@@ -130,12 +130,48 @@ reales en el mismo predio se declaran con `_nota` (el guardián
   programa oficial, nunca por deducción.
 - **Talleres multi-día**: UN bloque — `is_recurring` en cada sesión; la app
   ofrece «Añadir las N sesiones».
-- **Acceso**: `is_free` / `ticket_url` (solo compra) / `registration_url`
-  (va en la FUNCIÓN — cada actividad tiene su formulario).
+- **Acceso — CASILLA OBLIGATORIA, no se deja en blanco.** `is_free` /
+  `ticket_url` (solo compra) / `requires_registration` + `registration_url`
+  (van en la FUNCIÓN — cada actividad tiene su formulario). La traducción de la
+  palabra del festival a esos campos la hace `lib.acceso_campos()`, una sola
+  vez, con las frases reales de FICDEH, FICMA, FINCA y la Cinemateca.
+  **Si el festival aún no lo publicó se escribe `lib.DESCONOCIDO`**: no saber es
+  legítimo y se declara; no mirar, no. Un festival vigente cuyas funciones
+  callan queda ROJO (`[boleteria-muda]`), y `lib.cargar_crudo()` ya no acepta un
+  crudo mudo — falla en el paso 1, meses antes de que se vea en la app.
 - **Copy**: toda string nueva pasa por Juan. El tagline del splash expande la
   sigla; el lema del año vive en el afiche.
 
-### Paso 5 · Ensamblador propio → `festivals/<id>.json` + config
+### Paso 5 · El camino genérico — un ensamblador, un publicador
+
+**Desde el 17 ago 2026 el festival NO escribe su ensamblador.** Escribe su
+`pipeline/<id>.plan.json` —identidad, tabla de sedes, mapa de secciones— y
+corre:
+
+```bash
+python3 pipeline/ensamblar.py <id>    # crudo + plan → staging/<id>-build.json
+python3 pipeline/publicar.py <id>     # build → festivals/<id>.json, validando
+```
+
+Lo que pone el genérico, igual para todos: `day_order`, banderas desde el país,
+«N min», «Sede - Ciudad», la casilla de acceso vía `lib.acceso_campos()`, los
+cortos como `is_cortos` + `film_list`, el país de un programa derivado de sus
+obras, y el enriquecimiento por obra —también dentro de un bloque de cortos—.
+
+**Si un festival necesita una regla nueva, se añade AL GENÉRICO.** Escribir un
+ensamblador aparte es cómo se perdieron los 6 enlaces de TuBoleta de
+CineAutopsia y las 415 banderas de FICDEH: no eran doce errores distintos, era
+el mismo error doce veces. Lo vigila `[pipeline-generico]`.
+
+**`publicar.py` se niega a borrar lo que ya está en producción.** Compara la
+cobertura campo a campo con el JSON publicado y **aborta** si el build trae
+menos: es exactamente lo que pasó con FICDEH, cuyo build estaba atrasado y
+habría borrado 415 banderas y 13 salas en silencio. Con `--forzar` se publica
+igual, pero hay que escribirlo a mano.
+
+**Plantilla del plan:** `pipeline/festival.plan.example.json`.
+
+### Paso 5·bis · El ensamblador propio (legado)
 
 El ensamblador del festival junta crudo + enriquecido + geo y escribe el JSON
 final. La jerarquía de fuentes va COMENTADA en su cabecera, y toda excepción
@@ -267,6 +303,8 @@ para el aviso urgente, la fuente sigue siendo el ojo humano.
 - [ ] Fuentes en `fuentes/<id>/` · derivados en staging con `capturado`
 - [ ] Tabla de sedes canónica hecha · 0 salas dentro de nombres de sede
 - [ ] Slots compartidos DECIDIDOS (programa vs anclaje vs separadas)
+- [ ] **Acceso declarado en TODAS las funciones** (gratis / boletería /
+      inscripción / `desconocido` explícito) — nunca en blanco
 - [ ] Secciones verbatim + arquetipo de los 9 + inglés
 - [ ] Enriquecimiento verificado · sin-ficha resueltos o declarados
 - [ ] Sedes: verificadas o `_prec:"manual"`; pendientes DECLARADAS
@@ -287,12 +325,17 @@ es UN formato. Todo parser, venga de donde venga, escribe:
                    "sede": "…", "sala": "", "ciudad": "",
                    "director": "…", "pais": "…", "anio": 2026,
                    "duracion_min": 90, "has_qa": false,
-                   "acceso": "", "en_app": true } ] }
+                   "acceso": "Entrada libre | Boletería en … | desconocido",
+                   "ticket_url": "", "en_app": true } ] }
 ```
 
 y las herramientas genéricas leen eso, nunca el JSON propio de un festival.
 `capturado` es obligatorio: sin fecha no se sabe si un sidecar está viejo —
-así se escondió el bug de las 48 salas de FICDEH.
+así se escondió el bug de las 48 salas de FICDEH. **`acceso` también**: el campo
+existía desde el principio, FICDEH lo capturaba y FICMA lo declaraba en prosa, y
+aun así ningún ensamblador lo convertía en los campos que la app lee. Los 6
+enlaces de TuBoleta de CineAutopsia estaban en la fuente y no llegaron al JSON
+(17 ago 2026). Un campo que nadie exige es un campo que algún día no se llena.
 
 Las funciones comunes viven en **`pipeline/lib.py`** (antes reescritas por
 triplicado): `norm`, `hora24`, `rango_horario`, `curl_get`, `tmdb_get`,

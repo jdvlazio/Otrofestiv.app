@@ -12,9 +12,14 @@ import { FESTIVAL_CONFIG } from '../config.js';
 import { toMin, minToStr, parseDur, _festDate, festivalEnded } from '../domain/time.js';
 import { _resolveVenue } from '../domain/festival.js';
 import { blockDuration, effectiveDuration, durationForTravel, screeningPassed, _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm } from '../domain/film.js';
-import { screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios } from '../domain/schedule.js';
+// screeningPlannable: NO lo usa este módulo directamente — lo consume el eval de
+// _mkCalcWorker (_SCHED_PURE_FNS). Sin este import el build del worker moría con
+// ReferenceError y TODO cálculo caía al fallback síncrono en el main thread —
+// silenciosamente, desde que la fn se extrajo al dominio (16 ago). Lo destapó el
+// traspaso de Onboarding del 17: dos siembras distintas parecían dos motores.
+import { screensConflict, isScreeningBlocked, screeningPlannable, plannableScreens, sortScreensByStrategy, computeScenarios } from '../domain/schedule.js';
 import { renderAgenda } from '../view/agenda.js';
-import { keepCityOnly, planCityVenues, venueMatches } from '../view/helpers.js';
+import { keepCityOnly, planCityVenues, venueMatches, planInputSignature } from '../view/helpers.js';
 import { showToast } from '../view/feedback.js';
 import { t } from '../i18n/i18n.js';
 
@@ -143,7 +148,9 @@ export function runCalc(){
   const worker=_mkCalcWorker();
   if(worker){
     _activeCalcWorker=worker;
-    const _prioSnap=[...prioritized]; // snapshot de prioridades al momento del cálculo (detección stale)
+    // Firma de TODO lo que se consumió (dueño: view/helpers) — antes solo se
+    // guardaban las prioridades y el resto de los cambios pasaba inadvertido.
+    const _snap=planInputSignature();
     // Watchdog: 15s timeout — previene Worker colgado en mobile
     const watchdog=setTimeout(()=>{
       if(_activeCalcWorker===worker){
@@ -161,7 +168,7 @@ export function runCalc(){
       if(btn){btn.disabled=false;btn.textContent=t('av_ver_opciones');}
       if(e.data.ok){
         const scenarios=e.data.scenarios;
-        cachedResult={scenarios,currentIdx:0,_algorithmCount:scenarios.length,_prioSnapshot:_prioSnap};
+        cachedResult={scenarios,currentIdx:0,_algorithmCount:scenarios.length,_inputSnapshot:_snap};
         renderAgenda(); // re-render Planear → Estado 2 (corpus muta + strip resuelto + resultado)
       }else{
         if(res) res.innerHTML=`<div class="ag-calc-prompt" style="color:var(--red)"><strong>${t('error_calcular')}</strong><br><code class="txt-xs">${e.data.error}</code></div>`;
@@ -197,7 +204,7 @@ export function runCalc(){
 function _runCalcSync(btn,res){
   try{
     const scenarios=computeScenarios([...watchlist]);
-    cachedResult={scenarios,currentIdx:0,_algorithmCount:scenarios.length,_prioSnapshot:[...prioritized]};
+    cachedResult={scenarios,currentIdx:0,_algorithmCount:scenarios.length,_inputSnapshot:planInputSignature()};
     renderAgenda(); // re-render Planear → Estado 2 (corpus muta + strip resuelto + resultado)
   }catch(err){
     if(res) res.innerHTML=`<div class="ag-calc-prompt" style="color:var(--red)"><strong>${t('error_calcular')}</strong><br><code class="txt-xs">${err.message}</code></div>`;

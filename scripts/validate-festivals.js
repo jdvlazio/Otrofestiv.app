@@ -18,6 +18,34 @@ const path = require('path');
 // las CLAVES (strings ES con emoji) del bloque `export const SECTION_EN = {…}`
 // para que el check de cobertura [i18n-content-coverage] reconozca qué secciones
 // ya tienen traducción de display. Guardado: si falla, el Set queda vacío.
+// ── EL CONTRATO DE DATOS ─────────────────────────────────────────────────────
+// `pipeline/contrato.json` es el canon EJECUTABLE de una función: tipos,
+// formatos, obligatorios y enums. Antes esto vivía repartido entre una lista
+// hardcodeada aquí abajo (RULE 5) y la prosa de docs/SCHEMA.md — dos fuentes que
+// se desincronizaban en silencio (la doc decía que `duration` era un número
+// cuando las 1.194 son el string «90 min»). Ahora hay una sola, y de ella se
+// GENERA la doc. Ver scripts/generate-schema-md.js.
+const CONTRATO = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '..', 'pipeline', 'contrato.json'), 'utf8'));
+const HOY = new Date().toISOString().slice(0, 10);
+
+// ¿A este festival se le exige el contrato entero? La vigencia la dice la FECHA
+// DE CIERRE, no una lista de nombres: un guardián que decide por lista deja de
+// mirar en cuanto la lista envejece.
+function _exentoDe(campo, fest, finStr) {
+  const _fin = String(finStr || '').slice(0, 10);
+  const _archivado = _fin && _fin < HOY;
+  const _exc = (CONTRATO._excepciones || {})[campo] || {};
+  if (_archivado && fest in _exc) return { exento: true };
+  const _pend = ((CONTRATO._pendientes || {})[campo] || {})[fest];
+  if (_pend) {
+    // La excepción con fecha se VENCE SOLA. Una sin fecha se vuelve permanente.
+    if (HOY < _pend.migrar_el) return { exento: true, aviso: _pend };
+    return { exento: false, vencida: _pend };
+  }
+  return { exento: false };
+}
+
 const SECTION_EN_KEYS = new Set();
 // [seccion-sin-arquetipo]: claves de SECTION_ARCHETYPES (src/config.js). Toda
 // sección DEBE tener arquetipo o _sectionColor cae a gris ilegible #2C2C2A (el
@@ -205,7 +233,16 @@ function validateFestival(fname, data) {
     if (typeof data.ticket_url !== 'string' || !data.ticket_url.startsWith('https://'))
       errors.push(`ticket_url debe empezar con https:// (valor: ${JSON.stringify(data.ticket_url)})`);
   } else if (data.ticketing_model != null) {
-    errors.push(`ticketing_model presente sin ticket_url — eliminar ticketing_model o agregar ticket_url`);
+    // La boletería es POR FUNCIÓN desde FICDEH: un festival puede tener
+    // `ticketing_model` en la raíz y el enlace en cada función, que es el caso
+    // normal cuando cada sesión se vende aparte (CineAutopsia: 6 enlaces de
+    // TuBoleta distintos y una clausura libre). Exigir un ticket_url de raíz
+    // obligaba a inventar «el enlace del festival», que no existe.
+    const _conEnlace = (data.films || []).filter(f => f.ticket_url).length;
+    const _libres = (data.films || []).filter(f => f.is_free === true).length;
+    if (!_conEnlace && !_libres)
+      errors.push(`ticketing_model presente y NINGUNA función dice cómo se entra `
+        + `(ni ticket_url ni is_free) — eliminar ticketing_model o llenar la casilla`);
   }
 
   // dayKeys must match festivalDates (solo si el JSON define config)
@@ -330,13 +367,38 @@ function validateFestival(fname, data) {
     // film_list vive en buscador/Explorar SIN día/hora — la jornada se asigna
     // cuando el festival publique la programación. No exige day/time/venue/day_order.
     const isUnscheduledCatalog = isCortos && film.unscheduled && film.film_list && film.film_list.length > 0;
-    if (!isUnscheduledCatalog) {
-      if (!film.day) errors.push(`"${title}": campo 'day' requerido`);
-      if (!film.time) errors.push(`"${title}": campo 'time' requerido`);
-      if (!film.venue) warnings.push(`"${title}": campo 'venue' vacío`);
-      if (film.day_order === undefined) warnings.push(`"${title}": falta 'day_order'`);
+    // Los obligatorios y sus formatos salen del CONTRATO, no de una lista escrita
+    // aquí: si el canon cambia, cambia en un solo archivo y la doc se regenera.
+    const _fest = fname.replace(/\.json$/, '');
+    const _fin = (data.festivalEndStr || '');
+    for (const [_k, _spec] of Object.entries(CONTRATO.campos)) {
+      const _v = film[_k];
+      const _ex = _exentoDe(_k, _fest, _fin);
+      if (_spec.obligatorio && !isUnscheduledCatalog && (_v === undefined || _v === '')) {
+        if (!_ex.exento) errors.push(`"${title}": campo '${_k}' requerido (contrato)`);
+        continue;
+      }
+      if (_v === undefined || _v === null || _v === '') continue;
+      if (_spec.formato && !new RegExp(_spec.formato).test(String(_v))) {
+        const _msg = `"${title}": '${_k}' = ${JSON.stringify(String(_v).slice(0, 28))} no cumple el formato del contrato (${_spec.formato})`;
+        if (_ex.vencida) errors.push(`${_msg} — la excepción venció el ${_ex.vencida.migrar_el}`);
+        else if (!_ex.exento) errors.push(_msg);
+      }
+      if (_spec.enum && !_spec.enum.includes(_v)) {
+        errors.push(`"${title}": '${_k}' = ${JSON.stringify(_v)} fuera del contrato (${_spec.enum.join(' | ')})`);
+      }
+      if (_spec.tipo === 'boolean' && typeof _v !== 'boolean') {
+        errors.push(`"${title}": '${_k}' debe ser booleano de verdad, llegó ${typeof _v} — la app compara con === true`);
+      }
+      if (_spec.tipo === 'number' && typeof _v !== 'number') {
+        const _m = `"${title}": '${_k}' debe ser número, llegó ${typeof _v}`;
+        if (_ex.vencida) errors.push(`${_m} — la excepción venció el ${_ex.vencida.migrar_el}`);
+        else if (!_ex.exento) errors.push(_m);
+      }
+      if (_spec.exige && _v && !(Array.isArray(film[_spec.exige]) ? film[_spec.exige].length : film[_spec.exige])) {
+        errors.push(`"${title}": '${_k}' exige '${_spec.exige}' no vacío (contrato)`);
+      }
     }
-    if (!film.section) warnings.push(`"${title}": campo 'section' vacío`);
 
     // ── RULE 5a: duplicado real (mismo título+día+hora+SEDE) ─────────────
     // La sede entra en la clave: en un festival multiciudad la misma obra se
@@ -393,17 +455,63 @@ function validateFestival(fname, data) {
     }
   }
   // ════════ CHECKS DE CORRUPCIÓN (revisión crítica Olhar — detectan dato MALO, no solo ausente) ════════
+  // DEUDA DECLARADA de duplicados (19 ago 2026), y solo puede encoger. Al bajar
+  // estos dos checks a film_list —hasta hoy solo miraban el nivel de función—
+  // salieron a la luz duplicados VIEJOS en dos festivales ya publicados. No son
+  // el error que buscamos; son deuda con nombre:
+  //   · tercertiempo-2026 — «Raíces del Juego» y «Programa de cortos: Raíces
+  //     del juego» son la MISMA sesión anotada dos veces, con dos archivos de
+  //     afiche idénticos y títulos que difieren. Comparten pieza con razón.
+  //   · tribeca-2026 — siete cortos llevan el mismo texto de relleno («Un
+  //     cortometraje en competencia en Tribeca 2026»). Es un stub que nunca se
+  //     completó, no una sinopsis robada. Se arregla cosechando sus sinopsis.
+  // Un festival nuevo NO entra acá: si duplica, se corrige antes de publicar.
+  const _DEUDA_DUP = new Set(['tercertiempo-2026', 'tribeca-2026']);
+  const dup = [];
   // [posters-duplicados] ERROR — dos films con TÍTULO DISTINTO y misma URL de poster.
   // (El mismo título repetido = misma película en formato 1-entrada-por-función, legítimo.
   //  La comparación de título es case-insensitive: difiere solo en mayúsculas = mismo film.)
+  // Recorre los DOS niveles: la función y cada obra de su film_list. Mirar solo
+  // el nivel de arriba era el punto ciego — en CineAutopsia dos CORTOS llevaban
+  // el mismo afiche y este check pasó en verde, porque los cortos viven dentro
+  // de film_list. Lo vio Juan a ojo en una hoja de contactos, no el guardián.
+  //
+  // Y compara el CONTENIDO, no solo la ruta: los dos archivos se llamaban
+  // distinto —squander.jpg y ahol-a-kek-...jpg— y eran byte a byte el mismo
+  // JPEG. Comparar la cadena decía que estaba todo bien.
   {
     const norm = t => (t || '?').trim().toLowerCase();
-    const seen = new Map();
+    const todos = [];
     for (const f of films) {
+      todos.push(f);
+      if (Array.isArray(f.film_list)) for (const o of f.film_list) if (o && typeof o === 'object') todos.push(o);
+    }
+    const crypto = require('crypto');
+    const huella = new Map();          // ruta local → hash del archivo
+    const clave = p => {
+      if (!p.startsWith('/assets/')) return p;
+      if (huella.has(p)) return huella.get(p);
+      let k = p;
+      try { k = 'sha1:' + crypto.createHash('sha1').update(fs.readFileSync('.' + p)).digest('hex'); }
+      catch (e) { /* si no abre, lo dice [poster-mirado]; acá vale la ruta */ }
+      huella.set(p, k);
+      return k;
+    };
+    // Una función de UNA sola obra comparte su afiche con ella: eso no es dato
+    // corrupto, es la misma pieza. Se exime solo el par padre↔hija directa.
+    const propio = new Set();
+    for (const f of films) {
+      const pf = (f.poster || '').trim();
+      if (!pf) continue;
+      for (const o of (f.film_list || [])) if (o && (o.poster || '').trim() === pf) propio.add(o);
+    }
+    const seen = new Map();
+    for (const f of todos) {
       const p = (f.poster || '').trim();
-      if (!p) continue;
-      if (seen.has(p) && seen.get(p).n !== norm(f.title)) errors.push(`[posters-duplicados] "${(f.title||'?').slice(0,40)}" comparte poster con "${seen.get(p).t.slice(0,40)}" (título distinto) — dato corrupto`);
-      else if (!seen.has(p)) seen.set(p, { n: norm(f.title), t: f.title || '?' });
+      if (!p || propio.has(f)) continue;
+      const k = clave(p);
+      if (seen.has(k) && seen.get(k).n !== norm(f.title)) dup.push(`[posters-duplicados] "${(f.title||'?').slice(0,40)}" comparte poster con "${seen.get(k).t.slice(0,40)}" (título distinto) — dato corrupto`);
+      else if (!seen.has(k)) seen.set(k, { n: norm(f.title), t: f.title || '?' });
     }
   }
   // ── Gates de posters (estrategia editorial, POSTERS.md §5/§8) ─────────────
@@ -441,15 +549,30 @@ function validateFestival(fname, data) {
   }
 
   // [sinopsis-duplicada] ERROR — dos films con TÍTULO DISTINTO y misma synopsis o synopsis_en.
+  // Mismo punto ciego que en [posters-duplicados]: hay que bajar a film_list.
+  // En CineAutopsia dos PARES de cortos compartían sinopsis —la web del
+  // festival publica el cuerpo de una obra bajo la ficha de otra— y este check
+  // pasó en verde las tres veces que corrió.
   for (const fld of ['synopsis', 'synopsis_en']) {
     const norm = t => (t || '?').trim().toLowerCase();
-    const seen = new Map();
+    const todos = [];
     for (const f of films) {
+      todos.push(f);
+      if (Array.isArray(f.film_list)) for (const o of f.film_list) if (o && typeof o === 'object') todos.push(o);
+    }
+    const seen = new Map();
+    for (const f of todos) {
       const s = (f[fld] || '').trim();
       if (!s) continue;
-      if (seen.has(s) && seen.get(s).n !== norm(f.title)) errors.push(`[sinopsis-duplicada] "${(f.title||'?').slice(0,40)}" comparte ${fld} con "${seen.get(s).t.slice(0,40)}" (título distinto) — cross-contaminación`);
+      if (seen.has(s) && seen.get(s).n !== norm(f.title)) dup.push(`[sinopsis-duplicada] "${(f.title||'?').slice(0,40)}" comparte ${fld} con "${seen.get(s).t.slice(0,40)}" (título distinto) — cross-contaminación`);
       else if (!seen.has(s)) seen.set(s, { n: norm(f.title), t: f.title || '?' });
     }
+  }
+  // Los duplicados son ERROR salvo en los festivales con deuda declarada, donde
+  // quedan como WARNING para que sigan a la vista sin bloquear a los demás.
+  if (dup.length) {
+    if (_DEUDA_DUP.has(String(fname).replace(/\.json$/, ''))) warnings.push(...dup.map(d => d + ' [deuda declarada]'));
+    else errors.push(...dup);
   }
   // [year-sospechoso] WARNING — year > festival_year+1 y el film no es clásico/retro declarado
   {

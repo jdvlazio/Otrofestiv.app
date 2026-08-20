@@ -9,16 +9,16 @@ import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS } from '../config.js';
 import { ICONS, parseProgramTitle } from '../view/components.js';
 import { closeAuthSheet, closeCitySheet, closePrioLimit } from '../view/sheets.js';
 import { showActionModal, showToast } from '../view/feedback.js';
-import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey } from '../view/programa.js';
+import { _renderProgramaContent, lugarClose, render, renderNoticesBanner, _noticeKey, scrollDtabsToActive } from '../view/programa.js';
 import { renderAgenda, updateCardState, updateHorarioPrioBtn } from '../view/agenda.js';
 import { keepCityOnly, planCityVenues } from '../view/helpers.js';
 import { runCalc, _planCityVenues } from './calc.js';
-import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched } from './persistence.js';
+import { commitPlan, saveDelays, saveLastSlot, savePrio, saveSavedAgenda, saveState, saveWL, saveWatched, saveNotWatched } from './persistence.js';
 import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-cloud.js';
-import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _markPreserveResult, _syncPmodeTabs } from './pipeline.js';
+import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _syncPmodeTabs } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
-import { dayFullyPassed, festivalEnded, simTodayStr, toMin } from '../domain/time.js';
-import { scoreFilm, screeningPassed, isShortFilm } from '../domain/film.js';
+import { dayFullyPassed, festivalEnded, simNow, simTodayStr, toMin } from '../domain/time.js';
+import { scoreFilm, screeningPassed, isShortFilm, prioLiveCount, effectiveWatched, screeningEndDate } from '../domain/film.js';
 import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens, screeningPlannable } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
@@ -149,15 +149,22 @@ export function toggleWatched(title,e){
   title=normTitle(title);
   if(e) e.stopPropagation();
   // 1. READ
-  const {FILMS, watched, watchlist} = state.snapshot();
-  // 2. GUARD + 3. MUTATE — branch A: ya watched, desmarcar y devolver a Intereses
-  if(watched.has(title)){
+  const {FILMS, watched, notWatched, watchlist, savedAgenda} = state.snapshot();
+  // 2. GUARD + 3. MUTATE — branch A: efectivamente vista (marcada O ASUMIDA por
+  // el plan — decisión «vista asumida», 18 ago), desmarcar y devolver a Intereses.
+  // Si era ASUMIDA, negarla requiere memoria propia: notWatched — sin ella la
+  // asunción la re-marcaría en el próximo render.
+  if(effectiveWatched().has(title)){
+    const _now=simNow();
+    const _asumida=!!(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.some(s=>{
+      const end=screeningEndDate(s); return s._title===title&&end&&end<_now; }));
     state.batchUpdate({
       watched: state._delFromSet(watched, title),
+      notWatched: _asumida? state._addToSet(notWatched, title) : notWatched,
       watchlist: state._addToSet(watchlist, title),
     });
     // 4. PERSIST + surgical (render automático vía pipeline)
-    saveState('wl','watched');
+    saveState('wl','watched','notWatched');
     updateCardState(title);
     _reRenderIntereses();
     showToast(t('plan_vuelta_a',{donde:_vueltaA(title)}),'info');
@@ -170,8 +177,11 @@ export function toggleWatched(title,e){
     `<div class="cm-subject">${_short}</div><div>${t('modal_ya_viste_body')}</div>`,
     t('modal_ya_viste_cta'),
     ()=>{
-      state.update('watched', s => state._addToSet(s, title));
-      saveWatched();updateCardState(title);
+      state.batchUpdate({
+        watched: state._addToSet(state.snapshot().watched, title),
+        notWatched: state._delFromSet(state.snapshot().notWatched, title),
+      });
+      saveWatched();saveNotWatched();updateCardState(title);
       _reRenderIntereses();
       showToast(t('toast_marcada_vista'),'info');
       const _f=FILMS.find(fi=>fi.title===title);
@@ -453,32 +463,6 @@ export function addSuggestion(title,day,time){
   if(document.getElementById('pel-sheet')?.classList.contains('open')) openPelSheet(title);
 }
 
-export function checkinLaVi(title){
-  // 1. READ — state al top
-  const {FILMS, savedAgenda, watched} = state.snapshot();
-  // 2. GUARD — si ya está watched, solo re-renderea (no-op del estado: sin
-  // mutación el pipeline no dispara, así que el render queda explícito)
-  if(watched.has(title)){
-    renderAgenda();
-    return;
-  }
-  // 3. MUTATE
-  state.update('watched', s => state._addToSet(s, title));
-  // 4. PERSIST + surgical (render automático vía pipeline)
-  saveWatched();
-  updateCardState(title);
-  // Post-view rating SIEMPRE — openPostViewRating rutea: programa (is_cortos con
-  // film_list) → cola obra por obra; film suelto → flujo de siempre. El skip viejo
-  // "cortos sin calificación general" era del modelo paquete y dejaba la cola
-  // INALCANZABLE (bug cazado por Juan en TT: Refugio en la Cancha sin preguntar).
-  const s=savedAgenda&&savedAgenda.schedule.find(e=>e._title===title);
-  setTimeout(()=>openPostViewRating(title, s?.day, s?.time, s?.venue, s?.duration), 250);
-}
-
-export function checkinNoLaVi(title){
-  _removePlanItem(title);
-  renderAgenda();
-}
 
 export function forceInclude(title){
   // El botón "+ Incluir" en la sección No Incluidas solo se renderiza cuando
@@ -523,25 +507,26 @@ export function togglePriority(title,cost){
   // 2. GUARD + 3. MUTATE — branch A: unprioritize
   if(prioritized.has(title)){
     // D3: quitar in-strip se queda en el tab actual (sin modal ni navegación) — el
-    // toast alcanza. Preservar el resultado del Planear → detección de estado stale.
-    _markPreserveResult();
+    // toast alcanza. (El resultado del Planear se conserva SIEMPRE desde el 18 ago:
+    // ya no hace falta pedirlo — ver planInputSignature.)
     state.update('prioritized', s=>state._delFromSet(s,title));
     // 4. PERSIST + surgical (render automático vía pipeline)
     savePrio();updateCardState(title);
     showToast(`${ICONS.bookmark} ${t('toast_prioridad_quitada')}`,'info');
   } else {
     // Branch B: prioritize (con limit check)
-    if(prioritized.size>=PRIO_LIMIT){
+    // El cupo se mide sobre las VIVAS (prioLiveCount, dominio): una prioridad
+    // cuyas funciones ya pasaron no puede materializarse y no debe bloquear.
+    if(prioLiveCount()>=PRIO_LIMIT){
       openPrioLimit(title);return;
     }
-    _markPreserveResult();
     const _addWL=!watchlist.has(title);
     state.transaction(() => {
       state.update('prioritized', s=>state._addToSet(s,title));
       if(_addWL) state.batchUpdate({watchlist:state._addToSet(watchlist,title), watched:state._delFromSet(watched,title)});
     });
     savePrio();if(_addWL){saveWL();saveWatched();}updateCardState(title);
-    showToast(`${ICONS.bookmarkFill} ${t('cta_priorizada')} · ${prioritized.size+1}/${PRIO_LIMIT}${_addWL?' · '+t('toast_tambien_int'):''}`,'info');
+    showToast(`${ICONS.bookmarkFill} ${t('cta_priorizada')} · ${prioLiveCount()}/${PRIO_LIMIT}${_addWL?' · '+t('toast_tambien_int'):''}`,'info');
   }
   if(activeView==='day') updateHorarioPrioBtn(title);   // surgical: botón prio del pel-sheet
 }
@@ -743,9 +728,6 @@ export function toggleFilmAlternatives(key,title,day,time){
   if(_expandedFilm===key){_expandedFilm='';renderAgenda();return;}
   _expandedFilm=key;
   // Marcar hint como visto la primera vez que se usa
-  if(!localStorage.getItem('otrofestiv_hint_cambiar')){
-    localStorage.setItem('otrofestiv_hint_cambiar','1');
-  }
   renderAgenda();
 }
 
@@ -781,10 +763,7 @@ export function filterByDay(day){
   cartelaMode='horario';
   document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===day));
   _syncPmodeTabs(); // la píldora Hoy/Mañana espeja al día elegido (y se apaga si no es ninguno)
-  requestAnimationFrame(()=>{
-    const activeBtn=document.querySelector('.dtab.on');
-    if(activeBtn){const dt=document.getElementById('dtabs');if(dt)dt.scrollLeft=activeBtn.offsetLeft-dt.offsetLeft;}
-  });
+  requestAnimationFrame(scrollDtabsToActive);
   switchMainNav('mnav-cartelera');
   _renderProgramaContent(true); // cambio de día → scroll al tope
   _updateProgramaActiveFilter();
@@ -957,6 +936,32 @@ export function saveCurrentScenario(){
   } else {
     _doSave();
   }
+}
+
+// includeAnyway — agrega una excluida cuyo ÚNICO choque es el Q&A estimado.
+// No abre el modal de reemplazo (forceInclude) porque no hay nada que sacar: sin
+// quedarse a la charla las dos funciones caben. Se marca `_squeezed`, que es el
+// mecanismo ya existente para una violación DELIBERADA que el usuario aceptó —
+// verifyPlan la respeta y por eso el plan resultante es válido.
+// Muta cachedResult (el escenario en pantalla), no savedAgenda: el commit sigue
+// ocurriendo solo con «Usar este Plan», igual que forceInclude.
+export function includeAnyway(title, day, time){
+  if(festivalEnded()){showToast(t('notice_fest_term'),'info');return;}
+  if(!cachedResult||!cachedResult.scenarios.length) return;
+  const sc=cachedResult.scenarios[cachedResult.currentIdx||0];
+  globalThis.PLAN_CITY_VENUES=_planCityVenues();
+  // plannableScreens (dueño único) y no una copia: mismo cinturón que forceInclude
+  // contra reinsertar una función de otra ciudad, cancelada o ya pasada.
+  const s=plannableScreens(title).find(x=>x.day===day&&x.time===time);
+  if(!s){showToast(t('plan_sin_horario'),'info');return;}
+  if(sc.schedule.some(c=>(c._title||c.title)===title)) return;
+  sc.schedule.push({...s,_title:title,_squeezed:true});
+  sc.schedule.sort((a,b)=>(a.day_order||0)-(b.day_order||0)||toMin(a.time)-toMin(b.time));
+  sc.excluded=(sc.excluded||[]).filter(t2=>t2!==title);
+  // Sin toast: la fila desaparece de «No incluidas» y la función aparece en el
+  // escenario — el cambio de pantalla ES la confirmación. Un toast acá sería una
+  // string nueva para decir lo que ya se ve.
+  renderAgenda();
 }
 
 export function squeezeExcluded(schedule, excludedTitles){

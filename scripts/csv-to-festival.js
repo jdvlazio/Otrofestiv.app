@@ -39,6 +39,13 @@ const QUOTE_MAP = {
   '‘': "'", '’': "'", 'ʼ': "'", 'ʹ': "'",
   '“': '"', '”': '"', '«': '"', '»': '"',
 };
+// Clave de comparación de títulos: sin tildes, sin mayúsculas, sin puntuación.
+// Solo para DECIDIR si dos títulos son el mismo — nunca para escribir.
+function normKey(s) {
+  return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
 function normTitle(s) {
   return String(s == null ? '' : s).replace(/[‘’ʼʹ“”«»]/g, c => QUOTE_MAP[c] || c).trim();
 }
@@ -162,9 +169,7 @@ function main() {
       qa_type: clean(get(r, 'qa_type')).toLowerCase(),
       requires_registration: truthy(get(r, 'requires_registration')),
       is_free: truthy(get(r, 'is_free')),
-      title_orig: normTitle(get(r, 'title_orig')),
       rating: clean(get(r, 'rating')),
-      trailer: clean(get(r, 'trailer')),
       competencia: clean(get(r, 'competencia')),
     };
   }).filter(Boolean);
@@ -215,9 +220,7 @@ function main() {
     if (base.has_qa) { film.has_qa = true; if (base.qa_type) film.qa_type = base.qa_type; }
     if (base.requires_registration) film.requires_registration = true;
     if (base.is_free) film.is_free = true;
-    if (base.title_orig && base.title_orig !== title) film.title_orig = base.title_orig;
     if (base.rating) film.rating = base.rating;
-    if (base.trailer) film.trailer = base.trailer;
     if (base.competencia) film.competencia = base.competencia;
     if (base.sala) film.sala = base.sala;
     if (fns.length > 1) {

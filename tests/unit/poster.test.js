@@ -115,19 +115,23 @@ test('regresión: el ampersand de "Opening & Galas" queda como &amp;', () => {
     C._buildPosterV16({ accent: '#F59E0B', headerLabel: 'Opening & Galas', title: 'Opening & Galas', num: null }),
     'opening-galas'
   );
-  assert.ok(svg.includes('OPENING &amp; GALAS'), 'el & de la banda debe renderizarse escapado como &amp;');
-  assert.ok(!/OPENING & GALAS/.test(svg), 'no debe quedar ningún "& " crudo en la banda');
+  // La sección puede partirse en varias líneas (§6.0: la tipografía se ajusta al
+  // espacio), así que se afirma el ESCAPE —que es lo que la regresión protege—
+  // y no que las tres palabras queden contiguas.
+  assert.ok(svg.includes('&amp;'), 'el & debe renderizarse escapado como &amp;');
+  assert.ok(!/>[^<]*&(?!amp;|lt;|gt;|quot;|#)/.test(svg), 'no debe quedar ningún & crudo dentro de un <text>');
 });
 
 // ── Clamp de título largo (Netflix/Spotify): ≤4 líneas + elipsis en generativo ─
 // Líneas del body = <text> con y>52 (fuera de la banda HDR). Antes un título de
 // 80 chars daba 9 líneas minúsculas que llenaban el póster.
 function bodyLines(dataUri) {
-  const svg = decodeURIComponent(dataUri.replace('data:image/svg+xml,', ''));
-  return [...svg.matchAll(/<text[^>]*y="([\d.]+)"[^>]*>([^<]*)<\/text>/g)]
-    .filter(m => +m[1] > 52).map(m => m[2]);
-}
-test('_buildPosterV16: título largo se clampa a ≤4 líneas + "…"', () => {
+  // Selección por COLOR DE RELLENO, no por geometría: la anatomía §6.0 movió el
+  // título al pie y el `y>52` de antes (alto de la banda muerta) empezó a contar
+  // líneas de sección. El título es el único texto en #F0EDE8.
+  const svg = decodeURIComponent(String(dataUri).replace('data:image/svg+xml,', ''));
+  return [...svg.matchAll(/<text[^>]*fill="#F0EDE8"[^>]*>([^<]*)<\/text>/g)].map(m => m[1]);
+}test('_buildPosterV16: título largo se clampa a ≤4 líneas + "…"', () => {
   const long = 'Tribeca at 25: A Conversation With Co-Founders Jane Rosenthal and Robert De Niro';
   const lines = bodyLines(C._buildPosterV16({ accent: '#EF9F27', headerLabel: 'Gala', title: long, num: null }));
   assert.ok(lines.length <= 4, `body ≤4 líneas (fue ${lines.length})`);
@@ -203,29 +207,31 @@ test('posterModel fail-safe: host desconocido NO se marca editorial (no se mete 
 // Devuelve los HIJOS del marco; el contenedor aporta poster-ed + --ed-accent.
 // Zona imagen = blur-fill (.ed-blur) + still 16:9 al ras (.ed-still) + scrim
 // opcional (.ed-scrim con .ed-title). El título va en el scrim, no en un ed-body.
-test('editorialFrame: emite banda + imagen (blur+still) + scrim con título', () => {
-  const html = H.editorialFrame({ header: 'Cine Cubano', body: 'La Peli', src: 'https://x/y.jpg', title: 'La Peli' });
-  assert.ok(html.includes('class="ed-hdr"') && html.includes('class="ed-img"'), 'incluye banda + imagen');
-  assert.ok(html.includes('class="ed-blur"') && html.includes('class="ed-still"'), 'imagen = blur-fill + still 16:9');
-  assert.ok(html.includes('class="ed-scrim"') && html.includes('class="ed-title"'), 'título va en el scrim');
-  assert.ok(!html.includes('ed-body'), 'ya no hay zona ed-body (fusionada en el scrim)');
+test('editorialFrame (forma B §6.0): filete + sección + campo 16:9 + pie', () => {
+  const html = H.editorialFrame({ header: 'Cine Cubano', body: 'La Peli', src: 'https://x/y.jpg', title: 'La Peli', dato: '96 min' });
+  assert.ok(html.includes('class="ed-fil"') && html.includes('class="ed-hdr"'), 'filete de sección + sección');
+  assert.ok(html.includes('class="ed-img"') && html.includes('class="ed-still"'), 'campo de imagen con el still');
+  assert.ok(!html.includes('ed-blur'), 'el blur murió: ensuciaba el negro y competía con la imagen');
+  assert.ok(!html.includes('ed-scrim'), 'el scrim murió: el título ya no va encima de la imagen');
+  assert.ok(html.includes('class="ed-foot"') && html.includes('class="ed-title"'), 'título anclado al pie');
+  assert.ok(html.includes('class="ed-dato"') && html.includes('96 min'), 'el dato vive en el pie');
   assert.ok(html.includes('_edPosterErr(this)'), 'usa el onerror unificado editorial (en el still)');
   assert.ok(!html.includes('poster-ed'), 'NO incluye el wrapper — eso lo pone el contenedor');
 });
 
 test('editorialFrame: omite header/scrim/img vacíos (thumb = banda + img sin título)', () => {
   const thumb = H.editorialFrame({ src: 'https://x/y.jpg', title: 'T' }); // sin header ni body
-  assert.ok(thumb.includes('<div class="ed-hdr"></div>'), 'header vacío = banda sin texto');
-  assert.ok(thumb.includes('class="ed-still"') && !thumb.includes('ed-scrim'), 'still sí, scrim no (sin body)');
+  assert.ok(thumb.includes('<div class="ed-hdr"></div>'), 'sección vacía = sin texto');
+  assert.ok(thumb.includes('class="ed-still"') && !thumb.includes('ed-title'), 'still sí, título no (sin body)');
   const noImg = H.editorialFrame({ header: 'Sec' }); // sin src
   assert.ok(noImg.includes('<div class="ed-img"></div>'), 'ed-img vacío cuando no hay src');
 });
 
-test('editorialFrame: body undefined/"" → sin scrim · texto → título en scrim', () => {
-  assert.ok(!H.editorialFrame({ src: 'x' }).includes('ed-scrim'), 'undefined → sin scrim');
-  assert.ok(!H.editorialFrame({ src: 'x', body: '' }).includes('ed-scrim'), '"" (ended-poster) → sin scrim');
+test('editorialFrame: body undefined/"" → sin título · texto → título al pie', () => {
+  assert.ok(!H.editorialFrame({ src: 'x' }).includes('ed-title'), 'undefined → sin título');
+  assert.ok(!H.editorialFrame({ src: 'x', body: '' }).includes('ed-title'), '"" (ended-poster) → sin título');
   const titled = H.editorialFrame({ src: 'x', body: 'Peli' });
-  assert.ok(titled.includes('<div class="ed-scrim"><div class="ed-title">Peli</div></div>'), 'texto → título en scrim');
+  assert.ok(titled.includes('<div class="ed-title">Peli</div>'), 'texto → título en el pie (§6.0)');
 });
 
 test('editorialFrame: escapa body, header y data-title (sin & crudo)', () => {
@@ -233,4 +239,35 @@ test('editorialFrame: escapa body, header y data-title (sin & crudo)', () => {
   assert.ok(!BAD_AMP.test(html), 'ningún & sin escapar en el marco');
   assert.ok(html.includes('data-title="A &amp; B"'), 'data-title escapado');
   assert.ok(html.includes('A &lt; B &amp; &quot;C&quot;'), 'el body escapa <, & y "');
+});
+
+// ── Miniatura vs tapa: el halo y el campo centrado son SOLO de la miniatura ───
+// Juan, 19 ago: los cortos dentro de un programa se veían huecos. El pie se
+// llena con la obra desenfocada, pero solo donde hay hueco — en la tapa (con
+// sección y título) ese espacio ya está ocupado y el halo sería decoración.
+test('editorialFrame: miniatura lleva halo + campo centrado; la tapa no', () => {
+  const mini = H.editorialFrame({ src: 'https://x/y.jpg', title: 'T' });        // sin header ni body
+  assert.ok(mini.includes('class="ed-halo"'), 'la miniatura lleva halo en el pie');
+  assert.ok(mini.includes('ed-img ed-img-mid'), 'y el campo centrado');
+
+  const tapa = H.editorialFrame({ header: 'Sec', body: 'Una obra', src: 'https://x/y.jpg', title: 'T' });
+  assert.ok(!tapa.includes('ed-halo'), 'la tapa NO lleva halo: el hueco lo llenan título y dato');
+  assert.ok(!tapa.includes('ed-img-mid'), 'ni centra el campo');
+
+  const sinSrc = H.editorialFrame({});
+  assert.ok(!sinSrc.includes('ed-halo'), 'sin imagen no hay halo que dibujar');
+});
+
+// ── La sección nunca se pinta con un color inexistente ───────────────────────
+// Regresión real (19 ago): posterParts llamaba a editorialFrame SIN accent, el
+// <text> salía con fill="undefined" y el navegador lo pintaba NEGRO sobre fondo
+// oscuro. El filete no lo delataba: toma su color del CSS, no de ese argumento.
+// El llamador ya pasa el accent; esto cubre el cinturón, por si aparece otro.
+test('_edHdrSVG: sin accent cae a un color válido, nunca a "undefined"', () => {
+  for (const acc of [undefined, null, '', '   ']) {
+    const svg = H._edHdrSVG('Encuentro', acc);
+    assert.ok(!/fill="(undefined|null|)"/.test(svg), `accent=${JSON.stringify(acc)} no puede dar fill vacío`);
+    assert.ok(/fill="(#[0-9A-Fa-f]{3,8}|var\(--[a-z-]+\))"/.test(svg), 'el fill es un color de verdad');
+  }
+  assert.ok(H._edHdrSVG('Encuentro', '#3AAA6E').includes('fill="#3AAA6E"'), 'con accent, lo respeta');
 });

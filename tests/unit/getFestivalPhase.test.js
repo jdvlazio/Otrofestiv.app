@@ -14,6 +14,7 @@ function load(opts = {}) {
     globals: {
       FILMS: opts.FILMS || [],
       watched: opts.watched || new Set(),
+      notWatched: opts.notWatched || new Set(),
       savedAgenda: opts.savedAgenda ?? null,
       filmRatings: opts.filmRatings || {},
       DAY_KEYS: opts.DAY_KEYS || [],
@@ -71,7 +72,8 @@ test('now < FESTIVAL_START → phase:"before" con daysDiff', () => {
 
 test('día con screenings todas pasadas → phase:"evening"', () => {
   // simNow=20:00 → todas las screenings del día (9am, 11am) ya terminaron.
-  // todayWatched=[] porque watched está vacío y screeningPassed stubbed a false.
+  // Vista ASUMIDA (18 ago): terminadas = vistas sin marcar → todayWatched las
+  // trae a AMBAS aunque watched esté vacío. La negación viaja por notWatched.
   const todayKey = 'MAR 21', today = '2026-06-03';
   const { _getFestivalPhase } = load({
     savedAgenda: {
@@ -88,7 +90,25 @@ test('día con screenings todas pasadas → phase:"evening"', () => {
   const r = _getFestivalPhase();
   assert.strictEqual(r.phase, 'evening');
   assert.strictEqual(r.todayScreenings.length, 2);
-  assert.deepStrictEqual(r.todayWatched, []);
+  assert.strictEqual(r.todayWatched.length, 2, 'terminadas = asumidas vistas');
+});
+
+test('evening respeta la negación: notWatched saca la obra de todayWatched', () => {
+  const todayKey = 'MAR 21', today = '2026-06-03';
+  const { _getFestivalPhase } = load({
+    savedAgenda: { schedule: [
+      { _title: 'F1', day: todayKey, time: '9:00 AM', duration: '60 min' },
+      { _title: 'F2', day: todayKey, time: '11:00 AM', duration: '90 min' },
+    ] },
+    notWatched: new Set(['F1']),
+    DAY_KEYS: [todayKey],
+    FESTIVAL_DATES: { [todayKey]: today },
+    simNow: () => new Date(`${today}T20:00:00-05:00`),
+    simTodayStr: () => today,
+  });
+  const r = _getFestivalPhase();
+  assert.strictEqual(r.phase, 'evening');
+  assert.deepStrictEqual(r.todayWatched.map(s => s._title), ['F2'], '«no la vi» no cuenta');
 });
 
 test('próxima función en ≤ 45 min → phase:"next"', () => {

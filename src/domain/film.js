@@ -173,7 +173,7 @@ export function screeningPassed(s){
 
 // ── Predicados CANÓNICOS de fase de una función (fuente única) ────────────────
 // "terminó" y "en curso" estaban reimplementados inline en 5 sitios (aquí,
-// isNowShowing, agenda.js ×2, _updateMiPlanBadge), cada uno con parseInt y SIN
+// isNowShowing, agenda.js ×2), cada uno con parseInt y SIN
 // el Q&A (+30) que el planificador sí cuenta. Todo fin de función sale de
 // screeningEndMin (effectiveDuration = parseDur + Q&A). NOTA: screeningPassed
 // (arriba) es OTRO concepto — "ya no llegás" (arranque+10 de gracia), no "terminó".
@@ -184,7 +184,7 @@ export function screeningEndMin(s){ return toMin(s.time)+effectiveDuration(s); }
 // aparte, así que la frase arranca del fin duro, no del efectivo.
 export function screeningBlockEndMin(s){ return toMin(s.time)+blockDuration(s); }
 // screeningEndDate — el MISMO fin canónico, como instante absoluto (cruza días).
-// Dueño único del filtro "esta entrada del plan ya terminó": renderUnconfirmed y
+// Dueño único del filtro "esta entrada del plan ya terminó": effectiveWatched y
 // _updateMiPlanBadge lo reconstruían por separado, y el "terminó hace X min"
 // usaba OTRO fin (blockDuration) en la misma frase que el filtro (effective).
 export function screeningEndDate(s){
@@ -200,6 +200,26 @@ export function screeningEndDate(s){
 export function isShortFilm(f){ const d=parseDur(f&&f.duration); return d>0&&d<=40; }
 export function screeningEnded(s,nowMin){ return screeningEndMin(s)<=nowMin; }
 export function screeningNow(s,nowMin){ return toMin(s.time)<=nowMin&&!screeningEnded(s,nowMin); }
+// screeningQaOnly — la ventana en la que la PELÍCULA ya terminó pero la función
+// sigue: los ~30 min estimados del Q&A. Dueño único de la distinción, porque la
+// pantalla la necesita en dos lugares y con la misma respuesta.
+//
+// Por qué existe: «AHORA» y «EN CURSO» se apoyaban en el fin EFECTIVO (con Q&A),
+// que es correcto para el planificador —la función te ocupa hasta el final— pero
+// no para el que lee. Medido en FINCA (16 de 30 obras con Q&A): «¿Cuán profundo
+// es tu amor?» empieza 19:00, la película termina 20:41 y la función 21:11; a
+// las 21:00 la app decía AHORA en verde sobre una película terminada, y Mi Plan
+// mostraba «Termina en 0 min» durante media hora —el rótulo contando con Q&A y
+// la cuenta sin él, dos relojes en una frase—.
+//
+// Y hay una regla del proyecto que lo zanja: el fin de la película es DATO
+// (empieza + dura); el del Q&A es ESTIMACIÓN (FESTIVAL_QA_MIN, «la UI la
+// declara, nunca la afirma»). El badge más afirmativo de la app no puede
+// apoyarse 30 minutos en un número estimado.
+export function screeningQaOnly(s,nowMin){
+  if(!s||!s.has_qa) return false;
+  return screeningBlockEndMin(s)<=nowMin&&!screeningEnded(s,nowMin);
+}
 
 export function _classifyTodayScreenings(screenings,nowMin){
   const done=screenings.filter(s=>screeningEnded(s,nowMin));
@@ -208,14 +228,55 @@ export function _classifyTodayScreenings(screenings,nowMin){
   return{done,active,future};
 }
 
+// prioLiveCount — cuántas prioridades siguen VIVAS (alguna función futura).
+// El CUPO se mide sobre estas: una prioridad cuyas funciones ya pasaron no
+// puede materializarse en ningún plan, y retenía el cupo igual — el auditor de
+// fin de festival vio «Prioridades 2/4» con una muerta, y con 4/4 muertas el
+// usuario chocaba contra la sheet del límite sin que nada le avisara antes.
+// La prioridad muerta NO se borra sola (es del usuario y su lugar es la lista,
+// atenuada con «Ya pasó»): solo deja de contar.
+export function prioLiveCount(){
+  return [...prioritized].filter(t=>FILMS.some(f=>f.title===t&&!screeningPassed(f))).length;
+}
+
+// effectiveWatched — DUEÑO ÚNICO de «qué se vio». Decisión de Juan (18 ago,
+// rediseño Diario Luz): una función del Plan que ya terminó SE ASUME vista —
+// el usuario no confirma; solo puede negarla («no la vi» → notWatched).
+// efectivo = watched explícito ∪ asumidas del plan − notWatched.
+// El precedente ya vivía en el dominio: todayWatched (festival.js) contaba
+// screeningPassed como vista desde antes de esta decisión.
+export function effectiveWatched(){
+  const out=new Set(watched);
+  if(savedAgenda&&savedAgenda.schedule){
+    const now=simNow();
+    savedAgenda.schedule.forEach(s=>{
+      const end=screeningEndDate(s);
+      if(end&&end<now&&s._title) out.add(s._title);
+    });
+  }
+  notWatched.forEach(t=>out.delete(t));
+  return out;
+}
+
 export function _endedStats(){
-  // Conteo POR OBRA (modelo del Diario): un programa visto cuenta por sus
-  // películas — es lo que el usuario realmente vio. Antes excluía is_cortos
-  // por completo → "Viste 0" con dos programas vistos. Eventos no cuentan.
+  // DUEÑO ÚNICO de «cuántas marcaste». Un programa visto cuenta por sus obras —
+  // es lo que el usuario realmente vio. Antes excluía is_cortos por completo →
+  // "Viste 0" con dos programas vistos.
+  //
+  // Los EVENTOS (talleres, charlas) SÍ cuentan: son lo que el Diario muestra, y
+  // el chip del Diario los contaba mientras esta cuenta los descartaba — medido
+  // con FICDEH (29 eventos en catálogo): 2 marcadas acá contra 3 en el chip, dos
+  // números para lo mismo a dos centímetros. Por eso el titular usa el paraguas
+  // ACTIVIDADES: un taller no es una obra, pero sí es una actividad ([vocab]).
+  //
+  // pendingRatings NO los incluye: un taller no se califica, y prometerle al
+  // usuario que le falta calificar algo que no tiene estrellas sería un pendiente
+  // imposible de cerrar.
   let totalWatched=0, pendingRatings=0;
-  [...watched].forEach(t=>{
+  [...effectiveWatched()].forEach(t=>{
     const f=FILMS.find(fi=>fi.title===t);
-    if(!f||f.type==='event') return;
+    if(!f) return;
+    if(f.type==='event'){ totalWatched+=1; return; }
     if(f.is_cortos&&f.film_list&&f.film_list.length){
       totalWatched+=f.film_list.length;
       pendingRatings+=f.film_list.filter(it=>!filmRatings[it.title]).length;

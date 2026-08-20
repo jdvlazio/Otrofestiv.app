@@ -7,14 +7,14 @@
 
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _bandTextSVG, _secLabel, _sectionColor,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _fitLines, _secLabel, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
-import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
-import { effectiveDuration, screeningBlockEndMin } from '../domain/film.js';
+import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
+import { effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -126,7 +126,11 @@ export function itemPosterParts(item, section, imgClass, {header=false}={}){
   if(_isEditorialPoster(item)){
     // thumb pequeño → still enmarcado SIN banda de texto (precedente _posterThumb);
     // card grande (Diario) → con banda de sección, como _recapPosterCard.
-    return {ed:true, accent:_sectionColor(section||''), src,
+    // Filete de la MINIATURA en ámbar de marca, no en color de sección (Juan, 19
+    // ago): los cortos de un programa comparten sección, así que ese color no
+    // informa —y sin arquetipo cae al gris #2C2C2A, la barra gris repetida que
+    // él vio—. En la TAPA (header) se conserva: ahí sí orienta al scrollear.
+    return {ed:true, accent:header?_sectionColor(section||''):'var(--amber)', src,
       inner:editorialFrame(header?{header:_secLabel(section||''), src, title:item.title}:{src, title:item.title})};
   }
   return {ed:false, accent:'', src,
@@ -201,7 +205,7 @@ export function posterParts(f,{header=false,body='',loading}={}){
   const m=posterModel(f);
   if(m.kind!=='editorial') return m;                       // {kind,src,...} decidido
   return {...m, ed:true,
-    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading})};
+    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading, accent:m.accent})};
 }
 
 export function _getItemPoster(item){
@@ -243,11 +247,22 @@ export function _isEditorialPoster(f){
 // sin regresión, y robusto donde el piso de font-size rompía el HTML.
 export function _edHdrSVG(label, accent){
   if(!String(label||'').trim()) return '';
-  // Banda única (misma fuente que el generativo): vw=100, anclado arriba, y el
-  // <svg> propio del editorial escala vía CSS (.ed-hdr-svg / --ed-hdr-ratio).
-  const {text, lines, lh}=_bandTextSVG(label, accent, 100, {mode:'top'});
-  const VH=+(lines*lh+4).toFixed(2);
-  return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMidYMid meet">${text}</svg>`;
+  // Sin accent el <text> salía con fill="undefined" y el navegador lo pintaba
+  // NEGRO: la sección quedaba invisible sobre el fondo oscuro (lo vio Juan en la
+  // tarjeta de ENCUENTRO). El filete no lo delataba porque toma su color del CSS
+  // (--ed-accent), no de este argumento. Ahora el color siempre existe.
+  const _fill=String(accent||'').trim()||'var(--amber)';
+  // Mismo motor que la forma A (_fitLines), vw=100. Con imagen la sección baja a
+  // 2 líneas: la imagen carga el peso (§6.0). Caja = 8u menos margen de 0,75u.
+  const U=100/8, M=0.75*U, CW=100-2*M;
+  const fit=_fitLines(String(label).toUpperCase(),
+    {boxW:CW, boxH:2.4*U, maxLines:2, fsMax:2.4*U/1.16, fsMin:5, lhRatio:1.16, lsEm:0.02, upper:true});
+  const round=n=>+n.toFixed(2);
+  const VH=+(fit.lines.length*fit.lh+fit.fs*0.3).toFixed(2);
+  const text=fit.lines.map((l,i)=>
+    `<text x="${round(M)}" y="${round(fit.fs+i*fit.lh)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${round(fit.fs)}" font-weight="800" letter-spacing="${round(fit.fs*0.02)}" fill="${_fill}">${escXML(l)}</text>`
+  ).join('');
+  return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMinYMin meet">${text}</svg>`;
 }
 
 export function _posterThumb(f, cssClass, loading){
@@ -304,19 +319,33 @@ export function posterModel(f){
 // blur es decorativo (aria-hidden); el still lleva data-title y el onerror que
 // cae a generativo. `body` con texto → scrim con título (grid); undefined/''  →
 // sin scrim (thumb/lista/sheet y ended-poster, que trae su propio footer).
-export function editorialFrame({header, body, src, title, loading, accent}={}){
+
+export function editorialFrame({header, body, src, title, loading, accent, dato}={}){
+  // Forma B (§6.0) = forma A + UN campo 16:9 constante (8u×4,5u en y=3,5u). Sin
+  // blur ni banda de color; la geometría vive en el CSS de .poster-ed, en %.
   const _l=loading||'lazy';
   const _dt=title?` data-title="${escXML(title)}"`:'';
-  const hdr=`<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`;
   const _ttl=(body!=null && String(body).trim()) ? String(body) : '';
+  const _dato=(dato!=null && String(dato).trim()) ? String(dato) : '';
   const img=src
-    ? `<div class="ed-img">`
-      + `<img class="ed-blur" src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt="">`
-      + `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
-      + (_ttl?`<div class="ed-scrim"><div class="ed-title">${escXML(_ttl)}</div></div>`:'')
-      + `</div>`
-    : `<div class="ed-img"></div>`;
-  return `${hdr}${img}`;
+    ? `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
+    : '';
+  // MINIATURA = sin sección ni título (el corto dentro de un programa). Ahí el
+  // campo se centra y el pie se llena con la propia obra desenfocada (Juan, 19
+  // ago: «se ven muy vacías»). No es el blur que mató §6.0 —aquel iba DETRÁS del
+  // still, a sangre, y ensuciaba el negro—: este está contenido bajo el campo y
+  // se apaga con máscara antes del borde. En el póster grande no aplica: ahí el
+  // vacío no existe, lo llenan el título y el dato.
+  const _mini=!header&&!_ttl;
+  const halo=(_mini&&src)?`<div class="ed-halo"><img src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt=""></div>`:'';
+  return `<div class="ed-fil"></div>`
+    + `<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`
+    + halo
+    + `<div class="ed-img${_mini?' ed-img-mid':''}">${img}</div>`
+    + `<div class="ed-foot">`
+      + (_ttl?`<div class="ed-title">${escXML(_ttl)}</div>`:'')
+      + (_dato?`<div class="ed-dato">${escXML(_dato)}</div>`:'')
+    + `</div>`;
 }
 
 export function isNowShowing(f){
@@ -331,6 +360,14 @@ export function isNowShowing(f){
   // effectiveDuration (Q&A incluido) — mismo fin de función que el planificador.
   const end=new Date(start.getTime()+effectiveDuration(f)*60000);
   return now>=start&&now<=end;
+}
+
+// isQaOnlyNow — «la película ya terminó, queda el Q&A». Mismo encuadre que
+// isNowShowing (aplazado, fecha del festival, reloj simulado) pero delegando el
+// veredicto en el dominio: screeningQaOnly es el dueño único de la ventana.
+export function isQaOnlyNow(f){
+  if(!isNowShowing(f)) return false;
+  return screeningQaOnly(f,_festNowMin());
 }
 
 export function isToday(day){
@@ -499,6 +536,21 @@ export function planCityVenues(){
   return new Set(Object.keys(_vs).filter(v=>venueMatches(v,_sel)));
 }
 
+// planInputSignature — DUEÑO ÚNICO de «con qué se calculó este Plan» (Juan, 18
+// ago: el Plan que estás mirando nunca cambia solo). Cubre todo lo que consume el
+// planificador; la ciudad va reducida con keepCityOnly — una sede concreta no
+// restringe el plan y marcarla desactualizada sería una falsa alarma.
+export function planInputSignature(){
+  const _int=[...watchlist].filter(t=>!watched.has(t)).sort().join('|');
+  const _pri=[...prioritized].sort().join('|');
+  const _av=Object.keys(availability||{}).sort()
+    .map(d=>`${d}:${(availability[d]&&availability[d].blocks||[]).map(b=>`${b.from}-${b.to}`).sort().join(',')}`)
+    .filter(x=>!x.endsWith(':'))
+    .join(';');
+  const _ciudad=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
+  return `${_int}#${_pri}#${_av}#${_ciudad}`;
+}
+
 export function travelWarn(s1,s2){
   if(s1.day!==s2.day) return null;
   const travel=travelMins(s1.venue,s2.venue);
@@ -539,16 +591,28 @@ export function conflictAccount(a,b,r){
     return t('cuenta_salas',{t1:`<i>${t1}</i>`,end:_b(minToStr(end)),buffer:FESTIVAL_BUFFER,
       arr:_b(minToStr(end+FESTIVAL_BUFFER)),t2:`<i>${t2}</i>`,start:_b(minToStr(start))});
   }
-  // viaje: con traslado el Q&A sí cuenta (durationForTravel) — se muestra aparte
+  // viaje: con traslado el Q&A sí cuenta (durationForTravel) — se muestra aparte.
+  // La cadena SUMA el margen en vez de enunciarlo aparte: así el total es
+  // directamente comparable con la hora de inicio y la conclusión se lee sola
+  // (21:15 contra 21:00), sin una frase de veredicto que pueda contradecir a la
+  // decisión — que fue el bug original. Antes la cuenta omitía el margen que
+  // screensConflict exige, y una función EXCLUIDA se explicaba con la rama de
+  // «sí llegás»: 53 de los 275 choques de viaje de FICDEH (medido 17 ago).
+  // La `~` marca lo ESTIMADO (Q&A, viaje); el margen va sin tilde porque es una
+  // política nuestra, no una estimación.
   const qaEnd=end+(f1.has_qa?FESTIVAL_QA_MIN:0);
-  const arr=qaEnd+r.travel;                             // llegada: estimación
+  const total=qaEnd+r.travel+FESTIVAL_BUFFER;
   const base=t(f1.has_qa?'cuenta_viaje_qa':'cuenta_viaje',
-    {t1:`<i>${t1}</i>`,end:_b(minToStr(end)),qa:FESTIVAL_QA_MIN,qaEnd:_b(minToStr(qaEnd)),
-     travel:_b(_minFmt(r.travel)),arr:_b(minToStr(arr))});
-  const verdict=arr>start
-    ? t('cuenta_no_llegas',{start:_b(minToStr(start))})
-    : t('cuenta_al_filo',{start:_b(minToStr(start)),m:start-arr});
-  return `${base} ${verdict}`;
+    {t1:`<i>${t1}</i>`,end:_b(minToStr(end)),qa:FESTIVAL_QA_MIN,
+     // travel en minutos PELADOS: la cadena declara la unidad una sola vez, al
+     // final («margen 15 min»). Con _minFmt salía «viaje ~10 min + margen 15 min».
+     travel:r.travel,buffer:FESTIVAL_BUFFER,
+     total:_b(minToStr(total)),start:_b(minToStr(start))});
+  // Cuando el choque existe SOLO por el Q&A, la alternativa va en la MISMA
+  // moneda: la hora a la que llegarías saliendo al final de la película. Un
+  // número en vez de una recomendación — el usuario compara y decide.
+  const _qa=r.qaOnly?t('cuenta_qa_opcional',{sinQa:_b(minToStr(end+r.travel+FESTIVAL_BUFFER))}):'';
+  return `${base}${_qa}`;
 }
 
 // Retraso colaborativo (Fase B) — badge informativo desde el consenso derivado.
