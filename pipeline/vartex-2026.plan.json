@@ -1,5 +1,5 @@
 {
- "_nota": "VARTEX 14 — Muestra de Video & Experimental de Medellín, 14ª edición. Montado con el pipeline genérico. La fuente MANDANTE de la programación es el afiche oficial (carrusel de Instagram): el sitio del festival NO publica horarios, y sus secciones «Internacional» y «Video Performance» son plantilla comentada en el HTML — no se usan.",
+ "_nota": "VARTEX 14 — Muestra de Video & Experimental de Medellín, 14ª edición. Montado con el pipeline genérico. La fuente MANDANTE de la programación es el afiche oficial (carrusel de Instagram): el sitio del festival NO publica horarios, y sus secciones «Internacional» y «Video Performance» son plantilla comentada en el HTML — no se usan. El Colombo tiene DOS salas y cambian por función: la sede del crudo las distingue y esta tabla las mapea a la misma sede con distinta sala, porque el ensamblador toma la sala de aquí y no del campo de la función.",
  "pasos": [
   {
    "cmd": "python3 pipeline/ensamblar.py vartex-2026",
@@ -27,6 +27,14 @@
   "sharedSlotIsOneScreening": false,
   "mes_es": "agosto",
   "sedes": {
+   "Centro Colombo Americano - Medellín · Sala 1": [
+    "Centro Colombo Americano - Medellín",
+    "Sala 1"
+   ],
+   "Centro Colombo Americano - Medellín · Sala 2": [
+    "Centro Colombo Americano - Medellín",
+    "Sala 2"
+   ],
    "Centro Colombo Americano - Medellín": [
     "Centro Colombo Americano - Medellín",
     ""

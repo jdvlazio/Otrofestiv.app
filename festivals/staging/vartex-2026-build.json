@@ -110,7 +110,8 @@
    "city": "Medellín",
    "short": "Bellas Artes",
    "address": "",
-   "_nota": "faltan coordenadas y dirección"
+   "_nota": "faltan coordenadas y dirección",
+   "_verificar": "el afiche dice solo «Bellas Artes» y la institución tiene CUATRO sedes en Medellín, en direcciones distintas: Palacio de Bellas Artes (Calle 52 # 42–08), Ayacucho (Cra. 42A # 48–86), Bloque 3 (Cra. 42 # 49–95) y Guayabal (Cra. 52 # 20–63). No se elige una: mandar a alguien a la equivocada le cuesta un taller de 9 horas que ya pagó. Preguntar al festival."
   }
  },
  "films": [
@@ -125,6 +126,7 @@
    "time": "18:00",
    "day_order": 0,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 1",
    "has_qa": false,
    "_src": "afiche oficial de programación (Instagram del festival, lámina 2)",
    "is_free": true,
@@ -138,6 +140,7 @@
    "time": "18:30",
    "day_order": 1,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
    "has_qa": false,
    "poster": "/assets/vartex/muestra-internacional.jpg",
    "posterSource": "editorial",
@@ -165,6 +168,7 @@
    "time": "18:30",
    "day_order": 2,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
    "has_qa": false,
    "poster": "/assets/vartex/muestra-nacional.jpg",
    "posterSource": "editorial",
@@ -341,6 +345,7 @@
    "time": "09:00",
    "day_order": 3,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 1",
    "event_kind": "seminario",
    "has_qa": false,
    "synopsis": "Este seminario da los conceptos, las metodologías y los referentes para acercarse a la apreciación y la interpretación de un discurso, el experimental, que suele ser complejo e incluso parecer inasequible al momento de conectar con sus formas y sus particularidades narrativas. Es un curso de iniciación pensado para hacer legible una forma de expresión que siempre tiene mucho por decir, pero que a menudo requiere herramientas y una guía para acceder a sus mensajes.",
@@ -362,6 +367,7 @@
    "time": "16:30",
    "day_order": 3,
    "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
    "has_qa": false,
    "poster": "/assets/vartex/muestra-local.jpg",
    "posterSource": "editorial",
