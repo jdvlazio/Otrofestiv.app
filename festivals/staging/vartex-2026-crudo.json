@@ -6,8 +6,9 @@
   "erratas": [
    "el sitio lista 14 obras en la Muestra Nacional y el afiche 20 — manda el afiche, que es superconjunto",
    "las secciones «Muestra Internacional» y «Muestra Video Performance» del SITIO son plantilla comentada dentro del HTML, con obras inventadas de Madrid, São Paulo y Berlín — NO se usaron",
-   "el afiche escribe «Knick Knight»: es Nick Knight",
-   "el título de la obra de Giovanny Rendón difiere: «El tiempo como un abismo» (hoja y sitio) vs «El tiempo del abismo» (afiche)",
+   "el afiche escribe «Knick Knight» y se publica como Nick Knight (ver _titulo_src de esa obra)",
+   "«El tiempo como un abismo» es la grafía de la hoja del festival y del sitio; el afiche escribe «El tiempo del abismo»",
+   "«Polanima» figura con año 2005 en una hoja y 2026 en la otra; se publica 2026 (decisión de Juan: toda la selección es de 2025–2026)",
    "las dos hojas de selección dan duraciones distintas (5:09 vs 5:10, 3:39 vs 3:40, 11:06 vs 11:12); al minuto redondeado coinciden"
   ],
   "privacidad": "los datos de contacto y los enlaces privados de visionado de la convocatoria NO se copian: son material de jurado"
@@ -45,12 +46,12 @@
     {
      "titulo": "Fashion film de Nick Knight",
      "_src": "afiche oficial (lámina 3)",
-     "_verificar": "el afiche escribe «Knick Knight»; el título de la pieza no se declara"
+     "_titulo_src": "el afiche escribe «Knick Knight». Es Nick Knight: en 2002 el Estate de Guy Bourdin le entregó sus rollos de cine inéditos y SHOWstudio, que él fundó, los editó como once fashion films («Compulsive Viewing: The Films of Guy Bourdin»). Los dos nombres juntos en un programa de fashion film SON ese proyecto. «Knick Knight» no corresponde a nadie."
     },
     {
      "titulo": "Fashion film de Guy Bourdin",
      "_src": "afiche oficial (lámina 3)",
-     "_verificar": "el título de la pieza no se declara"
+     "_nota": "el afiche no declara el título de la pieza"
     }
    ],
    "_src": "afiche oficial de programación (Instagram del festival, lámina 2)"
@@ -310,7 +311,7 @@
      "duracion_min": 5,
      "pais": "Colombia",
      "_src": "hoja «Seleccionados» de la convocatoria del festival",
-     "_verificar": "año sin confirmar: «Seleccionados» dice 2005, «SELECCIONADOS FINAL» dice 2026"
+     "_anio_src": "Juan, 20 ago 2026: el 2005 de la hoja es una errata de tecleo; toda la selección es de 2025–2026"
     },
     {
      "titulo": "Un Mashup de Poder",
