@@ -471,8 +471,6 @@ export const FESTIVAL_CONFIG={
     // carrusel y las imágenes de su sitio son apaisadas (1200x630). Estirarlas
     // a 2:3 las aplastaría un 65%, muy lejos de lo que tolera la regla. La card
     // cae al respaldo tipográfico hasta que llegue el afiche en vertical.
-    // group:'test' — VARTEX 14 NO se publica todavía. Quitar esta línea ES publicar.
-    group:'test',
     tagline:'Muestra de Video y Experimental',
     films:null,posters:null,lbSlugs:{}
   },

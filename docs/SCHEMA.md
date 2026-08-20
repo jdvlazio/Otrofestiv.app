@@ -295,7 +295,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `qa_type` | string | `team` · `guests` | 2 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | — |  |
-| `sala` | string | — | 3 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
+| `sala` | string | — | 4 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
 | `date` | string | `^\d{4}-\d{2}-\d{2}$` | 6 fest | Requerido si hay screenings[]. Tres festivales legacy lo tienen como número de día. |
 | `screenings` | array | — | 3 fest |  |
 | `poster` | string | — | 14 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |
@@ -306,16 +306,6 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `filmCategory` | string | — | 1 fest |  |
 | `tmdb_id` | number | — | 5 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
 | `_src` | — | — | 6 fest | De dónde salió el dato. Toda obra nueva lo lleva. |
-
-### Excepciones con fecha de caducidad
-
-Festivales **vigentes** que aún no cumplen. A partir de la fecha, el validador
-deja de perdonar y se pone rojo: **una excepción sin fecha se vuelve permanente
-sola; ésta se vence sola.**
-
-| campo | festival | incumple | migra el | por qué espera |
-|---|---|---|---|---|
-| `venue` | finca-2026 | 30 | **2026-08-20** | FINCA cierra el 19 AGO y renombrar sus 6 sedes toca `_slotKey` (día\|hora\|sede\|sala), que es la ancla de los planes YA GUARDADOS de usuarios reales. Dos días de espera contra romper un plan en curso: se espera. |
 
 ### Excepciones congeladas (festivales archivados)
 
