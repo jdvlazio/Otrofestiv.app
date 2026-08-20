@@ -9,7 +9,13 @@ columnas y mezcla funciones de sedes distintas; por eso se lee con coordenadas.
 import json, re, sys
 import pypdf
 
-HORA = re.compile(r'^(\d{1,2}):\s?(\d{2})\s*(?:([ap])\.?\s?m\.?)?\s*$', re.I)
+HORA = re.compile(r'^(\d{1,2}):\s?(\d{2})\s*(?:([ap])\.?\s?m\.?)?(?:\s+(?P<resto>\S.*))?$', re.I)
+# La hora NO siempre viene sola en su fragmento: el domingo 6 el PDF emite
+# «2:00 p.m. ¿Qué historia es ésta» de una pieza, y exigir que el fragmento
+# fuera solo la hora perdía esa función entera. Se detectó porque una charla
+# del festival —«La primavera llega para los que esperan»— apuntaba a una
+# función que no existía en lo leído. Lo que sobra tras la hora es el comienzo
+# del título y se antepone al cuerpo.
 # Dos celdas de la parrilla escriben la hora SIN a.m./p.m. («4:30», págs. 3 y 12).
 # No se adivina: la parrilla corre cronológica de izquierda a derecha y las dos
 # caen en x~413, la columna de media tarde. Además el festival no programa nada
@@ -62,20 +68,29 @@ def bandas(sedes):
     celda se tragaba la fila de la sede siguiente."""
     out = []
     for i, (ys, nom) in enumerate(sedes):
-        techo = ys + 9 if i == 0 else (sedes[i-1][0] + ys) / 2
+        # La PRIMERA fila no tiene techo. Su contenido se pinta por encima del
+        # rótulo y un margen fijo se queda corto: con techo = ys+9, una celda a
+        # y=253 sobre un rótulo en y=243 quedaba FUERA de toda banda y caía al
+        # `return` final, que devolvía la ÚLTIMA sede de la página. Así, la
+        # función de las 2:00 p.m. del domingo 6 —Colombo sala 1— aparecía en
+        # el Teatro Caribe. Lo delató el festival: una charla suya apuntaba a
+        # una función que en lo leído estaba en otra sede.
+        techo = 1e9 if i == 0 else (sedes[i-1][0] + ys) / 2
         piso  = (ys + sedes[i+1][0]) / 2 if i + 1 < len(sedes) else -1e9
         out.append((techo, piso, nom))
     return out
 
 
 def sede_de(y, sedes):
+    # Fallback a la PRIMERA, no a la última: lo que se sale por arriba está
+    # arriba.
     """La sede cuya banda contiene y. La banda arranca un poco ARRIBA del
     rótulo: la primera función de la fila se pinta por encima del texto."""
     for i, (ys, nom) in enumerate(sedes):
         techo = ys + 9 if i == 0 else (sedes[i-1][0] + ys) / 2
         piso  = (ys + sedes[i+1][0]) / 2 if i + 1 < len(sedes) else -1e9
         if piso < y <= techo: return nom
-    return sedes[-1][1] if sedes else None
+    return sedes[0][1] if sedes else None
 
 def parsea_pagina(page):
     items = fragmentos(page)
@@ -96,7 +111,7 @@ def parsea_pagina(page):
     def banda_de(y):
         for techo, piso, nom in bs:
             if piso < y <= techo: return (techo, piso, nom)
-        return bs[-1] if bs else (1e9, -1e9, None)
+        return bs[0] if bs else (1e9, -1e9, None)
     por_sede = {}
     for hx, hy, ht in horas:
         por_sede.setdefault(banda_de(hy)[2], []).append(hx)
@@ -112,6 +127,7 @@ def parsea_pagina(page):
         derechas = sorted(x for x in por_sede.get(sede, []) if x > hx + 6)
         x_fin = derechas[0] - 6 if derechas else 1e9
         cuerpo, dur = [], None
+        _pegado = m.groupdict().get('resto')
         for x2, y2, t2 in celdas:
             if not (hx - 6 <= x2 < x_fin): continue
             if DUR.match(t2) and abs(y2 - hy) < 4:
@@ -120,6 +136,7 @@ def parsea_pagina(page):
             if DUR.match(t2): continue          # duración de otra celda, no es título
             if _piso < y2 < hy - 2 and not HORA.match(t2): cuerpo.append((y2, x2, t2))
         titulo = ' '.join(t for y2, x2, t in sorted(cuerpo, key=lambda i: (-i[0], i[1])))
+        if _pegado: titulo = (_pegado + ' ' + titulo).strip()
         funciones.append({'dia_num': num, 'dia_semana': dia, 'hora': f'{h:02d}:{mi:02d}',
                           'titulo_crudo': re.sub(r'\s+', ' ', titulo).strip(),
                           'duracion_min': dur, 'sede_crudo': sede,

@@ -7,10 +7,12 @@
   "notas": [
    "las páginas 6, 8 y 10 son de DESCRIPCIÓN (Conversaciones, Debate, Encuentro), no parrilla; su texto sirve para sinopsis, no para horarios",
    "dos celdas escriben la hora sin a.m./p.m. y van marcadas con _hora_inferida",
-   "la parrilla termina donde empieza la primera sección de detalle de la página; sin ese corte el sábado 12 daba una función fantasma"
+   "la parrilla termina donde empieza la primera sección de detalle de la página; sin ese corte el sábado 12 daba una función fantasma",
+   "la hora puede venir PEGADA al título en un mismo fragmento (domingo 6, 2:00 p.m.); exigir que el fragmento fuera solo la hora perdía esa función",
+   "la primera fila no tiene techo: un margen fijo dejaba fuera de banda las celdas que asoman sobre el rótulo y las mandaba a la última sede de la página"
   ]
  },
- "_funciones": 85,
+ "_funciones": 86,
  "funciones": [
   {
    "dia_semana": "jueves",
@@ -136,16 +138,16 @@
    "titulo_crudo": "Foro de la Crítica Sesión 2 Inscripción previa*",
    "duracion_min": 120,
    "_pagina": 4,
-   "sede": "Casa Municipal de la Cultura de Caldas Caldas",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
    "dia": "2026-09-05"
   },
   {
    "dia_semana": "sábado",
    "hora": "14:00",
-   "titulo_crudo": "Sick and Dirty Buddies Arthur J. Bressan, Jr. *Presentado por Michael Koresky Competencia Retrospectiva de cortometrajes Sergio Navarro Programa 2 Programa 2 El viento sabe que vuelvo a casa José Luis Torres Leiva Un techo sin cielo Competencia Nuevas Voces Diego Hernández Programa 1 La tempestá + No contéis con los dedos + Vampir Cuadec Pere Portabella + Conversaciones Cinemancia: “Legado inmarcesible”. Participan Julio Lamaña y Juan Pablo Franky",
+   "titulo_crudo": "Sick and Dirty Buddies Arthur J. Bressan, Jr. *Presentado por Michael Koresky",
    "duracion_min": 81,
    "_pagina": 4,
-   "sede": "Casa Municipal de la Cultura de Caldas Caldas",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
    "dia": "2026-09-05"
   },
   {
@@ -206,7 +208,7 @@
    "dia_semana": "sábado",
    "hora": "18:30",
    "titulo_crudo": "¿Qué historia es ésta y cuál es su final? + Obreras saliendo de la fábrica José Luis Torres Leiva",
-   "duracion_min": null,
+   "duracion_min": 74,
    "_pagina": 4,
    "sede": "Casa Municipal de la Cultura de Caldas Caldas",
    "dia": "2026-09-05"
@@ -214,11 +216,20 @@
   {
    "dia_semana": "sábado",
    "hora": "19:30",
-   "titulo_crudo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar Deimer Quintero Vertel + Decaer Juan Camilo González",
+   "titulo_crudo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar Deimer Quintero Vertel + Decaer",
    "duracion_min": 101,
    "_pagina": 4,
-   "sede": "Casa Municipal de la Cultura de Caldas Caldas",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
    "dia": "2026-09-05"
+  },
+  {
+   "dia_semana": "domingo",
+   "hora": "14:00",
+   "titulo_crudo": "¿Qué historia es ésta y cuál es su final? + Obreras saliendo de la fábrica José Luis Torres Leiva ’ + Conversaciones Cinemancia: “La primavera llega para los que esperan”",
+   "duracion_min": 74,
+   "_pagina": 5,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-06"
   },
   {
    "dia_semana": "domingo",
@@ -241,19 +252,19 @@
   {
    "dia_semana": "domingo",
    "hora": "16:30",
-   "titulo_crudo": "Los golfos Carlos Saura",
-   "duracion_min": 83,
+   "titulo_crudo": "Mucho hablar / Beaucoup parler Pascale Bodet + Futuros luminosos Ismael García",
+   "duracion_min": 103,
    "_pagina": 5,
-   "sede": "Cineprox Las Américas Medellín",
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
    "dia": "2026-09-06"
   },
   {
    "dia_semana": "domingo",
    "hora": "16:30",
-   "titulo_crudo": "Mucho hablar / Beaucoup parler Pascale Bodet + Futuros luminosos Ismael García Competencia de cortometrajes Programa 3 Los golfos Carlos Saura 110",
-   "duracion_min": null,
+   "titulo_crudo": "Los golfos Carlos Saura",
+   "duracion_min": 83,
    "_pagina": 5,
-   "sede": "Teatro Caribe Itagüí",
+   "sede": "Cineprox Las Américas Medellín",
    "dia": "2026-09-06"
   },
   {
