@@ -1,0 +1,349 @@
+{
+ "_provenance": {
+  "fuente": "afiche oficial de programación (carrusel de Instagram, 4 láminas) + hoja «Seleccionados» de la convocatoria + vartexmedellin.co",
+  "capturado": "2026-08-20",
+  "metodo": "el afiche da día, hora y sede; la hoja da la ficha de la Muestra Local; el sitio aportó las duraciones que la hoja trae en texto libre",
+  "erratas": [
+   "el sitio lista 14 obras en la Muestra Nacional y el afiche 20 — manda el afiche, que es superconjunto",
+   "las secciones «Muestra Internacional» y «Muestra Video Performance» del SITIO son plantilla comentada dentro del HTML, con obras inventadas de Madrid, São Paulo y Berlín — NO se usaron",
+   "el afiche escribe «Knick Knight»: es Nick Knight",
+   "el título de la obra de Giovanny Rendón difiere: «El tiempo como un abismo» (hoja y sitio) vs «El tiempo del abismo» (afiche)",
+   "las dos hojas de selección dan duraciones distintas (5:09 vs 5:10, 3:39 vs 3:40, 11:06 vs 11:12); al minuto redondeado coinciden"
+  ],
+  "privacidad": "los datos de contacto y los enlaces privados de visionado de la convocatoria NO se copian: son material de jurado"
+ },
+ "_funciones": 6,
+ "programas": [
+  {
+   "titulo": "Inauguración · Live cinema «A La Rivera: Synthfonía de un escape»",
+   "dia": "2026-08-19",
+   "hora": "18:00",
+   "sede": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 1",
+   "acceso": "Entrada libre",
+   "seccion": "Inauguración",
+   "_src": "afiche oficial de programación (Instagram del festival, lámina 2)",
+   "obras": [
+    {
+     "titulo": "A La Rivera: Synthfonía de un escape",
+     "director": "Santlek & Tittus",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 2)"
+    }
+   ],
+   "_nota": "la misma función abre las videoinstalaciones de Vartex 14"
+  },
+  {
+   "titulo": "Muestra Fashion Film Internacional",
+   "dia": "2026-08-20",
+   "hora": "18:30",
+   "sede": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
+   "acceso": "Entrada libre",
+   "seccion": "Muestra Internacional",
+   "obras": [
+    {
+     "titulo": "Fashion film de Nick Knight",
+     "_src": "afiche oficial (lámina 3)",
+     "_verificar": "el afiche escribe «Knick Knight»; el título de la pieza no se declara"
+    },
+    {
+     "titulo": "Fashion film de Guy Bourdin",
+     "_src": "afiche oficial (lámina 3)",
+     "_verificar": "el título de la pieza no se declara"
+    }
+   ],
+   "_src": "afiche oficial de programación (Instagram del festival, lámina 2)"
+  },
+  {
+   "titulo": "Muestra Fashion Film Nacional",
+   "dia": "2026-08-21",
+   "hora": "18:30",
+   "sede": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
+   "acceso": "Entrada libre",
+   "seccion": "Muestra Nacional",
+   "obras": [
+    {
+     "titulo": "Go back to Skin - Punto Blanco",
+     "director": "Mccalle",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Entretejidos Cubel ft Kia",
+     "director": "Mccalle",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "MIM",
+     "director": "JASZ",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Afecto",
+     "director": "Camilo Álvarez",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "The Stranger",
+     "director": "Carlos Gutiérrez",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Radioactive",
+     "director": "Carlos Gutiérrez",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Kanye Rules",
+     "director": "Carlos Gutiérrez",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Aire, tecnología y vestuario",
+     "director": "Andrés Montaño",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Subliminal.de.ce – Pangea",
+     "director": "Lina Rivera",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Supramusas - Zer0 Control X",
+     "director": "Lina Rivera",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "4-lex",
+     "director": "Daniela Ferrucho y Goz",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "TAC",
+     "director": "David Sierra",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "VIS",
+     "director": "David Sierra",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Identidad fragmentada",
+     "director": "Alegid Torres, Laura Hernández, Carlos Gutiérrez",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Frankenstein",
+     "director": "María Antonia Valencia, Tatiana Durango, Isabella Builes, Luna Quiroz",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Fragmentos de ser",
+     "director": "María Clara Molina, Juanita Carrillo",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "El viaje de Sierva María: Un amor y sus demonios",
+     "director": "Ximena Giraldo",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Rojo",
+     "director": "Rafaela Villa Botero",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Jardines",
+     "director": "Rafaela Villa Botero",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    },
+    {
+     "titulo": "Agenda abierta",
+     "director": "Rafaela Villa Botero & Ginger",
+     "pais": "Colombia",
+     "_src": "afiche oficial de programación (Instagram del festival, lámina 4)"
+    }
+   ],
+   "_src": "afiche oficial de programación (Instagram del festival, lámina 2)"
+  },
+  {
+   "titulo": "Laboratorio · Fashion film experimental",
+   "dia": "2026-08-22",
+   "hora": "09:00",
+   "sede": "Fundación Universitaria Bellas Artes - Medellín",
+   "acceso": "Cupo limitado con inscripción previa · $50.000",
+   "duracion_min": 540,
+   "obras": [],
+   "seccion": "Formación",
+   "_src": "afiche oficial de programación (Instagram del festival, lámina 2)",
+   "_talleristas": "Andrés Montaño, Carlos Gutiérrez"
+  },
+  {
+   "titulo": "Seminario · Apreciación del experimental: nombrar lo inasible",
+   "dia": "2026-08-22",
+   "hora": "09:00",
+   "sede": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 1",
+   "acceso": "Entrada libre con inscripción previa",
+   "duracion_min": 240,
+   "obras": [],
+   "seccion": "Formación",
+   "_src": "afiche oficial de programación (Instagram del festival, lámina 2)",
+   "_ponente": "Oswaldo Osorio"
+  },
+  {
+   "titulo": "Selección Oficial · Muestra Local",
+   "dia": "2026-08-22",
+   "hora": "16:30",
+   "sede": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
+   "acceso": "Entrada libre",
+   "seccion": "Muestra Local",
+   "obras": [
+    {
+     "titulo": "Busco casa",
+     "director": "Antonio Tabares",
+     "productor": "Salomé Quintero",
+     "sinopsis": "busco casa es una propuesta estética atreves de la cual se busca reconfigurar la idea de casa a partir de recuerdos de mi infancia, explorando visualmente la materialidad de las casas físicas y del cielo para abrir espacio a una metáfora onírica del hogar.",
+     "anio": 2026,
+     "duracion_min": 5,
+     "pais": "Colombia",
+     "_src": "hoja «Seleccionados» de la convocatoria del festival"
+    },
+    {
+     "titulo": "Cosmopoética",
+     "director": "Sofía Orozco Payares",
+     "productor": "Laura María Zapata Blanquicet",
+     "sinopsis": "Cosmopoética es un cortometraje experimental que explora la transformación y la vulnerabilidad del cambio. A partir del paralelo entre el ciclo vital de una estrella masiva y el proceso interior de una actriz que se despide del teatro, la obra propone una reflexión sobre los finales como origen de lo nuevo.",
+     "anio": 2025,
+     "duracion_min": 10,
+     "pais": "Colombia",
+     "_src": "hoja «Seleccionados» de la convocatoria del festival"
+    },
+    {
+     "titulo": "De: Saúl",
+     "director": "SANTIAGO GOMXZ",
+     "productor": "SANTIAGO GOMXZ",
+     "sinopsis": "En sus sueños, Saúl ve a una pitonisa que le dice que la única manera de liberarse de su pecado es matar al pecador. Al recordar a un ser amado, su conflicto interno lo lleva a una lucha entre el perdón y la autodestrucción.",
+     "anio": 2026,
+     "duracion_min": 4,
+     "pais": "Colombia",
+     "_src": "hoja «Seleccionados» de la convocatoria del festival"
+    },
+    {
+     "titulo": "El tiempo como un abismo",
+     "director": "Giovanny Rendón",
+     "productor": "Giovanny Rendón",
+     "sinopsis": "El tiempo como un abismo es la mirada de una cronología de involución y duda actual: olvidamos la historia para atender solo lo ambiguo y lo anacrónico. Nos desprendemos del contexto o magnificamos los hechos, incapaces de entenderlos o debatirlos. Todo lo contrario, avanzamos hacia aquello que ya creíamos superado, como si todo fuera parte del abismo.",
+     "anio": 2026,
+     "duracion_min": 8,
+     "pais": "Colombia",
+     "_src": "hoja «Seleccionados» de la convocatoria del festival"
+    },
+    {
+     "titulo": "En todo y en nada",
+     "director": "Ximena Pérez y Raquel Zapata",
+     "productor": "Ximena Pérez y Raquel",
+     "sinopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer.",
+     "anio": 2026,
+     "duracion_min": 11,
+     "pais": "Colombia",
+     "_src": "hoja «Seleccionados» de la convocatoria del festival"
+    },
+    {
+     "titulo": "Errante",
+     "director": "JOSÉ VALLEJO",
+     "productor": "JOSÉ VALLEJO",
+     "sinopsis": "Este manifiesto presenta a Errante, un ser que deambula por un Medellín invisible, creador de espacios y posibilidades. Allí donde pisa, los lugares se transforman, los no-lugares emergen y la ciudad se convierte en un mapa de su deseo. Entre la realidad y la imaginación, su recorrido desafía las lógicas que rigen el espacio urbano, construyendo una contraestética del habitar donde el cuerpo, la deriva y la imaginación se convierten en formas de resistencia.",
+     "anio": 2026,
+     "duracion_min": 6,
+     "pais": "Colombia",
+     "_src": "hoja «Seleccionados» de la convocatoria del festival"
+    },
+    {
+     "titulo": "Funeral Parade of Loves",
+     "director": "J.P. Álvarez Balanta",
+     "productor": "Ramus Spark, Akemi Lang",
+     "sinopsis": "Cuando la luna de miel de Diana se transforma en un banquete para carroñeros, su cuerpo es arrastrado a un paisaje de huesos, carne putrefacta e ilusiones de su pasado. En medio de una procesión fúnebre donde el deseo y la muerte se confunden; Diana deberá descender a las ruinas de su memoria para despojarse de quien fue y reencarnar entre los restos de aquello que alguna vez amó.",
+     "anio": 2026,
+     "duracion_min": 5,
+     "pais": "Colombia",
+     "_src": "hoja «Seleccionados» de la convocatoria del festival"
+    },
+    {
+     "titulo": "Natilla de arequipe (y otros recuerdos de Navidad)",
+     "director": "Sofía Guerra Gutiérrez",
+     "productor": "Sofía Guerra Gutiérrez",
+     "sinopsis": "Números que también son fechas, sopas y olores crocantes. La comida como excusa para encontrarse, mirarse, soñarse, extrañarse. En este video experimental quise conversar sobre la Navidad nostálgica, la que se mira desde lejos y se espera que sea diferente. Volver a ella y agradecerla. La natilla de arequipe como excusa para recordarse, cocinar y comer juntes (que nunca va a ser lo mismo que cocinar y comer sola), cuidarse, cuidarnos, acompañarse y hablarse bajito, porque las risas siempre suenan más fuerte que los villancicos.",
+     "anio": 2025,
+     "duracion_min": 5,
+     "pais": "Colombia",
+     "_src": "hoja «Seleccionados» de la convocatoria del festival"
+    },
+    {
+     "titulo": "Polanima",
+     "director": "Jerónimo Vergara (gerome)",
+     "productor": "Jerónimo Vergara (gerome)",
+     "sinopsis": "Polanima es un cortometraje de animación experimental e imagen híbrida que integra imagen live action, animación 3D de geometría low-poly, situado en el barrio Carlos E. Restrepo de Medellín. Tres personjes que convergen en una última noche entre polas y humo para su recuerdo colectivo. Lo que queda de ese encuentro es una entidad que nace de la fusión simbólica entre una botella de cerveza vacía y un alma sin género que habita el espacio donde lo efímero está presente.",
+     "anio": 2026,
+     "duracion_min": 5,
+     "pais": "Colombia",
+     "_src": "hoja «Seleccionados» de la convocatoria del festival",
+     "_verificar": "año sin confirmar: «Seleccionados» dice 2005, «SELECCIONADOS FINAL» dice 2026"
+    },
+    {
+     "titulo": "Un Mashup de Poder",
+     "director": "Andrés M. Murillo R. / Juan Pablo Ríos",
+     "productor": "Andrés M. Murillo R. / Juan Pablo Ríos",
+     "sinopsis": "“Un Mashup de Poder” es una pieza de videoarte y cine experimental que utiliza la técnica del found footage y la postproducción crítica para explorar las intersecciones entre el liderazgo político, la retórica mediática y la cultura del entretenimiento. A través de la recontextualización, la obra desarticula la relación tradicional entre la imagen de autoridad y el discurso que la sustenta, revelando los mecanismos artificiales de la construcción política contemporánea. La obra se estructura mediante la sincronización de discursos oficiales y apariciones públicas de figuras políticas prominentes con pistas de audio provenientes de películas icónicas y referentes de la cultura pop. Este ejercicio de disonancia audiovisual tiene como objetivo despojar al actor político de su gravedad institucional, exponiendo la teatralidad y el performance inherentes al ejercicio del poder. Al sustituir las palabras originales por diálogos del cine, la obra pone de relieve la permeabilidad del discurso político y la facilidad con la que este puede ser reinterpretado o manipulado. “Un Mashup de Poder” funciona como un espejo crítico que refleja la crisis de representación en la era de la posverdad, invitando al espectador a cuestionar la transparencia de la imagen y la autenticidad de los mensajes recibidos en el ecosistema mediático actual. El resultado es una experiencia híbrida que, si bien atrae inicialmente por la familiaridad de los referentes, provoca finalmente una reflexión profunda sobre la naturaleza de la autoridad, la manipulación de las masas y la fragilidad de las verdades construidas a través de la pantalla.",
+     "anio": 2026,
+     "duracion_min": 3,
+     "pais": "Colombia",
+     "_src": "hoja «Seleccionados» de la convocatoria del festival"
+    },
+    {
+     "titulo": "Reflejos del cuerpo",
+     "director": "Isabella Montoya Carvajal",
+     "productor": "Isabella Montoya Carvajal",
+     "sinopsis": "Tras una caída inesperada, una mujer exhausta se sumerge en un estado onírico donde distintos encuentros con su cuerpo y sus emociones la enfrentan a preguntas que había ignorado.",
+     "anio": 2026,
+     "duracion_min": 5,
+     "pais": "Colombia",
+     "_src": "hoja «Seleccionados» de la convocatoria del festival"
+    },
+    {
+     "titulo": "3xx3",
+     "director": "Antonio Tabares",
+     "productor": "Salomé Quintero",
+     "sinopsis": "3xx3 es una búsqueda plástica a través de imágenes archivo, explorando el ritmo y las texturas de la imagen bajo el concepto de la vida humana, pasando por las multitudes hasta las células que nos componen.",
+     "anio": 2026,
+     "duracion_min": 3,
+     "pais": "Colombia",
+     "_src": "hoja «Seleccionados» de la convocatoria del festival"
+    }
+   ],
+   "_src": "afiche oficial de programación (Instagram del festival, lámina 2)"
+  }
+ ]
+}
