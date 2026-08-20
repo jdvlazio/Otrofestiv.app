@@ -4603,6 +4603,45 @@ except Exception as _e:
     warn(check, f'no se pudo verificar poster-mirado: {_e}')
 
 
+# ── [config-esm] node --check da un VERDE FALSO ─────────────────────────────
+# src/config.js es un MÓDULO ES, y `node --check` lo analiza como script: un
+# archivo con la llave de un festival sin cerrar pasa ese chequeo y revienta en
+# el navegador. Pasó el 20 ago 2026 al resolver un merge donde las dos ramas
+# agregaban su festival en el mismo punto: la entrada de Cinemancia se quedó
+# sin `},`, CineAutopsia terminó ANIDADO dentro de ella, y la app no arrancaba
+# —splash vacío, «Uncaught SyntaxError»—. Ni validate.py ni `node --check` lo
+# vieron: el primero parsea con regex, el segundo con la gramática equivocada.
+#
+# Este lo IMPORTA de verdad y cuenta los festivales. Es la única forma de saber
+# que el archivo que carga el navegador es el que creemos.
+check = 'config-esm'
+try:
+    import subprocess as _sp9
+    _js = ("import('./src/config.js').then(m=>{const C=m.FESTIVAL_CONFIG;"
+           "const n=Object.keys(C).length;"
+           "const anid=Object.entries(C).filter(([k,v])=>Object.keys(v||{})"
+           ".some(x=>/^[a-z]+20\\d\\d$/.test(x))).map(([k])=>k);"
+           "console.log(JSON.stringify({n,anid}));})"
+           ".catch(e=>{console.log(JSON.stringify({error:String(e.message)}))})")
+    _r = _sp9.run(['node', '-e', _js], capture_output=True, text=True, timeout=30)
+    _out = [l for l in _r.stdout.splitlines() if l.strip().startswith('{')]
+    if not _out:
+        fail(check, f'src/config.js NO carga como módulo ES: {(_r.stderr or "").strip()[:120]}')
+    else:
+        import json as _j9
+        _d = _j9.loads(_out[-1])
+        if _d.get('error'):
+            fail(check, f'src/config.js NO carga como módulo ES: {_d["error"][:120]}')
+        elif _d.get('anid'):
+            fail(check, f'festival ANIDADO dentro de otro (falta un «}}» en la entrada anterior): {_d["anid"]}')
+        elif _d.get('n', 0) < 5:
+            fail(check, f'FESTIVAL_CONFIG solo tiene {_d["n"]} festivales — ¿se cerró una entrada de más?')
+        else:
+            ok(check, f'src/config.js carga como módulo ES · {_d["n"]} festivales, ninguno anidado')
+except Exception as _e:
+    warn(check, f'no se pudo verificar config-esm: {_e}')
+
+
 check = 'arquetipo-existe'
 try:
     import re as _r7

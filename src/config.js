@@ -454,12 +454,13 @@ export const FESTIVAL_CONFIG={
     // anterior marcaba las 89 funciones como gratis por igual.
     ticketing_model:'mixed',
     keyArt:'/assets/keyart/cinemancia2026.jpg',
-    // group:'test' — Cinemancia NO se publica todavía. El keyArt ya está; falta
-    // la sala en 64 de las 89 funciones y el catálogo completo (el boletín
-    // oficial declara 108 obras y tenemos 56). Quitar esta línea es el paso de
-    // publicación.
+    // group:'test' — Cinemancia NO se publica todavía. Falta el contenido de
+    // tres programas (los dos focos de Luciana Decker y el de Rajendra Gour) y
+    // las coordenadas de dos sedes. Quitar esta línea ES publicar.
     group:'test',
     tagline:'Festival de Cine del Valle de Aburrá',
+    films:null,posters:null,lbSlugs:{}
+  },
   'cineautopsia2026': {
     name:'CineAutopsia',fullName:'CineAutopsia — Festival de Cine Experimental de Bogotá',shortName:'CINEAUTOPSIA',
     city:'Bogotá',country:'CO',
