@@ -375,30 +375,50 @@
    "is_free": true
   },
   {
-   "title": "Cuartito rosa",
+   "title": "Retrospectiva Sergio Navarro Programa 1",
    "type": "film",
    "section": "📼 La sutil materia. Sergio Navarro",
-   "director": "Sergio Navarro",
    "country": "Chile",
    "flags": "🇨🇱",
-   "duration": "30 min",
+   "duration": "67 min",
    "day": "2026-09-04",
    "time": "16:00",
    "day_order": 1,
    "venue": "Biblioteca Comfama Bello Centro - Bello",
    "has_qa": false,
-   "synopsis": "Un grupo de adolescentes de una población marginal relata las diferentes aristas del ser mujer y su relación con el embarazo a temprana edad. Esta obra trata de ser un fiel retrato de ser mujer y adolescente en un estrato socioeconómico marginal de nuestro país. El documental está construido, íntegramente, por los relatos de las mujeres que forman el grupo seleccionado, cuyas edades van desde los 15 a 20 años, aproximadamente. Forman parte de un grupo donde se les ayuda a acercarse a las labores que deberán realizar al convertirse en madres, permitiéndoles intercambiar experiencias en torno al proceso previo y posterior al parto.",
-   "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/nyY00FzUlUdP5PzRyBIdOUeA7Ht.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
-   "lbSlug": "cuartito-rosa",
-   "synopsis_en": "The reality of pregnant teenagers from popular sectors, the absence of information about how to prevent pregnancy and the lack of knowledge of how their own sexuality works. Their dreams, hopes and the strength they display to assume a radical change for which neither they nor their environment are prepared.",
-   "title_en": "Cuartito Rosa",
-   "year": 1991,
-   "tmdb_id": 873367,
-   "_programa_original": "Cuartito rosa"
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Cuartito rosa",
+     "director": "Sergio Navarro",
+     "country": "Chile",
+     "flags": "🇨🇱",
+     "year": 1991,
+     "duration": "30 min",
+     "title_en": "Cuartito Rosa",
+     "synopsis_en": "The reality of pregnant teenagers from popular sectors, the absence of information about how to prevent pregnancy and the lack of knowledge of how their own sexuality works. Their dreams, hopes and the strength they display to assume a radical change for which neither they nor their environment are prepared.",
+     "poster": "https://image.tmdb.org/t/p/w500/nyY00FzUlUdP5PzRyBIdOUeA7Ht.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cuartito-rosa",
+     "tmdb_id": 873367,
+     "synopsis": "Un grupo de adolescentes de una población marginal relata las diferentes aristas del ser mujer y su relación con el embarazo a temprana edad. Esta obra trata de ser un fiel retrato de ser mujer y adolescente en un estrato socioeconómico marginal de nuestro país. El documental está construido, íntegramente, por los relatos de las mujeres que forman el grupo seleccionado, cuyas edades van desde los 15 a 20 años, aproximadamente. Forman parte de un grupo donde se les ayuda a acercarse a las labores que deberán realizar al convertirse en madres, permitiéndoles intercambiar experiencias en torno al proceso previo y posterior al parto.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Caminito al Cielo",
+     "director": "Sergio Navarro",
+     "year": 1989,
+     "duration": "37 min",
+     "title_en": "Caminito al cielo",
+     "synopsis_en": "The life of young people in the Villa Wolf sector in the town of La Pincoya at the end of the eighties.\r Work carried out thanks to the Soinde health program, Conchalí office and the La Ventana cultural center.",
+     "lbSlug": "caminito-al-cielo",
+     "tmdb_id": 615840,
+     "synopsis": "La vida de un grupo de jóvenes en la población La Pincoya, durante fines de los años ochenta",
+     "synopsis_lang": "es"
+    }
+   ]
   },
   {
    "title": "Oublie pas le gruau + Sol menor",
@@ -1127,6 +1147,20 @@
      "lbSlug": "dont-count-on-your-fingers",
      "tmdb_id": 137631,
      "synopsis": "La primera obra de Pere Portabella como director arranca con una frase: «derrotados… pero no vencidos». Puede leerse como alusión al K.O. técnico que el régimen de Franco le propinó en los sesenta a su trabajo como productor. A través de los juegos verbales, extremadamente rabiosos, del poeta catalán Joan Brossa, Portabella intenta desmontar las formas del discurso publicitario de la época.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Vampir Cuadecuc",
+     "director": "Pere Portabella",
+     "year": 1971,
+     "duration": "67 min",
+     "title_en": "Vampir Cuadecuc",
+     "synopsis_en": "An atmospheric essay, which is an alternative version of Count Dracula, a film directed by Jess Franco in 1970; a ghostly narration between fiction and reality.",
+     "poster": "https://image.tmdb.org/t/p/w500/6Ktgs4F6wfphozsi0KOgZzHeKCq.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "vampir-cuadecuc",
+     "tmdb_id": 126278,
+     "synopsis": "Un ensayo atmosférico, que viene a ser una versión alternativa de «El conde Drácula», película dirigida por Jesús Franco en 1970; una narración fantasmal entre la ficción y la realidad.",
      "synopsis_lang": "es"
     }
    ]
@@ -2145,30 +2179,50 @@
    "_programa_original": "Vive L'Amour"
   },
   {
-   "title": "Cuartito rosa",
+   "title": "Retrospectiva Sergio Navarro Programa 1",
    "type": "film",
    "section": "📼 La sutil materia. Sergio Navarro",
-   "director": "Sergio Navarro",
    "country": "Chile",
    "flags": "🇨🇱",
-   "duration": "30 min",
+   "duration": "67 min",
    "day": "2026-09-08",
    "time": "20:00",
    "day_order": 5,
    "venue": "Antimateria Libros y Café - Medellín",
    "has_qa": false,
-   "synopsis": "Un grupo de adolescentes de una población marginal relata las diferentes aristas del ser mujer y su relación con el embarazo a temprana edad. Esta obra trata de ser un fiel retrato de ser mujer y adolescente en un estrato socioeconómico marginal de nuestro país. El documental está construido, íntegramente, por los relatos de las mujeres que forman el grupo seleccionado, cuyas edades van desde los 15 a 20 años, aproximadamente. Forman parte de un grupo donde se les ayuda a acercarse a las labores que deberán realizar al convertirse en madres, permitiéndoles intercambiar experiencias en torno al proceso previo y posterior al parto.",
-   "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/nyY00FzUlUdP5PzRyBIdOUeA7Ht.jpg",
-   "posterSource": "tmdb",
    "_src": "PDF oficial de programación del festival",
    "is_free": true,
-   "lbSlug": "cuartito-rosa",
-   "synopsis_en": "The reality of pregnant teenagers from popular sectors, the absence of information about how to prevent pregnancy and the lack of knowledge of how their own sexuality works. Their dreams, hopes and the strength they display to assume a radical change for which neither they nor their environment are prepared.",
-   "title_en": "Cuartito Rosa",
-   "year": 1991,
-   "tmdb_id": 873367,
-   "_programa_original": "Cuartito rosa"
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Cuartito rosa",
+     "director": "Sergio Navarro",
+     "country": "Chile",
+     "flags": "🇨🇱",
+     "year": 1991,
+     "duration": "30 min",
+     "title_en": "Cuartito Rosa",
+     "synopsis_en": "The reality of pregnant teenagers from popular sectors, the absence of information about how to prevent pregnancy and the lack of knowledge of how their own sexuality works. Their dreams, hopes and the strength they display to assume a radical change for which neither they nor their environment are prepared.",
+     "poster": "https://image.tmdb.org/t/p/w500/nyY00FzUlUdP5PzRyBIdOUeA7Ht.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cuartito-rosa",
+     "tmdb_id": 873367,
+     "synopsis": "Un grupo de adolescentes de una población marginal relata las diferentes aristas del ser mujer y su relación con el embarazo a temprana edad. Esta obra trata de ser un fiel retrato de ser mujer y adolescente en un estrato socioeconómico marginal de nuestro país. El documental está construido, íntegramente, por los relatos de las mujeres que forman el grupo seleccionado, cuyas edades van desde los 15 a 20 años, aproximadamente. Forman parte de un grupo donde se les ayuda a acercarse a las labores que deberán realizar al convertirse en madres, permitiéndoles intercambiar experiencias en torno al proceso previo y posterior al parto.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Caminito al Cielo",
+     "director": "Sergio Navarro",
+     "year": 1989,
+     "duration": "37 min",
+     "title_en": "Caminito al cielo",
+     "synopsis_en": "The life of young people in the Villa Wolf sector in the town of La Pincoya at the end of the eighties.\r Work carried out thanks to the Soinde health program, Conchalí office and the La Ventana cultural center.",
+     "lbSlug": "caminito-al-cielo",
+     "tmdb_id": 615840,
+     "synopsis": "La vida de un grupo de jóvenes en la población La Pincoya, durante fines de los años ochenta",
+     "synopsis_lang": "es"
+    }
+   ]
   },
   {
    "title": "Seminario de la imagen con Luciana Decker",
@@ -2633,7 +2687,7 @@
    "is_free": true
   },
   {
-   "title": "El santo y el milagro + La libertad remonta el estadio + Valparaíso eterno",
+   "title": "Retrospectiva Sergio Navarro Programa 2",
    "type": "film",
    "section": "📼 La sutil materia. Sergio Navarro",
    "duration": "87 min",

@@ -173,8 +173,48 @@ def obras_en(crudo, cat):
     return out
 
 
+# ── Celdas que el lector posicional deja a medias ─────────────────────────────
+# La parrilla se lee por coordenadas porque el texto plano aplasta las columnas.
+# El precio: cuando el título de una celda pasa a una línea que cae fuera de la
+# banda de su sede, esa línea se descarta y la celda queda cortada. Se ve a ojo
+# cuando queda un «+» colgando, pero NO siempre deja rastro.
+#
+# Lo destapó el cruce contra el texto plano del mismo PDF, que sí trae la línea
+# perdida. Cada corrección se justifica sola con la aritmética del festival, y
+# NINGUNA inventa una obra: todas ya estaban en nuestro catálogo, huérfanas.
+#
+# Cuando el lector posicional aprenda a arrastrar la cola de la celda, esta
+# tabla debe quedar VACÍA — no es un parche permanente, es una deuda anotada.
+#
+# La clave lleva SEDE, no solo día y hora: el 5 SEP a las 18:00 corren dos
+# funciones en sedes distintas, y una clave sin sede pisaba las dos.
+CELDAS_TRUNCADAS = {
+    # pág. 3 y 9. El PDF en texto plano dice «Programa 1 Cuartito rosa +
+    # Caminito al Cielo». Publicábamos la función como si fuera solo «Cuartito
+    # rosa» (30'), y la duración declarada de la celda son 67' = 30' + 37',
+    # que es justo lo que dura «Caminito al Cielo» en nuestro catálogo.
+    ('2026-09-04', '16:00', 'Biblioteca Comfama Bello Centro Bello'): 'Retrospectiva Sergio Navarro Programa 1 Cuartito rosa + Caminito al Cielo',
+    ('2026-09-08', '20:00', 'Antimateria Libros y Café Medellín'): 'Retrospectiva Sergio Navarro Programa 1 Cuartito rosa + Caminito al Cielo',
+    # pág. 4. Cortado a media palabra: «Vampir Cuadec». Por eso el cruce
+    # reconocía dos obras y no tres. La hoja oficial del propio festival
+    # describe la función como «La tempestá, No contéis con los dedos y
+    # Vampir Cuadecuc y diálogo posterior».
+    ('2026-09-05', '18:00', 'Teatro Caribe Itagüí'): ('La tempestá + No contéis con los dedos + Vampir Cuadecuc '
+                              'Pere Portabella + Conversaciones Cinemancia: '
+                              '“Legado inmarcesible”. Participan Julio Lamaña y Juan Pablo Franky'),
+}
+
+
 def main():
     par = json.load(open(f'{S}/cinemancia-2026-programacion-oficial.json', encoding='utf-8'))['funciones']
+    reparadas = 0
+    for _f in par:
+        _fix = CELDAS_TRUNCADAS.get((_f['dia'], _f['hora'], _f['sede']))
+        if _fix and _fix != _f['titulo_crudo']:
+            _f['titulo_crudo'] = _fix
+            _f['_celda_reparada'] = 'cola de celda que el lector posicional descartó; recuperada del texto plano del MISMO PDF'
+            reparadas += 1
+    print(f'celdas truncadas reparadas: {reparadas}')
     of = json.load(open(f'{S}/cinemancia-2026-programas-oficial.json', encoding='utf-8'))
     cat = catalogo()
 
@@ -237,7 +277,15 @@ def main():
             if ch:
                 e['titulo'] = ch['titulo']
             elif len(halladas) > 1:
-                e['titulo'] = ' + '.join(o['title'] for o in halladas)
+                # Si la celda ARRANCA con el nombre de un programa del festival
+                # («Retrospectiva Sergio Navarro Programa 1 Cuartito rosa +
+                # Caminito al Cielo»), ese nombre manda: es como el festival la
+                # anuncia, y su hermana «…Programa 2» ya se publica así porque
+                # viene de la hoja oficial. Titularla «A + B» las dejaba como si
+                # fueran cosas distintas.
+                _prog = re.match(r'^(.*?\bPrograma\s*\d)\b', titulo_crudo, re.I)
+                e['titulo'] = (_prog.group(1).strip() if _prog
+                               else ' + '.join(o['title'] for o in halladas))
             elif hallada:
                 e['titulo'] = hallada['title']
             else:
