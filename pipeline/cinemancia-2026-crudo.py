@@ -259,6 +259,11 @@ def catalogo():
             o['country'] = _l['country']
         for campo_pub in ('synopsis_en', 'title_en', 'poster', 'posterSource', 'duration', 'country'):
             if not o.get(campo_pub) and p.get(campo_pub): o[campo_pub] = p[campo_pub]
+        # ORDEN DE PRIORIDAD — regla vieja de la casa, no una decisión de este
+        # festival: un AFICHE siempre gana a un FOTOGRAMA. Un afiche es el arte
+        # de la obra; un fotograma es un plano suyo. El fotograma entra solo
+        # cuando no hay afiche de ninguna parte.
+        # No reordenar estos cuatro bloques: `editorial` va último a propósito.
         if not o.get('poster') and o.get('poster_tmdb'):
             o['poster'], o['posterSource'] = o['poster_tmdb'], 'tmdb'
         if not o.get('poster') and AFICHES_TMDB.get(o.get('title')):
