@@ -17,6 +17,26 @@ import json, re, unicodedata, os
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 S = f'{REPO}/festivals/staging'
 
+# La parrilla del PDF mete la nota al pie DENTRO de la celda del título:
+# «Foro de la Crítica Sesión 1 Inscripción previa*», «Seminario de la imagen
+# con Luciana Decker *Inscripción previa». Eso no es el nombre de la actividad
+# — es una condición de acceso, y viajaba hasta la ficha, el plan y lo que el
+# usuario comparte. Peor: partía en dos el seminario de Luciana Decker, que son
+# TRES sesiones (9, 10 y 11 SEP, 09:00, misma sede) y parecían dos actividades
+# distintas porque una llevaba el asterisco.
+# El dato de acceso NO se pierde al limpiar: CON_INSCRIPCION ya lo deduce
+# del nombre de la actividad, y lo hacía bien desde antes de este arreglo.
+_INSCRIPCION = re.compile(r'\s*\*?\s*Inscripci[óo]n\s+previa\s*\*?\s*', re.I)
+
+
+def sin_nota_de_inscripcion(t):
+    """El título sin la nota al pie. NO decide si pide inscripción: ese hecho
+    ya tiene dueño único en CON_INSCRIPCION, que lo deduce del NOMBRE de la
+    actividad y no del asterisco — más robusto, porque el PDF marcó solo una
+    de las tres sesiones del seminario de Luciana Decker."""
+    return re.sub(r'\s+', ' ', _INSCRIPCION.sub(' ', t)).strip()
+
+
 def clave(s):
     """Clave de comparación SIN espacios. No es lib.clave(), que los conserva:
     acá se busca un título DENTRO de otro («Macho Dancer» dentro de «Macho
@@ -189,7 +209,8 @@ def main():
              '_src': 'PDF oficial de programación del festival'}
         if f.get('duracion_min'): e['duracion_min'] = f['duracion_min']
         if f.get('_hora_inferida'): e['_hora_inferida'] = True
-        e['acceso'] = acceso_de(f['sede'], f['titulo_crudo'])
+        titulo_crudo = sin_nota_de_inscripcion(f['titulo_crudo'])
+        e['acceso'] = acceso_de(f['sede'], titulo_crudo)
 
         p = busca(pases, f)
         ch = busca(charlas, f)          # un programa TAMBIÉN puede llevar debate
@@ -207,7 +228,7 @@ def main():
                 e['_charla'] = {'descripcion': ch['descripcion'], 'invitados': ch['invitados']}
         else:
             # Función simple: la obra sale del catálogo por el título crudo.
-            halladas = obras_en(f['titulo_crudo'], cat)
+            halladas = obras_en(titulo_crudo, cat)
             hallada = halladas[0] if halladas else None
             # Un PROGRAMA DOBLE se titula con las dos, unidas por «+», que es
             # como lo escribe el festival en su parrilla. Ponerle el nombre de
@@ -220,7 +241,7 @@ def main():
             elif hallada:
                 e['titulo'] = hallada['title']
             else:
-                e['titulo'] = f['titulo_crudo']
+                e['titulo'] = titulo_crudo
             e['obras'] = [obra_de(o) for o in halladas]
             if not hallada: sin_obra.append(f)
             if ch:
@@ -242,14 +263,14 @@ def main():
     # obras del pase que sí las trae valen para el otro.
     porprog = {}
     for e, f in zip(programas, par):
-        nom = re.sub(r'\s+', ' ', f['titulo_crudo']).strip()
+        nom = sin_nota_de_inscripcion(f['titulo_crudo'])
         m = re.match(r'^(.*?\bPrograma\s*\d)\b', nom, re.I)
         if not m or not e['obras']: continue
         porprog.setdefault((clave(m.group(1)), e.get('duracion_min')), e['obras'])
     heredadas = 0
     for e, f in zip(programas, par):
         if e['obras']: continue
-        nom = re.sub(r'\s+', ' ', f['titulo_crudo']).strip()
+        nom = sin_nota_de_inscripcion(f['titulo_crudo'])
         m = re.match(r'^(.*?\bPrograma\s*\d)\b', nom, re.I)
         if not m: continue
         src = porprog.get((clave(m.group(1)), e.get('duracion_min')))
