@@ -461,7 +461,7 @@ export const FESTIVAL_CONFIG={
     // group:'test' — Cinemancia NO se publica todavía. Falta el contenido de
     // tres programas (los dos focos de Luciana Decker y el de Rajendra Gour) y
     // las coordenadas de dos sedes. Quitar esta línea ES publicar.
-    // REVISIÓN LOCAL — revertir antes de commitear: group:'test',
+    group:'test',
     tagline:'Festival de Cine del Valle de Aburrá',
     films:null,posters:null,lbSlugs:{}
   },

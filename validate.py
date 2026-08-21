@@ -3688,7 +3688,7 @@ try:
         # guardián pide. Baja cuando se migre algo fuera de helpers.
         'src/view/helpers.js': 829,  # +5: la sección nunca se pinta con fill undefined — 19 ago
         'src/view/agenda.js': 2000,  # +3: el Plan no se reemplaza solo + aviso «Plan desactualizado» sin enlace — 18 ago
-        'src/main.js': 1670,  # +1: dispatcher de includeAnyway (17 ago)  # +7: el splash recuerda el festival elegido (memoria que caduca sola) (16 ago)  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
+        'src/main.js': 1699,  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
         'src/i18n/i18n.js': 1583,  # +3: av_recalcular en es/en/pt — 18 ago
         'src/controller/sheets-controller.js': 1682,  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         'src/controller/handlers.js': 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
