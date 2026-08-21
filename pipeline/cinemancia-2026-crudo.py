@@ -44,6 +44,22 @@ def clave(s):
     s = unicodedata.normalize('NFD', s or '').encode('ascii', 'ignore').decode().lower()
     return re.sub(r'[^a-z0-9]', '', s)
 
+# Afiches de TMDB hallados en una segunda búsqueda POR TÍTULO. La primera
+# pasada consultó solo las obras que ya traían tmdbId y las 11 volvieron sin
+# arte; estas tres llegaron después, con los programas que envió el festival,
+# y nunca se habían buscado.
+#
+# Verificadas contra director, año y duración antes de aceptarlas. La búsqueda
+# devolvió TAMBIÉN un «Valparaíso Eterno» con afiche, y NO es el nuestro: es de
+# 2003, alemana-chilena-austríaca, dirigida por Rosana Saavedra y Birgit
+# Foerster; el nuestro es de Sergio Navarro, 1991. Coincidir en título no es
+# coincidir en obra.
+AFICHES_TMDB = {
+    # Rajendra Gour, 1968, 23′ — coincide con nuestro dato (22′). TMDB 1004090.
+    'Sight and desire (eyes)': 'https://image.tmdb.org/t/p/w500/1k65lhMLIibhiTKXwricC9peNyb.jpg',
+}
+
+
 # Afiches ORIGINALES que envió el festival (21 AGO). No son fotogramas: son el
 # arte de la obra, con su título y sus créditos. Van como `oficial` —a sangre,
 # sin etiqueta ni título encima— y conservan su proporción: la regla de estirar
@@ -82,6 +98,16 @@ FOTOGRAMAS = {
     # incrustado — ver la nota de FOTOGRAMAS_CON_MARCA.
     'Caminito al Cielo':                  '/assets/cinemancia/caminito-al-cielo.jpg',
     'Todas las canciones del mundo':      '/assets/cinemancia/todas-las-canciones-del-mundo.jpg',
+    # Los dos de Sergio Navarro llevaban el logo de Cineteca U. de Chile arriba
+    # a la derecha, y por eso los descarté primero. Juan preguntó lo obvio: si
+    # recortando no daba. Sí da — el logo ocupa una banda superior y estas
+    # imágenes son 4:3, así que al recortar a 16:9 por DEBAJO de él se va
+    # entero y la composición se sostiene (en «Valparaíso eterno» incluso
+    # mejora: quedan los buques sobre la bahía y la ciudad abajo).
+    # No es retocar la imagen: es encuadrarla, que es lo que ya se hace con
+    # todos los fotogramas para llevarlos a 16:9.
+    'El santo y el milagro':              '/assets/cinemancia/el-santo-y-el-milagro.jpg',
+    'Valparaíso eterno':                  '/assets/cinemancia/valparaiso-eterno.jpg',
 }
 
 # El festival envió también fotogramas de «El santo y el milagro» y «Valparaíso
@@ -91,7 +117,7 @@ FOTOGRAMAS = {
 # sin afiche antes que publicar una tarjeta con la marca de un tercero.
 # Además, una de las de «El santo y el milagro» no era de esa obra: es el rótulo
 # de «Contento señor, contento», otra película de Navarro.
-FOTOGRAMAS_CON_MARCA = ('El santo y el milagro', 'Valparaíso eterno')
+# (Resuelto por recorte — ver la nota en FOTOGRAMAS.)
 
 
 # ── Los cuatro programas que el festival mandó aparte ─────────────────────────
@@ -228,6 +254,8 @@ def catalogo():
             if not o.get(campo_pub) and p.get(campo_pub): o[campo_pub] = p[campo_pub]
         if not o.get('poster') and o.get('poster_tmdb'):
             o['poster'], o['posterSource'] = o['poster_tmdb'], 'tmdb'
+        if not o.get('poster') and AFICHES_TMDB.get(o.get('title')):
+            o['poster'], o['posterSource'] = AFICHES_TMDB[o['title']], 'tmdb'
         if not o.get('poster') and AFICHES_OFICIALES.get(o.get('title')):
             o['poster'], o['posterSource'] = AFICHES_OFICIALES[o['title']], 'oficial'
             o.setdefault('_poster_src', 'afiche original enviado por el festival (21 AGO)')
@@ -481,7 +509,21 @@ def main():
         _op = OTROS_PROGRAMAS.get((f['dia'], f['hora'], f['sede']))
         if _op and otros.get(_op):
             e['titulo'] = _op
-            e['obras'] = [dict(o) for o in otros[_op]]
+            # Las obras vienen de la hoja del festival, que manda en el ORDEN y
+            # en los datos que trae. Pero hay que pasarlas por el catálogo o se
+            # quedan sin afiche ni sinopsis: la hoja no los lleva. Gana la hoja
+            # campo a campo; el catálogo solo rellena lo que ella no dice.
+            e['obras'] = []
+            for _o in otros[_op]:
+                # La hoja del festival y el catálogo no siempre escriben igual
+                # el mismo título: «Sight and desire (eyes)» contra «Sight and
+                # Desire». Si no casa, se reintenta sin el paréntesis final —
+                # sin él, esa obra se quedaba sin afiche teniéndolo el catálogo.
+                _base = (cat.get(clave(_o['title']))
+                         or cat.get(clave(re.sub(r'\s*\([^)]*\)\s*$', '', _o['title']))))
+                _d = obra_de(_base) if _base else {}
+                _d.update({k: v for k, v in _o.items() if v not in (None, '')})
+                e['obras'].append(_d)
             e['is_cortos'] = True
             e['_src'] = 'hoja «Otros programas» que envió el festival (orden de proyección)'
 
