@@ -92,9 +92,12 @@
   "_match": "Biblioteca Diego Echavarría Misas, Calle 48 # 51-34, Santa María, Itagüí — coincide con la dirección de la pág. 8 del PDF"
  },
  "Teatro Comfama Alfonso Restrepo Moreno - Medellín": {
+  "lat": 6.24575,
+  "lng": -75.56372,
   "address": "Calle 48 # 43–87, Medellín, Antioquia",
-  "_nota": "dirección del PDF oficial (pág. 8, «Salas de proyección»); faltan coordenadas",
-  "_verificar": "sin coordenadas. Nominatim solo devuelve el Auditorio Comfama de la Calle 90 (Bermejal), que es OTRO edificio. La dirección del PDF es Calle 48 # 43–87; hace falta ubicarla a mano."
+  "_prec": "centroide del Claustro Comfama San Ignacio",
+  "_match": "ficha de Google Maps que envió Juan → «Comfama San Ignacio, Cl. 48 # 43-87, La Candelaria» · Nominatim: «Comfama Claustro San Ignacio»",
+  "_nota": "MISMAS coordenadas que «La Capilla del Claustro Comfama»: son dos salas del mismo claustro (la capilla da a la Carrera 44, el teatro a la Calle 48). No es un duplicado por error — para el tiempo de traslado, que es lo que la app calcula, están a cero. Nominatim por dirección devolvía el Auditorio Comfama de la Calle 90, que es OTRO edificio; por eso estuvo sin coordenadas."
  },
  "Teatro Otraparte - Envigado": {
   "address": "Carrera 43A # 27A Sur–11, Envigado, Antioquia",
