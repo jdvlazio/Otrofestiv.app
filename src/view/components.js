@@ -386,18 +386,27 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     // Accent ámbar como charla/ponencia: las tres son la franja académica. Si Juan
     // prefiere distinguirlas, es cambiar este color y nada más.
     'taller':       {accent:'#F59E0B', headerLabel:'TALLER'},
+    // «seminario» llegó con VARTEX 14: es la misma franja académica que taller
+    // y charla, y sin entrada aquí su card mostraba el genérico EVENTO.
+    'seminario':    {accent:'#F59E0B', headerLabel:'SEMINARIO'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'ENCUENTRO'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'CINECONCIERTO'},
+    // «live cinema» llegó con VARTEX 14: actuación audiovisual en vivo, prima
+    // del cineconcierto. Se conserva la palabra del festival, no se traduce a
+    // «cineconcierto», que es de otros festivales.
+    'live cinema':  {accent:'#D85A30', headerLabel:'LIVE CINEMA'},
     'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
   };
   const _kindMapEN={
     'ponencia':     {accent:'#F59E0B', headerLabel:'TALK'},
     'charla':       {accent:'#F59E0B', headerLabel:'TALK'},
     'taller':       {accent:'#F59E0B', headerLabel:'WORKSHOP'},
+    'seminario':    {accent:'#F59E0B', headerLabel:'SEMINAR'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'MEETING'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'FILM CONCERT'},
+    'live cinema':  {accent:'#D85A30', headerLabel:'LIVE CINEMA'},
     'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
   };
   const _kindMap=_lang==='es'?_kindMapES:_kindMapEN; // PT reutiliza EN (términos internacionales)
