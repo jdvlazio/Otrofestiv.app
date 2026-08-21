@@ -2287,6 +2287,53 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar button-canon: {_e}')
 
+# ── [reload-sin-reloj] recargar borra la fecha congelada ─────────────────────
+# El 20 ago 2026 main amaneció rojo por dos tests que hacían page.reload(): la
+# recarga borra `_simTime` (vive en memoria), la app pasa a usar la fecha REAL y
+# el test queda a merced del día en que corra. T65 tardó media hora en entenderse
+# porque el síntoma engañaba —parecía roto el marcado «Ya pasó» y lo roto era la
+# premisa—. Es la única de las tres bombas de ese día que se caza LEYENDO.
+#
+# Después de recargar hay exactamente dos formas correctas:
+#   · reentrar(page, festId, simTime)  — re-elige festival y re-congela (helpers)
+#   · page.clock.install(...)          — congela el reloj del navegador, sobrevive
+#   · derivar la premisa del dato en tiempo de ejecución (lo que hace P09 hoy)
+#
+# La bomba NO es recargar: es recargar con la premisa CLAVADA. Un test que fija
+# 'ficdeh2026' o un simTime literal y después recarga queda a merced del día en
+# que corra; uno que elige el festival vigente al vuelo, no. Por eso el check
+# mira las dos cosas juntas — si solo mirara el reload, obligaría a reescribir
+# tests que ya son correctos, y un guardián que crea trabajo inútil se ignora.
+check = 'reload-sin-reloj'
+try:
+    import glob as _g6, re as _re
+    _malos = []
+    for _f in sorted(_g6.glob('tests/*.spec.js')):
+        _ls = open(_f, encoding='utf-8').read().splitlines()
+        for _i, _l in enumerate(_ls):
+            if '.reload(' not in _l:
+                continue
+            _ventana = ' '.join(_ls[_i:_i + 5])
+            if ('reentrar(' in _ventana or 'clock.install' in _ventana
+                    or 'selectFestival(' in _ventana):
+                continue
+            # clock.install ANTES del goto también vale: el reloj ya está congelado
+            _antes = _ls[max(0, _i - 45):_i]
+            if any('clock.install' in _p for _p in _antes):
+                continue
+            # ¿La premisa está clavada? Solo entonces la recarga es una bomba.
+            _fijo = any(_re.search(r"enterFestival\(page,\s*'[a-z0-9]+'", _p) for _p in _antes)
+            if not _fijo:
+                continue
+            _malos.append(f'{_f}:{_i + 1}')
+    if _malos:
+        fail(check, 'page.reload() sin re-congelar la fecha (usar reentrar() o clock.install): '
+                    + ', '.join(_malos[:5]))
+    else:
+        ok(check, 'toda recarga en tests re-congela la fecha o instala reloj')
+except Exception as _e:
+    warn(check, f'no se pudo verificar reload-sin-reloj: {_e}')
+
 # ── [aviso-color] el color de un aviso significa algo, y está decidido ────────
 # Juan, 18 ago 2026: «Plan desactualizado» salió en blanco por inercia (herencia
 # del banner de prioridades) y él preguntó lo obvio — ¿no debería ser ámbar, como

@@ -56,7 +56,9 @@ test('T26 — hora punteada abre panel de alternativas', async ({ page }) => {
   await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
-  if (!hasPlan) return;
+  // Salida MUDA: sin plan el test pasaba en verde sin ejercer una sola aserción.
+  // Un test que no corre tiene que decirlo — si no, la suite miente.
+  test.skip(!hasPlan, 'T26: sin plan activo en el festival de prueba');
   await page.locator('.mplan-t1').first().click();
   await expect(page.locator('.film-alts').first()).toBeVisible({ timeout: 5000 });
   expect(await page.locator('.film-alts').count()).toBeGreaterThan(0);
@@ -68,7 +70,8 @@ test('T27 — sugerencias: añadir no abre sheet', async ({ page }) => {
   await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
-  if (!await addBtn.count()) return;
+  // Salida MUDA: sin botón de sugerencia no se ejercía nada y daba verde.
+  test.skip(!await addBtn.count(), 'sin sugerencia disponible para agregar');
   await addBtn.click();
   await expect(page.locator('#pel-sheet.open')).toHaveCount(0, { timeout: 3000 });
 });
@@ -79,7 +82,8 @@ test('T28 — sugerencias: añadir muestra toast', async ({ page }) => {
   await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
-  if (!await addBtn.count()) return;
+  // Salida MUDA: sin botón de sugerencia no se ejercía nada y daba verde.
+  test.skip(!await addBtn.count(), 'sin sugerencia disponible para agregar');
   await addBtn.click();
   await page.waitForSelector('.toast, .toast-msg, #toast', { timeout: 5000 });
   const toast = await page.locator('.toast, .toast-msg, #toast').count();

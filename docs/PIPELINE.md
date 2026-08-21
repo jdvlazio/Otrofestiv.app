@@ -393,6 +393,21 @@ datos sin estar declarado** (así el contrato no envejece callando, que es como
 envejeció la doc), y que **ninguna excepción con fecha se venza sin que nadie
 mire**.
 
+**Y uno para los tests: `[reload-sin-reloj]`.** Dos de las tres bombas del 20 de
+agosto eran tests que hacían `page.reload()`. La recarga borra `_simTime` —vive
+en memoria—, así que la app vuelve a la fecha real y el test queda a merced del
+día en que corra. El síntoma engaña: T65 parecía un fallo del marcado «Ya pasó»
+y lo que estaba roto era su premisa.
+
+Después de recargar hay tres formas correctas: `reentrar()` (helpers, re-elige y
+re-congela), `page.clock.install()` (congela el reloj del navegador y sobrevive),
+o derivar el festival del dato en tiempo de ejecución en vez de clavarlo.
+
+El check mira **dos cosas juntas**: recarga *y* premisa clavada. Recargar no es el
+problema; recargar con `enterFestival(page, 'ficdeh2026')` escrito a mano, sí. Si
+solo mirara el reload obligaría a reescribir tests que ya son correctos — y un
+guardián que crea trabajo inútil se termina ignorando.
+
 **Decimotercero, el único ÁMBAR del repo: `[contrato-por-vencer]`.** El 20 de
 agosto de 2026 `main` amaneció rojo sin que nadie tocara nada: la excepción de
 `venue@finca-2026` vencía ese día. No hubo aviso porque **no existía la franja
