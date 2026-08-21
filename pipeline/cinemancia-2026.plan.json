@@ -119,12 +119,14 @@
    "Competencia Nuevas voces": {
     "emoji": "🌱",
     "en": "New Voices Competition",
-    "archetype": "Competencia"
+    "archetype": "Competencia",
+    "nombre": "Competencia Nuevas Voces"
    },
    "Proyecciones especiales": {
     "emoji": "✨",
     "en": "Special Screenings",
-    "archetype": "Especiales / Eventos"
+    "archetype": "Especiales / Eventos",
+    "nombre": "Proyecciones Especiales"
    },
    "Iluminaciones": {
     "emoji": "💡",
