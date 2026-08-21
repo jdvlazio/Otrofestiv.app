@@ -103,7 +103,7 @@ def catalogo():
         _l = json.load(open(f'{S}/cinemancia-2026-listado.json', encoding='utf-8'))
         for o in (_l if isinstance(_l, list) else _l.get('obras', [])):
             t = o.get('title') or o.get('titulo')
-            if t and (o.get('duration') or o.get('duracion')):
+            if t and (o.get('duration') or o.get('duracion') or o.get('country')):
                 lst[clave(t)] = o
     except FileNotFoundError:
         pass
@@ -136,6 +136,11 @@ def catalogo():
         if not o.get('duration'):
             _d = _l.get('duration') or _l.get('duracion')
             if _d: o['duration'] = f'{_d} min' if str(_d).isdigit() else str(_d)
+        # El PAÍS venía en el mismo renglón del listado —«(Dir. Affonso Uchôa,
+        # Brasil, 2026, 45’)»— para las 109 obras, y tampoco se usaba: 44 obras
+        # se publicaban sin país, que es lo que alimenta la bandera.
+        if not o.get('country') and _l.get('country'):
+            o['country'] = _l['country']
         for campo_pub in ('synopsis_en', 'title_en', 'poster', 'posterSource', 'duration', 'country'):
             if not o.get(campo_pub) and p.get(campo_pub): o[campo_pub] = p[campo_pub]
         if not o.get('poster') and o.get('poster_tmdb'):
@@ -397,6 +402,13 @@ def main():
         if not e.get('obras'):
             _k = kind_de(e.get('titulo')) or kind_de(titulo_crudo)
             if _k: e['event_kind'] = _k
+            # Una actividad sin obras no tiene de dónde sacar sinopsis: el
+            # catálogo describe películas, no foros. Pero la hoja del festival
+            # SÍ describe sus conversatorios, y esa descripción es la sinopsis
+            # de la actividad. Sin esto, la ficha de un debate salía vacía.
+            if _k and ch and ch.get('descripcion') and not e.get('sinopsis'):
+                e['sinopsis'] = ch['descripcion']
+                e['_sinopsis_src'] = 'hoja oficial del festival (conversatorios y charlas)'
         programas.append(e)
 
     # Un programa que se repite se anuncia dos veces, y la parrilla solo lista
