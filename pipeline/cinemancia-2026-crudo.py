@@ -70,13 +70,35 @@ def catalogo():
             if o.get('synopsis_web'): web[clave(o.get('title_web'))] = o['synopsis_web']
     except FileNotFoundError:
         pass
+    # DURACIÓN: manda el listado del festival, que la trae escrita en su propio
+    # texto («Disciplina (Dir. Affonso Uchôa, Brasil, 2026, 45’)»). Las 109
+    # obras la tienen. El sidecar tmdb no trae ninguna.
+    lst = {}
+    try:
+        _l = json.load(open(f'{S}/cinemancia-2026-listado.json', encoding='utf-8'))
+        for o in (_l if isinstance(_l, list) else _l.get('obras', [])):
+            t = o.get('title') or o.get('titulo')
+            if t and (o.get('duration') or o.get('duracion')):
+                lst[clave(t)] = o
+    except FileNotFoundError:
+        pass
+
     # lo que ya está PUBLICADO: último recurso, pero es donde viven los
-    # arreglos a mano que nunca volvieron al sidecar
+    # arreglos a mano que nunca volvieron al sidecar.
+    #
+    # Un CONTENEDOR no es una obra. Indexarlo aquí abrió un bucle: la función
+    # «Disciplina + Lolita en Honda» dura 106′ (lo que dice la celda), y cuando
+    # esa función se titulaba solo «Disciplina» entraba a este índice como si
+    # 106′ fuera la duración de la obra. De ahí volvía al catálogo en cada
+    # regenerado, así que el error se volvía permanente y crecía: las DOS obras
+    # del programa acababan con 106′ cada una, y el programa «sumaba» 212′.
+    # Se indexan solo las funciones que NO son contenedor.
     pub = {}
     try:
         pd = json.load(open(f'{REPO}/festivals/cinemancia-2026.json', encoding='utf-8'))
         for f in pd['films']:
-            for o in [f] + list(f.get('film_list') or []):
+            hijos = list(f.get('film_list') or [])
+            for o in ([f] if not hijos else []) + hijos:
                 if o.get('title'): pub.setdefault(clave(o['title']), o)
     except FileNotFoundError:
         pass
@@ -85,6 +107,10 @@ def catalogo():
         p = pub.get(k, {})
         o.setdefault('tmdb_id', o.get('tmdbId'))
         if not o.get('synopsis'): o['synopsis'] = web.get(k) or p.get('synopsis')
+        _l = lst.get(k) or {}
+        if not o.get('duration'):
+            _d = _l.get('duration') or _l.get('duracion')
+            if _d: o['duration'] = f'{_d} min' if str(_d).isdigit() else str(_d)
         for campo_pub in ('synopsis_en', 'title_en', 'poster', 'posterSource', 'duration', 'country'):
             if not o.get(campo_pub) and p.get(campo_pub): o[campo_pub] = p[campo_pub]
         if not o.get('poster') and o.get('poster_tmdb'):
