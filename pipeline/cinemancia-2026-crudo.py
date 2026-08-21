@@ -77,7 +77,21 @@ FOTOGRAMAS = {
     'Spot Fuera de campo 2':              '/assets/cinemancia/spot-fuera-de-campo-2.jpg',
     'Un aparato para detectar fantasmas': '/assets/cinemancia/un-aparato-para-detectar-fantasmas.jpg',
     'Ver y escuchar':                     '/assets/cinemancia/ver-y-escuchar.jpg',
+    # De la carpeta de Drive que envió el festival (21 AGO). De las cuatro obras
+    # que mandó ahí, solo estas dos vienen SIN el logo de Cineteca U. de Chile
+    # incrustado — ver la nota de FOTOGRAMAS_CON_MARCA.
+    'Caminito al Cielo':                  '/assets/cinemancia/caminito-al-cielo.jpg',
+    'Todas las canciones del mundo':      '/assets/cinemancia/todas-las-canciones-del-mundo.jpg',
 }
+
+# El festival envió también fotogramas de «El santo y el milagro» y «Valparaíso
+# eterno», y avisó que de esas obras no existe afiche. Revisé las tres imágenes
+# de cada carpeta: TODAS llevan el logo de Cineteca U. de Chile sobre la imagen,
+# porque son fotogramas de restauración del archivo que las conserva. Se quedan
+# sin afiche antes que publicar una tarjeta con la marca de un tercero.
+# Además, una de las de «El santo y el milagro» no era de esa obra: es el rótulo
+# de «Contento señor, contento», otra película de Navarro.
+FOTOGRAMAS_CON_MARCA = ('El santo y el milagro', 'Valparaíso eterno')
 
 
 # ── Los cuatro programas que el festival mandó aparte ─────────────────────────
