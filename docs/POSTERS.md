@@ -328,6 +328,74 @@ ahí el bold sintetizado mide de menos y el primer intento subestimaba hasta un
 19% («CHARLA» real da 0,739 em/carácter). Se usa 0,66 de promedio con factor de
 seguridad 1,12 — el error del estimador no es simétrico: pasarse se VE.
 
+#### Forma C — FUNCIÓN COMPARTIDA: la Escalera (21 ago 2026, Juan)
+
+Una **función compartida** (Tipo 2 del template: obras independientes que
+comparten día·hora·sede, ancladas por `_slotKey`) no tenía póster propio en
+ninguna superficie: la grilla y la lista muestran cada obra con su card, y la
+única representación de la función como unidad es el bloque de texto del
+calendario semanal. La Escalera le da forma: **los afiches de las obras,
+apilados en diagonal dentro del póster nuestro**.
+
+**Geometría** (viewBox 120×180, `u=15`, todo en pasos de 0,25u):
+
+| elemento | 2 obras | 3 obras |
+|---|---|---|
+| módulo | 4,5u × 6,75u | 4u × 6u |
+| trasero | `x=0,75u · y=3u` | `0,75 · 3` |
+| siguiente | `x=2,75u · y=3,75u` | `2 · 3,75` → `3,25 · 4,5` |
+| paso | +2u x · +0,75u y | +1,25u x · +0,75u y |
+
+Sombra dura de 0,19u bajo el delantero (la del apilado de miniaturas). Afiches
+2:3 **completos**, nunca recortados. Filete de sección, negro de marca y luz
+ámbar como en toda forma; la luz va **debajo** de los módulos.
+
+**SIN TÍTULO interno** (decisión de Juan): *«en una película con póster nunca
+vemos títulos»*. Se auditaron las cinco superficies antes de quitarlo: en lista,
+ficha, Intereses, Mi Plan y buscador el título ya vive **al lado** del póster —
+era duplicado; y en grilla y Diario **ninguna obra se nombra**, así que la
+identidad queda a un tap, igual que para cualquier película. Se conservan:
+- **la sección con su filete** — sin el título, es lo único que distingue
+  «función curada por el festival» de «póster de una película», y el separador
+  de sección de la grilla solo existe en la vista «todos los días»;
+- **el dato al pie** («2 obras · 92 min») — pasa a ser la **única declaración de
+  pluralidad** dentro del póster. Llena vacío con información, no con decoración.
+
+**LAS FRONTERAS, y de dónde salió cada una.** Las tres primeras las encontró
+Juan mirando render real, no razonando en abstracto:
+
+- **Solo Tipo 2, jamás PROGRAMAS (Tipo 3).** Las obras dentro de un programa
+  suelen tener *stills*, no afiches: Tribeca 68, Cinemancia 29, FantasoFest 18;
+  Ficmontañas y Vartex, ninguna imagen. Un still se dibuja **dentro del marco
+  editorial**, que ya es un póster propio — meterlo como módulo sería un póster
+  propio dentro de otro. Los programas conservan su afiche oficial o la forma A,
+  donde el título ES el identificador único (§6.2, con guardián propio).
+- **Solo con afiche real.** El módulo se decide con `_isEditorialPoster` (dueño
+  único del predicado): un `posterSource:'editorial'` nunca es módulo.
+- **Solo COMPLETA.** Se probó un «módulo mudo» para las funciones donde falta un
+  afiche: se leía como una sombra sucia y la tarjeta terminaba haciéndose pasar
+  por la única obra visible — con el agravante de que la obra invisible podía ser
+  la primera de la función. Falta un afiche → **sin tarjeta**, como hoy: cada
+  obra conserva su card y nada finge.
+- **2 o 3 obras.** Con 4+ habría que mostrar 3 de 6, y elegir cuáles es
+  curaduría nuestra sobre curaduría ajena — la misma objeción que mató al
+  mosaico.
+
+Cobertura medida con la regla dura: **FICDEH 18 de 63** funciones compartidas
+reciben tarjeta; las otras 45 no pierden nada (hoy tampoco la tienen).
+
+**Dueños.** La DECISIÓN vive en `slotPosterParts` (helpers.js) — clasifica los
+miembros y devuelve `null` cuando no corresponde; el DIBUJO en
+`makeSharedSlotSVG` (components.js), que solo recibe módulos ya validados.
+Devuelve **markup SVG inline**, no data-uri: lleva `<image>`, y un SVG dentro de
+`<img>` tiene prohibido cargar recursos externos — los afiches saldrían rotos.
+
+**Estado: la forma existe y está probada, sin consumidor.** Dónde vive —el
+bloque del calendario semanal, el Diario— es una decisión aparte. Y ojo con una
+regla del template al considerarlo: las obras de una función compartida se
+muestran en **cards independientes, jamás fusionadas**; fusionarlas en la grilla
+sería cambiar esa regla, no aplicar esta forma.
+
 #### Forma B — una sola imagen 16:9
 
 Idéntica a la forma A **más un campo de imagen**, y nada más:

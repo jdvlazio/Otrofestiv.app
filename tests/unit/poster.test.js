@@ -271,3 +271,41 @@ test('_edHdrSVG: sin accent cae a un color válido, nunca a "undefined"', () => 
   }
   assert.ok(H._edHdrSVG('Encuentro', '#3AAA6E').includes('fill="#3AAA6E"'), 'con accent, lo respeta');
 });
+
+// ── Póster de FUNCIÓN COMPARTIDA (Tipo 2) — las fronteras, §6.0 ──────────────
+// La forma nació de un pedido de Juan (dos afiches dentro del póster propio) y
+// se acotó tras dos hallazgos suyos mirando render real:
+//   1) un STILL no puede ser módulo: se dibuja dentro del marco editorial, que
+//      YA es un póster propio → sería un póster propio dentro de otro;
+//   2) el «módulo mudo» para los incompletos se leía como sombra sucia y la
+//      tarjeta se hacía pasar por la única obra visible.
+// De ahí la regla dura: la Escalera existe SOLO COMPLETA, y solo en Tipo 2.
+// Estos casos son las cuatro fronteras; cada uno mata una mutación distinta.
+test('slotPosterParts: solo funciones compartidas de 2-3 obras, y solo completas', () => {
+  const afiche = (title, poster) => ({ title, poster, posterSource: 'custom', duration: '90 min', section: 'Sec' });
+  const still  = (title) => ({ title, poster: '/assets/x/still.jpg', posterSource: 'editorial', duration: '20 min', section: 'Sec' });
+  const sinImg = (title) => ({ title, duration: '10 min', section: 'Sec' });
+
+  const dos = [afiche('A', 'https://image.tmdb.org/t/p/w342/a.jpg'), afiche('B', 'https://image.tmdb.org/t/p/w342/b.jpg')];
+  const tres = [...dos, afiche('C', 'https://image.tmdb.org/t/p/w342/c.jpg')];
+
+  const p2 = H.slotPosterParts(dos);
+  assert.ok(p2, 'dúo completo SÍ recibe tarjeta');
+  assert.strictEqual(p2.modules.length, 2, 'dos módulos');
+  assert.ok(p2.modules.every(Boolean), 'ningún módulo vacío: la forma es solo completa');
+  assert.ok(/<svg[^>]*viewBox="0 0 120 180"/.test(p2.svg), 'dibuja en la retícula de §6.0');
+  assert.ok(p2.dato.startsWith('2 obras'), 'el dato declara la pluralidad (única ancla de texto)');
+  assert.ok(!/#F0EDE8/.test(p2.svg), 'SIN título interno: no hay texto en blanco de título');
+
+  assert.ok(H.slotPosterParts(tres), 'trío completo SÍ');
+
+  // Fronteras: cada una devuelve null (sin tarjeta), nunca una tarjeta a medias.
+  assert.strictEqual(H.slotPosterParts([dos[0], still('S')]), null,
+    'un STILL no es afiche: sería un póster propio dentro de otro');
+  assert.strictEqual(H.slotPosterParts([dos[0], sinImg('X')]), null,
+    'incompleto → sin tarjeta (el módulo mudo murió: se leía como sombra)');
+  assert.strictEqual(H.slotPosterParts([...tres, afiche('D', 'https://image.tmdb.org/t/p/w342/d.jpg')]), null,
+    '4+ obras → sin tarjeta: mostrar 3 de 4 sería elegir por el festival');
+  assert.strictEqual(H.slotPosterParts([dos[0]]), null, 'una sola obra no es función compartida');
+  assert.strictEqual(H.slotPosterParts(null), null, 'sin miembros, nada');
+});
