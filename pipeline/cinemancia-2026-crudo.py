@@ -108,6 +108,13 @@ FOTOGRAMAS = {
     # todos los fotogramas para llevarlos a 16:9.
     'El santo y el milagro':              '/assets/cinemancia/el-santo-y-el-milagro.jpg',
     'Valparaíso eterno':                  '/assets/cinemancia/valparaiso-eterno.jpg',
+    # Las dos de la Carta Blanca. Yo las había dado por perdidas cruzándolas
+    # contra el sidecar `-web.json`, que se capturó el 9 AGO — antes de que
+    # estas obras entraran al sitio. Juan mandó las URLs y ahí estaban.
+    # Lección: un sidecar con fecha no dice qué hay HOY en la fuente.
+    'Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros':
+                                          '/assets/cinemancia/derroteros.jpg',
+    'Hiding / Esquivo':                   '/assets/cinemancia/esquivo.jpg',
 }
 
 # El festival envió también fotogramas de «El santo y el milagro» y «Valparaíso
