@@ -282,7 +282,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `rating` | string | — | 2 fest |  |
 | `premiere` | string | — | 4 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
 | `type` | string | `film` · `event` · `short` | 12 fest |  |
-| `event_kind` | string | — | 5 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
+| `event_kind` | string | — | 6 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
 | `is_cortos` | boolean | — | 14 fest | exige `film_list` Programa curado: exige film_list no vacío. |
 | `film_list` | array | — | 13 fest |  |
 | `is_programa` | boolean | — | 3 fest |  |

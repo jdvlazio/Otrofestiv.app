@@ -389,6 +389,11 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     // «seminario» llegó con VARTEX 14: es la misma franja académica que taller
     // y charla, y sin entrada aquí su card mostraba el genérico EVENTO.
     'seminario':    {accent:'#F59E0B', headerLabel:'SEMINARIO'},
+    // «foro» y «debate» llegaron con Cinemancia 2026: su Foro de la Crítica son
+    // cuatro sesiones y el debate «Todos los planos del mundo» una. Mismo ámbar
+    // de la franja académica; sin entrada aquí su card mostraba EVENTO genérico.
+    'foro':         {accent:'#F59E0B', headerLabel:'FORO'},
+    'debate':       {accent:'#F59E0B', headerLabel:'DEBATE'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'ENCUENTRO'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'CINECONCIERTO'},
@@ -403,6 +408,8 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'charla':       {accent:'#F59E0B', headerLabel:'TALK'},
     'taller':       {accent:'#F59E0B', headerLabel:'WORKSHOP'},
     'seminario':    {accent:'#F59E0B', headerLabel:'SEMINAR'},
+    'foro':         {accent:'#F59E0B', headerLabel:'FORUM'},
+    'debate':       {accent:'#F59E0B', headerLabel:'DEBATE'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'MEETING'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'FILM CONCERT'},

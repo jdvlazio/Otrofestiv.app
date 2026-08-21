@@ -231,6 +231,34 @@ CELDAS_TRUNCADAS = {
 }
 
 
+# ── Actividades que NO son proyecciones ───────────────────────────────────────
+# Se publicaban como type:'film' sin event_kind, así que la app les exigía
+# póster y las trataba como obras. Son foros, seminarios, un debate, un
+# encuentro y una charla. La palabra es la del festival, verbatim.
+#
+# OJO con lo que NO está aquí: los focos de Luciana Decker y el programa de
+# Rajendra Gour SÍ son proyecciones —les falta el contenido, que es otra
+# deuda—, y la charla de Koresky y Miccio a las 19:30 es un diálogo aparte de
+# la proyección de «The Children's Hour», que tiene su propia función a las
+# 17:30. Confundirlos habría borrado cuatro proyecciones del festival.
+KIND = (
+    (re.compile(r'^Foro de la Cr[íi]tica', re.I),           'foro'),
+    # ANCLADO al inicio: sin ancla, «…Fuera de competencia Programa 2 Teoremas
+    # sobre la mirada + Debate: Riesgos estéticos» —que es una PROYECCIÓN con
+    # debate posterior— quedaba marcada como evento y desaparecía del catálogo.
+    (re.compile(r'^Debate\b', re.I),                        'debate'),
+    (re.compile(r'^Seminario de la imagen', re.I),          'seminario'),
+    (re.compile(r'^Encuentro Internacional', re.I),         'encuentro'),
+    (re.compile(r'^Michael Koresky y Jos[ée] Miccio', re.I), 'charla'),
+)
+
+
+def kind_de(titulo):
+    for rx, k in KIND:
+        if rx.search(titulo or ''): return k
+    return None
+
+
 def main():
     par = json.load(open(f'{S}/cinemancia-2026-programacion-oficial.json', encoding='utf-8'))['funciones']
     reparadas = 0
@@ -328,6 +356,19 @@ def main():
         if secs:
             e['seccion'] = max(set(secs), key=secs.count)
         for o in e['obras']: o.pop('seccion', None)
+        # El kind se decide sobre el título FINAL: el de «Michael Koresky y José
+        # Miccio» lo pone la hoja de charlas, no la celda de la parrilla.
+        # Y NUNCA sobre algo que ya trae obras: una proyección con debate
+        # posterior sigue siendo una proyección.
+        # Se miran las DOS formas del nombre: el título final —que para la
+        # charla de Koresky y Miccio lo pone la hoja de charlas— y la celda
+        # cruda, que es donde el debate se anuncia como «Debate “Todos los
+        # planos del mundo”…». La guarda de «sin obras» es la que evita el
+        # falso positivo: una proyección con debate posterior tiene obras y
+        # sigue siendo proyección.
+        if not e.get('obras'):
+            _k = kind_de(e.get('titulo')) or kind_de(titulo_crudo)
+            if _k: e['event_kind'] = _k
         programas.append(e)
 
     # Un programa que se repite se anuncia dos veces, y la parrilla solo lista
