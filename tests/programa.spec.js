@@ -1,7 +1,7 @@
 // @ts-check
 // programa.spec.js — Tab Programa: lista, grid, filtros, posters, topbar.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival, goToPlanear } = require('./helpers');
+const { LEVIZA_SIMTIME, enterFestival, goToPlanear, reentrar } = require('./helpers');
 
 // T01 — Apóstrofe: corazón en lista agrega al watchlist
 test('T01 — apóstrofe: corazón en lista agrega al watchlist', async ({ page }) => {
@@ -667,10 +667,11 @@ test('T65 — una obra cuyas funciones pasaron dice «Ya pasó», no que no exis
   });
   expect(pasadas.length, 'FICDEH tiene obras con todas sus funciones pasadas').toBeGreaterThan(0);
 
+  // La recarga borra _simTime: hay que re-elegir festival y re-congelar la fecha,
+  // o el test queda a merced del día en que corra (ver `reentrar` en helpers).
   await page.reload();
-  await page.waitForSelector('.splash-card');
-  await page.click('#splash-enter-btn');
-  await page.waitForTimeout(2500);
+  await reentrar(page, 'ficdeh2026', '2026-08-18T20:00');
+  await page.waitForTimeout(1200);
   await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
   await page.waitForTimeout(400);
   await page.click('#mnav-seleccion');

@@ -3681,7 +3681,7 @@ try:
         # _buildPosterV16) y el dueño del color de sección. Entra a la lista con la
         # razón escrita, que es lo que este guardián pide, en vez de seguir
         # recortando comentarios que explican POR QUÉ el código es así.
-        'src/view/components.js': 804,  # +4: el gris de sección muere en el dueño — 19 ago
+        'src/view/components.js': 813,  # +9: «seminario» y «live cinema» entran al vocabulario de actividades (VARTEX 14) — 20 ago
         # helpers.js estaba EXACTAMENTE en 800 antes del rediseño de pósters
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
