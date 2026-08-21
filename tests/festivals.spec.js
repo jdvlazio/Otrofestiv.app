@@ -196,6 +196,13 @@ test('T39 — todos los festivales cargan sin crash', async ({ page }) => {
   const festIds = await page.evaluate(() =>
     Object.keys(FESTIVAL_CONFIG).filter(k => k !== 'default')
   );
+  // El costo de este test CRECE con cada festival: los carga todos en serie.
+  // Con 14 festivales y 2.2 MB de JSON tarda ~17s en local, y el presupuesto fijo
+  // de 30s se agotó en CI al entrar el festival nº14 — no por un defecto suyo,
+  // sino porque el techo no acompañaba al catálogo. El presupuesto se deriva del
+  // número de festivales para que el próximo onboarding no vuelva a chocarlo.
+  test.setTimeout(20000 + festIds.length * 5000);
+
   for (const id of festIds) {
     await page.evaluate((fid) => loadFestival(fid), id);
     await page.waitForFunction(() => typeof FILMS !== 'undefined' && FILMS.length > 0, { timeout: 8000 });
