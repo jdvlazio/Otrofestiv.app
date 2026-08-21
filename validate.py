@@ -3495,10 +3495,30 @@ except Exception as _e:
 # NO se auto-deriva (multisala: misma hora+sede puede ser otra sala = otra
 # función) → el guardián OBLIGA a decidir contra el programa oficial: declarar el
 # flag, o anotar el slot como funciones separadas en _SEPARATE.
+# _festivalesVivos — quiénes están activos o por venir, DERIVADO de las fechas.
+# Antes cada guardián llevaba su propia lista `_ACTIVE` escrita a mano, y esas
+# listas envejecían calladas: al 20 ago 2026, [slots-sin-decidir] vigilaba a
+# finca-2026 (cerrado el 19) y [activity-duration] a dos festivales cerrados en
+# JULIO — verdes los dos, sin mirar CineAutopsia ni Vartex, que sí estaban vivos.
+# El propio repo ya lo había escrito 800 líneas arriba: «un guardián con lista
+# manual no es un guardián: es una foto que envejece». Esto lo hace una sola vez.
+def _festivalesVivos():
+    import re as _r2, datetime as _d2, glob as _g3
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    # Fecha de Colombia, no del runner (misma regla que el resto del repo).
+    _hoy = (_d2.datetime.utcnow() - _d2.timedelta(hours=5)).date().isoformat()
+    _vivos = []
+    for _fid, _end in _r2.findall(r"'([a-z0-9]+)':\s*\{.*?festivalEndStr:\s*'(\d{4}-\d{2}-\d{2})", _cfg, _r2.S):
+        if _end >= _hoy:
+            _vivos.append(_r2.sub(r'([a-zA-Z]+)(\d+)$', r'\1-\2', _fid))
+    if not _vivos:   # entre temporadas: revisar el más reciente igual
+        _vivos = [_g3.os.path.basename(_p)[:-5] for _p in sorted(_g3.glob('festivals/*.json'))[-1:]]
+    return sorted(_vivos)
+
 check = 'slots-sin-decidir'
 try:
     import json as _json
-    _ACTIVE = ['finca-2026']   # activos/próximos hoy (mismo roster que activity-duration)
+    _ACTIVE = _festivalesVivos()   # derivado de las fechas, no escrito a mano
     # (festival, 'dia|hora|sede') REVISADOS contra el programa oficial y confirmados
     # como funciones SEPARADAS (p.ej. actividades paralelas en espacios distintos).
     _SEPARATE = set()
@@ -3536,7 +3556,7 @@ except Exception as _e:
 check = 'activity-duration'
 try:
     import json as _json
-    _ACTIVE = ['tercertiempo-2026', 'fantasofest-2026']   # activos/próximos hoy
+    _ACTIVE = _festivalesVivos()   # derivado de las fechas, no escrito a mano
     # (festival_file, título) cuyo dato de duración la organización NO publicó.
     # Al recibir el minutaje real: llenar el JSON y BORRAR la línea de aquí.
     _PENDING = {
