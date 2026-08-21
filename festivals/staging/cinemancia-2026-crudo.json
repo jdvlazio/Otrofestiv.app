@@ -34,6 +34,8 @@
      "anio": 2026,
      "sinopsis": "Lamentos de un balcón es un cortometraje experimental colombiano dirigido por el realizador Hans Chispas. La producción vio la luz en el año 2026 y posee una duración exacta de 4 minutos.",
      "title_en": "Lamentos de un balcón",
+     "poster": "/assets/cinemancia/lamentos-de-un-balcon.jpg",
+     "posterSource": "oficial",
      "tmdb_id": 1744098,
      "lbSlug": "lamentos-de-un-balcon",
      "duracion_min": 4
@@ -302,11 +304,55 @@
    "dia": "2026-09-04",
    "hora": "19:00",
    "sede": "Antimateria Libros y Café Medellín",
-   "_src": "PDF oficial de programación del festival",
+   "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
    "duracion_min": 82,
    "acceso": "Entrada libre",
-   "titulo": "Foco Alquimia de la luz: Luciana Decker",
-   "obras": []
+   "titulo": "Alquimia de la luz el cine de Luciana Decker",
+   "obras": [
+    {
+     "title": "Larama",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2020,
+     "duration": 8
+    },
+    {
+     "title": "Lo que los humanos ven como sangre los jaguares ven como chicha",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2023,
+     "duration": 30
+    },
+    {
+     "title": "Objetos parlantes",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2021,
+     "duration": 10
+    },
+    {
+     "title": "Puro andar",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2025,
+     "duration": 12
+    },
+    {
+     "title": "Spoils",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2023,
+     "duration": 7
+    },
+    {
+     "title": "Trizas",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2026,
+     "duration": 15
+    }
+   ],
+   "is_cortos": true
   },
   {
    "dia": "2026-09-04",
@@ -737,7 +783,7 @@
    "hora": "18:00",
    "sede": "Teatro Caribe Itagüí",
    "_src": "hoja oficial del festival (conversatorios y charlas)",
-   "duracion_min": 80,
+   "duracion_min": 99,
    "acceso": "Entrada libre",
    "titulo": "Pere Portabella: legado inmarcesible",
    "obras": [
@@ -788,7 +834,8 @@
     "descripcion": "Proyección de L*a tempestá*, No contéis con los dedos y Vampir Cuadecuc y diálogo posterior.",
     "invitados": "Julio Lamaña, Juan Pablo Franky"
    },
-   "seccion": "Iluminaciones"
+   "seccion": "Iluminaciones",
+   "_duracion_src": "confirmada por el festival (21 AGO)"
   },
   {
    "dia": "2026-09-05",
@@ -1430,15 +1477,59 @@
    "dia": "2026-09-08",
    "hora": "15:00",
    "sede": "La Capilla del Claustro Comfama Medellín",
-   "_src": "hoja oficial del festival (conversatorios y charlas)",
+   "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
    "duracion_min": 82,
    "acceso": "Entrada libre",
-   "titulo": "Luciana Decker Orozco: Alquimia de la luz",
-   "obras": [],
+   "titulo": "Alquimia de la luz el cine de Luciana Decker",
+   "obras": [
+    {
+     "title": "Larama",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2020,
+     "duration": 8
+    },
+    {
+     "title": "Lo que los humanos ven como sangre los jaguares ven como chicha",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2023,
+     "duration": 30
+    },
+    {
+     "title": "Objetos parlantes",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2021,
+     "duration": 10
+    },
+    {
+     "title": "Puro andar",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2025,
+     "duration": 12
+    },
+    {
+     "title": "Spoils",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2023,
+     "duration": 7
+    },
+    {
+     "title": "Trizas",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2026,
+     "duration": 15
+    }
+   ],
    "_charla": {
     "descripcion": "Proyección de cortometrajes de Luciana Decker Orozco y charla posterior.",
     "invitados": "Luciana Decker Orozco, Elena Acosta. Modera Paula Díaz"
-   }
+   },
+   "is_cortos": true
   },
   {
    "dia": "2026-09-08",
@@ -1782,11 +1873,34 @@
    "dia": "2026-09-09",
    "hora": "16:00",
    "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
-   "_src": "PDF oficial de programación del festival",
+   "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
    "duracion_min": 55,
    "acceso": "Entrada libre",
-   "titulo": "Foco Alquimia de la luz: Luciana Decker",
-   "obras": []
+   "titulo": "Carta Blanca Luciana Decker",
+   "obras": [
+    {
+     "title": "Derroteros. Derroteros. Derroteros. Derroteros. Derroteros. Derroteros. Derroteros.",
+     "director": "Esteban Prudencio",
+     "country": "Bolvia, Cuba",
+     "year": 2026,
+     "duration": 19
+    },
+    {
+     "title": "Esquivo",
+     "director": "Fatmeh Villalba",
+     "country": "Bolivia, Alemania",
+     "year": 2026,
+     "duration": 30
+    },
+    {
+     "title": "Jakawisa",
+     "director": "Delia Yujra Chura",
+     "country": "Bolivia",
+     "year": 2020,
+     "duration": 6
+    }
+   ],
+   "is_cortos": true
   },
   {
    "dia": "2026-09-09",
@@ -2001,6 +2115,8 @@
      "anio": 2025,
      "sinopsis": "En 1964, el poeta Joseph Brodsky, de veinticuatro años, fue juzgado por lo que el régimen soviético llamaba «parasitismo social» y condenado a cinco años de trabajos forzados en el extremo norte de Rusia. La periodista Frida Vigdórova asistió al juicio y tomó notas a escondidas, pese a la prohibición del juez. Su relato circuló por la URSS y por Occidente, y movilizó a la intelectualidad hasta lograr la liberación de Brodsky tras dieciocho meses. A partir de ese documento, la película vuelve sobre un episodio histórico que resuena con fuerza en el presente.",
      "title_en": "Procès d'un jeune poète",
+     "poster": "/assets/cinemancia/juicio-a-un-joven-poeta.jpg",
+     "posterSource": "oficial",
      "tmdb_id": 1563010,
      "lbSlug": "proces-dun-jeune-poete",
      "duracion_min": 60
@@ -2027,6 +2143,8 @@
      "sinopsis": "Durante la pandemia de covid-19, Sophie Sherman filma a sus parientes confinados entre Francia, Bélgica e Inglaterra. Marcada por un nacimiento y una muerte, se detiene en los gestos de cuidado, en el contacto humano y en la gracia y la fragilidad de los momentos compartidos.",
      "synopsis_en": "During the COVID-19 pandemic, Sophie Sherman films her relatives confined between France, Belgium, and England. Marked by a birth and a death, she focuses on acts of care, human contact, and the grace and fragility of shared moments.",
      "title_en": "Hold My Hand",
+     "poster": "/assets/cinemancia/hold-my-hand.jpg",
+     "posterSource": "oficial",
      "tmdb_id": 1635753,
      "lbSlug": "hold-my-hand-2",
      "duracion_min": 17
@@ -2274,9 +2392,17 @@
      "tmdb_id": 1593571,
      "lbSlug": "a-ghost-detecting-device",
      "duracion_min": 18
+    },
+    {
+     "title": "Ya se ven los tigres en la lluvia",
+     "director": "Oscar Ruiz Navia",
+     "country": "Colombia, Canadá",
+     "year": 2025,
+     "duration": 16
     }
    ],
-   "seccion": "Programa 1. El espesor de las formas"
+   "seccion": "Programa 1. El espesor de las formas",
+   "_obras_src": "obra que faltaba, enviada por el festival (21 AGO)"
   },
   {
    "dia": "2026-09-10",
@@ -2802,11 +2928,48 @@
    "dia": "2026-09-11",
    "hora": "17:00",
    "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
-   "_src": "PDF oficial de programación del festival",
+   "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
    "duracion_min": 71,
    "acceso": "Entrada libre",
    "titulo": "Programa de cortometrajes Rajenda Gour",
-   "obras": []
+   "obras": [
+    {
+     "title": "Eyes",
+     "director": "Rajendra Gour",
+     "country": "Singapur",
+     "year": 1967,
+     "duration": 5
+    },
+    {
+     "title": "Labour of love: The Housewife",
+     "director": "Rajendra Gour",
+     "country": "Singapur",
+     "year": 1978,
+     "duration": 19
+    },
+    {
+     "title": "My child, My child",
+     "director": "Rajendra Gour",
+     "country": "Singapur",
+     "year": 1979,
+     "duration": 12
+    },
+    {
+     "title": "Sight and desire (eyes)",
+     "director": "Rajendra Gour",
+     "country": "Singapur",
+     "year": 1968,
+     "duration": 22
+    },
+    {
+     "title": "Sunshine Singapur",
+     "director": "Rajendra Gour",
+     "country": "Singapur",
+     "year": 1972,
+     "duration": 7
+    }
+   ],
+   "is_cortos": true
   },
   {
    "dia": "2026-09-11",
@@ -2905,6 +3068,8 @@
      "anio": 2025,
      "sinopsis": "En 1964, el poeta Joseph Brodsky, de veinticuatro años, fue juzgado por lo que el régimen soviético llamaba «parasitismo social» y condenado a cinco años de trabajos forzados en el extremo norte de Rusia. La periodista Frida Vigdórova asistió al juicio y tomó notas a escondidas, pese a la prohibición del juez. Su relato circuló por la URSS y por Occidente, y movilizó a la intelectualidad hasta lograr la liberación de Brodsky tras dieciocho meses. A partir de ese documento, la película vuelve sobre un episodio histórico que resuena con fuerza en el presente.",
      "title_en": "Procès d'un jeune poète",
+     "poster": "/assets/cinemancia/juicio-a-un-joven-poeta.jpg",
+     "posterSource": "oficial",
      "tmdb_id": 1563010,
      "lbSlug": "proces-dun-jeune-poete",
      "duracion_min": 60
@@ -2931,6 +3096,8 @@
      "sinopsis": "Durante la pandemia de covid-19, Sophie Sherman filma a sus parientes confinados entre Francia, Bélgica e Inglaterra. Marcada por un nacimiento y una muerte, se detiene en los gestos de cuidado, en el contacto humano y en la gracia y la fragilidad de los momentos compartidos.",
      "synopsis_en": "During the COVID-19 pandemic, Sophie Sherman films her relatives confined between France, Belgium, and England. Marked by a birth and a death, she focuses on acts of care, human contact, and the grace and fragility of shared moments.",
      "title_en": "Hold My Hand",
+     "poster": "/assets/cinemancia/hold-my-hand.jpg",
+     "posterSource": "oficial",
      "tmdb_id": 1635753,
      "lbSlug": "hold-my-hand-2",
      "duracion_min": 17

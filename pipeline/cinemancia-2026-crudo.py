@@ -44,6 +44,17 @@ def clave(s):
     s = unicodedata.normalize('NFD', s or '').encode('ascii', 'ignore').decode().lower()
     return re.sub(r'[^a-z0-9]', '', s)
 
+# Afiches ORIGINALES que envió el festival (21 AGO). No son fotogramas: son el
+# arte de la obra, con su título y sus créditos. Van como `oficial` —a sangre,
+# sin etiqueta ni título encima— y conservan su proporción: la regla de estirar
+# a 2:3 es del keyArt del splash, no de los pósters.
+AFICHES_OFICIALES = {
+    'Lamentos de un balcón':                            '/assets/cinemancia/lamentos-de-un-balcon.jpg',
+    'Hold My Hand':                                     '/assets/cinemancia/hold-my-hand.jpg',
+    "Procès d'un jeune poète / Juicio a un joven poeta": '/assets/cinemancia/juicio-a-un-joven-poeta.jpg',
+}
+
+
 # ── Fotogramas oficiales del festival ─────────────────────────────────────────
 # TMDB no sirve para estas obras: se consultaron las 11 que tenían tmdbId y las
 # 11 devolvieron poster_path vacío. No es un fallo de la consulta —se verificó
@@ -66,6 +77,64 @@ FOTOGRAMAS = {
     'Spot Fuera de campo 2':              '/assets/cinemancia/spot-fuera-de-campo-2.jpg',
     'Un aparato para detectar fantasmas': '/assets/cinemancia/un-aparato-para-detectar-fantasmas.jpg',
     'Ver y escuchar':                     '/assets/cinemancia/ver-y-escuchar.jpg',
+}
+
+
+# ── Los cuatro programas que el festival mandó aparte ─────────────────────────
+# La parrilla los anuncia por su nombre y NO lista su contenido, así que estas
+# cuatro funciones se publicaban vacías. El festival envió el orden exacto en
+# una hoja aparte (21 AGO), y de ahí sale
+# `cinemancia-2026-otros-programas.json`.
+#
+# El hallazgo: la función de 55′ del miércoles 9 NO es un foco de Decker, como
+# la titula la parrilla, sino su CARTA BLANCA — tres obras de otros directores
+# que ella curó. El festival ya tiene sección «🃏 Carta blanca» y la parrilla
+# la llamaba igual que los focos. Las duraciones lo confirman solas: los focos
+# suman 82′ (las seis obras de Decker) y la carta blanca 55′ (19+30+6).
+#
+# Clave con SEDE: el viernes 4 a las 19:00 corren TRES funciones distintas.
+OTROS_PROGRAMAS = {
+    ('2026-09-04', '19:00', 'Antimateria Libros y Café Medellín'):
+        'Alquimia de la luz el cine de Luciana Decker',
+    ('2026-09-08', '15:00', 'La Capilla del Claustro Comfama Medellín'):
+        'Alquimia de la luz el cine de Luciana Decker',
+    ('2026-09-09', '16:00', 'Centro Colombo Americano Sede centro sala 2 Medellín'):
+        'Carta Blanca Luciana Decker',
+    ('2026-09-11', '17:00', 'Centro Colombo Americano Sede centro sala 2 Medellín'):
+        'Programa de cortometrajes Rajenda Gour',
+}
+
+
+def otros_programas():
+    """{nombre de programa: [obras en el orden del festival]}."""
+    try:
+        d = json.load(open(f'{S}/cinemancia-2026-otros-programas.json', encoding='utf-8'))
+    except FileNotFoundError:
+        return {}
+    return {p['programa']: p['obras'] for p in d.get('programas', [])}
+
+
+# ── Correcciones que confirmó el festival (21 AGO) ────────────────────────────
+# Las levantó nuestra propia auditoría de duraciones: un programa cuya suma no
+# cuadra con lo declarado es un programa al que le falta algo, o cuyo número
+# está mal. Se le preguntó al festival y contestó las dos.
+#
+# 1) «Pere Portabella: legado inmarcesible» — la parrilla decía 80′ y sus tres
+#    obras suman 99′. El festival: la correcta es 99. (El otro pase de las
+#    mismas tres ya declaraba 99′, que fue lo que nos hizo dudar.)
+DURACION_CORREGIDA = {
+    ('2026-09-05', '18:00', 'Teatro Caribe Itagüí'): 99,
+}
+
+# 2) «Fuera de competencia programa 1» — declaraba 88′ y sus obras sumaban 74′.
+#    Faltaba una, y el festival la mandó. Sus cinco duraciones suman 90′; los
+#    dos minutos de diferencia con los 88′ de la parrilla son de su propio
+#    dato y no se tocan.
+OBRAS_AÑADIDAS = {
+    ('2026-09-10', '16:00', 'Centro Colombo Americano Sede centro sala 1 Medellín'): [
+        {'title': 'Ya se ven los tigres en la lluvia', 'director': 'Oscar Ruiz Navia',
+         'country': 'Colombia, Canadá', 'year': 2025, 'duration': 16},
+    ],
 }
 
 
@@ -145,6 +214,9 @@ def catalogo():
             if not o.get(campo_pub) and p.get(campo_pub): o[campo_pub] = p[campo_pub]
         if not o.get('poster') and o.get('poster_tmdb'):
             o['poster'], o['posterSource'] = o['poster_tmdb'], 'tmdb'
+        if not o.get('poster') and AFICHES_OFICIALES.get(o.get('title')):
+            o['poster'], o['posterSource'] = AFICHES_OFICIALES[o['title']], 'oficial'
+            o.setdefault('_poster_src', 'afiche original enviado por el festival (21 AGO)')
         if not o.get('poster') and FOTOGRAMAS.get(o.get('title')):
             o['poster'], o['posterSource'] = FOTOGRAMAS[o['title']], 'editorial'
             o.setdefault('_poster_src', 'fotograma de la ficha oficial del festival')
@@ -330,6 +402,7 @@ def main():
             if cs.startswith(sede[:12]) or sede.startswith(cs[:12]): return v
         return None
 
+    otros = otros_programas()
     programas, sin_obra = [], []
     for f in par:
         e = {'dia': f['dia'], 'hora': f['hora'], 'sede': f['sede'],
@@ -389,6 +462,24 @@ def main():
         if secs:
             e['seccion'] = max(set(secs), key=secs.count)
         for o in e['obras']: o.pop('seccion', None)
+        # Los cuatro programas que el festival envió aparte: su contenido manda
+        # sobre lo que dedujo el cruce, y su nombre sobre el de la parrilla.
+        _op = OTROS_PROGRAMAS.get((f['dia'], f['hora'], f['sede']))
+        if _op and otros.get(_op):
+            e['titulo'] = _op
+            e['obras'] = [dict(o) for o in otros[_op]]
+            e['is_cortos'] = True
+            e['_src'] = 'hoja «Otros programas» que envió el festival (orden de proyección)'
+
+        _k2 = (f['dia'], f['hora'], f['sede'])
+        if _k2 in DURACION_CORREGIDA:
+            e['duracion_min'] = DURACION_CORREGIDA[_k2]
+            e['_duracion_src'] = 'confirmada por el festival (21 AGO)'
+        for _extra in OBRAS_AÑADIDAS.get(_k2, []):
+            if not any((o.get('title') or o.get('titulo')) == _extra['title'] for o in e.get('obras') or []):
+                e.setdefault('obras', []).append(dict(_extra))
+                e['_obras_src'] = 'obra que faltaba, enviada por el festival (21 AGO)'
+
         # El kind se decide sobre el título FINAL: el de «Michael Koresky y José
         # Miccio» lo pone la hoja de charlas, no la celda de la parrilla.
         # Y NUNCA sobre algo que ya trae obras: una proyección con debate
