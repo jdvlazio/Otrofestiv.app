@@ -533,7 +533,13 @@ def main():
             e['_duracion_src'] = 'confirmada por el festival (21 AGO)'
         for _extra in OBRAS_AÑADIDAS.get(_k2, []):
             if not any((o.get('title') or o.get('titulo')) == _extra['title'] for o in e.get('obras') or []):
-                e.setdefault('obras', []).append(dict(_extra))
+                # Por el catálogo, o entra sin sinopsis ni afiche aunque los
+                # tengamos — el mismo descuido que tuvieron las obras de los
+                # programas que envió el festival.
+                _b = cat.get(clave(_extra['title']))
+                _dd = obra_de(_b) if _b else {}
+                _dd.update({k: v for k, v in _extra.items() if v not in (None, '')})
+                e.setdefault('obras', []).append(_dd)
                 e['_obras_src'] = 'obra que faltaba, enviada por el festival (21 AGO)'
 
         # El kind se decide sobre el título FINAL: el de «Michael Koresky y José

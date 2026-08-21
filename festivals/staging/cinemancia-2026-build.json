@@ -3161,8 +3161,8 @@
    "title": "Fuera de competencia programa 1",
    "type": "film",
    "section": "🔺 Programa 1. El espesor de las formas",
-   "country": "Colombia, Canadá",
-   "flags": "🇨🇴🇨🇦",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "88 min",
    "day": "2026-09-10",
    "time": "16:00",
@@ -3240,15 +3240,18 @@
     {
      "title": "Ya se ven los tigres en la lluvia",
      "director": "Oscar Ruiz Navia",
-     "country": "Colombia, Canadá",
-     "flags": "🇨🇴🇨🇦",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
-     "duration": 16,
-     "poster": "https://image.tmdb.org/t/p/w500/sB4dBAGzUomRRZ0CcJdcIqqeCCf.jpg",
-     "lbSlug": "tigers-can-be-seen-in-the-rain",
-     "synopsis_en": "Drifting between moving-image formats and collaging local textures and bygone voices, Oscar Ruiz Navia’s film reflects on loss and mourning as experiences of temporal dislocation.",
+     "duration": "15 min",
      "title_en": "Tigers Can Be Seen In The Rain",
-     "posterSource": "tmdb"
+     "synopsis_en": "Drifting between moving-image formats and collaging local textures and bygone voices, Oscar Ruiz Navia’s film reflects on loss and mourning as experiences of temporal dislocation.",
+     "poster": "https://image.tmdb.org/t/p/w500/sB4dBAGzUomRRZ0CcJdcIqqeCCf.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "tigers-can-be-seen-in-the-rain",
+     "tmdb_id": 1526866,
+     "synopsis": "Entre formatos de imagen en movimiento, texturas locales y voces de otro tiempo, Óscar Ruiz Navia piensa la pérdida y el duelo como experiencias de dislocación temporal.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -3879,7 +3882,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/4LkplijLlt9si9OYjAqXjBvxGKB.jpg",
      "posterSource": "tmdb",
      "lbSlug": "eyes-1967",
-     "tmdb_id": 912349
+     "tmdb_id": 912349,
+     "synopsis": "Un filme experimental sobre el dolor y el sufrimiento que provoca en el mundo la falta de entendimiento entre los seres humanos, mirado todo a través de los «ojos» de la gente.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Labour of Love: The Housewife",
@@ -3893,7 +3898,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/9z2o8eYpRHttKX8ZDhYgyReXXZY.jpg",
      "posterSource": "tmdb",
      "lbSlug": "labour-of-love-the-housewife",
-     "tmdb_id": 1004085
+     "tmdb_id": 1004085,
+     "synopsis": "Un retrato del lugar de la mujer asiática dentro de la casa y la familia: el trabajo sin término que sostiene un hogar y cuida de los suyos. Una mirada temprana y feminista al valor económico de un trabajo que la sociedad da por descontado. Restaurado en 2K en 2022 a partir de la única copia en 16 mm que sobrevive en el Asian Film Archive.",
+     "synopsis_lang": "es"
     },
     {
      "title": "My Child, My Child",
@@ -3907,7 +3914,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/e3lSvyAjbBh2uTLIWjxsdI9KBXZ.jpg",
      "posterSource": "tmdb",
      "lbSlug": "my-child-my-child",
-     "tmdb_id": 912351
+     "tmdb_id": 912351,
+     "synopsis": "Una mujer piensa en voz alta sobre quién es y sobre su papel de madre. En el recuento aparecen su amor, lo que ha sacrificado por sus hijos y los muchos recuerdos felices que guarda de ellos.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Sight and Desire",
@@ -3921,7 +3930,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/1k65lhMLIibhiTKXwricC9peNyb.jpg",
      "posterSource": "tmdb",
      "lbSlug": "sight-and-desire",
-     "tmdb_id": 1004090
+     "tmdb_id": 1004090,
+     "synopsis": "Un filme experimental sobre el acto de percibir, y sobre los límites y las posibilidades de la visión. Con un narrador omnisciente y un imaginario deslumbrante, indaga qué significa «ver» y hasta dónde alcanzan de verdad nuestros ojos. Restaurado en 2K en 2021 a partir de la única copia en 16 mm que sobrevive en el Asian Film Archive.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Sunshine Singapur",
@@ -3935,7 +3946,9 @@
      "poster": "https://image.tmdb.org/t/p/w500/rnAfEaeVpYXLjVouHCxA9cxUzbW.jpg",
      "posterSource": "tmdb",
      "lbSlug": "sunshine-singapore",
-     "tmdb_id": 701268
+     "tmdb_id": 701268,
+     "synopsis": "Imágenes de un Singapur onírico y encendido de los años setenta, montadas sobre una música que lleva al espectador de lo lánguido y exótico a lo abiertamente eufórico, y que encarna las contradicciones de un país al borde de la modernidad. Lejos de la distancia del archivo en blanco y negro, Gour imagina con esperanza el Singapur de entonces y no disimula su enamoramiento juguetón de la ciudad. Restaurado en 4K en 2018 a partir de la copia en 16 mm que conserva el Asian Film Archive.",
+     "synopsis_lang": "es"
     }
    ]
   },
