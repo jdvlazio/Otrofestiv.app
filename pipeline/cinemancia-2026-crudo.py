@@ -171,6 +171,10 @@ def otros_programas():
 #    mismas tres ya declaraba 99′, que fue lo que nos hizo dudar.)
 DURACION_CORREGIDA = {
     ('2026-09-05', '18:00', 'Teatro Caribe Itagüí'): 99,
+    # «Competencia de cortometrajes Programa 3»: el pase del viernes 11 decía
+    # 67′ y el del domingo 6, con las MISMAS cinco obras, 85′. El festival
+    # confirma que lo correcto son 85 y que los dos pases duran igual.
+    ('2026-09-11', '18:00', 'Teatro Caribe Itagüí'): 85,
 }
 
 # 2) «Fuera de competencia programa 1» — declaraba 88′ y sus obras sumaban 74′.
@@ -320,6 +324,24 @@ CON_INSCRIPCION = re.compile(r'Foro de la [Cc]r[íi]tica|C[áa]psula de Proyecto
                              r'Seminario de la imagen|Laboratorio Internacional de Montaje')
 
 
+# ── Lo que el festival pidió NO publicar ──────────────────────────────────────
+# Al pedirles la descripción de estas actividades, la respuesta fue otra: que
+# NINGUNA salga en la programación. «Todas son de inscripción previa y no
+# abiertas al público» (Cinemancia, 21 AGO). Publicar una actividad cerrada le
+# ofrece al usuario un plan al que no puede entrar.
+#
+# La lista que nombraron —seminario de la imagen, foro de la crítica, cápsula
+# de proyectos y laboratorio de edición de sonido— es EXACTAMENTE la misma que
+# ya vivía en CON_INSCRIPCION, sacada de la nota de boletería de su PDF. Así
+# que se reutiliza ese predicado en vez de escribir una segunda lista: un solo
+# dueño del hecho «esto pide inscripción».
+#
+# De las cuatro, hoy solo aparecen en la parrilla el Foro (4 sesiones) y el
+# Seminario (3). Si mañana entran las otras dos, salen solas por el mismo
+# predicado.
+NO_PUBLICAR = CON_INSCRIPCION
+
+
 def acceso_de(sede, titulo):
     for k, v in SEDES_PAGAS.items():
         if k.lower() in (sede or '').lower(): return v
@@ -457,7 +479,13 @@ def main():
         return None
 
     otros = otros_programas()
-    programas, sin_obra = [], []
+    programas, sin_obra, retiradas = [], [], []
+    # (función, celda de la parrilla que la originó). Antes se recorrían
+    # `programas` y `par` con zip por índice, y al empezar a RETIRAR funciones
+    # las dos listas se desalinearon: la herencia de contenido entre pases
+    # emparejaba cada programa con la celda de otro. Se lo llevó por delante
+    # «Retrospectiva Sergio Navarro Programa 2», que se quedó sin sus 3 obras.
+    pares = []
     for f in par:
         e = {'dia': f['dia'], 'hora': f['hora'], 'sede': f['sede'],
              '_src': 'PDF oficial de programación del festival'}
@@ -590,7 +618,11 @@ def main():
             if _k and ch and ch.get('descripcion') and not e.get('sinopsis'):
                 e['sinopsis'] = ch['descripcion']
                 e['_sinopsis_src'] = 'hoja oficial del festival (conversatorios y charlas)'
+        if NO_PUBLICAR.search(e.get('titulo') or '') or NO_PUBLICAR.search(titulo_crudo):
+            retiradas.append(e.get('titulo') or titulo_crudo)
+            continue
         programas.append(e)
+        pares.append((e, f))
 
     # Un programa que se repite se anuncia dos veces, y la parrilla solo lista
     # su contenido en UNO de los pases: «Retrospectiva Sergio Navarro Programa
@@ -598,13 +630,13 @@ def main():
     # 87'. Mismo nombre de programa y misma duración = mismo programa, y las
     # obras del pase que sí las trae valen para el otro.
     porprog = {}
-    for e, f in zip(programas, par):
+    for e, f in pares:
         nom = sin_nota_de_inscripcion(f['titulo_crudo'])
         m = re.match(r'^(.*?\bPrograma\s*\d)\b', nom, re.I)
         if not m or not e['obras']: continue
         porprog.setdefault((clave(m.group(1)), e.get('duracion_min')), e['obras'])
     heredadas = 0
-    for e, f in zip(programas, par):
+    for e, f in pares:
         if e['obras']: continue
         nom = sin_nota_de_inscripcion(f['titulo_crudo'])
         m = re.match(r'^(.*?\bPrograma\s*\d)\b', nom, re.I)
@@ -615,6 +647,8 @@ def main():
             e['_obras_src'] = 'contenido tomado del otro pase del MISMO programa (mismo nombre y misma duración)'
             heredadas += 1
     print(f'programas que heredan su contenido del otro pase: {heredadas}')
+    print(f'actividades retiradas por pedido del festival (inscripción previa): {len(retiradas)}')
+    for _r in sorted(set(retiradas)): print(f'   · {_r}')
 
     out = {'_provenance': {
         'fuente': 'PDF oficial de programación + hoja de programas y charlas enviada por el festival',

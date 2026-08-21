@@ -290,14 +290,6 @@
    "lng": -75.58388,
    "_prec": "heredada de Casa Museo Otraparte"
   },
-  "Centro Cultural y Educativo Fundación Diego Echavarría Misas - Itagüí": {
-   "address": "Calle 48 # 51–34, Itagüí, Antioquia",
-   "_nota": "dirección del PDF oficial (pág. 8, «Salas de proyección»); faltan coordenadas",
-   "lat": 6.1724038,
-   "lng": -75.6115791,
-   "_prec": "nominatim",
-   "_match": "Biblioteca Diego Echavarría Misas, Calle 48 # 51-34, Santa María, Itagüí — coincide con la dirección de la pág. 8 del PDF"
-  },
   "Terko - Copacabana": {
    "lat": 6.34726,
    "lng": -75.506,
@@ -354,22 +346,6 @@
      "synopsis_lang": "es"
     }
    ]
-  },
-  {
-   "title": "Foro de la Crítica Sesión 1",
-   "type": "event",
-   "section": "✨ Proyecciones Especiales",
-   "duration": "120 min",
-   "day": "2026-09-04",
-   "time": "10:00",
-   "day_order": 1,
-   "venue": "Centro Colombo Americano - Sede centro - Medellín",
-   "sala": "Sala 1",
-   "event_kind": "foro",
-   "has_qa": false,
-   "_src": "PDF oficial de programación del festival",
-   "is_free": true,
-   "requires_registration": true
   },
   {
    "title": "Todos los planos del mundo — Debate: ¿Qué cine colombiano queremos?",
@@ -923,22 +899,6 @@
      "synopsis_lang": "es"
     }
    ]
-  },
-  {
-   "title": "Foro de la Crítica Sesión 2",
-   "type": "event",
-   "section": "✨ Proyecciones Especiales",
-   "duration": "120 min",
-   "day": "2026-09-05",
-   "time": "10:00",
-   "day_order": 2,
-   "venue": "Centro Colombo Americano - Sede centro - Medellín",
-   "sala": "Sala 1",
-   "event_kind": "foro",
-   "has_qa": false,
-   "_src": "PDF oficial de programación del festival",
-   "is_free": true,
-   "requires_registration": true
   },
   {
    "title": "Buddies",
@@ -1815,22 +1775,6 @@
    ]
   },
   {
-   "title": "Foro de la Crítica Sesión 3",
-   "type": "event",
-   "section": "✨ Proyecciones Especiales",
-   "duration": "120 min",
-   "day": "2026-09-07",
-   "time": "10:00",
-   "day_order": 4,
-   "venue": "Centro Colombo Americano - Sede centro - Medellín",
-   "sala": "Sala 1",
-   "event_kind": "foro",
-   "has_qa": false,
-   "_src": "PDF oficial de programación del festival",
-   "is_free": true,
-   "requires_registration": true
-  },
-  {
    "title": "Cleaning & Cleansing",
    "type": "film",
    "section": "🌡️ Febril incisión. El cine de Thomas Fürhapter",
@@ -2043,22 +1987,6 @@
    "synopsis_lang": "es",
    "_src": "hoja oficial del festival (conversatorios y charlas)",
    "is_free": true
-  },
-  {
-   "title": "Foro de la Crítica Sesión 4",
-   "type": "event",
-   "section": "✨ Proyecciones Especiales",
-   "duration": "120 min",
-   "day": "2026-09-08",
-   "time": "10:00",
-   "day_order": 5,
-   "venue": "Centro Colombo Americano - Sede centro - Medellín",
-   "sala": "Sala 1",
-   "event_kind": "foro",
-   "has_qa": false,
-   "_src": "PDF oficial de programación del festival",
-   "is_free": true,
-   "requires_registration": true
   },
   {
    "title": "Une vie manifeste",
@@ -2553,21 +2481,6 @@
      "synopsis_lang": "es"
     }
    ]
-  },
-  {
-   "title": "Seminario de la imagen con Luciana Decker",
-   "type": "event",
-   "section": "✨ Proyecciones Especiales",
-   "duration": "120 min",
-   "day": "2026-09-09",
-   "time": "09:00",
-   "day_order": 6,
-   "venue": "Centro Cultural y Educativo Fundación Diego Echavarría Misas - Itagüí",
-   "event_kind": "seminario",
-   "has_qa": false,
-   "_src": "PDF oficial de programación del festival",
-   "is_free": true,
-   "requires_registration": true
   },
   {
    "title": "El viento sabe que vuelvo a casa",
@@ -3077,21 +2990,6 @@
    "year": 2013,
    "tmdb_id": 407151,
    "_programa_original": "Ver y escuchar"
-  },
-  {
-   "title": "Seminario de la imagen con Luciana Decker",
-   "type": "event",
-   "section": "✨ Proyecciones Especiales",
-   "duration": "100 min",
-   "day": "2026-09-10",
-   "time": "09:00",
-   "day_order": 7,
-   "venue": "Centro Cultural y Educativo Fundación Diego Echavarría Misas - Itagüí",
-   "event_kind": "seminario",
-   "has_qa": false,
-   "_src": "PDF oficial de programación del festival",
-   "is_free": true,
-   "requires_registration": true
   },
   {
    "title": "Encuentro Internacional de Investigación-Creación en Música y Sonido Cinematográfico",
@@ -3699,21 +3597,6 @@
    ]
   },
   {
-   "title": "Seminario de la imagen con Luciana Decker",
-   "type": "event",
-   "section": "✨ Proyecciones Especiales",
-   "duration": "120 min",
-   "day": "2026-09-11",
-   "time": "09:00",
-   "day_order": 8,
-   "venue": "Centro Cultural y Educativo Fundación Diego Echavarría Misas - Itagüí",
-   "event_kind": "seminario",
-   "has_qa": false,
-   "_src": "PDF oficial de programación del festival",
-   "is_free": true,
-   "requires_registration": true
-  },
-  {
    "title": "La tercera opción / Die dritte Option / The Third Option",
    "type": "film",
    "section": "🌡️ Febril incisión. El cine de Thomas Fürhapter",
@@ -3971,7 +3854,7 @@
    "section": "🎞️ Competencia de cortometrajes",
    "country": "Alemania, Brasil, Rusia, Reino Unido, Colombia, España, Portugal",
    "flags": "🇩🇪🇧🇷🇷🇺🇬🇧🇨🇴🇪🇸🇵🇹",
-   "duration": "67 min",
+   "duration": "85 min",
    "day": "2026-09-11",
    "time": "18:00",
    "day_order": 8,
