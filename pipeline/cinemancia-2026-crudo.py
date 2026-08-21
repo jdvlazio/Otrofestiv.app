@@ -44,6 +44,31 @@ def clave(s):
     s = unicodedata.normalize('NFD', s or '').encode('ascii', 'ignore').decode().lower()
     return re.sub(r'[^a-z0-9]', '', s)
 
+# ── Fotogramas oficiales del festival ─────────────────────────────────────────
+# TMDB no sirve para estas obras: se consultaron las 11 que tenían tmdbId y las
+# 11 devolvieron poster_path vacío. No es un fallo de la consulta —se verificó
+# contra una ficha conocida, que sí trae afiche—: son cortos chilenos y
+# experimentales que TMDB cataloga sin arte.
+#
+# La ficha de cada obra en cinemanciafestival.com sí publica un fotograma 16:9
+# propio (se comprobó que cambia por obra, no es un genérico del sitio).
+# Normalizados a 896x504 JPEG, el mismo estándar que las editoriales de VARTEX.
+#
+# NO están «El santo y el milagro» ni «Valparaíso eterno», las dos de Sergio
+# Navarro: sus fotogramas traen incrustado el logo de Cineteca Universidad de
+# Chile, grande y sobre la imagen. Se le piden al festival antes que publicar
+# una tarjeta con la marca de un tercero. «Caminito al Cielo» tiene ficha en la
+# web pero sin og:image, así que también se pide.
+FOTOGRAMAS = {
+    'El sueño de Ana':                    '/assets/cinemancia/el-sueno-de-ana.jpg',
+    'Obreras saliendo de la fábrica':     '/assets/cinemancia/obreras-saliendo-de-la-fabrica.jpg',
+    'Spot Fuera de campo 1':              '/assets/cinemancia/spot-fuera-de-campo-1.jpg',
+    'Spot Fuera de campo 2':              '/assets/cinemancia/spot-fuera-de-campo-2.jpg',
+    'Un aparato para detectar fantasmas': '/assets/cinemancia/un-aparato-para-detectar-fantasmas.jpg',
+    'Ver y escuchar':                     '/assets/cinemancia/ver-y-escuchar.jpg',
+}
+
+
 def catalogo():
     """Las 109 obras del catálogo, fusionando TRES fuentes por obra.
 
@@ -115,6 +140,9 @@ def catalogo():
             if not o.get(campo_pub) and p.get(campo_pub): o[campo_pub] = p[campo_pub]
         if not o.get('poster') and o.get('poster_tmdb'):
             o['poster'], o['posterSource'] = o['poster_tmdb'], 'tmdb'
+        if not o.get('poster') and FOTOGRAMAS.get(o.get('title')):
+            o['poster'], o['posterSource'] = FOTOGRAMAS[o['title']], 'editorial'
+            o.setdefault('_poster_src', 'fotograma de la ficha oficial del festival')
         if not o.get('duration') and o.get('runtime_tmdb'): o['duration'] = f"{o['runtime_tmdb']} min"
     out = {}
     for o in d['obras']:
