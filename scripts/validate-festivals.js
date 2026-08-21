@@ -27,7 +27,15 @@ const path = require('path');
 // GENERA la doc. Ver scripts/generate-schema-md.js.
 const CONTRATO = JSON.parse(
   fs.readFileSync(path.join(__dirname, '..', 'pipeline', 'contrato.json'), 'utf8'));
-const HOY = new Date().toISOString().slice(0, 10);
+// Zona del proyecto (Colombia, UTC-5) y NO UTC: con toISOString() crudo, entre
+// las 7pm y medianoche de Bogotá `HOY` ya era mañana, así que una excepción
+// vencía cinco horas antes y la máquina local discrepaba de CI. Es la regla que
+// CLAUDE.md fija («nunca toISOString() para lógica de fechas») y que este
+// archivo violaba — el mismo bug que rompió el generador de CLAUDE.md (#682).
+const _hoyCO = ms => new Date(ms - 5 * 3600e3).toISOString().slice(0, 10);
+const HOY = _hoyCO(Date.now());
+// Ventana de aviso: una excepción no puede explotar el día D sin haber avisado.
+const PREAVISO = _hoyCO(Date.now() + 14 * 864e5);
 
 // ¿A este festival se le exige el contrato entero? La vigencia la dice la FECHA
 // DE CIERRE, no una lista de nombres: un guardián que decide por lista deja de
@@ -149,6 +157,17 @@ const DAY_ORDER_DEUDA = {
 function validateFestival(fname, data) {
   const errors = [];
   const warnings = [];
+  // El preaviso YA existía —_exentoDe devuelve `aviso` cuando la excepción sigue
+  // viva— y nadie lo leía: caducaba en silencio y aparecía como rojo el día D.
+  const _avisados = new Set();
+  const _avisar = (ex, campo, fest) => {
+    if (!ex.aviso || ex.aviso.migrar_el > PREAVISO) return;
+    const _k = `${campo}@${fest}`;
+    if (_avisados.has(_k)) return;
+    _avisados.add(_k);
+    warnings.push(`[contrato-por-vencer] ${_k} deja de perdonarse el ${ex.aviso.migrar_el}`
+      + ` — migrar antes de esa fecha o mover la fecha con su razón`);
+  };
   const _dayOrderMal = [];
 
   const hasConfigBlock = !!data.config;
@@ -383,6 +402,7 @@ function validateFestival(fname, data) {
         const _msg = `"${title}": '${_k}' = ${JSON.stringify(String(_v).slice(0, 28))} no cumple el formato del contrato (${_spec.formato})`;
         if (_ex.vencida) errors.push(`${_msg} — la excepción venció el ${_ex.vencida.migrar_el}`);
         else if (!_ex.exento) errors.push(_msg);
+        else _avisar(_ex, _k, _fest);
       }
       if (_spec.enum && !_spec.enum.includes(_v)) {
         errors.push(`"${title}": '${_k}' = ${JSON.stringify(_v)} fuera del contrato (${_spec.enum.join(' | ')})`);

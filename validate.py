@@ -4892,15 +4892,28 @@ try:
     _sin = [_k for _k in _sin if not _k.startswith('_')]
     if _sin:
         _prob.append('campo(s) en los datos que el contrato no declara: ' + ', '.join(_sin[:6]))
-    _hoy = _dt.date.today().isoformat()
+    # Fecha de Colombia (UTC-5), no del runner: en UTC el día cambia cinco horas
+    # antes y una excepción vencía distinto acá que en CI (misma regla de CLAUDE.md).
+    _hoyCO = (_dt.datetime.utcnow() - _dt.timedelta(hours=5)).date()
+    _limite = (_hoyCO + _dt.timedelta(days=14)).isoformat()
+    _hoy = _hoyCO.isoformat()
+    _porvencer = []
     for _campo, _fests in (_C.get('_pendientes') or {}).items():
         if _campo == '_doc':
             continue
         for _fest, _info in _fests.items():
-            if _info['migrar_el'] <= _hoy:
-                _prob.append(f'excepción VENCIDA: {_campo}@{_fest} debía migrar el {_info["migrar_el"]}')
+            _m = _info['migrar_el']
+            if _m <= _hoy:
+                _prob.append(f'excepción VENCIDA: {_campo}@{_fest} debía migrar el {_m}')
+            elif _m <= _limite:
+                # Ámbar: la franja que este repo no tenía. Todo era verde o rojo,
+                # así que lo que caducaba no avisaba — explotaba.
+                _porvencer.append(f'{_campo}@{_fest} vence el {_m}')
     if _prob:
         fail(check, ' · '.join(_prob))
+    elif _porvencer:
+        warn(check, 'excepción(es) por vencer en ≤14 días: ' + ' · '.join(_porvencer)
+                    + ' — migrar antes, o mover la fecha con su razón escrita')
     else:
         _np = sum(len(_v) for _k, _v in (_C.get('_pendientes') or {}).items() if _k != '_doc')
         ok(check, f'contrato al día: {len(_C["campos"])} campos, doc generada, '

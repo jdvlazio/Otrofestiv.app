@@ -305,9 +305,7 @@ test('P06 — el riel separa PRÓXIMOS sin mover el arranque del snap', async ({
   });
 
   if (!r.enCurso || !r.proximos) {
-    console.log(`P06: al 11 AGO 2026 no hay en-curso + próximos (${r.enCurso}/${r.proximos}), skip`);
-    return;
-  }
+    test.skip(true, `P06: al 11 AGO 2026 no hay en-curso + próximos (${r.enCurso}/${r.proximos}), skip`); return; }
 
   // ORDEN: ningún próximo antes de un en-curso, y el divisor justo entre los grupos.
   const idxDivProx = r.tira.findIndex(x => x.div);
@@ -359,9 +357,7 @@ test('P07 — el markup del selector es el mismo del splash (una implementación
       .map(([id]) => id);
   });
   if (enCurso.length !== 1) {
-    console.log(`P07: al 11 AGO 2026 hay ${enCurso.length} festivales en curso (se necesita 1), skip`);
-    return;
-  }
+    test.skip(true, `P07: al 11 AGO 2026 hay ${enCurso.length} festivales en curso (se necesita 1), skip`); return; }
   const fest = enCurso[0];
 
   const splash = await page.evaluate(() => ({
@@ -433,7 +429,7 @@ for (const festId of MAIN_FESTIVALS) {
       });
       return { mono: false, sedes: sedes.length, ciudades: ciudades.length, cruces };
     });
-    if (r.mono) { console.log(`P08 ${festId}: ${r.ciudades} ciudad(es), no aplica`); return; }
+    if (r.mono) { test.skip(true, `P08 ${festId}: ${r.ciudades} ciudad(es), no aplica`); return; }
     console.log(`P08 ${festId}: ${r.sedes} sedes en ${r.ciudades} ciudades`);
     expect(r.cruces, `el filtro de sede cruzó ciudades:\n  ${r.cruces.join('\n  ')}`).toEqual([]);
   });
