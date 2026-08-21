@@ -3384,6 +3384,16 @@ try:
     # Al recibir el minutaje real: llenar el JSON y BORRAR la línea de aquí.
     _PENDING = {
         ('fantasofest-2026', 'Muestra de Cortometrajes'),  # PDF prensa sin runtimes; pedido a FantasoLab
+        # Vartex 14 — vartexmedellin.co publica minutaje SOLO de la Muestra Local
+        # (12 obras, ya en el JSON) y las 8 h del taller. Verificado sobre el HTML
+        # vivo: el sitio no tiene sección de Internacional ni de Inauguración, y su
+        # sección muestra-nacional lista las obras sin duración. Pedido al festival.
+        ('vartex-2026', 'A La Rivera: Synthfonía de un escape'),   # live cinema de apertura; no anunciado
+        ('vartex-2026', 'Muestra Fashion Film Internacional'),     # 2 obras del carrusel IG, sin minutaje
+        ('vartex-2026', 'Muestra Fashion Film Nacional'),          # 20 obras listadas sin duración
+        # CineAutopsia — el PDF oficial la trae sin obras y sin runtime: es una
+        # proyección al aire libre más un diálogo, y el festival no anunció cuánto dura.
+        ('cineautopsia-2026', 'Encuentro Colombia Experimental Contemporánea'),
     }
     _viol = []
     for _fname in _ACTIVE:
