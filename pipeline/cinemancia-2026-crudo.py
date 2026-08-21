@@ -468,6 +468,14 @@ def main():
             e['_src'] = 'hoja oficial del festival (orden de programas)'
             if ch:
                 e['_charla'] = {'descripcion': ch['descripcion'], 'invitados': ch['invitados']}
+                # Una función con conversatorio NO termina con los créditos.
+                # has_qa alimenta durationForTravel, así que sin él el
+                # planificador manda al usuario a la función siguiente como si
+                # la sala se vaciara al final de la película. El festival da
+                # nombre e invitados de los diez; el contrato guarda el HECHO y
+                # su variante, no los nombres (esos los pinta la vista).
+                e['has_qa'] = True
+                e['qa_type'] = 'guests'
         else:
             # Función simple: la obra sale del catálogo por el título crudo.
             halladas = obras_en(titulo_crudo, cat)
@@ -496,6 +504,14 @@ def main():
             if not hallada: sin_obra.append(f)
             if ch:
                 e['_charla'] = {'descripcion': ch['descripcion'], 'invitados': ch['invitados']}
+                # Una función con conversatorio NO termina con los créditos.
+                # has_qa alimenta durationForTravel, así que sin él el
+                # planificador manda al usuario a la función siguiente como si
+                # la sala se vaciara al final de la película. El festival da
+                # nombre e invitados de los diez; el contrato guarda el HECHO y
+                # su variante, no los nombres (esos los pinta la vista).
+                e['has_qa'] = True
+                e['qa_type'] = 'guests'
                 e['_src'] = 'hoja oficial del festival (conversatorios y charlas)'
         # La sección es de la FUNCIÓN, no solo de la obra: el ensamblador la
         # lee de f['seccion']. En un programa, todas sus obras comparten

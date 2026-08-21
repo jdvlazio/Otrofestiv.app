@@ -69,6 +69,8 @@
     "descripcion": "A partir de la experiencia al filmar Todos los planos del mundo, se toma como ejemplo para pensar el cine nacional, sus tradiciones y su futuro.",
     "invitados": "Santiago Flórez, Federico Atehortúa, Tatiana Parra. Modera Pablo Roldán"
    },
+   "has_qa": true,
+   "qa_type": "guests",
    "event_kind": "debate",
    "sinopsis": "A partir de la experiencia al filmar Todos los planos del mundo, se toma como ejemplo para pensar el cine nacional, sus tradiciones y su futuro.",
    "_sinopsis_src": "hoja oficial del festival (conversatorios y charlas)"
@@ -208,6 +210,8 @@
     "descripcion": "Proyección del largometraje Viviendo juntos y charla posterior con el director Thomas Fülhapter.",
     "invitados": "Thomas Fülhapter, Juan Pablo Franky"
    },
+   "has_qa": true,
+   "qa_type": "guests",
    "seccion": "Febril incisión. El cine de Thomas Fürhapter"
   },
   {
@@ -914,6 +918,8 @@
     "descripcion": "Proyección de L*a tempestá*, No contéis con los dedos y Vampir Cuadecuc y diálogo posterior.",
     "invitados": "Julio Lamaña, Juan Pablo Franky"
    },
+   "has_qa": true,
+   "qa_type": "guests",
    "seccion": "Iluminaciones",
    "_duracion_src": "confirmada por el festival (21 AGO)"
   },
@@ -1038,6 +1044,8 @@
     "descripcion": "Proyección de las películas ¿Qué historia es ésta y cuál es su final? y Obreras saliendo de la fábrica, posterior charla.",
     "invitados": "José Luis Torres Leiva, Andrés Múnera"
    },
+   "has_qa": true,
+   "qa_type": "guests",
    "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
@@ -1512,6 +1520,8 @@
     "descripcion": "Proyección de la película The Children’s Hour y diálogo sobre cinematografías nacionales, la conformación del canon y la crítica como herramienta que configura nuevas miradas en el legado cinematográfico.",
     "invitados": "Michael Koresky, José Miccio"
    },
+   "has_qa": true,
+   "qa_type": "guests",
    "event_kind": "charla",
    "sinopsis": "Proyección de la película The Children’s Hour y diálogo sobre cinematografías nacionales, la conformación del canon y la crítica como herramienta que configura nuevas miradas en el legado cinematográfico.",
    "_sinopsis_src": "hoja oficial del festival (conversatorios y charlas)"
@@ -1681,6 +1691,8 @@
     "descripcion": "Proyección de cortometrajes de Luciana Decker Orozco y charla posterior.",
     "invitados": "Luciana Decker Orozco, Elena Acosta. Modera Paula Díaz"
    },
+   "has_qa": true,
+   "qa_type": "guests",
    "is_cortos": true
   },
   {
@@ -2466,6 +2478,8 @@
     "descripcion": "Ponencias seleccionadas",
     "invitados": ""
    },
+   "has_qa": true,
+   "qa_type": "guests",
    "event_kind": "encuentro",
    "sinopsis": "Ponencias seleccionadas",
    "_sinopsis_src": "hoja oficial del festival (conversatorios y charlas)"
@@ -2882,6 +2896,8 @@
     "descripcion": "Proyección de la película Viaje al extranjero y diálogo posterior.",
     "invitados": "Leonie Rodrian, Pablo Roldán"
    },
+   "has_qa": true,
+   "qa_type": "guests",
    "seccion": "Competencia central"
   },
   {
@@ -2978,6 +2994,8 @@
     "descripcion": "Conversación sobre la libertad artística en el cine, los riesgos y la posibilidad de empujar fronteras.",
     "invitados": "Santiago Quirama, Luciana Decker Orozco, Mauricio Carmona. Modera Andrés Carmona"
    },
+   "has_qa": true,
+   "qa_type": "guests",
    "seccion": "Programa 2. Teoremas sobre la mirada"
   },
   {
@@ -3392,6 +3410,8 @@
     "descripcion": "Proyección de la película Cleaning & Cleansing y diálogo posterior.",
     "invitados": "Thomas Fürhapter, Sara Lugo"
    },
+   "has_qa": true,
+   "qa_type": "guests",
    "seccion": "Febril incisión. El cine de Thomas Fürhapter"
   },
   {
