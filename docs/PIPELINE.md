@@ -1054,3 +1054,25 @@ producción durante FICMontañas 2026:
 | Póster de otra película del mismo director (FantasoFest 2026) | `AFICHE-Lqv` era "Los Que Vuelven" (Casabé 2019), NO "La Virgen de la Tosquera" (Casabé 2025) | Buscar el asset por TÍTULO en los uploads, no por proximidad/orden en la grilla; verificar que el póster corresponde a ESE film |
 | `title_en` traducido a mano en vez del oficial (riesgo, evitado) | Traducir "La Virgen de la Tosquera" daría "…Gravel Pit"; el oficial es "The Virgin of the Quarry Lake" | Regla: `title_en` = título internacional OFICIAL buscado+verificado (LB/circuito/IMDb), nunca máquina-traducción; sin oficial → sin `title_en` |
 | Still local 16:9 no recibía la banda editorial (FantasoFest 2026) | El sheet del corto detectaba editorial solo por CDN-URL, ignorando `posterSource` → still local caía a `<img>` recortado 2:3 | `_isEd3`/`_isEd4` honran `posterSource:'editorial'` (PR #305); still local de festival va con `poster`+`posterSource:'editorial'` |
+
+
+### `[calendario-entero]` — un día que se dibuja tiene que existir para el reloj
+
+La tira de días se arma con `dayKeys`; el reloj (`dayFullyPassed`,
+`screeningPassed`, la detección de HOY) lee `festivalDates`. Son **el mismo
+calendario**, y hasta el 23 ago 2026 tenían dueños distintos: `dayKeys` lo pisaba
+el JSON del festival, pero `festivalDates` estaba clasificado como *identidad* y
+el JSON solo podía rellenarlo si config lo tenía vacío.
+
+CineAutopsia dibujaba 8 días y el reloj conocía 4. Los cuatro huérfanos no se
+atenuaban nunca (`dayFullyPassed` corta con `if(!dateStr) return false`), sus
+funciones no contaban como pasadas, y el 25/26/27 habrían roto la detección de
+HOY con el festival en curso.
+
+El guardián exige tres cosas:
+1. Todo día de `dayKeys` tiene fecha en `festivalDates` — en config y en el JSON.
+2. El calendario de config **coincide** con el de su JSON. Esta es la que caza el
+   bug real: dentro de cada fuente todo cuadraba; lo que no cuadraba era una
+   contra la otra, y ahí no miraba nadie.
+3. `festivalDates` sigue siendo **contenido** en el loader, no identidad.
+

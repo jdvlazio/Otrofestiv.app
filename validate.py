@@ -2392,6 +2392,110 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar cancelada-no-difumina: {_e}')
 
+# ── [calendario-entero] un día que se dibuja tiene que existir para el reloj ───
+# Juan, 23 ago 2026: «CineAutopsia no marcó el Vie 21 como pasado, sigue vivo».
+# La tira de días se arma con `dayKeys` —que el JSON PISA, porque es contenido—
+# pero el reloj lee `FESTIVAL_DATES` (= `festivalDates`), que estaba archivado
+# como IDENTIDAD y por tanto el JSON solo podía rellenarlo si config lo tenía
+# vacío. El calendario quedó partido en dos dueños: 8 días dibujados, 4
+# conocidos. `dayFullyPassed` corta en seco con `if(!dateStr) return false`, así
+# que los cuatro huérfanos no se atenuaban NUNCA, sus funciones no contaban como
+# pasadas, y `todayDay` habría fallado el 25/26/27 con el festival en curso.
+# La regla que faltaba: todo día que se dibuja tiene que tener fecha. Este
+# guardián la exige en las DOS fuentes, porque el bug no vivía en ninguna de las
+# dos por separado — vivía en que no coincidían.
+check = 'calendario-entero'
+try:
+    import re as _re, json as _json, glob as _glob, os as _os
+    _errs = []
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    for _m in _re.finditer(r"'([a-zA-Z0-9]+)':\s*\{(.*?)\n  \},", _cfg, _re.S):
+        _fid, _body = _m.group(1), _m.group(2)
+        _dk = _re.search(r"dayKeys:\[(.*?)\]", _body, _re.S)
+        _fd = _re.search(r"festivalDates:\{(.*?)\}", _body, _re.S)
+        if not _dk or not _fd:
+            continue
+        _keys = set(_re.findall(r"'([^']+)'", _dk.group(1)))
+        _dates = set(_re.findall(r"'([^']+)'\s*:", _fd.group(1)))
+        _huerf = _keys - _dates
+        if _huerf:
+            _errs.append(f'{_fid}: {len(_huerf)} día(s) en dayKeys sin fecha en festivalDates '
+                         f'({", ".join(sorted(_huerf)[:3])}) — se dibujan pero el reloj no los ve')
+    for _p in sorted(_glob.glob('festivals/*.json')):
+        try:
+            _d = _json.load(open(_p, encoding='utf-8'))
+        except Exception:
+            continue
+        _keys = set(_d.get('dayKeys') or [])
+        _dates = set((_d.get('festivalDates') or {}).keys())
+        if not _keys or not _dates:
+            continue
+        _huerf = _keys - _dates
+        if _huerf:
+            _errs.append(f'{_os.path.basename(_p)}: {len(_huerf)} día(s) en dayKeys sin fecha '
+                         f'en festivalDates ({", ".join(sorted(_huerf)[:3])})')
+        # ── La mitad que SÍ habría cazado el bug ──────────────────────────────
+        # Dentro de config el calendario cuadraba, y dentro del JSON también. Lo
+        # que no cuadraba era una fuente contra la otra, y ahí no miraba nadie.
+        # El apareo replica el del loader: 'cineautopsia2026' → cineautopsia-2026.
+        _fid = _os.path.basename(_p)[:-5].replace('-', '')
+        _cm = _re.search(r"'" + _re.escape(_fid) + r"':\s*\{(.*?)\n  \},", _cfg, _re.S)
+        if not _cm:
+            continue
+        _cfd = _re.search(r"festivalDates:\{(.*?)\}", _cm.group(1), _re.S)
+        if not _cfd:
+            continue
+        _cdates = set(_re.findall(r"'([^']+)'\s*:", _cfd.group(1)))
+        if _cdates != _dates:
+            _solo_json = sorted(_dates - _cdates)
+            _errs.append(f'{_fid}: el calendario NO coincide entre config ({len(_cdates)} días) '
+                         f'y su JSON ({len(_dates)} días)'
+                         + (f' — el JSON tiene además {", ".join(_solo_json[:3])}' if _solo_json else '')
+                         + '. El dueño es el JSON: config quedó viejo y hay que regenerarlo')
+    # Y la clasificación en sí: si `festivalDates` vuelve a ser IDENTIDAD, el JSON
+    # deja de poder corregir un config viejo y el calendario se parte otra vez —
+    # sin que ningún dato quede mal, que es lo que lo hizo invisible la primera vez.
+    _ld = open('src/controller/loader.js', encoding='utf-8').read()
+    _ident = _re.search(r'_identFields\s*=\s*\[(.*?)\]', _ld, _re.S)
+    if _ident and 'festivalDates' in _ident.group(1):
+        _errs.append('festivalDates volvió a _identFields: el JSON ya no puede corregir un '
+                     'config viejo y el calendario se vuelve a partir en dos dueños')
+
+    # ── El ORDEN, que es lo que de verdad rompía ──────────────────────────────
+    # `dayFullyPassed` lee FESTIVAL_DATES y FILMS. Los dos se publican en el
+    # `state.batchUpdate` del loader. Preguntarle ANTES —como hacía el DOM build
+    # de la tira— es preguntarle por el festival anterior: devolvía false por
+    # `if(!dateStr)` y NINGÚN día se atenuaba, en ningún festival, nunca. El
+    # comentario del loader ya avisaba de FESTIVAL_END y aun así se coló, porque
+    # nadie miró la OTRA cosa que la función lee primero.
+    # El ancla es la LÍNEA QUE PUBLICA EL CALENDARIO, no `state.batchUpdate` a
+    # secas: hay dos batchUpdate en el loader y el primero (transition+clear) va
+    # ANTES de la tira, así que anclar ahí daba un chequeo que no medía nada —
+    # pasaba en verde con el bug puesto. Lo cacé mutando; sin mutar, habría
+    # quedado un guardián decorativo.
+    _bu = _ld.find('FESTIVAL_DATES: cfg.festivalDates')
+    if _bu < 0:
+        _errs.append('no encuentro dónde se publica FESTIVAL_DATES en loader.js: '
+                     'no puedo verificar el orden')
+    else:
+        for _c in _re.finditer(r'dayFullyPassed\s*\(', _ld):
+            _linea = _ld[_ld.rfind('\n', 0, _c.start()) + 1:_c.start()]
+            if _linea.lstrip().startswith(('//', '*')) or 'import' in _linea:
+                continue
+            if _c.start() < _bu:
+                _n = _ld[:_c.start()].count('\n') + 1
+                _errs.append(f'loader.js:{_n} pregunta dayFullyPassed antes de que se publique '
+                             'el calendario: ahí FESTIVAL_DATES y FILMS son todavía los del '
+                             'festival anterior, y la respuesta es siempre false')
+                break
+
+    if _errs:
+        fail(check, '; '.join(_errs[:3]))
+    else:
+        ok(check, 'todo día dibujable tiene fecha, y el calendario tiene un solo dueño')
+except Exception as _e:
+    warn(check, f'no se pudo verificar calendario-entero: {_e}')
+
 # ── [icono-texto] un botón con icono Y texto se alinea, o el icono flota ──────
 # Juan, 18 ago 2026: el «+» de «Agendar» iba 3px más alto que la palabra. La
 # causa: .excl-include-btn no tenía display:inline-flex ni align-items:center,

@@ -2241,6 +2241,13 @@ test('T99 — el texto del póster no se monta sobre la imagen, y la sección ti
   test.setTimeout(90000);
   await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00');
   await page.waitForTimeout(1000);
+  // TODO explícito. Antes el test no lo pedía y funcionaba igual — pero solo
+  // porque la detección de HOY estaba rota y la app caía siempre en TODO. Al
+  // arreglarla, entra por el día 25 (una LISTA, no la grilla) y el test se
+  // quedaba sin tarjetas que mirar: su propio guard lo cazó. Lo que T99 quiere
+  // examinar es la grilla de pósters, así que la pide en voz alta.
+  await page.click('.dtab[data-day="all"]');
+  await page.waitForTimeout(600);
   await page.evaluate(() => { try { setProgramaView('grid'); } catch (e) {} });
   await page.waitForTimeout(800);
   const r = await page.evaluate(() => {
