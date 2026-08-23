@@ -10,7 +10,7 @@ import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
 import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
 import { DAYS, DAY_SHORT_EN, _langDates, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
-import { closeFestivalSheet, openCitySheet } from '../view/sheets.js';
+import { closeFestivalSheet, openCitySheet, openReviewSheet, _reviewDesbloqueado, _pintarBannerRevision } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, scrollDtabsToActive } from '../view/programa.js';
 import { _fixStickyOffset } from '../view/agenda.js';
@@ -461,6 +461,10 @@ export async function loadFestival(id){
     watched: new Set([...state.get('watched')].filter(t=>_validTitles.has(t))),
     prioritized: new Set([...state.get('prioritized')].filter(t=>_validTitles.has(t))),
   });
+  // El banner se decide acá y no en cada tab: `_activeFestId` acaba de quedar
+  // fijado, y este es el único momento en que la respuesta puede cambiar.
+  _pintarBannerRevision();
+
   // ── Pase de `past` sobre la tira de días ──────────────────────────────────
   // AHORA, no antes: dayFullyPassed necesita el calendario (FESTIVAL_DATES) y las
   // funciones (FILMS) de ESTE festival, y las dos cosas acaban de publicarse en
@@ -602,6 +606,15 @@ export function dismissSplash(){
   // hasta que se elige (selectSplashFest lo habilita); guard defensivo por si
   // el click llega igual.
   if(!_splashSelectedFestId) return;
+  // Festival EN REVISIÓN: pide clave una vez por festival. Se comprueba acá, en
+  // el único punto por el que se entra a un festival, y no en la card: así no
+  // hay dos caminos que puedan divergir. La hoja solo valida; entrar es asunto
+  // de esta función, que se vuelve a llamar cuando la clave es correcta.
+  const _cfgSel=FESTIVAL_CONFIG[_splashSelectedFestId]||{};
+  if(_cfgSel.review&&_cfgSel.review.key&&!_reviewDesbloqueado(_splashSelectedFestId)){
+    openReviewSheet(_splashSelectedFestId);
+    return;
+  }
   const s=document.getElementById('otrofestiv-splash');
   const btn=document.querySelector('.splash-enter-btn');
   if(btn) btn.classList.add('loading');
@@ -613,7 +626,9 @@ export function dismissSplash(){
       }
       // 150ms para que el compositor de iOS se asiente antes de revelar
       setTimeout(()=>{
-        if(s){s.classList.add('fade-out');setTimeout(()=>{s.remove();// FIX iOS compositor (especialmente Leviza/festival activo):
+        if(s){s.classList.add('fade-out');setTimeout(()=>{s.remove();
+          // El splash ya no está: ahora sí puede aparecer el banner de revisión.
+          _pintarBannerRevision();// FIX iOS compositor (especialmente Leviza/festival activo):
           // initProgramaModeBar() corrió bajo el splash → reflowó el topbar →
           // compositor cacheó nav en posición incorrecta. Re-ejecutar DESPUÉS de
           // quitar el splash fuerza el reflow en viewport abierto → posición correcta.

@@ -455,6 +455,24 @@ fecha se vuelve permanente sola; ésta se vence sola. La primera fue FINCA: sus
 una sede toca `_slotKey`, que es la ancla de los planes YA GUARDADOS de usuarios
 reales.
 
+**Decimoséptimo: `[config-esm]` — `node --check` da un verde falso.**
+`src/config.js` es un **módulo ES**, y `node --check` lo analiza como *script*.
+Un archivo donde la entrada de un festival se quedó sin cerrar pasa ese chequeo
+y revienta en el navegador. Pasó el 20 ago 2026 al resolver un merge en el que
+las dos ramas agregaban su festival en el mismo punto del archivo: la entrada de
+Cinemancia perdió su `},`, CineAutopsia quedó **anidado dentro de ella**, y la
+app no arrancaba — splash vacío y `Uncaught SyntaxError` en consola.
+
+Nada lo vio. `validate.py` parsea el config con expresiones regulares y nunca lo
+ejecuta; `node --check` lo lee con la gramática equivocada; los unit tests no lo
+tocan; y Playwright habría fallado, pero esa rama no lo corría. El error viajó
+dentro de un commit que decía «108/117 checks passed».
+
+Regla: **el guardián IMPORTA el config de verdad** —`import()` sobre el archivo—
+y comprueba dos cosas que solo se ven al cargarlo: que no haya un festival
+anidado dentro de otro, y que el número de festivales no se desplome. Es la
+única forma de saber que el archivo que carga el navegador es el que creemos.
+
 **Decimosexto: `[poster-mirado]` — alguien tiene que ABRIR el archivo.**
 
 *«¿Cómo es posible crear un póster sin pasar por un guardián?»* preguntó Juan al

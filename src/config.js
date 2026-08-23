@@ -438,6 +438,50 @@ export const FESTIVAL_CONFIG={
     keyArt:'/assets/keyart/finca2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
+  'cinemancia2026': {
+    name:'Cinemancia',fullName:'Cinemancia — Festival de Cine del Valle de Aburrá',shortName:'CINEMANCIA',
+    city:'Valle de Aburrá',country:'CO',
+    dates:'3–12 SEP',dates_en:'SEP 3–12',year:2026,timezoneOffset:'-05:00',
+    storageKey:'cinemancia2026_',festivalStartStr:'2026-09-03T00:00:00',festivalEndStr:'2026-09-12T23:59:00',
+    festivalDates:{'2026-09-03': '2026-09-03', '2026-09-04': '2026-09-04', '2026-09-05': '2026-09-05', '2026-09-06': '2026-09-06', '2026-09-07': '2026-09-07', '2026-09-08': '2026-09-08', '2026-09-09': '2026-09-09', '2026-09-10': '2026-09-10', '2026-09-11': '2026-09-11', '2026-09-12': '2026-09-12'},
+    days:[{k: '2026-09-03', d: 3, lbl: 'JUE'}, {k: '2026-09-04', d: 4, lbl: 'VIE'}, {k: '2026-09-05', d: 5, lbl: 'SÁB'}, {k: '2026-09-06', d: 6, lbl: 'DOM'}, {k: '2026-09-07', d: 7, lbl: 'LUN'}, {k: '2026-09-08', d: 8, lbl: 'MAR'}, {k: '2026-09-09', d: 9, lbl: 'MIÉ'}, {k: '2026-09-10', d: 10, lbl: 'JUE'}, {k: '2026-09-11', d: 11, lbl: 'VIE'}, {k: '2026-09-12', d: 12, lbl: 'SÁB'}],
+    dayKeys:['2026-09-03', '2026-09-04', '2026-09-05', '2026-09-06', '2026-09-07', '2026-09-08', '2026-09-09', '2026-09-10', '2026-09-11', '2026-09-12'],
+    dayShort:{'2026-09-03': 'JUE 3', '2026-09-04': 'VIE 4', '2026-09-05': 'SÁB 5', '2026-09-06': 'DOM 6', '2026-09-07': 'LUN 7', '2026-09-08': 'MAR 8', '2026-09-09': 'MIÉ 9', '2026-09-10': 'JUE 10', '2026-09-11': 'VIE 11', '2026-09-12': 'SÁB 12'},
+    dayShort_en:{'2026-09-03': 'THU 3', '2026-09-04': 'FRI 4', '2026-09-05': 'SAT 5', '2026-09-06': 'SUN 6', '2026-09-07': 'MON 7', '2026-09-08': 'TUE 8', '2026-09-09': 'WED 9', '2026-09-10': 'THU 10', '2026-09-11': 'FRI 11', '2026-09-12': 'SAT 12'},
+    dayLong:{'2026-09-03': 'Jueves 3 de septiembre', '2026-09-04': 'Viernes 4 de septiembre', '2026-09-05': 'Sábado 5 de septiembre', '2026-09-06': 'Domingo 6 de septiembre', '2026-09-07': 'Lunes 7 de septiembre', '2026-09-08': 'Martes 8 de septiembre', '2026-09-09': 'Miércoles 9 de septiembre', '2026-09-10': 'Jueves 10 de septiembre', '2026-09-11': 'Viernes 11 de septiembre', '2026-09-12': 'Sábado 12 de septiembre'},
+    prioLimit:5,
+    sharedSlotIsOneScreening:true,
+    // Mixto, y lo dice el PDF oficial con todas las letras: «a excepción de las
+    // funciones en Cineprox Las Américas y Cine MAMM, las funciones del festival
+    // son de entrada libre». En Cineprox las sillas son numeradas y la boleta se
+    // compra en taquilla; en Cine MAMM, en el primer piso del museo. El build
+    // anterior marcaba las 89 funciones como gratis por igual.
+    ticketing_model:'mixed',
+    keyArt:'/assets/keyart/cinemancia2026.jpg',
+    // group:'test' — Cinemancia NO se publica todavía, pero ya NO por datos:
+    // el montaje está completo (79 funciones, 108 obras, todas con afiche,
+    // sinopsis, país y duración; 13 sedes ubicadas; cero programas sin
+    // contenido). Falta que el equipo del festival lo revise y lo apruebe,
+    // y para eso entran por ?fest=cinemancia2026 sin que nadie más lo vea.
+    // Quitar esta línea ES publicar.
+    group:'test',
+    // Sus seis municipios son el Valle de Aburrá: un solo territorio de
+    // traslado. Sin esto, la app se niega a estimar el viaje entre ellos —una
+    // regla pensada para FICDEH, que corre en ciudades a cientos de km— y le
+    // dice al usuario «es en otra ciudad» en vez de cuántos minutos le faltan.
+    metroArea:true,
+    // EN REVISIÓN — el festival ve su montaje en la app real, antes de que lo
+    // vea nadie más. `group:'test'` lo mantiene fuera de todo lo demás; esto lo
+    // devuelve al riel en su propio grupo, al final, tras los pasados.
+    //   · solo dentro de la app (en web el store gate manda a las tiendas);
+    //   · pide `key` para entrar — va en el bundle a propósito: protege de
+    //     entrar por accidente, no de alguien decidido, y eso basta;
+    //   · `until` la apaga sola. Un permiso temporal que hay que acordarse de
+    //     revocar es un permiso permanente.
+    review:{key:'cine26', until:'2026-09-03'},
+    tagline:'Festival de Cine del Valle de Aburrá',
+    films:null,posters:null,lbSlugs:{}
+  },
   'cineautopsia2026': {
     name:'CineAutopsia',fullName:'CineAutopsia — Festival de Cine Experimental de Bogotá',shortName:'CINEAUTOPSIA',
     city:'Bogotá',country:'CO',
@@ -553,6 +597,20 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── Cinemancia 2026 · Valle de Aburrá ─────────────────────────────────
+  '⭐ Función inaugural': 'Apertura / Gala',
+  '🎬 Función de clausura': 'Clausura',
+  '🏆 Competencia Central': 'Competencia',
+  '🎞️ Competencia de Cortometrajes': 'Competencia',
+  '🔺 Programa 1. El espesor de las formas': 'Cortos / Programas',
+  '👁️ Programa 2. Teoremas sobre la mirada': 'Cortos / Programas',
+  '⚗️ Alquimia de la luz. El cine de Luciana Decker': 'Retrospectiva / Tributo',
+  '🃏 Carta blanca': 'Perspectivas / Miradas',
+  '🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva': 'Retrospectiva / Tributo',
+  '🌡️ Febril incisión. El cine de Thomas Fürhapter': 'Retrospectiva / Tributo',
+  '🖤 Sick and Dirty. Curaduría de Michael Koresky': 'Perspectivas / Miradas',
+  '📼 La sutil materia. Sergio Navarro': 'Retrospectiva / Tributo',
+  '🇦🇷 Historia(s) del cine: Argentina. Curaduría de José Miccio': 'Muestra / País',
   // VARTEX 14 — muestra de video y experimental, Medellín.
   '🌍 Muestra Internacional': 'Muestra / País',
   '🇨🇴 Muestra Nacional':     'Muestra / País',

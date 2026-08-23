@@ -1,0 +1,794 @@
+{
+ "_provenance": {
+  "fuente": "PDF oficial de programación · Google Drive del festival (enviado por Juan, 19 ago 2026)",
+  "capturado": "2026-08-19",
+  "metodo": "parseo POSICIONAL de la parrilla (pipeline/cinemancia-2026-parrilla.py): la fila es la sede, el eje X es el tiempo",
+  "robots": "drive.google.com robots.txt leído antes de la descarga: /file permitido",
+  "notas": [
+   "las páginas 6, 8 y 10 son de DESCRIPCIÓN (Conversaciones, Debate, Encuentro), no parrilla; su texto sirve para sinopsis, no para horarios",
+   "dos celdas escriben la hora sin a.m./p.m. y van marcadas con _hora_inferida",
+   "la parrilla termina donde empieza la primera sección de detalle de la página; sin ese corte el sábado 12 daba una función fantasma",
+   "la hora puede venir PEGADA al título en un mismo fragmento (domingo 6, 2:00 p.m.); exigir que el fragmento fuera solo la hora perdía esa función",
+   "la primera fila no tiene techo: un margen fijo dejaba fuera de banda las celdas que asoman sobre el rótulo y las mandaba a la última sede de la página"
+  ]
+ },
+ "_funciones": 86,
+ "funciones": [
+  {
+   "dia_semana": "jueves",
+   "hora": "19:00",
+   "titulo_crudo": "Inauguración Todas las canciones del mundo Santiago Flórez + Lamentos de un balcón Juan Chispas",
+   "duracion_min": 88,
+   "_pagina": 2,
+   "sede": "Teatro Comfama Alfonso Restrepo Moreno Medellín",
+   "dia": "2026-09-03"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "10:00",
+   "titulo_crudo": "Foro de la Crítica Sesión 1 Inscripción previa*",
+   "duracion_min": 120,
+   "_pagina": 3,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-04"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "14:30",
+   "titulo_crudo": "Debate “Todos los planos del mundo”, ¿Qué cine colombiano queremos?",
+   "duracion_min": 60,
+   "_pagina": 3,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-04"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "16:00",
+   "titulo_crudo": "Retrospectiva Sergio Navarro Programa 1 Cuartito rosa +",
+   "duracion_min": 67,
+   "_pagina": 3,
+   "sede": "Biblioteca Comfama Bello Centro Bello",
+   "dia": "2026-09-04"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "16:30",
+   "titulo_crudo": "Oublie pas le gruau / No olvides la avena Olivier Godin + Sol menor André Silva Santos",
+   "duracion_min": 102,
+   "_pagina": 3,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-04"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "16:30",
+   "titulo_crudo": "Así llegó la noche Ángel Santos",
+   "duracion_min": 122,
+   "_hora_inferida": true,
+   "_pagina": 3,
+   "sede": "Cineprox Las Américas Medellín",
+   "dia": "2026-09-04"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "17:00",
+   "titulo_crudo": "Viviendo juntos / Zusammenlebenu Thomas Fürhapter + Conversaciones Cinemancia: Febril incisión: el cine de Thomas",
+   "duracion_min": 90,
+   "_pagina": 3,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-04"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "18:00",
+   "titulo_crudo": "La corazonada Diego Soto + Cairo Streets",
+   "duracion_min": 97,
+   "_pagina": 3,
+   "sede": "Teatro Caribe Itagüí",
+   "dia": "2026-09-04"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "18:30",
+   "titulo_crudo": "La tempestá + No contéis con los dedos + Vampir Cuadecuc Pere Portabella",
+   "duracion_min": 99,
+   "_pagina": 3,
+   "sede": "Casa Municipal de la Cultura de Caldas Caldas",
+   "dia": "2026-09-04"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "19:00",
+   "titulo_crudo": "Foco Alquimia de la luz: Luciana Decker",
+   "duracion_min": 82,
+   "_pagina": 3,
+   "sede": "Antimateria Libros y Café Medellín",
+   "dia": "2026-09-04"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "19:00",
+   "titulo_crudo": "Historia(s) del cine: Argentina Dice que... Alejandro Fernández Mouján + Las picapiedreras Azul Aizenberg *Presentación por José Miccio",
+   "duracion_min": 84,
+   "_pagina": 3,
+   "sede": "Casa Museo Otraparte Envigado",
+   "dia": "2026-09-04"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "19:00",
+   "titulo_crudo": "Macho Dancer Lino Brocka",
+   "duracion_min": 136,
+   "_pagina": 3,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-04"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "19:30",
+   "titulo_crudo": "Competencia de cortometrajes Programa 1",
+   "duracion_min": 71,
+   "_pagina": 3,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-04"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "10:00",
+   "titulo_crudo": "Foro de la Crítica Sesión 2 Inscripción previa*",
+   "duracion_min": 120,
+   "_pagina": 4,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-05"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "14:00",
+   "titulo_crudo": "Sick and Dirty Buddies Arthur J. Bressan, Jr. *Presentado por Michael Koresky",
+   "duracion_min": 81,
+   "_pagina": 4,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-05"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "15:00",
+   "titulo_crudo": "Un techo sin cielo Diego Hernández",
+   "duracion_min": 90,
+   "_pagina": 4,
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "dia": "2026-09-05"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "16:00",
+   "titulo_crudo": "Competencia de cortometrajes Programa 2",
+   "duracion_min": 86,
+   "_pagina": 4,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-05"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "16:30",
+   "titulo_crudo": "El viento sabe que vuelvo a casa",
+   "duracion_min": 102,
+   "_pagina": 4,
+   "sede": "Cineprox Las Américas Medellín",
+   "dia": "2026-09-05"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "17:00",
+   "titulo_crudo": "Competencia Nuevas Voces Programa 1",
+   "duracion_min": 59,
+   "_pagina": 4,
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "dia": "2026-09-05"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "18:00",
+   "titulo_crudo": "Retrospectiva Sergio Navarro Programa 2",
+   "duracion_min": 87,
+   "_pagina": 4,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-05"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "18:00",
+   "titulo_crudo": "La tempestá + No contéis con los dedos + Vampir Cuadec Pere Portabella + Conversaciones Cinemancia: “Legado inmarcesible”. Participan Julio Lamaña y",
+   "duracion_min": 80,
+   "_pagina": 4,
+   "sede": "Teatro Caribe Itagüí",
+   "dia": "2026-09-05"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "18:30",
+   "titulo_crudo": "¿Qué historia es ésta y cuál es su final? + Obreras saliendo de la fábrica José Luis Torres Leiva",
+   "duracion_min": 74,
+   "_pagina": 4,
+   "sede": "Casa Municipal de la Cultura de Caldas Caldas",
+   "dia": "2026-09-05"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "19:30",
+   "titulo_crudo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar Deimer Quintero Vertel + Decaer",
+   "duracion_min": 101,
+   "_pagina": 4,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-05"
+  },
+  {
+   "dia_semana": "domingo",
+   "hora": "14:00",
+   "titulo_crudo": "¿Qué historia es ésta y cuál es su final? + Obreras saliendo de la fábrica José Luis Torres Leiva ’ + Conversaciones Cinemancia: “La primavera llega para los que esperan”",
+   "duracion_min": 74,
+   "_pagina": 5,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-06"
+  },
+  {
+   "dia_semana": "domingo",
+   "hora": "14:00",
+   "titulo_crudo": "Así llegó la noche Ángel Santos",
+   "duracion_min": 122,
+   "_pagina": 5,
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "dia": "2026-09-06"
+  },
+  {
+   "dia_semana": "domingo",
+   "hora": "15:00",
+   "titulo_crudo": "Sobre cosas que me han pasado + Verano José Luis Torres Leiva",
+   "duracion_min": null,
+   "_pagina": 5,
+   "sede": "Cine MAMM Medellín",
+   "dia": "2026-09-06"
+  },
+  {
+   "dia_semana": "domingo",
+   "hora": "16:30",
+   "titulo_crudo": "Mucho hablar / Beaucoup parler Pascale Bodet + Futuros luminosos Ismael García",
+   "duracion_min": 103,
+   "_pagina": 5,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-06"
+  },
+  {
+   "dia_semana": "domingo",
+   "hora": "16:30",
+   "titulo_crudo": "Los golfos Carlos Saura",
+   "duracion_min": 83,
+   "_pagina": 5,
+   "sede": "Cineprox Las Américas Medellín",
+   "dia": "2026-09-06"
+  },
+  {
+   "dia_semana": "domingo",
+   "hora": "17:00",
+   "titulo_crudo": "Competencia de cortometrajes Programa 3",
+   "duracion_min": 85,
+   "_pagina": 5,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-06"
+  },
+  {
+   "dia_semana": "domingo",
+   "hora": "18:00",
+   "titulo_crudo": "Viviendo juntos / Zusammenleben Thomas Fürhapter",
+   "duracion_min": 90,
+   "_pagina": 5,
+   "sede": "Teatro Caribe Itagüí",
+   "dia": "2026-09-06"
+  },
+  {
+   "dia_semana": "domingo",
+   "hora": "19:00",
+   "titulo_crudo": "Historia(s) del cine: Argen - tina -Chico eléctrico Ingrid Pokropek + Solo qu3r3mos un poco de amor Raúl Perrone *Presentación por",
+   "duracion_min": 103,
+   "_pagina": 5,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-06"
+  },
+  {
+   "dia_semana": "Lunes",
+   "hora": "10:00",
+   "titulo_crudo": "Foro de la Crítica Sesión 3 Inscripción previa*",
+   "duracion_min": 120,
+   "_pagina": 7,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-07"
+  },
+  {
+   "dia_semana": "Lunes",
+   "hora": "16:30",
+   "titulo_crudo": "Cleaning & Cleansing / Limpiar y purificar Thomas Fürhapter",
+   "duracion_min": 92,
+   "_pagina": 7,
+   "sede": "Cineprox Las Américas Medellín",
+   "dia": "2026-09-07"
+  },
+  {
+   "dia_semana": "Lunes",
+   "hora": "17:30",
+   "titulo_crudo": "Sick and Dirty The Children’s Hour William Wyler",
+   "duracion_min": 108,
+   "_pagina": 7,
+   "sede": "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín",
+   "dia": "2026-09-07"
+  },
+  {
+   "dia_semana": "Lunes",
+   "hora": "18:00",
+   "titulo_crudo": "Cuando las nubes esconden la sombra + El sueño de Ana José Luis Torres Leiva",
+   "duracion_min": 80,
+   "_pagina": 7,
+   "sede": "Teatro Caribe Itagüí",
+   "dia": "2026-09-07"
+  },
+  {
+   "dia_semana": "Lunes",
+   "hora": "19:00",
+   "titulo_crudo": "Competencia Nuevas Voces Programa 2",
+   "duracion_min": 64,
+   "_pagina": 7,
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "dia": "2026-09-07"
+  },
+  {
+   "dia_semana": "Lunes",
+   "hora": "19:30",
+   "titulo_crudo": "Conversaciones Cinemancia: Itinerarios de una tradición. Participan: José Miccio",
+   "duracion_min": 60,
+   "_pagina": 7,
+   "sede": "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín",
+   "dia": "2026-09-07"
+  },
+  {
+   "dia_semana": "martes",
+   "hora": "10:00",
+   "titulo_crudo": "Foro de la Crítica Sesión 4 Inscripción previa*",
+   "duracion_min": 120,
+   "_pagina": 9,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-08"
+  },
+  {
+   "dia_semana": "martes",
+   "hora": "14:00",
+   "titulo_crudo": "Une vie manifeste / Una vida, un manifiesto Jean-Gabriel Périot",
+   "duracion_min": 86,
+   "_pagina": 9,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-08"
+  },
+  {
+   "dia_semana": "martes",
+   "hora": "15:00",
+   "titulo_crudo": "Foco Alquimia de la luz: Luciana Decker Programa 1 + Conversaciones Cinemancia: Alquimia",
+   "duracion_min": 82,
+   "_pagina": 9,
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "dia": "2026-09-08"
+  },
+  {
+   "dia_semana": "martes",
+   "hora": "16:00",
+   "titulo_crudo": "Un techo sin cielo Diego Hernández",
+   "duracion_min": 90,
+   "_pagina": 9,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-08"
+  },
+  {
+   "dia_semana": "martes",
+   "hora": "16:30",
+   "titulo_crudo": "Vendrá la muerte y tendrá tus ojos + Alicia soñó con un faro",
+   "duracion_min": 94,
+   "_pagina": 9,
+   "sede": "Cineprox Las Américas Medellín",
+   "dia": "2026-09-08"
+  },
+  {
+   "dia_semana": "martes",
+   "hora": "17:30",
+   "titulo_crudo": "Las almas ni los ojos Canela Reyes y César Jaimes + Una Dança Non Sancta",
+   "duracion_min": 82,
+   "_pagina": 9,
+   "sede": "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín",
+   "dia": "2026-09-08"
+  },
+  {
+   "dia_semana": "martes",
+   "hora": "18:00",
+   "titulo_crudo": "Dry Leaf Alexandre Koberidze",
+   "duracion_min": 186,
+   "_pagina": 9,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-08"
+  },
+  {
+   "dia_semana": "martes",
+   "hora": "18:00",
+   "titulo_crudo": "Competencia Nuevas Voces Programa 1",
+   "duracion_min": 58,
+   "_pagina": 9,
+   "sede": "Teatro Caribe Itagüí",
+   "dia": "2026-09-08"
+  },
+  {
+   "dia_semana": "martes",
+   "hora": "18:00",
+   "titulo_crudo": "Auslandsreise / Viaje al extranjero Ted Fendt",
+   "duracion_min": 63,
+   "_pagina": 9,
+   "sede": "Teatro Otraparte Biblioteca y Edificio Cultural Otraparte Envigado",
+   "dia": "2026-09-08"
+  },
+  {
+   "dia_semana": "martes",
+   "hora": "19:00",
+   "titulo_crudo": "Sick and Dirty Vive L’amour Tsai Ming-liang *Presentado por",
+   "duracion_min": 118,
+   "_pagina": 9,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-08"
+  },
+  {
+   "dia_semana": "martes",
+   "hora": "20:00",
+   "titulo_crudo": "Retrospectiva Sergio Navarro Programa 1 Cuartito rosa +",
+   "duracion_min": 67,
+   "_pagina": 9,
+   "sede": "Antimateria Libros y Café Medellín",
+   "dia": "2026-09-08"
+  },
+  {
+   "dia_semana": "miércoles",
+   "hora": "09:00",
+   "titulo_crudo": "Seminario de la imagen con Luciana Decker",
+   "duracion_min": 120,
+   "_pagina": 11,
+   "sede": "Centro Cultural y Educativo Fundación Diego Echavarría Misas Itagüí",
+   "dia": "2026-09-09"
+  },
+  {
+   "dia_semana": "miércoles",
+   "hora": "14:00",
+   "titulo_crudo": "El viento sabe que vuelvo a casa José Luis Torres Leiva",
+   "duracion_min": 102,
+   "_pagina": 11,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-09"
+  },
+  {
+   "dia_semana": "miércoles",
+   "hora": "16:00",
+   "titulo_crudo": "Foco Alquimia de la luz: Luciana Decker",
+   "duracion_min": 55,
+   "_pagina": 11,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-09"
+  },
+  {
+   "dia_semana": "miércoles",
+   "hora": "16:30",
+   "titulo_crudo": "Las almas ni los ojos Canela Reyes y César Jaimes + Una Dança Non Sancta",
+   "duracion_min": 82,
+   "_pagina": 11,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-09"
+  },
+  {
+   "dia_semana": "miércoles",
+   "hora": "16:30",
+   "titulo_crudo": "The Souffleur Gastón Solnicki",
+   "duracion_min": 78,
+   "_pagina": 11,
+   "sede": "Cineprox Las Américas Medellín",
+   "dia": "2026-09-09"
+  },
+  {
+   "dia_semana": "miércoles",
+   "hora": "17:00",
+   "titulo_crudo": "La tercera opción / Die dritte Option",
+   "duracion_min": 78,
+   "_pagina": 11,
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "dia": "2026-09-09"
+  },
+  {
+   "dia_semana": "miércoles",
+   "hora": "17:30",
+   "titulo_crudo": "Disciplina Affonso Uchôa + Lolita en Honda",
+   "duracion_min": 106,
+   "_pagina": 11,
+   "sede": "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín",
+   "dia": "2026-09-09"
+  },
+  {
+   "dia_semana": "miércoles",
+   "hora": "18:00",
+   "titulo_crudo": "Mucho hablar / Beaucoup parler Pascale Bodet + Futuros luminosos Ismael García",
+   "duracion_min": 103,
+   "_pagina": 11,
+   "sede": "Teatro Caribe Itagüí",
+   "dia": "2026-09-09"
+  },
+  {
+   "dia_semana": "miércoles",
+   "hora": "18:30",
+   "titulo_crudo": "Para hacer una película solo se necesita un arma",
+   "duracion_min": 146,
+   "_pagina": 11,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-09"
+  },
+  {
+   "dia_semana": "miércoles",
+   "hora": "19:00",
+   "titulo_crudo": "Juicio a un joven poeta Philippe Van Cutsem + Solitudes Ryan McKenna + Hold My Hand",
+   "duracion_min": 115,
+   "_pagina": 11,
+   "sede": "Antimateria Libros y Café Medellín",
+   "dia": "2026-09-09"
+  },
+  {
+   "dia_semana": "miércoles",
+   "hora": "19:00",
+   "titulo_crudo": "Competencia de cortometrajes Programa 1",
+   "duracion_min": 71,
+   "_pagina": 11,
+   "sede": "Casa Museo Otraparte Envigado",
+   "dia": "2026-09-09"
+  },
+  {
+   "dia_semana": "miércoles",
+   "hora": "19:00",
+   "titulo_crudo": "Ver y escuchar José Luis Torres Leiva",
+   "duracion_min": 90,
+   "_pagina": 11,
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "dia": "2026-09-09"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "09:00",
+   "titulo_crudo": "Seminario de la imagen con Luciana Decker *Inscripción previa",
+   "duracion_min": 100,
+   "_pagina": 12,
+   "sede": "Centro Cultural y Educativo Fundación Diego Echavarría Misas Itagüí",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "14:00",
+   "titulo_crudo": "Encuentro Internacional de Investigación-Creación en Música y Sonido Cinematográfico SONORIDADES",
+   "duracion_min": null,
+   "_pagina": 12,
+   "sede": "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "16:00",
+   "titulo_crudo": "Retrospectiva Sergio Navarro Programa 2 El santo y el milagro + La libertad remonta el estadio + Valparaíso eterno",
+   "duracion_min": 87,
+   "_pagina": 12,
+   "sede": "Casa Museo Otraparte Envigado",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "16:00",
+   "titulo_crudo": "Programas especiales cortometrajes – Fuera de competencia Programa 1 El espesor de las formas",
+   "duracion_min": 88,
+   "_pagina": 12,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "16:30",
+   "titulo_crudo": "La tercera opción / Die dritte Option Thomas Fürhapter",
+   "duracion_min": 78,
+   "_hora_inferida": true,
+   "_pagina": 12,
+   "sede": "Cineprox Las Américas Medellín",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "17:30",
+   "titulo_crudo": "Sobre cosas que me han pasado + Verano José Luis Torres Leiva",
+   "duracion_min": 110,
+   "_pagina": 12,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "17:30",
+   "titulo_crudo": "Historia(s) del cine: Argentina Rancho Pedro Speroni + Homenaje a la obra de Philip Henry Gosse Pablo Martín + Spot Fuera de campo 1 Pablo Martín + Spot Fuera de campo 2 María Aparicio",
+   "duracion_min": 98,
+   "_pagina": 12,
+   "sede": "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "18:00",
+   "titulo_crudo": "Competencia Nuevas Voces Programa 2",
+   "duracion_min": 64,
+   "_pagina": 12,
+   "sede": "Teatro Caribe Itagüí",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "18:00",
+   "titulo_crudo": "Oublie pas le gruau / No olvides la avena Olivier Godin + Sol menor",
+   "duracion_min": 102,
+   "_pagina": 12,
+   "sede": "Teatro Otraparte Biblioteca y Edificio Cultural Otraparte Envigado",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "19:00",
+   "titulo_crudo": "Auslandsreise / Viaje al extranjero Ted Fendt + Conversaciones Cinemancia: Contra la falsa intensidad. Participan: Leonie Rodrian, Pablo Roldán",
+   "duracion_min": 63,
+   "_pagina": 12,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "19:00",
+   "titulo_crudo": "Muchas veces pienso en Hawai / Ich denke oft an Hawaii Elfi Mikesch",
+   "duracion_min": 82,
+   "_pagina": 12,
+   "sede": "La Capilla del Claustro Comfama Medellín",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "19:00",
+   "titulo_crudo": "El cielo, la tierra y la lluvia José Luis Torres Leiva",
+   "duracion_min": 110,
+   "_pagina": 12,
+   "sede": "Terko Copacabana",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "jueves",
+   "hora": "19:30",
+   "titulo_crudo": "Programas especiales corto - metrajes Fuera de competencia Programa 2 Teoremas sobre la mirada + Debate: Riesgos estéticos: empujando los límites",
+   "duracion_min": 43,
+   "_pagina": 12,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-10"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "09:00",
+   "titulo_crudo": "Seminario de la imagen con Luciana Decker",
+   "duracion_min": 120,
+   "_pagina": 13,
+   "sede": "Centro Cultural y Educativo Fundación Diego Echavarría Misas Itagüí",
+   "dia": "2026-09-11"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "14:00",
+   "titulo_crudo": "La tercera opción / Die dritte Option",
+   "duracion_min": 78,
+   "_pagina": 13,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-11"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "16:00",
+   "titulo_crudo": "Vendrá la muerte y tendrá tus ojos + Alicia soñó con un faro José Luis Torres Leiva",
+   "duracion_min": 94,
+   "_pagina": 13,
+   "sede": "Biblioteca Comfama Bello Centro Bello",
+   "dia": "2026-09-11"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "16:00",
+   "titulo_crudo": "El cielo, la tierra y la lluvia",
+   "duracion_min": 110,
+   "_pagina": 13,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-11"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "16:30",
+   "titulo_crudo": "La corazonada Diego Soto + Cairo Streets Abdellah Taïa",
+   "duracion_min": 97,
+   "_pagina": 13,
+   "sede": "Cineprox Las Américas Medellín",
+   "dia": "2026-09-11"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "17:00",
+   "titulo_crudo": "Programa de cortometrajes Rajenda Gour",
+   "duracion_min": 71,
+   "_pagina": 13,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-11"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "18:00",
+   "titulo_crudo": "Competencia de cortometrajes Programa 3",
+   "duracion_min": 67,
+   "_pagina": 13,
+   "sede": "Teatro Caribe Itagüí",
+   "dia": "2026-09-11"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "18:30",
+   "titulo_crudo": "Juicio a un joven poeta Philippe Van Cutsem + Solitudes Ryan McKenna +Hold My Hand",
+   "duracion_min": 115,
+   "_pagina": 13,
+   "sede": "Cine MAMM Medellín",
+   "dia": "2026-09-11"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "19:00",
+   "titulo_crudo": "Cleaning & Cleansing Thomas Fürhapter",
+   "duracion_min": 92,
+   "_pagina": 13,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-11"
+  },
+  {
+   "dia_semana": "viernes",
+   "hora": "19:00",
+   "titulo_crudo": "Competencia de cortometrajes Programa 2",
+   "duracion_min": 86,
+   "_pagina": 13,
+   "sede": "Terko Copacabana",
+   "dia": "2026-09-11"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "14:30",
+   "titulo_crudo": "El árbol del conocimiento / A Árvore do Conhecimento",
+   "duracion_min": 100,
+   "_pagina": 14,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-12"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "17:00",
+   "titulo_crudo": "¿Qué haremos sin la muerte? / Was soll’n wir denn machen ohne den Tod Elfi Mikesch",
+   "duracion_min": 101,
+   "_pagina": 14,
+   "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
+   "dia": "2026-09-12"
+  },
+  {
+   "dia_semana": "sábado",
+   "hora": "19:00",
+   "titulo_crudo": "Premiación y función de clasura: Iluminaciones",
+   "duracion_min": 61,
+   "_pagina": 14,
+   "sede": "Centro Colombo Americano Sede centro sala 1 Medellín",
+   "dia": "2026-09-12"
+  }
+ ]
+}
