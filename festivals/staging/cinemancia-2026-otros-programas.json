@@ -1,0 +1,151 @@
+{
+ "_provenance": {
+  "fuente": "Google Sheet enviado por Cinemancia, hoja «Otros programas»",
+  "recibido": "2026-08-21"
+ },
+ "programas": [
+  {
+   "programa": "Alquimia de la luz el cine de Luciana Decker",
+   "pases": [
+    {
+     "dia_txt": "Viernes 4 de septiembre",
+     "hora_txt": "7:00 p.m.",
+     "sede_txt": "Antimateria Libros y Café",
+     "ciudad": "Medellín"
+    },
+    {
+     "dia_txt": "Martes 8 de septiembre",
+     "hora_txt": "3:00 p.m.",
+     "sede_txt": "La Capilla del Claustro Comfama",
+     "ciudad": "Medellín"
+    }
+   ],
+   "obras": [
+    {
+     "title": "Larama",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2020,
+     "duration": 8
+    },
+    {
+     "title": "Lo que los humanos ven como sangre los jaguares ven como chicha",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2023,
+     "duration": 30
+    },
+    {
+     "title": "Objetos parlantes",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2021,
+     "duration": 10
+    },
+    {
+     "title": "Puro andar",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2025,
+     "duration": 12
+    },
+    {
+     "title": "Spoils",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2023,
+     "duration": 7
+    },
+    {
+     "title": "Trizas",
+     "director": "Luciana Decker",
+     "country": "Bolivia",
+     "year": 2026,
+     "duration": 15
+    }
+   ]
+  },
+  {
+   "programa": "Carta Blanca Luciana Decker",
+   "pases": [
+    {
+     "dia_txt": "Miércoles 9 de septiembre",
+     "hora_txt": "4:00 p.m.",
+     "sede_txt": "Colombo Americano - Sede centro Sala 2",
+     "ciudad": "Medellín"
+    }
+   ],
+   "obras": [
+    {
+     "title": "Derroteros. Derroteros. Derroteros. Derroteros. Derroteros. Derroteros. Derroteros.",
+     "director": "Esteban Prudencio",
+     "country": "Bolvia, Cuba",
+     "year": 2026,
+     "duration": 19
+    },
+    {
+     "title": "Esquivo",
+     "director": "Fatmeh Villalba",
+     "country": "Bolivia, Alemania",
+     "year": 2026,
+     "duration": 30
+    },
+    {
+     "title": "Jakawisa",
+     "director": "Delia Yujra Chura",
+     "country": "Bolivia",
+     "year": 2020,
+     "duration": 6
+    }
+   ]
+  },
+  {
+   "programa": "Programa de cortometrajes Rajenda Gour",
+   "pases": [
+    {
+     "dia_txt": "Viernes 11 de septiembre",
+     "hora_txt": "5:00 p.m.",
+     "sede_txt": "Centro Colombo Americano - Sede centro - Sala 2",
+     "ciudad": "Medellín"
+    }
+   ],
+   "obras": [
+    {
+     "title": "Eyes",
+     "director": "Rajendra Gour",
+     "country": "Singapur",
+     "year": 1967,
+     "duration": 5
+    },
+    {
+     "title": "Labour of love: The Housewife",
+     "director": "Rajendra Gour",
+     "country": "Singapur",
+     "year": 1978,
+     "duration": 19
+    },
+    {
+     "title": "My child, My child",
+     "director": "Rajendra Gour",
+     "country": "Singapur",
+     "year": 1979,
+     "duration": 12
+    },
+    {
+     "title": "Sight and desire (eyes)",
+     "director": "Rajendra Gour",
+     "country": "Singapur",
+     "year": 1968,
+     "duration": 22
+    },
+    {
+     "title": "Sunshine Singapur",
+     "director": "Rajendra Gour",
+     "country": "Singapur",
+     "year": 1972,
+     "duration": 7
+    }
+   ]
+  }
+ ]
+}

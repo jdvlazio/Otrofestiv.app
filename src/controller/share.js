@@ -5,6 +5,7 @@ import { FESTIVAL_CONFIG } from '../config.js';
 import { DAYS, _langDates, dayLabel, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster } from '../view/helpers.js';
 import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast } from '../view/feedback.js';
+import { _esRevisionActiva } from '../view/sheets.js';
 import { _festDate } from '../domain/time.js';
 import { blockDuration } from '../domain/film.js';
 import { t } from '../i18n/i18n.js';
@@ -16,6 +17,12 @@ import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→aut
 // sección + título centrado. Tokens de la casa (fondo #0B0A08, ámbar #F59E0B,
 // blanco #F0EDE8). Mismo flujo de compartir que sharePlan (toBlob → Web Share → descarga).
 export async function shareDiary(){
+  // RESTRICCIÓN 2 — de un festival en revisión no sale nada. Su programación
+  // es provisional y compartirla la hace circular como si fuera definitiva:
+  // una captura del plan o un .ics en el calendario de alguien sobreviven a
+  // la revisión y ya no se pueden desmentir. Se avisa, no se falla en silencio.
+  if(_esRevisionActiva()){ showToast(t('review_no_compartir')); return; }
+
   const sched=(savedAgenda&&savedAgenda.schedule)||[];
   const _seen=new Set(); const rows=[];
   // Un programa se expande en sus OBRAS (lo que el usuario vio), cada una con su afiche + estrellas.
@@ -113,6 +120,12 @@ export async function shareDiary(){
 }
 
 export async function sharePlan(){
+  // RESTRICCIÓN 2 — de un festival en revisión no sale nada. Su programación
+  // es provisional y compartirla la hace circular como si fuera definitiva:
+  // una captura del plan o un .ics en el calendario de alguien sobreviven a
+  // la revisión y ya no se pueden desmentir. Se avisa, no se falla en silencio.
+  if(_esRevisionActiva()){ showToast(t('review_no_compartir')); return; }
+
   if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length){
     showToast(t('plan_sin_plan'),'warn');return;
   }
@@ -287,6 +300,12 @@ export function _dlDirect(dataUrl){
 }
 
 export async function exportICS(){
+  // RESTRICCIÓN 2 — de un festival en revisión no sale nada. Su programación
+  // es provisional y compartirla la hace circular como si fuera definitiva:
+  // una captura del plan o un .ics en el calendario de alguien sobreviven a
+  // la revisión y ya no se pueden desmentir. Se avisa, no se falla en silencio.
+  if(_esRevisionActiva()){ showToast(t('review_no_compartir')); return; }
+
   if(!savedAgenda||!savedAgenda.schedule.length){showToast(t('plan_sin_plan'),'warn');return;}
   const pad=n=>String(n).padStart(2,'0');
   // UTC con sufijo Z — instante absoluto. El Date se construye con el offset del
