@@ -2496,6 +2496,63 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar calendario-entero: {_e}')
 
+# ── [aplazado-caduca] un aplazado se va a pasados, pero sigue siendo aplazado ──
+# Juan, 23 ago 2026: «FICMA hace ruido donde está». Un aplazado nunca contaba
+# como pasado —deliberado: cuando FICMA se aplazó por el terremoto era noticia
+# viva y esconderlo habría tapado justo lo que había que leer— pero esa razón
+# CADUCA: pasadas sus fechas anunciadas es ruido en la zona de los vigentes.
+#
+# La bisagra vive en el RIEL (`_postponedElapsed`), no en el clasificador. Y ahí
+# está la tentación que este guardián existe para frenar: «simplificar» haciendo
+# que `_classifyFestival` devuelva 'past' para un aplazado con fechas vencidas.
+# Se vería idéntico en el riel y rompería en silencio todo lo que el estado
+# aplazado protege — que no cuente como en curso, que no se preseleccione, que
+# su plan no se rehidrate, que su banner siga explicando por qué no hay festival.
+# Eso es el bug del sismo otra vez, y no se ve hasta que alguien abre la app.
+check = 'aplazado-caduca'
+try:
+    import re as _re
+    _c = open('src/view/components.js', encoding='utf-8').read()
+    _errs = []
+
+    if 'function _postponedElapsed' not in _c:
+        _errs.append('falta _postponedElapsed: la bisagra que manda un aplazado vencido a pasados')
+    else:
+        _m = _re.search(r'function _postponedElapsed\(cfg\)\{(.*?)\n\}', _c, _re.S)
+        _body = _m.group(1) if _m else ''
+        if 'festivalEndStr' not in _body:
+            _errs.append('_postponedElapsed no mira festivalEndStr — la bisagra es la fecha '
+                         'que el festival había anunciado, no otra cosa')
+
+    # El clasificador NO puede aprender la bisagra: ahí rompería en silencio.
+    _cl = _re.search(r'export function _classifyFestival\(cfg\)\{(.*?)\n\}', _c, _re.S)
+    if not _cl:
+        _errs.append('no encuentro _classifyFestival')
+    else:
+        _cb = _cl.group(1)
+        if '_postponedElapsed' in _cb:
+            _errs.append('_classifyFestival llama a _postponedElapsed: un aplazado dejaría de '
+                         'ser aplazado y perdería sus protecciones (preselección, punto verde, '
+                         'banner). La bisagra es de PRESENTACIÓN, no de estado')
+        if not _re.search(r"kind===?'postponed'\s*\)\s*return\s*'postponed'", _cb.replace('"', "'")):
+            _errs.append("_classifyFestival dejó de devolver 'postponed' para un aplazado")
+
+    # Y alguien tiene que USARLA: una bisagra que nadie llama existe y no hace
+    # nada. Se cuentan las referencias fuera de su propia definición — partir el
+    # archivo por el nombre de la función me dio el trozo equivocado y el chequeo
+    # falló sobre código correcto.
+    _usos = len(_re.findall(r'_postponedElapsed\s*\(', _c)) - 1  # -1: la definición
+    if _usos < 2:
+        _errs.append(f'_postponedElapsed se usa {_usos} vez/veces: hacen falta las dos '
+                     '—el orden (_sortFestivals) y la partición del riel—')
+
+    if _errs:
+        fail(check, '; '.join(_errs[:3]))
+    else:
+        ok(check, 'el aplazado vencido baja a pasados sin dejar de ser aplazado')
+except Exception as _e:
+    warn(check, f'no se pudo verificar aplazado-caduca: {_e}')
+
 # ── [icono-texto] un botón con icono Y texto se alinea, o el icono flota ──────
 # Juan, 18 ago 2026: el «+» de «Agendar» iba 3px más alto que la palabra. La
 # causa: .excl-include-btn no tenía display:inline-flex ni align-items:center,
@@ -3851,7 +3908,7 @@ try:
         # _buildPosterV16) y el dueño del color de sección. Entra a la lista con la
         # razón escrita, que es lo que este guardián pide, en vez de seguir
         # recortando comentarios que explican POR QUÉ el código es así.
-        'src/view/components.js': 906,  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago
+        'src/view/components.js': 930,  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago  # +24: _postponedElapsed — un aplazado baja a pasados cuando sus fechas anunciadas pasan — 23 ago
         # helpers.js estaba EXACTAMENTE en 800 antes del rediseño de pósters
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
