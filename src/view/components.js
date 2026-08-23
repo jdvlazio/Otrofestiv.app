@@ -810,8 +810,11 @@ function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang, review}){
   // Distintivo APLAZADO sobre el afiche — fuente única: sale en el riel del splash
   // Y en el sheet «cambiar festival» sin tocar cada superficie.
   const _postponed=_classifyFestival(cfg)==='postponed';
-  const badge=review?`<span class="splash-card-badge">${t('fest_review_label')}</span>`
-    :_postponed?`<span class="splash-card-badge">${t('fest_postponed_label')}</span>`:'';
+  // Sin badge para revisión (Juan, 23 ago 2026): las cards en revisión viven
+  // DESPUÉS del divisor «EN REVISIÓN» del riel, así que el badge decía lo que la
+  // pantalla ya dice al lado. El de APLAZADO se queda: su grupo no tiene divisor
+  // propio y el badge es la única señal en la card.
+  const badge=_postponed?`<span class="splash-card-badge">${t('fest_postponed_label')}</span>`:'';
   return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}${_postponed?' postponed':''}${review?' review':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="${action}" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span>${badge}</button>`;
 }
 
