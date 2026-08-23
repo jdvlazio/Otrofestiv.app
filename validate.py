@@ -2287,6 +2287,53 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar button-canon: {_e}')
 
+# ── [reload-sin-reloj] recargar borra la fecha congelada ─────────────────────
+# El 20 ago 2026 main amaneció rojo por dos tests que hacían page.reload(): la
+# recarga borra `_simTime` (vive en memoria), la app pasa a usar la fecha REAL y
+# el test queda a merced del día en que corra. T65 tardó media hora en entenderse
+# porque el síntoma engañaba —parecía roto el marcado «Ya pasó» y lo roto era la
+# premisa—. Es la única de las tres bombas de ese día que se caza LEYENDO.
+#
+# Después de recargar hay exactamente dos formas correctas:
+#   · reentrar(page, festId, simTime)  — re-elige festival y re-congela (helpers)
+#   · page.clock.install(...)          — congela el reloj del navegador, sobrevive
+#   · derivar la premisa del dato en tiempo de ejecución (lo que hace P09 hoy)
+#
+# La bomba NO es recargar: es recargar con la premisa CLAVADA. Un test que fija
+# 'ficdeh2026' o un simTime literal y después recarga queda a merced del día en
+# que corra; uno que elige el festival vigente al vuelo, no. Por eso el check
+# mira las dos cosas juntas — si solo mirara el reload, obligaría a reescribir
+# tests que ya son correctos, y un guardián que crea trabajo inútil se ignora.
+check = 'reload-sin-reloj'
+try:
+    import glob as _g6, re as _re
+    _malos = []
+    for _f in sorted(_g6.glob('tests/*.spec.js')):
+        _ls = open(_f, encoding='utf-8').read().splitlines()
+        for _i, _l in enumerate(_ls):
+            if '.reload(' not in _l:
+                continue
+            _ventana = ' '.join(_ls[_i:_i + 5])
+            if ('reentrar(' in _ventana or 'clock.install' in _ventana
+                    or 'selectFestival(' in _ventana):
+                continue
+            # clock.install ANTES del goto también vale: el reloj ya está congelado
+            _antes = _ls[max(0, _i - 45):_i]
+            if any('clock.install' in _p for _p in _antes):
+                continue
+            # ¿La premisa está clavada? Solo entonces la recarga es una bomba.
+            _fijo = any(_re.search(r"enterFestival\(page,\s*'[a-z0-9]+'", _p) for _p in _antes)
+            if not _fijo:
+                continue
+            _malos.append(f'{_f}:{_i + 1}')
+    if _malos:
+        fail(check, 'page.reload() sin re-congelar la fecha (usar reentrar() o clock.install): '
+                    + ', '.join(_malos[:5]))
+    else:
+        ok(check, 'toda recarga en tests re-congela la fecha o instala reloj')
+except Exception as _e:
+    warn(check, f'no se pudo verificar reload-sin-reloj: {_e}')
+
 # ── [aviso-color] el color de un aviso significa algo, y está decidido ────────
 # Juan, 18 ago 2026: «Plan desactualizado» salió en blanco por inercia (herencia
 # del banner de prioridades) y él preguntó lo obvio — ¿no debería ser ámbar, como
@@ -2496,6 +2543,63 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar calendario-entero: {_e}')
 
+# ── [aplazado-caduca] un aplazado se va a pasados, pero sigue siendo aplazado ──
+# Juan, 23 ago 2026: «FICMA hace ruido donde está». Un aplazado nunca contaba
+# como pasado —deliberado: cuando FICMA se aplazó por el terremoto era noticia
+# viva y esconderlo habría tapado justo lo que había que leer— pero esa razón
+# CADUCA: pasadas sus fechas anunciadas es ruido en la zona de los vigentes.
+#
+# La bisagra vive en el RIEL (`_postponedElapsed`), no en el clasificador. Y ahí
+# está la tentación que este guardián existe para frenar: «simplificar» haciendo
+# que `_classifyFestival` devuelva 'past' para un aplazado con fechas vencidas.
+# Se vería idéntico en el riel y rompería en silencio todo lo que el estado
+# aplazado protege — que no cuente como en curso, que no se preseleccione, que
+# su plan no se rehidrate, que su banner siga explicando por qué no hay festival.
+# Eso es el bug del sismo otra vez, y no se ve hasta que alguien abre la app.
+check = 'aplazado-caduca'
+try:
+    import re as _re
+    _c = open('src/view/components.js', encoding='utf-8').read()
+    _errs = []
+
+    if 'function _postponedElapsed' not in _c:
+        _errs.append('falta _postponedElapsed: la bisagra que manda un aplazado vencido a pasados')
+    else:
+        _m = _re.search(r'function _postponedElapsed\(cfg\)\{(.*?)\n\}', _c, _re.S)
+        _body = _m.group(1) if _m else ''
+        if 'festivalEndStr' not in _body:
+            _errs.append('_postponedElapsed no mira festivalEndStr — la bisagra es la fecha '
+                         'que el festival había anunciado, no otra cosa')
+
+    # El clasificador NO puede aprender la bisagra: ahí rompería en silencio.
+    _cl = _re.search(r'export function _classifyFestival\(cfg\)\{(.*?)\n\}', _c, _re.S)
+    if not _cl:
+        _errs.append('no encuentro _classifyFestival')
+    else:
+        _cb = _cl.group(1)
+        if '_postponedElapsed' in _cb:
+            _errs.append('_classifyFestival llama a _postponedElapsed: un aplazado dejaría de '
+                         'ser aplazado y perdería sus protecciones (preselección, punto verde, '
+                         'banner). La bisagra es de PRESENTACIÓN, no de estado')
+        if not _re.search(r"kind===?'postponed'\s*\)\s*return\s*'postponed'", _cb.replace('"', "'")):
+            _errs.append("_classifyFestival dejó de devolver 'postponed' para un aplazado")
+
+    # Y alguien tiene que USARLA: una bisagra que nadie llama existe y no hace
+    # nada. Se cuentan las referencias fuera de su propia definición — partir el
+    # archivo por el nombre de la función me dio el trozo equivocado y el chequeo
+    # falló sobre código correcto.
+    _usos = len(_re.findall(r'_postponedElapsed\s*\(', _c)) - 1  # -1: la definición
+    if _usos < 2:
+        _errs.append(f'_postponedElapsed se usa {_usos} vez/veces: hacen falta las dos '
+                     '—el orden (_sortFestivals) y la partición del riel—')
+
+    if _errs:
+        fail(check, '; '.join(_errs[:3]))
+    else:
+        ok(check, 'el aplazado vencido baja a pasados sin dejar de ser aplazado')
+except Exception as _e:
+    warn(check, f'no se pudo verificar aplazado-caduca: {_e}')
+
 # ── [icono-texto] un botón con icono Y texto se alinea, o el icono flota ──────
 # Juan, 18 ago 2026: el «+» de «Agendar» iba 3px más alto que la palabra. La
 # causa: .excl-include-btn no tenía display:inline-flex ni align-items:center,
@@ -2574,9 +2678,12 @@ try:
            _re.search(r'color:var\(--(gray|gray2|white-60|white-40)\)', _b):
             _fam += 1
     # 88 heredadas + .diary-full (nombre completo bajo la sigla en la TAPA del
-    # Diario: tipografía de bloque de título, no una línea de dato). Baja cuando
-    # se migren las heredadas.
-    _TECHO = 89
+    # Diario: tipografía de bloque de título, no una línea de dato) + .palm-cap
+    # (pie de afiche del palmarés: el nombre DEBAJO de una imagen, en el riel y
+    # en las menciones — no es una línea de dato en una ficha, y usarla como tal
+    # la ataría a t-base, que a 62px de ancho no cabe). Baja cuando se migren
+    # las heredadas.
+    _TECHO = 90
     if _fam > _TECHO:
         _errs.append(f'familia de líneas de texto gris: {_fam} > techo {_TECHO} — '
                      f'usá .dato-linea en vez de crear otra variante (o bajá el techo si migraste)')
@@ -3495,10 +3602,30 @@ except Exception as _e:
 # NO se auto-deriva (multisala: misma hora+sede puede ser otra sala = otra
 # función) → el guardián OBLIGA a decidir contra el programa oficial: declarar el
 # flag, o anotar el slot como funciones separadas en _SEPARATE.
+# _festivalesVivos — quiénes están activos o por venir, DERIVADO de las fechas.
+# Antes cada guardián llevaba su propia lista `_ACTIVE` escrita a mano, y esas
+# listas envejecían calladas: al 20 ago 2026, [slots-sin-decidir] vigilaba a
+# finca-2026 (cerrado el 19) y [activity-duration] a dos festivales cerrados en
+# JULIO — verdes los dos, sin mirar CineAutopsia ni Vartex, que sí estaban vivos.
+# El propio repo ya lo había escrito 800 líneas arriba: «un guardián con lista
+# manual no es un guardián: es una foto que envejece». Esto lo hace una sola vez.
+def _festivalesVivos():
+    import re as _r2, datetime as _d2, glob as _g3
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    # Fecha de Colombia, no del runner (misma regla que el resto del repo).
+    _hoy = (_d2.datetime.utcnow() - _d2.timedelta(hours=5)).date().isoformat()
+    _vivos = []
+    for _fid, _end in _r2.findall(r"'([a-z0-9]+)':\s*\{.*?festivalEndStr:\s*'(\d{4}-\d{2}-\d{2})", _cfg, _r2.S):
+        if _end >= _hoy:
+            _vivos.append(_r2.sub(r'([a-zA-Z]+)(\d+)$', r'\1-\2', _fid))
+    if not _vivos:   # entre temporadas: revisar el más reciente igual
+        _vivos = [_g3.os.path.basename(_p)[:-5] for _p in sorted(_g3.glob('festivals/*.json'))[-1:]]
+    return sorted(_vivos)
+
 check = 'slots-sin-decidir'
 try:
     import json as _json
-    _ACTIVE = ['finca-2026']   # activos/próximos hoy (mismo roster que activity-duration)
+    _ACTIVE = _festivalesVivos()   # derivado de las fechas, no escrito a mano
     # (festival, 'dia|hora|sede') REVISADOS contra el programa oficial y confirmados
     # como funciones SEPARADAS (p.ej. actividades paralelas en espacios distintos).
     _SEPARATE = set()
@@ -3536,7 +3663,7 @@ except Exception as _e:
 check = 'activity-duration'
 try:
     import json as _json
-    _ACTIVE = ['tercertiempo-2026', 'fantasofest-2026']   # activos/próximos hoy
+    _ACTIVE = _festivalesVivos()   # derivado de las fechas, no escrito a mano
     # (festival_file, título) cuyo dato de duración la organización NO publicó.
     # Al recibir el minutaje real: llenar el JSON y BORRAR la línea de aquí.
     _PENDING = {
@@ -3551,6 +3678,16 @@ try:
         # CineAutopsia — el PDF oficial la trae sin obras y sin runtime: es una
         # proyección al aire libre más un diálogo, y el festival no anunció cuánto dura.
         ('cineautopsia-2026', 'Encuentro Colombia Experimental Contemporánea'),
+        # QAFF — la Muestra Artística es exposición CONTINUA: el calendario Boom
+        # publica un rango (14 SEP 09:00 → «17 OCT» 10:00, con el mes además mal
+        # tipeado), no un minutaje de visita. No hay número honesto que poner.
+        ('qaff-2026', 'Muestra Artística'),
+        # Cinemancia — actividad de encuentro sin minutaje publicado (ni en el
+        # Excel de 3 tabs ni en la web). Además es candidata a SALIR: el festival
+        # pidió retirar las actividades con inscripción — decisión pendiente en
+        # el chat de Cinemancia. NOTA: este error estaba EN MAIN (el guardián
+        # llegó en #698 con este caso ya rojo); esta línea desbloquea a los dos.
+        ('cinemancia-2026', 'Encuentro Internacional de Investigación-Creación en Música y Sonido Cinematográfico'),
     }
     _viol = []
     for _fname in _ACTIVE:
@@ -3848,21 +3985,42 @@ try:
         # _buildPosterV16) y el dueño del color de sección. Entra a la lista con la
         # razón escrita, que es lo que este guardián pide, en vez de seguir
         # recortando comentarios que explican POR QUÉ el código es así.
-        'src/view/components.js': 871,  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago
+        'src/view/components.js': 930,  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago  # +24: _postponedElapsed — un aplazado baja a pasados cuando sus fechas anunciadas pasan — 23 ago
         # helpers.js estaba EXACTAMENTE en 800 antes del rediseño de pósters
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
         # guardián pide. Baja cuando se migre algo fuera de helpers.
-        'src/view/helpers.js': 877,  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago
-        'src/view/agenda.js': 2011,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago
-        'src/main.js': 1670,  # +1: dispatcher de includeAnyway (17 ago)  # +7: el splash recuerda el festival elegido (memoria que caduca sola) (16 ago)  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
-        'src/i18n/i18n.js': 1583,  # +3: av_recalcular en es/en/pt — 18 ago
-        'src/controller/sheets-controller.js': 1682,  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
+        'src/view/helpers.js': 877,  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
+        'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
+        'src/main.js': 1706,  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
+        'src/i18n/i18n.js': 1640,  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
+        'src/controller/sheets-controller.js': 1711,  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
+        # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
+        # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres
+        # correcciones sobre la fuente, que valen más escritas que ahorradas.
         'src/controller/handlers.js': 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
+    # src/config.js NO tiene techo (Juan, 23 ago 2026). Es DATA de festival
+    # —FESTIVAL_CONFIG, VENUES, NOTICES, PALMARES— y crece con cada onboarding,
+    # por construcción y para siempre. Un techo sobre un archivo que legítimamente
+    # crece sin fin es un techo que se sube sin fin: en un solo día subió cuatro
+    # veces (747→807→885→925→926).
+    #
+    # Y cada subida tenía un costo oculto: el techo vive en validate.py, que SÍ es
+    # código de app, así que todo PR de DATOS que agregara una línea a config.js
+    # arrastraba un cambio de código y [frontera] lo marcaba como mixto. Le pasó
+    # al PR del afiche de «Los bibliotecarios» y le iba a pasar a cada onboarding.
+    # La medida no protegía nada y ensuciaba la frontera; se retira.
+    #
+    # Lo que sí lo vigila y sigue en pie: [frontera] (que no mezcle), los
+    # validadores de festival, y que su contenido sea declarativo — este chequeo
+    # medía LÍNEAS, que en un archivo de datos no dice nada sobre su salud.
+    _SIN_TECHO = {'src/config.js'}
     _over = []
     for _f in _glob.glob('src/**/*.js', recursive=True):
         _f = _f.replace('\\', '/')
+        if _f in _SIN_TECHO:
+            continue
         _n = sum(1 for _ in open(_f, encoding='utf-8'))
         _ceil = _ALLOW.get(_f, _CAP)
         if _n > _ceil:
@@ -4770,6 +4928,45 @@ except Exception as _e:
     warn(check, f'no se pudo verificar poster-mirado: {_e}')
 
 
+# ── [config-esm] node --check da un VERDE FALSO ─────────────────────────────
+# src/config.js es un MÓDULO ES, y `node --check` lo analiza como script: un
+# archivo con la llave de un festival sin cerrar pasa ese chequeo y revienta en
+# el navegador. Pasó el 20 ago 2026 al resolver un merge donde las dos ramas
+# agregaban su festival en el mismo punto: la entrada de Cinemancia se quedó
+# sin `},`, CineAutopsia terminó ANIDADO dentro de ella, y la app no arrancaba
+# —splash vacío, «Uncaught SyntaxError»—. Ni validate.py ni `node --check` lo
+# vieron: el primero parsea con regex, el segundo con la gramática equivocada.
+#
+# Este lo IMPORTA de verdad y cuenta los festivales. Es la única forma de saber
+# que el archivo que carga el navegador es el que creemos.
+check = 'config-esm'
+try:
+    import subprocess as _sp9
+    _js = ("import('./src/config.js').then(m=>{const C=m.FESTIVAL_CONFIG;"
+           "const n=Object.keys(C).length;"
+           "const anid=Object.entries(C).filter(([k,v])=>Object.keys(v||{})"
+           ".some(x=>/^[a-z]+20\\d\\d$/.test(x))).map(([k])=>k);"
+           "console.log(JSON.stringify({n,anid}));})"
+           ".catch(e=>{console.log(JSON.stringify({error:String(e.message)}))})")
+    _r = _sp9.run(['node', '-e', _js], capture_output=True, text=True, timeout=30)
+    _out = [l for l in _r.stdout.splitlines() if l.strip().startswith('{')]
+    if not _out:
+        fail(check, f'src/config.js NO carga como módulo ES: {(_r.stderr or "").strip()[:120]}')
+    else:
+        import json as _j9
+        _d = _j9.loads(_out[-1])
+        if _d.get('error'):
+            fail(check, f'src/config.js NO carga como módulo ES: {_d["error"][:120]}')
+        elif _d.get('anid'):
+            fail(check, f'festival ANIDADO dentro de otro (falta un «}}» en la entrada anterior): {_d["anid"]}')
+        elif _d.get('n', 0) < 5:
+            fail(check, f'FESTIVAL_CONFIG solo tiene {_d["n"]} festivales — ¿se cerró una entrada de más?')
+        else:
+            ok(check, f'src/config.js carga como módulo ES · {_d["n"]} festivales, ninguno anidado')
+except Exception as _e:
+    warn(check, f'no se pudo verificar config-esm: {_e}')
+
+
 check = 'arquetipo-existe'
 try:
     import re as _r7
@@ -4892,15 +5089,28 @@ try:
     _sin = [_k for _k in _sin if not _k.startswith('_')]
     if _sin:
         _prob.append('campo(s) en los datos que el contrato no declara: ' + ', '.join(_sin[:6]))
-    _hoy = _dt.date.today().isoformat()
+    # Fecha de Colombia (UTC-5), no del runner: en UTC el día cambia cinco horas
+    # antes y una excepción vencía distinto acá que en CI (misma regla de CLAUDE.md).
+    _hoyCO = (_dt.datetime.utcnow() - _dt.timedelta(hours=5)).date()
+    _limite = (_hoyCO + _dt.timedelta(days=14)).isoformat()
+    _hoy = _hoyCO.isoformat()
+    _porvencer = []
     for _campo, _fests in (_C.get('_pendientes') or {}).items():
         if _campo == '_doc':
             continue
         for _fest, _info in _fests.items():
-            if _info['migrar_el'] <= _hoy:
-                _prob.append(f'excepción VENCIDA: {_campo}@{_fest} debía migrar el {_info["migrar_el"]}')
+            _m = _info['migrar_el']
+            if _m <= _hoy:
+                _prob.append(f'excepción VENCIDA: {_campo}@{_fest} debía migrar el {_m}')
+            elif _m <= _limite:
+                # Ámbar: la franja que este repo no tenía. Todo era verde o rojo,
+                # así que lo que caducaba no avisaba — explotaba.
+                _porvencer.append(f'{_campo}@{_fest} vence el {_m}')
     if _prob:
         fail(check, ' · '.join(_prob))
+    elif _porvencer:
+        warn(check, 'excepción(es) por vencer en ≤14 días: ' + ' · '.join(_porvencer)
+                    + ' — migrar antes, o mover la fecha con su razón escrita')
     else:
         _np = sum(len(_v) for _k, _v in (_C.get('_pendientes') or {}).items() if _k != '_doc')
         ok(check, f'contrato al día: {len(_C["campos"])} campos, doc generada, '
@@ -4925,7 +5135,15 @@ try:
     # (con title_orig ya unificado dentro), filmType y cycle; _tmdbId se fusionó
     # en tmdb_id. La pregunta que los resolvió todos fue la misma: ¿lo vamos a
     # pintar? Si no, es peso muerto — por limpio que esté el dato.
-    _DEUDA = {}
+    _DEUDA = {
+        # TIFF, y los dos esperan una decisión de Juan, no un borrado mío:
+        # `section_tags` son los 47 SELLOS que él decidió sacar de las secciones
+        # y dejar como etiqueta — la decisión se tomó y el cableado en la vista
+        # nunca se hizo. `accessibility` son 34 funciones con subtítulos
+        # descriptivos ('oc'), dato real que hoy no se pinta en ningún lado.
+        'section_tags': 'TIFF (47) — sellos decididos por Juan, sin cablear en la vista',
+        'accessibility': 'TIFF (34) — accesibilidad de la función, sin superficie que la muestre',
+    }
     _src_all = ''.join(open(_p, encoding='utf-8').read()
                        for _p in _g.glob('src/**/*.js', recursive=True))
     _vistos = {}

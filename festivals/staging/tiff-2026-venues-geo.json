@@ -1,0 +1,58 @@
+{
+ "John Bassett Theatre": {
+  "n": 1,
+  "_prec": "poi",
+  "lat": 43.6438376,
+  "lng": -79.3866925,
+  "address": "Front Street West",
+  "city": "Toronto",
+  "_nota": "Nominatim no tiene el teatro: está DENTRO del Metro Toronto Convention Centre. Verificado en mtccc.com — North Building, al oeste de la entrada principal, sobre Front Street. La coordenada es la del edificio, no la de la sala."
+ },
+ "Roy Thomson Hall": {
+  "n": 26,
+  "_prec": "poi",
+  "lat": 43.6465586,
+  "lng": -79.386339,
+  "address": "60 Simcoe Street",
+  "city": "Toronto"
+ },
+ "Royal Alexandra Theatre": {
+  "n": 36,
+  "_prec": "poi",
+  "lat": 43.6473934,
+  "lng": -79.3876006,
+  "address": "260 King Street West",
+  "city": "Toronto"
+ },
+ "Scotiabank Theatre Toronto": {
+  "n": 393,
+  "_prec": "poi",
+  "lat": 43.6485875,
+  "lng": -79.3913729,
+  "address": "259 Richmond Street West",
+  "city": "Toronto"
+ },
+ "TIFF Lightbox": {
+  "n": 148,
+  "_prec": "poi",
+  "lat": 43.6467198,
+  "lng": -79.3905334,
+  "address": "350 King Street West",
+  "city": "Toronto"
+ },
+ "VISA Screening Room at the Princess of Wales Theatre": {
+  "n": 34,
+  "_prec": "poi",
+  "lat": 43.6470405,
+  "lng": -79.3892399,
+  "address": "300 King Street West",
+  "city": "Toronto",
+  "_nota": "El «VISA Screening Room» es el nombre que TIFF le da a la sala durante el festival; el recinto es el Princess of Wales Theatre, y por ahí se geocodificó."
+ },
+ "_provenance": {
+  "fuente": "Nominatim (coincidencia exacta de nombre + clase theatre/cinema + calle) · John Bassett verificado en mtccc.com",
+  "capturado": "2026-08-13",
+  "metodo": "cada resultado leido a mano antes de entrar; ninguno aceptado a ciegas",
+  "revisor": "Claude — pendiente de auditoria de Juan"
+ }
+}

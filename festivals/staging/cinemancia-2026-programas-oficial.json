@@ -1,0 +1,435 @@
+{
+ "_provenance": {
+  "fuente": "hoja oficial del festival, enviada por Cinemancia en respuesta a nuestras preguntas (20 ago 2026)",
+  "capturado": "2026-08-20",
+  "respuestas": [
+   "el Programa 3 de cortometrajes es el MISMO en sus dos funciones (la parrilla anunciaba 85 y 67 min: una de las dos es errata)",
+   "las dos celdas sin sufijo son 4:30 p.m., confirmado",
+   "la inauguración es una sola función, jueves 3 a las 7:00 p.m., y es PROGRAMA DOBLE: «Lamentos de un balcón» (Hans Chispas, 2026, 4 min) + «Todas las canciones del mundo» (Santiago Flórez Rincón, 2025, 83 min)"
+  ]
+ },
+ "_programas": 7,
+ "_charlas": 10,
+ "programas": [
+  {
+   "programa": "Competencia de cortometrajes Programa 1",
+   "obras": [
+    {
+     "titulo": "Only Making Out",
+     "director": "Marlon Weber",
+     "pais": "Alemania",
+     "anio": 2025,
+     "duracion_min": 15
+    },
+    {
+     "titulo": "El oído absoluto",
+     "director": "Rafael Federman",
+     "pais": "Argentina",
+     "anio": 2026,
+     "duracion_min": 18
+    },
+    {
+     "titulo": "loose sleep",
+     "director": "Rodrigo Soares Teixeira",
+     "pais": "Portugal",
+     "anio": 2026,
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Henry Is a Girl Who Likes to Sleep",
+     "director": "Marthe Peters",
+     "pais": "Bélgica",
+     "anio": 2026,
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Mi amigo, el arquitecto",
+     "director": "Óscar Garzón",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 16
+    }
+   ],
+   "pases": [
+    {
+     "dia": "2026-09-04",
+     "hora": "19:30",
+     "ciudad": "Medellín",
+     "sede": "Centro Colombo Americano - Sede centro - Sala 2"
+    },
+    {
+     "dia": "2026-09-09",
+     "hora": "19:00",
+     "ciudad": "Envigado",
+     "sede": "Casa Museo Otraparte"
+    }
+   ]
+  },
+  {
+   "programa": "Competencia de cortometrajes Programa 2",
+   "obras": [
+    {
+     "titulo": "Our Homes Do Not Exist",
+     "director": "Anna Lamour",
+     "pais": "Grecia",
+     "anio": 2025,
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Koki, Ciao",
+     "director": "Quenton Miller",
+     "pais": "Países bajos",
+     "anio": 2025,
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Mirando al sur",
+     "director": "Felipe López Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 34
+    },
+    {
+     "titulo": "Bright Summer Days",
+     "director": "Nevena Desivojevic",
+     "pais": "Serbia",
+     "anio": 2025,
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Prueba de cámara",
+     "director": "David Correa",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 10
+    }
+   ],
+   "pases": [
+    {
+     "dia": "2026-09-05",
+     "hora": "16:00",
+     "ciudad": "Medellín",
+     "sede": "Centro Colombo Americano - Sede centro - Sala 2"
+    },
+    {
+     "dia": "2026-09-11",
+     "hora": "19:00",
+     "ciudad": "Copacabana",
+     "sede": "Terko"
+    }
+   ]
+  },
+  {
+   "programa": "Competencia de cortometrajes Programa 3",
+   "obras": [
+    {
+     "titulo": "Crash",
+     "director": "Gabriela Mureb",
+     "pais": "Alemania, Brasil",
+     "anio": 2026,
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Chuura",
+     "director": "Chuuraa",
+     "pais": "Rusia, Reino Unido",
+     "anio": 2026,
+     "duracion_min": 17
+    },
+    {
+     "titulo": "Pies al revés",
+     "director": "Elodie Arpa",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 18
+    },
+    {
+     "titulo": "Certas formas",
+     "director": "Luiz Afonso Morêda",
+     "pais": "Brasil",
+     "anio": 2026,
+     "duracion_min": 17
+    },
+    {
+     "titulo": "O",
+     "director": "Francisca Alarcão",
+     "pais": "España, Portugal",
+     "anio": 2026,
+     "duracion_min": 14
+    }
+   ],
+   "pases": [
+    {
+     "dia": "2026-09-06",
+     "hora": "17:00",
+     "ciudad": "Medellín",
+     "sede": "Centro Colombo Americano - Sede centro - Sala 2"
+    },
+    {
+     "dia": "2026-09-11",
+     "hora": "18:00",
+     "ciudad": "Itagüí",
+     "sede": "Teatro Caribe"
+    }
+   ]
+  },
+  {
+   "programa": "Fuera de competencia programa 1",
+   "obras": [
+    {
+     "titulo": "Sombras en la niebla",
+     "director": "Pedro Pablo Vega",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 25
+    },
+    {
+     "titulo": "El cazador",
+     "director": "Manuel Villa, Luciana Riso",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Las formas de la magia",
+     "director": "Maria Paula Lorgia",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 17
+    },
+    {
+     "titulo": "Un aparato para detectar fantasmas",
+     "director": "Mauricio Maldonado",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 18
+    }
+   ],
+   "pases": [
+    {
+     "dia": "2026-09-10",
+     "hora": "16:00",
+     "ciudad": "Medellín",
+     "sede": "Centro Colombo Americano - Sede centro - Sala 1"
+    }
+   ]
+  },
+  {
+   "programa": "Fuera de competencia programa 2",
+   "obras": [
+    {
+     "titulo": "Parece el mundo",
+     "director": "Santiago Quirama",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 38
+    },
+    {
+     "titulo": "Memorias Encontradas Numa Banheira",
+     "director": "Leonardo Pirondi",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 4
+    }
+   ],
+   "pases": [
+    {
+     "dia": "2026-09-10",
+     "hora": "19:30",
+     "ciudad": "Medellín",
+     "sede": "Centro Colombo Americano - Sede centro - Sala 2"
+    }
+   ]
+  },
+  {
+   "programa": "Competencia Nuevas Voces Programa 1",
+   "obras": [
+    {
+     "titulo": "Preguntas Frecuentes",
+     "director": "Sofía Salinas",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Medellín, yo te saludo",
+     "director": "Lucas Muñoz",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 3
+    },
+    {
+     "titulo": "Liminal",
+     "director": "Gabriela Castelblanco",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Pausas activas",
+     "director": "Juan Pablo Castro",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 11
+    }
+   ],
+   "pases": [
+    {
+     "dia": "2026-09-05",
+     "hora": "17:00",
+     "ciudad": "Medellín",
+     "sede": "La Capilla del Claustro Comfama"
+    },
+    {
+     "dia": "2026-09-08",
+     "hora": "18:00",
+     "ciudad": "Itagüí",
+     "sede": "Teatro Caribe"
+    }
+   ]
+  },
+  {
+   "programa": "Competencia Nuevas Voces Programa 2",
+   "obras": [
+    {
+     "titulo": "Para no volver",
+     "director": "Tania Galvis",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 9
+    },
+    {
+     "titulo": "El Salto",
+     "director": "Jerónimo Rincón",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Gramática Práctica Italiana",
+     "director": "Daniel Cortés",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 13
+    },
+    {
+     "titulo": "Madres de Nacimiento",
+     "director": "Gloria Isabel Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Borrachos mientras escuchamos las gotas caer",
+     "director": "Santiago Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 22
+    }
+   ],
+   "pases": [
+    {
+     "dia": "2026-09-07",
+     "hora": "19:00",
+     "ciudad": "Medellín",
+     "sede": "La Capilla del Claustro Comfama"
+    },
+    {
+     "dia": "2026-09-10",
+     "hora": "18:00",
+     "ciudad": "Itagüí",
+     "sede": "Teatro Caribe"
+    }
+   ]
+  }
+ ],
+ "charlas": [
+  {
+   "titulo": "Thomas Fülhapter: Febril incisión",
+   "dia": "2026-09-04",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano - Sede centro - Sala 2",
+   "descripcion": "Proyección del largometraje Viviendo juntos y charla posterior con el director Thomas Fülhapter.",
+   "invitados": "Thomas Fülhapter, Juan Pablo Franky"
+  },
+  {
+   "titulo": "Pere Portabella: legado inmarcesible",
+   "dia": "2026-09-05",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "descripcion": "Proyección de L*a tempestá*, No contéis con los dedos y Vampir Cuadecuc y diálogo posterior.",
+   "invitados": "Julio Lamaña, Juan Pablo Franky"
+  },
+  {
+   "titulo": "José Luis Torres Leiva: la primavera llega para los que esperan",
+   "dia": "2026-09-06",
+   "hora": "14:00",
+   "sede": "Centro Colombo Americano - Sede centro - Sala 1",
+   "descripcion": "Proyección de las películas ¿Qué historia es ésta y cuál es su final? y Obreras saliendo de la fábrica, posterior charla.",
+   "invitados": "José Luis Torres Leiva, Andrés Múnera"
+  },
+  {
+   "titulo": "Michael Koresky y José Miccio: Itinerarios de una tradición",
+   "dia": "2026-09-07",
+   "hora": "19:30",
+   "sede": "ITM – Facultad de Artes y Humanidades (Sede La Floresta)",
+   "descripcion": "Proyección de la película The Children’s Hour y diálogo sobre cinematografías nacionales, la conformación del canon y la crítica como herramienta que configura nuevas miradas en el legado cinematográfico.",
+   "invitados": "Michael Koresky, José Miccio"
+  },
+  {
+   "titulo": "Luciana Decker Orozco: Alquimia de la luz",
+   "dia": "2026-09-08",
+   "hora": "15:00",
+   "sede": "La Capilla del Claustro Comfama",
+   "descripcion": "Proyección de cortometrajes de Luciana Decker Orozco y charla posterior.",
+   "invitados": "Luciana Decker Orozco, Elena Acosta. Modera Paula Díaz"
+  },
+  {
+   "titulo": "Leonie Rodrian: Contra la falsa intensidad",
+   "dia": "2026-09-10",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano - Sede centro - Sala 1",
+   "descripcion": "Proyección de la película Viaje al extranjero y diálogo posterior.",
+   "invitados": "Leonie Rodrian, Pablo Roldán"
+  },
+  {
+   "titulo": "Ciencia, cuerpos, trabajos y las políticas de la pureza",
+   "dia": "2026-09-11",
+   "hora": "19:00",
+   "sede": "Centro Colombo Americano - Sala 2",
+   "descripcion": "Proyección de la película Cleaning & Cleansing y diálogo posterior.",
+   "invitados": "Thomas Fürhapter, Sara Lugo"
+  },
+  {
+   "titulo": "Todos los planos del mundo — Debate: ¿Qué cine colombiano queremos?",
+   "dia": "2026-09-04",
+   "hora": "14:30",
+   "sede": "Centro Colombo Americano - Sede centro - Sala 2",
+   "descripcion": "A partir de la experiencia al filmar Todos los planos del mundo, se toma como ejemplo para pensar el cine nacional, sus tradiciones y su futuro.",
+   "invitados": "Santiago Flórez, Federico Atehortúa, Tatiana Parra. Modera Pablo Roldán"
+  },
+  {
+   "titulo": "Teoremas sobre la mirada — Debate: Riesgos estéticos: empujando los límites cinematográficos",
+   "dia": "2026-09-10",
+   "hora": "19:30",
+   "sede": "Centro Colombo Americano - Sede centro - Sala 2",
+   "descripcion": "Conversación sobre la libertad artística en el cine, los riesgos y la posibilidad de empujar fronteras.",
+   "invitados": "Santiago Quirama, Luciana Decker Orozco, Mauricio Carmona. Modera Andrés Carmona"
+  },
+  {
+   "titulo": "Encuentro Internacional de Investigación-Creación en Música y Sonido Cinematográfico",
+   "dia": "2026-09-10",
+   "hora": "14:00",
+   "sede": "ITM – Facultad de Artes y Humanidades (Sede La Floresta)",
+   "descripcion": "Ponencias seleccionadas",
+   "invitados": ""
+  }
+ ]
+}

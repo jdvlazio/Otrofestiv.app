@@ -16,14 +16,35 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
   // el borde exacto de fin de festival (ej. 19 JUL 23:00, cuando 2 vigentes pasan a
   // 'past'). Clasifica con la MISMA fn (_classifyFestival) que usó el riel.
   const r = await page.evaluate(async () => {
-    const { _classifyFestival } = await import('/src/view/components.js');
+    const { _classifyFestival, _postponedElapsed } = await import('/src/view/components.js');
     const { FESTIVAL_CONFIG } = await import('/src/config.js');
     // SCOPE #splash-rail: el sheet "cambiar festival" replica el riel (misma card,
     // clase .splash-rail) y también vive en el DOM — document-wide mezcla ambos y
     // el invariante de tiering lee las 18 cards intercaladas. Latente hasta FINCA:
     // con 0 vigentes, tieringOk era trivialmente true.
-    const ids = [...document.querySelectorAll('#splash-rail .splash-card[data-fest]')].map(c => c.dataset.fest);
-    const cls = ids.map(id => _classifyFestival(FESTIVAL_CONFIG[id]));
+    // Las cards EN REVISIÓN quedan fuera del invariante de tiering: son un CUARTO
+    // grupo, deliberadamente al final —después de los pasados— y con divisor
+    // propio. Por fechas un festival en revisión suele clasificar 'upcoming', así
+    // que contarlo aquí lo leería como «un vigente después de un pasado», que es
+    // justo lo que este test prohíbe. El invariante sigue vigilando los tres
+    // grupos de siempre; el cuarto tiene su propia regla (va último) y se
+    // comprueba abajo.
+    const ids = [...document.querySelectorAll('#splash-rail .splash-card[data-fest]:not(.review)')].map(c => c.dataset.fest);
+    const idsRev = [...document.querySelectorAll('#splash-rail .splash-card.review')].map(c => c.dataset.fest);
+    const todas = [...document.querySelectorAll('#splash-rail .splash-card[data-fest]')].map(c => c.dataset.fest);
+    // «Pasado PARA EL RIEL» = past por fechas, O aplazado cuyas fechas anunciadas
+    // ya pasaron (DESIGN.md §5.10). El invariante no cambia —ningún vigente
+    // después de un pasado— pero el predicado tiene que saber de la bisagra: con
+    // solo _classifyFestival, FICMA cuenta como vigente (sigue siendo 'postponed',
+    // a propósito) y el test leería su sitio en pasados como una violación.
+    const esPasado = id => {
+      const cfg = FESTIVAL_CONFIG[id];
+      return _classifyFestival(cfg) === 'past' || _postponedElapsed(cfg);
+    };
+    const cls = ids.map(id => (esPasado(id) ? 'past' : _classifyFestival(FESTIVAL_CONFIG[id])));
+    // La regla nueva, comprobada donde se ve: un aplazado con fechas vencidas se
+    // dibuja entre los pasados, y sigue marcado como aplazado.
+    const aplazadosVencidos = ids.filter(id => _postponedElapsed(FESTIVAL_CONFIG[id]));
     const firstPastIdx = cls.indexOf('past');
     const lastCurrentIdx = cls.reduce((mx, c, i) => (c !== 'past' ? i : mx), -1);
     return {
@@ -39,19 +60,51 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
       hasUpcoming: cls.some(c => c === 'upcoming'),
       hasOngoing: cls.some(c => c === 'ongoing'),
       leviza: ids.some(id => id.includes('leviza')),
+      // Si hay cards de revisión, van TODAS al final del riel.
+      // cada aplazado vencido: ¿está en el tramo de pasados y conserva su marca?
+      // Se mide contra el DIVISOR en pantalla, no contra un índice derivado de la
+      // misma clasificación: comparar la posición de FICMA con «el primer pasado»
+      // era circular —ese primer pasado ES FICMA— y la aserción daba true aunque
+      // la bisagra estuviera desactivada. Se descubrió mutándola.
+      aplazadosVencidos: aplazadosVencidos.map(id => {
+        const hijos = [...document.querySelector('#splash-rail').children];
+        const idxDiv = hijos.findIndex(el => el.classList.contains('splash-rail-div')
+          && /anteriores|previous|anteriores/i.test(el.textContent));
+        const idxCard = hijos.findIndex(el => el.dataset && el.dataset.fest === id);
+        return {
+          id,
+          enPasados: idxDiv !== -1 && idxCard > idxDiv,
+          marcado: !!document.querySelector(`#splash-rail .splash-card[data-fest="${id}"].postponed`),
+        };
+      }),
+      hayRevision: idsRev.length > 0,
+      revisionAlFinal: idsRev.length === 0
+        || idsRev.every(id => todas.indexOf(id) >= todas.length - idsRev.length),
     };
   });
   expect(r.count).toBeGreaterThan(1);
   expect(r.leviza).toBe(true); // leviza (pasado) presente en el riel
+  // Un aplazado cuyas fechas anunciadas pasaron se dibuja con los pasados, SIN
+  // dejar de estar marcado como aplazado (DESIGN.md §5.10). Si el clasificador
+  // aprendiera la bisagra, `marcado` se caería: perdería su estado y su banner.
+  for (const a of r.aplazadosVencidos) {
+    expect(a.enPasados, `«${a.id}» aplazado y vencido: va con los pasados`).toBe(true);
+    expect(a.marcado, `«${a.id}» sigue marcado como aplazado`).toBe(true);
+  }
+  expect(r.revisionAlFinal, 'las cards en revisión van al final del riel').toBe(true);
   expect(r.tieringOk).toBe(true); // vigentes siempre antes que pasados
   if (r.hasCurrent) expect(r.firstIsCurrent).toBe(true); // un vigente encabeza
   // El divisor "ANTERIORES" existe EXACTAMENTE cuando hay AMBOS grupos (si todos
   // los festivales ya pasaron, p.ej. tras el 19 JUL, no se emite → no falla el CI).
-  expect(r.dividerPresent).toBe(r.hasCurrent && r.hasPast);
+  expect(r.dividerPresent).toBe((r.hasCurrent && r.hasPast) || r.hayRevision);
   // Un divisor SEPARA dos grupos: se emite exactamente cuando hay algo de los dos
   // lados. Colgar uno de primero descentraría el snap inicial, que es de lo que
   // depende la preselección.
-  const esperados = (r.hasOngoing && r.hasUpcoming ? 1 : 0) + (r.hasCurrent && r.hasPast ? 1 : 0);
+  // Cuarto sumando: «En revisión» separa ese grupo del resto, y se emite con la
+  // misma regla —solo si hay algo antes—. Un festival en revisión existe pocos
+  // días al año, así que este término es 0 casi siempre.
+  const esperados = (r.hasOngoing && r.hasUpcoming ? 1 : 0) + (r.hasCurrent && r.hasPast ? 1 : 0)
+    + (r.hayRevision && (r.hasCurrent || r.hasPast) ? 1 : 0);
   expect(r.divisores.length, `divisores: ${JSON.stringify(r.divisores)}`).toBe(esperados);
 });
 
@@ -305,9 +358,7 @@ test('P06 — el riel separa PRÓXIMOS sin mover el arranque del snap', async ({
   });
 
   if (!r.enCurso || !r.proximos) {
-    console.log(`P06: al 11 AGO 2026 no hay en-curso + próximos (${r.enCurso}/${r.proximos}), skip`);
-    return;
-  }
+    test.skip(true, `P06: al 11 AGO 2026 no hay en-curso + próximos (${r.enCurso}/${r.proximos}), skip`); return; }
 
   // ORDEN: ningún próximo antes de un en-curso, y el divisor justo entre los grupos.
   const idxDivProx = r.tira.findIndex(x => x.div);
@@ -359,9 +410,7 @@ test('P07 — el markup del selector es el mismo del splash (una implementación
       .map(([id]) => id);
   });
   if (enCurso.length !== 1) {
-    console.log(`P07: al 11 AGO 2026 hay ${enCurso.length} festivales en curso (se necesita 1), skip`);
-    return;
-  }
+    test.skip(true, `P07: al 11 AGO 2026 hay ${enCurso.length} festivales en curso (se necesita 1), skip`); return; }
   const fest = enCurso[0];
 
   const splash = await page.evaluate(() => ({
@@ -433,7 +482,7 @@ for (const festId of MAIN_FESTIVALS) {
       });
       return { mono: false, sedes: sedes.length, ciudades: ciudades.length, cruces };
     });
-    if (r.mono) { console.log(`P08 ${festId}: ${r.ciudades} ciudad(es), no aplica`); return; }
+    if (r.mono) { test.skip(true, `P08 ${festId}: ${r.ciudades} ciudad(es), no aplica`); return; }
     console.log(`P08 ${festId}: ${r.sedes} sedes en ${r.ciudades} ciudades`);
     expect(r.cruces, `el filtro de sede cruzó ciudades:\n  ${r.cruces.join('\n  ')}`).toEqual([]);
   });

@@ -55,6 +55,7 @@ import {
 //   (notificaciones: toasts/modales/sim-label). ───────────────────────────────
 import {
   openAuthSheet, closeAuthSheet, closeAvSheet, openFestivalSheet,
+  closeReviewSheet, submitReviewKey,
   closeFestivalSheet, closePVRating, closePrioLimit, _showSignedInSheet,
 } from './view/sheets.js';
 import {
@@ -110,7 +111,7 @@ import {
 
 // ── Step 7d-1: controller/sheets-controller.js — sheets+rating+AV+toast+utils. ──
 import {
-  openPelSheet, closePelSheet, _closeTopSheet, openCortoSheet, openCortoSheetFromEl, _openCombinedFilmSheet, _findParentProgram, openConflictSheet, closeConflictSheet, openPrioLimit, openPlanConfirm, closePlanConfirm, openPostViewRating, openRatingSheet, closeRatingSheet, openAvSheet, selectAvDay, setAvType, confirmAvBlock, renderAvDay, addBlock, removeBlock, toggleFullDay, _setAvAddOpen, showActionToast, _dismissToastAction, countryToFlags, filmDisplayTitle, _genreEN, _removePlanItem, savePVRating, pvLater, openDiary, closeDiary, openVenueSheet, closeVenueSheet,
+  openPelSheet, closePelSheet, _closeTopSheet, openCortoSheet, openCortoSheetFromEl, _openCombinedFilmSheet, _findParentProgram, openConflictSheet, closeConflictSheet, openPrioLimit, openPlanConfirm, closePlanConfirm, openPostViewRating, openRatingSheet, closeRatingSheet, openAvSheet, selectAvDay, setAvType, confirmAvBlock, renderAvDay, addBlock, removeBlock, toggleFullDay, _setAvAddOpen, showActionToast, _dismissToastAction, countryToFlags, filmDisplayTitle, _genreEN, _removePlanItem, savePVRating, pvLater, openDiary, closeDiary, openPalmares, closePalmares, openVenueSheet, closeVenueSheet,
 } from './controller/sheets-controller.js';
 
 // ── Step 7d-2: controller/overlays.js — seccion/search/lugar dropdowns. ──────
@@ -215,6 +216,10 @@ const ACTION_REGISTRY = {
   openCortoSheetFromEl:  (el, e) => { const _m=globalThis._morphOpen; _m ? _m(el, () => openCortoSheetFromEl(el, e)) : openCortoSheetFromEl(el, e); }, // hero morph también dentro de programas (puente: _morphOpen vive en el IIFE)
   closePelSheet:         ()      => closePelSheet(),
   closeAuthSheet:        ()      => closeAuthSheet(),
+  // La hoja de clave solo VALIDA; si acierta devuelve el festId y entramos por
+  // el mismo dismissSplash() de siempre — no hay una segunda vía de entrada.
+  closeReviewSheet:      ()      => closeReviewSheet(),
+  submitReviewKey:       ()      => { if(submitReviewKey()) dismissSplash(); },
   closeAvSheet:          ()      => closeAvSheet(),
   closeConflictSheet:    ()      => closeConflictSheet(),
   closeFestivalSheet:    ()      => closeFestivalSheet(),
@@ -267,6 +272,8 @@ const ACTION_REGISTRY = {
   runCalc:             ()      => runCalc(),
   openDiary:           ()      => openDiary(),
   closeDiary:          ()      => closeDiary(),
+  openPalmares:        ()      => openPalmares(),
+  closePalmares:       ()      => closePalmares(),
   shareDiary:          ()      => shareDiary(),
   scrollToSuggestions: ()      => _scrollToSuggestions(),
   removeConflictModal: ()      => _removeConflictModal(),
@@ -392,12 +399,32 @@ FESTIVAL_TRANSPORT='transit';
 // Usado como fallback cuando localStorage está vacío o no hay festival en rango de fechas.
 // Al agregar un nuevo festival como primero en el config, este fallback se actualiza solo.
 // _DEFAULT_FEST_ID → src/config.js (Step 6g). Importado (deriva de FESTIVAL_CONFIG).
-const _storedFestId=storage.getActiveFestId();
+// VISTA PREVIA — ?fest=<id> abre un festival que aún no está publicado.
+// Un festival con group:'test' no aparece en el selector (components.js filtra
+// group!=='test'), así que hasta ahora no había NINGUNA forma de llegar a él:
+// para que el equipo de un festival revisara su montaje había que publicarlo
+// antes de que ellos lo aprobaran. Con esto ven la app real, en su URL real, y
+// sigue invisible para todos los demás.
+// Solo acepta ids que existan en FESTIVAL_CONFIG — un id inventado se ignora
+// y la app arranca normal.
+const _previewFestId=(()=>{
+  try{
+    const q=new URLSearchParams(location.search).get('fest');
+    return (q&&FESTIVAL_CONFIG[q])?q:null;
+  }catch(e){ return null; }
+})();
+
+const _storedFestId=_previewFestId||storage.getActiveFestId();
 // Si el festival guardado ya terminó → limpiar localStorage ahora, antes de que nada más lo lea
 const _storedFestCfg=_storedFestId&&FESTIVAL_CONFIG[_storedFestId];
 const _storedFestEnded=_storedFestCfg&&_storedFestCfg.festivalEndStr&&new Date(_storedFestCfg.festivalEndStr)<new Date();
-if(_storedFestEnded) localStorage.removeItem('otrofestiv_festival');
-_activeFestId=(_storedFestId&&!_storedFestEnded)?_storedFestId:_DEFAULT_FEST_ID;
+if(_storedFestEnded&&!_previewFestId) localStorage.removeItem('otrofestiv_festival');
+_activeFestId=_previewFestId||((_storedFestId&&!_storedFestEnded)?_storedFestId:_DEFAULT_FEST_ID);
+// El festival de la vista previa SÍ queda como activo para quien abra el
+// enlace: lo persiste loadFestival() por dentro, y quitárselo después no es
+// fiable porque esa persistencia es asíncrona. Es aceptable — el enlace se le
+// manda al equipo del festival, no al público— y se sale con "cambiar
+// festival" como con cualquier otro.
 
 // SUPABASE — _sb/_sbUser: backing del bridge (leídos/escritos por
 // controller/{auth,persistence}.js vía globalThis). _SB_URL/_SB_KEY → auth.js.
@@ -451,7 +478,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608230738';
+const BUILD_VERSION='202608231625';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1258,8 +1285,26 @@ state.subscribeRender(
   // Revelar el splash recién cuando el selector YA tiene el festival correcto:
   // el cambio placeholder→activo ocurre tras opacity:0 (invisible). Doble rAF
   // asegura que el contenido poblado se commitee antes de animar la entrada.
+  // VISTA PREVIA — con ?fest= se entra solo, como si pulsaran "Entrar". Sin
+  // esto el enlace no sirve de nada: loadFestival() solo lo llama
+  // dismissSplash(), y un festival oculto NO tiene card que tocar en el riel,
+  // así que el visitante quedaba varado en el splash con FILMS vacío.
+  if(_previewFestId){
+    // Con onDomReady y NO con rAF: este módulo se inyecta, así que el rAF
+    // disparaba antes de que el splash existiera y dismissSplash() no tenía
+    // nada que cerrar — entraba con FILMS vacío. Es la misma trampa de
+    // arranque que ya nos costó el store-gate.
+    onDomReady(function(){
+      // Se recorre el MISMO camino que un usuario: elegir y pulsar "Entrar".
+      // No se replica por dentro (loadFestival + quitar el splash a mano)
+      // justamente para no tener dos rutas de entrada que puedan divergir.
+      try{ selectSplashFest(_previewFestId); }catch(e){}
+      const _btn=document.querySelector('.splash-enter-btn');
+      if(_btn) _btn.click(); else { try{ dismissSplash(); }catch(e){} }
+    });
+  }
   const _spEl=document.getElementById('otrofestiv-splash');
-  if(_spEl){
+  if(_spEl&&!_previewFestId){
     requestAnimationFrame(function(){requestAnimationFrame(function(){
       _spEl.classList.add('splash-anim-in');
       // Hard-floor anti-invisible (lección del subsistema splash): la entrada anima

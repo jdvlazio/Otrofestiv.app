@@ -1,0 +1,1958 @@
+{
+ "_provenance": {
+  "fuente": "ficha de cada obra en letterboxd.com (slug de la lista oficial del festival)",
+  "capturado": "2026-08-09",
+  "verificacion": "director (lib.director_coincide) + año ±1 contra el PDF oficial; confirma o desmiente la alineación de secuencias del paso anterior",
+  "pendiente": "sinopsis y póster desde TMDB con el tmdbId ya verificado (requiere TMDB_API_KEY)"
+ },
+ "obras": [
+  {
+   "title": "Todas las canciones del mundo",
+   "section": "Función inaugural",
+   "year": 2026,
+   "director": "Santiago Flórez Rincón",
+   "lbSlug": "todas-las-canciones-del-mundo",
+   "title_en": "Todas las canciones del mundo",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Santiago Flórez Rincón"
+   ],
+   "lb_year": null,
+   "tmdbId": 1744092,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/todas-las-canciones-del-mundo/ — director y año de la ficha"
+  },
+  {
+   "title": "Lamentos de un balcón",
+   "section": "Función inaugural",
+   "year": 2026,
+   "director": "Hans Chispas",
+   "lbSlug": "lamentos-de-un-balcon",
+   "title_en": "Lamentos de un balcón",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Hans Chispas"
+   ],
+   "lb_year": null,
+   "tmdbId": 1744098,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/lamentos-de-un-balcon/ — director y año de la ficha"
+  },
+  {
+   "title": "Iluminaciones",
+   "section": "Función de clausura",
+   "year": 2025,
+   "director": "Pablo Llorca",
+   "lbSlug": "iluminaciones",
+   "title_en": "Iluminaciones",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Pablo Llorca"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1478518,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/iluminaciones/ — director y año de la ficha"
+  },
+  {
+   "title": "Así llegó la noche",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Ángel Santos",
+   "lbSlug": "and-so-the-night-fell",
+   "title_en": "And So the Night Fell",
+   "_conf": 0.43,
+   "_verificar": true,
+   "lb_director": [
+    "Ángel Santos"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1574164,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/and-so-the-night-fell/ — director y año de la ficha"
+  },
+  {
+   "title": "Auslandsreise / Viaje al extranjero",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Ted Fendt",
+   "lbSlug": "foreign-travel",
+   "title_en": "Foreign Travel",
+   "_conf": 0.48,
+   "_verificar": true,
+   "lb_director": [
+    "Ted Fendt"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1616882,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/foreign-travel/ — director y año de la ficha"
+  },
+  {
+   "title": "Beaucoup parler / Mucho hablar",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Pascale Bodet",
+   "lbSlug": "a-lot-talk",
+   "title_en": "A Lot Talk",
+   "_conf": 0.52,
+   "_verificar": false,
+   "lb_director": [
+    "Pascale Bodet"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1614696,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/a-lot-talk/ — director y año de la ficha"
+  },
+  {
+   "title": "Cairo Streets / Las calles de El Cairo",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Abdellah Taïa",
+   "lbSlug": "cairo-streets",
+   "title_en": "Cairo Streets",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Abdellah Taïa"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1506824,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/cairo-streets/ — director y año de la ficha"
+  },
+  {
+   "title": "Futuros luminosos",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Ismael García",
+   "lbSlug": "a-brighter-future",
+   "title_en": "A Brighter Future",
+   "_conf": 0.41,
+   "_verificar": true,
+   "lb_director": [
+    "Ismael García Ramírez"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1603950,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/a-brighter-future/ — director y año de la ficha"
+  },
+  {
+   "title": "Hold My Hand",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Sophie Sherman",
+   "lbSlug": "hold-my-hand-2",
+   "title_en": "Hold My Hand",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Sophie Sherman"
+   ],
+   "lb_year": null,
+   "tmdbId": 1635753,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/hold-my-hand-2/ — director y año de la ficha"
+  },
+  {
+   "title": "La corazonada",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Diego Soto",
+   "lbSlug": "a-heart-as-willing",
+   "title_en": "A Heart as Willing",
+   "_conf": 0.44,
+   "_verificar": true,
+   "lb_director": [
+    "Diego Soto"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1466153,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/a-heart-as-willing/ — director y año de la ficha"
+  },
+  {
+   "title": "Las almas ni los ojos",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Canela Reyes y César Jaimes",
+   "lbSlug": "las-almas-ni-los-ojos",
+   "title_en": "Las almas ni los ojos",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "María Canela Reyes",
+    "César Alejandro Jaimes"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1665538,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/las-almas-ni-los-ojos/ — director y año de la ficha"
+  },
+  {
+   "title": "Oublie pas le gruau",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Olivier Godin",
+   "lbSlug": "dont-forget-the-oatmeal",
+   "title_en": "Don't Forget the Oatmeal",
+   "_conf": 0.35,
+   "_verificar": true,
+   "lb_director": [
+    "Olivier Godin"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1596917,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/dont-forget-the-oatmeal/ — director y año de la ficha"
+  },
+  {
+   "title": "Procès d'un jeune poète / Juicio a un joven poeta",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Philippe Van Cutsem",
+   "lbSlug": "proces-dun-jeune-poete",
+   "title_en": "Procès d'un jeune poète",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Philippe Van Cutsem"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1563010,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/proces-dun-jeune-poete/ — director y año de la ficha"
+  },
+  {
+   "title": "Sol menor",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "André Silva Santos",
+   "lbSlug": "april-tune",
+   "title_en": "April Tune",
+   "_conf": 0.44,
+   "_verificar": true,
+   "lb_director": [
+    "André Silva Santos"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1500856,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/april-tune/ — director y año de la ficha"
+  },
+  {
+   "title": "Solitudes / Soledades",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Ryan McKenna",
+   "lbSlug": "solitudes-2025",
+   "title_en": "Solitudes",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Ryan McKenna"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1507792,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/solitudes-2025/ — director y año de la ficha"
+  },
+  {
+   "title": "Un techo sin cielo",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Diego Hernández",
+   "lbSlug": "a-skyless-roof",
+   "title_en": "A Skyless Roof",
+   "_conf": 0.37,
+   "_verificar": true,
+   "lb_director": [
+    "Diego Hernández"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1373119,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/a-skyless-roof/ — director y año de la ficha"
+  },
+  {
+   "title": "Una Dança Non Sancta",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Tiago Almança",
+   "lbSlug": "an-unholy-dance",
+   "title_en": "An Unholy Dance",
+   "_conf": 0.52,
+   "_verificar": false,
+   "lb_director": [
+    "Tiago Almança"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1595543,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/an-unholy-dance/ — director y año de la ficha"
+  },
+  {
+   "title": "Bright Summer Days",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Nevena Desivojevic",
+   "lbSlug": "bright-summer-days",
+   "title_en": "Bright Summer Days",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Nevena Desivojević"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1485440,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/bright-summer-days/ — director y año de la ficha"
+  },
+  {
+   "title": "Certas formas",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Luiz Afonso Morêda",
+   "lbSlug": "certas-formas",
+   "title_en": "Certas Formas",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Luiz Afonso Morêda"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1660730,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/certas-formas/ — director y año de la ficha"
+  },
+  {
+   "title": "Chuura",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Evgenia Arbugaeva",
+   "lbSlug": "chuuraa",
+   "title_en": "Chuuraa",
+   "_conf": 1.04,
+   "_verificar": false,
+   "lb_director": [
+    "Evgenia Arbugaeva"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1614693,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/chuuraa/ — director y año de la ficha"
+  },
+  {
+   "title": "Crash",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Gabriela Mureb",
+   "lbSlug": "crash-2026-1",
+   "title_en": "Crash",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Gabriela Mureb"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1620642,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/crash-2026-1/ — director y año de la ficha"
+  },
+  {
+   "title": "El oído absoluto",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Rafael Federman",
+   "lbSlug": "the-inner-ear",
+   "title_en": "The Inner Ear",
+   "_conf": 0.46,
+   "_verificar": true,
+   "lb_director": [
+    "Rafael Federman"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1722127,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-inner-ear/ — director y año de la ficha"
+  },
+  {
+   "title": "Henry Is a Girl Who Likes to Sleep",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Marthe Peters",
+   "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
+   "title_en": "Henry Is a Girl Who Likes to Sleep",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Marthe Peters"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1614674,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/henry-is-a-girl-who-likes-to-sleep/ — director y año de la ficha"
+  },
+  {
+   "title": "Koki, Ciao",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Quenton Miller",
+   "lbSlug": "koki-ciao",
+   "title_en": "Koki, Ciao",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Quenton Miller"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1416378,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/koki-ciao/ — director y año de la ficha"
+  },
+  {
+   "title": "loose sleep",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Rodrigo Soares Teixeira",
+   "lbSlug": "sono-solto",
+   "title_en": "Sono Solto",
+   "_conf": 0.6,
+   "_verificar": false,
+   "lb_director": [
+    "Rodrigo Soares Teixeira"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1655940,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/sono-solto/ — director y año de la ficha"
+  },
+  {
+   "title": "Mi amigo, el arquitecto",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Óscar Garzón",
+   "lbSlug": "my-friend-the-architect",
+   "title_en": "My Friend, The Architect",
+   "_conf": 0.65,
+   "_verificar": false,
+   "lb_director": [
+    "Oscar Garzón"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1655621,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/my-friend-the-architect/ — director y año de la ficha"
+  },
+  {
+   "title": "Mirando al sur",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Felipe López Gómez",
+   "lbSlug": "facing-south",
+   "title_en": "Facing South",
+   "_conf": 0.5,
+   "_verificar": false,
+   "lb_director": [
+    "Felipe López Gómez"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1657831,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/facing-south/ — director y año de la ficha"
+  },
+  {
+   "title": "O",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Francisca Alarcão",
+   "lbSlug": "o-2026",
+   "title_en": "o",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Francisca Alarcão"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1599922,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/o-2026/ — director y año de la ficha"
+  },
+  {
+   "title": "Only Making Out",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Marlon Weber",
+   "lbSlug": "only-making-out",
+   "title_en": "Only Making Out",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Marlon Weber"
+   ],
+   "lb_year": null,
+   "tmdbId": 1537273,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/only-making-out/ — director y año de la ficha"
+  },
+  {
+   "title": "Our Homes Do Not Exist",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Anna Lamour",
+   "lbSlug": "nos-maisons-nexistent-pas",
+   "title_en": "Nos maisons n'existent pas",
+   "_conf": 0.62,
+   "_verificar": false,
+   "lb_director": [
+    "Anna Lamour"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1645704,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/nos-maisons-nexistent-pas/ — director y año de la ficha"
+  },
+  {
+   "title": "Pies al revés",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Elodie Arpa",
+   "lbSlug": "feet-the-other-way-around",
+   "title_en": "Feet The Other Way Around",
+   "_conf": 0.33,
+   "_verificar": true,
+   "lb_director": [
+    "Elodie Arpa"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1645136,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/feet-the-other-way-around/ — director y año de la ficha"
+  },
+  {
+   "title": "Prueba de cámara",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "David Correa",
+   "lbSlug": "prueba-de-camara",
+   "title_en": "Prueba de cámara",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "David Correa"
+   ],
+   "lb_year": null,
+   "tmdbId": 1743099,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/prueba-de-camara/ — director y año de la ficha"
+  },
+  {
+   "title": "Sombras en la niebla",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2026,
+   "director": "Pedro Pablo Vega",
+   "lbSlug": "into-the-fog-2026",
+   "title_en": "Into the fog",
+   "_conf": 0.37,
+   "_verificar": true,
+   "lb_director": [
+    "Pedro Pablo Vega"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1668876,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/into-the-fog-2026/ — director y año de la ficha"
+  },
+  {
+   "title": "Un aparato para detectar fantasmas",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2025,
+   "director": "Mauricio Maldonado",
+   "lbSlug": "a-ghost-detecting-device",
+   "title_en": "A Ghost-Detecting Device",
+   "_conf": 0.46,
+   "_verificar": true,
+   "lb_director": [
+    "Mauricio Maldonado"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1593571,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/a-ghost-detecting-device/ — director y año de la ficha"
+  },
+  {
+   "title": "Ya se ven los tigres en la lluvia",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2025,
+   "director": "Óscar Ruiz Navia",
+   "lbSlug": "tigers-can-be-seen-in-the-rain",
+   "title_en": "Tigers Can Be Seen In The Rain",
+   "_conf": 0.47,
+   "_verificar": true,
+   "lb_director": [
+    "Oscar Ruiz Navia"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1526866,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/tigers-can-be-seen-in-the-rain/ — director y año de la ficha"
+  },
+  {
+   "title": "El cazador",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2026,
+   "director": "Luciana Riso Soto y Manuel Villa",
+   "lbSlug": "the-hunter-2026-1",
+   "title_en": "The Hunter",
+   "_conf": 0.42,
+   "_verificar": true,
+   "lb_director": [
+    "Luciana Riso Soto",
+    "Manuel Villa"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1668874,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-hunter-2026-1/ — director y año de la ficha"
+  },
+  {
+   "title": "Las formas de la magia",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2026,
+   "director": "María Paula Lorgia Garnica",
+   "lbSlug": "las-formas-de-la-magia",
+   "title_en": "Las Formas de la Magia",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "María Paula Lorgia"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1668889,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/las-formas-de-la-magia/ — director y año de la ficha"
+  },
+  {
+   "title": "Memorias Encontradas Numa Banheira",
+   "section": "Programa 2. Teoremas sobre la mirada",
+   "year": 2026,
+   "director": "Leonardo Pirondi",
+   "lbSlug": "memoirs-found-in-a-bathtub",
+   "title_en": "Memoirs Found in a Bathtub",
+   "_conf": 0.62,
+   "_verificar": false,
+   "lb_director": [
+    "Leonardo Pirondi"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1504896,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/memoirs-found-in-a-bathtub/ — director y año de la ficha"
+  },
+  {
+   "title": "Parece el mundo",
+   "section": "Programa 2. Teoremas sobre la mirada",
+   "year": 2026,
+   "director": "Santiago Quirama",
+   "lbSlug": "it-seems-the-world",
+   "title_en": "It Seems The World",
+   "_conf": 0.42,
+   "_verificar": true,
+   "lb_director": [
+    "Santiago Quirama M."
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1661938,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/it-seems-the-world/ — director y año de la ficha"
+  },
+  {
+   "title": "Borrachos mientras escuchamos las gotas caer",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Santiago Gómez Ramírez",
+   "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
+   "title_en": "Borrachos escuchando las gotas de lluvia caer",
+   "_conf": 0.86,
+   "_verificar": false,
+   "lb_director": [
+    "Santiago Gomez Ramirez"
+   ],
+   "lb_year": null,
+   "tmdbId": 1743109,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/borrachos-escuchando-las-gotas-de-lluvia/ — director y año de la ficha"
+  },
+  {
+   "title": "El salto",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Jerónimo Rincón",
+   "lbSlug": "el-salto-1",
+   "title_en": "El Salto",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Jerónimo Rincón"
+   ],
+   "lb_year": null,
+   "tmdbId": 1686065,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/el-salto-1/ — director y año de la ficha"
+  },
+  {
+   "title": "Gramática práctica italiana",
+   "section": "Competencia Nuevas voces",
+   "year": 2025,
+   "director": "Daniel Cortés",
+   "lbSlug": "practical-italian-grammar",
+   "title_en": "Practical Italian Grammar",
+   "_conf": 0.77,
+   "_verificar": false,
+   "lb_director": [
+    "Daniel Cortés"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1577564,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/practical-italian-grammar/ — director y año de la ficha"
+  },
+  {
+   "title": "Liminal",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Gabriella Castelblanco",
+   "lbSlug": "liminal-6",
+   "title_en": "Liminal",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Gabriella Castelblanco"
+   ],
+   "lb_year": null,
+   "tmdbId": 1743116,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/liminal-6/ — director y año de la ficha"
+  },
+  {
+   "title": "Madres de nacimiento",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Gloria Isabel Gómez",
+   "lbSlug": "madres-de-nacimiento",
+   "title_en": "Madres de Nacimiento",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Gloria Isabel Gómez Ceballos"
+   ],
+   "lb_year": null,
+   "tmdbId": 1668902,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/madres-de-nacimiento/ — director y año de la ficha"
+  },
+  {
+   "title": "Medellín yo te saludo",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Lucas Muñoz",
+   "lbSlug": "medellin-yo-te-saludo",
+   "title_en": "Medellín, yo te saludo",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Lucas Muñoz Cataño"
+   ],
+   "lb_year": null,
+   "tmdbId": 1740554,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/medellin-yo-te-saludo/ — director y año de la ficha"
+  },
+  {
+   "title": "Para no volver",
+   "section": "Competencia Nuevas voces",
+   "year": 2025,
+   "director": "Tania Galvis",
+   "lbSlug": "para-no-volver",
+   "title_en": "Para no volver",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Tania Galvis"
+   ],
+   "lb_year": null,
+   "tmdbId": 1743118,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/para-no-volver/ — director y año de la ficha"
+  },
+  {
+   "title": "Pausas activas",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Juan Pablo Castro",
+   "lbSlug": "pausas-activas",
+   "title_en": "Pausas activas",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Juan Pablo Castro"
+   ],
+   "lb_year": null,
+   "tmdbId": 1743120,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/pausas-activas/ — director y año de la ficha"
+  },
+  {
+   "title": "Preguntas frecuentes",
+   "section": "Competencia Nuevas voces",
+   "year": 2025,
+   "director": "Sofía Salinas Barrera",
+   "lbSlug": "frequently-asked-questions",
+   "title_en": "Frequently asked questions",
+   "_conf": 0.51,
+   "_verificar": false,
+   "lb_director": [
+    "Sofía Salinas Barrera"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1592609,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/frequently-asked-questions/ — director y año de la ficha"
+  },
+  {
+   "title": "Refracción",
+   "section": "Competencia Nuevas voces",
+   "year": 2025,
+   "director": "Isabella Palacio",
+   "lbSlug": "refraccion",
+   "title_en": "Refracción",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Isabella Palacio Mesa"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1584776,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/refraccion/ — director y año de la ficha"
+  },
+  {
+   "title": "A Árvore do Conhecimento / El árbol del conocimiento",
+   "section": "Proyecciones especiales",
+   "year": 2025,
+   "director": "Eugène Green",
+   "lbSlug": "the-tree-of-knowledge-2025",
+   "title_en": "The Tree of Knowledge",
+   "_conf": 0.47,
+   "_verificar": true,
+   "lb_director": [
+    "Eugène Green"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1523438,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-tree-of-knowledge-2025/ — director y año de la ficha"
+  },
+  {
+   "title": "Decaer",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Juan Camilo González",
+   "lbSlug": "decay-2026",
+   "title_en": "decay",
+   "_conf": 0.85,
+   "_verificar": false,
+   "lb_director": [
+    "Juan Camilo González"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1668881,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/decay-2026/ — director y año de la ficha"
+  },
+  {
+   "title": "Disciplina",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Affonso Uchôa",
+   "lbSlug": "disciplina-1",
+   "title_en": "Disciplina",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Affonso Uchôa"
+   ],
+   "lb_year": null,
+   "tmdbId": 1639721,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/disciplina-1/ — director y año de la ficha"
+  },
+  {
+   "title": "Dry Leaf",
+   "section": "Proyecciones especiales",
+   "year": 2025,
+   "director": "Alexandre Koberidze",
+   "lbSlug": "dry-leaf",
+   "title_en": "Dry Leaf",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Alexandre Koberidze"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1057888,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/dry-leaf/ — director y año de la ficha"
+  },
+  {
+   "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Deimer Quintero Vertel",
+   "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+   "title_en": "Our Home Was Buried in a Land We Could Never Find",
+   "_conf": 0.26,
+   "_verificar": true,
+   "lb_director": [
+    "Deimer Quintero Vertel"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1663181,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/our-home-was-buried-in-a-land-we-could-never/ — director y año de la ficha"
+  },
+  {
+   "title": "Lolita en Honda",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Daniel Torres",
+   "lbSlug": "lolita-en-honda",
+   "title_en": "Lolita en Honda",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Daniel Torres"
+   ],
+   "lb_year": null,
+   "tmdbId": 1665546,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/lolita-en-honda/ — director y año de la ficha"
+  },
+  {
+   "title": "Para hacer una película solo se necesita un arma",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Santiago Sein",
+   "lbSlug": "all-you-need-to-make-a-movie-is-a-gun",
+   "title_en": "All You Need to Make a Movie Is a Gun",
+   "_conf": 0.4,
+   "_verificar": true,
+   "lb_director": [
+    "Santiago Sein"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1196863,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/ — director y año de la ficha"
+  },
+  {
+   "title": "The Souffleur",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Gastón Solnicki",
+   "lbSlug": "the-souffleur",
+   "title_en": "The Souffleur",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Gastón Solnicki"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1418361,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-souffleur/ — director y año de la ficha"
+  },
+  {
+   "title": "Une vie manifeste",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Jean-Gabriel Périot",
+   "lbSlug": "a-life-a-manifesto",
+   "title_en": "A Life, A Manifesto",
+   "_conf": 0.75,
+   "_verificar": false,
+   "lb_director": [
+    "Jean-Gabriel Périot"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1483908,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/a-life-a-manifesto/ — director y año de la ficha"
+  },
+  {
+   "title": "La tempestá",
+   "section": "Iluminaciones",
+   "year": 2003,
+   "director": "Pere Portabella",
+   "lbSlug": "the-tempest-2003",
+   "title_en": "The Tempest",
+   "_conf": 0.85,
+   "_verificar": false,
+   "lb_director": [
+    "Pere Portabella"
+   ],
+   "lb_year": 2003,
+   "tmdbId": 257770,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-tempest-2003/ — director y año de la ficha"
+  },
+  {
+   "title": "Los golfos",
+   "section": "Iluminaciones",
+   "year": 1960,
+   "director": "Carlos Saura",
+   "lbSlug": "the-delinquents-1960",
+   "title_en": "The Delinquents",
+   "_conf": 0.28,
+   "_verificar": true,
+   "lb_director": [
+    "Carlos Saura"
+   ],
+   "lb_year": 1960,
+   "tmdbId": 198915,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-delinquents-1960/ — director y año de la ficha"
+  },
+  {
+   "title": "Macho Dancer",
+   "section": "Iluminaciones",
+   "year": 1988,
+   "director": "Lino Brocka",
+   "lbSlug": "macho-dancer",
+   "title_en": "Macho Dancer",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Lino Brocka"
+   ],
+   "lb_year": 1988,
+   "tmdbId": 170924,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/macho-dancer/ — director y año de la ficha"
+  },
+  {
+   "title": "Ich denke oft an Hawaii / Muchas veces pienso en Hawái",
+   "section": "Iluminaciones",
+   "year": 1978,
+   "director": "Elfi Mikesch",
+   "lbSlug": "i-often-think-of-hawaii",
+   "title_en": "I Often Think of Hawaii",
+   "_conf": 0.73,
+   "_verificar": false,
+   "lb_director": [
+    "Elfi Mikesch"
+   ],
+   "lb_year": 1978,
+   "tmdbId": 512475,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/i-often-think-of-hawaii/ — director y año de la ficha"
+  },
+  {
+   "title": "No contéis con los dedos",
+   "section": "Iluminaciones",
+   "year": 1967,
+   "director": "Pere Portabella",
+   "lbSlug": "dont-count-on-your-fingers",
+   "title_en": "Don't Count On Your Fingers",
+   "_conf": 0.59,
+   "_verificar": false,
+   "lb_director": [
+    "Pere Portabella"
+   ],
+   "lb_year": 1967,
+   "tmdbId": 137631,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/dont-count-on-your-fingers/ — director y año de la ficha"
+  },
+  {
+   "title": "Sunshine Singapur",
+   "section": "Iluminaciones",
+   "year": 1972,
+   "director": "Rajendra Gour",
+   "lbSlug": "sunshine-singapore",
+   "title_en": "Sunshine Singapore",
+   "_conf": 1.03,
+   "_verificar": false,
+   "lb_director": [
+    "Rajendra Gour"
+   ],
+   "lb_year": 1972,
+   "tmdbId": 701268,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/sunshine-singapore/ — director y año de la ficha"
+  },
+  {
+   "title": "Eyes",
+   "section": "Iluminaciones",
+   "year": 1967,
+   "director": "Rajendra Gour",
+   "lbSlug": "eyes-1967",
+   "title_en": "Eyes",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Rajendra Gour"
+   ],
+   "lb_year": 1967,
+   "tmdbId": 912349,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/eyes-1967/ — director y año de la ficha"
+  },
+  {
+   "title": "Labour of Love: The Housewife",
+   "section": "Iluminaciones",
+   "year": 1978,
+   "director": "Rajendra Gour",
+   "lbSlug": "labour-of-love-the-housewife",
+   "title_en": "Labour of Love: The Housewife",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Rajendra Gour"
+   ],
+   "lb_year": 1978,
+   "tmdbId": 1004085,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/labour-of-love-the-housewife/ — director y año de la ficha"
+  },
+  {
+   "title": "My Child, My Child",
+   "section": "Iluminaciones",
+   "year": 1978,
+   "director": "Rajendra Gour",
+   "lbSlug": "my-child-my-child",
+   "title_en": "My Child, My Child",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Rajendra Gour"
+   ],
+   "lb_year": 1979,
+   "tmdbId": 912351,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/my-child-my-child/ — director y año de la ficha"
+  },
+  {
+   "title": "Sight and Desire",
+   "section": "Iluminaciones",
+   "year": 1968,
+   "director": "Rajendra Gour",
+   "lbSlug": "sight-and-desire",
+   "title_en": "Sight and Desire",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Rajendra Gour"
+   ],
+   "lb_year": 1968,
+   "tmdbId": 1004090,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/sight-and-desire/ — director y año de la ficha"
+  },
+  {
+   "title": "Vampir Cuadecuc",
+   "section": "Iluminaciones",
+   "year": 1971,
+   "director": "Pere Portabella",
+   "lbSlug": "vampir-cuadecuc",
+   "title_en": "Vampir Cuadecuc",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Pere Portabella"
+   ],
+   "lb_year": 1971,
+   "tmdbId": 126278,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/vampir-cuadecuc/ — director y año de la ficha"
+  },
+  {
+   "title": "Was soll'n wir denn machen ohne den Tod / ¿Qué haremos sin la muerte?",
+   "section": "Iluminaciones",
+   "year": 1980,
+   "director": "Elfi Mikesch",
+   "lbSlug": "what-shall-we-do-without-death",
+   "title_en": "What Shall We Do Without Death",
+   "_conf": 0.55,
+   "_verificar": false,
+   "lb_director": [
+    "Elfi Mikesch"
+   ],
+   "lb_year": 1980,
+   "tmdbId": 544319,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/what-shall-we-do-without-death/ — director y año de la ficha"
+  },
+  {
+   "title": "Larama",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2020,
+   "director": "Luciana Decker",
+   "lbSlug": "larama",
+   "title_en": "Larama",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "lb_year": 2020,
+   "tmdbId": 848611,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/larama/ — director y año de la ficha"
+  },
+  {
+   "title": "Lo que los humanos ven como sangre los jaguares ven como chicha",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2023,
+   "director": "Luciana Decker",
+   "lbSlug": "what-humans-see-as-blood-jaguars-see-as-chicha",
+   "title_en": "What Humans See as Blood, Jaguars See as Chicha",
+   "_conf": 0.69,
+   "_verificar": false,
+   "lb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "lb_year": 2023,
+   "tmdbId": 1197126,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/what-humans-see-as-blood-jaguars-see-as-chicha/ — director y año de la ficha"
+  },
+  {
+   "title": "Objetos parlantes",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2021,
+   "director": "Luciana Decker",
+   "lbSlug": "objetos-parlantes",
+   "title_en": "Objetos parlantes",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "lb_year": 2021,
+   "tmdbId": 1398659,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/objetos-parlantes/ — director y año de la ficha"
+  },
+  {
+   "title": "Puro andar",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2025,
+   "director": "Luciana Decker",
+   "lbSlug": "language-of-the-entrails",
+   "title_en": "Language of the Entrails",
+   "_conf": 0.36,
+   "_verificar": true,
+   "lb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1419775,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/language-of-the-entrails/ — director y año de la ficha"
+  },
+  {
+   "title": "Spoils",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2023,
+   "director": "Luciana Decker",
+   "lbSlug": "spoils",
+   "title_en": "Spoils",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "lb_year": 2023,
+   "tmdbId": 1123071,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/spoils/ — director y año de la ficha"
+  },
+  {
+   "title": "Trizas",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2026,
+   "director": "Luciana Decker",
+   "lbSlug": "shards-2026",
+   "title_en": "Shards",
+   "_conf": 0.45,
+   "_verificar": true,
+   "lb_director": [
+    "Luciana Decker Orozco"
+   ],
+   "lb_year": 2026,
+   "tmdbId": 1604094,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/shards-2026/ — director y año de la ficha"
+  },
+  {
+   "title": "Jakawisa",
+   "section": "Carta blanca",
+   "year": 2020,
+   "director": "Delia Yujra Chura",
+   "lbSlug": "jakawisa",
+   "title_en": "Jakawisa",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [],
+   "lb_year": null,
+   "tmdbId": 873182,
+   "title_original_lb": null,
+   "_verificacion": "DISCREPA",
+   "_src": "letterboxd.com/film/jakawisa/ — director y año de la ficha"
+  },
+  {
+   "title": "Hiding / Esquivo",
+   "section": "Carta blanca",
+   "year": 2024,
+   "director": "Fatmeh Villalba",
+   "lbSlug": "hiding-esquivo",
+   "title_en": "Hiding / Esquivo",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Lilian Fatmeh Villalba"
+   ],
+   "lb_year": null,
+   "tmdbId": 1744060,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/hiding-esquivo/ — director y año de la ficha"
+  },
+  {
+   "title": "Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros",
+   "section": "Carta blanca",
+   "year": 2026,
+   "director": "Esteban Prudencia",
+   "lbSlug": "derroteros-derroteros-derroteros-derroteros",
+   "title_en": "Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Esteban Prudencio"
+   ],
+   "lb_year": null,
+   "tmdbId": 1744062,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/derroteros-derroteros-derroteros-derroteros/ — director y año de la ficha"
+  },
+  {
+   "title": "¿Qué historia es ésta y cuál es su final?",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2013,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "what-is-this-story-and-how-does-it-end",
+   "title_en": "What Is This Story and How Does It End?",
+   "_conf": 0.54,
+   "_verificar": false,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2013,
+   "tmdbId": 512555,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/what-is-this-story-and-how-does-it-end/ — director y año de la ficha"
+  },
+  {
+   "title": "Alicia soñó con un faro",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2021,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "alicia-dreams-of-a-lighthouse",
+   "title_en": "Alicia Dreams of a Lighthouse",
+   "_conf": 0.54,
+   "_verificar": false,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2021,
+   "tmdbId": 860514,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/alicia-dreams-of-a-lighthouse/ — director y año de la ficha"
+  },
+  {
+   "title": "Cuando las nubes esconden la sombra",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2024,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "when-clouds-hide-the-shadow",
+   "title_en": "When Clouds Hide the Shadow",
+   "_conf": 0.35,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2024,
+   "tmdbId": 1268743,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/when-clouds-hide-the-shadow/ — director y año de la ficha"
+  },
+  {
+   "title": "El cielo, la tierra y la lluvia",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2008,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "the-sky-the-earth-and-the-rain",
+   "title_en": "The Sky, the Earth and the Rain",
+   "_conf": 0.42,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2008,
+   "tmdbId": 102339,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-sky-the-earth-and-the-rain/ — director y año de la ficha"
+  },
+  {
+   "title": "El sueño de Ana",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2017,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "anas-dream",
+   "title_en": "Ana's Dream",
+   "_conf": 0.35,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2017,
+   "tmdbId": 478536,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/anas-dream/ — director y año de la ficha"
+  },
+  {
+   "title": "El viento sabe que vuelvo a casa",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2016,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "the-winds-know-that-im-coming-back-home",
+   "title_en": "The Winds Know That I'm Coming Back Home",
+   "_conf": 0.4,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2016,
+   "tmdbId": 381639,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-winds-know-that-im-coming-back-home/ — director y año de la ficha"
+  },
+  {
+   "title": "Obreras saliendo de la fábrica",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2005,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "women-workers-leaving-the-factory",
+   "title_en": "Women Workers Leaving the Factory",
+   "_conf": 0.53,
+   "_verificar": false,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2005,
+   "tmdbId": 182746,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/women-workers-leaving-the-factory/ — director y año de la ficha"
+  },
+  {
+   "title": "Sobre cosas que me han pasado",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2018,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "about-things-that-happened-to-me",
+   "title_en": "About Things That Happened to Me",
+   "_conf": 0.38,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2018,
+   "tmdbId": 573814,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/about-things-that-happened-to-me/ — director y año de la ficha"
+  },
+  {
+   "title": "Vendrá la muerte y tendrá tus ojos",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2019,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "death-will-come-and-shall-have-your-eyes",
+   "title_en": "Death Will Come and Shall Have Your Eyes",
+   "_conf": 0.44,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2019,
+   "tmdbId": 614456,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/death-will-come-and-shall-have-your-eyes/ — director y año de la ficha"
+  },
+  {
+   "title": "Ver y escuchar",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2013,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "see-and-listen",
+   "title_en": "See and Listen",
+   "_conf": 0.41,
+   "_verificar": true,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2013,
+   "tmdbId": 407151,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/see-and-listen/ — director y año de la ficha"
+  },
+  {
+   "title": "Verano",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2011,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "verano",
+   "title_en": "Verano",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "José Luis Torres Leiva"
+   ],
+   "lb_year": 2011,
+   "tmdbId": 111106,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/verano/ — director y año de la ficha"
+  },
+  {
+   "title": "Cleaning & Cleansing",
+   "section": "Febril incisión. El cine de Thomas Fürhapter",
+   "year": 2024,
+   "director": "Thomas Fürhapter",
+   "lbSlug": "cleaning-cleansing",
+   "title_en": "Cleaning & Cleansing",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Thomas Fürhapter"
+   ],
+   "lb_year": 2024,
+   "tmdbId": 1361665,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/cleaning-cleansing/ — director y año de la ficha"
+  },
+  {
+   "title": "La tercera opción / Die dritte Option / The Third Option",
+   "section": "Febril incisión. El cine de Thomas Fürhapter",
+   "year": 2017,
+   "director": "Thomas Fürhapter",
+   "lbSlug": "the-third-option",
+   "title_en": "The Third Option",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Thomas Fürhapter"
+   ],
+   "lb_year": 2017,
+   "tmdbId": 476369,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-third-option/ — director y año de la ficha"
+  },
+  {
+   "title": "Viviendo juntos / Zusammenleben",
+   "section": "Febril incisión. El cine de Thomas Fürhapter",
+   "year": 2022,
+   "director": "Thomas Fürhapter",
+   "lbSlug": "zusammenleben",
+   "title_en": "Zusammenleben",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Thomas Fürhapter"
+   ],
+   "lb_year": 2022,
+   "tmdbId": 1041158,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/zusammenleben/ — director y año de la ficha"
+  },
+  {
+   "title": "Vive L'Amour",
+   "section": "Sick and Dirty. Curaduría de Michael Koresky",
+   "year": 1994,
+   "director": "Tsai Ming-liang",
+   "lbSlug": "vive-lamour",
+   "title_en": "Vive L'Amour",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Tsai Ming-liang"
+   ],
+   "lb_year": 1994,
+   "tmdbId": 11985,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/vive-lamour/ — director y año de la ficha"
+  },
+  {
+   "title": "The Children's Hour",
+   "section": "Sick and Dirty. Curaduría de Michael Koresky",
+   "year": 1961,
+   "director": "William Wyler",
+   "lbSlug": "the-childrens-hour",
+   "title_en": "The Children's Hour",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "William Wyler"
+   ],
+   "lb_year": 1961,
+   "tmdbId": 20139,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-childrens-hour/ — director y año de la ficha"
+  },
+  {
+   "title": "Buddies",
+   "section": "Sick and Dirty. Curaduría de Michael Koresky",
+   "year": 1985,
+   "director": "Arthur J. Bressan",
+   "lbSlug": "buddies-1985",
+   "title_en": "Buddies",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Arthur J. Bressan, Jr."
+   ],
+   "lb_year": 1985,
+   "tmdbId": 259433,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/buddies-1985/ — director y año de la ficha"
+  },
+  {
+   "title": "Caminito al Cielo",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1989,
+   "director": "Sergio Navarro",
+   "lbSlug": "caminito-al-cielo",
+   "title_en": "Caminito al cielo",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Sergio Navarro"
+   ],
+   "lb_year": 1989,
+   "tmdbId": 615840,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/caminito-al-cielo/ — director y año de la ficha"
+  },
+  {
+   "title": "Cuartito rosa",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1991,
+   "director": "Sergio Navarro",
+   "lbSlug": "cuartito-rosa",
+   "title_en": "Cuartito Rosa",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Sergio Navarro"
+   ],
+   "lb_year": 1991,
+   "tmdbId": 873367,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/cuartito-rosa/ — director y año de la ficha"
+  },
+  {
+   "title": "La libertad remonta el estadio",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1897,
+   "director": "Sergio Navarro",
+   "lbSlug": "la-libertad-remonta-el-estadio",
+   "title_en": "La libertad remonta el estadio",
+   "_conf": 1.0,
+   "_verificar": false,
+   "lb_director": [
+    "Sergio Navarro"
+   ],
+   "lb_year": 1987,
+   "tmdbId": 1185345,
+   "title_original_lb": null,
+   "_verificacion": "DISCREPA",
+   "_src": "letterboxd.com/film/la-libertad-remonta-el-estadio/ — director y año de la ficha"
+  },
+  {
+   "title": "Chico eléctrico",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2021,
+   "director": "Ingrid Pokropek",
+   "lbSlug": "chico-electrico",
+   "title_en": "Chico eléctrico",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Ingrid Pokropek"
+   ],
+   "lb_year": 2021,
+   "tmdbId": 809738,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/chico-electrico/ — director y año de la ficha"
+  },
+  {
+   "title": "Dice que…",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2025,
+   "director": "Alejandro Fernández Mouján",
+   "lbSlug": "dice-que",
+   "title_en": "Dice que…",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Alejandro Fernández Mouján"
+   ],
+   "lb_year": 2025,
+   "tmdbId": 1564971,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/dice-que/ — director y año de la ficha"
+  },
+  {
+   "title": "Homenaje a la obra de Philip Henry Gosse",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2020,
+   "director": "Pablo Martín Weber",
+   "lbSlug": "homage-to-the-work-of-philip-henry-gosse",
+   "title_en": "Homage to the Work of Philip Henry Gosse",
+   "_conf": 0.82,
+   "_verificar": false,
+   "lb_director": [
+    "Pablo Martín Weber"
+   ],
+   "lb_year": 2020,
+   "tmdbId": 764439,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/homage-to-the-work-of-philip-henry-gosse/ — director y año de la ficha"
+  },
+  {
+   "title": "Las picapedreras",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2021,
+   "director": "Azul Aizenberg",
+   "lbSlug": "the-stonebreakers",
+   "title_en": "The Stonebreakers",
+   "_conf": 0.48,
+   "_verificar": true,
+   "lb_director": [
+    "Azul Aizenberg"
+   ],
+   "lb_year": 2021,
+   "tmdbId": 877043,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/the-stonebreakers/ — director y año de la ficha"
+  },
+  {
+   "title": "Rancho",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2021,
+   "director": "Pedro Speroni",
+   "lbSlug": "rancho",
+   "title_en": "Rancho",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Pedro Speroni"
+   ],
+   "lb_year": 2021,
+   "tmdbId": 805169,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/rancho/ — director y año de la ficha"
+  },
+  {
+   "title": "Solo qu3r3mos un poco de amor",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2024,
+   "director": "Raúl Perrone",
+   "lbSlug": "solo-qu3r3mos-un-poco-de-amor",
+   "title_en": "Solo qu3r3mos un poco de amor",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Raúl Perrone"
+   ],
+   "lb_year": 2024,
+   "tmdbId": 1388911,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/solo-qu3r3mos-un-poco-de-amor/ — director y año de la ficha"
+  },
+  {
+   "title": "Spot Fuera de campo 1",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2025,
+   "director": "Pablo Martín Weber",
+   "lbSlug": "spot-fuera-de-campo-1",
+   "title_en": "Spot Fuera de campo 1",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "Pablo Martín Weber"
+   ],
+   "lb_year": null,
+   "tmdbId": 1744140,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/spot-fuera-de-campo-1/ — director y año de la ficha"
+  },
+  {
+   "title": "Spot Fuera de campo 2",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2024,
+   "director": "María Aparicio",
+   "lbSlug": "spot-fuera-de-campo-2",
+   "title_en": "Spot Fuera de campo 2",
+   "_conf": 1.12,
+   "_verificar": false,
+   "lb_director": [
+    "María Aparicio"
+   ],
+   "lb_year": null,
+   "tmdbId": 1744147,
+   "title_original_lb": null,
+   "_verificacion": "confirmada",
+   "_src": "letterboxd.com/film/spot-fuera-de-campo-2/ — director y año de la ficha"
+  },
+  {
+   "title": "El santo y el milagro",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1993,
+   "director": "Sergio Navarro",
+   "lbSlug": null,
+   "title_en": null,
+   "_conf": 0.0,
+   "_verificar": false,
+   "_verificacion": "sin letterboxd"
+  },
+  {
+   "title": "Valparaíso eterno",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1991,
+   "director": "Sergio Navarro",
+   "lbSlug": null,
+   "title_en": null,
+   "_conf": 0.0,
+   "_verificar": false,
+   "_verificacion": "sin letterboxd"
+  }
+ ]
+}

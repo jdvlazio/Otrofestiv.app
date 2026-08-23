@@ -10,8 +10,8 @@
 //   programaChip, _programaChipMatchFn (bridgeados en main.js TEST BRIDGE, D-6C-1).
 //   Los handlers _dismissNotice/setProgramaChip (data-action) viven en main.js.
 
-import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
-import { ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
+import { NOTICES, PALMARES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
+import { ICONS, _buildPosterV16, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
 import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
@@ -247,6 +247,18 @@ export function _renderProgramaContent(resetScroll=false){
   const cntEl=document.getElementById('cnt');
   if(!grid||!lista) return;
   renderNoticesBanner();
+  // ── El palmarés vive en PROGRAMA, encima de la cartelera ────────────────
+  // Acá y no en Mi Plan: Mi Plan es TUYO —lo que planeaste, lo que viste— y el
+  // palmarés es del FESTIVAL. Juan pidió que lo viera cualquiera que abra el
+  // festival, haya usado o no la app, y a Mi Plan solo entra quien tiene algo
+  // suyo adentro. En PROGRAMA cae todo el mundo.
+  // Solo con el festival terminado: mientras corre, la cartelera es la noticia.
+  // Solo en TODO: un día concreto es una pregunta de horarios, no de premios.
+  const _palm=document.getElementById('palmares-slot');
+  if(_palm){
+    const _hay=festivalEnded()&&activeDay==='all'&&palmaresDe(state.get('_activeFestId'));
+    _palm.innerHTML=_hay?renderPalmaresBandHTML(state.get('_activeFestId')):'';
+  }
   if(activeDay==='all'){
     requestAnimationFrame(()=>{
       const _pg2=grid.querySelector('.poster-grid');
@@ -534,6 +546,123 @@ return`<div class="poster-card js-open-pel${f._cancelled?' is-cancelled':''}${in
     if(_cStepper) _cStepper.style.display='none';// always hidden in day/hora view
   }
 }
+
+
+// ── PALMARÉS ────────────────────────────────────────────────────────────────
+// Superficie del FESTIVAL, no del usuario (decisión de Juan, 23 ago 2026): la ve
+// cualquiera que abra el festival terminado, haya usado o no la app. Lo personal
+// —cuántas ganadoras viste, tu calificación sobre el afiche— se SUMA encima
+// cuando hay diario, y su ausencia no deja hueco.
+//
+// Todo lleva afiche, menciones incluidas. Una premiada que no está en el
+// catálogo NO se dibuja como una casilla vacía: nace con su afiche propio
+// (Forma A, POSTERS.md §6.0), que es la respuesta que la app ya da a cualquier
+// obra sin póster. Así el palmarés no hereda los huecos del catálogo.
+export function palmaresDe(festId){
+  const rows=PALMARES.filter(p=>p.fest===festId);
+  if(!rows.length) return null;
+  const cats=[];
+  rows.forEach(r=>{
+    let c=cats.find(x=>x.categoria===r.categoria);
+    if(!c){ c={categoria:r.categoria, ganadoras:[], menciones:[]}; cats.push(c); }
+    (r.nivel==='ganadora'?c.ganadoras:c.menciones).push(r);
+  });
+  return cats;
+}
+
+function _palmPoster(entry, accent, tira){
+  const {FILMS, watched, filmRatings}=state.snapshot();
+  const f=entry.obra?FILMS.find(x=>x.title===entry.obra):null;
+  // Prioridad: afiche de la obra en el catálogo → afiche propio de la entrada del
+  // palmarés (una premiada que no tenemos pero cuyo póster oficial sí existe) →
+  // Forma A. La Forma A es el último recurso, no el primero.
+  const src=(f?getFilmPoster(f):null)||entry.poster||null;
+  // Sin obra en el catálogo → afiche propio. El rótulo dice QUÉ es, no de qué
+  // sección: «PROYECTO» para lo de ImpulsoLab, la categoría para una obra.
+  const inner=src
+    ? `<img class="img-cover" src="${src}" loading="lazy" onerror="_posterErr(this)" alt="">`
+    // SIN rótulo de sección. A 76px —y peor a 52— el rótulo de la Forma A no
+    // informa: ocupa media tarjeta y compite con el título. Acá además sería
+    // redundante, porque la categoría ya está escrita ARRIBA de la fila, a dos
+    // centímetros. Queda el filete de color y la luz: el afiche se lee como
+    // pieza nuestra sin gritar de qué sección es.
+    : `<img class="img-cover" src="${_buildPosterV16({accent, headerLabel:'', title:entry.titulo, num:null, dato:''})}" alt="">`;
+  const vista=entry.obra&&watched.has(entry.obra);
+  const r=vista?(filmRatings[entry.obra]||0):0;
+  const estrellas=r?`<div class="palm-seen">${'★'.repeat(Math.floor(r))}${r%1>=0.5?'½':''}</div>`:'';
+  // La marca «afiche nuestro» se retiró: nació cuando TODA premiada sin ficha
+  // caía en Forma A y había varias. Hoy queda UNA —«Eliza», un proyecto de
+  // ImpulsoLab que no tiene afiche en ninguna parte— y no hay original con el
+  // que confundirla. La marca protegía de una confusión que ya no existe, y a
+  // cambio tapaba el afiche.
+  const propio='';
+  // La marca va SOLO en la ganadora: lo que no la lleva es mención. Un signo en
+  // vez de dieciséis rótulos —ocho «Ganadora» y ocho «Menciones»—, que era lo
+  // que Juan llamó repetitivo. Anclada con --poster-badge-top, el token que
+  // salió del bug del badge de cancelada: arriba chocaría con el rótulo de la
+  // Forma A, y ese error ya lo cometí hoy dos veces.
+  // Sin medalla sobre el afiche (Juan, 23 ago 2026): tapaba el dibujo —caía sobre
+  // una cara en «El verano de Jahia» y sobre el título en «Hija del volcán»— y
+  // marcaba lo que ya era obvio. Lo ambiguo no era cuál gana, sino qué son las
+  // pequeñas de la derecha; eso lo dice ahora el divisor.
+  const laurel='';
+  return `<div class="palm-po">${inner}${laurel}${estrellas}${propio}</div>`;
+}
+
+export function renderPalmaresBandHTML(festId){
+  // REPLEGADO, como el Diario (Juan, 23 ago 2026): la primera versión desplegaba
+  // el palmarés entero encima de la cartelera y había que navegar media pantalla
+  // para llegar al programa. La banda + la tira ocupan ~110px y cuentan lo mismo:
+  // que hay palmarés, cuántas ganadoras, y con qué cara. El detalle vive en su
+  // sheet, que es el patrón que la app ya enseñó con el Diario.
+  const cats=palmaresDe(festId);
+  if(!cats) return '';
+  const gan=cats.flatMap(c=>c.ganadoras);
+  const MAX=6;
+  const tira=gan.slice(0,MAX).map((g,i)=>{
+    const acc=_sectionColor(g.categoria);
+    return `<div class="palm-strip-p" style="${i?'margin-left:-20px;':''}z-index:${MAX-i}">${_palmPoster(g,acc,true)}</div>`;
+  }).join('');
+  const resto=gan.length>MAX?`<span class="dw-strip-mas">+${gan.length-MAX}</span>`:'';
+  return `<div class="palm-wrap">
+    <div class="sec-hdr palm-band" data-action="openPalmares">${ICONS.award} <span>${t('palm_eyebrow')}</span> <span class="count-badge cb-neutral">${gan.length}</span><span class="hdr-end">${ICONS.chevronR}</span></div>
+    <div class="palm-strip" data-action="openPalmares">${tira}${resto}</div>
+  </div>`;
+}
+
+export function renderPalmaresHTML(festId){
+  const cats=palmaresDe(festId);
+  if(!cats) return '';
+  const {watched}=state.snapshot();
+  const gan=cats.flatMap(c=>c.ganadoras);
+  const vistas=gan.filter(g=>g.obra&&watched.has(g.obra)).length;
+  const cruce=vistas
+    ? `<div class="palm-cruce dato-linea">${t('palm_viste').replace('{n}',`<b>${vistas}</b>`).replace('{tot}',`<b>${gan.length}</b>`)}</div>`
+    : '';
+  // UNA fila por categoría: la ganadora grande a la izquierda, las menciones
+  // pequeñas a la derecha. El chip «Ganadora» y el rótulo «Menciones de honor»
+  // se retiraron (Juan, 23 ago 2026): repetían dieciséis veces —ocho y ocho— una
+  // estructura que es siempre la misma, y el tamaño ya la dice. Se explica UNA
+  // vez en la cabecera del sheet. De paso la altura por categoría cae a la mitad,
+  // que era la otra queja: demasiado scroll.
+  const secs=cats.map(c=>{
+    const acc=_sectionColor(c.categoria);
+    const g=c.ganadoras.map(x=>`
+      <div class="palm-g${x.obra?' js-open-pel':''}"${x.obra?` data-title="${escXML(x.obra)}"`:''}>
+        ${_palmPoster(x,acc)}
+        <div class="palm-wtx"><div class="palm-wt">${escXML(x.titulo)}</div>
+          <div class="palm-wm dato-linea">${escXML(x.autoria||'')}</div></div>
+      </div>`).join('');
+    const m=c.menciones.map(x=>`
+      <div class="palm-m${x.obra?' js-open-pel':''}"${x.obra?` data-title="${escXML(x.obra)}"`:''}
+        title="${escXML(x.titulo)}">${_palmPoster(x,acc,true)}</div>`).join('');
+    return `<section class="palm-sec">
+      <div class="palm-cat" style="--c:${acc}"><span></span>${escXML(c.categoria)}</div>
+      ${g}${c.menciones.length?`<div class="palm-row palm-mrow2"><span class="splash-rail-div palm-div-v" aria-hidden="true"><span class="srd-bar"></span><span class="srd-lbl">${t('palm_mencion_corto')}</span><span class="srd-bar"></span></span><div class="palm-ms">${m}</div></div>`:''}</section>`;
+  }).join('');
+  return cruce+secs;
+}
+
 
 export function renderSbar(){
   // Reclasificada Group II durante 6c: no usa innerHTML para contenido —

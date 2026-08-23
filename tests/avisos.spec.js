@@ -68,7 +68,7 @@ test('AV02 — el aviso con fecha toca UNA función, no todas las del título', 
   const title = await page.evaluate(() =>
     (FILMS.filter(f => !f.info).map(f => f.title)
       .find((t, i, a) => a.indexOf(t) !== i)) || null);
-  if (!title) { console.log('AV02: sin título con dos funciones, skip'); return; }
+  if (!title) { test.skip(true, 'AV02: sin título con dos funciones, skip'); return; }
   const day = await page.evaluate(t => FILMS.find(f => f.title === t).day, title);
   await applyNotices(page, [{ title, type: 'cancelled', date: day }]);
   const r = await page.evaluate(t => {

@@ -1,0 +1,36 @@
+{
+ "_etapa": "B-ensamblada (staged, sin publicar). 64 funciones completas. Publicar en la ventana 20 AGO – 13 SEP, después de FINCA y FICDEH.",
+ "_festival": "Quibdó África Film Festival 2026 · 14–20 SEP · Quibdó (Chocó) · 55 obras en 64 funciones, 3 sedes, 9 secciones",
+ "_fuente": {
+  "que": "Boom Calendar «Program QAFF2026» (published=1), el widget del sitio en https://www.quibdoafricafilmfestival.com/program-2026",
+  "endpoint": "https://calendar.apiboomtech.com/api/published_calendar?comp_id=comp-ms99pkc3&instance=<TOKEN>",
+  "COMO_VOLVER_A_CONSULTARLA": [
+   "El endpoint EXIGE un `instance` firmado por Wix que CADUCA — no basta con comp_id, y sin él la API responde 200 con «Something went wrong», no un error HTTP. Guardar el token no sirve: hay que sacar uno nuevo cada vez.",
+   "1 · abrir https://www.quibdoafricafilmfestival.com/program-2026 en un navegador real (el widget es un iframe y curl no lo ejecuta).",
+   "2 · leer el src del iframe de calendar.boomte.ch/widget y copiar el parámetro `instance` (el payload lleva un signDate: así se ve si está fresco).",
+   "3 · llamar al endpoint con ese instance más los headers `PLATFORM: WIX` y un User-Agent de navegador.",
+   "La respuesta trae 160 eventos: 95 son de 2025-09 (edición pasada) y 65 de 2026-09. FILTRAR SIEMPRE por 2026-09."
+  ],
+  "registro": "registration y tickets vienen null en los 65 eventos, y sigue igual el 9 ago. El RSVP no está por evento: vive en addons.registration a nivel de CALENDARIO. El ticket_url de las 64 funciones se construyó en el montaje."
+ },
+ "_revision_9_ago_2026": {
+  "resultado": "SIN CAMBIOS. Los 65 eventos de 2026-09 son exactamente los mismos que el 2 de agosto: 0 nuevos, 0 retirados, y CERO diferencias campo por campo (end, desc, venue, image, registration, tickets, categories, color, limited_guests, all_day, organizer).",
+  "catalogo": "La página /catalog («CATALOG QAFF 2026 OFFICIAL SELECTION») es solo una galería de imágenes. Sus dos PDF NO sirven: uno es el catálogo de 2019 y el otro los términos y condiciones. No hay catálogo 2026 descargable.",
+  "otras_paginas": "El menú tiene /selection-2026, /catalog, /program-2026, /copie-de-directors, /official-jury-2026, /competition, /african-panorama, /colombianpanorama.",
+  "obras_sin_funcion": "Dos obras de la Selección Oficial NO tienen función en el calendario y NO aparecen en ningún evento, ni en título ni en descripción: «Orango» (Samuel Kay Forrest, Guinea-Bisáu, 94 min) y «Hyphen» (Reine Razzouk, Líbano, 98 min), ambas Largometraje Documental y ambas sin sinopsis ni póster. PREGUNTAR al festival si quedaron fuera de programación o si falta cargarlas. Sus fichas de Etapa A se recuperaron del commit 5863d69: el ensamblador las había consumido al sobreescribir su propia entrada.",
+  "falsas_alarmas_descartadas": [
+   "«The Banjo Boys» (15 SEP) y «Three Black Men» (16 SEP) salen dos veces el mismo día: son Quibdó y Bogotá en paralelo, correcto.",
+   "«GOD'S WORK (Copy)» en el calendario no es un duplicado accidental: es su segunda función, en la Cinemateca de Bogotá el 15 SEP.",
+   "Los 64 eventos de la ventana produjeron 64 funciones; los 12 títulos que parecían huérfanos estaban mapeados por ALIAS_EV."
+  ]
+ },
+ "_pendientes": [
+  "PREGUNTAR al festival por «Orango» y «Hyphen» (ver arriba).",
+  "PUBLICAR en la ventana 20 AGO – 13 SEP, después de FINCA y FICDEH. Falta el script de publicar y la entrada en FESTIVAL_CONFIG.",
+  "VERIFICACIÓN HUMANA del catálogo film por film (el gate de tools/audit.html).",
+  "synopsis_en: 15 de 64. No la publica el festival; el catálogo 2026 no existe como PDF. O se pide, o se queda vacía — NUNCA traducida (incidente Tribeca).",
+  "lbSlug: 35 de 64. Es enriquecimiento nuestro, no depende del festival.",
+  "PÓSTERS: 61 de 64. Faltan 3.",
+  "REVISIÓN PERIÓDICA: re-consultar la API con un instance nuevo (ver arriba) y diffear contra qaff-2026-programacion-raw.json. Vigilar sobre todo que registration deje de ser null: sería señal de que abrieron inscripciones por evento."
+ ]
+}

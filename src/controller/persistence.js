@@ -11,7 +11,7 @@ import { _festDate } from '../domain/time.js';
 import { syncScheduleWithCatalog, verifyPlan } from '../domain/schedule.js';
 import { report } from '../telemetry.js';
 import { FESTIVAL_STATE, deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge } from '../state/festival-context.js';
-import { closeAuthSheet } from '../view/sheets.js';
+import { closeAuthSheet, _esRevisionActiva } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
@@ -108,6 +108,11 @@ export function _cloudSave(field){
   // CRÍTICO para el re-push: _dirtyFields vive en memoria y tras un reload está vacío;
   // sin esto, el merge tomaba el remoto para todo, subía la fila sin cambios y LIMPIABA
   // el flag dirty → ediciones offline perdidas en silencio (regresión cazada en auditoría).
+  // RESTRICCIÓN 1 — un festival en revisión no sube nada a la nube. Su
+  // programación es provisional: si el plan de un revisor se sincronizara, se
+  // mezclaría con el suyo real y sobreviviría a la revisión. Queda en local, y
+  // desaparece cuando el permiso caduca.
+  if(_esRevisionActiva()) return;
   if(field) _dirtyFields.add(field);
   else FESTIVAL_STATE.forEach(e=>{ if(e.cloud) _dirtyFields.add(e.key); });
   if(!_sb||!_sbUser||_sbUser.is_anonymous) return; // anon = solo identidad de reportes, no sync de plan

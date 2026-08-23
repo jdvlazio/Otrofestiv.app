@@ -43,6 +43,60 @@ Orden canónico para montar un festival. Cada paso mapea a una fase de abajo.
 
 ## Fases en orden obligatorio
 
+### Fase 0 · El `robots.txt` va PRIMERO — retro TIFF 2026 (13 ago 2026)
+
+**Antes de escribir una línea de extractor, leer el `robots.txt` de la fuente.**
+No al final, no cuando algo falla: antes de la primera petición.
+
+Salió de TIFF y costó 262 páginas ya descargadas. Al ir a leer *tiffr* —un
+planificador de terceros— apareció esto, y lo mismo en Letterboxd:
+
+```
+User-agent: ClaudeBot
+Disallow: /
+Content-Signal: ai-train=no, use=reference
+```
+
+Las tres fuentes de aquel onboarding resultaron ser tres casos distintos, y la
+diferencia importa:
+
+| Fuente | Qué dice | Qué hacemos |
+|---|---|---|
+| **tiff.net** | no publica `robots.txt` (404) | sin restricción declarada → es la fuente |
+| **Letterboxd** | prohíbe ClaudeBot | decisión de Juan caso por caso; en TIFF quedó el uso mínimo del `lbSlug`, que además les devuelve tráfico |
+| **tiffr** | prohíbe ClaudeBot, y es un producto PAR | no se toca. Y no hacía falta: sus 244 obras eran las mismas 244 de TIFF |
+
+**Dos reglas que se llevan de aquí:**
+
+- **La web del propio festival es la fuente legítima por defecto.** Un tercero
+  que refleja al festival no aporta dato nuevo — se comprobó contando: tiffr y
+  tiff.net daban el mismo número exacto de obras.
+- **Un `robots.txt` que no existe (404) no es lo mismo que uno que calla sobre
+  nosotros, y ninguno de los dos es lo mismo que uno que nos nombra y nos
+  prohíbe.** Solo el tercero es un no.
+
+### Fase 0·bis · Qué obras PUEDEN tener `lbSlug` — retro TIFF (17 ago 2026)
+
+Una cobertura de Letterboxd que parece un hueco y no lo es. TIFF tenía «62
+funciones sin `lbSlug`», y al desglosarlas quedó así:
+
+| | | |
+|---|---|---|
+| programas de cortos | 20 funciones | **Letterboxd no tiene página de programa.** Sus cortos sí, uno por uno, y ahí es donde va el slug |
+| charlas y conversatorios | 5 | no son obras |
+| **series de TV** (Primetime) | 22 | **Letterboxd es SOLO cine.** Una serie no existe ahí, y buscarla es perder la noche |
+| obras que sí podrían tenerlo | 15 | estrenos 2026 aún sin ficha en TMDB |
+
+**El hueco real eran 5 títulos, no 62.** Antes de salir a buscar slugs, hay que
+restar lo que por definición no puede tenerlos: si el festival programa series,
+el 100% de cobertura es imposible y perseguirlo es trabajo inventado.
+
+**Y el `lbSlug` se saca por el atajo `letterboxd.com/tmdb/<id>`**, que necesita
+`tmdb_id`: sin ficha en TMDB no hay slug, y la ruta entonces es darla de alta
+(Fase 3b), no rastrear Letterboxd — que además nos prohíbe por `robots.txt`
+(Fase 0). Para estrenos del año en curso suele bastar con repetir el pase de
+TMDB unas semanas antes del festival: las fichas aparecen solas.
+
 ### Fase 1 · Extracción `[Data Engineer]`
 
 **Objetivo:** JSON del festival con todos los campos poblados desde el origen.
@@ -393,6 +447,41 @@ datos sin estar declarado** (así el contrato no envejece callando, que es como
 envejeció la doc), y que **ninguna excepción con fecha se venza sin que nadie
 mire**.
 
+**Y uno para los tests: `[reload-sin-reloj]`.** Dos de las tres bombas del 20 de
+agosto eran tests que hacían `page.reload()`. La recarga borra `_simTime` —vive
+en memoria—, así que la app vuelve a la fecha real y el test queda a merced del
+día en que corra. El síntoma engaña: T65 parecía un fallo del marcado «Ya pasó»
+y lo que estaba roto era su premisa.
+
+Después de recargar hay tres formas correctas: `reentrar()` (helpers, re-elige y
+re-congela), `page.clock.install()` (congela el reloj del navegador y sobrevive),
+o derivar el festival del dato en tiempo de ejecución en vez de clavarlo.
+
+El check mira **dos cosas juntas**: recarga *y* premisa clavada. Recargar no es el
+problema; recargar con `enterFestival(page, 'ficdeh2026')` escrito a mano, sí. Si
+solo mirara el reload obligaría a reescribir tests que ya son correctos — y un
+guardián que crea trabajo inútil se termina ignorando.
+
+**Decimotercero, el único ÁMBAR del repo: `[contrato-por-vencer]`.** El 20 de
+agosto de 2026 `main` amaneció rojo sin que nadie tocara nada: la excepción de
+`venue@finca-2026` vencía ese día. No hubo aviso porque **no existía la franja
+intermedia** — todo era verde o rojo, así que lo que caducaba no avisaba: explotaba.
+
+Lo irónico: el preaviso ya estaba escrito. `_exentoDe()` devolvía
+`{ exento:true, aviso }` mientras la excepción seguía viva… y **nadie leía ese
+`aviso`**. Ahora se lee: a 14 días o menos, `validate.py` y `validate-festivals.js`
+avisan **sin bloquear**; el día D siguen siendo error.
+
+- **La fecha se calcula en la zona del proyecto (UTC-5), no en UTC.** Con
+  `toISOString()` crudo, entre las 7pm y medianoche de Colombia «hoy» ya era
+  mañana: la excepción vencía cinco horas antes y la máquina local discrepaba de
+  CI. Es la regla que `CLAUDE.md` fija para toda lógica de fechas.
+- **La ventana avisa, no perdona.** Si la fecha llega, es error igual.
+
+Lección de la fecha que estalló: `migrar_el` era el **20 de agosto** y FINCA
+cerraba el **19**. Nunca hubo ventana que perder — al fijar la fecha de una
+excepción, dejar margen real después del cierre del festival.
+
 **Y las excepciones llevan fecha.** Los archivados quedan congelados —reescribir
 su historia es riesgo sin beneficio— pero un festival VIGENTE que aún no cumple
 entra en `_pendientes` con el día en que deja de perdonársele. Una excepción sin
@@ -400,6 +489,24 @@ fecha se vuelve permanente sola; ésta se vence sola. La primera fue FINCA: sus
 30 sedes sin ciudad esperan al 20 AGO porque el festival cierra el 19 y renombrar
 una sede toca `_slotKey`, que es la ancla de los planes YA GUARDADOS de usuarios
 reales.
+
+**Decimoséptimo: `[config-esm]` — `node --check` da un verde falso.**
+`src/config.js` es un **módulo ES**, y `node --check` lo analiza como *script*.
+Un archivo donde la entrada de un festival se quedó sin cerrar pasa ese chequeo
+y revienta en el navegador. Pasó el 20 ago 2026 al resolver un merge en el que
+las dos ramas agregaban su festival en el mismo punto del archivo: la entrada de
+Cinemancia perdió su `},`, CineAutopsia quedó **anidado dentro de ella**, y la
+app no arrancaba — splash vacío y `Uncaught SyntaxError` en consola.
+
+Nada lo vio. `validate.py` parsea el config con expresiones regulares y nunca lo
+ejecuta; `node --check` lo lee con la gramática equivocada; los unit tests no lo
+tocan; y Playwright habría fallado, pero esa rama no lo corría. El error viajó
+dentro de un commit que decía «108/117 checks passed».
+
+Regla: **el guardián IMPORTA el config de verdad** —`import()` sobre el archivo—
+y comprueba dos cosas que solo se ven al cargarlo: que no haya un festival
+anidado dentro de otro, y que el número de festivales no se desplome. Es la
+única forma de saber que el archivo que carga el navegador es el que creemos.
 
 **Decimosexto: `[poster-mirado]` — alguien tiene que ABRIR el archivo.**
 
@@ -515,9 +622,19 @@ buenos, y ahí se cayó uno: `[sidecar-vacio]` usaba
 `_listas.get(a) or _listas.get(b)`, y **una lista vacía es falsa en Python**,
 así que el guardián de las listas vacías se dejaba vencer justo por una lista
 vacía. Se pregunta por PRESENCIA, no por verdad.
+
 ### Fase 2 · Configuración en FESTIVAL_CONFIG `[Senior Dev + PM]`
 
 **Objetivo:** El festival existe en la app con su configuración completa.
+
+> **La Fase 2 no se difiere — retro QAFF (23 ago 2026).** QAFF se montó el 2 ago
+> con datos al 100% y pasó tres semanas de fases posteriores SIN entrada en
+> `FESTIVAL_CONFIG`. Consecuencia: los guardianes de festival vigente no lo
+> veían, y el día de publicar destaparon 4 errores de golpe (banderas, keyArt,
+> paridad de nombre) más 96 commits de guardianes nuevos que nunca habían
+> corrido contra él. La entrada en config no publica nada —la rama no llega a
+> producción hasta el merge—: lo único que hace es poner el festival bajo
+> vigilancia desde el día 1, para comerse los errores de a uno y no en bloque.
 
 1. Crear entrada en `FESTIVAL_CONFIG` dentro de **`src/config.js`** (post-Fase 8; el bloque salió de `index.html`). `generate-config.js` genera el bloque listo para pegar:
    ```js
@@ -955,6 +1072,13 @@ node scripts/validate-festivals.js [festival-id]
 ---
 
 ## Reglas inmutables
+
+- **La rama de un festival trae `main` cada semana.** El coste de la fusión es
+  lineal si es semanal y cuadrático si se acumula: QAFF cruzó 132 commits de
+  una vez (23 ago) y absorbió 96 cambios de guardianes el día que quería
+  publicar; TIFF publicó desde una rama cuyo `validate.py` viejo daba verde
+  sobre un `config.js` roto. Una rama congelada no está «estable»: está
+  acumulando deuda de guardianes que va a pagar entera el día del merge.
 
 | Regla | Detalle |
 |-------|---------|

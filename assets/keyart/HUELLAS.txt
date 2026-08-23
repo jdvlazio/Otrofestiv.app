@@ -4,16 +4,15 @@
 # los deploys, así que un keyArt es WRITE-ONCE: sobreescribirlo in-place deja a
 # los usuarios recurrentes viendo el afiche viejo PARA SIEMPRE, sin arreglo desde
 # la app (reinstalar tampoco basta: el caché del WebView persiste).
-#
 # Pasó con FICDEH 2026: el afiche se sobreescribió 4 veces con el mismo nombre y
 # el aliado de comunicaciones en Medellín seguía viendo el anterior a 4 días de
 # que abriera el festival.
-#
 # Para cambiar un afiche: `python3 scripts/compose-keyart.py <archivo>` escribe a
 # -v2/-v3, se actualiza el path en src/config.js y se regenera este archivo con
 # `python3 scripts/keyart-huellas.py`.
 4bafa09b72c8f149  aff2026-v2.jpg
 10b613ec41a6ce49  aff2026.jpg
+919f750cc394293a  cinemancia2026.jpg
 185489bee888135d  cineautopsia2026-v2.jpg
 83d8a5474330f041  cineautopsia2026.jpg
 b406583ad3ae1646  fantasofest2026.jpg
@@ -28,8 +27,12 @@ e06e3f43f4786ccb  finca2026.jpg
 a1f6bbce6ea878d1  olhar2026-v2.jpg
 87d3cd3a4f28ac12  olhar2026.jpg
 27b0b1565e67a11f  siembrafest2026.jpg
+f265570c7b4e2977  qaff2026-v2.jpg
+eea132b324947ebf  qaff2026.jpg
 dc6f4d95daf7fedb  tercertiempo2026-v2.jpg
 be06ee5dba1a012f  tercertiempo2026.jpg
+2d20ba7fabff6754  tiff2026-v2.jpg
+d562e62688eaf02d  tiff2026.jpg
 c201bdbda9fd672f  tribeca2026.jpg
 5fbb0260c7520f36  vartex2026-v2.jpg
 e9326d037c5b76a0  vartex2026-v3.jpg

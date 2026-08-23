@@ -47,8 +47,30 @@ jobs:
           echo "Archivos cambiados:"; echo "$CHANGED"; echo "---"
 
           # Código: la app. src/config.js NO cuenta — es donde se registra un festival.
-          COD=$(printf '%s\n' "$CHANGED" | grep -E '^(src/|index\.html$|sw\.js$|validate\.py$|tests/|scripts/)' \
+          CAND=$(printf '%s\n' "$CHANGED" | grep -E '^(src/|index\.html$|sw\.js$|validate\.py$|tests/|scripts/)' \
                 | grep -vx 'src/config.js' || true)
+
+          # …ni cuenta el CHURN DEL BUMP DE VERSIÓN. `scripts/bump-version.js` reescribe
+          # la cadena de build en index.html, sw.js y src/main.js, y publicar EXIGE el
+          # bump — así que sin este filtro el guardián se disparaba en TODO PR de
+          # festival y pedía la etiqueta cada vez. Medido en el PR #703: los tres
+          # archivos tenían CERO líneas cambiadas que no fueran la versión.
+          # Los patrones son los cinco que escribe el script, con sus 12 dígitos; un
+          # archivo solo se descarta si TODAS sus líneas cambiadas son de esa forma,
+          # así que un cambio real en el mismo archivo sigue contando.
+          BUMP='(otrofestiv-v[0-9]{12}|BUILD = .[0-9]{12}.|BUILD_VERSION=.[0-9]{12}.|main\.js\?v=[0-9]{12}|favicon(-192)?\.png\?v=[0-9]{12})'
+          COD=''
+          for f in $CAND; do
+            REAL=$(git diff "$BASE_SHA...$HEAD_SHA" -- "$f" \
+                   | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' \
+                   | grep -vE "$BUMP" || true)
+            if [ -n "$REAL" ]; then
+              COD="$COD$f"$'\n'
+            else
+              echo "· $f: solo bump de versión, no cuenta como código"
+            fi
+          done
+          COD=$(printf '%s' "$COD" | sed '/^$/d')
           # Datos: el material de un festival.
           DAT=$(printf '%s\n' "$CHANGED" | grep -E '^(festivals/|assets/)' || true)
 
