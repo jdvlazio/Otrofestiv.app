@@ -37,6 +37,9 @@ DESCARTAR:
 """
 import json, os, sys, collections
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import lib
+
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = f'{REPO}/festivals/staging/qaff-2026.json'
 OUT = f'{REPO}/festivals/qaff-2026.json'
@@ -62,8 +65,37 @@ def main():
            if k not in ('films', 'venues', 'sections') and not k.startswith('_')}
     out['_provenance'] = d.get('_provenance', {})
     out['sections'] = {k: limpio(v) for k, v in d['sections'].items()}
-    out['venues'] = {k: limpio(v) for k, v in d['venues'].items()}
+    # `short` es el nombre que se PINTA; la clave lleva la ciudad pegada para
+    # desambiguar sedes homónimas entre ciudades. El ensamblador de QAFF copiaba
+    # la clave entera, así que la agenda leería «Biblioteca Departamental -
+    # Quibdó» donde debe decir «Biblioteca Departamental». Misma regla que el
+    # ensamblador genérico (ensamblar.py:251) y que ya siguen FICDEH y FINCA.
+    out['venues'] = {}
+    for k, v in d['venues'].items():
+        v = limpio(v)
+        if v.get('short') == k and ' - ' in k:
+            v['short'] = k.rsplit(' - ', 1)[0]
+        out['venues'][k] = v
     out['films'] = [poda_src(limpio(f)) for f in d['films']]
+
+    # El contrato, aplicado en el ÚLTIMO paso: lib.normaliza es el dueño del
+    # tipo de cada campo. QAFF emitía `year` como string en las 61 funciones,
+    # igual que FICDEH y FICMA antes que él, y por el mismo motivo: la app hace
+    # String(f.year) y nunca se quejó.
+    # `flags` es DERIVADO: no existe en ninguna fuente, se calcula del país.
+    # Las 55 banderas se arreglaron el 23 ago a mano SOBRE el publicado, porque
+    # este ensamblador —a diferencia del genérico, que lo hace en ensamblar.py:138—
+    # nunca las derivó. Re-correr el publicador las borraba en silencio. Derivarlas
+    # aquí hace que la corrida sea idempotente y reproduzca lo ya commiteado.
+    rep = collections.Counter()
+    for f in out['films']:
+        for o in [f] + list(f.get('film_list') or []):
+            if not o.get('flags'):
+                b = lib.banderas(o.get('country') or '')
+                if b:
+                    o['flags'] = b
+                    rep['flags←country'] += 1
+            lib.normaliza(o, rep)
 
     json.dump(out, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False,
               separators=(',', ':'))
@@ -73,6 +105,7 @@ def main():
     print(f'{OUT.split("/")[-1]}  {os.path.getsize(OUT)//1024} KB')
     print(f'   films {len(out["films"])} · sedes {len(out["venues"])} · secciones {len(out["sections"])}')
     print(f'   claves privadas conservadas: {dict(priv)}')
+    print(f'   contrato aplicado: {dict(rep) or "nada que coaccionar"}')
     print(f'   films sin _src: {len(sin_src)}' + (f'  ⚠️ {sin_src[:4]}' if sin_src else ' ✅'))
     ciudades = sorted({v['city'] for v in out['venues'].values()})
     print(f'   ciudades: {", ".join(ciudades)}')

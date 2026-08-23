@@ -283,7 +283,7 @@ final={
    'verificacion':'Cruce título-normalizado eventos↔obras; sección dueña = 1ª categoría del evento (decisión Juan 2 ago); sin prelanzamiento 5 sep (decisión Juan); doble ciudad con city en venues (decisión Juan)',
    'decisiones_pendientes':'emojis/EN de secciones; 19-20 sep incluidos (funciones de cierre reales); geocoding; verificar URL de Registrarse por evento',
  },
- 'name':'QAFF 2026','shortName':'QAFF','city':'Quibdó y Bogotá','country':'CO',
+ 'name':'QAFF','shortName':'QAFF','city':'Quibdó y Bogotá','country':'CO',
  'dates':'14–20 SEP','dates_en':'SEP 14–20','year':2026,'timezoneOffset':'-05:00',
  'storageKey':'qaff2026_',
  'festivalStartStr':'2026-09-14T00:00:00','festivalEndStr':'2026-09-20T23:59:00',
