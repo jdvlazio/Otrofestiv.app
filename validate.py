@@ -3914,10 +3914,6 @@ try:
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
         # guardián pide. Baja cuando se migre algo fuera de helpers.
         'src/view/helpers.js': 877,  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
-        # config.js es DATA: una entrada por festival, y crece con cada onboarding.
-        # No se puede «partir» sin inventar un índice que se desincronice del
-        # contenido, que es peor. Entra a la lista con la razón escrita.
-        'src/config.js': 926,  # +1: el afiche oficial de «Los bibliotecarios» — 23 ago  # +78: PALMARES de FICDEH 2026 (19 entradas + el porqué de tres correcciones sobre la fuente) — 23 ago  # +40: TIFF 2026 (entrada + 13 arquetipos de sección) — 23 ago
         'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
         'src/main.js': 1706,  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
         'src/i18n/i18n.js': 1640,  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
@@ -3927,9 +3923,27 @@ try:
         # correcciones sobre la fuente, que valen más escritas que ahorradas.
         'src/controller/handlers.js': 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
+    # src/config.js NO tiene techo (Juan, 23 ago 2026). Es DATA de festival
+    # —FESTIVAL_CONFIG, VENUES, NOTICES, PALMARES— y crece con cada onboarding,
+    # por construcción y para siempre. Un techo sobre un archivo que legítimamente
+    # crece sin fin es un techo que se sube sin fin: en un solo día subió cuatro
+    # veces (747→807→885→925→926).
+    #
+    # Y cada subida tenía un costo oculto: el techo vive en validate.py, que SÍ es
+    # código de app, así que todo PR de DATOS que agregara una línea a config.js
+    # arrastraba un cambio de código y [frontera] lo marcaba como mixto. Le pasó
+    # al PR del afiche de «Los bibliotecarios» y le iba a pasar a cada onboarding.
+    # La medida no protegía nada y ensuciaba la frontera; se retira.
+    #
+    # Lo que sí lo vigila y sigue en pie: [frontera] (que no mezcle), los
+    # validadores de festival, y que su contenido sea declarativo — este chequeo
+    # medía LÍNEAS, que en un archivo de datos no dice nada sobre su salud.
+    _SIN_TECHO = {'src/config.js'}
     _over = []
     for _f in _glob.glob('src/**/*.js', recursive=True):
         _f = _f.replace('\\', '/')
+        if _f in _SIN_TECHO:
+            continue
         _n = sum(1 for _ in open(_f, encoding='utf-8'))
         _ceil = _ALLOW.get(_f, _CAP)
         if _n > _ceil:
