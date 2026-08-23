@@ -598,6 +598,26 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'qaff2026':{
+    // OCULTO (Juan, 23 ago 2026). El festival trasladó LA TOTALIDAD de las
+    // proyecciones a Bogotá por el terremoto del 10 ago que golpeó Quibdó y el
+    // Chocó — el MISMO sismo que aplazó FICMA. Comunicado en su Instagram el 20
+    // ago: instagram.com/p/DcREogQER9d
+    //
+    // Lo publicado esta misma mañana dice justo lo contrario: 47 funciones en la
+    // Biblioteca Departamental de QUIBDÓ, una ciudad donde ya no se proyecta
+    // nada. Por eso se oculta en vez de corregirse: no tenemos programación
+    // válida —la de Bogotá no está publicada—, y un festival con sedes falsas es
+    // peor que un festival ausente.
+    //
+    // NO es `status:postponed` como FICMA: el festival SÍ se hace, en sus fechas
+    // (14–18 SEP, confirmadas en su bio de IG). Cambia la ciudad, que es el
+    // nivel 2 del modelo de situaciones excepcionales.
+    //
+    // REVERSIÓN: cuando publiquen las sedes de Bogotá → re-ensamblar desde el
+    // crudo (festivals/staging/qaff-2026-programacion-raw.json, que conserva las
+    // 14 funciones de Cinemateca y Museo Nacional con sus sedes reales), quitar
+    // el filtro solo-Quibdó de pipeline/qaff-2026-build.py y borrar esta línea.
+    group:'test',
     name:'QAFF',fullName:'QAFF — Quibdó África Film Festival',shortName:'QAFF',
     city:'Quibdó',country:'CO',
     dates:'14–18 SEP',dates_en:'SEP 14–18',year:2026,timezoneOffset:'-05:00',
