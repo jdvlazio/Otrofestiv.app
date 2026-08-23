@@ -592,6 +592,15 @@ vacía. Se pregunta por PRESENCIA, no por verdad.
 
 **Objetivo:** El festival existe en la app con su configuración completa.
 
+> **La Fase 2 no se difiere — retro QAFF (23 ago 2026).** QAFF se montó el 2 ago
+> con datos al 100% y pasó tres semanas de fases posteriores SIN entrada en
+> `FESTIVAL_CONFIG`. Consecuencia: los guardianes de festival vigente no lo
+> veían, y el día de publicar destaparon 4 errores de golpe (banderas, keyArt,
+> paridad de nombre) más 96 commits de guardianes nuevos que nunca habían
+> corrido contra él. La entrada en config no publica nada —la rama no llega a
+> producción hasta el merge—: lo único que hace es poner el festival bajo
+> vigilancia desde el día 1, para comerse los errores de a uno y no en bloque.
+
 1. Crear entrada en `FESTIVAL_CONFIG` dentro de **`src/config.js`** (post-Fase 8; el bloque salió de `index.html`). `generate-config.js` genera el bloque listo para pegar:
    ```js
    'festival-id': {
@@ -1028,6 +1037,13 @@ node scripts/validate-festivals.js [festival-id]
 ---
 
 ## Reglas inmutables
+
+- **La rama de un festival trae `main` cada semana.** El coste de la fusión es
+  lineal si es semanal y cuadrático si se acumula: QAFF cruzó 132 commits de
+  una vez (23 ago) y absorbió 96 cambios de guardianes el día que quería
+  publicar; TIFF publicó desde una rama cuyo `validate.py` viejo daba verde
+  sobre un `config.js` roto. Una rama congelada no está «estable»: está
+  acumulando deuda de guardianes que va a pagar entera el día del merge.
 
 | Regla | Detalle |
 |-------|---------|
