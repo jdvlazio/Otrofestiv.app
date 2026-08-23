@@ -185,16 +185,28 @@ const DEFAULT_FNS = [
   '_resolveVenue', 'venueTravelMins', 'travelMins',
   'screensConflict', 'verifyPlan', '_cityOf', // helper local de schedule.js (kind 'ciudad')
   // Fase 2 — festival phase helpers
-  '_endedStats', '_classifyTodayScreenings', '_gapSuggestion', '_getFestivalPhase',
+  '_endedStats', 'effectiveWatched', '_classifyTodayScreenings', '_gapSuggestion', '_getFestivalPhase',
   // Fase 3 — temporal subsystem
   '_festDate', 'simNow', '_tzOffsetMin', '_festNow', '_festNowMin', 'simTodayStr', 'festivalEnded', 'screeningPassed', 'dayFullyPassed',
   // Fase 4 — schedule planning
-  'isScreeningBlocked', 'plannableScreens', '_djb2', '_titleSeed', '_mulberry32',
+  'isScreeningBlocked', 'screeningPlannable', 'plannableScreens', '_djb2', '_titleSeed', '_mulberry32',
   'shuffle', 'scoreFilm', 'sortScreensByStrategy', 'computeScenarios',
 ];
 
+// Constantes de config que el dominio lee como libres. Se LEEN de src/config.js,
+// no se copian: si acá viviera un 30 a mano y config cambiara a 25, los tests
+// seguirían verdes midiendo un número que la app ya no usa. Un test que afirma
+// una constante tiene que afirmar LA constante.
+function configConst(name, fallback) {
+  try {
+    const src = fs.readFileSync(path.join(ROOT, 'src', 'config.js'), 'utf8');
+    const m = src.match(new RegExp('export const ' + name + '\\s*=\\s*(\\d+)'));
+    return m ? Number(m[1]) : fallback;
+  } catch { return fallback; }
+}
+
 function loadDomain(opts = {}) {
-  const globals = opts.globals || {};
+  const globals = { FESTIVAL_QA_MIN: configConst('FESTIVAL_QA_MIN', 30), ...(opts.globals || {}) };
   const fns = opts.functions || DEFAULT_FNS;
   const objects = opts.objects || [];
   const source = readScripts();

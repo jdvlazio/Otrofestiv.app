@@ -192,19 +192,49 @@ SINOPSIS_PRIMERA_FUENTE = {
 }
 
 
-def sinacento(s):
+# [lib-unica] renombrada desde `sinacento` el 17 ago 2026.
+# Sube a MAYÚSCULAS además de quitar acentos; `lib.sinacento` respeta la caja.
+def mayus_sin_acento(s):
     return ''.join(c for c in unicodedata.normalize('NFD', (s or '').lower())
                    if unicodedata.category(c) != 'Mn').strip()
 
 
-def banderas(pais):
+# [lib-unica] renombrada desde `banderas` el 17 ago 2026.
+# Usa la tabla de países propia de FICMA, no la de lib.
+def banderas_ficma(pais):
     out = [BANDERAS[k] for p in re.split(r'[,/]| y ', pais or '')
-           if (k := sinacento(p)) in BANDERAS]
+           if (k := mayus_sin_acento(p)) in BANDERAS]
     return ''.join(dict.fromkeys(out))
 
 
-def slug(t):
+# [lib-unica] renombrada desde `slug` el 17 ago 2026.
+# CONSERVA los acentos («rebelión»); `lib.slug` los quita («rebelion»).
+def slug_con_acentos(t):
     return ''.join(c if c.isalnum() else '-' for c in t.lower()).strip('-')[:60]
+
+
+# ── nombres de la Franja Académica ───────────────────────────────────────────
+# El OCR del afiche deja dos cosas: nombres PEGADOS sin separador («Laura
+# Buriticá Angélica Avila» son dos personas) y confusiones de letra. Las dos se
+# corrigen con una tabla EXPLÍCITA y no con heurística: partir por mayúsculas
+# rompería «Juan José» o «De la Hoz», y adivinar una letra es inventar un
+# nombre propio. Cada entrada se leyó contra el afiche.
+_OCR_NOMBRES = {
+    # «Felipe lorres» es Felipe Torres, el mismo que da la charla de monedas y
+    # billetes: T mayúscula leída como l minúscula.
+    'Felipe lorres': 'Felipe Torres',
+    'Laura Buriticá Angélica Avila': 'Laura Buriticá y Angélica Ávila',
+    'Felipe Rodriguez (Proyecto Kinder) Rafael Hernández (Codiscos) '
+    'Juan José Charry (Codiscos) Felipe lorres (Numismatica Bogotá)':
+        'Felipe Rodríguez (Proyecto Kinder), Rafael Hernández y Juan José Charry '
+        '(Codiscos), y Felipe Torres (Numismática Bogotá)',
+}
+
+
+def _nombres(v):
+    """Nombre(s) de quien dicta, con las erratas del OCR corregidas."""
+    v = ' '.join((v or '').split())
+    return _OCR_NOMBRES.get(v, v)
 
 
 def main():
@@ -222,6 +252,9 @@ def main():
     # con is_recurring (el plan las toma todas o ninguna).
     franja = json.load(open(f'{ST}/ficma-2026-franja.json', encoding='utf-8'))['actividades']
     for a in franja:
+        a['tallerista'] = _nombres(a['tallerista'])
+        a['invitados'] = _nombres(a['invitados'])
+        a['modera'] = _nombres(a['modera'])
         for dia in a['dias']:
             funcs.append({
                 'pagina': a['pagina'], 'dia': dia, 'hora': a['hora'],
@@ -281,12 +314,12 @@ def main():
         e = {
             'title': TITULO_OFICIAL.get(f['titulo'], f['titulo']),
             'director': f['director'],
-            'year': str(f['anio']),
+            'year': int(f['anio']) if str(f['anio']).isdigit() else f['anio'],  # contrato: number
             # La duración es la del PDF, SIEMPRE: es la que el festival programó.
             # TMDB difiere hasta en 3 min y mover eso corre el fin de la función.
             'duration': f'{DURACION_OFICIAL.get(f["titulo"], f["duracion_min"])} min',
             'country': f['pais'],
-            'flags': banderas(f['pais']),
+            'flags': banderas_ficma(f['pais']),
             'section': sec[0],
             'day': f['dia'],
             'time': f['hora'],
@@ -297,7 +330,25 @@ def main():
         if _fa:
             # Actividad, no película: sin país ni año, con tipo de evento.
             e['type'] = 'event'
-            e['event_kind'] = 'taller' if _fa['tipo'] == 'taller' else 'ponencia'
+            # DESCRIPCIÓN. El PDF de la Franja Académica NO trae sinopsis —cada
+            # página es un afiche con título, quién dicta, lugar, hora y cupos—
+            # así que la card salía vacía. Se compone con lo único que la fuente
+            # sí publica: quién la dicta y quién modera. Nada más; en particular
+            # NO los cupos (decisión de Juan, 10 ago 2026). Sin nombre no hay
+            # frase: no se rellena por rellenar.
+            _quien = _fa['tallerista'] or _fa['invitados']
+            if _quien and not e.get('synopsis'):
+                _cab = 'Taller' if _fa['tipo'] == 'taller' else 'Charla'
+                _txt = f'{_cab} con {_quien}.'
+                if _fa['modera']:
+                    _txt += f' Modera {_fa["modera"]}.'
+                e['synopsis'] = _txt
+                e['synopsis_lang'] = 'es'
+            # El tipo se PASA, no se traduce. La fuente ya dice la palabra buena
+            # —el PDF titula TALLERES y CHARLAS— y esta línea convertía «charla»
+            # en «ponencia», que no la usa ningún festival nuestro. No fue un
+            # dato mal capturado: fue una traducción nuestra en la salida.
+            e['event_kind'] = _fa['tipo']            # 'taller' | 'charla'
             for k in ('country', 'flags', 'year'):
                 e.pop(k, None)
             if _fa['requires_registration']:
@@ -313,9 +364,11 @@ def main():
             e['_src'] = 'FICMA 17 - FRANJA ACADÉMICA.pdf (OCR) · ' + _fa['pagina']
         if f.get('sala'):
             e['sala'] = f['sala']
-        if f.get('ciclo'):
-            # El ciclo es la marca del festival («Cine al barrio»), no la sede.
-            e['cycle'] = f['ciclo']
+        # El ciclo («Cine al barrio», «Cine bajo la niebla») es la marca del
+        # festival, no la sede, y es información real que `section` no dice.
+        # Aun así NO se emite desde el 17 ago 2026: la ficha nunca lo pintó y la
+        # decisión fue no pintarlo. `ciclo` sigue en el crudo — si algún día se
+        # muestra, el dato está y no hay que volver a extraerlo.
         if t:
             e['tmdb_id'] = t['tmdb_id']
             if (g := (t.get('generos') or [''])[0]):
@@ -323,7 +376,7 @@ def main():
             # Nunca poster:'' — el gate [poster-empty-film] lo bloquea y con razón:
             # un string vacío es un póster roto, la ausencia es un dato honesto.
             if t.get('poster_path'):
-                e['poster'] = f'/assets/ficma/{slug(f["titulo"])}.jpg'
+                e['poster'] = f'/assets/ficma/{slug_con_acentos(f["titulo"])}.jpg'
                 e['posterSource'] = 'tmdb'
             if t.get('synopsis_es'):
                 e['synopsis'], e['synopsis_lang'] = t['synopsis_es'], 'es'
@@ -331,8 +384,10 @@ def main():
                 e['synopsis'], e['synopsis_lang'] = t['synopsis_en'], 'en'
             if t.get('synopsis_en'):
                 e['synopsis_en'] = t['synopsis_en']
-            if t.get('titulo_original') and t['titulo_original'] != f['titulo']:
-                e['original_title'] = t['titulo_original']
+            # `original_title` NO se emite (17 ago 2026): la ficha nunca lo
+            # pintó y un campo que nadie lee es peso muerto. El
+            # `titulo_original` del sidecar SÍ se conserva — enriquecer.py lo
+            # usa para decidir el title_en.
         # title_en: el título con que la obra se distribuye en inglés, traído de
         # TMDB sobre un tmdb_id ya verificado (pipeline/ficma-2026-title-en.py).
         # Las que ya se llaman igual en inglés no lo llevan.

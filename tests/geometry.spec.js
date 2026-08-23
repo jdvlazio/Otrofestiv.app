@@ -251,3 +251,93 @@ test('G03 — ningún icono pierde su proporción por el flex del contenedor', a
 
   expect(rotos, `icono(s) deformado(s):\n  ${rotos.join('\n  ')}`).toEqual([]);
 });
+
+// G04 — el aviso de cancelada se ve, y en el MISMO sitio, en las DOS vistas.
+// Nace de un bug vivo en producción (12 ago 2026): #notices-banner estaba entre
+// #programa-list y #grid, así que su posición dependía de la vista activa. En
+// GRILLA salía arriba (173px, 3% del documento); en LISTA el día entero se
+// pintaba encima y el aviso caía al 97% —2988px de 3065—, DESPUÉS de todas las
+// funciones tachadas. AP03 no lo cazó porque comprueba que el banner EXISTE y
+// cuántos hay, no DÓNDE está. Este mide la posición y exige que sea la misma.
+test('G04 — el aviso está arriba y en la misma posición en grilla y en lista', async ({ page }) => {
+  // Presupuesto propio: este test recorre grilla → lista → scroll → dos filtros,
+  // y cada paso espera un render. Con los 30s por defecto se quedaba sin tiempo en
+  // el último click y el error decía «timeout» como si fuera el botón.
+  test.setTimeout(90000);
+  await page.clock.install({ time: new Date('2026-08-14T10:00:00-05:00') });
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForSelector('.splash-card[data-fest="ficdeh2026"]', { timeout: 15000 });
+  await page.evaluate(() => { const c = FESTIVAL_CONFIG['ficdeh2026']; selectSplashFest(c.name, `${c.city} · ${c.dates}`, 'ficdeh2026'); });
+  await page.locator('.splash-enter-btn').click();
+  await page.waitForFunction(() => document.querySelectorAll('.poster-card, .plist-item').length > 0, null, { timeout: 20000 });
+  await page.waitForTimeout(600);
+  // El sheet de ciudad (FICDEH es multiciudad) tapa los tabs. Se cierra por el
+  // camino REAL — «Ver todas las ciudades» —: quitarle la clase .open lo oculta
+  // pero el nodo sigue interceptando los clicks, y el error sale como si el botón
+  // de lugar no respondiera.
+  const _todas = page.locator('#city-sheet').getByText('Ver todas las ciudades', { exact: false }).first();
+  if (await _todas.count()) { await _todas.click(); await page.waitForTimeout(700); }
+  const posicion = async () => {
+    await page.waitForTimeout(900);
+    return page.evaluate(() => {
+      const bn = document.querySelector('#notices-banner .notice-banner');
+      if (!bn) return null;
+      const r = bn.getBoundingClientRect();
+      return { vista: globalThis.programaViewMode, top: Math.round(r.top + window.scrollY),
+               visible: r.top >= 0 && r.top < window.innerHeight };
+    });
+  };
+  await page.evaluate(() => { document.querySelector('#dtabs .dtab')?.click(); });   // TODO → grilla
+  const grid = await posicion();
+  await page.evaluate(() => { [...document.querySelectorAll('#dtabs .dtab')][1]?.click(); }); // día → lista
+  const list = await posicion();
+  expect(grid, 'sin banner en grilla').not.toBeNull();
+  expect(list, 'sin banner en lista').not.toBeNull();
+  expect(grid.vista).toBe('grid');
+  expect(list.vista).toBe('list');
+  // Visible SIN scrollear en las dos: un aviso al que hay que bajar no avisa.
+  expect(grid.visible, 'el aviso no se ve en la grilla sin scrollear').toBe(true);
+  expect(list.visible, 'el aviso no se ve en la lista sin scrollear').toBe(true);
+  // Y en el MISMO sitio: si difiere, el contenedor volvió a quedar entre las vistas.
+  expect(Math.abs(grid.top - list.top), 'el aviso cambia de sitio entre vistas').toBeLessThanOrEqual(4);
+
+  // FIJO: tras scrollear hasta el fondo el aviso sigue en pantalla. Es lo que
+  // compra el sticky — con 116 cards, un aviso que se va no avisa.
+  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+  await page.waitForTimeout(500);
+  const trasScroll = await page.evaluate(() => {
+    const bn = document.querySelector('#notices-banner .notice-banner');
+    if (!bn) return null;
+    const r = bn.getBoundingClientRect();
+    return { visible: r.top >= 0 && r.bottom <= window.innerHeight + 1 };
+  });
+  expect(trasScroll, 'el aviso desapareció al scrollear').not.toBeNull();
+  expect(trasScroll.visible, 'el aviso no sigue fijo tras scrollear').toBe(true);
+
+  // ── El aviso CALLA donde no aplica ────────────────────────────────────────
+  // Filtrando una ciudad SIN cancelaciones, el banner seguía hablando de las 4 del
+  // sismo: no es ruido, se lee como que esa ciudad está afectada. Se comprueba en
+  // el DUEÑO (getActiveNotices) y en el DOM a la vez — si divergen, alguien pintó
+  // por su cuenta. El dropdown de lugar NO se conduce acá a propósito: es otra
+  // superficie, con sus propios tests, y meterla haría que este guard fallara por
+  // razones que no son la regla que vigila.
+  const conFiltro = async (sel) => page.evaluate(async (sel) => {
+    const { renderNoticesBanner, getActiveNotices } = await import('/src/view/programa.js');
+    globalThis.activeVenue = sel;
+    renderNoticesBanner();
+    return { activas: getActiveNotices().length,
+             enDOM: document.querySelectorAll('#notices-banner .notice-banner').length };
+  }, sel);
+  for (const [sel, esperado, porque] of [
+    ['all',            1, 'sin filtro es información del festival'],
+    ['city:Bogotá',    0, 'Bogotá no tiene cancelaciones'],
+    ['city:Medellín',  0, 'Medellín no tiene cancelaciones'],
+    ['city:Pereira',   1, 'Pereira es exactamente su caso'],
+    ['city:Quibdó',    1, 'Quibdó es exactamente su caso'],
+  ]) {
+    const r = await conFiltro(sel);
+    expect(r.activas, `${sel}: ${porque}`).toBe(esperado);
+    expect(r.enDOM, `${sel}: el DOM no coincide con getActiveNotices`).toBe(esperado);
+  }
+});

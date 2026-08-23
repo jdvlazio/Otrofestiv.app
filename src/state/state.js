@@ -14,12 +14,12 @@
 // Exports: state — { get, snapshot, set, update, batchUpdate, transaction,
 //   subscribe, subscribeRender, _addToSet, _delFromSet, _omit }.
 
-// Roster — las 19 keys de estado que el container administra. El bridge de
+// Roster — las 20 keys de estado que el container administra. El bridge de
 // main.js expone exactamente estas como propiedades de globalThis.
 const _ROSTER = new Set([
-  '_activeFestId', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END',
+  '_activeFestId', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END', 'FESTIVAL_POSTPONED',
   'FESTIVAL_STORAGE_KEY', 'PRIO_LIMIT', 'TZ_OFFSET', 'FESTIVAL_TRANSPORT',
-  'watchlist', 'watched', 'prioritized', 'filmRatings', 'filmDelays',
+  'watchlist', 'watched', 'notWatched', 'prioritized', 'filmRatings', 'filmDelays',
   'filmDelaysHistory', 'savedAgenda', 'availability', 'lastRemovedSlots',
   '_lang', '_simTime',
 ]);

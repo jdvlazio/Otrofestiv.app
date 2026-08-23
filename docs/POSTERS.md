@@ -181,6 +181,245 @@ en cada superficie + `28.89%` en 4 sitios + escape XML local frágil.
 Cuando no hay imagen, el sistema genera un póster tipográfico (SVG data-URI).
 Dos zonas: **header** = sección (color de acento) y **body** = texto.
 
+### 6.0 Anatomía del póster nuestro — APROBADA (18 ago 2026, Juan)
+
+> Aprobadas **las dos formas**: solo texto, y **una sola imagen 16:9**.
+> Rationale y descartes en `.specify/design-system/posters-c2-reticula.md`.
+
+**Solo hay dos formas. La regla que decide es una:**
+
+```
+¿la función tiene UNA imagen 16:9 propia?
+   sí  → forma B (una imagen)
+   no  → forma A (solo texto)
+```
+
+**«Propia» significa de la obra misma.** Un programa de cortos **no** toma
+prestada la imagen de una de sus obras: elegir un fotograma de las nueve para
+representar a las nueve es curaduría nuestra sobre curaduría ajena. Un programa
+sin still propio es **forma A**.
+
+**Nunca varias imágenes** (decisión de Juan, 18 ago 2026). Mosaicos, escalonados
+y tiras de índice quedan descartados: a 84 px son ruido, no información.
+
+**Nunca una imagen que no sea 16:9.** Un póster vertical 2:3 de una obra no se
+mete en el campo — eso sería recortarlo. Esa función es **forma A**.
+
+**El problema que corrige.** El tamaño de la sección estaba atado a una
+constante del ancho (`_BAND_FS = 0.0542`) y la banda a un alto fijo (28,89%).
+En la tarjeta real de 84 px eso da **una losa de 36 px con letra de 4,55 px**:
+la banda nunca se llena, y da igual que el nombre sea corto o largo. Fuera de
+los festivales con stills, *casi todos* nuestros pósters son de solo texto —
+24 funciones en FICDEH, 7 en FINCA— así que ahí la tipografía no decora: es el
+póster entero.
+
+**Retícula.** El póster es 2:3, así que la unidad cuadra sin residuo:
+
+```
+u = ancho / 8        →  el póster es 8u × 12u (módulos cuadrados)
+línea base           =  media unidad (24 líneas)
+margen               =  0,75u  →  caja de contenido 6,5u
+filete de sección    =  0,25u de alto, a sangre, en color de arquetipo
+```
+
+**Anatomía.** Sobre fondo `#0A0A0A` (el negro de la marca — el mismo de los
+slides de social media, **no** `#141414`):
+
+| elemento | posición | tamaño |
+|---|---|---|
+| filete de sección | `y = 0` | `0,25u`, a sangre |
+| sección | `y = 1u` | la mayor que quepa en `6,5u × 3,4u`, máx. 3 líneas |
+| título | anclado abajo, sobre `11,25u` | la mayor que quepa en `6,5u × 2,4u`, máx. 4 líneas |
+| dato | bajo el título | `5% del ancho`, gris `#888` |
+| luz | esquina inferior **derecha** | glow radial ámbar `#F59E0B` |
+
+**La regla que lo hace funcionar: la tipografía se ajusta al ESPACIO, no a una
+constante.** El corte de línea se decide por **ancho medido**, nunca por número
+de caracteres (partir por caracteres dejaba el título en una sola línea
+minúscula). En producción el ajuste se calcula en el `viewBox` del SVG —
+determinista, sin medir el DOM.
+
+Resultado medido en la tarjeta de 84 px:
+
+```
+                   hoy       aprobado
+CineAutopsia      4,5 px     11,4 px
+FICDEH            4,5 px     15,0 px
+FINCA             4,5 px      8,5 px
+esfuerzo (43 car) 4,5 px      9,2 px  ← «Retrospectiva 10 Años del Acuerdo de Paz»
+```
+
+La prueba de esfuerzo entra legible en tres líneas **sin tocar el nombre que
+puso el festival**: la regla de que las secciones no se renombran (§ vocabulario)
+queda intacta.
+
+**El color de sección deja de ser una losa** y pasa a ser el filete superior más
+el color de la propia tipografía de la sección. Se conserva porque es la señal
+que se lee de un vistazo al hacer scroll.
+
+**La luz va abajo a la derecha**, no abajo a la izquierda como en los slides de
+Instagram: en el póster esa esquina la ocupa el título.
+
+**Sin chevron.** A 84 px se leía como suciedad y competía con la luz por la
+misma esquina.
+
+El corte de línea sigue siendo `_bandWrap` (ninguna línea, salvo la última,
+termina en conjunción, preposición, artículo o separador).
+
+#### La MINIATURA es su propia forma (19 ago 2026, Juan)
+
+Un corto dentro de un programa se dibuja con el marco editorial pero **sin
+sección ni título** — los dice la fila de al lado. Con la anatomía de arriba tal
+cual, esa miniatura queda hueca: el hueco que en el póster grande llenan título
+y dato, acá no lo llena nadie. Reglas propias, y solo para ella:
+
+- **El campo se centra** (`y = 3,75u` en vez de `3,5u`): el vacío se reparte.
+- **Halo en el pie**: la propia obra desenfocada bajo el campo (`blur 10px`,
+  `opacity .55`), apagada con máscara antes del borde. Se lee como calor, no
+  como imagen. El primer valor probado —`.38`— se veía en el mockup y **no en
+  la app**: a 56×84 el pie seguía leyéndose negro. Se mide en la superficie
+  real, no en el banco de pruebas.
+- **El filete va en ámbar de marca**, no en color de sección: los cortos de un
+  programa comparten sección, así que ese color no informa nada — y sin
+  arquetipo caía al gris `#2C2C2A`, que fue lo que se veía: una barra gris
+  repetida siete veces.
+
+**Esto NO revive el blur que §6.0 mató.** Aquel iba *detrás* del still, a
+sangre, y ensuciaba el negro de marca compitiendo con la imagen. Este está
+contenido bajo el campo, con máscara, y solo donde hay vacío: en la tapa
+—con sección y título— no se emite. La diferencia está fijada por test.
+
+Costo medido: **un `<img>` extra por miniatura, con el MISMO src** — el
+navegador lo reusa de su cache, así que son 7 elementos más en la ficha de un
+programa de 7 cortos y **cero descargas nuevas**.
+
+#### Lo que cambió al implementar (19 ago 2026) — la spec se corrige con lo medido
+
+La anatomía se implementó tal cual, con cuatro ajustes que salieron de MEDIR el
+texto ya renderizado (`getBBox`) en la tarjeta real. Se documentan acá porque
+esta sección es la fuente única y las cifras de arriba salían de un mockup:
+
+- **El negro es `#0B0A08`, no `#0A0A0A`.** El guardián `[warm-neutrals]` marca
+  `#0A0A0A` como paleta fría vieja: la app migró a negros cálidos. A la vista son
+  el mismo negro; la regla del design system manda.
+- **La sección admite 4 líneas, no 3** (decisión de Juan). Con 3 líneas, el caso
+  de esfuerzo daba **6,4 px**; con 4 da **7,7 px**, un 20% más.
+- **Los 9,2 px del caso de esfuerzo NO son alcanzables.** «Retrospectiva 10 Años
+  del Acuerdo de Paz» son 39 caracteres; para dar 9,2 px en una tarjeta de 84 px
+  cada línea podría tener 12 caracteres y 3×12 = 36 < 39. El techo aritmético con
+  el margen de 0,75u es 7,7 px. Ensanchar la caja a 7,5u tampoco alcanza (7,5 px)
+  y además desbordaba. El número del mockup no medía el texto renderizado.
+- **Tope de 15 px para la sección** (decisión de Juan). «La mayor que quepa» sin
+  techo llevaba «CHARLA» a 17,9 px — más grande que el título de la obra.
+
+**Las dos reglas de margen son duras y están verificadas** (T98): ningún texto
+cruza `x = 108,75` ni `y = 168,75` del viewBox (0,75u). Dos hallazgos:
+
+- El dato apoyaba su línea base EN el margen y las colas de «g»/«p» se salían:
+  la base sube 0,30 em.
+- «Competencia Nacional de Cortometrajes» no tiene arreglo por tamaño: la regla
+  de corte prohíbe dejar «de» al final de línea, así que «DE CORTOMETRAJES»
+  viaja pegado y son 16 caracteres donde caben 14. Se resuelve con `textLength` +
+  `lengthAdjust="spacingAndGlyphs"`, que condensa ESA línea unos puntos hasta el
+  ancho exacto. Solo se activa cuando el corte no puede evitar el desborde.
+
+**El estimador de ancho se calibra con `getBBox`, no con `canvas.measureText`**:
+ahí el bold sintetizado mide de menos y el primer intento subestimaba hasta un
+19% («CHARLA» real da 0,739 em/carácter). Se usa 0,66 de promedio con factor de
+seguridad 1,12 — el error del estimador no es simétrico: pasarse se VE.
+
+#### Forma C — FUNCIÓN COMPARTIDA: la Escalera (21 ago 2026, Juan)
+
+Una **función compartida** (Tipo 2 del template: obras independientes que
+comparten día·hora·sede, ancladas por `_slotKey`) no tenía póster propio en
+ninguna superficie: la grilla y la lista muestran cada obra con su card, y la
+única representación de la función como unidad es el bloque de texto del
+calendario semanal. La Escalera le da forma: **los afiches de las obras,
+apilados en diagonal dentro del póster nuestro**.
+
+**Geometría** (viewBox 120×180, `u=15`, todo en pasos de 0,25u):
+
+| elemento | 2 obras | 3 obras |
+|---|---|---|
+| módulo | 4,5u × 6,75u | 4u × 6u |
+| trasero | `x=0,75u · y=3u` | `0,75 · 3` |
+| siguiente | `x=2,75u · y=3,75u` | `2 · 3,75` → `3,25 · 4,5` |
+| paso | +2u x · +0,75u y | +1,25u x · +0,75u y |
+
+Sombra dura de 0,19u bajo el delantero (la del apilado de miniaturas). Afiches
+2:3 **completos**, nunca recortados. Filete de sección, negro de marca y luz
+ámbar como en toda forma; la luz va **debajo** de los módulos.
+
+**SIN TÍTULO interno** (decisión de Juan): *«en una película con póster nunca
+vemos títulos»*. Se auditaron las cinco superficies antes de quitarlo: en lista,
+ficha, Intereses, Mi Plan y buscador el título ya vive **al lado** del póster —
+era duplicado; y en grilla y Diario **ninguna obra se nombra**, así que la
+identidad queda a un tap, igual que para cualquier película. Se conservan:
+- **la sección con su filete** — sin el título, es lo único que distingue
+  «función curada por el festival» de «póster de una película», y el separador
+  de sección de la grilla solo existe en la vista «todos los días»;
+- **el dato al pie** («2 obras · 92 min») — pasa a ser la **única declaración de
+  pluralidad** dentro del póster. Llena vacío con información, no con decoración.
+
+**LAS FRONTERAS, y de dónde salió cada una.** Las tres primeras las encontró
+Juan mirando render real, no razonando en abstracto:
+
+- **Solo Tipo 2, jamás PROGRAMAS (Tipo 3).** Las obras dentro de un programa
+  suelen tener *stills*, no afiches: Tribeca 68, Cinemancia 29, FantasoFest 18;
+  Ficmontañas y Vartex, ninguna imagen. Un still se dibuja **dentro del marco
+  editorial**, que ya es un póster propio — meterlo como módulo sería un póster
+  propio dentro de otro. Los programas conservan su afiche oficial o la forma A,
+  donde el título ES el identificador único (§6.2, con guardián propio).
+- **Solo con afiche real.** El módulo se decide con `_isEditorialPoster` (dueño
+  único del predicado): un `posterSource:'editorial'` nunca es módulo.
+- **Solo COMPLETA.** Se probó un «módulo mudo» para las funciones donde falta un
+  afiche: se leía como una sombra sucia y la tarjeta terminaba haciéndose pasar
+  por la única obra visible — con el agravante de que la obra invisible podía ser
+  la primera de la función. Falta un afiche → **sin tarjeta**, como hoy: cada
+  obra conserva su card y nada finge.
+- **2 o 3 obras.** Con 4+ habría que mostrar 3 de 6, y elegir cuáles es
+  curaduría nuestra sobre curaduría ajena — la misma objeción que mató al
+  mosaico.
+
+Cobertura medida con la regla dura: **FICDEH 18 de 63** funciones compartidas
+reciben tarjeta; las otras 45 no pierden nada (hoy tampoco la tienen).
+
+**Dueños.** La DECISIÓN vive en `slotPosterParts` (helpers.js) — clasifica los
+miembros y devuelve `null` cuando no corresponde; el DIBUJO en
+`makeSharedSlotSVG` (components.js), que solo recibe módulos ya validados.
+Devuelve **markup SVG inline**, no data-uri: lleva `<image>`, y un SVG dentro de
+`<img>` tiene prohibido cargar recursos externos — los afiches saldrían rotos.
+
+**Estado: la forma existe y está probada, sin consumidor.** Dónde vive —el
+bloque del calendario semanal, el Diario— es una decisión aparte. Y ojo con una
+regla del template al considerarlo: las obras de una función compartida se
+muestran en **cards independientes, jamás fusionadas**; fusionarlas en la grilla
+sería cambiar esa regla, no aplicar esta forma.
+
+#### Forma B — una sola imagen 16:9
+
+Idéntica a la forma A **más un campo de imagen**, y nada más:
+
+| elemento | posición | tamaño |
+|---|---|---|
+| campo de imagen | `y = 3,5u`, a sangre | `8u × 4,5u` — el 16:9 exacto |
+
+**El campo es constante**: siempre el mismo rectángulo, en la misma posición.
+Es lo que hace que las tarjetas se sientan familia al hacer scroll; cuando el
+bloque de imagen cambiaba de alto según el caso, la silueta saltaba.
+
+`8u` de ancho da `4,50u` de alto, que cae **en línea de media unidad**: el 16:9
+entra entero, sin recorte, sin sobrante y sin salirse de la retícula. Es el
+único ancho a sangre que lo consigue (`5u` → 2,81u y `6u` → 3,37u se salen).
+
+**Sin blur.** El relleno borroso bajo el still queda **descartado**: ensuciaba
+el negro de marca y competía con la imagen. Bajo el campo va el fondo limpio,
+igual que en la forma A.
+
+La sección baja a un máximo de 2 líneas (en forma A son 3): con imagen, la
+imagen es la que carga el peso.
+
+
 ### 6.1 Escape XML — fuente única `escXML`
 
 Todo texto de usuario que entra a un `<text>` SVG **debe** pasar por

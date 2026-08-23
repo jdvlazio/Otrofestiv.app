@@ -1,0 +1,77 @@
+{
+ "_nota": "PLANTILLA del plan de festival — el ÚNICO archivo propio de cada festival cuando se monta con el pipeline genérico. Copiar a pipeline/<id>.plan.json y llenar. Todo lo que NO está aquí (day_order, banderas, «N min», «Sede - Ciudad», la casilla de acceso, los cortos) lo pone ensamblar.py, igual para todos: si un festival necesita una regla nueva, se discute y se añade AL GENÉRICO, no se escribe un ensamblador aparte.",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/cineautopsia-2026-cinemateca.py",
+   "que": "fichas de la Cinemateca → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/cineautopsia-2026-tmdb.py",
+   "que": "enriquecimiento verificado por director"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py cineautopsia-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/publicar.py cineautopsia-2026",
+   "que": "build → festivals/ (valida el contrato al escribir)"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/cineautopsia-2026-cinemateca.json",
+  "enriquecido": "festivals/staging/cineautopsia-2026-tmdb.json",
+  "sedes": {
+   "Cinemateca de Bogotá Centro": [
+    "Cinemateca de Bogotá - Bogotá",
+    ""
+   ]
+  },
+  "secciones": {
+   "Destacados": {
+    "emoji": "🔬",
+    "en": "Destacados",
+    "archetype": "Competencia"
+   },
+   "Panorama": {
+    "emoji": "🌀",
+    "en": "Panorama",
+    "archetype": "Muestra / País"
+   },
+   "Clausura": {
+    "emoji": "🎬",
+    "en": "Clausura",
+    "archetype": "Clausura"
+   }
+  },
+  "name": "CineAutopsia",
+  "fullName": "CineAutopsia — Festival de Cine Experimental de Bogotá",
+  "city": "Bogotá",
+  "country": "CO",
+  "dates": "22–29 AGO",
+  "dates_en": "AUG 22–29",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "cineautopsia2026_",
+  "festivalStartStr": "2026-08-22T00:00:00",
+  "festivalEndStr": "2026-08-29T23:59:00",
+  "prioLimit": 3,
+  "sharedSlotIsOneScreening": false,
+  "ticketing_model": "mixed",
+  "mes_es": "agosto",
+  "seccion_por_titulo": {
+   "destacados": "Destacados",
+   "panorama": "Panorama",
+   "Clausura": "Clausura"
+  }
+ },
+ "_campos": {
+  "crudo": "sidecar del parser, en el formato intermedio (PROTOCOLO §4). OBLIGATORIO.",
+  "enriquecido": "sidecar de TMDB/Letterboxd. Opcional; se indexa por título normalizado.",
+  "geo": "sidecar de sedes geocodificadas. Opcional.",
+  "sedes": "tabla canónica EXPLÍCITA nombre-en-la-fuente → [«Sede - Ciudad», «sala»].",
+  "secciones": "mapa nombre-del-festival → {emoji, en, archetype}. Verbatim: nuestra capa es el emoji y el inglés.",
+  "seccion_por_titulo": "palabra en el título → sección, cuando el crudo no trae `seccion`. Explícito, nunca heurístico.",
+  "resto": "identidad del festival: name, fullName, city, dates, year, timezoneOffset, storageKey, festivalStartStr/EndStr, prioLimit, ticketing_model."
+ }
+}

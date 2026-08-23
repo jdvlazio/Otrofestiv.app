@@ -35,6 +35,12 @@ export const _POSTER_CACHE_PFX = 'orf_poster_v1_';
 
 // ── Constantes numéricas de scheduling ───────────────────────────────────────
 export const FESTIVAL_BUFFER = 15;        // min entre funciones: salida sala + intro siguiente
+// FESTIVAL_QA_MIN — los minutos ESTIMADOS de un Q&A. Estaba suelto en tres
+// lugares (effectiveDuration, el total del bloque anclado y el aviso de Mi Plan)
+// y desde el 16 ago 2026 además se MUESTRA («Q&A ~30 min»): un número que el
+// usuario lee no puede tener copias que puedan divergir. Como FESTIVAL_BUFFER,
+// el worker del planeador lleva su propia declaración (ver controller/calc.js).
+export const FESTIVAL_QA_MIN = 30;        // estimación — la UI la declara, nunca la afirma
 export const MAX_REMEMBERED_SLOTS = 5;
 export const DEFAULT_DURATION_MIN = 90;
 
@@ -133,6 +139,10 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  '🌍 Muestra Internacional': 'International Showcase',
+  '🇨🇴 Muestra Nacional':     'National Showcase',
+  '🏆 Muestra Local':         'Official Selection · Local',
+  '🎓 Formación':             'Workshops & Seminar',
   '🔮 Largometrajes': 'Feature Films',
   '🌙 Cortometrajes': 'Short Films',
   '🌱 Raíces del Juego': 'Roots of the Game',
@@ -216,12 +226,33 @@ export const SECTION_EN = {
   '🎟️ Invitadas': 'Guest Films',
   '💬 Charlas que Unen': 'Talks That Unite',
   '🛠️ Formación': 'Workshops',
+  '🛰️ Apertura': 'Opening · Expanded FullDome',
+  '🤝 Encuentro': 'Gathering',
 };
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
 // date: 'YYYY-MM-DD' de la función original — el banner desaparece al día siguiente
 // Para 'rescheduled': añadir newDay, newTime, newVenue
 export const NOTICES=[
+  // FICDEH 2026 — el sismo del 10 ago 2026 (Chocó, Valle del Cauca, Eje Cafetero).
+  // Comunicado oficial del festival el 11 ago: cancelan Quibdó, Cali, Pereira y
+  // Manizales «porque nuestros equipos locales están dedicados a labores de
+  // rescate y apoyo», y siguen en Armenia, Barranquilla, Bogotá, Cartagena,
+  // Medellín, Tunja, Ibagué y +30 municipios.
+  //
+  // Alcance CIUDAD y no 88 entradas por título: es UN hecho y un solo banner.
+  // El festival NO está aplazado —sigue en 7 ciudades—, así que no lleva
+  // `status`: eso es para el festival entero (docs/PROTOCOLO.md §2·bis).
+  // `note` son sus palabras; `note_en` es traducción nuestra.
+  {
+    festival:'ficdeh2026',
+    type:'cancelled',
+    cities:['Quibdó','Cali','Pereira','Manizales'],
+    id:'ficdeh-sismo-ciudades',
+    note:'FICDEH canceló su programación en <b>Quibdó, Cali, Pereira y Manizales</b> por el sismo. Sigue activa en las demás ciudades.',
+    note_en:'FICDEH canceled its programming in Quibdó, Cali, Pereira and Manizales due to the earthquake. It remains active in all other cities.',
+    url:'https://www.instagram.com/p/Db6xcU2FGb6/',
+  },
 ];
 
 // ── FESTIVAL_CONFIG ────────────────────────────────────────────────────────
@@ -231,6 +262,12 @@ export const NOTICES=[
 // Campos opcionales importantes:
 //   prioLimit  — máximo de funciones priorizadas (default: 5 si se omite)
 //   group:'test' — aparece en sección separada del selector; omitir para festivales regulares
+//   status:{kind:'postponed', since:'YYYY-MM-DD', note:'…', note_en:'…', url:'…'}
+//     — festival APLAZADO (terremoto, paro, clima): se VE con distintivo y banda
+//     (note = palabras del festival, verbatim; note_en = traducción nuestra
+//     aprobada por Juan, opcional — sin ella el EN muestra el ES intacto) pero
+//     no invita a ir: sin punto verde, sin preselección, sin AHORA, sin «hoy».
+//     Reversión: fechas nuevas + borrar status. Guardián [festival-aplazado].
 //   eventPosterLabel — ['LÍNEA1','LÍNEA2'] para el poster generativo de eventos
 //
 // Al agregar festival: también actualizar FESTIVALS en tools/enricher.html
@@ -338,6 +375,18 @@ export const FESTIVAL_CONFIG={
     city:'Manizales',country:'CO',
     dates:'10–17 AGO',dates_en:'AUG 10–17',year:2026,timezoneOffset:'-05:00',
     keyArt:'/assets/keyart/ficma2026.jpg',
+    // APLAZADO por el terremoto de Manizales. Comunicado oficial del festival
+    // el 10 ago 2026; la cita son dos párrafos VERBATIM suyos —el cierre y la
+    // única información accionable— elegidos por Juan. El EN es traducción
+    // nuestra, aprobada por él. Reversión: fechas nuevas + borrar este bloque;
+    // los datos del festival nunca se tocaron.
+    status:{
+      kind:'postponed',
+      since:'2026-08-10',
+      note:'«Hoy, primero, la vida.» Estaremos anunciando nuevas fechas y actividades.',
+      note_en:'«Today, life comes first.» We will be announcing new dates and activities.',
+      url:'https://www.instagram.com/p/Db35wc_zR5h/',
+    },
     storageKey:'ficma2026_',festivalStartStr:'2026-08-10T00:00:00',festivalEndStr:'2026-08-17T23:59:00',
     festivalDates:{'2026-08-10':'2026-08-10','2026-08-11':'2026-08-11','2026-08-12':'2026-08-12','2026-08-13':'2026-08-13','2026-08-14':'2026-08-14','2026-08-15':'2026-08-15','2026-08-16':'2026-08-16','2026-08-17':'2026-08-17'},
     days:[{k:'2026-08-10',d:10,lbl:'LUN'},{k:'2026-08-11',d:11,lbl:'MAR'},{k:'2026-08-12',d:12,lbl:'MIÉ'},{k:'2026-08-13',d:13,lbl:'JUE'},{k:'2026-08-14',d:14,lbl:'VIE'},{k:'2026-08-15',d:15,lbl:'SÁB'},{k:'2026-08-16',d:16,lbl:'DOM'},{k:'2026-08-17',d:17,lbl:'LUN'}],
@@ -387,6 +436,42 @@ export const FESTIVAL_CONFIG={
     dayLong:{'2026-08-12':'Miércoles 12 de agosto','2026-08-13':'Jueves 13 de agosto','2026-08-14':'Viernes 14 de agosto','2026-08-15':'Sábado 15 de agosto','2026-08-16':'Domingo 16 de agosto','2026-08-17':'Lunes 17 de agosto','2026-08-18':'Martes 18 de agosto','2026-08-19':'Miércoles 19 de agosto'},
     prioLimit:4,eventPosterLabel:['ACTIVIDAD',''],
     keyArt:'/assets/keyart/finca2026.jpg',
+    films:null,posters:null,lbSlugs:{}
+  },
+  'cineautopsia2026': {
+    name:'CineAutopsia',fullName:'CineAutopsia — Festival de Cine Experimental de Bogotá',shortName:'CINEAUTOPSIA',
+    city:'Bogotá',country:'CO',
+    dates:'21–29 AGO',dates_en:'AUG 21–29',year:2026,timezoneOffset:'-05:00',
+    storageKey:'cineautopsia2026_',festivalStartStr:'2026-08-21T00:00:00',festivalEndStr:'2026-08-29T23:59:00',
+    festivalDates:{'2026-08-21': '2026-08-21', '2026-08-22': '2026-08-22', '2026-08-23': '2026-08-23', '2026-08-25': '2026-08-25', '2026-08-26': '2026-08-26', '2026-08-27': '2026-08-27', '2026-08-28': '2026-08-28', '2026-08-29': '2026-08-29'},
+    days:[{k: '2026-08-21', d: 21, lbl: 'VIE'}, {k: '2026-08-22', d: 22, lbl: 'SÁB'}, {k: '2026-08-23', d: 23, lbl: 'DOM'}, {k: '2026-08-25', d: 25, lbl: 'MAR'}, {k: '2026-08-26', d: 26, lbl: 'MIÉ'}, {k: '2026-08-27', d: 27, lbl: 'JUE'}, {k: '2026-08-28', d: 28, lbl: 'VIE'}, {k: '2026-08-29', d: 29, lbl: 'SÁB'}],
+    dayKeys:['2026-08-21','2026-08-22','2026-08-23','2026-08-25','2026-08-26','2026-08-27','2026-08-28','2026-08-29'],
+    dayShort:{'2026-08-21': 'VIE 21', '2026-08-22': 'SÁB 22', '2026-08-23': 'DOM 23', '2026-08-25': 'MAR 25', '2026-08-26': 'MIÉ 26', '2026-08-27': 'JUE 27', '2026-08-28': 'VIE 28', '2026-08-29': 'SÁB 29'},
+    dayShort_en:{'2026-08-21': 'FRI 21', '2026-08-22': 'SAT 22', '2026-08-23': 'SUN 23', '2026-08-25': 'TUE 25', '2026-08-26': 'WED 26', '2026-08-27': 'THU 27', '2026-08-28': 'FRI 28', '2026-08-29': 'SAT 29'},
+    dayLong:{'2026-08-21': 'Viernes 21 de agosto', '2026-08-22': 'Sábado 22 de agosto', '2026-08-23': 'Domingo 23 de agosto', '2026-08-25': 'Martes 25 de agosto', '2026-08-26': 'Miércoles 26 de agosto', '2026-08-27': 'Jueves 27 de agosto', '2026-08-28': 'Viernes 28 de agosto', '2026-08-29': 'Sábado 29 de agosto'},
+    prioLimit:3,
+    keyArt:'/assets/keyart/cineautopsia2026-v2.jpg',
+    tagline:'Festival de Cine Experimental de Bogotá',
+    films:null,posters:null,lbSlugs:{}
+  },
+  'vartex2026': {
+    name:'Vartex',fullName:'Vartex 14 — Muestra de Video y Experimental de Medellín',shortName:'VARTEX',
+    city:'Medellín',country:'CO',
+    dates:'19–22 AGO',dates_en:'AUG 19–22',year:2026,timezoneOffset:'-05:00',
+    storageKey:'vartex2026_',festivalStartStr:'2026-08-19T00:00:00',festivalEndStr:'2026-08-22T23:59:00',
+    festivalDates:{'2026-08-19': '2026-08-19', '2026-08-20': '2026-08-20', '2026-08-21': '2026-08-21', '2026-08-22': '2026-08-22'},
+    days:[{k: '2026-08-19', d: 19, lbl: 'MIÉ'}, {k: '2026-08-20', d: 20, lbl: 'JUE'}, {k: '2026-08-21', d: 21, lbl: 'VIE'}, {k: '2026-08-22', d: 22, lbl: 'SÁB'}],
+    dayKeys:['2026-08-19', '2026-08-20', '2026-08-21', '2026-08-22'],
+    dayShort:{'2026-08-19': 'MIÉ 19', '2026-08-20': 'JUE 20', '2026-08-21': 'VIE 21', '2026-08-22': 'SÁB 22'},
+    dayShort_en:{'2026-08-19': 'WED 19', '2026-08-20': 'THU 20', '2026-08-21': 'FRI 21', '2026-08-22': 'SAT 22'},
+    dayLong:{'2026-08-19': 'Miércoles 19 de agosto', '2026-08-20': 'Jueves 20 de agosto', '2026-08-21': 'Viernes 21 de agosto', '2026-08-22': 'Sábado 22 de agosto'},
+    prioLimit:3,
+    keyArt:'/assets/keyart/vartex2026-v3.jpg',
+    // (nota histórica) Sin keyArt al principio: el afiche del festival está en la lámina 1 de su
+    // carrusel y las imágenes de su sitio son apaisadas (1200x630). Estirarlas
+    // a 2:3 las aplastaría un 65%, muy lejos de lo que tolera la regla. La card
+    // cae al respaldo tipográfico hasta que llegue el afiche en vertical.
+    tagline:'Muestra de Video y Experimental',
     films:null,posters:null,lbSlugs:{}
   },
   'ficmontanas2026':{
@@ -444,6 +529,14 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // VARTEX 14 — muestra de video y experimental, Medellín.
+  '🌍 Muestra Internacional': 'Muestra / País',
+  '🇨🇴 Muestra Nacional':     'Muestra / País',
+  '🏆 Muestra Local':         'Competencia',
+  '🎓 Formación':             'Charlas / Industria',
+  // ── CineAutopsia 2026 · Bogotá ────────────────────────────────────────
+  '🔬 Destacados': 'Competencia',
+  '🌀 Panorama': 'Muestra / País',
   '🔮 Largometrajes': 'Muestra / País',
   '🌙 Cortometrajes': 'Cortos / Programas',
   '🌱 Raíces del Juego': 'Perspectivas / Miradas',
@@ -584,6 +677,8 @@ export const SECTION_ARCHETYPES = {
   // Franja Académica de FICMA — el festival la divide en talleres y charlas.
   '🛠️ Talleres': 'Charlas / Industria',
   '💬 Charlas': 'Charlas / Industria',
+  '🛰️ Apertura': 'Apertura / Gala',
+  '🤝 Encuentro': 'Charlas / Industria',
   // QAFF 2026 (8ª edición, «NOIR»). Secciones curatoriales del propio festival,
   // con los emoji aprobados por Juan el 2 ago; los nombres EN salen del nav de su sitio.
   '🖼️ Muestra Artística': 'Especiales / Eventos',

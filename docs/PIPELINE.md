@@ -231,6 +231,290 @@ en TMDB (sin fecha/director/sinopsis) — sin criterio corroborante NO se atan.
 
 ---
 
+### Fase 1.6 · Guardianes de la LÓGICA DEL CRUCE — retro TIFF 2026 (13 ago 2026)
+
+Hasta TIFF, todos nuestros guardianes revisaban la **forma** del dato: que el
+campo exista, que el sidecar tenga fecha, que la sede no esté apilada. Ninguno
+sabía preguntar si el **cruce** que produjo ese dato era correcto.
+
+Montando TIFF se colaron cinco defectos de cruce y **ningún guardián cazó uno
+solo**: los cinco se cazaron mirando la salida a mano. De ahí salen estos
+cuatro, uno por clase de error. Son genéricos — no saben de qué festival
+hablan, solo de cómo se comporta un cruce sano.
+
+| Guardián | Qué exige | El error que lo parió |
+|---|---|---|
+| `[cruce-inyectivo]` | Un `lbSlug` o `tmdb_id` no puede quedar asignado a dos obras distintas. Se compara por OBRA, no por fila: una obra con doce funciones repite su slug doce veces y eso es sano. | «The Age of Goodbyes» le prestó su slug a otras cuatro obras cuyos títulos («月宫», «咒语») se normalizaban a cadena VACÍA, y la vacía casaba con cualquier cosa. Y los dos cortos llamados «The End» —Pelechian 1992 y Lindroth von Bahr 2026— colapsaron en uno al indexar por título. |
+| `[cuentas-cuadran]` | Si un sidecar declara `_cuentas`, sus números cierran: `entradas == publicadas + suma de descartadas`. | El ensamblador se quedaba con la PRIMERA sección de cada obra y tiraba la segunda sin decir nada: 18 obras perdieron una etiqueta y el JSON se veía perfecto. |
+| `[sidecar-vacio]` | Un conteo `_algo: N > 0` tiene que estar respaldado por su lista: ni vacía ni toda nula. | El script de TMDB se pasó una hora reintentando un error de certificado SSL y terminó sin escribir nada, porque trataba un fallo de transporte como un tropiezo pasajero de la API. |
+| `[discrepancia-falsa]` | En una lista `_discrep*` o `_ambigu*`, ningún elemento puede tener dos valores iguales al normalizar. | La auditoría de directores reportó 22 discrepancias y las 22 eran falsas: comparaba «Sue Kim» con «Sue Kim» y «濱口竜介» con su nombre latino. Una lista de discrepancias con idénticos no es auditoría, es ruido que esconde las de verdad. |
+
+**Séptimo, hermano del anterior y del mismo día: `[valor-inventado]`.**
+`[campo-contrato]` caza el NOMBRE mal escrito; éste caza el VALOR inventado.
+
+Escribí `ticketing_model:'ticketed'` para TIFF. La app solo ramifica sobre
+`'paid'` y `'mixed'`; con cualquier otra cosa cae al `return ''`. **637 fichas
+con su enlace de Ticketmaster guardado y sin botón de compra.** El error de
+fondo no fue teclear mal: fue ver `'mixed'` en otro festival y **deducir** que
+existiría un valor para «todo de pago», en vez de leer qué acepta el código.
+
+Los valores manejados se leen **del código**, no de una lista escrita a mano:
+una lista aquí envejecería igual que el bug que persigue.
+
+**La regla de trabajo que se lleva de aquí, y que vale más que el guardián: un
+valor de enum no se deduce por analogía. Se lee en el código que lo consume,
+antes de escribirlo.**
+
+**Sexto guardián, el que tapa el hueco de verdad: `[campo-contrato]`.** Todos
+los demás revisan el dato POR DENTRO —que el campo exista, que sea booleano,
+que las cuentas cierren—. Ninguno miraba la **junta** entre el dato y la app.
+Un JSON impecable y una vista impecable pueden no encontrarse nunca, y nada se
+pone rojo.
+
+Pasó con TIFF: emití `ticketUrl` y `sheets-controller` lee `ticket_url`. Los 638
+enlaces de boletería estaban en el JSON y no llegaban a ninguna ficha. **No lo
+cazó ningún test —ni los del pipeline ni los de la app—: lo cazó Juan abriendo
+la app y preguntando dónde estaba el enlace.** Esa es la definición del hueco.
+
+La regla es estrecha a propósito, para no dar falsos positivos: si un campo NO
+lo lee la app pero SÍ existe su variante en el otro estilo de nombre
+(camelCase ↔ snake_case) y esa sí se lee, es un error seguro — es la misma cosa
+escrita de dos formas. Los campos que nadie lee y no tienen gemela salen como
+aviso, no como error: son dato muerto, no un fallo.
+
+**En su primera ejecución encontró un bug que llevaba meses en producción y no
+era de TIFF:** `aff-2026.json` emitía `lb_slug` en dos películas y la app lee
+`lbSlug`. Dos botones de Letterboxd que nunca aparecieron.
+
+**Quinto guardián, añadido el 13 ago 2026:** `[flag-booleano]`. La app compara
+los flags de servicio con `=== true`, no por truthy, y eso es deliberado —un
+badge de precio no se pinta por un valor accidental—. El precio de esa decisión
+es que un `"true"` como **string** no rompe nada: el badge simplemente no
+aparece nunca, y nadie se entera. Lo levantó Main al implementar el badge
+PREMIUM de TIFF, y vale para todos los flags (`is_free`,
+`requires_registration`, `has_qa`, `is_cortos`, `premium`), en el film y dentro
+de `film_list`. Basta con que un ensamblador lea un CSV o un Excel para que un
+booleano llegue como texto.
+
+**El guion bajo no es un escondite (17 ago 2026).** Un campo `_` es una NOTA
+para nosotros —de dónde salió el dato, qué falta, qué se heredó—, no un dato de
+la app con disfraz. `_tmdbId` vivió en 16 funciones de FINCA a salvo de
+`[campo-huerfano]` **solo por llamarse con guion bajo**, mientras el resto del
+repo usaba `tmdb_id`. Ahora, si al quitarle el guion el nombre coincide con un
+campo real, el guardián lo llama por su nombre: contrabando.
+
+**Decimoquinto: `[cosecha-tmdb]` — tener la ficha y volver con las manos
+vacías.** Los catorce anteriores miran la FORMA del dato: el tipo, el enum, el
+campo que nadie lee, el camino por el que llegó. Ninguno preguntaba lo obvio:
+si fuimos hasta TMDB y anotamos el `tmdb_id`, ¿por qué la obra no tiene
+sinopsis? En CineAutopsia 32 obras tenían ficha y ni una línea de texto. Dos
+fallos encadenados, los dos invisibles:
+
+1. La consulta pedía `es-CO`. TMDB **no cae a `es-ES`**: devuelve vacío. El
+   enriquecedor genérico (`pipeline/enriquecer.py`) siempre pidió `es-ES` +
+   `en-US`; el que se equivocó fue un script a la medida del festival, escrito
+   por fuera del pipeline. Cuarta reincidencia del mismo pecado.
+2. `ensamblar.py` construía cada obra de `film_list` con una lista de campos
+   **escrita a mano** (título, director, país, año, duración). Todo lo demás
+   que el crudo trajera sobre la obra —póster, `tmdb_id`, sinopsis— se caía en
+   silencio. Ahora la lista la manda el contrato: lo que la fuente trae, viaja.
+
+Regla: **si hay `tmdb_id` y no hay `synopsis`, el guardián se pone rojo.** Un
+identificador de ficha es la prueba de que estuvimos ahí; volver sin el texto
+no es un dato que falta, es una cosecha que no hicimos.
+
+**Decimocuarto, y el que cierra el círculo: `[pipeline-generico]`.** Los trece
+anteriores vigilan que el dato salga bien de un camino que cada festival
+reescribía. Éste vigila que **el camino sea uno**: `pipeline/ensamblar.py` y
+`pipeline/publicar.py`, con lo propio del festival declarado en su `plan.json`.
+
+Por qué: los 6 enlaces de TuBoleta de CineAutopsia, las 415 banderas de FICDEH y
+el `is_free:false` escrito a mano en una función que era libre no fueron tres
+errores distintos — fueron **el mismo error tres veces**, porque las reglas
+vivían en la cabeza de quien escribía el ensamblador de turno.
+
+Y el publicador **se niega a borrar lo que ya está en producción**: compara la
+cobertura campo a campo con el JSON publicado y aborta si el build trae menos.
+Es literalmente el accidente de FICDEH del 17 ago, convertido en una guarda.
+
+**La prueba de que el genérico sirve fue reproducir CineAutopsia entero con él**
+—7 programas, 45 obras, 4 días— contra el JSON que había hecho el ensamblador a
+mano: mismas funciones, mismas obras, **mismos 23 pósters y 27 slugs de
+Letterboxd**. Las diferencias que quedaron fueron todas mejoras del genérico, y
+una fue un bug MÍO que la comparación cazó: deduplicaba banderas por carácter y
+partía los emoji en dos («🇺🇸🇪🇸🇵🇱» salía «🇺🇸🇪🇵🇱»), porque una bandera son dos
+puntos de código.
+
+**Y de paso se midió la tabla de países entera**: `banderas()` se escribía a
+mano y a demanda, así que le faltaba lo que ningún festival anterior había
+traído. «Hungría» apareció con CineAutopsia y se quedó sin bandera. Medido
+contra los 13 festivales: **de 191 apariciones sin bandera a 27**, y las 27 que
+quedan no son países («Varios», «Iberoamérica»).
+
+**Decimotercero: `[lib-unica]` — una función, un dueño.** `pipeline/lib.py`
+existe para escribir la lógica común una sola vez. El 17 ago 2026 se midió
+cuánto de eso era verdad: **7 de sus 17 funciones tenían copias sueltas**,
+`norm()` estaba reescrita en SEIS scripts, y solo 5 de 28 scripts importaban
+lib.
+
+Al comparar comportamiento con entradas reales apareció algo peor que un
+duplicado: **el mismo nombre significaba cosas distintas.** `norm()` devuelve un
+string en lib, un `set` en ficma-repesca y una `list` en ficma-tmdb. `slug()`
+quita acentos en lib y los conserva en ficma —«rebelion» contra «rebelión»—.
+`hora24()` devuelve la hora en lib y «» en ficma-parse cuando ya venía en 24h.
+`sede_sala()` y `director_coincide()` ni siquiera tenían la misma firma. Leer un
+script y suponer la semántica del otro era un bug esperando fecha.
+
+La regla tiene dos ramas: **si la copia hace lo mismo, se borra y se importa**
+(6 casos, verificados idénticos con entradas reales de los 12 festivales); **si
+hace otra cosa, se renombra para que lo diga** (8 casos, cada uno con su razón
+escrita sobre el `def`). Lo que no se permite es que dos cosas distintas
+compartan nombre.
+
+**El método importa tanto como el resultado**: la paridad se MIDIÓ ejecutando
+las dos versiones sobre 525 títulos, 523 horas y 440 países reales. Sustituir
+por una versión «equivalente» que no lo sea habría sido peor que el duplicado.
+
+**Duodécimo, y el que cambia el modelo: `[contrato-vivo]`.** Los once anteriores
+vigilan errores concretos que ya cometimos, uno por uno. Éste vigila que exista
+**un canon ejecutable**: `pipeline/contrato.json` declara los 49 campos de una
+función —tipo, formato, obligatoriedad, enum— y `validate-festivals.js` lo
+EXIGE. La sección Films de `docs/SCHEMA.md` ya no se escribe: se **genera** del
+contrato (`node scripts/generate-schema-md.js`).
+
+Por qué importa: una doc escrita a mano al lado de un canon ejecutable es una
+SEGUNDA FUENTE, y dos fuentes divergen siempre. Divergieron — el schema
+documentaba 24 campos de 60 y juraba que `duration` era un número cuando las
+1.194 son el string «90 min». La única defensa no es revisar la doc: es que no
+haya dos.
+
+Vigila tres cosas: que la doc esté regenerada, que **ningún campo viva en los
+datos sin estar declarado** (así el contrato no envejece callando, que es como
+envejeció la doc), y que **ninguna excepción con fecha se venza sin que nadie
+mire**.
+
+**Y las excepciones llevan fecha.** Los archivados quedan congelados —reescribir
+su historia es riesgo sin beneficio— pero un festival VIGENTE que aún no cumple
+entra en `_pendientes` con el día en que deja de perdonársele. Una excepción sin
+fecha se vuelve permanente sola; ésta se vence sola. La primera fue FINCA: sus
+30 sedes sin ciudad esperan al 20 AGO porque el festival cierra el 19 y renombrar
+una sede toca `_slotKey`, que es la ancla de los planes YA GUARDADOS de usuarios
+reales.
+
+**Decimosexto: `[poster-mirado]` — alguien tiene que ABRIR el archivo.**
+
+*«¿Cómo es posible crear un póster sin pasar por un guardián?»* preguntó Juan al
+ver en pantalla un póster que era la franja gris del encabezado del PDF con dos
+stills ajenos debajo. La respuesta incómoda: **todos los guardianes de póster
+miran el CAMPO y ninguno el ARCHIVO.** `[poster-single-owner]` vigila quién lo
+escribe, `[posters-duplicados]` que dos obras no compartan URL,
+`[paridad-derivados]` que `posterSource` acompañe a `poster`. Un JPG con un
+tercio de banda plana los pasa todos, porque ninguno lo abre.
+
+Éste lo abre y mide tres cosas sin opinar: que el archivo EXISTA, que tenga
+resolución de póster y no de miniatura, y que no arrastre una BANDA PLANA en un
+borde —el recorte que se comió el encabezado—.
+
+**Calibrarlo costó dos vueltas, y las dos por falsos positivos:** el mínimo iba
+por el ancho y marcaba 52 pósters verticales legítimos (300×427 es un póster,
+no una miniatura) → ahora va por el lado corto; y perseguía bandas planas en
+afiches ajenos, donde una franja de color sólido es una decisión de diseño →
+ahora solo en los EDITORIALES, que son los que recortamos nosotros.
+
+**Decimoquinto: `[arquetipo-existe]` — el color que no existe se pinta gris.**
+`[seccion-sin-arquetipo]` comprueba que la sección ESTÉ en `SECTION_ARCHETYPES`.
+Nadie comprobaba que el arquetipo asignado sea uno de los NUEVE que tienen
+color. Con CineAutopsia escribí «Apertura» e «Industria / Formación» —que suenan
+bien y no existen: son «Apertura / Gala» y «Charlas / Industria»— y las dos
+secciones cayeron al gris por defecto, con el texto encima ilegible.
+
+Los dos validadores en verde y la pantalla rota. Lo vio Juan mirando la app, que
+es donde se ven estas cosas: *«el gris está bien pero la letra no se lee
+absolutamente nada»*.
+
+**Y una regla de la misma tanda, sin guardián porque es de criterio:** el póster
+de un PROGRAMA no puede ser un recorte de la página donde están los stills de
+sus obras. Eso no es «la imagen del programa», son dos obras suyas pegadas —y
+encima con la franja del encabezado—. Solo vale recortar la página cuando ésta
+NO lleva stills de obras: el Encuentro, cuya página es un mosaico de retratos de
+los artistas, sí es la imagen del evento.
+
+**Y la deuda quedó en CERO el mismo día.** Los nueve huérfanos salieron:
+`trailer`, `tematica` y `qa_detail` primero; después `original_title` (con
+`title_orig` ya unificado dentro), `filmType` y `cycle`; `_tmdbId` se fusionó en
+`tmdb_id`. `cycle` merece una nota: las franjas de FICMA —«Cine al barrio»,
+«Cine bajo la niebla»— **sí eran palabra del festival e información que
+`section` no da**. Salió igual, porque no se iba a pintar, y sigue viva en el
+crudo: si algún día se muestra, no hay que volver a extraerla. **Borrar del JSON
+final no es perder el dato** — el crudo es el archivo, el JSON es la vitrina.
+
+**Y el epílogo (17 ago 2026).** Hubo un guardián —`titulo-original-util`, sin
+corchetes porque ya no existe— que exigía que `original_title` dijera algo que
+el `title` no dijera. Duró unas horas: al preguntarnos si íbamos a pintarlo alguna
+vez, la respuesta fue no, y entonces el campo entero salió del repo —dato,
+productores y plantillas—. **Un campo limpio que nadie lee sigue siendo peso
+muerto**, y un guardián que cuida un campo que ya no existe es peso muerto al
+cuadrado. El `titulo_original` de los sidecars SÍ se queda: `enriquecer.py` lo
+usa para decidir el `title_en`, que eso sí se ve.
+
+**Noveno, el del silencio: `[boleteria-muda]`.** Los guardianes de boletería
+que ya teníamos vigilan la COHERENCIA de lo que se emite —que el badge lo
+decida `ticketBadgeTarget()`, que `ticketing_model` use el vocabulario real,
+que no se escriba `ticketUrl` en camelCase—. Ninguno vigilaba la AUSENCIA: un
+festival vigente podía salir sin **una sola** función que dijera cómo se entra,
+y todo quedaba verde.
+
+Lo destapó CineAutopsia el 17 ago 2026. La agenda de la Cinemateca publicaba el
+enlace de TuBoleta de los seis programas de pago y decía «Entrada libre» en la
+clausura; mi ensamblador no miró el campo y encima escribió `is_free: false` en
+los siete, también en el libre. El dato estaba en la misma página de la que
+saqué todo lo demás. Lo cazó Juan preguntando —igual que los 638 enlaces de
+TIFF y las 415 banderas de FICDEH—.
+
+La regla: **gratis se declara, no se deja en blanco.** Un festival vigente cuyas
+funciones no dicen nada —ni `ticket_url`, ni `is_free`, ni
+`registration_url`— está mudo, y el silencio no es un dato, es una omisión.
+Solo aplica a los vigentes: reescribir el pasado de un festival archivado no le
+sirve a nadie.
+
+**Octavo, y el que explica por qué lo de FICDEH costó meses:
+`[paridad-derivados]`.**
+
+`flags` es un campo **derivado**: no existe en ninguna fuente. Ningún PDF,
+ningún Excel, ninguna web de festival trae banderas — las calculamos del país.
+Y ahí está la trampa: **una ausencia que nunca fue presencia no se nota.** Si
+falta un título salta a la vista, porque la fuente lo tenía y lo perdimos. Si
+falta `flags`, no hay nada río arriba de donde se haya caído.
+
+FICDEH corrió su festival entero con 415 films mostrando país y ninguna
+bandera. Su ensamblador era a medida —PDF, Excel, web y tuboleta— y nunca
+escribió el campo; los otros doce lo emiten porque salieron de la plantilla.
+
+**La regla: para cada par (fuente → derivado), un film con la fuente tiene que
+tener el derivado.** Los pares se declaran en el guardián y se **midieron
+antes de entrar**: `day→day_order`, `day→time`, `poster→posterSource` y
+`synopsis→synopsis_lang` se cumplen hoy en los 12 festivales publicados, 1.209
+films sin una sola excepción. No es una aspiración: es un invariante que ya se
+sostenía y que ahora no se puede romper en silencio. `country→flags` va aparte
+y solo cuenta como hueco si la bandera **se podía** derivar — un país fuera de
+tabla («Varios», o un idioma colado en el campo) es otro problema, y de ese se
+ocupa `[country-flags]`.
+
+**Ojo con la regla ingenua «campo presente en N−1 festivales»:** daría falsos
+positivos con `is_cortos` y `film_list`, que faltan legítimamente donde el
+festival no tiene programas de cortos. **Lo que distingue un hueco de una
+ausencia legítima es la dependencia, no la frecuencia.**
+
+**Regla nueva para todo ensamblador:** emitir `_cuentas` con `entradas`,
+`publicadas` y `descartadas` desglosadas por motivo. Declarar los descartes
+obliga a mirarlos; que sumen impide inventarlos.
+
+**Y la lección de método:** un guardián que nunca ha fallado no es de fiar.
+Los cuatro se probaron contra un sidecar roto a propósito antes de darlos por
+buenos, y ahí se cayó uno: `[sidecar-vacio]` usaba
+`_listas.get(a) or _listas.get(b)`, y **una lista vacía es falsa en Python**,
+así que el guardián de las listas vacías se dejaba vencer justo por una lista
+vacía. Se pregunta por PRESENCIA, no por verdad.
 ### Fase 2 · Configuración en FESTIVAL_CONFIG `[Senior Dev + PM]`
 
 **Objetivo:** El festival existe en la app con su configuración completa.
@@ -770,3 +1054,25 @@ producción durante FICMontañas 2026:
 | Póster de otra película del mismo director (FantasoFest 2026) | `AFICHE-Lqv` era "Los Que Vuelven" (Casabé 2019), NO "La Virgen de la Tosquera" (Casabé 2025) | Buscar el asset por TÍTULO en los uploads, no por proximidad/orden en la grilla; verificar que el póster corresponde a ESE film |
 | `title_en` traducido a mano en vez del oficial (riesgo, evitado) | Traducir "La Virgen de la Tosquera" daría "…Gravel Pit"; el oficial es "The Virgin of the Quarry Lake" | Regla: `title_en` = título internacional OFICIAL buscado+verificado (LB/circuito/IMDb), nunca máquina-traducción; sin oficial → sin `title_en` |
 | Still local 16:9 no recibía la banda editorial (FantasoFest 2026) | El sheet del corto detectaba editorial solo por CDN-URL, ignorando `posterSource` → still local caía a `<img>` recortado 2:3 | `_isEd3`/`_isEd4` honran `posterSource:'editorial'` (PR #305); still local de festival va con `poster`+`posterSource:'editorial'` |
+
+
+### `[calendario-entero]` — un día que se dibuja tiene que existir para el reloj
+
+La tira de días se arma con `dayKeys`; el reloj (`dayFullyPassed`,
+`screeningPassed`, la detección de HOY) lee `festivalDates`. Son **el mismo
+calendario**, y hasta el 23 ago 2026 tenían dueños distintos: `dayKeys` lo pisaba
+el JSON del festival, pero `festivalDates` estaba clasificado como *identidad* y
+el JSON solo podía rellenarlo si config lo tenía vacío.
+
+CineAutopsia dibujaba 8 días y el reloj conocía 4. Los cuatro huérfanos no se
+atenuaban nunca (`dayFullyPassed` corta con `if(!dateStr) return false`), sus
+funciones no contaban como pasadas, y el 25/26/27 habrían roto la detección de
+HOY con el festival en curso.
+
+El guardián exige tres cosas:
+1. Todo día de `dayKeys` tiene fecha en `festivalDates` — en config y en el JSON.
+2. El calendario de config **coincide** con el de su JSON. Esta es la que caza el
+   bug real: dentro de cada fuente todo cuadraba; lo que no cuadraba era una
+   contra la otra, y ahí no miraba nadie.
+3. `festivalDates` sigue siendo **contenido** en el loader, no identidad.
+

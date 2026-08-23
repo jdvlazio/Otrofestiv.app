@@ -17,9 +17,16 @@ const orden = entries => loadDomain({
   globals: { SIM_TIME: null },
 })._sortFestivals(entries, null).map(([id]) => id);
 
-// mismas fechas, como FINCA y FICDEH
-const fechas = { festivalStartStr: '2026-08-12T00:00:00', festivalEndStr: '2026-08-19T23:00:00' };
-const fin30 = { festivalStartStr: '2026-08-12T00:00:00', festivalEndStr: '2026-08-19T23:30:00' };
+// Mismas fechas, como FINCA y FICDEH. RELATIVAS A HOY, no fijas: con fechas
+// escritas a mano el test caducaba solo. Las de FINCA/FICDEH (12–19 AGO 2026)
+// eran «en curso» cuando se escribió el test y pasaron a «pasado» el 20 de
+// agosto: los dos primeros casos empezaron a fallar sin que nadie tocara nada,
+// porque en el tier `past` el orden es el inverso (más reciente primero) y la
+// prioridad editorial desempata. El test comprobaba la regla; la fecha fija lo
+// convirtió en una bomba de tiempo.
+const _dia = n => new Date(Date.now() + n * 864e5).toISOString().slice(0, 10);
+const fechas = { festivalStartStr: `${_dia(-1)}T00:00:00`, festivalEndStr: `${_dia(6)}T23:00:00` };
+const fin30  = { festivalStartStr: `${_dia(-1)}T00:00:00`, festivalEndStr: `${_dia(6)}T23:30:00` };
 
 test('sin prioridad: manda la fecha (comportamiento de siempre)', () => {
   // el que termina 30 min antes va primero — el accidente que motivó el cambio

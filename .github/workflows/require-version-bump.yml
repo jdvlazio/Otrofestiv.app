@@ -1,10 +1,25 @@
 name: Require version bump
 
-# Cinturón de seguridad: si un PR cambia app-code (src/, index.html, sw.js) sin
+# Cinturón de seguridad: si app-code (src/, index.html, sw.js) llega a main sin
 # actualizar version.json, las clientes ACTIVAS no recargan el código nuevo — el
 # poll de _checkVersionJson() compara version.json vs BUILD_VERSION y solo dispara
 # reload cuando difieren. Sin bump → quedan corriendo JS viejo indefinidamente.
-# Este gate lo previene. Rationale: .specify/memory/constitution.md.
+# Rationale: .specify/memory/constitution.md.
+#
+# ESTE CHECK YA NO BLOQUEA (Juan, 23 ago 2026). El bump dejó de vivir en la rama:
+# lo aplica `auto-bump-main.yml` una vez, sobre main, después de mergear.
+#
+# Por qué se relajó: bump-version.js escribe en CUATRO archivos (version.json,
+# sw.js, src/main.js, index.html). Exigirlo en cada PR hacía que dos PR
+# simultáneos que tocaran app-code tuvieran conflicto GARANTIZADO, siempre, en
+# los mismos cuatro archivos. No era un riesgo ocasional: era aritmética. El 23
+# de agosto el #694 chocó con el #693 y cuatro de los cinco archivos en conflicto
+# eran el bump; el único conflicto real de contenido fue un guardián nuevo.
+#
+# Por qué el job SIGUE EXISTIENDO y con el mismo nombre: `require-bump` es un
+# check REQUERIDO por la branch protection de main. Borrar el workflow dejaría
+# todos los PR inmergeables esperando un check que ya no corre — el mismo modo de
+# falla que cazó el PR #428. Así que el job se queda, informa, y nunca falla.
 #
 # Festivals/** NO está acá a propósito: el SW los sirve network-first y se
 # re-fetchean en cada load → no dependen del bump para frescura.
@@ -33,12 +48,15 @@ jobs:
           echo "---"
           APP=$(printf '%s\n' "$CHANGED" | grep -E '^(src/|index\.html$|sw\.js$)' || true)
           if [ -z "$APP" ]; then
-            echo "✓ Sin cambios de app-code — bump no requerido."
+            echo "✓ Sin cambios de app-code — este PR no mueve la versión."
             exit 0
           fi
           if printf '%s\n' "$CHANGED" | grep -qx 'version.json'; then
-            echo "✓ App-code cambió y version.json fue actualizado — OK."
+            echo "✓ El PR trae bump. No hace falta, pero no molesta: auto-bump-main lo"
+            echo "  volverá a calcular al mergear. Ojo que un bump en la rama es la causa"
+            echo "  número uno de conflictos con otros PR abiertos."
             exit 0
           fi
-          echo "::error::App-code cambió (src/, index.html o sw.js) sin actualizar version.json. Las clientes activas no recargarán el código nuevo. Corré 'node scripts/bump-version.js' y commiteá el resultado."
-          exit 1
+          echo "✓ App-code cambió sin bump — CORRECTO. auto-bump-main.yml lo aplica"
+          echo "  sobre main al mergear. No corras bump-version.js en la rama."
+          exit 0

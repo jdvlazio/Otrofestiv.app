@@ -1,0 +1,97 @@
+name: Auto-bump en main
+
+# EL BUMP DEJA DE VIVIR EN LA RAMA (Juan, 23 ago 2026).
+#
+# Antes, `require-bump` exigía que TODO PR que tocara src/, index.html o sw.js
+# incluyera el bump. Y bump-version.js escribe en CUATRO archivos: version.json,
+# sw.js, src/main.js e index.html. La consecuencia era aritmética, no ocasional:
+# dos PR simultáneos que tocaran código de app tenían conflicto GARANTIZADO, en
+# los mismos cuatro archivos, siempre. El 23 de agosto el #694 chocó con el #693
+# y cuatro de los cinco archivos en conflicto eran el bump.
+#
+# La razón de ser del gate sigue en pie: sin bump, `_checkVersionJson()` no ve
+# diferencia contra BUILD_VERSION y las clientes ACTIVAS se quedan con JS viejo
+# indefinidamente (el APK v6/v7 congelado salió de ahí). Pero ese objetivo se
+# cumple igual bumpeando UNA vez al mergear, en vez de exigirlo en cada rama.
+#
+# Dos trampas que este workflow tiene que esquivar, encontradas al montarlo:
+#   1. El GITHUB_TOKEN del repo es de solo lectura por defecto → hay que pedir
+#      `contents: write` explícitamente acá abajo.
+#   2. Un push hecho con GITHUB_TOKEN no dispara otros workflows. Si el deploy de
+#      Pages dependiera de eso, el bump saldría sin desplegarse y nadie lo notaría
+#      hasta que un cambio no apareciera en producción. Por eso el último paso
+#      pide el build de Pages por API, explícitamente, en vez de confiar en que
+#      el push lo dispare.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'index.html'
+      - 'sw.js'
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: auto-bump-main
+  cancel-in-progress: false
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    # Sin esto, el propio commit del bump vuelve a entrar por `paths` (toca
+    # index.html y src/main.js) y el workflow se persigue la cola. El push del
+    # GITHUB_TOKEN no dispara workflows, así que hoy no habría bucle — pero eso
+    # es una garantía de GitHub, no nuestra, y no quiero que el día que cambie
+    # nos deje un bucle de commits en main.
+    if: "!contains(github.event.head_commit.message, '[auto-bump]')"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Bump
+        id: bump
+        run: |
+          node scripts/bump-version.js
+          BUILD=$(python3 -c "import json;print(json.load(open('version.json'))['android'])")
+          echo "build=$BUILD" >> "$GITHUB_OUTPUT"
+          echo "Nuevo build: $BUILD"
+
+      - name: Validar que el bump no rompió nada
+        # El bump reescribe index.html y src/main.js. Es mecánico, pero corre en
+        # main sin revisión humana: si algo quedara inconsistente, [version-parity]
+        # y los demás guardianes lo cazan ANTES de commitear, no después.
+        run: python3 validate.py
+
+      - name: Commit
+        run: |
+          if git diff --quiet; then
+            echo "Sin cambios — el bump ya estaba puesto."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add version.json sw.js src/main.js index.html
+          git commit -m "chore: bump ${{ steps.bump.outputs.build }} [auto-bump]"
+          git push
+
+      - name: Disparar el build de Pages
+        # Ver trampa 2 arriba: el push de este job NO dispara workflows, así que
+        # el deploy se pide a mano. Si el repo sirve Pages por workflow y no por
+        # rama, esta llamada devuelve 404 y el paso no debe tumbar el job —
+        # el bump ya está en main, que es lo que importa.
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api --method POST "repos/${{ github.repository }}/pages/builds" \
+            && echo "Build de Pages solicitado." \
+            || echo "No se pudo pedir el build de Pages por API — revisar el deploy a mano."

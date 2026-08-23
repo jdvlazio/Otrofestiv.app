@@ -45,6 +45,12 @@ function load(opts = {}) {
       DEFAULT_DURATION_MIN: 90,
       FESTIVAL_BUFFER: opts.buffer != null ? opts.buffer : 10,
       DAY_KEYS: opts.DAY_KEYS || ['D1', 'D2'],
+      // Restricción de ciudad (15 ago 2026): getSuggestions ganó tres deps.
+      // Default 'all' + stubs neutros = el comportamiento previo intacto; los
+      // tests de ciudad inyectan su propio venueMatches por opts.
+      activeVenue: opts.activeVenue || 'all',
+      keepCityOnly: opts.keepCityOnly || (sel => sel),
+      venueMatches: opts.venueMatches || (() => true),
       FILMS: opts.FILMS || [],
       savedAgenda: 'savedAgenda' in opts ? opts.savedAgenda : { schedule: [] },
       watchlist: opts.watchlist || new Set(),
@@ -53,6 +59,15 @@ function load(opts = {}) {
       screeningPassed: s => passed.has(s._title || s.title),
       screensConflict: opts.screensConflict || mkConflict(),
       isScreeningBlocked: opts.isScreeningBlocked || (() => false),
+      // screeningPlannable (dueño único, 16 ago): la Recuperación lo consume.
+      // El stub COMPONE los stubs de este mismo sandbox — mismo contrato que
+      // la versión real, con las internas que cada test ya controla.
+      // planCityVenues (dueño del SET, 16 ago): getSuggestions lo publica al
+      // arrancar. Stub neutro = sin restricción, como el default de la app.
+      planCityVenues: opts.planCityVenues || (() => null),
+      screeningPlannable: opts.screeningPlannable
+        || (s => !s._cancelled && !passed.has(s._title || s.title)
+             && !(opts.isScreeningBlocked || (() => false))(s)),
       t: k => k,
     },
   });

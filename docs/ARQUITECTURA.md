@@ -577,6 +577,214 @@ Y lo que un hook no puede cortar, lo vigila `validate.py`:
 | `[sin-symlinks]` | ningún enlace simbólico versionado — tumban el deploy de Pages |
 | `[peso-repo]` | material de trabajo versionado (ofimáticos, > 3 MB) |
 | `[stash-compartido]` | stash vivo con varios worktrees — la pila es del repo, no del worktree |
+| `[plannable-dueno-unico]` | que nadie reimplemente «qué funciones son planificables» fuera de `plannableScreens` (exención explícita: `// plannable-ok:`) |
+| `[plan-concepto]` | que «Plan» vaya en mayúscula en las 3 locales y en el fallback estático — es el nombre de un concepto, y la regla se eligió por ser verificable |
+| `[doc-cadena]` | que esta documentación y los guardianes se citen mutuamente |
+
+#### La identidad nunca sale de una etiqueta
+
+`short` es cómo se **muestra** una sede; la identidad es la sede. Confundirlos costó
+un bug en producción: el filtro agrupaba por `short`, que no es único entre ciudades
+(FICDEH tiene dos «Cinema Local» y dos «Alianza Francesa»), así que elegir una traía
+las funciones de la otra y la segunda desaparecía de su lista. La clave correcta es
+**(ciudad, short)**: la ciudad separa, el short agrupa — dentro de una ciudad el
+short repetido son las salas de un edificio y agruparlas es lo que se quiere.
+
+Tres guardianes sostienen la regla, y cada uno cubre lo que el otro no ve:
+
+| | |
+|---|---|
+| `[short-ambiguo]` | **el dato**: avisa si un short se repite entre ciudades (validate-festivals) |
+| `venueMatches.test.js` | **la unidad**: el predicado no cruza ciudades y sí agrupa salas |
+| `P08` | **el invariante**: filtrar por una sede nunca devuelve otra ciudad, en CADA festival |
+
+P08 es el que más vale: no sabe nada de centinelas ni de `short`, así que sigue
+cazando la clase aunque cambiemos por completo la implementación. Juzga el
+resultado, no el camino — mismo patrón que el oráculo del planeador (§15.6).
+
+> **La familia del bug.** El 9 ago aparecieron tres del mismo tipo: `day_order` que
+> no era el índice del día, `COUNTRY_NAMES` sin `AR` (que devolvía `''`), y el short
+> como clave. Ninguno lanzó un error: los tres devolvieron algo **plausible** —un
+> orden, una línea más corta, un conteo— y por eso sobrevivieron meses. La regla que
+> dejan: **una derivación que puede fallar tiene que fallar fuerte o no fallar
+> nunca**; devolver un valor creíble es la peor de las tres opciones.
+
+#### La sala que parte un programa — `[sala-mixta]`
+
+El anclaje de función (`sealSharedSlots`) agrupa por `día|hora|sede|sala`. Si en
+un programa de cortos una entrada trae `sala` y las demás no, esa obra **queda
+fuera del bloque**: la duración se cuenta de menos, no cuenta como conflicto con
+sus compañeras, el planificador puede agendar dos obras de la misma función, y el
+aviso de la ficha dice «va con otras N obras» con N corta.
+
+Cazado el 17 ago 2026 en FICDEH (17 AGO 17:30, Cinemateca de Bogotá): cinco cortos
+que suman **86 min**, «La independencia» con `sala: "Sala Capital"` y las otras
+cuatro sin sala → el bloque valía **66**.
+
+`[sala-mixta]` (validate-festivals) mira **solo el subconjunto de formato corto**
+(≤45 min) de cada `día|hora|sede`: si entre esos unos traen sala y otros no, falla.
+Exigir que TODA la función fuera corta dejaba escapar el caso original, porque a esa
+hora y en esa sede había además un taller de 180 min en otra sala — eso es legítimo
+y por eso no se marca cuando hay largos o eventos en la mezcla. Las cuatro funciones
+de FICDEH que ya estaban mal al escribir la regla quedan en `DEUDA_SALA` como
+WARNING (el dato es del festival y arreglarlo exige la guía oficial); cualquier caso
+nuevo falla en duro.
+
+#### El paraguas no promete formato — `[vocab-obra]`
+
+«No siempre son películas. Esto es regla» (Juan, 17 ago 2026). El catálogo lleva
+talleres, charlas y eventos; llamarlos «película» en un texto que los abarca a
+todos promete un formato que la app no controla. El vocabulario tiene dos
+paraguas y ninguno es un formato: **ACTIVIDAD** para lo que ocurre (incluye
+talleres y eventos), **OBRA** para lo que se programa. *Función* sigue siendo solo
+la proyección.
+
+El hallazgo que lo destapó: el encabezado del Recuerdo decía «Viste 4 películas»
+mientras el chip contiguo decía «obras vistas» — dos vocabularios para lo mismo,
+en pantallas vecinas. Se barrieron 13 strings ES (más sus pares EN/PT); en inglés
+el paraguas es **title**, que es de uso corriente en festivales y no promete
+formato.
+
+`[vocab-obra]` (validate.py) mira el VALOR de cada clave de `src/i18n/i18n.js` —
+lo que el usuario lee— y no el nombre de la clave: hay claves históricas
+(`misc_pelicula`, `plan_pelicula_hoy`) cuyo texto ya dice «obra», y renombrarlas
+sería un cambio sin lector. Quedan EXENTOS los nombres de FORMATO
+(`label_cortometraje`, `label_cortos`), donde «cortometraje» es el dato correcto y
+no un paraguas.
+
+#### El nombre de la actividad — `[event-kind-conocido]`
+
+`event_kind` es la palabra que la card le pone encima a una actividad: TALLER,
+CHARLA, MASTERCLASS. `makeEventPoster` la traduce con dos mapas (`_kindMapES` y
+`_kindMapEN` en `src/view/components.js`) y, si la clave no está, **cae al genérico
+«EVENTO»**. No falla, no avisa: produce una card correcta que no dice nada.
+
+Dos formas de romperse, cazadas el 10 ago 2026 con FICMA ya abierto:
+
+1. **La palabra que pusimos nosotros.** FICDEH («💬 Charlas que Unen», 18) y FICMA
+   («💬 Charlas», 6) mostraban PONENCIA — una palabra que no aparece en ninguna
+   fuente de ninguno de los dos; la Franja Académica de FICMA dice TALLERES y
+   CHARLAS. Ver también [nombre oficial / secciones tal cual]: **el vocabulario es
+   del festival, no nuestro**, y eso vale para el kind igual que para la sección.
+2. **La clave que nunca existió.** Los 8 talleres de FICMA traían `'taller'`, que
+   jamás estuvo en el mapa: llevaban meses mostrando «EVENTO» y nadie lo vio, porque
+   una card genérica no se distingue de una card correcta si no sabés qué esperabas.
+
+`[event-kind-conocido]` (validate-festivals) exige que todo `event_kind` del dato
+exista en **los dos** mapas — leídos por separado, porque una clave solo en ES
+sobrevive hasta que alguien abre la app en inglés. Si el parser no logra leer los
+mapas se declara **CIEGO y bloquea**, en vez de aprobar por no haber encontrado nada.
+
+Y una regla de orden que no se puede invertir: **primero el mapa, después el dato.**
+`event_kind` solo alimenta `makeEventPoster`, y `agenda.js` (×2) y `programa.js` lo
+llaman sin la sección — así que migrar el dato antes que el código no deja el
+nombre viejo: deja «EVENTO», que es peor.
+
+#### Festival aplazado — `status` y `[festival-aplazado]`
+
+El terremoto de Manizales (10 ago 2026) encontró a la app diciendo «FICMA EN
+CURSO» —punto verde, 90 funciones, chips AHORA— mientras el festival publicaba
+que no habría festival. El parche de urgencia (`group:'test'`) lo hizo
+desaparecer sin explicar; el estado de verdad es **`status:{kind:'postponed',
+since, note, url}`** en `FESTIVAL_CONFIG`:
+
+- `_classifyFestival` devuelve `'postponed'` **antes** de la aritmética de fechas
+  — un solo dueño, y de él caen en cascada la preselección del splash, el punto
+  verde, el orden del riel y la rehidratación del plan.
+- El festival **se ve** (card con distintivo APLAZADO, última de los vigentes,
+  fuera de «Próximos» — un aplazado no tiene fecha) pero **no invita a ir**: sin
+  AHORA (`isNowShowing` gana el estado), sin abrir en «hoy» (loader), y la banda
+  persistente del header dice las palabras del **propio festival**: `note`
+  verbatim, y `note_en` como traducción nuestra aprobada por Juan (opcional; sin
+  ella el EN muestra el ES intacto — nunca se traduce en runtime). Etiqueta y
+  enlace pasan por `t()`.
+- Reversión: fechas nuevas + borrar `status`. Los datos no se tocan.
+
+**Un aplazado tampoco TERMINÓ.** `festivalEnded()` era pura aritmética contra
+`FESTIVAL_END`, y las fechas viejas se cruzan igual: FICMA habría entrado en Modo
+Recuerdo el 18 ago —«Tu festival», «Marcá lo que viste y calificálo»— por ocho días
+que no ocurrieron, sin que nadie desplegara nada. El estado viaja por el bridge
+(`FESTIVAL_POSTPONED`, junto a `FESTIVAL_END`) y `festivalEnded()` lo respeta: 27
+call sites corregidos en un punto. En Mi Plan el plan guardado sigue rindiendo, y
+el aviso NO se repite: la banda del header ya está visible en esa pestaña.
+
+`[festival-aplazado]` (validate.py) exige el status COMPLETO: `note` (sin él la
+banda sale vacía), `url` (el comunicado), `since`, y `kind` exactamente
+`'postponed'` — un typo haría que `_classifyFestival` lo ignorara en silencio y
+el festival volvería a salir «en curso», que es el bug que este estado evita.
+
+#### Cuándo la suite dice la verdad — `scripts/test.sh`
+
+Medido el 10 ago 2026, sin reintentos: con la máquina **libre**, la suite da 0
+fallos a 5 workers, dos corridas seguidas. Con **carga externa** —otra sesión de
+Claude corriendo sus tests en la misma máquina— la MISMA suite falló 11 veces, y
+5, y 6, con tests distintos cada vez. El puerto por corrida aisló el servidor;
+no aísla la CPU.
+
+Dos correcciones, ninguna de ellas «arreglar tests»:
+
+- **`test.sh` avisa antes de correr** cuando la carga supera el 70% de los núcleos
+  o hay otra corrida de Playwright viva. No bloquea: un rojo bajo carga no es un
+  rojo de la app, y decirlo vale más que esconderlo.
+- **`retries: 2` → `1`.** Con dos reintentos la suite reportaba «13 flaky, 0
+  fallos» y eso se leía como verde; sin reintentos, esa misma suite fallaba 11.
+  Los reintentos no distinguían «la máquina estaba ocupada» de «la app falla una
+  de cada tres veces». Y los flaky ahora se **nombran** al final de la corrida:
+  un flaky no es un test que pasa, es un test que no sabe si pasa.
+
+> Tres trampas de shell, las tres cazadas probando y no leyendo: `set -o pipefail`
+> mataba el script cuando `pgrep` no encontraba nada (cero salida, exit 1);
+> `${otras:+…}` se expandía con `otras=0` porque «0» no es cadena vacía; y el
+> `grep '^ *N flaky'` nunca casaba porque el reporter escribe secuencias de escape
+> del terminal antes del texto.
+
+#### La doc de contexto no puede envejecer — `[claude-md-fresco]`
+
+`CLAUDE.md` se genera leyendo el repo, pero el generador **se corre a mano** y
+nadie lo verificaba. El archivo que un ayudante lee PRIMERO envejecía en silencio.
+
+> **La cicatriz (15 ago 2026).** Decía «Android: Closed testing — Alpha» meses
+> después de que las dos apps estuvieran publicadas y verificadas. De ahí salió el
+> diagnóstico de que «nadie pudo instalar la app» durante FICMA, FICDEH y FINCA
+> —falso— y la petición a Juan de confirmar algo que el repo debía saber. **Un
+> dato caduco en la doc de contexto no produce una duda: produce una conclusión
+> falsa, con seguridad.** Es peor que un hueco: un hueco se pregunta.
+
+Dos correcciones, y la segunda es la que dura:
+
+- **El estado que el archivo no puede saber, sale del archivo.** El estado de las
+  tiendas vive en App Store Connect y Play Console; en `CLAUDE.md` quedan el
+  enlace y el procedimiento. Misma regla que el radar («si no lo mediste, no lo
+  afirmes») y que los guardianes que se declaran ciegos en vez de aprobar.
+- **El estado que sí deriva del repo, se verifica.** `[claude-md-fresco]`
+  regenera el archivo en un temporal y compara las secciones DERIVADAS —la tabla
+  de festivales y las features—; si difieren, bloquea y dice el comando. La línea
+  del último commit se excluye a propósito: cambia con cada commit y compararla
+  haría fallar el check siempre. El check restaura el archivo: no deja huella.
+
+#### La cadena doc ↔ guardián
+
+Una regla escrita que nadie ejecuta es una opinión; un guardián que nadie documenta
+es una trampa. `[doc-cadena]` cierra el circuito en **las dos direcciones**:
+
+- **doc → código.** Una etiqueta citada en la documentación sin ejecutor real es una
+  promesa vacía. Hoy son **cero** y es un error bloqueante que dejen de serlo.
+- **código → doc.** Un guardián sin una línea acá es deuda: se cumple, pero nadie
+  puede leer la doc y saber que existe, así que se re-descubre a golpes o se duplica.
+  Techo que solo BAJA (mismo patrón que `module-size`): los 46 que ya estaban quedan
+  con número, y **uno nuevo nace documentado o no entra**.
+
+> Medido el 9 ago 2026, a partir de «hemos escrito muchas cosas pero no todas se
+> cumplen en cadena» (Juan). El resultado corrigió la intuición: de 61 etiquetas
+> documentadas, **las 61 tenían ejecutor**. El hueco estaba al revés — de 100
+> guardianes reales, **46 no se mencionaban en ningún documento**.
+>
+> Dos advertencias que costaron dos iteraciones, y que valen para cualquier check
+> que lea código con regex: el extractor tiene que conocer **cómo declara sus
+> etiquetas cada archivo** (`check = 'x'` en validate.py, `'[x]'` en el mensaje de
+> validate-festivals.js, `err('x', …)` en lint-catalog.py) o inventa huérfanos —
+> primero dio 54 falsos, después 5 «promesas rotas» que sí existían. Un check con
+> parser flojo no avisa de menos: **avisa mal**, que es peor.
 
 > Por qué barreras y no propósitos: un agente encadena comandos de git en un
 > segundo, sin la fricción que tiene una persona al ver el diff en pantalla. La
@@ -728,6 +936,37 @@ miente, y FICDEH —que arrancaba tres días después— tiene taller multi-día
 creó `plannableScreens` como **dueño único** de «qué funciones son planificables
 para vos» (cancelada · pasada · franja vetada · taller entero-o-nada), consumido por
 el planeador, el oráculo y el recorrido.
+
+**La segunda vuelta del dueño único** (16 ago 2026, re-corrida del QA). El predicado
+POR FUNCIÓN se extrajo como `screeningPlannable(s)` (cancelada · pasada · franja
+vetada · ciudad): el panel de alternativas reimplementaba 2 de los 4 chequeos y
+ofrecía funciones de otras ciudades (436 de 836 con filtro Bogotá) y canceladas
+por el sismo (118), y la Recuperación de Sugerencias se saltaba `_cancelled`.
+Tres lecciones quedaron con guardián o test de mutación:
+- `[plannable-dueno-unico]` captura ahora el cuerpo del filtro por **balance de
+  paréntesis**, no por ventana de caracteres — la versión anterior leía 240 y el
+  filtro del panel medía 337: un guardián que depende del largo no vigila,
+  muestrea.
+- El SET de ciudad (`planCityVenues`, view/helpers) se **publica en cada sitio de
+  uso**, no solo al Calcular: quien armaba el plan a mano tenía el predicado sin
+  restricción — lo destapó un test de mutación que al principio pasaba en vacío.
+- `_pickScreen` (handlers): resolver (título, día, hora) **prefiere la función
+  elegible** — la otra cabeza del bug del sync (#612): aquel protegía el plan
+  guardado, esta protege la puerta de entrada.
+
+**Y un dueño único solo lo es si nadie más lo reimplementa** (16 ago 2026). Con la
+restricción de plan por ciudad recién puesta, el plan **volvió a cruzar ciudades**: no
+por la regla —`plannableScreens` filtraba bien— sino porque `squeezeExcluded`
+(`controller/handlers.js`) tenía su propia copia del predicado y reinsertaba las
+excluidas **al guardar**, después del motor, y exenta del chequeo de conflicto por
+`_squeezed`. La misma copia estaba en `forceInclude` («+ Incluir»). El fix tiene tres
+capas, porque una sola habría vuelto a fallar: los consumidores usan el dueño;
+`verifyPlan` gana la violación `ciudad-fuera` —la red que caza a **cualquiera** que
+inserte, no solo al camino feliz—; y `[plannable-dueno-unico]` en `validate.py` impide
+que la copia vuelva. Las preguntas sobre el **catálogo** (qué días existe una obra, por
+qué quedó fuera) son legítimamente otras y necesitan ver lo que el dueño ya filtró: se
+declaran con `// plannable-ok: <razón>`, que el guardián respeta. Declararlas, no
+asumirlas, es lo que separa una excepción de una fuga.
 
 > Y al extraerlo apareció la trampa que este mismo documento advierte: el worker del
 > planeador se arma con `.toString()` sobre `_SCHED_PURE_FNS` (`controller/calc.js`).

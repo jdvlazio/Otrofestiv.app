@@ -9,15 +9,15 @@ import { FESTIVAL_CONFIG, NOTICES, mergeFestivalSections } from '../config.js';
 import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
 import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
-import { DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
+import { DAYS, DAY_SHORT_EN, _langDates, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
 import { closeFestivalSheet, openCitySheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
-import { _renderProgramaContent, lugarClose } from '../view/programa.js';
+import { _renderProgramaContent, lugarClose, scrollDtabsToActive } from '../view/programa.js';
 import { _fixStickyOffset } from '../view/agenda.js';
 import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave } from './persistence.js';
 import { report } from '../telemetry.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
-import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav } from './pipeline.js';
+import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, _syncPmodeTabs } from './pipeline.js';
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
@@ -27,7 +27,7 @@ import { state } from '../state/state.js';
 import { deriveClear } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
-import { _autoResolveFestivalPosters, _renderFestivalSelector } from './festival.js';
+import { _autoResolveFestivalPosters, _renderFestivalSelector, renderPostponedBanner } from './festival.js';
 
 // Fetch del JSON de festival con timeout + reintentos (AbortController).
 // GitHub Pages a veces entrega los headers (200) pero el cuerpo se cuelga → el
@@ -164,9 +164,29 @@ export async function loadFestival(id){
           if(f.info) return;
           // `date` (día de la función original) desambigua cuando una obra tiene
           // varias funciones y solo una cambió. Sin `date` → aplica a todas.
-          const n=_avisos.find(x=>x.title===f.title&&(!x.date||x.date===f.day));
+          // Tres alcances, de más ancho a más fino (modelo de tres niveles,
+          // docs/PROTOCOLO.md): CIUDADES → título+fecha → título.
+          // `cities` nace del sismo del 11 ago 2026: FICDEH canceló Quibdó, Cali,
+          // Pereira y Manizales —88 de 444 funciones, 27 sedes, 10 obras que solo
+          // se veían ahí— y siguió en las otras 7 ciudades. Por título habrían sido
+          // 88 entradas y 88 banners para UN solo hecho.
+          // La ciudad se lee del venue CRUDO (data.venues), no de venueCity():
+          // ese helper OCULTA la ciudad cuando coincide con la del festival — es
+          // para mostrar, no para identificar.
+          const _city=((data.venues||{})[f.venue]||{}).city||'';
+          const n=_avisos.find(x=>
+            Array.isArray(x.cities)
+              ? (!!_city && x.cities.includes(_city))
+              : (x.title===f.title&&(!x.date||x.date===f.day)));
           if(!n) return;
-          if(n.type==='cancelled'){ f._cancelled=true; return; }
+          if(n.type==='cancelled'){
+            f._cancelled=true;
+            // La causa ya vive UNA vez en el banner: la card no la repite. Sin
+            // esto arrastraba «Pendiente nueva fecha», que se escribió para
+            // REPROGRAMADA y en una cancelación por tragedia es una promesa falsa.
+            if(n.note) f._cancelExplained=true;
+            return;
+          }
           if(n.type==='rescheduled'&&(n.newDay||n.newTime||n.newVenue)){
             f._movedFrom={day:f.day,time:f.time,venue:f.venue};
             if(n.newDay){
@@ -194,10 +214,21 @@ export async function loadFestival(id){
       // CONTENIDO (días, secciones, ticketing…): el dueño es el JSON.
       // Gate: validate.py [festival-name-parity]. Nada pisa storageKey.
       const _identFields=['name','shortName','city','dates','dates_en','year',
-        'timezoneOffset','festivalDates'];
+        'timezoneOffset'];
+      // `festivalDates` PASÓ de identidad a contenido (Juan, 23 ago 2026).
+      // Estaba archivado junto al nombre y la ciudad, así que el JSON solo podía
+      // rellenarlo si config lo tenía vacío — pero `days`/`dayKeys`, que son LA
+      // MISMA COSA (el calendario del festival), sí los pisa el JSON. El
+      // calendario quedaba partido en dos dueños: CineAutopsia dibujaba 8 días en
+      // la tira y `FESTIVAL_DATES` solo conocía 4. Los otros cuatro no existían
+      // para el reloj — `dayFullyPassed` devolvía false por `if(!dateStr)`, así
+      // que el VIE 21 nunca se atenuó, sus funciones nunca contaron como pasadas,
+      // y el 25/26/27 habrían roto la detección de HOY estando el festival vivo.
+      // El calendario tiene un solo dueño, y es el JSON — como el resto del
+      // contenido. Gate: validate.py [calendario-entero].
       const _contentFields=['days','dayKeys','dayShort','dayShort_en',
         'dayLong','prioLimit','eventPosterLabel','group','ticket_url','ticketing_model',
-        'sections']; // P2.2 — secciones data-driven desde el JSON del festival
+        'sections','festivalDates']; // P2.2 — secciones data-driven desde el JSON del festival
       _contentFields.forEach(k=>{ if(data[k]!=null) cfg[k]=data[k]; });
       _identFields.forEach(k=>{ if(data[k]!=null&&cfg[k]==null) cfg[k]=data[k]; });
       // Snapshot de identidad ya resuelta — el bloque config{} legacy de abajo
@@ -321,6 +352,11 @@ export async function loadFestival(id){
   state.batchUpdate({
     FESTIVAL_STORAGE_KEY: cfg.storageKey,
     FESTIVAL_END: new Date(cfg.festivalEndStr+(cfg.timezoneOffset||'')),
+    // Viaja junto a FESTIVAL_END porque es su corrección: festivalEnded() es pura
+    // aritmética contra esa fecha, y un festival APLAZADO la cruza igual — FICMA
+    // habría entrado en Modo Recuerdo el 18 ago, pidiéndole a la gente calificar
+    // películas que nunca vio. Ver domain/time.js festivalEnded.
+    FESTIVAL_POSTPONED: !!(cfg.status&&cfg.status.kind==='postponed'),
     ...deriveClear(cfg),
   });
   // Rebuild day tabs DOM
@@ -338,6 +374,7 @@ export async function loadFestival(id){
         cartelaMode='horario';
         setProgramaView('grid'); // TODO → siempre Grid
         document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day==='all'));
+        _syncPmodeTabs(); // la píldora Hoy/Mañana espeja al día activo (acá: ninguno)
         _renderProgramaContent(true); // cambio de día (TODO) → scroll al tope
         _updateProgramaActiveFilter();
         if(activeMNav!=='mnav-cartelera') switchMainNav('mnav-cartelera');
@@ -350,7 +387,12 @@ export async function loadFestival(id){
 
       cfg.days.forEach(day=>{
       const btn=document.createElement('button');
-      btn.className='dtab'+(dayFullyPassed(day.k)?' past':'');
+      // Sin `past` acá: en este punto FESTIVAL_DATES todavía es el del festival
+      // ANTERIOR (se publica en el batchUpdate, ~60 líneas más abajo), así que
+      // dayFullyPassed cortaba en `if(!dateStr) return false` y NINGÚN día se
+      // atenuaba nunca, en ningún festival. Se marca después del puente, cuando
+      // el calendario y FILMS ya son los de este festival. Ver el pase de `past`.
+      btn.className='dtab';
       btn.dataset.day=day.k;
       const _dtabLblES=day.lbl;
       const _dtabLblEN=(DAY_SHORT_EN[day.k]||'').split(' ')[0]||day.lbl;
@@ -362,6 +404,7 @@ export async function loadFestival(id){
         activeDay=day.k;activeVenue=keepCityOnly(activeVenue);selectedIdx=null;
         setProgramaView('list'); // día específico → siempre Lista (horarios/planificación)
         document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===day.k));
+        _syncPmodeTabs(); // la píldora Hoy/Mañana espeja al día elegido
         _renderProgramaContent(true); // cambio de día específico → scroll al tope
         _updateProgramaActiveFilter();
         if(activeMNav!=='mnav-cartelera') switchMainNav('mnav-cartelera');
@@ -418,6 +461,15 @@ export async function loadFestival(id){
     watched: new Set([...state.get('watched')].filter(t=>_validTitles.has(t))),
     prioritized: new Set([...state.get('prioritized')].filter(t=>_validTitles.has(t))),
   });
+  // ── Pase de `past` sobre la tira de días ──────────────────────────────────
+  // AHORA, no antes: dayFullyPassed necesita el calendario (FESTIVAL_DATES) y las
+  // funciones (FILMS) de ESTE festival, y las dos cosas acaban de publicarse en
+  // el batchUpdate de arriba. Hecho en el DOM build, leía los del festival
+  // anterior. Un solo dueño de la verdad — la función de dominio — evaluado
+  // cuando la verdad existe. Gate: validate.py [calendario-entero].
+  document.querySelectorAll('.dtab[data-day]').forEach(b=>{
+    if(b.dataset.day!=='all') b.classList.toggle('past', dayFullyPassed(b.dataset.day));
+  });
 
   // ► SYNC DEL PLAN CONTRA EL CATÁLOGO ───────────────────────────────
   // El hydrate de savedAgenda (BATCH 2) corre ANTES de que exista FILMS, así
@@ -454,8 +506,13 @@ export async function loadFestival(id){
   }
 
   // Set active day to today
+  // Aplazado: NO aterrizar en «Hoy» aunque el calendario diga que el festival va —
+  // sus fechas viejas siguen en el dato a propósito. Se abre como un festival
+  // futuro: grilla completa, sin «hoy». (El mismo estado ya silencia AHORA y la
+  // rehidratación del plan vía _classifyFestival/isNowShowing.)
+  const _postponed=!!(cfg.status&&cfg.status.kind==='postponed');
   const _ts=simTodayStr();
-  const _ni=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);
+  const _ni=_postponed?-1:DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_ts);
   if(_ni>=0){
     activeDay=DAY_KEYS[_ni];
     programaSubMode='hoy'; // Durante el festival → ir directo a Hoy
@@ -466,7 +523,11 @@ export async function loadFestival(id){
   const _fn=document.querySelector('.hdr-fest-name');
   const _fd=document.querySelector('.hdr-fest-dates');
   if(_fn) _fn.textContent=festivalShortName(cfg);
-  if(_fd) _fd.textContent=' · '+(_lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates)+(cfg.year?' '+cfg.year:'');
+  if(_fd) _fd.textContent=' · '+_langDates(cfg)+(cfg.year&&!_postponed?' '+cfg.year:'');
+  // Banda APLAZADO — dueño único: renderPostponedBanner (festival.js). Se llama
+  // SIEMPRE (limpia sola si no aplica; cambio de festival la retira) y también
+  // desde setLang, porque la banda persiste y el cambio de idioma no pasa por acá.
+  renderPostponedBanner(cfg);
   // Re-render festival selector con el nuevo festival activo
   _renderFestivalSelector(id);
   // Persist choice
@@ -487,9 +548,7 @@ export async function loadFestival(id){
   // El render fija activeDay + la clase .on, pero no scrollea #dtabs → sin esto
   // la barra arranca en el día 1 con el día de hoy fuera de pantalla. Corre tras
   // el doble-rAF (barra ya pintada y medible). Mismo patrón que filterByDay.
-  const _dtabs=document.getElementById('dtabs');
-  const _onDtab=_dtabs&&_dtabs.querySelector('.dtab.on');
-  if(_dtabs&&_onDtab) _dtabs.scrollLeft=_onDtab.offsetLeft-_dtabs.offsetLeft;
+  scrollDtabsToActive();
   // Tab de aterrizaje contextual (regla de Juan, 17 jul): DURANTE el festival, si el
   // usuario YA tiene plan, su pantalla de trabajo es Mi Plan — aterrizar ahí. Sin plan
   // (o festival futuro/pasado) → Programa, como siempre: un Mi Plan vacío no invita a

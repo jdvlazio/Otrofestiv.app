@@ -12,7 +12,7 @@
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, posterParts, sala, vcfg, venueMatches, venueCity } from './helpers.js';
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -50,19 +50,41 @@ export function renderProgramaChipsHTML(state){
 // en otro (TT y FantasoFest la misma semana pueden compartir título de corto/programa).
 // El add (_dismissNotice) y el check (getActiveNotices) usan ESTE helper → no divergen.
 // Separador NUL (imposible en un festId [a-z0-9]) evita colisiones festId-titulo.
+// Un aviso por CIUDADES no tiene `title`: su clave estable es `id`. Sin esto, la
+// clave sería «…\0undefined» y descartar un aviso ocultaría cualquier otro sin título.
 export function _noticeKey(title){ return (_activeFestId||_DEFAULT_FEST_ID)+String.fromCharCode(0)+title; }
+export function noticeId(n){ return n.id||n.title||''; }
+
+// _noticeAfecta — ¿este aviso alcanza a ESTA función? Es el alcance del aviso, el
+// mismo que sella el loader: por CIUDADES, o por título (+fecha si la trae).
+function _noticeAfecta(n,f){
+  if(Array.isArray(n.cities)) return n.cities.includes(vcfg(f.venue).city||'');
+  return n.title===f.title&&(!n.date||n.date===f.day);
+}
 
 export function getActiveNotices(){
   const festId=(_activeFestId||_DEFAULT_FEST_ID);
   const today=new Date(); today.setHours(0,0,0,0);
   return NOTICES.filter(n=>{
     if(n.festival!==festId) return false;
-    if(_dismissedNotices.has(_noticeKey(n.title))) return false;
+    if(_dismissedNotices.has(_noticeKey(noticeId(n)))) return false;
     // Banner desaparece al día siguiente de la función cancelada
     if(n.date){
       const funcDate=new Date(n.date+'T00:00:00');
       funcDate.setDate(funcDate.getDate()+1); // día siguiente
       if(today>=funcDate) return false;
+    }
+    // ── Un aviso se muestra si INTERSECTA con lo que hay en pantalla ──────────
+    // (regla de Juan, 12 ago 2026.) Filtrando BOGOTÁ —donde FICDEH no canceló
+    // nada— el banner seguía hablando de las 4 ciudades del sismo: no es ruido,
+    // se lee como que Bogotá está afectada. Es lo contrario de informar.
+    // El predicado se apoya en venueMatches, el dueño único del filtro de lugar,
+    // así que vale igual para 'all', para `city:` y para una SEDE concreta — y
+    // generaliza al aviso de una función suelta: si filtrás una sede donde esa
+    // función no va, el aviso no aparece.
+    if(activeVenue!=='all'){
+      const {FILMS}=state.snapshot();
+      if(!FILMS.some(f=>_noticeAfecta(n,f)&&venueMatches(f.venue,activeVenue))) return false;
     }
     return true;
   });
@@ -71,8 +93,25 @@ export function getActiveNotices(){
 export function renderNoticesBannerHTML(state){
   const active=getActiveNotices();
   if(!active.length) return '';
+  const {_lang}=state.snapshot();
   return active.map(n=>{
     const label=n.type==='cancelled'?t('notice_cancelada'):t('notice_reprogramada');
+    // Aviso CON causa (note): habla el festival, con sus palabras y su enlace. Es
+    // el único sitio donde se explica el porqué — las cards solo marcan CANCELADA.
+    // `note` va en ES en todos los idiomas salvo que traiga note_en (mismo criterio
+    // que status.note: no traducimos palabras ajenas sin aprobación).
+    if(n.note){
+      const _esc=s=>String(s||'').replace(/&/g,'&amp;');
+      const _txt=(_lang!=='es'&&n.note_en)||n.note;
+      return`<div class="notice-banner">
+      <div class="notice-banner-dot"></div>
+      <div class="notice-banner-body">
+        <div class="notice-banner-label">${label}</div>
+        <div class="notice-banner-text">${_txt}${n.url?`<br><a class="fest-postponed-link" href="${_esc(n.url)}" target="_blank" rel="noopener">${t('notice_link')}</a>`:''}</div>
+      </div>
+      <button class="notice-banner-close" data-action="dismissNotice" aria-label="${t('misc_cerrar')}" data-title="${noticeId(n).replace(/"/g,'&quot;')}">✕</button>
+    </div>`;
+    }
     const msgCancelled=`<span>${t('plan_fecha_pendiente')}</span>`;
     const msgRescheduled=n.newDay&&n.newTime?`${t('notice_nueva_funcion')} <span class="txt-white60">${n.newDay} · ${n.newTime}${n.newVenue?' · '+n.newVenue:''}</span>`:'';
     const msg=n.type==='cancelled'?msgCancelled:msgRescheduled;
@@ -126,6 +165,7 @@ export function renderProgramaListHTML(state){
       const inWL=watchlist.has(f.title);
       const passed=screeningPassed(f);
       const isNow=isNowShowing(f);
+      const isQa=isNow&&isQaOnlyNow(f);
 
       const _isPrograma=f.is_programa&&f.film_list&&f.film_list.length>=2;
       const{displayTitle:_rawDt}=parseProgramTitle(f.title);
@@ -134,22 +174,39 @@ export function renderProgramaListHTML(state){
         :_rawDt;
       const vc=vcfg(f.venue);
       const src=getFilmPoster(f)||'';
-      const nowBadge=isNow?`<span class="film-check-badge">${t('misc_ahora')}</span>`:'';
+      // EL PUNTO DICE CUÁNDO, EL BADGE DICE QUÉ (decisión de Juan, 18 ago, vía
+      // Onboarding: el badge de estado «Q&A» quedaba pegado al informativo «Q&A»
+      // de _metaBadges — la fila decía lo mismo dos veces). El punto verde
+      // .live-dot —el mismo que marca «en curso» en el splash— es el marcador de
+      // ahora en las FILAS: tras el título si corre la película, tras el badge
+      // Q&A si corre la charla. Siempre FUERA del badge. La píldora AHORA
+      // sobrevive solo sobre el PÓSTER (abajo), donde un punto de 7px se pierde
+      // contra el afiche. El aria-label sostiene lo que el color no comunica.
+      const nowDot=isNow&&!isQa
+        ?`<span class="live-dot row-dot" role="img" aria-label="${t('aria_en_curso')}"></span>`
+        :'';
+      const qaDot=isQa
+        ?`<span class="live-dot row-dot" role="img" aria-label="${t('aria_qa_en_curso')}"></span>`
+        :'';
       // El dato viene SELLADO en la función por el loader (_cancelled/_movedFrom):
       // el listado ya no busca en NOTICES. Y para una movida, la hora que muestra la
       // card ES la nueva — el detalle "pasa a…" quedó redundante y se retiró.
       const noticeBadge=f._cancelled?`<span class="notice-badge">${t('notice_cancelada')}</span>`
         :f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';
-      const noticeNote=f._cancelled?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';
-      const cancelStyle=f._cancelled?'opacity:.5':'';
-      const pastStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
-      const itemStyle=[pastStyle,cancelStyle].filter(Boolean).join(';');
+      // «Pendiente nueva fecha» SOLO si el aviso no explicó la causa (ver loader).
+      const noticeNote=(f._cancelled&&!f._cancelExplained)?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';
+      // Cancelada salió del difuminado (Juan, 21 ago 2026): acá se apilaba con el
+      // de «ya pasó» y una función caída y vieja quedaba al 22% — ilegible, y
+      // diciendo dos veces lo mismo con el mismo recurso. Ahora la fila cancelada
+      // se dice en gris (`.plist-item.is-cancelled`), y le siguen respondiendo el
+      // badge y el tachado de la meta, que sí son señales propias suyas.
+      const itemStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
       const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const _stk=_programaStack(f);
-      return`<div class="plist-item js-open-pel" style="${itemStyle}" data-title="${escXML(f.title)}">
+      return`<div class="plist-item js-open-pel${f._cancelled?' is-cancelled':''}" style="${itemStyle}" data-title="${escXML(f.title)}">
         ${_stk||_plistPosterHtml(f,src)}
         <div class="plist-info">
-          <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${_metaBadges(f)}${nowBadge}</div>
+          <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${nowDot}${_metaBadges(f)}${qaDot}</div>
           <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${venueCity(f.venue)?`<span class="plist-city">${venueCity(f.venue)}</span>`:''}${f.duration?' · '+durFmt(f.duration):''}</div>
           ${noticeNote||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}
         </div>
@@ -158,6 +215,28 @@ export function renderProgramaListHTML(state){
     }).join('')}
   `).join('');
   }catch(e){return `<div class="pad-muted">${t('error_funciones')}</div>`;}
+}
+
+// scrollDtabsToActive — DUEÑO ÚNICO del scroll de la barra de días. Regla de
+// Juan (18 ago): al abrir Programa, HOY y MAÑANA se ven sin navegar — el día
+// siguiente no puede vivir escondido en la navegación. La fórmula vieja
+// (activo pegado al borde izquierdo) vivía copiada en 3 sitios y con festivales
+// largos dejaba mañana fuera de cuadro: medido en AFF (10 días) — hoy visible,
+// mañana cortado; en Tribeca (12 días) ninguno de los dos.
+export function scrollDtabsToActive(){
+  const dt=document.getElementById('dtabs');
+  if(!dt) return;
+  const on=dt.querySelector('.dtab.on');
+  if(!on) return;
+  const tabs=[...dt.querySelectorAll('.dtab')];
+  const next=tabs[tabs.indexOf(on)+1]||null;
+  // El objetivo es el PAR (hoy + mañana); sin mañana (último día), solo hoy.
+  const left=on.offsetLeft-dt.offsetLeft;
+  const right=((next||on).offsetLeft-dt.offsetLeft)+(next||on).offsetWidth;
+  const max=Math.max(0,dt.scrollWidth-dt.clientWidth);
+  // Si el par no cabe entero, manda HOY (el día siguiente asoma lo que pueda).
+  const target=(right-left>dt.clientWidth)?left:Math.min(left,Math.max(0,right-dt.clientWidth));
+  dt.scrollLeft=Math.max(0,Math.min(max,target));
 }
 
 export function _renderProgramaContent(resetScroll=false){
@@ -269,7 +348,7 @@ export function _renderExploreListaHTML(state){
     return`<div class="plist-item js-open-pel${allPast?' past-card':''}" data-title="${escXML(f.title)}">
       ${_stk2||_plistPosterHtml(f,src)}
       <div class="plist-info">
-        ${(()=>{const nb=f._cancelled?`<span class="notice-badge">${t('notice_cancelada')}</span>`:f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';const nn=f._cancelled?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';const n=f._cancelled?{type:'cancelled'}:null;return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}`;})()}
+        ${(()=>{const nb=f._cancelled?`<span class="notice-badge">${t('notice_cancelada')}</span>`:f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';const nn=(f._cancelled&&!f._cancelExplained)?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';const n=f._cancelled?{type:'cancelled'}:null;return`<div class="plist-title" style="${allPast?'opacity:.5':''}">${nb}${dt}</div><div class="plist-meta" style="${n&&n.type==='cancelled'?'text-decoration:line-through':''}${allPast?';opacity:.5':''}">${daysHtml?`${daysHtml} · `:''}${durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>${nn||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}`;})()}
       </div>
       <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
     </div>`;
@@ -330,6 +409,13 @@ export function renderPeliculaViewHTML(state){
     const inWL=watchlist.has(f.title);
     const inW=watched.has(f.title);
     const allPast=screenings.every(s=>screeningPassed(s));
+    // La marca aparece SOLO cuando es verdad para TODA la obra (regla de Juan,
+    // 11 ago 2026). En FICDEH tras el sismo: de 116 obras, 10 quedaron sin ninguna
+    // función viva y 39 son PARCIALES —«La gran hazaña» tiene 4 canceladas y 12
+    // activas—. Marcar las 39 sería falso y empujaría a descartar películas que sí
+    // se pueden ver; su cancelación se ve donde el usuario decide a qué ir: la
+    // ficha y la vista por día. Aquí la card es la OBRA, no la función.
+    const allCancelled=screenings.length>0&&screenings.every(s=>s._cancelled);
     const posterSrc=getFilmPoster(f);
     const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
     const{displayTitle}=parseProgramTitle(f.title);
@@ -354,7 +440,11 @@ export function renderPeliculaViewHTML(state){
     } else {
       _cardBg='';
       _cardBg='';
-      const _opacity=allPast&&!_ended?';opacity:.45':'';
+      // El difuminado dice UNA sola cosa: «ya pasó». Cancelada salió de acá
+      // (Juan, 21 ago 2026) y se dice en gris — ver `.poster-card.is-cancelled`
+      // en index.html. Con las dos verdades compartiendo opacidad, una función
+      // caída se leía como una función vieja.
+      const _opacity=(allPast&&!_ended)?';opacity:.45':'';
       const _edSecLbl=_secLabel(f.section||'');
       const _edBodyTitle=(()=>{const pfx=_edSecLbl+' - ';if(displayTitle.startsWith(pfx))return displayTitle.slice(pfx.length);const sPfx='Storytellers - ';if(displayTitle.startsWith(sPfx))return displayTitle.slice(sPfx.length);return displayTitle;})();
       const _pp=posterParts(f,{header:true,body:_edBodyTitle}); // decisión única (posterModel)
@@ -368,8 +458,10 @@ export function renderPeliculaViewHTML(state){
       }
     }
     const _sep=activeDay==='all'&&f.section&&f.section!==_prevSec?`<div class="sec-hdr sm poster-grid-sep">${_secLabelFull(f.section||'')}</div>`:'';_prevSec=f.section||_prevSec;
-    return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${_edAccent?' poster-ed':''}" data-title="${escXML(f.title)}"${_edAccent?` style="--ed-accent:${_edAccent}"`:(_isPrograma?'':_cardBg)}>
+    const cancBadge=allCancelled?`<div class="badge-past poster-past-badge">${t('notice_cancelada')}</div>`:'';
+    return _sep+`<div class="bg-surf-2 poster-card js-open-pel${allCancelled?' is-cancelled':''}${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${_edAccent?' poster-ed':''}" data-title="${escXML(f.title)}"${_edAccent?` style="--ed-accent:${_edAccent}"`:(_isPrograma?'':_cardBg)}>
       ${posterImg}
+      ${cancBadge}
       ${progBadge}
       ${inWL?`<button class="poster-wl-dot wl-on" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWL" data-stop="1" aria-label="${t('misc_interes_label')}">${ICONS.heartFill}</button>`:''}
     </div>`
@@ -407,6 +499,7 @@ export function render(){
     const passed=screeningPassed(f);
     const inWL=watchlist.has(f.title),inW=watched.has(f.title);
     const isNow=isNowShowing(f);
+    const isQa=isNow&&isQaOnlyNow(f);
     const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
     const posterSrc=getFilmPoster(f);
     const _cardBg2='';
@@ -414,12 +507,18 @@ export function render(){
       ?`<img class="img-cover" src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="">`
       :``;
     const progBadge='';//REMOVED
-    const nowBadge=isNow?`<div class="poster-now">${t('misc_ahora')}</div>`:'';
+    const nowBadge=isNow
+      ?`<div class="poster-now${isQa?' qa-only':''}">${isQa?t('label_qa_ahora'):t('misc_ahora')}</div>`
+      :'';
     const pastBadge=f._cancelled?`<div class="badge-past poster-past-badge">${t('notice_cancelada')}</div>`
       :f._movedFrom?`<div class="badge-past poster-past-badge">${t('notice_reprog_short')}</div>`:'';
 
     const _fe=festivalEnded();
-return`<div class="poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe?' past-card':''}" data-title="${escXML(f.title)}"${_cardBg2}>
+// Cancelada le GANA a pasada (Juan, 21 ago 2026): si la función no va a
+    // ocurrir, que además su hora haya quedado atrás es lo de menos. Sin este
+    // `&&!f._cancelled` la tarjeta llevaba las dos marcas y el difuminado de
+    // «ya fue» se comía el gris de «se canceló».
+return`<div class="poster-card js-open-pel${f._cancelled?' is-cancelled':''}${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe&&!f._cancelled?' past-card':''}" data-title="${escXML(f.title)}"${_cardBg2}>
       ${posterImg}
       <div class="poster-time">${f.time}</div>
       ${nowBadge||pastBadge||progBadge}

@@ -8,6 +8,7 @@ on:
   pull_request:
     branches: [main]
   push:
+    branches: [main]
     paths:
       - 'index.html'
       - 'src/**'
@@ -16,6 +17,18 @@ on:
       - 'validate.py'
       - 'festivals/**.json'
       - 'tests/**'
+
+# Una sola corrida por PR (18 ago 2026). El workflow disparaba en `push` Y en
+# `pull_request`, así que cada rama corría los tests DOS veces en paralelo,
+# compitiendo por los mismos runners: de ahí las corridas colgadas de 23 y 96
+# minutos que hubo que cancelar a mano. Ahora:
+#   · `push` solo en main (el merge) — la rama ya la cubre su PR.
+#   · concurrency por PR: un push nuevo cancela la corrida que quedó obsoleta.
+# El check REQUERIDO por branch protection viene del evento `pull_request` y no
+# se toca: sigue corriendo siempre, sin filtro de paths (lección del PR #428).
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate:

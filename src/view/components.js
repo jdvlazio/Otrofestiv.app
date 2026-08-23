@@ -26,10 +26,8 @@ export function makeProgramPoster(state, title, duration, section, opts){
   // (generativo) de la MISMA sección salían de dos colores distintos —el bug de
   // "Peephole ámbar entre verdes". Fallback a la paleta por hash solo cuando la
   // sección no tiene color propio definido (evita gris para secciones nuevas).
-  const ACCENT_PALETTE=['#F59E0B','#3AAA6E','#E5A020','#E05252','#378ADD','#3A8E8E'];
-  const _hash=s=>[...s].reduce((h,c)=>(Math.imul(31,h)+c.charCodeAt(0))|0,0);
-  const _secAccent=_sectionColor(filmSec);
-  const accent=(_secAccent&&_secAccent!=='#2C2C2A')?_secAccent:ACCENT_PALETTE[Math.abs(_hash(sec))%ACCENT_PALETTE.length];
+  // El fallback por hash vivía acá y curaba solo al generativo: ahora es del dueño.
+  const accent=_sectionColor(filmSec);
 
   // Header: sección localizada vía _secLabel (lang-aware: EN→SECTION_EN,
   // ES→original sin emoji), uppercase. Así el poster editorial coincide con el
@@ -53,10 +51,12 @@ export function makeProgramPoster(state, title, duration, section, opts){
   const _di=_dayMatch?_dayIdx[_dayMatch[1].toLowerCase()]:undefined;
   const dayAbbr=_di!=null?(_DOW_ABBR[_lang]||_DOW_ABBR.es)[_di]:null;
 
-  // Body: siempre vacío cuando hay número (el header + número son suficientes)
-  // Sin número: extraer solo la parte distintiva
+  // Body: la parte distintiva del título. Antes se vaciaba cuando había número
+  // —el número era protagonista de 32px—; con §6.0 bajó a dato al pie y esa regla
+  // dejaba la tarjeta MUDA: sección y un «1» chiquito (vista previa CineAutopsia,
+  // 19 ago). El número ya no vacía el cuerpo: viaja al pie como lo que es.
   let bodyTitle='';
-  if(!num){
+  {
     // ── REGLA INAMOVIBLE: el body = identificador único del programa ──────
     // Para programas con código "PGM N" el código ES el identificador → body.
     // Se extrae del TÍTULO (no se matchea contra la sección): idioma-agnóstico
@@ -94,7 +94,12 @@ export function makeProgramPoster(state, title, duration, section, opts){
 
   // opts.untitled (regla anti-repetición del sheet): cuerpo vacío — el título ya
   // está en la cabecera del sheet. El num/día SE CONSERVA (identidad visual).
-  return _buildPosterV16({accent, headerLabel, title:(opts&&opts.untitled)?'':bodyTitle, num:num||dayAbbr||null});
+  // El número solo va al pie si el cuerpo NO lo dice ya: «Mediometrajes del Mundo
+  // Entero 1» + «1 · 102 min» repetía el dato que el título acababa de dar.
+  const _numRedundante=num&&new RegExp('\\b'+num+'\\s*$').test(bodyTitle||'');
+  const _dato=[(num&&!_numRedundante)?`${num}`:null, String(duration||'').trim()||null]
+    .filter(Boolean).join(' · ')||dayAbbr||null;
+  return _buildPosterV16({accent, headerLabel, title:(opts&&opts.untitled)?'':bodyTitle, num:null, dato:_dato});
 }
 
 export function makeSorpresaPoster(){
@@ -108,11 +113,17 @@ export function makeSorpresaPoster(){
 
 // Sección → color por ARQUETIPO (paleta unificada, POSTERS.md). El arquetipo gana;
 // fallback al mapa viejo, y a gris solo si no hay nada (lo caza el gate).
+// El gris #2C2C2A murió como color de sección (Juan, 19 ago): una sección sin
+// arquetipo caía a un gris apagado y, como el TEXTO se pinta con ese color,
+// quedaba gris sobre gris. La cura existía pero solo en el generativo; el marco
+// editorial usaba _sectionColor crudo. Ahora vive en el DUEÑO, para todos.
+const ACCENT_PALETTE=['#F59E0B','#3AAA6E','#E5A020','#E05252','#378ADD','#3A8E8E'];
+const _secHash=s=>[...String(s)].reduce((h,c)=>(Math.imul(31,h)+c.charCodeAt(0))|0,0);
 export function _sectionColor(sec){
-  if(!sec) return '#2C2C2A';
+  if(!sec) return '#F59E0B';                       // sin sección: ámbar de marca
   const arch = SECTION_ARCHETYPES[sec];
   if(arch && ARCHETYPE_COLORS[arch]) return ARCHETYPE_COLORS[arch];
-  return SECTION_COLORS[sec] || '#2C2C2A';
+  return SECTION_COLORS[sec] || ACCENT_PALETTE[Math.abs(_secHash(sec))%ACCENT_PALETTE.length];
 }
 // Texto legible sobre un color: negro o blanco por MÁXIMO contraste real (WCAG),
 // no por umbral. Garantiza banda legible sobre cualquier color de sección.
@@ -175,7 +186,9 @@ export function escXML(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&
 //   mode 'top'    → anclado arriba, para el <svg> propio del editorial.
 // wrap a 15ch mantiene la línea más ancha ≤15; secciones que superan 2 líneas
 // exigen `sectionShort` (gate [seccion-larga]).
-const _BAND_FS=0.0542, _BAND_LH=0.075, _BAND_PADX=0.0667, _BAND_LS=0.00583, _BAND_MAXCH=16;
+// _BAND_FS/_LH/_PADX/_LS murieron con la banda-losa (§6.0): el tamaño ya no es
+// un ratio fijo del ancho. _BAND_MAXCH sigue vivo como default de _bandWrap.
+const _BAND_MAXCH=16;
 
 // ── Regla de lecturabilidad del corte de línea (regla de Juan) ────────────────
 // Cada línea debe tener sentido por sí sola y NINGUNA línea (salvo la última)
@@ -218,106 +231,235 @@ export function _bandWrap(s, maxCh=_BAND_MAXCH){
   return best.texts;
 }
 
-export function _bandTextSVG(label, accent, vw, {mode='center', bandH=0}={}){
-  const s=String(label||'').trim().toUpperCase();
-  const fs=vw*_BAND_FS, lh=vw*_BAND_LH, padX=vw*_BAND_PADX, ls=vw*_BAND_LS;
-  if(!s) return {text:'', lines:0, lh, fs};
-  const L=_bandWrap(s, _BAND_MAXCH);
-  const fill=_contrastText(accent);  // auto-contraste sobre la banda de sección
-  const y0 = mode==='center' ? (bandH-L.length*lh)/2+fs : fs+vw*0.02;
-  const round=n=>+n.toFixed(2);
-  const text=L.map((l,i)=>
-    `<text x="${round(padX)}" y="${round(y0+i*lh)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${round(fs)}" font-weight="800" letter-spacing="${round(ls)}" fill="${fill}">${escXML(l)}</text>`
-  ).join('');
-  return {text, lines:L.length, lh, fs};
+// ── Motor de ajuste tipográfico (POSTERS.md §6.0) ────────────────────────────
+// La tipografía se ajusta AL ESPACIO, no a una constante: antes _BAND_FS daba
+// 4,55px en la tarjeta real, igual para «FICCIÓN» que para un nombre de 43
+// caracteres. Se calcula en el viewBox (determinista, sin tocar el DOM) con un
+// estimador de ancho por carácter; como es aproximado, el test mide el tamaño
+// REAL en la tarjeta de 84px — ahí se ve si el estimador miente.
+const _CHW_UPPER={'I':.30,'J':.45,'L':.55,'M':.92,'W':.92,'1':.42,' ':.26,'·':.32,'-':.35,'–':.5,'.':.28,',':.28,':':.28,'&':.75,'Í':.30,'Ó':.7,'Á':.68,'É':.62,'Ú':.7,'Ñ':.72};
+const _CHW_LOWER={'i':.28,'j':.28,'l':.28,'t':.35,'f':.34,'r':.4,'m':.86,'w':.72,' ':.26,'·':.32,'-':.35,'.':.26,',':.26,'I':.3,'M':.9,'W':.9};
+function _emWidth(str, upper){
+  // 0.66 medido con getBBox sobre el <text> YA RENDERIZADO (no con canvas: ahí
+  // el bold sintetizado mide de menos y el primer intento subestimaba hasta un
+  // 19% — «CHARLA» real da 0.739 em/char y se salía de la tarjeta).
+  const T=upper?_CHW_UPPER:_CHW_LOWER, def=upper?.66:.55;
+  let w=0;
+  for(const ch of String(str)) w += T[ch] !== undefined ? T[ch] : (upper ? def : (ch===ch.toUpperCase()&&ch!==ch.toLowerCase() ? .68 : def));
+  return w;
+}
+// Devuelve {lines, fs, lh} con el MAYOR tamaño que entra en la caja. El corte de
+// línea lo sigue decidiendo _bandWrap (regla de Juan: ninguna línea, salvo la
+// última, termina en palabra débil) — acá solo se le dice cuántos caracteres
+// caben a ese tamaño, y después se verifica el ancho REAL de cada línea.
+// _lineaSVG — una línea que NO puede cruzar la línea de margen. Cuando el corte
+// no logra evitarlo —la regla de Juan prohíbe dejar «de» al final, así que «DE
+// CORTOMETRAJES» viaja pegado— se fija el ancho con textLength y el navegador
+// condensa unos puntos. Solo se activa ahí; el resto se dibuja sin tocar.
+export function _lineaSVG(txt, {x, y, fs, ls, fill, boxW, upper}){
+  const est=(_emWidth(txt,upper)*fs+txt.length*ls)*1.12;
+  const tope=boxW*0.98;
+  const ajuste=est>tope?` textLength="${(+tope).toFixed(2)}" lengthAdjust="spacingAndGlyphs"`:'';
+  return `<text x="${+x.toFixed(2)}" y="${+y.toFixed(2)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${+fs.toFixed(2)}" font-weight="800" letter-spacing="${+ls.toFixed(2)}" fill="${fill}"${ajuste}>${escXML(txt)}</text>`;
 }
 
-export function _buildPosterV16({accent, headerLabel, title, num}){
-  // ── Motor de poster tipográfico v16 ──────────────────────────
-  // Sistema único para eventos, programas, sorpresa.
-  // Header sólido en accent (~52/180px) + body surf-2.
-  // Variante A (num!=null): título arriba + número en accent abajo.
-  // Variante B (num===null): título expande desde abajo.
-  // ─────────────────────────────────────────────────────────────
-  const VW=120,VH=180,HDR=52,PAD=8;
-  const esc=escXML;  // ver escXML (arriba) — fuente única de escape XML
-
-  // El cuerpo usa el MISMO cortador que la banda (_bandWrap): cada línea con
-  // sentido propio, ninguna termina en palabra débil ni separador (·/–). Una
-  // sola regla de corte para TODO texto dentro de pósters no-originales.
-  const wrap=(str,maxCh)=>str?_bandWrap(str,maxCh):[''];
-  // Clamp de líneas + elipsis (estilo Netflix/Spotify): los títulos larguísimos
-  // (ej. "Tribeca at 25: A Conversation With…", 80 chars = 9 líneas minúsculas)
-  // se truncan a N líneas con "…" en vez de llenar el póster. Los cortos no cambian.
-  function clamp(lines,maxLines){
-    if(lines.length<=maxLines) return lines;
-    const k=lines.slice(0,maxLines);
-    k[maxLines-1]=k[maxLines-1].replace(/[\s.,;:–—-]+$/,'')+'…';
-    return k;
+export function _fitLines(str, {boxW, boxH, maxLines, fsMax, fsMin, lhRatio=1.16, lsEm=0, upper=false}){
+  const s=String(str||'').trim();
+  if(!s) return {lines:[], fs:0, lh:0};
+  for(let fs=fsMax; fs>=fsMin; fs-=0.25){
+    const perChar=fs*lsEm;
+    const maxCh=Math.max(4, Math.floor(boxW/(fs*(upper?.66:.55)+perChar)));
+    const L=_bandWrap(s, maxCh);
+    if(L.length>maxLines) continue;
+    const lh=fs*lhRatio;
+    if(L.length*lh>boxH) continue;
+    // 8% de resguardo (Juan, 19 ago: «los textos llegan demasiado al borde»). El
+    // estimador es aproximado y el margen de 0,75u es una regla de retícula, no
+    // una sugerencia: el test mide el bbox REAL de cada línea y exige que ninguna
+    // cruce la línea de margen. Pasarse se VE; quedarse corto, no.
+    // El estimador es aproximado y su error NO es simétrico: quedarse corto se ve
+    // (texto tocando el borde), sobrar no. Por eso se mide con un factor de
+    // seguridad —el peor caso observado, «CHARLA», mide 1,12× el promedio— y la
+    // caja se respeta al 98%. El test mide el bbox REAL contra la línea de margen.
+    if(L.some(l=>(_emWidth(l,upper)*fs+l.length*perChar)*1.12>boxW*0.98)) continue;
+    return {lines:L, fs:+fs.toFixed(2), lh:+lh.toFixed(2)};
   }
+  // Suelo: no cabe ni al mínimo → se recorta a maxLines con elipsis. El ancho no
+  // se re-verifica acá A PROPÓSITO: quien garantiza el margen es _lineaSVG (una
+  // sola vez, para todas las líneas). Un segundo cinturón acá era redundante —
+  // ninguna mutación podía matarlo, que es la señal de que no defendía nada.
+  const lh=fsMin*lhRatio;
+  const L=_bandWrap(s, Math.max(4, Math.floor(boxW/(fsMin*(upper?.66:.55)))));
+  const K=L.slice(0,maxLines);
+  if(L.length>maxLines) K[maxLines-1]=K[maxLines-1].replace(/[\s.,;:–—-]+$/,'')+'…';
+  return {lines:K, fs:fsMin, lh:+lh.toFixed(2)};
+}
 
-  // Header label — banda única (misma fuente que el editorial). Ver _bandTextSVG.
-  const headerText=_bandTextSVG(headerLabel||'', accent, VW, {mode:'center', bandH:HDR}).text;
+export function _buildPosterV16({accent, headerLabel, title, num, dato}){
+  // ── Póster nuestro — anatomía aprobada (POSTERS.md §6.0, Juan 18 ago 2026) ──
+  // Retícula: u = ancho/8 → 8u × 12u. Margen 0,75u. Filete de sección de 0,25u a
+  // sangre. Sección arriba, título anclado abajo, dato al pie, luz abajo a la
+  // derecha. La tipografía se ajusta al espacio (_fitLines), no a una constante.
+  //
+  // Lo que murió acá: la banda de color como losa (el color de sección pasó al
+  // filete y a la propia tipografía), el chevron (a 84px era suciedad) y el
+  // número gigante — que era un DATO y ahora vive como tal, en el pie.
+  const VW=120, VH=180, U=VW/8;              // 15
+  const M=0.75*U, CW=VW-2*M;                 // margen 11.25 · caja de contenido 97.5
+  const esc=escXML;
+  const round=n=>+n.toFixed(2);
+  const FONT='-apple-system,BlinkMacSystemFont,sans-serif';
 
-  // Body
-  let bodyContent='';
-  // El strip de número final solo aplica en Variante A (num se muestra aparte,
-  // evita duplicarlo). En Variante B el título se muestra tal cual — si no, un
-  // body como "PGM 05" perdería el "05" y dejaría dos programas indistinguibles.
-  const cleanTitle=(num!==null&&num!==undefined)
-    ? (title||'').replace(/\s+\d+\s*$/,'').trim()
-    : (title||'').trim();
+  // Sección — la mayor que quepa en 6,5u × 3,4u, máx 3 líneas
+  // Tope de 15px en la tarjeta de 84 (decisión de Juan, 18 ago) = 21,43 en el
+  // viewBox: «la mayor que quepa» sin techo llevaba «CHARLA» a 17,9px, más grande
+  // que el título de la obra. El techo mantiene la jerarquía: la sección orienta,
+  // el título es el protagonista.
+  const SEC_FS_MAX=15*VW/84;
+  const sec=_fitLines(String(headerLabel||'').toUpperCase(),
+    {boxW:CW, boxH:3.4*U, maxLines:4, fsMax:Math.min(SEC_FS_MAX, 3.4*U/1.16), fsMin:9, lhRatio:1.16, lsEm:0.02, upper:true});
+  const secY=1*U+sec.fs;                     // primera línea base a 1u
+  const secText=sec.lines.map((l,i)=>_lineaSVG(l,
+    {x:M, y:secY+i*sec.lh, fs:sec.fs, ls:sec.fs*0.02, fill:accent, boxW:CW, upper:true})).join('');
 
-  if(num!==null&&num!==undefined){
-    // Variante A — número como elemento principal
-    const bodyH=VH-HDR;
-    const numFS=32;
-    const numY=HDR+(bodyH/2)+(numFS/3); // centrado vertical en el body
-    const titleText=cleanTitle
-      ? (()=>{
-          const tLines=clamp(wrap(cleanTitle,12),3); // variante A: título comparte espacio con el número
-          const tFS=11,tLD=14;
-          return tLines.map((l,i)=>
-            `<text x="${PAD}" y="${HDR+PAD+tFS+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${esc(l)}</text>`
-          ).join('');
-        })()
-      : '';
-    bodyContent=titleText+`<text x="${VW/2}" y="${numY}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${numFS}" font-weight="800" letter-spacing="-1" fill="${accent}" text-anchor="middle">${esc(num)}</text>`;
-  } else {
-    // Variante B — título anclado abajo, clampeado a 4 líneas + elipsis
-    const tLines=clamp(wrap(cleanTitle,12),4);
-    const tFS=11,tLD=14;
-    const totalH=tLines.length*tLD;
-    const startY=VH-PAD-totalH+tLD;
-    bodyContent=tLines.map((l,i)=>
-      `<text x="${PAD}" y="${startY+i*tLD}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${tFS}" font-weight="800" letter-spacing="-0.3" fill="#F0EDE8">${esc(l)}</text>`
-    ).join('');
-  }
+  // Dato al pie (5% del ancho, gris). El `num` de los programas —«PGM 05», «MAR
+  // 18»— ES un dato: deja de ser un número de 32px en el centro.
+  //
+  // Y si no hay título, el dato PASA AL LUGAR DEL TÍTULO: sin eso, los programas
+  // con `untitled` quedaban con la sección y nada más.
+  const _tituloVacio=!String(title||'').trim();
+  const _datoCrudo=String(dato||num||'').trim();
+  const datoStr=_tituloVacio?'':_datoCrudo;
+  const datoFS=VW*0.05;
+  // La línea base va ARRIBA del margen por el descendente (~0,22em): apoyarla
+  // justo en 11,25u metía las colas de la «g» y la «p» fuera de la retícula.
+  const datoY=VH-M-datoFS*0.30;
+  const datoText=datoStr
+    ? _lineaSVG(datoStr, {x:M, y:datoY, fs:datoFS, ls:datoFS*0.02, fill:'#888', boxW:CW, upper:false})
+    : '';
+
+  // Título — anclado abajo, sobre el dato: 6,5u × 2,4u, máx 4 líneas
+  const tTop=datoStr?datoY-datoFS*1.6:datoY;
+  const ttl=_fitLines(_tituloVacio?_datoCrudo:String(title||'').trim(),
+    {boxW:CW, boxH:2.4*U, maxLines:4, fsMax:2.4*U/1.2, fsMin:12, lhRatio:1.2, lsEm:-0.02, upper:false});
+  // fsMin=12 (≈8,4px en tarjeta) es SUELO DE LEGIBILIDAD: por debajo se recorta
+  // con elipsis en vez de encoger hasta lo ilegible. La sección usa un suelo más
+  // bajo a propósito — recortar el nombre del festival está prohibido.
+  const tBottom=tTop;                        // el bloque CRECE hacia arriba
+  const tStartY=tBottom-(ttl.lines.length-1)*ttl.lh;
+  const ttlText=ttl.lines.map((l,i)=>_lineaSVG(l,
+    {x:M, y:tStartY+i*ttl.lh, fs:ttl.fs, ls:ttl.fs*-0.02, fill:'#F0EDE8', boxW:CW, upper:false})).join('');
 
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
-    <rect width="${VW}" height="${VH}" fill="#1B1917"/>
-    <rect width="${VW}" height="${HDR}" fill="${accent}"/>
-    ${headerText}
-    ${bodyContent}
+    <defs><radialGradient id="lz" cx="1" cy="1" r="1">
+      <stop offset="0" stop-color="#F59E0B" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient></defs>
+    <rect width="${VW}" height="${VH}" fill="#0B0A08"/>
+    <rect x="${round(VW*0.45)}" y="${round(VH*0.55)}" width="${round(VW*0.55)}" height="${round(VH*0.45)}" fill="url(#lz)"/>
+    <rect width="${VW}" height="${round(0.25*U)}" fill="${accent}"/>
+    ${secText}
+    ${ttlText}
+    ${datoText}
   </svg>`;
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+}
+
+// ── Póster de FUNCIÓN COMPARTIDA (Tipo 2) — «Escalera mayor», §6.0 ──────────
+// Aprobado por Juan (21 ago 2026) tras revisión exhaustiva. Reglas de frontera:
+// SOLO funciones compartidas (anclaje) de 2-3 obras con ≥1 afiche real; los
+// PROGRAMAS (Tipo 3) jamás usan esta forma — sus obras suelen tener stills, y un
+// still se dibuja dentro del marco editorial, que ya es un póster propio: sería
+// un póster propio dentro de otro. SIN TÍTULO interno («en una película con
+// póster nunca vemos títulos»): la identidad nominal vive en lista/ficha/plan,
+// y en las superficies mudas queda a un tap, igual que cualquier obra.
+// Este builder SOLO dibuja: la decisión de qué es módulo real y qué es mudo la
+// toma helpers (slotPosterParts), dueño del modelo de póster.
+// Devuelve MARKUP SVG INLINE, no data-uri: contiene <image> y un SVG dentro de
+// <img> tiene prohibido cargar recursos — los afiches saldrían rotos.
+export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
+  const U=15, VW=120, VH=180, M=11.25, CW=VW-2*M, NEGRO='#0B0A08', HAIR='#26231F';
+  const r=n=>+n.toFixed(2);
+  const mod=(ux,uy,uw,src,i)=>{
+    const x=ux*U,y=uy*U,w=uw*U,h=uw*1.5*U,rx=w*0.13;
+    const id=`ssp${i}`;
+    return `<clipPath id="${id}"><rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}"/></clipPath>`
+      +`<rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}" fill="${NEGRO}" stroke="${HAIR}" stroke-width="0.5"/>`
+      +`<image href="${escXML(src)}" x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" preserveAspectRatio="xMidYMid meet" clip-path="url(#${id})"/>`;
+  };
+  const sombra=(ux,uy,uw)=>`<rect x="${r(ux*U+2.85)}" y="${r(uy*U-2.85)}" width="${r(uw*U)}" height="${r(uw*1.5*U)}" rx="${r(uw*U*0.13)}" fill="#000" opacity=".5"/>`;
+  // Geometrías aprobadas (en u, pasos de 0,25u). modules viene atrás→delante,
+  // con los mudos SIEMPRE atrás. El delantero es la primera obra con afiche.
+  // El «módulo mudo» murió (Juan, 21 ago): la Escalera existe solo completa,
+  // así que acá solo llegan afiches reales.
+  const n=modules.length;
+  let comp='';
+  if(n===2){
+    const [atras,frente]=modules;
+    comp = mod(0.75,3,4.5,atras,0) + sombra(2.75,3.75,4.5) + mod(2.75,3.75,4.5,frente,1);
+  } else {
+    const pos=[[0.75,3],[2,3.75],[3.25,4.5]]; // atrás→delante, módulos 4u
+    comp = modules.map((src,i)=>
+      (i===n-1?sombra(pos[i][0],pos[i][1],4):'')+mod(pos[i][0],pos[i][1],4,src,i)).join('');
+  }
+  const SEC_FS_MAX=15*VW/84;
+  const sec=_fitLines(String(secLabel||'').toUpperCase(),
+    {boxW:CW, boxH:1.9*U, maxLines:2, fsMax:Math.min(SEC_FS_MAX, 1.9*U/1.16), fsMin:9, lhRatio:1.16, lsEm:0.02, upper:true});
+  const secTxt=sec.lines.map((l,i)=>_lineaSVG(l,{x:M,y:1*U+sec.fs+i*sec.lh,fs:sec.fs,ls:sec.fs*0.02,fill:accent,boxW:CW,upper:true})).join('');
+  const datoFS=VW*0.05, datoY=VH-M-datoFS*0.30;
+  const datoTxt=dato?_lineaSVG(dato,{x:M,y:datoY,fs:datoFS,ls:datoFS*0.02,fill:'#888',boxW:CW,upper:false}):'';
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">`
+    +`<defs><radialGradient id="ssp-luz" cx="1" cy="1" r="1"><stop offset="0" stop-color="#F59E0B" stop-opacity=".28"/><stop offset="1" stop-color="#F59E0B" stop-opacity="0"/></radialGradient>`
+    +`</defs>`
+    +`<rect width="${VW}" height="${VH}" fill="${NEGRO}"/>`
+    +`<rect x="54" y="99" width="66" height="81" fill="url(#ssp-luz)"/>`
+    +comp
+    +`<rect width="${VW}" height="3.75" fill="${accent}"/>`
+    +secTxt+datoTxt+`</svg>`;
 }
 
 export function makeEventPoster(state,title,duration,eventKind,section,opts){
   const {_activeFestId, _lang} = state.snapshot();
   const festCfg=(FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{};
+  // 'charla' — la palabra que usan los festivales. FICDEH («💬 Charlas que Unen»,
+  // 18 actividades) y FICMA («💬 Charlas», 6) mostraban PONENCIA, que no aparece en
+  // ninguna de sus fuentes: la Franja Académica de FICMA dice TALLERES y CHARLAS.
+  // «Ponencia» la pusimos nosotros (Juan, 10 ago 2026 — con FICMA ya en curso).
+  // 'ponencia' SE QUEDA: es vocabulario válido para un festival que sí la use, y
+  // sacarla rompería el dato actual mientras se migra. Primero el mapa, después el
+  // dato: event_kind solo alimenta makeEventPoster, y agenda.js (×2) y programa.js
+  // lo llaman SIN sección, así que un 'charla' sin entrada caería al genérico
+  // EVENTO en Mi Plan y en la agenda — peor que el PONENCIA de hoy.
   const _kindMapES={
     'ponencia':     {accent:'#F59E0B', headerLabel:'PONENCIA'},
+    'charla':       {accent:'#F59E0B', headerLabel:'CHARLA'},
+    // 'taller' ya estaba EN EL DATO (FICMA, 8 actividades) sin entrada en el mapa:
+    // esas cards mostraban el genérico EVENTO. Es la otra mitad del vocabulario de
+    // la Franja Académica —«TALLERES y CHARLAS»— y no necesita migración.
+    // Accent ámbar como charla/ponencia: las tres son la franja académica. Si Juan
+    // prefiere distinguirlas, es cambiar este color y nada más.
+    'taller':       {accent:'#F59E0B', headerLabel:'TALLER'},
+    // «seminario» llegó con VARTEX 14: es la misma franja académica que taller
+    // y charla, y sin entrada aquí su card mostraba el genérico EVENTO.
+    'seminario':    {accent:'#F59E0B', headerLabel:'SEMINARIO'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'ENCUENTRO'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'CINECONCIERTO'},
+    // «live cinema» llegó con VARTEX 14: actuación audiovisual en vivo, prima
+    // del cineconcierto. Se conserva la palabra del festival, no se traduce a
+    // «cineconcierto», que es de otros festivales.
+    'live cinema':  {accent:'#D85A30', headerLabel:'LIVE CINEMA'},
     'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
   };
   const _kindMapEN={
     'ponencia':     {accent:'#F59E0B', headerLabel:'TALK'},
+    'charla':       {accent:'#F59E0B', headerLabel:'TALK'},
+    'taller':       {accent:'#F59E0B', headerLabel:'WORKSHOP'},
+    'seminario':    {accent:'#F59E0B', headerLabel:'SEMINAR'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'MEETING'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'FILM CONCERT'},
+    'live cinema':  {accent:'#D85A30', headerLabel:'LIVE CINEMA'},
     'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
   };
   const _kindMap=_lang==='es'?_kindMapES:_kindMapEN; // PT reutiliza EN (términos internacionales)
@@ -357,6 +499,12 @@ export const ICONS={
   switch:   `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>`,
   plus:     `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>`,
   text:     `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12H3"/><path d="M17 18H3"/><path d="M21 6H3"/></svg>`,
+  // book-open (Lucide) — el DIARIO. `history` (reloj con flecha de rebobinar) es
+  // el símbolo de restaurar/deshacer, no el de un cuaderno: se leía como una
+  // acción sobre el pasado, no como un lugar donde queda escrito lo que viste.
+  bookOpen: `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>`,
+  eye: `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>`,
+  eyeOff: `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></svg>`,
   history:  `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>`,
   film:     `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v18"/><path d="M17 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>`,
   clock:    `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
@@ -365,6 +513,7 @@ export const ICONS={
   route:    `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg>`,
   play:     `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>`,
   calendar: `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>`,
+  calendarPlus: `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M8 2v4M16 2v4M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8M3 10h18M16 19h6M19 16v6"/></svg>`,
   alert:    `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>`,
   chevronR: `<svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>`,
   chevronD: `<svg aria-hidden="true" focusable="false" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>`,
@@ -468,7 +617,49 @@ export function renderRatingStarsHTML(state, current){
 }
 
 
+// _langDates — DUEÑO ÚNICO de «las fechas del festival como texto». Vivía en
+// helpers.js con un solo consumidor mientras el header interno, la card del riel
+// y la imagen de «Compartir mi festival» repetían el ternario por su cuenta — y
+// cuando FICMA se aplazó, tres superficies siguieron prometiendo «10–17 AGO»
+// (la del share, HORNEADA en un PNG que la gente manda por WhatsApp y no se
+// corrige con un deploy; hallazgo de Onboarding, 10 ago 2026). Un festival
+// aplazado no tiene fechas: tiene un estado. Se muda ACÁ porque helpers importa
+// components (ciclo); helpers lo re-exporta para sus consumidores.
+// `lang` opcional: default al estado global, pero quien ya tiene el idioma en la
+// mano (la card del riel lo recibe de su render) lo pasa explícito — el unit test
+// del riel cazó que ignorarlo rompía el contrato de _renderSplashRailHTML(state).
+// postponedBannerHTML — markup ÚNICO del aviso de festival aplazado. Dos hosts lo
+// pintan: el header del Programa (renderPostponedBanner) y Mi Plan (renderAgenda).
+// Las palabras son del FESTIVAL (note verbatim; note_en traducción aprobada por
+// Juan). Sin botón de cerrar: es contexto, no notificación.
+export function postponedBannerHTML(cfg,{id=''}={}){
+  if(!cfg||!cfg.status||cfg.status.kind!=='postponed') return '';
+  const {_lang}=state.snapshot();
+  const _esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  const note=(_lang!=='es'&&cfg.status.note_en)||cfg.status.note;
+  return`<div class="fest-postponed-banner"${id?` id="${id}"`:''}>
+    <div class="notice-banner-dot"></div>
+    <div class="notice-banner-body">
+      <div class="notice-banner-label">${t('fest_postponed_label')}</div>
+      <div class="notice-banner-text">${_esc(note)}${cfg.status.url?`<br><a class="fest-postponed-link" href="${_esc(cfg.status.url)}" target="_blank" rel="noopener">${t('fest_postponed_link')}</a>`:''}</div>
+    </div>
+  </div>`;
+}
+
+export function _langDates(cfg,lang){
+  if(cfg&&cfg.status&&cfg.status.kind==='postponed') return t('fest_postponed_dates');
+  const _l=lang||state.snapshot()._lang;
+  return (_l==='en'&&cfg&&cfg.dates_en)?cfg.dates_en:(cfg&&cfg.dates)||'';
+}
+
 export function _classifyFestival(cfg){
+  // APLAZADO — estado DECLARADO (cfg.status), no derivado: le gana a la aritmética
+  // de fechas. Nace del terremoto de Manizales (FICMA 17, 10 ago 2026): sus fechas
+  // decían «en curso» mientras el festival anunciaba que no habría festival. Un
+  // aplazado jamás cuenta como ongoing (preselección, punto verde, rehidratación
+  // del plan) ni como past (sigue siendo noticia viva). Reversión: fechas nuevas
+  // + borrar `status` — sin re-onboarding. Guardián: [festival-aplazado].
+  if(cfg.status&&cfg.status.kind==='postponed') return 'postponed';
   const now=new Date();
   const start=cfg.festivalStartStr?new Date(cfg.festivalStartStr):null;
   const end=cfg.festivalEndStr?new Date(cfg.festivalEndStr):null;
@@ -484,7 +675,8 @@ export function _sortFestivals(entries, activeFestId){
     const cls=_classifyFestival(cfg);
     if(cls==='ongoing')  return 1;
     if(cls==='upcoming') return 2;
-    return 3; // past
+    if(cls==='postponed') return 3; // vigente pero sin invitación — último del grupo
+    return 4; // past
   };
   // PRIORIDAD EDITORIAL — desempata DENTRO del tier, antes que la fecha.
   // Nace de FINCA vs FICDEH (8 ago 2026): mismas fechas exactas, y quién salía
@@ -500,8 +692,8 @@ export function _sortFestivals(entries, activeFestId){
     if(pa!==pb) return pa-pb;
     // ongoing: termina antes primero
     if(ta===1) return new Date(a[1].festivalEndStr||0)-new Date(b[1].festivalEndStr||0);
-    // upcoming: empieza antes primero
-    if(ta===2) return new Date(a[1].festivalStartStr||'2099-01-01')-new Date(b[1].festivalStartStr||'2099-01-01');
+    // upcoming (y aplazados entre sí): empieza antes primero
+    if(ta===2||ta===3) return new Date(a[1].festivalStartStr||'2099-01-01')-new Date(b[1].festivalStartStr||'2099-01-01');
     // past: más reciente primero
     return new Date(b[1].festivalEndStr||0)-new Date(a[1].festivalEndStr||0);
   });
@@ -579,12 +771,16 @@ export function festivalTagline(cfg, lang='es'){
 // keyArtPos → custom property --kap (no inline style raw: ARQUITECTURA §10.3);
 // onerror=this.remove() degrada al template negro si el afiche 404ea (§10.2).
 function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang}){
-  const meta=`${cfg.city} · ${lang==='en'&&cfg.dates_en?cfg.dates_en:cfg.dates}`;
+  const meta=`${cfg.city} · ${_langDates(cfg,lang)}`;
   const label=festivalLabel(cfg);
   const art=cfg.keyArt
     ? `<img class="splash-card-art" src="${cfg.keyArt}" alt="" loading="lazy" onerror="this.remove()"${cfg.keyArtPos?` style="--kap:${cfg.keyArtPos}"`:''}>`
     : `<span class="splash-card-fb">${festivalShortName(cfg)}</span>`;
-  return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="${action}" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span></button>`;
+  // Distintivo APLAZADO sobre el afiche — fuente única: sale en el riel del splash
+  // Y en el sheet «cambiar festival» sin tocar cada superficie.
+  const _postponed=_classifyFestival(cfg)==='postponed';
+  const badge=_postponed?`<span class="splash-card-badge">${t('fest_postponed_label')}</span>`:'';
+  return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}${_postponed?' postponed':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="${action}" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span>${badge}</button>`;
 }
 
 // `action` parametriza la superficie (20 jul 2026): el splash SELECCIONA (confirma
@@ -617,9 +813,15 @@ export function _renderSplashRailHTML(state, activeFestId, action='selectSplashF
   // decirlo en pantalla. Misma tira y misma dirección: los próximos NO se mudan a la
   // izquierda —eso haría correr el tiempo de derecha a izquierda y obligaría a
   // arrancar el riel desplazado, que es de lo que depende la preselección—.
+  // Aplazados: dentro de los vigentes (siguen siendo noticia, no historia) pero
+  // FUERA del grupo «Próximos» — un aplazado no es un próximo: no tiene fecha. Van
+  // al final del grupo vigente, con su distintivo como única etiqueta.
+  const _upc=upcoming.filter(([,cfg])=>_classifyFestival(cfg)!=='postponed');
+  const _post=upcoming.filter(([,cfg])=>_classifyFestival(cfg)==='postponed');
   let html=ongoing.map(e=>mkCard(e,false)).join('');
-  if(ongoing.length && upcoming.length) html+=div(t('fs_proximos'));
-  html+=upcoming.map(e=>mkCard(e,false)).join('');
+  if(ongoing.length && _upc.length) html+=div(t('fs_proximos'));
+  html+=_upc.map(e=>mkCard(e,false)).join('');
+  html+=_post.map(e=>mkCard(e,false)).join('');
   if(current.length && past.length) html+=div(t('splash_anteriores'));
   html+=past.map(e=>mkCard(e,true)).join('');
   return html;

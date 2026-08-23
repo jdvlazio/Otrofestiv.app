@@ -115,7 +115,15 @@ def main():
     d = json.load(open(f'{REPO}/festivals/{fid}.json', encoding='utf-8'))
 
     vistos, plan, editorial = set(), [], []
+    # Los pósters viven en DOS niveles: la función (afiche de programa) y cada
+    # obra dentro de film_list. Recorrer solo el primero dejaba los de obra sin
+    # encuadrar — se vio en CineAutopsia, donde 40 afiches oficiales del
+    # festival entraron con proporciones de 0,70 a 0,85 y ninguno era 2:3.
+    entradas = []
     for f in d['films']:
+        entradas.append(f)
+        entradas.extend(f.get('film_list') or [])
+    for f in entradas:
         p = f.get('poster') or ''
         if not p.startswith('/assets/') or p in vistos:
             continue

@@ -7,40 +7,41 @@
 import { FESTIVAL_CONFIG } from '../config.js';
 import { ICONS, _secLabelFull } from '../view/components.js';
 import { venueSelLabel } from '../view/helpers.js';
-import { _renderProgramaContent, renderProgramaChips } from '../view/programa.js';
+import { _renderProgramaContent, renderProgramaChips, scrollDtabsToActive } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda, renderFilmListHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
-import { _renderSplashRail, _renderFestivalSelector } from './festival.js';
+import { _renderSplashRail, _renderFestivalSelector, renderPostponedBanner } from './festival.js';
 import { dayFullyPassed, festivalEnded, simNow, simTodayStr } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t, LANGS, _applyI18nDOM } from '../i18n/i18n.js';
 
-// Sentinel: toggles de prioridad NO deben nular cachedResult ni auto-recalcular
-// — el resultado se preserva para detectar "stale" (prio strip Estado 3).
-let _preserveResult=false;
-export function _markPreserveResult(){ _preserveResult=true; }
-
 export function renderActiveView(){
-  if(_preserveResult){
-    _preserveResult=false;                    // consumir flag
-    // No nular cachedResult, no auto-runCalc: preservar para detección stale.
-    if(activeView==='day' && activeMNav==='mnav-cartelera'){
-      const pelOpen = document.getElementById('pel-sheet')?.classList.contains('open');
-      if(!pelOpen) _renderProgramaContent();
-      return;
-    }
-    renderAgenda();                           // planner → Estado 1/3; seleccion/miplan
-    return;
-  }
-  cachedResult = null;                        // state cambió → cache de schedule stale
+  // El resultado ya NO se anula en cada cambio (Juan, 18 ago): «que el Plan que
+  // estás mirando nunca cambie solo». Antes, cambiar un interés lo destruía y
+  // recalculaba en silencio, mientras cambiar una prioridad lo conservaba y
+  // avisaba — dos gestos vecinos, leyes opuestas. Ahora se conserva siempre y la
+  // vista compara la firma de insumos (planInputSignature) para decir si quedó
+  // desactualizado. Recalcular es del usuario.
   if(activeView==='day' && activeMNav==='mnav-cartelera'){
     const pelOpen = document.getElementById('pel-sheet')?.classList.contains('open');
     if(!pelOpen) _renderProgramaContent(); // re-render por estado → resetScroll=false preserva scroll
     return;
   }
-  if(activeMNav==='mnav-planner'){ runCalc(); return; }  // recompute scenarios + render
+  if(activeMNav==='mnav-planner'){
+    // MISMO gate que el auto-cálculo de showAgView: si no queda nada
+    // planificable, runCalc solo produce una cáscara de cero escenarios que
+    // pisa la pantalla «Nada por planear» con un «Sin combinaciones» que culpa
+    // al armado cuando la verdad es temporal. Sin material, se re-rutea a
+    // showAgView, que ya distingue las tres situaciones del vacío.
+    const _p=[...watchlist].some(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
+    // Con un resultado en pantalla NO se recalcula solo: se re-renderiza y la
+    // firma de insumos lo marcará desactualizado si algo cambió. Sin resultado,
+    // el primer cálculo sí es automático: no hay ningún Plan que arruinar.
+    if(_p&&!cachedResult) runCalc(); else showAgView();
+    return;
+  }
   renderAgenda();                             // rutea internamente seleccion/miplan
 }
 
@@ -58,7 +59,6 @@ export function showDayView(){
   activeView='day';
   switchMainNav('mnav-cartelera');
   // Mostrar buscador y mode bar
-  document.getElementById('hdr-ag')?.style.setProperty('display','none');
   const modeBar=document.getElementById('programa-mode-bar');
   if(modeBar){
     modeBar.style.removeProperty('display');// removeProperty is more reliable than =""
@@ -75,7 +75,13 @@ export function showDayView(){
   // Inicializar el sistema de modos
   initProgramaModeBar();
   _renderProgramaContent(true); // entrar a vista día → scroll al tope
-  requestAnimationFrame(_fixStickyOffset); // actualiza altura del chrome-blur
+  requestAnimationFrame(()=>{
+    _fixStickyOffset(); // actualiza altura del chrome-blur
+    // ENTRAR a Programa reposiciona la barra de días: hoy y mañana a la vista
+    // (Juan, 18 ago). Antes solo corría al CARGAR el festival, así que volver
+    // desde otra pestaña dejaba la barra donde el usuario la hubiera empujado.
+    scrollDtabsToActive();
+  });
 }
 
 export function showAgView(){
@@ -85,11 +91,6 @@ export function showAgView(){
   const _chips=document.getElementById('programa-chips');if(_chips) _chips.classList.add('hidden');
   const _paf=document.getElementById('programa-active-filter');if(_paf) _paf.classList.remove('visible');
   const _lista=document.getElementById('programa-list');if(_lista) _lista.classList.remove('visible');
-  const _agH=document.getElementById('hdr-ag');
-  if(_agH){
-    _agH.style.display='';
-    // ag-toggle-bar eliminado de Intereses (solo en Explorar)
-  }
   document.getElementById('filter-bars').style.display='none';
   ['hint','cnt','grid','cartelera-stepper'].forEach(id=>{const el=document.getElementById(id);if(el) el.style.display='none';});
   const _av=document.getElementById('ag-view');
@@ -101,6 +102,28 @@ export function showAgView(){
   document.getElementById('agtab').classList.add('on');
   document.querySelectorAll('.dtab').forEach(t=>t.classList.remove('on'));
   renderAgenda();
+  // Al ENTRAR a Planear sin resultado en memoria, calcular solo.
+  //
+  // El escenario vive en memoria (viewstate) y muere al recargar: medido el
+  // 16 ago con FICDEH — 4 filas antes, 0 después, sin aviso, mientras los
+  // intereses seguían intactos. Lo que se perdía no era el trabajo del usuario
+  // sino una DERIVACIÓN de ese trabajo, y recalcularla cuesta 2–3 ms (medido con
+  // 8 y con 20 intereses). Por eso NO se persiste: guardar la derivación sería
+  // una segunda verdad que además se pone rancia sola (una función se cancela,
+  // cambia el filtro de ciudad) y te mostraría un plan que ya no es cierto.
+  //
+  // Con plan YA guardado no se toca nada: aparecer con una opción nueva sin
+  // pedirla invita a reemplazar lo que el usuario curó a mano. Ahí manda el botón.
+  if(activeMNav==='mnav-planner'&&!cachedResult&&!festivalEnded()){
+    const _sa=savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length;
+    // MISMO criterio que `pending` en la vista (agenda.js): interés sin ver Y
+    // con alguna función futura. Contar solo «sin ver» calculaba con una lista
+    // agotada, dejaba un cachedResult de cero escenarios y esa cáscara pisaba
+    // la pantalla «Nada por planear» — el usuario veía «Sin combinaciones»
+    // culpando al armado cuando la verdad era temporal (todo lo suyo ya pasó).
+    const _hayIntereses=[...watchlist].some(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
+    if(!_sa&&_hayIntereses) runCalc();
+  }
   requestAnimationFrame(_fixStickyOffset); // actualiza altura del chrome-blur
 }
 
@@ -122,20 +145,6 @@ export function _rerenderFilmList(){
   const lel=document.getElementById('ag-film-list');
   if(!lel) return;
   lel.innerHTML=renderFilmListHTML(state);
-  // Recompute pill counts — filter sobre Sets, O(n) trivial. Mismo cálculo
-  // que la pure half hace; se duplica para mantener purity de renderFilmListHTML.
-  const {prioritized, watched, watchlist, PRIO_LIMIT} = state.snapshot();
-  const prioList=[...prioritized].filter(titleStr=>!watched.has(titleStr));
-  const nonPrioList=[...watchlist].filter(titleStr=>!watched.has(titleStr)&&!prioritized.has(titleStr));
-  const watchedList=[...watched];
-  setTimeout(()=>{
-    const _pp=document.getElementById('pill-prio-cnt');if(_pp) _pp.textContent=prioList.length?`${prioList.length}/${PRIO_LIMIT}`:'—';
-    const _pi=document.getElementById('pill-int-cnt');if(_pi) _pi.textContent=nonPrioList.length?String(nonPrioList.length):'—';
-    const _py=document.getElementById('pill-yv-cnt');if(_py) _py.textContent=watchedList.length?String(watchedList.length):'—';
-    document.getElementById('pill-prio')?.style.setProperty('display',prioList.length?'inline-flex':'none');
-    document.getElementById('pill-int')?.style.setProperty('display',nonPrioList.length?'inline-flex':'none');
-    document.getElementById('pill-yv')?.style.setProperty('display',watchedList.length?'inline-flex':'none');
-  },0);
 }
 
 export function _getProgramaPhase(){
@@ -179,6 +188,37 @@ export function _updateProgramaActiveFilter(){
   af.classList.add('visible');
 }
 
+// _syncPmodeTabs — la píldora Hoy/Mañana ESPEJA a su chip de día (16 ago 2026,
+// hallazgo de la ronda 3 + observación de Juan). La píldora es doble: BOTÓN
+// (el atajo que salta al día) e INDICADOR — y la mitad de indicador mentía por
+// omisión: pintada desde programaSubMode, quedaba subrayada mostrando MAR 18,
+// y nunca se atenuaba cuando su día ya no tenía nada. Ahora las dos dimensiones
+// se derivan de lo mismo que el chip: activa si su día ES el día activo,
+// opaca si su día está agotado (dayFullyPassed, el mismo dueño del .past del
+// chip). El destino de cada píldora se calcula con las MISMAS fórmulas del
+// atajo (setProgramaMode) para que indicador y botón nunca diverjan.
+export function _syncPmodeTabs(){
+  const _pts=simTodayStr();
+  const _pti=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_pts);
+  const _keys={
+    hoy: _pti>=0?DAY_KEYS[_pti]:DAY_KEYS[0],
+    manana: _pti>=0&&_pti<DAY_KEYS.length-1?DAY_KEYS[_pti+1]:DAY_KEYS[DAY_KEYS.length-1],
+  };
+  ['hoy','manana'].forEach(m=>{
+    const el=document.getElementById('pmode-'+m);
+    if(!el) return;
+    el.classList.toggle('on', activeDay===_keys[m]);
+    el.classList.toggle('past', dayFullyPassed(_keys[m]));
+  });
+  // Y los chips se refrescan con el MISMO cálculo: al cruzar la medianoche o
+  // agotarse el día, píldora y chip tienen que atenuarse JUNTOS (Juan, 16 ago).
+  // Sin esto la píldora quedaba opaca y su chip brillante — la discrepancia
+  // inversa a la que veníamos a arreglar, y la cazó el test.
+  document.querySelectorAll('.dtab').forEach(t=>{
+    if(t.dataset.day&&t.dataset.day!=='all') t.classList.toggle('past', dayFullyPassed(t.dataset.day));
+  });
+}
+
 export function initProgramaModeBar(){
   const phase=_getProgramaPhase();
   // Mostrar/ocultar tabs según fase
@@ -191,20 +231,22 @@ export function initProgramaModeBar(){
   if(!phase.tabs.includes(programaSubMode)){
     programaSubMode=phase.default;
   }
-  // Actualizar tab activo
-  ['hoy','manana'].forEach(m=>{
-    const el=document.getElementById('pmode-'+m);
-    if(el) el.classList.toggle('on',m===programaSubMode);
-  });
+  // Tab activo/atenuado: derivado del día, no de programaSubMode (el espejo).
+  _syncPmodeTabs();
   // Mostrar/ocultar chips
   const chipsEl=document.getElementById('programa-chips');
   if(chipsEl){
     chipsEl.classList.toggle('hidden',activeDay!=='all');
     if(activeDay==='all') renderProgramaChips();
   }
-  // nav-row siempre visible en Programa — dtabs son la navegación temporal
+  // nav-row visible SOLO en Programa — misma condición que switchMainNav. El
+  // remove('hidden') incondicional asumía que esta función solo corre en
+  // Programa, pero el fix del compositor de iOS (loader.js) la re-ejecuta
+  // ~830ms después de entrar al festival, y si para entonces estás en Mi Plan
+  // (el salto automático del boot, o un toque rápido) la barra de días se
+  // colaba en el tab equivocado. Cazado por Juan en producción, 18 ago 2026.
   const navRow=document.getElementById('nav-row');
-  if(navRow) navRow.classList.remove('hidden');
+  if(navRow) navRow.classList.toggle('hidden', activeMNav!=='mnav-cartelera');
   document.querySelectorAll('.dtab').forEach(t=>{
     t.classList.toggle('on', activeDay==='all' ? t.dataset.day==='all' : t.dataset.day===activeDay);
     t.classList.toggle('past', t.dataset.day!=='all' && dayFullyPassed(t.dataset.day));
@@ -237,6 +279,9 @@ export function setLang(code){
     // fechas del info localizadas). Preserva la selección (_splashSelectedFestId).
     _renderSplashRail(_splashSelectedFestId);
     _renderFestivalSelector(_activeFestId);
+    // Banda APLAZADO: persistente → no pasa por loadFestival; se rehornea acá con
+    // la etiqueta/enlace del idioma nuevo (la cita del festival queda en ES).
+    renderPostponedBanner(FESTIVAL_CONFIG[_activeFestId]);
     requestAnimationFrame(()=>{
       _fadeEls.forEach(el=>el.classList.remove('lang-fade'));
     });

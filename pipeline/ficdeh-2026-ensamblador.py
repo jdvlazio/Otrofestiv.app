@@ -11,15 +11,12 @@ Decisiones aplicadas (Juan): entran 18 charlas + 9 talleres abiertos; fuera
 industria y sedes en el extranjero. Multi-ciudad: cada venue lleva `city`.
 """
 import json, re, unicodedata, collections, datetime, os
+import sys, os as _os; sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+import lib  # dueño único de norm/hora24/sinacento — [lib-unica]
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CAT  = json.load(open(f'{REPO}/festivals/staging/ficdeh-2026.json', encoding='utf-8'))
 PROG = json.load(open(f'{REPO}/festivals/staging/ficdeh-2026-programacion-oficial.json', encoding='utf-8'))
-
-def norm(s):
-    s = unicodedata.normalize('NFD', (s or '').lower())
-    s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
-    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
 
 # ── catálogo indexado ────────────────────────────────────────────────────────
 by_title = {f['title']: f for f in CAT['films']}
@@ -126,7 +123,10 @@ def _norm(s):
     return re.sub(r'[^a-z0-9]+', ' ', s).strip()
 
 
-def sede_sala(f):
+# [lib-unica] renombrada desde `sede_sala` el 17 ago 2026.
+# Recibe la FUNCIÓN entera y arbitra tres fuentes (guía PDF > sala explícita >
+# nombre de la sede). `lib.sede_sala(nombre, tabla)` solo aplica la tabla.
+def sede_sala_de_funcion(f):
     """→ (sede, sala). Manda la guía en PDF; luego la sala explícita de la
     programación; por último la que venía metida en el nombre de la sede."""
     sede, sala = SEDE_SALA.get(f['sede'], (f['sede'], ''))
@@ -136,7 +136,7 @@ def sede_sala(f):
 
 venues = {}
 def venue_key(f):
-    sede, _ = sede_sala(f)
+    sede, _ = sede_sala_de_funcion(f)
     key = f'{sede} - {f["ciudad"]}'
     if key not in venues:
         g = GEO.get(key, {})
@@ -164,6 +164,26 @@ RECURRENTES = {
     'Los frutos que dan vida: Siembra autosostenible casera',   # 16 y 17 AGO, Aguas Fieras
 }
 
+# El `tipo` de la web dice en cuál de las DOS páginas del festival está listada
+# la actividad (/charlas o /talleres): es un cajón, no la palabra de la
+# actividad. Por eso «Master Class: Cine documental autobiográfico» y
+# «Conversatorio Mujeres en el Audiovisual» aparecen ahí dentro con tipo=taller,
+# y está bien: el festival mismo las agrupa así.
+#
+# La guía en PDF de Medellín SÍ rotula cada actividad con su propia palabra, y
+# para Medellín el PDF manda (CIUDAD_CON_PDF). Barrido entero el 10 ago, solo
+# dos actividades llevan rótulo y solo una discrepa del cajón:
+#
+#     «Masterclass» → Filmar un país en guerra      (la web la mete en /talleres)
+#     «Taller»      → Los frutos que dan vida       (coincide, no hace falta entrada)
+#
+# Curiosidad que vale anotar: la traducción taller→masterclass que quitamos hoy
+# acertaba con esta por accidente, y al quitarla la rompimos. Ahora es explícita
+# y con su fuente, que es distinto de acertar de casualidad.
+KIND_PDF_MEDELLIN = {
+    '¿Cómo filmar un país en guerra?': 'masterclass',
+}
+
 SEC_ACT = {
   'charla': ('💬 Charlas que Unen', 'Talks That Unite', 'Charlas / Industria', 11),
   'taller': ('🛠️ Formación',        'Workshops',        'Charlas / Industria', 12),
@@ -181,7 +201,7 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
     base = {'day': f['dia'], 'time': f['hora'], 'venue': venue_key(f),
             'day_order': dias.index(f['dia']),
             'has_qa': False, 'is_cortos': False, 'film_list': None,
-            **({'sala': sede_sala(f)[1]} if sede_sala(f)[1] else {}),
+            **({'sala': sede_sala_de_funcion(f)[1]} if sede_sala_de_funcion(f)[1] else {}),
             # is_free/requires_registration salen del 'tipo de ingreso' que
             # publica cada función en la programación oficial.
             'is_free': f.get('ingreso','').strip().lower().startswith('entrada libre') or not f.get('ingreso'),
@@ -225,7 +245,14 @@ for f in sorted(funcs, key=lambda x: (x['dia'], x['hora'], x['ciudad'])):
              'section': SEC_ACT[f['tipo']][0], 'duration': _dur,
              'synopsis': a.get('synopsis',''), 'synopsis_lang': 'es',
              'poster': _poster_local(a.get('poster','')), 'posterSource': 'custom' if a.get('poster') else '',
-             'event_kind': 'ponencia' if f['tipo']=='charla' else 'masterclass'}
+             # El tipo se PASA, no se traduce. Aquí se traducían LAS DOS
+             # palabras: «charla»→«ponencia» (que no usa ningún festival
+             # nuestro) y «taller»→«masterclass», con lo que 11 actividades de
+             # «🛠️ Formación» —«Producción y Animación 2D», «Actuación para
+             # cine»— salían rotuladas MASTERCLASS. SEC_ACT ya demuestra que
+             # `tipo` es la palabra del festival: de ahí salen los nombres de
+             # sus dos secciones.
+             'event_kind': KIND_PDF_MEDELLIN.get(f['titulo_programacion'], f['tipo'])}
         e.update(base)
         if a.get('requires_registration') or _d.get('requires_registration'):
             e['requires_registration'] = True

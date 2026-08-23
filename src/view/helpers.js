@@ -5,13 +5,16 @@
 // _POSTERS_N) + setters; main.js (loadFestival) los re-popula vía setters.
 // _lang se lee vía STATE BRIDGE (globalThis) igual que el resto de la capa view.
 
-import { FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
+import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _bandTextSVG, _secLabel, _sectionColor,
-  makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _fitLines, _secLabel, _sectionColor,
+  makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeSharedSlotSVG, escXML, _langDates, parseProgramTitle,
 } from './components.js';
-import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate } from '../domain/time.js';
-import { effectiveDuration } from '../domain/film.js';
+// _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
+// components — el ciclo decide dónde vive; ver el comentario del dueño).
+export { _langDates };
+import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
+import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -123,7 +126,11 @@ export function itemPosterParts(item, section, imgClass, {header=false}={}){
   if(_isEditorialPoster(item)){
     // thumb pequeño → still enmarcado SIN banda de texto (precedente _posterThumb);
     // card grande (Diario) → con banda de sección, como _recapPosterCard.
-    return {ed:true, accent:_sectionColor(section||''), src,
+    // Filete de la MINIATURA en ámbar de marca, no en color de sección (Juan, 19
+    // ago): los cortos de un programa comparten sección, así que ese color no
+    // informa —y sin arquetipo cae al gris #2C2C2A, la barra gris repetida que
+    // él vio—. En la TAPA (header) se conserva: ahí sí orienta al scrollear.
+    return {ed:true, accent:header?_sectionColor(section||''):'var(--amber)', src,
       inner:editorialFrame(header?{header:_secLabel(section||''), src, title:item.title}:{src, title:item.title})};
   }
   return {ed:false, accent:'', src,
@@ -194,11 +201,59 @@ export function posterAmbient(src,fallbackHex,cb){
 // ni llama editorialFrame directo (guardián [poster-single-owner]). La rama
 // `image`/`generative` conserva su <img> por superficie (clases/transiciones
 // propias) usando .src — la DECISIÓN ya viene tomada.
+// ── slotPosterParts — la DECISIÓN del póster de función compartida ───────────
+// Dueño del modelo (como posterParts): clasifica cada obra del slot y decide si
+// la función tiene póster propio. Reglas de la revisión exhaustiva (21 ago):
+//   · SOLO Tipo 2 (slot anclado) de 2-3 obras — con 4+ no hay tarjeta (mostrar
+//     3 de 6 sería curaduría nuestra sobre curaduría ajena).
+//   · La Escalera existe SOLO COMPLETA (Juan, 21 ago): 2-3 obras y TODOS los
+//     afiches reales (!_isEditorialPoster). Un still va dentro del marco
+//     editorial —ya es un póster propio— y no puede ser módulo; y el «módulo
+//     mudo» que probamos para los incompletos se leía como sombra sucia y la
+//     tarjeta se hacía pasar por la única obra visible. Falta un afiche → null:
+//     cada obra conserva su card, como hoy. Nada se inventa.
+//   · Delantero = primera obra en orden de catálogo (regla neutra).
+// El dibujo lo hace components.makeSharedSlotSVG — acá solo el modelo.
+// legacyProgramParts — el póster de un programa LEGACY «Film A + Film B».
+// Ese modelo (is_programa) es una FUNCIÓN COMPARTIDA modelada a la vieja usanza
+// —el template dice que la reemplazó el anclaje Tipo 2—, así que le corresponde
+// la misma forma C. Y arregla una mentira vieja: getFilmPoster (camino 5)
+// devuelve el afiche de la PRIMERA obra, así que «Esperando abril + Los bandidos
+// del hotel azul» se mostraba —en el Diario y en todas partes— como si fuera
+// «Esperando abril» sola. Con las dos obras apiladas, la tarjeta dice la verdad.
+// Devuelve null cuando no califica (afiches incompletos, still, 4+): ahí el
+// camino viejo sigue mandando y no se toca nada.
+export function legacyProgramParts(f){
+  if(!f||!f.is_programa||!Array.isArray(f.film_list)) return null;
+  return slotPosterParts(f.film_list.map(it=>({
+    title:it.title, poster:it.poster, posterSource:it.posterSource,
+    duration:it.duration||f.duration, section:f.section,
+  })));
+}
+
+export function slotPosterParts(members){
+  if(!Array.isArray(members)||members.length<2||members.length>3) return null;
+  const clasif=members.map(f=>{
+    const src=getPosterSrc(f.title,true)||f.poster||null;
+    const real=!!src&&!_isEditorialPoster(f);
+    return {f, src:real?src:null};
+  });
+  if(clasif.some(c=>!c.src)) return null;   // solo completa: falta un afiche → sin tarjeta
+  const reales=clasif;
+  // atrás→delante: el 1º del catálogo queda delante
+  const modules=[...reales.slice(1).reverse().map(c=>c.src), reales[0].src];
+  const lider=reales[0].f;
+  const dur=blockDuration(lider);
+  const dato=`${members.length} obras${dur?` · ${dur} min`:''}`;
+  return {modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato,
+    svg:makeSharedSlotSVG({modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato})};
+}
+
 export function posterParts(f,{header=false,body='',loading}={}){
   const m=posterModel(f);
   if(m.kind!=='editorial') return m;                       // {kind,src,...} decidido
   return {...m, ed:true,
-    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading})};
+    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading, accent:m.accent})};
 }
 
 export function _getItemPoster(item){
@@ -240,11 +295,22 @@ export function _isEditorialPoster(f){
 // sin regresión, y robusto donde el piso de font-size rompía el HTML.
 export function _edHdrSVG(label, accent){
   if(!String(label||'').trim()) return '';
-  // Banda única (misma fuente que el generativo): vw=100, anclado arriba, y el
-  // <svg> propio del editorial escala vía CSS (.ed-hdr-svg / --ed-hdr-ratio).
-  const {text, lines, lh}=_bandTextSVG(label, accent, 100, {mode:'top'});
-  const VH=+(lines*lh+4).toFixed(2);
-  return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMidYMid meet">${text}</svg>`;
+  // Sin accent el <text> salía con fill="undefined" y el navegador lo pintaba
+  // NEGRO: la sección quedaba invisible sobre el fondo oscuro (lo vio Juan en la
+  // tarjeta de ENCUENTRO). El filete no lo delataba porque toma su color del CSS
+  // (--ed-accent), no de este argumento. Ahora el color siempre existe.
+  const _fill=String(accent||'').trim()||'var(--amber)';
+  // Mismo motor que la forma A (_fitLines), vw=100. Con imagen la sección baja a
+  // 2 líneas: la imagen carga el peso (§6.0). Caja = 8u menos margen de 0,75u.
+  const U=100/8, M=0.75*U, CW=100-2*M;
+  const fit=_fitLines(String(label).toUpperCase(),
+    {boxW:CW, boxH:2.4*U, maxLines:2, fsMax:2.4*U/1.16, fsMin:5, lhRatio:1.16, lsEm:0.02, upper:true});
+  const round=n=>+n.toFixed(2);
+  const VH=+(fit.lines.length*fit.lh+fit.fs*0.3).toFixed(2);
+  const text=fit.lines.map((l,i)=>
+    `<text x="${round(M)}" y="${round(fit.fs+i*fit.lh)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${round(fit.fs)}" font-weight="800" letter-spacing="${round(fit.fs*0.02)}" fill="${_fill}">${escXML(l)}</text>`
+  ).join('');
+  return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMinYMin meet">${text}</svg>`;
 }
 
 export function _posterThumb(f, cssClass, loading){
@@ -301,28 +367,55 @@ export function posterModel(f){
 // blur es decorativo (aria-hidden); el still lleva data-title y el onerror que
 // cae a generativo. `body` con texto → scrim con título (grid); undefined/''  →
 // sin scrim (thumb/lista/sheet y ended-poster, que trae su propio footer).
-export function editorialFrame({header, body, src, title, loading, accent}={}){
+
+export function editorialFrame({header, body, src, title, loading, accent, dato}={}){
+  // Forma B (§6.0) = forma A + UN campo 16:9 constante (8u×4,5u en y=3,5u). Sin
+  // blur ni banda de color; la geometría vive en el CSS de .poster-ed, en %.
   const _l=loading||'lazy';
   const _dt=title?` data-title="${escXML(title)}"`:'';
-  const hdr=`<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`;
   const _ttl=(body!=null && String(body).trim()) ? String(body) : '';
+  const _dato=(dato!=null && String(dato).trim()) ? String(dato) : '';
   const img=src
-    ? `<div class="ed-img">`
-      + `<img class="ed-blur" src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt="">`
-      + `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
-      + (_ttl?`<div class="ed-scrim"><div class="ed-title">${escXML(_ttl)}</div></div>`:'')
-      + `</div>`
-    : `<div class="ed-img"></div>`;
-  return `${hdr}${img}`;
+    ? `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
+    : '';
+  // MINIATURA = sin sección ni título (el corto dentro de un programa). Ahí el
+  // campo se centra y el pie se llena con la propia obra desenfocada (Juan, 19
+  // ago: «se ven muy vacías»). No es el blur que mató §6.0 —aquel iba DETRÁS del
+  // still, a sangre, y ensuciaba el negro—: este está contenido bajo el campo y
+  // se apaga con máscara antes del borde. En el póster grande no aplica: ahí el
+  // vacío no existe, lo llenan el título y el dato.
+  const _mini=!header&&!_ttl;
+  const halo=(_mini&&src)?`<div class="ed-halo"><img src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt=""></div>`:'';
+  return `<div class="ed-fil"></div>`
+    + `<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`
+    + halo
+    + `<div class="ed-img${_mini?' ed-img-mid':''}">${img}</div>`
+    + `<div class="ed-foot">`
+      + (_ttl?`<div class="ed-title">${escXML(_ttl)}</div>`:'')
+      + (_dato?`<div class="ed-dato">${escXML(_dato)}</div>`:'')
+    + `</div>`;
 }
 
 export function isNowShowing(f){
+  // Festival aplazado: NADA está «AHORA» — el chip verde es una invitación a ir,
+  // y un aplazado no invita. El reloj diría otra cosa (las fechas viejas siguen
+  // en el dato, a propósito); el estado declarado gana.
+  const _cfg=FESTIVAL_CONFIG[state.snapshot()._activeFestId];
+  if(_cfg&&_cfg.status&&_cfg.status.kind==='postponed') return false;
   const dateStr=FESTIVAL_DATES[f.day];if(!dateStr) return false;
   const now=simNow();
   const start=_festDate(dateStr,f.time);
   // effectiveDuration (Q&A incluido) — mismo fin de función que el planificador.
   const end=new Date(start.getTime()+effectiveDuration(f)*60000);
   return now>=start&&now<=end;
+}
+
+// isQaOnlyNow — «la película ya terminó, queda el Q&A». Mismo encuadre que
+// isNowShowing (aplazado, fecha del festival, reloj simulado) pero delegando el
+// veredicto en el dominio: screeningQaOnly es el dueño único de la ventana.
+export function isQaOnlyNow(f){
+  if(!isNowShowing(f)) return false;
+  return screeningQaOnly(f,_festNowMin());
 }
 
 export function isToday(day){
@@ -343,16 +436,56 @@ export function vcfg(v){
 // superficie comparaba `vcfg(v).short===activeVenue` a mano en 8 sitios; el
 // nivel de ciudad habría exigido tocarlos todos y en el tiempo habrían
 // divergido. Consumido por programa.js (grid/lista/horario) y overlays.js.
+// SEDE_SEP — separador del centinela 'sede:<ciudad><SEP><short>'. Se usa un
+// carácter de control (U+001F, unit separator) y no un '|' o un '·' porque el
+// delimitador NO puede aparecer nunca dentro de un nombre de ciudad o de sede.
+// Se escribe como ESCAPE, nunca como carácter literal: un control invisible en el
+// fuente se pierde en un copiar/pegar y no se ve al revisar un diff.
+export const SEDE_SEP='\u001F';
+
+// venueMatches — DUEÑO ÚNICO del predicado «esta función pasa el filtro de lugar».
+// Tres formas de selección:
+//   'all'                       → todo
+//   'city:<Ciudad>'             → la ciudad entera
+//   'sede:<Ciudad><SEP><short>' → una sede DE esa ciudad
+//   '<short>'                   → legado: sede por nombre corto, sin ciudad
+//
+// Por qué la sede lleva la ciudad adentro (9 ago 2026): el nombre corto NO es
+// único cuando el festival recorre varias ciudades. En FICDEH hay dos «Cinema
+// Local» (Bogotá y Cali) y dos «Alianza Francesa» (Barranquilla y Cartagena);
+// filtrando solo por short, elegir la de Bogotá traía también las 4 funciones de
+// Cali, el conteo de la ciudad no cuadraba (135 arriba, 139 adentro) y la sede
+// DESAPARECÍA de la lista de la segunda ciudad, absorbida por la primera.
+//
+// Y por qué la clave es (ciudad, short) y no la sede completa: dentro de UNA
+// ciudad, varias sedes comparten short a PROPÓSITO — son las salas de un mismo
+// edificio (Cinemateca Sala 2/3/Capital → «Cinemateca de Bogotá»; las 5 de Plaza
+// Bocagrande). Ahí agrupar es lo correcto: quien elige el edificio quiere todas
+// sus salas. La ciudad separa; el short agrupa.
 export function venueMatches(v, sel){
   if(sel==='all') return true;
   if(sel&&sel.startsWith('city:')) return (vcfg(v).city||'')===sel.slice(5);
+  if(sel&&sel.startsWith('sede:')){
+    const i=sel.indexOf(SEDE_SEP);
+    if(i<0) return vcfg(v).short===sel.slice(5);
+    const ciudad=sel.slice(5,i), short=sel.slice(i+1);
+    const c=vcfg(v);
+    return c.short===short && (c.city||'')===ciudad;
+  }
   return vcfg(v).short===sel;
 }
 
 // venueSelLabel — cómo se MUESTRA la selección del filtro (pill de filtros
 // activos): la ciudad sin el centinela, o el short tal cual.
 export function venueSelLabel(sel){
-  return (sel&&sel.startsWith('city:'))?sel.slice(5):sel;
+  if(sel&&sel.startsWith('city:')) return sel.slice(5);
+  if(sel&&sel.startsWith('sede:')){
+    // La pill muestra el NOMBRE de la sede; la ciudad viaja en el centinela para
+    // desambiguar, no para leerse (ya está dicha en el propio filtro de ciudad).
+    const i=sel.indexOf(SEDE_SEP);
+    return i<0?sel.slice(5):sel.slice(i+1);
+  }
+  return sel;
 }
 
 // isCitySel / keepCityOnly — la CIUDAD es contexto, la SEDE es un filtro momentáneo.
@@ -437,6 +570,35 @@ export function venueLabel(v){
   return _sala?`${nombre} · ${_sala}`:nombre;
 }
 
+// planCityVenues — el SET de sedes que el plan puede usar, derivado del filtro
+// de lugar activo reducido a ciudad. Dueño único (16 ago 2026): vivía en
+// controller/calc.js y solo se publicaba al CALCULAR, así que quien armaba su
+// plan a mano (addSuggestion, sin pasar por Planear) tenía screeningPlannable
+// sin restricción de ciudad — lo destapó el test de mutación de T61. Vive en
+// helpers porque lo consumen la vista (alternativas, sugerencias) y el
+// controller (runCalc, squeeze), y controller→view ya es dirección permitida.
+export function planCityVenues(){
+  const _sel=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
+  if(_sel==='all') return null;
+  const _vs=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  return new Set(Object.keys(_vs).filter(v=>venueMatches(v,_sel)));
+}
+
+// planInputSignature — DUEÑO ÚNICO de «con qué se calculó este Plan» (Juan, 18
+// ago: el Plan que estás mirando nunca cambia solo). Cubre todo lo que consume el
+// planificador; la ciudad va reducida con keepCityOnly — una sede concreta no
+// restringe el plan y marcarla desactualizada sería una falsa alarma.
+export function planInputSignature(){
+  const _int=[...watchlist].filter(t=>!watched.has(t)).sort().join('|');
+  const _pri=[...prioritized].sort().join('|');
+  const _av=Object.keys(availability||{}).sort()
+    .map(d=>`${d}:${(availability[d]&&availability[d].blocks||[]).map(b=>`${b.from}-${b.to}`).sort().join(',')}`)
+    .filter(x=>!x.endsWith(':'))
+    .join(';');
+  const _ciudad=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
+  return `${_int}#${_pri}#${_av}#${_ciudad}`;
+}
+
 export function travelWarn(s1,s2){
   if(s1.day!==s2.day) return null;
   const travel=travelMins(s1.venue,s2.venue);
@@ -448,6 +610,57 @@ export function travelWarn(s1,s2){
     return`${ICONS.alert} ~${travel} min${_modo?' '+_modo:''} ${t('warn_entre_sedes')}`;
   }
   return null;
+}
+
+
+// conflictAccount(a,b,r) — LA CUENTA del veredicto, en un solo dueño.
+// r = screensConflictReason(a,b). Solo arma frase para 'ajustado' y 'viaje':
+// son los veredictos cuyo número era irreconstruible en pantalla (QA de ojos
+// frescos, 15 ago 2026 — un agente descartó una función creyendo que la app
+// se equivocaba: los datos visibles no se solapaban; el margen de sala sí).
+// 'solape' es un dato visible y 'ciudad' tiene su propia frase (el sujeto es
+// el PLAN, no la película).
+// Doctrina (Juan, 15 ago): la cuenta se MUESTRA, el veredicto se SUGIERE.
+// Los fines de película son dato (indicativo); llegada y margen son estimación
+// (condicional: «llegarías», «no te daría el tiempo», «te quedarían N min»).
+// Mismos números que la regla (blockDuration / Q&A solo con traslado / buffer):
+// no recalcula la decisión, la explica.
+export function conflictAccount(a,b,r){
+  if(!r||(r.kind!=='viaje'&&r.kind!=='ajustado')) return '';
+  // f1 = la que termina primero; f2 = aquella a la que el tiempo no daría.
+  const [f1,f2]=r.bFirst?[b,a]:[a,b];
+  const t1=parseProgramTitle(f1._title||f1.title||'').displayTitle;
+  const t2=parseProgramTitle(f2._title||f2.title||'').displayTitle;
+  const end=screeningBlockEndMin(f1);                   // fin de película: dato
+  const start=toMin(f2.time);
+  const _b=x=>`<b>${x}</b>`;
+  if(r.kind==='ajustado'){
+    // misma sede: el Q&A no compromete (doctrina 30 jul) — cuenta con el buffer
+    return t('cuenta_salas',{t1:`<i>${t1}</i>`,end:_b(minToStr(end)),buffer:FESTIVAL_BUFFER,
+      arr:_b(minToStr(end+FESTIVAL_BUFFER)),t2:`<i>${t2}</i>`,start:_b(minToStr(start))});
+  }
+  // viaje: con traslado el Q&A sí cuenta (durationForTravel) — se muestra aparte.
+  // La cadena SUMA el margen en vez de enunciarlo aparte: así el total es
+  // directamente comparable con la hora de inicio y la conclusión se lee sola
+  // (21:15 contra 21:00), sin una frase de veredicto que pueda contradecir a la
+  // decisión — que fue el bug original. Antes la cuenta omitía el margen que
+  // screensConflict exige, y una función EXCLUIDA se explicaba con la rama de
+  // «sí llegás»: 53 de los 275 choques de viaje de FICDEH (medido 17 ago).
+  // La `~` marca lo ESTIMADO (Q&A, viaje); el margen va sin tilde porque es una
+  // política nuestra, no una estimación.
+  const qaEnd=end+(f1.has_qa?FESTIVAL_QA_MIN:0);
+  const total=qaEnd+r.travel+FESTIVAL_BUFFER;
+  const base=t(f1.has_qa?'cuenta_viaje_qa':'cuenta_viaje',
+    {t1:`<i>${t1}</i>`,end:_b(minToStr(end)),qa:FESTIVAL_QA_MIN,
+     // travel en minutos PELADOS: la cadena declara la unidad una sola vez, al
+     // final («margen 15 min»). Con _minFmt salía «viaje ~10 min + margen 15 min».
+     travel:r.travel,buffer:FESTIVAL_BUFFER,
+     total:_b(minToStr(total)),start:_b(minToStr(start))});
+  // Cuando el choque existe SOLO por el Q&A, la alternativa va en la MISMA
+  // moneda: la hora a la que llegarías saliendo al final de la película. Un
+  // número en vez de una recomendación — el usuario compara y decide.
+  const _qa=r.qaOnly?t('cuenta_qa_opcional',{sinQa:_b(minToStr(end+r.travel+FESTIVAL_BUFFER))}):'';
+  return `${base}${_qa}`;
 }
 
 // Retraso colaborativo (Fase B) — badge informativo desde el consenso derivado.
@@ -509,10 +722,6 @@ export const _minFmt   = m   => {
 };
 
 export const flagFmt   = fl  => fl||'';
-
-export function _langDates(cfg) {
-  return (_lang==='en' && cfg && cfg.dates_en) ? cfg.dates_en : (cfg && cfg.dates)||'';
-}
 
 export function _mkCortoItemHtml(item, n, {cls='mplan-prog-item', section='', ratingEl=''}={}){
   // Póster por la fuente única: en tamaño thumb el marco va SIN texto en la
@@ -597,7 +806,22 @@ export function ticketBadgeTarget(){
 }
 
 export function _metaBadges(f){
+  // Una función CANCELADA no tiene Q&A, ni inscripción, ni boleta. Sin esto la
+  // card de Quibdó decía «CANCELADA» y al lado «CON BOLETA» el día que FICDEH
+  // abrió: le ofrecía comprar entrada a una función que el festival ya suspendió
+  // por el sismo (visto en producción, 11 ago 2026). El badge de estado manda
+  // sobre los de servicio: si no va a ocurrir, no hay nada que ofrecer.
+  if(f&&f._cancelled) return '';
   let b='';
+  // PREMIUM — la función cuesta más que el resto. Va PRIMERO entre los de
+  // servicio porque es lo único que cambia el precio: los demás dicen qué te dan,
+  // éste dice cuánto te cuesta. En TIFF son 61 de 638 funciones (las galas del
+  // Roy Thomson, el Princess of Wales, el Royal Alexandra y dos sedes más), y lo
+  // crítico es que 55 obras tienen funciones premium y normales A LA VEZ: sin el
+  // badge, alguien planea su día, va a comprar y se encuentra otro precio — y lo
+  // habría llevado ahí la app. Palabra del propio festival, la misma que verá en
+  // Ticketmaster; no se traduce (mismo criterio que Q&A).
+  if(f.premium===true) b+=`<span class="meta-badge">${t('badge_premium')}</span>`;
   if(f.has_qa) b+=`<span class="meta-badge">Q&A</span>`;
   if(f.requires_registration) b+=`<span class="meta-badge">${t('badge_inscripcion')}</span>`;
   // Festival mixto: el badge marca la MINORÍA (ver ticketBadgeTarget).
