@@ -447,6 +447,41 @@ datos sin estar declarado** (así el contrato no envejece callando, que es como
 envejeció la doc), y que **ninguna excepción con fecha se venza sin que nadie
 mire**.
 
+**Y uno para los tests: `[reload-sin-reloj]`.** Dos de las tres bombas del 20 de
+agosto eran tests que hacían `page.reload()`. La recarga borra `_simTime` —vive
+en memoria—, así que la app vuelve a la fecha real y el test queda a merced del
+día en que corra. El síntoma engaña: T65 parecía un fallo del marcado «Ya pasó»
+y lo que estaba roto era su premisa.
+
+Después de recargar hay tres formas correctas: `reentrar()` (helpers, re-elige y
+re-congela), `page.clock.install()` (congela el reloj del navegador y sobrevive),
+o derivar el festival del dato en tiempo de ejecución en vez de clavarlo.
+
+El check mira **dos cosas juntas**: recarga *y* premisa clavada. Recargar no es el
+problema; recargar con `enterFestival(page, 'ficdeh2026')` escrito a mano, sí. Si
+solo mirara el reload obligaría a reescribir tests que ya son correctos — y un
+guardián que crea trabajo inútil se termina ignorando.
+
+**Decimotercero, el único ÁMBAR del repo: `[contrato-por-vencer]`.** El 20 de
+agosto de 2026 `main` amaneció rojo sin que nadie tocara nada: la excepción de
+`venue@finca-2026` vencía ese día. No hubo aviso porque **no existía la franja
+intermedia** — todo era verde o rojo, así que lo que caducaba no avisaba: explotaba.
+
+Lo irónico: el preaviso ya estaba escrito. `_exentoDe()` devolvía
+`{ exento:true, aviso }` mientras la excepción seguía viva… y **nadie leía ese
+`aviso`**. Ahora se lee: a 14 días o menos, `validate.py` y `validate-festivals.js`
+avisan **sin bloquear**; el día D siguen siendo error.
+
+- **La fecha se calcula en la zona del proyecto (UTC-5), no en UTC.** Con
+  `toISOString()` crudo, entre las 7pm y medianoche de Colombia «hoy» ya era
+  mañana: la excepción vencía cinco horas antes y la máquina local discrepaba de
+  CI. Es la regla que `CLAUDE.md` fija para toda lógica de fechas.
+- **La ventana avisa, no perdona.** Si la fecha llega, es error igual.
+
+Lección de la fecha que estalló: `migrar_el` era el **20 de agosto** y FINCA
+cerraba el **19**. Nunca hubo ventana que perder — al fijar la fecha de una
+excepción, dejar margen real después del cierre del festival.
+
 **Y las excepciones llevan fecha.** Los archivados quedan congelados —reescribir
 su historia es riesgo sin beneficio— pero un festival VIGENTE que aún no cumple
 entra en `_pendientes` con el día en que deja de perdonársele. Una excepción sin
