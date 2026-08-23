@@ -531,12 +531,11 @@ export const FESTIVAL_CONFIG={
     dayLong:{'2026-09-10': 'Jueves 10 de septiembre', '2026-09-11': 'Viernes 11 de septiembre', '2026-09-12': 'Sábado 12 de septiembre', '2026-09-13': 'Domingo 13 de septiembre', '2026-09-14': 'Lunes 14 de septiembre', '2026-09-15': 'Martes 15 de septiembre', '2026-09-16': 'Miércoles 16 de septiembre', '2026-09-17': 'Jueves 17 de septiembre', '2026-09-18': 'Viernes 18 de septiembre', '2026-09-19': 'Sábado 19 de septiembre', '2026-09-20': 'Domingo 20 de septiembre'},
     prioLimit:6,
     keyArt:'/assets/keyart/tiff2026-v2.jpg',
-    // FRENO DE PUBLICACIÓN. Estuvo quitado desde el 16 ago con el razonamiento
-    // «ya hay keyArt, group:'test' deja de tener sentido» — pero el keyArt era
-    // solo UNO de los requisitos, y sin esta línea la rama PUBLICA TIFF en el
-    // momento en que se mergea. Restaurado el 17 ago: quitarla ES el paso de
-    // publicación, y no antes del pase de Juan sobre las 284 sinopsis.
-    group:'test',
+    // PUBLICADO el 23 ago 2026, por decisión de Juan. El freno estuvo puesto
+    // desde el 17 ago esperando su pase sobre las sinopsis; lo levanta él
+    // sabiendo que faltan 20 de 296 —casi todas de cortos experimentales—,
+    // 16 años, un afiche y un director. Ninguno rompe una ficha: sale sin
+    // sinopsis, no sin obra.
     tagline:'Toronto International Film Festival',
     ticketing_model:'paid', // todas las públicas tienen enlace de Ticketmaster.
     // OJO: el vocabulario de la app es SOLO 'paid' | 'mixed'. Puse 'ticketed',
@@ -805,6 +804,7 @@ export const COUNTRY_NAMES = {
   CO: { es:'Colombia',       en:'Colombia' },
   BR: { es:'Brasil',         en:'Brazil' },
   US: { es:'Estados Unidos', en:'United States' },
+  CA: { es:'Canadá',         en:'Canada' },
   AR: { es:'Argentina',      en:'Argentina' },
 };
 // countryName(iso, lang) — nombre del país o '' si no hay dato / ISO desconocido. Puro.
