@@ -397,6 +397,17 @@ def contrato():
 
 def normaliza(film, reporte=None):
     """Coacciona los tipos del contrato en UN film. Devuelve el film."""
+    # NFC primero. macOS entrega los nombres de archivo —y lo que se copia de
+    # ellos— en NFD: «Soñé su nombre» llegaba como n+tilde combinante y e+acento
+    # combinante. Se ve idéntico en pantalla y NO casa con nada: ni con una
+    # búsqueda, ni con una tabla de correcciones, ni consigo mismo escrito a
+    # mano. Se descubrió porque una corrección de título por clave exacta no
+    # aplicaba, sin error y sin síntoma visible.
+    for k, v in list(film.items()):
+        if isinstance(v, str) and not unicodedata.is_normalized('NFC', v):
+            film[k] = unicodedata.normalize('NFC', v)
+            if reporte is not None:
+                reporte['NFC'] += 1
     for k, spec in contrato()['campos'].items():
         if k not in film:
             continue
