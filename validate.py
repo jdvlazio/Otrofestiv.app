@@ -2339,6 +2339,59 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar aviso-color: {_e}')
 
+# ── [cancelada-no-difumina] cancelada y pasada no pueden usar el mismo recurso ─
+# Juan, 21 ago 2026, mirando FICDEH en el teléfono: el badge CANCELADA se pisaba
+# con el rótulo de sección del póster propio. Al medirlo aparecieron DOS fallas,
+# no una:
+#   1. El badge vivía en `top:5px`. En la anatomía §6.0 el rótulo de sección vive
+#      justo ahí. No era un caso raro: chocaban SIEMPRE, en todo póster nuestro.
+#   2. Cancelada se decía con `opacity:.45` — el mismo recurso que «ya pasó». Dos
+#      verdades distintas con la misma cara: una función caída se leía como una
+#      función vieja.
+# El arreglo: el badge se ancla a la retícula (la sección no puede pasar de 4,4u,
+# así que 4,65u SIEMPRE está libre) y cancelada se dice en gris, que es un canal
+# que no estaba ocupado. Este guardián cuida las dos mitades — la segunda importa
+# más, porque volver a difuminar una cancelada no se ve roto, se ve normal.
+check = 'cancelada-no-difumina'
+try:
+    import re as _re
+    _html = open('index.html', encoding='utf-8').read()
+    _prog = open('src/view/programa.js', encoding='utf-8').read()
+    _errs = []
+
+    _m = _re.search(r'^\.poster-past-badge\{([^}]*)\}', _html, _re.M)
+    if not _m:
+        _errs.append('.poster-past-badge ya no existe en el CSS')
+    else:
+        _cuerpo = _m.group(1)
+        _top = _re.search(r'top:([^;}]+)', _cuerpo)
+        if not _top:
+            _errs.append('.poster-past-badge sin `top` — el badge queda donde caiga')
+        elif 'var(--poster-badge-top)' not in _top.group(1):
+            _errs.append(f'.poster-past-badge ancla en `top:{_top.group(1).strip()}` en vez de '
+                         'var(--poster-badge-top): un número a ojo vuelve a caer sobre el rótulo '
+                         'de sección en cuanto el rótulo cambie de tamaño')
+    if '--poster-badge-top:' not in _html:
+        _errs.append('falta el token --poster-badge-top (sale de la retícula: 4,65u de 12u)')
+    if not _re.search(r'\.is-cancelled[^{]*\{[^}]*filter:grayscale', _html):
+        _errs.append('cancelada dejó de decirse en gris — sin `filter:grayscale` el estado '
+                     'no se distingue de una función normal')
+
+    # La mitad que de verdad protege la decisión: nadie vuelve a difuminar una cancelada.
+    # Solo cuenta cuando CANCELADA es la CONDICIÓN y el difuminado la consecuencia.
+    # Un `allPast?'opacity:.5'` que convive en la misma línea con un badge de
+    # cancelada es legítimo: ahí quien difumina es «ya pasó», que es su dueño.
+    if _re.search(r"_cancell?ed[^?\n]{0,40}\?[^:\n]{0,60}opacity:", _prog):
+        _errs.append('una función cancelada vuelve a difuminarse en programa.js: el '
+                     'difuminado ya significa «ya pasó» y no puede decir dos cosas')
+
+    if _errs:
+        fail(check, '; '.join(_errs[:3]))
+    else:
+        ok(check, 'el badge se ancla a la retícula y cancelada se dice en gris, no difuminada')
+except Exception as _e:
+    warn(check, f'no se pudo verificar cancelada-no-difumina: {_e}')
+
 # ── [icono-texto] un botón con icono Y texto se alinea, o el icono flota ──────
 # Juan, 18 ago 2026: el «+» de «Agendar» iba 3px más alto que la palabra. La
 # causa: .excl-include-btn no tenía display:inline-flex ni align-items:center,
