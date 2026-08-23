@@ -35,11 +35,19 @@ export function _esRevisionActiva(){
   return !!(cfg.review&&cfg.review.key);
 }
 
-// Enciende/apaga el banner de revisión. Se llama al cargar un festival: es el
-// único momento en que la respuesta puede cambiar.
+// Enciende/apaga el banner de revisión.
+//
+// NO en el splash: ahí el aviso ya lo da el separador «En revisión» del riel, y
+// repetirlo abajo es decir dos veces lo mismo en una pantalla que se lee de un
+// golpe (lo levantó Juan al revisarlo). loadFestival() lo enciende cuando el
+// splash TODAVÍA está en pantalla —tarda 830 ms en irse— así que la condición
+// no puede ser solo «el festival es de revisión»: también tiene que no haber
+// splash. Se vuelve a pintar cuando el splash se retira.
 export function _pintarBannerRevision(){
   const b=document.getElementById('review-banner');
-  if(b) b.classList.toggle('on', _esRevisionActiva());
+  if(!b) return;
+  const haySplash=!!document.getElementById('otrofestiv-splash');
+  b.classList.toggle('on', _esRevisionActiva() && !haySplash);
 }
 
 // ── Clave de un festival en revisión ─────────────────────────────────────────

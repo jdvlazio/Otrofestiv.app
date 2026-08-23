@@ -626,7 +626,9 @@ export function dismissSplash(){
       }
       // 150ms para que el compositor de iOS se asiente antes de revelar
       setTimeout(()=>{
-        if(s){s.classList.add('fade-out');setTimeout(()=>{s.remove();// FIX iOS compositor (especialmente Leviza/festival activo):
+        if(s){s.classList.add('fade-out');setTimeout(()=>{s.remove();
+          // El splash ya no está: ahora sí puede aparecer el banner de revisión.
+          _pintarBannerRevision();// FIX iOS compositor (especialmente Leviza/festival activo):
           // initProgramaModeBar() corrió bajo el splash → reflowó el topbar →
           // compositor cacheó nav en posición incorrecta. Re-ejecutar DESPUÉS de
           // quitar el splash fuerza el reflow en viewport abierto → posición correcta.
