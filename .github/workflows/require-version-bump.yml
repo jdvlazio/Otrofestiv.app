@@ -1,25 +1,33 @@
 name: Require version bump
 
-# Cinturón de seguridad: si app-code (src/, index.html, sw.js) llega a main sin
+# INTENTO FALLIDO Y REVERTIDO — leer antes de reintentar (23 ago 2026).
+#
+# El #697 sacó el bump de la rama y lo pasó a un workflow que empujaba a main
+# después de mergear. Falló 5 de 5 veces y se revirtió en el #705:
+#
+#   remote: error: GH006: Protected branch update failed for refs/heads/main.
+#   remote: - 4 of 4 required status checks are expected.
+#
+# La branch protection exige 4 checks para TODO push a main, y esos checks solo
+# corren en `pull_request`: un push directo no puede satisfacerlos nunca. Y la
+# variante «que el bot abra un PR con auto-merge» tampoco sirve: un PR creado
+# con GITHUB_TOKEN NO dispara workflows —GitHub lo impide para evitar recursión—
+# así que los checks jamás correrían y el PR quedaría abierto en silencio.
+#
+# Mientras estuvo roto, #700, #701, CineAutopsia y #702 entraron a main SIN
+# bump: las clientes ABIERTAS se quedaron con el JS viejo. El síntoma es
+# invisible desde el repo, porque main se ve perfecto.
+#
+# Automatizarlo de verdad requiere un PAT de admin como secreto. Se descartó:
+# es más máquina de la que el problema justifica. El costo que queda —dos PR
+# simultáneos chocan en los 4 archivos del bump— es real pero se resuelve en
+# dos minutos, y ahora sabemos que casi todo conflicto entre ramas es ese.
+#
+# Cinturón de seguridad: si un PR cambia app-code (src/, index.html, sw.js) sin
 # actualizar version.json, las clientes ACTIVAS no recargan el código nuevo — el
 # poll de _checkVersionJson() compara version.json vs BUILD_VERSION y solo dispara
 # reload cuando difieren. Sin bump → quedan corriendo JS viejo indefinidamente.
-# Rationale: .specify/memory/constitution.md.
-#
-# ESTE CHECK YA NO BLOQUEA (Juan, 23 ago 2026). El bump dejó de vivir en la rama:
-# lo aplica `auto-bump-main.yml` una vez, sobre main, después de mergear.
-#
-# Por qué se relajó: bump-version.js escribe en CUATRO archivos (version.json,
-# sw.js, src/main.js, index.html). Exigirlo en cada PR hacía que dos PR
-# simultáneos que tocaran app-code tuvieran conflicto GARANTIZADO, siempre, en
-# los mismos cuatro archivos. No era un riesgo ocasional: era aritmética. El 23
-# de agosto el #694 chocó con el #693 y cuatro de los cinco archivos en conflicto
-# eran el bump; el único conflicto real de contenido fue un guardián nuevo.
-#
-# Por qué el job SIGUE EXISTIENDO y con el mismo nombre: `require-bump` es un
-# check REQUERIDO por la branch protection de main. Borrar el workflow dejaría
-# todos los PR inmergeables esperando un check que ya no corre — el mismo modo de
-# falla que cazó el PR #428. Así que el job se queda, informa, y nunca falla.
+# Este gate lo previene. Rationale: .specify/memory/constitution.md.
 #
 # Festivals/** NO está acá a propósito: el SW los sirve network-first y se
 # re-fetchean en cada load → no dependen del bump para frescura.
@@ -48,15 +56,12 @@ jobs:
           echo "---"
           APP=$(printf '%s\n' "$CHANGED" | grep -E '^(src/|index\.html$|sw\.js$)' || true)
           if [ -z "$APP" ]; then
-            echo "✓ Sin cambios de app-code — este PR no mueve la versión."
+            echo "✓ Sin cambios de app-code — bump no requerido."
             exit 0
           fi
           if printf '%s\n' "$CHANGED" | grep -qx 'version.json'; then
-            echo "✓ El PR trae bump. No hace falta, pero no molesta: auto-bump-main lo"
-            echo "  volverá a calcular al mergear. Ojo que un bump en la rama es la causa"
-            echo "  número uno de conflictos con otros PR abiertos."
+            echo "✓ App-code cambió y version.json fue actualizado — OK."
             exit 0
           fi
-          echo "✓ App-code cambió sin bump — CORRECTO. auto-bump-main.yml lo aplica"
-          echo "  sobre main al mergear. No corras bump-version.js en la rama."
-          exit 0
+          echo "::error::App-code cambió (src/, index.html o sw.js) sin actualizar version.json. Las clientes activas no recargarán el código nuevo. Corré 'node scripts/bump-version.js' y commiteá el resultado."
+          exit 1
