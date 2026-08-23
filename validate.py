@@ -3678,6 +3678,16 @@ try:
         # CineAutopsia — el PDF oficial la trae sin obras y sin runtime: es una
         # proyección al aire libre más un diálogo, y el festival no anunció cuánto dura.
         ('cineautopsia-2026', 'Encuentro Colombia Experimental Contemporánea'),
+        # QAFF — la Muestra Artística es exposición CONTINUA: el calendario Boom
+        # publica un rango (14 SEP 09:00 → «17 OCT» 10:00, con el mes además mal
+        # tipeado), no un minutaje de visita. No hay número honesto que poner.
+        ('qaff-2026', 'Muestra Artística'),
+        # Cinemancia — actividad de encuentro sin minutaje publicado (ni en el
+        # Excel de 3 tabs ni en la web). Además es candidata a SALIR: el festival
+        # pidió retirar las actividades con inscripción — decisión pendiente en
+        # el chat de Cinemancia. NOTA: este error estaba EN MAIN (el guardián
+        # llegó en #698 con este caso ya rojo); esta línea desbloquea a los dos.
+        ('cinemancia-2026', 'Encuentro Internacional de Investigación-Creación en Música y Sonido Cinematográfico'),
     }
     _viol = []
     for _fname in _ACTIVE:

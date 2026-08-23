@@ -195,7 +195,9 @@ BANDERAS = {
     'uruguay': '🇺🇾', 'paraguay': '🇵🇾', 'cuba': '🇨🇺', 'espana': '🇪🇸', 'francia': '🇫🇷',
     'italia': '🇮🇹', 'alemania': '🇩🇪', 'reino unido': '🇬🇧', 'estados unidos': '🇺🇸',
     'canada': '🇨🇦', 'japon': '🇯🇵', 'china': '🇨🇳', 'iran': '🇮🇷', 'india': '🇮🇳',
-    'rusia': '🇷🇺', 'federacion rusa': '🇷🇺',  # así lo escribe CineAutopsia 'polonia': '🇵🇱', 'dinamarca': '🇩🇰', 'suecia': '🇸🇪', 'noruega': '🇳🇴',
+    'rusia': '🇷🇺',
+    'federacion rusa': '🇷🇺',   # así lo escribe CineAutopsia
+    'polonia': '🇵🇱', 'dinamarca': '🇩🇰', 'suecia': '🇸🇪', 'noruega': '🇳🇴',
     'irlanda': '🇮🇪', 'belgica': '🇧🇪', 'paises bajos': '🇳🇱', 'portugal': '🇵🇹',
     'suiza': '🇨🇭', 'austria': '🇦🇹', 'grecia': '🇬🇷', 'turquia': '🇹🇷', 'kenia': '🇰🇪',
     'filipinas': '🇵🇭', 'macedonia del norte': '🇲🇰', 'nueva zelanda': '🇳🇿',
@@ -247,6 +249,10 @@ BANDERAS = {
     'latvia': '🇱🇻', 'lithuania': '🇱🇹', 'finland': '🇫🇮', 'iceland': '🇮🇸',
     'egypt': '🇪🇬', 'morocco': '🇲🇦', 'tunisia': '🇹🇳', 'algeria': '🇩🇿',
     'nigeria': '🇳🇬', 'kenya': '🇰🇪', 'senegal': '🇸🇳', 'ethiopia': '🇪🇹',
+    # Territorios de ultramar del Caribe francés. No son estados soberanos,
+    # pero tienen bandera propia y los festivales los publican como país de
+    # la obra — QAFF 2026 trae tres. Puerto Rico ya sentaba el criterio.
+    'martinica': '🇲🇶', 'guadalupe': '🇬🇵', 'guayana francesa': '🇬🇫',
 }
 
 # ISO2, porque los catálogos y TMDB los publican así y un país escrito «CO» es
@@ -391,6 +397,17 @@ def contrato():
 
 def normaliza(film, reporte=None):
     """Coacciona los tipos del contrato en UN film. Devuelve el film."""
+    # NFC primero. macOS entrega los nombres de archivo —y lo que se copia de
+    # ellos— en NFD: «Soñé su nombre» llegaba como n+tilde combinante y e+acento
+    # combinante. Se ve idéntico en pantalla y NO casa con nada: ni con una
+    # búsqueda, ni con una tabla de correcciones, ni consigo mismo escrito a
+    # mano. Se descubrió porque una corrección de título por clave exacta no
+    # aplicaba, sin error y sin síntoma visible.
+    for k, v in list(film.items()):
+        if isinstance(v, str) and not unicodedata.is_normalized('NFC', v):
+            film[k] = unicodedata.normalize('NFC', v)
+            if reporte is not None:
+                reporte['NFC'] += 1
     for k, spec in contrato()['campos'].items():
         if k not in film:
             continue

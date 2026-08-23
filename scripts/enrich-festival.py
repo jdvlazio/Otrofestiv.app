@@ -413,7 +413,7 @@ def enrich_festival(path):
         title = film.get('title', '')
         needs_tmdb = _needs_tmdb(film)
         needs_lb = _needs_lb(film)
-        list_items = [it for it in film.get('film_list', []) if _needs_tmdb(it) or _needs_lb(it)]
+        list_items = [it for it in (film.get('film_list') or []) if _needs_tmdb(it) or _needs_lb(it)]
 
         if not needs_tmdb and not needs_lb and not list_items:
             stats['skipped'] += 1
@@ -432,7 +432,7 @@ def enrich_festival(path):
         if needs_lb:
             resolve_lb(film, tmdb_id, stats)
 
-        for item in film.get('film_list', []):
+        for item in (film.get('film_list') or []):
             if not (_needs_tmdb(item) or _needs_lb(item)):
                 continue
             it_id = None

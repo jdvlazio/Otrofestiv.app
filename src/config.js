@@ -597,6 +597,21 @@ export const FESTIVAL_CONFIG={
     tagline:'Muestra de Video y Experimental',
     films:null,posters:null,lbSlugs:{}
   },
+  'qaff2026':{
+    name:'QAFF',fullName:'QAFF — Quibdó África Film Festival',shortName:'QAFF',
+    city:'Quibdó',country:'CO',
+    dates:'14–18 SEP',dates_en:'SEP 14–18',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/qaff2026-v2.jpg',
+    storageKey:'qaff2026_',festivalStartStr:'2026-09-14T00:00:00',festivalEndStr:'2026-09-18T23:00:00',
+    festivalDates:{'2026-09-14':'2026-09-14','2026-09-15':'2026-09-15','2026-09-16':'2026-09-16','2026-09-17':'2026-09-17','2026-09-18':'2026-09-18'},
+    days:[{k:'2026-09-14',d:14,lbl:'LUN'},{k:'2026-09-15',d:15,lbl:'MAR'},{k:'2026-09-16',d:16,lbl:'MIÉ'},{k:'2026-09-17',d:17,lbl:'JUE'},{k:'2026-09-18',d:18,lbl:'VIE'}],
+    dayKeys:['2026-09-14','2026-09-15','2026-09-16','2026-09-17','2026-09-18'],
+    dayShort:{'2026-09-14':'LUN 14','2026-09-15':'MAR 15','2026-09-16':'MIÉ 16','2026-09-17':'JUE 17','2026-09-18':'VIE 18'},
+    dayShort_en:{'2026-09-14':'MON 14','2026-09-15':'TUE 15','2026-09-16':'WED 16','2026-09-17':'THU 17','2026-09-18':'FRI 18'},
+    dayLong:{'2026-09-14':'Lunes 14 de septiembre','2026-09-15':'Martes 15 de septiembre','2026-09-16':'Miércoles 16 de septiembre','2026-09-17':'Jueves 17 de septiembre','2026-09-18':'Viernes 18 de septiembre'},
+    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'tiff2026': {
     name:'TIFF',fullName:'TIFF — Toronto International Film Festival',shortName:'TIFF',
     city:'Toronto',country:'CA',
@@ -855,6 +870,17 @@ export const SECTION_ARCHETYPES = {
   '💬 Charlas': 'Charlas / Industria',
   '🛰️ Apertura': 'Apertura / Gala',
   '🤝 Encuentro': 'Charlas / Industria',
+  // QAFF 2026 (8ª edición, «NOIR»). Secciones curatoriales del propio festival,
+  // con los emoji aprobados por Juan el 2 ago; los nombres EN salen del nav de su sitio.
+  '🖼️ Muestra Artística': 'Especiales / Eventos',
+  '🌧️ Imaginarios Afrodisruptivos': 'Perspectivas / Miradas',
+  '🌊 Fronteras Latam': 'Muestra / País',
+  '🛶 Panorama Colombiano': 'Muestra / País',
+  '☕ Panorama Diaspórica': 'Muestra / País',
+  '🪞 Prisma Femenino': 'Perspectivas / Miradas',
+  '🌳 Panorama Africano': 'Muestra / País',
+  '🪕 Otra Mirada': 'Perspectivas / Miradas',
+  '🗄️ Diálogo Improbable': 'Charlas / Industria',
 };
 
 // mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus
