@@ -2590,6 +2590,12 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    ya desmintió— asomaba en blanco por debajo (Juan, 10 ago). Medido sobre el
    afiche real: bottom 5.5% + min-width 62% lo cubre por completo, sin la banda
    opaca que se comía un sexto del cartel. Verificado a 4x en el pie de la card. */
+/* La card ES el contexto de posicionamiento de su badge. Sin esto, el badge
+   solo quedaba dentro de las cards que casualmente tenían transform (que crea
+   containing block); la card seleccionada lo pierde y el badge se escapaba al
+   fondo del SPLASH — medido: card termina en y=395, badge pintado en y=747.
+   Así lo encontró Juan: un «EN REVISIÓN» suelto al pie de la pantalla. */
+.splash-card{position:relative}
 .splash-card-badge{position:absolute;left:50%;bottom:5.5%;transform:translateX(-50%);
   min-width:62%;text-align:center;
   font-size:var(--t-badge);letter-spacing:.6px;font-weight:var(--w-display);color:var(--amber);
