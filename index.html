@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608230703">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608230703">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608231112">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608231112">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -696,6 +696,15 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    desde que el filtro pasó a dropdown— y por debajo de #hdr-programa (z-index
    201) para no taparlo. Sigue descartable con la ✕. */
 #notices-banner:not(:empty){position:sticky;top:var(--sticky-top-chips);z-index:194}
+/* La hoja de clave se abre ENCIMA del splash, que es z-index:99999 — el resto
+   de .auth-sheet vive en 9999 porque se abren dentro de la app, con el splash
+   ya retirado. Ésta no: es lo primero que se toca. Sin esto se ve la hoja pero
+   el splash se traga los toques y no hay forma de escribir la clave ni de
+   confirmar: «lo veo pero no entra». */
+#review-sheet{z-index:100000}
+.review-banner{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;align-items:center;justify-content:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-4);padding-bottom:max(env(safe-area-inset-bottom),var(--sp-2));background:var(--surf-2);border-top:1px solid var(--bdr-l);font-family:var(--font);font-size:var(--t-xs);color:var(--gray2);text-align:center}
+.review-banner.on{display:flex}
+.review-banner b{color:var(--amber);font-weight:var(--w-bold)}
 .notice-banner{display:flex;align-items:flex-start;gap:var(--sp-2);padding:var(--sp-2) var(--sp-4);background:var(--surf-2);border-bottom:1px solid var(--bdr-l)}
 .notice-banner-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:5px}
 .notice-banner-body{flex:1;min-width:0}
@@ -3376,7 +3385,19 @@ setTimeout(function(){
 <script>
 (function(){
   var ua = navigator.userAgent;
-  var isDev = ['localhost','127.0.0.1'].indexOf(location.hostname) >= 0;
+  // isDev — servidor de desarrollo. Incluye las IP PRIVADAS además de
+  // localhost: revisar desde el teléfono obliga a entrar por la IP del Mac en
+  // la red (localhost en el móvil apunta al propio móvil), y con solo
+  // localhost/127.0.0.1 esa sesión caía en la landing de tiendas y no había
+  // forma de probar nada en un dispositivo real. Rangos privados (RFC1918) y
+  // el CGNAT de Tailscale (100.64/10): ninguno es alcanzable desde internet,
+  // así que esto no abre la app a nadie que no esté ya en la red.
+  var _h = location.hostname;
+  var isDev = ['localhost','127.0.0.1'].indexOf(_h) >= 0
+    || /^10\./.test(_h)
+    || /^192\.168\./.test(_h)
+    || /^172\.(1[6-9]|2\d|3[01])\./.test(_h)
+    || /^100\.(6[4-9]|[7-9]\d|1[01]\d|12[0-7])\./.test(_h);
   var hasCapacitor = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
   var isIOSDevice = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
   // iOS: la ÚNICA señal confiable es la ausencia del token "Safari/" en el UA —
@@ -3397,7 +3418,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608230703";
+    s.src="/src/main.js?v=202608231112";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
@@ -3415,6 +3436,12 @@ setTimeout(function(){
       }catch(e){}
     }, 6000);
   }
+  // El gate es el ÚNICO que sabe si esto es la app: en iOS la app real es un
+  // wrapper SwiftUI (WKWebView), NO Capacitor, así que window.Capacitor no
+  // existe ahí y detectarlo por ahí fallaría justo en iOS. Se expone su
+  // veredicto para que el resto de la app no lo recalcule con otra regla.
+  window.__otfIsApp = isApp;
+  window.__otfIsDev = isDev;
   if (isApp || isDev) { bootApp(); return; }
   function showLanding(){
     var es = (window.__otfLang || 'es') !== 'en';
@@ -3517,6 +3544,31 @@ setTimeout(function(){
     <div class="splash-card-tpl city-sheet-art" id="city-sheet-art"></div>
     <div class="splash-fest-label" id="city-sheet-label"></div>
     <div id="city-sheet-list"></div>
+  </div>
+</div>
+
+<!-- Clave de revisión — un festival que aún no se publica, para que su propio
+     equipo lo vea en la app real antes que nadie. Calcada de la hoja de OTP:
+     mismo contenedor, mismo input de código, mismo botón. La clave vive en el
+     bundle a propósito (protege de entrar por accidente, no de alguien
+     decidido) y el permiso caduca solo por `review.until` en config.js. -->
+<!-- RESTRICCIÓN 3 — banner permanente. Un festival en revisión trae datos
+     provisionales; sin decirlo, quien lo mire concluye que ESO es la
+     programación. Va FIJO al borde inferior y no en el flujo: G01 mide la
+     distancia del contenido al chrome en las cuatro tabs, y un elemento en el
+     flujo la movería. -->
+<div class="review-banner" id="review-banner" role="status">
+  <span><b data-i18n="review_banner_t">En revisión</b> <span data-i18n="review_banner_d">— programación provisional, aún sin publicar</span></span>
+</div>
+
+<div class="auth-sheet" id="review-sheet" data-close-bg="ReviewSheet">
+  <div class="auth-sheet-inner">
+    <div class="auth-sheet-title" data-i18n="review_titulo">Festival en revisión</div>
+    <div class="auth-sheet-sub"><span data-i18n="review_sub">Este montaje todavía no se publica. Ingresá la clave que te compartimos para verlo.</span></div>
+    <input class="pin-display auth-email-inp" id="review-key-inp" type="text" placeholder="••••••" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="24" onkeydown="if(event.key==='Enter')submitReviewKey()">
+    <button class="auth-send-btn" id="review-key-btn" data-action="submitReviewKey" data-i18n="av_confirmar">Confirmar</button>
+    <div class="auth-msg" id="review-msg"></div>
+    <span class="auth-cancel" data-action="closeReviewSheet" data-i18n="misc_cancelar">Cancelar</span>
   </div>
 </div>
 

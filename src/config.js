@@ -470,6 +470,15 @@ export const FESTIVAL_CONFIG={
     // regla pensada para FICDEH, que corre en ciudades a cientos de km— y le
     // dice al usuario «es en otra ciudad» en vez de cuántos minutos le faltan.
     metroArea:true,
+    // EN REVISIÓN — el festival ve su montaje en la app real, antes de que lo
+    // vea nadie más. `group:'test'` lo mantiene fuera de todo lo demás; esto lo
+    // devuelve al riel en su propio grupo, al final, tras los pasados.
+    //   · solo dentro de la app (en web el store gate manda a las tiendas);
+    //   · pide `key` para entrar — va en el bundle a propósito: protege de
+    //     entrar por accidente, no de alguien decidido, y eso basta;
+    //   · `until` la apaga sola. Un permiso temporal que hay que acordarse de
+    //     revocar es un permiso permanente.
+    review:{key:'cine26', until:'2026-09-03'},
     tagline:'Festival de Cine del Valle de Aburrá',
     films:null,posters:null,lbSlugs:{}
   },

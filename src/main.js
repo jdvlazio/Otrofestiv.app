@@ -55,6 +55,7 @@ import {
 //   (notificaciones: toasts/modales/sim-label). ───────────────────────────────
 import {
   openAuthSheet, closeAuthSheet, closeAvSheet, openFestivalSheet,
+  closeReviewSheet, submitReviewKey,
   closeFestivalSheet, closePVRating, closePrioLimit, _showSignedInSheet,
 } from './view/sheets.js';
 import {
@@ -215,6 +216,10 @@ const ACTION_REGISTRY = {
   openCortoSheetFromEl:  (el, e) => { const _m=globalThis._morphOpen; _m ? _m(el, () => openCortoSheetFromEl(el, e)) : openCortoSheetFromEl(el, e); }, // hero morph también dentro de programas (puente: _morphOpen vive en el IIFE)
   closePelSheet:         ()      => closePelSheet(),
   closeAuthSheet:        ()      => closeAuthSheet(),
+  // La hoja de clave solo VALIDA; si acierta devuelve el festId y entramos por
+  // el mismo dismissSplash() de siempre — no hay una segunda vía de entrada.
+  closeReviewSheet:      ()      => closeReviewSheet(),
+  submitReviewKey:       ()      => { if(submitReviewKey()) dismissSplash(); },
   closeAvSheet:          ()      => closeAvSheet(),
   closeConflictSheet:    ()      => closeConflictSheet(),
   closeFestivalSheet:    ()      => closeFestivalSheet(),
@@ -471,7 +476,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608230703';
+const BUILD_VERSION='202608231112';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
