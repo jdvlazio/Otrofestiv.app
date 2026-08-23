@@ -195,7 +195,9 @@ BANDERAS = {
     'uruguay': '🇺🇾', 'paraguay': '🇵🇾', 'cuba': '🇨🇺', 'espana': '🇪🇸', 'francia': '🇫🇷',
     'italia': '🇮🇹', 'alemania': '🇩🇪', 'reino unido': '🇬🇧', 'estados unidos': '🇺🇸',
     'canada': '🇨🇦', 'japon': '🇯🇵', 'china': '🇨🇳', 'iran': '🇮🇷', 'india': '🇮🇳',
-    'rusia': '🇷🇺', 'federacion rusa': '🇷🇺',  # así lo escribe CineAutopsia 'polonia': '🇵🇱', 'dinamarca': '🇩🇰', 'suecia': '🇸🇪', 'noruega': '🇳🇴',
+    'rusia': '🇷🇺',
+    'federacion rusa': '🇷🇺',   # así lo escribe CineAutopsia
+    'polonia': '🇵🇱', 'dinamarca': '🇩🇰', 'suecia': '🇸🇪', 'noruega': '🇳🇴',
     'irlanda': '🇮🇪', 'belgica': '🇧🇪', 'paises bajos': '🇳🇱', 'portugal': '🇵🇹',
     'suiza': '🇨🇭', 'austria': '🇦🇹', 'grecia': '🇬🇷', 'turquia': '🇹🇷', 'kenia': '🇰🇪',
     'filipinas': '🇵🇭', 'macedonia del norte': '🇲🇰', 'nueva zelanda': '🇳🇿',
@@ -247,6 +249,10 @@ BANDERAS = {
     'latvia': '🇱🇻', 'lithuania': '🇱🇹', 'finland': '🇫🇮', 'iceland': '🇮🇸',
     'egypt': '🇪🇬', 'morocco': '🇲🇦', 'tunisia': '🇹🇳', 'algeria': '🇩🇿',
     'nigeria': '🇳🇬', 'kenya': '🇰🇪', 'senegal': '🇸🇳', 'ethiopia': '🇪🇹',
+    # Territorios de ultramar del Caribe francés. No son estados soberanos,
+    # pero tienen bandera propia y los festivales los publican como país de
+    # la obra — QAFF 2026 trae tres. Puerto Rico ya sentaba el criterio.
+    'martinica': '🇲🇶', 'guadalupe': '🇬🇵', 'guayana francesa': '🇬🇫',
 }
 
 # ISO2, porque los catálogos y TMDB los publican así y un país escrito «CO» es
