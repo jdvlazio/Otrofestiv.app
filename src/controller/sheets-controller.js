@@ -550,6 +550,35 @@ export function closeVenueSheet(){
 // Se abre desde el chip "N vistas" del progreso de Mi Plan. El contenido lo arma
 // renderDiaryHTML (misma card del recap de Modo Recuerdo). z 8901: bajo pel-sheet,
 // así tocar una card abre la película ENCIMA del Diario.
+import { renderPalmaresHTML, palmaresDe } from '../view/programa.js';
+
+export function openPalmares(){
+  // Espejo de openDiary: el sheet se llena al abrirlo, no al renderizar la banda.
+  const body=document.getElementById('palm-body');
+  if(body) body.innerHTML=renderPalmaresHTML(_activeFestId);
+  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
+  const titleEl=document.getElementById('palm-title');
+  if(titleEl) titleEl.textContent=cfg.name||'';
+  const artEl=document.getElementById('palm-keyart');
+  if(artEl){
+    if(cfg.keyArt){ artEl.src=cfg.keyArt; artEl.style.visibility=''; }
+    else artEl.style.visibility='hidden';
+  }
+  const subEl=document.getElementById('palm-sub');
+  if(subEl){
+    const cats=palmaresDe(_activeFestId)||[];
+    const gan=cats.reduce((n,c)=>n+c.ganadoras.length,0);
+    subEl.textContent=t('palm_resumen').replace('{cats}',cats.length).replace('{n}',gan);
+  }
+  document.getElementById('palm-overlay')?.classList.add('open');
+  document.getElementById('palm-sheet')?.classList.add('open');
+}
+
+export function closePalmares(){
+  document.getElementById('palm-overlay')?.classList.remove('open');
+  document.getElementById('palm-sheet')?.classList.remove('open');
+}
+
 export function openDiary(){
   const body=document.getElementById('diary-body');
   if(body) body.innerHTML=renderDiaryHTML(state);

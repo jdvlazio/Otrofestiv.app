@@ -230,6 +230,80 @@ export const SECTION_EN = {
   '🤝 Encuentro': 'Gathering',
 };
 
+
+// ── PALMARÉS ────────────────────────────────────────────────────────────────
+// El palmarés es un dato PROPIO, no derivado de las funciones (decisión de Juan,
+// 23 ago 2026). Motivo: lo que un festival premió NO depende de si nosotros
+// teníamos su función. Vincularlos era forzar dos hechos distintos a ser uno, y
+// hacía que el palmarés heredara los huecos del catálogo — FICDEH premió «Los
+// bibliotecarios», una obra que nunca entró a nuestro JSON porque su ficha no
+// tenía ninguna función y el pipeline construye el catálogo DESDE las funciones.
+//
+// `obra` es el título EXACTO en el JSON del festival, o null si no la tenemos.
+// Con título → la tarjeta enlaza a su ficha. Sin título → se muestra igual, con
+// su afiche propio (Forma A). El palmarés queda completo siempre, y la ausencia
+// se ve como pieza nuestra en vez de como un hueco.
+//
+// `categoria` va VERBATIM del festival — misma regla que las secciones.
+// `nivel`: 'ganadora' | 'mencion'.
+export const PALMARES=[
+  // FICDEH 2026 — 8 posts del 21 ago en @ficdeh, uno por categoría.
+  // Tres correcciones sobre la fuente, documentadas porque publicar mal un premio
+  // es mentirle al usuario sobre su propio festival:
+  //  · «Muerto no» aparecía en la leyenda como Ficción NACIONAL, categoría que ese
+  //    mismo día se dio a «Sukua». El ARTE del post dice Internacional, la obra es
+  //    brasilera, y el JSON la tiene en la sección Internacional. Gana el arte.
+  //  · «Indryd» → «Ingryd» Ríos.  · «My Ggandmother is a skydriver» → grafía normal.
+  {fest:'ficdeh2026', categoria:'ImpulsoLab, 10ª edición', nivel:'ganadora',
+   titulo:'Eliza', autoria:'Ingryd Ríos', obra:null, tipo:'proyecto'},
+
+  {fest:'ficdeh2026', categoria:'Largometraje de Ficción', nivel:'ganadora',
+   titulo:'El verano de Jahia', autoria:'Olivier Meys', obra:'El verano de Jahia'},
+  {fest:'ficdeh2026', categoria:'Largometraje de Ficción', nivel:'mencion',
+   titulo:'Feito Pipa', autoria:'Allan Deberton', obra:'Feito Pipa'},
+  {fest:'ficdeh2026', categoria:'Largometraje de Ficción', nivel:'mencion',
+   titulo:'La hija cóndor', autoria:'Álvaro Olmos T.', obra:'La hija cóndor'},
+
+  {fest:'ficdeh2026', categoria:'Largometraje Documental Nacional', nivel:'ganadora',
+   titulo:'Hija del volcán', autoria:'Jenifer de la Rosa', obra:'Hija del volcán'},
+  {fest:'ficdeh2026', categoria:'Largometraje Documental Nacional', nivel:'mencion',
+   titulo:'Soñé su nombre', autoria:'Ángela Carabalí', obra:'Soñé su nombre'},
+  {fest:'ficdeh2026', categoria:'Largometraje Documental Nacional', nivel:'mencion',
+   titulo:'El valor de la palabra', autoria:'Marta Rodríguez', obra:'El valor de la palabra'},
+
+  // Sin `poster` acá a propósito: su afiche oficial entra en su propio PR, porque
+  // [frontera] separa código de app y datos de festival. Mientras tanto cae en
+  // Forma A, que es el último recurso y funciona.
+  {fest:'ficdeh2026', categoria:'Largometraje Documental Internacional', nivel:'ganadora',
+   titulo:'Los bibliotecarios', autoria:'Kim Snyder', obra:null},
+  {fest:'ficdeh2026', categoria:'Largometraje Documental Internacional', nivel:'mencion',
+   titulo:'El silencio de la tierra', autoria:'Frank Gutiérrez', obra:'El silencio de la tierra'},
+
+  {fest:'ficdeh2026', categoria:'Cortometraje de Ficción Nacional', nivel:'ganadora',
+   titulo:'Sukua', autoria:'Omar E. Ospina Giraldo', obra:'Sukua'},
+  {fest:'ficdeh2026', categoria:'Cortometraje de Ficción Nacional', nivel:'mencion',
+   titulo:'Sapos por todos lados', autoria:'Jacobo Alban', obra:'Sapos por todos lados'},
+  {fest:'ficdeh2026', categoria:'Cortometraje de Ficción Nacional', nivel:'mencion',
+   titulo:'La independencia', autoria:'John Agudelo Suárez', obra:'La independencia'},
+
+  {fest:'ficdeh2026', categoria:'Cortometraje de Ficción Internacional', nivel:'ganadora',
+   titulo:'Muerto no', autoria:'Alex Reis', obra:'Muerto no'},
+  {fest:'ficdeh2026', categoria:'Cortometraje de Ficción Internacional', nivel:'mencion',
+   titulo:'Una torreta en llamas', autoria:'Humberto Flores Jáuregui', obra:'Una torreta en llamas'},
+  {fest:'ficdeh2026', categoria:'Cortometraje de Ficción Internacional', nivel:'mencion',
+   titulo:'My grandmother is a skydiver', autoria:'Polina Piddubna', obra:'My grandmother is a skydiver'},
+
+  {fest:'ficdeh2026', categoria:'Cortometraje Documental Nacional', nivel:'ganadora',
+   titulo:'Madres de nacimiento', autoria:'Gloria Isabel Gómez Ceballos', obra:'Madres de nacimiento'},
+  {fest:'ficdeh2026', categoria:'Cortometraje Documental Nacional', nivel:'mencion',
+   titulo:'Apotnojushi La Casa del viento', autoria:'Marbel Ina Vanegas Jusayu', obra:'Apotnojushi La Casa del viento'},
+  {fest:'ficdeh2026', categoria:'Cortometraje Documental Nacional', nivel:'mencion',
+   titulo:'Si La Escombrera hablara', autoria:'Juan Prado', obra:'Si La Escombrera hablara'},
+
+  {fest:'ficdeh2026', categoria:'Cine Comunitario Nacional', nivel:'ganadora',
+   titulo:'Por una gota de leche', autoria:'Esteban J. Corzo', obra:'Por una gota de leche'},
+];
+
 // ── NOTICES ──────────────────────────────────────────────────────────────────
 // date: 'YYYY-MM-DD' de la función original — el banner desaparece al día siguiente
 // Para 'rescheduled': añadir newDay, newTime, newVenue
