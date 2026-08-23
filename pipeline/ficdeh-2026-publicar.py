@@ -16,6 +16,8 @@ derivado a is_free/requires_registration, y las marcas de geocoding viven en
 su sidecar.
 """
 import json, os, collections
+import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import lib
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUILD = f'{REPO}/festivals/staging/ficdeh-2026-build.json'
@@ -29,12 +31,15 @@ def limpio(d):
 
 
 def main():
+    _rep = collections.Counter()
     b = json.load(open(BUILD, encoding='utf-8'))
     out = {k: v for k, v in b.items() if k not in ('films', 'venues', 'sections')}
     out['sections'] = {k: limpio(v) for k, v in b['sections'].items()}
     out['venues'] = {k: limpio(v) for k, v in b['venues'].items()}
-    out['films'] = [limpio(f) for f in b['films']]
+    out['films'] = [lib.normaliza(limpio(f), _rep) for f in b['films']]
 
+    if _rep:
+        print('   contrato aplicado:', dict(_rep))
     json.dump(out, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False,
               separators=(',', ':'))
 

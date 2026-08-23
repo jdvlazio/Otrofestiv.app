@@ -17,6 +17,8 @@ por qué viajar a un JSON que se publica.
 Solo cubre MEDELLÍN. Las otras diez ciudades siguen dependiendo del sitio web.
 """
 import json, os, re, datetime
+import sys, os as _os; sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+import lib  # dueño único de norm/hora24/sinacento — [lib-unica]
 import openpyxl
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,18 +42,6 @@ def limpio(v):
     return re.sub(r'\s+', ' ', str(v)).strip()
 
 
-def hora24(h):
-    m = re.match(r'(\d{1,2}):(\d{2})\s*([ap])\.?\s*m', h.strip(), re.I)
-    if not m:
-        return h.strip()
-    hh, mm, ap = int(m.group(1)), m.group(2), m.group(3).lower()
-    if ap == 'p' and hh != 12:
-        hh += 12
-    if ap == 'a' and hh == 12:
-        hh = 0
-    return f'{hh:02d}:{mm}'
-
-
 def main():
     ws = openpyxl.load_workbook(XLSX, data_only=True)['FICDEH']
     fmt = openpyxl.load_workbook(XLSX)['FICDEH']   # data_only pierde nada de estilo, pero se lee aparte por claridad
@@ -69,7 +59,7 @@ def main():
         if not get('titulo') or not get('fecha'):
             continue
         f = {k: get(k) for k in COLS}
-        f['hora'] = hora24(f['hora'])
+        f['hora'] = lib.hora24(f['hora'])
         # el país llega con saltos de línea, barras y guiones sueltos
         f['pais'] = re.sub(r'\s*[/\-]\s*|\s{2,}', ', ', f['pais']).strip(' ,')
         f['duracion'] = f"{f['duracion']} min" if f['duracion'] else ''

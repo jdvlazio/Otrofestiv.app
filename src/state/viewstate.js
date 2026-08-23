@@ -26,7 +26,6 @@ let cachedResult=null;
 let activeView='day',activeDay='Martes',activeVenue='all',activeSec='all',selectedIdx=null,activeMNav='mnav-cartelera';
 let cartelaMode='pelicula';      // 'horario' | 'pelicula' (interno)
 let programaSubMode='hoy';       // 'hoy' | 'manana'
-let interesesViewMode='grid';    // 'grid' | 'list' para Intereses
 let miPlanViewMode='calendar';   // 'calendar' | 'list' para Mi Plan
 let programaViewMode='grid';     // 'grid' | 'list'
 let programaChip='all';          // chip activo en Explorar
@@ -58,7 +57,6 @@ const _lets = {
   programaSubMode:    [() => programaSubMode,    v => { programaSubMode = v; }],
   programaViewMode:   [() => programaViewMode,   v => { programaViewMode = v; }],
   cartelaMode:        [() => cartelaMode,        v => { cartelaMode = v; }],
-  interesesViewMode:  [() => interesesViewMode,  v => { interesesViewMode = v; }],
   miPlanViewMode:     [() => miPlanViewMode,     v => { miPlanViewMode = v; }],
   _sbUser:            [() => _sbUser,            v => { _sbUser = v; }],
   _sb:                [() => _sb,                v => { _sb = v; }],

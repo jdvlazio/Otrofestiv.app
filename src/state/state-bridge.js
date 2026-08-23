@@ -20,7 +20,7 @@ import { state } from './state.js';
 
 // ── STATE BRIDGE START (p8 Step 2) ───────────────────────────────────
 const _BRIDGE_KEYS = [
-  'watchlist', 'watched', 'prioritized', 'filmRatings', 'filmDelays',
+  'watchlist', 'watched', 'notWatched', 'prioritized', 'filmRatings', 'filmDelays',
   'filmDelaysHistory', 'savedAgenda', 'availability', 'lastRemovedSlots',
   '_lang', '_simTime', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END', 'PRIO_LIMIT',
   'TZ_OFFSET', 'FESTIVAL_TRANSPORT', '_activeFestId', 'FESTIVAL_STORAGE_KEY',

@@ -196,6 +196,13 @@ test('T39 — todos los festivales cargan sin crash', async ({ page }) => {
   const festIds = await page.evaluate(() =>
     Object.keys(FESTIVAL_CONFIG).filter(k => k !== 'default')
   );
+  // El costo de este test CRECE con cada festival: los carga todos en serie.
+  // Con 14 festivales y 2.2 MB de JSON tarda ~17s en local, y el presupuesto fijo
+  // de 30s se agotó en CI al entrar el festival nº14 — no por un defecto suyo,
+  // sino porque el techo no acompañaba al catálogo. El presupuesto se deriva del
+  // número de festivales para que el próximo onboarding no vuelva a chocarlo.
+  test.setTimeout(20000 + festIds.length * 5000);
+
   for (const id of festIds) {
     await page.evaluate((fid) => loadFestival(fid), id);
     await page.waitForFunction(() => typeof FILMS !== 'undefined' && FILMS.length > 0, { timeout: 8000 });
@@ -454,8 +461,14 @@ test('AP01 — aplazado: distintivo + banda + sin AHORA + sin «hoy»', async ({
     const { state } = await import('/src/state/state.js');
     const html = _renderSplashRailHTML(state, null);
     // Orden en el riel: la card aplazada va DESPUÉS de los próximos y ANTES de ANTERIORES.
+    // El divisor se busca POR SU RÓTULO, no por la clase. El riel emite DOS divisores
+    // con la misma clase —«Próximos» y «Anteriores»— y buscar el primero daba con el
+    // que no era en cuanto existía algún festival próximo: al publicar CineAutopsia
+    // (21–29 AGO, próximo el 13 de agosto que congela este test) apareció el divisor
+    // «Próximos» delante de FICMA y el test señaló una regresión que no ocurrió.
+    const { t } = await import('/src/i18n/i18n.js');
     const iFicma = html.indexOf('data-fest="ficma2026"');
-    const iAnteriores = html.indexOf('splash-rail-div');
+    const iAnteriores = html.indexOf(`<span class="srd-lbl">${t('splash_anteriores')}</span>`);
     return { cls: _classifyFestival(cfg), badge: html.includes('splash-card-badge'),
              postponedClass: /splash-card[^"]*postponed/.test(html),
              ficmaAntesDeAnteriores: iFicma >= 0 && iAnteriores > iFicma };
@@ -716,4 +729,144 @@ test('AP04 — cancelada por obra: marca solo las totales, y el Diario no ofrece
   expect(d.marcada).toBe(true);
   expect(d.ofreceVista).toBe(false);       // no se califica lo que no ocurrió
   expect(d.vivaOfreceVista).toBe(true);    // y la que sí ocurrió, sigue calificable
+});
+
+// AP05 — badge PREMIUM: la función cuesta más y hay que decirlo. TIFF marca 61 de
+// sus 638 funciones (galas del Roy Thomson, Princess of Wales, Royal Alexandra y
+// dos sedes más), y 55 OBRAS tienen funciones premium y normales a la vez: sin el
+// badge, alguien planea su día, va a comprar y se encuentra otro precio — y lo
+// habría llevado ahí la app. Se prueba en el DUEÑO (_metaBadges), que es donde
+// vive la regla, y con el caso de orden que importa: una cancelada no anuncia que
+// es cara. Hoy no hay ninguna premium cancelada en TIFF; el orden vale para
+// cuando la haya.
+test('AP05 — PREMIUM se anuncia, salvo si la función está cancelada', async ({ page }) => {
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  const r = await page.evaluate(async () => {
+    const { _metaBadges } = await import('/src/view/helpers.js');
+    const txt = o => _metaBadges(o).replace(/<[^>]*>/g, '·');
+    return {
+      premium:            txt({ premium: true }),
+      normal:             txt({ premium: false }),
+      sinCampo:           txt({}),
+      premiumCancelada:   txt({ premium: true, _cancelled: true }),
+      premiumConQA:       txt({ premium: true, has_qa: true }),
+      // `premium: 'true'` (string) NO cuenta: el dato es booleano y un truthy
+      // accidental no debe pintar un badge de precio.
+      premiumString:      txt({ premium: 'true' }),
+    };
+  });
+  expect(r.premium).toContain('PREMIUM');
+  expect(r.normal).not.toContain('PREMIUM');
+  expect(r.sinCampo).not.toContain('PREMIUM');
+  // El badge de ESTADO manda sobre los de SERVICIO: si no va a ocurrir, no hay
+  // nada que ofrecer — ni siquiera decir que era cara.
+  expect(r.premiumCancelada).toBe('');
+  // Convive con los demás, y va PRIMERO: es lo único que cambia el precio.
+  expect(r.premiumConQA).toContain('PREMIUM');
+  expect(r.premiumConQA).toContain('Q&A');
+  expect(r.premiumConQA.indexOf('PREMIUM')).toBeLessThan(r.premiumConQA.indexOf('Q&A'));
+  expect(r.premiumString).not.toContain('PREMIUM');
+});
+
+// PC01 — el plan NO cruza ciudades (QA de ojos frescos, 15 ago 2026). El caso
+// real: filtro Bogotá en FICDEH, watchlist con obras que existen en Bogotá Y en
+// otras ciudades, «Calcular mi Plan» → el plan ponía al usuario en Medellín el
+// domingo y en Ibagué el lunes, sin ciudad visible en las filas. Ahora: con
+// filtro de ciudad, CADA función del plan y CADA sugerencia es de esa ciudad.
+test('PC01 — con filtro Bogotá, el plan y las sugerencias no salen de Bogotá', async ({ page }) => {
+  test.setTimeout(90000);
+  await page.clock.install({ time: new Date('2026-08-15T09:00:00-05:00') });
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForSelector('.splash-card[data-fest="ficdeh2026"]', { timeout: 15000 });
+  await page.evaluate(() => { const c = FESTIVAL_CONFIG['ficdeh2026']; selectSplashFest(c.name, `${c.city} · ${c.dates}`, 'ficdeh2026'); });
+  await page.locator('.splash-enter-btn').click();
+  await page.waitForFunction(() => document.querySelectorAll('.poster-card, .plist-item').length > 0, null, { timeout: 20000 });
+  await page.waitForTimeout(600);
+  const r = await page.evaluate(async () => {
+    const { state } = await import('/src/state/state.js');
+    const { vcfg } = await import('/src/view/helpers.js');
+    const { computeScenarios } = await import('/src/domain/schedule.js');
+    const { _planCityVenues } = await import('/src/controller/calc.js');
+    const { getSuggestions } = await import('/src/view/agenda.js');
+    const city = f => (vcfg(f.venue) || {}).city || '';
+    const { FILMS } = state.snapshot();
+    // Watchlist como la del agente: obras con función en Bogotá Y en otras ciudades.
+    const mixtas = [...new Set(FILMS.filter(f => city(f) === 'Bogotá' && f.day >= '2026-08-16')
+      .map(f => f.title))].filter(t => FILMS.some(f => f.title === t && city(f) && city(f) !== 'Bogotá')).slice(0, 6);
+    mixtas.forEach(t => toggleWL(t));
+    // Filtro de ciudad ACTIVO — el camino real lo setea el dropdown; acá el estado.
+    globalThis.activeVenue = 'city:Bogotá';
+    globalThis.PLAN_CITY_VENUES = _planCityVenues();
+    const scenarios = computeScenarios([...state.snapshot().watchlist]);
+    const funciones = scenarios.flatMap(sc => sc.schedule || sc.items || sc);
+    const ciudades = [...new Set(funciones.map(f => city(f.venue ? f : f)).filter(Boolean))];
+    // Y las sugerencias sobre un plan guardado en Bogotá:
+    const bog = FILMS.find(f => city(f) === 'Bogotá' && f.day === '2026-08-16' && f.time);
+    state.set('savedAgenda', { schedule: [{ ...bog, _title: bog.title }] });
+    const sug = getSuggestions();
+    const sugCiudades = [...new Set(Object.values(sug).flat().map(s => city(s)).filter(Boolean))];
+    return { mixtas: mixtas.length, escenarios: scenarios.length, funciones: funciones.length,
+             ciudadesEnPlan: ciudades, ciudadesEnSugerencias: sugCiudades };
+  });
+  expect(r.mixtas).toBeGreaterThan(2);            // el caso existe de verdad
+  expect(r.escenarios).toBeGreaterThan(0);        // el plan se calcula
+  expect(r.funciones).toBeGreaterThan(0);
+  expect(r.ciudadesEnPlan).toEqual(['Bogotá']);   // NI UNA función de otra ciudad
+  expect(r.ciudadesEnSugerencias.every(c => c === 'Bogotá')).toBe(true);
+});
+
+// Ronda 3 (FINCA): con 3 festivales en curso el splash pedía elegir CADA vez —
+// el auditor elegía FICDEH, recargaba y volvía al punto cero. La regla del 5 jul
+// (0 o 2+ en curso → el usuario elige) decide la PRIMERA visita; no dice nada
+// sobre recordar lo ya elegido. La memoria persiste en el dispositivo y caduca
+// sola: si el festival recordado terminó, se vuelve a preguntar.
+test('P09 — el splash recuerda el festival elegido, y lo olvida cuando terminó', async ({ page }) => {
+  const estado = () => page.evaluate(() => ({
+    on: document.querySelector('.splash-card.on')?.dataset.fest || null,
+    entrar: document.getElementById('splash-enter-btn')?.disabled ? 'disabled' : 'habilitado',
+    guardado: localStorage.getItem('otrofestiv_festival'),
+  }));
+
+  // El festival se elige EN TIEMPO DE EJECUCIÓN, no a mano. Antes era
+  // 'ficdeh2026' fijo, y el test caducó solo cuando FICDEH terminó (19 AGO
+  // 2026): la app olvida a propósito los festivales terminados —es justo lo
+  // que la segunda mitad de este test comprueba— así que el propio caso se
+  // contradecía. Se necesita uno VIGENTE, y cuál sea depende del día.
+  await page.goto('/');
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  const elegido = await page.evaluate(() => {
+    const vivos = Object.entries(FESTIVAL_CONFIG).filter(([, c]) =>
+      c.name && c.group !== 'test' && c.festivalEndStr && new Date(c.festivalEndStr) > new Date());
+    return vivos.length ? vivos[0][0] : null;
+  });
+  expect(elegido, 'hace falta al menos un festival vigente para este caso').not.toBeNull();
+
+  await enterFestival(page, elegido);
+  expect((await estado()).guardado, 'entrar guarda la elección').toBe(elegido);
+
+  // El splash SIGUE apareciendo — solo llega con la elección puesta.
+  await page.reload();
+  await page.waitForSelector('.splash-card');
+  await page.waitForTimeout(800);
+  const vuelta = await estado();
+  expect(await page.locator('#otrofestiv-splash').isVisible(), 'el splash no se salta').toBe(true);
+  expect(vuelta.on, 'preselecciona lo recordado').toBe(elegido);
+  expect(vuelta.entrar, 'y «Entrar» queda habilitado').toBe('habilitado');
+
+  // Caduca sola: un festival ya terminado no se preselecciona ni sobrevive.
+  await page.evaluate(() => localStorage.setItem('otrofestiv_festival', 'ficci65'));
+  await page.reload();
+  await page.waitForSelector('.splash-card');
+  await page.waitForTimeout(800);
+  const caducado = await estado();
+  // Lo invariante es que el terminado NO sobrevive: ni queda seleccionado ni
+  // queda en memoria. Antes se comprobaba «Entrar» disabled, y eso solo vale
+  // cuando NO hay exactamente un festival en curso: si lo hay, al olvidar el
+  // viejo entra la OTRA regla —preselección automática del único vigente— y
+  // «Entrar» queda habilitado con razón. Son dos reglas distintas y cada una
+  // tiene su caso; mezclarlas hacía que este fallara según el día.
+  expect(caducado.on, 'el terminado no queda seleccionado').not.toBe('ficci65');
+  expect(caducado.guardado, 'y la memoria se limpia sola').toBeNull();
 });

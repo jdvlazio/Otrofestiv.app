@@ -16,6 +16,8 @@ paréntesis es la traducción al español de un título que ya está en inglés:
 el título original ya sirve y no hace falta title_en.
 """
 import json, os, re, subprocess, time, urllib.parse, unicodedata
+import sys, os as _os; sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+import lib  # dueño único de norm/hora24/sinacento — [lib-unica]
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CAT = f'{REPO}/festivals/staging/ficdeh-2026.json'
@@ -40,12 +42,6 @@ def ascii_ish(s):
     return not re.search(r'[áéíóúñüàèìòùâêîôûç]', (s or '').lower())
 
 
-def norm(s):
-    s = unicodedata.normalize('NFD', (s or '').lower())
-    s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
-    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
-
-
 def main():
     cat = json.load(open(CAT, encoding='utf-8'))
     can = json.load(open(CAN, encoding='utf-8'))['funciones']
@@ -58,14 +54,14 @@ def main():
             continue
         base, par = m.group(1).strip(), m.group(2).strip()
         if ascii_ish(par) and not ascii_ish(base):      # ES (EN) → sirve
-            del_festival[norm(base)] = par
+            del_festival[lib.norm(base)] = par
 
     cands = []
     for f in cat['films']:
         if f.get('title_en'):
             continue
         t = f['title']
-        hit = del_festival.get(norm(t))
+        hit = del_festival.get(lib.norm(t))
         if hit:
             cands.append({'title': t, 'title_en': hit, 'fuente': 'programación oficial del festival',
                           'confianza': 'alta'})
@@ -76,9 +72,9 @@ def main():
         for c in (r.get('results') or [])[:3]:
             en, orig = (c.get('title') or '').strip(), (c.get('original_title') or '').strip()
             anio = (c.get('release_date') or '')[:4]
-            if norm(orig) != norm(t) and norm(en) != norm(t):
+            if lib.norm(orig) != lib.norm(t) and lib.norm(en) != lib.norm(t):
                 continue                                  # ni el original ni el en-US son nuestra obra
-            if en and norm(en) != norm(orig) and ascii_ish(en):
+            if en and lib.norm(en) != lib.norm(orig) and ascii_ish(en):
                 cands.append({'title': t, 'title_en': en, 'fuente': f'TMDB {c["id"]}',
                               'confianza': 'media', 'anio_tmdb': anio,
                               'anio_catalogo': f.get('year'), 'original_title': orig})

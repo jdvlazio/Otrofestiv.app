@@ -90,7 +90,21 @@ export function screensConflictReason(a,b){
   const bFirst = bE<=aS;
   const gap = bFirst ? (aS-bE) : (bS-aE);
   const travel = (a.venue&&b.venue) ? travelMins(a.venue,b.venue) : 0;
-  return travel>0 ? {kind:'viaje', travel, gap, bFirst} : {kind:'ajustado', gap, bFirst};
+  if(!travel) return {kind:'ajustado', gap, bFirst};
+  // ¿El choque existe SOLO por el Q&A? Con traslado el Q&A cuenta (doctrina 30
+  // jul), pero es OPCIONAL y sus 30 min son ESTIMADOS: si saliendo al final de
+  // la película la función entra, eso no es una imposibilidad sino una decisión
+  // que el usuario puede tomar. Medido en FINCA: 4 de 27 choques con Q&A son de
+  // este tipo — «Tierra que habla» → «El amor duerme en la calle» deja 38 min de
+  // hueco sin la charla y hacen falta 25.
+  // La cuenta se repite acá con blockDuration en vez de durationForTravel; no se
+  // delega en screensConflict porque ésa es, por definición, la que cuenta el Q&A.
+  const _minGap=Math.max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER);
+  const _aE=toMin(a.time)+blockDuration(a), _bE=toMin(b.time)+blockDuration(b);
+  const _chocaSinQa=(_aE<=toMin(b.time))?(toMin(b.time)-_aE)<_minGap
+    :(_bE<=toMin(a.time))?(toMin(a.time)-_bE)<_minGap:true;
+  const qaOnly=(a.has_qa||b.has_qa)&&!_chocaSinQa;
+  return {kind:'viaje', travel, gap, bFirst, qaOnly};
 }
 
 export function isScreeningBlocked(s){
@@ -122,8 +136,36 @@ export function isScreeningBlocked(s){
 // día entero. Vive acá y no inline porque la regla la necesitan tres: el
 // planeador, el oráculo exacto y el recorrido por festival — y una regla con
 // tres copias es una regla que se desincroniza.
+// ── screeningPlannable — el predicado POR FUNCIÓN de «puede entrar a tu plan» ──
+// La mitad por-función de plannableScreens, extraída como dueño único (16 ago
+// 2026): el panel de alternativas reimplementaba 2 de los 4 chequeos y ofrecía
+// funciones de otras ciudades (436 de 836 con filtro Bogotá) y canceladas por
+// el sismo (118); el bloque de recuperación de Sugerencias se saltaba
+// `_cancelled`. Cancelada · pasada · franja vetada · ciudad. La regla del
+// taller entero-o-nada es GRUPAL y queda en plannableScreens, que es su casa.
+// WORKER: viaja serializada (_SCHED_PURE_FNS) — PLAN_CITY_VENUES con guard de
+// typeof, mismo patrón que en plannableScreens.
+export function screeningPlannable(s){
+  if(!s||s._cancelled) return false;
+  if(screeningPassed(s)) return false;
+  if(isScreeningBlocked(s)) return false;
+  const _pv=(typeof PLAN_CITY_VENUES!=='undefined')?PLAN_CITY_VENUES:null;
+  if(_pv&&s.venue&&!_pv.has(s.venue)) return false;
+  return true;
+}
+
 export function plannableScreens(title){
-  const screens=FILMS.filter(f=>f.title===title&&!f._cancelled&&!isScreeningBlocked(f)&&!screeningPassed(f));
+  // PLAN_CITY_VENUES — el planificador NO cruza ciudades (QA de ojos frescos,
+  // 15 ago 2026): con filtro Bogotá, «Calcular mi Plan» armaba el domingo en
+  // Medellín y el lunes en Ibagué sin avisar, y las filas del plan no muestran
+  // ciudad, así que era indetectable en pantalla. El set lo calcula calc.js
+  // desde el filtro activo (venueMatches, el dueño del predicado de lugar) y
+  // viaja al worker como payload. null = sin restricción.
+  // `typeof` y no la referencia: este global no existe en el sandbox de los unit
+  // tests ni en contextos que no calculan (la lección de FESTIVAL_POSTPONED).
+  // La mitad por-función vive en screeningPlannable (dueño único); acá queda
+  // lo que es de TÍTULO: el match y la regla grupal del taller.
+  const screens=FILMS.filter(f=>f.title===title&&screeningPlannable(f));
   if(screens.length&&screens[0].is_recurring){
     const total=FILMS.filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time&&!f._cancelled).length;
     if(total&&screens.length!==total) return [];
@@ -375,7 +417,17 @@ export function computeScenarios(titles){
 export function syncScheduleWithCatalog(schedule, films){
   if(!schedule||!schedule.length) return schedule;
   return schedule.map(e=>{
-    const live=(films||[]).find(f=>f.title===e._title&&f.day===e.day&&f.time===e.time);
+    // La identidad de una función incluye su SEDE. FICDEH programa el mismo
+    // título el mismo día a la misma hora en ciudades distintas (13 tripletas
+    // así, medido el 16 ago 2026), y matchear solo por título+día+hora hacía
+    // que .find() devolviera la PRIMERA del catálogo: el plan guardado con
+    // «Notas sobre un destierro · Cinemateca de Bogotá» amanecía en la
+    // Cinemateca del Caribe (Barranquilla) tras recargar — lo cazó la re-corrida
+    // del QA de ojos frescos. Si la entrada trae sede y esa sede ya no existe
+    // en el catálogo, la entrada queda INTACTA: es el camino reprogramada/
+    // cancelada que los avisos marcan con badge y salida — nunca un swap mudo.
+    const live=(films||[]).find(f=>f.title===e._title&&f.day===e.day&&f.time===e.time
+      &&(!e.venue||!f.venue||f.venue===e.venue));
     if(!live) return e;
     const out={...live,_title:e._title};
     if(e._squeezed) out._squeezed=e._squeezed;
@@ -434,5 +486,14 @@ export function verifyPlan(schedule, opts){
         v.push({kind:'bloque-incompleto', title:t, tiene:enPlan[t], necesita:total});
     });
   }
+  // CIUDAD CRUZADA — la red del chokepoint para la restricción de plan por
+  // ciudad (#594). Va acá y no solo en plannableScreens porque el squeeze de
+  // excluidas inserta DESPUÉS de computeScenarios y queda exento del chequeo
+  // de conflicto (`_squeezed`): por esa puerta entraron Medellín y Barranquilla
+  // con filtro Bogotá. Un guardián que solo mira el camino feliz no es red.
+  const _pv=(typeof PLAN_CITY_VENUES!=='undefined')?PLAN_CITY_VENUES:null;
+  if(_pv) list.forEach(s=>{
+    if(s.venue&&!_pv.has(s.venue)) v.push({kind:'ciudad-fuera', title:s._title||s.title||'', venue:s.venue});
+  });
   return {ok:v.length===0, violations:v};
 }

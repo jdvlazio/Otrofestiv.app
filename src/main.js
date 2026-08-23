@@ -71,7 +71,7 @@ import {
 
 // ── Step 6h: programa.js cartelera render (render, lugar overlay). ────────────
 import {
-  render, lugarClose, lugarOutside,
+  render, lugarClose, lugarOutside, scrollDtabsToActive,
 } from './view/programa.js';
 
 // ── Step 6g: programa.js render dispatchers (8 fns). ─────────────────────────
@@ -90,7 +90,7 @@ import {
 
 // ── Step 6f: view/agenda.js — render de agenda+miplan (18 fns). ───────────────
 import {
-  renderAgenda, renderMiPlanCalendar, renderUnconfirmed, renderFilmAlternatives, renderContextualHeader, renderPrioStrip, renderFilmListHTML, renderSavedAgendaHTML, renderAvBlocks, updateCardState, updateHorarioPrioBtn, _fixStickyOffset, _scrollMiPlanToNow, _updateMiPlanBadge,
+  renderAgenda, renderMiPlanCalendar,  renderFilmAlternatives, renderContextualHeader, renderPrioStrip, renderFilmListHTML, renderSavedAgendaHTML, renderAvBlocks, updateCardState, updateHorarioPrioBtn, _fixStickyOffset, _scrollMiPlanToNow,
   getSuggestions,
 } from './view/agenda.js';
 
@@ -121,7 +121,7 @@ import {
 // ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
 import {
   citySheetPick, citySheetAll,
-  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice, checkinLaVi, checkinNoLaVi, forceInclude, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setInteresesView, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _scrollToAgSection, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
+  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice,  forceInclude, includeAnyway, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
 import { setDelaysRerender } from './controller/delays-cloud.js';
 import { initWatchBridge } from './controller/watch-bridge.js';
@@ -197,13 +197,12 @@ const ACTION_REGISTRY = {
   setDelay:           (el)    => setDelay(el.dataset.title, el.dataset.day, el.dataset.time, +el.dataset.mins, el.dataset.venue),
   clearDelay:         (el)    => clearDelay(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue),
   undoDelay:          (el)    => undoDelay(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue),
-  checkinLaVi:        (el)    => checkinLaVi(el.dataset.title),
-  checkinNoLaVi:      (el)    => checkinNoLaVi(el.dataset.title),
   savePVRating:       ()      => savePVRating(),
   setLang:            (el)    => setLang(el.dataset.code),
   toggleLangDropdown: ()      => toggleLangDropdown(),
   selectLang:         (el)    => selectLang(el),
   forceInclude:       (el)    => forceInclude(el.dataset.title),
+  includeAnyway:      (el)    => includeAnyway(el.dataset.title, el.dataset.day, el.dataset.time),
   dismissNotice:      (el)    => _dismissNotice(el.dataset.title),
   swapPriority:       (el)    => swapPriority(el.dataset.rmtitle, el.dataset.addtitle),
 
@@ -241,7 +240,6 @@ const ACTION_REGISTRY = {
   setProgramaMode:     (el)    => setProgramaMode(el.dataset.mode),
   setProgramaChip:     (el)    => setProgramaChip(el.dataset.chip),
   setAvType:           (el)    => setAvType(el.dataset.type),
-  setInteresesView:    (el)    => setInteresesView(el.dataset.mode),
   toggleProgramaView:  ()      => toggleProgramaView(),
   lugarToggle:         ()      => lugarToggle(),
   seccionToggle:       ()      => seccionToggle(),
@@ -292,7 +290,6 @@ const ACTION_REGISTRY = {
   signOutAndClose:  ()    => signOutAndClose(),
 
   // ── G: Composite helpers (Patrones A-J multi-statement) (11) ──
-  scrollToAgSec:        (el)    => _scrollToAgSection(el.dataset.target),
   clearExpandedFilm:    ()      => _setExpandedFilm(''),
   setAvAddOpen:         (el)    => _setAvAddOpen(el.dataset.day, el.dataset.open === '1'),
   closePelAndRemove:    (el)    => _closePelAndRemove(el.dataset.title),
@@ -454,7 +451,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608121033';
+const BUILD_VERSION='202608230738';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -487,8 +484,8 @@ const BUILD_VERSION='202608121033';
                     CALIFICACIÓN (convención cine). Prioridad = marcador.
                                            Favorita, Top
    Disponibilidad   bloques de tiempo libre Horario, Agenda libre
-   Añadir           acción de Plan (función específica)  Guardar, Seleccionar
-   Interés          acción de ♥ — añadir a la colección  Favorito, Me gusta
+   Agendar          acción de Mi Plan (función específica)  Añadir, Agregar, Incluir
+   Agregar          acción de ♥ — sumar a Intereses    Añadir, Guardar, Favorito
    Elegir           confirmar un plan       Guardar, Aceptar
    ────────────────────────────────────────────────── */
 // FESTIVAL_BUFFER → src/config.js (Step 1).
@@ -687,7 +684,6 @@ const _isoToFlag = c  => c&&c.length===2 ? String.fromCodePoint(0x1F1E6+c.toUppe
 // ═══════════════════════════════════════════════════════════════
 // 11 · RENDER — MI AGENDA
 //      renderPrioStrip, renderFilmListHTML, renderSavedAgendaHTML
-//      renderUnconfirmed
 // ═══════════════════════════════════════════════════════════════
 
 /* ── RENDER — MI LISTA ──────────────────────────────────────────────── */
@@ -833,15 +829,12 @@ const _isoToFlag = c  => c&&c.length===2 ? String.fromCodePoint(0x1F1E6+c.toUppe
 // Solo actúa cuando el festival está en curso (nowDayIdx >= 0).
 // Centra la nowline verticalmente en el viewport del contenedor.
 
-// _updateMiPlanBadge — muestra el número de funciones sin confirmar
-// en el tab de Mi Plan. Ámbar, no rojo — es una tarea diferible, no un error.
-// Se llama al final de renderAgenda() y cuando cambia watched.
 // _toggleEveningFilms — muestra/oculta posters adicionales en EVENING.
 // Sin CSS nuevo — usa hscroll-strip existente y link-gray-xs.
 
 // ── CALENDAR VIEW ──
 // p8 8b: view-state (activeView/activeDay/activeVenue/activeSec/selectedIdx/
-// activeMNav/cartelaMode/programaSubMode/interesesViewMode/miPlanViewMode/
+// activeMNav/cartelaMode/programaSubMode/miPlanViewMode/
 // programaViewMode/programaChip/_programaChipMatchFn/_currentChips) →
 // state/viewstate.js (bridge). main.js los lee/escribe vía globalThis.
 
@@ -867,10 +860,7 @@ const dtabs=document.getElementById('dtabs');
     activeDay=firstFuture;
     dtabs.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===firstFuture));
   }
-  requestAnimationFrame(()=>{
-    const activeBtn=dtabs.querySelector('.dtab.on');
-    if(activeBtn) dtabs.scrollLeft=activeBtn.offsetLeft-dtabs.offsetLeft;
-  });
+  requestAnimationFrame(scrollDtabsToActive);
 })();
 
 /* ── RENDER — CARTELERA: filtros, grid horario, grid película ────────── */
@@ -1123,7 +1113,7 @@ document.addEventListener('click',function(e){
 // varios de estos slices dispara el render 1× solo si comparten la misma fn.
 const _pipelineRenderMain = () => { updateAgTab(); renderActiveView(); };
 state.subscribeRender(
-  ['watchlist', 'watched', 'prioritized', 'filmRatings',
+  ['watchlist', 'watched', 'notWatched', 'prioritized', 'filmRatings',
    'filmDelays', 'filmDelaysHistory', '_simTime'],
   _pipelineRenderMain
 );
@@ -1229,7 +1219,26 @@ state.subscribeRender(
   // Se decide ANTES del reveal (splash aún invisible) → sin flash ni brinco.
   const _ongoingIds=Object.entries(FESTIVAL_CONFIG)
     .filter(([,c])=>_classifyFestival(c)==='ongoing').map(([id])=>id);
-  if(_ongoingIds.length===1){
+  // Memoria de la elección (decisión Juan, 16 ago 2026): la regla de arriba
+  // decide qué mostrar la PRIMERA vez; no dice nada sobre recordar lo que el
+  // usuario ya eligió. Con 3 festivales en curso, el auditor de FINCA elegía
+  // FICDEH, recargaba y volvía al punto cero. Si hay una elección previa
+  // VIGENTE, esa manda; si no, la regla del 5 jul se aplica intacta.
+  // No inventa estado: reusa la preselección que ya existe (card .on + info
+  // lleno + "Entrar" habilitado) y NO se narra en pantalla — preseleccionar sin
+  // anunciarlo dice «seguí o cambiá», no «sé lo que querés».
+  // Caduca sola: _storedFestEnded es el mismo veredicto que ya borró la clave de
+  // localStorage (L396-400), y hay que consultarlo acá porque _storedFestId es una
+  // const capturada ANTES del borrado. MEDIDO: sin esta condición el riel tampoco
+  // preselecciona un festival terminado (otro dueño río abajo lo rechaza) — se
+  // conserva porque hace explícita la intención en el punto donde se decide, no
+  // porque sea quien la hace cumplir.
+  const _recordado=(_storedFestId&&!_storedFestEnded&&FESTIVAL_CONFIG[_storedFestId])
+    ?_storedFestId:null;
+  if(_recordado){
+    _renderSplashRail(_recordado);
+    selectSplashFest(null,null,_recordado);
+  } else if(_ongoingIds.length===1){
     // Preselección automática: card .on + "Entrar" habilitado, cero interacción.
     _renderSplashRail(_ongoingIds[0]);
     selectSplashFest(null,null,_ongoingIds[0]);

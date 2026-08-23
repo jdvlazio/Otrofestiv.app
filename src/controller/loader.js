@@ -12,12 +12,12 @@ import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view
 import { DAYS, DAY_SHORT_EN, _langDates, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
 import { closeFestivalSheet, openCitySheet } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
-import { _renderProgramaContent, lugarClose } from '../view/programa.js';
+import { _renderProgramaContent, lugarClose, scrollDtabsToActive } from '../view/programa.js';
 import { _fixStickyOffset } from '../view/agenda.js';
 import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave } from './persistence.js';
 import { report } from '../telemetry.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
-import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav } from './pipeline.js';
+import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, _syncPmodeTabs } from './pipeline.js';
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
@@ -214,10 +214,21 @@ export async function loadFestival(id){
       // CONTENIDO (días, secciones, ticketing…): el dueño es el JSON.
       // Gate: validate.py [festival-name-parity]. Nada pisa storageKey.
       const _identFields=['name','shortName','city','dates','dates_en','year',
-        'timezoneOffset','festivalDates'];
+        'timezoneOffset'];
+      // `festivalDates` PASÓ de identidad a contenido (Juan, 23 ago 2026).
+      // Estaba archivado junto al nombre y la ciudad, así que el JSON solo podía
+      // rellenarlo si config lo tenía vacío — pero `days`/`dayKeys`, que son LA
+      // MISMA COSA (el calendario del festival), sí los pisa el JSON. El
+      // calendario quedaba partido en dos dueños: CineAutopsia dibujaba 8 días en
+      // la tira y `FESTIVAL_DATES` solo conocía 4. Los otros cuatro no existían
+      // para el reloj — `dayFullyPassed` devolvía false por `if(!dateStr)`, así
+      // que el VIE 21 nunca se atenuó, sus funciones nunca contaron como pasadas,
+      // y el 25/26/27 habrían roto la detección de HOY estando el festival vivo.
+      // El calendario tiene un solo dueño, y es el JSON — como el resto del
+      // contenido. Gate: validate.py [calendario-entero].
       const _contentFields=['days','dayKeys','dayShort','dayShort_en',
         'dayLong','prioLimit','eventPosterLabel','group','ticket_url','ticketing_model',
-        'sections']; // P2.2 — secciones data-driven desde el JSON del festival
+        'sections','festivalDates']; // P2.2 — secciones data-driven desde el JSON del festival
       _contentFields.forEach(k=>{ if(data[k]!=null) cfg[k]=data[k]; });
       _identFields.forEach(k=>{ if(data[k]!=null&&cfg[k]==null) cfg[k]=data[k]; });
       // Snapshot de identidad ya resuelta — el bloque config{} legacy de abajo
@@ -363,6 +374,7 @@ export async function loadFestival(id){
         cartelaMode='horario';
         setProgramaView('grid'); // TODO → siempre Grid
         document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day==='all'));
+        _syncPmodeTabs(); // la píldora Hoy/Mañana espeja al día activo (acá: ninguno)
         _renderProgramaContent(true); // cambio de día (TODO) → scroll al tope
         _updateProgramaActiveFilter();
         if(activeMNav!=='mnav-cartelera') switchMainNav('mnav-cartelera');
@@ -375,7 +387,12 @@ export async function loadFestival(id){
 
       cfg.days.forEach(day=>{
       const btn=document.createElement('button');
-      btn.className='dtab'+(dayFullyPassed(day.k)?' past':'');
+      // Sin `past` acá: en este punto FESTIVAL_DATES todavía es el del festival
+      // ANTERIOR (se publica en el batchUpdate, ~60 líneas más abajo), así que
+      // dayFullyPassed cortaba en `if(!dateStr) return false` y NINGÚN día se
+      // atenuaba nunca, en ningún festival. Se marca después del puente, cuando
+      // el calendario y FILMS ya son los de este festival. Ver el pase de `past`.
+      btn.className='dtab';
       btn.dataset.day=day.k;
       const _dtabLblES=day.lbl;
       const _dtabLblEN=(DAY_SHORT_EN[day.k]||'').split(' ')[0]||day.lbl;
@@ -387,6 +404,7 @@ export async function loadFestival(id){
         activeDay=day.k;activeVenue=keepCityOnly(activeVenue);selectedIdx=null;
         setProgramaView('list'); // día específico → siempre Lista (horarios/planificación)
         document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===day.k));
+        _syncPmodeTabs(); // la píldora Hoy/Mañana espeja al día elegido
         _renderProgramaContent(true); // cambio de día específico → scroll al tope
         _updateProgramaActiveFilter();
         if(activeMNav!=='mnav-cartelera') switchMainNav('mnav-cartelera');
@@ -442,6 +460,15 @@ export async function loadFestival(id){
     watchlist: new Set([...state.get('watchlist')].filter(t=>_validTitles.has(t))),
     watched: new Set([...state.get('watched')].filter(t=>_validTitles.has(t))),
     prioritized: new Set([...state.get('prioritized')].filter(t=>_validTitles.has(t))),
+  });
+  // ── Pase de `past` sobre la tira de días ──────────────────────────────────
+  // AHORA, no antes: dayFullyPassed necesita el calendario (FESTIVAL_DATES) y las
+  // funciones (FILMS) de ESTE festival, y las dos cosas acaban de publicarse en
+  // el batchUpdate de arriba. Hecho en el DOM build, leía los del festival
+  // anterior. Un solo dueño de la verdad — la función de dominio — evaluado
+  // cuando la verdad existe. Gate: validate.py [calendario-entero].
+  document.querySelectorAll('.dtab[data-day]').forEach(b=>{
+    if(b.dataset.day!=='all') b.classList.toggle('past', dayFullyPassed(b.dataset.day));
   });
 
   // ► SYNC DEL PLAN CONTRA EL CATÁLOGO ───────────────────────────────
@@ -521,9 +548,7 @@ export async function loadFestival(id){
   // El render fija activeDay + la clase .on, pero no scrollea #dtabs → sin esto
   // la barra arranca en el día 1 con el día de hoy fuera de pantalla. Corre tras
   // el doble-rAF (barra ya pintada y medible). Mismo patrón que filterByDay.
-  const _dtabs=document.getElementById('dtabs');
-  const _onDtab=_dtabs&&_dtabs.querySelector('.dtab.on');
-  if(_dtabs&&_onDtab) _dtabs.scrollLeft=_onDtab.offsetLeft-_dtabs.offsetLeft;
+  scrollDtabsToActive();
   // Tab de aterrizaje contextual (regla de Juan, 17 jul): DURANTE el festival, si el
   // usuario YA tiene plan, su pantalla de trabajo es Mi Plan — aterrizar ahí. Sin plan
   // (o festival futuro/pasado) → Programa, como siempre: un Mi Plan vacío no invita a

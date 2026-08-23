@@ -1,0 +1,77 @@
+{
+ "_nota": "VARTEX 14 — Muestra de Video & Experimental de Medellín, 14ª edición. Montado con el pipeline genérico. La fuente MANDANTE de la programación es el afiche oficial (carrusel de Instagram): el sitio del festival NO publica horarios, y sus secciones «Internacional» y «Video Performance» son plantilla comentada en el HTML — no se usan. El Colombo tiene DOS salas y cambian por función: la sede del crudo las distingue y esta tabla las mapea a la misma sede con distinta sala, porque el ensamblador toma la sala de aquí y no del campo de la función.",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/ensamblar.py vartex-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/publicar.py vartex-2026",
+   "que": "build → festivals/"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/vartex-2026-crudo.json",
+  "name": "Vartex",
+  "fullName": "Vartex 14 — Muestra de Video y Experimental de Medellín",
+  "city": "Medellín",
+  "country": "CO",
+  "dates": "19–22 AGO",
+  "dates_en": "AUG 19–22",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "vartex2026_",
+  "festivalStartStr": "2026-08-19T00:00:00",
+  "festivalEndStr": "2026-08-22T23:59:00",
+  "prioLimit": 3,
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "agosto",
+  "sedes": {
+   "Centro Colombo Americano - Medellín · Sala 1": [
+    "Centro Colombo Americano - Medellín",
+    "Sala 1"
+   ],
+   "Centro Colombo Americano - Medellín · Sala 2": [
+    "Centro Colombo Americano - Medellín",
+    "Sala 2"
+   ],
+   "Centro Colombo Americano - Medellín": [
+    "Centro Colombo Americano - Medellín",
+    ""
+   ],
+   "Fundación Universitaria Bellas Artes - Medellín": [
+    "Fundación Universitaria Bellas Artes - Medellín",
+    ""
+   ]
+  },
+  "secciones": {
+   "Inauguración": {
+    "emoji": "⭐",
+    "en": "Opening",
+    "archetype": "Apertura / Gala"
+   },
+   "Muestra Internacional": {
+    "emoji": "🌍",
+    "en": "International Showcase",
+    "archetype": "Muestra / País"
+   },
+   "Muestra Nacional": {
+    "emoji": "🇨🇴",
+    "en": "National Showcase",
+    "archetype": "Muestra / País"
+   },
+   "Muestra Local": {
+    "emoji": "🏆",
+    "en": "Official Selection · Local",
+    "archetype": "Competencia"
+   },
+   "Formación": {
+    "emoji": "🎓",
+    "en": "Workshops & Seminar",
+    "archetype": "Industria / Formación"
+   }
+  },
+  "seccion_default": "Muestra Local",
+  "geo": "festivals/staging/vartex-2026-geo.json"
+ }
+}

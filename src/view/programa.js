@@ -12,7 +12,7 @@
 
 import { NOTICES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, posterParts, sala, vcfg, venueMatches, venueCity } from './helpers.js';
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -165,6 +165,7 @@ export function renderProgramaListHTML(state){
       const inWL=watchlist.has(f.title);
       const passed=screeningPassed(f);
       const isNow=isNowShowing(f);
+      const isQa=isNow&&isQaOnlyNow(f);
 
       const _isPrograma=f.is_programa&&f.film_list&&f.film_list.length>=2;
       const{displayTitle:_rawDt}=parseProgramTitle(f.title);
@@ -173,7 +174,20 @@ export function renderProgramaListHTML(state){
         :_rawDt;
       const vc=vcfg(f.venue);
       const src=getFilmPoster(f)||'';
-      const nowBadge=isNow?`<span class="film-check-badge">${t('misc_ahora')}</span>`:'';
+      // EL PUNTO DICE CUÁNDO, EL BADGE DICE QUÉ (decisión de Juan, 18 ago, vía
+      // Onboarding: el badge de estado «Q&A» quedaba pegado al informativo «Q&A»
+      // de _metaBadges — la fila decía lo mismo dos veces). El punto verde
+      // .live-dot —el mismo que marca «en curso» en el splash— es el marcador de
+      // ahora en las FILAS: tras el título si corre la película, tras el badge
+      // Q&A si corre la charla. Siempre FUERA del badge. La píldora AHORA
+      // sobrevive solo sobre el PÓSTER (abajo), donde un punto de 7px se pierde
+      // contra el afiche. El aria-label sostiene lo que el color no comunica.
+      const nowDot=isNow&&!isQa
+        ?`<span class="live-dot row-dot" role="img" aria-label="${t('aria_en_curso')}"></span>`
+        :'';
+      const qaDot=isQa
+        ?`<span class="live-dot row-dot" role="img" aria-label="${t('aria_qa_en_curso')}"></span>`
+        :'';
       // El dato viene SELLADO en la función por el loader (_cancelled/_movedFrom):
       // el listado ya no busca en NOTICES. Y para una movida, la hora que muestra la
       // card ES la nueva — el detalle "pasa a…" quedó redundante y se retiró.
@@ -181,15 +195,18 @@ export function renderProgramaListHTML(state){
         :f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';
       // «Pendiente nueva fecha» SOLO si el aviso no explicó la causa (ver loader).
       const noticeNote=(f._cancelled&&!f._cancelExplained)?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';
-      const cancelStyle=f._cancelled?'opacity:.5':'';
-      const pastStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
-      const itemStyle=[pastStyle,cancelStyle].filter(Boolean).join(';');
+      // Cancelada salió del difuminado (Juan, 21 ago 2026): acá se apilaba con el
+      // de «ya pasó» y una función caída y vieja quedaba al 22% — ilegible, y
+      // diciendo dos veces lo mismo con el mismo recurso. Ahora la fila cancelada
+      // se dice en gris (`.plist-item.is-cancelled`), y le siguen respondiendo el
+      // badge y el tachado de la meta, que sí son señales propias suyas.
+      const itemStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
       const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const _stk=_programaStack(f);
-      return`<div class="plist-item js-open-pel" style="${itemStyle}" data-title="${escXML(f.title)}">
+      return`<div class="plist-item js-open-pel${f._cancelled?' is-cancelled':''}" style="${itemStyle}" data-title="${escXML(f.title)}">
         ${_stk||_plistPosterHtml(f,src)}
         <div class="plist-info">
-          <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${_metaBadges(f)}${nowBadge}</div>
+          <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${nowDot}${_metaBadges(f)}${qaDot}</div>
           <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${venueCity(f.venue)?`<span class="plist-city">${venueCity(f.venue)}</span>`:''}${f.duration?' · '+durFmt(f.duration):''}</div>
           ${noticeNote||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}
         </div>
@@ -198,6 +215,28 @@ export function renderProgramaListHTML(state){
     }).join('')}
   `).join('');
   }catch(e){return `<div class="pad-muted">${t('error_funciones')}</div>`;}
+}
+
+// scrollDtabsToActive — DUEÑO ÚNICO del scroll de la barra de días. Regla de
+// Juan (18 ago): al abrir Programa, HOY y MAÑANA se ven sin navegar — el día
+// siguiente no puede vivir escondido en la navegación. La fórmula vieja
+// (activo pegado al borde izquierdo) vivía copiada en 3 sitios y con festivales
+// largos dejaba mañana fuera de cuadro: medido en AFF (10 días) — hoy visible,
+// mañana cortado; en Tribeca (12 días) ninguno de los dos.
+export function scrollDtabsToActive(){
+  const dt=document.getElementById('dtabs');
+  if(!dt) return;
+  const on=dt.querySelector('.dtab.on');
+  if(!on) return;
+  const tabs=[...dt.querySelectorAll('.dtab')];
+  const next=tabs[tabs.indexOf(on)+1]||null;
+  // El objetivo es el PAR (hoy + mañana); sin mañana (último día), solo hoy.
+  const left=on.offsetLeft-dt.offsetLeft;
+  const right=((next||on).offsetLeft-dt.offsetLeft)+(next||on).offsetWidth;
+  const max=Math.max(0,dt.scrollWidth-dt.clientWidth);
+  // Si el par no cabe entero, manda HOY (el día siguiente asoma lo que pueda).
+  const target=(right-left>dt.clientWidth)?left:Math.min(left,Math.max(0,right-dt.clientWidth));
+  dt.scrollLeft=Math.max(0,Math.min(max,target));
 }
 
 export function _renderProgramaContent(resetScroll=false){
@@ -401,7 +440,11 @@ export function renderPeliculaViewHTML(state){
     } else {
       _cardBg='';
       _cardBg='';
-      const _opacity=(allPast&&!_ended)||allCancelled?';opacity:.45':'';
+      // El difuminado dice UNA sola cosa: «ya pasó». Cancelada salió de acá
+      // (Juan, 21 ago 2026) y se dice en gris — ver `.poster-card.is-cancelled`
+      // en index.html. Con las dos verdades compartiendo opacidad, una función
+      // caída se leía como una función vieja.
+      const _opacity=(allPast&&!_ended)?';opacity:.45':'';
       const _edSecLbl=_secLabel(f.section||'');
       const _edBodyTitle=(()=>{const pfx=_edSecLbl+' - ';if(displayTitle.startsWith(pfx))return displayTitle.slice(pfx.length);const sPfx='Storytellers - ';if(displayTitle.startsWith(sPfx))return displayTitle.slice(sPfx.length);return displayTitle;})();
       const _pp=posterParts(f,{header:true,body:_edBodyTitle}); // decisión única (posterModel)
@@ -416,7 +459,7 @@ export function renderPeliculaViewHTML(state){
     }
     const _sep=activeDay==='all'&&f.section&&f.section!==_prevSec?`<div class="sec-hdr sm poster-grid-sep">${_secLabelFull(f.section||'')}</div>`:'';_prevSec=f.section||_prevSec;
     const cancBadge=allCancelled?`<div class="badge-past poster-past-badge">${t('notice_cancelada')}</div>`:'';
-    return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${_edAccent?' poster-ed':''}" data-title="${escXML(f.title)}"${_edAccent?` style="--ed-accent:${_edAccent}"`:(_isPrograma?'':_cardBg)}>
+    return _sep+`<div class="bg-surf-2 poster-card js-open-pel${allCancelled?' is-cancelled':''}${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${_edAccent?' poster-ed':''}" data-title="${escXML(f.title)}"${_edAccent?` style="--ed-accent:${_edAccent}"`:(_isPrograma?'':_cardBg)}>
       ${posterImg}
       ${cancBadge}
       ${progBadge}
@@ -456,6 +499,7 @@ export function render(){
     const passed=screeningPassed(f);
     const inWL=watchlist.has(f.title),inW=watched.has(f.title);
     const isNow=isNowShowing(f);
+    const isQa=isNow&&isQaOnlyNow(f);
     const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
     const posterSrc=getFilmPoster(f);
     const _cardBg2='';
@@ -463,12 +507,18 @@ export function render(){
       ?`<img class="img-cover" src="${posterSrc}" loading="lazy" data-title="${f.title.replace(/"/g,'&quot;')}" onerror="_posterErr(this)" alt="">`
       :``;
     const progBadge='';//REMOVED
-    const nowBadge=isNow?`<div class="poster-now">${t('misc_ahora')}</div>`:'';
+    const nowBadge=isNow
+      ?`<div class="poster-now${isQa?' qa-only':''}">${isQa?t('label_qa_ahora'):t('misc_ahora')}</div>`
+      :'';
     const pastBadge=f._cancelled?`<div class="badge-past poster-past-badge">${t('notice_cancelada')}</div>`
       :f._movedFrom?`<div class="badge-past poster-past-badge">${t('notice_reprog_short')}</div>`:'';
 
     const _fe=festivalEnded();
-return`<div class="poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe?' past-card':''}" data-title="${escXML(f.title)}"${_cardBg2}>
+// Cancelada le GANA a pasada (Juan, 21 ago 2026): si la función no va a
+    // ocurrir, que además su hora haya quedado atrás es lo de menos. Sin este
+    // `&&!f._cancelled` la tarjeta llevaba las dos marcas y el difuminado de
+    // «ya fue» se comía el gris de «se canceló».
+return`<div class="poster-card js-open-pel${f._cancelled?' is-cancelled':''}${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe&&!f._cancelled?' past-card':''}" data-title="${escXML(f.title)}"${_cardBg2}>
       ${posterImg}
       <div class="poster-time">${f.time}</div>
       ${nowBadge||pastBadge||progBadge}

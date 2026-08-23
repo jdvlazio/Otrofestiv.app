@@ -43,6 +43,25 @@ async function selectFestival(page, festId) {
   await page.waitForTimeout(100);
 }
 
+// reentrar — volver a la app DESPUÉS de un page.reload(), sin depender del
+// calendario. `_simTime` vive en memoria: la recarga lo borra y la app pasa a usar
+// la fecha REAL. Un test que fija «ficdeh2026 · 18 AGO» y luego recarga queda a
+// merced del día en que se corra — el 20 de agosto, con FICDEH ya terminado, el
+// splash deja de preseleccionar (regla: 0 o 2+ en curso ⇒ elegir a mano) y
+// «Entrar» aparece DESHABILITADO. Eso fue T65, y el síntoma engañaba: parecía
+// roto el marcado «Ya pasó» y lo que estaba roto era la premisa del test.
+// Acá se re-elige el festival explícitamente y se re-congela el tiempo.
+async function reentrar(page, festId, simTime) {
+  await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+  await page.waitForFunction(
+    () => typeof FESTIVAL_CONFIG !== 'undefined' && typeof selectSplashFest === 'function',
+    null, { timeout: 15000 });
+  await selectFestival(page, festId);
+  await page.locator('.splash-enter-btn').click();
+  await page.waitForSelector('.poster-card, .plist-item, .dtab', { timeout: 15000 });
+  if (simTime) await page.evaluate((t) => { _simTime = t; }, simTime);
+}
+
 async function enterFestival(page, festId, simTime) {
   await page.goto('/');
   // Gate de readiness JS DEFINITIVO: el marcador [data-app-ready="1"] se setea al
@@ -102,6 +121,16 @@ async function addToWatchlist(page, title) {
   }, title);
 }
 
+// esperarCalculo — la compuerta correcta tras pulsar «Calcular mi Plan».
+// Los tests esperaban a que #ag-result-wrap se hiciera VISIBLE, y eso funcionaba
+// solo porque antes el área nacía oculta. Desde que entrar a Planear calcula solo
+// (T58, 16 ago 2026) el área YA está visible, así que ese wait vuelve al instante
+// y el test lee cachedResult a mitad del recálculo (runCalc lo nula al empezar).
+// La condición honesta es el resultado, no la visibilidad.
+async function esperarCalculo(page) {
+  await page.waitForFunction(() => !!cachedResult, null, { timeout: 20000 });
+}
+
 async function goToPlanear(page) {
   await page.evaluate(() => {
     cachedResult = null;
@@ -110,6 +139,10 @@ async function goToPlanear(page) {
     showAgView();
   });
   await page.waitForSelector('.av-calc-btn', { timeout: 8000 });
+  // Entrar a Planear YA calcula cuando hay intereses y no hay plan guardado
+  // (T58, 16 ago 2026). Esperar a que asiente evita que un click posterior
+  // compita con el cálculo en vuelo. Si no hay intereses no calcula: se tolera.
+  await page.waitForFunction(() => !!cachedResult, null, { timeout: 20000 }).catch(() => {});
 }
 
-module.exports = { LEVIZA_SIMTIME, festivalTestIds, selectFestival, enterFestival, freezeSimTime, addToWatchlist, goToPlanear };
+module.exports = { LEVIZA_SIMTIME, esperarCalculo, festivalTestIds, selectFestival, enterFestival, reentrar, freezeSimTime, addToWatchlist, goToPlanear };
