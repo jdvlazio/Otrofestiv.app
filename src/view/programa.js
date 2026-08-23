@@ -195,12 +195,15 @@ export function renderProgramaListHTML(state){
         :f._movedFrom?`<span class="notice-badge">${t('notice_reprog_short')}</span>`:'';
       // «Pendiente nueva fecha» SOLO si el aviso no explicó la causa (ver loader).
       const noticeNote=(f._cancelled&&!f._cancelExplained)?`<div class="notice-detail-amber">${t('plan_fecha_pendiente')}</div>`:'';
-      const cancelStyle=f._cancelled?'opacity:.5':'';
-      const pastStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
-      const itemStyle=[pastStyle,cancelStyle].filter(Boolean).join(';');
+      // Cancelada salió del difuminado (Juan, 21 ago 2026): acá se apilaba con el
+      // de «ya pasó» y una función caída y vieja quedaba al 22% — ilegible, y
+      // diciendo dos veces lo mismo con el mismo recurso. Ahora la fila cancelada
+      // se dice en gris (`.plist-item.is-cancelled`), y le siguen respondiendo el
+      // badge y el tachado de la meta, que sí son señales propias suyas.
+      const itemStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
       const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const _stk=_programaStack(f);
-      return`<div class="plist-item js-open-pel" style="${itemStyle}" data-title="${escXML(f.title)}">
+      return`<div class="plist-item js-open-pel${f._cancelled?' is-cancelled':''}" style="${itemStyle}" data-title="${escXML(f.title)}">
         ${_stk||_plistPosterHtml(f,src)}
         <div class="plist-info">
           <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${nowDot}${_metaBadges(f)}${qaDot}</div>
@@ -437,7 +440,11 @@ export function renderPeliculaViewHTML(state){
     } else {
       _cardBg='';
       _cardBg='';
-      const _opacity=(allPast&&!_ended)||allCancelled?';opacity:.45':'';
+      // El difuminado dice UNA sola cosa: «ya pasó». Cancelada salió de acá
+      // (Juan, 21 ago 2026) y se dice en gris — ver `.poster-card.is-cancelled`
+      // en index.html. Con las dos verdades compartiendo opacidad, una función
+      // caída se leía como una función vieja.
+      const _opacity=(allPast&&!_ended)?';opacity:.45':'';
       const _edSecLbl=_secLabel(f.section||'');
       const _edBodyTitle=(()=>{const pfx=_edSecLbl+' - ';if(displayTitle.startsWith(pfx))return displayTitle.slice(pfx.length);const sPfx='Storytellers - ';if(displayTitle.startsWith(sPfx))return displayTitle.slice(sPfx.length);return displayTitle;})();
       const _pp=posterParts(f,{header:true,body:_edBodyTitle}); // decisión única (posterModel)
@@ -452,7 +459,7 @@ export function renderPeliculaViewHTML(state){
     }
     const _sep=activeDay==='all'&&f.section&&f.section!==_prevSec?`<div class="sec-hdr sm poster-grid-sep">${_secLabelFull(f.section||'')}</div>`:'';_prevSec=f.section||_prevSec;
     const cancBadge=allCancelled?`<div class="badge-past poster-past-badge">${t('notice_cancelada')}</div>`:'';
-    return _sep+`<div class="bg-surf-2 poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${_edAccent?' poster-ed':''}" data-title="${escXML(f.title)}"${_edAccent?` style="--ed-accent:${_edAccent}"`:(_isPrograma?'':_cardBg)}>
+    return _sep+`<div class="bg-surf-2 poster-card js-open-pel${allCancelled?' is-cancelled':''}${inWL&&!inW?' in-wl':''}${inW&&!_ended?' in-watched':''}${_edAccent?' poster-ed':''}" data-title="${escXML(f.title)}"${_edAccent?` style="--ed-accent:${_edAccent}"`:(_isPrograma?'':_cardBg)}>
       ${posterImg}
       ${cancBadge}
       ${progBadge}
@@ -507,7 +514,11 @@ export function render(){
       :f._movedFrom?`<div class="badge-past poster-past-badge">${t('notice_reprog_short')}</div>`:'';
 
     const _fe=festivalEnded();
-return`<div class="poster-card js-open-pel${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe?' past-card':''}" data-title="${escXML(f.title)}"${_cardBg2}>
+// Cancelada le GANA a pasada (Juan, 21 ago 2026): si la función no va a
+    // ocurrir, que además su hora haya quedado atrás es lo de menos. Sin este
+    // `&&!f._cancelled` la tarjeta llevaba las dos marcas y el difuminado de
+    // «ya fue» se comía el gris de «se canceló».
+return`<div class="poster-card js-open-pel${f._cancelled?' is-cancelled':''}${inWL&&!inW?' in-wl':''}${inW&&!_fe?' in-watched':''}${passed&&!_fe&&!f._cancelled?' past-card':''}" data-title="${escXML(f.title)}"${_cardBg2}>
       ${posterImg}
       <div class="poster-time">${f.time}</div>
       ${nowBadge||pastBadge||progBadge}

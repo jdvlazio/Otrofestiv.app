@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608230633">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608230633">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608230701">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608230701">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1135,7 +1135,21 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 /* Badge AHORA / Ya pasó */
 .poster-now{position:absolute;top:5px;left:5px;background:var(--green);color:var(--black);font-size:var(--t-badge);font-weight:var(--w-display);letter-spacing:.5px;padding:2px 5px;border-radius:var(--r-sm);line-height:1.4}
 .poster-now.qa-only{background:var(--amber)}
-.poster-past-badge{position:absolute;top:5px;left:5px;background:var(--overlay-60);color:var(--gray2);font-size:var(--t-badge);font-weight:var(--w-bold);padding:2px 4px;border-radius:var(--r-sm);line-height:1.4}
+/* El badge de estado NO se ancla al borde: en el póster nuestro el rótulo de
+   sección vive arriba (POSTERS.md §6.0) y a top:5px los dos ocupaban el mismo
+   sitio — ilegibles ambos, en todo póster propio, siempre (Juan, 21 ago 2026).
+   El anclaje sale de la retícula, no de un número a ojo: la sección arranca en
+   1u y su caja tiene un techo de 3,4u, así que NUNCA puede pasar de 4,4u por
+   más que crezca a varias líneas. +0,25u de aire (el grosor del filete) = 4,65u
+   de las 12u de alto. Un porcentaje medido a ojo sobre un rótulo de una línea
+   nos habría traicionado el día que uno ocupara dos. */
+:root{--poster-badge-top:38.75%} /* 4,65u / 12u */
+.poster-past-badge{position:absolute;top:var(--poster-badge-top);left:5px;background:var(--overlay-60);color:var(--gray2);font-size:var(--t-badge);font-weight:var(--w-bold);padding:2px 4px;border-radius:var(--r-sm);line-height:1.4}
+/* Cancelada = el afiche pierde el color, y el badge queda como lo único vivo de
+   la tarjeta. El difuminado NO servía: ya significa «ya pasó» (decisión de Juan
+   del 30 jul), y usar el mismo recurso para dos verdades distintas hacía leer
+   «esa ya fue» donde hay que leer «esa se canceló». El gris es un canal libre. */
+.poster-card.is-cancelled img,.plist-item.is-cancelled img{filter:grayscale(1)}
 /* ── Vista horario compacta — grid 2 columnas ── */
 
 /* ── Franja de acciones en tarjetas ── */
@@ -3397,7 +3411,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608230633";
+    s.src="/src/main.js?v=202608230701";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

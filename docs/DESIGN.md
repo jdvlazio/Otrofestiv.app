@@ -1040,6 +1040,37 @@ Esto las agrupa visualmente con la metadata sin alterar el dato fuente.
 
 ---
 
+## 5.9 · Un estado, un recurso: cancelada no se difumina
+
+**Regla (Juan, 21 ago 2026).** El **difuminado** (`opacity`) significa **una sola
+cosa: «ya pasó»**. Una función **cancelada** se dice en **gris**
+(`filter:grayscale(1)`) y con su badge. Nunca las dos cosas, y nunca el
+difuminado para cancelada.
+
+**Por qué.** Cancelada usaba `opacity` en tres superficies distintas —la grilla,
+el listado y la tarjeta de día—, el mismo recurso que «ya pasó». Dos verdades
+distintas con la misma cara: una función caída se leía como una función vieja. En
+el listado además se apilaban (`.45` × `.5`) y una cancelada ya pasada quedaba al
+22%: ilegible, y diciendo dos veces lo mismo. El gris estaba libre.
+
+**Cuándo coinciden manda cancelada.** Si una función está cancelada y además su
+hora ya pasó, va en gris y **sin** difuminar: que sea tarde es lo de menos si no
+va a ocurrir.
+
+**El badge se ancla a la retícula, no a un margen.** `--poster-badge-top` sale de
+la anatomía del póster propio (POSTERS.md §6.0): la sección arranca en 1u y su
+caja tiene un **techo de 3,4u**, así que 4,4u es el punto más bajo al que puede
+llegar por más líneas que ocupe; +0,25u de aire = **4,65u de las 12u (38,75%)**.
+A `top:5px` el badge caía sobre el rótulo de sección —no en un caso raro: en
+**todo** póster nuestro, siempre—. Un porcentaje medido a ojo sobre un rótulo de
+una línea habría vuelto a fallar con uno de dos.
+
+**Guardián:** `[cancelada-no-difumina]` cuida las dos mitades — que el badge
+ancle en el token y que nadie vuelva a difuminar una cancelada. La segunda
+importa más: volver a difuminarla no se ve roto, se ve normal.
+
+---
+
 ## 6 · Relación con CLAUDE.md
 
 - `CLAUDE.md` → contrato de **arquitectura** (capas, patrones, reglas de proceso).
