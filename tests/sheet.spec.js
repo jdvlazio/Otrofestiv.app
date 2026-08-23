@@ -186,11 +186,11 @@ test('AF03 — añadir otra función del mismo título hace swap', async ({ page
   await enterFestival(page, 'tribeca2026', TRIBECA_SIMTIME);
   await page.evaluate(() => { state.set('savedAgenda', null); });
   const title = await _titleWithFutureScreenings(page, 2);
-  if (!title) { console.log('AF03: sin título multi-función no-recurrente, skip'); return; }
+  if (!title) { test.skip(true, 'AF03: sin título multi-función no-recurrente, skip'); return; }
   await page.evaluate((t) => openPelSheet(t), title);
   await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
   const nBtns = await page.locator('.pel-sheet-screening .suggestion-add').count();
-  if (nBtns < 2) { console.log('AF03: <2 funciones futuras con botón, skip'); return; }
+  if (nBtns < 2) { test.skip(true, 'AF03: <2 funciones futuras con botón, skip'); return; }
   await page.locator('.pel-sheet-screening .suggestion-add').first().click();
   // El sheet se re-renderiza: la función añadida pasa a "en tu plan" (check izq).
   await page.waitForSelector('.pel-sheet-screening.in-plan', { timeout: 5000 });
@@ -274,7 +274,7 @@ test('AF09 — banda AVISOS con el aviso de programa en la ficha de corto', asyn
 test('AF10 — los avisos comparten columna y arrancan en el riel del día', async ({ page }) => {
   await enterFestival(page, 'finca2026', FINCA_SIMTIME);
   const withQa = await page.evaluate(() => (FILMS.find(f => f.has_qa) || {}).title);
-  if (!withQa) { console.log('AF10: festival sin Q&A, skip'); return; }
+  if (!withQa) { test.skip(true, 'AF10: festival sin Q&A, skip'); return; }
   await page.evaluate((t) => openPelSheet(t), withQa);
   await page.waitForSelector('#pel-sheet-inner .avisos-body', { timeout: 8000 });
   const m = await page.evaluate(() => {
@@ -341,7 +341,7 @@ test('AF12 — el corto hereda el Q&A de su programa, y nombra cuál función', 
 test('AF13 — la ficha muestra GRATIS en un festival de ticketing mixto', async ({ page }) => {
   await enterFestival(page, 'tercertiempo2026');
   const title = await page.evaluate(() => (FILMS.find(f => f.is_free === true && !f.info) || {}).title);
-  if (!title) { console.log('AF13: sin función gratuita, skip'); return; }
+  if (!title) { test.skip(true, 'AF13: sin función gratuita, skip'); return; }
   await page.evaluate((t) => openPelSheet(t), title);
   await page.waitForSelector('#pel-sheet-inner .avisos-body', { timeout: 8000 });
   const pills = await page.evaluate(() => [...document.querySelectorAll('.aviso-pill')].map(e => e.textContent));

@@ -2287,6 +2287,53 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar button-canon: {_e}')
 
+# ── [reload-sin-reloj] recargar borra la fecha congelada ─────────────────────
+# El 20 ago 2026 main amaneció rojo por dos tests que hacían page.reload(): la
+# recarga borra `_simTime` (vive en memoria), la app pasa a usar la fecha REAL y
+# el test queda a merced del día en que corra. T65 tardó media hora en entenderse
+# porque el síntoma engañaba —parecía roto el marcado «Ya pasó» y lo roto era la
+# premisa—. Es la única de las tres bombas de ese día que se caza LEYENDO.
+#
+# Después de recargar hay exactamente dos formas correctas:
+#   · reentrar(page, festId, simTime)  — re-elige festival y re-congela (helpers)
+#   · page.clock.install(...)          — congela el reloj del navegador, sobrevive
+#   · derivar la premisa del dato en tiempo de ejecución (lo que hace P09 hoy)
+#
+# La bomba NO es recargar: es recargar con la premisa CLAVADA. Un test que fija
+# 'ficdeh2026' o un simTime literal y después recarga queda a merced del día en
+# que corra; uno que elige el festival vigente al vuelo, no. Por eso el check
+# mira las dos cosas juntas — si solo mirara el reload, obligaría a reescribir
+# tests que ya son correctos, y un guardián que crea trabajo inútil se ignora.
+check = 'reload-sin-reloj'
+try:
+    import glob as _g6, re as _re
+    _malos = []
+    for _f in sorted(_g6.glob('tests/*.spec.js')):
+        _ls = open(_f, encoding='utf-8').read().splitlines()
+        for _i, _l in enumerate(_ls):
+            if '.reload(' not in _l:
+                continue
+            _ventana = ' '.join(_ls[_i:_i + 5])
+            if ('reentrar(' in _ventana or 'clock.install' in _ventana
+                    or 'selectFestival(' in _ventana):
+                continue
+            # clock.install ANTES del goto también vale: el reloj ya está congelado
+            _antes = _ls[max(0, _i - 45):_i]
+            if any('clock.install' in _p for _p in _antes):
+                continue
+            # ¿La premisa está clavada? Solo entonces la recarga es una bomba.
+            _fijo = any(_re.search(r"enterFestival\(page,\s*'[a-z0-9]+'", _p) for _p in _antes)
+            if not _fijo:
+                continue
+            _malos.append(f'{_f}:{_i + 1}')
+    if _malos:
+        fail(check, 'page.reload() sin re-congelar la fecha (usar reentrar() o clock.install): '
+                    + ', '.join(_malos[:5]))
+    else:
+        ok(check, 'toda recarga en tests re-congela la fecha o instala reloj')
+except Exception as _e:
+    warn(check, f'no se pudo verificar reload-sin-reloj: {_e}')
+
 # ── [aviso-color] el color de un aviso significa algo, y está decidido ────────
 # Juan, 18 ago 2026: «Plan desactualizado» salió en blanco por inercia (herencia
 # del banner de prioridades) y él preguntó lo obvio — ¿no debería ser ámbar, como
@@ -3555,10 +3602,30 @@ except Exception as _e:
 # NO se auto-deriva (multisala: misma hora+sede puede ser otra sala = otra
 # función) → el guardián OBLIGA a decidir contra el programa oficial: declarar el
 # flag, o anotar el slot como funciones separadas en _SEPARATE.
+# _festivalesVivos — quiénes están activos o por venir, DERIVADO de las fechas.
+# Antes cada guardián llevaba su propia lista `_ACTIVE` escrita a mano, y esas
+# listas envejecían calladas: al 20 ago 2026, [slots-sin-decidir] vigilaba a
+# finca-2026 (cerrado el 19) y [activity-duration] a dos festivales cerrados en
+# JULIO — verdes los dos, sin mirar CineAutopsia ni Vartex, que sí estaban vivos.
+# El propio repo ya lo había escrito 800 líneas arriba: «un guardián con lista
+# manual no es un guardián: es una foto que envejece». Esto lo hace una sola vez.
+def _festivalesVivos():
+    import re as _r2, datetime as _d2, glob as _g3
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    # Fecha de Colombia, no del runner (misma regla que el resto del repo).
+    _hoy = (_d2.datetime.utcnow() - _d2.timedelta(hours=5)).date().isoformat()
+    _vivos = []
+    for _fid, _end in _r2.findall(r"'([a-z0-9]+)':\s*\{.*?festivalEndStr:\s*'(\d{4}-\d{2}-\d{2})", _cfg, _r2.S):
+        if _end >= _hoy:
+            _vivos.append(_r2.sub(r'([a-zA-Z]+)(\d+)$', r'\1-\2', _fid))
+    if not _vivos:   # entre temporadas: revisar el más reciente igual
+        _vivos = [_g3.os.path.basename(_p)[:-5] for _p in sorted(_g3.glob('festivals/*.json'))[-1:]]
+    return sorted(_vivos)
+
 check = 'slots-sin-decidir'
 try:
     import json as _json
-    _ACTIVE = ['finca-2026']   # activos/próximos hoy (mismo roster que activity-duration)
+    _ACTIVE = _festivalesVivos()   # derivado de las fechas, no escrito a mano
     # (festival, 'dia|hora|sede') REVISADOS contra el programa oficial y confirmados
     # como funciones SEPARADAS (p.ej. actividades paralelas en espacios distintos).
     _SEPARATE = set()
@@ -3596,7 +3663,7 @@ except Exception as _e:
 check = 'activity-duration'
 try:
     import json as _json
-    _ACTIVE = ['tercertiempo-2026', 'fantasofest-2026']   # activos/próximos hoy
+    _ACTIVE = _festivalesVivos()   # derivado de las fechas, no escrito a mano
     # (festival_file, título) cuyo dato de duración la organización NO publicó.
     # Al recibir el minutaje real: llenar el JSON y BORRAR la línea de aquí.
     _PENDING = {
@@ -3611,6 +3678,16 @@ try:
         # CineAutopsia — el PDF oficial la trae sin obras y sin runtime: es una
         # proyección al aire libre más un diálogo, y el festival no anunció cuánto dura.
         ('cineautopsia-2026', 'Encuentro Colombia Experimental Contemporánea'),
+        # QAFF — la Muestra Artística es exposición CONTINUA: el calendario Boom
+        # publica un rango (14 SEP 09:00 → «17 OCT» 10:00, con el mes además mal
+        # tipeado), no un minutaje de visita. No hay número honesto que poner.
+        ('qaff-2026', 'Muestra Artística'),
+        # Cinemancia — actividad de encuentro sin minutaje publicado (ni en el
+        # Excel de 3 tabs ni en la web). Además es candidata a SALIR: el festival
+        # pidió retirar las actividades con inscripción — decisión pendiente en
+        # el chat de Cinemancia. NOTA: este error estaba EN MAIN (el guardián
+        # llegó en #698 con este caso ya rojo); esta línea desbloquea a los dos.
+        ('cinemancia-2026', 'Encuentro Internacional de Investigación-Creación en Música y Sonido Cinematográfico'),
     }
     _viol = []
     for _fname in _ACTIVE:
@@ -3914,10 +3991,6 @@ try:
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
         # guardián pide. Baja cuando se migre algo fuera de helpers.
         'src/view/helpers.js': 877,  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
-        # config.js es DATA: una entrada por festival, y crece con cada onboarding.
-        # No se puede «partir» sin inventar un índice que se desincronice del
-        # contenido, que es peor. Entra a la lista con la razón escrita.
-        'src/config.js': 952,  # +25: QAFF 2026 (entrada de FESTIVAL_CONFIG) — 23 ago  # +1: el afiche oficial de «Los bibliotecarios» — 23 ago  # +78: PALMARES de FICDEH 2026 (19 entradas + el porqué de tres correcciones sobre la fuente) — 23 ago  # +40: TIFF 2026 (entrada + 13 arquetipos de sección) — 23 ago
         'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
         'src/main.js': 1706,  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
         'src/i18n/i18n.js': 1640,  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
@@ -3927,9 +4000,27 @@ try:
         # correcciones sobre la fuente, que valen más escritas que ahorradas.
         'src/controller/handlers.js': 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
+    # src/config.js NO tiene techo (Juan, 23 ago 2026). Es DATA de festival
+    # —FESTIVAL_CONFIG, VENUES, NOTICES, PALMARES— y crece con cada onboarding,
+    # por construcción y para siempre. Un techo sobre un archivo que legítimamente
+    # crece sin fin es un techo que se sube sin fin: en un solo día subió cuatro
+    # veces (747→807→885→925→926).
+    #
+    # Y cada subida tenía un costo oculto: el techo vive en validate.py, que SÍ es
+    # código de app, así que todo PR de DATOS que agregara una línea a config.js
+    # arrastraba un cambio de código y [frontera] lo marcaba como mixto. Le pasó
+    # al PR del afiche de «Los bibliotecarios» y le iba a pasar a cada onboarding.
+    # La medida no protegía nada y ensuciaba la frontera; se retira.
+    #
+    # Lo que sí lo vigila y sigue en pie: [frontera] (que no mezcle), los
+    # validadores de festival, y que su contenido sea declarativo — este chequeo
+    # medía LÍNEAS, que en un archivo de datos no dice nada sobre su salud.
+    _SIN_TECHO = {'src/config.js'}
     _over = []
     for _f in _glob.glob('src/**/*.js', recursive=True):
         _f = _f.replace('\\', '/')
+        if _f in _SIN_TECHO:
+            continue
         _n = sum(1 for _ in open(_f, encoding='utf-8'))
         _ceil = _ALLOW.get(_f, _CAP)
         if _n > _ceil:
@@ -4998,15 +5089,28 @@ try:
     _sin = [_k for _k in _sin if not _k.startswith('_')]
     if _sin:
         _prob.append('campo(s) en los datos que el contrato no declara: ' + ', '.join(_sin[:6]))
-    _hoy = _dt.date.today().isoformat()
+    # Fecha de Colombia (UTC-5), no del runner: en UTC el día cambia cinco horas
+    # antes y una excepción vencía distinto acá que en CI (misma regla de CLAUDE.md).
+    _hoyCO = (_dt.datetime.utcnow() - _dt.timedelta(hours=5)).date()
+    _limite = (_hoyCO + _dt.timedelta(days=14)).isoformat()
+    _hoy = _hoyCO.isoformat()
+    _porvencer = []
     for _campo, _fests in (_C.get('_pendientes') or {}).items():
         if _campo == '_doc':
             continue
         for _fest, _info in _fests.items():
-            if _info['migrar_el'] <= _hoy:
-                _prob.append(f'excepción VENCIDA: {_campo}@{_fest} debía migrar el {_info["migrar_el"]}')
+            _m = _info['migrar_el']
+            if _m <= _hoy:
+                _prob.append(f'excepción VENCIDA: {_campo}@{_fest} debía migrar el {_m}')
+            elif _m <= _limite:
+                # Ámbar: la franja que este repo no tenía. Todo era verde o rojo,
+                # así que lo que caducaba no avisaba — explotaba.
+                _porvencer.append(f'{_campo}@{_fest} vence el {_m}')
     if _prob:
         fail(check, ' · '.join(_prob))
+    elif _porvencer:
+        warn(check, 'excepción(es) por vencer en ≤14 días: ' + ' · '.join(_porvencer)
+                    + ' — migrar antes, o mover la fecha con su razón escrita')
     else:
         _np = sum(len(_v) for _k, _v in (_C.get('_pendientes') or {}).items() if _k != '_doc')
         ok(check, f'contrato al día: {len(_C["campos"])} campos, doc generada, '

@@ -10,7 +10,7 @@ test('T11 — cerrar alternativas en Mi Plan cierra el panel', async ({ page }) 
   await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
-  if (hasPlan === 0) { console.log('T11: sin plan activo, skip'); return; }
+  if (hasPlan === 0) { test.skip(true, 'T11: sin plan activo, skip'); return; }
   await page.locator('.mplan-t1').first().click();
   const altPanel = page.locator('.film-alts').first();
   await expect(altPanel).toBeVisible({ timeout: 5000 });
@@ -56,7 +56,9 @@ test('T26 — hora punteada abre panel de alternativas', async ({ page }) => {
   await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
-  if (!hasPlan) return;
+  // Salida MUDA: sin plan el test pasaba en verde sin ejercer una sola aserción.
+  // Un test que no corre tiene que decirlo — si no, la suite miente.
+  test.skip(!hasPlan, 'T26: sin plan activo en el festival de prueba');
   await page.locator('.mplan-t1').first().click();
   await expect(page.locator('.film-alts').first()).toBeVisible({ timeout: 5000 });
   expect(await page.locator('.film-alts').count()).toBeGreaterThan(0);
@@ -68,7 +70,8 @@ test('T27 — sugerencias: añadir no abre sheet', async ({ page }) => {
   await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
-  if (!await addBtn.count()) return;
+  // Salida MUDA: sin botón de sugerencia no se ejercía nada y daba verde.
+  test.skip(!await addBtn.count(), 'sin sugerencia disponible para agregar');
   await addBtn.click();
   await expect(page.locator('#pel-sheet.open')).toHaveCount(0, { timeout: 3000 });
 });
@@ -79,7 +82,8 @@ test('T28 — sugerencias: añadir muestra toast', async ({ page }) => {
   await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
-  if (!await addBtn.count()) return;
+  // Salida MUDA: sin botón de sugerencia no se ejercía nada y daba verde.
+  test.skip(!await addBtn.count(), 'sin sugerencia disponible para agregar');
   await addBtn.click();
   await page.waitForSelector('.toast, .toast-msg, #toast', { timeout: 5000 });
   const toast = await page.locator('.toast, .toast-msg, #toast').count();
@@ -143,7 +147,7 @@ test('T50 — dos obras del mismo slot no generan aviso entre ellas y comparten 
     state.set('savedAgenda', { schedule: miembros.map(f => ({ ...f, _title: f.title })), scenarioIdx: 0 });
     return true;
   });
-  if (!ok) { console.log('T50: sin slot compartido en el festival, skip'); return; }
+  if (!ok) { test.skip(true, 'T50: sin slot compartido en el festival, skip'); return; }
   await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   await page.waitForTimeout(600);
@@ -173,7 +177,7 @@ test('T51 — el calendario dibuja un solo bloque para la función compartida', 
     state.set('savedAgenda', { schedule: miembros.map(f => ({ ...f, _title: f.title })), scenarioIdx: 0 });
     return true;
   });
-  if (!ok) { console.log('T51: sin slot compartido, skip'); return; }
+  if (!ok) { test.skip(true, 'T51: sin slot compartido, skip'); return; }
   await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   await page.waitForTimeout(600);
@@ -201,7 +205,7 @@ test('T52 — Actualizar muda la entrada a la función nueva', async ({ page }) 
       day: f._movedFrom.day, time: f._movedFrom.time, venue: f._movedFrom.venue }], scenarioIdx: 0 });
     return true;
   });
-  if (!ok) { console.log('T52: sin film de prueba, skip'); return; }
+  if (!ok) { test.skip(true, 'T52: sin film de prueba, skip'); return; }
   await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   await page.waitForTimeout(600);
@@ -226,7 +230,7 @@ test('T53 — el tachado de la hora no alcanza al badge ni a la salida', async (
     state.set('savedAgenda', { schedule: [{ ...f, _title: f.title }], scenarioIdx: 0 });
     return true;
   });
-  if (!ok) { console.log('T53: sin film de prueba, skip'); return; }
+  if (!ok) { test.skip(true, 'T53: sin film de prueba, skip'); return; }
   await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
   await page.waitForSelector('.mplan-fix', { timeout: 8000 });
   const deco = await page.evaluate(() => {

@@ -28,6 +28,13 @@ Aquí queda únicamente lo QAFF-específico, que es curaduría de datos:
   · poda de `_src`: quedan boom_event_id y tmdb_id; los stills de wixstatic
     son material de trabajo y se quedan en el staging.
 
+SLOT COMPARTIDO (decisión 23 ago, guardián [slots-sin-decidir]): el 17 SEP a
+las 14:10 «Bertha» (13') y «Mi viche todo el día» (26') arrancan JUNTAS en la
+única pantalla de la Biblioteca — el calendario del festival las publica como
+dos eventos con la misma hora de inicio. Es una sesión doble real, así que el
+staging declara sharedSlotIsOneScreening:true; es el único slot compartido de
+QAFF, no hay caso «separadas» que la bandera pueda malinterpretar.
+
 El resto —limpio de claves privadas, NFC, year→int, contrato, gate
 anti-pérdida— es del publicador genérico y NO se repite aquí.
 
