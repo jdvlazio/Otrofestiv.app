@@ -516,6 +516,8 @@ export const FESTIVAL_CONFIG={
     // a 2:3 las aplastaría un 65%, muy lejos de lo que tolera la regla. La card
     // cae al respaldo tipográfico hasta que llegue el afiche en vertical.
     tagline:'Muestra de Video y Experimental',
+    films:null,posters:null,lbSlugs:{}
+  },
   'tiff2026': {
     name:'TIFF',fullName:'TIFF — Toronto International Film Festival',shortName:'TIFF',
     city:'Toronto',country:'CA',
@@ -597,6 +599,20 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
+  '📺 Primetime': 'Especiales / Eventos',
+  '🔎 Discovery': 'Perspectivas / Miradas',
+  '🎯 Centrepiece': 'Muestra / País',
+  '⭐ Special Presentations': 'Muestra / País',
+  '🎩 Gala Presentations': 'Apertura / Gala',
+  '🌙 Midnight Madness': 'Especiales / Eventos',
+  '🏆 Platform': 'Competencia',
+  '〰️ Wavelengths': 'Perspectivas / Miradas',
+  '🎥 TIFF Docs': 'Perspectivas / Miradas',
+  '🎙️ In Conversation With...': 'Charlas / Industria',
+  '🏛️ TIFF Classics': 'Retrospectiva / Tributo',
+  '🎪 Special Events': 'Especiales / Eventos',
+  '✂️ Short Cuts': 'Cortos / Programas',
   // ── Cinemancia 2026 · Valle de Aburrá ─────────────────────────────────
   '⭐ Función inaugural': 'Apertura / Gala',
   '🎬 Función de clausura': 'Clausura',
@@ -619,20 +635,6 @@ export const SECTION_ARCHETYPES = {
   // ── CineAutopsia 2026 · Bogotá ────────────────────────────────────────
   '🔬 Destacados': 'Competencia',
   '🌀 Panorama': 'Muestra / País',
-  // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
-  '🎩 Gala Presentations': 'Apertura / Gala',
-  '⭐ Special Presentations': 'Muestra / País',
-  '🎯 Centrepiece': 'Muestra / País',
-  '🔎 Discovery': 'Perspectivas / Miradas',
-  '🏆 Platform': 'Competencia',
-  '🎥 TIFF Docs': 'Perspectivas / Miradas',
-  '🌙 Midnight Madness': 'Especiales / Eventos',
-  '〰️ Wavelengths': 'Perspectivas / Miradas',
-  '✂️ Short Cuts': 'Cortos / Programas',
-  '🏛️ TIFF Classics': 'Retrospectiva / Tributo',
-  '📺 Primetime': 'Especiales / Eventos',
-  '🎙️ In Conversation With...': 'Charlas / Industria',
-  '🎪 Special Events': 'Especiales / Eventos',
   '🔮 Largometrajes': 'Muestra / País',
   '🌙 Cortometrajes': 'Cortos / Programas',
   '🌱 Raíces del Juego': 'Perspectivas / Miradas',
@@ -800,7 +802,6 @@ export const SECTION_ARCHETYPES = {
 // Lo cazó Juan mirando el splash (9 ago 2026). El guardián [pais-conocido] de
 // validate.py exige ahora que todo `country` de FESTIVAL_CONFIG exista en esta tabla.
 export const COUNTRY_NAMES = {
-  CA: { es:'Canadá',       en:'Canada' },
   CO: { es:'Colombia',       en:'Colombia' },
   BR: { es:'Brasil',         en:'Brazil' },
   US: { es:'Estados Unidos', en:'United States' },
