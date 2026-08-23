@@ -168,7 +168,8 @@
    "_poster_nota": "posterSource OBLIGATORIO si poster tiene valor ([poster-source]): 'tmdb' | 'custom' (afiche propio en assets/) | 'editorial' (still 16:9 → marco editorial). El enricher propone; la verificación es humana (PIPELINE.md manda).",
    "lbSlug": "",
    "tmdb_id": 12345,
-   "_lbSlug_nota": "Slug REAL de Letterboxd (verificar vía redirect letterboxd.com/tmdb/<id>/) — nunca inferido."
+   "_lbSlug_nota": "Slug REAL de Letterboxd (verificar vía redirect letterboxd.com/tmdb/<id>/) — nunca inferido.",
+   "_tmdb_id_nota": "ID numérico de TMDB. No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar."
   },
   {
    "_tipo": "Tipo 2 — FUNCIÓN COMPARTIDA (anclaje). Obras INDEPENDIENTES que comparten una función: corto antes del largo, dos mediometrajes, hasta 4 obras. Entradas NORMALES (fichas y cards independientes, jamás fusionadas) + sharedSlotIsOneScreening:true en la raíz. El loader las ancla por día|hora|sede|sala. ⚠️ Reemplaza al legacy is_programa ('Film A + Film B') — no usar ese modelo.",

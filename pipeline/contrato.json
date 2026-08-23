@@ -238,6 +238,20 @@
   },
   "_src": {
    "nota": "De dónde salió el dato. Toda obra nueva lo lleva."
+  },
+  "format": {
+   "tipo": "string",
+   "nota": "Formato de proyección (DCP, 35mm). Lo publica el festival; TIFF es el único que lo trae."
+  },
+  "section_tags": {
+   "tipo": "array",
+   "lector": "ninguno todavía",
+   "nota": "Sellos del festival (TIFF). Decisión de Juan: etiqueta, no sección. Falta cablearlo en la vista."
+  },
+  "accessibility": {
+   "tipo": "array",
+   "lector": "ninguno todavía",
+   "nota": "Accesibilidad de la función (p. ej. «oc» = subtítulos descriptivos). Sin superficie que la muestre."
   }
  },
  "raiz": {

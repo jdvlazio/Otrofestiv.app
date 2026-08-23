@@ -3857,7 +3857,7 @@ try:
         # config.js es DATA: una entrada por festival, y crece con cada onboarding.
         # No se puede «partir» sin inventar un índice que se desincronice del
         # contenido, que es peor. Entra a la lista con la razón escrita.
-        'src/config.js': 807,  # +7: `review` de Cinemancia — festival abierto a su propio equipo — 23 ago
+        'src/config.js': 847,  # +40: TIFF 2026 (entrada + 13 arquetipos de sección) — 23 ago
         'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
         'src/main.js': 1704,  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
         'src/i18n/i18n.js': 1604,  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
@@ -4968,7 +4968,15 @@ try:
     # (con title_orig ya unificado dentro), filmType y cycle; _tmdbId se fusionó
     # en tmdb_id. La pregunta que los resolvió todos fue la misma: ¿lo vamos a
     # pintar? Si no, es peso muerto — por limpio que esté el dato.
-    _DEUDA = {}
+    _DEUDA = {
+        # TIFF, y los dos esperan una decisión de Juan, no un borrado mío:
+        # `section_tags` son los 47 SELLOS que él decidió sacar de las secciones
+        # y dejar como etiqueta — la decisión se tomó y el cableado en la vista
+        # nunca se hizo. `accessibility` son 34 funciones con subtítulos
+        # descriptivos ('oc'), dato real que hoy no se pinta en ningún lado.
+        'section_tags': 'TIFF (47) — sellos decididos por Juan, sin cablear en la vista',
+        'accessibility': 'TIFF (34) — accesibilidad de la función, sin superficie que la muestre',
+    }
     _src_all = ''.join(open(_p, encoding='utf-8').read()
                        for _p in _g.glob('src/**/*.js', recursive=True))
     _vistos = {}

@@ -518,6 +518,31 @@ export const FESTIVAL_CONFIG={
     tagline:'Muestra de Video y Experimental',
     films:null,posters:null,lbSlugs:{}
   },
+  'tiff2026': {
+    name:'TIFF',fullName:'TIFF — Toronto International Film Festival',shortName:'TIFF',
+    city:'Toronto',country:'CA',
+    dates:'10–20 SEP',dates_en:'SEP 10–20',year:2026,timezoneOffset:'-04:00',
+    storageKey:'tiff2026_',festivalStartStr:'2026-09-10T00:00:00',festivalEndStr:'2026-09-20T23:59:00',
+    festivalDates:{'2026-09-10': '2026-09-10', '2026-09-11': '2026-09-11', '2026-09-12': '2026-09-12', '2026-09-13': '2026-09-13', '2026-09-14': '2026-09-14', '2026-09-15': '2026-09-15', '2026-09-16': '2026-09-16', '2026-09-17': '2026-09-17', '2026-09-18': '2026-09-18', '2026-09-19': '2026-09-19', '2026-09-20': '2026-09-20'},
+    days:[{k: '2026-09-10', d: 10, lbl: 'JUE'}, {k: '2026-09-11', d: 11, lbl: 'VIE'}, {k: '2026-09-12', d: 12, lbl: 'SÁB'}, {k: '2026-09-13', d: 13, lbl: 'DOM'}, {k: '2026-09-14', d: 14, lbl: 'LUN'}, {k: '2026-09-15', d: 15, lbl: 'MAR'}, {k: '2026-09-16', d: 16, lbl: 'MIÉ'}, {k: '2026-09-17', d: 17, lbl: 'JUE'}, {k: '2026-09-18', d: 18, lbl: 'VIE'}, {k: '2026-09-19', d: 19, lbl: 'SÁB'}, {k: '2026-09-20', d: 20, lbl: 'DOM'}],
+    dayKeys:['2026-09-10', '2026-09-11', '2026-09-12', '2026-09-13', '2026-09-14', '2026-09-15', '2026-09-16', '2026-09-17', '2026-09-18', '2026-09-19', '2026-09-20'],
+    dayShort:{'2026-09-10': 'JUE 10', '2026-09-11': 'VIE 11', '2026-09-12': 'SÁB 12', '2026-09-13': 'DOM 13', '2026-09-14': 'LUN 14', '2026-09-15': 'MAR 15', '2026-09-16': 'MIÉ 16', '2026-09-17': 'JUE 17', '2026-09-18': 'VIE 18', '2026-09-19': 'SÁB 19', '2026-09-20': 'DOM 20'},
+    dayShort_en:{'2026-09-10': 'THU 10', '2026-09-11': 'FRI 11', '2026-09-12': 'SAT 12', '2026-09-13': 'SUN 13', '2026-09-14': 'MON 14', '2026-09-15': 'TUE 15', '2026-09-16': 'WED 16', '2026-09-17': 'THU 17', '2026-09-18': 'FRI 18', '2026-09-19': 'SAT 19', '2026-09-20': 'SUN 20'},
+    dayLong:{'2026-09-10': 'Jueves 10 de septiembre', '2026-09-11': 'Viernes 11 de septiembre', '2026-09-12': 'Sábado 12 de septiembre', '2026-09-13': 'Domingo 13 de septiembre', '2026-09-14': 'Lunes 14 de septiembre', '2026-09-15': 'Martes 15 de septiembre', '2026-09-16': 'Miércoles 16 de septiembre', '2026-09-17': 'Jueves 17 de septiembre', '2026-09-18': 'Viernes 18 de septiembre', '2026-09-19': 'Sábado 19 de septiembre', '2026-09-20': 'Domingo 20 de septiembre'},
+    prioLimit:6,
+    keyArt:'/assets/keyart/tiff2026-v2.jpg',
+    // PUBLICADO el 23 ago 2026, por decisión de Juan. El freno estuvo puesto
+    // desde el 17 ago esperando su pase sobre las sinopsis; lo levanta él
+    // sabiendo que faltan 20 de 296 —casi todas de cortos experimentales—,
+    // 16 años, un afiche y un director. Ninguno rompe una ficha: sale sin
+    // sinopsis, no sin obra.
+    tagline:'Toronto International Film Festival',
+    ticketing_model:'paid', // todas las públicas tienen enlace de Ticketmaster.
+    // OJO: el vocabulario de la app es SOLO 'paid' | 'mixed'. Puse 'ticketed',
+    // que no existe, y el botón de boletería no se pintó en ninguna de las 637
+    // fichas pese a tener el enlace. Lo cazó Juan en pantalla, 13 ago.
+    films:null,posters:null,lbSlugs:{}
+  },
   'ficmontanas2026':{
     name:'Ficmontañas',fullName:'Festival Internacional de Cine en las Montañas',shortName:'FICMONTAÑAS',
     city:'Salento',country:'CO',
@@ -573,6 +598,20 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
+  '📺 Primetime': 'Especiales / Eventos',
+  '🔎 Discovery': 'Perspectivas / Miradas',
+  '🎯 Centrepiece': 'Muestra / País',
+  '⭐ Special Presentations': 'Muestra / País',
+  '🎩 Gala Presentations': 'Apertura / Gala',
+  '🌙 Midnight Madness': 'Especiales / Eventos',
+  '🏆 Platform': 'Competencia',
+  '〰️ Wavelengths': 'Perspectivas / Miradas',
+  '🎥 TIFF Docs': 'Perspectivas / Miradas',
+  '🎙️ In Conversation With...': 'Charlas / Industria',
+  '🏛️ TIFF Classics': 'Retrospectiva / Tributo',
+  '🎪 Special Events': 'Especiales / Eventos',
+  '✂️ Short Cuts': 'Cortos / Programas',
   // ── Cinemancia 2026 · Valle de Aburrá ─────────────────────────────────
   '⭐ Función inaugural': 'Apertura / Gala',
   '🎬 Función de clausura': 'Clausura',
@@ -765,6 +804,7 @@ export const COUNTRY_NAMES = {
   CO: { es:'Colombia',       en:'Colombia' },
   BR: { es:'Brasil',         en:'Brazil' },
   US: { es:'Estados Unidos', en:'United States' },
+  CA: { es:'Canadá',         en:'Canada' },
   AR: { es:'Argentina',      en:'Argentina' },
 };
 // countryName(iso, lang) — nombre del país o '' si no hay dato / ISO desconocido. Puro.
