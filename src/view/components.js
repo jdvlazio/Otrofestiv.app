@@ -680,13 +680,33 @@ export function _classifyFestival(cfg){
   return 'ongoing';                    // entre start y end → en curso
 }
 
+// ¿Un aplazado ya dejó de ser noticia? (Juan, 23 ago 2026)
+//
+// `_classifyFestival` nunca devuelve 'past' para un aplazado, y eso fue
+// deliberado: FICMA se aplazó por el terremoto el 10 de agosto, y mandarlo al
+// fondo del riel habría escondido justo lo que la gente necesitaba leer.
+//
+// Pero esa razón CADUCA. Pasadas sus fechas anunciadas, el aplazado deja de ser
+// noticia y pasa a ser ruido en la zona de los vigentes — que es como Juan lo
+// encontró seis días después del 17. La bisagra es la fecha de cierre que el
+// festival había anunciado: antes es noticia viva, después es historia.
+//
+// Vive SOLO en el orden y la partición del riel. La clasificación no se toca:
+// un aplazado sigue sin contar como en curso, sin preselección, y con su banner
+// explicando por qué está donde está. Guardián: [aplazado-caduca].
+export function _postponedElapsed(cfg){
+  if(!cfg||!cfg.status||cfg.status.kind!=='postponed') return false;
+  if(!cfg.festivalEndStr) return false;   // sin fecha declarada no hay bisagra
+  return new Date()>new Date(cfg.festivalEndStr);
+}
+
 export function _sortFestivals(entries, activeFestId){
   const _tier=([id,cfg])=>{
     if(id===activeFestId) return 0;
     const cls=_classifyFestival(cfg);
     if(cls==='ongoing')  return 1;
     if(cls==='upcoming') return 2;
-    if(cls==='postponed') return 3; // vigente pero sin invitación — último del grupo
+    if(cls==='postponed') return _postponedElapsed(cfg)?4:3; // vigente sin invitación… hasta que sus fechas pasan
     return 4; // past
   };
   // PRIORIDAD EDITORIAL — desempata DENTRO del tier, antes que la fecha.
@@ -824,8 +844,12 @@ export function _renderSplashRailHTML(state, activeFestId, action='selectSplashF
   // revisión quedaba abierto a un toque, sin clave: la puerta con llave al lado
   // de una ventana abierta.
   const revision=conRevision?_todos.filter(([,cfg])=>cfg.group==='test'&&_enRevision(cfg)):[];
-  const current = entries.filter(([,cfg])=>_classifyFestival(cfg)!=='past');
-  const past    = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
+  // «pasado» para el RIEL incluye al aplazado cuyas fechas ya pasaron — ver
+  // _postponedElapsed. La clasificación sigue diciendo 'postponed'; lo que
+  // cambia es dónde se dibuja.
+  const _esPasado=cfg=>_classifyFestival(cfg)==='past'||_postponedElapsed(cfg);
+  const current = entries.filter(([,cfg])=>!_esPasado(cfg));
+  const past    = entries.filter(([,cfg])=>_esPasado(cfg));
   // isPast se pasa desde la partición (una sola clasificación por festival) — no
   // re-clasificar dentro de mkCard: evita que la card caiga en un grupo y se pinte
   // con la clase del otro en un boundary de fecha.
