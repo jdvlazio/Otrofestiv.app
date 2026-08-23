@@ -9,14 +9,15 @@ import json, re, html, unicodedata, collections
 # absoluto («/Users/Juanda/Documents/Otrofestiv-dev») y por eso el ensamblador
 # no corría en un worktree: leía los sidecars del checkout principal, que en
 # una rama distinta tiene otro contenido — o directamente no los tiene.
-import os
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 REPO=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 staging=json.load(open(f'{REPO}/festivals/staging/qaff-2026.json'))
 side=json.load(open(f'{REPO}/festivals/staging/qaff-2026-programacion-raw.json'))
 
-def norm(s):
-    s=unicodedata.normalize('NFD',(s or '').lower()); s=''.join(c for c in s if unicodedata.category(c)!='Mn')
-    return re.sub(r'[^a-z0-9]+',' ',s).strip()
+# norm() vivía aquí copiada; es idéntica a lib.norm (verificado con entradas
+# reales el 23 ago 2026) y [lib-unica] tiene razón: se importa, no se reescribe.
+from lib import norm
 
 def strip_html(t):
     t=re.sub(r'</p>|<br[^>]*>','\n',t or '')

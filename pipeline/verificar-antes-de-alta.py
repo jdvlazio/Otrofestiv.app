@@ -6,15 +6,15 @@ Por cada obra sin lbSlug, tres sondas independientes:
   C) Letterboxd search por título (HTML) → ¿existe ficha con ese director?
 Solo las que fallan LAS TRES son candidatas legítimas a alta nueva."""
 import os, re, json, time, unicodedata, difflib, urllib.parse
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import requests
 
 K = os.environ['TMDB_API_KEY']
 UA = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/126 Safari/537.36'}
 
-def norm(s):
-    s = unicodedata.normalize('NFD', (s or '').lower())
-    s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
-    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
+# norm() vivía aquí copiada; idéntica a lib.norm (verificado 23 ago 2026).
+from lib import norm
 
 def sim(a, b): return difflib.SequenceMatcher(None, norm(a), norm(b)).ratio()
 def toks(s): return set(norm(s).split()) - {'de','la','el','los','las','del','y','of','the','a'}
