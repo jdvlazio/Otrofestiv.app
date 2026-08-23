@@ -1071,6 +1071,34 @@ importa más: volver a difuminarla no se ve roto, se ve normal.
 
 ---
 
+## 5.10 · Un aplazado deja de ser noticia cuando sus fechas pasan
+
+**Regla (Juan, 23 ago 2026).** Un festival **aplazado** vive con los vigentes
+mientras sus **fechas anunciadas** no hayan pasado. Cuando pasan, baja al grupo
+de **pasados** del riel — pero **sigue siendo aplazado**.
+
+**Por qué la bisagra y no «siempre a pasados».** FICMA se aplazó por el terremoto
+el 10 de agosto, con su festival por delante. Mandarlo al fondo habría escondido
+justo lo que la gente necesitaba leer. Esa razón **caduca**: seis días después
+del 17 —su cierre anunciado— ya no era noticia, era ruido en la zona de los
+vigentes. La bisagra es `festivalEndStr`: la fecha que el propio festival había
+anunciado.
+
+**Dónde vive: en la presentación, no en el estado.** `_postponedElapsed()` la
+usan el orden (`_sortFestivals`) y la partición del riel. `_classifyFestival`
+**sigue devolviendo `postponed`**, así que el festival conserva todo lo que ese
+estado protege: no cuenta como en curso, no se preselecciona, su plan no se
+rehidrata, y su banner sigue explicando por qué no hay festival.
+
+**La tentación que hay que resistir:** «simplificar» haciendo que el
+clasificador devuelva `past` para un aplazado vencido. Se vería idéntico en el
+riel y rompería en silencio las cuatro protecciones de arriba — el bug del sismo
+otra vez, y de los que no se ven hasta que alguien abre la app.
+
+**Guardián:** `[aplazado-caduca]`.
+
+---
+
 ## 6 · Relación con CLAUDE.md
 
 - `CLAUDE.md` → contrato de **arquitectura** (capas, patrones, reglas de proceso).

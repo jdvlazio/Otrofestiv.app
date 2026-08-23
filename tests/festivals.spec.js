@@ -16,7 +16,7 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
   // el borde exacto de fin de festival (ej. 19 JUL 23:00, cuando 2 vigentes pasan a
   // 'past'). Clasifica con la MISMA fn (_classifyFestival) que usó el riel.
   const r = await page.evaluate(async () => {
-    const { _classifyFestival } = await import('/src/view/components.js');
+    const { _classifyFestival, _postponedElapsed } = await import('/src/view/components.js');
     const { FESTIVAL_CONFIG } = await import('/src/config.js');
     // SCOPE #splash-rail: el sheet "cambiar festival" replica el riel (misma card,
     // clase .splash-rail) y también vive en el DOM — document-wide mezcla ambos y
@@ -32,7 +32,19 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
     const ids = [...document.querySelectorAll('#splash-rail .splash-card[data-fest]:not(.review)')].map(c => c.dataset.fest);
     const idsRev = [...document.querySelectorAll('#splash-rail .splash-card.review')].map(c => c.dataset.fest);
     const todas = [...document.querySelectorAll('#splash-rail .splash-card[data-fest]')].map(c => c.dataset.fest);
-    const cls = ids.map(id => _classifyFestival(FESTIVAL_CONFIG[id]));
+    // «Pasado PARA EL RIEL» = past por fechas, O aplazado cuyas fechas anunciadas
+    // ya pasaron (DESIGN.md §5.10). El invariante no cambia —ningún vigente
+    // después de un pasado— pero el predicado tiene que saber de la bisagra: con
+    // solo _classifyFestival, FICMA cuenta como vigente (sigue siendo 'postponed',
+    // a propósito) y el test leería su sitio en pasados como una violación.
+    const esPasado = id => {
+      const cfg = FESTIVAL_CONFIG[id];
+      return _classifyFestival(cfg) === 'past' || _postponedElapsed(cfg);
+    };
+    const cls = ids.map(id => (esPasado(id) ? 'past' : _classifyFestival(FESTIVAL_CONFIG[id])));
+    // La regla nueva, comprobada donde se ve: un aplazado con fechas vencidas se
+    // dibuja entre los pasados, y sigue marcado como aplazado.
+    const aplazadosVencidos = ids.filter(id => _postponedElapsed(FESTIVAL_CONFIG[id]));
     const firstPastIdx = cls.indexOf('past');
     const lastCurrentIdx = cls.reduce((mx, c, i) => (c !== 'past' ? i : mx), -1);
     return {
@@ -49,6 +61,22 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
       hasOngoing: cls.some(c => c === 'ongoing'),
       leviza: ids.some(id => id.includes('leviza')),
       // Si hay cards de revisión, van TODAS al final del riel.
+      // cada aplazado vencido: ¿está en el tramo de pasados y conserva su marca?
+      // Se mide contra el DIVISOR en pantalla, no contra un índice derivado de la
+      // misma clasificación: comparar la posición de FICMA con «el primer pasado»
+      // era circular —ese primer pasado ES FICMA— y la aserción daba true aunque
+      // la bisagra estuviera desactivada. Se descubrió mutándola.
+      aplazadosVencidos: aplazadosVencidos.map(id => {
+        const hijos = [...document.querySelector('#splash-rail').children];
+        const idxDiv = hijos.findIndex(el => el.classList.contains('splash-rail-div')
+          && /anteriores|previous|anteriores/i.test(el.textContent));
+        const idxCard = hijos.findIndex(el => el.dataset && el.dataset.fest === id);
+        return {
+          id,
+          enPasados: idxDiv !== -1 && idxCard > idxDiv,
+          marcado: !!document.querySelector(`#splash-rail .splash-card[data-fest="${id}"].postponed`),
+        };
+      }),
       hayRevision: idsRev.length > 0,
       revisionAlFinal: idsRev.length === 0
         || idsRev.every(id => todas.indexOf(id) >= todas.length - idsRev.length),
@@ -56,6 +84,13 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
   });
   expect(r.count).toBeGreaterThan(1);
   expect(r.leviza).toBe(true); // leviza (pasado) presente en el riel
+  // Un aplazado cuyas fechas anunciadas pasaron se dibuja con los pasados, SIN
+  // dejar de estar marcado como aplazado (DESIGN.md §5.10). Si el clasificador
+  // aprendiera la bisagra, `marcado` se caería: perdería su estado y su banner.
+  for (const a of r.aplazadosVencidos) {
+    expect(a.enPasados, `«${a.id}» aplazado y vencido: va con los pasados`).toBe(true);
+    expect(a.marcado, `«${a.id}» sigue marcado como aplazado`).toBe(true);
+  }
   expect(r.revisionAlFinal, 'las cards en revisión van al final del riel').toBe(true);
   expect(r.tieringOk).toBe(true); // vigentes siempre antes que pasados
   if (r.hasCurrent) expect(r.firstIsCurrent).toBe(true); // un vigente encabeza

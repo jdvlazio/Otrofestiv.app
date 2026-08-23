@@ -271,11 +271,16 @@ export const PALMARES=[
   {fest:'ficdeh2026', categoria:'Largometraje Documental Nacional', nivel:'mencion',
    titulo:'El valor de la palabra', autoria:'Marta Rodríguez', obra:'El valor de la palabra'},
 
-  // Sin `poster` acá a propósito: su afiche oficial entra en su propio PR, porque
-  // [frontera] separa código de app y datos de festival. Mientras tanto cae en
-  // Forma A, que es el último recurso y funciona.
+  // `poster` propio de la entrada: la obra NO está en el catálogo —su ficha en la
+  // web del festival no tenía ninguna función, y el pipeline de FICDEH construye
+  // DESDE las funciones— pero su afiche oficial sí existe. TMDB 1400379,
+  // verificado por director (Kim A. Snyder) y duración (92 min), no por título:
+  // hay cinco películas llamadas «The Librarians».
+  // Sin este campo cae en Forma A. Que una obra falte en NUESTRO catálogo es una
+  // limitación nuestra: usar nuestro dibujo existiendo el suyo empobrece la pieza.
   {fest:'ficdeh2026', categoria:'Largometraje Documental Internacional', nivel:'ganadora',
-   titulo:'Los bibliotecarios', autoria:'Kim Snyder', obra:null},
+   titulo:'Los bibliotecarios', autoria:'Kim Snyder', obra:null,
+   poster:'/assets/ficdeh/los-bibliotecarios.jpg'},
   {fest:'ficdeh2026', categoria:'Largometraje Documental Internacional', nivel:'mencion',
    titulo:'El silencio de la tierra', autoria:'Frank Gutiérrez', obra:'El silencio de la tierra'},
 
