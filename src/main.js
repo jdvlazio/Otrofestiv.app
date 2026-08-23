@@ -111,7 +111,7 @@ import {
 
 // ── Step 7d-1: controller/sheets-controller.js — sheets+rating+AV+toast+utils. ──
 import {
-  openPelSheet, closePelSheet, _closeTopSheet, openCortoSheet, openCortoSheetFromEl, _openCombinedFilmSheet, _findParentProgram, openConflictSheet, closeConflictSheet, openPrioLimit, openPlanConfirm, closePlanConfirm, openPostViewRating, openRatingSheet, closeRatingSheet, openAvSheet, selectAvDay, setAvType, confirmAvBlock, renderAvDay, addBlock, removeBlock, toggleFullDay, _setAvAddOpen, showActionToast, _dismissToastAction, countryToFlags, filmDisplayTitle, _genreEN, _removePlanItem, savePVRating, pvLater, openDiary, closeDiary, openVenueSheet, closeVenueSheet,
+  openPelSheet, closePelSheet, _closeTopSheet, openCortoSheet, openCortoSheetFromEl, _openCombinedFilmSheet, _findParentProgram, openConflictSheet, closeConflictSheet, openPrioLimit, openPlanConfirm, closePlanConfirm, openPostViewRating, openRatingSheet, closeRatingSheet, openAvSheet, selectAvDay, setAvType, confirmAvBlock, renderAvDay, addBlock, removeBlock, toggleFullDay, _setAvAddOpen, showActionToast, _dismissToastAction, countryToFlags, filmDisplayTitle, _genreEN, _removePlanItem, savePVRating, pvLater, openDiary, closeDiary, openPalmares, closePalmares, openVenueSheet, closeVenueSheet,
 } from './controller/sheets-controller.js';
 
 // ── Step 7d-2: controller/overlays.js — seccion/search/lugar dropdowns. ──────
@@ -272,6 +272,8 @@ const ACTION_REGISTRY = {
   runCalc:             ()      => runCalc(),
   openDiary:           ()      => openDiary(),
   closeDiary:          ()      => closeDiary(),
+  openPalmares:        ()      => openPalmares(),
+  closePalmares:       ()      => closePalmares(),
   shareDiary:          ()      => shareDiary(),
   scrollToSuggestions: ()      => _scrollToSuggestions(),
   removeConflictModal: ()      => _removeConflictModal(),
