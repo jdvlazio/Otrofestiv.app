@@ -4,7 +4,8 @@
   "fuente": "Página única de la Selección Oficial (https://siembrafest.com/seleccion-sf-2026/), server-rendered, capturada 2026-08-02. El festival anuncia 86 producciones.",
   "verificacion": "Parseo estructural h3/ul/li del HTML crudo; conteo contra el anuncio oficial; secciones = curaduría del festival tal cual (aprobado por Juan 2 ago).",
   "secciones": "Emoji alineado con la iconografia que el festival publico en su story del 12 ago 2026 (fantasma, ojo, corazon remendado, mapa, tira de pelicula). Arquetipos corregidos: Sabores en Escena, Amores & Desamores y Mujeres que sostienen la vida son secciones TEMATICAS de curaduria, no industria ni apertura. PENDIENTE con el festival: su story lista 7 secciones curatoriales y su web 9 - faltan «Mujeres que sostienen la vida» (que parece el tema de la edicion) y «Estampas».",
-  "capturado": "2026-08-02"
+  "capturado": "2026-08-02",
+  "revision_23_ago": "Sync con la Selección del 19 ago (URL NUEVA: https://siembrafest.com/siembrafest/seleccion-oficial/ — la vieja /seleccion-sf-2026/ sigue viva con contenido anterior). 85→84: −Carlina −Tentado de difunto +Chicha la chicharra; «Somos historias (Episodio 2)» retitulada. Cayenas libertarias SIGUE (el parser ingenuo la perdía — trampa del primer <li>)."
  },
  "sections": {
   "🏺 Mujeres que sostienen la vida": {
@@ -253,26 +254,6 @@
    "synopsis_en": "Three Venezuelan women cross the border into Colombia to buy a packet of pasta.",
    "_inherited": {
     "synopsis_en": "tmdb-1403488"
-   }
-  },
-  {
-   "title": "Carlina",
-   "director": "Ángela María Leiton",
-   "year": "2026",
-   "duration": "14 min",
-   "country": "Colombia",
-   "section": "❤️‍🩹 Amores & Desamores",
-   "genre": "Ficción",
-   "synopsis": "",
-   "synopsis_lang": "es",
-   "poster": "",
-   "posterSource": "",
-   "_src": {
-    "url": "https://siembrafest.com/seleccion-sf-2026/",
-    "date": "2026-08-02",
-    "ficha_raw": "2026 | 14' | Ficción",
-    "formato": "Ficción",
-    "produccion": "María Paula Hernández"
    }
   },
   {
@@ -1605,7 +1586,7 @@
    }
   },
   {
-   "title": "Somos historias (Episodio 2)",
+   "title": "Somos historias: Casaramano, sagrado y vida",
    "director": "Paola Diaz Gómez, Juven Piranga Valencia, Gustavo Cabezas Tenorio, María Fernanda Pinilla Segura, Lorena Herran Sánchez, Ursula Baylon Londoño, Melvin Rivero Guerra, Liceth Duran Herrera, Sonia Jaimes Rodríguez, Nicolas Cuéllar Gempeler",
    "year": "2023",
    "duration": "30 min",
@@ -1617,11 +1598,12 @@
    "poster": "",
    "posterSource": "",
    "_src": {
-    "url": "https://siembrafest.com/seleccion-sf-2026/",
-    "date": "2026-08-02",
+    "url": "https://siembrafest.com/siembrafest/seleccion-oficial/",
+    "date": "2026-08-23",
     "ficha_raw": "2023 | 30' | Documental",
     "formato": "Documental",
-    "produccion": "Historias en Kilómetros"
+    "produccion": "Historias en Kilómetros",
+    "titulo_anterior": "Somos historias (Episodio 2) — retitulada en la web del 19 ago"
    }
   },
   {
@@ -1799,26 +1781,6 @@
    }
   },
   {
-   "title": "Tentado de difunto",
-   "director": "Juan David Corredor Robles",
-   "year": "2025",
-   "duration": "13 min",
-   "country": "Colombia",
-   "section": "🪶 Estampas",
-   "genre": "ARTE",
-   "synopsis": "",
-   "synopsis_lang": "es",
-   "poster": "",
-   "posterSource": "",
-   "_src": {
-    "url": "https://siembrafest.com/seleccion-sf-2026/",
-    "date": "2026-08-02",
-    "ficha_raw": "2025 | 13' | Documental – ARTE",
-    "formato": "Documental",
-    "produccion": "Daniel Santiago Ruiz Sandoval"
-   }
-  },
-  {
    "title": "XIE. Defensa de la vida",
    "director": "Adriana Bernal-Mor, Paola Zuluaga Palacios",
    "year": "2025",
@@ -1971,6 +1933,25 @@
    "_inherited": {
     "synopsis": "tmdb-1538872",
     "synopsis_en": "tmdb-1538872"
+   }
+  },
+  {
+   "title": "Chicha la chicharra",
+   "director": "Sofía Alejandra Uzcátegui León",
+   "year": "2025",
+   "duration": "10 min",
+   "country": "Colombia",
+   "section": "👁️ Ojo Pelao",
+   "genre": "Animación – Infantil",
+   "synopsis": "",
+   "synopsis_lang": "es",
+   "poster": "",
+   "posterSource": "",
+   "_src": {
+    "url": "https://siembrafest.com/siembrafest/seleccion-oficial/",
+    "date": "2026-08-23",
+    "ficha_raw": "2025 | 10' | Animación – Infantil · Dirección: Sofía Alejandra Uzcátegui León · Producción: Sofía Alejandra Uzcátegui León, Laura Natalia Rangel Rangel, Maria Paula Rodríguez Santos, Casa resonante.",
+    "ig": "post Ojo Pelao 23 ago — Programa I"
    }
   }
  ]

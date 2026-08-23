@@ -1,28 +1,32 @@
 {
  "_etapa": "PRE-ONBOARDING. Catálogo staged (85 obras, 9 secciones). El festival NO ha publicado programación ni fichas de obra de esta edición. NO PUBLICAR.",
  "_festival": "11° SiembraFest — Festival de Cine Colombiano al Campo · 9–18 SEP 2026 · Sasaima y Villeta (Cundinamarca) · funciones en plazas, veredas y espacios no convencionales",
- "_fuente": "https://siembrafest.com/seleccion-sf-2026/ — página única de la Selección Oficial, server-rendered. Es TODO lo que hay publicado de 2026.",
-
+ "_fuente": "https://siembrafest.com/siembrafest/seleccion-oficial/ — Selección Oficial CANÓNICA (se MUDÓ de URL el 19 ago; la vieja /seleccion-sf-2026/ sigue respondiendo 200 con contenido viejo — el radar debe mirar la NUEVA). + Instagram @siembrafest: serie «Presentamos <sección>» con los PROGRAMAS (sidecar siembrafest-2026-programas-ig.json).",
  "_revision_9_ago_2026": {
   "resultado": "SIN CAMBIOS respecto de la captura del 2 ago. Las 85 obras son las mismas: 0 nuevas, 0 retiradas, mismas secciones.",
   "sigue_abierto": "El festival anuncia 86 producciones en su propio texto y la página lista 85. La diferencia lleva abierta desde la primera captura.",
   "trampa_del_parseo": "El primer <li> de la página está mal cerrado y se traga la intro completa MÁS la primera obra de la primera sección («En su sombra fértil», Mujeres que sostienen la vida). Un parser de <li> ingenuo pierde esa obra y parece que el festival la quitó. Hay que acotar el cuerpo al primer <h3> de sección real antes de recorrer los <li>. Verificado el 9 ago: la obra SÍ está en la web, el fallo era del comparador."
  },
-
  "_donde_aparecera_el_dato_que_falta": {
   "nota": "Reconocimiento del sitio hecho el 9 ago vía wp-sitemap.xml. El festival ya tiene la maquinaria montada de ediciones anteriores, así que se sabe DÓNDE mirar en la próxima revisión en vez de rastrear a ciegas.",
   "fichas_de_obra": "post type `project` → /pelicula/<slug>/. Hay 68, TODAS de 2020–2022 (lastmod). La ficha de 2020 trae SINOPSIS, créditos, trailer de YouTube y un bloque EXHIBICIONES con fecha, hora y local. Si repiten el formato en 2026, de ahí salen las 67 sinopsis que faltan Y la programación, igual que pasó en Cinemancia.",
   "programacion": "post type `mec-events` (Modern Events Calendar) → /programacion-archivo/<slug>/. Hay 20, todas de dic 2020 (8º SiembraFest) y marcadas «¡Caducado!». Los slugs muestran la estructura que usan: exhibicion-<seccion>, siembralab-N, making-of-N, exhibicion-clausura.",
   "sitemaps": "https://siembrafest.com/wp-sitemap.xml lista los sub-sitemaps por tipo; el campo lastmod dice de un vistazo si hay material nuevo sin descargar nada."
  },
-
  "_pendientes": [
+  "IG: capturar los posts de SABORES EN ESCENA y ASÍ ES CUNDINAMARCA cuando salgan (serie en curso) → completar el sidecar de programas.",
   "REVISAR PERIÓDICAMENTE lastmod de wp-sitemap-posts-project-1.xml y wp-sitemap-posts-mec-events-1.xml. Cuando aparezcan entradas de 2026, el catálogo se completa y llega la programación.",
-  "SINOPSIS: 18 de 85. La web de 2026 no publica ninguna todavía; TMDB aportó 9. Casi todas son obras colombianas nuevas y de festival, así que TMDB no las va a cubrir: dependen del festival.",
-  "PÓSTERS: 30 de 85, todos de TMDB. Ojo, marcados tmdb-<id> y sin verificar contra la obra.",
+  "SINOPSIS: 18 de 84. Sin cambio: la web de 2026 sigue sin publicar ninguna.",
+  "PÓSTERS: 30 de 84, todos TMDB sin verificar. Los posts de IG usan la pieza gráfica de sección, no afiches por obra.",
   "lbSlug: 32 de 85, verificados.",
   "PROGRAMACIÓN: no existe. Sin día/hora/sede no hay films[] posible.",
   "SEDES: ninguna todavía. Serán plazas, veredas y espacios no convencionales en Sasaima y Villeta — geocodificar eso va a ser más difícil que un teatro, y el guardián [sedes-apiladas] va a hablar.",
-  "OBRAS HEREDABLES DE FICDEH: al menos 7 coinciden entre los dos catálogos; sinopsis y pósters ya verificados se pueden reusar en vez de volver a buscarlos."
- ]
+  "OBRAS HEREDABLES: ≥7 coinciden con FICDEH; y «Refugiar el gesto»/«La tinaja»/«Soñé su nombre» están TAMBIÉN en QAFF 2026 (publicado) con póster+sinopsis+lbSlug verificados — heredar de ahí primero."
+ ],
+ "_revision_23_ago_2026": {
+  "catalogo": "SINCRONIZADO con la web del 19 ago: 85→84 (−Carlina, −Tentado de difunto, +Chicha la chicharra; «Somos historias (Episodio 2)» retitulada «Somos historias: Casaramano, sagrado y vida»). Cayenas libertarias SIGUE: el parser ingenuo la perdía (trampa del primer <li>), verificado contra el HTML crudo.",
+  "programas_ig": "EL DATO NUEVO: el festival agrupó la Selección en 21 PROGRAMAS por sección (7/9 secciones publicadas; serie en curso, el post de Ojo Pelao tenía 1 h al capturar). Cuando llegue la programación, cada programa será presumiblemente una función: el ensamblado de films[] ya tiene la mitad del trabajo hecho. Faltan Sabores en Escena y Así es Cundinamarca.",
+  "confirmado": "9–18 SEP · Sasaima (primera vez) y Villeta — cartel + posts fijados. Sin programación aún: mec-events sigue en 2020, project en 2022.",
+  "discrepancias": "IG vs web difieren en 4 títulos y 4 años (lista en el sidecar de programas) — preguntar al festival junto con sinopsis/pósters."
+ }
 }
