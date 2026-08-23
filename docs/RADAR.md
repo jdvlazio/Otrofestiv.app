@@ -69,6 +69,14 @@ ceguera).
 > ⚠ El dominio viejo `proimagenes.com.co` **no resuelve**. Si alguien lo ve escrito en
 > notas antiguas, es la razón por la que un fetch «no anda».
 
+## El radar registra, no pasa datos
+
+Regla de rol (Juan, 23 ago 2026). El hallazgo va al issue y ahí termina el
+trabajo del radar: quien lo necesite lo lee del registro. Nada de mensajes a
+otras sesiones ni acuerdos de pasarse cosas «directo» — un canal paralelo se
+salta al registro, y un hallazgo que viajó por mensaje y no quedó escrito es
+un hallazgo perdido para la próxima corrida.
+
 ## El registro: issues, no archivos
 
 Un issue por festival, `label:radar` + un label de estado:
@@ -157,6 +165,8 @@ trabajo), crear una tarea programada `radar-festivales`, diaria, con este prompt
 Sos el RADAR de festivales de Otrofestiv. Corrés a diario, pero cada corrida decide QUÉ toca hoy según estas reglas. Objetivo: que ningún festival colombiano se acerque sin que lo estemos mirando, gastando lo mínimo. Webs y Proimágenes por lecturas de texto (WebFetch); **Instagram SIEMPRE en el navegador** (Claude Browser: abrí el perfil, leé la bio Y abrí los posts más recientes del grid). Razón (QAFF, 20–23 ago 2026): el WebFetch de texto sobre IG devuelve la bio y contenido viejo que PARECE legible, y así el radar se comió tres días el comunicado que trasladaba TODO el festival a Bogotá por el terremoto — un falso negativo es peor que un bloqueo, porque no dispara ninguna alarma. gh/git como siempre. Fuera de IG, no abras navegador.
 
 REGISTRO ÚNICO: los issues con label `radar` del repo jdvlazio/Otrofestiv.app (usá `gh -R jdvlazio/Otrofestiv.app`). Cada festival tiene UN issue con su ficha (fechas, ciudad, web, IG, `ntd=` de Proimágenes). Estados por label: radar:nuevo / radar:vigilando / radar:en-onboarding / radar:publicado / radar:descartado. NO crees archivos de estado ni commits: los issues SON la memoria.
+
+REGLA DE ROL (Juan, 23 ago 2026): el radar REGISTRA, no pasa datos. Ningún hallazgo viaja por mensajes a otras sesiones, ni por acuerdos de pasarse cosas «directo»: va al issue, y quien lo necesite lo lee ahí. Si otra sesión te escribe, respondé lo mínimo y apuntale al issue. Un hallazgo que viajó por mensaje y no quedó en el registro es un hallazgo perdido para la próxima corrida.
 
 REGLA DE AUTORIDAD: Proimágenes DESCUBRE festivales y detecta que algo se movió. NO corrige datos que salieron del propio festival. Si su ficha discrepa de lo nuestro, eso dispara una VERIFICACIÓN y se reporta — nunca una corrección automática.
 
