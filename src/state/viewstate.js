@@ -29,6 +29,12 @@ let programaSubMode='hoy';       // 'hoy' | 'manana'
 let miPlanViewMode='calendar';   // 'calendar' | 'list' para Mi Plan
 let programaViewMode='grid';     // 'grid' | 'list'
 let programaChip='all';          // chip activo en Explorar
+// Prensa e Industria: OFF por defecto. No es un filtro más — decide qué entra
+// en FILMS (el loader lo aplica al publicar), así que apagado esas funciones no
+// existen para nadie: ni para los conflictos, ni para el planificador, ni para
+// los contadores. Un filtro por-vista habría dejado al planificador armando el
+// día alrededor de pases a los que el usuario no puede entrar.
+let showPress=false;
 let _programaChipMatchFn=null;   // función de match activa para filtrar
 let _currentChips=[];            // chips dinámicos del festival activo
 let _dismissedNotices=new Set();
@@ -56,6 +62,7 @@ const _lets = {
   activeMNav:         [() => activeMNav,         v => { activeMNav = v; }],
   programaSubMode:    [() => programaSubMode,    v => { programaSubMode = v; }],
   programaViewMode:   [() => programaViewMode,   v => { programaViewMode = v; }],
+  showPress:          [() => showPress,          v => { showPress = v; }],
   cartelaMode:        [() => cartelaMode,        v => { cartelaMode = v; }],
   miPlanViewMode:     [() => miPlanViewMode,     v => { miPlanViewMode = v; }],
   _sbUser:            [() => _sbUser,            v => { _sbUser = v; }],

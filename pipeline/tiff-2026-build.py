@@ -239,6 +239,9 @@ def main():
             'tmdb_id': f.get('tmdb_id'),
             'day': f['dia'], 'time': f['hora'], 'day_order': orden_dia[f['dia']],
             'venue': f['sede'], 'sala': f['sala'],
+            # Ausente = público. Solo se emite en los 247 pases de Prensa e
+            # Industria, que la app oculta salvo que el usuario los pida.
+            **({'audience': 'press'} if f.get('audience') == 'press' else {}),
             'has_qa': f.get('has_qa', False),
             'flags': flags_de(f.get('pais')),
             'is_cortos': f['is_cortos'],
