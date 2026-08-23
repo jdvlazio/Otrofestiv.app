@@ -88,7 +88,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `cinemancia2026` | Cinemancia | Valle de Aburrá | 3–12 SEP | **Próximo / activo** |
 | `cineautopsia2026` | CineAutopsia | Bogotá | 21–29 AGO | **Próximo / activo** |
 | `vartex2026` | Vartex | Medellín | 19–22 AGO | Recién terminado |
-| `qaff2026` | QAFF | Quibdó y Bogotá | 14–18 SEP | **Próximo / activo** |
+| `qaff2026` | QAFF | Quibdó | 14–18 SEP | **Próximo / activo** |
 | `tiff2026` | TIFF | Toronto | 10–20 SEP | **Próximo / activo** |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
 

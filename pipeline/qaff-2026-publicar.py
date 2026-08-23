@@ -78,6 +78,23 @@ def main():
         out['venues'][k] = v
     out['films'] = [poda_src(limpio(f)) for f in d['films']]
 
+    # ── SOLO QUIBDÓ (decisión de Juan, 23 ago 2026) ───────────────────────────
+    # El festival programa 14 funciones en Bogotá —Cinemateca y Museo Nacional—
+    # en paralelo a Quibdó. El 11 ago se decidió incluirlas porque caían dentro
+    # de la ventana oficial; el 23 ago Juan lo revierte: QAFF es en Quibdó.
+    #
+    # Cuesta 7 títulos que NO se proyectan en Quibdó y por tanto desaparecen del
+    # catálogo: Iniciación en la Octava Dimensión, LAUNDRY (Uhlanjululo), Of Mud
+    # and Blood, The Travelers, Wrong Generation y los dos Diálogo Improbable
+    # —que se llevan su sección entera—. Queda constancia aquí porque el dato
+    # existe en la fuente y la app no lo va a mostrar: es una omisión decidida,
+    # no una que se nos escapó.
+    _bog = {k for k, v in d['venues'].items() if v.get('city') != 'Quibdó'}
+    out['films'] = [f for f in out['films'] if f['venue'] not in _bog]
+    out['venues'] = {k: v for k, v in out['venues'].items() if k not in _bog}
+    _usadas = {f.get('section') for f in out['films']}
+    out['sections'] = {k: v for k, v in out['sections'].items() if k in _usadas}
+
     # El contrato, aplicado en el ÚLTIMO paso: lib.normaliza es el dueño del
     # tipo de cada campo. QAFF emitía `year` como string en las 61 funciones,
     # igual que FICDEH y FICMA antes que él, y por el mismo motivo: la app hace

@@ -594,7 +594,7 @@ export const FESTIVAL_CONFIG={
   },
   'qaff2026':{
     name:'QAFF',fullName:'QAFF — Quibdó África Film Festival',shortName:'QAFF',
-    city:'Quibdó y Bogotá',country:'CO',
+    city:'Quibdó',country:'CO',
     dates:'14–18 SEP',dates_en:'SEP 14–18',year:2026,timezoneOffset:'-05:00',
     keyArt:'/assets/keyart/qaff2026-v2.jpg',
     storageKey:'qaff2026_',festivalStartStr:'2026-09-14T00:00:00',festivalEndStr:'2026-09-18T23:00:00',
