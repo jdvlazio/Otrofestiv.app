@@ -81,8 +81,16 @@ export function screensConflictReason(a,b){
   // (130 km, ~4 h en bus) le sale 13 h. Ese número no es confiable y NO se
   // muestra: la app dice la ciudad, que es un dato, y deja que el usuario juzgue.
   // Mismo criterio que el Q&A: donde no sabemos, no afirmamos.
+  // metroArea: el festival declara que sus ciudades son UNA sola área de
+  // traslado. Cinemancia 2026 corre en seis municipios —Medellín, Bello,
+  // Itagüí, Envigado, Caldas, Copacabana— que son el Valle de Aburrá: ir de
+  // uno a otro son minutos, no un viaje intermunicipal. Ahí la velocidad
+  // urbana de travelMins SÍ es confiable, y decir «es en otra ciudad» informa
+  // MENOS que decir cuántos minutos faltan. Sin la bandera nada cambia:
+  // FICDEH sigue negándose a estimar Bogotá→Ibagué.
+  const _metro=(FESTIVAL_CONFIG[_activeFestId]||{}).metroArea===true;
   const _ca=_cityOf(a), _cb=_cityOf(b);
-  if(_ca&&_cb&&_ca!==_cb) return {kind:'ciudad', city:_cb, cityFrom:_ca};
+  if(!_metro&&_ca&&_cb&&_ca!==_cb) return {kind:'ciudad', city:_cb, cityFrom:_ca};
   const _tv=(a.venue&&b.venue)?travelMins(a.venue,b.venue):0;
   const aS=toMin(a.time), aE=aS+durationForTravel(a,_tv);
   const bS=toMin(b.time), bE=bS+durationForTravel(b,_tv);

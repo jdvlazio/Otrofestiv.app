@@ -462,6 +462,11 @@ export const FESTIVAL_CONFIG={
     // tres programas (los dos focos de Luciana Decker y el de Rajendra Gour) y
     // las coordenadas de dos sedes. Quitar esta línea ES publicar.
     group:'test',
+    // Sus seis municipios son el Valle de Aburrá: un solo territorio de
+    // traslado. Sin esto, la app se niega a estimar el viaje entre ellos —una
+    // regla pensada para FICDEH, que corre en ciudades a cientos de km— y le
+    // dice al usuario «es en otra ciudad» en vez de cuántos minutos le faltan.
+    metroArea:true,
     tagline:'Festival de Cine del Valle de Aburrá',
     films:null,posters:null,lbSlugs:{}
   },

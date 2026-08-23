@@ -550,7 +550,7 @@ export function renderMiPlanCalendar(state){
             return _void?`<span class="mp-void-t">${_fin}</span>`:_fin;
           })()}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
-          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
+          <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${_sesionDeBloque(s)}
           ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
         </div>
@@ -1024,7 +1024,10 @@ export function renderFilmListHTML(state){
     // plannable-ok: días del CATÁLOGO para los chips de la obra (informativo).
     const future=FILMS.filter(fi=>fi.title===title&&!screeningPassed(fi)); // días disponibles = futuras
     const daysHtml=_dayChips(future);                                       // ámbar "THU 4 · FRI 5"
-    const venueStr=next?vcfg(next.venue).short:'';                          // venue de la próxima función
+    // `short||venue`: sin el respaldo, una sede sin `short` pintaba la palabra
+    // «undefined» en la ficha. Toda otra superficie va por venueLabel(), que ya
+    // cae al nombre completo; estas dos —Mi Plan y esta— leían el campo crudo.
+    const venueStr=next?(vcfg(next.venue).short||next.venue):'';             // venue de la próxima función
     const durStr=durFmt(f?.duration);                                       // solo f.duration
     const conflictHtml=conflict
       ?`<div class="int-item-conflict">
