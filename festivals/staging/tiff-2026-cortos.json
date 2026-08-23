@@ -1,0 +1,1562 @@
+{
+ "_provenance": {
+  "fuente": "https://www.tiff.net/festivalmultifilmtemplatejson/<slug>",
+  "capturado": "2026-08-13",
+  "metodo": "childEvents con imagen; fetch desde el navegador"
+ },
+ "_programas": 13,
+ "_cortos": 72,
+ "programas": [
+  {
+   "slug": "pelechian-project",
+   "titulo": "Pelechian Project",
+   "secciones": [
+    "TIFF Classics"
+   ],
+   "cortos": [
+    {
+     "id": "T000011185",
+     "titulo": "Land of the People",
+     "tituloAlt": "Մարդկանց երկիրը",
+     "directores": [
+      "Artavazd Pelechian"
+     ],
+     "anio": "1966",
+     "duracion": "10",
+     "paises": [
+      "Armenia",
+      "USSR"
+     ],
+     "idiomas": [
+      "No Dialogue"
+     ],
+     "premiere": null,
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/HaZJ0sMpZwzjVoso8iolC/097c17fcf404651ae275ca95095e7420/Land-of-the-People-_Pelechian-Project__Still_03-_1_.jpg"
+    },
+    {
+     "id": "T000011186",
+     "titulo": "The Beginning",
+     "tituloAlt": "Սկիզբը",
+     "directores": [
+      "Artavazd Pelechian"
+     ],
+     "anio": "1967",
+     "duracion": "10",
+     "paises": [
+      "Armenia",
+      "USSR"
+     ],
+     "idiomas": [
+      "No Dialogue"
+     ],
+     "premiere": null,
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/7oiMaeypuuqB7mBGQJs1Bz/f84b5630041d0f6ce176a35e0b21db2e/The-Beginning-_Pelechian-Project__Still_02.jpg"
+    },
+    {
+     "id": "T000011187",
+     "titulo": "We",
+     "tituloAlt": "Մենք",
+     "directores": [
+      "Artavazd Pelechian"
+     ],
+     "anio": "1969",
+     "duracion": "27",
+     "paises": [
+      "Armenia",
+      "USSR"
+     ],
+     "idiomas": [
+      "Armenian"
+     ],
+     "premiere": null,
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/4aXFBcUZHhdR7x5UMLALUO/cb2574ee2eb6f57f21d8c05a463cbc02/WE_01.webp"
+    },
+    {
+     "id": "T000010296",
+     "titulo": "The Seasons",
+     "tituloAlt": "Տարվա եղանակները",
+     "directores": [
+      "Artavazd Pelechian"
+     ],
+     "anio": "1975",
+     "duracion": "31",
+     "paises": [
+      "Armenia",
+      "USSR"
+     ],
+     "idiomas": [
+      "No Dialogue"
+     ],
+     "premiere": null,
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/3b1tKd1UGENYMm7YHiRbGv/2a927beca5d3af12f788450994e032c1/Pelechian-Project_01.webp"
+    },
+    {
+     "id": "T000011189",
+     "titulo": "The End",
+     "tituloAlt": "Վերջը",
+     "directores": [
+      "Artavazd Pelechian"
+     ],
+     "anio": "1992",
+     "duracion": "8",
+     "paises": [
+      "Armenia"
+     ],
+     "idiomas": [
+      "No Dialogue"
+     ],
+     "premiere": null,
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/7itZBWdO1cej37uKiTEZHS/16c0166b57004418d26be16ab81d23d5/TIFF2026_no_image_available.webp"
+    }
+   ]
+  },
+  {
+   "slug": "redefined-short-film-showcase",
+   "titulo": "REDEFINED | Short Film Showcase",
+   "secciones": [
+    "TIFF Next Wave Selects",
+    "Special Events"
+   ],
+   "cortos": [
+    {
+     "id": "T000011263",
+     "titulo": "Butter Chicken to Go",
+     "tituloAlt": null,
+     "directores": [
+      "Prajj"
+     ],
+     "anio": "2026",
+     "duracion": "12",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "Hindi",
+      " English"
+     ],
+     "premiere": null,
+     "sinopsis": "<p>It’s winter in Toronto. During the evening dinner rush, South Asian delivery drivers navigate the city streets, reflecting on the unique journeys that brought each of them here — stories that reveal a universal quest for belonging.</p>\r\n<p></p>",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/6iFyIpqLmuTxD2D5vS6cXo/e4f597d7d42c6d45a894c41512ab4902/Butter-Chicken-to-Go_Still_01.jpg"
+    },
+    {
+     "id": "T000011259",
+     "titulo": "RE/ROUTE",
+     "tituloAlt": null,
+     "directores": [
+      "Gabrielle Côté"
+     ],
+     "anio": "2026",
+     "duracion": "9",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [],
+     "premiere": null,
+     "sinopsis": "<p>Through surreal transformations of real-world imagery, two visions of urban life question\r\nhow the cities we build shape our lives and the future we are creating.</p>\r\n<p></p>",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/5NDHSMmXUbgYP9EgBPLr0n/52e0a371ec3613f72fbc09a4c602c80d/RE-ROUTE_Still_01.jpg"
+    },
+    {
+     "id": "T000011260",
+     "titulo": "pahkwêsikan sâkihitowin: Bannock is Love",
+     "tituloAlt": null,
+     "directores": [
+      "Tyra Delver"
+     ],
+     "anio": "2026",
+     "duracion": "11",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": null,
+     "sinopsis": "<p>Tracing the enduring power of cultural knowledge passed between generations through the practice of making bannock.</p>\r\n<p></p>",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/1vWUeMgCqqfqpvBNLkChKt/7b874430dbc0bff778af7aaeff7d505b/Bannock-is-Love_Still_01.jpg"
+    },
+    {
+     "id": "T000011261",
+     "titulo": "Where Our Flowers Grow",
+     "tituloAlt": "Là où nos fleurs poussent",
+     "directores": [
+      "Maxime Kornachuk"
+     ],
+     "anio": "2026",
+     "duracion": "11",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "French",
+      " Michif French",
+      " English"
+     ],
+     "premiere": null,
+     "sinopsis": "<p>Métis people of all ages share their journeys of cultural reconnection in a visually striking\r\nanimated documentary where personal stories become the seeds of a collective\r\nresurgence.</p>\r\n<p></p>",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/1bPc4EFwbX3ZDepkdkNXoB/0a702479d55a8bd6e54845223027c106/Where-Our-Flowers-Grow_Still_01.jpg"
+    },
+    {
+     "id": "T000011262",
+     "titulo": "Restaurant Kids",
+     "tituloAlt": null,
+     "directores": [
+      "Sylvia Mok"
+     ],
+     "anio": "2026",
+     "duracion": "12",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English",
+      " Cantonese"
+     ],
+     "premiere": null,
+     "sinopsis": "<p>In Halifax, a close-knit community of Chinese restaurateurs reflects on the sacrifices,\r\nresilience, and sense of belonging that shaped a generation raised in family-run restaurants.</p>\r\n<p></p>",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/6yYjtdIOODWY2VVvcZbIod/e8b4a5f22c8461dacb1e938e08ce5099/Restaurant-Kids_Still_01.jpg"
+    }
+   ]
+  },
+  {
+   "slug": "short-cuts-2026-strange-cuts",
+   "titulo": "Short Cuts 2026 / Strange Cuts",
+   "secciones": [
+    "Short Cuts"
+   ],
+   "cortos": [
+    {
+     "id": "T000010984",
+     "titulo": "Melk",
+     "tituloAlt": null,
+     "directores": [
+      "Filip Anthonissen"
+     ],
+     "anio": "2026",
+     "duracion": "14",
+     "paises": [
+      "Belgium"
+     ],
+     "idiomas": [
+      "Dutch"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "Mommy issues abound in Filip Anthonissen’s uniquely unsettling 3D animation, a surreal and sharply comedic Oedipal odyssey in which a middle-aged manchild traverses bucolic goat fields, pounding raves, and a pagan cult in his quest to mollify his overbearing mother.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/2zw4C4bigN1Sz1tlPXEPld/c4e1262a03e0d69dab6640fc2588e30a/Melk_Still_05.jpg"
+    },
+    {
+     "id": "T000011038",
+     "titulo": "Koden'n",
+     "tituloAlt": null,
+     "directores": [
+      "Daniel «Tètèl» Chérubin"
+     ],
+     "anio": "2026",
+     "duracion": "16",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "French",
+      " Haitian Creole"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "When Western medicine fails to explain a couple’s multiple miscarriages, a husband turns to his Haitian ancestry for solutions in Daniel «Tètèl» Chérubin’s restrained and mood-driven horror that leans on the importance of inherited spiritual traditions.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/34wzbJJTLX3JLr485q5dsm/1f0be2843652e4018d1d6c855377931f/Koden-n_Still_03.jpg"
+    },
+    {
+     "id": "T000011039",
+     "titulo": "MAMMALIA",
+     "tituloAlt": null,
+     "directores": [
+      "Elia Kalogianni"
+     ],
+     "anio": "2026",
+     "duracion": "19",
+     "paises": [
+      "Greece",
+      "Netherlands"
+     ],
+     "idiomas": [
+      "Greek"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "With meticulous precision, Elia Kalogianni excavates the fissure between care and abuse in a visually stunning and wildly depraved film about two sadistic women who stage experiments and lessons in abject cruelty in their battle for dominance.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/QlD2hP9RRsPuObZg73iTC/06148f531f0448e055b0046d45f6c809/Mammalia_Still_01.jpg"
+    },
+    {
+     "id": "T000011033",
+     "titulo": "Into The Betaverse",
+     "tituloAlt": null,
+     "directores": [
+      "Varun Raman",
+      "Tom Hancock"
+     ],
+     "anio": "2026",
+     "duracion": "14",
+     "paises": [
+      "United Kingdom"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "A virtual identity crisis meets dank British comedy in Varun Raman and Tom Hancock’s satirical take on the pressures of class and masculinity, and the value of homosocial friendship.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/3FBSTirc1KYqiYaZ0G5wGT/e1155d21dbb8005df7ed1c01ca7d3c06/Into-The-Betaverse_Still_02.jpg"
+    },
+    {
+     "id": "T000010952",
+     "titulo": "Madrugada",
+     "tituloAlt": null,
+     "directores": [
+      "Sebastián Lojo"
+     ],
+     "anio": "2026",
+     "duracion": "20",
+     "paises": [
+      "Guatemala"
+     ],
+     "idiomas": [
+      "Spanish"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "When their young son begins to experience destructive desires, a vampiric father and human mother try to shield him from blood-soaked nocturnal exploits in Sebastián Lojo’s slow-burn rumination on generational malaise.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/7cOKcUxq4gcTzMcYswv70p/c28dfb5d4d60805d6adc73b452b19169/Madrugada_Still_02.jpg"
+    },
+    {
+     "id": "T000011031",
+     "titulo": "The Dream Is A Snail",
+     "tituloAlt": "Giấc mơ là ốc sên",
+     "directores": [
+      "Thien An Nguyen"
+     ],
+     "anio": "2026",
+     "duracion": "15",
+     "paises": [
+      "Vietnam",
+      "South Korea"
+     ],
+     "idiomas": [
+      "Vietnamese"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "Thien An Nguyen’s highly stylized, eccentric comedy follows a desperate background actor who finds his calling by offering his body as a snail race host and discovers a world of erotic delights in sensations elicited by his slimy new friends.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/2PtXUohqqwu2ipRmIc6e1S/b4e2d609a539aeda76a2fbecc46527ed/The-Dream-Is-A-Snail_HERO.jpg"
+    }
+   ]
+  },
+  {
+   "slug": "short-cuts-2026-programme-01",
+   "titulo": "Short Cuts 2026 Programme 01",
+   "secciones": [
+    "Short Cuts"
+   ],
+   "cortos": [
+    {
+     "id": "T000011037",
+     "titulo": "Skinny Bottines",
+     "tituloAlt": "Skinny Boots",
+     "directores": [
+      "Romain F. Dubois"
+     ],
+     "anio": "2026",
+     "duracion": "20",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "French"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "A pickpocket’s affairs come to a head when he’s entrusted with looking after his spirited younger cousin while scrambling to settle a debt with his soon-to-be ex-girlfriend, in Romain F. Dubois’ zesty winner of the Sony Discovery Prize at the 2026 Cannes Critics’ Week.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/21mhrfsFi3cdRg9cQXwi25/88acdcf5f4f9aecf17a325a1727622ff/Skinny-Bottines_Still_01.jpg"
+    },
+    {
+     "id": "T000011036",
+     "titulo": "Untitled Woman",
+     "tituloAlt": null,
+     "directores": [
+      "Camille Summers-Valli"
+     ],
+     "anio": "2026",
+     "duracion": "17",
+     "paises": [
+      "United Kingdom",
+      "United States of America"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "A magnificent Julianne Nicholson plays a middle-aged woman longing to be seen in Camille Summers-Valli’s elegant, meticulously composed character study set at an art class with a charismatic teacher (Charles Melton) and a delightful group of eccentrics eager to gaze.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/4OQo1F8hLIN5KyIVDTBffm/06288a569dbbd5e3cf255fcb25fd8cd1/Untitled-Woman_Still_01.jpg"
+    },
+    {
+     "id": "T000011100",
+     "titulo": "When the Ground Paused",
+     "tituloAlt": null,
+     "directores": [
+      "Jess Barclay Lawton"
+     ],
+     "anio": "2026",
+     "duracion": "14",
+     "paises": [
+      "Australia"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "International Premiere",
+     "sinopsis": "Jess Barclay Lawton’s achingly raw documentary is a deeply affecting snapshot of early motherhood in which a young woman reflects on childhood scars in an effort to become the nurturing, attentive mother she longed to have.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/7bgGoR2Sv1cWJoxvp7qAp8/091a7e9e267384f786e5e5ef832f83e6/When-The-Ground-Paused_Still_05.jpg"
+    },
+    {
+     "id": "T000010900",
+     "titulo": "The End",
+     "tituloAlt": null,
+     "directores": [
+      "Niki Lindroth von Bahr"
+     ],
+     "anio": "2026",
+     "duracion": "17",
+     "paises": [
+      "Sweden",
+      "France",
+      "Denmark"
+     ],
+     "idiomas": [
+      "Swedish",
+      " English",
+      " Finnish"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "Winner of the 2017 Best International Short Film (<em>The Burden</em>), Niki Lindroth von Bahr returns to TIFF with another brilliant stop-motion doomsday comedy, in which airport-bound creatures wait out the impending apocalypse. Featuring voices by Alexander Skarsgård, Denis Lavant, and Noomi Rapace.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/7zobSrS7WoKexEoOrjW6Ja/d8da65b5679157332aab231d6ce212db/The-End_Still_06.jpg"
+    },
+    {
+     "id": "T000011134",
+     "titulo": "The Highway",
+     "tituloAlt": "《公路》",
+     "directores": [
+      "Yung Chang"
+     ],
+     "anio": "2026",
+     "duracion": "15",
+     "paises": [
+      "Canada",
+      "China"
+     ],
+     "idiomas": [
+      "Chinese",
+      " English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Yung Chang, one of Canada’s most prominent documentary filmmakers, makes a haunting narrative debut with this visually arresting, atmospheric slow-burner about an affluent businesswoman whose cushy routine and sense of reality unravel after she drives past the aftermath of a hit and run.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/3BKUye1FZsaWaCPNrsup9G/e63a85b64f5439d55d612d541b155b50/The-Highway_Still_02.jpg"
+    },
+    {
+     "id": "T000010949",
+     "titulo": "Fried Chicken & Strip Checkers",
+     "tituloAlt": "Տապակած Հավ և Ստրիպ Շաշկի",
+     "directores": [
+      "Ophelia Harutyunyan"
+     ],
+     "anio": "2026",
+     "duracion": "19",
+     "paises": [
+      "Armenia",
+      "France"
+     ],
+     "idiomas": [
+      "Armenian"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "A brother and sister at odds over household responsibilities are in for a dose of the bigger picture when a visit to their father in prison opens their eyes to the dark cloud hanging over their family’s future, in Ophelia Harutyunyan’s richly textured sibling drama.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/4lz34szHgqyPGqHo2VeIeL/560ae44036ec8887fb27fffb88faca96/fried-chicken.jpg"
+    }
+   ]
+  },
+  {
+   "slug": "short-cuts-2026-programme-02",
+   "titulo": "Short Cuts 2026 Programme 02",
+   "secciones": [
+    "Short Cuts"
+   ],
+   "cortos": [
+    {
+     "id": "T000010981",
+     "titulo": "Leftover Women",
+     "tituloAlt": null,
+     "directores": [
+      "Atalanta Swire"
+     ],
+     "anio": "2026",
+     "duracion": "19",
+     "paises": [
+      "United Kingdom"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Single, childless women turning 35 are to report to government-run centres for assessment and desirability coaching in Atalanta Swire’s wildly entertaining dystopian comedy grounded in Anjana Vasan’s impeccable deadpan instincts as a woman subjected to ludicrous trials.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/1QDJBTRD9ahWKpBwOiWyUY/73ff140d457690ec3a7c40e08eb15ffa/Leftover-Women_Still_01.jpg"
+    },
+    {
+     "id": "T000011017",
+     "titulo": "The Comet",
+     "tituloAlt": "La comète",
+     "directores": [
+      "Julie Charette"
+     ],
+     "anio": "2026",
+     "duracion": "12",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "French"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "An unspeakable act of cruelty on an idyllic summer night disrupts and forever changes a young boy and his sister’s understanding of the world in Julie Charette’s deeply moving animated drama that so vividly evokes a sense of summer air tinged with heartbreak.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/3h7akRtI8be3jFshp83IQA/99597e492c343a9a734a23a87a93e3f9/The-Comet_Still_01.jpg"
+    },
+    {
+     "id": "T000010948",
+     "titulo": "Forgotten Spaceman",
+     "tituloAlt": "Hershewe Fazanawerd",
+     "directores": [
+      "Elham Ehsas"
+     ],
+     "anio": "2026",
+     "duracion": "16",
+     "paises": [
+      "Afghanistan",
+      "United Kingdom"
+     ],
+     "idiomas": [
+      "Pashto"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "Elham Ehsas draws on rare footage of the first Afghan astronaut in space and lush 16mm film to reflect on his own sense of belonging in this singular, opulent non-fiction work brimming with cultural longing.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/3fvGMmv97RF3CEoqF0mKtK/b597ca47a2c6512f9e203b6ac9f4db3e/Forgotten-Spaceman_Still_01.jpg"
+    },
+    {
+     "id": "T000011116",
+     "titulo": "Between Late April and Early May",
+     "tituloAlt": null,
+     "directores": [
+      "Sophia Smith"
+     ],
+     "anio": "2026",
+     "duracion": "8",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "As cherry blossom season peaks in Toronto’s High Park, so do some of the camera-ready visitors’ worst impulses, as evidenced in Sophia Smith’s hilarious mockumentary that captures the unscrupulous methods and frenzied quest for that elusive snap.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/2O2uZx8uXHzOFBXfYM4MAJ/e5447c455e14b2d40713406fd5a73460/Between-Late-April-And-Early-May_Still_02.jpg"
+    },
+    {
+     "id": "T000011019",
+     "titulo": "Termite",
+     "tituloAlt": null,
+     "directores": [
+      "Shaunak Sen"
+     ],
+     "anio": "2026",
+     "duracion": "31",
+     "paises": [
+      "India"
+     ],
+     "idiomas": [
+      "Hindi",
+      " Urdu"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Shaunak Sen’s follow-up to the Academy Award–nominated documentary <em>All That Breathes</em> is an evocative drama set in the vibrant neighbourhoods of Old Delhi, where the routined lives of two middle-aged termite exterminators are about to drastically change when one of them receives an unexpected marriage proposal.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/6G6E7ZrOYoMv9w9nxZfbvj/253491cf9d8d039b2b476d235732cfba/Termite_Still_04.jpg"
+    },
+    {
+     "id": "T000011111",
+     "titulo": "The Lion Does Not Concern Himself",
+     "tituloAlt": null,
+     "directores": [
+      "Zarrar Kahn"
+     ],
+     "anio": "2026",
+     "duracion": "15",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Zarrar Kahn’s latest is a charming romantic comedy about an endearing gym coach who is convinced that his online persona as a toxic podcaster is his only ticket to relevance and popularity until a new client and love interest enters his life.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/3IZQQWqgvxrgFq6y7ZFby8/eb023956d1211d81749fefdb0b7bccff/The-Lion-Does-Not-Concern-Himself_Still_02.jpg"
+    }
+   ]
+  },
+  {
+   "slug": "short-cuts-2026-programme-03",
+   "titulo": "Short Cuts 2026 Programme 03",
+   "secciones": [
+    "Short Cuts"
+   ],
+   "cortos": [
+    {
+     "id": "T000011142",
+     "titulo": "A Tenderness",
+     "tituloAlt": null,
+     "directores": [
+      "Sabrine Khoury"
+     ],
+     "anio": "2026",
+     "duracion": "17",
+     "paises": [
+      "Netherlands",
+      "Palestine"
+     ],
+     "idiomas": [
+      "Arabic"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Sabrine Khoury weaves a myriad of emotional and cultural threads in her delicate postpartum drama about a young Palestinian mother navigating seemingly small daily challenges, amplified by a visit from her parents at her new Amsterdam home.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/4XWbEYpIZDYtvJR6mGgo4x/8d488f08a7a8772adcbab24a47cb62d2/A-Tenderness_Still_05.jpg"
+    },
+    {
+     "id": "T000010998",
+     "titulo": "Dough Man",
+     "tituloAlt": null,
+     "directores": [
+      "Brittney Gavin",
+      "Amy Mielke"
+     ],
+     "anio": "2026",
+     "duracion": "11",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Mischief abounds in Brittney Gavin and Amy Mielke’s charming ’70s-set comedy that introduces a handsome, mysterious newcomer to a Halifax Black community, catching three sisters off guard for various reasons, including a suspicion of occult leanings that calls for some serious supernatural vetting.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/1zS41701HZDl0k8Z0u3ULE/aa08bc41965ba6af3de281617b7249d9/Dough-Man_Still_03.jpg"
+    },
+    {
+     "id": "T000010999",
+     "titulo": "Fight Kid",
+     "tituloAlt": null,
+     "directores": [
+      "Michael Del Monte"
+     ],
+     "anio": "2026",
+     "duracion": "16",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Drawing on his non-fiction roots and naturalistic traditions, Michael Del Monte crafts an astute, emotionally layered portrait of a father resting the weight of his hopes and dreams on the shoulders of the son he’s rushing into a high-stakes boxing match.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/7jylEZknvLoDKq7H9HDvme/8aef400eb45cef87a6591e586b91bfdf/Fight-Kid_Still_01.jpg"
+    },
+    {
+     "id": "T000010950",
+     "titulo": "Terminal",
+     "tituloAlt": null,
+     "directores": [
+      "Alexandre Siqueira"
+     ],
+     "anio": "2026",
+     "duracion": "17",
+     "paises": [
+      "Portugal",
+      "Spain",
+      "France"
+     ],
+     "idiomas": [
+      "Portuguese/Catalan"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Returning home after thirty years at sea, a man surrenders to a cruel fate under his mother’s watchful, caring eye in Alexandre Siqueira’s emotionally charged, animated drama infused with metaphysical flourishes that capture the powerful essence of the mother-son bond.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/5ITyQE1wvX6UwLXf06UQll/42e9b6f9bfbdeeb03dd1feee75c59204/Terminal_Still_04.jpg"
+    },
+    {
+     "id": "T000011115",
+     "titulo": "Under the Same Clouds",
+     "tituloAlt": "Sous les mêmes nuages",
+     "directores": [
+      "Jérémi Roy"
+     ],
+     "anio": "2026",
+     "duracion": "6",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "French"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Jérémi Roy turns the camera on his parents in this dreamy, richly textured docufiction set in the snowy hills of rural Quebec, capturing the elderly couple’s daily routine peppered with sweet gestures and a healthy dose of romance.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/5JOVgbB6ljgffAlnMY8IWY/4d662d68f74cf23fc0a8fcb5ecbc5db6/Under-The-Same-Clouds_Still_04.jpg"
+    },
+    {
+     "id": "T000011087",
+     "titulo": "Patronymic",
+     "tituloAlt": "По батькові",
+     "directores": [
+      "Mariia Ponomarova"
+     ],
+     "anio": "2026",
+     "duracion": "22",
+     "paises": [
+      "Netherlands",
+      "Ukraine"
+     ],
+     "idiomas": [
+      "English",
+      " Ukrainian",
+      " Polish"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Her patronymic — a father-coded middle name — is more than just a formality in Mariia Ponomarova’s personal and structurally playful documentary that expertly blends archival material, meta re-enactments, and present-day family exchanges to deconstruct the notion of cultural identity.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/7IaaA93DjrstOvBPNCfDyO/f396b7e962259eb2b769f99e8eb6f5a8/Patronymic_Still_02.jpg"
+    },
+    {
+     "id": "T000011056",
+     "titulo": "The Episode",
+     "tituloAlt": null,
+     "directores": [
+      "Logan Graham Greene"
+     ],
+     "anio": "2026",
+     "duracion": "14",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Things quickly go from bad to worse in Logan Graham Greene’s boisterous, sharply scripted comedy featuring a pitch-perfect Rodrigo Fernandez-Stoll as a man in the throes of an epic meltdown prompted by his girlfriend’s steamy on-screen kiss with a fellow actor.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/2XSbE5gpXKCuNHujtAjqQO/cf7f6d01210b8e881f8d625f8876614f/The-Episode_Still_02.jpg"
+    }
+   ]
+  },
+  {
+   "slug": "short-cuts-2026-programme-04",
+   "titulo": "Short Cuts 2026 Programme 04",
+   "secciones": [
+    "Short Cuts"
+   ],
+   "cortos": [
+    {
+     "id": "T000011113",
+     "titulo": "El Aumento",
+     "tituloAlt": null,
+     "directores": [
+      "Maria Belen Poncio"
+     ],
+     "anio": "2026",
+     "duracion": "20",
+     "paises": [
+      "Argentina",
+      "United States of America"
+     ],
+     "idiomas": [
+      "Spanish"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Chaos and heightened tensions at a jam-packed gas station serve as a microcosm of a nation in crisis in Maria Belen Poncio’s sharp, offbeat comedy centred on three generations of women waiting in line the night before fuel prices are set to skyrocket.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/6Zr4eZMLyw4LEvOEmOQ8BL/06b51a274673877d9e12385664fccdb8/El-Aumento_Still_03.jpg"
+    },
+    {
+     "id": "T000011000",
+     "titulo": "BID16",
+     "tituloAlt": null,
+     "directores": [
+      "Mick Robertson",
+      "Margaret Rose"
+     ],
+     "anio": "2026",
+     "duracion": "11",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Unable to cover the fees on a storage unit, Carmen enlists the help of her brother to break into it, in Mick Robertson and Margaret Rose’s masterful character study about the messy complexities of family dynamics and the absurdity of arbitrary societal rules.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/fWt6lVpfhtALktbKX4hEd/20991abb37daa2e03003bfc9983250e7/BID16_Still_03.jpg"
+    },
+    {
+     "id": "T000011105",
+     "titulo": "Beans and Belief",
+     "tituloAlt": "sran pood",
+     "directores": [
+      "Tenzin Sedon"
+     ],
+     "anio": "2026",
+     "duracion": "17",
+     "paises": [
+      "United States of America",
+      "Canada",
+      "China"
+     ],
+     "idiomas": [
+      "Tibetan",
+      " Chinese"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "The sounds of prayers and of selling beans echo through a city where past and present collide in Tenzin Sedon’s textured and cinematic ethnographic study on the relentless way modernization and urban development have reshaped a sacred, historically revered Tibetan tradition.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/7epRDhww3jEcX2beiOxGYL/9c134e1db4efa4669fdf57540f4a73d9/Beans-And-Belief_Still_02.jpg"
+    },
+    {
+     "id": "T000010947",
+     "titulo": "Yek Rooz-e Shirin",
+     "tituloAlt": "A Sweet Day",
+     "directores": [
+      "Omid Abdollahi"
+     ],
+     "anio": "2026",
+     "duracion": "18",
+     "paises": [
+      "Iran"
+     ],
+     "idiomas": [
+      "Persian"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "Grounded by Behdokht Valian’s standout lead performance, Omid Abdollahi’s quietly foreboding drama follows a young woman making thoughtful preparations in anticipation of a long-awaited conjugal visit with her imprisoned husband in cold, apathetic, and harsh prison interiors.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/XoQO27oNnqdPvC3iIVWHq/d72901e3cf2e8f0a2c71d635f21175f3/Yek-Rooz-e-Shirin_Still_02.jpg"
+    },
+    {
+     "id": "T000011068",
+     "titulo": "(Haboolm Ksinaalgat) Soul Catcher",
+     "tituloAlt": null,
+     "directores": [
+      "Amanda Strong",
+      "Pamela Post"
+     ],
+     "anio": "2026",
+     "duracion": "15",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English",
+      " Sm'algya̱x"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Amanda Strong joins forces with Pamela Post to tell the story of a gender-fluid Ts’msyen youth tasked with retrieving the soul of their great-grandfather’s totem pole in this fluid, evocative animation about reclaiming history and righting the wrongs of a dark colonial past.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/4Y0xYub9mx98sZk5xyrFb8/a6f3579184539531df4ac35d0864060e/Haboolm-Ksinaalgat-Soul-Catcher_Still_HERO.jpg"
+    },
+    {
+     "id": "T000011057",
+     "titulo": "Fivehead",
+     "tituloAlt": null,
+     "directores": [
+      "Christian Smith"
+     ],
+     "anio": "2026",
+     "duracion": "19",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Christian Smith’s satirical, dark comedy brings body horror to side-splitting heights in this unhinged story of a woman who spirals into extreme paranoia on the basis of a body insecurity, anchored by Maddy Foley’s singular writing and performance.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/3JFFB80744EKx4tTm7xAre/69d4832b4fcc6a3dc903cbf69517958a/Fivehead_Still_06.jpg"
+    }
+   ]
+  },
+  {
+   "slug": "short-cuts-2026-programme-05",
+   "titulo": "Short Cuts 2026 Programme 05",
+   "secciones": [
+    "Short Cuts"
+   ],
+   "cortos": [
+    {
+     "id": "T000010993",
+     "titulo": "Bloodline",
+     "tituloAlt": null,
+     "directores": [
+      "Fala Chen"
+     ],
+     "anio": "2026",
+     "duracion": "19",
+     "paises": [
+      "United States of America"
+     ],
+     "idiomas": [
+      "English",
+      " Chinese"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Rooted in the history of systemic erasure and oppression of Chinese-American communities, Fala Chen’s elegant and spine-chilling turn behind the camera, produced by Colin Farrell, follows two siblings in 1952 Utah on a mission to find their family treasure.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/3W0urzZEdGaJLpnzNlHOl6/1d4025dc642cadfb6e1b7391dda24dcc/Bloodline_Still_01.jpg"
+    },
+    {
+     "id": "T000011099",
+     "titulo": "Driftwood",
+     "tituloAlt": null,
+     "directores": [
+      "A.C. Birch"
+     ],
+     "anio": "2026",
+     "duracion": "11",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "The calm waters and soothing breeze of the Toronto Islands provide a safe reprieve for two best friends after one of them experiences a jarring, dysphoric hookup, in this deeply affecting take on trans life, embodiment, and intimacy by A.C. Birch.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/2XsGs9wVsuL2WjOn5on2Sc/494086ad5019e4489a2dbc651e86a40c/Driftwood_Still_04.jpg"
+    },
+    {
+     "id": "T000011030",
+     "titulo": "Till The Milk Runs Dry",
+     "tituloAlt": null,
+     "directores": [
+      "Kalainithan Kalaichelvan"
+     ],
+     "anio": "2026",
+     "duracion": "12",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "Tamil"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "True to signature form, Kalainithan Kalaichelvan conjures a deeply sensorial experience with stunning, dreamlike visuals reflecting the inner turmoil of a dancer under immense pressure at a prestigious Bharatanatyam dance academy in this stunning observation of bodily autonomy.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/7dag010wTSHwWXHzRPsNCz/d5438fddd092e607c35bd47647a34082/Till-The-Milk-Runs-Dry_Still_04.jpg"
+    },
+    {
+     "id": "T000011145",
+     "titulo": "Almost Pink",
+     "tituloAlt": "Presque rose",
+     "directores": [
+      "Justine Prince"
+     ],
+     "anio": "2026",
+     "duracion": "16",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "French"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "After basketball practice, a 15-year-old girl meets a stranger for a transaction that goes terrifyingly off script, in Justine Prince’s sharp, heart-stopping story of secrecy, gendered power dynamics, and the suffocating experience of being on the precipice of real danger.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/7rYm6UqdA2lQKMCaUWufaC/af9edaf2867f65a2f4580a607992d130/Almost-Pink_Still_02.jpg"
+    },
+    {
+     "id": "T000010992",
+     "titulo": "2:Love",
+     "tituloAlt": null,
+     "directores": [
+      "Ronni Shalev"
+     ],
+     "anio": "2026",
+     "duracion": "11",
+     "paises": [
+      "Belgium",
+      "France",
+      "Israel"
+     ],
+     "idiomas": [
+      "French",
+      " Latin"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "A fluorescent colour palette, sharp angular visuals, and a gleeful choir coalesce exquisitely, building up to an epic crescendo in Ronni Shalev’s joyful animated story of two ball girls on a tennis court whose initial rivalry transforms into an electric, magnetic passion.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/HY5nFKcDn4IheITNho8z3/1a1af3e5e2ff1bc861150945ef85ac0d/2-Love_Still_03.webp"
+    },
+    {
+     "id": "T000010869",
+     "titulo": "Buddies",
+     "tituloAlt": null,
+     "directores": [
+      "Fraser Wolfe"
+     ],
+     "anio": "2026",
+     "duracion": "11",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Over a ski weekend, 14-year-old Aiden navigates the boundaries of his friendship with Lucas. Fraser Wolfe’s poignant exploration of queer awakenings marks an assured, memorable directorial debut with strong vision and full command of the craft.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/69WXDngDRj3N3GTSogvEIF/41d8446ab10c6d1f66492f27d5b0ef1d/Buddies_Still_04.jpg"
+    },
+    {
+     "id": "T000011091",
+     "titulo": "The Spectacular Death of Prisca",
+     "tituloAlt": null,
+     "directores": [
+      "Kaelo Iyizoba"
+     ],
+     "anio": "2026",
+     "duracion": "23",
+     "paises": [
+      "Nigeria"
+     ],
+     "idiomas": [
+      "English",
+      " Igbo",
+      " Yoruba"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "On her daughter’s wedding day, a mother finds herself catapulted into a fever-dream quest to rescue her daughter in Kaelo Iyizoba’s wonderfully imaginative narrative and uproarious love letter to 2000s Nollywood, packed with bold aesthetics, chaotic twists, and delightfully over-the-top melodrama.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/5HnojggwMebM2YWDu019Ta/d9a8d0f13f0b2b3517de802562e67df8/The-Spectacular-Death-Of-Prisca_Still_03.jpg"
+    }
+   ]
+  },
+  {
+   "slug": "short-cuts-2026-programme-06",
+   "titulo": "Short Cuts 2026 Programme 06",
+   "secciones": [
+    "Short Cuts"
+   ],
+   "cortos": [
+    {
+     "id": "T000011110",
+     "titulo": "Aman",
+     "tituloAlt": null,
+     "directores": [
+      "Rahul Roye"
+     ],
+     "anio": "2026",
+     "duracion": "16",
+     "paises": [
+      "India",
+      "United Kingdom",
+      "United States of America",
+      "France"
+     ],
+     "idiomas": [
+      "Bengali",
+      " Hindi"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "A heart-piercing bond between two trans siblings forms the emotional core of Rahul Roye’s profound exploration of identity, body, and the meaning of manhood, as a trans man’s journey takes an unexpected turn on the eve of his gender-affirming surgery.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/7gmwtRNkMSsA0CkZSjvVza/822eed2a8a60dc2509c82ce8c72b4a56/Aman_Still_05.jpg"
+    },
+    {
+     "id": "T000011029",
+     "titulo": "The Day I Smoked a Cigarette with my Father",
+     "tituloAlt": "Le jour où j'ai fumé une cigarette avec mon père",
+     "directores": [
+      "Sameh Alaa",
+      "Robin Vouters"
+     ],
+     "anio": "2026",
+     "duracion": "13",
+     "paises": [
+      "France",
+      "Egypt",
+      "Belgium"
+     ],
+     "idiomas": [
+      "Arabic"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Sameh Alaa and Robin Vouters’animation brings the warmth of charming, bustling neighbourhoods of 1960s Cairo to life in this touching tale of a father returning home from prison after many years and attempting to repair a fragile bond with his eldest son.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/53ppOCggpvWvTjTdMpGjgX/398bf4af6a3ea5fd7102e58756ef4381/The-Day-I-Smoked-A-Cigarette-With-My-Father_Still_01.jpg"
+    },
+    {
+     "id": "T000011067",
+     "titulo": "Call Me Tim",
+     "tituloAlt": null,
+     "directores": [
+      "Shamier Anderson"
+     ],
+     "anio": "2026",
+     "duracion": "18",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Packed with dry humour and deadpan wit, actor Shamier Anderson’s mockumentary and irreverent character study centres on a city outsider who buys a rural hunting shop and inadvertently sparks a bitter rivalry with an incensed local animal-rights activist.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/5USKcqX7GaUjEDAPMAIufG/80e61c45cc0fde6238e2092a9f7c40c3/Call-Me-Tim_Still_01.jpg"
+    },
+    {
+     "id": "T000010995",
+     "titulo": "Pacific Spirit",
+     "tituloAlt": null,
+     "directores": [
+      "Antoine Bourges"
+     ],
+     "anio": "2026",
+     "duracion": "15",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Between polite small talk and mundane reflections, two university students — one confident, one with self-doubt — walk through a lush forest to complete a photography assignment in Antoine Bourges’ unexpectedly moving meditation on discovering divinity and abundance in the world just as it is.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/jbd02Wh3u2WmDHafTG6kH/f2863f05f9ddf0c0f40d3c46b0de99bd/Pacific-Spirit_Still_03.jpg"
+    },
+    {
+     "id": "T000010996",
+     "titulo": "Imichki",
+     "tituloAlt": null,
+     "directores": [
+      "Yza Nouiga"
+     ],
+     "anio": "2026",
+     "duracion": "15",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "Amazigh"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Yza Nouiga evokes a fraught chapter in Morocco’s history through the intimate and stirring story of an illiterate woman in the 1970s attempting to write to her absent husband in a profound act of resistance against the boundaries of her world.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/haLsMmgCHsqJC1mRfc0xp/2ce333f47903ee2d0a0d1e3a14e80792/Imichki_Still_01.jpg"
+    },
+    {
+     "id": "T000010983",
+     "titulo": "Please",
+     "tituloAlt": null,
+     "directores": [
+      "Anna Mantzaris"
+     ],
+     "anio": "2026",
+     "duracion": "9",
+     "paises": [
+      "Sweden",
+      "France",
+      "Czech Republic",
+      "Norway",
+      "Finland"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "Anna Mantzaris brings endearing, peculiar characters to lovable life in her sharp animated portrayal of the friction between the weight of being needed and our deep craving for intimacy, in this quirky, hilarious observation on romance, neediness, and human connection.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/v3USXZjJj0ihRmn9eW06V/77d5a5383126dc193287ee220cd2aff5/Please_Still_03.jpg"
+    },
+    {
+     "id": "T000011109",
+     "titulo": "Moongirl",
+     "tituloAlt": "月の民",
+     "directores": [
+      "Victor Boccard"
+     ],
+     "anio": "2026",
+     "duracion": "20",
+     "paises": [
+      "Japan"
+     ],
+     "idiomas": [
+      "Japanese"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Blurring fiction and reality, Victor Boccard maps an artist’s obsession across decades of paintings revisiting one subject: the woman he buried long ago at the foot of a statue, in this ethereal meditation on grief, memory, and bonds that transcend time.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/4jllh2eCTLM3Eecm6D7ksw/d3a8d5413cc98e4b94e179e7e1163497/Moongirl_Still_01.jpg"
+    }
+   ]
+  },
+  {
+   "slug": "wavelengths-1-house-and-home",
+   "titulo": "Wavelengths 1: House and Home",
+   "secciones": [
+    "Wavelengths"
+   ],
+   "cortos": [
+    {
+     "id": "T000010224",
+     "titulo": "Two Pids",
+     "tituloAlt": null,
+     "directores": [
+      "John Smith"
+     ],
+     "anio": "2026",
+     "duracion": "5",
+     "paises": [
+      "United Kingdom"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/1yjCZmLmS128oJSHcobzUd/956ea19343a80bf7c624b3ab85b40da6/Two-Pids_Still_HERO.jpg"
+    },
+    {
+     "id": "T000011086",
+     "titulo": "After Image",
+     "tituloAlt": null,
+     "directores": [
+      "Rita Ferrando"
+     ],
+     "anio": "2026",
+     "duracion": "12",
+     "paises": [
+      "Canada",
+      "Argentina"
+     ],
+     "idiomas": [
+      "Spanish"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/78LOVrDnEj4vzKo8LQ2XdB/0a4f7af33c6effe77468c3460b6d6956/After-Image_Still_HERO.jpg"
+    },
+    {
+     "id": "T000011084",
+     "titulo": "Moon Palace",
+     "tituloAlt": "月宫",
+     "directores": [
+      "Jiaqi Yu"
+     ],
+     "anio": "2026",
+     "duracion": "19",
+     "paises": [
+      "China",
+      "United States of America"
+     ],
+     "idiomas": [
+      "Mandarin"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/5NW0BAcDnSaexS1bcGr5xV/8d7d6ce93aae3da6b3a013fe20e70f2e/Moon-Palace_Still_HERO.jpg"
+    },
+    {
+     "id": "T000011148",
+     "titulo": "Microcosmic Orbit: Encased",
+     "tituloAlt": null,
+     "directores": [
+      "Danaya Chulphuthiphong"
+     ],
+     "anio": "2026",
+     "duracion": "17",
+     "paises": [
+      "Thailand"
+     ],
+     "idiomas": [
+      "No Dialogue"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/1kYGCXwzOpCCQVeF56tNL4/af8caef3128c81f792a86da8337c5441/Microcosmic-Orbit-Encased_Still_HERO.jpg"
+    },
+    {
+     "id": "T000011085",
+     "titulo": "The Address Book",
+     "tituloAlt": null,
+     "directores": [
+      "Mustafa Uzuner"
+     ],
+     "anio": "2026",
+     "duracion": "7",
+     "paises": [
+      "Canada"
+     ],
+     "idiomas": [
+      "No Dialogue"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/37UuVvoiEBsAuZsJyN5LsP/c6921c5dcd48f6fa78b4a98c4e5fd7b5/The-Address-Book_Still_HERO.jpg"
+    },
+    {
+     "id": "T000011146",
+     "titulo": "Chronicle of Tiredness",
+     "tituloAlt": "Crónica del cansancio",
+     "directores": [
+      "Natalia Marín"
+     ],
+     "anio": "2026",
+     "duracion": "21",
+     "paises": [
+      "Spain"
+     ],
+     "idiomas": [
+      "Spanish"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/1kavpsCGqzoMqD8qdATz74/605a85352e71df81983381c4ec79fe69/Chronicle-of-Tiredness_Still_HERO.jpg"
+    }
+   ]
+  },
+  {
+   "slug": "wavelengths-2-this-suffocating-now",
+   "titulo": "Wavelengths 2: This Suffocating Now",
+   "secciones": [
+    "Wavelengths"
+   ],
+   "cortos": [
+    {
+     "id": "T000011096",
+     "titulo": "Ghazal-e Sorkh",
+     "tituloAlt": "غزالِ سُرخ",
+     "directores": [
+      "Maryam Tafakory"
+     ],
+     "anio": "2026",
+     "duracion": "20",
+     "paises": [
+      "Iran",
+      "United Kingdom",
+      "France"
+     ],
+     "idiomas": [
+      "English",
+      " Persian"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/76MiKB601e3WbhnnqMLVXI/86531bc1331997881ca5868a003f032a/Ghazal-e-Sorkh_Still_01.jpg"
+    },
+    {
+     "id": "T000011098",
+     "titulo": "TM",
+     "tituloAlt": null,
+     "directores": [
+      "Takehisa Kosugi"
+     ],
+     "anio": "1974",
+     "duracion": "3",
+     "paises": [
+      "Japan"
+     ],
+     "idiomas": [
+      "Silent"
+     ],
+     "premiere": "International Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/1DgG9wZMmcP3Bi0CxYbvWC/d903571b167f0499afc8f034e9f05b4b/TM_Still_HERO.jpg"
+    },
+    {
+     "id": "T000010279",
+     "titulo": "Fire Flies",
+     "tituloAlt": "咒语",
+     "directores": [
+      "Zheng Lu Xinyuan"
+     ],
+     "anio": "2026",
+     "duracion": "18",
+     "paises": [
+      "China"
+     ],
+     "idiomas": [
+      "Mandarin"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/MYgHyPzol82XHJpi5J06m/82da87084a8068d30f260d0a4cf56781/Fire-Flies_Still_HERO.jpg"
+    },
+    {
+     "id": "T000011051",
+     "titulo": "Splits in Two",
+     "tituloAlt": null,
+     "directores": [
+      "Simon Liu"
+     ],
+     "anio": "2026",
+     "duracion": "13",
+     "paises": [
+      "Hong Kong",
+      "United States of America"
+     ],
+     "idiomas": [
+      "No Dialogue"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/bv8FSY1cQ2Y2yhdab2oXi/713c964e470c7e5cf1df40645f3f89bb/Splits-in-Two_Still_HERO.jpg"
+    },
+    {
+     "id": "T000011043",
+     "titulo": "This Suffocating Now",
+     "tituloAlt": null,
+     "directores": [
+      "Vika Kirchenbauer"
+     ],
+     "anio": "2026",
+     "duracion": "16",
+     "paises": [
+      "Germany"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/01I6wrRhyA47SKqJFQLvCU/e400ec47b5ef62368b161027e0ad6eae/This-Suffocating-Now_Still_HERO.jpg"
+    }
+   ]
+  },
+  {
+   "slug": "wavelengths-3-time-and-tide",
+   "titulo": "Wavelengths 3: Time and Tide",
+   "secciones": [
+    "Wavelengths"
+   ],
+   "cortos": [
+    {
+     "id": "T000010011",
+     "titulo": "Forever...Forever",
+     "tituloAlt": null,
+     "directores": [
+      "Johann Lurf"
+     ],
+     "anio": "2026",
+     "duracion": "21",
+     "paises": [
+      "Austria",
+      "France"
+     ],
+     "idiomas": [
+      "No Dialogue"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/59qCJTqTagGk7abBp6rpXZ/af8b4ac10966ac158ae5c57f310bd0f8/Forever-Forever_Still_HERO.jpg"
+    },
+    {
+     "id": "T000011063",
+     "titulo": "La Prospettiva (1653)",
+     "tituloAlt": null,
+     "directores": [
+      "Ben Russell"
+     ],
+     "anio": "2026",
+     "duracion": "6",
+     "paises": [
+      "France",
+      "Italy"
+     ],
+     "idiomas": [
+      "No Dialogue"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/5cKsz05q8ajg3ZriwMdZ8P/28b74b7c6d3745625436734bbc640492/La-Prospettiva-_1653__Still_HERO.jpg"
+    },
+    {
+     "id": "T000011193",
+     "titulo": "Electric Fragments No. 1 - Rom (Men)",
+     "tituloAlt": "Frammenti Elettrici No. 1 - Rom (Uomini)",
+     "directores": [
+      "Yervant Gianikian",
+      "Angela Ricci Lucchi"
+     ],
+     "anio": "2001",
+     "duracion": "14",
+     "paises": [
+      "Italy"
+     ],
+     "idiomas": [
+      "Italian"
+     ],
+     "premiere": null,
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/349HVsjO4qpPet4hnpkVEh/cb5775dd674ad6e1870b11d90564cecf/Electric-Fragments-No.-1-Rom-_Men__Still_02.jpg"
+    },
+    {
+     "id": "T000011097",
+     "titulo": "Fevers",
+     "tituloAlt": null,
+     "directores": [
+      "James Richards"
+     ],
+     "anio": "2026",
+     "duracion": "31",
+     "paises": [
+      "Germany",
+      "United Kingdom"
+     ],
+     "idiomas": [
+      "English"
+     ],
+     "premiere": "North American Premiere",
+     "sinopsis": "",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/5eSeZeW1X22Noizo1lqBeZ/48d2b452cd0db2c5d4d72590a85b0584/Fevers_Still_HERO.jpg"
+    }
+   ]
+  },
+  {
+   "slug": "wavelengths-anoushahpour-aljafari",
+   "titulo": "Wavelengths: Anoushahpour/Aljafari",
+   "secciones": [
+    "Wavelengths"
+   ],
+   "cortos": [
+    {
+     "id": "T000010699",
+     "titulo": "Peacocks Come with the Clouds",
+     "tituloAlt": "طاووس‌ها با ابرها می‌آیند",
+     "directores": [
+      "Parastoo Anoushahpour"
+     ],
+     "anio": "2026",
+     "duracion": "48",
+     "paises": [
+      "Iran",
+      "Canada"
+     ],
+     "idiomas": [
+      "Persian",
+      " Kurdish"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "Shot over a decade in multiple Kurdish-majority villages on the border of Iran and Turkmenistan, <em>Peacocks Come with the Clouds</em> by Parastoo Anoushahpour reflects on a series of elegant wedding embroideries by way of workshops with local children.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/3qNJ89QgDfa9aDmQA0HemA/1de93c87f02cbe288148ee1facb7379a/Peacocks-Come-with-the-Clouds_Still_HERO.jpg"
+    },
+    {
+     "id": "T000010626",
+     "titulo": "Masao Adachi Takes a Passport Photo",
+     "tituloAlt": "足立正生、パスポート写真を撮る",
+     "directores": [
+      "Kamal Aljafari"
+     ],
+     "anio": "2026",
+     "duracion": "28",
+     "paises": [
+      "Germany",
+      "France",
+      "Japan"
+     ],
+     "idiomas": [
+      "Japanese"
+     ],
+     "premiere": "World Premiere",
+     "sinopsis": "In <em>Masao Adachi Takes a Passport Photo</em>, Palestinian filmmaker and artist Kamal Aljafari documents one of Japan’s great maverick artists — now 85 — as he makes one last attempt to attain a passport decades after his was confiscated.",
+     "imagen": "//images.ctfassets.net/22n7d68fswlw/2vqv7M79JYVkJlYOCpa69m/42d2f5fe24703590bdfe6767e4db2455/Masao-Adachi-Takes-a-Passport-Photo_01.webp"
+    }
+   ]
+  }
+ ]
+}

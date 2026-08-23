@@ -33,6 +33,7 @@
  "shortName": "NOMBRE",
  "_shortName_nota": "Nombre corto/simple para el selector del splash (regla selector-name-simplify). Siglas establecidas (FICCI/AFF) se conservan.",
  "city": "Ciudad",
+ "ticketing_model": "paid | mixed — SOLO si el festival cobra en algo; se omite si todo es entrada libre",
  "country": "XX",
  "dates": "5–8 JUN",
  "dates_en": "JUN 5–8",
@@ -166,7 +167,9 @@
    "posterSource": "",
    "_poster_nota": "posterSource OBLIGATORIO si poster tiene valor ([poster-source]): 'tmdb' | 'custom' (afiche propio en assets/) | 'editorial' (still 16:9 → marco editorial). El enricher propone; la verificación es humana (PIPELINE.md manda).",
    "lbSlug": "",
-   "_lbSlug_nota": "Slug REAL de Letterboxd (verificar vía redirect letterboxd.com/tmdb/<id>/) — nunca inferido."
+   "tmdb_id": 12345,
+   "_lbSlug_nota": "Slug REAL de Letterboxd (verificar vía redirect letterboxd.com/tmdb/<id>/) — nunca inferido.",
+   "_tmdb_id_nota": "ID numérico de TMDB. No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar."
   },
   {
    "_tipo": "Tipo 2 — FUNCIÓN COMPARTIDA (anclaje). Obras INDEPENDIENTES que comparten una función: corto antes del largo, dos mediometrajes, hasta 4 obras. Entradas NORMALES (fichas y cards independientes, jamás fusionadas) + sharedSlotIsOneScreening:true en la raíz. El loader las ancla por día|hora|sede|sala. ⚠️ Reemplaza al legacy is_programa ('Film A + Film B') — no usar ese modelo.",
@@ -190,7 +193,8 @@
    "film_list": null,
    "poster": "",
    "posterSource": "",
-   "lbSlug": ""
+   "lbSlug": "",
+   "tmdb_id": 12345
   },
   {
    "_tipo": "Tipo 2 (continuación) — la otra obra de la MISMA función: mismo day/time/venue.",
@@ -216,7 +220,8 @@
    "film_list": null,
    "poster": "",
    "posterSource": "",
-   "lbSlug": ""
+   "lbSlug": "",
+   "tmdb_id": 12345
   },
   {
    "_tipo": "Tipo 3 — PROGRAMA de cortometrajes (el festival curó un contenedor CON NOMBRE).",
@@ -249,6 +254,7 @@
      "poster": "",
      "posterSource": "",
      "lbSlug": "",
+     "tmdb_id": 12345,
      "_item_nota": "Cada corto con metadata completa: su ficha es independiente (hereda función y avisos del programa)."
     },
     {
@@ -261,7 +267,8 @@
      "synopsis": "Sinopsis.",
      "poster": "",
      "posterSource": "",
-     "lbSlug": ""
+     "lbSlug": "",
+     "tmdb_id": 12345
     }
    ]
   },

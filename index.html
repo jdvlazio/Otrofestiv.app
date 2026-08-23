@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608230738">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608230738">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608231452">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608231452">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -635,6 +635,80 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* ── Badges ── */
 
+
+/* ── PALMARÉS ─────────────────────────────────────────────────────────────
+   Superficie del festival terminado. Todo lleva afiche —menciones incluidas—
+   porque una lista de títulos sueltos al lado de tarjetas con póster se lee
+   como material de segunda. Una premiada que no está en el catálogo NO deja
+   casilla vacía: nace con su afiche propio (Forma A), que es lo que la app ya
+   hace con cualquier obra sin póster. */
+.palm-hdr{padding:var(--sp-4) var(--sp-4) 0}
+.palm-eye{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--amber);font-weight:var(--w-bold)}
+.palm-sub{margin-top:var(--sp-1)}
+.palm-cruce{margin:var(--sp-3) var(--sp-4) 0}
+.palm-cruce b{color:var(--amber)}
+/* Banda + tira: el mismo objeto que .dw-band/.dw-strip del Diario. Se repite la
+   anatomía a propósito — el usuario ya aprendió que una banda con contador y
+   chevron se abre, y aprender dos gestos para lo mismo sería peor. */
+.palm-band{cursor:pointer}
+.palm-band .hdr-end svg{color:var(--gray)}
+.palm-strip{display:flex;align-items:center;padding:var(--sp-2) var(--sp-4) var(--sp-1);cursor:pointer;min-height:86px}
+.palm-strip-p{width:52px;flex:0 0 52px;position:relative;filter:drop-shadow(-6px 0 12px rgba(0,0,0,.55))}
+.palm-strip-p .palm-po{border-radius:7px;border:1px solid rgba(255,255,255,.06)}
+/* Riel horizontal: mismo gesto que el carrusel del splash — las obras primero,
+   el detalle por categoría después. Escanea igual con 3 categorías que con 30. */
+/* Un solo pie de afiche para el riel y para las menciones: es el mismo objeto
+   —el nombre debajo de una imagen— y solo cambia de tamaño según el contenedor.
+   Dos clases habrían sido dos variantes de gris más, que es justo lo que
+   [dato-linea] existe para frenar. */
+.palm-cap{line-height:1.25;margin-top:var(--sp-2);color:var(--gray2);font-size:var(--t-xs)}
+.palm-mgrid .palm-cap{font-size:var(--t-badge);margin-top:var(--sp-1)}
+.palm-po{position:relative;width:100%;aspect-ratio:2/3;border-radius:var(--r-poster);overflow:hidden;background:var(--surf-2)}
+.palm-po .img-cover{width:100%;height:100%;object-fit:cover;display:block}
+.palm-seen{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,var(--overlay-60));
+  color:var(--amber);font-size:var(--t-badge);text-align:center;padding:9px 0 2px;letter-spacing:.6px}
+/* Marca honesta: lo nuestro no se hace pasar por material del festival. */
+/* Se ancla con el MISMO token que el badge de cancelada (--poster-badge-top):
+   arriba chocaba con el rótulo de sección de la Forma A — exactamente el bug
+   que Juan reportó el 23 ago en la grilla. La regla ya existía; la ignoré al
+   escribir esto y el render me lo devolvió. */
+.palm-own{position:absolute;top:var(--poster-badge-top);right:5px;background:var(--overlay-60);
+  color:var(--gray);font-size:var(--t-badge);padding:1.5px 4px;border-radius:var(--r-sm);letter-spacing:.04em}
+.palm-div{height:1px;background:var(--bdr);margin:var(--sp-4) var(--sp-4) 0}
+.palm-sec{margin-top:var(--sp-5)}
+.palm-cat{display:flex;align-items:center;gap:var(--sp-2);margin:0 var(--sp-4) var(--sp-3);
+  font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;font-weight:var(--w-bold);color:var(--c);line-height:1.3}
+.palm-cat span{width:16px;height:2px;background:var(--c);flex:0 0 16px;border-radius:2px}
+/* Una fila por categoría: ganadora grande + menciones pequeñas a la derecha.
+   La jerarquía la carga el TAMAÑO, no un chip repetido ocho veces. */
+/* Dos renglones por categoría, no uno (Juan, 23 ago 2026). Medido: con dos
+   menciones de 52px en la MISMA fila, el título se quedaba en 69px de ancho
+   —ocho caracteres por línea— y «Madres de nacimiento» salía en tres líneas.
+   El ancho no se puede negociar y el scroll sí: la categoría sube de 138 a
+   ~180px, y a cambio el título vuelve a caber en una línea. */
+.palm-row{display:flex;align-items:center;gap:var(--sp-3);margin:0 var(--sp-4)}
+.palm-mrow2{margin-top:var(--sp-3);padding-left:var(--sp-1)}
+.palm-g{display:flex;gap:var(--sp-3);align-items:center;margin:0 var(--sp-4);cursor:pointer}
+.palm-g .palm-wtx{flex:1;min-width:0}
+.palm-g .palm-po{width:76px;flex:0 0 76px}
+.palm-wtx{flex:1;min-width:0}
+.palm-wt{font-size:var(--t-md);font-weight:var(--w-bold);letter-spacing:-.02em;line-height:1.15}
+.palm-wm{margin-top:2px}
+.palm-ms{display:flex;gap:6px;flex:0 0 auto}
+/* 52px, el mismo ancho que los afiches del Diario (.dw-strip-p): es el tamaño
+   más chico en el que un afiche de esta app sigue leyéndose como afiche. A 38px
+   no distinguía nada, solo se veía pequeño (Juan, medido en el teléfono). */
+.palm-m{width:52px;flex:0 0 52px;cursor:pointer}
+.palm-m:active{opacity:.7}
+/* El divisor del splash, reusado: la barra vertical con el rótulo rotado que ya
+   separa «vigentes» de «ANTERIORES» en el riel de festivales. Idea de Juan —
+   el gesto ya existe y el usuario ya lo leyó, así que no hay que enseñarlo.
+   Las barras se acortan al alto de esta fila (allá se miden contra --poster-h,
+   que es el del splash y acá no aplica). */
+.palm-div-v{margin:0 var(--sp-1)}
+.palm-div-v .srd-bar{height:14px}
+
+
 /* ── Notices: funciones canceladas / reprogramadas ── */
 .meta-badge{display:inline-block;font-size:var(--t-xs);font-weight:var(--w-display);letter-spacing:.5px;padding:2px var(--sp-2);border-radius:var(--r-md);font-family:var(--font);margin-left:var(--sp-2);vertical-align:middle;flex-shrink:0;background:var(--amber);color:var(--bg)}
 .meta-badge.sm{font-size:var(--t-badge);padding:1px 4px;margin-left:var(--sp-1)}
@@ -696,6 +770,15 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    desde que el filtro pasó a dropdown— y por debajo de #hdr-programa (z-index
    201) para no taparlo. Sigue descartable con la ✕. */
 #notices-banner:not(:empty){position:sticky;top:var(--sticky-top-chips);z-index:194}
+/* La hoja de clave se abre ENCIMA del splash, que es z-index:99999 — el resto
+   de .auth-sheet vive en 9999 porque se abren dentro de la app, con el splash
+   ya retirado. Ésta no: es lo primero que se toca. Sin esto se ve la hoja pero
+   el splash se traga los toques y no hay forma de escribir la clave ni de
+   confirmar: «lo veo pero no entra». */
+#review-sheet{z-index:100000}
+.review-banner{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;align-items:center;justify-content:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-4);padding-bottom:max(env(safe-area-inset-bottom),var(--sp-2));background:var(--surf-2);border-top:1px solid var(--bdr-l);font-family:var(--font);font-size:var(--t-xs);color:var(--gray2);text-align:center}
+.review-banner.on{display:flex}
+.review-banner b{color:var(--amber);font-weight:var(--w-bold)}
 .notice-banner{display:flex;align-items:flex-start;gap:var(--sp-2);padding:var(--sp-2) var(--sp-4);background:var(--surf-2);border-bottom:1px solid var(--bdr-l)}
 .notice-banner-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:5px}
 .notice-banner-body{flex:1;min-width:0}
@@ -1757,12 +1840,12 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .dw-strip-p{width:52px;height:78px;object-fit:cover;border-radius:7px;position:relative;box-shadow:-6px 0 12px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.06);flex-shrink:0}
 .dw-strip-mas{margin-left:var(--sp-3);font-size:var(--t-caption);color:var(--gray)}
 /* Tapa del Diario: el afiche es OBJETO (completo, con sombra), no fondo. */
-.diary-wordmark{font-size:var(--t-lg);flex:0 0 auto}
-.diary-cover{display:flex;gap:var(--sp-4);padding:var(--sp-1) var(--sp-4) var(--sp-5);align-items:flex-start}
-.diary-keyart{width:104px;height:156px;object-fit:cover;border-radius:var(--r);box-shadow:0 10px 28px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.07);flex-shrink:0}
-.diary-cover-txt{flex:1;min-width:0;padding-top:var(--sp-1)}
-.diary-eyebrow{font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.14em;color:var(--amber);text-transform:uppercase;margin-bottom:var(--sp-2)}
-.diary-full{font-size:var(--t-sm);line-height:1.35;color:var(--gray);margin-top:var(--sp-2)}
+.diary-wordmark,.palm-wm{font-size:var(--t-lg);flex:0 0 auto}
+.diary-cover,.palm-cv{display:flex;gap:var(--sp-4);padding:var(--sp-1) var(--sp-4) var(--sp-5);align-items:flex-start}
+.diary-keyart,.palm-ka{width:104px;height:156px;object-fit:cover;border-radius:var(--r);box-shadow:0 10px 28px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.07);flex-shrink:0}
+.diary-cover-txt,.palm-cvtx{flex:1;min-width:0;padding-top:var(--sp-1)}
+.diary-eyebrow,.palm-eb{font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.14em;color:var(--amber);text-transform:uppercase;margin-bottom:var(--sp-2)}
+.diary-full,.palm-fu{font-size:var(--t-sm);line-height:1.35;color:var(--gray);margin-top:var(--sp-2)}
 .diary-dates{font-size:var(--t-sm);font-weight:var(--w-semi);letter-spacing:.1em;color:var(--white-60);margin-top:var(--sp-2);text-transform:uppercase}
 /* La sheet NO tiene padding horizontal, así que el sangrado negativo de
    .sec-hdr (−sp-4) empujaba la banda de −16 a 406 y dejaba el ojo en x=0,
@@ -1869,13 +1952,13 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 /* Sección archivo */
 /* ── DIARIO (17 jul): lo visto como destino propio (patrón Letterboxd/Things).
    Sheet propio bajo pel-sheet (z 9001): tocar una card abre la película ENCIMA. */
-.diary-overlay{position:fixed;inset:0;background:var(--overlay-70);z-index:8900;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility 0s linear .4s}
-.diary-overlay.open{opacity:1;visibility:visible;transition:opacity .25s ease,visibility 0s;pointer-events:auto}
-.diary-sheet{position:fixed;bottom:0;left:0;right:0;max-height:86dvh;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:8901;display:flex;flex-direction:column;transform:translateY(100%);transition:var(--sheet-out)}
-.diary-sheet.open{transform:translateY(0);transition:var(--sheet-in)}
-.diary-hdr{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--sp-3);padding:var(--sp-1) var(--sp-4) var(--sp-3)}
-.diary-title{font-size:26px;font-weight:var(--w-display);color:var(--white);letter-spacing:-.03em;line-height:1.05}
-.diary-body{overflow-y:auto;padding:0 var(--sp-4) calc(env(safe-area-inset-bottom) + var(--sp-6));-webkit-overflow-scrolling:touch}
+.diary-overlay,.palm-ov{position:fixed;inset:0;background:var(--overlay-70);z-index:8900;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility 0s linear .4s}
+.diary-overlay.open,.palm-ov.open{opacity:1;visibility:visible;transition:opacity .25s ease,visibility 0s;pointer-events:auto}
+.diary-sheet,.palm-sh{position:fixed;bottom:0;left:0;right:0;max-height:86dvh;background:var(--surf-2);border-radius:var(--r-sheet) var(--r-sheet) 0 0;z-index:8901;display:flex;flex-direction:column;transform:translateY(100%);transition:var(--sheet-out)}
+.diary-sheet.open,.palm-sh.open{transform:translateY(0);transition:var(--sheet-in)}
+.diary-hdr,.palm-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--sp-3);padding:var(--sp-1) var(--sp-4) var(--sp-3)}
+.diary-title,.palm-ti{font-size:26px;font-weight:var(--w-display);color:var(--white);letter-spacing:-.03em;line-height:1.05}
+.diary-body,.palm-bd{overflow-y:auto;padding:0 var(--sp-4) calc(env(safe-area-inset-bottom) + var(--sp-6));-webkit-overflow-scrolling:touch}
 /* Los grids del Diario anulan el padding-bottom de .poster-grid (~100px, pensado para
    scrollear bajo el nav en la grilla principal) — acá era el hueco entre grupos. */
 .diary-body .poster-grid{padding:0;margin:0 0 var(--sp-3)}
@@ -3184,6 +3267,34 @@ setTimeout(function(){
 <!-- ── Post-View Rating Sheet ── -->
 <div class="pv-rating-overlay" id="pv-rating-overlay" data-action="closePVRating"></div>
 <!-- ── Diario (lo visto, destino propio — patrón Letterboxd/Things) ── -->
+<!-- Palmarés: MISMA anatomía visual que el Diario, CLASES PROPIAS.
+     Reusar las clases .diary-* rompió T83 y T84: `querySelector('.diary-sheet')`
+     devuelve el primero del DOM, y este sheet quedó antes que el Diario, así que
+     los tests del Diario terminaron midiendo el palmarés. Compartir apariencia
+     no puede significar compartir identidad. El CSS se comparte listando ambos
+     selectores; el DOM distingue.
+     Palmarés: mismo patrón que el Diario — banda replegada en su sitio, la pieza
+     completa en un sheet. Sin esto, el palmarés desplegado obligaba a bajar media
+     pantalla para llegar a la cartelera (Juan, 23 ago 2026). -->
+<div class="palm-ov" id="palm-overlay" data-action="closePalmares"></div>
+<div class="palm-sh" id="palm-sheet">
+  <div class="pv-handle"></div>
+  <div class="palm-hd">
+    <h2 class="hdr-wordmark palm-wm">Otro<span>festiv</span></h2>
+    <div class="row-sm">
+      <button class="icon-btn-circle" data-action="closePalmares" data-i18n-aria="misc_cerrar" aria-label="Cerrar"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+    </div>
+  </div>
+  <div class="palm-cv">
+    <img class="palm-ka" id="palm-keyart" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+    <div class="palm-cvtx">
+      <div class="palm-eb" data-i18n="palm_eyebrow">Palmarés</div>
+      <div class="palm-ti" id="palm-title"></div>
+      <div class="palm-fu" id="palm-sub"></div>
+    </div>
+  </div>
+  <div class="palm-bd" id="palm-body"></div>
+</div>
 <div class="diary-overlay" id="diary-overlay" data-action="closeDiary"></div>
 <div class="diary-sheet" id="diary-sheet">
   <div class="pv-handle"></div>
@@ -3345,6 +3456,9 @@ setTimeout(function(){
      cuando ya habías pasado de largo. Medido con FICDEH y sus 116 cards.
      Va antes de ambas: una sola posición, no dos. -->
 <div id="notices-banner"></div>
+<!-- El palmarés: superficie del FESTIVAL, encima de la cartelera y debajo de los
+     avisos. Vacío mientras el festival corre o si no hay palmarés cargado. -->
+<div id="palmares-slot"></div>
 <div class="programa-list" id="programa-list"></div>
 <div id="filter-bars">
   <button id="agtab" style="display:none"><span id="ag-cnt">0</span></button>
@@ -3390,7 +3504,19 @@ setTimeout(function(){
 <script>
 (function(){
   var ua = navigator.userAgent;
-  var isDev = ['localhost','127.0.0.1'].indexOf(location.hostname) >= 0;
+  // isDev — servidor de desarrollo. Incluye las IP PRIVADAS además de
+  // localhost: revisar desde el teléfono obliga a entrar por la IP del Mac en
+  // la red (localhost en el móvil apunta al propio móvil), y con solo
+  // localhost/127.0.0.1 esa sesión caía en la landing de tiendas y no había
+  // forma de probar nada en un dispositivo real. Rangos privados (RFC1918) y
+  // el CGNAT de Tailscale (100.64/10): ninguno es alcanzable desde internet,
+  // así que esto no abre la app a nadie que no esté ya en la red.
+  var _h = location.hostname;
+  var isDev = ['localhost','127.0.0.1'].indexOf(_h) >= 0
+    || /^10\./.test(_h)
+    || /^192\.168\./.test(_h)
+    || /^172\.(1[6-9]|2\d|3[01])\./.test(_h)
+    || /^100\.(6[4-9]|[7-9]\d|1[01]\d|12[0-7])\./.test(_h);
   var hasCapacitor = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
   var isIOSDevice = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
   // iOS: la ÚNICA señal confiable es la ausencia del token "Safari/" en el UA —
@@ -3411,7 +3537,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608230738";
+    s.src="/src/main.js?v=202608231452";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
@@ -3429,6 +3555,12 @@ setTimeout(function(){
       }catch(e){}
     }, 6000);
   }
+  // El gate es el ÚNICO que sabe si esto es la app: en iOS la app real es un
+  // wrapper SwiftUI (WKWebView), NO Capacitor, así que window.Capacitor no
+  // existe ahí y detectarlo por ahí fallaría justo en iOS. Se expone su
+  // veredicto para que el resto de la app no lo recalcule con otra regla.
+  window.__otfIsApp = isApp;
+  window.__otfIsDev = isDev;
   if (isApp || isDev) { bootApp(); return; }
   function showLanding(){
     var es = (window.__otfLang || 'es') !== 'en';
@@ -3531,6 +3663,31 @@ setTimeout(function(){
     <div class="splash-card-tpl city-sheet-art" id="city-sheet-art"></div>
     <div class="splash-fest-label" id="city-sheet-label"></div>
     <div id="city-sheet-list"></div>
+  </div>
+</div>
+
+<!-- Clave de revisión — un festival que aún no se publica, para que su propio
+     equipo lo vea en la app real antes que nadie. Calcada de la hoja de OTP:
+     mismo contenedor, mismo input de código, mismo botón. La clave vive en el
+     bundle a propósito (protege de entrar por accidente, no de alguien
+     decidido) y el permiso caduca solo por `review.until` en config.js. -->
+<!-- RESTRICCIÓN 3 — banner permanente. Un festival en revisión trae datos
+     provisionales; sin decirlo, quien lo mire concluye que ESO es la
+     programación. Va FIJO al borde inferior y no en el flujo: G01 mide la
+     distancia del contenido al chrome en las cuatro tabs, y un elemento en el
+     flujo la movería. -->
+<div class="review-banner" id="review-banner" role="status">
+  <span><b data-i18n="review_banner_t">En revisión</b> <span data-i18n="review_banner_d">— programación provisional, aún sin publicar</span></span>
+</div>
+
+<div class="auth-sheet" id="review-sheet" data-close-bg="ReviewSheet">
+  <div class="auth-sheet-inner">
+    <div class="auth-sheet-title" data-i18n="review_titulo">Festival en revisión</div>
+    <div class="auth-sheet-sub"><span data-i18n="review_sub">Este montaje todavía no se publica. Ingresá la clave que te compartimos para verlo.</span></div>
+    <input class="pin-display auth-email-inp" id="review-key-inp" type="text" placeholder="••••••" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="24" onkeydown="if(event.key==='Enter')submitReviewKey()">
+    <button class="auth-send-btn" id="review-key-btn" data-action="submitReviewKey" data-i18n="av_confirmar">Confirmar</button>
+    <div class="auth-msg" id="review-msg"></div>
+    <span class="auth-cancel" data-action="closeReviewSheet" data-i18n="misc_cancelar">Cancelar</span>
   </div>
 </div>
 

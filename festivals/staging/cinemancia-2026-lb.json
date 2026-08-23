@@ -1,0 +1,1100 @@
+{
+ "_provenance": {
+  "fuente": "lista maestra de Letterboxd (https://letterboxd.com/cinemancia/list/cinemancia-2026/) alineada contra el PDF oficial",
+  "capturado": "2026-08-09",
+  "metodo": "Needleman-Wunsch sobre el orden de ambas listas; la lista está en inglés y el PDF en idioma original, así que el título solo no basta.",
+  "pendiente": "28 parejas con _conf<0.5 esperan verificación por DIRECTOR contra la ficha de Letterboxd (doctrina Tribeca)."
+ },
+ "obras": [
+  {
+   "title": "Todas las canciones del mundo",
+   "section": "Función inaugural",
+   "year": 2026,
+   "director": "Santiago Flórez Rincón",
+   "lbSlug": "todas-las-canciones-del-mundo",
+   "title_en": "Todas las canciones del mundo",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Lamentos de un balcón",
+   "section": "Función inaugural",
+   "year": 2026,
+   "director": "Hans Chispas",
+   "lbSlug": "lamentos-de-un-balcon",
+   "title_en": "Lamentos de un balcón",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Iluminaciones",
+   "section": "Función de clausura",
+   "year": 2025,
+   "director": "Pablo Llorca",
+   "lbSlug": "iluminaciones",
+   "title_en": "Iluminaciones",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Así llegó la noche",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Ángel Santos",
+   "lbSlug": "and-so-the-night-fell",
+   "title_en": "And So the Night Fell",
+   "_conf": 0.43,
+   "_verificar": true
+  },
+  {
+   "title": "Auslandsreise / Viaje al extranjero",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Ted Fendt",
+   "lbSlug": "foreign-travel",
+   "title_en": "Foreign Travel",
+   "_conf": 0.48,
+   "_verificar": true
+  },
+  {
+   "title": "Beaucoup parler / Mucho hablar",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Pascale Bodet",
+   "lbSlug": "a-lot-talk",
+   "title_en": "A Lot Talk",
+   "_conf": 0.52,
+   "_verificar": false
+  },
+  {
+   "title": "Cairo Streets / Las calles de El Cairo",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Abdellah Taïa",
+   "lbSlug": "cairo-streets",
+   "title_en": "Cairo Streets",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Futuros luminosos",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Ismael García",
+   "lbSlug": "a-brighter-future",
+   "title_en": "A Brighter Future",
+   "_conf": 0.41,
+   "_verificar": true
+  },
+  {
+   "title": "Hold My Hand",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Sophie Sherman",
+   "lbSlug": "hold-my-hand-2",
+   "title_en": "Hold My Hand",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "La corazonada",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Diego Soto",
+   "lbSlug": "a-heart-as-willing",
+   "title_en": "A Heart as Willing",
+   "_conf": 0.44,
+   "_verificar": true
+  },
+  {
+   "title": "Las almas ni los ojos",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Canela Reyes y César Jaimes",
+   "lbSlug": "las-almas-ni-los-ojos",
+   "title_en": "Las almas ni los ojos",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Oublie pas le gruau",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Olivier Godin",
+   "lbSlug": "dont-forget-the-oatmeal",
+   "title_en": "Don't Forget the Oatmeal",
+   "_conf": 0.35,
+   "_verificar": true
+  },
+  {
+   "title": "Procès d'un jeune poète / Juicio a un joven poeta",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Philippe Van Cutsem",
+   "lbSlug": "proces-dun-jeune-poete",
+   "title_en": "Procès d'un jeune poète",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Sol menor",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "André Silva Santos",
+   "lbSlug": "april-tune",
+   "title_en": "April Tune",
+   "_conf": 0.44,
+   "_verificar": true
+  },
+  {
+   "title": "Solitudes / Soledades",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Ryan McKenna",
+   "lbSlug": "solitudes-2025",
+   "title_en": "Solitudes",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Un techo sin cielo",
+   "section": "Competencia central",
+   "year": 2025,
+   "director": "Diego Hernández",
+   "lbSlug": "a-skyless-roof",
+   "title_en": "A Skyless Roof",
+   "_conf": 0.37,
+   "_verificar": true
+  },
+  {
+   "title": "Una Dança Non Sancta",
+   "section": "Competencia central",
+   "year": 2026,
+   "director": "Tiago Almança",
+   "lbSlug": "an-unholy-dance",
+   "title_en": "An Unholy Dance",
+   "_conf": 0.52,
+   "_verificar": false
+  },
+  {
+   "title": "Bright Summer Days",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Nevena Desivojevic",
+   "lbSlug": "bright-summer-days",
+   "title_en": "Bright Summer Days",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Certas formas",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Luiz Afonso Morêda",
+   "lbSlug": "certas-formas",
+   "title_en": "Certas Formas",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Chuura",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Evgenia Arbugaeva",
+   "lbSlug": "chuuraa",
+   "title_en": "Chuuraa",
+   "_conf": 1.04,
+   "_verificar": false
+  },
+  {
+   "title": "Crash",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Gabriela Mureb",
+   "lbSlug": "crash-2026-1",
+   "title_en": "Crash",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "El oído absoluto",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Rafael Federman",
+   "lbSlug": "the-inner-ear",
+   "title_en": "The Inner Ear",
+   "_conf": 0.46,
+   "_verificar": true
+  },
+  {
+   "title": "Henry Is a Girl Who Likes to Sleep",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Marthe Peters",
+   "lbSlug": "henry-is-a-girl-who-likes-to-sleep",
+   "title_en": "Henry Is a Girl Who Likes to Sleep",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Koki, Ciao",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Quenton Miller",
+   "lbSlug": "koki-ciao",
+   "title_en": "Koki, Ciao",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "loose sleep",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Rodrigo Soares Teixeira",
+   "lbSlug": "sono-solto",
+   "title_en": "Sono Solto",
+   "_conf": 0.6,
+   "_verificar": false
+  },
+  {
+   "title": "Mi amigo, el arquitecto",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Óscar Garzón",
+   "lbSlug": "my-friend-the-architect",
+   "title_en": "My Friend, The Architect",
+   "_conf": 0.65,
+   "_verificar": false
+  },
+  {
+   "title": "Mirando al sur",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Felipe López Gómez",
+   "lbSlug": "facing-south",
+   "title_en": "Facing South",
+   "_conf": 0.5,
+   "_verificar": false
+  },
+  {
+   "title": "O",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "Francisca Alarcão",
+   "lbSlug": "o-2026",
+   "title_en": "o",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Only Making Out",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Marlon Weber",
+   "lbSlug": "only-making-out",
+   "title_en": "Only Making Out",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Our Homes Do Not Exist",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Anna Lamour",
+   "lbSlug": "nos-maisons-nexistent-pas",
+   "title_en": "Nos maisons n'existent pas",
+   "_conf": 0.62,
+   "_verificar": false
+  },
+  {
+   "title": "Pies al revés",
+   "section": "Competencia de cortometrajes",
+   "year": 2025,
+   "director": "Elodie Arpa",
+   "lbSlug": "feet-the-other-way-around",
+   "title_en": "Feet The Other Way Around",
+   "_conf": 0.33,
+   "_verificar": true
+  },
+  {
+   "title": "Prueba de cámara",
+   "section": "Competencia de cortometrajes",
+   "year": 2026,
+   "director": "David Correa",
+   "lbSlug": "prueba-de-camara",
+   "title_en": "Prueba de cámara",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Sombras en la niebla",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2026,
+   "director": "Pedro Pablo Vega",
+   "lbSlug": "into-the-fog-2026",
+   "title_en": "Into the fog",
+   "_conf": 0.37,
+   "_verificar": true
+  },
+  {
+   "title": "Un aparato para detectar fantasmas",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2025,
+   "director": "Mauricio Maldonado",
+   "lbSlug": "a-ghost-detecting-device",
+   "title_en": "A Ghost-Detecting Device",
+   "_conf": 0.46,
+   "_verificar": true
+  },
+  {
+   "title": "Ya se ven los tigres en la lluvia",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2025,
+   "director": "Óscar Ruiz Navia",
+   "lbSlug": "tigers-can-be-seen-in-the-rain",
+   "title_en": "Tigers Can Be Seen In The Rain",
+   "_conf": 0.47,
+   "_verificar": true
+  },
+  {
+   "title": "El cazador",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2026,
+   "director": "Luciana Riso Soto y Manuel Villa",
+   "lbSlug": "the-hunter-2026-1",
+   "title_en": "The Hunter",
+   "_conf": 0.42,
+   "_verificar": true
+  },
+  {
+   "title": "Las formas de la magia",
+   "section": "Programa 1. El espesor de las formas",
+   "year": 2026,
+   "director": "María Paula Lorgia Garnica",
+   "lbSlug": "las-formas-de-la-magia",
+   "title_en": "Las Formas de la Magia",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Memorias Encontradas Numa Banheira",
+   "section": "Programa 2. Teoremas sobre la mirada",
+   "year": 2026,
+   "director": "Leonardo Pirondi",
+   "lbSlug": "memoirs-found-in-a-bathtub",
+   "title_en": "Memoirs Found in a Bathtub",
+   "_conf": 0.62,
+   "_verificar": false
+  },
+  {
+   "title": "Parece el mundo",
+   "section": "Programa 2. Teoremas sobre la mirada",
+   "year": 2026,
+   "director": "Santiago Quirama",
+   "lbSlug": "it-seems-the-world",
+   "title_en": "It Seems The World",
+   "_conf": 0.42,
+   "_verificar": true
+  },
+  {
+   "title": "Borrachos mientras escuchamos las gotas caer",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Santiago Gómez Ramírez",
+   "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
+   "title_en": "Borrachos escuchando las gotas de lluvia caer",
+   "_conf": 0.86,
+   "_verificar": false
+  },
+  {
+   "title": "El salto",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Jerónimo Rincón",
+   "lbSlug": "el-salto-1",
+   "title_en": "El Salto",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Gramática práctica italiana",
+   "section": "Competencia Nuevas voces",
+   "year": 2025,
+   "director": "Daniel Cortés",
+   "lbSlug": "practical-italian-grammar",
+   "title_en": "Practical Italian Grammar",
+   "_conf": 0.77,
+   "_verificar": false
+  },
+  {
+   "title": "Liminal",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Gabriella Castelblanco",
+   "lbSlug": "liminal-6",
+   "title_en": "Liminal",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Madres de nacimiento",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Gloria Isabel Gómez",
+   "lbSlug": "madres-de-nacimiento",
+   "title_en": "Madres de Nacimiento",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Medellín yo te saludo",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Lucas Muñoz",
+   "lbSlug": "medellin-yo-te-saludo",
+   "title_en": "Medellín, yo te saludo",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Para no volver",
+   "section": "Competencia Nuevas voces",
+   "year": 2025,
+   "director": "Tania Galvis",
+   "lbSlug": "para-no-volver",
+   "title_en": "Para no volver",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Pausas activas",
+   "section": "Competencia Nuevas voces",
+   "year": 2026,
+   "director": "Juan Pablo Castro",
+   "lbSlug": "pausas-activas",
+   "title_en": "Pausas activas",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Preguntas frecuentes",
+   "section": "Competencia Nuevas voces",
+   "year": 2025,
+   "director": "Sofía Salinas Barrera",
+   "lbSlug": "frequently-asked-questions",
+   "title_en": "Frequently asked questions",
+   "_conf": 0.51,
+   "_verificar": false
+  },
+  {
+   "title": "Refracción",
+   "section": "Competencia Nuevas voces",
+   "year": 2025,
+   "director": "Isabella Palacio",
+   "lbSlug": "refraccion",
+   "title_en": "Refracción",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "A Árvore do Conhecimento / El árbol del conocimiento",
+   "section": "Proyecciones especiales",
+   "year": 2025,
+   "director": "Eugène Green",
+   "lbSlug": "the-tree-of-knowledge-2025",
+   "title_en": "The Tree of Knowledge",
+   "_conf": 0.47,
+   "_verificar": true
+  },
+  {
+   "title": "Decaer",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Juan Camilo González",
+   "lbSlug": "decay-2026",
+   "title_en": "decay",
+   "_conf": 0.85,
+   "_verificar": false
+  },
+  {
+   "title": "Disciplina",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Affonso Uchôa",
+   "lbSlug": "disciplina-1",
+   "title_en": "Disciplina",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Dry Leaf",
+   "section": "Proyecciones especiales",
+   "year": 2025,
+   "director": "Alexandre Koberidze",
+   "lbSlug": "dry-leaf",
+   "title_en": "Dry Leaf",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Deimer Quintero Vertel",
+   "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+   "title_en": "Our Home Was Buried in a Land We Could Never Find",
+   "_conf": 0.26,
+   "_verificar": true
+  },
+  {
+   "title": "Lolita en Honda",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Daniel Torres",
+   "lbSlug": "lolita-en-honda",
+   "title_en": "Lolita en Honda",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Para hacer una película solo se necesita un arma",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Santiago Sein",
+   "lbSlug": "all-you-need-to-make-a-movie-is-a-gun",
+   "title_en": "All You Need to Make a Movie Is a Gun",
+   "_conf": 0.4,
+   "_verificar": true
+  },
+  {
+   "title": "The Souffleur",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Gastón Solnicki",
+   "lbSlug": "the-souffleur",
+   "title_en": "The Souffleur",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Une vie manifeste",
+   "section": "Proyecciones especiales",
+   "year": 2026,
+   "director": "Jean-Gabriel Périot",
+   "lbSlug": "a-life-a-manifesto",
+   "title_en": "A Life, A Manifesto",
+   "_conf": 0.75,
+   "_verificar": false
+  },
+  {
+   "title": "La tempestá",
+   "section": "Iluminaciones",
+   "year": 2003,
+   "director": "Pere Portabella",
+   "lbSlug": "the-tempest-2003",
+   "title_en": "The Tempest",
+   "_conf": 0.85,
+   "_verificar": false
+  },
+  {
+   "title": "Los golfos",
+   "section": "Iluminaciones",
+   "year": 1960,
+   "director": "Carlos Saura",
+   "lbSlug": "the-delinquents-1960",
+   "title_en": "The Delinquents",
+   "_conf": 0.28,
+   "_verificar": true
+  },
+  {
+   "title": "Macho Dancer",
+   "section": "Iluminaciones",
+   "year": 1988,
+   "director": "Lino Brocka",
+   "lbSlug": "macho-dancer",
+   "title_en": "Macho Dancer",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Ich denke oft an Hawaii / Muchas veces pienso en Hawái",
+   "section": "Iluminaciones",
+   "year": 1978,
+   "director": "Elfi Mikesch",
+   "lbSlug": "i-often-think-of-hawaii",
+   "title_en": "I Often Think of Hawaii",
+   "_conf": 0.73,
+   "_verificar": false
+  },
+  {
+   "title": "No contéis con los dedos",
+   "section": "Iluminaciones",
+   "year": 1967,
+   "director": "Pere Portabella",
+   "lbSlug": "dont-count-on-your-fingers",
+   "title_en": "Don't Count On Your Fingers",
+   "_conf": 0.59,
+   "_verificar": false
+  },
+  {
+   "title": "Sunshine Singapur",
+   "section": "Iluminaciones",
+   "year": 1972,
+   "director": "Rajendra Gour",
+   "lbSlug": "sunshine-singapore",
+   "title_en": "Sunshine Singapore",
+   "_conf": 1.03,
+   "_verificar": false
+  },
+  {
+   "title": "Eyes",
+   "section": "Iluminaciones",
+   "year": 1967,
+   "director": "Rajendra Gour",
+   "lbSlug": "eyes-1967",
+   "title_en": "Eyes",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Labour of Love: The Housewife",
+   "section": "Iluminaciones",
+   "year": 1978,
+   "director": "Rajendra Gour",
+   "lbSlug": "labour-of-love-the-housewife",
+   "title_en": "Labour of Love: The Housewife",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "My Child, My Child",
+   "section": "Iluminaciones",
+   "year": 1978,
+   "director": "Rajendra Gour",
+   "lbSlug": "my-child-my-child",
+   "title_en": "My Child, My Child",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Sight and Desire",
+   "section": "Iluminaciones",
+   "year": 1968,
+   "director": "Rajendra Gour",
+   "lbSlug": "sight-and-desire",
+   "title_en": "Sight and Desire",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Vampir Cuadecuc",
+   "section": "Iluminaciones",
+   "year": 1971,
+   "director": "Pere Portabella",
+   "lbSlug": "vampir-cuadecuc",
+   "title_en": "Vampir Cuadecuc",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Was soll'n wir denn machen ohne den Tod / ¿Qué haremos sin la muerte?",
+   "section": "Iluminaciones",
+   "year": 1980,
+   "director": "Elfi Mikesch",
+   "lbSlug": "what-shall-we-do-without-death",
+   "title_en": "What Shall We Do Without Death",
+   "_conf": 0.55,
+   "_verificar": false
+  },
+  {
+   "title": "Larama",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2020,
+   "director": "Luciana Decker",
+   "lbSlug": "larama",
+   "title_en": "Larama",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Lo que los humanos ven como sangre los jaguares ven como chicha",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2023,
+   "director": "Luciana Decker",
+   "lbSlug": "what-humans-see-as-blood-jaguars-see-as-chicha",
+   "title_en": "What Humans See as Blood, Jaguars See as Chicha",
+   "_conf": 0.69,
+   "_verificar": false
+  },
+  {
+   "title": "Objetos parlantes",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2021,
+   "director": "Luciana Decker",
+   "lbSlug": "objetos-parlantes",
+   "title_en": "Objetos parlantes",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Puro andar",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2025,
+   "director": "Luciana Decker",
+   "lbSlug": "language-of-the-entrails",
+   "title_en": "Language of the Entrails",
+   "_conf": 0.36,
+   "_verificar": true
+  },
+  {
+   "title": "Spoils",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2023,
+   "director": "Luciana Decker",
+   "lbSlug": "spoils",
+   "title_en": "Spoils",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Trizas",
+   "section": "Alquimia de la luz. El cine de Luciana Decker",
+   "year": 2026,
+   "director": "Luciana Decker",
+   "lbSlug": "shards-2026",
+   "title_en": "Shards",
+   "_conf": 0.45,
+   "_verificar": true
+  },
+  {
+   "title": "Jakawisa",
+   "section": "Carta blanca",
+   "year": 2020,
+   "director": "Delia Yujra Chura",
+   "lbSlug": "jakawisa",
+   "title_en": "Jakawisa",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Hiding / Esquivo",
+   "section": "Carta blanca",
+   "year": 2024,
+   "director": "Fatmeh Villalba",
+   "lbSlug": "hiding-esquivo",
+   "title_en": "Hiding / Esquivo",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros",
+   "section": "Carta blanca",
+   "year": 2026,
+   "director": "Esteban Prudencia",
+   "lbSlug": "derroteros-derroteros-derroteros-derroteros",
+   "title_en": "Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros, Derroteros",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "¿Qué historia es ésta y cuál es su final?",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2013,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "what-is-this-story-and-how-does-it-end",
+   "title_en": "What Is This Story and How Does It End?",
+   "_conf": 0.54,
+   "_verificar": false
+  },
+  {
+   "title": "Alicia soñó con un faro",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2021,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "alicia-dreams-of-a-lighthouse",
+   "title_en": "Alicia Dreams of a Lighthouse",
+   "_conf": 0.54,
+   "_verificar": false
+  },
+  {
+   "title": "Cuando las nubes esconden la sombra",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2024,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "when-clouds-hide-the-shadow",
+   "title_en": "When Clouds Hide the Shadow",
+   "_conf": 0.35,
+   "_verificar": true
+  },
+  {
+   "title": "El cielo, la tierra y la lluvia",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2008,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "the-sky-the-earth-and-the-rain",
+   "title_en": "The Sky, the Earth and the Rain",
+   "_conf": 0.42,
+   "_verificar": true
+  },
+  {
+   "title": "El sueño de Ana",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2017,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "anas-dream",
+   "title_en": "Ana's Dream",
+   "_conf": 0.35,
+   "_verificar": true
+  },
+  {
+   "title": "El viento sabe que vuelvo a casa",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2016,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "the-winds-know-that-im-coming-back-home",
+   "title_en": "The Winds Know That I'm Coming Back Home",
+   "_conf": 0.4,
+   "_verificar": true
+  },
+  {
+   "title": "Obreras saliendo de la fábrica",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2005,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "women-workers-leaving-the-factory",
+   "title_en": "Women Workers Leaving the Factory",
+   "_conf": 0.53,
+   "_verificar": false
+  },
+  {
+   "title": "Sobre cosas que me han pasado",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2018,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "about-things-that-happened-to-me",
+   "title_en": "About Things That Happened to Me",
+   "_conf": 0.38,
+   "_verificar": true
+  },
+  {
+   "title": "Vendrá la muerte y tendrá tus ojos",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2019,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "death-will-come-and-shall-have-your-eyes",
+   "title_en": "Death Will Come and Shall Have Your Eyes",
+   "_conf": 0.44,
+   "_verificar": true
+  },
+  {
+   "title": "Ver y escuchar",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2013,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "see-and-listen",
+   "title_en": "See and Listen",
+   "_conf": 0.41,
+   "_verificar": true
+  },
+  {
+   "title": "Verano",
+   "section": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
+   "year": 2011,
+   "director": "José Luis Torres Leiva",
+   "lbSlug": "verano",
+   "title_en": "Verano",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Cleaning & Cleansing",
+   "section": "Febril incisión. El cine de Thomas Fürhapter",
+   "year": 2024,
+   "director": "Thomas Fürhapter",
+   "lbSlug": "cleaning-cleansing",
+   "title_en": "Cleaning & Cleansing",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "La tercera opción / Die dritte Option / The Third Option",
+   "section": "Febril incisión. El cine de Thomas Fürhapter",
+   "year": 2017,
+   "director": "Thomas Fürhapter",
+   "lbSlug": "the-third-option",
+   "title_en": "The Third Option",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Viviendo juntos / Zusammenleben",
+   "section": "Febril incisión. El cine de Thomas Fürhapter",
+   "year": 2022,
+   "director": "Thomas Fürhapter",
+   "lbSlug": "zusammenleben",
+   "title_en": "Zusammenleben",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Vive L'Amour",
+   "section": "Sick and Dirty. Curaduría de Michael Koresky",
+   "year": 1994,
+   "director": "Tsai Ming-liang",
+   "lbSlug": "vive-lamour",
+   "title_en": "Vive L'Amour",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "The Children's Hour",
+   "section": "Sick and Dirty. Curaduría de Michael Koresky",
+   "year": 1961,
+   "director": "William Wyler",
+   "lbSlug": "the-childrens-hour",
+   "title_en": "The Children's Hour",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Buddies",
+   "section": "Sick and Dirty. Curaduría de Michael Koresky",
+   "year": 1985,
+   "director": "Arthur J. Bressan",
+   "lbSlug": "buddies-1985",
+   "title_en": "Buddies",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Caminito al Cielo",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1989,
+   "director": "Sergio Navarro",
+   "lbSlug": "caminito-al-cielo",
+   "title_en": "Caminito al cielo",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Cuartito rosa",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1991,
+   "director": "Sergio Navarro",
+   "lbSlug": "cuartito-rosa",
+   "title_en": "Cuartito Rosa",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "El santo y el milagro",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1993,
+   "director": "Sergio Navarro",
+   "lbSlug": null,
+   "title_en": null,
+   "_conf": 0.0,
+   "_verificar": false
+  },
+  {
+   "title": "La libertad remonta el estadio",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1897,
+   "director": "Sergio Navarro",
+   "lbSlug": "la-libertad-remonta-el-estadio",
+   "title_en": "La libertad remonta el estadio",
+   "_conf": 1.0,
+   "_verificar": false
+  },
+  {
+   "title": "Valparaíso eterno",
+   "section": "La sutil materia. Sergio Navarro",
+   "year": 1991,
+   "director": "Sergio Navarro",
+   "lbSlug": null,
+   "title_en": null,
+   "_conf": 0.0,
+   "_verificar": false
+  },
+  {
+   "title": "Chico eléctrico",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2021,
+   "director": "Ingrid Pokropek",
+   "lbSlug": "chico-electrico",
+   "title_en": "Chico eléctrico",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Dice que…",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2025,
+   "director": "Alejandro Fernández Mouján",
+   "lbSlug": "dice-que",
+   "title_en": "Dice que…",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Homenaje a la obra de Philip Henry Gosse",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2020,
+   "director": "Pablo Martín Weber",
+   "lbSlug": "homage-to-the-work-of-philip-henry-gosse",
+   "title_en": "Homage to the Work of Philip Henry Gosse",
+   "_conf": 0.82,
+   "_verificar": false
+  },
+  {
+   "title": "Las picapedreras",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2021,
+   "director": "Azul Aizenberg",
+   "lbSlug": "the-stonebreakers",
+   "title_en": "The Stonebreakers",
+   "_conf": 0.48,
+   "_verificar": true
+  },
+  {
+   "title": "Rancho",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2021,
+   "director": "Pedro Speroni",
+   "lbSlug": "rancho",
+   "title_en": "Rancho",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Solo qu3r3mos un poco de amor",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2024,
+   "director": "Raúl Perrone",
+   "lbSlug": "solo-qu3r3mos-un-poco-de-amor",
+   "title_en": "Solo qu3r3mos un poco de amor",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Spot Fuera de campo 1",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2025,
+   "director": "Pablo Martín Weber",
+   "lbSlug": "spot-fuera-de-campo-1",
+   "title_en": "Spot Fuera de campo 1",
+   "_conf": 1.12,
+   "_verificar": false
+  },
+  {
+   "title": "Spot Fuera de campo 2",
+   "section": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "year": 2024,
+   "director": "María Aparicio",
+   "lbSlug": "spot-fuera-de-campo-2",
+   "title_en": "Spot Fuera de campo 2",
+   "_conf": 1.12,
+   "_verificar": false
+  }
+ ]
+}

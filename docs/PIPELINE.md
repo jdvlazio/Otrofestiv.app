@@ -43,6 +43,60 @@ Orden canónico para montar un festival. Cada paso mapea a una fase de abajo.
 
 ## Fases en orden obligatorio
 
+### Fase 0 · El `robots.txt` va PRIMERO — retro TIFF 2026 (13 ago 2026)
+
+**Antes de escribir una línea de extractor, leer el `robots.txt` de la fuente.**
+No al final, no cuando algo falla: antes de la primera petición.
+
+Salió de TIFF y costó 262 páginas ya descargadas. Al ir a leer *tiffr* —un
+planificador de terceros— apareció esto, y lo mismo en Letterboxd:
+
+```
+User-agent: ClaudeBot
+Disallow: /
+Content-Signal: ai-train=no, use=reference
+```
+
+Las tres fuentes de aquel onboarding resultaron ser tres casos distintos, y la
+diferencia importa:
+
+| Fuente | Qué dice | Qué hacemos |
+|---|---|---|
+| **tiff.net** | no publica `robots.txt` (404) | sin restricción declarada → es la fuente |
+| **Letterboxd** | prohíbe ClaudeBot | decisión de Juan caso por caso; en TIFF quedó el uso mínimo del `lbSlug`, que además les devuelve tráfico |
+| **tiffr** | prohíbe ClaudeBot, y es un producto PAR | no se toca. Y no hacía falta: sus 244 obras eran las mismas 244 de TIFF |
+
+**Dos reglas que se llevan de aquí:**
+
+- **La web del propio festival es la fuente legítima por defecto.** Un tercero
+  que refleja al festival no aporta dato nuevo — se comprobó contando: tiffr y
+  tiff.net daban el mismo número exacto de obras.
+- **Un `robots.txt` que no existe (404) no es lo mismo que uno que calla sobre
+  nosotros, y ninguno de los dos es lo mismo que uno que nos nombra y nos
+  prohíbe.** Solo el tercero es un no.
+
+### Fase 0·bis · Qué obras PUEDEN tener `lbSlug` — retro TIFF (17 ago 2026)
+
+Una cobertura de Letterboxd que parece un hueco y no lo es. TIFF tenía «62
+funciones sin `lbSlug`», y al desglosarlas quedó así:
+
+| | | |
+|---|---|---|
+| programas de cortos | 20 funciones | **Letterboxd no tiene página de programa.** Sus cortos sí, uno por uno, y ahí es donde va el slug |
+| charlas y conversatorios | 5 | no son obras |
+| **series de TV** (Primetime) | 22 | **Letterboxd es SOLO cine.** Una serie no existe ahí, y buscarla es perder la noche |
+| obras que sí podrían tenerlo | 15 | estrenos 2026 aún sin ficha en TMDB |
+
+**El hueco real eran 5 títulos, no 62.** Antes de salir a buscar slugs, hay que
+restar lo que por definición no puede tenerlos: si el festival programa series,
+el 100% de cobertura es imposible y perseguirlo es trabajo inventado.
+
+**Y el `lbSlug` se saca por el atajo `letterboxd.com/tmdb/<id>`**, que necesita
+`tmdb_id`: sin ficha en TMDB no hay slug, y la ruta entonces es darla de alta
+(Fase 3b), no rastrear Letterboxd — que además nos prohíbe por `robots.txt`
+(Fase 0). Para estrenos del año en curso suele bastar con repetir el pase de
+TMDB unas semanas antes del festival: las fichas aparecen solas.
+
 ### Fase 1 · Extracción `[Data Engineer]`
 
 **Objetivo:** JSON del festival con todos los campos poblados desde el origen.
@@ -401,6 +455,24 @@ fecha se vuelve permanente sola; ésta se vence sola. La primera fue FINCA: sus
 una sede toca `_slotKey`, que es la ancla de los planes YA GUARDADOS de usuarios
 reales.
 
+**Decimoséptimo: `[config-esm]` — `node --check` da un verde falso.**
+`src/config.js` es un **módulo ES**, y `node --check` lo analiza como *script*.
+Un archivo donde la entrada de un festival se quedó sin cerrar pasa ese chequeo
+y revienta en el navegador. Pasó el 20 ago 2026 al resolver un merge en el que
+las dos ramas agregaban su festival en el mismo punto del archivo: la entrada de
+Cinemancia perdió su `},`, CineAutopsia quedó **anidado dentro de ella**, y la
+app no arrancaba — splash vacío y `Uncaught SyntaxError` en consola.
+
+Nada lo vio. `validate.py` parsea el config con expresiones regulares y nunca lo
+ejecuta; `node --check` lo lee con la gramática equivocada; los unit tests no lo
+tocan; y Playwright habría fallado, pero esa rama no lo corría. El error viajó
+dentro de un commit que decía «108/117 checks passed».
+
+Regla: **el guardián IMPORTA el config de verdad** —`import()` sobre el archivo—
+y comprueba dos cosas que solo se ven al cargarlo: que no haya un festival
+anidado dentro de otro, y que el número de festivales no se desplome. Es la
+única forma de saber que el archivo que carga el navegador es el que creemos.
+
 **Decimosexto: `[poster-mirado]` — alguien tiene que ABRIR el archivo.**
 
 *«¿Cómo es posible crear un póster sin pasar por un guardián?»* preguntó Juan al
@@ -515,6 +587,7 @@ buenos, y ahí se cayó uno: `[sidecar-vacio]` usaba
 `_listas.get(a) or _listas.get(b)`, y **una lista vacía es falsa en Python**,
 así que el guardián de las listas vacías se dejaba vencer justo por una lista
 vacía. Se pregunta por PRESENCIA, no por verdad.
+
 ### Fase 2 · Configuración en FESTIVAL_CONFIG `[Senior Dev + PM]`
 
 **Objetivo:** El festival existe en la app con su configuración completa.

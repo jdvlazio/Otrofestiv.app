@@ -1,0 +1,3521 @@
+{
+ "_provenance": {
+  "fuente": "cruce tiff-2026-oficial + tiff-2026-cortos + tiff-2026-tmdb",
+  "capturado": "2026-08-13",
+  "metodo": "titulo exacto, luego original, luego similitud >= 0.9; homonimos desempatados por director y anio"
+ },
+ "_universo": 303,
+ "_con_slug": 259,
+ "_difusos": [
+  {
+   "tiff": "A Good Little Soldier",
+   "letterboxd": "A Good Little Solider",
+   "lbSlug": "a-good-little-solider",
+   "modo": "difuso 0.94"
+  },
+  {
+   "tiff": "A Talent for Murder",
+   "letterboxd": "A Talent for a Murder",
+   "lbSlug": "a-talent-for-a-murder",
+   "modo": "difuso 0.97"
+  },
+  {
+   "tiff": "L'AUTRE",
+   "letterboxd": "L'AUTURE",
+   "lbSlug": "lauture",
+   "modo": "difuso 0.92"
+  },
+  {
+   "tiff": "Whatcha Want",
+   "letterboxd": "Watcha Want",
+   "lbSlug": "watcha-want",
+   "modo": "difuso 0.95"
+  },
+  {
+   "tiff": "Electric Fragments No. 1 - Rom (Men)",
+   "letterboxd": "Electric Fragments No. 1 - Rom (Uomini)",
+   "lbSlug": "electric-fragments-no-1-rom-uomini",
+   "modo": "difuso 0.91"
+  }
+ ],
+ "_ambiguos": [],
+ "_sin_slug": [
+  "2.6 Seconds: Death in the Outback",
+  "Alice",
+  "American Hostage",
+  "Below",
+  "Blindspot Berlin",
+  "Carrie",
+  "Crystal Lake",
+  "In Conversation With... Andrew Scott",
+  "In Conversation With... Chris Rock",
+  "In Conversation With... Lee Min-ho",
+  "In Conversation With... Rachel Morrison",
+  "London",
+  "Making Waves With... Hudson Williams",
+  "Oxygen Masks Will (Not) Drop Automatically",
+  "Pretenders",
+  "Re/Pair",
+  "Slow Horses",
+  "The Hummingbird Paints Fragrant Songs",
+  "Turtle Island Rap",
+  "YAGA",
+  "Butter Chicken to Go",
+  "RE/ROUTE",
+  "pahkwêsikan sâkihitowin: Bannock is Love",
+  "Where Our Flowers Grow",
+  "Restaurant Kids",
+  "Into The Betaverse",
+  "The Highway",
+  "Fried Chicken & Strip Checkers",
+  "A Tenderness",
+  "Dough Man",
+  "Fight Kid",
+  "Terminal",
+  "BID16",
+  "Beans and Belief",
+  "Driftwood",
+  "Call Me Tim",
+  "Pacific Spirit",
+  "After Image",
+  "Moon Palace",
+  "Microcosmic Orbit: Encased",
+  "The Address Book",
+  "Fire Flies",
+  "Splits in Two",
+  "La Prospettiva (1653)"
+ ],
+ "_letterboxd_sin_usar": [],
+ "obras": [
+  {
+   "tipo": "obra",
+   "clave": "a-common-story",
+   "titulo": "A Common Story",
+   "alt": null,
+   "directores": [
+    "Anna Foglietta"
+   ],
+   "anio": null,
+   "lbSlug": "a-common-story-2026",
+   "tmdb_id": 1597196,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "a-girl-unknown",
+   "titulo": "A Girl Unknown",
+   "alt": null,
+   "directores": [
+    "Zou Jing"
+   ],
+   "anio": null,
+   "lbSlug": "a-girl-unknown",
+   "tmdb_id": 1364629,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "a-good-little-soldier",
+   "titulo": "A Good Little Soldier",
+   "alt": null,
+   "directores": [
+    "Stéphane Brizé"
+   ],
+   "anio": null,
+   "lbSlug": "a-good-little-solider",
+   "tmdb_id": 1430815,
+   "_match": "difuso 0.94/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "a-long-winter",
+   "titulo": "A Long Winter",
+   "alt": null,
+   "directores": [
+    "Andrew Haigh"
+   ],
+   "anio": null,
+   "lbSlug": "a-long-winter-2026",
+   "tmdb_id": 1534221,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "a-talent-for-murder",
+   "titulo": "A Talent for Murder",
+   "alt": null,
+   "directores": [
+    "Anton Corbijn"
+   ],
+   "anio": null,
+   "lbSlug": "a-talent-for-a-murder",
+   "tmdb_id": 1084409,
+   "_match": "difuso 0.97/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "after-elena",
+   "titulo": "After Elena",
+   "alt": null,
+   "directores": [
+    "Shawn Garry"
+   ],
+   "anio": null,
+   "lbSlug": "after-elena",
+   "tmdb_id": 1743976,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "ah-girl",
+   "titulo": "Ah Girl",
+   "alt": null,
+   "directores": [
+    "Ang Geck Geck Priscilla"
+   ],
+   "anio": null,
+   "lbSlug": "ah-girl",
+   "tmdb_id": 747509,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "all-about-corinne",
+   "titulo": "All About Corinne",
+   "alt": null,
+   "directores": [
+    "Marc Fitoussi"
+   ],
+   "anio": null,
+   "lbSlug": "all-about-corinne",
+   "tmdb_id": 1429592,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "all-that-she-wants",
+   "titulo": "All That She Wants",
+   "alt": null,
+   "directores": [
+    "Scarlett Bermingham",
+    "Andrew Rhymer"
+   ],
+   "anio": null,
+   "lbSlug": "all-that-she-wants-2026",
+   "tmdb_id": 1544905,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "all-of-a-sudden",
+   "titulo": "All of a Sudden",
+   "alt": null,
+   "directores": [
+    "Ryûsuke Hamaguchi"
+   ],
+   "anio": null,
+   "lbSlug": "all-of-a-sudden-2026",
+   "tmdb_id": 1476614,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "alpha-gang",
+   "titulo": "Alpha Gang",
+   "alt": null,
+   "directores": [
+    "David Zellner",
+    "Nathan Zellner"
+   ],
+   "anio": null,
+   "lbSlug": "alpha-gang",
+   "tmdb_id": 717041,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "always-lalisa",
+   "titulo": "Always Lalisa",
+   "alt": null,
+   "directores": [
+    "Sue Kim"
+   ],
+   "anio": null,
+   "lbSlug": "always-lalisa",
+   "tmdb_id": 1489932,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "ancestors",
+   "titulo": "Ancestors",
+   "alt": null,
+   "directores": [
+    "David Turpin"
+   ],
+   "anio": null,
+   "lbSlug": "ancestors-2026",
+   "tmdb_id": 1577319,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "anchors-aweigh",
+   "titulo": "Anchors Aweigh",
+   "alt": null,
+   "directores": [
+    "Matt Barats"
+   ],
+   "anio": null,
+   "lbSlug": "anchors-aweigh-2026",
+   "tmdb_id": 1684663,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "angh",
+   "titulo": "Angh",
+   "alt": null,
+   "directores": [
+    "Theja Rio"
+   ],
+   "anio": null,
+   "lbSlug": "angh-2026",
+   "tmdb_id": 1460933,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "arne-goes-to-space",
+   "titulo": "Arne Goes to Space",
+   "alt": null,
+   "directores": [
+    "Lars Vega"
+   ],
+   "anio": null,
+   "lbSlug": "arne-goes-to-space",
+   "tmdb_id": 1472679,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "arrested-memory",
+   "titulo": "Arrested Memory",
+   "alt": null,
+   "directores": [
+    "SABU"
+   ],
+   "anio": null,
+   "lbSlug": "arrested-memory",
+   "tmdb_id": 1577970,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "ashes",
+   "titulo": "Ashes",
+   "alt": null,
+   "directores": [
+    "Diego Luna"
+   ],
+   "anio": null,
+   "lbSlug": "ashes-2026-3",
+   "tmdb_id": 1623608,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "at-night",
+   "titulo": "At Night",
+   "alt": null,
+   "directores": [
+    "Beatrice Gibson"
+   ],
+   "anio": null,
+   "lbSlug": "at-night-2026",
+   "tmdb_id": 1228911,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "atonement",
+   "titulo": "Atonement",
+   "alt": null,
+   "directores": [
+    "Reed Van Dyk"
+   ],
+   "anio": null,
+   "lbSlug": "atonement-2026-1",
+   "tmdb_id": 1484085,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "bas-book",
+   "titulo": "Ba's Book",
+   "alt": null,
+   "directores": [
+    "Ashley Duong"
+   ],
+   "anio": null,
+   "lbSlug": "bas-book",
+   "tmdb_id": 1727905,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "babies",
+   "titulo": "Babies",
+   "alt": null,
+   "directores": [
+    "Lauren Miller Rogen"
+   ],
+   "anio": null,
+   "lbSlug": "babies-2026-1",
+   "tmdb_id": 1537546,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "back-in-black",
+   "titulo": "Back in Black",
+   "alt": null,
+   "directores": [
+    "Ron Murphy"
+   ],
+   "anio": null,
+   "lbSlug": "back-in-black",
+   "tmdb_id": 1575391,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "bad-lieutenant-tokyo",
+   "titulo": "Bad Lieutenant: Tokyo",
+   "alt": null,
+   "directores": [
+    "Takashi Miike"
+   ],
+   "anio": null,
+   "lbSlug": "bad-lieutenant-tokyo",
+   "tmdb_id": 1473439,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "bedford-park",
+   "titulo": "Bedford Park",
+   "alt": null,
+   "directores": [
+    "Stephanie Ahn"
+   ],
+   "anio": null,
+   "lbSlug": "bedford-park",
+   "tmdb_id": 1470198,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "being-heumann",
+   "titulo": "Being Heumann",
+   "alt": null,
+   "directores": [
+    "Siân Heder"
+   ],
+   "anio": null,
+   "lbSlug": "being-heumann",
+   "tmdb_id": 1050981,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "ben-imana",
+   "titulo": "Ben'Imana",
+   "alt": null,
+   "directores": [
+    "Marie-Clémentine Dusabejambo"
+   ],
+   "anio": null,
+   "lbSlug": "benimana",
+   "tmdb_id": 1405200,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "bitter-christmas",
+   "titulo": "Bitter Christmas",
+   "alt": null,
+   "directores": [
+    "Pedro Almodóvar"
+   ],
+   "anio": null,
+   "lbSlug": "bitter-christmas",
+   "tmdb_id": 1088548,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "black-sunflowers",
+   "titulo": "Black Sunflowers",
+   "alt": null,
+   "directores": [
+    "James Marcus Haney"
+   ],
+   "anio": null,
+   "lbSlug": "black-sunflowers",
+   "tmdb_id": 1744043,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "bleeding-hearts",
+   "titulo": "Bleeding Hearts",
+   "alt": null,
+   "directores": [
+    "Andrew Morgan"
+   ],
+   "anio": null,
+   "lbSlug": "bleeding-hearts-2026",
+   "tmdb_id": 1744046,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "brace-your-heart",
+   "titulo": "Brace Your Heart",
+   "alt": null,
+   "directores": [
+    "Amanda Kernell"
+   ],
+   "anio": null,
+   "lbSlug": "brace-your-heart",
+   "tmdb_id": 1432701,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "bucking-fastard",
+   "titulo": "Bucking Fastard",
+   "alt": null,
+   "directores": [
+    "Werner Herzog"
+   ],
+   "anio": null,
+   "lbSlug": "bucking-fastard",
+   "tmdb_id": 1429713,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "bunker",
+   "titulo": "Bunker",
+   "alt": null,
+   "directores": [
+    "Florian Zeller"
+   ],
+   "anio": null,
+   "lbSlug": "bunker-2026-1",
+   "tmdb_id": 1473784,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "cheyenne",
+   "titulo": "Cheyenne",
+   "alt": null,
+   "directores": [
+    "Taimi Arvidson"
+   ],
+   "anio": null,
+   "lbSlug": "cheyenne-2026",
+   "tmdb_id": 1744054,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "children-untold",
+   "titulo": "Children Untold",
+   "alt": null,
+   "directores": [
+    "Miwa Nishikawa"
+   ],
+   "anio": null,
+   "lbSlug": "children-untold",
+   "tmdb_id": 1692852,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "clarissa",
+   "titulo": "Clarissa",
+   "alt": null,
+   "directores": [
+    "Arie Esiri",
+    "Chuko Esiri"
+   ],
+   "anio": null,
+   "lbSlug": "clarissa-2026",
+   "tmdb_id": 1630464,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "closing-night",
+   "titulo": "Closing Night",
+   "alt": null,
+   "directores": [
+    "Cody Fern"
+   ],
+   "anio": null,
+   "lbSlug": "closing-night-2026",
+   "tmdb_id": 1481609,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "club-kid",
+   "titulo": "Club Kid",
+   "alt": null,
+   "directores": [
+    "Jordan Firstman"
+   ],
+   "anio": null,
+   "lbSlug": "club-kid",
+   "tmdb_id": 1585239,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "congo-boy",
+   "titulo": "Congo Boy",
+   "alt": null,
+   "directores": [
+    "Rafiki Fariala"
+   ],
+   "anio": null,
+   "lbSlug": "congo-boy",
+   "tmdb_id": 1666683,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "conversation-with-the-sea",
+   "titulo": "Conversation With The Sea",
+   "alt": null,
+   "directores": [
+    "Muayad Alayan"
+   ],
+   "anio": null,
+   "lbSlug": "conversation-with-the-sea",
+   "tmdb_id": 1736495,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "coward",
+   "titulo": "Coward",
+   "alt": null,
+   "directores": [
+    "Lukas Dhont"
+   ],
+   "anio": null,
+   "lbSlug": "coward-2026",
+   "tmdb_id": 1437981,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "darlene-love-i-know-where-ive-been",
+   "titulo": "Darlene Love: I Know Where I've Been",
+   "alt": null,
+   "directores": [
+    "Barry Avrich"
+   ],
+   "anio": null,
+   "lbSlug": "darlene-love-i-know-where-ive-been",
+   "tmdb_id": 1688799,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "diary-of-a-mad-old-man",
+   "titulo": "Diary of a Mad Old Man",
+   "alt": null,
+   "directores": [
+    "Wayne Wang"
+   ],
+   "anio": null,
+   "lbSlug": "diary-of-a-mad-old-man-2026",
+   "tmdb_id": 1444454,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "djinn-wedding",
+   "titulo": "Djinn Wedding",
+   "alt": null,
+   "directores": [
+    "Ferit Karahan"
+   ],
+   "anio": null,
+   "lbSlug": "djinn-wedding",
+   "tmdb_id": 1709585,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "dorothy",
+   "titulo": "Dorothy",
+   "alt": null,
+   "directores": [
+    "Karthik Subbaraj"
+   ],
+   "anio": null,
+   "lbSlug": "dorothy-2026",
+   "tmdb_id": 1578079,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "double-freedom",
+   "titulo": "Double Freedom",
+   "alt": null,
+   "directores": [
+    "Lisandro Alonso"
+   ],
+   "anio": null,
+   "lbSlug": "double-freedom",
+   "tmdb_id": 1387981,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "drifter",
+   "titulo": "Drifter",
+   "alt": null,
+   "directores": [
+    "Sung Kang"
+   ],
+   "anio": null,
+   "lbSlug": "drifter-2026-1",
+   "tmdb_id": 1517127,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "edward-said-between-worlds",
+   "titulo": "Edward Said: Between Worlds",
+   "alt": null,
+   "directores": [
+    "Maiken Baird"
+   ],
+   "anio": null,
+   "lbSlug": "edward-said-between-worlds",
+   "tmdb_id": 1733336,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "eklipse",
+   "titulo": "Eklipse",
+   "alt": null,
+   "directores": [
+    "Manuel Wetscher"
+   ],
+   "anio": null,
+   "lbSlug": "eklipse-2026",
+   "tmdb_id": 1724831,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "elephants-in-the-fog",
+   "titulo": "Elephants in the Fog",
+   "alt": null,
+   "directores": [
+    "Abinash Bikram Shah"
+   ],
+   "anio": null,
+   "lbSlug": "elephants-in-the-fog",
+   "tmdb_id": 1661926,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "elsinore",
+   "titulo": "Elsinore",
+   "alt": null,
+   "directores": [
+    "Simon Stone"
+   ],
+   "anio": null,
+   "lbSlug": "elsinore",
+   "tmdb_id": 1599230,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "everest-the-other-side",
+   "titulo": "Everest: The Other Side",
+   "alt": null,
+   "directores": [
+    "Jimmy Chin",
+    "Elizabeth Chai Vasarhelyi"
+   ],
+   "anio": null,
+   "lbSlug": "everest-the-other-side",
+   "tmdb_id": 1603262,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "everybody-wants-to-fck-me",
+   "titulo": "Everybody Wants to F*ck Me",
+   "alt": null,
+   "directores": [
+    "Jonathan Schey"
+   ],
+   "anio": null,
+   "lbSlug": "everybody-wants-to-fck-me",
+   "tmdb_id": 1559269,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "everything-else-is-noise",
+   "titulo": "Everything Else is Noise",
+   "alt": null,
+   "directores": [
+    "Nicolás Pereda"
+   ],
+   "anio": null,
+   "lbSlug": "everything-else-is-noise",
+   "tmdb_id": 1616861,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "everytime",
+   "titulo": "Everytime",
+   "alt": null,
+   "directores": [
+    "Sandra Wollner"
+   ],
+   "anio": null,
+   "lbSlug": "everytime",
+   "tmdb_id": 1655419,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "evil-genius",
+   "titulo": "Evil Genius",
+   "alt": null,
+   "directores": [
+    "Courteney Cox"
+   ],
+   "anio": null,
+   "lbSlug": "evil-genius-2026",
+   "tmdb_id": 1575461,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "faith",
+   "titulo": "Faith",
+   "alt": null,
+   "directores": [
+    "Paul Andrew Williams"
+   ],
+   "anio": null,
+   "lbSlug": "faith-2026-1",
+   "tmdb_id": 1625126,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "fjord",
+   "titulo": "Fjord",
+   "alt": null,
+   "directores": [
+    "Cristian Mungiu"
+   ],
+   "anio": null,
+   "lbSlug": "fjord-2026",
+   "tmdb_id": 1401459,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "flies",
+   "titulo": "Flies",
+   "alt": null,
+   "directores": [
+    "Fernando Eimbcke"
+   ],
+   "anio": null,
+   "lbSlug": "flies-2026",
+   "tmdb_id": 1437703,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "four-seasons-in-java",
+   "titulo": "Four Seasons in Java",
+   "alt": null,
+   "directores": [
+    "Kamila Andini"
+   ],
+   "anio": null,
+   "lbSlug": "four-seasons-in-java",
+   "tmdb_id": 1280076,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "furies",
+   "titulo": "Furies",
+   "alt": null,
+   "directores": [
+    "Rami Kodeih"
+   ],
+   "anio": null,
+   "lbSlug": "furies-2026",
+   "tmdb_id": 1484090,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "future-tense",
+   "titulo": "Future Tense",
+   "alt": null,
+   "directores": [
+    "Jenna Cato Bass"
+   ],
+   "anio": null,
+   "lbSlug": "future-tense-2026",
+   "tmdb_id": 1648489,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "gail",
+   "titulo": "Gail",
+   "alt": null,
+   "directores": [
+    "Michael Maxxis"
+   ],
+   "anio": null,
+   "lbSlug": "gail",
+   "tmdb_id": 1744056,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "gentle-monster",
+   "titulo": "Gentle Monster",
+   "alt": null,
+   "directores": [
+    "Marie Kreutzer"
+   ],
+   "anio": null,
+   "lbSlug": "gentle-monster",
+   "tmdb_id": 1473148,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "girl-group",
+   "titulo": "Girl Group",
+   "alt": null,
+   "directores": [
+    "Rebel Wilson"
+   ],
+   "anio": null,
+   "lbSlug": "girl-group",
+   "tmdb_id": 1551451,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "glaxo",
+   "titulo": "Glaxo",
+   "alt": null,
+   "directores": [
+    "Benjamín Naishtat"
+   ],
+   "anio": null,
+   "lbSlug": "glaxo",
+   "tmdb_id": 1551179,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "god-bless-you-mr-kopu",
+   "titulo": "God Bless You, Mr Kopu",
+   "alt": null,
+   "directores": [
+    "Alex Liu"
+   ],
+   "anio": null,
+   "lbSlug": "god-bless-you-mr-kopu",
+   "tmdb_id": 1575904,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "growth-of-the-soil",
+   "titulo": "Growth of the Soil",
+   "alt": null,
+   "directores": [
+    "Hans Petter Moland"
+   ],
+   "anio": null,
+   "lbSlug": "growth-of-the-soil-2026",
+   "tmdb_id": 1729732,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "half",
+   "titulo": "HALF",
+   "alt": null,
+   "directores": [
+    "Samjad"
+   ],
+   "anio": null,
+   "lbSlug": "half-2026",
+   "tmdb_id": 1411598,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "ha-chan-shake-your-booty",
+   "titulo": "Ha-Chan, Shake Your Booty!",
+   "alt": null,
+   "directores": [
+    "Josef Kubota Wladyka"
+   ],
+   "anio": null,
+   "lbSlug": "ha-chan-shake-your-booty",
+   "tmdb_id": 1596249,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "happily-ever-after",
+   "titulo": "Happily Ever After",
+   "alt": null,
+   "directores": [
+    "Feng-I Fiona Roan"
+   ],
+   "anio": null,
+   "lbSlug": "happily-ever-after-2026-2",
+   "tmdb_id": 1658272,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "head-to-head",
+   "titulo": "Head to Head",
+   "alt": null,
+   "directores": [
+    "Ghasideh Golmakani"
+   ],
+   "anio": null,
+   "lbSlug": "head-to-head-2026-1",
+   "tmdb_id": 1737839,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "hombre-al-agua",
+   "titulo": "Hombre al agua",
+   "alt": null,
+   "directores": [
+    "Gael García Bernal"
+   ],
+   "anio": null,
+   "lbSlug": "hombre-al-agua",
+   "tmdb_id": 1632166,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "hope",
+   "titulo": "Hope",
+   "alt": null,
+   "directores": [
+    "Na Hong-jin"
+   ],
+   "anio": null,
+   "lbSlug": "hope-2026",
+   "tmdb_id": 1058424,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "how-we-stand",
+   "titulo": "How We Stand",
+   "alt": null,
+   "directores": [
+    "Marie Clements"
+   ],
+   "anio": null,
+   "lbSlug": "how-we-stand",
+   "tmdb_id": 1563760,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "i-am-mario",
+   "titulo": "I Am Mario",
+   "alt": null,
+   "directores": [
+    "Sharon Kleinberg"
+   ],
+   "anio": null,
+   "lbSlug": "i-am-mario",
+   "tmdb_id": 1651231,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "i-play-rocky",
+   "titulo": "I Play Rocky",
+   "alt": null,
+   "directores": [
+    "Peter Farrelly"
+   ],
+   "anio": null,
+   "lbSlug": "i-play-rocky",
+   "tmdb_id": 1286656,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "idda",
+   "titulo": "Idda",
+   "alt": null,
+   "directores": [
+    "Irene Dionisio"
+   ],
+   "anio": null,
+   "lbSlug": "idda-2026",
+   "tmdb_id": 1341804,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "in-alaska",
+   "titulo": "In Alaska",
+   "alt": null,
+   "directores": [
+    "Vinnie Karetak",
+    "Jaap van Heusden"
+   ],
+   "anio": null,
+   "lbSlug": "in-alaska",
+   "tmdb_id": 1734769,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "in-waves",
+   "titulo": "In Waves",
+   "alt": null,
+   "directores": [
+    "Phuong Mai Nguyen"
+   ],
+   "anio": null,
+   "lbSlug": "in-waves",
+   "tmdb_id": 947502,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "in-the-heart-of-the-south",
+   "titulo": "In the Heart of the South",
+   "alt": null,
+   "directores": [
+    "Nyla Innuksuk"
+   ],
+   "anio": null,
+   "lbSlug": "in-the-heart-of-the-south",
+   "tmdb_id": 1535659,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "inherit",
+   "titulo": "Inherit",
+   "alt": null,
+   "directores": [
+    "Banjong Pisanthanakun"
+   ],
+   "anio": null,
+   "lbSlug": "inherit-2026",
+   "tmdb_id": 1480276,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "ink",
+   "titulo": "Ink",
+   "alt": null,
+   "directores": [
+    "Danny Boyle"
+   ],
+   "anio": null,
+   "lbSlug": "ink-2026",
+   "tmdb_id": 1532610,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "intermission",
+   "titulo": "Intermission",
+   "alt": null,
+   "directores": [
+    "Yonfan"
+   ],
+   "anio": null,
+   "lbSlug": "intermission-2026",
+   "tmdb_id": 1736508,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "iron-boy",
+   "titulo": "Iron Boy",
+   "alt": null,
+   "directores": [
+    "Louis Clichy"
+   ],
+   "anio": null,
+   "lbSlug": "iron-boy",
+   "tmdb_id": 947493,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "it-will-happen-tonight",
+   "titulo": "It Will Happen Tonight",
+   "alt": null,
+   "directores": [
+    "Nanni Moretti"
+   ],
+   "anio": null,
+   "lbSlug": "it-will-happen-tonight",
+   "tmdb_id": 1499546,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "its-my-time",
+   "titulo": "It's My Time",
+   "alt": null,
+   "directores": [
+    "Bai Xue"
+   ],
+   "anio": null,
+   "lbSlug": "its-my-time",
+   "tmdb_id": 1257942,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "josephine",
+   "titulo": "Josephine",
+   "alt": null,
+   "directores": [
+    "Beth de Araújo"
+   ],
+   "anio": null,
+   "lbSlug": "josephine-2026",
+   "tmdb_id": 1299329,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "julian",
+   "titulo": "Julián",
+   "alt": null,
+   "directores": [
+    "Louise Bagnall"
+   ],
+   "anio": null,
+   "lbSlug": "julian-2026",
+   "tmdb_id": 1061799,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "ken-russells-the-devils",
+   "titulo": "Ken Russell's The Devils",
+   "alt": null,
+   "directores": [
+    "Ken Russell"
+   ],
+   "anio": null,
+   "lbSlug": "the-devils",
+   "tmdb_id": 31767,
+   "_match": "alias/verificado por director"
+  },
+  {
+   "tipo": "obra",
+   "clave": "kick-on",
+   "titulo": "Kick On",
+   "alt": null,
+   "directores": [
+    "Nick Kozakis"
+   ],
+   "anio": null,
+   "lbSlug": "kick-on",
+   "tmdb_id": 1744889,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "kissed",
+   "titulo": "Kissed",
+   "alt": null,
+   "directores": [
+    "Lynne Stopkewich"
+   ],
+   "anio": null,
+   "lbSlug": "kissed",
+   "tmdb_id": 21626,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "krux",
+   "titulo": "Krux",
+   "alt": null,
+   "directores": [
+    "Tony Vahl"
+   ],
+   "anio": null,
+   "lbSlug": "krux",
+   "tmdb_id": 1653830,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "lautre",
+   "titulo": "L'AUTRE",
+   "alt": null,
+   "directores": [
+    "Alexandre Franchi"
+   ],
+   "anio": null,
+   "lbSlug": "lauture",
+   "tmdb_id": 1703273,
+   "_match": "difuso 0.92/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "la-bola-negra",
+   "titulo": "La Bola Negra",
+   "alt": null,
+   "directores": [
+    "Javier Calvo",
+    "Javier Ambrossi"
+   ],
+   "anio": null,
+   "lbSlug": "la-bola-negra",
+   "tmdb_id": 1422041,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "la-gradiva",
+   "titulo": "La Gradiva",
+   "alt": null,
+   "directores": [
+    "Marine Atlan"
+   ],
+   "anio": null,
+   "lbSlug": "la-gradiva",
+   "tmdb_id": 1154730,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "ladies-and-gentlemen-brian-mulroney",
+   "titulo": "Ladies and Gentlemen, Brian Mulroney",
+   "alt": null,
+   "directores": [
+    "Matthew Rankin"
+   ],
+   "anio": null,
+   "lbSlug": "ladies-and-gentlemen-brian-mulroney",
+   "tmdb_id": 1727146,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "le-faux-soir",
+   "titulo": "Le Faux Soir",
+   "alt": null,
+   "directores": [
+    "Michaël R. Roskam"
+   ],
+   "anio": null,
+   "lbSlug": "le-faux-soir",
+   "tmdb_id": 1090025,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "lemonade",
+   "titulo": "Lemonade",
+   "alt": null,
+   "directores": [
+    "Kim Bartley"
+   ],
+   "anio": null,
+   "lbSlug": "lemonade-2026",
+   "tmdb_id": 1632659,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "life-of-jorge-luis-borges",
+   "titulo": "Life of Jorge Luis Borges",
+   "alt": null,
+   "directores": [
+    "Mariano Llinás"
+   ],
+   "anio": null,
+   "lbSlug": "biografia-de-jorge-luis-borges",
+   "tmdb_id": 1736494,
+   "_match": "alias/verificado por director"
+  },
+  {
+   "tipo": "obra",
+   "clave": "light-pillar",
+   "titulo": "Light Pillar",
+   "alt": null,
+   "directores": [
+    "Xu Zao"
+   ],
+   "anio": null,
+   "lbSlug": "light-pillar",
+   "tmdb_id": 1601885,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "like-magic",
+   "titulo": "Like Magic",
+   "alt": null,
+   "directores": [
+    "Melissa Saavedra Gil"
+   ],
+   "anio": null,
+   "lbSlug": "like-magic",
+   "tmdb_id": 1744708,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "long-long-night",
+   "titulo": "Long Long Night",
+   "alt": null,
+   "directores": [
+    "Kyu Bock Youm"
+   ],
+   "anio": null,
+   "lbSlug": "long-long-night",
+   "tmdb_id": 1619996,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "look-back",
+   "titulo": "Look Back",
+   "alt": null,
+   "directores": [
+    "Hirokazu Kore-eda"
+   ],
+   "anio": null,
+   "lbSlug": "look-back-2026",
+   "tmdb_id": 1591675,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "love-is-the-monster",
+   "titulo": "Love is the monster",
+   "alt": null,
+   "directores": [
+    "Neto Villalobos Brenes"
+   ],
+   "anio": null,
+   "lbSlug": "love-is-the-monster-2026",
+   "tmdb_id": 1504211,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "love-of-your-life",
+   "titulo": "Love of Your Life",
+   "alt": null,
+   "directores": [
+    "Rachel Morrison"
+   ],
+   "anio": null,
+   "lbSlug": "love-of-your-life",
+   "tmdb_id": 1381078,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "low-lies-the-land",
+   "titulo": "Low Lies The Land",
+   "alt": null,
+   "directores": [
+    "Emanuele Gerosa"
+   ],
+   "anio": null,
+   "lbSlug": "low-lies-the-land",
+   "tmdb_id": 1747726,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "magazine",
+   "titulo": "Magazine",
+   "alt": null,
+   "directores": [
+    "Alexandra Pechman"
+   ],
+   "anio": null,
+   "lbSlug": "magazine-2026-2",
+   "tmdb_id": 1736025,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "man-in-motion-the-rick-hansen-story",
+   "titulo": "Man in Motion: The Rick Hansen Story",
+   "alt": null,
+   "directores": [
+    "Adrian Buitenhuis"
+   ],
+   "anio": null,
+   "lbSlug": "man-in-motion-the-rick-hansen-story",
+   "tmdb_id": 1735917,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "marie-madeleine",
+   "titulo": "Marie Madeleine",
+   "alt": null,
+   "directores": [
+    "Géssica Généus"
+   ],
+   "anio": null,
+   "lbSlug": "marie-madeleine",
+   "tmdb_id": 1660660,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "masc",
+   "titulo": "Masc",
+   "alt": null,
+   "directores": [
+    "Bertil Nilsson"
+   ],
+   "anio": null,
+   "lbSlug": "masc-2026",
+   "tmdb_id": 1735867,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "memories-of-a-forest",
+   "titulo": "Memories of a Forest",
+   "alt": null,
+   "directores": [
+    "Katharina Rabl"
+   ],
+   "anio": null,
+   "lbSlug": "memories-of-a-forest",
+   "tmdb_id": 1693083,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "minotaur",
+   "titulo": "Minotaur",
+   "alt": null,
+   "directores": [
+    "Andrey Zvyagintsev"
+   ],
+   "anio": null,
+   "lbSlug": "minotaur-2026",
+   "tmdb_id": 848700,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "misty-green",
+   "titulo": "Misty Green",
+   "alt": null,
+   "directores": [
+    "Chris Rock"
+   ],
+   "anio": null,
+   "lbSlug": "misty-green",
+   "tmdb_id": 1381221,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "mr-nelson-did-you-kill-people",
+   "titulo": "Mr. Nelson, Did You Kill People?",
+   "alt": null,
+   "directores": [
+    "Shinya Tsukamoto"
+   ],
+   "anio": null,
+   "lbSlug": "mr-nelson-did-you-kill-people",
+   "tmdb_id": 1497946,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "musk",
+   "titulo": "Musk",
+   "alt": null,
+   "directores": [
+    "Alex Gibney"
+   ],
+   "anio": null,
+   "lbSlug": "musk-2026",
+   "tmdb_id": 1096228,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "muyi",
+   "titulo": "Muyi",
+   "alt": null,
+   "directores": [
+    "Julien Chheng"
+   ],
+   "anio": null,
+   "lbSlug": "muyi",
+   "tmdb_id": 676670,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "my-wife-cries",
+   "titulo": "My Wife Cries",
+   "alt": null,
+   "directores": [
+    "Angela Schanelec"
+   ],
+   "anio": null,
+   "lbSlug": "my-wife-cries",
+   "tmdb_id": 1152312,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "neil-peart-no-ones-disciple",
+   "titulo": "Neil Peart: No One's Disciple",
+   "alt": null,
+   "directores": [
+    "Sam Dunn",
+    "Scot McFadyen"
+   ],
+   "anio": null,
+   "lbSlug": "neil-peart-no-ones-disciple",
+   "tmdb_id": 1747920,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "neverman",
+   "titulo": "Neverman",
+   "alt": null,
+   "directores": [
+    "Rodrigo Barriuso"
+   ],
+   "anio": null,
+   "lbSlug": "neverman",
+   "tmdb_id": 1743993,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "nobodys-violence",
+   "titulo": "Nobody's Violence",
+   "alt": null,
+   "directores": [
+    "Denis Côté"
+   ],
+   "anio": null,
+   "lbSlug": "nobodys-violence",
+   "tmdb_id": 1552242,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "nosotros",
+   "titulo": "Nosotros",
+   "alt": null,
+   "directores": [
+    "Joaquín Ruano"
+   ],
+   "anio": null,
+   "lbSlug": "nosotros-2026",
+   "tmdb_id": 1736798,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "obsession",
+   "titulo": "Obsession",
+   "alt": null,
+   "directores": [
+    "Curry Barker"
+   ],
+   "anio": null,
+   "lbSlug": "obsession-2025",
+   "tmdb_id": 1339713,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "on-behalf-of-my-son",
+   "titulo": "On Behalf of My Son",
+   "alt": null,
+   "directores": [
+    "Gabriel Martins"
+   ],
+   "anio": null,
+   "lbSlug": "on-behalf-of-my-son",
+   "tmdb_id": 1307474,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "once-upon-a-time-in-harlem",
+   "titulo": "Once Upon a Time in Harlem",
+   "alt": null,
+   "directores": [
+    "William Greaves",
+    "David Greaves"
+   ],
+   "anio": null,
+   "lbSlug": "once-upon-a-time-in-harlem",
+   "tmdb_id": 1596300,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "onwards-and-sideways",
+   "titulo": "Onwards and Sideways",
+   "alt": null,
+   "directores": [
+    "John Madden"
+   ],
+   "anio": null,
+   "lbSlug": "onwards-and-sideways",
+   "tmdb_id": 1567265,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "our-loves",
+   "titulo": "Our Loves",
+   "alt": null,
+   "directores": [
+    "Avi Nesher"
+   ],
+   "anio": null,
+   "lbSlug": "our-loves",
+   "tmdb_id": 1239958,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "paradise-lost",
+   "titulo": "Paradise Lost",
+   "alt": null,
+   "directores": [
+    "Yeon Sang-ho"
+   ],
+   "anio": null,
+   "lbSlug": "paradise-lost-2026-1",
+   "tmdb_id": 1584855,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "phoolan",
+   "titulo": "Phoolan",
+   "alt": null,
+   "directores": [
+    "Richie Mehta"
+   ],
+   "anio": null,
+   "lbSlug": "phoolan-2026",
+   "tmdb_id": 1736689,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "possible-love",
+   "titulo": "Possible Love",
+   "alt": null,
+   "directores": [
+    "Lee Chang-dong"
+   ],
+   "anio": null,
+   "lbSlug": "possible-love",
+   "tmdb_id": 1483525,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "prima-facie",
+   "titulo": "Prima Facie",
+   "alt": null,
+   "directores": [
+    "Susanna White"
+   ],
+   "anio": null,
+   "lbSlug": "prima-facie-2026",
+   "tmdb_id": 1127282,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "purgatory",
+   "titulo": "Purgatory",
+   "alt": null,
+   "directores": [
+    "Lindsay Lanzillotta"
+   ],
+   "anio": null,
+   "lbSlug": "purgatory-2026",
+   "tmdb_id": 1641750,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "rapinoe",
+   "titulo": "Rapinoe",
+   "alt": null,
+   "directores": [
+    "Rebeca Huntt"
+   ],
+   "anio": null,
+   "lbSlug": "rapinoe",
+   "tmdb_id": 1743677,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "rehearsals-for-a-revolution",
+   "titulo": "Rehearsals for a Revolution",
+   "alt": null,
+   "directores": [
+    "Pegah Ahangarani"
+   ],
+   "anio": null,
+   "lbSlug": "rehearsals-for-a-revolution",
+   "tmdb_id": 1666864,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "report-to-mother",
+   "titulo": "Report to Mother",
+   "alt": null,
+   "directores": [
+    "John Abraham"
+   ],
+   "anio": null,
+   "lbSlug": "report-to-mother",
+   "tmdb_id": 258486,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "rescue",
+   "titulo": "Rescue",
+   "alt": null,
+   "directores": [
+    "Sine Plambech"
+   ],
+   "anio": null,
+   "lbSlug": "rescue-2026-1",
+   "tmdb_id": 1743514,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "river",
+   "titulo": "River",
+   "alt": null,
+   "directores": [
+    "Joshua Giuliano"
+   ],
+   "anio": null,
+   "lbSlug": "river-2026-1",
+   "tmdb_id": 1520592,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "rogue-trooper",
+   "titulo": "Rogue Trooper",
+   "alt": null,
+   "directores": [
+    "Duncan Jones"
+   ],
+   "anio": null,
+   "lbSlug": "rogue-trooper",
+   "tmdb_id": 536097,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "run-terry-run",
+   "titulo": "Run Terry Run",
+   "alt": null,
+   "directores": [
+    "Sean Menard"
+   ],
+   "anio": null,
+   "lbSlug": "run-terry-run",
+   "tmdb_id": 1578210,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "salvation",
+   "titulo": "Salvation",
+   "alt": null,
+   "directores": [
+    "Tom Nicoll"
+   ],
+   "anio": null,
+   "lbSlug": "salvation-2026-1",
+   "tmdb_id": 1736323,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "seventeen",
+   "titulo": "Seventeen",
+   "alt": null,
+   "directores": [
+    "Justin Ducharme"
+   ],
+   "anio": null,
+   "lbSlug": "seventeen-2026-1",
+   "tmdb_id": 1490068,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "silenced-nights",
+   "titulo": "Silenced Nights",
+   "alt": null,
+   "directores": [
+    "Lawrence Fajardo"
+   ],
+   "anio": null,
+   "lbSlug": "silenced-nights",
+   "tmdb_id": 1735910,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "sisters",
+   "titulo": "Sisters",
+   "alt": null,
+   "directores": [
+    "Ione Hernández"
+   ],
+   "anio": null,
+   "lbSlug": "sisters-2026",
+   "tmdb_id": 1556887,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "smudge-the-blades",
+   "titulo": "Smudge the Blades",
+   "alt": null,
+   "directores": [
+    "Cody Lightning"
+   ],
+   "anio": null,
+   "lbSlug": "smudge-the-blades",
+   "tmdb_id": 1469469,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "soumsoum-the-night-of-the-stars",
+   "titulo": "Soumsoum, The Night of the Stars",
+   "alt": null,
+   "directores": [
+    "Mahamat-Saleh Haroun"
+   ],
+   "anio": null,
+   "lbSlug": "soumsoum-the-night-of-the-stars",
+   "tmdb_id": 1376457,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "spirit-guardians-the-last-secret-of-the-first-emperor",
+   "titulo": "Spirit Guardians: The Last Secret of the First Emperor",
+   "alt": null,
+   "directores": [
+    "Nguyễn Phan Quang Binh"
+   ],
+   "anio": null,
+   "lbSlug": "ho-linh-trang-si-bi-an-mo-vua-inh",
+   "tmdb_id": 1554807,
+   "_match": "alias/verificado por director"
+  },
+  {
+   "tipo": "obra",
+   "clave": "spring-in-a-small-town",
+   "titulo": "Spring in a Small Town",
+   "alt": null,
+   "directores": [
+    "Fei Mu"
+   ],
+   "anio": null,
+   "lbSlug": "spring-in-a-small-town",
+   "tmdb_id": 21058,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "still-night-burning-house",
+   "titulo": "Still Night, Burning House",
+   "alt": null,
+   "directores": [
+    "Carol Nguyen"
+   ],
+   "anio": null,
+   "lbSlug": "still-night-burning-house",
+   "tmdb_id": 1606687,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "strong-son-2",
+   "titulo": "Strong Son",
+   "alt": null,
+   "directores": [
+    "Ian Bawa"
+   ],
+   "anio": null,
+   "lbSlug": "strong-son-2026",
+   "tmdb_id": 1737831,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "stuffed",
+   "titulo": "Stuffed",
+   "alt": null,
+   "directores": [
+    "Theo Rhys"
+   ],
+   "anio": null,
+   "lbSlug": "stuffed-2026",
+   "tmdb_id": 1541330,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "sunburn",
+   "titulo": "Sunburn",
+   "alt": null,
+   "directores": [
+    "Serville Poblete"
+   ],
+   "anio": null,
+   "lbSlug": "sunburn-2026-3",
+   "tmdb_id": 1743994,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "tangles",
+   "titulo": "Tangles",
+   "alt": null,
+   "directores": [
+    "Leah Nelson"
+   ],
+   "anio": null,
+   "lbSlug": "tangles",
+   "tmdb_id": 1316999,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "tehran-under-the-skin",
+   "titulo": "Tehran, Under the Skin",
+   "alt": null,
+   "directores": [
+    "Afsaneh Salari"
+   ],
+   "anio": null,
+   "lbSlug": "tehran-under-the-skin",
+   "tmdb_id": 1747742,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "ten-dark-women",
+   "titulo": "Ten Dark Women",
+   "alt": null,
+   "directores": [
+    "Kon Ichikawa"
+   ],
+   "anio": null,
+   "lbSlug": "ten-dark-women",
+   "tmdb_id": 125368,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "tender-loving-care",
+   "titulo": "Tender Loving Care",
+   "alt": null,
+   "directores": [
+    "Mike Leigh"
+   ],
+   "anio": null,
+   "lbSlug": "tender-loving-care-2026",
+   "tmdb_id": 1370191,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "tenzing",
+   "titulo": "Tenzing",
+   "alt": null,
+   "directores": [
+    "Jennifer Peedom"
+   ],
+   "anio": null,
+   "lbSlug": "tenzing",
+   "tmdb_id": 1288069,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-age-of-goodbyes",
+   "titulo": "The Age of Goodbyes",
+   "alt": null,
+   "directores": [
+    "Edmund Yeo"
+   ],
+   "anio": null,
+   "lbSlug": "the-age-of-goodbyes",
+   "tmdb_id": 1613284,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-assassins",
+   "titulo": "The Assassin(s)",
+   "alt": null,
+   "directores": [
+    "Hur Jin-ho"
+   ],
+   "anio": null,
+   "lbSlug": "the-assassins-2026",
+   "tmdb_id": 1418428,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-beloved",
+   "titulo": "The Beloved",
+   "alt": null,
+   "directores": [
+    "Rodrigo Sorogoyen"
+   ],
+   "anio": null,
+   "lbSlug": "the-beloved-2026",
+   "tmdb_id": 1074074,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-betrayers",
+   "titulo": "The Betrayers",
+   "alt": null,
+   "directores": [
+    "David Bezmozgis"
+   ],
+   "anio": null,
+   "lbSlug": "the-betrayers",
+   "tmdb_id": 1723076,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-black-box-is-orange",
+   "titulo": "The Black Box is Orange",
+   "alt": null,
+   "directores": [
+    "Yuula Benivolski"
+   ],
+   "anio": null,
+   "lbSlug": "the-black-box-is-orange",
+   "tmdb_id": 1744013,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-city-of-the-living",
+   "titulo": "The City of the Living",
+   "alt": null,
+   "directores": [
+    "Edoardo Gabbriellini"
+   ],
+   "anio": null,
+   "lbSlug": "the-city-of-the-living",
+   "tmdb_id": 1632103,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-daughters-of-abraham",
+   "titulo": "The Daughters of Abraham",
+   "alt": null,
+   "directores": [
+    "Hanaël El Yousfi"
+   ],
+   "anio": null,
+   "lbSlug": "the-daughters-of-abraham",
+   "tmdb_id": 1737842,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-debut",
+   "titulo": "The Debut",
+   "alt": null,
+   "directores": [
+    "Jesse Eisenberg"
+   ],
+   "anio": null,
+   "lbSlug": "the-debut-2026",
+   "tmdb_id": 1391239,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-diary-of-a-chambermaid",
+   "titulo": "The Diary of a Chambermaid",
+   "alt": null,
+   "directores": [
+    "Radu Jude"
+   ],
+   "anio": null,
+   "lbSlug": "the-diary-of-a-chambermaid-2026",
+   "tmdb_id": 1472813,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-difficult-bride",
+   "titulo": "The Difficult Bride",
+   "alt": null,
+   "directores": [
+    "Rubaiyat Hossain"
+   ],
+   "anio": null,
+   "lbSlug": "the-difficult-bride",
+   "tmdb_id": 1593299,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-dreamed-adventure",
+   "titulo": "The Dreamed Adventure",
+   "alt": null,
+   "directores": [
+    "Valeska Grisebach"
+   ],
+   "anio": null,
+   "lbSlug": "the-dreamed-adventure",
+   "tmdb_id": 1013822,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-face-of-horror",
+   "titulo": "The Face of Horror",
+   "alt": null,
+   "directores": [
+    "Anna Biller"
+   ],
+   "anio": null,
+   "lbSlug": "the-face-of-horror",
+   "tmdb_id": 1051646,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-final-act",
+   "titulo": "The Final Act",
+   "alt": null,
+   "directores": [
+    "Sophie Deraspe"
+   ],
+   "anio": null,
+   "lbSlug": "the-final-act",
+   "tmdb_id": 1324042,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-fortunate-isles",
+   "titulo": "The Fortunate Isles",
+   "alt": null,
+   "directores": [
+    "Helena Girón",
+    "Samuel Delgado"
+   ],
+   "anio": null,
+   "lbSlug": "the-fortunate-isles",
+   "tmdb_id": 1736324,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-housewife",
+   "titulo": "The Housewife",
+   "alt": null,
+   "directores": [
+    "Ben Shirinian"
+   ],
+   "anio": null,
+   "lbSlug": "the-housewife-2026",
+   "tmdb_id": 1241907,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-idiots",
+   "titulo": "The Idiot(s)",
+   "alt": null,
+   "directores": [
+    "Michał Englert",
+    "Małgorzata Szumowska"
+   ],
+   "anio": null,
+   "lbSlug": "the-idiots-1",
+   "tmdb_id": 1478243,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-julia-set",
+   "titulo": "The Julia Set",
+   "alt": null,
+   "directores": [
+    "Niki Byrne"
+   ],
+   "anio": null,
+   "lbSlug": "the-julia-set",
+   "tmdb_id": 1376284,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-liberation",
+   "titulo": "The Liberation",
+   "alt": null,
+   "directores": [
+    "Guy Nattiv"
+   ],
+   "anio": null,
+   "lbSlug": "the-liberation-2026",
+   "tmdb_id": 1287365,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-life-and-deaths-of-wilson-shedd",
+   "titulo": "The Life and Deaths of Wilson Shedd",
+   "alt": null,
+   "directores": [
+    "Tim Blake Nelson"
+   ],
+   "anio": null,
+   "lbSlug": "the-life-and-deaths-of-wilson-shedd",
+   "tmdb_id": 1476832,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-lost-children-of-tuam",
+   "titulo": "The Lost Children Of Tuam",
+   "alt": null,
+   "directores": [
+    "Frank Berry"
+   ],
+   "anio": null,
+   "lbSlug": "the-lost-children-of-tuam",
+   "tmdb_id": 1522690,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-man-i-love",
+   "titulo": "The Man I Love",
+   "alt": null,
+   "directores": [
+    "Ira Sachs"
+   ],
+   "anio": null,
+   "lbSlug": "the-man-i-love-2026",
+   "tmdb_id": 1458914,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-only-living-pickpocket-in-new-york",
+   "titulo": "The Only Living Pickpocket in New York",
+   "alt": null,
+   "directores": [
+    "Noah Segan"
+   ],
+   "anio": null,
+   "lbSlug": "the-only-living-pickpocket-in-new-york",
+   "tmdb_id": 1458099,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-perverts-guide-to-utopias",
+   "titulo": "The Pervert's Guide to Utopias",
+   "alt": null,
+   "directores": [
+    "Sophie Fiennes"
+   ],
+   "anio": null,
+   "lbSlug": "the-perverts-guide-to-utopias",
+   "tmdb_id": 1734476,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-remotes",
+   "titulo": "The Remotes",
+   "alt": null,
+   "directores": [
+    "John Torres"
+   ],
+   "anio": null,
+   "lbSlug": "the-remotes",
+   "tmdb_id": 1743597,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-road-not-taken",
+   "titulo": "The Road Not Taken",
+   "alt": null,
+   "directores": [
+    "Peter Ho-Sun Chan"
+   ],
+   "anio": null,
+   "lbSlug": "the-road-not-taken-2026",
+   "tmdb_id": 1690780,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-secret-lives-of-baba-segis-wives",
+   "titulo": "The Secret Lives of Baba Segi's Wives",
+   "alt": null,
+   "directores": [
+    "Daniel Oriahi"
+   ],
+   "anio": null,
+   "lbSlug": "the-secret-lives-of-baba-segis-wives",
+   "tmdb_id": 1744003,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-smell-of-apples",
+   "titulo": "The Smell of Apples",
+   "alt": null,
+   "directores": [
+    "John Trengove"
+   ],
+   "anio": null,
+   "lbSlug": "the-smell-of-apples",
+   "tmdb_id": 1484181,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-spiral",
+   "titulo": "The Spiral",
+   "alt": null,
+   "directores": [
+    "Paolo Strippoli"
+   ],
+   "anio": null,
+   "lbSlug": "the-spiral-2026",
+   "tmdb_id": 1412795,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-stunt-driver",
+   "titulo": "The Stunt Driver",
+   "alt": null,
+   "directores": [
+    "Michael Dowse"
+   ],
+   "anio": null,
+   "lbSlug": "the-stunt-driver",
+   "tmdb_id": 1562777,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-surgeon",
+   "titulo": "The Surgeon",
+   "alt": null,
+   "directores": [
+    "Roshan Sethi"
+   ],
+   "anio": null,
+   "lbSlug": "the-surgeon-2026",
+   "tmdb_id": 1479429,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-ultra-runner",
+   "titulo": "The Ultra Runner",
+   "alt": null,
+   "directores": [
+    "Mila Aung-Thwin"
+   ],
+   "anio": null,
+   "lbSlug": "the-ultra-runner",
+   "tmdb_id": 1747669,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-unknown",
+   "titulo": "The Unknown",
+   "alt": null,
+   "directores": [
+    "Arthur Harari"
+   ],
+   "anio": null,
+   "lbSlug": "the-unknown-2026",
+   "tmdb_id": 1182935,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-violinist",
+   "titulo": "The Violinist",
+   "alt": null,
+   "directores": [
+    "Ervin Han",
+    "Raúl García"
+   ],
+   "anio": null,
+   "lbSlug": "the-violinist-2026",
+   "tmdb_id": 748681,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-world-before",
+   "titulo": "The World Before",
+   "alt": null,
+   "directores": [
+    "Yoon Dan-bi"
+   ],
+   "anio": null,
+   "lbSlug": "the-world-before",
+   "tmdb_id": 1159810,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "the-bovine-with-the-curved-horns",
+   "titulo": "The bovine with the curved horns",
+   "alt": null,
+   "directores": [
+    "Omar E. Ospina Giraldo"
+   ],
+   "anio": null,
+   "lbSlug": "the-bovine-with-the-curved-horns",
+   "tmdb_id": 1743999,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "thirteen-in-gaza",
+   "titulo": "Thirteen in Gaza",
+   "alt": null,
+   "directores": [
+    "Hosam Abu Dan"
+   ],
+   "anio": null,
+   "lbSlug": "thirteen-in-gaza",
+   "tmdb_id": 1744009,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "toy-gun-bandit",
+   "titulo": "Toy Gun Bandit",
+   "alt": null,
+   "directores": [
+    "Rémi St-Michel"
+   ],
+   "anio": null,
+   "lbSlug": "toy-gun-bandit",
+   "tmdb_id": 1570650,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "trash-mountain",
+   "titulo": "Trash Mountain",
+   "alt": null,
+   "directores": [
+    "Kris Rey"
+   ],
+   "anio": null,
+   "lbSlug": "trash-mountain",
+   "tmdb_id": 1244113,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "trees-are-watching",
+   "titulo": "Trees are Watching",
+   "alt": null,
+   "directores": [
+    "Bahman Ghobadi"
+   ],
+   "anio": null,
+   "lbSlug": "trees-are-watching",
+   "tmdb_id": 1747867,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "union-town",
+   "titulo": "Union Town",
+   "alt": null,
+   "directores": [
+    "Barbara Kopple"
+   ],
+   "anio": null,
+   "lbSlug": "union-town",
+   "tmdb_id": 1736513,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "up-against-it",
+   "titulo": "Up Against It",
+   "alt": null,
+   "directores": [
+    "Trudie Styler"
+   ],
+   "anio": null,
+   "lbSlug": "up-against-it-2026",
+   "tmdb_id": 1536163,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "villeneuve-the-rise-of-a-legend",
+   "titulo": "Villeneuve: The Rise of a Legend",
+   "alt": null,
+   "directores": [
+    "Yan Lanouette Turgeon"
+   ],
+   "anio": null,
+   "lbSlug": "villeneuve-the-rise-of-a-legend",
+   "tmdb_id": 1247662,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "vintage-violence",
+   "titulo": "Vintage Violence",
+   "alt": null,
+   "directores": [
+    "Eugene Kotlyarenko"
+   ],
+   "anio": null,
+   "lbSlug": "vintage-violence",
+   "tmdb_id": 1608727,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "viva-carmen",
+   "titulo": "Viva Carmen",
+   "alt": null,
+   "directores": [
+    "Sébastien Laudenbach"
+   ],
+   "anio": null,
+   "lbSlug": "love-is-a-gypsy-child-a-carmen-story",
+   "tmdb_id": 1061821,
+   "_match": "alias/verificado por director"
+  },
+  {
+   "tipo": "obra",
+   "clave": "voices",
+   "titulo": "Voices",
+   "alt": null,
+   "directores": [
+    "Deanté Gray"
+   ],
+   "anio": null,
+   "lbSlug": "voices-2026-2",
+   "tmdb_id": 1671257,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "we-are-all-strangers",
+   "titulo": "We Are All Strangers",
+   "alt": null,
+   "directores": [
+    "Anthony Chen"
+   ],
+   "anio": null,
+   "lbSlug": "we-are-all-strangers",
+   "tmdb_id": 884692,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "we-are-born-good",
+   "titulo": "We Are Born Good",
+   "alt": null,
+   "directores": [
+    "Leung Chuen Yeung"
+   ],
+   "anio": null,
+   "lbSlug": "we-are-born-good",
+   "tmdb_id": 1736318,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "what-lies-between-us",
+   "titulo": "What Lies Between Us",
+   "alt": null,
+   "directores": [
+    "Amalie Næsby Fick"
+   ],
+   "anio": null,
+   "lbSlug": "what-lies-between-us-2026",
+   "tmdb_id": 1481651,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "whatcha-want",
+   "titulo": "Whatcha Want",
+   "alt": null,
+   "directores": [
+    "Mina Shum"
+   ],
+   "anio": null,
+   "lbSlug": "watcha-want",
+   "tmdb_id": 1634230,
+   "_match": "difuso 0.95/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "where-the-river-begins",
+   "titulo": "Where the River Begins",
+   "alt": null,
+   "directores": [
+    "Juan Andrés Arango"
+   ],
+   "anio": null,
+   "lbSlug": "where-the-river-begins",
+   "tmdb_id": 865567,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "wild-horse-nine",
+   "titulo": "Wild Horse Nine",
+   "alt": null,
+   "directores": [
+    "Martin McDonagh"
+   ],
+   "anio": null,
+   "lbSlug": "wild-horse-nine",
+   "tmdb_id": 891621,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "wild-wild-east",
+   "titulo": "Wild Wild East",
+   "alt": null,
+   "directores": [
+    "Jan Holoubek"
+   ],
+   "anio": null,
+   "lbSlug": "wild-wild-east",
+   "tmdb_id": 1514333,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "woman-unknown",
+   "titulo": "Woman Unknown",
+   "alt": null,
+   "directores": [
+    "May el-Toukhy"
+   ],
+   "anio": null,
+   "lbSlug": "woman-unknown",
+   "tmdb_id": 1511780,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "your-mother-your-mother-your-mother",
+   "titulo": "Your Mother Your Mother Your Mother",
+   "alt": null,
+   "directores": [
+    "Bassam Tariq"
+   ],
+   "anio": null,
+   "lbSlug": "your-mother-your-mother-your-mother",
+   "tmdb_id": 1437396,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "obra",
+   "clave": "zjili-a-story-of-sisterhood-and-the-burdens-of-excess",
+   "titulo": "Zjili: A Story of Sisterhood and The Burdens of Excess",
+   "alt": null,
+   "directores": [
+    "Hajara Musah Chambas",
+    "Christine Boateng"
+   ],
+   "anio": null,
+   "lbSlug": "zjili-a-story-of-sisterhood-and-the-burdens",
+   "tmdb_id": 1737849,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011185",
+   "titulo": "Land of the People",
+   "alt": "Մարդկանց երկիրը",
+   "directores": [
+    "Artavazd Pelechian"
+   ],
+   "anio": "1966",
+   "programa": "pelechian-project",
+   "lbSlug": "the-land-of-the-people",
+   "tmdb_id": 183714,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011186",
+   "titulo": "The Beginning",
+   "alt": "Սկիզբը",
+   "directores": [
+    "Artavazd Pelechian"
+   ],
+   "anio": "1967",
+   "programa": "pelechian-project",
+   "lbSlug": "beginning",
+   "tmdb_id": 183718,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011187",
+   "titulo": "We",
+   "alt": "Մենք",
+   "directores": [
+    "Artavazd Pelechian"
+   ],
+   "anio": "1969",
+   "programa": "pelechian-project",
+   "lbSlug": "we-1969",
+   "tmdb_id": 183725,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010296",
+   "titulo": "The Seasons",
+   "alt": "Տարվա եղանակները",
+   "directores": [
+    "Artavazd Pelechian"
+   ],
+   "anio": "1975",
+   "programa": "pelechian-project",
+   "lbSlug": "the-seasons-1975",
+   "tmdb_id": 44357,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011189",
+   "titulo": "The End",
+   "alt": "Վերջը",
+   "directores": [
+    "Artavazd Pelechian"
+   ],
+   "anio": "1992",
+   "programa": "pelechian-project",
+   "lbSlug": "end-1992",
+   "tmdb_id": 200148,
+   "_match": "exacto/director"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010984",
+   "titulo": "Melk",
+   "alt": null,
+   "directores": [
+    "Filip Anthonissen"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-strange-cuts",
+   "lbSlug": "milk-2026",
+   "tmdb_id": 1667690,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011038",
+   "titulo": "Koden'n",
+   "alt": null,
+   "directores": [
+    "Daniel «Tètèl» Chérubin"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-strange-cuts",
+   "lbSlug": "kodenn",
+   "tmdb_id": 1745682,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011039",
+   "titulo": "MAMMALIA",
+   "alt": null,
+   "directores": [
+    "Elia Kalogianni"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-strange-cuts",
+   "lbSlug": "mammalia-1",
+   "tmdb_id": 1745705,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010952",
+   "titulo": "Madrugada",
+   "alt": null,
+   "directores": [
+    "Sebastián Lojo"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-strange-cuts",
+   "lbSlug": "madrugada-2026",
+   "tmdb_id": 1686584,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011031",
+   "titulo": "The Dream Is A Snail",
+   "alt": "Giấc mơ là ốc sên",
+   "directores": [
+    "Thien An Nguyen"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-strange-cuts",
+   "lbSlug": "the-dream-is-a-snail",
+   "tmdb_id": 1678762,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011037",
+   "titulo": "Skinny Bottines",
+   "alt": "Skinny Boots",
+   "directores": [
+    "Romain F. Dubois"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-01",
+   "lbSlug": "skinny-boots",
+   "tmdb_id": 1673947,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011036",
+   "titulo": "Untitled Woman",
+   "alt": null,
+   "directores": [
+    "Camille Summers-Valli"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-01",
+   "lbSlug": "untitled-woman",
+   "tmdb_id": 1745983,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011100",
+   "titulo": "When the Ground Paused",
+   "alt": null,
+   "directores": [
+    "Jess Barclay Lawton"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-01",
+   "lbSlug": "when-the-ground-paused",
+   "tmdb_id": 1741269,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010900",
+   "titulo": "The End",
+   "alt": null,
+   "directores": [
+    "Niki Lindroth von Bahr"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-01",
+   "lbSlug": "the-end-2026-4",
+   "tmdb_id": 1472669,
+   "_match": "exacto/director"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010981",
+   "titulo": "Leftover Women",
+   "alt": null,
+   "directores": [
+    "Atalanta Swire"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-02",
+   "lbSlug": "leftover-women-1",
+   "tmdb_id": 1744863,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011017",
+   "titulo": "The Comet",
+   "alt": "La comète",
+   "directores": [
+    "Julie Charette"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-02",
+   "lbSlug": "the-comet",
+   "tmdb_id": 1660288,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010948",
+   "titulo": "Forgotten Spaceman",
+   "alt": "Hershewe Fazanawerd",
+   "directores": [
+    "Elham Ehsas"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-02",
+   "lbSlug": "forgotten-spaceman",
+   "tmdb_id": 1700421,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011116",
+   "titulo": "Between Late April and Early May",
+   "alt": null,
+   "directores": [
+    "Sophia Smith"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-02",
+   "lbSlug": "between-late-april-and-early-may",
+   "tmdb_id": 1744130,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011019",
+   "titulo": "Termite",
+   "alt": null,
+   "directores": [
+    "Shaunak Sen"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-02",
+   "lbSlug": "termite-2026",
+   "tmdb_id": 1745761,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011111",
+   "titulo": "The Lion Does Not Concern Himself",
+   "alt": null,
+   "directores": [
+    "Zarrar Kahn"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-02",
+   "lbSlug": "the-lion-does-not-concern-himself",
+   "tmdb_id": 1745415,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011115",
+   "titulo": "Under the Same Clouds",
+   "alt": "Sous les mêmes nuages",
+   "directores": [
+    "Jérémi Roy"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-03",
+   "lbSlug": "under-the-same-clouds",
+   "tmdb_id": 1735475,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011087",
+   "titulo": "Patronymic",
+   "alt": "По батькові",
+   "directores": [
+    "Mariia Ponomarova"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-03",
+   "lbSlug": "patronymic",
+   "tmdb_id": 1745765,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011056",
+   "titulo": "The Episode",
+   "alt": null,
+   "directores": [
+    "Logan Graham Greene"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-03",
+   "lbSlug": "the-episode-1",
+   "tmdb_id": 1746050,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011113",
+   "titulo": "El Aumento",
+   "alt": null,
+   "directores": [
+    "Maria Belen Poncio"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-04",
+   "lbSlug": "el-aumento-1",
+   "tmdb_id": 1745768,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010947",
+   "titulo": "Yek Rooz-e Shirin",
+   "alt": "A Sweet Day",
+   "directores": [
+    "Omid Abdollahi"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-04",
+   "lbSlug": "a-sweet-day",
+   "tmdb_id": 1728801,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011068",
+   "titulo": "(Haboolm Ksinaalgat) Soul Catcher",
+   "alt": null,
+   "directores": [
+    "Amanda Strong",
+    "Pamela Post"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-04",
+   "lbSlug": "soul-catcher-1",
+   "tmdb_id": 1746161,
+   "_match": "alias/verificado por director"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011057",
+   "titulo": "Fivehead",
+   "alt": null,
+   "directores": [
+    "Christian Smith"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-04",
+   "lbSlug": "fivehead",
+   "tmdb_id": 1745551,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010993",
+   "titulo": "Bloodline",
+   "alt": null,
+   "directores": [
+    "Fala Chen"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-05",
+   "lbSlug": "bloodline-4",
+   "tmdb_id": 1744368,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011030",
+   "titulo": "Till The Milk Runs Dry",
+   "alt": null,
+   "directores": [
+    "Kalainithan Kalaichelvan"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-05",
+   "lbSlug": "till-the-milk-runs-dry",
+   "tmdb_id": 1745960,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011145",
+   "titulo": "Almost Pink",
+   "alt": "Presque rose",
+   "directores": [
+    "Justine Prince"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-05",
+   "lbSlug": "almost-pink",
+   "tmdb_id": 1703823,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010992",
+   "titulo": "2:Love",
+   "alt": null,
+   "directores": [
+    "Ronni Shalev"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-05",
+   "lbSlug": "2-love",
+   "tmdb_id": 1730056,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010869",
+   "titulo": "Buddies",
+   "alt": null,
+   "directores": [
+    "Fraser Wolfe"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-05",
+   "lbSlug": "buddies-2",
+   "tmdb_id": 1739673,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011091",
+   "titulo": "The Spectacular Death of Prisca",
+   "alt": null,
+   "directores": [
+    "Kaelo Iyizoba"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-05",
+   "lbSlug": "the-spectacular-death-of-prisca",
+   "tmdb_id": 1744317,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011110",
+   "titulo": "Aman",
+   "alt": null,
+   "directores": [
+    "Rahul Roye"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-06",
+   "lbSlug": "aman-2026",
+   "tmdb_id": 1743858,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011029",
+   "titulo": "The Day I Smoked a Cigarette with my Father",
+   "alt": "Le jour où j'ai fumé une cigarette avec mon père",
+   "directores": [
+    "Sameh Alaa",
+    "Robin Vouters"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-06",
+   "lbSlug": "the-day-i-smoked-a-cigarette-with-my-father",
+   "tmdb_id": 1643560,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010996",
+   "titulo": "Imichki",
+   "alt": null,
+   "directores": [
+    "Yza Nouiga"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-06",
+   "lbSlug": "imichki",
+   "tmdb_id": 1717645,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010983",
+   "titulo": "Please",
+   "alt": null,
+   "directores": [
+    "Anna Mantzaris"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-06",
+   "lbSlug": "please-2026",
+   "tmdb_id": 1660526,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011109",
+   "titulo": "Moongirl",
+   "alt": "月の民",
+   "directores": [
+    "Victor Boccard"
+   ],
+   "anio": "2026",
+   "programa": "short-cuts-2026-programme-06",
+   "lbSlug": "moongirl-1",
+   "tmdb_id": 1744388,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010224",
+   "titulo": "Two Pids",
+   "alt": null,
+   "directores": [
+    "John Smith"
+   ],
+   "anio": "2026",
+   "programa": "wavelengths-1-house-and-home",
+   "lbSlug": "two-pids",
+   "tmdb_id": 1663244,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011146",
+   "titulo": "Chronicle of Tiredness",
+   "alt": "Crónica del cansancio",
+   "directores": [
+    "Natalia Marín"
+   ],
+   "anio": "2026",
+   "programa": "wavelengths-1-house-and-home",
+   "lbSlug": "chronicle-of-tiredness",
+   "tmdb_id": 1711424,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011096",
+   "titulo": "Ghazal-e Sorkh",
+   "alt": "غزالِ سُرخ",
+   "directores": [
+    "Maryam Tafakory"
+   ],
+   "anio": "2026",
+   "programa": "wavelengths-2-this-suffocating-now",
+   "lbSlug": "ghazal-e-sorkh",
+   "tmdb_id": 1745771,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011098",
+   "titulo": "TM",
+   "alt": null,
+   "directores": [
+    "Takehisa Kosugi"
+   ],
+   "anio": "1974",
+   "programa": "wavelengths-2-this-suffocating-now",
+   "lbSlug": "tm-1974",
+   "tmdb_id": 1324877,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011043",
+   "titulo": "This Suffocating Now",
+   "alt": null,
+   "directores": [
+    "Vika Kirchenbauer"
+   ],
+   "anio": "2026",
+   "programa": "wavelengths-2-this-suffocating-now",
+   "lbSlug": "this-suffocating-now",
+   "tmdb_id": 1616786,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010011",
+   "titulo": "Forever...Forever",
+   "alt": null,
+   "directores": [
+    "Johann Lurf"
+   ],
+   "anio": "2026",
+   "programa": "wavelengths-3-time-and-tide",
+   "lbSlug": "foreverforever",
+   "tmdb_id": 1616842,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011193",
+   "titulo": "Electric Fragments No. 1 - Rom (Men)",
+   "alt": "Frammenti Elettrici No. 1 - Rom (Uomini)",
+   "directores": [
+    "Yervant Gianikian",
+    "Angela Ricci Lucchi"
+   ],
+   "anio": "2001",
+   "programa": "wavelengths-3-time-and-tide",
+   "lbSlug": "electric-fragments-no-1-rom-uomini",
+   "tmdb_id": 502596,
+   "_match": "difuso 0.91/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000011097",
+   "titulo": "Fevers",
+   "alt": null,
+   "directores": [
+    "James Richards"
+   ],
+   "anio": "2026",
+   "programa": "wavelengths-3-time-and-tide",
+   "lbSlug": "fevers-2",
+   "tmdb_id": 1745772,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010699",
+   "titulo": "Peacocks Come with the Clouds",
+   "alt": "طاووس‌ها با ابرها می‌آیند",
+   "directores": [
+    "Parastoo Anoushahpour"
+   ],
+   "anio": "2026",
+   "programa": "wavelengths-anoushahpour-aljafari",
+   "lbSlug": "peacocks-come-with-the-clouds",
+   "tmdb_id": 1745775,
+   "_match": "exacto/unico"
+  },
+  {
+   "tipo": "corto",
+   "clave": "T000010626",
+   "titulo": "Masao Adachi Takes a Passport Photo",
+   "alt": "足立正生、パスポート写真を撮る",
+   "directores": [
+    "Kamal Aljafari"
+   ],
+   "anio": "2026",
+   "programa": "wavelengths-anoushahpour-aljafari",
+   "lbSlug": "masao-adachi-takes-a-passport-photo",
+   "tmdb_id": 1743616,
+   "_match": "exacto/unico"
+  }
+ ]
+}

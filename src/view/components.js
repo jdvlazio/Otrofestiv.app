@@ -442,6 +442,11 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     // «seminario» llegó con VARTEX 14: es la misma franja académica que taller
     // y charla, y sin entrada aquí su card mostraba el genérico EVENTO.
     'seminario':    {accent:'#F59E0B', headerLabel:'SEMINARIO'},
+    // «foro» y «debate» llegaron con Cinemancia 2026: su Foro de la Crítica son
+    // cuatro sesiones y el debate «Todos los planos del mundo» una. Mismo ámbar
+    // de la franja académica; sin entrada aquí su card mostraba EVENTO genérico.
+    'foro':         {accent:'#F59E0B', headerLabel:'FORO'},
+    'debate':       {accent:'#F59E0B', headerLabel:'DEBATE'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'ENCUENTRO'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'CINECONCIERTO'},
@@ -456,6 +461,8 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'charla':       {accent:'#F59E0B', headerLabel:'TALK'},
     'taller':       {accent:'#F59E0B', headerLabel:'WORKSHOP'},
     'seminario':    {accent:'#F59E0B', headerLabel:'SEMINAR'},
+    'foro':         {accent:'#F59E0B', headerLabel:'FORUM'},
+    'debate':       {accent:'#F59E0B', headerLabel:'DEBATE'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'MEETING'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'FILM CONCERT'},
@@ -489,6 +496,10 @@ export const ICONS={
   // el link clásico es diagonal y pelea con la geometría. 12px: es una marca
   // sobre una línea de 1.5px, no un icono de acción.
   link: `<svg aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" y1="12" x2="16" y2="12"/></svg>`,
+  // Lucide `award` — la medalla. La app solo tenía star/starFill, y la estrella
+  // YA significa calificación: usarla para «premio» hacía decir dos cosas con el
+  // mismo signo. Es el único icono nuevo que pide el palmarés.
+  award: `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>`,
   star:     `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
   starFill: `<svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
   heart:    `<svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>`,
@@ -770,7 +781,7 @@ export function festivalTagline(cfg, lang='es'){
 // usuario confirma con "Entrar"); en el sheet CARGA directo (no hay confirmación).
 // keyArtPos → custom property --kap (no inline style raw: ARQUITECTURA §10.3);
 // onerror=this.remove() degrada al template negro si el afiche 404ea (§10.2).
-function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang}){
+function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang, review}){
   const meta=`${cfg.city} · ${_langDates(cfg,lang)}`;
   const label=festivalLabel(cfg);
   const art=cfg.keyArt
@@ -779,18 +790,40 @@ function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang}){
   // Distintivo APLAZADO sobre el afiche — fuente única: sale en el riel del splash
   // Y en el sheet «cambiar festival» sin tocar cada superficie.
   const _postponed=_classifyFestival(cfg)==='postponed';
-  const badge=_postponed?`<span class="splash-card-badge">${t('fest_postponed_label')}</span>`:'';
-  return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}${_postponed?' postponed':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="${action}" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span>${badge}</button>`;
+  const badge=review?`<span class="splash-card-badge">${t('fest_review_label')}</span>`
+    :_postponed?`<span class="splash-card-badge">${t('fest_postponed_label')}</span>`:'';
+  return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}${_postponed?' postponed':''}${review?' review':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="${action}" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span>${badge}</button>`;
 }
 
 // `action` parametriza la superficie (20 jul 2026): el splash SELECCIONA (confirma
 // con "Entrar"); el sheet "cambiar festival" CARGA directo. Todo lo demás —orden,
 // partición vigentes/pasados, divisor "ANTERIORES"— es idéntico, así que el riel es
 // UNO SOLO y no dos implementaciones que se desincronizan.
-export function _renderSplashRailHTML(state, activeFestId, action='selectSplashFest'){
+// _enRevision — ¿este festival está en revisión del propio festival, y todavía?
+// Vive en el riel pero SOLO dentro de la app: en un navegador el store gate ya
+// mandó al usuario a las tiendas, así que web y app se ven distinto a propósito.
+// `until` la apaga sola: un permiso temporal que hay que acordarse de revocar
+// es, en la práctica, un permiso permanente.
+export function _enRevision(cfg){
+  const r=cfg&&cfg.review;
+  if(!r||!r.key) return false;
+  if(r.until&&new Date()>new Date(r.until+'T23:59:59')) return false;
+  return globalThis.__otfIsApp===true||globalThis.__otfIsDev===true;
+}
+
+export function _renderSplashRailHTML(state, activeFestId, action='selectSplashFest', conRevision=true){
   const {_lang} = state.snapshot();
-  const entries=_sortFestivals(Object.entries(FESTIVAL_CONFIG)
-    .filter(([,cfg])=>cfg.name&&cfg.group!=='test'), null);
+  const _todos=Object.entries(FESTIVAL_CONFIG).filter(([,cfg])=>cfg.name);
+  const entries=_sortFestivals(_todos.filter(([,cfg])=>cfg.group!=='test'), null);
+  // Los de revisión salen aparte: group:'test' los mantiene fuera de todo lo
+  // demás —validadores, sheet de festivales, preselección— y esto los devuelve
+  // solo acá, al final del riel.
+  // SOLO en el splash. El sheet «cambiar festival» reutiliza este mismo riel
+  // pero con action='loadFestival', que entra DIRECTO — sin pasar por
+  // dismissSplash, que es donde vive la clave. Con la card ahí, el festival en
+  // revisión quedaba abierto a un toque, sin clave: la puerta con llave al lado
+  // de una ventana abierta.
+  const revision=conRevision?_todos.filter(([,cfg])=>cfg.group==='test'&&_enRevision(cfg)):[];
   const current = entries.filter(([,cfg])=>_classifyFestival(cfg)!=='past');
   const past    = entries.filter(([,cfg])=>_classifyFestival(cfg)==='past');
   // isPast se pasa desde la partición (una sola clasificación por festival) — no
@@ -824,6 +857,13 @@ export function _renderSplashRailHTML(state, activeFestId, action='selectSplashF
   html+=_post.map(e=>mkCard(e,false)).join('');
   if(current.length && past.length) html+=div(t('splash_anteriores'));
   html+=past.map(e=>mkCard(e,true)).join('');
+  // Al FINAL de todo y con divisor propio: no compite con los vigentes ni se
+  // confunde con un pasado. Un divisor separa dos grupos, así que solo se emite
+  // si hay algo antes.
+  if(revision.length){
+    if(entries.length) html+=div(t('splash_en_revision'));
+    html+=revision.map(e=>_festivalCardHTML(e,{isPast:false,isActive:e[0]===activeFestId,action,lang:_lang,review:true})).join('');
+  }
   return html;
 }
 
@@ -838,7 +878,7 @@ export function _renderSplashRailHTML(state, activeFestId, action='selectSplashF
 // acción (cargar directo en vez de seleccionar+"Entrar"). El info lo puebla
 // _renderFestivalSelector (controller/festival.js) reusando _fillFestInfo.
 export function _renderFestivalSelectorHTML(state, activeFestId){
-  return _renderSplashRailHTML(state, activeFestId, 'loadFestival');
+  return _renderSplashRailHTML(state, activeFestId, 'loadFestival', false);
 }
 
 // p8 Step 6b (D-6B-2): util de título compartida (usada por feedback/programa/agenda).

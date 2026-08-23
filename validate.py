@@ -2574,9 +2574,12 @@ try:
            _re.search(r'color:var\(--(gray|gray2|white-60|white-40)\)', _b):
             _fam += 1
     # 88 heredadas + .diary-full (nombre completo bajo la sigla en la TAPA del
-    # Diario: tipografía de bloque de título, no una línea de dato). Baja cuando
-    # se migren las heredadas.
-    _TECHO = 89
+    # Diario: tipografía de bloque de título, no una línea de dato) + .palm-cap
+    # (pie de afiche del palmarés: el nombre DEBAJO de una imagen, en el riel y
+    # en las menciones — no es una línea de dato en una ficha, y usarla como tal
+    # la ataría a t-base, que a 62px de ancho no cabe). Baja cuando se migren
+    # las heredadas.
+    _TECHO = 90
     if _fam > _TECHO:
         _errs.append(f'familia de líneas de texto gris: {_fam} > techo {_TECHO} — '
                      f'usá .dato-linea en vez de crear otra variante (o bajá el techo si migraste)')
@@ -3848,16 +3851,23 @@ try:
         # _buildPosterV16) y el dueño del color de sección. Entra a la lista con la
         # razón escrita, que es lo que este guardián pide, en vez de seguir
         # recortando comentarios que explican POR QUÉ el código es así.
-        'src/view/components.js': 871,  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago
+        'src/view/components.js': 906,  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago
         # helpers.js estaba EXACTAMENTE en 800 antes del rediseño de pósters
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
         # guardián pide. Baja cuando se migre algo fuera de helpers.
-        'src/view/helpers.js': 877,  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago
-        'src/view/agenda.js': 2011,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago
-        'src/main.js': 1670,  # +1: dispatcher de includeAnyway (17 ago)  # +7: el splash recuerda el festival elegido (memoria que caduca sola) (16 ago)  # +46 total: _morphOpen a FLIP — clon de la card compuesta, radio contra-escalado, encuadre del destino (29 jul)
-        'src/i18n/i18n.js': 1583,  # +3: av_recalcular en es/en/pt — 18 ago
-        'src/controller/sheets-controller.js': 1682,  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
+        'src/view/helpers.js': 877,  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
+        # config.js es DATA: una entrada por festival, y crece con cada onboarding.
+        # No se puede «partir» sin inventar un índice que se desincronice del
+        # contenido, que es peor. Entra a la lista con la razón escrita.
+        'src/config.js': 950,  # +25: QAFF 2026 (entrada de FESTIVAL_CONFIG) — 23 ago  # +78: PALMARES de FICDEH 2026 (19 entradas + el porqué de tres correcciones sobre la fuente) — 23 ago  # +40: TIFF 2026 (entrada + 13 arquetipos de sección) — 23 ago
+        'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
+        'src/main.js': 1706,  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
+        'src/i18n/i18n.js': 1640,  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
+        'src/controller/sheets-controller.js': 1711,  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
+        # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
+        # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres
+        # correcciones sobre la fuente, que valen más escritas que ahorradas.
         'src/controller/handlers.js': 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     _over = []
@@ -4770,6 +4780,45 @@ except Exception as _e:
     warn(check, f'no se pudo verificar poster-mirado: {_e}')
 
 
+# ── [config-esm] node --check da un VERDE FALSO ─────────────────────────────
+# src/config.js es un MÓDULO ES, y `node --check` lo analiza como script: un
+# archivo con la llave de un festival sin cerrar pasa ese chequeo y revienta en
+# el navegador. Pasó el 20 ago 2026 al resolver un merge donde las dos ramas
+# agregaban su festival en el mismo punto: la entrada de Cinemancia se quedó
+# sin `},`, CineAutopsia terminó ANIDADO dentro de ella, y la app no arrancaba
+# —splash vacío, «Uncaught SyntaxError»—. Ni validate.py ni `node --check` lo
+# vieron: el primero parsea con regex, el segundo con la gramática equivocada.
+#
+# Este lo IMPORTA de verdad y cuenta los festivales. Es la única forma de saber
+# que el archivo que carga el navegador es el que creemos.
+check = 'config-esm'
+try:
+    import subprocess as _sp9
+    _js = ("import('./src/config.js').then(m=>{const C=m.FESTIVAL_CONFIG;"
+           "const n=Object.keys(C).length;"
+           "const anid=Object.entries(C).filter(([k,v])=>Object.keys(v||{})"
+           ".some(x=>/^[a-z]+20\\d\\d$/.test(x))).map(([k])=>k);"
+           "console.log(JSON.stringify({n,anid}));})"
+           ".catch(e=>{console.log(JSON.stringify({error:String(e.message)}))})")
+    _r = _sp9.run(['node', '-e', _js], capture_output=True, text=True, timeout=30)
+    _out = [l for l in _r.stdout.splitlines() if l.strip().startswith('{')]
+    if not _out:
+        fail(check, f'src/config.js NO carga como módulo ES: {(_r.stderr or "").strip()[:120]}')
+    else:
+        import json as _j9
+        _d = _j9.loads(_out[-1])
+        if _d.get('error'):
+            fail(check, f'src/config.js NO carga como módulo ES: {_d["error"][:120]}')
+        elif _d.get('anid'):
+            fail(check, f'festival ANIDADO dentro de otro (falta un «}}» en la entrada anterior): {_d["anid"]}')
+        elif _d.get('n', 0) < 5:
+            fail(check, f'FESTIVAL_CONFIG solo tiene {_d["n"]} festivales — ¿se cerró una entrada de más?')
+        else:
+            ok(check, f'src/config.js carga como módulo ES · {_d["n"]} festivales, ninguno anidado')
+except Exception as _e:
+    warn(check, f'no se pudo verificar config-esm: {_e}')
+
+
 check = 'arquetipo-existe'
 try:
     import re as _r7
@@ -4925,7 +4974,15 @@ try:
     # (con title_orig ya unificado dentro), filmType y cycle; _tmdbId se fusionó
     # en tmdb_id. La pregunta que los resolvió todos fue la misma: ¿lo vamos a
     # pintar? Si no, es peso muerto — por limpio que esté el dato.
-    _DEUDA = {}
+    _DEUDA = {
+        # TIFF, y los dos esperan una decisión de Juan, no un borrado mío:
+        # `section_tags` son los 47 SELLOS que él decidió sacar de las secciones
+        # y dejar como etiqueta — la decisión se tomó y el cableado en la vista
+        # nunca se hizo. `accessibility` son 34 funciones con subtítulos
+        # descriptivos ('oc'), dato real que hoy no se pinta en ningún lado.
+        'section_tags': 'TIFF (47) — sellos decididos por Juan, sin cablear en la vista',
+        'accessibility': 'TIFF (34) — accesibilidad de la función, sin superficie que la muestre',
+    }
     _src_all = ''.join(open(_p, encoding='utf-8').read()
                        for _p in _g.glob('src/**/*.js', recursive=True))
     _vistos = {}

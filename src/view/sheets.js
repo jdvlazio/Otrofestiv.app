@@ -26,6 +26,91 @@ export function openAuthSheet(){
   }
 }
 
+// _esRevisionActiva — ¿el festival ABIERTO ahora es uno en revisión? Dueño único
+// de la pregunta: de acá cuelgan las tres restricciones (no sincronizar, no
+// compartir, banner). Se pregunta por el festival activo, no por el elegido en
+// el splash, porque las restricciones aplican mientras se está DENTRO.
+export function _esRevisionActiva(){
+  const cfg=FESTIVAL_CONFIG[globalThis._activeFestId]||{};
+  return !!(cfg.review&&cfg.review.key);
+}
+
+// Enciende/apaga el banner de revisión.
+//
+// NO en el splash: ahí el aviso ya lo da el separador «En revisión» del riel, y
+// repetirlo abajo es decir dos veces lo mismo en una pantalla que se lee de un
+// golpe (lo levantó Juan al revisarlo). loadFestival() lo enciende cuando el
+// splash TODAVÍA está en pantalla —tarda 830 ms en irse— así que la condición
+// no puede ser solo «el festival es de revisión»: también tiene que no haber
+// splash. Se vuelve a pintar cuando el splash se retira.
+export function _pintarBannerRevision(){
+  const b=document.getElementById('review-banner');
+  if(!b) return;
+  const haySplash=!!document.getElementById('otrofestiv-splash');
+  b.classList.toggle('on', _esRevisionActiva() && !haySplash);
+}
+
+// ── Clave de un festival en revisión ─────────────────────────────────────────
+// Un festival que aún no se publica, abierto a su propio equipo para que lo vea
+// en la app real antes que nadie. La clave vive en config.js —en el bundle— a
+// propósito: protege de entrar por accidente, no de alguien decidido, y para
+// esto eso basta. El permiso caduca solo (review.until); no hay que acordarse
+// de revocarlo.
+//
+// Se recuerda por festival y no globalmente: entrar a uno no abre los otros.
+const _REVIEW_LS='otrofestiv_review_ok';
+
+export function _reviewDesbloqueado(festId){
+  try{ return (JSON.parse(localStorage.getItem(_REVIEW_LS)||'[]')||[]).includes(festId); }
+  catch(e){ return false; }
+}
+
+function _recordarReview(festId){
+  try{
+    const v=JSON.parse(localStorage.getItem(_REVIEW_LS)||'[]')||[];
+    if(!v.includes(festId)){ v.push(festId); localStorage.setItem(_REVIEW_LS,JSON.stringify(v)); }
+  }catch(e){}
+}
+
+let _reviewPendiente=null;   // festId esperando clave
+
+export function openReviewSheet(festId){
+  _reviewPendiente=festId;
+  const s=document.getElementById('review-sheet');
+  if(!s) return;
+  const inp=document.getElementById('review-key-inp');
+  const msg=document.getElementById('review-msg');
+  if(inp) inp.value='';
+  if(msg) msg.textContent='';
+  s.style.display='flex';
+  setTimeout(()=>{s.classList.add('open'); if(inp) inp.focus();},10);
+}
+
+export function closeReviewSheet(){
+  _reviewPendiente=null;
+  const s=document.getElementById('review-sheet');
+  if(s){s.classList.remove('open');setTimeout(()=>s.style.display='none',300);}
+}
+
+// Devuelve el festId desbloqueado, o null. Quien llama decide qué hacer con él
+// —acá no se entra a ningún festival: esta hoja solo valida.
+export function submitReviewKey(){
+  const festId=_reviewPendiente;
+  const inp=document.getElementById('review-key-inp');
+  const msg=document.getElementById('review-msg');
+  const dada=(inp&&inp.value||'').trim();
+  const real=((FESTIVAL_CONFIG[festId]||{}).review||{}).key||'';
+  if(!festId||!real) { closeReviewSheet(); return null; }
+  if(dada&&dada.toLowerCase()===String(real).toLowerCase()){
+    _recordarReview(festId);
+    closeReviewSheet();
+    return festId;
+  }
+  if(msg) msg.textContent=t('review_err');
+  if(inp){ inp.value=''; inp.focus(); }
+  return null;
+}
+
 export function closeAuthSheet(){
   const s=document.getElementById('auth-sheet');
   if(s){s.classList.remove('open');setTimeout(()=>s.style.display='none',300);}

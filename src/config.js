@@ -230,6 +230,80 @@ export const SECTION_EN = {
   '🤝 Encuentro': 'Gathering',
 };
 
+
+// ── PALMARÉS ────────────────────────────────────────────────────────────────
+// El palmarés es un dato PROPIO, no derivado de las funciones (decisión de Juan,
+// 23 ago 2026). Motivo: lo que un festival premió NO depende de si nosotros
+// teníamos su función. Vincularlos era forzar dos hechos distintos a ser uno, y
+// hacía que el palmarés heredara los huecos del catálogo — FICDEH premió «Los
+// bibliotecarios», una obra que nunca entró a nuestro JSON porque su ficha no
+// tenía ninguna función y el pipeline construye el catálogo DESDE las funciones.
+//
+// `obra` es el título EXACTO en el JSON del festival, o null si no la tenemos.
+// Con título → la tarjeta enlaza a su ficha. Sin título → se muestra igual, con
+// su afiche propio (Forma A). El palmarés queda completo siempre, y la ausencia
+// se ve como pieza nuestra en vez de como un hueco.
+//
+// `categoria` va VERBATIM del festival — misma regla que las secciones.
+// `nivel`: 'ganadora' | 'mencion'.
+export const PALMARES=[
+  // FICDEH 2026 — 8 posts del 21 ago en @ficdeh, uno por categoría.
+  // Tres correcciones sobre la fuente, documentadas porque publicar mal un premio
+  // es mentirle al usuario sobre su propio festival:
+  //  · «Muerto no» aparecía en la leyenda como Ficción NACIONAL, categoría que ese
+  //    mismo día se dio a «Sukua». El ARTE del post dice Internacional, la obra es
+  //    brasilera, y el JSON la tiene en la sección Internacional. Gana el arte.
+  //  · «Indryd» → «Ingryd» Ríos.  · «My Ggandmother is a skydriver» → grafía normal.
+  {fest:'ficdeh2026', categoria:'ImpulsoLab, 10ª edición', nivel:'ganadora',
+   titulo:'Eliza', autoria:'Ingryd Ríos', obra:null, tipo:'proyecto'},
+
+  {fest:'ficdeh2026', categoria:'Largometraje de Ficción', nivel:'ganadora',
+   titulo:'El verano de Jahia', autoria:'Olivier Meys', obra:'El verano de Jahia'},
+  {fest:'ficdeh2026', categoria:'Largometraje de Ficción', nivel:'mencion',
+   titulo:'Feito Pipa', autoria:'Allan Deberton', obra:'Feito Pipa'},
+  {fest:'ficdeh2026', categoria:'Largometraje de Ficción', nivel:'mencion',
+   titulo:'La hija cóndor', autoria:'Álvaro Olmos T.', obra:'La hija cóndor'},
+
+  {fest:'ficdeh2026', categoria:'Largometraje Documental Nacional', nivel:'ganadora',
+   titulo:'Hija del volcán', autoria:'Jenifer de la Rosa', obra:'Hija del volcán'},
+  {fest:'ficdeh2026', categoria:'Largometraje Documental Nacional', nivel:'mencion',
+   titulo:'Soñé su nombre', autoria:'Ángela Carabalí', obra:'Soñé su nombre'},
+  {fest:'ficdeh2026', categoria:'Largometraje Documental Nacional', nivel:'mencion',
+   titulo:'El valor de la palabra', autoria:'Marta Rodríguez', obra:'El valor de la palabra'},
+
+  // Sin `poster` acá a propósito: su afiche oficial entra en su propio PR, porque
+  // [frontera] separa código de app y datos de festival. Mientras tanto cae en
+  // Forma A, que es el último recurso y funciona.
+  {fest:'ficdeh2026', categoria:'Largometraje Documental Internacional', nivel:'ganadora',
+   titulo:'Los bibliotecarios', autoria:'Kim Snyder', obra:null},
+  {fest:'ficdeh2026', categoria:'Largometraje Documental Internacional', nivel:'mencion',
+   titulo:'El silencio de la tierra', autoria:'Frank Gutiérrez', obra:'El silencio de la tierra'},
+
+  {fest:'ficdeh2026', categoria:'Cortometraje de Ficción Nacional', nivel:'ganadora',
+   titulo:'Sukua', autoria:'Omar E. Ospina Giraldo', obra:'Sukua'},
+  {fest:'ficdeh2026', categoria:'Cortometraje de Ficción Nacional', nivel:'mencion',
+   titulo:'Sapos por todos lados', autoria:'Jacobo Alban', obra:'Sapos por todos lados'},
+  {fest:'ficdeh2026', categoria:'Cortometraje de Ficción Nacional', nivel:'mencion',
+   titulo:'La independencia', autoria:'John Agudelo Suárez', obra:'La independencia'},
+
+  {fest:'ficdeh2026', categoria:'Cortometraje de Ficción Internacional', nivel:'ganadora',
+   titulo:'Muerto no', autoria:'Alex Reis', obra:'Muerto no'},
+  {fest:'ficdeh2026', categoria:'Cortometraje de Ficción Internacional', nivel:'mencion',
+   titulo:'Una torreta en llamas', autoria:'Humberto Flores Jáuregui', obra:'Una torreta en llamas'},
+  {fest:'ficdeh2026', categoria:'Cortometraje de Ficción Internacional', nivel:'mencion',
+   titulo:'My grandmother is a skydiver', autoria:'Polina Piddubna', obra:'My grandmother is a skydiver'},
+
+  {fest:'ficdeh2026', categoria:'Cortometraje Documental Nacional', nivel:'ganadora',
+   titulo:'Madres de nacimiento', autoria:'Gloria Isabel Gómez Ceballos', obra:'Madres de nacimiento'},
+  {fest:'ficdeh2026', categoria:'Cortometraje Documental Nacional', nivel:'mencion',
+   titulo:'Apotnojushi La Casa del viento', autoria:'Marbel Ina Vanegas Jusayu', obra:'Apotnojushi La Casa del viento'},
+  {fest:'ficdeh2026', categoria:'Cortometraje Documental Nacional', nivel:'mencion',
+   titulo:'Si La Escombrera hablara', autoria:'Juan Prado', obra:'Si La Escombrera hablara'},
+
+  {fest:'ficdeh2026', categoria:'Cine Comunitario Nacional', nivel:'ganadora',
+   titulo:'Por una gota de leche', autoria:'Esteban J. Corzo', obra:'Por una gota de leche'},
+];
+
 // ── NOTICES ──────────────────────────────────────────────────────────────────
 // date: 'YYYY-MM-DD' de la función original — el banner desaparece al día siguiente
 // Para 'rescheduled': añadir newDay, newTime, newVenue
@@ -438,6 +512,50 @@ export const FESTIVAL_CONFIG={
     keyArt:'/assets/keyart/finca2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
+  'cinemancia2026': {
+    name:'Cinemancia',fullName:'Cinemancia — Festival de Cine del Valle de Aburrá',shortName:'CINEMANCIA',
+    city:'Valle de Aburrá',country:'CO',
+    dates:'3–12 SEP',dates_en:'SEP 3–12',year:2026,timezoneOffset:'-05:00',
+    storageKey:'cinemancia2026_',festivalStartStr:'2026-09-03T00:00:00',festivalEndStr:'2026-09-12T23:59:00',
+    festivalDates:{'2026-09-03': '2026-09-03', '2026-09-04': '2026-09-04', '2026-09-05': '2026-09-05', '2026-09-06': '2026-09-06', '2026-09-07': '2026-09-07', '2026-09-08': '2026-09-08', '2026-09-09': '2026-09-09', '2026-09-10': '2026-09-10', '2026-09-11': '2026-09-11', '2026-09-12': '2026-09-12'},
+    days:[{k: '2026-09-03', d: 3, lbl: 'JUE'}, {k: '2026-09-04', d: 4, lbl: 'VIE'}, {k: '2026-09-05', d: 5, lbl: 'SÁB'}, {k: '2026-09-06', d: 6, lbl: 'DOM'}, {k: '2026-09-07', d: 7, lbl: 'LUN'}, {k: '2026-09-08', d: 8, lbl: 'MAR'}, {k: '2026-09-09', d: 9, lbl: 'MIÉ'}, {k: '2026-09-10', d: 10, lbl: 'JUE'}, {k: '2026-09-11', d: 11, lbl: 'VIE'}, {k: '2026-09-12', d: 12, lbl: 'SÁB'}],
+    dayKeys:['2026-09-03', '2026-09-04', '2026-09-05', '2026-09-06', '2026-09-07', '2026-09-08', '2026-09-09', '2026-09-10', '2026-09-11', '2026-09-12'],
+    dayShort:{'2026-09-03': 'JUE 3', '2026-09-04': 'VIE 4', '2026-09-05': 'SÁB 5', '2026-09-06': 'DOM 6', '2026-09-07': 'LUN 7', '2026-09-08': 'MAR 8', '2026-09-09': 'MIÉ 9', '2026-09-10': 'JUE 10', '2026-09-11': 'VIE 11', '2026-09-12': 'SÁB 12'},
+    dayShort_en:{'2026-09-03': 'THU 3', '2026-09-04': 'FRI 4', '2026-09-05': 'SAT 5', '2026-09-06': 'SUN 6', '2026-09-07': 'MON 7', '2026-09-08': 'TUE 8', '2026-09-09': 'WED 9', '2026-09-10': 'THU 10', '2026-09-11': 'FRI 11', '2026-09-12': 'SAT 12'},
+    dayLong:{'2026-09-03': 'Jueves 3 de septiembre', '2026-09-04': 'Viernes 4 de septiembre', '2026-09-05': 'Sábado 5 de septiembre', '2026-09-06': 'Domingo 6 de septiembre', '2026-09-07': 'Lunes 7 de septiembre', '2026-09-08': 'Martes 8 de septiembre', '2026-09-09': 'Miércoles 9 de septiembre', '2026-09-10': 'Jueves 10 de septiembre', '2026-09-11': 'Viernes 11 de septiembre', '2026-09-12': 'Sábado 12 de septiembre'},
+    prioLimit:5,
+    sharedSlotIsOneScreening:true,
+    // Mixto, y lo dice el PDF oficial con todas las letras: «a excepción de las
+    // funciones en Cineprox Las Américas y Cine MAMM, las funciones del festival
+    // son de entrada libre». En Cineprox las sillas son numeradas y la boleta se
+    // compra en taquilla; en Cine MAMM, en el primer piso del museo. El build
+    // anterior marcaba las 89 funciones como gratis por igual.
+    ticketing_model:'mixed',
+    keyArt:'/assets/keyart/cinemancia2026.jpg',
+    // group:'test' — Cinemancia NO se publica todavía, pero ya NO por datos:
+    // el montaje está completo (79 funciones, 108 obras, todas con afiche,
+    // sinopsis, país y duración; 13 sedes ubicadas; cero programas sin
+    // contenido). Falta que el equipo del festival lo revise y lo apruebe,
+    // y para eso entran por ?fest=cinemancia2026 sin que nadie más lo vea.
+    // Quitar esta línea ES publicar.
+    group:'test',
+    // Sus seis municipios son el Valle de Aburrá: un solo territorio de
+    // traslado. Sin esto, la app se niega a estimar el viaje entre ellos —una
+    // regla pensada para FICDEH, que corre en ciudades a cientos de km— y le
+    // dice al usuario «es en otra ciudad» en vez de cuántos minutos le faltan.
+    metroArea:true,
+    // EN REVISIÓN — el festival ve su montaje en la app real, antes de que lo
+    // vea nadie más. `group:'test'` lo mantiene fuera de todo lo demás; esto lo
+    // devuelve al riel en su propio grupo, al final, tras los pasados.
+    //   · solo dentro de la app (en web el store gate manda a las tiendas);
+    //   · pide `key` para entrar — va en el bundle a propósito: protege de
+    //     entrar por accidente, no de alguien decidido, y eso basta;
+    //   · `until` la apaga sola. Un permiso temporal que hay que acordarse de
+    //     revocar es un permiso permanente.
+    review:{key:'cine26', until:'2026-09-03'},
+    tagline:'Festival de Cine del Valle de Aburrá',
+    films:null,posters:null,lbSlugs:{}
+  },
   'cineautopsia2026': {
     name:'CineAutopsia',fullName:'CineAutopsia — Festival de Cine Experimental de Bogotá',shortName:'CINEAUTOPSIA',
     city:'Bogotá',country:'CO',
@@ -487,6 +605,31 @@ export const FESTIVAL_CONFIG={
     dayShort_en:{'2026-09-14':'MON 14','2026-09-15':'TUE 15','2026-09-16':'WED 16','2026-09-17':'THU 17','2026-09-18':'FRI 18'},
     dayLong:{'2026-09-14':'Lunes 14 de septiembre','2026-09-15':'Martes 15 de septiembre','2026-09-16':'Miércoles 16 de septiembre','2026-09-17':'Jueves 17 de septiembre','2026-09-18':'Viernes 18 de septiembre'},
     prioLimit:3,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
+  'tiff2026': {
+    name:'TIFF',fullName:'TIFF — Toronto International Film Festival',shortName:'TIFF',
+    city:'Toronto',country:'CA',
+    dates:'10–20 SEP',dates_en:'SEP 10–20',year:2026,timezoneOffset:'-04:00',
+    storageKey:'tiff2026_',festivalStartStr:'2026-09-10T00:00:00',festivalEndStr:'2026-09-20T23:59:00',
+    festivalDates:{'2026-09-10': '2026-09-10', '2026-09-11': '2026-09-11', '2026-09-12': '2026-09-12', '2026-09-13': '2026-09-13', '2026-09-14': '2026-09-14', '2026-09-15': '2026-09-15', '2026-09-16': '2026-09-16', '2026-09-17': '2026-09-17', '2026-09-18': '2026-09-18', '2026-09-19': '2026-09-19', '2026-09-20': '2026-09-20'},
+    days:[{k: '2026-09-10', d: 10, lbl: 'JUE'}, {k: '2026-09-11', d: 11, lbl: 'VIE'}, {k: '2026-09-12', d: 12, lbl: 'SÁB'}, {k: '2026-09-13', d: 13, lbl: 'DOM'}, {k: '2026-09-14', d: 14, lbl: 'LUN'}, {k: '2026-09-15', d: 15, lbl: 'MAR'}, {k: '2026-09-16', d: 16, lbl: 'MIÉ'}, {k: '2026-09-17', d: 17, lbl: 'JUE'}, {k: '2026-09-18', d: 18, lbl: 'VIE'}, {k: '2026-09-19', d: 19, lbl: 'SÁB'}, {k: '2026-09-20', d: 20, lbl: 'DOM'}],
+    dayKeys:['2026-09-10', '2026-09-11', '2026-09-12', '2026-09-13', '2026-09-14', '2026-09-15', '2026-09-16', '2026-09-17', '2026-09-18', '2026-09-19', '2026-09-20'],
+    dayShort:{'2026-09-10': 'JUE 10', '2026-09-11': 'VIE 11', '2026-09-12': 'SÁB 12', '2026-09-13': 'DOM 13', '2026-09-14': 'LUN 14', '2026-09-15': 'MAR 15', '2026-09-16': 'MIÉ 16', '2026-09-17': 'JUE 17', '2026-09-18': 'VIE 18', '2026-09-19': 'SÁB 19', '2026-09-20': 'DOM 20'},
+    dayShort_en:{'2026-09-10': 'THU 10', '2026-09-11': 'FRI 11', '2026-09-12': 'SAT 12', '2026-09-13': 'SUN 13', '2026-09-14': 'MON 14', '2026-09-15': 'TUE 15', '2026-09-16': 'WED 16', '2026-09-17': 'THU 17', '2026-09-18': 'FRI 18', '2026-09-19': 'SAT 19', '2026-09-20': 'SUN 20'},
+    dayLong:{'2026-09-10': 'Jueves 10 de septiembre', '2026-09-11': 'Viernes 11 de septiembre', '2026-09-12': 'Sábado 12 de septiembre', '2026-09-13': 'Domingo 13 de septiembre', '2026-09-14': 'Lunes 14 de septiembre', '2026-09-15': 'Martes 15 de septiembre', '2026-09-16': 'Miércoles 16 de septiembre', '2026-09-17': 'Jueves 17 de septiembre', '2026-09-18': 'Viernes 18 de septiembre', '2026-09-19': 'Sábado 19 de septiembre', '2026-09-20': 'Domingo 20 de septiembre'},
+    prioLimit:6,
+    keyArt:'/assets/keyart/tiff2026-v2.jpg',
+    // PUBLICADO el 23 ago 2026, por decisión de Juan. El freno estuvo puesto
+    // desde el 17 ago esperando su pase sobre las sinopsis; lo levanta él
+    // sabiendo que faltan 20 de 296 —casi todas de cortos experimentales—,
+    // 16 años, un afiche y un director. Ninguno rompe una ficha: sale sin
+    // sinopsis, no sin obra.
+    tagline:'Toronto International Film Festival',
+    ticketing_model:'paid', // todas las públicas tienen enlace de Ticketmaster.
+    // OJO: el vocabulario de la app es SOLO 'paid' | 'mixed'. Puse 'ticketed',
+    // que no existe, y el botón de boletería no se pintó en ninguna de las 637
+    // fichas pese a tener el enlace. Lo cazó Juan en pantalla, 13 ago.
     films:null,posters:null,lbSlugs:{}
   },
   'ficmontanas2026':{
@@ -544,6 +687,34 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
+  '📺 Primetime': 'Especiales / Eventos',
+  '🔎 Discovery': 'Perspectivas / Miradas',
+  '🎯 Centrepiece': 'Muestra / País',
+  '⭐ Special Presentations': 'Muestra / País',
+  '🎩 Gala Presentations': 'Apertura / Gala',
+  '🌙 Midnight Madness': 'Especiales / Eventos',
+  '🏆 Platform': 'Competencia',
+  '〰️ Wavelengths': 'Perspectivas / Miradas',
+  '🎥 TIFF Docs': 'Perspectivas / Miradas',
+  '🎙️ In Conversation With...': 'Charlas / Industria',
+  '🏛️ TIFF Classics': 'Retrospectiva / Tributo',
+  '🎪 Special Events': 'Especiales / Eventos',
+  '✂️ Short Cuts': 'Cortos / Programas',
+  // ── Cinemancia 2026 · Valle de Aburrá ─────────────────────────────────
+  '⭐ Función inaugural': 'Apertura / Gala',
+  '🎬 Función de clausura': 'Clausura',
+  '🏆 Competencia Central': 'Competencia',
+  '🎞️ Competencia de Cortometrajes': 'Competencia',
+  '🔺 Programa 1. El espesor de las formas': 'Cortos / Programas',
+  '👁️ Programa 2. Teoremas sobre la mirada': 'Cortos / Programas',
+  '⚗️ Alquimia de la luz. El cine de Luciana Decker': 'Retrospectiva / Tributo',
+  '🃏 Carta blanca': 'Perspectivas / Miradas',
+  '🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva': 'Retrospectiva / Tributo',
+  '🌡️ Febril incisión. El cine de Thomas Fürhapter': 'Retrospectiva / Tributo',
+  '🖤 Sick and Dirty. Curaduría de Michael Koresky': 'Perspectivas / Miradas',
+  '📼 La sutil materia. Sergio Navarro': 'Retrospectiva / Tributo',
+  '🇦🇷 Historia(s) del cine: Argentina. Curaduría de José Miccio': 'Muestra / País',
   // VARTEX 14 — muestra de video y experimental, Medellín.
   '🌍 Muestra Internacional': 'Muestra / País',
   '🇨🇴 Muestra Nacional':     'Muestra / País',
@@ -733,6 +904,7 @@ export const COUNTRY_NAMES = {
   CO: { es:'Colombia',       en:'Colombia' },
   BR: { es:'Brasil',         en:'Brazil' },
   US: { es:'Estados Unidos', en:'United States' },
+  CA: { es:'Canadá',         en:'Canada' },
   AR: { es:'Argentina',      en:'Argentina' },
 };
 // countryName(iso, lang) — nombre del país o '' si no hay dato / ISO desconocido. Puro.

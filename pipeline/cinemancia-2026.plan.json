@@ -1,0 +1,188 @@
+{
+ "_nota": "Cinemancia 2026 — migrado al pipeline genérico. Este archivo es lo ÚNICO propio del festival: identidad, tabla de sedes y mapa de secciones. Hay DOS fuentes mandantes y se reparten el trabajo: la PARRILLA del PDF oficial dice cuándo y dónde (86 funciones), y la HOJA que el festival envió el 20 ago dice QUÉ obras van en cada programa y describe las 10 charlas. El barrido web anterior sacaba el horario de la ficha de cada película y producía 89 funciones sueltas, sin inauguración ni clausura: no se usa.",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/cinemancia-2026-parrilla.py fuentes/cinemancia-2026/programacion-oficial.pdf",
+   "que": "PDF oficial → parrilla posicional (86 funciones, 15 sedes)"
+  },
+  {
+   "cmd": "python3 pipeline/cinemancia-2026-crudo.py",
+   "que": "parrilla + hoja del festival + catálogo → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py cinemancia-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/publicar.py cinemancia-2026",
+   "que": "build → festivals/ (valida el contrato al escribir)"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/cinemancia-2026-crudo.json",
+  "enriquecido": "festivals/staging/cinemancia-2026-tmdb.json",
+  "geo": "festivals/staging/cinemancia-2026-venues-geo.json",
+  "sedes": {
+   "Antimateria Libros y Café Medellín": [
+    "Antimateria Libros y Café - Medellín",
+    ""
+   ],
+   "Biblioteca Comfama Bello Centro Bello": [
+    "Biblioteca Comfama Bello Centro - Bello",
+    ""
+   ],
+   "Casa Municipal de la Cultura de Caldas Caldas": [
+    "Casa Municipal de la Cultura - Caldas",
+    ""
+   ],
+   "Casa Museo Otraparte Envigado": [
+    "Casa Museo Otraparte - Envigado",
+    ""
+   ],
+   "Centro Colombo Americano Sede centro sala 1 Medellín": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "Sala 1"
+   ],
+   "Centro Colombo Americano Sede centro sala 2 Medellín": [
+    "Centro Colombo Americano - Sede centro - Medellín",
+    "Sala 2"
+   ],
+   "Centro Cultural y Educativo Fundación Diego Echavarría Misas Itagüí": [
+    "Centro Cultural y Educativo Fundación Diego Echavarría Misas - Itagüí",
+    ""
+   ],
+   "Cine MAMM Medellín": [
+    "Cine MAMM - Medellín",
+    ""
+   ],
+   "Cineprox Las Américas Medellín": [
+    "Cineprox Las Américas - Medellín",
+    ""
+   ],
+   "ITM – Facultad de Artes y Humanidades Sede La Floresta Medellín": [
+    "ITM - Facultad de Artes y Humanidades - Medellín",
+    "Sede La Floresta"
+   ],
+   "La Capilla del Claustro Comfama Medellín": [
+    "La Capilla del Claustro Comfama - Medellín",
+    ""
+   ],
+   "Teatro Caribe Itagüí": [
+    "Teatro Caribe - Itagüí",
+    ""
+   ],
+   "Teatro Comfama Alfonso Restrepo Moreno Medellín": [
+    "Teatro Comfama Alfonso Restrepo Moreno - Medellín",
+    ""
+   ],
+   "Teatro Otraparte Biblioteca y Edificio Cultural Otraparte Envigado": [
+    "Teatro Otraparte - Envigado",
+    ""
+   ],
+   "Terko Copacabana": [
+    "Terko - Copacabana",
+    ""
+   ]
+  },
+  "seccion_default": "Proyecciones especiales",
+  "secciones": {
+   "Función inaugural": {
+    "emoji": "⭐",
+    "en": "Opening Film",
+    "archetype": "Apertura / Gala"
+   },
+   "Función de clausura": {
+    "emoji": "🎬",
+    "en": "Closing Film",
+    "archetype": "Clausura"
+   },
+   "Competencia central": {
+    "emoji": "🏆",
+    "en": "Main Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia de cortometrajes": {
+    "emoji": "🎞️",
+    "en": "Short Film Competition",
+    "archetype": "Competencia"
+   },
+   "Programa 1. El espesor de las formas": {
+    "emoji": "🔺",
+    "en": "Programme 1. The Thickness of Forms",
+    "archetype": "Cortos / Programas"
+   },
+   "Programa 2. Teoremas sobre la mirada": {
+    "emoji": "👁️",
+    "en": "Programme 2. Theorems on the Gaze",
+    "archetype": "Cortos / Programas"
+   },
+   "Competencia Nuevas voces": {
+    "emoji": "🌱",
+    "en": "New Voices Competition",
+    "archetype": "Competencia",
+    "nombre": "Competencia Nuevas Voces"
+   },
+   "Proyecciones especiales": {
+    "emoji": "✨",
+    "en": "Special Screenings",
+    "archetype": "Especiales / Eventos",
+    "nombre": "Proyecciones Especiales"
+   },
+   "Iluminaciones": {
+    "emoji": "💡",
+    "en": "Illuminations",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Alquimia de la luz. El cine de Luciana Decker": {
+    "emoji": "⚗️",
+    "en": "Alchemy of Light. The Cinema of Luciana Decker",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Carta blanca": {
+    "emoji": "🃏",
+    "en": "Carte Blanche",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "La primavera llega para los que esperan. El cine de José Luis Torres Leiva": {
+    "emoji": "🌷",
+    "en": "Spring Comes for Those Who Wait. The Cinema of José Luis Torres Leiva",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Febril incisión. El cine de Thomas Fürhapter": {
+    "emoji": "🌡️",
+    "en": "Feverish Incision. The Cinema of Thomas Fürhapter",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Sick and Dirty. Curaduría de Michael Koresky": {
+    "emoji": "🖤",
+    "en": "Sick and Dirty. Curated by Michael Koresky",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "La sutil materia. Sergio Navarro": {
+    "emoji": "📼",
+    "en": "The Subtle Matter. Sergio Navarro",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Historia(s) del cine: Argentina. Curaduría de José Miccio": {
+    "emoji": "🇦🇷",
+    "en": "Histoire(s) of Cinema: Argentina. Curated by José Miccio",
+    "archetype": "Muestra / País"
+   }
+  },
+  "name": "Cinemancia",
+  "fullName": "Cinemancia — Festival de Cine del Valle de Aburrá",
+  "city": "Valle de Aburrá",
+  "country": "CO",
+  "dates": "3–12 SEP",
+  "dates_en": "SEP 3–12",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "cinemancia2026_",
+  "festivalStartStr": "2026-09-03T00:00:00",
+  "festivalEndStr": "2026-09-12T23:59:00",
+  "prioLimit": 5,
+  "sharedSlotIsOneScreening": true,
+  "ticketing_model": "mixed",
+  "mes_es": "septiembre"
+ }
+}

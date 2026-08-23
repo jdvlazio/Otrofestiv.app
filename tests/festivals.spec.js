@@ -22,7 +22,16 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
     // clase .splash-rail) y también vive en el DOM — document-wide mezcla ambos y
     // el invariante de tiering lee las 18 cards intercaladas. Latente hasta FINCA:
     // con 0 vigentes, tieringOk era trivialmente true.
-    const ids = [...document.querySelectorAll('#splash-rail .splash-card[data-fest]')].map(c => c.dataset.fest);
+    // Las cards EN REVISIÓN quedan fuera del invariante de tiering: son un CUARTO
+    // grupo, deliberadamente al final —después de los pasados— y con divisor
+    // propio. Por fechas un festival en revisión suele clasificar 'upcoming', así
+    // que contarlo aquí lo leería como «un vigente después de un pasado», que es
+    // justo lo que este test prohíbe. El invariante sigue vigilando los tres
+    // grupos de siempre; el cuarto tiene su propia regla (va último) y se
+    // comprueba abajo.
+    const ids = [...document.querySelectorAll('#splash-rail .splash-card[data-fest]:not(.review)')].map(c => c.dataset.fest);
+    const idsRev = [...document.querySelectorAll('#splash-rail .splash-card.review')].map(c => c.dataset.fest);
+    const todas = [...document.querySelectorAll('#splash-rail .splash-card[data-fest]')].map(c => c.dataset.fest);
     const cls = ids.map(id => _classifyFestival(FESTIVAL_CONFIG[id]));
     const firstPastIdx = cls.indexOf('past');
     const lastCurrentIdx = cls.reduce((mx, c, i) => (c !== 'past' ? i : mx), -1);
@@ -39,19 +48,28 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
       hasUpcoming: cls.some(c => c === 'upcoming'),
       hasOngoing: cls.some(c => c === 'ongoing'),
       leviza: ids.some(id => id.includes('leviza')),
+      // Si hay cards de revisión, van TODAS al final del riel.
+      hayRevision: idsRev.length > 0,
+      revisionAlFinal: idsRev.length === 0
+        || idsRev.every(id => todas.indexOf(id) >= todas.length - idsRev.length),
     };
   });
   expect(r.count).toBeGreaterThan(1);
   expect(r.leviza).toBe(true); // leviza (pasado) presente en el riel
+  expect(r.revisionAlFinal, 'las cards en revisión van al final del riel').toBe(true);
   expect(r.tieringOk).toBe(true); // vigentes siempre antes que pasados
   if (r.hasCurrent) expect(r.firstIsCurrent).toBe(true); // un vigente encabeza
   // El divisor "ANTERIORES" existe EXACTAMENTE cuando hay AMBOS grupos (si todos
   // los festivales ya pasaron, p.ej. tras el 19 JUL, no se emite → no falla el CI).
-  expect(r.dividerPresent).toBe(r.hasCurrent && r.hasPast);
+  expect(r.dividerPresent).toBe((r.hasCurrent && r.hasPast) || r.hayRevision);
   // Un divisor SEPARA dos grupos: se emite exactamente cuando hay algo de los dos
   // lados. Colgar uno de primero descentraría el snap inicial, que es de lo que
   // depende la preselección.
-  const esperados = (r.hasOngoing && r.hasUpcoming ? 1 : 0) + (r.hasCurrent && r.hasPast ? 1 : 0);
+  // Cuarto sumando: «En revisión» separa ese grupo del resto, y se emite con la
+  // misma regla —solo si hay algo antes—. Un festival en revisión existe pocos
+  // días al año, así que este término es 0 casi siempre.
+  const esperados = (r.hasOngoing && r.hasUpcoming ? 1 : 0) + (r.hasCurrent && r.hasPast ? 1 : 0)
+    + (r.hayRevision && (r.hasCurrent || r.hasPast) ? 1 : 0);
   expect(r.divisores.length, `divisores: ${JSON.stringify(r.divisores)}`).toBe(esperados);
 });
 

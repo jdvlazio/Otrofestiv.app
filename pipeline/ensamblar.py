@@ -248,7 +248,21 @@ def ensamblar(fid, escribir=True):
             e['_programa_original'] = f.get('titulo')
 
         films.append(lib.normaliza({k: v for k, v in e.items() if v not in (None, '', [], {})}, rep))
-        venues[sede] = geo.get(sede, {'short': sede.split(' - ')[0], 'city': sede.split(' - ')[-1]})
+        # `short` y `city` se derivan SIEMPRE del nombre —que por contrato es
+        # «Nombre de la Sede - Ciudad»— y el sidecar de geo se monta ENCIMA.
+        #
+        # Antes era `geo.get(sede, {…})`: los valores derivados se usaban solo
+        # como respaldo cuando la sede NO estaba en el sidecar. Un sidecar con
+        # lat/lng/address pero sin short ni city —que es lo normal, porque lo
+        # escribe la geocodificación— ganaba entero y se llevaba los dos campos
+        # por delante. Cinemancia publicó sus 13 sedes sin `short` ni `city`:
+        # el nombre salía completo («Centro Colombo Americano - Sede centro -
+        # Medellín» en vez de «Centro Colombo Americano») y el filtro por
+        # ciudad no se encendía pese a cubrir seis municipios, porque
+        # multiCity exige ≥2 valores de `city` no vacíos.
+        _v = {'short': sede.split(' - ')[0], 'city': sede.split(' - ')[-1]}
+        _v.update(geo.get(sede, {}))
+        venues[sede] = _v
 
     out = {'_etapa': plan.get('_etapa', 'build generado por pipeline/ensamblar.py'),
            '_provenance': lib.provenance(crudo['_provenance'].get('fuente', ''),
