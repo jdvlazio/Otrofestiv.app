@@ -458,9 +458,12 @@ export const FESTIVAL_CONFIG={
     // anterior marcaba las 89 funciones como gratis por igual.
     ticketing_model:'mixed',
     keyArt:'/assets/keyart/cinemancia2026.jpg',
-    // group:'test' — Cinemancia NO se publica todavía. Falta el contenido de
-    // tres programas (los dos focos de Luciana Decker y el de Rajendra Gour) y
-    // las coordenadas de dos sedes. Quitar esta línea ES publicar.
+    // group:'test' — Cinemancia NO se publica todavía, pero ya NO por datos:
+    // el montaje está completo (79 funciones, 108 obras, todas con afiche,
+    // sinopsis, país y duración; 13 sedes ubicadas; cero programas sin
+    // contenido). Falta que el equipo del festival lo revise y lo apruebe,
+    // y para eso entran por ?fest=cinemancia2026 sin que nadie más lo vea.
+    // Quitar esta línea ES publicar.
     group:'test',
     // Sus seis municipios son el Valle de Aburrá: un solo territorio de
     // traslado. Sin esto, la app se niega a estimar el viaje entre ellos —una
