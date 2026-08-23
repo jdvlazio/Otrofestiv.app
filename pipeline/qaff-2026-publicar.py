@@ -35,7 +35,7 @@ DESCARTAR:
   · `_poster_provisional`, `_geocode_nota`, `_contact`, `_obras_sin_funcion`,
     `_etapa`        material de trabajo.
 """
-import json, os, sys, collections
+import json, os, sys, collections, unicodedata
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
@@ -46,6 +46,18 @@ OUT = f'{REPO}/festivals/qaff-2026.json'
 
 CONSERVAR = {'_src', '_inherited', '_pendiente', '_nota'}
 SRC_UTIL = ('boom_event_id', 'tmdb_id')      # del _src, solo esto sobrevive
+
+
+def _sinacento(s):
+    """Título reducido a letras y dígitos, sin tildes ni mayúsculas.
+
+    La PUNTUACIÓN también se cae, y no es un detalle: «Amazonas: Cocinas
+    Indígenas…» contra «Amazonas Cocinas Indigenas…» son el mismo título —uno
+    perdió las tildes Y los dos puntos—, pero comparando solo tildes salían
+    distintos y el original se copiaba a title_en como si fuera inglés."""
+    t = ''.join(c for c in unicodedata.normalize('NFKD', s or '')
+                if not unicodedata.combining(c)).lower()
+    return ''.join(c for c in t if c.isalnum())
 
 
 def limpio(d):
@@ -92,6 +104,66 @@ def main():
     _bog = {k for k, v in d['venues'].items() if v.get('city') != 'Quibdó'}
     out['films'] = [f for f in out['films'] if f['venue'] not in _bog]
     out['venues'] = {k: v for k, v in out['venues'].items() if k not in _bog}
+    # NFC ANTES de tocar títulos. Las tablas de abajo buscan por clave exacta y
+    # «Soñé su nombre» llegaba en NFD (n+tilde combinante): se ve idéntico, no
+    # casa con nada, y la corrección se caía sin error ni síntoma. lib.normaliza
+    # también lo hace, pero corre al final — demasiado tarde para estas tablas.
+    for f in out['films']:
+        for k, v in list(f.items()):
+            if isinstance(v, str):
+                f[k] = unicodedata.normalize('NFC', v)
+
+    # ── TÍTULO: el original manda, el inglés va en title_en ───────────────────
+    # (decisión de Juan, 23 ago 2026)
+    #
+    # QAFF venía al revés que los otros nueve festivales: el inglés en `title`
+    # y el original en `title_orig`, un campo que nadie lee y que el contrato no
+    # declara. `title_en` SÍ está declarado, lo leen cinco sitios de src/, y
+    # filmDisplayTitle() ya sabe pintar «inglés arriba, original debajo» cuando
+    # la interfaz está en inglés. FICDEH tiene 171 así; QAFF tenía UNO —«El
+    # Capitán Anthony» → «Captain Anthony»—, que es el caso hecho bien.
+    #
+    # El inglés lo pusimos nosotros, tomándolo de la página de Selección
+    # Oficial: el CALENDARIO del propio festival publica RELATOS DE LA
+    # GUAJIRITA, CAIDA LIBRE, LA TINAJA, REFUGIAR EL GESTO y POSESAS.
+    #
+    # Dos casos, no uno:
+    #   · mismo título mal escrito (Carabali→Carabalí) → se corrige `title` y
+    #     NO se inventa un title_en: «Carabali» no es un título en inglés.
+    #   · traducción de verdad (Free Fall / Caída Libre) → el original a
+    #     `title`, el inglés a `title_en`.
+    # La frontera es comparar sin tildes ni mayúsculas: si coinciden, es
+    # ortografía; si no, son dos títulos.
+    EN_LIMPIO = {  # el inglés venía pegado al original entre corchetes
+        'POSESAS [Possessed]': 'Possessed',
+    }
+
+    # Dos obras que la regla de arriba NO podía ver, porque nunca tuvieron
+    # title_orig: nadie leyó su afiche, así que no había con qué comparar.
+    # Aparecieron cruzando el lbSlug —verificado— contra el título: un slug en
+    # inglés sobre un título en español dice que falta un title_en, y uno que no
+    # casa con ninguno de los dos dice que alguno está mal escrito.
+    #   · «Mi viche todo el dia» → TMDB da «Mi viche todo el día» como original
+    #     y Letterboxd (my-daily-viche) «My Daily Viche» como inglés.
+    #   · «Soñé su nombre» ya estaba bien; solo le faltaba el inglés, que
+    #     confirman Letterboxd (i-dreamed-his-name) y TMDB.
+    A_MANO = {
+        'Mi viche todo el dia': ('Mi viche todo el día', 'My Daily Viche'),
+        'Soñé su nombre':       ('Soñé su nombre',       'I Dreamed His Name'),
+    }
+    for f in out['films']:
+        if f['title'] in A_MANO:
+            f['title'], f['title_en'] = A_MANO[f['title']]
+    for f in out['films']:
+        orig = f.pop('title_orig', None)
+        if not orig or orig == f['title']:
+            continue
+        if _sinacento(orig) == _sinacento(f['title']):
+            f['title'] = orig                      # solo ortografía
+        else:
+            f['title_en'] = EN_LIMPIO.get(f['title'], f['title'])
+            f['title'] = orig
+
     _usadas = {f.get('section') for f in out['films']}
     out['sections'] = {k: v for k, v in out['sections'].items() if k in _usadas}
 
