@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
+  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, legacyProgramParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, dayFullyPassed, festivalEnded, minToStr, simNow, simTodayStr, toMin,
@@ -1342,7 +1342,7 @@ export function _renderSavedAgendaHTML(state, consensus){
 // de app. Un solo tamaño de póster (4 col), un solo label de día, estrellas
 // SIEMPRE bajo el afiche (Letterboxd), un solo ojo. Las 13 violaciones del
 // muro doble murieron aquí de raíz.
-function _dwCard(state,{title,poster,rating,off}){
+function _dwCard(state,{title,poster,posterSVG,rating,off}){
   const safe=escXML(title||'');
   // El AFICHE es solo afiche (Juan, 18 ago): nada encima, y su tap abre la
   // ficha como en toda la app. Estado y acciones viven en la fila de control,
@@ -1357,7 +1357,12 @@ function _dwCard(state,{title,poster,rating,off}){
       :`<button class="dw-ctrl dw-ctrl-star" data-action="openRatingSheet" data-title="${safe}" data-stop="1" aria-label="${t('aria_calificar')}">${ICONS.starFill}</button>`;
   return`<div class="dw-card">
     <div class="dw-poster${off?' dw-off':''} js-open-pel" data-title="${safe}">
-      ${poster?`<img class="img-cover" src="${poster}" loading="lazy" onerror="this.remove()" alt="">`:''}
+      ${posterSVG
+        // SVG INLINE y no <img src>: la forma C lleva <image> con afiches
+        // remotos, y dentro de un <img> un SVG es documento aislado que tiene
+        // prohibido cargar recursos externos — saldrían rotos.
+        ? `<div class="img-cover dw-svg">${posterSVG}</div>`
+        : poster?`<img class="img-cover" src="${poster}" loading="lazy" onerror="this.remove()" alt="">`:''}
     </div>
     <div class="dw-row">${ctrl}</div>
   </div>`;
@@ -1380,7 +1385,13 @@ export function renderDiaryWall(state){
     if(f.is_cortos&&f.film_list&&f.film_list.length){
       f.film_list.forEach(it=>cards.push({title:it.title,poster:getCortoItemPoster(it),rating:filmRatings[it.title]||0,off}));
     } else {
-      cards.push({title,poster:getFilmPoster(f),rating:filmRatings[title]||0,off});
+      // Programa legacy «A + B»: getFilmPoster devuelve el afiche de la PRIMERA
+      // obra, así que la tarjeta se hacía pasar por esa obra sola. Con la forma C
+      // se ven las dos. Si no califica (afiches incompletos), sigue el camino viejo.
+      const _lp=legacyProgramParts(f);
+      cards.push(_lp
+        ? {title,posterSVG:_lp.svg,rating:filmRatings[title]||0,off}
+        : {title,poster:getFilmPoster(f),rating:filmRatings[title]||0,off});
     }
   };
   DAY_KEYS.forEach(day=>{

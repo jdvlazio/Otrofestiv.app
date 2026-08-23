@@ -365,6 +365,59 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
+// ── Póster de FUNCIÓN COMPARTIDA (Tipo 2) — «Escalera mayor», §6.0 ──────────
+// Aprobado por Juan (21 ago 2026) tras revisión exhaustiva. Reglas de frontera:
+// SOLO funciones compartidas (anclaje) de 2-3 obras con ≥1 afiche real; los
+// PROGRAMAS (Tipo 3) jamás usan esta forma — sus obras suelen tener stills, y un
+// still se dibuja dentro del marco editorial, que ya es un póster propio: sería
+// un póster propio dentro de otro. SIN TÍTULO interno («en una película con
+// póster nunca vemos títulos»): la identidad nominal vive en lista/ficha/plan,
+// y en las superficies mudas queda a un tap, igual que cualquier obra.
+// Este builder SOLO dibuja: la decisión de qué es módulo real y qué es mudo la
+// toma helpers (slotPosterParts), dueño del modelo de póster.
+// Devuelve MARKUP SVG INLINE, no data-uri: contiene <image> y un SVG dentro de
+// <img> tiene prohibido cargar recursos — los afiches saldrían rotos.
+export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
+  const U=15, VW=120, VH=180, M=11.25, CW=VW-2*M, NEGRO='#0B0A08', HAIR='#26231F';
+  const r=n=>+n.toFixed(2);
+  const mod=(ux,uy,uw,src,i)=>{
+    const x=ux*U,y=uy*U,w=uw*U,h=uw*1.5*U,rx=w*0.13;
+    const id=`ssp${i}`;
+    return `<clipPath id="${id}"><rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}"/></clipPath>`
+      +`<rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}" fill="${NEGRO}" stroke="${HAIR}" stroke-width="0.5"/>`
+      +`<image href="${escXML(src)}" x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" preserveAspectRatio="xMidYMid meet" clip-path="url(#${id})"/>`;
+  };
+  const sombra=(ux,uy,uw)=>`<rect x="${r(ux*U+2.85)}" y="${r(uy*U-2.85)}" width="${r(uw*U)}" height="${r(uw*1.5*U)}" rx="${r(uw*U*0.13)}" fill="#000" opacity=".5"/>`;
+  // Geometrías aprobadas (en u, pasos de 0,25u). modules viene atrás→delante,
+  // con los mudos SIEMPRE atrás. El delantero es la primera obra con afiche.
+  // El «módulo mudo» murió (Juan, 21 ago): la Escalera existe solo completa,
+  // así que acá solo llegan afiches reales.
+  const n=modules.length;
+  let comp='';
+  if(n===2){
+    const [atras,frente]=modules;
+    comp = mod(0.75,3,4.5,atras,0) + sombra(2.75,3.75,4.5) + mod(2.75,3.75,4.5,frente,1);
+  } else {
+    const pos=[[0.75,3],[2,3.75],[3.25,4.5]]; // atrás→delante, módulos 4u
+    comp = modules.map((src,i)=>
+      (i===n-1?sombra(pos[i][0],pos[i][1],4):'')+mod(pos[i][0],pos[i][1],4,src,i)).join('');
+  }
+  const SEC_FS_MAX=15*VW/84;
+  const sec=_fitLines(String(secLabel||'').toUpperCase(),
+    {boxW:CW, boxH:1.9*U, maxLines:2, fsMax:Math.min(SEC_FS_MAX, 1.9*U/1.16), fsMin:9, lhRatio:1.16, lsEm:0.02, upper:true});
+  const secTxt=sec.lines.map((l,i)=>_lineaSVG(l,{x:M,y:1*U+sec.fs+i*sec.lh,fs:sec.fs,ls:sec.fs*0.02,fill:accent,boxW:CW,upper:true})).join('');
+  const datoFS=VW*0.05, datoY=VH-M-datoFS*0.30;
+  const datoTxt=dato?_lineaSVG(dato,{x:M,y:datoY,fs:datoFS,ls:datoFS*0.02,fill:'#888',boxW:CW,upper:false}):'';
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">`
+    +`<defs><radialGradient id="ssp-luz" cx="1" cy="1" r="1"><stop offset="0" stop-color="#F59E0B" stop-opacity=".28"/><stop offset="1" stop-color="#F59E0B" stop-opacity="0"/></radialGradient>`
+    +`</defs>`
+    +`<rect width="${VW}" height="${VH}" fill="${NEGRO}"/>`
+    +`<rect x="54" y="99" width="66" height="81" fill="url(#ssp-luz)"/>`
+    +comp
+    +`<rect width="${VW}" height="3.75" fill="${accent}"/>`
+    +secTxt+datoTxt+`</svg>`;
+}
+
 export function makeEventPoster(state,title,duration,eventKind,section,opts){
   const {_activeFestId, _lang} = state.snapshot();
   const festCfg=(FESTIVAL_CONFIG&&FESTIVAL_CONFIG[_activeFestId])||Object.values(FESTIVAL_CONFIG||{})[0]||{};

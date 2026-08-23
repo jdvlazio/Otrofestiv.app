@@ -8,13 +8,13 @@
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
   DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _fitLines, _secLabel, _sectionColor,
-  makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML, _langDates, parseProgramTitle,
+  makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeSharedSlotSVG, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
 import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
-import { effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
+import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -201,6 +201,54 @@ export function posterAmbient(src,fallbackHex,cb){
 // ni llama editorialFrame directo (guardián [poster-single-owner]). La rama
 // `image`/`generative` conserva su <img> por superficie (clases/transiciones
 // propias) usando .src — la DECISIÓN ya viene tomada.
+// ── slotPosterParts — la DECISIÓN del póster de función compartida ───────────
+// Dueño del modelo (como posterParts): clasifica cada obra del slot y decide si
+// la función tiene póster propio. Reglas de la revisión exhaustiva (21 ago):
+//   · SOLO Tipo 2 (slot anclado) de 2-3 obras — con 4+ no hay tarjeta (mostrar
+//     3 de 6 sería curaduría nuestra sobre curaduría ajena).
+//   · La Escalera existe SOLO COMPLETA (Juan, 21 ago): 2-3 obras y TODOS los
+//     afiches reales (!_isEditorialPoster). Un still va dentro del marco
+//     editorial —ya es un póster propio— y no puede ser módulo; y el «módulo
+//     mudo» que probamos para los incompletos se leía como sombra sucia y la
+//     tarjeta se hacía pasar por la única obra visible. Falta un afiche → null:
+//     cada obra conserva su card, como hoy. Nada se inventa.
+//   · Delantero = primera obra en orden de catálogo (regla neutra).
+// El dibujo lo hace components.makeSharedSlotSVG — acá solo el modelo.
+// legacyProgramParts — el póster de un programa LEGACY «Film A + Film B».
+// Ese modelo (is_programa) es una FUNCIÓN COMPARTIDA modelada a la vieja usanza
+// —el template dice que la reemplazó el anclaje Tipo 2—, así que le corresponde
+// la misma forma C. Y arregla una mentira vieja: getFilmPoster (camino 5)
+// devuelve el afiche de la PRIMERA obra, así que «Esperando abril + Los bandidos
+// del hotel azul» se mostraba —en el Diario y en todas partes— como si fuera
+// «Esperando abril» sola. Con las dos obras apiladas, la tarjeta dice la verdad.
+// Devuelve null cuando no califica (afiches incompletos, still, 4+): ahí el
+// camino viejo sigue mandando y no se toca nada.
+export function legacyProgramParts(f){
+  if(!f||!f.is_programa||!Array.isArray(f.film_list)) return null;
+  return slotPosterParts(f.film_list.map(it=>({
+    title:it.title, poster:it.poster, posterSource:it.posterSource,
+    duration:it.duration||f.duration, section:f.section,
+  })));
+}
+
+export function slotPosterParts(members){
+  if(!Array.isArray(members)||members.length<2||members.length>3) return null;
+  const clasif=members.map(f=>{
+    const src=getPosterSrc(f.title,true)||f.poster||null;
+    const real=!!src&&!_isEditorialPoster(f);
+    return {f, src:real?src:null};
+  });
+  if(clasif.some(c=>!c.src)) return null;   // solo completa: falta un afiche → sin tarjeta
+  const reales=clasif;
+  // atrás→delante: el 1º del catálogo queda delante
+  const modules=[...reales.slice(1).reverse().map(c=>c.src), reales[0].src];
+  const lider=reales[0].f;
+  const dur=blockDuration(lider);
+  const dato=`${members.length} obras${dur?` · ${dur} min`:''}`;
+  return {modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato,
+    svg:makeSharedSlotSVG({modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato})};
+}
+
 export function posterParts(f,{header=false,body='',loading}={}){
   const m=posterModel(f);
   if(m.kind!=='editorial') return m;                       // {kind,src,...} decidido

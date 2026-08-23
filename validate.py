@@ -3384,6 +3384,16 @@ try:
     # Al recibir el minutaje real: llenar el JSON y BORRAR la línea de aquí.
     _PENDING = {
         ('fantasofest-2026', 'Muestra de Cortometrajes'),  # PDF prensa sin runtimes; pedido a FantasoLab
+        # Vartex 14 — vartexmedellin.co publica minutaje SOLO de la Muestra Local
+        # (12 obras, ya en el JSON) y las 8 h del taller. Verificado sobre el HTML
+        # vivo: el sitio no tiene sección de Internacional ni de Inauguración, y su
+        # sección muestra-nacional lista las obras sin duración. Pedido al festival.
+        ('vartex-2026', 'A La Rivera: Synthfonía de un escape'),   # live cinema de apertura; no anunciado
+        ('vartex-2026', 'Muestra Fashion Film Internacional'),     # 2 obras del carrusel IG, sin minutaje
+        ('vartex-2026', 'Muestra Fashion Film Nacional'),          # 20 obras listadas sin duración
+        # CineAutopsia — el PDF oficial la trae sin obras y sin runtime: es una
+        # proyección al aire libre más un diálogo, y el festival no anunció cuánto dura.
+        ('cineautopsia-2026', 'Encuentro Colombia Experimental Contemporánea'),
     }
     _viol = []
     for _fname in _ACTIVE:
@@ -3681,13 +3691,13 @@ try:
         # _buildPosterV16) y el dueño del color de sección. Entra a la lista con la
         # razón escrita, que es lo que este guardián pide, en vez de seguir
         # recortando comentarios que explican POR QUÉ el código es así.
-        'src/view/components.js': 820,  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago
+        'src/view/components.js': 873,  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago
         # helpers.js estaba EXACTAMENTE en 800 antes del rediseño de pósters
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
         # guardián pide. Baja cuando se migre algo fuera de helpers.
-        'src/view/helpers.js': 829,  # +5: la sección nunca se pinta con fill undefined — 19 ago
-        'src/view/agenda.js': 2003,  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
+        'src/view/helpers.js': 877,  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
+        'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
         'src/main.js': 1699,  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
         'src/i18n/i18n.js': 1583,  # +3: av_recalcular en es/en/pt — 18 ago
         'src/controller/sheets-controller.js': 1682,  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
