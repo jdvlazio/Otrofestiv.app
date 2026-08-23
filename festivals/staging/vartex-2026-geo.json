@@ -1,0 +1,24 @@
+{
+ "_provenance": {
+  "fuente": "heredada de cinemancia-2026 (misma sede) + pendiente Bellas Artes",
+  "capturado": "2026-08-20"
+ },
+ "Centro Colombo Americano - Medellín": {
+  "lat": 6.2497341,
+  "lng": -75.5627237,
+  "city": "Medellín",
+  "short": "Centro Colombo Americano",
+  "address": "Calle 43 # 54–139, Medellín, Antioquia",
+  "_prec": "heredada de cinemancia-2026"
+ },
+ "Fundación Universitaria Bellas Artes - Medellín": {
+  "city": "Medellín",
+  "short": "Instituto de Bellas Artes",
+  "address": "Calle 52 # 42–08, Medellín, Antioquia",
+  "_src": "Juan, 20 ago 2026: de las cuatro sedes de Bellas Artes en Medellín, el Laboratorio es en el INSTITUTO (Palacio de Bellas Artes), Calle 52 # 42–08. El afiche decía solo «Bellas Artes».",
+  "lat": 6.248511,
+  "lng": -75.5614556,
+  "_prec": "nominatim",
+  "_match": "Palacio de Bellas Artes, Carrera 42 con Calle 52, Boston — coincide con la dirección confirmada por Juan. OJO: buscar «Fundación Universitaria Bellas Artes» devuelve la sede AYACUCHO (Cra. 42A # 48-86), que es otro edificio a diez cuadras."
+ }
+}

@@ -46,7 +46,7 @@ Juan es Product Owner, diseñador y developer. Claude ejecuta; Juan audita y apr
 2. **Cambios quirúrgicos.** Solo se modifica lo pedido. Cero modificaciones no solicitadas.
 3. **Copy es un artefacto de diseño.** Toda nueva string o corrección requiere discusión semántica con Juan como Content Designer + UX Writer. Sin excepciones.
 4. **Validar antes de commitear.** Siempre correr `python3 validate.py` antes de proponer un commit.
-5. **bump-version antes de deploy.** `node scripts/bump-version.js` justo antes de cada push.
+5. **El bump NO va en la rama.** Lo aplica `auto-bump-main.yml` sobre main al mergear. Correrlo en la rama es la causa nº1 de conflictos: escribe en 4 archivos y dos PR simultáneos chocan siempre.
 6. **Sin regresiones.** Verificar qué cambió y por qué después de cada entrega.
 7. **Código de la app acá, datos del festival allá.** El trabajo está partido en dos
    chats con worktrees separados. La pregunta que decide dónde va un cambio es una
@@ -80,12 +80,13 @@ deliberada existe la etiqueta `frontera-ok`.
 | `cinemancia2025` | Cinemancia 2025 | Valle de Aburrá | 11–20 SEP | Archivado |
 | `leviza2026` | Leviza - Festival de Cine y Audiovisuales | Zapatoca | 14–17 MAY | Archivado |
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Archivado |
-| `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Recién terminado |
-| `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Recién terminado |
+| `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Archivado |
+| `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Archivado |
 | `ficma2026` | FICMA | Manizales | 10–17 AGO | desconocido |
-| `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | **Próximo / activo** |
-| `finca2026` | FINCA | Buenos Aires | 12–19 AGO | **Próximo / activo** |
-| `tiff2026` | TIFF | Toronto | 10–20 SEP | **Próximo / activo** |
+| `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | Recién terminado |
+| `finca2026` | FINCA | Buenos Aires | 12–19 AGO | Recién terminado |
+| `cineautopsia2026` | CineAutopsia | Bogotá | 21–29 AGO | **Próximo / activo** |
+| `vartex2026` | Vartex | Medellín | 19–22 AGO | Recién terminado |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
 
 ### Features activas (desde `.specify/features/`)
@@ -180,8 +181,9 @@ congelados en código viejo pese a los deploys web. Antes de CADA build:
 
 ## CI — GitHub Actions
 
-- **bump-and-validate.yml:** corre `python3 validate.py` **y** los unit tests de dominio (`node --test tests/unit/*.test.js`) — ambos deben pasar para que el job quede verde. (Pese al nombre, NO hace bump: el bump de versión es responsabilidad local — correr `node scripts/bump-version.js` antes de cada push.) Ojo: cambiar la firma/deps de una fn de dominio (ej. un nuevo `import` interno) suele requerir actualizar `tests/lib/load-domain.js` (DEFAULT_FNS) además del test.
+- **bump-and-validate.yml:** corre `python3 validate.py` **y** los unit tests de dominio (`node --test tests/unit/*.test.js`) — ambos deben pasar para que el job quede verde. (Pese al nombre, NO hace bump: desde ago 2026 el bump lo aplica `auto-bump-main.yml` sobre main después de mergear, no la rama.) Ojo: cambiar la firma/deps de una fn de dominio (ej. un nuevo `import` interno) suele requerir actualizar `tests/lib/load-domain.js` (DEFAULT_FNS) además del test.
 - **playwright.yml:** tests de regresión T01–T10, viewport 390×844 (iPhone 14), simTime frozen para festivales activos.
+- **auto-bump-main.yml:** aplica el bump UNA vez, sobre main, después de cada merge que toque `src/`, `index.html` o `sw.js`; valida antes de commitear y pide el build de Pages por API (un push con GITHUB_TOKEN no dispara workflows). `require-bump` sigue existiendo con el mismo nombre —es un check requerido por la branch protection y borrarlo dejaría los PR inmergeables (modo de falla del #428)— pero ya solo informa.
 - **Update iOS/Android:** `bump-version.js` avanza `version.json.ios` junto con `.android` (mismo build, sin staged rollout). El cliente recarga vía poll de `version.json` en cada reapertura.
 
 ---
@@ -191,7 +193,7 @@ congelados en código viejo pese a los deploys web. Antes de CADA build:
 ```bash
 sh scripts/install-hooks.sh                # UNA VEZ por clon/worktree: hooks + driver de merge
 python3 validate.py                        # validar antes de commitear
-node scripts/bump-version.js               # actualizar index.html + main.js + sw.js + version.json antes de deploy
+# node scripts/bump-version.js             # NO correr en la rama — lo hace auto-bump-main.yml al mergear
 node scripts/generate-claude-md.js         # regenerar este archivo cuando cambie el estado del proyecto
 node scripts/generate-config.js --help     # generar entrada FESTIVAL_CONFIG
 python3 scripts/enrich-festival.py --help  # enriquecer JSON con TMDB

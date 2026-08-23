@@ -139,6 +139,10 @@ export const SECTION_COLORS = {
 //  · Tribeca se omite entero: sus secciones ya están en inglés.
 //  · "Impact Hits"/"Industry Days" (AFF) ya están en inglés → se omiten.
 export const SECTION_EN = {
+  '🌍 Muestra Internacional': 'International Showcase',
+  '🇨🇴 Muestra Nacional':     'National Showcase',
+  '🏆 Muestra Local':         'Official Selection · Local',
+  '🎓 Formación':             'Workshops & Seminar',
   '🔮 Largometrajes': 'Feature Films',
   '🌙 Cortometrajes': 'Short Films',
   '🌱 Raíces del Juego': 'Roots of the Game',
@@ -222,6 +226,8 @@ export const SECTION_EN = {
   '🎟️ Invitadas': 'Guest Films',
   '💬 Charlas que Unen': 'Talks That Unite',
   '🛠️ Formación': 'Workshops',
+  '🛰️ Apertura': 'Opening · Expanded FullDome',
+  '🤝 Encuentro': 'Gathering',
 };
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
@@ -432,6 +438,40 @@ export const FESTIVAL_CONFIG={
     keyArt:'/assets/keyart/finca2026.jpg',
     films:null,posters:null,lbSlugs:{}
   },
+  'cineautopsia2026': {
+    name:'CineAutopsia',fullName:'CineAutopsia — Festival de Cine Experimental de Bogotá',shortName:'CINEAUTOPSIA',
+    city:'Bogotá',country:'CO',
+    dates:'21–29 AGO',dates_en:'AUG 21–29',year:2026,timezoneOffset:'-05:00',
+    storageKey:'cineautopsia2026_',festivalStartStr:'2026-08-21T00:00:00',festivalEndStr:'2026-08-29T23:59:00',
+    festivalDates:{'2026-08-21': '2026-08-21', '2026-08-22': '2026-08-22', '2026-08-23': '2026-08-23', '2026-08-25': '2026-08-25', '2026-08-26': '2026-08-26', '2026-08-27': '2026-08-27', '2026-08-28': '2026-08-28', '2026-08-29': '2026-08-29'},
+    days:[{k: '2026-08-21', d: 21, lbl: 'VIE'}, {k: '2026-08-22', d: 22, lbl: 'SÁB'}, {k: '2026-08-23', d: 23, lbl: 'DOM'}, {k: '2026-08-25', d: 25, lbl: 'MAR'}, {k: '2026-08-26', d: 26, lbl: 'MIÉ'}, {k: '2026-08-27', d: 27, lbl: 'JUE'}, {k: '2026-08-28', d: 28, lbl: 'VIE'}, {k: '2026-08-29', d: 29, lbl: 'SÁB'}],
+    dayKeys:['2026-08-21','2026-08-22','2026-08-23','2026-08-25','2026-08-26','2026-08-27','2026-08-28','2026-08-29'],
+    dayShort:{'2026-08-21': 'VIE 21', '2026-08-22': 'SÁB 22', '2026-08-23': 'DOM 23', '2026-08-25': 'MAR 25', '2026-08-26': 'MIÉ 26', '2026-08-27': 'JUE 27', '2026-08-28': 'VIE 28', '2026-08-29': 'SÁB 29'},
+    dayShort_en:{'2026-08-21': 'FRI 21', '2026-08-22': 'SAT 22', '2026-08-23': 'SUN 23', '2026-08-25': 'TUE 25', '2026-08-26': 'WED 26', '2026-08-27': 'THU 27', '2026-08-28': 'FRI 28', '2026-08-29': 'SAT 29'},
+    dayLong:{'2026-08-21': 'Viernes 21 de agosto', '2026-08-22': 'Sábado 22 de agosto', '2026-08-23': 'Domingo 23 de agosto', '2026-08-25': 'Martes 25 de agosto', '2026-08-26': 'Miércoles 26 de agosto', '2026-08-27': 'Jueves 27 de agosto', '2026-08-28': 'Viernes 28 de agosto', '2026-08-29': 'Sábado 29 de agosto'},
+    prioLimit:3,
+    keyArt:'/assets/keyart/cineautopsia2026-v2.jpg',
+    tagline:'Festival de Cine Experimental de Bogotá',
+    films:null,posters:null,lbSlugs:{}
+  },
+  'vartex2026': {
+    name:'Vartex',fullName:'Vartex 14 — Muestra de Video y Experimental de Medellín',shortName:'VARTEX',
+    city:'Medellín',country:'CO',
+    dates:'19–22 AGO',dates_en:'AUG 19–22',year:2026,timezoneOffset:'-05:00',
+    storageKey:'vartex2026_',festivalStartStr:'2026-08-19T00:00:00',festivalEndStr:'2026-08-22T23:59:00',
+    festivalDates:{'2026-08-19': '2026-08-19', '2026-08-20': '2026-08-20', '2026-08-21': '2026-08-21', '2026-08-22': '2026-08-22'},
+    days:[{k: '2026-08-19', d: 19, lbl: 'MIÉ'}, {k: '2026-08-20', d: 20, lbl: 'JUE'}, {k: '2026-08-21', d: 21, lbl: 'VIE'}, {k: '2026-08-22', d: 22, lbl: 'SÁB'}],
+    dayKeys:['2026-08-19', '2026-08-20', '2026-08-21', '2026-08-22'],
+    dayShort:{'2026-08-19': 'MIÉ 19', '2026-08-20': 'JUE 20', '2026-08-21': 'VIE 21', '2026-08-22': 'SÁB 22'},
+    dayShort_en:{'2026-08-19': 'WED 19', '2026-08-20': 'THU 20', '2026-08-21': 'FRI 21', '2026-08-22': 'SAT 22'},
+    dayLong:{'2026-08-19': 'Miércoles 19 de agosto', '2026-08-20': 'Jueves 20 de agosto', '2026-08-21': 'Viernes 21 de agosto', '2026-08-22': 'Sábado 22 de agosto'},
+    prioLimit:3,
+    keyArt:'/assets/keyart/vartex2026-v3.jpg',
+    // (nota histórica) Sin keyArt al principio: el afiche del festival está en la lámina 1 de su
+    // carrusel y las imágenes de su sitio son apaisadas (1200x630). Estirarlas
+    // a 2:3 las aplastaría un 65%, muy lejos de lo que tolera la regla. La card
+    // cae al respaldo tipográfico hasta que llegue el afiche en vertical.
+    tagline:'Muestra de Video y Experimental',
   'tiff2026': {
     name:'TIFF',fullName:'TIFF — Toronto International Film Festival',shortName:'TIFF',
     city:'Toronto',country:'CA',
@@ -513,6 +553,14 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // VARTEX 14 — muestra de video y experimental, Medellín.
+  '🌍 Muestra Internacional': 'Muestra / País',
+  '🇨🇴 Muestra Nacional':     'Muestra / País',
+  '🏆 Muestra Local':         'Competencia',
+  '🎓 Formación':             'Charlas / Industria',
+  // ── CineAutopsia 2026 · Bogotá ────────────────────────────────────────
+  '🔬 Destacados': 'Competencia',
+  '🌀 Panorama': 'Muestra / País',
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
   '🎩 Gala Presentations': 'Apertura / Gala',
   '⭐ Special Presentations': 'Muestra / País',
@@ -667,6 +715,8 @@ export const SECTION_ARCHETYPES = {
   // Franja Académica de FICMA — el festival la divide en talleres y charlas.
   '🛠️ Talleres': 'Charlas / Industria',
   '💬 Charlas': 'Charlas / Industria',
+  '🛰️ Apertura': 'Apertura / Gala',
+  '🤝 Encuentro': 'Charlas / Industria',
 };
 
 // mergeFestivalSections(sections) — DATA-DRIVEN (P2.2): un festival declara sus

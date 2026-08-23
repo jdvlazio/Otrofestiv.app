@@ -255,7 +255,8 @@ Valores **canónicos aprobados** por contexto:
 | `.saved-venue` | **`font-size:var(--t-sm); font-weight:var(--w-thin); color:var(--gray)`**; `margin-top:2px` |
 | `.lb-poster`/`-ph` | `56×84; border-radius:var(--r-sm)` |
 | `.col-end` acciones | Cambiar (`.ag-fi-btn`, switch, gris) + **Intereses** (`.ag-fi-btn.wl`, corazón lleno, `color:var(--amber)`) |
-| `.ag-day-label` (day landmark) | `border-top:1px solid var(--bdr-l)` (separa días); `.first` sin border; nombre `t-md`/`w-semi`/`white` + `count-badge` |
+| `.ag-day-band` (day landmark) | Banda sólida `surf-2` a sangre, igual que el separador de horas de Programa (`.plist-time-hdr`): día en `t-label`/`w-bold`/ámbar con tracking `.1em`, `count-badge` a la derecha, y **`position:sticky`** — sin el sticky no ancla nada. `.first` con `margin-top:sp-3`. |
+| ~~`.ag-day-label`~~ | **Retirada el 18 ago 2026.** La reemplazó `.ag-day-band`; sus reglas quedaron huérfanas en el CSS (cero usos en `src/`) y esta tabla siguió documentándolas medio día — el doc describía una pantalla que ya no existía. |
 
 ### 2.5 · `.mplan-row` — **Mi Plan** (lista del día, variante `--plan-saved`)
 
@@ -375,6 +376,74 @@ El header de la ficha respira el color dominante del póster. `posterAmbient()` 
 negado o data-URI → fallback al acento de sección. `getImageData` fuera de
 helpers.js o `--amb` a mano = build roto. Safari iOS: muestrear con URL propia
 (TMDB→w92) para no heredar la entrada de caché sin-CORS del `<img>`.
+
+### 8.3c · Línea de resultado — lo que salió (`.dato-resultado`)
+- **`.dato-resultado`** es la gemela en blanco de `.dato-linea`: misma fórmula
+  `texto · texto`, pero `t-md` (16px), `--w-semi` y `--white`. Se usa UNA vez por
+  pantalla, para el desenlace de una operación que el usuario pidió.
+- **Por qué** (auditoría 18 ago 2026, Juan): en Planear el insumo («16 obras · 1
+  con prioridad · ⚠ 8 cruces») y el resultado («8 obras · 2 días») eran la misma
+  línea gris con la misma fórmula, separadas solo por el botón. El lector tenía
+  que deducir por posición cuál era cuál, y la advertencia —lo único en ámbar—
+  pesaba más que la respuesta. Ahora el color separa lo que ENTRA de lo que SALIÓ.
+- **El matiz reusa el canon gris**: `<span class="dato-linea">· 8 sin cupo</span>`
+  DENTRO de la línea blanca. Es una línea de dato, no la variante 90 de gris.
+- **Proximidad**: el resultado pertenece a la banda del día que va debajo, no al
+  CTA de arriba. Medido: 12px abajo (margen de la banda) contra 20 arriba.
+- **El número no se recalcula**: «N sin cupo» sale del mismo `_excVivas` que
+  alimenta el badge de «No incluidas». Guardián vivo: **T93** compara ese N con
+  las filas realmente pintadas, y falla si alguien lo saca de otro conteo.
+
+### 8.3b · Línea de dato — el canon (`[dato-linea]`)
+- **`.dato-linea`** es la línea que informa sin ser sección ni banda: el insumo
+  de Planear, un vacío colapsado, una cifra al pie de un bloque. Anatomía única:
+  `t-base` (13px), `line-height 1.4`, `--gray`, y `sp-1` de ritmo entre hermanas.
+  El matiz semántico va en un `<span class="dato-alerta">` (ámbar) DENTRO de la
+  misma línea — la fórmula es `texto · texto`, nunca dos filas.
+- **Por qué existe** (auditoría 18 ago 2026): la app tenía **89 clases** distintas
+  de «texto pequeño gris» (`.hint`, `.cnt-line`, `.excl-reason`, `.plist-meta`,
+  `.suggestion-meta`…). Ninguna era dueña, así que cada pantalla elegía tamaño y
+  ritmo propios y las líneas nuevas se veían sueltas y pequeñas.
+- **Espaciado — la ley de proximidad, medida**: el hueco DENTRO de un grupo debe
+  ser como mucho la mitad del hueco ENTRE grupos (1:2). Medido en Planear antes
+  del arreglo: 0px dentro del grupo y **44px** hacia el CTA — más que `sp-6`, el
+  token de «entre secciones». Ahora: `sp-1` entre líneas, `sp-4` al CTA.
+- El guardián congela la familia en su tamaño actual: no obliga a migrar las 89
+  de golpe, pero impide sumar la 90 sin decidirlo, y verifica que el canon siga
+  vivo con su `t-base` y su ritmo.
+
+### 8.6 · Color de un aviso — qué significa (`[aviso-color]`)
+- **Ámbar = te pide algo ahora.** El cruce de horarios en la línea de insumo
+  (`.dato-alerta`), la próxima función (`.ctx-aviso.amb`), el Plan desactualizado
+  (`.prio-stale`). Si el usuario tiene que hacer algo o decidir algo, va ámbar,
+  con el triángulo de alerta o el reloj según el caso.
+- **Gris = te informa, no te exige.** La razón por la que una obra no entró
+  (`.excl-reason`), el encabezado neutro de contexto (`.ctx-aviso`).
+- **Verde / rojo = estado, no pedido.** Verde: en curso (`.ctx-aviso.grn`). Rojo:
+  lo grave — retraso confirmado, severidad alta (`.delay-warn`, `.aviso-pill.sev-red`).
+- **Blanco = matiz dentro de una ficha** (`.aviso-txt`).
+- **La pastilla y el toast son superficie**, no texto teñido: ahí el fondo ES el
+  componente (`.aviso-pill`, `.prio-toast.warn`).
+- **Por qué existe la regla** (Juan, 18 ago 2026): «Plan desactualizado» salió en
+  blanco por inercia —herencia del banner de prioridades— y él preguntó si no
+  debía ser ámbar. El precedente ya existía en la app; lo que faltaba era estar
+  escrito: §1 define el ámbar como «acento, hora, CTA, estado activo», nunca como
+  advertencia, y la familia había quedado con 6 tokens repartidos a ojo. El
+  guardián congela la clasificación: un aviso nuevo no entra sin decidir a qué
+  familia pertenece.
+- **Tamaño**: todos los avisos son `--t-sm` (11px) y ninguno lleva caja (§ regla
+  del 29 jul, guardián `[aviso-sin-caja]`). El color es lo único que varía.
+
+### 8.5 · Botones con icono — alineación (`[icono-texto]`)
+- Un `<button>` cuyo markup pone `${ICONS.x}` **seguido de texto** DEBE llevar
+  `display:inline-flex` + `align-items:center` (+ `gap`). Sin eso el SVG se
+  apoya en la línea BASE del texto y flota: medido 3px de desfase en el «+» de
+  «Agendar» (`.excl-include-btn`, cazado por Juan el 18 ago 2026 en producción).
+- El guardián mira SOLO elementos `<button>` con icono **y** texto: los
+  contenedores de icono solo (chevrons, cierres) no tienen nada que alinear.
+- Por qué no lo vio `[button-canon]`: ese guardián audita color, fondo, radio y
+  peso — la anatomía declarada en julio. Nunca miró la geometría INTERNA. Dos
+  guardianes, dos preguntas distintas sobre el mismo componente.
 
 ### 8.4 · Botones — regla dueña única (`[button-canon]`)
 - **PRIMARIO**: UNA regla CSS dueña (`--amber-cta` / negro / `--r-pill` / `--sp-btn`
@@ -968,6 +1037,37 @@ Esto las agrupa visualmente con la metadata sin alterar el dato fuente.
 - **Badges "short"**: cuando un badge tiene variante corta para chips compactos
   (notice_reprog_short = "REPROG."), sigue siendo ALLCAPS como el full. No hay
   variante Title Case de un badge.
+
+---
+
+## 5.9 · Un estado, un recurso: cancelada no se difumina
+
+**Regla (Juan, 21 ago 2026).** El **difuminado** (`opacity`) significa **una sola
+cosa: «ya pasó»**. Una función **cancelada** se dice en **gris**
+(`filter:grayscale(1)`) y con su badge. Nunca las dos cosas, y nunca el
+difuminado para cancelada.
+
+**Por qué.** Cancelada usaba `opacity` en tres superficies distintas —la grilla,
+el listado y la tarjeta de día—, el mismo recurso que «ya pasó». Dos verdades
+distintas con la misma cara: una función caída se leía como una función vieja. En
+el listado además se apilaban (`.45` × `.5`) y una cancelada ya pasada quedaba al
+22%: ilegible, y diciendo dos veces lo mismo. El gris estaba libre.
+
+**Cuándo coinciden manda cancelada.** Si una función está cancelada y además su
+hora ya pasó, va en gris y **sin** difuminar: que sea tarde es lo de menos si no
+va a ocurrir.
+
+**El badge se ancla a la retícula, no a un margen.** `--poster-badge-top` sale de
+la anatomía del póster propio (POSTERS.md §6.0): la sección arranca en 1u y su
+caja tiene un **techo de 3,4u**, así que 4,4u es el punto más bajo al que puede
+llegar por más líneas que ocupe; +0,25u de aire = **4,65u de las 12u (38,75%)**.
+A `top:5px` el badge caía sobre el rótulo de sección —no en un caso raro: en
+**todo** póster nuestro, siempre—. Un porcentaje medido a ojo sobre un rótulo de
+una línea habría vuelto a fallar con uno de dos.
+
+**Guardián:** `[cancelada-no-difumina]` cuida las dos mitades — que el badge
+ancle en el token y que nadie vuelva a difuminar una cancelada. La segunda
+importa más: volver a difuminarla no se ve roto, se ve normal.
 
 ---
 

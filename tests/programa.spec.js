@@ -1,7 +1,7 @@
 // @ts-check
 // programa.spec.js — Tab Programa: lista, grid, filtros, posters, topbar.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival, goToPlanear } = require('./helpers');
+const { LEVIZA_SIMTIME, enterFestival, goToPlanear, reentrar } = require('./helpers');
 
 // T01 — Apóstrofe: corazón en lista agrega al watchlist
 test('T01 — apóstrofe: corazón en lista agrega al watchlist', async ({ page }) => {
@@ -667,10 +667,11 @@ test('T65 — una obra cuyas funciones pasaron dice «Ya pasó», no que no exis
   });
   expect(pasadas.length, 'FICDEH tiene obras con todas sus funciones pasadas').toBeGreaterThan(0);
 
+  // La recarga borra _simTime: hay que re-elegir festival y re-congelar la fecha,
+  // o el test queda a merced del día en que corra (ver `reentrar` en helpers).
   await page.reload();
-  await page.waitForSelector('.splash-card');
-  await page.click('#splash-enter-btn');
-  await page.waitForTimeout(2500);
+  await reentrar(page, 'ficdeh2026', '2026-08-18T20:00');
+  await page.waitForTimeout(1200);
   await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
   await page.waitForTimeout(400);
   await page.click('#mnav-seleccion');
@@ -770,20 +771,25 @@ test('T67 — el chip nombra el Diario, y el Recuerdo lo presenta', async ({ pag
     await page.waitForTimeout(900);
   };
   await pintar();
-  const chip = await page.evaluate(() => {
-    const c = document.querySelector('.diary-chip');
-    return c && { txt: c.innerText.replace(/\s+/g, ' ').trim(),
-      ancho: Math.round(c.getBoundingClientRect().width),
-      icono: !!c.querySelector('svg'),
-      badge: !!c.querySelector('.count-badge'),
-      desborda: c.getBoundingClientRect().right > 390 };
+  // El chip murió (18 ago): lo reemplaza la SECCIÓN Diario al final del tab —
+  // banda canónica con icono, cuenta como badge y «Ver todo» hacia el overlay.
+  const sec = await page.evaluate(() => {
+    const w = document.querySelector('.diario-wrap');
+    const b = w?.querySelector('.sec-hdr');
+    return w && { txt: b.textContent.replace(/\s+/g, ' ').trim(),
+      icono: !!b.querySelector('svg'),
+      badge: !!b.querySelector('.count-badge'),
+      bandaAbre: b.matches('[data-action="openDiary"]'),
+      verTodoViejo: !!b.querySelector('button'),
+      chipViejo: !!document.querySelector('.diary-chip') };
   });
-  expect(chip, 'con obras vistas hay chip').toBeTruthy();
-  expect(chip.txt, 'el chip nombra su destino').toContain('Diario');
-  expect(chip.icono, 'con icono, como todo encabezado').toBe(true);
-  expect(chip.badge, 'y la cuenta como badge, no en palabras').toBe(true);
-  expect(chip.txt, 'la cuenta no se repite en palabras').not.toMatch(/obras? vistas?/);
-  expect(chip.desborda, 'sin desbordar los 390 px').toBe(false);
+  expect(sec, 'con obras vistas hay sección Diario').toBeTruthy();
+  expect(sec.txt, 'la banda nombra su destino').toContain('Diario');
+  expect(sec.icono, 'con icono, como toda banda').toBe(true);
+  expect(sec.badge, 'y la cuenta como badge, no en palabras').toBe(true);
+  expect(sec.bandaAbre, 'la banda ENTERA abre el Diario').toBe(true);
+  expect(sec.verTodoViejo, 'sin «Ver todo»: la affordance no se duplica').toBe(false);
+  expect(sec.chipViejo, 'el chip de la banda del Plan no existe más').toBe(false);
 
   // Y después del festival, el bloque del Recuerdo se presenta con su nombre.
   await page.evaluate(() => { _simTime = '2026-08-21T12:00:00-05:00'; showAgView(); });
@@ -877,12 +883,12 @@ test('T70 — el Diario y el Recuerdo cuentan lo mismo, incluidos los talleres',
       const f = FILMS.find(x => x.title === t); return Object.assign({}, f, { _title: t }); }) });
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 1200));
-    const c = document.querySelector('.diary-chip');
+    const c = document.querySelector('.diario-wrap .count-badge');
     return { conEvento: marcar.length, eventos: ev.length,
-      chip: c && c.innerText.replace(/\s+/g, ' ').trim() };
+      cuenta: c && c.textContent.trim() };
   });
   expect(caso.eventos, 'FICDEH tiene eventos en catálogo').toBe(1);
-  expect(caso.chip, 'el chip cuenta las 3, taller incluido').toBe('Diario 3');
+  expect(caso.cuenta, 'la banda del Diario cuenta las 3, taller incluido').toBe('3');
 
   const retro = await page.evaluate(async () => {
     _simTime = '2026-08-21T12:00:00-05:00'; showAgView();
@@ -893,12 +899,10 @@ test('T70 — el Diario y el Recuerdo cuentan lo mismo, incluidos los talleres',
     .toBe('Viste 3 actividades');
 });
 
-// Ronda 3 (diseño, Juan): en Mi Plan el Diario iba a la derecha y «Día n de n» a
-// la izquierda —el destino detrás del dato— y el bloque «Sin confirmar» era la
-// única sección de la app dibujada como card, con una píldora de encabezado que
-// flotaba a 17px mientras sus filas arrancaban a 33. Regla contada sobre la app:
-// card = ítem, resumen, panel o menú; sección = lista con su banda a sangre.
-test('T71 — Mi Plan: la banda del Plan con Diario y día, y «Sin confirmar» es sección', async ({ page }) => {
+// 18 ago (vista asumida): la banda del Plan quedó solo con su cuenta y el día —
+// el chip del Diario se mudó a su sección y «Sin confirmar» murió con la
+// asunción. La banda sigue siendo canónica (a sangre, nombre + badge).
+test('T71 — la banda del Plan: canónica, sin chip, y sin resucitar «Sin confirmar»', async ({ page }) => {
   await enterFestival(page, 'ficdeh2026', '2026-08-17T20:00:00-05:00');
   await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
   await page.waitForTimeout(400);
@@ -910,48 +914,22 @@ test('T71 — Mi Plan: la banda del Plan con Diario y día, y «Sin confirmar» 
       Object.assign({}, f, { _title: f.title })) });
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 1400));
-    const box = s => { const e = document.querySelector(s); if (!e) return null;
-      const b = e.getBoundingClientRect(); return { x: Math.round(b.x), r: Math.round(b.right) }; };
-    const wrap = document.querySelector('.checkin-wrap');
-    const cs = wrap && getComputedStyle(wrap);
+    const banda = [...document.querySelectorAll('#ag-view .sec-hdr')]
+      .find(e => /Mi Plan|My Plan|Meu Plano/.test(e.textContent));
+    const b = banda.getBoundingClientRect();
     return {
-      chip: box('.diary-chip'),
-      dia: box('.sec-hdr .sec-hdr-opt'),
-      bandaPlan: box('#ag-view .sec-hdr'),
-      bandaPlanTxt: document.querySelector('#ag-view .sec-hdr')?.textContent.replace(/\s+/g, ' ').trim(),
-      banda: box('.checkin-wrap .sec-hdr'),
-      fila: box('.checkin-title'),
-      vecino: box('.mplan-list-hdr'),
-      badge: document.querySelector('.checkin-wrap .count-badge')?.textContent,
-      pendientes: 3,
-      // sección, no card: sin fondo propio ni borde
-      fondo: cs && cs.backgroundColor,
-      borde: cs && cs.borderTopWidth,
-      pildoraVieja: !!document.querySelector('.checkin-hdr'),
+      x: Math.round(b.x), w: Math.round(b.width),
+      txt: banda.textContent.replace(/\s+/g, ' ').trim(),
+      chip: !!banda.querySelector('.diary-chip'),
+      dia: !!banda.querySelector('.sec-hdr-opt'),
+      checkin: !!document.querySelector('.checkin-wrap'),
     };
   });
-
-  // 1· la banda del Plan (18 ago): sec-hdr canónica con nombre + cuenta, el chip
-  //    del Diario DENTRO (ámbar, tocable) y el día como dato gris al final.
-  expect(g.bandaPlan.x, 'la banda del Plan va a sangre').toBe(0);
-  expect(g.bandaPlanTxt, 'nombra la sección con su cuenta').toMatch(/Mi Plan\s*5/);
-  expect(g.chip.x, 'el Diario vive dentro de la banda').toBeGreaterThan(g.bandaPlan.x);
-  expect(g.chip.r, 'antes del día').toBeLessThanOrEqual(g.dia.x + 1);
-  expect(g.dia.r, 'y el día cierra la banda').toBeGreaterThan(g.chip.r);
-
-  // 2· la banda es canónica: a sangre, como cualquier sec-hdr
-  expect(g.banda.x, 'banda a sangre por izquierda').toBe(0);
-
-  // 3· las filas alinean con sus vecinas — el desajuste de 16px no puede volver
-  expect(g.fila.x, 'la fila alinea con el encabezado del día').toBe(g.vecino.x);
-
-  // 4· sección, no card
-  expect(g.pildoraVieja, 'la píldora inline ya no existe').toBe(false);
-  expect(g.fondo, 'sin fondo de card').toMatch(/rgba\(0, 0, 0, 0\)|transparent/);
-  expect(g.borde, 'sin borde de card').toBe('0px');
-
-  // 5· el badge dice cuántas quedan por confirmar
-  expect(g.badge, 'la cuenta está a la vista').toBe(String(g.pendientes));
+  expect(g.x, 'la banda del Plan va a sangre').toBe(0);
+  expect(g.txt, 'nombra la sección con su cuenta').toMatch(/Mi Plan\s*5/);
+  expect(g.chip, 'el chip del Diario no vive más en la banda').toBe(false);
+  expect(g.dia, 'el día cierra la banda como dato').toBe(true);
+  expect(g.checkin, '«Sin confirmar» no resucita').toBe(false);
 });
 
 // Ronda 4 (auditor de fin de festival): «AHORA» en verde sobre una película que
@@ -1050,11 +1028,15 @@ test('T73 — la cuenta del veredicto usa la misma aritmética que la decisión'
   expect(r.qaOnly, 'y existe SOLO por el Q&A').toBe(true);
   // 1· el margen es un SUMANDO de la cadena, no una regla enunciada aparte: así
   //    el total se compara solo contra la hora de inicio (21:15 vs 21:00).
-  expect(r.txt, 'el margen entra en la suma').toContain('margen 15 min');
-  expect(r.txt, 'y el total sale de sumarlo').toContain('21:15');
-  expect(r.txt, 'contra la hora de inicio').toContain('empieza 21:00');
+  // 18 ago: la SUMA se retiró (Juan) — «21:15 se entiende cuando la función
+  // dice 21:00», y esa hora vive ahora arriba, en la línea de la función. La
+  // cuenta conserva la CAUSA (Q&A, viaje) y el veredicto, con la tilde de
+  // estimado mudada al total: sugerimos, no predecimos.
+  expect(r.txt, 'nombra la causa: el Q&A y el viaje').toMatch(/Q&A y viaje/);
+  expect(r.txt, 'y el veredicto es el total, marcado como estimado').toContain('~21:15');
+  expect(r.txt, 'sin enumerar los sumandos').not.toMatch(/margen 15 min|\+ viaje/);
   // 2· la salida va en la MISMA moneda: la hora a la que llegarías sin el Q&A
-  expect(r.txt, 'nombra la alternativa con su hora').toContain('sin el Q&A, 20:45');
+  expect(r.txt, 'nombra la alternativa con su hora').toContain('sin el Q&A, ~20:45');
   // y ya no hace falta un veredicto en palabras
   expect(r.txt, 'sin frase de veredicto').not.toMatch(/no te daría el tiempo|te quedarían/);
   // 3· tomarla a sabiendas produce un plan VÁLIDO; sin la marca, no
@@ -1213,8 +1195,9 @@ test('T76 — el cupo de prioridades es de las vivas, y el badge de MI PLAN dice
   expect(cupo.otraEntro, 'priorizar otra viva no choca contra el límite').toBe(true);
   expect(cupo.sheetLimite, 'sin sheet de límite').toBe(false);
 
-  // ── 2 · badge del tab = banda «Sin confirmar», mismo número siempre
-  const badgeBanda = await page.evaluate(async () => {
+  // ── 2 · la tarea de confirmar murió con la vista asumida (18 ago): ni badge
+  //        en el tab ni bloque «Sin confirmar» — las pasadas van directo al Diario.
+  const asumido = await page.evaluate(async () => {
     const pas = FILMS.filter(f => f.day <= '2026-08-17').slice(0, 3);
     state.set('watched', new Set());
     state.set('savedAgenda', { scenarioIdx: 0, schedule: pas.map(f =>
@@ -1222,12 +1205,14 @@ test('T76 — el cupo de prioridades es de las vivas, y el badge de MI PLAN dice
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 1200));
     return {
-      tab: document.getElementById('miplan-badge')?.textContent,
-      banda: document.querySelector('.checkin-wrap .count-badge')?.textContent,
+      badge: !!document.getElementById('miplan-badge'),
+      checkin: !!document.querySelector('.checkin-wrap'),
+      diario: document.querySelector('.diario-wrap .count-badge')?.textContent,
     };
   });
-  expect(badgeBanda.tab, 'el tab y la banda dicen el mismo número').toBe(badgeBanda.banda);
-  expect(Number(badgeBanda.tab), 'y es la cuenta real de pendientes').toBe(3);
+  expect(asumido.badge, 'el badge del tab murió con su tarea').toBe(false);
+  expect(asumido.checkin, 'el bloque de confirmación no existe').toBe(false);
+  expect(Number(asumido.diario), 'las 3 pasadas están ASUMIDAS en el Diario').toBe(3);
 });
 
 // Falsa alarma que dejó un seguro: creí ver días vencidos en los chips de
@@ -1276,21 +1261,1018 @@ test('T79 — Mi Plan: eyebrow pariente, hero que respira, botones anclados', as
       Object.assign({}, f, { _title: f.title })) });
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 1400));
-    const g = (a, b) => { const A = document.querySelector(a), B = document.querySelector(b);
+    // La banda del PLAN se ubica por contenido, no por posición: desde que el
+    // hero abre con su propia banda (T80), «la primera sec-hdr» ya no es esta.
+    const bandaPlan = [...document.querySelectorAll('#ag-view .sec-hdr')]
+      .find(e => /Mi Plan|My Plan|Meu Plano/.test(e.textContent));
+    const g = (a, b) => { const A = typeof a === 'string' ? document.querySelector(a) : a,
+      B = typeof b === 'string' ? document.querySelector(b) : b;
       return A && B ? Math.round(B.getBoundingClientRect().top - A.getBoundingClientRect().bottom) : null; };
-    const ey = document.querySelector('.ctx-eyebrow');
-    // El patrón es sec-hdr.SM (la variante chica), no la banda base: se compara
-    // contra el TOKEN resuelto, no contra un elemento circunstancial.
+    const ey = document.querySelector('#ag-view .ctx-aviso');
+    // El aviso habla los tokens del sistema: t-sm y w-semi, sin caps ni tracking.
     const probe = document.createElement('span');
-    probe.style.fontSize = 'var(--t-xs)'; document.body.appendChild(probe);
-    const tXs = getComputedStyle(probe).fontSize; probe.remove();
-    return { heroBanda: g('.ctx-header', '#ag-view .sec-hdr'),
-      calBotones: g('.mplan-wk-outer', '.mplan-bottom-actions'),
+    probe.style.fontSize = 'var(--t-sm)'; document.body.appendChild(probe);
+    const tSm = getComputedStyle(probe).fontSize; probe.remove();
+    return { heroBanda: g('.ctx-header', bandaPlan),
+      footDentro: !!document.querySelector('.mplan-wrap .mplan-foot'),
       eyebrowPx: ey && getComputedStyle(ey).fontSize,
-      eyebrowTracking: ey && getComputedStyle(ey).letterSpacing, tXs };
+      eyebrowCaps: ey && getComputedStyle(ey).textTransform, tSm };
   });
   expect(r.heroBanda, 'el hero respira sp-5 antes de la banda').toBe(24);
-  expect(r.calBotones, 'los botones anclados al pie del calendario').toBeLessThanOrEqual(8);
-  expect(r.eyebrowPx, 'el eyebrow habla el token t-xs de sec-hdr.sm').toBe(r.tXs);
-  expect(r.eyebrowTracking, 'con el tracking de la banda (.1em de 9px ≈ 0.9px)').toMatch(/^0\.9/);
+  expect(r.footDentro, 'las acciones son el footer DE la pieza, no flotan bajo ella').toBe(true);
+  expect(r.eyebrowPx, 'el aviso habla el token t-sm del sistema').toBe(r.tSm);
+  expect(r.eyebrowCaps, 'sin mayúsculas: es aviso, no separador').toBe('none');
+});
+
+// 18 ago, cazado por Juan en producción: al abrir Mi Plan se metía la barra de
+// días de Programa. El fix del compositor de iOS (loader.js) re-ejecuta
+// initProgramaModeBar ~830ms después de entrar al festival, y su
+// remove('hidden') incondicional asumía correr solo en Programa — si para
+// entonces estabas en Mi Plan (salto automático del boot, o un toque rápido),
+// la barra se colaba. Ahora usa la MISMA condición que switchMainNav.
+test('T81 — la barra de días no se cuela en Mi Plan (re-run diferido del iOS fix)', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  // entrar a Mi Plan INMEDIATAMENTE (dentro de la ventana de ~830ms del re-run)
+  await page.click('#mnav-miplan');
+  // esperar a que el re-run diferido dispare con Mi Plan activo
+  await page.waitForTimeout(1400);
+  const nav = await page.evaluate(() => {
+    const n = document.getElementById('nav-row');
+    return { hidden: n.classList.contains('hidden'),
+      alto: Math.round(n.getBoundingClientRect().height) };
+  });
+  expect(nav.hidden, 'la barra de días queda oculta en Mi Plan').toBe(true);
+  // y en Programa sigue visible — la condición no puede sobre-ocultar
+  await page.click('#mnav-cartelera');
+  await page.waitForTimeout(700);
+  const nav2 = await page.evaluate(() => document.getElementById('nav-row').classList.contains('hidden'));
+  expect(nav2, 'en Programa la barra vive').toBe(false);
+});
+
+// 18 ago, opción A de Juan: el hero habla UN solo aviso en sus cinco estados —
+// texto con color semántico (ámbar próximo · verde ahora, punto solo si corre ·
+// gris informativo), sin banda ni caps. El nocturno dice el día COMPLETO («tu
+// martes», no «tu mar»), y el cierre vuelve al sistema con su propio aviso.
+test('T80 — el aviso del hero: un solo vestuario en sus cinco estados', async ({ page }) => {
+  test.setTimeout(60000);
+  const medir = async (hora, watch) => {
+    await page.evaluate(async ({ hh, watch }) => {
+      _simTime = hh;
+      const bog = f => (f.venue || '').includes('Bogotá');
+      const pick = (day, pred, n) => FILMS.filter(f => bog(f) && f.day === day && pred(f)).slice(0, n);
+      const sched = [...pick('2026-08-18', f => f.time < '14:00', 1), ...pick('2026-08-18', f => f.time >= '17:00', 2)];
+      state.set('savedAgenda', { scenarioIdx: 0, schedule: sched.map(f =>
+        Object.assign({}, f, { _title: f.title })) });
+      state.set('watched', watch ? new Set(sched.map(x => x.title)) : new Set());
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 1200));
+    }, { hh: hora, watch: !!watch });
+    return page.evaluate(() => {
+      const a = document.querySelector('#ag-view .ctx-aviso');
+      return { txt: a?.textContent.replace(/\s+/g, ' ').trim(),
+        color: a && getComputedStyle(a).color,
+        dot: !!a?.querySelector('.row-dot'),
+        banda: !!document.querySelector('.ctx-eyebrow-band') };
+    });
+  };
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(600);
+  const AMBER = 'rgb(245, 158, 11)';
+
+  const prox = await medir('2026-08-18T16:45:00-05:00');
+  expect(prox.txt, 'el aviso nombra el estado').toBe('Próxima función');
+  expect(prox.color, 'próximo = ámbar').toBe(AMBER);
+  expect(prox.dot, 'sin punto: nada corre aún').toBe(false);
+  expect(prox.banda, 'la banda del hero no existe más').toBe(false);
+
+  const curso = await medir('2026-08-18T17:30:00-05:00');
+  expect(curso.txt).toBe('En curso');
+  expect(curso.color, 'ahora = verde').not.toBe(AMBER);
+  expect(curso.dot, 'y el punto dice que corre').toBe(true);
+
+  const libre = await medir('2026-08-18T14:30:00-05:00');
+  expect(libre.txt, 'tiempo libre habla el mismo componente').toMatch(/Tiempo libre/);
+  expect(libre.color, 'verde, sin punto').toBe(curso.color);
+  expect(libre.dot).toBe(false);
+
+  const noct = await medir('2026-08-18T22:45:00-05:00', true);
+  expect(noct.txt, 'el día COMPLETO: «tu martes», no «tu mar»').toMatch(/martes/);
+  expect(noct.dot).toBe(false);
+
+  const fin = await medir('2026-08-20T11:00:00-05:00', true);
+  expect(fin.txt, 'el cierre vuelve al sistema').toMatch(/Festival terminado/);
+  expect(fin.color, 'informativo = gris, no ámbar').not.toBe(AMBER);
+});
+
+// 18 ago, auditoría de Mi Plan con Juan: el calendario es UNA pieza — grilla,
+// día y lista comparten el perímetro bordeado, el día es caption (no banda),
+// las acciones son footer con labels que dicen la acción, y la hora tocable
+// lleva chevron en vez del hint que lo confesaba.
+test('T82 — el calendario es una pieza: lista adentro, footer con nombre propio, chevron sin hint', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(600);
+  const r = await page.evaluate(async () => {
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const pick = (day, pred, n) => FILMS.filter(f => bog(f) && f.day === day && pred(f)).slice(0, n);
+    const sched = [...pick('2026-08-18', f => f.time < '14:00', 1), ...pick('2026-08-18', f => f.time > '16:00', 2)];
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: sched.map(f => Object.assign({}, f, { _title: f.title })) });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    const wrap = document.querySelector('.mplan-wrap');
+    const btns = [...document.querySelectorAll('.mplan-foot-btn')].map(b => b.textContent.trim());
+    return {
+      listaDentro: !!wrap?.querySelector('.mplan-list'),
+      captionDentro: !!wrap?.querySelector('.mplan-list-hdr'),
+      footAlFinal: wrap && wrap.lastElementChild?.classList.contains('mplan-foot'),
+      labels: btns,
+      // Un solo cuerpo para ambos botones, dictado por el label más largo
+      // (pedido de Juan, 18 ago): mismas fuentes computadas y CERO desborde
+      // en el peor idioma (PT trae el label más ancho).
+      footSizes: [...document.querySelectorAll('.mplan-foot-btn')].map(b => getComputedStyle(b).fontSize),
+      footOverflow: await (async () => {
+        let worst = 0;
+        for (const lang of ['es', 'pt']) {
+          state.set('_lang', lang); switchMainNav('mnav-miplan'); showAgView();
+          await new Promise(r => setTimeout(r, 700));
+          const bs = [...document.querySelectorAll('.mplan-foot-btn')];
+          bs.forEach(b => { worst = Math.max(worst, b.scrollWidth - b.clientWidth); });
+          // y el 50/50 es real: ningún label le roba ancho al vecino
+          worst = Math.max(worst, Math.abs(bs[0].clientWidth - bs[1].clientWidth) > 2 ? 99 : 0);
+        }
+        state.set('_lang', 'es'); switchMainNav('mnav-miplan'); showAgView();
+        await new Promise(r => setTimeout(r, 700));
+        return worst;
+      })(),
+      hint: !!document.querySelector('.mplan-change-hint'),
+      chevronFuturas: [...document.querySelectorAll('.mplan-t1:not(.mp-past)')].every(e => !!e.querySelector('svg')),
+      chevronPasadas: [...document.querySelectorAll('.mplan-t1.mp-past')].some(e => e.querySelector('svg')),
+      nFuturas: document.querySelectorAll('.mplan-t1:not(.mp-past)').length,
+      nPasadas: document.querySelectorAll('.mplan-t1.mp-past').length,
+    };
+  });
+  expect(r.listaDentro, 'la lista vive dentro del perímetro de la pieza').toBe(true);
+  expect(r.captionDentro, 'el día es caption dentro de la pieza').toBe(true);
+  expect(r.footAlFinal, 'el footer cierra la pieza').toBe(true);
+  expect(r.labels.join('|'), 'los labels dicen la acción, no el sustantivo').toMatch(/Compartir Plan|Share Plan/);
+  // «Exportar» (Juan, 18 ago): dentro del calendario, «Pasar a tu calendario»
+  // obligaba a preguntar cuál; y «Sincronizar» prometía un vínculo vivo que el
+  // .ics no cumple. El verbo dice la acción; el icono carga el destino.
+  expect(r.labels.join('|')).toMatch(/Exportar|Export/);
+  expect(new Set(r.footSizes).size, 'un solo cuerpo tipográfico en el footer').toBe(1);
+  expect(r.footOverflow, 'el label más largo cabe: cero desborde (ES y PT)').toBe(0);
+  expect(r.hint, 'el hint murió: lo reemplaza la affordance').toBe(false);
+  expect(r.nFuturas, 'la escena tiene horas futuras que medir').toBeGreaterThan(0);
+  expect(r.chevronFuturas, 'toda hora tocable lleva chevron').toBe(true);
+  expect(r.nPasadas).toBeGreaterThan(0);
+  expect(r.chevronPasadas, 'una hora pasada no promete cambio').toBe(false);
+});
+
+// 18 ago — Diario LUZ (elección de Juan sobre 3 propuestas premium): el muro de
+// pósters LIMPIOS es el diario. La vista asumida no lleva NI UN pixel de estado;
+// el estado solo aparece al desviarse: calificaste → estrellas FUERA del afiche
+// (patrón Letterboxd); «no la vi» → póster apagado con el ojo tachado.
+test('T83 — Diario Luz: muro limpio, estrellas afuera, y la negación se apaga', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(600);
+  const r = await page.evaluate(async () => {
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const pick = (day, n) => FILMS.filter(f => bog(f) && f.day === day && f.poster && !f.is_cortos).slice(0, n);
+    const [rated, assumed, negada] = [...pick('2026-08-15', 2), ...pick('2026-08-16', 1)];
+    const sched = [rated, assumed, negada,
+      ...FILMS.filter(f => bog(f) && f.day === '2026-08-18' && f.time > '16:00').slice(0, 1)];
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: sched.map(f => Object.assign({}, f, { _title: f.title })) });
+    state.set('watched', new Set());
+    state.set('notWatched', new Set([negada.title]));
+    state.set('filmRatings', { [rated.title]: 4 });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    // el muro vive detrás del tap (18 ago): la sección es una tira replegada
+    document.querySelector('.dw-band')?.click();
+    await new Promise(r => setTimeout(r, 900));
+    const wrap = document.querySelector('.diary-sheet');
+    const sug = document.querySelector('.suggestion-wrap');
+    const seccion = document.querySelector('.diario-wrap');
+    // el data-title vive en el AFICHE (su tap abre la ficha), no en la card
+    const card = t => [...wrap.querySelectorAll('.dw-card')].find(c => c.querySelector(`[data-title="${CSS.escape(t)}"]`));
+    const cR = card(rated.title), cA = card(assumed.title), cN = card(negada.title);
+    return {
+      alFinal: !!seccion && !!sug && seccion.getBoundingClientRect().top > sug.getBoundingClientRect().top,
+      cuenta: wrap.querySelector('.count-badge')?.textContent,
+      // calificada: estrellas FUERA del póster (la fila no es descendiente de .dw-poster)
+      ratedStars: cR?.querySelectorAll('.dw-stars .dw-star.on').length,
+      starsFuera: cR ? !cR.querySelector('.dw-poster .dw-stars') : null,
+      // asumida: ni un pixel de estado sobre el afiche (su control es la
+      // estrella opaca de la fila, no una marca encima del póster)
+      assumedLimpia: cA ? !cA.querySelector('.dw-poster > :not(img)') && cA.querySelectorAll('.dw-star.on').length === 0 : null,
+      // negada: apagada, con el ojo tachado en su FILA, y NO cuenta en la banda
+      negadaOff: cN ? !!cN.querySelector('.dw-row .dw-ctrl[data-action="toggleWatched"]') && !!cN.querySelector('.dw-poster.dw-off') : null,
+    };
+  });
+  expect(r.alFinal, 'el Diario cierra el tab, después de Sugerencias').toBe(true);
+  expect(Number(r.cuenta), 'la banda cuenta 2: la calificada y la ASUMIDA — la negada no').toBe(2);
+  expect(r.ratedStars, 'la calificada lleva sus 4 estrellas').toBe(4);
+  expect(r.starsFuera, 'las estrellas viven FUERA del afiche (Letterboxd)').toBe(true);
+  // (el detalle fino de la fila de control lo fija T86)
+  expect(r.assumedLimpia, 'la asumida no lleva ni un pixel de estado').toBe(true);
+  expect(r.negadaOff, 'la negada se apaga con el ojo tachado').toBe(true);
+});
+
+// 18 ago (Juan, tras ver Letterboxd): el Diario se parte en dos estados. En Mi
+// Plan vive REPLEGADO —banda + tira solapada de alto FIJO, que no crece con lo
+// visto para no comerle el scroll al calendario— y al tocarlo abre su TAPA:
+// nuestro wordmark, el afiche del festival como objeto (completo, no recortado),
+// nombre y fechas, la banda «Lo que viste» y el muro CONTINUO (los días, fuera:
+// «limitan la visual y generan muchos espacios»).
+test('T84 — el Diario: replegado de alto fijo en Mi Plan, tapa y muro continuo al abrir', async ({ page }) => {
+  test.setTimeout(60000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const medir = async (n) => page.evaluate(async (n) => {
+    const pick = (day, k) => FILMS.filter(f => f.day === day && f.poster && !f.is_cortos).slice(0, k);
+    const sched = [...pick('2026-08-13', 4), ...pick('2026-08-14', 4), ...pick('2026-08-15', 4)].slice(0, n);
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: sched.map(f => Object.assign({}, f, { _title: f.title })) });
+    state.set('watched', new Set()); state.set('notWatched', new Set());
+    state.set('filmRatings', { [sched[0].title]: 4 });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1300));
+    const wrap = document.querySelector('.diario-wrap');
+    const strip = wrap?.querySelector('.dw-strip');
+    return { alto: wrap ? Math.round(wrap.getBoundingClientRect().height) : 0,
+      posters: strip ? strip.querySelectorAll('.dw-strip-p').length : 0,
+      mas: strip?.querySelector('.dw-strip-mas')?.textContent || null,
+      muroEnSeccion: !!wrap?.querySelector('.dw-grid'),
+      abre: wrap?.querySelector('.sec-hdr')?.matches('[data-action="openDiary"]') };
+  }, n);
+
+  // ── replegado: el alto NO crece con lo visto ──
+  const pocas = await medir(4);
+  const muchas = await medir(12);
+  expect(pocas.posters, 'con 4 obras, 4 pósters en la tira').toBe(4);
+  expect(muchas.posters, 'con 12, la tira se acota a 6').toBe(6);
+  expect(muchas.mas, 'y el resto se cuenta').toMatch(/\+\d+/);
+  expect(Math.abs(muchas.alto - pocas.alto), 'el alto no crece con lo visto').toBeLessThanOrEqual(2);
+  expect(muchas.muroEnSeccion, 'el muro NO vive en Mi Plan: está detrás del tap').toBe(false);
+  expect(muchas.abre, 'la banda abre el Diario').toBe(true);
+
+  // ── abierto: tapa + banda + muro continuo ──
+  const abierto = await page.evaluate(async () => {
+    document.querySelector('.dw-band').click();
+    await new Promise(r => setTimeout(r, 900));
+    const sheet = document.querySelector('.diary-sheet');
+    const art = sheet.querySelector('.diary-keyart');
+    const cs = art && getComputedStyle(art);
+    return {
+      wordmark: !!sheet.querySelector('.diary-wordmark'),
+      afiche: !!art && !!art.getAttribute('src'),
+      // el afiche es OBJETO: se ve completo (contain/cover en caja 2:3), no banda recortada
+      afichePropor: art ? +(art.getBoundingClientRect().height / art.getBoundingClientRect().width).toFixed(2) : 0,
+      titulo: sheet.querySelector('#diary-title')?.textContent.trim(),
+      fechas: sheet.querySelector('#diary-dates')?.textContent.trim(),
+      banda: sheet.querySelector('.diary-band')?.textContent.replace(/\s+/g, ' ').trim(),
+      grids: sheet.querySelectorAll('.dw-grid').length,
+      dias: sheet.querySelectorAll('.dw-day-lbl').length,
+      estrellas: sheet.querySelectorAll('.dw-stars .dw-star.on').length,
+      sheetIzq: Math.round(sheet.getBoundingClientRect().left),
+      bandaIzq: Math.round(sheet.querySelector('.diary-band').getBoundingClientRect().left),
+      ojoIzq: Math.round(sheet.querySelector('.diary-band svg').getBoundingClientRect().left),
+      nombreCompleto: sheet.querySelector('#diary-full')?.textContent.trim(),
+    };
+  });
+  expect(abierto.wordmark, 'la tapa lleva nuestro wordmark').toBe(true);
+  expect(abierto.afiche, 'y el afiche del festival').toBe(true);
+  expect(abierto.afichePropor, 'el afiche va completo en 2:3, no recortado a banda').toBeCloseTo(1.5, 1);
+  expect(abierto.titulo, 'con el nombre del festival').toBe('FICDEH');
+  expect(abierto.fechas, 'y sus fechas').toMatch(/AGO|AUG/);
+  expect(abierto.banda, 'la banda separa la tapa del muro y lleva la cuenta').toMatch(/Lo que viste|What you saw/);
+  // La banda no puede sangrar MÁS que la sheet: con el bleed de .sec-hdr
+  // (pensado para un contenedor con padding) el icono caía en x=0, cortado
+  // contra el borde (Juan, 18 ago).
+  expect(abierto.bandaIzq, 'la banda arranca en el borde de la sheet, no antes').toBe(abierto.sheetIzq);
+  expect(abierto.ojoIzq, 'y el ojo respeta su inset, entero').toBeGreaterThanOrEqual(12);
+  expect(abierto.nombreCompleto, 'bajo la sigla, el nombre completo sin repetirla').toMatch(/Festival Internacional/);
+  expect(abierto.grids, 'el muro es UNO solo, continuo').toBe(1);
+  expect(abierto.dias, 'sin días partiendo la retícula').toBe(0);
+  expect(abierto.estrellas, 'y las calificaciones se ven').toBeGreaterThan(0);
+});
+
+// 18 ago, regla de Juan: al ABRIR Programa, la barra de días muestra hoy Y
+// mañana sin navegar — «el día siguiente no puede estar escondido». Medido
+// antes del fix: AFF (10 días) mostraba hoy y cortaba mañana; Tribeca (12) no
+// mostraba ninguno de los dos. La fórmula vieja vivía copiada en 3 sitios y
+// solo corría al CARGAR el festival, no al volver desde otra pestaña.
+test('T85 — al abrir Programa, hoy y mañana caben sin navegar', async ({ page }) => {
+  test.setTimeout(90000);
+  const casos = [
+    ['aff2026', '2026-04-26T11:00:00-05:00'],
+    ['tribeca2026', '2026-06-10T11:00:00-05:00'],
+  ];
+  for (const [fest, tm] of casos) {
+    await enterFestival(page, fest, tm);
+    await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+    await page.waitForTimeout(500);
+    // salir a otra pestaña y VOLVER — el caso que reportó Juan
+    await page.evaluate(async () => {
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 400));
+      showDayView();
+      await new Promise(r => setTimeout(r, 500));
+    });
+    const r = await page.evaluate(() => {
+      const dt = document.getElementById('dtabs');
+      const tabs = [...dt.querySelectorAll('.dtab')];
+      const dr = dt.getBoundingClientRect();
+      const on = dt.querySelector('.dtab.on');
+      const next = tabs[tabs.indexOf(on) + 1] || null;
+      const vis = t => { const b = t.getBoundingClientRect();
+        return Math.round(b.left) >= Math.round(dr.left) - 1 && Math.round(b.right) <= Math.round(dr.right) + 1; };
+      return { hoy: vis(on), manana: next ? vis(next) : null, dias: tabs.length };
+    });
+    expect(r.dias, `${fest} tiene barra con varios días`).toBeGreaterThan(6);
+    expect(r.hoy, `${fest}: hoy a la vista al abrir Programa`).toBe(true);
+    expect(r.manana, `${fest}: y mañana también, sin navegar`).toBe(true);
+  }
+});
+
+// 18 ago (Juan, tras ver el ojo sobre el afiche): «el tap del póster abre la
+// card — ese comportamiento no se cambia». Los controles salen del afiche a
+// una fila centrada debajo: ojo tachado (devolver a vista) y estrella opaca
+// (calificar), a la altura de las estrellas de las calificadas.
+test('T86 — Diario: el afiche es solo afiche; los controles viven debajo', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const pick = (day, n) => FILMS.filter(f => f.day === day && f.poster && !f.is_cortos).slice(0, n);
+    const s = pick('2026-08-13', 3);
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: s.map(f => Object.assign({}, f, { _title: f.title })) });
+    state.set('watched', new Set()); state.set('notWatched', new Set([s[2].title]));
+    state.set('filmRatings', { [s[0].title]: 4 });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    // el muro vive detrás del tap (18 ago): la sección es una tira replegada
+    document.querySelector('.dw-band')?.click();
+    await new Promise(r => setTimeout(r, 900));
+    const cards = [...document.querySelectorAll('.diary-sheet .dw-card')];
+    const byTitle = t => cards.find(c => c.querySelector(`[data-title="${CSS.escape(t)}"]`));
+    const cal = byTitle(s[0].title), sinCal = byTitle(s[1].title), negada = byTitle(s[2].title);
+    const bajoElAfiche = c => { const p = c.querySelector('.dw-poster'), row = c.querySelector('.dw-row');
+      return !!p && !!row && row.getBoundingClientRect().top >= p.getBoundingClientRect().bottom - 1; };
+    const centrado = c => { const row = c.querySelector('.dw-row'), el = row.firstElementChild;
+      const rr = row.getBoundingClientRect(), er = el.getBoundingClientRect();
+      return Math.abs((er.left + er.right) / 2 - (rr.left + rr.right) / 2) <= 2; };
+    return {
+      nadaEncima: cards.every(c => !c.querySelector('.dw-poster > :not(img)')),
+      posterAbreFicha: cards.every(c => c.querySelector('.dw-poster')?.classList.contains('js-open-pel')),
+      // la negada ofrece el ojo; la no calificada, la estrella; la calificada, sus estrellas
+      negadaOjo: !!negada?.querySelector('.dw-ctrl[data-action="toggleWatched"]'),
+      sinCalEstrella: !!sinCal?.querySelector('.dw-ctrl-star[data-action="openRatingSheet"]'),
+      calEstrellas: cal?.querySelectorAll('.dw-stars .dw-star.on').length,
+      negadaSinEstrella: !negada?.querySelector('.dw-ctrl-star'),
+      bajo: [cal, sinCal, negada].every(bajoElAfiche),
+      centrados: [sinCal, negada].every(centrado),
+      // la fila reserva su alto aunque el control sea el mismo → misma línea base
+      mismaBase: new Set([cal, sinCal, negada].map(c => Math.round(c.querySelector('.dw-row').getBoundingClientRect().top))).size === 1,
+    };
+  });
+  expect(r.nadaEncima, 'el afiche no lleva nada encima').toBe(true);
+  expect(r.posterAbreFicha, 'y su tap abre la ficha, como en toda la app').toBe(true);
+  expect(r.negadaOjo, 'la negada ofrece el ojo tachado para volver a vista').toBe(true);
+  expect(r.sinCalEstrella, 'la no calificada ofrece la estrella opaca').toBe(true);
+  expect(r.calEstrellas, 'la calificada muestra su calificación').toBe(4);
+  expect(r.negadaSinEstrella, 'a la negada no se le pide calificar').toBe(true);
+  expect(r.bajo, 'los controles viven DEBAJO del afiche').toBe(true);
+  expect(r.centrados, 'y centrados en su fila').toBe(true);
+  expect(r.mismaBase, 'la fila reserva su alto: los pósters no bailan').toBe(true);
+});
+
+// 18 ago (Juan): «al abrir la Card debe aparecer Vista, con el ojito; siempre
+// primero la opción de Vista». Lo que había era una mentira de interfaz: el
+// botón decía «Calificar» con estrella y su acción era toggleWatched — marcaba
+// vista. Ahora el ojo y el label dicen lo que el botón hace, en los dos estados.
+test('T87 — la card ofrece VISTA con el ojo, y calificar viene después', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T15:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const f = FILMS.find(x => !x.is_cortos && x.poster);
+    openPelSheet(f.title);
+    await new Promise(r => setTimeout(r, 700));
+    const btn = document.getElementById('pel-vista-btn');
+    const antes = { txt: btn?.textContent.trim(), accion: btn?.dataset.action,
+      // el icono del ojo trae su círculo (pupila); la estrella, un polígono
+      ojo: !!btn?.querySelector('circle'), estrella: !!btn?.querySelector('polygon') };
+    // marcarla vista → la card pasa al estado ya-vista
+    btn.click();
+    await new Promise(r => setTimeout(r, 500));
+    const modal = [...document.querySelectorAll('button')].find(b => /Sí|Marcar|Confirmar/i.test(b.textContent));
+    if (modal) { modal.click(); await new Promise(r => setTimeout(r, 700)); }
+    const vistos = [...document.querySelectorAll('.pel-sheet-ctas-watched .pel-sheet-action-btn')]
+      .map(b => ({ txt: b.textContent.trim(), ojo: !!b.querySelector('circle'), estrella: !!b.querySelector('polygon') }));
+    return { antes, vistos };
+  });
+  expect(r.antes.accion, 'el botón marca vista…').toBe('toggleWatched');
+  expect(r.antes.txt, '…y lo dice: Vista, no Calificar').toMatch(/Vista|Seen|Watched/);
+  expect(r.antes.ojo, 'con el ojo, el icono de watched').toBe(true);
+  expect(r.antes.estrella, 'sin estrella: calificar es otra cosa').toBe(false);
+  if (r.vistos.length) {
+    expect(r.vistos[0].txt, 'ya vista: Vista sigue primero').toMatch(/Vista|Seen|Watched/);
+    expect(r.vistos[0].ojo, 'y con el ojo, no con el check').toBe(true);
+  }
+});
+
+// 18 ago (Juan): el vacío de Sugerencias gastaba 114px y una lupa de 20 para
+// una frase de 31 caracteres — el vacío pesaba más que el contenido. Y la lupa
+// decía «búsqueda fallida» cuando lo que pasa es que el catálogo se agotó.
+test('T88 — el vacío de Sugerencias es una línea, no una pantalla', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T19:30:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const f = FILMS.filter(x => x.day === '2026-08-18' && x.time >= '19:00').slice(0, 3);
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: f.map(x => Object.assign({}, x, { _title: x.title })) });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    const w = document.querySelector('.suggestion-wrap');
+    const linea = w?.querySelector('.sug-vacio');
+    return { hay: !!linea, alto: linea && Math.round(linea.getBoundingClientRect().height),
+      pantallaVieja: !!w?.querySelector('.empty-state'),
+      txt: linea?.textContent.trim() };
+  });
+  expect(r.hay, 'el vacío existe y nombra el día').toBe(true);
+  expect(r.txt, 'con el día, no un «hoy» falso').toMatch(/MAR 18/);
+  expect(r.alto, 'y cabe en una línea').toBeLessThanOrEqual(30);
+  expect(r.pantallaVieja, 'sin la pantalla vacía con lupa').toBe(false);
+});
+
+// 18 ago (Juan, UX Writer): «no te daría» es una afirmación sobre tu futuro —
+// nunca afirmamos, sugerimos. La línea del Q&A pasa a describir la aritmética
+// de la estimación: cuánto queda, o cuánto se cruza. El sujeto es la charla y
+// el reloj, no el usuario («si te quedás te quedarían» se fue con su redundancia).
+test('T89 — la línea del Q&A cuenta el reloj, no predice tu suerte', async ({ page }) => {
+  test.setTimeout(60000);
+  await enterFestival(page, 'finca2026', '2026-08-18T09:00:00-03:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const dur = f => parseInt(String(f.duration).match(/\d+/)?.[0] || 90, 10);
+    const mins = t => { const [h, m] = t.split(':').map(Number); return h * 60 + m; };
+    const out = { cabe: null, cruza: null };
+    for (const prev of FILMS.filter(f => f.has_qa)) {
+      const fin = mins(prev.time) + dur(prev);
+      for (const next of FILMS.filter(f => f.day === prev.day && f.venue === prev.venue && mins(f.time) > fin)) {
+        const qaGap = mins(next.time) - fin - 30;
+        const target = qaGap >= 0 && qaGap < 25 ? 'cabe' : (qaGap < 0 && qaGap > -40 ? 'cruza' : null);
+        if (!target || out[target]) continue;
+        _simTime = prev.day + 'T08:00:00-03:00';
+        state.set('savedAgenda', { scenarioIdx: 0, schedule: [prev, next].map(f => Object.assign({}, f, { _title: f.title })) });
+        switchMainNav('mnav-miplan'); showAgView();
+        await new Promise(r => setTimeout(r, 900));
+        const w = [...document.querySelectorAll('.mplan-warn-row')].find(e => /Q&A/.test(e.textContent));
+        if (w) out[target] = w.textContent.replace(/\s+/g, ' ').trim();
+      }
+      if (out.cabe && out.cruza) break;
+    }
+    return out;
+  });
+  const todo = [r.cabe, r.cruza].filter(Boolean).join(' | ');
+  expect(todo, 'la escena produjo al menos una línea de Q&A').toBeTruthy();
+  expect(todo, 'sin veredicto sobre tu futuro').not.toMatch(/no te daría|wouldn.t make it/);
+  expect(todo, 'y sin decirte qué harías').not.toMatch(/si te quedás|te quedarían/);
+  if (r.cabe) expect(r.cabe, 'cuando cabe: cuánto queda hasta la siguiente').toMatch(/quedan ~\d+ min hasta la siguiente/);
+  if (r.cruza) expect(r.cruza, 'cuando no: cuánto se cruza, con su número').toMatch(/se cruza ~\d+ min con la siguiente/);
+});
+
+// 18 ago, discusión de Planear (Juan: «mantener la simplicidad pero comunicar
+// mejor»): la pantalla pedía calcular sin decir qué iba a procesar. Ahora dice
+// el INSUMO («8 obras · 3 con prioridad»), el SUPUESTO (la banda de
+// Disponibilidad muestra su valor, no «opcional») y el PRE-DIAGNÓSTICO (los
+// cruces sin salida, en ámbar, con oráculo independiente en este test).
+test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ page }) => {
+  test.setTimeout(60000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:21:00-05:00');
+  // con filtro de CIUDAD: en un festival multiciudad casi todo choque es de
+  // ciudad, y el pre-diagnóstico solo afirma solapes de reloj.
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const S = await import('/src/domain/schedule.js');
+    // La selección INCLUYE obras con ≥2 funciones: ahí un predicado débil
+    // (some en vez de every) infla la cuenta — el cruce con salida no es cruce.
+    const porT = {};
+    FILMS.forEach(f => { if (!D.screeningPassed(f)) (porT[f.title] = porT[f.title] || []).push(f); });
+    // la selección INCLUYE pares que se pisan de verdad, y obras con ≥2
+    // funciones (ahí un predicado débil inflaría la cuenta: el cruce con salida
+    // no es cruce).
+    const pisanTodo = (a, b) => porT[a].every(x => porT[b].every(y => {
+      const r = S.screensConflictReason(x, y); return !!r && r.kind === 'solape'; }));
+    const ts0 = Object.keys(porT);
+    const conSolape = new Set();
+    for (let i = 0; i < ts0.length && conSolape.size < 6; i++)
+      for (let j = i + 1; j < ts0.length && conSolape.size < 6; j++)
+        if (pisanTodo(ts0[i], ts0[j])) { conSolape.add(ts0[i]); conSolape.add(ts0[j]); }
+    const multi = ts0.filter(t => porT[t].length >= 2 && !conSolape.has(t));
+    const sel = [...conSolape, ...multi.slice(0, 3)];
+    state.set('watchlist', new Set(sel));
+    state.set('prioritized', new Set(sel.slice(0, 3)));
+    const base = FILMS.find(f => f.day === '2026-08-19' && !sel.includes(f.title));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [Object.assign({}, base, { _title: base.title })] });
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 1500));
+    // oráculo independiente: parejas cuyas funciones chocan en TODAS las combinaciones
+    const por = {};
+    FILMS.forEach(f => { if (sel.includes(f.title) && !D.screeningPassed(f)) (por[f.title] = por[f.title] || []).push(f); });
+    const ts = Object.keys(por); let esperados = 0, debiles = 0;
+    for (let i = 0; i < ts.length; i++) for (let j = i + 1; j < ts.length; j++) {
+      const pisan = (x, y) => { const r = S.screensConflictReason(x, y); return !!r && r.kind === 'solape'; };
+      if (por[ts[i]].every(x => por[ts[j]].every(y => pisan(x, y)))) esperados++;
+      if (por[ts[i]].some(x => por[ts[j]].some(y => pisan(x, y)))) debiles++;
+    }
+    // materializar ANTES del re-render (los nodos quedan huérfanos después)
+    const linea = document.querySelector('.dato-linea');
+    const _insumo = linea?.textContent.replace(/\s+/g, ' ').trim();
+    const _cr = linea?.querySelector('.dato-alerta');
+    const _crTxt = _cr?.textContent.trim() || null;
+    const _crColor = _cr && getComputedStyle(_cr).color;
+    const _fs = linea && getComputedStyle(linea).fontSize;
+    // ritmo 1:2 — el hueco al CTA no puede ser el de «entre secciones»
+    const _cta = document.querySelector('.av-calc-btn');
+    const _gapCta = (_cta && linea) ? Math.round(_cta.getBoundingClientRect().top - linea.getBoundingClientRect().bottom) : null;
+    const _filas = document.querySelectorAll('.dato-linea').length;
+    const fila = document.querySelector('.av-fila');
+    const _filaTxt = fila?.textContent.replace(/\s+/g, ' ').trim();
+    const _editar = fila?.querySelector('.av-editar')?.textContent.trim() || null;
+    // con una restricción configurada, el bloque se VE (no hay acordeón)
+    const av = { ...state.snapshot().availability };
+    av[Object.keys(av)[6]] = { blocks: [{ from: '09:00', to: '14:00' }] };
+    state.set('availability', av);
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 900));
+    const bloqueVisible = (() => { const b = document.getElementById('av-blocks-list');
+      return !!b && b.children.length > 0 && b.offsetParent !== null; })();
+    return {
+      esperados, debiles, pendientes: ts.length,
+      insumo: _insumo, cruces: _crTxt, crucesColor: _crColor, fs: _fs, gapCta: _gapCta, filas: _filas,
+      filaTxt: _filaTxt, editar: _editar,
+      acordeon: !!document.querySelector('.ag-av-details'),
+      bloqueVisible,
+    };
+  });
+  // UNA sola línea con la fórmula «texto · texto»: insumo y aviso conviven
+  expect(r.filas, 'una sola línea, no dos').toBe(1);
+  expect(r.insumo, 'el insumo abre la línea').toMatch(new RegExp(`^${r.pendientes} obras · \\d+ con prioridad`));
+  expect(r.fs, 'con el cuerpo del canon (t-base), no t-sm').toBe('13px');
+  expect(r.gapCta, 'y el salto al CTA es sp-4, no «entre secciones»').toBeLessThanOrEqual(20);
+  expect(r.esperados, 'la escena tiene cruces que diagnosticar').toBeGreaterThan(0);
+  expect(r.debiles, 'y distingue el predicado: un cruce con salida no es cruce').toBeGreaterThan(r.esperados);
+  // solapes puros: dato del programa, afirmable. Los cruces por viaje son
+  // estimación nuestra y no se anuncian como hecho antes de calcular.
+  expect(r.cruces, 'el pre-diagnóstico dice el número del oráculo de SOLAPES')
+    .toBe(r.esperados === 1 ? '1 cruce de horario' : `${r.esperados} cruces de horario`);
+  expect(r.crucesColor, 'en ámbar: aviso, no veredicto').toBe('rgb(245, 158, 11)');
+  // La fila de Disponibilidad: sin acordeón, sin valor verbal (Juan: confundía)
+  // — el estado lo dicen los BLOQUES visibles. «Editar» hereda el objeto.
+  expect(r.acordeon, 'el acordeón murió').toBe(false);
+  expect(r.editar, 'la fila ofrece Editar — el verbo hereda el objeto').toMatch(/^Editar$|^Edit$/);
+  expect(r.filaTxt, 'sin «opcional» ni valor verbal').not.toMatch(/opcional|restriccion/i);
+  expect(r.bloqueVisible, 'con restricción configurada, el bloque SE VE').toBe(true);
+});
+
+// 18 ago (Juan): «quiero que se vean siempre claros los botones inferiores,
+// sin navegar la card». Medido antes: con 352 caracteres de sinopsis la ficha
+// topaba en 88dvh y los CTAs caían 96px BAJO el borde visible. El alto ya era
+// responsive (411px en un evento sin sinopsis); lo que faltaba era anclar el pie.
+test('T91 — la ficha: alto según su contenido y los CTAs siempre a la vista', async ({ page }) => {
+  test.setTimeout(60000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T09:00:00-05:00');
+  await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
+  await page.waitForTimeout(400);
+  const r = await page.evaluate(async () => {
+    const largo = f => (f.synopsis || '').length + (f.film_list?.length || 0) * 200;
+    const orden = [...FILMS].sort((a, b) => largo(b) - largo(a));
+    const casos = [orden[orden.length - 1], orden[0]]; // la más corta y la más larga
+    const out = [];
+    for (const f of casos) {
+      openPelSheet(f.title);
+      await new Promise(r => setTimeout(r, 700));
+      const sh = document.getElementById('pel-sheet');
+      const cta = sh.querySelector('.pel-sheet-ctas, .pel-sheet-ctas-watched');
+      const shr = sh.getBoundingClientRect(), ctr = cta.getBoundingClientRect();
+      out.push({
+        alto: Math.round(shr.height),
+        scrollea: sh.scrollHeight > sh.clientHeight + 2,
+        // el CTA cabe DENTRO del rectángulo visible de la sheet
+        dentro: Math.round(ctr.bottom) <= Math.round(shr.bottom) + 1 && Math.round(ctr.top) >= Math.round(shr.top),
+        piePegado: getComputedStyle(sh.querySelector('.pel-sheet-foot')).position,
+      });
+      closePelSheet(); await new Promise(r => setTimeout(r, 300));
+    }
+    return { corta: out[0], larga: out[1], vp: innerHeight };
+  });
+  // alto según contenido: la corta NO llega al tope y no scrollea
+  expect(r.corta.scrollea, 'la ficha corta cabe entera').toBe(false);
+  expect(r.corta.alto, 'y mide bastante menos que el tope').toBeLessThan(r.vp * 0.7);
+  expect(r.larga.scrollea, 'la larga sí scrollea su cuerpo').toBe(true);
+  // y en AMBAS los botones están a la vista sin navegar
+  expect(r.corta.dentro, 'CTAs a la vista en la corta').toBe(true);
+  expect(r.larga.dentro, 'CTAs a la vista en la larga, sin scrollear').toBe(true);
+  expect(r.larga.piePegado, 'el pie va anclado').toBe('sticky');
+});
+
+// 18 ago (Juan): «el separador dice Opción y tiene badge, se entiende como el
+// número de Opción». Un badge junto a un sustantivo CONTABLE se lee como su
+// índice — y el 5 eran las obras. Ya pasamos por «Plan Óptimo»: el problema no
+// era la palabra, era el badge. Muere la banda; el resumen usa la línea de dato
+// («6 obras · 2 días») y los días adoptan la banda ámbar del separador de horas
+// de Programa, con su conteo.
+test('T92 — el resultado: sin banda «Opción», resumen en línea y días como Programa', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(fut.slice(0, 10)));
+    cachedResult = null; savedAgenda = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 800));
+    document.querySelector('.av-calc-btn').click();
+    for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
+    const sum = document.querySelector('.ag-summary');
+    const bandas = [...document.querySelectorAll('.ag-day-band')];
+    const b0 = bandas[0];
+    return {
+      bandaOpcion: !!sum?.querySelector('.sec-hdr'),
+      resumen: sum?.querySelector('.dato-resultado')?.textContent.trim(),
+      // el resumen NO lleva badge: un número en píldora se leía como índice
+      resumenBadge: !!sum?.querySelector('.count-badge'),
+      nBandas: bandas.length,
+      // los días heredan la anatomía del separador de horas de Programa
+      color: b0 && getComputedStyle(b0).color,
+      caps: b0 && getComputedStyle(b0).letterSpacing,
+      conteoDia: !!b0?.querySelector('.count-badge'),
+      txt: b0?.textContent.replace(/\s+/g, ' ').trim(),
+      // y el conteo del día coincide con las filas que lo siguen
+      dias: new Set((cachedResult.scenarios[cachedResult.currentIdx || 0].schedule || []).map(s => s.day)).size,
+    };
+  });
+  expect(r.bandaOpcion, 'la banda «Opción» murió').toBe(false);
+  expect(r.resumen, 'el resumen es una línea de dato: obras · días').toMatch(/\d+ obras? · \d+ días?/);
+  expect(r.resumenBadge, 'sin badge — el número no puede leerse como índice').toBe(false);
+  expect(r.nBandas, 'hay una banda por día del plan').toBe(r.dias);
+  expect(r.color, 'los días van en ámbar, como las horas de Programa').toBe('rgb(245, 158, 11)');
+  expect(parseFloat(r.caps), 'con el tracking del separador de horas').toBeGreaterThan(0.5);
+  expect(r.conteoDia, 'y conservan su conteo').toBe(true);
+  expect(r.txt, 'el día va en mayúsculas').toMatch(/^[A-ZÁÉÍÓÚÑ]/);
+});
+
+test('T93 — el resultado se distingue del insumo, y «sin cupo» no se inventa el número', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
+    // 14 obras para forzar que alguna se quede fuera y exista el matiz, MÁS
+    // obras que el festival ya se llevó: sin ellas sc.excluded y _excVivas dan
+    // el mismo número y el oráculo no distingue nada (la mutación pasaba).
+    // «ya se la llevó el festival» = TODAS sus funciones pasaron. Con «alguna»
+    // entran obras que aún tienen función futura y el motor sí puede planear.
+    const porT = {};
+    FILMS.filter(bog).forEach(f => (porT[f.title] = porT[f.title] || []).push(f));
+    const idas = Object.keys(porT).filter(t => porT[t].every(f => D.screeningPassed(f))).slice(0, 3);
+    state.set('watchlist', new Set([...fut.slice(0, 14), ...idas]));
+    cachedResult = null; savedAgenda = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 1500));
+    // el insumo vive ARRIBA del botón; se mide antes de calcular
+    const insumo = document.querySelector('.pre-resumen .dato-linea');
+    // se leen los NÚMEROS ya: getComputedStyle devuelve un objeto vivo y el
+    // cálculo re-renderiza — guardar la referencia daba '' (y NaN al medir).
+    const insumoPx = insumo ? parseFloat(getComputedStyle(insumo).fontSize) : null;
+    const insumoPeso = insumo ? parseInt(getComputedStyle(insumo).fontWeight) : null;
+    document.querySelector('.av-calc-btn').click();
+    for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
+    const res = document.querySelector('.dato-resultado');
+    const cs = res && getComputedStyle(res);
+    const cupo = res?.querySelector('.dato-linea');
+    const band = document.querySelector('.ag-day-band');
+    return {
+      insumoPx, insumoPeso,
+      resPx: cs && parseFloat(cs.fontSize),
+      resPeso: cs && parseInt(cs.fontWeight),
+      resColor: cs && cs.color,
+      // el matiz sigue siendo gris y más chico que la afirmación que acompaña
+      cupoTxt: cupo?.textContent.trim() || '',
+      cupoPx: cupo && parseFloat(getComputedStyle(cupo).fontSize),
+      cupoColor: cupo && getComputedStyle(cupo).color,
+      // el N de «sin cupo» tiene que ser el de la lista que se ve, no otro
+      nFilas: document.querySelectorAll('.ag-excl-block .int-item').length,
+      // control de que el oráculo NO es vacuo: si estos dos números fueran
+      // iguales, «sin cupo» podría salir de cualquiera de los dos conteos.
+      nExcluidasCrudas: (cachedResult.scenarios[cachedResult.currentIdx || 0].excluded || []).length,
+      // y la línea pertenece a la banda de abajo, no al botón de arriba
+      huecoAbajo: band && res ? Math.round(band.getBoundingClientRect().top - res.getBoundingClientRect().bottom) : null,
+    };
+  });
+  expect(r.resPx, 'el resultado es más grande que el insumo').toBeGreaterThan(r.insumoPx);
+  expect(r.resPeso, 'y más pesado').toBeGreaterThan(r.insumoPeso);
+  expect(r.resColor, 'el resultado va en blanco — es la respuesta').toBe('rgb(240, 237, 232)');
+  if (r.nFilas > 0) {
+    expect(r.nExcluidasCrudas, 'el escenario distingue: hay excluidas que el festival ya se llevó')
+      .toBeGreaterThan(r.nFilas);
+    expect(r.cupoTxt, 'con obras fuera, el resultado dice cuántas').toMatch(/\d+/);
+    expect(parseInt(r.cupoTxt.match(/\d+/)[0]), 'y ese número es el de la lista que se ve')
+      .toBe(r.nFilas);
+    expect(r.cupoPx, 'el matiz es más chico que la afirmación').toBeLessThan(r.resPx);
+    expect(r.cupoColor, 'y sigue siendo gris').toBe('rgb(136, 136, 136)');
+  }
+  expect(r.huecoAbajo, 'el resultado queda pegado a la banda que describe').toBeLessThanOrEqual(16);
+});
+
+test('T94 — lo que nunca compitió no cuenta como costo del Plan, y no se pierde', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(fut.slice(0, 14)));
+    cachedResult = null; savedAgenda = null;
+    switchMainNav('mnav-planner'); showAgView();
+    for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
+    await new Promise(r => setTimeout(r, 400));
+    const sc = cachedResult.scenarios[cachedResult.currentIdx || 0];
+    const city = document.querySelector('.ag-excl-city');
+    const filasCiudad = [...document.querySelectorAll('.ag-excl-city .int-item')];
+    return {
+      titular: document.querySelector('.dato-resultado')?.textContent.replace(/\s+/g, ' ').trim(),
+      nCompiten: document.querySelectorAll('.ag-excl-block .int-item').length,
+      nCiudad: filasCiudad.length,
+      // oráculo independiente: el total de excluidas VIVAS del escenario
+      nVivas: (sc.excluded || []).filter(t => FILMS.some(f => f.title === t && !D.screeningPassed(f))).length,
+      abierta: !!city?.open,
+      // en «otra ciudad» no se repite la razón ni se ofrece lo que el motor rechaza
+      razones: filasCiudad.filter(x => x.querySelector('.excl-reason')).length,
+      botones: filasCiudad.filter(x => x.querySelector('.excl-include-btn')).length,
+      // la explicación se dice UNA vez, con la ciudad del Plan
+      sub: document.querySelector('.excl-city-sub')?.textContent.trim() || '',
+      // y cada fila aporta la suya
+      ciudadEnFila: filasCiudad.every(x => /·/.test(x.querySelector('.int-item-when')?.textContent || '')),
+    };
+  });
+  expect(r.nCiudad, 'el escenario tiene obras de otra ciudad (si no, el test no prueba nada)').toBeGreaterThan(0);
+  expect(r.nCompiten + r.nCiudad, 'ninguna excluida se pierde entre las dos secciones').toBe(r.nVivas);
+  expect(r.titular, 'el titular cuenta SOLO las que compitieron').toContain(String(r.nCompiten));
+  expect(r.nCompiten, 'y el escenario distingue: no todas compitieron').toBeLessThan(r.nVivas);
+  expect(r.abierta, 'la sección sin acciones arranca replegada').toBe(false);
+  expect(r.razones, 'la razón no se repite fila por fila').toBe(0);
+  expect(r.botones, 'no se ofrece un botón que el motor va a rechazar').toBe(0);
+  expect(r.sub, 'la explicación se dice una vez, con la ciudad del Plan').toMatch(/Bogotá/);
+  expect(r.ciudadEnFila, 'cada fila aporta su ciudad').toBe(true);
+});
+
+test('T95 — la alerta de cruces es un pre-diagnóstico: no sobrevive al resultado', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(fut.slice(0, 14)));
+    state.set('prioritized', new Set(fut.slice(0, 2)));
+    // showAgView() calcula solo si no hay Plan guardado (pipeline.js): para ver
+    // el estado PREVIO se le da uno, así el pre-diagnóstico queda a la vista.
+    const base = FILMS.find(f => bog(f) && !D.screeningPassed(f));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [Object.assign({}, base, { _title: base.title })] });
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 1500));
+    const antes = {
+      alerta: !!document.querySelector('.pre-resumen .dato-alerta'),
+      linea: document.querySelector('.pre-resumen .dato-linea')?.textContent.replace(/\s+/g, ' ').trim(),
+    };
+    document.querySelector('.av-calc-btn').click();
+    for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
+    await new Promise(r => setTimeout(r, 400));
+    const banner = document.querySelector('.meta-banner-text');
+    return {
+      antes,
+      despuesAlerta: !!document.querySelector('.pre-resumen .dato-alerta'),
+      despuesLinea: document.querySelector('.pre-resumen .dato-linea')?.textContent.replace(/\s+/g, ' ').trim(),
+      banner: banner ? banner.textContent.replace(/\s+/g, ' ').trim() : null,
+    };
+  });
+  expect(r.antes.alerta, 'antes de calcular la alerta SÍ está (si no, el test no prueba nada)').toBe(true);
+  expect(r.despuesAlerta, 'con el resultado en pantalla la alerta se retira').toBe(false);
+  expect(r.despuesLinea, 'el insumo se conserva: se va la alerta, no el dato').toMatch(/\d+ obras/);
+  if (r.banner) {
+    expect(r.banner, 'punto seguido de raya no es puntuación española').not.toMatch(/\.\s*—/);
+    expect(r.banner, 'la segunda oración arranca en mayúscula').toMatch(/\.\s+[A-ZÁÉÍÓÚÑ]/);
+  }
+});
+
+test('T96 — el botón admite que ya calculó, y no compite con el que confirma', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(fut.slice(0, 12)));
+    // con Plan guardado NO hay auto-cálculo (pipeline.js): se ve el estado previo
+    const base = FILMS.find(f => bog(f) && !D.screeningPassed(f));
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [Object.assign({}, base, { _title: base.title })] });
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 1500));
+    // ámbar del canon primario: el primer stop del degradado
+    const AMBAR = '251, 191, 36';
+    const primarios = () => [...document.querySelectorAll('button')]
+      .filter(b => b.offsetParent !== null)
+      .filter(b => (getComputedStyle(b).backgroundImage || '').includes(AMBAR))
+      .map(b => b.textContent.replace(/\s+/g, ' ').trim());
+    const btn = () => document.querySelector('.av-calc-btn');
+    const esAmbar = el => (getComputedStyle(el).backgroundImage || '').includes(AMBAR);
+    const antes = { txt: btn().textContent.trim(), recalc: btn().classList.contains('recalc'), ambar: esAmbar(btn()) };
+    btn().click();
+    for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
+    await new Promise(r => setTimeout(r, 400));
+    return { antes, despues: { txt: btn().textContent.trim(), recalc: btn().classList.contains('recalc'),
+      ambar: esAmbar(btn()), primarios: primarios() } };
+  });
+  expect(r.antes.txt, 'sin resultado, el botón ofrece calcular').toMatch(/Calcular/);
+  expect(r.antes.recalc, 'y es el primario').toBe(false);
+  expect(r.antes.ambar, 'sin resultado, calcular ES el CTA ámbar').toBe(true);
+  expect(r.despues.txt, 'con resultado, nombra lo que de verdad haría').toMatch(/Recalcular/);
+  expect(r.despues.recalc, 'y baja a secundario').toBe(true);
+  expect(r.despues.ambar, 'y deja de vestirse de CTA primario').toBe(false);
+  // El paso siguiente pasa a ser confirmar: «Usar este Plan» queda como el único
+  // ámbar de PÁGINA. (Las acciones de fila del bloque de conflictos también son
+  // ámbar por el canon; se cuentan aparte y no son parte de este cambio.)
+  expect(r.despues.primarios.some(txt => /Plan/.test(txt)), 'el CTA que confirma sigue en ámbar').toBe(true);
+  expect(r.despues.primarios.some(txt => /Calcular|Recalcular/.test(txt)), 'y el de calcular ya no compite').toBe(false);
+});
+
+test('T97 — el Plan que estás mirando no cambia solo: se marca y vos recalculás', async ({ page }) => {
+  test.setTimeout(120000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  await page.evaluate(() => [...document.querySelectorAll('#city-sheet [data-action]')]
+    .find(x => x.textContent.includes('Bogotá'))?.click());
+  await page.waitForTimeout(500);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/film.js');
+    const bog = f => (f.venue || '').includes('Bogotá');
+    const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(fut.slice(0, 12)));
+    cachedResult = null; savedAgenda = null;
+    switchMainNav('mnav-planner'); showAgView();
+    for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
+    await new Promise(r => setTimeout(r, 300));
+    const firma = () => cachedResult && cachedResult._inputSnapshot;
+    const foto = () => ({
+      titulos: [...document.querySelectorAll('#ag-result .saved-item')].length,
+      stale: !!document.querySelector('.prio-stale'),
+      confirmar: !!document.querySelector('.ag-save-btn'),
+      confirmarOff: !!document.querySelector('.ag-save-btn[disabled]'),
+      confirmarOpacidad: (() => { const b = document.querySelector('.ag-save-btn');
+        return b ? parseFloat(getComputedStyle(b).opacity) : 1; })(),
+      firma: firma(),
+    });
+    const inicial = foto();
+    // gesto 1 — CORAZÓN: antes destruía el resultado y recalculaba en silencio
+    const enPlan = [...document.querySelectorAll('#ag-result .saved-item')][0]?.dataset.title;
+    const fuera = fut.slice(12, 13)[0];
+    toggleWL(fuera);
+    await new Promise(r => setTimeout(r, 600));
+    const trasCorazon = foto();
+    // gesto 2 — MARCADOR: el que ya conservaba (misma ley ahora)
+    togglePriority(enPlan || fut[0]);
+    await new Promise(r => setTimeout(r, 600));
+    const trasMarcador = foto();
+    // recalcular: el usuario decide cuándo
+    document.querySelector('.av-calc-btn').click();
+    for (let i = 0; i < 60 && document.querySelector('.prio-stale'); i++) await new Promise(r => setTimeout(r, 250));
+    await new Promise(r => setTimeout(r, 300));
+    return { inicial, trasCorazon, trasMarcador, tras: foto() };
+  });
+  expect(r.inicial.titulos, 'hay un Plan en pantalla').toBeGreaterThan(0);
+  expect(r.inicial.stale, 'y arranca al día').toBe(false);
+  expect(r.inicial.confirmarOff, 'con el Plan al día se puede confirmar').toBe(false);
+  // el corazón ya no destruye ni recalcula: conserva y avisa
+  expect(r.trasCorazon.titulos, 'el Plan sigue en pantalla tras tocar un interés').toBe(r.inicial.titulos);
+  expect(r.trasCorazon.firma, 'y sigue siendo el MISMO cálculo (no recalculó solo)').toBe(r.inicial.firma);
+  expect(r.trasCorazon.stale, 'pero queda marcado como desactualizado').toBe(true);
+  expect(r.trasCorazon.confirmarOff, 'y no se puede confirmar un Plan que ya no corresponde').toBe(true);
+  expect(r.trasCorazon.confirmarOpacidad, 'y se NOTA que no se puede (un botón muerto no puede verse vivo)')
+    .toBeLessThan(0.5);
+  // el marcador se comporta IGUAL que el corazón: una sola ley
+  expect(r.trasMarcador.stale, 'la prioridad sigue la misma ley').toBe(true);
+  expect(r.trasMarcador.firma, 'tampoco recalcula sola').toBe(r.inicial.firma);
+  // y al pedirlo, se pone al día
+  expect(r.tras.stale, 'al recalcular se va la marca').toBe(false);
+  expect(r.tras.firma, 'y el cálculo es otro').not.toBe(r.inicial.firma);
+  expect(r.tras.confirmarOff, 'y vuelve a poder confirmarse').toBe(false);
+});
+
+test('T98 — ningún texto del póster cruza la línea de margen de la retícula', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T08:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const C = await import('/src/view/components.js');
+    // Retícula §6.0: u = ancho/8 = 15, margen 0,75u = 11,25. Las «reglas» son
+    // x ≤ 108,75 y y ≤ 168,75 — Juan las pidió tras ver textos tocando el borde.
+    const M = 11.25, DER = 120 - M, ABAJO = 180 - M;
+    const casos = [
+      ['Retrospectiva 10 Años del Acuerdo de Paz', 'Con la paz entre las manos'],
+      ['Competencia Nacional de Cortometrajes', 'Una obra con título bastante largo de prueba'],
+      ['Charla', 'El arte de moldear la IA'],
+      ['Muestra', 'Ñandú y el poema gigante que baja'],
+      ['Retrospectiva', 'Wwwwwwwwwwww Mmmmmmmmmm'],   // extremo sintético: palabra sin dónde partir
+      ['Cortos', 'A'],
+    ];
+    return casos.map(([sec, tit]) => {
+      const svg = decodeURIComponent(C._buildPosterV16({ accent:'#F59E0B', headerLabel:sec, title:tit, num:null, dato:'Charla · Bogotá' })
+        .replace('data:image/svg+xml,', ''));
+      const div = document.createElement('div'); div.innerHTML = svg;
+      const el = div.querySelector('svg');
+      el.style.cssText = 'position:absolute;width:120px'; document.body.appendChild(el);
+      let der = 0, abajo = 0, n = 0;
+      el.querySelectorAll('text').forEach(t => { const b = t.getBBox();
+        der = Math.max(der, b.x + b.width); abajo = Math.max(abajo, b.y + b.height); n++; });
+      el.remove();
+      return { sec, der:+der.toFixed(1), abajo:+abajo.toFixed(1), n, DER, ABAJO };
+    });
+  });
+  for (const c of r) {
+    expect(c.n, `«${c.sec}» dibuja texto (si no, el test no probaría nada)`).toBeGreaterThan(1);
+    expect(c.der, `«${c.sec}» no cruza el margen derecho`).toBeLessThanOrEqual(c.DER + 0.1);
+    expect(c.abajo, `«${c.sec}» no cruza el margen inferior`).toBeLessThanOrEqual(c.ABAJO + 0.1);
+  }
+});
+
+test('T99 — el texto del póster no se monta sobre la imagen, y la sección tiene color', async ({ page }) => {
+  test.setTimeout(90000);
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00');
+  await page.waitForTimeout(1000);
+  // TODO explícito. Antes el test no lo pedía y funcionaba igual — pero solo
+  // porque la detección de HOY estaba rota y la app caía siempre en TODO. Al
+  // arreglarla, entra por el día 25 (una LISTA, no la grilla) y el test se
+  // quedaba sin tarjetas que mirar: su propio guard lo cazó. Lo que T99 quiere
+  // examinar es la grilla de pósters, así que la pide en voz alta.
+  await page.click('.dtab[data-day="all"]');
+  await page.waitForTimeout(600);
+  await page.evaluate(() => { try { setProgramaView('grid'); } catch (e) {} });
+  await page.waitForTimeout(800);
+  const r = await page.evaluate(() => {
+    return [...document.querySelectorAll('.poster-ed')].filter(e => e.offsetParent).map(ed => {
+      const R = ed.getBoundingClientRect();
+      const img = ed.querySelector('.ed-img')?.getBoundingClientRect();
+      const ttl = ed.querySelector('.ed-title')?.getBoundingClientRect();
+      const txt = ed.querySelector('.ed-hdr svg text');
+      return {
+        titulo: (ed.querySelector('.ed-title')?.textContent || '').slice(0, 24),
+        // «montado sobre la imagen» = el título empieza ANTES de que el campo termine
+        invade: !!(img && ttl && ttl.top < img.bottom - 0.5),
+        // el pie tampoco puede desbordar la tarjeta por abajo
+        seSale: !!(ttl && ttl.bottom > R.bottom + 0.5),
+        fill: txt ? txt.getAttribute('fill') : null,
+      };
+    });
+  });
+  expect(r.length, 'hay tarjetas con marco editorial (si no, el test no prueba nada)').toBeGreaterThan(0);
+  for (const c of r) {
+    expect(c.invade, `«${c.titulo}» no se monta sobre la imagen`).toBe(false);
+    expect(c.seSale, `«${c.titulo}» no se sale de la tarjeta`).toBe(false);
+    if (c.fill !== null) {
+      // fill="undefined" pintaba la sección de NEGRO sobre fondo oscuro: invisible
+      expect(c.fill, 'la sección se pinta con un color de verdad').toMatch(/^(#[0-9A-Fa-f]{3,8}|var\(--[a-z-]+\))$/);
+    }
+  }
 });

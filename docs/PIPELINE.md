@@ -357,6 +357,26 @@ la app con disfraz. `_tmdbId` vivió en 16 funciones de FINCA a salvo de
 repo usaba `tmdb_id`. Ahora, si al quitarle el guion el nombre coincide con un
 campo real, el guardián lo llama por su nombre: contrabando.
 
+**Decimoquinto: `[cosecha-tmdb]` — tener la ficha y volver con las manos
+vacías.** Los catorce anteriores miran la FORMA del dato: el tipo, el enum, el
+campo que nadie lee, el camino por el que llegó. Ninguno preguntaba lo obvio:
+si fuimos hasta TMDB y anotamos el `tmdb_id`, ¿por qué la obra no tiene
+sinopsis? En CineAutopsia 32 obras tenían ficha y ni una línea de texto. Dos
+fallos encadenados, los dos invisibles:
+
+1. La consulta pedía `es-CO`. TMDB **no cae a `es-ES`**: devuelve vacío. El
+   enriquecedor genérico (`pipeline/enriquecer.py`) siempre pidió `es-ES` +
+   `en-US`; el que se equivocó fue un script a la medida del festival, escrito
+   por fuera del pipeline. Cuarta reincidencia del mismo pecado.
+2. `ensamblar.py` construía cada obra de `film_list` con una lista de campos
+   **escrita a mano** (título, director, país, año, duración). Todo lo demás
+   que el crudo trajera sobre la obra —póster, `tmdb_id`, sinopsis— se caía en
+   silencio. Ahora la lista la manda el contrato: lo que la fuente trae, viaja.
+
+Regla: **si hay `tmdb_id` y no hay `synopsis`, el guardián se pone rojo.** Un
+identificador de ficha es la prueba de que estuvimos ahí; volver sin el texto
+no es un dato que falta, es una cosecha que no hicimos.
+
 **Decimocuarto, y el que cierra el círculo: `[pipeline-generico]`.** Los trece
 anteriores vigilan que el dato salga bien de un camino que cada festival
 reescribía. Éste vigila que **el camino sea uno**: `pipeline/ensamblar.py` y
@@ -434,6 +454,44 @@ fecha se vuelve permanente sola; ésta se vence sola. La primera fue FINCA: sus
 30 sedes sin ciudad esperan al 20 AGO porque el festival cierra el 19 y renombrar
 una sede toca `_slotKey`, que es la ancla de los planes YA GUARDADOS de usuarios
 reales.
+
+**Decimosexto: `[poster-mirado]` — alguien tiene que ABRIR el archivo.**
+
+*«¿Cómo es posible crear un póster sin pasar por un guardián?»* preguntó Juan al
+ver en pantalla un póster que era la franja gris del encabezado del PDF con dos
+stills ajenos debajo. La respuesta incómoda: **todos los guardianes de póster
+miran el CAMPO y ninguno el ARCHIVO.** `[poster-single-owner]` vigila quién lo
+escribe, `[posters-duplicados]` que dos obras no compartan URL,
+`[paridad-derivados]` que `posterSource` acompañe a `poster`. Un JPG con un
+tercio de banda plana los pasa todos, porque ninguno lo abre.
+
+Éste lo abre y mide tres cosas sin opinar: que el archivo EXISTA, que tenga
+resolución de póster y no de miniatura, y que no arrastre una BANDA PLANA en un
+borde —el recorte que se comió el encabezado—.
+
+**Calibrarlo costó dos vueltas, y las dos por falsos positivos:** el mínimo iba
+por el ancho y marcaba 52 pósters verticales legítimos (300×427 es un póster,
+no una miniatura) → ahora va por el lado corto; y perseguía bandas planas en
+afiches ajenos, donde una franja de color sólido es una decisión de diseño →
+ahora solo en los EDITORIALES, que son los que recortamos nosotros.
+
+**Decimoquinto: `[arquetipo-existe]` — el color que no existe se pinta gris.**
+`[seccion-sin-arquetipo]` comprueba que la sección ESTÉ en `SECTION_ARCHETYPES`.
+Nadie comprobaba que el arquetipo asignado sea uno de los NUEVE que tienen
+color. Con CineAutopsia escribí «Apertura» e «Industria / Formación» —que suenan
+bien y no existen: son «Apertura / Gala» y «Charlas / Industria»— y las dos
+secciones cayeron al gris por defecto, con el texto encima ilegible.
+
+Los dos validadores en verde y la pantalla rota. Lo vio Juan mirando la app, que
+es donde se ven estas cosas: *«el gris está bien pero la letra no se lee
+absolutamente nada»*.
+
+**Y una regla de la misma tanda, sin guardián porque es de criterio:** el póster
+de un PROGRAMA no puede ser un recorte de la página donde están los stills de
+sus obras. Eso no es «la imagen del programa», son dos obras suyas pegadas —y
+encima con la franja del encabezado—. Solo vale recortar la página cuando ésta
+NO lleva stills de obras: el Encuentro, cuya página es un mosaico de retratos de
+los artistas, sí es la imagen del evento.
 
 **Y la deuda quedó en CERO el mismo día.** Los nueve huérfanos salieron:
 `trailer`, `tematica` y `qa_detail` primero; después `original_title` (con
@@ -1051,3 +1109,25 @@ producción durante FICMontañas 2026:
 | Póster de otra película del mismo director (FantasoFest 2026) | `AFICHE-Lqv` era "Los Que Vuelven" (Casabé 2019), NO "La Virgen de la Tosquera" (Casabé 2025) | Buscar el asset por TÍTULO en los uploads, no por proximidad/orden en la grilla; verificar que el póster corresponde a ESE film |
 | `title_en` traducido a mano en vez del oficial (riesgo, evitado) | Traducir "La Virgen de la Tosquera" daría "…Gravel Pit"; el oficial es "The Virgin of the Quarry Lake" | Regla: `title_en` = título internacional OFICIAL buscado+verificado (LB/circuito/IMDb), nunca máquina-traducción; sin oficial → sin `title_en` |
 | Still local 16:9 no recibía la banda editorial (FantasoFest 2026) | El sheet del corto detectaba editorial solo por CDN-URL, ignorando `posterSource` → still local caía a `<img>` recortado 2:3 | `_isEd3`/`_isEd4` honran `posterSource:'editorial'` (PR #305); still local de festival va con `poster`+`posterSource:'editorial'` |
+
+
+### `[calendario-entero]` — un día que se dibuja tiene que existir para el reloj
+
+La tira de días se arma con `dayKeys`; el reloj (`dayFullyPassed`,
+`screeningPassed`, la detección de HOY) lee `festivalDates`. Son **el mismo
+calendario**, y hasta el 23 ago 2026 tenían dueños distintos: `dayKeys` lo pisaba
+el JSON del festival, pero `festivalDates` estaba clasificado como *identidad* y
+el JSON solo podía rellenarlo si config lo tenía vacío.
+
+CineAutopsia dibujaba 8 días y el reloj conocía 4. Los cuatro huérfanos no se
+atenuaban nunca (`dayFullyPassed` corta con `if(!dateStr) return false`), sus
+funciones no contaban como pasadas, y el 25/26/27 habrían roto la detección de
+HOY con el festival en curso.
+
+El guardián exige tres cosas:
+1. Todo día de `dayKeys` tiene fecha en `festivalDates` — en config y en el JSON.
+2. El calendario de config **coincide** con el de su JSON. Esta es la que caza el
+   bug real: dentro de cada fuente todo cuadraba; lo que no cuadraba era una
+   contra la otra, y ahí no miraba nadie.
+3. `festivalDates` sigue siendo **contenido** en el loader, no identidad.
+

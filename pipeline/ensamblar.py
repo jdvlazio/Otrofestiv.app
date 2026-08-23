@@ -142,13 +142,21 @@ def ensamblar(fid, escribir=True):
             'day': f.get('dia'), 'time': f.get('hora'), 'day_order': orden.get(f.get('dia')),
             'venue': sede, 'sala': sala or None,
             'event_kind': f.get('event_kind') or None,
+            # `info`: drop-in sin hora de fin — se muestra y NO se planifica.
+            'info': True if f.get('info') else None,
             'has_qa': bool(f.get('has_qa')),
+            'qa_type': f.get('qa_type') or None,
             'synopsis': f.get('sinopsis') or None,
             'synopsis_lang': 'es' if f.get('sinopsis') else None,
             'poster': f.get('poster') or None,
             # El póster que publica el festival es EDITORIAL: es la pieza del
             # programa, no el afiche de una obra (docs/POSTERS.md §2).
-            'posterSource': (cfg.get('posterSource_fuente', 'editorial')
+            # Si la FUENTE declara de dónde salió el póster, manda ella. El
+            # default del plan es solo para cuando no lo dice: forzarlo tapaba
+            # los afiches OFICIALES de los programas de CineAutopsia, que
+            # quedaban marcados como still 16:9 y la vista los recortaba.
+            'posterSource': (f.get('posterSource')
+                             or cfg.get('posterSource_fuente', 'editorial')
                              if f.get('poster') else None),
             '_src': ({'url': f['_src'], 'fuente': crudo['_provenance'].get('fuente', '')}
                      if isinstance(f.get('_src'), str) and f['_src'].startswith('http')
@@ -171,6 +179,20 @@ def ensamblar(fid, escribir=True):
                 'year': o.get('anio') or o.get('year'),
                 'duration': f"{o['duracion_min']} min" if o.get('duracion_min') else None,
             }.items() if v not in (None, '', [], {})} for o in obras]
+            # Lo que la FUENTE ya trae sobre la obra viaja tal cual. Qué campos
+            # puede llevar una obra lo decide el contrato, no una lista escrita
+            # a mano aquí: la lista fija de arriba (título/director/país/año/
+            # duración) se comió los tmdb_id, los pósters y las 37 sinopsis de
+            # CineAutopsia — el dato estaba en el crudo y el ensamblador,
+            # calladito, lo tiraba. Primero verbatim, después los alias
+            # (sinopsis→synopsis), y solo al final el enriquecido: la fuente
+            # del festival manda sobre nuestra tabla.
+            _campos = lib.contrato()['campos']
+            for item, _o in zip(e['film_list'], obras):
+                for _c in _campos:
+                    if _o.get(_c) and not item.get(_c):
+                        item[_c] = _o[_c]
+                _enriquece(item, _o)
             # Cada obra DENTRO del programa se enriquece por su cuenta: en un
             # bloque de cortos, el póster que importa es el de cada corto.
             for item in e['film_list']:
@@ -181,6 +203,15 @@ def ensamblar(fid, escribir=True):
             # existe «el país» de una sesión de siete cortos de cinco lugares.
             # Y su `year` tampoco: el año lo tiene cada obra, y poner el de la
             # sesión pinta «2025» al lado de un programa de 2026.
+            # La duración de un PROGRAMA es la suma de sus obras. Lo hice a mano
+            # para los 20 bloques de TIFF; vive aquí para que no haya que
+            # volver a hacerlo en ningún festival. Solo si la fuente no la trae:
+            # su número manda, porque incluye presentaciones y pausas.
+            if not e.get('duration'):
+                _mins = sum(int(_m.group(1)) for o in e['film_list']
+                            if (_m := __import__('re').match(r'(\d+)', str(o.get('duration') or ''))))
+                if _mins:
+                    e['duration'] = f'{_mins} min'
             _paises = [p for o in e['film_list'] if (p := o.get('country'))]
             if _paises and not e.get('country'):
                 # Se deduplica por PAÍS, nunca por carácter: una bandera son DOS
@@ -193,6 +224,29 @@ def ensamblar(fid, escribir=True):
         it = enr.get(lib.norm(f['titulo']))
         if it:
             _enriquece(e, it)
+        # UN PROGRAMA DE UNA SOLA OBRA NO ES UN PROGRAMA. La doctrina dice que
+        # hay contenedor cuando el festival le puso NOMBRE A UN CONJUNTO
+        # (docs/SCHEMA.md, modelo A). Con una sola obra no hay conjunto: lo que
+        # el festival nombró es la CATEGORÍA, y la función es esa obra. Se
+        # promueve: el usuario busca «Paristopia», no «Largometraje Panorama
+        # Colombia», y la ficha del programa mostraba una lista de un elemento.
+        if len(e.get('film_list') or []) == 1:
+            _u = e['film_list'][0]
+            e['title'] = _u.get('title', e['title'])
+            for _c in ('director', 'year', 'poster', 'posterSource', 'lbSlug',
+                       'tmdb_id', 'synopsis', 'synopsis_lang', 'synopsis_en',
+                       'country', 'flags'):
+                if _u.get(_c):
+                    e[_c] = _u[_c]
+            if _u.get('duration'):
+                e['duration'] = _u['duration']
+            # La sinopsis promovida se lleva su idioma: sin `synopsis_lang`
+            # la vista no sabe cuál texto mostrar ([paridad-derivados]).
+            if e.get('synopsis') and not e.get('synopsis_lang'):
+                e['synopsis_lang'] = 'es'
+            e.pop('is_cortos', None); e.pop('film_list', None)
+            e['_programa_original'] = f.get('titulo')
+
         films.append(lib.normaliza({k: v for k, v in e.items() if v not in (None, '', [], {})}, rep))
         venues[sede] = geo.get(sede, {'short': sede.split(' - ')[0], 'city': sede.split(' - ')[-1]})
 

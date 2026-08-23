@@ -313,13 +313,6 @@
    "Excepciones CON FECHA DE CADUCIDAD, para festivales VIGENTES. A partir de",
    "`migrar_el`, el guardián deja de perdonar y se pone rojo. Una excepción sin",
    "fecha se vuelve permanente sola; ésta se vence sola, que es lo contrario."
-  ],
-  "venue": {
-   "finca-2026": {
-    "incumple": 30,
-    "migrar_el": "2026-08-20",
-    "motivo": "FINCA cierra el 19 AGO y renombrar sus 6 sedes toca `_slotKey` (día|hora|sede|sala), que es la ancla de los planes YA GUARDADOS de usuarios reales. Dos días de espera contra romper un plan en curso: se espera."
-   }
-  }
+  ]
  }
 }

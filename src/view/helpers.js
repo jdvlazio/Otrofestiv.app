@@ -7,14 +7,14 @@
 
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _bandTextSVG, _secLabel, _sectionColor,
-  makeProgramPoster, makeEventPoster, makeSorpresaPoster, escXML, _langDates, parseProgramTitle,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _fitLines, _secLabel, _sectionColor,
+  makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeSharedSlotSVG, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
 import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
-import { effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
+import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -126,7 +126,11 @@ export function itemPosterParts(item, section, imgClass, {header=false}={}){
   if(_isEditorialPoster(item)){
     // thumb pequeño → still enmarcado SIN banda de texto (precedente _posterThumb);
     // card grande (Diario) → con banda de sección, como _recapPosterCard.
-    return {ed:true, accent:_sectionColor(section||''), src,
+    // Filete de la MINIATURA en ámbar de marca, no en color de sección (Juan, 19
+    // ago): los cortos de un programa comparten sección, así que ese color no
+    // informa —y sin arquetipo cae al gris #2C2C2A, la barra gris repetida que
+    // él vio—. En la TAPA (header) se conserva: ahí sí orienta al scrollear.
+    return {ed:true, accent:header?_sectionColor(section||''):'var(--amber)', src,
       inner:editorialFrame(header?{header:_secLabel(section||''), src, title:item.title}:{src, title:item.title})};
   }
   return {ed:false, accent:'', src,
@@ -197,11 +201,59 @@ export function posterAmbient(src,fallbackHex,cb){
 // ni llama editorialFrame directo (guardián [poster-single-owner]). La rama
 // `image`/`generative` conserva su <img> por superficie (clases/transiciones
 // propias) usando .src — la DECISIÓN ya viene tomada.
+// ── slotPosterParts — la DECISIÓN del póster de función compartida ───────────
+// Dueño del modelo (como posterParts): clasifica cada obra del slot y decide si
+// la función tiene póster propio. Reglas de la revisión exhaustiva (21 ago):
+//   · SOLO Tipo 2 (slot anclado) de 2-3 obras — con 4+ no hay tarjeta (mostrar
+//     3 de 6 sería curaduría nuestra sobre curaduría ajena).
+//   · La Escalera existe SOLO COMPLETA (Juan, 21 ago): 2-3 obras y TODOS los
+//     afiches reales (!_isEditorialPoster). Un still va dentro del marco
+//     editorial —ya es un póster propio— y no puede ser módulo; y el «módulo
+//     mudo» que probamos para los incompletos se leía como sombra sucia y la
+//     tarjeta se hacía pasar por la única obra visible. Falta un afiche → null:
+//     cada obra conserva su card, como hoy. Nada se inventa.
+//   · Delantero = primera obra en orden de catálogo (regla neutra).
+// El dibujo lo hace components.makeSharedSlotSVG — acá solo el modelo.
+// legacyProgramParts — el póster de un programa LEGACY «Film A + Film B».
+// Ese modelo (is_programa) es una FUNCIÓN COMPARTIDA modelada a la vieja usanza
+// —el template dice que la reemplazó el anclaje Tipo 2—, así que le corresponde
+// la misma forma C. Y arregla una mentira vieja: getFilmPoster (camino 5)
+// devuelve el afiche de la PRIMERA obra, así que «Esperando abril + Los bandidos
+// del hotel azul» se mostraba —en el Diario y en todas partes— como si fuera
+// «Esperando abril» sola. Con las dos obras apiladas, la tarjeta dice la verdad.
+// Devuelve null cuando no califica (afiches incompletos, still, 4+): ahí el
+// camino viejo sigue mandando y no se toca nada.
+export function legacyProgramParts(f){
+  if(!f||!f.is_programa||!Array.isArray(f.film_list)) return null;
+  return slotPosterParts(f.film_list.map(it=>({
+    title:it.title, poster:it.poster, posterSource:it.posterSource,
+    duration:it.duration||f.duration, section:f.section,
+  })));
+}
+
+export function slotPosterParts(members){
+  if(!Array.isArray(members)||members.length<2||members.length>3) return null;
+  const clasif=members.map(f=>{
+    const src=getPosterSrc(f.title,true)||f.poster||null;
+    const real=!!src&&!_isEditorialPoster(f);
+    return {f, src:real?src:null};
+  });
+  if(clasif.some(c=>!c.src)) return null;   // solo completa: falta un afiche → sin tarjeta
+  const reales=clasif;
+  // atrás→delante: el 1º del catálogo queda delante
+  const modules=[...reales.slice(1).reverse().map(c=>c.src), reales[0].src];
+  const lider=reales[0].f;
+  const dur=blockDuration(lider);
+  const dato=`${members.length} obras${dur?` · ${dur} min`:''}`;
+  return {modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato,
+    svg:makeSharedSlotSVG({modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato})};
+}
+
 export function posterParts(f,{header=false,body='',loading}={}){
   const m=posterModel(f);
   if(m.kind!=='editorial') return m;                       // {kind,src,...} decidido
   return {...m, ed:true,
-    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading})};
+    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading, accent:m.accent})};
 }
 
 export function _getItemPoster(item){
@@ -243,11 +295,22 @@ export function _isEditorialPoster(f){
 // sin regresión, y robusto donde el piso de font-size rompía el HTML.
 export function _edHdrSVG(label, accent){
   if(!String(label||'').trim()) return '';
-  // Banda única (misma fuente que el generativo): vw=100, anclado arriba, y el
-  // <svg> propio del editorial escala vía CSS (.ed-hdr-svg / --ed-hdr-ratio).
-  const {text, lines, lh}=_bandTextSVG(label, accent, 100, {mode:'top'});
-  const VH=+(lines*lh+4).toFixed(2);
-  return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMidYMid meet">${text}</svg>`;
+  // Sin accent el <text> salía con fill="undefined" y el navegador lo pintaba
+  // NEGRO: la sección quedaba invisible sobre el fondo oscuro (lo vio Juan en la
+  // tarjeta de ENCUENTRO). El filete no lo delataba porque toma su color del CSS
+  // (--ed-accent), no de este argumento. Ahora el color siempre existe.
+  const _fill=String(accent||'').trim()||'var(--amber)';
+  // Mismo motor que la forma A (_fitLines), vw=100. Con imagen la sección baja a
+  // 2 líneas: la imagen carga el peso (§6.0). Caja = 8u menos margen de 0,75u.
+  const U=100/8, M=0.75*U, CW=100-2*M;
+  const fit=_fitLines(String(label).toUpperCase(),
+    {boxW:CW, boxH:2.4*U, maxLines:2, fsMax:2.4*U/1.16, fsMin:5, lhRatio:1.16, lsEm:0.02, upper:true});
+  const round=n=>+n.toFixed(2);
+  const VH=+(fit.lines.length*fit.lh+fit.fs*0.3).toFixed(2);
+  const text=fit.lines.map((l,i)=>
+    `<text x="${round(M)}" y="${round(fit.fs+i*fit.lh)}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${round(fit.fs)}" font-weight="800" letter-spacing="${round(fit.fs*0.02)}" fill="${_fill}">${escXML(l)}</text>`
+  ).join('');
+  return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMinYMin meet">${text}</svg>`;
 }
 
 export function _posterThumb(f, cssClass, loading){
@@ -304,19 +367,33 @@ export function posterModel(f){
 // blur es decorativo (aria-hidden); el still lleva data-title y el onerror que
 // cae a generativo. `body` con texto → scrim con título (grid); undefined/''  →
 // sin scrim (thumb/lista/sheet y ended-poster, que trae su propio footer).
-export function editorialFrame({header, body, src, title, loading, accent}={}){
+
+export function editorialFrame({header, body, src, title, loading, accent, dato}={}){
+  // Forma B (§6.0) = forma A + UN campo 16:9 constante (8u×4,5u en y=3,5u). Sin
+  // blur ni banda de color; la geometría vive en el CSS de .poster-ed, en %.
   const _l=loading||'lazy';
   const _dt=title?` data-title="${escXML(title)}"`:'';
-  const hdr=`<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`;
   const _ttl=(body!=null && String(body).trim()) ? String(body) : '';
+  const _dato=(dato!=null && String(dato).trim()) ? String(dato) : '';
   const img=src
-    ? `<div class="ed-img">`
-      + `<img class="ed-blur" src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt="">`
-      + `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
-      + (_ttl?`<div class="ed-scrim"><div class="ed-title">${escXML(_ttl)}</div></div>`:'')
-      + `</div>`
-    : `<div class="ed-img"></div>`;
-  return `${hdr}${img}`;
+    ? `<img class="ed-still" src="${src}"${_dt} loading="${_l}" onload="this.style.opacity='1'" onerror="_edPosterErr(this)" alt="">`
+    : '';
+  // MINIATURA = sin sección ni título (el corto dentro de un programa). Ahí el
+  // campo se centra y el pie se llena con la propia obra desenfocada (Juan, 19
+  // ago: «se ven muy vacías»). No es el blur que mató §6.0 —aquel iba DETRÁS del
+  // still, a sangre, y ensuciaba el negro—: este está contenido bajo el campo y
+  // se apaga con máscara antes del borde. En el póster grande no aplica: ahí el
+  // vacío no existe, lo llenan el título y el dato.
+  const _mini=!header&&!_ttl;
+  const halo=(_mini&&src)?`<div class="ed-halo"><img src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt=""></div>`:'';
+  return `<div class="ed-fil"></div>`
+    + `<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`
+    + halo
+    + `<div class="ed-img${_mini?' ed-img-mid':''}">${img}</div>`
+    + `<div class="ed-foot">`
+      + (_ttl?`<div class="ed-title">${escXML(_ttl)}</div>`:'')
+      + (_dato?`<div class="ed-dato">${escXML(_dato)}</div>`:'')
+    + `</div>`;
 }
 
 export function isNowShowing(f){
@@ -505,6 +582,21 @@ export function planCityVenues(){
   if(_sel==='all') return null;
   const _vs=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
   return new Set(Object.keys(_vs).filter(v=>venueMatches(v,_sel)));
+}
+
+// planInputSignature — DUEÑO ÚNICO de «con qué se calculó este Plan» (Juan, 18
+// ago: el Plan que estás mirando nunca cambia solo). Cubre todo lo que consume el
+// planificador; la ciudad va reducida con keepCityOnly — una sede concreta no
+// restringe el plan y marcarla desactualizada sería una falsa alarma.
+export function planInputSignature(){
+  const _int=[...watchlist].filter(t=>!watched.has(t)).sort().join('|');
+  const _pri=[...prioritized].sort().join('|');
+  const _av=Object.keys(availability||{}).sort()
+    .map(d=>`${d}:${(availability[d]&&availability[d].blocks||[]).map(b=>`${b.from}-${b.to}`).sort().join(',')}`)
+    .filter(x=>!x.endsWith(':'))
+    .join(';');
+  const _ciudad=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
+  return `${_int}#${_pri}#${_av}#${_ciudad}`;
 }
 
 export function travelWarn(s1,s2){

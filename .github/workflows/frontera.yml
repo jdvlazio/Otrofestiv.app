@@ -18,6 +18,15 @@ on:
     branches: [main]
     # SIN filtro de paths, por la misma razón que los otros checks: si el workflow
     # no corre, un check requerido queda pendiente para siempre (PR #428).
+    #
+    # `labeled`/`unlabeled` NO son un adorno. `frontera-ok` se lee del payload del
+    # evento, y con los tipos por defecto —opened, synchronize, reopened— poner la
+    # etiqueta no vuelve a disparar nada: el check se queda rojo con la etiqueta
+    # puesta, y un re-run repite el payload viejo. Es decir, el mensaje de error
+    # mandaba a hacer algo que no tenía efecto, y la única salida era un push
+    # vacío. Pasó en el PR #684 (CineAutopsia). `unlabeled` va por simetría: si
+    # se quita la etiqueta, el check tiene que volver a opinar.
+    types: [opened, synchronize, reopened, labeled, unlabeled]
 
 jobs:
   frontera:

@@ -71,7 +71,7 @@ import {
 
 // ── Step 6h: programa.js cartelera render (render, lugar overlay). ────────────
 import {
-  render, lugarClose, lugarOutside,
+  render, lugarClose, lugarOutside, scrollDtabsToActive,
 } from './view/programa.js';
 
 // ── Step 6g: programa.js render dispatchers (8 fns). ─────────────────────────
@@ -90,7 +90,7 @@ import {
 
 // ── Step 6f: view/agenda.js — render de agenda+miplan (18 fns). ───────────────
 import {
-  renderAgenda, renderMiPlanCalendar, renderUnconfirmed, renderFilmAlternatives, renderContextualHeader, renderPrioStrip, renderFilmListHTML, renderSavedAgendaHTML, renderAvBlocks, updateCardState, updateHorarioPrioBtn, _fixStickyOffset, _scrollMiPlanToNow, _updateMiPlanBadge,
+  renderAgenda, renderMiPlanCalendar,  renderFilmAlternatives, renderContextualHeader, renderPrioStrip, renderFilmListHTML, renderSavedAgendaHTML, renderAvBlocks, updateCardState, updateHorarioPrioBtn, _fixStickyOffset, _scrollMiPlanToNow,
   getSuggestions,
 } from './view/agenda.js';
 
@@ -121,7 +121,7 @@ import {
 // ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
 import {
   citySheetPick, citySheetAll,
-  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice, checkinLaVi, checkinNoLaVi, forceInclude, includeAnyway, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
+  toggleWL, toggleWatched, togglePelPrio, togglePelWL, setDelay, undoDelay, clearDelay, removeFromAgenda, addSuggestion, addRecurringBlock, removeRecurringBlock, _planFixNotice,  forceInclude, includeAnyway, togglePriority, swapPriority, markWatchedFromPlan, confirmReplace, removeFilmFromScenario, _dismissNotice, selectMiPlanDay, miPlanNav, toggleMplanProg, setActivePlanFilm, selectFromDetail, toggleFilmAlternatives, _toggleEveningFilms, filterByVenue, filterByDay, filterBySection, setProgramaMode, toggleProgramaView, setProgramaView, setProgramaChip, clearProgramaChip, _pafClearSec, _pafClearVenue, _toggleWLFromList, saveCurrentScenario, _setExpandedFilm, _closePelAndRemove, _closePelAndRate, _navTo, _closeAuthAndReset, _toggleCtxOlder, _toggleWatchedAndClose, _toggleWLAndClose, _activatePlanFilm, _scrollToSuggestions, _removeConflictModal, _scrollToTop, _searchOpenFilm, _searchOpenCorto,
 } from './controller/handlers.js';
 import { setDelaysRerender } from './controller/delays-cloud.js';
 import { initWatchBridge } from './controller/watch-bridge.js';
@@ -197,8 +197,6 @@ const ACTION_REGISTRY = {
   setDelay:           (el)    => setDelay(el.dataset.title, el.dataset.day, el.dataset.time, +el.dataset.mins, el.dataset.venue),
   clearDelay:         (el)    => clearDelay(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue),
   undoDelay:          (el)    => undoDelay(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue),
-  checkinLaVi:        (el)    => checkinLaVi(el.dataset.title),
-  checkinNoLaVi:      (el)    => checkinNoLaVi(el.dataset.title),
   savePVRating:       ()      => savePVRating(),
   setLang:            (el)    => setLang(el.dataset.code),
   toggleLangDropdown: ()      => toggleLangDropdown(),
@@ -453,7 +451,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608171957';
+const BUILD_VERSION='202608230738';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -686,7 +684,6 @@ const _isoToFlag = c  => c&&c.length===2 ? String.fromCodePoint(0x1F1E6+c.toUppe
 // ═══════════════════════════════════════════════════════════════
 // 11 · RENDER — MI AGENDA
 //      renderPrioStrip, renderFilmListHTML, renderSavedAgendaHTML
-//      renderUnconfirmed
 // ═══════════════════════════════════════════════════════════════
 
 /* ── RENDER — MI LISTA ──────────────────────────────────────────────── */
@@ -832,9 +829,6 @@ const _isoToFlag = c  => c&&c.length===2 ? String.fromCodePoint(0x1F1E6+c.toUppe
 // Solo actúa cuando el festival está en curso (nowDayIdx >= 0).
 // Centra la nowline verticalmente en el viewport del contenedor.
 
-// _updateMiPlanBadge — muestra el número de funciones sin confirmar
-// en el tab de Mi Plan. Ámbar, no rojo — es una tarea diferible, no un error.
-// Se llama al final de renderAgenda() y cuando cambia watched.
 // _toggleEveningFilms — muestra/oculta posters adicionales en EVENING.
 // Sin CSS nuevo — usa hscroll-strip existente y link-gray-xs.
 
@@ -866,10 +860,7 @@ const dtabs=document.getElementById('dtabs');
     activeDay=firstFuture;
     dtabs.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on',t.dataset.day===firstFuture));
   }
-  requestAnimationFrame(()=>{
-    const activeBtn=dtabs.querySelector('.dtab.on');
-    if(activeBtn) dtabs.scrollLeft=activeBtn.offsetLeft-dtabs.offsetLeft;
-  });
+  requestAnimationFrame(scrollDtabsToActive);
 })();
 
 /* ── RENDER — CARTELERA: filtros, grid horario, grid película ────────── */
@@ -1122,7 +1113,7 @@ document.addEventListener('click',function(e){
 // varios de estos slices dispara el render 1× solo si comparten la misma fn.
 const _pipelineRenderMain = () => { updateAgTab(); renderActiveView(); };
 state.subscribeRender(
-  ['watchlist', 'watched', 'prioritized', 'filmRatings',
+  ['watchlist', 'watched', 'notWatched', 'prioritized', 'filmRatings',
    'filmDelays', 'filmDelaysHistory', '_simTime'],
   _pipelineRenderMain
 );
