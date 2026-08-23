@@ -3917,7 +3917,7 @@ try:
         # config.js es DATA: una entrada por festival, y crece con cada onboarding.
         # No se puede «partir» sin inventar un índice que se desincronice del
         # contenido, que es peor. Entra a la lista con la razón escrita.
-        'src/config.js': 925,  # +78: PALMARES de FICDEH 2026 (19 entradas + el porqué de tres correcciones sobre la fuente) — 23 ago  # +40: TIFF 2026 (entrada + 13 arquetipos de sección) — 23 ago
+        'src/config.js': 926,  # +1: el afiche oficial de «Los bibliotecarios» — 23 ago  # +78: PALMARES de FICDEH 2026 (19 entradas + el porqué de tres correcciones sobre la fuente) — 23 ago  # +40: TIFF 2026 (entrada + 13 arquetipos de sección) — 23 ago
         'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
         'src/main.js': 1706,  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
         'src/i18n/i18n.js': 1640,  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
