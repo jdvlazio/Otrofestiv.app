@@ -7,7 +7,7 @@
 
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _datoCompuesto, _fitLines, _secLabel, _sectionColor,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeSharedSlotSVG, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
@@ -77,12 +77,18 @@ export function getFilmPoster(f){
   // 7. f.poster directo — editorial cloudfront o formato Jardín 2026
   if(f.poster) return (f.poster.startsWith('http')||f.poster.startsWith('/assets/'))?f.poster:TMDB_IMG+f.poster;
   // 8. Poster generativo
+  // Regla de carga (Juan, 24 ago): rótulo = primera oración; la firma de
+  // curaduría solo baja al pie con TÍTULO SIMPLE — con pila/compuesto cede y
+  // vive en la ficha. Tres voces: sección, cuerpo, pie.
+  const _partes=_seccionPartes(_secLabel(f.section||''));
+  const _compuesto=/\s\+\s/.test(f.title||'');
   return _buildPosterV16({
     accent: _sectionColor(f.section||''),
-    headerLabel: _secLabel(f.section||'')||'TRIBECA',
+    headerLabel: _partes.rotulo||'TRIBECA',
     title: f.title,
     num: null,
-    dato: _datoCompuesto(f.title, f.duration) // «3 obras · 99 min» si el título es compuesto
+    dato: _datoCompuesto(f.title, f.duration), // «3 obras · 99 min» si es compuesto
+    firma: _compuesto?null:_partes.firma
   });
 }
 
@@ -100,7 +106,7 @@ export function getFilmPosterUntitled(f){
   if(f.is_cortos||(f.is_programa&&f.film_list&&f.film_list.length)) return makeProgramPoster(state,f.title,f.duration,f.section,{untitled:true});
   return _buildPosterV16({
     accent: _sectionColor(f.section||''),
-    headerLabel: _secLabel(f.section||'')||'TRIBECA', // mismo fallback que getFilmPoster #8
+    headerLabel: _seccionPartes(_secLabel(f.section||'')).rotulo||'TRIBECA', // mismo rótulo que #8
     title: '',
     num: null
   });
@@ -254,7 +260,7 @@ export function posterParts(f,{header=false,body='',loading}={}){
   const m=posterModel(f);
   if(m.kind!=='editorial') return m;                       // {kind,src,...} decidido
   return {...m, ed:true,
-    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading, accent:m.accent})};
+    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading, accent:m.accent, firma:body?m.firma:undefined})};
 }
 
 export function _getItemPoster(item){
@@ -348,7 +354,7 @@ export function posterModel(f){
   const src=getFilmPoster(f);
   if(!src) return {kind:'empty'};
   if(src.startsWith('data:image/svg+xml')) return {kind:'generative', src};
-  if(_isEditorialPoster(f)) return {kind:'editorial', src, accent:_sectionColor(f.section||''), header:_secLabel(f.section||''), title:f.title||''};
+  if(_isEditorialPoster(f)) return {kind:'editorial', src, accent:_sectionColor(f.section||''), header:_seccionPartes(_secLabel(f.section||'')).rotulo, firma:(/\s\+\s/.test(f.title||'')?null:_seccionPartes(_secLabel(f.section||'')).firma), title:f.title||''};
   return {kind:'image', src, objectPosition:(f.posterPosition&&f.posterPosition!=='center')?f.posterPosition:'', title:f.title||''};
 }
 
@@ -369,7 +375,7 @@ export function posterModel(f){
 // cae a generativo. `body` con texto → scrim con título (grid); undefined/''  →
 // sin scrim (thumb/lista/sheet y ended-poster, que trae su propio footer).
 
-export function editorialFrame({header, body, src, title, loading, accent, dato}={}){
+export function editorialFrame({header, body, src, title, loading, accent, dato, firma}={}){
   // Forma B (§6.0) = forma A + UN campo 16:9 constante (8u×4,5u en y=3,5u). Sin
   // blur ni banda de color; la geometría vive en el CSS de .poster-ed, en %.
   const _l=loading||'lazy';
@@ -386,13 +392,21 @@ export function editorialFrame({header, body, src, title, loading, accent, dato}
   // se apaga con máscara antes del borde. En el póster grande no aplica: ahí el
   // vacío no existe, lo llenan el título y el dato.
   const _mini=!header&&!_ttl;
-  const halo=(_mini&&src)?`<div class="ed-halo"><img src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt=""></div>`:'';
+  // El halo llena el vacío TAMBIÉN en el póster grande (Juan, 24 ago 2026: «esa
+  // línea negra debajo del still genera distancia y ruido»). Medido en la app:
+  // el still termina en 66,67% y el título arranca en 86,4% — 23,6px de negro
+  // muerto en una card de 120. La premisa que lo excluía («en el póster grande
+  // el vacío no existe, lo llenan el título y el dato») era falsa en pantalla.
+  // Mismo mecanismo que la miniatura —contenido, con máscara— pero anclado al
+  // borde del campo grande (66,67%, clase ed-halo-full) para no dejar costura.
+  const halo=(src)?`<div class="ed-halo${_mini?'':' ed-halo-full'}"><img src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt=""></div>`:'';
   return `<div class="ed-fil"></div>`
     + `<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`
     + halo
     + `<div class="ed-img${_mini?' ed-img-mid':''}">${img}</div>`
     + `<div class="ed-foot">`
       + (_ttl?`<div class="ed-title">${escXML(_ttl)}</div>`:'')
+      + ((firma&&_ttl)?`<div class="ed-firma">${escXML(firma)}</div>`:'')
       + (_dato?`<div class="ed-dato">${escXML(_dato)}</div>`:'')
     + `</div>`;
 }

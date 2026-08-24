@@ -33,7 +33,12 @@ export function makeProgramPoster(state, title, duration, section, opts){
   // ES→original sin emoji), uppercase. Así el poster editorial coincide con el
   // separador del grid en cada idioma — antes horneaba f.section crudo y se
   // quedaba en español aunque la UI estuviera en EN.
-  const cleanSection=_secLabel(filmSec).toUpperCase();
+  // Rótulo = primera oración (regla de carga, 24 ago): el programa de cortos es
+  // pila por naturaleza, así que la firma de curaduría CEDE — no se pasa. Sin
+  // esto, los programas de secciones curadas seguían con el rótulo completo
+  // muriendo en «…» mientras los films de al lado ya lo llevaban corto: dos
+  // pósters de la MISMA sección con dos rótulos distintos.
+  const cleanSection=_seccionPartes(_secLabel(filmSec)).rotulo.toUpperCase();
   const headerLabel=cleanSection||t('poster_programa');
 
   // Número — patrones: "Prog. 4", "Prog. 1 · 16mm", "Voces 2", número al final
@@ -308,7 +313,28 @@ export function _datoCompuesto(title, duration){
   return `${_partes.length} obras${duration?` · ${duration}`:''}`;
 }
 
-export function _buildPosterV16({accent, headerLabel, title, num, dato}){
+// _seccionPartes — separa el rótulo de la FIRMA en una sección curada.
+// Cinemancia escribe la curaduría dentro del nombre de sección: «La primavera
+// llega para los que esperan. El cine de José Luis Torres Leiva». En el póster,
+// ese rótulo moría en 84px justo donde va el autor («…EL CINE DE JOSÉ…»).
+//
+// La firma se reconoce ESTRICTA, no por cualquier punto: solo si tras la primera
+// oración viene «Curaduría…» / «El cine de…» (o su inglés) o un nombre propio
+// corto (≤4 palabras, todas capitalizadas — «Sergio Navarro»). Sin eso, el punto
+// es parte del nombre y NO se parte: «Programa 1. El espesor de las formas» es
+// un solo rótulo, no un rótulo con firma — partirlo por el punto a secas habría
+// convertido «El espesor de las formas» en curador.
+export function _seccionPartes(label){
+  const _l=String(label||'').trim();
+  const _i=_l.indexOf('. ');
+  if(_i<0) return {rotulo:_l, firma:null};
+  const _rot=_l.slice(0,_i), _resto=_l.slice(_i+2).trim();
+  const _esFirma=/^(curadur[ií]a|curated|el cine de|the cinema of|o cinema de)/i.test(_resto)
+    || (_resto.split(/\s+/).length<=4 && _resto.split(/\s+/).every(w=>/^[A-ZÁÉÍÓÚÑÜ]/.test(w)));
+  return _esFirma ? {rotulo:_rot, firma:_resto} : {rotulo:_l, firma:null};
+}
+
+export function _buildPosterV16({accent, headerLabel, title, num, dato, firma}){
   // ── Póster nuestro — anatomía aprobada (POSTERS.md §6.0, Juan 18 ago 2026) ──
   // Retícula: u = ancho/8 → 8u × 12u. Margen 0,75u. Filete de sección de 0,25u a
   // sangre. Sección arriba, título anclado abajo, dato al pie, luz abajo a la
@@ -350,8 +376,17 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
     }
   }
   const SEC_FS_MAX=15*VW/84;
+  // REGLA DE CARGA (Juan, 24 ago 2026): el póster habla con TRES voces —
+  // sección ≤2 líneas, cuerpo, pie de UNA línea. La sección bajó de 4 líneas a
+  // 2: con 4, los rótulos curados se comían medio póster y aun así morían en
+  // «…»; la primera oración (via _seccionPartes, en los llamadores) cabe en 2.
   const sec=_fitLines(String(headerLabel||'').toUpperCase(),
-    {boxW:CW, boxH:3.4*U, maxLines:4, fsMax:Math.min(SEC_FS_MAX, 3.4*U/1.16), fsMin:9, lhRatio:1.16, lsEm:0.02, upper:true});
+    {boxW:CW, boxH:3.4*U, maxLines:2, fsMax:Math.min(SEC_FS_MAX, 3.4*U/1.16), fsMin:7, lhRatio:1.16, lsEm:0.02, upper:true});
+  // fsMin bajó de 9 a 7 CON el techo de 2 líneas (24 ago): a fsMin 9, «LA
+  // PRIMAVERA LLEGA PARA LOS QUE ESPERAN» necesitaba 3 líneas y el motor
+  // recortaba con «…» — y recortar una sección está prohibido (§6.0). A 7
+  // (≈4,9px en la card de 84) el rótulo entero cabe en dos líneas. Preferimos
+  // pequeño y completo a grande y mutilado.
   const secY=1*U+sec.fs;                     // primera línea base a 1u
   const secText=sec.lines.map((l,i)=>_lineaSVG(l,
     {x:M, y:secY+i*sec.lh, fs:sec.fs, ls:sec.fs*0.02, fill:accent, boxW:CW, upper:true})).join('');
@@ -371,9 +406,17 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
   const datoText=datoStr
     ? _lineaSVG(datoStr, {x:M, y:datoY, fs:datoFS, ls:datoFS*0.02, fill:'#888', boxW:CW, upper:false})
     : '';
+  // FIRMA de curaduría — línea propia en itálica sobre el dato, a 1,5·fs. Solo
+  // llega cuando el llamador la permite (título simple: la regla de carga manda
+  // que con pila de obras la firma CEDE y vive en la ficha, no en el póster).
+  const _firmaStr=String(firma||'').trim();
+  const firmaY=_firmaStr?(datoStr?datoY-datoFS*1.5:datoY):null;
+  const firmaText=_firmaStr
+    ? `<text x="${M}" y="${round(firmaY)}" font-family="${FONT}" font-size="${datoFS}" font-style="italic" font-weight="600" fill="#888">${escXML(_firmaStr)}</text>`
+    : '';
 
-  // Título — anclado abajo, sobre el dato: 6,5u × 2,4u, máx 4 líneas
-  const tTop=datoStr?datoY-datoFS*1.6:datoY;
+  // Título — anclado abajo, sobre el dato (y sobre la firma si la hay)
+  const tTop=_firmaStr?firmaY-datoFS*1.6:(datoStr?datoY-datoFS*1.6:datoY);
   const ttl=_fitLines(_tituloVacio?_datoCrudo:String(title||'').trim(),
     {boxW:CW, boxH:2.4*U, maxLines:4, fsMax:2.4*U/1.2, fsMin:12, lhRatio:1.2, lsEm:-0.02, upper:false});
   // fsMin=12 (≈8,4px en tarjeta) es SUELO DE LEGIBILIDAD: por debajo se recorta
@@ -394,7 +437,7 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
     <rect width="${VW}" height="${round(0.25*U)}" fill="${accent}"/>
     ${secText}
     ${ttlText}
-    ${datoText}
+    ${firmaText}${datoText}
   </svg>`;
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
