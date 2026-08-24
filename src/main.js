@@ -479,7 +479,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608241623';
+const BUILD_VERSION='202608241651';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1580,14 +1580,26 @@ if(navigator.storage && navigator.storage.persist){
   navigator.storage.persist().catch(function(){});
 }
 
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js').catch(function(){});
+// ── Actualizaciones ──────────────────────────────────────────────────────
+// LOS CANALES DE version.json NO DEPENDEN DEL SERVICE WORKER (24 ago 2026).
+// Vivieron años dentro de if('serviceWorker' in navigator) — una condición que
+// no les corresponde: son fetch + location.href. El wrapper iOS es WKWebView
+// sin WKAppBoundDomains → sin navigator.serviceWorker → el bloque entero nunca
+// corría: iOS quedaba SIN NINGÚN mecanismo de actualización (Juan lo vivió: el
+// palmarés de FINCA no le llegaba con la app en la mano). Es el mismo patrón de
+// [store-gate-dom-timing]: un guard heredado que esconde código que no lo
+// necesita. Dentro del guard quedan SOLO register() y controllerchange, que sí
+// son API de SW. El guardián [update-canales-sin-sw] impide que esto regrese.
+var _HAS_SW = ('serviceWorker' in navigator);
 
-  // ── Plataforma y build tracking ───────────────────────────────────────
-  var _isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  var _BUILD_KEY = 'orf_build';
-  var _reloading  = false; // guard: evita double-reload si dos canales disparan a la vez
+// ── Plataforma y build tracking ───────────────────────────────────────
+var _isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+var _BUILD_KEY = 'orf_build';
+var _reloading  = false; // guard: evita double-reload si dos canales disparan a la vez
+
+if(_HAS_SW){
+  navigator.serviceWorker.register('/sw.js').catch(function(){});
 
   // ── Canal Android/Desktop: controllerchange ───────────────────────────
   // hadController previene el double-reload en primera instalación
@@ -1604,122 +1616,125 @@ if('serviceWorker' in navigator){
       _hadController = true;
     });
   }
-
-  // ── Función de check compartida por cold-start y visibilitychange ─────
-  // Extrae la lógica para reutilizarla en ambos triggers sin duplicar código.
-  function _checkVersionJson(opts){
-    fetch('/version.json', {cache:'no-store'})
-      .then(function(r){ return r.json(); })
-      .then(function(v){
-        var serverBuild = v[_isIOS ? 'ios' : 'android'] || '';
-        if(!serverBuild) return;
-        // Comparar contra BUILD_VERSION (horneado en el bundle que REALMENTE está
-        // corriendo) — único indicador confiable de qué código se cargó. NO contra
-        // localStorage, que solo refleja "vi este version.json", no "cargué este JS".
-        if(serverBuild === BUILD_VERSION){
-          // El bundle cargado ya es el del servidor → recién ahora marcar como
-          // actualizado. (Antes se escribía ANTES de recargar → en iOS el reload
-          // servía el bundle viejo desde caché y el marcador quedaba "actualizado"
-          // para siempre, deshabilitando el trigger.)
-          if(localStorage.getItem(_BUILD_KEY) !== serverBuild){
-            localStorage.setItem(_BUILD_KEY, serverBuild);
-          }
-          return;
-        }
-        // serverBuild !== BUILD_VERSION → hay un bundle nuevo que todavía no cargó.
-        // Recargar con cache-busting REAL del documento (?v=serverBuild) para
-        // bypassear la caché HTTP de WKWebView que causaba el stuck en iOS.
-        // Guard de loop: si ya estamos en ?v=serverBuild, no re-navegar (el
-        // sub-recurso pudo quedar en caché) — se reintenta en el próximo cold-start.
-        if(location.href.indexOf('v=' + serverBuild) !== -1) return;
-        if(opts && opts.offer && !document.getElementById('otrofestiv-splash')){
-          // MODO OFRECER (canal #4, la app VISIBLE y en uso). No se recarga bajo
-          // los dedos del usuario: es la doctrina de T97 —lo que estás mirando no
-          // cambia solo— aplicada a la app entera. Se ofrece con el toast de
-          // acción que ya existe; si lo ignora, el próximo poll re-ofrece y la
-          // vuelta de background lo aplica sola, como siempre.
-          // En el SPLASH sí se recarga en silencio: vuelve al mismo splash con el
-          // festival recordado — indistinguible, y no hay trabajo que interrumpir.
-          _offerUpdate(serverBuild);
-          return;
-        }
-        if(!_reloading){
-          _reloading = true;
-          location.href = location.href.split('?')[0].split('#')[0] + '?v=' + serverBuild;
-        }
-        // NO se escribe orf_build aquí: el bundle nuevo aún no cargó.
-      })
-      .catch(function(){});
-  }
-
-  var _lastOffered = '';
-  function _offerUpdate(serverBuild){
-    if(_lastOffered === serverBuild) return; // un toast por build por ciclo de polls
-    _lastOffered = serverBuild;
-    showActionToast(t('update_disponible'), t('update_cta'), function(){
-      _reloading = true;
-      location.href = location.href.split('?')[0].split('#')[0] + '?v=' + serverBuild;
-    }, 12000);
-  }
-
-  // ── Canal version.json #1: cold start ─────────────────────────────────
-  // Corre al abrir la app desde cero.
-  // Permite staged rollout: android e ios con builds independientes en version.json.
-  _checkVersionJson();
-
-  // ── Canal version.json #2 + SW re-check: visibilitychange ────────────
-  // Corre cuando el usuario vuelve la app desde background.
-  // En mobile, el JS no recarga al volver del background — sin este listener,
-  // un usuario que deja la app abierta horas (o días) nunca detecta updates.
-  // Patrón usado por Slack, Discord, Notion para actualizaciones en WebView.
-  // registration.update() fuerza re-verificación de sw.js contra el servidor —
-  // el browser solo hace este check en register() (al cargar), no al volver de bg.
-  // Si hay nuevo sw.js → instala → skipWaiting → controllerchange → reload.
-  document.addEventListener('visibilitychange', function(){
-    if(document.visibilityState === 'visible' && !_reloading){
-      _checkVersionJson();
-      // Forzar re-check del SW contra el servidor (gap documentado en web.dev/MDN)
-      navigator.serviceWorker.ready.then(function(reg){ reg.update(); }).catch(function(){});
-    }
-  });
-
-  // ── Canal version.json #3 + flush de sync: online ────────────────────────
-  // Al recuperar conexión (aterrizar, salir del sótano del teatro): (1) subir
-  // los cambios locales que quedaron sin sincronizar mientras no había red, y
-  // (2) revalidar si hay build nuevo. El evento 'online' es optimista (señala
-  // "hay interfaz de red", no "hay Internet real"), así que ambas acciones son
-  // idempotentes y tolerantes a fallo: _cloudSave solo limpia cloud_dirty tras
-  // un upsert confirmado (nunca pierde la edición si el flush falla) y es el
-  // mismo re-push que ya dispara el boot (loader.js); _checkVersionJson va con
-  // no-store y es no-op si nada cambió. El re-push de boot permanece como red
-  // de seguridad — este listener no lo reemplaza.
-  // ── Canal version.json #4: poll en PRIMER PLANO ──────────────────────────
-  // El hueco que los otros tres no cubren (Juan, 24 ago 2026): quien deja la app
-  // ABIERTA Y VISIBLE durante horas no dispara cold-start, ni visibilitychange,
-  // ni online. Durante un festival es el caso normal — la app en la mano entre
-  // sede y sede. Sin esto, un cambio de sede u horario sellado en NOTICES no le
-  // llega hasta que suelta el teléfono.
-  // Cada 10 min y SOLO visible: en background, visibilitychange ya hace el
-  // trabajo al volver, y sondear de fondo es gastar batería en algo que otro
-  // canal cubre. `?updPoll=` acorta el ciclo en dev/tests (precedente: simTime).
-  var _POLL_MS = (function(){
-    var m = location.search.match(/[?&]updPoll=(\d+)/);
-    return m ? Math.max(300, +m[1]) : 10 * 60 * 1000;
-  })();
-  setInterval(function(){
-    if(document.visibilityState === 'visible' && !_reloading){
-      _checkVersionJson({offer:true});
-    }
-  }, _POLL_MS);
-
-  window.addEventListener('online', function(){
-    if(storage.getCloudDirty()) _cloudSave();
-    if(!_reloading){
-      _checkVersionJson();
-      navigator.serviceWorker.ready.then(function(reg){ reg.update(); }).catch(function(){});
-    }
-  });
 }
+
+// Re-check del sw.js contra el servidor (gap documentado en web.dev/MDN): el
+// browser solo lo hace en register(). No-op silencioso donde no hay SW.
+function _swRecheck(){
+  if(!_HAS_SW) return;
+  navigator.serviceWorker.ready.then(function(reg){ reg.update(); }).catch(function(){});
+}
+
+// ── Función de check compartida por cold-start y visibilitychange ─────
+// Extrae la lógica para reutilizarla en ambos triggers sin duplicar código.
+function _checkVersionJson(opts){
+  fetch('/version.json', {cache:'no-store'})
+    .then(function(r){ return r.json(); })
+    .then(function(v){
+      var serverBuild = v[_isIOS ? 'ios' : 'android'] || '';
+      if(!serverBuild) return;
+      // Comparar contra BUILD_VERSION (horneado en el bundle que REALMENTE está
+      // corriendo) — único indicador confiable de qué código se cargó. NO contra
+      // localStorage, que solo refleja "vi este version.json", no "cargué este JS".
+      if(serverBuild === BUILD_VERSION){
+        // El bundle cargado ya es el del servidor → recién ahora marcar como
+        // actualizado. (Antes se escribía ANTES de recargar → en iOS el reload
+        // servía el bundle viejo desde caché y el marcador quedaba "actualizado"
+        // para siempre, deshabilitando el trigger.)
+        if(localStorage.getItem(_BUILD_KEY) !== serverBuild){
+          localStorage.setItem(_BUILD_KEY, serverBuild);
+        }
+        return;
+      }
+      // serverBuild !== BUILD_VERSION → hay un bundle nuevo que todavía no cargó.
+      // Recargar con cache-busting REAL del documento (?v=serverBuild) para
+      // bypassear la caché HTTP de WKWebView que causaba el stuck en iOS.
+      // Guard de loop: si ya estamos en ?v=serverBuild, no re-navegar (el
+      // sub-recurso pudo quedar en caché) — se reintenta en el próximo cold-start.
+      if(location.href.indexOf('v=' + serverBuild) !== -1) return;
+      if(opts && opts.offer && !document.getElementById('otrofestiv-splash')){
+        // MODO OFRECER (canal #4, la app VISIBLE y en uso). No se recarga bajo
+        // los dedos del usuario: es la doctrina de T97 —lo que estás mirando no
+        // cambia solo— aplicada a la app entera. Se ofrece con el toast de
+        // acción que ya existe; si lo ignora, el próximo poll re-ofrece y la
+        // vuelta de background lo aplica sola, como siempre.
+        // En el SPLASH sí se recarga en silencio: vuelve al mismo splash con el
+        // festival recordado — indistinguible, y no hay trabajo que interrumpir.
+        _offerUpdate(serverBuild);
+        return;
+      }
+      if(!_reloading){
+        _reloading = true;
+        location.href = location.href.split('?')[0].split('#')[0] + '?v=' + serverBuild;
+      }
+      // NO se escribe orf_build aquí: el bundle nuevo aún no cargó.
+    })
+    .catch(function(){});
+}
+
+var _lastOffered = '';
+function _offerUpdate(serverBuild){
+  if(_lastOffered === serverBuild) return; // un toast por build por ciclo de polls
+  _lastOffered = serverBuild;
+  showActionToast(t('update_disponible'), t('update_cta'), function(){
+    _reloading = true;
+    location.href = location.href.split('?')[0].split('#')[0] + '?v=' + serverBuild;
+  }, 12000);
+}
+
+// ── Canal version.json #1: cold start ─────────────────────────────────
+// Corre al abrir la app desde cero.
+// Permite staged rollout: android e ios con builds independientes en version.json.
+_checkVersionJson();
+
+// ── Canal version.json #2 + SW re-check: visibilitychange ────────────
+// Corre cuando el usuario vuelve la app desde background.
+// En mobile, el JS no recarga al volver del background — sin este listener,
+// un usuario que deja la app abierta horas (o días) nunca detecta updates.
+// Patrón usado por Slack, Discord, Notion para actualizaciones en WebView.
+document.addEventListener('visibilitychange', function(){
+  if(document.visibilityState === 'visible' && !_reloading){
+    _checkVersionJson();
+    _swRecheck();
+  }
+});
+
+// ── Canal version.json #3 + flush de sync: online ────────────────────────
+// Al recuperar conexión (aterrizar, salir del sótano del teatro): (1) subir
+// los cambios locales que quedaron sin sincronizar mientras no había red, y
+// (2) revalidar si hay build nuevo. El evento 'online' es optimista (señala
+// "hay interfaz de red", no "hay Internet real"), así que ambas acciones son
+// idempotentes y tolerantes a fallo: _cloudSave solo limpia cloud_dirty tras
+// un upsert confirmado (nunca pierde la edición si el flush falla) y es el
+// mismo re-push que ya dispara el boot (loader.js); _checkVersionJson va con
+// no-store y es no-op si nada cambió. El re-push de boot permanece como red
+// de seguridad — este listener no lo reemplaza.
+window.addEventListener('online', function(){
+  if(storage.getCloudDirty()) _cloudSave();
+  if(!_reloading){
+    _checkVersionJson();
+    _swRecheck();
+  }
+});
+
+// ── Canal version.json #4: poll en PRIMER PLANO ──────────────────────────
+// El hueco que los otros tres no cubren (Juan, 24 ago 2026): quien deja la app
+// ABIERTA Y VISIBLE durante horas no dispara cold-start, ni visibilitychange,
+// ni online. Durante un festival es el caso normal — la app en la mano entre
+// sede y sede. Sin esto, un cambio de sede u horario sellado en NOTICES no le
+// llega hasta que suelta el teléfono.
+// Cada 10 min y SOLO visible: en background, visibilitychange ya hace el
+// trabajo al volver, y sondear de fondo es gastar batería en algo que otro
+// canal cubre. `?updPoll=` acorta el ciclo en dev/tests (precedente: simTime).
+var _POLL_MS = (function(){
+  var m = location.search.match(/[?&]updPoll=(\d+)/);
+  return m ? Math.max(300, +m[1]) : 10 * 60 * 1000;
+})();
+setInterval(function(){
+  if(document.visibilityState === 'visible' && !_reloading){
+    _checkVersionJson({offer:true});
+  }
+}, _POLL_MS);
 
 // ── FILTRO LUGAR — implementación desde cero ─────────────────────────────
 // 40 líneas. Un dropdown simple. Sin dependencias externas.

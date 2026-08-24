@@ -1612,6 +1612,46 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar dom-ready-guard: {_e}')
 
+# ── CHECK: [update-canales-sin-sw] ────────────────────────────────────────────
+# Los 4 canales de version.json (cold start, visibilitychange, online, poll) NO
+# dependen del service worker: son fetch + location.href. Vivieron años dentro
+# de if('serviceWorker' in navigator) → el wrapper iOS (WKWebView sin
+# WKAppBoundDomains, SIN esa API) quedaba sin NINGÚN mecanismo de actualización
+# (24 ago 2026: el palmarés de FINCA no llegaba con la app en la mano). Este
+# check prohíbe que los canales vuelvan a caer dentro de un guard de SW, y exige
+# que existan. Cazado también por T102 (Playwright, borra la API de verdad).
+check = 'update-canales-sin-sw'
+try:
+    import re as _re3
+    _mainjs = open('src/main.js', encoding='utf-8').read()
+    # Marcadores EJECUTABLES, no comentarios: '_checkVersionJson({offer:true})'
+    # es la llamada del poll (canal #4) — 'updPoll' era mal marcador, vive
+    # también en comentarios y sobrevivía a la muerte del canal.
+    _CANALES = ['_checkVersionJson(', '_offerUpdate(', '_checkVersionJson({offer:true})']
+    _faltan = [c for c in _CANALES if c not in _mainjs]
+    _presos = []
+    for _m in _re3.finditer(r"if\s*\(\s*(?:'serviceWorker'\s+in\s+navigator|_HAS_SW)\s*\)\s*\{", _mainjs):
+        _d = 0; _i = _m.end() - 1
+        while _i < len(_mainjs):
+            if _mainjs[_i] == '{': _d += 1
+            elif _mainjs[_i] == '}':
+                _d -= 1
+                if _d == 0: break
+            _i += 1
+        _bloque = _mainjs[_m.start():_i]
+        for _c in _CANALES + ['setInterval(', "addEventListener('visibilitychange'", "addEventListener('online'"]:
+            if _c in _bloque:
+                _ln = _mainjs[:_m.start()].count('\n') + 1
+                _presos.append(f'{_c} dentro del guard de SW (linea {_ln})')
+    if _faltan:
+        fail(check, 'canal(es) de version.json AUSENTES de src/main.js (iOS sin update): ' + ', '.join(_faltan))
+    elif _presos:
+        fail(check, 'canal(es) de version.json PRESOS del guard de SW — el wrapper iOS no tiene esa API y se queda sin updates: ' + '; '.join(_presos))
+    else:
+        ok(check, 'los 4 canales de version.json viven fuera del guard de SW (el wrapper iOS los corre)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar update-canales-sin-sw: {_e}')
+
 # ── CHECK: [synopsis-helper] ──────────────────────────────────────────────────
 # REGLA: la sinopsis localizada se resuelve SOLO vía locSynopsis(f) (src/i18n/i18n.js).
 # Prohibido rehacer a mano el ternario `_lang==='en'?...synopsis_en...` en view/
@@ -4044,7 +4084,7 @@ try:
         # guardián pide. Baja cuando se migre algo fuera de helpers.
         'src/view/helpers.js': 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
         'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
-        'src/main.js': 1753,  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
+        'src/main.js': 1768,  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
         'src/i18n/i18n.js': 1661,  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
         'src/controller/sheets-controller.js': 1718,  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora

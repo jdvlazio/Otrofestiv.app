@@ -2361,3 +2361,40 @@ test('T101 — la app abierta se entera del build nuevo, y no se recarga sola', 
   expect(page.url()).toContain('v=299901010000');
 });
 });
+
+test.describe('T102 — el wrapper iOS: SIN navigator.serviceWorker, los canales existen igual', () => {
+test('T102 — sin API de service worker, el poll igual ofrece el build nuevo', async ({ page }) => {
+  test.setTimeout(90000);
+  // EL BUG QUE VIVIÓ JUAN (24 ago 2026): los 4 canales de version.json vivían
+  // dentro de if('serviceWorker' in navigator). El wrapper iOS es WKWebView sin
+  // WKAppBoundDomains → navigator.serviceWorker NO EXISTE → el bloque entero
+  // nunca corría: iOS sin NINGÚN mecanismo de actualización (el palmarés de
+  // FINCA no llegaba con la app en la mano). T101 no lo cazaba: el `block` de
+  // Playwright bloquea el registro pero deja la API presente — el guard pasaba.
+  // Acá se borra la API de verdad, como en el wrapper.
+  await page.addInitScript(() => { delete Navigator.prototype.serviceWorker; });
+  let servirNuevo = false;
+  await page.route('**/version.json*', async (route) => {
+    if (!servirNuevo) return route.continue();
+    await route.fulfill({ contentType: 'application/json',
+      body: JSON.stringify({ android: '299901010000', ios: '299901010000', storeGate: false }) });
+  });
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00', { query: 'updPoll=400' });
+
+  // Sanidad del harness: el entorno ES el del wrapper (sin la API).
+  const sinSW = await page.evaluate(() => !('serviceWorker' in navigator));
+  expect(sinSW, 'el harness debe simular el wrapper: sin navigator.serviceWorker').toBe(true);
+
+  await page.waitForTimeout(1000);
+  const urlAntes = page.url();
+  servirNuevo = true;
+  await page.waitForTimeout(1600); // ≥2 ciclos de poll
+
+  const t1 = await page.evaluate(() => ({
+    toast: document.getElementById('prio-toast')?.textContent.replace(/\s+/g, ' ').trim() || '',
+    accion: !!document.querySelector('#prio-toast .toast-action-btn'),
+  }));
+  expect(page.url(), 'doctrina T97: tampoco acá se recarga sola').toBe(urlAntes);
+  expect(t1.accion, 'sin SW, el canal #4 igual ofrece la actualización').toBe(true);
+});
+});
