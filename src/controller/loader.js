@@ -21,7 +21,7 @@ import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayVi
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
 import { dayFullyPassed, simTodayStr } from '../domain/time.js';
-import { explodeScreenings, normTitle, sealSharedSlots, validateFilm } from '../domain/film.js';
+import { _djb2, explodeScreenings, normTitle, sealSharedSlots, validateFilm } from '../domain/film.js';
 import { syncScheduleWithCatalog } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { deriveClear } from '../state/festival-context.js';
@@ -35,7 +35,7 @@ import { _autoResolveFestivalPosters, _renderFestivalSelector, renderPostponedBa
 // sin error ni 404 (cazado por synthetic monitoring, ~10-20% de cargas en frío).
 // El timeout aborta el cuerpo colgado y reintenta. cache:'no-store' se mantiene
 // (datos siempre frescos); el reintento cubre el stall transitorio del CDN.
-async function _fetchFestivalJson(url, tries=3, timeoutMs=6000){
+export async function _fetchFestivalJson(url, tries=3, timeoutMs=6000){
   let lastErr;
   for(let i=0;i<tries;i++){
     const ctrl=new AbortController();
@@ -88,6 +88,252 @@ function _touchFestivalCache(id){
   }
 }
 
+
+// ── INGESTA: JSON crudo → cfg sellado. DUEÑO ÚNICO (24 ago 2026) ─────────────
+// Compartida por loadFestival (carga/cambio de festival) y por el refresco de
+// datos en caliente (live-refresh.js). Extraerla evita el segundo camino de
+// ingesta que la auditoría de caminos duplicados prohibió: los avisos (NOTICES),
+// los slots compartidos y la explosión se sellan ACÁ o no se sellan.
+export function _ingerirDatosFestival(id, cfg, data){
+  // ── Explosión de screenings[] → objetos planos por función ──
+  // Dueño: explodeScreenings (domain/film.js) — compartido con el oráculo
+  // del planeador, que necesita ejercer el MISMO catálogo que producción.
+  const exploded=explodeScreenings(data.films);
+  // Duración automática para is_programa
+  exploded.forEach(f=>{
+    if(f.is_programa&&f.film_list&&f.film_list.length&&!f.duration){
+      const mins=f.film_list.reduce((acc,item)=>{
+        const m=parseInt((item.duration||"").replace(/[^0-9]/g,""))||0;
+        return acc+m;
+      },0);
+      if(mins>0) f.duration=mins+" min";
+    }
+  });
+  // ── ANCLAJE DE FUNCIÓN (opt-in: root `sharedSlotIsOneScreening`) ────────
+  // Algunos festivales programan DOS obras en una misma función: mismo día,
+  // hora y sala, una detrás de la otra (FINCA 2026: 6 casos, verificados
+  // contra su documento día por día — una sola cabecera de hora para las
+  // dos). Sin esto la app las trata como funciones rivales: las declara en
+  // conflicto (falso: con una entrada ves ambas) y cree que salís al
+  // terminar la primera, así que te ofrece otra función a la que no llegás.
+  // NO se puede derivar para todos: en sedes multisala (Tribeca) misma
+  // hora+sede es OTRA sala = otra función. Por eso el festival lo declara.
+  // Se marca acá, una vez, y el dominio solo lee los campos.
+  if(data.sharedSlotIsOneScreening) sealSharedSlots(exploded); // dueño: domain/film.js (compartido con el oráculo)
+  // ── AVISOS: cancelada / reprogramada, SELLADOS en la función ────────────
+  // Antes el aviso se resolvía por búsqueda en cada superficie (la ficha, el
+  // listado y la card lo buscaban por su cuenta en NOTICES) y el
+  // PLANIFICADOR no lo miraba nunca: armaba el día alrededor de funciones
+  // canceladas y de horas que ya no existían. Se sella acá, una vez, igual
+  // que _slotKey — y todos los consumidores lo leen del dato.
+  //
+  // Reprogramada: la VERDAD es la hora nueva (decisión de Juan, 30 jul 2026).
+  // Se aplica al dato y queda `_movedFrom` con la vieja para poder decir de
+  // dónde viene. Mantener la hora vieja en pantalla y pedirle al
+  // planificador que la ignore es la doble verdad que ya nos costó bugs.
+  const _avisos=NOTICES.filter(n=>n.festival===id);
+  if(_avisos.length){
+    const _dk=data.dayKeys||[];
+    exploded.forEach(f=>{
+      if(f.info) return;
+      // `date` (día de la función original) desambigua cuando una obra tiene
+      // varias funciones y solo una cambió. Sin `date` → aplica a todas.
+      // Tres alcances, de más ancho a más fino (modelo de tres niveles,
+      // docs/PROTOCOLO.md): CIUDADES → título+fecha → título.
+      // `cities` nace del sismo del 11 ago 2026: FICDEH canceló Quibdó, Cali,
+      // Pereira y Manizales —88 de 444 funciones, 27 sedes, 10 obras que solo
+      // se veían ahí— y siguió en las otras 7 ciudades. Por título habrían sido
+      // 88 entradas y 88 banners para UN solo hecho.
+      // La ciudad se lee del venue CRUDO (data.venues), no de venueCity():
+      // ese helper OCULTA la ciudad cuando coincide con la del festival — es
+      // para mostrar, no para identificar.
+      const _city=((data.venues||{})[f.venue]||{}).city||'';
+      const n=_avisos.find(x=>
+        Array.isArray(x.cities)
+          ? (!!_city && x.cities.includes(_city))
+          : (x.title===f.title&&(!x.date||x.date===f.day)));
+      if(!n) return;
+      if(n.type==='cancelled'){
+        f._cancelled=true;
+        // La causa ya vive UNA vez en el banner: la card no la repite. Sin
+        // esto arrastraba «Pendiente nueva fecha», que se escribió para
+        // REPROGRAMADA y en una cancelación por tragedia es una promesa falsa.
+        if(n.note) f._cancelExplained=true;
+        return;
+      }
+      if(n.type==='rescheduled'&&(n.newDay||n.newTime||n.newVenue)){
+        f._movedFrom={day:f.day,time:f.time,venue:f.venue};
+        if(n.newDay){
+          f.day=n.newDay;
+          // day_order es el índice en dayKeys: sin recalcularlo, la función
+          // movida se ordena en su día viejo.
+          const _i=_dk.indexOf(n.newDay); if(_i>=0) f.day_order=_i;
+        }
+        if(n.newTime) f.time=n.newTime;
+        if(n.newVenue) f.venue=n.newVenue;
+      }
+    });
+  }
+  cfg.films=exploded; // Cacheado en sesión — evita re-fetch al volver al festival.
+  // Límite recomendado: ≤5 festivales simultáneos (~80KB c/u). LRU si escala a 8+.
+  cfg.posters=data.posters||{};
+  cfg.customPosters=data.customPosters||{};
+  cfg.lbSlugs=data.lbSlugs||{};
+  // ── Un solo dueño por tipo de dato (17 jul 2026) ────────────────────
+  // IDENTIDAD (nombre, ciudad, fechas…): el dueño es FESTIVAL_CONFIG
+  // (src/config.js) — el JSON solo RELLENA huecos de festivales legacy y
+  // nunca pisa un valor que config ya tiene. Motivo: el JSON con
+  // "TercerTiempo" pegado pisaba el nombre oficial en todo lo runtime
+  // (export del Diario, share, ICS) aunque config estuviera bien.
+  // CONTENIDO (días, secciones, ticketing…): el dueño es el JSON.
+  // Gate: validate.py [festival-name-parity]. Nada pisa storageKey.
+  const _identFields=['name','shortName','city','dates','dates_en','year',
+    'timezoneOffset'];
+  // `festivalDates` PASÓ de identidad a contenido (Juan, 23 ago 2026).
+  // Estaba archivado junto al nombre y la ciudad, así que el JSON solo podía
+  // rellenarlo si config lo tenía vacío — pero `days`/`dayKeys`, que son LA
+  // MISMA COSA (el calendario del festival), sí los pisa el JSON. El
+  // calendario quedaba partido en dos dueños: CineAutopsia dibujaba 8 días en
+  // la tira y `FESTIVAL_DATES` solo conocía 4. Los otros cuatro no existían
+  // para el reloj — `dayFullyPassed` devolvía false por `if(!dateStr)`, así
+  // que el VIE 21 nunca se atenuó, sus funciones nunca contaron como pasadas,
+  // y el 25/26/27 habrían roto la detección de HOY estando el festival vivo.
+  // El calendario tiene un solo dueño, y es el JSON — como el resto del
+  // contenido. Gate: validate.py [calendario-entero].
+  const _contentFields=['days','dayKeys','dayShort','dayShort_en',
+    'dayLong','prioLimit','eventPosterLabel','group','ticket_url','ticketing_model',
+    'sections','festivalDates']; // P2.2 — secciones data-driven desde el JSON del festival
+  _contentFields.forEach(k=>{ if(data[k]!=null) cfg[k]=data[k]; });
+  _identFields.forEach(k=>{ if(data[k]!=null&&cfg[k]==null) cfg[k]=data[k]; });
+  // Snapshot de identidad ya resuelta — el bloque config{} legacy de abajo
+  // tampoco puede pisarla (solo rellenar lo que siga faltando).
+  const _identSnap={}; _identFields.forEach(k=>{ if(cfg[k]!=null) _identSnap[k]=cfg[k]; });
+  // ── LEGADO: festivales anteriores con bloque config{} en el JSON ──────
+  // Festivales nuevos (desde Mujeres 2026) NO deben incluir config{} en el JSON —
+  // toda la configuración va en FESTIVAL_CONFIG en index.html.
+  // Este bloque existe solo para compatibilidad con festivales anteriores.
+  if(data.config){
+    const _knownLegacy=['ficci65','cinemancia2025'];
+    if(!_knownLegacy.includes(id)){
+      console.warn(`[loadFestival] '${id}' tiene bloque config{} en el JSON — los festivales nuevos deben configurarse solo en FESTIVAL_CONFIG (index.html). El bloque config{} se ignora para festivales nuevos.`);
+    } else {
+      Object.assign(cfg, data.config);
+      // Restaurar campos críticos — Object.assign puede pisarlos si config los tiene vacíos
+      Object.assign(cfg, _identSnap); // identidad: config.js sigue mandando
+      cfg.films=exploded;
+      cfg.lbSlugs=data.lbSlugs||cfg.lbSlugs||{};
+      cfg.posters=data.posters||cfg.posters||{};
+      cfg.customPosters=data.customPosters||cfg.customPosters||{};
+    }
+  }
+  // Absorber venues desde raíz del JSON (AFF/FICCI los tienen hardcodeados; otros festivales los traen aquí)
+  if(data.venues) cfg.venues=data.venues;
+  if(data.transport) cfg.transport=data.transport;
+  // Huella para el refresco en caliente (live-refresh.js): el hash detecta el
+  // cambio sin comparar todo; los crudos alimentan al clasificador del diff.
+  cfg._rawFilms=data.films;
+  cfg._rawDayKeys=data.dayKeys||cfg.dayKeys||[];
+  cfg._rawHash=_djb2(JSON.stringify(data));
+}
+
+// URL del JSON del festival — dueño único (la convención festId→archivo vivía
+// inline y el refresco la habría duplicado).
+export function festivalJsonUrl(id){
+  // Convierte festivalId a nombre de archivo: ficci65→ficci-65, aff2026→aff-2026
+  return 'festivals/'+id.replace(/([a-zA-Z]+)(\d+)$/,'$1-$2')+'.json';
+}
+
+
+// ── PUBLICACIÓN: cfg sellado → state (FILMS + derivados). DUEÑO ÚNICO ────────
+// Compartida por loadFestival y el refresco en caliente. Todo lo que depende del
+// catálogo publicado vive acá: validación, filtro de prensa, poda de listas
+// contra títulos válidos, pase de `past` en la tira y el re-derive del plan
+// (syncScheduleWithCatalog — el plan guarda la ELECCIÓN, el catálogo manda el
+// resto). Un refresco que no pase por acá dejaría media app mirando el catálogo
+// viejo — es la lección de [guardianes-datos-sede]: el dato debe SOBREVIVIR el
+// camino completo.
+export function publicarCatalogo(id, cfg){
+  const _computedPrioLimit = Math.min(8, Math.max(3, Math.round((cfg.dayKeys||[]).length / 2)));
+  // _newFilms y _validTitles computados local — no se leen de state.
+  // Esto permite que FILMS y los user-state filtrados estén en el MISMO
+  // batch atómico. Subscribers post-Fase 6 verán "festival activo y user-state
+  // consistente con sus films" en una sola notificación.
+  // normTitle: normaliza comillas tipográficas en títulos. Punto único.
+  const _mapped = (cfg.films||[]).map(f=>({...f,title:normTitle(f.title)}));
+  // ── Validación de datos (domain puro: validateFilm) — particiona drop/keep ──
+  // drop (sin title) → excluido de FILMS. errors (day/time) → conservado + logeado.
+  // warnings (section/venue/duration) → conservado + default. Diagnóstico agregado
+  // SIEMPRE (incluso si todo OK) para no procesar datos malformados en silencio.
+  const _newFilms=[]; let _dropCount=0; const _filmErrors=[], _filmWarnings=[];
+  for(const f of _mapped){
+    const v=validateFilm(f, cfg.dayKeys, cfg.venues);
+    if(v.drop){ _dropCount++; console.error(`[loadFestival/${id}] film DROP:`, f, v.errors); continue; }
+    if(v.errors.length) _filmErrors.push({title:f.title, errors:v.errors});
+    if(v.warnings.length) _filmWarnings.push({title:f.title, warnings:v.warnings});
+    _newFilms.push(f);
+  }
+  console.group(`[loadFestival] ${id} — validación de ${_mapped.length} films`);
+  console.log(`OK: ${_newFilms.length-_filmErrors.length} · con errores (conservados): ${_filmErrors.length} · con warnings: ${_filmWarnings.length} · dropeados: ${_dropCount}`);
+  if(_filmErrors.length) console.error('Films con errores de datos:', _filmErrors);
+  if(_filmWarnings.length) console.warn('Films con warnings:', _filmWarnings);
+  console.groupEnd();
+  // ── PRENSA E INDUSTRIA — se decide ACÁ, no en cada vista ─────────────────
+  // Las funciones con `audience:'press'` son pases de acreditados: el público
+  // general no puede entrar. TIFF 2026 trae 247 (audienceType «Press & Market»
+  // en su endpoint) sobre obras que YA tienen función pública.
+  //
+  // El filtro vive en este punto —el único sitio donde FILMS se publica— porque
+  // sus 171 consumidores lo leen de ahí: apagado, esas funciones NO EXISTEN para
+  // nadie. Filtrar por-vista habría dejado al planificador armando el día
+  // alrededor de pases a los que no se puede entrar, y a screensConflict
+  // declarando choques contra funciones invisibles.
+  //
+  // `_todasLasFunciones` guarda la lista COMPLETA en el cfg (que ya cachea la
+  // sesión) para que el interruptor re-derive sin volver a pedir el JSON.
+  cfg._todasLasFunciones = _newFilms;
+  cfg._tienePrensa = _newFilms.some(f=>f.audience==='press');
+  _restaurarPrensa(cfg);   // la preferencia de ESTE festival, antes de publicar
+  const _visibles = _filtrarPorAudiencia(_newFilms);
+  const _validTitles = new Set(_visibles.map(f=>f.title));
+  state.batchUpdate({
+    _activeFestId: id,
+    FILMS: _visibles,
+    FESTIVAL_DATES: cfg.festivalDates,
+    PRIO_LIMIT: cfg.prioLimit || _computedPrioLimit,
+    TZ_OFFSET: cfg.timezoneOffset || '-05:00',
+    FESTIVAL_TRANSPORT: cfg.transport || 'transit',
+    watchlist: new Set([...state.get('watchlist')].filter(t=>_validTitles.has(t))),
+    watched: new Set([...state.get('watched')].filter(t=>_validTitles.has(t))),
+    prioritized: new Set([...state.get('prioritized')].filter(t=>_validTitles.has(t))),
+  });
+  // El banner se decide acá y no en cada tab: `_activeFestId` acaba de quedar
+  // fijado, y este es el único momento en que la respuesta puede cambiar.
+  _pintarBannerRevision();
+  _sincronizarBotonPrensa();  // el botón solo existe si el festival trae pases
+
+  // ── Pase de `past` sobre la tira de días ──────────────────────────────────
+  // AHORA, no antes: dayFullyPassed necesita el calendario (FESTIVAL_DATES) y las
+  // funciones (FILMS) de ESTE festival, y las dos cosas acaban de publicarse en
+  // el batchUpdate de arriba. Hecho en el DOM build, leía los del festival
+  // anterior. Un solo dueño de la verdad — la función de dominio — evaluado
+  // cuando la verdad existe. Gate: validate.py [calendario-entero].
+  document.querySelectorAll('.dtab[data-day]').forEach(b=>{
+    if(b.dataset.day!=='all') b.classList.toggle('past', dayFullyPassed(b.dataset.day));
+  });
+
+  // ► SYNC DEL PLAN CONTRA EL CATÁLOGO ───────────────────────────────
+  // El hydrate de savedAgenda (BATCH 2) corre ANTES de que exista FILMS, así
+  // que trae la copia congelada tal cual se guardó. Acá, con el catálogo ya
+  // sellado (slots + avisos), cada entrada se re-deriva de su función viva:
+  // el plan guarda la ELECCIÓN (título+día+hora), el catálogo manda el resto.
+  // Solo persiste en LOCAL: es una corrección derivada e idempotente — subirla
+  // a la nube crearía ping-pong entre dispositivos que se normalizan solos.
+  if(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length){
+    state.update('savedAgenda', a=>({...a, schedule: syncScheduleWithCatalog(a.schedule, _newFilms)}));
+    storage.setSavedAgenda(state.get('savedAgenda'));
+  }
+}
+
 export async function loadFestival(id){
   const _gen=++_loadGen;
   // Subir YA cualquier edición pendiente del festival que estás dejando (con sus
@@ -113,148 +359,13 @@ export async function loadFestival(id){
   }
   // ── Fase 1: cargar datos del festival desde JSON si no están en memoria ──
   if(!cfg.films){
-    // Convierte festivalId a nombre de archivo: ficci65→ficci-65, aff2026→aff-2026
-    const festFile=id.replace(/([a-zA-Z]+)(\d+)$/,'$1-$2');
     try{
-      const _festUrl='festivals/'+festFile+'.json';
       // Sin banner de error: el catch externo muestra el toast y reporta a Sentry.
       // (El banner rojo fixed nunca se removía → quedaba tapando el topbar tras un
       // retry exitoso.)
-      const data=await _fetchFestivalJson(_festUrl);
-      // ── Explosión de screenings[] → objetos planos por función ──
-      // Dueño: explodeScreenings (domain/film.js) — compartido con el oráculo
-      // del planeador, que necesita ejercer el MISMO catálogo que producción.
-      const exploded=explodeScreenings(data.films);
-      // Duración automática para is_programa
-      exploded.forEach(f=>{
-        if(f.is_programa&&f.film_list&&f.film_list.length&&!f.duration){
-          const mins=f.film_list.reduce((acc,item)=>{
-            const m=parseInt((item.duration||"").replace(/[^0-9]/g,""))||0;
-            return acc+m;
-          },0);
-          if(mins>0) f.duration=mins+" min";
-        }
-      });
-      // ── ANCLAJE DE FUNCIÓN (opt-in: root `sharedSlotIsOneScreening`) ────────
-      // Algunos festivales programan DOS obras en una misma función: mismo día,
-      // hora y sala, una detrás de la otra (FINCA 2026: 6 casos, verificados
-      // contra su documento día por día — una sola cabecera de hora para las
-      // dos). Sin esto la app las trata como funciones rivales: las declara en
-      // conflicto (falso: con una entrada ves ambas) y cree que salís al
-      // terminar la primera, así que te ofrece otra función a la que no llegás.
-      // NO se puede derivar para todos: en sedes multisala (Tribeca) misma
-      // hora+sede es OTRA sala = otra función. Por eso el festival lo declara.
-      // Se marca acá, una vez, y el dominio solo lee los campos.
-      if(data.sharedSlotIsOneScreening) sealSharedSlots(exploded); // dueño: domain/film.js (compartido con el oráculo)
-      // ── AVISOS: cancelada / reprogramada, SELLADOS en la función ────────────
-      // Antes el aviso se resolvía por búsqueda en cada superficie (la ficha, el
-      // listado y la card lo buscaban por su cuenta en NOTICES) y el
-      // PLANIFICADOR no lo miraba nunca: armaba el día alrededor de funciones
-      // canceladas y de horas que ya no existían. Se sella acá, una vez, igual
-      // que _slotKey — y todos los consumidores lo leen del dato.
-      //
-      // Reprogramada: la VERDAD es la hora nueva (decisión de Juan, 30 jul 2026).
-      // Se aplica al dato y queda `_movedFrom` con la vieja para poder decir de
-      // dónde viene. Mantener la hora vieja en pantalla y pedirle al
-      // planificador que la ignore es la doble verdad que ya nos costó bugs.
-      const _avisos=NOTICES.filter(n=>n.festival===id);
-      if(_avisos.length){
-        const _dk=data.dayKeys||[];
-        exploded.forEach(f=>{
-          if(f.info) return;
-          // `date` (día de la función original) desambigua cuando una obra tiene
-          // varias funciones y solo una cambió. Sin `date` → aplica a todas.
-          // Tres alcances, de más ancho a más fino (modelo de tres niveles,
-          // docs/PROTOCOLO.md): CIUDADES → título+fecha → título.
-          // `cities` nace del sismo del 11 ago 2026: FICDEH canceló Quibdó, Cali,
-          // Pereira y Manizales —88 de 444 funciones, 27 sedes, 10 obras que solo
-          // se veían ahí— y siguió en las otras 7 ciudades. Por título habrían sido
-          // 88 entradas y 88 banners para UN solo hecho.
-          // La ciudad se lee del venue CRUDO (data.venues), no de venueCity():
-          // ese helper OCULTA la ciudad cuando coincide con la del festival — es
-          // para mostrar, no para identificar.
-          const _city=((data.venues||{})[f.venue]||{}).city||'';
-          const n=_avisos.find(x=>
-            Array.isArray(x.cities)
-              ? (!!_city && x.cities.includes(_city))
-              : (x.title===f.title&&(!x.date||x.date===f.day)));
-          if(!n) return;
-          if(n.type==='cancelled'){
-            f._cancelled=true;
-            // La causa ya vive UNA vez en el banner: la card no la repite. Sin
-            // esto arrastraba «Pendiente nueva fecha», que se escribió para
-            // REPROGRAMADA y en una cancelación por tragedia es una promesa falsa.
-            if(n.note) f._cancelExplained=true;
-            return;
-          }
-          if(n.type==='rescheduled'&&(n.newDay||n.newTime||n.newVenue)){
-            f._movedFrom={day:f.day,time:f.time,venue:f.venue};
-            if(n.newDay){
-              f.day=n.newDay;
-              // day_order es el índice en dayKeys: sin recalcularlo, la función
-              // movida se ordena en su día viejo.
-              const _i=_dk.indexOf(n.newDay); if(_i>=0) f.day_order=_i;
-            }
-            if(n.newTime) f.time=n.newTime;
-            if(n.newVenue) f.venue=n.newVenue;
-          }
-        });
-      }
-      cfg.films=exploded; // Cacheado en sesión — evita re-fetch al volver al festival.
-      // Límite recomendado: ≤5 festivales simultáneos (~80KB c/u). LRU si escala a 8+.
-      cfg.posters=data.posters||{};
-      cfg.customPosters=data.customPosters||{};
-      cfg.lbSlugs=data.lbSlugs||{};
-      // ── Un solo dueño por tipo de dato (17 jul 2026) ────────────────────
-      // IDENTIDAD (nombre, ciudad, fechas…): el dueño es FESTIVAL_CONFIG
-      // (src/config.js) — el JSON solo RELLENA huecos de festivales legacy y
-      // nunca pisa un valor que config ya tiene. Motivo: el JSON con
-      // "TercerTiempo" pegado pisaba el nombre oficial en todo lo runtime
-      // (export del Diario, share, ICS) aunque config estuviera bien.
-      // CONTENIDO (días, secciones, ticketing…): el dueño es el JSON.
-      // Gate: validate.py [festival-name-parity]. Nada pisa storageKey.
-      const _identFields=['name','shortName','city','dates','dates_en','year',
-        'timezoneOffset'];
-      // `festivalDates` PASÓ de identidad a contenido (Juan, 23 ago 2026).
-      // Estaba archivado junto al nombre y la ciudad, así que el JSON solo podía
-      // rellenarlo si config lo tenía vacío — pero `days`/`dayKeys`, que son LA
-      // MISMA COSA (el calendario del festival), sí los pisa el JSON. El
-      // calendario quedaba partido en dos dueños: CineAutopsia dibujaba 8 días en
-      // la tira y `FESTIVAL_DATES` solo conocía 4. Los otros cuatro no existían
-      // para el reloj — `dayFullyPassed` devolvía false por `if(!dateStr)`, así
-      // que el VIE 21 nunca se atenuó, sus funciones nunca contaron como pasadas,
-      // y el 25/26/27 habrían roto la detección de HOY estando el festival vivo.
-      // El calendario tiene un solo dueño, y es el JSON — como el resto del
-      // contenido. Gate: validate.py [calendario-entero].
-      const _contentFields=['days','dayKeys','dayShort','dayShort_en',
-        'dayLong','prioLimit','eventPosterLabel','group','ticket_url','ticketing_model',
-        'sections','festivalDates']; // P2.2 — secciones data-driven desde el JSON del festival
-      _contentFields.forEach(k=>{ if(data[k]!=null) cfg[k]=data[k]; });
-      _identFields.forEach(k=>{ if(data[k]!=null&&cfg[k]==null) cfg[k]=data[k]; });
-      // Snapshot de identidad ya resuelta — el bloque config{} legacy de abajo
-      // tampoco puede pisarla (solo rellenar lo que siga faltando).
-      const _identSnap={}; _identFields.forEach(k=>{ if(cfg[k]!=null) _identSnap[k]=cfg[k]; });
-      // ── LEGADO: festivales anteriores con bloque config{} en el JSON ──────
-      // Festivales nuevos (desde Mujeres 2026) NO deben incluir config{} en el JSON —
-      // toda la configuración va en FESTIVAL_CONFIG en index.html.
-      // Este bloque existe solo para compatibilidad con festivales anteriores.
-      if(data.config){
-        const _knownLegacy=['ficci65','cinemancia2025'];
-        if(!_knownLegacy.includes(id)){
-          console.warn(`[loadFestival] '${id}' tiene bloque config{} en el JSON — los festivales nuevos deben configurarse solo en FESTIVAL_CONFIG (index.html). El bloque config{} se ignora para festivales nuevos.`);
-        } else {
-          Object.assign(cfg, data.config);
-          // Restaurar campos críticos — Object.assign puede pisarlos si config los tiene vacíos
-          Object.assign(cfg, _identSnap); // identidad: config.js sigue mandando
-          cfg.films=exploded;
-          cfg.lbSlugs=data.lbSlugs||cfg.lbSlugs||{};
-          cfg.posters=data.posters||cfg.posters||{};
-          cfg.customPosters=data.customPosters||cfg.customPosters||{};
-        }
-      }
-      // Absorber venues desde raíz del JSON (AFF/FICCI los tienen hardcodeados; otros festivales los traen aquí)
-      if(data.venues) cfg.venues=data.venues;
-      if(data.transport) cfg.transport=data.transport;
+      const data=await _fetchFestivalJson(festivalJsonUrl(id));
+      _ingerirDatosFestival(id, cfg, data);
+
     }catch(e){
       console.error('Error cargando festival '+id+':',e);
       report(e,'loadFestival:'+id); // visible en Sentry (antes se tragaba en silencio)
@@ -329,9 +440,7 @@ export async function loadFestival(id){
   Object.keys(DAY_ABBR).forEach(k=>delete DAY_ABBR[k]);
   Object.keys(DAY_NUM).forEach(k=>delete DAY_NUM[k]);
   cfg.days.forEach(d=>{DAY_ABBR[d.k]=d.lbl;DAY_NUM[d.k]=d.d;});
-  // PRIO_LIMIT computado para batch 3 (regla: round(días/2), cap [3,8]).
-  // Si cfg.prioLimit no está definido, fallback conservador = 3.
-  const _computedPrioLimit = Math.min(8, Math.max(3, Math.round((cfg.dayKeys||[]).length / 2)));
+  // PRIO_LIMIT: lo computa publicarCatalogo (batch 3) — regla round(días/2), cap [3,8].
 
   // ► BATCH 1 — transition + clear ───────────────────────────────────
   // FESTIVAL_STORAGE_KEY debe estar al new fest ANTES de batch 2 (loadState
@@ -425,85 +534,8 @@ export async function loadFestival(id){
   // lastRemovedSlots/filmDelays/filmDelaysHistory).
   loadState();
 
-  // ► BATCH 3 — cfg-tail + filter ────────────────────────────────────
-  // _newFilms y _validTitles computados local — no se leen de state.
-  // Esto permite que FILMS y los user-state filtrados estén en el MISMO
-  // batch atómico. Subscribers post-Fase 6 verán "festival activo y user-state
-  // consistente con sus films" en una sola notificación.
-  // normTitle: normaliza comillas tipográficas en títulos. Punto único.
-  const _mapped = (cfg.films||[]).map(f=>({...f,title:normTitle(f.title)}));
-  // ── Validación de datos (domain puro: validateFilm) — particiona drop/keep ──
-  // drop (sin title) → excluido de FILMS. errors (day/time) → conservado + logeado.
-  // warnings (section/venue/duration) → conservado + default. Diagnóstico agregado
-  // SIEMPRE (incluso si todo OK) para no procesar datos malformados en silencio.
-  const _newFilms=[]; let _dropCount=0; const _filmErrors=[], _filmWarnings=[];
-  for(const f of _mapped){
-    const v=validateFilm(f, cfg.dayKeys, cfg.venues);
-    if(v.drop){ _dropCount++; console.error(`[loadFestival/${id}] film DROP:`, f, v.errors); continue; }
-    if(v.errors.length) _filmErrors.push({title:f.title, errors:v.errors});
-    if(v.warnings.length) _filmWarnings.push({title:f.title, warnings:v.warnings});
-    _newFilms.push(f);
-  }
-  console.group(`[loadFestival] ${id} — validación de ${_mapped.length} films`);
-  console.log(`OK: ${_newFilms.length-_filmErrors.length} · con errores (conservados): ${_filmErrors.length} · con warnings: ${_filmWarnings.length} · dropeados: ${_dropCount}`);
-  if(_filmErrors.length) console.error('Films con errores de datos:', _filmErrors);
-  if(_filmWarnings.length) console.warn('Films con warnings:', _filmWarnings);
-  console.groupEnd();
-  // ── PRENSA E INDUSTRIA — se decide ACÁ, no en cada vista ─────────────────
-  // Las funciones con `audience:'press'` son pases de acreditados: el público
-  // general no puede entrar. TIFF 2026 trae 247 (audienceType «Press & Market»
-  // en su endpoint) sobre obras que YA tienen función pública.
-  //
-  // El filtro vive en este punto —el único sitio donde FILMS se publica— porque
-  // sus 171 consumidores lo leen de ahí: apagado, esas funciones NO EXISTEN para
-  // nadie. Filtrar por-vista habría dejado al planificador armando el día
-  // alrededor de pases a los que no se puede entrar, y a screensConflict
-  // declarando choques contra funciones invisibles.
-  //
-  // `_todasLasFunciones` guarda la lista COMPLETA en el cfg (que ya cachea la
-  // sesión) para que el interruptor re-derive sin volver a pedir el JSON.
-  cfg._todasLasFunciones = _newFilms;
-  cfg._tienePrensa = _newFilms.some(f=>f.audience==='press');
-  _restaurarPrensa(cfg);   // la preferencia de ESTE festival, antes de publicar
-  const _visibles = _filtrarPorAudiencia(_newFilms);
-  const _validTitles = new Set(_visibles.map(f=>f.title));
-  state.batchUpdate({
-    _activeFestId: id,
-    FILMS: _visibles,
-    FESTIVAL_DATES: cfg.festivalDates,
-    PRIO_LIMIT: cfg.prioLimit || _computedPrioLimit,
-    TZ_OFFSET: cfg.timezoneOffset || '-05:00',
-    FESTIVAL_TRANSPORT: cfg.transport || 'transit',
-    watchlist: new Set([...state.get('watchlist')].filter(t=>_validTitles.has(t))),
-    watched: new Set([...state.get('watched')].filter(t=>_validTitles.has(t))),
-    prioritized: new Set([...state.get('prioritized')].filter(t=>_validTitles.has(t))),
-  });
-  // El banner se decide acá y no en cada tab: `_activeFestId` acaba de quedar
-  // fijado, y este es el único momento en que la respuesta puede cambiar.
-  _pintarBannerRevision();
-  _sincronizarBotonPrensa();  // el botón solo existe si el festival trae pases
-
-  // ── Pase de `past` sobre la tira de días ──────────────────────────────────
-  // AHORA, no antes: dayFullyPassed necesita el calendario (FESTIVAL_DATES) y las
-  // funciones (FILMS) de ESTE festival, y las dos cosas acaban de publicarse en
-  // el batchUpdate de arriba. Hecho en el DOM build, leía los del festival
-  // anterior. Un solo dueño de la verdad — la función de dominio — evaluado
-  // cuando la verdad existe. Gate: validate.py [calendario-entero].
-  document.querySelectorAll('.dtab[data-day]').forEach(b=>{
-    if(b.dataset.day!=='all') b.classList.toggle('past', dayFullyPassed(b.dataset.day));
-  });
-
-  // ► SYNC DEL PLAN CONTRA EL CATÁLOGO ───────────────────────────────
-  // El hydrate de savedAgenda (BATCH 2) corre ANTES de que exista FILMS, así
-  // que trae la copia congelada tal cual se guardó. Acá, con el catálogo ya
-  // sellado (slots + avisos), cada entrada se re-deriva de su función viva:
-  // el plan guarda la ELECCIÓN (título+día+hora), el catálogo manda el resto.
-  // Solo persiste en LOCAL: es una corrección derivada e idempotente — subirla
-  // a la nube crearía ping-pong entre dispositivos que se normalizan solos.
-  if(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length){
-    state.update('savedAgenda', a=>({...a, schedule: syncScheduleWithCatalog(a.schedule, _newFilms)}));
-    storage.setSavedAgenda(state.get('savedAgenda'));
-  }
+  // ► BATCH 3 — publicación del catálogo (dueño único: publicarCatalogo) ────
+  publicarCatalogo(id, cfg);
 
   // ► CIUDAD RECORDADA (festivales multiciudad) ──────────────────────────────
   // La ciudad es CONTEXTO, no un filtro más: quien está en Quibdó sigue en Quibdó
