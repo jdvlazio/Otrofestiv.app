@@ -482,9 +482,11 @@ de programa doble nunca tipografía así.
 1. **Un bloque tipográfico por obra**, todos al **mismo cuerpo** — el menor de
    los ajustes individuales, tope **16**. Una obra corta no puede gritar más que
    su vecina.
-2. **1u exacto** entre bloques. El « + » vive **en ese gap**, a **0,5u**, al
+2. **1u exacto** entre bloques. El « + » vive **en ese gap**, a **0,6u**, al
    margen izquierdo como todo el sistema, en el **color de la sección**, y
-   ópticamente centrado en el aire (no apoyado en su borde).
+   ópticamente centrado en el aire (no apoyado en su borde). Subió de 0,5u a
+   0,6u (Juan, 24 ago): a 0,5u quedaba casi un punto y leía como suciedad antes
+   que como el signo que une dos obras.
 3. La pila **crece hacia arriba** desde la misma base que cualquier título
    (§6.0): su última línea se apoya donde se apoyaba el título de una sola obra.
 4. **Frontera 2–3 obras** — la misma de la forma C / Escalera. Con **4 o más** se

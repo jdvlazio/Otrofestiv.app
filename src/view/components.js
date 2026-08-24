@@ -429,7 +429,7 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma}){
   // Retícula (medida con Juan sobre grid y rulers, no a ojo):
   //  · todas las obras al MISMO cuerpo — hermanas iguales: el menor de los
   //    ajustes individuales. Una obra corta no puede gritar más que su vecina.
-  //  · 1u exacto entre bloques; el «+» vive EN ese gap, a 0,5u, al margen
+  //  · 1u exacto entre bloques; el «+» vive EN ese gap, a 0,6u, al margen
   //    izquierdo como todo el sistema, en el color de la sección.
   //  · la pila crece hacia arriba desde la misma base que el título de §6.0 —
   //    no inventa anclas nuevas.
@@ -467,9 +467,11 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma}){
       f.lines.forEach(l=>{ _y+=_lh;
         _partes.push(_lineaSVG(l,{x:M, y:_y, fs:_fs, ls:_fs*-0.02, fill:'#F0EDE8', boxW:CW, upper:false})); });
       if(i<_re.length-1){
-        // el «+» centrado en el gap: 0,5u, apoyado en su tercio para ópticamente
-        // caer en el medio del aire, no en su borde superior.
-        const _fsMas=0.5*U;
+        // el «+» centrado en el gap: 0,6u, apoyado en su tercio para ópticamente
+        // caer en el medio del aire, no en su borde superior. Subió de 0,5u a
+        // 0,6u (Juan, 24 ago): a 0,5u quedaba casi un punto — leía como suciedad
+        // antes que como el signo que une dos obras.
+        const _fsMas=0.6*U;
         _partes.push(`<text x="${round(M)}" y="${round(_y+GAP*0.5+_fsMas*0.35)}" font-family="${FONT}" font-size="${round(_fsMas)}" font-weight="800" fill="${accent}">+</text>`);
         _y+=GAP;
       }
