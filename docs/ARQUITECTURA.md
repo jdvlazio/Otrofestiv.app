@@ -13,6 +13,11 @@
 ├── sw.js                       ← Service Worker (CACHE_NAME/BUILD stampeado por bump-version.js)
 ├── manifest.json               ← PWA manifest
 ├── version.json                ← Build timestamp (android+ios) — sincronizado por bump-version.js
+│   Los 4 canales que lo leen (cold start, visibilitychange, online, poll de
+│   10 min con toast) viven en src/main.js FUERA del guard de service worker:
+│   el wrapper iOS (WKWebView sin WKAppBoundDomains) no tiene esa API, y con
+│   los canales presos del guard quedaba sin ningún mecanismo de update
+│   (bug del 24 ago 2026). Guardián: [update-canales-sin-sw] + test T102.
 ├── src/                        ← App modular ESM (Fase 8). Mapa detallado de módulos en §16.2
 │   ├── main.js                 ← Bootstrap + STATE/VIEWSTATE bridge + ACTION_REGISTRY; importa el resto
 │   ├── config.js               ← FESTIVAL_CONFIG · VENUES · NOTICES · taxonomía/colores de sección + mergeFestivalSections()
