@@ -382,13 +382,29 @@ export function renderPeliculaViewHTML(state){
   const {FILMS, watched, watchlist} = state.snapshot();
   const _dayFilms = activeDay==='all' ? FILMS : FILMS.filter(f=>f.day===activeDay);
   const titleMap={};
+  // El REPRESENTANTE de cada obra —el que fija su posición en el grid— es su
+  // función más temprana, pero IGNORANDO los pases de prensa. Sin esto, activar
+  // Prensa e Industria reordenaba el catálogo sin añadirle una sola tarjeta:
+  // ninguna obra existe solo en prensa (las 226 tienen función pública), y los
+  // pases son mucho más tempranos que las funciones públicas —en TIFF prensa
+  // arranca con 61 el 10 SEP contra 14 públicas—, así que el pase pasaba a ser
+  // el más temprano y la obra saltaba de sitio. Mismas tarjetas, otro orden:
+  // confuso justo cuando el usuario busca ver QUÉ SE AÑADIÓ. Lo levantó Juan.
+  //
+  // El grid es un catálogo de OBRAS; el interruptor filtra FUNCIONES. Que la
+  // obra se ancle a su función pública mantiene el catálogo quieto, y las
+  // funciones añadidas se ven donde son la unidad: la vista Lista.
+  const _rank=f=>(f.audience==='press'?1:0);   // público primero, siempre
+  const _min=f=>(f.day_order||0)*1440+toMin(f.time||'00:00');
   _dayFilms.forEach(f=>{
     if(!titleMap[f.title]){titleMap[f.title]={film:f,screenings:[]};}
     else{
       const cur=titleMap[f.title].film;
-      const curMin=(cur.day_order||0)*1440+toMin(cur.time||'00:00');
-      const newMin=(f.day_order||0)*1440+toMin(f.time||'00:00');
-      if(newMin<curMin) titleMap[f.title].film=f;
+      // Una pública SIEMPRE gana a un pase de prensa; entre iguales, la más
+      // temprana. Si la obra solo tuviera pases (hoy no pasa en TIFF), el
+      // primero que llegue sigue siendo su representante y nada se rompe.
+      const dr=_rank(f)-_rank(cur);
+      if(dr<0||(dr===0&&_min(f)<_min(cur))) titleMap[f.title].film=f;
     }
     titleMap[f.title].screenings.push(f);
   });

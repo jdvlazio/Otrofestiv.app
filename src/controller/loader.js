@@ -690,6 +690,34 @@ export function togglePressScreenings(){
   const _vis = _filtrarPorAudiencia(cfg._todasLasFunciones||[]);
   state.batchUpdate({ FILMS: _vis });
   _sincronizarBotonPrensa();
+
+  // ── AL ENCENDER, LLEVAR A DONDE SE VE LO AÑADIDO ─────────────────────────
+  // El grid de Explorar es un catálogo de OBRAS: una tarjeta por obra, y
+  // ninguna obra existe solo en prensa. Ahí el interruptor no puede añadir
+  // NADA — antes solo reordenaba, y ahora (con el representante anclado a lo
+  // público) no se mueve. Las funciones añadidas son visibles donde la unidad
+  // es la función: la vista Lista, que además exige un día concreto.
+  //
+  // Así que al ENCENDER desde una vista que no puede mostrarlas, se salta a
+  // Lista y, si estábamos en «todos los días», al primer día CON pases. Al
+  // apagar no se devuelve a nadie a ningún sitio: quedarse donde uno está es
+  // menos sorprendente que un segundo salto.
+  if(nuevo){
+    const _conPrensa = new Set(_vis.filter(f=>f.audience==='press').map(f=>f.day));
+    if(_conPrensa.size && (programaViewMode!=='list' || activeDay==='all')){
+      if(activeDay==='all' || !_conPrensa.has(activeDay)){
+        const _d = (cfg.dayKeys||[]).find(d=>_conPrensa.has(d));
+        if(_d){
+          activeDay = _d;
+          document.querySelectorAll('.dtab').forEach(t=>t.classList.toggle('on', t.dataset.day===_d));
+          _syncPmodeTabs();
+        }
+      }
+      setProgramaView('list');   // ya re-renderiza y sube al tope
+      _updateProgramaActiveFilter();
+      return;
+    }
+  }
   _updateProgramaActiveFilter();
   _renderProgramaContent();
 }
