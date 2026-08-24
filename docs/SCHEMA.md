@@ -262,7 +262,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `is_free` | boolean | — | 8 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
 | `requires_registration` | boolean | — | 6 fest |  |
 | `registration_url` | string | `^https://` | 2 fest |  |
-| `audience` | string | `press` | — | Solo cuando la función NO es para el público general. Ausente = público (el caso normal, no se declara). «press» = pase de prensa e industria: la app los OCULTA salvo que el usuario active el filtro. TIFF 2026 trae 247 (audienceType=Press & Market en su endpoint). |
+| `audience` | string | `press` | 1 fest | Solo cuando la función NO es para el público general. Ausente = público (el caso normal, no se declara). «press» = pase de prensa e industria: la app los OCULTA salvo que el usuario active el filtro. TIFF 2026 trae 247 (audienceType=Press & Market en su endpoint). |
 
 ### Todo lo demás
 
