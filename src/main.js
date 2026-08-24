@@ -479,7 +479,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608240907';
+const BUILD_VERSION='202608241030';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1602,7 +1602,7 @@ if('serviceWorker' in navigator){
 
   // ── Función de check compartida por cold-start y visibilitychange ─────
   // Extrae la lógica para reutilizarla en ambos triggers sin duplicar código.
-  function _checkVersionJson(){
+  function _checkVersionJson(opts){
     fetch('/version.json', {cache:'no-store'})
       .then(function(r){ return r.json(); })
       .then(function(v){
@@ -1626,13 +1626,35 @@ if('serviceWorker' in navigator){
         // bypassear la caché HTTP de WKWebView que causaba el stuck en iOS.
         // Guard de loop: si ya estamos en ?v=serverBuild, no re-navegar (el
         // sub-recurso pudo quedar en caché) — se reintenta en el próximo cold-start.
-        if(!_reloading && location.href.indexOf('v=' + serverBuild) === -1){
+        if(location.href.indexOf('v=' + serverBuild) !== -1) return;
+        if(opts && opts.offer && !document.getElementById('otrofestiv-splash')){
+          // MODO OFRECER (canal #4, la app VISIBLE y en uso). No se recarga bajo
+          // los dedos del usuario: es la doctrina de T97 —lo que estás mirando no
+          // cambia solo— aplicada a la app entera. Se ofrece con el toast de
+          // acción que ya existe; si lo ignora, el próximo poll re-ofrece y la
+          // vuelta de background lo aplica sola, como siempre.
+          // En el SPLASH sí se recarga en silencio: vuelve al mismo splash con el
+          // festival recordado — indistinguible, y no hay trabajo que interrumpir.
+          _offerUpdate(serverBuild);
+          return;
+        }
+        if(!_reloading){
           _reloading = true;
           location.href = location.href.split('?')[0].split('#')[0] + '?v=' + serverBuild;
         }
         // NO se escribe orf_build aquí: el bundle nuevo aún no cargó.
       })
       .catch(function(){});
+  }
+
+  var _lastOffered = '';
+  function _offerUpdate(serverBuild){
+    if(_lastOffered === serverBuild) return; // un toast por build por ciclo de polls
+    _lastOffered = serverBuild;
+    showActionToast(t('update_disponible'), t('update_cta'), function(){
+      _reloading = true;
+      location.href = location.href.split('?')[0].split('#')[0] + '?v=' + serverBuild;
+    }, 12000);
   }
 
   // ── Canal version.json #1: cold start ─────────────────────────────────
@@ -1666,6 +1688,25 @@ if('serviceWorker' in navigator){
   // mismo re-push que ya dispara el boot (loader.js); _checkVersionJson va con
   // no-store y es no-op si nada cambió. El re-push de boot permanece como red
   // de seguridad — este listener no lo reemplaza.
+  // ── Canal version.json #4: poll en PRIMER PLANO ──────────────────────────
+  // El hueco que los otros tres no cubren (Juan, 24 ago 2026): quien deja la app
+  // ABIERTA Y VISIBLE durante horas no dispara cold-start, ni visibilitychange,
+  // ni online. Durante un festival es el caso normal — la app en la mano entre
+  // sede y sede. Sin esto, un cambio de sede u horario sellado en NOTICES no le
+  // llega hasta que suelta el teléfono.
+  // Cada 10 min y SOLO visible: en background, visibilitychange ya hace el
+  // trabajo al volver, y sondear de fondo es gastar batería en algo que otro
+  // canal cubre. `?updPoll=` acorta el ciclo en dev/tests (precedente: simTime).
+  var _POLL_MS = (function(){
+    var m = location.search.match(/[?&]updPoll=(\d+)/);
+    return m ? Math.max(300, +m[1]) : 10 * 60 * 1000;
+  })();
+  setInterval(function(){
+    if(document.visibilityState === 'visible' && !_reloading){
+      _checkVersionJson({offer:true});
+    }
+  }, _POLL_MS);
+
   window.addEventListener('online', function(){
     if(storage.getCloudDirty()) _cloudSave();
     if(!_reloading){
