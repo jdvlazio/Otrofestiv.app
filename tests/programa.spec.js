@@ -2398,3 +2398,70 @@ test('T102 — sin API de service worker, el poll igual ofrece el build nuevo', 
   expect(t1.accion, 'sin SW, el canal #4 igual ofrece la actualización').toBe(true);
 });
 });
+
+test.describe('T103/T104 — capa 2: los datos se refrescan en caliente (sin SW: page.route no ve fetches vía SW)', () => {
+  test.use({ serviceWorkers: 'block' });
+
+test('T103 — un cambio de sede aterriza EN SILENCIO, en su casilla, sin scroll ni toast', async ({ page }) => {
+  test.setTimeout(90000);
+  // Regla 1 de la capa 2 (aprobada con respaldo: marcadores deportivos /
+  // tableros de aeropuerto): un VALOR que cambia dentro de su casilla se aplica
+  // solo — el usuario espera ese dato vivo. Ni pill, ni recarga, ni salto.
+  let mutar = false;
+  await page.route('**/festivals/cineautopsia-2026.json*', async (route) => {
+    if (!mutar) return route.continue();
+    const res = await route.fetch();
+    const j = await res.json();
+    // A la OTRA sede real del día: la lista muestra nombres cortos («ASAB»,
+    // «U. Nacional»), así que el cambio es visible y el venue existe en el mapa.
+    j.films.forEach(f => { if (f.title === 'Mediometrajes Destacados del Mundo Entero 1') f.venue = 'Universidad Nacional - Bogotá'; });
+    await route.fulfill({ contentType: 'application/json', body: JSON.stringify(j) });
+  });
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00', { query: 'updPoll=400' });
+  await expect(page.locator('#programa-list')).toContainText('ASAB', { timeout: 8000 });
+  const urlAntes = page.url();
+  const scrollAntes = await page.evaluate(() => window.scrollY);
+
+  mutar = true;
+  // La casilla de Mediometrajes 1 pasa de «ASAB» a «U. Nacional» — sola.
+  await expect(page.locator('#programa-list')).not.toContainText('ASAB', { timeout: 8000 });
+  await expect(page.locator('#programa-list')).toContainText('Mediometrajes Destacados del Mundo Entero 1');
+  expect(page.url(), 'sin recarga: el documento es el mismo').toBe(urlAntes);
+  expect(await page.evaluate(() => window.scrollY), 'sin salto de scroll').toBe(scrollAntes);
+  const toast = await page.evaluate(() => document.getElementById('prio-toast')?.classList.contains('show') || false);
+  expect(toast, 'regla 1 es silenciosa: un valor fresco no es una noticia').toBe(false);
+  await page.unrouteAll({ behavior: 'ignoreErrors' });
+});
+
+test('T104 — una función nueva NO se inyecta bajo los dedos: se ofrece, y el tap la aplica', async ({ page }) => {
+  test.setTimeout(90000);
+  // Regla 2 (CLS / patrón «N posts nuevos»): estructura en pantalla visible se
+  // OFRECE. La lista queda intacta hasta el tap.
+  let mutar = false;
+  await page.route('**/festivals/cineautopsia-2026.json*', async (route) => {
+    if (!mutar) return route.continue();
+    const res = await route.fetch();
+    const j = await res.json();
+    j.films.push({ title: 'Función Sorpresa de Medianoche', type: 'film', section: '🛰️ Apertura',
+      duration: '80 min', day: '2026-08-25', time: '23:00',
+      day_order: 4, venue: 'Universidad Nacional - Bogotá' });
+    await route.fulfill({ contentType: 'application/json', body: JSON.stringify(j) });
+  });
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00', { query: 'updPoll=400' });
+  await expect(page.locator('#programa-list')).toContainText('Mediometrajes', { timeout: 8000 });
+
+  mutar = true;
+  // Aparece el pill…
+  await expect(page.locator('#prio-toast .toast-action-btn')).toBeVisible({ timeout: 8000 });
+  // …y la lista sigue INTACTA (nada se inyectó bajo los dedos).
+  await expect(page.locator('#programa-list')).not.toContainText('Función Sorpresa');
+  // El tap aplica: ahora sí, la función nueva existe en la lista.
+  // Testigo de no-recarga: una recarga lo borraría del window.
+  await page.evaluate(() => { window.__vivoT104 = 1; });
+  await page.click('#prio-toast .toast-action-btn');
+  await expect(page.locator('#programa-list')).toContainText('Función Sorpresa', { timeout: 8000 });
+  expect(await page.evaluate(() => window.__vivoT104),
+    'aplicar estructura no recarga el documento (el testigo sobrevive)').toBe(1);
+  await page.unrouteAll({ behavior: 'ignoreErrors' });
+});
+});

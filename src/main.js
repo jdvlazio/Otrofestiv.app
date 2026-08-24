@@ -131,6 +131,7 @@ import { initWatchBridge } from './controller/watch-bridge.js';
 import {
   loadFestival, dismissSplash, backToSplash, togglePressScreenings, _sincronizarBotonPrensa,
 } from './controller/loader.js';
+import { refrescarDatosFestival } from './controller/live-refresh.js';
 
 // ── Step 7e: controller/festival.js ────────────────────────────────────────────
 import {
@@ -479,7 +480,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608241651';
+const BUILD_VERSION='202608241751';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1696,6 +1697,7 @@ document.addEventListener('visibilitychange', function(){
   if(document.visibilityState === 'visible' && !_reloading){
     _checkVersionJson();
     _swRecheck();
+    refrescarDatosFestival();   // capa 2: los DATOS también, sin recargar
   }
 });
 
@@ -1714,6 +1716,7 @@ window.addEventListener('online', function(){
   if(!_reloading){
     _checkVersionJson();
     _swRecheck();
+    refrescarDatosFestival();
   }
 });
 
@@ -1733,6 +1736,7 @@ var _POLL_MS = (function(){
 setInterval(function(){
   if(document.visibilityState === 'visible' && !_reloading){
     _checkVersionJson({offer:true});
+    refrescarDatosFestival();   // capa 2 — mismo pulso, otra carga: el catálogo
   }
 }, _POLL_MS);
 

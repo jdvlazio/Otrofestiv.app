@@ -18,6 +18,13 @@
 │   el wrapper iOS (WKWebView sin WKAppBoundDomains) no tiene esa API, y con
 │   los canales presos del guard quedaba sin ningún mecanismo de update
 │   (bug del 24 ago 2026). Guardián: [update-canales-sin-sw] + test T102.
+│   CAPA 2 — datos en caliente (live-refresh.js): en los mismos ticks, el
+│   catálogo del festival activo se re-fetchea y aplica SIN recargar, por
+│   tres reglas (aprobadas con respaldo — web.dev CLS, NN/g, pill de X):
+│   valores → en silencio; estructura visible → se OFRECE (pill), calendario
+│   siempre; cambios de TU plan → aviso con el hecho (T97). Dueños únicos
+│   compartidos con loadFestival: _ingerirDatosFestival + publicarCatalogo;
+│   el árbitro es domain/refresh-diff.js (puro). Tests: T103/T104 + unit.
 ├── src/                        ← App modular ESM (Fase 8). Mapa detallado de módulos en §16.2
 │   ├── main.js                 ← Bootstrap + STATE/VIEWSTATE bridge + ACTION_REGISTRY; importa el resto
 │   ├── config.js               ← FESTIVAL_CONFIG · VENUES · NOTICES · taxonomía/colores de sección + mergeFestivalSections()
