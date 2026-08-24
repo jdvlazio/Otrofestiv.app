@@ -2313,6 +2313,11 @@ test('T100 — un día hueco del festival no manda «Hoy» a un día que ya pas�
   // Y dice la verdad: sin filtros puestos, el vacío es del FESTIVAL, no del filtro.
   expect(hoy.motivo, 'el vacío no culpa a un filtro que nadie puso')
     .not.toMatch(/filtro|filter/i);
+  // Ni ancla el mensaje a HOY: el vacío se pinta para el día que MIRÁS, y
+  // Tercer Tiempo tiene dos días vacíos que no son hoy (14 y 19 jul). Decir
+  // «hoy» ahí sería la misma afirmación sin comprobar (Juan, 24 ago 2026).
+  expect(hoy.motivo, 'el vacío no dice «hoy»: vale para cualquier día')
+    .not.toMatch(/\bhoy\b|\btoday\b|\bhoje\b/i);
 
   const manana = await leer('Mañana|Tomorrow');
   expect(manana.pasado, '«Mañana» tampoco abre un día pasado').toBe(false);
