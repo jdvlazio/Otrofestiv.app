@@ -153,6 +153,28 @@ const DAY_ORDER_DEUDA = {
   'fantasofest-2026.json': 11,
 };
 
+// ── Vocabulario de géneros ───────────────────────────────────────────────────
+// Se LEE de _GENRE_EN (src/controller/sheets-controller.js), que es el dueño:
+// la tabla que la app usa para traducir géneros, con los nombres canónicos de
+// TMDB. Copiar la lista acá crearía una segunda verdad que envejece sola.
+// Si algún día _GENRE_EN se mueve, este parseo falla RUIDOSO (lista vacía →
+// el gate avisa) en vez de dar verde sobre nada.
+const GENEROS = (() => {
+  try {
+    const src = fs.readFileSync(path.join(__dirname, '..', 'src', 'controller', 'sheets-controller.js'), 'utf8');
+    const blk = src.match(/const _GENRE_EN = \{([\s\S]*?)\n\};/);
+    if (!blk) return new Set();
+    const v = new Set();
+    for (const m of blk[1].matchAll(/'([^']+)'\s*:\s*'([^']+)'/g)) {
+      v.add(m[1].toLowerCase()); v.add(m[2].toLowerCase());
+    }
+    // Dos que la app usa como género y no viven en la tabla de traducción
+    // porque se escriben igual en los dos idiomas.
+    v.add('ficción'); v.add('fiction');
+    return v;
+  } catch { return new Set(); }
+})();
+
 // ── Validar un festival ──────────────────────────────────────────────────────
 function validateFestival(fname, data) {
   const errors = [];
@@ -185,6 +207,41 @@ function validateFestival(fname, data) {
   // GATE: config{} en el JSON es un error bloqueante desde el pipeline v2.
   if (data.config && Object.keys(data.config).length > 0) {
     errors.push('GATE BLOQUEANTE: config{} presente en el JSON — mover a FESTIVAL_CONFIG en src/config.js y eliminar este bloque');
+  }
+
+  // GATE [genero-unico]: UNA obra, UN género — y de los comunes.
+  //
+  // Juan, 24 ago 2026: «No me gusta que incluyamos varios géneros en la card.
+  // Solo el primero, el principal». Y después, viendo el resultado: «tags no,
+  // necesitamos indicar un género, dentro de los más comunes».
+  //
+  // TIFF traía 859 de 878 obras (97%) con varios, y no eran subgéneros sino
+  // ETIQUETAS DE PROGRAMACIÓN del festival mezcladas con el género en el mismo
+  // campo: «Asian Cultures, Drama, Directed by Women, Coming of Age». Tomar el
+  // primero a secas habría publicado «Asian Cultures» donde va «Drama», en 271
+  // fichas.
+  //
+  // LA REGLA: el PRIMER género de la fuente QUE SEA UN GÉNERO. El orden de la
+  // fuente manda; lo que no es género se salta. Si no hay ninguno, el campo
+  // queda VACÍO — inventarle un género a una obra es peor que no decir nada.
+  //
+  // El vocabulario NO se define acá: se LEE de _GENRE_EN (sheets-controller.js),
+  // que es el que la app ya usa para traducir géneros y trae los nombres
+  // canónicos de TMDB. Duplicarlo sería crear una segunda verdad que se
+  // desincroniza — el patrón que ya nos costó el calendario partido.
+  for (const f of films) {
+    const g = f.genre;
+    if (typeof g !== 'string' || !g.trim()) continue;
+    if (/[,+]/.test(g)) {
+      errors.push(`GATE BLOQUEANTE [genero-unico]: «${f.title}» declara varios géneros `
+        + `(«${g}»). Va UNO: el primero de la fuente que sea un género de verdad `
+        + `(vocabulario: _GENRE_EN). Si ninguno lo es, dejar el campo vacío.`);
+      break;
+    }
+    if (!GENEROS.has(g.trim().toLowerCase())) {
+      warnings.push(`[genero-unico] «${f.title}»: «${g}» no está en el vocabulario de géneros `
+        + `(_GENRE_EN). Puede ser una etiqueta del festival colada como género.`);
+    }
   }
 
   // GATE [poster-map-legacy]: el modelo dual posters{}/customPosters{} murió en Fase A.1.

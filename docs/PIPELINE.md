@@ -1222,3 +1222,43 @@ tiene huecos. CineAutopsia fue la excepción.
 `dayKeys`, `days`, `dayShort`, `dayShort_en`, `dayLong` y `festivalDates`. El
 guardián ignora los festivales legacy con rótulos en vez de fechas ISO (Leviza).
 
+
+### `[genero-unico]` — una obra, un género, y de los comunes
+
+**Regla (Juan, 24 ago 2026):** cada obra declara **un solo género**: el
+**primero de la fuente que sea un género de verdad**. El orden de la fuente
+manda; lo que no es un género se salta. Si no hay ninguno, el campo queda
+**vacío** — inventarle un género a una obra es peor que no decir nada.
+
+**Por qué.** TIFF traía **859 de 878 obras (97%)** con varios, y no eran
+subgéneros: eran **etiquetas de programación del festival** mezcladas con el
+género en el mismo campo.
+
+```
+Asian Cultures, Drama, Directed by Women, Coming of Age
+Documentary, Aboriginal + Indigenous, Crime, Biography + History
+```
+
+Tomar «el primero» a secas habría publicado **«Asian Cultures» donde va
+«Drama»**, en 271 fichas. No era solo TIFF: Tribeca 56, Olhar 19, FICDEH 29.
+
+**El vocabulario no se inventa ni se copia.** Es `_GENRE_EN`
+(`src/controller/sheets-controller.js`), la tabla que la app ya usa para
+traducir géneros, con los nombres canónicos de TMDB. El validador la **lee** de
+ahí: duplicar la lista crearía una segunda verdad que envejece sola.
+
+**Dos formas de escribir que hay que reconocer al extraer**, encontradas
+midiendo — el género es la **cabeza** del compuesto:
+
+| fuente | género |
+|---|---|
+| `Experimental + Avant-Garde` (TIFF compone con `+`) | **Experimental** |
+| `Comedia dramática` (el español compone con adjetivo) | **Comedia** |
+| `Action + Adventure` | **Action** |
+
+Sin reconocerlas, 28 obras se quedaban sin género **teniendo uno**.
+
+**El gate:** varios géneros → **error bloqueante**. Un género fuera del
+vocabulario → **warning**, porque puede ser una etiqueta colada… o un género
+legítimo que falte en `_GENRE_EN`, y esa decisión es de quien monta.
+
