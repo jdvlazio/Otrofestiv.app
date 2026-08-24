@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608241119">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608241119">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608241247">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608241247">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1160,6 +1160,10 @@ background:radial-gradient(circle at 100% 100%,rgba(245,158,11,.16),rgba(245,158
    del borde: a 52px no se lee como imagen, se lee como calor. */
 .poster-ed .ed-img-mid{top:31.25%;z-index:2}
 .poster-ed .ed-halo{position:absolute;left:0;right:0;top:68.75%;bottom:0;overflow:hidden;z-index:1;pointer-events:none}
+/* El halo del póster GRANDE ancla al borde de SU campo (3,5u+4,5u=8u → 66,67%),
+   no al de la miniatura (68,75%): con el top de la mini quedaba una costura de
+   2,08% de negro entre still y halo — la «línea negra» que vio Juan. */
+.poster-ed .ed-halo-full{top:66.67%}
 .poster-ed .ed-halo img{position:absolute;left:0;bottom:0;width:100%;height:260%;object-fit:cover;
 filter:blur(10px) saturate(1.15);opacity:.55;
 -webkit-mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100%);
@@ -1170,8 +1174,15 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    uno más largo, más. Ahora su techo es la línea de retícula que cierra el campo
    (3,5u + 4,5u = 8u → 66,67%) más media unidad de aire, y lo que no entra se
    corta: el título cede, la imagen no. */
-.poster-ed .ed-foot{position:absolute;left:0;right:0;top:70.83%;bottom:6.25%;padding:0 9.4%;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.poster-ed .ed-foot{position:absolute;left:0;right:0;top:70.83%;bottom:6.25%;padding:0 9.4%;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;z-index:2}
 .poster-ed .ed-title{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.2cqi;font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white);line-height:1.2;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+/* La firma de curaduría bajo el título (regla de carga: solo con título simple).
+   Itálica, tamaño del dato: es una firma, no un segundo título. */
+/* 4.2cqi y SIN nowrap: a 5cqi con nowrap, «The Cinema of José Luis Torres
+   Leiva» moría en «…Tor…» — y la promesa de esta regla es que la firma nunca se
+   corta. Puede partir en dos líneas; el techo del pie (overflow del ed-foot) es
+   el límite duro, y el título cede antes que la firma desaparezca. */
+.poster-ed .ed-firma{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:4.2cqi;font-style:italic;font-weight:var(--w-semi);color:var(--gray2);margin-top:1.5%;line-height:1.3}
 .poster-ed .ed-dato{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:5cqi;font-weight:var(--w-semi);color:var(--gray);margin-top:2%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 /* Anatomía A3 (Fase C): blur-fill de fondo + still 16:9 al ras del banner (sin
    recortar) + scrim de título opcional. El blur es decorativo; el still es el 16:9. */
@@ -3555,7 +3566,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608241119";
+    s.src="/src/main.js?v=202608241247";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

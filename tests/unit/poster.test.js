@@ -245,14 +245,22 @@ test('editorialFrame: escapa body, header y data-title (sin & crudo)', () => {
 // Juan, 19 ago: los cortos dentro de un programa se veían huecos. El pie se
 // llena con la obra desenfocada, pero solo donde hay hueco — en la tapa (con
 // sección y título) ese espacio ya está ocupado y el halo sería decoración.
-test('editorialFrame: miniatura lleva halo + campo centrado; la tapa no', () => {
+test('editorialFrame: la miniatura centra el campo; el halo va en AMBAS', () => {
+  // Este test decía «la tapa NO lleva halo: el hueco lo llenan título y dato».
+  // Esa premisa murió el 24 ago 2026: Juan la refutó EN PANTALLA — el still
+  // termina en 66,67%, el título arranca en 86,4%, y entre medio hay 23,6px de
+  // negro muerto en una card de 120. El halo llena ese vacío también en el
+  // póster grande, con su propia ancla (ed-halo-full, 66,67%) para no dejar la
+  // costura de 2,08% que dejaría el ancla de la miniatura.
   const mini = H.editorialFrame({ src: 'https://x/y.jpg', title: 'T' });        // sin header ni body
-  assert.ok(mini.includes('class="ed-halo"'), 'la miniatura lleva halo en el pie');
+  assert.ok(mini.includes('class="ed-halo"') && !mini.includes('ed-halo-full'),
+    'la miniatura conserva su halo con el ancla de siempre (68,75%)');
   assert.ok(mini.includes('ed-img ed-img-mid'), 'y el campo centrado');
 
   const tapa = H.editorialFrame({ header: 'Sec', body: 'Una obra', src: 'https://x/y.jpg', title: 'T' });
-  assert.ok(!tapa.includes('ed-halo'), 'la tapa NO lleva halo: el hueco lo llenan título y dato');
-  assert.ok(!tapa.includes('ed-img-mid'), 'ni centra el campo');
+  assert.ok(tapa.includes('ed-halo ed-halo-full'),
+    'el póster grande lleva halo anclado a SU campo — el vacío ya no es diseño');
+  assert.ok(!tapa.includes('ed-img-mid'), 'y no centra el campo');
 
   const sinSrc = H.editorialFrame({});
   assert.ok(!sinSrc.includes('ed-halo'), 'sin imagen no hay halo que dibujar');
@@ -362,4 +370,67 @@ test('_datoCompuesto — el pie cuenta las obras del « + », y deja en paz lo d
     '2 obras', 'compuesto sin duración: cuenta igual');
   assert.strictEqual(C._datoCompuesto('Sujo+2', '80 min'),
     '80 min', 'un «+» sin espacios es parte del nombre, no separador');
+});
+
+// ── Regla de carga + halo (24 ago 2026, notas de Juan sobre la revisión) ──────
+
+test('_seccionPartes — reconoce la firma estricta y respeta los puntos que no lo son', () => {
+  assert.deepStrictEqual(C._seccionPartes('La primavera llega para los que esperan. El cine de José Luis Torres Leiva'),
+    {rotulo:'La primavera llega para los que esperan', firma:'El cine de José Luis Torres Leiva'});
+  assert.deepStrictEqual(C._seccionPartes('La sutil materia. Sergio Navarro'),
+    {rotulo:'La sutil materia', firma:'Sergio Navarro'});
+  assert.deepStrictEqual(C._seccionPartes('Historia(s) del cine: Argentina. Curaduría de José Miccio'),
+    {rotulo:'Historia(s) del cine: Argentina', firma:'Curaduría de José Miccio'});
+  // el punto que NO es firma: «El espesor de las formas» no es un curador
+  assert.deepStrictEqual(C._seccionPartes('Programa 1. El espesor de las formas'),
+    {rotulo:'Programa 1. El espesor de las formas', firma:null});
+});
+
+test('Forma A — la firma va en itálica sobre el dato, y solo cuando se pasa', () => {
+  const con = decodeURIComponent(C._buildPosterV16({accent:'#E05252',
+    headerLabel:'La primavera llega para los que esperan',
+    title:'¿Qué historia es ésta y cuál es su final?', num:null, dato:'74 min',
+    firma:'El cine de José Luis Torres Leiva'}));
+  assert.ok(/font-style="italic"[^>]*>El cine de José Luis Torres Leiva</.test(con),
+    'la firma se pinta en itálica');
+  const sin = decodeURIComponent(C._buildPosterV16({accent:'#E05252',
+    headerLabel:'La primavera llega para los que esperan',
+    title:'A + B', num:null, dato:'2 obras · 74 min'}));
+  assert.ok(!/font-style="italic"/.test(sin), 'sin firma no hay itálica');
+});
+
+test('Forma A — regla de carga: la sección ya no pasa de 2 líneas', () => {
+  const svg = decodeURIComponent(C._buildPosterV16({accent:'#7F77DD',
+    headerLabel:'Spring comes for those who wait. The cinema of José Luis Torres Leiva',
+    title:'X', num:null, dato:''}));
+  const sec = [...svg.matchAll(/fill="#7F77DD"[^>]*>|<text(?=[^>]*fill="#7F77DD")/g)].length;
+  const lineasSec = [...svg.matchAll(/<text[^>]*fill="#7F77DD"/g)].length;
+  assert.ok(lineasSec <= 2, `sección en ${lineasSec} líneas (techo 2)`);
+});
+
+test('Forma B — el halo llena el vacío también en el póster grande', () => {
+  const grande = H.editorialFrame({header:'La primavera llega para los que esperan',
+    body:'Ver y escuchar', src:'/x.jpg', title:'Ver y escuchar', accent:'#E05252',
+    firma:'El cine de José Luis Torres Leiva'});
+  assert.ok(grande.includes('ed-halo ed-halo-full'), 'halo con ancla del campo grande');
+  assert.ok(grande.includes('class="ed-firma"'), 'la firma vive en el pie');
+  const mini = H.editorialFrame({src:'/x.jpg', title:'Corto'});
+  assert.ok(mini.includes('class="ed-halo"') && !mini.includes('ed-halo-full'),
+    'la miniatura conserva su ancla de siempre (68,75%)');
+});
+
+test('makeProgramPoster — el programa curado lleva el rótulo corto, sin firma', () => {
+  // Versión 1 de este test tenía aserciones decorativas (un «|| true» incluido)
+  // y la mutación «vuelve el rótulo completo» sobrevivía. Ahora se exige lo que
+  // importa: NINGÚN texto del póster contiene la firma, y el rótulo no muere
+  // en elipsis.
+  const st = { snapshot: () => ({ FILMS: [], _lang: 'es' }) };
+  const svg = decodeURIComponent(C.makeProgramPoster(st,
+    'Sobre cosas que me han pasado + Verano', '110 min',
+    '🌷 La primavera llega para los que esperan. El cine de José Luis Torres Leiva'));
+  const textos = [...svg.matchAll(/<text[^>]*>([^<]+)<\/text>/g)].map(m => m[1]).join(' | ');
+  assert.ok(/LA PRIMAVERA/.test(textos), 'el rótulo está: ' + textos);
+  assert.ok(!/CINE DE|CINEMA OF|TORRES LEIVA/i.test(textos),
+    'la firma NO aparece en ningún texto del programa (pila → cede): ' + textos);
+  assert.ok(!/…/.test(textos), 'ningún texto muere en elipsis: ' + textos);
 });
