@@ -265,11 +265,12 @@ export const PALMARES=[
   // discriminación». Ahora `_palmBuscar` mira también dentro de los programas y
   // el clic abre la ficha del CORTO (openCortoSheet), no la de su envase.
   //
-  // DOS TÍTULOS que el festival escribe distinto en su programa y en su
-  // palmarés: mostramos el DEL PROGRAMA, que es el que el usuario vio en la
-  // app. En los posts de premios fueron «How Deep Is Your Love» (programa:
-  // «¿Cuán profundo es tu amor?») y «No als poalets» (programa: «Dígale no a
-  // los poalets»).
+  // «No als poalets» ya no necesita reconciliación: el catálogo lo muestra con
+  // su título original desde el 24 ago, cuando se aplicó a FINCA la regla de
+  // QAFF (el original manda). Queda UNO: el palmarés dice «How Deep Is Your
+  // Love» y el catálogo «¿Cuán profundo es tu amor?» — ahí mostramos el del
+  // catálogo, que es el que el usuario vio, hasta que se decida ese caso: es
+  // el único de FINCA sin original declarado en nuestros datos.
   //
   // EL PREMIO EXACTO, en `premio`. La primera versión metió el Segundo Premio
   // como una segunda `ganadora` y dio a entender que FINCA premió a dos obras
@@ -295,7 +296,7 @@ export const PALMARES=[
   {fest:'finca2026', categoria:'Corto y Mediometrajes Internacionales', nivel:'ganadora',
    titulo:'Sobre Ruínas', autoria:'Carol Benjamin', obra:'Sobre Ruínas'},
   {fest:'finca2026', categoria:'Corto y Mediometrajes Internacionales', nivel:'mencion',
-   titulo:'Dígale no a los poalets', autoria:'Laura García Andreu', obra:'Dígale no a los poalets'},
+   titulo:'No als poalets', autoria:'Laura García Andreu', obra:'No als poalets'},
 
   {fest:'finca2026', categoria:'Documentales Latinoamericanos', nivel:'ganadora', premio:'Primer Premio',
    titulo:'Karuara, la gente del río', autoria:'Miguel Araoz Cartagena, Stephanie Boyd', obra:'Karuara, la gente del río'},

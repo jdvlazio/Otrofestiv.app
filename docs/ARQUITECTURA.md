@@ -259,6 +259,30 @@ Dos componentes canónicos reemplazan las ~20 clases ad-hoc de encabezados
 
 **Regla de uso:** ¿abre una lista? → `sec-hdr`. ¿Corona un bloque/sheet? → `ctx-eyebrow`.
 
+**El contrato de `sec-hdr` con su contenedor (24 ago 2026).** El full-bleed no es
+magia: se consigue con `margin-left/right: calc(-1*var(--sp-4))` para romper el
+padding del contenedor, repuesto como `padding: var(--sp-2) var(--sp-4)` propio.
+De ahí sale un requisito que hay que cumplir al usarlo:
+
+> **El contenedor de un `sec-hdr` DEBE aportar `var(--sp-4)` de padding lateral**
+> —él mismo o un ancestro—. Sin eso los márgenes negativos no compensan nada:
+> solo empujan la banda fuera del viewport.
+
+Y su corolario: si el contenedor da ese padding, **la tira o lista hermana NO
+debe repetirlo** (`padding: var(--sp-2) 0 var(--sp-1)`), o queda a 32px y se
+desalinea del icono de la banda.
+
+Lo pagó el palmarés: nació el 23 ago con un punto de inserción nuevo
+—`#palmares-slot`, un div sin una sola regla de CSS colgado del `body`— y su
+banda medía **422px en un viewport de 390**, con el icono cortado contra el
+borde. Los otros 23 `sec-hdr` de la app nunca lo notaron porque heredaron
+contextos que ya cumplían (`.poster-grid`, sheets, `.ag-summary`): cumplían la
+regla por copiar un sitio que funcionaba, no por conocerla.
+
+Al crear un contenedor NUEVO para un `sec-hdr`, medir. La comprobación son tres
+números en el navegador a 390px: la banda ocupa exactamente el ancho del
+viewport, el icono queda a 16px del borde, y `scrollWidth` no crece.
+
 **Cero divisores sueltos (decisión Juan, jul 2026):** la separación de secciones
 la hace la BANDA del `sec-hdr` (estilo C — reemplazó a la línea del estilo A ese
 mismo día, prototipo A/B/C con datos reales). Prohibidos los divisores huérfanos
