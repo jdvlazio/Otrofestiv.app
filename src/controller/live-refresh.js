@@ -74,7 +74,10 @@ export async function refrescarDatosFestival(){
       if (_ofrecido !== hash) {
         _ofrecido = hash;
         _pendiente = { id, data, calendario: cambio.calendario };
-        showActionToast(t('refresco_programacion'), t('update_cta'), _aplicarPendiente, 12000);
+        // CTA propia (auditoría UX Writer, 24 ago): «Actualizar» ya significa
+        // «recargar la app» en el toast de versión — dos acciones distintas no
+        // comparten etiqueta. Acá tocás y VES la programación nueva, en el lugar.
+        showActionToast(t('refresco_programacion'), t('refresco_cta'), _aplicarPendiente, 12000);
       }
       // El plan se avisa igual (regla 3): el hecho ya ocurrió en el festival,
       // ofrecer el re-render no lo pospone.
