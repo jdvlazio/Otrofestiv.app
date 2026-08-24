@@ -417,15 +417,75 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma}){
 
   // Título — anclado abajo, sobre el dato (y sobre la firma si la hay)
   const tTop=_firmaStr?firmaY-datoFS*1.6:(datoStr?datoY-datoFS*1.6:datoY);
-  const ttl=_fitLines(_tituloVacio?_datoCrudo:String(title||'').trim(),
-    {boxW:CW, boxH:2.4*U, maxLines:4, fsMax:2.4*U/1.2, fsMin:12, lhRatio:1.2, lsEm:-0.02, upper:false});
-  // fsMin=12 (≈8,4px en tarjeta) es SUELO DE LEGIBILIDAD: por debajo se recorta
-  // con elipsis en vez de encoger hasta lo ilegible. La sección usa un suelo más
-  // bajo a propósito — recortar el nombre del festival está prohibido.
-  const tBottom=tTop;                        // el bloque CRECE hacia arriba
-  const tStartY=tBottom-(ttl.lines.length-1)*ttl.lh;
-  const ttlText=ttl.lines.map((l,i)=>_lineaSVG(l,
-    {x:M, y:tStartY+i*ttl.lh, fs:ttl.fs, ls:ttl.fs*-0.02, fill:'#F0EDE8', boxW:CW, upper:false})).join('');
+  const _titulo=_tituloVacio?_datoCrudo:String(title||'').trim();
+  const _obras=_titulo.split(/\s\+\s/).map(x=>x.trim()).filter(Boolean);
+
+  // ── LA PILA (Juan, 24 ago 2026) ───────────────────────────────────────────
+  // «El + no es un título: es una pila de obras». Un compuesto llegaba como una
+  // frase y el motor lo partía donde caía: «La tempestá + No contéis con los
+  // dedos + Vampir Cuadecuc» rompía a mitad de un nombre y moría en elipsis.
+  // El cartel de un programa doble nunca tipografía así: apila las obras.
+  //
+  // Retícula (medida con Juan sobre grid y rulers, no a ojo):
+  //  · todas las obras al MISMO cuerpo — hermanas iguales: el menor de los
+  //    ajustes individuales. Una obra corta no puede gritar más que su vecina.
+  //  · 1u exacto entre bloques; el «+» vive EN ese gap, a 0,5u, al margen
+  //    izquierdo como todo el sistema, en el color de la sección.
+  //  · la pila crece hacia arriba desde la misma base que el título de §6.0 —
+  //    no inventa anclas nuevas.
+  //  · FRONTERA 2–3 obras, la misma de la forma C. Con 4+ el cuerpo caería a un
+  //    tamaño ilegible: se conserva la forma de siempre y el pie ya dice
+  //    «4 obras» (_datoCompuesto), que es la información que salva el caso.
+  const _esPila=_obras.length>=2&&_obras.length<=3;
+  let ttlText, ttl;
+  if(_esPila){
+    const GAP=U;
+    const PILA_FS_MAX=16;                    // tope de cuerpo de la pila (Juan)
+    // TECHO REAL, MEDIDO: la pila no vive en la caja de 2,4u del título — crece
+    // hacia arriba por aire vacío (la Forma A no tiene campo de imagen). Su
+    // único límite por arriba es el bloque de sección YA AJUSTADO, no una
+    // constante inventada: fondo de la sección + 0,5u de aire para descendentes.
+    const _techo=secY+(sec.lines.length-1)*sec.lh+0.5*U;
+    const _presupuesto=tTop-_techo;
+    // El techo NO se vigila con un lazo que encoge después: se le entrega al
+    // motor como la caja de cada obra. Cada una recibe su parte del presupuesto
+    // (descontados los gaps) y _fitLines ya no puede devolver algo que no quepa.
+    // Un lazo correctivo aparte era código muerto — _fitLines lo adelantaba
+    // siempre — y un guardián que nunca dispara no es de fiar.
+    const _boxCada=(_presupuesto-GAP*(_obras.length-1))/_obras.length;
+    const _ajusta=(fsMax)=>_obras.map(o=>_fitLines(o,
+      {boxW:CW, boxH:_boxCada, maxLines:2, fsMax, fsMin:9, lhRatio:1.2, lsEm:-0.02, upper:false}));
+    // Cuerpo común = el MENOR de los ajustes individuales: mandan las anchas.
+    // Con el menor, el re-ajuste de cada obra devuelve exactamente ese cuerpo —
+    // por eso ninguna línea necesita condensarse (textLength) al dibujarse.
+    const _fs=Math.min(PILA_FS_MAX, ...(_ajusta(PILA_FS_MAX).map(f=>f.fs)));
+    const _re=_ajusta(_fs), _lh=_fs*1.2;
+    const _alto=_re.reduce((a,f)=>a+f.lines.length*_lh,0)+GAP*(_obras.length-1);
+    let _y=tTop-_alto;                                     // crece hacia arriba
+    const _partes=[];
+    _re.forEach((f,i)=>{
+      f.lines.forEach(l=>{ _y+=_lh;
+        _partes.push(_lineaSVG(l,{x:M, y:_y, fs:_fs, ls:_fs*-0.02, fill:'#F0EDE8', boxW:CW, upper:false})); });
+      if(i<_re.length-1){
+        // el «+» centrado en el gap: 0,5u, apoyado en su tercio para ópticamente
+        // caer en el medio del aire, no en su borde superior.
+        const _fsMas=0.5*U;
+        _partes.push(`<text x="${round(M)}" y="${round(_y+GAP*0.5+_fsMas*0.35)}" font-family="${FONT}" font-size="${round(_fsMas)}" font-weight="800" fill="${accent}">+</text>`);
+        _y+=GAP;
+      }
+    });
+    ttlText=_partes.join('');
+    ttl={fs:_fs, lines:_re.flatMap(f=>f.lines)};
+  } else {
+    ttl=_fitLines(_titulo,
+      {boxW:CW, boxH:2.4*U, maxLines:4, fsMax:2.4*U/1.2, fsMin:12, lhRatio:1.2, lsEm:-0.02, upper:false});
+    // fsMin=12 (≈8,4px en tarjeta) es SUELO DE LEGIBILIDAD: por debajo se recorta
+    // con elipsis en vez de encoger hasta lo ilegible. La sección usa un suelo más
+    // bajo a propósito — recortar el nombre del festival está prohibido.
+    const tStartY=tTop-(ttl.lines.length-1)*ttl.lh;
+    ttlText=ttl.lines.map((l,i)=>_lineaSVG(l,
+      {x:M, y:tStartY+i*ttl.lh, fs:ttl.fs, ls:ttl.fs*-0.02, fill:'#F0EDE8', boxW:CW, upper:false})).join('');
+  }
 
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
     <defs><radialGradient id="lz" cx="1" cy="1" r="1">
