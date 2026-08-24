@@ -14,10 +14,9 @@
   "sitemaps": "https://siembrafest.com/wp-sitemap.xml lista los sub-sitemaps por tipo; el campo lastmod dice de un vistazo si hay material nuevo sin descargar nada."
  },
  "_pendientes": [
+  "ESPERANDO RESPUESTA del festival (correo del 24 ago) — ver _contacto_24_ago_2026. Sinopsis 22/84, pósters 32/84, programación 0.",
   "IG: capturar los posts de SABORES EN ESCENA y ASÍ ES CUNDINAMARCA cuando salgan (serie en curso) → completar el sidecar de programas.",
   "REVISAR PERIÓDICAMENTE lastmod de wp-sitemap-posts-project-1.xml y wp-sitemap-posts-mec-events-1.xml. Cuando aparezcan entradas de 2026, el catálogo se completa y llega la programación.",
-  "SINOPSIS: 18 de 84. Sin cambio: la web de 2026 sigue sin publicar ninguna.",
-  "PÓSTERS: 30 de 84, todos TMDB sin verificar. Los posts de IG usan la pieza gráfica de sección, no afiches por obra.",
   "lbSlug: 32 de 85, verificados.",
   "PROGRAMACIÓN: no existe. Sin día/hora/sede no hay films[] posible.",
   "SEDES: ninguna todavía. Serán plazas, veredas y espacios no convencionales en Sasaima y Villeta — geocodificar eso va a ser más difícil que un teatro, y el guardián [sedes-apiladas] va a hablar.",
@@ -28,5 +27,13 @@
   "programas_ig": "EL DATO NUEVO: el festival agrupó la Selección en 21 PROGRAMAS por sección (7/9 secciones publicadas; serie en curso, el post de Ojo Pelao tenía 1 h al capturar). Cuando llegue la programación, cada programa será presumiblemente una función: el ensamblado de films[] ya tiene la mitad del trabajo hecho. Faltan Sabores en Escena y Así es Cundinamarca.",
   "confirmado": "9–18 SEP · Sasaima (primera vez) y Villeta — cartel + posts fijados. Sin programación aún: mec-events sigue en 2020, project en 2022.",
   "discrepancias": "IG vs web difieren en 4 títulos y 4 años (lista en el sidecar de programas) — preguntar al festival junto con sinopsis/pósters."
+ },
+ "_contacto_24_ago_2026": {
+  "enviado": "Correo a produccion@siembrafest.com (cc contacto@) el 24 ago 2026, desde el Gmail de Juan con hola@otrofestiv.app en la firma. Un DM por Instagram previo quedó SIN respuesta — de ahí el cambio de canal.",
+  "pedimos": "(1) LA PROGRAMACIÓN: día, hora y lugar de cada función — es lo único que bloquea publicar; (2) 62 sinopsis; (3) 52 afiches o fotogramas. Cualquier formato.",
+  "les_dimos": "8 discrepancias entre su web y su IG (Cantos al juego/fuego de bolar, Flores Miro/Floresmiro, HDLT, Emechiche cabeciblanco(s), y 4 años que no coinciden) + el aviso de que su Selección Oficial vive en DOS URLs a la vez.",
+  "fecha_pedida": "antes del 5 SEP (el festival abre el 9)",
+  "antes_de_pedir": "Se agotó lo que podíamos solos: herencia de otros festivales aplicada (4 sinopsis, 2 pósters) y el barrido TMDB ya estaba hecho. Los 62+52 que faltan no están en ninguna otra fuente.",
+  "si_no_responden": "La programación puede aparecer sola en su web: mec-events (Modern Events Calendar) es el mismo sistema de ediciones anteriores. Vigilar ese sitemap + los 2 posts de IG que faltan (Sabores en Escena, Así es Cundinamarca)."
  }
 }
