@@ -801,12 +801,30 @@ export function setProgramaMode(mode){
   programaChip='all';_programaChipMatchFn=null;
   lugarClose();seccionClose();
   // Set active day for hoy/mañana modes
+  // DÍA HUECO EN MEDIO DEL FESTIVAL (Juan, 24 ago 2026 — CineAutopsia en curso).
+  // Un festival puede tener días sin programación entre medio: CineAutopsia va
+  // del 21 al 29 y no programa el 24. Ese día `findIndex` devuelve -1, y los
+  // fallbacks viejos —DAY_KEYS[0] para «Hoy», el ÚLTIMO para «Mañana»— mandaban
+  // a los extremos del array: «Hoy» abría el VIE 21, ya pasado, y «Mañana» el
+  // SÁB 29 en vez del MAR 25. Medido en producción, no supuesto.
+  //
+  // El fallback correcto es el primer día que NO pasó, que es exactamente lo que
+  // ya hacen filterByVenue y filterBySection en este mismo archivo. La respuesta
+  // estaba escrita dos veces al lado; esta función no la usaba.
   const _pts=simTodayStr();
   const _pti=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_pts);
+  const _proximoVivo=DAY_KEYS.findIndex(d=>!dayFullyPassed(d));
+  const _ultimo=DAY_KEYS.length-1;
   if(mode==='hoy'){
-    activeDay=_pti>=0?DAY_KEYS[_pti]:DAY_KEYS[0];
+    // Hoy no está en el calendario → el próximo día con función. Si TODOS
+    // pasaron (festival terminado) queda el último, que es lo que había.
+    activeDay=_pti>=0?DAY_KEYS[_pti]:(_proximoVivo>=0?DAY_KEYS[_proximoVivo]:DAY_KEYS[_ultimo]);
   } else if(mode==='manana'){
-    activeDay=_pti>=0&&_pti<DAY_KEYS.length-1?DAY_KEYS[_pti+1]:DAY_KEYS[DAY_KEYS.length-1];
+    // Con hoy en el calendario, mañana es el siguiente. Sin hoy, «mañana» es
+    // igualmente el próximo día vivo: en un hueco, el siguiente día programado
+    // ES el mañana del usuario.
+    const _base=_pti>=0?_pti+1:_proximoVivo;
+    activeDay=(_base>=0&&_base<=_ultimo)?DAY_KEYS[_base]:DAY_KEYS[_ultimo];
   }
   // filter-row visibility handled by initProgramaModeBar() below
   // filter updates handled by lugarOpen()

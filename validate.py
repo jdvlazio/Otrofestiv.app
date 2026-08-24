@@ -2439,6 +2439,58 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar cancelada-no-difumina: {_e}')
 
+def _re_fecha(k):
+    """¿La clave de día es una fecha ISO? Leviza y otros legacy usan rótulos
+    ('DOM 17'), y ahí el concepto de «día que falta» no aplica."""
+    import re as _r
+    return bool(_r.fullmatch(r'\d{4}-\d{2}-\d{2}', str(k)))
+
+# ── [calendario-sin-huecos] el día existe aunque esté vacío ───────────────────
+# Juan, 24 ago 2026: «el día debería existir, vacío. No hay programación pero el
+# día existe. Menos conflictos, más claridad».
+#
+# CineAutopsia corre del 21 al 29 de agosto y su calendario NO declaraba el 24.
+# Con el festival EN CURSO eso hacía que «Hoy» abriera el VIE 21 —ya pasado— y
+# «Mañana» el SÁB 29: `findIndex` del día de hoy daba -1 y los fallbacks caían a
+# los extremos del array (arreglado aparte, pero el dato era la causa).
+#
+# La convención ya existía y nadie la había escrito: Tercer Tiempo declara SIETE
+# días con DOS vacíos (14 y 19 jul) y cero huecos; FICDEH tampoco tiene huecos.
+# CineAutopsia fue la excepción. Un día vacío declarado se atenúa solo y no
+# rompe nada —`dayFullyPassed` ya tiene su caso explícito—; un día AUSENTE deja
+# un agujero por el que se cuela la aritmética de índices.
+check = 'calendario-sin-huecos'
+try:
+    import json as _json, glob as _glob, os as _os
+    from datetime import date as _date, timedelta as _td
+    _errs = []
+    for _p in sorted(_glob.glob('festivals/*.json')):
+        try:
+            _d = _json.load(open(_p, encoding='utf-8'))
+        except Exception:
+            continue
+        _keys = [k for k in (_d.get('dayKeys') or []) if _re_fecha(k)]
+        if len(_keys) < 2:
+            continue
+        try:
+            _ini = _date.fromisoformat(_keys[0]); _fin = _date.fromisoformat(_keys[-1])
+        except ValueError:
+            continue
+        _esperados, _x = [], _ini
+        while _x <= _fin:
+            _esperados.append(_x.isoformat()); _x += _td(days=1)
+        _faltan = [k for k in _esperados if k not in _keys]
+        if _faltan:
+            _errs.append(f'{_os.path.basename(_p)}: el calendario salta {len(_faltan)} día(s) '
+                         f'({", ".join(_faltan[:3])}). Un día sin programación se DECLARA vacío, '
+                         'no se omite — si no, «Hoy» cae en un día que ya pasó')
+    if _errs:
+        fail(check, '; '.join(_errs[:3]))
+    else:
+        ok(check, 'ningún festival salta días: los vacíos se declaran')
+except Exception as _e:
+    warn(check, f'no se pudo verificar calendario-sin-huecos: {_e}')
+
 # ── [calendario-entero] un día que se dibuja tiene que existir para el reloj ───
 # Juan, 23 ago 2026: «CineAutopsia no marcó el Vie 21 como pasado, sigue vivo».
 # La tira de días se arma con `dayKeys` —que el JSON PISA, porque es contenido—
@@ -3993,7 +4045,7 @@ try:
         'src/view/helpers.js': 883,  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
         'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
         'src/main.js': 1707,  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
-        'src/i18n/i18n.js': 1649,  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
+        'src/i18n/i18n.js': 1655,  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
         'src/controller/sheets-controller.js': 1718,  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
         # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres
