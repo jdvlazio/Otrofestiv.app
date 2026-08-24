@@ -152,18 +152,30 @@ Un solo camino para pintar cualquier póster — los call sites NO re-derivan fl
   `kind ∈ {image, editorial, generative, empty}`. Es el **único** lugar que
   clasifica (usa `getFilmPoster` + `_isEditorialPoster`). `generative` se detecta
   por el prefijo data-URI; el default es `image` (fail-safe, §5).
-- **`editorialFrame({header, body, src, title, loading})`** (`helpers.js`) → el
-  **único** builder del marco editorial-con-imagen. Devuelve los **hijos**
-  (`.ed-hdr` + `.ed-img`); el **contenedor** aporta tamaño y color vía la clase
-  **`poster-ed`** + `style="--ed-accent:…"`.
-- **Anatomía A3 de `.ed-img`** (Fase C) — respeta el **16:9 completo** (el
-  cover-crop decapitaba composiciones con gente a los lados):
-  - `.ed-blur` — blur-fill del mismo still, de fondo (decorativo, `aria-hidden`).
-  - `.ed-still` — el still **16:9 al ras del banner**, sin recortar (`aspect-ratio:16/9`,
-    top-flush). Lleva `data-title` y el `onerror` que cae a generativo.
-  - `.ed-scrim` — degradado inferior con el **título**, solo cuando `body` trae
-    texto (grid). `undefined`/`''` → sin scrim (thumb/sheet/ended-poster, que
-    muestran el título aparte). Murió la zona `.ed-body`.
+- **`editorialFrame({header, body, src, title, loading, accent, dato, firma})`**
+  (`helpers.js`) → el **único** builder del marco editorial-con-imagen (Forma B
+  §6.0 = Forma A + un campo 16:9 constante). Devuelve los **hijos**; el
+  **contenedor** aporta tamaño y color vía la clase **`poster-ed`** +
+  `style="--ed-accent:…"`.
+- **Anatomía §6.0 del marco** — respeta el **16:9 completo** (el cover-crop
+  decapitaba composiciones con gente a los lados). La geometría vive en el CSS
+  de `.poster-ed`, en %:
+  - `.ed-fil` — el filete de sección de 0,25u a sangre (color de sección).
+  - `.ed-hdr` — la sección tipografiada (`_edHdrSVG`, mismo motor de ajuste).
+  - `.ed-halo` — la propia obra desenfocada llenando el vacío bajo el campo,
+    contenida y con máscara (no es el blur a sangre que mató §6.0). En la
+    miniatura va bajo el campo centrado; en el póster grande ancla al borde del
+    campo (66,67%, `.ed-halo-full` — 24 ago 2026: la línea negra bajo el still
+    «genera distancia y ruido»).
+  - `.ed-img` + `.ed-still` — el still **16:9 sin recortar**; `.ed-img-mid`
+    centra el campo en la miniatura (corto dentro de programa, sin sección ni
+    título). El still lleva `data-title` y `onerror` → `_edPosterErr`.
+  - `.ed-foot` — el pie: `.ed-title` (solo cuando `body` trae texto — grid;
+    thumb/sheet muestran el título aparte), `.ed-firma` (curatorial, itálica,
+    solo junto al título) y `.ed-dato` (gris, 5%).
+  - Muertos y enterrados: `.ed-blur` (blur a sangre), `.ed-scrim` (degradado
+    con título encima del still) y `.ed-body`. Si aparecen en código nuevo, es
+    regresión.
 - **CSS `.poster-ed`** (`index.html`) — **un** componente; el alto de la banda es
   `var(--ed-hdr-ratio)` (una fuente, antes `28.89%` hardcodeado en CSS y JS).
 - **`onerror` unificado** — los marcos editoriales usan **`_edPosterErr`**
