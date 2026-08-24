@@ -493,12 +493,20 @@ de programa doble nunca tipografía así.
    conserva la forma de siempre: el cuerpo caería a ilegible y el pie ya dice
    «4 obras» (`_datoCompuesto`).
 
-**El techo es estructural, no correctivo.** El presupuesto de alto —base del
-título − fondo del rótulo **ya ajustado** − 0,5u de aire— se le entrega a
-`_fitLines` como la caja de cada obra. Un lazo que encogiera *después* es código
-muerto: `_fitLines` lo adelanta siempre, y un guardián que nunca dispara no es de
-fiar. Con una caja fija de 2,4u en vez del presupuesto medido, un cartel real de
-Cinemancia invade la sección.
+**El presupuesto se reparte por USO REAL, no en partes iguales.** Darle a cada
+obra un tercio exacto del alto castigaba a las tres por culpa de una: con dos
+nombres de una línea y uno de dos sobraban ~3,7u de aire muerto y la pila igual
+salía pequeña (10,8 donde cabía 14). El alto **no acota** el ajuste individual:
+las líneas de cada obra las decide su **ancho**, que es lo único que de verdad la
+limita, y el presupuesto —base del título − fondo del rótulo **ya ajustado** −
+0,5u de aire— se cobra **una sola vez**, sobre el alto que la pila realmente
+ocupa: si no cabe, el cuerpo baja de a 0,25 hasta que quepa (suelo 9).
+
+Ojo con el orden: la primera versión repartía el presupuesto como caja de cada
+obra y llevaba además un lazo correctivo. Ese lazo era **código muerto**
+—`_fitLines` lo adelantaba siempre— y un guardián que nunca dispara no es de
+fiar. Con el reparto por uso real el lazo **sí vive**, y es lo único que impide
+que un cartel real de Cinemancia invada la sección.
 
 Lo blindan 7 tests en `tests/unit/poster.test.js` (11 mutantes, todos mueren).
 Ojo con los inputs: dos mutantes sobrevivieron a la primera versión porque los
