@@ -247,6 +247,61 @@ export const SECTION_EN = {
 // `categoria` va VERBATIM del festival — misma regla que las secciones.
 // `nivel`: 'ganadora' | 'mencion'.
 export const PALMARES=[
+  // ── FINCA 2026 (8ª ed., Buenos Aires) — 5 posts del 22 ago en @festivalfinca ──
+  // Se leyeron EN EL NAVEGADOR y expandiendo el caption: los cinco llegaban
+  // truncados en «… more», y el texto corto no nombra ni una sola premiada.
+  //
+  // DOS TÍTULOS QUE ARREGLAMOS EN EL CATÁLOGO al cruzar, y los dos eran NUESTROS:
+  // «Mora» era «Amora» (se cayó la A inicial) y «Sobre Ruinas» era «Sobre
+  // Ruínas». El sidecar finca-2026-funciones.json —lo que mandó el festival—
+  // trae las dos bien; se rompieron aguas abajo. «Amora» además se verificó
+  // fuera (Cinemateca Brasileira, Mostra SP, IMDb): Ana Petta, Brasil 2025.
+  //
+  // DOS PREMIADAS NO ENLAZAN y es correcto: «Sobre Ruínas» y «Dígale no a los
+  // poalets» son CORTOS dentro de «Cortometrajes en Competencia Oficial —
+  // Programa 2», y _palmPoster busca en FILMS por título de nivel superior.
+  // Van con obra:null → Forma A, que es la respuesta de diseño para esto.
+  //
+  // DOS TÍTULOS que el festival escribe distinto en su programa y en su
+  // palmarés: mostramos el DEL PROGRAMA, que es el que el usuario vio en la
+  // app. En los posts de premios fueron «How Deep Is Your Love» (programa:
+  // «¿Cuán profundo es tu amor?») y «No als poalets» (programa: «Dígale no a
+  // los poalets»).
+  //
+  // EL SEGUNDO PREMIO no cabe en el modelo: `nivel` es ganadora|mencion y las
+  // menciones se rotulan «Mención», así que meter ahí un Segundo Premio sería
+  // degradarlo. Va como `ganadora` — las dos ganaron esa competencia — y el
+  // orden 1º/2º se pierde. Queda dicho acá en vez de disimulado.
+
+  {fest:'finca2026', categoria:'Premio del Público · Largometrajes Internacionales', nivel:'ganadora',
+   titulo:'La vida fracturada', autoria:'Cristian Cartier, Martín Longo, Pablo Piovano, Maximiliano Goldschmidt', obra:'La vida fracturada'},
+  {fest:'finca2026', categoria:'Premio del Público · Corto y Mediometrajes Internacionales', nivel:'ganadora',
+   titulo:'Ziki', autoria:'Roberta Palmieri, Olga Sargenti', obra:'Ziki'},
+  {fest:'finca2026', categoria:'Premio del Público · Documentales Latinoamericanos', nivel:'ganadora',
+   titulo:'Amora', autoria:'Ana Petta', obra:'Amora'},
+
+  {fest:'finca2026', categoria:'Largometrajes Internacionales', nivel:'ganadora',
+   titulo:'Yintah', autoria:'Jennifer Wickham, Brenda Michell, Michael Toledano', obra:'Yintah'},
+  {fest:'finca2026', categoria:'Largometrajes Internacionales', nivel:'mencion',
+   titulo:'¿Cuán profundo es tu amor?', autoria:'Eleanor Mortimer', obra:'¿Cuán profundo es tu amor?'},
+
+  {fest:'finca2026', categoria:'Corto y Mediometrajes Internacionales', nivel:'ganadora',
+   titulo:'Sobre Ruínas', autoria:'Carol Benjamin', obra:null},
+  {fest:'finca2026', categoria:'Corto y Mediometrajes Internacionales', nivel:'mencion',
+   titulo:'Dígale no a los poalets', autoria:'Laura García Andreu', obra:null},
+
+  {fest:'finca2026', categoria:'Documentales Latinoamericanos', nivel:'ganadora',
+   titulo:'Karuara, la gente del río', autoria:'Miguel Araoz Cartagena, Stephanie Boyd', obra:'Karuara, la gente del río'},
+  {fest:'finca2026', categoria:'Documentales Latinoamericanos', nivel:'ganadora',
+   titulo:'Toroboro: el nombre de las plantas', autoria:'Manolo Sarmiento', obra:'Toroboro: el nombre de las plantas'},
+
+  // Premio de la Red Argentina de Festivales y Muestras Audiovisuales (RAFMA),
+  // con el nombre del documentalista Edgardo «Pipo» Bechara el Khoury.
+  {fest:'finca2026', categoria:'Premio «Edgardo Pipo Bechara el Khoury»', nivel:'ganadora',
+   titulo:'La vida fracturada', autoria:'Cristian Cartier, Martín Longo, Pablo Piovano, Maximiliano Goldschmidt', obra:'La vida fracturada'},
+  {fest:'finca2026', categoria:'Premio «Edgardo Pipo Bechara el Khoury»', nivel:'mencion',
+   titulo:'La granja de la libertad', autoria:'Luciano Militello', obra:'La granja de la libertad'},
+
   // FICDEH 2026 — 8 posts del 21 ago en @ficdeh, uno por categoría.
   // Tres correcciones sobre la fuente, documentadas porque publicar mal un premio
   // es mentirle al usuario sobre su propio festival:
