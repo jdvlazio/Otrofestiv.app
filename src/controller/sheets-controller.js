@@ -120,6 +120,13 @@ let _cortoParentHtml=null;
 // `pairs` = [{s, owner}] — `owner` es el film que manda sobre el Plan. Para un corto
 // es su PROGRAMA: agregar un corto agrega el programa completo (regla establecida) y
 // addSuggestion solo entiende títulos que existen en FILMS.
+// El distintivo de un pase de prensa en la fila es el MISMO icono del
+// interruptor que el usuario acaba de pulsar para verlo — vocabulario ya
+// aprendido, cero palabras (decisión de Juan, 24 ago: «no quiero tanto
+// texto»). Inline y sin flex-shrink:0, para no repetir la cicatriz del badge
+// «En tu Plan» que le robaba ancho a la sede. El texto queda en sr-only.
+const _PRESS_ICO=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 011-1h11a1 1 0 011 1v18"/><path d="M17 8h2a1 1 0 011 1v10a2 2 0 01-2 2H4"/><line x1="7" y1="7" x2="14" y2="7"/><line x1="7" y1="11" x2="14" y2="11"/><line x1="7" y1="15" x2="11" y2="15"/></svg>`;
+
 function _screeningRows(pairs, opts){
   return pairs.map(({s,owner})=>{
     const dayAbb=dayLabel(s.day)||s.day;
@@ -159,7 +166,7 @@ function _screeningRows(pairs, opts){
       ${_planned?`<span class="sr-only">${t('plan_en_tu_plan')}</span>`:''}
       <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
-      <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
+      <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span>${s.audience==='press'?`<span class="scr-press" aria-hidden="true">${_PRESS_ICO}</span><span class="sr-only">${t('press_badge')}</span>`:''}</span>
       ${_addCtrl}
     </div>`;
   }).join('');
