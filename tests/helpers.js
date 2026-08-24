@@ -62,8 +62,11 @@ async function reentrar(page, festId, simTime) {
   if (simTime) await page.evaluate((t) => { _simTime = t; }, simTime);
 }
 
-async function enterFestival(page, festId, simTime) {
-  await page.goto('/');
+async function enterFestival(page, festId, simTime, opts) {
+  // opts.query: query string extra para el goto — precedente de simTime: los
+  // interruptores de dev/test viajan por URL (T101 usa updPoll= para acortar
+  // el ciclo del poll de actualización).
+  await page.goto('/' + (opts && opts.query ? '?' + opts.query : ''));
   // Gate de readiness JS DEFINITIVO: el marcador [data-app-ready="1"] se setea al
   // FINAL del bootstrap síncrono (main.js) — módulo evaluado, STATE/TEST BRIDGE
   // instalado (FESTIVAL_CONFIG/selectSplashFest expuestos en globalThis), listener

@@ -2323,3 +2323,41 @@ test('T100 — un día hueco del festival no manda «Hoy» a un día que ya pas�
   expect(manana.pasado, '«Mañana» tampoco abre un día pasado').toBe(false);
   expect(manana.dia, '«Mañana» es el día siguiente, no el final del festival').toBe('2026-08-25');
 });
+
+test.describe('T101 — canal #4 (sin SW: page.route no ve los fetches que pasan por el service worker)', () => {
+  test.use({ serviceWorkers: 'block' });
+test('T101 — la app abierta se entera del build nuevo, y no se recarga sola', async ({ page }) => {
+  test.setTimeout(90000);
+  // El canal #4 (poll en primer plano) existe para quien deja la app ABIERTA:
+  // sin él, un cambio de sede u horario no llega hasta soltar el teléfono.
+  // Doctrina T97 aplicada a la app entera: lo que estás mirando no cambia solo.
+  // `?updPoll=400` acorta el ciclo (precedente: simTime).
+  let servirNuevo = false;
+  await page.route('**/version.json*', async (route) => {
+    if (!servirNuevo) return route.continue();
+    await route.fulfill({ contentType: 'application/json',
+      body: JSON.stringify({ android: '299901010000', ios: '299901010000', storeGate: false }) });
+  });
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00', { query: 'updPoll=400' });
+  await page.waitForTimeout(1000);
+  const urlAntes = page.url();
+
+  // Aparece el build nuevo en el servidor…
+  servirNuevo = true;
+  await page.waitForTimeout(1600); // ≥2 ciclos de poll
+
+  // …la app lo OFRECE (toast con acción) y NO navegó sola.
+  const t1 = await page.evaluate(() => ({
+    toast: document.getElementById('prio-toast')?.textContent.replace(/\s+/g, ' ').trim() || '',
+    accion: !!document.querySelector('#prio-toast .toast-action-btn'),
+  }));
+  expect(page.url(), 'la app NO se recarga bajo los dedos del usuario').toBe(urlAntes);
+  expect(t1.accion, 'ofrece la actualización con el toast de acción').toBe(true);
+  expect(t1.toast.length, 'el toast dice algo').toBeGreaterThan(0);
+
+  // Al aceptar, recarga con el cache-busting del build nuevo.
+  await page.click('#prio-toast .toast-action-btn');
+  await page.waitForURL(/v=299901010000/, { timeout: 8000 });
+  expect(page.url()).toContain('v=299901010000');
+});
+});
