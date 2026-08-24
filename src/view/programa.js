@@ -155,7 +155,15 @@ export function renderProgramaListHTML(state){
     return cat(a)-cat(b);
   });
   if(!films.length){
-    return emptyState(ICONS.search, t('filter_sin_actividades'), t('empty_filtros'));
+    // DOS vacíos distintos, y decirlos igual es mentir (Juan, 24 ago 2026):
+    // «ajustá los filtros» cuando NO hay filtros puestos le echa la culpa al
+    // usuario de una decisión del festival. Un día declarado y vacío —regla de
+    // [calendario-sin-huecos]— es programación que no existe, no un filtro que
+    // esconde. Se distingue por lo que había ANTES de filtrar.
+    const _sinFiltros=activeVenue==='all'&&activeSec==='all';
+    return _sinFiltros
+      ? emptyState(ICONS.calendar, t('dia_sin_funciones'), t('dia_sin_funciones_sub'))
+      : emptyState(ICONS.search, t('filter_sin_actividades'), t('empty_filtros'));
   }
   const byTime={};
   films.forEach(f=>{if(!byTime[f.time])byTime[f.time]=[];byTime[f.time].push(f);});
