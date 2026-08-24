@@ -2276,3 +2276,45 @@ test('T99 — el texto del póster no se monta sobre la imagen, y la sección ti
     }
   }
 });
+
+test('T100 — un día hueco del festival no manda «Hoy» a un día que ya pasó', async ({ page }) => {
+  test.setTimeout(90000);
+  // CineAutopsia va del 21 al 29 de agosto y NO programa el 24: un hueco EN MEDIO
+  // del festival. Ese día `DAY_KEYS.findIndex(hoy)` da -1, y los fallbacks viejos
+  // mandaban a los extremos del array — «Hoy» al primer día (ya pasado) y «Mañana»
+  // al último. Cazado en producción el 24 ago 2026, con el festival en curso.
+  await enterFestival(page, 'cineautopsia2026', '2026-08-24T10:00:00-05:00');
+  await page.waitForTimeout(1200);
+
+  const leer = async (rotulo) => {
+    await page.evaluate((r) => {
+      const p = [...document.querySelectorAll('.pmode-tab')]
+        .find(x => new RegExp(r, 'i').test(x.textContent));
+      if (p) p.click();
+    }, rotulo);
+    await page.waitForTimeout(900);
+    return page.evaluate(() => ({
+      dia: typeof activeDay !== 'undefined' ? activeDay : null,
+      pasado: !!document.querySelector('.dtab.on')?.classList.contains('past'),
+      // La grilla de TODO sigue en el DOM oculta; lo que importa es la superficie
+      // VISIBLE del día. Medirlo con .poster-card contaba cards de otra vista.
+      vacio: document.querySelectorAll('.plist-item').length === 0,
+      motivo: (document.querySelector('#programa-list .empty-state, #programa-list .empty-state-hero')
+        ?.textContent || '').replace(/\s+/g, ' ').trim(),
+    }));
+  };
+
+  // El 24 EXISTE en el calendario aunque no tenga funciones (regla de Juan,
+  // 24 ago 2026): un día vacío se declara, no se omite. Así «Hoy» significa hoy.
+  const hoy = await leer('Hoy|Today');
+  expect(hoy.pasado, '«Hoy» no puede abrir un día que ya pasó').toBe(false);
+  expect(hoy.dia, '«Hoy» es HOY, aunque hoy no tenga funciones').toBe('2026-08-24');
+  expect(hoy.vacio, 'el día vacío se muestra vacío, no se salta').toBe(true);
+  // Y dice la verdad: sin filtros puestos, el vacío es del FESTIVAL, no del filtro.
+  expect(hoy.motivo, 'el vacío no culpa a un filtro que nadie puso')
+    .not.toMatch(/filtro|filter/i);
+
+  const manana = await leer('Mañana|Tomorrow');
+  expect(manana.pasado, '«Mañana» tampoco abre un día pasado').toBe(false);
+  expect(manana.dia, '«Mañana» es el día siguiente, no el final del festival').toBe('2026-08-25');
+});

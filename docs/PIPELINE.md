@@ -1200,3 +1200,25 @@ El guardián exige tres cosas:
    contra la otra, y ahí no miraba nadie.
 3. `festivalDates` sigue siendo **contenido** en el loader, no identidad.
 
+
+### `[calendario-sin-huecos]` — el día existe aunque esté vacío
+
+**Regla (Juan, 24 ago 2026):** el calendario de un festival declara **todos** los
+días entre el primero y el último, **incluidos los que no tienen programación**.
+Un día vacío se declara; no se omite.
+
+**Por qué.** CineAutopsia corre del 21 al 29 de agosto y no declaraba el 24. Con
+el festival **en curso**, «Hoy» abría el VIE 21 —ya pasado— y «Mañana» el SÁB 29:
+`findIndex` del día de hoy daba −1 y los fallbacks caían a los extremos del
+array. Un día vacío **declarado** se atenúa solo y no rompe nada
+(`dayFullyPassed` ya tiene su caso explícito); un día **ausente** deja un agujero
+por el que se cuela la aritmética de índices.
+
+**La convención ya existía y nadie la había escrito:** Tercer Tiempo declara
+**siete** días con **dos vacíos** (14 y 19 jul) y cero huecos. FICDEH tampoco
+tiene huecos. CineAutopsia fue la excepción.
+
+**Al montar un festival:** si la programación salta un día, ese día va igual en
+`dayKeys`, `days`, `dayShort`, `dayShort_en`, `dayLong` y `festivalDates`. El
+guardián ignora los festivales legacy con rótulos en vez de fechas ISO (Leviza).
+
