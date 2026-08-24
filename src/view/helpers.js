@@ -7,7 +7,7 @@
 
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _fitLines, _secLabel, _sectionColor,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _datoCompuesto, _fitLines, _secLabel, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeSharedSlotSVG, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
@@ -81,7 +81,8 @@ export function getFilmPoster(f){
     accent: _sectionColor(f.section||''),
     headerLabel: _secLabel(f.section||'')||'TRIBECA',
     title: f.title,
-    num: null
+    num: null,
+    dato: _datoCompuesto(f.title, f.duration) // «3 obras · 99 min» si el título es compuesto
   });
 }
 

@@ -295,6 +295,19 @@ export function _fitLines(str, {boxW, boxH, maxLines, fsMax, fsMin, lhRatio=1.16
   return {lines:K, fs:fsMin, lh:+lh.toFixed(2)};
 }
 
+// _datoCompuesto — el pie de un programa dice cuántas obras trae.
+// Juan, 24 ago 2026: un compuesto de tres obras decía «99 min», el mismo pie que
+// una obra sola. La Forma C ya lo resolvió («2 obras · 77 min»); esto se lo da a
+// la Forma A. El conteo sale del « + » CON espacios — el separador que usan los
+// títulos compuestos reales (Cinemancia: 14 de 32)— para no confundir un «+»
+// interno de un nombre. «obras» va en crudo como en la Forma C (mismo dueño de
+// vocabulario; si algún día se localiza, se localizan juntos).
+export function _datoCompuesto(title, duration){
+  const _partes=String(title||'').split(/\s\+\s/);
+  if(_partes.length<2) return duration||'';
+  return `${_partes.length} obras${duration?` · ${duration}`:''}`;
+}
+
 export function _buildPosterV16({accent, headerLabel, title, num, dato}){
   // ── Póster nuestro — anatomía aprobada (POSTERS.md §6.0, Juan 18 ago 2026) ──
   // Retícula: u = ancho/8 → 8u × 12u. Margen 0,75u. Filete de sección de 0,25u a
@@ -304,6 +317,12 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
   // Lo que murió acá: la banda de color como losa (el color de sección pasó al
   // filete y a la propia tipografía), el chevron (a 84px era suciedad) y el
   // número gigante — que era un DATO y ahora vive como tal, en el pie.
+  //
+  // La LUZ hereda el acento de sección (Juan, 24 ago 2026 — auditoría con
+  // Cinemancia): era ámbar fija en los 32 generativos del festival y una pared
+  // de Forma A se veía monótona. Con la luz en el color de sección, Competencia
+  // se distingue de Iluminaciones de un golpe de vista, sin tocar la retícula.
+  // Es la doctrina de color ambiental, aplicada al generativo.
   const VW=120, VH=180, U=VW/8;              // 15
   const M=0.75*U, CW=VW-2*M;                 // margen 11.25 · caja de contenido 97.5
   const esc=escXML;
@@ -315,6 +334,21 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
   // viewBox: «la mayor que quepa» sin techo llevaba «CHARLA» a 17,9px, más grande
   // que el título de la obra. El techo mantiene la jerarquía: la sección orienta,
   // el título es el protagonista.
+  // EL TÍTULO NO REPITE LA SECCIÓN (Juan: «una regla que he repetido mil veces
+  // y nunca la aplican» — 24 ago 2026). Si el título arranca con el nombre del
+  // rótulo («Competencia de cortometrajes Programa 1» bajo COMPETENCIA DE
+  // CORTOMETRAJES), el prefijo se recorta y queda «Programa 1», grande y limpio:
+  // la sección ya lo dijo arriba. Comparación sin acentos/case; solo prefijo
+  // EXACTO — nada de adivinar coincidencias parciales. Si el recorte deja vacío,
+  // se conserva el título original.
+  const _norm=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+  {
+    const _nt=_norm(title), _nh=_norm(headerLabel);
+    if(_nh&&_nt.startsWith(_nh)){
+      const _resto=String(title).trim().slice(String(headerLabel).trim().length).replace(/^[\s·:—-]+/,'');
+      if(_resto) title=_resto;
+    }
+  }
   const SEC_FS_MAX=15*VW/84;
   const sec=_fitLines(String(headerLabel||'').toUpperCase(),
     {boxW:CW, boxH:3.4*U, maxLines:4, fsMax:Math.min(SEC_FS_MAX, 3.4*U/1.16), fsMin:9, lhRatio:1.16, lsEm:0.02, upper:true});
@@ -352,8 +386,8 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
 
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
     <defs><radialGradient id="lz" cx="1" cy="1" r="1">
-      <stop offset="0" stop-color="#F59E0B" stop-opacity=".28"/>
-      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+      <stop offset="0" stop-color="${accent}" stop-opacity=".28"/>
+      <stop offset="1" stop-color="${accent}" stop-opacity="0"/>
     </radialGradient></defs>
     <rect width="${VW}" height="${VH}" fill="#0B0A08"/>
     <rect x="${round(VW*0.45)}" y="${round(VH*0.55)}" width="${round(VW*0.55)}" height="${round(VH*0.45)}" fill="url(#lz)"/>

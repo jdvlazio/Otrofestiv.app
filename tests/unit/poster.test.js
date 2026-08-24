@@ -309,3 +309,57 @@ test('slotPosterParts: solo funciones compartidas de 2-3 obras, y solo completas
   assert.strictEqual(H.slotPosterParts([dos[0]]), null, 'una sola obra no es función compartida');
   assert.strictEqual(H.slotPosterParts(null), null, 'sin miembros, nada');
 });
+
+// ── Auditoría 24 ago 2026 (Cinemancia): mejoras 2, 3 y 5 de la Forma A ────────
+
+test('Forma A — el título no repite la sección: el prefijo exacto se recorta', () => {
+  const svg = decodeURIComponent(C._buildPosterV16({
+    accent: '#E5A020', headerLabel: 'Competencia de cortometrajes',
+    title: 'Competencia de cortometrajes Programa 1', num: null, dato: '71 min' }));
+  // SOLO los textos del TÍTULO (fill #F0EDE8) — mirar todos los <text> era
+  // decorativo: el quiebre de línea del título SIN recortar también produce una
+  // línea final «Programa 1», y la aserción pasaba con la regla muerta. Cazado
+  // mutando (if(false) sobrevivía).
+  const titulo = [...svg.matchAll(/fill="#F0EDE8"[^>]*>([^<]+)<\/text>|<text(?=[^>]*fill="#F0EDE8")[^>]*>([^<]+)<\/text>/g)]
+    .map(m => m[1] || m[2]);
+  assert.deepStrictEqual(titulo.join(' ').trim(), 'Programa 1',
+    'el título ES «Programa 1» y nada más — la sección ya lo dijo arriba: ' + JSON.stringify(titulo));
+});
+
+test('Forma A — sin coincidencia EXACTA de prefijo, el título no se toca', () => {
+  // «Retrospectiva Sergio Navarro…» bajo «La sutil materia. Sergio Navarro»:
+  // comparten nombre propio pero NO prefijo — adivinar sería peor que repetir.
+  const svg = decodeURIComponent(C._buildPosterV16({
+    accent: '#7F77DD', headerLabel: 'La sutil materia. Sergio Navarro',
+    title: 'Retrospectiva Sergio Navarro Programa 1', num: null, dato: '67 min' }));
+  assert.ok(/Retrospectiva/.test(svg), 'el título sobrevive intacto');
+});
+
+test('Forma A — si el recorte dejara el título vacío, se conserva el original', () => {
+  const svg = decodeURIComponent(C._buildPosterV16({
+    accent: '#E5A020', headerLabel: 'Iluminaciones',
+    title: 'Iluminaciones', num: null, dato: '' }));
+  assert.ok(/Iluminaciones/.test(svg), 'nunca un póster sin título por recortar de más');
+});
+
+test('Forma A — la luz hereda el acento de la sección, no el ámbar fijo', () => {
+  const svg = decodeURIComponent(C._buildPosterV16({
+    accent: '#3AAA6E', headerLabel: 'Iluminaciones',
+    title: 'Pere Portabella: legado inmarcesible', num: null, dato: '99 min' }));
+  const grad = svg.match(/<radialGradient[\s\S]*?<\/radialGradient>/)[0];
+  assert.ok(grad.includes('#3AAA6E'), 'el gradiente usa el acento de sección');
+  assert.ok(!grad.includes('#F59E0B'), 'el ámbar fijo murió del gradiente');
+});
+
+test('_datoCompuesto — el pie cuenta las obras del « + », y deja en paz lo demás', () => {
+  assert.strictEqual(C._datoCompuesto('Oublie pas le gruau + Sol menor', '102 min'),
+    '2 obras · 102 min');
+  assert.strictEqual(C._datoCompuesto('La tempestá + No contéis con los dedos + Vampir Cuadecuc', '99 min'),
+    '3 obras · 99 min');
+  assert.strictEqual(C._datoCompuesto('Pere Portabella: legado inmarcesible', '99 min'),
+    '99 min', 'una obra sola: el pie de siempre');
+  assert.strictEqual(C._datoCompuesto('Chico eléctrico + Solo qu3r3mos un poco de amor', ''),
+    '2 obras', 'compuesto sin duración: cuenta igual');
+  assert.strictEqual(C._datoCompuesto('Sujo+2', '80 min'),
+    '80 min', 'un «+» sin espacios es parte del nombre, no separador');
+});
