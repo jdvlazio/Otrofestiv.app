@@ -5,7 +5,8 @@
   "verificacion": "Parseo estructural h3/ul/li del HTML crudo; conteo contra el anuncio oficial; secciones = curaduría del festival tal cual (aprobado por Juan 2 ago).",
   "secciones": "Emoji alineado con la iconografia que el festival publico en su story del 12 ago 2026 (fantasma, ojo, corazon remendado, mapa, tira de pelicula). Arquetipos corregidos: Sabores en Escena, Amores & Desamores y Mujeres que sostienen la vida son secciones TEMATICAS de curaduria, no industria ni apertura. PENDIENTE con el festival: su story lista 7 secciones curatoriales y su web 9 - faltan «Mujeres que sostienen la vida» (que parece el tema de la edicion) y «Estampas».",
   "capturado": "2026-08-02",
-  "revision_23_ago": "Sync con la Selección del 19 ago (URL NUEVA: https://siembrafest.com/siembrafest/seleccion-oficial/ — la vieja /seleccion-sf-2026/ sigue viva con contenido anterior). 85→84: −Carlina −Tentado de difunto +Chicha la chicharra; «Somos historias (Episodio 2)» retitulada. Cayenas libertarias SIGUE (el parser ingenuo la perdía — trampa del primer <li>)."
+  "revision_23_ago": "Sync con la Selección del 19 ago (URL NUEVA: https://siembrafest.com/siembrafest/seleccion-oficial/ — la vieja /seleccion-sf-2026/ sigue viva con contenido anterior). 85→84: −Carlina −Tentado de difunto +Chicha la chicharra; «Somos historias (Episodio 2)» retitulada. Cayenas libertarias SIGUE (el parser ingenuo la perdía — trampa del primer <li>).",
+  "herencia_24_ago": "Campos heredados de festivales YA publicados donde la misma obra aparece (obras colombianas que circulan por varios festivales): {\"synopsis\": 4, \"poster\": 2, \"posterSource\": 2, \"synopsis_en\": 4}. Se hizo ANTES de escribirle al festival, para no pedirle lo que ya teníamos."
  },
  "sections": {
   "🏺 Mujeres que sostienen la vida": {
@@ -203,12 +204,14 @@
     "ficha_raw": "2025 | 20' | Documental",
     "formato": "Documental",
     "produccion": "Javier Camilo Aranguren",
-    "tmdb_id": 1737961
+    "tmdb_id": 1737961,
+    "heredado_de": "ficdeh-2026"
    },
    "_inherited": {
     "synopsis": "ficdeh-2026",
     "lbSlug": "ficdeh-2026"
-   }
+   },
+   "synopsis_en": "On Colombia's eastern plains, a group of women keep and reinterpret the lecos, the work songs of the llano that men sang for generations. Through their cattle-herding songs they reclaim their place in llanero tradition, revealing a harmonious relationship with the land and a complex attachment to plains life."
   },
   {
    "title": "La grandiosa",
@@ -450,8 +453,8 @@
    "genre": "Ficción",
    "synopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
    "synopsis_lang": "es",
-   "poster": "",
-   "posterSource": "",
+   "poster": "/assets/ficdeh/la-independencia.jpg",
+   "posterSource": "custom",
    "lbSlug": "independence-2025",
    "_src": {
     "url": "https://siembrafest.com/seleccion-sf-2026/",
@@ -459,7 +462,8 @@
     "ficha_raw": "2024 | 20' | Ficción",
     "formato": "Ficción",
     "produccion": "Johanna Quintero",
-    "tmdb_id": 1595081
+    "tmdb_id": 1595081,
+    "heredado_de": "ficdeh-2026"
    },
    "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
    "title_en": "Independence",
@@ -740,7 +744,7 @@
    "country": "Colombia",
    "section": "👻 Cinema Patatús",
    "genre": "Drama, Terror",
-   "synopsis": "",
+   "synopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
    "synopsis_lang": "es",
    "poster": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
    "posterSource": "tmdb",
@@ -750,7 +754,8 @@
     "ficha_raw": "2025 | 17' | Ficción – Drama, Terror",
     "formato": "Ficción",
     "produccion": "Carolina Cardona Pardo",
-    "tmdb_id": 1565878
+    "tmdb_id": 1565878,
+    "heredado_de": "ficma-2026"
    },
    "lbSlug": "que-el-cielo-nos-perdone"
   },
@@ -1021,7 +1026,7 @@
    "country": "Colombia",
    "section": "🎞️ Buenos, Malos y Feos",
    "genre": "Documental / Experimental",
-   "synopsis": "",
+   "synopsis": "S. escribe a Juan, que está profundamente dormido. S. reflexiona sobre imágenes y cine, y un consejo de un director que admira la desafía a ella y a todo su trabajo anterior. Decidida a encontrar una idea detrás de las imágenes que ha grabado hasta ahora, S. deambula entre los materiales, su propio archivo de imágenes y sonidos, pestañas de navegador de Internet, películas occidentales y cuentos japoneses. S. recopila todos estos pensamientos y hallazgos en una carta, con la esperanza de entregárselo a Juan cuando se despierte.",
    "synopsis_lang": "es",
    "poster": "/gY6k1B2FGXBsMvTDr7ltZRSe7OF.jpg",
    "posterSource": "tmdb",
@@ -1032,7 +1037,8 @@
     "ficha_raw": "2025 | 16' | Documental / Experimental",
     "formato": "Documental / Experimental",
     "produccion": "Sofía Salinas Barrera; Juan Bohorquez Triana",
-    "tmdb_id": 1592609
+    "tmdb_id": 1592609,
+    "heredado_de": "cinemancia-2026"
    },
    "synopsis_en": "S. writes to Juan, who is deeply asleep. She reflects on images and cinema, and a piece of advice from a director she admires challenges her and all her previous work. Determined to find an idea behind the images she has recorded so far, S. wanders among materials, her own archive of images and sounds, internet browser tabs, western films and Japanese short stories. S. compiles all these thoughts and findings into a letter, hoping to deliver it to Juan when he wakes up.",
    "_inherited": {
@@ -1104,12 +1110,14 @@
     "ficha_raw": "2025 | 101' | Documental – Social, war, peace, religión",
     "formato": "Documental",
     "produccion": "Johanna Quintero",
-    "tmdb_id": 1738416
+    "tmdb_id": 1738416,
+    "heredado_de": "ficdeh-2026"
    },
    "_inherited": {
     "synopsis": "ficdeh-2026",
     "lbSlug": "ficdeh-2026"
-   }
+   },
+   "synopsis_en": "In San Vicente de Chucurí, Father Floro sets up a fruit processing plant to stem the losses caused by the war. The film also remembers Floresmiro López, a priest who risked his life defending peasant farmers during the armed conflict. With love and moral firmness, he faced down the guns and left a legacy of community organizing that still shapes the region."
   },
   {
    "title": "Relatos del camino",
@@ -1184,7 +1192,7 @@
    "country": "Colombia",
    "section": "🎞️ Buenos, Malos y Feos",
    "genre": "Animación",
-   "synopsis": "",
+   "synopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público.",
    "synopsis_lang": "es",
    "poster": "/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
    "posterSource": "tmdb",
@@ -1195,7 +1203,8 @@
     "ficha_raw": "2025 | 9' | Animación",
     "formato": "Animación",
     "produccion": "Laura María Rodríguez",
-    "tmdb_id": 1592968
+    "tmdb_id": 1592968,
+    "heredado_de": "cineautopsia-2026"
    },
    "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
    "_inherited": {
@@ -1283,14 +1292,15 @@
    "genre": "Campo; Emigracion/Inmigracion; Familia",
    "synopsis": "Manuel quiere vender su cosecha de maíz para costear el viaje a la ciudad y dejar la vereda de sus padres ancianos. Conocer a Ezequiel —un viejo ermitaño y huaquero que parece haber hallado algo grande— lo enfrenta a su ambición, el amor y sus anhelos más profundos.",
    "synopsis_lang": "es",
-   "poster": "",
-   "posterSource": "",
+   "poster": "/assets/ficmontanas/el-huaquero.jpg",
+   "posterSource": "custom",
    "_src": {
     "url": "https://siembrafest.com/seleccion-sf-2026/",
     "date": "2026-08-02",
     "ficha_raw": "2025 | 94' | Ficción – Campo; Emigracion/Inmigracion; Familia",
     "formato": "Ficción",
-    "produccion": "Gloria Saavedra Castaño"
+    "produccion": "Gloria Saavedra Castaño",
+    "heredado_de": "ficmontanas-2026"
    },
    "synopsis_en": "Manuel wants to sell his corn harvest to fund his trip to the city and leave the hamlet where his elderly parents live. Meeting Ezequiel —an old hermit and treasure-hunting huaquero who seems to have found something big— forces him to confront his ambition, love and his deepest longings.",
    "_inherited": {
@@ -1360,12 +1370,14 @@
     "ficha_raw": "2024 | 27' | Documental – DERECHOS HUMANOS",
     "formato": "Documental",
     "produccion": "Fundación Medios de Comunicación Étnicos y Ambientales",
-    "tmdb_id": 1738823
+    "tmdb_id": 1738823,
+    "heredado_de": "ficdeh-2026"
    },
    "_inherited": {
     "synopsis": "ficdeh-2026",
     "lbSlug": "ficdeh-2026"
-   }
+   },
+   "synopsis_en": "In the heart of the Colombian Pacific, Manuel Cruz and his wife Angy work to heal the wounds of a community devastated by the armed conflict. They do it by keeping their ancestral traditions alive and honoring the memory of the victims, while the river, a silent witness, flows on as a symbol of resistance and hope."
   },
   {
    "title": "Extinta",
@@ -1694,7 +1706,7 @@
    "country": "Colombia",
    "section": "🪶 Estampas",
    "genre": "Videodance",
-   "synopsis": "",
+   "synopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras.",
    "synopsis_lang": "es",
    "poster": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
    "posterSource": "tmdb",
@@ -1705,7 +1717,8 @@
     "ficha_raw": "2026 | 11' | Documental / Experimental – Videodance",
     "formato": "Documental / Experimental",
     "produccion": "Tragaluz",
-    "tmdb_id": 1713804
+    "tmdb_id": 1713804,
+    "heredado_de": "qaff-2026"
    },
    "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
    "_inherited": {
@@ -1799,12 +1812,14 @@
     "ficha_raw": "2025 | 70' | Documental – Human Righst",
     "formato": "Documental",
     "produccion": "Paola Zuluaga Palacios",
-    "tmdb_id": 1739023
+    "tmdb_id": 1739023,
+    "heredado_de": "ficdeh-2026"
    },
    "_inherited": {
     "synopsis": "ficdeh-2026",
     "lbSlug": "ficdeh-2026"
-   }
+   },
+   "synopsis_en": "Since 1977, peasant women weavers in the mountains of Cundinamarca have resisted the unregulated exploitation of freshwater springs by the beverage and ultra-processed food industries. As water becomes a business, communities endure drought and the decay of their ecosystems. Now, facing a new concession to bottle water, they organize to defend their territory and demand that water remain a right, not a commodity."
   },
   {
    "title": "Teresa",
