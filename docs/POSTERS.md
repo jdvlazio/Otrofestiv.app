@@ -470,6 +470,40 @@ esas bajan a la línea siguiente con el sustantivo que introducen.
    `[poster-editorial-unique]` (corre el `makeProgramPoster` real sobre cada
    programa y falla si dos coinciden). **ERROR, sin falsos positivos.**
 
+### 6.3 La pila de obras — un compuesto se apila, no se escribe como frase
+
+Un título compuesto (`«A + B»`, `«A + B + C»`) **no es una frase**: es una lista
+de obras. Escrito corrido, el motor lo partía donde cayera —línea rota a mitad de
+un nombre, el « + » colgando al final del renglón, elipsis al cierre—. Un cartel
+de programa doble nunca tipografía así.
+
+**Retícula** (medida sobre grid y rulers, `_buildPosterV16`):
+
+1. **Un bloque tipográfico por obra**, todos al **mismo cuerpo** — el menor de
+   los ajustes individuales, tope **16**. Una obra corta no puede gritar más que
+   su vecina.
+2. **1u exacto** entre bloques. El « + » vive **en ese gap**, a **0,5u**, al
+   margen izquierdo como todo el sistema, en el **color de la sección**, y
+   ópticamente centrado en el aire (no apoyado en su borde).
+3. La pila **crece hacia arriba** desde la misma base que cualquier título
+   (§6.0): su última línea se apoya donde se apoyaba el título de una sola obra.
+4. **Frontera 2–3 obras** — la misma de la forma C / Escalera. Con **4 o más** se
+   conserva la forma de siempre: el cuerpo caería a ilegible y el pie ya dice
+   «4 obras» (`_datoCompuesto`).
+
+**El techo es estructural, no correctivo.** El presupuesto de alto —base del
+título − fondo del rótulo **ya ajustado** − 0,5u de aire— se le entrega a
+`_fitLines` como la caja de cada obra. Un lazo que encogiera *después* es código
+muerto: `_fitLines` lo adelanta siempre, y un guardián que nunca dispara no es de
+fiar. Con una caja fija de 2,4u en vez del presupuesto medido, un cartel real de
+Cinemancia invade la sección.
+
+Lo blindan 7 tests en `tests/unit/poster.test.js` (11 mutantes, todos mueren).
+Ojo con los inputs: dos mutantes sobrevivieron a la primera versión porque los
+casos de prueba caían al suelo **por ancho** antes de que el techo mandara. El
+input que prueba el techo salió de una búsqueda por fuerza bruta sobre el espacio
+de compuestos — **tres nombres medianos bajo un rótulo de 2 líneas**.
+
 ---
 
 ## 7. `poster: ""` — exclusivo de programas
