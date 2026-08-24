@@ -1,659 +1,659 @@
 {
-  "id": "leviza2026",
-  "name": "Leviza - Festival de Cine y Audiovisuales",
-  "shortName": "LEVIZA",
-  "city": "Zapatoca",
-  "country": "CO",
-  "dates": "14–17 MAY",
-  "dates_en": "MAY 14–17",
-  "year": 2026,
-  "timezoneOffset": "-05:00",
-  "storageKey": "leviza2026_",
-  "festivalEndStr": "2026-05-17T23:00:00",
-  "festivalDates": {
-    "JUE 14": "2026-05-14",
-    "VIE 15": "2026-05-15",
-    "SÁB 16": "2026-05-16",
-    "DOM 17": "2026-05-17"
+ "id": "leviza2026",
+ "name": "Leviza - Festival de Cine y Audiovisuales",
+ "shortName": "LEVIZA",
+ "city": "Zapatoca",
+ "country": "CO",
+ "dates": "14–17 MAY",
+ "dates_en": "MAY 14–17",
+ "year": 2026,
+ "timezoneOffset": "-05:00",
+ "storageKey": "leviza2026_",
+ "festivalEndStr": "2026-05-17T23:00:00",
+ "festivalDates": {
+  "JUE 14": "2026-05-14",
+  "VIE 15": "2026-05-15",
+  "SÁB 16": "2026-05-16",
+  "DOM 17": "2026-05-17"
+ },
+ "days": [
+  {
+   "k": "JUE 14",
+   "d": 14,
+   "lbl": "JUE"
   },
-  "days": [
+  {
+   "k": "VIE 15",
+   "d": 15,
+   "lbl": "VIE"
+  },
+  {
+   "k": "SÁB 16",
+   "d": 16,
+   "lbl": "SÁB"
+  },
+  {
+   "k": "DOM 17",
+   "d": 17,
+   "lbl": "DOM"
+  }
+ ],
+ "dayKeys": [
+  "JUE 14",
+  "VIE 15",
+  "SÁB 16",
+  "DOM 17"
+ ],
+ "dayShort": {
+  "JUE 14": "JUE 14",
+  "VIE 15": "VIE 15",
+  "SÁB 16": "SÁB 16",
+  "DOM 17": "DOM 17"
+ },
+ "dayShort_en": {
+  "JUE 14": "THU 14",
+  "VIE 15": "FRI 15",
+  "SÁB 16": "SAT 16",
+  "DOM 17": "SUN 17"
+ },
+ "prioLimit": 3,
+ "transport": "mixed",
+ "venues": {
+  "Auditorio Polideportivo - Zapatoca": {
+   "short": "Polideportivo",
+   "lat": 6.8115307,
+   "lng": -73.2714857,
+   "city": "Zapatoca",
+   "address": "Zapatoca, Santander"
+  },
+  "Mediateca Municipal - Zapatoca": {
+   "short": "Mediateca",
+   "lat": 6.8162013,
+   "lng": -73.269468,
+   "city": "Zapatoca",
+   "address": "Cra. 10 #1938, Zapatoca, Santander"
+  }
+ },
+ "films": [
+  {
+   "title": "La Suprema",
+   "director": "Felipe Holguín Caro",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "section": "🎬 Inauguración",
+   "day": "JUE 14",
+   "time": "10:00",
+   "venue": "Auditorio Polideportivo - Zapatoca",
+   "has_qa": true,
+   "day_order": 0,
+   "tmdb_id": 1105382,
+   "year": 2023,
+   "genre": "Drama",
+   "lbSlug": "⚠️ LB PENDIENTE",
+   "synopsis": "En una remota aldea sin electricidad, una adolescente convence a todo el pueblo para encontrar la forma de ver a su tío, del que está distanciada, competir en un combate del campeonato mundial de boxeo.",
+   "poster": "/PTehUUjJ9afMKhuJoMeKFlA25D.jpg",
+   "duration": "83 min",
+   "synopsis_en": "In a remote village without electricity, a teenage girl rallies the entire town to find a way to watch her estranged uncle compete in a world boxing championship bout.",
+   "synopsis_lang": "es",
+   "posterSource": "tmdb"
+  },
+  {
+   "title": "Rebelión",
+   "director": "José Luis Rugeles",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "section": "🎞️ Proyecciones",
+   "day": "JUE 14",
+   "time": "16:00",
+   "venue": "Auditorio Polideportivo - Zapatoca",
+   "day_order": 1,
+   "tmdb_id": 1032603,
+   "year": 2022,
+   "genre": "Drama",
+   "lbSlug": "⚠️ LB PENDIENTE",
+   "synopsis": "La película retrata a un vulnerable y anónimo Joe Arroyo, quizás el cantante colombiano de salsa más importante de la historia, en su viaje claustrofóbico por diferentes momentos de su vida.",
+   "poster": "/pjGO6C0AVxiSJ9EbmJ5B3n7NjAh.jpg",
+   "duration": "101 min",
+   "synopsis_en": "The film portrays a vulnerable and anonymous Joe Arroyo — perhaps the most important Colombian salsa singer in history — in a claustrophobic journey through different moments of his life.",
+   "synopsis_lang": "es",
+   "posterSource": "tmdb"
+  },
+  {
+   "title": "Muestra Competencia Nacional de Ficción — Jueves",
+   "section": "🏆 Competencia Nacional de Ficción",
+   "day": "JUE 14",
+   "time": "19:30",
+   "venue": "Auditorio Polideportivo - Zapatoca",
+   "is_cortos": true,
+   "film_list": [
     {
-      "k": "JUE 14",
-      "d": 14,
-      "lbl": "JUE"
+     "title": "Enigmas: Puro Entretenimiento",
+     "director": "Samuel Lazcano",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/images.jpeg",
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "posterSource": "custom"
     },
     {
-      "k": "VIE 15",
-      "d": 15,
-      "lbl": "VIE"
+     "title": "La Bruja de Mi Ex",
+     "director": "Yesid Rengifo Sanabria",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/LaBruja.jpg",
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "posterSource": "custom"
     },
     {
-      "k": "SÁB 16",
-      "d": 16,
-      "lbl": "SÁB"
+     "title": "La Mujer en el Espejo",
+     "director": "Luis Miguel Cuervo Ospina",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/LaMujer.png",
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "posterSource": "custom"
     },
     {
-      "k": "DOM 17",
-      "d": 17,
-      "lbl": "DOM"
+     "title": "Legado Sinuano",
+     "director": "Luis Vieira Manchego",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/Legado.jpeg",
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "posterSource": "custom"
+    },
+    {
+     "title": "Manual para Reparar",
+     "director": "Laura Mora",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "lbSlug": "⚠️ LB PENDIENTE"
     }
-  ],
-  "dayKeys": [
-    "JUE 14",
-    "VIE 15",
-    "SÁB 16",
-    "DOM 17"
-  ],
-  "dayShort": {
-    "JUE 14": "JUE 14",
-    "VIE 15": "VIE 15",
-    "SÁB 16": "SÁB 16",
-    "DOM 17": "DOM 17"
+   ],
+   "day_order": 2,
+   "flags": "🇨🇴",
+   "lbSlug": "⚠️ LB PENDIENTE"
   },
-  "dayShort_en": {
-    "JUE 14": "THU 14",
-    "VIE 15": "FRI 15",
-    "SÁB 16": "SAT 16",
-    "DOM 17": "SUN 17"
-  },
-  "prioLimit": 3,
-  "transport": "mixed",
-  "venues": {
-    "Auditorio Polideportivo - Zapatoca": {
-      "short": "Polideportivo",
-      "lat": 6.8115307,
-      "lng": -73.2714857,
-      "city": "Zapatoca",
-      "address": "Zapatoca, Santander"
+  {
+   "title": "Muestra Competencia Nacional de Ficción — Viernes",
+   "section": "🏆 Competencia Nacional de Ficción",
+   "day": "VIE 15",
+   "time": "19:30",
+   "venue": "Auditorio Polideportivo - Zapatoca",
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "La Ceremonia",
+     "director": "Deimer Vergara / Julián García",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "lbSlug": "⚠️ LB PENDIENTE"
     },
-    "Mediateca Municipal - Zapatoca": {
-      "short": "Mediateca",
-      "lat": 6.8162013,
-      "lng": -73.269468,
-      "city": "Zapatoca",
-      "address": "Cra. 10 #1938, Zapatoca, Santander"
+    {
+     "title": "No Te Despiertes",
+     "director": "Hernán Velásquez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/NoTeDespiertes.jpg",
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "posterSource": "custom"
+    },
+    {
+     "title": "Pawa",
+     "director": "Marbel Vanegas Jusayu",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/Pawa.jpeg",
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "posterSource": "custom"
+    },
+    {
+     "title": "Refracción",
+     "director": "Isabella Palacio Meda",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/Refraccio_n.jpeg",
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "posterSource": "custom"
+    },
+    {
+     "title": "Tiene que Ser Ella",
+     "director": "Valeria Rojas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "title": "Saltus",
+     "director": "Lisett Contreras",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/Saltus.jpeg",
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "posterSource": "custom"
+    },
+    {
+     "title": "Tándem",
+     "director": "Edison González",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/Tandem.webp",
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "posterSource": "custom"
     }
+   ],
+   "day_order": 4,
+   "flags": "🇨🇴",
+   "lbSlug": "⚠️ LB PENDIENTE"
   },
-  "films": [
+  {
+   "title": "Mateo",
+   "director": "María Gamboa",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "section": "🎞️ Proyecciones",
+   "day": "SÁB 16",
+   "time": "10:00",
+   "venue": "Auditorio Polideportivo - Zapatoca",
+   "has_qa": true,
+   "day_order": 0,
+   "tmdb_id": 262229,
+   "year": 2014,
+   "genre": "Drama",
+   "lbSlug": "⚠️ LB PENDIENTE",
+   "synopsis": "A la impresionante edad de 16 años, el joven Mateo enfrenta la tentación de ingresar a las pandillas del barrio o buscar otra manera de expresarse.",
+   "poster": "/5OjMb4Xa4ezZrjhHAHizFkzR2mX.jpg",
+   "duration": "86 min",
+   "synopsis_en": "At the striking age of 16, young Mateo faces the temptation of joining his neighborhood gangs or finding another way to express himself.",
+   "synopsis_lang": "es",
+   "posterSource": "tmdb"
+  },
+  {
+   "title": "Sumas y Restas",
+   "director": "Víctor Gaviria",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "section": "🎞️ Proyecciones",
+   "day": "SÁB 16",
+   "time": "16:00",
+   "venue": "Auditorio Polideportivo - Zapatoca",
+   "has_qa": true,
+   "day_order": 1,
+   "tmdb_id": 258450,
+   "year": 2004,
+   "genre": "Drama",
+   "lbSlug": "⚠️ LB PENDIENTE",
+   "synopsis": "Una mirada al infame cartel de cocaína de Medellín. Focalizándose en la relación entre un constructor y un traficante.",
+   "poster": "/qliOZ0X4vO9cD7oImKivGncbFrS.jpg",
+   "duration": "107 min",
+   "synopsis_en": "A look at Medellín's infamous cocaine cartel, focusing on the relationship between a construction contractor and a drug trafficker.",
+   "synopsis_lang": "es",
+   "posterSource": "tmdb"
+  },
+  {
+   "title": "Muestra Competencia Nacional de Ficción — Sábado",
+   "section": "🏆 Competencia Nacional de Ficción",
+   "day": "SÁB 16",
+   "time": "19:30",
+   "venue": "Auditorio Polideportivo - Zapatoca",
+   "is_cortos": true,
+   "film_list": [
     {
-      "title": "La Suprema",
-      "director": "Felipe Holguín Caro",
-      "country": "Colombia",
-      "flags": "🇨🇴",
-      "section": "🎬 Inauguración",
-      "day": "JUE 14",
-      "time": "10:00",
-      "venue": "Auditorio Polideportivo - Zapatoca",
-      "has_qa": true,
-      "day_order": 0,
-      "tmdb_id": 1105382,
-      "year": 2023,
-      "genre": "Drama",
-      "lbSlug": "⚠️ LB PENDIENTE",
-      "synopsis": "En una remota aldea sin electricidad, una adolescente convence a todo el pueblo para encontrar la forma de ver a su tío, del que está distanciada, competir en un combate del campeonato mundial de boxeo.",
-      "poster": "/PTehUUjJ9afMKhuJoMeKFlA25D.jpg",
-      "duration": "83 min",
-      "synopsis_en": "In a remote village without electricity, a teenage girl rallies the entire town to find a way to watch her estranged uncle compete in a world boxing championship bout.",
-      "synopsis_lang": "es",
-      "posterSource": "tmdb"
+     "title": "La Independencia",
+     "director": "Jhon Agudelo Suárez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/LaIndependencia.webp",
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "posterSource": "custom"
     },
     {
-      "title": "Rebelión",
-      "director": "José Luis Rugeles",
-      "country": "Colombia",
-      "flags": "🇨🇴",
-      "section": "🎞️ Proyecciones",
-      "day": "JUE 14",
-      "time": "16:00",
-      "venue": "Auditorio Polideportivo - Zapatoca",
-      "day_order": 1,
-      "tmdb_id": 1032603,
-      "year": 2022,
-      "genre": "Biográfico, Drama, Musical",
-      "lbSlug": "⚠️ LB PENDIENTE",
-      "synopsis": "La película retrata a un vulnerable y anónimo Joe Arroyo, quizás el cantante colombiano de salsa más importante de la historia, en su viaje claustrofóbico por diferentes momentos de su vida.",
-      "poster": "/pjGO6C0AVxiSJ9EbmJ5B3n7NjAh.jpg",
-      "duration": "101 min",
-      "synopsis_en": "The film portrays a vulnerable and anonymous Joe Arroyo — perhaps the most important Colombian salsa singer in history — in a claustrophobic journey through different moments of his life.",
-      "synopsis_lang": "es",
-      "posterSource": "tmdb"
+     "title": "Luz Blanca",
+     "director": "Luigui Acuña",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/Luz-Blanca.jpg",
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "posterSource": "custom"
     },
     {
-      "title": "Muestra Competencia Nacional de Ficción — Jueves",
-      "section": "🏆 Competencia Nacional de Ficción",
-      "day": "JUE 14",
-      "time": "19:30",
-      "venue": "Auditorio Polideportivo - Zapatoca",
-      "is_cortos": true,
-      "film_list": [
-        {
-          "title": "Enigmas: Puro Entretenimiento",
-          "director": "Samuel Lazcano",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/images.jpeg",
-          "lbSlug": "⚠️ LB PENDIENTE",
-          "posterSource": "custom"
-        },
-        {
-          "title": "La Bruja de Mi Ex",
-          "director": "Yesid Rengifo Sanabria",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/LaBruja.jpg",
-          "lbSlug": "⚠️ LB PENDIENTE",
-          "posterSource": "custom"
-        },
-        {
-          "title": "La Mujer en el Espejo",
-          "director": "Luis Miguel Cuervo Ospina",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/LaMujer.png",
-          "lbSlug": "⚠️ LB PENDIENTE",
-          "posterSource": "custom"
-        },
-        {
-          "title": "Legado Sinuano",
-          "director": "Luis Vieira Manchego",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/Legado.jpeg",
-          "lbSlug": "⚠️ LB PENDIENTE",
-          "posterSource": "custom"
-        },
-        {
-          "title": "Manual para Reparar",
-          "director": "Laura Mora",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "lbSlug": "⚠️ LB PENDIENTE"
-        }
-      ],
-      "day_order": 2,
-      "flags": "🇨🇴",
-      "lbSlug": "⚠️ LB PENDIENTE"
+     "title": "Retrato de un Adiós",
+     "director": "Santiago Atehortúa",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "lbSlug": "⚠️ LB PENDIENTE"
     },
     {
-      "title": "Muestra Competencia Nacional de Ficción — Viernes",
-      "section": "🏆 Competencia Nacional de Ficción",
-      "day": "VIE 15",
-      "time": "19:30",
-      "venue": "Auditorio Polideportivo - Zapatoca",
-      "is_cortos": true,
-      "film_list": [
-        {
-          "title": "La Ceremonia",
-          "director": "Deimer Vergara / Julián García",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "lbSlug": "⚠️ LB PENDIENTE"
-        },
-        {
-          "title": "No Te Despiertes",
-          "director": "Hernán Velásquez",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/NoTeDespiertes.jpg",
-          "lbSlug": "⚠️ LB PENDIENTE",
-          "posterSource": "custom"
-        },
-        {
-          "title": "Pawa",
-          "director": "Marbel Vanegas Jusayu",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/Pawa.jpeg",
-          "lbSlug": "⚠️ LB PENDIENTE",
-          "posterSource": "custom"
-        },
-        {
-          "title": "Refracción",
-          "director": "Isabella Palacio Meda",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/Refraccio_n.jpeg",
-          "lbSlug": "⚠️ LB PENDIENTE",
-          "posterSource": "custom"
-        },
-        {
-          "title": "Tiene que Ser Ella",
-          "director": "Valeria Rojas",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "lbSlug": "⚠️ LB PENDIENTE"
-        },
-        {
-          "title": "Saltus",
-          "director": "Lisett Contreras",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/Saltus.jpeg",
-          "lbSlug": "⚠️ LB PENDIENTE",
-          "posterSource": "custom"
-        },
-        {
-          "title": "Tándem",
-          "director": "Edison González",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/Tandem.webp",
-          "lbSlug": "⚠️ LB PENDIENTE",
-          "posterSource": "custom"
-        }
-      ],
-      "day_order": 4,
-      "flags": "🇨🇴",
-      "lbSlug": "⚠️ LB PENDIENTE"
+     "title": "Ruidos",
+     "director": "Lala Corredor",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "lbSlug": "⚠️ LB PENDIENTE"
     },
     {
-      "title": "Mateo",
-      "director": "María Gamboa",
-      "country": "Colombia",
-      "flags": "🇨🇴",
-      "section": "🎞️ Proyecciones",
-      "day": "SÁB 16",
-      "time": "10:00",
-      "venue": "Auditorio Polideportivo - Zapatoca",
-      "has_qa": true,
-      "day_order": 0,
-      "tmdb_id": 262229,
-      "year": 2014,
-      "genre": "Drama",
-      "lbSlug": "⚠️ LB PENDIENTE",
-      "synopsis": "A la impresionante edad de 16 años, el joven Mateo enfrenta la tentación de ingresar a las pandillas del barrio o buscar otra manera de expresarse.",
-      "poster": "/5OjMb4Xa4ezZrjhHAHizFkzR2mX.jpg",
-      "duration": "86 min",
-      "synopsis_en": "At the striking age of 16, young Mateo faces the temptation of joining his neighborhood gangs or finding another way to express himself.",
-      "synopsis_lang": "es",
-      "posterSource": "tmdb"
+     "title": "Téngale Fe",
+     "director": "Doney Cardona",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/TengaleFE.png",
+     "lbSlug": "⚠️ LB PENDIENTE",
+     "posterSource": "custom"
     },
     {
-      "title": "Sumas y Restas",
-      "director": "Víctor Gaviria",
-      "country": "Colombia",
-      "flags": "🇨🇴",
-      "section": "🎞️ Proyecciones",
-      "day": "SÁB 16",
-      "time": "16:00",
-      "venue": "Auditorio Polideportivo - Zapatoca",
-      "has_qa": true,
-      "day_order": 1,
-      "tmdb_id": 258450,
-      "year": 2004,
-      "genre": "Drama, Crimen",
-      "lbSlug": "⚠️ LB PENDIENTE",
-      "synopsis": "Una mirada al infame cartel de cocaína de Medellín. Focalizándose en la relación entre un constructor y un traficante.",
-      "poster": "/qliOZ0X4vO9cD7oImKivGncbFrS.jpg",
-      "duration": "107 min",
-      "synopsis_en": "A look at Medellín's infamous cocaine cartel, focusing on the relationship between a construction contractor and a drug trafficker.",
-      "synopsis_lang": "es",
-      "posterSource": "tmdb"
-    },
-    {
-      "title": "Muestra Competencia Nacional de Ficción — Sábado",
-      "section": "🏆 Competencia Nacional de Ficción",
-      "day": "SÁB 16",
-      "time": "19:30",
-      "venue": "Auditorio Polideportivo - Zapatoca",
-      "is_cortos": true,
-      "film_list": [
-        {
-          "title": "La Independencia",
-          "director": "Jhon Agudelo Suárez",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/LaIndependencia.webp",
-          "lbSlug": "⚠️ LB PENDIENTE",
-          "posterSource": "custom"
-        },
-        {
-          "title": "Luz Blanca",
-          "director": "Luigui Acuña",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/Luz-Blanca.jpg",
-          "lbSlug": "⚠️ LB PENDIENTE",
-          "posterSource": "custom"
-        },
-        {
-          "title": "Retrato de un Adiós",
-          "director": "Santiago Atehortúa",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "lbSlug": "⚠️ LB PENDIENTE"
-        },
-        {
-          "title": "Ruidos",
-          "director": "Lala Corredor",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "lbSlug": "⚠️ LB PENDIENTE"
-        },
-        {
-          "title": "Téngale Fe",
-          "director": "Doney Cardona",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/TengaleFE.png",
-          "lbSlug": "⚠️ LB PENDIENTE",
-          "posterSource": "custom"
-        },
-        {
-          "title": "Tiempos Revelados",
-          "director": "Paola Nova / Fredy Roldán",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "lbSlug": "⚠️ LB PENDIENTE"
-        }
-      ],
-      "day_order": 2,
-      "flags": "🇨🇴",
-      "lbSlug": "⚠️ LB PENDIENTE"
-    },
-    {
-      "title": "La Vendedora de Rosas",
-      "director": "Víctor Gaviria",
-      "country": "Colombia",
-      "flags": "🇨🇴",
-      "section": "🎞️ Proyecciones",
-      "day": "DOM 17",
-      "time": "10:00",
-      "venue": "Auditorio Polideportivo - Zapatoca",
-      "has_qa": true,
-      "day_order": 0,
-      "tmdb_id": 97038,
-      "year": 1998,
-      "genre": "Drama",
-      "lbSlug": "⚠️ LB PENDIENTE",
-      "synopsis": "Mónica, de 13 años, lleva una vida en la calle, ganándose la vida vendiendo rosas.",
-      "poster": "/oZgWtVMiq0IuuvmArTtLzWKIra3.jpg",
-      "duration": "116 min",
-      "synopsis_en": "Mónica, 13 years old, lives on the streets, earning a living selling roses.",
-      "synopsis_lang": "es",
-      "posterSource": "tmdb"
-    },
-    {
-      "title": "Los Súper Descendientes",
-      "director": "Rasmus A. Sivertsen",
-      "country": "Noruega",
-      "flags": "🇳🇴",
-      "section": "🎞️ Proyecciones",
-      "day": "DOM 17",
-      "time": "16:00",
-      "venue": "Auditorio Polideportivo - Zapatoca",
-      "day_order": 1,
-      "tmdb_id": 1222695,
-      "year": 2022,
-      "genre": "Animación, Familiar",
-      "lbSlug": "⚠️ LB PENDIENTE",
-      "synopsis": "No hace falta ser un superhéroe para ser súper. Hedvig, de 11 años, encoge accidentalmente el traje de su padre, el superhéroe del pueblo, y tendrá que encontrar su propio superpoder.",
-      "poster": "/buCip15i0a0PlT77oC7OwQD0HAC.jpg",
-      "duration": "76 min",
-      "synopsis_en": "You don't have to be a superhero to be super. Eleven-year-old Hedvig accidentally shrinks her father's superhero suit, and will have to find her own superpower.",
-      "synopsis_lang": "es",
-      "posterSource": "tmdb"
-    },
-    {
-      "title": "Clausura — Filminutos Movimiento Audiovisual LEVIZA",
-      "section": "⭐ Clausura",
-      "day": "DOM 17",
-      "time": "19:30",
-      "venue": "Auditorio Polideportivo - Zapatoca",
-      "is_cortos": true,
-      "film_list": [
-        {
-          "title": "Un Recuerdo Muerto",
-          "lbSlug": "⚠️ LB PENDIENTE"
-        },
-        {
-          "title": "Perdón",
-          "lbSlug": "⚠️ LB PENDIENTE"
-        },
-        {
-          "title": "La Lluvia",
-          "lbSlug": "⚠️ LB PENDIENTE"
-        },
-        {
-          "title": "Entre Ventanas",
-          "lbSlug": "⚠️ LB PENDIENTE"
-        },
-        {
-          "title": "Justa Medida",
-          "lbSlug": "⚠️ LB PENDIENTE"
-        },
-        {
-          "title": "Del Otro Lado del Solar",
-          "lbSlug": "⚠️ LB PENDIENTE"
-        }
-      ],
-      "day_order": 2,
-      "flags": "🇨🇴",
-      "lbSlug": "⚠️ LB PENDIENTE"
-    },
-    {
-      "title": "Taller de Producción y Financiación",
-      "section": "🎓 Talleres",
-      "type": "event",
-      "day": "JUE 14",
-      "time": "14:00",
-      "venue": "Mediateca Municipal - Zapatoca",
-      "day_order": 3,
-      "duration": "240 min",
-      "is_recurring": true,
-      "director": "Tere Gaviria"
-    },
-    {
-      "title": "Taller de Producción y Financiación",
-      "section": "🎓 Talleres",
-      "type": "event",
-      "day": "VIE 15",
-      "time": "14:00",
-      "venue": "Mediateca Municipal - Zapatoca",
-      "day_order": 5,
-      "duration": "240 min",
-      "is_recurring": true,
-      "director": "Tere Gaviria"
-    },
-    {
-      "title": "Taller de Producción y Financiación",
-      "section": "🎓 Talleres",
-      "type": "event",
-      "day": "SÁB 16",
-      "time": "14:00",
-      "venue": "Mediateca Municipal - Zapatoca",
-      "day_order": 3,
-      "duration": "240 min",
-      "is_recurring": true,
-      "director": "Tere Gaviria"
-    },
-    {
-      "title": "Taller de Guion",
-      "section": "🎓 Talleres",
-      "type": "event",
-      "day": "JUE 14",
-      "time": "14:00",
-      "venue": "Mediateca Municipal - Zapatoca",
-      "day_order": 4,
-      "duration": "240 min",
-      "is_recurring": true,
-      "director": "Raúl Gutiérrez"
-    },
-    {
-      "title": "Taller de Guion",
-      "section": "🎓 Talleres",
-      "type": "event",
-      "day": "VIE 15",
-      "time": "14:00",
-      "venue": "Mediateca Municipal - Zapatoca",
-      "day_order": 6,
-      "duration": "240 min",
-      "is_recurring": true,
-      "director": "Raúl Gutiérrez"
-    },
-    {
-      "title": "Taller de Guion",
-      "section": "🎓 Talleres",
-      "type": "event",
-      "day": "SÁB 16",
-      "time": "14:00",
-      "venue": "Mediateca Municipal - Zapatoca",
-      "day_order": 4,
-      "duration": "240 min",
-      "is_recurring": true,
-      "director": "Raúl Gutiérrez"
-    },
-    {
-      "title": "Taller de Dirección de Actores",
-      "section": "🎓 Talleres",
-      "type": "event",
-      "day": "VIE 15",
-      "time": "14:00",
-      "venue": "Mediateca Municipal - Zapatoca",
-      "day_order": 7,
-      "duration": "240 min",
-      "is_recurring": true,
-      "director": "María Gamboa"
-    },
-    {
-      "title": "Taller de Dirección de Actores",
-      "section": "🎓 Talleres",
-      "type": "event",
-      "day": "SÁB 16",
-      "time": "14:00",
-      "venue": "Mediateca Municipal - Zapatoca",
-      "day_order": 5,
-      "duration": "240 min",
-      "is_recurring": true,
-      "director": "María Gamboa"
-    },
-    {
-      "title": "Taller de Dirección de Actores",
-      "section": "🎓 Talleres",
-      "type": "event",
-      "day": "DOM 17",
-      "time": "14:00",
-      "venue": "Mediateca Municipal - Zapatoca",
-      "day_order": 3,
-      "duration": "240 min",
-      "is_recurring": true,
-      "director": "María Gamboa"
-    },
-    {
-      "title": "Taller de Iniciación Actoral",
-      "section": "🎓 Talleres",
-      "type": "event",
-      "day": "VIE 15",
-      "time": "14:00",
-      "venue": "Mediateca Municipal - Zapatoca",
-      "day_order": 8,
-      "duration": "240 min",
-      "is_recurring": true,
-      "director": "Herman Sánchez"
-    },
-    {
-      "title": "Taller de Iniciación Actoral",
-      "section": "🎓 Talleres",
-      "type": "event",
-      "day": "SÁB 16",
-      "time": "14:00",
-      "venue": "Mediateca Municipal - Zapatoca",
-      "day_order": 6,
-      "duration": "240 min",
-      "is_recurring": true,
-      "director": "Herman Sánchez"
-    },
-    {
-      "title": "Taller de Iniciación Actoral",
-      "section": "🎓 Talleres",
-      "type": "event",
-      "day": "DOM 17",
-      "time": "14:00",
-      "venue": "Mediateca Municipal - Zapatoca",
-      "day_order": 4,
-      "duration": "240 min",
-      "is_recurring": true,
-      "director": "Herman Sánchez"
-    },
-    {
-      "title": "Chist + Sin la Luz Perpetua",
-      "section": "🎞️ Proyecciones",
-      "is_programa": true,
-      "has_qa": true,
-      "day": "VIE 15",
-      "time": "10:00",
-      "venue": "Auditorio Polideportivo - Zapatoca",
-      "duration": "36 min",
-      "day_order": 0,
-      "film_list": [
-        {
-          "title": "Chist",
-          "director": "Elkin Díaz",
-          "year": "2022",
-          "duration": "11 min",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/Chist.jpg",
-          "synopsis": "Un escritor que no escribe llega a su casa entrada la noche con cara de suicidio, dispuesto a torturar a los suyos debido a su estreñimiento creativo. En su despacho, una galería de grandes escritores parece burlarse de sus malos intentos.",
-          "synopsis_lang": "es",
-          "posterSource": "custom",
-          "lbSlug": "chist-1"
-        },
-        {
-          "title": "Sin la Luz Perpetua",
-          "director": "Raúl Gutiérrez",
-          "year": "2022",
-          "duration": "25 min",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "poster": "/assets/leviza/SinLaLuz.jpg",
-          "synopsis": "Tres historias entrelazadas a través de décadas de historia colombiana: un militar desaparecido en la Guerra de Corea, un sacerdote que busca a un colega desaparecido por paramilitares, y una periodista en busca de la familia de un hombre enterrado como N.N.",
-          "synopsis_lang": "es",
-          "posterSource": "custom"
-        }
-      ],
-      "poster": "/assets/leviza/Chist.jpg",
-      "genre": "Comedia, Drama",
-      "posterSource": "custom"
-    },
-    {
-      "title": "Filminutos YarimaFICS + Candelaria",
-      "section": "🎞️ Proyecciones",
-      "is_programa": true,
-      "has_qa": false,
-      "day": "VIE 15",
-      "time": "16:00",
-      "venue": "Auditorio Polideportivo - Zapatoca",
-      "duration": "102 min",
-      "day_order": 3,
-      "film_list": [
-        {
-          "title": "Filminutos Semillero YarimaFICS — Barrancabermeja",
-          "director": "",
-          "year": "2025",
-          "duration": "~15 min",
-          "country": "Colombia",
-          "flags": "🇨🇴",
-          "synopsis": "Selección de cortometrajes de un minuto realizados por jóvenes del Semillero YarimaFICS en Barrancabermeja.",
-          "synopsis_lang": "es"
-        },
-        {
-          "title": "Candelaria",
-          "director": "Jhonny Hendrix Hinestroza",
-          "year": "2017",
-          "duration": "87 min",
-          "country": "Colombia / Cuba",
-          "flags": "🇨🇴🇨🇺",
-          "synopsis": "Dos pensionistas, una cámara de video y una propuesta indecente.",
-          "lbSlug": "candelaria-2017",
-          "poster": "/3xszLcSPv2ntc5QLKx86UAsp52E.jpg",
-          "synopsis_lang": "es",
-          "posterSource": "tmdb"
-        }
-      ],
-      "poster": "/3xszLcSPv2ntc5QLKx86UAsp52E.jpg",
-      "genre": "Comedia, Drama",
-      "posterSource": "tmdb"
+     "title": "Tiempos Revelados",
+     "director": "Paola Nova / Fredy Roldán",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "lbSlug": "⚠️ LB PENDIENTE"
     }
-  ]
+   ],
+   "day_order": 2,
+   "flags": "🇨🇴",
+   "lbSlug": "⚠️ LB PENDIENTE"
+  },
+  {
+   "title": "La Vendedora de Rosas",
+   "director": "Víctor Gaviria",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "section": "🎞️ Proyecciones",
+   "day": "DOM 17",
+   "time": "10:00",
+   "venue": "Auditorio Polideportivo - Zapatoca",
+   "has_qa": true,
+   "day_order": 0,
+   "tmdb_id": 97038,
+   "year": 1998,
+   "genre": "Drama",
+   "lbSlug": "⚠️ LB PENDIENTE",
+   "synopsis": "Mónica, de 13 años, lleva una vida en la calle, ganándose la vida vendiendo rosas.",
+   "poster": "/oZgWtVMiq0IuuvmArTtLzWKIra3.jpg",
+   "duration": "116 min",
+   "synopsis_en": "Mónica, 13 years old, lives on the streets, earning a living selling roses.",
+   "synopsis_lang": "es",
+   "posterSource": "tmdb"
+  },
+  {
+   "title": "Los Súper Descendientes",
+   "director": "Rasmus A. Sivertsen",
+   "country": "Noruega",
+   "flags": "🇳🇴",
+   "section": "🎞️ Proyecciones",
+   "day": "DOM 17",
+   "time": "16:00",
+   "venue": "Auditorio Polideportivo - Zapatoca",
+   "day_order": 1,
+   "tmdb_id": 1222695,
+   "year": 2022,
+   "genre": "Animación",
+   "lbSlug": "⚠️ LB PENDIENTE",
+   "synopsis": "No hace falta ser un superhéroe para ser súper. Hedvig, de 11 años, encoge accidentalmente el traje de su padre, el superhéroe del pueblo, y tendrá que encontrar su propio superpoder.",
+   "poster": "/buCip15i0a0PlT77oC7OwQD0HAC.jpg",
+   "duration": "76 min",
+   "synopsis_en": "You don't have to be a superhero to be super. Eleven-year-old Hedvig accidentally shrinks her father's superhero suit, and will have to find her own superpower.",
+   "synopsis_lang": "es",
+   "posterSource": "tmdb"
+  },
+  {
+   "title": "Clausura — Filminutos Movimiento Audiovisual LEVIZA",
+   "section": "⭐ Clausura",
+   "day": "DOM 17",
+   "time": "19:30",
+   "venue": "Auditorio Polideportivo - Zapatoca",
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Un Recuerdo Muerto",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "title": "Perdón",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "title": "La Lluvia",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "title": "Entre Ventanas",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "title": "Justa Medida",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "title": "Del Otro Lado del Solar",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    }
+   ],
+   "day_order": 2,
+   "flags": "🇨🇴",
+   "lbSlug": "⚠️ LB PENDIENTE"
+  },
+  {
+   "title": "Taller de Producción y Financiación",
+   "section": "🎓 Talleres",
+   "type": "event",
+   "day": "JUE 14",
+   "time": "14:00",
+   "venue": "Mediateca Municipal - Zapatoca",
+   "day_order": 3,
+   "duration": "240 min",
+   "is_recurring": true,
+   "director": "Tere Gaviria"
+  },
+  {
+   "title": "Taller de Producción y Financiación",
+   "section": "🎓 Talleres",
+   "type": "event",
+   "day": "VIE 15",
+   "time": "14:00",
+   "venue": "Mediateca Municipal - Zapatoca",
+   "day_order": 5,
+   "duration": "240 min",
+   "is_recurring": true,
+   "director": "Tere Gaviria"
+  },
+  {
+   "title": "Taller de Producción y Financiación",
+   "section": "🎓 Talleres",
+   "type": "event",
+   "day": "SÁB 16",
+   "time": "14:00",
+   "venue": "Mediateca Municipal - Zapatoca",
+   "day_order": 3,
+   "duration": "240 min",
+   "is_recurring": true,
+   "director": "Tere Gaviria"
+  },
+  {
+   "title": "Taller de Guion",
+   "section": "🎓 Talleres",
+   "type": "event",
+   "day": "JUE 14",
+   "time": "14:00",
+   "venue": "Mediateca Municipal - Zapatoca",
+   "day_order": 4,
+   "duration": "240 min",
+   "is_recurring": true,
+   "director": "Raúl Gutiérrez"
+  },
+  {
+   "title": "Taller de Guion",
+   "section": "🎓 Talleres",
+   "type": "event",
+   "day": "VIE 15",
+   "time": "14:00",
+   "venue": "Mediateca Municipal - Zapatoca",
+   "day_order": 6,
+   "duration": "240 min",
+   "is_recurring": true,
+   "director": "Raúl Gutiérrez"
+  },
+  {
+   "title": "Taller de Guion",
+   "section": "🎓 Talleres",
+   "type": "event",
+   "day": "SÁB 16",
+   "time": "14:00",
+   "venue": "Mediateca Municipal - Zapatoca",
+   "day_order": 4,
+   "duration": "240 min",
+   "is_recurring": true,
+   "director": "Raúl Gutiérrez"
+  },
+  {
+   "title": "Taller de Dirección de Actores",
+   "section": "🎓 Talleres",
+   "type": "event",
+   "day": "VIE 15",
+   "time": "14:00",
+   "venue": "Mediateca Municipal - Zapatoca",
+   "day_order": 7,
+   "duration": "240 min",
+   "is_recurring": true,
+   "director": "María Gamboa"
+  },
+  {
+   "title": "Taller de Dirección de Actores",
+   "section": "🎓 Talleres",
+   "type": "event",
+   "day": "SÁB 16",
+   "time": "14:00",
+   "venue": "Mediateca Municipal - Zapatoca",
+   "day_order": 5,
+   "duration": "240 min",
+   "is_recurring": true,
+   "director": "María Gamboa"
+  },
+  {
+   "title": "Taller de Dirección de Actores",
+   "section": "🎓 Talleres",
+   "type": "event",
+   "day": "DOM 17",
+   "time": "14:00",
+   "venue": "Mediateca Municipal - Zapatoca",
+   "day_order": 3,
+   "duration": "240 min",
+   "is_recurring": true,
+   "director": "María Gamboa"
+  },
+  {
+   "title": "Taller de Iniciación Actoral",
+   "section": "🎓 Talleres",
+   "type": "event",
+   "day": "VIE 15",
+   "time": "14:00",
+   "venue": "Mediateca Municipal - Zapatoca",
+   "day_order": 8,
+   "duration": "240 min",
+   "is_recurring": true,
+   "director": "Herman Sánchez"
+  },
+  {
+   "title": "Taller de Iniciación Actoral",
+   "section": "🎓 Talleres",
+   "type": "event",
+   "day": "SÁB 16",
+   "time": "14:00",
+   "venue": "Mediateca Municipal - Zapatoca",
+   "day_order": 6,
+   "duration": "240 min",
+   "is_recurring": true,
+   "director": "Herman Sánchez"
+  },
+  {
+   "title": "Taller de Iniciación Actoral",
+   "section": "🎓 Talleres",
+   "type": "event",
+   "day": "DOM 17",
+   "time": "14:00",
+   "venue": "Mediateca Municipal - Zapatoca",
+   "day_order": 4,
+   "duration": "240 min",
+   "is_recurring": true,
+   "director": "Herman Sánchez"
+  },
+  {
+   "title": "Chist + Sin la Luz Perpetua",
+   "section": "🎞️ Proyecciones",
+   "is_programa": true,
+   "has_qa": true,
+   "day": "VIE 15",
+   "time": "10:00",
+   "venue": "Auditorio Polideportivo - Zapatoca",
+   "duration": "36 min",
+   "day_order": 0,
+   "film_list": [
+    {
+     "title": "Chist",
+     "director": "Elkin Díaz",
+     "year": "2022",
+     "duration": "11 min",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/Chist.jpg",
+     "synopsis": "Un escritor que no escribe llega a su casa entrada la noche con cara de suicidio, dispuesto a torturar a los suyos debido a su estreñimiento creativo. En su despacho, una galería de grandes escritores parece burlarse de sus malos intentos.",
+     "synopsis_lang": "es",
+     "posterSource": "custom",
+     "lbSlug": "chist-1"
+    },
+    {
+     "title": "Sin la Luz Perpetua",
+     "director": "Raúl Gutiérrez",
+     "year": "2022",
+     "duration": "25 min",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "poster": "/assets/leviza/SinLaLuz.jpg",
+     "synopsis": "Tres historias entrelazadas a través de décadas de historia colombiana: un militar desaparecido en la Guerra de Corea, un sacerdote que busca a un colega desaparecido por paramilitares, y una periodista en busca de la familia de un hombre enterrado como N.N.",
+     "synopsis_lang": "es",
+     "posterSource": "custom"
+    }
+   ],
+   "poster": "/assets/leviza/Chist.jpg",
+   "genre": "Comedia",
+   "posterSource": "custom"
+  },
+  {
+   "title": "Filminutos YarimaFICS + Candelaria",
+   "section": "🎞️ Proyecciones",
+   "is_programa": true,
+   "has_qa": false,
+   "day": "VIE 15",
+   "time": "16:00",
+   "venue": "Auditorio Polideportivo - Zapatoca",
+   "duration": "102 min",
+   "day_order": 3,
+   "film_list": [
+    {
+     "title": "Filminutos Semillero YarimaFICS — Barrancabermeja",
+     "director": "",
+     "year": "2025",
+     "duration": "~15 min",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "synopsis": "Selección de cortometrajes de un minuto realizados por jóvenes del Semillero YarimaFICS en Barrancabermeja.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Candelaria",
+     "director": "Jhonny Hendrix Hinestroza",
+     "year": "2017",
+     "duration": "87 min",
+     "country": "Colombia / Cuba",
+     "flags": "🇨🇴🇨🇺",
+     "synopsis": "Dos pensionistas, una cámara de video y una propuesta indecente.",
+     "lbSlug": "candelaria-2017",
+     "poster": "/3xszLcSPv2ntc5QLKx86UAsp52E.jpg",
+     "synopsis_lang": "es",
+     "posterSource": "tmdb"
+    }
+   ],
+   "poster": "/3xszLcSPv2ntc5QLKx86UAsp52E.jpg",
+   "genre": "Comedia",
+   "posterSource": "tmdb"
+  }
+ ]
 }
