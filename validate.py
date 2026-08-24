@@ -3990,10 +3990,10 @@ try:
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
         # guardián pide. Baja cuando se migre algo fuera de helpers.
-        'src/view/helpers.js': 877,  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
+        'src/view/helpers.js': 883,  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
         'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
-        'src/main.js': 1706,  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
-        'src/i18n/i18n.js': 1640,  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
+        'src/main.js': 1707,  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
+        'src/i18n/i18n.js': 1649,  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
         'src/controller/sheets-controller.js': 1711,  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
         # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres

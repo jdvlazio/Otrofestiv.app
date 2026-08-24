@@ -21,6 +21,7 @@ const BRIDGE = {};
   'selectedIdx','activeMNav','programaSubMode','programaViewMode','cartelaMode',
   'interesesViewMode','miPlanViewMode','_sbUser','_sb','LB_SLUGS','POSTERS',
   'CUSTOM_POSTERS','_splashSelectedFestId','programaChip','_programaChipMatchFn',
+  'showPress',  // filtro Prensa e Industria (viewstate bridge) — 23 ago
   '_dismissedNotices','_currentChips','_activeMiPlanFilm','_expandedFilm',
   'activeMiPlanDay','miPlanViewStart','_ctaRemovedVisible','archiveOpen',
 ].forEach(k => { BRIDGE[k] = 'writable'; });

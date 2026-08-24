@@ -449,10 +449,27 @@ export async function loadFestival(id){
   if(_filmErrors.length) console.error('Films con errores de datos:', _filmErrors);
   if(_filmWarnings.length) console.warn('Films con warnings:', _filmWarnings);
   console.groupEnd();
-  const _validTitles = new Set(_newFilms.map(f=>f.title));
+  // ── PRENSA E INDUSTRIA — se decide ACÁ, no en cada vista ─────────────────
+  // Las funciones con `audience:'press'` son pases de acreditados: el público
+  // general no puede entrar. TIFF 2026 trae 247 (audienceType «Press & Market»
+  // en su endpoint) sobre obras que YA tienen función pública.
+  //
+  // El filtro vive en este punto —el único sitio donde FILMS se publica— porque
+  // sus 171 consumidores lo leen de ahí: apagado, esas funciones NO EXISTEN para
+  // nadie. Filtrar por-vista habría dejado al planificador armando el día
+  // alrededor de pases a los que no se puede entrar, y a screensConflict
+  // declarando choques contra funciones invisibles.
+  //
+  // `_todasLasFunciones` guarda la lista COMPLETA en el cfg (que ya cachea la
+  // sesión) para que el interruptor re-derive sin volver a pedir el JSON.
+  cfg._todasLasFunciones = _newFilms;
+  cfg._tienePrensa = _newFilms.some(f=>f.audience==='press');
+  _restaurarPrensa(cfg);   // la preferencia de ESTE festival, antes de publicar
+  const _visibles = _filtrarPorAudiencia(_newFilms);
+  const _validTitles = new Set(_visibles.map(f=>f.title));
   state.batchUpdate({
     _activeFestId: id,
-    FILMS: _newFilms,
+    FILMS: _visibles,
     FESTIVAL_DATES: cfg.festivalDates,
     PRIO_LIMIT: cfg.prioLimit || _computedPrioLimit,
     TZ_OFFSET: cfg.timezoneOffset || '-05:00',
@@ -464,6 +481,7 @@ export async function loadFestival(id){
   // El banner se decide acá y no en cada tab: `_activeFestId` acaba de quedar
   // fijado, y este es el único momento en que la respuesta puede cambiar.
   _pintarBannerRevision();
+  _sincronizarBotonPrensa();  // el botón solo existe si el festival trae pases
 
   // ── Pase de `past` sobre la tira de días ──────────────────────────────────
   // AHORA, no antes: dayFullyPassed necesita el calendario (FESTIVAL_DATES) y las
@@ -652,4 +670,46 @@ export function dismissSplash(){
       console.error('Error init festival:',e);
       if(btn) btn.classList.remove('loading');
     });
+}
+
+// ── el filtro de audiencia y su interruptor ─────────────────────────────────
+// Un solo dueño para las dos direcciones: al cargar (arriba) y al conmutar.
+export function _filtrarPorAudiencia(films){
+  return showPress ? films : films.filter(f=>f.audience!=='press');
+}
+
+// Conmuta Prensa e Industria y RE-PUBLICA FILMS desde la lista completa que el
+// cfg ya tiene cacheada — sin volver a pedir el JSON ni re-validar.
+// Se persiste por festival: quien tiene acreditación la tiene toda la semana.
+export function togglePressScreenings(){
+  const cfg = FESTIVAL_CONFIG[state.get('_activeFestId')];
+  if(!cfg || !cfg._tienePrensa) return;
+  const nuevo = !showPress;
+  showPress = nuevo;
+  try{ localStorage.setItem((cfg.storageKey||'')+'showPress', nuevo?'1':'0'); }catch(e){}
+  const _vis = _filtrarPorAudiencia(cfg._todasLasFunciones||[]);
+  state.batchUpdate({ FILMS: _vis });
+  _sincronizarBotonPrensa();
+  _updateProgramaActiveFilter();
+  _renderProgramaContent();
+}
+
+// Lee la preferencia guardada de ESTE festival. La llama loadFestival antes de
+// publicar FILMS, para que la primera pintura ya sea la correcta.
+export function _restaurarPrensa(cfg){
+  let v = false;
+  try{ v = localStorage.getItem((cfg.storageKey||'')+'showPress') === '1'; }catch(e){}
+  showPress = v;
+}
+
+// El botón solo EXISTE en festivales que tienen pases de prensa, y refleja su
+// estado con la clase `.on` — el mismo estado único que el resto de la barra.
+export function _sincronizarBotonPrensa(){
+  const b = document.getElementById('prensa-btn');
+  if(!b) return;
+  const cfg = FESTIVAL_CONFIG[state.get('_activeFestId')];
+  const hay = !!(cfg && cfg._tienePrensa);
+  b.style.display = hay ? '' : 'none';
+  b.classList.toggle('on', hay && !!showPress);
+  b.setAttribute('aria-pressed', String(hay && !!showPress));
 }

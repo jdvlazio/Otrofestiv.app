@@ -129,7 +129,7 @@ import { initWatchBridge } from './controller/watch-bridge.js';
 
 // ── Step 8d-4: controller/loader.js (loadFestival + dismissSplash) ───────────
 import {
-  loadFestival, dismissSplash, backToSplash,
+  loadFestival, dismissSplash, backToSplash, togglePressScreenings, _sincronizarBotonPrensa,
 } from './controller/loader.js';
 
 // ── Step 7e: controller/festival.js ────────────────────────────────────────────
@@ -246,6 +246,7 @@ const ACTION_REGISTRY = {
   setProgramaChip:     (el)    => setProgramaChip(el.dataset.chip),
   setAvType:           (el)    => setAvType(el.dataset.type),
   toggleProgramaView:  ()      => toggleProgramaView(),
+  togglePressScreenings: ()    => togglePressScreenings(),
   lugarToggle:         ()      => lugarToggle(),
   seccionToggle:       ()      => seccionToggle(),
   selectAvDay:         (el)    => selectAvDay(el.dataset.day),
@@ -478,7 +479,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608231725';
+const BUILD_VERSION='202608240533';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

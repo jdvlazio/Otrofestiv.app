@@ -813,6 +813,12 @@ export function _metaBadges(f){
   // sobre los de servicio: si no va a ocurrir, no hay nada que ofrecer.
   if(f&&f._cancelled) return '';
   let b='';
+  // PRENSA — va PRIMERO, antes incluso que premium, porque no describe la
+  // función sino QUIÉN puede entrar: es un pase de acreditados. Solo se ve
+  // cuando el usuario activó el filtro de Prensa e Industria — apagado, la
+  // función ni siquiera está en FILMS —, así que el badge es el recordatorio
+  // de que esta fila no es para el público general.
+  if(f.audience==='press') b+=`<span class="meta-badge">${t('press_badge')}</span>`;
   // PREMIUM — la función cuesta más que el resto. Va PRIMERO entre los de
   // servicio porque es lo único que cambia el precio: los demás dicen qué te dan,
   // éste dice cuánto te cuesta. En TIFF son 61 de 638 funciones (las galas del

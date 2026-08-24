@@ -12,11 +12,19 @@ SALE
 
 LAS CUATRO DECISIONES QUE ESTE ENSAMBLADOR TOMA, Y POR QUÉ
 
-1. SOLO FUNCIONES PÚBLICAS. `audienceType` distingue «General Public» (638) de
-   «Press & Market» (247) y «Private» (2). Decisión de Juan del 13 ago: las de
-   prensa no se muestran. Ofrecer una función a la que nadie puede entrar es
-   peor que no listarla. El filtro vive AQUÍ, en un solo sitio, y no en cada
-   consumidor del dato.
+1. LA AUDIENCIA SE MARCA, NO SE DESCARTA (revisado el 23 ago 2026).
+   `audienceType` distingue «General Public» (638), «Press & Market» (247) y
+   «Private» (2).
+
+   El 13 ago se decidió NO mostrar las de prensa: ofrecer una función a la que
+   nadie puede entrar es peor que no listarla. Seguía siendo cierto para el
+   público general — y por eso la app las oculta POR DEFECTO —, pero se llevaba
+   por delante a quien SÍ puede entrar: el festival pidió publicarlas para su
+   público acreditado. Así que ahora viajan marcadas `audience:'press'` y es la
+   app quien decide mostrarlas, con un interruptor.
+
+   Las 2 «Private» se siguen descartando aquí: no son una audiencia con
+   acreditación, son proyecciones cerradas a las que no asiste nadie de fuera.
 
 2. UN PROGRAMA NO ES UNA OBRA. Los 13 programas («Short Cuts 2026 Programme
    01», «Wavelengths 2…») son el envase que TIFF vende; las obras son los 72
@@ -190,10 +198,19 @@ def main():
                 })
 
         for f in o['funciones']:
-            # Decisión 1: solo público. Un pase de prensa no es asistible.
-            if f['audiencia'] != 'General Public':
+            # Decisión 1 (REVISADA 23 ago 2026, a pedido del festival): los pases
+            # de Prensa e Industria ya NO se descartan — se MARCAN con
+            # `audience:'press'` y viajan en el mismo films[]. La app los oculta
+            # por defecto y solo los muestra a quien active el filtro, que es
+            # gente acreditada. Antes se perdían 247 funciones que el propio
+            # festival quería publicar para su público profesional.
+            #
+            # `Private` (2 funciones) SÍ se sigue descartando: no es una
+            # audiencia a la que nadie pueda asistir, es una proyección cerrada.
+            if f['audiencia'] not in ('General Public', 'Press & Market'):
                 saltadas['no_publica'] += 1
                 continue
+            _es_prensa = f['audiencia'] == 'Press & Market'
             if f['cancelada']:
                 saltadas['cancelada'] += 1
                 continue
@@ -205,6 +222,8 @@ def main():
             funciones.append({
                 'titulo': o['titulo'],
                 'dia': dia, 'hora': hora,
+                # Ausente = público (el caso normal, no se declara). Ver contrato.
+                **({'audience': 'press'} if _es_prensa else {}),
                 'sede': SEDES.get(f['sede'], f['sede']),
                 'sala': f['sala'] or '',
                 'ciudad': '',
@@ -245,7 +264,7 @@ def main():
     salida = f'{ST}/tiff-2026-crudo.json'
     json.dump({'_provenance': provenance(
                    'tiff-2026-oficial + tiff-2026-cortos + tiff-2026-lbslug + tiff-2026-tmdb',
-                   metodo='solo funciones «General Public»; programas como is_cortos+film_list'),
+                   metodo='General Public + Press & Market (marcadas audience:press); Private descartadas; programas como is_cortos+film_list'),
                '_festival': {'id': 'tiff2026', 'ciudad': 'Toronto', 'pais': 'Canadá',
                              'timezoneOffset': '-04:00', 'dias': dias},
                '_secciones_propuestas': {publicado(k): {'emoji': e, 'archetype': a,

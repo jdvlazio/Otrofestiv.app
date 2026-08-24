@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608231725">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608231725">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608240533">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608240533">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -2804,6 +2804,11 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .seccion-btn.on{color:var(--amber)}
 /* Lugar filter — nuevo sistema ────────────────────────── */
 .lugar-btn{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);background:none;border:none;cursor:pointer;font-family:var(--font);padding:var(--sp-1) 0;transition:color var(--tr-base);white-space:nowrap;-webkit-tap-highlight-color:transparent;touch-action:manipulation;position:relative}
+/* Prensa e Industria — mismo cuerpo que los otros chips de la barra; en `.on`
+   toma el ámbar del estado activo, igual que el resto del canon de botones. */
+.prensa-btn{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border:none;border-radius:var(--r-sm);background:var(--surf-2);color:var(--txt-2);cursor:pointer;padding:0}
+.prensa-btn.on{background:var(--amber);color:#000}
+
 .lugar-btn::after{content:'';position:absolute;inset:-12px -8px}
 .lugar-btn.on{color:var(--amber)}
 .sec-drop-hdr{padding:10px var(--sp-4) 4px;font-size:var(--t-label);font-weight:var(--w-bold);letter-spacing:.8px;color:var(--gray2);text-transform:uppercase;pointer-events:none;user-select:none}
@@ -3226,6 +3231,15 @@ setTimeout(function(){
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
       <span id="lugar-lbl" data-i18n="bar_lugar">Lugar</span>
     </button>
+    <!-- Prensa e Industria: solo se muestra en festivales que traen pases de
+         acreditados (loader._sincronizarBotonPrensa). Icono solo, porque la
+         barra a 390px no admite una cuarta etiqueta; cuando está activo, la
+         píldora de filtros activos lo dice con palabras. -->
+    <button class="prensa-btn" id="prensa-btn" data-action="togglePressScreenings" style="display:none"
+            aria-pressed="false" data-i18n-aria="bar_prensa" data-i18n-title="bar_prensa"
+            title="Prensa e Industria" aria-label="Prensa e Industria">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 011-1h11a1 1 0 011 1v18"/><path d="M17 8h2a1 1 0 011 1v10a2 2 0 01-2 2H4"/><line x1="7" y1="7" x2="14" y2="7"/><line x1="7" y1="11" x2="14" y2="11"/><line x1="7" y1="15" x2="11" y2="15"/></svg>
+    </button>
     <!-- single toggle btn — icono refleja estado actual -->
     <button class="view-toggle-btn" id="view-toggle-btn" data-action="toggleProgramaView" data-i18n-aria="aria_cambiar_vista" data-i18n-title="aria_cambiar_vista" title="Cambiar vista" aria-label="Cambiar vista">
       <svg id="view-toggle-ico-grid" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
@@ -3543,7 +3557,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608231725";
+    s.src="/src/main.js?v=202608240533";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

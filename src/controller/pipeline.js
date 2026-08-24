@@ -175,8 +175,16 @@ export function _updateProgramaActiveFilter(){
   if(!af) return;
   const hasSec=activeSec!=='all';
   const hasVenue=activeVenue!=='all';
-  if(!hasSec&&!hasVenue){af.classList.remove('visible');return;}
+  // Prensa e Industria entra acá porque su botón es solo un icono: la barra a
+  // 390px no admite una cuarta etiqueta, así que la palabra la pone la píldora.
+  // Y sirve de recordatorio: el usuario está viendo pases a los que el público
+  // general no entra, y puede apagarlo desde la misma × que los otros filtros.
+  const hasPress=!!showPress;
+  if(!hasSec&&!hasVenue&&!hasPress){af.classList.remove('visible');return;}
   let pills='';
+  if(hasPress){
+    pills+='<div class="paf-pill" data-action="togglePressScreenings">'+t('paf_prensa')+'<span class="paf-pill-x">×</span></div>';
+  }
   if(hasSec){
     const lbl=_seccionPillLabel(activeSec);
     pills+='<div class="paf-pill" data-action="pafClearSec">'+lbl+'<span class="paf-pill-x">×</span></div>';
