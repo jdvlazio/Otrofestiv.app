@@ -247,6 +247,68 @@ export const SECTION_EN = {
 // `categoria` va VERBATIM del festival — misma regla que las secciones.
 // `nivel`: 'ganadora' | 'mencion'.
 export const PALMARES=[
+  // ── FINCA 2026 (8ª ed., Buenos Aires) — 5 posts del 22 ago en @festivalfinca ──
+  // Se leyeron EN EL NAVEGADOR y expandiendo el caption: los cinco llegaban
+  // truncados en «… more», y el texto corto no nombra ni una sola premiada.
+  //
+  // DOS TÍTULOS QUE ARREGLAMOS EN EL CATÁLOGO al cruzar, y los dos eran NUESTROS:
+  // «Mora» era «Amora» (se cayó la A inicial) y «Sobre Ruinas» era «Sobre
+  // Ruínas». El sidecar finca-2026-funciones.json —lo que mandó el festival—
+  // trae las dos bien; se rompieron aguas abajo. «Amora» además se verificó
+  // fuera (Cinemateca Brasileira, Mostra SP, IMDb): Ana Petta, Brasil 2025.
+  //
+  // LOS CORTOS ENLAZAN COMO CUALQUIER OBRA. «Sobre Ruínas» y «Dígale no a los
+  // poalets» viven dentro de «Cortometrajes en Competencia Oficial — Programa
+  // 2». La primera versión los dejó en obra:null porque el palmarés solo
+  // buscaba títulos de nivel superior; Juan lo corrigió el 24 ago: «para eso
+  // existe la ficha independiente por película o cortometraje, sin
+  // discriminación». Ahora `_palmBuscar` mira también dentro de los programas y
+  // el clic abre la ficha del CORTO (openCortoSheet), no la de su envase.
+  //
+  // DOS TÍTULOS que el festival escribe distinto en su programa y en su
+  // palmarés: mostramos el DEL PROGRAMA, que es el que el usuario vio en la
+  // app. En los posts de premios fueron «How Deep Is Your Love» (programa:
+  // «¿Cuán profundo es tu amor?») y «No als poalets» (programa: «Dígale no a
+  // los poalets»).
+  //
+  // EL PREMIO EXACTO, en `premio`. La primera versión metió el Segundo Premio
+  // como una segunda `ganadora` y dio a entender que FINCA premió a dos obras
+  // por igual en esa competencia — no lo hizo. `nivel` sigue decidiendo el
+  // TAMAÑO (grande = ganadora, pequeña = mención), que es lo visual; `premio`
+  // dice el nombre que le puso el festival y se pinta encima del título.
+  // Es opcional: la mayoría de categorías tienen una sola ganadora y no lo
+  // necesitan. Sirve para lo que venga —Tercer Premio, Premio Especial del
+  // Jurado— sin volver a tocar el modelo.
+
+  {fest:'finca2026', categoria:'Premio del Público · Largometrajes Internacionales', nivel:'ganadora',
+   titulo:'La vida fracturada', autoria:'Cristian Cartier, Martín Longo, Pablo Piovano, Maximiliano Goldschmidt', obra:'La vida fracturada'},
+  {fest:'finca2026', categoria:'Premio del Público · Corto y Mediometrajes Internacionales', nivel:'ganadora',
+   titulo:'Ziki', autoria:'Roberta Palmieri, Olga Sargenti', obra:'Ziki'},
+  {fest:'finca2026', categoria:'Premio del Público · Documentales Latinoamericanos', nivel:'ganadora',
+   titulo:'Amora', autoria:'Ana Petta', obra:'Amora'},
+
+  {fest:'finca2026', categoria:'Largometrajes Internacionales', nivel:'ganadora',
+   titulo:'Yintah', autoria:'Jennifer Wickham, Brenda Michell, Michael Toledano', obra:'Yintah'},
+  {fest:'finca2026', categoria:'Largometrajes Internacionales', nivel:'mencion',
+   titulo:'¿Cuán profundo es tu amor?', autoria:'Eleanor Mortimer', obra:'¿Cuán profundo es tu amor?'},
+
+  {fest:'finca2026', categoria:'Corto y Mediometrajes Internacionales', nivel:'ganadora',
+   titulo:'Sobre Ruínas', autoria:'Carol Benjamin', obra:'Sobre Ruínas'},
+  {fest:'finca2026', categoria:'Corto y Mediometrajes Internacionales', nivel:'mencion',
+   titulo:'Dígale no a los poalets', autoria:'Laura García Andreu', obra:'Dígale no a los poalets'},
+
+  {fest:'finca2026', categoria:'Documentales Latinoamericanos', nivel:'ganadora', premio:'Primer Premio',
+   titulo:'Karuara, la gente del río', autoria:'Miguel Araoz Cartagena, Stephanie Boyd', obra:'Karuara, la gente del río'},
+  {fest:'finca2026', categoria:'Documentales Latinoamericanos', nivel:'ganadora', premio:'Segundo Premio',
+   titulo:'Toroboro: el nombre de las plantas', autoria:'Manolo Sarmiento', obra:'Toroboro: el nombre de las plantas'},
+
+  // Premio de la Red Argentina de Festivales y Muestras Audiovisuales (RAFMA),
+  // con el nombre del documentalista Edgardo «Pipo» Bechara el Khoury.
+  {fest:'finca2026', categoria:'Premio «Edgardo Pipo Bechara el Khoury»', nivel:'ganadora',
+   titulo:'La vida fracturada', autoria:'Cristian Cartier, Martín Longo, Pablo Piovano, Maximiliano Goldschmidt', obra:'La vida fracturada'},
+  {fest:'finca2026', categoria:'Premio «Edgardo Pipo Bechara el Khoury»', nivel:'mencion',
+   titulo:'La granja de la libertad', autoria:'Luciano Militello', obra:'La granja de la libertad'},
+
   // FICDEH 2026 — 8 posts del 21 ago en @ficdeh, uno por categoría.
   // Tres correcciones sobre la fuente, documentadas porque publicar mal un premio
   // es mentirle al usuario sobre su propio festival:

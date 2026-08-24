@@ -594,13 +594,33 @@ export function palmaresDe(festId){
   return cats;
 }
 
+// Una premiada se busca en el catálogo ENTERO: primero como obra de nivel
+// superior y, si no, DENTRO de los programas de cortos. Un corto premiado tiene
+// su propia ficha (openCortoSheet) igual que cualquier obra — no hay razón para
+// que el palmarés lo trate distinto por venir envuelto en un programa. Lo
+// levantó Juan el 24 ago: «para eso existe la ficha independiente por película o
+// cortometraje, sin discriminación». Antes devolvíamos null y caían a Forma A,
+// que es el respaldo para lo que NO tenemos, no para lo que sí.
+export function _palmBuscar(titulo){
+  if(!titulo) return null;
+  const {FILMS}=state.snapshot();
+  const f=FILMS.find(x=>x.title===titulo);
+  if(f) return {tipo:'film', film:f};
+  for(const p of FILMS){
+    const c=(p.film_list||[]).find(x=>x&&x.title===titulo);
+    if(c) return {tipo:'corto', corto:c, programa:p};
+  }
+  return null;
+}
+
 function _palmPoster(entry, accent, tira){
-  const {FILMS, watched, filmRatings}=state.snapshot();
-  const f=entry.obra?FILMS.find(x=>x.title===entry.obra):null;
+  const {watched, filmRatings}=state.snapshot();
+  const _h=entry.obra?_palmBuscar(entry.obra):null;
+  const f=_h?(_h.tipo==='film'?_h.film:_h.corto):null;
   // Prioridad: afiche de la obra en el catálogo → afiche propio de la entrada del
   // palmarés (una premiada que no tenemos pero cuyo póster oficial sí existe) →
   // Forma A. La Forma A es el último recurso, no el primero.
-  const src=(f?getFilmPoster(f):null)||entry.poster||null;
+  const src=(_h?(_h.tipo==='film'?getFilmPoster(_h.film):_getItemPoster(_h.corto)):null)||entry.poster||null;
   // Sin obra en el catálogo → afiche propio. El rótulo dice QUÉ es, no de qué
   // sección: «PROYECTO» para lo de ImpulsoLab, la categoría para una obra.
   const inner=src
@@ -670,15 +690,28 @@ export function renderPalmaresHTML(festId){
   // que era la otra queja: demasiado scroll.
   const secs=cats.map(c=>{
     const acc=_sectionColor(c.categoria);
+    // `_palmAbrir` decide la ficha: la de película o la del CORTO. Antes esto
+    // era `js-open-pel` a secas y un corto premiado no tenía a dónde llevar.
+    // Qué ficha abre cada premiada: la de película, o la del CORTO si viene
+    // dentro de un programa. Un corto premiado tiene ficha propia igual que
+    // cualquier obra (openCortoSheet) — el palmarés no lo trata distinto por
+    // venir envuelto. Sin obra en el catálogo, la tarjeta no es clicable.
+    const _clic=x=>{
+      const h=x.obra?_palmBuscar(x.obra):null;
+      if(!h) return '';
+      const cls=h.tipo==='corto'?'js-open-corto':'js-open-pel';
+      return ` ${cls}" data-title="${escXML(x.obra)}`;
+    };
     const g=c.ganadoras.map(x=>`
-      <div class="palm-g${x.obra?' js-open-pel':''}"${x.obra?` data-title="${escXML(x.obra)}"`:''}>
+      <div class="palm-g${_clic(x)}">
         ${_palmPoster(x,acc)}
-        <div class="palm-wtx"><div class="palm-wt">${escXML(x.titulo)}</div>
+        <div class="palm-wtx">
+          ${x.premio?`<div class="palm-premio">${escXML(x.premio)}</div>`:''}
+          <div class="palm-wt">${escXML(x.titulo)}</div>
           <div class="palm-wm dato-linea">${escXML(x.autoria||'')}</div></div>
       </div>`).join('');
     const m=c.menciones.map(x=>`
-      <div class="palm-m${x.obra?' js-open-pel':''}"${x.obra?` data-title="${escXML(x.obra)}"`:''}
-        title="${escXML(x.titulo)}">${_palmPoster(x,acc,true)}</div>`).join('');
+      <div class="palm-m${_clic(x)}" title="${escXML((x.premio?x.premio+' · ':'')+x.titulo)}">${_palmPoster(x,acc,true)}</div>`).join('');
     return `<section class="palm-sec">
       <div class="palm-cat" style="--c:${acc}"><span></span>${escXML(c.categoria)}</div>
       ${g}${c.menciones.length?`<div class="palm-row palm-mrow2"><span class="splash-rail-div palm-div-v" aria-hidden="true"><span class="srd-bar"></span><span class="srd-lbl">${t('palm_mencion_corto')}</span><span class="srd-bar"></span></span><div class="palm-ms">${m}</div></div>`:''}</section>`;

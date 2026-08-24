@@ -479,7 +479,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608241431';
+const BUILD_VERSION='202608241445';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1021,6 +1021,11 @@ document.addEventListener('click',function(e){
   if(e.target.closest('.int-prio-btn')) return; // estrella priorizar — no abrir sheet
   if(e.target.closest('.int-seen-btn')) return; // ya vista — no abrir sheet
   if(e.target.closest('.prio-chip-rm')) return; // quitar prioridad — no abrir sheet
+  // Un corto premiado abre SU ficha, no la de su programa. openCortoSheet se
+  // enriquece sola buscando el item en los film_list de FILMS, así que basta el
+  // título — no hace falta arrastrar país/duración/sección por el marcado.
+  const ec=e.target.closest('.js-open-corto');
+  if(ec){ _searchOpenCorto(ec.dataset.title||'','','','',''); return; }
   const el=e.target.closest('.js-open-pel');
   if(el) _openPelMorph(el, el.dataset.title||'');
 },true);

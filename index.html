@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608241431">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608241431">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608241445">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608241445">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -688,6 +688,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .palm-g .palm-po{width:76px;flex:0 0 76px}
 .palm-wtx{flex:1;min-width:0}
 .palm-wt{font-size:var(--t-md);font-weight:var(--w-bold);letter-spacing:-.02em;line-height:1.15}
+/* Rótulo del premio EXACTO cuando el festival lo distingue (Primer/Segundo
+   Premio, Premio Especial…). Va ENCIMA del título, en pequeño: el nombre del
+   premio es del festival, el título es de la obra. Solo aparece si la entrada
+   lo trae — la mayoría de categorías tienen una sola ganadora y no lo necesita. */
+.palm-premio{font-size:var(--t-caption);color:var(--txt-3);letter-spacing:.04em;margin-bottom:2px}
+
 .palm-wm{margin-top:2px}
 .palm-ms{display:flex;gap:6px;flex:0 0 auto}
 /* 52px, el mismo ancho que los afiches del Diario (.dw-strip-p): es el tamaño
@@ -3566,7 +3572,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608241431";
+    s.src="/src/main.js?v=202608241445";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
