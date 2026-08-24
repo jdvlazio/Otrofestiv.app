@@ -614,12 +614,11 @@ function _palmPoster(entry, accent, tira){
   const vista=entry.obra&&watched.has(entry.obra);
   const r=vista?(filmRatings[entry.obra]||0):0;
   const estrellas=r?`<div class="palm-seen">${'★'.repeat(Math.floor(r))}${r%1>=0.5?'½':''}</div>`:'';
-  // La marca «afiche nuestro» se retiró: nació cuando TODA premiada sin ficha
-  // caía en Forma A y había varias. Hoy queda UNA —«Eliza», un proyecto de
-  // ImpulsoLab que no tiene afiche en ninguna parte— y no hay original con el
-  // que confundirla. La marca protegía de una confusión que ya no existe, y a
-  // cambio tapaba el afiche.
-  const propio='';
+  // Sin marca «afiche nuestro» (Juan, 24 ago 2026). Nació cuando toda premiada
+  // sin ficha caía en Forma A y eran varias; hoy queda UNA —«Eliza», un proyecto
+  // de ImpulsoLab que no tiene afiche en ninguna parte— y no hay original con el
+  // que confundirla. Protegía de una confusión que ya no existe, y tapaba el
+  // afiche.
   // La marca va SOLO en la ganadora: lo que no la lleva es mención. Un signo en
   // vez de dieciséis rótulos —ocho «Ganadora» y ocho «Menciones»—, que era lo
   // que Juan llamó repetitivo. Anclada con --poster-badge-top, el token que
@@ -630,7 +629,7 @@ function _palmPoster(entry, accent, tira){
   // marcaba lo que ya era obvio. Lo ambiguo no era cuál gana, sino qué son las
   // pequeñas de la derecha; eso lo dice ahora el divisor.
   const laurel='';
-  return `<div class="palm-po">${inner}${laurel}${estrellas}${propio}</div>`;
+  return `<div class="palm-po">${inner}${laurel}${estrellas}</div>`;
 }
 
 export function renderPalmaresBandHTML(festId){

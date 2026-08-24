@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608240757">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608240757">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608240813">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608240813">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -668,12 +668,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .palm-seen{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,var(--overlay-60));
   color:var(--amber);font-size:var(--t-badge);text-align:center;padding:9px 0 2px;letter-spacing:.6px}
 /* Marca honesta: lo nuestro no se hace pasar por material del festival. */
-/* Se ancla con el MISMO token que el badge de cancelada (--poster-badge-top):
-   arriba chocaba con el rótulo de sección de la Forma A — exactamente el bug
-   que Juan reportó el 23 ago en la grilla. La regla ya existía; la ignoré al
-   escribir esto y el render me lo devolvió. */
-.palm-own{position:absolute;top:var(--poster-badge-top);right:5px;background:var(--overlay-60);
-  color:var(--gray);font-size:var(--t-badge);padding:1.5px 4px;border-radius:var(--r-sm);letter-spacing:.04em}
+
 .palm-div{height:1px;background:var(--bdr);margin:var(--sp-4) var(--sp-4) 0}
 .palm-sec{margin-top:var(--sp-5)}
 .palm-cat{display:flex;align-items:center;gap:var(--sp-2);margin:0 var(--sp-4) var(--sp-3);
@@ -3560,7 +3555,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608240757";
+    s.src="/src/main.js?v=202608240813";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
