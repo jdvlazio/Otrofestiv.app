@@ -537,3 +537,32 @@ test('la pila — nunca invade el bloque de sección, ni con rótulo de 2 línea
   assert.ok(pilaTop > secBottom,
     `la pila se metió en la sección: tope ${pilaTop} vs fondo de sección ${secBottom}`);
 });
+
+test('la pila — reparto por uso real: el cuerpo es el que manda el ANCHO, no el vecino', () => {
+  // El presupuesto se reparte POR USO REAL, no en tercios. Repartido en partes
+  // iguales, dos obras de una línea pagaban por la tercera que usaba dos: en
+  // «La tempestá + …» sobraban ~3,7u de aire muerto y la pila salía a 10,8 en vez
+  // de a 14. La propiedad correcta: el cuerpo común es EL IDEAL POR ANCHO —lo
+  // único que de verdad limita a cada obra— salvo que el techo tenga que bajarlo.
+  const _idealPorAncho = t => Math.min(16, ...t.split(' + ').map(o => C._fitLines(o,
+    { boxW: 97.5, boxH: 1e4, maxLines: 2, fsMax: 16, fsMin: 9, lhRatio: 1.2, lsEm: -0.02 }).fs));
+  const _cuerpoDe = (sec, t, dato) => _cuerpo(_textos(C._buildPosterV16(
+    { accent:ACC, headerLabel:sec, title:t, num:null, dato })))[0].fs;
+
+  // Sin presión de techo: el cuerpo TIENE que ser el ideal por ancho.
+  for (const [sec, t, dato] of [
+        ['Iluminaciones', 'La tempestá + No contéis con los dedos + Vampir Cuadecuc', '3 obras · 99 min'],
+        ['Iluminaciones', 'Rancho + Gosse', '2 obras · 71 min'],
+      ]) {
+    const fs = _cuerpoDe(sec, t, dato), ideal = _idealPorAncho(t);
+    assert.equal(fs, ideal,
+      `${t} → la pila se dibuja a ${fs} pudiendo ir a ${ideal}: la está encogiendo un vecino, no su propio ancho`);
+  }
+
+  // Con presión de techo (tres medianos bajo rótulo de 2 líneas) el cuerpo baja
+  // por debajo del ideal — y esa bajada es justamente lo que prueba el lazo.
+  const SEC2 = 'La primavera llega para los que esperan';
+  const T2 = 'El norte de la mañana + Cantos de la aurora + La casa de la frontera';
+  assert.ok(_cuerpoDe(SEC2, T2, '3 obras') < _idealPorAncho(T2),
+    'el peor caso debería estar limitado por el techo, no por el ancho — si no, dejó de probar el lazo');
+});

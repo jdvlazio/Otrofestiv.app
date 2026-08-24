@@ -447,20 +447,31 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma}){
     // constante inventada: fondo de la sección + 0,5u de aire para descendentes.
     const _techo=secY+(sec.lines.length-1)*sec.lh+0.5*U;
     const _presupuesto=tTop-_techo;
-    // El techo NO se vigila con un lazo que encoge después: se le entrega al
-    // motor como la caja de cada obra. Cada una recibe su parte del presupuesto
-    // (descontados los gaps) y _fitLines ya no puede devolver algo que no quepa.
-    // Un lazo correctivo aparte era código muerto — _fitLines lo adelantaba
-    // siempre — y un guardián que nunca dispara no es de fiar.
-    const _boxCada=(_presupuesto-GAP*(_obras.length-1))/_obras.length;
-    const _ajusta=(fsMax)=>_obras.map(o=>_fitLines(o,
-      {boxW:CW, boxH:_boxCada, maxLines:2, fsMax, fsMin:9, lhRatio:1.2, lsEm:-0.02, upper:false}));
+    // EL PRESUPUESTO SE REPARTE POR USO REAL, NO EN PARTES IGUALES (Juan, 24
+    // ago). Darle a cada obra un tercio exacto del alto castigaba a las tres por
+    // culpa de una: con dos nombres de una línea y uno de dos, sobraban ~3,7u de
+    // aire muerto y la pila igual se dibujaba pequeña. Ahora el alto no acota el
+    // ajuste individual (boxH abierto): las líneas de cada obra las decide su
+    // ANCHO, que es lo único que de verdad la limita, y el presupuesto se cobra
+    // una sola vez, sobre el alto que la pila realmente ocupa.
+    const _ajusta=(f)=>_obras.map(o=>_fitLines(o,
+      {boxW:CW, boxH:1e4, maxLines:2, fsMax:f, fsMin:f, lhRatio:1.2, lsEm:-0.02, upper:false}));
+    const _altoDe=(re,f)=>re.reduce((a,x)=>a+x.lines.length*f*1.2,0)+GAP*(_obras.length-1);
     // Cuerpo común = el MENOR de los ajustes individuales: mandan las anchas.
-    // Con el menor, el re-ajuste de cada obra devuelve exactamente ese cuerpo —
-    // por eso ninguna línea necesita condensarse (textLength) al dibujarse.
-    const _fs=Math.min(PILA_FS_MAX, ...(_ajusta(PILA_FS_MAX).map(f=>f.fs)));
-    const _re=_ajusta(_fs), _lh=_fs*1.2;
-    const _alto=_re.reduce((a,f)=>a+f.lines.length*_lh,0)+GAP*(_obras.length-1);
+    let _fs=Math.min(PILA_FS_MAX, ..._obras.map(o=>_fitLines(o,
+      {boxW:CW, boxH:1e4, maxLines:2, fsMax:PILA_FS_MAX, fsMin:9, lhRatio:1.2, lsEm:-0.02, upper:false}).fs));
+    let _re=_ajusta(_fs);
+    // Y ahora sí, el techo: se baja el cuerpo de a poco hasta que la pila entera
+    // quepa bajo la sección. Este lazo SÍ vive —el de la primera versión era
+    // código muerto porque la caja de cada obra ya lo adelantaba— y se prueba con
+    // el peor caso real: tres nombres medianos bajo un rótulo de dos líneas.
+    // Suelo 9: por debajo no se lee, y el pie ya salva el caso con «N obras».
+    while(_fs>9 && _altoDe(_re,_fs)>_presupuesto){
+      _fs=Math.max(9, +(_fs-0.25).toFixed(2));
+      _re=_ajusta(_fs);
+    }
+    const _lh=_fs*1.2;
+    const _alto=_altoDe(_re,_fs);
     let _y=tTop-_alto;                                     // crece hacia arriba
     const _partes=[];
     _re.forEach((f,i)=>{
