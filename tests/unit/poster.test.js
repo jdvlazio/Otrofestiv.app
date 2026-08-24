@@ -443,7 +443,7 @@ test('makeProgramPoster — el programa curado lleva el rótulo corto, sin firma
 // en elipsis. Un cartel de programa doble nunca tipografía así: APILA las obras.
 //
 // Retícula medida con Juan sobre grid y rulers (no a ojo): un bloque por obra,
-// todas al MISMO cuerpo, 1u exacto de gap, el «+» dentro de ese gap a 0,5u y al
+// todas al MISMO cuerpo, 1u exacto de gap, el «+» dentro de ese gap a 0,6u y al
 // margen, en color de sección. Frontera 2–3 obras (la misma de la forma C).
 const U16 = 120/8;                       // unidad del viewBox de la Forma A
 function _textos(svg){
@@ -487,11 +487,11 @@ test('la pila — hermanas iguales: todas las obras al mismo cuerpo', () => {
   }
 });
 
-test('la pila — el « + » vive en el gap: 0,5u, al margen, en color de sección', () => {
+test('la pila — el « + » vive en el gap: 0,6u, al margen, en color de sección', () => {
   const mas = _mas(_pila('La tempestá + No contéis con los dedos + Vampir Cuadecuc', ''));
   assert.equal(mas.length, 2, 'dos obras contiguas → un « + » entre ellas');
   for (const m of mas) {
-    assert.equal(m.fs, 0.5*U16, 'el « + » mide 0,5u');
+    assert.equal(m.fs, 0.6*U16, 'el « + » mide 0,6u');
     assert.equal(m.x, +(0.75*U16).toFixed(2), 'el « + » se apoya en el margen, como todo el sistema');
     assert.equal(m.fill, ACC, 'el « + » lleva el color de la sección');
   }
@@ -504,7 +504,7 @@ test('la pila — 1u exacto entre bloques, y el « + » centrado en ese aire', (
   assert.ok(Math.abs((b.y - a.y) - (lh + U16)) < 0.05,
     `el gap entre bloques debe ser 1u exacto — medido ${((b.y-a.y-lh)/U16).toFixed(3)}u`);
   const centro = a.y + U16/2;                   // mitad del aire
-  assert.ok(Math.abs(_mas(rows)[0].y - (centro + 0.5*U16*0.35)) < 0.05,
+  assert.ok(Math.abs(_mas(rows)[0].y - (centro + 0.6*U16*0.35)) < 0.05,
     'el « + » cae ópticamente en el medio del gap, no en su borde');
 });
 
