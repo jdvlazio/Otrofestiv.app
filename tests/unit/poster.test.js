@@ -434,3 +434,106 @@ test('makeProgramPoster — el programa curado lleva el rótulo corto, sin firma
     'la firma NO aparece en ningún texto del programa (pila → cede): ' + textos);
   assert.ok(!/…/.test(textos), 'ningún texto muere en elipsis: ' + textos);
 });
+
+// ─── LA PILA DE OBRAS (mejora 1 de la auditoría de pósters, Juan 24 ago 2026) ──
+//
+// FALLA DE CLASE: un compuesto llegaba al motor como una frase corrida —
+// «La tempestá + No contéis con los dedos + Vampir Cuadecuc» — y _fitLines lo
+// partía donde cayera: la línea rompía a mitad de un nombre y el conjunto moría
+// en elipsis. Un cartel de programa doble nunca tipografía así: APILA las obras.
+//
+// Retícula medida con Juan sobre grid y rulers (no a ojo): un bloque por obra,
+// todas al MISMO cuerpo, 1u exacto de gap, el «+» dentro de ese gap a 0,5u y al
+// margen, en color de sección. Frontera 2–3 obras (la misma de la forma C).
+const U16 = 120/8;                       // unidad del viewBox de la Forma A
+function _textos(svg){
+  return [...decodeURIComponent(svg).matchAll(
+    /<text x="([-\d.]+)" y="([-\d.]+)"[^>]*font-size="([\d.]+)"[^>]*fill="([^"]+)"[^>]*>([^<]*)</g)]
+    .map(r => ({ x:+r[1], y:+r[2], fs:+r[3], fill:r[4], txt:r[5] }));
+}
+const ACC = '#3AAA6E';
+const _pila = (title, dato) => _textos(C._buildPosterV16(
+  { accent:ACC, headerLabel:'Iluminaciones', title, num:null, dato }));
+const _cuerpo = rows => rows.filter(r => r.fill === '#F0EDE8');   // el título
+const _mas    = rows => rows.filter(r => r.txt === '+');
+
+test('la pila — cada obra es su propio bloque, ninguna línea mezcla dos obras', () => {
+  const cuerpo = _cuerpo(_pila('La tempestá + No contéis con los dedos + Vampir Cuadecuc', '3 obras · 99 min'));
+  const texto = cuerpo.map(r => r.txt).join(' ');
+  assert.ok(!cuerpo.some(r => r.txt.includes('+')),
+    'apilado, ningún « + » puede quedar dentro de una línea de título — es su propio bloque');
+  assert.ok(!texto.includes('…'), 'apilado, el compuesto entero cabe sin elipsis');
+  for (const nombre of ['La tempestá', 'Vampir Cuadecuc'])
+    assert.ok(texto.includes(nombre), `falta la obra completa: ${nombre}`);
+});
+
+test('la pila — hermanas iguales: todas las obras al mismo cuerpo', () => {
+  // La pareja corta+larga es la que DISCRIMINA: con dos nombres cortos, «el menor»
+  // y «el mayor» de los ajustes coinciden y el test no probaría nada.
+  for (const t of ['Ida + Un título considerablemente más largo que el anterior',
+                   'Rancho + Gosse',
+                   'La tempestá + No contéis con los dedos + Vampir Cuadecuc']) {
+    const fs = new Set(_cuerpo(_pila(t, '')).map(r => r.fs));
+    assert.equal(fs.size, 1, `${t} → una obra grita más que su vecina: ${[...fs]}`);
+    assert.ok([...fs][0] <= 16, `el cuerpo de la pila no puede pasar de 16: ${[...fs][0]}`);
+    // Y que sea EL MENOR, no el mayor: el cuerpo común jamás puede pasarse de lo
+    // que aguanta la hermana más angosta por sí sola. (Ajuste solo por ancho —
+    // caja alta — para no reproducir en el test la aritmética del presupuesto.)
+    const _sola = o => C._fitLines(o,
+      { boxW: 97.5, boxH: 1e4, maxLines: 2, fsMax: 16, fsMin: 9, lhRatio: 1.2, lsEm: -0.02 }).fs;
+    const _aguanta = Math.min(...t.split(' + ').map(_sola));
+    assert.ok([...fs][0] <= _aguanta,
+      `${t} → la pila se dibuja a ${[...fs][0]}, más de lo que aguanta su hermana más angosta (${_aguanta})`);
+  }
+});
+
+test('la pila — el « + » vive en el gap: 0,5u, al margen, en color de sección', () => {
+  const mas = _mas(_pila('La tempestá + No contéis con los dedos + Vampir Cuadecuc', ''));
+  assert.equal(mas.length, 2, 'dos obras contiguas → un « + » entre ellas');
+  for (const m of mas) {
+    assert.equal(m.fs, 0.5*U16, 'el « + » mide 0,5u');
+    assert.equal(m.x, +(0.75*U16).toFixed(2), 'el « + » se apoya en el margen, como todo el sistema');
+    assert.equal(m.fill, ACC, 'el « + » lleva el color de la sección');
+  }
+});
+
+test('la pila — 1u exacto entre bloques, y el « + » centrado en ese aire', () => {
+  const rows = _pila('Rancho + Gosse', '2 obras · 71 min');
+  const [a, b] = _cuerpo(rows);                 // una línea por obra
+  const lh = a.fs*1.2;
+  assert.ok(Math.abs((b.y - a.y) - (lh + U16)) < 0.05,
+    `el gap entre bloques debe ser 1u exacto — medido ${((b.y-a.y-lh)/U16).toFixed(3)}u`);
+  const centro = a.y + U16/2;                   // mitad del aire
+  assert.ok(Math.abs(_mas(rows)[0].y - (centro + 0.5*U16*0.35)) < 0.05,
+    'el « + » cae ópticamente en el medio del gap, no en su borde');
+});
+
+test('la pila — se apoya en la misma base que cualquier título (§6.0)', () => {
+  const base = rows => Math.max(..._cuerpo(rows).map(r => r.y));
+  assert.equal(base(_pila('Rancho + Gosse', '2 obras · 71 min')),
+               base(_pila('Los bibliotecarios', '92 min')),
+    'la pila crece hacia arriba: su última línea comparte base con el título de una sola obra');
+});
+
+test('la pila — frontera 2–3: con 4 obras vuelve la forma de siempre', () => {
+  const rows = _pila('Rancho + Gosse + Spot uno + Spot dos', '4 obras · 88 min');
+  assert.equal(_mas(rows).length, 0,
+    'con 4 obras no hay pila: el pie ya dice « 4 obras » y el cuerpo caería a ilegible');
+  assert.equal(_mas(_pila('Los bibliotecarios', '92 min')).length, 0,
+    'una sola obra nunca se apila');
+});
+
+test('la pila — nunca invade el bloque de sección, ni con rótulo de 2 líneas', () => {
+  const rows = _textos(C._buildPosterV16({ accent:ACC,
+    headerLabel:'La primavera llega para los que esperan',
+    // Peor caso hallado por fuerza bruta sobre el espacio de compuestos: tres
+    // nombres MEDIANOS bajo un rótulo de 2 líneas. Caben holgados por ancho, así
+    // que quien los baja es el presupuesto de alto — es el único input que prueba
+    // el techo. Con una caja fija de 2,4u este mismo cartel invade la sección.
+    title:'El norte de la mañana + Cantos de la aurora + La casa de la frontera',
+    num:null, dato:'3 obras · 140 min' }));
+  const secBottom = Math.max(...rows.filter(r => r.fill === ACC && r.txt !== '+').map(r => r.y));
+  const pilaTop   = Math.min(..._cuerpo(rows).map(r => r.y - r.fs));   // borde alto de la caja
+  assert.ok(pilaTop > secBottom,
+    `la pila se metió en la sección: tope ${pilaTop} vs fondo de sección ${secBottom}`);
+});
