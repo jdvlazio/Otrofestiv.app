@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608241527">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608241527">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608241601">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608241601">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -868,6 +868,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    línea. La banda contrasta con su contenedor: surf-2 sobre página; card-b
    (token existente) dentro de sheets/cards — scoped abajo. Los días (saved-day-lbl,
    horas del horario) quedan SIN banda: jerarquía mayor, respiran solos. */
+/* CONTRATO: los margin negativos de abajo ROMPEN el padding del contenedor
+   para lograr el full-bleed, y lo reponen como padding propio. Por tanto el
+   contenedor —él o un ancestro— DEBE aportar var(--sp-4) lateral; si no, la
+   banda se sale del viewport y su icono queda cortado contra el borde (pasó
+   con #palmares-slot el 24 ago: 422px en un viewport de 390). Doctrina y
+   comprobación en docs/ARQUITECTURA.md § sec-hdr. */
 .sec-hdr{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white-60);display:flex;align-items:center;gap:var(--sp-1);margin-bottom:var(--sp-2);width:auto;background:var(--surf-2);margin-left:calc(-1*var(--sp-4));margin-right:calc(-1*var(--sp-4));padding:var(--sp-2) var(--sp-4)}
 .sec-hdr>svg{color:var(--amber);flex-shrink:0}
 .sec-hdr .hdr-end{margin-left:auto;display:inline-flex;align-items:center;gap:var(--sp-1)}
@@ -3572,7 +3578,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608241527";
+    s.src="/src/main.js?v=202608241601";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
