@@ -656,6 +656,52 @@ resultado, no el camino — mismo patrón que el oráculo del planeador (§15.6)
 
 El anclaje de función (`sealSharedSlots`) agrupa por `día|hora|sede|sala`. Si en
 
+#### Los guardianes se pudren: la auditoría del 25 ago 2026
+
+Un guardián es código, y como todo código se desactualiza cuando la app se
+mueve. La **Fase 8** partió el JS de `index.html` en 37 módulos bajo `src/` y
+anotó en el shim de `validate.py`: *«los checks no requieren cambios»*. Esa
+frase fue la enfermedad — el shim inyectaba **solo `main.js`**, así que todos
+los checks que leen `content` se quedaron mirando 2 de 37 módulos.
+
+Se auditaron con **mutación** los 30 guardianes más antiguos (los anteriores a
+la Fase 8, la población de mayor riesgo). Resultado: **19 vivos · 8 ciegos ·
+3 decorativos**.
+
+**Lo que se arregló:**
+- **`js-syntax` era un ✓ incondicional**: `node --check` sobre un `.js` con
+  `import` lo trata como CommonJS y aprueba *cualquier cosa* — incluso
+  `const a = ;`. Ahora compila cada módulo como `.mjs` (parseo real) y el inline
+  de index.html como script clásico. Importa porque un error de sintaxis en
+  cualquier módulo mata la app entera al boot (ver [boot-esm-torn]).
+- **El shim inyecta TODOS los módulos**: `event-delegation` pasó de ver 39
+  `data-action` a **101** (y sus «63 muertos» eran falsos: 7).
+
+**LOS DUEÑOS NO SON TERRITORIO.** Al ver todo el código, cuatro guardianes se
+acusaron a sí mismos: el diccionario (`i18n.js`) veía sus 425 valores como
+«strings hardcodeados», el adaptador (`storage.js`) veía sus propios
+`localStorage`, y los bridges veían sus declaraciones como shadowing. Un
+archivo que ES la referencia de un check no puede estar en su pajar:
+`_SRC_NO_INYECTAR`.
+
+**Un guardián puede tener razón y estar mal escrito.** Dos regex daban falsos:
+uno cruzaba la coma de un array literal (`const _visDays=new Set([DAY_KEYS[vs],
+DAY_KEYS[ve]])` parecía declarar `DAY_KEYS`); otro ignoraba que
+`t('k').replace('{n}',…)` sí sustituye el placeholder.
+
+**Y uno se BORRÓ, con medición:** `shadow-t` (retirado) vigilaba 1 de 467 llamadas a
+`t()`, y con el territorio completo hay **42 sombreados de `t` y cero
+peligrosos**. La alternativa correcta (ESLint `no-restricted-syntax`, parser de
+verdad) marca los 42 inofensivos: 50 avisos por un bug que no ocurre. Menos
+guardianes y mejores: **155 → 154**.
+
+> **La regla que queda.** «Un guardián que nunca falló no es de fiar» se venía
+> aplicando **al crearlo**. Hay que aplicarla también **al conjunto**, cada
+> tanto: un guardián verde puede estar mirando el lugar equivocado desde hace
+> meses. Lo único que lo demuestra es plantar el bug real donde hoy ocurriría.
+
+---
+
 #### `sameEntry` — la identidad de una entrada del Plan incluye la SEDE
 
 `sameEntry(a,b)` (`src/domain/schedule.js`) es el **dueño único** de «esta
