@@ -655,6 +655,39 @@ resultado, no el camino — mismo patrón que el oráculo del planeador (§15.6)
 #### La sala que parte un programa — `[sala-mixta]`
 
 El anclaje de función (`sealSharedSlots`) agrupa por `día|hora|sede|sala`. Si en
+
+#### `sameEntry` — la identidad de una entrada del Plan incluye la SEDE
+
+`sameEntry(a,b)` (`src/domain/schedule.js`) es el **dueño único** de «esta
+entrada del Plan es aquella»: **título + día + hora + sede**. Misma forma que
+`screensConflict` para «estas dos chocan» y `venueMatches` para el filtro: el
+predicado vive en el dominio y todos preguntan, nadie reimplementa.
+
+**Por qué la sede.** FICDEH programa la misma obra el mismo día y a la misma
+hora en ciudades distintas — **13 casos medidos**. Sin sede en la identidad,
+agendar «La independencia» en Bogotá marcaba la función de **Ibagué** como «en
+tu plan»: la app le decía a alguien de Ibagué que ya tenía algo que nunca
+agendó, y la que sí quería aparecía tomada. Bug real en producción, encontrado
+por el modelador de dominio el 25 ago 2026, sin relación con ninguna feature.
+
+**Dos decisiones del predicado, y las dos importan:**
+- **Falla CERRADO**: sin día u hora no matchea nada. Un predicado anterior
+  (revertido con #749) matcheaba TODO con los campos ausentes, así que un
+  llamador olvidadizo no daba error — borraba en masa. Ahora el olvido es un
+  no-op.
+- **Tolera la sede ausente**: si un lado no la declara, no se exige que
+  coincida. Los planes guardados antes de que la sede viajara en la entrada no
+  la tienen, y endurecerlo los desconectaría del catálogo — justo la pérdida de
+  datos que el predicado existe para evitar.
+
+**Sutileza del refresco en caliente**: la CLAVE del diff (`refresh-diff.js`) NO
+lleva sede a propósito — un cambio de sede es un cambio de VALOR (regla 1, se
+aplica en silencio) y meterla ahí lo volvería estructural, disparando el pill
+por una mudanza de sala. Solo el emparejamiento del PLAN usa `sameEntry`.
+
+Blindaje: `tests/unit/sameEntry.test.js` (datos reales de FICDEH) + **T108**
+(mide el bug en pantalla). Dos mutantes mueren: quitarle la sede reproduce el
+bug de producción; quitarle el fallo-cerrado reproduce el de #746.
 un programa de cortos una entrada trae `sala` y las demás no, esa obra **queda
 fuera del bloque**: la duración se cuenta de menos, no cuenta como conflicto con
 sus compañeras, el planificador puede agendar dos obras de la misma función, y el

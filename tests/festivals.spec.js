@@ -919,3 +919,35 @@ test('P09 — el splash recuerda el festival elegido, y lo olvida cuando termin�
   expect(caducado.on, 'el terminado no queda seleccionado').not.toBe('ficci65');
   expect(caducado.guardado, 'y la memoria se limpia sola').toBeNull();
 });
+
+// T108 — El ENLACE DE REVISIÓN (`?fest=<id>`) entra al festival que pide.
+// Es la única vía para que el equipo de un festival vea su montaje antes de
+// publicarlo, y estuvo rota desde que nació (#695, 22 ago 2026): main.js
+// llamaba `selectSplashFest(_previewFestId)` con el id de PRIMER argumento,
+// cuando la firma es (name, meta, festId). El tercer parámetro quedaba
+// undefined, la fn caía a su default `festId||_DEFAULT_FEST_ID` y la app
+// entraba —sin ningún error visible— al festival por defecto. Verificado en
+// producción: /?fest=cinemancia2026 abría TIFF.
+//
+// El test comprueba el RESULTADO (a qué festival se entra), no la forma de la
+// llamada: se pide con DOS festivales distintos, así que ningún destino fijo
+// puede pasar por bueno — que es exactamente como se coló el fallo.
+test('T108 — ?fest=<id> entra a ESE festival, no al de por defecto', async ({ page }) => {
+  const ids = festivalTestIds().slice(0, 2);
+  expect(ids.length, 'hacen falta 2 festivales publicables para este caso').toBe(2);
+  for (const id of ids) {
+    await page.goto('/?fest=' + id);
+    await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
+    await page.waitForFunction(
+      (f) => typeof _activeFestId !== 'undefined' && _activeFestId === f,
+      id,
+      { timeout: 15000 },
+    ).catch(() => {});
+    expect(await page.evaluate(() => _activeFestId), `?fest=${id} entra a ${id}`).toBe(id);
+    // Y entra de verdad: el splash se fue y el programa está poblado. El
+    // splash no se va con loadFestival() sino 150ms después, con un fade de
+    // 680ms (dismissSplash) — esperar el DOM, no el reloj.
+    await page.waitForSelector('#otrofestiv-splash', { state: 'detached', timeout: 10000 });
+    expect(await page.evaluate(() => FILMS.length), 'con el programa cargado').toBeGreaterThan(0);
+  }
+});

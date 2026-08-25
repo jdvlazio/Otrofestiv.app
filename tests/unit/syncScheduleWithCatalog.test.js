@@ -11,7 +11,9 @@ const test = require('node:test');
 const assert = require('node:assert');
 const { loadDomain } = require('../lib/load-domain.js');
 
-const { syncScheduleWithCatalog } = loadDomain({ functions: ['syncScheduleWithCatalog'], globals: {} });
+// sameEntry es el dueño único de la identidad de entrada; syncScheduleWithCatalog
+// la consume, así que el harness tiene que cargar las dos.
+const { syncScheduleWithCatalog } = loadDomain({ functions: ['sameEntry', 'syncScheduleWithCatalog'], globals: {} });
 
 const CATALOGO = [
   { title: 'Propiedad privada', day: 'D1', time: '18:00', venue: 'York', duration: '106 min',

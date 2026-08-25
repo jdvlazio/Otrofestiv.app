@@ -19,7 +19,17 @@
 // alta+baja (estructura) — correcto para el layout — y el clasificador del plan
 // lo re-encuentra por título para poder DECIR «cambió el horario», no «se fue».
 
+import { sameEntry } from './schedule.js';
+
 const _key = f => `${f.title}|${f.day}|${f.time}`;
+// La CLAVE del diff no lleva sede a propósito: un cambio de sede es un cambio de
+// VALOR (regla 1 — se aplica en silencio), no un alta+baja. Meterla acá lo
+// volvería estructural y dispararía el pill por una mudanza de sala.
+// El emparejamiento del PLAN es otra cosa: ahí sí hay que distinguir ciudades
+// (FICDEH programa la misma obra el mismo día y hora en dos ciudades), o el
+// diff compara la elección del usuario contra la función equivocada. Para eso
+// se usa sameEntry, el dueño único de la identidad de entrada.
+const _elegida = (fns, p) => (p.venue ? fns.find(f => sameEntry(f, p)) : null);
 
 // clasificarRefresco({oldFns, newFns, oldDays, newDays, plan}) →
 //   { hay, estructural, calendario, valores:[{title,day,time,campo}], plan:[{title,tipo}] }
@@ -55,9 +65,9 @@ export function clasificarRefresco({ oldFns, newFns, oldDays, newDays, plan }){
   const planCambios = [];
   for (const p of (plan||[])) {
     const k = `${p.title}|${p.day}|${p.time}`;
-    const viva = nm.get(k);
+    const viva = _elegida(newFns||[], p) || nm.get(k);
     if (viva) {
-      const vieja = om.get(k);
+      const vieja = _elegida(oldFns||[], p) || om.get(k);
       if (vieja && (viva.venue||'') !== (vieja.venue||'')) planCambios.push({ title: p.title, tipo: 'sede' });
       continue;
     }
