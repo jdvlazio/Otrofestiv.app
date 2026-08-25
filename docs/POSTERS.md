@@ -495,6 +495,13 @@ esas bajan a la línea siguiente con el sustantivo que introducen.
 3. **Todo programa produce un póster único** — lo blinda el check
    `[poster-editorial-unique]` (corre el `makeProgramPoster` real sobre cada
    programa y falla si dos coinciden). **ERROR, sin falsos positivos.**
+4. **La serie se ve como serie** — regla de las portadas de playlists dinámicas
+   de Apple («easily identified as being part of a series», auditoría 24 ago
+   2026): los programas numerados de una misma sección cuyo título solo difiere
+   en el ordinal renderizan la MISMA composición. Lo blinda
+   `[poster-serie-consistente]` (el inverso del anterior: idénticos-salvo-el-
+   ordinal dentro de la serie; enmascara ordinales y coordenadas para comparar
+   solo estructura, colores y voces). 21 series reales en 8 festivales.
 
 ### 6.2b El título no repite la sección — por delante Y por detrás
 
