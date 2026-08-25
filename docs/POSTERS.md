@@ -178,6 +178,20 @@ Un solo camino para pintar cualquier póster — los call sites NO re-derivan fl
     regresión.
 - **CSS `.poster-ed`** (`index.html`) — **un** componente; el alto de la banda es
   `var(--ed-hdr-ratio)` (una fuente, antes `28.89%` hardcodeado en CSS y JS).
+- **La Forma B es de la MISMA FAMILIA que la A** (24 ago 2026): mismo **suelo**
+  (negro de marca `--bg`) y misma **luz** de sección. Dos trampas, las dos
+  visibles solo EN PANTALLA:
+  1. El marco **pinta su propio suelo** —es el póster, no un contenedor de
+     `<img>`—, pero la card del grid llega con `bg-surf-2 … poster-ed` y
+     `.bg-surf-2` **gana la cascada** (misma especificidad, ~1950 líneas más
+     abajo). Por eso la regla del suelo va con la clase repetida
+     (`.poster-ed.poster-ed`). La Forma A nunca lo sufrió: su `<img>` SVG tapa
+     el fondo del contenedor.
+  2. La luz **hereda `--ed-accent`** (que el contenedor ya trae). Estuvo ámbar
+     fija mientras la Forma A ya heredaba el acento → una pared con las dos
+     formas mezclaba ámbar entre colores de sección.
+  Guardián: **T105**, que MIDE estilos computados. Un check estático del CSS
+  habría dado verde con el bug puesto: la regla correcta existía, solo perdía.
 - **`onerror` unificado** — los marcos editoriales usan **`_edPosterErr`**
   (`poster-err.js`): si la imagen falla, reemplaza **toda** la pieza por un póster
   generativo (no deja la banda con hueco).
