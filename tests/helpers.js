@@ -15,7 +15,12 @@ const LEVIZA_SIMTIME = '2026-05-14T00:00:00-05:00';
 function festivalTestIds() {
   const fs = require('fs'), path = require('path');
   const src = fs.readFileSync(path.join(__dirname, '../src/config.js'), 'utf8');
-  const body = src.slice(src.indexOf('FESTIVAL_CONFIG'));
+  // Sin comentarios: esto busca `group:'test'` como TEXTO, y un comentario que
+  // lo mencione cuenta igual que la línea real. Pasó al publicar Cinemancia —
+  // el comentario que explicaba que se le había quitado la marca la dejaba
+  // fuera de la suite, y en silencio: un festival de menos no se ve, los tests
+  // que quedan siguen pasando. El fallo es del tipo que no falla.
+  const body = src.slice(src.indexOf('FESTIVAL_CONFIG')).replace(/^\s*\/\/.*$/gm, '');
   const re = /\n {2}'([a-z0-9]+)':\s*\{/g; // entradas de festival (2-space, id [a-z0-9])
   const found = [];
   let m;
