@@ -215,7 +215,7 @@ export function renderProgramaListHTML(state){
         ${_stk||_plistPosterHtml(f,src)}
         <div class="plist-info">
           <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${nowDot}${_metaBadges(f)}${qaDot}</div>
-          <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${venueCity(f.venue)?`<span class="plist-city">${venueCity(f.venue)}</span>`:''}${f.duration?' · '+durFmt(f.duration):''}</div>
+          <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${venueCity(f.venue)?` · <span class="plist-city">${venueCity(f.venue)}</span>`:''}${f.duration?' · '+durFmt(f.duration):''}</div>
           ${noticeNote||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}
         </div>
         <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>

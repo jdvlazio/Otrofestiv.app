@@ -2539,3 +2539,33 @@ test('T106 — la LISTA sirve la mini: una voz por chip, y el grid queda intacto
   });
   expect((grid.match(/<text/g) || []).length, 'el grid queda tipográfico: sus voces intactas').toBeGreaterThanOrEqual(2);
 });
+
+test('T107 — la ciudad no se pega a la sede en la lista', async ({ page }) => {
+  test.setTimeout(60000);
+  // Juan, 25 ago, sobre Cinemancia: «¿por qué la ciudad está pegada totalmente
+  // del venue?» — «Centro Colombo AmericanoMedellín». La ciudad pasó a vivir
+  // DENTRO de la frase de sede el 18 ago (antes era display:block, línea propia
+  // sin separador), y de los tres emisores solo dos recibieron el « · ». El de
+  // la lista quedó pegando ciudad y sede en TODOS los festivales multiciudad.
+  // Se mide en PANTALLA (textContent real), no en el markup: es donde se ve.
+  await enterFestival(page, 'ficdeh2026', '2026-08-14T10:00:00-05:00');
+  await page.evaluate(() => { activeDay = DAY_KEYS[0]; programaViewMode = 'list'; _renderProgramaContent(); });
+  // Se lee el NODO DE TEXTO anterior al span, no la cadena entera: buscar la
+  // ciudad con indexOf la encuentra dentro del propio nombre de la sede
+  // («Centro Cultural Panóptico de Ibagué» · Ibagué) y el test acusaba en falso.
+  const metas = await page.evaluate(() => [].slice.call(document.querySelectorAll('.plist-meta'))
+    .filter(n => n.querySelector('.plist-city'))
+    .map(n => {
+      const span = n.querySelector('.plist-city');
+      const prev = span.previousSibling;
+      return {
+        txt: n.textContent.replace(/\s+/g, ' '),
+        antes: prev ? prev.textContent.trimEnd() : '',
+      };
+    }));
+  expect(metas.length, 'FICDEH es multiciudad: sus filas muestran ciudad').toBeGreaterThan(0);
+  for (const m of metas) {
+    expect(m.antes.endsWith('·'),
+      `«${m.txt}»: la ciudad debe ir separada de la sede por « · », no pegada`).toBe(true);
+  }
+});

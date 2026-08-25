@@ -639,6 +639,7 @@ Tres guardianes sostienen la regla, y cada uno cubre lo que el otro no ve:
 | `[short-ambiguo]` | **el dato**: avisa si un short se repite entre ciudades (validate-festivals) |
 | `venueMatches.test.js` | **la unidad**: el predicado no cruza ciudades y sí agrupa salas |
 | `P08` | **el invariante**: filtrar por una sede nunca devuelve otra ciudad, en CADA festival |
+| `[ciudad-separada]` | **la pantalla**: la ciudad va DENTRO de la frase de sede (auditoría 18 ago) y necesita su « · ». Se lo pusieron a 2 de los 3 emisores; el tercero pegó «Centro Colombo AmericanoMedellín» en todos los multiciudad hasta el 25 ago |
 
 P08 es el que más vale: no sabe nada de centinelas ni de `short`, así que sigue
 cazando la clase aunque cambiemos por completo la implementación. Juzga el
