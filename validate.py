@@ -1612,6 +1612,39 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar dom-ready-guard: {_e}')
 
+# ── CHECK: [refresco-huella-cruda] ────────────────────────────────────────────
+# La ingesta MUTA el JSON recién bajado (explodeScreenings devuelve los MISMOS
+# objetos que data.films; la duración de programas, sealSharedSlots y NOTICES
+# escriben sobre él). Si la huella del refresco en caliente se toma DESPUÉS de
+# esas mutaciones, nunca vuelve a coincidir con la de un JSON fresco y el
+# refresco cree ver un cambio en cada tick: los pósters titilan (Juan lo vio en
+# su teléfono, 24 ago 2026). La huella y la copia cruda van ANTES de todo.
+check = 'refresco-huella-cruda'
+try:
+    _ld = open('src/controller/loader.js', encoding='utf-8').read()
+    _i = _ld.find('export function _ingerirDatosFestival')
+    if _i < 0:
+        fail(check, 'no existe _ingerirDatosFestival — el dueño único de la ingesta desapareció')
+    else:
+        _cuerpo = _ld[_i:_ld.find('\nexport ', _i + 10)]
+        # SIN COMENTARIOS: el porqué de este check NOMBRA a explodeScreenings y a
+        # sealSharedSlots, así que buscar sobre el texto crudo encontraba la
+        # mención en la prosa y acusaba al código ya arreglado. Un guardián tiene
+        # que mirar código, no su propia explicación.
+        _codigo = '\n'.join(_l for _l in _cuerpo.split('\n') if not _l.lstrip().startswith('//'))
+        _pos_hash = _codigo.find('_rawHash')
+        _pos_mut  = min([p for p in (_codigo.find('explodeScreenings'), _codigo.find('sealSharedSlots')) if p > 0] or [-1])
+        if _pos_hash < 0:
+            fail(check, 'la ingesta ya no toma la huella cruda (_rawHash) — el refresco quedaría ciego')
+        elif _pos_mut > 0 and _pos_hash > _pos_mut:
+            fail(check, 'la huella (_rawHash) se toma DESPUÉS de mutar el JSON — el refresco verá un cambio en cada tick y los pósters van a titilar')
+        elif 'cfg._rawFilms=data.films' in _codigo.replace(' ', ''):
+            fail(check, '_rawFilms guarda la REFERENCIA al JSON que la ingesta muta — el lado viejo del diff se inventará cambios; debe ser copia')
+        else:
+            ok(check, 'la huella y la copia crudas se toman antes de que la ingesta mute el JSON')
+except Exception as _e:
+    warn(check, f'no se pudo verificar refresco-huella-cruda: {_e}')
+
 # ── CHECK: [update-canales-sin-sw] ────────────────────────────────────────────
 # Los 4 canales de version.json (cold start, visibilitychange, online, poll) NO
 # dependen del service worker: son fetch + location.href. Vivieron años dentro

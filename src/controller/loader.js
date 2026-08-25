@@ -95,6 +95,22 @@ function _touchFestivalCache(id){
 // ingesta que la auditoría de caminos duplicados prohibió: los avisos (NOTICES),
 // los slots compartidos y la explosión se sellan ACÁ o no se sellan.
 export function _ingerirDatosFestival(id, cfg, data){
+  // HUELLA CRUDA — SE TOMA ACÁ, ANTES DE TOCAR NADA (24 ago 2026). La ingesta
+  // MUTA `data`: explodeScreenings devuelve los MISMOS objetos que data.films
+  // (no copias), así que la duración automática de los programas, sealSharedSlots
+  // y los avisos de NOTICES escriben sobre el JSON recién bajado. Tomar la huella
+  // al final la dejaba distinta de la de un JSON fresco → el refresco en caliente
+  // creía ver un cambio en CADA tick y re-renderizaba el grid cada 10 minutos:
+  // los pósters titilaban (Juan lo vio en su teléfono). Medido: muta en 4 de 17
+  // festivales (FICDEH, FICMA, FINCA, QAFF) — los que tienen slots compartidos,
+  // avisos o programas sin duración propia.
+  // Por lo mismo `_rawFilms` es una COPIA: es el lado «viejo» del diff y con las
+  // mutaciones puestas reportaría como cambio lo que solo fue nuestro sellado
+  // (una función reprogramada por NOTICES se vería «movida» contra el JSON nuevo).
+  const _crudo=JSON.stringify(data);
+  cfg._rawHash=_djb2(_crudo);
+  cfg._rawFilms=JSON.parse(_crudo).films;
+  cfg._rawDayKeys=(data.dayKeys||cfg.dayKeys||[]).slice();
   // ── Explosión de screenings[] → objetos planos por función ──
   // Dueño: explodeScreenings (domain/film.js) — compartido con el oráculo
   // del planeador, que necesita ejercer el MISMO catálogo que producción.
@@ -229,11 +245,7 @@ export function _ingerirDatosFestival(id, cfg, data){
   // Absorber venues desde raíz del JSON (AFF/FICCI los tienen hardcodeados; otros festivales los traen aquí)
   if(data.venues) cfg.venues=data.venues;
   if(data.transport) cfg.transport=data.transport;
-  // Huella para el refresco en caliente (live-refresh.js): el hash detecta el
-  // cambio sin comparar todo; los crudos alimentan al clasificador del diff.
-  cfg._rawFilms=data.films;
-  cfg._rawDayKeys=data.dayKeys||cfg.dayKeys||[];
-  cfg._rawHash=_djb2(JSON.stringify(data));
+
 }
 
 // URL del JSON del festival — dueño único (la convención festId→archivo vivía
