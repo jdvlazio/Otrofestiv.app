@@ -573,10 +573,20 @@ try:
     es_keys = _parse_i18n(_extract_lang_block(i18n_block, 'es'))
     en_keys = _parse_i18n(_extract_lang_block(i18n_block, 'en'))
 
-    # All t('key') calls — en el script (main.js inyectado) Y en i18n.js
-    # (_applyI18nDOM llama t() con keys hardcodeadas).
-    script_part = content[content.find('<script>'):content.rfind('</script>')]
-    all_t_calls = set(re.findall(r"t\('([a-z][a-z0-9_]+)'\)", script_part + '\n' + _i18n_src))
+    # All t('key') calls. OJO — ESTE CHECK ESTUVO CIEGO (25 ago 2026): miraba
+    # solo el <script> de index.html y el propio i18n.js, pero la Fase 8 se llevó
+    # TODAS las llamadas a t() a src/**. Verificaba 4 claves de cientos, y dejó
+    # pasar a producción un diálogo entero con las claves ES/EN ausentes: t() cae
+    # al nombre de la clave y el botón habría dicho «plan_verla_otra_vez».
+    # Su hermano [i18n-parity] tampoco lo cazó: compara ES contra EN, y las
+    # claves faltaban en AMBOS, así que la paridad se cumplía. Ahora barre src/.
+    _fuentes = [content[content.find('<script>'):content.rfind('</script>')], _i18n_src]
+    for _r, _d, _fs in os.walk('src'):
+        for _f in _fs:
+            if _f.endswith('.js'):
+                _fuentes.append(open(os.path.join(_r, _f), encoding='utf-8').read())
+    # t('clave') y t('clave', {…}) — la forma con params también cuenta
+    all_t_calls = set(re.findall(r"\bt\(\s*'([a-z][a-z0-9_]+)'\s*[,)]", '\n'.join(_fuentes)))
     # Filter out non-i18n false positives (CSS selectors, HTML tags, etc.)
     NON_KEYS = {'div','span','button','img','input','p','a','svg','ul','li','err','ok'}
     real_keys = {k for k in all_t_calls if k not in NON_KEYS and len(k) > 3 and '_' in k}
@@ -4148,7 +4158,7 @@ try:
         'src/view/helpers.js': 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
         'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
         'src/main.js': 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
-        'src/i18n/i18n.js': 1668,  # +7: strings del diálogo de obra repetida (es/en/pt) — 25 ago  # antes 1661,  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
+        'src/i18n/i18n.js': 1682,  # +14: las 7 claves de «verla otra vez» en ES y EN, que se habían perdido — 25 ago  # antes 1668,  # +7: strings del diálogo de obra repetida (es/en/pt) — 25 ago  # antes 1661,  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
         'src/controller/sheets-controller.js': 1723,  # +5: _removePlanItem quita LA entrada (título+día+hora), no todas las del título — 25 ago  # antes 1718,  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
         # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres
