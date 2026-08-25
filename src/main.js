@@ -194,7 +194,7 @@ const ACTION_REGISTRY = {
   addBlock:           (el)    => addBlock(el.dataset.day),
   confirmAvBlock:     ()      => confirmAvBlock(),
   confirmReplace:     (el)    => confirmReplace(el.dataset.rmtitle, el.dataset.newtitle, el.dataset.day, el.dataset.time, !!el.closest('#ag-result')),
-  removeFromAgenda:   (el)    => removeFromAgenda(el.dataset.title),
+  removeFromAgenda:   (el)    => removeFromAgenda(el.dataset.title, el.dataset.day, el.dataset.time),
   planFixNotice:      (el)    => _planFixNotice(el.dataset.title),
   setDelay:           (el)    => setDelay(el.dataset.title, el.dataset.day, el.dataset.time, +el.dataset.mins, el.dataset.venue),
   clearDelay:         (el)    => clearDelay(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.venue),
@@ -480,7 +480,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608250828';
+const BUILD_VERSION='202608250909';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
