@@ -573,10 +573,20 @@ try:
     es_keys = _parse_i18n(_extract_lang_block(i18n_block, 'es'))
     en_keys = _parse_i18n(_extract_lang_block(i18n_block, 'en'))
 
-    # All t('key') calls — en el script (main.js inyectado) Y en i18n.js
-    # (_applyI18nDOM llama t() con keys hardcodeadas).
-    script_part = content[content.find('<script>'):content.rfind('</script>')]
-    all_t_calls = set(re.findall(r"t\('([a-z][a-z0-9_]+)'\)", script_part + '\n' + _i18n_src))
+    # All t('key') calls. OJO — ESTE CHECK ESTUVO CIEGO (25 ago 2026): miraba
+    # solo el <script> de index.html y el propio i18n.js, pero la Fase 8 se llevó
+    # TODAS las llamadas a t() a src/**. Verificaba 4 claves de cientos, y dejó
+    # pasar a producción un diálogo entero con las claves ES/EN ausentes: t() cae
+    # al nombre de la clave y el botón habría dicho «plan_verla_otra_vez».
+    # Su hermano [i18n-parity] tampoco lo cazó: compara ES contra EN, y las
+    # claves faltaban en AMBOS, así que la paridad se cumplía. Ahora barre src/.
+    _fuentes = [content[content.find('<script>'):content.rfind('</script>')], _i18n_src]
+    for _r, _d, _fs in os.walk('src'):
+        for _f in _fs:
+            if _f.endswith('.js'):
+                _fuentes.append(open(os.path.join(_r, _f), encoding='utf-8').read())
+    # t('clave') y t('clave', {…}) — la forma con params también cuenta
+    all_t_calls = set(re.findall(r"\bt\(\s*'([a-z][a-z0-9_]+)'\s*[,)]", '\n'.join(_fuentes)))
     # Filter out non-i18n false positives (CSS selectors, HTML tags, etc.)
     NON_KEYS = {'div','span','button','img','input','p','a','svg','ul','li','err','ok'}
     real_keys = {k for k in all_t_calls if k not in NON_KEYS and len(k) > 3 and '_' in k}
