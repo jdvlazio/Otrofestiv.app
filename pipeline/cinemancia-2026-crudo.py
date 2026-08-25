@@ -663,6 +663,22 @@ def main():
                 _dd.update({k: v for k, v in _extra.items() if v not in (None, '')})
                 e.setdefault('obras', []).append(_dd)
                 e['_obras_src'] = 'obra que faltaba, enviada por el festival (21 AGO)'
+        # El TÍTULO se decidió arriba, con las obras que el cruce encontró. Si
+        # acabamos de meter una que faltaba, quedó vencido: «Dice que…» seguía
+        # anunciándose sola cuando ya eran DOS, y «Las picapedreras» no existía
+        # para quien mirara la tarjeta —el mismo agujero que veníamos de tapar,
+        # tapado a medias—. Se rehace con la regla que ya usa este archivo para
+        # los programas dobles: unir con «+», como los escribe el festival.
+        # Solo cuando el título ES el de una de sus obras: un programa con
+        # nombre propio («… Programa 2») no se renombra.
+        if len(e.get('obras') or []) > 1:
+            # Dentro del crudo la obra se llama `titulo`; `title` solo aparece
+            # en las que entran por OBRAS_AÑADIDAS. Mirar una sola forma dejaba
+            # la lista vacía y el retitulado no ocurría (sin fallar).
+            _tits = [t for t in ((o.get('titulo') or o.get('title')) for o in e['obras']) if t]
+            if e.get('titulo') in _tits:
+                e['titulo'] = ' + '.join(_tits)
+                e['_titulo_src'] = 'programa doble: unido con «+», como lo escribe la parrilla'
 
         # El kind se decide sobre el título FINAL: el de «Michael Koresky y José
         # Miccio» lo pone la hoja de charlas, no la celda de la parrilla.
