@@ -600,27 +600,18 @@ export const FESTIVAL_CONFIG={
     // anterior marcaba las 89 funciones como gratis por igual.
     ticketing_model:'mixed',
     keyArt:'/assets/keyart/cinemancia2026.jpg',
-    // group:'test' — Cinemancia NO se publica todavía, pero ya NO por datos:
-    // el montaje está completo (79 funciones, 108 obras, todas con afiche,
-    // sinopsis, país y duración; 13 sedes ubicadas; cero programas sin
-    // contenido). Falta que el equipo del festival lo revise y lo apruebe,
-    // y para eso entran por ?fest=cinemancia2026 sin que nadie más lo vea.
-    // Quitar esta línea ES publicar.
-    group:'test',
     // Sus seis municipios son el Valle de Aburrá: un solo territorio de
     // traslado. Sin esto, la app se niega a estimar el viaje entre ellos —una
     // regla pensada para FICDEH, que corre en ciudades a cientos de km— y le
     // dice al usuario «es en otra ciudad» en vez de cuántos minutos le faltan.
     metroArea:true,
-    // EN REVISIÓN — el festival ve su montaje en la app real, antes de que lo
-    // vea nadie más. `group:'test'` lo mantiene fuera de todo lo demás; esto lo
-    // devuelve al riel en su propio grupo, al final, tras los pasados.
-    //   · solo dentro de la app (en web el store gate manda a las tiendas);
-    //   · pide `key` para entrar — va en el bundle a propósito: protege de
-    //     entrar por accidente, no de alguien decidido, y eso basta;
-    //   · `until` la apaga sola. Un permiso temporal que hay que acordarse de
-    //     revocar es un permiso permanente.
-    review:{key:'cine26', until:'2026-09-03'},
+    // PUBLICADO el 25 AGO 2026, con el visto bueno del festival. Se fueron
+    // JUNTAS las dos líneas que lo escondían: la marca de grupo de pruebas y
+    // `review`. La segunda no es decorativa —`_esRevisionActiva()` la lee como
+    // «esto no se publica» y de ahí cuelgan tres restricciones: no sincroniza,
+    // no se comparte y pinta la banda «En revisión»—; además `dismissSplash()`
+    // pide la clave con solo ver `review.key`, sin mirar `until` ni el grupo,
+    // así que dejarla habría pedido la clave a todo el que entrara.
     tagline:'Festival de Cine del Valle de Aburrá',
     films:null,posters:null,lbSlugs:{}
   },
