@@ -12,6 +12,7 @@
 
 import { FESTIVAL_CONFIG, SECTION_COLORS, SECTION_EN, ARCHETYPE_COLORS, SECTION_ARCHETYPES } from "../config.js";
 import { toMin } from "../domain/time.js";
+import { _djb2, _mulberry32 } from "../domain/film.js";
 import { t } from "../i18n/i18n.js";
 import { state } from "../state/state.js";
 
@@ -332,6 +333,53 @@ export function _seccionPartes(label){
   const _esFirma=/^(curadur[ií]a|curated|el cine de|the cinema of|o cinema de)/i.test(_resto)
     || (_resto.split(/\s+/).length<=4 && _resto.split(/\s+/).every(w=>/^[A-ZÁÉÍÓÚÑÜ]/.test(w)));
   return _esFirma ? {rotulo:_rot, firma:_resto} : {rotulo:_l, firma:null};
+}
+
+// ── LA MINI — el generativo en superficies de 56px (mejora 1, Apple Music) ──
+// Regla oficial que la motiva: «legible en TODO el rango de tamaños» (Curator
+// Best Practices). Medido: en el chip de la lista el póster entero escalado
+// dejaba la sección en 3,3px y el dato en 2,8px — ruido que además REPITE lo
+// que la fila ya dice al lado (anti-repetición). La mini responde con UNA voz:
+//  · SERIE (título con «Programa N»): el ordinal a 5u — legible de verdad.
+//  · Obra o programa con nombre: SU MARCA — 2-3 formas geométricas sobre
+//    retícula de 2u, sembradas por _djb2(título) → _mulberry32. Determinista:
+//    la misma obra dibuja SIEMPRE la misma marca — se reconoce como una
+//    portada de disco, sin leer. (Primera versión sin marca: Juan la tumbó —
+//    «no hay diferenciador, no sirve». El color es de la SECCIÓN; a 56px solo
+//    una marca por obra distingue a dos vecinas.)
+// El GRID NO CAMBIA (decisión de Juan, 25 ago): la marca ahí era «demasiado
+// ruidosa, minimalismo cero». La mini vive solo donde el título va al lado.
+export function _buildPosterMini({accent, title, esPrograma}){
+  const VW=120, VH=180, U=15, M=11.25;
+  const _acc=accent||'#D85A30';
+  const base=`<defs><radialGradient id="lz" cx="1" cy="1" r="1">`
+    +`<stop offset="0" stop-color="${_acc}" stop-opacity=".28"/>`
+    +`<stop offset="1" stop-color="${_acc}" stop-opacity="0"/>`
+    +`</radialGradient></defs>`
+    +`<rect width="${VW}" height="${VH}" fill="#0B0A08"/>`
+    +`<rect width="${VW}" height="${VH}" fill="url(#lz)"/>`
+    +`<rect width="${VW}" height="${0.25*U}" fill="${_acc}"/>`;
+  let cuerpo='';
+  const _m=esPrograma&&String(title||'').match(/(?:programa|program|programme|prog\.?|pgm)\s*0?(\d+)/i);
+  if(_m){
+    cuerpo=`<text x="${M}" y="${VH-M}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${5*U}" font-weight="800" fill="#F0EDE8">${escXML(_m[1])}</text>`;
+  } else {
+    const rnd=_mulberry32(_djb2(String(title||'')));
+    const cel=2*U, usadas=new Set(), n=2+Math.floor(rnd()*2);
+    for(let i=0;i<n;i++){
+      let cx,cy,k=0;
+      do{ cx=Math.floor(rnd()*4); cy=1+Math.floor(rnd()*4); k++; }while(usadas.has(cx+'-'+cy)&&k<8);
+      usadas.add(cx+'-'+cy);
+      const x=cx*cel, y=cy*cel, op=i===0?'':' opacity=".45"';
+      switch(Math.floor(rnd()*4)){
+        case 0: cuerpo+=`<circle cx="${x+cel/2}" cy="${y+cel/2}" r="${cel/2}" fill="${_acc}"${op}/>`; break;
+        case 1: cuerpo+=`<path d="M${x} ${y+cel} A${cel} ${cel} 0 0 1 ${x+cel} ${y} L${x+cel} ${y+cel} Z" fill="${_acc}"${op}/>`; break;
+        case 2: cuerpo+=`<rect x="${x}" y="${y}" width="${cel}" height="${cel/2}" fill="${_acc}"${op}/>`; break;
+        case 3: cuerpo+=`<path d="M${x} ${y} L${x+cel} ${y} L${x} ${y+cel} Z" fill="${_acc}"${op}/>`; break;
+      }
+    }
+  }
+  return 'data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">${base}${cuerpo}</svg>`);
 }
 
 export function _buildPosterV16({accent, headerLabel, title, num, dato, firma}){
