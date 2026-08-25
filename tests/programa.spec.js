@@ -2465,3 +2465,41 @@ test('T104 — una función nueva NO se inyecta bajo los dedos: se ofrece, y el 
   await page.unrouteAll({ behavior: 'ignoreErrors' });
 });
 });
+
+test('T105 — la Forma B es de la misma familia que la A: negro de marca y luz de sección', async ({ page }) => {
+  test.setTimeout(60000);
+  // Juan, 24 ago 2026, sobre «Ver y escuchar» (Cinemancia): «tiene un estilo
+  // diferente al que aprobamos para los stills 16:9». Eran DOS bugs, los dos de
+  // la misma familia —la Forma B no recibió lo que la A sí—, y los dos solo se
+  // ven EN PANTALLA (el dato y el markup estaban perfectos):
+  //  1. SUELO: .poster-ed{background:var(--bg)} lo pisaba .bg-surf-2, que la card
+  //     del grid también trae y que está definida ~1950 líneas más abajo con la
+  //     MISMA especificidad. La Forma B se pintaba sobre #1B1917 mientras sus
+  //     hermanas generativas usan #0B0A08 → al lado se veía más clara y plana.
+  //     La Forma A nunca lo sufrió: su <img> SVG tapa el fondo del contenedor.
+  //  2. LUZ: seguía ámbar fija aunque la Forma A ya hereda el acento de sección
+  //     (24 ago) — una pared con las dos formas mezclaba ámbar entre colores.
+  // Por eso este test MIDE estilos computados en vez de leer el CSS: un guardián
+  // estático habría dado verde con el bug puesto, porque la regla correcta SÍ
+  // existía — solo perdía la cascada.
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00');
+  await page.evaluate(() => { activeDay = 'all'; programaViewMode = 'grid'; _renderProgramaContent(); });
+  const ed = page.locator('.poster-ed').first();
+  await expect(ed, 'CineAutopsia trae un póster editorial con still').toBeVisible({ timeout: 8000 });
+
+  const med = await page.evaluate(() => {
+    const n = document.querySelector('.poster-ed');
+    const cs = getComputedStyle(n), af = getComputedStyle(n, '::after');
+    const hex2rgb = h => { const v = h.trim().replace('#',''); return `rgb(${parseInt(v.slice(0,2),16)}, ${parseInt(v.slice(2,4),16)}, ${parseInt(v.slice(4,6),16)})`; };
+    return {
+      fondo: cs.backgroundColor,
+      negroMarca: hex2rgb(getComputedStyle(document.documentElement).getPropertyValue('--bg')),
+      surf2: hex2rgb(getComputedStyle(document.documentElement).getPropertyValue('--surf-2')),
+      acento: hex2rgb(n.style.getPropertyValue('--ed-accent') || '#000000'),
+      luz: af.backgroundImage || '',
+    };
+  });
+  expect(med.fondo, 'el marco editorial pinta su propio suelo: negro de marca, no la superficie gris').toBe(med.negroMarca);
+  expect(med.fondo, 'si sale surf-2, una clase utilitaria le ganó la cascada al builder').not.toBe(med.surf2);
+  expect(med.luz, 'la luz hereda el acento de la sección, no un color fijo').toContain(med.acento);
+});

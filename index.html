@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608241836">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608241836">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608241912">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608241912">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1159,12 +1159,28 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    psp-editorial, plist-poster…); el alto del header es var(--ed-hdr-ratio).
    Lo construye editorialFrame() (helpers.js). Sustituye a las 7 copias bespoke. */
 .poster-ed{position:relative;overflow:hidden;background:var(--bg);container-type:inline-size}
+/* CLASE REPETIDA A PROPÓSITO (24 ago 2026). El marco editorial PINTA SU PROPIO
+   SUELO —es el póster, no un contenedor de <img>—, pero la card del grid llega
+   con `bg-surf-2 poster-card … poster-ed` (programa.js) y `.bg-surf-2` gana por
+   orden: misma especificidad, definida ~1950 líneas más abajo. Resultado medido
+   en Cinemancia: la Forma B se pintaba sobre #1B1917 mientras sus hermanas
+   generativas usan el negro de marca #0B0A08 → al lado se veía más clara y
+   plana, otra familia. Duplicar la clase la sube a (0,2,0) sin suponer qué otras
+   clases trae el contenedor: sirve para el grid y para cualquier sizer futuro.
+   Es la misma lección de siempre: el CSS por-contenedor puede pisar al builder. */
+.poster-ed.poster-ed{background:var(--bg)}
 /* Luz de marca en la esquina inferior derecha — la misma firma que el póster
    generativo (§6.0), pero DISCRETA: a 64px de ancho una luz como la del póster
    grande es un manchón que compite con la imagen, que es lo único que informa
-   (Juan, 19 ago). Se dimensiona en % del contenedor, así escala con la tarjeta. */
-.poster-ed::after{content:'';position:absolute;right:0;bottom:0;width:55%;height:32%;pointer-events:none;
-background:radial-gradient(circle at 100% 100%,rgba(245,158,11,.16),rgba(245,158,11,0) 70%)}
+   (Juan, 19 ago). Se dimensiona en % del contenedor, así escala con la tarjeta.
+   LA LUZ HEREDA EL ACENTO DE SECCIÓN (24 ago 2026): estaba ámbar fija mientras
+   la Forma A ya la heredaba — una pared con las dos formas mezclaba una luz
+   ámbar entre luces de sección. El contenedor ya trae `--ed-accent`, así que no
+   hace falta tocar JS. El 0,16 de alfa va como `opacity` de la capa y no dentro
+   del color: interpolar un hex en rgba() exigiría color-mix, que este proyecto
+   todavía no usa en ninguna parte — no vale estrenar una dependencia por esto. */
+.poster-ed::after{content:'';position:absolute;right:0;bottom:0;width:55%;height:32%;pointer-events:none;opacity:.16;
+background:radial-gradient(circle at 100% 100%,var(--ed-accent),transparent 70%)}
 /* ── Forma B (POSTERS.md §6.0): la forma A más UN campo de imagen ───────────
    Retícula del póster 2:3 en %: 1u = 12,5% del ancho = 8,33% del alto. Filete
    0,25u · sección a 1u · campo de imagen 8u×4,5u en y=3,5u (29,17% / 37,5%) ·
@@ -3587,7 +3603,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608241836";
+    s.src="/src/main.js?v=202608241912";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
