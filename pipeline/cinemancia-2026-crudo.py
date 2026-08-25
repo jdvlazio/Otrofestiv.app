@@ -175,13 +175,36 @@ DURACION_CORREGIDA = {
     # 67′ y el del domingo 6, con las MISMAS cinco obras, 85′. El festival
     # confirma que lo correcto son 85 y que los dos pases duran igual.
     ('2026-09-11', '18:00', 'Teatro Caribe Itagüí'): 85,
+    # «Programa de cortometrajes Rajenda Gour»: la parrilla dice 71′ y los cinco
+    # cortos que el propio festival listó suman 65′. Confirmado por ellos el
+    # 25 ago: son 65. El descuadre era de su parrilla, no de nuestra copia.
+    # Queda 1′ de residuo: sus obras suman 66 porque «Sight and Desire» figura
+    # con 23′ en el catálogo y 22′ en la hoja del festival. Un minuto sobre un
+    # corto de los sesenta no vale forzar una regla; queda dicho para que la
+    # próxima auditoría de duraciones no lo persiga.
+    ('2026-09-11', '17:00', 'Centro Colombo Americano Sede centro sala 2 Medellín'): 65,
 }
 
 # 2) «Fuera de competencia programa 1» — declaraba 88′ y sus obras sumaban 74′.
 #    Faltaba una, y el festival la mandó. Sus cinco duraciones suman 90′; los
 #    dos minutos de diferencia con los 88′ de la parrilla son de su propio
 #    dato y no se tocan.
+# 3) «Dice que…» del 4 SEP salía como película SOLA y es un programa de DOS.
+#    La parrilla lo dice —«Dice que... + Las picapiedreras»— y sus 84′ cuadran
+#    exactos con 68+16. Lo perdimos por una LETRA: la parrilla escribe
+#    «picapiEdreras» y el catálogo «picapedreras», así que el cruce por título
+#    exacto no encontró la obra y la función quedó de una sola. La cazó el
+#    equipo del festival revisando la app, el 25 ago.
+#
+#    Es la tercera vez en este festival que un título escrito distinto rompe un
+#    cruce (ver también «Borrachos escuchando…» vs «Borrachos mientras
+#    escuchamos…» y «Para no regresar» vs «Para no volver», que sí casaron por
+#    otras vías). El emparejamiento exacto es el punto débil de este montaje.
 OBRAS_AÑADIDAS = {
+    ('2026-09-04', '19:00', 'Casa Museo Otraparte Envigado'): [
+        {'title': 'Las picapedreras', 'director': 'Azul Aizenberg',
+         'country': 'Argentina', 'year': 2021, 'duration': 16},
+    ],
     ('2026-09-10', '16:00', 'Centro Colombo Americano Sede centro sala 1 Medellín'): [
         {'title': 'Ya se ven los tigres en la lluvia', 'director': 'Oscar Ruiz Navia',
          'country': 'Colombia, Canadá', 'year': 2025, 'duration': 16},

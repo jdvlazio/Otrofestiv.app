@@ -445,9 +445,29 @@
      "tmdb_id": 1564971,
      "lbSlug": "dice-que",
      "duracion_min": 68
+    },
+    {
+     "titulo": "Las picapedreras",
+     "director": "Azul Aizenberg",
+     "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+     "pais": "Argentina",
+     "anio": 2021,
+     "sinopsis": "No hay imágenes de la Huelga Grande de Tandil, llevada a cabo en 1908 por los obreros picapedreros durante casi un año. Las mujeres, todas venidas del otro lado del océano a título de esposas, sabotearon los intentos de los patrones por torcer la rebelión. Las herramientas del trabajo doméstico fueron sus armas para la lucha de clases, en un gesto inédito que reunió sin proponérselo, género y condición obrera. A un siglo de distancia, este documental recupera sus testimonios orales para reconstruir su historia con imágenes de películas ajenas, buscando en los gestos de otras mujeres las imágenes ausentes de las picapedreras.",
+     "synopsis_en": "A history book, a film saved from the dictatorship, an exiled film director, and a collection of pirated films. The filmmaker traces the images of the women who led to the triumph of the longest strike in Argentine history.",
+     "title_en": "The Stonebreakers",
+     "poster": "/8c80lOeLRfsC25rBoheC9nU1bh5.jpg",
+     "posterSource": "tmdb",
+     "tmdb_id": 877043,
+     "lbSlug": "the-stonebreakers",
+     "duracion_min": 16,
+     "title": "Las picapedreras",
+     "country": "Argentina",
+     "year": 2021,
+     "duration": 16
     }
    ],
-   "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio"
+   "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
+   "_obras_src": "obra que faltaba, enviada por el festival (21 AGO)"
   },
   {
    "dia": "2026-09-04",
@@ -3073,7 +3093,7 @@
    "hora": "17:00",
    "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
    "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
-   "duracion_min": 71,
+   "duracion_min": 65,
    "acceso": "Entrada libre",
    "titulo": "Programa de cortometrajes Rajenda Gour",
    "obras": [
@@ -3173,7 +3193,8 @@
      "duration": 7
     }
    ],
-   "is_cortos": true
+   "is_cortos": true,
+   "_duracion_src": "confirmada por el festival (21 AGO)"
   },
   {
    "dia": "2026-09-11",
