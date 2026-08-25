@@ -83,6 +83,7 @@ Estos labels, si aparecen, bloquean o advierten — no ignorarlos:
 |---|---|---|
 | `[posters-duplicados]` | ERROR | dos films con la misma URL de poster |
 | `[sinopsis-duplicada]` | ERROR | cross-contaminación de synopsis/synopsis_en |
+| `[titulo-programa-incompleto]` | ERROR | programa de ≥2 obras titulado con el nombre de UNA — las demás no se ven en la tarjeta |
 | `[poster-map-legacy]` | ERROR | `posters{}`/`customPosters{}` a nivel raíz (modelo muerto jul 2026) |
 | `[poster-source]` | ERROR | póster inline sin `posterSource` (correr classify-posters) |
 | `[seccion-sin-arquetipo]` | ERROR | sección sin entrada en `SECTION_ARCHETYPES` (banda gris ilegible) |
