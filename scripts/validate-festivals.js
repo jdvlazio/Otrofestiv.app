@@ -599,6 +599,41 @@ function validateFestival(fname, data) {
       else if (!seen.has(k)) seen.set(k, { n: norm(f.title), t: f.title || '?' });
     }
   }
+  // [titulo-programa-incompleto] ERROR — un programa de VARIAS obras titulado
+  // con el nombre de UNA de ellas. Desde fuera se lee como esa película sola y
+  // las demás no existen para quien mira la tarjeta: es el único sitio donde se
+  // anuncian.
+  //
+  // Nació de «Dice que…» (Cinemancia, 4 SEP): la parrilla decía «Dice que... +
+  // Las picapiedreras», el cruce por título exacto falló por una letra
+  // («picapiEdreras»), la función quedó de una sola obra y se tituló con ella.
+  // Al meter después la obra que faltaba, el título ya estaba decidido y nadie
+  // lo rehizo — el arreglo tapó el agujero a medias. Lo cazó Juan MIRANDO LA
+  // APP, no un validador: el dato interno estaba perfecto (2 obras, 84′ = 68+16)
+  // y lo que fallaba era lo único que se ve.
+  //
+  // Medido antes de encenderlo sobre los 17 festivales publicados: 1 caso, el
+  // de arriba. Los otros 30 programas de ≥2 obras de ese mismo festival tienen
+  // título propio o unen con «+», así que el invariante no rompe montajes
+  // legítimos. Si algún día un festival titula A DREDE un programa con el
+  // nombre de su obra principal, esto se convierte en warning con su razón.
+  {
+    const norm = t => (t || '').trim().toLowerCase().normalize('NFC');
+    const vistos = new Set();
+    for (const f of films) {
+      const fl = Array.isArray(f.film_list) ? f.film_list : [];
+      if (fl.length < 2) continue;
+      const t = norm(f.title);
+      if (!t || vistos.has(t)) continue;
+      const igual = fl.find(o => o && norm(o.title) === t);
+      if (!igual) continue;
+      vistos.add(t);
+      const _n = fl.length - 1;
+      errors.push(`[titulo-programa-incompleto] "${(f.title||'?').slice(0,44)}" agrupa ${fl.length} obras `
+        + `pero se titula con UNA de ellas — ${_n === 1 ? 'la otra no se ve' : `las otras ${_n} no se ven`} `
+        + `desde la tarjeta. Titularlo con todas, unidas por " + ", o darle el nombre del programa.`);
+    }
+  }
   // ── Gates de posters (estrategia editorial, POSTERS.md §5/§8) ─────────────
   // Poster-holders = films top-level + cortos anidados en film_list.
   const posterHolders = [];
