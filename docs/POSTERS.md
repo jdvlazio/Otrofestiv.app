@@ -496,6 +496,28 @@ esas bajan a la línea siguiente con el sustantivo que introducen.
    `[poster-editorial-unique]` (corre el `makeProgramPoster` real sobre cada
    programa y falla si dos coinciden). **ERROR, sin falsos positivos.**
 
+### 6.2b El título no repite la sección — por delante Y por detrás
+
+Si la sección ya lo dijo, el título no lo repite. Dos formas del mismo eco:
+
+1. **Prefijo**: título que ARRANCA con el rótulo («Competencia de cortometrajes
+   Programa 1» bajo COMPETENCIA DE CORTOMETRAJES) → queda «Programa 1».
+2. **Identificador de programa al final** (24 ago 2026, cazado por Juan en
+   Cinemancia): sección «Programa 1. El espesor de las formas» con título «Fuera
+   de competencia programa 1» → «Programa 1» **dos veces** en el mismo póster.
+   Queda «Fuera de competencia»: el número lo dice la sección, arriba y grande.
+
+**Dos frenos, los dos con test:**
+- Solo si la sección nombra **ESE MISMO número**. «programa 2» bajo «Programa 1»
+  se conserva — ahí el número informa, no repite.
+- Solo el eco **FINAL** (regla anclada). «…programa 1 (restaurada)» va entero:
+  lo que viene después del número no es eco, y recortar ahí se lo comería.
+
+Comparación sin acentos ni case; si el recorte dejara el título vacío, se
+conserva el original.
+
+---
+
 ### 6.3 La pila de obras — un compuesto se apila, no se escribe como frase
 
 Un título compuesto (`«A + B»`, `«A + B + C»`) **no es una frase**: es una lista

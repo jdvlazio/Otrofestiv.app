@@ -566,3 +566,37 @@ test('la pila — reparto por uso real: el cuerpo es el que manda el ANCHO, no e
   assert.ok(_cuerpoDe(SEC2, T2, '3 obras') < _idealPorAncho(T2),
     'el peor caso debería estar limitado por el techo, no por el ancho — si no, dejó de probar el lazo');
 });
+
+test('Forma A — el eco al FINAL también se recorta: la sección ya dijo el programa', () => {
+  // Juan lo cazó en Cinemancia (24 ago 2026): sección «Programa 1. El espesor de
+  // las formas» con título «Fuera de competencia programa 1» → «Programa 1» dos
+  // veces en el mismo póster. La regla de arriba solo miraba el PREFIJO; el eco
+  // venía por el otro lado. No se pierde nada al recortarlo: el número lo dice la
+  // sección, arriba y grande.
+  const cuerpo = (sec, ti) => _cuerpo(_textos(C._buildPosterV16(
+    { accent:ACC, headerLabel:sec, title:ti, num:null, dato:'80 min' }))).map(r => r.txt).join(' ');
+
+  assert.equal(cuerpo('Programa 1. El espesor de las formas', 'Fuera de competencia programa 1'),
+    'Fuera de competencia', 'el identificador de programa que la sección ya dio no se repite');
+  assert.equal(cuerpo('Programa 2. Teoremas sobre la mirada', 'Fuera de competencia programa 2'),
+    'Fuera de competencia', 'el segundo caso real de Cinemancia');
+});
+
+test('Forma A — si el número es OTRO, se conserva: ahí el número sí informa', () => {
+  const cuerpo = (sec, ti) => _cuerpo(_textos(C._buildPosterV16(
+    { accent:ACC, headerLabel:sec, title:ti, num:null, dato:'80 min' }))).map(r => r.txt).join(' ');
+  // Recortar acá borraría información: la sección habla del 1, la obra es del 2.
+  assert.ok(/programa 2/i.test(cuerpo('Programa 1. El espesor de las formas', 'Fuera de competencia programa 2')),
+    'un número distinto al de la sección NO es un eco — se conserva');
+  // Y la regla vieja (prefijo) sigue viva, sin que la nueva la pise.
+  assert.equal(cuerpo('Competencia de cortometrajes', 'Competencia de cortometrajes Programa 1'),
+    'Programa 1', 'el recorte de prefijo sigue funcionando');
+  // Un título que ES solo el eco no se vacía: se conserva entero.
+  assert.equal(cuerpo('Programa 1', 'Programa 1'), 'Programa 1',
+    'si el recorte dejara el título vacío, se conserva el original');
+  // Solo el eco FINAL. Si después del número viene algo más, ese algo NO es eco y
+  // recortar ahí se lo comería — por eso la regla está anclada al final.
+  assert.ok(/restaurada/i.test(cuerpo('Programa 1. El espesor de las formas',
+      'Fuera de competencia programa 1 (restaurada)')),
+    'con texto después del número no hay eco que recortar: el título va entero');
+});
