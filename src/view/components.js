@@ -375,6 +375,26 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma}){
       if(_resto) title=_resto;
     }
   }
+  // MISMA REGLA, EL ECO AL FINAL (Juan, 24 ago 2026 — lo cazó en Cinemancia).
+  // El recorte de arriba solo mira el PREFIJO, y en Cinemancia el eco venía por
+  // el otro lado: sección «Programa 1. El espesor de las formas» con título
+  // «Fuera de competencia programa 1» → «Programa 1» dos veces en el mismo
+  // póster. Si la sección YA identifica el programa, el título no lo repite,
+  // quede donde quede: acá se recorta el identificador final y queda «Fuera de
+  // competencia». No se pierde nada — el número lo dice la sección, arriba y
+  // grande.
+  // Solo actúa cuando la sección nombra ESE MISMO número: «programa 2» bajo
+  // «Programa 1» se conserva, porque ahí el número SÍ informa (son distintos).
+  {
+    const _m=String(title).trim().match(/[\s·:—-]*\b(?:programa|program|programme)\s*(\d+)\s*$/i);
+    if(_m){
+      const _nEnSeccion=_norm(headerLabel).match(/\b(?:programa|program|programme)\s*(\d+)\b/);
+      if(_nEnSeccion&&_nEnSeccion[1]===_m[1]){
+        const _resto=String(title).trim().slice(0,_m.index).replace(/[\s·:—-]+$/,'');
+        if(_resto) title=_resto;
+      }
+    }
+  }
   const SEC_FS_MAX=15*VW/84;
   // REGLA DE CARGA (Juan, 24 ago 2026): el póster habla con TRES voces —
   // sección ≤2 líneas, cuerpo, pie de UNA línea. La sección bajó de 4 líneas a
