@@ -557,7 +557,7 @@ export function renderMiPlanCalendar(state){
         <div class="col-end">
           ${isSeen
             ?`<button class="icon-btn-circle ag-fi-btn seen" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" data-action="markWatchedFromPlan" data-stop="1" aria-label="${t('aria_quitar_vista')}">${ICONS.check}</button>`
-            :`<button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-action="removeFromAgenda" data-stop="1" aria-label="${t('plan_sacar')}">${ICONS.x}</button>`}
+            :`<button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1" aria-label="${t('plan_sacar')}">${ICONS.x}</button>`}
         </div>
       </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(state,s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||'',ratingEl:filmRatings[item.title]?`<span class="corto-rating-stars">${starsText(filmRatings[item.title])}</span>`:''})).join('')}</div>`;})()}`;
     });
