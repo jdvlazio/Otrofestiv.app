@@ -25,6 +25,12 @@
 │   siempre; cambios de TU plan → aviso con el hecho (T97). Dueños únicos
 │   compartidos con loadFestival: _ingerirDatosFestival + publicarCatalogo;
 │   el árbitro es domain/refresh-diff.js (puro). Tests: T103/T104 + unit.
+│   La HUELLA del refresco (_rawHash) y la copia cruda (_rawFilms) se toman AL
+│   ENTRAR a la ingesta: explodeScreenings devuelve los MISMOS objetos que
+│   data.films, así que duraciones, sealSharedSlots y NOTICES mutan el JSON
+│   bajado — tomarla al final la dejaba distinta de la de un fetch fresco y el
+│   refresco veía un cambio en cada tick (los pósters titilaban; 4 de 17
+│   festivales). Guardián: [refresco-huella-cruda] + tests/unit/refreshHuella.
 ├── src/                        ← App modular ESM (Fase 8). Mapa detallado de módulos en §16.2
 │   ├── main.js                 ← Bootstrap + STATE/VIEWSTATE bridge + ACTION_REGISTRY; importa el resto
 │   ├── config.js               ← FESTIVAL_CONFIG · VENUES · NOTICES · taxonomía/colores de sección + mergeFestivalSections()
