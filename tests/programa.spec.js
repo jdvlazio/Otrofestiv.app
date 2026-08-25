@@ -2503,3 +2503,39 @@ test('T105 — la Forma B es de la misma familia que la A: negro de marca y luz 
   expect(med.fondo, 'si sale surf-2, una clase utilitaria le ganó la cascada al builder').not.toBe(med.surf2);
   expect(med.luz, 'la luz hereda el acento de la sección, no un color fijo').toContain(med.acento);
 });
+
+test('T106 — la LISTA sirve la mini: una voz por chip, y el grid queda intacto', async ({ page }) => {
+  test.setTimeout(60000);
+  // Mejora 1 (auditoría Apple Music, aprobada 25 ago): en el chip de 56px el
+  // póster entero era ruido de 3px que repetía la fila. La mini responde con UNA
+  // voz — ordinal de serie o la marca de la obra. El GRID no cambia (Juan: la
+  // marca en grande era «demasiado ruidosa»).
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00');
+  // Lista de un día: los chips generativos NO llevan rótulo de sección
+  await page.evaluate(() => { activeDay = DAY_KEYS[0]; programaViewMode = 'list'; _renderProgramaContent(); });
+  const lista = await page.evaluate(() => {
+    const out = [];
+    document.querySelectorAll('.plist-item').forEach(li => {
+      const img = li.querySelector('.plist-poster img');
+      if (!img || !img.src.startsWith('data:image/svg')) return;
+      const svg = decodeURIComponent(img.src.split(',')[1] || '');
+      out.push({ t: li.dataset.title, textos: (svg.match(/<text/g) || []).length,
+        conMarca: /circle|<path d=/.test(svg) });
+    });
+    return out;
+  });
+  expect(lista.length, 'el día 1 de CineAutopsia tiene chips generativos').toBeGreaterThan(0);
+  for (const c of lista) {
+    expect(c.textos, `${c.t}: la mini lleva a lo sumo UNA voz (ordinal) — el póster entero eran 4+`)
+      .toBeLessThanOrEqual(1);
+    expect(c.textos === 1 || c.conMarca, `${c.t}: sin ordinal, la marca es el diferenciador`).toBe(true);
+  }
+  // El GRID conserva el póster entero (rótulo de sección presente)
+  await page.evaluate(() => { activeDay = 'all'; programaViewMode = 'grid'; _renderProgramaContent(); });
+  const grid = await page.evaluate(() => {
+    const img = [].slice.call(document.querySelectorAll('.poster-card img'))
+      .find(i => i.src.startsWith('data:image/svg'));
+    return img ? decodeURIComponent(img.src.split(',')[1] || '') : '';
+  });
+  expect((grid.match(/<text/g) || []).length, 'el grid queda tipográfico: sus voces intactas').toBeGreaterThanOrEqual(2);
+});

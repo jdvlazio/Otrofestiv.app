@@ -525,6 +525,32 @@ conserva el original.
 
 ---
 
+### 6.2c La MINI — el generativo en superficies de 56px
+
+Regla de Apple que la motiva («legible en TODO el rango de tamaños», Curator
+Best Practices) + medición propia: en el chip de la lista el póster entero
+escalado dejaba la sección en **3,3px** y el dato en 2,8px — ruido que además
+REPITE lo que la fila dice al lado (anti-repetición).
+
+La mini responde con **UNA voz** (dueño: `_buildPosterMini`, servida por
+`getFilmPosterMini` que espeja las decisiones de `getFilmPoster` y solo
+sustituye los caminos generativos — custom/evento/sorpresa/TMDB/editorial pasan
+intactos):
+- **Serie** («Programa N»): el **ordinal a 5u** — legible de verdad.
+- **Obra o programa con nombre**: **SU MARCA** — 2-3 formas geométricas sobre
+  retícula de 2u, sembradas por `_djb2(título)` → `_mulberry32`. Determinista:
+  la misma obra dibuja siempre la misma marca, se reconoce sin leer, como una
+  portada de disco. (La v1 sin marca murió en revisión: «no hay diferenciador,
+  no sirve» — el color es de la SECCIÓN y dos vecinas quedaban idénticas.)
+
+**El GRID no cambia** (Juan, 25 ago): la marca en el póster grande era
+«demasiado ruidosa, minimalismo cero» — el grid queda tipográfico puro.
+Superficies de la mini: chip de la lista (`_plistPosterHtml`), thumb de corto
+(`itemPosterParts` sin header) y el fallback del stack (`_programaStack`).
+Guardián: T106 (lista → mini, grid → intacto) + unit posterMini (5 mutantes).
+
+---
+
 ### 6.3 La pila de obras — un compuesto se apila, no se escribe como frase
 
 Un título compuesto (`«A + B»`, `«A + B + C»`) **no es una frase**: es una lista

@@ -7,7 +7,7 @@
 
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterMini, _buildPosterV16, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeSharedSlotSVG, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
@@ -92,6 +92,26 @@ export function getFilmPoster(f){
   });
 }
 
+// ── LA MINI para superficies de 56px (mejora 1, auditoría Apple Music) ──────
+// Espeja las decisiones de getFilmPoster y solo sustituye los caminos que
+// terminarían en la Forma A generativa: custom/evento/sorpresa/TMDB/editorial
+// pasan tal cual (la sorpresa conserva su «?», que es marca). El chip de la
+// lista y el thumb de cortos muestran el título AL LADO, así que acá el
+// generativo responde con UNA voz: ordinal de serie o la marca de la obra
+// (_buildPosterMini). El GRID no pasa por acá — queda tipográfico puro
+// (decisión de Juan, 25 ago: la marca en grande era «demasiado ruidosa»).
+export function getFilmPosterMini(f){
+  const src=getFilmPoster(f);
+  if(!src||!String(src).startsWith('data:image/svg')) return src;   // póster real
+  if(f&&f.type==='event') return src;                                // evento: ámbar propio
+  if(f&&f.title&&f.title.toLowerCase().includes('sorpresa')) return src; // la «?» es marca
+  return _buildPosterMini({
+    accent:_sectionColor(f&&f.section||''),
+    title:f&&f.title||'',
+    esPrograma:!!(f&&(f.is_cortos||f.is_programa)),
+  });
+}
+
 // Variante SIN TÍTULO para el sheet expandido (regla anti-repetición de Juan:
 // el póster lleva el título solo cuando nadie más lo dice; en el sheet el título
 // es la cabecera). Solo re-genera los GENERATIVOS con cuerpo vacío — la banda
@@ -129,7 +149,11 @@ export function getCortoItemPoster(item){
 // poster-ed + --ed-accent). Ninguna superficie de cortos debe volver a construir
 // el <img> del still a mano — enforced por validate.py [poster-editorial-parity].
 export function itemPosterParts(item, section, imgClass, {header=false}={}){
-  const src=getCortoItemPoster(item)||makeProgramPoster(state,item.title,item.duration||'',section||'');
+  // Sin póster propio: la CARD grande (header) conserva el generativo entero;
+  // el thumb de 56px recibe la mini — la marca de la obra, su título va al lado.
+  const src=getCortoItemPoster(item)
+    ||(header?makeProgramPoster(state,item.title,item.duration||'',section||'')
+             :_buildPosterMini({accent:_sectionColor(section||''), title:item.title, esPrograma:false}));
   if(_isEditorialPoster(item)){
     // thumb pequeño → still enmarcado SIN banda de texto (precedente _posterThumb);
     // card grande (Diario) → con banda de sección, como _recapPosterCard.
@@ -856,15 +880,19 @@ export function _programaStack(f){
   if(!f.is_programa||!f.film_list||f.film_list.length<2) return null;
   const p1=_getItemPoster(f.film_list[0]);
   const p2=_getItemPoster(f.film_list[1]);
-  // Fallback unificado (como el stack del sheet): item sin póster → generativo
-  // del programa, nunca un hueco vacío.
-  const _gen=()=>makeProgramPoster(state,f.title,f.duration||'',f.section||'');
+  // Fallback unificado (como el stack del sheet): item sin póster → la MINI del
+  // programa (mejora 1 — el stack vive en el chip de 56px de la lista), nunca
+  // un hueco vacío ni el póster entero ilegible.
+  const _gen=()=>getFilmPosterMini(f);
   const imgB=`<img class="ps-back" src="${p2||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
   const imgF=`<img class="ps-front" src="${p1||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
   return`<div class="plist-poster-stack">${imgB}${imgF}</div>`;
 }
 
 export function _plistPosterHtml(f, src){
+  // Chip de 56px: el generativo entero era ruido ilegible que repetía la fila
+  // (mejora 1) → la mini. Los pósters reales y la sorpresa pasan tal cual.
+  if(src&&String(src).startsWith('data:image/svg')) src=getFilmPosterMini(f);
   const _pp=posterParts(f);
   if(_pp.ed){
     // Marco editorial único (lista = banda + img, sin label) vía posterParts.
