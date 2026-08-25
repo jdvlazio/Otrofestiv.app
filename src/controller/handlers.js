@@ -349,7 +349,11 @@ export function _planFixNotice(title){
   const {FILMS, savedAgenda} = state.snapshot();
   if(!savedAgenda||!savedAgenda.schedule.some(s=>s._title===title)) return;
   const moved=FILMS.find(f=>f.title===title&&f._movedFrom&&!f._cancelled);
-  if(moved){ addSuggestion(title, moved.day, moved.time); return; }
+  // {mudar:true}: acá NO se pregunta «¿verla otra vez?». El usuario tocó
+  // «Actualizar» sobre una función reprogramada — su intención es mudarla, y
+  // preguntarle sería pedirle que confirme lo que acaba de pedir. (Lo cazó T52
+  // en CI: sin este flag la entrada se quedaba en la hora vieja.)
+  if(moved){ addSuggestion(title, moved.day, moved.time, {mudar:true}); return; }
   _dropFromPlan(title);
   setTimeout(_scrollToSuggestions, 350);
 }
@@ -455,7 +459,7 @@ export function addSuggestion(title,day,time,opts){
     // optimizador no cambia); AGENDAR sí, con advertencia, porque es decisión
     // del usuario. El modal es de dos botones + salir tocando afuera, así que
     // los dos botones son las dos intenciones y no hay «cancelar».
-    if(existing&&!(existing.day===day&&existing.time===time)&&!opts.repetir&&!existing.is_recurring){
+    if(existing&&!(existing.day===day&&existing.time===time)&&!opts.repetir&&!opts.mudar&&!existing.is_recurring){
       const _dm=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
       const _cuando=`<b>${_dm[existing.day]||existing.day||''} · ${existing.time||''}</b>`;
       showActionModal(
