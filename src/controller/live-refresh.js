@@ -47,8 +47,11 @@ export async function refrescarDatosFestival(){
     const hash = _djb2(JSON.stringify(data));
     if (hash === cfg._rawHash) return false;
 
+    // La SEDE viaja en la huella del plan: sin ella, en FICDEH (13 obras
+    // programadas el mismo día y hora en ciudades distintas) el diff podía
+    // diagnosticar el cambio sobre la función equivocada.
     const _plan = ((state.get('savedAgenda') || {}).schedule || [])
-      .map(e => ({ title: e._title || e.title, day: e.day, time: e.time }));
+      .map(e => ({ title: e._title || e.title, day: e.day, time: e.time, venue: e.venue }));
     const cambio = clasificarRefresco({
       oldFns: _explotar(cfg._rawFilms), newFns: _explotar(data.films),
       oldDays: cfg._rawDayKeys, newDays: data.dayKeys || cfg._rawDayKeys,
