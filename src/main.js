@@ -480,7 +480,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608251311';
+const BUILD_VERSION='202608251406';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1302,10 +1302,10 @@ state.subscribeRender(
     // nada que cerrar — entraba con FILMS vacío. Es la misma trampa de
     // arranque que ya nos costó el store-gate.
     onDomReady(function(){
-      // Se recorre el MISMO camino que un usuario: elegir y pulsar "Entrar".
-      // No se replica por dentro (loadFestival + quitar el splash a mano)
-      // justamente para no tener dos rutas de entrada que puedan divergir.
-      try{ selectSplashFest(_previewFestId); }catch(e){}
+      // Mismo camino que un usuario (elegir + "Entrar"), para no tener dos vías
+      // que diverjan. El festId va TERCERO: de primero cae en `name`, la fn usa
+      // su default `festId||_DEFAULT_FEST_ID` y se entraba a otro. Lo vigila T108.
+      try{ selectSplashFest(null,null,_previewFestId); }catch(e){}
       const _btn=document.querySelector('.splash-enter-btn');
       if(_btn) _btn.click(); else { try{ dismissSplash(); }catch(e){} }
     });
