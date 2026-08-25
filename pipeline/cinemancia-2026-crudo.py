@@ -71,6 +71,37 @@ AFICHES_OFICIALES = {
 }
 
 
+# Artes de SECCIÓN que envió el festival (25 AGO). Son las piezas que usan en
+# redes: identidad de la retrospectiva o el foco, no de una obra. Se usan como
+# afiche de las tarjetas que NO tienen uno propio, que en estas secciones son
+# TODAS programas —ninguna película suelta— así que el arte nunca suplanta el
+# póster de una obra: cubre un envase que no tenía ninguno.
+#
+# Vienen en 4:5 (formato de sus redes) y se ESTIRAN a 2:3, la misma regla que
+# el keyArt del splash: se estira en un eje, no se recorta, no se ponen bandas
+# ni blur. Ver assets/cinemancia/seccion-*.jpg.
+ARTE_DE_SECCION = {
+    'Febril incisión':                 '/assets/cinemancia/seccion-febril-incision-thomas-furhapter.jpg',
+    'Historia(s) del cine: Argentina': '/assets/cinemancia/seccion-historias-del-cine-argentina.jpg',
+    'La primavera llega':              '/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg',
+    'La sutil materia':                '/assets/cinemancia/seccion-la-sutil-materia-sergio-navarro.jpg',
+    'Sick and Dirty':                  '/assets/cinemancia/seccion-sick-and-dirty.jpg',
+}
+
+# Por TÍTULO, para lo que la sección no alcanza a cubrir:
+#  · el foco de Luciana Decker no es sección — vive dentro de Proyecciones
+#    Especiales, con dos funciones de nombres distintos;
+#  · «Retrospectiva Sergio Navarro Programa 2» tiene DOS pases y el festival
+#    los archivó en secciones distintas (uno en «La sutil materia», otro en
+#    Proyecciones Especiales). Sin esto, el mismo programa salía con arte en
+#    un pase y sin él en el otro.
+ARTE_DE_FOCO = {
+    'Alquimia de la luz':          '/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg',
+    'Carta Blanca Luciana Decker': '/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg',
+    'Retrospectiva Sergio Navarro': '/assets/cinemancia/seccion-la-sutil-materia-sergio-navarro.jpg',
+}
+
+
 # ── Fotogramas oficiales del festival ─────────────────────────────────────────
 # TMDB no sirve para estas obras: se consultaron las 11 que tenían tmdbId y las
 # 11 devolvieron poster_path vacío. No es un fallo de la consulta —se verificó
@@ -641,6 +672,19 @@ def main():
             if _k and ch and ch.get('descripcion') and not e.get('sinopsis'):
                 e['sinopsis'] = ch['descripcion']
                 e['_sinopsis_src'] = 'hoja oficial del festival (conversatorios y charlas)'
+        # ── ARTE DE SECCIÓN, el ÚLTIMO recurso ──────────────────────────────
+        # Solo si la tarjeta no tiene afiche propio. Se resuelve por sección y,
+        # si no, por el título de la función (el foco de Luciana Decker, que no
+        # es sección). Con esto los programas de retrospectiva dejan de caer al
+        # afiche generado y muestran la pieza que el festival usa en redes.
+        if not e.get('poster'):
+            _sec = e.get('seccion') or ''
+            _tit = e.get('titulo') or ''
+            _arte = next((v for k, v in ARTE_DE_SECCION.items() if k in _sec), None) \
+                 or next((v for k, v in ARTE_DE_FOCO.items() if k in _tit), None)
+            if _arte:
+                e['poster'], e['posterSource'] = _arte, 'oficial'
+                e['_poster_src'] = 'arte de sección enviado por el festival (25 AGO), estirado a 2:3'
         if NO_PUBLICAR.search(e.get('titulo') or '') or NO_PUBLICAR.search(titulo_crudo):
             retiradas.append(e.get('titulo') or titulo_crudo)
             continue
