@@ -1612,6 +1612,36 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar dom-ready-guard: {_e}')
 
+# ── CHECK: [ciudad-separada] ──────────────────────────────────────────────────
+# La CIUDAD vive DENTRO de la frase de sede (auditoría 18 ago 2026: con
+# display:block partía la frase en tres renglones y dejaba el punto huérfano).
+# Al volverse inline, el separador « · » se volvió obligatorio — y se le puso a
+# dos de los tres emisores. El tercero (la lista del Programa) quedó pegando la
+# ciudad al nombre de la sede: «Centro Colombo AmericanoMedellín», en TODOS los
+# festivales multiciudad, hasta que Juan lo vio el 25 ago. Este check exige que
+# todo <span class="plist-city"> venga precedido de un separador.
+check = 'ciudad-separada'
+try:
+    import re as _re4
+    _malos = []
+    for _root, _dirs, _files in os.walk('src'):
+        for _fn in _files:
+            if not _fn.endswith('.js'): continue
+            _fp = os.path.join(_root, _fn)
+            _txt = open(_fp, encoding='utf-8').read()
+            for _m in _re4.finditer(r'<span class="plist-city">', _txt):
+                # los ~14 chars previos deben traer un separador (· o -) o un <br>
+                _antes = _txt[max(0, _m.start() - 14):_m.start()]
+                if ('\u00b7' not in _antes) and ('&middot;' not in _antes) and ('<br' not in _antes):
+                    _ln = _txt[:_m.start()].count('\n') + 1
+                    _malos.append(f'{_fp}:{_ln}')
+    if _malos:
+        fail(check, 'ciudad pegada a la sede — falta el separador « · » antes de <span class="plist-city">: ' + ', '.join(_malos))
+    else:
+        ok(check, 'la ciudad va separada de la sede en todos los emisores')
+except Exception as _e:
+    warn(check, f'no se pudo verificar ciudad-separada: {_e}')
+
 # ── CHECK: [refresco-huella-cruda] ────────────────────────────────────────────
 # La ingesta MUTA el JSON recién bajado (explodeScreenings devuelve los MISMOS
 # objetos que data.films; la duración de programas, sealSharedSlots y NOTICES
