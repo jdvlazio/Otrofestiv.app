@@ -1102,6 +1102,52 @@ if (skErrors.length) {
     }
   }
 
+  // ── [poster-serie-consistente] — la serie se ve como serie ──────────────────
+  // Regla de las portadas de playlists dinámicas de Apple («easily identified as
+  // being part of a series»), adoptada 24 ago 2026 (auditoría Apple Music,
+  // mejora #4): los programas numerados de una MISMA sección cuyo título solo
+  // difiere en el ordinal deben renderizar la MISMA composición — solo cambia el
+  // número. Hoy es cierto por plantilla; sin este check, nada lo protege: un
+  // recorte de rótulo que aplique a unos y no a otros (pasó con el eco de
+  // «Programa N»), una firma que entre en uno solo, o un color desviado rompen
+  // la serie en silencio.
+  // Es el INVERSO de [poster-editorial-unique]: aquel prohíbe idénticos entre
+  // programas distintos; este exige idénticos-salvo-el-ordinal dentro de la serie.
+  // NORMALIZACIÓN (para comparar sin falsos positivos): se enmascaran los
+  // valores numéricos de atributos (coordenadas/tamaños — cambian legítimamente
+  // si un ordinal es más ancho) y las corridas de dígitos del texto (el ordinal
+  // mismo). Queda la estructura, el orden de elementos, los colores y las
+  // strings — que es exactamente lo que define «la misma composición».
+  if (makeProgramPoster) {
+    const _mockState = { snapshot: () => ({ FILMS: [] }) };
+    const _mascara = (svg) => decodeURIComponent(String(svg))
+      .replace(/"[\d.\-]+"/g, '"#"')
+      .replace(/\d+/g, 'N');
+    for (const r of results) {
+      let data;
+      try { data = JSON.parse(fs.readFileSync(path.join(festivalsDir, r.fname), 'utf8')); } catch (e) { continue; }
+      const progs = (data.films || []).filter(f => (f.is_cortos || f.is_programa) && !f.poster && /\d/.test(f.title || ''));
+      const series = {};
+      for (const p of progs) {
+        const clave = (p.section || '') + '::' + String(p.title).replace(/\d+/g, 'N');
+        (series[clave] = series[clave] || []).push(p);
+      }
+      for (const [clave, miembros] of Object.entries(series)) {
+        if (miembros.length < 2) continue;
+        const vistos = new Map(); // svg enmascarado → primer título
+        for (const p of miembros) {
+          const m = _mascara(makeProgramPoster(_mockState, p.title, p.duration || '', p.section || ''));
+          if (!vistos.size) { vistos.set(m, p.title); continue; }
+          if (!vistos.has(m)) {
+            r.errors.push(`[poster-serie-consistente] la serie «${clave.split('::')[1]}» (${clave.split('::')[0]}) se rompe: «${p.title}» no comparte composición con «${[...vistos.values()][0]}»`);
+            totalErrors++;
+            break;
+          }
+        }
+      }
+    }
+  }
+
   // ── Output ───────────────────────────────────────────────────────────────────
   for (const { fname, errors, warnings } of results) {
     if (errors.length === 0 && warnings.length === 0) {
