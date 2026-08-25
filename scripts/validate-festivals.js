@@ -582,10 +582,18 @@ function validateFestival(fname, data) {
       if (!pf) continue;
       for (const o of (f.film_list || [])) if (o && (o.poster || '').trim() === pf) propio.add(o);
     }
+    // ARTE DE SECCIÓN: repetirse es su NATURALEZA, no corrupción. Es la pieza
+    // que el festival usa en redes para una retrospectiva o un foco, y cubre a
+    // la vez todos los programas de esa sección que no tienen afiche propio —
+    // en Cinemancia 2026, 12 tarjetas con 6 artes. Se reconoce por el nombre
+    // del archivo (`seccion-*`), que declara la intención: un póster de obra
+    // nunca se llama así. Un duplicado accidental entre dos obras sigue siendo
+    // error, que es lo que este gate nació para cazar.
+    const esArteDeSeccion = (p) => /\/seccion-[^/]+$/.test(p);
     const seen = new Map();
     for (const f of todos) {
       const p = (f.poster || '').trim();
-      if (!p || propio.has(f)) continue;
+      if (!p || propio.has(f) || esArteDeSeccion(p)) continue;
       const k = clave(p);
       if (seen.has(k) && seen.get(k).n !== norm(f.title)) dup.push(`[posters-duplicados] "${(f.title||'?').slice(0,40)}" comparte poster con "${seen.get(k).t.slice(0,40)}" (título distinto) — dato corrupto`);
       else if (!seen.has(k)) seen.set(k, { n: norm(f.title), t: f.title || '?' });
