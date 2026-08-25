@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608251707">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608251707">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608251757">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608251757">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1897,6 +1897,11 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .diary-band{margin-left:0;margin-right:0;margin-bottom:var(--sp-3)}
 .dw-svg{display:block;line-height:0}
 .dw-svg svg{width:100%;height:100%;display:block}
+/* LA ESCALERA en el grid — el SVG va inline (sus módulos son <image href>
+   remotos y dentro de un <img> no cargarían). line-height:0 mata el hueco del
+   baseline que dejaría el inline-block. El radio lo pone .poster-card. */
+.poster-esc{display:block;line-height:0;width:100%;height:100%}
+.poster-esc svg{width:100%;height:100%;display:block}
 .dw-card{cursor:pointer;min-width:0}
 .dw-poster{position:relative;aspect-ratio:2/3;border-radius:var(--r-poster);overflow:hidden;background:var(--surf-3)}
 .dw-poster .img-cover{width:100%;height:100%;object-fit:cover;display:block}
@@ -3603,7 +3608,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608251707";
+    s.src="/src/main.js?v=202608251757";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

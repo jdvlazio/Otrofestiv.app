@@ -387,6 +387,31 @@ identidad queda a un tap, igual que para cualquier película. Se conservan:
 - **el dato al pie** («2 obras · 92 min») — pasa a ser la **única declaración de
   pluralidad** dentro del póster. Llena vacío con información, no con decoración.
 
+**DÓNDE ALCANZA (ampliado 25 ago 2026).** La forma nació para la función
+compartida y su modelo se llamaba `legacyProgramParts`, con el gate puesto en
+`is_programa`. Pero la pregunta que responde —«¿esta función agrupa 2-3 obras
+y tenemos el afiche REAL de todas?»— no depende de cómo esté modelada la
+función. Los **programas de cortos** (`is_cortos`), que es como se modelan hoy,
+quedaban fuera: **31 funciones del catálogo** caían al generativo teniendo los
+dos o tres afiches guardados. Y en la grilla los programas legacy mostraban
+`poster-card-stack` — dos mitades a 50/50 que recortan cada afiche a una tira
+y le parten la tipografía impresa, justo lo que la Escalera existe para evitar.
+
+El modelo pasó a llamarse `programParts` y mira `is_programa || is_cortos`. La
+grilla lo pregunta ANTES que nada, porque es la decisión de más alto rango para
+una función que agrupa obras y su modelo ya sabe decir que no.
+
+> **El SVG va INLINE, nunca como `src` de un `<img>`.** Sus módulos son
+> `<image href>` remotos y un SVG dentro de `<img>` no carga recursos externos:
+> saldría en negro. Es el mismo camino que ya usaba el Diario (`.dw-svg`).
+
+**Por qué la sección se queda, aunque la grilla tenga banda.** Se propuso
+quitarla (25 ago) con el argumento de que el separador de sección está unos
+pixeles más arriba. **Es cierto solo en la vista «todos los días»**: en la
+vista por día ese separador no existe, y la tarjeta se quedaría sin ninguna
+señal de que es una función curada. La medición que sostenía la propuesta se
+había hecho únicamente en modo TODO.
+
 **LAS FRONTERAS, y de dónde salió cada una.** Las tres primeras las encontró
 Juan mirando render real, no razonando en abstracto:
 
