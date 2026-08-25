@@ -28,7 +28,7 @@ import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
   screeningPassed, screeningEnded, screeningNow, screeningQaOnly, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey, _endedStats, prioLiveCount, effectiveWatched,
 } from '../domain/film.js';
-import {
+import { sameEntry,
   isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
 } from '../domain/schedule.js';
 import {
@@ -278,7 +278,7 @@ function _slotKeyOf(e){
   if(e&&e._slotKey) return e._slotKey;
   // Las entradas guardadas antes de que existiera _slotKey no lo traen: se resuelve
   // contra FILMS, que es donde el loader lo sella.
-  const f=FILMS.find(fi=>fi.title===e._title&&fi.day===e.day&&fi.time===e.time);
+  const f=FILMS.find(fi=>sameEntry(fi,e));
   return (f&&f._slotKey)||null;
 }
 function _slotMembers(k){ return k?FILMS.filter(f=>f._slotKey===k):[]; }
@@ -520,7 +520,7 @@ export function renderMiPlanCalendar(state){
       // es una que se movió, y una que la encuentra cancelada es una que se cayó.
       // NUNCA se borra en silencio: se marca y el usuario decide. Sacarle a
       // alguien una función del Plan sin avisar es peor que el aviso mismo.
-      const _scr=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);
+      const _scr=FILMS.find(fi=>sameEntry(fi,s));
       const _void=_scr?!!_scr._cancelled:!!(_mf&&(_mf._movedFrom||FILMS.some(fi=>fi.title===s._title&&fi._movedFrom)));
       const _voidCanc=!!(_scr&&_scr._cancelled);
       const _voidBadge=_void
@@ -549,17 +549,17 @@ export function renderMiPlanCalendar(state){
             const _fin=t('plan_hasta',{h:mplanEndStr(s.time,dur)});
             return _void?`<span class="mp-void-t">${_fin}</span>`:_fin;
           })()}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
-          <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
+          <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>sameEntry(fi,s));const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>
           ${_sesionDeBloque(s)}
-          ${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
+          ${(()=>{const _mf=FILMS.find(fi=>sameEntry(fi,s));if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<button class="row-xs mplan-prog-toggle" data-action="toggleMplanProg">${ICONS.chevronR} ${t('label_programa')}</button>`;})()}
         </div>
         <div class="col-end">
           ${isSeen
             ?`<button class="icon-btn-circle ag-fi-btn seen" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-venue="${(s.venue||'').replace(/"/g,'&quot;')}" data-dur="${s.duration||''}" data-action="markWatchedFromPlan" data-stop="1" aria-label="${t('aria_quitar_vista')}">${ICONS.check}</button>`
             :`<button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1" aria-label="${t('plan_sacar')}">${ICONS.x}</button>`}
         </div>
-      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(state,s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time);if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||'',ratingEl:filmRatings[item.title]?`<span class="corto-rating-stars">${starsText(filmRatings[item.title])}</span>`:''})).join('')}</div>`;})()}`;
+      </div>${_expandedFilm===(s._title||'')+(s.day||'')+(s.time||'')?`<div class="film-alts">${renderFilmAlternatives(state,s._title,s.day,s.time)}</div>`:''}${(()=>{const _mf=FILMS.find(fi=>sameEntry(fi,s));if(!_mf||!_mf.is_cortos||!_mf.film_list||!_mf.film_list.length) return'';return`<div class="mplan-prog-list">${_mf.film_list.map((item,n)=>_mkCortoItemHtml(item,n,{section:_mf.section||'',ratingEl:filmRatings[item.title]?`<span class="corto-rating-stars">${starsText(filmRatings[item.title])}</span>`:''})).join('')}</div>`;})()}`;
     });
   }
   listHtml+='</div>';

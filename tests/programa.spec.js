@@ -2569,3 +2569,39 @@ test('T107 — la ciudad no se pega a la sede en la lista', async ({ page }) => 
       `«${m.txt}»: la ciudad debe ir separada de la sede por « · », no pegada`).toBe(true);
   }
 });
+
+test('T108 — la SEDE es parte de la identidad: agendar en una ciudad no marca la otra', async ({ page }) => {
+  test.setTimeout(60000);
+  // Bug MEDIDO EN PRODUCCIÓN (25 ago 2026, sin ninguna feature nueva): la
+  // identidad de una entrada del Plan era título+día+hora, sin sede. FICDEH
+  // programa la misma obra el mismo día y hora en ciudades distintas — 13 casos.
+  // Agendar «La independencia» en Bogotá hacía que la app diera por planeada
+  // la función de IBAGUÉ: a alguien de Ibagué le decía que ya tenía algo que
+  // nunca agendó, y la que sí quería aparecía tomada.
+  await enterFestival(page, 'ficdeh2026', '2026-08-12T09:00:00-05:00');
+  const r = await page.evaluate(() => {
+    // buscar en el catálogo REAL una colisión título+día+hora en dos sedes
+    const porClave = {};
+    FILMS.filter(f => f.day && f.time).forEach(f => {
+      const k = f.title + '|' + f.day + '|' + f.time;
+      (porClave[k] = porClave[k] || []).push(f);
+    });
+    const par = Object.values(porClave).find(v => new Set(v.map(x => x.venue)).size > 1);
+    if (!par) return null;
+    const [a, b] = par;
+    addSuggestion(a.title, a.day, a.time);            // agendo SOLO la primera sede
+    const sch = (state.get('savedAgenda') || {}).schedule || [];
+    return {
+      enPlan: sch.length,
+      sedeGuardada: (sch[0] || {}).venue,
+      sedeA: a.venue, sedeB: b.venue,
+      // ¿la app cree que la de la OTRA sede también está planeada?
+      otraMarcada: sch.some(s => sameEntry(s, b)),
+    };
+  });
+  expect(r, 'FICDEH trae la misma obra el mismo día y hora en dos ciudades').not.toBeNull();
+  expect(r.enPlan, 'se agendó una sola función').toBe(1);
+  expect(r.sedeGuardada, 'y es la de la sede que se eligió').toBe(r.sedeA);
+  expect(r.otraMarcada,
+    `agendar en «${r.sedeA}» no puede marcar la función de «${r.sedeB}»`).toBe(false);
+});

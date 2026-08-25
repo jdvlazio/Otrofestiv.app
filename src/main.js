@@ -37,7 +37,7 @@ import { LANGS, t, _applyI18nDOM } from './i18n/i18n.js';
 //   las consume vía eval(name).toString(); sus copias worker-local se quedan. ──
 import { toMin, parseDur, minToStr, _festDate, simNow, simTodayStr, dayFullyPassed, festivalEnded } from './domain/time.js';
 import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, screeningPassed, _classifyTodayScreenings, _endedStats, normTitle } from './domain/film.js';
-import { screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios, verifyPlan } from './domain/schedule.js';
+import { sameEntry, screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios, verifyPlan } from './domain/schedule.js';
 import { _resolveVenue, _gapSuggestion, _getFestivalPhase, venueTravelMins, travelMins } from './domain/festival.js';
 
 // ── Step 6a: view/components.js — capa presentacional foundational de Wave 6
@@ -480,7 +480,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608251220';
+const BUILD_VERSION='202608251311';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1409,8 +1409,12 @@ document.addEventListener('click', function(e){
     // de mostrar. Se exponen para que el test PREGUNTE en vez de reimplementar:
     // un test que recalcula la regla es una segunda opinión, no un veredicto —
     // y coincide con producción hasta el día en que la regla cambia.
+    // sameEntry: el DUEÑO de «esta entrada del Plan es aquella» — título, día,
+    // hora y SEDE. Mismo motivo que los de arriba: el test pregunta, no
+    // reimplementa. Sin él, T108 tendría que rehacer la identidad a mano y
+    // volvería a coincidir con producción solo hasta que la regla cambie.
     // Solo lectura: ninguna muta estado.
-    screensConflict, isScreeningBlocked, screeningPassed, plannableScreens,
+    sameEntry, screensConflict, isScreeningBlocked, screeningPassed, plannableScreens,
     // getSuggestions: lo que la app OFRECE agregar al plan. Expuesto para que el
     // recorrido verifique la promesa que nadie mira — que una sugerencia jamás
     // choque con el plan que ya tenés.

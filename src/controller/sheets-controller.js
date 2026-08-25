@@ -17,7 +17,7 @@ import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from '.
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
 import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
 import { screeningPassed, effectiveDuration, blockDuration } from '../domain/film.js';
-import { isScreeningBlocked, screensConflictReason, plannableScreens } from '../domain/schedule.js';
+import { sameEntry, isScreeningBlocked, screensConflictReason, plannableScreens } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
 // Vivía acá un driver rAF que pisaba radio+opacidad por frame. Medido en device
 // con el video de Juan (7 de 7 aperturas): progresaba hasta ~68%, se congelaba
@@ -154,7 +154,7 @@ function _screeningRows(pairs, opts){
     // marcaban aunque el bloque estuviera en el plan.
     // No hace falta una rama especial para el bloque: como entra entero (o no
     // entra), la comparación exacta marca sus N filas igual.
-    _planned=savedAgenda&&savedAgenda.schedule.some(e=>e._title===owner.title&&e.day===s.day&&e.time===s.time);
+    _planned=savedAgenda&&savedAgenda.schedule.some(e=>sameEntry(e,{title:owner.title,day:s.day,time:s.time,venue:s.venue}));
     // El botón POR SESIÓN, en cambio, no existe para un recurrente: su control
     // vive abajo, a nivel de bloque (ver _bloqueCtrl).
     if(!owner.is_recurring&&!s._cancelled){
@@ -252,7 +252,7 @@ export function openPelSheet(title){
   // Por eso una función que está en tu plan se muestra SIEMPRE, aunque sea de otra
   // ciudad: sin esa excepción la app te ofrecería «Agregar» algo que ya tenés.
   const _ciudadSel=isCitySel(activeVenue)?activeVenue.slice(5):'';
-  const _yaElegida=sc=>savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===sc.day&&e.time===sc.time);
+  const _yaElegida=sc=>savedAgenda&&savedAgenda.schedule.some(e=>sameEntry(e,{title:f.title,day:sc.day,time:sc.time,venue:sc.venue}));
   const _todas=[...future,...past];
   const allScr=_ciudadSel?_todas.filter(sc=>venueMatches(sc.venue,activeVenue)||_yaElegida(sc)):_todas;
   // Cuántas compañeras anuncia el aviso: se cuenta sobre allScr —las funciones
@@ -518,7 +518,7 @@ export function openVenueSheet(venueName){
   const fns=FILMS.filter(f=>f.venue===venueName)
     .sort((a,b)=>(a.day_order-b.day_order)||(toMin(a.time)-toMin(b.time)));
   const _fnRow=f=>{
-    const _inPlan=savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===f.day&&e.time===f.time);
+    const _inPlan=savedAgenda&&savedAgenda.schedule.some(e=>sameEntry(e,f));
     return`<div class="venue-fn-row" data-action="openPelFromVenue" data-title="${f.title.replace(/"/g,'&quot;')}">
       <span class="venue-fn-time">${f.time}</span>
       <span class="venue-fn-title">${filmDisplayTitle(f).main}</span>
@@ -904,7 +904,7 @@ export function confirmConflictReplace(){
   // 3. MUTATE — quitar la existente e insertar la nueva
   commitPlan(a=>{const b=a||{schedule:[]};return {...b,
     schedule: [
-      ...b.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time)),
+      ...b.schedule.filter(s=>!sameEntry(s,existingEntry)),
       {...incomingScreen,_title:incomingTitle}
     ].sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
   };});
