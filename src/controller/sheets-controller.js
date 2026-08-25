@@ -1638,19 +1638,14 @@ export function _checkRecalcOpportunity(){
   }
 }
 
-// Ver _mismaEntrada en handlers.js: desde «verla otra vez» una obra puede estar
-// dos veces en el Plan, así que se quita LA entrada (título+día+hora). Sin
-// day/time se conserva el comportamiento viejo — todas las del título — que es
-// el correcto para los llamadores de conflictos y bloqueos.
-export function _removePlanItem(title,day,time){
+export function _removePlanItem(title){
   if(!savedAgenda) return;
-  const _match=s=>s._title===title&&(day==null||s.day===day)&&(time==null||s.time===time);
-  const removed=savedAgenda.schedule.find(_match);
+  const removed=savedAgenda.schedule.find(s=>s._title===title);
   if(removed){
-    state.update('lastRemovedSlots', arr => [{...removed,_isRestored:true}, ...arr.filter(r=>!(r._title===removed._title&&r.day===removed.day&&r.time===removed.time))].slice(0,MAX_REMEMBERED_SLOTS));
+    state.update('lastRemovedSlots', arr => [{...removed,_isRestored:true}, ...arr.filter(r=>r._title!==removed._title)].slice(0,MAX_REMEMBERED_SLOTS));
     saveLastSlot();
   }
-  commitPlan(a=>{const sch=a.schedule.filter(s=>!_match(s));return sch.length?{...a,schedule:sch}:null;});
+  commitPlan(a=>{const sch=a.schedule.filter(s=>s._title!==title);return sch.length?{...a,schedule:sch}:null;});
   saveSavedAgenda();
 }
 
