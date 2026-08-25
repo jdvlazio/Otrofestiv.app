@@ -12,7 +12,8 @@
 
 import { NOTICES, PALMARES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _buildPosterV16, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity } from './helpers.js';
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity, programParts,
+} from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -457,9 +458,26 @@ export function renderPeliculaViewHTML(state){
     const{displayTitle}=parseProgramTitle(f.title);
     const progBadge='';//REMOVED: no count badge
     const _ended=festivalEnded();
-    const _isPrograma=f.is_programa&&f.film_list&&f.film_list.length>=2;
+    // LA ESCALERA — 2-3 obras, todas con afiche REAL (POSTERS.md, Juan 21 ago).
+    // Se pregunta ANTES que nada: es la decisión de más alto rango para una
+    // función que agrupa obras, y su modelo ya sabe decir que no. Devuelve null
+    // si falta un afiche, si alguno es un still nuestro (Forma B) o si son 4+;
+    // ahí siguen mandando los caminos de siempre y no se toca nada.
+    //
+    // Lo que gana el grid: las funciones de cortos de 2-3 obras caían al
+    // generativo con los dos afiches guardados (31 en el catálogo), y los
+    // programas legacy mostraban `poster-card-stack`, dos mitades a 50/50 que
+    // recortan cada afiche a una tira y le parten la tipografía. La Escalera
+    // los muestra ENTEROS y solapados.
+    const _esc=programParts(f);
+    const _isPrograma=!_esc&&f.is_programa&&f.film_list&&f.film_list.length>=2;
     let posterImg,_cardBg='',_edAccent='';
-    if(_isPrograma){
+    if(_esc){
+      // El SVG va INLINE, no como src de un <img>: sus módulos son <image href>
+      // remotos y un SVG dentro de <img> no carga recursos externos — saldría en
+      // negro. Es el mismo camino que ya usa el Diario (`.dw-svg`).
+      posterImg=`<div class="img-cover poster-esc">${_esc.svg}</div>`;
+    } else if(_isPrograma){
       const _p1=_getItemPoster(f.film_list[0]);
       const _p2=_getItemPoster(f.film_list[1]);
       if(!_p1&&!_p2){

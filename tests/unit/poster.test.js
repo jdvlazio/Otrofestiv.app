@@ -318,6 +318,34 @@ test('slotPosterParts: solo funciones compartidas de 2-3 obras, y solo completas
   assert.strictEqual(H.slotPosterParts(null), null, 'sin miembros, nada');
 });
 
+// programParts — el gate de ENTRADA a la Escalera. Antes se llamaba
+// legacyProgramParts y solo miraba `is_programa`, así que los programas de
+// CORTOS (is_cortos, que es como se modelan hoy) caían al generativo teniendo
+// los afiches: 31 funciones del catálogo. El test comprueba las DOS puertas,
+// porque el fallo era exactamente que una de ellas no existía.
+test('programParts: la Escalera alcanza a los programas de cortos, no solo a los legacy', () => {
+  const it = (title, poster) => ({ title, poster, posterSource: 'custom', duration: '40 min' });
+  const dos = [it('A', 'https://image.tmdb.org/t/p/w342/a.jpg'), it('B', 'https://image.tmdb.org/t/p/w342/b.jpg')];
+
+  const cortos = { is_cortos: true, film_list: dos, duration: '88 min', section: 'Sec', title: 'A + B' };
+  const legacy = { is_programa: true, film_list: dos, duration: '88 min', section: 'Sec', title: 'A + B' };
+
+  const pc = H.programParts(cortos);
+  assert.ok(pc, 'is_cortos SÍ entra (esto era el bug)');
+  assert.strictEqual(pc.modules.length, 2, 'dos módulos');
+  assert.ok(H.programParts(legacy), 'is_programa sigue entrando: no se rompió lo viejo');
+
+  // Las fronteras las guarda slotPosterParts, pero deben SOBREVIVIR al gate:
+  // un still dentro anula la tarjeta aunque la función sea de cortos.
+  const conStill = { is_cortos: true, section: 'Sec', duration: '60 min',
+    film_list: [dos[0], { title: 'S', poster: '/assets/x/s.jpg', posterSource: 'editorial', duration: '20 min' }] };
+  assert.strictEqual(H.programParts(conStill), null,
+    'afiche original + still nuestro NO fusiona (regla de Juan, 25 ago)');
+
+  assert.strictEqual(H.programParts({ film_list: dos }), null, 'sin is_cortos ni is_programa, nada');
+  assert.strictEqual(H.programParts(null), null, 'sin función, nada');
+});
+
 // ── Auditoría 24 ago 2026 (Cinemancia): mejoras 2, 3 y 5 de la Forma A ────────
 
 test('Forma A — el título no repite la sección: el prefijo exacto se recorta', () => {

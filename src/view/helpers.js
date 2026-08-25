@@ -245,17 +245,16 @@ export function posterAmbient(src,fallbackHex,cb){
 //     cada obra conserva su card, como hoy. Nada se inventa.
 //   · Delantero = primera obra en orden de catálogo (regla neutra).
 // El dibujo lo hace components.makeSharedSlotSVG — acá solo el modelo.
-// legacyProgramParts — el póster de un programa LEGACY «Film A + Film B».
-// Ese modelo (is_programa) es una FUNCIÓN COMPARTIDA modelada a la vieja usanza
-// —el template dice que la reemplazó el anclaje Tipo 2—, así que le corresponde
-// la misma forma C. Y arregla una mentira vieja: getFilmPoster (camino 5)
-// devuelve el afiche de la PRIMERA obra, así que «Esperando abril + Los bandidos
-// del hotel azul» se mostraba —en el Diario y en todas partes— como si fuera
-// «Esperando abril» sola. Con las dos obras apiladas, la tarjeta dice la verdad.
-// Devuelve null cuando no califica (afiches incompletos, still, 4+): ahí el
-// camino viejo sigue mandando y no se toca nada.
-export function legacyProgramParts(f){
-  if(!f||!f.is_programa||!Array.isArray(f.film_list)) return null;
+// programParts — el póster de una función que agrupa 2-3 obras, sea programa
+// legacy («A + B», is_programa) o de cortos (is_cortos, como se modelan hoy).
+// Arregla una mentira vieja: getFilmPoster (camino 5) devuelve el afiche de la
+// PRIMERA obra, así que «Esperando abril + Los bandidos del hotel azul» se
+// mostraba como si fuera «Esperando abril» sola. Con la Escalera dice la verdad.
+// Antes se llamaba legacyProgramParts y solo miraba is_programa: las 31
+// funciones de cortos de 2-3 obras caían al generativo teniendo los afiches.
+// Devuelve null si no califica (afiche incompleto, still, 4+) → camino viejo.
+export function programParts(f){
+  if(!f||!(f.is_programa||f.is_cortos)||!Array.isArray(f.film_list)) return null;
   return slotPosterParts(f.film_list.map(it=>({
     title:it.title, poster:it.poster, posterSource:it.posterSource,
     duration:it.duration||f.duration, section:f.section,
