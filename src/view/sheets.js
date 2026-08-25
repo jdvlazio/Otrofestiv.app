@@ -10,6 +10,7 @@
 //   binding importado) — sin exposición globalThis nueva.
 
 import { t } from "../i18n/i18n.js";
+import { storage } from '../storage/storage.js';
 import { FESTIVAL_CONFIG } from "../config.js";
 import { ICONS, festivalShortName } from "./components.js";
 import { festivalCities } from "./helpers.js";
@@ -58,17 +59,15 @@ export function _pintarBannerRevision(){
 // de revocarlo.
 //
 // Se recuerda por festival y no globalmente: entrar a uno no abre los otros.
-const _REVIEW_LS='otrofestiv_review_ok';
 
 export function _reviewDesbloqueado(festId){
-  try{ return (JSON.parse(localStorage.getItem(_REVIEW_LS)||'[]')||[]).includes(festId); }
+  try{ return storage.getReviewOk().includes(festId); }
   catch(e){ return false; }
 }
 
 function _recordarReview(festId){
   try{
-    const v=JSON.parse(localStorage.getItem(_REVIEW_LS)||'[]')||[];
-    if(!v.includes(festId)){ v.push(festId); localStorage.setItem(_REVIEW_LS,JSON.stringify(v)); }
+    storage.addReviewOk(festId);
   }catch(e){}
 }
 

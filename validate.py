@@ -71,8 +71,41 @@ content = open(INDEX_HTML, encoding='utf-8').read()
 # funcionando, se inyecta main.js donde estaba el bloque inline — el `content`
 # en memoria queda "as if inline". Los checks no requieren cambios.
 _MAIN_JS = 'src/main.js'
+# EL SHIM ESTABA INCOMPLETO Y POR ESO 7 GUARDIANES QUEDARON CIEGOS (auditoria de
+# guardianes, 25 ago 2026). La Fase 8 inyectaba SOLO main.js y anoto «los checks
+# no requieren cambios» — pero el codigo se partio en 37 modulos y el territorio
+# real paso a ser src/view y src/controller. Los checks que leen `content`
+# seguian mirando index.html + main.js: event-delegation no veia los 98
+# data-action de view/controller (un typo = boton muerto, en verde); shadow-t
+# vigilaba 1 de 467 llamadas a t(). Se plantaron 8 bugs reales en src/ y validate
+# dio verde en los 8.
+# Ahora el shim inyecta TODOS los modulos: `content` vuelve a representar el
+# codigo de la app, que es lo que el shim prometia desde el principio.
+# El DICCIONARIO no es territorio: es la referencia contra la que se compara.
+# Inyectarlo hacia que [i18n-hardcoded] viera sus propios 425 valores como
+# «strings hardcodeados en JS» — el guardian acusandose a si mismo.
+# Ni el DICCIONARIO ni el ADAPTADOR son territorio: son las referencias contra
+# las que cada check compara. Inyectarlos hacia que se acusaran a si mismos —
+# i18n-hardcoded veia sus propios 425 valores como «strings en JS», y
+# storage-encapsulation veia los localStorage legitimos del adaptador.
+# LOS DUEÑOS NO SON TERRITORIO. Cada uno de estos archivos ES la referencia
+# contra la que compara algun check; inyectarlos los hace acusarse a si mismos:
+#   i18n.js        → i18n-hardcoded veia sus 425 valores como «strings en JS»
+#   storage.js     → storage-encapsulation veia los localStorage del adaptador
+#   viewstate.js   → viewstate-shadow veia las declaraciones del propio bridge
+#   state-bridge.js→ idem para state-mirror
+_SRC_NO_INYECTAR = {_MAIN_JS, 'src/i18n/i18n.js', 'src/storage/storage.js',
+                    'src/state/viewstate.js', 'src/state/state-bridge.js'}
+_SRC_MODS = sorted(
+    os.path.join(_r, _f)
+    for _r, _d, _fs in os.walk('src') for _f in _fs
+    if _f.endswith('.js') and os.path.join(_r, _f).replace(os.sep, '/') not in _SRC_NO_INYECTAR
+)
+_SRC_EXTRA = '\n'.join(
+    '\n/* ---- ' + _m + ' ---- */\n' + open(_m, encoding='utf-8').read() for _m in _SRC_MODS
+)
 if os.path.exists(_MAIN_JS):
-    _main_src = open(_MAIN_JS, encoding='utf-8').read()
+    _main_src = open(_MAIN_JS, encoding='utf-8').read() + '\n' + _SRC_EXTRA
     # El src de main.js lleva ?v=BUILD (cache-busting del fix iOS) — matchear con o
     # sin el query para que la inyección siga funcionando en cada build. Replacement
     # como función para no interpretar backslashes del código JS como group refs.
@@ -128,54 +161,20 @@ script = content[script_start:script_end]
 # ── CHECK 1: Shadow variable t= ───────────────────────────────────────────────
 # Detecta funciones donde una variable local llamada `t` (o arrow param `t=>`)
 # pisa la función global t() de i18n — causó 3 bugs esta semana.
-check = 'shadow-t'
-func_matches = list(re.finditer(r'\nfunction (\w+)\s*\(', script))
-shadow_found = []
+# ── [shadow-t] BORRADO (auditoria de guardianes, 25 ago 2026) ────────────────
+# Protegia contra `const t=` / `.map(t=>…)` pisando la t() de i18n. Se retira
+# por dos razones MEDIDAS, no por gusto:
+#  1. Estaba CIEGO: miraba solo main.js, no src/view ni src/controller, donde
+#     vive el codigo desde la Fase 8. Vigilaba 1 de 467 llamadas a t().
+#  2. La clase de bug NO OCURRE: con el territorio completo hay 42 sombreados
+#     de `t` y CERO llaman t('clave') adentro. Meses ciego sin consecuencia.
+# Ademas su implementacion tenia dos modos de falla comprobados: tomaba «de una
+# function a la siguiente» como cuerpo (cruzando modulos enteros en el blob) y
+# contaba llaves sin entender template literals — daba falsos positivos.
+# Un ESLint no-restricted-syntax sobre `t` seria preciso, pero marca los 42
+# sombreados inofensivos: 50 avisos de ruido por un bug que no pasa. Si algun
+# dia ocurre de verdad, ese es el camino correcto (parser, no regex).
 
-for i, m in enumerate(func_matches):
-    fn_name = m.group(1)
-    start   = m.start()
-    end     = func_matches[i+1].start() if i+1 < len(func_matches) else len(script)
-    body    = script[start:end]
-
-    # Arrow callback con t como param + t() llamado dentro del mismo bloque
-    for arrow_m in re.finditer(r'(?:[.(,\s])\bt\b\s*=>\s*\{', body):
-        # Extraer solo el cuerpo del bloque { } del callback
-        brace_start = body.find('{', arrow_m.end()-1)
-        if brace_start == -1: continue
-        depth, i = 1, brace_start + 1
-        while i < len(body) and depth > 0:
-            if body[i] == '{': depth += 1
-            elif body[i] == '}': depth -= 1
-            i += 1
-        cb_text = body[brace_start:i]
-        if re.search(r"\bt\s*\('[^']*'\)", cb_text):
-            shadow_found.append(f'{fn_name}() — arrow param t=> con t() en callback')
-
-    # Destructuring ({t,...})=> en callbacks de array — {t,f} sombrea t()
-    # Solo detecta cuando es parámetro de arrow function: ({t,...})=>
-    for destr_m in re.finditer(r'\(\{([^}]{1,40})\}\s*(?:,[^)]*)?\)\s*=>', body):
-        params = destr_m.group(1)
-        if re.search(r'(?<![:\w])t(?![:\w])', params):
-            cb_text = body[destr_m.end():destr_m.end()+500]
-            if re.search(r"\bt\('[^']*'\)", cb_text):
-                shadow_found.append(f'{fn_name}() — destructuring {{t}} en arrow fn sombrea t() — usar {{t:title}}')
-
-    # const t = ... + t() llamado después
-    for decl_m in re.finditer(r'\bconst\s+t\s*=(?!\s*t\()', body):
-        if re.search(r"\bt\('[^']*'\)", body[decl_m.end():]):
-            shadow_found.append(f'{fn_name}() — const t= con t() en mismo scope')
-
-if shadow_found:
-    for s in shadow_found:
-        fail(check, s)
-    fail(check, 'Convención: usar titleStr como param de callbacks, nunca t=')
-else:
-    ok(check, '0 shadow variable t= risks en todas las funciones')
-
-# ── CHECK 2: _SCHED_PURE_FNS existen en main thread ──────────────────────────
-# Si una función se renombra o elimina del main thread pero sigue en la lista,
-# el Worker se construye con un fragmento undefined.
 check = 'sched-pure-fns'
 _sched_hay = content + _calc_src  # p8 7a: _SCHED_PURE_FNS vive en controller/calc.js
 sched_start = _sched_hay.find('const _SCHED_PURE_FNS = [')
@@ -818,24 +817,62 @@ except Exception as e:
     warn(check, f'no se pudo verificar tasks: {e}')
 
 check = 'js-syntax'
+# ESTE CHEQUEO FUE UN SELLO VERDE INCONDICIONAL (auditoría de guardianes,
+# 25 ago 2026). Dos fallas encadenadas:
+#   1. `node --check archivo.js` trata el archivo como CommonJS. Ante un módulo
+#      ESM se rinde y devuelve exit 0 SIEMPRE — incluso con `const a = ;` dentro.
+#      Comprobado: `printf "import x from 'y';\nconst a = ;" > t.js` → exit 0.
+#      Se arregla con `.mjs` (o --input-type=module), que sí parsea de verdad.
+#   2. Miraba solo el <script> mayor de index.html. La Fase 8 se llevó el JS a
+#      src/**: el territorio real quedó sin vigilar.
+# Por qué importa: un error de sintaxis en CUALQUIER módulo mata la app entera
+# al boot — es el «splash vacío sin errores» del grafo ESM (ver [boot-esm-torn]).
+# Creíamos tener paracaídas y era una mochila vacía.
+def _err_util(_stderr):
+    # Node imprime el volcado y CIERRA con «Node.js v22.x» — tomar la última
+    # línea daba un mensaje inútil («Node.js v22.18.0»). La que informa es la
+    # del SyntaxError, con su número de línea.
+    _ls = [l.strip() for l in _stderr.strip().split(chr(10)) if l.strip()]
+    _e = next((l for l in _ls if 'Error' in l), '')
+    _loc = next((l for l in _ls if ':' in l and l.split(':')[-1].strip().isdigit()), '')
+    return ((_loc.split('/')[-1] + ' ') if _loc else '') + (_e or _ls[-1] if _ls else '?')
+
 try:
     import subprocess, tempfile
-    # Extract main script (largest <script> block)
-    scripts = re.findall(r'<script[^>]*>(.*?)</script>', content, re.DOTALL)
-    main_js = max(scripts, key=len) if scripts else ''
-    if main_js:
-        with tempfile.NamedTemporaryFile(suffix='.js', mode='w', delete=False, encoding='utf-8') as f:
-            f.write(main_js)
-            tmppath = f.name
-        result = subprocess.run(['node', '--check', tmppath], capture_output=True)
-        os.unlink(tmppath)
-        if result.returncode != 0:
-            err = result.stderr.decode()[:200]
-            fail(check, f'error de sintaxis JS: {err}')
-        else:
-            ok(check, 'sintaxis JS válida (Node.js --check)')
+    _fuentes = []
+    for _r, _d, _fs in os.walk('src'):
+        for _f in _fs:
+            if _f.endswith('.js'):
+                _fuentes.append(os.path.join(_r, _f))
+    # OJO: `content` es una CONCATENACIÓN sintética (index.html + main.js
+    # inyectado) que arma este script para otros chequeos. Parsearla como si
+    # fuera un archivo no significa nada — hay que leer el index.html REAL.
+    _idx_real = open(INDEX_HTML, encoding='utf-8').read()
+    _scripts = re.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>', _idx_real, re.DOTALL)
+    _inline = max(_scripts, key=len) if _scripts else ''
+    _malos = []
+    for _src in _fuentes:
+        # .mjs: sin esto Node lo lee como CommonJS y aprueba cualquier cosa.
+        with tempfile.NamedTemporaryFile(suffix='.mjs', mode='w', delete=False, encoding='utf-8') as _tf:
+            _tf.write(open(_src, encoding='utf-8').read())
+            _tp = _tf.name
+        _r2 = subprocess.run(['node', '--check', _tp], capture_output=True)
+        os.unlink(_tp)
+        if _r2.returncode != 0:
+            _malos.append(f'{_src}: ' + _err_util(_r2.stderr.decode()))
+    # El inline de index.html es script CLÁSICO (no módulo): .js es lo correcto,
+    # y ahí `node --check` sí detecta errores de verdad (probado).
+    if _inline.strip():
+        with tempfile.NamedTemporaryFile(suffix='.js', mode='w', delete=False, encoding='utf-8') as _tf:
+            _tf.write(_inline); _tp = _tf.name
+        _r2 = subprocess.run(['node', '--check', _tp], capture_output=True)
+        os.unlink(_tp)
+        if _r2.returncode != 0:
+            _malos.append('index.html <script>: ' + _err_util(_r2.stderr.decode()))
+    if _malos:
+        fail(check, 'error de sintaxis JS (mata la app al boot): ' + ' · '.join(_malos[:3]))
     else:
-        warn(check, 'no se encontró bloque <script> para validar')
+        ok(check, f'sintaxis ESM válida en {len(_fuentes)} módulos de src/ + el inline de index.html')
 except FileNotFoundError:
     warn(check, 'Node.js no disponible — skip sintaxis JS')
 
@@ -861,7 +898,13 @@ try:
     for key, placeholders in keys_with_placeholders.items():
         # Buscar todas las llamadas a t('key') — con o sin parámetros
         all_calls = _re_interp.findall(rf"t\('{key}'([^)]*)\)", script_part)
-        bare_calls = [c for c in all_calls if c.strip() == '']
+        # `t('clave')` seguido de `.replace('{n}', …)` TAMBIEN sustituye — el
+        # placeholder no queda literal, que es lo unico que este check protege.
+        # Sin este matiz acusaba a ics_success, palm_viste y palm_resumen, que
+        # sustituyen a mano y se ven bien en pantalla (auditoria 25 ago 2026).
+        _con_replace = set(_re_interp.findall(rf"t\('{key}'\)\s*\.replace\(", script_part))
+        _bare_sin_replace = len(_re_interp.findall(rf"t\('{key}'\)(?!\s*\.replace\()", script_part))
+        bare_calls = [c for c in all_calls if c.strip() == ''][:_bare_sin_replace]
         if bare_calls:
             interp_errors.append(
                 f"t('{key}') llamado sin params pero la key contiene {{{','.join(placeholders)}}} — "
@@ -1103,8 +1146,15 @@ try:
 
     for _name in _roster:
         # let/const/var <name>  |  let a=.., <name>  (multi-decl, name no primero)
+        # La parte de «declaracion multiple» (let a=1, b=2) NO puede cruzar
+        # parentesis ni corchetes, y el nombre tiene que ir SEGUIDO de = ; o ,
+        # para contar como declaracion. Sin eso, `const _visDays=new Set([
+        # DAY_KEYS[vs],DAY_KEYS[ve]])` se leia como si declarara DAY_KEYS (la coma
+        # del array hacia de separador) y `const totalDays=Math.max(1,DAY_KEYS.length)`
+        # igual. Falsos positivos que aparecieron apenas el check empezo a ver todo
+        # el codigo (auditoria de guardianes, 25 ago 2026).
         _re_decl = _re.compile(
-            r'\b(?:let|const|var)\s+(?:[\w$]+\s*(?:=[^,;]*?)?\s*,\s*)*' + _re.escape(_name) + r'\b'
+            r'\b(?:let|const|var)\s+(?:[\w$]+\s*(?:=[^,;()\[\]{}]*?)?\s*,\s*)*' + _re.escape(_name) + r'\s*[=;,]'
         )
         for _i, _line in enumerate(_lines, 1):
             _st = _line.lstrip()
@@ -1181,7 +1231,7 @@ try:
     _main_lines = _main_src.split('\n')
     for _name in _vs_keys:
         _re_decl = _re.compile(
-            r'\b(?:let|const|var)\s+(?:[\w$]+\s*(?:=[^,;]*?)?\s*,\s*)*' + _re.escape(_name) + r'\b'
+            r'\b(?:let|const|var)\s+(?:[\w$]+\s*(?:=[^,;()\[\]{}]*?)?\s*,\s*)*' + _re.escape(_name) + r'\s*[=;,]'
         )
         for _i, _line in enumerate(_main_lines, 1):
             _st = _line.lstrip()

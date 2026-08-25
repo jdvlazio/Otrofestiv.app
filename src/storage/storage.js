@@ -106,5 +106,15 @@ export const storage = {
 
   getBuild() { return localStorage.getItem('otrofestiv_build'); },
   setBuild(b) { try { localStorage.setItem('otrofestiv_build', b); } catch(e) {} },
+
+  // showPress — el interruptor de Prensa e Industria, POR FESTIVAL (la clave
+  // lleva el storageKey). Vivia como localStorage crudo en loader.js.
+  getShowPress(k) { try { return localStorage.getItem((k||'') + 'showPress') === '1'; } catch(e) { return false; } },
+  setShowPress(k, v) { try { localStorage.setItem((k||'') + 'showPress', v ? '1' : '0'); } catch(e) {} },
+
+  // reviewOk — los festivales EN REVISION ya desbloqueados con su clave.
+  // Vivia como localStorage crudo en view/sheets.js.
+  getReviewOk() { try { return JSON.parse(localStorage.getItem('otrofestiv_review_ok') || '[]') || []; } catch(e) { return []; } },
+  addReviewOk(id) { try { const v = this.getReviewOk(); if (!v.includes(id)) { v.push(id); localStorage.setItem('otrofestiv_review_ok', JSON.stringify(v)); } } catch(e) {} },
 };
 // ── STORAGE ADAPTER END ──────────────────────────────────────────────

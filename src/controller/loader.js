@@ -730,7 +730,7 @@ export function togglePressScreenings(){
   if(!cfg || !cfg._tienePrensa) return;
   const nuevo = !showPress;
   showPress = nuevo;
-  try{ localStorage.setItem((cfg.storageKey||'')+'showPress', nuevo?'1':'0'); }catch(e){}
+  storage.setShowPress(cfg.storageKey, nuevo);
   const _vis = _filtrarPorAudiencia(cfg._todasLasFunciones||[]);
   state.batchUpdate({ FILMS: _vis });
   _sincronizarBotonPrensa();
@@ -770,7 +770,7 @@ export function togglePressScreenings(){
 // publicar FILMS, para que la primera pintura ya sea la correcta.
 export function _restaurarPrensa(cfg){
   let v = false;
-  try{ v = localStorage.getItem((cfg.storageKey||'')+'showPress') === '1'; }catch(e){}
+  v = storage.getShowPress(cfg.storageKey);
   showPress = v;
 }
 
