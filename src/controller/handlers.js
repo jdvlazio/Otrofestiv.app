@@ -284,12 +284,22 @@ export function clearDelay(title,day,time,venue){
 // modal) y el arreglo de una función cancelada, que NO pide confirmación: el
 // usuario está actuando sobre algo que ya no existe, y preguntarle "¿seguro?"
 // sería pedirle que confirme la realidad.
-function _dropFromPlan(title){
+// IDENTIDAD DE LA ENTRADA, NO DEL TÍTULO (25 ago 2026). Desde que una obra puede
+// estar DOS VECES en el Plan («verla otra vez»), filtrar por título borraría las
+// dos de un golpe y el deshacer solo recordaría una: pérdida silenciosa. Con
+// day+time se quita LA función elegida. Sin day/time (llamadas viejas: conflictos,
+// función cancelada) el comportamiento es el de siempre — quitar todas las del
+// título — que es lo correcto ahí: esos caminos actúan sobre la obra entera.
+const _mismaEntrada=(s,title,day,time)=>s._title===title&&(day==null||s.day===day)&&(time==null||s.time===time);
+
+function _dropFromPlan(title,day,time){
   const {savedAgenda} = state.snapshot();
   if(!savedAgenda) return;
-  const rem=savedAgenda.schedule.find(s=>s._title===title);
-  if(rem){state.update('lastRemovedSlots', arr => [{...rem,_isRestored:true}, ...arr.filter(r=>r._title!==rem._title)].slice(0,MAX_REMEMBERED_SLOTS));saveLastSlot();}
-  commitPlan(a=>{const sch=a.schedule.filter(s=>s._title!==title);return sch.length?{...a,schedule:sch}:null;});
+  const rem=savedAgenda.schedule.find(s=>_mismaEntrada(s,title,day,time));
+  // El restaurable se indexa por ENTRADA (título+día+hora): dos funciones de la
+  // misma obra son dos restaurables distintos, no uno que pisa al otro.
+  if(rem){state.update('lastRemovedSlots', arr => [{...rem,_isRestored:true}, ...arr.filter(r=>!(r._title===rem._title&&r.day===rem.day&&r.time===rem.time))].slice(0,MAX_REMEMBERED_SLOTS));saveLastSlot();}
+  commitPlan(a=>{const sch=a.schedule.filter(s=>!_mismaEntrada(s,title,day,time));return sch.length?{...a,schedule:sch}:null;});
   saveSavedAgenda();
   // CTA B: mostrar aviso contextual post-eliminación
   _ctaRemovedVisible=true;
@@ -298,17 +308,29 @@ function _dropFromPlan(title){
   renderAgenda();showToast(t('toast_fuera_plan'),'info');
 }
 
-export function removeFromAgenda(title){
+export function removeFromAgenda(title,day,time){
   // 1. READ + 2. GUARD — el outer handler solo abre el modal de confirmación
-  const {savedAgenda} = state.snapshot();
+  const {FILMS, savedAgenda, _activeFestId} = state.snapshot();
   if(!savedAgenda) return;
   const _s=title.length>36?title.slice(0,34)+'…':title;
   // Taller multi-día: el modal dice la CONSECUENCIA real —salen las N— y no la
   // promesa vieja. «Lo podés encontrar de nuevo en Sugerencias» dejó de ser cierto
   // para un taller: se quitaron de ahí justamente para que el bloque no se rompa.
   const _rec=(FILMS||[]).filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time).length;
-  const _cuerpo=_rec>1?t('bloque_quitar_aviso',{n:_rec}):t('plan_restaurar_suger');
-  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${_cuerpo}</div>`,t('misc_sacar'),()=>_dropFromPlan(title));
+  let _cuerpo=_rec>1?t('bloque_quitar_aviso',{n:_rec}):t('plan_restaurar_suger');
+  // OBRA REPETIDA: con dos funciones de la misma obra en el Plan, «¿Quitar
+  // <obra>?» no dice cuál se va — y el susto real es creer que se pierden las
+  // dos. El modal nombra LA FUNCIÓN que sale y confirma la que se queda
+  // (revisión de UX Writer, 25 ago). Solo cuando de verdad hay más de una.
+  const _mias=savedAgenda.schedule.filter(x=>x._title===title);
+  if(day&&time&&_mias.length>1){
+    const _dm=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
+    const _fmt=x=>`${_dm[x.day]||x.day||''} · ${x.time||''}`;
+    const _otra=_mias.find(x=>!(x.day===day&&x.time===time));
+    _cuerpo=t('plan_quitar_esta_funcion',{f:`<b>${_fmt({day,time})}</b>`})
+      +(_otra?` ${t('plan_seguis_teniendo',{f:`<b>${_fmt(_otra)}</b>`})}`:'');
+  }
+  showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${_cuerpo}</div>`,t('misc_sacar'),()=>_dropFromPlan(title,day,time));
 }
 
 // _planFixNotice — la salida para una entrada del Plan cuya función cambió. El
@@ -327,7 +349,11 @@ export function _planFixNotice(title){
   const {FILMS, savedAgenda} = state.snapshot();
   if(!savedAgenda||!savedAgenda.schedule.some(s=>s._title===title)) return;
   const moved=FILMS.find(f=>f.title===title&&f._movedFrom&&!f._cancelled);
-  if(moved){ addSuggestion(title, moved.day, moved.time); return; }
+  // {mudar:true}: acá NO se pregunta «¿verla otra vez?». El usuario tocó
+  // «Actualizar» sobre una función reprogramada — su intención es mudarla, y
+  // preguntarle sería pedirle que confirme lo que acaba de pedir. (Lo cazó T52
+  // en CI: sin este flag la entrada se quedaba en la hora vieja.)
+  if(moved){ addSuggestion(title, moved.day, moved.time, {mudar:true}); return; }
   _dropFromPlan(title);
   setTimeout(_scrollToSuggestions, 350);
 }
@@ -395,7 +421,8 @@ function _pickScreen(title,day,time){
   return _cands.find(f=>screeningPlannable(f))||_cands[0];
 }
 
-export function addSuggestion(title,day,time){
+export function addSuggestion(title,day,time,opts){
+  opts=opts||{};
   title=normTitle(title);
   // 1. READ
   const {FILMS, _activeFestId, savedAgenda, watchlist, watched} = state.snapshot();
@@ -422,6 +449,27 @@ export function addSuggestion(title,day,time){
     // misma acción para "Añadir esta función". Si el título ya está en OTRA
     // función → swap; si ya está en ESA misma → sin acción (cae al render final).
     const existing=sa.schedule.find(s=>s._title===title);
+    // ── YA ESTÁ EN EL PLAN, EN OTRA FUNCIÓN (Juan, 25 ago) ──────────────────
+    // Hasta hoy esto hacía SWAP EN SILENCIO: te movía la función sin decírtelo,
+    // y no había forma de ver una obra dos veces (una acreditada de prensa de
+    // TIFF lo pidió; el 93% de las obras de TIFF tienen ≥2 funciones). Los dos
+    // intentos detrás del mismo tap son legítimos e indistinguibles para la app
+    // —«me equivoqué de horario» y «la quiero ver de nuevo»—, así que se
+    // pregunta. Decisión de Juan: PLANEAR no repite obras (eso sigue igual, el
+    // optimizador no cambia); AGENDAR sí, con advertencia, porque es decisión
+    // del usuario. El modal es de dos botones + salir tocando afuera, así que
+    // los dos botones son las dos intenciones y no hay «cancelar».
+    if(existing&&!(existing.day===day&&existing.time===time)&&!opts.repetir&&!opts.mudar&&!existing.is_recurring){
+      const _dm=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
+      const _cuando=`<b>${_dm[existing.day]||existing.day||''} · ${existing.time||''}</b>`;
+      showActionModal(
+        t('plan_ya_en_plan_tit'),
+        `<div>${t('plan_ya_en_plan_cuando',{f:_cuando})}</div><div>${t('plan_ya_en_plan_preg')}</div>`,
+        t('plan_verla_otra_vez'),
+        ()=>addSuggestion(title,day,time,{repetir:true}),
+        t('plan_cambiar_funcion'));
+      return;
+    }
     if(!(existing&&existing.day===day&&existing.time===time)){
       // ── Re-validación en tiempo real ─────────────────────────────
       // getSuggestions verificó el hueco al renderizar, pero el plan
@@ -435,9 +483,10 @@ export function addSuggestion(title,day,time){
         return;
       }
       // filter(s._title!==title): no-opea en add (título ausente), quita la
-      // función vieja en swap (título presente en otra función).
+      // función vieja en swap (título presente en otra función). En REPETIR no
+      // se filtra nada: conservar la vieja ES la función de este camino.
       commitPlan(a=>{const b=a||{schedule:[]};return {...b,
-        schedule: [...b.schedule.filter(s=>s._title!==title), {...screen,_title:title}]
+        schedule: [...(opts.repetir?b.schedule:b.schedule.filter(s=>s._title!==title)), {...screen,_title:title}]
           .sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
       };});
       saveSavedAgenda();

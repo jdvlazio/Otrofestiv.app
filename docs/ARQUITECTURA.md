@@ -655,6 +655,35 @@ resultado, no el camino — mismo patrón que el oráculo del planeador (§15.6)
 #### La sala que parte un programa — `[sala-mixta]`
 
 El anclaje de función (`sealSharedSlots`) agrupa por `día|hora|sede|sala`. Si en
+
+#### Una obra puede estar DOS VECES en el Plan («verla otra vez», 25 ago 2026)
+
+Caso real: una acreditada de prensa de TIFF quiere ver la misma obra dos veces
+(el 93 % de las obras de TIFF tienen ≥2 funciones). Decisión de Juan:
+**PLANEAR no repite obras** —el optimizador no cambia, y esa restricción es
+justamente lo que hace que 4 obras distintas valgan más que 4 repeticiones—;
+**AGENDAR sí, con advertencia**, porque es decisión del usuario.
+
+Lo que cambió, y por qué las dos mitades son inseparables:
+- **Agendar** una obra ya planeada dejó de hacer **swap silencioso**: pregunta
+  («Verla otra vez» / «Cambiar de función»). Los dos intentos detrás del mismo
+  tap son legítimos e indistinguibles para la app.
+- **Quitar** pasó a ser por ENTRADA (título+día+hora), no por título, en los dos
+  dueños (`_dropFromPlan`, `_removePlanItem`) y en `lastRemovedSlots`. Sin esto,
+  quitar una función se habría llevado las dos y el deshacer solo recordaría
+  una: **pérdida silenciosa**. Enviar «agregar» sin «borrar por entrada» sería
+  peor que no hacer nada.
+- Sin `day`/`time` el comportamiento viejo se conserva (todas las del título):
+  es el correcto para los llamadores de conflictos y de función cancelada, que
+  actúan sobre la obra entera.
+- `verifyPlan` ya exceptuaba `is_recurring` del chequeo `'duplicado'`; en
+  producción `commitPlan` **reporta y deja pasar**, así que el plan duplicado ya
+  se guardaba. Blindaje: **T108** (pregunta · agrega las dos · quitar una deja
+  la otra), 3 mutantes muertos, falla contra el código viejo.
+
+**Pendiente de verificar**: la app del Watch (repo Swift aparte) lee
+`saved_agenda` directamente — si asume una entrada por título, mostrará mal el
+plan repetido.
 un programa de cortos una entrada trae `sala` y las demás no, esa obra **queda
 fuera del bloque**: la duración se cuenta de menos, no cuenta como conflicto con
 sus compañeras, el planificador puede agendar dos obras de la misma función, y el

@@ -2569,3 +2569,48 @@ test('T107 — la ciudad no se pega a la sede en la lista', async ({ page }) => 
       `«${m.txt}»: la ciudad debe ir separada de la sede por « · », no pegada`).toBe(true);
   }
 });
+
+test('T108 — verla otra vez: se pregunta, se agrega, y quitar una NO borra la otra', async ({ page }) => {
+  test.setTimeout(90000);
+  // Caso real: una acreditada de PRENSA de TIFF quiere ver la misma obra dos
+  // veces. Decisión de Juan (25 ago): PLANEAR no repite obras —el optimizador no
+  // cambia—; AGENDAR sí, con advertencia, porque es decisión del usuario.
+  // Lo que este test blinda, en orden de riesgo:
+  //  1. agendar la 2ª función NO hace swap en silencio: pregunta;
+  //  2. «Verla otra vez» deja las DOS en el plan;
+  //  3. y —lo grave— quitar una NO se lleva la otra. Antes ambos borradores
+  //     filtraban por título: se habrían ido las dos, y el deshacer solo
+  //     recordaba una. Pérdida silenciosa.
+  const OBRA = '2.6 Seconds: Death in the Outback';
+  const F1 = { day: '2026-09-14', time: '15:20' };
+  const F2 = { day: '2026-09-15', time: '18:25' };
+  await enterFestival(page, 'tiff2026', '2026-09-14T09:00:00-04:00');
+
+  const plan = () => page.evaluate(() => ((state.get('savedAgenda') || {}).schedule || [])
+    .map(s => ({ t: s._title, day: s.day, time: s.time })));
+
+  // Primera función: entra sin preguntar nada.
+  await page.evaluate(([t, f]) => addSuggestion(t, f.day, f.time), [OBRA, F1]);
+  expect((await plan()).filter(s => s.t === OBRA).length, 'la primera entra directo').toBe(1);
+
+  // Segunda función: NO debe hacer swap en silencio → aparece el diálogo.
+  await page.evaluate(([t, f]) => addSuggestion(t, f.day, f.time), [OBRA, F2]);
+  await expect(page.locator('#conflict-modal'), 'agendar una obra ya planeada pregunta, no swapea').toBeVisible();
+  expect((await plan()).filter(s => s.t === OBRA).length, 'y no toca el plan hasta que el usuario elija').toBe(1);
+
+  // El primario es «Verla otra vez» (decisión de Juan).
+  const primario = (await page.locator('#cm-ok').textContent()).trim();
+  expect(primario.length, 'el botón primario dice algo').toBeGreaterThan(0);
+  await page.click('#cm-ok');
+  const dos = (await plan()).filter(s => s.t === OBRA);
+  expect(dos.length, '«Verla otra vez» deja las DOS funciones').toBe(2);
+  expect(new Set(dos.map(s => s.day)).size, 'cada una en su día').toBe(2);
+
+  // EL RIESGO GRAVE: quitar una no puede llevarse la otra.
+  await page.evaluate(([t, f]) => removeFromAgenda(t, f.day, f.time), [OBRA, F1]);
+  await expect(page.locator('#conflict-modal')).toBeVisible();
+  await page.click('#cm-ok');
+  const queda = (await plan()).filter(s => s.t === OBRA);
+  expect(queda.length, 'quitar UNA función deja la otra en pie').toBe(1);
+  expect(queda[0].day, 'y la que queda es la que NO se quitó').toBe(F2.day);
+});

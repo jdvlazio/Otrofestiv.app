@@ -1322,6 +1322,13 @@ export const _I18N = {
     "plan_sin_proximas": "Você não tem próximas sessões",
     "plan_sin_horario": "Sem horário disponível",
     // ── Lote 10c: plan — confirmaciones, advertencias, estados de cierre ──
+    "plan_ya_en_plan_tit": "Esta obra já está no seu Plano",
+    "plan_ya_en_plan_cuando": "Você a tem em {f}.",
+    "plan_ya_en_plan_preg": "Trocar por esta sessão ou ver as duas vezes?",
+    "plan_verla_otra_vez": "Ver de novo",
+    "plan_cambiar_funcion": "Trocar de sessão",
+    "plan_quitar_esta_funcion": "Sai a sessão de {f}.",
+    "plan_seguis_teniendo": "Você continua com esta obra em {f}.",
     "plan_quitar_confirm": "Sim, remover de tudo",
     "plan_quitar_tmb": "Remover também do Plano salvo?",
     "plan_se_quitara": "Será removido de Interesses e as opções serão recalculadas",
