@@ -2614,3 +2614,38 @@ test('T108 — verla otra vez: se pregunta, se agrega, y quitar una NO borra la 
   expect(queda.length, 'quitar UNA función deja la otra en pie').toBe(1);
   expect(queda[0].day, 'y la que queda es la que NO se quitó').toBe(F2.day);
 });
+
+test('T109 — el taller multi-día se va ENTERO, aunque el borrado sea por función', async ({ page }) => {
+  test.setTimeout(60000);
+  // Regresión que introdujo T108 y que su propio test no vio: al hacer el
+  // borrado por ENTRADA (para «verla otra vez»), el × de Mi Plan empezó a mandar
+  // día y hora y se llevaba UNA sesión del taller. Medido sobre el taller real
+  // de FICDEH: el plan quedaba en «bloque-incompleto:1/2» — y «un plan con 1 de
+  // 2 no es medio taller, es un plan que miente» (verifyPlan).
+  // Las repeticiones de un taller NO son elecciones independientes como las de
+  // «verla otra vez»: son un bloque. Ahí el título vuelve a mandar.
+  await enterFestival(page, 'ficdeh2026', '2026-08-14T09:00:00-05:00');
+  const info = await page.evaluate(() => {
+    const rec = FILMS.filter(f => f.is_recurring && f.day && f.time);
+    const g = {}; rec.forEach(f => (g[f.title] = g[f.title] || []).push(f));
+    const par = Object.entries(g).find(([, v]) => v.length > 1);
+    if (!par) return null;
+    const [t, ses] = par;
+    commitPlan(a => ({ ...(a || {}), schedule: [...(((a || {}).schedule) || []), ...ses.map(s => ({ ...s, _title: t }))] }));
+    return { t, n: ses.length, d: ses[0].day, h: ses[0].time };
+  });
+  expect(info, 'FICDEH trae un taller de más de una sesión').not.toBeNull();
+  expect(info.n, 'el taller tiene varias sesiones').toBeGreaterThan(1);
+
+  // Quitar UNA sesión con el × (que manda día y hora)
+  await page.evaluate(i => removeFromAgenda(i.t, i.d, i.h), info);
+  if (await page.locator('#conflict-modal').isVisible().catch(() => false)) await page.click('#cm-ok');
+
+  const r = await page.evaluate(t => {
+    const sch = (state.get('savedAgenda') || {}).schedule || [];
+    return { quedan: sch.filter(s => s._title === t).length,
+             viol: verifyPlan(sch, { catalog: FILMS }).violations.map(v => v.kind) };
+  }, info.t);
+  expect(r.quedan, 'el taller sale completo: no queda media inscripción').toBe(0);
+  expect(r.viol, 'y el plan queda sin violaciones (nada de bloque-incompleto)').toEqual([]);
+});

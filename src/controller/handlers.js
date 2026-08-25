@@ -292,9 +292,22 @@ export function clearDelay(title,day,time,venue){
 // título — que es lo correcto ahí: esos caminos actúan sobre la obra entera.
 const _mismaEntrada=(s,title,day,time)=>s._title===title&&(day==null||s.day===day)&&(time==null||s.time===time);
 
+// EL TALLER SE VA ENTERO (25 ago 2026). Un taller multi-día se toma completo —
+// «un plan con 1 de 2 no es medio taller, es un plan que miente» (verifyPlan,
+// 'bloque-incompleto'). Cuando el borrado pasó a ser por ENTRADA para permitir
+// «verla otra vez», el × de Mi Plan empezó a mandar día y hora y se llevaba UNA
+// sesión: medido sobre el taller real de FICDEH, el plan quedaba en 1/2. Las
+// repeticiones de un taller NO son elecciones independientes como las de «verla
+// otra vez»: son un bloque. Acá el título vuelve a mandar.
+const _esBloque=(title)=>{
+  const {FILMS}=state.snapshot();
+  return (FILMS||[]).filter(f=>f&&f.is_recurring&&f.title===title&&f.day&&f.time).length>1;
+};
+
 function _dropFromPlan(title,day,time){
   const {savedAgenda} = state.snapshot();
   if(!savedAgenda) return;
+  if(_esBloque(title)){ day=null; time=null; }   // el taller se va entero
   const rem=savedAgenda.schedule.find(s=>_mismaEntrada(s,title,day,time));
   // El restaurable se indexa por ENTRADA (título+día+hora): dos funciones de la
   // misma obra son dos restaurables distintos, no uno que pisa al otro.

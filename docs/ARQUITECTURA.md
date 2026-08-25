@@ -676,6 +676,14 @@ Lo que cambió, y por qué las dos mitades son inseparables:
 - Sin `day`/`time` el comportamiento viejo se conserva (todas las del título):
   es el correcto para los llamadores de conflictos y de función cancelada, que
   actúan sobre la obra entera.
+- **DOS TIPOS DE REPETICIÓN, y confundirlos costó una regresión en producción**
+  (25 ago): las dos funciones de «verla otra vez» son elecciones INDEPENDIENTES;
+  las sesiones de un taller multi-día son un BLOQUE indivisible. Al pasar el
+  borrado a por-entrada, el × se llevaba una sola sesión y dejaba el plan en
+  `bloque-incompleto:1/2` — «un plan con 1 de 2 no es medio taller, es un plan
+  que miente». `_esBloque(title)` devuelve el mando al título cuando la obra es
+  un taller. Guardián: **T109** (mide contra `verifyPlan` sobre el taller real de
+  FICDEH). T108 no lo vio: probaba la repetición, no el bloque.
 - `verifyPlan` ya exceptuaba `is_recurring` del chequeo `'duplicado'`; en
   producción `commitPlan` **reporta y deja pasar**, así que el plan duplicado ya
   se guardaba. Blindaje: **T108** (pregunta · agrega las dos · quitar una deja
