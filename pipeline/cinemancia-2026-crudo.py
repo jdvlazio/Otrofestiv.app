@@ -102,6 +102,18 @@ ARTE_DE_FOCO = {
 }
 
 
+# Artes de PROGRAMA de la Competencia de cortometrajes (llegaron el 25 AGO,
+# aparte de los de sección). Cada pieza lista sus cinco cortos con su director,
+# así que la correspondencia se verificó título a título contra el film_list:
+# los 5 de cada arte coinciden con los 5 del programa, sin sobras ni faltantes.
+# Cubren 6 tarjetas (cada programa tiene dos pases) que no tenían afiche.
+# Mismo tratamiento que los de sección: 4:5 estirado a 2:3, sin recorte.
+ARTE_DE_PROGRAMA = {
+    'Competencia de cortometrajes Programa 1': '/assets/cinemancia/programa-cortos-1.jpg',
+    'Competencia de cortometrajes Programa 2': '/assets/cinemancia/programa-cortos-2.jpg',
+    'Competencia de cortometrajes Programa 3': '/assets/cinemancia/programa-cortos-3.jpg',
+}
+
 # ── Fotogramas oficiales del festival ─────────────────────────────────────────
 # TMDB no sirve para estas obras: se consultaron las 11 que tenían tmdbId y las
 # 11 devolvieron poster_path vacío. No es un fallo de la consulta —se verificó
@@ -680,11 +692,13 @@ def main():
         if not e.get('poster'):
             _sec = e.get('seccion') or ''
             _tit = e.get('titulo') or ''
-            _arte = next((v for k, v in ARTE_DE_SECCION.items() if k in _sec), None) \
+            _arte = ARTE_DE_PROGRAMA.get(_tit) \
+                 or next((v for k, v in ARTE_DE_SECCION.items() if k in _sec), None) \
                  or next((v for k, v in ARTE_DE_FOCO.items() if k in _tit), None)
             if _arte:
                 e['poster'], e['posterSource'] = _arte, 'oficial'
-                e['_poster_src'] = 'arte de sección enviado por el festival (25 AGO), estirado a 2:3'
+                _cual = 'programa' if _tit in ARTE_DE_PROGRAMA else 'sección'
+                e['_poster_src'] = f'arte de {_cual} enviado por el festival (25 AGO), estirado a 2:3'
         if NO_PUBLICAR.search(e.get('titulo') or '') or NO_PUBLICAR.search(titulo_crudo):
             retiradas.append(e.get('titulo') or titulo_crudo)
             continue
