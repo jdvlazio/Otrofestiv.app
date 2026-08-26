@@ -483,24 +483,30 @@ export function syncScheduleWithCatalog(schedule, films){
 // Devuelve {ok, violations:[{kind, title, with?}]} — kinds:
 //   'conflicto'  — dos entradas no-squeezed en conflicto real
 //   'cancelada'  — entrada cuya función está _cancelled
-//   'duplicado'  — el mismo título dos veces
+//   'duplicado'  — la MISMA ENTRADA dos veces (título+día+hora+sede)
 //   'pasada'     — (opt-in checkPassed) función ya pasada al momento de armar
 export function verifyPlan(schedule, opts){
   const v=[];
   const list=schedule||[];
-  const seen=new Set();
   list.forEach(s=>{
     const t=s._title||s.title||'';
-    // is_recurring (taller multi-día): el plan lleva TODAS sus sesiones a
-    // propósito — mismo título N veces es lo correcto, no un duplicado.
-    if(seen.has(t)&&!s.is_recurring) v.push({kind:'duplicado', title:t});
-    seen.add(t);
     if(s._cancelled) v.push({kind:'cancelada', title:t});
     if(opts&&opts.checkPassed&&screeningPassed(s)) v.push({kind:'pasada', title:t});
   });
   for(let i=0;i<list.length;i++){
     for(let j=i+1;j<list.length;j++){
       const a=list[i], b=list[j];
+      // DUPLICADO — por IDENTIDAD DE ENTRADA, vía sameEntry (el dueño único),
+      // no por título. Antes bastaba con repetir el título para ser duplicado,
+      // y is_recurring era el permiso que salvaba a los talleres. Esa regla ya
+      // no distingue: un plan legítimo con la misma obra en DOS funciones —lo
+      // que el usuario puede pedir a propósito— salía marcado igual que un plan
+      // con la MISMA función dos veces, que sí es corrupción. Un guardián que
+      // grita siempre no avisa nunca. Con identidad de entrada, el permiso de
+      // is_recurring sobra: las sesiones de un taller ya tienen día distinto.
+      // El `continue` evita el eco: dos entradas idénticas también «chocan»
+      // consigo mismas y reportarlo dos veces enmascara el hallazgo real.
+      if(sameEntry(a,b)){ v.push({kind:'duplicado', title:a._title||a.title||'', day:a.day, time:a.time}); continue; }
       if(a._squeezed||b._squeezed) continue;
       if(screensConflict(a,b)) v.push({kind:'conflicto', title:a._title||a.title, with:b._title||b.title});
     }

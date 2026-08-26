@@ -731,9 +731,25 @@ lleva sede a propósito — un cambio de sede es un cambio de VALOR (regla 1, se
 aplica en silencio) y meterla ahí lo volvería estructural, disparando el pill
 por una mudanza de sala. Solo el emparejamiento del PLAN usa `sameEntry`.
 
+**`verifyPlan` pregunta lo mismo (26 ago 2026).** La violación `duplicado` era
+por TÍTULO: repetir el título bastaba, e `is_recurring` era el permiso que
+salvaba a los talleres. Esa regla dejó de distinguir. Un plan legítimo con la
+misma obra en **dos funciones** —lo que el usuario puede pedir a propósito—
+salía marcado igual que un plan con la **misma función dos veces**, que sí es
+corrupción; y como el chokepoint reporta a Sentry en cada escritura, gritaba en
+cada toque sin señalar nada. Ahora `duplicado` = `sameEntry(a,b)`, y el permiso
+de `is_recurring` sobra: las sesiones de un taller ya tienen día distinto. Dos
+consecuencias que valen la pena: misma obra, mismo día y hora, **sedes
+distintas** ya no es `duplicado` sino `conflicto` —que es lo que de verdad es—,
+y dos entradas idénticas dejan de reportarse **también** como conflicto consigo
+mismas, un eco que enmascaraba el hallazgo real.
+
 Blindaje: `tests/unit/sameEntry.test.js` (datos reales de FICDEH) + **T108**
-(mide el bug en pantalla). Dos mutantes mueren: quitarle la sede reproduce el
-bug de producción; quitarle el fallo-cerrado reproduce el de #746.
+(mide el bug en pantalla) + `verifyPlan.test.js` y `bloqueRecurrente.test.js`
+para la doctrina de `duplicado`. Cuatro mutantes mueren: quitarle la sede
+reproduce el bug de producción; quitarle el fallo-cerrado reproduce el de #746;
+volver `duplicado` a por-título tumba 4 tests; y quitar el `continue` devuelve
+el eco de conflicto.
 un programa de cortos una entrada trae `sala` y las demás no, esa obra **queda
 fuera del bloque**: la duración se cuenta de menos, no cuenta como conflicto con
 sus compañeras, el planificador puede agendar dos obras de la misma función, y el
