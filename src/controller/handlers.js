@@ -326,6 +326,10 @@ export function _planFixNotice(title){
   title=normTitle(title);
   const {FILMS, savedAgenda} = state.snapshot();
   if(!savedAgenda||!savedAgenda.schedule.some(s=>s._title===title)) return;
+  // Un TALLER entra y sale ENTERO (regla de Juan, 8 ago): addSuggestion resuelve
+  // el swap con filter(_title!==title)+insertar UNA, y sobre un bloque eso borraba
+  // la sesión hermana —2→1, sin aviso y sin quedar restaurable—. Cubierto por T109.
+  if(FILMS.some(f=>f.title===title&&f.is_recurring)){ addRecurringBlock(title); return; }
   const moved=FILMS.find(f=>f.title===title&&f._movedFrom&&!f._cancelled);
   if(moved){ addSuggestion(title, moved.day, moved.time); return; }
   _dropFromPlan(title);

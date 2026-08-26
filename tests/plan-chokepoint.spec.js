@@ -80,3 +80,49 @@ test('CH03 — strict: los flujos REALES de la app commitean limpio de punta a p
   expect(r.strict).toBe(true);          // strict estuvo activo durante TODO el flujo
   expect(r.n).toBeGreaterThan(0);       // y ninguna mutación real lo hizo tirar
 });
+
+// ── T109 — «Actualizar» sobre un TALLER no puede dejar el plan en «1 de 2» ────
+// Bug medido en main (26 ago 2026), vivo y sin relación con «verla otra vez»:
+// _planFixNotice mandaba TODO título reprogramado a addSuggestion, que resuelve
+// el swap de función con filter(_title!==title) + insertar UNA. Sobre un taller
+// de 2 sesiones eso borraba la hermana intacta: 2 → 1, sin toast, y sin pasar
+// por _dropFromPlan, así que la sesión perdida NO quedaba restaurable. El propio
+// verifyPlan la marcaba `bloque-incompleto` — el estado que addRecurringBlock
+// declara prohibido («un plan con 1 de 2 no es medio taller, es un plan que
+// miente sobre un compromiso que nadie tomó», regla de Juan del 8 ago).
+//
+// Se ejerce por el MISMO data-action que dispara un tap real, no por el bridge.
+const TALLER_FICDEH = 'Los frutos que dan vida: Siembra autosostenible casera';
+
+test('T109 — un taller con una sesión reprogramada se re-toma ENTERO', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-14T10:00');
+  const r = await page.evaluate((TITULO) => {
+    const tap = (action, title) => {
+      const b = document.createElement('button');
+      b.setAttribute('data-action', action);
+      b.setAttribute('data-title', title);
+      document.body.appendChild(b); b.click(); b.remove();
+    };
+    const delTaller = () => ((savedAgenda && savedAgenda.schedule) || [])
+      .filter(s => s._title === TITULO).map(s => s.day + ' ' + s.time);
+
+    tap('addRecurringBlock', TITULO);
+    const antes = delTaller();
+
+    // el festival mueve UNA de las dos sesiones
+    const ses = FILMS.filter(f => f.title === TITULO);
+    if (ses[1]) { ses[1]._movedFrom = { day: ses[1].day, time: ses[1].time }; ses[1].time = '15:00'; }
+
+    tap('planFixNotice', TITULO);   // el usuario toca «Actualizar» en Mi Plan
+    const despues = delTaller();
+    const v = verifyPlan((savedAgenda && savedAgenda.schedule) || [], { catalog: FILMS });
+    return { antes, despues, ok: !!(v && v.ok), violaciones: (v && v.violations) || [] };
+  }, TALLER_FICDEH);
+
+  expect(r.antes.length).toBe(2);                 // el taller entró entero
+  expect(r.despues.length).toBe(2);               // y sigue entero tras «Actualizar»
+  expect(r.despues).toContain('2026-08-16 13:00'); // la sesión intacta sobrevive
+  expect(r.despues).toContain('2026-08-17 15:00'); // la reprogramada, en su hora nueva
+  expect(r.violaciones.map(x => x.kind)).not.toContain('bloque-incompleto');
+  expect(r.ok).toBe(true);
+});
