@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608261640">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608261640">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608261718">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608261718">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1235,6 +1235,11 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .pel-sheet-poster-stage{display:flex;gap:1px;background:var(--bdr);flex-shrink:0;width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-poster);overflow:hidden}
 .psp-card{flex:1;height:100%;object-fit:cover;object-position:center;display:block;min-width:0;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .psp-front,.psp-back{/* split visual — sin posicionamiento absoluto */}
+/* .psp-escalera — la Escalera dentro de la ficha. Mismo tamaño y radio que
+   el póster de la ficha; el SVG va inline (sus módulos son <image href>
+   remotos y dentro de un <img> no cargarían). */
+.psp-escalera{flex-shrink:0;width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-poster);overflow:hidden}
+.psp-escalera svg{width:100%;height:100%;display:block}
 
 .psp-swap-zone{display:none}
 .ended-poster .ended-poster-footer{position:absolute;bottom:0;left:0;right:0;padding:var(--sp-5) 6px 7px;background:linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,.55) 45%,transparent);display:flex;flex-direction:column;gap:2px;align-items:center}
@@ -1439,7 +1444,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .pel-sheet.compact .psp-editorial{width:72px;height:108px}
 .pel-sheet-header{display:flex;gap:var(--sp-btn);margin-bottom:var(--sp-4)}
 /* Modo compacto: films con 3+ funciones reducen el poster para que CTAs sean visibles */
-.pel-sheet.compact .pel-sheet-poster,.pel-sheet.compact .pel-sheet-poster-ph,.pel-sheet.compact .pel-sheet-poster-stage{width:72px;height:108px}
+.pel-sheet.compact .pel-sheet-poster,.pel-sheet.compact .pel-sheet-poster-ph,.pel-sheet.compact .pel-sheet-poster-stage,.pel-sheet.compact .psp-escalera{width:72px;height:108px}
 .pel-sheet.compact .pel-sheet-header{margin-bottom:var(--sp-3)}
 
 .pel-sheet-meta{flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--sp-1);padding-top:2px}
@@ -3612,7 +3617,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608261640";
+    s.src="/src/main.js?v=202608261718";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

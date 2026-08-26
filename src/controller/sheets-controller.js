@@ -7,8 +7,8 @@
 // (lo escribe loadFestival). Roster/viewstate vía bridge.
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
-import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount } from '../view/helpers.js';
+import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, makeSharedSlotSVG, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts} from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
@@ -202,7 +202,19 @@ export function openPelSheet(title){
   const inWL=watchlist.has(f.title),inW=watched.has(f.title),inPrio=prioritized.has(f.title);
   const posterSrc=getFilmPoster(f);
   let posterHtml;
-  if(f.is_programa&&f.film_list&&f.film_list.length>=2){
+  // LA FICHA PREGUNTA AL MISMO DUEÑO que la grilla y la lista (26 ago 2026). Era
+  // el CUARTO sitio con el gate viejo en `is_programa`: un compuesto de cortos
+  // —207 de los 215 del catálogo— caía al generativo, que trae banda de sección
+  // y duración justo al lado del encabezado, que ya las dice. Se leía doble.
+  // La jerarquía la resuelve programParts: si el festival mandó afiche, no entra.
+  //
+  // MUDA: el `dato` se vacía. La regla anti-repetición de la ficha ya existía
+  // para el generativo («el título vive en la cabecera») y vale igual acá: el
+  // encabezado dice sección, duración y título, así que el póster no los repite.
+  const _escF=programParts(f);
+  if(_escF){
+    posterHtml=`<div class="psp-escalera">${makeSharedSlotSVG({modules:_escF.modules, secLabel:_escF.secLabel, accent:_escF.accent, dato:''})}</div>`;
+  } else if(f.is_programa&&f.film_list&&f.film_list.length>=2){
     const _sp1=_getItemPoster(f.film_list[0]);
     const _sp2=_getItemPoster(f.film_list[1]);
     const _fd1=JSON.stringify(f.film_list[0]).replace(/"/g,'&quot;');
@@ -318,7 +330,10 @@ export function openPelSheet(title){
     :rows;
   // Lista de cortos si es programa
   let cortosHtml='';
-  if(f.is_cortos&&f.film_list?.length){
+  // Antes exigía is_cortos, y los programas legacy daban acceso a sus obras por
+  // los afiches TOCABLES del stack. Al pasar esos a la Escalera —una sola
+  // imagen— ese acceso desaparecía: la lista lo repone para todo compuesto.
+  if(f.film_list?.length>=2){
     const cortoItems=f.film_list.map((item,n)=>{
       const r=filmRatings[item.title]||0;
       const ratingEl=r

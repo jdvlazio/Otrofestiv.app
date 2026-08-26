@@ -364,3 +364,58 @@ test('AF14 — la banda AVISOS usa el ritmo vertical de la fila de función', as
   expect(m.arriba).toBe(m.abajo);   // mismo aire arriba y abajo
   expect(m.arriba).toBe(m.fila);    // y el mismo que la fila de función
 });
+
+// ── T115 — la FICHA pregunta al mismo dueño que la grilla y la lista ──────────
+// Era el CUARTO sitio con el gate viejo en `is_programa`: un compuesto de cortos
+// —207 de los 215 del catálogo— caía al generativo, que trae banda de sección y
+// duración justo al lado del encabezado, que ya las dice. Juan: «se lee doble».
+// La Escalera entra MUDA (dato vacío): la regla anti-repetición de la ficha ya
+// existía para el generativo y vale igual acá.
+test('T115 — un compuesto de cortos muestra la Escalera en su ficha, no el generativo', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00');
+  const r = await page.evaluate(() => {
+    const f = FILMS.find(x => /^Oublie pas le gruau/.test(x.title));
+    if (!f) return { falta: true };
+    openPelSheet(f.title);
+    const svg = document.querySelector('.psp-escalera svg');
+    return {
+      esCortos: !!f.is_cortos, tienePosterPropio: !!f.poster,
+      escalera: !!svg,
+      generativo: !!document.querySelector('.pel-sheet-poster'),
+      stackViejo: !!document.querySelector('.pel-sheet-poster-stage'),
+      obrasListadas: document.querySelectorAll('.pel-sheet-corto-item').length,
+      // MUDA: sin la línea de dato, que repetiría la duración del encabezado
+      textoEnElPoster: svg ? [...svg.querySelectorAll('text')].map(t => t.textContent.trim()).filter(Boolean) : null
+    };
+  });
+  expect(r.falta).toBeFalsy();
+  expect(r.esCortos).toBe(true);
+  expect(r.tienePosterPropio).toBe(false);   // si lo tuviera, mandaría el oficial
+  expect(r.escalera).toBe(true);
+  expect(r.generativo).toBe(false);
+  expect(r.stackViejo).toBe(false);
+  expect(r.obrasListadas).toBe(2);           // sus obras siguen alcanzables
+  expect(r.textoEnElPoster).toEqual([]);     // muda: nada que el encabezado ya diga
+});
+
+test('T115b — si el programa trae afiche oficial, la ficha lo respeta', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00');
+  const r = await page.evaluate(() => {
+    // El caso donde la jerarquía DECIDE: afiche oficial del programa Y los
+    // afiches completos de todas sus obras. Sin esta segunda condición el test
+    // pasa por la razón equivocada —la Escalera no entraría igual, por falta de
+    // afiches— y la mutación que quita la jerarquía lo deja verde. Pasó: hubo
+    // que cazarlo mutando. En Cinemancia hay 14 compuestos así.
+    const f = FILMS.find(x => x.poster && x.film_list && x.film_list.length >= 2
+      && x.film_list.length <= 8
+      && x.film_list.every(i => i.poster && i.posterSource !== 'editorial'));
+    if (!f) return { falta: true };
+    openPelSheet(f.title);
+    return { titulo: f.title, oficial: f.poster, obras: f.film_list.length,
+      escalera: !!document.querySelector('.psp-escalera svg'),
+      muestraElOficial: !!document.querySelector('.pel-sheet-poster, .psp-editorial') };
+  });
+  expect(r.falta).toBeFalsy();
+  expect(r.escalera).toBe(false);         // la pila nuestra NO tapa el arte del festival
+  expect(r.muestraElOficial).toBe(true);
+});
