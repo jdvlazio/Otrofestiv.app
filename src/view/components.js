@@ -596,23 +596,26 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma}){
 // Devuelve MARKUP SVG INLINE, no data-uri: contiene <image> y un SVG dentro de
 // <img> tiene prohibido cargar recursos — los afiches saldrían rotos.
 export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
-  const U=15, VW=120, VH=180, M=11.25, CW=VW-2*M, NEGRO='#0B0A08', HAIR='rgba(255,246,232,.34)';
+  const U=15, VW=120, VH=180, M=11.25, CW=VW-2*M, NEGRO='#0B0A08';
   const r=n=>+n.toFixed(2);
+  // slice y NO meet (26 ago): meet dejaba bandas negras en todo afiche que no
+  // fuera 2:3 exacto. slice CUBRE = object-fit:cover. Sin stroke. Ver POSTERS.md.
   const mod=(ux,uy,uw,src,i)=>{
     const x=ux*U,y=uy*U,w=uw*U,h=uw*1.5*U,rx=w*0.13;
     const id=`ssp${i}`;
     return `<clipPath id="${id}"><rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}"/></clipPath>`
-      +`<rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}" fill="${NEGRO}" stroke="${HAIR}" stroke-width="0.5"/>`
-      +`<image href="${escXML(src)}" x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" preserveAspectRatio="xMidYMid meet" clip-path="url(#${id})"/>`;
+      +`<rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}" fill="${NEGRO}"/>`
+      +`<image href="${escXML(src)}" x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${id})"/>`;
   };
-  const sombra=(ux,uy,uw)=>`<rect x="${r(ux*U+2.85)}" y="${r(uy*U-2.85)}" width="${r(uw*U)}" height="${r(uw*1.5*U)}" rx="${r(uw*U*0.13)}" fill="#000" opacity=".5"/>`;
-  // Geometría RIMA 2:3 (Juan, 25 ago 2026) — ver POSTERS.md §Forma C. El paso
-  // entre módulos es PARALELO A LA DIAGONAL DEL MARCO (dy = 1,5·dx), así que el
-  // envolvente mide 2:3 para cualquier N. Perilla única k = dx/ancho envolvente.
-  // modules viene atrás→delante: el ÚLTIMO al frente, su sombra sobre el anterior.
+  // Sombra DIFUSA y a la IZQUIERDA (26 ago): cae SOBRE el afiche de atrás, que
+  // es lo que lo hace leer como lámina encima. Antes: rect duro a la derecha.
+  const sombra=(ux,uy,uw)=>`<rect x="${r(ux*U-3.2)}" y="${r(uy*U-1)}" width="${r(uw*U)}" height="${r(uw*1.5*U)}" rx="${r(uw*U*0.13)}" fill="#000" opacity=".55" filter="url(#ssp-sb)"/>`;
+  // RIMA 2:3 (25 ago) — POSTERS.md §Forma C. dy = 1,5·dx → envolvente 2:3 para
+  // cualquier N. modules va atrás→delante: el ÚLTIMO al frente.
   const n=modules.length;
   const datoFS=VW*0.05;
-  const YTOP=1.5*U, YBOT=VH-M-datoFS*1.6;
+  // 2,2·datoFS de aire sobre el dato: antes parecían apoyados encima (26 ago).
+  const YTOP=0.9*U, YBOT=VH-M-datoFS*0.30-datoFS*2.2;
   const HENV=YBOT-YTOP, WENV=HENV/1.5;
   const K=n===2?0.30:0.235, DX=K*WENV, MW=(WENV-(n-1)*DX)/U, X0=(VW-WENV)/2;
   let comp='';
@@ -625,7 +628,7 @@ export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
   const datoTxt=dato?_lineaSVG(dato,{x:M,y:datoY,fs:datoFS,ls:datoFS*0.02,fill:'#888',boxW:CW,upper:false}):'';
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">`
     +`<defs><radialGradient id="ssp-luz" cx="0" cy="1" r="1"><stop offset="0" stop-color="${accent}" stop-opacity=".28"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></radialGradient>`
-    +`</defs>`
+    +`<filter id="ssp-sb" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.6"/></filter></defs>`
     +`<rect width="${VW}" height="${VH}" fill="${NEGRO}"/>`
     +`<rect x="0" y="99" width="66" height="81" fill="url(#ssp-luz)"/>`
     +comp
