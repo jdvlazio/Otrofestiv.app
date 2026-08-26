@@ -1308,7 +1308,7 @@ export function _renderSavedAgendaHTML(state, consensus){
             <div class="suggestion-sec">${_secLabelFull(f.section||'')}</div>
             <div class="suggestion-meta">${durFmt(f.duration)}${vc2.short?' · '+vc2.short+(sl?' · '+sl:''):''}</div>
           </div>
-          <button class="suggestion-add" data-action="addSuggestion" data-title="${f.title.replace(/"/g,'&quot;')}" data-day="${f.day}" data-time="${f.time}" data-stop="1" style="${f._isRestored?'border-color:var(--amber);color:var(--amber);background:var(--amber-10)':''}">
+          <button class="suggestion-add" data-action="addSuggestion"${f._isRestored?' data-restaurar="1"':''} data-title="${f.title.replace(/"/g,'&quot;')}" data-day="${f.day}" data-time="${f.time}" data-stop="1" style="${f._isRestored?'border-color:var(--amber);color:var(--amber);background:var(--amber-10)':''}">
             ${f._isRestored?`${ICONS.undo} ${t('misc_restaurar')}`:`${ICONS.plus} ${t('plan_agendar')}`}
           </button>
         </div>`;

@@ -264,7 +264,11 @@ const ACTION_REGISTRY = {
   pafClearVenue:       ()      => _pafClearVenue(),
   toggleEveningFilms:  (el)    => _toggleEveningFilms(el),
   toggleWLFromList:    (el)    => _toggleWLFromList(el.dataset.title, el),
-  addSuggestion:       (el)    => addSuggestion(el.dataset.title, el.dataset.day, el.dataset.time),
+  // data-restaurar: el botón de DESHACER usa esta misma acción y solo cambia de
+  // etiqueta. Quien deshace no quiere una segunda copia — quiere de vuelta la
+  // entrada que quitó. {repetir:true} la re-inserta sin tocar a la gemela y sin
+  // abrir el modal, que ahí sería una pregunta inventada.
+  addSuggestion:       (el)    => addSuggestion(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.restaurar?{repetir:true}:undefined),
   // taller multi-día: el bloque entra o sale entero (no hay acción por sesión)
   addRecurringBlock:   (el)    => addRecurringBlock(el.dataset.title),
   removeRecurringBlock:(el)    => removeRecurringBlock(el.dataset.title),
@@ -480,7 +484,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608260956';
+const BUILD_VERSION='202608261513';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

@@ -19,7 +19,7 @@ import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, ini
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simNow, simTodayStr, toMin } from '../domain/time.js';
 import { scoreFilm, screeningPassed, isShortFilm, prioLiveCount, effectiveWatched, screeningEndDate } from '../domain/film.js';
-import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens, screeningPlannable } from '../domain/schedule.js';
+import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens, screeningPlannable, sameEntry } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
@@ -331,7 +331,11 @@ export function _planFixNotice(title){
   // la sesión hermana —2→1, sin aviso y sin quedar restaurable—. Cubierto por T109.
   if(FILMS.some(f=>f.title===title&&f.is_recurring)){ addRecurringBlock(title); return; }
   const moved=FILMS.find(f=>f.title===title&&f._movedFrom&&!f._cancelled);
-  if(moved){ addSuggestion(title, moved.day, moved.time); return; }
+  // {mudar:true}: quien toca «Actualizar» sobre una función reprogramada YA declaró
+  // su intención — preguntarle «¿verla dos veces?» sería inventarle una duda. Sin
+  // la bandera, addSuggestion abre el modal y el aviso deja de mudar (lo cazaron
+  // T52 y AV04: addSuggestion es dueño compartido, y cada llamador declara la suya).
+  if(moved){ addSuggestion(title, moved.day, moved.time, {mudar:true}); return; }
   _dropFromPlan(title);
   setTimeout(_scrollToSuggestions, 350);
 }
@@ -399,7 +403,8 @@ function _pickScreen(title,day,time){
   return _cands.find(f=>screeningPlannable(f))||_cands[0];
 }
 
-export function addSuggestion(title,day,time){
+export function addSuggestion(title,day,time,opts){
+  opts=opts||{};
   title=normTitle(title);
   // 1. READ
   const {FILMS, _activeFestId, savedAgenda, watchlist, watched} = state.snapshot();
@@ -422,26 +427,54 @@ export function addSuggestion(title,day,time){
   const screen=_pickScreen(title,day,time);
   if(screen){
     const sa=state.get('savedAgenda')||{schedule:[]};
-    // Mitad B (pin-funcion): add / swap / no-op. El sheet de película usa esta
-    // misma acción para "Añadir esta función". Si el título ya está en OTRA
-    // función → swap; si ya está en ESA misma → sin acción (cae al render final).
-    const existing=sa.schedule.find(s=>s._title===title);
-    if(!(existing&&existing.day===day&&existing.time===time)){
+    // Un TALLER se toma ENTERO: «añadir esta sesión» no existe como intención.
+    // Sin esto, el filter(_title!==title) de más abajo borra las sesiones
+    // hermanas al insertar una — la misma pérdida que #763 arregló en el aviso.
+    if(FILMS.some(f=>f.title===title&&f.is_recurring)){ addRecurringBlock(title); return; }
+    // add / repetir / mudar / no-op. La identidad de una entrada la decide
+    // sameEntry (título+día+hora+sede), NUNCA el título: `find(s._title===title)`
+    // devolvía la PRIMERA entrada, así que al tocar «Agendar» sobre una función
+    // que YA estaba, el guard comparaba contra la OTRA y la daba por nueva.
+    const _esta={_title:title, title, day, time, venue:screen.venue};
+    const _yaEstaEsta=sa.schedule.some(s=>sameEntry(s,_esta));
+    const _otras=sa.schedule.filter(s=>s._title===title&&!sameEntry(s,_esta));
+    if(!_yaEstaEsta){
+      // El título ya está en OTRA función y nadie declaró intención: preguntar.
+      // Son DOS intenciones opuestas —verla dos veces o corregir el horario— y
+      // el modal no puede resolverlas con un botón que solo cierra.
+      if(_otras.length&&!opts.repetir&&!opts.mudar){
+        const _ds=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
+        // TODAS las que ya tiene, no la primera: nombrar una sola mentía sobre
+        // el estado del plan justo cuando el usuario decide sobre él.
+        const _cuando=_otras.map(o=>`${_ds[o.day]||o.day||''} · ${o.time||''}`).join(' · ');
+        const{displayTitle:_dt}=parseProgramTitle(title);
+        showActionModal(
+          t('vov_titulo'),
+          `<div class="cm-subject">${_dt}</div><div>${t('vov_cuerpo',{cuando:_cuando})}</div>`,
+          t('vov_repetir'), ()=>addSuggestion(title,day,time,{repetir:true}),
+          t('misc_cancelar'),
+          { altLabel:t('vov_mudar'), altCb:()=>addSuggestion(title,day,time,{mudar:true}) }
+        );
+        return;
+      }
       // ── Re-validación en tiempo real ─────────────────────────────
       // getSuggestions verificó el hueco al renderizar, pero el plan
       // pudo haber cambiado desde entonces (otra sugerencia añadida
       // en la misma sesión). Revalidamos contra el estado actual. En swap,
       // EXCLUIMOS la función vieja del propio título (s._title!==title) para
       // no dar un falso positivo de conflicto consigo misma.
-      const realConflict=sa.schedule.find(s=>s._title!==title&&s.day===day&&screensConflict(s,screen));
+      // Excluir el propio título es correcto en el SWAP (no chocar consigo misma),
+      // pero en `repetir` es justo lo que hay que mirar: dos funciones de la misma
+      // obra el mismo día pueden solaparse, y sin esto se agenda un imposible.
+      const realConflict=sa.schedule.find(s=>(opts.repetir||s._title!==title)&&s.day===day&&screensConflict(s,screen));
       if(realConflict){
         openConflictSheet(title, screen, realConflict);
         return;
       }
-      // filter(s._title!==title): no-opea en add (título ausente), quita la
-      // función vieja en swap (título presente en otra función).
+      // En `repetir` la otra función SE QUEDA; en add/swap el filter no-opea
+      // (título ausente) o quita la vieja (título presente en otra función).
       commitPlan(a=>{const b=a||{schedule:[]};return {...b,
-        schedule: [...b.schedule.filter(s=>s._title!==title), {...screen,_title:title}]
+        schedule: [...(opts.repetir?b.schedule:b.schedule.filter(s=>s._title!==title)), {...screen,_title:title}]
           .sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
       };});
       saveSavedAgenda();
