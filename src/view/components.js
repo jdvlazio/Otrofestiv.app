@@ -596,7 +596,7 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma}){
 // Devuelve MARKUP SVG INLINE, no data-uri: contiene <image> y un SVG dentro de
 // <img> tiene prohibido cargar recursos — los afiches saldrían rotos.
 export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
-  const U=15, VW=120, VH=180, M=11.25, CW=VW-2*M, NEGRO='#0B0A08', HAIR='#26231F';
+  const U=15, VW=120, VH=180, M=11.25, CW=VW-2*M, NEGRO='#0B0A08', HAIR='rgba(255,246,232,.34)';
   const r=n=>+n.toFixed(2);
   const mod=(ux,uy,uw,src,i)=>{
     const x=ux*U,y=uy*U,w=uw*U,h=uw*1.5*U,rx=w*0.13;
@@ -606,34 +606,31 @@ export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
       +`<image href="${escXML(src)}" x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" preserveAspectRatio="xMidYMid meet" clip-path="url(#${id})"/>`;
   };
   const sombra=(ux,uy,uw)=>`<rect x="${r(ux*U+2.85)}" y="${r(uy*U-2.85)}" width="${r(uw*U)}" height="${r(uw*1.5*U)}" rx="${r(uw*U*0.13)}" fill="#000" opacity=".5"/>`;
-  // Geometrías aprobadas (en u, pasos de 0,25u). modules viene atrás→delante,
-  // con los mudos SIEMPRE atrás. El delantero es la primera obra con afiche.
-  // El «módulo mudo» murió (Juan, 21 ago): la Escalera existe solo completa,
-  // así que acá solo llegan afiches reales.
+  // Geometría RIMA 2:3 (Juan, 25 ago 2026) — ver POSTERS.md §Forma C. El paso
+  // entre módulos es PARALELO A LA DIAGONAL DEL MARCO (dy = 1,5·dx), así que el
+  // envolvente mide 2:3 para cualquier N. Perilla única k = dx/ancho envolvente.
+  // modules viene atrás→delante: el ÚLTIMO al frente, su sombra sobre el anterior.
   const n=modules.length;
+  const datoFS=VW*0.05;
+  const YTOP=1.5*U, YBOT=VH-M-datoFS*1.6;
+  const HENV=YBOT-YTOP, WENV=HENV/1.5;
+  const K=n===2?0.30:0.235, DX=K*WENV, MW=(WENV-(n-1)*DX)/U, X0=(VW-WENV)/2;
   let comp='';
-  if(n===2){
-    const [atras,frente]=modules;
-    comp = mod(0.75,3,4.5,atras,0) + sombra(2.75,3.75,4.5) + mod(2.75,3.75,4.5,frente,1);
-  } else {
-    const pos=[[0.75,3],[2,3.75],[3.25,4.5]]; // atrás→delante, módulos 4u
-    comp = modules.map((src,i)=>
-      (i===n-1?sombra(pos[i][0],pos[i][1],4):'')+mod(pos[i][0],pos[i][1],4,src,i)).join('');
-  }
-  const SEC_FS_MAX=15*VW/84;
-  const sec=_fitLines(String(secLabel||'').toUpperCase(),
-    {boxW:CW, boxH:1.9*U, maxLines:2, fsMax:Math.min(SEC_FS_MAX, 1.9*U/1.16), fsMin:9, lhRatio:1.16, lsEm:0.02, upper:true});
-  const secTxt=sec.lines.map((l,i)=>_lineaSVG(l,{x:M,y:1*U+sec.fs+i*sec.lh,fs:sec.fs,ls:sec.fs*0.02,fill:accent,boxW:CW,upper:true})).join('');
-  const datoFS=VW*0.05, datoY=VH-M-datoFS*0.30;
+  modules.forEach((src,i)=>{
+    const ux=(X0+i*DX)/U, uy=(YTOP+i*DX*1.5)/U;
+    comp += (i===n-1?sombra(ux,uy,MW):'') + mod(ux,uy,MW,src,i);
+  });
+  // SIN rótulo (Juan, 25 ago): robaba 3u a los afiches. La sección la dice el filete.
+  const datoY=VH-M-datoFS*0.30;
   const datoTxt=dato?_lineaSVG(dato,{x:M,y:datoY,fs:datoFS,ls:datoFS*0.02,fill:'#888',boxW:CW,upper:false}):'';
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">`
-    +`<defs><radialGradient id="ssp-luz" cx="1" cy="1" r="1"><stop offset="0" stop-color="#F59E0B" stop-opacity=".28"/><stop offset="1" stop-color="#F59E0B" stop-opacity="0"/></radialGradient>`
+    +`<defs><radialGradient id="ssp-luz" cx="0" cy="1" r="1"><stop offset="0" stop-color="${accent}" stop-opacity=".28"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></radialGradient>`
     +`</defs>`
     +`<rect width="${VW}" height="${VH}" fill="${NEGRO}"/>`
-    +`<rect x="54" y="99" width="66" height="81" fill="url(#ssp-luz)"/>`
+    +`<rect x="0" y="99" width="66" height="81" fill="url(#ssp-luz)"/>`
     +comp
     +`<rect width="${VW}" height="3.75" fill="${accent}"/>`
-    +secTxt+datoTxt+`</svg>`;
+    +datoTxt+`</svg>`;
 }
 
 export function makeEventPoster(state,title,duration,eventKind,section,opts){
