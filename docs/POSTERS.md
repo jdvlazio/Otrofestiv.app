@@ -379,17 +379,27 @@ Una sola perilla, `k = dx / ancho del envolvente`:
 | | 2 obras | 3 obras |
 |---|---|---|
 | k | 0,30 | 0,235 |
-| envolvente | de `y=1,5u` a `y=VH−M−1,6·datoFS`, centrado en x | ídem |
+| envolvente | de `y=0,9u` a `y=datoY−2,2·datoFS`, centrado en x | ídem |
 | módulo | ≈ 4,25u de ancho | ≈ 3,6u |
 
 Con más solape el de atrás se lee como sombra del de adelante y se pierde la
-pluralidad; con menos, sobra campo. **El ÚLTIMO módulo va al frente** y su
-sombra (dura, 0,19u) cae sobre el anterior: con el primero al frente la sombra
-cae en campo vacío y la pieza se aplana.
+pluralidad; con menos, sobra campo. El fondo del envolvente deja **2,2·datoFS**
+de aire sobre la línea del dato: con menos, los afiches parecen apoyados encima
+del texto (26 ago). **El ÚLTIMO módulo va al frente** y su
+sombra cae sobre el anterior: con el primero al frente cae en campo vacío y la
+pieza se aplana. La sombra es **difusa y va a la IZQUIERDA** (26 ago) — un rect
+duro desplazado a la derecha se leía como un borde sucio, no como sombra.
 
-Afiches 2:3 **completos**, nunca recortados, con el radio del token (13% del
-ancho del módulo) y un **passe-partout** cálido de 0,5 — sin él un afiche
-oscuro se disuelve en el negro de marca y la tarjeta parece rota.
+Cada módulo lleva el radio del token (13% de SU ancho) y va **a cara limpia**:
+sin filete de contorno (26 ago — ensuciaba el contenedor).
+
+**`preserveAspectRatio="xMidYMid slice"`, nunca `meet`.** `meet` encaja la
+imagen DENTRO de la caja, así que todo afiche que no fuera 2:3 al pixel dejaba
+ver el fondo negro como bandas arriba y abajo, y la esquina redondeada del rect
+no coincidía con la de la imagen encajada. `slice` **cubre**, igual que el
+`object-fit: cover` con el que estos mismos afiches se ven bien en la ficha y en
+toda superficie de póster de la app. Costo aceptado y consistente con el resto:
+un afiche que no sea 2:3 exacto pierde unos pixeles por el lado largo.
 
 **La luz va abajo a la IZQUIERDA**, que es el triángulo que deja libre la
 diagonal. En su posición canónica (abajo-derecha, §6.0) queda tapada por el
