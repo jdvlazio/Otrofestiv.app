@@ -45,7 +45,13 @@ jobs:
           node-version: '20'
 
       - name: Validar app
-        run: python3 validate.py
+        # Pillow: sin él, [poster-mirado] emitía «⚠ sin Pillow» EN CADA CORRIDA
+        # desde que nació y jamás abrió un póster — y validate-festivals delega
+        # en él («si no abre, lo dice poster-mirado»), así que NADIE en ninguna
+        # capa verificaba que un póster publicado abra (auditoría 25 ago, lote 3).
+        run: |
+          pip3 install --quiet pillow
+          python3 validate.py
 
       - name: Unit tests dominio
         run: node --test tests/unit/*.test.js
