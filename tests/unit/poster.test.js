@@ -289,7 +289,7 @@ test('_edHdrSVG: sin accent cae a un color válido, nunca a "undefined"', () => 
 //      tarjeta se hacía pasar por la única obra visible.
 // De ahí la regla dura: la Escalera existe SOLO COMPLETA, y solo en Tipo 2.
 // Estos casos son las cuatro fronteras; cada uno mata una mutación distinta.
-test('slotPosterParts: solo funciones compartidas de 2-3 obras, y solo completas', () => {
+test('slotPosterParts: funciones compartidas de 2 a 8 obras, y solo completas', () => {
   const afiche = (title, poster) => ({ title, poster, posterSource: 'custom', duration: '90 min', section: 'Sec' });
   const still  = (title) => ({ title, poster: '/assets/x/still.jpg', posterSource: 'editorial', duration: '20 min', section: 'Sec' });
   const sinImg = (title) => ({ title, duration: '10 min', section: 'Sec' });
@@ -312,10 +312,73 @@ test('slotPosterParts: solo funciones compartidas de 2-3 obras, y solo completas
     'un STILL no es afiche: sería un póster propio dentro de otro');
   assert.strictEqual(H.slotPosterParts([dos[0], sinImg('X')]), null,
     'incompleto → sin tarjeta (el módulo mudo murió: se leía como sombra)');
-  assert.strictEqual(H.slotPosterParts([...tres, afiche('D', 'https://image.tmdb.org/t/p/w342/d.jpg')]), null,
-    '4+ obras → sin tarjeta: mostrar 3 de 4 sería elegir por el festival');
+  // FRONTERA 8 (26 ago 2026) — antes era 3, y su razón escrita era «mostrar 3 de 4
+  // sería elegir por el festival». El diseño nuevo responde esa objeción en vez de
+  // violarla: no muestra 3 de 4, muestra LAS 4. La forma escala porque el paso es
+  // fracción de la lámina y no de la envolvente, así que la rima 2:3 se sostiene
+  // para cualquier n (ver makeSharedSlotSVG). Se corta en 9 porque ahí la lámina
+  // baja del 23% y a 56px queda en textura.
+  const mas = k => Array.from({length:k}, (_,i) => afiche('X'+i, 'https://image.tmdb.org/t/p/w342/'+i+'.jpg'));
+  for (const k of [4, 5, 6, 7, 8]) {
+    const r = H.slotPosterParts(mas(k));
+    assert.ok(r, k + ' obras SÍ recibe tarjeta');
+    assert.strictEqual(r.modules.length, k, 'se dibujan LAS ' + k + ', no un subconjunto elegido por nosotros');
+    assert.ok(r.dato.startsWith(k + ' obras'), 'el dato declara la pluralidad real');
+  }
+  assert.strictEqual(H.slotPosterParts(mas(9)), null,
+    '9+ → sin tarjeta: la lámina baja del 23% y en el chip de 56px es textura, no afiches');
   assert.strictEqual(H.slotPosterParts([dos[0]]), null, 'una sola obra no es función compartida');
   assert.strictEqual(H.slotPosterParts(null), null, 'sin miembros, nada');
+});
+
+// Los clipPath de la Escalera se llamaban ssp0/ssp1/… IGUAL en cada póster, y el
+// gradiente y el filtro eran ssp-luz/ssp-sb, también fijos. En SVG `url(#id)`
+// resuelve al PRIMERO del documento: con varias Escaleras en pantalla —o sea, la
+// grilla— todas se recortaban contra el rectángulo de la primera. Medido en la app
+// con Cinemancia publicado: 14 Escaleras, 11 de 2 obras y 3 de 3; las de 3
+// declaraban 49,55 de ancho y se recortaban con 65,45. Un 32% de más.
+// Nadie lo cazó porque ningún test miraba DOS pósters a la vez.
+test('la Escalera no reutiliza ids entre pósters distintos', () => {
+  const af = (i) => ({ title: 'T' + i, poster: 'https://image.tmdb.org/t/p/w342/' + i + '.jpg',
+                       posterSource: 'custom', duration: '90 min', section: 'Sec' });
+  const dos = H.slotPosterParts([af(1), af(2)]);
+  const tres = H.slotPosterParts([af(1), af(2), af(3)]);
+  const ids = (svg) => [...String(svg).matchAll(/id="([^"]+)"/g)].map(m => m[1]);
+  const a = ids(dos.svg), b = ids(tres.svg);
+  assert.ok(a.length >= 2 && b.length >= 3, 'cada póster declara sus ids');
+  const compartidos = a.filter(x => b.includes(x));
+  assert.deepStrictEqual(compartidos, [],
+    'dos Escaleras distintas no pueden compartir NINGÚN id — el segundo se recorta con el rect del primero');
+  // y dos pósters IGUALES sí pueden compartirlos: el rect es el mismo, no hay daño
+  const otroDos = H.slotPosterParts([af(1), af(2)]);
+  assert.deepStrictEqual(ids(otroDos.svg), a, 'mismo contenido → mismos ids (determinista, sin ruido en el diff)');
+});
+
+// JERARQUÍA DEL PÓSTER DE UNA FUNCIÓN COMPUESTA (regla de Juan, 26 ago 2026):
+//   1. el afiche OFICIAL del programa, si el festival mandó uno
+//   2. la Escalera, con los afiches oficiales de TODAS sus obras
+//   3. el generativo nuestro
+// La Escalera es un póster NUESTRO: solo entra donde íbamos a inventar uno. El
+// código preguntaba `programParts` «ANTES que nada» y su modelo solo miraba los
+// afiches de las OBRAS, nunca si el programa traía el suyo — así que la pila
+// tapaba el arte del festival. Medido: 19 de 59 compuestos, con Cinemancia y
+// Leviza ya publicados.
+test('el afiche oficial del programa gana sobre la Escalera', () => {
+  const af = (i) => ({ title: 'Obra ' + i, poster: 'https://image.tmdb.org/t/p/w342/' + i + '.jpg',
+                       posterSource: 'custom', duration: '20 min' });
+  const base = { is_cortos: true, section: 'Sec', duration: '90 min', film_list: [af(1), af(2), af(3)] };
+
+  // sin afiche propio → la Escalera hace su trabajo
+  const sinPropio = H.programParts({ ...base });
+  assert.ok(sinPropio, 'sin afiche del programa, la pila entra');
+  assert.strictEqual(sinPropio.modules.length, 3);
+
+  // con afiche propio → la pila NO se dibuja, mande quien mande
+  assert.strictEqual(H.programParts({ ...base, poster: '/assets/x/programa-cortos-1.jpg' }), null,
+    'el afiche que mandó el festival no se tapa con un póster nuestro');
+  // y da igual de dónde venga el oficial
+  assert.strictEqual(H.programParts({ ...base, poster: 'https://image.tmdb.org/t/p/w342/oficial.jpg' }), null,
+    'oficial es oficial, venga del festival o de TMDB');
 });
 
 // programParts — el gate de ENTRADA a la Escalera. Antes se llamaba

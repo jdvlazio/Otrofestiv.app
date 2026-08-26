@@ -433,9 +433,54 @@ dos o tres afiches guardados. Y en la grilla los programas legacy mostraban
 `poster-card-stack` — dos mitades a 50/50 que recortan cada afiche a una tira
 y le parten la tipografía impresa, justo lo que la Escalera existe para evitar.
 
-El modelo pasó a llamarse `programParts` y mira `is_programa || is_cortos`. La
-grilla lo pregunta ANTES que nada, porque es la decisión de más alto rango para
-una función que agrupa obras y su modelo ya sabe decir que no.
+El modelo pasó a llamarse `programParts` y mira `is_programa || is_cortos`.
+
+**LA JERARQUÍA (regla de Juan, 26 ago 2026).** La Escalera es un póster
+**nuestro**, así que solo entra donde íbamos a inventar uno. El orden no es
+preferencia, es rango:
+
+1. **El afiche OFICIAL del programa**, si el festival mandó uno. Manda siempre.
+2. **La Escalera**, si no hay oficial del programa pero tenemos los afiches
+   oficiales de **todas** sus obras y ninguno es un still nuestro.
+3. **El generativo nuestro**, para todo lo demás.
+
+Antes de la regla, `programParts` se preguntaba «ANTES que nada» y su modelo
+solo miraba los afiches de las OBRAS, nunca si el programa traía el suyo: la
+pila tapaba el arte del festival. Medido en el catálogo: **de 59 compuestos que
+dibujaban Escalera, 19 tapaban un afiche oficial** —«Historia(s) del Cine
+Argentina», las secciones de Cinemancia, «Competencia de cortos Programa 1/2/3»—
+con Cinemancia y Leviza ya publicados. Hoy son **91** los que muestran el arte
+del festival. Blindaje: `poster.test.js`, «el afiche oficial del programa gana
+sobre la Escalera»; el mutante que quita `if(f.poster) return null` lo tumba.
+
+**LA LISTA PREGUNTA AL MISMO DUEÑO (26 ago 2026).** El chip de 56px tenía su
+propio dibujante —`_programaStack`, dos imágenes a 50/50— con el gate viejo en
+`is_programa`. De los **215 compuestos del catálogo, 207 son `is_cortos`**: el
+chip disparaba en el 3,7% y la misma obra se veía apilada en grilla y generativa
+en lista. Ahora `_programaStack` llama a `programParts` y dibuja la misma
+Escalera; el stack de dos imágenes queda solo como respaldo de los que no
+califican. Quedan dos dibujantes de pósters apilados en vez de tres.
+
+**ESCALA A CUALQUIER N (26 ago 2026).** El paso del escalón es fracción de la
+**lámina**, no de la envolvente: `dx = 0,43 · w`, de donde `w = WENV/(1+(N-1)·0,43)`.
+Escrito al revés —K fija sobre la envolvente— el ancho de lámina es `1-(N-1)K`,
+que con 5 obras cae al 6% y con 6 da **negativo**: no había dibujo posible, y por
+eso el modelo cortaba en 3. Las dos constantes viejas YA ERAN esta regla
+congelada (0,30/0,70 = 0,429 · 0,235/0,53 = 0,443), así que generalizarla no
+cambia lo aprobado: con 2 obras da 69,9% donde daba 70%. La rima 2:3 se sostiene
+sola —`alto = 1,5w + (N-1)·1,5dx = 1,5·(w + (N-1)dx) = 1,5·ancho`— y por eso no
+hace falta una forma para el par y otra para el programa. **Tope 8**: con 9 la
+lámina baja del 23% y en el chip de 56px queda en textura.
+
+**IDS ÚNICOS POR PÓSTER.** Los `clipPath` se llamaban `ssp0`/`ssp1`… y el
+gradiente y el filtro `ssp-luz`/`ssp-sb`, **iguales en cada póster**. En SVG
+`url(#id)` resuelve al PRIMERO del documento: con varias Escaleras en pantalla
+—o sea, la grilla— todas se recortaban contra el rectángulo de la primera.
+Medido en la app con Cinemancia publicado: 14 Escaleras, 11 de 2 obras y 3 de 3;
+las de 3 declaraban 49,55 de ancho y se recortaban con 65,45, un 32% de más.
+Ahora el prefijo sale de `_djb2(modules+n)`: único por contenido y determinista,
+así que el mismo póster da el mismo id y no ensucia los diffs. Nadie lo cazó
+porque ningún test miraba DOS pósters a la vez; ahora `poster.test.js` lo hace.
 
 > **El SVG va INLINE, nunca como `src` de un `<img>`.** Sus módulos son
 > `<image href>` remotos y un SVG dentro de `<img>` no carga recursos externos:
@@ -631,9 +676,10 @@ de programa doble nunca tipografía así.
    que como el signo que une dos obras.
 3. La pila **crece hacia arriba** desde la misma base que cualquier título
    (§6.0): su última línea se apoya donde se apoyaba el título de una sola obra.
-4. **Frontera 2–3 obras** — la misma de la forma C / Escalera. Con **4 o más** se
-   conserva la forma de siempre: el cuerpo caería a ilegible y el pie ya dice
-   «4 obras» (`_datoCompuesto`).
+4. **Frontera 2–3 obras** — para la PILA DE TÍTULOS (esta forma). Con **4 o más**
+   se conserva la forma de siempre: el cuerpo caería a ilegible y el pie ya dice
+   «4 obras» (`_datoCompuesto`). Ojo: la Escalera —que apila AFICHES, no
+   títulos— dejó de compartir esta frontera el 26 ago y llega hasta 8.
 
 **El presupuesto se reparte por USO REAL, no en partes iguales.** Darle a cada
 obra un tercio exacto del alto castigaba a las tres por culpa de una: con dos

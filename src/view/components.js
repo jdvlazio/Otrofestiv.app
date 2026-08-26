@@ -600,16 +600,20 @@ export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
   const r=n=>+n.toFixed(2);
   // slice y NO meet (26 ago): meet dejaba bandas negras en todo afiche que no
   // fuera 2:3 exacto. slice CUBRE = object-fit:cover. Sin stroke. Ver POSTERS.md.
+  // UID por póster: los clipPath se llamaban ssp0/ssp1/… IGUAL en todos. Con más
+  // de una Escalera en la misma página —o sea, la grilla— cada url(#ssp0) resuelve
+  // al PRIMERO del documento y recorta los demás contra el rectángulo ajeno.
+  const UID='ssp'+Math.abs(_djb2(modules.join('|')+modules.length)).toString(36);
   const mod=(ux,uy,uw,src,i)=>{
     const x=ux*U,y=uy*U,w=uw*U,h=uw*1.5*U,rx=w*0.13;
-    const id=`ssp${i}`;
+    const id=`${UID}_${i}`;
     return `<clipPath id="${id}"><rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}"/></clipPath>`
       +`<rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}" fill="${NEGRO}"/>`
       +`<image href="${escXML(src)}" x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${id})"/>`;
   };
   // Sombra DIFUSA y a la IZQUIERDA (26 ago): cae SOBRE el afiche de atrás, que
   // es lo que lo hace leer como lámina encima. Antes: rect duro a la derecha.
-  const sombra=(ux,uy,uw)=>`<rect x="${r(ux*U-3.2)}" y="${r(uy*U-1)}" width="${r(uw*U)}" height="${r(uw*1.5*U)}" rx="${r(uw*U*0.13)}" fill="#000" opacity=".55" filter="url(#ssp-sb)"/>`;
+  const sombra=(ux,uy,uw)=>`<rect x="${r(ux*U-3.2)}" y="${r(uy*U-1)}" width="${r(uw*U)}" height="${r(uw*1.5*U)}" rx="${r(uw*U*0.13)}" fill="#000" opacity=".55" filter="url(#${UID}-sb)"/>`;
   // RIMA 2:3 (25 ago) — POSTERS.md §Forma C. dy = 1,5·dx → envolvente 2:3 para
   // cualquier N. modules va atrás→delante: el ÚLTIMO al frente.
   const n=modules.length;
@@ -617,7 +621,18 @@ export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
   // 2,2·datoFS de aire sobre el dato: antes parecían apoyados encima (26 ago).
   const YTOP=0.9*U, YBOT=VH-M-datoFS*0.30-datoFS*2.2;
   const HENV=YBOT-YTOP, WENV=HENV/1.5;
-  const K=n===2?0.30:0.235, DX=K*WENV, MW=(WENV-(n-1)*DX)/U, X0=(VW-WENV)/2;
+  // EL PASO ES FRACCIÓN DE LA LÁMINA, NO DE LA ENVOLVENTE (26 ago 2026).
+  // Antes: K fija sobre la envolvente (0,30 con 2 obras, 0,235 con 3+). Esa forma
+  // no escala — el ancho de lámina es 1-(n-1)K, que con 5 obras cae al 6% y con 6
+  // da NEGATIVO: no había dibujo posible, y por eso el modelo cortaba en 3.
+  // Pero las dos constantes viejas YA ERAN esta regla congelada: 0,30/0,70 = 0,429
+  // y 0,235/0,53 = 0,443. Escribiéndola como dx = P·w se despeja
+  //   w = WENV / (1 + (n-1)·P)
+  // y la forma vale para CUALQUIER n conservando lo aprobado (70,0% con 2 obras,
+  // 53,7% con 3), sin una forma para el par y otra para el programa. La rima 2:3
+  // se sostiene sola: alto = 1,5w + (n-1)·1,5dx = 1,5·(w + (n-1)dx) = 1,5·ancho.
+  const P=0.43;
+  const MW=WENV/(1+(n-1)*P)/U, DX=P*MW*U, X0=(VW-WENV)/2;
   let comp='';
   modules.forEach((src,i)=>{
     const ux=(X0+i*DX)/U, uy=(YTOP+i*DX*1.5)/U;
@@ -627,10 +642,10 @@ export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
   const datoY=VH-M-datoFS*0.30;
   const datoTxt=dato?_lineaSVG(dato,{x:M,y:datoY,fs:datoFS,ls:datoFS*0.02,fill:'#888',boxW:CW,upper:false}):'';
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">`
-    +`<defs><radialGradient id="ssp-luz" cx="0" cy="1" r="1"><stop offset="0" stop-color="${accent}" stop-opacity=".28"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></radialGradient>`
-    +`<filter id="ssp-sb" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.6"/></filter></defs>`
+    +`<defs><radialGradient id="${UID}-luz" cx="0" cy="1" r="1"><stop offset="0" stop-color="${accent}" stop-opacity=".28"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></radialGradient>`
+    +`<filter id="${UID}-sb" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.6"/></filter></defs>`
     +`<rect width="${VW}" height="${VH}" fill="${NEGRO}"/>`
-    +`<rect x="0" y="99" width="66" height="81" fill="url(#ssp-luz)"/>`
+    +`<rect x="0" y="99" width="66" height="81" fill="url(#${UID}-luz)"/>`
     +comp
     +`<rect width="${VW}" height="3.75" fill="${accent}"/>`
     +datoTxt+`</svg>`;

@@ -255,6 +255,15 @@ export function posterAmbient(src,fallbackHex,cb){
 // Devuelve null si no califica (afiche incompleto, still, 4+) → camino viejo.
 export function programParts(f){
   if(!f||!(f.is_programa||f.is_cortos)||!Array.isArray(f.film_list)) return null;
+  // EL AFICHE DEL FESTIVAL MANDA (regla de Juan, 26 ago 2026). La Escalera es un
+  // póster NUESTRO: solo tiene sentido cuando el festival no mandó uno para la
+  // función. Si el programa trae el suyo —«Competencia de cortos Programa 1»,
+  // las secciones de Cinemancia, los programas de CineAutopsia— ese gana, y la
+  // pila no se dibuja. Medido antes de la regla: de 59 compuestos que dibujaban
+  // Escalera, 19 tapaban el afiche oficial (Cinemancia y Leviza, publicados).
+  // El orden es jerarquía, no preferencia: oficial del programa → Escalera con
+  // los afiches oficiales de TODAS sus obras → generativo nuestro.
+  if(f.poster) return null;
   return slotPosterParts(f.film_list.map(it=>({
     title:it.title, poster:it.poster, posterSource:it.posterSource,
     duration:it.duration||f.duration, section:f.section,
@@ -262,7 +271,10 @@ export function programParts(f){
 }
 
 export function slotPosterParts(members){
-  if(!Array.isArray(members)||members.length<2||members.length>3) return null;
+  // Tope 8 (prototipo aprobado, 25 ago): la Escalera escala a cualquier N porque
+  // el paso es fracción de la lámina — ver makeSharedSlotSVG. Con 9+ la lámina
+  // baja del 23% y a 56px queda en textura, así que ahí sí cae a la forma vieja.
+  if(!Array.isArray(members)||members.length<2||members.length>8) return null;
   const clasif=members.map(f=>{
     const src=getPosterSrc(f.title,true)||f.poster||null;
     const real=!!src&&!_isEditorialPoster(f);
@@ -875,8 +887,25 @@ export function _metaBadges(f){
   return b;
 }
 
+// _programaStack — el chip de 56px de la LISTA para una función compuesta.
+//
+// Era el TERCER dibujante de «afiches apilados», junto a la Escalera del grid y
+// el generativo: dos imágenes a 50/50, y con el gate puesto en `is_programa`.
+// Ese gate lo dejaba fuera de casi todo: de los 215 compuestos del catálogo,
+// 207 son `is_cortos` y solo 8 son `is_programa` — disparaba en el 3,7%. El
+// grid ya había corregido exactamente esto (ver programParts, «antes se
+// llamaba legacyProgramParts y solo miraba is_programa») y la lista se quedó
+// atrás: la misma obra se veía apilada en grilla y generativa en lista.
+//
+// Ahora la lista PREGUNTA AL MISMO DUEÑO que el grid (programParts) y dibuja la
+// misma Escalera. Un compuesto se ve igual en las dos vistas y quedan dos
+// dibujantes en vez de tres. El stack de dos imágenes se conserva solo como
+// respaldo para los que no califican (afiche incompleto, still, 9+ obras).
 export function _programaStack(f){
-  if(!f.is_programa||!f.film_list||f.film_list.length<2) return null;
+  if(!f||!f.film_list||f.film_list.length<2) return null;
+  const _pp=programParts(f);
+  if(_pp&&_pp.svg) return`<div class="plist-poster">${_pp.svg}</div>`;
+  if(!f.is_programa) return null;
   const p1=_getItemPoster(f.film_list[0]);
   const p2=_getItemPoster(f.film_list[1]);
   // Fallback unificado (como el stack del sheet): item sin póster → la MINI del
