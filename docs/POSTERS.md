@@ -363,29 +363,55 @@ ninguna superficie: la grilla y la lista muestran cada obra con su card, y la
 calendario semanal. La Escalera le da forma: **los afiches de las obras,
 apilados en diagonal dentro del póster nuestro**.
 
-**Geometría** (viewBox 120×180, `u=15`, todo en pasos de 0,25u):
+**Geometría — RIMA 2:3** (viewBox 120×180, `u=15`; revisada 25 ago 2026, Juan).
+El desplazamiento entre módulos es **paralelo a la diagonal del marco**:
 
-| elemento | 2 obras | 3 obras |
+> **dy = 1,5 · dx**
+
+y con eso el rectángulo que envuelve a la pila mide exactamente 2:3 — la misma
+proporción del marco y la de cada afiche, tres 2:3 anidados. La demostración es
+de una línea, y vale para cualquier N:
+
+> alto = 1,5w + (N−1)·1,5dx = 1,5·(w + (N−1)dx) = 1,5 × ancho
+
+Una sola perilla, `k = dx / ancho del envolvente`:
+
+| | 2 obras | 3 obras |
 |---|---|---|
-| módulo | 4,5u × 6,75u | 4u × 6u |
-| trasero | `x=0,75u · y=3u` | `0,75 · 3` |
-| siguiente | `x=2,75u · y=3,75u` | `2 · 3,75` → `3,25 · 4,5` |
-| paso | +2u x · +0,75u y | +1,25u x · +0,75u y |
+| k | 0,30 | 0,235 |
+| envolvente | de `y=1,5u` a `y=VH−M−1,6·datoFS`, centrado en x | ídem |
+| módulo | ≈ 4,25u de ancho | ≈ 3,6u |
 
-Sombra dura de 0,19u bajo el delantero (la del apilado de miniaturas). Afiches
-2:3 **completos**, nunca recortados. Filete de sección, negro de marca y luz
-ámbar como en toda forma; la luz va **debajo** de los módulos.
+Con más solape el de atrás se lee como sombra del de adelante y se pierde la
+pluralidad; con menos, sobra campo. **El ÚLTIMO módulo va al frente** y su
+sombra (dura, 0,19u) cae sobre el anterior: con el primero al frente la sombra
+cae en campo vacío y la pieza se aplana.
+
+Afiches 2:3 **completos**, nunca recortados, con el radio del token (13% del
+ancho del módulo) y un **passe-partout** cálido de 0,5 — sin él un afiche
+oscuro se disuelve en el negro de marca y la tarjeta parece rota.
+
+**La luz va abajo a la IZQUIERDA**, que es el triángulo que deja libre la
+diagonal. En su posición canónica (abajo-derecha, §6.0) queda tapada por el
+módulo delantero y no ilumina nada. Es una excepción deliberada de esta forma;
+no se "corrige" de vuelta.
+
+Sustituye a la geometría de pasos fijos del 21 ago, que reservaba 3u arriba
+para el rótulo de sección.
 
 **SIN TÍTULO interno** (decisión de Juan): *«en una película con póster nunca
 vemos títulos»*. Se auditaron las cinco superficies antes de quitarlo: en lista,
 ficha, Intereses, Mi Plan y buscador el título ya vive **al lado** del póster —
 era duplicado; y en grilla y Diario **ninguna obra se nombra**, así que la
-identidad queda a un tap, igual que para cualquier película. Se conservan:
-- **la sección con su filete** — sin el título, es lo único que distingue
-  «función curada por el festival» de «póster de una película», y el separador
-  de sección de la grilla solo existe en la vista «todos los días»;
-- **el dato al pie** («2 obras · 92 min») — pasa a ser la **única declaración de
-  pluralidad** dentro del póster. Llena vacío con información, no con decoración.
+identidad queda a un tap, igual que para cualquier película. Se conserva **el dato al pie** («2 obras · 92 min»): es la **única declaración
+de pluralidad** dentro del póster, y lo único que las imágenes no pueden decir.
+
+**El RÓTULO de sección salió también** (25 ago 2026, Juan). Competía con los
+afiches y les robaba 3u de alto —el mismo argumento que mató el título—, y la
+sección sigue dicha por **el filete**, que es de su color y va a sangre arriba.
+Queda anotado el costo, para que se sepa que se aceptó y no que se pasó por
+alto: el separador de sección de la grilla solo existe en la vista «todos los
+días», así que en la vista por día el filete es la única señal de sección.
 
 **DÓNDE ALCANZA (ampliado 25 ago 2026).** La forma nació para la función
 compartida y su modelo se llamaba `legacyProgramParts`, con el gate puesto en
