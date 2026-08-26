@@ -9,7 +9,8 @@ const { loadDomain } = require('../lib/load-domain.js');
 function load(passed = new Set()) {
   return loadDomain({
     functions: ['toMin', 'parseDur', 'blockDuration', 'durationForTravel', 'effectiveDuration',
-                '_resolveVenue', 'venueTravelMins', 'travelMins', 'screensConflict', 'verifyPlan'],
+                '_resolveVenue', 'venueTravelMins', 'travelMins', 'screensConflict', 'verifyPlan',
+                'sameEntry'],
     globals: {
       DEFAULT_DURATION_MIN: 90, FESTIVAL_BUFFER: 15, FESTIVAL_TRANSPORT: 'transit',
       FESTIVAL_CONFIG: { test: { venues: { A: { short: 'A', lat: 6.2, lng: -75.5 } } } },
@@ -40,10 +41,33 @@ test('_squeezed es violación DELIBERADA — no genera falso rojo', () => {
   assert.strictEqual(r.ok, true);
 });
 
-test('cancelada y duplicado se certifican', () => {
+test('cancelada se certifica (y el título repetido en OTRA función, no)', () => {
   const { verifyPlan } = load();
+  // Doctrina 26 ago 2026: `duplicado` es por IDENTIDAD DE ENTRADA, no por título.
+  // La misma obra en dos funciones distintas es un plan legítimo — el usuario
+  // puede pedirlo. Acá la única violación es la cancelada.
   const r = verifyPlan([e('F1', '10:00', { _cancelled: true }), e('F1', '18:00')]);
-  assert.deepStrictEqual(r.violations.map(v => v.kind).sort(), ['cancelada', 'duplicado']);
+  assert.deepStrictEqual(r.violations.map(v => v.kind).sort(), ['cancelada']);
+});
+
+test('la MISMA función dos veces SÍ es duplicado (corrupción real)', () => {
+  const { verifyPlan } = load();
+  const r = verifyPlan([e('F1', '10:00'), e('F1', '10:00')]);
+  const dup = r.violations.filter(v => v.kind === 'duplicado');
+  assert.strictEqual(dup.length, 1, 'una sola violación, sin eco de conflicto-consigo-misma');
+  assert.strictEqual(dup[0].day, 'D1');
+  assert.strictEqual(dup[0].time, '10:00');
+  // y NO se reporta además como conflicto: el eco enmascaraba el hallazgo real
+  assert.ok(!r.violations.some(v => v.kind === 'conflicto'));
+});
+
+test('misma obra, mismo día y hora, SEDES distintas → conflicto, no duplicado', () => {
+  const { verifyPlan } = load();
+  // No es la misma entrada (la sede es parte de la identidad desde #751): es un
+  // imposible físico, y el kind correcto lo dice.
+  const r = verifyPlan([e('F1', '10:00'), e('F1', '10:00', { venue: 'B' })]);
+  assert.ok(!r.violations.some(v => v.kind === 'duplicado'));
+  assert.ok(r.violations.some(v => v.kind === 'conflicto'));
 });
 
 test('is_recurring repetido NO es duplicado (taller multi-día, todas las sesiones)', () => {

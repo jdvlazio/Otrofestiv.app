@@ -68,7 +68,7 @@ test('una función SIN venue nunca queda atrapada por el filtro', () => {
 // cubren la red: quien sea que inserte, el verificador lo caza.
 function loadVerify(planVenues) {
   return loadDomain({
-    functions: ['verifyPlan', 'screensConflict', 'screeningPassed', 'toMin', 'parseDur', 'blockDuration', 'effectiveDuration', 'durationForTravel'],
+    functions: ['verifyPlan', 'sameEntry', 'screensConflict', 'screeningPassed', 'toMin', 'parseDur', 'blockDuration', 'effectiveDuration', 'durationForTravel'],
     globals: {
       FILMS, DEFAULT_DURATION_MIN: 90, DAY_KEYS: ['D1'],
       FESTIVAL_DATES: { D1: '2099-01-01' }, TZ_OFFSET: '-05:00', _simTime: null,

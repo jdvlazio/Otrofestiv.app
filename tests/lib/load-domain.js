@@ -184,6 +184,7 @@ const DEFAULT_FNS = [
   'screeningEndMin', 'screeningEnded', 'screeningNow',
   '_resolveVenue', 'venueTravelMins', 'travelMins',
   'screensConflict', 'verifyPlan', '_cityOf', // helper local de schedule.js (kind 'ciudad')
+  'sameEntry',        // dueño de la identidad de entrada — verifyPlan lo usa para 'duplicado'
   // Fase 2 — festival phase helpers
   '_endedStats', 'effectiveWatched', '_classifyTodayScreenings', '_gapSuggestion', '_getFestivalPhase',
   // Fase 3 — temporal subsystem
