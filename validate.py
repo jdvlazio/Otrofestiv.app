@@ -757,9 +757,56 @@ try:
     SPANISH_ACCENT = set('áéíóúñÁÉÍÓÚÑ')
     import re as _re3
 
+    # Strings que son DATO de festival, no copy de UI: nombres de sección (regla
+    # «secciones tal cual»: verbatim, jamás traducidos), sedes y ciudades. Se
+    # derivan de festivals/*.json en vez de mantenerse a mano — SAFE_LINE_MARKERS
+    # arriba es el fósil de esa época y acumula strings de festivales archivados.
+    # Sin esto, cada festival nuevo consumía cupos de aviso con falsos positivos.
+    _dataStr = set()
+    try:
+        import glob as _g3, json as _j3
+        for _fp3 in _g3.glob('festivals/*.json'):
+            try:
+                _d3 = _j3.load(open(_fp3, encoding='utf-8'))
+            except Exception:
+                continue
+            def _eat(v):
+                if isinstance(v, str) and v.strip():
+                    _dataStr.add(v.strip())
+                    # los emisores prefijan emoji: «🌱 Pequeñas Perspectivas»
+                    _dataStr.add(_re3.sub(r'^[^\w¡¿]+', '', v).strip())
+            for _it3 in (_d3.get('films') or []) + (_d3.get('screenings') or []):
+                if not isinstance(_it3, dict):
+                    continue
+                for _k3 in ('section', 'seccion', 'venue', 'sala', 'city', 'ciudad'):
+                    _eat(_it3.get(_k3))
+            for _k3 in ('sections', 'venues', 'cities'):
+                _v3 = _d3.get(_k3)
+                if isinstance(_v3, list):
+                    for _e3 in _v3:
+                        _eat(_e3 if isinstance(_e3, str) else (_e3 or {}).get('name'))
+    except Exception:
+        pass
+
+    # src/config.js es el módulo de DECLARACIONES (FESTIVAL_CONFIG, FESTIVAL_DATES,
+    # palmarés): todo lo que hay ahí es dato de festival —nombres, fechas, premios—
+    # y nada de eso pasa por t() por diseño. Aportaba 93 de 103 avisos: con el tope
+    # de 8 que tenía este check, esos falsos positivos SEPULTABAN los hallazgos
+    # reales de view/controller/domain. Se excluye por archivo, no por strings a
+    # mano (que es lo que hacía SAFE_LINE_MARKERS y no escalaba con cada festival).
+    _cfgSrc = ''
+    try:
+        _cfgSrc = open('src/config.js', encoding='utf-8').read()
+    except Exception:
+        pass
+    _cfgLines = {l.strip() for l in _cfgSrc.split('\n') if l.strip()}
+
     # Extract only lines with Spanish chars from JS code
     dynamic_found = []
+    _seen_dyn = set()
     for lnum, line in enumerate(code_no_comments.split('\n'), 1):
+        if line.strip() in _cfgLines:
+            continue
         if not any(c in line for c in SPANISH_ACCENT):
             continue
         if any(m in line for m in SAFE_LINE_MARKERS):
@@ -777,16 +824,35 @@ try:
                 continue  # likely a key, not UI text
             if text in _es_vals:
                 continue  # ya en diccionario — lo cubre el reverse-check (FAIL)
+            if text in _dataStr or _re3.sub(r'^[^\w¡¿]+', '', text).strip() in _dataStr:
+                continue  # nombre de sección/sede/ciudad: dato del festival, no copy
+            # Detrás de una clave de DATO nunca hay copy de UI (el copy vive en
+            # i18n.js). Palmarés, catálogos y config declaran datos con estas
+            # claves: exentar por estructura, no por lista de strings a mano.
+            _pre = line[max(0, m.start() - 60):m.start()]
+            if _re3.search(r'(?:categoria|category|titulo|title|autoria|author|'
+                           r'obra|premio|award|section|seccion|venue|sala|city|'
+                           r'ciudad|name|nombre|director|fest|id|key|slug)'
+                           r'["\']?\s*:\s*$', _pre):
+                continue
             # Skip if t() appears right before the quote
             pos = m.start()
             before = line[max(0, pos-3):pos]
             if before.endswith("t("):
                 continue
-            dynamic_found.append(f'L{lnum}: "{text[:55]}"')
+            # el shim concatena main.js dos veces en `content`: deduplicar por
+            # texto para no reportar el mismo hallazgo dos veces
+            _entry = f'L{lnum}: "{text[:55]}"'
+            if text not in _seen_dyn:
+                _seen_dyn.add(text)
+                dynamic_found.append(_entry)
 
     if dynamic_found:
-        for item in dynamic_found[:8]:
+        for item in dynamic_found[:12]:
             warn('i18n-dynamic', f'Posible string ES sin t(): {item}')
+        if len(dynamic_found) > 12:
+            # un tope que calla lo que recorta convierte el aviso #13 en invisible
+            warn('i18n-dynamic', f'… y {len(dynamic_found) - 12} más no listados')
 
 except Exception as e:
     warn(check, f'no se pudo verificar hardcoding: {e}')
