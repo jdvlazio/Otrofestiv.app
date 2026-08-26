@@ -1977,9 +1977,15 @@ try:
     _es_end = _i18n.find('"plan_hint_opciones": "Tap')
     _es = _i18n[:_es_end] if _es_end > 0 else _i18n
     import re as _re
-    _TUTEO = [r'"[^"]*Ingresa', r'"[^"]*Ajusta', r'"[^"]*Permite el',
-              r'"[^"]*Agrega(?!́)', r'"[^"]*Marca(?!́)', r'"[^"]*terminas',
-              r'"[^"]*Añad', r'"[^"]*añad']
+    # LOS \b DE ESTOS PATRONES FUERON BYTES 0x08 (BACKSPACE) LITERALES desde que
+    # el check nacio hasta el 25 ago 2026: un heredoc interpreto el escape al
+    # escribirlo. Un regex que exige un backspace literal no matchea NUNCA — el
+    # guardian estuvo verde toda su vida sin vigilar nada (auditoria de
+    # guardianes, lote 1). Si editas estos patrones, hacelo con un editor que
+    # muestre escapes, y muta («Ingresa tu correo» en el bloque ES) al terminar.
+    _TUTEO = [r'"[^"]*\bIngresa\b', r'"[^"]*\bAjusta\b', r'"[^"]*\bPermite el\b',
+              r'"[^"]*\bAgrega\b(?!́)', r'"[^"]*\bMarca\b(?!́)', r'"[^"]*\bterminas\b',
+              r'"[^"]*\bAñad', r'"[^"]*\bañad']
     _v = []
     for _pat in _TUTEO:
         for _m in _re.finditer(_pat, _es):
@@ -2048,10 +2054,19 @@ except Exception as _e:
 # usuario aprende dos veces. Ver docs/DESIGN.md §8.4.4.
 check = 'aviso-antes-sinopsis'
 try:
-    _src = open('src/controller/sheets-controller.js', encoding='utf-8').read()
+    # DOS ARREGLOS DE LA AUDITORÍA (25 ago 2026, lote 1):
+    #  1. Buscaba 'meta-banner-label' — una clase que NINGÚN emisor usa (solo
+    #     existe como CSS muerto): los banners reales llevan 'meta-banner'. Un
+    #     banner real tras la sinopsis pasaba en verde.
+    #  2. Solo leía sheets-controller.js; agenda.js también emite meta-banner.
     _mal = []
+    _fuentes_avso = ['src/controller/sheets-controller.js', 'src/view/agenda.js']
+    _src = '\n'.join(open(_f, encoding='utf-8').read() for _f in _fuentes_avso)
     for _blk in _src.split('document.getElementById('):
-        _ib = _blk.find('meta-banner-label')
+        # rfind: si en el bloque hay un banner ANTES de la sinopsis (legítimo) y
+        # otro DESPUÉS (el bug), find() veía solo el primero y aprobaba. Lo que
+        # importa es el ÚLTIMO banner del bloque.
+        _ib = _blk.rfind('meta-banner')
         _is = _blk.find('pel-sheet-synopsis')
         if _ib != -1 and _is != -1 and _ib > _is:
             _mal.append(_blk[:60].strip().replace('\n', ' '))
@@ -2566,7 +2581,9 @@ check = 'cancelada-no-difumina'
 try:
     import re as _re
     _html = open('index.html', encoding='utf-8').read()
-    _prog = open('src/view/programa.js', encoding='utf-8').read()
+    # agenda.js también pinta canceladas (auditoría 25 ago, lote 1): el mismo
+    # `_cancelled ? opacity` plantado allá pasaba en verde.
+    _prog = open('src/view/programa.js', encoding='utf-8').read() + '\n' + open('src/view/agenda.js', encoding='utf-8').read()
     _errs = []
 
     _m = _re.search(r'^\.poster-past-badge\{([^}]*)\}', _html, _re.M)
@@ -2898,7 +2915,10 @@ try:
     # en las menciones — no es una línea de dato en una ficha, y usarla como tal
     # la ataría a t-base, que a 62px de ancho no cabe). Baja cuando se migren
     # las heredadas.
-    _TECHO = 90
+    # Techo PEGADO a la familia real (auditoría 25 ago, lote 2): a 90 con la
+    # familia en 89, la variante #90 entraba sin ruido. Un techo con holgura es
+    # un guardián dormido — si migrás una heredada, bajalo otra vez.
+    _TECHO = 89
     if _fam > _TECHO:
         _errs.append(f'familia de líneas de texto gris: {_fam} > techo {_TECHO} — '
                      f'usá .dato-linea en vez de crear otra variante (o bajá el techo si migraste)')
@@ -3120,12 +3140,20 @@ except Exception as _e:
 # DENTRO de FUNCIÓN porque la invalida.
 check = 'avisos-en-banda'
 try:
-    _sc = open('src/controller/sheets-controller.js', encoding='utf-8').read()
-    _bad = [i for i, ln in enumerate(_sc.splitlines(), 1)
-            if 'meta-banner-label' in ln and not ln.strip().startswith('//')]
+    # TODO src/, no solo sheets-controller (auditoría 25 ago, lote 2): el mismo
+    # rótulo prohibido plantado en agenda.js pasaba en verde. Nada legítimo emite
+    # esta clase — cero riesgo de auto-acusación.
+    _bad = []
+    for _r_ab, _d_ab, _fs_ab in os.walk('src'):
+        for _f_ab in _fs_ab:
+            if not _f_ab.endswith('.js'): continue
+            _p_ab = os.path.join(_r_ab, _f_ab)
+            for i, ln in enumerate(open(_p_ab, encoding='utf-8').read().splitlines(), 1):
+                if 'meta-banner-label' in ln and not ln.strip().startswith('//'):
+                    _bad.append(f'{_p_ab}:{i}')
     if _bad:
         fail(check, 'aviso con rótulo fuera de la banda AVISOS (usar _avisosBand): '
-             + ', '.join(f'sheets-controller.js:{i}' for i in _bad[:5]))
+             + ', '.join(_bad[:5]))
     else:
         ok(check, 'los avisos que matizan la función se construyen solo en _avisosBand')
 except Exception as _e:
@@ -3488,8 +3516,8 @@ try:
         'dom-ready-guard','dtab-sin-linea','fc-bootstrap','filter-drop-canon','html-divs',
         'i18n-hardcoded','i18n-interpolation','i18n-voseo','json-fields','keyart-write-once',
         'no-underscore-actions','onclick-syntax','pais-conocido','pipeline-circuito',
-        'poster-editorial-parity','poster-radio-unico','poster-single-owner','pressed-canon',
-        'prio-limit','responsive-contract','sala-en-sede','sched-pure-fns','section-display-raw',
+        'poster-editorial-parity','poster-radio-unico','pressed-canon',
+        'prio-limit','responsive-contract','sched-pure-fns','section-display-raw',
         'sedes-apiladas','shadow-t','sheet-meta-legible','staging-provenance','static-html-template',
         'synopsis-helper','synopsis-length','tasks-sync','template-al-dia','title-normalization',
         'validate-film-tests','version-json','viewstate-shadow','worker-deps',
@@ -4789,10 +4817,16 @@ try:
                 _es_w = bool(_re.search(r"json\.dump|,\s*'w'", _ln))
                 (_escribe if _es_w else _lee).setdefault(_b, set()).add(_os.path.basename(_sp))
     def _quien(_tabla, _b):
-        # nombre exacto o patrón de herramienta genérica ('*-crudo.json')
+        # nombre exacto o patrón de herramienta genérica ('*-crudo.json').
+        # EL PATRÓN PELADO '*.json' NO CUENTA (auditoría 25 ago, lote 3):
+        # publicar.py referencia '{fid}.json' → normaliza a '*.json', y con
+        # endswith('.json') TODO archivo tenía «lector» — el check era
+        # tautológicamente verde. Se replantó su bug fundacional exacto
+        # (sidecar escrito sin lector) y pasó. Un patrón solo vale si su
+        # sufijo dice algo más que la extensión.
         _hit = set(_tabla.get(_b, set()))
         for _k, _v in _tabla.items():
-            if _k.startswith('*') and _b.endswith(_k[1:]):
+            if _k.startswith('*') and _k[1:] != '.json' and _b.endswith(_k[1:]):
                 _hit |= _v
         return _hit
     _pares = []
@@ -4825,7 +4859,10 @@ check = 'sedes-apiladas'
 try:
     import json as _json, math as _math, glob as _glob, os as _os, itertools as _it
     _avisos = []
-    _ACTIVOS_AP = {'ficdeh-2026.json', 'ficma-2026.json', 'finca-2026.json'}
+    # DERIVADO, no lista fija (auditoría 25 ago, lote 3): la lista congelada
+    # {ficdeh, ficma, finca} vigilaba tres festivales YA TERMINADOS mientras el
+    # mismo bug plantado en Cinemancia —vivo y publicado— pasaba en silencio.
+    _ACTIVOS_AP = {_v + '.json' for _v in _festivalesVivos()}
     for _f in sorted(_glob.glob('festivals/*.json')):
         if _os.path.basename(_f) not in _ACTIVOS_AP:
             continue          # los archivados no se reescriben
@@ -4859,7 +4896,8 @@ check = 'sala-en-sede'
 try:
     import json as _json, re as _re, glob as _glob, os as _os
     _avisos = []
-    _ACTIVOS = {'ficdeh-2026.json', 'ficma-2026.json', 'finca-2026.json'}
+    # Derivado de las fechas — misma corrección que _ACTIVOS_AP (25 ago, lote 3).
+    _ACTIVOS = {_v + '.json' for _v in _festivalesVivos()}
     for _f in sorted(_glob.glob('festivals/*.json')):
         if _os.path.basename(_f) not in _ACTIVOS:
             continue          # los archivados no se reescriben
