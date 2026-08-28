@@ -1344,16 +1344,18 @@
    "country": "Colombia",
    "section": "🎞️ Buenos, Malos y Feos",
    "genre": "Otro; Soledad; Vejez",
-   "synopsis": "",
+   "synopsis": "El condecorado coronel Augusto Almendros, desde su lejano retiro, se entera que \"El comandante Salazar\", uno de los guerrilleros más perseguidos en su época activa, ha sido perdonado por la justicia para la paz (JEP) y llega a radicarse en la misma población que está viviendo. Sin poder conciliar el sueño, el coronel, pone en marcha un plan para desafiarlo a un duelo en la montaña, como dos guerreros de honor y cobrarle las deudas del pasado.",
    "synopsis_lang": "es",
-   "poster": "",
-   "posterSource": "",
+   "poster": "https://www.proimagenescolombia.com/photos/57150_10961__imagen_270_400.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://siembrafest.com/seleccion-sf-2026/",
     "date": "2026-08-02",
     "ficha_raw": "2024 | 100' | Ficción – Otro; Soledad; Vejez",
     "formato": "Ficción",
-    "produccion": "Gloria Saavedra Castaño"
+    "produccion": "Gloria Saavedra Castaño",
+    "proimagenes_id": "3116",
+    "proimagenes_verificado": "título exacto + director coincidente — 26 ago 2026"
    },
    "_inherited": {
     "director": "grafia-unificada-con-el-huaquero"
@@ -1367,7 +1369,7 @@
    "country": "Colombia",
    "section": "🎞️ Buenos, Malos y Feos",
    "genre": "Ambiental",
-   "synopsis": "",
+   "synopsis": "Cuando Moisés descubre la red que está apoderándose del agua, debe elegir entre seguir en el negocio que lo sacó de la pobreza... o denunciarlo y asumir las consecuencias. En un país sediento de verdad, Moisés deberá decidir qué está dispuesto a arriesgar: su comodidad, su familia o la vida de millones. Y tendrá que hacerlo antes de que la corriente lo arrastre. Entre 2 Aguas es un thriller ambiental sobre el recurso más importante del planeta y la estrategia de un poderoso grupo económico decidido a convertir su acceso en un negocio multimillonario, cueste lo que cueste.",
    "synopsis_lang": "es",
    "poster": "/1sHXXkdwsKwrwSrfLmvCG9WL2EW.jpg",
    "posterSource": "tmdb",
@@ -1379,7 +1381,9 @@
     "produccion": "Carlos Gabriel Vergara M.",
     "tmdb_id": 1656180,
     "tmdb_verificado": "director coincidente (≥2 partes del nombre) — 26 ago 2026",
-    "lb_verificado": "director coincidente en JSON-LD — 26 ago 2026"
+    "lb_verificado": "director coincidente en JSON-LD — 26 ago 2026",
+    "proimagenes_id": "3168",
+    "proimagenes_verificado": "título exacto + director coincidente — 26 ago 2026"
    },
    "synopsis_en": "When Moses discovers the network taking control of the water supply, he must choose between staying in the business that lifted him out of poverty… or exposing it and facing the consequences. In a country thirsty for truth, Moses will have to decide what he’s willing to risk: his comfort, his family, or the lives of millions. And he’ll have to do it before the current pulls him under.  Between Two Waters is an environmental thriller about the planet’s most vital resource and the strategy of a powerful economic group determined to turn access to it into a multibillion-dollar business—no matter the cost.",
    "lbSlug": "entre-2-aguas"
