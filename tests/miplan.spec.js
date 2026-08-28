@@ -483,3 +483,56 @@ test('T62 — con filtro de ciudad, la tripleta ambigua entra por TU sede', asyn
     (savedAgenda.schedule.find(e => e._title === c.t) || {}).venue, caso);
   expect(venue, 'entró la función de tu ciudad, no la primera del catálogo').toContain('Bogotá');
 });
+
+// ── T116 — «Día libre en tu Plan» no se apelmaza contra el día ni se encaja ───
+// Reportado por Juan con captura (26 ago 2026). Dos cosas, las dos medidas:
+//   · el rótulo del día quedaba a 0px del aviso — .mplan-list-hdr tenía el
+//     padding inferior en 0, así que «Sábado 5» se apoyaba encima de la caja.
+//   · el aviso dibujaba SU PROPIA tarjeta (fondo + borde + radio) dentro de
+//     .mplan-wrap, que ya es el contenedor con su borde y su radio: dos cajas
+//     anidadas diciendo lo mismo. Contra la regla del 29 jul («un aviso es una
+//     NOTA al margen, no una tarjeta»), de la que este selector se había
+//     escapado porque [aviso-sin-caja] vigila por NOMBRE de selector.
+// Queda el filete ámbar: no rodea nada, marca que el aviso es accionable.
+test('T116 — el aviso de día libre respira y no se encaja en otra caja', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00');
+  const r = await page.evaluate(() => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    // un plan con algo, para estar en Mi Plan de verdad
+    const f = FILMS.filter(x => x.day === '2026-09-04' && x.time)[0];
+    tap('addSuggestion', { title: f.title, day: f.day, time: f.time });
+    switchMainNav('mnav-miplan'); showAgView();
+    // el día que reprodujo la captura: sin funciones en el plan, CON sugerencias
+    const sugs = getSuggestions();
+    const enPlan = new Set(((savedAgenda || {}).schedule || []).map(s => s.day));
+    const i = DAY_KEYS.findIndex(d => !enPlan.has(d) && (sugs[d] || []).length > 0);
+    if (i < 0) return { sinCaso: true };
+    activeMiPlanDay = i; renderAgenda();
+
+    const cta = document.querySelector('.cta-ctx-c');
+    const nombre = document.querySelector('.mplan-day-name');
+    if (!cta || !nombre) return { faltaAlgo: !cta ? 'aviso' : 'rótulo' };
+    const cs = getComputedStyle(cta);
+    // cajas que pintan entre el aviso y la vista
+    let cajas = 0, p = cta;
+    for (let k = 0; k < 4 && p; k++, p = p.parentElement) {
+      const s = getComputedStyle(p);
+      if (s.backgroundColor !== 'rgba(0, 0, 0, 0)' || parseFloat(s.borderTopWidth) > 0) cajas++;
+    }
+    return {
+      aire: Math.round(cta.getBoundingClientRect().top - nombre.getBoundingClientRect().bottom),
+      fondo: cs.backgroundColor, bordeArriba: cs.borderTopWidth, radio: cs.borderTopLeftRadius,
+      fileteIzq: parseFloat(cs.borderLeftWidth), cajas
+    };
+  });
+  expect(r.sinCaso).toBeFalsy();
+  expect(r.faltaAlgo).toBeFalsy();
+  expect(r.aire).toBeGreaterThanOrEqual(8);        // antes: 0
+  expect(r.fondo).toBe('rgba(0, 0, 0, 0)');        // sin fondo propio
+  expect(parseFloat(r.bordeArriba)).toBe(0);       // sin recuadro
+  expect(parseFloat(r.radio)).toBe(0);             // ni esquinas de tarjeta
+  expect(r.fileteIzq).toBeGreaterThan(0);          // pero SÍ la marca de accionable
+  expect(r.cajas).toBe(1);                         // solo .mplan-wrap, el contenedor real
+});
