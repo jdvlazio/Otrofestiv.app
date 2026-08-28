@@ -1,8 +1,8 @@
 {
  "_provenance": {
   "fuente": "Instagram @siembrafest — serie «Presentamos <sección>» (captions con Programa I..N)",
-  "capturado": "2026-08-23",
-  "nota": "El festival agrupó la Selección en PROGRAMAS por sección — estructura que la web NO publica y que es la antesala de films[]: cuando llegue la programación, cada programa será presumiblemente una función. Serie EN CURSO al capturar: el post de Ojo Pelao tenía 1 hora. FALTAN 2 secciones: Sabores en Escena y Así es Cundinamarca."
+  "capturado": "2026-08-23 (7 secciones) · 2026-08-26 (Sabores en Escena y Así es Cundinamarca, completada la serie)",
+  "nota": "El festival agrupó la Selección en PROGRAMAS por sección — estructura que la web NO publica y que es la antesala de films[]: cuando llegue la programación, cada programa será presumiblemente una función. SERIE COMPLETA: las 9 secciones publicadas. Leído en el navegador con sesión, nunca por fetch (cicatriz QAFF: el fetch da falsos negativos en IG)."
  },
  "programas": {
   "🏺 Mujeres que sostienen la vida": {
@@ -141,6 +141,28 @@
     "La pecera",
     "Un pájaro más"
    ]
+  },
+  "🍲 Sabores en Escena": {
+   "_post": "2026-08-24 (DcelBcQoD1S)",
+   "I": [
+    "Phakhakhe Pi'txi - Minga de pensamiento",
+    "La Asociación",
+    "Somos Historias: Casaramano, sagrado y vida"
+   ]
+  },
+  "🌄 Así es Cundinamarca": {
+   "_post": "2026-08-23 (Dcb_hTGICGX)",
+   "I": [
+    "Elipsis",
+    "Trigos",
+    "Herminda",
+    "Teresa",
+    "La muerte de Elías",
+    "Gachalá, entre el miedo y la memoria"
+   ],
+   "II": [
+    "XIE. Defensa de la vida"
+   ]
   }
  },
  "_discrepancias_ig_vs_web": [
@@ -151,5 +173,26 @@
   "Años: La gran hazaña IG 2024/web 2025 · Irredentos IG 2025/web 2024 · Orígenes IG 2025/web 2024 · Payasadas IG 2024/web 2025",
   "Directores nuevos que la web no da con tanto detalle: ver captions (p.ej. Zizuma — Fátima Correa Hurtado)"
  ],
- "_conteo": "7 de 9 secciones publicadas · 21 programas · 74 obras colocadas en programa (3 con variante de título, ver _discrepancias)"
+ "_conteo": "9 de 9 secciones publicadas · 24 programas · 84 obras colocadas en programa (3 con variante de título, ver _discrepancias)",
+ "_cierre_del_cruce": {
+  "verificado": "2026-08-26",
+  "resultado": "84 obras en programas = 84 obras del catálogo. TODAS colocadas.",
+  "metodo": "cruce por título con emparejamiento laxo (sin acentos, sin puntuación). El exacto habría dado 3 por perdidas.",
+  "variantes_a_reconciliar": [
+   {
+    "catalogo": "HDLT",
+    "ig": "HDLT (Hijo de la Tierra)"
+   },
+   {
+    "catalogo": "Cantos al fuego de Bolar",
+    "ig": "Cantos al juego de Bolar",
+    "nota": "Juan la señaló el 23 ago: puede ser la misma que estuvo en Tercer Tiempo. Preguntar al festival."
+   },
+   {
+    "catalogo": "Emechiche, el renacer de los cabeciblanco",
+    "ig": "Emechiche, el renacer de los cabeciblancos",
+    "nota": "singular/plural"
+   }
+  ]
+ }
 }
