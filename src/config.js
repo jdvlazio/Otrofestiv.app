@@ -725,7 +725,33 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     keyArt:'/assets/keyart/ficmontanas2026-v2.jpg',
     films:null,posters:null,lbSlugs:{}
-  }
+  },
+  'siembrafest2026': {
+    name:'SiembraFest',fullName:'SiembraFest — Festival de Cine Colombiano al Campo',shortName:'SIEMBRAFEST',
+    city:'Sasaima y Villeta',country:'CO',
+    dates:'9–18 SEP',dates_en:'SEP 9–18',year:2026,timezoneOffset:'-05:00',
+    storageKey:'siembrafest2026_',festivalStartStr:'2026-09-09T00:00:00',festivalEndStr:'2026-09-18T23:00:00',
+    festivalDates:{'2026-09-09':'2026-09-09','2026-09-10':'2026-09-10','2026-09-11':'2026-09-11','2026-09-12':'2026-09-12','2026-09-13':'2026-09-13','2026-09-14':'2026-09-14','2026-09-15':'2026-09-15','2026-09-16':'2026-09-16','2026-09-17':'2026-09-17','2026-09-18':'2026-09-18'},
+    days:[{k:'2026-09-09',d:9,lbl:'MIÉ'},{k:'2026-09-10',d:10,lbl:'JUE'},{k:'2026-09-11',d:11,lbl:'VIE'},{k:'2026-09-12',d:12,lbl:'SÁB'},{k:'2026-09-13',d:13,lbl:'DOM'},{k:'2026-09-14',d:14,lbl:'LUN'},{k:'2026-09-15',d:15,lbl:'MAR'},{k:'2026-09-16',d:16,lbl:'MIÉ'},{k:'2026-09-17',d:17,lbl:'JUE'},{k:'2026-09-18',d:18,lbl:'VIE'}],
+    dayKeys:['2026-09-09','2026-09-10','2026-09-11','2026-09-12','2026-09-13','2026-09-14','2026-09-15','2026-09-16','2026-09-17','2026-09-18'],
+    dayShort:{'2026-09-09':'MIÉ 9','2026-09-10':'JUE 10','2026-09-11':'VIE 11','2026-09-12':'SÁB 12','2026-09-13':'DOM 13','2026-09-14':'LUN 14','2026-09-15':'MAR 15','2026-09-16':'MIÉ 16','2026-09-17':'JUE 17','2026-09-18':'VIE 18'},
+    dayShort_en:{'2026-09-09':'WED 9','2026-09-10':'THU 10','2026-09-11':'FRI 11','2026-09-12':'SAT 12','2026-09-13':'SUN 13','2026-09-14':'MON 14','2026-09-15':'TUE 15','2026-09-16':'WED 16','2026-09-17':'THU 17','2026-09-18':'FRI 18'},
+    dayLong:{'2026-09-09':'Miércoles 9 de septiembre','2026-09-10':'Jueves 10 de septiembre','2026-09-11':'Viernes 11 de septiembre','2026-09-12':'Sábado 12 de septiembre','2026-09-13':'Domingo 13 de septiembre','2026-09-14':'Lunes 14 de septiembre','2026-09-15':'Martes 15 de septiembre','2026-09-16':'Miércoles 16 de septiembre','2026-09-17':'Jueves 17 de septiembre','2026-09-18':'Viernes 18 de septiembre'},
+    prioLimit:5,
+    // NO SE PUBLICA: falta la programación entera. El catálogo está completo (84
+    // obras en 24 programas) pero sin día·hora·sede no hay films[]. La entrada
+    // existe desde ya para que el montaje sea solo ensamblar cuando llegue.
+    group:'test',
+    // Sasaima y Villeta están a 12 km por la misma vía: es UN territorio de
+    // traslado. Sin esto la app diría «es en otra ciudad» en vez de los minutos
+    // — el mismo caso que Cinemancia en el Valle de Aburrá. REVISAR cuando
+    // lleguen las sedes: el radar dice que Proimágenes lista además Supatá y
+    // Anolaima, y eso cambiaría el veredicto.
+    metroArea:true,
+    keyArt:'/assets/keyart/siembrafest2026-v2.jpg',
+    tagline:'Festival de Cine Colombiano al Campo',
+    films:null,posters:null,lbSlugs:{}
+  },
 };// Festival data loaded async from festivals/<id>.json via loadFestival()
 
 // ── VENUES ───────────────────────────────────────────────────────────────────
@@ -766,6 +792,20 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── SiembraFest 11 · Sasaima y Villeta ────────────────────────────────
+  // Nombres VERBATIM del festival; el emoji y el arquetipo son nuestra capa.
+  // Sin display EN a propósito: son nombres de autor en español —«Ojo Pelao»,
+  // «Cinema Patatús»— y la regla de esta tabla omite las secciones de marca
+  // antes que inventarles traducción.
+  '🏺 Mujeres que sostienen la vida': 'Perspectivas / Miradas',
+  '❤️‍🩹 Amores & Desamores': 'Perspectivas / Miradas',
+  '🪶 Estampas': 'Cortos / Programas',
+  '👻 Cinema Patatús': 'Muestra / País',
+  '🎞️ Buenos, Malos y Feos': 'Cortos / Programas',
+  '💀 Muertos de Risa': 'Cortos / Programas',
+  '👁️ Ojo Pelao': 'Perspectivas / Miradas',
+  '🍲 Sabores en Escena': 'Muestra / País',
+  '🗺️ Así es Cundinamarca': 'Muestra / País',
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
   '📺 Primetime': 'Especiales / Eventos',
   '🔎 Discovery': 'Perspectivas / Miradas',
