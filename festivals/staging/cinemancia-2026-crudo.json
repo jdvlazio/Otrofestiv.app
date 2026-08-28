@@ -102,10 +102,7 @@
      "duracion_min": 37
     }
    ],
-   "seccion": "La sutil materia. Sergio Navarro",
-   "poster": "/assets/cinemancia/seccion-la-sutil-materia-sergio-navarro.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La sutil materia. Sergio Navarro"
   },
   {
    "dia": "2026-09-04",
@@ -204,10 +201,7 @@
    },
    "has_qa": true,
    "qa_type": "guests",
-   "seccion": "Febril incisión. El cine de Thomas Fürhapter",
-   "poster": "/assets/cinemancia/seccion-febril-incision-thomas-furhapter.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
   },
   {
    "dia": "2026-09-04",
@@ -427,10 +421,7 @@
      "duration": 15
     }
    ],
-   "is_cortos": true,
-   "poster": "/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "is_cortos": true
   },
   {
    "dia": "2026-09-04",
@@ -439,7 +430,7 @@
    "_src": "PDF oficial de programación del festival",
    "duracion_min": 84,
    "acceso": "Entrada libre",
-   "titulo": "Dice que… + Las picapedreras",
+   "titulo": "Dice que…",
    "obras": [
     {
      "titulo": "Dice que…",
@@ -454,33 +445,9 @@
      "tmdb_id": 1564971,
      "lbSlug": "dice-que",
      "duracion_min": 68
-    },
-    {
-     "titulo": "Las picapedreras",
-     "director": "Azul Aizenberg",
-     "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
-     "pais": "Argentina",
-     "anio": 2021,
-     "sinopsis": "No hay imágenes de la Huelga Grande de Tandil, llevada a cabo en 1908 por los obreros picapedreros durante casi un año. Las mujeres, todas venidas del otro lado del océano a título de esposas, sabotearon los intentos de los patrones por torcer la rebelión. Las herramientas del trabajo doméstico fueron sus armas para la lucha de clases, en un gesto inédito que reunió sin proponérselo, género y condición obrera. A un siglo de distancia, este documental recupera sus testimonios orales para reconstruir su historia con imágenes de películas ajenas, buscando en los gestos de otras mujeres las imágenes ausentes de las picapedreras.",
-     "synopsis_en": "A history book, a film saved from the dictatorship, an exiled film director, and a collection of pirated films. The filmmaker traces the images of the women who led to the triumph of the longest strike in Argentine history.",
-     "title_en": "The Stonebreakers",
-     "poster": "https://image.tmdb.org/t/p/w500/8c80lOeLRfsC25rBoheC9nU1bh5.jpg",
-     "posterSource": "tmdb",
-     "tmdb_id": 877043,
-     "lbSlug": "the-stonebreakers",
-     "duracion_min": 16,
-     "title": "Las picapedreras",
-     "country": "Argentina",
-     "year": 2021,
-     "duration": 16
     }
    ],
-   "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
-   "_obras_src": "obra que faltaba, enviada por el festival (21 AGO)",
-   "_titulo_src": "programa doble: unido con «+», como lo escribe la parrilla",
-   "poster": "/assets/cinemancia/seccion-historias-del-cine-argentina.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio"
   },
   {
    "dia": "2026-09-04",
@@ -588,10 +555,7 @@
      "duracion_min": 16
     }
    ],
-   "seccion": "Competencia de cortometrajes",
-   "poster": "/assets/cinemancia/programa-cortos-1.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de programa enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Competencia de cortometrajes"
   },
   {
    "dia": "2026-09-05",
@@ -617,10 +581,7 @@
      "duracion_min": 81
     }
    ],
-   "seccion": "Sick and Dirty. Curaduría de Michael Koresky",
-   "poster": "/assets/cinemancia/seccion-sick-and-dirty.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Sick and Dirty. Curaduría de Michael Koresky"
   },
   {
    "dia": "2026-09-05",
@@ -726,10 +687,7 @@
      "duracion_min": 10
     }
    ],
-   "seccion": "Competencia de cortometrajes",
-   "poster": "/assets/cinemancia/programa-cortos-2.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de programa enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Competencia de cortometrajes"
   },
   {
    "dia": "2026-09-05",
@@ -755,10 +713,7 @@
      "duracion_min": 102
     }
    ],
-   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
-   "poster": "/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-05",
@@ -883,9 +838,6 @@
      "duracion_min": 30
     }
    ],
-   "poster": "/assets/cinemancia/seccion-la-sutil-materia-sergio-navarro.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3",
    "_obras_src": "contenido tomado del otro pase del MISMO programa (mismo nombre y misma duración)"
   },
   {
@@ -987,10 +939,7 @@
      "duracion_min": 21
     }
    ],
-   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
-   "poster": "/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-05",
@@ -1075,10 +1024,7 @@
    },
    "has_qa": true,
    "qa_type": "guests",
-   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
-   "poster": "/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-06",
@@ -1143,10 +1089,7 @@
      "duracion_min": 95
     }
    ],
-   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
-   "poster": "/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-06",
@@ -1239,7 +1182,7 @@
     },
     {
      "titulo": "Chuura",
-     "director": "Evgenia Arbugaeva",
+     "director": "Chuuraa",
      "pais": "Rusia, Reino Unido",
      "anio": 2026,
      "sinopsis": "En el remoto Ártico siberiano, un científico indígena sakha desciende a las profundidades del permafrost que se derrite. En busca de una criatura antigua, se abre paso por cuevas peligrosas y claustrofóbicas hasta el reino mítico del inframundo.",
@@ -1293,10 +1236,7 @@
      "duracion_min": 14
     }
    ],
-   "seccion": "Competencia de cortometrajes",
-   "poster": "/assets/cinemancia/programa-cortos-3.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de programa enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Competencia de cortometrajes"
   },
   {
    "dia": "2026-09-06",
@@ -1322,10 +1262,7 @@
      "duracion_min": 90
     }
    ],
-   "seccion": "Febril incisión. El cine de Thomas Fürhapter",
-   "poster": "/assets/cinemancia/seccion-febril-incision-thomas-furhapter.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
   },
   {
    "dia": "2026-09-06",
@@ -1365,10 +1302,7 @@
      "duracion_min": 75
     }
    ],
-   "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
-   "poster": "/assets/cinemancia/seccion-historias-del-cine-argentina.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio"
   },
   {
    "dia": "2026-09-07",
@@ -1394,10 +1328,7 @@
      "duracion_min": 92
     }
    ],
-   "seccion": "Febril incisión. El cine de Thomas Fürhapter",
-   "poster": "/assets/cinemancia/seccion-febril-incision-thomas-furhapter.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
   },
   {
    "dia": "2026-09-07",
@@ -1423,10 +1354,7 @@
      "duracion_min": 108
     }
    ],
-   "seccion": "Sick and Dirty. Curaduría de Michael Koresky",
-   "poster": "/assets/cinemancia/seccion-sick-and-dirty.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Sick and Dirty. Curaduría de Michael Koresky"
   },
   {
    "dia": "2026-09-07",
@@ -1466,10 +1394,7 @@
      "duracion_min": 9
     }
    ],
-   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
-   "poster": "/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-07",
@@ -1724,10 +1649,7 @@
    },
    "has_qa": true,
    "qa_type": "guests",
-   "is_cortos": true,
-   "poster": "/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "is_cortos": true
   },
   {
    "dia": "2026-09-08",
@@ -1793,10 +1715,7 @@
      "duracion_min": 8
     }
    ],
-   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
-   "poster": "/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-08",
@@ -1993,10 +1912,7 @@
      "duracion_min": 118
     }
    ],
-   "seccion": "Sick and Dirty. Curaduría de Michael Koresky",
-   "poster": "/assets/cinemancia/seccion-sick-and-dirty.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Sick and Dirty. Curaduría de Michael Koresky"
   },
   {
    "dia": "2026-09-08",
@@ -2036,10 +1952,7 @@
      "duracion_min": 37
     }
    ],
-   "seccion": "La sutil materia. Sergio Navarro",
-   "poster": "/assets/cinemancia/seccion-la-sutil-materia-sergio-navarro.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La sutil materia. Sergio Navarro"
   },
   {
    "dia": "2026-09-09",
@@ -2065,10 +1978,7 @@
      "duracion_min": 102
     }
    ],
-   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
-   "poster": "/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-09",
@@ -2134,10 +2044,7 @@
      "duration": 6
     }
    ],
-   "is_cortos": true,
-   "poster": "/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "is_cortos": true
   },
   {
    "dia": "2026-09-09",
@@ -2229,10 +2136,7 @@
      "duracion_min": 78
     }
    ],
-   "seccion": "Febril incisión. El cine de Thomas Fürhapter",
-   "poster": "/assets/cinemancia/seccion-febril-incision-thomas-furhapter.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
   },
   {
    "dia": "2026-09-09",
@@ -2472,10 +2376,7 @@
      "duracion_min": 16
     }
    ],
-   "seccion": "Competencia de cortometrajes",
-   "poster": "/assets/cinemancia/programa-cortos-1.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de programa enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Competencia de cortometrajes"
   },
   {
    "dia": "2026-09-09",
@@ -2501,10 +2402,7 @@
      "duracion_min": 90
     }
    ],
-   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
-   "poster": "/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-10",
@@ -2568,10 +2466,7 @@
      "duracion_min": 30
     }
    ],
-   "seccion": "La sutil materia. Sergio Navarro",
-   "poster": "/assets/cinemancia/seccion-la-sutil-materia-sergio-navarro.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La sutil materia. Sergio Navarro"
   },
   {
    "dia": "2026-09-10",
@@ -2685,10 +2580,7 @@
      "duracion_min": 78
     }
    ],
-   "seccion": "Febril incisión. El cine de Thomas Fürhapter",
-   "poster": "/assets/cinemancia/seccion-febril-incision-thomas-furhapter.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
   },
   {
    "dia": "2026-09-10",
@@ -2728,10 +2620,7 @@
      "duracion_min": 95
     }
    ],
-   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
-   "poster": "/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-10",
@@ -2797,10 +2686,7 @@
      "duracion_min": 4
     }
    ],
-   "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio",
-   "poster": "/assets/cinemancia/seccion-historias-del-cine-argentina.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Historia(s) del cine: Argentina. Curaduría de José Miccio"
   },
   {
    "dia": "2026-09-10",
@@ -3002,10 +2888,7 @@
      "duracion_min": 110
     }
    ],
-   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
-   "poster": "/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-10",
@@ -3077,10 +2960,7 @@
      "duracion_min": 78
     }
    ],
-   "seccion": "Febril incisión. El cine de Thomas Fürhapter",
-   "poster": "/assets/cinemancia/seccion-febril-incision-thomas-furhapter.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
   },
   {
    "dia": "2026-09-11",
@@ -3120,10 +3000,7 @@
      "duracion_min": 8
     }
    ],
-   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
-   "poster": "/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-11",
@@ -3149,10 +3026,7 @@
      "duracion_min": 110
     }
    ],
-   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva",
-   "poster": "/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "La primavera llega para los que esperan. El cine de José Luis Torres Leiva"
   },
   {
    "dia": "2026-09-11",
@@ -3199,7 +3073,7 @@
    "hora": "17:00",
    "sede": "Centro Colombo Americano Sede centro sala 2 Medellín",
    "_src": "hoja «Otros programas» que envió el festival (orden de proyección)",
-   "duracion_min": 65,
+   "duracion_min": 71,
    "acceso": "Entrada libre",
    "titulo": "Programa de cortometrajes Rajenda Gour",
    "obras": [
@@ -3299,8 +3173,7 @@
      "duration": 7
     }
    ],
-   "is_cortos": true,
-   "_duracion_src": "confirmada por el festival (21 AGO)"
+   "is_cortos": true
   },
   {
    "dia": "2026-09-11",
@@ -3327,7 +3200,7 @@
     },
     {
      "titulo": "Chuura",
-     "director": "Evgenia Arbugaeva",
+     "director": "Chuuraa",
      "pais": "Rusia, Reino Unido",
      "anio": 2026,
      "sinopsis": "En el remoto Ártico siberiano, un científico indígena sakha desciende a las profundidades del permafrost que se derrite. En busca de una criatura antigua, se abre paso por cuevas peligrosas y claustrofóbicas hasta el reino mítico del inframundo.",
@@ -3382,10 +3255,7 @@
     }
    ],
    "seccion": "Competencia de cortometrajes",
-   "_duracion_src": "confirmada por el festival (21 AGO)",
-   "poster": "/assets/cinemancia/programa-cortos-3.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de programa enviado por el festival (25 AGO), estirado a 2:3"
+   "_duracion_src": "confirmada por el festival (21 AGO)"
   },
   {
    "dia": "2026-09-11",
@@ -3470,10 +3340,7 @@
    },
    "has_qa": true,
    "qa_type": "guests",
-   "seccion": "Febril incisión. El cine de Thomas Fürhapter",
-   "poster": "/assets/cinemancia/seccion-febril-incision-thomas-furhapter.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de sección enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Febril incisión. El cine de Thomas Fürhapter"
   },
   {
    "dia": "2026-09-11",
@@ -3553,10 +3420,7 @@
      "duracion_min": 10
     }
    ],
-   "seccion": "Competencia de cortometrajes",
-   "poster": "/assets/cinemancia/programa-cortos-2.jpg",
-   "posterSource": "oficial",
-   "_poster_src": "arte de programa enviado por el festival (25 AGO), estirado a 2:3"
+   "seccion": "Competencia de cortometrajes"
   },
   {
    "dia": "2026-09-12",
