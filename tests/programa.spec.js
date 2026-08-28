@@ -2605,3 +2605,49 @@ test('T108 — la SEDE es parte de la identidad: agendar en una ciudad no marca 
   expect(r.otraMarcada,
     `agendar en «${r.sedeA}» no puede marcar la función de «${r.sedeB}»`).toBe(false);
 });
+
+// ── T117 — el filtro de Prensa se lee como filtro, no como un botón mudo ─────
+// Una usuaria pidió el filtro de Prensa e Industria para TIFF y no lo encontró
+// (Juan, 26 ago 2026). Estaba al lado de Sección y Lugar pero era otro
+// componente: un cuadrado de 26px con fondo y solo un icono, mientras sus dos
+// hermanos son texto+icono sin fondo. La razón escrita era que «la barra a
+// 390px no admite una cuarta etiqueta» — se midió y era falsa: con Hoy+Mañana
+// visibles y todos los filtros, el espaciador deja 45px libres en español y 28
+// en inglés a 390px, y 30/13 a 375px. La palabra cuesta 18-25px.
+// El test mide la BARRA, no el CSS: que quepa es la mitad del requisito.
+test('T117 — Prensa tiene etiqueta, anatomía de filtro, y la barra sigue cabiendo', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-12T14:00');
+  for (const lang of ['es', 'en']) {
+    const r = await page.evaluate((L) => {
+      const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+        Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+        document.body.appendChild(b); b.click(); b.remove(); };
+      tap('selectLang', { code: L });
+      switchMainNav('mnav-cartelera');
+      // el caso PEOR: los dos tabs de modo visibles a la vez
+      const hoy = document.getElementById('pmode-hoy'), man = document.getElementById('pmode-manana');
+      hoy.style.display = ''; man.style.display = '';
+      const pb = document.getElementById('prensa-btn');
+      const lbl = document.getElementById('prensa-lbl');
+      const sec = document.getElementById('seccion-btn');
+      const cs = pb && getComputedStyle(pb), cse = sec && getComputedStyle(sec);
+      const sp = document.querySelector('.pmode-spacer');
+      return {
+        etiqueta: lbl && lbl.textContent.trim(),
+        libre: sp ? Math.round(sp.getBoundingClientRect().width) : -1,
+        // misma anatomía que su hermano Sección
+        fondo: cs && cs.backgroundColor, borde: cs && cs.borderTopWidth,
+        fuente: cs && cs.fontSize, fuenteHermano: cse && cse.fontSize,
+        icono: pb && (() => { const s = pb.querySelector('svg'); return s ? s.getAttribute('width') : null; })(),
+        iconoHermano: sec && (() => { const s = sec.querySelector('svg'); return s ? s.getAttribute('width') : null; })()
+      };
+    }, lang);
+    expect(r.etiqueta, `hay etiqueta en ${lang}`).toBeTruthy();
+    expect(r.etiqueta.length, `la etiqueta es corta en ${lang}`).toBeLessThanOrEqual(9);
+    expect(r.libre, `la barra sigue cabiendo en ${lang}`).toBeGreaterThan(0);
+    expect(r.fondo, `sin fondo propio en ${lang}`).toBe('rgba(0, 0, 0, 0)');
+    expect(parseFloat(r.borde), `sin borde en ${lang}`).toBe(0);
+    expect(r.fuente, `misma tipografía que Sección en ${lang}`).toBe(r.fuenteHermano);
+    expect(Math.abs(+r.icono - +r.iconoHermano), `icono a la par de Sección en ${lang}`).toBeLessThanOrEqual(1);
+  }
+});
