@@ -112,6 +112,12 @@ ARTE_DE_PROGRAMA = {
     'Competencia de cortometrajes Programa 1': '/assets/cinemancia/programa-cortos-1.jpg',
     'Competencia de cortometrajes Programa 2': '/assets/cinemancia/programa-cortos-2.jpg',
     'Competencia de cortometrajes Programa 3': '/assets/cinemancia/programa-cortos-3.jpg',
+    # Llegaron el 28 AGO. El arte los titula solo «Programa 01» y «02», sin
+    # nombrar la sección: si se hubieran leído por el número habrían ido a la
+    # Competencia de cortometrajes y le habrían cambiado el afiche. Son de
+    # NUEVAS VOCES — lo dicen sus cinco obras, cruzadas 5/5 contra el film_list.
+    'Competencia Nuevas Voces Programa 1': '/assets/cinemancia/nuevas-voces-1.jpg',
+    'Competencia Nuevas Voces Programa 2': '/assets/cinemancia/nuevas-voces-2.jpg',
 }
 
 # ── Fotogramas oficiales del festival ─────────────────────────────────────────
