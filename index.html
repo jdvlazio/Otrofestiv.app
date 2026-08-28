@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608280713">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608280713">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608280811">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608280811">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -2870,8 +2870,8 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .lugar-btn{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);background:none;border:none;cursor:pointer;font-family:var(--font);padding:var(--sp-1) 0;transition:color var(--tr-base);white-space:nowrap;-webkit-tap-highlight-color:transparent;touch-action:manipulation;position:relative}
 /* Prensa e Industria — mismo cuerpo que los otros chips de la barra; en `.on`
    toma el ámbar del estado activo, igual que el resto del canon de botones. */
-.prensa-btn{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border:none;border-radius:var(--r-sm);background:var(--surf-2);color:var(--txt-2);cursor:pointer;padding:0}
-.prensa-btn.on{background:var(--amber);color:#000}
+.prensa-btn{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);background:none;border:none;cursor:pointer;font-family:var(--font);padding:var(--sp-1) 0;transition:color var(--tr-base);white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.prensa-btn.on{color:var(--amber)}
 /* El eco del interruptor dentro de la fila de función: mismo icono, atenuado,
    inline tras la sede — sin flex-shrink, no puede robarle ancho. */
 .scr-press{display:inline-flex;margin-left:var(--sp-1);color:rgba(240,237,232,.35);flex:none;align-self:center}
@@ -3299,13 +3299,19 @@ setTimeout(function(){
       <span id="lugar-lbl" data-i18n="bar_lugar">Lugar</span>
     </button>
     <!-- Prensa e Industria: solo se muestra en festivales que traen pases de
-         acreditados (loader._sincronizarBotonPrensa). Icono solo, porque la
-         barra a 390px no admite una cuarta etiqueta; cuando está activo, la
-         píldora de filtros activos lo dice con palabras. -->
+         acreditados (loader._sincronizarBotonPrensa). CON ETIQUETA desde el
+         26 ago: era un cuadrado de 26px con fondo, un componente distinto al de
+         sus dos hermanos, y la usuaria que pidió el filtro no lo encontró. La
+         razón vieja —«la barra a 390px no admite una cuarta etiqueta»— se midió
+         y era falsa: con Hoy+Mañana visibles y todos los filtros, el espaciador
+         deja 46px a 390 y 31px a 375, y la palabra cuesta 18-25px. Ahora es
+         texto+icono como Sección y Lugar, y marca activo igual que ellos: el
+         texto en ámbar, no un fondo. -->
     <button class="prensa-btn" id="prensa-btn" data-action="togglePressScreenings" style="display:none"
             aria-pressed="false" data-i18n-aria="bar_prensa" data-i18n-title="bar_prensa"
             title="Prensa e Industria" aria-label="Prensa e Industria">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 011-1h11a1 1 0 011 1v18"/><path d="M17 8h2a1 1 0 011 1v10a2 2 0 01-2 2H4"/><line x1="7" y1="7" x2="14" y2="7"/><line x1="7" y1="11" x2="14" y2="11"/><line x1="7" y1="15" x2="11" y2="15"/></svg>
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 011-1h11a1 1 0 011 1v18"/><path d="M17 8h2a1 1 0 011 1v10a2 2 0 01-2 2H4"/><line x1="7" y1="7" x2="14" y2="7"/><line x1="7" y1="11" x2="14" y2="11"/><line x1="7" y1="15" x2="11" y2="15"/></svg>
+      <span id="prensa-lbl" data-i18n="bar_prensa_corto">Prensa</span>
     </button>
     <!-- single toggle btn — icono refleja estado actual -->
     <button class="view-toggle-btn" id="view-toggle-btn" data-action="toggleProgramaView" data-i18n-aria="aria_cambiar_vista" data-i18n-title="aria_cambiar_vista" title="Cambiar vista" aria-label="Cambiar vista">
@@ -3624,7 +3630,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608280713";
+    s.src="/src/main.js?v=202608280811";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
