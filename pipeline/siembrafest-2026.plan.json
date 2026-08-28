@@ -14,13 +14,12 @@
   "sitemaps": "https://siembrafest.com/wp-sitemap.xml lista los sub-sitemaps por tipo; el campo lastmod dice de un vistazo si hay material nuevo sin descargar nada."
  },
  "_pendientes": [
-  "ESPERANDO RESPUESTA del festival (correo del 24 ago) — ver _contacto_24_ago_2026. Sinopsis 22/84, pósters 32/84, programación 0.",
-  "IG: capturar los posts de SABORES EN ESCENA y ASÍ ES CUNDINAMARCA cuando salgan (serie en curso) → completar el sidecar de programas.",
-  "REVISAR PERIÓDICAMENTE lastmod de wp-sitemap-posts-project-1.xml y wp-sitemap-posts-mec-events-1.xml. Cuando aparezcan entradas de 2026, el catálogo se completa y llega la programación.",
-  "lbSlug: 32 de 85, verificados.",
-  "PROGRAMACIÓN: no existe. Sin día/hora/sede no hay films[] posible.",
-  "SEDES: ninguna todavía. Serán plazas, veredas y espacios no convencionales en Sasaima y Villeta — geocodificar eso va a ser más difícil que un teatro, y el guardián [sedes-apiladas] va a hablar.",
-  "OBRAS HEREDABLES: ≥7 coinciden con FICDEH; y «Refugiar el gesto»/«La tinaja»/«Soñé su nombre» están TAMBIÉN en QAFF 2026 (publicado) con póster+sinopsis+lbSlug verificados — heredar de ahí primero."
+  "PROGRAMACIÓN: sigue sin existir. Es lo único que falta para montar. Sin día·hora·sede no hay films[].",
+  "~45 sinopsis y ~45 afiches: solo pueden venir del festival — de sus fichas /pelicula/<slug>/ cuando publique las de esta edición (hoy las 68 son de 2020-2022) o de la respuesta al correo del 24 ago.",
+  "VIGILAR lastmod de wp-sitemap-posts-project-1.xml y wp-sitemap-posts-mec-events-1.xml: cuando aparezcan entradas de 2026 llegan de golpe las sinopsis Y la parrilla.",
+  "SEDES: ninguna. Serán plazas y veredas; geocodificar eso será más difícil que un teatro y [sedes-apiladas] va a hablar.",
+  "3 variantes de título a confirmar con el festival (ver _cierre_del_cruce en el sidecar de programas).",
+  "Verificar municipios: nuestro registro dice Sasaima y Villeta; Proimágenes lista Villeta, Supatá y Anolaima."
  ],
  "_revision_23_ago_2026": {
   "catalogo": "SINCRONIZADO con la web del 19 ago: 85→84 (−Carlina, −Tentado de difunto, +Chicha la chicharra; «Somos historias (Episodio 2)» retitulada «Somos historias: Casaramano, sagrado y vida»). Cayenas libertarias SIGUE: el parser ingenuo la perdía (trampa del primer <li>), verificado contra el HTML crudo.",
@@ -35,5 +34,14 @@
   "fecha_pedida": "antes del 5 SEP (el festival abre el 9)",
   "antes_de_pedir": "Se agotó lo que podíamos solos: herencia de otros festivales aplicada (4 sinopsis, 2 pósters) y el barrido TMDB ya estaba hecho. Los 62+52 que faltan no están en ninguna otra fuente.",
   "si_no_responden": "La programación puede aparecer sola en su web: mec-events (Modern Events Calendar) es el mismo sistema de ediciones anteriores. Vigilar ese sitemap + los 2 posts de IG que faltan (Sabores en Escena, Así es Cundinamarca)."
+ },
+ "_revision_26_ago_2026": {
+  "programas_ig": "SERIE COMPLETA: 9/9 secciones, 24 programas, 84 obras. Entraron Sabores en Escena (1 prog) y Así es Cundinamarca (2 prog), leídas en el navegador CON SESIÓN — el perfil público topa con el muro de registro.",
+  "cruce_cerrado": "Las 84 obras en programas son EXACTAMENTE las 84 del catálogo. Emparejamiento laxo; el exacto daba 3 por perdidas (variantes de escritura, anotadas en el sidecar de programas).",
+  "enriquecimiento": "Techo de las fuentes automáticas TOCADO. póster 32→39, sinopsis 22→25, synopsis_en 25→31, lbSlug 32→38. De 52 obras sin lbSlug solo 6 están en TMDB; Letterboxd devuelve ESAS MISMAS 6 (importa de TMDB); Proimágenes suma 2. Los cortos rurales colombianos de 2025-26 no están en bases públicas.",
+  "fichas_bloqueadas": "121 fichas ajenas rechazadas por el doble filtro título+director (9 en TMDB, 112 en Proimágenes). Sin él habrían entrado «Teresa» de Fred Zinnemann, «Amor» coreana y «Elipsis» de 2006.",
+  "preparacion_publicacion": "HECHO: los 9 arquetipos de sección en SECTION_ARCHETYPES (bloqueaban la publicación: [seccion-sin-arquetipo] es ERROR), la entrada en FESTIVAL_CONFIG con group:'test', y el keyArt a 2:3 (siembrafest2026-v2.jpg, 400x600 estirado desde 1983x2834).",
+  "sin_display_EN": "A propósito: son nombres de autor en español («Ojo Pelao», «Cinema Patatús»). La tabla EN omite las secciones de marca antes que inventar traducción.",
+  "metroArea": "Puesto en true — Sasaima y Villeta están a 12 km por la misma vía. REVISAR con las sedes: el radar dice que Proimágenes lista además Supatá y Anolaima."
  }
 }
