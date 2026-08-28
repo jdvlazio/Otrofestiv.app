@@ -3235,15 +3235,30 @@ check = 'aviso-sin-caja'
 try:
     import re as _re
     _html = open('index.html', encoding='utf-8').read()
+    # .cta-ctx-c entra el 26 ago: vivía DENTRO de .mplan-wrap, que ya es el
+    # contenedor con su borde y su radio, y dibujaba una segunda caja anidada.
+    # Se escapó de la regla porque este guardián vigila selectores POR NOMBRE.
     _AVISOS = ('.meta-banner{', '.notice-banner-row{', '.prio-stale{',
-               '.notice-detail-amber{', '.notice-detail-green{')
+               '.notice-detail-amber{', '.notice-detail-green{', '.cta-ctx-c{')
     _off = []
     for _sel in _AVISOS:
         _i = _html.find(_sel)
         if _i < 0:
             continue
         _body = _html[_i + len(_sel):_html.index('}', _i)]
-        if 'background' in _body or 'border:' in _body or 'border-radius' in _body:
+        # POR VALOR, no por nombre de propiedad (26 ago): buscar 'background' a
+        # secas marcaba `background:none` —que es justo la AUSENCIA de caja— como
+        # si fuera una. Un chequeo que confunde lo uno con lo otro no deja
+        # escribir el arreglo. Un filete lateral (border-left) tampoco es caja:
+        # no rodea nada, es la marca de accionable.
+        def _pinta(_prop, _cuerpo):
+            _m = _re.search(_prop + r'\s*:\s*([^;}]+)', _cuerpo)
+            if not _m:
+                return False
+            _val = _m.group(1).strip().lower()
+            return _val not in ('none', 'transparent', '0', '0px', 'initial', 'unset')
+        if (_pinta('background', _body) or _pinta('border', _body)
+                or _pinta('border-radius', _body)):
             _off.append(_sel[:-1])
     if _off:
         fail(check, 'aviso(s) con caja (fondo/borde/radio sobre el texto): ' + ', '.join(_off))
@@ -4302,7 +4317,7 @@ try:
         'src/view/helpers.js': 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
         'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
         'src/main.js': 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
-        'src/i18n/i18n.js': 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
+        'src/i18n/i18n.js': 1676,  # +3: bar_prensa_corto en es-en-pt — el filtro de Prensa gana etiqueta (una usuaria no lo encontraba) — 26 ago  # antes 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
         'src/controller/sheets-controller.js': 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
         # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres
