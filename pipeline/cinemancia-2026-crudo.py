@@ -108,10 +108,27 @@ ARTE_DE_FOCO = {
 # los 5 de cada arte coinciden con los 5 del programa, sin sobras ni faltantes.
 # Cubren 6 tarjetas (cada programa tiene dos pases) que no tenían afiche.
 # Mismo tratamiento que los de sección: 4:5 estirado a 2:3, sin recorte.
+# Conversatorios que declaran los propios artes del festival, y que su hoja de
+# charlas no traía. El arte de Nuevas Voces 1 y 2 dice «Foro Metropolitano -
+# Teatro Caribe (Conversación con directores)»: el conversatorio es del pase de
+# TEATRO CARIBE, no de los cuatro. Marcar también los de La Capilla les alargaría
+# la duración en el planificador sin que haya conversatorio — has_qa alimenta
+# durationForTravel.
+CON_CONVERSATORIO = {
+    ('2026-09-08', '18:00', 'Teatro Caribe Itagüí'): 'guests',
+    ('2026-09-10', '18:00', 'Teatro Caribe Itagüí'): 'guests',
+}
+
 ARTE_DE_PROGRAMA = {
     'Competencia de cortometrajes Programa 1': '/assets/cinemancia/programa-cortos-1.jpg',
     'Competencia de cortometrajes Programa 2': '/assets/cinemancia/programa-cortos-2.jpg',
     'Competencia de cortometrajes Programa 3': '/assets/cinemancia/programa-cortos-3.jpg',
+    # Llegaron el 28 AGO. El arte los titula solo «Programa 01» y «02», sin
+    # nombrar la sección: si se hubieran leído por el número habrían ido a la
+    # Competencia de cortometrajes y le habrían cambiado el afiche. Son de
+    # NUEVAS VOCES — lo dicen sus cinco obras, cruzadas 5/5 contra el film_list.
+    'Competencia Nuevas Voces Programa 1': '/assets/cinemancia/nuevas-voces-1.jpg',
+    'Competencia Nuevas Voces Programa 2': '/assets/cinemancia/nuevas-voces-2.jpg',
 }
 
 # ── Fotogramas oficiales del festival ─────────────────────────────────────────
@@ -650,6 +667,10 @@ def main():
             e['_src'] = 'hoja «Otros programas» que envió el festival (orden de proyección)'
 
         _k2 = (f['dia'], f['hora'], f['sede'])
+        if _k2 in CON_CONVERSATORIO:
+            e['has_qa'] = True
+            e['qa_type'] = CON_CONVERSATORIO[_k2]
+            e['_qa_src'] = 'lo declara el arte del programa que envió el festival (28 AGO)'
         if _k2 in DURACION_CORREGIDA:
             e['duracion_min'] = DURACION_CORREGIDA[_k2]
             e['_duracion_src'] = 'confirmada por el festival (21 AGO)'
