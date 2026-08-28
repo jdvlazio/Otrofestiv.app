@@ -3235,15 +3235,30 @@ check = 'aviso-sin-caja'
 try:
     import re as _re
     _html = open('index.html', encoding='utf-8').read()
+    # .cta-ctx-c entra el 26 ago: vivía DENTRO de .mplan-wrap, que ya es el
+    # contenedor con su borde y su radio, y dibujaba una segunda caja anidada.
+    # Se escapó de la regla porque este guardián vigila selectores POR NOMBRE.
     _AVISOS = ('.meta-banner{', '.notice-banner-row{', '.prio-stale{',
-               '.notice-detail-amber{', '.notice-detail-green{')
+               '.notice-detail-amber{', '.notice-detail-green{', '.cta-ctx-c{')
     _off = []
     for _sel in _AVISOS:
         _i = _html.find(_sel)
         if _i < 0:
             continue
         _body = _html[_i + len(_sel):_html.index('}', _i)]
-        if 'background' in _body or 'border:' in _body or 'border-radius' in _body:
+        # POR VALOR, no por nombre de propiedad (26 ago): buscar 'background' a
+        # secas marcaba `background:none` —que es justo la AUSENCIA de caja— como
+        # si fuera una. Un chequeo que confunde lo uno con lo otro no deja
+        # escribir el arreglo. Un filete lateral (border-left) tampoco es caja:
+        # no rodea nada, es la marca de accionable.
+        def _pinta(_prop, _cuerpo):
+            _m = _re.search(_prop + r'\s*:\s*([^;}]+)', _cuerpo)
+            if not _m:
+                return False
+            _val = _m.group(1).strip().lower()
+            return _val not in ('none', 'transparent', '0', '0px', 'initial', 'unset')
+        if (_pinta('background', _body) or _pinta('border', _body)
+                or _pinta('border-radius', _body)):
             _off.append(_sel[:-1])
     if _off:
         fail(check, 'aviso(s) con caja (fondo/borde/radio sobre el texto): ' + ', '.join(_off))
