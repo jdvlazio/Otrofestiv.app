@@ -13,7 +13,7 @@ import { DAYS, DAY_SHORT_EN, _langDates, setCustomPosters, setDayShort, setDaySh
 import { closeFestivalSheet, openCitySheet, openReviewSheet, _reviewDesbloqueado, _pintarBannerRevision } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, scrollDtabsToActive } from '../view/programa.js';
-import { _fixStickyOffset } from '../view/agenda.js';
+import { _fixStickyOffset, renderAgenda } from '../view/agenda.js';
 import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave } from './persistence.js';
 import { report } from '../telemetry.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
@@ -764,6 +764,14 @@ export function togglePressScreenings(){
   }
   _updateProgramaActiveFilter();
   _renderProgramaContent();
+  // Y la vista del PLAN, si es la que está en pantalla (30 ago 2026). El
+  // interruptor es un insumo del plan —entró a planInputSignature—, así que
+  // apagarlo lo deja DESACTUALIZADO; pero acá solo se repintaba Programa, y el
+  // aviso «plan desactualizado» no aparecía hasta que otra cosa disparara un
+  // render. Marcado por dentro y mudo por fuera es lo mismo que no marcarlo:
+  // el usuario seguía viendo un pase de acreditados al que ya no puede entrar.
+  const _agv=document.getElementById('ag-view');
+  if(_agv&&_agv.classList.contains('visible')) renderAgenda();
 }
 
 // Lee la preferencia guardada de ESTE festival. La llama loadFestival antes de

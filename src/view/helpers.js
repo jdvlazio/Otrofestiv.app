@@ -646,7 +646,14 @@ export function planInputSignature(){
     .filter(x=>!x.endsWith(':'))
     .join(';');
   const _ciudad=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
-  return `${_int}#${_pri}#${_av}#${_ciudad}`;
+  // El interruptor de PRENSA es un insumo del plan (30 ago 2026). Faltaba, y por
+  // eso apagarlo dejaba el Plan agendado en un pase de acreditados que la app
+  // misma ya no listaba: la función desaparecía de FILMS y la entrada seguía en
+  // savedAgenda, sin aviso. Con el interruptor dentro de la firma, el Plan queda
+  // marcado como desactualizado y el usuario decide cuándo recalcular — que es la
+  // regla de Juan del 18 ago: «el Plan en pantalla no se reemplaza solo».
+  const _prensa=(typeof showPress!=='undefined'&&showPress)?'P':'-';
+  return `${_int}#${_pri}#${_av}#${_ciudad}#${_prensa}`;
 }
 
 export function travelWarn(s1,s2){
