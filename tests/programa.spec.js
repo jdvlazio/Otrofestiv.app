@@ -505,13 +505,22 @@ test('T55 — la ficha filtra por ciudad, pero nunca esconde lo que ya elegiste'
 // DESPUÉS y pisaba el verdadero. El dueño del mensaje es toggleWL.
 test('T60 — el toast del corazón es el mismo desde la ficha y desde la grilla', async ({ page }) => {
   await enterFestival(page, 'ficdeh2026', '2026-08-16T10:00');
+  // Elige una obra cuyas compañeras SOBREVIVEN a la regla de intersección
+  // (30 ago): antes bastaba con estar en una función de 3+, pero desde que las
+  // compañeras son las que acompañan en TODAS las funciones del título, una obra
+  // que se repite en varias ciudades con distinto acompañamiento ya no arrastra
+  // a nadie — y el toast, con razón, no dice «+N». El test mide que el toast sea
+  // EL MISMO desde la ficha y desde la grilla; su dato tiene que ejercer ese caso.
   const anclada = await page.evaluate(() => {
-    const conSlot = FILMS.filter(f => f._slotKey);
-    const cuenta = {};
-    conSlot.forEach(f => { cuenta[f._slotKey] = (cuenta[f._slotKey] || 0) + 1; });
-    const k = Object.keys(cuenta).find(x => cuenta[x] >= 3);
-    return conSlot.find(f => f._slotKey === k).title;
+    const titulos = [...new Set(FILMS.filter(f => f._slotKey).map(f => f.title))];
+    for (const t of titulos) {
+      const slots = [...new Set(FILMS.filter(f => f.title === t && f._slotKey).map(f => f._slotKey))];
+      const porSlot = slots.map(k => new Set(FILMS.filter(f => f._slotKey === k && f.title !== t).map(f => f.title)));
+      if (porSlot.length && [...porSlot[0]].filter(x => porSlot.every(s => s.has(x))).length >= 2) return t;
+    }
+    return null;
   });
+  expect(anclada, 'hay una obra con compañeras estables en este festival').toBeTruthy();
   const leerToast = () => page.evaluate(() => {
     const el = document.querySelector('.toast, [class*=toast]');
     return el ? el.innerText.replace(/\n/g, ' ').trim() : '';

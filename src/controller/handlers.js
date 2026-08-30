@@ -54,9 +54,20 @@ export function toggleWL(title,e){
   // ANCLAJE DE FUNCIÓN: obras programadas en la MISMA función (misma sala y
   // horario, una tras otra) comparten `_slotKey` — lo marca el loader en los
   // festivales que lo declaran. Se calcula acá para tenerlo en todo el flujo.
-  const _slotKeys=new Set(FILMS.filter(f=>f.title===title&&f._slotKey).map(f=>f._slotKey));
-  const _hermanas=_slotKeys.size
-    ?[...new Set(FILMS.filter(f=>f._slotKey&&_slotKeys.has(f._slotKey)&&f.title!==title).map(f=>f.title))]
+  // INTERSECCIÓN, no unión (26 ago 2026). Antes se juntaban los _slotKey de TODAS
+  // las funciones del título y se arrastraba la UNIÓN de sus compañeras. Con una
+  // obra que se repite en varias ciudades eso es una avalancha: «Más allá» de
+  // FICDEH tiene 6 funciones en 4 ciudades, con 4-6 compañeras cada una → un solo
+  // toque metía 15 obras ajenas en Intereses, incluidas las de ciudades canceladas
+  // por el sismo. Y rompía la simetría: agregar y quitar dejaban de ser inversos.
+  // La regla que el comentario de abajo siempre quiso decir es «la MISMA función»,
+  // en singular. Cuando el título está en varias, la única respuesta honesta son
+  // las que lo acompañan en TODAS: un programa de cortos que gira entero conserva
+  // sus compañeras, y una obra que cada noche va con otras no arrastra a nadie.
+  const _slots=[...new Set(FILMS.filter(f=>f.title===title&&f._slotKey).map(f=>f._slotKey))];
+  const _porSlot=_slots.map(k=>new Set(FILMS.filter(f=>f._slotKey===k&&f.title!==title).map(f=>f.title)));
+  const _hermanas=_porSlot.length
+    ?[..._porSlot[0]].filter(x=>_porSlot.every(s=>s.has(x)))
     :[];
   // La función es UNA unidad en las dos direcciones. Si quitar sacara solo la
   // obra tocada, quien agrega una y se arrepiente queda con la compañera en

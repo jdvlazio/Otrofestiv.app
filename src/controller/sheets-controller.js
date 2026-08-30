@@ -953,12 +953,17 @@ export function openPrioLimit(newTitle){
   // Lista de prioritarias actuales
   const list=document.getElementById('prio-limit-list');
   if(list){
-    const items=[...prioritized].map(t=>{
-      const{displayTitle:dt}=parseProgramTitle(t);
-      const f=FILMS.find(fi=>fi.title===t&&!screeningPassed(fi));
+    // `_ttl` y NO `t`: el nombre del parámetro pisaba la t() de i18n, y la llamada
+    // a t('misc_cambiar') de doce líneas más abajo reventaba con «t is not a
+    // function». La hoja del tope de prioridades no abría NUNCA —en todos los
+    // festivales— y el usuario se pasaba del tope justo porque lo que debía
+    // frenarlo se caía antes del classList.add('open'). Cubierto por [shadow-t].
+    const items=[...prioritized].map(_ttl=>{
+      const{displayTitle:dt}=parseProgramTitle(_ttl);
+      const f=FILMS.find(fi=>fi.title===_ttl&&!screeningPassed(fi));
       const when=f?`${(dayLabel(f.day)||f.day).split(' ')[0]} · ${f.time}`:'';
       const poster=getFilmPoster(f)||'';
-      const safeSwap=t.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
+      const safeSwap=_ttl.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const safeNew=newTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       return`<div class="prio-limit-item">
         ${poster?`<img class="prio-limit-thumb" src="${poster}" onerror="this.remove()" alt="" loading="lazy">`:'<div class="prio-limit-thumb"></div>'}
@@ -1283,7 +1288,10 @@ export function openAvSheet(){
       const isPast=dayFullyPassed(d);
       const lbl=(DAY_ABBR&&DAY_ABBR[d])||d.slice(0,3).toUpperCase();
       const num=(DAY_NUM&&DAY_NUM[d])||'';
-      const sel=_avSheetDay===d?' selected':'';
+      // ' on', no ' selected': el CSS solo pinta .av-day-chip.on, así que el día
+      // preseleccionado se veía IDÉNTICO a los no elegidos — y «Confirmar» sin
+      // tocar nada bloqueaba ese día en silencio.
+      const sel=_avSheetDay===d?' on':'';
       return`<button class="av-day-chip${isPast?' past':''}${sel}" data-day="${d}" data-action="selectAvDay">${lbl} ${num}</button>`;
     }).join('');
   }
