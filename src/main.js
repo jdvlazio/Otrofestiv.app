@@ -491,7 +491,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608301630';
+const BUILD_VERSION='202608301846';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1028,6 +1028,18 @@ function _morphOpen(sourceEl, openFn){
 function _openPelMorph(cardEl, title){ _morphOpen(cardEl, ()=>openPelSheet(title)); }
 globalThis._morphOpen = _morphOpen; // puente: lo usa el ACTION_REGISTRY (openCortoSheetFromEl) fuera de este IIFE
 document.addEventListener('click',function(e){
+  // data-stop="1" SE HONRA ACÁ (30 ago 2026). Este listener corre en CAPTURA, así
+  // que llega antes del stopPropagation de la fase de burbuja: un control que
+  // declara `data-stop` para decir «yo me encargo de este toque» quedaba sin
+  // efecto contra él, y el toque abría la ficha ADEMÁS de hacer lo suyo. Pasó con
+  // «Agendar» en NO INCLUIDAS: se agendaba y el usuario terminaba en la ficha de
+  // la obra, detrás del modal, en vez de en su Plan.
+  // La lista de abajo era el único mecanismo, y sumarle un nombre por cada control
+  // nuevo es un olvido esperando: el olvido no da error, solo abre una ficha de
+  // más. Honrar la declaración cubre a los que vengan; la lista se queda para
+  // .int-seen-btn, el único que no la declara.
+  const _stop=e.target.closest('[data-stop="1"]');
+  if(_stop) return;
   if(e.target.closest('.plist-heart')) return; // heart toggle — no abrir sheet
   if(e.target.closest('.suggestion-add')) return; // botón Añadir — no abrir sheet
   if(e.target.closest('.int-prio-btn')) return; // estrella priorizar — no abrir sheet
