@@ -547,7 +547,22 @@ export function renderMiPlanCalendar(state){
             // que es lo único que las conectaría, no está en la fila. No repite el
             // inicio porque ya vive arriba, grande y en ámbar.
             const _fin=t('plan_hasta',{h:mplanEndStr(s.time,dur)});
-            return _void?`<span class="mp-void-t">${_fin}</span>`:_fin;
+            if(!_void) return _fin;
+            // REPROGRAMADA: DÓNDE quedó, no dónde estaba (30 ago 2026). La fila
+            // mostraba la hora VIEJA («17:00 · REPROG. · hasta 18:30») y el día y
+            // la hora nuevos no aparecían en ningún lado: «Actualizar» era un botón
+            // a ciegas, y una función que se movió del domingo al miércoles a las
+            // 20:00 puede ser inaceptable para quien viaja. La doctrina ya estaba
+            // escrita cuatro líneas arriba —«una reprogramada MUEVE su día/hora: la
+            // verdad es la nueva»—, solo que la fila no la honraba. La cancelada no
+            // se movió a ninguna parte, así que conserva su hora tachada.
+            const _mv=!_voidCanc&&_mf&&FILMS.find(fi=>fi.title===s._title&&fi._movedFrom);
+            if(_mv&&(_mv.day!==s.day||_mv.time!==s.time)){
+              const _ds=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
+              const _dest=`${_ds[_mv.day]||_mv.day||''} · ${_mv.time||''}`;
+              return `<span class="mp-void-t">${_fin}</span> <span class="txt-amber60-xs">→ ${_dest}</span>`;
+            }
+            return `<span class="mp-void-t">${_fin}</span>`;
           })()}${_voidFix}${prioritized.has(s._title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_rowStars?` <span class="txt-amber-sm">${_rowStars}</span>`:''}${isNow?` <span class="txt-green-semi">${t('label_en_curso_min')}</span>`:''}</div>
           <div>${(()=>{const{displayTitle:_dt,progSuffix:_ps}=parseProgramTitle(s._title||'');const _mfqa=FILMS.find(fi=>sameEntry(fi,s));const _qab=_mfqa?.has_qa?`<span class="meta-badge sm">Q&A</span>`:'';return`<div class="mplan-rtitle${_isEventRow?' mp-event-title':''}">${_dt}${_qab}</div>${_ps?`<div class="prog-suffix">${_ps}</div>`:''}`;})()} </div>
           <div class="mplan-rvenue${_isEventRow?' mp-event-venue':''}">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}${sala(s.venue)?' \u00b7 '+sala(s.venue):''}</div>

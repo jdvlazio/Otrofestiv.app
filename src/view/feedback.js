@@ -32,12 +32,26 @@ export function showConflictModal(conflicts, onConfirm){
     const{displayTitle}=parseProgramTitle(s._title||'');
     return`<b>${s.time} ${displayTitle.length>30?displayTitle.slice(0,28)+'…':displayTitle}</b>`;
   }).join('<br>');
+  // LA CONSECUENCIA, NO SOLO EL CONFLICTO (30 ago 2026). Con un taller el modal
+  // decía la verdad a medias: nombraba la ÚNICA sesión que choca con la franja
+  // —correcto—, pero al aceptar se van las DOS, porque un bloque entra y sale
+  // entero. El usuario decidía sin saber qué perdía. El modal de quitar del Plan
+  // ya dice «Se quitarán las N sesiones»: acá se usa la MISMA frase, que además
+  // ya está traducida. Y por eso el intro genérico —«Esta función choca con»— no
+  // sirve para un taller: «función» es solo una proyección (regla de vocabulario).
+  const _bloques=[...new Set(conflicts.filter(s=>s._title&&(typeof FILMS!=='undefined')
+    &&FILMS.some(f=>f.title===s._title&&f.is_recurring)).map(s=>s._title))];
+  const _avisoBloque=_bloques.map(tt=>{
+    const n=FILMS.filter(f=>f.title===tt&&f.is_recurring&&f.day&&f.time).length;
+    return n>1?`<div>${t('bloque_quitar_aviso',{n})}</div>`:'';
+  }).join('');
   const modal=document.createElement('div');
   modal.id='conflict-modal';modal.className='conflict-modal';
   modal.innerHTML=`<div class="conflict-modal-box">
     <div class="conflict-modal-hdr">${t('conflict_plan_titulo')}</div>
     <div class="conflict-modal-body">
-      <div>${t('conflict_choca_intro')}<br>${names}</div>
+      <div>${_bloques.length?t('conflict_choca_intro_bloque'):t('conflict_choca_intro')}<br>${names}</div>
+      ${_avisoBloque}
       <div>${t('plan_continuar_quitar')}</div>
     </div>
     <div class="conflict-modal-btns">

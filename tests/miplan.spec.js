@@ -726,3 +726,66 @@ test('T123 — el interruptor de Prensa es un insumo del Plan', async ({ page })
   expect(r.antes, 'con el plan recién calculado no hay aviso').toBe(false);
   expect(r.despues, 'al apagar Prensa el Plan queda MARCADO como desactualizado').toBe(true);
 });
+
+// T124 — una función reprogramada dice A DÓNDE se movió, no solo que se movió.
+// La fila mostraba «17:00 · REPROG. · hasta 18:30 · [Actualizar]»: la hora VIEJA,
+// y ni el día ni la hora nuevos en ningún lado. «Actualizar» era un botón a
+// ciegas — y una función que se va del domingo al miércoles a las 20:00 puede
+// ser inaceptable para quien viaja. El propio módulo ya lo tenía escrito cuatro
+// líneas más arriba: «una reprogramada MUEVE su día/hora: la verdad es la nueva».
+test('T124 — la fila de una reprogramada revela su destino', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-16T10:00');
+  const r = await page.evaluate(async () => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const f = FILMS.find(x => /verano de Jahia/i.test(x.title) && x.day === '2026-08-16');
+    if (!f) return { falta: true };
+    tap('addSuggestion', { title: f.title, day: f.day, time: f.time });
+    // el loader sella una reprogramación: _movedFrom + día/hora NUEVOS
+    FILMS.forEach(x => { if (x.title === f.title && x.day === '2026-08-16') {
+      x._movedFrom = { day: x.day, time: x.time }; x.day = '2026-08-19'; x.time = '20:00'; } });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1100));
+    const badge = [...document.querySelectorAll('.notice-badge')].find(b => /REPROG/i.test(b.textContent));
+    if (!badge) return { sinBadge: true };
+    const fila = badge.closest('.mplan-row') || badge.parentElement.parentElement;
+    const txt = fila.innerText.replace(/\s+/g, ' ').trim();
+    return { txt: txt.slice(0, 140), horaNueva: txt.includes('20:00'), diaNuevo: /19/.test(txt) };
+  });
+  if (r.falta || r.sinBadge) return;
+  expect(r.horaNueva, 'la fila dice la hora NUEVA').toBe(true);
+  expect(r.diaNuevo, 'y el día nuevo').toBe(true);
+});
+
+// T125 — el aviso de conflicto dice la CONSECUENCIA cuando hay un taller.
+// Nombraba la única sesión que choca con la franja —correcto— pero al aceptar se
+// iban las DOS, porque un bloque entra y sale entero: el usuario decidía sin
+// saber qué perdía. Y le decía «Esta función» a un taller.
+test('T125 — con un taller, el conflicto anuncia las sesiones que se van', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  const r = await page.evaluate(async () => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const T = 'Los frutos que dan vida: Siembra autosostenible casera';
+    if (!FILMS.some(f => f.title === T)) return { falta: true };
+    tap('addRecurringBlock', { title: T });
+    const sesiones = FILMS.filter(f => f.title === T && f.is_recurring && f.day && f.time).length;
+    switchMainNav('mnav-planner'); showAgView();
+    await new Promise(r => setTimeout(r, 600));
+    tap('openAvSheet', {}); await new Promise(r => setTimeout(r, 700));
+    tap('selectAvDay', { day: '2026-08-17' }); await new Promise(r => setTimeout(r, 400));
+    tap('toggleFullDay', { day: '2026-08-17' }); await new Promise(r => setTimeout(r, 700));
+    const m = document.getElementById('conflict-modal');
+    if (!m) return { sinModal: true };
+    const txt = m.innerText.replace(/\s+/g, ' ').trim();
+    return { sesiones, txt: txt.slice(0, 170),
+      diceCuantas: txt.includes(sesiones + ' sesiones'),
+      leDiceFuncion: /esta funci[oó]n/i.test(txt) };
+  });
+  if (r.falta || r.sinModal) return;
+  expect(r.sesiones, 'el taller tiene varias sesiones').toBeGreaterThan(1);
+  expect(r.diceCuantas, 'el aviso dice cuántas sesiones se van').toBe(true);
+  expect(r.leDiceFuncion, 'y no le dice «función» a un taller').toBe(false);
+});
