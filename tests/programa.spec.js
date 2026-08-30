@@ -2660,3 +2660,42 @@ test('T117 — Prensa tiene etiqueta, anatomía de filtro, y la barra sigue cabi
     expect(Math.abs(+r.icono - +r.iconoHermano), `icono a la par de Sección en ${lang}`).toBeLessThanOrEqual(1);
   }
 });
+
+// ── T126 — el corazón de la LISTA tiene área de toque, como su hermano ───────
+// Medido por un recorrido de usuario: 26×26 px sin expansor, y a 14 px del
+// centro el toque ya abría la ficha en vez de sumar a Intereses. El hermano de
+// la GRILLA (.poster-wl-dot) ya estaba en la regla de expansión desde la
+// auditoría de iconos de julio: el patrón existía y no se había aplicado acá.
+// La doctrina de esa regla permite expandir los icon-only AISLADOS; el corazón
+// es el ÚLTIMO elemento de la fila, sin ningún icono al lado — lo único que le
+// disputa el toque es la fila, que es justamente el bug.
+test('T126 — el corazón de la lista llega al área de toque de sus hermanos', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-05T11:00');
+  const r = await page.evaluate(async () => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    switchMainNav('mnav-cartelera');
+    const vt = document.querySelector('[data-action="toggleProgramaView"]');
+    if (vt) vt.click();
+    await new Promise(r => setTimeout(r, 1200));
+    const h = document.querySelector('.plist-heart');
+    if (!h) return { sinCorazon: true };
+    const af = getComputedStyle(h, '::after');
+    // Se mide el EXPANSOR, no la caja: en un runner headless la fila puede no
+    // llegar a pintarse y getBoundingClientRect da 0 — un aserto sobre el ancho
+    // pasaría o fallaría por razones ajenas al arreglo. El expansor sí se
+    // resuelve siempre, y es lo que define el área de toque real.
+    return {
+      tieneExpansor: af.content !== 'none' && af.content !== 'normal',
+      posicionRelativa: getComputedStyle(h).position,
+      margenPorLado: Math.abs(parseFloat(af.top || '0')),
+      esAbsoluto: af.position
+    };
+  });
+  if (r.sinCorazon) return;
+  expect(r.tieneExpansor, 'el corazón tiene expansor táctil').toBe(true);
+  expect(r.esAbsoluto, 'el expansor se posiciona sobre el corazón').toBe('absolute');
+  expect(r.posicionRelativa, 'y ancla en él (si no, el ::after se va al ancestro)').toBe('relative');
+  expect(r.margenPorLado, 'suma al menos 14px por lado, como sus hermanos').toBeGreaterThanOrEqual(14);
+});
