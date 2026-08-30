@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608301319">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608301319">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608301449">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608301449">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -803,7 +803,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Expander táctil (auditoría iconos 18 jul): botones icon-only AISLADOS llegan a
    ~44px de área sin agrandar su caja visual. Solo aislados — los pares adyacentes
    no se expanden (robarían taps al vecino). Guardián [icon-touch]. */
-.notice-banner-close::after,.poster-wl-dot::after,.prio-chip-rm::after,.av-pill-rm::after{content:'';position:absolute;inset:-14px;border-radius:50%}
+.notice-banner-close::after,.poster-wl-dot::after,.prio-chip-rm::after,.av-pill-rm::after,.plist-heart::after{content:'';position:absolute;inset:-14px;border-radius:50%}
+/* .plist-heart entra al expansor (30 ago 2026): medía 26×26 sin área ampliada y
+   a 14px del centro el toque ya abría la ficha en vez de sumar a Intereses. Su
+   hermano de la GRILLA (.poster-wl-dot) ya estaba en esta regla — el patrón
+   existía y no se había aplicado al de la lista. Necesita position:relative
+   para que el ::after ancle en él. */
+.plist-heart{position:relative}
 /* Banda APLAZADO — persistente en el header del Programa. Misma anatomía que
    .notice-banner (punto ámbar + etiqueta + texto): el estado del festival habla el
    idioma que la app ya usa para canceladas/reprogramadas. SIN botón de cerrar: es
@@ -3630,7 +3636,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608301319";
+    s.src="/src/main.js?v=202608301449";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
