@@ -536,3 +536,83 @@ test('T116 — el aviso de día libre respira y no se encaja en otra caja', asyn
   expect(r.fileteIzq).toBeGreaterThan(0);          // pero SÍ la marca de accionable
   expect(r.cajas).toBe(1);                         // solo .mplan-wrap, el contenedor real
 });
+
+// ── P0 del recorrido de usuario (30 ago 2026) ────────────────────────────────
+// Tres hallazgos que encontraron dos agentes recorriendo la app como personas,
+// no como suite. Los tres verificados por mí antes de tocar nada.
+
+// T118 — un toque en una obra no puede arrastrar obras ajenas a Intereses.
+// «Más allá» (FICDEH) tiene 6 funciones en 4 ciudades con 4-6 compañeras cada
+// una: el código juntaba los _slotKey de TODAS y metía la UNIÓN → 15 obras que
+// el usuario nunca eligió, incluidas las de ciudades canceladas por el sismo.
+// La regla correcta es la INTERSECCIÓN: las que lo acompañan en TODAS sus
+// funciones. Un programa de cortos que gira entero conserva las suyas.
+test('T118 — marcar una obra no mete compañeras de otras funciones', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T11:00');
+  const r = await page.evaluate(() => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const obra = FILMS.find(f => /^Más allá/.test(f.title));
+    if (!obra) return { falta: true };
+    const funcs = FILMS.filter(f => f.title === obra.title).length;
+    tap('toggleWL', { title: obra.title });
+    const tras = watchlist.size;
+    // y la simetría: quitar deshace exactamente lo que agregar hizo
+    tap('toggleWL', { title: obra.title });
+    return { funciones: funcs, trasAgregar: tras, trasQuitar: watchlist.size };
+  });
+  expect(r.falta).toBeFalsy();
+  expect(r.funciones).toBeGreaterThan(1);   // el caso ambiguo: varias funciones
+  expect(r.trasAgregar).toBe(1);            // solo la obra tocada (antes: 16)
+  expect(r.trasQuitar).toBe(0);             // agregar y quitar son inversos
+});
+
+// T119 — la hoja del tope de prioridades tiene que ABRIR.
+// Un `.map(t=>…)` pisaba la t() de i18n y la hoja moría con «t is not a
+// function» antes del classList.add('open'): no abría nunca, en ningún
+// festival, y el usuario se pasaba del tope porque lo que debía frenarlo se
+// caía. Cubierto además por el guardián [shadow-t], restituido con territorio
+// completo — se había borrado con una medición equivocada.
+test('T119 — pasarse del tope de prioridades abre la hoja, no revienta', async ({ page }) => {
+  const errores = [];
+  page.on('pageerror', e => errores.push(String(e.message)));
+  await enterFestival(page, 'cinemancia2026', '2026-09-05T11:00');
+  const r = await page.evaluate(() => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const tit = [...new Set(FILMS.filter(f => !f.info && f.day).map(f => f.title))].slice(0, 8);
+    tit.forEach(t => tap('toggleWL', { title: t }));
+    [...watchlist].slice(0, 8).forEach(t => tap('togglePriority', { title: t }));
+    const sh = document.getElementById('prio-limit-sheet');
+    return { abrio: !!(sh && sh.classList.contains('open')), prioridades: prioritized.size };
+  });
+  expect(errores, 'ninguna excepción de página').toEqual([]);
+  expect(r.abrio, 'la hoja del tope abre').toBe(true);
+});
+
+// T120 — el día preseleccionado de Disponibilidad tiene que VERSE elegido.
+// El chip se emitía con clase `selected` y el CSS solo pinta `.on`: se veía
+// idéntico a los no elegidos, así que «Confirmar» sin tocar nada bloqueaba
+// ese día en silencio.
+test('T120 — el día preseleccionado de Disponibilidad se ve elegido', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-05T11:00');
+  const r = await page.evaluate(async () => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    switchMainNav('mnav-planner'); showAgView();
+    tap('openAvSheet', {});
+    await new Promise(r => setTimeout(r, 700));
+    const chips = [...document.querySelectorAll('.av-day-chip')];
+    const marcados = chips.filter(c => c.classList.contains('on'));
+    const fondos = [...new Set(chips.map(c => getComputedStyle(c).backgroundColor))];
+    return { chips: chips.length, marcados: marcados.length, fondosDistintos: fondos.length,
+      claseSelectHuerfana: chips.some(c => c.classList.contains('selected')) };
+  });
+  if (!r.chips) return;                       // festival sin hoja de disponibilidad
+  expect(r.claseSelectHuerfana, 'no queda la clase que el CSS no pinta').toBe(false);
+  expect(r.marcados, 'hay un día marcado con la clase que el CSS SÍ pinta').toBeGreaterThan(0);
+  expect(r.fondosDistintos, 'el elegido se distingue de los demás').toBeGreaterThan(1);
+});

@@ -161,19 +161,52 @@ script = content[script_start:script_end]
 # ── CHECK 1: Shadow variable t= ───────────────────────────────────────────────
 # Detecta funciones donde una variable local llamada `t` (o arrow param `t=>`)
 # pisa la función global t() de i18n — causó 3 bugs esta semana.
-# ── [shadow-t] BORRADO (auditoria de guardianes, 25 ago 2026) ────────────────
-# Protegia contra `const t=` / `.map(t=>…)` pisando la t() de i18n. Se retira
-# por dos razones MEDIDAS, no por gusto:
-#  1. Estaba CIEGO: miraba solo main.js, no src/view ni src/controller, donde
-#     vive el codigo desde la Fase 8. Vigilaba 1 de 467 llamadas a t().
-#  2. La clase de bug NO OCURRE: con el territorio completo hay 42 sombreados
-#     de `t` y CERO llaman t('clave') adentro. Meses ciego sin consecuencia.
-# Ademas su implementacion tenia dos modos de falla comprobados: tomaba «de una
-# function a la siguiente» como cuerpo (cruzando modulos enteros en el blob) y
-# contaba llaves sin entender template literals — daba falsos positivos.
-# Un ESLint no-restricted-syntax sobre `t` seria preciso, pero marca los 42
-# sombreados inofensivos: 50 avisos de ruido por un bug que no pasa. Si algun
-# dia ocurre de verdad, ese es el camino correcto (parser, no regex).
+# ── [shadow-t] RESTITUIDO con territorio completo (30 ago 2026) ───────────────
+# Se habia BORRADO el 25 ago con dos razones. La primera era cierta: estaba CIEGO
+# —miraba solo main.js, no src/view ni src/controller, donde vive el codigo desde
+# la Fase 8—. La segunda era FALSA: «la clase de bug NO OCURRE, cero sombreados
+# llaman t() adentro». La medicion estaba mal. Con el territorio completo hay
+# UNO, y es el que reventaba: sheets-controller.js hacia
+# `[...prioritized].map(t=>{ … t('misc_cambiar') … })`, asi que la hoja del tope
+# de prioridades moria con «t is not a function» ANTES del classList.add('open').
+# No abria NUNCA, en todos los festivales, y el usuario se pasaba del tope porque
+# lo que debia frenarlo se caia. Lo encontro un recorrido de usuario, no un test.
+# LECCION: un guardian ciego se REAPUNTA, no se borra — y la medicion que
+# justifica un borrado se verifica igual que un arreglo.
+#
+# Busca el patron REAL, no cualquier sombreado: un binding local llamado `t`
+# (parametro de arrow o const/let) que en su cuerpo llame `t('clave')`. Los ~42
+# sombreados inofensivos —los que NO llaman t() adentro— no se reportan: un
+# guardian que grita 42 veces por un bug no avisa de nada.
+check = 'shadow-t'
+try:
+    import re as _sh
+    _mal = []
+    for _r, _d, _fs in os.walk('src'):
+        for _f in _fs:
+            if not _f.endswith('.js'):
+                continue
+            _p = os.path.join(_r, _f)
+            _ls = open(_p, encoding='utf-8').read().split('\n')
+            for _i, _ln in enumerate(_ls):
+                if not _sh.search(r'\.(map|forEach|filter|find|some|every)\(\s*t\s*=>'
+                                  r'|\bconst\s+t\s*=|\blet\s+t\s*=|\(\s*t\s*\)\s*=>', _ln):
+                    continue
+                _prof = 0
+                for _j in range(_i, min(_i + 60, len(_ls))):
+                    _seg = _ls[_j][_ls[_j].find('=>') + 2:] if _j == _i else _ls[_j]
+                    _prof += _seg.count('{') - _seg.count('}')
+                    if _j > _i and _sh.search(r"[^\w.'\"]t\(\s*['\"]", _seg):
+                        _mal.append(f'{_p}:{_i+1} sombrea `t` y en L{_j+1} llama t(\'clave\')')
+                        break
+                    if _j > _i and _prof <= 0:
+                        break
+    if _mal:
+        fail(check, 'la t() de i18n queda pisada y se la llama igual: ' + ' · '.join(_mal[:3]))
+    else:
+        ok(check, 'ningun binding local `t` pisa la t() de i18n y la llama adentro')
+except Exception as _e:
+    warn(check, f'no se pudo verificar shadow-t: {_e}')
 
 check = 'sched-pure-fns'
 _sched_hay = content + _calc_src  # p8 7a: _SCHED_PURE_FNS vive en controller/calc.js
@@ -4318,11 +4351,11 @@ try:
         'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
         'src/main.js': 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
         'src/i18n/i18n.js': 1676,  # +3: bar_prensa_corto en es-en-pt — el filtro de Prensa gana etiqueta (una usuaria no lo encontraba) — 26 ago  # antes 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
-        'src/controller/sheets-controller.js': 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
+        'src/controller/sheets-controller.js': 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
         # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres
         # correcciones sobre la fuente, que valen más escritas que ahorradas.
-        'src/controller/handlers.js': 1137,  # +4: el aviso de reprogramada declara {mudar:true} — T52/AV04 lo cazaron — 26 ago  # antes 1133,  # +28: «verla otra vez» rehecha — no-op por sameEntry, conflicto sin excluirse a sí misma, modal de 3 acciones y el taller ruteado entero (H6+H7 del informe) — 26 ago  # antes 1105,  # revert #746/#748 (25 ago): «verla otra vez» salió — ver el informe adversarial  # +4: {mudar:true} — «Actualizar» una reprogramada no pregunta (T52) — 25 ago  # antes 1145,  # +40: «verla otra vez» — el diálogo de obra repetida y el borrado por función — 25 ago  # antes 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
+        'src/controller/handlers.js': 1148,  # +11: las compañeras de función son la INTERSECCIÓN, no la unión — un toque metía 15 obras ajenas (recorrido de usuario) — 30 ago  # antes 1137,  # +4: el aviso de reprogramada declara {mudar:true} — T52/AV04 lo cazaron — 26 ago  # antes 1133,  # +28: «verla otra vez» rehecha — no-op por sameEntry, conflicto sin excluirse a sí misma, modal de 3 acciones y el taller ruteado entero (H6+H7 del informe) — 26 ago  # antes 1105,  # revert #746/#748 (25 ago): «verla otra vez» salió — ver el informe adversarial  # +4: {mudar:true} — «Actualizar» una reprogramada no pregunta (T52) — 25 ago  # antes 1145,  # +40: «verla otra vez» — el diálogo de obra repetida y el borrado por función — 25 ago  # antes 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     # src/config.js NO tiene techo (Juan, 23 ago 2026). Es DATA de festival
     # —FESTIVAL_CONFIG, VENUES, NOTICES, PALMARES— y crece con cada onboarding,
