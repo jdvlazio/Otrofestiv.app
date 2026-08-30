@@ -713,6 +713,15 @@ export function renderContextualHeader(state, consensus){
   // ── NEXT ────────────────────────────────────────────────────
   if(ph.phase==='next'){
     const{next,minsUntil,isNow}=ph;
+    // CANCELADA EN EL HERO (30 ago 2026). El hero es lo ÚNICO que mira quien abre
+    // la app en la calle, y le contaba atrás —«En 7 h»— a una función que el
+    // festival había cancelado, mientras la fila de abajo la marcaba CANCELADA:
+    // dos vistas de la misma pantalla diciéndose lo contrario. La verdad la tiene
+    // el mismo dueño que usa la fila (sameEntry + _cancelled), no un cálculo
+    // aparte. Si está caída, el hero lo DICE y calla el countdown: la cuenta
+    // regresiva a algo que no va a pasar es peor que no decir nada.
+    const _heroScr=FILMS.find(fi=>sameEntry(fi,next));
+    const _heroCanc=!!(_heroScr&&_heroScr._cancelled);
     const{displayTitle:dt}=parseProgramTitle(next._title||'');
     const vc=vcfg(next.venue);
     const src=getFilmPoster(next)||'';
@@ -733,7 +742,9 @@ export function renderContextualHeader(state, consensus){
     // hasta 20:41, función hasta 21:11): a las 20:50 y a las 21:05 decía cero.
     // En esa ventana el badge dice Q&A, que es lo único cierto que queda.
     const _qaAhora=isNow&&screeningQaOnly(next,_nowMin);
-    const badge=isNow
+    const badge=_heroCanc
+      ?`<span class="ctx-next-badge cancelada">${t('notice_cancelada')}</span>`
+      :isNow
       ?(_qaAhora
         ?`<span class="ctx-next-badge qa-only">${t('label_qa_ahora')}</span>`
         :`<span class="ctx-next-badge ending">${t('plan_termina_en')} ${_minFmt(_leftMin)}</span>`)
@@ -1461,7 +1472,11 @@ export function buildResultHTML(scenarios){
   // con otros en tu Plan», retirado el 17 ago: solo podía ser cierto cuando TODAS
   // las filas compartían causa, y se mostraba con 7 de 9 que ni siquiera habían
   // competido. Cada fila ya dice su razón.
-  const ok=sc.schedule.length;
+  // OBRAS, no entradas (30 ago 2026): `sc.schedule.length` cuenta FUNCIONES, y
+  // un taller de dos sesiones son dos entradas de UNA obra. Salía «3 obras · 1
+  // quedó fuera» sobre 3 intereses — 3+1=4—, y el badge de Intereses, que sí
+  // cuenta obras, decía 3. Dos contadores de la misma cosa con reglas distintas.
+  const ok=new Set(sc.schedule.map(s=>s._title)).size;
   // Stale banner (movido aquí desde pre-cálculo): se calcula a partir de cachedResult._prioSnapshot vs prioritized actual.
   // Desactualizado = cambió CUALQUIER insumo desde el cálculo, no solo las
   // prioridades (Juan, 18 ago). El Plan en pantalla no se reemplaza solo: se
@@ -1544,11 +1559,18 @@ export function buildResultHTML(scenarios){
       const secLabel=f?_secLabel(f.section||''):'';
       const safeT=excTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const posterHtml=_posterThumb(f,'int-item-poster');
+      // _cancelled entra al filtro (30 ago 2026): esta lista ofrecía como
+      // alternativa obras con TODAS sus funciones caídas — 10 en FICDEH, entre
+      // ellas «Si La Escombrera hablara» (3 de 3), de una ciudad del sismo. Y con
+      // la ciudad puesta en otra, el banner del sismo no se muestra: no había
+      // ninguna pista. No se ocultan —el usuario merece saber que la obra existe—
+      // pero la fila lo DICE, con la misma marca que lleva en el Programa.
       // Detectar razón usando screensConflict contra el schedule activo
       // plannable-ok: acá el catálogo completo es OBLIGATORIO — hay que ver la
       // función de la otra ciudad para poder decir por qué quedó fuera. Con el
       // dueño (que ya la filtró) diríamos «sin funciones», que es falso.
       const screens=FILMS.filter(fi=>fi.title===excTitle&&!screeningPassed(fi)&&!isScreeningBlocked(fi));
+      const _excCanc=screens.length>0&&screens.every(fi=>fi._cancelled);
       // Distinguir «ya pasó» de «nunca tuvo función»: screens ya filtró las
       // pasadas, así que la lista vacía no dice por sí sola cuál de las dos es.
       let _qaOnlySlot=null;
@@ -1645,7 +1667,7 @@ export function buildResultHTML(scenarios){
       return{k:_kind,ciudad:_ciudadPlan,html:`<div class="int-item js-open-pel" style="${opacity}" data-title="${escXML(f.title)}">
         ${posterHtml}
         <div class="int-item-info">
-          <div class="int-item-title">${dt}</div>
+          <div class="int-item-title">${dt}${_excCanc?` <span class="notice-badge">${t('notice_cancelada')}</span>`:''}</div>
           <div class="int-item-sec">${flagFmt(f?.flags)||''}${flagFmt(f?.flags)?' ':''} ${secLabel}</div>
           ${_when?`<div class="int-item-when">${_when}</div>`:''}
           ${_esCiudad?'':reason}

@@ -1,7 +1,7 @@
 // @ts-check
 // miplan.spec.js — Tab Mi Plan: agenda guardada, alternativas, sugerencias.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival, addToWatchlist } = require('./helpers');
+const { LEVIZA_SIMTIME, enterFestival, addToWatchlist, goToPlanear, esperarCalculo } = require('./helpers');
 
 // T11 — Cerrar alternativas en Mi Plan cierra el panel
 test('T11 — cerrar alternativas en Mi Plan cierra el panel', async ({ page }) => {
@@ -615,4 +615,114 @@ test('T120 — el día preseleccionado de Disponibilidad se ve elegido', async (
   expect(r.claseSelectHuerfana, 'no queda la clase que el CSS no pinta').toBe(false);
   expect(r.marcados, 'hay un día marcado con la clase que el CSS SÍ pinta').toBeGreaterThan(0);
   expect(r.fondosDistintos, 'el elegido se distingue de los demás').toBeGreaterThan(1);
+});
+
+// ── P1 del recorrido: «el Plan miente» (30 ago 2026) ─────────────────────────
+// Cuatro hallazgos donde nada se rompe: el Plan AFIRMA cosas que no son ciertas.
+// Duele durante el festival, que es cuando el usuario le cree.
+
+// T121 — el hero no puede contarle atrás a una función cancelada.
+// Medido por el agente: hero «Próxima función · En 7 h · 17:00» sin marca, y la
+// fila de abajo con CANCELADA. Dos vistas de la misma pantalla contradiciéndose.
+test('T121 — el hero dice CANCELADA en vez de contar atrás', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-16T10:00');
+  const r = await page.evaluate(async () => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const f = FILMS.find(x => /verano de Jahia/i.test(x.title) && x.day === '2026-08-16');
+    if (!f) return { falta: true };
+    tap('addSuggestion', { title: f.title, day: f.day, time: f.time });
+    FILMS.forEach(x => { if (x.title === f.title && x.day === '2026-08-16') x._cancelled = true; });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1100));
+    const hero = document.querySelector('.ctx-header');
+    if (!hero) return { sinHero: true };
+    const txt = hero.innerText.replace(/\s+/g, ' ').trim();
+    return { txt, marca: /cancel/i.test(txt), countdown: /\bEn \d+\s*(min|h)\b/i.test(txt) };
+  });
+  if (r.falta || r.sinHero) return;
+  expect(r.marca, 'el hero dice que está cancelada').toBe(true);
+  expect(r.countdown, 'y NO cuenta atrás hacia algo que no va a pasar').toBe(false);
+});
+
+// T122 — el resumen del Plan cuenta OBRAS, no funciones.
+// `sc.schedule.length` contaba entradas: un taller de 2 sesiones son 2 entradas
+// de UNA obra, así que salía «3 obras · 1 quedó fuera» sobre 3 intereses (3+1=4),
+// mientras el badge de Intereses —que sí cuenta obras— decía 3.
+test('T122 — el resumen del Plan cuenta OBRAS, no funciones', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  // El taller entra a Intereses junto a otras dos obras: 3 intereses. Si el
+  // resumen contara ENTRADAS, sus dos sesiones lo inflarían a 4.
+  const listo = await page.evaluate(() => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const T = 'Los frutos que dan vida: Siembra autosostenible casera';
+    if (!FILMS.some(f => f.title === T)) return 0;
+    tap('toggleWL', { title: T });
+    const otras = [...new Set(FILMS.filter(f => f.day && f.time && f.title !== T && !f.is_recurring).map(f => f.title))].slice(0, 2);
+    otras.forEach(t => tap('toggleWL', { title: t }));
+    return watchlist.size;
+  });
+  if (!listo) return;
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  const r = await page.evaluate(() => {
+    const el = document.querySelector('.dato-resultado');
+    // El resumen lee del plan CALCULADO (cachedResult), no del guardado:
+    // goToPlanear deja savedAgenda en null y el plan solo se guarda al «usar».
+    const _sc = cachedResult && cachedResult.scenarios && cachedResult.scenarios[cachedResult.currentIdx || 0];
+    const sch = (_sc && _sc.schedule) || [];
+    return {
+      resumen: el ? el.innerText.replace(/\s+/g, ' ').trim() : null,
+      // lo que el resumen DEBE decir: obras distintas, no entradas
+      obras: new Set(sch.map(s => s._title)).size,
+      entradas: sch.length
+    };
+  });
+  if (!r.resumen) return;
+  const n = parseInt((r.resumen.match(/(\d+)\s*obra/i) || [])[1], 10);
+  expect(Number.isFinite(n), 'el resumen declara un número de obras').toBe(true);
+  expect(n, 'el resumen cuenta OBRAS distintas, no entradas').toBe(r.obras);
+  if (r.entradas > r.obras) {
+    expect(n, 'con un taller de 2 sesiones, obras < entradas').toBeLessThan(r.entradas);
+  }
+});
+
+// T123 — apagar Prensa marca el Plan como desactualizado.
+// El interruptor no estaba en planInputSignature, así que el Plan seguía
+// agendado en un pase de acreditados que la app ya no listaba: la función
+// desaparecía de FILMS y la entrada seguía en savedAgenda, sin aviso.
+// Regla de Juan (18 ago): el Plan no se reemplaza solo — se MARCA.
+test('T123 — el interruptor de Prensa es un insumo del Plan', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-14T11:00');
+  // Prensa ON + un pase de acreditados en Intereses, ANTES de calcular
+  const hayPrensa = await page.evaluate(() => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('togglePressScreenings', {});
+    const p = FILMS.filter(f => f.audience === 'press' || f.is_press);
+    if (!p.length) return false;
+    tap('toggleWL', { title: p[0].title });
+    return true;
+  });
+  if (!hayPrensa) return;
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  const r = await page.evaluate(async () => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    // Se mide la CONSECUENCIA VISIBLE —el aviso de plan desactualizado—, no la
+    // función interna: es lo que ve el usuario, y no obliga a exponer nada en el
+    // puente de test solo para poder mirarlo.
+    const antes = !!document.querySelector('.prio-stale');
+    tap('togglePressScreenings', {});          // Prensa OFF, sin tocar nada más
+    await new Promise(r => setTimeout(r, 1300));
+    return { antes, despues: !!document.querySelector('.prio-stale') };
+  });
+  expect(r.antes, 'con el plan recién calculado no hay aviso').toBe(false);
+  expect(r.despues, 'al apagar Prensa el Plan queda MARCADO como desactualizado').toBe(true);
 });
