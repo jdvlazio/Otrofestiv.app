@@ -951,3 +951,28 @@ test('T108 — ?fest=<id> entra a ESE festival, no al de por defecto', async ({ 
     expect(await page.evaluate(() => FILMS.length), 'con el programa cargado').toBeGreaterThan(0);
   }
 });
+
+// ── T127 — la hoja de ciudad cierra tocando el fondo, como sus hermanas ──────
+// Reportado por un recorrido de usuario: en un festival multiciudad la hoja
+// «¿A cuál ciudad vas?» sube a los ~2 s de entrar y NO se podía cerrar — ni
+// clic fuera, ni Escape, ni botón. Sus tres hermanas (Auth, Disponibilidad,
+// Revisión) SÍ cierran tocando fuera. Es la primera interacción de la app.
+// La causa era muda: el markup declara `data-close-bg="CitySheet"`, el listener
+// busca ACTION_REGISTRY['closeCitySheet'] y no lo encontraba — la función
+// existía en view/sheets.js desde siempre, nunca se había enchufado. Sin error,
+// sin warning: no pasaba nada. Guardián: [close-bg-registrado].
+test('T127 — la hoja de ciudad se puede cerrar tocando el fondo', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T11:00');
+  const r = await page.evaluate(async () => {
+    const sh = document.getElementById('city-sheet');
+    if (!sh) return { sinHoja: true };
+    if (!sh.classList.contains('open')) { switchMainNav('mnav-cartelera'); await new Promise(r => setTimeout(r, 900)); }
+    if (!sh.classList.contains('open')) return { noAbrio: true };
+    // el fondo ES la hoja (.auth-sheet es el telón: position:fixed; inset:0)
+    sh.click();
+    await new Promise(r => setTimeout(r, 500));
+    return { cerro: !sh.classList.contains('open') };
+  });
+  if (r.sinHoja || r.noAbrio) return;
+  expect(r.cerro, 'tocar el fondo la cierra').toBe(true);
+});

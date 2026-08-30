@@ -54,7 +54,7 @@ import {
 // ── Step 6b: view/sheets.js (lifecycle de paneles) + view/feedback.js
 //   (notificaciones: toasts/modales/sim-label). ───────────────────────────────
 import {
-  openAuthSheet, closeAuthSheet, closeAvSheet, openFestivalSheet,
+  openAuthSheet, closeAuthSheet, closeAvSheet, closeCitySheet, openFestivalSheet,
   closeReviewSheet, submitReviewKey,
   closeFestivalSheet, closePVRating, closePrioLimit, _showSignedInSheet,
 } from './view/sheets.js';
@@ -222,6 +222,13 @@ const ACTION_REGISTRY = {
   closeReviewSheet:      ()      => closeReviewSheet(),
   submitReviewKey:       ()      => { if(submitReviewKey()) dismissSplash(); },
   closeAvSheet:          ()      => closeAvSheet(),
+  // closeCitySheet FALTABA (30 ago 2026) y el fallo era MUDO: el markup declara
+  // data-close-bg="CitySheet", el listener busca ACTION_REGISTRY['closeCitySheet']
+  // y al no encontrarlo no hace nada. La hoja de ciudad era la ÚNICA de las cuatro
+  // que no cerraba tocando fuera —sus tres hermanas sí—, y es la PRIMERA pantalla
+  // que ve alguien que entra a un festival multiciudad. La función ya existía en
+  // view/sheets.js: solo nunca se había enchufado. Guardián: [close-bg-registrado].
+  closeCitySheet:        ()      => closeCitySheet(),
   closeConflictSheet:    ()      => closeConflictSheet(),
   closeFestivalSheet:    ()      => closeFestivalSheet(),
   closeRatingSheet:      ()      => closeRatingSheet(),
@@ -484,7 +491,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608301449';
+const BUILD_VERSION='202608301630';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

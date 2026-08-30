@@ -4323,6 +4323,32 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar section-map-dupes: {_e}')
 
+# ── [close-bg-registrado] toda hoja que promete cerrarse, cierra ───────────────
+# `data-close-bg="X"` en el markup significa «tocando el fondo, cierro»: el
+# listener delegado busca ACTION_REGISTRY['closeX'] y lo llama. Si ese nombre no
+# está registrado, NO PASA NADA — y no hay error, ni warning, ni pista. Un fallo
+# de los que no fallan.
+# Pasó con la hoja de CIUDAD (30 ago 2026): declaraba data-close-bg="CitySheet",
+# `closeCitySheet` existía en view/sheets.js desde siempre, y nunca se había
+# enchufado al registro. Era la ÚNICA de las cuatro hojas que no cerraba tocando
+# fuera —sus tres hermanas sí— y es la PRIMERA pantalla de un festival
+# multiciudad: el usuario quedaba encerrado en su primera interacción.
+# Lo encontró un recorrido de usuario. Ningún test miraba si la promesa se cumple.
+check = 'close-bg-registrado'
+try:
+    import re as _cb
+    _html_cb = open('index.html', encoding='utf-8').read()
+    _main_cb = open(_MAIN_JS, encoding='utf-8').read() if os.path.exists(_MAIN_JS) else ''
+    _decl = sorted(set(_cb.findall(r'data-close-bg="([A-Za-z]+)"', _html_cb)))
+    _falta = [d for d in _decl if not _cb.search(r'\bclose%s\s*:' % d, _main_cb)]
+    if _falta:
+        fail(check, 'hoja(s) que prometen cerrarse y no tienen cerrador en ACTION_REGISTRY: '
+             + ', '.join('data-close-bg="%s" → falta close%s' % (d, d) for d in _falta))
+    else:
+        ok(check, f'{len(_decl)} hoja(s) con data-close-bg tienen su cerrador registrado')
+except Exception as _e:
+    warn(check, f'no se pudo verificar close-bg-registrado: {_e}')
+
 # ── [module-size] ningún módulo crece en silencio ─────────────────────────────
 # La modularidad se degrada cuando un archivo se vuelve un cajón de sastre. Este
 # check pone un techo: los módulos nuevos deben quedar <800 líneas; los grandes
@@ -4349,7 +4375,7 @@ try:
         # guardián pide. Baja cuando se migre algo fuera de helpers.
         'src/view/helpers.js': 961,  # +7: el interruptor de Prensa entra a planInputSignature — apagarlo dejaba el Plan en un pase que ya no existía — 30 ago  # antes 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
         'src/view/agenda.js': 2051,  # +15: la fila de una reprogramada dice A DÓNDE se movió — «Actualizar» era un botón a ciegas — 30 ago  # antes 2036,  # +22: el hero no le cuenta atrás a una cancelada, la alternativa de otra ciudad lleva su marca, y el resumen cuenta OBRAS y no funciones — P1 del recorrido — 30 ago  # antes 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
-        'src/main.js': 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
+        'src/main.js': 1787,  # +7: closeCitySheet al ACTION_REGISTRY — la hoja de ciudad prometía cerrarse tocando el fondo y el registro no la tenía (fallo mudo) — 30 ago  # antes 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
         'src/i18n/i18n.js': 1679,  # +3: conflict_choca_intro_bloque — «función» no se le dice a un taller — 30 ago  # antes 1676,  # +3: bar_prensa_corto en es-en-pt — el filtro de Prensa gana etiqueta (una usuaria no lo encontraba) — 26 ago  # antes 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
         'src/controller/sheets-controller.js': 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora

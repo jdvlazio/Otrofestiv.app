@@ -621,6 +621,7 @@ Y lo que un hook no puede cortar, lo vigila `validate.py`:
 | `[stash-compartido]` | stash vivo con varios worktrees — la pila es del repo, no del worktree |
 | `[plannable-dueno-unico]` | que nadie reimplemente «qué funciones son planificables» fuera de `plannableScreens` (exención explícita: `// plannable-ok:`) |
 | `[plan-concepto]` | que «Plan» vaya en mayúscula en las 3 locales y en el fallback estático — es el nombre de un concepto, y la regla se eligió por ser verificable |
+| `[close-bg-registrado]` | que toda hoja con `data-close-bg="X"` tenga su `closeX` en ACTION_REGISTRY — sin él el toque en el fondo no hace NADA, y en silencio (la hoja de ciudad fue así desde siempre) |
 | `[doc-cadena]` | que esta documentación y los guardianes se citen mutuamente |
 
 #### La identidad nunca sale de una etiqueta
