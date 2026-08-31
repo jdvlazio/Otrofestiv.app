@@ -419,8 +419,26 @@ export function lugarToggle(){
 export function fuzzyMatch(query,title){
   const q=normalize(query),t=normalize(title);
   if(t.includes(q)) return{match:true,score:100+q.length};
-  let qi=0;for(let i=0;i<t.length&&qi<q.length;i++) if(t[i]===q[qi]) qi++;
-  if(qi===q.length) return{match:true,score:qi};
+  if(!q.length) return{match:false,score:0};
+  // La subsecuencia vale SOLO si es compacta: las letras tienen que caber en una
+  // ventana de como mucho el doble de lo escrito. Sin este techo, «techo» casaba
+  // con «The Children's Hour» (5 letras repartidas en 17) y con cuatro títulos
+  // más, uno de 57 caracteres — 6 resultados de los que 1 tenía que ver. Medido
+  // sobre el catálogo: una errata real (una letra caída) se pasa de la consulta
+  // por 1 en 29 de 35 casos; el ruido empieza en 9. El umbral vive en ese hueco
+  // y escala solo con lo escrito, sin constante mágica.
+  // Se busca la ocurrencia MÁS COMPACTA, no la primera: arrancar por la primera
+  // letra disponible puede desparramar un match que más adelante era estrecho.
+  let best=-1;
+  for(let s0=0;s0<t.length;s0++){
+    if(t[s0]!==q[0]) continue;
+    let qi=0,last=-1;
+    for(let i=s0;i<t.length&&qi<q.length;i++) if(t[i]===q[qi]){ last=i; qi++; }
+    if(qi<q.length) break;                       // desde acá ya no alcanza
+    const sp=last-s0+1;
+    if(best<0||sp<best) best=sp;
+  }
+  if(best>0&&best<=q.length*2) return{match:true,score:q.length};
   return{match:false,score:0};
 }
 

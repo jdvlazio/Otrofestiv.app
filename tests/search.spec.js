@@ -65,3 +65,40 @@ test('S06 — búsqueda funciona en Tribeca', async ({ page }) => {
   await page.waitForTimeout(200);
   expect(errors).toHaveLength(0);
 });
+
+// ── S07 — la búsqueda no acepta letras desparramadas ─────────────────────────
+// «techo» devolvía 6 resultados y solo el primero tenía que ver: fuzzyMatch
+// aceptaba cualquier SUBSECUENCIA, así que T-h-e C-h-ildren's H-o-ur contiene
+// t·e·c·h·o en orden, igual que un título de 57 caracteres. Ahora la
+// subsecuencia vale solo si es compacta (ventana ≤ 2× lo escrito). El umbral
+// salió de medir el catálogo: una errata real (una letra caída) se pasa de la
+// consulta por 1 en 29 de 35 casos, y el ruido empieza en 9.
+//
+// Los DOS asertos van juntos a propósito: el primero solo puede aprobarse
+// borrando la tolerancia a erratas, y el segundo lo impide.
+test('S07 — «techo» no trae títulos con las letras sueltas', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  const r = await page.evaluate(async () => {
+    const O = await import('/src/controller/overlays.js');
+    const res = O._searchAll('techo').map(x => x.title);
+    // tolerancia a erratas: a cada título se le cae una letra de una palabra suya
+    const titulos = [...new Set(FILMS.map(f => f.title))].filter(t => t.length > 7 && !t.includes(' + '));
+    let ok = 0, total = 0;
+    titulos.slice(0, 60).forEach(t => {
+      const w = O.normalize(t).split(' ').find(x => x.length >= 6);
+      if (!w) return;
+      total++;
+      const q = w.slice(0, 3) + w.slice(4, 7);
+      if (O._searchAll(q).some(x => x.title === t)) ok++;
+    });
+    return {
+      res,
+      sueltos: res.filter(t => !O.normalize(t).includes('techo')),
+      erratasOk: ok, erratasTotal: total
+    };
+  });
+  expect(r.res.length, 'la obra buscada sigue apareciendo').toBeGreaterThan(0);
+  expect(r.sueltos, 'ningún resultado con las letras desparramadas').toEqual([]);
+  expect(r.erratasTotal, 'la muestra de erratas no está vacía').toBeGreaterThan(20);
+  expect(r.erratasOk, 'y una letra caída se sigue perdonando').toBe(r.erratasTotal);
+});
