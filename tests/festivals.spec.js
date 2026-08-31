@@ -1030,3 +1030,81 @@ test('T43 — en el chooser, arrastrar no cambia de festival; tocar sí', async 
   const trasToque = await page.evaluate(() => _activeFestId);
   expect(trasToque, 'y un toque deliberado sí carga el otro festival').not.toBe(antes);
 });
+
+// ── T44 — tras cambiar de festival, la hoja no se contradice ─────────────────
+// V-B11 reportó que al reabrir «Cambiar festival» el bloque de info describía
+// un festival y la marca .on estaba en otro (info: Cinemancia, .on: tiff2026).
+// No reproduce en main: medido por la acción, por el chip real del encabezado y
+// muestreando de 80 ms a 1200 ms tras el cambio, las cuatro señales coinciden.
+// Tampoco pueden divergir por los dos caminos que lo explicarían — con id vacío
+// no habría .on (sale de `e[0]===activeFestId`), y el handler de scroll mueve
+// la marca JUNTO con el texto.
+//
+// Queda el invariante sin vigilar, y el riel se reconstruyó entero el 20 jul:
+// las CUATRO señales que nombran el festival —chip, info, marca y card
+// centrada— tienen que decir lo mismo. Se comparan entre sí, no contra un
+// nombre fijo: el hallazgo era la contradicción, no un valor concreto.
+test('T44 — al reabrir el chooser, chip, info, marca y centro dicen lo mismo', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T09:00:00-05:00');
+  await page.evaluate(async () => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');   // FICDEH es multiciudad: su hoja tapa el chip
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 600));
+  });
+  const leer = () => page.evaluate(() => {
+    const rail = document.querySelector('#fs-festival-list .splash-rail');
+    if (!rail) return null;
+    const on = rail.querySelector('.splash-card.on');
+    const rb = rail.getBoundingClientRect(), cx = rb.left + rb.width / 2;
+    let best = null, bd = 1e9;
+    rail.querySelectorAll('.splash-card').forEach(c => {
+      const b = c.getBoundingClientRect(), d = Math.abs(b.left + b.width / 2 - cx);
+      if (d < bd) { bd = d; best = c; }
+    });
+    const info = document.getElementById('fs-info');
+    const nom = info ? (info.querySelector('.splash-info-name') || {}).innerText : '';
+    const chip = (document.querySelector('.hdr-fest-selector') || {}).innerText || '';
+    return {
+      activo: _activeFestId,
+      marca: on ? on.dataset.fest : '(sin marca)',
+      centrada: best ? best.dataset.fest : null,
+      infoNombre: (nom || '').trim(),
+      chipNombre: chip.split('\n')[0].trim()
+    };
+  });
+
+  await page.locator('.hdr-fest-selector').click();
+  await page.waitForTimeout(1000);
+  const antes = await leer();
+  expect(antes, 'la hoja se abrió con su riel').not.toBe(null);
+
+  // Se elige una card que NO sea la primera del riel: si el destino fuera la
+  // primera, un info roto que siempre describe la primera card coincidiría con
+  // el chip por casualidad y el aserto dejaría de discriminar.
+  const otro = await page.evaluate(() => {
+    const cards = [...document.querySelectorAll('#fs-festival-list .splash-card')];
+    const c = cards.slice(1).find(x => x.dataset.fest && x.dataset.fest !== _activeFestId);
+    return c ? c.dataset.fest : null;
+  });
+  if (!otro) return;                               // un solo festival: nada que cambiar
+  await page.locator(`#fs-festival-list .splash-card[data-fest="${otro}"]`).click();
+  await page.waitForTimeout(2400);
+  // El festival nuevo puede ser multiciudad a su vez: su hoja nace tapando el chip.
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+  });
+  await page.waitForTimeout(700);
+  await page.locator('.hdr-fest-selector').click();
+  await page.waitForTimeout(1000);
+  const d = await leer();
+
+  expect(d.activo, 'el festival activo es el que se tocó').toBe(otro);
+  expect(d.marca, 'la marca .on está en el activo, no en el anterior').toBe(otro);
+  expect(d.centrada, 'y el riel abre mostrando esa card, no otra').toBe(otro);
+  expect(d.infoNombre, 'el bloque de info describe el mismo festival que la marca')
+    .toBe(d.chipNombre);
+  expect(d.infoNombre, 'y no el que estaba antes').not.toBe(antes.infoNombre);
+});
