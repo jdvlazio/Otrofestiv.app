@@ -3,6 +3,7 @@
 
 import { _renderProgramaContent } from '../view/programa.js';
 import { _cloudLoad, _cloudSave, _sbUpdateUI, subscribePlanCloud, unsubscribePlanCloud, _hasLocalPlan } from './persistence.js';
+import { subscribeDelaysCloud } from './delays-cloud.js';
 import { showDayView } from './pipeline.js';
 import { t } from '../i18n/i18n.js';
 import { onWindowLoad } from '../util/ready.js';
@@ -36,6 +37,10 @@ export function _sbInit(){
         const _applied=await _cloudLoad();
         if(!_applied && _hasLocalPlan()) _cloudSave();
         subscribePlanCloud();      // sync EN VIVO desde ya
+        // …y los retrasos: la suscripción se crea al CARGAR el festival, cuando
+        // todavía no había sesión. Sin esto, quien inicia sesión después de
+        // entrar se queda sin consenso hasta cambiar de festival — mudo, sin aviso.
+        subscribeDelaysCloud();
         _renderAfterSync();
       }
       // INITIAL_SESSION (arranque con sesión restaurada): cubre la CARRERA del

@@ -67,7 +67,12 @@ function _applyRow(row, removed){
 // (Re)suscribe al festival activo. Idempotente por festival; tearing-down al cambiar.
 // Lo llama loader.js tras cargar un festival (cuando _activeFestId ya es correcto).
 export async function subscribeDelaysCloud(){
-  if(!_sb || !_activeFestId) return;
+  // SIN SESIÓN NO SE LEE. El rol anónimo no tiene GRANT de SELECT sobre
+  // screening_reports (medido: 42501 «permission denied for table», que es un
+  // grant faltante, no una RLS que filtra), así que cada carga de festival
+  // disparaba un 401 garantizado. Los hermanos de escritura —cloudReportDelay,
+  // cloudClearDelay— ya exigían _sbUser; la lectura era la única que no.
+  if(!_sb || !_sbUser || !_activeFestId) return;
   if(_channelFest === _activeFestId && _channel) return; // ya suscrito a este festival
   if(_channel){ try{ _sb.removeChannel(_channel); }catch(e){ /* noop */ } _channel = null; }
   _reports.clear();
@@ -76,9 +81,12 @@ export async function subscribeDelaysCloud(){
   // Carga inicial — Realtime solo trae cambios futuros; los reportes ya existentes
   // se traen una vez. (Guard: si el festival cambió mientras esperábamos, descartar.)
   try{
-    const { data } = await _sb.from('screening_reports')
+    // supabase-js RESUELVE con {data,error} en vez de lanzar: descartar `error`
+    // hacía que un permiso denegado se viera igual que «no hay reportes».
+    const { data, error } = await _sb.from('screening_reports')
       .select('screening_key,reporter_id,delay_min,created_at')
       .eq('festival_id', fest);
+    if(error) console.warn('[delays-cloud] carga inicial:', error.message);
     if(_channelFest === fest){ (data || []).forEach(r => _applyRow(r, false)); _rerender(); }
   }catch(e){ console.warn('[delays-cloud] carga inicial:', e.message); }
   // CARRERA (cazada por T39 al iterar festivales rápido): si el festival cambió
