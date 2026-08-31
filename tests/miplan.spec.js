@@ -925,3 +925,64 @@ test('T130 — el primario de Planear es el botón que se puede tocar', async ({
   expect(r.stale.saveDisabled, 'con el plan viejo no se puede guardar').toBe(true);
   expect(r.stale.calcEsPrimario, 'así que Recalcular es el primario').toBe(true);
 });
+
+// ── T132 — al final del día, Mi Plan cierra el día ───────────────────────────
+// El plan se cumplió y no se marcó nada a mano: la pantalla arrancaba directo
+// en «Mi Plan · Día 5 de 8» con las filas atenuadas, sin tarjeta de cierre.
+// Causa: dos dueños de «qué se vio» en el mismo camino — la fase resolvía
+// todayWatched con effectiveWatched (una función que TERMINÓ se asume vista) y
+// la tarjeta recontaba con el set explícito `watched`, que estaba vacío.
+// Se mide el DOM pintado, que es donde el usuario ve —o no ve— la tarjeta.
+test('T132 — con el plan cumplido, la tarjeta de cierre del día aparece', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-16T22:45:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const hoy = FILMS.filter(f => f.day === '2026-08-16' && f.time < '17:00').slice(0, 2);
+    commitPlan(() => ({ schedule: hoy.map(f => ({ ...f, _title: f.title })) }));
+    await w(400);
+    switchMainNav('mnav-miplan'); showAgView();
+    await w(1400);
+    const ph = typeof _getFestivalPhase === 'function' ? _getFestivalPhase() : null;
+    const h = document.querySelector('.ctx-main-title');
+    return {
+      fase: ph ? ph.phase : '?',
+      planeadas: hoy.length,
+      marcadasAMano: watched.size,
+      hayTarjeta: !!document.querySelector('.ctx-header'),
+      titular: h ? h.innerText.replace(/\s+/g, ' ').trim() : null
+    };
+  });
+  expect(r.planeadas, 'el día tenía dos funciones planeadas').toBe(2);
+  expect(r.fase, 'y todas terminaron: es el cierre del día').toBe('evening');
+  expect(r.marcadasAMano, 'sin marcar ninguna a mano — es el caso del bug').toBe(0);
+  expect(r.hayTarjeta, 'la tarjeta de cierre del día aparece igual').toBe(true);
+  expect(r.titular, 'y cuenta las dos').toMatch(/^2 /);
+});
+
+// ── T132b — un taller cuenta, pero no se le dice obra ────────────────────────
+// «actividad» es el paraguas y un taller no es una obra ([vocab]): con un
+// evento en la cuenta el titular usa el paraguas, igual que _endedStats.
+// La hora va anclada a -05:00: sin zona, `new Date()` la parsea en la del host
+// y el runner de CI (UTC) leía las 18:50 de Colombia, con el taller de las
+// 17:00 todavía en curso — otra fase, sin tarjeta que medir.
+test('T132b — con un taller en el día, el titular usa el paraguas', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-13T23:50:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const dia = '2026-08-13';
+    const ev = FILMS.find(f => f.type === 'event' && f.day === dia);
+    const obra = FILMS.find(f => f.day === dia && f.type !== 'event');
+    const sel = [ev, obra].filter(Boolean);
+    commitPlan(() => ({ schedule: sel.map(f => ({ ...f, _title: f.title })) }));
+    await w(400);
+    switchMainNav('mnav-miplan'); showAgView();
+    await w(1400);
+    const h = document.querySelector('.ctx-main-title');
+    return { conEvento: sel.some(f => f.type === 'event'), n: sel.length,
+      titular: h ? h.innerText.replace(/\s+/g, ' ').trim() : null };
+  });
+  if (!r.conEvento) return; // festival sin eventos ese día: nada que afirmar
+  expect(r.titular, 'la tarjeta se pintó').not.toBe(null);
+  expect(r.titular, 'un taller no se cuenta como obra').not.toMatch(/obras?\b/);
+  expect(r.titular, 'se cuenta como actividad').toMatch(/actividades?\b/);
+});
