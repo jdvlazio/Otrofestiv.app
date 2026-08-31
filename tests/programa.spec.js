@@ -2733,3 +2733,68 @@ test('T131 — el día vacío por ciudad nombra la ciudad, no filtros ajenos', a
   expect(r.txt, 'el vacío nombra la ciudad').toContain('Medell\u00edn');
   expect(r.txt, 'y NO manda a ajustar sección o sede').not.toMatch(/secci\u00f3n o sede/);
 });
+
+// ── T133 — el número de un filtro promete lo que vas a ver ───────────────────
+// Contrato de Juan (7 ago, citado en sheets.js): «en el filtro el número dice
+// vas a ver N si filtrás por esto — es la consecuencia de la acción». Los dos
+// menús lo incumplían con unidades distintas: Sección deduplicaba por título
+// (día 15 de FICDEH: decía 6, pintaba 8) y la fila de CIUDAD sumaba las de sus
+// sedes, contando dos veces la obra proyectada en dos salas (decía 136 en modo
+// «todas», pintaba 79). Se asserta número contra FILAS PINTADAS, que es la
+// magnitud del contrato — no contra el dato del que sale el número.
+test('T133 — el número del filtro de sección es el de las filas que pinta', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    switchMainNav('mnav-cartelera');
+    await w(1200);
+    const vis = () => [...document.querySelectorAll('.plist-item,.poster-card')]
+      .filter(e => e.offsetParent !== null).length;
+    const b = document.getElementById('seccion-btn');
+    if (!b) return { sinBoton: true };
+    b.click(); await w(800);
+    const ops = [...document.querySelectorAll('.filter-drop .lugar-opt')]
+      .filter(o => o.querySelector('.lugar-cnt') && o.dataset.s && o.dataset.s !== 'all');
+    if (!ops.length) return { sinOpciones: true };
+    const dice = parseInt(ops[0].querySelector('.lugar-cnt').innerText, 10);
+    ops[0].click(); await w(1300);
+    const dd = FILMS.filter(f => f.day === activeDay && f.section === activeSec);
+    return { dice, pinta: vis(), funciones: dd.length, obras: new Set(dd.map(f => f.title)).size };
+  });
+  if (r.sinBoton || r.sinOpciones) return;
+  expect(r.funciones, 'la sección elegida repite algún título ese día — si no, el caso no distingue')
+    .toBeGreaterThan(r.obras);
+  expect(r.dice, 'el número dice lo que se va a pintar').toBe(r.pinta);
+});
+
+test('T133b — la fila de ciudad no cuenta dos veces la obra que va a dos salas', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    switchMainNav('mnav-cartelera');
+    await w(1200);
+    const chipAll = document.querySelector('.dtab[data-day="all"]');
+    if (chipAll) chipAll.click();
+    await w(1400);
+    const vis = () => [...document.querySelectorAll('.plist-item,.poster-card')]
+      .filter(e => e.offsetParent !== null).length;
+    const b = document.getElementById('lugar-btn');
+    if (!b) return { sinBoton: true };
+    b.click(); await w(800);
+    const dr = [...document.querySelectorAll('.filter-drop .lugar-opt')]
+      .find(o => (o.dataset.v || '').startsWith('drill:'));
+    if (!dr) return { sinCiudades: true };          // festival de una sola ciudad
+    const diceNivel1 = parseInt(dr.querySelector('.lugar-cnt').innerText, 10);
+    dr.click(); await w(700);
+    const cityRow = [...document.querySelectorAll('.filter-drop .lugar-opt')]
+      .find(o => (o.dataset.v || '').startsWith('city:'));
+    const diceNivel2 = parseInt(cityRow.querySelector('.lugar-cnt').innerText, 10);
+    cityRow.click(); await w(1500);
+    return { diceNivel1, diceNivel2, pinta: vis(), total: new Set(FILMS.map(f => f.title)).size };
+  });
+  if (r.sinBoton || r.sinCiudades) return;
+  expect(r.diceNivel1, 'los dos niveles dicen lo mismo de la misma ciudad').toBe(r.diceNivel2);
+  expect(r.diceNivel1, 'y ese número es el de las tarjetas que pinta').toBe(r.pinta);
+  expect(r.pinta, 'la ciudad no puede tener más obras que el festival entero')
+    .toBeLessThanOrEqual(r.total);
+});
