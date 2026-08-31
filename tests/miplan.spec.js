@@ -869,3 +869,59 @@ test('T129 — los programas numerados se distinguen entre sí en Intereses', as
   expect(r.desbordanEnAncho, 'ningún título se corta a lo ancho (ahí muere el número)').toBe(0);
   expect(r.desbordanEnAlto, 'ni se pasa del clamp de dos líneas').toBe(0);
 });
+
+// ── T130 — con el Plan desactualizado, la única acción viva parece la acción ──
+// Un recorrido de usuario midió «Recalcular» en PLANEAR: fondo gris y texto al
+// 60% de blanco — la convención de deshabilitado — con `disabled:false`.
+// Bajarlo a secundario cuando ya hay plan es una DECISIÓN escrita («dos primarios
+// ámbar no dicen cuál es cuál»; el primario es «Usar este Plan») y se conserva.
+// Lo que faltaba: con el plan DESACTUALIZADO, «Usar este Plan» se pinta disabled
+// —no se guarda un plan viejo— así que el primario queda apagado Y el único botón
+// vivo se veía apagado. La app avisaba «tu Plan está desactualizado» y pintaba el
+// remedio como inactivo. La regla no cambia: cambia CUÁL es el primario.
+//
+// Se mide el GRADIENTE, no backgroundColor: --amber-cta es un linear-gradient, y
+// backgroundColor devuelve transparente aunque el botón esté pintado. (Medirlo
+// mal me hizo creer que la pantalla no tenía ningún primario.)
+test('T130 — el primario de Planear es el botón que se puede tocar', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-05T11:00');
+  const hay = await page.evaluate(() => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const t = [...new Set(FILMS.filter(f => f.day && f.time && !f.info).map(f => f.title))].slice(0, 4);
+    t.forEach(x => tap('toggleWL', { title: x }));
+    return t.length;
+  });
+  if (!hay) return;
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  const r = await page.evaluate(async () => {
+    const AMBAR = /251,\s*191,\s*36/;   // primer stop del gradiente --amber-cta
+    const leer = () => {
+      const calc = [...document.querySelectorAll('.av-calc-btn')].filter(b => b.offsetParent !== null)[0];
+      const save = document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]');
+      const g = e => e ? (getComputedStyle(e).backgroundImage || '') : '';
+      return {
+        calcEsPrimario: AMBAR.test(g(calc)),
+        saveEsPrimario: AMBAR.test(g(save)),
+        saveDisabled: save ? save.disabled : null
+      };
+    };
+    const conPlan = leer();
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const extra = [...new Set(FILMS.filter(f => f.day && f.time && !f.info).map(f => f.title))][8];
+    if (extra) tap('toggleWL', { title: extra });
+    await new Promise(r => setTimeout(r, 1300));
+    return { conPlan, stale: leer(), hayAviso: !!document.querySelector('.prio-stale') };
+  });
+  // con plan válido: el primario es «Usar este Plan», Recalcular baja a secundario
+  expect(r.conPlan.saveEsPrimario, 'con plan válido, «Usar este Plan» es el primario').toBe(true);
+  expect(r.conPlan.calcEsPrimario, 'y Recalcular NO compite con él').toBe(false);
+  // desactualizado: «Usar este Plan» no se puede tocar → el primario es Recalcular
+  if (!r.hayAviso) return;
+  expect(r.stale.saveDisabled, 'con el plan viejo no se puede guardar').toBe(true);
+  expect(r.stale.calcEsPrimario, 'así que Recalcular es el primario').toBe(true);
+});
