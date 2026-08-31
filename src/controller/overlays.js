@@ -27,6 +27,18 @@ function _dropRight(btnRight){
   return Math.max(MARGEN, Math.min(right, window.innerWidth-ancho-MARGEN))+'px';
 }
 
+// _filasQueVeras — DUEÑO ÚNICO del número de una fila de filtro. El contrato lo
+// fijó Juan (7 ago, citado en sheets.js): «en el filtro el número dice vas a ver
+// N si filtrás por esto — es la consecuencia de la acción». Entonces la unidad
+// no la elige el menú, la elige la VISTA: con un día activo pinta una fila por
+// FUNCIÓN; en «todas» pinta una tarjeta por OBRA. Medido en FICDEH: día 15 → 88
+// filas (88 funciones, 55 obras); todas → 118 tarjetas (118 obras, 447
+// funciones). Sin esto la fila de ciudad prometía 136 —la suma de sus sedes, que
+// cuenta dos veces la obra proyectada en dos salas— y pintaba 79.
+function _filasQueVeras(films){
+  return activeDay==='all' ? new Set(films.map(f=>f.title)).size : films.length;
+}
+
 export function seccionOpen(){
   const btn = document.getElementById('seccion-btn');
   const r = btn.getBoundingClientRect();
@@ -39,14 +51,14 @@ export function seccionOpen(){
   const baseFilms = activeDay==='all' ? FILMS : FILMS.filter(f=>f.day===activeDay);
   const films = activeVenue!=='all' ? baseFilms.filter(f=>venueMatches(f.venue,activeVenue)) : baseFilms;
 
-  const secMap={}, secCatMap={}, titleSet={};
+  const secFilms={}, secCatMap={}, secMap={};
   films.forEach(f=>{
-    if(!titleSet[f.title]){
-      titleSet[f.title]=true;
-      const s=f.section||'';
-      if(s){ secMap[s]=(secMap[s]||0)+1; if(f.filmCategory) secCatMap[s]=f.filmCategory; }
-    }
+    const s=f.section||'';
+    if(!s) return;
+    (secFilms[s]||(secFilms[s]=[])).push(f);
+    if(f.filmCategory) secCatMap[s]=f.filmCategory;
   });
+  Object.keys(secFilms).forEach(s=>{ secMap[s]=_filasQueVeras(secFilms[s]); });
 
   // data-s SIEMPRE = section ES (clave de filtro/orden); solo el <span> visible se localiza.
   const _opt=(s,cnt,isActive)=>'<div class="lugar-opt'+(isActive?' on':'')+'" data-s="'+s.replace(/"/g,'&quot;')+'">'
@@ -282,9 +294,9 @@ export function lugarOpen(){
         if(_vSeen.has(f.title)) return;
         _vSeen.add(f.title);
         const rel=activeDay==='all'?f.screenings:f.screenings.filter(s=>s.date===activeDay||s.day===activeDay);
-        rel.forEach(s=>_acum(s.venue));
+        rel.forEach(s=>_acum(s.venue,f));
       } else {
-        _acum(f.venue);
+        _acum(f.venue,f);
       }
     });
   // La clave agrupa por (CIUDAD, short), no por short a secas: el short no es único
@@ -293,17 +305,22 @@ export function lugarOpen(){
   // dos, descuadraba el conteo de la ciudad y hacía DESAPARECER la sede de la
   // segunda. Dentro de una misma ciudad el short sí agrupa a propósito: son las
   // salas de un edificio (Cinemateca Sala 2/3/Capital, las 5 de Plaza Bocagrande).
-  function _acum(venue){
+  function _acum(venue,film){
     const cfg=vcfg(venue);const short=cfg.short||venue;
     if(!short) return;
     const city=cfg.city||'';
     const k=city+SEDE_SEP+short;
-    if(!venueMap[k]) venueMap[k]={key:k,label:short,count:0,city};
-    venueMap[k].count++;
+    if(!venueMap[k]) venueMap[k]={key:k,label:short,city,films:[]};
+    venueMap[k].films.push(film);
   }
 
-  const venues = Object.values(venueMap).sort((a,b)=>b.count-a.count);
-  const total = venues.reduce((s,v)=>s+v.count,0);
+  const venues = Object.values(venueMap)
+    .map(v=>({...v, count:_filasQueVeras(v.films)}))
+    .sort((a,b)=>b.count-a.count);
+  // La ciudad cuenta sobre SU conjunto, no sumando el de sus sedes: sumarlas
+  // duplica la obra que se proyecta en dos salas de la misma ciudad.
+  const _cuentaCiudad=name=>_filasQueVeras(
+    venues.filter(v=>v.city===name).reduce((a,v)=>a.concat(v.films),[]));
 
   // ── Nivel de CIUDAD (solo festivales multiciudad — FICDEH 11, Cinemancia 10) ──
   // Multiciudad = ≥2 ciudades DISTINTAS y NO VACÍAS entre las sedes visibles. El
@@ -350,10 +367,10 @@ export function lugarOpen(){
     }
     if(!drillCity){
       drop.innerHTML=_row('all', t('filter_todos_lugares'), null)
-        +cities.map(c=>_row('drill:'+c.name, c.name, c.count, {chev:true})).join('');
+        +cities.map(c=>_row('drill:'+c.name, c.name, _cuentaCiudad(c.name), {chev:true})).join('');
     } else {
       const cv=venues.filter(v=>v.city===drillCity);
-      const ccount=cv.reduce((s,v)=>s+v.count,0);
+      const ccount=_cuentaCiudad(drillCity);
       drop.innerHTML='<div class="lugar-opt lugar-back" data-v="back">'+ICONS.chevronL+'<span>'+t('filter_ciudades')+'</span></div>'
         +_row('city:'+drillCity, drillCity, ccount)
         +cv.map(v=>_row('sede:'+v.key, v.label, v.count, {icon:ICONS.pin})).join('');
