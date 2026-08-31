@@ -976,3 +976,57 @@ test('T127 — la hoja de ciudad se puede cerrar tocando el fondo', async ({ pag
   if (r.sinHoja || r.noAbrio) return;
   expect(r.cerro, 'tocar el fondo la cierra').toBe(true);
 });
+
+// ── T43 — explorar el riel del chooser no te saca de tu festival ─────────────
+// En el sheet «Cambiar festival» un toque en una card CARGA directo: no hay
+// «Entrar» y es deliberado (20 jul 2026, comentado en controller/festival.js).
+// Esa decisión se apoya en una propiedad que nadie estaba vigilando: arrastrar
+// el riel para leer de qué va cada festival NO puede disparar la carga. Si un
+// rewire del riel hiciera que el arrastre termine en click, el usuario se iría
+// de su festival mientras explora — y en el splash el mismo gesto solo
+// selecciona, así que llega con el modelo mental equivocado.
+//
+// Las dos mitades van juntas: la primera sin la segunda se aprobaría rompiendo
+// la carga por toque, que es justamente lo que el diseño quiso.
+test('T43 — en el chooser, arrastrar no cambia de festival; tocar sí', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-05T11:00:00-05:00');
+  await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');            // Cinemancia es multiciudad: su sheet nace encima
+    await w(500);
+    tap('openFestivalSheet');
+    await w(900);
+  });
+  await page.waitForSelector('#fs-festival-list .splash-card', { timeout: 8000 });
+
+  const antes = await page.evaluate(() => _activeFestId);
+  const caja = await page.evaluate(() => {
+    const c = [...document.querySelectorAll('#fs-festival-list .splash-card')]
+      .find(x => x.dataset.fest && x.dataset.fest !== _activeFestId);
+    if (!c) return null;
+    const b = c.getBoundingClientRect();
+    return { x: Math.round(b.left + b.width / 2), y: Math.round(b.top + b.height / 2), fest: c.dataset.fest };
+  });
+  if (!caja) return;                  // un solo festival visible: nada que arrastrar
+
+  // 1 · arrastre horizontal que SUELTA encima de otra card
+  await page.mouse.move(caja.x + 120, caja.y);
+  await page.mouse.down();
+  for (let i = 1; i <= 6; i++) await page.mouse.move(caja.x + 120 - 20 * i, caja.y);
+  await page.mouse.up();
+  await page.waitForTimeout(1200);
+  const trasArrastre = await page.evaluate(() => _activeFestId);
+  expect(trasArrastre, 'explorar el riel no puede cambiarte de festival').toBe(antes);
+
+  // 2 · toque limpio sobre una card ajena: eso SÍ carga (el diseño del 20 jul)
+  await page.evaluate(() => {
+    const c = [...document.querySelectorAll('#fs-festival-list .splash-card')]
+      .find(x => x.dataset.fest && x.dataset.fest !== _activeFestId);
+    c.click();
+  });
+  await page.waitForTimeout(1800);
+  const trasToque = await page.evaluate(() => _activeFestId);
+  expect(trasToque, 'y un toque deliberado sí carga el otro festival').not.toBe(antes);
+});
