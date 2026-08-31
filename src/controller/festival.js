@@ -40,6 +40,14 @@ export function _renderFestivalSelector(activeFestId){
       clearTimeout(_tmo);
       _tmo=setTimeout(()=>{
         _armed=false;
+        // El riel se REEMPLAZA entero al cambiar de festival (loadFestival →
+        // _renderFestivalSelector), pero este handler quedó atado al nodo viejo y
+        // su debounce de 90 ms dispara DESPUÉS. Su `.on` va a un nodo huérfano
+        // —invisible— y su `info` apunta a #fs-info, que vive FUERA del contenedor
+        // reemplazado y sigue vivo: escribía el festival centrado en el riel muerto
+        // encima del que acababa de cargarse. La hoja quedaba con la marca en uno y
+        // el texto en otro (V-B11). Un listener zombi no habla por la pantalla.
+        if(!rail.isConnected) return;
         const best=_centeredCard(rail);
         if(!best || best.classList.contains('on')) return;
         // Mover la marca .on a la card centrada. NO es cosmético: el zoom+opacidad
