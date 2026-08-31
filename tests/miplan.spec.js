@@ -934,7 +934,7 @@ test('T130 — el primario de Planear es el botón que se puede tocar', async ({
 // la tarjeta recontaba con el set explícito `watched`, que estaba vacío.
 // Se mide el DOM pintado, que es donde el usuario ve —o no ve— la tarjeta.
 test('T132 — con el plan cumplido, la tarjeta de cierre del día aparece', async ({ page }) => {
-  await enterFestival(page, 'ficdeh2026', '2026-08-16T22:45');
+  await enterFestival(page, 'ficdeh2026', '2026-08-16T22:45:00-05:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const hoy = FILMS.filter(f => f.day === '2026-08-16' && f.time < '17:00').slice(0, 2);
@@ -962,8 +962,11 @@ test('T132 — con el plan cumplido, la tarjeta de cierre del día aparece', asy
 // ── T132b — un taller cuenta, pero no se le dice obra ────────────────────────
 // «actividad» es el paraguas y un taller no es una obra ([vocab]): con un
 // evento en la cuenta el titular usa el paraguas, igual que _endedStats.
+// La hora va anclada a -05:00: sin zona, `new Date()` la parsea en la del host
+// y el runner de CI (UTC) leía las 18:50 de Colombia, con el taller de las
+// 17:00 todavía en curso — otra fase, sin tarjeta que medir.
 test('T132b — con un taller en el día, el titular usa el paraguas', async ({ page }) => {
-  await enterFestival(page, 'ficdeh2026', '2026-08-13T23:50');
+  await enterFestival(page, 'ficdeh2026', '2026-08-13T23:50:00-05:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const dia = '2026-08-13';
