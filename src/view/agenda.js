@@ -889,7 +889,7 @@ export function renderContextualHeader(state, consensus){
 
   // ── EVENING ─────────────────────────────────────────────────
   if(ph.phase==='evening'){
-    const{todayScreenings}=ph;
+    const{todayScreenings,todayWatched}=ph;
     // "Calificado": film suelto → su rating; PROGRAMA → alguna de sus obras calificada
     // (las estrellas van por obra, no al paquete — el aviso no debe quedar pegado
     // para siempre en un programa cuyo usuario ya calificó/omitió obra por obra).
@@ -898,14 +898,17 @@ export function renderContextualHeader(state, consensus){
       const f=FILMS.find(fi=>fi.title===s._title);
       return !!(f&&f.is_cortos&&f.film_list&&f.film_list.some(it=>filmRatings[it.title]));
     };
-    const pendingRating=todayScreenings.filter(s=>watched.has(s._title)&&!_isRated(s));
-    const rated=todayScreenings.filter(s=>watched.has(s._title)&&_isRated(s));
-    const total=todayScreenings.filter(s=>watched.has(s._title)).length;
+    // «Qué se vio» lo decide effectiveWatched (dueño único, film.js:242) y la
+    // fase ya lo resolvió en todayWatched; acá se recontaba con el set explícito
+    // `watched` — dos dueños, y con el plan cumplido sin marcar nada a mano la
+    // tarjeta de cierre del día no aparecía nunca.
+    const allWatched=todayWatched||[];
+    const pendingRating=allWatched.filter(s=>!_isRated(s));
+    const total=allWatched.length;
     if(!total) return '';
     // Máximo 2 posters visibles — el resto se expande con "Ver todo (N)"
     // Consistente con el sistema: link-gray-xs, misc_ver_todo existente
     const MAX_VISIBLE=2;
-    const allWatched=todayScreenings.filter(s=>watched.has(s._title));
     const mkChip=s=>{
       const{displayTitle:dt}=parseProgramTitle(s._title||'');
       const f=FILMS.find(fi=>fi.title===s._title);
@@ -933,6 +936,8 @@ export function renderContextualHeader(state, consensus){
     // Día COMPLETO: la abreviatura en minúscula decía «tu mar en FICDEH» — el
     // MAR de martes leído como océano (cazado en el inventario del 18 ago).
     // ES/PT escriben los días en minúscula; EN los capitaliza.
+    // Un taller no es obra pero sí actividad ([vocab]): con un evento adentro el titular usa el paraguas, como _endedStats.
+    const _hayEvento=allWatched.some(s2=>(FILMS.find(fi=>fi.title===s2._title)||{}).type==='event');
     const _dayWord=(dayLabelLong(todayScreenings[0]?.day)||'').split(' ')[0]||t('bar_hoy');
     const dayName=_lang==='en'?_dayWord:_dayWord.toLowerCase();
     return`<div class="ctx-header">
@@ -940,7 +945,7 @@ export function renderContextualHeader(state, consensus){
         ${ICONS.moon}
         <span>${t('plan_tu_dia_en',{dia:dayName})} ${(FESTIVAL_CONFIG[_activeFestId]||{}).name||''}</span>
       </div>
-      <div class="ctx-main-title">${total} ${total!==1?t('misc_peliculas'):t('misc_pelicula')} ${total===1?t('plan_vista_hoy'):t('plan_vistas_hoy')}</div>
+      <div class="ctx-main-title">${total} ${_hayEvento?(total!==1?t('misc_actividades'):t('misc_actividad')):(total!==1?t('misc_peliculas'):t('misc_pelicula'))} ${total===1?t('plan_vista_hoy'):t('plan_vistas_hoy')}</div>
       ${pendingRating.length?`<div class="mb-3 ctx-sub">${pendingRating.length===1?t('plan_una_pendiente'):t('empty_calificar')}</div>`:`<div class="mb-3"></div>`}
       <div class="hscroll-strip">${visible}${hidden}</div>
       ${verTodas}
