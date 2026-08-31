@@ -1064,7 +1064,7 @@ export function renderFilmListHTML(state){
     return`<div class="int-item js-open-pel${!next?' gone':''}" style="${!next&&!festivalEnded()?'opacity:.35':''}" data-title="${escXML(title)}">
       ${posterHtml}
       <div class="int-item-info">
-        <div class="int-item-title">${displayTitle}${progSuffix?` <span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
+        <div class="int-item-title"><span class="int-item-name">${displayTitle}</span>${progSuffix?`<span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
         ${next?`<div class="int-item-days">${daysHtml}</div>`:`<div class="int-item-gone">${t(FILMS.some(fi=>fi.title===title)?'ya_paso':'empty_sin_funciones')}</div>`}
         <div class="int-item-meta">${venueStr}${venueStr&&durStr?' · ':''}${durStr}</div>
         <div class="int-item-sec">${_secLabelFull(f?.section||'')}</div>
@@ -1105,7 +1105,7 @@ export function renderFilmListHTML(state){
     return`<div class="int-item js-open-pel" data-title="${escXML(title)}">
       ${posterHtml}
       <div class="int-item-info">
-        <div class="int-item-title">${displayTitle}${progSuffix?` <span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
+        <div class="int-item-title"><span class="int-item-name">${displayTitle}</span>${progSuffix?`<span class="txt-amber-xs">${progSuffix}</span>`:''}</div>
         <div class="int-item-sec">${_secLabelFull(f?.section||'')}</div>
         ${ratingHtml}
       </div>
@@ -1682,7 +1682,7 @@ export function buildResultHTML(scenarios){
       return{k:_kind,ciudad:_ciudadPlan,html:`<div class="int-item js-open-pel" style="${opacity}" data-title="${escXML(f.title)}">
         ${posterHtml}
         <div class="int-item-info">
-          <div class="int-item-title">${dt}${_excCanc?` <span class="notice-badge">${t('notice_cancelada')}</span>`:''}</div>
+          <div class="int-item-title"><span class="int-item-name">${dt}</span>${_excCanc?`<span class="notice-badge">${t('notice_cancelada')}</span>`:''}</div>
           <div class="int-item-sec">${flagFmt(f?.flags)||''}${flagFmt(f?.flags)?' ':''} ${secLabel}</div>
           ${_when?`<div class="int-item-when">${_when}</div>`:''}
           ${_esCiudad?'':reason}

@@ -826,3 +826,46 @@ test('T128 — tocar «Agendar» en NO INCLUIDAS no abre la ficha detrás', asyn
   expect(r.abiertoAntes, 'no había ficha abierta').toBe(false);
   expect(r.abiertoDespues, 'un control con data-stop no abre la ficha').toBe(false);
 });
+
+// ── T129 — Intereses no puede cortar el número que distingue dos programas ───
+// Un recorrido de usuario agregó los 6 programas numerados de Cinemancia y
+// quedaron TRES PARES de filas visualmente idénticas: `.int-item-title` era
+// nowrap + ellipsis y el corte caía justo antes del dígito. Medido entonces y
+// ahora: a «Competencia de cortometrajes Programa 2» le faltaban 28 px.
+// Es la pantalla donde el usuario revisa lo que eligió antes de armar el Plan.
+//
+// Se arregla en la LISTA, no en parseProgramTitle: ese parser tiene 46 llamadas
+// y extenderlo cambiaría cómo se ven 36 títulos en toda la app — un cambio
+// visual que es decisión de Juan, no un arreglo de bug. Acá el nombre pasa a dos
+// líneas y cabe entero. (La estructura nombre+sufijo queda puesta: si algún día
+// el parser separa el número, el sufijo ya está blindado contra el recorte.)
+test('T129 — los programas numerados se distinguen entre sí en Intereses', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-05T11:00');
+  const r = await page.evaluate(async () => {
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const nums = [...new Set(FILMS.filter(f => /Programa \d/i.test(f.title)).map(f => f.title))].slice(0, 6);
+    if (nums.length < 2) return { sinCaso: true };
+    nums.forEach(t => tap('toggleWL', { title: t }));
+    switchMainNav('mnav-seleccion');
+    if (typeof showAgView === 'function') showAgView();
+    await new Promise(r => setTimeout(r, 1400));
+    const filas = [...document.querySelectorAll('.int-item-name')]
+      .filter(e => /Programa \d/i.test(e.innerText));
+    return {
+      candidatos: nums.length,
+      filas: filas.length,
+      // ANCHO, no alto: un recorte con ellipsis desborda en HORIZONTAL. Medir
+      // scrollHeight no lo ve —y con nowrap tampoco lo ve innerText, que devuelve
+      // el texto completo aunque en pantalla esté cortado—. La primera versión de
+      // este test usaba las dos medidas ciegas y pasó su mutación.
+      desbordanEnAncho: filas.filter(e => e.scrollWidth > e.clientWidth + 1).length,
+      desbordanEnAlto: filas.filter(e => e.scrollHeight > e.clientHeight + 1).length
+    };
+  });
+  if (r.sinCaso) return;
+  expect(r.filas, 'las filas están en pantalla').toBeGreaterThan(1);
+  expect(r.desbordanEnAncho, 'ningún título se corta a lo ancho (ahí muere el número)').toBe(0);
+  expect(r.desbordanEnAlto, 'ni se pasa del clamp de dos líneas').toBe(0);
+});
