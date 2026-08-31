@@ -12,7 +12,7 @@
 
 import { NOTICES, PALMARES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _buildPosterV16, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity, programParts,
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity, programParts, isCitySel, venueSelLabel,
 } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
@@ -143,6 +143,22 @@ export function renderProgramaList(){
   el.innerHTML=renderProgramaListHTML(state);
 }
 
+// ── vacioDelDia — dueño único del vacío de un día ────────────────────────────
+// TRES vacíos, y decirlos igual es mentir (Juan 24 ago, ampliado 30 ago): sin
+// filtros el día vacío es programación que no existe; con SOLO la ciudad
+// —contexto, no un filtro que el usuario fue a buscar— culpar a «sección o
+// sede» le manda a arreglar dos controles que nunca tocó; con sección o sede
+// puestas el filtro sí esconde y el aviso es correcto.
+function vacioDelDia(){
+  if(activeVenue==='all'&&activeSec==='all')
+    return emptyState(ICONS.calendar, t('dia_sin_funciones'), t('dia_sin_funciones_sub'));
+  if(activeSec==='all'&&isCitySel(activeVenue))
+    return emptyState(ICONS.calendar,
+      t('dia_sin_funciones_ciudad',{city:venueSelLabel(activeVenue)}),
+      t('dia_sin_funciones_ciudad_sub'));
+  return emptyState(ICONS.search, t('filter_sin_actividades'), t('empty_filtros'));
+}
+
 export function renderProgramaListHTML(state){
   try{
   const {FILMS, _activeFestId, watchlist} = state.snapshot();
@@ -155,17 +171,7 @@ export function renderProgramaListHTML(state){
     const cat=f=>f.type==='event'?2:f.is_cortos?1:0;
     return cat(a)-cat(b);
   });
-  if(!films.length){
-    // DOS vacíos distintos, y decirlos igual es mentir (Juan, 24 ago 2026):
-    // «ajustá los filtros» cuando NO hay filtros puestos le echa la culpa al
-    // usuario de una decisión del festival. Un día declarado y vacío —regla de
-    // [calendario-sin-huecos]— es programación que no existe, no un filtro que
-    // esconde. Se distingue por lo que había ANTES de filtrar.
-    const _sinFiltros=activeVenue==='all'&&activeSec==='all';
-    return _sinFiltros
-      ? emptyState(ICONS.calendar, t('dia_sin_funciones'), t('dia_sin_funciones_sub'))
-      : emptyState(ICONS.search, t('filter_sin_actividades'), t('empty_filtros'));
-  }
+  if(!films.length) return vacioDelDia();
   const byTime={};
   films.forEach(f=>{if(!byTime[f.time])byTime[f.time]=[];byTime[f.time].push(f);});
   return Object.entries(byTime).map(([time,fs])=>`
@@ -545,7 +551,7 @@ export function render(){
   const cntEl=document.getElementById('cnt');
   cntEl.innerHTML=''; // count eliminado — redundante con lugar-btn y chips
   const grid=document.getElementById('grid');
-  if(!films.length){grid.innerHTML=emptyState(ICONS.search,t('filter_sin_actividades'),t('empty_filtros'));return;}
+  if(!films.length){grid.innerHTML=vacioDelDia();return;}
   // ── Vista horario: poster-grid 3 col + overlay de hora ──
   grid.innerHTML='<div class="poster-grid">'+films.map((f,i)=>{
     const isProg=f.is_cortos;

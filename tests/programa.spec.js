@@ -2699,3 +2699,37 @@ test('T126 — el corazón de la lista llega al área de toque de sus hermanos',
   expect(r.posicionRelativa, 'y ancla en él (si no, el ::after se va al ancestro)').toBe('relative');
   expect(r.margenPorLado, 'suma al menos 14px por lado, como sus hermanos').toBeGreaterThanOrEqual(14);
 });
+
+// ── T131 — el vacío de un día con SOLO la ciudad puesta no culpa a los filtros ──
+// La ciudad es CONTEXTO (sobrevive al cambio de día por keepCityOnly), no un
+// filtro que el usuario fue a buscar. En FICDEH, Medellín + MIÉ 12 no tiene
+// programación y el vacío decía «Ajustá los filtros de sección o sede»: dos
+// controles que el usuario nunca tocó y que no arreglan nada. Se mide el TEXTO
+// pintado —la misma magnitud del diagnóstico—, no la rama que lo eligió.
+test('T131 — el día vacío por ciudad nombra la ciudad, no filtros ajenos', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-12T10:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('citySheetPick', { city: 'Medell\u00edn' });
+    await w(700);
+    switchMainNav('mnav-cartelera');
+    await w(700);
+    const out = { venue: String(activeVenue), sec: String(activeSec), txt: null };
+    for (let i = 0; i < DAY_KEYS.length; i++) {
+      globalThis.selectedIdx = i;
+      if (typeof render === 'function') render();
+      await w(240);
+      const es = document.querySelector('.empty-state');
+      if (es) { out.txt = es.innerText.replace(/\s+/g, ' ').trim(); break; }
+    }
+    return out;
+  });
+  expect(r.venue, 'la ciudad quedó puesta como selección de lugar').toContain('city:');
+  expect(r.sec, 'y ninguna sección está filtrando').toBe('all');
+  expect(r.txt, 'algún día de FICDEH queda vacío en esa ciudad').not.toBe(null);
+  expect(r.txt, 'el vacío nombra la ciudad').toContain('Medell\u00edn');
+  expect(r.txt, 'y NO manda a ajustar sección o sede').not.toMatch(/secci\u00f3n o sede/);
+});
