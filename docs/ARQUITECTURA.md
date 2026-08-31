@@ -791,6 +791,21 @@ sería un cambio sin lector. Quedan EXENTOS los nombres de FORMATO
 (`label_cortometraje`, `label_cortos`), donde «cortometraje» es el dato correcto y
 no un paraguas.
 
+#### El build que se ve es el que corre — `[dbg-ver-sin-literal]`
+
+El buscador muestra el número de build en su esquina (`#dbg-ver`). Estaba
+**tipeado a mano** en `index.html`, y nadie lo actualizaba —`bump-version.js` ni
+sabía que existía—, así que enseñó el build del **10 de mayo durante cuatro
+meses** a todo el que abriera el buscador. Un número de build existe justo para
+lo contrario: saber qué código corre de verdad, que es la cicatriz del bundle
+congelado del v6/v7 en Play Store. Uno viejo miente sobre lo único que tenía que
+decir, y encima parece confiable.
+
+Ahora lo llena `main.js` con `BUILD_VERSION` —el del código que se está
+ejecutando, mantenido por `bump-version.js`— y el nodo **nace vacío**: si el JS
+no llega, mejor sin número que con uno falso. `[dbg-ver-sin-literal]`
+(validate.py) bloquea el push si vuelve a nacer escrito.
+
 #### El nombre de la actividad — `[event-kind-conocido]`
 
 `event_kind` es la palabra que la card le pone encima a una actividad: TALLER,

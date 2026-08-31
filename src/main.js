@@ -491,7 +491,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608311447';
+const BUILD_VERSION='202608311638';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -508,6 +508,16 @@ const BUILD_VERSION='202608311447';
   sessionStorage.removeItem(_sk);
   storage.setBuild(BUILD_VERSION);
 })();
+
+// #dbg-ver estaba escrito A MANO en index.html y nadie lo actualizaba —tampoco
+// bump-version, que no lo conocía—: mostraba el build del 10 de mayo cuatro meses
+// después. Un número de build existe para lo contrario: saber qué código corre
+// (cicatriz del bundle congelado del v6/v7). Sale de BUILD_VERSION, y el nodo nace
+// VACÍO: si el JS no llega, mejor sin número que con uno falso.
+onDomReady(()=>{
+  const _v=document.getElementById('dbg-ver');
+  if(_v) _v.textContent=BUILD_VERSION;
+});
 
 /* ── GLOSARIO DE TÉRMINOS USER-FACING ────────────────────────────
    Validar con usuarios reales antes de cada edición del festival.
