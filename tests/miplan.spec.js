@@ -789,3 +789,40 @@ test('T125 — con un taller, el conflicto anuncia las sesiones que se van', asy
   expect(r.diceCuantas, 'el aviso dice cuántas sesiones se van').toBe(true);
   expect(r.leDiceFuncion, 'y no le dice «función» a un taller').toBe(false);
 });
+
+// ── T128 — «Agendar» en NO INCLUIDAS agenda, y no te lleva a otro lado ───────
+// Medido por un recorrido de usuario: al tocar «Agendar» de una obra no incluida
+// se abría TAMBIÉN su ficha, detrás del modal, y el usuario terminaba ahí en vez
+// de en su Plan. El botón declara `data-stop="1"` —«yo me encargo de este
+// toque»— pero el listener que abre la ficha corre en CAPTURA, o sea ANTES del
+// stopPropagation de la burbuja: la declaración no podía frenarlo. Su única
+// defensa era una lista de clases en la que `.excl-include-btn` no estaba.
+test('T128 — tocar «Agendar» en NO INCLUIDAS no abre la ficha detrás', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T11:00');
+  const r = await page.evaluate(async () => {
+    // Caso mínimo con una obra REAL: con un título inventado openPelSheet no
+    // encuentra film y sale sin abrir nada — el test pasaría con y sin el
+    // arreglo. (Pasó: su primera mutación no lo tumbó.)
+    const real = FILMS.find(f => f.day && f.time && !f.info);
+    if (!real) return { sinObra: true };
+    const fila = document.createElement('div');
+    fila.className = 'int-item js-open-pel';
+    fila.dataset.title = real.title;
+    const btn = document.createElement('button');
+    btn.className = 'excl-include-btn';
+    btn.dataset.stop = '1';
+    btn.textContent = 'Agendar';
+    fila.appendChild(btn);
+    document.body.appendChild(fila);
+    const abiertoAntes = !!document.querySelector('#pel-sheet.open');
+    btn.click();
+    await new Promise(r => setTimeout(r, 700));
+    const abiertoDespues = !!document.querySelector('#pel-sheet.open');
+    fila.remove();
+    const sh = document.querySelector('#pel-sheet.open'); if (sh) sh.classList.remove('open');
+    return { abiertoAntes, abiertoDespues };
+  });
+  if (r.sinObra) return;
+  expect(r.abiertoAntes, 'no había ficha abierta').toBe(false);
+  expect(r.abiertoDespues, 'un control con data-stop no abre la ficha').toBe(false);
+});
