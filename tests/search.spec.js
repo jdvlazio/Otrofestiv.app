@@ -102,3 +102,27 @@ test('S07 — «techo» no trae títulos con las letras sueltas', async ({ page 
   expect(r.erratasTotal, 'la muestra de erratas no está vacía').toBeGreaterThan(20);
   expect(r.erratasOk, 'y una letra caída se sigue perdonando').toBe(r.erratasTotal);
 });
+
+// ── S08 — el build que muestra el buscador es el que corre ───────────────────
+// El número estaba TIPEADO en index.html y nadie lo actualizaba: mostró el build
+// del 10 de mayo durante cuatro meses. Ahora lo pone main.js con BUILD_VERSION.
+// [dbg-ver-sin-literal] (validate.py) impide que vuelva a nacer escrito; este
+// test cubre la otra mitad —que el código de verdad lo escriba—, porque un nodo
+// que nace vacío y nunca se llena pasa ese guardián sin decir nada.
+test('S08 — el número de build del buscador sale del código que corre', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(500);
+    tap('searchOpen');
+    await w(800);
+    const el = document.getElementById('dbg-ver');
+    const vj = await (await fetch('/version.json?cb=' + Math.random())).json();
+    return { enPantalla: el ? el.textContent.trim() : null, deploy: String(vj.android) };
+  });
+  expect(r.enPantalla, 'el buscador muestra un build').toBeTruthy();
+  expect(r.enPantalla, 'y es el del deploy, no uno escrito a mano').toBe(r.deploy);
+});
