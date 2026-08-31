@@ -2666,42 +2666,53 @@ test('T117 — Prensa tiene etiqueta, anatomía de filtro, y la barra sigue cabi
 });
 
 // ── T126 — el corazón de la LISTA tiene área de toque, como su hermano ───────
-// Medido por un recorrido de usuario: 26×26 px sin expansor, y a 14 px del
-// centro el toque ya abría la ficha en vez de sumar a Intereses. El hermano de
-// la GRILLA (.poster-wl-dot) ya estaba en la regla de expansión desde la
-// auditoría de iconos de julio: el patrón existía y no se había aplicado acá.
-// La doctrina de esa regla permite expandir los icon-only AISLADOS; el corazón
-// es el ÚLTIMO elemento de la fila, sin ningún icono al lado — lo único que le
-// disputa el toque es la fila, que es justamente el bug.
+// El botón mide 26×26 y errarle abría la ficha: a ±14 px del centro
+// elementFromPoint ya devolvía la fila. El expansor (::after con inset -14px)
+// lo lleva a 54×54, sobre el mínimo de 44.
+//
+// Se sondea con elementFromPoint —la MISMA magnitud del diagnóstico—, no las
+// propiedades CSS del ::after: un expansor puede existir en el estilo y no
+// capturar nada (ancestro sin position, z-index, un sheet encima). La versión
+// anterior de este test medía en la vista GRID —clickeaba el toggle, que sale
+// de la lista— y leía estilos de un elemento oculto.
+//
+// El aserto de BORDE es la otra mitad: a ±30 px debe responder la ficha. Sin él,
+// «arreglarlo» haciendo que toda la fila sea corazón pasaría el test y rompería
+// el toque de abrir la obra.
 test('T126 — el corazón de la lista llega al área de toque de sus hermanos', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026', '2026-09-05T11:00');
+  await enterFestival(page, 'cinemancia2026', '2026-09-05T11:00:00-05:00');
   const r = await page.evaluate(async () => {
-    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
-      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
       document.body.appendChild(b); b.click(); b.remove(); };
+    // Cinemancia es multiciudad: el sheet de ciudad nace encima y se come las
+    // sondas (es fixed, así que offsetParent no lo delata).
+    tap('closeCitySheet');
+    await w(600);
     switchMainNav('mnav-cartelera');
-    const vt = document.querySelector('[data-action="toggleProgramaView"]');
-    if (vt) vt.click();
-    await new Promise(r => setTimeout(r, 1200));
-    const h = document.querySelector('.plist-heart');
+    await w(1400);
+    const h = [...document.querySelectorAll('.plist-heart')].filter(e => e.getBoundingClientRect().width > 0)[0];
     if (!h) return { sinCorazon: true };
-    const af = getComputedStyle(h, '::after');
-    // Se mide el EXPANSOR, no la caja: en un runner headless la fila puede no
-    // llegar a pintarse y getBoundingClientRect da 0 — un aserto sobre el ancho
-    // pasaría o fallaría por razones ajenas al arreglo. El expansor sí se
-    // resuelve siempre, y es lo que define el área de toque real.
+    const b = h.getBoundingClientRect();
+    const cx = Math.round(b.left + b.width / 2), cy = Math.round(b.top + b.height / 2);
+    const sonda = (dx, dy) => {
+      const e = document.elementFromPoint(cx + dx, cy + dy);
+      if (!e) return 'nada';
+      if (e.closest('[data-action="toggleWLFromList"],.plist-heart')) return 'CORAZON';
+      return e.closest('.js-open-pel') ? 'FICHA' : 'OTRO';
+    };
     return {
-      tieneExpansor: af.content !== 'none' && af.content !== 'normal',
-      posicionRelativa: getComputedStyle(h).position,
-      margenPorLado: Math.abs(parseFloat(af.top || '0')),
-      esAbsoluto: af.position
+      caja: Math.round(b.width),
+      dentro: [sonda(-14, 0), sonda(14, 0), sonda(0, -14), sonda(0, 14)],
+      borde: [sonda(-30, 0), sonda(0, -30)]
     };
   });
   if (r.sinCorazon) return;
-  expect(r.tieneExpansor, 'el corazón tiene expansor táctil').toBe(true);
-  expect(r.esAbsoluto, 'el expansor se posiciona sobre el corazón').toBe('absolute');
-  expect(r.posicionRelativa, 'y ancla en él (si no, el ::after se va al ancestro)').toBe('relative');
-  expect(r.margenPorLado, 'suma al menos 14px por lado, como sus hermanos').toBeGreaterThanOrEqual(14);
+  expect(r.caja, 'el botón sigue siendo el chico de 26 px').toBeLessThan(44);
+  expect(r.dentro, 'a 14 px del centro responde el corazón, no la fila')
+    .toEqual(['CORAZON', 'CORAZON', 'CORAZON', 'CORAZON']);
+  expect(r.borde, 'y a 30 px ya es la fila: el expansor está acotado')
+    .toEqual(['FICHA', 'FICHA']);
 });
 
 // ── T131 — el vacío de un día con SOLO la ciudad puesta no culpa a los filtros ──
