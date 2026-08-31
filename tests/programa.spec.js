@@ -2140,7 +2140,11 @@ test('T96 — el botón admite que ya calculó, y no compite con el que confirma
     return { antes, despues: { txt: btn().textContent.trim(), recalc: btn().classList.contains('recalc'),
       ambar: esAmbar(btn()), primarios: primarios() } };
   });
-  expect(r.antes.txt, 'sin resultado, el botón ofrece calcular').toMatch(/Calcular/);
+  // El rótulo pasó a «Ver opciones» (31 ago): la clave siempre se llamó
+  // av_ver_opciones y su valor había derivado a «Calcular Mi Plan», que con un
+  // Plan ya guardado prometía crear lo que el usuario tiene. El aserto se
+  // REAPUNTA al rótulo nuevo — dejarlo en /Calcular/ lo volvería ciego.
+  expect(r.antes.txt, 'sin resultado, el botón ofrece ver las opciones').toMatch(/Ver opciones/);
   expect(r.antes.recalc, 'y es el primario').toBe(false);
   expect(r.antes.ambar, 'sin resultado, calcular ES el CTA ámbar').toBe(true);
   expect(r.despues.txt, 'con resultado, nombra lo que de verdad haría').toMatch(/Recalcular/);
@@ -2150,7 +2154,7 @@ test('T96 — el botón admite que ya calculó, y no compite con el que confirma
   // ámbar de PÁGINA. (Las acciones de fila del bloque de conflictos también son
   // ámbar por el canon; se cuentan aparte y no son parte de este cambio.)
   expect(r.despues.primarios.some(txt => /Plan/.test(txt)), 'el CTA que confirma sigue en ámbar').toBe(true);
-  expect(r.despues.primarios.some(txt => /Calcular|Recalcular/.test(txt)), 'y el de calcular ya no compite').toBe(false);
+  expect(r.despues.primarios.some(txt => /Ver opciones|Recalcular/.test(txt)), 'y el de calcular ya no compite').toBe(false);
 });
 
 test('T97 — el Plan que estás mirando no cambia solo: se marca y vos recalculás', async ({ page }) => {
