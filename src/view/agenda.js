@@ -154,10 +154,14 @@ export function renderAgenda(){
           </div>`;
         return;
       }
-      // A.3 — primer uso de verdad: nunca hubo intereses.
+      // A.3 — primer uso de verdad: nunca hubo intereses. El titular NO puede ser
+      // «Tu Plan aparece aquí»: acá el Plan se ARMA, aparece en Mi Plan — y esa
+      // pantalla usaba la misma frase con el mismo icono, así que dos de los tres
+      // pasos que promete el stepper se presentaban como el mismo lugar. El icono
+      // es el del paso al que manda el CTA (Intereses), no el del calendario.
       view.innerHTML=`${_progressHtml}
         <div class="ag-section">
-          ${emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses_3'),t('cta_ir_intereses'),'mnav-seleccion')}
+          ${emptyStateHero(ICONS.heart,t('plan_falta_intereses'),t('empty_intereses_3'),t('cta_ir_intereses'),'mnav-seleccion')}
         </div>`;
       return;
     }

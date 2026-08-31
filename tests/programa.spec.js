@@ -1121,7 +1121,7 @@ test('T75 — Planear distingue por qué no hay nada que planear', async ({ page
   });
   expect(a1, 'se despide en vez de invitar').toContain('ha terminado');
   expect(a1, 'y manda a lo vivido').toContain('Ver Mi Plan');
-  expect(a1, 'sin la pantalla de primer uso').not.toContain('Tu Plan aparece aquí');
+  expect(a1, 'sin la pantalla de primer uso').not.toContain('Primero, tus intereses');
 
   // A.2 · el festival sigue, tus intereses se agotaron → al Programa
   const a2 = await page.evaluate(async () => {
@@ -1151,7 +1151,11 @@ test('T75 — Planear distingue por qué no hay nada que planear', async ({ page
     await new Promise(r => setTimeout(r, 1000));
     return (document.getElementById('ag-view')?.innerText || '').replace(/\s+/g, ' ');
   });
-  expect(a3, 'el primer uso conserva su invitación').toContain('Tu Plan aparece aquí');
+  // El titular del primer uso cambió el 31 ago: «Tu Plan aparece aquí» era falso
+  // acá (el Plan se arma en Planear y aparece en Mi Plan) y era además el mismo
+  // de Mi Plan. El aserto se REAPUNTA a la frase nueva — si se dejara la vieja,
+  // dejaría de identificar esta pantalla y el guardián quedaría ciego.
+  expect(a3, 'el primer uso conserva su invitación').toContain('Primero, tus intereses');
 
   // Combos vacíos · sin bloqueos NO se culpa a la disponibilidad
   const combos = await page.evaluate(async () => {

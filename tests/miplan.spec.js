@@ -986,3 +986,38 @@ test('T132b — con un taller en el día, el titular usa el paraguas', async ({ 
   expect(r.titular, 'un taller no se cuenta como obra').not.toMatch(/obras?\b/);
   expect(r.titular, 'se cuenta como actividad').toMatch(/actividades?\b/);
 });
+
+// ── T134 — PLANEAR y MI PLAN no se presentan como el mismo lugar ─────────────
+// Con la app recién abierta y nada agregado, los pasos 2 y 3 del stepper
+// mostraban el MISMO titular («Tu Plan aparece aquí.») y el MISMO icono, con
+// CTA en direcciones contrarias. Además la frase era falsa en PLANEAR: ahí el
+// Plan se ARMA, aparece en MI PLAN. Se comparan las dos pantallas entre sí
+// —titular e icono—, que es la magnitud del hallazgo: no que cada una diga algo
+// razonable, sino que no digan lo mismo.
+test('T134 — los vacíos de PLANEAR y MI PLAN se distinguen', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const leer = async nav => {
+      switchMainNav(nav);
+      try { showAgView(); } catch (e) {}
+      await w(1500);
+      const es = [...document.querySelectorAll('.empty-state-hero')].filter(e => e.offsetParent !== null)[0];
+      if (!es) return null;
+      const ic = es.querySelector('.empty-state-icon svg');
+      return {
+        titulo: (es.querySelector('.empty-state-title') || {}).innerText,
+        cta: (es.querySelector('.empty-state-cta,.empty-state-cta-sec') || {}).innerText,
+        icono: ic ? [...ic.querySelectorAll('path,circle,rect,line,polyline')]
+          .map(e => e.getAttribute('d') || e.tagName).join('~') : null
+      };
+    };
+    return { wl: watchlist.size, planear: await leer('mnav-planner'), miplan: await leer('mnav-miplan') };
+  });
+  expect(r.wl, 'app sin intereses — es el estado del hallazgo').toBe(0);
+  expect(r.planear, 'PLANEAR muestra su vacío').not.toBe(null);
+  expect(r.miplan, 'MI PLAN muestra su vacío').not.toBe(null);
+  expect(r.planear.cta, 'y los CTA siguen apuntando a pasos distintos').not.toBe(r.miplan.cta);
+  expect(r.planear.titulo, 'los titulares no pueden ser el mismo').not.toBe(r.miplan.titulo);
+  expect(r.planear.icono, 'ni el icono').not.toBe(r.miplan.icono);
+});
