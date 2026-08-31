@@ -216,9 +216,18 @@ export function renderAgenda(){
             // entrar con intereses y sin Plan guardado), así que un botón que
             // ofrece «Calcular» sobre un plan ya calculado describe mal lo que
             // pasó. «Recalcular» nombra el estado real y baja a secundario.
-            const _ya=!!cachedResult;
+            // …SALVO cuando el plan quedó DESACTUALIZADO (30 ago 2026). Ahí
+            // «Usar este Plan» se pinta `disabled` (línea ~1528: no se guarda un
+            // plan viejo), así que el primario de la pantalla está apagado Y el
+            // único botón vivo se veía apagado también: fondo transparente y
+            // texto al 60%, que es la convención de deshabilitado. La app avisaba
+            // «tu Plan está desactualizado» y pintaba el remedio como inactivo.
+            // La regla no cambia —UN primario, y dos ámbar juntos no dicen cuál
+            // es cuál—: cambia CUÁL es. Si «Usar este Plan» no se puede tocar,
+            // el primario es Recalcular.
+            const _ya=!!cachedResult&&!_stale;
             return`<button class="av-calc-btn${_ya?' recalc':''}" data-action="runCalc">
-              ${_ya?t('av_recalcular'):t('av_ver_opciones')}
+              ${cachedResult?t('av_recalcular'):t('av_ver_opciones')}
             </button>`;
           })()}
         </div>
