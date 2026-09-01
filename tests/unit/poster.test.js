@@ -691,3 +691,64 @@ test('Forma A — si el número es OTRO, se conserva: ahí el número sí inform
       'Fuera de competencia programa 1 (restaurada)')),
     'con texto después del número no hay eco que recortar: el título va entero');
 });
+
+// ── N-B22 (1 sep 2026): el título de un EVENTO no repite su TIPO ─────────────
+// La regla del 24 ago recorta el PREFIJO exacto que coincide con el rótulo, y
+// para secciones está bien. Pero la misma card sirve a los eventos, donde el
+// rótulo es un TIPO —DEBATE, TALLER, ENCUENTRO— que suele ser la CABEZA de la
+// frase y no un prefijo. Fallaba de dos formas, las dos medidas en Cinemancia:
+//   · «Encuentro Internacional de…» quedaba «Internacional de…», a media frase.
+//   · «Todos los planos del mundo — Debate: ¿Qué…» repetía la palabra en 4 cm².
+//
+// Los SEIS títulos son los reales del catálogo — los únicos 6 casos en 12
+// festivales, barriendo los JSON. Los cuatro que NO deben cambiar valen tanto
+// como los dos que sí: una regla que los tocara sería peor que el bug, porque
+// ahí «Taller» es parte de la frase.
+//
+// Se afirma POR DÓNDE ARRANCA y QUÉ PALABRAS quedan, no la cadena exacta: estos
+// títulos son largos y la card trunca con «…» a 4 líneas. Fijar el render
+// completo ataría el test al motor de quiebre, que no es lo que se arregló.
+const _tituloDe = (svg) => [...decodeURIComponent(svg)
+  .matchAll(/<text(?=[^>]*fill="#F0EDE8")[^>]*>([^<]+)<\/text>/g)].map(m => m[1]).join(' ').trim();
+const _evento = (headerLabel, title) =>
+  _tituloDe(C._buildPosterV16({ accent: '#F59E0B', headerLabel, title, num: null, kindLabel: true }));
+
+test('Forma A · evento — el TIPO como cabeza de frase NO se recorta', () => {
+  const t = _evento('ENCUENTRO', 'Encuentro Internacional de Investigación-Creación en Música y Sonido Cinematográfico');
+  assert.ok(t.startsWith('Encuentro Internacional'),
+    'arranca por su propia cabeza, no a media frase: ' + JSON.stringify(t));
+});
+
+test('Forma A · evento — el TIPO con separador SÍ se recorta', () => {
+  // VARTEX: acá el rótulo sí es un prefijo puesto, y el título entero cabe.
+  assert.strictEqual(
+    _evento('SEMINARIO', 'Seminario · Apreciación del experimental: nombrar lo inasible'),
+    'Apreciación del experimental: nombrar lo inasible',
+    'con separador, el prefijo se va como siempre');
+});
+
+test('Forma A · evento — el eco en MEDIO con forma de etiqueta se quita', () => {
+  const t = _evento('DEBATE', 'Todos los planos del mundo — Debate: ¿Qué cine colombiano queremos?');
+  assert.ok(!/debate/i.test(t), 'la palabra no se repite dentro del título: ' + JSON.stringify(t));
+  assert.ok(t.startsWith('Todos los planos del mundo —'),
+    'y el guion queda separando nombre de pregunta: ' + JSON.stringify(t));
+});
+
+test('Forma A · evento — sin la forma exacta, el título NO se toca', () => {
+  const a = _evento('CHARLA', 'Tercera charla Derechos audiovisuales');
+  assert.strictEqual(a, 'Tercera charla Derechos audiovisuales', 'sin separador ni dos puntos');
+  const b = _evento('TALLER', 'Visibilizar lo Invisible: Taller de Herramientas frente a las Violencias Basadas en Género');
+  assert.ok(b.startsWith('Visibilizar lo Invisible: Taller de Herramientas'),
+    'dos puntos ANTES del rótulo no es la forma de etiqueta: ' + JSON.stringify(b));
+  const c = _evento('TALLER', 'Cine en Movimiento: Taller Teórico-Práctico de Plano Secuencia');
+  assert.ok(c.startsWith('Cine en Movimiento: Taller Teórico'), 'ídem: ' + JSON.stringify(c));
+});
+
+test('Forma A · evento — la regla NO alcanza a las secciones', () => {
+  // Sin kindLabel todo se comporta igual que antes: el prefijo exacto se recorta
+  // aunque no haya separador. Es la mitad que no puede moverse.
+  const secc = _tituloDe(C._buildPosterV16({ accent: '#E5A020',
+    headerLabel: 'Competencia de cortometrajes',
+    title: 'Competencia de cortometrajes Programa 1', num: null }));
+  assert.strictEqual(secc, 'Programa 1', 'la sección conserva la regla exacta de siempre');
+});

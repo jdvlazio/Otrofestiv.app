@@ -384,7 +384,7 @@ export function _buildPosterMini({accent, title, esPrograma}){
   return 'data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">${base}${cuerpo}</svg>`);
 }
 
-export function _buildPosterV16({accent, headerLabel, title, num, dato, firma}){
+export function _buildPosterV16({accent, headerLabel, title, num, dato, firma, kindLabel}){
   // ── Póster nuestro — anatomía aprobada (POSTERS.md §6.0, Juan 18 ago 2026) ──
   // Retícula: u = ancho/8 → 8u × 12u. Margen 0,75u. Filete de sección de 0,25u a
   // sangre. Sección arriba, título anclado abajo, dato al pie, luz abajo a la
@@ -421,8 +421,26 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma}){
   {
     const _nt=_norm(title), _nh=_norm(headerLabel);
     if(_nh&&_nt.startsWith(_nh)){
-      const _resto=String(title).trim().slice(String(headerLabel).trim().length).replace(/^[\s·:—-]+/,'');
-      if(_resto) title=_resto;
+      const _tras=String(title).trim().slice(String(headerLabel).trim().length);
+      // Con rótulo de TIPO la palabra puede ser la CABEZA de la frase y no un
+      // prefijo: «Encuentro Internacional de…» quedaba «Internacional de…», a
+      // media frase. Ahí solo se recorta si sigue un separador («Seminario ·
+      // Apreciación…»). Las secciones conservan la regla exacta de siempre.
+      const _hayCorte=!kindLabel||/^\s*[·:—–-]/.test(_tras);
+      const _resto=_tras.replace(/^[\s·:—–-]+/,'');
+      if(_resto&&_hayCorte) title=_resto;
+    }
+    // Eco en MEDIO con forma de ETIQUETA: «Nombre — Debate: pregunta» bajo DEBATE.
+    // El recorte de arriba solo mira el PREFIJO, así que este sobrevivía y la
+    // palabra salía dos veces en 4 cm² (Cinemancia). Se va el rótulo con sus dos
+    // puntos; el guion queda, que sigue separando nombre de pregunta. SOLO esa
+    // forma: «Tercera charla…» y «…: Taller de Herramientas» no la tienen. Match
+    // sobre el título CRUDO — ningún rótulo de tipo lleva acentos.
+    if(kindLabel&&String(headerLabel||'').trim()){
+      const _lbl=String(headerLabel).trim().replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      const _re=new RegExp('(\\s[—–-]\\s*)'+_lbl+'\\s*:\\s*','i');
+      const _t2=String(title).replace(_re,'$1');
+      if(_t2.trim()&&_t2!==String(title)) title=_t2;
     }
   }
   // MISMA REGLA, EL ECO AL FINAL (Juan, 24 ago 2026 — lo cazó en Cinemancia).
@@ -709,7 +727,7 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
   // está en la cabecera del sheet. La banda de kind/sección se conserva.
   const _bodyTitle=(opts&&opts.untitled)?'':title;
   const kind=_kindMap[eventKind];
-  if(kind) return _buildPosterV16({...kind, title:_bodyTitle, num:null});
+  if(kind) return _buildPosterV16({...kind, title:_bodyTitle, num:null, kindLabel:true});
   // Fallback — usa la sección del film si existe, sino eventPosterLabel del config
   const _secFallback=section?_secLabel(section):'';
   const lbl=_secFallback?[_secFallback]:((festCfg.eventPosterLabel)||[t('poster_evento'),'']);
