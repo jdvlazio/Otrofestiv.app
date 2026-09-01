@@ -2868,3 +2868,68 @@ test('T140 — con el título en dos líneas, la etiqueta va en la última', asy
     expect(c.alTecho, `«${c.etiqueta}» en ${c.txt}: y NO junto a la primera`).toBeGreaterThan(4);
   }
 });
+
+// ── T141 — la fila que filtra la ciudad entera está en la columna, no fuera ──
+// En el nivel 2 del filtro de Lugar («‹ Ciudades / Medellín 60 / 📍 sede / …»)
+// la fila de la CIUDAD es la única sin icono: el pin es de las SEDES, y esa
+// regla se queda. Pero sin nada en su lugar, su texto arrancaba 21px a la
+// izquierda de todas las demás (63 contra 84) y colgaba fuera de la columna, así
+// que se leía como el TÍTULO de la lista y no como la opción que es — y es la
+// única forma de pedir «todo Medellín», el caso más común en un festival de área
+// metropolitana.
+//
+// El reporte lo atribuía al color («las sedes llevan color más claro»): medido,
+// las tres filas son el MISMO rgb(136,136,136). Era la sangría.
+//
+// Se comparan las posiciones ENTRE FILAS, no contra un número fijo: lo que no
+// puede volver a pasar es que la ciudad quede desalineada de sus hermanas.
+test('T141 — el rótulo de la ciudad se alinea con el de sus sedes', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-14T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(600);
+    switchMainNav('mnav-cartelera');
+    await w(1300);
+    const btn = document.querySelector('.lugar-btn');
+    if (!btn) return { sinBoton: true };
+    btn.click();
+    await w(900);
+    const dr = [...document.querySelectorAll('.filter-drop .lugar-opt')]
+      .find(o => (o.dataset.v || '').startsWith('drill:'));
+    if (!dr) return { sinDrill: true };            // festival de una sola ciudad
+    dr.click();
+    await w(700);
+    // El rótulo es el primer span CON texto: el hueco es un span vacío y el
+    // conteo va después (medirlo mal fue mi primer error acá).
+    const rotulo = o => {
+      const sp = [...o.querySelectorAll('span')]
+        .find(x => x.textContent.trim() && !x.classList.contains('lugar-cnt'));
+      return sp ? Math.round(sp.getBoundingClientRect().left) : null;
+    };
+    const filas = [...document.querySelectorAll('.filter-drop .lugar-opt')];
+    const ciudad = filas.find(o => (o.dataset.v || '').startsWith('city:'));
+    const sedes = filas.filter(o => (o.dataset.v || '').startsWith('sede:'));
+    if (!ciudad || !sedes.length) return { sinNivel2: true };
+    return {
+      xCiudad: rotulo(ciudad),
+      xSedes: [...new Set(sedes.map(rotulo))],
+      colorCiudad: getComputedStyle(ciudad).color,
+      colorSede: getComputedStyle(sedes[0]).color,
+      pinCiudad: ciudad.querySelectorAll('svg').length,
+      pinSede: sedes[0].querySelectorAll('svg').length
+    };
+  });
+  if (r.sinBoton || r.sinDrill || r.sinNivel2) return;
+  expect(r.xSedes.length, 'las sedes comparten una sola columna').toBe(1);
+  expect(Math.abs(r.xCiudad - r.xSedes[0]), 'la ciudad está en esa misma columna')
+    .toBeLessThanOrEqual(2);
+  // Las dos mitades de la regla que se conserva: la ciudad NO lleva pin (es de
+  // las sedes) y tampoco está más apagada — si alguien "arregla" la alineación
+  // dándole un pin, esto lo caza.
+  expect(r.pinSede, 'la sede sí lleva pin').toBeGreaterThan(0);
+  expect(r.pinCiudad, 'y la ciudad no — el pin es de las sedes').toBe(0);
+  expect(r.colorCiudad, 'ni está más apagada que ellas').toBe(r.colorSede);
+});

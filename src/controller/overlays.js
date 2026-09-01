@@ -371,8 +371,17 @@ export function lugarOpen(){
     } else {
       const cv=venues.filter(v=>v.city===drillCity);
       const ccount=_cuentaCiudad(drillCity);
+      // La fila que filtra la CIUDAD entera es la única sin icono —el pin es de
+      // las SEDES ([filtro-lugar-multiciudad]: la ciudad no lo lleva)— así que su
+      // texto arrancaba 21px a la izquierda de todas las demás (63 contra 84).
+      // En una lista, el ítem que cuelga fuera de la columna se lee como TÍTULO
+      // de los de abajo, y esta es la única forma de pedir «todo Medellín». Un
+      // hueco del ancho del pin la mete en la columna sin darle un pin que no le
+      // toca. No es color —las tres filas miden el mismo rgb(136,136,136)—: es
+      // la sangría.
+      const _hueco='<span class="lugar-gutter" aria-hidden="true"></span>';
       drop.innerHTML='<div class="lugar-opt lugar-back" data-v="back">'+ICONS.chevronL+'<span>'+t('filter_ciudades')+'</span></div>'
-        +_row('city:'+drillCity, drillCity, ccount)
+        +_row('city:'+drillCity, drillCity, ccount, {icon:_hueco})
         +cv.map(v=>_row('sede:'+v.key, v.label, v.count, {icon:ICONS.pin})).join('');
     }
   }
