@@ -196,6 +196,27 @@ export function _renderSplashRail(activeFestId){
 // (10 ago: «es corto, emotivo, sencillo» — dejarla opaca al usuario EN pesa más que
 // el escrúpulo de traducir). Sin note_en, el fallback es el ES intacto — nunca se
 // traduce en runtime. Etiqueta y enlace pasan por t(). Sin botón de cerrar.
+// renderFestBar — el chip del encabezado (nombre + fechas). DUEÑO ÚNICO.
+// Vivía inline en loadFestival, así que solo se pintaba al CARGAR un festival y
+// el cambio de idioma no lo tocaba: en inglés el selector decía «SEP 3–12»
+// (dates_en) y el encabezado seguía en «3–12 SEP 2026», la misma fecha en dos
+// órdenes a dos toques de distancia. Es la misma trampa que ya tenía resuelta su
+// hermana renderPostponedBanner —persiste, no pasa por loadFestival— y por eso
+// vive al lado y la llaman los mismos dos sitios.
+export function renderFestBar(cfg){
+  if(!cfg) return;
+  const _fn=document.querySelector('.hdr-fest-name');
+  const _fd=document.querySelector('.hdr-fest-dates');
+  const _postponed=!!(cfg.status&&cfg.status.kind==='postponed');
+  if(_fn) _fn.textContent=festivalShortName(cfg);
+  // El año se une con la MISMA separación que usa el bloque del splash (' · ').
+  // Solo en inglés: ahí las fechas terminan en número («SEP 3–12») y un espacio
+  // dejaba «3–12 2026», dos cifras pegadas. En español la fecha termina en mes
+  // («3–12 SEP 2026») y se lee bien — no se toca una superficie ya aprobada.
+  const _sep=(state.snapshot()._lang==='en')?' · ':' ';
+  if(_fd) _fd.textContent=' · '+_langDates(cfg)+(cfg.year&&!_postponed?_sep+cfg.year:'');
+}
+
 export function renderPostponedBanner(cfg){
   document.getElementById('fest-postponed-banner')?.remove();
   const _hdrP=document.getElementById('hdr-programa');

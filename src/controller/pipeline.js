@@ -10,7 +10,7 @@ import { venueSelLabel } from '../view/helpers.js';
 import { _renderProgramaContent, renderProgramaChips, scrollDtabsToActive } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda, renderFilmListHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
-import { _renderSplashRail, _renderFestivalSelector, renderPostponedBanner } from './festival.js';
+import { _renderSplashRail, _renderFestivalSelector, renderPostponedBanner, renderFestBar } from './festival.js';
 import { dayFullyPassed, festivalEnded, simNow, simTodayStr } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -290,6 +290,9 @@ export function setLang(code){
     // Banda APLAZADO: persistente → no pasa por loadFestival; se rehornea acá con
     // la etiqueta/enlace del idioma nuevo (la cita del festival queda en ES).
     renderPostponedBanner(FESTIVAL_CONFIG[_activeFestId]);
+    // El chip del encabezado tampoco pasa por loadFestival al cambiar idioma:
+    // sin esto quedaba con las fechas en el orden del idioma anterior.
+    renderFestBar(FESTIVAL_CONFIG[_activeFestId]);
     requestAnimationFrame(()=>{
       _fadeEls.forEach(el=>el.classList.remove('lang-fade'));
     });

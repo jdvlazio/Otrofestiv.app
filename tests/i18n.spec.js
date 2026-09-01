@@ -70,3 +70,42 @@ test('I05 — cambio de idioma sin errores JS', async ({ page }) => {
   await page.waitForTimeout(200);
   expect(errors).toHaveLength(0);
 });
+
+// ── I06 — al cambiar de idioma, el encabezado también cambia de fecha ────────
+// El chip del encabezado se llenaba INLINE dentro de loadFestival, así que solo
+// se pintaba al cargar un festival: cambiar el idioma no lo tocaba. En inglés el
+// selector decía «SEP 3–12» (dates_en) y el encabezado seguía en «3–12 SEP» —la
+// misma fecha en dos órdenes, a dos toques de distancia—. Es la misma trampa que
+// ya tenía resuelta renderPostponedBanner, que persiste y por eso setLang la
+// rehornea; el chip no estaba en esa lista.
+//
+// Se comparan las DOS superficies entre sí y contra el config: que el encabezado
+// diga lo del idioma actual, y que en español no se haya movido.
+test('I06 — el encabezado usa las fechas del idioma activo', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(500);
+    const cfg = FESTIVAL_CONFIG[_activeFestId] || {};
+    const topbar = () => { const e = document.querySelector('.hdr-fest-dates'); return e ? e.textContent.trim() : null; };
+    const es = topbar();
+    tap('selectLang', { code: 'en' });
+    await w(1400);
+    const en = topbar();
+    tap('openFestivalSheet');
+    await w(900);
+    const info = document.querySelector('#fs-info .splash-info-dates');
+    return { es, en, selectorEn: info ? info.textContent.trim() : null,
+      dates: cfg.dates, datesEn: cfg.dates_en };
+  });
+  expect(r.datesEn, 'el festival del test declara fechas en inglés — si no, no distingue').toBeTruthy();
+  expect(r.datesEn, 'y son un orden DISTINTO del español').not.toBe(r.dates);
+  expect(r.es, 'en español el encabezado usa dates').toContain(r.dates);
+  expect(r.en, 'en inglés pasa a dates_en').toContain(r.datesEn);
+  expect(r.en, 'y deja de mostrar el orden español').not.toContain(r.dates);
+  expect(r.selectorEn, 'el selector dice lo mismo que el encabezado').toContain(r.datesEn);
+});

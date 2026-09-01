@@ -17,6 +17,7 @@ import { _fixStickyOffset, renderAgenda } from '../view/agenda.js';
 import { loadState, _cloudLoad, _cloudSave, subscribePlanCloud, _flushCloudSave } from './persistence.js';
 import { report } from '../telemetry.js';
 import { subscribeDelaysCloud } from './delays-cloud.js';
+import { renderFestBar } from './festival.js';
 import { _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, _syncPmodeTabs } from './pipeline.js';
 import { seccionClose } from './overlays.js';
 import { setProgramaView } from './handlers.js';
@@ -586,10 +587,7 @@ export async function loadFestival(id){
   // Regla global inamovible: navegación por día específico → lista por defecto
   programaViewMode=activeDay==='all'?'grid':'list';
   // Update fest-bar
-  const _fn=document.querySelector('.hdr-fest-name');
-  const _fd=document.querySelector('.hdr-fest-dates');
-  if(_fn) _fn.textContent=festivalShortName(cfg);
-  if(_fd) _fd.textContent=' · '+_langDates(cfg)+(cfg.year&&!_postponed?' '+cfg.year:'');
+  renderFestBar(cfg);
   // Banda APLAZADO — dueño único: renderPostponedBanner (festival.js). Se llama
   // SIEMPRE (limpia sola si no aplica; cambio de festival la retira) y también
   // desde setLang, porque la banda persiste y el cambio de idioma no pasa por acá.
