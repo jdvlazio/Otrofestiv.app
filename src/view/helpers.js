@@ -286,7 +286,7 @@ export function slotPosterParts(members){
   const modules=[...reales.slice(1).reverse().map(c=>c.src), reales[0].src];
   const lider=reales[0].f;
   const dur=blockDuration(lider);
-  const dato=`${members.length} obras${dur?` · ${dur} min`:''}`;
+  const dato=`${members.length} ${t('misc_peliculas')}${dur?` · ${dur} min`:''}`;
   return {modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato,
     svg:makeSharedSlotSVG({modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato})};
 }

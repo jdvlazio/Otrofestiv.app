@@ -791,6 +791,25 @@ sería un cambio sin lector. Quedan EXENTOS los nombres de FORMATO
 (`label_cortometraje`, `label_cortos`), donde «cortometraje» es el dato correcto y
 no un paraguas.
 
+#### La cuenta no lleva el sustantivo escrito — `[i18n-sustantivo-pegado]`
+
+Las cards de programa compuesto decían «2 obras · 93 min» **en inglés**: el
+sustantivo estaba pegado al template en dos sitios —`_datoCompuesto`
+(components.js) y `slotPosterParts` (helpers.js)— en vez de salir de `t()`. Once
+ocurrencias en la grilla.
+
+Ningún guardián podía verlo. `[i18n-complete]` comprueba que las **claves**
+existan en los dos idiomas, y un literal no es una clave; `literal-template.spec`
+vigila `${` roto, otra cosa. Y un test de DOM solo alcanza lo que se **renderiza**:
+medido, `_datoCompuesto` no se pinta en ninguno de los tres festivales grandes,
+así que su regresión sería invisible desde el navegador.
+
+Por eso hay **dos** capas: `[i18n-sustantivo-pegado]` (validate.py) mira el
+CÓDIGO —una interpolación seguida de nuestro vocabulario en español, `${n} obras`,
+es cromo sin traducir— e **I07** (i18n.spec.js) mira el DOM en inglés buscando
+«N obras» y hermanos. El contenido del festival no se traduce por diseño, así que
+el número delante es lo que distingue cromo de título.
+
 #### El build que se ve es el que corre — `[dbg-ver-sin-literal]`
 
 El buscador muestra el número de build en su esquina (`#dbg-ver`). Estaba
