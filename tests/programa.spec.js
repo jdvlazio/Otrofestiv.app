@@ -2821,3 +2821,50 @@ test('T133b — la fila de ciudad no cuenta dos veces la obra que va a dos salas
   expect(r.pinta, 'la ciudad no puede tener más obras que el festival entero')
     .toBeLessThanOrEqual(r.total);
 });
+
+// ── T140 — la etiqueta de metadato no parte el título en dos ─────────────────
+// «CON BOLETA» quedaba pegada a la PRIMERA línea de un título de dos, y se leía
+// «El viento sabe que vuelvo [CON BOLETA] / a casa»: un título mal cortado antes
+// que una etiqueta. No estaba dentro del texto —es hermana FLEX del bloque del
+// título—, pero el align-items:flex-start del contenedor la anclaba arriba.
+// Bajándola a la última línea termina la frase en vez de interrumpirla.
+//
+// Se mide la POSICIÓN de la etiqueta contra las líneas del título, que es la
+// magnitud del hallazgo; el CSS puede decir align-self y aun así no aplicar
+// (contenedor sin flex, especificidad, otro selector ganando).
+test('T140 — con el título en dos líneas, la etiqueta va en la última', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-05T11:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(600);
+    switchMainNav('mnav-cartelera');
+    await w(1500);
+    const casos = [];
+    document.querySelectorAll('.plist-title').forEach(fila => {
+      const txt = fila.querySelector('.plist-title-txt');
+      const badge = fila.querySelector('.meta-badge');
+      if (!txt || !badge) return;
+      const tb = txt.getBoundingClientRect(), bb = badge.getBoundingClientRect();
+      const lh = parseFloat(getComputedStyle(txt).lineHeight) || 16;
+      const lineas = Math.round(tb.height / lh);
+      if (lineas < 2) return;                       // con una línea no hay dónde partirse
+      casos.push({
+        txt: txt.innerText.slice(0, 30), etiqueta: badge.innerText,
+        lineas,
+        // distancia del PIE de la etiqueta al pie del título: 0 = última línea
+        alPie: Math.round(tb.bottom - bb.bottom),
+        // distancia de su TECHO al techo del título: 0 = primera línea (el bug)
+        alTecho: Math.round(bb.top - tb.top)
+      });
+    });
+    return { casos };
+  });
+  if (!r.casos.length) return;                      // ningún título de 2 líneas con etiqueta
+  for (const c of r.casos) {
+    expect(c.alPie, `«${c.etiqueta}» en ${c.txt}: va con la última línea`).toBeLessThanOrEqual(4);
+    expect(c.alTecho, `«${c.etiqueta}» en ${c.txt}: y NO junto a la primera`).toBeGreaterThan(4);
+  }
+});
