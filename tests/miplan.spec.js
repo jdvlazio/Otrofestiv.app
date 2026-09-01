@@ -1021,3 +1021,67 @@ test('T134 — los vacíos de PLANEAR y MI PLAN se distinguen', async ({ page })
   expect(r.planear.titulo, 'los titulares no pueden ser el mismo').not.toBe(r.miplan.titulo);
   expect(r.planear.icono, 'ni el icono').not.toBe(r.miplan.icono);
 });
+
+// ── T137 — la hora tachada de una función caída se lee ───────────────────────
+// La línea de una entrada cancelada lleva TRES cosas: el badge CANCELADA (77px),
+// la hora tachada y «Buscar reemplazo» (111px). `.mplan-t2` era flex SIN
+// flex-wrap, así que iban a la fuerza en una sola línea de 230px y el que cedía
+// era el texto: «hasta 17:05» quedaba en 23px de ancho y 22 de alto — once
+// caracteres partidos en dos líneas tachadas, una encima de la otra. Ilegible
+// justo cuando el usuario necesita entender qué pasó con su función.
+//
+// Se mide la CAJA del texto: que no desborde y que ocupe una sola línea. Es la
+// magnitud del diagnóstico — el bug era una caja demasiado chica para su
+// contenido, no una regla CSS ausente.
+test('T137 — «hasta HH:MM» de una función cancelada entra en una línea', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-12T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(500);
+    // FICDEH trae cancelaciones REALES (el sismo de agosto: Quibdó, Cali,
+    // Pereira, Manizales), así que el estado no se fabrica.
+    const canc = FILMS.filter(f => f._cancelled && f.day === '2026-08-12').slice(0, 2);
+    if (!canc.length) return { sinCanceladas: true };
+    commitPlan(() => ({ schedule: canc.map(f => ({ ...f, _title: f.title })) }));
+    await w(500);
+    switchMainNav('mnav-miplan'); showAgView();
+    await w(1600);
+    const span = [...document.querySelectorAll('.mplan-t2 .mp-void-t')]
+      .filter(e => e.getBoundingClientRect().width > 0)[0];
+    if (!span) return { sinHora: true };
+    const b = span.getBoundingClientRect();
+    const cs = getComputedStyle(span);
+    const titulo = document.querySelector('.mplan-t1');
+    // El botón «Buscar reemplazo» es el tercer inquilino de la línea: sin
+    // flex-wrap no baja, se sale de su fila por la derecha (medido: 352 contra
+    // 323). El nowrap del texto solo NO lo evita — cada declaración hace un
+    // trabajo distinto, así que las dos se afirman.
+    const fila = span.closest('.mplan-t2');
+    const btn = fila && fila.querySelector('.mplan-fix');
+    const fb = fila.getBoundingClientRect();
+    const bb = btn && btn.getBoundingClientRect();
+    return {
+      txt: span.innerText.replace(/\s+/g, ' ').trim(),
+      ancho: Math.round(b.width), alto: Math.round(b.height),
+      fontSize: parseFloat(cs.fontSize),
+      desborda: span.scrollWidth > Math.ceil(b.width) + 1 || span.scrollHeight > Math.ceil(b.height) + 1,
+      wsTitulo: titulo ? getComputedStyle(titulo).whiteSpace : null,
+      hayBoton: !!btn,
+      botonSeSale: bb ? Math.round(bb.right) > Math.round(fb.right) + 1 : null
+    };
+  });
+  if (r.sinCanceladas || r.sinHora) return;
+  expect(r.txt, 'la fila muestra la hora hasta la que iba').toMatch(/\d{1,2}:\d{2}/);
+  expect(r.desborda, 'el texto no se sale de su caja').toBe(false);
+  expect(r.alto, 'y entra en UNA línea (dos serían ~2× el tamaño de fuente)')
+    .toBeLessThan(r.fontSize * 2);
+  // El nowrap va acotado al span: si se filtrara a .mplan-t1, el título de la
+  // obra dejaría de envolver y se saldría de la fila.
+  expect(r.wsTitulo, 'el título de la obra sigue envolviendo').toBe('normal');
+  if (r.hayBoton) {
+    expect(r.botonSeSale, '«Buscar reemplazo» baja de línea en vez de salirse de la fila').toBe(false);
+  }
+});
