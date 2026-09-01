@@ -4257,6 +4257,36 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar festival-aplazado: {_e}')
 
+# ── [i18n-sustantivo-pegado] la cuenta no lleva el sustantivo escrito ─────────
+# Las cards de programa compuesto decían «2 obras · 93 min» EN INGLÉS: el
+# sustantivo estaba pegado al template en dos sitios (_datoCompuesto y
+# slotPosterParts) en vez de salir de t(). Ningún guardián podía verlo:
+# [i18n-complete] comprueba que las CLAVES existan en los dos idiomas —un literal
+# no es una clave— y el test de DOM solo alcanza lo que se renderiza (medido:
+# _datoCompuesto no se pinta en ninguno de los tres festivales grandes, así que
+# su regresión sería invisible desde el navegador).
+# Este mira el CÓDIGO: una interpolación seguida de nuestro vocabulario en
+# español —`${n} obras`— es cromo sin traducir. Los comentarios se ignoran.
+check = 'i18n-sustantivo-pegado'
+try:
+    _malos = []
+    for _f in _glob.glob('src/**/*.js', recursive=True):
+        if '/i18n/' in _f:
+            continue
+        for _i, _ln in enumerate(open(_f, encoding='utf-8'), 1):
+            _s = _ln.strip()
+            if _s.startswith('//') or _s.startswith('*'):
+                continue
+            _m = re.search(r'\}\s(obras?|actividades?|funciones?|vistas?)\b', _ln)
+            if _m:
+                _malos.append(f'{_f}:{_i} «{_m.group(0).strip()}»')
+    if _malos:
+        fail(check, 'sustantivo en español pegado a una cuenta (no sale de t()): ' + '; '.join(_malos[:5]))
+    else:
+        ok(check, 'ninguna cuenta lleva el sustantivo escrito — todas pasan por t()')
+except Exception as _e:
+    warn(check, f'no se pudo verificar i18n-sustantivo-pegado: {_e}')
+
 # ── [dbg-ver-sin-literal] el número de build no se escribe a mano ──────────────
 # #dbg-ver (esquina del buscador) tenía el build TIPEADO en index.html. Nadie lo
 # actualizaba —bump-version ni sabía que existía— así que mostró el build del 10
@@ -4389,7 +4419,7 @@ try:
         # _buildPosterV16) y el dueño del color de sección. Entra a la lista con la
         # razón escrita, que es lo que este guardián pide, en vez de seguir
         # recortando comentarios que explican POR QUÉ el código es así.
-        'src/view/components.js': 1166,  # +15: la Escalera escala a cualquier N (paso = fracción de la LÁMINA, no de la envolvente) + UID por póster (los clipPath fijos se pisaban entre sí en la grilla) — 26 ago  # antes 1151,  # +48: _buildPosterMini — la mini de 56px con marca determinista por obra (mejora 1 Apple Music) — 25 ago  # +20: el título tampoco repite el programa cuando el eco va al final (Cinemancia) — 24 ago  # +11: la pila reparte el presupuesto por uso real (el lazo del techo ahora SÍ vive) — 24 ago  # +2: el « + » de la pila sube a 0,6u (a 0,5u leía como suciedad, no como signo) — 24 ago  # +60: la pila de obras — un compuesto se apila, no se escribe como frase (mejora 1 de la auditoría de pósters) — 24 ago  # +10: makeProgramPoster con rótulo corto + suelo de sección 7 con su porqué — 24 ago  # +33: _seccionPartes + firma en el motor + sección a 2 líneas (regla de carga) — 24 ago  # +34: auditoría Forma A — luz por sección, título sin repetir la sección, _datoCompuesto — 24 ago  # +3: muere el badge EN REVISIÓN de la card (redundante con el divisor) — 23 ago  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago  # +24: _postponedElapsed — un aplazado baja a pasados cuando sus fechas anunciadas pasan — 23 ago
+        'src/view/components.js': 1168,  # +2: «obras» sale de misc_peliculas, no de un literal — 1 sep  # antes 1166,  # +15: la Escalera escala a cualquier N (paso = fracción de la LÁMINA, no de la envolvente) + UID por póster (los clipPath fijos se pisaban entre sí en la grilla) — 26 ago  # antes 1151,  # +48: _buildPosterMini — la mini de 56px con marca determinista por obra (mejora 1 Apple Music) — 25 ago  # +20: el título tampoco repite el programa cuando el eco va al final (Cinemancia) — 24 ago  # +11: la pila reparte el presupuesto por uso real (el lazo del techo ahora SÍ vive) — 24 ago  # +2: el « + » de la pila sube a 0,6u (a 0,5u leía como suciedad, no como signo) — 24 ago  # +60: la pila de obras — un compuesto se apila, no se escribe como frase (mejora 1 de la auditoría de pósters) — 24 ago  # +10: makeProgramPoster con rótulo corto + suelo de sección 7 con su porqué — 24 ago  # +33: _seccionPartes + firma en el motor + sección a 2 líneas (regla de carga) — 24 ago  # +34: auditoría Forma A — luz por sección, título sin repetir la sección, _datoCompuesto — 24 ago  # +3: muere el badge EN REVISIÓN de la card (redundante con el divisor) — 23 ago  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago  # +24: _postponedElapsed — un aplazado baja a pasados cuando sus fechas anunciadas pasan — 23 ago
         # helpers.js estaba EXACTAMENTE en 800 antes del rediseño de pósters
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este

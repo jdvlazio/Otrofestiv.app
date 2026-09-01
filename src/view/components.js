@@ -306,12 +306,14 @@ export function _fitLines(str, {boxW, boxH, maxLines, fsMax, fsMin, lhRatio=1.16
 // una obra sola. La Forma C ya lo resolvió («2 obras · 77 min»); esto se lo da a
 // la Forma A. El conteo sale del « + » CON espacios — el separador que usan los
 // títulos compuestos reales (Cinemancia: 14 de 32)— para no confundir un «+»
-// interno de un nombre. «obras» va en crudo como en la Forma C (mismo dueño de
-// vocabulario; si algún día se localiza, se localizan juntos).
+// interno de un nombre. El sustantivo sale de misc_peliculas —mismo dueño de
+// vocabulario— y no de un literal: en inglés las cards decían «2 obras · 93 min».
+// La Forma C (slotPosterParts) llevaba el mismo literal y se localiza CON esta,
+// como este comentario decía que había que hacer.
 export function _datoCompuesto(title, duration){
   const _partes=String(title||'').split(/\s\+\s/);
   if(_partes.length<2) return duration||'';
-  return `${_partes.length} obras${duration?` · ${duration}`:''}`;
+  return `${_partes.length} ${t('misc_peliculas')}${duration?` · ${duration}`:''}`;
 }
 
 // _seccionPartes — separa el rótulo de la FIRMA en una sección curada.

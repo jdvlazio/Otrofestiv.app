@@ -109,3 +109,49 @@ test('I06 — el encabezado usa las fechas del idioma activo', async ({ page }) 
   expect(r.en, 'y deja de mostrar el orden español').not.toContain(r.dates);
   expect(r.selectorEn, 'el selector dice lo mismo que el encabezado').toContain(r.datesEn);
 });
+
+// ── I07 — en inglés, el cromo no habla español ──────────────────────────────
+// Las cards de programa compuesto decían «2 obras · 93 min» en inglés: once
+// ocurrencias en la grilla. El sustantivo estaba PEGADO en dos sitios
+// (_datoCompuesto y slotPosterParts), no salía de t(), y ningún guardián podía
+// verlo: [i18n-complete] comprueba que las CLAVES existan en los dos idiomas
+// —un literal no es una clave— y literal-template.spec.js vigila `${` roto.
+//
+// Este cubre el hueco por el lado del DOM. Busca NUESTRO vocabulario con su
+// cuenta delante («N obras», «N actividades»…), que es cromo y nunca contenido:
+// los títulos y las secciones del festival NO se traducen por diseño, así que un
+// «no hay palabras en español» a secas daría falsos positivos con «Proyecciones
+// Especiales». El número delante es lo que distingue una cosa de la otra.
+test('I07 — en inglés ninguna cuenta usa el sustantivo en español', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(500);
+    switchMainNav('mnav-cartelera');
+    await w(1400);
+    const esperados = () => (document.body.innerText.match(/\d+ obras/g) || []).length;
+    const enEspanol = esperados();
+    tap('selectLang', { code: 'en' });
+    await w(1600);
+    const vistos = [];
+    for (const nav of ['mnav-cartelera', 'mnav-seleccion', 'mnav-planner', 'mnav-miplan']) {
+      switchMainNav(nav);
+      // showAgView() SOLO donde corresponde: llamarlo en cartelera saca de la
+      // grilla y el test terminaba midiendo una pantalla que no era la del bug
+      // (pasaba con el literal restituido — lo cacé mutando).
+      if (nav === 'mnav-planner' || nav === 'mnav-miplan') { try { showAgView(); } catch (e) {} }
+      await w(1200);
+      const m = document.body.innerText
+        .match(/\d+\s(obras?|actividades?|funciones?|d[ií]as?|vistas?)\b/g) || [];
+      m.forEach(x => vistos.push(nav + ': ' + x));
+    }
+    return { enEspanol, vistos: [...new Set(vistos)] };
+  });
+  expect(r.enEspanol, 'en español SÍ aparecen esas cuentas — si no, el test no prueba nada')
+    .toBeGreaterThan(0);
+  expect(r.vistos, 'en inglés ninguna cuenta quedó con el sustantivo en español').toEqual([]);
+});
