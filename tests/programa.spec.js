@@ -1844,7 +1844,11 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
   });
   // UNA sola línea con la fórmula «texto · texto»: insumo y aviso conviven
   expect(r.filas, 'una sola línea, no dos').toBe(1);
-  expect(r.insumo, 'el insumo abre la línea').toMatch(new RegExp(`^${r.pendientes} obras · \\d+ con prioridad`));
+  // El insumo dice ahora de qué conjunto habla («N obras POR PLANEAR»): la cifra
+  // de arriba y la del resultado usaban la misma clave a 113px una de otra. El
+  // aserto se REAPUNTA —su intención es que el insumo abra la línea, no el
+  // literal— porque dejarlo pasaría a medir una frase que ya no existe.
+  expect(r.insumo, 'el insumo abre la línea').toMatch(new RegExp(`^${r.pendientes} obras por planear · \\d+ con prioridad`));
   expect(r.fs, 'con el cuerpo del canon (t-base), no t-sm').toBe('13px');
   expect(r.gapCta, 'y el salto al CTA es sp-4, no «entre secciones»').toBeLessThanOrEqual(20);
   expect(r.esperados, 'la escena tiene cruces que diagnosticar').toBeGreaterThan(0);

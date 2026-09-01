@@ -1134,3 +1134,42 @@ test('T138 — al volver a poner lo que sacaste, el aviso del hueco desaparece',
   expect(r.volvio, 'la entrada volvió al Plan').toBe(true);
   expect(r.tapado, 'y con el hueco tapado el aviso ya no habla de él').toBe(false);
 });
+
+// ── T139 — las dos cifras de Planear no se leen como la misma ────────────────
+// Planear muestra dos números a ~113 px uno de otro, y usaban la MISMA clave
+// «N obras»: arriba lo que vas a planear, abajo lo que entró («5 obras · 5 días
+// · 1 quedó fuera»). Con los números iguales se leen como el mismo dato; con
+// distintos, como una contradicción. Y el de arriba no tenía rótulo: colgaba de
+// «Disponibilidad · Editar», así que se leía como parte de la disponibilidad.
+//
+// Se comparan los dos TEXTOS entre sí —que es el hallazgo— y no cada uno contra
+// una cadena fija: lo que no puede volver a pasar es que empiecen igual.
+test('T139 — la cifra de «por planear» no se confunde con la del resultado', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T09:00:00-05:00');
+  await page.evaluate(async () => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    FILMS.filter(f => f.day === '2026-08-17').slice(0, 5).forEach(f => watchlist.add(f.title));
+    if (typeof saveState === 'function') saveState();
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(1200);
+  const r = await page.evaluate(() => {
+    const txt = el => el ? el.innerText.replace(/\s+/g, ' ').trim() : null;
+    const pre = document.querySelector('.pre-resumen .dato-linea');
+    const res = document.querySelector('.dato-resultado');
+    return { pre: txt(pre), res: txt(res),
+      separacion: (pre && res)
+        ? Math.round(res.getBoundingClientRect().top - pre.getBoundingClientRect().top) : null };
+  });
+  if (!r.pre || !r.res) return;            // sin cálculo en pantalla no hay dos cifras
+  expect(r.separacion, 'las dos cifras conviven en la misma pantalla').toBeLessThan(400);
+  expect(r.pre, 'la de arriba dice de qué conjunto habla').toMatch(/planear|schedule|planejar/i);
+  expect(r.pre, 'y no es el mismo texto que la de abajo').not.toBe(r.res);
+  // El hallazgo era que ambas ARRANCABAN igual («5 obras…»): comparar los textos
+  // completos no alcanza, porque diferían en el sufijo y aun así se confundían.
+  const prefijo = s => s.split('·')[0].trim();
+  expect(prefijo(r.pre), 'ni empieza igual que ella').not.toBe(prefijo(r.res));
+});
