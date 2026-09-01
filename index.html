@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609011035">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609011035">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609011418">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609011418">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -2902,6 +2902,10 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .lugar-btn.on{color:var(--amber)}
 .sec-drop-hdr{padding:10px var(--sp-4) 4px;font-size:var(--t-label);font-weight:var(--w-bold);letter-spacing:.8px;color:var(--gray2);text-transform:uppercase;pointer-events:none;user-select:none}
 .lugar-opt{display:flex;align-items:center;gap:var(--sp-2);padding:10px var(--sp-4);min-height:44px;box-sizing:border-box;cursor:pointer;font-size:var(--t-base);color:var(--gray);border-bottom:1px solid var(--bdr-l);transition:background var(--tr-base);white-space:nowrap}
+/* Hueco del ancho del pin para la fila que filtra la ciudad entera: es la única
+   sin icono y su texto colgaba 21px a la izquierda de sus hermanas, así que se
+   leía como el título de la lista y no como la opción que es. */
+.lugar-opt span.lugar-gutter{flex:0 0 13px}
 .lugar-opt:last-child{border-bottom:none}
 .lugar-opt:active,.lugar-opt:hover{background:var(--surf-2)}
 .lugar-opt.on{color:var(--white);font-weight:var(--w-semi)}
@@ -3660,7 +3664,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609011035";
+    s.src="/src/main.js?v=202609011418";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
