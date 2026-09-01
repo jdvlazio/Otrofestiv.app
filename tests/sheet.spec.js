@@ -419,3 +419,56 @@ test('T115b — si el programa trae afiche oficial, la ficha lo respeta', async 
   expect(r.escalera).toBe(false);         // la pila nuestra NO tapa el arte del festival
   expect(r.muestraElOficial).toBe(true);
 });
+
+// ── T143 — con una hoja abierta, el toast no aterriza sobre sus controles ────
+// El toast vive a 62px del borde inferior, encima de la barra de tabs. Las hojas
+// son TODAS bottom-anchored, así que con una abierta el aviso caía justo sobre
+// lo que hay que tocar: medido en la hoja de calificación, tapaba 38 de los 84px
+// del área de estrellas —la mitad de abajo— y el texto «Deslizá sobre las
+// estrellas» quedaba debajo. Con showActionToast (pointer-events:all) además
+// INTERCEPTABA el toque, no solo lo tapaba.
+//
+// Se mide el SOLAPE en píxeles contra el control, que es el hallazgo, y no la
+// clase CSS: una regla puede declararse y no aplicar. La segunda mitad —sin hoja
+// el toast se queda abajo— impide «arreglarlo» mandándolo siempre arriba, que
+// lo pondría sobre el contenido del Programa.
+test('T143 — el toast se aparta de la hoja, y solo cuando hay hoja', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-08T20:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(600);
+    const F = await import('/src/view/feedback.js');
+    const caja = el => { const b = el.getBoundingClientRect(); return { y: b.top, bot: b.bottom }; };
+    const solape = (a, b) => Math.round(Math.max(0, Math.min(a.bot, b.bot) - Math.max(a.y, b.y)));
+    // 1 · SIN hoja: el toast se queda donde siempre, abajo
+    F.showToast('Movida a Ya vistas', 'info');
+    await w(400);
+    const t1 = document.getElementById('prio-toast');
+    const sinHoja = { y: Math.round(caja(t1).y), vp: window.innerHeight };
+    // 2 · CON hoja: la de calificación, por su acción real
+    const obra = FILMS[0];
+    tap('closePelSheet');
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'openPostViewRating');
+    b.setAttribute('data-title', obra.title); b.setAttribute('data-day', obra.day || '');
+    b.setAttribute('data-time', obra.time || ''); b.setAttribute('data-venue', obra.venue || '');
+    document.body.appendChild(b); b.click(); b.remove();
+    await w(1200);
+    const estrellas = document.querySelector('.pv-stars-area, .rating-stars');
+    if (!estrellas) return { sinEstrellas: true, sinHoja };
+    F.showToast('Movida a Ya vistas', 'info');
+    await w(400);
+    const t2 = document.getElementById('prio-toast');
+    return { sinHoja,
+      conHoja: { y: Math.round(caja(t2).y), solape: solape(caja(estrellas), caja(t2)),
+        altoEstrellas: Math.round(caja(estrellas).bot - caja(estrellas).y) } };
+  });
+  if (r.sinEstrellas) return;
+  expect(r.sinHoja.y, 'sin hoja el toast sigue abajo, encima de los tabs')
+    .toBeGreaterThan(r.sinHoja.vp / 2);
+  expect(r.conHoja.altoEstrellas, 'la hoja muestra su área de estrellas').toBeGreaterThan(40);
+  expect(r.conHoja.solape, 'y el toast no pisa ni un píxel de ella').toBe(0);
+});

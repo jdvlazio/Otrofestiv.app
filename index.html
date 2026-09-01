@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609011559">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609011559">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609011640">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609011640">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -635,6 +635,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .prio-toast{position:fixed;bottom:calc(max(env(safe-area-inset-bottom),20px) + 52px + 10px);left:12px;right:12px;background:var(--surf-2);border:1px solid var(--bdr);color:var(--white);font-size:var(--t-base);padding:var(--sp-3) var(--sp-4);border-radius:var(--r-md);z-index:9999;transition:opacity var(--tr-smooth);text-align:left;pointer-events:none;line-height:1.5;display:flex;align-items:center;gap:var(--sp-3)}
 .prio-toast.warn{border-color:var(--yellow-12);color:var(--yellow)}
 .prio-toast.action{pointer-events:all;justify-content:space-between}
+/* Con una hoja abierta el toast se va ARRIBA: las hojas son bottom-anchored y
+   el aviso caía sobre sus controles (medido: 38 de 84px del área de estrellas).
+   Arriba no hay nada que tocar y el aviso sigue a la vista. */
+.prio-toast.arriba{bottom:auto;top:calc(max(env(safe-area-inset-top),12px) + 12px)}
 .toast-action-btn{background:none;border:none;color:var(--amber);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer;padding:0;white-space:nowrap;flex-shrink:0}
 
 /* ── Badges ── */
@@ -3664,7 +3668,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609011559";
+    s.src="/src/main.js?v=202609011640";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

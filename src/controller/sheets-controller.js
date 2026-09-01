@@ -10,7 +10,7 @@ import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } fro
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, makeSharedSlotSVG, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
 import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts} from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
-import { showConflictModal, showToast } from '../view/feedback.js';
+import { showConflictModal, showToast, _toastArriba } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
 import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
@@ -1479,7 +1479,7 @@ export function showActionToast(msg,actionLabel,actionFn,duration=4000){
   _toastActionFn=actionFn;
   let t=document.getElementById('prio-toast');
   if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
-  t.className='prio-toast action';
+  t.className='prio-toast action';_toastArriba(t);
   t.innerHTML=`<span>${msg}</span><button class="toast-action-btn" data-action="dismissToastAction">${actionLabel}</button>`;
   t.style.opacity='1';t.style.pointerEvents='all';
   clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';t.style.pointerEvents='none';},duration);
