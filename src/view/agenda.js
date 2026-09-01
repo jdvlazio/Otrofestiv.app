@@ -197,7 +197,13 @@ export function renderAgenda(){
           // Una sola línea (Juan, 18 ago): la advertencia sube a la misma fila
           // con la fórmula «texto · texto» del resultado. Gana ~21px verticales
           // y las dos mitades se leen como un solo dato con su matiz.
-          const _obras=`${_nP===1?t('pre_obra'):t('pre_obras',{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}`;
+          // Esta cifra y la del resultado usaban la MISMA clave —«N obras»— a 113px
+          // una de otra, y cuentan cosas distintas: acá es lo que vas a planear;
+          // abajo, lo que entró («5 obras · 5 días · 1 quedó fuera»). Con los números
+          // iguales se leen como el mismo dato, y con distintos como una contradicción.
+          // Esta se nombra con el vocabulario que la app YA usa para este conjunto
+          // cuando está vacío: «Nada por planear».
+          const _obras=`${_nP===1?t('pre_obra_planear'):t('pre_obras_planear',{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}`;
           // La alerta vive SOLO antes de calcular (auditoría 18 ago): es un
           // PRE-diagnóstico —«esto va a costar»— y sobrevivía al cálculo, en
           // ámbar y con ícono, justo encima del resultado. Ahí se leía como «tu
