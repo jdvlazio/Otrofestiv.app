@@ -2933,3 +2933,66 @@ test('T141 — el rótulo de la ciudad se alinea con el de sus sedes', async ({ 
   expect(r.pinCiudad, 'y la ciudad no — el pin es de las sedes').toBe(0);
   expect(r.colorCiudad, 'ni está más apagada que ellas').toBe(r.colorSede);
 });
+
+// ── T142 — al encender Prensa te lleva a donde se ven los pases añadidos ─────
+// El recorrido reportó que en la grilla el interruptor «no cambia nada»: 243
+// cards antes y 243 después. Es cierto que no puede cambiarlas —la grilla es un
+// catálogo de OBRAS, una tarjeta por obra, y ninguna obra existe SOLO en prensa
+// (medido en TIFF: 247 funciones de prensa, 0 obras exclusivas)— así que un
+// interruptor que se enciende sobre una pantalla quieta parece roto.
+//
+// La regla del 24 ago lo resolvió navegando: al ENCENDER desde una vista que no
+// puede mostrarlos, salta a Lista y al primer día CON pases. Esa regla no tenía
+// guardián: T117 cubre la anatomía del botón y T123 su papel como insumo del
+// Plan, pero nadie vigilaba la navegación — quitarla devuelve el síntoma del
+// reporte en silencio.
+//
+// La segunda mitad es igual de deliberada: al APAGAR no se mueve a nadie,
+// porque un segundo salto sorprende más que quedarse. Sin ese aserto, «arreglar»
+// esto navegando siempre pasaría el test.
+test('T142 — Prensa ON salta a donde se ven los pases; OFF no mueve a nadie', async ({ page }) => {
+  await enterFestival(page, 'tiff2026');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(500);
+    switchMainNav('mnav-cartelera');
+    await w(1400);
+    const chipAll = document.querySelector('.dtab[data-day="all"]');
+    if (chipAll) chipAll.click();
+    await w(1400);
+    const snap = () => ({
+      dia: String(activeDay),
+      modo: typeof programaViewMode !== 'undefined' ? programaViewMode : '?',
+      prensa: typeof showPress !== 'undefined' ? showPress : '?',
+      filas: [...document.querySelectorAll('.plist-item')].filter(e => e.offsetParent !== null).length
+    });
+    const enGrilla = snap();
+    const btn = document.querySelector('.prensa-btn');
+    if (!btn) return { sinBoton: true };
+    btn.click();
+    await w(2000);
+    const conPrensa = snap();
+    // ¿el día al que saltó tiene pases de prensa de verdad?
+    const diaTienePases = FILMS.some(f => f.audience === 'press' && f.day === activeDay);
+    btn.click();
+    await w(2000);
+    const trasApagar = snap();
+    return { enGrilla, conPrensa, trasApagar, diaTienePases };
+  });
+  if (r.sinBoton) return;                       // festival sin pases de prensa
+  expect(r.enGrilla.modo, 'se parte de la grilla de todas').toBe('grid');
+  expect(r.enGrilla.dia, 'y de «todos los días»').toBe('all');
+  // ENCENDER: lleva a donde lo añadido se ve
+  expect(r.conPrensa.prensa, 'el interruptor quedó encendido').toBe(true);
+  expect(r.conPrensa.modo, 'y la vista pasa a Lista, donde la unidad es la función').toBe('list');
+  expect(r.conPrensa.dia, 'sobre un día concreto, no «todas»').not.toBe('all');
+  expect(r.diaTienePases, 'y ese día TIENE pases de prensa').toBe(true);
+  expect(r.conPrensa.filas, 'con funciones en pantalla').toBeGreaterThan(0);
+  // APAGAR: no mueve a nadie
+  expect(r.trasApagar.prensa, 'el interruptor quedó apagado').toBe(false);
+  expect(r.trasApagar.dia, 'apagar NO devuelve a nadie a otro día').toBe(r.conPrensa.dia);
+  expect(r.trasApagar.modo, 'ni a otra vista').toBe(r.conPrensa.modo);
+});
