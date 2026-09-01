@@ -1306,7 +1306,13 @@ export function _renderSavedAgendaHTML(state, consensus){
 `;
 
   // ── CTA B: post-eliminación (temporal, auto-dismiss 6s) ──
-  if(_ctaRemovedVisible){
+  // El aviso habla de un HUECO. Si el usuario lo tapó —restaurando lo que sacó,
+  // el camino que la propia pantalla le ofrece— el hueco no existe y el aviso
+  // señala nada. Vivía SOLO de un setTimeout de 6s, y un temporizador no es un
+  // estado: se apagaba por reloj, no porque el motivo desapareciera.
+  const _ultimoSacado=(typeof lastRemovedSlots!=='undefined'&&lastRemovedSlots)?lastRemovedSlots[0]:null;
+  const _huecoTapado=!!(_ultimoSacado&&(savedAgenda&&savedAgenda.schedule||[]).some(s=>sameEntry(s,_ultimoSacado)));
+  if(_ctaRemovedVisible&&!_huecoTapado){
     html+=`<div class="cta-ctx cta-ctx-b" data-action="navTo" data-tab="mnav-planner">
       <div class="flex-center cta-ctx-ico">${ICONS.undo}</div>
       <div class="cta-ctx-body">

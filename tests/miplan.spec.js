@@ -1085,3 +1085,52 @@ test('T137 — «hasta HH:MM» de una función cancelada entra en una línea', a
     expect(r.botonSeSale, '«Buscar reemplazo» baja de línea en vez de salirse de la fila').toBe(false);
   }
 });
+
+// ── T138 — el aviso del hueco se apaga cuando el hueco se tapa ───────────────
+// Sacás algo del Plan → «¿Querés poner otra cosa ahí?». Lo volvés a poner → el
+// aviso SEGUÍA, señalando un hueco que ya no existe. Se iba a los 6 s por un
+// setTimeout: un temporizador no es un estado, se apaga por reloj y no porque
+// el motivo haya desaparecido.
+//
+// Ahora el aviso se DERIVA del plan: si lo último que se sacó volvió —lo decide
+// sameEntry, dueño único de la identidad de una entrada— no hay hueco del que
+// hablar. El test recorre los tres momentos, porque el del medio es el que
+// impide «arreglarlo» no mostrando nunca el aviso.
+test('T138 — al volver a poner lo que sacaste, el aviso del hueco desaparece', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(500);
+    const hoy = FILMS.filter(f => f.day === '2026-08-15').slice(0, 3);
+    if (hoy.length < 3) return { pocasFunciones: true };
+    hoy.forEach(f => watchlist.add(f.title));
+    commitPlan(() => ({ schedule: hoy.map(f => ({ ...f, _title: f.title })) }));
+    await w(400);
+    switchMainNav('mnav-miplan'); showAgView();
+    await w(1500);
+    const aviso = () => !!document.querySelector('.cta-ctx-b');
+    const antes = aviso();
+    // Sacar por el camino real: el modal pide confirmar.
+    removeFromAgenda(hoy[0].title);
+    await w(600);
+    const conf = [...document.querySelectorAll('button')].find(b => /Sacar/i.test(b.innerText));
+    if (conf) conf.click();
+    await w(1400);
+    const conHueco = aviso();
+    // Volver a ponerla por el chokepoint, donde terminan TODOS los caminos que
+    // la devuelven (Restaurar en Sugerencias, deshacer, agendar de nuevo).
+    commitPlan(a => ({ ...a, schedule: [...a.schedule, { ...hoy[0], _title: hoy[0].title }] }));
+    saveSavedAgenda(); renderAgenda();
+    await w(1200);
+    return { antes, conHueco, tapado: aviso(),
+      volvio: (savedAgenda && savedAgenda.schedule || []).some(s => s._title === hoy[0].title) };
+  });
+  if (r.pocasFunciones) return;
+  expect(r.antes, 'sin haber sacado nada no hay aviso de hueco').toBe(false);
+  expect(r.conHueco, 'al sacar algo, el aviso aparece — si no, el test no prueba nada').toBe(true);
+  expect(r.volvio, 'la entrada volvió al Plan').toBe(true);
+  expect(r.tapado, 'y con el hueco tapado el aviso ya no habla de él').toBe(false);
+});
