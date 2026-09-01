@@ -11,10 +11,23 @@ import { parseProgramTitle } from "./components.js";
 
 export const _SIM_TOTAL=()=>((_simFestEnd()-_simFestStart())/60000)||1;
 
+// _toastArriba — DUEÑO ÚNICO de dónde aterriza el toast. El toast vive a 62px
+// del borde inferior, encima de la barra de tabs; y las hojas son TODAS
+// bottom-anchored, así que con una abierta caía justo sobre sus controles:
+// medido en la hoja de calificación, tapaba 38 de los 84px del área de
+// estrellas —la mitad de abajo— y con showActionToast (pointer-events:all)
+// además interceptaba el toque. Con una hoja abierta el aviso se va ARRIBA,
+// donde no hay nada que tocar. `.open` es la marca que usan todas las hojas
+// (city, fs, auth, pel, pv-rating): se verificó una por una.
+export function _toastArriba(t){
+  if(!t) return;
+  t.classList.toggle('arriba', !!document.querySelector('[id$="-sheet"].open, [id$="-overlay"].open'));
+}
+
 export function showToast(msg,type='info',duration=2800){
   let t=document.getElementById('prio-toast');
   if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
-  t.className='prio-toast '+type;t.innerHTML=msg;t.style.opacity='1';t.style.pointerEvents='none';
+  t.className='prio-toast '+type;_toastArriba(t);t.innerHTML=msg;t.style.opacity='1';t.style.pointerEvents='none';
   clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';},duration);
 }
 
