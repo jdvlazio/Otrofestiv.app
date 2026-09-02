@@ -1173,3 +1173,43 @@ test('T139 — la cifra de «por planear» no se confunde con la del resultado',
   const prefijo = s => s.split('·')[0].trim();
   expect(prefijo(r.pre), 'ni empieza igual que ella').not.toBe(prefijo(r.res));
 });
+
+// ── T144 — la hoja de disponibilidad dice QUÉ se está declarando ─────────────
+// La fila de PLANEAR dice «Disponibilidad» (positivo) y la hoja que abre se
+// titulaba «No disponible» (negativo), sin una frase que aclarara cuál de las
+// dos declarás. Lo que se guarda son BLOQUES de no disponibilidad, y entenderlo
+// al revés arruina el Plan en silencio. Las dos palabras conviven en pantalla.
+//
+// Decisión de Juan (1 sep): el título pregunta, que es el patrón que la app YA
+// usa en sus otras hojas de declaración («¿A cuál festival vas?», «¿A cuál
+// ciudad vas?», «¿Cómo querés aparecer en tu Plan?»). Esta era la única que
+// declaraba con un sustantivo.
+//
+// Se afirma que el título PREGUNTA y que nombra la negación — no la cadena
+// exacta, que es copy y puede afinarse sin romper la intención.
+test('T144 — el título de la hoja de disponibilidad pregunta por la negación', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(500);
+    FILMS.filter(f => f.day === '2026-08-17').slice(0, 3).forEach(f => watchlist.add(f.title));
+    switchMainNav('mnav-planner'); showAgView();
+    await w(1400);
+    const fila = document.querySelector('.av-fila-valor');
+    tap('openAvSheet');
+    await w(900);
+    const s = document.querySelector('.av-sheet');
+    return {
+      fila: fila ? fila.innerText.replace(/\s+/g, ' ').trim() : null,
+      titulo: s ? (s.querySelector('.av-sheet-title') || {}).innerText : null
+    };
+  });
+  expect(r.titulo, 'la hoja tiene título').toBeTruthy();
+  expect(r.titulo, 'y pregunta, como sus hermanas de declaración').toMatch(/^¿.+\?$/);
+  expect(r.titulo, 'nombrando la negación, que es lo que se declara').toMatch(/\bNO\b/);
+  // La fila sigue siendo el rótulo de sección aprobado: no se toca.
+  if (r.fila) expect(r.fila, 'la fila de Planear conserva su rótulo').toContain('Disponibilidad');
+});
