@@ -27,6 +27,23 @@ function _dropRight(btnRight){
   return Math.max(MARGEN, Math.min(right, window.innerWidth-ancho-MARGEN))+'px';
 }
 
+// _velaElCorte — DUEÑO ÚNICO del desvanecido al pie de un dropdown de filtro.
+// El panel se corta donde llega su max-height, y eso caía a MEDIA LETRA: medido
+// en Sección (max-height 464,2 · scrollHeight 660), la fila 11 quedaba con 23 de
+// sus 44px y se leía como error de render, no como «hay más abajo».
+//
+// La máscara NO puede ser fija: al llegar al final de la lista se come la última
+// opción —medido: «Función de clausura» a 1px de la base, dentro del degradado—,
+// que es peor que el corte. Se enciende solo mientras queda algo por debajo.
+// Lo usan los DOS dropdowns (sección y lugar): un solo listener, un solo dueño.
+function _velaElCorte(drop){
+  if(!drop) return;
+  const _sync=()=>drop.classList.toggle('hay-mas',
+    drop.scrollTop + drop.clientHeight < drop.scrollHeight - 2);
+  drop.addEventListener('scroll', _sync, {passive:true});
+  _sync();
+}
+
 // _filasQueVeras — DUEÑO ÚNICO del número de una fila de filtro. El contrato lo
 // fijó Juan (7 ago, citado en sheets.js): «en el filtro el número dice vas a ver
 // N si filtrás por esto — es la consecuencia de la acción». Entonces la unidad
@@ -101,6 +118,7 @@ export function seccionOpen(){
     if(activeMNav==='mnav-cartelera') _renderProgramaContent(true); else render(); // selección sección → scroll al tope
   });
   document.body.appendChild(drop);
+  _velaElCorte(drop);
   btn.classList.add('on');
   setTimeout(()=>{ document.addEventListener('click',seccionOutside); },0);
 }
@@ -409,6 +427,7 @@ export function lugarOpen(){
   });
 
   document.body.appendChild(drop);
+  _velaElCorte(drop);
   btn.classList.add('on');
 
   // Close on outside click
