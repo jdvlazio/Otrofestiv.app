@@ -106,15 +106,27 @@ export function _promptDisplayName(onSave){
     <div class="sheet-title">${t('export_como_aparecer')}</div>
     <div class="sheet-subtitle">${t('export_aparecera')}</div>
     <input class="sheet-input" id="dname-input" type="text" maxlength="30" placeholder="${t('auth_nombre')}" autocomplete="name">
-    <button class="sheet-cta" id="dname-save">${t('export_guardar_compartir')}</button>
+    <button class="sheet-cta" id="dname-save">${t('export_compartir_sin_nombre')}</button>
   </div>`;
   document.body.appendChild(el);
   const input=document.getElementById('dname-input');
   input.focus();
-  document.getElementById('dname-save').onclick=async()=>{
+  // El nombre es OPCIONAL y siempre lo fue: el subtítulo de la imagen se arma
+  // con `(_dn?_dn+' · ':'')` (share.js), o sea que sin nombre sale «Mi Plan ·
+  // Festival · N días», publicable. La compuerta decía lo contrario, y con el
+  // campo vacío el botón solo pintaba el borde de rojo: sin mensaje, sin salida
+  // visible y sin forma de compartir. Dos afirmaciones opuestas sobre el mismo
+  // dato, y ganaba la que bloqueaba.
+  // Un solo control cuyo rótulo dice qué va a pasar, según el campo — el patrón
+  // que ya usa la fila de Mi Plan. Vacío deja de ser un estado inválido, así que
+  // el borde rojo no tiene nada que señalar y se va con él.
+  const cta=document.getElementById('dname-save');
+  const _rotulo=()=>{cta.textContent=input.value.trim()
+    ?t('export_guardar_compartir'):t('export_compartir_sin_nombre');};
+  input.addEventListener('input',_rotulo);
+  cta.onclick=async()=>{
     const v=input.value.trim();
-    if(!v){input.style.borderColor='var(--red)';return;}
-    await _saveDisplayName(v);
+    if(v) await _saveDisplayName(v);
     el.remove();
     if(onSave) onSave();
   };

@@ -119,7 +119,7 @@ export async function shareDiary(){
   _dlDirect(c.toDataURL('image/png'));
 }
 
-export async function sharePlan(){
+export async function sharePlan(_yaPregunte){
   // RESTRICCIÓN 2 — de un festival en revisión no sale nada. Su programación
   // es provisional y compartirla la hace circular como si fuera definitiva:
   // una captura del plan o un .ics en el calendario de alguien sobreviven a
@@ -129,9 +129,13 @@ export async function sharePlan(){
   if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length){
     showToast(t('plan_sin_plan'),'warn');return;
   }
-  // Pedir nombre si no existe — solo la primera vez
-  if(!_getDisplayName()){
-    _promptDisplayName(()=>sharePlan());
+  // Pedir nombre si no existe. El flag corta la RECURSIÓN: el nombre es
+  // opcional, así que al volver de la hoja sin haberlo puesto esta misma
+  // condición era verdadera otra vez y la hoja se reabría en bucle — medido:
+  // con el campo vacío no se cerraba nunca. La compuerta pregunta una vez por
+  // gesto de compartir, no hasta que haya nombre.
+  if(!_getDisplayName()&&!_yaPregunte){
+    _promptDisplayName(()=>sharePlan(true));
     return;
   }
   let canvas,dataUrl;
