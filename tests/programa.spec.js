@@ -3252,3 +3252,70 @@ test('T153 — el sustantivo de Planear sigue al contenido, no a la pantalla', a
     .toMatch(/\bobras?\b/i);
   expect(sinT.resultado, 'y el resultado también').toMatch(/\bobras?\b/i);
 });
+
+// ── T157 — las salidas «Cancelar» se alcanzan con el teclado ────────────────
+// `.auth-cancel` eran los ÚNICOS `<span data-action>` de todo el index: cinco
+// salidas «Cancelar» —los tres pasos de la hoja de cuenta, la de reseña y la
+// del nombre al compartir— que ningún teclado podía alcanzar.
+//
+// Y estaban en la MISMA regla CSS que `.conflict-btn-cancel` y
+// `.prio-limit-cancel`, que es un reset de botón (background:none, border:none,
+// cursor:pointer) y cuyas otras dos clases ya eran `<button>`. La etiqueta era
+// lo único que faltaba; el anillo de foco ya existía
+// (`:focus-visible{outline:2px solid var(--amber)}`).
+//
+// Se afirman las tres cosas que hacen falta para poder usarla sin mouse:
+// alcanzable, con foco VISIBLE, y que Enter la opere. Una de las tres sola no
+// sirve de nada.
+test('T157 — Cancelar es alcanzable, se ve enfocada y responde a Enter', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+  });
+  await page.waitForTimeout(700);
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'openAuthSheet');
+    document.body.appendChild(b); b.click(); b.remove();
+  });
+  await page.waitForTimeout(1200);
+
+  // 1 · TODAS las salidas de la app son alcanzables, incluidas las de los pasos
+  //     que ahora mismo están ocultos
+  const todas = await page.evaluate(() => {
+    const out = [...document.querySelectorAll('.auth-cancel')].map(e => ({
+      tag: e.tagName, tab: e.tabIndex
+    }));
+    return { n: out.length, inalcanzables: out.filter(o => !(o.tab >= 0)),
+      spansConAccion: document.querySelectorAll('span[data-action]').length };
+  });
+  expect(todas.n, 'la hoja de cuenta trae sus salidas').toBeGreaterThan(0);
+  expect(todas.inalcanzables,
+    'ninguna salida «Cancelar» puede quedar fuera del recorrido del teclado').toEqual([]);
+  expect(todas.spansConAccion,
+    'y no queda ningún <span> haciendo de botón, que es como empezó esto').toBe(0);
+
+  // 2 · llegar con Tab de verdad: :focus-visible solo se arma con el teclado
+  await page.evaluate(() => { const i = document.getElementById('auth-email-inp'); if (i) i.focus(); });
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
+  await page.waitForTimeout(300);
+  const foco = await page.evaluate(() => {
+    const a = document.activeElement;
+    return { esCancelar: a.classList.contains('auth-cancel'),
+      visible: (() => { try { return a.matches(':focus-visible'); } catch (e) { return null; } })() };
+  });
+  expect(foco.esCancelar, 'tabulando desde el campo se llega a Cancelar').toBe(true);
+  expect(foco.visible, 'y el foco se VE — un foco invisible no sirve de nada').toBe(true);
+
+  // 3 · y Enter la opera
+  await page.keyboard.press('Enter');
+  await page.waitForTimeout(900);
+  const cerrada = await page.evaluate(() => {
+    const sh = document.getElementById('auth-sheet');
+    return !sh || !sh.classList.contains('open');
+  });
+  expect(cerrada, 'Enter cierra la hoja: es un botón de verdad, no un span con onclick').toBe(true);
+});

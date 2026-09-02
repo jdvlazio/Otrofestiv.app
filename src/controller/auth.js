@@ -107,7 +107,7 @@ export function _promptDisplayName(onSave){
     <div class="sheet-subtitle">${t('export_aparecera')}</div>
     <input class="sheet-input" id="dname-input" type="text" maxlength="30" placeholder="${t('auth_nombre')}" autocomplete="name">
     <button class="sheet-cta" id="dname-save">${t('export_compartir_sin_nombre')}</button>
-    <span class="auth-cancel" id="dname-cancel">${t('misc_cancelar')}</span>
+    <button type="button" class="auth-cancel" id="dname-cancel">${t('misc_cancelar')}</button>
   </div>`;
   document.body.appendChild(el);
   const input=document.getElementById('dname-input');
