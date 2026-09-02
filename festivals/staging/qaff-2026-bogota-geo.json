@@ -1,9 +1,10 @@
 {
  "_provenance": {
-  "fuente": "Cinemateca: coordenadas ya nuestras (ficdeh-2026). Alianza Francesa, Uniandes y Javeriana: Nominatim/OSM",
-  "capturado": "2026-09-02"
+  "fuente": "Cinemateca: coordenadas ya nuestras (ficdeh-2026). Las otras cinco: Nominatim/OSM, con la dirección que imprime el PDF del programa como término de búsqueda",
+  "capturado": "2026-09-02",
+  "verificacion": "cada resultado devolvió el número de placa impreso en el programa (19-10, 18-45, 18A-12, 40-62, 28-66, 26-85), no solo el nombre de la sede"
  },
- "_src": "Cinemateca: coordenadas YA nuestras (ficdeh-2026), con la dirección coincidiendo con la del programa de Bogotá. Las otras tres: Nominatim/OSM, verificadas contra el mapa de orientación de la p2 del programa —las cuatro sedes caen en el eje Centro/Las Aguas, como allí se dibuja.",
+ "_ojo": "El 16 de septiembre Javeriana NO es en el campus de la Cra. 7: es Estudio 4, Edificio Gerardo Arango, Facultad de Artes, Calle 40B # 5-37 —a un kilómetro—. El geo del festival es por SEDE, así que esa función queda con la coordenada del campus principal. Está declarado en `_direcciones` del plan; si alguna vez importa para el mapa, hay que partir la sede, y eso es decisión de producto.",
  "venues": {
   "Cinemateca de Bogotá - Bogotá": {
    "lat": 4.6031614,
@@ -32,6 +33,20 @@
    "address": "Cra. 7 # 40-62",
    "city": "Bogotá",
    "short": "Pontificia Universidad Javeriana"
+  },
+  "Museo Nacional de Colombia - Bogotá": {
+   "lat": 4.6155238,
+   "lng": -74.0684131,
+   "address": "Cra. 7 # 28-66",
+   "city": "Bogotá",
+   "short": "Museo Nacional"
+  },
+  "Universidad Nacional de Colombia - Bogotá": {
+   "lat": 4.6387426,
+   "lng": -74.0852375,
+   "address": "Cra. 45 # 26-85",
+   "city": "Bogotá",
+   "short": "Universidad Nacional"
   }
  }
 }

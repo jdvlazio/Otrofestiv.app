@@ -48,21 +48,49 @@
   "festival": {
     "crudo": "festivals/staging/qaff-2026-bogota-crudo.json",
     "sedes": {
-      "Cinemateca de Bogotá": [
-        "Cinemateca de Bogotá - Bogotá",
-        "Cra 3 #19-10, Bogotá"
-      ],
       "Alianza Francesa": [
         "Alianza Francesa - Bogotá",
-        "Cra 3 #18-45, Bogotá"
+        ""
+      ],
+      "Cinemateca de Bogotá · Sala 2": [
+        "Cinemateca de Bogotá - Bogotá",
+        "Sala 2"
+      ],
+      "Cinemateca de Bogotá · Sala 3": [
+        "Cinemateca de Bogotá - Bogotá",
+        "Sala 3"
+      ],
+      "Cinemateca de Bogotá · Sala Capital": [
+        "Cinemateca de Bogotá - Bogotá",
+        "Sala Capital"
+      ],
+      "Museo Nacional de Colombia · Auditorio Teresa Cuervo Borda": [
+        "Museo Nacional de Colombia - Bogotá",
+        "Auditorio Teresa Cuervo Borda"
+      ],
+      "Pontificia Universidad Javeriana · Auditorio Centro Ático": [
+        "Pontificia Universidad Javeriana - Bogotá",
+        "Auditorio Centro Ático"
+      ],
+      "Pontificia Universidad Javeriana · Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes": [
+        "Pontificia Universidad Javeriana - Bogotá",
+        "Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes"
+      ],
+      "Pontificia Universidad Javeriana · Sala 901 - Edificio Jorge Hoyos Vásquez, S.J.": [
+        "Pontificia Universidad Javeriana - Bogotá",
+        "Sala 901 - Edificio Jorge Hoyos Vásquez, S.J."
+      ],
+      "Pontificia Universidad Javeriana · Sala 903 - Edificio Jorge Hoyos Vásquez, S.J.": [
+        "Pontificia Universidad Javeriana - Bogotá",
+        "Sala 903 - Edificio Jorge Hoyos Vásquez, S.J."
+      ],
+      "Universidad Nacional de Colombia · Facultad de Artes": [
+        "Universidad Nacional de Colombia - Bogotá",
+        "Facultad de Artes"
       ],
       "Universidad de los Andes": [
         "Universidad de los Andes - Bogotá",
-        "Cra 1 #18A-12, Bogotá"
-      ],
-      "Pontificia Universidad Javeriana": [
-        "Pontificia Universidad Javeriana - Bogotá",
-        "Cra 7 #40-62, Bogotá"
+        ""
       ]
     },
     "secciones": {
@@ -125,6 +153,20 @@
     },
     "_secciones_src": "verbatim del QAFF ya publicado (festivals/qaff-2026.json): emoji, inglés, arquetipo, color y orden son curaduría YA APROBADA — no se reinventa al cambiar de ciudad, el festival es el mismo",
     "geo": "festivals/staging/qaff-2026-bogota-geo.json",
-    "enriquecido": "festivals/staging/qaff-2026-bogota-enriquecimiento.json"
+    "enriquecido": "festivals/staging/qaff-2026-bogota-enriquecimiento.json",
+    "_sedes_src": "clave = «Sede · Sala» tal como la escribe el crudo; valor = (sede canónica, sala). La sala NO puede ir suelta en el crudo: ensamblar.py la toma de esta tabla y descarta f['sala'].",
+    "_direcciones": {
+      "Alianza Francesa": "Cra. 3 # 18-45, Bogotá",
+      "Cinemateca de Bogotá · Sala 2": "Cra. 3 # 19-10, Bogotá",
+      "Cinemateca de Bogotá · Sala 3": "Cra. 3 # 19-10, Bogotá",
+      "Cinemateca de Bogotá · Sala Capital": "Cra. 3 # 19-10, Bogotá",
+      "Museo Nacional de Colombia · Auditorio Teresa Cuervo Borda": "Cra. 7 # 28-66, Bogotá",
+      "Pontificia Universidad Javeriana · Auditorio Centro Ático": "Cra. 7 # 40-62, Bogotá",
+      "Pontificia Universidad Javeriana · Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes": "Calle 40B # 5-37, Bogotá",
+      "Pontificia Universidad Javeriana · Sala 901 - Edificio Jorge Hoyos Vásquez, S.J.": "Cra. 7 # 40-62, Bogotá",
+      "Pontificia Universidad Javeriana · Sala 903 - Edificio Jorge Hoyos Vásquez, S.J.": "Cra. 7 # 40-62, Bogotá",
+      "Universidad Nacional de Colombia · Facultad de Artes": "Cra. 45 # 26-85, Bogotá",
+      "Universidad de los Andes": "Cra. 1 # 18A-12, Bogotá"
+    }
   }
 }

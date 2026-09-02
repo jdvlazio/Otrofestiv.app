@@ -2,7 +2,7 @@
  "_provenance": {
   "fuente": "TMDB",
   "capturado": "2026-09-02",
-  "metodo": "búsqueda por título original y, cuando falló, por filmografía del director; cada ficha aceptada SOLO si el director de TMDB coincide con el de la ficha del festival"
+  "metodo": "búsqueda por título original y, cuando falló, por filmografía del director; cada ficha aceptada SOLO si el director de TMDB coincide con el de la ficha del festival. Los pósters que ya teníamos del onboarding de Quibdó se heredan en el crudo, no aquí: este archivo solo trae lo que hubo que buscar de nuevo para las obras que Bogotá añadió"
  },
  "_formato": "lista bajo «obras», que es lo único que ensamblar.py indexa. Como diccionario plano título→ficha el archivo se lee sin error y NO ENRIQUECE NADA: _lista queda vacía y el fallo es mudo.",
  "obras": [
@@ -138,6 +138,27 @@
    "poster_tmdb": "/taznOT0q9UkUmA1ijRT1DDA1PTP.jpg",
    "synopsis_en": "Two women. Two continents. One shared fight. From Guadeloupe to the United States, the parallel paths of Angela Davis and Gerty Archimède trace a common struggle for justice.",
    "_verificado": "TMDB, director coincidente (Pascal Archimède, Dimitry Zandronis) — 2 SEP 2026"
+  },
+  {
+   "titulo": "INICIACIÓN EN LA OCTAVA DIMENSIÓN",
+   "tmdb_id": 1742327,
+   "poster_tmdb": "/apQpk4kG29oQMpAJKYzeMC6aYhF.jpg",
+   "synopsis_en": "Five Afro-Colombian characters in the middle of Bogotá, five disparate destinies in a city that is hostile to them. Rubi Quejada, a young model displaced from Chocó.",
+   "_verificado": "TMDB, director coincidente (Lucas Silva) — 2 SEP 2026"
+  },
+  {
+   "titulo": "STORMY DAYS",
+   "tmdb_id": 1742417,
+   "poster_tmdb": "/tFmN5xRoi9YekNH4BF103bwzGt1.jpg",
+   "synopsis_en": "Ahura is a wheelchair carrier who tries to escape at all costs, but finds Gymbia being a decisive presence on a stormy day.",
+   "_verificado": "TMDB, director coincidente (Vitor Bitencourt Rocha) — 2 SEP 2026"
+  },
+  {
+   "titulo": "THE ONE WHO CRIES",
+   "tmdb_id": 1628580,
+   "poster_tmdb": "/cmvFvwo7MR3xtpCdBYwJJMZSKAh.jpg",
+   "synopsis_en": "A pastor allows himself to be persuaded by his childhood friend, now a trafficker of smuggled medicines, to recover goods that a spirit has stolen from him. Indeed, rumors say that a demon haunts the streets of Abidjan: the one who cries.",
+   "_verificado": "TMDB, director coincidente (Cyrille Gueï) — 2 SEP 2026"
   }
  ]
 }

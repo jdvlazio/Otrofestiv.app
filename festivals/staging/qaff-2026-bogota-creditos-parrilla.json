@@ -1,0 +1,600 @@
+{
+ "_provenance": {
+  "fuente": "créditos impresos junto a cada obra en las parrillas del PDF oficial del programa QAFF 2026",
+  "capturado": "2026-09-02",
+  "metodo": "capa de texto del PDF, no OCR; «(Director) - 12'44 - País» y la línea «País / Año – Tipo» que la sigue"
+ },
+ "obras": {
+  "FACE TO FACE": [
+   {
+    "director": "Florent Mahoukou",
+    "duracion_min": 19,
+    "pais": "Congo",
+    "_pagina": 14
+   }
+  ],
+  "MANGO": [
+   {
+    "director": "Joan Iyiola",
+    "duracion_min": 11,
+    "pais": "Francia, Reino Unido",
+    "_pagina": 14
+   }
+  ],
+  "CONCRETE MOVES": [
+   {
+    "director": "Fagamou Fama Ndiaye",
+    "duracion_min": 12,
+    "pais": "Senegal",
+    "_pagina": 14
+   }
+  ],
+  "CAFE ?": [
+   {
+    "director": "Bamar Kane",
+    "duracion_min": 24,
+    "pais": "Francia",
+    "_pagina": 14
+   },
+   {
+    "director": "Bamar Kane",
+    "duracion_min": 24,
+    "pais": null,
+    "_pagina": 82,
+    "anio": 2025,
+    "tipo": "Ficción",
+    "pais_cola": "France"
+   }
+  ],
+  "Happy Meal": [
+   {
+    "director": "Johanna Makabi",
+    "duracion_min": 19,
+    "pais": "Francia",
+    "_pagina": 14
+   }
+  ],
+  "GLORIA": [
+   {
+    "director": "Marvin Yamb",
+    "duracion_min": 15,
+    "pais": "Guyana Frances",
+    "_pagina": 14
+   }
+  ],
+  "THE ONE WHO CRIES": [
+   {
+    "director": "Cyrille Guei",
+    "duracion_min": 20,
+    "pais": "Francia",
+    "_pagina": 14
+   }
+  ],
+  "CAPTAIN ANTHONY": [
+   {
+    "director": "Gregory Robinson",
+    "duracion_min": 8,
+    "pais": "Colombia",
+    "_pagina": 19
+   }
+  ],
+  "LEER EN LAS GOTAS DE LLUVIA": [
+   {
+    "director": "Lilian Pallares, Charles Olsen",
+    "duracion_min": 10,
+    "pais": "España",
+    "_pagina": 19
+   }
+  ],
+  "A KING DISPLACED": [
+   {
+    "director": "Olayinka Eno Babalola",
+    "duracion_min": 19,
+    "pais": "Nigeria",
+    "_pagina": 19
+   }
+  ],
+  "SISTERS IN DESTINY: ANGELA DAVIS & GERTY ARCHIMEDE": [
+   {
+    "director": "Pascal Frederic Archimede, Dimitry Zandronis",
+    "duracion_min": 52,
+    "pais": "Guadeloupe",
+    "_pagina": 19
+   }
+  ],
+  "NI CHAÎNES NI MAÎTRES": [
+   {
+    "director": "Simon Moutaïrou",
+    "duracion_min": 98,
+    "pais": "Francia",
+    "_pagina": 19
+   }
+  ],
+  "CAIDA LIBRE": [
+   {
+    "director": "Wilson Borja",
+    "duracion_min": 9,
+    "pais": "Colombia",
+    "_pagina": 27
+   },
+   {
+    "director": "WILSON BORJA",
+    "duracion_min": 9,
+    "pais": "COLOMBIA",
+    "_pagina": 45
+   },
+   {
+    "director": "Wilson Borja",
+    "duracion_min": 9,
+    "pais": "Colombia",
+    "_pagina": 82
+   }
+  ],
+  "KANEKALON": [
+   {
+    "director": "Sara J. Asprilla",
+    "duracion_min": 12,
+    "pais": "Colombia",
+    "_pagina": 27
+   },
+   {
+    "director": "SARA J. ASPRILLA",
+    "duracion_min": 12,
+    "pais": "COLOMBIA",
+    "_pagina": 45
+   }
+  ],
+  "BERTHA": [
+   {
+    "director": "Laura Asprilla",
+    "duracion_min": 12,
+    "pais": "Colombia",
+    "_pagina": 27
+   },
+   {
+    "director": "LAURA ASPRILLA",
+    "duracion_min": 12,
+    "pais": "COLOMBIA",
+    "_pagina": 45
+   },
+   {
+    "director": "Laura Asprilla",
+    "duracion_min": 12,
+    "pais": null,
+    "_pagina": 82,
+    "anio": 2025,
+    "tipo": "Ficción",
+    "pais_cola": "Colombia"
+   }
+  ],
+  "HACKER LEONILIA": [
+   {
+    "director": "Gustavo Fontele Dourado",
+    "duracion_min": 14,
+    "pais": "Brazil",
+    "_pagina": 27
+   },
+   {
+    "director": "GUSTAVO FONTELE DOURADO",
+    "duracion_min": 14,
+    "pais": "BRAZIL",
+    "_pagina": 45
+   }
+  ],
+  "VICHE": [
+   {
+    "director": "Jorge Eliecer Leudo Murillo",
+    "duracion_min": 17,
+    "pais": "Colombia",
+    "_pagina": 27
+   }
+  ],
+  "TIA CIATA": [
+   {
+    "director": "Mariana Campos y Raquel Beatriz",
+    "duracion_min": 26,
+    "pais": "Brasil",
+    "_pagina": 27
+   },
+   {
+    "director": "MARIANA CAMPOS Y RAQUEL BEATRIZ",
+    "duracion_min": 26,
+    "pais": "BRASIL",
+    "_pagina": 45
+   }
+  ],
+  "LA TINAJA": [
+   {
+    "director": "Ernestina Miranda, Mar Aje",
+    "duracion_min": 13,
+    "pais": "Colombia",
+    "_pagina": 27
+   }
+  ],
+  "THE LAST DANCE": [
+   {
+    "director": "Hayden Mclean",
+    "duracion_min": 16,
+    "pais": "Reino Unido",
+    "_pagina": 27
+   }
+  ],
+  "WATERFRONT MEMORIES": [
+   {
+    "director": "Marton Olympio",
+    "duracion_min": 20,
+    "pais": "Brazil",
+    "_pagina": 27
+   }
+  ],
+  "WHEN THE WORLD BROKE OPEN": [
+   {
+    "director": "Desiree Mbakumua Meiffret",
+    "duracion_min": 29,
+    "pais": "Estados Unido",
+    "_pagina": 27
+   }
+  ],
+  "REFUGIAR EL GESTO": [
+   {
+    "director": "Adrian Villa-Davila, Andres Prado",
+    "duracion_min": 10,
+    "pais": "Colombia",
+    "_pagina": 37
+   },
+   {
+    "director": "ADRIAN VILLA-DAVILA, ANDRES PRADO",
+    "duracion_min": 10,
+    "pais": "COLOMBIA",
+    "_pagina": 45
+   }
+  ],
+  "POSESAS": [
+   {
+    "director": "Sebastian Wiedemann, Daniel Cortes",
+    "duracion_min": 16,
+    "pais": "Colombia",
+    "_pagina": 37
+   }
+  ],
+  "ALTANEGRA": [
+   {
+    "director": "Raiza De La Hoz, Daniela Ponce",
+    "duracion_min": 25,
+    "pais": "Colombia",
+    "_pagina": 37
+   }
+  ],
+  "SOÑÉ SU NOMBRE": [
+   {
+    "director": "Ángela Carabalí",
+    "duracion_min": 85,
+    "pais": "Colombia",
+    "_pagina": 37
+   }
+  ],
+  "AMAZONAS COCINAS INDIGENAS DE SELVA Y RIO": [
+   {
+    "director": "Jairo Garrido",
+    "duracion_min": 13,
+    "pais": "Colombia",
+    "_pagina": 37
+   }
+  ],
+  "MOJUGBA": [
+   {
+    "director": "Gustavo Alonso Arias",
+    "duracion_min": 23,
+    "pais": "Colombia",
+    "_pagina": 37
+   }
+  ],
+  "A COR DA PATROA": [
+   {
+    "director": "Milena Anjos",
+    "duracion_min": 24,
+    "pais": "Brazil",
+    "_pagina": 37
+   }
+  ],
+  "RELATOS DE LA GUAJIRITA": [
+   {
+    "director": "David Antonio Díaz de la Rosa",
+    "duracion_min": 51,
+    "pais": "Colombia",
+    "_pagina": 37
+   }
+  ],
+  "FITOFASCIAS": [
+   {
+    "director": "Petra Ventana, Lucía Benamo",
+    "duracion_min": 8,
+    "pais": "Argentina-Colombia",
+    "_pagina": 45
+   }
+  ],
+  "AISHA NO PUEDE VOLAR LEJOS": [
+   {
+    "director": "Morad Mostafa",
+    "duracion_min": 120,
+    "pais": null,
+    "_pagina": 45,
+    "anio": 2025,
+    "tipo": "Ficción",
+    "pais_cola": "Egypt"
+   },
+   {
+    "director": "Morad Mostafa",
+    "duracion_min": 120,
+    "pais": null,
+    "_pagina": 84,
+    "anio": 2025,
+    "tipo": "Ficción",
+    "pais_cola": "Egypt"
+   }
+  ],
+  "THE BLACK BART OF TACO KING #17": [
+   {
+    "director": "Rickey Larke",
+    "duracion_min": 11,
+    "pais": "United States",
+    "_pagina": 51
+   }
+  ],
+  "STORMY DAYS": [
+   {
+    "director": "Vitor Bitencourt Rocha",
+    "duracion_min": 19,
+    "pais": "Brazil",
+    "_pagina": 51
+   }
+  ],
+  "AMELIA": [
+   {
+    "director": "Badewa Adeseye Ajibade",
+    "duracion_min": 23,
+    "pais": "Nigeria",
+    "_pagina": 51
+   },
+   {
+    "director": "Badewa Adeseye Ajibade",
+    "duracion_min": 23,
+    "pais": null,
+    "_pagina": 82,
+    "anio": 2025,
+    "tipo": "Ficción",
+    "pais_cola": "Nigeria"
+   }
+  ],
+  "MI VICHE TODO EL DIA": [
+   {
+    "director": "Juan Camilo Moreno",
+    "duracion_min": 26,
+    "pais": "Colombia",
+    "_pagina": 51
+   }
+  ],
+  "ORANGO": [
+   {
+    "director": "Samuel Kay Forrest",
+    "duracion_min": 94,
+    "pais": "Guinea-Bissau",
+    "_pagina": 51
+   }
+  ],
+  "LOS CHICOS DEL BANJO": [
+   {
+    "director": "Johan R. Nayar",
+    "duracion_min": 76,
+    "pais": null,
+    "_pagina": 70,
+    "anio": 2025,
+    "tipo": "Documental",
+    "pais_cola": "Malawi"
+   }
+  ],
+  "HYPHEN": [
+   {
+    "director": "Reine Razzouk",
+    "duracion_min": 98,
+    "pais": null,
+    "_pagina": 70,
+    "anio": 2023,
+    "tipo": "Documental",
+    "pais_cola": "Lebanon"
+   }
+  ],
+  "EL ANCLAJE DEL TIEMPO": [
+   {
+    "director": "Sol de Carvalho",
+    "duracion_min": 105,
+    "pais": null,
+    "_pagina": 70,
+    "anio": 2024,
+    "tipo": "Ficción",
+    "pais_cola": "Mozambique"
+   }
+  ],
+  "SOBREVIVIENDO A BIAFRA": [
+   {
+    "director": "Meji Alabi, Leke Alabi-Isama",
+    "duracion_min": 75,
+    "pais": null,
+    "_pagina": 73,
+    "anio": 2026,
+    "tipo": "Documental",
+    "pais_cola": "Nigeria"
+   }
+  ],
+  "TRES HOMBRES NEGROS": [
+   {
+    "director": "Sienna McLean-LoGreco",
+    "duracion_min": 99,
+    "pais": null,
+    "_pagina": 73,
+    "anio": 2026,
+    "tipo": "Documental",
+    "pais_cola": "Estados Unidos"
+   }
+  ],
+  "NUNKUI": [
+   {
+    "director": "Verenice Benitez",
+    "duracion_min": 90,
+    "pais": null,
+    "_pagina": 73,
+    "anio": 2025,
+    "tipo": "Ficción",
+    "pais_cola": "Ecuador"
+   }
+  ],
+  "DE BARRO Y SANGRE": [
+   {
+    "director": "Jean-Gabriel Leynaud",
+    "duracion_min": 94,
+    "pais": null,
+    "_pagina": 76,
+    "anio": 2025,
+    "tipo": "Documental",
+    "pais_cola": "RD Congo"
+   }
+  ],
+  "VIVA YURUMANGUI": [
+   {
+    "director": "Emma Christopher, Sergio Leyva Seiglie",
+    "duracion_min": 80,
+    "pais": "Colombia",
+    "_pagina": 76
+   }
+  ],
+  "LA OBRA DE DIOS": [
+   {
+    "director": "Michael James",
+    "duracion_min": 126,
+    "pais": null,
+    "_pagina": 76,
+    "anio": 2025,
+    "tipo": "Ficción",
+    "pais_cola": "South Africa"
+   }
+  ],
+  "LOS VIAJEROS": [
+   {
+    "director": "David Bingong",
+    "duracion_min": 60,
+    "pais": null,
+    "_pagina": 79,
+    "anio": 2025,
+    "tipo": "Documental",
+    "pais_cola": "Cameroon"
+   }
+  ],
+  "INICIACIÓN EN LA OCTAVA DIMENSIÓN": [
+   {
+    "director": "Lucas Silva",
+    "duracion_min": 90,
+    "pais": null,
+    "_pagina": 79,
+    "anio": 2025,
+    "tipo": "Documental",
+    "pais_cola": "Colombia"
+   }
+  ],
+  "GENERACIÓN EQUIVOCADA": [
+   {
+    "director": "Shili Munyama",
+    "duracion_min": 64,
+    "pais": null,
+    "_pagina": 79,
+    "anio": 2026,
+    "tipo": "Ficción",
+    "pais_cola": "Namibia"
+   }
+  ],
+  "AVENIDA FISHKILL 305": [
+   {
+    "director": "Ramel Westry",
+    "duracion_min": 15,
+    "pais": null,
+    "_pagina": 82,
+    "anio": 2026,
+    "tipo": "Ficción",
+    "pais_cola": "Estados Unidos"
+   }
+  ],
+  "UN DOMINGO": [
+   {
+    "director": "Day Sena",
+    "duracion_min": 20,
+    "pais": null,
+    "_pagina": 82,
+    "anio": 2026,
+    "tipo": "Ficción",
+    "pais_cola": "Brasil"
+   }
+  ],
+  "DÍA DEL PADRE": [
+   {
+    "director": "Ayana O'Shun",
+    "duracion_min": 74,
+    "pais": null,
+    "_pagina": 82,
+    "anio": 2025,
+    "tipo": "Documental",
+    "pais_cola": "Canadá"
+   }
+  ],
+  "AMAZONAS COCINAS INDÍGENAS": [
+   {
+    "director": "Jairo Garrido",
+    "duracion_min": 13,
+    "pais": null,
+    "_pagina": 84,
+    "anio": 2026,
+    "tipo": "Documental",
+    "pais_cola": "Colombia"
+   }
+  ],
+  "CARABALÍ": [
+   {
+    "director": "Medhin Tewolde",
+    "duracion_min": 18,
+    "pais": null,
+    "_pagina": 84,
+    "anio": 2026,
+    "tipo": "Documental",
+    "pais_cola": "México"
+   }
+  ],
+  "UN REY DESPLAZADO": [
+   {
+    "director": "Olayinka Eno Babalola",
+    "duracion_min": 19,
+    "pais": null,
+    "_pagina": 84,
+    "anio": 2026,
+    "tipo": "Documental",
+    "pais_cola": "Nigeria"
+   }
+  ],
+  "HERMANAS EN EL DESTINO - ANGELA & GERTY ARCHIMÈDE": [
+   {
+    "director": "Pascal Frederic Archimede, Dimitry Zandronis",
+    "duracion_min": 52,
+    "pais": "Guadeloupe",
+    "_pagina": 84
+   }
+  ],
+  "EL COACH DE LOS LOCOS": [
+   {
+    "director": "Carlo Liberatore",
+    "duracion_min": 60,
+    "pais": null,
+    "_pagina": 84,
+    "anio": 2025,
+    "tipo": "Documental",
+    "pais_cola": "Senegal"
+   }
+  ]
+ }
+}

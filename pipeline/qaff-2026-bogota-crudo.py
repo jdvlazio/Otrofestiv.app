@@ -1,222 +1,347 @@
-#!/usr/bin/env python3
-"""Crudo de QAFF 2026 — BOGOTÁ.
+# -*- coding: utf-8 -*-
+"""El crudo de QAFF 2026 en Bogotá, armado desde el PDF OFICIAL del programa.
 
-Quibdó quedó CANCELADO por el terremoto del 10 ago (confirmado por Juan, 2 SEP):
-la 8ª edición es solo en Bogotá. Este crudo sustituye a las 47 funciones de
-Quibdó que quedaron ocultas en producción, no las complementa.
+    quibdoafricafilmfestival.com/es/program-2026  ·  prog2.pdf  ·  86 páginas
 
-DOS FUENTES, cada una en lo suyo:
-  · LA PARRILLA (día, hora, sede, sala, qué se proyecta) sale del programa
-    oficial en flipbook, publicado el 2 SEP. Extraída y verificada por DOS
-    auditorías independientes que coincidieron en los 68 cupos —mismo día,
-    hora, sede y título, cero diferencias—. Ver
-    festivals/staging/qaff-2026-bogota-auditoria.json y -auditoria-3.json.
-  · LAS OBRAS salen de NUESTRO catálogo del onboarding del Chocó, que costó
-    meses: 38 de las 57 obras de Bogotá ya estaban enriquecidas con sinopsis,
-    afiche, director, país y año. Esas se heredan enteras. Las otras 19 se
-    siembran con lo que imprime el propio programa (director, duración y país
-    en las 19; año y género en 15) y se enriquecen aparte.
+Por qué el PDF y no el flip book: el PDF tiene CAPA DE TEXTO. No es OCR, así que
+no puede tener errores de lectura —o el festival lo escribió así, o no está—.
+Dos cosechas por OCR del flip book no lograron sacar las sinopsis en español sin
+pegarle a una obra el texto de la de al lado; aquí eso no puede pasar.
 
-Por qué el crudo y no un JSON a mano: el mismo camino genérico que el resto
-—crudo → ensamblar → publicar— para que el contrato, las banderas y los
-guardianes se apliquen igual que a los demás festivales.
+El PDF trae la misma información DOS VECES y por eso se puede auditar solo:
+
+  1. la PARRILLA de cada sede: sede, día, hora, sala y, junto a cada obra,
+     «(Director) - 12'44 - País»;
+  2. la FICHA de cada obra: país, año, duración, tipo, idioma y sinopsis.
+
+Las dos se cruzan aquí y las 13 diferencias que aparecieron están resueltas o
+declaradas una por una (ver DISCREPANCIAS). Encima de eso, la transcripción de
+la parrilla se verifica contra la página que declara (scratchpad/qaff/verifica.py)
+y coincide con dos auditorías independientes del flip book en las 29 funciones y
+en 28 de las 29 listas de obra.
+
+Quibdó quedó CANCELADO por el terremoto: todo es en Bogotá. El prelanzamiento
+del 5 SEP en el Museo Nacional NO se incluye.
 """
-import json, re, unicodedata, os, sys
+import json, os, re, sys, unicodedata, datetime
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-S = os.path.join(BASE, 'festivals', 'staging')
+SCR  = os.path.join(BASE, 'pipeline', 'qaff_pdf')
+sys.path.insert(0, SCR)
+import programa as pr                                        # noqa: E402
+from parrilla import presencias                              # noqa: E402
+
+SALIDA = os.path.join(BASE, 'festivals', 'staging', 'qaff-2026-bogota-crudo.json')
+
 
 def n(s):
-    return re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFKD', (s or ''))
-                  .encode('ascii', 'ignore').decode().lower())
+    s = unicodedata.normalize('NFKD', s or '').encode('ascii', 'ignore').decode()
+    return re.sub(r'[^a-z0-9]', '', s.lower())
 
-# Las 5 sedes con su dirección salen del «Plano de orientación» del programa
-# (p2), que es la única página que las lista con nomenclatura y dirección.
-SEDES = {
-    'cinematecadebogota':          'Cinemateca de Bogotá',
-    'alianzafrancesa':             'Alianza Francesa',
-    'universidaddelosandes':       'Universidad de los Andes',
-    'pontificiauniversidadjaveriana': 'Pontificia Universidad Javeriana',
+
+# El propio PDF publica algunas obras con su título en español y otras con el
+# original: la ficha de «AISHA CAN'T FLY AWAY» es la de «AISHA NO PUEDE VOLAR
+# LEJOS», y la de «ONE SUNDAY» la de «UN DOMINGO». El puente sale del PDF —de
+# la ficha bilingüe de MI VICHE TODO EL DÍA / MY DAILY VICHE hacia abajo—, no
+# de una conjetura nuestra.
+PUENTE = {
+ 'AISHA NO PUEDE VOLAR LEJOS': "AISHA CAN'T FLY AWAY",
+ 'UN DOMINGO': 'ONE SUNDAY',
+ 'MI VICHE TODO EL DIA': 'MI VICHE TODO EL DÍA MY DAILY VICHE',
+ 'SISTERS IN DESTINY: ANGELA DAVIS & GERTY ARCHIMEDE': 'ANGELA DAVIS & ARCHIMÈDE GERTY',
+ 'HERMANAS EN EL DESTINO - ANGELA & GERTY ARCHIMÈDE': 'ANGELA DAVIS & ARCHIMÈDE GERTY',
+ 'UN REY DESPLAZADO': 'A KING DISPLACED',
+ 'AMAZONAS COCINAS INDIGENAS DE SELVA Y RIO': 'AMAZONAS COCINAS INDÍGENAS DE SELVA Y RÍO',
+ 'AMAZONAS COCINAS INDÍGENAS': 'AMAZONAS COCINAS INDÍGENAS DE SELVA Y RÍO',
+ 'SOÑÉ SU NOMBRE': 'SOÑE SU NOMBRE',
+ 'CAIDA LIBRE': 'CAÍDA LIBRE',
+ 'CAFE ?': 'CAFÉ ?',
 }
-def sede_norm(s):
-    """Normaliza a UN nombre por sede (el programa las escribe de varias
-    formas). La forma publicada «<Sede> - <Ciudad>» NO se decide aquí: la
-    declara la tabla `sedes` del plan, que es donde vive ese mapeo para todos
-    los festivales."""
-    k = n(s)
-    for kk, v in SEDES.items():
-        if kk in k or k in kk: return v
-    return (s or '').strip()
 
-MINUS = {'de','del','la','las','el','los','y','a','en','un','una','the','of','and','ni','du','le'}
+# Las 13 diferencias entre la parrilla y la ficha del MISMO PDF. Diez son de
+# idioma o grafía y se normalizan al español; tres eran de fondo:
+#   · «La obra de Dios» 122' (ficha) vs 126' (parrilla) → TMDB dice 126: manda
+#     la parrilla, la ficha se equivocó.
+#   · «Relatos de la Guajirita» país Nigeria (ficha) vs Colombia (parrilla) → la
+#     propia sinopsis de la ficha habla de Becerril, Cesar: manda la parrilla.
+#   · «Un domingo» 12' (ficha) vs 20' (parrilla) → SIN resolver, se le pregunta
+#     al festival. Se toma la de la parrilla, que es la de la franja programada.
+PAIS_ES = {'brazil': 'Brasil', 'united states': 'Estados Unidos',
+           'guyana frances': 'Guayana Francesa', 'colomnbia': 'Colombia',
+           'egypt': 'Egipto', 'lebanon': 'Líbano', 'south africa': 'Sudáfrica',
+           'cameroon': 'Camerún', 'france': 'Francia'}
+DISCREPANCIAS = {
+ 'LA OBRA DE DIOS': "la ficha del programa dice 122' y la parrilla 126'; TMDB confirma 126",
+ 'RELATOS DE LA GUAJIRITA': 'la ficha del programa imprime «Nigeria» como país, pero su propia '
+                            'sinopsis sitúa la obra en Becerril, Cesar: es Colombia',
+ 'UN DOMINGO': "la ficha dice 12' y la parrilla 20'; sin resolver, pendiente del festival",
+}
+# Obras cuya FICHA está en la sección de una sede que no publicó parrilla. El
+# festival las ubicó ahí: son su programación en esa sede, sin hora impresa.
+SIN_HORA = {
+ 'Museo Nacional de Colombia': ['POSESAS', 'LA TINAJA', 'WATERFRONT MEMORIES', 'MANMAN CHADWON'],
+ 'Universidad Nacional de Colombia': ['KANEKALON', 'AMELIA', 'ONE SUNDAY'],
+}
+
+MINUS = {'de','del','la','las','el','los','y','a','en','un','una','al','con','por',
+         'the','of','and','to','in','on','for','a',
+         'e','o','da','do','das','dos','du','le','les','ni'}
+
+
 def titulo_casa(t):
-    """El programa imprime los títulos en VERSALES; nuestro catálogo los guarda
-    en capital normal («Caída Libre», «Face to Face»). Se baja SOLO lo que
-    viene todo en mayúsculas —si el festival ya lo escribió mixto, se respeta—
-    y se dejan intactas las palabras que no son iniciales. No se traduce ni se
-    reordena nada: es tipografía, no contenido."""
-    t = (t or '').strip()
-    if not t or t != t.upper(): return t
+    """VERSALES → capital normal. El programa imprime TODO en mayúsculas; la app
+    no. Si el título ya viene mixto (marcas, siglas), no se toca."""
+    if not t or t != t.upper():
+        return t
     out = []
-    for i, w in enumerate(t.split()):
-        if w.isupper() and len(w) <= 4 and not w.isalpha(): out.append(w); continue
-        b = w.capitalize()
-        if i and b.lower() in MINUS: b = b.lower()
-        out.append(b)
+    for i, p in enumerate(t.split()):
+        b = p.lower()
+        out.append(p if len(p) <= 2 and p.isupper() and not p.isalpha()
+                   else (b if i and b in MINUS else b.capitalize()))
     return ' '.join(out)
 
-def dur_min(d):
-    """«19'57» son 19 min y 57 s → 19. «120'» → 120. El festival mezcla los dos."""
-    if not d: return None
-    m = re.match(r"(\d+)", str(d))
-    return int(m.group(1)) if m else None
 
-def fichas_pdf():
-    """Las fichas que el festival publica en el PDF de su programa
-    (quibdoafricafilmfestival.com/es/program-2026). El PDF tiene CAPA DE TEXTO:
-    no es OCR, no puede tener errores de lectura. De ahí salen país, año y la
-    SINOPSIS EN ESPAÑOL de las obras que el catálogo del Chocó no traía —el
-    hueco que dos cosechas por OCR no lograron llenar sin corromper datos."""
-    p = os.path.join(BASE, 'festivals', 'staging', 'qaff-2026-bogota-fichas-pdf.json')
-    if not os.path.exists(p): return {}
-    d = json.load(open(p, encoding='utf-8'))
-    return {n(k): v for k, v in d.items()}
-
-
-def catalogo():
-    """Todo lo que ya sabemos de las obras, de las dos fuentes nuestras."""
-    dic = {}
-    for f in ('qaff-2026.json', 'staging/qaff-2026.json'):
-        p = os.path.join(BASE, 'festivals', f)
-        if not os.path.exists(p): continue
-        for o in json.load(open(p, encoding='utf-8'))['films']:
-            for k in ('title', 'title_en'):
-                if o.get(k): dic.setdefault(n(o[k]), o)
-    return dic
-
-# El programa marca, junto a una obra suelta, «con la presencia de la
-# directora / del director / de la guionista / del protagonista». Es un
-# invitado en sala: para la app eso es Q&A. Se declara por FUNCIÓN (sede,
-# día, hora) porque el flag vive en la función, no en la obra, y cada una
-# de estas nueve marcas resolvió a una sola función del crudo con la obra
-# nombrada dentro — sexta verificación cruzada del programa de Bogotá.
-INVITADOS = {
-    ('Pontificia Universidad Javeriana', '2026-09-15', '10:00'): 'directoras de Caída Libre y Tía Ciata',
-    ('Pontificia Universidad Javeriana', '2026-09-17', '10:00'): 'guionista de Soñé su nombre',
-    ('Pontificia Universidad Javeriana', '2026-09-18', '10:00'): 'protagonista de Amazonas: Cocinas Indígenas de Selva y Río',
-    ('Universidad de los Andes', '2026-09-15', '14:00'): 'directora de Fitofascias',
-    ('Universidad de los Andes', '2026-09-16', '13:00'): 'directoras de Caída Libre y Tía Ciata',
-    ('Cinemateca de Bogotá', '2026-09-18', '17:00'): 'director de Iniciación en la Octava Dimensión',
-    ('Cinemateca de Bogotá', '2026-09-19', '14:00'): 'director de Caída Libre',
+# El festival imprime el mismo título de dos formas y ninguna de las dos fuentes
+# gana siempre: la parrilla escribe «SOÑÉ SU NOMBRE» y su ficha «SOÑE SU NOMBRE»;
+# con «CAIDA LIBRE» pasa al revés. La regla no puede ser «manda la ficha»: manda
+# LA VARIANTE ACENTUADA, porque la tilde es información y su ausencia es una
+# errata de imprenta. Las dos son del festival, así que no inventamos nada.
+TITULO_ES = {
+ # título bilingüe en una sola ficha: nos quedamos con el español y el original
+ # viaja aparte, no pegado al nombre de la obra
+ 'MI VICHE TODO EL DIA': 'MI VICHE TODO EL DÍA',
+ # el programa la imprime corta en Cinemateca y larga en Javeriana; es LA MISMA
+ # obra (Jairo Garrido, 13', Colombia). Dos títulos para una obra rompen la
+ # identidad: quien la marca en una función no la reconoce en la otra.
+ 'AMAZONAS COCINAS INDÍGENAS': 'AMAZONAS COCINAS INDÍGENAS DE SELVA Y RÍO',
+ 'AMAZONAS COCINAS INDIGENAS DE SELVA Y RIO': 'AMAZONAS COCINAS INDÍGENAS DE SELVA Y RÍO',
+ # dos obras que el programa titula en inglés en Alianza Francesa y en español en
+ # Cinemateca. Mismo director, misma duración, misma obra. El catálogo de Bogotá
+ # va en español; el título original viaja en `titulo_original`.
+ 'A KING DISPLACED': 'UN REY DESPLAZADO',
+ 'SISTERS IN DESTINY: ANGELA DAVIS & GERTY ARCHIMEDE':
+     'HERMANAS EN EL DESTINO - ANGELA & GERTY ARCHIMÈDE',
 }
+ORIGINAL = {'UN REY DESPLAZADO': 'A King Displaced',
+            'HERMANAS EN EL DESTINO - ANGELA & GERTY ARCHIMÈDE':
+                'Sisters in Destiny: Angela Davis & Gerty Archimede',
+            'MI VICHE TODO EL DIA': 'My Daily Viche'}
 
-def hereda(cat, titulo):
-    k = n(titulo)
-    if k in cat: return cat[k]
-    for kk, v in cat.items():
-        if len(k) > 7 and (k in kk or kk in k): return v
-    return None
+
+def _tildes(s):
+    return sum(1 for c in (s or '') if unicodedata.combining(
+        unicodedata.normalize('NFD', c)[-1]) or c in 'ñÑçÇ')
+
+
+def titulo_obra(titulo, fichas):
+    if titulo in TITULO_ES:
+        return titulo_casa(TITULO_ES[titulo])
+    f = fichas.get(n(titulo)) or fichas.get(n(PUENTE.get(titulo, ''))) or {}
+    otra = f.get('titulo')
+    if otra and n(otra) == n(titulo) and _tildes(otra) > _tildes(titulo):
+        titulo = otra
+    return titulo_casa(titulo)
+
+
+def _pais(p):
+    if not p:
+        return None
+    p = p.strip()
+    return PAIS_ES.get(p.lower(), p)
+
+
+def cargar():
+    fichas = json.load(open(os.path.join(BASE, 'festivals', 'staging',
+                        'qaff-2026-bogota-fichas.json'), encoding='utf-8'))['obras']
+    idx = {}
+    for f in fichas:                       # entre copias, la más completa
+        k = n(f['titulo'])
+        if k not in idx or sum(1 for v in f.values() if v) > sum(1 for v in idx[k].values() if v):
+            idx[k] = f
+    cred = json.load(open(os.path.join(BASE, 'festivals', 'staging',
+                      'qaff-2026-bogota-creditos-parrilla.json'), encoding='utf-8'))['obras']
+    return idx, cred
+
+
+def obra(titulo, fichas, cred):
+    """Una obra = lo que dicen las dos fuentes del PDF, con la parrilla mandando
+    en lo que ella programó (país y duración de la franja) y la ficha aportando
+    lo que solo ella tiene (sinopsis, año, tipo, idioma)."""
+    f = fichas.get(n(titulo)) or fichas.get(n(PUENTE.get(titulo, ''))) or {}
+    c = (cred.get(titulo) or [{}])[0]
+    o = {'titulo': titulo_obra(titulo, fichas)}
+    o['director'] = c.get('director') or f.get('director') or None
+    o['duracion_min'] = c.get('duracion_min') or f.get('duracion_min')
+    o['pais'] = _pais(c.get('pais')) or _pais(c.get('pais_cola')) or _pais(f.get('pais'))
+    if c.get('anio'):
+        o['anio'] = c['anio']
+    if c.get('tipo'):
+        o['tipo'] = c['tipo']
+    for k_src, k_dst in (('anio','anio'), ('tipo','tipo'), ('idioma','idioma')):
+        if f.get(k_src):
+            o[k_dst] = f[k_src]
+    if f.get('sinopsis'):
+        o['sinopsis'] = f['sinopsis']
+        o['synopsis_lang'] = 'es'
+    orig = ORIGINAL.get(TITULO_ES.get(titulo, titulo)) or ORIGINAL.get(titulo)
+    if orig:
+        o['titulo_original'] = orig
+    elif f.get('titulo') and n(f['titulo']) != n(titulo):
+        o['titulo_original'] = f['titulo']      # el original, cuando difiere de verdad
+    o['_obra_src'] = ('ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)'
+                      if f else 'parrilla del PDF oficial del programa')
+    if titulo in DISCREPANCIAS:
+        o['_ojo'] = DISCREPANCIAS[titulo]
+    return {k: v for k, v in o.items() if v not in (None, '', [], {})}
+
+
+def del_chocho():
+    """La SECCIÓN no está en el programa de Bogotá: no la imprime ni la parrilla
+    ni la ficha, en ninguna de las 86 páginas. Pero es el MISMO festival y
+    muchas de estas obras ya venían de la selección oficial del Chocó, que sí
+    las clasificó y que ya publicamos. Heredarla de ahí no es adivinar: es
+    nuestro propio onboarding de agosto. Va marcada como heredada, para que se
+    vea que Bogotá no la imprimió —y para que el festival pueda desmentirla."""
+    # el QAFF publicado de Quibdó, tal como está en el repo: no se copia a staging,
+    # porque una copia se queda vieja y nadie se entera
+    p = os.path.join(BASE, 'festivals', 'qaff-2026.json')
+    if not os.path.exists(p):
+        return {}
+    pub = json.load(open(p, encoding='utf-8'))
+    out = {}
+
+    def guarda(t, o, sec):
+        if not t:
+            return
+        d = out.setdefault(n(t), {})
+        if sec:
+            d.setdefault('section', sec)
+        for k in ('poster', 'posterSource', 'lbSlug', 'tmdb_id', 'synopsis_en', 'title_en'):
+            if o.get(k):
+                d.setdefault(k, o[k])
+
+    for f in pub.get('films', []):
+        guarda(f.get('title'), f, f.get('section'))
+        for i in (f.get('film_list') or []):
+            guarda(i.get('title'), i, f.get('section'))
+    return out
+
 
 def main():
-    aud = json.load(open(os.path.join(S, 'qaff-2026-bogota-auditoria-3.json'), encoding='utf-8'))
-    cat = catalogo()
-    fpdf = fichas_pdf()
-    programas, heredadas, sembradas = [], 0, 0
-    for pg in aud['paginas']:
-        sede = sede_norm(pg.get('sede'))
-        for fu in pg.get('funciones', []):
-            obras = []
-            for o in (fu.get('obras') or []):
-                base = hereda(cat, o.get('titulo'))
-                e = {'titulo': o.get('titulo')}
-                if base:
-                    # NUESTRO catálogo manda en la obra; el programa solo
-                    # rellena lo que a él le falte.
-                    for c in ('title', 'director', 'country', 'year', 'synopsis',
-                              'synopsis_lang', 'synopsis_en', 'poster', 'posterSource',
-                              'lbSlug', 'duration', 'section'):
-                        if base.get(c) is not None: e[c] = base[c]
-                    e['titulo'] = base.get('title') or o.get('titulo')
-                    e['_obra_src'] = 'catálogo del onboarding del Chocó'
-                    heredadas += 1
-                else:
-                    e.update({'director': o.get('director'), 'pais': o.get('pais'),
-                              'anio': o.get('anio'), 'genero': o.get('genero')})
-                    e['titulo'] = titulo_casa(o.get('titulo'))
-                    e['_obra_src'] = 'ficha impresa en el programa de Bogotá (2 SEP)'
-                    fp = fpdf.get(n(o.get('titulo')))
-                    if fp:
-                        if fp.get('sinopsis'):
-                            e['sinopsis'] = fp['sinopsis']; e['synopsis_lang'] = 'es'
-                        if fp.get('pais'): e['pais'] = fp['pais']
-                        if fp.get('anio'): e['anio'] = fp['anio']
-                        e['_obra_src'] = 'ficha del PDF oficial del programa (capa de texto, no OCR)'
-                    sembradas += 1
-                d = dur_min(o.get('duracion'))
-                if d: e['duracion_min'] = d
-                if o.get('nota'): e['_nota'] = o['nota']
-                obras.append({k: v for k, v in e.items() if v not in (None, '', [], {})})
-            if not obras: continue
-            # El título de la función: el nombre del bloque si el festival le
-            # puso uno; si son dos obras, unidas por «+» como en el resto del
-            # repo; si es una sola, la obra.
-            nb = fu.get('bloque_titulo')
-            if nb: titulo = nb
-            elif len(obras) == 1: titulo = obras[0]['titulo']
-            else: titulo = ' + '.join(o['titulo'] for o in obras)
-            f = {'dia': fu.get('dia'), 'hora': fu.get('hora'), 'sede': sede,
-                 'titulo': titulo, 'obras': obras,
-                 # El programa NO dice cómo se entra a ninguna función de
-                 # Bogotá. No se hereda el «entrada libre» de Quibdó: eran otra
-                 # ciudad y otras sedes, y la Cinemateca suele cobrar boleta.
-                 # El contrato exige declarar la ignorancia, no callarla.
-                 'acceso': 'desconocido',
-                 '_src': 'programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes'}
-            if fu.get('sala'):
-                # La dirección que el programa mete entre paréntesis es de la
-                # SEDE, no de la sala: «Auditorio Centro Ático (Carrera 7 #
-                # 40-62)» → «Auditorio Centro Ático».
-                f['sala'] = re.sub(r'\s*\([^)]*\)\s*$', '', fu['sala']).strip()
-            if fu.get('hora_fin'): f['hora_fin'] = fu['hora_fin']
-            if len(obras) > 1: f['is_cortos'] = True
-            # La SECCIÓN es de la función, y sale de sus obras: son las del
-            # propio festival, ya guardadas en el catálogo del Chocó. Gana la
-            # más frecuente entre las obras que la declaran. Si NINGUNA la
-            # declara —las 19 sembradas no la traen— la función queda sin
-            # sección y se cuenta aparte: inventarla sería peor.
-            _inv = INVITADOS.get((sede, f['dia'], f['hora']))
-            if _inv:
-                f['has_qa'] = True
-                f['_qa_src'] = 'el programa anuncia la presencia de ' + _inv
-            secs = [o['section'] for o in obras if o.get('section')]
-            if secs:
-                # el catálogo del Chocó guarda la sección YA publicada («☕ Panorama
-                # Diaspórica»); el plan la indexa pelada y el emoji lo pone el
-                # ensamblador. Devolverla con emoji la deja huérfana del mapa.
-                f['seccion'] = re.sub(r'^\S+\s+', '', max(set(secs), key=secs.count))
-            for o in obras: o.pop('section', None)
-            dm = sum(o.get('duracion_min') or 0 for o in obras)
-            if dm: f['duracion_min'] = dm
-            programas.append(f)
-    programas.sort(key=lambda x: (x['dia'] or '', x['hora'] or '', x['sede']))
-    out = {
-        '_provenance': {
-            'capturado': '2026-09-02',
-            'parrilla': 'programa oficial en flipbook, online.fliphtml5.com/QAFF2026/Programa-QAFF2026 (2 SEP 2026)',
-            'verificacion': 'dos auditorías independientes sobre las imágenes; coincidieron en los 68 cupos sin una sola diferencia',
-            'obras': 'heredadas del catálogo del onboarding del Chocó; las que no estaban, sembradas con la ficha impresa',
-            'quibdo': 'CANCELADO por el terremoto del 10 ago — la edición es solo en Bogotá',
-            'sin_prelanzamiento': 'el prelanzamiento del 5 SEP en el Museo Nacional queda fuera por decisión de Juan',
-        },
-        '_funciones': len(programas),
-        'programas': programas,
+    fichas, cred = cargar()
+    choco = del_chocho()
+    # El Q&A no se escribe a mano: se lee del PDF. «con la presencia de la
+    # directora» va pegada a UNA obra, y el extractor exige que cada marca caiga
+    # en una sola función. Si el festival mueve una obra de franja, esto deja de
+    # resolver y avisa, en vez de arrastrar un dato viejo.
+    qa, huerfanas = presencias()
+    assert not huerfanas, f'marcas de invitado sin función única: {huerfanas}'
+    funciones = []
+    for sede, sala, dia, hora, obras, pag in pr.FUNCIONES:
+        obs = [obra(t, fichas, cred) for t in obras]
+        for o, t in zip(obs, obras):
+            h = (choco.get(n(o['titulo'])) or choco.get(n(t))
+                 or choco.get(n(o.get('titulo_original') or '')) or {})
+            if h.get('section'):
+                o['section'] = re.sub(r'^\S+\s+', '', h['section'])  # el emoji lo pone el ensamblador
+                o['_section_src'] = ('heredada de la selección oficial del Chocó ya publicada; '
+                                     'el programa de Bogotá no imprime secciones')
+            # El PÓSTER y el identificador de TMDB también son nuestros, de agosto.
+            # El PDF manda en lo que el PDF dice (sinopsis, país, año, duración);
+            # esto solo rellena lo que el papel no puede traer.
+            for k in ('poster', 'posterSource', 'lbSlug', 'tmdb_id', 'synopsis_en'):
+                if h.get(k) and not o.get(k):
+                    o[k] = h[k]
+            if h.get('poster'):
+                o['_poster_src'] = 'heredado del onboarding de QAFF Quibdó (agosto 2026)'
+        nombre, sinopsis = pr.BLOQUES.get((sede, dia, hora), (None, None))
+        # El ensamblador toma la SALA de la tabla del plan, no de `f['sala']`
+        # (ensamblar.py:123). Una sala puesta suelta en el crudo se pierde sin
+        # avisar, y la Cinemateca usa tres salas distintas. Por eso la clave de
+        # sede lleva la sala dentro y el plan la desdobla: es la tabla explícita
+        # que el contrato pide, no una heurística sobre el guion.
+        f = {'dia': f'2026-09-{int(dia):02d}', 'hora': hora,
+             'sede': f'{sede} · {sala}' if sala else sede,
+             'titulo': nombre or ' + '.join(o['titulo'] for o in obs),
+             'obras': obs,
+             # El programa no dice CÓMO se entra a ninguna sede de Bogotá, y la
+             # agenda de la Cinemateca no ha publicado el ciclo. Declararlo
+             # desconocido es el dato; suponer «entrada libre» sería inventarlo.
+             'acceso': 'desconocido',
+             '_src': f'parrilla impresa en el PDF oficial del programa, p{pag}'}
+        _s = [o['section'] for o in obs if o.get('section')]
+        if _s:
+            f['seccion'] = max(set(_s), key=_s.count)
+        if nombre:
+            f['sinopsis'] = sinopsis
+            f['synopsis_lang'] = 'es'
+        inv = qa.get((sede, sala, dia, hora))
+        if inv:
+            f['has_qa'] = True
+            quienes = ' y '.join(sorted(
+                (f'la {q} de «{titulo_obra(t, fichas)}»' if q.endswith('a')
+                 else f'el {q} de «{titulo_obra(t, fichas)}»') for q, t in inv))
+            f['_qa_src'] = ('el programa anuncia la presencia de ' + quienes
+                            ).replace('de el ', 'del ')
+        funciones.append(f)
+
+    for tipo, sede, sala, dia, ini, fin, titulo, quien, pag in pr.ACTIVIDADES:
+        a = {'dia': f'2026-09-{int(dia):02d}', 'hora': ini,
+             'sede': f'{sede} · {sala}' if sala else sede,
+             'titulo': titulo, 'obras': [],
+             'event_kind': 'dialogo' if tipo == 'dialogo' else tipo,
+             'acceso': 'gratis' if tipo == 'vernissage' else 'desconocido',
+             'sinopsis': quien, 'synopsis_lang': 'es',
+             '_src': f'PDF oficial del programa, p{pag}'}
+        if fin:
+            a['hora_fin'] = fin
+        funciones.append(a)
+
+    # Una obra con dos títulos se parte en dos obras distintas: quien la marca en
+    # una función no la reconoce en la otra. El programa lo hace tres veces, y
+    # las tres están unificadas arriba —pero si el festival añade una cuarta,
+    # esto tiene que gritar, no dejarla pasar.
+    porobra = {}
+    for f in funciones:
+        for o in f.get('obras', []):
+            if not o.get('director'):
+                continue
+            porobra.setdefault((n(o['director'])[:14], o.get('duracion_min')), set()).add(o['titulo'])
+    partidas = {k: v for k, v in porobra.items() if len(v) > 1}
+    assert not partidas, f'la misma obra con dos títulos, sin unificar: {partidas}'
+
+    funciones.sort(key=lambda f: (f['dia'], f['hora'], f['sede']))
+    crudo = {
+     '_provenance': {
+       'fuente': 'PDF oficial del programa QAFF 2026 — quibdoafricafilmfestival.com/es/program-2026',
+       'capturado': datetime.date.today().isoformat(),
+       'metodo': 'capa de texto del PDF (no OCR). Parrilla y fichas cruzadas entre sí; '
+                 'la transcripción verificada contra la página que declara; contrastada '
+                 'con dos auditorías independientes del flip book',
+       'quibdo': 'CANCELADO por el terremoto — la 8ª edición es solo en Bogotá',
+       'prelanzamiento': 'el 5 SEP en el Museo Nacional NO se incluye',
+     },
+     '_pendiente_del_festival': {
+       'fechas': 'el lomo dice «14 - 18 SEPTIEMBRE» en 10 páginas y «14 - 17» en las 2 de '
+                 'Alianza Francesa, pero hay parrillas del 19 y el 20 en Cinemateca',
+       'secciones': 'el programa de Bogotá NO imprime secciones en ninguna parte',
+       'museo_y_unal': {sede: obs for sede, obs in SIN_HORA.items()},
+       'franjas_que_no_caben': [
+         "Alianza Francesa 15 SEP 15:00: 4 obras suman 79' en una franja de 60 min",
+         "Universidad de los Andes 15 SEP 14:00: 2 obras suman 128' en una franja de 120 min"],
+       'duraciones_en_disputa': ["«Un domingo»: 12' en la ficha, 20' en la parrilla"],
+     },
+     'programas': funciones,
     }
-    json.dump(out, open(os.path.join(S, 'qaff-2026-bogota-crudo.json'), 'w', encoding='utf-8'),
-              ensure_ascii=False, indent=1)
-    print(f'{len(programas)} funciones · {heredadas} obras heredadas · {sembradas} sembradas del programa')
+    os.makedirs(os.path.dirname(SALIDA), exist_ok=True)
+    json.dump(crudo, open(SALIDA, 'w'), ensure_ascii=False, indent=1)
+    proy = [f for f in funciones if f.get('obras')]
+    print(f"{len(proy)} funciones · {sum(len(f['obras']) for f in proy)} cupos de obra · "
+          f"{len(funciones) - len(proy)} actividades")
     import collections
-    for k, v in collections.Counter(f['sede'] for f in programas).most_common():
-        print(f'   {v:3}  {k}')
+    for s, k in collections.Counter(f['sede'] for f in funciones).most_common():
+        print(f'   {k:3}  {s}')
+
 
 if __name__ == '__main__':
     main()
