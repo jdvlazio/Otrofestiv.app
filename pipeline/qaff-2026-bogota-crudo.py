@@ -64,8 +64,10 @@ PUENTE = {
 #     la parrilla, la ficha se equivocó.
 #   · «Relatos de la Guajirita» país Nigeria (ficha) vs Colombia (parrilla) → la
 #     propia sinopsis de la ficha habla de Becerril, Cesar: manda la parrilla.
-#   · «Un domingo» 12' (ficha) vs 20' (parrilla) → SIN resolver, se le pregunta
-#     al festival. Se toma la de la parrilla, que es la de la franja programada.
+#   · «Un domingo» 12' (ficha) vs 20' (parrilla) → TMDB (1742409, «Domingo»,
+#     mismo director) dice 20': manda la parrilla. Las TRES discrepancias de
+#     fondo quedaron resueltas por una tercera fuente, ninguna por criterio
+#     nuestro.
 PAIS_ES = {'brazil': 'Brasil', 'united states': 'Estados Unidos',
            'guyana frances': 'Guayana Francesa', 'colomnbia': 'Colombia',
            'egypt': 'Egipto', 'lebanon': 'Líbano', 'south africa': 'Sudáfrica',
@@ -74,7 +76,7 @@ DISCREPANCIAS = {
  'LA OBRA DE DIOS': "la ficha del programa dice 122' y la parrilla 126'; TMDB confirma 126",
  'RELATOS DE LA GUAJIRITA': 'la ficha del programa imprime «Nigeria» como país, pero su propia '
                             'sinopsis sitúa la obra en Becerril, Cesar: es Colombia',
- 'UN DOMINGO': "la ficha dice 12' y la parrilla 20'; sin resolver, pendiente del festival",
+ 'UN DOMINGO': "la ficha del programa dice 12' y la parrilla 20'; TMDB confirma 20'",
 }
 # Obras cuya FICHA está en la sección de una sede que no publicó parrilla. El
 # festival las ubicó ahí: son su programación en esa sede, sin hora impresa.
@@ -359,7 +361,9 @@ def main():
        'franjas_que_no_caben': [
          "Alianza Francesa 15 SEP 15:00: 4 obras suman 79' en una franja de 60 min",
          "Universidad de los Andes 15 SEP 14:00: 2 obras suman 128' en una franja de 120 min"],
-       'duraciones_en_disputa': ["«Un domingo»: 12' en la ficha, 20' en la parrilla"],
+       # las tres discrepancias internas del PDF quedaron resueltas por tercera
+       # fuente (TMDB, o la propia sinopsis del festival); no queda ninguna que
+       # preguntar
      },
      'programas': funciones,
     }

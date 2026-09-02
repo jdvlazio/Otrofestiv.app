@@ -25,9 +25,6 @@
   "franjas_que_no_caben": [
    "Alianza Francesa 15 SEP 15:00: 4 obras suman 79' en una franja de 60 min",
    "Universidad de los Andes 15 SEP 14:00: 2 obras suman 128' en una franja de 120 min"
-  ],
-  "duraciones_en_disputa": [
-   "«Un domingo»: 12' en la ficha, 20' en la parrilla"
   ]
  },
  "programas": [
@@ -91,7 +88,7 @@
    ],
    "acceso": "desconocido",
    "_src": "parrilla impresa en el PDF oficial del programa, p14",
-   "seccion": "Panorama Africano"
+   "seccion": "Imaginarios Afrodisruptivos"
   },
   {
    "dia": "2026-09-14",
@@ -403,7 +400,7 @@
    ],
    "acceso": "desconocido",
    "_src": "parrilla impresa en el PDF oficial del programa, p14",
-   "seccion": "Fronteras Latam"
+   "seccion": "Prisma Femenino"
   },
   {
    "dia": "2026-09-15",
@@ -784,7 +781,7 @@
    ],
    "acceso": "desconocido",
    "_src": "parrilla impresa en el PDF oficial del programa, p19",
-   "seccion": "Fronteras Latam"
+   "seccion": "Imaginarios Afrodisruptivos"
   },
   {
    "dia": "2026-09-16",
@@ -1048,7 +1045,7 @@
    ],
    "acceso": "desconocido",
    "_src": "parrilla impresa en el PDF oficial del programa, p51",
-   "seccion": "Panorama Africano"
+   "seccion": "Panorama Colombiano"
   },
   {
    "dia": "2026-09-17",
@@ -1442,7 +1439,7 @@
      "titulo_original": "One Sunday",
      "title_en": "One Sunday",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "_ojo": "la ficha dice 12' y la parrilla 20'; sin resolver, pendiente del festival"
+     "_ojo": "la ficha del programa dice 12' y la parrilla 20'; TMDB confirma 20'"
     },
     {
      "titulo": "Amelia",
