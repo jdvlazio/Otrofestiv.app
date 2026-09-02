@@ -8,7 +8,7 @@
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, makeSharedSlotSVG, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts} from '../view/helpers.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts} from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast, _toastArriba } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
@@ -988,27 +988,49 @@ export function openPlanConfirm(schedule){
     return (ai<0?999:ai)-(bi<0?999:bi)||a.time.localeCompare(b.time);
   });
   const total=sorted.length;
-  const days=[...new Set(sorted.map(s=>s.day))];
-  const dayRange=days.length===1?dayLabel(days[0]):`${dayLabel(days[0])}–${dayLabel(days[days.length-1])}`;
+  // Dueño único del rango de días de un tramo del Plan: lo piden el subtítulo
+  // (el Plan entero) y el pie (solo las que no se muestran). Eran dos fórmulas.
+  const _rango=e=>{const d=[...new Set(e.map(x=>x.day))];
+    return d.length?(d.length===1?dayLabel(d[0]):`${dayLabel(d[0])}–${dayLabel(d[d.length-1])}`):'';};
+  const dayRange=_rango(sorted);
 
   // Sub: N películas · DÍAS
   const sub=document.getElementById('plan-confirm-sub');
   if(sub) sub.innerHTML=`<span class="mr-1 count-badge cb-neutral">${total}</span> · ${dayRange}`;
 
-  // Lista — máx 3 + resumen del resto
+  // Lista — máx 3 + resumen del resto. Fila canónica (anatomía y porqué: el
+  // comentario de .plan-confirm-film en index.html). El día no es un agregado:
+  // es el renglón que la fila ya tiene para el cuándo, y sin él la hoja mostraba
+  // «19:00 · 14:30 · 14:00» (medido en Cinemancia) — el orden es por día.
+  // dayLabel COMPLETO («JUE 3»), no el «JUE» que recortan otros 4 sitios:
+  // Cinemancia dura 10 días y tiene dos jueves, dos viernes y dos sábados.
   const show=sorted.slice(0,3);
   const rest=total-show.length;
   const filmsEl=document.getElementById('plan-confirm-films');
   if(filmsEl){
     filmsEl.innerHTML=show.map(s=>{
       const{displayTitle:dt}=parseProgramTitle(s._title||'');
-      const short=dt.length>28?dt.slice(0,26)+'…':dt;
+      // La función exacta; el fallback por título deja viva la fila si el
+      // catálogo cambió bajo un plan ya guardado.
+      const f=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time)
+             ||FILMS.find(fi=>fi.title===s._title);
       return`<div class="plan-confirm-film">
-        <div class="plan-confirm-dot"></div>
-        <div class="plan-confirm-time">${s.time}</div>
-        <div class="plan-confirm-name">${short}</div>
+        ${_posterThumb(f,'lb-poster')}
+        <div class="plan-confirm-info">
+          <div class="plan-confirm-name">${dt}</div>
+          <div class="plan-confirm-when">${dayLabel(s.day)||s.day} · ${s.time}</div>
+        </div>
       </div>`;
-    }).join('')+(rest>0?`<div class="plan-confirm-film" style="color:var(--gray)"><div class="bg-gray plan-confirm-dot"></div><div class="plan-confirm-name">+ ${rest} ${t('misc_mas')} ${dayRange}</div></div>`:'');
+    }).join('');
+  }
+  // El pie cuenta el rango de LAS QUE FALTAN, no el del Plan entero: decía
+  // «+ 5 más · JUE 3–VIE 11» y JUE 3 es la primera fila, ya está arriba.
+  const masEl=document.getElementById('plan-confirm-mas');
+  if(masEl){
+    // Sin «·» propio: misc_mas ya lo trae dentro («más ·»). Lo cazó la auditoría
+    // de lo pintado — la plantilla se leía bien y la pantalla decía «más · ·».
+    masEl.textContent=rest>0?`+ ${rest} ${t('misc_mas')} ${_rango(sorted.slice(3))}`:'';
+    masEl.style.display=rest>0?'':'none';
   }
 
   const _pcSheet=document.getElementById('plan-confirm-sheet');
