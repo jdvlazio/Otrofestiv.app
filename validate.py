@@ -3031,6 +3031,34 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar dato-linea: {_e}')
 
+# ── [modal-orden] el botón de escape va SIEMPRE último ───────────────────────
+# Hallazgo de Juan (2 sep 2026), medido con rects a 390x844: «SACAR DE MI PLAN»
+# ponía Sacar arriba (y=423) y Cancelar abajo (y=471); «¿REEMPLAZAR FUNCIÓN?»
+# los ponía al revés (Cancelar y=460, «Sí, reemplazar» y=497). En móvil el
+# pulgar aprende una posición, y acá cambiaba según el modal.
+# `.conflict-modal-btns` es `flex-direction:column`, así que el orden del DOM ES
+# el orden vertical: basta leerlo. Y con Cancelar último, el toque accidental
+# más probable —el de abajo, donde descansa el pulgar— es el inofensivo.
+check = 'modal-orden'
+try:
+    import re as _re, glob as _glob
+    _mal = []
+    for _f in _glob.glob('src/**/*.js', recursive=True):
+        _src = open(_f, encoding='utf-8').read()
+        for _m in _re.finditer(r'conflict-modal-btns"?>(.*?)</div>', _src, _re.S):
+            _btns = _re.findall(r'conflict-modal-btn ([a-z$\{\}]+)"', _m.group(1))
+            if not _btns:
+                continue
+            if 'cancel' in _btns and _btns[-1] != 'cancel':
+                _mal.append(f'{_f}: {" → ".join(_btns)}')
+    if _mal:
+        fail(check, 'el botón de escape no va último — el pulgar aprende una '
+                    'posición y esta cambia según el modal: ' + '; '.join(_mal))
+    else:
+        ok(check, 'en todos los modales el escape va último')
+except Exception as _e:
+    warn(check, f'no se pudo verificar modal-orden: {_e}')
+
 # ── [star-semantics] la estrella es CALIFICACIÓN; prioridad = bookmark ─────────
 # Decisión Juan 18 jul 2026: ★/ICONS.star SOLO para rating (convención cine);
 # prioridad usa ICONS.bookmark. Una línea de PRIORIDAD (togglePriority/

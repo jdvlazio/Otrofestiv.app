@@ -1461,3 +1461,82 @@ test('T150 — con la app en cero, el vacío lleva al Programa de un toque', asy
   expect(enPlanear.tab, 'y lleva a Planear').toMatch(/PLANEAR/i);
   expect(enPlanear.vacio, 'que con intereses NO está vacío — por eso el salto vale').toBe(false);
 });
+
+// ── T151 — el botón de escape está en el mismo lugar en los dos modales ─────
+// Medido con rects a 390x844: «SACAR DE MI PLAN» ponía Sacar en y=423 y
+// Cancelar en y=471; «¿REEMPLAZAR FUNCIÓN?» los ponía al revés —Cancelar en
+// y=460 y «Sí, reemplazar» en y=497—. En móvil el pulgar aprende una posición,
+// y esta cambiaba según el modal.
+//
+// Se miden los rects y no el orden del DOM a propósito: el guardián estático
+// [modal-orden] ya lee el DOM, y con `flex-direction:column` un `order:` o un
+// `column-reverse` lo dejarían pasar mientras la pantalla dice otra cosa. Acá
+// se afirma sobre lo que el pulgar encuentra.
+test('T151 — en los dos modales el escape es el botón de abajo', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    const porDia = {};
+    FILMS.forEach(f => { (porDia[f.day] = porDia[f.day] || []).push(f.title); });
+    watchlist.clear();
+    Object.keys(porDia).sort().slice(0, 4).forEach(d => watchlist.add(porDia[d][0]));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(900);
+  const leer = () => page.evaluate(() => {
+    const m = document.getElementById('conflict-modal');
+    if (!m) return null;
+    const btns = [...m.querySelectorAll('.conflict-modal-btn')].map(b => ({
+      rol: [...b.classList].find(c => c !== 'conflict-modal-btn') || '?',
+      top: Math.round(b.getBoundingClientRect().top)
+    })).sort((a, b) => a.top - b.top);
+    return { titulo: (m.querySelector('.conflict-modal-hdr') || {}).innerText, btns };
+  });
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const disparar = (attrs) => {
+      const b = document.createElement('button');
+      Object.entries(attrs).forEach(([k, v]) => b.setAttribute(k, v));
+      document.body.appendChild(b); b.click(); b.remove();
+    };
+    document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]').click();
+    await w(1400);
+    disparar({ 'data-action': 'closePlanConfirm' }); await w(800);
+    switchMainNav('mnav-miplan'); showAgView(); await w(1500);
+    const t0 = (savedAgenda && savedAgenda.schedule[0] || {})._title;
+    disparar({ 'data-action': 'removeFromAgenda', 'data-title': t0 || '' });
+    await w(900);
+    return { ok: !!document.getElementById('conflict-modal') };
+  });
+  if (!r.ok) return;
+  const quitar = await leer();
+  expect(quitar, 'el modal de sacar del Plan abre').not.toBeNull();
+
+  await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const m = document.getElementById('conflict-modal'); if (m) m.remove();
+    switchMainNav('mnav-planner'); showAgView(); await w(1600);
+    const sc = cachedResult && cachedResult.scenarios && cachedResult.scenarios[0];
+    const e0 = sc && sc.schedule[0];
+    const cand = FILMS.find(f => f.title !== e0._title && f.day && f.time);
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'confirmReplace');
+    b.setAttribute('data-rmtitle', e0._title); b.setAttribute('data-newtitle', cand.title);
+    b.setAttribute('data-day', cand.day); b.setAttribute('data-time', cand.time);
+    document.body.appendChild(b); b.click(); b.remove(); await w(1000);
+  });
+  const reemplazar = await leer();
+  expect(reemplazar, 'el modal de reemplazar abre').not.toBeNull();
+
+  for (const [nombre, m] of [['sacar del Plan', quitar], ['reemplazar función', reemplazar]]) {
+    expect(m.btns.length, `${nombre}: hay al menos dos botones que comparar`).toBeGreaterThan(1);
+    expect(m.btns[m.btns.length - 1].rol,
+      `${nombre}: el botón de MÁS ABAJO —donde cae el pulgar— tiene que ser el escape`)
+      .toBe('cancel');
+    expect(m.btns[0].rol, `${nombre}: y el de arriba, el que confirma`).toBe('confirm');
+  }
+});
