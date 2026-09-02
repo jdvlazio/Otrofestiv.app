@@ -352,6 +352,23 @@ de-énfasis extremo. Por eso el canónico de venue/meta es `gray`.
 
 Rediseño aprobado por el PO, en producción, cada pieza con su guardián ejecutable.
 
+### 8.0 · Orden de los botones de un modal (`[modal-orden]`)
+`.conflict-modal-btns` es `flex-direction:column`, así que **el orden del DOM es
+el orden vertical**. La regla: el **botón de escape va siempre último**, debajo
+del que confirma.
+
+Dos razones, las dos medidas. Una, la consistencia: había tres emisores
+(`feedback.js::showConflictModal`, `feedback.js::_showModal` —el genérico, con
+seis llamadas— y `handlers.js::confirmReplace`) y el tercero los ponía al revés.
+Medido con rects a 390×844: «SACAR DE MI PLAN» daba Sacar en y=423 y Cancelar en
+y=471; «¿REEMPLAZAR FUNCIÓN?» daba Cancelar en y=460 y «Sí, reemplazar» en
+y=497. En móvil el pulgar aprende una posición, y esta cambiaba según el modal.
+
+Dos, la seguridad: con el escape abajo, el toque accidental más probable —el de
+la zona donde descansa el pulgar— es el inofensivo. Es además el idiom de la
+action sheet de iOS, que es la forma que este modal ya tiene (`.cancel` es texto
+gris sin fondo, subordinado).
+
 ### 8.1 · Chrome de vidrio (`[chrome-glass]`)
 El chrome (topbar + nav inferior) es **una lámina de vidrio translúcido**, no un
 muro. `.topbar::before` y `.main-nav` (fixed) llevan `background:rgba(14,13,12,.5/.55)`
