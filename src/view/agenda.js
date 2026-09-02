@@ -157,11 +157,16 @@ export function renderAgenda(){
       // A.3 — primer uso de verdad: nunca hubo intereses. El titular NO puede ser
       // «Tu Plan aparece aquí»: acá el Plan se ARMA, aparece en Mi Plan — y esa
       // pantalla usaba la misma frase con el mismo icono, así que dos de los tres
-      // pasos que promete el stepper se presentaban como el mismo lugar. El icono
-      // es el del paso al que manda el CTA (Intereses), no el del calendario.
+      // pasos que promete el stepper se presentaban como el mismo lugar.
+      // El CTA manda al PROGRAMA y no a Intereses (2 sep 2026): en esta rama
+      // watchlist está vacía por construcción —A.2 se llevó el caso contrario—,
+      // así que Intereses es otra pantalla vacía. Medido: Mi Plan → Planear →
+      // Intereses → Programa, tres vacíos y tres toques antes de poder agregar
+      // nada. Queda igual que el vacío de Intereses, que ya es corazón + «Ir al
+      // Programa»: el icono nombra lo que vas a hacer allá, no el tab destino.
       view.innerHTML=`${_progressHtml}
         <div class="ag-section">
-          ${emptyStateHero(ICONS.heart,t('plan_falta_intereses'),t('empty_intereses_3'),t('cta_ir_intereses'),'mnav-seleccion')}
+          ${emptyStateHero(ICONS.heart,t('plan_falta_intereses'),t('empty_intereses_3'),t('plan_ir_programa'),'mnav-cartelera')}
         </div>`;
       return;
     }
@@ -1234,7 +1239,7 @@ export function renderSavedAgendaHTML(state, consensus){
 }
 
 export function _renderSavedAgendaHTML(state, consensus){
-  const {savedAgenda, FILMS, watched, _activeFestId, FESTIVAL_DATES} = state.snapshot();
+  const {savedAgenda, FILMS, watched, watchlist, _activeFestId, FESTIVAL_DATES} = state.snapshot();
   if(festivalEnded()){
     // ── Modo Recuerdo (RFC docs/RFC-modo-recuerdo.md) ──
     // El plan vivido NO desaparece: recap (si hay vistas) + calendario read-only
@@ -1260,7 +1265,15 @@ export function _renderSavedAgendaHTML(state, consensus){
     const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
     return emptyStateHero(ICONS.sparkles,`${_festNameMp} ${t('plan_fest_terminado')}`,t('empty_vistas'),t('plan_ir_programa'),'mnav-cartelera');
   }
-  if(!savedAgenda||!savedAgenda.schedule.length) return emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('cta_ir_planear'),'mnav-planner');
+  // El vacío manda al primer lugar donde SE PUEDE hacer algo, no al siguiente
+  // nodo del grafo (2 sep 2026). Sin intereses, Planear también está vacío y su
+  // vacío mandaba a Intereses, que también lo está: medido, eran TRES pantallas
+  // vacías y tres toques antes de poder tocar una obra. Con intereses, en cambio,
+  // Planear sí tiene qué calcular y el salto vale. Es el mismo criterio que ya
+  // usa A.2 más arriba («mandarte a una lista agotada»), aplicado al eslabón.
+  if(!savedAgenda||!savedAgenda.schedule.length) return watchlist.size
+    ? emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('cta_ir_planear'),'mnav-planner')
+    : emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('plan_ir_programa'),'mnav-cartelera');
   const all=savedAgenda.schedule;
   const planTitles=new Set(all.map(s=>s._title));
   // Películas marcadas vistas FUERA del plan — en watched pero no en savedAgenda
