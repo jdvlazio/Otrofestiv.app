@@ -8,6 +8,17 @@ ante cualquier conflicto sobre datos de terceros, PIPELINE prevalece.
 Reescrito el 9 ago 2026 tras montar FICDEH (443 funciones, 11 ciudades) y
 FICMA (90 funciones desde un PDF de imágenes). Todo lo que dice aquí se pagó.
 
+> **Si vas a hacer a mano algo que tiene comando, para.** Cinco de los siete
+> pasos tienen herramienta genérica —`enriquecer.py`, `geocodificar.py`,
+> `ensamblar.py` + `publicar.py`, `correr.py`, `tools/audit.html`— y una
+> plantilla del plan con cada clave explicada (`festival.plan.example.json`).
+> Montando QAFF Bogotá (2 sep 2026) se hicieron a mano cuatro pasos que tenían
+> comando, y cada uno produjo exactamente el defecto que el comando evita: un
+> enriquecido con la forma equivocada que se leía sin error y no enriquecía
+> nada, un plan sin cabecera ni `pasos`, un `config.js` con comillas que ningún
+> guardián lee. Doce vueltas para encontrarlos uno a uno. El camino corto es
+> `python3 pipeline/correr.py <id>`; todo lo demás es el camino largo.
+
 ---
 
 ## 1 · Qué pedir para empezar
