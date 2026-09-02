@@ -1,0 +1,37 @@
+{
+ "_provenance": {
+  "fuente": "Cinemateca: coordenadas ya nuestras (ficdeh-2026). Alianza Francesa, Uniandes y Javeriana: Nominatim/OSM",
+  "capturado": "2026-09-02"
+ },
+ "_src": "Cinemateca: coordenadas YA nuestras (ficdeh-2026), con la dirección coincidiendo con la del programa de Bogotá. Las otras tres: Nominatim/OSM, verificadas contra el mapa de orientación de la p2 del programa —las cuatro sedes caen en el eje Centro/Las Aguas, como allí se dibuja.",
+ "venues": {
+  "Cinemateca de Bogotá - Bogotá": {
+   "lat": 4.6031614,
+   "lng": -74.0676717,
+   "address": "Cra. 3 # 19-10",
+   "city": "Bogotá",
+   "short": "Cinemateca de Bogotá"
+  },
+  "Alianza Francesa - Bogotá": {
+   "lat": 4.6026918,
+   "lng": -74.068628,
+   "address": "Cra. 3 # 18-45",
+   "city": "Bogotá",
+   "short": "Alianza Francesa"
+  },
+  "Universidad de los Andes - Bogotá": {
+   "lat": 4.6014026,
+   "lng": -74.064905,
+   "address": "Cra. 1 # 18A-12",
+   "city": "Bogotá",
+   "short": "Universidad de los Andes"
+  },
+  "Pontificia Universidad Javeriana - Bogotá": {
+   "lat": 4.6287061,
+   "lng": -74.0636499,
+   "address": "Cra. 7 # 40-62",
+   "city": "Bogotá",
+   "short": "Pontificia Universidad Javeriana"
+  }
+ }
+}

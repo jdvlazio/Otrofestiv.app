@@ -66,7 +66,7 @@
    "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
    "hora_fin": "17:00",
    "is_cortos": true,
-   "seccion": "☕ Panorama Diaspórica",
+   "seccion": "Panorama Diaspórica",
    "duracion_min": 42
   },
   {
@@ -157,7 +157,10 @@
      "titulo": "Tia Ciata",
      "director": "Mariana Campos y Raquel Beatriz",
      "pais": "Brasil",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "anio": 2017,
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "El documental aborda el protagonismo femenino negro desde la óptica de la personaje popular Tia Ciata, una mujer de suma importancia para la historia y la cultura brasileña, referencia en la construcción de la identidad nacional.",
+     "synopsis_lang": "es",
      "duracion_min": 26,
      "_nota": "con la presencia de la directora"
     }
@@ -167,7 +170,9 @@
    "sala": "Auditorio Centro Ático",
    "hora_fin": "13:00",
    "is_cortos": true,
-   "seccion": "🛶 Panorama Colombiano",
+   "has_qa": true,
+   "_qa_src": "el programa anuncia la presencia de directoras de Caída Libre y Tía Ciata",
+   "seccion": "Panorama Colombiano",
    "duracion_min": 90
   },
   {
@@ -180,9 +185,11 @@
      "titulo": "Los Chicos del Banjo",
      "director": "Johan R. Nayar",
      "pais": "Malawi",
-     "anio": "2025",
+     "anio": 2025,
      "genero": "Documental",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "The Banjo Boys sigue el electrizante ascenso de Madalitso Band, un dúo malauí—Yobu Maligwa y Yosefe Kalekeni—que construyeron sus propios instrumentos en un banjo, un babatone (bajo) de una cuerda y un bombo de pie, creando un sonido que realmente hace mover a la gente. Una vez despedidos como locos por sus incansables actuaciones callejeras en Lilongwe, llaman la atención de Neil Nayar, un músico británico cautivado por la vibrante alma de Malaui. Lo que comienza como un encuentro casual enciende un trío inesperado, catapultándolos desde las calles locales hasta los escenarios más grandes del mundo",
+     "synopsis_lang": "es",
      "duracion_min": 76
     }
    ],
@@ -201,17 +208,22 @@
      "titulo": "Fitofascias",
      "director": "Petra Ventana, Lucía Benamo",
      "pais": "Argentina-Colombia",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "anio": 2025,
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "Un grupo de bailarinas indaga en la relación entre cuerpo y territorio utilizando la danza Butoh como medio de reflexión y creación. Fitofascias articula una serie de intervenciones en espacios públicos de Buenos Aires y el caribe colombiano donde los feminicidios han dejado huellas en la memoria colectiva.",
+     "synopsis_lang": "es",
      "duracion_min": 8,
      "_nota": "con la presencia de la directora"
     },
     {
      "titulo": "Aisha No Puede Volar Lejos",
      "director": "Morad Mostafa",
-     "pais": "Egypt",
-     "anio": "2025",
+     "pais": "Egipto",
+     "anio": 2026,
      "genero": "Ficción",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "Aisha es una cuidadora sudanesa de 26 años que vive en un barrio en el corazón de El Cairo, donde es testigo de la tensión entre sus compañeros migrantes africanos y las pandillas locales. Atrapada entre una relación indefinida con un joven cocinero egipcio, un pandillero que la chantajea para que acepte un trato poco ético a cambio de seguridad, y una nueva casa donde ha sido asignada a trabajar, Aisha lucha por sobrellevar sus miedos y batallas perdidas, haciendo que sus sueños se crucen con la realidad y llevándola a un callejón sin salida.",
+     "synopsis_lang": "es",
      "duracion_min": 120
     }
    ],
@@ -219,6 +231,8 @@
    "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
    "hora_fin": "16:00",
    "is_cortos": true,
+   "has_qa": true,
+   "_qa_src": "el programa anuncia la presencia de directora de Fitofascias",
    "duracion_min": 128
   },
   {
@@ -291,7 +305,7 @@
    "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
    "hora_fin": "16:00",
    "is_cortos": true,
-   "seccion": "☕ Panorama Diaspórica",
+   "seccion": "Panorama Diaspórica",
    "duracion_min": 78
   },
   {
@@ -303,10 +317,12 @@
     {
      "titulo": "Hyphen",
      "director": "Reine Razzouk",
-     "pais": "Lebanon",
-     "anio": "2023",
+     "pais": "Líbano",
+     "anio": 2023,
      "genero": "Documental",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "Cuando Nicole le revela a su amiga de la infancia y prima, Reine, que ha sido adicta a la heroína desde los 13 años, deciden documentar el proceso de rehabilitación de Nicole. Hyphen sigue su lucha por salir al mundo como adulta y mujer hecha y derecha, a pesar de la falta de oportunidades económicas y una educación cultural tóxica que enseña a las jóvenes a suprimir sus ideas y su sexualidad, y a seguir un conjunto de reglas religiosas y culturales.",
+     "synopsis_lang": "es",
      "duracion_min": 98
     }
    ],
@@ -325,9 +341,11 @@
      "titulo": "El Anclaje del Tiempo",
      "director": "Sol de Carvalho",
      "pais": "Mozambique",
-     "anio": "2024",
+     "anio": 2024,
      "genero": "Ficción",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "IZIDINE, un detective de policía recientemente ascendido, es llamado a un hogar de ancianos ubicado en una antigua fortaleza colonial para investigar un crimen: el director del hogar ha sido asesinado.",
+     "synopsis_lang": "es",
      "duracion_min": 105
     }
    ],
@@ -407,7 +425,7 @@
    "sala": "Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes",
    "hora_fin": "13:00",
    "is_cortos": true,
-   "seccion": "☕ Panorama Diaspórica",
+   "seccion": "Panorama Diaspórica",
    "duracion_min": 78
   },
   {
@@ -496,8 +514,11 @@
     {
      "titulo": "Tia Ciata",
      "director": "MARIANA CAMPOS Y RAQUEL BEATRIZ",
-     "pais": "BRASIL",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "pais": "Brasil",
+     "anio": 2017,
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "El documental aborda el protagonismo femenino negro desde la óptica de la personaje popular Tia Ciata, una mujer de suma importancia para la historia y la cultura brasileña, referencia en la construcción de la identidad nacional.",
+     "synopsis_lang": "es",
      "duracion_min": 26,
      "_nota": "CON LA PRESENCIA DE LA DIRECTORA"
     }
@@ -506,7 +527,9 @@
    "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
    "hora_fin": "15:00",
    "is_cortos": true,
-   "seccion": "🛶 Panorama Colombiano",
+   "has_qa": true,
+   "_qa_src": "el programa anuncia la presencia de directoras de Caída Libre y Tía Ciata",
+   "seccion": "Panorama Colombiano",
    "duracion_min": 83
   },
   {
@@ -518,10 +541,12 @@
     {
      "titulo": "Sobreviviendo a Biafra",
      "director": "Meji Alabi, Leke Alabi-Isama",
-     "pais": "Nigeria",
-     "anio": "2026",
+     "pais": "Nigeria / Reino Unido",
+     "anio": 2026,
      "genero": "Documental",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "Surviving Biafra es un largometraje documental dirigido por Meji Alabi y Leke Alabi-Isama que explora la guerra civil nigeriana a través de los testimonios de quienes la sobrevivieron. Como nieto e hijo de Godwin Alabi-Isama, los cineastas combinan archivos poco comunes, fotografías del frente nunca antes vistas y testimonios profundamente personales para desenterrar una historia largamente enterrada y raramente enseñada a las generaciones más jóvenes.",
+     "synopsis_lang": "es",
      "duracion_min": 75
     }
    ],
@@ -597,7 +622,7 @@
    "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
    "hora_fin": "17:00",
    "is_cortos": true,
-   "seccion": "🪞 Prisma Femenino",
+   "seccion": "Fronteras Latam",
    "duracion_min": 89
   },
   {
@@ -610,9 +635,11 @@
      "titulo": "Tres Hombres Negros",
      "director": "Sienna McLean-LoGreco",
      "pais": "Estados Unidos",
-     "anio": "2026",
+     "anio": 2026,
      "genero": "Documental",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "¿Puede la negritud escapar de la violencia de sus orígenes? Tres hombres negros emprenden un viaje transformador a lo largo de la ruta de la esclavitud transatlántica en sentido inverso, explorando la resistencia, la liberación y una nueva comprensión de la negritud. Su épica travesía los lleva desde Los Ángeles hasta Salvador de Bahía en Brasil, y finalmente a Acra en Ghana. Su misión es redefinir la negritud, sanar el trauma histórico y vislumbrar nuevos caminos hacia la liberación más allá de las ataduras de la supremacía blanca.",
+     "synopsis_lang": "es",
      "duracion_min": 99
     }
    ],
@@ -647,7 +674,7 @@
    "acceso": "desconocido",
    "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
    "sala": "Sala 3",
-   "seccion": "🌊 Fronteras Latam",
+   "seccion": "Fronteras Latam",
    "duracion_min": 90
   },
   {
@@ -722,7 +749,9 @@
    "sala": "Sala 901 - Edificio Jorge Hoyos Vásquez, S.J. – Facultad de Ciencias Económicas y Administrativas",
    "hora_fin": "13:00",
    "is_cortos": true,
-   "seccion": "🛶 Panorama Colombiano",
+   "has_qa": true,
+   "_qa_src": "el programa anuncia la presencia de guionista de Soñé su nombre",
+   "seccion": "Panorama Colombiano",
    "duracion_min": 136
   },
   {
@@ -734,10 +763,12 @@
     {
      "titulo": "De Barro y Sangre",
      "director": "Jean-Gabriel Leynaud",
-     "pais": "RD Congo",
-     "anio": "2025",
+     "pais": "República Democrática del Congo",
+     "anio": 2025,
      "genero": "Documental",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "En Numbi, una aldea aislada en las montañas del Congo, la vida gira en torno a la fiebre del coltán, una \"tierra rara\" indispensable para la electrónica. La fatalidad que afecta a los habitantes encarna los mecanismos tortuosos del capitalismo en la década de 2020.",
+     "synopsis_lang": "es",
      "duracion_min": 94
     }
    ],
@@ -817,7 +848,7 @@
    "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
    "hora_fin": "16:00",
    "is_cortos": true,
-   "seccion": "🌊 Fronteras Latam",
+   "seccion": "Panorama Diaspórica",
    "duracion_min": 79
   },
   {
@@ -830,7 +861,10 @@
      "titulo": "Ni Chaînes ni Maîtres",
      "director": "Simon Moutaïrou",
      "pais": "Francia",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "anio": 2024,
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "1759. Isla de Francia (actual Isla Mauricio). Massamba y Mati, esclavos en la plantación de Eugène Larcenet, viven en el miedo y el trabajo forzado. Él sueña con que su hija sea liberada; ella, con escapar del infierno verde de la caña de azúcar. Una noche, ella huye. Madame La Victoire, una famosa cazadora de esclavos, es contratada para rastrearla. Massamba no tiene otra opción que huir a su vez. Con ese acto, se convierte en un \"marron\", un fugitivo que rompe para siempre con el orden colonial.",
+     "synopsis_lang": "es",
      "duracion_min": 98
     }
    ],
@@ -863,7 +897,7 @@
    "acceso": "desconocido",
    "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
    "sala": "Sala 2",
-   "seccion": "🛶 Panorama Colombiano",
+   "seccion": "Panorama Colombiano",
    "duracion_min": 80
   },
   {
@@ -875,10 +909,12 @@
     {
      "titulo": "La Obra de Dios",
      "director": "Michael James",
-     "pais": "South Africa",
-     "anio": "2025",
+     "pais": "Sudáfrica",
+     "anio": 2025,
      "genero": "Ficción",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "En un edificio abandonado a las afueras de Durban, un grupo de hombres sin hogar construye una existencia frágil en medio de la violencia, la adicción y la constante amenaza de ser borrados. Sus vidas transcurren en ritmos de supervivencia, hermandad y memoria, hasta que la llegada de un equipo de cine promete visibilidad, pero empieza a desdibujar los límites entre la realidad y la representación.",
+     "synopsis_lang": "es",
      "duracion_min": 126
     }
    ],
@@ -957,7 +993,9 @@
    "sala": "Sala 903 - Edificio Jorge Hoyos Vásquez, S.J. – Facultad de Ciencias Económicas y Administrativas",
    "hora_fin": "13:00",
    "is_cortos": true,
-   "seccion": "🛶 Panorama Colombiano",
+   "has_qa": true,
+   "_qa_src": "el programa anuncia la presencia de protagonista de Amazonas: Cocinas Indígenas de Selva y Río",
+   "seccion": "Panorama Colombiano",
    "duracion_min": 111
   },
   {
@@ -970,7 +1008,10 @@
      "titulo": "Orango",
      "director": "Samuel Kay Forrest",
      "pais": "Guinea-Bissau",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "anio": 2024,
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "Eny, un pintor en Berlín, y su hermana Titina emprenden un viaje a través de África Occidental después de 17 años de exilio de Guinea-Bissau tras el fallecimiento de su madre, explorando su tierra ancestral.",
+     "synopsis_lang": "es",
      "duracion_min": 94
     }
    ],
@@ -988,10 +1029,12 @@
     {
      "titulo": "Los Viajeros",
      "director": "David Bingong",
-     "pais": "Cameroon",
-     "anio": "2025",
+     "pais": "Camerún",
+     "anio": 2025,
      "genero": "Documental",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "En la frontera entre Marruecos y España, esperamos impacientemente la \"boza\" para cruzar a Europa. Tras un intento fallido tras otro, sobrevivimos, y yo, el \"Artista\", debo mantener viva la llama de la esperanza para todo el grupo.",
+     "synopsis_lang": "es",
      "duracion_min": 60
     }
    ],
@@ -1025,7 +1068,9 @@
    "acceso": "desconocido",
    "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
    "sala": "Sala 3",
-   "seccion": "🛶 Panorama Colombiano",
+   "has_qa": true,
+   "_qa_src": "el programa anuncia la presencia de director de Iniciación en la Octava Dimensión",
+   "seccion": "Panorama Colombiano",
    "duracion_min": 90
   },
   {
@@ -1038,9 +1083,11 @@
      "titulo": "Generación Equivocada",
      "director": "Shili Munyama",
      "pais": "Namibia",
-     "anio": "2026",
+     "anio": 2026,
      "genero": "Ficción",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "Tras una serie de brutales asesinatos, el último de los cuales acaba con la vida de su compañero de la infancia, un grupo de mejores amigos distanciados se reconecta para organizar la protesta más grande en la Namibia posterior al apartheid.",
+     "synopsis_lang": "es",
      "duracion_min": 64
     }
    ],
@@ -1141,7 +1188,9 @@
    "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
    "sala": "Sala 3",
    "is_cortos": true,
-   "seccion": "🛶 Panorama Colombiano",
+   "has_qa": true,
+   "_qa_src": "el programa anuncia la presencia de director de Caída Libre",
+   "seccion": "Panorama Colombiano",
    "duracion_min": 103
   },
   {
@@ -1154,9 +1203,11 @@
      "titulo": "Día del Padre",
      "director": "Ayana O'Shun",
      "pais": "Canadá",
-     "anio": "2025",
+     "anio": 2025,
      "genero": "Documental",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "Father's Day es un documental íntimo y poderoso que explora el legado de los padres ausentes en las comunidades negras de América del Norte y el Caribe. Impulsada por el viaje personal de la directora, la película entrelaza las historias de mujeres de Canadá y Guadalupe que crecieron navegando el silencio, las heridas y la resiliencia moldeadas por la ausencia paterna.",
+     "synopsis_lang": "es",
      "duracion_min": 74
     }
    ],
@@ -1203,18 +1254,22 @@
      "titulo": "Un Rey Desplazado",
      "director": "Olayinka Eno Babalola",
      "pais": "Nigeria",
-     "anio": "2026",
+     "anio": 2026,
      "genero": "Documental",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "Daniel Hungbeji navega su vida diaria tanto como pescador como gobernante tradicional dentro del asentamiento acuático de Makoko, Lagos, Nigeria. Cada año, el Gobierno del Estado de Lagos invade gradualmente este asentamiento de dos siglos de antigüedad, desplazando a miles de personas de su comunidad. Seguimos a Daniel en su día a día, esforzándose por preservar su comunidad incluso cuando fuerzas fuera de su control amenazan con borrar su forma de vida tradicional y su legado.",
+     "synopsis_lang": "es",
      "duracion_min": 19
     },
     {
      "titulo": "Hermanas en el Destino - Angela & Gerty Archimède",
      "director": "Pascal Frederic Archimede, Dimitry Zandronis",
      "pais": "Guadeloupe",
-     "anio": "2025",
+     "anio": 2025,
      "genero": "Documental",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "Dos mujeres. Dos continentes. Una misma lucha. Desde Guadalupe hasta Estados Unidos, Sisters in Destiny explora los caminos entrelazados de Gerty Archimède, pionera del feminismo y la lucha anticolonial, y Angela Davis, símbolo global de los derechos civiles y la resistencia. A través de sus activismos, sus voces y su encuentro histórico, la película descubre una poderosa historia de hermandad negra, resiliencia y legado — un capítulo olvidado que aún resuena hoy.",
+     "synopsis_lang": "es",
      "duracion_min": 52
     }
    ],
@@ -1222,7 +1277,7 @@
    "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
    "sala": "Sala 3",
    "is_cortos": true,
-   "seccion": "🌊 Fronteras Latam",
+   "seccion": "Fronteras Latam",
    "duracion_min": 102
   },
   {
@@ -1234,10 +1289,12 @@
     {
      "titulo": "El Coach de los Locos",
      "director": "Carlo Liberatore",
-     "pais": "Senegal",
-     "anio": "2025",
+     "pais": "Italia / Senegal",
+     "anio": 2025,
      "genero": "Documental",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "En Dakar, Malick Biteye forma un equipo de fútbol compuesto por jugadores con trastornos mentales. En un contexto de pobreza absoluta, las historias y los deseos de estos hombres, que luchan contra el estigma, se entrelazan. Su viaje culmina en Italia, donde cumplen su sueño de jugar en un partido de fútbol internacional.",
+     "synopsis_lang": "es",
      "duracion_min": 60
     }
    ],
@@ -1255,10 +1312,12 @@
     {
      "titulo": "Aisha No Puede Volar Lejos",
      "director": "Morad Mostafa",
-     "pais": "Egypt",
-     "anio": "2025",
+     "pais": "Egipto",
+     "anio": 2026,
      "genero": "Ficción",
-     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "_obra_src": "ficha del PDF oficial del programa (capa de texto, no OCR)",
+     "sinopsis": "Aisha es una cuidadora sudanesa de 26 años que vive en un barrio en el corazón de El Cairo, donde es testigo de la tensión entre sus compañeros migrantes africanos y las pandillas locales. Atrapada entre una relación indefinida con un joven cocinero egipcio, un pandillero que la chantajea para que acepte un trato poco ético a cambio de seguridad, y una nueva casa donde ha sido asignada a trabajar, Aisha lucha por sobrellevar sus miedos y batallas perdidas, haciendo que sus sueños se crucen con la realidad y llevándola a un callejón sin salida.",
+     "synopsis_lang": "es",
      "duracion_min": 120
     }
    ],

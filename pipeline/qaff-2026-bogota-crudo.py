@@ -71,6 +71,18 @@ def dur_min(d):
     m = re.match(r"(\d+)", str(d))
     return int(m.group(1)) if m else None
 
+def fichas_pdf():
+    """Las fichas que el festival publica en el PDF de su programa
+    (quibdoafricafilmfestival.com/es/program-2026). El PDF tiene CAPA DE TEXTO:
+    no es OCR, no puede tener errores de lectura. De ahí salen país, año y la
+    SINOPSIS EN ESPAÑOL de las obras que el catálogo del Chocó no traía —el
+    hueco que dos cosechas por OCR no lograron llenar sin corromper datos."""
+    p = os.path.join(BASE, 'festivals', 'staging', 'qaff-2026-bogota-fichas-pdf.json')
+    if not os.path.exists(p): return {}
+    d = json.load(open(p, encoding='utf-8'))
+    return {n(k): v for k, v in d.items()}
+
+
 def catalogo():
     """Todo lo que ya sabemos de las obras, de las dos fuentes nuestras."""
     dic = {}
@@ -82,6 +94,22 @@ def catalogo():
                 if o.get(k): dic.setdefault(n(o[k]), o)
     return dic
 
+# El programa marca, junto a una obra suelta, «con la presencia de la
+# directora / del director / de la guionista / del protagonista». Es un
+# invitado en sala: para la app eso es Q&A. Se declara por FUNCIÓN (sede,
+# día, hora) porque el flag vive en la función, no en la obra, y cada una
+# de estas nueve marcas resolvió a una sola función del crudo con la obra
+# nombrada dentro — sexta verificación cruzada del programa de Bogotá.
+INVITADOS = {
+    ('Pontificia Universidad Javeriana', '2026-09-15', '10:00'): 'directoras de Caída Libre y Tía Ciata',
+    ('Pontificia Universidad Javeriana', '2026-09-17', '10:00'): 'guionista de Soñé su nombre',
+    ('Pontificia Universidad Javeriana', '2026-09-18', '10:00'): 'protagonista de Amazonas: Cocinas Indígenas de Selva y Río',
+    ('Universidad de los Andes', '2026-09-15', '14:00'): 'directora de Fitofascias',
+    ('Universidad de los Andes', '2026-09-16', '13:00'): 'directoras de Caída Libre y Tía Ciata',
+    ('Cinemateca de Bogotá', '2026-09-18', '17:00'): 'director de Iniciación en la Octava Dimensión',
+    ('Cinemateca de Bogotá', '2026-09-19', '14:00'): 'director de Caída Libre',
+}
+
 def hereda(cat, titulo):
     k = n(titulo)
     if k in cat: return cat[k]
@@ -92,6 +120,7 @@ def hereda(cat, titulo):
 def main():
     aud = json.load(open(os.path.join(S, 'qaff-2026-bogota-auditoria-3.json'), encoding='utf-8'))
     cat = catalogo()
+    fpdf = fichas_pdf()
     programas, heredadas, sembradas = [], 0, 0
     for pg in aud['paginas']:
         sede = sede_norm(pg.get('sede'))
@@ -115,6 +144,13 @@ def main():
                               'anio': o.get('anio'), 'genero': o.get('genero')})
                     e['titulo'] = titulo_casa(o.get('titulo'))
                     e['_obra_src'] = 'ficha impresa en el programa de Bogotá (2 SEP)'
+                    fp = fpdf.get(n(o.get('titulo')))
+                    if fp:
+                        if fp.get('sinopsis'):
+                            e['sinopsis'] = fp['sinopsis']; e['synopsis_lang'] = 'es'
+                        if fp.get('pais'): e['pais'] = fp['pais']
+                        if fp.get('anio'): e['anio'] = fp['anio']
+                        e['_obra_src'] = 'ficha del PDF oficial del programa (capa de texto, no OCR)'
                     sembradas += 1
                 d = dur_min(o.get('duracion'))
                 if d: e['duracion_min'] = d
@@ -148,8 +184,16 @@ def main():
             # más frecuente entre las obras que la declaran. Si NINGUNA la
             # declara —las 19 sembradas no la traen— la función queda sin
             # sección y se cuenta aparte: inventarla sería peor.
+            _inv = INVITADOS.get((sede, f['dia'], f['hora']))
+            if _inv:
+                f['has_qa'] = True
+                f['_qa_src'] = 'el programa anuncia la presencia de ' + _inv
             secs = [o['section'] for o in obras if o.get('section')]
-            if secs: f['seccion'] = max(set(secs), key=secs.count)
+            if secs:
+                # el catálogo del Chocó guarda la sección YA publicada («☕ Panorama
+                # Diaspórica»); el plan la indexa pelada y el emoji lo pone el
+                # ensamblador. Devolverla con emoji la deja huérfana del mapa.
+                f['seccion'] = re.sub(r'^\S+\s+', '', max(set(secs), key=secs.count))
             for o in obras: o.pop('section', None)
             dm = sum(o.get('duracion_min') or 0 for o in obras)
             if dm: f['duracion_min'] = dm
