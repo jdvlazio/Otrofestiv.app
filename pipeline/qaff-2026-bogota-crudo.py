@@ -143,6 +143,26 @@ def titulo_obra(titulo, fichas):
     return titulo_casa(titulo)
 
 
+# El «Tipo de Proyecto» de la ficha mezcla FORMATO y GÉNERO en una sola frase:
+# «Cortometraje de Ficción», «Largometraje Documental». El formato ya lo dice la
+# duración; lo que la app muestra en la ficha es el GÉNERO, y lo traduce al
+# inglés con _GENRE_EN, que espera la forma en español —la canónica del repo—.
+# Así que el género sale del propio festival, no de TMDB: nadie clasifica su
+# programa mejor que quien lo programó.
+FORMATO = {'cortometraje', 'largometraje', 'mediometraje', 'corto', 'largo', 'de', 'estudiante'}
+
+
+def _genero(tipo):
+    partes = []
+    for trozo in re.split(r'[,/]| y ', tipo or ''):
+        palabras = [w for w in trozo.split() if n(w) not in FORMATO]
+        if palabras:
+            g = ' '.join(palabras).strip()
+            if g and g not in partes:
+                partes.append(g)
+    return ', '.join(partes) or None
+
+
 def _pais(p):
     if not p:
         return None
@@ -180,14 +200,22 @@ def obra(titulo, fichas, cred):
     for k_src, k_dst in (('anio','anio'), ('tipo','tipo'), ('idioma','idioma')):
         if f.get(k_src):
             o[k_dst] = f[k_src]
+    g = _genero(o.get('tipo') or (c.get('tipo') if c else None))
+    if g:
+        o['genre'] = g
     if f.get('sinopsis'):
         o['sinopsis'] = f['sinopsis']
         o['synopsis_lang'] = 'es'
     orig = ORIGINAL.get(TITULO_ES.get(titulo, titulo)) or ORIGINAL.get(titulo)
+    if not orig and f.get('titulo') and n(f['titulo']) != n(TITULO_ES.get(titulo, titulo)):
+        orig = titulo_casa(f['titulo'])
     if orig:
+        # `title_en` es lo que la app muestra como título principal cuando está en
+        # inglés (sheets-controller.js:1544) y lo que usa para buscar. Los cinco
+        # originales que trae este programa son ingleses; si algún día uno no lo
+        # fuera, iría a `titulo_original` y NO aquí.
         o['titulo_original'] = orig
-    elif f.get('titulo') and n(f['titulo']) != n(titulo):
-        o['titulo_original'] = f['titulo']      # el original, cuando difiere de verdad
+        o['title_en'] = orig
     o['_obra_src'] = ('ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)'
                       if f else 'parrilla del PDF oficial del programa')
     if titulo in DISCREPANCIAS:
@@ -216,7 +244,8 @@ def del_chocho():
         d = out.setdefault(n(t), {})
         if sec:
             d.setdefault('section', sec)
-        for k in ('poster', 'posterSource', 'lbSlug', 'tmdb_id', 'synopsis_en', 'title_en'):
+        for k in ('poster', 'posterSource', 'lbSlug', 'tmdb_id', 'synopsis_en',
+                  'title_en', 'genre'):
             if o.get(k):
                 d.setdefault(k, o[k])
 
@@ -249,7 +278,8 @@ def main():
             # El PÓSTER y el identificador de TMDB también son nuestros, de agosto.
             # El PDF manda en lo que el PDF dice (sinopsis, país, año, duración);
             # esto solo rellena lo que el papel no puede traer.
-            for k in ('poster', 'posterSource', 'lbSlug', 'tmdb_id', 'synopsis_en'):
+            for k in ('poster', 'posterSource', 'lbSlug', 'tmdb_id', 'synopsis_en',
+                      'title_en', 'genre'):
                 if h.get(k) and not o.get(k):
                     o[k] = h[k]
             if h.get('poster'):

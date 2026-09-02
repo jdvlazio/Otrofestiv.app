@@ -233,11 +233,25 @@ def ensamblar(fid, escribir=True):
         if len(e.get('film_list') or []) == 1:
             _u = e['film_list'][0]
             e['title'] = _u.get('title', e['title'])
-            for _c in ('director', 'year', 'poster', 'posterSource', 'lbSlug',
-                       'tmdb_id', 'synopsis', 'synopsis_lang', 'synopsis_en',
-                       'country', 'flags'):
-                if _u.get(_c):
-                    e[_c] = _u[_c]
+            # Qué se promueve NO puede ser una lista escrita a mano: esta se
+            # había comido `genre` y `title_en`, que sí están en el contrato y sí
+            # viajaban dentro de film_list. Resultado: la obra llevaba su género
+            # y su título en inglés, la función promovida los perdía, y como el
+            # publicador no exige ninguno de los dos, el fallo era mudo —el mismo
+            # patrón que se comió los tmdb_id y las 37 sinopsis de CineAutopsia—.
+            # Ahora se promueve TODO campo de obra del contrato; lo que es de la
+            # FUNCIÓN y no de la obra se queda fuera por lista explícita.
+            _DE_LA_FUNCION = {'day', 'day_order', 'date', 'time', 'venue', 'sala',
+                              'screenings', 'sessions', 'ticket_url', 'is_free',
+                              'requires_registration', 'registration_url', 'has_qa',
+                              'qa_type', 'film_list', 'is_cortos', 'is_programa',
+                              'type', 'unscheduled', '_src'}
+            for _c, _v in _u.items():
+                if _c in _DE_LA_FUNCION or not _v:
+                    continue
+                if _c in _campos or _c in ('director', 'year', 'country', 'flags',
+                                           'synopsis_lang'):
+                    e[_c] = _v
             if _u.get('duration'):
                 e['duration'] = _u['duration']
             # La sinopsis promovida se lleva su idioma: sin `synopsis_lang`
