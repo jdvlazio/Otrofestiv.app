@@ -873,9 +873,15 @@ export function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   // Nombres y horarios
   const setEl=(id,txt)=>{const el=document.getElementById(id);if(el)el.textContent=txt;};
   setEl('cs-incoming-name', inDT);
-  setEl('cs-incoming-when', `${(dayLabel(incomingScreen.day)||'').split(' ')[0]} · ${incomingScreen.time} · ${inF?.duration||''}`);
+  // El día va CON su número (2 sep 2026). `.split(' ')[0]` dejaba «JUE» a secas,
+  // y 9 de los 15 festivales de la app repiten nombre de día —todos los de 8
+  // días o más: Tribeca tiene 5 pares, TIFF 4, Cinemancia 3—, así que «JUE» no
+  // distinguía el 3 del 10. Medido a 375px en las cuatro superficies: el número
+  // no cuesta nada —misma altura, misma caja, sin desbordar ni partir línea—
+  // porque ninguna de estas clases lleva `nowrap` y la caja sobraba.
+  setEl('cs-incoming-when', `${dayLabel(incomingScreen.day)||''} · ${incomingScreen.time} · ${inF?.duration||''}`);
   setEl('cs-existing-name', exDT);
-  const exWhen=existingEntry.day?`${(dayLabel(existingEntry.day)||'').split(' ')[0]} · ${existingEntry.time} · ${exF?.duration||''}`:'';
+  const exWhen=existingEntry.day?`${dayLabel(existingEntry.day)||''} · ${existingEntry.time} · ${exF?.duration||''}`:'';
   setEl('cs-existing-when', exWhen);
 
   // Título del sheet: si el conflicto es por margen (salas/viaje), el título
@@ -961,7 +967,9 @@ export function openPrioLimit(newTitle){
     const items=[...prioritized].map(_ttl=>{
       const{displayTitle:dt}=parseProgramTitle(_ttl);
       const f=FILMS.find(fi=>fi.title===_ttl&&!screeningPassed(fi));
-      const when=f?`${(dayLabel(f.day)||f.day).split(' ')[0]} · ${f.time}`:'';
+      // Día con número (ver cs-incoming-when): esta lista muestra hasta PRIO_LIMIT
+      // obras de días distintos, y es donde dos «JUE» a secas más engañan.
+      const when=f?`${dayLabel(f.day)||f.day} · ${f.time}`:'';
       const poster=getFilmPoster(f)||'';
       const safeSwap=_ttl.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const safeNew=newTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
@@ -1086,7 +1094,7 @@ export function openPostViewRating(title, day, time, venue, duration){
   const ctx=document.getElementById('pv-context');
   if(ctx){
     const parts=[];
-    if(day) parts.push((dayLabel(day)||day).split(' ')[0]);
+    if(day) parts.push(dayLabel(day)||day);   // con número (ver cs-incoming-when)
     if(venue) parts.push(venue.split('·')[0].trim().split('‒')[0].trim());
     if(duration) parts.push(duration);
     ctx.textContent=parts.join(' · ');
