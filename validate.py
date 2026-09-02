@@ -3662,7 +3662,7 @@ try:
         'i18n-hardcoded','i18n-interpolation','i18n-voseo','json-fields','keyart-write-once',
         'no-underscore-actions','onclick-syntax','pais-conocido','pipeline-circuito',
         'poster-editorial-parity','poster-radio-unico','pressed-canon',
-        'prio-limit','responsive-contract','sched-pure-fns','section-display-raw',
+        'plan-contrato','prio-limit','responsive-contract','sched-pure-fns','section-display-raw',
         'sedes-apiladas','shadow-t','sheet-meta-legible','staging-provenance','static-html-template',
         'synopsis-helper','synopsis-length','tasks-sync','template-al-dia','title-normalization',
         'validate-film-tests','version-json','viewstate-shadow','worker-deps',
@@ -5499,6 +5499,40 @@ try:
         ok(check, 'toda ficha con tmdb_id trae su sinopsis')
 except Exception as _e:
     warn(check, f'no se pudo verificar cosecha-tmdb: {_e}')
+
+# ── [plan-contrato] el ÚNICO guardián de entrada del pipeline ─────────────
+# Los otros 125 juzgan el JSON publicado: cada defecto de entrada llegaba
+# disfrazado de síntoma de salida, uno por vuelta. Este pasa cada plan por
+# lib.cargar_plan() —el mismo contrato que corre el ensamblador y el runner—.
+# Falla el plan que RECLAMA el camino genérico (bloque `festival`) y no lo
+# cumple. Un plan sin `festival` es legado o vacío: se nombra, no se reprueba,
+# porque no pasa por el ensamblador genérico y nada suyo se pierde aquí.
+check = 'plan-contrato'
+try:
+    import glob as _gp, os as _osp, sys as _sysp
+    _sysp.path.insert(0, 'pipeline'); import lib as _libp
+    _malos, _vacios, _ok = [], [], 0
+    for _pp in sorted(_gp.glob('pipeline/*.plan.json')):
+        if _pp.endswith('festival.plan.example.json'):
+            continue
+        try:
+            _dp = _libp.cargar_plan(_pp)
+            if _dp['_clase'] == 'generico': _ok += 1
+            elif _dp['_clase'] == 'vacio': _vacios.append(_osp.path.basename(_pp))
+        except AssertionError as _e:
+            _malos.append(str(_e))
+    for _m in _malos:
+        fail(check, _m)
+    if not _malos:
+        ok(check, f'{_ok} plan(es) genérico(s) cumplen su contrato' + (f' · sin pipeline declarado: {_vacios}' if _vacios else ''))
+    elif _vacios:
+        warn(check, f'plan(es) sin `pasos` ni `festival`: {_vacios}')
+except Exception as _e:
+    # Un guardián que no puede correr NO avisa: falla. Si avisa, el push pasa
+    # en verde con el contrato sin comprobar — es la trampa 7 de la auditoría
+    # de guardianes («un tope que calla lo que recorta»), y aquí pasó en la
+    # primera corrida: un NameError en lib.py salió como ⚠ y «OK para push».
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 check = 'pipeline-generico'
 try:

@@ -53,7 +53,17 @@ def main():
     plan_p = f'{REPO}/pipeline/{fid}.plan.json'
     if not os.path.exists(plan_p):
         sys.exit(f'no hay plan: {plan_p}\n(formato en el docstring de este script)')
-    pasos = json.load(open(plan_p, encoding='utf-8'))['pasos']
+    # El contrato del plan, ANTES del primer paso: lo que falte sale aquí,
+    # junto y con remedio, no tras diez minutos de OCR y una vuelta entera.
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import lib
+    try:
+        plan = lib.cargar_plan(fid)
+    except AssertionError as e:
+        sys.exit(f'✗ {e}')
+    if plan['_clase'] == 'vacio':
+        sys.exit(f'✗ {plan_p}: ni `pasos` ni `festival` — no hay pipeline declarado')
+    pasos = plan['pasos']
 
     print(f'═══ {fid} · {len(pasos)} pasos · sidecars antes:')
     print('\n'.join(inventario(fid)) or '  (ninguno)')
