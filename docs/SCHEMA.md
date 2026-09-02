@@ -258,9 +258,9 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
-| `ticket_url` | string | `^https://` | 5 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
+| `ticket_url` | string | `^https://` | 6 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
 | `is_free` | boolean | — | 8 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
-| `requires_registration` | boolean | — | 5 fest |  |
+| `requires_registration` | boolean | — | 6 fest |  |
 | `registration_url` | string | `^https://` | 2 fest |  |
 | `audience` | string | `press` | 1 fest | Solo cuando la función NO es para el público general. Ausente = público (el caso normal, no se declara). «press» = pase de prensa e industria: la app los OCULTA salvo que el usuario active el filtro. TIFF 2026 trae 247 (audienceType=Press & Market en su endpoint). |
 
@@ -283,9 +283,9 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `rating` | string | — | 2 fest |  |
 | `premiere` | string | — | 4 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
 | `type` | string | `film` · `event` · `short` | 14 fest |  |
-| `event_kind` | string | — | 7 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
+| `event_kind` | string | — | 6 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
 | `is_cortos` | boolean | — | 16 fest | exige `film_list` Programa curado: exige film_list no vacío. |
-| `film_list` | array | — | 15 fest |  |
+| `film_list` | array | — | 14 fest |  |
 | `is_programa` | boolean | — | 3 fest |  |
 | `is_recurring` | boolean | — | 3 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |
@@ -296,7 +296,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `qa_type` | string | `team` · `guests` | 3 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | 1 fest |  |
-| `sala` | string | — | 7 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
+| `sala` | string | — | 6 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
 | `date` | string | `^\d{4}-\d{2}-\d{2}$` | 6 fest | Requerido si hay screenings[]. Tres festivales legacy lo tienen como número de día. |
 | `screenings` | array | — | 3 fest |  |
 | `poster` | string | — | 17 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |
@@ -305,7 +305,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `lbSlug` | string | — | 12 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
 | `slug` | string | — | 1 fest |  |
 | `filmCategory` | string | — | 1 fest |  |
-| `tmdb_id` | number | — | 8 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
+| `tmdb_id` | number | — | 7 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
 | `_src` | — | — | 9 fest | De dónde salió el dato. Toda obra nueva lo lleva. |
 | `format` | string | — | 1 fest | Formato de proyección (DCP, 35mm). Lo publica el festival; TIFF es el único que lo trae. |
 | `section_tags` | array | — | 1 fest | no lo lee la vista: ninguno todavía Sellos del festival (TIFF). Decisión de Juan: etiqueta, no sección. Falta cablearlo en la vista. |

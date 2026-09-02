@@ -85,6 +85,20 @@ BLOQUES = {
    'reafirmar que la memoria es, en sí misma, un acto de resistencia.'),
 }
 
+# La VENTANA que la parrilla imprime para cada franja de proyección: «3:00 - 5:00
+# pm», «10:00 - 1:00 pm». No es un adorno — es cuánto tiempo está ocupada la sala,
+# y en las franjas donde el festival mete un Diálogo junto a las obras es el único
+# dato que dice cuánto dura el Diálogo: lo que sobra después de las proyecciones.
+# (sede, día, hora) → minutos · página
+VENTANAS = {
+ (AF,  '14', '15:00'): (120, 14), (AF,  '15', '15:00'): (60, 14),
+ (AF,  '16', '15:00'): (120, 19), (AF,  '17', '15:00'): (300, 19),
+ (PUJ, '15', '10:00'): (180, 27), (PUJ, '16', '10:00'): (180, 27),
+ (PUJ, '17', '10:00'): (180, 37), (PUJ, '18', '10:00'): (180, 37),
+ (UA,  '15', '14:00'): (120, 45), (UA,  '16', '13:00'): (120, 45),
+ (UA,  '17', '14:00'): (120, 51), (UA,  '18', '13:00'): (120, 51),
+}
+
 # ── actividades: los Diálogos Improbables y lo que no es proyección ─────────
 # Cada uno tiene DOS páginas: la parrilla lo anuncia y una página propia da
 # moderador, panelistas, fecha, hora y sede. La hora sale de la página propia.

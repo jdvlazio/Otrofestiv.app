@@ -357,7 +357,6 @@ def main():
             h1, m1 = (int(x) for x in ini.split(':'))
             h2, m2 = (int(x) for x in fin.split(':'))
             a['duracion_min'] = (h2 * 60 + m2) - (h1 * 60 + m1)
-            a['duration'] = f"{a['duracion_min']} min"
         funciones.append(a)
 
     # Una obra con dos títulos se parte en dos obras distintas: quien la marca en
@@ -372,6 +371,53 @@ def main():
             porobra.setdefault((n(o['director'])[:14], o.get('duracion_min')), set()).add(o['titulo'])
     partidas = {k: v for k, v in porobra.items() if len(v) > 1}
     assert not partidas, f'la misma obra con dos títulos, sin unificar: {partidas}'
+
+    # ── la parte de la actividad dentro de una franja compartida ───────────
+    # Nueve de las doce actividades comparten día, hora y sede con una
+    # proyección, porque el programa las imprime así: una ventana de «3:00 - 5:00
+    # pm» con las obras Y el Diálogo dentro. El modelo B de la doctrina —anclaje,
+    # `sharedSlotIsOneScreening`— ya dice qué hacer con eso: las entradas no
+    # rivalizan y la sala se ocupa con la SUMA. Pero entonces la duración de la
+    # actividad no puede ser la ventana entera: sumada a las obras daba 162
+    # minutos para una sesión de 120. Su parte es lo que sobra tras las
+    # proyecciones, y así la suma vuelve a ser exactamente la ventana impresa.
+    # Las tres actividades que van solas —Museo ×2 y la Nacional— conservan su
+    # ventana completa, que ahí sí es toda suya.
+    obras_por_franja = {}
+    for f in funciones:
+        if f.get('obras'):
+            k = (f['sede'], f['dia'], f['hora'])
+            obras_por_franja[k] = sum(o.get('duracion_min') or 0 for o in f['obras'])
+    cuantas = {}
+    for a in funciones:
+        if a.get('event_kind'):
+            k = (a['sede'], a['dia'], a['hora'])
+            cuantas[k] = cuantas.get(k, 0) + 1
+    for a in funciones:
+        if not a.get('event_kind'):
+            continue
+        k = (a['sede'], a['dia'], a['hora'])
+        vent = pr.VENTANAS.get((a['sede'].split(' · ')[0], a['dia'][8:], a['hora']))
+        films = obras_por_franja.get(k)
+        if vent and films is not None:
+            # Con DOS actividades en la misma franja —el 17 en Alianza tiene el
+            # Diálogo y el vernissage— el resto se reparte entre ellas. Darle el
+            # resto entero a cada una duplicaba la franja.
+            resto = (vent[0] - films) // cuantas[k]
+            if resto > 0:
+                a['duracion_min'] = resto
+                a['_duracion_src'] = (f"la parrilla imprime una ventana de {vent[0]} min "
+                                      f"(p{vent[1]}), las obras ocupan {films} y el resto se "
+                                      f"reparte entre {cuantas[k]} actividad(es)"
+                                      if cuantas[k] > 1 else
+                                      f"la parrilla imprime una ventana de {vent[0]} min "
+                                      f"(p{vent[1]}) y las obras ocupan {films}")
+            else:
+                # el propio programa sobrevende la franja: no hay resto que
+                # repartir. Se declara y se le pregunta al festival.
+                a['_ojo'] = (f'la franja impresa es de {vent[0]} min y solo las obras ya '
+                             f'suman {films}: no cabe además la actividad')
+        a['duration'] = f"{a['duracion_min']} min"
 
     funciones.sort(key=lambda f: (f['dia'], f['hora'], f['sede']))
     crudo = {

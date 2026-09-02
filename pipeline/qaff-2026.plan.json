@@ -186,5 +186,17 @@
       "2026-09-21"
     ],
     "_dias_vacios_por_que": "el último Diálogo es el 22 en la Universidad Nacional y las proyecciones acaban el 20: el 21 no tiene nada. Se declara vacío porque un día ausente rompe la aritmética de «Hoy» y «Mañana»"
+  },
+  "_publicar": {
+    "estado": "NO publicado. src/config.js sigue apuntando al QAFF de Quibdó, y el JSON publicado sigue siendo el de Quibdó: la rama queda coherente consigo misma.",
+    "bloqueo": "faltan la sección de 14 funciones y la boletería de las cuatro sedes (issue #566). El ensamblador exige sección explícita, así que sin eso no hay build publicable.",
+    "receta": [
+      "1. añadir al bloque `festival` las secciones que responda el festival",
+      "2. python3 pipeline/qaff-2026-bogota-crudo.py",
+      "3. python3 pipeline/ensamblar.py qaff-2026",
+      "4. python3 pipeline/publicar.py qaff-2026 --forzar   (el gate compara contra el Quibdó publicado, que es OTRO programa: la pérdida es real y deliberada)",
+      "5. regenerar el bloque qaff2026 de src/config.js desde el JSON: ciudad Bogotá, 14–22 SEP, 9 días con el 21 vacío, prioLimit 4 — y con COMILLAS SIMPLES, que es lo único que leen los guardianes que parsean config.js con regex",
+      "6. quitar group:test cuando Juan lo decida"
+    ]
   }
 }
