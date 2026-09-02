@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609011904">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609011904">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609012045">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609012045">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -560,7 +560,15 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* Navegación principal (bottom tabs) */
 .main-nav{display:flex;border-bottom:1px solid var(--bdr);background:var(--surf);padding-bottom:max(env(safe-area-inset-bottom),20px)}
-.main-nav-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:var(--sp-2) var(--sp-1) var(--sp-3);cursor:pointer;color:var(--gray);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-semi);letter-spacing:.3px;text-align:center;transition:color var(--tr-base),border-color var(--tr-base);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-1);height:52px;box-sizing:border-box;position:relative}
+/* El rótulo inactivo sube a --white-60 (no --gray) por CONTRASTE, no por gusto:
+   el vidrio de la barra deja pasar luz, y con pósters claros detrás el fondo
+   llega a rgb(52,49,44). Ahí #888 cae a 3,65:1, bajo el 4,5:1 que pide AA para
+   11px (medido en TIFF, scrollTop 1800); --white-60 da 5,09:1 y 6,38:1 sobre
+   fondo oscuro. Se aclara el RÓTULO y no el vidrio porque subir su alfa está
+   prohibido por [chrome-glass] (≤0,6, decisión del 18 jul: muro, no vidrio) —
+   lo intenté con 0,80 y el guardián lo paró. La jerarquía no se apoya en la
+   luminancia sino en el COLOR: la activa (.on) sigue siendo ámbar. */
+.main-nav-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:var(--sp-2) var(--sp-1) var(--sp-3);cursor:pointer;color:var(--white-60);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-semi);letter-spacing:.3px;text-align:center;transition:color var(--tr-base),border-color var(--tr-base);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-1);height:52px;box-sizing:border-box;position:relative}
 .main-nav-tab:active{opacity:.6}
 .main-nav-tab.on{color:var(--amber);border-bottom-color:var(--amber)}
 .main-nav-tab .tab-badge{position:absolute;top:4px;right:calc(50% - 18px);min-width:16px;height:16px;border-radius:var(--r-pill);background:var(--amber);color:var(--black);font-size:var(--t-xs);font-weight:var(--w-display);line-height:16px;text-align:center;padding:0 4px;pointer-events:none;box-sizing:border-box;display:none}
@@ -3668,7 +3676,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609011904";
+    s.src="/src/main.js?v=202609012045";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

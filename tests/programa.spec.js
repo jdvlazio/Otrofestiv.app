@@ -2996,3 +2996,57 @@ test('T142 — Prensa ON salta a donde se ven los pases; OFF no mueve a nadie', 
   expect(r.trasApagar.dia, 'apagar NO devuelve a nadie a otro día').toBe(r.conPrensa.dia);
   expect(r.trasApagar.modo, 'ni a otra vista').toBe(r.conPrensa.modo);
 });
+
+// ── T145 — los rótulos de la barra se leen sobre pósters claros ──────────────
+// La barra es vidrio: rgba(14,13,12,.55) + blur(28px). Deja pasar LUZ, no texto
+// —el blur impide leer nada detrás—, pero con pósters claros el fondo efectivo
+// sube y el rótulo inactivo #888 caía a 3,65:1, bajo el 4,5:1 que WCAG AA pide
+// para 11px. En Cinemancia (pósters oscuros) el mismo gris daba 5,52:1: el
+// defecto dependía del festival.
+//
+// La salida NO fue opacar el vidrio —lo prohíbe [chrome-glass], alpha ≤0,6,
+// decisión del 18 jul— sino aclarar el RÓTULO a --white-60, ya en la paleta.
+//
+// EL FONDO ES UNA CONSTANTE MEDIDA, y hay que decirlo: rgb(52,49,44) es el
+// píxel real de la barra en TIFF con scrollTop 1800, el más claro que encontré
+// barriendo dos festivales × cuatro posiciones. No se puede leer en vivo desde
+// la página —lo que compone backdrop-filter no es accesible al DOM— y el peor
+// teórico (un póster blanco puro bajo el velo, rgb(122,122,121)) no ocurre:
+// el blur de 28px promedia un área grande. El test vigila lo que cambiamos —el
+// color del RÓTULO— contra ese suelo, y que el velo siga siendo vidrio.
+const _FONDO_MAS_CLARO_MEDIDO = [52, 49, 44];   // TIFF · scrollTop 1800 · 1 sep 2026
+
+test('T145 — el rótulo inactivo de la barra cumple AA sobre pósters claros', async ({ page }) => {
+  await enterFestival(page, 'tiff2026');
+  const r = await page.evaluate(async (fondo) => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(600);
+    switchMainNav('mnav-cartelera');
+    await w(1200);
+    const nav = document.querySelector('.main-nav');
+    const tab = [...document.querySelectorAll('.main-nav-tab')].find(t => !t.classList.contains('on'));
+    if (!nav || !tab) return { sinBarra: true };
+    const nums = s => (s.match(/[\d.]+/g) || []).map(Number);
+    const csN = getComputedStyle(nav), csT = getComputedStyle(tab);
+    const nN = nums(csN.backgroundColor), nT = nums(csT.color);
+    const alfaVelo = nN.length > 3 ? nN[3] : 1;
+    const aT = nT.length > 3 ? nT[3] : 1;
+    const txtEf = nT.slice(0, 3).map((c, i) => Math.round(aT * c + (1 - aT) * fondo[i]));
+    const lin = c => { c /= 255; return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
+    const L = ([a, b, c]) => 0.2126 * lin(a) + 0.7152 * lin(b) + 0.0722 * lin(c);
+    const l1 = L(txtEf), l2 = L(fondo);
+    return { contraste: +(((Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05)).toFixed(2)),
+      alfaVelo, blur: csN.backdropFilter || csN.webkitBackdropFilter,
+      colorTexto: csT.color, fs: parseFloat(csT.fontSize) };
+  }, _FONDO_MAS_CLARO_MEDIDO);
+  if (r.sinBarra) return;
+  expect(r.alfaVelo, 'la barra sigue siendo vidrio, no muro ([chrome-glass])').toBeLessThanOrEqual(0.6);
+  expect(r.blur, 'y conserva su desenfoque').toMatch(/blur/);
+  expect(r.fs, 'el rótulo es texto pequeño: le aplica el 4,5:1').toBeLessThan(18);
+  expect(r.contraste,
+    `sobre el fondo más claro medido (${_FONDO_MAS_CLARO_MEDIDO}) el rótulo ${r.colorTexto} cumple AA`)
+    .toBeGreaterThanOrEqual(4.5);
+});
