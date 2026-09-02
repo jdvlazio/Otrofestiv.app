@@ -1300,3 +1300,82 @@ test('T147 — cada fila del Plan listo trae póster y su día, y el pie cuenta 
       .not.toMatch(new RegExp('^\\+\\s*\\d+\\s+\\S+\\s+·\\s+[A-ZÁÉÍÓÚ]{3}\\s' + primerMostrado + '\\b'));
   }
 });
+
+// ── T148 — compartir el Plan no exige poner nombre ──────────────────────────
+// La hoja tenía DOS controles: el campo y un botón. Con el campo vacío el botón
+// solo pintaba el borde de rojo y volvía — sin mensaje (medido: el texto de la
+// hoja no cambiaba, 98 caracteres antes y después), sin salida visible y sin
+// forma de compartir.
+//
+// Y el nombre nunca fue obligatorio: el subtítulo de la imagen se arma con
+// `(_dn ? _dn+' · ' : '')`, o sea que sin nombre sale «Mi Plan · Festival · N
+// días», publicable. La compuerta afirmaba lo contrario y ganaba la que frena.
+//
+// El test mide las dos mitades juntas a propósito: el rótulo que ofrece la
+// salida, y que la salida FUNCIONE. Arreglar solo el rótulo dejaba la hoja
+// reabriéndose en bucle — sharePlan volvía a no encontrar nombre y la pedía
+// otra vez. Eso lo cazó la medición, no la lectura.
+test('T148 — con el campo vacío, Compartir comparte igual', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    const porDia = {};
+    FILMS.forEach(f => { (porDia[f.day] = porDia[f.day] || []).push(f.title); });
+    watchlist.clear();
+    Object.keys(porDia).sort().slice(0, 4).forEach(d => watchlist.add(porDia[d][0]));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+    try { localStorage.removeItem('otrofestiv_display_name'); } catch (e) {}
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(800);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const save = document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]');
+    if (!save) return { sinPlan: true };
+    save.click(); await w(1400);
+    tap('closePlanConfirm'); await w(700);
+    tap('sharePlan'); await w(900);
+    const sheet = document.getElementById('display-name-sheet');
+    if (!sheet) return { noPide: true };
+    const inp = document.getElementById('dname-input'), cta = document.getElementById('dname-save');
+    const vacio = cta.innerText.trim();
+    inp.value = 'Juanda'; inp.dispatchEvent(new Event('input')); await w(200);
+    const conTexto = cta.innerText.trim();
+    inp.value = ''; inp.dispatchEvent(new Event('input')); await w(200);
+    const vuelve = cta.innerText.trim();
+    // pulsar con el campo vacío — ¿comparte de verdad?
+    let imagen = 0;
+    const _orig = HTMLCanvasElement.prototype.toDataURL;
+    HTMLCanvasElement.prototype.toDataURL = function (...a) {
+      const u = _orig.apply(this, a);
+      if (this.width > 400) imagen = Math.max(imagen, u.length);
+      return u;
+    };
+    cta.click(); await w(2500);
+    HTMLCanvasElement.prototype.toDataURL = _orig;
+    return { vacio, conTexto, vuelve,
+      hojaCerrada: !document.getElementById('display-name-sheet'),
+      guardo: localStorage.getItem('otrofestiv_display_name'),
+      imagen };
+  });
+  if (r.sinPlan) return;
+  expect(r.noPide, 'sin nombre guardado, compartir tiene que ofrecer ponerlo').toBeUndefined();
+
+  // 1 · con el campo vacío el botón OFRECE la salida, en vez de un borde rojo mudo
+  expect(r.vacio, 'con el campo vacío el botón dice que se puede compartir sin nombre')
+    .toMatch(/sin mi nombre/i);
+  // 2 · y apenas escribís, dice lo que va a hacer con lo que escribiste
+  expect(r.conTexto, 'con texto, el botón guarda y comparte').toMatch(/guardar/i);
+  expect(r.vuelve, 'y vuelve a ofrecer la salida si borrás lo escrito').toMatch(/sin mi nombre/i);
+
+  // 3 · la salida FUNCIONA: cierra, no inventa un nombre, y la imagen se generó
+  expect(r.hojaCerrada, 'la hoja se cierra — no se reabre en bucle pidiendo lo mismo').toBe(true);
+  expect(r.guardo, 'y no guarda ningún nombre, porque no lo diste').toBeNull();
+  expect(r.imagen, 'y la imagen del Plan se generó igual: el nombre nunca fue obligatorio')
+    .toBeGreaterThan(1000);
+});
