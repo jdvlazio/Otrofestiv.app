@@ -1813,7 +1813,12 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
       if (por[ts[i]].some(x => por[ts[j]].some(y => pisan(x, y)))) debiles++;
     }
     // materializar ANTES del re-render (los nodos quedan huérfanos después)
-    const linea = document.querySelector('.dato-linea');
+    // El conteo se acota a Planear (2 sep 2026): contaba .dato-linea en TODO el
+    // documento y eso solo funcionaba mientras ninguna otra pantalla usara el
+    // canon. La hoja «¡Tu Plan está listo!» lo adoptó y el test cayó sin que
+    // Planear hubiera cambiado — medía la app entera creyendo medir una vista.
+    const _plan = document.getElementById('ag-view');
+    const linea = _plan.querySelector('.dato-linea');
     const _insumo = linea?.textContent.replace(/\s+/g, ' ').trim();
     const _cr = linea?.querySelector('.dato-alerta');
     const _crTxt = _cr?.textContent.trim() || null;
@@ -1822,7 +1827,7 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
     // ritmo 1:2 — el hueco al CTA no puede ser el de «entre secciones»
     const _cta = document.querySelector('.av-calc-btn');
     const _gapCta = (_cta && linea) ? Math.round(_cta.getBoundingClientRect().top - linea.getBoundingClientRect().bottom) : null;
-    const _filas = document.querySelectorAll('.dato-linea').length;
+    const _filas = _plan.querySelectorAll('.dato-linea').length;
     const fila = document.querySelector('.av-fila');
     const _filaTxt = fila?.textContent.replace(/\s+/g, ' ').trim();
     const _editar = fila?.querySelector('.av-editar')?.textContent.trim() || null;
