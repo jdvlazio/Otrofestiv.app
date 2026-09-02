@@ -1213,3 +1213,90 @@ test('T144 — el título de la hoja de disponibilidad pregunta por la negación
   // La fila sigue siendo el rótulo de sección aprobado: no se toca.
   if (r.fila) expect(r.fila, 'la fila de Planear conserva su rótulo').toContain('Disponibilidad');
 });
+
+// ── T147 — la hoja «¡Tu Plan está listo!» dice de qué día es cada hora ───────
+// Medido en Cinemancia con un Plan real de 8 obras: la hoja mostraba
+// «19:00 · 14:30 · 14:00» — horas en DESCENSO. Son JUE 3, VIE 4 y SÁB 5, pero
+// sin el día en pantalla la lista se leía como un mismo día en desorden, justo
+// en el momento que celebra el Plan.
+//
+// La causa de fondo no era el día: esta era la única de las seis listas de obras
+// de la app sin póster, encajada en un marco y con el título cortado a mano.
+// Al adoptar la fila canónica, el día llega en el renglón que ya existía para el
+// cuándo. Por eso el test mide las TRES cosas juntas: si mañana alguien vuelve a
+// quitar el póster, la fila dejó de ser la canónica aunque el día siga ahí.
+//
+// El día va CON su número: Cinemancia dura 10 días y tiene dos jueves, dos
+// viernes y dos sábados — «JUE» a secas no distingue el 3 del 10.
+test('T147 — cada fila del Plan listo trae póster y su día, y el pie cuenta las que faltan', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    const porDia = {};
+    FILMS.forEach(f => { (porDia[f.day] = porDia[f.day] || []).push(f.title); });
+    watchlist.clear();
+    // Una obra por día en cinco días distintos: garantiza 3 filas de 3 días y
+    // un resto que empieza DESPUÉS de las mostradas — sin eso, el pie se podría
+    // «acertar» por casualidad.
+    Object.keys(porDia).sort().slice(0, 5).forEach(d => watchlist.add(porDia[d][0]));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(900);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const save = document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]');
+    if (!save) return { sinBoton: true };
+    save.click(); await w(1500);
+    const filas = [...document.querySelectorAll('.plan-confirm-film')];
+    if (filas.length < 3) return { pocasFilas: filas.length };
+    const plan = (savedAgenda && savedAgenda.schedule || []);
+    return {
+      cuando: filas.map(e => (e.querySelector('.plan-confirm-when') || {}).innerText || ''),
+      posters: filas.map(e => {
+        const p = e.querySelector('.lb-poster');
+        if (!p) return null;
+        const b = p.getBoundingClientRect();
+        return { w: Math.round(b.width), h: Math.round(b.height) };
+      }),
+      mas: (document.getElementById('plan-confirm-mas') || {}).innerText || '',
+      diasDelPlan: [...new Set(plan.map(s => s.day))],
+      diasMostrados: plan.slice(0, 3).map(s => s.day),
+      diasQueFaltan: [...new Set(plan.slice(3).map(s => s.day))]
+    };
+  });
+  if (r.sinBoton) return;
+  expect(r.pocasFilas, 'el fixture tiene que pintar 3 filas o el test no mide nada').toBeUndefined();
+
+  // 1 · cada fila dice su día, CON número, antes de la hora
+  for (const c of r.cuando) {
+    expect(c, 'la fila dice «DÍA N · HH:MM», con el número que distingue dos jueves')
+      .toMatch(/^[A-ZÁÉÍÓÚ]{3}\s\d{1,2}\s·\s\d{1,2}:\d{2}$/);
+  }
+  // 2 · y los días AVANZAN: es lo que hacía leer las horas como desordenadas
+  const num = c => parseInt(c.match(/\d{1,2}/)[0], 10);
+  expect(r.diasMostrados.length, 'las 3 mostradas son de días distintos o no hay nada que ordenar')
+    .toBe(new Set(r.diasMostrados).size);
+  expect(num(r.cuando[1]), 'la 2ª fila cae después de la 1ª').toBeGreaterThan(num(r.cuando[0]));
+  expect(num(r.cuando[2]), 'la 3ª fila cae después de la 2ª').toBeGreaterThan(num(r.cuando[1]));
+
+  // 3 · la fila es la canónica: lleva el póster del dueño único, en su token
+  for (const p of r.posters) {
+    expect(p, 'la fila lleva póster — es la anatomía de las otras cinco listas').not.toBeNull();
+    expect(p.w, 'y en el token --poster-xs, el mismo de la fila de Mi Plan').toBe(56);
+    expect(p.h, 'idem alto').toBe(84);
+  }
+
+  // 4 · el pie cuenta el rango de LAS QUE FALTAN, no el del Plan entero
+  if (r.diasQueFaltan.length) {
+    const primerFalta = r.diasQueFaltan[0].slice(-2).replace(/^0/, '');
+    const primerMostrado = r.diasMostrados[0].slice(-2).replace(/^0/, '');
+    expect(r.mas, `el pie arranca en el día ${primerFalta}, el primero que no está arriba`)
+      .toMatch(new RegExp('\\b' + primerFalta + '\\b'));
+    expect(r.mas, `y NO en el ${primerMostrado}, que es la primera fila`)
+      .not.toMatch(new RegExp('^\\+\\s*\\d+\\s+\\S+\\s+·\\s+[A-ZÁÉÍÓÚ]{3}\\s' + primerMostrado + '\\b'));
+  }
+});
