@@ -355,6 +355,24 @@ export function _edHdrSVG(label, accent){
   return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMinYMin meet">${text}</svg>`;
 }
 
+// ── hayEvento — dueño único del sustantivo que nombra un conjunto ───────────
+// «actividad» es el PARAGUAS y un taller no es una obra (regla de vocabulario de
+// Juan): el sustantivo se elige por el contenido, no por la pantalla. «obras» si
+// TODAS son proyecciones; «actividades» si alguna no lo es.
+//
+// Vivía inline en el titular de Mi Plan y lo vigilaba T132b, pero las dos líneas
+// de Planear —«N obras por planear» y «N obras · N días»— se habían quedado
+// afuera: medido en FICDEH con «Los frutos que dan vida» (taller de 2 sesiones)
+// más una película, decían «2 obras» sobre 1 película y 1 taller. El número
+// estaba bien; el sustantivo no. Con tres copias del predicado, la próxima
+// pantalla iba a quedarse afuera igual.
+export function hayEvento(entradas, films){
+  return (entradas||[]).some(e=>{
+    const _t=typeof e==='string'?e:(e&&(e._title||e.title));
+    return ((films||[]).find(f=>f.title===_t)||{}).type==='event';
+  });
+}
+
 export function _posterThumb(f, cssClass, loading){
   const p = f ? getFilmPoster(f) : null;
   const _load = loading || 'lazy';
