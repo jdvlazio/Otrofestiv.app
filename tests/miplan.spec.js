@@ -1017,7 +1017,14 @@ test('T134 — los vacíos de PLANEAR y MI PLAN se distinguen', async ({ page })
   expect(r.wl, 'app sin intereses — es el estado del hallazgo').toBe(0);
   expect(r.planear, 'PLANEAR muestra su vacío').not.toBe(null);
   expect(r.miplan, 'MI PLAN muestra su vacío').not.toBe(null);
-  expect(r.planear.cta, 'y los CTA siguen apuntando a pasos distintos').not.toBe(r.miplan.cta);
+  // El CTA dejó de ser una de las señales (2 sep 2026). Antes cada vacío
+  // apuntaba al nodo anterior del grafo y por eso los botones diferían solos;
+  // desde que el vacío manda al primer lugar donde SE PUEDE hacer algo, con la
+  // app en cero los dos llevan al Programa —a propósito, es lo que corta la
+  // cadena de tres pantallas vacías que dueña T150—. Lo que esta prueba
+  // defiende es que las dos pantallas no se lean como el MISMO lugar, y eso lo
+  // sostienen el titular y el icono, que son su identidad; el botón es la
+  // salida, y con nada cargado la salida honesta es una sola.
   expect(r.planear.titulo, 'los titulares no pueden ser el mismo').not.toBe(r.miplan.titulo);
   expect(r.planear.icono, 'ni el icono').not.toBe(r.miplan.icono);
 });
@@ -1378,4 +1385,79 @@ test('T148 — con el campo vacío, Compartir comparte igual', async ({ page }) 
   expect(r.guardo, 'y no guarda ningún nombre, porque no lo diste').toBeNull();
   expect(r.imagen, 'y la imagen del Plan se generó igual: el nombre nunca fue obligatorio')
     .toBeGreaterThan(1000);
+});
+
+// ── T150 — el vacío no encadena vacíos ──────────────────────────────────────
+// Medido con la app en cero (sin plan, sin intereses, sin vistas): Mi Plan decía
+// «Ir a Planear», Planear decía «Ir a Intereses», Intereses decía «Ir al
+// Programa». TRES pantallas vacías y TRES toques antes de poder tocar una obra,
+// y las tres decían la misma idea con otras palabras.
+//
+// Cada vacío apuntaba al nodo anterior del grafo (Plan ← Planear ← Intereses ←
+// Programa), que es correcto como modelo y pésimo como camino. El destino tiene
+// que ser el primer lugar donde SE PUEDE hacer algo.
+//
+// La segunda mitad del test es la que impide «arreglarlo» de más: CON intereses,
+// el salto Mi Plan → Planear sí vale, porque Planear tiene qué calcular. Mandar
+// también ese caso al Programa sería cambiar un camino muerto por uno perdido.
+test('T150 — con la app en cero, el vacío lleva al Programa de un toque', async ({ page }) => {
+  const cero = async (conIntereses) => {
+    await page.evaluate((ci) => {
+      const b = document.createElement('button');
+      b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      watchlist.clear(); prioritized.clear(); watched.clear();
+      savedAgenda = null; cachedResult = null;
+      if (ci) FILMS.slice(0, 3).forEach(f => watchlist.add(f.title));
+      if (typeof saveState === 'function') saveState('wl', 'watched');
+    }, conIntereses);
+    await page.waitForTimeout(400);
+  };
+  const leer = () => page.evaluate(() => {
+    const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+    const hero = [...document.querySelectorAll('.empty-state-hero,.empty-state')].filter(vis);
+    const cta = hero.flatMap(h => [...h.querySelectorAll('button,[data-action]')]).filter(vis)
+      .map(b => b.innerText.trim());
+    const tab = [...document.querySelectorAll('.main-nav-tab')].find(t => t.classList.contains('on'));
+    return { tab: (tab ? tab.innerText : '').trim().replace(/\n/g, ' '),
+      vacio: hero.length > 0, cta,
+      obras: [...document.querySelectorAll('.poster-card,.plist-item')].filter(vis).length };
+  });
+  const tocarCTA = async () => {
+    await page.evaluate(() => {
+      const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+      const h = [...document.querySelectorAll('.empty-state-hero,.empty-state')].filter(vis);
+      const b = h.flatMap(x => [...x.querySelectorAll('button,[data-action]')]).filter(vis)[0];
+      if (b) b.click();
+    });
+    await page.waitForTimeout(1600);
+  };
+
+  await enterFestival(page, 'cinemancia2026');
+
+  // ── 1 · desde CADA uno de los tres vacíos, un solo toque llega a las obras ──
+  for (const tab of ['mnav-miplan', 'mnav-planner', 'mnav-seleccion']) {
+    await cero(false);
+    await page.evaluate(tb => { switchMainNav(tb); showAgView(); }, tab);
+    await page.waitForTimeout(1600);
+    const antes = await leer();
+    expect(antes.vacio, `${tab} en cero tiene que estar vacío o el test no mide nada`).toBe(true);
+    expect(antes.cta.length, `${tab} ofrece una salida`).toBeGreaterThan(0);
+    await tocarCTA();
+    const despues = await leer();
+    expect(despues.vacio, `desde ${tab}, un toque NO puede dejarte en otra pantalla vacía`).toBe(false);
+    expect(despues.obras, `y tiene que dejarte donde hay obras que agregar`).toBeGreaterThan(0);
+  }
+
+  // ── 2 · pero CON intereses el salto a Planear se conserva: ahí sí hay qué hacer ──
+  await cero(true);
+  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  await page.waitForTimeout(1600);
+  const conInt = await leer();
+  expect(conInt.vacio, 'sin plan, Mi Plan sigue vacío aunque haya intereses').toBe(true);
+  expect(conInt.cta[0], 'con intereses el destino es Planear, no el Programa').toMatch(/planear/i);
+  await tocarCTA();
+  const enPlanear = await leer();
+  expect(enPlanear.tab, 'y lleva a Planear').toMatch(/PLANEAR/i);
+  expect(enPlanear.vacio, 'que con intereses NO está vacío — por eso el salto vale').toBe(false);
 });
