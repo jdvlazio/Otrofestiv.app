@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, programParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
+  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, hayEvento, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, programParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, dayFullyPassed, festivalEnded, minToStr, simNow, simTodayStr, toMin,
@@ -157,11 +157,16 @@ export function renderAgenda(){
       // A.3 — primer uso de verdad: nunca hubo intereses. El titular NO puede ser
       // «Tu Plan aparece aquí»: acá el Plan se ARMA, aparece en Mi Plan — y esa
       // pantalla usaba la misma frase con el mismo icono, así que dos de los tres
-      // pasos que promete el stepper se presentaban como el mismo lugar. El icono
-      // es el del paso al que manda el CTA (Intereses), no el del calendario.
+      // pasos que promete el stepper se presentaban como el mismo lugar.
+      // El CTA manda al PROGRAMA y no a Intereses (2 sep 2026): en esta rama
+      // watchlist está vacía por construcción —A.2 se llevó el caso contrario—,
+      // así que Intereses es otra pantalla vacía. Medido: Mi Plan → Planear →
+      // Intereses → Programa, tres vacíos y tres toques antes de poder agregar
+      // nada. Queda igual que el vacío de Intereses, que ya es corazón + «Ir al
+      // Programa»: el icono nombra lo que vas a hacer allá, no el tab destino.
       view.innerHTML=`${_progressHtml}
         <div class="ag-section">
-          ${emptyStateHero(ICONS.heart,t('plan_falta_intereses'),t('empty_intereses_3'),t('cta_ir_intereses'),'mnav-seleccion')}
+          ${emptyStateHero(ICONS.heart,t('plan_falta_intereses'),t('empty_intereses_3'),t('plan_ir_programa'),'mnav-cartelera')}
         </div>`;
       return;
     }
@@ -203,7 +208,13 @@ export function renderAgenda(){
           // iguales se leen como el mismo dato, y con distintos como una contradicción.
           // Esta se nombra con el vocabulario que la app YA usa para este conjunto
           // cuando está vacío: «Nada por planear».
-          const _obras=`${_nP===1?t('pre_obra_planear'):t('pre_obras_planear',{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}`;
+          // El sustantivo sale del DUEÑO (hayEvento): con un taller o una charla
+          // en la cuenta, «obras» sería falso — «actividad» es el paraguas.
+          const _ev=hayEvento(pending,FILMS);
+          const _clave=_nP===1
+            ?(_ev?'pre_actividad_planear':'pre_obra_planear')
+            :(_ev?'pre_actividades_planear':'pre_obras_planear');
+          const _obras=`${t(_clave,{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}`;
           // La alerta vive SOLO antes de calcular (auditoría 18 ago): es un
           // PRE-diagnóstico —«esto va a costar»— y sobrevivía al cálculo, en
           // ámbar y con ícono, justo encima del resultado. Ahí se leía como «tu
@@ -947,7 +958,7 @@ export function renderContextualHeader(state, consensus){
     // MAR de martes leído como océano (cazado en el inventario del 18 ago).
     // ES/PT escriben los días en minúscula; EN los capitaliza.
     // Un taller no es obra pero sí actividad ([vocab]): con un evento adentro el titular usa el paraguas, como _endedStats.
-    const _hayEvento=allWatched.some(s2=>(FILMS.find(fi=>fi.title===s2._title)||{}).type==='event');
+    const _hayEvento=hayEvento(allWatched,FILMS);
     const _dayWord=(dayLabelLong(todayScreenings[0]?.day)||'').split(' ')[0]||t('bar_hoy');
     const dayName=_lang==='en'?_dayWord:_dayWord.toLowerCase();
     return`<div class="ctx-header">
@@ -1234,7 +1245,7 @@ export function renderSavedAgendaHTML(state, consensus){
 }
 
 export function _renderSavedAgendaHTML(state, consensus){
-  const {savedAgenda, FILMS, watched, _activeFestId, FESTIVAL_DATES} = state.snapshot();
+  const {savedAgenda, FILMS, watched, watchlist, _activeFestId, FESTIVAL_DATES} = state.snapshot();
   if(festivalEnded()){
     // ── Modo Recuerdo (RFC docs/RFC-modo-recuerdo.md) ──
     // El plan vivido NO desaparece: recap (si hay vistas) + calendario read-only
@@ -1260,7 +1271,15 @@ export function _renderSavedAgendaHTML(state, consensus){
     const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
     return emptyStateHero(ICONS.sparkles,`${_festNameMp} ${t('plan_fest_terminado')}`,t('empty_vistas'),t('plan_ir_programa'),'mnav-cartelera');
   }
-  if(!savedAgenda||!savedAgenda.schedule.length) return emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('cta_ir_planear'),'mnav-planner');
+  // El vacío manda al primer lugar donde SE PUEDE hacer algo, no al siguiente
+  // nodo del grafo (2 sep 2026). Sin intereses, Planear también está vacío y su
+  // vacío mandaba a Intereses, que también lo está: medido, eran TRES pantallas
+  // vacías y tres toques antes de poder tocar una obra. Con intereses, en cambio,
+  // Planear sí tiene qué calcular y el salto vale. Es el mismo criterio que ya
+  // usa A.2 más arriba («mandarte a una lista agotada»), aplicado al eslabón.
+  if(!savedAgenda||!savedAgenda.schedule.length) return watchlist.size
+    ? emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('cta_ir_planear'),'mnav-planner')
+    : emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('plan_ir_programa'),'mnav-cartelera');
   const all=savedAgenda.schedule;
   const planTitles=new Set(all.map(s=>s._title));
   // Películas marcadas vistas FUERA del plan — en watched pero no en savedAgenda
@@ -1760,7 +1779,9 @@ export function buildResultHTML(scenarios){
     ?` <span class="dato-linea">· ${_nFuera===1?t('res_fuera_1'):t('res_fuera',{n:_nFuera})}</span>`
     :'';
   let html=`${_staleBanner}<div class="ag-summary ag-summary-res">
-    <div class="dato-resultado">${t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_fuera}</div>
+    <div class="dato-resultado">${hayEvento(sc.schedule,FILMS)
+      ?`${ok} ${ok!==1?t('misc_actividades'):t('misc_actividad')}`
+      :t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_fuera}</div>
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
       const pairMsg=pairs.length

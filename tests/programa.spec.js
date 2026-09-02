@@ -1,7 +1,7 @@
 // @ts-check
 // programa.spec.js — Tab Programa: lista, grid, filtros, posters, topbar.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival, goToPlanear, reentrar } = require('./helpers');
+const { LEVIZA_SIMTIME, enterFestival, goToPlanear, reentrar, esperarCalculo } = require('./helpers');
 
 // T01 — Apóstrofe: corazón en lista agrega al watchlist
 test('T01 — apóstrofe: corazón en lista agrega al watchlist', async ({ page }) => {
@@ -1813,7 +1813,12 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
       if (por[ts[i]].some(x => por[ts[j]].some(y => pisan(x, y)))) debiles++;
     }
     // materializar ANTES del re-render (los nodos quedan huérfanos después)
-    const linea = document.querySelector('.dato-linea');
+    // El conteo se acota a Planear (2 sep 2026): contaba .dato-linea en TODO el
+    // documento y eso solo funcionaba mientras ninguna otra pantalla usara el
+    // canon. La hoja «¡Tu Plan está listo!» lo adoptó y el test cayó sin que
+    // Planear hubiera cambiado — medía la app entera creyendo medir una vista.
+    const _plan = document.getElementById('ag-view');
+    const linea = _plan.querySelector('.dato-linea');
     const _insumo = linea?.textContent.replace(/\s+/g, ' ').trim();
     const _cr = linea?.querySelector('.dato-alerta');
     const _crTxt = _cr?.textContent.trim() || null;
@@ -1822,7 +1827,7 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
     // ritmo 1:2 — el hueco al CTA no puede ser el de «entre secciones»
     const _cta = document.querySelector('.av-calc-btn');
     const _gapCta = (_cta && linea) ? Math.round(_cta.getBoundingClientRect().top - linea.getBoundingClientRect().bottom) : null;
-    const _filas = document.querySelectorAll('.dato-linea').length;
+    const _filas = _plan.querySelectorAll('.dato-linea').length;
     const fila = document.querySelector('.av-fila');
     const _filaTxt = fila?.textContent.replace(/\s+/g, ' ').trim();
     const _editar = fila?.querySelector('.av-editar')?.textContent.trim() || null;
@@ -1948,7 +1953,11 @@ test('T92 — el resultado: sin banda «Opción», resumen en línea y días com
     };
   });
   expect(r.bandaOpcion, 'la banda «Opción» murió').toBe(false);
-  expect(r.resumen, 'el resumen es una línea de dato: obras · días').toMatch(/\d+ obras? · \d+ días?/);
+  // El sustantivo lo elige el contenido (T153): con un taller o una charla en el
+  // Plan la línea dice «actividades». Lo que este test afirma es la FORMA
+  // —«N sustantivo · N días»—, no cuál de los dos sustantivos toca.
+  expect(r.resumen, 'el resumen es una línea de dato: N cosas · N días')
+    .toMatch(/\d+ (?:obras?|actividades?) · \d+ días?/);
   expect(r.resumenBadge, 'sin badge — el número no puede leerse como índice').toBe(false);
   expect(r.nBandas, 'hay una banda por día del plan').toBe(r.dias);
   expect(r.color, 'los días van en ámbar, como las horas de Programa').toBe('rgb(245, 158, 11)');
@@ -2105,7 +2114,12 @@ test('T95 — la alerta de cruces es un pre-diagnóstico: no sobrevive al result
   });
   expect(r.antes.alerta, 'antes de calcular la alerta SÍ está (si no, el test no prueba nada)').toBe(true);
   expect(r.despuesAlerta, 'con el resultado en pantalla la alerta se retira').toBe(false);
-  expect(r.despuesLinea, 'el insumo se conserva: se va la alerta, no el dato').toMatch(/\d+ obras/);
+    // Sustantivo agnóstico por la misma razón que T92: acá se afirma que el dato
+    // SIGUE, no con qué palabra se nombra (eso lo vigila T153).
+  expect(r.despuesLinea, 'el insumo SIGUE en pantalla tras calcular — si desaparece, se fue el dato con la alerta')
+    .toBeTruthy();
+  expect(r.despuesLinea, 'el insumo se conserva: se va la alerta, no el dato')
+    .toMatch(/\d+ (?:obras?|actividades?)/);
   if (r.banner) {
     expect(r.banner, 'punto seguido de raya no es puntuación española').not.toMatch(/\.\s*—/);
     expect(r.banner, 'la segunda oración arranca en mayúscula').toMatch(/\.\s+[A-ZÁÉÍÓÚÑ]/);
@@ -3049,4 +3063,192 @@ test('T145 — el rótulo inactivo de la barra cumple AA sobre pósters claros',
   expect(r.contraste,
     `sobre el fondo más claro medido (${_FONDO_MAS_CLARO_MEDIDO}) el rótulo ${r.colorTexto} cumple AA`)
     .toBeGreaterThanOrEqual(4.5);
+});
+
+// ── T146 — el dropdown avisa que hay más, sin comerse la última opción ───────
+// El panel se corta donde llega su max-height y eso caía a MEDIA LETRA: medido
+// en Sección (max-height 464,2 · scrollHeight 660), la fila 11 quedaba con 23 de
+// sus 44px — 53% — y se leía como error de render.
+//
+// La máscara NO puede ser fija: al final de la lista se come la última opción
+// («Función de clausura» quedaba a 1px de la base, dentro del degradado), que es
+// peor que el corte. Por eso la clase se enciende SOLO mientras queda algo abajo.
+//
+// Las dos mitades van juntas a propósito: la primera sola se «arregla» con una
+// máscara fija, y la segunda lo impide.
+test('T146 — el pie del dropdown se desvanece solo mientras queda lista', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(600);
+    switchMainNav('mnav-cartelera');
+    await w(1400);
+    const btn = document.getElementById('seccion-btn');
+    if (!btn) return { sinBoton: true };
+    btn.click();
+    await w(800);
+    const d = document.querySelector('.filter-drop');
+    if (!d || d.scrollHeight <= d.clientHeight + 4) return { noScrollea: true };
+    const arriba = { clase: d.classList.contains('hay-mas'), mask: getComputedStyle(d).maskImage || getComputedStyle(d).webkitMaskImage };
+    d.scrollTop = d.scrollHeight;
+    d.dispatchEvent(new Event('scroll'));
+    await w(400);
+    const abajo = { clase: d.classList.contains('hay-mas'), mask: getComputedStyle(d).maskImage || getComputedStyle(d).webkitMaskImage };
+    // ¿la última opción queda dentro de la zona de desvanecido?
+    const ult = [...d.querySelectorAll('.lugar-opt')].pop();
+    const db = d.getBoundingClientRect(), ub = ult.getBoundingClientRect();
+    return { arriba, abajo, pieUltimaALaBase: Math.round(db.bottom - ub.bottom) };
+  });
+  if (r.sinBoton || r.noScrollea) return;
+  expect(r.arriba.clase, 'con lista por debajo, el pie se desvanece').toBe(true);
+  expect(r.arriba.mask, 'y la máscara aplica de verdad, no solo la clase').toMatch(/gradient/);
+  expect(r.abajo.clase, 'al final de la lista la clase se retira').toBe(false);
+  // Y la MÁSCARA con ella: comprobar solo la clase deja pasar una regla fija
+  // sobre .filter-drop, que es exactamente el modo de fallo documentado arriba
+  // (lo cacé mutando: con la máscara sin condicionar, el test pasaba).
+  expect(r.abajo.mask, 'y con ella el degradado — si no, la última opción se desvanece').toBe('none');
+  expect(r.pieUltimaALaBase, 'porque la última opción está pegada a la base — con máscara sería ilegible')
+    .toBeLessThan(24);
+});
+
+// ── T149 — la pregunta de apertura marca la ciudad cuya programación cayó ────
+// FICDEH tras el sismo: de once ciudades, CUATRO tienen el 100% de sus funciones
+// caídas (Pereira 0/29, Manizales 0/26, Cali 0/17, Quibdó 0/16) y se ofrecían
+// con la misma clase, el mismo color y la misma opacidad que las siete vivas.
+// El destino sí avisa —el banner explica con las palabras del festival—, pero
+// el aviso llegaba DESPUÉS de elegir.
+//
+// El test mide las DOS superficies en la misma corrida a propósito: la hoja de
+// apertura y el nivel de ciudades del filtro de Lugar leen el mismo dueño
+// (festivalCities). Marcar una sola las pondría a decir cosas distintas de la
+// misma ciudad, que es peor que no marcar ninguna.
+test('T149 — la ciudad sin programación viva se marca en las dos superficies', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026');
+  await page.waitForTimeout(1200);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const H = await import('/src/view/helpers.js');
+    // oráculo independiente: la ciudad cae si NINGUNA de sus funciones sobrevive
+    const viva = {};
+    FILMS.forEach(f => {
+      const c = H.venueCity(f.venue); if (!c || !f.day) return;
+      viva[c] = viva[c] || 0; if (!f._cancelled) viva[c]++;
+    });
+    const caidasReales = Object.keys(viva).filter(c => viva[c] === 0).sort();
+    const vivasReales = Object.keys(viva).filter(c => viva[c] > 0).sort();
+
+    const filas = [...document.querySelectorAll('#city-sheet-list .lugar-opt.city')];
+    const hoja = { marcadas: [], sinMarca: [], texto: null, cortado: false };
+    filas.forEach(e => {
+      const m = e.querySelector('.lugar-canc');
+      const n = e.querySelector('span:not(.lugar-canc)');
+      if (m) { hoja.marcadas.push(e.dataset.city); hoja.texto = m.innerText.trim(); }
+      else hoja.sinMarca.push(e.dataset.city);
+      if (n && n.scrollWidth > n.clientWidth + 1) hoja.cortado = true;
+    });
+    hoja.marcadas.sort(); hoja.sinMarca.sort();
+
+    // ── el filtro de Lugar, la otra cara del mismo dueño ──
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet'); await w(700);
+    const lb = document.getElementById('lugar-btn');
+    if (!lb) return { hoja, caidasReales, vivasReales, sinFiltro: true };
+    lb.click(); await w(800);
+    const d = document.querySelector('.filter-drop');
+    const filtro = { marcadas: [], sinMarca: [] };
+    [...d.querySelectorAll('.lugar-opt')].forEach(e => {
+      const v = e.dataset.v || '';
+      if (!v.startsWith('drill:')) return;
+      const c = v.slice(6);
+      (e.querySelector('.lugar-canc') ? filtro.marcadas : filtro.sinMarca).push(c);
+    });
+    filtro.marcadas.sort(); filtro.sinMarca.sort();
+    return { hoja, filtro, caidasReales, vivasReales };
+  });
+
+  // 1 · la hoja marca EXACTAMENTE las caídas, y ninguna viva
+  expect(r.caidasReales.length, 'el fixture tiene que traer ciudades caídas o el test no mide nada')
+    .toBeGreaterThan(0);
+  expect(r.hoja.marcadas, 'la hoja marca las ciudades sin una sola función viva')
+    .toEqual(r.caidasReales);
+  expect(r.hoja.sinMarca, 'y no marca ninguna de las vivas').toEqual(r.vivasReales);
+
+  // 2 · con la MISMA palabra que el banner del destino — sin copy nuevo
+  expect(r.hoja.texto, 'la marca dice lo mismo que el rótulo del banner al que lleva')
+    .toBe('CANCELADA');
+
+  // 3 · el nombre de la ciudad sigue entero: la marca no se lo come
+  expect(r.hoja.cortado, 'la marca no recorta el nombre de la ciudad').toBe(false);
+
+  // 4 · y el filtro de Lugar dice LO MISMO — dos superficies, un dueño
+  if (!r.sinFiltro) {
+    expect(r.filtro.marcadas, 'el filtro de Lugar marca las mismas que la hoja de apertura')
+      .toEqual(r.hoja.marcadas);
+    expect(r.filtro.sinMarca, 'y deja sin marcar las mismas').toEqual(r.hoja.sinMarca);
+  }
+});
+
+// ── T153 — con un taller en la cuenta, Planear no dice «obras» ──────────────
+// «actividad» es el PARAGUAS y un taller no es una obra (regla de vocabulario).
+// El titular de Mi Plan ya elegía el sustantivo por el contenido y T132b lo
+// vigilaba, pero las dos líneas de Planear se habían quedado afuera: medido en
+// FICDEH con «Los frutos que dan vida» —taller de dos sesiones— más una
+// película, decían «2 obras» sobre 1 película y 1 taller. El NÚMERO estaba bien
+// (2 obras, 3 citas); el sustantivo no.
+//
+// La segunda mitad es la que impide arreglar de más: sin taller las dos líneas
+// tienen que seguir diciendo «obras», que es más específico y sigue siendo
+// verdad. Un cambio a «actividades» siempre pasaría la primera mitad sola.
+test('T153 — el sustantivo de Planear sigue al contenido, no a la pantalla', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-12T09:00:00-05:00');
+  const leer = async (conTaller) => {
+    await page.evaluate(async (ev) => {
+      const w = ms => new Promise(r => setTimeout(r, ms));
+      const b = document.createElement('button');
+      b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await w(400);
+      watchlist.clear(); prioritized.clear();
+      savedAgenda = null; cachedResult = null;
+      const pelis = FILMS.filter(f => f.type !== 'event' && !f._cancelled && f.day && f.time);
+      if (ev) {
+        const t = FILMS.find(f => f.is_recurring);
+        watchlist.add(t.title); watchlist.add(pelis[0].title);
+      } else {
+        watchlist.add(pelis[0].title); watchlist.add(pelis[1].title);
+      }
+      if (typeof saveState === 'function') saveState('wl', 'watched');
+    }, conTaller);
+    await goToPlanear(page);
+    await esperarCalculo(page);
+    await page.waitForTimeout(1000);
+    return page.evaluate(() => {
+      const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+      const uno = sel => [...document.querySelectorAll(sel)].filter(vis)
+        .map(e => e.innerText.replace(/\s+/g, ' ').trim())[0] || '';
+      return { insumo: uno('#ag-view .dato-linea'), resultado: uno('#ag-view .dato-resultado') };
+    });
+  };
+
+  // 1 · con un taller adentro, ninguna de las dos líneas puede decir «obra»
+  const conT = await leer(true);
+  expect(conT.insumo, 'la línea de insumo se pintó').toBeTruthy();
+  expect(conT.resultado, 'la línea de resultado se pintó').toBeTruthy();
+  expect(conT.insumo, 'con un taller en la cuenta, el insumo no lo llama obra')
+    .not.toMatch(/\bobras?\b/i);
+  expect(conT.insumo, 'usa el paraguas').toMatch(/\bactividad(es)?\b/i);
+  expect(conT.resultado, 'y el resultado tampoco lo llama obra').not.toMatch(/\bobras?\b/i);
+  expect(conT.resultado, 'usa el paraguas').toMatch(/\bactividad(es)?\b/i);
+  // el número no cambia: son 2 cosas, aunque el taller traiga 2 sesiones
+  expect(conT.insumo, 'y sigue contando 2 — el taller de dos sesiones es UNA').toMatch(/\b2\b/);
+
+  // 2 · sin taller, «obras» sobrevive: es más específico y sigue siendo verdad
+  const sinT = await leer(false);
+  expect(sinT.insumo, 'sin taller el insumo vuelve a la palabra específica')
+    .toMatch(/\bobras?\b/i);
+  expect(sinT.resultado, 'y el resultado también').toMatch(/\bobras?\b/i);
 });

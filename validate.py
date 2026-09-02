@@ -3017,7 +3017,10 @@ try:
     # Techo PEGADO a la familia real (auditoría 25 ago, lote 2): a 90 con la
     # familia en 89, la variante #90 entraba sin ruido. Un techo con holgura es
     # un guardián dormido — si migrás una heredada, bajalo otra vez.
-    _TECHO = 89
+    # 88 (2 sep 2026): la línea «día · hora» de plan-confirm y prio-limit pasó a
+    # tener UN solo bloque que declara las dos — una hermana menos suelta, no una
+    # migración a .dato-linea. El techo baja con ella; el propio guardián lo pide.
+    _TECHO = 88
     if _fam > _TECHO:
         _errs.append(f'familia de líneas de texto gris: {_fam} > techo {_TECHO} — '
                      f'usá .dato-linea en vez de crear otra variante (o bajá el techo si migraste)')
@@ -3027,6 +3030,34 @@ try:
         ok(check, f'canon vivo (t-base + ritmo sp-1) y familia en {_fam} (techo {_TECHO})')
 except Exception as _e:
     warn(check, f'no se pudo verificar dato-linea: {_e}')
+
+# ── [modal-orden] el botón de escape va SIEMPRE último ───────────────────────
+# Hallazgo de Juan (2 sep 2026), medido con rects a 390x844: «SACAR DE MI PLAN»
+# ponía Sacar arriba (y=423) y Cancelar abajo (y=471); «¿REEMPLAZAR FUNCIÓN?»
+# los ponía al revés (Cancelar y=460, «Sí, reemplazar» y=497). En móvil el
+# pulgar aprende una posición, y acá cambiaba según el modal.
+# `.conflict-modal-btns` es `flex-direction:column`, así que el orden del DOM ES
+# el orden vertical: basta leerlo. Y con Cancelar último, el toque accidental
+# más probable —el de abajo, donde descansa el pulgar— es el inofensivo.
+check = 'modal-orden'
+try:
+    import re as _re, glob as _glob
+    _mal = []
+    for _f in _glob.glob('src/**/*.js', recursive=True):
+        _src = open(_f, encoding='utf-8').read()
+        for _m in _re.finditer(r'conflict-modal-btns"?>(.*?)</div>', _src, _re.S):
+            _btns = _re.findall(r'conflict-modal-btn ([a-z$\{\}]+)"', _m.group(1))
+            if not _btns:
+                continue
+            if 'cancel' in _btns and _btns[-1] != 'cancel':
+                _mal.append(f'{_f}: {" → ".join(_btns)}')
+    if _mal:
+        fail(check, 'el botón de escape no va último — el pulgar aprende una '
+                    'posición y esta cambia según el modal: ' + '; '.join(_mal))
+    else:
+        ok(check, 'en todos los modales el escape va último')
+except Exception as _e:
+    warn(check, f'no se pudo verificar modal-orden: {_e}')
 
 # ── [star-semantics] la estrella es CALIFICACIÓN; prioridad = bookmark ─────────
 # Decisión Juan 18 jul 2026: ★/ICONS.star SOLO para rating (convención cine);
@@ -3631,7 +3662,7 @@ try:
         'i18n-hardcoded','i18n-interpolation','i18n-voseo','json-fields','keyart-write-once',
         'no-underscore-actions','onclick-syntax','pais-conocido','pipeline-circuito',
         'poster-editorial-parity','poster-radio-unico','pressed-canon',
-        'prio-limit','responsive-contract','sched-pure-fns','section-display-raw',
+        'plan-contrato','prio-limit','responsive-contract','sched-pure-fns','section-display-raw',
         'sedes-apiladas','shadow-t','sheet-meta-legible','staging-provenance','static-html-template',
         'synopsis-helper','synopsis-length','tasks-sync','template-al-dia','title-normalization',
         'validate-film-tests','version-json','viewstate-shadow','worker-deps',
@@ -4424,11 +4455,11 @@ try:
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
         # guardián pide. Baja cuando se migre algo fuera de helpers.
-        'src/view/helpers.js': 967,  # +6: la Escalera dice la duración DEL BLOQUE, no la de la primera obra (209 programas del repo la tenían mal) — 2 sep  # antes 961,  # +7: el interruptor de Prensa entra a planInputSignature — apagarlo dejaba el Plan en un pase que ya no existía — 30 ago  # antes 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
-        'src/view/agenda.js': 2081,  # +6: la cifra de «por planear» se distingue de la del resultado — 1 sep  # antes 2075,  # +6: el aviso del hueco se deriva del plan, no de un temporizador — 31 ago  # antes 2069,  # +4: por qué el vacío de PLANEAR no puede decir «Tu Plan aparece aquí» — 31 ago  # antes 2065,  # +5: la tarjeta de cierre del día usa todayWatched (effectiveWatched) en vez del set explícito — 31 ago  # antes 2060,  # +9: con el plan desactualizado «Usar este Plan» está disabled, así que el primario pasa a ser Recalcular — la pantalla no tenía ninguna acción que pareciera acción — 30 ago  # antes 2051,  # +15: la fila de una reprogramada dice A DÓNDE se movió — «Actualizar» era un botón a ciegas — 30 ago  # antes 2036,  # +22: el hero no le cuenta atrás a una cancelada, la alternativa de otra ciudad lleva su marca, y el resumen cuenta OBRAS y no funciones — P1 del recorrido — 30 ago  # antes 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
+        'src/view/helpers.js': 993,  # +18: hayEvento pasa a ser dueño único del sustantivo (obras vs actividades), con su porqué (2 sep)  # antes 969,  # +8: festivalCities marca la ciudad cuya programación cayó entera — dueño único de la hoja de apertura y del filtro de Lugar (Juan, 2 sep)  # antes 961,  # +7: el interruptor de Prensa entra a planInputSignature — apagarlo dejaba el Plan en un pase que ya no existía — 30 ago  # antes 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago  # +6: la Escalera dice la duración DEL BLOQUE, no la de la primera obra (209 programas del repo la tenían mal) — 2 sep  # antes 961,  # +7: el interruptor de Prensa entra a planInputSignature — apagarlo dejaba el Plan en un pase que ya no existía — 30 ago  # antes 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
+        'src/view/agenda.js': 2102,  # +8: el sustantivo de las dos líneas de Planear sale del dueño hayEvento — un taller no es una obra (2 sep)  # antes 2094,  # +13: el vacío manda al primer lugar donde se puede hacer algo — se corta la cadena Mi Plan→Planear→Intereses de tres pantallas vacías (2 sep)  # antes 2081,  # +6: la cifra de «por planear» se distingue de la del resultado — 1 sep  # antes 2075,  # +6: el aviso del hueco se deriva del plan, no de un temporizador — 31 ago  # antes 2069,  # +4: por qué el vacío de PLANEAR no puede decir «Tu Plan aparece aquí» — 31 ago  # antes 2065,  # +5: la tarjeta de cierre del día usa todayWatched (effectiveWatched) en vez del set explícito — 31 ago  # antes 2060,  # +9: con el plan desactualizado «Usar este Plan» está disabled, así que el primario pasa a ser Recalcular — la pantalla no tenía ninguna acción que pareciera acción — 30 ago  # antes 2051,  # +15: la fila de una reprogramada dice A DÓNDE se movió — «Actualizar» era un botón a ciegas — 30 ago  # antes 2036,  # +22: el hero no le cuenta atrás a una cancelada, la alternativa de otra ciudad lleva su marca, y el resumen cuenta OBRAS y no funciones — P1 del recorrido — 30 ago  # antes 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
         'src/main.js': 1809,  # +10: #dbg-ver sale del BUILD_VERSION que corre, no de un literal de mayo — 31 ago  # antes 1799,  # +12: el listener de captura honra data-stop — «Agendar» en NO INCLUIDAS abría además la ficha y te dejaba ahí — 30 ago  # antes 1787,  # +7: closeCitySheet al ACTION_REGISTRY — la hoja de ciudad prometía cerrarse tocando el fondo y el registro no la tenía (fallo mudo) — 30 ago  # antes 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
-        'src/i18n/i18n.js': 1694,  # +6: pre_obras_planear/pre_obra_planear — 1 sep  # antes 1688,  # +3: plan_falta_intereses — PLANEAR y MI PLAN dejan de tener el mismo titular — 31 ago  # antes 1685,  # +6: dia_sin_funciones_ciudad(+_sub) — el vacío del día con SOLO ciudad puesta no culpa a sección/sede — 30 ago  # antes 1679,  # +3: conflict_choca_intro_bloque — «función» no se le dice a un taller — 30 ago  # antes 1676,  # +3: bar_prensa_corto en es-en-pt — el filtro de Prensa gana etiqueta (una usuaria no lo encontraba) — 26 ago  # antes 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
-        'src/controller/sheets-controller.js': 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
+        'src/i18n/i18n.js': 1703,  # +6: pre_actividades_planear y pre_actividad_planear en es/en/pt — aprobado por Juan (2 sep)  # antes 1697,  # +3: export_compartir_sin_nombre en es/en/pt — compartir el Plan deja de exigir nombre (aprobado por Juan, 2 sep)  # antes 1694,  # +6: pre_obras_planear/pre_obra_planear — 1 sep  # antes 1688,  # +3: plan_falta_intereses — PLANEAR y MI PLAN dejan de tener el mismo titular — 31 ago  # antes 1685,  # +6: dia_sin_funciones_ciudad(+_sub) — el vacío del día con SOLO ciudad puesta no culpa a sección/sede — 30 ago  # antes 1679,  # +3: conflict_choca_intro_bloque — «función» no se le dice a un taller — 30 ago  # antes 1676,  # +3: bar_prensa_corto en es-en-pt — el filtro de Prensa gana etiqueta (una usuaria no lo encontraba) — 26 ago  # antes 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
+        'src/controller/sheets-controller.js': 1763,  # +22: la hoja «¡Tu Plan está listo!» adopta la fila canónica — era la única de las 6 listas de obras sin póster y la única encajada; entran el thumb por el dueño único, la línea «día · hora» y el rango del pie, y sale la fórmula de rango duplicada — 2 sep  # antes 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
         # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres
         # correcciones sobre la fuente, que valen más escritas que ahorradas.
@@ -5476,6 +5507,40 @@ try:
         ok(check, 'toda ficha con tmdb_id trae su sinopsis')
 except Exception as _e:
     warn(check, f'no se pudo verificar cosecha-tmdb: {_e}')
+
+# ── [plan-contrato] el ÚNICO guardián de entrada del pipeline ─────────────
+# Los otros 125 juzgan el JSON publicado: cada defecto de entrada llegaba
+# disfrazado de síntoma de salida, uno por vuelta. Este pasa cada plan por
+# lib.cargar_plan() —el mismo contrato que corre el ensamblador y el runner—.
+# Falla el plan que RECLAMA el camino genérico (bloque `festival`) y no lo
+# cumple. Un plan sin `festival` es legado o vacío: se nombra, no se reprueba,
+# porque no pasa por el ensamblador genérico y nada suyo se pierde aquí.
+check = 'plan-contrato'
+try:
+    import glob as _gp, os as _osp, sys as _sysp
+    _sysp.path.insert(0, 'pipeline'); import lib as _libp
+    _malos, _vacios, _ok = [], [], 0
+    for _pp in sorted(_gp.glob('pipeline/*.plan.json')):
+        if _pp.endswith('festival.plan.example.json'):
+            continue
+        try:
+            _dp = _libp.cargar_plan(_pp)
+            if _dp['_clase'] == 'generico': _ok += 1
+            elif _dp['_clase'] == 'vacio': _vacios.append(_osp.path.basename(_pp))
+        except AssertionError as _e:
+            _malos.append(str(_e))
+    for _m in _malos:
+        fail(check, _m)
+    if not _malos:
+        ok(check, f'{_ok} plan(es) genérico(s) cumplen su contrato' + (f' · sin pipeline declarado: {_vacios}' if _vacios else ''))
+    elif _vacios:
+        warn(check, f'plan(es) sin `pasos` ni `festival`: {_vacios}')
+except Exception as _e:
+    # Un guardián que no puede correr NO avisa: falla. Si avisa, el push pasa
+    # en verde con el contrato sin comprobar — es la trampa 7 de la auditoría
+    # de guardianes («un tope que calla lo que recorta»), y aquí pasó en la
+    # primera corrida: un NameError en lib.py salió como ⚠ y «OK para push».
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 check = 'pipeline-generico'
 try:

@@ -179,7 +179,6 @@
     "storageKey": "qaff2026_",
     "festivalStartStr": "2026-09-14T00:00:00",
     "festivalEndStr": "2026-09-22T23:00:00",
-    "prioLimit": 4,
     "sharedSlotIsOneScreening": true,
     "mes_es": "septiembre",
     "dias_vacios": [
@@ -198,5 +197,31 @@
       "5. regenerar el bloque qaff2026 de src/config.js desde el JSON: ciudad Bogotá, 14–22 SEP, 9 días con el 21 vacío, prioLimit 4 — y con COMILLAS SIMPLES, que es lo único que leen los guardianes que parsean config.js con regex",
       "6. quitar group:test cuando Juan lo decida"
     ]
-  }
+  },
+  "pasos": [
+    {
+      "cmd": "python3 pipeline/qaff_pdf/fichas.py",
+      "que": "fichas de obra del PDF oficial → staging"
+    },
+    {
+      "cmd": "python3 pipeline/qaff_pdf/parrilla.py",
+      "que": "créditos de parrilla + invitados → staging"
+    },
+    {
+      "cmd": "python3 pipeline/qaff_pdf/verifica.py",
+      "que": "cada dato transcrito contra su página del PDF"
+    },
+    {
+      "cmd": "python3 pipeline/qaff-2026-bogota-crudo.py",
+      "que": "parrilla + fichas + herencia del Chocó → crudo"
+    },
+    {
+      "cmd": "python3 pipeline/ensamblar.py qaff-2026",
+      "que": "crudo + plan → build"
+    },
+    {
+      "cmd": "python3 pipeline/publicar.py qaff-2026",
+      "que": "build → festivals/ (valida el contrato al escribir)"
+    }
+  ]
 }

@@ -6,7 +6,7 @@ extraer → enriquecer → geocodificar → ensamblar → publicar, con la fonta
 entre pasos invisible. Así se desincronizó FICDEH (el barrido escribía un
 sidecar que el ensamblador no leía) sin que nadie lo notara durante días.
 
-Este runner hace dos cosas y ninguna más:
+Este runner hace tres cosas y ninguna más:
 
   1. Corre los pasos DECLARADOS en pipeline/<fest-id>.plan.json, en orden,
      abortando al primer fallo. El plan es datos, no código: declara qué se
@@ -53,7 +53,17 @@ def main():
     plan_p = f'{REPO}/pipeline/{fid}.plan.json'
     if not os.path.exists(plan_p):
         sys.exit(f'no hay plan: {plan_p}\n(formato en el docstring de este script)')
-    pasos = json.load(open(plan_p, encoding='utf-8'))['pasos']
+    # El contrato del plan, ANTES del primer paso: lo que falte sale aquí,
+    # junto y con remedio, no tras diez minutos de OCR y una vuelta entera.
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import lib
+    try:
+        plan = lib.cargar_plan(fid)
+    except AssertionError as e:
+        sys.exit(f'✗ {e}')
+    if plan['_clase'] == 'vacio':
+        sys.exit(f'✗ {plan_p}: ni `pasos` ni `festival` — no hay pipeline declarado')
+    pasos = plan['pasos']
 
     print(f'═══ {fid} · {len(pasos)} pasos · sidecars antes:')
     print('\n'.join(inventario(fid)) or '  (ninguno)')
@@ -68,10 +78,16 @@ def main():
         if solo and i != solo:
             continue
         print(f'\n─── paso {i}/{len(pasos)}: {p["cmd"]}')
+        _b = f'{REPO}/festivals/staging/{fid}-build.json'
+        _antes = os.path.getmtime(_b) if os.path.exists(_b) else 0
         r = subprocess.run(p['cmd'], shell=True, cwd=REPO)
         if r.returncode != 0:
             sys.exit(f'\n✗ el paso {i} falló (exit {r.returncode}) — se aborta aquí; '
                      f'reanudar con --paso {i} tras corregir')
+        # si este paso reescribió el build, lleva el sello del runner y del plan
+        if os.path.exists(_b) and os.path.getmtime(_b) > _antes:
+            _c = lib.sellar_build(fid, i, p['cmd'])
+            print(f'    sello: {_c["por"]} · plan {_c["plan_sha"]} · {_c["fecha"]}')
 
     print(f'\n═══ sidecars después:')
     print('\n'.join(inventario(fid)))

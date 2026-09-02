@@ -682,7 +682,12 @@ test('T122 — el resumen del Plan cuenta OBRAS, no funciones', async ({ page })
     };
   });
   if (!r.resumen) return;
-  const n = parseInt((r.resumen.match(/(\d+)\s*obra/i) || [])[1], 10);
+  // El sustantivo dejó de ser «obra» fijo (2 sep 2026): el fixture de este test
+  // ES un taller, y con un taller en la cuenta la línea usa el paraguas
+  // («actividades»), que es la regla de vocabulario y la vigila T153. Lo que
+  // este test afirma es el NÚMERO —obras distintas, no entradas—, así que lee
+  // la cifra sin depender de la palabra en vez de aflojar la afirmación.
+  const n = parseInt((r.resumen.match(/(\d+)\s*(?:obras?|actividades?)\b/i) || [])[1], 10);
   expect(Number.isFinite(n), 'el resumen declara un número de obras').toBe(true);
   expect(n, 'el resumen cuenta OBRAS distintas, no entradas').toBe(r.obras);
   if (r.entradas > r.obras) {
@@ -1017,7 +1022,14 @@ test('T134 — los vacíos de PLANEAR y MI PLAN se distinguen', async ({ page })
   expect(r.wl, 'app sin intereses — es el estado del hallazgo').toBe(0);
   expect(r.planear, 'PLANEAR muestra su vacío').not.toBe(null);
   expect(r.miplan, 'MI PLAN muestra su vacío').not.toBe(null);
-  expect(r.planear.cta, 'y los CTA siguen apuntando a pasos distintos').not.toBe(r.miplan.cta);
+  // El CTA dejó de ser una de las señales (2 sep 2026). Antes cada vacío
+  // apuntaba al nodo anterior del grafo y por eso los botones diferían solos;
+  // desde que el vacío manda al primer lugar donde SE PUEDE hacer algo, con la
+  // app en cero los dos llevan al Programa —a propósito, es lo que corta la
+  // cadena de tres pantallas vacías que dueña T150—. Lo que esta prueba
+  // defiende es que las dos pantallas no se lean como el MISMO lugar, y eso lo
+  // sostienen el titular y el icono, que son su identidad; el botón es la
+  // salida, y con nada cargado la salida honesta es una sola.
   expect(r.planear.titulo, 'los titulares no pueden ser el mismo').not.toBe(r.miplan.titulo);
   expect(r.planear.icono, 'ni el icono').not.toBe(r.miplan.icono);
 });
@@ -1212,4 +1224,407 @@ test('T144 — el título de la hoja de disponibilidad pregunta por la negación
   expect(r.titulo, 'nombrando la negación, que es lo que se declara').toMatch(/\bNO\b/);
   // La fila sigue siendo el rótulo de sección aprobado: no se toca.
   if (r.fila) expect(r.fila, 'la fila de Planear conserva su rótulo').toContain('Disponibilidad');
+});
+
+// ── T147 — la hoja «¡Tu Plan está listo!» dice de qué día es cada hora ───────
+// Medido en Cinemancia con un Plan real de 8 obras: la hoja mostraba
+// «19:00 · 14:30 · 14:00» — horas en DESCENSO. Son JUE 3, VIE 4 y SÁB 5, pero
+// sin el día en pantalla la lista se leía como un mismo día en desorden, justo
+// en el momento que celebra el Plan.
+//
+// La causa de fondo no era el día: esta era la única de las seis listas de obras
+// de la app sin póster, encajada en un marco y con el título cortado a mano.
+// Al adoptar la fila canónica, el día llega en el renglón que ya existía para el
+// cuándo. Por eso el test mide las TRES cosas juntas: si mañana alguien vuelve a
+// quitar el póster, la fila dejó de ser la canónica aunque el día siga ahí.
+//
+// El día va CON su número: Cinemancia dura 10 días y tiene dos jueves, dos
+// viernes y dos sábados — «JUE» a secas no distingue el 3 del 10.
+test('T147 — cada fila del Plan listo trae póster y su día, y el pie cuenta las que faltan', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    const porDia = {};
+    FILMS.forEach(f => { (porDia[f.day] = porDia[f.day] || []).push(f.title); });
+    watchlist.clear();
+    // Una obra por día en cinco días distintos: garantiza 3 filas de 3 días y
+    // un resto que empieza DESPUÉS de las mostradas — sin eso, el pie se podría
+    // «acertar» por casualidad.
+    Object.keys(porDia).sort().slice(0, 5).forEach(d => watchlist.add(porDia[d][0]));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(900);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const save = document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]');
+    if (!save) return { sinBoton: true };
+    save.click(); await w(1500);
+    const filas = [...document.querySelectorAll('.plan-confirm-film')];
+    if (filas.length < 3) return { pocasFilas: filas.length };
+    const plan = (savedAgenda && savedAgenda.schedule || []);
+    return {
+      cuando: filas.map(e => (e.querySelector('.plan-confirm-when') || {}).innerText || ''),
+      posters: filas.map(e => {
+        const p = e.querySelector('.lb-poster');
+        if (!p) return null;
+        const b = p.getBoundingClientRect();
+        return { w: Math.round(b.width), h: Math.round(b.height) };
+      }),
+      mas: (document.getElementById('plan-confirm-mas') || {}).innerText || '',
+      diasDelPlan: [...new Set(plan.map(s => s.day))],
+      diasMostrados: plan.slice(0, 3).map(s => s.day),
+      diasQueFaltan: [...new Set(plan.slice(3).map(s => s.day))]
+    };
+  });
+  if (r.sinBoton) return;
+  expect(r.pocasFilas, 'el fixture tiene que pintar 3 filas o el test no mide nada').toBeUndefined();
+
+  // 1 · cada fila dice su día, CON número, antes de la hora
+  for (const c of r.cuando) {
+    expect(c, 'la fila dice «DÍA N · HH:MM», con el número que distingue dos jueves')
+      .toMatch(/^[A-ZÁÉÍÓÚ]{3}\s\d{1,2}\s·\s\d{1,2}:\d{2}$/);
+  }
+  // 2 · y los días AVANZAN: es lo que hacía leer las horas como desordenadas
+  const num = c => parseInt(c.match(/\d{1,2}/)[0], 10);
+  expect(r.diasMostrados.length, 'las 3 mostradas son de días distintos o no hay nada que ordenar')
+    .toBe(new Set(r.diasMostrados).size);
+  expect(num(r.cuando[1]), 'la 2ª fila cae después de la 1ª').toBeGreaterThan(num(r.cuando[0]));
+  expect(num(r.cuando[2]), 'la 3ª fila cae después de la 2ª').toBeGreaterThan(num(r.cuando[1]));
+
+  // 3 · la fila es la canónica: lleva el póster del dueño único, en su token
+  for (const p of r.posters) {
+    expect(p, 'la fila lleva póster — es la anatomía de las otras cinco listas').not.toBeNull();
+    expect(p.w, 'y en el token --poster-xs, el mismo de la fila de Mi Plan').toBe(56);
+    expect(p.h, 'idem alto').toBe(84);
+  }
+
+  // 4 · el pie cuenta el rango de LAS QUE FALTAN, no el del Plan entero
+  if (r.diasQueFaltan.length) {
+    const primerFalta = r.diasQueFaltan[0].slice(-2).replace(/^0/, '');
+    const primerMostrado = r.diasMostrados[0].slice(-2).replace(/^0/, '');
+    expect(r.mas, `el pie arranca en el día ${primerFalta}, el primero que no está arriba`)
+      .toMatch(new RegExp('\\b' + primerFalta + '\\b'));
+    expect(r.mas, `y NO en el ${primerMostrado}, que es la primera fila`)
+      .not.toMatch(new RegExp('^\\+\\s*\\d+\\s+\\S+\\s+·\\s+[A-ZÁÉÍÓÚ]{3}\\s' + primerMostrado + '\\b'));
+  }
+});
+
+// ── T148 — compartir el Plan no exige poner nombre ──────────────────────────
+// La hoja tenía DOS controles: el campo y un botón. Con el campo vacío el botón
+// solo pintaba el borde de rojo y volvía — sin mensaje (medido: el texto de la
+// hoja no cambiaba, 98 caracteres antes y después), sin salida visible y sin
+// forma de compartir.
+//
+// Y el nombre nunca fue obligatorio: el subtítulo de la imagen se arma con
+// `(_dn ? _dn+' · ' : '')`, o sea que sin nombre sale «Mi Plan · Festival · N
+// días», publicable. La compuerta afirmaba lo contrario y ganaba la que frena.
+//
+// El test mide las dos mitades juntas a propósito: el rótulo que ofrece la
+// salida, y que la salida FUNCIONE. Arreglar solo el rótulo dejaba la hoja
+// reabriéndose en bucle — sharePlan volvía a no encontrar nombre y la pedía
+// otra vez. Eso lo cazó la medición, no la lectura.
+test('T148 — con el campo vacío, Compartir comparte igual', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    const porDia = {};
+    FILMS.forEach(f => { (porDia[f.day] = porDia[f.day] || []).push(f.title); });
+    watchlist.clear();
+    Object.keys(porDia).sort().slice(0, 4).forEach(d => watchlist.add(porDia[d][0]));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+    try { localStorage.removeItem('otrofestiv_display_name'); } catch (e) {}
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(800);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const save = document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]');
+    if (!save) return { sinPlan: true };
+    save.click(); await w(1400);
+    tap('closePlanConfirm'); await w(700);
+    tap('sharePlan'); await w(900);
+    const sheet = document.getElementById('display-name-sheet');
+    if (!sheet) return { noPide: true };
+    const inp = document.getElementById('dname-input'), cta = document.getElementById('dname-save');
+    const vacio = cta.innerText.trim();
+    inp.value = 'Juanda'; inp.dispatchEvent(new Event('input')); await w(200);
+    const conTexto = cta.innerText.trim();
+    inp.value = ''; inp.dispatchEvent(new Event('input')); await w(200);
+    const vuelve = cta.innerText.trim();
+    // pulsar con el campo vacío — ¿comparte de verdad?
+    let imagen = 0;
+    const _orig = HTMLCanvasElement.prototype.toDataURL;
+    HTMLCanvasElement.prototype.toDataURL = function (...a) {
+      const u = _orig.apply(this, a);
+      if (this.width > 400) imagen = Math.max(imagen, u.length);
+      return u;
+    };
+    cta.click(); await w(2500);
+    HTMLCanvasElement.prototype.toDataURL = _orig;
+    return { vacio, conTexto, vuelve,
+      hojaCerrada: !document.getElementById('display-name-sheet'),
+      guardo: localStorage.getItem('otrofestiv_display_name'),
+      imagen };
+  });
+  if (r.sinPlan) return;
+  expect(r.noPide, 'sin nombre guardado, compartir tiene que ofrecer ponerlo').toBeUndefined();
+
+  // 1 · con el campo vacío el botón OFRECE la salida, en vez de un borde rojo mudo
+  expect(r.vacio, 'con el campo vacío el botón dice que se puede compartir sin nombre')
+    .toMatch(/sin mi nombre/i);
+  // 2 · y apenas escribís, dice lo que va a hacer con lo que escribiste
+  expect(r.conTexto, 'con texto, el botón guarda y comparte').toMatch(/guardar/i);
+  expect(r.vuelve, 'y vuelve a ofrecer la salida si borrás lo escrito').toMatch(/sin mi nombre/i);
+
+  // 3 · la salida FUNCIONA: cierra, no inventa un nombre, y la imagen se generó
+  expect(r.hojaCerrada, 'la hoja se cierra — no se reabre en bucle pidiendo lo mismo').toBe(true);
+  expect(r.guardo, 'y no guarda ningún nombre, porque no lo diste').toBeNull();
+  expect(r.imagen, 'y la imagen del Plan se generó igual: el nombre nunca fue obligatorio')
+    .toBeGreaterThan(1000);
+});
+
+// ── T150 — el vacío no encadena vacíos ──────────────────────────────────────
+// Medido con la app en cero (sin plan, sin intereses, sin vistas): Mi Plan decía
+// «Ir a Planear», Planear decía «Ir a Intereses», Intereses decía «Ir al
+// Programa». TRES pantallas vacías y TRES toques antes de poder tocar una obra,
+// y las tres decían la misma idea con otras palabras.
+//
+// Cada vacío apuntaba al nodo anterior del grafo (Plan ← Planear ← Intereses ←
+// Programa), que es correcto como modelo y pésimo como camino. El destino tiene
+// que ser el primer lugar donde SE PUEDE hacer algo.
+//
+// La segunda mitad del test es la que impide «arreglarlo» de más: CON intereses,
+// el salto Mi Plan → Planear sí vale, porque Planear tiene qué calcular. Mandar
+// también ese caso al Programa sería cambiar un camino muerto por uno perdido.
+test('T150 — con la app en cero, el vacío lleva al Programa de un toque', async ({ page }) => {
+  const cero = async (conIntereses) => {
+    await page.evaluate((ci) => {
+      const b = document.createElement('button');
+      b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      watchlist.clear(); prioritized.clear(); watched.clear();
+      savedAgenda = null; cachedResult = null;
+      if (ci) FILMS.slice(0, 3).forEach(f => watchlist.add(f.title));
+      if (typeof saveState === 'function') saveState('wl', 'watched');
+    }, conIntereses);
+    await page.waitForTimeout(400);
+  };
+  const leer = () => page.evaluate(() => {
+    const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+    const hero = [...document.querySelectorAll('.empty-state-hero,.empty-state')].filter(vis);
+    const cta = hero.flatMap(h => [...h.querySelectorAll('button,[data-action]')]).filter(vis)
+      .map(b => b.innerText.trim());
+    const tab = [...document.querySelectorAll('.main-nav-tab')].find(t => t.classList.contains('on'));
+    return { tab: (tab ? tab.innerText : '').trim().replace(/\n/g, ' '),
+      vacio: hero.length > 0, cta,
+      obras: [...document.querySelectorAll('.poster-card,.plist-item')].filter(vis).length };
+  });
+  const tocarCTA = async () => {
+    await page.evaluate(() => {
+      const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+      const h = [...document.querySelectorAll('.empty-state-hero,.empty-state')].filter(vis);
+      const b = h.flatMap(x => [...x.querySelectorAll('button,[data-action]')]).filter(vis)[0];
+      if (b) b.click();
+    });
+    await page.waitForTimeout(1600);
+  };
+
+  await enterFestival(page, 'cinemancia2026');
+
+  // ── 1 · desde CADA uno de los tres vacíos, un solo toque llega a las obras ──
+  for (const tab of ['mnav-miplan', 'mnav-planner', 'mnav-seleccion']) {
+    await cero(false);
+    await page.evaluate(tb => { switchMainNav(tb); showAgView(); }, tab);
+    await page.waitForTimeout(1600);
+    const antes = await leer();
+    expect(antes.vacio, `${tab} en cero tiene que estar vacío o el test no mide nada`).toBe(true);
+    expect(antes.cta.length, `${tab} ofrece una salida`).toBeGreaterThan(0);
+    await tocarCTA();
+    const despues = await leer();
+    expect(despues.vacio, `desde ${tab}, un toque NO puede dejarte en otra pantalla vacía`).toBe(false);
+    expect(despues.obras, `y tiene que dejarte donde hay obras que agregar`).toBeGreaterThan(0);
+  }
+
+  // ── 2 · pero CON intereses el salto a Planear se conserva: ahí sí hay qué hacer ──
+  await cero(true);
+  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  await page.waitForTimeout(1600);
+  const conInt = await leer();
+  expect(conInt.vacio, 'sin plan, Mi Plan sigue vacío aunque haya intereses').toBe(true);
+  expect(conInt.cta[0], 'con intereses el destino es Planear, no el Programa').toMatch(/planear/i);
+  await tocarCTA();
+  const enPlanear = await leer();
+  expect(enPlanear.tab, 'y lleva a Planear').toMatch(/PLANEAR/i);
+  expect(enPlanear.vacio, 'que con intereses NO está vacío — por eso el salto vale').toBe(false);
+});
+
+// ── T151 — el botón de escape está en el mismo lugar en los dos modales ─────
+// Medido con rects a 390x844: «SACAR DE MI PLAN» ponía Sacar en y=423 y
+// Cancelar en y=471; «¿REEMPLAZAR FUNCIÓN?» los ponía al revés —Cancelar en
+// y=460 y «Sí, reemplazar» en y=497—. En móvil el pulgar aprende una posición,
+// y esta cambiaba según el modal.
+//
+// Se miden los rects y no el orden del DOM a propósito: el guardián estático
+// [modal-orden] ya lee el DOM, y con `flex-direction:column` un `order:` o un
+// `column-reverse` lo dejarían pasar mientras la pantalla dice otra cosa. Acá
+// se afirma sobre lo que el pulgar encuentra.
+test('T151 — en los dos modales el escape es el botón de abajo', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    const porDia = {};
+    FILMS.forEach(f => { (porDia[f.day] = porDia[f.day] || []).push(f.title); });
+    watchlist.clear();
+    Object.keys(porDia).sort().slice(0, 4).forEach(d => watchlist.add(porDia[d][0]));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(900);
+  const leer = () => page.evaluate(() => {
+    const m = document.getElementById('conflict-modal');
+    if (!m) return null;
+    const btns = [...m.querySelectorAll('.conflict-modal-btn')].map(b => ({
+      rol: [...b.classList].find(c => c !== 'conflict-modal-btn') || '?',
+      top: Math.round(b.getBoundingClientRect().top)
+    })).sort((a, b) => a.top - b.top);
+    return { titulo: (m.querySelector('.conflict-modal-hdr') || {}).innerText, btns };
+  });
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const disparar = (attrs) => {
+      const b = document.createElement('button');
+      Object.entries(attrs).forEach(([k, v]) => b.setAttribute(k, v));
+      document.body.appendChild(b); b.click(); b.remove();
+    };
+    document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]').click();
+    await w(1400);
+    disparar({ 'data-action': 'closePlanConfirm' }); await w(800);
+    switchMainNav('mnav-miplan'); showAgView(); await w(1500);
+    const t0 = (savedAgenda && savedAgenda.schedule[0] || {})._title;
+    disparar({ 'data-action': 'removeFromAgenda', 'data-title': t0 || '' });
+    await w(900);
+    return { ok: !!document.getElementById('conflict-modal') };
+  });
+  if (!r.ok) return;
+  const quitar = await leer();
+  expect(quitar, 'el modal de sacar del Plan abre').not.toBeNull();
+
+  await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const m = document.getElementById('conflict-modal'); if (m) m.remove();
+    switchMainNav('mnav-planner'); showAgView(); await w(1600);
+    const sc = cachedResult && cachedResult.scenarios && cachedResult.scenarios[0];
+    const e0 = sc && sc.schedule[0];
+    const cand = FILMS.find(f => f.title !== e0._title && f.day && f.time);
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'confirmReplace');
+    b.setAttribute('data-rmtitle', e0._title); b.setAttribute('data-newtitle', cand.title);
+    b.setAttribute('data-day', cand.day); b.setAttribute('data-time', cand.time);
+    document.body.appendChild(b); b.click(); b.remove(); await w(1000);
+  });
+  const reemplazar = await leer();
+  expect(reemplazar, 'el modal de reemplazar abre').not.toBeNull();
+
+  for (const [nombre, m] of [['sacar del Plan', quitar], ['reemplazar función', reemplazar]]) {
+    expect(m.btns.length, `${nombre}: hay al menos dos botones que comparar`).toBeGreaterThan(1);
+    expect(m.btns[m.btns.length - 1].rol,
+      `${nombre}: el botón de MÁS ABAJO —donde cae el pulgar— tiene que ser el escape`)
+      .toBe('cancel');
+    expect(m.btns[0].rol, `${nombre}: y el de arriba, el que confirma`).toBe('confirm');
+  }
+});
+
+// ── T152 — la columna elegida se marca sola, sin depender de lo que tenga ────
+// Medido en FICDEH el sábado 15 a las 14:00 con un Plan real: la columna ACTIVA
+// tenía 2 de 3 bloques en `opacity .35` (ya pasaron) y la de mañana 2 de 2 en 1.
+// Los bloques solo saben de pasado/futuro: no distinguen columna elegida de
+// columna cualquiera. Así que toda la emphasis de la selección vivía en la
+// cabecera y en un tinte de fondo que, medido en píxeles pintados, da
+// rgb(24,18,8) contra rgb(11,10,8) — Δ(13,8,0) sobre 255, un 5%. Con hoy ya
+// empezado, la columna que mirás queda en fantasmas y la de mañana se lleva la
+// mirada. Pasa todos los días desde el mediodía.
+//
+// La tercera parte es la que define el arreglo: la marca tiene que estar
+// TAMBIÉN en un día sin un solo bloque. Si dependiera del contenido no sería
+// una marca de selección, sería una coincidencia.
+test('T152 — la columna activa se distingue aunque su día esté vacío o pasado', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T14:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet'); await w(500);
+    const sch = [];
+    const hoy = FILMS.filter(x => x.day === '2026-08-15' && !x._cancelled);
+    hoy.filter(x => parseInt(x.time) < 14).slice(0, 3).forEach(f => sch.push({ ...f, _title: f.title }));
+    hoy.filter(x => parseInt(x.time) >= 15).slice(0, 1).forEach(f => sch.push({ ...f, _title: f.title }));
+    FILMS.filter(x => x.day === '2026-08-16' && !x._cancelled).slice(0, 2)
+      .forEach(f => sch.push({ ...f, _title: f.title }));
+    commitPlan(() => ({ schedule: sch }));
+    await w(600);
+    switchMainNav('mnav-miplan'); showAgView(); await w(1800);
+
+    const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+    const mirar = () => [...document.querySelectorAll('.mplan-wk-col')].filter(vis).map(c => ({
+      activa: c.classList.contains('wk-active'),
+      marca: getComputedStyle(c).boxShadow,
+      bloques: [...c.querySelectorAll('.mplan-wk-block')].map(x => Number(getComputedStyle(x).opacity))
+    }));
+    const conPlan = mirar();
+
+    // mover la selección a un día SIN bloques, para ver si la marca sobrevive
+    const idxVacio = DAY_KEYS.findIndex(k => !sch.some(s => s.day === k));
+    let vacia = null;
+    if (idxVacio >= 0) {
+      const b = document.createElement('button');
+      b.setAttribute('data-action', 'selectMiPlanDay');
+      b.setAttribute('data-index', String(idxVacio));
+      document.body.appendChild(b); b.click(); b.remove();
+      await w(1500);
+      const cols = mirar();
+      const act = cols.find(c => c.activa);
+      vacia = act ? { marca: act.marca, bloques: act.bloques.length } : null;
+    }
+    return { conPlan, vacia };
+  });
+
+  const act = r.conPlan.find(c => c.activa);
+  const otra = r.conPlan.find(c => !c.activa);
+  expect(act, 'hay una columna activa').toBeTruthy();
+  expect(otra, 'y una que no lo está — sin las dos no hay nada que comparar').toBeTruthy();
+
+  // 1 · el diagnóstico: los bloques de la activa están MÁS apagados que los de la otra
+  const apagados = act.bloques.filter(o => o < 0.5).length;
+  if (apagados > 0 && otra.bloques.length) {
+    expect(Math.min(...otra.bloques),
+      'la columna que NO mirás tiene sus bloques enteros — por eso se lleva la mirada')
+      .toBe(1);
+  }
+
+  // 2 · la activa lleva una marca propia que la otra no tiene
+  expect(act.marca, 'la columna activa lleva su propia marca, no solo el tinte del 5%')
+    .toMatch(/rgba?\(/);
+  expect(act.marca, 'y es ámbar, el color con el que la app marca lo elegido')
+    .toMatch(/245,\s*158,\s*11/);
+  expect(otra.marca, 'la columna que no está elegida NO la lleva — si no, no marca nada')
+    .toBe('none');
+
+  // 3 · y la marca NO depende de lo que el día tenga adentro
+  if (r.vacia) {
+    expect(r.vacia.bloques, 'el día de control no tiene bloques — es el punto').toBe(0);
+    expect(r.vacia.marca, 'un día vacío elegido se sigue viendo elegido')
+      .toMatch(/245,\s*158,\s*11/);
+  }
 });

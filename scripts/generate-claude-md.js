@@ -137,7 +137,12 @@ Después del clone, leer en este orden:
 1. Este archivo (\`CLAUDE.md\`)
 2. \`docs/ARQUITECTURA.md\` — diseño, reglas, componentes, patrones
 3. Si el trabajo involucra datos de festival: \`docs/SCHEMA.md\`
-4. Si el trabajo involucra onboarding de un festival nuevo: \`docs/PIPELINE.md\`
+4. Si el trabajo involucra onboarding de un festival nuevo: \`pipeline/PROTOCOLO.md\` — **es EL proceso**.
+   Antes de escribir una línea, tener abiertos \`pipeline/correr.py\` (el runner),
+   \`pipeline/enriquecer.py\` (TMDB verificado + Letterboxd + pósters, un comando) y
+   \`pipeline/festival.plan.example.json\` (la plantilla del plan). Si vas a hacer a mano
+   algo que tiene comando, para. \`docs/PIPELINE.md\` es la doctrina de TMDB/LB y el
+   historial de errores: manda en su tema, no es el proceso.
 
 ---
 

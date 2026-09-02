@@ -630,8 +630,8 @@ export function confirmReplace(removedTitle,newTitle,day,time,isScenario){
     <div class="conflict-modal-hdr">${removedTitle?t('plan_reemplazar_funcion'):t('plan_anadir_plan')}</div>
     <div class="conflict-modal-body">${removedTitle?t('plan_reemplazar_funcion_body',{old:`<b>${shortRem}</b>`,new:`<b>${shortNew}</b>`}):t('plan_anadir_plan_body',{new:`<b>${shortNew}</b>`})}</div>
     <div class="conflict-modal-btns">
-      <button class="conflict-modal-btn cancel" data-action="removeConflictModal">${t('search_cancelar')}</button>
       <button class="conflict-modal-btn confirm" id="replace-ok">${removedTitle?t('misc_si_reemplazar'):t('misc_si_anadir')}</button>
+      <button class="conflict-modal-btn cancel" data-action="removeConflictModal">${t('search_cancelar')}</button>
     </div>
   </div>`;
   document.body.appendChild(modal);

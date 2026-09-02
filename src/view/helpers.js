@@ -361,6 +361,24 @@ export function _edHdrSVG(label, accent){
   return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMinYMin meet">${text}</svg>`;
 }
 
+// ── hayEvento — dueño único del sustantivo que nombra un conjunto ───────────
+// «actividad» es el PARAGUAS y un taller no es una obra (regla de vocabulario de
+// Juan): el sustantivo se elige por el contenido, no por la pantalla. «obras» si
+// TODAS son proyecciones; «actividades» si alguna no lo es.
+//
+// Vivía inline en el titular de Mi Plan y lo vigilaba T132b, pero las dos líneas
+// de Planear —«N obras por planear» y «N obras · N días»— se habían quedado
+// afuera: medido en FICDEH con «Los frutos que dan vida» (taller de 2 sesiones)
+// más una película, decían «2 obras» sobre 1 película y 1 taller. El número
+// estaba bien; el sustantivo no. Con tres copias del predicado, la próxima
+// pantalla iba a quedarse afuera igual.
+export function hayEvento(entradas, films){
+  return (entradas||[]).some(e=>{
+    const _t=typeof e==='string'?e:(e&&(e._title||e.title));
+    return ((films||[]).find(f=>f.title===_t)||{}).type==='event';
+  });
+}
+
 export function _posterThumb(f, cssClass, loading){
   const p = f ? getFilmPoster(f) : null;
   const _load = loading || 'lazy';
@@ -571,12 +589,20 @@ export function festivalCities(films){
     if(f.info||!f.venue||!f.day) return;
     const c=vcfg(f.venue).city;
     if(!c) return;
-    (map[c] ||= {name:c,count:0,days:new Set()});
+    (map[c] ||= {name:c,count:0,vivas:0,days:new Set()});
     map[c].count++;
+    if(!f._cancelled) map[c].vivas++;
     map[c].days.add(f.day);
   });
+  // `cancelled` sale de ACÁ y no de un predicado al lado (2 sep 2026): esta
+  // función ya recorre todas las funciones y ya es el dueño único que comparten
+  // la hoja de apertura («¿A cuál ciudad vas?») y el nivel de ciudades del filtro
+  // de Lugar. Con dos derivaciones, una superficie podía decir CANCELADA y la
+  // otra ofrecer la misma ciudad como si nada.
+  // Medido en FICDEH tras el sismo: Pereira 0/29, Manizales 0/26, Cali 0/17 y
+  // Quibdó 0/16 — cuatro de once, ofrecidas con la misma tipografía que las vivas.
   return Object.values(map)
-    .map(c=>({...c, days:[...c.days].sort()}))
+    .map(c=>({...c, days:[...c.days].sort(), cancelled:c.vivas===0}))
     .sort((a,b)=>b.count-a.count);
 }
 

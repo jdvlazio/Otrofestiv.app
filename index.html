@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609012045">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609012045">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609021313">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609021313">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1623,7 +1623,10 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .prio-limit-thumb{width:32px;height:48px;border-radius:var(--r-poster);flex-shrink:0;object-fit:cover;background:var(--surf-3)}
 .prio-limit-info{flex:1;min-width:0}
 .prio-limit-name{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.prio-limit-when{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
+/* Un solo dueño para la línea «día · hora» de las dos hojas hermanas: si cambia
+   el ritmo o el gris, cambia en las dos. Declararla otra vez con otro nombre
+   habría sido la variante gris número 90 — que es justo lo que [dato-linea] frena. */
+.prio-limit-when,.plan-confirm-when{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
 .prio-limit-swap{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);padding:5px 11px;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all var(--tr-base)}
 .prio-limit-swap:active{border-color:var(--amber-30);color:var(--amber);background:var(--amber-10)}
 .prio-limit-cancel{width:calc(100% - 40px);margin:8px 20px 44px;display:block;text-align:center} /* anatomía: regla CANCEL canónica */
@@ -1636,13 +1639,25 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .plan-confirm-ico{width:48px;height:48px;background:var(--green-10);border:1px solid var(--green-30);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .plan-confirm-title{font-size:var(--t-md);font-weight:var(--w-display);color:var(--white);letter-spacing:-.02em}
 .plan-confirm-sub{font-size:var(--t-base);color:var(--gray);margin-top:3px}
-.plan-confirm-films{border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;margin-bottom:18px}
-.plan-confirm-film{display:flex;align-items:center;gap:10px;padding:var(--sp-btn) var(--sp-3);border-bottom:1px solid var(--bdr-l);font-size:var(--t-base);color:var(--white)}
-.plan-confirm-film:last-child{border-bottom:none;color:var(--gray)}
-.plan-confirm-dot{width:5px;height:5px;background:var(--amber);border-radius:50%;flex-shrink:0}
-.plan-confirm-time{color:var(--amber);font-weight:var(--w-bold);font-size:var(--t-caption);flex-shrink:0;min-width:40px}
-.plan-confirm-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.plan-confirm-cta{width:100%} /* anatomía: regla dueña */
+/* Anatomía canónica de fila de obra (2 sep 2026). Auditado: de las SEIS listas
+   de obras de la app, esta era la única sin póster, la única encajada en un marco
+   (18 listas usan separador a sangre) y la única con un gap crudo — el título se
+   cortaba a mano en 28 caracteres. Su hoja HERMANA (prio-limit: misma familia,
+   mismo z-index 9200/9201, mismo trabajo) ya usaba el canon, día incluido.
+   La fila adopta ahora la anatomía de .saved-item, que es la fila de Mi Plan —
+   el destino al que lleva el CTA de esta misma hoja. El póster es el token más
+   chico que existe (--poster-xs, vía .lb-poster, el mismo de Mi Plan): el 32x48
+   de la hermana es un tamaño crudo, no un token. El título se clampea a 2 líneas
+   como las otras cuatro listas, en vez de cortarse en JS. */
+.plan-confirm-films{margin-bottom:var(--sp-2)}
+.plan-confirm-film{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) 0;border-bottom:1px solid var(--bdr-l)}
+.plan-confirm-film:last-child{border-bottom:none}
+.plan-confirm-info{flex:1;min-width:0}
+.plan-confirm-name{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);overflow:hidden;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.25}
+/* El aire vive en el CTA y no en la línea «+N más», que puede no existir:
+   medido, el pie quedaba a 0px del botón primario y a 16px de la lista que
+   resume — pegado a lo que no es suyo y suelto de lo que sí. */
+.plan-confirm-cta{width:100%;margin-top:var(--sp-5)} /* anatomía: regla dueña */
 .rating-action-btn.skip{background:none;color:var(--gray)}
 .rating-action-btn.save{background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber)}
 
@@ -1881,7 +1896,18 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .mplan-wk-col:last-child{border-right:none}
 
 .mplan-wk-col:hover{background:var(--amber-06)}
-.mplan-wk-col.wk-active{background:var(--amber-06)}
+/* La columna elegida se marca por su CONTENEDOR, no por su contenido
+   (2 sep 2026). Los bloques solo saben de pasado/futuro —.mp-past va a
+   opacity .35— así que toda la emphasis de la selección vivía en la
+   cabecera y en este tinte, que medido en píxeles pintados es
+   rgb(24,18,8) contra rgb(11,10,8): Δ(13,8,0) sobre 255, un 5%. Con hoy
+   ya empezado, la columna activa quedaba en fantasmas y la de mañana,
+   entera en futuro, se llevaba la mirada. Pasa todos los días desde el
+   mediodía.
+   El borde mide Δ(79,50,0) — seis veces el tinte— y no toca ninguna señal
+   verdadera: el pasado sigue atenuado y los otros días siguen enteros, que
+   es lo que hace de la grilla un panorama de la semana. */
+.mplan-wk-col.wk-active{background:var(--amber-06);box-shadow:inset 1px 0 0 var(--amber-30),inset -1px 0 0 var(--amber-30)}
 .mplan-wk-col-hdr{height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-bottom:1px solid var(--bdr);background:var(--surf);position:sticky;top:0;z-index:4}
 .mplan-wk-col.wk-today .mplan-wk-col-hdr{background:var(--amber-08)}
 .mplan-wk-col.wk-today .mplan-wk-col-date{color:var(--amber-60);line-height:1}
@@ -2926,6 +2952,9 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    empujaban el pin fuera de la caja y pegaban el conteo al borde. */
 .lugar-opt span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
 .lugar-cnt{font-size:var(--t-sm);color:var(--gray2);flex:none!important}
+/* Marca de ciudad caída: mismo `flex:none!important` que el conteo — sin él,
+   `.lugar-opt span{flex:1}` la estira y le come el nombre a la ciudad. */
+.lugar-canc{font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.5px;color:var(--amber);flex:none!important}
 /* lugar-back — fila de regreso del drill-down de ciudad (festivales multiciudad).
    Ámbar = navegación, no selección: no filtra, vuelve al nivel de ciudades. */
 .lugar-back{color:var(--amber);font-weight:var(--w-semi);font-size:var(--t-sm)}
@@ -2954,6 +2983,10 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    (max-width 300 vs 280, max-height 55vh vs 50vh, scroll props solo en lugar).
    El build sólo aporta position top/right. Guardián [filter-drop-canon]. */
 .filter-drop{position:fixed;min-width:200px;max-width:min(300px,90vw);max-height:55vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);box-shadow:0 8px 24px var(--overlay-55);z-index:9999;animation:lugarFadeIn .12s ease}
+/* El pie se desvanece SOLO mientras queda lista por debajo (clase puesta por
+   _velaElCorte). Fija, la máscara se comía la última opción al llegar al final:
+   el corte a media letra que viene a arreglar es menos grave que eso. */
+.filter-drop.hay-mas{-webkit-mask-image:linear-gradient(to bottom,#000 calc(100% - 22px),transparent);mask-image:linear-gradient(to bottom,#000 calc(100% - 22px),transparent)}
 
 /* ── BUSCADOR — arquitectura overlay ─────────────────────────────────────
    El overlay cubre la pantalla desde el topbar hacia abajo.
@@ -3551,6 +3584,7 @@ setTimeout(function(){
     </div>
   </div>
   <div class="plan-confirm-films" id="plan-confirm-films"></div>
+  <div class="dato-linea" id="plan-confirm-mas"></div>
   <button class="plan-confirm-cta" data-i18n="cta_mi_plan" data-action="closePlanConfirm" data-force="1">Ver Mi Plan</button>
 </div>
 <!-- ── Rating Sheet ── -->
@@ -3676,7 +3710,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609012045";
+    s.src="/src/main.js?v=202609021313";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
