@@ -20,8 +20,15 @@ DOS TRABAJOS, Y EL SEGUNDO ES EL QUE DUELE.
     Por eso compara con lo publicado y ABORTA si el build tiene menos. Con
     `--forzar` se publica igual, pero hay que escribirlo a mano y queda dicho.
 
+3 · SOLO PUBLICA LO QUE CORRIÓ EL RUNNER. El build tiene que llevar el sello
+    de pipeline/correr.py con el SHA del plan que hay ahora. Sin sello —una
+    cadena hecha a mano— o con el sello de un plan que luego cambió, no se
+    publica. Montando QAFF Bogotá (2 sep 2026) se hicieron a mano cuatro pasos
+    que tenían comando y cada uno produjo el defecto que el comando evita; con
+    esto, ese camino no llega a festivals/. --forzar sigue siendo el escape.
+
     python3 pipeline/publicar.py <id>
-    python3 pipeline/publicar.py <id> --forzar   # sí, quiero perder esos datos
+    python3 pipeline/publicar.py <id> --forzar   # sí, quiero perder esos datos / publicar sin sello
 """
 import json, os, sys, collections
 
@@ -53,6 +60,17 @@ def publicar(fid, forzar=False):
     if not os.path.exists(build):
         sys.exit(f'✗ falta {build} — correr antes pipeline/ensamblar.py {fid}')
     b = json.load(open(build, encoding='utf-8'))
+
+    # ── ¿este build lo produjo el runner, con este plan? ────────────────────
+    ok_sello, motivo = lib.sello_valido(fid, b)
+    if not ok_sello and not forzar:
+        sys.exit(f'✗ NO se publica {fid}: {motivo}.\n'
+                 f'  El camino es: python3 pipeline/correr.py {fid}\n'
+                 f'  (o --forzar, a mano, si de verdad querés publicar un build sin correr)')
+    if not ok_sello:
+        print(f'⚠ --forzar: se publica SIN sello del runner — {motivo}')
+    else:
+        print(f'  sello: {motivo}')
 
     rep = collections.Counter()
     out = {k: v for k, v in b.items() if k not in ('films', 'venues', 'sections')}

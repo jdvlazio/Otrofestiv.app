@@ -192,6 +192,12 @@ enriquecía nada), y el calendario sin huecos (`dias_vacios` los declara).
 seis ausencias salieron una por vuelta, al final de la cadena; con el contrato
 salen en la primera corrida.
 
+**Solo se publica lo que corrió el runner.** `correr.py` sella el build tras
+cada paso que lo reescribe (`_corrido`: quién, cuándo, con qué plan — el SHA del
+archivo); `publicar.py` no acepta un build sin sello ni con el sello de un plan
+que cambió después. Una cadena a mano no llega a `festivals/`. El escape es
+`--forzar`, escrito a mano y dicho en voz alta.
+
 **La sala es de la función.** Como dicen §3 y §4: campo `sala` en el crudo. El
 ensamblador la honraba solo desde la tabla de sedes; ahora la que trae la
 función gana, y la tabla manda en el NOMBRE de la sede.
