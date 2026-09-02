@@ -565,12 +565,20 @@ export function festivalCities(films){
     if(f.info||!f.venue||!f.day) return;
     const c=vcfg(f.venue).city;
     if(!c) return;
-    (map[c] ||= {name:c,count:0,days:new Set()});
+    (map[c] ||= {name:c,count:0,vivas:0,days:new Set()});
     map[c].count++;
+    if(!f._cancelled) map[c].vivas++;
     map[c].days.add(f.day);
   });
+  // `cancelled` sale de ACÁ y no de un predicado al lado (2 sep 2026): esta
+  // función ya recorre todas las funciones y ya es el dueño único que comparten
+  // la hoja de apertura («¿A cuál ciudad vas?») y el nivel de ciudades del filtro
+  // de Lugar. Con dos derivaciones, una superficie podía decir CANCELADA y la
+  // otra ofrecer la misma ciudad como si nada.
+  // Medido en FICDEH tras el sismo: Pereira 0/29, Manizales 0/26, Cali 0/17 y
+  // Quibdó 0/16 — cuatro de once, ofrecidas con la misma tipografía que las vivas.
   return Object.values(map)
-    .map(c=>({...c, days:[...c.days].sort()}))
+    .map(c=>({...c, days:[...c.days].sort(), cancelled:c.vivas===0}))
     .sort((a,b)=>b.count-a.count);
 }
 

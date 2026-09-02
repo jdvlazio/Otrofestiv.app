@@ -370,6 +370,12 @@ export function lugarOpen(){
       +'<span>'+label+'</span>'
       // "todos los lugares" sin conteo (total general sin referencia confunde);
       // ciudades y sedes sí muestran su número.
+      // Marca de ciudad caída (2 sep 2026): el dato sale de festivalCities —el
+      // MISMO dueño que alimenta la hoja de apertura—, así que las dos
+      // superficies no pueden decir cosas distintas de la misma ciudad. Antes
+      // acá se leía «Quibdó 14» sobre catorce obras con todas sus funciones
+      // caídas por el sismo.
+      +(opts.canc?'<span class="lugar-canc">'+t('notice_cancelada')+'</span>':'')
       +(count!=null?'<span class="lugar-cnt">'+count+'</span>':'')
       +(opts.chev?ICONS.chevronR:'')
       +'</div>';
@@ -385,7 +391,7 @@ export function lugarOpen(){
     }
     if(!drillCity){
       drop.innerHTML=_row('all', t('filter_todos_lugares'), null)
-        +cities.map(c=>_row('drill:'+c.name, c.name, _cuentaCiudad(c.name), {chev:true})).join('');
+        +cities.map(c=>_row('drill:'+c.name, c.name, _cuentaCiudad(c.name), {chev:true, canc:c.cancelled})).join('');
     } else {
       const cv=venues.filter(v=>v.city===drillCity);
       const ccount=_cuentaCiudad(drillCity);
@@ -399,7 +405,7 @@ export function lugarOpen(){
       // la sangría.
       const _hueco='<span class="lugar-gutter" aria-hidden="true"></span>';
       drop.innerHTML='<div class="lugar-opt lugar-back" data-v="back">'+ICONS.chevronL+'<span>'+t('filter_ciudades')+'</span></div>'
-        +_row('city:'+drillCity, drillCity, ccount, {icon:_hueco})
+        +_row('city:'+drillCity, drillCity, ccount, {icon:_hueco, canc:!!(cities.find(c=>c.name===drillCity)||{}).cancelled})
         +cv.map(v=>_row('sede:'+v.key, v.label, v.count, {icon:ICONS.pin})).join('');
     }
   }
