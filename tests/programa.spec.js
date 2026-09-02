@@ -3104,3 +3104,81 @@ test('T146 — el pie del dropdown se desvanece solo mientras queda lista', asyn
   expect(r.pieUltimaALaBase, 'porque la última opción está pegada a la base — con máscara sería ilegible')
     .toBeLessThan(24);
 });
+
+// ── T149 — la pregunta de apertura marca la ciudad cuya programación cayó ────
+// FICDEH tras el sismo: de once ciudades, CUATRO tienen el 100% de sus funciones
+// caídas (Pereira 0/29, Manizales 0/26, Cali 0/17, Quibdó 0/16) y se ofrecían
+// con la misma clase, el mismo color y la misma opacidad que las siete vivas.
+// El destino sí avisa —el banner explica con las palabras del festival—, pero
+// el aviso llegaba DESPUÉS de elegir.
+//
+// El test mide las DOS superficies en la misma corrida a propósito: la hoja de
+// apertura y el nivel de ciudades del filtro de Lugar leen el mismo dueño
+// (festivalCities). Marcar una sola las pondría a decir cosas distintas de la
+// misma ciudad, que es peor que no marcar ninguna.
+test('T149 — la ciudad sin programación viva se marca en las dos superficies', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026');
+  await page.waitForTimeout(1200);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const H = await import('/src/view/helpers.js');
+    // oráculo independiente: la ciudad cae si NINGUNA de sus funciones sobrevive
+    const viva = {};
+    FILMS.forEach(f => {
+      const c = H.venueCity(f.venue); if (!c || !f.day) return;
+      viva[c] = viva[c] || 0; if (!f._cancelled) viva[c]++;
+    });
+    const caidasReales = Object.keys(viva).filter(c => viva[c] === 0).sort();
+    const vivasReales = Object.keys(viva).filter(c => viva[c] > 0).sort();
+
+    const filas = [...document.querySelectorAll('#city-sheet-list .lugar-opt.city')];
+    const hoja = { marcadas: [], sinMarca: [], texto: null, cortado: false };
+    filas.forEach(e => {
+      const m = e.querySelector('.lugar-canc');
+      const n = e.querySelector('span:not(.lugar-canc)');
+      if (m) { hoja.marcadas.push(e.dataset.city); hoja.texto = m.innerText.trim(); }
+      else hoja.sinMarca.push(e.dataset.city);
+      if (n && n.scrollWidth > n.clientWidth + 1) hoja.cortado = true;
+    });
+    hoja.marcadas.sort(); hoja.sinMarca.sort();
+
+    // ── el filtro de Lugar, la otra cara del mismo dueño ──
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet'); await w(700);
+    const lb = document.getElementById('lugar-btn');
+    if (!lb) return { hoja, caidasReales, vivasReales, sinFiltro: true };
+    lb.click(); await w(800);
+    const d = document.querySelector('.filter-drop');
+    const filtro = { marcadas: [], sinMarca: [] };
+    [...d.querySelectorAll('.lugar-opt')].forEach(e => {
+      const v = e.dataset.v || '';
+      if (!v.startsWith('drill:')) return;
+      const c = v.slice(6);
+      (e.querySelector('.lugar-canc') ? filtro.marcadas : filtro.sinMarca).push(c);
+    });
+    filtro.marcadas.sort(); filtro.sinMarca.sort();
+    return { hoja, filtro, caidasReales, vivasReales };
+  });
+
+  // 1 · la hoja marca EXACTAMENTE las caídas, y ninguna viva
+  expect(r.caidasReales.length, 'el fixture tiene que traer ciudades caídas o el test no mide nada')
+    .toBeGreaterThan(0);
+  expect(r.hoja.marcadas, 'la hoja marca las ciudades sin una sola función viva')
+    .toEqual(r.caidasReales);
+  expect(r.hoja.sinMarca, 'y no marca ninguna de las vivas').toEqual(r.vivasReales);
+
+  // 2 · con la MISMA palabra que el banner del destino — sin copy nuevo
+  expect(r.hoja.texto, 'la marca dice lo mismo que el rótulo del banner al que lleva')
+    .toBe('CANCELADA');
+
+  // 3 · el nombre de la ciudad sigue entero: la marca no se lo come
+  expect(r.hoja.cortado, 'la marca no recorta el nombre de la ciudad').toBe(false);
+
+  // 4 · y el filtro de Lugar dice LO MISMO — dos superficies, un dueño
+  if (!r.sinFiltro) {
+    expect(r.filtro.marcadas, 'el filtro de Lugar marca las mismas que la hoja de apertura')
+      .toEqual(r.hoja.marcadas);
+    expect(r.filtro.sinMarca, 'y deja sin marcar las mismas').toEqual(r.hoja.sinMarca);
+  }
+});

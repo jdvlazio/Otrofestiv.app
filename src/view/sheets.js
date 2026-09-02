@@ -156,9 +156,15 @@ export function openCitySheet(){
   // casi lo mismo y es repetición visual. Los tabs de día siguen siendo los del
   // festival ENTERO —la madre— y un día sin funciones en tu ciudad simplemente
   // se ve vacío. La ciudad se elige por su nombre, nada más.
+  // CON marca de caída (Juan, 2 sep 2026): la pregunta que abre la app ofrecía
+  // las ciudades del sismo con la misma tipografía que las vivas. La fila sigue
+  // siendo TOCABLE —no se oculta, se dice— y al entrar el banner explica con las
+  // palabras del festival; lo que cambia es que ahora se sabe antes de elegir.
+  // La palabra es la MISMA del rótulo de ese banner (notice_cancelada), así que
+  // la pregunta y la respuesta se nombran igual y no hace falta copy nuevo.
   document.getElementById('city-sheet-list').innerHTML=cities.map(c=>
     `<div class="lugar-opt city" data-action="citySheetPick" data-city="${String(c.name).replace(/"/g,'&quot;')}">
-      <span>${c.name}</span>${ICONS.chevronR}
+      <span>${c.name}</span>${c.cancelled?`<span class="lugar-canc">${t('notice_cancelada')}</span>`:''}${ICONS.chevronR}
     </div>`).join('')
   // La salida es una fila más de la lista (como "todos los lugares" en el filtro),
   // no un "cancelar": no está cancelando nada, está eligiendo la otra opción.
