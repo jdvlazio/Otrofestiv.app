@@ -3050,3 +3050,52 @@ test('T145 — el rótulo inactivo de la barra cumple AA sobre pósters claros',
     `sobre el fondo más claro medido (${_FONDO_MAS_CLARO_MEDIDO}) el rótulo ${r.colorTexto} cumple AA`)
     .toBeGreaterThanOrEqual(4.5);
 });
+
+// ── T146 — el dropdown avisa que hay más, sin comerse la última opción ───────
+// El panel se corta donde llega su max-height y eso caía a MEDIA LETRA: medido
+// en Sección (max-height 464,2 · scrollHeight 660), la fila 11 quedaba con 23 de
+// sus 44px — 53% — y se leía como error de render.
+//
+// La máscara NO puede ser fija: al final de la lista se come la última opción
+// («Función de clausura» quedaba a 1px de la base, dentro del degradado), que es
+// peor que el corte. Por eso la clase se enciende SOLO mientras queda algo abajo.
+//
+// Las dos mitades van juntas a propósito: la primera sola se «arregla» con una
+// máscara fija, y la segunda lo impide.
+test('T146 — el pie del dropdown se desvanece solo mientras queda lista', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(600);
+    switchMainNav('mnav-cartelera');
+    await w(1400);
+    const btn = document.getElementById('seccion-btn');
+    if (!btn) return { sinBoton: true };
+    btn.click();
+    await w(800);
+    const d = document.querySelector('.filter-drop');
+    if (!d || d.scrollHeight <= d.clientHeight + 4) return { noScrollea: true };
+    const arriba = { clase: d.classList.contains('hay-mas'), mask: getComputedStyle(d).maskImage || getComputedStyle(d).webkitMaskImage };
+    d.scrollTop = d.scrollHeight;
+    d.dispatchEvent(new Event('scroll'));
+    await w(400);
+    const abajo = { clase: d.classList.contains('hay-mas'), mask: getComputedStyle(d).maskImage || getComputedStyle(d).webkitMaskImage };
+    // ¿la última opción queda dentro de la zona de desvanecido?
+    const ult = [...d.querySelectorAll('.lugar-opt')].pop();
+    const db = d.getBoundingClientRect(), ub = ult.getBoundingClientRect();
+    return { arriba, abajo, pieUltimaALaBase: Math.round(db.bottom - ub.bottom) };
+  });
+  if (r.sinBoton || r.noScrollea) return;
+  expect(r.arriba.clase, 'con lista por debajo, el pie se desvanece').toBe(true);
+  expect(r.arriba.mask, 'y la máscara aplica de verdad, no solo la clase').toMatch(/gradient/);
+  expect(r.abajo.clase, 'al final de la lista la clase se retira').toBe(false);
+  // Y la MÁSCARA con ella: comprobar solo la clase deja pasar una regla fija
+  // sobre .filter-drop, que es exactamente el modo de fallo documentado arriba
+  // (lo cacé mutando: con la máscara sin condicionar, el test pasaba).
+  expect(r.abajo.mask, 'y con ella el degradado — si no, la última opción se desvanece').toBe('none');
+  expect(r.pieUltimaALaBase, 'porque la última opción está pegada a la base — con máscara sería ilegible')
+    .toBeLessThan(24);
+});
