@@ -451,6 +451,41 @@ def cargar_plan(fid, repo=None):
     return d
 
 
+def sello_plan(fid, repo=None):
+    """El SHA del plan tal como está en disco. Es lo que el sello guarda: un
+    plan editado después de correr deja de casar, y el build hay que volver a
+    correrlo — no publicarlo desde un plan que ya no es el suyo."""
+    import hashlib
+    p = f'{repo or REPO}/pipeline/{fid}.plan.json'
+    return hashlib.sha256(open(p, 'rb').read()).hexdigest()[:16]
+
+
+def sellar_build(fid, paso, cmd, repo=None):
+    """correr.py lo llama tras cada paso que reescribió el build: deja en él
+    `_corrido` = {por, fecha, plan_sha, paso, cmd}. Un build sin sello, o con
+    el sello de otro plan, no lo publica publicar.py."""
+    R = repo or REPO
+    b = f'{R}/festivals/staging/{fid}-build.json'
+    if not os.path.exists(b):
+        return None
+    d = json.load(open(b, encoding='utf-8'))
+    d['_corrido'] = {'por': 'pipeline/correr.py', 'fecha': datetime.datetime.now().isoformat(timespec='seconds'),
+                     'plan_sha': sello_plan(fid, R), 'paso': paso, 'cmd': cmd}
+    json.dump(d, open(b, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    return d['_corrido']
+
+
+def sello_valido(fid, build, repo=None):
+    """(ok, motivo). El build viene de correr.py Y del plan que hay ahora."""
+    c = (build or {}).get('_corrido') or {}
+    if not c:
+        return False, 'el build no lleva sello: no lo produjo pipeline/correr.py'
+    if c.get('plan_sha') != sello_plan(fid, repo):
+        return False, (f'el sello es de otro plan (sha {c.get("plan_sha")} ≠ {sello_plan(fid, repo)}): '
+                       f'el plan cambió después de correr')
+    return True, f'sellado por {c.get("por")} el {c.get("fecha")} (paso {c.get("paso")})'
+
+
 def cargar_crudo(path):
     """Carga un sidecar del formato intermedio y FALLA si no lo cumple. Las
     herramientas genéricas solo aceptan este shape: mejor un error a la cara
@@ -663,6 +698,18 @@ def _selftest():
       ['2026-09-01', '2026-09-02', '2026-09-03'])
     json.dump({'pasos': [{'cmd': 'x', 'que': 'x'}]}, open(f'{_root}/pipeline/l.plan.json', 'w'))
     t('plan legado se clasifica, no reprueba', cargar_plan(f'{_root}/pipeline/l.plan.json', repo=_root)['_clase'], 'legado')
+    _sh.rmtree(_root)
+    # ── el sello del build: viene del runner Y del plan que hay ahora ─────
+    _root = _tf.mkdtemp(); _os.makedirs(f'{_root}/pipeline'); _os.makedirs(f'{_root}/festivals/staging')
+    json.dump({'pasos': []}, open(f'{_root}/pipeline/s.plan.json', 'w'))
+    json.dump({'films': []}, open(f'{_root}/festivals/staging/s-build.json', 'w'))
+    t('build sin sello no vale', sello_valido('s', json.load(open(f'{_root}/festivals/staging/s-build.json')), repo=_root)[0], False)
+    sellar_build('s', 1, 'x', repo=_root)
+    t('build sellado vale', sello_valido('s', json.load(open(f'{_root}/festivals/staging/s-build.json')), repo=_root)[0], True)
+    json.dump({'pasos': [], 'x': 1}, open(f'{_root}/pipeline/s.plan.json', 'w'))   # el plan cambia después
+    _v = sello_valido('s', json.load(open(f'{_root}/festivals/staging/s-build.json')), repo=_root)
+    t('plan editado tras correr invalida el sello', _v[0], False)
+    assert 'otro plan' in _v[1]; ok[0] += 1
     _sh.rmtree(_root)
     print(f'✓ selftest: {ok[0]} casos')
 
