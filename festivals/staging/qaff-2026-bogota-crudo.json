@@ -40,10 +40,13 @@
      "duracion_min": 19,
      "pais": "Congo",
      "_obra_src": "parrilla del PDF oficial del programa",
-     "section": "Imaginarios Afrodisruptivos",
+     "_seccion": "Imaginarios Afrodisruptivos",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/face-to-face.jpg",
      "posterSource": "custom",
+     "lbSlug": "face-to-face-2021-4",
+     "tmdb_id": 1742389,
+     "synopsis_en": "At a difficult moment in his personal and professional life, choreographer Florent Mahoukou confronts himself and his own reflection in a performance filmed on the shore.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -58,7 +61,7 @@
      "sinopsis": "Zadie es una floristería independiente que sufre en privado de fibromas, pero está decidida a llevar su carrera al siguiente nivel. Cuando llega un trabajo de ensueño, Zadie busca ayuda para controlar su cuerpo cambiante, pero los crecimientos no deseados amenazan con apoderarse de ella.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Diaspórica",
+     "_seccion": "Imaginarios Afrodisruptivos",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/mango.jpg",
      "posterSource": "custom",
@@ -77,7 +80,7 @@
      "sinopsis": "Concrete Moves está inspirado en un recuerdo de la infancia: el miedo provocado por una serpiente durante una excursión escolar al faro de Mamelles en Dakar. Al regresar a esa misma colina décadas después, encuentro un litoral transformado por una expansión urbana implacable. A través de la danza, imágenes de archivo, la invocación de la memoria y la metáfora de la serpiente como una ciudad que cambia de piel, la película traza un viaje a través de un lugar donde el cemento borra lentamente la memoria, la naturaleza y los rastros del pasado.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Africano",
+     "_seccion": "Imaginarios Afrodisruptivos",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/concrete-moves.jpg",
      "posterSource": "custom",
@@ -101,7 +104,9 @@
    "sinopsis": "Florent Mahoukou · Gwladys Gambie · Catalina Mosquera · Shamyr Caicedo Rivas · Santiago Trujillo",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p15",
-   "hora_fin": "17:00"
+   "hora_fin": "17:00",
+   "duracion_min": 120,
+   "duration": "120 min"
   },
   {
    "dia": "2026-09-15",
@@ -120,7 +125,7 @@
      "sinopsis": "En un intento desesperado por escapar del aislamiento, un personaje sin rostro se lanza desde una cornisa esperando encontrar su final, sin saber que en el fondo de la caída las leyes de la gravedad no aplican para él: rebota. Frustrado por este hecho, sigue intentándolo en diferentes escenarios, en un ciclo constante. Todo esto, enmarcado en un paisaje desolado, contaminado y sin recursos.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/free-fall.jpg",
      "posterSource": "custom",
@@ -140,7 +145,7 @@
      "sinopsis": "Teyo, una chica trans, se prepara para empezar en su nuevo colegio exclusivo para chicas. Mientras recorre Quibdó, una ciudad cálida y vibrante, sortea los ritmos y las miradas que la reciben antes de entrar a clase.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/kanekalon.jpg",
      "posterSource": "custom",
@@ -160,10 +165,13 @@
      "sinopsis": "ULDA (65) se niega a hacerse cargo del funeral de su esposo machista porque él murió en la cama de otra mujer. En casa, solo queda Bertha, una cabra revoltosa, que será su compañía mientras ella vuelve a ser la mujer que era antes.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/bertha.jpg",
      "posterSource": "custom",
+     "lbSlug": "bertha",
+     "tmdb_id": 1742324,
+     "synopsis_en": "ULDA (65) refuses to take charge of her macho husband's funeral because he died in another woman's bed. At home, only Bertha, a mischievous goat, remains as her companion while she returns to the woman she once was.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -178,7 +186,7 @@
      "sinopsis": "En el futuro, una anciana hacker y bordadora debe enfrentar sus propios traumas y usar sus habilidades para escapar de una realidad virtual. Esta historia está basada en la vida de mi abuela, Leonilia Ferreira.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Fronteras Latam",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/hacker-leonilia.jpg",
      "posterSource": "custom",
@@ -198,7 +206,7 @@
      "sinopsis": "En el corazón del Chocó, Diógenes, un joven universitario afrocolombiano, vive atrapado entre las tradiciones de su abuelo Anacleto, un maestro productor de viche, y sus propias aspiraciones de salir al mundo y construir una vida diferente.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/viche.jpg",
      "posterSource": "custom",
@@ -217,7 +225,14 @@
      "genre": "Documental",
      "sinopsis": "El documental aborda el protagonismo femenino negro desde la óptica de la personaje popular Tia Ciata, una mujer de suma importancia para la historia y la cultura brasileña, referencia en la construcción de la identidad nacional.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Colombiano",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/iwvrGBWNVna32CMwWEAuRmCUkmG.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "aunt-ciata",
+     "tmdb_id": 602540,
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
@@ -237,7 +252,9 @@
    "sinopsis": "Modera María José López · Emma Van Lare · Ana Beatriz Silva · Mariana Campos · Wilson Borja",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p32",
-   "hora_fin": "13:00"
+   "hora_fin": "13:00",
+   "duracion_min": 180,
+   "duration": "180 min"
   },
   {
    "dia": "2026-09-15",
@@ -256,11 +273,20 @@
      "genre": "Documental",
      "sinopsis": "The Banjo Boys sigue el electrizante ascenso de Madalitso Band, un dúo malauí—Yobu Maligwa y Yosefe Kalekeni—que construyeron sus propios instrumentos en un banjo, un babatone (bajo) de una cuerda y un bombo de pie, creando un sonido que realmente hace mover a la gente. Una vez despedidos como locos por sus incansables actuaciones callejeras en Lilongwe, llaman la atención de Neil Nayar, un músico británico cautivado por la vibrante alma de Malaui. Lo que comienza como un encuentro casual enciende un trío inesperado, catapultándolos desde las calles locales hasta los escenarios más grandes del mundo",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/6CmwyWw15chXWgBcYi5qBYtcIGc.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-banjo-boys",
+     "tmdb_id": 1547480,
+     "synopsis_en": "The Banjo Boys follows the rise of Madalitso Band, Malawian musicians Yobu Maligwa and Yosefe Kalekeni, who craft a banjo, a one-stringed babatone, and foot drum, creating a sound that moves audiences. Once mocked as madmen in Lilongwe’s streets, they meet Neil Nayar, a British musician drawn to Malawi’s spirit. Their chance encounter sparks a trio, propelling them from local busking to global stages like Sauti za Busara, WOMAD, and Joshua Tree. Facing visa struggles, personal tragedies—including original member Rice’s imprisonment for murder—and cultural tensions, their grit fuels joyous performances. Yobu’s pastoral visions, Yosefe’s resilience, and Neil’s purpose drive their bond. Their minimalist sound bridges continents, culminating in a 2023 world tour and a legendary Malawi homecoming. Intimate interviews and vibrant performances reveal music’s power to unite and transform.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p70"
+   "_src": "parrilla impresa en el PDF oficial del programa, p70",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-15",
@@ -276,10 +302,18 @@
      "anio": 2025,
      "tipo": "Documental, Experimental",
      "idioma": "Español",
-     "genre": "Documental, Experimental",
+     "genre": "Documental",
      "sinopsis": "Un grupo de bailarinas indaga en la relación entre cuerpo y territorio utilizando la danza Butoh como medio de reflexión y creación. Fitofascias articula una serie de intervenciones en espacios públicos de Buenos Aires y el caribe colombiano donde los feminicidios han dejado huellas en la memoria colectiva.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Africano",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/uAj0iQAgnvSFbSpSAeKG6pXEL2T.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "fitofascias",
+     "tmdb_id": 1548637,
+     "synopsis_en": "Fitofascias is an artistic project that combines body movement with the natural environment. The work explores the deep connection between the body and the earth through interventions in public spaces.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
      "titulo": "Aisha No Puede Volar Lejos",
@@ -295,11 +329,13 @@
      "titulo_original": "Aisha Can't Fly Away",
      "title_en": "Aisha Can't Fly Away",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Africano",
+     "_seccion": "Panorama Africano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/aisha-can-t-fly-away.jpg",
      "posterSource": "custom",
      "lbSlug": "aisha-cant-fly-away",
+     "tmdb_id": 1337148,
+     "synopsis_en": "Aisha, a 26-year-old Sudanese woman, lives in Ain-Shams, a neighborhood in Cairo with a large African migrant community. The authorities’ indifference to the violent tensions between Egyptians and various African nationalities, has allowed different gangs to seize control of the neighborhood. The situation quickly turns sour after one of them offers Aisha security in exchange for a favor.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
@@ -320,7 +356,9 @@
    "sinopsis": "Moderan Melissa Riquet, Sofía Espinosa y María José Durán · Juan Manuel Amaya · Douna Tongrongru · Petra Ventana · Maguemati Wabgou",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p47",
-   "hora_fin": "16:00"
+   "hora_fin": "16:00",
+   "duracion_min": 120,
+   "duration": "120 min"
   },
   {
    "dia": "2026-09-15",
@@ -340,10 +378,13 @@
      "sinopsis": "Ouzin, Baba y Sémou, amigos de toda la vida y jubilados, nunca fallan a su cita diaria para tomar café. Pero cada año, en abril, Sémou se siente atormentado por la pérdida de su primer amor. Una tarde, cuando Ouzin y Baba se preocupan por su amigo, Sémou no aparece para el café.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Diaspórica",
+     "_seccion": "Prisma Femenino",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/cafe.jpg",
      "posterSource": "custom",
+     "lbSlug": "cafe-2025-1",
+     "tmdb_id": 1742385,
+     "synopsis_en": "Ouzin, Baba and Sémou, longtime friends and retirees, never miss their daily coffee meetup — until the day one of them fails to show up.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -358,7 +399,7 @@
      "sinopsis": "DOM, de 32 años, está en terapia. Al llegar el final de las vacaciones de Navidad, se le concede, por primera vez en años, el derecho a pasar un día a solas con sus hijas. Un día precioso... que teme ver llegar a su fin.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Prisma Femenino",
+     "_seccion": "Prisma Femenino",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/happy-meal.jpg",
      "posterSource": "custom",
@@ -377,7 +418,7 @@
      "sinopsis": "Cuando Gloria descubre un secreto profundo que su hija Ilana le confía, lucha por reaccionar, atrapada en el silencio de la religión y las tradiciones que asfixian a su familia.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Fronteras Latam",
+     "_seccion": "Prisma Femenino",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/gloria.jpg",
      "posterSource": "custom",
@@ -395,7 +436,15 @@
      "genre": "Ficción",
      "sinopsis": "Una pastora es convencida por su amigo de la infancia, convertido en vendedor de medicamentos falsos, de que vaya a buscar los bienes que un espíritu le habría robado. De hecho, circula el rumor de que un demonio ronda las calles de Abiyán: \"El que llora\".",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Prisma Femenino",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/cmvFvwo7MR3xtpCdBYwJJMZSKAh.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "celui-qui-pleure",
+     "tmdb_id": 1628580,
+     "synopsis_en": "A pastor allows himself to be persuaded by his childhood friend, now a trafficker of smuggled medicines, to recover goods that a spirit has stolen from him. Indeed, rumors say that a demon haunts the streets of Abidjan: the one who cries.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
@@ -419,11 +468,20 @@
      "genre": "Documental",
      "sinopsis": "Cuando Nicole le revela a su amiga de la infancia y prima, Reine, que ha sido adicta a la heroína desde los 13 años, deciden documentar el proceso de rehabilitación de Nicole. Hyphen sigue su lucha por salir al mundo como adulta y mujer hecha y derecha, a pesar de la falta de oportunidades económicas y una educación cultural tóxica que enseña a las jóvenes a suprimir sus ideas y su sexualidad, y a seguir un conjunto de reglas religiosas y culturales.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/vgnxchnFnaXMFWOrCxCd5EuHgkD.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "hyphen-2023",
+     "tmdb_id": 1102404,
+     "synopsis_en": "When Nicole reveals to her childhood friend and cousin, Reine, that she’s been addicted to heroin since she was 13, they decide to document Nicole’s rehab journey. Hyphen follows her struggle to move out into the world as an adult and grown woman despite the lack of economic opportunities and a poisonous cultural upbringing that teaches young women to suppress their ideas and sexuality and to follow a set of religious and cultural rules.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p70"
+   "_src": "parrilla impresa en el PDF oficial del programa, p70",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-15",
@@ -442,11 +500,20 @@
      "genre": "Ficción",
      "sinopsis": "IZIDINE, un detective de policía recientemente ascendido, es llamado a un hogar de ancianos ubicado en una antigua fortaleza colonial para investigar un crimen: el director del hogar ha sido asesinado.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/tGWncDcXXr9WQOzs6oaUnsFL85I.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-anchorage-of-time",
+     "tmdb_id": 1369889,
+     "synopsis_en": "In Mozambique, Izidine, a young police inspector, is called to investigate the murder of Vasto Excelêncio, the director of a nursing home built within the walls of an old colonial slave fortress. He is shocked when all the elderly residents, as well as the head nurse, Marta, confess to the murder. Each one has motive, given Excelêncio’s abusive behavior. With only a week to solve the case, the detective slowly unravels truths about the murder, Mozambique's colonial past, and himself.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p70"
+   "_src": "parrilla impresa en el PDF oficial del programa, p70",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-16",
@@ -459,7 +526,9 @@
    "sinopsis": "Modera Indhira Serrano · César Palacios Chaverra · Patricia Mena · Nicolás Vizcaíno Sánchez · Alejandra Mina",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p58",
-   "hora_fin": "12:00"
+   "hora_fin": "12:00",
+   "duracion_min": 120,
+   "duration": "120 min"
   },
   {
    "dia": "2026-09-16",
@@ -479,7 +548,7 @@
      "sinopsis": "¿Dónde guardamos nuestros recuerdos? ¿Dónde perduran? ¿Cómo los recordamos? Una epifanía disipa el olvido y reconstruye el vínculo entre Esther, la protagonista, y sus ancestros a través del mundo de los sueños, los recuerdos de su madre y la restauración de una vasija de barro heredada. Este cortometraje, creado en el marco de círculos de mujeres, navega de manera íntima, poética y femenina por los momentos de un rito de paso. Inmerso en la cosmovisión palenquera, con la intención de percibir los misterios más que de desvelarlos, esta obra es una ventana sutil a esos sentimientos que crecen entre ciénagas y arroyos.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Diaspórica",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/the-clay-vase.jpg",
      "posterSource": "custom",
@@ -499,7 +568,7 @@
      "sinopsis": "Cuando el \"LA Bar\" de Fox recibe una orden de compra obligatoria, un pilar de la vida caribeña en el este de Londres de los años 90 se ve amenazado. Mientras la ciudad comienza a olvidar, la comunidad recuerda. En un acto de desafío y añoranza, un último baile se enciende—uno que será recordado por siempre.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Diaspórica",
+     "_seccion": "Panorama Diaspórica",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/the-last-dance.jpg",
      "posterSource": "custom",
@@ -517,7 +586,14 @@
      "genre": "Ficción",
      "sinopsis": "Un pintor negro de 80 años escapa de un asilo y se refugia en un banco de la playa. Allí, los recuerdos perdidos resurgen gradualmente. Al enfrentarse a las olas de su pasado, reevalúa su vida, esboza nuevas perspectivas y se reconecta con su hijo.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Diaspórica",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/x84OaQ6Ymo6RiOfd1oSDtlCfZyu.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "memorias-com-vista-para-o-mar",
+     "tmdb_id": 1542983,
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
      "titulo": "When the World Broke Open",
@@ -531,10 +607,13 @@
      "sinopsis": "En el punto más álgido del genocidio herero y nama de 1904 en el África Sudoccidental Alemana, una joven mujer herero embarazada llamada Jorokee huye de las ruinas humeantes de su pueblo junto a su esposo Unomuinjo, buscando desesperadamente refugio más allá de la naturaleza salvaje. Heridos pero decididos, la pareja enfrenta una naturaleza implacable acechada por el hambre, la sed y un depredador invisible: los soldados alemanes y la guerra que los rodea, con la orden de exterminio alemana aún presente como una amenaza constante de muerte.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Diaspórica",
+     "_seccion": "Panorama Diaspórica",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/when-the-world-broke-open.jpg",
      "posterSource": "custom",
+     "lbSlug": "when-the-world-broke-open",
+     "tmdb_id": 1742418,
+     "synopsis_en": "At the height of the 1904 Herero and Nama genocide, a mother carries the hope of her people across a landscape of loss.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
@@ -553,7 +632,9 @@
    "sinopsis": "Modera Marcio Brito Neto · Andrea V. Naranjo · Yenni Córdoba · Marino Aguado · Marton Olympio",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p36",
-   "hora_fin": "13:00"
+   "hora_fin": "13:00",
+   "duracion_min": 180,
+   "duration": "180 min"
   },
   {
    "dia": "2026-09-16",
@@ -572,7 +653,7 @@
      "sinopsis": "En un intento desesperado por escapar del aislamiento, un personaje sin rostro se lanza desde una cornisa esperando encontrar su final, sin saber que en el fondo de la caída las leyes de la gravedad no aplican para él: rebota. Frustrado por este hecho, sigue intentándolo en diferentes escenarios, en un ciclo constante. Todo esto, enmarcado en un paisaje desolado, contaminado y sin recursos.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/free-fall.jpg",
      "posterSource": "custom",
@@ -588,11 +669,11 @@
      "anio": 2026,
      "tipo": "Documental, Experimental, Videodanza",
      "idioma": "Español",
-     "genre": "Documental, Experimental, Videodanza",
+     "genre": "Documental",
      "sinopsis": "Gestos que resguardan es una videodanza que rastrea los movimientos rituales y espirituales revividos por un grupo de jóvenes bailarinas que fueron testigos de la desaparición gradual de la tradicional Danza de las Tabliteras. Decididas a devolverle la vida, aprendieron sus ritmos y coreografías de los cuatro ancianos que aún conservaban la danza en sus cuerpos. Una vez más, estos gestos hacen eco de los movimientos que hace décadas llenaron de orgullo, vitalidad y espíritu colectivo a la comunidad de San Antonio, Bolívar.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/sheltering-gestures.jpg",
      "posterSource": "custom",
@@ -612,7 +693,7 @@
      "sinopsis": "Teyo, una chica trans, se prepara para empezar en su nuevo colegio exclusivo para chicas. Mientras recorre Quibdó, una ciudad cálida y vibrante, sortea los ritmos y las miradas que la reciben antes de entrar a clase.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/kanekalon.jpg",
      "posterSource": "custom",
@@ -632,10 +713,13 @@
      "sinopsis": "ULDA (65) se niega a hacerse cargo del funeral de su esposo machista porque él murió en la cama de otra mujer. En casa, solo queda Bertha, una cabra revoltosa, que será su compañía mientras ella vuelve a ser la mujer que era antes.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/bertha.jpg",
      "posterSource": "custom",
+     "lbSlug": "bertha",
+     "tmdb_id": 1742324,
+     "synopsis_en": "ULDA (65) refuses to take charge of her macho husband's funeral because he died in another woman's bed. At home, only Bertha, a mischievous goat, remains as her companion while she returns to the woman she once was.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -650,7 +734,7 @@
      "sinopsis": "En el futuro, una anciana hacker y bordadora debe enfrentar sus propios traumas y usar sus habilidades para escapar de una realidad virtual. Esta historia está basada en la vida de mi abuela, Leonilia Ferreira.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Fronteras Latam",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/hacker-leonilia.jpg",
      "posterSource": "custom",
@@ -669,7 +753,14 @@
      "genre": "Documental",
      "sinopsis": "El documental aborda el protagonismo femenino negro desde la óptica de la personaje popular Tia Ciata, una mujer de suma importancia para la historia y la cultura brasileña, referencia en la construcción de la identidad nacional.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Colombiano",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/iwvrGBWNVna32CMwWEAuRmCUkmG.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "aunt-ciata",
+     "tmdb_id": 602540,
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
@@ -695,11 +786,20 @@
      "genre": "Documental",
      "sinopsis": "Surviving Biafra es un largometraje documental dirigido por Meji Alabi y Leke Alabi-Isama que explora la guerra civil nigeriana a través de los testimonios de quienes la sobrevivieron. Como nieto e hijo de Godwin Alabi-Isama, los cineastas combinan archivos poco comunes, fotografías del frente nunca antes vistas y testimonios profundamente personales para desenterrar una historia largamente enterrada y raramente enseñada a las generaciones más jóvenes.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/cEcb4J4zVAq80jVVYWYBsrgm7Yk.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "surviving-biafra",
+     "tmdb_id": 1713898,
+     "synopsis_en": "Some of the last survivors from Nigeria’s Civil War, also known as the Biafran War, share their memories from the frontline.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p73"
+   "_src": "parrilla impresa en el PDF oficial del programa, p73",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-16",
@@ -718,7 +818,15 @@
      "genre": "Ficción",
      "sinopsis": "En 1942, Anthony es un niño de diez años que vive en la isla de Providencia, Colombia. Sueña con ser un gran capitán de goleta como su padre, y va a la escuela todos los días para aprender sobre el mar y la navegación con su maestro Fabio. Las motivaciones de Anthony se ven afectadas cuando el maestro es reemplazado por una hermosa profesora del continente, que despertará en él el amor por primera vez. Este amor llevará a Anthony de regreso a su verdadero amor: el mar.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Imaginarios Afrodisruptivos",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/tMr0NQH1n6mXb1aXu0YdOBIFYBj.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-capitan-anthony-2023",
+     "tmdb_id": 1742317,
+     "synopsis_en": "In 1942, Anthony is a ten-year-old boy living on the island of Providencia, Colombia. He dreams of becoming a great schooner captain like his father, and goes to school every day to learn about the sea and navigation from his teacher Fabio.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
      "titulo": "Leer en las Gotas de Lluvia",
@@ -732,10 +840,13 @@
      "sinopsis": "Una artista y madre angoleña, su hija de cuatro años y un pintor neozelandés crean mundos imaginarios en tierras nuevas. Estos encuentran eco en el poema de Xisca Minart «Read in Raindrops",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Imaginarios Afrodisruptivos",
+     "_seccion": "Imaginarios Afrodisruptivos",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/leer-en-las-gotas-de-lluvia.jpg",
      "posterSource": "custom",
+     "lbSlug": "leer-en-las-gotas-de-lluvia",
+     "tmdb_id": 1742403,
+     "synopsis_en": "An Angolan artist and mother, her four-year-old daughter, and a New Zealand painter create together from a poem, turning rain into a shared language.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -752,10 +863,13 @@
      "titulo_original": "A King Displaced",
      "title_en": "A King Displaced",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Prisma Femenino",
+     "_seccion": "Imaginarios Afrodisruptivos",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/a-king-displaced.jpg",
      "posterSource": "custom",
+     "lbSlug": "a-king-displaced",
+     "tmdb_id": 1742381,
+     "synopsis_en": "Daniel Hungbeji navigates his daily life both as a fisherman and as a traditional ruler, holding together the weight of a crown and the demands of survival.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -772,10 +886,13 @@
      "titulo_original": "Sisters in Destiny: Angela Davis & Gerty Archimede",
      "title_en": "Sisters in Destiny: Angela Davis & Gerty Archimede",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Fronteras Latam",
+     "_seccion": "Imaginarios Afrodisruptivos",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/sisters-in-destiny-angela-davis-gerty-archimede.jpg",
      "posterSource": "custom",
+     "lbSlug": "sisters-in-destiny-angela-davis-gerty-archimede",
+     "tmdb_id": 1742412,
+     "synopsis_en": "Two women. Two continents. One shared fight. From Guadeloupe to the United States, the parallel paths of Angela Davis and Gerty Archimède trace a common struggle for justice.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
@@ -800,11 +917,20 @@
      "genre": "Documental",
      "sinopsis": "¿Puede la negritud escapar de la violencia de sus orígenes? Tres hombres negros emprenden un viaje transformador a lo largo de la ruta de la esclavitud transatlántica en sentido inverso, explorando la resistencia, la liberación y una nueva comprensión de la negritud. Su épica travesía los lleva desde Los Ángeles hasta Salvador de Bahía en Brasil, y finalmente a Acra en Ghana. Su misión es redefinir la negritud, sanar el trauma histórico y vislumbrar nuevos caminos hacia la liberación más allá de las ataduras de la supremacía blanca.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/3hgFsxxC3ByUjaXUA9qp9DNboGi.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "three-black-men",
+     "tmdb_id": 1616280,
+     "synopsis_en": "Can blackness escape the violence of its origins?  Three Black men set out on a transformative journey along the transatlantic slave route in reverse, exploring resistance, liberation and a new understanding of Blackness.  Their epic voyage takes them from Los Angeles to Salvador da Bahia in Brazil, and finally to Accra in Ghana. Their mission is to redefine Blackness, heal from historical trauma, and envision new paths to liberation beyond the constraints of white supremacy.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p73"
+   "_src": "parrilla impresa en el PDF oficial del programa, p73",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-16",
@@ -824,7 +950,7 @@
      "sinopsis": "Nunkui vive en una comunidad shuar y sueña con el espíritu femenino de la huerta, llamado Nunkui, igual que ella. Mientras su tía le enseña cantos y secretos del cultivo, la vasta selva amazónica en la que viven es entregada a empresas mineras transnacionales y comienzan los desalojos en la zona. Los sueños premonitorios, la figura de su abuelo, un anciano líder shuar, y un mundo exuberante de plantas, animales y espíritus marcan su viaje hacia la adolescencia y la comprensión de su lugar en el mundo.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Fronteras Latam",
+     "_seccion": "Fronteras Latam",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/nunkui.jpg",
      "posterSource": "custom",
@@ -851,11 +977,11 @@
      "anio": 2026,
      "tipo": "Documental, Experimental, Videodanza",
      "idioma": "Español",
-     "genre": "Documental, Experimental, Videodanza",
+     "genre": "Documental",
      "sinopsis": "Gestos que resguardan es una videodanza que rastrea los movimientos rituales y espirituales revividos por un grupo de jóvenes bailarinas que fueron testigos de la desaparición gradual de la tradicional Danza de las Tabliteras. Decididas a devolverle la vida, aprendieron sus ritmos y coreografías de los cuatro ancianos que aún conservaban la danza en sus cuerpos. Una vez más, estos gestos hacen eco de los movimientos que hace décadas llenaron de orgullo, vitalidad y espíritu colectivo a la comunidad de San Antonio, Bolívar.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/sheltering-gestures.jpg",
      "posterSource": "custom",
@@ -875,10 +1001,13 @@
      "sinopsis": "A partir de una revisión crítica y a contracorriente de la figura histórica de Javiera Londoño — una mujer terrateniente del siglo XVIII que supuestamente contribuyó a la abolición de la esclavitud en la región de Antioquia, Colombia— Posesas es un ritual audiovisual en el que cinco jóvenes mujeres encarnan formas de resistir las opresiones que persisten desde la época colonial. BiografíaS de l0S Directores - Sebastian Wiedemann, Daniel Cortés Sebastian Wiedemann es un cineasta-investigador colombiano y filósofo de modos de experiencia cinematográfica. Sus obras investigan intersecciones liminales animadas a través del cine experimental y la filosofía, conscientes de la posibilidad de un pensamiento-cine como ecología poética viva y una superficie para la afirmación de una cosmopolítica de la imagen. Daniel Cortés es profesor, director, editor y productor de cine de no ficción. Su cine se mueve en los límites del documental, suspendiendo la centralidad de la narrativa y jugando con archivos desde la especulación y la co-creación para cuestionar las memorias oficiales. Es productor de los films La noche del minotauro (2023, Mejor Cortometraje en Mar del Plata, MOMA, FICUNAM) y Las razones del lobo (2020, Biarritz, La Habana).",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/posesas-possessed.jpg",
      "posterSource": "custom",
+     "lbSlug": "posesas",
+     "tmdb_id": 1742320,
+     "synopsis_en": "Based on a critical and counter-current review of the historical figure of Javiera Londoño, an 18th-century landowner who supposedly contributed to the abolition of slavery in the region of Antioquia, Colombia.",
      "title_en": "Possessed",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
@@ -893,10 +1022,13 @@
      "sinopsis": "En un territorio atravesado por promesas de igualdad y realidades de exclusión, ser joven, negra y de pueblo se convierte en un acto de resistencia cotidiana. Esta obra cinematográfica no solo expone las grietas de una sociedad que margina mientras habla de inclusión, sino que transforma la pantalla en un espacio de memoria, dignidad y lucha colectiva. Más que una denuncia, es un acto político y profundamente humano que interpela al público, cuestionando las estructuras de poder y exigiendo justicia para quienes históricamente han sido silenciadas.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/altanegra.jpg",
      "posterSource": "custom",
+     "lbSlug": "altanegra",
+     "tmdb_id": 1742175,
+     "synopsis_en": "In a territory marked by promises of equality and realities of exclusion, being young, Black, and from a rural community becomes an act of everyday resistance.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -911,7 +1043,7 @@
      "sinopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre se le aparece en un sueño pidiéndole que lo encuentre. Con su hermana Juliana, emprende un viaje a través de Colombia hacia las tierras indígenas donde su padre, un campesino afrodescendiente, fue víctima de desaparición forzada.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Prisma Femenino",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/sone-su-nombre.jpg",
      "posterSource": "custom",
@@ -938,7 +1070,9 @@
    "sinopsis": "Modera Frida Muenala · Julián Díaz · Juliana Carabalí · Nina Caicedo · Yenni Córdoba",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p38",
-   "hora_fin": "13:00"
+   "hora_fin": "13:00",
+   "duracion_min": 180,
+   "duration": "180 min"
   },
   {
    "dia": "2026-09-17",
@@ -957,11 +1091,20 @@
      "genre": "Documental",
      "sinopsis": "En Numbi, una aldea aislada en las montañas del Congo, la vida gira en torno a la fiebre del coltán, una \"tierra rara\" indispensable para la electrónica. La fatalidad que afecta a los habitantes encarna los mecanismos tortuosos del capitalismo en la década de 2020.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/nrlLcvB9xi2MjXP8UjGEIygkEoE.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "of-mud-and-blood",
+     "tmdb_id": 1108782,
+     "synopsis_en": "Numbi, a little village hidden deep in the Democratic Republic of Congo mountains, lies nonetheless at the heart of our world. Here, with their bare hands, miners dig the coltan which will find its way – legally or otherwise – to our industrialized world. For decades this grey gold, indispensable to the manufacture of almost all contemporary technological devices, has been the cause of conflicts and a bitter exploitation. In Numbi, bodies are covered in mud, hands red with blood, and coltan hides in every pocket. Every inhabitant lives with the illusory hope of escaping fate and enjoying for themselves the riches of the Congo. Sensitive, shocking and deeply moving, Of Mud and Blood documents the everyday existence of the inhabitant of Numbi, revealing the hardships and trials of a story from which we must not look away.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p76"
+   "_src": "parrilla impresa en el PDF oficial del programa, p76",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-17",
@@ -981,7 +1124,7 @@
      "sinopsis": "Un delincuente suave busca una nueva compañera en un bar de mala muerte y encuentra a la Bonnie perfecta para su Clyde. La invita a cenar para ponerla a prueba, pero ella tiene todas las respuestas... y más.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Diaspórica",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/the-black-bart-of-taco-king-17.jpg",
      "posterSource": "custom",
@@ -1000,7 +1143,15 @@
      "genre": "Animación",
      "sinopsis": "Ahura es un portador de silla de ruedas que intenta escapar a toda costa, pero encuentra a Gymbia siendo atacada. Él la salva y comienza su viaje en busca de amor y libertad, lo que lo lleva a involucrarse en la Revolta dos Malês (1835), la mayor rebelión contra la esclavitud en la historia de Brasil.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Colombiano",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/tFmN5xRoi9YekNH4BF103bwzGt1.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "dias-de-tempestade",
+     "tmdb_id": 1742417,
+     "synopsis_en": "Ahura is a wheelchair carrier who tries to escape at all costs, but finds Gymbia being a decisive presence on a stormy day.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
      "titulo": "Amelia",
@@ -1014,10 +1165,13 @@
      "sinopsis": "Desafío, fortaleza, valentía, amor y pérdida: estos son el corazón de la historia de Amelia. Más que un simple relato sobre nuestra protagonista, está narrado de manera única a través de su perspectiva. Como mujer nigeriana casada que vive en una relativa pobreza en el año 2002, desesperada por tener un hijo con su esposo queer, la visión de Amelia sobre la homosexualidad, el trauma y su lucha inquebrantable por lo que ama la hacen inequívocamente singular frente a los demás en su comunidad.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Africano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/amelia.jpg",
      "posterSource": "custom",
+     "lbSlug": "amelia-2025",
+     "tmdb_id": 1742383,
+     "synopsis_en": "Defiance, strength, bravery, love, and loss—these are the hearts of a woman who refuses to be broken.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -1034,7 +1188,7 @@
      "titulo_original": "My Daily Viche",
      "title_en": "My Daily Viche",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/mi-viche-todo-el-dia.jpg",
      "posterSource": "custom",
@@ -1055,7 +1209,9 @@
    "obras": [
     {
      "titulo": "Performance Artistica e Musical",
-     "_obra_src": "parrilla del PDF oficial del programa"
+     "_obra_src": "parrilla del PDF oficial del programa",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones"
     },
     {
      "titulo": "Ni Chaînes ni Maîtres",
@@ -1067,11 +1223,20 @@
      "idioma": "Francés - Subt. Español",
      "sinopsis": "1759. Isla de Francia (actual Isla Mauricio). Massamba y Mati, esclavos en la plantación de Eugène Larcenet, viven en el miedo y el trabajo forzado. Él sueña con que su hija sea liberada; ella, con escapar del infierno verde de la caña de azúcar. Una noche, ella huye. Madame La Victoire, una famosa cazadora de esclavos, es contratada para rastrearla. Massamba no tiene otra opción que huir a su vez. Con ese acto, se convierte en un \"marron\", un fugitivo que rompe para siempre con el orden colonial.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/dVJ91RJuPsdr9F0zIMskWcSNoHi.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "no-chains-no-masters",
+     "tmdb_id": 1126692,
+     "synopsis_en": "1759, Mauritius Island, Indian Ocean. The island is controlled by French settlers and the deported slave population live in fear while toiling in the sugar cane plantations. Unlike her disillusioned father Massamba, 16-year-old Mati refuses to keep her head down and accept her fate.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p19"
+   "_src": "parrilla impresa en el PDF oficial del programa, p19",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-17",
@@ -1084,20 +1249,24 @@
    "sinopsis": "Modera Ángel Perea Escobar · Essehomo Pino Valoyes · Alain Nkosi Nkonda · Zanu · Lucas Silva",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p22",
-   "hora_fin": "18:00"
+   "hora_fin": "18:00",
+   "duracion_min": 180,
+   "duration": "180 min"
   },
   {
    "dia": "2026-09-17",
    "hora": "15:00",
    "sede": "Alianza Francesa",
-   "titulo": "Vernissage — «Ma chérie, coiffure?», de Phalonne Pierre Louis",
+   "titulo": "Vernissage — Ma chérie, coiffure?, de Phalonne Pierre Louis",
    "obras": [],
    "event_kind": "vernissage",
    "acceso": "gratis",
    "sinopsis": "Exposición de Phalonne Pierre Louis. Entrada libre.",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p(19, 24)",
-   "hora_fin": "20:00"
+   "hora_fin": "20:00",
+   "duracion_min": 300,
+   "duration": "300 min"
   },
   {
    "dia": "2026-09-17",
@@ -1117,10 +1286,13 @@
      "sinopsis": "En la remota costa del Pacífico colombiano, los habitantes del palenque de Yurumanguí todavía luchan por la libertad, cientos de años después de que sus antepasados huyeran de la esclavitud. En las colinas a lo largo de su amado río, durante sus singulares y ancestrales celebraciones de Pascua, hombres con máscaras de madera talladas al estilo africano increpan desafiante a Jesús, una referencia al rechazo de sus ancestros al cristianismo de los esclavizadores.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/viva-yurumangui.jpg",
      "posterSource": "custom",
+     "lbSlug": "viva-yurumangui",
+     "tmdb_id": 1742319,
+     "synopsis_en": "On the remote Pacific coast of Colombia, the inhabitants of the Yurumanguí palenque still fight for freedom, hundreds of years after their ancestors fled slavery.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
@@ -1139,7 +1311,9 @@
    "sinopsis": "Modera Catherine Dunga · Gwladys Gambie · Ángela Carabalí · Carlos Correa Angulo · Mercedes Angola",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p62",
-   "hora_fin": "18:00"
+   "hora_fin": "18:00",
+   "duracion_min": 120,
+   "duration": "120 min"
   },
   {
    "dia": "2026-09-17",
@@ -1159,11 +1333,20 @@
      "sinopsis": "En un edificio abandonado a las afueras de Durban, un grupo de hombres sin hogar construye una existencia frágil en medio de la violencia, la adicción y la constante amenaza de ser borrados. Sus vidas transcurren en ritmos de supervivencia, hermandad y memoria, hasta que la llegada de un equipo de cine promete visibilidad, pero empieza a desdibujar los límites entre la realidad y la representación.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "_ojo": "la ficha del programa dice 122' y la parrilla 126'; TMDB confirma 126"
+     "_ojo": "la ficha del programa dice 122' y la parrilla 126'; TMDB confirma 126",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/gqLhJWfLO3AOAqs79HsDaXkDesU.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "gods-work-2025",
+     "tmdb_id": 1742391,
+     "synopsis_en": "In a derelict building on the outskirts of Durban, a group of homeless men carve out a fragile existence amid violence, addiction, and the constant threat of being erased.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p76"
+   "_src": "parrilla impresa en el PDF oficial del programa, p76",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-18",
@@ -1183,10 +1366,13 @@
      "sinopsis": "Amazonas: Cocinas Indígenas de Selva y Río – Colombia Producido para el Servicio Nacional de Aprendizaje (SENA) en colaboración con las comunidades indígenas de Leticia, en la Amazonía colombiana, este documental explora el conocimiento ancestral preservado a través de las cocinas del bosque y del río. A través de recetas tradicionales, prácticas de recolección y la profunda relación entre las personas y la naturaleza, el filme salvaguarda un patrimonio gastronómico vivo.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/amazonas-cocinas-indigenas-de-selva-y-rio.jpg",
      "posterSource": "custom",
+     "lbSlug": "amazonas-cocinas-indigenas-de-selva-y-rio",
+     "tmdb_id": 1742315,
+     "synopsis_en": "This documentary explores the ancestral knowledge preserved through the kitchens of the forest and the river. Through traditional recipes, gathering practices, and the deep relationship between people and nature.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -1201,10 +1387,13 @@
      "sinopsis": "Fanny, una líder afrocolombiana, convierte la Mojugba —un ritual yoruba de invocación a los ancestros— en un acto de resistencia. En un país que intenta borrar su historia, ella enseña que recordar es revolucionario. Un documental sobre la espiritualidad como arma de lucha.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/mojugba.jpg",
      "posterSource": "custom",
+     "lbSlug": "mojugba",
+     "tmdb_id": 1742321,
+     "synopsis_en": "Fanny, an Afro-Colombian leader, turns the Mojugba, a Yoruba ritual of ancestral invocation, into an act of resistance. In a country that tries to erase its history, she teaches that remembering is revolutionary.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -1218,7 +1407,7 @@
      "sinopsis": "Con las clases suspendidas debido a la tensión policial en represalia por una protesta comunitaria, un niño acompaña a su madre en una jornada de trabajo como trabajadora doméstica y se sorprende al conocer a su empleador.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Prisma Femenino",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/a-cor-da-patroa.jpg",
      "posterSource": "custom",
@@ -1238,10 +1427,13 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_ojo": "la ficha del programa imprime «Nigeria» como país, pero su propia sinopsis sitúa la obra en Becerril, Cesar: es Colombia",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/stories-from-la-guajirita.jpg",
      "posterSource": "custom",
+     "lbSlug": "relatos-de-la-guajirita",
+     "tmdb_id": 1742318,
+     "synopsis_en": "Relatos de la Guajirita tells the story of the Afro-descendant communities of Becerril, Cesar, through their memories, traditions, music, and oral narratives.",
      "title_en": "Stories from La Guajirita",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
@@ -1263,7 +1455,9 @@
    "sinopsis": "Modera Ana Camila Jaramillo · Miguel Ángel Abadía · Ricardo Malagón",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p43",
-   "hora_fin": "13:00"
+   "hora_fin": "13:00",
+   "duracion_min": 180,
+   "duration": "180 min"
   },
   {
    "dia": "2026-09-18",
@@ -1279,14 +1473,23 @@
      "anio": 2024,
      "tipo": "Doc-Drama / Experimental",
      "idioma": "Inglés Subt. Español",
-     "genre": "Doc-Drama, Experimental",
+     "genre": "Experimental",
      "sinopsis": "Eny, un pintor en Berlín, y su hermana Titina emprenden un viaje a través de África Occidental después de 17 años de exilio de Guinea-Bissau tras el fallecimiento de su madre, explorando su tierra ancestral.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/qP4VdEx1Ez6FJxbqZd3ul1VqNbp.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "orango-2024",
+     "tmdb_id": 1395425,
+     "synopsis_en": "For the first time since they escaped the war in Guinea-Bissau, Eny, a painter living in Berlin, and his sister Titina, go on a journey through West Africa. After 17 years of exile and the passing of their mother, they are guided to the land of their ancestors.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p51"
+   "_src": "parrilla impresa en el PDF oficial del programa, p51",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-18",
@@ -1299,7 +1502,9 @@
    "sinopsis": "Moderan Melissa Riquet, Sofía Espinosa y María José Durán · Catalina Mosquera · Frida Muenala · Nina Caicedo",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p54",
-   "hora_fin": "16:00"
+   "hora_fin": "16:00",
+   "duracion_min": 180,
+   "duration": "180 min"
   },
   {
    "dia": "2026-09-18",
@@ -1318,11 +1523,20 @@
      "genre": "Documental",
      "sinopsis": "En la frontera entre Marruecos y España, esperamos impacientemente la \"boza\" para cruzar a Europa. Tras un intento fallido tras otro, sobrevivimos, y yo, el \"Artista\", debo mantener viva la llama de la esperanza para todo el grupo.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/sSMEXMfV9njHYVuZpHCzReqYRs7.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-travelers-2025",
+     "tmdb_id": 1463516,
+     "synopsis_en": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p79"
+   "_src": "parrilla impresa en el PDF oficial del programa, p79",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-18",
@@ -1341,11 +1555,20 @@
      "genre": "Documental",
      "sinopsis": "Cinco personajes afrocolombianos en medio de Bogotá, cinco destinos dispares en una ciudad que les es hostil. Rubi Quejada, una joven modelo desplazada del Chocó; Shaka, un rapero y champetúo que trabaja en un cibercafé; Makambile, un cantante de champeta y mesero; Jah-Man, un profeta autodidacta de Buenaventura; y Afreeway, un joven pandillero que busca llegar lejos.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/apQpk4kG29oQMpAJKYzeMC6aYhF.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "iniciacion-en-la-octava-dimension",
+     "tmdb_id": 1742327,
+     "synopsis_en": "Five Afro-Colombian characters in the middle of Bogotá, five disparate destinies in a city that is hostile to them. Rubi Quejada, a young model displaced from Chocó.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
    "_src": "parrilla impresa en el PDF oficial del programa, p79",
+   "seccion": "__PENDIENTE__",
    "has_qa": true,
    "_qa_src": "el programa anuncia la presencia del director de «Iniciación en la Octava Dimensión»"
   },
@@ -1366,17 +1589,26 @@
      "genre": "Ficción",
      "sinopsis": "Tras una serie de brutales asesinatos, el último de los cuales acaba con la vida de su compañero de la infancia, un grupo de mejores amigos distanciados se reconecta para organizar la protesta más grande en la Namibia posterior al apartheid.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/vRY4JXAYZi8ZMsMVSX5I5l3GnFU.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "wrong-generation",
+     "tmdb_id": 1742419,
+     "synopsis_en": "Following a series of brutal murders, a generation of young Namibians refuses to stay silent and turns grief into protest.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p79"
+   "_src": "parrilla impresa en el PDF oficial del programa, p79",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-19",
    "hora": "14:00",
    "sede": "Cinemateca de Bogotá · Sala 3",
-   "titulo": "BLOQUE CORTOS FICCIÓN — NOIR URBANO: HISTORIAS EN CLAVE MENOR",
+   "titulo": "Bloque cortos ficción — Noir urbano: historias en clave menor",
    "obras": [
     {
      "titulo": "Caída Libre",
@@ -1389,7 +1621,7 @@
      "sinopsis": "En un intento desesperado por escapar del aislamiento, un personaje sin rostro se lanza desde una cornisa esperando encontrar su final, sin saber que en el fondo de la caída las leyes de la gravedad no aplican para él: rebota. Frustrado por este hecho, sigue intentándolo en diferentes escenarios, en un ciclo constante. Todo esto, enmarcado en un paisaje desolado, contaminado y sin recursos.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/free-fall.jpg",
      "posterSource": "custom",
@@ -1409,10 +1641,13 @@
      "sinopsis": "ULDA (65) se niega a hacerse cargo del funeral de su esposo machista porque él murió en la cama de otra mujer. En casa, solo queda Bertha, una cabra revoltosa, que será su compañía mientras ella vuelve a ser la mujer que era antes.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/bertha.jpg",
      "posterSource": "custom",
+     "lbSlug": "bertha",
+     "tmdb_id": 1742324,
+     "synopsis_en": "ULDA (65) refuses to take charge of her macho husband's funeral because he died in another woman's bed. At home, only Bertha, a mischievous goat, remains as her companion while she returns to the woman she once was.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -1423,7 +1658,15 @@
      "anio": 2026,
      "tipo": "Ficción",
      "genre": "Ficción",
-     "_obra_src": "parrilla del PDF oficial del programa"
+     "_obra_src": "parrilla del PDF oficial del programa",
+     "_seccion": "Panorama Colombiano",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/lmvDPCXBNgG0Bxai4PY3JI2qXT5.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "305-fishkill-avenue",
+     "tmdb_id": 1742377,
+     "synopsis_en": "A kind-hearted janitor witnesses dangerous criminal activity at his workplace and must decide whether to stay silent or risk everything to do what is right.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
      "titulo": "Un Domingo",
@@ -1439,7 +1682,15 @@
      "titulo_original": "One Sunday",
      "title_en": "One Sunday",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "_ojo": "la ficha del programa dice 12' y la parrilla 20'; TMDB confirma 20'"
+     "_ojo": "la ficha del programa dice 12' y la parrilla 20'; TMDB confirma 20'",
+     "_seccion": "Panorama Colombiano",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/bdbv398RGs61f9DbSgOwpnMIftF.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "domingo-2026",
+     "tmdb_id": 1742409,
+     "synopsis_en": "One Sunday tells the story of a possible encounter between Samuel and a stranger, on a day when the ordinary opens a crack toward something else.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
      "titulo": "Amelia",
@@ -1453,10 +1704,13 @@
      "sinopsis": "Desafío, fortaleza, valentía, amor y pérdida: estos son el corazón de la historia de Amelia. Más que un simple relato sobre nuestra protagonista, está narrado de manera única a través de su perspectiva. Como mujer nigeriana casada que vive en una relativa pobreza en el año 2002, desesperada por tener un hijo con su esposo queer, la visión de Amelia sobre la homosexualidad, el trauma y su lucha inquebrantable por lo que ama la hacen inequívocamente singular frente a los demás en su comunidad.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Africano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/amelia.jpg",
      "posterSource": "custom",
+     "lbSlug": "amelia-2025",
+     "tmdb_id": 1742383,
+     "synopsis_en": "Defiance, strength, bravery, love, and loss—these are the hearts of a woman who refuses to be broken.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -1471,10 +1725,13 @@
      "sinopsis": "Ouzin, Baba y Sémou, amigos de toda la vida y jubilados, nunca fallan a su cita diaria para tomar café. Pero cada año, en abril, Sémou se siente atormentado por la pérdida de su primer amor. Una tarde, cuando Ouzin y Baba se preocupan por su amigo, Sémou no aparece para el café.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Diaspórica",
+     "_seccion": "Prisma Femenino",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/cafe.jpg",
      "posterSource": "custom",
+     "lbSlug": "cafe-2025-1",
+     "tmdb_id": 1742385,
+     "synopsis_en": "Ouzin, Baba and Sémou, longtime friends and retirees, never miss their daily coffee meetup — until the day one of them fails to show up.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
@@ -1503,17 +1760,26 @@
      "genre": "Documental",
      "sinopsis": "Father's Day es un documental íntimo y poderoso que explora el legado de los padres ausentes en las comunidades negras de América del Norte y el Caribe. Impulsada por el viaje personal de la directora, la película entrelaza las historias de mujeres de Canadá y Guadalupe que crecieron navegando el silencio, las heridas y la resiliencia moldeadas por la ausencia paterna.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/bG0McA7iij9elYDGPSA15N3uApb.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "fathers-day-2025",
+     "tmdb_id": 1432916,
+     "synopsis_en": "In this film, Ayana O'Shun investigates the phenomenon of absent fathers in black communities, through her personal story and that of luminous and resilient women from Quebec and Guadeloupe.",
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p82"
+   "_src": "parrilla impresa en el PDF oficial del programa, p82",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-20",
    "hora": "14:00",
    "sede": "Cinemateca de Bogotá · Sala 3",
-   "titulo": "BLOQUE CORTOS DOCUMENTAL — NOIR MEMORIAS: DE LA SOMBRA AL TESTIMONIO",
+   "titulo": "Bloque cortos documental — Noir memorias: de la sombra al testimonio",
    "obras": [
     {
      "titulo": "Amazonas Cocinas Indígenas de Selva y Río",
@@ -1527,10 +1793,13 @@
      "sinopsis": "Amazonas: Cocinas Indígenas de Selva y Río – Colombia Producido para el Servicio Nacional de Aprendizaje (SENA) en colaboración con las comunidades indígenas de Leticia, en la Amazonía colombiana, este documental explora el conocimiento ancestral preservado a través de las cocinas del bosque y del río. A través de recetas tradicionales, prácticas de recolección y la profunda relación entre las personas y la naturaleza, el filme salvaguarda un patrimonio gastronómico vivo.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Colombiano",
+     "_seccion": "Panorama Colombiano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/amazonas-cocinas-indigenas-de-selva-y-rio.jpg",
      "posterSource": "custom",
+     "lbSlug": "amazonas-cocinas-indigenas-de-selva-y-rio",
+     "tmdb_id": 1742315,
+     "synopsis_en": "This documentary explores the ancestral knowledge preserved through the kitchens of the forest and the river. Through traditional recipes, gathering practices, and the deep relationship between people and nature.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -1545,10 +1814,13 @@
      "sinopsis": "Un líder comunitario afrocolombiano es amenazado y forzado al exilio. Lejos de su tierra y su familia, Carabalí resiste en el desplazamiento, aferrándose a la esperanza de regresar algún día al lugar al que pertenece.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Fronteras Latam",
+     "_seccion": "Imaginarios Afrodisruptivos",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/carabali.jpg",
      "posterSource": "custom",
+     "lbSlug": "carabali",
+     "tmdb_id": 1742387,
+     "synopsis_en": "An Afro-Colombian community leader is threatened and forced into exile in Mexico, where she rebuilds her life while keeping her fight alive.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -1565,10 +1837,13 @@
      "titulo_original": "A King Displaced",
      "title_en": "A King Displaced",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Prisma Femenino",
+     "_seccion": "Imaginarios Afrodisruptivos",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/a-king-displaced.jpg",
      "posterSource": "custom",
+     "lbSlug": "a-king-displaced",
+     "tmdb_id": 1742381,
+     "synopsis_en": "Daniel Hungbeji navigates his daily life both as a fisherman and as a traditional ruler, holding together the weight of a crown and the demands of survival.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     },
     {
@@ -1585,16 +1860,19 @@
      "titulo_original": "Sisters in Destiny: Angela Davis & Gerty Archimede",
      "title_en": "Sisters in Destiny: Angela Davis & Gerty Archimede",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Fronteras Latam",
+     "_seccion": "Imaginarios Afrodisruptivos",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/sisters-in-destiny-angela-davis-gerty-archimede.jpg",
      "posterSource": "custom",
+     "lbSlug": "sisters-in-destiny-angela-davis-gerty-archimede",
+     "tmdb_id": 1742412,
+     "synopsis_en": "Two women. Two continents. One shared fight. From Guadeloupe to the United States, the parallel paths of Angela Davis and Gerty Archimède trace a common struggle for justice.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
    "_src": "parrilla impresa en el PDF oficial del programa, p84",
-   "seccion": "Fronteras Latam",
+   "seccion": "Imaginarios Afrodisruptivos",
    "sinopsis": "Cuatro documentales que rescatan saberes, historias y luchas silenciadas, para reafirmar que la memoria es, en sí misma, un acto de resistencia.",
    "synopsis_lang": "es"
   },
@@ -1615,11 +1893,19 @@
      "genre": "Documental",
      "sinopsis": "En Dakar, Malick Biteye forma un equipo de fútbol compuesto por jugadores con trastornos mentales. En un contexto de pobreza absoluta, las historias y los deseos de estos hombres, que luchan contra el estigma, se entrelazan. Su viaje culmina en Italia, donde cumplen su sueño de jugar en un partido de fútbol internacional.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "__PENDIENTE__",
+     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "poster": "https://image.tmdb.org/t/p/w500/D8N4FBRKkPM8laxkVHPiv6ZDfY.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-madmen-coach",
+     "tmdb_id": 1675697,
+     "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "desconocido",
-   "_src": "parrilla impresa en el PDF oficial del programa, p84"
+   "_src": "parrilla impresa en el PDF oficial del programa, p84",
+   "seccion": "__PENDIENTE__"
   },
   {
    "dia": "2026-09-20",
@@ -1641,11 +1927,13 @@
      "titulo_original": "Aisha Can't Fly Away",
      "title_en": "Aisha Can't Fly Away",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "section": "Panorama Africano",
+     "_seccion": "Panorama Africano",
      "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
      "poster": "/assets/qaff/aisha-can-t-fly-away.jpg",
      "posterSource": "custom",
      "lbSlug": "aisha-cant-fly-away",
+     "tmdb_id": 1337148,
+     "synopsis_en": "Aisha, a 26-year-old Sudanese woman, lives in Ain-Shams, a neighborhood in Cairo with a large African migrant community. The authorities’ indifference to the violent tensions between Egyptians and various African nationalities, has allowed different gangs to seize control of the neighborhood. The situation quickly turns sour after one of them offers Aisha security in exchange for a favor.",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
@@ -1664,7 +1952,9 @@
    "sinopsis": "Modera Iván Jiménez · Wilson Borja · Francisco Caldas Vela · Rafael Antonio Díaz",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p67",
-   "hora_fin": "18:00"
+   "hora_fin": "18:00",
+   "duracion_min": 120,
+   "duration": "120 min"
   }
  ]
 }

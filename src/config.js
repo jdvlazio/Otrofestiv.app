@@ -652,38 +652,25 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'qaff2026':{
-    // OCULTO (Juan, 23 ago 2026). El festival trasladó LA TOTALIDAD de las
-    // proyecciones a Bogotá por el terremoto del 10 ago que golpeó Quibdó y el
-    // Chocó — el MISMO sismo que aplazó FICMA. Comunicado en su Instagram el 20
-    // ago: instagram.com/p/DcREogQER9d
-    //
-    // Lo publicado esta misma mañana dice justo lo contrario: 47 funciones en la
-    // Biblioteca Departamental de QUIBDÓ, una ciudad donde ya no se proyecta
-    // nada. Por eso se oculta en vez de corregirse: no tenemos programación
-    // válida —la de Bogotá no está publicada—, y un festival con sedes falsas es
-    // peor que un festival ausente.
-    //
-    // NO es `status:postponed` como FICMA: el festival SÍ se hace, en sus fechas
-    // (14–18 SEP, confirmadas en su bio de IG). Cambia la ciudad, que es el
-    // nivel 2 del modelo de situaciones excepcionales.
-    //
-    // REVERSIÓN: cuando publiquen las sedes de Bogotá → re-ensamblar desde el
-    // crudo (festivals/staging/qaff-2026-programacion-raw.json, que conserva las
-    // 14 funciones de Cinemateca y Museo Nacional con sus sedes reales), quitar
-    // el filtro solo-Quibdó de pipeline/qaff-2026-build.py y borrar esta línea.
+    // SIGUE OCULTO mientras falten la boletería de las cuatro sedes de proyección
+    // y la sección de 14 funciones (issue #566). Los datos ya NO son los de
+    // Quibdó: la 8ª edición se hace entera en Bogotá tras el terremoto del 10 ago,
+    // y esto es la programación del PDF oficial publicado el 2 sep.
+    // El 21 va declarado y VACÍO: el último Diálogo es el 22 y las proyecciones
+    // acaban el 20 ([calendario-sin-huecos]).
     group:'test',
     name:'QAFF',fullName:'QAFF — Quibdó África Film Festival',shortName:'QAFF',
-    city:'Quibdó',country:'CO',
-    dates:'14–18 SEP',dates_en:'SEP 14–18',year:2026,timezoneOffset:'-05:00',
+    city:'Bogotá',country:'CO',
+    dates:'14–22 SEP',dates_en:'SEP 14–22',year:2026,timezoneOffset:'-05:00',
     keyArt:'/assets/keyart/qaff2026-v2.jpg',
-    storageKey:'qaff2026_',festivalStartStr:'2026-09-14T00:00:00',festivalEndStr:'2026-09-18T23:00:00',
-    festivalDates:{'2026-09-14':'2026-09-14','2026-09-15':'2026-09-15','2026-09-16':'2026-09-16','2026-09-17':'2026-09-17','2026-09-18':'2026-09-18'},
-    days:[{k:'2026-09-14',d:14,lbl:'LUN'},{k:'2026-09-15',d:15,lbl:'MAR'},{k:'2026-09-16',d:16,lbl:'MIÉ'},{k:'2026-09-17',d:17,lbl:'JUE'},{k:'2026-09-18',d:18,lbl:'VIE'}],
-    dayKeys:['2026-09-14','2026-09-15','2026-09-16','2026-09-17','2026-09-18'],
-    dayShort:{'2026-09-14':'LUN 14','2026-09-15':'MAR 15','2026-09-16':'MIÉ 16','2026-09-17':'JUE 17','2026-09-18':'VIE 18'},
-    dayShort_en:{'2026-09-14':'MON 14','2026-09-15':'TUE 15','2026-09-16':'WED 16','2026-09-17':'THU 17','2026-09-18':'FRI 18'},
-    dayLong:{'2026-09-14':'Lunes 14 de septiembre','2026-09-15':'Martes 15 de septiembre','2026-09-16':'Miércoles 16 de septiembre','2026-09-17':'Jueves 17 de septiembre','2026-09-18':'Viernes 18 de septiembre'},
-    prioLimit:3,eventPosterLabel:['EVENTO',''],
+    storageKey:'qaff2026_',festivalStartStr:'2026-09-14T00:00:00',festivalEndStr:'2026-09-22T23:00:00',
+    festivalDates:{'2026-09-14':'2026-09-14','2026-09-15':'2026-09-15','2026-09-16':'2026-09-16','2026-09-17':'2026-09-17','2026-09-18':'2026-09-18','2026-09-19':'2026-09-19','2026-09-20':'2026-09-20','2026-09-21':'2026-09-21','2026-09-22':'2026-09-22'},
+    days:[{'k':'2026-09-14','d':14,'lbl':'LUN'},{'k':'2026-09-15','d':15,'lbl':'MAR'},{'k':'2026-09-16','d':16,'lbl':'MIÉ'},{'k':'2026-09-17','d':17,'lbl':'JUE'},{'k':'2026-09-18','d':18,'lbl':'VIE'},{'k':'2026-09-19','d':19,'lbl':'SÁB'},{'k':'2026-09-20','d':20,'lbl':'DOM'},{'k':'2026-09-21','d':21,'lbl':'LUN'},{'k':'2026-09-22','d':22,'lbl':'MAR'}],
+    dayKeys:['2026-09-14','2026-09-15','2026-09-16','2026-09-17','2026-09-18','2026-09-19','2026-09-20','2026-09-21','2026-09-22'],
+    dayShort:{'2026-09-14':'LUN 14','2026-09-15':'MAR 15','2026-09-16':'MIÉ 16','2026-09-17':'JUE 17','2026-09-18':'VIE 18','2026-09-19':'SÁB 19','2026-09-20':'DOM 20','2026-09-21':'LUN 21','2026-09-22':'MAR 22'},
+    dayShort_en:{'2026-09-14':'MON 14','2026-09-15':'TUE 15','2026-09-16':'WED 16','2026-09-17':'THU 17','2026-09-18':'FRI 18','2026-09-19':'SAT 19','2026-09-20':'SUN 20','2026-09-21':'MON 21','2026-09-22':'TUE 22'},
+    dayLong:{'2026-09-14':'Lunes 14 de septiembre','2026-09-15':'Martes 15 de septiembre','2026-09-16':'Miércoles 16 de septiembre','2026-09-17':'Jueves 17 de septiembre','2026-09-18':'Viernes 18 de septiembre','2026-09-19':'Sábado 19 de septiembre','2026-09-20':'Domingo 20 de septiembre','2026-09-21':'Lunes 21 de septiembre','2026-09-22':'Martes 22 de septiembre'},
+    prioLimit:4,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
   'tiff2026': {

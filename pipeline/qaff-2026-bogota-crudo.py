@@ -153,16 +153,34 @@ def titulo_obra(titulo, fichas):
 # programa mejor que quien lo programó.
 FORMATO = {'cortometraje', 'largometraje', 'mediometraje', 'corto', 'largo', 'de', 'estudiante'}
 
+# El vocabulario de género de la app (_GENRE_EN, sheets-controller.js) más
+# «Ficción», que no está en el mapa pero lleva 110 obras en el repo. El guardián
+# [genero-unico] exige UNO: «Doc-Drama, Experimental» no es un género compuesto,
+# es una descripción, y la app la pintaría entera en la ficha.
+GENEROS = {'accion', 'aventura', 'comedia', 'drama', 'documental', 'experimental',
+           'romance', 'satira', 'terror', 'thriller', 'animacion', 'cienciaficcion',
+           'fantasia', 'misterio', 'musical', 'musica', 'crimen', 'historia',
+           'suspense', 'belica', 'familia', 'western', 'ficcion'}
+
 
 def _genero(tipo):
-    partes = []
     for trozo in re.split(r'[,/]| y ', tipo or ''):
         palabras = [w for w in trozo.split() if n(w) not in FORMATO]
-        if palabras:
-            g = ' '.join(palabras).strip()
-            if g and g not in partes:
-                partes.append(g)
-    return ', '.join(partes) or None
+        g = ' '.join(palabras).strip()
+        if g and n(g) in GENEROS:
+            return g
+    return None
+
+
+def sin_emoji(sec):
+    """«🌊 Fronteras Latam» → «Fronteras Latam», y «Fronteras Latam» → igual.
+
+    Quitar «el primer token» a ciegas funciona hasta que la sección llega SIN
+    emoji —y llega: el festival publicado guarda la sección con emoji en la
+    función y sin él en la obra—. Ahí «Fronteras Latam» se convertía en «Latam»,
+    que no existe en el mapa, y el ensamblador paraba. Se quita solo lo que no
+    es letra ni dígito."""
+    return re.sub(r'^[^\w]+\s*', '', sec or '', flags=re.UNICODE).strip()
 
 
 def _pais(p):
@@ -274,7 +292,12 @@ def main():
             h = (choco.get(n(o['titulo'])) or choco.get(n(t))
                  or choco.get(n(o.get('titulo_original') or '')) or {})
             if h.get('section'):
-                o['section'] = re.sub(r'^\S+\s+', '', h['section'])  # el emoji lo pone el ensamblador
+                # Clave INTERNA: solo sirve para votar la sección de la función.
+                # Publicada en la obra, el festival acaba con dos strings para la
+                # misma sección —«🛶 Panorama Colombiano» en la función y
+                # «Panorama Colombiano» en la obra— y el guardián de arquetipo
+                # no reconoce la segunda: color gris ilegible.
+                o['_seccion'] = sin_emoji(h['section'])
                 o['_section_src'] = ('heredada de la selección oficial del Chocó ya publicada; '
                                      'el programa de Bogotá no imprime secciones')
             # El PÓSTER y el identificador de TMDB también son nuestros, de agosto.
@@ -301,7 +324,7 @@ def main():
              # desconocido es el dato; suponer «entrada libre» sería inventarlo.
              'acceso': 'desconocido',
              '_src': f'parrilla impresa en el PDF oficial del programa, p{pag}'}
-        _s = [o['section'] for o in obs if o.get('section')]
+        _s = [o['_seccion'] for o in obs if o.get('_seccion')]
         if _s:
             f['seccion'] = max(set(_s), key=_s.count)
         if nombre:
@@ -327,6 +350,14 @@ def main():
              '_src': f'PDF oficial del programa, p{pag}'}
         if fin:
             a['hora_fin'] = fin
+            # La duración de una actividad es OBLIGATORIA: alimenta el plan, y sin
+            # ella el planificador no puede reservarle sitio ni ver si choca con
+            # una función. Aquí no hay que estimarla: el programa imprime la
+            # franja completa de cada Diálogo en su propia página.
+            h1, m1 = (int(x) for x in ini.split(':'))
+            h2, m2 = (int(x) for x in fin.split(':'))
+            a['duracion_min'] = (h2 * 60 + m2) - (h1 * 60 + m1)
+            a['duration'] = f"{a['duracion_min']} min"
         funciones.append(a)
 
     # Una obra con dos títulos se parte en dos obras distintas: quien la marca en

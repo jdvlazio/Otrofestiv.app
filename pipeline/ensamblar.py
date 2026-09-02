@@ -114,7 +114,13 @@ def ensamblar(fid, escribir=True):
 
     SEDES = cfg.get('sedes', {})
     SECS = cfg.get('secciones', {})
-    dias = sorted({f['dia'] for f in crudo['funciones'] if f.get('dia')})
+    # Un día SIN programación se declara vacío, no se omite ([calendario-sin-huecos]):
+    # un día ausente deja un agujero por el que se cuela la aritmética de índices
+    # y «Hoy» acaba abriendo un día ya pasado. La convención ya existía —Tercer
+    # Tiempo declara siete días con dos vacíos—; lo que faltaba era poder
+    # declararlos desde el plan cuando el hueco está EN MEDIO del festival.
+    dias = sorted({f['dia'] for f in crudo['funciones'] if f.get('dia')}
+                  | set(cfg.get('dias_vacios') or []))
     orden = {d: i for i, d in enumerate(dias)}
 
     films, venues, secciones = [], {}, {}

@@ -71,12 +71,16 @@ FUNCIONES = [
 # Nombre y sinopsis que el propio festival le puso a dos bloques (p82, p84).
 # Donde el festival NOMBRA un conjunto hay contenedor; donde no, la función es
 # la obra (docs/SCHEMA.md, modelo A).
+# El programa los imprime en VERSALES, como todo lo suyo. El guardián de la app
+# rechaza títulos en ALLCAPS: la app escribe en Title Case, y unas versales
+# sueltas gritan en la parrilla. Es la misma normalización que se le hace a
+# los títulos de obra, no una reescritura del nombre.
 BLOQUES = {
- (CIN,'19','14:00'): ('BLOQUE CORTOS FICCIÓN — NOIR URBANO: HISTORIAS EN CLAVE MENOR',
+ (CIN,'19','14:00'): ('Bloque cortos ficción — Noir urbano: historias en clave menor',
    'Seis miradas breves que encuentran lo extraordinario en lo cotidiano, un domingo '
    'cualquiera, una taza de café, un encuentro casual y revelan las tensiones raciales, '
    'familiares y sociales que atraviesan la vida diaria en cuatro continentes.'),
- (CIN,'20','14:00'): ('BLOQUE CORTOS DOCUMENTAL — NOIR MEMORIAS: DE LA SOMBRA AL TESTIMONIO',
+ (CIN,'20','14:00'): ('Bloque cortos documental — Noir memorias: de la sombra al testimonio',
    'Cuatro documentales que rescatan saberes, historias y luchas silenciadas, para '
    'reafirmar que la memoria es, en sí misma, un acto de resistencia.'),
 }
@@ -117,7 +121,7 @@ ACTIVIDADES = [
  # La página del vernissage (p24) NO imprime hora: solo «17 Septiembre 2026» y
  # «Entrada Libre». La franja sale de la parrilla que lo contiene (p19, 3:00-8:00
  # pm del 17). Ponerle una hora propia sería inventarla.
- ('vernissage', AF, None, '17', '15:00', '20:00', 'Vernissage — «Ma chérie, coiffure?», de Phalonne Pierre Louis',
+ ('vernissage', AF, None, '17', '15:00', '20:00', 'Vernissage — Ma chérie, coiffure?, de Phalonne Pierre Louis',
   'Exposición de Phalonne Pierre Louis. Entrada libre.', (19, 24)),
 ]
 

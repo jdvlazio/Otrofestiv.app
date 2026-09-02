@@ -700,6 +700,15 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     // de la franja académica; sin entrada aquí su card mostraba EVENTO genérico.
     'foro':         {accent:'#F59E0B', headerLabel:'FORO'},
     'debate':       {accent:'#F59E0B', headerLabel:'DEBATE'},
+    // «diálogo» llegó con QAFF Bogotá: sus «Diálogos Improbables» son once mesas
+    // con moderador y panelistas —la mitad del programa de las universidades—.
+    // Mismo ámbar de la franja de conversación; sin entrada aquí, once cards
+    // mostraban EVENTO genérico. Se conserva la palabra del festival.
+    'dialogo':      {accent:'#F59E0B', headerLabel:'DIÁLOGO'},
+    // «vernissage» no es franja académica: es la apertura de una exposición, con
+    // entrada libre. Azul de «encuentro». La palabra es la misma en español,
+    // inglés y francés, y es la que usa la Alianza Francesa: no se traduce.
+    'vernissage':   {accent:'#378ADD', headerLabel:'VERNISSAGE'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'ENCUENTRO'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'CINECONCIERTO'},
@@ -716,6 +725,8 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'seminario':    {accent:'#F59E0B', headerLabel:'SEMINAR'},
     'foro':         {accent:'#F59E0B', headerLabel:'FORUM'},
     'debate':       {accent:'#F59E0B', headerLabel:'DEBATE'},
+    'dialogo':      {accent:'#F59E0B', headerLabel:'DIALOGUE'},
+    'vernissage':   {accent:'#378ADD', headerLabel:'VERNISSAGE'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'MEETING'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'FILM CONCERT'},

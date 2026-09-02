@@ -267,10 +267,16 @@ export function programParts(f){
   return slotPosterParts(f.film_list.map(it=>({
     title:it.title, poster:it.poster, posterSource:it.posterSource,
     duration:it.duration||f.duration, section:f.section,
-  })));
+  })), blockDuration(f));
 }
 
-export function slotPosterParts(members){
+// `blockDur` es la duración DEL BLOQUE y viaja aparte a propósito: el pie dice
+// «N obras · X min», y esa X es lo que dura la función, no lo que dura la
+// primera. Sin ella se leía la del líder —«3 obras · 19 min» para un bloque de
+// 42—, y el número engañaba justo donde el usuario decide si le cabe en la
+// tarde. Medido: 209 de los 225 programas del repo tenían el líder con otra
+// duración que su bloque.
+export function slotPosterParts(members, blockDur){
   // Tope 8 (prototipo aprobado, 25 ago): la Escalera escala a cualquier N porque
   // el paso es fracción de la lámina — ver makeSharedSlotSVG. Con 9+ la lámina
   // baja del 23% y a 56px queda en textura, así que ahí sí cae a la forma vieja.
@@ -285,7 +291,7 @@ export function slotPosterParts(members){
   // atrás→delante: el 1º del catálogo queda delante
   const modules=[...reales.slice(1).reverse().map(c=>c.src), reales[0].src];
   const lider=reales[0].f;
-  const dur=blockDuration(lider);
+  const dur=blockDur||blockDuration(lider);
   const dato=`${members.length} ${t('misc_peliculas')}${dur?` · ${dur} min`:''}`;
   return {modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato,
     svg:makeSharedSlotSVG({modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato})};

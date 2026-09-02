@@ -167,6 +167,24 @@
       "Pontificia Universidad Javeriana · Sala 903 - Edificio Jorge Hoyos Vásquez, S.J.": "Cra. 7 # 40-62, Bogotá",
       "Universidad Nacional de Colombia · Facultad de Artes": "Cra. 45 # 26-85, Bogotá",
       "Universidad de los Andes": "Cra. 1 # 18A-12, Bogotá"
-    }
+    },
+    "name": "QAFF",
+    "fullName": "QAFF — Quibdó África Film Festival",
+    "city": "Bogotá",
+    "country": "CO",
+    "dates": "14–22 SEP",
+    "dates_en": "SEP 14–22",
+    "year": 2026,
+    "timezoneOffset": "-05:00",
+    "storageKey": "qaff2026_",
+    "festivalStartStr": "2026-09-14T00:00:00",
+    "festivalEndStr": "2026-09-22T23:00:00",
+    "prioLimit": 4,
+    "sharedSlotIsOneScreening": true,
+    "mes_es": "septiembre",
+    "dias_vacios": [
+      "2026-09-21"
+    ],
+    "_dias_vacios_por_que": "el último Diálogo es el 22 en la Universidad Nacional y las proyecciones acaban el 20: el 21 no tiene nada. Se declara vacío porque un día ausente rompe la aritmética de «Hoy» y «Mañana»"
   }
 }
