@@ -1,0 +1,1271 @@
+{
+ "_provenance": {
+  "capturado": "2026-09-02",
+  "parrilla": "programa oficial en flipbook, online.fliphtml5.com/QAFF2026/Programa-QAFF2026 (2 SEP 2026)",
+  "verificacion": "dos auditorías independientes sobre las imágenes; coincidieron en los 68 cupos sin una sola diferencia",
+  "obras": "heredadas del catálogo del onboarding del Chocó; las que no estaban, sembradas con la ficha impresa",
+  "quibdo": "CANCELADO por el terremoto del 10 ago — la edición es solo en Bogotá",
+  "sin_prelanzamiento": "el prelanzamiento del 5 SEP en el Museo Nacional queda fuera por decisión de Juan"
+ },
+ "_funciones": 29,
+ "programas": [
+  {
+   "dia": "2026-09-14",
+   "hora": "15:00",
+   "sede": "Alianza Francesa",
+   "titulo": "Face to Face + Mango + Concrete Moves",
+   "obras": [
+    {
+     "titulo": "Face to Face",
+     "title": "Face to Face",
+     "director": "Florent Mahoukou",
+     "country": "Congo",
+     "year": 2021,
+     "synopsis": "At a difficult moment in his personal and professional life, choreographer Florent Mahoukou returns to the city of Pointe Noire, where, for him, everything began with dance.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/face-to-face.jpg",
+     "posterSource": "custom",
+     "duration": "20 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 19,
+     "_nota": "rotulada 'Performance de danza'; no es proyeccion"
+    },
+    {
+     "titulo": "Mango",
+     "title": "Mango",
+     "director": "Joan Iyiola",
+     "country": "Francia (Reino Unido)",
+     "year": 2025,
+     "synopsis": "Zadie is an independent florist who is privately suffering from fibroids but is determined to take her career to the next level. When a dream job arrives, Zadie searches for help in order to control her morphing body, but the unwanted growths threaten to take over.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/mango.jpg",
+     "posterSource": "custom",
+     "lbSlug": "mango-2025",
+     "duration": "11 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "Concrete Moves",
+     "title": "Concrete Moves",
+     "director": "Fagamou Fama Ndiaye",
+     "country": "Senegal",
+     "year": 2026,
+     "synopsis": "Concrete Moves is inspired by a childhood memory: the fear triggered by a snake during a school trip to the Mamelles lighthouse in Dakar. Returning to that same hill decades later.",
+     "synopsis_lang": "en",
+     "synopsis_en": "Fagamou returns to the same hill that, decades ago, triggered her fear of snakes.",
+     "poster": "/assets/qaff/concrete-moves.jpg",
+     "posterSource": "custom",
+     "lbSlug": "concrete-moves",
+     "duration": "12 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 12
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "hora_fin": "17:00",
+   "is_cortos": true,
+   "seccion": "☕ Panorama Diaspórica",
+   "duracion_min": 42
+  },
+  {
+   "dia": "2026-09-15",
+   "hora": "10:00",
+   "sede": "Pontificia Universidad Javeriana",
+   "titulo": "Caída Libre + Kanekalon + Bertha + Hacker Leonilia + Viche + Tia Ciata",
+   "obras": [
+    {
+     "titulo": "Caída Libre",
+     "title": "Caída Libre",
+     "director": "Wilson Borja",
+     "country": "Colombia",
+     "year": 2024,
+     "synopsis": "In a desperate attempt to escape isolation, a faceless character leaps from a ledge hoping to find his end, unaware that at the bottom of the fall, the laws of gravity do not apply to him: he bounces back.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/free-fall.jpg",
+     "posterSource": "custom",
+     "lbSlug": "caida-libre",
+     "duration": "9 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 9,
+     "_nota": "con la presencia de la directora"
+    },
+    {
+     "titulo": "Kanekalon",
+     "title": "Kanekalon",
+     "director": "Sara J. Asprilla",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "Teyo, a trans girl, gets ready to start at her new all-girls school. As she journeys through Quibdó, a warm and vibrant city, she navigates the rhythms and gazes that greet her before stepping into class.",
+     "synopsis_lang": "en",
+     "synopsis_en": "Teyo, a young trans woman, prepares to enter her new female school. In the middle of a trip through Quibdó, a hot city of sound, rhythms and glances that she faces before entering class converge.",
+     "poster": "/assets/qaff/kanekalon.jpg",
+     "posterSource": "custom",
+     "lbSlug": "kanekalon",
+     "duration": "13 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Bertha",
+     "title": "Bertha",
+     "director": "Laura Asprilla",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "ULDA (65) refuses to take charge of her macho husband's funeral because he died in another woman's bed. At home, only Bertha, a mischievous goat, remains as her companion while she returns to the woman she once was.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/bertha.jpg",
+     "posterSource": "custom",
+     "duration": "13 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Hacker Leonilia",
+     "title": "Hacker Leonilia",
+     "director": "Gustavo Fontele Dourado",
+     "country": "Brasil",
+     "year": 2025,
+     "synopsis": "In the future, an elderly hacker and embroiderer must confront her own traumas and use her skills to escape a virtual reality. This story is based on the life of my grandmother, Leonilia Ferreira.",
+     "synopsis_lang": "en",
+     "synopsis_en": "An elderly hacker with a personal crisis needs to use her skills and memories to escape a metaverse in order to have a second chance.",
+     "poster": "/assets/qaff/hacker-leonilia.jpg",
+     "posterSource": "custom",
+     "lbSlug": "hacker-leonilia",
+     "duration": "15 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Viche",
+     "title": "Viche",
+     "director": "Jorge Eliecer Leudo Murillo",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "In the heart of Chocó, Diógenes, a young Afro-Colombian university student, lives trapped between the traditions of his grandfather Anacleto, a master viche producer, and his own aspirations to go out into the world and build a different life.",
+     "synopsis_lang": "en",
+     "synopsis_en": "In the heart of Chocó, Diógenes, a young Afro-descendant university student, lives trapped between the traditions of his grandfather Anacleto, a master viche producer, and his own aspirations to go out into the world and build a different life.",
+     "poster": "/assets/qaff/viche.jpg",
+     "posterSource": "custom",
+     "lbSlug": "viche",
+     "duration": "17 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "Tia Ciata",
+     "director": "Mariana Campos y Raquel Beatriz",
+     "pais": "Brasil",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 26,
+     "_nota": "con la presencia de la directora"
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Auditorio Centro Ático",
+   "hora_fin": "13:00",
+   "is_cortos": true,
+   "seccion": "🛶 Panorama Colombiano",
+   "duracion_min": 90
+  },
+  {
+   "dia": "2026-09-15",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "Los Chicos del Banjo",
+   "obras": [
+    {
+     "titulo": "Los Chicos del Banjo",
+     "director": "Johan R. Nayar",
+     "pais": "Malawi",
+     "anio": "2025",
+     "genero": "Documental",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 76
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "duracion_min": 76
+  },
+  {
+   "dia": "2026-09-15",
+   "hora": "14:00",
+   "sede": "Universidad de los Andes",
+   "titulo": "Fitofascias + Aisha No Puede Volar Lejos",
+   "obras": [
+    {
+     "titulo": "Fitofascias",
+     "director": "Petra Ventana, Lucía Benamo",
+     "pais": "Argentina-Colombia",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 8,
+     "_nota": "con la presencia de la directora"
+    },
+    {
+     "titulo": "Aisha No Puede Volar Lejos",
+     "director": "Morad Mostafa",
+     "pais": "Egypt",
+     "anio": "2025",
+     "genero": "Ficción",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 120
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "hora_fin": "16:00",
+   "is_cortos": true,
+   "duracion_min": 128
+  },
+  {
+   "dia": "2026-09-15",
+   "hora": "15:00",
+   "sede": "Alianza Francesa",
+   "titulo": "Café ? + Happy Meal + Gloria + Celui qui pleure",
+   "obras": [
+    {
+     "titulo": "Café ?",
+     "title": "Café ?",
+     "director": "Bamar Kane",
+     "country": "Francia",
+     "year": 2025,
+     "synopsis": "Ouzin, Baba and Sémou, longtime friends and retirees, never miss their daily coffee meetup. But every year, in April, Sémou is haunted by the loss of his first love. One afternoon, as Ouzin and Baba grow concerned about their friend, Sémou doesn't show up for coffee.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/cafe.jpg",
+     "posterSource": "custom",
+     "duration": "25 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 24
+    },
+    {
+     "titulo": "Happy Meal",
+     "title": "Happy Meal",
+     "director": "Johanna Makabi",
+     "country": "Francia",
+     "year": 2025,
+     "synopsis": "DOM, 32, is undergoing therapy. As the Christmas holidays come to an end, he is granted, for the first time in years, the right to spend a day alone with his daughters. A precious day... that he dreads seeing come to an end.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/happy-meal.jpg",
+     "posterSource": "custom",
+     "lbSlug": "happy-meal-2026",
+     "duration": "20 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Gloria",
+     "title": "Gloria",
+     "director": "Marvin Yamb",
+     "country": "Guayana Francesa",
+     "year": 2025,
+     "synopsis": "When Gloria discovers a deep secret that her daughter Ilana confides in her, she struggles to react, trapped in the silence of religion and traditions that suffocate her family.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/gloria.jpg",
+     "posterSource": "custom",
+     "lbSlug": "gloria-2025-2",
+     "duration": "15 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Celui qui pleure",
+     "title": "Celui qui pleure",
+     "director": "Cyrille Guei",
+     "country": "Francia",
+     "year": 2025,
+     "synopsis": "A shepherdess is convinced by her childhood friend, who has become a seller of fake medicines, to go and retrieve the goods that a spirit supposedly stole from her. In fact, a rumor is circulating that a demon is prowling the streets of Abidjan: \"The Weeper.\"",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/the-one-who-cries.jpg",
+     "posterSource": "custom",
+     "lbSlug": "celui-qui-pleure",
+     "duration": "20 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 20
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "hora_fin": "16:00",
+   "is_cortos": true,
+   "seccion": "☕ Panorama Diaspórica",
+   "duracion_min": 78
+  },
+  {
+   "dia": "2026-09-15",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "Hyphen",
+   "obras": [
+    {
+     "titulo": "Hyphen",
+     "director": "Reine Razzouk",
+     "pais": "Lebanon",
+     "anio": "2023",
+     "genero": "Documental",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 98
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "duracion_min": 98
+  },
+  {
+   "dia": "2026-09-15",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "El Anclaje del Tiempo",
+   "obras": [
+    {
+     "titulo": "El Anclaje del Tiempo",
+     "director": "Sol de Carvalho",
+     "pais": "Mozambique",
+     "anio": "2024",
+     "genero": "Ficción",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 105
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "duracion_min": 105
+  },
+  {
+   "dia": "2026-09-16",
+   "hora": "10:00",
+   "sede": "Pontificia Universidad Javeriana",
+   "titulo": "La tinaja + The Last Dance + Memórias com vista para o mar + When the World Broke Open",
+   "obras": [
+    {
+     "titulo": "La tinaja",
+     "title": "La tinaja",
+     "director": "Ernestina Miranda, Mar Aje",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "Where do we keep our memories? Where do they endure? How do we evoke them? An epiphany dispels forgetfulness and reconstructs the bond between Esther, the protagonist, and her ancestors through the world of dreams, her mother's memories, and the restoration of an inherited clay vessel.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/the-clay-vase.jpg",
+     "posterSource": "custom",
+     "lbSlug": "la-tinaja",
+     "duration": "14 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 13
+    },
+    {
+     "titulo": "The Last Dance",
+     "title": "The Last Dance",
+     "director": "Hayden Mclean",
+     "country": "Reino Unido",
+     "year": 2025,
+     "synopsis": "When Fox's \"LA Bar\" is hit with a compulsory purchase order, a cornerstone of Caribbean life in 90's East London is threatened. As the city begins to forget, the community remembers.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/the-last-dance.jpg",
+     "posterSource": "custom",
+     "lbSlug": "the-last-dance-2025",
+     "duration": "17 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Memórias com vista para o mar",
+     "title": "Memórias com vista para o mar",
+     "director": "Marton Olympio",
+     "country": "Brasil",
+     "year": 2025,
+     "synopsis": "An 80-year-old Black painter escapes from a nursing home and takes refuge on a beach bench. There, lost memories gradually resurface. As he comes face to face with the waves of his past, he re-evaluates his life, sketches new perspectives, and reconnects with his son.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/waterfront-memories.jpg",
+     "posterSource": "custom",
+     "lbSlug": "memorias-com-vista-para-o-mar",
+     "duration": "20 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 20
+    },
+    {
+     "titulo": "When the World Broke Open",
+     "title": "When the World Broke Open",
+     "director": "Desiree Mbakumua Meiffret",
+     "country": "Estados Unidos",
+     "year": 2026,
+     "synopsis": "At the height of the 1904 Herero and Nama genocide in German South West Africa, a young, pregnant Herero woman named Jorokee flees the smoldering ruins of her village with her husband Unomuinjo...",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/when-the-world-broke-open.jpg",
+     "posterSource": "custom",
+     "duration": "30 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 29
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes",
+   "hora_fin": "13:00",
+   "is_cortos": true,
+   "seccion": "☕ Panorama Diaspórica",
+   "duracion_min": 78
+  },
+  {
+   "dia": "2026-09-16",
+   "hora": "13:00",
+   "sede": "Universidad de los Andes",
+   "titulo": "Caída Libre + Refugiar el gesto + Kanekalon + Bertha + Hacker Leonilia + Tia Ciata",
+   "obras": [
+    {
+     "titulo": "Caída Libre",
+     "title": "Caída Libre",
+     "director": "Wilson Borja",
+     "country": "Colombia",
+     "year": 2024,
+     "synopsis": "In a desperate attempt to escape isolation, a faceless character leaps from a ledge hoping to find his end, unaware that at the bottom of the fall, the laws of gravity do not apply to him: he bounces back.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/free-fall.jpg",
+     "posterSource": "custom",
+     "lbSlug": "caida-libre",
+     "duration": "9 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 9,
+     "_nota": "CON LA PRESENCIA DE LA DIRECTORA"
+    },
+    {
+     "titulo": "Refugiar el gesto",
+     "title": "Refugiar el gesto",
+     "director": "Adrian Villa-Davila, Andres Prado",
+     "country": "Colombia",
+     "year": 2026,
+     "synopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/sheltering-gestures.jpg",
+     "posterSource": "custom",
+     "lbSlug": "sheltering-gestures",
+     "duration": "11 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Kanekalon",
+     "title": "Kanekalon",
+     "director": "Sara J. Asprilla",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "Teyo, a trans girl, gets ready to start at her new all-girls school. As she journeys through Quibdó, a warm and vibrant city, she navigates the rhythms and gazes that greet her before stepping into class.",
+     "synopsis_lang": "en",
+     "synopsis_en": "Teyo, a young trans woman, prepares to enter her new female school. In the middle of a trip through Quibdó, a hot city of sound, rhythms and glances that she faces before entering class converge.",
+     "poster": "/assets/qaff/kanekalon.jpg",
+     "posterSource": "custom",
+     "lbSlug": "kanekalon",
+     "duration": "13 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Bertha",
+     "title": "Bertha",
+     "director": "Laura Asprilla",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "ULDA (65) refuses to take charge of her macho husband's funeral because he died in another woman's bed. At home, only Bertha, a mischievous goat, remains as her companion while she returns to the woman she once was.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/bertha.jpg",
+     "posterSource": "custom",
+     "duration": "13 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Hacker Leonilia",
+     "title": "Hacker Leonilia",
+     "director": "Gustavo Fontele Dourado",
+     "country": "Brasil",
+     "year": 2025,
+     "synopsis": "In the future, an elderly hacker and embroiderer must confront her own traumas and use her skills to escape a virtual reality. This story is based on the life of my grandmother, Leonilia Ferreira.",
+     "synopsis_lang": "en",
+     "synopsis_en": "An elderly hacker with a personal crisis needs to use her skills and memories to escape a metaverse in order to have a second chance.",
+     "poster": "/assets/qaff/hacker-leonilia.jpg",
+     "posterSource": "custom",
+     "lbSlug": "hacker-leonilia",
+     "duration": "15 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Tia Ciata",
+     "director": "MARIANA CAMPOS Y RAQUEL BEATRIZ",
+     "pais": "BRASIL",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 26,
+     "_nota": "CON LA PRESENCIA DE LA DIRECTORA"
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "hora_fin": "15:00",
+   "is_cortos": true,
+   "seccion": "🛶 Panorama Colombiano",
+   "duracion_min": 83
+  },
+  {
+   "dia": "2026-09-16",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "Sobreviviendo a Biafra",
+   "obras": [
+    {
+     "titulo": "Sobreviviendo a Biafra",
+     "director": "Meji Alabi, Leke Alabi-Isama",
+     "pais": "Nigeria",
+     "anio": "2026",
+     "genero": "Documental",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 75
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "duracion_min": 75
+  },
+  {
+   "dia": "2026-09-16",
+   "hora": "15:00",
+   "sede": "Alianza Francesa",
+   "titulo": "El Capitán Anthony + Leer en las gotas de lluvia + A King Displaced + Sisters in Destiny: Angela Davis & Gerty Archimède",
+   "obras": [
+    {
+     "titulo": "El Capitán Anthony",
+     "title": "El Capitán Anthony",
+     "director": "Gregory Robinson",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "In 1942, Anthony is a ten-year-old boy living on the island of Providencia, Colombia. He dreams of becoming a great schooner captain like his father, and goes to school every day to learn about the sea and navigation from his teacher Fabio.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/captain-anthony.jpg",
+     "posterSource": "custom",
+     "duration": "8 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Leer en las gotas de lluvia",
+     "title": "Leer en las gotas de lluvia",
+     "director": "Lilian Pallares, Charles Olsen",
+     "country": "España",
+     "year": 2025,
+     "synopsis": "An Angolan artist and mother, her four-year-old daughter, and a New Zealand painter create imaginary worlds in new lands. These find echo in the poem by Xisca Minart, Read in Raindrops.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/leer-en-las-gotas-de-lluvia.jpg",
+     "posterSource": "custom",
+     "duration": "10 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "A King Displaced",
+     "title": "A King Displaced",
+     "director": "Olayinka Eno Babalola",
+     "country": "Nigeria",
+     "year": 2026,
+     "synopsis": "Daniel Hungbeji navigates his daily life both as a fisherman and as a traditional ruler within the water settlement of Makoko, Lagos, Nigeria.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/a-king-displaced.jpg",
+     "posterSource": "custom",
+     "duration": "20 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Sisters in Destiny: Angela Davis & Gerty Archimède",
+     "title": "Sisters in Destiny: Angela Davis & Gerty Archimède",
+     "director": "Pascal Frederic Archimede, Dimitry Zandronis",
+     "country": "Guadalupe",
+     "year": 2025,
+     "synopsis": "Two women. Two continents. One shared fight. From Guadeloupe to the United States, Sisters in Destiny explores the intertwined journeys of Gerty Archimède, a trailblazer of feminism.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/sisters-in-destiny-angela-davis-gerty-archimede.jpg",
+     "posterSource": "custom",
+     "duration": "53 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 52
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "hora_fin": "17:00",
+   "is_cortos": true,
+   "seccion": "🪞 Prisma Femenino",
+   "duracion_min": 89
+  },
+  {
+   "dia": "2026-09-16",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "Tres Hombres Negros",
+   "obras": [
+    {
+     "titulo": "Tres Hombres Negros",
+     "director": "Sienna McLean-LoGreco",
+     "pais": "Estados Unidos",
+     "anio": "2026",
+     "genero": "Documental",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 99
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "duracion_min": 99
+  },
+  {
+   "dia": "2026-09-16",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "Nunkui",
+   "obras": [
+    {
+     "titulo": "Nunkui",
+     "title": "Nunkui",
+     "director": "Verenice Benitez",
+     "country": "Chile (Ecuador, Alemania)",
+     "year": 2026,
+     "synopsis": "Nunkui lives in a Shuar community and dreams of the feminine spirit of the garden, also called Nunkui, just like her. While her aunt teaches her songs and the secrets of cultivation, the vast Amazon rainforest they call home is handed over to transnational mining companies, and evictions begin in the area.",
+     "synopsis_lang": "en",
+     "synopsis_en": "Nunkui, the female spirit of the garden. Nunkui, the name of a Shuar girl in a lush world of plants, animals, spirits and an extended family. Between premonitory dreams and mining conflicts in the Amazonian Cóndor mountain range, Nunkui searches for her place in the world, influenced by her grandfather Yaunchu, an old Shuar leader.",
+     "poster": "/assets/qaff/nunkui.jpg",
+     "posterSource": "custom",
+     "lbSlug": "nunkui-2026",
+     "duration": "90 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 90
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "seccion": "🌊 Fronteras Latam",
+   "duracion_min": 90
+  },
+  {
+   "dia": "2026-09-17",
+   "hora": "10:00",
+   "sede": "Pontificia Universidad Javeriana",
+   "titulo": "Refugiar el gesto + Posesas + Altanegra + Soñé su nombre",
+   "obras": [
+    {
+     "titulo": "Refugiar el gesto",
+     "title": "Refugiar el gesto",
+     "director": "Adrian Villa-Davila, Andres Prado",
+     "country": "Colombia",
+     "year": 2026,
+     "synopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/sheltering-gestures.jpg",
+     "posterSource": "custom",
+     "lbSlug": "sheltering-gestures",
+     "duration": "11 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Posesas",
+     "title": "Posesas",
+     "director": "Sebastian Wiedemann, Daniel Cortes",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "Based on a critical and counter-current review of the historical figure of Javiera Londoño, an 18th-century landowner who supposedly contributed to the abolition of slavery in the region of Antioquia, Colombia.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/posesas-possessed.jpg",
+     "posterSource": "custom",
+     "duration": "16 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Altanegra",
+     "title": "Altanegra",
+     "director": "Raiza De La Hoz, Daniela Ponce",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "In a territory marked by promises of equality and realities of exclusion, being young, Black, and from a rural community becomes an act of everyday resistance.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/altanegra.jpg",
+     "posterSource": "custom",
+     "duration": "26 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 25
+    },
+    {
+     "titulo": "Soñé su nombre",
+     "title": "Soñé su nombre",
+     "director": "Ángela Carabalí",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre se le aparece en un sueño y le pide que lo busque. Junto a su hermana Juliana, emprende un viaje por Colombia hasta los terriotiros indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada.",
+     "synopsis_lang": "es",
+     "synopsis_en": "Thirty years after his forced disappearance, the filmmaker’s Afro Colombian father comes to her in a dream, asking her to find him. With her sister, she sets out on a journey of discovery across Colombia’s painful history, reconnecting with their father and his activism.",
+     "poster": "/assets/qaff/sone-su-nombre.jpg",
+     "posterSource": "custom",
+     "lbSlug": "i-dreamed-his-name",
+     "duration": "85 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 85,
+     "_nota": "con la presencia de la guinista [sic]"
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 901 - Edificio Jorge Hoyos Vásquez, S.J. – Facultad de Ciencias Económicas y Administrativas",
+   "hora_fin": "13:00",
+   "is_cortos": true,
+   "seccion": "🛶 Panorama Colombiano",
+   "duracion_min": 136
+  },
+  {
+   "dia": "2026-09-17",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "De Barro y Sangre",
+   "obras": [
+    {
+     "titulo": "De Barro y Sangre",
+     "director": "Jean-Gabriel Leynaud",
+     "pais": "RD Congo",
+     "anio": "2025",
+     "genero": "Documental",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 94
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "duracion_min": 94
+  },
+  {
+   "dia": "2026-09-17",
+   "hora": "14:00",
+   "sede": "Universidad de los Andes",
+   "titulo": "The Black Bart of Taco King #17 + Dias de Tempestade + Amelia + Mi viche todo el día",
+   "obras": [
+    {
+     "titulo": "The Black Bart of Taco King #17",
+     "title": "The Black Bart of Taco King #17",
+     "director": "Rickey Larke",
+     "country": "Estados Unidos",
+     "year": 2026,
+     "synopsis": "A suave criminal searches for a new partner at a dive bar and finds the perfect Bonnie to his Clyde. He takes her to dinner to put her to the test, yet she has all the answers... and more.",
+     "synopsis_lang": "en",
+     "synopsis_en": "A suave larcenist searches for a new partner at a dive bar and finds the perfect Bonnie to his Clyde. He takes her to dinner to put her to the test, yet she has all the answers... and more.",
+     "poster": "/assets/qaff/the-black-bart-of-taco-king-17.jpg",
+     "posterSource": "custom",
+     "lbSlug": "the-black-bart-of-taco-king-17",
+     "duration": "11 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "Dias de Tempestade",
+     "title": "Dias de Tempestade",
+     "director": "Vitor Bitencourt Rocha",
+     "country": "Brasil",
+     "year": 2026,
+     "synopsis": "Ahura is a wheelchair carrier who tries to escape at all costs, but finds Gymbia being attacked. He saves her and begins his journey in search of love and freedom.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/stormy-days.jpg",
+     "posterSource": "custom",
+     "duration": "19 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Amelia",
+     "title": "Amelia",
+     "director": "Badewa Adeseye Ajibade",
+     "country": "Nigeria",
+     "year": 2025,
+     "synopsis": "Defiance, strength, bravery, love, and loss—these are the heart of Amelia's story. More than just a tale about our protagonist, it is uniquely told through her perspective. As a married Nigerian woman living in relative poverty in the year 2002.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/amelia.jpg",
+     "posterSource": "custom",
+     "duration": "23 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 23
+    },
+    {
+     "titulo": "Mi viche todo el día",
+     "title": "Mi viche todo el día",
+     "director": "Juan Camilo Moreno",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and produce viche, an ancestral beverage once prohibited and now in vogue.",
+     "synopsis_lang": "en",
+     "synopsis_en": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and make viche, an ancestral beverage that was once prohibited but now is in vogue. Through food, river trips, and music, viche and its knowledge not only shape people s daily lives but also raise the question of a just future, where viche serves as food, sustenance, and identity for Black families.",
+     "poster": "/assets/qaff/mi-viche-todo-el-dia.jpg",
+     "posterSource": "custom",
+     "lbSlug": "my-daily-viche",
+     "duration": "26 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 26
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "hora_fin": "16:00",
+   "is_cortos": true,
+   "seccion": "🌊 Fronteras Latam",
+   "duracion_min": 79
+  },
+  {
+   "dia": "2026-09-17",
+   "hora": "15:00",
+   "sede": "Alianza Francesa",
+   "titulo": "Ni Chaînes ni Maîtres",
+   "obras": [
+    {
+     "titulo": "Ni Chaînes ni Maîtres",
+     "director": "Simon Moutaïrou",
+     "pais": "Francia",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 98
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "hora_fin": "20:00",
+   "duracion_min": 98
+  },
+  {
+   "dia": "2026-09-17",
+   "hora": "15:00",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "Viva Yurumanguí",
+   "obras": [
+    {
+     "titulo": "Viva Yurumanguí",
+     "title": "Viva Yurumanguí",
+     "director": "Emma Christopher, Sergio Leyva Seiglie",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "On the remote Pacific coast of Colombia, the inhabitants of the Yurumanguí palenque still fight for freedom, hundreds of years after their ancestors fled slavery.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/viva-yurumangui.jpg",
+     "posterSource": "custom",
+     "duration": "80 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 80
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 2",
+   "seccion": "🛶 Panorama Colombiano",
+   "duracion_min": 80
+  },
+  {
+   "dia": "2026-09-17",
+   "hora": "16:30",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "La Obra de Dios",
+   "obras": [
+    {
+     "titulo": "La Obra de Dios",
+     "director": "Michael James",
+     "pais": "South Africa",
+     "anio": "2025",
+     "genero": "Ficción",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 126
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala Capital",
+   "duracion_min": 126
+  },
+  {
+   "dia": "2026-09-18",
+   "hora": "10:00",
+   "sede": "Pontificia Universidad Javeriana",
+   "titulo": "Amazonas: Cocinas Indígenas de Selva y Río + Mojugba + A Cor da Patroa + Relatos de la Guajirita",
+   "obras": [
+    {
+     "titulo": "Amazonas: Cocinas Indígenas de Selva y Río",
+     "title": "Amazonas: Cocinas Indígenas de Selva y Río",
+     "director": "Jairo Garrido",
+     "country": "Colombia",
+     "year": 2026,
+     "synopsis": "This documentary explores the ancestral knowledge preserved through the kitchens of the forest and the river. Through traditional recipes, gathering practices, and the deep relationship between people and nature.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/amazonas-cocinas-indigenas-de-selva-y-rio.jpg",
+     "posterSource": "custom",
+     "duration": "13 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 13,
+     "_nota": "con la presencia del protagonista"
+    },
+    {
+     "titulo": "Mojugba",
+     "title": "Mojugba",
+     "director": "Gustavo Alonso Arias",
+     "country": "Colombia",
+     "year": 2026,
+     "synopsis": "Fanny, an Afro-Colombian leader, turns the Mojugba, a Yoruba ritual of ancestral invocation, into an act of resistance. In a country that tries to erase its history, she teaches that remembering is revolutionary.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/mojugba.jpg",
+     "posterSource": "custom",
+     "duration": "24 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 23
+    },
+    {
+     "titulo": "A Cor da Patroa",
+     "title": "A Cor da Patroa",
+     "director": "Milena Anjos",
+     "country": "Brasil",
+     "year": 2026,
+     "synopsis": "With classes suspended due to police tension in retaliation for a community protest, a child accompanies his mother on a workday as a domestic worker and is surprised to meet her employer.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/a-cor-da-patroa.jpg",
+     "posterSource": "custom",
+     "lbSlug": "a-cor-da-patroa",
+     "duration": "25 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 24
+    },
+    {
+     "titulo": "Relatos de la Guajirita",
+     "title": "Relatos de la Guajirita",
+     "director": "David Antonio Diaz de la rosa",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "Relatos de la Guajirita tells the story of the Afro-descendant communities of Becerril, Cesar, through their memories, traditions, music, and oral narratives.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/stories-from-la-guajirita.jpg",
+     "posterSource": "custom",
+     "duration": "51 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 51
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 903 - Edificio Jorge Hoyos Vásquez, S.J. – Facultad de Ciencias Económicas y Administrativas",
+   "hora_fin": "13:00",
+   "is_cortos": true,
+   "seccion": "🛶 Panorama Colombiano",
+   "duracion_min": 111
+  },
+  {
+   "dia": "2026-09-18",
+   "hora": "13:00",
+   "sede": "Universidad de los Andes",
+   "titulo": "Orango",
+   "obras": [
+    {
+     "titulo": "Orango",
+     "director": "Samuel Kay Forrest",
+     "pais": "Guinea-Bissau",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 94
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "hora_fin": "15:00",
+   "duracion_min": 94
+  },
+  {
+   "dia": "2026-09-18",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "Los Viajeros",
+   "obras": [
+    {
+     "titulo": "Los Viajeros",
+     "director": "David Bingong",
+     "pais": "Cameroon",
+     "anio": "2025",
+     "genero": "Documental",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 60
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "duracion_min": 60
+  },
+  {
+   "dia": "2026-09-18",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "Iniciación en la Octava Dimensión",
+   "obras": [
+    {
+     "titulo": "Iniciación en la Octava Dimensión",
+     "title": "Iniciación en la Octava Dimensión",
+     "director": "Lucas Silva",
+     "country": "Colombia",
+     "year": "2025",
+     "synopsis": "Five Afro-Colombian characters in the middle of Bogotá, five disparate destinies in a city that is hostile to them. Rubi Quejada, a young model displaced from Chocó.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/initiation-into-the-eighth-dimension.jpg",
+     "posterSource": "custom",
+     "duration": "90 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 90,
+     "_nota": "+ (Presencia del director)"
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "seccion": "🛶 Panorama Colombiano",
+   "duracion_min": 90
+  },
+  {
+   "dia": "2026-09-18",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "Generación Equivocada",
+   "obras": [
+    {
+     "titulo": "Generación Equivocada",
+     "director": "Shili Munyama",
+     "pais": "Namibia",
+     "anio": "2026",
+     "genero": "Ficción",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 64
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "duracion_min": 64
+  },
+  {
+   "dia": "2026-09-19",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "BLOQUE CORTOS FICCIÓN — NOIR URBANO: HISTORIAS EN CLAVE MENOR",
+   "obras": [
+    {
+     "titulo": "Caída Libre",
+     "title": "Caída Libre",
+     "director": "Wilson Borja",
+     "country": "Colombia",
+     "year": 2024,
+     "synopsis": "In a desperate attempt to escape isolation, a faceless character leaps from a ledge hoping to find his end, unaware that at the bottom of the fall, the laws of gravity do not apply to him: he bounces back.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/free-fall.jpg",
+     "posterSource": "custom",
+     "lbSlug": "caida-libre",
+     "duration": "9 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 9,
+     "_nota": "+ (Presencia del director)"
+    },
+    {
+     "titulo": "Bertha",
+     "title": "Bertha",
+     "director": "Laura Asprilla",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis": "ULDA (65) refuses to take charge of her macho husband's funeral because he died in another woman's bed. At home, only Bertha, a mischievous goat, remains as her companion while she returns to the woman she once was.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/bertha.jpg",
+     "posterSource": "custom",
+     "duration": "13 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Avenida Fishkill 305",
+     "director": "Ramel Westry",
+     "pais": "Estados Unidos",
+     "anio": "2026",
+     "genero": "Ficción",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Domingo",
+     "title": "Domingo",
+     "director": "Day Sena",
+     "country": "Brasil",
+     "year": 2026,
+     "synopsis": "One Sunday tells the story of a possible encounter between Samuel and a stray bullet. The bullet comes from a gunshot fired in the favela where Samuel lives. On a sunny Sunday, Samuel decides to take advantage of his day off to go to the beach.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/one-sunday.jpg",
+     "posterSource": "custom",
+     "duration": "20 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 20
+    },
+    {
+     "titulo": "Amelia",
+     "title": "Amelia",
+     "director": "Badewa Adeseye Ajibade",
+     "country": "Nigeria",
+     "year": 2025,
+     "synopsis": "Defiance, strength, bravery, love, and loss—these are the heart of Amelia's story. More than just a tale about our protagonist, it is uniquely told through her perspective. As a married Nigerian woman living in relative poverty in the year 2002.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/amelia.jpg",
+     "posterSource": "custom",
+     "duration": "23 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 23
+    },
+    {
+     "titulo": "Café ?",
+     "title": "Café ?",
+     "director": "Bamar Kane",
+     "country": "Francia",
+     "year": 2025,
+     "synopsis": "Ouzin, Baba and Sémou, longtime friends and retirees, never miss their daily coffee meetup. But every year, in April, Sémou is haunted by the loss of his first love. One afternoon, as Ouzin and Baba grow concerned about their friend, Sémou doesn't show up for coffee.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/cafe.jpg",
+     "posterSource": "custom",
+     "duration": "25 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 24
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "is_cortos": true,
+   "seccion": "🛶 Panorama Colombiano",
+   "duracion_min": 103
+  },
+  {
+   "dia": "2026-09-19",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "Día del Padre",
+   "obras": [
+    {
+     "titulo": "Día del Padre",
+     "director": "Ayana O'Shun",
+     "pais": "Canadá",
+     "anio": "2025",
+     "genero": "Documental",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 74
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "duracion_min": 74
+  },
+  {
+   "dia": "2026-09-20",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "BLOQUE CORTOS DOCUMENTAL — NOIR MEMORIAS: DE LA SOMBRA AL TESTIMONIO",
+   "obras": [
+    {
+     "titulo": "Amazonas: Cocinas Indígenas de Selva y Río",
+     "title": "Amazonas: Cocinas Indígenas de Selva y Río",
+     "director": "Jairo Garrido",
+     "country": "Colombia",
+     "year": 2026,
+     "synopsis": "This documentary explores the ancestral knowledge preserved through the kitchens of the forest and the river. Through traditional recipes, gathering practices, and the deep relationship between people and nature.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/amazonas-cocinas-indigenas-de-selva-y-rio.jpg",
+     "posterSource": "custom",
+     "duration": "13 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 13
+    },
+    {
+     "titulo": "Carabalí",
+     "title": "Carabalí",
+     "director": "Medhin Tewolde",
+     "country": "México",
+     "year": 2026,
+     "synopsis": "An Afro-Colombian community leader is threatened and forced into exile. Far from his land and family, Carabalí resists in displacement, clinging to the hope of returning one day to the place where he belongs.",
+     "synopsis_lang": "en",
+     "poster": "/assets/qaff/carabali.jpg",
+     "posterSource": "custom",
+     "duration": "18 min",
+     "_obra_src": "catálogo del onboarding del Chocó",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "Un Rey Desplazado",
+     "director": "Olayinka Eno Babalola",
+     "pais": "Nigeria",
+     "anio": "2026",
+     "genero": "Documental",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Hermanas en el Destino - Angela & Gerty Archimède",
+     "director": "Pascal Frederic Archimede, Dimitry Zandronis",
+     "pais": "Guadeloupe",
+     "anio": "2025",
+     "genero": "Documental",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 52
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "is_cortos": true,
+   "seccion": "🌊 Fronteras Latam",
+   "duracion_min": 102
+  },
+  {
+   "dia": "2026-09-20",
+   "hora": "17:30",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "El Coach de los Locos",
+   "obras": [
+    {
+     "titulo": "El Coach de los Locos",
+     "director": "Carlo Liberatore",
+     "pais": "Senegal",
+     "anio": "2025",
+     "genero": "Documental",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 60
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala 3",
+   "duracion_min": 60
+  },
+  {
+   "dia": "2026-09-20",
+   "hora": "18:30",
+   "sede": "Cinemateca de Bogotá",
+   "titulo": "Aisha No Puede Volar Lejos",
+   "obras": [
+    {
+     "titulo": "Aisha No Puede Volar Lejos",
+     "director": "Morad Mostafa",
+     "pais": "Egypt",
+     "anio": "2025",
+     "genero": "Ficción",
+     "_obra_src": "ficha impresa en el programa de Bogotá (2 SEP)",
+     "duracion_min": 120
+    }
+   ],
+   "acceso": "desconocido",
+   "_src": "programa oficial en flipbook (2 SEP 2026), verificado por dos auditorías independientes",
+   "sala": "Sala Capital",
+   "duracion_min": 120
+  }
+ ]
+}

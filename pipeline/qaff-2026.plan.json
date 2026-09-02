@@ -32,5 +32,38 @@
   "lbSlug: 35 de 64. Es enriquecimiento nuestro, no depende del festival.",
   "PÓSTERS: 61 de 64. Faltan 3.",
   "REVISIÓN PERIÓDICA: re-consultar la API con un instance nuevo (ver arriba) y diffear contra qaff-2026-programacion-raw.json. Vigilar sobre todo que registration deje de ser null: sería señal de que abrieron inscripciones por evento."
- ]
+ ],
+ "_revision_2_sep_2026": {
+  "quibdo": "CANCELADO por el terremoto del 10 ago (confirmado por Juan). La edición es solo en Bogotá.",
+  "parrilla": "del programa oficial en flipbook del 2 SEP, verificada por dos auditorías independientes que coincidieron en los 68 cupos sin una sola diferencia.",
+  "obras": "38 de las 57 se heredan del catálogo del Chocó; 19 se siembran con la ficha impresa y quedan por enriquecer (afiche, sinopsis, lbSlug).",
+  "acceso": "DESCONOCIDO y declarado: el programa no dice cómo se entra a ninguna función de Bogotá, y no se hereda el «entrada libre» de Quibdó.",
+  "sin_prelanzamiento": "el prelanzamiento del 5 SEP en el Museo Nacional queda fuera por decisión de Juan.",
+  "pendiente_del_festival": [
+   "dos franjas imposibles (Alianza 15 SEP y Uniandes 15 SEP: las obras no caben en su horario)",
+   "dos sedes anunciadas sin parrilla (Museo Nacional 16-17, Universidad Nacional 22)",
+   "las fechas: el lomo dice 14-18 en unas páginas y 14-17 en otras, y hay funciones el 19 y el 20"
+  ]
+ },
+ "festival": {
+  "crudo": "festivals/staging/qaff-2026-bogota-crudo.json",
+  "sedes": {
+   "Cinemateca de Bogotá": [
+    "Cinemateca de Bogotá - Bogotá",
+    "Cra 3 #19-10, Bogotá"
+   ],
+   "Alianza Francesa": [
+    "Alianza Francesa - Bogotá",
+    "Cra 3 #18-45, Bogotá"
+   ],
+   "Universidad de los Andes": [
+    "Universidad de los Andes - Bogotá",
+    "Cra 1 #18A-12, Bogotá"
+   ],
+   "Pontificia Universidad Javeriana": [
+    "Pontificia Universidad Javeriana - Bogotá",
+    "Cra 7 #40-62, Bogotá"
+   ]
+  }
+ }
 }
