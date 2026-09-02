@@ -1774,3 +1774,73 @@ test('T155 — la hoja del tope y la de conflicto muestran el día completo', as
       .toContain(r.conflicto.diaEstaba);
   }
 });
+
+// ── T156 — la hoja del nombre tiene una salida visible ──────────────────────
+// Solo se cerraba tocando el fondo, que no se anuncia. La hoja reusa de la de
+// cuenta el contenedor (.auth-sheet-body), el título, el subtítulo, el input y
+// el CTA — pero no la última pieza de esa anatomía: los TRES pasos de la hoja
+// de cuenta terminan en `<span class="auth-cancel">Cancelar</span>`.
+//
+// Se afirman las dos mitades: que la salida se VE (existe, tiene caja y entra
+// en el viewport) y que hace lo que dice — cerrar SIN compartir. Una salida que
+// igual comparte es peor que ninguna, y arreglar solo la primera mitad la
+// dejaría pasar.
+test('T156 — Compartir se puede cancelar, y cancelar no comparte', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    const porDia = {};
+    FILMS.forEach(f => { (porDia[f.day] = porDia[f.day] || []).push(f.title); });
+    watchlist.clear();
+    Object.keys(porDia).sort().slice(0, 3).forEach(d => watchlist.add(porDia[d][0]));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+    try { localStorage.removeItem('otrofestiv_display_name'); } catch (e) {}
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(900);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const save = document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]');
+    if (!save) return { sinPlan: true };
+    save.click(); await w(1400);
+    tap('closePlanConfirm'); await w(800);
+    tap('sharePlan'); await w(1000);
+    const sh = document.getElementById('display-name-sheet');
+    if (!sh) return { noPide: true };
+
+    // 1 · ¿hay una salida que se VEA?
+    const c = document.getElementById('dname-cancel');
+    const rc = c ? c.getBoundingClientRect() : null;
+    const visible = { hay: !!c, txt: c ? c.textContent.trim() : null,
+      caja: rc ? (rc.width > 0 && rc.height > 0) : false,
+      enPantalla: rc ? (rc.bottom <= innerHeight + 0.5 && rc.top >= 0) : false };
+    if (!c) return { visible };
+
+    // 2 · ¿cierra SIN compartir?
+    let imagen = 0;
+    const _o = HTMLCanvasElement.prototype.toDataURL;
+    HTMLCanvasElement.prototype.toDataURL = function (...a) {
+      const u = _o.apply(this, a);
+      if (this.width > 400) imagen = Math.max(imagen, u.length);
+      return u;
+    };
+    c.click(); await w(2000);
+    HTMLCanvasElement.prototype.toDataURL = _o;
+    return { visible, cerro: !document.getElementById('display-name-sheet'),
+      imagen, nombre: localStorage.getItem('otrofestiv_display_name') };
+  });
+  if (r.sinPlan || r.noPide) return;
+
+  expect(r.visible.hay, 'la hoja ofrece una salida visible, no solo el fondo').toBe(true);
+  expect(r.visible.caja, 'y esa salida ocupa lugar en la pantalla').toBe(true);
+  expect(r.visible.enPantalla, 'y entra en el viewport, no queda debajo del borde').toBe(true);
+
+  expect(r.cerro, 'cancelar cierra la hoja').toBe(true);
+  expect(r.imagen, 'y NO comparte: una salida que igual comparte es peor que ninguna').toBe(0);
+  expect(r.nombre, 'ni guarda un nombre que no diste').toBeNull();
+});

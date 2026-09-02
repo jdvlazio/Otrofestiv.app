@@ -107,6 +107,7 @@ export function _promptDisplayName(onSave){
     <div class="sheet-subtitle">${t('export_aparecera')}</div>
     <input class="sheet-input" id="dname-input" type="text" maxlength="30" placeholder="${t('auth_nombre')}" autocomplete="name">
     <button class="sheet-cta" id="dname-save">${t('export_compartir_sin_nombre')}</button>
+    <span class="auth-cancel" id="dname-cancel">${t('misc_cancelar')}</span>
   </div>`;
   document.body.appendChild(el);
   const input=document.getElementById('dname-input');
@@ -130,5 +131,12 @@ export function _promptDisplayName(onSave){
     el.remove();
     if(onSave) onSave();
   };
+  // Salida VISIBLE (2 sep 2026): la hoja solo se cerraba tocando el fondo, que no
+  // se anuncia. Es el mismo `.auth-cancel` con que terminan los tres pasos de la
+  // hoja de cuenta —de la que esta ya reusa `.auth-sheet-body`, el título, el
+  // subtítulo, el input y el CTA—: mismo gris 136, mismo 11px, misma altura de
+  // 33px, medido. Ni CSS ni copy nuevos; solo la pieza que faltaba de la anatomía.
+  // Cancelar NO comparte: `onSave` no corre.
+  document.getElementById('dname-cancel').onclick=()=>el.remove();
   el.addEventListener('click',e=>{if(e.target===el)el.remove();});
 }
