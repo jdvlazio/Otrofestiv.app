@@ -1,0 +1,44 @@
+{
+ "_metodo": "lectura visual de la página, usada como VERDAD; el OCR queda como contraste",
+ "paginas": [
+  {"img":"c0f5bdac817a4fa94dd73448cb70b42f.jpg","sede":"Cinemateca de Bogotá","dia":"2026-09-15","apertura":"13:30",
+   "funciones":[
+    {"hora":"14:00","sala":"Sala 3","obras":[{"titulo":"Los chicos del banjo","director":"Johan R. Nayar","duracion":"76","pais":"Malawi","anio":2025,"genero":"Documental"}]},
+    {"hora":"17:00","sala":"Sala 3","obras":[{"titulo":"Hyphen","director":"Reine Razzouk","duracion":"98","pais":"Lebanon","anio":2023,"genero":"Documental"}]},
+    {"hora":"19:30","sala":"Sala 3","obras":[{"titulo":"El anclaje del tiempo","director":"Sol de Carvalho","duracion":"105","pais":"Mozambique","anio":2024,"genero":"Ficción"}]}]},
+  {"img":"9da227a29a00f44c3a9a859269c6611d.jpg","sede":"Alianza Francesa",
+   "funciones":[
+    {"dia":"2026-09-16","hora":"15:00","hora_fin":"17:00","es_bloque":true,"obras":[
+      {"titulo":"Captain Anthony","director":"Gregory Robinson","duracion":"8","pais":"Colombia"},
+      {"titulo":"Leer en las gotas de lluvia","director":"Lilian Pallares, Charles Olsen","duracion":"10'24","pais":"España"},
+      {"titulo":"A King Displaced","director":"Olayinka Eno Babalola","duracion":"19'57","pais":"Nigeria"},
+      {"titulo":"Sisters in Destiny: Angela Davis & Gerty Archimède","director":"Pascal Frederic Archimede, Dimitry Zandronis","duracion":"52'40","pais":"Guadeloupe"}]},
+    {"dia":"2026-09-17","hora":"15:00","hora_fin":"20:00","es_bloque":true,"obras":[
+      {"titulo":"Ni chaînes ni maîtres","director":"Simon Moutaïrou","duracion":"98","pais":"Francia"}],
+     "actividades":["Performance artística e musical — Alain Nkosi Konda + Zanu (live acústico)","Diálogo Improbable — NOIR Industria: Redes Sur-Sur","Vernissage exposición — Phalonne Pierre Louis"]}]},
+  {"img":"2d99599a9b06ef084df012e5b7a9c095.jpg","sede":"Pontificia Universidad Javeriana",
+   "direccion":"Edificio Jorge Hoyos Vásquez S.J. — Facultad de Ciencias Económicas y Administrativas, Carrera 7 # 40-62",
+   "funciones":[
+    {"dia":"2026-09-17","hora":"10:00","hora_fin":"13:00","sala":"Sala 901","es_bloque":true,"obras":[
+      {"titulo":"Refugiar el gesto","director":"Adrian Villa-Davila, Andres Prado","duracion":"10'53","pais":"Colombia"},
+      {"titulo":"Posesas","director":"Sebastian Wiedemann, Daniel Cortes","duracion":"16'18","pais":"Colombia"},
+      {"titulo":"Altanegra","director":"Raiza De La Hoz, Daniela Ponce","duracion":"25'59","pais":"Colombia"},
+      {"titulo":"Soñé su nombre","director":"Ángela Carabalí","duracion":"85","pais":"Colombia","nota":"con la presencia de la guionista"}],
+     "actividades":["Diálogo Improbable — Después de la Tormenta: cuerpo, tierra y renacer"]},
+    {"dia":"2026-09-18","hora":"10:00","hora_fin":"13:00","sala":"Sala 903","es_bloque":true,"obras":[
+      {"titulo":"Amazonas Cocinas Indígenas de Selva y Río","director":"Jairo Garrido","duracion":"13","pais":"Colombia","nota":"con la presencia del protagonista"},
+      {"titulo":"Mojugba","director":"Gustavo Alonso Arias","duracion":"23'33","pais":"Colombia"},
+      {"titulo":"A Cor da Patroa","director":"Milena Anjos","duracion":"24'48","pais":"Brazil"},
+      {"titulo":"Relatos de la Guajirita","director":"David Antonio Díaz de la Rosa","duracion":"51'19","pais":"Colombia"}],
+     "actividades":["Diálogo Improbable — NOIR FOGÓN: Cocina, Territorio y Memoria"]}]},
+  {"img":"e82d0d755c71fa3069af0b188e21bb69.jpg","sede":"Cinemateca de Bogotá","dia":"2026-09-20","apertura":"13:30",
+   "funciones":[
+    {"hora":"14:00","sala":"Sala 3","es_bloque":true,"nombre_bloque":"Bloque cortos documental — NOIR Memorias: de la sombra al testimonio","obras":[
+      {"titulo":"Amazonas Cocinas Indígenas","director":"Jairo Garrido","duracion":"13","pais":"Colombia","anio":2026,"genero":"Documental"},
+      {"titulo":"Carabalí","director":"Medhin Tewolde","duracion":"18'20","pais":"México","anio":2026,"genero":"Documental"},
+      {"titulo":"Un rey desplazado","director":"Olayinka Eno Babalola","duracion":"19'57","pais":"Nigeria","anio":2026,"genero":"Documental"},
+      {"titulo":"Hermanas en el destino - Angela & Gerty Archimède","director":"Pascal Frederic Archimede, Dimitry Zandronis","duracion":"52'40","pais":"Guadeloupe","anio":2025,"genero":"Documental"}]},
+    {"hora":"17:30","sala":"Sala 3","obras":[{"titulo":"El coach de los locos","director":"Carlo Liberatore","duracion":"60","pais":"Senegal","anio":2025,"genero":"Documental"}]},
+    {"hora":"18:30","sala":"Sala Capital","obras":[{"titulo":"Aisha no puede volar lejos","director":"Morad Mostafa","duracion":"120","pais":"Egypt","anio":2025,"genero":"Ficción"}]}]}
+ ]
+}
