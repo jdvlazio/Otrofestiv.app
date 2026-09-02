@@ -223,7 +223,16 @@ export function _buildAgendaCanvas(){
   c.fillStyle='#888888';
   c.font='500 11px system-ui,-apple-system,sans-serif';
   const _dn=_getDisplayName();
-  const _sub=(_dn?_dn+' · ':'')+t('share_mi_plan')+' · '+(cfg.name||'Festival')+' · '+active.length+' '+(active.length!==1?t('misc_dias'):t('misc_dia'));
+  // Los días del PLAN, no los del festival (2 sep 2026). El subtítulo reusaba
+  // `active.length`, y `active` son TODOS los días del festival a propósito —la
+  // grilla es un registro completo, con sus columnas vacías—: medido en FICDEH
+  // con 3 obras en 4 días, la imagen decía «8 días». Leído bajo «Mi Plan» eso
+  // es el tamaño de tu Plan, y era el del festival.
+  // Misma derivación que la línea de resultado de Planear (días con algo
+  // adentro), no el lapso entre la primera y la última: con una obra el lunes y
+  // otra el viernes, tu Plan es de 2 días, no de 5.
+  const _diasPlan=new Set((savedAgenda.schedule||[]).map(s=>s.day)).size||1;
+  const _sub=(_dn?_dn+' · ':'')+t('share_mi_plan')+' · '+(cfg.name||'Festival')+' · '+_diasPlan+' '+(_diasPlan!==1?t('misc_dias'):t('misc_dia'));
   c.fillText(_sub,PAD,HDR/2+20);
   active.forEach((day,ci)=>{
     const x=PAD+ci*(CW+CGAP);

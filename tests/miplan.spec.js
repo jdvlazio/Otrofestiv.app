@@ -1628,3 +1628,67 @@ test('T152 — la columna activa se distingue aunque su día esté vacío o pasa
       .toMatch(/245,\s*158,\s*11/);
   }
 });
+
+// ── T154 — la imagen compartida dice los días del PLAN, no los del festival ──
+// El subtítulo del PNG reusaba `active.length`, y `active` son TODOS los días
+// del festival a propósito: la grilla es un registro completo, con sus columnas
+// vacías. Medido en FICDEH con 3 obras repartidas en 4 días, la imagen decía
+// «Mi Plan · FICDEH · 8 días». Leído bajo «Mi Plan», ese número es el tamaño de
+// tu Plan, y era el del festival.
+//
+// Se afirma sobre el TEXTO QUE ENTRA AL CANVAS (fillText), que es lo que queda
+// pintado en la imagen que se comparte — no sobre la variable que lo calcula.
+// Y son días CON algo adentro, no el lapso: con una obra el lunes y otra el
+// viernes tu Plan es de 2 días, no de 5. Misma derivación que usa la línea de
+// resultado de Planear.
+test('T154 — el subtítulo de la imagen cuenta los días que tienen algo', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-12T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet'); await w(500);
+    try { localStorage.removeItem('otrofestiv_display_name'); } catch (e) {}
+    // Plan repartido: días con algo < días del festival, o el test no mide nada
+    const pel = FILMS.filter(f => f.type !== 'event' && !f._cancelled && f.day && f.time);
+    const sch = [];
+    ['2026-08-13', '2026-08-15', '2026-08-17'].forEach(d => {
+      const f = pel.find(x => x.day === d); if (f) sch.push({ ...f, _title: f.title });
+    });
+    if (sch.length < 2) return { sinFixture: true };
+    commitPlan(() => ({ schedule: sch }));
+    await w(700);
+
+    // lo que se PINTA en la imagen
+    const textos = [];
+    const _fill = CanvasRenderingContext2D.prototype.fillText;
+    CanvasRenderingContext2D.prototype.fillText = function (t, ...rest) {
+      textos.push(String(t)); return _fill.call(this, t, ...rest);
+    };
+    tap('sharePlan'); await w(1200);
+    const cta = document.getElementById('dname-save');
+    if (cta) { cta.click(); await w(2500); }
+    CanvasRenderingContext2D.prototype.fillText = _fill;
+
+    const dias = [...new Set(sch.map(s => s.day))].sort();
+    const i0 = DAY_KEYS.indexOf(dias[0]), i1 = DAY_KEYS.indexOf(dias[dias.length - 1]);
+    return {
+      sub: textos.find(t => t.includes('Mi Plan')) || null,
+      diasConPlan: dias.length,
+      diasFestival: DAY_KEYS.length,
+      lapso: (i0 >= 0 && i1 >= 0) ? (i1 - i0 + 1) : null
+    };
+  });
+  if (r.sinFixture) return;
+  expect(r.sub, 'el subtítulo se pintó en la imagen').toBeTruthy();
+  expect(r.diasConPlan, 'el fixture reparte el Plan en menos días que el festival')
+    .toBeLessThan(r.diasFestival);
+
+  const n = parseInt((r.sub.match(/(\d+)\s*d[ií]as?\b/i) || [])[1], 10);
+  expect(Number.isFinite(n), 'el subtítulo declara un número de días').toBe(true);
+  expect(n, 'y son los días del PLAN, no los del festival').toBe(r.diasConPlan);
+  if (r.lapso && r.lapso !== r.diasConPlan) {
+    expect(n, 'días CON algo adentro, no el lapso entre el primero y el último')
+      .not.toBe(r.lapso);
+  }
+});
