@@ -1,7 +1,7 @@
 // @ts-check
 // programa.spec.js — Tab Programa: lista, grid, filtros, posters, topbar.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival, goToPlanear, reentrar } = require('./helpers');
+const { LEVIZA_SIMTIME, enterFestival, goToPlanear, reentrar, esperarCalculo } = require('./helpers');
 
 // T01 — Apóstrofe: corazón en lista agrega al watchlist
 test('T01 — apóstrofe: corazón en lista agrega al watchlist', async ({ page }) => {
@@ -1953,7 +1953,11 @@ test('T92 — el resultado: sin banda «Opción», resumen en línea y días com
     };
   });
   expect(r.bandaOpcion, 'la banda «Opción» murió').toBe(false);
-  expect(r.resumen, 'el resumen es una línea de dato: obras · días').toMatch(/\d+ obras? · \d+ días?/);
+  // El sustantivo lo elige el contenido (T153): con un taller o una charla en el
+  // Plan la línea dice «actividades». Lo que este test afirma es la FORMA
+  // —«N sustantivo · N días»—, no cuál de los dos sustantivos toca.
+  expect(r.resumen, 'el resumen es una línea de dato: N cosas · N días')
+    .toMatch(/\d+ (?:obras?|actividades?) · \d+ días?/);
   expect(r.resumenBadge, 'sin badge — el número no puede leerse como índice').toBe(false);
   expect(r.nBandas, 'hay una banda por día del plan').toBe(r.dias);
   expect(r.color, 'los días van en ámbar, como las horas de Programa').toBe('rgb(245, 158, 11)');
@@ -2110,7 +2114,12 @@ test('T95 — la alerta de cruces es un pre-diagnóstico: no sobrevive al result
   });
   expect(r.antes.alerta, 'antes de calcular la alerta SÍ está (si no, el test no prueba nada)').toBe(true);
   expect(r.despuesAlerta, 'con el resultado en pantalla la alerta se retira').toBe(false);
-  expect(r.despuesLinea, 'el insumo se conserva: se va la alerta, no el dato').toMatch(/\d+ obras/);
+    // Sustantivo agnóstico por la misma razón que T92: acá se afirma que el dato
+    // SIGUE, no con qué palabra se nombra (eso lo vigila T153).
+  expect(r.despuesLinea, 'el insumo SIGUE en pantalla tras calcular — si desaparece, se fue el dato con la alerta')
+    .toBeTruthy();
+  expect(r.despuesLinea, 'el insumo se conserva: se va la alerta, no el dato')
+    .toMatch(/\d+ (?:obras?|actividades?)/);
   if (r.banner) {
     expect(r.banner, 'punto seguido de raya no es puntuación española').not.toMatch(/\.\s*—/);
     expect(r.banner, 'la segunda oración arranca en mayúscula').toMatch(/\.\s+[A-ZÁÉÍÓÚÑ]/);
@@ -3181,4 +3190,65 @@ test('T149 — la ciudad sin programación viva se marca en las dos superficies'
       .toEqual(r.hoja.marcadas);
     expect(r.filtro.sinMarca, 'y deja sin marcar las mismas').toEqual(r.hoja.sinMarca);
   }
+});
+
+// ── T153 — con un taller en la cuenta, Planear no dice «obras» ──────────────
+// «actividad» es el PARAGUAS y un taller no es una obra (regla de vocabulario).
+// El titular de Mi Plan ya elegía el sustantivo por el contenido y T132b lo
+// vigilaba, pero las dos líneas de Planear se habían quedado afuera: medido en
+// FICDEH con «Los frutos que dan vida» —taller de dos sesiones— más una
+// película, decían «2 obras» sobre 1 película y 1 taller. El NÚMERO estaba bien
+// (2 obras, 3 citas); el sustantivo no.
+//
+// La segunda mitad es la que impide arreglar de más: sin taller las dos líneas
+// tienen que seguir diciendo «obras», que es más específico y sigue siendo
+// verdad. Un cambio a «actividades» siempre pasaría la primera mitad sola.
+test('T153 — el sustantivo de Planear sigue al contenido, no a la pantalla', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-12T09:00:00-05:00');
+  const leer = async (conTaller) => {
+    await page.evaluate(async (ev) => {
+      const w = ms => new Promise(r => setTimeout(r, ms));
+      const b = document.createElement('button');
+      b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await w(400);
+      watchlist.clear(); prioritized.clear();
+      savedAgenda = null; cachedResult = null;
+      const pelis = FILMS.filter(f => f.type !== 'event' && !f._cancelled && f.day && f.time);
+      if (ev) {
+        const t = FILMS.find(f => f.is_recurring);
+        watchlist.add(t.title); watchlist.add(pelis[0].title);
+      } else {
+        watchlist.add(pelis[0].title); watchlist.add(pelis[1].title);
+      }
+      if (typeof saveState === 'function') saveState('wl', 'watched');
+    }, conTaller);
+    await goToPlanear(page);
+    await esperarCalculo(page);
+    await page.waitForTimeout(1000);
+    return page.evaluate(() => {
+      const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+      const uno = sel => [...document.querySelectorAll(sel)].filter(vis)
+        .map(e => e.innerText.replace(/\s+/g, ' ').trim())[0] || '';
+      return { insumo: uno('#ag-view .dato-linea'), resultado: uno('#ag-view .dato-resultado') };
+    });
+  };
+
+  // 1 · con un taller adentro, ninguna de las dos líneas puede decir «obra»
+  const conT = await leer(true);
+  expect(conT.insumo, 'la línea de insumo se pintó').toBeTruthy();
+  expect(conT.resultado, 'la línea de resultado se pintó').toBeTruthy();
+  expect(conT.insumo, 'con un taller en la cuenta, el insumo no lo llama obra')
+    .not.toMatch(/\bobras?\b/i);
+  expect(conT.insumo, 'usa el paraguas').toMatch(/\bactividad(es)?\b/i);
+  expect(conT.resultado, 'y el resultado tampoco lo llama obra').not.toMatch(/\bobras?\b/i);
+  expect(conT.resultado, 'usa el paraguas').toMatch(/\bactividad(es)?\b/i);
+  // el número no cambia: son 2 cosas, aunque el taller traiga 2 sesiones
+  expect(conT.insumo, 'y sigue contando 2 — el taller de dos sesiones es UNA').toMatch(/\b2\b/);
+
+  // 2 · sin taller, «obras» sobrevive: es más específico y sigue siendo verdad
+  const sinT = await leer(false);
+  expect(sinT.insumo, 'sin taller el insumo vuelve a la palabra específica')
+    .toMatch(/\bobras?\b/i);
+  expect(sinT.resultado, 'y el resultado también').toMatch(/\bobras?\b/i);
 });

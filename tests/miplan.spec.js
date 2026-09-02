@@ -682,7 +682,12 @@ test('T122 — el resumen del Plan cuenta OBRAS, no funciones', async ({ page })
     };
   });
   if (!r.resumen) return;
-  const n = parseInt((r.resumen.match(/(\d+)\s*obra/i) || [])[1], 10);
+  // El sustantivo dejó de ser «obra» fijo (2 sep 2026): el fixture de este test
+  // ES un taller, y con un taller en la cuenta la línea usa el paraguas
+  // («actividades»), que es la regla de vocabulario y la vigila T153. Lo que
+  // este test afirma es el NÚMERO —obras distintas, no entradas—, así que lee
+  // la cifra sin depender de la palabra en vez de aflojar la afirmación.
+  const n = parseInt((r.resumen.match(/(\d+)\s*(?:obras?|actividades?)\b/i) || [])[1], 10);
   expect(Number.isFinite(n), 'el resumen declara un número de obras').toBe(true);
   expect(n, 'el resumen cuenta OBRAS distintas, no entradas').toBe(r.obras);
   if (r.entradas > r.obras) {

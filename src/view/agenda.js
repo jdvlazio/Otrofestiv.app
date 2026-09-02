@@ -13,7 +13,7 @@ import {
   ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, programParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
+  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, hayEvento, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, programParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
 } from './helpers.js';
 import {
   _festDate, _festNowMin, dayFullyPassed, festivalEnded, minToStr, simNow, simTodayStr, toMin,
@@ -208,7 +208,13 @@ export function renderAgenda(){
           // iguales se leen como el mismo dato, y con distintos como una contradicción.
           // Esta se nombra con el vocabulario que la app YA usa para este conjunto
           // cuando está vacío: «Nada por planear».
-          const _obras=`${_nP===1?t('pre_obra_planear'):t('pre_obras_planear',{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}`;
+          // El sustantivo sale del DUEÑO (hayEvento): con un taller o una charla
+          // en la cuenta, «obras» sería falso — «actividad» es el paraguas.
+          const _ev=hayEvento(pending,FILMS);
+          const _clave=_nP===1
+            ?(_ev?'pre_actividad_planear':'pre_obra_planear')
+            :(_ev?'pre_actividades_planear':'pre_obras_planear');
+          const _obras=`${t(_clave,{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}`;
           // La alerta vive SOLO antes de calcular (auditoría 18 ago): es un
           // PRE-diagnóstico —«esto va a costar»— y sobrevivía al cálculo, en
           // ámbar y con ícono, justo encima del resultado. Ahí se leía como «tu
@@ -952,7 +958,7 @@ export function renderContextualHeader(state, consensus){
     // MAR de martes leído como océano (cazado en el inventario del 18 ago).
     // ES/PT escriben los días en minúscula; EN los capitaliza.
     // Un taller no es obra pero sí actividad ([vocab]): con un evento adentro el titular usa el paraguas, como _endedStats.
-    const _hayEvento=allWatched.some(s2=>(FILMS.find(fi=>fi.title===s2._title)||{}).type==='event');
+    const _hayEvento=hayEvento(allWatched,FILMS);
     const _dayWord=(dayLabelLong(todayScreenings[0]?.day)||'').split(' ')[0]||t('bar_hoy');
     const dayName=_lang==='en'?_dayWord:_dayWord.toLowerCase();
     return`<div class="ctx-header">
@@ -1773,7 +1779,9 @@ export function buildResultHTML(scenarios){
     ?` <span class="dato-linea">· ${_nFuera===1?t('res_fuera_1'):t('res_fuera',{n:_nFuera})}</span>`
     :'';
   let html=`${_staleBanner}<div class="ag-summary ag-summary-res">
-    <div class="dato-resultado">${t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_fuera}</div>
+    <div class="dato-resultado">${hayEvento(sc.schedule,FILMS)
+      ?`${ok} ${ok!==1?t('misc_actividades'):t('misc_actividad')}`
+      :t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_fuera}</div>
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
       const pairMsg=pairs.length
