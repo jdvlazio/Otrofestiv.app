@@ -1692,3 +1692,85 @@ test('T154 — el subtítulo de la imagen cuenta los días que tienen algo', asy
       .not.toBe(r.lapso);
   }
 });
+
+// ── T155 — el día se muestra con su número, no recortado a «JUE» ────────────
+// Cuatro superficies de sheets-controller cortaban `dayLabel()` con
+// `.split(' ')[0]` y dejaban «JUE» a secas. Medido: 9 de los 15 festivales de
+// la app repiten nombre de día —todos los de 8 días o más; Tribeca tiene 5
+// pares, TIFF 4, Cinemancia 3—, así que «JUE» no distingue el 3 del 10.
+//
+// El recorte no protegía ningún layout: ninguna de esas clases lleva `nowrap`,
+// y medido a 375px en las cuatro, el número no cambia ni la altura ni la caja.
+//
+// Se afirma que la superficie muestra EXACTAMENTE lo que devuelve el dueño
+// (dayLabel), no un prefijo suyo: es la forma de que un recorte futuro —de un
+// carácter o de dos— caiga igual.
+test('T155 — la hoja del tope y la de conflicto muestran el día completo', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const H = await import('/src/view/helpers.js');
+    const S = await import('/src/domain/schedule.js');
+    const tap = (a, attrs = {}) => {
+      const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.entries(attrs).forEach(([k, v]) => b.setAttribute(k, v));
+      document.body.appendChild(b); b.click(); b.remove();
+    };
+    tap('closeCitySheet'); await w(600);
+
+    // ¿este festival repite nombres de día? si no, el test no mide nada
+    const cortos = DAY_KEYS.map(k => String(H.dayLabel(k) || k).split(' ')[0]);
+    const repetidos = cortos.filter((c, i) => cortos.indexOf(c) !== i).length;
+
+    const pel = FILMS.filter(f => f.day && f.time && !f._cancelled);
+
+    // 1 · hoja del tope de prioridades: varias obras de días distintos
+    watchlist.clear(); prioritized.clear();
+    const titulos = [...new Set(pel.map(f => f.title))].slice(0, PRIO_LIMIT + 1);
+    titulos.forEach(t => watchlist.add(t));
+    titulos.slice(0, PRIO_LIMIT).forEach(t => prioritized.add(t));
+    tap('togglePriority', { 'data-title': titulos[PRIO_LIMIT] });
+    await w(1200);
+    const prio = [...document.querySelectorAll('.prio-limit-when')]
+      .map(e => (e.textContent || '').split('·')[0].trim()).filter(Boolean);
+    tap('closePrioLimit'); await w(500);
+
+    // 2 · hoja de conflicto: dos funciones que se pisan de verdad
+    let a = null, b = null;
+    for (let i = 0; i < pel.length && !b; i++)
+      for (let j = i + 1; j < pel.length; j++)
+        if (pel[i].title !== pel[j].title && S.screensConflict(pel[i], pel[j])) { a = pel[i]; b = pel[j]; break; }
+    let conflicto = null;
+    if (b) {
+      commitPlan(() => ({ schedule: [{ ...a, _title: a.title }] }));
+      await w(500);
+      openConflictSheet(b.title, b, { ...a, _title: a.title });
+      await w(1000);
+      conflicto = {
+        entra: (document.getElementById('cs-incoming-when') || {}).textContent || '',
+        estaba: (document.getElementById('cs-existing-when') || {}).textContent || '',
+        diaEntra: H.dayLabel(b.day), diaEstaba: H.dayLabel(a.day)
+      };
+    }
+    return { repetidos, prio, conflicto,
+      etiquetasValidas: DAY_KEYS.map(k => H.dayLabel(k)) };
+  });
+
+  expect(r.repetidos, 'el festival de prueba repite nombres de día — si no, no hay ambigüedad que medir')
+    .toBeGreaterThan(0);
+  expect(r.prio.length, 'la hoja del tope pintó sus filas').toBeGreaterThan(0);
+
+  // cada día mostrado es EXACTAMENTE una etiqueta del dueño, no un prefijo
+  for (const d of r.prio) {
+    expect(d, `«${d}» lleva su número: sin él no se distingue de otro ${d.split(' ')[0]}`)
+      .toMatch(/^[A-ZÁÉÍÓÚ]{3}\s\d{1,2}$/);
+    expect(r.etiquetasValidas, `y es una etiqueta real del calendario, no un recorte`)
+      .toContain(d);
+  }
+  if (r.conflicto) {
+    expect(r.conflicto.entra, 'la función que entra dice su día entero')
+      .toContain(r.conflicto.diaEntra);
+    expect(r.conflicto.estaba, 'y la que ya estaba, también')
+      .toContain(r.conflicto.diaEstaba);
+  }
+});
