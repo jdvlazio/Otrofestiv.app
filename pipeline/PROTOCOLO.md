@@ -171,6 +171,20 @@ igual, pero hay que escribirlo a mano.
 
 **Plantilla del plan:** `pipeline/festival.plan.example.json`.
 
+**El plan tiene contrato, como el crudo.** `lib.cargar_plan()` lo pasa antes
+del primer paso —lo llaman `correr.py`, `ensamblar.py` y el guardián
+`[plan-contrato]`— y falla a la cara con TODO lo que falte, junto: cabecera,
+`pasos`, secciones con arquetipo de los 9, la forma de cada sidecar (un
+enriquecido que es diccionario y no `{obras:[…]}` se leía sin error y no
+enriquecía nada), y el calendario sin huecos (`dias_vacios` los declara).
+`prioLimit` no se escribe: se calcula. Montando QAFF Bogotá (2 sep 2026) esas
+seis ausencias salieron una por vuelta, al final de la cadena; con el contrato
+salen en la primera corrida.
+
+**La sala es de la función.** Como dicen §3 y §4: campo `sala` en el crudo. El
+ensamblador la honraba solo desde la tabla de sedes; ahora la que trae la
+función gana, y la tabla manda en el NOMBRE de la sede.
+
 ### Paso 5·bis · El ensamblador propio (legado)
 
 El ensamblador del festival junta crudo + enriquecido + geo y escribe el JSON
