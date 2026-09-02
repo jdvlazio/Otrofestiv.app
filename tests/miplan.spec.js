@@ -1540,3 +1540,86 @@ test('T151 — en los dos modales el escape es el botón de abajo', async ({ pag
     expect(m.btns[0].rol, `${nombre}: y el de arriba, el que confirma`).toBe('confirm');
   }
 });
+
+// ── T152 — la columna elegida se marca sola, sin depender de lo que tenga ────
+// Medido en FICDEH el sábado 15 a las 14:00 con un Plan real: la columna ACTIVA
+// tenía 2 de 3 bloques en `opacity .35` (ya pasaron) y la de mañana 2 de 2 en 1.
+// Los bloques solo saben de pasado/futuro: no distinguen columna elegida de
+// columna cualquiera. Así que toda la emphasis de la selección vivía en la
+// cabecera y en un tinte de fondo que, medido en píxeles pintados, da
+// rgb(24,18,8) contra rgb(11,10,8) — Δ(13,8,0) sobre 255, un 5%. Con hoy ya
+// empezado, la columna que mirás queda en fantasmas y la de mañana se lleva la
+// mirada. Pasa todos los días desde el mediodía.
+//
+// La tercera parte es la que define el arreglo: la marca tiene que estar
+// TAMBIÉN en un día sin un solo bloque. Si dependiera del contenido no sería
+// una marca de selección, sería una coincidencia.
+test('T152 — la columna activa se distingue aunque su día esté vacío o pasado', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T14:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet'); await w(500);
+    const sch = [];
+    const hoy = FILMS.filter(x => x.day === '2026-08-15' && !x._cancelled);
+    hoy.filter(x => parseInt(x.time) < 14).slice(0, 3).forEach(f => sch.push({ ...f, _title: f.title }));
+    hoy.filter(x => parseInt(x.time) >= 15).slice(0, 1).forEach(f => sch.push({ ...f, _title: f.title }));
+    FILMS.filter(x => x.day === '2026-08-16' && !x._cancelled).slice(0, 2)
+      .forEach(f => sch.push({ ...f, _title: f.title }));
+    commitPlan(() => ({ schedule: sch }));
+    await w(600);
+    switchMainNav('mnav-miplan'); showAgView(); await w(1800);
+
+    const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+    const mirar = () => [...document.querySelectorAll('.mplan-wk-col')].filter(vis).map(c => ({
+      activa: c.classList.contains('wk-active'),
+      marca: getComputedStyle(c).boxShadow,
+      bloques: [...c.querySelectorAll('.mplan-wk-block')].map(x => Number(getComputedStyle(x).opacity))
+    }));
+    const conPlan = mirar();
+
+    // mover la selección a un día SIN bloques, para ver si la marca sobrevive
+    const idxVacio = DAY_KEYS.findIndex(k => !sch.some(s => s.day === k));
+    let vacia = null;
+    if (idxVacio >= 0) {
+      const b = document.createElement('button');
+      b.setAttribute('data-action', 'selectMiPlanDay');
+      b.setAttribute('data-index', String(idxVacio));
+      document.body.appendChild(b); b.click(); b.remove();
+      await w(1500);
+      const cols = mirar();
+      const act = cols.find(c => c.activa);
+      vacia = act ? { marca: act.marca, bloques: act.bloques.length } : null;
+    }
+    return { conPlan, vacia };
+  });
+
+  const act = r.conPlan.find(c => c.activa);
+  const otra = r.conPlan.find(c => !c.activa);
+  expect(act, 'hay una columna activa').toBeTruthy();
+  expect(otra, 'y una que no lo está — sin las dos no hay nada que comparar').toBeTruthy();
+
+  // 1 · el diagnóstico: los bloques de la activa están MÁS apagados que los de la otra
+  const apagados = act.bloques.filter(o => o < 0.5).length;
+  if (apagados > 0 && otra.bloques.length) {
+    expect(Math.min(...otra.bloques),
+      'la columna que NO mirás tiene sus bloques enteros — por eso se lleva la mirada')
+      .toBe(1);
+  }
+
+  // 2 · la activa lleva una marca propia que la otra no tiene
+  expect(act.marca, 'la columna activa lleva su propia marca, no solo el tinte del 5%')
+    .toMatch(/rgba?\(/);
+  expect(act.marca, 'y es ámbar, el color con el que la app marca lo elegido')
+    .toMatch(/245,\s*158,\s*11/);
+  expect(otra.marca, 'la columna que no está elegida NO la lleva — si no, no marca nada')
+    .toBe('none');
+
+  // 3 · y la marca NO depende de lo que el día tenga adentro
+  if (r.vacia) {
+    expect(r.vacia.bloques, 'el día de control no tiene bloques — es el punto').toBe(0);
+    expect(r.vacia.marca, 'un día vacío elegido se sigue viendo elegido')
+      .toMatch(/245,\s*158,\s*11/);
+  }
+});
