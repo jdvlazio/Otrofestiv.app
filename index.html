@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609022032">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609022032">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609022053">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609022053">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -3174,8 +3174,20 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .txt-amber60-xs{color:var(--amber-60);font-size:var(--t-xs)}
 .txt-green-semi{color:var(--green);font-weight:var(--w-semi)}
 .prog-suffix{font-size:var(--t-sm);color:var(--amber);font-weight:var(--w-bold);line-height:1;margin-top:2px}
-.col-end{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;flex-shrink:0}
-.icon-btn-circle{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;border-radius:50%;border:none}
+/* gap = 14px = --sp-btn, y no es casual: los dos .icon-btn-circle apilados
+   («Cambiar» y «Quitar del Plan») extienden su caja de impacto 7px a cada lado.
+   Con gap 0 (medido) las zonas se solapaban 14px y en toda la franja el
+   toque iba al de ABAJO, el destructivo — peor que sin ampliar. Con 14 las
+   zonas se tocan sin solaparse. La fila no crece: 30+14+30 = 74 < 132. */
+.col-end{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;flex-shrink:0;gap:var(--sp-btn)}
+/* Área de toque de 44px sobre un círculo DIBUJADO de 30 (auditoría B-9, 2 sep
+   2026): los dos recorridos independientes midieron lo mismo —30×30 en los
+   botones de las filas del Plan, donde el error de dedo borra una función—.
+   El dibujo no cambia: el ::before extiende la caja de impacto 7px a cada
+   lado (30 + 14 = 44, el mínimo de iOS). `position:relative` solo para
+   anclarlo; no afecta el flujo ni la altura de las filas. */
+.icon-btn-circle{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;border-radius:50%;border:none;position:relative}
+.icon-btn-circle::before{content:"";position:absolute;inset:-7px;border-radius:50%}
 
 .poster-label-amber{color:var(--amber);display:block;font-size:var(--t-xs);margin-top:1px}
 .film-sub-label{font-size:var(--t-sm);color:var(--amber);font-weight:var(--w-bold);margin-top:1px;line-height:1}
@@ -3719,7 +3731,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609022032";
+    s.src="/src/main.js?v=202609022053";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
