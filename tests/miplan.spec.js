@@ -1844,3 +1844,79 @@ test('T156 — Compartir se puede cancelar, y cancelar no comparte', async ({ pa
   expect(r.imagen, 'y NO comparte: una salida que igual comparte es peor que ninguna').toBe(0);
   expect(r.nombre, 'ni guarda un nombre que no diste').toBeNull();
 });
+
+// ── T159 — la fila de una obra excluida ofrece una función VIVA, no una cancelada ──
+// Auditoría B-1 (2 sep 2026), FICDEH tras el sismo: «Honorablé» tiene una
+// función cancelada (SÁB 15 · Cali) y una viva (MIÉ 19 · Barranquilla). Con el
+// Plan en Bogotá, la fila de «En otra ciudad» decía «SÁB 15 17:00 · Cali», en
+// ámbar y sin marca: el bucle tomaba la PRIMERA que chocaba con el Plan, y la
+// cancelada iba primero. Mandaba a viajar a otra ciudad a una función que no
+// existe, teniendo una viva que nunca miró.
+//
+// Tres afirmaciones, y la tercera es la que impide arreglar de más: una obra
+// con TODAS sus funciones caídas tiene que seguir marcada CANCELADA (regla del
+// 30 ago). Si las canceladas se excluyeran del todo, esa fila perdería su marca.
+test('T159 — la excluida se explica con su función viva, y la toda-caída sigue marcada', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T14:00:00-05:00');
+  await page.evaluate(() => { const f = [...document.querySelectorAll('#city-sheet-list .lugar-opt')].find(e => e.dataset.city === 'Bogotá'); if (f) f.click(); });
+  await page.waitForTimeout(1400);
+  const fx = await page.evaluate(() => {
+    watchlist.clear();
+    // una obra con función cancelada Y función viva, y otra con TODAS caídas
+    const porT = {}; FILMS.forEach(f => { if (f.day && f.time) (porT[f.title] ||= []).push(f); });
+    // La condición EXACTA del hallazgo: en el orden del catálogo, la función
+    // cancelada va ANTES que la viva — es lo que hacía que el bucle la tomara.
+    // Con una obra donde la viva va primero, el bug no cambia nada y el test
+    // pasaría con el bug puesto (la primera versión de este test, mutada, pasó).
+    // …Y el segundo ingrediente: todas sus funciones vivas caen FUERA de la
+    // ciudad del Plan. Solo así el motor la excluye y existe una fila que medir.
+    // Con una viva en Bogotá el motor la incluye, no hay fila, y el test pasaría
+    // con el bug puesto (la segunda versión de este test, mutada, pasó).
+    const ciudadDe = f => (typeof venueCity === 'function' ? venueCity(f.venue) : '') || (f.venue || '').split(' - ').pop();
+    const mixta = Object.keys(porT).find(t => {
+      const noPasadas = porT[t].filter(f => f.day >= '2026-08-15');
+      const iCanc = noPasadas.findIndex(f => f._cancelled), iViva = noPasadas.findIndex(f => !f._cancelled);
+      const vivas = noPasadas.filter(f => !f._cancelled);
+      return iCanc >= 0 && iViva >= 0 && iCanc < iViva && vivas.every(f => ciudadDe(f) && ciudadDe(f) !== 'Bogotá');
+    });
+    const caida = Object.keys(porT).find(t => porT[t].every(f => f._cancelled));
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f._cancelled).map(f => f.title))].filter(t => t !== mixta).slice(0, 12);
+    [mixta, caida, ...vivas].filter(Boolean).forEach(t => watchlist.add(t));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+    savedAgenda = null; cachedResult = null;
+    return { mixta, caida, vivasDeLaMixta: mixta ? porT[mixta].filter(f => !f._cancelled).map(f => f.day + ' ' + f.time) : [],
+      canceladaPrimero: mixta ? porT[mixta].filter(f => f.day >= '2026-08-15')[0].day + ' ' + porT[mixta].filter(f => f.day >= '2026-08-15')[0].time : null };
+  });
+  if (!fx.mixta) return; // festival sin el caso: nada que afirmar
+  console.log(`T159 fixture: ${fx.mixta} · cancelada primero ${fx.canceladaPrimero} · vivas ${fx.vivasDeLaMixta.join(', ')}`);
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(1000);
+  const r = await page.evaluate(async (fx) => {
+    const det = document.querySelector('details.ag-excl-city'); if (det) det.open = true;
+    await new Promise(r => setTimeout(r, 400));
+    const sc = cachedResult.scenarios[cachedResult.currentIdx || 0];
+    const fila = t => { const e = [...document.querySelectorAll('.int-item')].find(x => x.dataset.title === t); if (!e) return null;
+      const when = (e.querySelector('.int-item-when') || {}).innerText || '';
+      const s = FILMS.find(f => f.title === t && when.includes(f.time) && (window.dayLabel ? true : true));
+      return { when, marca: !!e.querySelector('.notice-badge'), boton: !!e.querySelector('.excl-include-btn'),
+        // ¿la función que muestra está cancelada?
+        muestraCancelada: FILMS.filter(f => f.title === t && when.includes(f.time)).every(f => f._cancelled) }; };
+    return { excluidaMixta: sc.excluded.includes(fx.mixta), mixta: fila(fx.mixta), caida: fx.caida ? fila(fx.caida) : null };
+  }, fx);
+  // Sin `return` temprano: el fixture está construido para que la obra quede
+  // excluida y tenga fila. Si no pasa, el test tiene que FALLAR, no callarse.
+  expect(r.excluidaMixta, `${fx.mixta}: sus vivas están fuera de Bogotá, el motor tiene que excluirla`).toBe(true);
+  expect(r.mixta, 'la obra excluida tiene su fila').not.toBeNull();
+  expect(r.mixta.when, 'la fila dice cuándo').toBeTruthy();
+  // 1 · la función que muestra es VIVA
+  expect(r.mixta.muestraCancelada, `la fila no puede ofrecer una función cancelada — la obra tiene viva: ${fx.vivasDeLaMixta.join(', ')}`)
+    .toBe(false);
+  expect(r.mixta.marca, 'y como tiene función viva, no lleva CANCELADA').toBe(false);
+  // 2 · y no ofrece agendarla en otra ciudad (regla #594)
+  expect(r.mixta.boton, 'sin botón: el motor no cruza ciudades').toBe(false);
+  // 3 · la que perdió TODAS sus funciones sigue marcada — no se arregla de más
+  if (r.caida) {
+    expect(r.caida.marca, 'una obra con todas sus funciones caídas sigue diciendo CANCELADA').toBe(true);
+  }
+});
