@@ -3362,3 +3362,43 @@ test('T158 — el punto verde de un corto se apaga cuando termina la charla que 
   expect(parseFloat(despues.opacity), 'y la fila pasa a atenuada, como toda función pasada')
     .toBeLessThan(0.9);
 });
+
+// ── T160 — el día de hoy no se atenúa mientras su última función sigue ───────
+// Auditoría B-4 (2 sep 2026): 17 AGO 19:30, Bogotá. «El juego de la vida»
+// (19:00, 95 min) corre hasta las 20:35 y la cabecera dice «En curso · Termina
+// en 1 h 05» — pero la pestaña LUN 17 salía `past` a opacity .35 (2,04:1),
+// porque dayFullyPassed tomaba el último INICIO más 10 minutos.
+//
+// Dos instantes, y el segundo impide arreglar de más: a las 19:30 el día está
+// vivo; a las 21:00 (la última terminó 20:35) ya pasó y se atenúa. El reloj del
+// navegador se congela (page.clock): esta medición no reproducía con _simTime
+// solo, y así fue como la primera verificación la dio por falsa.
+test('T160 — LUN 17 sigue encendido a las 19:30 con su última función en curso, y pasado a las 21:00', async ({ page }) => {
+  // Cada instante ENTRA a la app de nuevo: la clase `past` de las pestañas se
+  // decide al construirlas (pipeline/loader), no en cada render, así que mover
+  // el reloj con la app abierta no la recalcula — y eso es lo que hace un
+  // usuario que abre la app a esa hora. La primera versión de este test movía
+  // _simTime en caliente y fallaba con el dominio SANO: medía el arnés.
+  const tab = async (iso) => {
+    await enterFestival(page, 'ficdeh2026', iso);
+    try { await page.clock.setFixedTime(new Date(iso)); } catch (e) {}
+    await page.evaluate(() => { const f = [...document.querySelectorAll('#city-sheet-list .lugar-opt')].find(e => e.dataset.city === 'Bogotá'); if (f) f.click(); });
+    await page.waitForTimeout(1400);
+    return page.evaluate(() => {
+      const t = [...document.querySelectorAll('.dtab')].find(e => (e.dataset.day || e.getAttribute('data-day')) === '2026-08-17');
+      if (!t) return null;
+      const bog = FILMS.filter(f => f.day === '2026-08-17' && f.time && !f._cancelled && /Bogot/.test(f.venue || ''));
+      const u = bog.sort((a, b) => a.time.localeCompare(b.time)).pop();
+      return { past: t.classList.contains('past'), opacity: parseFloat(getComputedStyle(t).opacity), ultima: u ? u.time + ' · ' + u.duration : null };
+    });
+  };
+  const vivo = await tab('2026-08-17T19:30:00-05:00');
+  expect(vivo, 'la pestaña del 17 se pintó').not.toBeNull();
+  expect(vivo.ultima, 'el fixture: la última de Bogotá empieza a las 19:00 y dura 95 — el caso medido').toBe('19:00 · 95 min');
+  expect(vivo.past, 'a las 19:30 la última función sigue: el día NO es pasado').toBe(false);
+  expect(vivo.opacity, 'y no se atenúa — es el día que estás viviendo').toBeGreaterThan(0.9);
+
+  const pasado = await tab('2026-08-17T21:00:00-05:00');
+  expect(pasado.past, 'a las 21:00 la última terminó (19:00 + 95 = 20:35): el día pasó').toBe(true);
+  expect(pasado.opacity, 'y se atenúa como todo día pasado').toBeLessThan(0.5);
+});
