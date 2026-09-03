@@ -20,11 +20,18 @@ import { countryToFlags } from './sheets-controller.js';
 // leía "odo el programa" sin la T y los emojis salían partidos. Le pasa a
 // cualquier festival cuyo panel llegue al máximo — con secciones de nombre largo
 // es sistemático. El clamp deja al menos MARGEN px de aire a la izquierda.
-function _dropRight(btnRight){
+// El ancho llega MEDIDO, no supuesto (auditoría A-6, 3 sep 2026). Antes esta
+// función espejaba el tope de `.filter-drop` (300px) y se posicionaba por el peor
+// caso, así que un panel angosto se anclaba como si midiera 300 y uno ancho
+// desperdiciaba lo que le sobraba: medido en Sección con TODO, el panel quedaba
+// de 8 a 308 en un viewport de 390 —82px sin usar— y 4 de 15 secciones salían
+// cortadas, una perdiendo el 45% del nombre. Con el ancho real, el panel angosto
+// sigue pegado a su botón y el ancho usa la pantalla.
+function _dropRight(btnRight, ancho){
   const MARGEN=8;
-  const ancho=Math.min(300, window.innerWidth*0.9); // espejo de .filter-drop max-width
+  const _a=ancho||Math.min(300, window.innerWidth*0.9);
   const right=window.innerWidth-btnRight;
-  return Math.max(MARGEN, Math.min(right, window.innerWidth-ancho-MARGEN))+'px';
+  return Math.max(MARGEN, Math.min(right, window.innerWidth-_a-MARGEN))+'px';
 }
 
 // _velaElCorte — DUEÑO ÚNICO del desvanecido al pie de un dropdown de filtro.
@@ -118,6 +125,8 @@ export function seccionOpen(){
     if(activeMNav==='mnav-cartelera') _renderProgramaContent(true); else render(); // selección sección → scroll al tope
   });
   document.body.appendChild(drop);
+  // Recién acá el panel tiene ancho: se posiciona con el REAL, no con el tope.
+  drop.style.right = _dropRight(r.right, drop.offsetWidth);
   _velaElCorte(drop);
   btn.classList.add('on');
   setTimeout(()=>{ document.addEventListener('click',seccionOutside); },0);
@@ -433,6 +442,7 @@ export function lugarOpen(){
   });
 
   document.body.appendChild(drop);
+  drop.style.right = _dropRight(r.right, drop.offsetWidth);   // ancho real (ver _dropRight)
   _velaElCorte(drop);
   btn.classList.add('on');
 

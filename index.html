@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609030819">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609030819">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609030839">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609030839">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -3003,7 +3003,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    Antes: ~11 líneas de cssText inline DUPLICADAS que además divergieron
    (max-width 300 vs 280, max-height 55vh vs 50vh, scroll props solo en lugar).
    El build sólo aporta position top/right. Guardián [filter-drop-canon]. */
-.filter-drop{position:fixed;min-width:200px;max-width:min(300px,90vw);max-height:55vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);box-shadow:0 8px 24px var(--overlay-55);z-index:9999;animation:lugarFadeIn .12s ease}
+.filter-drop{position:fixed;min-width:200px;max-width:calc(100vw - 16px);max-height:55vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);box-shadow:0 8px 24px var(--overlay-55);z-index:9999;animation:lugarFadeIn .12s ease}
 /* El pie se desvanece SOLO mientras queda lista por debajo (clase puesta por
    _velaElCorte). Fija, la máscara se comía la última opción al llegar al final:
    el corte a media letra que viene a arreglar es menos grave que eso. */
@@ -3743,7 +3743,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609030819";
+    s.src="/src/main.js?v=202609030839";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

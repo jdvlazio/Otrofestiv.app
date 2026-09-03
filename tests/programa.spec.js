@@ -3402,3 +3402,61 @@ test('T160 — LUN 17 sigue encendido a las 19:30 con su última función en cur
   expect(pasado.past, 'a las 21:00 la última terminó (19:00 + 95 = 20:35): el día pasó').toBe(true);
   expect(pasado.opacity, 'y se atenúa como todo día pasado').toBeLessThan(0.5);
 });
+// ── T164 — el panel de filtro no deja aire sin usar mientras corta nombres ──
+// Auditoría A-6 (2 sep 2026): en Sección con TODO el panel quedaba de x=8 a
+// x=308 en un viewport de 390 —82px sin usar— y 4 de 15 secciones salían
+// cortadas, la peor perdiendo el 45% de su nombre («🌷 La primavera llega para
+// los que esperan…», 453px de texto en 251 de caja).
+//
+// La causa no era el tope sino CUÁNDO se mide: _dropRight se llamaba antes de
+// que el panel tuviera contenido, así que espejaba el máximo (300) y posicionaba
+// por el peor caso. Con el ancho real, el panel ancho usa la pantalla y el
+// angosto queda pegado a su botón.
+//
+// Las dos mitades: si algo se corta, no puede sobrar espacio; si nada se corta,
+// el panel sigue anclado a su botón. Una sola de las dos se «arregla» sola.
+test('T164 — el panel usa el ancho que necesita, y no más', async ({ page }) => {
+  const abrir = async (todo) => {
+    await page.evaluate(t => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      if (t) { activeDay = 'all'; programaViewMode = 'grid'; _renderProgramaContent && _renderProgramaContent(); }
+    }, todo);
+    await page.waitForTimeout(1200);
+    return page.evaluate(async () => {
+      document.querySelector('.filter-drop')?.remove();
+      document.getElementById('seccion-btn').click();
+      await new Promise(r => setTimeout(r, 800));
+      const d = document.querySelector('.filter-drop'); if (!d) return null;
+      const dr = d.getBoundingClientRect();
+      const btn = document.getElementById('seccion-btn').getBoundingClientRect();
+      const spans = [...d.querySelectorAll('.lugar-opt span')];
+      return { left: Math.round(dr.left), right: Math.round(dr.right), width: Math.round(dr.width),
+        vp: innerWidth, btnRight: Math.round(btn.right),
+        filas: spans.length, cortadas: spans.filter(s => s.scrollWidth > s.clientWidth + 1).length };
+    });
+  };
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'cinemancia2026');
+
+  // 1 · catálogo entero: hay nombres largos, así que el panel tiene que usar todo
+  const todo = await abrir(true);
+  expect(todo, 'el panel de Sección abre').not.toBeNull();
+  expect(todo.filas, 'con TODO hay muchas secciones — si no, el test no mide nada').toBeGreaterThan(5);
+  expect(todo.left, 'no se sale por la izquierda').toBeGreaterThanOrEqual(0);
+  expect(todo.right, 'ni por la derecha').toBeLessThanOrEqual(todo.vp);
+  if (todo.cortadas > 0) {
+    const sobra = todo.vp - todo.width;
+    expect(sobra,
+      `${todo.cortadas} nombres cortados y ${sobra}px de pantalla sin usar: si algo se corta, el panel usa todo lo que hay`)
+      .toBeLessThanOrEqual(20);
+  }
+
+  // 2 · y con pocas secciones (el día de hoy) NO se estira: queda anclado al botón
+  const hoy = await abrir(false);
+  if (hoy && hoy.cortadas === 0 && hoy.width < todo.vp - 40) {
+    expect(Math.abs(hoy.right - hoy.btnRight),
+      `sin nada que cortar, el panel se ancla al borde del botón (panel ${hoy.right}, botón ${hoy.btnRight})`)
+      .toBeLessThanOrEqual(2);
+  }
+});
