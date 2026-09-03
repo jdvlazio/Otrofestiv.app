@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609030900">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609030900">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609031058">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609031058">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1452,7 +1452,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .pel-sheet.vt-in .pel-sheet-meta>*:nth-child(2){animation-delay:.1s}
 .pel-sheet.vt-in .pel-sheet-meta>*:nth-child(3){animation-delay:.14s}
 .pel-sheet.vt-in .pel-sheet-inner>*:not(.pel-sheet-header){animation:vtRise .28s cubic-bezier(.16,1,.3,1) both;animation-delay:.12s}
-/* El enlace de Letterboxd descansa en opacity:.6 → sube sin fundir (ver vtRiseNoFade). */
+/* El enlace de Letterboxd descansa en la opacity:.55 de .c-lb → sube sin fundir (ver vtRiseNoFade). */
 .pel-sheet.vt-in .pel-sheet-lb{animation-name:vtRiseNoFade}
 .pel-sheet.amb.vt-in{--amb-o:0}
 @media(prefers-reduced-motion:reduce){.pel-sheet.vt-in .pel-sheet-meta>*,.pel-sheet.vt-in .pel-sheet-inner>*:not(.pel-sheet-header){animation:none}}
@@ -1747,8 +1747,8 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .pel-sheet-ctas .pel-sheet-action-btn svg{width:13px;height:13px}
 .pel-sheet-ctas-watched{display:flex;gap:var(--sp-2);margin-top:var(--sp-6)}
 
-.pel-sheet-lb{display:inline-flex;align-items:center;gap:6px;margin-top:var(--sp-4);opacity:.6;text-decoration:none}
-.pel-sheet-lb-text{font-size:var(--t-sm);color:var(--gray2)}
+.pel-sheet-lb{display:inline-flex;align-items:center;gap:6px;margin-top:var(--sp-4);text-decoration:none}
+.pel-sheet-lb-text{font-size:var(--t-sm)}
 .pel-sheet-remove-plan{width:100%;margin-top:var(--sp-2);background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-caption);font-weight:var(--w-semi);padding:8px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)}
 .pel-sheet-corto-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-2) 0;border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base);border-radius:var(--r-sm);margin:0 -6px;padding-left:6px;padding-right:6px}
 .pel-sheet-corto-item:last-child{border-bottom:none}
@@ -1768,7 +1768,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 
 .c-lb{display:inline-flex;align-items:center;gap:var(--sp-1);background:none;border:none;padding:0;cursor:pointer;transition:opacity var(--tr-base);line-height:1;flex-shrink:0;text-decoration:none;opacity:.55}
 .c-lb:hover{opacity:.9}
-.c-lb-text{font-size:var(--t-sm);font-weight:var(--w-regular);color:var(--gray2);letter-spacing:.2px;white-space:nowrap}
+.c-lb-text{font-size:var(--t-sm);font-weight:var(--w-regular);color:var(--white);letter-spacing:.2px;white-space:nowrap}
 
 /* ── MI LISTA ── */
 .ag-section{margin-bottom:var(--sp-4)}
@@ -3000,7 +3000,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    El techo en vh deja entrar las 11 ciudades sin scroll en un teléfono normal y
    recorta con scroll solo en pantallas cortas. */
 .lugar-opt.city{font-weight:var(--w-semi);color:var(--white)}
-.lugar-opt.escape{color:var(--gray2);font-size:var(--t-sm);justify-content:center}
+.lugar-opt.escape{color:var(--gray);font-size:var(--t-sm);justify-content:center}
 #city-sheet-list{max-height:66vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--sp-5))}
 .lugar-back svg{color:var(--amber)}
 @keyframes lugarFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
@@ -3748,7 +3748,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609030900";
+    s.src="/src/main.js?v=202609031058";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

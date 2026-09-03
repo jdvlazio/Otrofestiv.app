@@ -2291,10 +2291,17 @@ except Exception as _e:
 # Reporte Juan 18 jul 2026: duración/director/año de la ficha en #555 eran
 # ilegibles sobre el tinte ambiental. Regla: lo que se LEE para decidir
 # (metadata de obra) va en --gray o más claro; --gray2 es UI pasiva.
+# Ampliado 3 sep 2026 (auditorías A-7 y A-3) con dos salidas que se leen para
+# ACTUAR, no solo para decidir: el escape de la hoja de ciudad medía 2,30 y el
+# enlace de Letterboxd 1,54. Se re-apunta este guardián en vez de crear otro:
+# la regla «esto no va en --gray2» ya tiene dueño. Ojo: acá el estático no
+# alcanza —el enlace de LB vive bajo una opacidad que ningún grep ve—, así que
+# el contraste PINTADO lo mide T166.
 check = 'sheet-meta-legible'
 try:
     _html = open('index.html', encoding='utf-8').read()
-    _INFO = ['.pel-sheet-flags-dur{', '.pel-sheet-metaline{', '.rating-title{']
+    _INFO = ['.pel-sheet-flags-dur{', '.pel-sheet-metaline{', '.rating-title{',
+             '.lugar-opt.escape{', '.c-lb-text{']
     _bad = []
     for _sel in _INFO:
         _i = _html.find(_sel)
@@ -2306,7 +2313,7 @@ try:
     if _bad:
         fail(check, 'metadata informativa degradada: ' + '; '.join(_bad))
     else:
-        ok(check, 'duración/director/año de la ficha en --gray o más claro')
+        ok(check, f'{len(_INFO)} superficies de lectura en --gray o más claro')
 except Exception as _e:
     warn(check, f'no se pudo verificar sheet-meta-legible: {_e}')
 
