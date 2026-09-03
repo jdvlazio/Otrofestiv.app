@@ -2023,3 +2023,84 @@ test('T162 — cada botón de la fila responde a 20px de su centro, y la franja 
   expect(r.franja.bajoA, 'justo debajo de «Cambiar» sigue siendo «Cambiar» — no «Quitar»').toBe('A');
   expect(r.franja.sobreB, 'justo encima de «Quitar» es «Quitar»').toBe('B');
 });
+// ── T163 — el distintivo Q&A del Plan se dibuja; el que cede es el título ────
+// Auditoría A-5 (2 sep 2026): el badge vivía DENTRO de `.mplan-rtitle`, que es
+// `nowrap + overflow:hidden`, así que se recortaba junto con el título. Medido
+// en Mi Plan: el renglón terminaba en x=323 y el badge arrancaba en x=587 — no
+// se dibujaba nunca. La ficha y Planear sí avisan «Q&A · +30 min estimados»; en
+// el Plan, el único lugar donde el dato cambia a qué hora salís del cine,
+// desaparecía.
+//
+// Se afirma que el badge queda DENTRO de la caja de la fila (no que exista en
+// el DOM: existía y no se veía). Y la fila sin Q&A es el control que impide
+// arreglar de más poniéndole un distintivo a todo el mundo.
+test('T163 — con Q&A el distintivo entra en la fila, y sin Q&A no aparece', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    watchlist.clear();
+    // una obra CON Q&A y una SIN, las dos con función
+    FILMS.filter(f => f.has_qa && f.day && f.time).slice(0, 2).forEach(f => watchlist.add(f.title));
+    FILMS.filter(f => !f.has_qa && f.day && f.time).slice(0, 2).forEach(f => watchlist.add(f.title));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(900);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const save = document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]');
+    if (!save) return { sinPlan: true };
+    save.click(); await w(1400);
+    const cta = document.querySelector('.plan-confirm-cta'); if (cta) cta.click();
+    await w(1800);
+    const conQA = (savedAgenda.schedule || []).find(s => (FILMS.find(f => f.title === s._title && f.day === s.day) || {}).has_qa);
+    if (!conQA) return { sinQAenPlan: true };
+    const idx = DAY_KEYS.indexOf(conQA.day);
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'selectMiPlanDay'); b.setAttribute('data-index', String(idx));
+    document.body.appendChild(b); b.click(); b.remove();
+    await w(1200);
+    const filas = [...document.querySelectorAll('.mplan-rtitle')].map(rt => {
+      const bd = rt.querySelector('.meta-badge'), tx = rt.querySelector('.mplan-rtitle-txt');
+      const rr = rt.getBoundingClientRect();
+      const br = bd ? bd.getBoundingClientRect() : null;
+      const tr = tx ? tx.getBoundingClientRect() : null;
+      const cs = getComputedStyle(rt);
+      const lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.2;
+      return { texto: rt.textContent.trim().slice(0, 30), hayBadge: !!bd,
+        dentroDeLaFila: br ? (br.width > 0 && br.right <= rr.right + 0.5) : null,
+        tituloCede: tx ? tx.scrollWidth > tx.clientWidth + 1 : null,
+        badgeRight: br ? Math.round(br.right) : null, filaRight: Math.round(rr.right),
+        // el renglón es UNO: sin esto, un `display:block` deja el badge «dentro»
+        // de la caja pero en una segunda línea, con el título desbordando
+        lineas: Math.round(rr.height / lh),
+        mismaLinea: (br && tr) ? Math.abs(br.top - tr.top) < lh * 0.6 : null,
+        tituloDesborda: tr ? tr.right > rr.right + 0.5 : null };
+    });
+    return { dia: conQA.day, filas };
+  });
+  if (r.sinPlan || r.sinQAenPlan) return;
+  const conBadge = r.filas.filter(f => f.hayBadge);
+  const sinBadge = r.filas.filter(f => !f.hayBadge);
+  expect(conBadge.length, 'el día elegido tiene la obra con Q&A — si no, el test no mide nada').toBeGreaterThan(0);
+  for (const f of conBadge) {
+    expect(f.dentroDeLaFila,
+      `«${f.texto}»: el distintivo termina en x=${f.badgeRight} y la fila en x=${f.filaRight} — tiene que ENTRAR, no solo existir en el DOM`)
+      .toBe(true);
+    expect(f.lineas, `«${f.texto}»: el renglón sigue siendo UNO — el distintivo no baja a una segunda línea`).toBe(1);
+    expect(f.mismaLinea, 'y va en la misma línea que el título').toBe(true);
+    expect(f.tituloDesborda, 'con el título recortado dentro de la fila, no desbordándola').toBe(false);
+  }
+  // el que cede es el título, no el distintivo (si el título entra entero, nada que afirmar)
+  const cortada = conBadge.find(f => f.tituloCede);
+  if (cortada) {
+    expect(cortada.dentroDeLaFila, 'con el título recortado, el distintivo sigue entero').toBe(true);
+  }
+  // control: una fila sin Q&A no inventa distintivo
+  for (const f of sinBadge) {
+    expect(f.hayBadge, `«${f.texto}» no tiene Q&A: no lleva distintivo`).toBe(false);
+  }
+});
