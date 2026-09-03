@@ -114,7 +114,16 @@ test('I06 — el encabezado usa las fechas del idioma activo', async ({ page }) 
 // Las cards de programa compuesto decían «2 obras · 93 min» en inglés: once
 // ocurrencias en la grilla. El sustantivo estaba PEGADO en dos sitios
 // (_datoCompuesto y slotPosterParts), no salía de t(), y ningún guardián podía
-// verlo: [i18n-complete] comprueba que las CLAVES existan en los dos idiomas
+// verlo:
+//
+// LÍMITE MEDIDO (3 sep 2026): de esos dos sitios, este test solo ejercita
+// `slotPosterParts`. Marqué los dos con centinelas y barrí los quince
+// festivales en grilla con TODO: `slotPosterParts` pinta 11 ocurrencias en
+// Cinemancia y `_datoCompuesto` pinta CERO en todos. Su mutación (devolverle el
+// literal español) no hace fallar nada. No es que el test mire mal: es que hoy
+// ningún catálogo llega a esa rama del póster. Queda dicho para que nadie lea
+// «cubre los dos» donde el dato dice que cubre uno.
+// [i18n-complete] comprueba que las CLAVES existan en los dos idiomas
 // —un literal no es una clave— y literal-template.spec.js vigila `${` roto.
 //
 // Este cubre el hueco por el lado del DOM. Busca NUESTRO vocabulario con su
@@ -133,6 +142,18 @@ test('I07 — en inglés ninguna cuenta usa el sustantivo en español', async ({
     await w(500);
     switchMainNav('mnav-cartelera');
     await w(1400);
+    // La GRILLA, explícitamente (3 sep 2026): «N obras» es el dato de la tarjeta
+    // de programa compuesto, y esas tarjetas son de la grilla. enterFestival deja
+    // la vista según la FASE del festival —con Cinemancia en curso pasa a lista y
+    // al día de hoy—, así que el día que el festival arrancó este test se quedó
+    // sin nada que medir y su propia guarda lo dijo: «en español SÍ aparecen esas
+    // cuentas — si no, el test no prueba nada». Medido ese día: 0 en lista, 11 en
+    // grilla con TODO. El defecto que vigila no cambió; el fixture dependía de la
+    // fecha. Se fija acá y deja de depender.
+    activeDay = 'all';
+    programaViewMode = 'grid';
+    _renderProgramaContent && _renderProgramaContent();
+    await w(1400);
     const esperados = () => (document.body.innerText.match(/\d+ obras/g) || []).length;
     const enEspanol = esperados();
     tap('selectLang', { code: 'en' });
@@ -140,6 +161,8 @@ test('I07 — en inglés ninguna cuenta usa el sustantivo en español', async ({
     const vistos = [];
     for (const nav of ['mnav-cartelera', 'mnav-seleccion', 'mnav-planner', 'mnav-miplan']) {
       switchMainNav(nav);
+      // la grilla también en inglés: es donde vivía el literal
+      if (nav === 'mnav-cartelera') { activeDay = 'all'; programaViewMode = 'grid'; _renderProgramaContent && _renderProgramaContent(); }
       // showAgView() SOLO donde corresponde: llamarlo en cartelera saca de la
       // grilla y el test terminaba midiendo una pantalla que no era la del bug
       // (pasaba con el literal restituido — lo cacé mutando).
