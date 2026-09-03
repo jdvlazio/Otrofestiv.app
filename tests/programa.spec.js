@@ -3319,3 +3319,46 @@ test('T157 — Cancelar es alcanzable, se ve enfocada y responde a Enter', async
   });
   expect(cerrada, 'Enter cierra la hoja: es un botón de verdad, no un span con onclick').toBe(true);
 });
+
+// ── T158 — un corto dentro de una charla no sigue «En curso» cuando la charla terminó ──
+// FICDEH, 17 AGO, Cinemateca Sala 2 a las 16:00: dos cortos (18 y 14 min) y una
+// charla de 180 que los proyecta adentro. El bloque sumaba 212 y los cortos
+// quedaban «En curso» hasta las 19:32, tres horas y media después de terminar,
+// mientras el bloque real terminó a las 19:00 (auditoría B-2, 2 sep 2026).
+//
+// Se afirma sobre lo PINTADO —el punto verde y su aria— en dos instantes: a las
+// 18:50 sigue en curso (la charla no terminó: el anclaje es correcto), a las
+// 19:30 ya no. Con la suma vieja el segundo instante falla; sin anclaje el
+// primero — las dos mitades se sostienen mutuamente.
+// El reloj del navegador se CONGELA (page.clock): «en curso» lee la hora del
+// navegador, y con solo _simTime esta medición no reproducía.
+test('T158 — el punto verde de un corto se apaga cuando termina la charla que lo contiene', async ({ page }) => {
+  const leer = async (iso) => {
+    try { await page.clock.setFixedTime(new Date(iso)); } catch (e) {}
+    await page.evaluate(t => { _simTime = t; activeDay = '2026-08-17'; programaViewMode = 'list';
+      _renderProgramaContent && _renderProgramaContent(); }, iso);
+    await page.waitForTimeout(1200);
+    return page.evaluate(() => {
+      const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+      const fila = [...document.querySelectorAll('.plist-item')].filter(vis).find(e => e.innerText.includes('Los pliegues de la falda'));
+      if (!fila) return null;
+      const dot = fila.querySelector('.live-dot,.row-dot');
+      return { enCurso: !!dot, aria: dot ? dot.getAttribute('aria-label') : null, opacity: getComputedStyle(fila).opacity };
+    });
+  };
+  await enterFestival(page, 'ficdeh2026', '2026-08-17T18:50:00-05:00');
+  await page.evaluate(() => { const f = [...document.querySelectorAll('#city-sheet-list .lugar-opt')].find(e => e.dataset.city === 'Bogotá'); if (f) f.click(); });
+  await page.waitForTimeout(1400);
+
+  const antes = await leer('2026-08-17T18:50:00-05:00');
+  expect(antes, 'la fila del corto se pintó').not.toBeNull();
+  expect(antes.enCurso, 'a las 18:50 la charla que lo contiene sigue: el corto está EN CURSO — es el anclaje, y es correcto')
+    .toBe(true);
+
+  const despues = await leer('2026-08-17T19:30:00-05:00');
+  expect(despues, 'la fila del corto se pintó').not.toBeNull();
+  expect(despues.enCurso, 'a las 19:30 la charla terminó (16:00 + 180): el punto verde se apaga')
+    .toBe(false);
+  expect(parseFloat(despues.opacity), 'y la fila pasa a atenuada, como toda función pasada')
+    .toBeLessThan(0.9);
+});

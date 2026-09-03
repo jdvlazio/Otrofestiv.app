@@ -54,6 +54,17 @@ La duda se resuelve contra el programa oficial del festival, nunca por deducció
 dominio es el dueño; ninguna vista calcula por su cuenta):
 
 - **Conflictos** — `screensConflict`: las obras de una función no rivalizan.
+- **Un EVENTO en el bloque es el contenedor, no una obra más** (2 sep 2026).
+  La suma es para obras que se siguen una a otra. Si el bloque trae un evento
+  (charla, taller) al menos tan largo como la suma de sus obras, el bloque dura
+  lo que dura el evento: las obras se proyectan adentro. FICDEH 2026 tiene cinco
+  «Charlas que Unen» de 180 min así, y la suma les agregaba lo que ya contenían
+  —un corto de 18 min quedaba «En curso» 32 min después de terminar el bloque, y
+  el planificador bloqueaba esa media hora—. Si el evento es MÁS CORTO que las
+  obras (FICMA: taller de 120 y largo de 178 en Expoferias, sin sala) no contiene
+  nada y se conserva la suma; ese dato, además, pide decidirse aparte. Dueño:
+  `sealSharedSlots`; prueba: `tests/unit/sealSharedSlots.test.js` sobre los JSON
+  reales.
 - **Duración** — el par `blockDuration` (fin del bloque, sin Q&A: «¿hasta qué
   hora estoy en la sala?») / `effectiveDuration` (bloque + Q&A: «¿cuánto ocupa
   la sala?» — conflictos), con `durationForTravel` como dueño de la doctrina del
