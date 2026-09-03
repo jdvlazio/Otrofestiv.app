@@ -2189,3 +2189,133 @@ test('T165 — el bloque de la grilla dice cuántas obras no le caben', async ({
   expect(z.gapHora, 'separado de la hora, no pegado').toBeGreaterThanOrEqual(3);
   expect(z.gapHora, 'con el aire del bloque (sp-1), no el de la tira de pósters (sp-3)').toBeLessThanOrEqual(8);
 });
+
+// ── T168 — el bloque de UNA obra corta no recorta su título ──────────────────
+// Auditoría del bloque corto (3 sep 2026). El bloque mide lo que dura la
+// función y apila hora sobre título: hacen falta 36px para una línea (≈61 min)
+// y 51 para dos (≈76 min). Debajo de eso el título se cortaba, y en el piso de
+// 20px no se veía ni una letra. Censo a 390px: 148 bloques en 14 de 15
+// festivales, 21 de ellos en Cinemancia, en curso.
+//
+// La altura mínima se descartó MIDIENDO: arregla el bloque de 16 min y falla en
+// los de 43 y 60 —ya son altos; lo que no entra es la segunda línea— y cubrirlos
+// exigiría 51px fijos, con lo que 16 min se dibujaría del alto de 76. El bloque
+// dejaría de decir cuánto dura, que es su única razón de ser.
+//
+// Lo que se afirma: (1) donde no entraba, hora y título comparten UNA línea y
+// el título entra entero en el bloque; (2) el bloque NO cambia de alto, o sea
+// que sigue diciendo la duración; (3) el título cede con elipsis, no se corta a
+// la mitad; (4) control: un bloque donde el título ya entraba no se toca.
+test('T168 — el bloque de una obra corta dice su título en una línea', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  // `elegir` corre EN la página: 'corta' es la del censo (por nombre) y 'larga'
+  // se busca por dato. La primera versión fijaba también el control por nombre
+  // y ese título no existía en el catálogo: el control se saltaba en silencio y
+  // la mutación «una línea SIEMPRE» pasaba limpia.
+  const medir = async (elegir, dia) => {
+    await enterFestival(page, 'cinemancia2026', dia + 'T10:00');
+    return page.evaluate(async ([elegir, dia]) => {
+      const b0 = document.createElement('button'); b0.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b0); b0.click(); b0.remove();
+      await new Promise(r => setTimeout(r, 400));
+      const solas = FILMS.filter(x => !x._cancelled && !x._slotKey && x.day === dia && x.time);
+      const f = elegir.tit
+        ? solas.find(x => x.title === elegir.tit)
+        : solas.filter(x => (parseInt(x.duration) || 0) >= 95)
+               .sort((a, b) => parseInt(b.duration) - parseInt(a.duration))[0];
+      if (!f) return null;
+      const alto = Math.max(parseInt(f.duration) / 60 * 40 - 4, 20);   // lo que DEBE medir
+      state.set('savedAgenda', { schedule: [{ ...f, _title: f.title }], scenarioIdx: 0 });
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 900));
+      const b = document.querySelector('.mplan-col-mobile .mplan-wk-block');
+      if (!b) return null;
+      const br = b.getBoundingClientRect();
+      const lim = br.bottom - parseFloat(getComputedStyle(b).paddingBottom);
+      const ti = b.querySelector('.mplan-wk-title'), tm = b.querySelector('.mplan-wk-time');
+      const rt = ti.getBoundingClientRect(), rm = tm.getBoundingClientRect();
+      return { dur: parseInt(f.duration), h: +br.height.toFixed(1), altoEsperado: +alto.toFixed(1),
+        unaLinea: b.classList.contains('mp-linea'),
+        excede: +(rt.bottom - lim).toFixed(1),
+        mismaLinea: Math.abs(rt.top - rm.top) <= 3,
+        desborda: ti.scrollWidth > ti.clientWidth + 1,
+        // el corte con puntos suspensivos no deja rastro medible en el DOM:
+        // se afirma la declaración, que es lo que lo produce
+        cortaConPuntos: getComputedStyle(ti).textOverflow === 'ellipsis',
+        lineas: Math.round(rt.height / 12) };
+    }, [elegir, dia]);
+  };
+
+  // 1 · el caso que se cortaba: 43 min, título de dos líneas, faltaban 26px
+  const corto = await medir({ tit: 'Fuera de competencia programa 2' }, '2026-09-10');
+  expect(corto, 'Cinemancia tiene la función corta del censo').not.toBeNull();
+  expect(corto.unaLinea, 'el bloque pasa a una línea').toBe(true);
+  expect(corto.excede, `el título entra en el bloque de ${corto.h}px`).toBeLessThanOrEqual(0.5);
+  expect(corto.mismaLinea, 'hora y título comparten línea').toBe(true);
+  expect(corto.desborda, 'el título no cabía entero: por eso hay algo que ceder').toBe(true);
+  expect(corto.cortaConPuntos, 'y cede con puntos suspensivos, no cortado a la mitad').toBe(true);
+  expect(corto.lineas, 'en UNA línea').toBe(1);
+  expect(corto.h, 'el bloque NO creció: sigue diciendo cuánto dura').toBeCloseTo(corto.altoEsperado, 0);
+
+  // 2 · control: una obra larga conserva su forma de siempre. Sin este control,
+  // «pasar TODOS los bloques a una línea» sería indistinguible del arreglo.
+  const largo = await medir({ largo: true }, '2026-09-04');
+  expect(largo, 'hace falta una obra sola de 95+ min como control').not.toBeNull();
+  expect(largo.unaLinea, 'un bloque que ya tenía lugar no se toca').toBe(false);
+  expect(largo.excede, 'y su título sigue entrando').toBeLessThanOrEqual(0.5);
+});
+
+// ── T169 — ningún bloque de obra sola recorta su título ─────────────────────
+// El barrido que el caso a caso no puede dar: mete en el Plan las obras solas
+// MÁS CORTAS de cada catálogo y afirma que ninguna se sale de su caja. Es el
+// que caza el festival que todavía no existe.
+//
+// Se entra una vez por DÍA y se pintan juntas las de ese día: la grilla móvil
+// muestra dos columnas, así que un bloque de otro día no se dibuja y no se
+// puede medir. (La primera versión midió 2 de 14 por esto y no probaba nada;
+// la segunda, con un render por obra, se pasaba del tiempo.)
+for (const fid of ['cinemancia2026', 'ficdeh2026', 'olhar2026']) {
+test(`T169 — ningún bloque de obra sola recorta su título · ${fid}`, async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, fid);
+  const porDia = await page.evaluate(() => {
+    const v = new Map();
+    FILMS.filter(f => !f._slotKey && !f._cancelled && f.day && f.time)
+      .forEach(f => { if (!v.has(f.title + f.day + f.time)) v.set(f.title + f.day + f.time, f); });
+    const g = {};
+    [...v.values()].sort((a, b) => (parseInt(a.duration) || 90) - (parseInt(b.duration) || 90))
+      .slice(0, 16).forEach(f => (g[f.day] ||= []).push(f.title));
+    return g;
+  });
+  let medidos = 0; const malos = [];
+  for (const [dia, titulos] of Object.entries(porDia)) {
+    await enterFestival(page, fid, dia + 'T10:00');
+    const r = await page.evaluate(async ([dia, titulos]) => {
+      const b0 = document.createElement('button'); b0.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b0); b0.click(); b0.remove();
+      await new Promise(r => setTimeout(r, 300));
+      const fs = titulos.map(t => FILMS.find(x => x.title === t && x.day === dia && !x._slotKey && !x._cancelled)).filter(Boolean);
+      if (!fs.length) return { n: 0, malos: [] };
+      state.set('savedAgenda', { schedule: fs.map(f => ({ ...f, _title: f.title })), scenarioIdx: 0 });
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 900));
+      const out = { n: 0, malos: [] };
+      for (const b of document.querySelectorAll('.mplan-col-mobile .mplan-wk-block')) {
+        const br = b.getBoundingClientRect();
+        if (!br.height) continue;
+        const ti = b.querySelector('.mplan-wk-title');
+        if (!ti || b.querySelectorAll('.mplan-wk-title').length > 1) continue;   // los compartidos son de T165
+        out.n++;
+        const lim = br.bottom - parseFloat(getComputedStyle(b).paddingBottom);
+        const ex = +(ti.getBoundingClientRect().bottom - lim).toFixed(1);
+        if (ex > 0.5) out.malos.push(`${ti.textContent.trim().slice(0, 22)} (caja ${Math.round(br.height)}px, se sale ${ex})`);
+      }
+      return out;
+    }, [dia, titulos]);
+    medidos += r.n; malos.push(...r.malos);
+  }
+  expect(medidos, `${fid}: hay bloques de obra sola que medir`).toBeGreaterThan(5);
+  expect(malos, `${fid}: ${malos.length} de ${medidos} bloques recortan su título — ${malos.slice(0, 3).join(' · ')}`).toHaveLength(0);
+});
+}
