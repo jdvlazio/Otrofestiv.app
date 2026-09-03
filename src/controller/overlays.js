@@ -229,11 +229,20 @@ export function _searchAll(q){
   FILMS.forEach(f=>{if(!titleMap[f.title]) titleMap[f.title]=f;});
   Object.values(titleMap).forEach(f=>{
     const r1=fuzzyMatch(q,f.title);
-    const r2=f.title_en?fuzzyMatch(q,f.title_en):{match:false,score:0};
+    // Títulos alternos: el usuario busca lo que TIENE DELANTE, y la única pista
+    // frente a él es el afiche. Cuando nuestro póster viene con el arte de
+    // distribución en español y el festival titula en otro idioma, esas dos
+    // cosas no coinciden: «Hoja seca» en el afiche sobre una ficha que se llama
+    // «Dry Leaf» (Cinemancia 2026, título correcto por doctrina — así lo publica
+    // el festival). Medido: buscar «hoja» daba «Sin resultados».
+    // Un solo dueño para todos los alternos, así agregar otro idioma no vuelve
+    // a tocar la fórmula del puntaje.
+    const rAlt=[f.title_en,f.title_es].filter(Boolean)
+      .reduce((mej,alt)=>{const r=fuzzyMatch(q,alt);return r.score>mej.score?r:mej;},{match:false,score:0});
     const secScore=(f.section||'').toLowerCase().includes(ql)?0.3:0;
     const cntScore=(f.country||'').toLowerCase().includes(ql)?0.2:0;
-    const score=Math.max(r1.score,r2.score)+secScore+cntScore;
-    if((r1.match||r2.match||secScore||cntScore)&&!seen.has(f.title)){
+    const score=Math.max(r1.score,rAlt.score)+secScore+cntScore;
+    if((r1.match||rAlt.match||secScore||cntScore)&&!seen.has(f.title)){
       seen.add(f.title);
       results.push({...f,_score:score});
     }

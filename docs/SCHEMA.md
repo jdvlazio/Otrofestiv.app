@@ -280,6 +280,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
 | `title_en` | string | — | 10 fest |  |
+| `title_es` | string | — | — | Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial. |
 | `director` | string | — | 17 fest |  |
 | `year` | number | — | 16 fest | Entero. Dos festivales legacy lo tienen como string. |
 | `country` | string | — | 17 fest |  |
