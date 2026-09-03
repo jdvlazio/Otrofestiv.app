@@ -1920,3 +1920,53 @@ test('T159 — la excluida se explica con su función viva, y la toda-caída sig
     expect(r.caida.marca, 'una obra con todas sus funciones caídas sigue diciendo CANCELADA').toBe(true);
   }
 });
+
+// ── T161 — Intereses muestra la función de TU ciudad cuando la hay ──────────
+// Auditoría B-5 (2 sep 2026): con Bogotá elegida al entrar, la fila de «Sukua»
+// decía «Centro Cultural Panóptico de Ibagué» por ser la más temprana del
+// catálogo, teniendo función en Bogotá ese mismo día — la que estaba en su Plan.
+// La elección de ciudad se pidió como un dato sobre la persona; acá la lista de
+// sus intereses le proponía salas a 200 km.
+//
+// La segunda mitad impide arreglar de más: una obra SIN función en tu ciudad
+// sigue mostrando dónde existe (el comentario `plannable-ok` de _nextScreening
+// protegía justo eso: filtrar por ciudad escondería que la obra existe en otra
+// parte). Preferir no es filtrar.
+test('T161 — la fila de Intereses prefiere tu ciudad, y sin función ahí muestra dónde existe', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T09:00:00-05:00');
+  await page.evaluate(() => { const f = [...document.querySelectorAll('#city-sheet-list .lugar-opt')].find(e => e.dataset.city === 'Bogotá'); if (f) f.click(); });
+  await page.waitForTimeout(1400);
+  const r = await page.evaluate(async () => {
+    const H = await import('/src/view/helpers.js');
+    const D = await import('/src/domain/film.js');
+    const viva = f => f.day && f.time && !f._cancelled && !D.screeningPassed(f);
+    const enBogota = f => H.venueMatches(f.venue, 'city:Bogotá');
+    const porT = {}; FILMS.forEach(f => { if (viva(f)) (porT[f.title] ||= []).push(f); });
+    // una obra con función viva en Bogotá Y otra más temprana fuera; y una sin ninguna en Bogotá
+    const conBogota = Object.keys(porT).find(t => porT[t].some(enBogota) && porT[t].some(f => !enBogota(f)));
+    const sinBogota = Object.keys(porT).find(t => !porT[t].some(enBogota));
+    watchlist.clear(); [conBogota, sinBogota].filter(Boolean).forEach(t => watchlist.add(t));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+    switchMainNav('mnav-seleccion'); showAgView();
+    await new Promise(r => setTimeout(r, 1500));
+    const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+    const fila = t => { const e = [...document.querySelectorAll('.int-item')].filter(vis).find(x => x.dataset.title === t); return e ? e.innerText.replace(/\s+/g, ' ') : null; };
+    const sedesBogota = t => [...new Set(porT[t].filter(enBogota).map(f => H.vcfg(f.venue).short || f.venue))];
+    const sedesFuera = t => [...new Set(porT[t].filter(f => !enBogota(f)).map(f => H.vcfg(f.venue).short || f.venue))];
+    return { activeVenue, conBogota, sinBogota,
+      filaCon: conBogota ? fila(conBogota) : null, sedesBogotaDeCon: conBogota ? sedesBogota(conBogota) : [], sedesFueraDeCon: conBogota ? sedesFuera(conBogota) : [],
+      filaSin: sinBogota ? fila(sinBogota) : null, sedesFueraDeSin: sinBogota ? sedesFuera(sinBogota) : [] };
+  });
+  expect(r.activeVenue, 'la ciudad elegida está activa').toBe('city:Bogotá');
+  expect(r.conBogota, 'el fixture trae una obra con función en Bogotá y otra más temprana fuera').toBeTruthy();
+  expect(r.filaCon, 'la fila se pintó').toBeTruthy();
+  const enBog = r.sedesBogotaDeCon.some(s => r.filaCon.includes(s));
+  expect(enBog, `«${r.conBogota}» tiene función en Bogotá (${r.sedesBogotaDeCon.join(' / ')}): la fila la muestra, no la de ${r.sedesFueraDeCon.join(' / ')}`)
+    .toBe(true);
+  if (r.sinBogota) {
+    expect(r.filaSin, 'la obra sin función en Bogotá también tiene fila').toBeTruthy();
+    const fuera = r.sedesFueraDeSin.some(s => r.filaSin.includes(s));
+    expect(fuera, `«${r.sinBogota}» no tiene función en Bogotá: la fila muestra dónde existe (${r.sedesFueraDeSin.slice(0, 2).join(' / ')}), no la esconde`)
+      .toBe(true);
+  }
+});
