@@ -3460,3 +3460,83 @@ test('T164 — el panel usa el ancho que necesita, y no más', async ({ page }) 
       .toBeLessThanOrEqual(2);
   }
 });
+
+// ── T166 — las dos salidas de texto gris se leen (contraste PINTADO) ─────────
+// Auditorías A-7 y A-3 (2 sep 2026), medido a 390x844 con el color COMPUESTO
+// (color × opacidades heredadas sobre el fondo real), no con el declarado:
+//   «Ver todas las ciudades» (hoja de ciudad) → #555555 sobre #1D1B18 = 2,30
+//   «Letterboxd» (ficha)                     → #555555 al .55 = pintado #3B3A39 = 1,54
+// Los dos son texto de 11px, así que les aplica el 4,5:1 de AA normal.
+//
+// Por qué PINTADO y no declarado: el enlace de Letterboxd hereda el opacity:.55
+// de `.c-lb`, y ningún guardián estático lo ve. Cambiarle solo el color a
+// --gray daba 2,39 —seguía fallando— y un grep habría cantado victoria.
+// Con --white bajo la misma opacidad pinta #908E8A y da 5,34.
+const _AA_NORMAL = 4.5;
+
+test('T166 — las dos salidas de texto gris cumplen AA pintadas', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const sonda = () => {
+    const lin = c => { c /= 255; return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
+    const L = ([a, b, c]) => 0.2126 * lin(a) + 0.7152 * lin(b) + 0.0722 * lin(c);
+    const nums = s => (s.match(/[\d.]+/g) || []).map(Number);
+    // fondo: el primer ancestro con un relleno realmente opaco
+    const fondo = el => { let n = el;
+      while (n && n !== document.documentElement) {
+        const p = nums(getComputedStyle(n).backgroundColor);
+        if (p.length >= 3 && (p[3] === undefined || p[3] > 0.9)) return p.slice(0, 3);
+        n = n.parentElement; }
+      return nums(getComputedStyle(document.body).backgroundColor).slice(0, 3); };
+    // alfa compuesto: el propio y el de TODOS sus ancestros
+    const alfa = el => { let a = 1, n = el;
+      while (n && n !== document.documentElement) { a *= parseFloat(getComputedStyle(n).opacity) || 1; n = n.parentElement; }
+      return a; };
+    window.__sonda = sel => {
+      const el = document.querySelector(sel); if (!el) return null;
+      const r = el.getBoundingClientRect(); if (!r.width || !r.height) return null;
+      const cs = getComputedStyle(el), c = nums(cs.color);
+      const aTxt = c.length > 3 ? c[3] : 1;
+      const a = alfa(el) * aTxt, bg = fondo(el);
+      const pintado = c.slice(0, 3).map((v, i) => Math.round(v * a + bg[i] * (1 - a)));
+      const l1 = L(pintado), l2 = L(bg);
+      return { txt: el.textContent.trim().slice(0, 26), px: parseFloat(cs.fontSize),
+        peso: cs.fontWeight, declarado: cs.color, alfa: Math.round(a * 100) / 100,
+        pintado: '#' + pintado.map(v => v.toString(16).padStart(2, '0')).join(''), bg,
+        contraste: +(((Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05)).toFixed(2)) }; };
+  };
+
+  // 1 · A-7 · el escape de la hoja de ciudad (festival multiciudad: la hoja abre sola)
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  await page.evaluate(sonda);
+  const esc = await page.evaluate(() => window.__sonda('.lugar-opt.escape'));
+  expect(esc, 'la hoja de ciudad muestra su escape').not.toBeNull();
+  expect(esc.px, 'es texto pequeño: le aplica el 4,5:1').toBeLessThan(18);
+  expect(esc.contraste,
+    `«${esc.txt}»: ${esc.declarado} pintado ${esc.pintado} sobre ${esc.bg} da ${esc.contraste}`)
+    .toBeGreaterThanOrEqual(_AA_NORMAL);
+
+  // 2 · A-3 · el enlace de Letterboxd de la ficha
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00');
+  const abierta = await page.evaluate(async () => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 500));
+    for (const f of FILMS.filter(x => !x._cancelled && x.type !== 'event')) {
+      openPelSheet(f.title);
+      await new Promise(r => setTimeout(r, 800));
+      if (document.querySelector('.c-lb-text')) return f.title;
+      closePelSheet && closePelSheet();
+      await new Promise(r => setTimeout(r, 200));
+    }
+    return null;
+  });
+  expect(abierta, 'alguna obra del catálogo trae enlace de Letterboxd').toBeTruthy();
+  await page.evaluate(sonda);
+  const lb = await page.evaluate(() => window.__sonda('.c-lb-text'));
+  expect(lb, 'el enlace se dibuja').not.toBeNull();
+  expect(lb.px, 'también es texto pequeño').toBeLessThan(18);
+  expect(lb.alfa, 'y sigue atenuado — el arreglo NO fue subirle la opacidad').toBeLessThan(0.7);
+  expect(lb.contraste,
+    `«${lb.txt}»: ${lb.declarado} al ${lb.alfa} pinta ${lb.pintado} sobre ${lb.bg} y da ${lb.contraste}`)
+    .toBeGreaterThanOrEqual(_AA_NORMAL);
+});
