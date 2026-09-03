@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609030656">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609030656">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609030819">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609030819">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -2068,7 +2068,19 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    que sí tiene que envolver. */
 .mplan-t2 .mp-void-t{white-space:nowrap}
 .mplan-ri{flex:1;min-width:0}
-.mplan-rtitle{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* El título cede, el distintivo no (auditoría A-5, 2 sep 2026): el badge Q&A
+   vivía DENTRO de este mismo nodo, que es `nowrap + overflow:hidden`, así que
+   se recortaba junto con el título. Medido en Mi Plan: el renglón terminaba en
+   x=323 y el badge arrancaba en x=587 — no se dibujaba NUNCA. La ficha y
+   Planear sí avisan «Q&A · +30 min estimados»; en el Plan —el único lugar
+   donde el dato cambia a qué hora salís del cine— desaparecía.
+   Fila flex: la elipsis se muda al span del texto, que es quien cede.
+   Sin `flex-shrink:0` en el badge ni `min-width:0` en el span: medidos, los
+   dos son no-op acá —el texto puede encoger hasta 0 por su overflow:hidden,
+   así que el badge nunca necesita ceder— y una línea que ninguna mutación
+   mueve es una línea que el test no protege. */
+.mplan-rtitle{display:flex;align-items:baseline;min-width:0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white)}
+.mplan-rtitle-txt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mplan-rtitle.mp-event-title{color:var(--event-blue-title)}
 .mplan-rvenue{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
 .mplan-rvenue.mp-event-venue{color:var(--event-blue-60)}
@@ -3731,7 +3743,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609030656";
+    s.src="/src/main.js?v=202609030819";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
