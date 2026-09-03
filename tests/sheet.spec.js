@@ -1,7 +1,7 @@
 // @ts-check
 // sheet.spec.js — Sheet de película + Intereses (watchlist).
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival, addToWatchlist } = require('./helpers');
+const { LEVIZA_SIMTIME, enterFestival, addToWatchlist, reentrar } = require('./helpers');
 
 // T07 — Quitar de Intereses desde sheet cierra el sheet
 test('T07 — quitar de Intereses desde sheet cierra el sheet', async ({ page }) => {
@@ -471,4 +471,101 @@ test('T143 — el toast se aparta de la hoja, y solo cuando hay hoja', async ({ 
     .toBeGreaterThan(r.sinHoja.vp / 2);
   expect(r.conHoja.altoEstrellas, 'la hoja muestra su área de estrellas').toBeGreaterThan(40);
   expect(r.conHoja.solape, 'y el toast no pisa ni un píxel de ella').toBe(0);
+});
+
+// ── T167 — quitar de Intereses tiene vuelta atrás ────────────────────────────
+// Auditoría A-2 (2 sep 2026): quitar una obra que NO está en el Plan no pregunta
+// —el modal es solo para lo que está en el Plan— y el toast era informativo, sin
+// botón. Medido: clase «prio-toast info», 0 botones de acción. Un toque de más
+// borraba la obra, sus compañeras de función y su prioridad, en silencio.
+//
+// Lo que se afirma: (1) el toast ofrece «Deshacer»; (2) al usarlo vuelven los
+// TRES conjuntos —intereses, vista y prioridad— y también las compañeras de
+// función; (3) sobrevive a una recarga, o sea que se guardó de verdad;
+// (4) control: sin tocar «Deshacer», la obra sigue fuera.
+test('T167 — quitar de Intereses ofrece deshacer, y el deshacer repone todo', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'finca2026', '2026-08-13T10:00');
+
+  // una obra ANCLADA (con compañera de función) y fuera del Plan: es el caso
+  // donde más se pierde de un toque
+  const prep = await page.evaluate(async () => {
+    const g = {};
+    FILMS.forEach(f => { if (f._slotKey && !f._cancelled) (g[f._slotKey] ||= []).push(f); });
+    // La obra tiene que estar en UNA sola función: cuando un título gira por
+    // varias con distintas compañeras, la intersección es vacía a propósito
+    // (regla de «la MISMA función», handlers.js) y no arrastraría a nadie.
+    const unaSola = t => FILMS.filter(f => f.title === t && f._slotKey)
+      .reduce((s, f) => s.add(f._slotKey), new Set()).size === 1;
+    const grupo = Object.values(g).find(x => x.length >= 2 && x.every(f => unaSola(f.title)));
+    if (!grupo) return null;
+    const tit = grupo[0].title;
+    toggleWL(tit);
+    await new Promise(r => setTimeout(r, 300));
+    togglePriority(tit);
+    await new Promise(r => setTimeout(r, 300));
+    return { tit, hermanas: grupo.slice(1).map(f => f.title),
+      enWL: watchlist.has(tit), enPrio: prioritized.has(tit),
+      hermanasEnWL: grupo.slice(1).filter(f => watchlist.has(f.title)).length,
+      enPlan: !!(savedAgenda && savedAgenda.schedule.some(s => s._title === tit)) };
+  });
+  expect(prep, 'el festival tiene una función compartida de obras que no giran').not.toBeNull();
+  expect(prep.hermanas.length, 'con al menos una compañera — si no, no se prueba el arrastre').toBeGreaterThanOrEqual(1);
+  expect(prep.enWL, 'la obra quedó en Intereses').toBe(true);
+  expect(prep.enPrio, 'y priorizada').toBe(true);
+  expect(prep.hermanasEnWL, 'con sus compañeras de función').toBe(prep.hermanas.length);
+  expect(prep.enPlan, 'y NO está en el Plan: por eso quitar no pregunta').toBe(false);
+
+  // quitar → el toast tiene que ofrecer la vuelta atrás
+  const tras = await page.evaluate(async (p) => {
+    toggleWL(p.tit);
+    await new Promise(r => setTimeout(r, 400));
+    const toast = document.getElementById('prio-toast');
+    const btn = toast && toast.querySelector('.toast-action-btn');
+    return { enWL: watchlist.has(p.tit), enPrio: prioritized.has(p.tit),
+      hermanasEnWL: p.hermanas.filter(h => watchlist.has(h)).length,
+      hayBoton: !!btn, etiqueta: btn ? btn.textContent.trim() : null,
+      visible: toast ? getComputedStyle(toast).opacity : null };
+  }, prep);
+  expect(tras.enWL, 'la obra salió de Intereses').toBe(false);
+  expect(tras.hermanasEnWL, 'y sus compañeras también').toBe(0);
+  expect(tras.hayBoton, 'el toast ofrece una salida, no solo avisa').toBe(true);
+  expect(tras.etiqueta, 'y dice qué hace').toBe('Deshacer');
+  expect(tras.visible, 'el toast está a la vista').toBe('1');
+
+  // usarla → vuelven los tres conjuntos y las compañeras
+  const undo = await page.evaluate(async (p) => {
+    document.querySelector('.toast-action-btn').click();
+    await new Promise(r => setTimeout(r, 500));
+    return { enWL: watchlist.has(p.tit), enPrio: prioritized.has(p.tit),
+      hermanasEnWL: p.hermanas.filter(h => watchlist.has(h)).length };
+  }, prep);
+  expect(undo.enWL, 'la obra volvió a Intereses').toBe(true);
+  expect(undo.enPrio, 'con su prioridad, no solo el interés').toBe(true);
+  expect(undo.hermanasEnWL, 'y sus compañeras de función volvieron con ella').toBe(prep.hermanas.length);
+
+  // y sobrevive a una recarga: se guardó, no quedó solo en memoria.
+  // La recarga borra _simTime y devuelve al selector → hay que re-entrar
+  // (mismo patrón que el resto de la suite, ver `reentrar` en helpers).
+  await page.reload();
+  await reentrar(page, 'finca2026', '2026-08-13T10:00');
+  await page.waitForTimeout(1200);
+  const post = await page.evaluate(p => ({ enWL: watchlist.has(p.tit),
+    enPrio: prioritized.has(p.tit),
+    hermanasEnWL: p.hermanas.filter(h => watchlist.has(h)).length }), prep);
+  expect(post.enWL, 'tras recargar sigue en Intereses: el deshacer persistió').toBe(true);
+  expect(post.enPrio, 'y sigue priorizada').toBe(true);
+  expect(post.hermanasEnWL, 'y las compañeras siguen').toBe(prep.hermanas.length);
+
+  // control: si NO se toca «Deshacer», la obra se queda fuera
+  const sinUndo = await page.evaluate(async (p) => {
+    toggleWL(p.tit);
+    await new Promise(r => setTimeout(r, 400));
+    const t2 = document.getElementById('prio-toast');
+    if (t2) { t2.style.opacity = '0'; t2.style.pointerEvents = 'none'; }  // se vence sin tocarlo
+    await new Promise(r => setTimeout(r, 300));
+    return { enWL: watchlist.has(p.tit), enPrio: prioritized.has(p.tit) };
+  }, prep);
+  expect(sinUndo.enWL, 'sin deshacer, la obra sigue fuera — el quitar no se anula solo').toBe(false);
+  expect(sinUndo.enPrio, 'y sin prioridad').toBe(false);
 });
