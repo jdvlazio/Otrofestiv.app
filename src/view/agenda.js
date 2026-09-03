@@ -2120,9 +2120,27 @@ export function _fixStickyOffset(){
 function _fitMiPlanBlocks(view){
   view.querySelectorAll('.mplan-wk-block').forEach(b=>{
     if(!b.offsetParent) return;                       // columna no visible en este ancho
-    const lim=b.getBoundingClientRect().bottom-parseFloat(getComputedStyle(b).paddingBottom)+0.5;
-    const entra=el=>el.getBoundingClientRect().bottom<=lim;
+    // el borde útil se RECALCULA en cada consulta: el modo compacto cambia el
+    // padding, así que un `lim` cacheado mentiría después de aplicarlo
+    const entra=el=>el.getBoundingClientRect().bottom
+      <=b.getBoundingClientRect().bottom-parseFloat(getComputedStyle(b).paddingBottom)+0.5;
     const titles=[...b.querySelectorAll('.mplan-wk-title')];
+    // UNA sola obra: el bloque mide lo que dura, y por debajo de ~61 min no le
+    // entra hora + una línea de título (auditoría del bloque corto, 3 sep 2026).
+    // Censo a 390px: 148 bloques cortados en 14 de los 15 festivales, 21 de
+    // ellos en Cinemancia, en curso. El umbral no es «obras cortas»: con un
+    // título de dos líneas hacen falta 76 min, así que caían debates de una hora.
+    // La altura mínima se midió y NO sirve: arregla el bloque de 16 min y falla
+    // en los de 43 y 60 —ya son altos, lo que no entra es la segunda línea— y
+    // para cubrirlos habría que fijar 51px, con lo que 16 min se dibujaría del
+    // alto de 76. El bloque dejaría de decir cuánto dura.
+    // Salida: hora y título comparten UNA línea, con elipsis. Solo donde hace
+    // falta —un bloque alto conserva sus dos líneas y su sede— y en dos escalones,
+    // porque el piso de 20px del bloque no admite el interlineado normal.
+    if(titles.length===1&&!entra(titles[0])){
+      b.classList.add('mp-linea');
+      if(!entra(titles[0])) b.classList.add('mp-linea-corta');
+    }
     if(titles.length>1){
       const fits=titles.filter(entra).length;
       if(fits<titles.length){

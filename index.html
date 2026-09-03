@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609031118">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609031118">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609031633">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609031633">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -2025,6 +2025,15 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    compartida). Se clampan a 1 línea para que entren todas: lo que importa es
    saber qué obras hay, no leer el título completo de cada una. */
 .mplan-wk-title.mp-multi{-webkit-line-clamp:1;font-size:var(--t-xs);margin-bottom:1px}
+/* Bloque de UNA obra que no alcanza para hora + título (ver _fitMiPlanBlocks):
+   comparten línea y el que cede es el título. `mp-linea-corta` es el escalón
+   para el piso de 20px, donde el interlineado normal tampoco entra. */
+.mplan-wk-block.mp-linea{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:var(--sp-1)}
+.mp-linea .mplan-wk-time{margin-bottom:0;flex-shrink:0}
+.mp-linea .mplan-wk-title{min-width:0;flex:1;-webkit-line-clamp:1;white-space:nowrap;text-overflow:ellipsis}
+.mp-linea .mplan-wk-venue{flex-basis:100%}
+.mp-linea-corta{padding-top:2px;padding-bottom:2px}
+.mp-linea-corta .mplan-wk-title,.mp-linea-corta .mplan-wk-time{line-height:1.1}
 /* «+N» — lo que no cupo (ver _fitMiPlanBlocks): la última obra visible cede
    con elipsis y el contador queda a su derecha, en la misma línea. */
 .mplan-wk-title.mp-mas{display:flex;align-items:baseline}
@@ -3748,7 +3757,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609031118";
+    s.src="/src/main.js?v=202609031633";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
