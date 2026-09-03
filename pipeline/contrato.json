@@ -75,6 +75,7 @@
   "title_en": {
    "tipo": "string"
   },
+  "title_es": {"tipo": "string", "nota": "Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial."},
   "director": {
    "tipo": "string"
   },
