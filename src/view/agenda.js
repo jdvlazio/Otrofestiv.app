@@ -1042,7 +1042,16 @@ export function renderFilmListHTML(state){
     // plan — filtrarla por ciudad escondería que la obra existe en otra parte.
     const future=FILMS.filter(f=>f.title===title&&!screeningPassed(f))
       .sort((a,b)=>{ const d=(a.day_order||0)-(b.day_order||0); return d||toMin(a.time)-toMin(b.time); });
-    return future[0]||null;
+    // …PERO si la obra tiene función viva EN TU CIUDAD, esa es la próxima que
+    // te importa (auditoría B-5, 2 sep 2026). Con Bogotá elegida, «Sukua» decía
+    // «Centro Cultural Panóptico de Ibagué» por ser la más temprana del
+    // catálogo, teniendo función en Bogotá ese mismo día — la que estaba en el
+    // Plan. Se prefiere la de tu ciudad (venueMatches, el dueño del predicado de
+    // lugar) y solo si no hay ninguna se cae al catálogo entero: la obra sigue
+    // existiendo en otra parte, que es lo que el comentario de arriba protegía.
+    const _aqui=(typeof activeVenue!=='undefined'&&activeVenue&&activeVenue!=='all')
+      ?future.filter(f=>!f._cancelled&&venueMatches(f.venue,activeVenue)):[];
+    return _aqui[0]||future[0]||null;
   }
 
   // ── Label de día relativo: hoy→solo hora, mañana→MAÑANA, otro→label ──
