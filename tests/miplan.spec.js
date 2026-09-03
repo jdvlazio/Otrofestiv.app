@@ -1970,3 +1970,56 @@ test('T161 — la fila de Intereses prefiere tu ciudad, y sin función ahí mues
       .toBe(true);
   }
 });
+
+// ── T162 — los botones de la fila del Plan se tocan con el dedo, y no se pisan ──
+// Auditoría B-9 (2 sep 2026), y los dos recorridos independientes midieron lo
+// mismo: los .icon-btn-circle de las filas del Plan —«Cambiar» y «Quitar del
+// Plan», apilados— miden 30×30, en una lista donde el error de dedo borra una
+// función. iOS pide 44.
+//
+// La caja de impacto se extiende 7px a cada lado con un ::before; el dibujo
+// sigue en 30. Y la segunda mitad es la que importa: medido, los dos botones
+// tenían gap 0, así que ampliar cada uno 14px los hacía SOLAPARSE 14px y en
+// toda la franja el toque iba al de abajo — el destructivo. Peor que antes.
+// El gap de 14 (--sp-btn) hace que las zonas se toquen sin pisarse. Se afirma
+// con elementFromPoint, que es lo que el dedo encuentra.
+test('T162 — cada botón de la fila responde a 20px de su centro, y la franja entre los dos va al más cercano', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    const porDia = {}; FILMS.forEach(f => { (porDia[f.day] = porDia[f.day] || []).push(f.title); });
+    watchlist.clear();
+    Object.keys(porDia).sort().slice(0, 3).forEach(d => watchlist.add(porDia[d][0]));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(900);
+  const r = await page.evaluate(() => {
+    const col = document.querySelector('.col-end'); if (!col) return null;
+    const [a, b] = [...col.querySelectorAll('.ag-fi-btn')]; if (!a || !b) return null;
+    const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+    const fila = col.closest('.saved-item').getBoundingClientRect();
+    const cx = ra.left + ra.width / 2, ca = ra.top + ra.height / 2, cb = rb.top + rb.height / 2;
+    const quien = (x, y) => { const e = document.elementFromPoint(x, y); return e === a || a.contains(e) ? 'A' : (e === b || b.contains(e) ? 'B' : 'otro'); };
+    return {
+      dibujado: [Math.round(ra.width), Math.round(ra.height)],
+      gap: Math.round(rb.top - ra.bottom),
+      colNoDesborda: col.getBoundingClientRect().height <= fila.height + 0.5,
+      a20: [quien(cx, ca - 20), quien(cx - 20, ca), quien(cx + 20, ca)],
+      b20: [quien(cx, cb + 20), quien(cx - 20, cb), quien(cx + 20, cb)],
+      franja: { bajoA: quien(cx, ra.bottom + 3), sobreB: quien(cx, rb.top - 3) }
+    };
+  });
+  expect(r, 'hay una fila del Plan con sus dos botones').not.toBeNull();
+  expect(r.dibujado, 'el dibujo sigue siendo el círculo de 30 — no cambió la anatomía').toEqual([30, 30]);
+  expect(r.colNoDesborda, 'la columna de botones no hace crecer la fila').toBe(true);
+  // 1 · cada botón responde a 20px de su centro (caja ≥ 44)
+  expect(r.a20, '«Cambiar» responde a 20px arriba/izquierda/derecha de su centro').toEqual(['A', 'A', 'A']);
+  expect(r.b20, '«Quitar» responde a 20px abajo/izquierda/derecha de su centro').toEqual(['B', 'B', 'B']);
+  // 2 · y NO se pisan: la franja entre los dos va al más cercano
+  expect(r.gap, 'hay aire entre los dos: sin él las zonas ampliadas se solapan y gana el de abajo').toBeGreaterThanOrEqual(14);
+  expect(r.franja.bajoA, 'justo debajo de «Cambiar» sigue siendo «Cambiar» — no «Quitar»').toBe('A');
+  expect(r.franja.sobreB, 'justo encima de «Quitar» es «Quitar»').toBe('B');
+});
