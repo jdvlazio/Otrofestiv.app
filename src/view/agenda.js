@@ -108,6 +108,7 @@ export function renderAgenda(){
     // Lo que Mi Plan sí garantiza es lo de abajo: el plan RINDE (festivalEnded()
     // respeta el estado, así que no cae en Modo Recuerdo) y no queda un hueco.
     view.innerHTML=_progressHtmlPlan+renderSavedAgendaHTML(state, getConsensusMap());
+    _fitMiPlanBlocks(view);
     _scrollMiPlanToNow();
   } else {
     // ── Planear: stepper de progreso + prio strip + disponibilidad + opciones ──
@@ -2103,6 +2104,42 @@ export function _fixStickyOffset(){
     const hdrH=document.getElementById('hdr-programa')?.offsetHeight||(tbH+navH);
     r.setProperty('--sticky-top-chips',hdrH+'px');
   }
+}
+
+// El bloque de la grilla dice cuántas obras NO le caben (auditoría B-3, 3 sep
+// 2026). Un bloque compartido mide lo que dura la función y lista todas sus
+// obras; cuando son más de las que entran, `overflow:hidden` las cortaba en
+// silencio —y a la última, por la mitad—. Medido en FICDEH a 390px:
+//   7 obras / 98 min → bloque de 61px: 3 enteras, 1 partida, 3 invisibles
+//   4 obras / 60 min → bloque de 36px: 1 entera, 1 partida, 2 invisibles
+// Se MIDE después de pintar, no se calcula con constantes que espejen el CSS:
+// las que entran se quedan, las demás se retiran y la última visible termina en
+// «+N» (el mismo contador que usan las tiras de pósters). Si no entra ni una,
+// el «+N» va junto a la hora. La sede corre la misma suerte: si no cabe, no
+// queda escondida debajo del borde.
+function _fitMiPlanBlocks(view){
+  view.querySelectorAll('.mplan-wk-block').forEach(b=>{
+    if(!b.offsetParent) return;                       // columna no visible en este ancho
+    const lim=b.getBoundingClientRect().bottom-parseFloat(getComputedStyle(b).paddingBottom)+0.5;
+    const entra=el=>el.getBoundingClientRect().bottom<=lim;
+    const titles=[...b.querySelectorAll('.mplan-wk-title')];
+    if(titles.length>1){
+      const fits=titles.filter(entra).length;
+      if(fits<titles.length){
+        const mas=`<span class="dw-strip-mas">+${titles.length-fits}</span>`;
+        titles.slice(fits).forEach(t=>t.remove());
+        if(fits){
+          const last=titles[fits-1];
+          last.classList.add('mp-mas');
+          last.innerHTML=`<span class="mplan-wk-title-txt">${last.innerHTML}</span>${mas}`;
+        } else {
+          b.querySelector('.mplan-wk-time')?.insertAdjacentHTML('beforeend',mas);
+        }
+      }
+    }
+    const v=b.querySelector('.mplan-wk-venue');
+    if(v&&!entra(v)) v.remove();
+  });
 }
 
 export function _scrollMiPlanToNow(){

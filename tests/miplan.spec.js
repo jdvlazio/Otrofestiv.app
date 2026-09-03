@@ -2104,3 +2104,88 @@ test('T163 — con Q&A el distintivo entra en la fila, y sin Q&A no aparece', as
     expect(f.hayBadge, `«${f.texto}» no tiene Q&A: no lleva distintivo`).toBe(false);
   }
 });
+
+// ── T165 — el bloque de la grilla dice cuántas obras no le caben ──────────────
+// Auditoría B-3 (2 sep 2026): un bloque compartido mide lo que dura la función y
+// lista todas sus obras; con `overflow:hidden`, las que no entraban se cortaban
+// en silencio —la última por la mitad—. Medido en FICDEH a 390px: 7 obras en
+// 98 min → bloque de 61px con 3 enteras, 1 partida y 3 invisibles.
+//
+// Lo que se afirma: (1) toda obra que queda en el bloque se ve ENTERA; (2) el
+// «+N» existe, cuenta exactamente las que faltan y también se ve entero, en la
+// línea de la última visible; (3) un bloque donde todo cabe no lleva contador
+// ni pierde obras — el control contra arreglar de más.
+test('T165 — el bloque de la grilla dice cuántas obras no le caben', async ({ page }) => {
+  const medir = async (key, slotDur) => page.evaluate(async ([key, slotDur]) => {
+    const g = FILMS.filter(f => f._slotKey === key);
+    // slotDur: la misma función pero más corta (bloque más bajo) — ver el caso 3
+    state.set('savedAgenda', { schedule: g.map(f => ({ ...f, _title: f.title, ...(slotDur ? { _slotDur: slotDur } : {}) })), scenarioIdx: 0 });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 900));
+    const b = document.querySelector('.mplan-col-mobile .mplan-wk-block');
+    if (!b) return null;
+    const br = b.getBoundingClientRect();
+    const lim = br.bottom - parseFloat(getComputedStyle(b).paddingBottom) + 0.5;
+    const ts = [...b.querySelectorAll('.mplan-wk-title')].map(t => t.getBoundingClientRect());
+    const mas = b.querySelector('.dw-strip-mas');
+    const mr = mas && mas.getBoundingClientRect();
+    return { n: g.length, h: Math.round(br.height), titulos: ts.length,
+      enteros: ts.filter(r => r.bottom <= lim).length,
+      mas: mas ? mas.textContent : null, masEntero: mr ? mr.bottom <= lim && mr.right <= br.right : null,
+      masEnLineaUltima: mr && ts.length ? Math.abs(mr.top - ts[ts.length - 1].top) <= 3 : null,
+      sedeEntera: (() => { const v = b.querySelector('.mplan-wk-venue'); return v ? v.getBoundingClientRect().bottom <= lim : null; })(),
+      // junto a la hora: cuánto aire hay entre «19:00» y «+N»
+      gapHora: (() => { const tm = b.querySelector('.mplan-wk-time'); if (!mas || !tm || mas.parentElement !== tm) return null;
+        const r = document.createRange(); r.selectNodeContents(tm.firstChild); return mr.left - r.getBoundingClientRect().right; })(),
+      // con un nombre que no cabe, el que cede es el nombre: el contador sigue a la vista
+      masEnteroLargo: (() => { const txt = b.querySelector('.mp-mas .mplan-wk-title-txt'); if (!txt || !mas) return null;
+        txt.textContent = 'Un nombre largo, largo, largo, que no cabe en la columna de la grilla';
+        const m2 = mas.getBoundingClientRect(), l2 = txt.parentElement.getBoundingClientRect();
+        return m2.right <= br.right + 0.5 && m2.bottom <= lim && l2.bottom <= lim && l2.height < m2.height * 2; })() };
+  }, [key, slotDur || 0]);
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  const picks = await page.evaluate(() => {
+    const groups = {};
+    FILMS.forEach(f => { if (f._slotKey && !f._cancelled) (groups[f._slotKey] ||= []).push(f); });
+    const arr = Object.values(groups).sort((a, b) => b.length - a.length);
+    const chico = arr.find(g => g.length === 2 && g.reduce((a, f) => a + parseInt(f.duration), 0) >= 80);
+    return { grande: { key: arr[0][0]._slotKey, day: arr[0][0].day, n: arr[0].length },
+             chico: chico && { key: chico[0]._slotKey, day: chico[0].day } };
+  });
+  expect(picks.grande.n, 'hace falta una función con 5+ obras — si no, el test no mide nada').toBeGreaterThanOrEqual(5);
+  expect(picks.chico, 'y una de 2 obras con tiempo de sobra, como control').toBeTruthy();
+
+  // 1 · la función grande: entra lo que entra, y el resto se cuenta
+  await enterFestival(page, 'ficdeh2026', picks.grande.day + 'T10:00');
+  const g = await medir(picks.grande.key);
+  expect(g, 'el bloque de la función grande se dibuja').not.toBeNull();
+  expect(g.enteros, `las ${g.titulos} obras que quedan se ven enteras (bloque de ${g.h}px)`).toBe(g.titulos);
+  expect(g.titulos, 'quedan menos obras de las que hay — si caben todas, el fixture no sirve').toBeLessThan(g.n);
+  expect(g.titulos, 'al menos una obra se queda').toBeGreaterThanOrEqual(1);
+  expect(g.mas, 'el contador dice exactamente cuántas faltan').toBe(`+${g.n - g.titulos}`);
+  expect(g.masEntero, 'y se ve entero, dentro del bloque').toBe(true);
+  expect(g.masEnLineaUltima, 'en la misma línea que la última obra visible').toBe(true);
+  expect(g.masEnteroLargo, 'con un nombre largo el contador sigue a la vista: el que cede es el nombre').toBe(true);
+  expect(g.sedeEntera, 'la sede, si quedó, se ve entera — no escondida bajo el borde').not.toBe(false);
+
+  // 2 · control: donde todo cabe, no hay contador ni se pierde nada
+  await enterFestival(page, 'ficdeh2026', picks.chico.day + 'T10:00');
+  const c = await medir(picks.chico.key);
+  expect(c, 'el bloque de control se dibuja').not.toBeNull();
+  expect(c.titulos, 'las 2 obras siguen ahí').toBe(2);
+  expect(c.enteros, 'enteras').toBe(2);
+  expect(c.mas, 'y sin contador: no falta nada').toBeNull();
+  expect(c.sedeEntera, 'la sede del control también entera').not.toBe(false);
+
+  // 3 · y si no entra ni una obra (ningún festival tiene hoy un bloque compartido
+  // tan corto: se simula la misma función de 30 min), el contador va junto a la hora
+  const z = await medir(picks.chico.key, 30);
+  expect(z, 'el bloque corto se dibuja').not.toBeNull();
+  expect(z.titulos, 'con 30 min no cabe ninguna obra').toBe(0);
+  expect(z.mas, 'el contador dice que faltan las 2').toBe('+2');
+  expect(z.masEntero, 'y se ve entero').toBe(true);
+  expect(z.gapHora, 'separado de la hora, no pegado').toBeGreaterThanOrEqual(3);
+  expect(z.gapHora, 'con el aire del bloque (sp-1), no el de la tira de pósters (sp-3)').toBeLessThanOrEqual(8);
+});
