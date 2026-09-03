@@ -1635,6 +1635,16 @@ export function buildResultHTML(scenarios){
       // dueño (que ya la filtró) diríamos «sin funciones», que es falso.
       const screens=FILMS.filter(fi=>fi.title===excTitle&&!screeningPassed(fi)&&!isScreeningBlocked(fi));
       const _excCanc=screens.length>0&&screens.every(fi=>fi._cancelled);
+      // Una función CANCELADA nunca compitió: no explica por qué la obra quedó
+      // fuera, y menos puede ofrecerse como la función a la que ir. Auditoría
+      // B-1 (2 sep 2026): «Honorablé» tiene una función cancelada por el sismo
+      // (SÁB 15 · Cali) y una viva (MIÉ 19 · Barranquilla); el bucle tomaba la
+      // primera que chocaba con el Plan —la de Cali, por ser el mismo día que
+      // una obra de Bogotá— y la fila decía «SÁB 15 17:00 · Cali», en ámbar y
+      // sin marca. Las candidatas son las VIVAS; solo si no queda ninguna se
+      // mira el resto, y esa fila ya lleva CANCELADA (_excCanc).
+      const _vivas=screens.filter(fi=>!fi._cancelled);
+      const _cand=_vivas.length?_vivas:screens;
       // Distinguir «ya pasó» de «nunca tuvo función»: screens ya filtró las
       // pasadas, así que la lista vacía no dice por sí sola cuál de las dos es.
       let _qaOnlySlot=null;
@@ -1652,7 +1662,7 @@ export function buildResultHTML(scenarios){
         // Buscar conflicto con el schedule actual
         let conflictWith=null,conflictWhen=null;
         let conflictReason=null,conflictPair=null;
-        for(const s of screens){
+        for(const s of _cand){
           for(const c of sc.schedule){
             const _r=screensConflictReason(s,c);
             if(_r){
@@ -1709,8 +1719,23 @@ export function buildResultHTML(scenarios){
           // (verifyPlan la respeta). El planificador automático sigue siendo
           // conservador: no arma tu plan alrededor de una charla estimada.
           if(conflictReason.qaOnly){ _qaOnlySlot=conflictPair.s; }
-        } else if(screens.length){
-          reason=`<div class="excl-reason">${t('plan_choca')}</div>`;
+        } else if(_cand.length){
+          // Sin choque de reloj con nadie. ¿Quedó fuera por la CIUDAD del Plan?
+          // Se le pregunta al dueño (screeningPlannable): una función viva, no
+          // pasada y no bloqueada que igual NO es planificable solo puede serlo
+          // por PLAN_CITY_VENUES — el motor no cruza ciudades (#594). Antes esta
+          // rama decía «Choca con otras obras de tu Plan», que era falso: la de
+          // Barranquilla cae el MIÉ 19, un día libre. La fila va a «En otra
+          // ciudad», que es la verdad, y sin botón, que es la regla de ahí.
+          const _fc=_cand.find(x=>!screeningPlannable(x));
+          const _cityFn=_fc?venueCity(_fc.venue):'';
+          const _cityPlan=(sc.schedule[0]&&venueCity(sc.schedule[0].venue))||'';
+          if(_fc&&_cityFn&&_cityPlan&&_cityFn!==_cityPlan){
+            _kind='ciudad'; _ciudadFn=_cityFn; _ciudadPlan=_cityPlan;
+            _cuando=`${dayLabel(_fc.day)||_fc.day||''}${_fc.time?' '+_fc.time:''}`;
+          } else {
+            reason=`<div class="excl-reason">${t('plan_choca')}</div>`;
+          }
         } else {
           reason=`<div class="excl-reason">${t(_yaPaso)}</div>`;
         }
