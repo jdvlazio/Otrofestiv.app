@@ -96,8 +96,21 @@ export function toggleWL(title,e){
         });return;
     }
     // Branch B: remove directo (film NO en savedAgenda)
+    // Con vuelta atrás (auditoría A-2, 2 sep 2026). Este quitar NO pregunta —el
+    // modal es solo para lo que está en el Plan— así que un toque de más borraba
+    // sin red: la obra, sus compañeras de función y su prioridad, en silencio.
+    // Se guardan los TRES conjuntos antes de mutar (los Sets del snapshot son
+    // inmutables: _delFromSet devuelve uno nuevo) y el deshacer los repone tal
+    // cual, sin recalcular hermanas ni prioridades. Persiste también 'prio',
+    // que el quitar no toca.
+    const _antes={watchlist, watched, prioritized};
     state.batchUpdate(_quitarTodas(watchlist, watched, prioritized));
-    showToast(t('toast_fuera_intereses'),'info');
+    showActionToast(t('toast_fuera_intereses'),t('cta_deshacer'),()=>{
+      state.batchUpdate(_antes);
+      saveState('wl','watched','prio');
+      updateCardState(title);
+      _hermanas.forEach(h=>updateCardState(h));
+    });
   }
   else{
     // Branch C: add — con detección "todas funciones bloqueadas" + UI variants
