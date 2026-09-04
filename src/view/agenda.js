@@ -72,8 +72,16 @@ export function renderAgenda(){
         const _fs=FILMS.filter(x=>x.title===title);
         const _canc=_fs.length>0&&_fs.every(x=>x._cancelled);
         const stars=seen&&filmRatings&&filmRatings[title]?`<span class="txt-amber-sm">${starsText(filmRatings[title])}</span>`:'';
+        // La línea de metadatos dice lo que SABEMOS de la obra; el estado «vista»
+        // ya lo dicen el botón, la marca ✓ y el atenuado de la fila. Cuando la
+        // obra estaba vista y SIN calificar caía en la misma cadena que el botón
+        // y la fila tartamudeaba: «Madres de nacimiento | Vista | Vista»
+        // (auditoría 4 sep 2026). Con estrellas se veía bien; sin ellas, no.
+        // Sin calificación se muestra la sección, igual que en una obra no vista:
+        // el dato que hay, en el lugar del dato. Las estrellas siguen ganando
+        // cuando existen, así que la rama de `seen` sobraba.
         const meta=_canc?`<span class="txt-amber-sm">${t('notice_cancelada')}</span>`
-          :seen?(stars||t('cta_vista')):_secLabelFull((f&&f.section)||'');
+          :(stars||_secLabelFull((f&&f.section)||''));
         const poster=f?`<div class="js-open-pel" data-title="${title.replace(/"/g,'&quot;')}" style="cursor:pointer">${_posterThumb(f,'lb-poster')}</div>`:'';
         return`<div class="saved-item${seen&&!_canc?' done':''}"${seen&&!_canc?'':' style="opacity:.65"'}>
           ${poster}

@@ -2486,3 +2486,68 @@ test('T172 — Mi Plan e Intereses cuentan lo mismo, y quien fue a todo puede co
   expect(vacio.recap, 'sin plan ni marcas no hay recap que mostrar').toBe(false);
   expect(vacio.compartir, 'ni festival que compartir').toBe(0);
 });
+
+// ── T173 — la fila de Intereses no dice «Vista» dos veces ────────────────────
+// Auditoría 4 sep 2026: una obra vista y SIN calificar mostraba la palabra dos
+// veces en la misma fila —«Madres de nacimiento | Vista | Vista»—: una en la
+// línea de metadatos (`.saved-venue`, gris) y otra en el botón (`.saved-check`,
+// verde). Con estrellas se veía bien; sin ellas, la fila tartamudeaba.
+//
+// La línea de metadatos dice lo que SABEMOS de la obra; que esté vista ya lo
+// dicen el botón, la marca ✓ y el atenuado. Sin calificación muestra la sección,
+// igual que una obra no vista.
+//
+// Se afirma: (1) sin calificar, la palabra aparece UNA vez y el dato es la
+// sección; (2) con calificación, el dato son las estrellas —el arreglo no se las
+// come—; (3) control: una obra NO vista sigue mostrando su sección y su botón.
+test('T173 — la fila de Intereses no repite «Vista»', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'ficdeh2026', '2026-08-25T11:00');
+
+  const fila = async (opts) => page.evaluate(async (o) => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 300));
+    const f = FILMS.find(x => !x._cancelled && x.title && x.section);
+    state.set('watchlist', new Set([f.title]));
+    state.set('savedAgenda', null);
+    state.set('notWatched', new Set());
+    state.set('watched', new Set(o.vista ? [f.title] : []));
+    state.set('filmRatings', o.estrellas ? { [f.title]: 4 } : {});
+    switchMainNav('mnav-seleccion');
+    if (typeof renderAgenda === 'function') renderAgenda();
+    await new Promise(r => setTimeout(r, 800));
+    const vista = document.getElementById('ag-view');
+    const row = vista.querySelector('.saved-item');
+    if (!row) return null;
+    const dato = row.querySelector('.saved-venue'), btn = row.querySelector('.saved-check');
+    const txt = row.innerText.replace(/\s+/g, ' ').trim();
+    return { obra: f.title.slice(0, 26), seccion: f.section,
+      dato: dato ? dato.textContent.replace(/\s+/g, ' ').trim() : null,
+      boton: btn ? btn.textContent.replace(/\s+/g, ' ').trim() : null,
+      vecesVista: (txt.match(/vista/gi) || []).length, texto: txt.slice(0, 60) };
+  }, opts);
+
+  // 1 · vista y sin calificar: el caso del hallazgo
+  const sinEstrellas = await fila({ vista: true, estrellas: false });
+  expect(sinEstrellas, 'la fila de Intereses se dibuja').not.toBeNull();
+  expect(sinEstrellas.vecesVista,
+    `«Vista» aparece una sola vez en la fila (dice: ${sinEstrellas.texto})`).toBe(1);
+  expect(sinEstrellas.boton, 'y la que queda es la del botón, que es la acción').toMatch(/vista/i);
+  expect(sinEstrellas.dato, 'el dato muestra la sección, no el estado')
+    .not.toMatch(/^vista$/i);
+  expect(sinEstrellas.dato, 'y esa sección es la suya').toBeTruthy();
+
+  // 2 · con calificación, el dato son las estrellas: el arreglo no se las come
+  const conEstrellas = await fila({ vista: true, estrellas: true });
+  expect(conEstrellas.dato, `«${conEstrellas.obra}» calificada muestra sus estrellas`).toMatch(/★|☆|\*/);
+  expect(conEstrellas.vecesVista, 'y «Vista» sigue apareciendo una sola vez').toBe(1);
+
+  // 3 · control: una obra NO vista conserva su fila de siempre. El botón dice
+  // «Vista» en los dos estados —es la ACCIÓN, no el estado—, así que la palabra
+  // aparece una vez también acá: lo que no puede es aparecer dos.
+  const noVista = await fila({ vista: false, estrellas: false });
+  expect(noVista.dato, 'sin ver, el dato sigue siendo la sección').toBeTruthy();
+  expect(noVista.dato, 'y no es el estado').not.toMatch(/^vista$/i);
+  expect(noVista.vecesVista, 'y la palabra sigue apareciendo una sola vez, en el botón').toBe(1);
+});
