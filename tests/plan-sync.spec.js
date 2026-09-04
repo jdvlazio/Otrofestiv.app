@@ -95,3 +95,41 @@ test('PS03 — el ICS exporta el fin del BLOQUE para una obra anclada', async ({
   expect(ics).toContain('DTSTART:20260813T210000Z');
   expect(ics).toContain('DTEND:20260813T225100Z');
 });
+
+// PS05 — el calendario dice los minutos que reserva, y Avisos por qué
+// Auditoría 4 sep 2026: una actividad sin duración publicada exportaba un evento
+// de 90 minutos —el relleno de DEFAULT_DURATION_MIN— con la duración EN BLANCO:
+// la descripción terminaba colgando en « - » mientras bloqueaba 90 minutos reales.
+// El DTEND no cambia (un evento necesita un fin): cambia que lo diga, con la `~`
+// de siempre. El POR QUÉ vive en Avisos, en la ficha, que es donde se decide
+// (decisión de Juan, 4 sep) — eso lo mide T171.
+test('PS05 — el ICS dice los minutos que reserva cuando la duración no está publicada', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-09T15:00');
+  const r = await page.evaluate(async () => {
+    const capturar = async (f) => {
+      state.set('savedAgenda', { scenarioIdx: 0, schedule: [{ ...f, _title: f.title }] });
+      let cap = null;
+      const orig = URL.createObjectURL.bind(URL);
+      URL.createObjectURL = b => { cap = b; return orig(b); };
+      await exportICS();
+      URL.createObjectURL = orig;
+      return cap ? await cap.text() : null;
+    };
+    const sin = FILMS.find(x => !x._cancelled && x.day && x.time && !x.duration);
+    const con = FILMS.find(x => !x._cancelled && x.day && x.time && x.duration);
+    return { sinDur: sin ? { obra: sin.title.slice(0, 30), ics: await capturar(sin) } : null,
+             conDur: con ? { obra: con.title.slice(0, 30), dur: con.duration, ics: await capturar(con) } : null };
+  });
+
+  expect(r.sinDur, 'Cinemancia tiene la actividad sin duración del censo').not.toBeNull();
+  const desc = (r.sinDur.ics.match(/^DESCRIPTION:.*$/m) || [''])[0];
+  expect(desc, `dice los minutos que bloquea (dice: ${desc})`).toContain('90 min');
+  expect(desc, 'marcados como estimados con la `~` de siempre').toContain('~90');
+  expect(desc.trim(), 'y ya no termina colgando en « - »').not.toMatch(/-\s*$/);
+
+  // control: con duración publicada, ni tilde ni invento — sale el dato tal cual
+  expect(r.conDur, 'y hay obras con duración').not.toBeNull();
+  const desc2 = (r.conDur.ics.match(/^DESCRIPTION:.*$/m) || [''])[0];
+  expect(desc2, `«${r.conDur.obra}» sale con su duración real (dice: ${desc2})`).toContain(r.conDur.dur);
+  expect(desc2, 'sin marca de estimación').not.toContain('~');
+});

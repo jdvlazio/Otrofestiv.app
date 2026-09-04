@@ -569,3 +569,66 @@ test('T167 — quitar de Intereses ofrece deshacer, y el deshacer repone todo', 
   expect(sinUndo.enWL, 'sin deshacer, la obra sigue fuera — el quitar no se anula solo').toBe(false);
   expect(sinUndo.enPrio, 'y sin prioridad').toBe(false);
 });
+
+// ── T171 — Avisos dice cuando la duración no está publicada ──────────────────
+// Auditoría 4 sep 2026: el festival no publica la duración de algunas actividades
+// (28 registros en 7 festivales). La app rellena con DEFAULT_DURATION_MIN y sobre
+// ese número afirma la hora de salida y descarta obras del plan. Es un rasgo de la
+// función, igual que el Q&A, y su casa es la banda de Avisos: se lee ANTES de
+// decidir. (Decisión de Juan, 4 sep: acá y no en las notas del evento exportado.)
+//
+// Se afirma: (1) la ficha de la actividad sin duración trae la fila, con los
+// minutos que la app realmente usa; (2) una obra CON duración no la trae — el
+// control que impide que el aviso salga siempre y deje de querer decir algo.
+test('T171 — Avisos avisa que la duración es estimada, y solo cuando lo es', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'cinemancia2026', '2026-09-09T15:00');
+
+  const avisos = async (conDuracion) => page.evaluate(async (conD) => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 300));
+    const f = FILMS.find(x => !x._cancelled && x.day && x.time && (conD ? x.duration : !x.duration));
+    if (!f) return null;
+    if (typeof closePelSheet === 'function') closePelSheet();
+    await new Promise(r => setTimeout(r, 200));
+    openPelSheet(f.title);
+    await new Promise(r => setTimeout(r, 1000));
+    const txt = (document.getElementById('pel-sheet')?.innerText || '').replace(/\s+/g, ' ');
+    return { obra: f.title.slice(0, 30), duration: f.duration || null, texto: txt.slice(0, 400) };
+  }, conDuracion);
+
+  // 1 · sin duración publicada: el aviso está, con los minutos que la app usa
+  const sin = await avisos(false);
+  expect(sin, 'Cinemancia tiene la actividad sin duración del censo').not.toBeNull();
+  expect(sin.duration, 'y de verdad no la trae').toBeNull();
+  expect(sin.texto, `«${sin.obra}»: Avisos nombra la duración`).toMatch(/DURACI[ÓO]N/i);
+  expect(sin.texto, 'y dice que es una estimación').toMatch(/estimad/i);
+  expect(sin.texto, 'con los minutos que la app efectivamente usa').toContain('90 min');
+
+  // 2 · control: con duración publicada NO aparece el aviso. Sin esto, «avisar
+  // siempre» pasaría el test y la fila dejaría de significar algo.
+  const con = await avisos(true);
+  expect(con, 'y hay obras con duración').not.toBeNull();
+  expect(con.duration, 'esta sí la trae').toBeTruthy();
+  expect(con.texto, `«${con.obra}» (${con.duration}) no lleva aviso de duración estimada`)
+    .not.toMatch(/min estimados/i);
+
+  // 3 · la ficha de un CORTO no tiene film propio: el aviso se deriva de las
+  // funciones heredadas, no del film. Leerlo directo reventaba las 6 pruebas de
+  // esa ficha con «Cannot read properties of null» — lo cazó la suite, no yo.
+  const corto = await page.evaluate(async () => {
+    const prog = FILMS.find(f => f.is_cortos && f.film_list && f.film_list.length);
+    if (!prog) return { sinPrograma: true };
+    if (typeof closePelSheet === 'function') closePelSheet();
+    await new Promise(r => setTimeout(r, 200));
+    const it = prog.film_list[0];
+    openCortoSheet(it.title, it.country, it.duration, prog.section, it.flags, it.director, it.genre, it.synopsis);
+    await new Promise(r => setTimeout(r, 900));
+    const sheet = document.querySelector('#corto-sheet, #pel-sheet');
+    return { abrio: !!sheet, texto: (sheet?.innerText || '').replace(/\s+/g, ' ').slice(0, 200) };
+  });
+  if (!corto.sinPrograma) {
+    expect(corto.abrio, 'la ficha del corto abre — sin esto el caso no se prueba').toBe(true);
+  }
+});

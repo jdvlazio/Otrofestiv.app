@@ -34,7 +34,20 @@ export function toMin(t){
   return h*60+m; // 24h format
 }
 
-export function parseDur(d){const s=d!=null?String(d):'';const m=s&&s.replace('~','').match(/(\d+)/);return m?parseInt(m[1]):DEFAULT_DURATION_MIN;}
+// Un solo lector del texto de duración, para que «cuánto dura» y «¿lo sabemos?»
+// no puedan divergir nunca.
+// El `.replace('~','')` es INERTE con este regex —«~120 min» da 120 igual— y
+// ninguna mutación lo mueve. Se conserva porque venía de parseDur y quitarlo no
+// es parte de este arreglo; queda dicho para que nadie lo lea como protección.
+export function _durMatch(d){const s=d!=null?String(d):'';return s?s.replace('~','').match(/(\d+)/):null;}
+export function parseDur(d){const m=_durMatch(d);return m?parseInt(m[1]):DEFAULT_DURATION_MIN;}
+// «No la sabemos» tiene que poder decirse. parseDur rellena con DEFAULT_DURATION_MIN
+// y hasta ahora nada distinguía un 90 real de uno inventado: la app afirmaba la hora
+// de salida, reservaba 90 minutos en tu calendario y descartaba obras de tu plan
+// sobre un número que no tiene. Medido: 28 registros en 7 festivales sin duración.
+// Su propia doctrina ya dice que lo estimado se rotula («+30 min estimados» del Q&A)
+// y que lo no confiable no se muestra (el viaje entre ciudades, schedule.js).
+export function durEstimada(d){return !_durMatch(d);}
 
 export function minToStr(m){
   const h=Math.floor(((m%1440)+1440)%1440/60),mn=((m%1440)+1440)%1440%60;
