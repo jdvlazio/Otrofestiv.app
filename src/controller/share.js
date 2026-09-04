@@ -64,7 +64,40 @@ export async function shareDiary(){
   x.fillText(_dt?`${_n} · ${String(_dt).toUpperCase()}`:_n,PAD,192);
   // helpers
   const rr=(px,py,w,h,r)=>{ x.beginPath(); x.moveTo(px+r,py); x.arcTo(px+w,py,px+w,py+h,r); x.arcTo(px+w,py+h,px,py+h,r); x.arcTo(px,py+h,px,py,r); x.arcTo(px,py,px+w,py,r); x.closePath(); };
-  const load=src=>new Promise(res=>{ if(!src){res(null);return;} const im=new Image(); im.crossOrigin='anonymous'; im.onload=()=>res(im); im.onerror=()=>res(null); im.src=src; });
+  // Los afiches del export se piden de otra forma que en la pantalla, y ESA es la
+  // razón por la que no cargaban (reportado por Juan, FICCI desde iPhone, 4 sep
+  // 2026). El canvas EXIGE permiso cruzado —dibujar una imagen sin él lo
+  // contamina y `toBlob` tira excepción, medido—, pero la grilla ya cargó ese
+  // mismo afiche SIN pedirlo, y la copia guardada no sirve para una petición que
+  // sí lo pide: el navegador la rechaza. Medido con un póster real de FICCI
+  // (TMDB w185): con permiso cruzado falla, sin él carga, y con permiso cruzado
+  // más una dirección distinta carga. El servidor autoriza —manda
+  // `access-control-allow-origin: *`—; lo que falla es reusar la copia vieja.
+  //
+  // Tres casos, cada uno con lo que necesita:
+  //  · `data:` — no hay servidor ni copia que arreglar, y pedirle permiso cruzado
+  //    la rompe en WebKit (el motor de la app de iPhone). Se pide tal cual.
+  //  · mismo origen — no hay permiso que pedir: el canvas no se contamina.
+  //  · otro origen — permiso cruzado Y una dirección distinta, para no recibir la
+  //    copia que la pantalla dejó sin permiso.
+  const load=src=>new Promise(res=>{
+    if(!src){res(null);return;}
+    const im=new Image();
+    let _u=src;
+    if(/^https?:/i.test(src)){
+      let _ajeno=true;
+      try{ _ajeno=new URL(src,location.href).origin!==location.origin; }catch(e){}
+      // El mismo origen no necesita ninguna de las dos cosas: no hay permiso que
+      // pedir ni copia envenenada. Distinguirlo evita descargar dos veces cada
+      // afiche propio — ninguna mutación mueve esta rama (el archivo sale igual),
+      // así que queda dicho: la protege el sentido, no el test.
+      if(_ajeno){
+        im.crossOrigin='anonymous';
+        _u=src+(src.includes('?')?'&':'?')+'ofx=1';
+      }
+    }
+    im.onload=()=>res(im); im.onerror=()=>res(null); im.src=_u;
+  });
   const imgs=await Promise.all(rows.map(rw=>load(rw.src)));
   // celdas
   for(let i=0;i<rows.length;i++){
