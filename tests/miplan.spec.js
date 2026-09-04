@@ -2382,3 +2382,107 @@ test('T170 — la hora de salida se marca estimada si la duración no está publ
   expect(con.duration, 'esta sí la trae').toBeTruthy();
   expect(con.texto, `«${con.obra}» NO se marca: su duración es dato (dice: ${con.texto})`).not.toContain('~');
 });
+
+// ── T172 — «qué viste» se cuenta una sola vez ────────────────────────────────
+// Auditoría 4 sep 2026. `effectiveWatched` está declarado DUEÑO ÚNICO de «qué se
+// vio» (film.js): una función del plan que ya terminó SE ASUME vista. Pero cuatro
+// puertas del modo Recuerdo preguntaban por el `watched` CRUDO, y las pantallas
+// se contradecían a dos toques de distancia:
+//
+//   · con 4 obras en el plan y 2 marcadas a mano, Mi Plan titulaba «Viste 4
+//     actividades» mientras Intereses archivaba 2 bajo «te quedaste con ganas»;
+//   · y a quien fue a TODO sin marcar nada —armás el plan, vas, volvés cuando
+//     terminó— se le escondía «Compartir mi festival», que es lo que el modo
+//     Recuerdo promete. Medido: 4 afiches pintados, 0 botones de compartir.
+//
+// Las cuatro puertas viven dentro de festivalEnded(), así que nada cambia en vivo.
+test('T172 — Mi Plan e Intereses cuentan lo mismo, y quien fue a todo puede compartir', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  const escenario = async (marcadas) => {
+    await enterFestival(page, 'ficdeh2026', '2026-08-25T11:00');
+    return page.evaluate(async (marcadas) => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await new Promise(r => setTimeout(r, 400));
+      // OJO: post-festival screeningPassed() devuelve false a propósito (todo
+      // vuelve a plena opacidad), así que las pasadas se eligen por FECHA.
+      const vistos = new Set(); const el = [];
+      for (const f of FILMS.filter(x => !x._cancelled && x.day && x.time && x.day < '2026-08-20')) {
+        if (!vistos.has(f.title)) { vistos.add(f.title); el.push(f); }
+        if (el.length === 4) break;
+      }
+      // Una obra de MÁS en la watchlist que NO está en el plan y nadie marcó: es
+      // el control de que el reparto siga significando algo. Sin ella, «contar
+      // todo como visto» pasaba el test igual.
+      const suelta = [...FILMS].find(x => !x._cancelled && x.title && !vistos.has(x.title));
+      state.set('watchlist', new Set([...el.map(f => f.title), suelta.title]));
+      state.set('savedAgenda', { schedule: el.map(f => ({ ...f, _title: f.title })), scenarioIdx: 0 });
+      state.set('notWatched', new Set());
+      state.set('watched', new Set(el.slice(0, marcadas).map(f => f.title)));
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 900));
+      const recap = document.querySelector('.recap-hdr');
+      const compartir = [...document.querySelectorAll('.ag-save-btn[data-action="shareDiary"]')]
+        .filter(e => e.getBoundingClientRect().height > 0).length;
+      // renderAgenda() explícito: cambiar de pestaña sola no re-dibuja la vista
+      // (medido: #ag-view queda con el contenido anterior y en display:none).
+      switchMainNav('mnav-seleccion');
+      if (typeof renderAgenda === 'function') renderAgenda();
+      await new Promise(r => setTimeout(r, 900));
+      const vista = document.getElementById('ag-view');
+      const hdrs = [...vista.querySelectorAll('.sec-hdr')].map(e => e.textContent.replace(/\s+/g, ' ').trim());
+      const filas = [...vista.querySelectorAll('.saved-item')];
+      const conMarca = filas.filter(f => f.classList.contains('done')).length;
+      return { enPlan: el.length, marcadasAMano: marcadas, suelta: suelta.title.slice(0, 26),
+        recapTxt: recap ? recap.textContent.replace(/\s+/g, ' ').trim().slice(0, 40) : null,
+        compartir, filas: filas.length, comoVistas: conMarca,
+        hayGanas: hdrs.some(h => /no viste|missed/i.test(h)) };
+    }, marcadas);
+  };
+
+  // 1 · fue a todo y no marcó nada: el caso del hallazgo
+  const nada = await escenario(0);
+  expect(nada.enPlan, 'el fixture arma un plan de 4 funciones ya pasadas').toBe(4);
+  expect(nada.recapTxt, 'Mi Plan lo recibe con su recap, no pidiéndole que marque').not.toBeNull();
+  expect(nada.recapTxt, 'y cuenta las 4').toMatch(/4/);
+  expect(nada.compartir, '«Compartir mi festival» existe: es lo que el modo Recuerdo promete').toBe(1);
+  expect(nada.comoVistas, 'Intereses da por vistas las 4 del plan, igual que Mi Plan').toBe(4);
+  expect(nada.filas, 'y lista también la que quedó fuera del plan').toBe(5);
+  expect(nada.hayGanas,
+    `«${nada.suelta}» no estuvo en el plan y nadie la marcó: va en «te quedaste con ganas»`).toBe(true);
+
+  // 2 · marcó 2 de 4 a mano: las dos pantallas siguen de acuerdo
+  const dos = await escenario(2);
+  expect(dos.recapTxt, 'Mi Plan sigue contando 4').toMatch(/4/);
+  expect(dos.comoVistas, 'e Intereses también las da las 4 por vistas').toBe(4);
+  expect(dos.hayGanas, 'y la que quedó fuera del plan sigue del otro lado').toBe(true);
+
+  // 2b · quien NIEGA haber ido: `notWatched` es su memoria propia. El plan existe,
+  // así que el diario se pinta igual — pero no hay festival que compartir. Es el
+  // control de la puerta: sin él, «mostrar el botón siempre» pasaba el test.
+  const negadas = await page.evaluate(async () => {
+    const plan = savedAgenda.schedule.map(s => s._title);
+    state.set('watched', new Set());
+    state.set('notWatched', new Set(plan));
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 900));
+    return { diario: !!document.querySelector('.saved-agenda'),
+      compartir: [...document.querySelectorAll('.ag-save-btn[data-action="shareDiary"]')]
+        .filter(e => e.getBoundingClientRect().height > 0).length };
+  });
+  expect(negadas.diario, 'el plan vivido se sigue pintando').toBe(true);
+  expect(negadas.compartir, 'pero si negaste haber ido a todo, no hay festival que compartir').toBe(0);
+
+  // 3 · control: sin plan y sin marcas no se inventa nada
+  const vacio = await page.evaluate(async () => {
+    state.set('savedAgenda', null); state.set('watched', new Set()); state.set('notWatched', new Set());
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 900));
+    return { recap: !!document.querySelector('.recap-hdr'),
+      compartir: [...document.querySelectorAll('.ag-save-btn[data-action="shareDiary"]')]
+        .filter(e => e.getBoundingClientRect().height > 0).length };
+  });
+  expect(vacio.recap, 'sin plan ni marcas no hay recap que mostrar').toBe(false);
+  expect(vacio.compartir, 'ni festival que compartir').toBe(0);
+});
