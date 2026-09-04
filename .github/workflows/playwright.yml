@@ -95,10 +95,14 @@ jobs:
         run: ./scripts/test.sh tests/responsive.spec.js
 
       - name: Run visual audit
+        # Sin `|| true`: el archivo promete fallar «si un selector crítico no
+        # existe (la pantalla no cargó)», y con el fallo tragado esa promesa no
+        # llegaba a ninguna parte — tres capturas se tomaron de la pantalla
+        # equivocada sin que CI dijera nada. Las capturas se suben igual: el
+        # paso de abajo corre con `if: always()`.
         run: |
           mkdir -p test-results/visual
-          mkdir -p test-results/visual
-          ./scripts/test.sh tests/visual-audit.spec.js --reporter=list || true
+          ./scripts/test.sh tests/visual-audit.spec.js --reporter=list
 
       - name: Upload screenshots (visual audit)
         uses: actions/upload-artifact@v6
