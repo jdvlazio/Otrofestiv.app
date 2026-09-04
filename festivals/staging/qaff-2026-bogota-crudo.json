@@ -8,13 +8,24 @@
  },
  "_pendiente_del_festival": {
   "fechas": "el lomo dice «14 - 18 SEPTIEMBRE» en 10 páginas y «14 - 17» en las 2 de Alianza Francesa, pero hay parrillas del 19 y el 20 en Cinemateca",
-  "secciones": "RESUELTO el 4 sep. NO era cierto que el festival no las publicara: las declara en las 15 categorías de su calendario oficial (capturado el 2 ago) y las imprime en el propio PDF para los diálogos. El cruce fallaba porque buscábamos por el título en ESPAÑOL contra una fuente que los lleva en ORIGINAL. 43 de 44 programas tienen sección.",
+  "secciones": "el programa de Bogotá NO imprime secciones en ninguna parte",
+  "museo_y_unal": {
+   "Museo Nacional de Colombia": [
+    "POSESAS",
+    "LA TINAJA",
+    "WATERFRONT MEMORIES",
+    "MANMAN CHADWON"
+   ],
+   "Universidad Nacional de Colombia": [
+    "KANEKALON",
+    "AMELIA",
+    "ONE SUNDAY"
+   ]
+  },
   "franjas_que_no_caben": [
-   "Universidad de los Andes 15 SEP 14:00: 2 obras suman 128′ en una franja de 120",
-   "Alianza Francesa 15 SEP 15:00: 4 obras suman ~79′ en una franja de 60"
-  ],
-  "la_unica_que_falta": "«Orango» (Samuel Kay Forrest, Guinea-Bisáu, 94′). Está en la selección oficial del sitio pero sin categoría en el calendario, ni en /catalog, ni en las páginas de sección. Es la ÚNICA pregunta pendiente sobre secciones.",
-  "museo_y_unal_RESUELTO": "las 7 obras del Museo Nacional y la Universidad Nacional ya tienen función: lo resolvió guardar el sello de fecha de cada ficha."
+   "Alianza Francesa 15 SEP 15:00: 4 obras suman 79' en una franja de 60 min",
+   "Universidad de los Andes 15 SEP 14:00: 2 obras suman 128' en una franja de 120 min"
+  ]
  },
  "programas": [
   {
@@ -1639,7 +1650,9 @@
      "anio": 2026,
      "tipo": "Ficción",
      "genre": "Ficción",
-     "_obra_src": "parrilla del PDF oficial del programa"
+     "_obra_src": "parrilla del PDF oficial del programa",
+     "_seccion": "Panorama Diaspórica",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     },
     {
      "titulo": "Un Domingo",

@@ -23,7 +23,7 @@ en 28 de las 29 listas de obra.
 Quibdó quedó CANCELADO por el terremoto: todo es en Bogotá. El prelanzamiento
 del 5 SEP en el Museo Nacional NO se incluye.
 """
-import json, os, re, sys, unicodedata, datetime
+import json, os, re, sys, unicodedata, datetime, collections
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -318,6 +318,7 @@ PUENTE_SECCION = {
     'Día del Padre': "FATHER'S DAY",
     'El Coach de los Locos': 'THE MADMEN COACH',
     'Performance Artistica e Musical': 'MUESTRA ARTISTICA',
+    'Avenida Fishkill 305': '305 FISHKILL AVENUE',
     # En la selección oficial del sitio va marcada «(out of competition)», que es
     # una sección del festival, no una nota.
 }
@@ -370,6 +371,7 @@ def main():
     choco = del_chocho()
     calen = del_calendario()
     canon = _canon_seccion()
+    fuente_sec = collections.Counter()
     _cn = lambda x: canon.get(n(x), x)
     sin_cruce = []
     # El Q&A no se escribe a mano: se lee del PDF. «con la presencia de la
@@ -398,10 +400,12 @@ def main():
             if _dir:
                 o['_seccion'] = _cn(sin_emoji(_dir[0]))
                 o['_section_src'] = _dir[1]
+                fuente_sec['sitio del festival'] += 1
             elif _cat:
                 o['_seccion'] = _cn(sin_emoji(_cat))
                 o['_section_src'] = ('categoría del calendario oficial del festival '
                                      '(qaff-2026-programacion-raw.json, 2 ago)')
+                fuente_sec['calendario oficial'] += 1
             elif h.get('section'):
                 # Clave INTERNA: solo sirve para votar la sección de la función.
                 # Publicada en la obra, el festival acaba con dos strings para la
@@ -409,6 +413,7 @@ def main():
                 # «Panorama Colombiano» en la obra— y el guardián de arquetipo
                 # no reconoce la segunda: color gris ilegible.
                 o['_seccion'] = sin_emoji(h['section'])
+                fuente_sec['herencia del Chocó'] += 1
                 o['_section_src'] = ('heredada de la selección oficial del Chocó ya publicada; '
                                      'el programa de Bogotá no imprime secciones')
             # El PÓSTER y el identificador de TMDB también son nuestros, de agosto.
@@ -578,11 +583,18 @@ def main():
      'programas': funciones,
     }
     os.makedirs(os.path.dirname(SALIDA), exist_ok=True)
+    # DE DÓNDE salió cada sección, y cuántas no salieron de ninguna parte.
+    # Sin esta línea, 26 obras sin sección pasaban por «el festival no las
+    # publica» — y sí las publicaba, en una fuente que no estábamos cruzando.
+    # Un cruce que no dice cuánto pegó es un cruce que no se puede auditar.
+    print('  sección, por fuente: '
+          + ' · '.join(f'{v} {k}' for k, v in fuente_sec.most_common())
+          + (f' · {len(set(sin_cruce))} SIN CRUZAR: {sorted(set(sin_cruce))}'
+             if sin_cruce else ' · 0 sin cruzar'))
     json.dump(crudo, open(SALIDA, 'w'), ensure_ascii=False, indent=1)
     proy = [f for f in funciones if f.get('obras')]
     print(f"{len(proy)} funciones · {sum(len(f['obras']) for f in proy)} cupos de obra · "
           f"{len(funciones) - len(proy)} actividades")
-    import collections
     for s, k in collections.Counter(f['sede'] for f in funciones).most_common():
         print(f'   {k:3}  {s}')
 
