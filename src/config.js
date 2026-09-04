@@ -727,26 +727,28 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'siembrafest2026': {
-    name:'SiembraFest',fullName:'SiembraFest — Festival de Cine Colombiano al Campo',shortName:'SIEMBRAFEST',
-    city:'Sasaima y Villeta',country:'CO',
-    dates:'9–18 SEP',dates_en:'SEP 9–18',year:2026,timezoneOffset:'-05:00',
-    storageKey:'siembrafest2026_',festivalStartStr:'2026-09-09T00:00:00',festivalEndStr:'2026-09-18T23:00:00',
-    festivalDates:{'2026-09-09':'2026-09-09','2026-09-10':'2026-09-10','2026-09-11':'2026-09-11','2026-09-12':'2026-09-12','2026-09-13':'2026-09-13','2026-09-14':'2026-09-14','2026-09-15':'2026-09-15','2026-09-16':'2026-09-16','2026-09-17':'2026-09-17','2026-09-18':'2026-09-18'},
-    days:[{k:'2026-09-09',d:9,lbl:'MIÉ'},{k:'2026-09-10',d:10,lbl:'JUE'},{k:'2026-09-11',d:11,lbl:'VIE'},{k:'2026-09-12',d:12,lbl:'SÁB'},{k:'2026-09-13',d:13,lbl:'DOM'},{k:'2026-09-14',d:14,lbl:'LUN'},{k:'2026-09-15',d:15,lbl:'MAR'},{k:'2026-09-16',d:16,lbl:'MIÉ'},{k:'2026-09-17',d:17,lbl:'JUE'},{k:'2026-09-18',d:18,lbl:'VIE'}],
-    dayKeys:['2026-09-09','2026-09-10','2026-09-11','2026-09-12','2026-09-13','2026-09-14','2026-09-15','2026-09-16','2026-09-17','2026-09-18'],
-    dayShort:{'2026-09-09':'MIÉ 9','2026-09-10':'JUE 10','2026-09-11':'VIE 11','2026-09-12':'SÁB 12','2026-09-13':'DOM 13','2026-09-14':'LUN 14','2026-09-15':'MAR 15','2026-09-16':'MIÉ 16','2026-09-17':'JUE 17','2026-09-18':'VIE 18'},
-    dayShort_en:{'2026-09-09':'WED 9','2026-09-10':'THU 10','2026-09-11':'FRI 11','2026-09-12':'SAT 12','2026-09-13':'SUN 13','2026-09-14':'MON 14','2026-09-15':'TUE 15','2026-09-16':'WED 16','2026-09-17':'THU 17','2026-09-18':'FRI 18'},
-    dayLong:{'2026-09-09':'Miércoles 9 de septiembre','2026-09-10':'Jueves 10 de septiembre','2026-09-11':'Viernes 11 de septiembre','2026-09-12':'Sábado 12 de septiembre','2026-09-13':'Domingo 13 de septiembre','2026-09-14':'Lunes 14 de septiembre','2026-09-15':'Martes 15 de septiembre','2026-09-16':'Miércoles 16 de septiembre','2026-09-17':'Jueves 17 de septiembre','2026-09-18':'Viernes 18 de septiembre'},
-    prioLimit:5,
-    // NO SE PUBLICA: falta la programación entera. El catálogo está completo (84
-    // obras en 24 programas) pero sin día·hora·sede no hay films[]. La entrada
-    // existe desde ya para que el montaje sea solo ensamblar cuando llegue.
+    // SIGUE OCULTO por una sola cosa: el festival no dice CÓMO SE ENTRA. Ni el
+    // PDF del programa ni la web ni sus redes lo mencionan, así que las 23
+    // funciones van con `acceso: desconocido` y [boleteria-muda] queda rojo —
+    // que es lo correcto: el silencio no es un dato. Es la pregunta al festival.
     group:'test',
+    // VILLETA, del 9 al 17. El festival completo es 9–18 en Sasaima y Villeta
+    // (así lo dice su propia bio), pero el PDF de Sasaima no existe todavía: la
+    // web dice «muy pronto» y su URL devuelve HTML. Cuando salga vuelven la
+    // ciudad «Sasaima y Villeta» y, con ella, probablemente el 18.
+    name:'SiembraFest',fullName:'SiembraFest — Festival de Cine Colombiano al Campo',shortName:'SIEMBRAFEST',
+    city:'Villeta',country:'CO',
+    dates:'9–17 SEP',dates_en:'SEP 9–17',year:2026,timezoneOffset:'-05:00',
+    storageKey:'siembrafest2026_',festivalStartStr:'2026-09-09T00:00:00',festivalEndStr:'2026-09-17T23:00:00',
+    festivalDates:{'2026-09-09':'2026-09-09','2026-09-10':'2026-09-10','2026-09-11':'2026-09-11','2026-09-12':'2026-09-12','2026-09-13':'2026-09-13','2026-09-14':'2026-09-14','2026-09-15':'2026-09-15','2026-09-16':'2026-09-16','2026-09-17':'2026-09-17'},
+    days:[{'k':'2026-09-09','d':9,'lbl':'MIÉ'},{'k':'2026-09-10','d':10,'lbl':'JUE'},{'k':'2026-09-11','d':11,'lbl':'VIE'},{'k':'2026-09-12','d':12,'lbl':'SÁB'},{'k':'2026-09-13','d':13,'lbl':'DOM'},{'k':'2026-09-14','d':14,'lbl':'LUN'},{'k':'2026-09-15','d':15,'lbl':'MAR'},{'k':'2026-09-16','d':16,'lbl':'MIÉ'},{'k':'2026-09-17','d':17,'lbl':'JUE'}],
+    dayKeys:['2026-09-09','2026-09-10','2026-09-11','2026-09-12','2026-09-13','2026-09-14','2026-09-15','2026-09-16','2026-09-17'],
+    dayShort:{'2026-09-09':'MIÉ 9','2026-09-10':'JUE 10','2026-09-11':'VIE 11','2026-09-12':'SÁB 12','2026-09-13':'DOM 13','2026-09-14':'LUN 14','2026-09-15':'MAR 15','2026-09-16':'MIÉ 16','2026-09-17':'JUE 17'},
+    dayShort_en:{'2026-09-09':'WED 9','2026-09-10':'THU 10','2026-09-11':'FRI 11','2026-09-12':'SAT 12','2026-09-13':'SUN 13','2026-09-14':'MON 14','2026-09-15':'TUE 15','2026-09-16':'WED 16','2026-09-17':'THU 17'},
+    dayLong:{'2026-09-09':'Miércoles 9 de septiembre','2026-09-10':'Jueves 10 de septiembre','2026-09-11':'Viernes 11 de septiembre','2026-09-12':'Sábado 12 de septiembre','2026-09-13':'Domingo 13 de septiembre','2026-09-14':'Lunes 14 de septiembre','2026-09-15':'Martes 15 de septiembre','2026-09-16':'Miércoles 16 de septiembre','2026-09-17':'Jueves 17 de septiembre'},
+    prioLimit:4,
     // Sasaima y Villeta están a 12 km por la misma vía: es UN territorio de
-    // traslado. Sin esto la app diría «es en otra ciudad» en vez de los minutos
-    // — el mismo caso que Cinemancia en el Valle de Aburrá. REVISAR cuando
-    // lleguen las sedes: el radar dice que Proimágenes lista además Supatá y
-    // Anolaima, y eso cambiaría el veredicto.
+    // traslado. Se conserva para cuando Sasaima entre; hoy solo hay Villeta.
     metroArea:true,
     keyArt:'/assets/keyart/siembrafest2026-v2.jpg',
     tagline:'Festival de Cine Colombiano al Campo',
@@ -792,20 +794,6 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
-  // ── SiembraFest 11 · Sasaima y Villeta ────────────────────────────────
-  // Nombres VERBATIM del festival; el emoji y el arquetipo son nuestra capa.
-  // Sin display EN a propósito: son nombres de autor en español —«Ojo Pelao»,
-  // «Cinema Patatús»— y la regla de esta tabla omite las secciones de marca
-  // antes que inventarles traducción.
-  '🏺 Mujeres que sostienen la vida': 'Perspectivas / Miradas',
-  '❤️‍🩹 Amores & Desamores': 'Perspectivas / Miradas',
-  '🪶 Estampas': 'Cortos / Programas',
-  '👻 Cinema Patatús': 'Muestra / País',
-  '🎞️ Buenos, Malos y Feos': 'Cortos / Programas',
-  '💀 Muertos de Risa': 'Cortos / Programas',
-  '👁️ Ojo Pelao': 'Perspectivas / Miradas',
-  '🍲 Sabores en Escena': 'Muestra / País',
-  '🗺️ Así es Cundinamarca': 'Muestra / País',
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
   '📺 Primetime': 'Especiales / Eventos',
   '🔎 Discovery': 'Perspectivas / Miradas',
@@ -994,6 +982,14 @@ export const SECTION_ARCHETYPES = {
   '🎞️ Buenos, Malos y Feos': 'Perspectivas / Miradas',
   '👁️ Ojo Pelao': 'Cortos / Programas',
   '🍲 Sabores en Escena': 'Perspectivas / Miradas',
+  // Tres franjas que aparecen en el PROGRAMA impreso de Villeta (4 sep) y que
+  // la selección oficial no listaba: no son secciones de obras, son bandas del
+  // festival. «Película Invitada» trae una película fuera de selección;
+  // «SiembraLAB» son los tres talleres y «LABRA» la cosecha del proceso de
+  // formación. Nombre verbatim; el emoji y el arquetipo, nuestros.
+  '🎟️ Película Invitada': 'Especiales / Eventos',
+  '🛠️ SiembraLAB': 'Charlas / Industria',
+  '🌱 LABRA': 'Charlas / Industria',
   '🪶 Estampas': 'Muestra / País',
   '🗺️ Así es Cundinamarca': 'Muestra / País',
   // QAFF 2026 (8ª edición, «NOIR»). Secciones curatoriales del propio festival,

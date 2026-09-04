@@ -370,7 +370,16 @@ def _forma_sidecar(clase, d):
         return isinstance(d.get('obras'), list) and bool(d['obras']), 'la lista `obras`'
     if clase == 'geo':
         v = d.get('venues') if isinstance(d.get('venues'), dict) else {k: x for k, x in d.items() if not k.startswith('_')}
-        return bool(v) and all(isinstance(x, dict) and 'lat' in x for x in v.values()), '`venues` (o un diccionario sede→{lat,lng})'
+        # Basta con que UNA sede traiga punto. Exigirlo de todas reprobaba un
+        # sidecar correcto: PROTOCOLO §3 dice que las sedes que no se pueden
+        # verificar se DECLARAN pendientes, y SiembraFest tiene dos que OSM no
+        # conoce. Sin punto se quedan fuera del mapa, que es justo lo que debe
+        # pasar; inventarles una coordenada mandaría a alguien al sitio
+        # equivocado. Lo que este chequeo persigue es el sidecar con OTRA FORMA
+        # —el que se lee sin error y no aporta nada—, no el incompleto honesto.
+        ok = bool(v) and all(isinstance(x, dict) for x in v.values()) \
+            and any('lat' in x for x in v.values())
+        return ok, '`venues` (o un diccionario sede→{lat,lng}) con al menos una coordenada'
     return True, ''
 
 

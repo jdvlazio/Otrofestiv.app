@@ -1,0 +1,745 @@
+{
+ "_provenance": {
+  "fuente": "PDF oficial de la programación de Villeta — siembrafest.com/descargas/programacion_11sf_villeta.pdf",
+  "capturado": "2026-09-04",
+  "metodo": "doble lectura: capa de texto del PDF (no OCR) + lectura visual de cada página, que es la que fija el layout a dos columnas",
+  "alcance": "SOLO VILLETA. El PDF de Sasaima no existe todavía (la web dice «muy pronto» y su URL devuelve HTML)"
+ },
+ "funciones": [
+  {
+   "dia": "2026-09-09",
+   "hora": "14:00",
+   "hora_fin": "15:30",
+   "sede": "Cinema Villeta",
+   "seccion": "Mujeres que sostienen la vida",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p2",
+   "titulo": "Acto inaugural + Convite: Sembrar soberanía — agricultura, semillas y territorio",
+   "obras": [],
+   "duracion_min": 90,
+   "duration": "90 min",
+   "event_kind": "apertura"
+  },
+  {
+   "dia": "2026-09-09",
+   "hora": "16:00",
+   "hora_fin": "18:00",
+   "sede": "Cinema Villeta",
+   "seccion": "Película Invitada",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p2",
+   "titulo": "Andariega",
+   "obras": [
+    {
+     "titulo": "Andariega",
+     "director": "Rául Soto",
+     "anio": 2025,
+     "duracion_min": 94,
+     "seccion": "Película Invitada"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "10:00",
+   "hora_fin": "12:00",
+   "sede": "IED Alonso de Olalla",
+   "seccion": "Amores & Desamores",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p3",
+   "titulo": "Elementales + Orígenes + Desde acá veo la tormenta + Unlearning Motherhood + Amor + La independencia",
+   "obras": [
+    {
+     "titulo": "Elementales",
+     "director": "Camilo Botero Jaramillo",
+     "anio": 2025,
+     "duracion_min": 8,
+     "seccion": "Amores & Desamores"
+    },
+    {
+     "titulo": "Orígenes",
+     "director": "Daniel Rodríguez Gaitán",
+     "anio": 2025,
+     "duracion_min": 7,
+     "seccion": "Amores & Desamores"
+    },
+    {
+     "titulo": "Desde acá veo la tormenta",
+     "director": "Juan Felipe Restrepo",
+     "anio": 2026,
+     "duracion_min": 10,
+     "seccion": "Amores & Desamores"
+    },
+    {
+     "titulo": "Unlearning Motherhood",
+     "director": "Juliana Erazo",
+     "anio": 2025,
+     "duracion_min": 10,
+     "seccion": "Amores & Desamores"
+    },
+    {
+     "titulo": "Amor",
+     "director": "Dayana González Fajardo",
+     "anio": 2026,
+     "duracion_min": 13,
+     "seccion": "Amores & Desamores"
+    },
+    {
+     "titulo": "La independencia",
+     "director": "John Agudelo Suárez",
+     "anio": 2024,
+     "duracion_min": 19,
+     "seccion": "Amores & Desamores"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "11:00",
+   "hora_fin": "13:00",
+   "sede": "SENA CDAE Villeta",
+   "seccion": "Buenos, Malos y Feos",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p3",
+   "titulo": "Flores Miro",
+   "obras": [
+    {
+     "titulo": "Flores Miro",
+     "director": "John Agudelo Suárez",
+     "anio": 2025,
+     "duracion_min": 101,
+     "seccion": "Buenos, Malos y Feos",
+     "_alias_catalogo": "Floresmiro"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "16:00",
+   "hora_fin": "18:00",
+   "sede": "SENA CDAE Villeta",
+   "seccion": "Estampas",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p3",
+   "titulo": "Herencia: los cantos de la tierra",
+   "obras": [
+    {
+     "titulo": "Herencia: los cantos de la tierra",
+     "director": "Iván Acosta Rojas",
+     "anio": 2026,
+     "duracion_min": 82,
+     "seccion": "Estampas"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-10",
+   "hora": "18:00",
+   "hora_fin": "20:00",
+   "sede": "SENA CDAE Villeta",
+   "seccion": "Cinema Patatús",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p4",
+   "titulo": "La oscurana + Animero: son de la muerte + Nativos de la tierra negra + Que el cielo nos perdone + El silbido del cañaduzal",
+   "obras": [
+    {
+     "titulo": "La oscurana",
+     "director": "Carolina González Rodríguez",
+     "anio": 2025,
+     "duracion_min": 20,
+     "seccion": "Cinema Patatús"
+    },
+    {
+     "titulo": "Animero: son de la muerte",
+     "director": "Nadine Holguín",
+     "anio": 2025,
+     "duracion_min": 11,
+     "seccion": "Cinema Patatús"
+    },
+    {
+     "titulo": "Nativos de la tierra negra",
+     "director": "Juan Pablo Ríos",
+     "anio": 2026,
+     "duracion_min": 18,
+     "seccion": "Cinema Patatús"
+    },
+    {
+     "titulo": "Que el cielo nos perdone",
+     "director": "Andrés Buitrago",
+     "anio": 2025,
+     "duracion_min": 17,
+     "seccion": "Cinema Patatús"
+    },
+    {
+     "titulo": "El silbido del cañaduzal",
+     "director": "Juan Fernando Murillo",
+     "anio": 2025,
+     "duracion_min": 19,
+     "seccion": "Cinema Patatús"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "10:00",
+   "hora_fin": "12:00",
+   "sede": "IED Alonso de Olalla",
+   "seccion": "Buenos, Malos y Feos",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p5",
+   "titulo": "Dios y suerte + La despedida del río + Las piedras del río + Y el río lloró",
+   "obras": [
+    {
+     "titulo": "Dios y suerte",
+     "director": "Carol Durán",
+     "anio": 2025,
+     "duracion_min": 17,
+     "seccion": "Buenos, Malos y Feos"
+    },
+    {
+     "titulo": "La despedida del río",
+     "director": "Mateo Salas Puerta",
+     "anio": 2025,
+     "duracion_min": 17,
+     "seccion": "Buenos, Malos y Feos"
+    },
+    {
+     "titulo": "Las piedras del río",
+     "director": "Edna Sierra",
+     "anio": 2026,
+     "duracion_min": 16,
+     "seccion": "Buenos, Malos y Feos"
+    },
+    {
+     "titulo": "Y el río lloró",
+     "director": "Zumaya Mayers",
+     "anio": 2024,
+     "duracion_min": 27,
+     "seccion": "Buenos, Malos y Feos"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "11:00",
+   "hora_fin": "13:00",
+   "sede": "SENA CDAE Villeta",
+   "seccion": "Amores & Desamores",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p5",
+   "titulo": "Tres gatos parias + Valentino y la calavera + La calle del amor + Corazón galvánico + El mejor chocolate del mundo + Make Up: el arte de amar",
+   "obras": [
+    {
+     "titulo": "Tres gatos parias",
+     "director": "Iván Sierra",
+     "anio": 2025,
+     "duracion_min": 7,
+     "seccion": "Amores & Desamores"
+    },
+    {
+     "titulo": "Valentino y la calavera",
+     "director": "Iván Sierra",
+     "anio": 2025,
+     "duracion_min": 7,
+     "seccion": "Amores & Desamores"
+    },
+    {
+     "titulo": "La calle del amor",
+     "director": "Ramón Contreras",
+     "anio": 2026,
+     "duracion_min": 9,
+     "seccion": "Amores & Desamores"
+    },
+    {
+     "titulo": "Corazón galvánico",
+     "director": "Valentina Valencia",
+     "anio": 2024,
+     "duracion_min": 11,
+     "seccion": "Amores & Desamores"
+    },
+    {
+     "titulo": "El mejor chocolate del mundo",
+     "director": "John Agudelo Suárez",
+     "anio": 2026,
+     "duracion_min": 17,
+     "seccion": "Amores & Desamores"
+    },
+    {
+     "titulo": "Make Up: el arte de amar",
+     "director": "Daniel Calderón",
+     "anio": 2025,
+     "duracion_min": 19,
+     "seccion": "Amores & Desamores"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "15:30",
+   "hora_fin": "16:00",
+   "sede": "Cinema Villeta",
+   "seccion": "LABRA",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p6",
+   "titulo": "Cosecha audiovisual",
+   "obras": [],
+   "duracion_min": 30,
+   "duration": "30 min",
+   "sinopsis": "Producto del proceso de formación LABRA.",
+   "synopsis_lang": "es"
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "16:00",
+   "hora_fin": "17:30",
+   "sede": "Cinema Villeta",
+   "seccion": "Así es Cundinamarca",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p6",
+   "titulo": "Elipsis + Trigos + Herminda + Teresa + La muerte de Elías + Gachalá, entre el miedo y la memoria",
+   "obras": [
+    {
+     "titulo": "Elipsis",
+     "director": "Dayana González Fajardo",
+     "anio": 2020,
+     "duracion_min": 6,
+     "seccion": "Así es Cundinamarca"
+    },
+    {
+     "titulo": "Trigos",
+     "director": "Enrique Uribe White",
+     "anio": 1941,
+     "duracion_min": 20,
+     "seccion": "Así es Cundinamarca"
+    },
+    {
+     "titulo": "Herminda",
+     "director": "Ernesto Lozano Redondo",
+     "anio": 2024,
+     "duracion_min": 9,
+     "seccion": "Así es Cundinamarca"
+    },
+    {
+     "titulo": "Teresa",
+     "director": "Edgar Medina Fetecua",
+     "anio": 2025,
+     "duracion_min": 18,
+     "seccion": "Así es Cundinamarca"
+    },
+    {
+     "titulo": "La muerte de Elías",
+     "director": "Gustavo Alejandro Valcárcel Sierra",
+     "anio": 2023,
+     "duracion_min": 9,
+     "seccion": "Así es Cundinamarca",
+     "_director_del_catalogo": true
+    },
+    {
+     "titulo": "Gachalá, entre el miedo y la memoria",
+     "director": "María Camila Mariño",
+     "anio": 2026,
+     "duracion_min": 11,
+     "seccion": "Así es Cundinamarca"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "17:30",
+   "hora_fin": "18:00",
+   "sede": "Cinema Villeta",
+   "seccion": "Así es Cundinamarca",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p6",
+   "titulo": "Convite: La tierra no olvida — historias contadas desde la región",
+   "obras": [],
+   "duracion_min": 30,
+   "duration": "30 min",
+   "event_kind": "convite"
+  },
+  {
+   "dia": "2026-09-11",
+   "hora": "18:00",
+   "hora_fin": "20:00",
+   "sede": "SENA CDAE Villeta",
+   "seccion": "Buenos, Malos y Feos",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p7",
+   "titulo": "Preguntas frecuentes + Pudor ante el asalto de los ojos furtivos + La mona + Términa + Desde la ventana",
+   "obras": [
+    {
+     "titulo": "Preguntas frecuentes",
+     "director": "Sofía Salinas Barrera",
+     "anio": 2025,
+     "duracion_min": 16,
+     "seccion": "Buenos, Malos y Feos"
+    },
+    {
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "director": "Laura Rodríguez",
+     "anio": 2025,
+     "duracion_min": 9,
+     "seccion": "Buenos, Malos y Feos",
+     "_director_del_catalogo": true
+    },
+    {
+     "titulo": "La mona",
+     "director": "Laura Gutiérrez Ardila",
+     "anio": 2025,
+     "duracion_min": 18,
+     "seccion": "Buenos, Malos y Feos"
+    },
+    {
+     "titulo": "Términa",
+     "director": "Juan José Guevara Ruiz",
+     "anio": 2025,
+     "duracion_min": 27,
+     "seccion": "Buenos, Malos y Feos"
+    },
+    {
+     "titulo": "Desde la ventana",
+     "director": "Mike Pitalua",
+     "anio": 2021,
+     "duracion_min": 9,
+     "seccion": "Buenos, Malos y Feos"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-12",
+   "hora": "08:00",
+   "hora_fin": "12:00",
+   "sede": "SENA CDAE Villeta",
+   "seccion": "SiembraLAB",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p8",
+   "titulo": "Microtaller: producción de imagen y video en realidad virtual",
+   "obras": [],
+   "duracion_min": 240,
+   "duration": "240 min",
+   "event_kind": "taller",
+   "sinopsis": "A cargo de Kinotov.",
+   "synopsis_lang": "es"
+  },
+  {
+   "dia": "2026-09-12",
+   "hora": "18:00",
+   "hora_fin": "20:00",
+   "sede": "Vda. Chapaima",
+   "seccion": "Buenos, Malos y Feos",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p8",
+   "titulo": "Irredentos",
+   "obras": [
+    {
+     "titulo": "Irredentos",
+     "director": "Harold de Vasten",
+     "anio": 2025,
+     "duracion_min": 100,
+     "seccion": "Buenos, Malos y Feos"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-13",
+   "hora": "08:00",
+   "hora_fin": "18:00",
+   "sede": "Villeta y Sasaima",
+   "seccion": "Mujeres que sostienen la vida",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p8",
+   "titulo": "Maratón fotográfica SiembraFest",
+   "obras": [],
+   "duracion_min": 600,
+   "duration": "600 min",
+   "event_kind": "experiencia",
+   "info": true,
+   "sinopsis": "Una invitación a recorrer Villeta y Sasaima para descubrir, fotografiar y compartir las historias, gestos y escenas que muestran cómo las mujeres sostienen la vida en sus territorios.",
+   "synopsis_lang": "es"
+  },
+  {
+   "dia": "2026-09-14",
+   "hora": "11:00",
+   "hora_fin": "13:00",
+   "sede": "SENA CDAE Villeta",
+   "seccion": "Sabores en Escena",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p9",
+   "titulo": "Phakhakhe Pi'txi - Minga de pensamiento + La Asociación + Somos historias: Casaramano, sagrado y vida",
+   "obras": [
+    {
+     "titulo": "Phakhakhe Pi'txi - Minga de pensamiento",
+     "director": "Duvier Baicue",
+     "anio": 2024,
+     "duracion_min": 10,
+     "seccion": "Sabores en Escena"
+    },
+    {
+     "titulo": "La Asociación",
+     "director": "Juan Camilo Muñoz Quintero",
+     "anio": 2023,
+     "duracion_min": 19,
+     "seccion": "Sabores en Escena"
+    },
+    {
+     "titulo": "Somos historias: Casaramano, sagrado y vida",
+     "director": "Juven A. Piranga",
+     "anio": 2023,
+     "duracion_min": 30,
+     "seccion": "Sabores en Escena",
+     "_director_del_catalogo": true
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-14",
+   "hora": "16:00",
+   "hora_fin": "18:00",
+   "sede": "SENA CDAE Villeta",
+   "seccion": "Estampas",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p9",
+   "titulo": "Mingoya: tierra de ornitólogos + Refugiar el gesto + Guatapé (no) ha muerto",
+   "obras": [
+    {
+     "titulo": "Mingoya: tierra de ornitólogos",
+     "director": "Nelsy Niño R. & Juan Esteban Quintero",
+     "anio": 2024,
+     "duracion_min": 8,
+     "seccion": "Estampas",
+     "_director_del_catalogo": true
+    },
+    {
+     "titulo": "Refugiar el gesto",
+     "director": "Adrián Villa-Dávila & Andrés Prado",
+     "anio": 2026,
+     "duracion_min": 11,
+     "seccion": "Estampas"
+    },
+    {
+     "titulo": "Guatapé (no) ha muerto",
+     "director": "Laurence Paciarelli",
+     "anio": 2025,
+     "duracion_min": 52,
+     "seccion": "Estampas"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-15",
+   "hora": "10:00",
+   "hora_fin": "12:00",
+   "sede": "IED Alonso de Olalla",
+   "seccion": "Mujeres que sostienen la vida",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p10",
+   "titulo": "La gallina saraviada + En su sombra fértil + La grandiosa + Paramunas: el alma de la montaña + El tiempo de las mujeres transforma el territorio",
+   "obras": [
+    {
+     "titulo": "La gallina saraviada",
+     "director": "Ingrid Bonilla Rodríguez",
+     "anio": 2025,
+     "duracion_min": 11,
+     "seccion": "Mujeres que sostienen la vida",
+     "_director_del_catalogo": true
+    },
+    {
+     "titulo": "En su sombra fértil",
+     "director": "Andrés Dávila",
+     "anio": 2025,
+     "duracion_min": 11,
+     "seccion": "Mujeres que sostienen la vida"
+    },
+    {
+     "titulo": "La grandiosa",
+     "director": "Viviana Reinoso",
+     "anio": 2025,
+     "duracion_min": 13,
+     "seccion": "Mujeres que sostienen la vida"
+    },
+    {
+     "titulo": "Paramunas: el alma de la montaña",
+     "director": "Alejandro Calderón González",
+     "anio": 2024,
+     "duracion_min": 18,
+     "seccion": "Mujeres que sostienen la vida"
+    },
+    {
+     "titulo": "El tiempo de las mujeres transforma el territorio",
+     "director": "FAO Colombia",
+     "anio": 2025,
+     "duracion_min": 17,
+     "seccion": "Mujeres que sostienen la vida"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-15",
+   "hora": "11:00",
+   "hora_fin": "13:00",
+   "sede": "SENA CDAE Villeta",
+   "seccion": "SiembraLAB",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p10",
+   "titulo": "Trabajo con material de archivo",
+   "obras": [],
+   "duracion_min": 120,
+   "duration": "120 min",
+   "event_kind": "taller",
+   "sinopsis": "A cargo de la Fundación Patrimonio Fílmico Colombiano.",
+   "synopsis_lang": "es"
+  },
+  {
+   "dia": "2026-09-16",
+   "hora": "10:00",
+   "hora_fin": "12:00",
+   "sede": "IED Alonso de Olalla",
+   "seccion": "Mujeres que sostienen la vida",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p11",
+   "titulo": "La tinaja + Cayenas libertarias + Pasta negra + Victorias y glorias - relatos de campeonas + El tiempo de las mujeres transforma el territorio",
+   "obras": [
+    {
+     "titulo": "La tinaja",
+     "director": "Ernestina Miranda y Mar Ajé",
+     "anio": 2025,
+     "duracion_min": 14,
+     "seccion": "Mujeres que sostienen la vida"
+    },
+    {
+     "titulo": "Cayenas libertarias",
+     "director": "Javier Camilo Aranguren Montañez",
+     "anio": 2026,
+     "duracion_min": 17,
+     "seccion": "Mujeres que sostienen la vida"
+    },
+    {
+     "titulo": "Pasta negra",
+     "director": "Jorge Thielen Armand",
+     "anio": 2025,
+     "duracion_min": 15,
+     "seccion": "Mujeres que sostienen la vida"
+    },
+    {
+     "titulo": "Victorias y glorias - relatos de campeonas",
+     "director": "Luber Yesid Zúñiga Ordóñez",
+     "anio": 2025,
+     "duracion_min": 11,
+     "seccion": "Mujeres que sostienen la vida"
+    },
+    {
+     "titulo": "El tiempo de las mujeres transforma el territorio",
+     "director": "FAO Colombia",
+     "anio": 2025,
+     "duracion_min": 17,
+     "seccion": "Mujeres que sostienen la vida"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-16",
+   "hora": "11:00",
+   "hora_fin": "13:00",
+   "sede": "SENA CDAE Villeta",
+   "seccion": "Cinema Patatús",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p11",
+   "titulo": "Noche de vuelo + Villa Feliz + Bajo el mismo techo + Linfernum + Payasadas",
+   "obras": [
+    {
+     "titulo": "Noche de vuelo",
+     "director": "Zacarías Flores del Campo",
+     "anio": 2025,
+     "duracion_min": 19,
+     "seccion": "Cinema Patatús",
+     "_ojo": "el catálogo de la selección oficial la firma Juan Alvarado y el programa Zacarías Flores del Campo — no es una abreviatura, son personas distintas. Se toma la del programa por ser lo más reciente."
+    },
+    {
+     "titulo": "Villa Feliz",
+     "director": "James Camargo de Alba",
+     "anio": 2021,
+     "duracion_min": 8,
+     "seccion": "Cinema Patatús"
+    },
+    {
+     "titulo": "Bajo el mismo techo",
+     "director": "Sophia Cadavid",
+     "anio": 2026,
+     "duracion_min": 13,
+     "seccion": "Cinema Patatús"
+    },
+    {
+     "titulo": "Linfernum",
+     "director": "Dayana González Fajardo",
+     "anio": 2024,
+     "duracion_min": 8,
+     "seccion": "Cinema Patatús"
+    },
+    {
+     "titulo": "Payasadas",
+     "director": "Santiago Duque",
+     "anio": 2024,
+     "duracion_min": 24,
+     "seccion": "Cinema Patatús"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-17",
+   "hora": "10:00",
+   "hora_fin": "12:00",
+   "sede": "IED Alonso de Olalla",
+   "seccion": "Muertos de Risa",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p12",
+   "titulo": "El día de mi suerte + HDLT + Miguel Ángel, Federico, y el carro que pasó encima de las gafas + Muertos que no son muertos",
+   "obras": [
+    {
+     "titulo": "El día de mi suerte",
+     "director": "Dayana González Fajardo",
+     "anio": 2024,
+     "duracion_min": 8,
+     "seccion": "Muertos de Risa"
+    },
+    {
+     "titulo": "HDLT",
+     "director": "Colectivo Artefactum Suba",
+     "anio": 2025,
+     "duracion_min": 18,
+     "seccion": "Muertos de Risa",
+     "_director_del_catalogo": true
+    },
+    {
+     "titulo": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
+     "director": "Juan David Rodríguez Pantoja",
+     "anio": 2025,
+     "duracion_min": 13,
+     "seccion": "Muertos de Risa"
+    },
+    {
+     "titulo": "Muertos que no son muertos",
+     "director": "Nicolás O. Segura",
+     "anio": 2025,
+     "duracion_min": 10,
+     "seccion": "Muertos de Risa"
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-17",
+   "hora": "11:00",
+   "hora_fin": "13:00",
+   "sede": "SENA CDAE Villeta",
+   "seccion": "SiembraLAB",
+   "acceso": "desconocido",
+   "_src": "PDF oficial de la programación de Villeta, p12",
+   "titulo": "Taller: paisajes sonoros, archivo y memoria",
+   "obras": [],
+   "duracion_min": 120,
+   "duration": "120 min",
+   "event_kind": "taller",
+   "sinopsis": "A cargo de Señal Memoria e Inravisión, Sistema de Medios Públicos.",
+   "synopsis_lang": "es"
+  }
+ ]
+}

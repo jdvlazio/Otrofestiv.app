@@ -707,6 +707,14 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     // del cineconcierto. Se conserva la palabra del festival, no se traduce a
     // «cineconcierto», que es de otros festivales.
     'live cinema':  {accent:'#D85A30', headerLabel:'LIVE CINEMA'},
+        // SiembraFest 11 nombra tres bandas más, y sin entrada aquí sus cards
+    // mostraban EVENTO genérico. «Convite» es la palabra del festival para la
+    // conversación con la comunidad —no es un foro ni una charla, y no se
+    // traduce: es cine al campo—. «Apertura» hereda el ámbar oscuro de la gala.
+    // «Experiencia» es la maratón fotográfica: se recorre, no se asiste.
+    'apertura':     {accent:'#BA7517', headerLabel:'APERTURA'},
+    'convite':      {accent:'#F59E0B', headerLabel:'CONVITE'},
+    'experiencia':  {accent:'#378ADD', headerLabel:'EXPERIENCIA'},
     'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
   };
   const _kindMapEN={
@@ -720,6 +728,9 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'encuentro':    {accent:'#378ADD', headerLabel:'MEETING'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'FILM CONCERT'},
     'live cinema':  {accent:'#D85A30', headerLabel:'LIVE CINEMA'},
+        'apertura':     {accent:'#BA7517', headerLabel:'OPENING'},
+    'convite':      {accent:'#F59E0B', headerLabel:'CONVITE'},
+    'experiencia':  {accent:'#378ADD', headerLabel:'EXPERIENCE'},
     'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
   };
   const _kindMap=_lang==='es'?_kindMapES:_kindMapEN; // PT reutiliza EN (términos internacionales)

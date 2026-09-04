@@ -1,47 +1,194 @@
 {
- "_etapa": "PRE-ONBOARDING. Catálogo staged (85 obras, 9 secciones). El festival NO ha publicado programación ni fichas de obra de esta edición. NO PUBLICAR.",
- "_festival": "11° SiembraFest — Festival de Cine Colombiano al Campo · 9–18 SEP 2026 · Sasaima y Villeta (Cundinamarca) · funciones en plazas, veredas y espacios no convencionales",
- "_fuente": "https://siembrafest.com/siembrafest/seleccion-oficial/ — Selección Oficial CANÓNICA (se MUDÓ de URL el 19 ago; la vieja /seleccion-sf-2026/ sigue respondiendo 200 con contenido viejo — el radar debe mirar la NUEVA). + Instagram @siembrafest: serie «Presentamos <sección>» con los PROGRAMAS (sidecar siembrafest-2026-programas-ig.json).",
- "_revision_9_ago_2026": {
-  "resultado": "SIN CAMBIOS respecto de la captura del 2 ago. Las 85 obras son las mismas: 0 nuevas, 0 retiradas, mismas secciones.",
-  "sigue_abierto": "El festival anuncia 86 producciones en su propio texto y la página lista 85. La diferencia lleva abierta desde la primera captura.",
-  "trampa_del_parseo": "El primer <li> de la página está mal cerrado y se traga la intro completa MÁS la primera obra de la primera sección («En su sombra fértil», Mujeres que sostienen la vida). Un parser de <li> ingenuo pierde esa obra y parece que el festival la quitó. Hay que acotar el cuerpo al primer <h3> de sección real antes de recorrer los <li>. Verificado el 9 ago: la obra SÍ está en la web, el fallo era del comparador."
+ "_etapa": "Villeta montado desde el PDF oficial (4 sep 2026). Sasaima pendiente: su PDF no existe.",
+ "_historial": {
+  "_etapa": "PRE-ONBOARDING. Catálogo staged (85 obras, 9 secciones). El festival NO ha publicado programación ni fichas de obra de esta edición. NO PUBLICAR.",
+  "_festival": "11° SiembraFest — Festival de Cine Colombiano al Campo · 9–18 SEP 2026 · Sasaima y Villeta (Cundinamarca) · funciones en plazas, veredas y espacios no convencionales",
+  "_fuente": "https://siembrafest.com/siembrafest/seleccion-oficial/ — Selección Oficial CANÓNICA (se MUDÓ de URL el 19 ago; la vieja /seleccion-sf-2026/ sigue respondiendo 200 con contenido viejo — el radar debe mirar la NUEVA). + Instagram @siembrafest: serie «Presentamos <sección>» con los PROGRAMAS (sidecar siembrafest-2026-programas-ig.json).",
+  "_revision_9_ago_2026": {
+   "resultado": "SIN CAMBIOS respecto de la captura del 2 ago. Las 85 obras son las mismas: 0 nuevas, 0 retiradas, mismas secciones.",
+   "sigue_abierto": "El festival anuncia 86 producciones en su propio texto y la página lista 85. La diferencia lleva abierta desde la primera captura.",
+   "trampa_del_parseo": "El primer <li> de la página está mal cerrado y se traga la intro completa MÁS la primera obra de la primera sección («En su sombra fértil», Mujeres que sostienen la vida). Un parser de <li> ingenuo pierde esa obra y parece que el festival la quitó. Hay que acotar el cuerpo al primer <h3> de sección real antes de recorrer los <li>. Verificado el 9 ago: la obra SÍ está en la web, el fallo era del comparador."
+  },
+  "_donde_aparecera_el_dato_que_falta": {
+   "nota": "Reconocimiento del sitio hecho el 9 ago vía wp-sitemap.xml. El festival ya tiene la maquinaria montada de ediciones anteriores, así que se sabe DÓNDE mirar en la próxima revisión en vez de rastrear a ciegas.",
+   "fichas_de_obra": "post type `project` → /pelicula/<slug>/. Hay 68, TODAS de 2020–2022 (lastmod). La ficha de 2020 trae SINOPSIS, créditos, trailer de YouTube y un bloque EXHIBICIONES con fecha, hora y local. Si repiten el formato en 2026, de ahí salen las 67 sinopsis que faltan Y la programación, igual que pasó en Cinemancia.",
+   "programacion": "post type `mec-events` (Modern Events Calendar) → /programacion-archivo/<slug>/. Hay 20, todas de dic 2020 (8º SiembraFest) y marcadas «¡Caducado!». Los slugs muestran la estructura que usan: exhibicion-<seccion>, siembralab-N, making-of-N, exhibicion-clausura.",
+   "sitemaps": "https://siembrafest.com/wp-sitemap.xml lista los sub-sitemaps por tipo; el campo lastmod dice de un vistazo si hay material nuevo sin descargar nada."
+  },
+  "_pendientes": [
+   "PROGRAMACIÓN: sigue sin existir. Es lo único que falta para montar. Sin día·hora·sede no hay films[].",
+   "~45 sinopsis y ~45 afiches: solo pueden venir del festival — de sus fichas /pelicula/<slug>/ cuando publique las de esta edición (hoy las 68 son de 2020-2022) o de la respuesta al correo del 24 ago.",
+   "VIGILAR lastmod de wp-sitemap-posts-project-1.xml y wp-sitemap-posts-mec-events-1.xml: cuando aparezcan entradas de 2026 llegan de golpe las sinopsis Y la parrilla.",
+   "SEDES: ninguna. Serán plazas y veredas; geocodificar eso será más difícil que un teatro y [sedes-apiladas] va a hablar.",
+   "3 variantes de título a confirmar con el festival (ver _cierre_del_cruce en el sidecar de programas).",
+   "Verificar municipios: nuestro registro dice Sasaima y Villeta; Proimágenes lista Villeta, Supatá y Anolaima."
+  ],
+  "_revision_23_ago_2026": {
+   "catalogo": "SINCRONIZADO con la web del 19 ago: 85→84 (−Carlina, −Tentado de difunto, +Chicha la chicharra; «Somos historias (Episodio 2)» retitulada «Somos historias: Casaramano, sagrado y vida»). Cayenas libertarias SIGUE: el parser ingenuo la perdía (trampa del primer <li>), verificado contra el HTML crudo.",
+   "programas_ig": "EL DATO NUEVO: el festival agrupó la Selección en 21 PROGRAMAS por sección (7/9 secciones publicadas; serie en curso, el post de Ojo Pelao tenía 1 h al capturar). Cuando llegue la programación, cada programa será presumiblemente una función: el ensamblado de films[] ya tiene la mitad del trabajo hecho. Faltan Sabores en Escena y Así es Cundinamarca.",
+   "confirmado": "9–18 SEP · Sasaima (primera vez) y Villeta — cartel + posts fijados. Sin programación aún: mec-events sigue en 2020, project en 2022.",
+   "discrepancias": "IG vs web difieren en 4 títulos y 4 años (lista en el sidecar de programas) — preguntar al festival junto con sinopsis/pósters."
+  },
+  "_contacto_24_ago_2026": {
+   "enviado": "Correo a produccion@siembrafest.com (cc contacto@) el 24 ago 2026, desde el Gmail de Juan con hola@otrofestiv.app en la firma. Un DM por Instagram previo quedó SIN respuesta — de ahí el cambio de canal.",
+   "pedimos": "(1) LA PROGRAMACIÓN: día, hora y lugar de cada función — es lo único que bloquea publicar; (2) 62 sinopsis; (3) 52 afiches o fotogramas. Cualquier formato.",
+   "les_dimos": "8 discrepancias entre su web y su IG (Cantos al juego/fuego de bolar, Flores Miro/Floresmiro, HDLT, Emechiche cabeciblanco(s), y 4 años que no coinciden) + el aviso de que su Selección Oficial vive en DOS URLs a la vez.",
+   "fecha_pedida": "antes del 5 SEP (el festival abre el 9)",
+   "antes_de_pedir": "Se agotó lo que podíamos solos: herencia de otros festivales aplicada (4 sinopsis, 2 pósters) y el barrido TMDB ya estaba hecho. Los 62+52 que faltan no están en ninguna otra fuente.",
+   "si_no_responden": "La programación puede aparecer sola en su web: mec-events (Modern Events Calendar) es el mismo sistema de ediciones anteriores. Vigilar ese sitemap + los 2 posts de IG que faltan (Sabores en Escena, Así es Cundinamarca)."
+  },
+  "_revision_26_ago_2026": {
+   "programas_ig": "SERIE COMPLETA: 9/9 secciones, 24 programas, 84 obras. Entraron Sabores en Escena (1 prog) y Así es Cundinamarca (2 prog), leídas en el navegador CON SESIÓN — el perfil público topa con el muro de registro.",
+   "cruce_cerrado": "Las 84 obras en programas son EXACTAMENTE las 84 del catálogo. Emparejamiento laxo; el exacto daba 3 por perdidas (variantes de escritura, anotadas en el sidecar de programas).",
+   "enriquecimiento": "Techo de las fuentes automáticas TOCADO. póster 32→39, sinopsis 22→25, synopsis_en 25→31, lbSlug 32→38. De 52 obras sin lbSlug solo 6 están en TMDB; Letterboxd devuelve ESAS MISMAS 6 (importa de TMDB); Proimágenes suma 2. Los cortos rurales colombianos de 2025-26 no están en bases públicas.",
+   "fichas_bloqueadas": "121 fichas ajenas rechazadas por el doble filtro título+director (9 en TMDB, 112 en Proimágenes). Sin él habrían entrado «Teresa» de Fred Zinnemann, «Amor» coreana y «Elipsis» de 2006.",
+   "preparacion_publicacion": "HECHO: los 9 arquetipos de sección en SECTION_ARCHETYPES (bloqueaban la publicación: [seccion-sin-arquetipo] es ERROR), la entrada en FESTIVAL_CONFIG con group:'test', y el keyArt a 2:3 (siembrafest2026-v2.jpg, 400x600 estirado desde 1983x2834).",
+   "sin_display_EN": "A propósito: son nombres de autor en español («Ojo Pelao», «Cinema Patatús»). La tabla EN omite las secciones de marca antes que inventar traducción.",
+   "metroArea": "Puesto en true — Sasaima y Villeta están a 12 km por la misma vía. REVISAR con las sedes: el radar dice que Proimágenes lista además Supatá y Anolaima."
+  }
  },
- "_donde_aparecera_el_dato_que_falta": {
-  "nota": "Reconocimiento del sitio hecho el 9 ago vía wp-sitemap.xml. El festival ya tiene la maquinaria montada de ediciones anteriores, así que se sabe DÓNDE mirar en la próxima revisión en vez de rastrear a ciegas.",
-  "fichas_de_obra": "post type `project` → /pelicula/<slug>/. Hay 68, TODAS de 2020–2022 (lastmod). La ficha de 2020 trae SINOPSIS, créditos, trailer de YouTube y un bloque EXHIBICIONES con fecha, hora y local. Si repiten el formato en 2026, de ahí salen las 67 sinopsis que faltan Y la programación, igual que pasó en Cinemancia.",
-  "programacion": "post type `mec-events` (Modern Events Calendar) → /programacion-archivo/<slug>/. Hay 20, todas de dic 2020 (8º SiembraFest) y marcadas «¡Caducado!». Los slugs muestran la estructura que usan: exhibicion-<seccion>, siembralab-N, making-of-N, exhibicion-clausura.",
-  "sitemaps": "https://siembrafest.com/wp-sitemap.xml lista los sub-sitemaps por tipo; el campo lastmod dice de un vistazo si hay material nuevo sin descargar nada."
- },
- "_pendientes": [
-  "PROGRAMACIÓN: sigue sin existir. Es lo único que falta para montar. Sin día·hora·sede no hay films[].",
-  "~45 sinopsis y ~45 afiches: solo pueden venir del festival — de sus fichas /pelicula/<slug>/ cuando publique las de esta edición (hoy las 68 son de 2020-2022) o de la respuesta al correo del 24 ago.",
-  "VIGILAR lastmod de wp-sitemap-posts-project-1.xml y wp-sitemap-posts-mec-events-1.xml: cuando aparezcan entradas de 2026 llegan de golpe las sinopsis Y la parrilla.",
-  "SEDES: ninguna. Serán plazas y veredas; geocodificar eso será más difícil que un teatro y [sedes-apiladas] va a hablar.",
-  "3 variantes de título a confirmar con el festival (ver _cierre_del_cruce en el sidecar de programas).",
-  "Verificar municipios: nuestro registro dice Sasaima y Villeta; Proimágenes lista Villeta, Supatá y Anolaima."
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/siembrafest-2026-villeta.py --escribir",
+   "que": "PDF oficial de Villeta (doble lectura) → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/siembrafest-2026-enriquecido.py",
+   "que": "catálogo de la selección oficial → sidecar de enriquecimiento"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py siembrafest-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/publicar.py siembrafest-2026",
+   "que": "build → festivals/ (valida el contrato al escribir)"
+  }
  ],
- "_revision_23_ago_2026": {
-  "catalogo": "SINCRONIZADO con la web del 19 ago: 85→84 (−Carlina, −Tentado de difunto, +Chicha la chicharra; «Somos historias (Episodio 2)» retitulada «Somos historias: Casaramano, sagrado y vida»). Cayenas libertarias SIGUE: el parser ingenuo la perdía (trampa del primer <li>), verificado contra el HTML crudo.",
-  "programas_ig": "EL DATO NUEVO: el festival agrupó la Selección en 21 PROGRAMAS por sección (7/9 secciones publicadas; serie en curso, el post de Ojo Pelao tenía 1 h al capturar). Cuando llegue la programación, cada programa será presumiblemente una función: el ensamblado de films[] ya tiene la mitad del trabajo hecho. Faltan Sabores en Escena y Así es Cundinamarca.",
-  "confirmado": "9–18 SEP · Sasaima (primera vez) y Villeta — cartel + posts fijados. Sin programación aún: mec-events sigue en 2020, project en 2022.",
-  "discrepancias": "IG vs web difieren en 4 títulos y 4 años (lista en el sidecar de programas) — preguntar al festival junto con sinopsis/pósters."
- },
- "_contacto_24_ago_2026": {
-  "enviado": "Correo a produccion@siembrafest.com (cc contacto@) el 24 ago 2026, desde el Gmail de Juan con hola@otrofestiv.app en la firma. Un DM por Instagram previo quedó SIN respuesta — de ahí el cambio de canal.",
-  "pedimos": "(1) LA PROGRAMACIÓN: día, hora y lugar de cada función — es lo único que bloquea publicar; (2) 62 sinopsis; (3) 52 afiches o fotogramas. Cualquier formato.",
-  "les_dimos": "8 discrepancias entre su web y su IG (Cantos al juego/fuego de bolar, Flores Miro/Floresmiro, HDLT, Emechiche cabeciblanco(s), y 4 años que no coinciden) + el aviso de que su Selección Oficial vive en DOS URLs a la vez.",
-  "fecha_pedida": "antes del 5 SEP (el festival abre el 9)",
-  "antes_de_pedir": "Se agotó lo que podíamos solos: herencia de otros festivales aplicada (4 sinopsis, 2 pósters) y el barrido TMDB ya estaba hecho. Los 62+52 que faltan no están en ninguna otra fuente.",
-  "si_no_responden": "La programación puede aparecer sola en su web: mec-events (Modern Events Calendar) es el mismo sistema de ediciones anteriores. Vigilar ese sitemap + los 2 posts de IG que faltan (Sabores en Escena, Así es Cundinamarca)."
- },
- "_revision_26_ago_2026": {
-  "programas_ig": "SERIE COMPLETA: 9/9 secciones, 24 programas, 84 obras. Entraron Sabores en Escena (1 prog) y Así es Cundinamarca (2 prog), leídas en el navegador CON SESIÓN — el perfil público topa con el muro de registro.",
-  "cruce_cerrado": "Las 84 obras en programas son EXACTAMENTE las 84 del catálogo. Emparejamiento laxo; el exacto daba 3 por perdidas (variantes de escritura, anotadas en el sidecar de programas).",
-  "enriquecimiento": "Techo de las fuentes automáticas TOCADO. póster 32→39, sinopsis 22→25, synopsis_en 25→31, lbSlug 32→38. De 52 obras sin lbSlug solo 6 están en TMDB; Letterboxd devuelve ESAS MISMAS 6 (importa de TMDB); Proimágenes suma 2. Los cortos rurales colombianos de 2025-26 no están en bases públicas.",
-  "fichas_bloqueadas": "121 fichas ajenas rechazadas por el doble filtro título+director (9 en TMDB, 112 en Proimágenes). Sin él habrían entrado «Teresa» de Fred Zinnemann, «Amor» coreana y «Elipsis» de 2006.",
-  "preparacion_publicacion": "HECHO: los 9 arquetipos de sección en SECTION_ARCHETYPES (bloqueaban la publicación: [seccion-sin-arquetipo] es ERROR), la entrada en FESTIVAL_CONFIG con group:'test', y el keyArt a 2:3 (siembrafest2026-v2.jpg, 400x600 estirado desde 1983x2834).",
-  "sin_display_EN": "A propósito: son nombres de autor en español («Ojo Pelao», «Cinema Patatús»). La tabla EN omite las secciones de marca antes que inventar traducción.",
-  "metroArea": "Puesto en true — Sasaima y Villeta están a 12 km por la misma vía. REVISAR con las sedes: el radar dice que Proimágenes lista además Supatá y Anolaima."
+ "festival": {
+  "crudo": "festivals/staging/siembrafest-2026-crudo.json",
+  "enriquecido": "festivals/staging/siembrafest-2026-enriquecido.json",
+  "geo": "festivals/staging/siembrafest-2026-geo.json",
+  "sedes": {
+   "Cinema Villeta": [
+    "Cinema Villeta - Villeta",
+    ""
+   ],
+   "SENA CDAE Villeta": [
+    "SENA CDAE Villeta - Villeta",
+    ""
+   ],
+   "IED Alonso de Olalla": [
+    "IED Alonso de Olalla - Villeta",
+    ""
+   ],
+   "Vda. Chapaima": [
+    "Vda. Chapaima - Villeta",
+    ""
+   ],
+   "Villeta y Sasaima": [
+    "Villeta y Sasaima - Villeta",
+    ""
+   ]
+  },
+  "_sedes_src": "el programa escribe «SENA - CDAE VILLETA»; el guion interno rompe la convención «Sede - Ciudad», así que la sede se registra «SENA CDAE Villeta». Es puntuación, no el nombre.",
+  "secciones": {
+   "Mujeres que sostienen la vida": {
+    "emoji": "🏺",
+    "en": "Women Who Sustain Life",
+    "archetype": "Perspectivas / Miradas",
+    "color": "#EF9F27",
+    "order": 1
+   },
+   "Amores & Desamores": {
+    "emoji": "❤️‍🩹",
+    "en": "Love & Heartbreak",
+    "archetype": "Perspectivas / Miradas",
+    "color": "#E0418A",
+    "order": 2
+   },
+   "Cinema Patatús": {
+    "emoji": "👻",
+    "en": "Cinema Patatús",
+    "archetype": "Perspectivas / Miradas",
+    "color": "#5DCAA5",
+    "order": 3
+   },
+   "Muertos de Risa": {
+    "emoji": "💀",
+    "en": "Dying of Laughter",
+    "archetype": "Perspectivas / Miradas",
+    "color": "#5DCAA5",
+    "order": 4
+   },
+   "Buenos, Malos y Feos": {
+    "emoji": "🎞️",
+    "en": "The Good, the Bad and the Ugly",
+    "archetype": "Perspectivas / Miradas",
+    "color": "#5DCAA5",
+    "order": 5
+   },
+   "Ojo Pelao": {
+    "emoji": "👁️",
+    "en": "Eyes Peeled",
+    "archetype": "Cortos / Programas",
+    "color": "#1D9E75",
+    "order": 6
+   },
+   "Sabores en Escena": {
+    "emoji": "🍲",
+    "en": "Flavors on Screen",
+    "archetype": "Perspectivas / Miradas",
+    "color": "#639922",
+    "order": 7
+   },
+   "Estampas": {
+    "emoji": "🪶",
+    "en": "Vignettes",
+    "archetype": "Muestra / País",
+    "color": "#378ADD",
+    "order": 8
+   },
+   "Así es Cundinamarca": {
+    "emoji": "🗺️",
+    "en": "This Is Cundinamarca",
+    "archetype": "Muestra / País",
+    "color": "#378ADD",
+    "order": 9
+   },
+   "Película Invitada": {
+    "emoji": "🎟️",
+    "en": "Guest Film",
+    "archetype": "Especiales / Eventos",
+    "order": 10
+   },
+   "SiembraLAB": {
+    "emoji": "🛠️",
+    "en": "SiembraLAB",
+    "archetype": "Charlas / Industria",
+    "order": 11
+   },
+   "LABRA": {
+    "emoji": "🌱",
+    "en": "LABRA",
+    "archetype": "Charlas / Industria",
+    "order": 12
+   }
+  },
+  "name": "SiembraFest",
+  "fullName": "SiembraFest — Festival de Cine Colombiano al Campo",
+  "city": "Villeta",
+  "country": "CO",
+  "dates": "9–17 SEP",
+  "dates_en": "SEP 9–17",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "siembrafest2026_",
+  "festivalStartStr": "2026-09-09T00:00:00",
+  "festivalEndStr": "2026-09-17T23:00:00",
+  "mes_es": "septiembre",
+  "sharedSlotIsOneScreening": true,
+  "_jerarquia_de_fuentes": "programa PDF de Villeta (4 sep) > selección oficial (23 ago) > IG. El PDF manda en el horario y en lo que imprime; el catálogo rellena sinopsis, póster, país, género y lbSlug.",
+  "_alcance": "SOLO VILLETA. Sasaima se añade cuando el festival publique su PDF; entonces volverán la ciudad «Sasaima y Villeta» y probablemente el 18 SEP."
  }
 }

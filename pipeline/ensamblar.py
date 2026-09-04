@@ -73,7 +73,14 @@ def _enriquece(dst, it):
                           ('lbSlug', ('lbSlug',)), ('tmdb_id', ('tmdb_id',)),
                           ('synopsis', ('sinopsis', 'synopsis_es')),
                           ('synopsis_en', ('synopsis_en',)),
-                          ('title_en', ('title_en',)), ('genre', ('genero', 'genre'))):
+                          ('title_en', ('title_en',)), ('genre', ('genero', 'genre')),
+                          # El PAÍS también puede venir del enriquecido: hasta hoy
+                          # solo se leía del crudo, y un festival cuya fuente no lo
+                          # imprime salía con 0 países aunque su catálogo los tuviera
+                          # todos (SiembraFest: 84/84 en el catálogo, 0 en la app).
+                          # La bandera se recalcula abajo, que si no el país llega
+                          # solo y sin bandera — que es la mitad del dato.
+                          ('country', ('pais', 'country'))):
         if dst.get(campo):
             continue
         v = next((it[o] for o in origen if it.get(o)), None)
@@ -90,6 +97,10 @@ def _enriquece(dst, it):
         dst['posterSource'] = 'tmdb' if 'image.tmdb.org' in _p else 'oficial'
     if dst.get('synopsis') and not dst.get('synopsis_lang'):
         dst['synopsis_lang'] = 'es'
+    if dst.get('country') and not dst.get('flags'):
+        dst['flags'] = lib.banderas(dst['country']) or None
+        if not dst['flags']:
+            dst.pop('flags')
     return dst
 
 

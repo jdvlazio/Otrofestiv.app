@@ -1,0 +1,44 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim/OSM, con la dirección del municipio",
+  "capturado": "2026-09-04",
+  "metodo": "SENA CDAE Villeta e IED Alonso de Olalla NO están en OSM. Se declaran PENDIENTES y SIN punto: una coordenada aproximada en un municipio pequeño manda a alguien al sitio equivocado, y eso es peor que no tener mapa"
+ },
+ "venues": {
+  "Cinema Villeta - Villeta": {
+   "lat": 5.010889,
+   "lng": -74.46983,
+   "city": "Villeta",
+   "short": "Cinema Villeta",
+   "_prec": "osm"
+  },
+  "Vda. Chapaima - Villeta": {
+   "lat": 4.991911,
+   "lng": -74.490832,
+   "city": "Villeta",
+   "short": "Vda. Chapaima",
+   "_prec": "aproximada",
+   "_nota": "vereda: OSM devuelve la vía a Chapaima, no un punto exacto"
+  },
+  "Villeta y Sasaima - Villeta": {
+   "lat": 5.011258,
+   "lng": -74.47023,
+   "city": "Villeta",
+   "short": "Villeta y Sasaima",
+   "_prec": "aproximada",
+   "_nota": "recorrido por dos municipios; el punto es el casco urbano de Villeta"
+  },
+  "SENA CDAE Villeta - Villeta": {
+   "city": "Villeta",
+   "short": "SENA CDAE Villeta",
+   "_prec": "pendiente",
+   "_nota": "no está en OSM — geocodificar a mano (pipeline/sedes-html.py)"
+  },
+  "IED Alonso de Olalla - Villeta": {
+   "city": "Villeta",
+   "short": "IED Alonso de Olalla",
+   "_prec": "pendiente",
+   "_nota": "no está en OSM — geocodificar a mano (pipeline/sedes-html.py)"
+  }
+ }
+}
