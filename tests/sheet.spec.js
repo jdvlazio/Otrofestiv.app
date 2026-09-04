@@ -709,3 +709,85 @@ test('T174 — un festival terminado no ofrece priorizar', async ({ page }) => {
   expect(cerrado.botones, `los botones que quedan (viva: ${vivo.botones.join(', ')})`)
     .toEqual(vivo.botones.filter(b => b !== 'pel-prio-btn'));
 });
+
+// ── T176 — la banda no le pone precio a una función cancelada ────────────────
+// Auditoría 4 sep 2026, FICDEH: la ficha de «Bojayá, la verdad desde adentro»
+// listaba 7 funciones CANCELADA y, tres renglones más abajo, decía CON BOLETA
+// nombrando funciones que están en esa misma lista. La misma tarjeta se
+// desmentía sola.
+//
+// Una función cancelada no tiene precio: no va a ocurrir. Y lo que invalida se
+// lee ANTES que lo que matiza (DESIGN 8.4.6), así que el precio se dice de las
+// VIVAS. Si TODAS están canceladas no se dice nada de precio: el aviso de
+// cancelada ya lo dijo todo.
+//
+// Se afirma: (1) ninguna función nombrada en el aviso de precio aparece también
+// en el de cancelada; (2) el aviso de precio SIGUE estando cuando hay funciones
+// vivas —el control: callarlo del todo también quitaría la contradicción, y sería
+// peor—; (3) el aviso de cancelada sigue nombrando las suyas.
+test('T176 — el precio se dice de las funciones vivas, no de las canceladas', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T11:00');
+  const r = await page.evaluate(async () => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 500));
+    // una obra con funciones canceladas Y vivas: es donde la contradicción vive
+    const porTitulo = {};
+    FILMS.forEach(f => { if (f.title) (porTitulo[f.title] ||= []).push(f); });
+    // La obra se elige por DATO y de forma determinista: la que MÁS funciones de
+    // pago canceladas tiene. `_cual` solo nombra cuando el rasgo está en algunas y
+    // no en todas, así que hace falta un subconjunto propio de pago que además
+    // contenga canceladas. Las dos primeras versiones elegían «la primera que
+    // cumple» y caían en una obra cuyo aviso nombraba una función VIVA: no había
+    // contradicción que medir y el test pasaba con el código viejo.
+    const tit = Object.keys(porTitulo)
+      .filter(t => {
+        const fs = porTitulo[t]; const pago = fs.filter(f => f.is_free !== true);
+        return pago.length > 0 && pago.length < fs.length && pago.some(f => f._cancelled);
+      })
+      .sort((a, b) => porTitulo[b].filter(f => f.is_free !== true && f._cancelled).length
+                    - porTitulo[a].filter(f => f.is_free !== true && f._cancelled).length)[0];
+    if (!tit) return { sinCaso: true };
+    if (typeof closePelSheet === 'function') closePelSheet();
+    await new Promise(r => setTimeout(r, 200));
+    openPelSheet(tit);
+    await new Promise(r => setTimeout(r, 1100));
+    const cuerpo = document.querySelector('#pel-sheet .avisos-body');
+    if (!cuerpo) return { sinBanda: true, tit };
+    // cada aviso es un par pill + texto
+    const pills = [...cuerpo.querySelectorAll('.aviso-pill')].map(e => e.textContent.trim());
+    const txts = [...cuerpo.querySelectorAll('.aviso-txt')].map(e => e.textContent.replace(/\s+/g, ' ').trim());
+    // los días llevan tilde («mié», «sáb»): `\w` no los toma.
+    const horas = s => [...s.matchAll(/([^\s·]{3})\s+(\d{1,2})\s*·\s*(\d{1,2}:\d{2})/g)].map(m => `${m[1]} ${m[2]} ${m[3]}`);
+    // TODAS las filas de cancelada, no la primera: esta obra tiene siete, y
+    // mirando una sola el solapamiento se escapaba.
+    const iPrecio = pills.findIndex(p => /boleta|gratis/i.test(p));
+    const _hc = pills.map((p, i) => /cancel/i.test(p) ? horas(txts[i] || '') : []).flat();
+    const fs = porTitulo[tit];
+    return { tit: tit.slice(0, 30), pills,
+      canceladas: fs.filter(f => f._cancelled).length, vivas: fs.filter(f => !f._cancelled).length,
+      horasCanceladas: _hc,
+      horasPrecio: iPrecio >= 0 ? horas(txts[iPrecio]) : [],
+      textoPrecio: iPrecio >= 0 ? (txts[iPrecio] || '').slice(0, 90) : null,
+      hayPrecio: iPrecio >= 0, hayCancelada: _hc.length > 0 };
+  });
+
+  expect(r.sinCaso, 'FICDEH tiene una obra con funciones canceladas y vivas').toBeUndefined();
+  expect(r.sinBanda, `«${r.tit}» muestra su banda de avisos`).toBeUndefined();
+  expect(r.canceladas, 'y de verdad tiene canceladas').toBeGreaterThan(0);
+  expect(r.vivas, 'y también vivas').toBeGreaterThan(0);
+
+  // 1 · ninguna función nombrada en el precio está entre las canceladas
+  const solapan = r.horasPrecio.filter(h => r.horasCanceladas.includes(h));
+  expect(solapan,
+    `el aviso de precio no nombra funciones canceladas — dice «${r.textoPrecio}» y las canceladas son [${r.horasCanceladas.join(', ')}]`)
+    .toHaveLength(0);
+
+  // 2 · control: el aviso de precio sigue estando. Callarlo del todo también
+  // quitaría la contradicción, y sería peor: el usuario dejaría de saber si paga.
+  expect(r.hayPrecio, `la banda sigue diciendo el precio (avisos: ${r.pills.join(' / ')})`).toBe(true);
+
+  // 3 · y el aviso de cancelada sigue nombrando las suyas
+  expect(r.hayCancelada, 'y sigue avisando de las canceladas, nombrando sus funciones').toBe(true);
+});
