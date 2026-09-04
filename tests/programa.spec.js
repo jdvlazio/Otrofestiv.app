@@ -103,7 +103,9 @@ test('T12 — día específico carga en vista lista por defecto', async ({ page 
   test.setTimeout(40000);
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   const activeDay = await page.evaluate(() => activeDay);
-  if (activeDay === 'all') return;
+  // Premisa: con el reloj DENTRO de Leviza se aterriza en un día concreto. Si
+  // cayera en «todos» no hay día específico que cargar y el test no mide nada.
+  expect(activeDay, 'el arranque elige un día concreto, no «todos los días»').not.toBe('all');
   // Esperar a que .plist-item sea visible y .poster-card desaparezca del DOM visible
   await page.waitForSelector('.plist-item', { timeout: 8000 });
   await page.waitForFunction(() => {
@@ -2735,7 +2737,7 @@ test('T126 — el corazón de la lista llega al área de toque de sus hermanos',
       borde: [sonda(-30, 0), sonda(0, -30)]
     };
   });
-  if (r.sinCorazon) return;
+  expect(r.sinCorazon, 'la lista trae su corazón: es el área táctil que se mide').toBeUndefined();
   expect(r.caja, 'el botón sigue siendo el chico de 26 px').toBeLessThan(44);
   expect(r.dentro, 'a 14 px del centro responde el corazón, no la fila')
     .toEqual(['CORAZON', 'CORAZON', 'CORAZON', 'CORAZON']);
@@ -2804,7 +2806,8 @@ test('T133 — el número del filtro de sección es el de las filas que pinta', 
     const dd = FILMS.filter(f => f.day === activeDay && f.section === activeSec);
     return { dice, pinta: vis(), funciones: dd.length, obras: new Set(dd.map(f => f.title)).size };
   });
-  if (r.sinBoton || r.sinOpciones) return;
+  expect(r.sinBoton, 'el filtro de Sección existe').toBeUndefined();
+  expect(r.sinOpciones, 'y ofrece secciones con cuenta: son las que se comparan').toBeUndefined();
   expect(r.funciones, 'la sección elegida repite algún título ese día — si no, el caso no distingue')
     .toBeGreaterThan(r.obras);
   expect(r.dice, 'el número dice lo que se va a pintar').toBe(r.pinta);
@@ -2835,7 +2838,8 @@ test('T133b — la fila de ciudad no cuenta dos veces la obra que va a dos salas
     cityRow.click(); await w(1500);
     return { diceNivel1, diceNivel2, pinta: vis(), total: new Set(FILMS.map(f => f.title)).size };
   });
-  if (r.sinBoton || r.sinCiudades) return;
+  expect(r.sinBoton, 'el filtro de Lugar existe').toBeUndefined();
+  expect(r.sinCiudades, 'y el festival es multiciudad: sin dos niveles no hay nada que comparar').toBeUndefined();
   expect(r.diceNivel1, 'los dos niveles dicen lo mismo de la misma ciudad').toBe(r.diceNivel2);
   expect(r.diceNivel1, 'y ese número es el de las tarjetas que pinta').toBe(r.pinta);
   expect(r.pinta, 'la ciudad no puede tener más obras que el festival entero')
@@ -2882,7 +2886,9 @@ test('T140 — con el título en dos líneas, la etiqueta va en la última', asy
     });
     return { casos };
   });
-  if (!r.casos.length) return;                      // ningún título de 2 líneas con etiqueta
+  // Premisa: hace falta al menos un título de dos líneas CON etiqueta. Sin
+  // ninguno el bucle de abajo no itera y el test pasa sin mirar nada.
+  expect(r.casos.length, 'el fixture trae títulos de dos líneas con etiqueta').toBeGreaterThan(0);
   for (const c of r.casos) {
     expect(c.alPie, `«${c.etiqueta}» en ${c.txt}: va con la última línea`).toBeLessThanOrEqual(4);
     expect(c.alTecho, `«${c.etiqueta}» en ${c.txt}: y NO junto a la primera`).toBeGreaterThan(4);
@@ -2942,7 +2948,9 @@ test('T141 — el rótulo de la ciudad se alinea con el de sus sedes', async ({ 
       pinSede: sedes[0].querySelectorAll('svg').length
     };
   });
-  if (r.sinBoton || r.sinDrill || r.sinNivel2) return;
+  expect(r.sinBoton, 'el filtro de Lugar existe').toBeUndefined();
+  expect(r.sinDrill, 'y baja a ciudades').toBeUndefined();
+  expect(r.sinNivel2, 'y la ciudad abre sus sedes: es la columna que se mide').toBeUndefined();
   expect(r.xSedes.length, 'las sedes comparten una sola columna').toBe(1);
   expect(Math.abs(r.xCiudad - r.xSedes[0]), 'la ciudad está en esa misma columna')
     .toBeLessThanOrEqual(2);
@@ -3002,7 +3010,7 @@ test('T142 — Prensa ON salta a donde se ven los pases; OFF no mueve a nadie', 
     const trasApagar = snap();
     return { enGrilla, conPrensa, trasApagar, diaTienePases };
   });
-  if (r.sinBoton) return;                       // festival sin pases de prensa
+  expect(r.sinBoton, 'el fixture tiene pases de prensa: sin ellos no hay interruptor que probar').toBeUndefined();
   expect(r.enGrilla.modo, 'se parte de la grilla de todas').toBe('grid');
   expect(r.enGrilla.dia, 'y de «todos los días»').toBe('all');
   // ENCENDER: lleva a donde lo añadido se ve
@@ -3062,7 +3070,7 @@ test('T145 — el rótulo inactivo de la barra cumple AA sobre pósters claros',
       alfaVelo, blur: csN.backdropFilter || csN.webkitBackdropFilter,
       colorTexto: csT.color, fs: parseFloat(csT.fontSize) };
   }, _FONDO_MAS_CLARO_MEDIDO);
-  if (r.sinBarra) return;
+  expect(r.sinBarra, 'la barra de filtros está en pantalla: es la superficie que se mide').toBeUndefined();
   expect(r.alfaVelo, 'la barra sigue siendo vidrio, no muro ([chrome-glass])').toBeLessThanOrEqual(0.6);
   expect(r.blur, 'y conserva su desenfoque').toMatch(/blur/);
   expect(r.fs, 'el rótulo es texto pequeño: le aplica el 4,5:1').toBeLessThan(18);

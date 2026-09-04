@@ -973,7 +973,10 @@ test('T127 — la hoja de ciudad se puede cerrar tocando el fondo', async ({ pag
     await new Promise(r => setTimeout(r, 500));
     return { cerro: !sh.classList.contains('open') };
   });
-  if (r.sinHoja || r.noAbrio) return;
+  // Premisas, no escapes: el reloj va DENTRO de FICDEH y ahí la hoja existe y
+  // abre. Si dejara de hacerlo no hay fondo que tocar y el test no mide nada.
+  expect(r.sinHoja, 'la hoja de ciudad existe en el DOM').toBeUndefined();
+  expect(r.noAbrio, 'y se abre: es la que este test cierra tocando el fondo').toBeUndefined();
   expect(r.cerro, 'tocar el fondo la cierra').toBe(true);
 });
 
@@ -1009,7 +1012,9 @@ test('T43 — en el chooser, arrastrar no cambia de festival; tocar sí', async 
     const b = c.getBoundingClientRect();
     return { x: Math.round(b.left + b.width / 2), y: Math.round(b.top + b.height / 2), fest: c.dataset.fest };
   });
-  if (!caja) return;                  // un solo festival visible: nada que arrastrar
+  // Premisa: el chooser lista los festivales del riel, así que siempre hay otra
+  // card que la activa. Sin ella no hay nada que arrastrar y el test es mudo.
+  expect(caja, 'el chooser ofrece otra card además de la activa').not.toBe(null);
 
   // 1 · arrastre horizontal que SUELTA encima de otra card
   await page.mouse.move(caja.x + 120, caja.y);
@@ -1087,7 +1092,9 @@ test('T44 — al reabrir el chooser, chip, info, marca y centro dicen lo mismo',
     const c = cards.slice(1).find(x => x.dataset.fest && x.dataset.fest !== _activeFestId);
     return c ? c.dataset.fest : null;
   });
-  if (!otro) return;                               // un solo festival: nada que cambiar
+  // Premisa: hace falta una card que no sea la activa NI la primera del riel
+  // (ver arriba: con la primera el aserto dejaría de discriminar).
+  expect(otro, 'el riel ofrece una card distinta de la activa y de la primera').not.toBe(null);
   await page.locator(`#fs-festival-list .splash-card[data-fest="${otro}"]`).click();
   await page.waitForTimeout(2400);
   // El festival nuevo puede ser multiciudad a su vez: su hoja nace tapando el chip.
