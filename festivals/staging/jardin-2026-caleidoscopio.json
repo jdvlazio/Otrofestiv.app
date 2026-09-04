@@ -1,0 +1,263 @@
+{
+ "_provenance": {
+  "fuente": "Instagram del festival (@festicinejardin) — los tres posts de selección oficial de CALEIDOSCOPIO",
+  "capturado": "2026-09-04",
+  "metodo": "DOBLE LECTURA por post: (A) el texto alternativo que Instagram genera por OCR de cada diapositiva y (B) la lectura visual del carrusel, lámina a lámina. Las dos hicieron falta: el OCR devolvió «Jiru luiai \" malo\"» donde el cartel dice «Jiru luiai \"Algo malo\"», escribió «Gomxz» por «Gómez», y de una lámina entera solo sacó «J Dr e U» — esa era «Una vez en un cuerpo», una obra que la lectura única habría perdido del todo",
+  "alcance": "SOLO la competencia CALEIDOSCOPIO. La muestra central (~20 largometrajes) y el seminario académico no se han publicado"
+ },
+ "_festival": {
+  "nombre": "Festival de Cine de Jardín",
+  "edicion": 11,
+  "ciudad": "Jardín, Antioquia",
+  "fechas": "24–27 de septiembre de 2026",
+  "tema": "Ecos de Voces Silenciadas — vida y muerte de los líderes sociales en Colombia",
+  "web": "https://festicinejardin.com/",
+  "ig": "https://www.instagram.com/festicinejardin/",
+  "radar": "#811"
+ },
+ "_trampas": [
+  "La web NO publica la selección: solo la convocatoria (/caleidoscopio-2026-convocatoria/). Instagram es la única fuente, y por eso hace falta la doble lectura.",
+  "El banner de «programación» de la home enlaza un PDF de 2025 (registrado en el radar #811).",
+  "El festival no está en Proimágenes: no habrá señal de terceros. Todo sale de sus canales."
+ ],
+ "_categorias": {
+  "Documental": {
+   "post": "https://www.instagram.com/festicinejardin/p/DcytNbdlgrv/",
+   "leido": "radar #811, 2 sep 2026 — lectura visual diapositiva a diapositiva. NO reverificada el 4 sep: Instagram dejó de servir el carrusel de ese post",
+   "obras": 7
+  },
+  "Ficción": {
+   "post": "https://www.instagram.com/festicinejardin/p/Dczc9LIls6f/",
+   "leido": "doble lectura, 4 sep 2026",
+   "obras": 9
+  },
+  "Experimental": {
+   "post": "https://www.instagram.com/festicinejardin/p/DczQXk6Ft3W/",
+   "leido": "doble lectura, 4 sep 2026",
+   "obras": 6
+  }
+ },
+ "obras": [
+  {
+   "titulo": "Lejanía",
+   "director": "Daniel Velásquez Patarroyo",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DcytNbdlgrv/",
+    "date": "2026-09-02"
+   }
+  },
+  {
+   "titulo": "Un aparato para detectar fantasmas",
+   "director": "Mauricio Maldonado",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DcytNbdlgrv/",
+    "date": "2026-09-02"
+   }
+  },
+  {
+   "titulo": "Lecciones de primavera",
+   "director": "Antonio Mariño Lizarazo",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DcytNbdlgrv/",
+    "date": "2026-09-02"
+   }
+  },
+  {
+   "titulo": "Madres de nacimiento",
+   "director": "Gloria Isabel Gómez",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DcytNbdlgrv/",
+    "date": "2026-09-02"
+   }
+  },
+  {
+   "titulo": "Elementales",
+   "director": "Camilo Botero Jaramillo",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DcytNbdlgrv/",
+    "date": "2026-09-02"
+   }
+  },
+  {
+   "titulo": "Relatos del camino",
+   "director": "Daniel Prieto Muriel",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DcytNbdlgrv/",
+    "date": "2026-09-02"
+   }
+  },
+  {
+   "titulo": "Los años del conejo",
+   "director": "Raquel Tamayo Gutiérrez",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Documental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DcytNbdlgrv/",
+    "date": "2026-09-02"
+   }
+  },
+  {
+   "titulo": "Malas posturas",
+   "director": "Juan Pablo Castro",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/Dczc9LIls6f/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "Futuros luminosos",
+   "director": "Ismael García Ramírez",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/Dczc9LIls6f/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "Criatura",
+   "director": "Juan Pablo Ríos",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/Dczc9LIls6f/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "Jiru luiai \"Algo malo\"",
+   "director": "Yon Arley Agreda Jamioy",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/Dczc9LIls6f/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "Primer amor",
+   "director": "Iván Luna Dulcey",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/Dczc9LIls6f/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "Términa",
+   "director": "Juan José Guevara Ruiz",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/Dczc9LIls6f/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "La Mona",
+   "director": "Laura Gutiérrez Ardila",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/Dczc9LIls6f/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "Refracción",
+   "director": "Isabella Palacio Mesa",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/Dczc9LIls6f/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "El mundo es afuera",
+   "director": "Pablo Roldán",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Ficción",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/Dczc9LIls6f/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "Una vez en un cuerpo",
+   "director": "María Colonia Pérez",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DczQXk6Ft3W/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "Somnolítico",
+   "director": "Abril Velásquez",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DczQXk6Ft3W/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "Sirena mecánica",
+   "director": "Violeta Vieytes Vivares, Damián Sato",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DczQXk6Ft3W/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "En todo y en nada",
+   "director": "Ximena Pérez, Raquel Zapata",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DczQXk6Ft3W/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "De: Saúl",
+   "director": "Santiago Gómez, Cristian Rojas",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DczQXk6Ft3W/",
+    "date": "2026-09-04"
+   }
+  },
+  {
+   "titulo": "Deus ex necro machina",
+   "director": "Mateo M. Correa",
+   "seccion": "CALEIDOSCOPIO",
+   "categoria": "Experimental",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/p/DczQXk6Ft3W/",
+    "date": "2026-09-04"
+   }
+  }
+ ],
+ "_ya_en_el_repo": "13 de las 22 ya están en otros festivales nuestros (FICCI 65, Cinemancia, FICDEH, FICMontañas, CineAutopsia, Vartex, Leviza, AFF) y 2 más en el catálogo de SiembraFest: póster, sinopsis, director y lbSlug ya cosechados. El enriquecimiento de este festival empieza con más de la mitad hecho."
+}
