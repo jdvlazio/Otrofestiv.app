@@ -133,3 +133,74 @@ test('PS05 — el ICS dice los minutos que reserva cuando la duración no está 
   expect(desc2, `«${r.conDur.obra}» sale con su duración real (dice: ${desc2})`).toContain(r.conDur.dur);
   expect(desc2, 'sin marca de estimación').not.toContain('~');
 });
+
+// ── PS06 — el calendario conserva las comas del título ───────────────────────
+// Auditoría 4 sep 2026: `clean()` reemplazaba por un espacio la coma, el punto y
+// coma, el salto de línea y la barra invertida. «Ni un minuto de silencio, toda
+// una vida de búsqueda» llegaba al calendario del teléfono como «Ni un minuto de
+// silencio  toda una vida de búsqueda», partido y con doble espacio. Medido: 39
+// obras en 12 festivales llevan alguno de esos caracteres.
+//
+// El RFC 5545 §3.3.11 pide ESCAPARLOS (`\,`), no borrarlos: el valor sigue siendo
+// uno solo y el título llega entero.
+//
+// Se afirma: (1) el título con coma sobrevive al viaje —se desescapa al que era—;
+// (2) la coma va escapada, no cruda, que es lo que haría que un parser partiera
+// el valor; (3) control: un título SIN coma no gana barras de la nada.
+test('PS06 — el ICS escapa la coma en vez de borrarla', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  const r = await page.evaluate(async () => {
+    const capturar = async (f) => {
+      state.set('savedAgenda', { scenarioIdx: 0, schedule: [{ ...f, _title: f.title }] });
+      let cap = null;
+      const orig = URL.createObjectURL.bind(URL);
+      URL.createObjectURL = b => { cap = b; return orig(b); };
+      await exportICS();
+      URL.createObjectURL = orig;
+      return cap ? await cap.text() : null;
+    };
+    const conComa = FILMS.find(x => !x._cancelled && x.day && x.time && /,/.test(x.title));
+    const sinComa = FILMS.find(x => !x._cancelled && x.day && x.time && !/[,;\\]/.test(x.title));
+    return { conComa: conComa ? { titulo: conComa.title, ics: await capturar(conComa) } : null,
+             sinComa: sinComa ? { titulo: sinComa.title, ics: await capturar(sinComa) } : null };
+  });
+
+  expect(r.conComa, 'FICDEH tiene títulos con coma — 5 de los 39 del censo').not.toBeNull();
+  const linea = (r.conComa.ics.match(/^SUMMARY:.*$/m) || [''])[0];
+
+  // 1 · el título vuelve a ser el que era al desescapar
+  const desescapado = linea.replace(/^SUMMARY:/, '')
+    .replace(/\\n/g, '\n').replace(/\\([,;])/g, '$1').replace(/\\\\/g, '\\');
+  expect(desescapado, `«${r.conComa.titulo}» llega entero (línea: ${linea})`).toBe(r.conComa.titulo);
+
+  // 2 · y la coma viaja ESCAPADA: cruda, un parser partiría el valor en dos
+  expect(linea, 'la coma va escapada').toContain('\\,');
+  expect(linea.replace(/\\,/g, ''), 'y no queda ninguna coma cruda suelta').not.toContain(',');
+
+  // 3 · control: sin coma no aparecen barras de la nada
+  expect(r.sinComa, 'y hay títulos sin coma').not.toBeNull();
+  const linea2 = (r.sinComa.ics.match(/^SUMMARY:.*$/m) || [''])[0];
+  expect(linea2, `«${r.sinComa.titulo}» sale tal cual`).toBe('SUMMARY:' + r.sinComa.titulo);
+
+  // 4 · el punto y coma y la barra invertida. NINGÚN título del catálogo los trae
+  // (medido: 0 de 2.246), así que el caso se construye — sin él, escapar solo la
+  // coma pasaba el test y el día que un festival publique un título con `;` se
+  // partiría el evento en silencio.
+  const raro = await page.evaluate(async () => {
+    const f = FILMS.find(x => !x._cancelled && x.day && x.time);
+    const titulo = 'Uno; dos, tres \\ cuatro';
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: [{ ...f, _title: titulo, title: titulo }] });
+    let cap = null;
+    const orig = URL.createObjectURL.bind(URL);
+    URL.createObjectURL = b => { cap = b; return orig(b); };
+    await exportICS();
+    URL.createObjectURL = orig;
+    return { titulo, ics: cap ? await cap.text() : null };
+  });
+  const l3 = (raro.ics.match(/^SUMMARY:.*$/m) || [''])[0];
+  const vuelta = l3.replace(/^SUMMARY:/, '')
+    .replace(/\\n/g, '\n').replace(/\\([,;])/g, '$1').replace(/\\\\/g, '\\');
+  expect(vuelta, `«${raro.titulo}» vuelve entero (línea: ${l3})`).toBe(raro.titulo);
+  expect(l3, 'el punto y coma va escapado').toContain('\\;');
+  expect(l3, 'y la barra invertida también').toContain('\\\\');
+});
