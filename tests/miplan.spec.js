@@ -1705,8 +1705,15 @@ test('T154 — el subtítulo de la imagen cuenta los días que tienen algo', asy
 // Se afirma que la superficie muestra EXACTAMENTE lo que devuelve el dueño
 // (dayLabel), no un prefijo suyo: es la forma de que un recorte futuro —de un
 // carácter o de dos— caiga igual.
+// El reloj va CONGELADO (4 sep 2026). Corría contra la fecha real y se rompió
+// solo al pasar el día: Cinemancia empezó el 3 SEP, y con el festival adentro las
+// primeras funciones del catálogo ya pasaron, así que la hoja del tope se quedó
+// sin filas que pintar. Medido en main limpio: con reloj real pasaba el 1 y el 3
+// de septiembre y fallaba el 5. La hoja del tope y la de conflicto no dependen de
+// la fase, así que se ancla ANTES del arranque, donde todas las funciones son
+// futuras y el fixture es estable para siempre.
 test('T155 — la hoja del tope y la de conflicto muestran el día completo', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-01T10:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const H = await import('/src/view/helpers.js');
