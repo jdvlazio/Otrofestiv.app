@@ -3076,8 +3076,16 @@ test('T145 — el rótulo inactivo de la barra cumple AA sobre pósters claros',
 //
 // Las dos mitades van juntas a propósito: la primera sola se «arregla» con una
 // máscara fija, y la segunda lo impide.
+//
+// FIXTURE — se mide sobre ficci65 y NO sobre un festival vivo. El test estaba
+// apuntado a cinemancia2026 y se volvió mudo sin avisar: su lista de Sección
+// bajó a 8 opciones (352px) y dejó de tocar el tope de 464,2 — sin desborde no
+// hay máscara que medir, así que salía verde probando nada (medido 4 sep 2026).
+// ficci65 está archivado (su dato ya no cambia) y desborda con margen amplio:
+// 22 opciones, 968px contra los mismos 464,2. Y si aun así dejara de desbordar,
+// abajo se cae en vez de callarse.
 test('T146 — el pie del dropdown se desvanece solo mientras queda lista', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'ficci65');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
@@ -3102,7 +3110,10 @@ test('T146 — el pie del dropdown se desvanece solo mientras queda lista', asyn
     const db = d.getBoundingClientRect(), ub = ult.getBoundingClientRect();
     return { arriba, abajo, pieUltimaALaBase: Math.round(db.bottom - ub.bottom) };
   });
-  if (r.sinBoton || r.noScrollea) return;
+  // Estas dos NO son escapes: son la premisa del test. Cuando no se cumplen no
+  // hay nada que medir, y eso tiene que sonar — antes eran un `return` mudo.
+  expect(r.sinBoton, 'el filtro de Sección existe en este festival').toBeUndefined();
+  expect(r.noScrollea, 'y su lista desborda el panel: sin desborde no hay máscara que probar').toBeUndefined();
   expect(r.arriba.clase, 'con lista por debajo, el pie se desvanece').toBe(true);
   expect(r.arriba.mask, 'y la máscara aplica de verdad, no solo la clase').toMatch(/gradient/);
   expect(r.abajo.clase, 'al final de la lista la clase se retira').toBe(false);
@@ -3185,7 +3196,10 @@ test('T149 — la ciudad sin programación viva se marca en las dos superficies'
   expect(r.hoja.cortado, 'la marca no recorta el nombre de la ciudad').toBe(false);
 
   // 4 · y el filtro de Lugar dice LO MISMO — dos superficies, un dueño
-  if (!r.sinFiltro) {
+  // La otra mitad no se salta en silencio: si el filtro de Lugar no está, las
+  // dos superficies dejan de compararse y el test se queda a medias sin decirlo.
+  expect(r.sinFiltro, 'el filtro de Lugar existe: es la otra superficie que este test compara').toBeUndefined();
+  {
     expect(r.filtro.marcadas, 'el filtro de Lugar marca las mismas que la hoja de apertura')
       .toEqual(r.hoja.marcadas);
     expect(r.filtro.sinMarca, 'y deja sin marcar las mismas').toEqual(r.hoja.sinMarca);
