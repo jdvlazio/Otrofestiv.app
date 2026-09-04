@@ -44,7 +44,13 @@ def creditos():
     P = {k: limpia(v) for k, v in paginas().items()}
     out = {}
     for sede, sala, dia, hora, obras, pag in pr.FUNCIONES:
-        ls = P[str(pag)]
+        # Una función puede declarar DOS páginas: el Museo Nacional y la
+        # Universidad Nacional no tienen parrilla, así que su día sale del sello
+        # de la ficha y su hora de la página del Diálogo de ese mismo día.
+        # verifica.py ya lo contemplaba; esto no, y reventaba con un KeyError en
+        # cuanto se corría suelto. No se notó porque el crudo importa presencias()
+        # y nunca llegaba hasta aquí: lo destapó correr.py al ejecutar el paso.
+        ls = [l for q in (pag if isinstance(pag, tuple) else (pag,)) for l in P[str(q)]]
         for o in obras:
             # el crédito es la línea siguiente al título (a veces la subsiguiente,
             # cuando el nombre de la obra ocupa dos renglones)
