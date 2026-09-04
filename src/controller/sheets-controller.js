@@ -421,7 +421,7 @@ export function openPelSheet(title){
       </div>`
     :`<div class="pel-sheet-ctas">
         <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(f.title)}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
-        <button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(f.title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
+        ${festivalEnded()?'':`<button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(f.title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>`}
         <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-secondary" data-title="${escXML(f.title)}" data-action="toggleWatched">${ICONS.eye} ${t('cta_vista')}</button>
       </div>`}
     ${_inPlan&&activeView==='agenda'?`<button data-title="${escXML(f.title)}" data-action="closePelAndRemove" class="pel-sheet-remove-plan">${ICONS.x} ${t('plan_quitar_plan')}</button>`:''}
@@ -757,7 +757,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
     <div class="pel-sheet-foot">
     <div class="pel-sheet-ctas">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
-      <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(parentTitle||title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
+      ${festivalEnded()?'':`<button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(parentTitle||title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>`}
       <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${escXML(title)}" data-action="closePelAndRate">${ICONS.star} ${filmRatings[title]?t('misc_cambiar'):t('cta_calificar')}</button>
     </div>
     </div>
