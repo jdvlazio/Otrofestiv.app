@@ -40,6 +40,14 @@ export function _renderFestivalSelector(activeFestId){
       clearTimeout(_tmo);
       _tmo=setTimeout(()=>{
         _armed=false;
+        // El riel se REEMPLAZA entero al cambiar de festival (loadFestival →
+        // _renderFestivalSelector), pero este handler quedó atado al nodo viejo y
+        // su debounce de 90 ms dispara DESPUÉS. Su `.on` va a un nodo huérfano
+        // —invisible— y su `info` apunta a #fs-info, que vive FUERA del contenedor
+        // reemplazado y sigue vivo: escribía el festival centrado en el riel muerto
+        // encima del que acababa de cargarse. La hoja quedaba con la marca en uno y
+        // el texto en otro (V-B11). Un listener zombi no habla por la pantalla.
+        if(!rail.isConnected) return;
         const best=_centeredCard(rail);
         if(!best || best.classList.contains('on')) return;
         // Mover la marca .on a la card centrada. NO es cosmético: el zoom+opacidad
@@ -188,6 +196,27 @@ export function _renderSplashRail(activeFestId){
 // (10 ago: «es corto, emotivo, sencillo» — dejarla opaca al usuario EN pesa más que
 // el escrúpulo de traducir). Sin note_en, el fallback es el ES intacto — nunca se
 // traduce en runtime. Etiqueta y enlace pasan por t(). Sin botón de cerrar.
+// renderFestBar — el chip del encabezado (nombre + fechas). DUEÑO ÚNICO.
+// Vivía inline en loadFestival, así que solo se pintaba al CARGAR un festival y
+// el cambio de idioma no lo tocaba: en inglés el selector decía «SEP 3–12»
+// (dates_en) y el encabezado seguía en «3–12 SEP 2026», la misma fecha en dos
+// órdenes a dos toques de distancia. Es la misma trampa que ya tenía resuelta su
+// hermana renderPostponedBanner —persiste, no pasa por loadFestival— y por eso
+// vive al lado y la llaman los mismos dos sitios.
+export function renderFestBar(cfg){
+  if(!cfg) return;
+  const _fn=document.querySelector('.hdr-fest-name');
+  const _fd=document.querySelector('.hdr-fest-dates');
+  const _postponed=!!(cfg.status&&cfg.status.kind==='postponed');
+  if(_fn) _fn.textContent=festivalShortName(cfg);
+  // El año se une con la MISMA separación que usa el bloque del splash (' · ').
+  // Solo en inglés: ahí las fechas terminan en número («SEP 3–12») y un espacio
+  // dejaba «3–12 2026», dos cifras pegadas. En español la fecha termina en mes
+  // («3–12 SEP 2026») y se lee bien — no se toca una superficie ya aprobada.
+  const _sep=(state.snapshot()._lang==='en')?' · ':' ';
+  if(_fd) _fd.textContent=' · '+_langDates(cfg)+(cfg.year&&!_postponed?_sep+cfg.year:'');
+}
+
 export function renderPostponedBanner(cfg){
   document.getElementById('fest-postponed-banner')?.remove();
   const _hdrP=document.getElementById('hdr-programa');

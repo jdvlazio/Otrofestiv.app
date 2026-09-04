@@ -422,6 +422,34 @@ export function computeScenarios(titles){
 //     que el camino de avisos marca con badge y salida. Nada se corrige ni se
 //     borra en silencio.
 //   - Idempotente: correrla dos veces = una vez (deriva todo del catálogo).
+// ── sameEntry — DUEÑO ÚNICO de «esta entrada del Plan es aquella» ────────────
+// La identidad de una función es título + día + hora + SEDE. La sede no es un
+// adorno: FICDEH programa la misma obra el mismo día y a la misma hora en
+// ciudades distintas — 13 casos medidos (ej. «La independencia», 13 AGO 14:00,
+// en Bogotá Y en Ibagué). Sin ella, agendar la de Bogotá marcaba la fila de
+// Ibagué como «en tu plan» (medido en main, 25 ago 2026): la app le decía a
+// alguien de Ibagué que ya tenía una función que nunca agendó, y la que sí
+// quería aparecía tomada.
+//
+// TOLERANCIA DELIBERADA: si UNO de los dos lados no declara sede, no se exige
+// que coincida. Los planes guardados antes de que la sede viajara en la entrada
+// no la tienen, y endurecer acá los desconectaría del catálogo — que es
+// exactamente la pérdida de datos que se quiere evitar. Si los dos la declaran,
+// tiene que coincidir.
+//
+// FALLA CERRADO por diseño: sin día u hora NO matchea nada. La versión previa
+// de este predicado (revertida) matcheaba TODO cuando faltaban esos campos, así
+// que un llamador que se olvidaba de pasarlos no daba error: borraba en masa.
+// Acá el olvido es un no-op — se nota, pero no destruye.
+export function sameEntry(a, b){
+  if(!a || !b) return false;
+  const ta = a._title || a.title, tb = b._title || b.title;
+  if(!ta || ta !== tb) return false;
+  if(!a.day || !b.day || a.day !== b.day) return false;
+  if(!a.time || !b.time || a.time !== b.time) return false;
+  return (!a.venue || !b.venue || a.venue === b.venue);
+}
+
 export function syncScheduleWithCatalog(schedule, films){
   if(!schedule||!schedule.length) return schedule;
   return schedule.map(e=>{
@@ -434,8 +462,7 @@ export function syncScheduleWithCatalog(schedule, films){
     // del QA de ojos frescos. Si la entrada trae sede y esa sede ya no existe
     // en el catálogo, la entrada queda INTACTA: es el camino reprogramada/
     // cancelada que los avisos marcan con badge y salida — nunca un swap mudo.
-    const live=(films||[]).find(f=>f.title===e._title&&f.day===e.day&&f.time===e.time
-      &&(!e.venue||!f.venue||f.venue===e.venue));
+    const live=(films||[]).find(f=>sameEntry(f, e));
     if(!live) return e;
     const out={...live,_title:e._title};
     if(e._squeezed) out._squeezed=e._squeezed;
@@ -456,24 +483,30 @@ export function syncScheduleWithCatalog(schedule, films){
 // Devuelve {ok, violations:[{kind, title, with?}]} — kinds:
 //   'conflicto'  — dos entradas no-squeezed en conflicto real
 //   'cancelada'  — entrada cuya función está _cancelled
-//   'duplicado'  — el mismo título dos veces
+//   'duplicado'  — la MISMA ENTRADA dos veces (título+día+hora+sede)
 //   'pasada'     — (opt-in checkPassed) función ya pasada al momento de armar
 export function verifyPlan(schedule, opts){
   const v=[];
   const list=schedule||[];
-  const seen=new Set();
   list.forEach(s=>{
     const t=s._title||s.title||'';
-    // is_recurring (taller multi-día): el plan lleva TODAS sus sesiones a
-    // propósito — mismo título N veces es lo correcto, no un duplicado.
-    if(seen.has(t)&&!s.is_recurring) v.push({kind:'duplicado', title:t});
-    seen.add(t);
     if(s._cancelled) v.push({kind:'cancelada', title:t});
     if(opts&&opts.checkPassed&&screeningPassed(s)) v.push({kind:'pasada', title:t});
   });
   for(let i=0;i<list.length;i++){
     for(let j=i+1;j<list.length;j++){
       const a=list[i], b=list[j];
+      // DUPLICADO — por IDENTIDAD DE ENTRADA, vía sameEntry (el dueño único),
+      // no por título. Antes bastaba con repetir el título para ser duplicado,
+      // y is_recurring era el permiso que salvaba a los talleres. Esa regla ya
+      // no distingue: un plan legítimo con la misma obra en DOS funciones —lo
+      // que el usuario puede pedir a propósito— salía marcado igual que un plan
+      // con la MISMA función dos veces, que sí es corrupción. Un guardián que
+      // grita siempre no avisa nunca. Con identidad de entrada, el permiso de
+      // is_recurring sobra: las sesiones de un taller ya tienen día distinto.
+      // El `continue` evita el eco: dos entradas idénticas también «chocan»
+      // consigo mismas y reportarlo dos veces enmascara el hallazgo real.
+      if(sameEntry(a,b)){ v.push({kind:'duplicado', title:a._title||a.title||'', day:a.day, time:a.time}); continue; }
       if(a._squeezed||b._squeezed) continue;
       if(screensConflict(a,b)) v.push({kind:'conflicto', title:a._title||a.title, with:b._title||b.title});
     }

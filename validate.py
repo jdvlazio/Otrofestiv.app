@@ -71,8 +71,41 @@ content = open(INDEX_HTML, encoding='utf-8').read()
 # funcionando, se inyecta main.js donde estaba el bloque inline — el `content`
 # en memoria queda "as if inline". Los checks no requieren cambios.
 _MAIN_JS = 'src/main.js'
+# EL SHIM ESTABA INCOMPLETO Y POR ESO 7 GUARDIANES QUEDARON CIEGOS (auditoria de
+# guardianes, 25 ago 2026). La Fase 8 inyectaba SOLO main.js y anoto «los checks
+# no requieren cambios» — pero el codigo se partio en 37 modulos y el territorio
+# real paso a ser src/view y src/controller. Los checks que leen `content`
+# seguian mirando index.html + main.js: event-delegation no veia los 98
+# data-action de view/controller (un typo = boton muerto, en verde); shadow-t
+# vigilaba 1 de 467 llamadas a t(). Se plantaron 8 bugs reales en src/ y validate
+# dio verde en los 8.
+# Ahora el shim inyecta TODOS los modulos: `content` vuelve a representar el
+# codigo de la app, que es lo que el shim prometia desde el principio.
+# El DICCIONARIO no es territorio: es la referencia contra la que se compara.
+# Inyectarlo hacia que [i18n-hardcoded] viera sus propios 425 valores como
+# «strings hardcodeados en JS» — el guardian acusandose a si mismo.
+# Ni el DICCIONARIO ni el ADAPTADOR son territorio: son las referencias contra
+# las que cada check compara. Inyectarlos hacia que se acusaran a si mismos —
+# i18n-hardcoded veia sus propios 425 valores como «strings en JS», y
+# storage-encapsulation veia los localStorage legitimos del adaptador.
+# LOS DUEÑOS NO SON TERRITORIO. Cada uno de estos archivos ES la referencia
+# contra la que compara algun check; inyectarlos los hace acusarse a si mismos:
+#   i18n.js        → i18n-hardcoded veia sus 425 valores como «strings en JS»
+#   storage.js     → storage-encapsulation veia los localStorage del adaptador
+#   viewstate.js   → viewstate-shadow veia las declaraciones del propio bridge
+#   state-bridge.js→ idem para state-mirror
+_SRC_NO_INYECTAR = {_MAIN_JS, 'src/i18n/i18n.js', 'src/storage/storage.js',
+                    'src/state/viewstate.js', 'src/state/state-bridge.js'}
+_SRC_MODS = sorted(
+    os.path.join(_r, _f)
+    for _r, _d, _fs in os.walk('src') for _f in _fs
+    if _f.endswith('.js') and os.path.join(_r, _f).replace(os.sep, '/') not in _SRC_NO_INYECTAR
+)
+_SRC_EXTRA = '\n'.join(
+    '\n/* ---- ' + _m + ' ---- */\n' + open(_m, encoding='utf-8').read() for _m in _SRC_MODS
+)
 if os.path.exists(_MAIN_JS):
-    _main_src = open(_MAIN_JS, encoding='utf-8').read()
+    _main_src = open(_MAIN_JS, encoding='utf-8').read() + '\n' + _SRC_EXTRA
     # El src de main.js lleva ?v=BUILD (cache-busting del fix iOS) — matchear con o
     # sin el query para que la inyección siga funcionando en cada build. Replacement
     # como función para no interpretar backslashes del código JS como group refs.
@@ -128,54 +161,53 @@ script = content[script_start:script_end]
 # ── CHECK 1: Shadow variable t= ───────────────────────────────────────────────
 # Detecta funciones donde una variable local llamada `t` (o arrow param `t=>`)
 # pisa la función global t() de i18n — causó 3 bugs esta semana.
+# ── [shadow-t] RESTITUIDO con territorio completo (30 ago 2026) ───────────────
+# Se habia BORRADO el 25 ago con dos razones. La primera era cierta: estaba CIEGO
+# —miraba solo main.js, no src/view ni src/controller, donde vive el codigo desde
+# la Fase 8—. La segunda era FALSA: «la clase de bug NO OCURRE, cero sombreados
+# llaman t() adentro». La medicion estaba mal. Con el territorio completo hay
+# UNO, y es el que reventaba: sheets-controller.js hacia
+# `[...prioritized].map(t=>{ … t('misc_cambiar') … })`, asi que la hoja del tope
+# de prioridades moria con «t is not a function» ANTES del classList.add('open').
+# No abria NUNCA, en todos los festivales, y el usuario se pasaba del tope porque
+# lo que debia frenarlo se caia. Lo encontro un recorrido de usuario, no un test.
+# LECCION: un guardian ciego se REAPUNTA, no se borra — y la medicion que
+# justifica un borrado se verifica igual que un arreglo.
+#
+# Busca el patron REAL, no cualquier sombreado: un binding local llamado `t`
+# (parametro de arrow o const/let) que en su cuerpo llame `t('clave')`. Los ~42
+# sombreados inofensivos —los que NO llaman t() adentro— no se reportan: un
+# guardian que grita 42 veces por un bug no avisa de nada.
 check = 'shadow-t'
-func_matches = list(re.finditer(r'\nfunction (\w+)\s*\(', script))
-shadow_found = []
+try:
+    import re as _sh
+    _mal = []
+    for _r, _d, _fs in os.walk('src'):
+        for _f in _fs:
+            if not _f.endswith('.js'):
+                continue
+            _p = os.path.join(_r, _f)
+            _ls = open(_p, encoding='utf-8').read().split('\n')
+            for _i, _ln in enumerate(_ls):
+                if not _sh.search(r'\.(map|forEach|filter|find|some|every)\(\s*t\s*=>'
+                                  r'|\bconst\s+t\s*=|\blet\s+t\s*=|\(\s*t\s*\)\s*=>', _ln):
+                    continue
+                _prof = 0
+                for _j in range(_i, min(_i + 60, len(_ls))):
+                    _seg = _ls[_j][_ls[_j].find('=>') + 2:] if _j == _i else _ls[_j]
+                    _prof += _seg.count('{') - _seg.count('}')
+                    if _j > _i and _sh.search(r"[^\w.'\"]t\(\s*['\"]", _seg):
+                        _mal.append(f'{_p}:{_i+1} sombrea `t` y en L{_j+1} llama t(\'clave\')')
+                        break
+                    if _j > _i and _prof <= 0:
+                        break
+    if _mal:
+        fail(check, 'la t() de i18n queda pisada y se la llama igual: ' + ' · '.join(_mal[:3]))
+    else:
+        ok(check, 'ningun binding local `t` pisa la t() de i18n y la llama adentro')
+except Exception as _e:
+    warn(check, f'no se pudo verificar shadow-t: {_e}')
 
-for i, m in enumerate(func_matches):
-    fn_name = m.group(1)
-    start   = m.start()
-    end     = func_matches[i+1].start() if i+1 < len(func_matches) else len(script)
-    body    = script[start:end]
-
-    # Arrow callback con t como param + t() llamado dentro del mismo bloque
-    for arrow_m in re.finditer(r'(?:[.(,\s])\bt\b\s*=>\s*\{', body):
-        # Extraer solo el cuerpo del bloque { } del callback
-        brace_start = body.find('{', arrow_m.end()-1)
-        if brace_start == -1: continue
-        depth, i = 1, brace_start + 1
-        while i < len(body) and depth > 0:
-            if body[i] == '{': depth += 1
-            elif body[i] == '}': depth -= 1
-            i += 1
-        cb_text = body[brace_start:i]
-        if re.search(r"\bt\s*\('[^']*'\)", cb_text):
-            shadow_found.append(f'{fn_name}() — arrow param t=> con t() en callback')
-
-    # Destructuring ({t,...})=> en callbacks de array — {t,f} sombrea t()
-    # Solo detecta cuando es parámetro de arrow function: ({t,...})=>
-    for destr_m in re.finditer(r'\(\{([^}]{1,40})\}\s*(?:,[^)]*)?\)\s*=>', body):
-        params = destr_m.group(1)
-        if re.search(r'(?<![:\w])t(?![:\w])', params):
-            cb_text = body[destr_m.end():destr_m.end()+500]
-            if re.search(r"\bt\('[^']*'\)", cb_text):
-                shadow_found.append(f'{fn_name}() — destructuring {{t}} en arrow fn sombrea t() — usar {{t:title}}')
-
-    # const t = ... + t() llamado después
-    for decl_m in re.finditer(r'\bconst\s+t\s*=(?!\s*t\()', body):
-        if re.search(r"\bt\('[^']*'\)", body[decl_m.end():]):
-            shadow_found.append(f'{fn_name}() — const t= con t() en mismo scope')
-
-if shadow_found:
-    for s in shadow_found:
-        fail(check, s)
-    fail(check, 'Convención: usar titleStr como param de callbacks, nunca t=')
-else:
-    ok(check, '0 shadow variable t= risks en todas las funciones')
-
-# ── CHECK 2: _SCHED_PURE_FNS existen en main thread ──────────────────────────
-# Si una función se renombra o elimina del main thread pero sigue en la lista,
-# el Worker se construye con un fragmento undefined.
 check = 'sched-pure-fns'
 _sched_hay = content + _calc_src  # p8 7a: _SCHED_PURE_FNS vive en controller/calc.js
 sched_start = _sched_hay.find('const _SCHED_PURE_FNS = [')
@@ -573,10 +605,20 @@ try:
     es_keys = _parse_i18n(_extract_lang_block(i18n_block, 'es'))
     en_keys = _parse_i18n(_extract_lang_block(i18n_block, 'en'))
 
-    # All t('key') calls — en el script (main.js inyectado) Y en i18n.js
-    # (_applyI18nDOM llama t() con keys hardcodeadas).
-    script_part = content[content.find('<script>'):content.rfind('</script>')]
-    all_t_calls = set(re.findall(r"t\('([a-z][a-z0-9_]+)'\)", script_part + '\n' + _i18n_src))
+    # All t('key') calls. OJO — ESTE CHECK ESTUVO CIEGO (25 ago 2026): miraba
+    # solo el <script> de index.html y el propio i18n.js, pero la Fase 8 se llevó
+    # TODAS las llamadas a t() a src/**. Verificaba 4 claves de cientos, y dejó
+    # pasar a producción un diálogo entero con las claves ES/EN ausentes: t() cae
+    # al nombre de la clave y el botón habría dicho «plan_verla_otra_vez».
+    # Su hermano [i18n-parity] tampoco lo cazó: compara ES contra EN, y las
+    # claves faltaban en AMBOS, así que la paridad se cumplía. Ahora barre src/.
+    _fuentes = [content[content.find('<script>'):content.rfind('</script>')], _i18n_src]
+    for _r, _d, _fs in os.walk('src'):
+        for _f in _fs:
+            if _f.endswith('.js'):
+                _fuentes.append(open(os.path.join(_r, _f), encoding='utf-8').read())
+    # t('clave') y t('clave', {…}) — la forma con params también cuenta
+    all_t_calls = set(re.findall(r"\bt\(\s*'([a-z][a-z0-9_]+)'\s*[,)]", '\n'.join(_fuentes)))
     # Filter out non-i18n false positives (CSS selectors, HTML tags, etc.)
     NON_KEYS = {'div','span','button','img','input','p','a','svg','ul','li','err','ok'}
     real_keys = {k for k in all_t_calls if k not in NON_KEYS and len(k) > 3 and '_' in k}
@@ -748,9 +790,56 @@ try:
     SPANISH_ACCENT = set('áéíóúñÁÉÍÓÚÑ')
     import re as _re3
 
+    # Strings que son DATO de festival, no copy de UI: nombres de sección (regla
+    # «secciones tal cual»: verbatim, jamás traducidos), sedes y ciudades. Se
+    # derivan de festivals/*.json en vez de mantenerse a mano — SAFE_LINE_MARKERS
+    # arriba es el fósil de esa época y acumula strings de festivales archivados.
+    # Sin esto, cada festival nuevo consumía cupos de aviso con falsos positivos.
+    _dataStr = set()
+    try:
+        import glob as _g3, json as _j3
+        for _fp3 in _g3.glob('festivals/*.json'):
+            try:
+                _d3 = _j3.load(open(_fp3, encoding='utf-8'))
+            except Exception:
+                continue
+            def _eat(v):
+                if isinstance(v, str) and v.strip():
+                    _dataStr.add(v.strip())
+                    # los emisores prefijan emoji: «🌱 Pequeñas Perspectivas»
+                    _dataStr.add(_re3.sub(r'^[^\w¡¿]+', '', v).strip())
+            for _it3 in (_d3.get('films') or []) + (_d3.get('screenings') or []):
+                if not isinstance(_it3, dict):
+                    continue
+                for _k3 in ('section', 'seccion', 'venue', 'sala', 'city', 'ciudad'):
+                    _eat(_it3.get(_k3))
+            for _k3 in ('sections', 'venues', 'cities'):
+                _v3 = _d3.get(_k3)
+                if isinstance(_v3, list):
+                    for _e3 in _v3:
+                        _eat(_e3 if isinstance(_e3, str) else (_e3 or {}).get('name'))
+    except Exception:
+        pass
+
+    # src/config.js es el módulo de DECLARACIONES (FESTIVAL_CONFIG, FESTIVAL_DATES,
+    # palmarés): todo lo que hay ahí es dato de festival —nombres, fechas, premios—
+    # y nada de eso pasa por t() por diseño. Aportaba 93 de 103 avisos: con el tope
+    # de 8 que tenía este check, esos falsos positivos SEPULTABAN los hallazgos
+    # reales de view/controller/domain. Se excluye por archivo, no por strings a
+    # mano (que es lo que hacía SAFE_LINE_MARKERS y no escalaba con cada festival).
+    _cfgSrc = ''
+    try:
+        _cfgSrc = open('src/config.js', encoding='utf-8').read()
+    except Exception:
+        pass
+    _cfgLines = {l.strip() for l in _cfgSrc.split('\n') if l.strip()}
+
     # Extract only lines with Spanish chars from JS code
     dynamic_found = []
+    _seen_dyn = set()
     for lnum, line in enumerate(code_no_comments.split('\n'), 1):
+        if line.strip() in _cfgLines:
+            continue
         if not any(c in line for c in SPANISH_ACCENT):
             continue
         if any(m in line for m in SAFE_LINE_MARKERS):
@@ -768,16 +857,35 @@ try:
                 continue  # likely a key, not UI text
             if text in _es_vals:
                 continue  # ya en diccionario — lo cubre el reverse-check (FAIL)
+            if text in _dataStr or _re3.sub(r'^[^\w¡¿]+', '', text).strip() in _dataStr:
+                continue  # nombre de sección/sede/ciudad: dato del festival, no copy
+            # Detrás de una clave de DATO nunca hay copy de UI (el copy vive en
+            # i18n.js). Palmarés, catálogos y config declaran datos con estas
+            # claves: exentar por estructura, no por lista de strings a mano.
+            _pre = line[max(0, m.start() - 60):m.start()]
+            if _re3.search(r'(?:categoria|category|titulo|title|autoria|author|'
+                           r'obra|premio|award|section|seccion|venue|sala|city|'
+                           r'ciudad|name|nombre|director|fest|id|key|slug)'
+                           r'["\']?\s*:\s*$', _pre):
+                continue
             # Skip if t() appears right before the quote
             pos = m.start()
             before = line[max(0, pos-3):pos]
             if before.endswith("t("):
                 continue
-            dynamic_found.append(f'L{lnum}: "{text[:55]}"')
+            # el shim concatena main.js dos veces en `content`: deduplicar por
+            # texto para no reportar el mismo hallazgo dos veces
+            _entry = f'L{lnum}: "{text[:55]}"'
+            if text not in _seen_dyn:
+                _seen_dyn.add(text)
+                dynamic_found.append(_entry)
 
     if dynamic_found:
-        for item in dynamic_found[:8]:
+        for item in dynamic_found[:12]:
             warn('i18n-dynamic', f'Posible string ES sin t(): {item}')
+        if len(dynamic_found) > 12:
+            # un tope que calla lo que recorta convierte el aviso #13 en invisible
+            warn('i18n-dynamic', f'… y {len(dynamic_found) - 12} más no listados')
 
 except Exception as e:
     warn(check, f'no se pudo verificar hardcoding: {e}')
@@ -808,24 +916,62 @@ except Exception as e:
     warn(check, f'no se pudo verificar tasks: {e}')
 
 check = 'js-syntax'
+# ESTE CHEQUEO FUE UN SELLO VERDE INCONDICIONAL (auditoría de guardianes,
+# 25 ago 2026). Dos fallas encadenadas:
+#   1. `node --check archivo.js` trata el archivo como CommonJS. Ante un módulo
+#      ESM se rinde y devuelve exit 0 SIEMPRE — incluso con `const a = ;` dentro.
+#      Comprobado: `printf "import x from 'y';\nconst a = ;" > t.js` → exit 0.
+#      Se arregla con `.mjs` (o --input-type=module), que sí parsea de verdad.
+#   2. Miraba solo el <script> mayor de index.html. La Fase 8 se llevó el JS a
+#      src/**: el territorio real quedó sin vigilar.
+# Por qué importa: un error de sintaxis en CUALQUIER módulo mata la app entera
+# al boot — es el «splash vacío sin errores» del grafo ESM (ver [boot-esm-torn]).
+# Creíamos tener paracaídas y era una mochila vacía.
+def _err_util(_stderr):
+    # Node imprime el volcado y CIERRA con «Node.js v22.x» — tomar la última
+    # línea daba un mensaje inútil («Node.js v22.18.0»). La que informa es la
+    # del SyntaxError, con su número de línea.
+    _ls = [l.strip() for l in _stderr.strip().split(chr(10)) if l.strip()]
+    _e = next((l for l in _ls if 'Error' in l), '')
+    _loc = next((l for l in _ls if ':' in l and l.split(':')[-1].strip().isdigit()), '')
+    return ((_loc.split('/')[-1] + ' ') if _loc else '') + (_e or _ls[-1] if _ls else '?')
+
 try:
     import subprocess, tempfile
-    # Extract main script (largest <script> block)
-    scripts = re.findall(r'<script[^>]*>(.*?)</script>', content, re.DOTALL)
-    main_js = max(scripts, key=len) if scripts else ''
-    if main_js:
-        with tempfile.NamedTemporaryFile(suffix='.js', mode='w', delete=False, encoding='utf-8') as f:
-            f.write(main_js)
-            tmppath = f.name
-        result = subprocess.run(['node', '--check', tmppath], capture_output=True)
-        os.unlink(tmppath)
-        if result.returncode != 0:
-            err = result.stderr.decode()[:200]
-            fail(check, f'error de sintaxis JS: {err}')
-        else:
-            ok(check, 'sintaxis JS válida (Node.js --check)')
+    _fuentes = []
+    for _r, _d, _fs in os.walk('src'):
+        for _f in _fs:
+            if _f.endswith('.js'):
+                _fuentes.append(os.path.join(_r, _f))
+    # OJO: `content` es una CONCATENACIÓN sintética (index.html + main.js
+    # inyectado) que arma este script para otros chequeos. Parsearla como si
+    # fuera un archivo no significa nada — hay que leer el index.html REAL.
+    _idx_real = open(INDEX_HTML, encoding='utf-8').read()
+    _scripts = re.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>', _idx_real, re.DOTALL)
+    _inline = max(_scripts, key=len) if _scripts else ''
+    _malos = []
+    for _src in _fuentes:
+        # .mjs: sin esto Node lo lee como CommonJS y aprueba cualquier cosa.
+        with tempfile.NamedTemporaryFile(suffix='.mjs', mode='w', delete=False, encoding='utf-8') as _tf:
+            _tf.write(open(_src, encoding='utf-8').read())
+            _tp = _tf.name
+        _r2 = subprocess.run(['node', '--check', _tp], capture_output=True)
+        os.unlink(_tp)
+        if _r2.returncode != 0:
+            _malos.append(f'{_src}: ' + _err_util(_r2.stderr.decode()))
+    # El inline de index.html es script CLÁSICO (no módulo): .js es lo correcto,
+    # y ahí `node --check` sí detecta errores de verdad (probado).
+    if _inline.strip():
+        with tempfile.NamedTemporaryFile(suffix='.js', mode='w', delete=False, encoding='utf-8') as _tf:
+            _tf.write(_inline); _tp = _tf.name
+        _r2 = subprocess.run(['node', '--check', _tp], capture_output=True)
+        os.unlink(_tp)
+        if _r2.returncode != 0:
+            _malos.append('index.html <script>: ' + _err_util(_r2.stderr.decode()))
+    if _malos:
+        fail(check, 'error de sintaxis JS (mata la app al boot): ' + ' · '.join(_malos[:3]))
     else:
-        warn(check, 'no se encontró bloque <script> para validar')
+        ok(check, f'sintaxis ESM válida en {len(_fuentes)} módulos de src/ + el inline de index.html')
 except FileNotFoundError:
     warn(check, 'Node.js no disponible — skip sintaxis JS')
 
@@ -851,7 +997,13 @@ try:
     for key, placeholders in keys_with_placeholders.items():
         # Buscar todas las llamadas a t('key') — con o sin parámetros
         all_calls = _re_interp.findall(rf"t\('{key}'([^)]*)\)", script_part)
-        bare_calls = [c for c in all_calls if c.strip() == '']
+        # `t('clave')` seguido de `.replace('{n}', …)` TAMBIEN sustituye — el
+        # placeholder no queda literal, que es lo unico que este check protege.
+        # Sin este matiz acusaba a ics_success, palm_viste y palm_resumen, que
+        # sustituyen a mano y se ven bien en pantalla (auditoria 25 ago 2026).
+        _con_replace = set(_re_interp.findall(rf"t\('{key}'\)\s*\.replace\(", script_part))
+        _bare_sin_replace = len(_re_interp.findall(rf"t\('{key}'\)(?!\s*\.replace\()", script_part))
+        bare_calls = [c for c in all_calls if c.strip() == ''][:_bare_sin_replace]
         if bare_calls:
             interp_errors.append(
                 f"t('{key}') llamado sin params pero la key contiene {{{','.join(placeholders)}}} — "
@@ -1093,8 +1245,15 @@ try:
 
     for _name in _roster:
         # let/const/var <name>  |  let a=.., <name>  (multi-decl, name no primero)
+        # La parte de «declaracion multiple» (let a=1, b=2) NO puede cruzar
+        # parentesis ni corchetes, y el nombre tiene que ir SEGUIDO de = ; o ,
+        # para contar como declaracion. Sin eso, `const _visDays=new Set([
+        # DAY_KEYS[vs],DAY_KEYS[ve]])` se leia como si declarara DAY_KEYS (la coma
+        # del array hacia de separador) y `const totalDays=Math.max(1,DAY_KEYS.length)`
+        # igual. Falsos positivos que aparecieron apenas el check empezo a ver todo
+        # el codigo (auditoria de guardianes, 25 ago 2026).
         _re_decl = _re.compile(
-            r'\b(?:let|const|var)\s+(?:[\w$]+\s*(?:=[^,;]*?)?\s*,\s*)*' + _re.escape(_name) + r'\b'
+            r'\b(?:let|const|var)\s+(?:[\w$]+\s*(?:=[^,;()\[\]{}]*?)?\s*,\s*)*' + _re.escape(_name) + r'\s*[=;,]'
         )
         for _i, _line in enumerate(_lines, 1):
             _st = _line.lstrip()
@@ -1171,7 +1330,7 @@ try:
     _main_lines = _main_src.split('\n')
     for _name in _vs_keys:
         _re_decl = _re.compile(
-            r'\b(?:let|const|var)\s+(?:[\w$]+\s*(?:=[^,;]*?)?\s*,\s*)*' + _re.escape(_name) + r'\b'
+            r'\b(?:let|const|var)\s+(?:[\w$]+\s*(?:=[^,;()\[\]{}]*?)?\s*,\s*)*' + _re.escape(_name) + r'\s*[=;,]'
         )
         for _i, _line in enumerate(_main_lines, 1):
             _st = _line.lstrip()
@@ -1612,6 +1771,109 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar dom-ready-guard: {_e}')
 
+# ── CHECK: [ciudad-separada] ──────────────────────────────────────────────────
+# La CIUDAD vive DENTRO de la frase de sede (auditoría 18 ago 2026: con
+# display:block partía la frase en tres renglones y dejaba el punto huérfano).
+# Al volverse inline, el separador « · » se volvió obligatorio — y se le puso a
+# dos de los tres emisores. El tercero (la lista del Programa) quedó pegando la
+# ciudad al nombre de la sede: «Centro Colombo AmericanoMedellín», en TODOS los
+# festivales multiciudad, hasta que Juan lo vio el 25 ago. Este check exige que
+# todo <span class="plist-city"> venga precedido de un separador.
+check = 'ciudad-separada'
+try:
+    import re as _re4
+    _malos = []
+    for _root, _dirs, _files in os.walk('src'):
+        for _fn in _files:
+            if not _fn.endswith('.js'): continue
+            _fp = os.path.join(_root, _fn)
+            _txt = open(_fp, encoding='utf-8').read()
+            for _m in _re4.finditer(r'<span class="plist-city">', _txt):
+                # los ~14 chars previos deben traer un separador (· o -) o un <br>
+                _antes = _txt[max(0, _m.start() - 14):_m.start()]
+                if ('\u00b7' not in _antes) and ('&middot;' not in _antes) and ('<br' not in _antes):
+                    _ln = _txt[:_m.start()].count('\n') + 1
+                    _malos.append(f'{_fp}:{_ln}')
+    if _malos:
+        fail(check, 'ciudad pegada a la sede — falta el separador « · » antes de <span class="plist-city">: ' + ', '.join(_malos))
+    else:
+        ok(check, 'la ciudad va separada de la sede en todos los emisores')
+except Exception as _e:
+    warn(check, f'no se pudo verificar ciudad-separada: {_e}')
+
+# ── CHECK: [refresco-huella-cruda] ────────────────────────────────────────────
+# La ingesta MUTA el JSON recién bajado (explodeScreenings devuelve los MISMOS
+# objetos que data.films; la duración de programas, sealSharedSlots y NOTICES
+# escriben sobre él). Si la huella del refresco en caliente se toma DESPUÉS de
+# esas mutaciones, nunca vuelve a coincidir con la de un JSON fresco y el
+# refresco cree ver un cambio en cada tick: los pósters titilan (Juan lo vio en
+# su teléfono, 24 ago 2026). La huella y la copia cruda van ANTES de todo.
+check = 'refresco-huella-cruda'
+try:
+    _ld = open('src/controller/loader.js', encoding='utf-8').read()
+    _i = _ld.find('export function _ingerirDatosFestival')
+    if _i < 0:
+        fail(check, 'no existe _ingerirDatosFestival — el dueño único de la ingesta desapareció')
+    else:
+        _cuerpo = _ld[_i:_ld.find('\nexport ', _i + 10)]
+        # SIN COMENTARIOS: el porqué de este check NOMBRA a explodeScreenings y a
+        # sealSharedSlots, así que buscar sobre el texto crudo encontraba la
+        # mención en la prosa y acusaba al código ya arreglado. Un guardián tiene
+        # que mirar código, no su propia explicación.
+        _codigo = '\n'.join(_l for _l in _cuerpo.split('\n') if not _l.lstrip().startswith('//'))
+        _pos_hash = _codigo.find('_rawHash')
+        _pos_mut  = min([p for p in (_codigo.find('explodeScreenings'), _codigo.find('sealSharedSlots')) if p > 0] or [-1])
+        if _pos_hash < 0:
+            fail(check, 'la ingesta ya no toma la huella cruda (_rawHash) — el refresco quedaría ciego')
+        elif _pos_mut > 0 and _pos_hash > _pos_mut:
+            fail(check, 'la huella (_rawHash) se toma DESPUÉS de mutar el JSON — el refresco verá un cambio en cada tick y los pósters van a titilar')
+        elif 'cfg._rawFilms=data.films' in _codigo.replace(' ', ''):
+            fail(check, '_rawFilms guarda la REFERENCIA al JSON que la ingesta muta — el lado viejo del diff se inventará cambios; debe ser copia')
+        else:
+            ok(check, 'la huella y la copia crudas se toman antes de que la ingesta mute el JSON')
+except Exception as _e:
+    warn(check, f'no se pudo verificar refresco-huella-cruda: {_e}')
+
+# ── CHECK: [update-canales-sin-sw] ────────────────────────────────────────────
+# Los 4 canales de version.json (cold start, visibilitychange, online, poll) NO
+# dependen del service worker: son fetch + location.href. Vivieron años dentro
+# de if('serviceWorker' in navigator) → el wrapper iOS (WKWebView sin
+# WKAppBoundDomains, SIN esa API) quedaba sin NINGÚN mecanismo de actualización
+# (24 ago 2026: el palmarés de FINCA no llegaba con la app en la mano). Este
+# check prohíbe que los canales vuelvan a caer dentro de un guard de SW, y exige
+# que existan. Cazado también por T102 (Playwright, borra la API de verdad).
+check = 'update-canales-sin-sw'
+try:
+    import re as _re3
+    _mainjs = open('src/main.js', encoding='utf-8').read()
+    # Marcadores EJECUTABLES, no comentarios: '_checkVersionJson({offer:true})'
+    # es la llamada del poll (canal #4) — 'updPoll' era mal marcador, vive
+    # también en comentarios y sobrevivía a la muerte del canal.
+    _CANALES = ['_checkVersionJson(', '_offerUpdate(', '_checkVersionJson({offer:true})']
+    _faltan = [c for c in _CANALES if c not in _mainjs]
+    _presos = []
+    for _m in _re3.finditer(r"if\s*\(\s*(?:'serviceWorker'\s+in\s+navigator|_HAS_SW)\s*\)\s*\{", _mainjs):
+        _d = 0; _i = _m.end() - 1
+        while _i < len(_mainjs):
+            if _mainjs[_i] == '{': _d += 1
+            elif _mainjs[_i] == '}':
+                _d -= 1
+                if _d == 0: break
+            _i += 1
+        _bloque = _mainjs[_m.start():_i]
+        for _c in _CANALES + ['setInterval(', "addEventListener('visibilitychange'", "addEventListener('online'"]:
+            if _c in _bloque:
+                _ln = _mainjs[:_m.start()].count('\n') + 1
+                _presos.append(f'{_c} dentro del guard de SW (linea {_ln})')
+    if _faltan:
+        fail(check, 'canal(es) de version.json AUSENTES de src/main.js (iOS sin update): ' + ', '.join(_faltan))
+    elif _presos:
+        fail(check, 'canal(es) de version.json PRESOS del guard de SW — el wrapper iOS no tiene esa API y se queda sin updates: ' + '; '.join(_presos))
+    else:
+        ok(check, 'los 4 canales de version.json viven fuera del guard de SW (el wrapper iOS los corre)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar update-canales-sin-sw: {_e}')
+
 # ── CHECK: [synopsis-helper] ──────────────────────────────────────────────────
 # REGLA: la sinopsis localizada se resuelve SOLO vía locSynopsis(f) (src/i18n/i18n.js).
 # Prohibido rehacer a mano el ternario `_lang==='en'?...synopsis_en...` en view/
@@ -1814,9 +2076,15 @@ try:
     _es_end = _i18n.find('"plan_hint_opciones": "Tap')
     _es = _i18n[:_es_end] if _es_end > 0 else _i18n
     import re as _re
-    _TUTEO = [r'"[^"]*Ingresa', r'"[^"]*Ajusta', r'"[^"]*Permite el',
-              r'"[^"]*Agrega(?!́)', r'"[^"]*Marca(?!́)', r'"[^"]*terminas',
-              r'"[^"]*Añad', r'"[^"]*añad']
+    # LOS \b DE ESTOS PATRONES FUERON BYTES 0x08 (BACKSPACE) LITERALES desde que
+    # el check nacio hasta el 25 ago 2026: un heredoc interpreto el escape al
+    # escribirlo. Un regex que exige un backspace literal no matchea NUNCA — el
+    # guardian estuvo verde toda su vida sin vigilar nada (auditoria de
+    # guardianes, lote 1). Si editas estos patrones, hacelo con un editor que
+    # muestre escapes, y muta («Ingresa tu correo» en el bloque ES) al terminar.
+    _TUTEO = [r'"[^"]*\bIngresa\b', r'"[^"]*\bAjusta\b', r'"[^"]*\bPermite el\b',
+              r'"[^"]*\bAgrega\b(?!́)', r'"[^"]*\bMarca\b(?!́)', r'"[^"]*\bterminas\b',
+              r'"[^"]*\bAñad', r'"[^"]*\bañad']
     _v = []
     for _pat in _TUTEO:
         for _m in _re.finditer(_pat, _es):
@@ -1885,10 +2153,19 @@ except Exception as _e:
 # usuario aprende dos veces. Ver docs/DESIGN.md §8.4.4.
 check = 'aviso-antes-sinopsis'
 try:
-    _src = open('src/controller/sheets-controller.js', encoding='utf-8').read()
+    # DOS ARREGLOS DE LA AUDITORÍA (25 ago 2026, lote 1):
+    #  1. Buscaba 'meta-banner-label' — una clase que NINGÚN emisor usa (solo
+    #     existe como CSS muerto): los banners reales llevan 'meta-banner'. Un
+    #     banner real tras la sinopsis pasaba en verde.
+    #  2. Solo leía sheets-controller.js; agenda.js también emite meta-banner.
     _mal = []
+    _fuentes_avso = ['src/controller/sheets-controller.js', 'src/view/agenda.js']
+    _src = '\n'.join(open(_f, encoding='utf-8').read() for _f in _fuentes_avso)
     for _blk in _src.split('document.getElementById('):
-        _ib = _blk.find('meta-banner-label')
+        # rfind: si en el bloque hay un banner ANTES de la sinopsis (legítimo) y
+        # otro DESPUÉS (el bug), find() veía solo el primero y aprobaba. Lo que
+        # importa es el ÚLTIMO banner del bloque.
+        _ib = _blk.rfind('meta-banner')
         _is = _blk.find('pel-sheet-synopsis')
         if _ib != -1 and _is != -1 and _ib > _is:
             _mal.append(_blk[:60].strip().replace('\n', ' '))
@@ -2014,10 +2291,17 @@ except Exception as _e:
 # Reporte Juan 18 jul 2026: duración/director/año de la ficha en #555 eran
 # ilegibles sobre el tinte ambiental. Regla: lo que se LEE para decidir
 # (metadata de obra) va en --gray o más claro; --gray2 es UI pasiva.
+# Ampliado 3 sep 2026 (auditorías A-7 y A-3) con dos salidas que se leen para
+# ACTUAR, no solo para decidir: el escape de la hoja de ciudad medía 2,30 y el
+# enlace de Letterboxd 1,54. Se re-apunta este guardián en vez de crear otro:
+# la regla «esto no va en --gray2» ya tiene dueño. Ojo: acá el estático no
+# alcanza —el enlace de LB vive bajo una opacidad que ningún grep ve—, así que
+# el contraste PINTADO lo mide T166.
 check = 'sheet-meta-legible'
 try:
     _html = open('index.html', encoding='utf-8').read()
-    _INFO = ['.pel-sheet-flags-dur{', '.pel-sheet-metaline{', '.rating-title{']
+    _INFO = ['.pel-sheet-flags-dur{', '.pel-sheet-metaline{', '.rating-title{',
+             '.lugar-opt.escape{', '.c-lb-text{']
     _bad = []
     for _sel in _INFO:
         _i = _html.find(_sel)
@@ -2029,7 +2313,7 @@ try:
     if _bad:
         fail(check, 'metadata informativa degradada: ' + '; '.join(_bad))
     else:
-        ok(check, 'duración/director/año de la ficha en --gray o más claro')
+        ok(check, f'{len(_INFO)} superficies de lectura en --gray o más claro')
 except Exception as _e:
     warn(check, f'no se pudo verificar sheet-meta-legible: {_e}')
 
@@ -2403,7 +2687,9 @@ check = 'cancelada-no-difumina'
 try:
     import re as _re
     _html = open('index.html', encoding='utf-8').read()
-    _prog = open('src/view/programa.js', encoding='utf-8').read()
+    # agenda.js también pinta canceladas (auditoría 25 ago, lote 1): el mismo
+    # `_cancelled ? opacity` plantado allá pasaba en verde.
+    _prog = open('src/view/programa.js', encoding='utf-8').read() + '\n' + open('src/view/agenda.js', encoding='utf-8').read()
     _errs = []
 
     _m = _re.search(r'^\.poster-past-badge\{([^}]*)\}', _html, _re.M)
@@ -2438,6 +2724,58 @@ try:
         ok(check, 'el badge se ancla a la retícula y cancelada se dice en gris, no difuminada')
 except Exception as _e:
     warn(check, f'no se pudo verificar cancelada-no-difumina: {_e}')
+
+def _re_fecha(k):
+    """¿La clave de día es una fecha ISO? Leviza y otros legacy usan rótulos
+    ('DOM 17'), y ahí el concepto de «día que falta» no aplica."""
+    import re as _r
+    return bool(_r.fullmatch(r'\d{4}-\d{2}-\d{2}', str(k)))
+
+# ── [calendario-sin-huecos] el día existe aunque esté vacío ───────────────────
+# Juan, 24 ago 2026: «el día debería existir, vacío. No hay programación pero el
+# día existe. Menos conflictos, más claridad».
+#
+# CineAutopsia corre del 21 al 29 de agosto y su calendario NO declaraba el 24.
+# Con el festival EN CURSO eso hacía que «Hoy» abriera el VIE 21 —ya pasado— y
+# «Mañana» el SÁB 29: `findIndex` del día de hoy daba -1 y los fallbacks caían a
+# los extremos del array (arreglado aparte, pero el dato era la causa).
+#
+# La convención ya existía y nadie la había escrito: Tercer Tiempo declara SIETE
+# días con DOS vacíos (14 y 19 jul) y cero huecos; FICDEH tampoco tiene huecos.
+# CineAutopsia fue la excepción. Un día vacío declarado se atenúa solo y no
+# rompe nada —`dayFullyPassed` ya tiene su caso explícito—; un día AUSENTE deja
+# un agujero por el que se cuela la aritmética de índices.
+check = 'calendario-sin-huecos'
+try:
+    import json as _json, glob as _glob, os as _os
+    from datetime import date as _date, timedelta as _td
+    _errs = []
+    for _p in sorted(_glob.glob('festivals/*.json')):
+        try:
+            _d = _json.load(open(_p, encoding='utf-8'))
+        except Exception:
+            continue
+        _keys = [k for k in (_d.get('dayKeys') or []) if _re_fecha(k)]
+        if len(_keys) < 2:
+            continue
+        try:
+            _ini = _date.fromisoformat(_keys[0]); _fin = _date.fromisoformat(_keys[-1])
+        except ValueError:
+            continue
+        _esperados, _x = [], _ini
+        while _x <= _fin:
+            _esperados.append(_x.isoformat()); _x += _td(days=1)
+        _faltan = [k for k in _esperados if k not in _keys]
+        if _faltan:
+            _errs.append(f'{_os.path.basename(_p)}: el calendario salta {len(_faltan)} día(s) '
+                         f'({", ".join(_faltan[:3])}). Un día sin programación se DECLARA vacío, '
+                         'no se omite — si no, «Hoy» cae en un día que ya pasó')
+    if _errs:
+        fail(check, '; '.join(_errs[:3]))
+    else:
+        ok(check, 'ningún festival salta días: los vacíos se declaran')
+except Exception as _e:
+    warn(check, f'no se pudo verificar calendario-sin-huecos: {_e}')
 
 # ── [calendario-entero] un día que se dibuja tiene que existir para el reloj ───
 # Juan, 23 ago 2026: «CineAutopsia no marcó el Vie 21 como pasado, sigue vivo».
@@ -2683,7 +3021,13 @@ try:
     # en las menciones — no es una línea de dato en una ficha, y usarla como tal
     # la ataría a t-base, que a 62px de ancho no cabe). Baja cuando se migren
     # las heredadas.
-    _TECHO = 90
+    # Techo PEGADO a la familia real (auditoría 25 ago, lote 2): a 90 con la
+    # familia en 89, la variante #90 entraba sin ruido. Un techo con holgura es
+    # un guardián dormido — si migrás una heredada, bajalo otra vez.
+    # 88 (2 sep 2026): la línea «día · hora» de plan-confirm y prio-limit pasó a
+    # tener UN solo bloque que declara las dos — una hermana menos suelta, no una
+    # migración a .dato-linea. El techo baja con ella; el propio guardián lo pide.
+    _TECHO = 88
     if _fam > _TECHO:
         _errs.append(f'familia de líneas de texto gris: {_fam} > techo {_TECHO} — '
                      f'usá .dato-linea en vez de crear otra variante (o bajá el techo si migraste)')
@@ -2693,6 +3037,34 @@ try:
         ok(check, f'canon vivo (t-base + ritmo sp-1) y familia en {_fam} (techo {_TECHO})')
 except Exception as _e:
     warn(check, f'no se pudo verificar dato-linea: {_e}')
+
+# ── [modal-orden] el botón de escape va SIEMPRE último ───────────────────────
+# Hallazgo de Juan (2 sep 2026), medido con rects a 390x844: «SACAR DE MI PLAN»
+# ponía Sacar arriba (y=423) y Cancelar abajo (y=471); «¿REEMPLAZAR FUNCIÓN?»
+# los ponía al revés (Cancelar y=460, «Sí, reemplazar» y=497). En móvil el
+# pulgar aprende una posición, y acá cambiaba según el modal.
+# `.conflict-modal-btns` es `flex-direction:column`, así que el orden del DOM ES
+# el orden vertical: basta leerlo. Y con Cancelar último, el toque accidental
+# más probable —el de abajo, donde descansa el pulgar— es el inofensivo.
+check = 'modal-orden'
+try:
+    import re as _re, glob as _glob
+    _mal = []
+    for _f in _glob.glob('src/**/*.js', recursive=True):
+        _src = open(_f, encoding='utf-8').read()
+        for _m in _re.finditer(r'conflict-modal-btns"?>(.*?)</div>', _src, _re.S):
+            _btns = _re.findall(r'conflict-modal-btn ([a-z$\{\}]+)"', _m.group(1))
+            if not _btns:
+                continue
+            if 'cancel' in _btns and _btns[-1] != 'cancel':
+                _mal.append(f'{_f}: {" → ".join(_btns)}')
+    if _mal:
+        fail(check, 'el botón de escape no va último — el pulgar aprende una '
+                    'posición y esta cambia según el modal: ' + '; '.join(_mal))
+    else:
+        ok(check, 'en todos los modales el escape va último')
+except Exception as _e:
+    warn(check, f'no se pudo verificar modal-orden: {_e}')
 
 # ── [star-semantics] la estrella es CALIFICACIÓN; prioridad = bookmark ─────────
 # Decisión Juan 18 jul 2026: ★/ICONS.star SOLO para rating (convención cine);
@@ -2905,12 +3277,20 @@ except Exception as _e:
 # DENTRO de FUNCIÓN porque la invalida.
 check = 'avisos-en-banda'
 try:
-    _sc = open('src/controller/sheets-controller.js', encoding='utf-8').read()
-    _bad = [i for i, ln in enumerate(_sc.splitlines(), 1)
-            if 'meta-banner-label' in ln and not ln.strip().startswith('//')]
+    # TODO src/, no solo sheets-controller (auditoría 25 ago, lote 2): el mismo
+    # rótulo prohibido plantado en agenda.js pasaba en verde. Nada legítimo emite
+    # esta clase — cero riesgo de auto-acusación.
+    _bad = []
+    for _r_ab, _d_ab, _fs_ab in os.walk('src'):
+        for _f_ab in _fs_ab:
+            if not _f_ab.endswith('.js'): continue
+            _p_ab = os.path.join(_r_ab, _f_ab)
+            for i, ln in enumerate(open(_p_ab, encoding='utf-8').read().splitlines(), 1):
+                if 'meta-banner-label' in ln and not ln.strip().startswith('//'):
+                    _bad.append(f'{_p_ab}:{i}')
     if _bad:
         fail(check, 'aviso con rótulo fuera de la banda AVISOS (usar _avisosBand): '
-             + ', '.join(f'sheets-controller.js:{i}' for i in _bad[:5]))
+             + ', '.join(_bad[:5]))
     else:
         ok(check, 'los avisos que matizan la función se construyen solo en _avisosBand')
 except Exception as _e:
@@ -2926,15 +3306,30 @@ check = 'aviso-sin-caja'
 try:
     import re as _re
     _html = open('index.html', encoding='utf-8').read()
+    # .cta-ctx-c entra el 26 ago: vivía DENTRO de .mplan-wrap, que ya es el
+    # contenedor con su borde y su radio, y dibujaba una segunda caja anidada.
+    # Se escapó de la regla porque este guardián vigila selectores POR NOMBRE.
     _AVISOS = ('.meta-banner{', '.notice-banner-row{', '.prio-stale{',
-               '.notice-detail-amber{', '.notice-detail-green{')
+               '.notice-detail-amber{', '.notice-detail-green{', '.cta-ctx-c{')
     _off = []
     for _sel in _AVISOS:
         _i = _html.find(_sel)
         if _i < 0:
             continue
         _body = _html[_i + len(_sel):_html.index('}', _i)]
-        if 'background' in _body or 'border:' in _body or 'border-radius' in _body:
+        # POR VALOR, no por nombre de propiedad (26 ago): buscar 'background' a
+        # secas marcaba `background:none` —que es justo la AUSENCIA de caja— como
+        # si fuera una. Un chequeo que confunde lo uno con lo otro no deja
+        # escribir el arreglo. Un filete lateral (border-left) tampoco es caja:
+        # no rodea nada, es la marca de accionable.
+        def _pinta(_prop, _cuerpo):
+            _m = _re.search(_prop + r'\s*:\s*([^;}]+)', _cuerpo)
+            if not _m:
+                return False
+            _val = _m.group(1).strip().lower()
+            return _val not in ('none', 'transparent', '0', '0px', 'initial', 'unset')
+        if (_pinta('background', _body) or _pinta('border', _body)
+                or _pinta('border-radius', _body)):
             _off.append(_sel[:-1])
     if _off:
         fail(check, 'aviso(s) con caja (fondo/borde/radio sobre el texto): ' + ', '.join(_off))
@@ -3273,8 +3668,8 @@ try:
         'dom-ready-guard','dtab-sin-linea','fc-bootstrap','filter-drop-canon','html-divs',
         'i18n-hardcoded','i18n-interpolation','i18n-voseo','json-fields','keyart-write-once',
         'no-underscore-actions','onclick-syntax','pais-conocido','pipeline-circuito',
-        'poster-editorial-parity','poster-radio-unico','poster-single-owner','pressed-canon',
-        'prio-limit','responsive-contract','sala-en-sede','sched-pure-fns','section-display-raw',
+        'poster-editorial-parity','poster-radio-unico','pressed-canon',
+        'plan-contrato','prio-limit','responsive-contract','sched-pure-fns','section-display-raw',
         'sedes-apiladas','shadow-t','sheet-meta-legible','staging-provenance','static-html-template',
         'synopsis-helper','synopsis-length','tasks-sync','template-al-dia','title-normalization',
         'validate-film-tests','version-json','viewstate-shadow','worker-deps',
@@ -3900,6 +4295,57 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar festival-aplazado: {_e}')
 
+# ── [i18n-sustantivo-pegado] la cuenta no lleva el sustantivo escrito ─────────
+# Las cards de programa compuesto decían «2 obras · 93 min» EN INGLÉS: el
+# sustantivo estaba pegado al template en dos sitios (_datoCompuesto y
+# slotPosterParts) en vez de salir de t(). Ningún guardián podía verlo:
+# [i18n-complete] comprueba que las CLAVES existan en los dos idiomas —un literal
+# no es una clave— y el test de DOM solo alcanza lo que se renderiza (medido:
+# _datoCompuesto no se pinta en ninguno de los tres festivales grandes, así que
+# su regresión sería invisible desde el navegador).
+# Este mira el CÓDIGO: una interpolación seguida de nuestro vocabulario en
+# español —`${n} obras`— es cromo sin traducir. Los comentarios se ignoran.
+check = 'i18n-sustantivo-pegado'
+try:
+    _malos = []
+    for _f in _glob.glob('src/**/*.js', recursive=True):
+        if '/i18n/' in _f:
+            continue
+        for _i, _ln in enumerate(open(_f, encoding='utf-8'), 1):
+            _s = _ln.strip()
+            if _s.startswith('//') or _s.startswith('*'):
+                continue
+            _m = re.search(r'\}\s(obras?|actividades?|funciones?|vistas?)\b', _ln)
+            if _m:
+                _malos.append(f'{_f}:{_i} «{_m.group(0).strip()}»')
+    if _malos:
+        fail(check, 'sustantivo en español pegado a una cuenta (no sale de t()): ' + '; '.join(_malos[:5]))
+    else:
+        ok(check, 'ninguna cuenta lleva el sustantivo escrito — todas pasan por t()')
+except Exception as _e:
+    warn(check, f'no se pudo verificar i18n-sustantivo-pegado: {_e}')
+
+# ── [dbg-ver-sin-literal] el número de build no se escribe a mano ──────────────
+# #dbg-ver (esquina del buscador) tenía el build TIPEADO en index.html. Nadie lo
+# actualizaba —bump-version ni sabía que existía— así que mostró el build del 10
+# de mayo durante cuatro meses a todo el que abriera el buscador. Un número de
+# build existe para saber qué código corre de verdad (cicatriz del bundle
+# congelado del v6/v7): uno viejo miente sobre lo único que tenía que decir.
+# Ahora lo llena main.js con BUILD_VERSION. Este guardián impide que vuelva a
+# nacer escrito: el nodo tiene que estar VACÍO en el HTML.
+check = 'dbg-ver-sin-literal'
+try:
+    _html = open('index.html', encoding='utf-8').read()
+    _m = re.search(r'id="dbg-ver"[^>]*>([^<]*)</span>', _html)
+    if not _m:
+        warn(check, 'no se encontró #dbg-ver en index.html (¿se renombró o se quitó?)')
+    elif _m.group(1).strip():
+        fail(check, f'#dbg-ver trae el build escrito a mano ({_m.group(1).strip()!r}) — se pudre solo; lo llena main.js con BUILD_VERSION')
+    else:
+        ok(check, '#dbg-ver nace vacío — el build lo pone el código que corre')
+except Exception as _e:
+    warn(check, f'no se pudo verificar dbg-ver-sin-literal: {_e}')
+
 # ── [timezone-valid] todo festival tiene timezoneOffset válido (±HH:MM) ─────────
 # Toda la lógica de "ahora" (now-line, contador, en-curso, hoy, pasó/futuro) se ancla
 # a la zona del festival vía cfg.timezoneOffset (domain/time.js _festNow/_festDate).
@@ -3966,6 +4412,32 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar section-map-dupes: {_e}')
 
+# ── [close-bg-registrado] toda hoja que promete cerrarse, cierra ───────────────
+# `data-close-bg="X"` en el markup significa «tocando el fondo, cierro»: el
+# listener delegado busca ACTION_REGISTRY['closeX'] y lo llama. Si ese nombre no
+# está registrado, NO PASA NADA — y no hay error, ni warning, ni pista. Un fallo
+# de los que no fallan.
+# Pasó con la hoja de CIUDAD (30 ago 2026): declaraba data-close-bg="CitySheet",
+# `closeCitySheet` existía en view/sheets.js desde siempre, y nunca se había
+# enchufado al registro. Era la ÚNICA de las cuatro hojas que no cerraba tocando
+# fuera —sus tres hermanas sí— y es la PRIMERA pantalla de un festival
+# multiciudad: el usuario quedaba encerrado en su primera interacción.
+# Lo encontró un recorrido de usuario. Ningún test miraba si la promesa se cumple.
+check = 'close-bg-registrado'
+try:
+    import re as _cb
+    _html_cb = open('index.html', encoding='utf-8').read()
+    _main_cb = open(_MAIN_JS, encoding='utf-8').read() if os.path.exists(_MAIN_JS) else ''
+    _decl = sorted(set(_cb.findall(r'data-close-bg="([A-Za-z]+)"', _html_cb)))
+    _falta = [d for d in _decl if not _cb.search(r'\bclose%s\s*:' % d, _main_cb)]
+    if _falta:
+        fail(check, 'hoja(s) que prometen cerrarse y no tienen cerrador en ACTION_REGISTRY: '
+             + ', '.join('data-close-bg="%s" → falta close%s' % (d, d) for d in _falta))
+    else:
+        ok(check, f'{len(_decl)} hoja(s) con data-close-bg tienen su cerrador registrado')
+except Exception as _e:
+    warn(check, f'no se pudo verificar close-bg-registrado: {_e}')
+
 # ── [module-size] ningún módulo crece en silencio ─────────────────────────────
 # La modularidad se degrada cuando un archivo se vuelve un cajón de sastre. Este
 # check pone un techo: los módulos nuevos deben quedar <800 líneas; los grandes
@@ -3985,20 +4457,20 @@ try:
         # _buildPosterV16) y el dueño del color de sección. Entra a la lista con la
         # razón escrita, que es lo que este guardián pide, en vez de seguir
         # recortando comentarios que explican POR QUÉ el código es así.
-        'src/view/components.js': 930,  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago  # +24: _postponedElapsed — un aplazado baja a pasados cuando sus fechas anunciadas pasan — 23 ago
+        'src/view/components.js': 1186,  # +18: el título de un evento no repite su TIPO (prefijo con separador + eco en medio) — 1 sep  # antes 1168,  # +2: «obras» sale de misc_peliculas, no de un literal — 1 sep  # antes 1166,  # +15: la Escalera escala a cualquier N (paso = fracción de la LÁMINA, no de la envolvente) + UID por póster (los clipPath fijos se pisaban entre sí en la grilla) — 26 ago  # antes 1151,  # +48: _buildPosterMini — la mini de 56px con marca determinista por obra (mejora 1 Apple Music) — 25 ago  # +20: el título tampoco repite el programa cuando el eco va al final (Cinemancia) — 24 ago  # +11: la pila reparte el presupuesto por uso real (el lazo del techo ahora SÍ vive) — 24 ago  # +2: el « + » de la pila sube a 0,6u (a 0,5u leía como suciedad, no como signo) — 24 ago  # +60: la pila de obras — un compuesto se apila, no se escribe como frase (mejora 1 de la auditoría de pósters) — 24 ago  # +10: makeProgramPoster con rótulo corto + suelo de sección 7 con su porqué — 24 ago  # +33: _seccionPartes + firma en el motor + sección a 2 líneas (regla de carga) — 24 ago  # +34: auditoría Forma A — luz por sección, título sin repetir la sección, _datoCompuesto — 24 ago  # +3: muere el badge EN REVISIÓN de la card (redundante con el divisor) — 23 ago  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago  # +24: _postponedElapsed — un aplazado baja a pasados cuando sus fechas anunciadas pasan — 23 ago
         # helpers.js estaba EXACTAMENTE en 800 antes del rediseño de pósters
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
         # guardián pide. Baja cuando se migre algo fuera de helpers.
-        'src/view/helpers.js': 877,  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
-        'src/view/agenda.js': 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
-        'src/main.js': 1706,  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
-        'src/i18n/i18n.js': 1640,  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
-        'src/controller/sheets-controller.js': 1711,  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
+        'src/view/helpers.js': 987,  # +18: hayEvento pasa a ser dueño único del sustantivo (obras vs actividades), con su porqué (2 sep)  # antes 969,  # +8: festivalCities marca la ciudad cuya programación cayó entera — dueño único de la hoja de apertura y del filtro de Lugar (Juan, 2 sep)  # antes 961,  # +7: el interruptor de Prensa entra a planInputSignature — apagarlo dejaba el Plan en un pase que ya no existía — 30 ago  # antes 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
+        'src/view/agenda.js': 2191,  # +18: el bloque de UNA obra corta pasa a una línea (hora+título) en vez de recortar — 148 bloques en 14 festivales, aprobado por Juan (3 sep)  # antes 2173,  # +37: _fitMiPlanBlocks — el bloque de la grilla dice cuántas obras no le caben, auditoría B-3 (3 sep)  # antes 2136,  # +9: _nextScreening prefiere la función viva de TU ciudad y cae al catálogo si no hay — auditoría B-5 (2 sep)  # antes 2127,  # +25: la fila de excluida se explica con una función VIVA y pregunta a screeningPlannable si quedó fuera por ciudad — auditoría B-1 (2 sep)  # antes 2102,  # +8: el sustantivo de las dos líneas de Planear sale del dueño hayEvento — un taller no es una obra (2 sep)  # antes 2094,  # +13: el vacío manda al primer lugar donde se puede hacer algo — se corta la cadena Mi Plan→Planear→Intereses de tres pantallas vacías (2 sep)  # antes 2081,  # +6: la cifra de «por planear» se distingue de la del resultado — 1 sep  # antes 2075,  # +6: el aviso del hueco se deriva del plan, no de un temporizador — 31 ago  # antes 2069,  # +4: por qué el vacío de PLANEAR no puede decir «Tu Plan aparece aquí» — 31 ago  # antes 2065,  # +5: la tarjeta de cierre del día usa todayWatched (effectiveWatched) en vez del set explícito — 31 ago  # antes 2060,  # +9: con el plan desactualizado «Usar este Plan» está disabled, así que el primario pasa a ser Recalcular — la pantalla no tenía ninguna acción que pareciera acción — 30 ago  # antes 2051,  # +15: la fila de una reprogramada dice A DÓNDE se movió — «Actualizar» era un botón a ciegas — 30 ago  # antes 2036,  # +22: el hero no le cuenta atrás a una cancelada, la alternativa de otra ciudad lleva su marca, y el resumen cuenta OBRAS y no funciones — P1 del recorrido — 30 ago  # antes 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
+        'src/main.js': 1809,  # +10: #dbg-ver sale del BUILD_VERSION que corre, no de un literal de mayo — 31 ago  # antes 1799,  # +12: el listener de captura honra data-stop — «Agendar» en NO INCLUIDAS abría además la ficha y te dejaba ahí — 30 ago  # antes 1787,  # +7: closeCitySheet al ACTION_REGISTRY — la hoja de ciudad prometía cerrarse tocando el fondo y el registro no la tenía (fallo mudo) — 30 ago  # antes 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
+        'src/i18n/i18n.js': 1706,  # +3: cta_deshacer en es/en/pt — la vuelta atrás al quitar de Intereses, auditoría A-2 (3 sep)  # antes 1703,  # +6: pre_actividades_planear y pre_actividad_planear en es/en/pt — aprobado por Juan (2 sep)  # antes 1697,  # +3: export_compartir_sin_nombre en es/en/pt — compartir el Plan deja de exigir nombre (aprobado por Juan, 2 sep)  # antes 1694,  # +6: pre_obras_planear/pre_obra_planear — 1 sep  # antes 1688,  # +3: plan_falta_intereses — PLANEAR y MI PLAN dejan de tener el mismo titular — 31 ago  # antes 1685,  # +6: dia_sin_funciones_ciudad(+_sub) — el vacío del día con SOLO ciudad puesta no culpa a sección/sede — 30 ago  # antes 1679,  # +3: conflict_choca_intro_bloque — «función» no se le dice a un taller — 30 ago  # antes 1676,  # +3: bar_prensa_corto en es-en-pt — el filtro de Prensa gana etiqueta (una usuaria no lo encontraba) — 26 ago  # antes 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
+        'src/controller/sheets-controller.js': 1771,  # +8: el día se muestra con su número en las 4 superficies — 9 de 15 festivales repiten nombre de día (2 sep)  # antes 1763,  # +22: la hoja «¡Tu Plan está listo!» adopta la fila canónica — era la única de las 6 listas de obras sin póster y la única encajada; entran el thumb por el dueño único, la línea «día · hora» y el rango del pie, y sale la fórmula de rango duplicada — 2 sep  # antes 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
         # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres
         # correcciones sobre la fuente, que valen más escritas que ahorradas.
-        'src/controller/handlers.js': 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
+        'src/controller/handlers.js': 1161,  # +13: quitar de Intereses ofrece «Deshacer» y repone los 3 conjuntos, auditoría A-2 (3 sep)  # antes 1148,  # +11: las compañeras de función son la INTERSECCIÓN, no la unión — un toque metía 15 obras ajenas (recorrido de usuario) — 30 ago  # antes 1137,  # +4: el aviso de reprogramada declara {mudar:true} — T52/AV04 lo cazaron — 26 ago  # antes 1133,  # +28: «verla otra vez» rehecha — no-op por sameEntry, conflicto sin excluirse a sí misma, modal de 3 acciones y el taller ruteado entero (H6+H7 del informe) — 26 ago  # antes 1105,  # revert #746/#748 (25 ago): «verla otra vez» salió — ver el informe adversarial  # +4: {mudar:true} — «Actualizar» una reprogramada no pregunta (T52) — 25 ago  # antes 1145,  # +40: «verla otra vez» — el diálogo de obra repetida y el borrado por función — 25 ago  # antes 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     # src/config.js NO tiene techo (Juan, 23 ago 2026). Es DATA de festival
     # —FESTIVAL_CONFIG, VENUES, NOTICES, PALMARES— y crece con cada onboarding,
@@ -4574,10 +5046,16 @@ try:
                 _es_w = bool(_re.search(r"json\.dump|,\s*'w'", _ln))
                 (_escribe if _es_w else _lee).setdefault(_b, set()).add(_os.path.basename(_sp))
     def _quien(_tabla, _b):
-        # nombre exacto o patrón de herramienta genérica ('*-crudo.json')
+        # nombre exacto o patrón de herramienta genérica ('*-crudo.json').
+        # EL PATRÓN PELADO '*.json' NO CUENTA (auditoría 25 ago, lote 3):
+        # publicar.py referencia '{fid}.json' → normaliza a '*.json', y con
+        # endswith('.json') TODO archivo tenía «lector» — el check era
+        # tautológicamente verde. Se replantó su bug fundacional exacto
+        # (sidecar escrito sin lector) y pasó. Un patrón solo vale si su
+        # sufijo dice algo más que la extensión.
         _hit = set(_tabla.get(_b, set()))
         for _k, _v in _tabla.items():
-            if _k.startswith('*') and _b.endswith(_k[1:]):
+            if _k.startswith('*') and _k[1:] != '.json' and _b.endswith(_k[1:]):
                 _hit |= _v
         return _hit
     _pares = []
@@ -4610,7 +5088,10 @@ check = 'sedes-apiladas'
 try:
     import json as _json, math as _math, glob as _glob, os as _os, itertools as _it
     _avisos = []
-    _ACTIVOS_AP = {'ficdeh-2026.json', 'ficma-2026.json', 'finca-2026.json'}
+    # DERIVADO, no lista fija (auditoría 25 ago, lote 3): la lista congelada
+    # {ficdeh, ficma, finca} vigilaba tres festivales YA TERMINADOS mientras el
+    # mismo bug plantado en Cinemancia —vivo y publicado— pasaba en silencio.
+    _ACTIVOS_AP = {_v + '.json' for _v in _festivalesVivos()}
     for _f in sorted(_glob.glob('festivals/*.json')):
         if _os.path.basename(_f) not in _ACTIVOS_AP:
             continue          # los archivados no se reescriben
@@ -4644,7 +5125,8 @@ check = 'sala-en-sede'
 try:
     import json as _json, re as _re, glob as _glob, os as _os
     _avisos = []
-    _ACTIVOS = {'ficdeh-2026.json', 'ficma-2026.json', 'finca-2026.json'}
+    # Derivado de las fechas — misma corrección que _ACTIVOS_AP (25 ago, lote 3).
+    _ACTIVOS = {_v + '.json' for _v in _festivalesVivos()}
     for _f in sorted(_glob.glob('festivals/*.json')):
         if _os.path.basename(_f) not in _ACTIVOS:
             continue          # los archivados no se reescriben
@@ -5024,6 +5506,40 @@ try:
         ok(check, 'toda ficha con tmdb_id trae su sinopsis')
 except Exception as _e:
     warn(check, f'no se pudo verificar cosecha-tmdb: {_e}')
+
+# ── [plan-contrato] el ÚNICO guardián de entrada del pipeline ─────────────
+# Los otros 125 juzgan el JSON publicado: cada defecto de entrada llegaba
+# disfrazado de síntoma de salida, uno por vuelta. Este pasa cada plan por
+# lib.cargar_plan() —el mismo contrato que corre el ensamblador y el runner—.
+# Falla el plan que RECLAMA el camino genérico (bloque `festival`) y no lo
+# cumple. Un plan sin `festival` es legado o vacío: se nombra, no se reprueba,
+# porque no pasa por el ensamblador genérico y nada suyo se pierde aquí.
+check = 'plan-contrato'
+try:
+    import glob as _gp, os as _osp, sys as _sysp
+    _sysp.path.insert(0, 'pipeline'); import lib as _libp
+    _malos, _vacios, _ok = [], [], 0
+    for _pp in sorted(_gp.glob('pipeline/*.plan.json')):
+        if _pp.endswith('festival.plan.example.json'):
+            continue
+        try:
+            _dp = _libp.cargar_plan(_pp)
+            if _dp['_clase'] == 'generico': _ok += 1
+            elif _dp['_clase'] == 'vacio': _vacios.append(_osp.path.basename(_pp))
+        except AssertionError as _e:
+            _malos.append(str(_e))
+    for _m in _malos:
+        fail(check, _m)
+    if not _malos:
+        ok(check, f'{_ok} plan(es) genérico(s) cumplen su contrato' + (f' · sin pipeline declarado: {_vacios}' if _vacios else ''))
+    elif _vacios:
+        warn(check, f'plan(es) sin `pasos` ni `festival`: {_vacios}')
+except Exception as _e:
+    # Un guardián que no puede correr NO avisa: falla. Si avisa, el push pasa
+    # en verde con el contrato sin comprobar — es la trampa 7 de la auditoría
+    # de guardianes («un tope que calla lo que recorta»), y aquí pasó en la
+    # primera corrida: un NameError en lib.py salió como ⚠ y «OK para push».
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 check = 'pipeline-generico'
 try:

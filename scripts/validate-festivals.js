@@ -153,6 +153,28 @@ const DAY_ORDER_DEUDA = {
   'fantasofest-2026.json': 11,
 };
 
+// ── Vocabulario de géneros ───────────────────────────────────────────────────
+// Se LEE de _GENRE_EN (src/controller/sheets-controller.js), que es el dueño:
+// la tabla que la app usa para traducir géneros, con los nombres canónicos de
+// TMDB. Copiar la lista acá crearía una segunda verdad que envejece sola.
+// Si algún día _GENRE_EN se mueve, este parseo falla RUIDOSO (lista vacía →
+// el gate avisa) en vez de dar verde sobre nada.
+const GENEROS = (() => {
+  try {
+    const src = fs.readFileSync(path.join(__dirname, '..', 'src', 'controller', 'sheets-controller.js'), 'utf8');
+    const blk = src.match(/const _GENRE_EN = \{([\s\S]*?)\n\};/);
+    if (!blk) return new Set();
+    const v = new Set();
+    for (const m of blk[1].matchAll(/'([^']+)'\s*:\s*'([^']+)'/g)) {
+      v.add(m[1].toLowerCase()); v.add(m[2].toLowerCase());
+    }
+    // Dos que la app usa como género y no viven en la tabla de traducción
+    // porque se escriben igual en los dos idiomas.
+    v.add('ficción'); v.add('fiction');
+    return v;
+  } catch { return new Set(); }
+})();
+
 // ── Validar un festival ──────────────────────────────────────────────────────
 function validateFestival(fname, data) {
   const errors = [];
@@ -185,6 +207,41 @@ function validateFestival(fname, data) {
   // GATE: config{} en el JSON es un error bloqueante desde el pipeline v2.
   if (data.config && Object.keys(data.config).length > 0) {
     errors.push('GATE BLOQUEANTE: config{} presente en el JSON — mover a FESTIVAL_CONFIG en src/config.js y eliminar este bloque');
+  }
+
+  // GATE [genero-unico]: UNA obra, UN género — y de los comunes.
+  //
+  // Juan, 24 ago 2026: «No me gusta que incluyamos varios géneros en la card.
+  // Solo el primero, el principal». Y después, viendo el resultado: «tags no,
+  // necesitamos indicar un género, dentro de los más comunes».
+  //
+  // TIFF traía 859 de 878 obras (97%) con varios, y no eran subgéneros sino
+  // ETIQUETAS DE PROGRAMACIÓN del festival mezcladas con el género en el mismo
+  // campo: «Asian Cultures, Drama, Directed by Women, Coming of Age». Tomar el
+  // primero a secas habría publicado «Asian Cultures» donde va «Drama», en 271
+  // fichas.
+  //
+  // LA REGLA: el PRIMER género de la fuente QUE SEA UN GÉNERO. El orden de la
+  // fuente manda; lo que no es género se salta. Si no hay ninguno, el campo
+  // queda VACÍO — inventarle un género a una obra es peor que no decir nada.
+  //
+  // El vocabulario NO se define acá: se LEE de _GENRE_EN (sheets-controller.js),
+  // que es el que la app ya usa para traducir géneros y trae los nombres
+  // canónicos de TMDB. Duplicarlo sería crear una segunda verdad que se
+  // desincroniza — el patrón que ya nos costó el calendario partido.
+  for (const f of films) {
+    const g = f.genre;
+    if (typeof g !== 'string' || !g.trim()) continue;
+    if (/[,+]/.test(g)) {
+      errors.push(`GATE BLOQUEANTE [genero-unico]: «${f.title}» declara varios géneros `
+        + `(«${g}»). Va UNO: el primero de la fuente que sea un género de verdad `
+        + `(vocabulario: _GENRE_EN). Si ninguno lo es, dejar el campo vacío.`);
+      break;
+    }
+    if (!GENEROS.has(g.trim().toLowerCase())) {
+      warnings.push(`[genero-unico] «${f.title}»: «${g}» no está en el vocabulario de géneros `
+        + `(_GENRE_EN). Puede ser una etiqueta del festival colada como género.`);
+    }
   }
 
   // GATE [poster-map-legacy]: el modelo dual posters{}/customPosters{} murió en Fase A.1.
@@ -525,13 +582,56 @@ function validateFestival(fname, data) {
       if (!pf) continue;
       for (const o of (f.film_list || [])) if (o && (o.poster || '').trim() === pf) propio.add(o);
     }
+    // ARTE DE SECCIÓN: repetirse es su NATURALEZA, no corrupción. Es la pieza
+    // que el festival usa en redes para una retrospectiva o un foco, y cubre a
+    // la vez todos los programas de esa sección que no tienen afiche propio —
+    // en Cinemancia 2026, 12 tarjetas con 6 artes. Se reconoce por el nombre
+    // del archivo (`seccion-*`), que declara la intención: un póster de obra
+    // nunca se llama así. Un duplicado accidental entre dos obras sigue siendo
+    // error, que es lo que este gate nació para cazar.
+    const esArteDeSeccion = (p) => /\/seccion-[^/]+$/.test(p);
     const seen = new Map();
     for (const f of todos) {
       const p = (f.poster || '').trim();
-      if (!p || propio.has(f)) continue;
+      if (!p || propio.has(f) || esArteDeSeccion(p)) continue;
       const k = clave(p);
       if (seen.has(k) && seen.get(k).n !== norm(f.title)) dup.push(`[posters-duplicados] "${(f.title||'?').slice(0,40)}" comparte poster con "${seen.get(k).t.slice(0,40)}" (título distinto) — dato corrupto`);
       else if (!seen.has(k)) seen.set(k, { n: norm(f.title), t: f.title || '?' });
+    }
+  }
+  // [titulo-programa-incompleto] ERROR — un programa de VARIAS obras titulado
+  // con el nombre de UNA de ellas. Desde fuera se lee como esa película sola y
+  // las demás no existen para quien mira la tarjeta: es el único sitio donde se
+  // anuncian.
+  //
+  // Nació de «Dice que…» (Cinemancia, 4 SEP): la parrilla decía «Dice que... +
+  // Las picapiedreras», el cruce por título exacto falló por una letra
+  // («picapiEdreras»), la función quedó de una sola obra y se tituló con ella.
+  // Al meter después la obra que faltaba, el título ya estaba decidido y nadie
+  // lo rehizo — el arreglo tapó el agujero a medias. Lo cazó Juan MIRANDO LA
+  // APP, no un validador: el dato interno estaba perfecto (2 obras, 84′ = 68+16)
+  // y lo que fallaba era lo único que se ve.
+  //
+  // Medido antes de encenderlo sobre los 17 festivales publicados: 1 caso, el
+  // de arriba. Los otros 30 programas de ≥2 obras de ese mismo festival tienen
+  // título propio o unen con «+», así que el invariante no rompe montajes
+  // legítimos. Si algún día un festival titula A DREDE un programa con el
+  // nombre de su obra principal, esto se convierte en warning con su razón.
+  {
+    const norm = t => (t || '').trim().toLowerCase().normalize('NFC');
+    const vistos = new Set();
+    for (const f of films) {
+      const fl = Array.isArray(f.film_list) ? f.film_list : [];
+      if (fl.length < 2) continue;
+      const t = norm(f.title);
+      if (!t || vistos.has(t)) continue;
+      const igual = fl.find(o => o && norm(o.title) === t);
+      if (!igual) continue;
+      vistos.add(t);
+      const _n = fl.length - 1;
+      errors.push(`[titulo-programa-incompleto] "${(f.title||'?').slice(0,44)}" agrupa ${fl.length} obras `
+        + `pero se titula con UNA de ellas — ${_n === 1 ? 'la otra no se ve' : `las otras ${_n} no se ven`} `
+        + `desde la tarjeta. Titularlo con todas, unidas por " + ", o darle el nombre del programa.`);
     }
   }
   // ── Gates de posters (estrategia editorial, POSTERS.md §5/§8) ─────────────
@@ -1040,6 +1140,52 @@ if (skErrors.length) {
         if (titles.size > 1) {
           r.errors.push(`[poster-editorial-unique] ${titles.size} programas con poster editorial idéntico: ${[...titles].join(' | ')}`);
           totalErrors++;
+        }
+      }
+    }
+  }
+
+  // ── [poster-serie-consistente] — la serie se ve como serie ──────────────────
+  // Regla de las portadas de playlists dinámicas de Apple («easily identified as
+  // being part of a series»), adoptada 24 ago 2026 (auditoría Apple Music,
+  // mejora #4): los programas numerados de una MISMA sección cuyo título solo
+  // difiere en el ordinal deben renderizar la MISMA composición — solo cambia el
+  // número. Hoy es cierto por plantilla; sin este check, nada lo protege: un
+  // recorte de rótulo que aplique a unos y no a otros (pasó con el eco de
+  // «Programa N»), una firma que entre en uno solo, o un color desviado rompen
+  // la serie en silencio.
+  // Es el INVERSO de [poster-editorial-unique]: aquel prohíbe idénticos entre
+  // programas distintos; este exige idénticos-salvo-el-ordinal dentro de la serie.
+  // NORMALIZACIÓN (para comparar sin falsos positivos): se enmascaran los
+  // valores numéricos de atributos (coordenadas/tamaños — cambian legítimamente
+  // si un ordinal es más ancho) y las corridas de dígitos del texto (el ordinal
+  // mismo). Queda la estructura, el orden de elementos, los colores y las
+  // strings — que es exactamente lo que define «la misma composición».
+  if (makeProgramPoster) {
+    const _mockState = { snapshot: () => ({ FILMS: [] }) };
+    const _mascara = (svg) => decodeURIComponent(String(svg))
+      .replace(/"[\d.\-]+"/g, '"#"')
+      .replace(/\d+/g, 'N');
+    for (const r of results) {
+      let data;
+      try { data = JSON.parse(fs.readFileSync(path.join(festivalsDir, r.fname), 'utf8')); } catch (e) { continue; }
+      const progs = (data.films || []).filter(f => (f.is_cortos || f.is_programa) && !f.poster && /\d/.test(f.title || ''));
+      const series = {};
+      for (const p of progs) {
+        const clave = (p.section || '') + '::' + String(p.title).replace(/\d+/g, 'N');
+        (series[clave] = series[clave] || []).push(p);
+      }
+      for (const [clave, miembros] of Object.entries(series)) {
+        if (miembros.length < 2) continue;
+        const vistos = new Map(); // svg enmascarado → primer título
+        for (const p of miembros) {
+          const m = _mascara(makeProgramPoster(_mockState, p.title, p.duration || '', p.section || ''));
+          if (!vistos.size) { vistos.set(m, p.title); continue; }
+          if (!vistos.has(m)) {
+            r.errors.push(`[poster-serie-consistente] la serie «${clave.split('::')[1]}» (${clave.split('::')[0]}) se rompe: «${p.title}» no comparte composición con «${[...vistos.values()][0]}»`);
+            totalErrors++;
+            break;
+          }
         }
       }
     }

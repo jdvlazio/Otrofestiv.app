@@ -54,7 +54,12 @@ jobs:
           echo "Archivos cambiados en el PR:"
           echo "$CHANGED"
           echo "---"
-          APP=$(printf '%s\n' "$CHANGED" | grep -E '^(src/|index\.html$|sw\.js$)' || true)
+          # festivals/** TAMBIÉN exige bump desde el canal #4 (24 ago 2026): el
+          # poll en primer plano solo ve version.json. Un cambio de programación
+          # sin bump sería invisible para quien tiene la app abierta — que es
+          # exactamente el usuario al que ese cambio le importa. La práctica ya
+          # bumpeaba en cada PR de datos (regla 5); el gate ahora lo garantiza.
+          APP=$(printf '%s\n' "$CHANGED" | grep -E '^(src/|index\.html$|sw\.js$|festivals/)' || true)
           if [ -z "$APP" ]; then
             echo "✓ Sin cambios de app-code — bump no requerido."
             exit 0

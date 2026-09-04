@@ -37,7 +37,7 @@ import { LANGS, t, _applyI18nDOM } from './i18n/i18n.js';
 //   las consume vía eval(name).toString(); sus copias worker-local se quedan. ──
 import { toMin, parseDur, minToStr, _festDate, simNow, simTodayStr, dayFullyPassed, festivalEnded } from './domain/time.js';
 import { _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm, effectiveDuration, screeningPassed, _classifyTodayScreenings, _endedStats, normTitle } from './domain/film.js';
-import { screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios, verifyPlan } from './domain/schedule.js';
+import { sameEntry, screensConflict, isScreeningBlocked, plannableScreens, sortScreensByStrategy, computeScenarios, verifyPlan } from './domain/schedule.js';
 import { _resolveVenue, _gapSuggestion, _getFestivalPhase, venueTravelMins, travelMins } from './domain/festival.js';
 
 // ── Step 6a: view/components.js — capa presentacional foundational de Wave 6
@@ -54,7 +54,7 @@ import {
 // ── Step 6b: view/sheets.js (lifecycle de paneles) + view/feedback.js
 //   (notificaciones: toasts/modales/sim-label). ───────────────────────────────
 import {
-  openAuthSheet, closeAuthSheet, closeAvSheet, openFestivalSheet,
+  openAuthSheet, closeAuthSheet, closeAvSheet, closeCitySheet, openFestivalSheet,
   closeReviewSheet, submitReviewKey,
   closeFestivalSheet, closePVRating, closePrioLimit, _showSignedInSheet,
 } from './view/sheets.js';
@@ -129,8 +129,9 @@ import { initWatchBridge } from './controller/watch-bridge.js';
 
 // ── Step 8d-4: controller/loader.js (loadFestival + dismissSplash) ───────────
 import {
-  loadFestival, dismissSplash, backToSplash,
+  loadFestival, dismissSplash, backToSplash, togglePressScreenings, _sincronizarBotonPrensa,
 } from './controller/loader.js';
+import { refrescarDatosFestival } from './controller/live-refresh.js';
 
 // ── Step 7e: controller/festival.js ────────────────────────────────────────────
 import {
@@ -221,6 +222,13 @@ const ACTION_REGISTRY = {
   closeReviewSheet:      ()      => closeReviewSheet(),
   submitReviewKey:       ()      => { if(submitReviewKey()) dismissSplash(); },
   closeAvSheet:          ()      => closeAvSheet(),
+  // closeCitySheet FALTABA (30 ago 2026) y el fallo era MUDO: el markup declara
+  // data-close-bg="CitySheet", el listener busca ACTION_REGISTRY['closeCitySheet']
+  // y al no encontrarlo no hace nada. La hoja de ciudad era la ÚNICA de las cuatro
+  // que no cerraba tocando fuera —sus tres hermanas sí—, y es la PRIMERA pantalla
+  // que ve alguien que entra a un festival multiciudad. La función ya existía en
+  // view/sheets.js: solo nunca se había enchufado. Guardián: [close-bg-registrado].
+  closeCitySheet:        ()      => closeCitySheet(),
   closeConflictSheet:    ()      => closeConflictSheet(),
   closeFestivalSheet:    ()      => closeFestivalSheet(),
   closeRatingSheet:      ()      => closeRatingSheet(),
@@ -246,6 +254,7 @@ const ACTION_REGISTRY = {
   setProgramaChip:     (el)    => setProgramaChip(el.dataset.chip),
   setAvType:           (el)    => setAvType(el.dataset.type),
   toggleProgramaView:  ()      => toggleProgramaView(),
+  togglePressScreenings: ()    => togglePressScreenings(),
   lugarToggle:         ()      => lugarToggle(),
   seccionToggle:       ()      => seccionToggle(),
   selectAvDay:         (el)    => selectAvDay(el.dataset.day),
@@ -262,7 +271,11 @@ const ACTION_REGISTRY = {
   pafClearVenue:       ()      => _pafClearVenue(),
   toggleEveningFilms:  (el)    => _toggleEveningFilms(el),
   toggleWLFromList:    (el)    => _toggleWLFromList(el.dataset.title, el),
-  addSuggestion:       (el)    => addSuggestion(el.dataset.title, el.dataset.day, el.dataset.time),
+  // data-restaurar: el botón de DESHACER usa esta misma acción y solo cambia de
+  // etiqueta. Quien deshace no quiere una segunda copia — quiere de vuelta la
+  // entrada que quitó. {repetir:true} la re-inserta sin tocar a la gemela y sin
+  // abrir el modal, que ahí sería una pregunta inventada.
+  addSuggestion:       (el)    => addSuggestion(el.dataset.title, el.dataset.day, el.dataset.time, el.dataset.restaurar?{repetir:true}:undefined),
   // taller multi-día: el bloque entra o sale entero (no hay acción por sesión)
   addRecurringBlock:   (el)    => addRecurringBlock(el.dataset.title),
   removeRecurringBlock:(el)    => removeRecurringBlock(el.dataset.title),
@@ -478,7 +491,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202608231625';
+const BUILD_VERSION='202609031733';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -495,6 +508,16 @@ const BUILD_VERSION='202608231625';
   sessionStorage.removeItem(_sk);
   storage.setBuild(BUILD_VERSION);
 })();
+
+// #dbg-ver estaba escrito A MANO en index.html y nadie lo actualizaba —tampoco
+// bump-version, que no lo conocía—: mostraba el build del 10 de mayo cuatro meses
+// después. Un número de build existe para lo contrario: saber qué código corre
+// (cicatriz del bundle congelado del v6/v7). Sale de BUILD_VERSION, y el nodo nace
+// VACÍO: si el JS no llega, mejor sin número que con uno falso.
+onDomReady(()=>{
+  const _v=document.getElementById('dbg-ver');
+  if(_v) _v.textContent=BUILD_VERSION;
+});
 
 /* ── GLOSARIO DE TÉRMINOS USER-FACING ────────────────────────────
    Validar con usuarios reales antes de cada edición del festival.
@@ -1015,11 +1038,28 @@ function _morphOpen(sourceEl, openFn){
 function _openPelMorph(cardEl, title){ _morphOpen(cardEl, ()=>openPelSheet(title)); }
 globalThis._morphOpen = _morphOpen; // puente: lo usa el ACTION_REGISTRY (openCortoSheetFromEl) fuera de este IIFE
 document.addEventListener('click',function(e){
+  // data-stop="1" SE HONRA ACÁ (30 ago 2026). Este listener corre en CAPTURA, así
+  // que llega antes del stopPropagation de la fase de burbuja: un control que
+  // declara `data-stop` para decir «yo me encargo de este toque» quedaba sin
+  // efecto contra él, y el toque abría la ficha ADEMÁS de hacer lo suyo. Pasó con
+  // «Agendar» en NO INCLUIDAS: se agendaba y el usuario terminaba en la ficha de
+  // la obra, detrás del modal, en vez de en su Plan.
+  // La lista de abajo era el único mecanismo, y sumarle un nombre por cada control
+  // nuevo es un olvido esperando: el olvido no da error, solo abre una ficha de
+  // más. Honrar la declaración cubre a los que vengan; la lista se queda para
+  // .int-seen-btn, el único que no la declara.
+  const _stop=e.target.closest('[data-stop="1"]');
+  if(_stop) return;
   if(e.target.closest('.plist-heart')) return; // heart toggle — no abrir sheet
   if(e.target.closest('.suggestion-add')) return; // botón Añadir — no abrir sheet
   if(e.target.closest('.int-prio-btn')) return; // estrella priorizar — no abrir sheet
   if(e.target.closest('.int-seen-btn')) return; // ya vista — no abrir sheet
   if(e.target.closest('.prio-chip-rm')) return; // quitar prioridad — no abrir sheet
+  // Un corto premiado abre SU ficha, no la de su programa. openCortoSheet se
+  // enriquece sola buscando el item en los film_list de FILMS, así que basta el
+  // título — no hace falta arrastrar país/duración/sección por el marcado.
+  const ec=e.target.closest('.js-open-corto');
+  if(ec){ _searchOpenCorto(ec.dataset.title||'','','','',''); return; }
   const el=e.target.closest('.js-open-pel');
   if(el) _openPelMorph(el, el.dataset.title||'');
 },true);
@@ -1295,10 +1335,10 @@ state.subscribeRender(
     // nada que cerrar — entraba con FILMS vacío. Es la misma trampa de
     // arranque que ya nos costó el store-gate.
     onDomReady(function(){
-      // Se recorre el MISMO camino que un usuario: elegir y pulsar "Entrar".
-      // No se replica por dentro (loadFestival + quitar el splash a mano)
-      // justamente para no tener dos rutas de entrada que puedan divergir.
-      try{ selectSplashFest(_previewFestId); }catch(e){}
+      // Mismo camino que un usuario (elegir + "Entrar"), para no tener dos vías
+      // que diverjan. El festId va TERCERO: de primero cae en `name`, la fn usa
+      // su default `festId||_DEFAULT_FEST_ID` y se entraba a otro. Lo vigila T108.
+      try{ selectSplashFest(null,null,_previewFestId); }catch(e){}
       const _btn=document.querySelector('.splash-enter-btn');
       if(_btn) _btn.click(); else { try{ dismissSplash(); }catch(e){} }
     });
@@ -1402,8 +1442,12 @@ document.addEventListener('click', function(e){
     // de mostrar. Se exponen para que el test PREGUNTE en vez de reimplementar:
     // un test que recalcula la regla es una segunda opinión, no un veredicto —
     // y coincide con producción hasta el día en que la regla cambia.
+    // sameEntry: el DUEÑO de «esta entrada del Plan es aquella» — título, día,
+    // hora y SEDE. Mismo motivo que los de arriba: el test pregunta, no
+    // reimplementa. Sin él, T108 tendría que rehacer la identidad a mano y
+    // volvería a coincidir con producción solo hasta que la regla cambie.
     // Solo lectura: ninguna muta estado.
-    screensConflict, isScreeningBlocked, screeningPassed, plannableScreens,
+    sameEntry, screensConflict, isScreeningBlocked, screeningPassed, plannableScreens,
     // getSuggestions: lo que la app OFRECE agregar al plan. Expuesto para que el
     // recorrido verifique la promesa que nadie mira — que una sugerencia jamás
     // choque con el plan que ya tenés.
@@ -1574,14 +1618,26 @@ if(navigator.storage && navigator.storage.persist){
   navigator.storage.persist().catch(function(){});
 }
 
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js').catch(function(){});
+// ── Actualizaciones ──────────────────────────────────────────────────────
+// LOS CANALES DE version.json NO DEPENDEN DEL SERVICE WORKER (24 ago 2026).
+// Vivieron años dentro de if('serviceWorker' in navigator) — una condición que
+// no les corresponde: son fetch + location.href. El wrapper iOS es WKWebView
+// sin WKAppBoundDomains → sin navigator.serviceWorker → el bloque entero nunca
+// corría: iOS quedaba SIN NINGÚN mecanismo de actualización (Juan lo vivió: el
+// palmarés de FINCA no le llegaba con la app en la mano). Es el mismo patrón de
+// [store-gate-dom-timing]: un guard heredado que esconde código que no lo
+// necesita. Dentro del guard quedan SOLO register() y controllerchange, que sí
+// son API de SW. El guardián [update-canales-sin-sw] impide que esto regrese.
+var _HAS_SW = ('serviceWorker' in navigator);
 
-  // ── Plataforma y build tracking ───────────────────────────────────────
-  var _isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  var _BUILD_KEY = 'orf_build';
-  var _reloading  = false; // guard: evita double-reload si dos canales disparan a la vez
+// ── Plataforma y build tracking ───────────────────────────────────────
+var _isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+var _BUILD_KEY = 'orf_build';
+var _reloading  = false; // guard: evita double-reload si dos canales disparan a la vez
+
+if(_HAS_SW){
+  navigator.serviceWorker.register('/sw.js').catch(function(){});
 
   // ── Canal Android/Desktop: controllerchange ───────────────────────────
   // hadController previene el double-reload en primera instalación
@@ -1598,81 +1654,128 @@ if('serviceWorker' in navigator){
       _hadController = true;
     });
   }
-
-  // ── Función de check compartida por cold-start y visibilitychange ─────
-  // Extrae la lógica para reutilizarla en ambos triggers sin duplicar código.
-  function _checkVersionJson(){
-    fetch('/version.json', {cache:'no-store'})
-      .then(function(r){ return r.json(); })
-      .then(function(v){
-        var serverBuild = v[_isIOS ? 'ios' : 'android'] || '';
-        if(!serverBuild) return;
-        // Comparar contra BUILD_VERSION (horneado en el bundle que REALMENTE está
-        // corriendo) — único indicador confiable de qué código se cargó. NO contra
-        // localStorage, que solo refleja "vi este version.json", no "cargué este JS".
-        if(serverBuild === BUILD_VERSION){
-          // El bundle cargado ya es el del servidor → recién ahora marcar como
-          // actualizado. (Antes se escribía ANTES de recargar → en iOS el reload
-          // servía el bundle viejo desde caché y el marcador quedaba "actualizado"
-          // para siempre, deshabilitando el trigger.)
-          if(localStorage.getItem(_BUILD_KEY) !== serverBuild){
-            localStorage.setItem(_BUILD_KEY, serverBuild);
-          }
-          return;
-        }
-        // serverBuild !== BUILD_VERSION → hay un bundle nuevo que todavía no cargó.
-        // Recargar con cache-busting REAL del documento (?v=serverBuild) para
-        // bypassear la caché HTTP de WKWebView que causaba el stuck en iOS.
-        // Guard de loop: si ya estamos en ?v=serverBuild, no re-navegar (el
-        // sub-recurso pudo quedar en caché) — se reintenta en el próximo cold-start.
-        if(!_reloading && location.href.indexOf('v=' + serverBuild) === -1){
-          _reloading = true;
-          location.href = location.href.split('?')[0].split('#')[0] + '?v=' + serverBuild;
-        }
-        // NO se escribe orf_build aquí: el bundle nuevo aún no cargó.
-      })
-      .catch(function(){});
-  }
-
-  // ── Canal version.json #1: cold start ─────────────────────────────────
-  // Corre al abrir la app desde cero.
-  // Permite staged rollout: android e ios con builds independientes en version.json.
-  _checkVersionJson();
-
-  // ── Canal version.json #2 + SW re-check: visibilitychange ────────────
-  // Corre cuando el usuario vuelve la app desde background.
-  // En mobile, el JS no recarga al volver del background — sin este listener,
-  // un usuario que deja la app abierta horas (o días) nunca detecta updates.
-  // Patrón usado por Slack, Discord, Notion para actualizaciones en WebView.
-  // registration.update() fuerza re-verificación de sw.js contra el servidor —
-  // el browser solo hace este check en register() (al cargar), no al volver de bg.
-  // Si hay nuevo sw.js → instala → skipWaiting → controllerchange → reload.
-  document.addEventListener('visibilitychange', function(){
-    if(document.visibilityState === 'visible' && !_reloading){
-      _checkVersionJson();
-      // Forzar re-check del SW contra el servidor (gap documentado en web.dev/MDN)
-      navigator.serviceWorker.ready.then(function(reg){ reg.update(); }).catch(function(){});
-    }
-  });
-
-  // ── Canal version.json #3 + flush de sync: online ────────────────────────
-  // Al recuperar conexión (aterrizar, salir del sótano del teatro): (1) subir
-  // los cambios locales que quedaron sin sincronizar mientras no había red, y
-  // (2) revalidar si hay build nuevo. El evento 'online' es optimista (señala
-  // "hay interfaz de red", no "hay Internet real"), así que ambas acciones son
-  // idempotentes y tolerantes a fallo: _cloudSave solo limpia cloud_dirty tras
-  // un upsert confirmado (nunca pierde la edición si el flush falla) y es el
-  // mismo re-push que ya dispara el boot (loader.js); _checkVersionJson va con
-  // no-store y es no-op si nada cambió. El re-push de boot permanece como red
-  // de seguridad — este listener no lo reemplaza.
-  window.addEventListener('online', function(){
-    if(storage.getCloudDirty()) _cloudSave();
-    if(!_reloading){
-      _checkVersionJson();
-      navigator.serviceWorker.ready.then(function(reg){ reg.update(); }).catch(function(){});
-    }
-  });
 }
+
+// Re-check del sw.js contra el servidor (gap documentado en web.dev/MDN): el
+// browser solo lo hace en register(). No-op silencioso donde no hay SW.
+function _swRecheck(){
+  if(!_HAS_SW) return;
+  navigator.serviceWorker.ready.then(function(reg){ reg.update(); }).catch(function(){});
+}
+
+// ── Función de check compartida por cold-start y visibilitychange ─────
+// Extrae la lógica para reutilizarla en ambos triggers sin duplicar código.
+function _checkVersionJson(opts){
+  fetch('/version.json', {cache:'no-store'})
+    .then(function(r){ return r.json(); })
+    .then(function(v){
+      var serverBuild = v[_isIOS ? 'ios' : 'android'] || '';
+      if(!serverBuild) return;
+      // Comparar contra BUILD_VERSION (horneado en el bundle que REALMENTE está
+      // corriendo) — único indicador confiable de qué código se cargó. NO contra
+      // localStorage, que solo refleja "vi este version.json", no "cargué este JS".
+      if(serverBuild === BUILD_VERSION){
+        // El bundle cargado ya es el del servidor → recién ahora marcar como
+        // actualizado. (Antes se escribía ANTES de recargar → en iOS el reload
+        // servía el bundle viejo desde caché y el marcador quedaba "actualizado"
+        // para siempre, deshabilitando el trigger.)
+        if(localStorage.getItem(_BUILD_KEY) !== serverBuild){
+          localStorage.setItem(_BUILD_KEY, serverBuild);
+        }
+        return;
+      }
+      // serverBuild !== BUILD_VERSION → hay un bundle nuevo que todavía no cargó.
+      // Recargar con cache-busting REAL del documento (?v=serverBuild) para
+      // bypassear la caché HTTP de WKWebView que causaba el stuck en iOS.
+      // Guard de loop: si ya estamos en ?v=serverBuild, no re-navegar (el
+      // sub-recurso pudo quedar en caché) — se reintenta en el próximo cold-start.
+      if(location.href.indexOf('v=' + serverBuild) !== -1) return;
+      if(opts && opts.offer && !document.getElementById('otrofestiv-splash')){
+        // MODO OFRECER (canal #4, la app VISIBLE y en uso). No se recarga bajo
+        // los dedos del usuario: es la doctrina de T97 —lo que estás mirando no
+        // cambia solo— aplicada a la app entera. Se ofrece con el toast de
+        // acción que ya existe; si lo ignora, el próximo poll re-ofrece y la
+        // vuelta de background lo aplica sola, como siempre.
+        // En el SPLASH sí se recarga en silencio: vuelve al mismo splash con el
+        // festival recordado — indistinguible, y no hay trabajo que interrumpir.
+        _offerUpdate(serverBuild);
+        return;
+      }
+      if(!_reloading){
+        _reloading = true;
+        location.href = location.href.split('?')[0].split('#')[0] + '?v=' + serverBuild;
+      }
+      // NO se escribe orf_build aquí: el bundle nuevo aún no cargó.
+    })
+    .catch(function(){});
+}
+
+var _lastOffered = '';
+function _offerUpdate(serverBuild){
+  if(_lastOffered === serverBuild) return; // un toast por build por ciclo de polls
+  _lastOffered = serverBuild;
+  showActionToast(t('update_disponible'), t('update_cta'), function(){
+    _reloading = true;
+    location.href = location.href.split('?')[0].split('#')[0] + '?v=' + serverBuild;
+  }, 12000);
+}
+
+// ── Canal version.json #1: cold start ─────────────────────────────────
+// Corre al abrir la app desde cero.
+// Permite staged rollout: android e ios con builds independientes en version.json.
+_checkVersionJson();
+
+// ── Canal version.json #2 + SW re-check: visibilitychange ────────────
+// Corre cuando el usuario vuelve la app desde background.
+// En mobile, el JS no recarga al volver del background — sin este listener,
+// un usuario que deja la app abierta horas (o días) nunca detecta updates.
+// Patrón usado por Slack, Discord, Notion para actualizaciones en WebView.
+document.addEventListener('visibilitychange', function(){
+  if(document.visibilityState === 'visible' && !_reloading){
+    _checkVersionJson();
+    _swRecheck();
+    refrescarDatosFestival();   // capa 2: los DATOS también, sin recargar
+  }
+});
+
+// ── Canal version.json #3 + flush de sync: online ────────────────────────
+// Al recuperar conexión (aterrizar, salir del sótano del teatro): (1) subir
+// los cambios locales que quedaron sin sincronizar mientras no había red, y
+// (2) revalidar si hay build nuevo. El evento 'online' es optimista (señala
+// "hay interfaz de red", no "hay Internet real"), así que ambas acciones son
+// idempotentes y tolerantes a fallo: _cloudSave solo limpia cloud_dirty tras
+// un upsert confirmado (nunca pierde la edición si el flush falla) y es el
+// mismo re-push que ya dispara el boot (loader.js); _checkVersionJson va con
+// no-store y es no-op si nada cambió. El re-push de boot permanece como red
+// de seguridad — este listener no lo reemplaza.
+window.addEventListener('online', function(){
+  if(storage.getCloudDirty()) _cloudSave();
+  if(!_reloading){
+    _checkVersionJson();
+    _swRecheck();
+    refrescarDatosFestival();
+  }
+});
+
+// ── Canal version.json #4: poll en PRIMER PLANO ──────────────────────────
+// El hueco que los otros tres no cubren (Juan, 24 ago 2026): quien deja la app
+// ABIERTA Y VISIBLE durante horas no dispara cold-start, ni visibilitychange,
+// ni online. Durante un festival es el caso normal — la app en la mano entre
+// sede y sede. Sin esto, un cambio de sede u horario sellado en NOTICES no le
+// llega hasta que suelta el teléfono.
+// Cada 10 min y SOLO visible: en background, visibilitychange ya hace el
+// trabajo al volver, y sondear de fondo es gastar batería en algo que otro
+// canal cubre. `?updPoll=` acorta el ciclo en dev/tests (precedente: simTime).
+var _POLL_MS = (function(){
+  var m = location.search.match(/[?&]updPoll=(\d+)/);
+  return m ? Math.max(300, +m[1]) : 10 * 60 * 1000;
+})();
+setInterval(function(){
+  if(document.visibilityState === 'visible' && !_reloading){
+    _checkVersionJson({offer:true});
+    refrescarDatosFestival();   // capa 2 — mismo pulso, otra carga: el catálogo
+  }
+}, _POLL_MS);
 
 // ── FILTRO LUGAR — implementación desde cero ─────────────────────────────
 // 40 líneas. Un dropdown simple. Sin dependencias externas.

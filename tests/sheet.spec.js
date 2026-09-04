@@ -1,7 +1,7 @@
 // @ts-check
 // sheet.spec.js — Sheet de película + Intereses (watchlist).
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival, addToWatchlist } = require('./helpers');
+const { LEVIZA_SIMTIME, enterFestival, addToWatchlist, reentrar } = require('./helpers');
 
 // T07 — Quitar de Intereses desde sheet cierra el sheet
 test('T07 — quitar de Intereses desde sheet cierra el sheet', async ({ page }) => {
@@ -363,4 +363,209 @@ test('AF14 — la banda AVISOS usa el ritmo vertical de la fila de función', as
   });
   expect(m.arriba).toBe(m.abajo);   // mismo aire arriba y abajo
   expect(m.arriba).toBe(m.fila);    // y el mismo que la fila de función
+});
+
+// ── T115 — la FICHA pregunta al mismo dueño que la grilla y la lista ──────────
+// Era el CUARTO sitio con el gate viejo en `is_programa`: un compuesto de cortos
+// —207 de los 215 del catálogo— caía al generativo, que trae banda de sección y
+// duración justo al lado del encabezado, que ya las dice. Juan: «se lee doble».
+// La Escalera entra MUDA (dato vacío): la regla anti-repetición de la ficha ya
+// existía para el generativo y vale igual acá.
+test('T115 — un compuesto de cortos muestra la Escalera en su ficha, no el generativo', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00');
+  const r = await page.evaluate(() => {
+    const f = FILMS.find(x => /^Oublie pas le gruau/.test(x.title));
+    if (!f) return { falta: true };
+    openPelSheet(f.title);
+    const svg = document.querySelector('.psp-escalera svg');
+    return {
+      esCortos: !!f.is_cortos, tienePosterPropio: !!f.poster,
+      escalera: !!svg,
+      generativo: !!document.querySelector('.pel-sheet-poster'),
+      stackViejo: !!document.querySelector('.pel-sheet-poster-stage'),
+      obrasListadas: document.querySelectorAll('.pel-sheet-corto-item').length,
+      // MUDA: sin la línea de dato, que repetiría la duración del encabezado
+      textoEnElPoster: svg ? [...svg.querySelectorAll('text')].map(t => t.textContent.trim()).filter(Boolean) : null
+    };
+  });
+  expect(r.falta).toBeFalsy();
+  expect(r.esCortos).toBe(true);
+  expect(r.tienePosterPropio).toBe(false);   // si lo tuviera, mandaría el oficial
+  expect(r.escalera).toBe(true);
+  expect(r.generativo).toBe(false);
+  expect(r.stackViejo).toBe(false);
+  expect(r.obrasListadas).toBe(2);           // sus obras siguen alcanzables
+  expect(r.textoEnElPoster).toEqual([]);     // muda: nada que el encabezado ya diga
+});
+
+test('T115b — si el programa trae afiche oficial, la ficha lo respeta', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00');
+  const r = await page.evaluate(() => {
+    // El caso donde la jerarquía DECIDE: afiche oficial del programa Y los
+    // afiches completos de todas sus obras. Sin esta segunda condición el test
+    // pasa por la razón equivocada —la Escalera no entraría igual, por falta de
+    // afiches— y la mutación que quita la jerarquía lo deja verde. Pasó: hubo
+    // que cazarlo mutando. En Cinemancia hay 14 compuestos así.
+    const f = FILMS.find(x => x.poster && x.film_list && x.film_list.length >= 2
+      && x.film_list.length <= 8
+      && x.film_list.every(i => i.poster && i.posterSource !== 'editorial'));
+    if (!f) return { falta: true };
+    openPelSheet(f.title);
+    return { titulo: f.title, oficial: f.poster, obras: f.film_list.length,
+      escalera: !!document.querySelector('.psp-escalera svg'),
+      muestraElOficial: !!document.querySelector('.pel-sheet-poster, .psp-editorial') };
+  });
+  expect(r.falta).toBeFalsy();
+  expect(r.escalera).toBe(false);         // la pila nuestra NO tapa el arte del festival
+  expect(r.muestraElOficial).toBe(true);
+});
+
+// ── T143 — con una hoja abierta, el toast no aterriza sobre sus controles ────
+// El toast vive a 62px del borde inferior, encima de la barra de tabs. Las hojas
+// son TODAS bottom-anchored, así que con una abierta el aviso caía justo sobre
+// lo que hay que tocar: medido en la hoja de calificación, tapaba 38 de los 84px
+// del área de estrellas —la mitad de abajo— y el texto «Deslizá sobre las
+// estrellas» quedaba debajo. Con showActionToast (pointer-events:all) además
+// INTERCEPTABA el toque, no solo lo tapaba.
+//
+// Se mide el SOLAPE en píxeles contra el control, que es el hallazgo, y no la
+// clase CSS: una regla puede declararse y no aplicar. La segunda mitad —sin hoja
+// el toast se queda abajo— impide «arreglarlo» mandándolo siempre arriba, que
+// lo pondría sobre el contenido del Programa.
+test('T143 — el toast se aparta de la hoja, y solo cuando hay hoja', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-08T20:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(600);
+    const F = await import('/src/view/feedback.js');
+    const caja = el => { const b = el.getBoundingClientRect(); return { y: b.top, bot: b.bottom }; };
+    const solape = (a, b) => Math.round(Math.max(0, Math.min(a.bot, b.bot) - Math.max(a.y, b.y)));
+    // 1 · SIN hoja: el toast se queda donde siempre, abajo
+    F.showToast('Movida a Ya vistas', 'info');
+    await w(400);
+    const t1 = document.getElementById('prio-toast');
+    const sinHoja = { y: Math.round(caja(t1).y), vp: window.innerHeight };
+    // 2 · CON hoja: la de calificación, por su acción real
+    const obra = FILMS[0];
+    tap('closePelSheet');
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'openPostViewRating');
+    b.setAttribute('data-title', obra.title); b.setAttribute('data-day', obra.day || '');
+    b.setAttribute('data-time', obra.time || ''); b.setAttribute('data-venue', obra.venue || '');
+    document.body.appendChild(b); b.click(); b.remove();
+    await w(1200);
+    const estrellas = document.querySelector('.pv-stars-area, .rating-stars');
+    if (!estrellas) return { sinEstrellas: true, sinHoja };
+    F.showToast('Movida a Ya vistas', 'info');
+    await w(400);
+    const t2 = document.getElementById('prio-toast');
+    return { sinHoja,
+      conHoja: { y: Math.round(caja(t2).y), solape: solape(caja(estrellas), caja(t2)),
+        altoEstrellas: Math.round(caja(estrellas).bot - caja(estrellas).y) } };
+  });
+  if (r.sinEstrellas) return;
+  expect(r.sinHoja.y, 'sin hoja el toast sigue abajo, encima de los tabs')
+    .toBeGreaterThan(r.sinHoja.vp / 2);
+  expect(r.conHoja.altoEstrellas, 'la hoja muestra su área de estrellas').toBeGreaterThan(40);
+  expect(r.conHoja.solape, 'y el toast no pisa ni un píxel de ella').toBe(0);
+});
+
+// ── T167 — quitar de Intereses tiene vuelta atrás ────────────────────────────
+// Auditoría A-2 (2 sep 2026): quitar una obra que NO está en el Plan no pregunta
+// —el modal es solo para lo que está en el Plan— y el toast era informativo, sin
+// botón. Medido: clase «prio-toast info», 0 botones de acción. Un toque de más
+// borraba la obra, sus compañeras de función y su prioridad, en silencio.
+//
+// Lo que se afirma: (1) el toast ofrece «Deshacer»; (2) al usarlo vuelven los
+// TRES conjuntos —intereses, vista y prioridad— y también las compañeras de
+// función; (3) sobrevive a una recarga, o sea que se guardó de verdad;
+// (4) control: sin tocar «Deshacer», la obra sigue fuera.
+test('T167 — quitar de Intereses ofrece deshacer, y el deshacer repone todo', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'finca2026', '2026-08-13T10:00');
+
+  // una obra ANCLADA (con compañera de función) y fuera del Plan: es el caso
+  // donde más se pierde de un toque
+  const prep = await page.evaluate(async () => {
+    const g = {};
+    FILMS.forEach(f => { if (f._slotKey && !f._cancelled) (g[f._slotKey] ||= []).push(f); });
+    // La obra tiene que estar en UNA sola función: cuando un título gira por
+    // varias con distintas compañeras, la intersección es vacía a propósito
+    // (regla de «la MISMA función», handlers.js) y no arrastraría a nadie.
+    const unaSola = t => FILMS.filter(f => f.title === t && f._slotKey)
+      .reduce((s, f) => s.add(f._slotKey), new Set()).size === 1;
+    const grupo = Object.values(g).find(x => x.length >= 2 && x.every(f => unaSola(f.title)));
+    if (!grupo) return null;
+    const tit = grupo[0].title;
+    toggleWL(tit);
+    await new Promise(r => setTimeout(r, 300));
+    togglePriority(tit);
+    await new Promise(r => setTimeout(r, 300));
+    return { tit, hermanas: grupo.slice(1).map(f => f.title),
+      enWL: watchlist.has(tit), enPrio: prioritized.has(tit),
+      hermanasEnWL: grupo.slice(1).filter(f => watchlist.has(f.title)).length,
+      enPlan: !!(savedAgenda && savedAgenda.schedule.some(s => s._title === tit)) };
+  });
+  expect(prep, 'el festival tiene una función compartida de obras que no giran').not.toBeNull();
+  expect(prep.hermanas.length, 'con al menos una compañera — si no, no se prueba el arrastre').toBeGreaterThanOrEqual(1);
+  expect(prep.enWL, 'la obra quedó en Intereses').toBe(true);
+  expect(prep.enPrio, 'y priorizada').toBe(true);
+  expect(prep.hermanasEnWL, 'con sus compañeras de función').toBe(prep.hermanas.length);
+  expect(prep.enPlan, 'y NO está en el Plan: por eso quitar no pregunta').toBe(false);
+
+  // quitar → el toast tiene que ofrecer la vuelta atrás
+  const tras = await page.evaluate(async (p) => {
+    toggleWL(p.tit);
+    await new Promise(r => setTimeout(r, 400));
+    const toast = document.getElementById('prio-toast');
+    const btn = toast && toast.querySelector('.toast-action-btn');
+    return { enWL: watchlist.has(p.tit), enPrio: prioritized.has(p.tit),
+      hermanasEnWL: p.hermanas.filter(h => watchlist.has(h)).length,
+      hayBoton: !!btn, etiqueta: btn ? btn.textContent.trim() : null,
+      visible: toast ? getComputedStyle(toast).opacity : null };
+  }, prep);
+  expect(tras.enWL, 'la obra salió de Intereses').toBe(false);
+  expect(tras.hermanasEnWL, 'y sus compañeras también').toBe(0);
+  expect(tras.hayBoton, 'el toast ofrece una salida, no solo avisa').toBe(true);
+  expect(tras.etiqueta, 'y dice qué hace').toBe('Deshacer');
+  expect(tras.visible, 'el toast está a la vista').toBe('1');
+
+  // usarla → vuelven los tres conjuntos y las compañeras
+  const undo = await page.evaluate(async (p) => {
+    document.querySelector('.toast-action-btn').click();
+    await new Promise(r => setTimeout(r, 500));
+    return { enWL: watchlist.has(p.tit), enPrio: prioritized.has(p.tit),
+      hermanasEnWL: p.hermanas.filter(h => watchlist.has(h)).length };
+  }, prep);
+  expect(undo.enWL, 'la obra volvió a Intereses').toBe(true);
+  expect(undo.enPrio, 'con su prioridad, no solo el interés').toBe(true);
+  expect(undo.hermanasEnWL, 'y sus compañeras de función volvieron con ella').toBe(prep.hermanas.length);
+
+  // y sobrevive a una recarga: se guardó, no quedó solo en memoria.
+  // La recarga borra _simTime y devuelve al selector → hay que re-entrar
+  // (mismo patrón que el resto de la suite, ver `reentrar` en helpers).
+  await page.reload();
+  await reentrar(page, 'finca2026', '2026-08-13T10:00');
+  await page.waitForTimeout(1200);
+  const post = await page.evaluate(p => ({ enWL: watchlist.has(p.tit),
+    enPrio: prioritized.has(p.tit),
+    hermanasEnWL: p.hermanas.filter(h => watchlist.has(h)).length }), prep);
+  expect(post.enWL, 'tras recargar sigue en Intereses: el deshacer persistió').toBe(true);
+  expect(post.enPrio, 'y sigue priorizada').toBe(true);
+  expect(post.hermanasEnWL, 'y las compañeras siguen').toBe(prep.hermanas.length);
+
+  // control: si NO se toca «Deshacer», la obra se queda fuera
+  const sinUndo = await page.evaluate(async (p) => {
+    toggleWL(p.tit);
+    await new Promise(r => setTimeout(r, 400));
+    const t2 = document.getElementById('prio-toast');
+    if (t2) { t2.style.opacity = '0'; t2.style.pointerEvents = 'none'; }  // se vence sin tocarlo
+    await new Promise(r => setTimeout(r, 300));
+    return { enWL: watchlist.has(p.tit), enPrio: prioritized.has(p.tit) };
+  }, prep);
+  expect(sinUndo.enWL, 'sin deshacer, la obra sigue fuera — el quitar no se anula solo').toBe(false);
+  expect(sinUndo.enPrio, 'y sin prioridad').toBe(false);
 });

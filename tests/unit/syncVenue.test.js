@@ -15,7 +15,9 @@ const CAT = [
 ];
 
 function load() {
-  return loadDomain({ functions: ['syncScheduleWithCatalog'], globals: {} });
+  // sameEntry es el dueño de la identidad de entrada y syncScheduleWithCatalog
+  // la consume — el harness carga por lista explícita, así que va declarada.
+  return loadDomain({ functions: ['sameEntry', 'syncScheduleWithCatalog'], globals: {} });
 }
 
 test('misma tripleta en dos sedes → conserva LA SEDE elegida, no la primera del catálogo', () => {

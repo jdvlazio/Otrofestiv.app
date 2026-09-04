@@ -12,7 +12,8 @@
 
 import { NOTICES, PALMARES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _buildPosterV16, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity } from './helpers.js';
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity, programParts, isCitySel, venueSelLabel,
+} from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -142,6 +143,22 @@ export function renderProgramaList(){
   el.innerHTML=renderProgramaListHTML(state);
 }
 
+// ── vacioDelDia — dueño único del vacío de un día ────────────────────────────
+// TRES vacíos, y decirlos igual es mentir (Juan 24 ago, ampliado 30 ago): sin
+// filtros el día vacío es programación que no existe; con SOLO la ciudad
+// —contexto, no un filtro que el usuario fue a buscar— culpar a «sección o
+// sede» le manda a arreglar dos controles que nunca tocó; con sección o sede
+// puestas el filtro sí esconde y el aviso es correcto.
+function vacioDelDia(){
+  if(activeVenue==='all'&&activeSec==='all')
+    return emptyState(ICONS.calendar, t('dia_sin_funciones'), t('dia_sin_funciones_sub'));
+  if(activeSec==='all'&&isCitySel(activeVenue))
+    return emptyState(ICONS.calendar,
+      t('dia_sin_funciones_ciudad',{city:venueSelLabel(activeVenue)}),
+      t('dia_sin_funciones_ciudad_sub'));
+  return emptyState(ICONS.search, t('filter_sin_actividades'), t('empty_filtros'));
+}
+
 export function renderProgramaListHTML(state){
   try{
   const {FILMS, _activeFestId, watchlist} = state.snapshot();
@@ -154,9 +171,7 @@ export function renderProgramaListHTML(state){
     const cat=f=>f.type==='event'?2:f.is_cortos?1:0;
     return cat(a)-cat(b);
   });
-  if(!films.length){
-    return emptyState(ICONS.search, t('filter_sin_actividades'), t('empty_filtros'));
-  }
+  if(!films.length) return vacioDelDia();
   const byTime={};
   films.forEach(f=>{if(!byTime[f.time])byTime[f.time]=[];byTime[f.time].push(f);});
   return Object.entries(byTime).map(([time,fs])=>`
@@ -207,7 +222,7 @@ export function renderProgramaListHTML(state){
         ${_stk||_plistPosterHtml(f,src)}
         <div class="plist-info">
           <div class="plist-title">${noticeBadge}<span class="plist-title-txt">${dt}</span>${nowDot}${_metaBadges(f)}${qaDot}</div>
-          <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${venueCity(f.venue)?`<span class="plist-city">${venueCity(f.venue)}</span>`:''}${f.duration?' · '+durFmt(f.duration):''}</div>
+          <div class="plist-meta" style="${f._cancelled?'text-decoration:line-through':''}">${vc.short}${sala(f.venue)?' · '+sala(f.venue):''}${venueCity(f.venue)?` · <span class="plist-city">${venueCity(f.venue)}</span>`:''}${f.duration?' · '+durFmt(f.duration):''}</div>
           ${noticeNote||`<div class="plist-sec">${_secLabelFull(f.section||'')}</div>`}
         </div>
         <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>
@@ -382,13 +397,29 @@ export function renderPeliculaViewHTML(state){
   const {FILMS, watched, watchlist} = state.snapshot();
   const _dayFilms = activeDay==='all' ? FILMS : FILMS.filter(f=>f.day===activeDay);
   const titleMap={};
+  // El REPRESENTANTE de cada obra —el que fija su posición en el grid— es su
+  // función más temprana, pero IGNORANDO los pases de prensa. Sin esto, activar
+  // Prensa e Industria reordenaba el catálogo sin añadirle una sola tarjeta:
+  // ninguna obra existe solo en prensa (las 226 tienen función pública), y los
+  // pases son mucho más tempranos que las funciones públicas —en TIFF prensa
+  // arranca con 61 el 10 SEP contra 14 públicas—, así que el pase pasaba a ser
+  // el más temprano y la obra saltaba de sitio. Mismas tarjetas, otro orden:
+  // confuso justo cuando el usuario busca ver QUÉ SE AÑADIÓ. Lo levantó Juan.
+  //
+  // El grid es un catálogo de OBRAS; el interruptor filtra FUNCIONES. Que la
+  // obra se ancle a su función pública mantiene el catálogo quieto, y las
+  // funciones añadidas se ven donde son la unidad: la vista Lista.
+  const _rank=f=>(f.audience==='press'?1:0);   // público primero, siempre
+  const _min=f=>(f.day_order||0)*1440+toMin(f.time||'00:00');
   _dayFilms.forEach(f=>{
     if(!titleMap[f.title]){titleMap[f.title]={film:f,screenings:[]};}
     else{
       const cur=titleMap[f.title].film;
-      const curMin=(cur.day_order||0)*1440+toMin(cur.time||'00:00');
-      const newMin=(f.day_order||0)*1440+toMin(f.time||'00:00');
-      if(newMin<curMin) titleMap[f.title].film=f;
+      // Una pública SIEMPRE gana a un pase de prensa; entre iguales, la más
+      // temprana. Si la obra solo tuviera pases (hoy no pasa en TIFF), el
+      // primero que llegue sigue siendo su representante y nada se rompe.
+      const dr=_rank(f)-_rank(cur);
+      if(dr<0||(dr===0&&_min(f)<_min(cur))) titleMap[f.title].film=f;
     }
     titleMap[f.title].screenings.push(f);
   });
@@ -433,9 +464,26 @@ export function renderPeliculaViewHTML(state){
     const{displayTitle}=parseProgramTitle(f.title);
     const progBadge='';//REMOVED: no count badge
     const _ended=festivalEnded();
-    const _isPrograma=f.is_programa&&f.film_list&&f.film_list.length>=2;
+    // LA ESCALERA — 2-3 obras, todas con afiche REAL (POSTERS.md, Juan 21 ago).
+    // Se pregunta ANTES que nada: es la decisión de más alto rango para una
+    // función que agrupa obras, y su modelo ya sabe decir que no. Devuelve null
+    // si falta un afiche, si alguno es un still nuestro (Forma B) o si son 4+;
+    // ahí siguen mandando los caminos de siempre y no se toca nada.
+    //
+    // Lo que gana el grid: las funciones de cortos de 2-3 obras caían al
+    // generativo con los dos afiches guardados (31 en el catálogo), y los
+    // programas legacy mostraban `poster-card-stack`, dos mitades a 50/50 que
+    // recortan cada afiche a una tira y le parten la tipografía. La Escalera
+    // los muestra ENTEROS y solapados.
+    const _esc=programParts(f);
+    const _isPrograma=!_esc&&f.is_programa&&f.film_list&&f.film_list.length>=2;
     let posterImg,_cardBg='',_edAccent='';
-    if(_isPrograma){
+    if(_esc){
+      // El SVG va INLINE, no como src de un <img>: sus módulos son <image href>
+      // remotos y un SVG dentro de <img> no carga recursos externos — saldría en
+      // negro. Es el mismo camino que ya usa el Diario (`.dw-svg`).
+      posterImg=`<div class="img-cover poster-esc">${_esc.svg}</div>`;
+    } else if(_isPrograma){
       const _p1=_getItemPoster(f.film_list[0]);
       const _p2=_getItemPoster(f.film_list[1]);
       if(!_p1&&!_p2){
@@ -503,7 +551,7 @@ export function render(){
   const cntEl=document.getElementById('cnt');
   cntEl.innerHTML=''; // count eliminado — redundante con lugar-btn y chips
   const grid=document.getElementById('grid');
-  if(!films.length){grid.innerHTML=emptyState(ICONS.search,t('filter_sin_actividades'),t('empty_filtros'));return;}
+  if(!films.length){grid.innerHTML=vacioDelDia();return;}
   // ── Vista horario: poster-grid 3 col + overlay de hora ──
   grid.innerHTML='<div class="poster-grid">'+films.map((f,i)=>{
     const isProg=f.is_cortos;
@@ -570,13 +618,33 @@ export function palmaresDe(festId){
   return cats;
 }
 
+// Una premiada se busca en el catálogo ENTERO: primero como obra de nivel
+// superior y, si no, DENTRO de los programas de cortos. Un corto premiado tiene
+// su propia ficha (openCortoSheet) igual que cualquier obra — no hay razón para
+// que el palmarés lo trate distinto por venir envuelto en un programa. Lo
+// levantó Juan el 24 ago: «para eso existe la ficha independiente por película o
+// cortometraje, sin discriminación». Antes devolvíamos null y caían a Forma A,
+// que es el respaldo para lo que NO tenemos, no para lo que sí.
+export function _palmBuscar(titulo){
+  if(!titulo) return null;
+  const {FILMS}=state.snapshot();
+  const f=FILMS.find(x=>x.title===titulo);
+  if(f) return {tipo:'film', film:f};
+  for(const p of FILMS){
+    const c=(p.film_list||[]).find(x=>x&&x.title===titulo);
+    if(c) return {tipo:'corto', corto:c, programa:p};
+  }
+  return null;
+}
+
 function _palmPoster(entry, accent, tira){
-  const {FILMS, watched, filmRatings}=state.snapshot();
-  const f=entry.obra?FILMS.find(x=>x.title===entry.obra):null;
+  const {watched, filmRatings}=state.snapshot();
+  const _h=entry.obra?_palmBuscar(entry.obra):null;
+  const f=_h?(_h.tipo==='film'?_h.film:_h.corto):null;
   // Prioridad: afiche de la obra en el catálogo → afiche propio de la entrada del
   // palmarés (una premiada que no tenemos pero cuyo póster oficial sí existe) →
   // Forma A. La Forma A es el último recurso, no el primero.
-  const src=(f?getFilmPoster(f):null)||entry.poster||null;
+  const src=(_h?(_h.tipo==='film'?getFilmPoster(_h.film):_getItemPoster(_h.corto)):null)||entry.poster||null;
   // Sin obra en el catálogo → afiche propio. El rótulo dice QUÉ es, no de qué
   // sección: «PROYECTO» para lo de ImpulsoLab, la categoría para una obra.
   const inner=src
@@ -590,12 +658,11 @@ function _palmPoster(entry, accent, tira){
   const vista=entry.obra&&watched.has(entry.obra);
   const r=vista?(filmRatings[entry.obra]||0):0;
   const estrellas=r?`<div class="palm-seen">${'★'.repeat(Math.floor(r))}${r%1>=0.5?'½':''}</div>`:'';
-  // La marca «afiche nuestro» se retiró: nació cuando TODA premiada sin ficha
-  // caía en Forma A y había varias. Hoy queda UNA —«Eliza», un proyecto de
-  // ImpulsoLab que no tiene afiche en ninguna parte— y no hay original con el
-  // que confundirla. La marca protegía de una confusión que ya no existe, y a
-  // cambio tapaba el afiche.
-  const propio='';
+  // Sin marca «afiche nuestro» (Juan, 24 ago 2026). Nació cuando toda premiada
+  // sin ficha caía en Forma A y eran varias; hoy queda UNA —«Eliza», un proyecto
+  // de ImpulsoLab que no tiene afiche en ninguna parte— y no hay original con el
+  // que confundirla. Protegía de una confusión que ya no existe, y tapaba el
+  // afiche.
   // La marca va SOLO en la ganadora: lo que no la lleva es mención. Un signo en
   // vez de dieciséis rótulos —ocho «Ganadora» y ocho «Menciones»—, que era lo
   // que Juan llamó repetitivo. Anclada con --poster-badge-top, el token que
@@ -606,7 +673,7 @@ function _palmPoster(entry, accent, tira){
   // marcaba lo que ya era obvio. Lo ambiguo no era cuál gana, sino qué son las
   // pequeñas de la derecha; eso lo dice ahora el divisor.
   const laurel='';
-  return `<div class="palm-po">${inner}${laurel}${estrellas}${propio}</div>`;
+  return `<div class="palm-po">${inner}${laurel}${estrellas}</div>`;
 }
 
 export function renderPalmaresBandHTML(festId){
@@ -647,15 +714,28 @@ export function renderPalmaresHTML(festId){
   // que era la otra queja: demasiado scroll.
   const secs=cats.map(c=>{
     const acc=_sectionColor(c.categoria);
+    // `_palmAbrir` decide la ficha: la de película o la del CORTO. Antes esto
+    // era `js-open-pel` a secas y un corto premiado no tenía a dónde llevar.
+    // Qué ficha abre cada premiada: la de película, o la del CORTO si viene
+    // dentro de un programa. Un corto premiado tiene ficha propia igual que
+    // cualquier obra (openCortoSheet) — el palmarés no lo trata distinto por
+    // venir envuelto. Sin obra en el catálogo, la tarjeta no es clicable.
+    const _clic=x=>{
+      const h=x.obra?_palmBuscar(x.obra):null;
+      if(!h) return '';
+      const cls=h.tipo==='corto'?'js-open-corto':'js-open-pel';
+      return ` ${cls}" data-title="${escXML(x.obra)}`;
+    };
     const g=c.ganadoras.map(x=>`
-      <div class="palm-g${x.obra?' js-open-pel':''}"${x.obra?` data-title="${escXML(x.obra)}"`:''}>
+      <div class="palm-g${_clic(x)}">
         ${_palmPoster(x,acc)}
-        <div class="palm-wtx"><div class="palm-wt">${escXML(x.titulo)}</div>
+        <div class="palm-wtx">
+          ${x.premio?`<div class="palm-premio">${escXML(x.premio)}</div>`:''}
+          <div class="palm-wt">${escXML(x.titulo)}</div>
           <div class="palm-wm dato-linea">${escXML(x.autoria||'')}</div></div>
       </div>`).join('');
     const m=c.menciones.map(x=>`
-      <div class="palm-m${x.obra?' js-open-pel':''}"${x.obra?` data-title="${escXML(x.obra)}"`:''}
-        title="${escXML(x.titulo)}">${_palmPoster(x,acc,true)}</div>`).join('');
+      <div class="palm-m${_clic(x)}" title="${escXML((x.premio?x.premio+' · ':'')+x.titulo)}">${_palmPoster(x,acc,true)}</div>`).join('');
     return `<section class="palm-sec">
       <div class="palm-cat" style="--c:${acc}"><span></span>${escXML(c.categoria)}</div>
       ${g}${c.menciones.length?`<div class="palm-row palm-mrow2"><span class="splash-rail-div palm-div-v" aria-hidden="true"><span class="srd-bar"></span><span class="srd-lbl">${t('palm_mencion_corto')}</span><span class="srd-bar"></span></span><div class="palm-ms">${m}</div></div>`:''}</section>`;

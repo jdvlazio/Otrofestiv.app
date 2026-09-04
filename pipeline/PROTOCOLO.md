@@ -8,6 +8,17 @@ ante cualquier conflicto sobre datos de terceros, PIPELINE prevalece.
 Reescrito el 9 ago 2026 tras montar FICDEH (443 funciones, 11 ciudades) y
 FICMA (90 funciones desde un PDF de imágenes). Todo lo que dice aquí se pagó.
 
+> **Si vas a hacer a mano algo que tiene comando, para.** Cinco de los siete
+> pasos tienen herramienta genérica —`enriquecer.py`, `geocodificar.py`,
+> `ensamblar.py` + `publicar.py`, `correr.py`, `tools/audit.html`— y una
+> plantilla del plan con cada clave explicada (`festival.plan.example.json`).
+> Montando QAFF Bogotá (2 sep 2026) se hicieron a mano cuatro pasos que tenían
+> comando, y cada uno produjo exactamente el defecto que el comando evita: un
+> enriquecido con la forma equivocada que se leía sin error y no enriquecía
+> nada, un plan sin cabecera ni `pasos`, un `config.js` con comillas que ningún
+> guardián lee. Doce vueltas para encontrarlos uno a uno. El camino corto es
+> `python3 pipeline/correr.py <id>`; todo lo demás es el camino largo.
+
 ---
 
 ## 1 · Qué pedir para empezar
@@ -170,6 +181,26 @@ habría borrado 415 banderas y 13 salas en silencio. Con `--forzar` se publica
 igual, pero hay que escribirlo a mano.
 
 **Plantilla del plan:** `pipeline/festival.plan.example.json`.
+
+**El plan tiene contrato, como el crudo.** `lib.cargar_plan()` lo pasa antes
+del primer paso —lo llaman `correr.py`, `ensamblar.py` y el guardián
+`[plan-contrato]`— y falla a la cara con TODO lo que falte, junto: cabecera,
+`pasos`, secciones con arquetipo de los 9, la forma de cada sidecar (un
+enriquecido que es diccionario y no `{obras:[…]}` se leía sin error y no
+enriquecía nada), y el calendario sin huecos (`dias_vacios` los declara).
+`prioLimit` no se escribe: se calcula. Montando QAFF Bogotá (2 sep 2026) esas
+seis ausencias salieron una por vuelta, al final de la cadena; con el contrato
+salen en la primera corrida.
+
+**Solo se publica lo que corrió el runner.** `correr.py` sella el build tras
+cada paso que lo reescribe (`_corrido`: quién, cuándo, con qué plan — el SHA del
+archivo); `publicar.py` no acepta un build sin sello ni con el sello de un plan
+que cambió después. Una cadena a mano no llega a `festivals/`. El escape es
+`--forzar`, escrito a mano y dicho en voz alta.
+
+**La sala es de la función.** Como dicen §3 y §4: campo `sala` en el crudo. El
+ensamblador la honraba solo desde la tabla de sedes; ahora la que trae la
+función gana, y la tabla manda en el NOMBRE de la sede.
 
 ### Paso 5·bis · El ensamblador propio (legado)
 

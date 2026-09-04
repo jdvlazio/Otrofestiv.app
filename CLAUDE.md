@@ -32,7 +32,12 @@ Después del clone, leer en este orden:
 1. Este archivo (`CLAUDE.md`)
 2. `docs/ARQUITECTURA.md` — diseño, reglas, componentes, patrones
 3. Si el trabajo involucra datos de festival: `docs/SCHEMA.md`
-4. Si el trabajo involucra onboarding de un festival nuevo: `docs/PIPELINE.md`
+4. Si el trabajo involucra onboarding de un festival nuevo: `pipeline/PROTOCOLO.md` — **es EL proceso**.
+   Antes de escribir una línea, tener abiertos `pipeline/correr.py` (el runner),
+   `pipeline/enriquecer.py` (TMDB verificado + Letterboxd + pósters, un comando) y
+   `pipeline/festival.plan.example.json` (la plantilla del plan). Si vas a hacer a mano
+   algo que tiene comando, para. `docs/PIPELINE.md` es la doctrina de TMDB/LB y el
+   historial de errores: manda en su tema, no es el proceso.
 
 ---
 
@@ -86,11 +91,12 @@ deliberada existe la etiqueta `frontera-ok`.
 | `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | Recién terminado |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | Recién terminado |
 | `cinemancia2026` | Cinemancia | Valle de Aburrá | 3–12 SEP | **Próximo / activo** |
-| `cineautopsia2026` | CineAutopsia | Bogotá | 21–29 AGO | **Próximo / activo** |
+| `cineautopsia2026` | CineAutopsia | Bogotá | 21–29 AGO | Recién terminado |
 | `vartex2026` | Vartex | Medellín | 19–22 AGO | Recién terminado |
 | `qaff2026` | QAFF | Quibdó | 14–18 SEP | **Próximo / activo** |
 | `tiff2026` | TIFF | Toronto | 10–20 SEP | **Próximo / activo** |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
+| `siembrafest2026` | SiembraFest | Sasaima y Villeta | 9–18 SEP | **Próximo / activo** |
 
 ### Features activas (desde `.specify/features/`)
 

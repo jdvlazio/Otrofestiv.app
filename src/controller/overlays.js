@@ -20,11 +20,47 @@ import { countryToFlags } from './sheets-controller.js';
 // leía "odo el programa" sin la T y los emojis salían partidos. Le pasa a
 // cualquier festival cuyo panel llegue al máximo — con secciones de nombre largo
 // es sistemático. El clamp deja al menos MARGEN px de aire a la izquierda.
-function _dropRight(btnRight){
+// El ancho llega MEDIDO, no supuesto (auditoría A-6, 3 sep 2026). Antes esta
+// función espejaba el tope de `.filter-drop` (300px) y se posicionaba por el peor
+// caso, así que un panel angosto se anclaba como si midiera 300 y uno ancho
+// desperdiciaba lo que le sobraba: medido en Sección con TODO, el panel quedaba
+// de 8 a 308 en un viewport de 390 —82px sin usar— y 4 de 15 secciones salían
+// cortadas, una perdiendo el 45% del nombre. Con el ancho real, el panel angosto
+// sigue pegado a su botón y el ancho usa la pantalla.
+function _dropRight(btnRight, ancho){
   const MARGEN=8;
-  const ancho=Math.min(300, window.innerWidth*0.9); // espejo de .filter-drop max-width
+  const _a=ancho||Math.min(300, window.innerWidth*0.9);
   const right=window.innerWidth-btnRight;
-  return Math.max(MARGEN, Math.min(right, window.innerWidth-ancho-MARGEN))+'px';
+  return Math.max(MARGEN, Math.min(right, window.innerWidth-_a-MARGEN))+'px';
+}
+
+// _velaElCorte — DUEÑO ÚNICO del desvanecido al pie de un dropdown de filtro.
+// El panel se corta donde llega su max-height, y eso caía a MEDIA LETRA: medido
+// en Sección (max-height 464,2 · scrollHeight 660), la fila 11 quedaba con 23 de
+// sus 44px y se leía como error de render, no como «hay más abajo».
+//
+// La máscara NO puede ser fija: al llegar al final de la lista se come la última
+// opción —medido: «Función de clausura» a 1px de la base, dentro del degradado—,
+// que es peor que el corte. Se enciende solo mientras queda algo por debajo.
+// Lo usan los DOS dropdowns (sección y lugar): un solo listener, un solo dueño.
+function _velaElCorte(drop){
+  if(!drop) return;
+  const _sync=()=>drop.classList.toggle('hay-mas',
+    drop.scrollTop + drop.clientHeight < drop.scrollHeight - 2);
+  drop.addEventListener('scroll', _sync, {passive:true});
+  _sync();
+}
+
+// _filasQueVeras — DUEÑO ÚNICO del número de una fila de filtro. El contrato lo
+// fijó Juan (7 ago, citado en sheets.js): «en el filtro el número dice vas a ver
+// N si filtrás por esto — es la consecuencia de la acción». Entonces la unidad
+// no la elige el menú, la elige la VISTA: con un día activo pinta una fila por
+// FUNCIÓN; en «todas» pinta una tarjeta por OBRA. Medido en FICDEH: día 15 → 88
+// filas (88 funciones, 55 obras); todas → 118 tarjetas (118 obras, 447
+// funciones). Sin esto la fila de ciudad prometía 136 —la suma de sus sedes, que
+// cuenta dos veces la obra proyectada en dos salas— y pintaba 79.
+function _filasQueVeras(films){
+  return activeDay==='all' ? new Set(films.map(f=>f.title)).size : films.length;
 }
 
 export function seccionOpen(){
@@ -39,14 +75,14 @@ export function seccionOpen(){
   const baseFilms = activeDay==='all' ? FILMS : FILMS.filter(f=>f.day===activeDay);
   const films = activeVenue!=='all' ? baseFilms.filter(f=>venueMatches(f.venue,activeVenue)) : baseFilms;
 
-  const secMap={}, secCatMap={}, titleSet={};
+  const secFilms={}, secCatMap={}, secMap={};
   films.forEach(f=>{
-    if(!titleSet[f.title]){
-      titleSet[f.title]=true;
-      const s=f.section||'';
-      if(s){ secMap[s]=(secMap[s]||0)+1; if(f.filmCategory) secCatMap[s]=f.filmCategory; }
-    }
+    const s=f.section||'';
+    if(!s) return;
+    (secFilms[s]||(secFilms[s]=[])).push(f);
+    if(f.filmCategory) secCatMap[s]=f.filmCategory;
   });
+  Object.keys(secFilms).forEach(s=>{ secMap[s]=_filasQueVeras(secFilms[s]); });
 
   // data-s SIEMPRE = section ES (clave de filtro/orden); solo el <span> visible se localiza.
   const _opt=(s,cnt,isActive)=>'<div class="lugar-opt'+(isActive?' on':'')+'" data-s="'+s.replace(/"/g,'&quot;')+'">'
@@ -89,6 +125,9 @@ export function seccionOpen(){
     if(activeMNav==='mnav-cartelera') _renderProgramaContent(true); else render(); // selección sección → scroll al tope
   });
   document.body.appendChild(drop);
+  // Recién acá el panel tiene ancho: se posiciona con el REAL, no con el tope.
+  drop.style.right = _dropRight(r.right, drop.offsetWidth);
+  _velaElCorte(drop);
   btn.classList.add('on');
   setTimeout(()=>{ document.addEventListener('click',seccionOutside); },0);
 }
@@ -190,11 +229,20 @@ export function _searchAll(q){
   FILMS.forEach(f=>{if(!titleMap[f.title]) titleMap[f.title]=f;});
   Object.values(titleMap).forEach(f=>{
     const r1=fuzzyMatch(q,f.title);
-    const r2=f.title_en?fuzzyMatch(q,f.title_en):{match:false,score:0};
+    // Títulos alternos: el usuario busca lo que TIENE DELANTE, y la única pista
+    // frente a él es el afiche. Cuando nuestro póster viene con el arte de
+    // distribución en español y el festival titula en otro idioma, esas dos
+    // cosas no coinciden: «Hoja seca» en el afiche sobre una ficha que se llama
+    // «Dry Leaf» (Cinemancia 2026, título correcto por doctrina — así lo publica
+    // el festival). Medido: buscar «hoja» daba «Sin resultados».
+    // Un solo dueño para todos los alternos, así agregar otro idioma no vuelve
+    // a tocar la fórmula del puntaje.
+    const rAlt=[f.title_en,f.title_es].filter(Boolean)
+      .reduce((mej,alt)=>{const r=fuzzyMatch(q,alt);return r.score>mej.score?r:mej;},{match:false,score:0});
     const secScore=(f.section||'').toLowerCase().includes(ql)?0.3:0;
     const cntScore=(f.country||'').toLowerCase().includes(ql)?0.2:0;
-    const score=Math.max(r1.score,r2.score)+secScore+cntScore;
-    if((r1.match||r2.match||secScore||cntScore)&&!seen.has(f.title)){
+    const score=Math.max(r1.score,rAlt.score)+secScore+cntScore;
+    if((r1.match||rAlt.match||secScore||cntScore)&&!seen.has(f.title)){
       seen.add(f.title);
       results.push({...f,_score:score});
     }
@@ -282,9 +330,9 @@ export function lugarOpen(){
         if(_vSeen.has(f.title)) return;
         _vSeen.add(f.title);
         const rel=activeDay==='all'?f.screenings:f.screenings.filter(s=>s.date===activeDay||s.day===activeDay);
-        rel.forEach(s=>_acum(s.venue));
+        rel.forEach(s=>_acum(s.venue,f));
       } else {
-        _acum(f.venue);
+        _acum(f.venue,f);
       }
     });
   // La clave agrupa por (CIUDAD, short), no por short a secas: el short no es único
@@ -293,17 +341,22 @@ export function lugarOpen(){
   // dos, descuadraba el conteo de la ciudad y hacía DESAPARECER la sede de la
   // segunda. Dentro de una misma ciudad el short sí agrupa a propósito: son las
   // salas de un edificio (Cinemateca Sala 2/3/Capital, las 5 de Plaza Bocagrande).
-  function _acum(venue){
+  function _acum(venue,film){
     const cfg=vcfg(venue);const short=cfg.short||venue;
     if(!short) return;
     const city=cfg.city||'';
     const k=city+SEDE_SEP+short;
-    if(!venueMap[k]) venueMap[k]={key:k,label:short,count:0,city};
-    venueMap[k].count++;
+    if(!venueMap[k]) venueMap[k]={key:k,label:short,city,films:[]};
+    venueMap[k].films.push(film);
   }
 
-  const venues = Object.values(venueMap).sort((a,b)=>b.count-a.count);
-  const total = venues.reduce((s,v)=>s+v.count,0);
+  const venues = Object.values(venueMap)
+    .map(v=>({...v, count:_filasQueVeras(v.films)}))
+    .sort((a,b)=>b.count-a.count);
+  // La ciudad cuenta sobre SU conjunto, no sumando el de sus sedes: sumarlas
+  // duplica la obra que se proyecta en dos salas de la misma ciudad.
+  const _cuentaCiudad=name=>_filasQueVeras(
+    venues.filter(v=>v.city===name).reduce((a,v)=>a.concat(v.films),[]));
 
   // ── Nivel de CIUDAD (solo festivales multiciudad — FICDEH 11, Cinemancia 10) ──
   // Multiciudad = ≥2 ciudades DISTINTAS y NO VACÍAS entre las sedes visibles. El
@@ -335,6 +388,12 @@ export function lugarOpen(){
       +'<span>'+label+'</span>'
       // "todos los lugares" sin conteo (total general sin referencia confunde);
       // ciudades y sedes sí muestran su número.
+      // Marca de ciudad caída (2 sep 2026): el dato sale de festivalCities —el
+      // MISMO dueño que alimenta la hoja de apertura—, así que las dos
+      // superficies no pueden decir cosas distintas de la misma ciudad. Antes
+      // acá se leía «Quibdó 14» sobre catorce obras con todas sus funciones
+      // caídas por el sismo.
+      +(opts.canc?'<span class="lugar-canc">'+t('notice_cancelada')+'</span>':'')
       +(count!=null?'<span class="lugar-cnt">'+count+'</span>':'')
       +(opts.chev?ICONS.chevronR:'')
       +'</div>';
@@ -350,12 +409,21 @@ export function lugarOpen(){
     }
     if(!drillCity){
       drop.innerHTML=_row('all', t('filter_todos_lugares'), null)
-        +cities.map(c=>_row('drill:'+c.name, c.name, c.count, {chev:true})).join('');
+        +cities.map(c=>_row('drill:'+c.name, c.name, _cuentaCiudad(c.name), {chev:true, canc:c.cancelled})).join('');
     } else {
       const cv=venues.filter(v=>v.city===drillCity);
-      const ccount=cv.reduce((s,v)=>s+v.count,0);
+      const ccount=_cuentaCiudad(drillCity);
+      // La fila que filtra la CIUDAD entera es la única sin icono —el pin es de
+      // las SEDES ([filtro-lugar-multiciudad]: la ciudad no lo lleva)— así que su
+      // texto arrancaba 21px a la izquierda de todas las demás (63 contra 84).
+      // En una lista, el ítem que cuelga fuera de la columna se lee como TÍTULO
+      // de los de abajo, y esta es la única forma de pedir «todo Medellín». Un
+      // hueco del ancho del pin la mete en la columna sin darle un pin que no le
+      // toca. No es color —las tres filas miden el mismo rgb(136,136,136)—: es
+      // la sangría.
+      const _hueco='<span class="lugar-gutter" aria-hidden="true"></span>';
       drop.innerHTML='<div class="lugar-opt lugar-back" data-v="back">'+ICONS.chevronL+'<span>'+t('filter_ciudades')+'</span></div>'
-        +_row('city:'+drillCity, drillCity, ccount)
+        +_row('city:'+drillCity, drillCity, ccount, {icon:_hueco, canc:!!(cities.find(c=>c.name===drillCity)||{}).cancelled})
         +cv.map(v=>_row('sede:'+v.key, v.label, v.count, {icon:ICONS.pin})).join('');
     }
   }
@@ -383,6 +451,8 @@ export function lugarOpen(){
   });
 
   document.body.appendChild(drop);
+  drop.style.right = _dropRight(r.right, drop.offsetWidth);   // ancho real (ver _dropRight)
+  _velaElCorte(drop);
   btn.classList.add('on');
 
   // Close on outside click
@@ -402,8 +472,26 @@ export function lugarToggle(){
 export function fuzzyMatch(query,title){
   const q=normalize(query),t=normalize(title);
   if(t.includes(q)) return{match:true,score:100+q.length};
-  let qi=0;for(let i=0;i<t.length&&qi<q.length;i++) if(t[i]===q[qi]) qi++;
-  if(qi===q.length) return{match:true,score:qi};
+  if(!q.length) return{match:false,score:0};
+  // La subsecuencia vale SOLO si es compacta: las letras tienen que caber en una
+  // ventana de como mucho el doble de lo escrito. Sin este techo, «techo» casaba
+  // con «The Children's Hour» (5 letras repartidas en 17) y con cuatro títulos
+  // más, uno de 57 caracteres — 6 resultados de los que 1 tenía que ver. Medido
+  // sobre el catálogo: una errata real (una letra caída) se pasa de la consulta
+  // por 1 en 29 de 35 casos; el ruido empieza en 9. El umbral vive en ese hueco
+  // y escala solo con lo escrito, sin constante mágica.
+  // Se busca la ocurrencia MÁS COMPACTA, no la primera: arrancar por la primera
+  // letra disponible puede desparramar un match que más adelante era estrecho.
+  let best=-1;
+  for(let s0=0;s0<t.length;s0++){
+    if(t[s0]!==q[0]) continue;
+    let qi=0,last=-1;
+    for(let i=s0;i<t.length&&qi<q.length;i++) if(t[i]===q[qi]){ last=i; qi++; }
+    if(qi<q.length) break;                       // desde acá ya no alcanza
+    const sp=last-s0+1;
+    if(best<0||sp<best) best=sp;
+  }
+  if(best>0&&best<=q.length*2) return{match:true,score:q.length};
   return{match:false,score:0};
 }
 

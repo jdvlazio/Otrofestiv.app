@@ -55,7 +55,6 @@
   "storageKey": "cineautopsia2026_",
   "festivalStartStr": "2026-08-22T00:00:00",
   "festivalEndStr": "2026-08-29T23:59:00",
-  "prioLimit": 3,
   "sharedSlotIsOneScreening": false,
   "ticketing_model": "mixed",
   "mes_es": "agosto",
@@ -63,7 +62,8 @@
    "destacados": "Destacados",
    "panorama": "Panorama",
    "Clausura": "Clausura"
-  }
+  },
+  "dias_vacios": []
  },
  "_campos": {
   "crudo": "sidecar del parser, en el formato intermedio (PROTOCOLO §4). OBLIGATORIO.",
@@ -72,6 +72,9 @@
   "sedes": "tabla canónica EXPLÍCITA nombre-en-la-fuente → [«Sede - Ciudad», «sala»].",
   "secciones": "mapa nombre-del-festival → {emoji, en, archetype}. Verbatim: nuestra capa es el emoji y el inglés.",
   "seccion_por_titulo": "palabra en el título → sección, cuando el crudo no trae `seccion`. Explícito, nunca heurístico.",
-  "resto": "identidad del festival: name, fullName, city, dates, year, timezoneOffset, storageKey, festivalStartStr/EndStr, prioLimit, ticketing_model."
+  "resto": "identidad del festival: name, fullName, city, dates, year, timezoneOffset, storageKey, festivalStartStr/EndStr, prioLimit, ticketing_model.",
+  "dias_vacios": "días SIN programación dentro del festival, declarados: un día ausente rompe la aritmética de «Hoy». lib.cargar_plan() falla si el calendario tiene un hueco sin declarar.",
+  "prioLimit": "NO se escribe: lo calcula cargar_plan() (round(días/2), tope [3,8]).",
+  "contrato": "lib.cargar_plan() valida este archivo ANTES del primer paso —cabecera, pasos, secciones con arquetipo de los 9, forma de cada sidecar, calendario sin huecos— y falla a la cara con todo lo que falte, junto. Igual que cargar_crudo con el crudo."
  }
 }

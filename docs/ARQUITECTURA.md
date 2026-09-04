@@ -13,6 +13,24 @@
 ├── sw.js                       ← Service Worker (CACHE_NAME/BUILD stampeado por bump-version.js)
 ├── manifest.json               ← PWA manifest
 ├── version.json                ← Build timestamp (android+ios) — sincronizado por bump-version.js
+│   Los 4 canales que lo leen (cold start, visibilitychange, online, poll de
+│   10 min con toast) viven en src/main.js FUERA del guard de service worker:
+│   el wrapper iOS (WKWebView sin WKAppBoundDomains) no tiene esa API, y con
+│   los canales presos del guard quedaba sin ningún mecanismo de update
+│   (bug del 24 ago 2026). Guardián: [update-canales-sin-sw] + test T102.
+│   CAPA 2 — datos en caliente (live-refresh.js): en los mismos ticks, el
+│   catálogo del festival activo se re-fetchea y aplica SIN recargar, por
+│   tres reglas (aprobadas con respaldo — web.dev CLS, NN/g, pill de X):
+│   valores → en silencio; estructura visible → se OFRECE (pill), calendario
+│   siempre; cambios de TU plan → aviso con el hecho (T97). Dueños únicos
+│   compartidos con loadFestival: _ingerirDatosFestival + publicarCatalogo;
+│   el árbitro es domain/refresh-diff.js (puro). Tests: T103/T104 + unit.
+│   La HUELLA del refresco (_rawHash) y la copia cruda (_rawFilms) se toman AL
+│   ENTRAR a la ingesta: explodeScreenings devuelve los MISMOS objetos que
+│   data.films, así que duraciones, sealSharedSlots y NOTICES mutan el JSON
+│   bajado — tomarla al final la dejaba distinta de la de un fetch fresco y el
+│   refresco veía un cambio en cada tick (los pósters titilaban; 4 de 17
+│   festivales). Guardián: [refresco-huella-cruda] + tests/unit/refreshHuella.
 ├── src/                        ← App modular ESM (Fase 8). Mapa detallado de módulos en §16.2
 │   ├── main.js                 ← Bootstrap + STATE/VIEWSTATE bridge + ACTION_REGISTRY; importa el resto
 │   ├── config.js               ← FESTIVAL_CONFIG · VENUES · NOTICES · taxonomía/colores de sección + mergeFestivalSections()
@@ -258,6 +276,30 @@ Dos componentes canónicos reemplazan las ~20 clases ad-hoc de encabezados
 | `.ctx-eyebrow` | **Ceja** — corona un bloque/sheet con contexto | Icono pequeño + label uppercase, sin barra. Color por contexto vía scope del padre (`.pv-header`, `.conflict-hdr`, `.prio-limit-hdr`). |
 
 **Regla de uso:** ¿abre una lista? → `sec-hdr`. ¿Corona un bloque/sheet? → `ctx-eyebrow`.
+
+**El contrato de `sec-hdr` con su contenedor (24 ago 2026).** El full-bleed no es
+magia: se consigue con `margin-left/right: calc(-1*var(--sp-4))` para romper el
+padding del contenedor, repuesto como `padding: var(--sp-2) var(--sp-4)` propio.
+De ahí sale un requisito que hay que cumplir al usarlo:
+
+> **El contenedor de un `sec-hdr` DEBE aportar `var(--sp-4)` de padding lateral**
+> —él mismo o un ancestro—. Sin eso los márgenes negativos no compensan nada:
+> solo empujan la banda fuera del viewport.
+
+Y su corolario: si el contenedor da ese padding, **la tira o lista hermana NO
+debe repetirlo** (`padding: var(--sp-2) 0 var(--sp-1)`), o queda a 32px y se
+desalinea del icono de la banda.
+
+Lo pagó el palmarés: nació el 23 ago con un punto de inserción nuevo
+—`#palmares-slot`, un div sin una sola regla de CSS colgado del `body`— y su
+banda medía **422px en un viewport de 390**, con el icono cortado contra el
+borde. Los otros 23 `sec-hdr` de la app nunca lo notaron porque heredaron
+contextos que ya cumplían (`.poster-grid`, sheets, `.ag-summary`): cumplían la
+regla por copiar un sitio que funcionaba, no por conocerla.
+
+Al crear un contenedor NUEVO para un `sec-hdr`, medir. La comprobación son tres
+números en el navegador a 390px: la banda ocupa exactamente el ancho del
+viewport, el icono queda a 16px del borde, y `scrollWidth` no crece.
 
 **Cero divisores sueltos (decisión Juan, jul 2026):** la separación de secciones
 la hace la BANDA del `sec-hdr` (estilo C — reemplazó a la línea del estilo A ese
@@ -579,6 +621,7 @@ Y lo que un hook no puede cortar, lo vigila `validate.py`:
 | `[stash-compartido]` | stash vivo con varios worktrees — la pila es del repo, no del worktree |
 | `[plannable-dueno-unico]` | que nadie reimplemente «qué funciones son planificables» fuera de `plannableScreens` (exención explícita: `// plannable-ok:`) |
 | `[plan-concepto]` | que «Plan» vaya en mayúscula en las 3 locales y en el fallback estático — es el nombre de un concepto, y la regla se eligió por ser verificable |
+| `[close-bg-registrado]` | que toda hoja con `data-close-bg="X"` tenga su `closeX` en ACTION_REGISTRY — sin él el toque en el fondo no hace NADA, y en silencio (la hoja de ciudad fue así desde siempre) |
 | `[doc-cadena]` | que esta documentación y los guardianes se citen mutuamente |
 
 #### La identidad nunca sale de una etiqueta
@@ -597,6 +640,7 @@ Tres guardianes sostienen la regla, y cada uno cubre lo que el otro no ve:
 | `[short-ambiguo]` | **el dato**: avisa si un short se repite entre ciudades (validate-festivals) |
 | `venueMatches.test.js` | **la unidad**: el predicado no cruza ciudades y sí agrupa salas |
 | `P08` | **el invariante**: filtrar por una sede nunca devuelve otra ciudad, en CADA festival |
+| `[ciudad-separada]` | **la pantalla**: la ciudad va DENTRO de la frase de sede (auditoría 18 ago) y necesita su « · ». Se lo pusieron a 2 de los 3 emisores; el tercero pegó «Centro Colombo AmericanoMedellín» en todos los multiciudad hasta el 25 ago |
 
 P08 es el que más vale: no sabe nada de centinelas ni de `short`, así que sigue
 cazando la clase aunque cambiemos por completo la implementación. Juzga el
@@ -612,6 +656,101 @@ resultado, no el camino — mismo patrón que el oráculo del planeador (§15.6)
 #### La sala que parte un programa — `[sala-mixta]`
 
 El anclaje de función (`sealSharedSlots`) agrupa por `día|hora|sede|sala`. Si en
+
+#### Los guardianes se pudren: la auditoría del 25 ago 2026
+
+Un guardián es código, y como todo código se desactualiza cuando la app se
+mueve. La **Fase 8** partió el JS de `index.html` en 37 módulos bajo `src/` y
+anotó en el shim de `validate.py`: *«los checks no requieren cambios»*. Esa
+frase fue la enfermedad — el shim inyectaba **solo `main.js`**, así que todos
+los checks que leen `content` se quedaron mirando 2 de 37 módulos.
+
+Se auditaron con **mutación** los 30 guardianes más antiguos (los anteriores a
+la Fase 8, la población de mayor riesgo). Resultado: **19 vivos · 8 ciegos ·
+3 decorativos**.
+
+**Lo que se arregló:**
+- **`js-syntax` era un ✓ incondicional**: `node --check` sobre un `.js` con
+  `import` lo trata como CommonJS y aprueba *cualquier cosa* — incluso
+  `const a = ;`. Ahora compila cada módulo como `.mjs` (parseo real) y el inline
+  de index.html como script clásico. Importa porque un error de sintaxis en
+  cualquier módulo mata la app entera al boot (ver [boot-esm-torn]).
+- **El shim inyecta TODOS los módulos**: `event-delegation` pasó de ver 39
+  `data-action` a **101** (y sus «63 muertos» eran falsos: 7).
+
+**LOS DUEÑOS NO SON TERRITORIO.** Al ver todo el código, cuatro guardianes se
+acusaron a sí mismos: el diccionario (`i18n.js`) veía sus 425 valores como
+«strings hardcodeados», el adaptador (`storage.js`) veía sus propios
+`localStorage`, y los bridges veían sus declaraciones como shadowing. Un
+archivo que ES la referencia de un check no puede estar en su pajar:
+`_SRC_NO_INYECTAR`.
+
+**Un guardián puede tener razón y estar mal escrito.** Dos regex daban falsos:
+uno cruzaba la coma de un array literal (`const _visDays=new Set([DAY_KEYS[vs],
+DAY_KEYS[ve]])` parecía declarar `DAY_KEYS`); otro ignoraba que
+`t('k').replace('{n}',…)` sí sustituye el placeholder.
+
+**Y uno se BORRÓ, con medición:** `shadow-t` (retirado) vigilaba 1 de 467 llamadas a
+`t()`, y con el territorio completo hay **42 sombreados de `t` y cero
+peligrosos**. La alternativa correcta (ESLint `no-restricted-syntax`, parser de
+verdad) marca los 42 inofensivos: 50 avisos por un bug que no ocurre. Menos
+guardianes y mejores: **155 → 154**.
+
+> **La regla que queda.** «Un guardián que nunca falló no es de fiar» se venía
+> aplicando **al crearlo**. Hay que aplicarla también **al conjunto**, cada
+> tanto: un guardián verde puede estar mirando el lugar equivocado desde hace
+> meses. Lo único que lo demuestra es plantar el bug real donde hoy ocurriría.
+
+---
+
+#### `sameEntry` — la identidad de una entrada del Plan incluye la SEDE
+
+`sameEntry(a,b)` (`src/domain/schedule.js`) es el **dueño único** de «esta
+entrada del Plan es aquella»: **título + día + hora + sede**. Misma forma que
+`screensConflict` para «estas dos chocan» y `venueMatches` para el filtro: el
+predicado vive en el dominio y todos preguntan, nadie reimplementa.
+
+**Por qué la sede.** FICDEH programa la misma obra el mismo día y a la misma
+hora en ciudades distintas — **13 casos medidos**. Sin sede en la identidad,
+agendar «La independencia» en Bogotá marcaba la función de **Ibagué** como «en
+tu plan»: la app le decía a alguien de Ibagué que ya tenía algo que nunca
+agendó, y la que sí quería aparecía tomada. Bug real en producción, encontrado
+por el modelador de dominio el 25 ago 2026, sin relación con ninguna feature.
+
+**Dos decisiones del predicado, y las dos importan:**
+- **Falla CERRADO**: sin día u hora no matchea nada. Un predicado anterior
+  (revertido con #749) matcheaba TODO con los campos ausentes, así que un
+  llamador olvidadizo no daba error — borraba en masa. Ahora el olvido es un
+  no-op.
+- **Tolera la sede ausente**: si un lado no la declara, no se exige que
+  coincida. Los planes guardados antes de que la sede viajara en la entrada no
+  la tienen, y endurecerlo los desconectaría del catálogo — justo la pérdida de
+  datos que el predicado existe para evitar.
+
+**Sutileza del refresco en caliente**: la CLAVE del diff (`refresh-diff.js`) NO
+lleva sede a propósito — un cambio de sede es un cambio de VALOR (regla 1, se
+aplica en silencio) y meterla ahí lo volvería estructural, disparando el pill
+por una mudanza de sala. Solo el emparejamiento del PLAN usa `sameEntry`.
+
+**`verifyPlan` pregunta lo mismo (26 ago 2026).** La violación `duplicado` era
+por TÍTULO: repetir el título bastaba, e `is_recurring` era el permiso que
+salvaba a los talleres. Esa regla dejó de distinguir. Un plan legítimo con la
+misma obra en **dos funciones** —lo que el usuario puede pedir a propósito—
+salía marcado igual que un plan con la **misma función dos veces**, que sí es
+corrupción; y como el chokepoint reporta a Sentry en cada escritura, gritaba en
+cada toque sin señalar nada. Ahora `duplicado` = `sameEntry(a,b)`, y el permiso
+de `is_recurring` sobra: las sesiones de un taller ya tienen día distinto. Dos
+consecuencias que valen la pena: misma obra, mismo día y hora, **sedes
+distintas** ya no es `duplicado` sino `conflicto` —que es lo que de verdad es—,
+y dos entradas idénticas dejan de reportarse **también** como conflicto consigo
+mismas, un eco que enmascaraba el hallazgo real.
+
+Blindaje: `tests/unit/sameEntry.test.js` (datos reales de FICDEH) + **T108**
+(mide el bug en pantalla) + `verifyPlan.test.js` y `bloqueRecurrente.test.js`
+para la doctrina de `duplicado`. Cuatro mutantes mueren: quitarle la sede
+reproduce el bug de producción; quitarle el fallo-cerrado reproduce el de #746;
+volver `duplicado` a por-título tumba 4 tests; y quitar el `continue` devuelve
+el eco de conflicto.
 un programa de cortos una entrada trae `sala` y las demás no, esa obra **queda
 fuera del bloque**: la duración se cuenta de menos, no cuenta como conflicto con
 sus compañeras, el planificador puede agendar dos obras de la misma función, y el
@@ -651,6 +790,40 @@ lo que el usuario lee— y no el nombre de la clave: hay claves históricas
 sería un cambio sin lector. Quedan EXENTOS los nombres de FORMATO
 (`label_cortometraje`, `label_cortos`), donde «cortometraje» es el dato correcto y
 no un paraguas.
+
+#### La cuenta no lleva el sustantivo escrito — `[i18n-sustantivo-pegado]`
+
+Las cards de programa compuesto decían «2 obras · 93 min» **en inglés**: el
+sustantivo estaba pegado al template en dos sitios —`_datoCompuesto`
+(components.js) y `slotPosterParts` (helpers.js)— en vez de salir de `t()`. Once
+ocurrencias en la grilla.
+
+Ningún guardián podía verlo. `[i18n-complete]` comprueba que las **claves**
+existan en los dos idiomas, y un literal no es una clave; `literal-template.spec`
+vigila `${` roto, otra cosa. Y un test de DOM solo alcanza lo que se **renderiza**:
+medido, `_datoCompuesto` no se pinta en ninguno de los tres festivales grandes,
+así que su regresión sería invisible desde el navegador.
+
+Por eso hay **dos** capas: `[i18n-sustantivo-pegado]` (validate.py) mira el
+CÓDIGO —una interpolación seguida de nuestro vocabulario en español, `${n} obras`,
+es cromo sin traducir— e **I07** (i18n.spec.js) mira el DOM en inglés buscando
+«N obras» y hermanos. El contenido del festival no se traduce por diseño, así que
+el número delante es lo que distingue cromo de título.
+
+#### El build que se ve es el que corre — `[dbg-ver-sin-literal]`
+
+El buscador muestra el número de build en su esquina (`#dbg-ver`). Estaba
+**tipeado a mano** en `index.html`, y nadie lo actualizaba —`bump-version.js` ni
+sabía que existía—, así que enseñó el build del **10 de mayo durante cuatro
+meses** a todo el que abriera el buscador. Un número de build existe justo para
+lo contrario: saber qué código corre de verdad, que es la cicatriz del bundle
+congelado del v6/v7 en Play Store. Uno viejo miente sobre lo único que tenía que
+decir, y encima parece confiable.
+
+Ahora lo llena `main.js` con `BUILD_VERSION` —el del código que se está
+ejecutando, mantenido por `bump-version.js`— y el nodo **nace vacío**: si el JS
+no llega, mejor sin número que con uno falso. `[dbg-ver-sin-literal]`
+(validate.py) bloquea el push si vuelve a nacer escrito.
 
 #### El nombre de la actividad — `[event-kind-conocido]`
 

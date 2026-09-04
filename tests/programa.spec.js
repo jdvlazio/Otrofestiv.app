@@ -1,7 +1,7 @@
 // @ts-check
 // programa.spec.js — Tab Programa: lista, grid, filtros, posters, topbar.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival, goToPlanear, reentrar } = require('./helpers');
+const { LEVIZA_SIMTIME, enterFestival, goToPlanear, reentrar, esperarCalculo } = require('./helpers');
 
 // T01 — Apóstrofe: corazón en lista agrega al watchlist
 test('T01 — apóstrofe: corazón en lista agrega al watchlist', async ({ page }) => {
@@ -505,13 +505,22 @@ test('T55 — la ficha filtra por ciudad, pero nunca esconde lo que ya elegiste'
 // DESPUÉS y pisaba el verdadero. El dueño del mensaje es toggleWL.
 test('T60 — el toast del corazón es el mismo desde la ficha y desde la grilla', async ({ page }) => {
   await enterFestival(page, 'ficdeh2026', '2026-08-16T10:00');
+  // Elige una obra cuyas compañeras SOBREVIVEN a la regla de intersección
+  // (30 ago): antes bastaba con estar en una función de 3+, pero desde que las
+  // compañeras son las que acompañan en TODAS las funciones del título, una obra
+  // que se repite en varias ciudades con distinto acompañamiento ya no arrastra
+  // a nadie — y el toast, con razón, no dice «+N». El test mide que el toast sea
+  // EL MISMO desde la ficha y desde la grilla; su dato tiene que ejercer ese caso.
   const anclada = await page.evaluate(() => {
-    const conSlot = FILMS.filter(f => f._slotKey);
-    const cuenta = {};
-    conSlot.forEach(f => { cuenta[f._slotKey] = (cuenta[f._slotKey] || 0) + 1; });
-    const k = Object.keys(cuenta).find(x => cuenta[x] >= 3);
-    return conSlot.find(f => f._slotKey === k).title;
+    const titulos = [...new Set(FILMS.filter(f => f._slotKey).map(f => f.title))];
+    for (const t of titulos) {
+      const slots = [...new Set(FILMS.filter(f => f.title === t && f._slotKey).map(f => f._slotKey))];
+      const porSlot = slots.map(k => new Set(FILMS.filter(f => f._slotKey === k && f.title !== t).map(f => f.title)));
+      if (porSlot.length && [...porSlot[0]].filter(x => porSlot.every(s => s.has(x))).length >= 2) return t;
+    }
+    return null;
   });
+  expect(anclada, 'hay una obra con compañeras estables en este festival').toBeTruthy();
   const leerToast = () => page.evaluate(() => {
     const el = document.querySelector('.toast, [class*=toast]');
     return el ? el.innerText.replace(/\n/g, ' ').trim() : '';
@@ -1112,7 +1121,7 @@ test('T75 — Planear distingue por qué no hay nada que planear', async ({ page
   });
   expect(a1, 'se despide en vez de invitar').toContain('ha terminado');
   expect(a1, 'y manda a lo vivido').toContain('Ver Mi Plan');
-  expect(a1, 'sin la pantalla de primer uso').not.toContain('Tu Plan aparece aquí');
+  expect(a1, 'sin la pantalla de primer uso').not.toContain('Primero, tus intereses');
 
   // A.2 · el festival sigue, tus intereses se agotaron → al Programa
   const a2 = await page.evaluate(async () => {
@@ -1142,7 +1151,11 @@ test('T75 — Planear distingue por qué no hay nada que planear', async ({ page
     await new Promise(r => setTimeout(r, 1000));
     return (document.getElementById('ag-view')?.innerText || '').replace(/\s+/g, ' ');
   });
-  expect(a3, 'el primer uso conserva su invitación').toContain('Tu Plan aparece aquí');
+  // El titular del primer uso cambió el 31 ago: «Tu Plan aparece aquí» era falso
+  // acá (el Plan se arma en Planear y aparece en Mi Plan) y era además el mismo
+  // de Mi Plan. El aserto se REAPUNTA a la frase nueva — si se dejara la vieja,
+  // dejaría de identificar esta pantalla y el guardián quedaría ciego.
+  expect(a3, 'el primer uso conserva su invitación').toContain('Primero, tus intereses');
 
   // Combos vacíos · sin bloqueos NO se culpa a la disponibilidad
   const combos = await page.evaluate(async () => {
@@ -1800,7 +1813,12 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
       if (por[ts[i]].some(x => por[ts[j]].some(y => pisan(x, y)))) debiles++;
     }
     // materializar ANTES del re-render (los nodos quedan huérfanos después)
-    const linea = document.querySelector('.dato-linea');
+    // El conteo se acota a Planear (2 sep 2026): contaba .dato-linea en TODO el
+    // documento y eso solo funcionaba mientras ninguna otra pantalla usara el
+    // canon. La hoja «¡Tu Plan está listo!» lo adoptó y el test cayó sin que
+    // Planear hubiera cambiado — medía la app entera creyendo medir una vista.
+    const _plan = document.getElementById('ag-view');
+    const linea = _plan.querySelector('.dato-linea');
     const _insumo = linea?.textContent.replace(/\s+/g, ' ').trim();
     const _cr = linea?.querySelector('.dato-alerta');
     const _crTxt = _cr?.textContent.trim() || null;
@@ -1809,7 +1827,7 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
     // ritmo 1:2 — el hueco al CTA no puede ser el de «entre secciones»
     const _cta = document.querySelector('.av-calc-btn');
     const _gapCta = (_cta && linea) ? Math.round(_cta.getBoundingClientRect().top - linea.getBoundingClientRect().bottom) : null;
-    const _filas = document.querySelectorAll('.dato-linea').length;
+    const _filas = _plan.querySelectorAll('.dato-linea').length;
     const fila = document.querySelector('.av-fila');
     const _filaTxt = fila?.textContent.replace(/\s+/g, ' ').trim();
     const _editar = fila?.querySelector('.av-editar')?.textContent.trim() || null;
@@ -1831,7 +1849,11 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
   });
   // UNA sola línea con la fórmula «texto · texto»: insumo y aviso conviven
   expect(r.filas, 'una sola línea, no dos').toBe(1);
-  expect(r.insumo, 'el insumo abre la línea').toMatch(new RegExp(`^${r.pendientes} obras · \\d+ con prioridad`));
+  // El insumo dice ahora de qué conjunto habla («N obras POR PLANEAR»): la cifra
+  // de arriba y la del resultado usaban la misma clave a 113px una de otra. El
+  // aserto se REAPUNTA —su intención es que el insumo abra la línea, no el
+  // literal— porque dejarlo pasaría a medir una frase que ya no existe.
+  expect(r.insumo, 'el insumo abre la línea').toMatch(new RegExp(`^${r.pendientes} obras por planear · \\d+ con prioridad`));
   expect(r.fs, 'con el cuerpo del canon (t-base), no t-sm').toBe('13px');
   expect(r.gapCta, 'y el salto al CTA es sp-4, no «entre secciones»').toBeLessThanOrEqual(20);
   expect(r.esperados, 'la escena tiene cruces que diagnosticar').toBeGreaterThan(0);
@@ -1931,7 +1953,11 @@ test('T92 — el resultado: sin banda «Opción», resumen en línea y días com
     };
   });
   expect(r.bandaOpcion, 'la banda «Opción» murió').toBe(false);
-  expect(r.resumen, 'el resumen es una línea de dato: obras · días').toMatch(/\d+ obras? · \d+ días?/);
+  // El sustantivo lo elige el contenido (T153): con un taller o una charla en el
+  // Plan la línea dice «actividades». Lo que este test afirma es la FORMA
+  // —«N sustantivo · N días»—, no cuál de los dos sustantivos toca.
+  expect(r.resumen, 'el resumen es una línea de dato: N cosas · N días')
+    .toMatch(/\d+ (?:obras?|actividades?) · \d+ días?/);
   expect(r.resumenBadge, 'sin badge — el número no puede leerse como índice').toBe(false);
   expect(r.nBandas, 'hay una banda por día del plan').toBe(r.dias);
   expect(r.color, 'los días van en ámbar, como las horas de Programa').toBe('rgb(245, 158, 11)');
@@ -2088,7 +2114,12 @@ test('T95 — la alerta de cruces es un pre-diagnóstico: no sobrevive al result
   });
   expect(r.antes.alerta, 'antes de calcular la alerta SÍ está (si no, el test no prueba nada)').toBe(true);
   expect(r.despuesAlerta, 'con el resultado en pantalla la alerta se retira').toBe(false);
-  expect(r.despuesLinea, 'el insumo se conserva: se va la alerta, no el dato').toMatch(/\d+ obras/);
+    // Sustantivo agnóstico por la misma razón que T92: acá se afirma que el dato
+    // SIGUE, no con qué palabra se nombra (eso lo vigila T153).
+  expect(r.despuesLinea, 'el insumo SIGUE en pantalla tras calcular — si desaparece, se fue el dato con la alerta')
+    .toBeTruthy();
+  expect(r.despuesLinea, 'el insumo se conserva: se va la alerta, no el dato')
+    .toMatch(/\d+ (?:obras?|actividades?)/);
   if (r.banner) {
     expect(r.banner, 'punto seguido de raya no es puntuación española').not.toMatch(/\.\s*—/);
     expect(r.banner, 'la segunda oración arranca en mayúscula').toMatch(/\.\s+[A-ZÁÉÍÓÚÑ]/);
@@ -2127,7 +2158,11 @@ test('T96 — el botón admite que ya calculó, y no compite con el que confirma
     return { antes, despues: { txt: btn().textContent.trim(), recalc: btn().classList.contains('recalc'),
       ambar: esAmbar(btn()), primarios: primarios() } };
   });
-  expect(r.antes.txt, 'sin resultado, el botón ofrece calcular').toMatch(/Calcular/);
+  // El rótulo pasó a «Ver opciones» (31 ago): la clave siempre se llamó
+  // av_ver_opciones y su valor había derivado a «Calcular Mi Plan», que con un
+  // Plan ya guardado prometía crear lo que el usuario tiene. El aserto se
+  // REAPUNTA al rótulo nuevo — dejarlo en /Calcular/ lo volvería ciego.
+  expect(r.antes.txt, 'sin resultado, el botón ofrece ver las opciones').toMatch(/Ver opciones/);
   expect(r.antes.recalc, 'y es el primario').toBe(false);
   expect(r.antes.ambar, 'sin resultado, calcular ES el CTA ámbar').toBe(true);
   expect(r.despues.txt, 'con resultado, nombra lo que de verdad haría').toMatch(/Recalcular/);
@@ -2137,7 +2172,7 @@ test('T96 — el botón admite que ya calculó, y no compite con el que confirma
   // ámbar de PÁGINA. (Las acciones de fila del bloque de conflictos también son
   // ámbar por el canon; se cuentan aparte y no son parte de este cambio.)
   expect(r.despues.primarios.some(txt => /Plan/.test(txt)), 'el CTA que confirma sigue en ámbar').toBe(true);
-  expect(r.despues.primarios.some(txt => /Calcular|Recalcular/.test(txt)), 'y el de calcular ya no compite').toBe(false);
+  expect(r.despues.primarios.some(txt => /Ver opciones|Recalcular/.test(txt)), 'y el de calcular ya no compite').toBe(false);
 });
 
 test('T97 — el Plan que estás mirando no cambia solo: se marca y vos recalculás', async ({ page }) => {
@@ -2275,4 +2310,1233 @@ test('T99 — el texto del póster no se monta sobre la imagen, y la sección ti
       expect(c.fill, 'la sección se pinta con un color de verdad').toMatch(/^(#[0-9A-Fa-f]{3,8}|var\(--[a-z-]+\))$/);
     }
   }
+});
+
+test('T100 — un día hueco del festival no manda «Hoy» a un día que ya pasó', async ({ page }) => {
+  test.setTimeout(90000);
+  // CineAutopsia va del 21 al 29 de agosto y NO programa el 24: un hueco EN MEDIO
+  // del festival. Ese día `DAY_KEYS.findIndex(hoy)` da -1, y los fallbacks viejos
+  // mandaban a los extremos del array — «Hoy» al primer día (ya pasado) y «Mañana»
+  // al último. Cazado en producción el 24 ago 2026, con el festival en curso.
+  await enterFestival(page, 'cineautopsia2026', '2026-08-24T10:00:00-05:00');
+  await page.waitForTimeout(1200);
+
+  const leer = async (rotulo) => {
+    await page.evaluate((r) => {
+      const p = [...document.querySelectorAll('.pmode-tab')]
+        .find(x => new RegExp(r, 'i').test(x.textContent));
+      if (p) p.click();
+    }, rotulo);
+    await page.waitForTimeout(900);
+    return page.evaluate(() => ({
+      dia: typeof activeDay !== 'undefined' ? activeDay : null,
+      pasado: !!document.querySelector('.dtab.on')?.classList.contains('past'),
+      // La grilla de TODO sigue en el DOM oculta; lo que importa es la superficie
+      // VISIBLE del día. Medirlo con .poster-card contaba cards de otra vista.
+      vacio: document.querySelectorAll('.plist-item').length === 0,
+      motivo: (document.querySelector('#programa-list .empty-state, #programa-list .empty-state-hero')
+        ?.textContent || '').replace(/\s+/g, ' ').trim(),
+    }));
+  };
+
+  // El 24 EXISTE en el calendario aunque no tenga funciones (regla de Juan,
+  // 24 ago 2026): un día vacío se declara, no se omite. Así «Hoy» significa hoy.
+  const hoy = await leer('Hoy|Today');
+  expect(hoy.pasado, '«Hoy» no puede abrir un día que ya pasó').toBe(false);
+  expect(hoy.dia, '«Hoy» es HOY, aunque hoy no tenga funciones').toBe('2026-08-24');
+  expect(hoy.vacio, 'el día vacío se muestra vacío, no se salta').toBe(true);
+  // Y dice la verdad: sin filtros puestos, el vacío es del FESTIVAL, no del filtro.
+  expect(hoy.motivo, 'el vacío no culpa a un filtro que nadie puso')
+    .not.toMatch(/filtro|filter/i);
+  // Ni ancla el mensaje a HOY: el vacío se pinta para el día que MIRÁS, y
+  // Tercer Tiempo tiene dos días vacíos que no son hoy (14 y 19 jul). Decir
+  // «hoy» ahí sería la misma afirmación sin comprobar (Juan, 24 ago 2026).
+  expect(hoy.motivo, 'el vacío no dice «hoy»: vale para cualquier día')
+    .not.toMatch(/\bhoy\b|\btoday\b|\bhoje\b/i);
+
+  const manana = await leer('Mañana|Tomorrow');
+  expect(manana.pasado, '«Mañana» tampoco abre un día pasado').toBe(false);
+  expect(manana.dia, '«Mañana» es el día siguiente, no el final del festival').toBe('2026-08-25');
+});
+
+test.describe('T101 — canal #4 (sin SW: page.route no ve los fetches que pasan por el service worker)', () => {
+  test.use({ serviceWorkers: 'block' });
+test('T101 — la app abierta se entera del build nuevo, y no se recarga sola', async ({ page }) => {
+  test.setTimeout(90000);
+  // El canal #4 (poll en primer plano) existe para quien deja la app ABIERTA:
+  // sin él, un cambio de sede u horario no llega hasta soltar el teléfono.
+  // Doctrina T97 aplicada a la app entera: lo que estás mirando no cambia solo.
+  // `?updPoll=400` acorta el ciclo (precedente: simTime).
+  let servirNuevo = false;
+  await page.route('**/version.json*', async (route) => {
+    if (!servirNuevo) return route.continue();
+    await route.fulfill({ contentType: 'application/json',
+      body: JSON.stringify({ android: '299901010000', ios: '299901010000', storeGate: false }) });
+  });
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00', { query: 'updPoll=400' });
+  await page.waitForTimeout(1000);
+  const urlAntes = page.url();
+
+  // Aparece el build nuevo en el servidor…
+  servirNuevo = true;
+  await page.waitForTimeout(1600); // ≥2 ciclos de poll
+
+  // …la app lo OFRECE (toast con acción) y NO navegó sola.
+  const t1 = await page.evaluate(() => ({
+    toast: document.getElementById('prio-toast')?.textContent.replace(/\s+/g, ' ').trim() || '',
+    accion: !!document.querySelector('#prio-toast .toast-action-btn'),
+  }));
+  expect(page.url(), 'la app NO se recarga bajo los dedos del usuario').toBe(urlAntes);
+  expect(t1.accion, 'ofrece la actualización con el toast de acción').toBe(true);
+  expect(t1.toast.length, 'el toast dice algo').toBeGreaterThan(0);
+
+  // Al aceptar, recarga con el cache-busting del build nuevo.
+  await page.click('#prio-toast .toast-action-btn');
+  await page.waitForURL(/v=299901010000/, { timeout: 8000 });
+  expect(page.url()).toContain('v=299901010000');
+});
+});
+
+test.describe('T102 — el wrapper iOS: SIN navigator.serviceWorker, los canales existen igual', () => {
+test('T102 — sin API de service worker, el poll igual ofrece el build nuevo', async ({ page }) => {
+  test.setTimeout(90000);
+  // EL BUG QUE VIVIÓ JUAN (24 ago 2026): los 4 canales de version.json vivían
+  // dentro de if('serviceWorker' in navigator). El wrapper iOS es WKWebView sin
+  // WKAppBoundDomains → navigator.serviceWorker NO EXISTE → el bloque entero
+  // nunca corría: iOS sin NINGÚN mecanismo de actualización (el palmarés de
+  // FINCA no llegaba con la app en la mano). T101 no lo cazaba: el `block` de
+  // Playwright bloquea el registro pero deja la API presente — el guard pasaba.
+  // Acá se borra la API de verdad, como en el wrapper.
+  await page.addInitScript(() => { delete Navigator.prototype.serviceWorker; });
+  let servirNuevo = false;
+  await page.route('**/version.json*', async (route) => {
+    if (!servirNuevo) return route.continue();
+    await route.fulfill({ contentType: 'application/json',
+      body: JSON.stringify({ android: '299901010000', ios: '299901010000', storeGate: false }) });
+  });
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00', { query: 'updPoll=400' });
+
+  // Sanidad del harness: el entorno ES el del wrapper (sin la API).
+  const sinSW = await page.evaluate(() => !('serviceWorker' in navigator));
+  expect(sinSW, 'el harness debe simular el wrapper: sin navigator.serviceWorker').toBe(true);
+
+  await page.waitForTimeout(1000);
+  const urlAntes = page.url();
+  servirNuevo = true;
+  await page.waitForTimeout(1600); // ≥2 ciclos de poll
+
+  const t1 = await page.evaluate(() => ({
+    toast: document.getElementById('prio-toast')?.textContent.replace(/\s+/g, ' ').trim() || '',
+    accion: !!document.querySelector('#prio-toast .toast-action-btn'),
+  }));
+  expect(page.url(), 'doctrina T97: tampoco acá se recarga sola').toBe(urlAntes);
+  expect(t1.accion, 'sin SW, el canal #4 igual ofrece la actualización').toBe(true);
+});
+});
+
+test.describe('T103/T104 — capa 2: los datos se refrescan en caliente (sin SW: page.route no ve fetches vía SW)', () => {
+  test.use({ serviceWorkers: 'block' });
+
+test('T103 — un cambio de sede aterriza EN SILENCIO, en su casilla, sin scroll ni toast', async ({ page }) => {
+  test.setTimeout(90000);
+  // Regla 1 de la capa 2 (aprobada con respaldo: marcadores deportivos /
+  // tableros de aeropuerto): un VALOR que cambia dentro de su casilla se aplica
+  // solo — el usuario espera ese dato vivo. Ni pill, ni recarga, ni salto.
+  let mutar = false;
+  await page.route('**/festivals/cineautopsia-2026.json*', async (route) => {
+    if (!mutar) return route.continue();
+    const res = await route.fetch();
+    const j = await res.json();
+    // A la OTRA sede real del día: la lista muestra nombres cortos («ASAB»,
+    // «U. Nacional»), así que el cambio es visible y el venue existe en el mapa.
+    j.films.forEach(f => { if (f.title === 'Mediometrajes Destacados del Mundo Entero 1') f.venue = 'Universidad Nacional - Bogotá'; });
+    await route.fulfill({ contentType: 'application/json', body: JSON.stringify(j) });
+  });
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00', { query: 'updPoll=400' });
+  await expect(page.locator('#programa-list')).toContainText('ASAB', { timeout: 8000 });
+  const urlAntes = page.url();
+  const scrollAntes = await page.evaluate(() => window.scrollY);
+
+  mutar = true;
+  // La casilla de Mediometrajes 1 pasa de «ASAB» a «U. Nacional» — sola.
+  await expect(page.locator('#programa-list')).not.toContainText('ASAB', { timeout: 8000 });
+  await expect(page.locator('#programa-list')).toContainText('Mediometrajes Destacados del Mundo Entero 1');
+  expect(page.url(), 'sin recarga: el documento es el mismo').toBe(urlAntes);
+  expect(await page.evaluate(() => window.scrollY), 'sin salto de scroll').toBe(scrollAntes);
+  const toast = await page.evaluate(() => document.getElementById('prio-toast')?.classList.contains('show') || false);
+  expect(toast, 'regla 1 es silenciosa: un valor fresco no es una noticia').toBe(false);
+  await page.unrouteAll({ behavior: 'ignoreErrors' });
+});
+
+test('T104 — una función nueva NO se inyecta bajo los dedos: se ofrece, y el tap la aplica', async ({ page }) => {
+  test.setTimeout(90000);
+  // Regla 2 (CLS / patrón «N posts nuevos»): estructura en pantalla visible se
+  // OFRECE. La lista queda intacta hasta el tap.
+  let mutar = false;
+  await page.route('**/festivals/cineautopsia-2026.json*', async (route) => {
+    if (!mutar) return route.continue();
+    const res = await route.fetch();
+    const j = await res.json();
+    j.films.push({ title: 'Función Sorpresa de Medianoche', type: 'film', section: '🛰️ Apertura',
+      duration: '80 min', day: '2026-08-25', time: '23:00',
+      day_order: 4, venue: 'Universidad Nacional - Bogotá' });
+    await route.fulfill({ contentType: 'application/json', body: JSON.stringify(j) });
+  });
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00', { query: 'updPoll=400' });
+  await expect(page.locator('#programa-list')).toContainText('Mediometrajes', { timeout: 8000 });
+
+  mutar = true;
+  // Aparece el pill…
+  await expect(page.locator('#prio-toast .toast-action-btn')).toBeVisible({ timeout: 8000 });
+  // …y la lista sigue INTACTA (nada se inyectó bajo los dedos).
+  await expect(page.locator('#programa-list')).not.toContainText('Función Sorpresa');
+  // El tap aplica: ahora sí, la función nueva existe en la lista.
+  // Testigo de no-recarga: una recarga lo borraría del window.
+  await page.evaluate(() => { window.__vivoT104 = 1; });
+  await page.click('#prio-toast .toast-action-btn');
+  await expect(page.locator('#programa-list')).toContainText('Función Sorpresa', { timeout: 8000 });
+  expect(await page.evaluate(() => window.__vivoT104),
+    'aplicar estructura no recarga el documento (el testigo sobrevive)').toBe(1);
+  await page.unrouteAll({ behavior: 'ignoreErrors' });
+});
+});
+
+test('T105 — la Forma B es de la misma familia que la A: negro de marca y luz de sección', async ({ page }) => {
+  test.setTimeout(60000);
+  // Juan, 24 ago 2026, sobre «Ver y escuchar» (Cinemancia): «tiene un estilo
+  // diferente al que aprobamos para los stills 16:9». Eran DOS bugs, los dos de
+  // la misma familia —la Forma B no recibió lo que la A sí—, y los dos solo se
+  // ven EN PANTALLA (el dato y el markup estaban perfectos):
+  //  1. SUELO: .poster-ed{background:var(--bg)} lo pisaba .bg-surf-2, que la card
+  //     del grid también trae y que está definida ~1950 líneas más abajo con la
+  //     MISMA especificidad. La Forma B se pintaba sobre #1B1917 mientras sus
+  //     hermanas generativas usan #0B0A08 → al lado se veía más clara y plana.
+  //     La Forma A nunca lo sufrió: su <img> SVG tapa el fondo del contenedor.
+  //  2. LUZ: seguía ámbar fija aunque la Forma A ya hereda el acento de sección
+  //     (24 ago) — una pared con las dos formas mezclaba ámbar entre colores.
+  // Por eso este test MIDE estilos computados en vez de leer el CSS: un guardián
+  // estático habría dado verde con el bug puesto, porque la regla correcta SÍ
+  // existía — solo perdía la cascada.
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00');
+  await page.evaluate(() => { activeDay = 'all'; programaViewMode = 'grid'; _renderProgramaContent(); });
+  const ed = page.locator('.poster-ed').first();
+  await expect(ed, 'CineAutopsia trae un póster editorial con still').toBeVisible({ timeout: 8000 });
+
+  const med = await page.evaluate(() => {
+    const n = document.querySelector('.poster-ed');
+    const cs = getComputedStyle(n), af = getComputedStyle(n, '::after');
+    const hex2rgb = h => { const v = h.trim().replace('#',''); return `rgb(${parseInt(v.slice(0,2),16)}, ${parseInt(v.slice(2,4),16)}, ${parseInt(v.slice(4,6),16)})`; };
+    return {
+      fondo: cs.backgroundColor,
+      negroMarca: hex2rgb(getComputedStyle(document.documentElement).getPropertyValue('--bg')),
+      surf2: hex2rgb(getComputedStyle(document.documentElement).getPropertyValue('--surf-2')),
+      acento: hex2rgb(n.style.getPropertyValue('--ed-accent') || '#000000'),
+      luz: af.backgroundImage || '',
+    };
+  });
+  expect(med.fondo, 'el marco editorial pinta su propio suelo: negro de marca, no la superficie gris').toBe(med.negroMarca);
+  expect(med.fondo, 'si sale surf-2, una clase utilitaria le ganó la cascada al builder').not.toBe(med.surf2);
+  expect(med.luz, 'la luz hereda el acento de la sección, no un color fijo').toContain(med.acento);
+});
+
+test('T106 — la LISTA sirve la mini: una voz por chip, y el grid queda intacto', async ({ page }) => {
+  test.setTimeout(60000);
+  // Mejora 1 (auditoría Apple Music, aprobada 25 ago): en el chip de 56px el
+  // póster entero era ruido de 3px que repetía la fila. La mini responde con UNA
+  // voz — ordinal de serie o la marca de la obra. El GRID no cambia (Juan: la
+  // marca en grande era «demasiado ruidosa»).
+  await enterFestival(page, 'cineautopsia2026', '2026-08-25T10:00:00-05:00');
+  // Lista de un día: los chips generativos NO llevan rótulo de sección
+  await page.evaluate(() => { activeDay = DAY_KEYS[0]; programaViewMode = 'list'; _renderProgramaContent(); });
+  const lista = await page.evaluate(() => {
+    const out = [];
+    document.querySelectorAll('.plist-item').forEach(li => {
+      const img = li.querySelector('.plist-poster img');
+      if (!img || !img.src.startsWith('data:image/svg')) return;
+      const svg = decodeURIComponent(img.src.split(',')[1] || '');
+      out.push({ t: li.dataset.title, textos: (svg.match(/<text/g) || []).length,
+        conMarca: /circle|<path d=/.test(svg) });
+    });
+    return out;
+  });
+  expect(lista.length, 'el día 1 de CineAutopsia tiene chips generativos').toBeGreaterThan(0);
+  for (const c of lista) {
+    expect(c.textos, `${c.t}: la mini lleva a lo sumo UNA voz (ordinal) — el póster entero eran 4+`)
+      .toBeLessThanOrEqual(1);
+    expect(c.textos === 1 || c.conMarca, `${c.t}: sin ordinal, la marca es el diferenciador`).toBe(true);
+  }
+  // El GRID conserva el póster entero (rótulo de sección presente)
+  await page.evaluate(() => { activeDay = 'all'; programaViewMode = 'grid'; _renderProgramaContent(); });
+  const grid = await page.evaluate(() => {
+    const img = [].slice.call(document.querySelectorAll('.poster-card img'))
+      .find(i => i.src.startsWith('data:image/svg'));
+    return img ? decodeURIComponent(img.src.split(',')[1] || '') : '';
+  });
+  expect((grid.match(/<text/g) || []).length, 'el grid queda tipográfico: sus voces intactas').toBeGreaterThanOrEqual(2);
+});
+
+test('T107 — la ciudad no se pega a la sede en la lista', async ({ page }) => {
+  test.setTimeout(60000);
+  // Juan, 25 ago, sobre Cinemancia: «¿por qué la ciudad está pegada totalmente
+  // del venue?» — «Centro Colombo AmericanoMedellín». La ciudad pasó a vivir
+  // DENTRO de la frase de sede el 18 ago (antes era display:block, línea propia
+  // sin separador), y de los tres emisores solo dos recibieron el « · ». El de
+  // la lista quedó pegando ciudad y sede en TODOS los festivales multiciudad.
+  // Se mide en PANTALLA (textContent real), no en el markup: es donde se ve.
+  await enterFestival(page, 'ficdeh2026', '2026-08-14T10:00:00-05:00');
+  await page.evaluate(() => { activeDay = DAY_KEYS[0]; programaViewMode = 'list'; _renderProgramaContent(); });
+  // Se lee el NODO DE TEXTO anterior al span, no la cadena entera: buscar la
+  // ciudad con indexOf la encuentra dentro del propio nombre de la sede
+  // («Centro Cultural Panóptico de Ibagué» · Ibagué) y el test acusaba en falso.
+  const metas = await page.evaluate(() => [].slice.call(document.querySelectorAll('.plist-meta'))
+    .filter(n => n.querySelector('.plist-city'))
+    .map(n => {
+      const span = n.querySelector('.plist-city');
+      const prev = span.previousSibling;
+      return {
+        txt: n.textContent.replace(/\s+/g, ' '),
+        antes: prev ? prev.textContent.trimEnd() : '',
+      };
+    }));
+  expect(metas.length, 'FICDEH es multiciudad: sus filas muestran ciudad').toBeGreaterThan(0);
+  for (const m of metas) {
+    expect(m.antes.endsWith('·'),
+      `«${m.txt}»: la ciudad debe ir separada de la sede por « · », no pegada`).toBe(true);
+  }
+});
+
+test('T108 — la SEDE es parte de la identidad: agendar en una ciudad no marca la otra', async ({ page }) => {
+  test.setTimeout(60000);
+  // Bug MEDIDO EN PRODUCCIÓN (25 ago 2026, sin ninguna feature nueva): la
+  // identidad de una entrada del Plan era título+día+hora, sin sede. FICDEH
+  // programa la misma obra el mismo día y hora en ciudades distintas — 13 casos.
+  // Agendar «La independencia» en Bogotá hacía que la app diera por planeada
+  // la función de IBAGUÉ: a alguien de Ibagué le decía que ya tenía algo que
+  // nunca agendó, y la que sí quería aparecía tomada.
+  await enterFestival(page, 'ficdeh2026', '2026-08-12T09:00:00-05:00');
+  const r = await page.evaluate(() => {
+    // buscar en el catálogo REAL una colisión título+día+hora en dos sedes
+    const porClave = {};
+    FILMS.filter(f => f.day && f.time).forEach(f => {
+      const k = f.title + '|' + f.day + '|' + f.time;
+      (porClave[k] = porClave[k] || []).push(f);
+    });
+    const par = Object.values(porClave).find(v => new Set(v.map(x => x.venue)).size > 1);
+    if (!par) return null;
+    const [a, b] = par;
+    addSuggestion(a.title, a.day, a.time);            // agendo SOLO la primera sede
+    const sch = (state.get('savedAgenda') || {}).schedule || [];
+    return {
+      enPlan: sch.length,
+      sedeGuardada: (sch[0] || {}).venue,
+      sedeA: a.venue, sedeB: b.venue,
+      // ¿la app cree que la de la OTRA sede también está planeada?
+      otraMarcada: sch.some(s => sameEntry(s, b)),
+    };
+  });
+  expect(r, 'FICDEH trae la misma obra el mismo día y hora en dos ciudades').not.toBeNull();
+  expect(r.enPlan, 'se agendó una sola función').toBe(1);
+  expect(r.sedeGuardada, 'y es la de la sede que se eligió').toBe(r.sedeA);
+  expect(r.otraMarcada,
+    `agendar en «${r.sedeA}» no puede marcar la función de «${r.sedeB}»`).toBe(false);
+});
+
+// ── T117 — el filtro de Prensa se lee como filtro, no como un botón mudo ─────
+// Una usuaria pidió el filtro de Prensa e Industria para TIFF y no lo encontró
+// (Juan, 26 ago 2026). Estaba al lado de Sección y Lugar pero era otro
+// componente: un cuadrado de 26px con fondo y solo un icono, mientras sus dos
+// hermanos son texto+icono sin fondo. La razón escrita era que «la barra a
+// 390px no admite una cuarta etiqueta» — se midió y era falsa: con Hoy+Mañana
+// visibles y todos los filtros, el espaciador deja 45px libres en español y 28
+// en inglés a 390px, y 30/13 a 375px. La palabra cuesta 18-25px.
+// El test mide la BARRA, no el CSS: que quepa es la mitad del requisito.
+test('T117 — Prensa tiene etiqueta, anatomía de filtro, y la barra sigue cabiendo', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-12T14:00');
+  for (const lang of ['es', 'en']) {
+    const r = await page.evaluate((L) => {
+      const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+        Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+        document.body.appendChild(b); b.click(); b.remove(); };
+      tap('selectLang', { code: L });
+      switchMainNav('mnav-cartelera');
+      // el caso PEOR: los dos tabs de modo visibles a la vez
+      const hoy = document.getElementById('pmode-hoy'), man = document.getElementById('pmode-manana');
+      hoy.style.display = ''; man.style.display = '';
+      const pb = document.getElementById('prensa-btn');
+      const lbl = document.getElementById('prensa-lbl');
+      const sec = document.getElementById('seccion-btn');
+      const cs = pb && getComputedStyle(pb), cse = sec && getComputedStyle(sec);
+      const sp = document.querySelector('.pmode-spacer');
+      return {
+        etiqueta: lbl && lbl.textContent.trim(),
+        libre: sp ? Math.round(sp.getBoundingClientRect().width) : -1,
+        // misma anatomía que su hermano Sección
+        fondo: cs && cs.backgroundColor, borde: cs && cs.borderTopWidth,
+        fuente: cs && cs.fontSize, fuenteHermano: cse && cse.fontSize,
+        icono: pb && (() => { const s = pb.querySelector('svg'); return s ? s.getAttribute('width') : null; })(),
+        iconoHermano: sec && (() => { const s = sec.querySelector('svg'); return s ? s.getAttribute('width') : null; })()
+      };
+    }, lang);
+    expect(r.etiqueta, `hay etiqueta en ${lang}`).toBeTruthy();
+    expect(r.etiqueta.length, `la etiqueta es corta en ${lang}`).toBeLessThanOrEqual(9);
+    expect(r.libre, `la barra sigue cabiendo en ${lang}`).toBeGreaterThan(0);
+    expect(r.fondo, `sin fondo propio en ${lang}`).toBe('rgba(0, 0, 0, 0)');
+    expect(parseFloat(r.borde), `sin borde en ${lang}`).toBe(0);
+    expect(r.fuente, `misma tipografía que Sección en ${lang}`).toBe(r.fuenteHermano);
+    expect(Math.abs(+r.icono - +r.iconoHermano), `icono a la par de Sección en ${lang}`).toBeLessThanOrEqual(1);
+  }
+});
+
+// ── T126 — el corazón de la LISTA tiene área de toque, como su hermano ───────
+// El botón mide 26×26 y errarle abría la ficha: a ±14 px del centro
+// elementFromPoint ya devolvía la fila. El expansor (::after con inset -14px)
+// lo lleva a 54×54, sobre el mínimo de 44.
+//
+// Se sondea con elementFromPoint —la MISMA magnitud del diagnóstico—, no las
+// propiedades CSS del ::after: un expansor puede existir en el estilo y no
+// capturar nada (ancestro sin position, z-index, un sheet encima). La versión
+// anterior de este test medía en la vista GRID —clickeaba el toggle, que sale
+// de la lista— y leía estilos de un elemento oculto.
+//
+// El aserto de BORDE es la otra mitad: a ±30 px debe responder la ficha. Sin él,
+// «arreglarlo» haciendo que toda la fila sea corazón pasaría el test y rompería
+// el toque de abrir la obra.
+test('T126 — el corazón de la lista llega al área de toque de sus hermanos', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-05T11:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    // Cinemancia es multiciudad: el sheet de ciudad nace encima y se come las
+    // sondas (es fixed, así que offsetParent no lo delata).
+    tap('closeCitySheet');
+    await w(600);
+    switchMainNav('mnav-cartelera');
+    await w(1400);
+    const h = [...document.querySelectorAll('.plist-heart')].filter(e => e.getBoundingClientRect().width > 0)[0];
+    if (!h) return { sinCorazon: true };
+    const b = h.getBoundingClientRect();
+    const cx = Math.round(b.left + b.width / 2), cy = Math.round(b.top + b.height / 2);
+    const sonda = (dx, dy) => {
+      const e = document.elementFromPoint(cx + dx, cy + dy);
+      if (!e) return 'nada';
+      if (e.closest('[data-action="toggleWLFromList"],.plist-heart')) return 'CORAZON';
+      return e.closest('.js-open-pel') ? 'FICHA' : 'OTRO';
+    };
+    return {
+      caja: Math.round(b.width),
+      dentro: [sonda(-14, 0), sonda(14, 0), sonda(0, -14), sonda(0, 14)],
+      borde: [sonda(-30, 0), sonda(0, -30)]
+    };
+  });
+  if (r.sinCorazon) return;
+  expect(r.caja, 'el botón sigue siendo el chico de 26 px').toBeLessThan(44);
+  expect(r.dentro, 'a 14 px del centro responde el corazón, no la fila')
+    .toEqual(['CORAZON', 'CORAZON', 'CORAZON', 'CORAZON']);
+  expect(r.borde, 'y a 30 px ya es la fila: el expansor está acotado')
+    .toEqual(['FICHA', 'FICHA']);
+});
+
+// ── T131 — el vacío de un día con SOLO la ciudad puesta no culpa a los filtros ──
+// La ciudad es CONTEXTO (sobrevive al cambio de día por keepCityOnly), no un
+// filtro que el usuario fue a buscar. En FICDEH, Medellín + MIÉ 12 no tiene
+// programación y el vacío decía «Ajustá los filtros de sección o sede»: dos
+// controles que el usuario nunca tocó y que no arreglan nada. Se mide el TEXTO
+// pintado —la misma magnitud del diagnóstico—, no la rama que lo eligió.
+test('T131 — el día vacío por ciudad nombra la ciudad, no filtros ajenos', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-12T10:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.keys(ds || {}).forEach(k => b.setAttribute('data-' + k, ds[k]));
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('citySheetPick', { city: 'Medell\u00edn' });
+    await w(700);
+    switchMainNav('mnav-cartelera');
+    await w(700);
+    const out = { venue: String(activeVenue), sec: String(activeSec), txt: null };
+    for (let i = 0; i < DAY_KEYS.length; i++) {
+      globalThis.selectedIdx = i;
+      if (typeof render === 'function') render();
+      await w(240);
+      const es = document.querySelector('.empty-state');
+      if (es) { out.txt = es.innerText.replace(/\s+/g, ' ').trim(); break; }
+    }
+    return out;
+  });
+  expect(r.venue, 'la ciudad quedó puesta como selección de lugar').toContain('city:');
+  expect(r.sec, 'y ninguna sección está filtrando').toBe('all');
+  expect(r.txt, 'algún día de FICDEH queda vacío en esa ciudad').not.toBe(null);
+  expect(r.txt, 'el vacío nombra la ciudad').toContain('Medell\u00edn');
+  expect(r.txt, 'y NO manda a ajustar sección o sede').not.toMatch(/secci\u00f3n o sede/);
+});
+
+// ── T133 — el número de un filtro promete lo que vas a ver ───────────────────
+// Contrato de Juan (7 ago, citado en sheets.js): «en el filtro el número dice
+// vas a ver N si filtrás por esto — es la consecuencia de la acción». Los dos
+// menús lo incumplían con unidades distintas: Sección deduplicaba por título
+// (día 15 de FICDEH: decía 6, pintaba 8) y la fila de CIUDAD sumaba las de sus
+// sedes, contando dos veces la obra proyectada en dos salas (decía 136 en modo
+// «todas», pintaba 79). Se asserta número contra FILAS PINTADAS, que es la
+// magnitud del contrato — no contra el dato del que sale el número.
+test('T133 — el número del filtro de sección es el de las filas que pinta', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    switchMainNav('mnav-cartelera');
+    await w(1200);
+    const vis = () => [...document.querySelectorAll('.plist-item,.poster-card')]
+      .filter(e => e.offsetParent !== null).length;
+    const b = document.getElementById('seccion-btn');
+    if (!b) return { sinBoton: true };
+    b.click(); await w(800);
+    const ops = [...document.querySelectorAll('.filter-drop .lugar-opt')]
+      .filter(o => o.querySelector('.lugar-cnt') && o.dataset.s && o.dataset.s !== 'all');
+    if (!ops.length) return { sinOpciones: true };
+    const dice = parseInt(ops[0].querySelector('.lugar-cnt').innerText, 10);
+    ops[0].click(); await w(1300);
+    const dd = FILMS.filter(f => f.day === activeDay && f.section === activeSec);
+    return { dice, pinta: vis(), funciones: dd.length, obras: new Set(dd.map(f => f.title)).size };
+  });
+  if (r.sinBoton || r.sinOpciones) return;
+  expect(r.funciones, 'la sección elegida repite algún título ese día — si no, el caso no distingue')
+    .toBeGreaterThan(r.obras);
+  expect(r.dice, 'el número dice lo que se va a pintar').toBe(r.pinta);
+});
+
+test('T133b — la fila de ciudad no cuenta dos veces la obra que va a dos salas', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    switchMainNav('mnav-cartelera');
+    await w(1200);
+    const chipAll = document.querySelector('.dtab[data-day="all"]');
+    if (chipAll) chipAll.click();
+    await w(1400);
+    const vis = () => [...document.querySelectorAll('.plist-item,.poster-card')]
+      .filter(e => e.offsetParent !== null).length;
+    const b = document.getElementById('lugar-btn');
+    if (!b) return { sinBoton: true };
+    b.click(); await w(800);
+    const dr = [...document.querySelectorAll('.filter-drop .lugar-opt')]
+      .find(o => (o.dataset.v || '').startsWith('drill:'));
+    if (!dr) return { sinCiudades: true };          // festival de una sola ciudad
+    const diceNivel1 = parseInt(dr.querySelector('.lugar-cnt').innerText, 10);
+    dr.click(); await w(700);
+    const cityRow = [...document.querySelectorAll('.filter-drop .lugar-opt')]
+      .find(o => (o.dataset.v || '').startsWith('city:'));
+    const diceNivel2 = parseInt(cityRow.querySelector('.lugar-cnt').innerText, 10);
+    cityRow.click(); await w(1500);
+    return { diceNivel1, diceNivel2, pinta: vis(), total: new Set(FILMS.map(f => f.title)).size };
+  });
+  if (r.sinBoton || r.sinCiudades) return;
+  expect(r.diceNivel1, 'los dos niveles dicen lo mismo de la misma ciudad').toBe(r.diceNivel2);
+  expect(r.diceNivel1, 'y ese número es el de las tarjetas que pinta').toBe(r.pinta);
+  expect(r.pinta, 'la ciudad no puede tener más obras que el festival entero')
+    .toBeLessThanOrEqual(r.total);
+});
+
+// ── T140 — la etiqueta de metadato no parte el título en dos ─────────────────
+// «CON BOLETA» quedaba pegada a la PRIMERA línea de un título de dos, y se leía
+// «El viento sabe que vuelvo [CON BOLETA] / a casa»: un título mal cortado antes
+// que una etiqueta. No estaba dentro del texto —es hermana FLEX del bloque del
+// título—, pero el align-items:flex-start del contenedor la anclaba arriba.
+// Bajándola a la última línea termina la frase en vez de interrumpirla.
+//
+// Se mide la POSICIÓN de la etiqueta contra las líneas del título, que es la
+// magnitud del hallazgo; el CSS puede decir align-self y aun así no aplicar
+// (contenedor sin flex, especificidad, otro selector ganando).
+test('T140 — con el título en dos líneas, la etiqueta va en la última', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-05T11:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(600);
+    switchMainNav('mnav-cartelera');
+    await w(1500);
+    const casos = [];
+    document.querySelectorAll('.plist-title').forEach(fila => {
+      const txt = fila.querySelector('.plist-title-txt');
+      const badge = fila.querySelector('.meta-badge');
+      if (!txt || !badge) return;
+      const tb = txt.getBoundingClientRect(), bb = badge.getBoundingClientRect();
+      const lh = parseFloat(getComputedStyle(txt).lineHeight) || 16;
+      const lineas = Math.round(tb.height / lh);
+      if (lineas < 2) return;                       // con una línea no hay dónde partirse
+      casos.push({
+        txt: txt.innerText.slice(0, 30), etiqueta: badge.innerText,
+        lineas,
+        // distancia del PIE de la etiqueta al pie del título: 0 = última línea
+        alPie: Math.round(tb.bottom - bb.bottom),
+        // distancia de su TECHO al techo del título: 0 = primera línea (el bug)
+        alTecho: Math.round(bb.top - tb.top)
+      });
+    });
+    return { casos };
+  });
+  if (!r.casos.length) return;                      // ningún título de 2 líneas con etiqueta
+  for (const c of r.casos) {
+    expect(c.alPie, `«${c.etiqueta}» en ${c.txt}: va con la última línea`).toBeLessThanOrEqual(4);
+    expect(c.alTecho, `«${c.etiqueta}» en ${c.txt}: y NO junto a la primera`).toBeGreaterThan(4);
+  }
+});
+
+// ── T141 — la fila que filtra la ciudad entera está en la columna, no fuera ──
+// En el nivel 2 del filtro de Lugar («‹ Ciudades / Medellín 60 / 📍 sede / …»)
+// la fila de la CIUDAD es la única sin icono: el pin es de las SEDES, y esa
+// regla se queda. Pero sin nada en su lugar, su texto arrancaba 21px a la
+// izquierda de todas las demás (63 contra 84) y colgaba fuera de la columna, así
+// que se leía como el TÍTULO de la lista y no como la opción que es — y es la
+// única forma de pedir «todo Medellín», el caso más común en un festival de área
+// metropolitana.
+//
+// El reporte lo atribuía al color («las sedes llevan color más claro»): medido,
+// las tres filas son el MISMO rgb(136,136,136). Era la sangría.
+//
+// Se comparan las posiciones ENTRE FILAS, no contra un número fijo: lo que no
+// puede volver a pasar es que la ciudad quede desalineada de sus hermanas.
+test('T141 — el rótulo de la ciudad se alinea con el de sus sedes', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-14T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(600);
+    switchMainNav('mnav-cartelera');
+    await w(1300);
+    const btn = document.querySelector('.lugar-btn');
+    if (!btn) return { sinBoton: true };
+    btn.click();
+    await w(900);
+    const dr = [...document.querySelectorAll('.filter-drop .lugar-opt')]
+      .find(o => (o.dataset.v || '').startsWith('drill:'));
+    if (!dr) return { sinDrill: true };            // festival de una sola ciudad
+    dr.click();
+    await w(700);
+    // El rótulo es el primer span CON texto: el hueco es un span vacío y el
+    // conteo va después (medirlo mal fue mi primer error acá).
+    const rotulo = o => {
+      const sp = [...o.querySelectorAll('span')]
+        .find(x => x.textContent.trim() && !x.classList.contains('lugar-cnt'));
+      return sp ? Math.round(sp.getBoundingClientRect().left) : null;
+    };
+    const filas = [...document.querySelectorAll('.filter-drop .lugar-opt')];
+    const ciudad = filas.find(o => (o.dataset.v || '').startsWith('city:'));
+    const sedes = filas.filter(o => (o.dataset.v || '').startsWith('sede:'));
+    if (!ciudad || !sedes.length) return { sinNivel2: true };
+    return {
+      xCiudad: rotulo(ciudad),
+      xSedes: [...new Set(sedes.map(rotulo))],
+      colorCiudad: getComputedStyle(ciudad).color,
+      colorSede: getComputedStyle(sedes[0]).color,
+      pinCiudad: ciudad.querySelectorAll('svg').length,
+      pinSede: sedes[0].querySelectorAll('svg').length
+    };
+  });
+  if (r.sinBoton || r.sinDrill || r.sinNivel2) return;
+  expect(r.xSedes.length, 'las sedes comparten una sola columna').toBe(1);
+  expect(Math.abs(r.xCiudad - r.xSedes[0]), 'la ciudad está en esa misma columna')
+    .toBeLessThanOrEqual(2);
+  // Las dos mitades de la regla que se conserva: la ciudad NO lleva pin (es de
+  // las sedes) y tampoco está más apagada — si alguien "arregla" la alineación
+  // dándole un pin, esto lo caza.
+  expect(r.pinSede, 'la sede sí lleva pin').toBeGreaterThan(0);
+  expect(r.pinCiudad, 'y la ciudad no — el pin es de las sedes').toBe(0);
+  expect(r.colorCiudad, 'ni está más apagada que ellas').toBe(r.colorSede);
+});
+
+// ── T142 — al encender Prensa te lleva a donde se ven los pases añadidos ─────
+// El recorrido reportó que en la grilla el interruptor «no cambia nada»: 243
+// cards antes y 243 después. Es cierto que no puede cambiarlas —la grilla es un
+// catálogo de OBRAS, una tarjeta por obra, y ninguna obra existe SOLO en prensa
+// (medido en TIFF: 247 funciones de prensa, 0 obras exclusivas)— así que un
+// interruptor que se enciende sobre una pantalla quieta parece roto.
+//
+// La regla del 24 ago lo resolvió navegando: al ENCENDER desde una vista que no
+// puede mostrarlos, salta a Lista y al primer día CON pases. Esa regla no tenía
+// guardián: T117 cubre la anatomía del botón y T123 su papel como insumo del
+// Plan, pero nadie vigilaba la navegación — quitarla devuelve el síntoma del
+// reporte en silencio.
+//
+// La segunda mitad es igual de deliberada: al APAGAR no se mueve a nadie,
+// porque un segundo salto sorprende más que quedarse. Sin ese aserto, «arreglar»
+// esto navegando siempre pasaría el test.
+test('T142 — Prensa ON salta a donde se ven los pases; OFF no mueve a nadie', async ({ page }) => {
+  await enterFestival(page, 'tiff2026');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(500);
+    switchMainNav('mnav-cartelera');
+    await w(1400);
+    const chipAll = document.querySelector('.dtab[data-day="all"]');
+    if (chipAll) chipAll.click();
+    await w(1400);
+    const snap = () => ({
+      dia: String(activeDay),
+      modo: typeof programaViewMode !== 'undefined' ? programaViewMode : '?',
+      prensa: typeof showPress !== 'undefined' ? showPress : '?',
+      filas: [...document.querySelectorAll('.plist-item')].filter(e => e.offsetParent !== null).length
+    });
+    const enGrilla = snap();
+    const btn = document.querySelector('.prensa-btn');
+    if (!btn) return { sinBoton: true };
+    btn.click();
+    await w(2000);
+    const conPrensa = snap();
+    // ¿el día al que saltó tiene pases de prensa de verdad?
+    const diaTienePases = FILMS.some(f => f.audience === 'press' && f.day === activeDay);
+    btn.click();
+    await w(2000);
+    const trasApagar = snap();
+    return { enGrilla, conPrensa, trasApagar, diaTienePases };
+  });
+  if (r.sinBoton) return;                       // festival sin pases de prensa
+  expect(r.enGrilla.modo, 'se parte de la grilla de todas').toBe('grid');
+  expect(r.enGrilla.dia, 'y de «todos los días»').toBe('all');
+  // ENCENDER: lleva a donde lo añadido se ve
+  expect(r.conPrensa.prensa, 'el interruptor quedó encendido').toBe(true);
+  expect(r.conPrensa.modo, 'y la vista pasa a Lista, donde la unidad es la función').toBe('list');
+  expect(r.conPrensa.dia, 'sobre un día concreto, no «todas»').not.toBe('all');
+  expect(r.diaTienePases, 'y ese día TIENE pases de prensa').toBe(true);
+  expect(r.conPrensa.filas, 'con funciones en pantalla').toBeGreaterThan(0);
+  // APAGAR: no mueve a nadie
+  expect(r.trasApagar.prensa, 'el interruptor quedó apagado').toBe(false);
+  expect(r.trasApagar.dia, 'apagar NO devuelve a nadie a otro día').toBe(r.conPrensa.dia);
+  expect(r.trasApagar.modo, 'ni a otra vista').toBe(r.conPrensa.modo);
+});
+
+// ── T145 — los rótulos de la barra se leen sobre pósters claros ──────────────
+// La barra es vidrio: rgba(14,13,12,.55) + blur(28px). Deja pasar LUZ, no texto
+// —el blur impide leer nada detrás—, pero con pósters claros el fondo efectivo
+// sube y el rótulo inactivo #888 caía a 3,65:1, bajo el 4,5:1 que WCAG AA pide
+// para 11px. En Cinemancia (pósters oscuros) el mismo gris daba 5,52:1: el
+// defecto dependía del festival.
+//
+// La salida NO fue opacar el vidrio —lo prohíbe [chrome-glass], alpha ≤0,6,
+// decisión del 18 jul— sino aclarar el RÓTULO a --white-60, ya en la paleta.
+//
+// EL FONDO ES UNA CONSTANTE MEDIDA, y hay que decirlo: rgb(52,49,44) es el
+// píxel real de la barra en TIFF con scrollTop 1800, el más claro que encontré
+// barriendo dos festivales × cuatro posiciones. No se puede leer en vivo desde
+// la página —lo que compone backdrop-filter no es accesible al DOM— y el peor
+// teórico (un póster blanco puro bajo el velo, rgb(122,122,121)) no ocurre:
+// el blur de 28px promedia un área grande. El test vigila lo que cambiamos —el
+// color del RÓTULO— contra ese suelo, y que el velo siga siendo vidrio.
+const _FONDO_MAS_CLARO_MEDIDO = [52, 49, 44];   // TIFF · scrollTop 1800 · 1 sep 2026
+
+test('T145 — el rótulo inactivo de la barra cumple AA sobre pósters claros', async ({ page }) => {
+  await enterFestival(page, 'tiff2026');
+  const r = await page.evaluate(async (fondo) => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(600);
+    switchMainNav('mnav-cartelera');
+    await w(1200);
+    const nav = document.querySelector('.main-nav');
+    const tab = [...document.querySelectorAll('.main-nav-tab')].find(t => !t.classList.contains('on'));
+    if (!nav || !tab) return { sinBarra: true };
+    const nums = s => (s.match(/[\d.]+/g) || []).map(Number);
+    const csN = getComputedStyle(nav), csT = getComputedStyle(tab);
+    const nN = nums(csN.backgroundColor), nT = nums(csT.color);
+    const alfaVelo = nN.length > 3 ? nN[3] : 1;
+    const aT = nT.length > 3 ? nT[3] : 1;
+    const txtEf = nT.slice(0, 3).map((c, i) => Math.round(aT * c + (1 - aT) * fondo[i]));
+    const lin = c => { c /= 255; return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
+    const L = ([a, b, c]) => 0.2126 * lin(a) + 0.7152 * lin(b) + 0.0722 * lin(c);
+    const l1 = L(txtEf), l2 = L(fondo);
+    return { contraste: +(((Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05)).toFixed(2)),
+      alfaVelo, blur: csN.backdropFilter || csN.webkitBackdropFilter,
+      colorTexto: csT.color, fs: parseFloat(csT.fontSize) };
+  }, _FONDO_MAS_CLARO_MEDIDO);
+  if (r.sinBarra) return;
+  expect(r.alfaVelo, 'la barra sigue siendo vidrio, no muro ([chrome-glass])').toBeLessThanOrEqual(0.6);
+  expect(r.blur, 'y conserva su desenfoque').toMatch(/blur/);
+  expect(r.fs, 'el rótulo es texto pequeño: le aplica el 4,5:1').toBeLessThan(18);
+  expect(r.contraste,
+    `sobre el fondo más claro medido (${_FONDO_MAS_CLARO_MEDIDO}) el rótulo ${r.colorTexto} cumple AA`)
+    .toBeGreaterThanOrEqual(4.5);
+});
+
+// ── T146 — el dropdown avisa que hay más, sin comerse la última opción ───────
+// El panel se corta donde llega su max-height y eso caía a MEDIA LETRA: medido
+// en Sección (max-height 464,2 · scrollHeight 660), la fila 11 quedaba con 23 de
+// sus 44px — 53% — y se leía como error de render.
+//
+// La máscara NO puede ser fija: al final de la lista se come la última opción
+// («Función de clausura» quedaba a 1px de la base, dentro del degradado), que es
+// peor que el corte. Por eso la clase se enciende SOLO mientras queda algo abajo.
+//
+// Las dos mitades van juntas a propósito: la primera sola se «arregla» con una
+// máscara fija, y la segunda lo impide.
+test('T146 — el pie del dropdown se desvanece solo mientras queda lista', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet');
+    await w(600);
+    switchMainNav('mnav-cartelera');
+    await w(1400);
+    const btn = document.getElementById('seccion-btn');
+    if (!btn) return { sinBoton: true };
+    btn.click();
+    await w(800);
+    const d = document.querySelector('.filter-drop');
+    if (!d || d.scrollHeight <= d.clientHeight + 4) return { noScrollea: true };
+    const arriba = { clase: d.classList.contains('hay-mas'), mask: getComputedStyle(d).maskImage || getComputedStyle(d).webkitMaskImage };
+    d.scrollTop = d.scrollHeight;
+    d.dispatchEvent(new Event('scroll'));
+    await w(400);
+    const abajo = { clase: d.classList.contains('hay-mas'), mask: getComputedStyle(d).maskImage || getComputedStyle(d).webkitMaskImage };
+    // ¿la última opción queda dentro de la zona de desvanecido?
+    const ult = [...d.querySelectorAll('.lugar-opt')].pop();
+    const db = d.getBoundingClientRect(), ub = ult.getBoundingClientRect();
+    return { arriba, abajo, pieUltimaALaBase: Math.round(db.bottom - ub.bottom) };
+  });
+  if (r.sinBoton || r.noScrollea) return;
+  expect(r.arriba.clase, 'con lista por debajo, el pie se desvanece').toBe(true);
+  expect(r.arriba.mask, 'y la máscara aplica de verdad, no solo la clase').toMatch(/gradient/);
+  expect(r.abajo.clase, 'al final de la lista la clase se retira').toBe(false);
+  // Y la MÁSCARA con ella: comprobar solo la clase deja pasar una regla fija
+  // sobre .filter-drop, que es exactamente el modo de fallo documentado arriba
+  // (lo cacé mutando: con la máscara sin condicionar, el test pasaba).
+  expect(r.abajo.mask, 'y con ella el degradado — si no, la última opción se desvanece').toBe('none');
+  expect(r.pieUltimaALaBase, 'porque la última opción está pegada a la base — con máscara sería ilegible')
+    .toBeLessThan(24);
+});
+
+// ── T149 — la pregunta de apertura marca la ciudad cuya programación cayó ────
+// FICDEH tras el sismo: de once ciudades, CUATRO tienen el 100% de sus funciones
+// caídas (Pereira 0/29, Manizales 0/26, Cali 0/17, Quibdó 0/16) y se ofrecían
+// con la misma clase, el mismo color y la misma opacidad que las siete vivas.
+// El destino sí avisa —el banner explica con las palabras del festival—, pero
+// el aviso llegaba DESPUÉS de elegir.
+//
+// El test mide las DOS superficies en la misma corrida a propósito: la hoja de
+// apertura y el nivel de ciudades del filtro de Lugar leen el mismo dueño
+// (festivalCities). Marcar una sola las pondría a decir cosas distintas de la
+// misma ciudad, que es peor que no marcar ninguna.
+test('T149 — la ciudad sin programación viva se marca en las dos superficies', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026');
+  await page.waitForTimeout(1200);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const H = await import('/src/view/helpers.js');
+    // oráculo independiente: la ciudad cae si NINGUNA de sus funciones sobrevive
+    const viva = {};
+    FILMS.forEach(f => {
+      const c = H.venueCity(f.venue); if (!c || !f.day) return;
+      viva[c] = viva[c] || 0; if (!f._cancelled) viva[c]++;
+    });
+    const caidasReales = Object.keys(viva).filter(c => viva[c] === 0).sort();
+    const vivasReales = Object.keys(viva).filter(c => viva[c] > 0).sort();
+
+    const filas = [...document.querySelectorAll('#city-sheet-list .lugar-opt.city')];
+    const hoja = { marcadas: [], sinMarca: [], texto: null, cortado: false };
+    filas.forEach(e => {
+      const m = e.querySelector('.lugar-canc');
+      const n = e.querySelector('span:not(.lugar-canc)');
+      if (m) { hoja.marcadas.push(e.dataset.city); hoja.texto = m.innerText.trim(); }
+      else hoja.sinMarca.push(e.dataset.city);
+      if (n && n.scrollWidth > n.clientWidth + 1) hoja.cortado = true;
+    });
+    hoja.marcadas.sort(); hoja.sinMarca.sort();
+
+    // ── el filtro de Lugar, la otra cara del mismo dueño ──
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet'); await w(700);
+    const lb = document.getElementById('lugar-btn');
+    if (!lb) return { hoja, caidasReales, vivasReales, sinFiltro: true };
+    lb.click(); await w(800);
+    const d = document.querySelector('.filter-drop');
+    const filtro = { marcadas: [], sinMarca: [] };
+    [...d.querySelectorAll('.lugar-opt')].forEach(e => {
+      const v = e.dataset.v || '';
+      if (!v.startsWith('drill:')) return;
+      const c = v.slice(6);
+      (e.querySelector('.lugar-canc') ? filtro.marcadas : filtro.sinMarca).push(c);
+    });
+    filtro.marcadas.sort(); filtro.sinMarca.sort();
+    return { hoja, filtro, caidasReales, vivasReales };
+  });
+
+  // 1 · la hoja marca EXACTAMENTE las caídas, y ninguna viva
+  expect(r.caidasReales.length, 'el fixture tiene que traer ciudades caídas o el test no mide nada')
+    .toBeGreaterThan(0);
+  expect(r.hoja.marcadas, 'la hoja marca las ciudades sin una sola función viva')
+    .toEqual(r.caidasReales);
+  expect(r.hoja.sinMarca, 'y no marca ninguna de las vivas').toEqual(r.vivasReales);
+
+  // 2 · con la MISMA palabra que el banner del destino — sin copy nuevo
+  expect(r.hoja.texto, 'la marca dice lo mismo que el rótulo del banner al que lleva')
+    .toBe('CANCELADA');
+
+  // 3 · el nombre de la ciudad sigue entero: la marca no se lo come
+  expect(r.hoja.cortado, 'la marca no recorta el nombre de la ciudad').toBe(false);
+
+  // 4 · y el filtro de Lugar dice LO MISMO — dos superficies, un dueño
+  if (!r.sinFiltro) {
+    expect(r.filtro.marcadas, 'el filtro de Lugar marca las mismas que la hoja de apertura')
+      .toEqual(r.hoja.marcadas);
+    expect(r.filtro.sinMarca, 'y deja sin marcar las mismas').toEqual(r.hoja.sinMarca);
+  }
+});
+
+// ── T153 — con un taller en la cuenta, Planear no dice «obras» ──────────────
+// «actividad» es el PARAGUAS y un taller no es una obra (regla de vocabulario).
+// El titular de Mi Plan ya elegía el sustantivo por el contenido y T132b lo
+// vigilaba, pero las dos líneas de Planear se habían quedado afuera: medido en
+// FICDEH con «Los frutos que dan vida» —taller de dos sesiones— más una
+// película, decían «2 obras» sobre 1 película y 1 taller. El NÚMERO estaba bien
+// (2 obras, 3 citas); el sustantivo no.
+//
+// La segunda mitad es la que impide arreglar de más: sin taller las dos líneas
+// tienen que seguir diciendo «obras», que es más específico y sigue siendo
+// verdad. Un cambio a «actividades» siempre pasaría la primera mitad sola.
+test('T153 — el sustantivo de Planear sigue al contenido, no a la pantalla', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-12T09:00:00-05:00');
+  const leer = async (conTaller) => {
+    await page.evaluate(async (ev) => {
+      const w = ms => new Promise(r => setTimeout(r, ms));
+      const b = document.createElement('button');
+      b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await w(400);
+      watchlist.clear(); prioritized.clear();
+      savedAgenda = null; cachedResult = null;
+      const pelis = FILMS.filter(f => f.type !== 'event' && !f._cancelled && f.day && f.time);
+      if (ev) {
+        const t = FILMS.find(f => f.is_recurring);
+        watchlist.add(t.title); watchlist.add(pelis[0].title);
+      } else {
+        watchlist.add(pelis[0].title); watchlist.add(pelis[1].title);
+      }
+      if (typeof saveState === 'function') saveState('wl', 'watched');
+    }, conTaller);
+    await goToPlanear(page);
+    await esperarCalculo(page);
+    await page.waitForTimeout(1000);
+    return page.evaluate(() => {
+      const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+      const uno = sel => [...document.querySelectorAll(sel)].filter(vis)
+        .map(e => e.innerText.replace(/\s+/g, ' ').trim())[0] || '';
+      return { insumo: uno('#ag-view .dato-linea'), resultado: uno('#ag-view .dato-resultado') };
+    });
+  };
+
+  // 1 · con un taller adentro, ninguna de las dos líneas puede decir «obra»
+  const conT = await leer(true);
+  expect(conT.insumo, 'la línea de insumo se pintó').toBeTruthy();
+  expect(conT.resultado, 'la línea de resultado se pintó').toBeTruthy();
+  expect(conT.insumo, 'con un taller en la cuenta, el insumo no lo llama obra')
+    .not.toMatch(/\bobras?\b/i);
+  expect(conT.insumo, 'usa el paraguas').toMatch(/\bactividad(es)?\b/i);
+  expect(conT.resultado, 'y el resultado tampoco lo llama obra').not.toMatch(/\bobras?\b/i);
+  expect(conT.resultado, 'usa el paraguas').toMatch(/\bactividad(es)?\b/i);
+  // el número no cambia: son 2 cosas, aunque el taller traiga 2 sesiones
+  expect(conT.insumo, 'y sigue contando 2 — el taller de dos sesiones es UNA').toMatch(/\b2\b/);
+
+  // 2 · sin taller, «obras» sobrevive: es más específico y sigue siendo verdad
+  const sinT = await leer(false);
+  expect(sinT.insumo, 'sin taller el insumo vuelve a la palabra específica')
+    .toMatch(/\bobras?\b/i);
+  expect(sinT.resultado, 'y el resultado también').toMatch(/\bobras?\b/i);
+});
+
+// ── T157 — las salidas «Cancelar» se alcanzan con el teclado ────────────────
+// `.auth-cancel` eran los ÚNICOS `<span data-action>` de todo el index: cinco
+// salidas «Cancelar» —los tres pasos de la hoja de cuenta, la de reseña y la
+// del nombre al compartir— que ningún teclado podía alcanzar.
+//
+// Y estaban en la MISMA regla CSS que `.conflict-btn-cancel` y
+// `.prio-limit-cancel`, que es un reset de botón (background:none, border:none,
+// cursor:pointer) y cuyas otras dos clases ya eran `<button>`. La etiqueta era
+// lo único que faltaba; el anillo de foco ya existía
+// (`:focus-visible{outline:2px solid var(--amber)}`).
+//
+// Se afirman las tres cosas que hacen falta para poder usarla sin mouse:
+// alcanzable, con foco VISIBLE, y que Enter la opere. Una de las tres sola no
+// sirve de nada.
+test('T157 — Cancelar es alcanzable, se ve enfocada y responde a Enter', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+  });
+  await page.waitForTimeout(700);
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'openAuthSheet');
+    document.body.appendChild(b); b.click(); b.remove();
+  });
+  await page.waitForTimeout(1200);
+
+  // 1 · TODAS las salidas de la app son alcanzables, incluidas las de los pasos
+  //     que ahora mismo están ocultos
+  const todas = await page.evaluate(() => {
+    const out = [...document.querySelectorAll('.auth-cancel')].map(e => ({
+      tag: e.tagName, tab: e.tabIndex
+    }));
+    return { n: out.length, inalcanzables: out.filter(o => !(o.tab >= 0)),
+      spansConAccion: document.querySelectorAll('span[data-action]').length };
+  });
+  expect(todas.n, 'la hoja de cuenta trae sus salidas').toBeGreaterThan(0);
+  expect(todas.inalcanzables,
+    'ninguna salida «Cancelar» puede quedar fuera del recorrido del teclado').toEqual([]);
+  expect(todas.spansConAccion,
+    'y no queda ningún <span> haciendo de botón, que es como empezó esto').toBe(0);
+
+  // 2 · llegar con Tab de verdad: :focus-visible solo se arma con el teclado
+  await page.evaluate(() => { const i = document.getElementById('auth-email-inp'); if (i) i.focus(); });
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
+  await page.waitForTimeout(300);
+  const foco = await page.evaluate(() => {
+    const a = document.activeElement;
+    return { esCancelar: a.classList.contains('auth-cancel'),
+      visible: (() => { try { return a.matches(':focus-visible'); } catch (e) { return null; } })() };
+  });
+  expect(foco.esCancelar, 'tabulando desde el campo se llega a Cancelar').toBe(true);
+  expect(foco.visible, 'y el foco se VE — un foco invisible no sirve de nada').toBe(true);
+
+  // 3 · y Enter la opera
+  await page.keyboard.press('Enter');
+  await page.waitForTimeout(900);
+  const cerrada = await page.evaluate(() => {
+    const sh = document.getElementById('auth-sheet');
+    return !sh || !sh.classList.contains('open');
+  });
+  expect(cerrada, 'Enter cierra la hoja: es un botón de verdad, no un span con onclick').toBe(true);
+});
+
+// ── T158 — un corto dentro de una charla no sigue «En curso» cuando la charla terminó ──
+// FICDEH, 17 AGO, Cinemateca Sala 2 a las 16:00: dos cortos (18 y 14 min) y una
+// charla de 180 que los proyecta adentro. El bloque sumaba 212 y los cortos
+// quedaban «En curso» hasta las 19:32, tres horas y media después de terminar,
+// mientras el bloque real terminó a las 19:00 (auditoría B-2, 2 sep 2026).
+//
+// Se afirma sobre lo PINTADO —el punto verde y su aria— en dos instantes: a las
+// 18:50 sigue en curso (la charla no terminó: el anclaje es correcto), a las
+// 19:30 ya no. Con la suma vieja el segundo instante falla; sin anclaje el
+// primero — las dos mitades se sostienen mutuamente.
+// El reloj del navegador se CONGELA (page.clock): «en curso» lee la hora del
+// navegador, y con solo _simTime esta medición no reproducía.
+test('T158 — el punto verde de un corto se apaga cuando termina la charla que lo contiene', async ({ page }) => {
+  const leer = async (iso) => {
+    try { await page.clock.setFixedTime(new Date(iso)); } catch (e) {}
+    await page.evaluate(t => { _simTime = t; activeDay = '2026-08-17'; programaViewMode = 'list';
+      _renderProgramaContent && _renderProgramaContent(); }, iso);
+    await page.waitForTimeout(1200);
+    return page.evaluate(() => {
+      const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+      const fila = [...document.querySelectorAll('.plist-item')].filter(vis).find(e => e.innerText.includes('Los pliegues de la falda'));
+      if (!fila) return null;
+      const dot = fila.querySelector('.live-dot,.row-dot');
+      return { enCurso: !!dot, aria: dot ? dot.getAttribute('aria-label') : null, opacity: getComputedStyle(fila).opacity };
+    });
+  };
+  await enterFestival(page, 'ficdeh2026', '2026-08-17T18:50:00-05:00');
+  await page.evaluate(() => { const f = [...document.querySelectorAll('#city-sheet-list .lugar-opt')].find(e => e.dataset.city === 'Bogotá'); if (f) f.click(); });
+  await page.waitForTimeout(1400);
+
+  const antes = await leer('2026-08-17T18:50:00-05:00');
+  expect(antes, 'la fila del corto se pintó').not.toBeNull();
+  expect(antes.enCurso, 'a las 18:50 la charla que lo contiene sigue: el corto está EN CURSO — es el anclaje, y es correcto')
+    .toBe(true);
+
+  const despues = await leer('2026-08-17T19:30:00-05:00');
+  expect(despues, 'la fila del corto se pintó').not.toBeNull();
+  expect(despues.enCurso, 'a las 19:30 la charla terminó (16:00 + 180): el punto verde se apaga')
+    .toBe(false);
+  expect(parseFloat(despues.opacity), 'y la fila pasa a atenuada, como toda función pasada')
+    .toBeLessThan(0.9);
+});
+
+// ── T160 — el día de hoy no se atenúa mientras su última función sigue ───────
+// Auditoría B-4 (2 sep 2026): 17 AGO 19:30, Bogotá. «El juego de la vida»
+// (19:00, 95 min) corre hasta las 20:35 y la cabecera dice «En curso · Termina
+// en 1 h 05» — pero la pestaña LUN 17 salía `past` a opacity .35 (2,04:1),
+// porque dayFullyPassed tomaba el último INICIO más 10 minutos.
+//
+// Dos instantes, y el segundo impide arreglar de más: a las 19:30 el día está
+// vivo; a las 21:00 (la última terminó 20:35) ya pasó y se atenúa. El reloj del
+// navegador se congela (page.clock): esta medición no reproducía con _simTime
+// solo, y así fue como la primera verificación la dio por falsa.
+test('T160 — LUN 17 sigue encendido a las 19:30 con su última función en curso, y pasado a las 21:00', async ({ page }) => {
+  // Cada instante ENTRA a la app de nuevo: la clase `past` de las pestañas se
+  // decide al construirlas (pipeline/loader), no en cada render, así que mover
+  // el reloj con la app abierta no la recalcula — y eso es lo que hace un
+  // usuario que abre la app a esa hora. La primera versión de este test movía
+  // _simTime en caliente y fallaba con el dominio SANO: medía el arnés.
+  const tab = async (iso) => {
+    await enterFestival(page, 'ficdeh2026', iso);
+    try { await page.clock.setFixedTime(new Date(iso)); } catch (e) {}
+    await page.evaluate(() => { const f = [...document.querySelectorAll('#city-sheet-list .lugar-opt')].find(e => e.dataset.city === 'Bogotá'); if (f) f.click(); });
+    await page.waitForTimeout(1400);
+    return page.evaluate(() => {
+      const t = [...document.querySelectorAll('.dtab')].find(e => (e.dataset.day || e.getAttribute('data-day')) === '2026-08-17');
+      if (!t) return null;
+      const bog = FILMS.filter(f => f.day === '2026-08-17' && f.time && !f._cancelled && /Bogot/.test(f.venue || ''));
+      const u = bog.sort((a, b) => a.time.localeCompare(b.time)).pop();
+      return { past: t.classList.contains('past'), opacity: parseFloat(getComputedStyle(t).opacity), ultima: u ? u.time + ' · ' + u.duration : null };
+    });
+  };
+  const vivo = await tab('2026-08-17T19:30:00-05:00');
+  expect(vivo, 'la pestaña del 17 se pintó').not.toBeNull();
+  expect(vivo.ultima, 'el fixture: la última de Bogotá empieza a las 19:00 y dura 95 — el caso medido').toBe('19:00 · 95 min');
+  expect(vivo.past, 'a las 19:30 la última función sigue: el día NO es pasado').toBe(false);
+  expect(vivo.opacity, 'y no se atenúa — es el día que estás viviendo').toBeGreaterThan(0.9);
+
+  const pasado = await tab('2026-08-17T21:00:00-05:00');
+  expect(pasado.past, 'a las 21:00 la última terminó (19:00 + 95 = 20:35): el día pasó').toBe(true);
+  expect(pasado.opacity, 'y se atenúa como todo día pasado').toBeLessThan(0.5);
+});
+// ── T164 — el panel de filtro no deja aire sin usar mientras corta nombres ──
+// Auditoría A-6 (2 sep 2026): en Sección con TODO el panel quedaba de x=8 a
+// x=308 en un viewport de 390 —82px sin usar— y 4 de 15 secciones salían
+// cortadas, la peor perdiendo el 45% de su nombre («🌷 La primavera llega para
+// los que esperan…», 453px de texto en 251 de caja).
+//
+// La causa no era el tope sino CUÁNDO se mide: _dropRight se llamaba antes de
+// que el panel tuviera contenido, así que espejaba el máximo (300) y posicionaba
+// por el peor caso. Con el ancho real, el panel ancho usa la pantalla y el
+// angosto queda pegado a su botón.
+//
+// Las dos mitades: si algo se corta, no puede sobrar espacio; si nada se corta,
+// el panel sigue anclado a su botón. Una sola de las dos se «arregla» sola.
+test('T164 — el panel usa el ancho que necesita, y no más', async ({ page }) => {
+  const abrir = async (todo) => {
+    await page.evaluate(t => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      if (t) { activeDay = 'all'; programaViewMode = 'grid'; _renderProgramaContent && _renderProgramaContent(); }
+    }, todo);
+    await page.waitForTimeout(1200);
+    return page.evaluate(async () => {
+      document.querySelector('.filter-drop')?.remove();
+      document.getElementById('seccion-btn').click();
+      await new Promise(r => setTimeout(r, 800));
+      const d = document.querySelector('.filter-drop'); if (!d) return null;
+      const dr = d.getBoundingClientRect();
+      const btn = document.getElementById('seccion-btn').getBoundingClientRect();
+      const spans = [...d.querySelectorAll('.lugar-opt span')];
+      return { left: Math.round(dr.left), right: Math.round(dr.right), width: Math.round(dr.width),
+        vp: innerWidth, btnRight: Math.round(btn.right),
+        filas: spans.length, cortadas: spans.filter(s => s.scrollWidth > s.clientWidth + 1).length };
+    });
+  };
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'cinemancia2026');
+
+  // 1 · catálogo entero: hay nombres largos, así que el panel tiene que usar todo
+  const todo = await abrir(true);
+  expect(todo, 'el panel de Sección abre').not.toBeNull();
+  expect(todo.filas, 'con TODO hay muchas secciones — si no, el test no mide nada').toBeGreaterThan(5);
+  expect(todo.left, 'no se sale por la izquierda').toBeGreaterThanOrEqual(0);
+  expect(todo.right, 'ni por la derecha').toBeLessThanOrEqual(todo.vp);
+  if (todo.cortadas > 0) {
+    const sobra = todo.vp - todo.width;
+    expect(sobra,
+      `${todo.cortadas} nombres cortados y ${sobra}px de pantalla sin usar: si algo se corta, el panel usa todo lo que hay`)
+      .toBeLessThanOrEqual(20);
+  }
+
+  // 2 · y con pocas secciones (el día de hoy) NO se estira: queda anclado al botón
+  const hoy = await abrir(false);
+  if (hoy && hoy.cortadas === 0 && hoy.width < todo.vp - 40) {
+    expect(Math.abs(hoy.right - hoy.btnRight),
+      `sin nada que cortar, el panel se ancla al borde del botón (panel ${hoy.right}, botón ${hoy.btnRight})`)
+      .toBeLessThanOrEqual(2);
+  }
+});
+
+// ── T166 — las dos salidas de texto gris se leen (contraste PINTADO) ─────────
+// Auditorías A-7 y A-3 (2 sep 2026), medido a 390x844 con el color COMPUESTO
+// (color × opacidades heredadas sobre el fondo real), no con el declarado:
+//   «Ver todas las ciudades» (hoja de ciudad) → #555555 sobre #1D1B18 = 2,30
+//   «Letterboxd» (ficha)                     → #555555 al .55 = pintado #3B3A39 = 1,54
+// Los dos son texto de 11px, así que les aplica el 4,5:1 de AA normal.
+//
+// Por qué PINTADO y no declarado: el enlace de Letterboxd hereda el opacity:.55
+// de `.c-lb`, y ningún guardián estático lo ve. Cambiarle solo el color a
+// --gray daba 2,39 —seguía fallando— y un grep habría cantado victoria.
+// Con --white bajo la misma opacidad pinta #908E8A y da 5,34.
+const _AA_NORMAL = 4.5;
+
+test('T166 — las dos salidas de texto gris cumplen AA pintadas', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const sonda = () => {
+    const lin = c => { c /= 255; return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
+    const L = ([a, b, c]) => 0.2126 * lin(a) + 0.7152 * lin(b) + 0.0722 * lin(c);
+    const nums = s => (s.match(/[\d.]+/g) || []).map(Number);
+    // fondo: el primer ancestro con un relleno realmente opaco
+    const fondo = el => { let n = el;
+      while (n && n !== document.documentElement) {
+        const p = nums(getComputedStyle(n).backgroundColor);
+        if (p.length >= 3 && (p[3] === undefined || p[3] > 0.9)) return p.slice(0, 3);
+        n = n.parentElement; }
+      return nums(getComputedStyle(document.body).backgroundColor).slice(0, 3); };
+    // alfa compuesto: el propio y el de TODOS sus ancestros
+    const alfa = el => { let a = 1, n = el;
+      while (n && n !== document.documentElement) { a *= parseFloat(getComputedStyle(n).opacity) || 1; n = n.parentElement; }
+      return a; };
+    window.__sonda = sel => {
+      const el = document.querySelector(sel); if (!el) return null;
+      const r = el.getBoundingClientRect(); if (!r.width || !r.height) return null;
+      const cs = getComputedStyle(el), c = nums(cs.color);
+      const aTxt = c.length > 3 ? c[3] : 1;
+      const a = alfa(el) * aTxt, bg = fondo(el);
+      const pintado = c.slice(0, 3).map((v, i) => Math.round(v * a + bg[i] * (1 - a)));
+      const l1 = L(pintado), l2 = L(bg);
+      return { txt: el.textContent.trim().slice(0, 26), px: parseFloat(cs.fontSize),
+        peso: cs.fontWeight, declarado: cs.color, alfa: Math.round(a * 100) / 100,
+        pintado: '#' + pintado.map(v => v.toString(16).padStart(2, '0')).join(''), bg,
+        contraste: +(((Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05)).toFixed(2)) }; };
+  };
+
+  // 1 · A-7 · el escape de la hoja de ciudad (festival multiciudad: la hoja abre sola)
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  await page.evaluate(sonda);
+  const esc = await page.evaluate(() => window.__sonda('.lugar-opt.escape'));
+  expect(esc, 'la hoja de ciudad muestra su escape').not.toBeNull();
+  expect(esc.px, 'es texto pequeño: le aplica el 4,5:1').toBeLessThan(18);
+  expect(esc.contraste,
+    `«${esc.txt}»: ${esc.declarado} pintado ${esc.pintado} sobre ${esc.bg} da ${esc.contraste}`)
+    .toBeGreaterThanOrEqual(_AA_NORMAL);
+
+  // 2 · A-3 · el enlace de Letterboxd de la ficha
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00');
+  const abierta = await page.evaluate(async () => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 500));
+    for (const f of FILMS.filter(x => !x._cancelled && x.type !== 'event')) {
+      openPelSheet(f.title);
+      await new Promise(r => setTimeout(r, 800));
+      if (document.querySelector('.c-lb-text')) return f.title;
+      closePelSheet && closePelSheet();
+      await new Promise(r => setTimeout(r, 200));
+    }
+    return null;
+  });
+  expect(abierta, 'alguna obra del catálogo trae enlace de Letterboxd').toBeTruthy();
+  await page.evaluate(sonda);
+  const lb = await page.evaluate(() => window.__sonda('.c-lb-text'));
+  expect(lb, 'el enlace se dibuja').not.toBeNull();
+  expect(lb.px, 'también es texto pequeño').toBeLessThan(18);
+  expect(lb.alfa, 'y sigue atenuado — el arreglo NO fue subirle la opacidad').toBeLessThan(0.7);
+  expect(lb.contraste,
+    `«${lb.txt}»: ${lb.declarado} al ${lb.alfa} pinta ${lb.pintado} sobre ${lb.bg} y da ${lb.contraste}`)
+    .toBeGreaterThanOrEqual(_AA_NORMAL);
 });

@@ -19,7 +19,7 @@ import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, ini
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simNow, simTodayStr, toMin } from '../domain/time.js';
 import { scoreFilm, screeningPassed, isShortFilm, prioLiveCount, effectiveWatched, screeningEndDate } from '../domain/film.js';
-import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens, screeningPlannable } from '../domain/schedule.js';
+import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens, screeningPlannable, sameEntry } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
@@ -54,9 +54,20 @@ export function toggleWL(title,e){
   // ANCLAJE DE FUNCIÓN: obras programadas en la MISMA función (misma sala y
   // horario, una tras otra) comparten `_slotKey` — lo marca el loader en los
   // festivales que lo declaran. Se calcula acá para tenerlo en todo el flujo.
-  const _slotKeys=new Set(FILMS.filter(f=>f.title===title&&f._slotKey).map(f=>f._slotKey));
-  const _hermanas=_slotKeys.size
-    ?[...new Set(FILMS.filter(f=>f._slotKey&&_slotKeys.has(f._slotKey)&&f.title!==title).map(f=>f.title))]
+  // INTERSECCIÓN, no unión (26 ago 2026). Antes se juntaban los _slotKey de TODAS
+  // las funciones del título y se arrastraba la UNIÓN de sus compañeras. Con una
+  // obra que se repite en varias ciudades eso es una avalancha: «Más allá» de
+  // FICDEH tiene 6 funciones en 4 ciudades, con 4-6 compañeras cada una → un solo
+  // toque metía 15 obras ajenas en Intereses, incluidas las de ciudades canceladas
+  // por el sismo. Y rompía la simetría: agregar y quitar dejaban de ser inversos.
+  // La regla que el comentario de abajo siempre quiso decir es «la MISMA función»,
+  // en singular. Cuando el título está en varias, la única respuesta honesta son
+  // las que lo acompañan en TODAS: un programa de cortos que gira entero conserva
+  // sus compañeras, y una obra que cada noche va con otras no arrastra a nadie.
+  const _slots=[...new Set(FILMS.filter(f=>f.title===title&&f._slotKey).map(f=>f._slotKey))];
+  const _porSlot=_slots.map(k=>new Set(FILMS.filter(f=>f._slotKey===k&&f.title!==title).map(f=>f.title)));
+  const _hermanas=_porSlot.length
+    ?[..._porSlot[0]].filter(x=>_porSlot.every(s=>s.has(x)))
     :[];
   // La función es UNA unidad en las dos direcciones. Si quitar sacara solo la
   // obra tocada, quien agrega una y se arrepiente queda con la compañera en
@@ -85,8 +96,21 @@ export function toggleWL(title,e){
         });return;
     }
     // Branch B: remove directo (film NO en savedAgenda)
+    // Con vuelta atrás (auditoría A-2, 2 sep 2026). Este quitar NO pregunta —el
+    // modal es solo para lo que está en el Plan— así que un toque de más borraba
+    // sin red: la obra, sus compañeras de función y su prioridad, en silencio.
+    // Se guardan los TRES conjuntos antes de mutar (los Sets del snapshot son
+    // inmutables: _delFromSet devuelve uno nuevo) y el deshacer los repone tal
+    // cual, sin recalcular hermanas ni prioridades. Persiste también 'prio',
+    // que el quitar no toca.
+    const _antes={watchlist, watched, prioritized};
     state.batchUpdate(_quitarTodas(watchlist, watched, prioritized));
-    showToast(t('toast_fuera_intereses'),'info');
+    showActionToast(t('toast_fuera_intereses'),t('cta_deshacer'),()=>{
+      state.batchUpdate(_antes);
+      saveState('wl','watched','prio');
+      updateCardState(title);
+      _hermanas.forEach(h=>updateCardState(h));
+    });
   }
   else{
     // Branch C: add — con detección "todas funciones bloqueadas" + UI variants
@@ -326,8 +350,16 @@ export function _planFixNotice(title){
   title=normTitle(title);
   const {FILMS, savedAgenda} = state.snapshot();
   if(!savedAgenda||!savedAgenda.schedule.some(s=>s._title===title)) return;
+  // Un TALLER entra y sale ENTERO (regla de Juan, 8 ago): addSuggestion resuelve
+  // el swap con filter(_title!==title)+insertar UNA, y sobre un bloque eso borraba
+  // la sesión hermana —2→1, sin aviso y sin quedar restaurable—. Cubierto por T109.
+  if(FILMS.some(f=>f.title===title&&f.is_recurring)){ addRecurringBlock(title); return; }
   const moved=FILMS.find(f=>f.title===title&&f._movedFrom&&!f._cancelled);
-  if(moved){ addSuggestion(title, moved.day, moved.time); return; }
+  // {mudar:true}: quien toca «Actualizar» sobre una función reprogramada YA declaró
+  // su intención — preguntarle «¿verla dos veces?» sería inventarle una duda. Sin
+  // la bandera, addSuggestion abre el modal y el aviso deja de mudar (lo cazaron
+  // T52 y AV04: addSuggestion es dueño compartido, y cada llamador declara la suya).
+  if(moved){ addSuggestion(title, moved.day, moved.time, {mudar:true}); return; }
   _dropFromPlan(title);
   setTimeout(_scrollToSuggestions, 350);
 }
@@ -395,7 +427,8 @@ function _pickScreen(title,day,time){
   return _cands.find(f=>screeningPlannable(f))||_cands[0];
 }
 
-export function addSuggestion(title,day,time){
+export function addSuggestion(title,day,time,opts){
+  opts=opts||{};
   title=normTitle(title);
   // 1. READ
   const {FILMS, _activeFestId, savedAgenda, watchlist, watched} = state.snapshot();
@@ -418,26 +451,54 @@ export function addSuggestion(title,day,time){
   const screen=_pickScreen(title,day,time);
   if(screen){
     const sa=state.get('savedAgenda')||{schedule:[]};
-    // Mitad B (pin-funcion): add / swap / no-op. El sheet de película usa esta
-    // misma acción para "Añadir esta función". Si el título ya está en OTRA
-    // función → swap; si ya está en ESA misma → sin acción (cae al render final).
-    const existing=sa.schedule.find(s=>s._title===title);
-    if(!(existing&&existing.day===day&&existing.time===time)){
+    // Un TALLER se toma ENTERO: «añadir esta sesión» no existe como intención.
+    // Sin esto, el filter(_title!==title) de más abajo borra las sesiones
+    // hermanas al insertar una — la misma pérdida que #763 arregló en el aviso.
+    if(FILMS.some(f=>f.title===title&&f.is_recurring)){ addRecurringBlock(title); return; }
+    // add / repetir / mudar / no-op. La identidad de una entrada la decide
+    // sameEntry (título+día+hora+sede), NUNCA el título: `find(s._title===title)`
+    // devolvía la PRIMERA entrada, así que al tocar «Agendar» sobre una función
+    // que YA estaba, el guard comparaba contra la OTRA y la daba por nueva.
+    const _esta={_title:title, title, day, time, venue:screen.venue};
+    const _yaEstaEsta=sa.schedule.some(s=>sameEntry(s,_esta));
+    const _otras=sa.schedule.filter(s=>s._title===title&&!sameEntry(s,_esta));
+    if(!_yaEstaEsta){
+      // El título ya está en OTRA función y nadie declaró intención: preguntar.
+      // Son DOS intenciones opuestas —verla dos veces o corregir el horario— y
+      // el modal no puede resolverlas con un botón que solo cierra.
+      if(_otras.length&&!opts.repetir&&!opts.mudar){
+        const _ds=(FESTIVAL_CONFIG[_activeFestId]||{}).dayShort||{};
+        // TODAS las que ya tiene, no la primera: nombrar una sola mentía sobre
+        // el estado del plan justo cuando el usuario decide sobre él.
+        const _cuando=_otras.map(o=>`${_ds[o.day]||o.day||''} · ${o.time||''}`).join(' · ');
+        const{displayTitle:_dt}=parseProgramTitle(title);
+        showActionModal(
+          t('vov_titulo'),
+          `<div class="cm-subject">${_dt}</div><div>${t('vov_cuerpo',{cuando:_cuando})}</div>`,
+          t('vov_repetir'), ()=>addSuggestion(title,day,time,{repetir:true}),
+          t('misc_cancelar'),
+          { altLabel:t('vov_mudar'), altCb:()=>addSuggestion(title,day,time,{mudar:true}) }
+        );
+        return;
+      }
       // ── Re-validación en tiempo real ─────────────────────────────
       // getSuggestions verificó el hueco al renderizar, pero el plan
       // pudo haber cambiado desde entonces (otra sugerencia añadida
       // en la misma sesión). Revalidamos contra el estado actual. En swap,
       // EXCLUIMOS la función vieja del propio título (s._title!==title) para
       // no dar un falso positivo de conflicto consigo misma.
-      const realConflict=sa.schedule.find(s=>s._title!==title&&s.day===day&&screensConflict(s,screen));
+      // Excluir el propio título es correcto en el SWAP (no chocar consigo misma),
+      // pero en `repetir` es justo lo que hay que mirar: dos funciones de la misma
+      // obra el mismo día pueden solaparse, y sin esto se agenda un imposible.
+      const realConflict=sa.schedule.find(s=>(opts.repetir||s._title!==title)&&s.day===day&&screensConflict(s,screen));
       if(realConflict){
         openConflictSheet(title, screen, realConflict);
         return;
       }
-      // filter(s._title!==title): no-opea en add (título ausente), quita la
-      // función vieja en swap (título presente en otra función).
+      // En `repetir` la otra función SE QUEDA; en add/swap el filter no-opea
+      // (título ausente) o quita la vieja (título presente en otra función).
       commitPlan(a=>{const b=a||{schedule:[]};return {...b,
-        schedule: [...b.schedule.filter(s=>s._title!==title), {...screen,_title:title}]
+        schedule: [...(opts.repetir?b.schedule:b.schedule.filter(s=>s._title!==title)), {...screen,_title:title}]
           .sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
       };});
       saveSavedAgenda();
@@ -582,8 +643,8 @@ export function confirmReplace(removedTitle,newTitle,day,time,isScenario){
     <div class="conflict-modal-hdr">${removedTitle?t('plan_reemplazar_funcion'):t('plan_anadir_plan')}</div>
     <div class="conflict-modal-body">${removedTitle?t('plan_reemplazar_funcion_body',{old:`<b>${shortRem}</b>`,new:`<b>${shortNew}</b>`}):t('plan_anadir_plan_body',{new:`<b>${shortNew}</b>`})}</div>
     <div class="conflict-modal-btns">
-      <button class="conflict-modal-btn cancel" data-action="removeConflictModal">${t('search_cancelar')}</button>
       <button class="conflict-modal-btn confirm" id="replace-ok">${removedTitle?t('misc_si_reemplazar'):t('misc_si_anadir')}</button>
+      <button class="conflict-modal-btn cancel" data-action="removeConflictModal">${t('search_cancelar')}</button>
     </div>
   </div>`;
   document.body.appendChild(modal);
@@ -801,12 +862,30 @@ export function setProgramaMode(mode){
   programaChip='all';_programaChipMatchFn=null;
   lugarClose();seccionClose();
   // Set active day for hoy/mañana modes
+  // DÍA HUECO EN MEDIO DEL FESTIVAL (Juan, 24 ago 2026 — CineAutopsia en curso).
+  // Un festival puede tener días sin programación entre medio: CineAutopsia va
+  // del 21 al 29 y no programa el 24. Ese día `findIndex` devuelve -1, y los
+  // fallbacks viejos —DAY_KEYS[0] para «Hoy», el ÚLTIMO para «Mañana»— mandaban
+  // a los extremos del array: «Hoy» abría el VIE 21, ya pasado, y «Mañana» el
+  // SÁB 29 en vez del MAR 25. Medido en producción, no supuesto.
+  //
+  // El fallback correcto es el primer día que NO pasó, que es exactamente lo que
+  // ya hacen filterByVenue y filterBySection en este mismo archivo. La respuesta
+  // estaba escrita dos veces al lado; esta función no la usaba.
   const _pts=simTodayStr();
   const _pti=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===_pts);
+  const _proximoVivo=DAY_KEYS.findIndex(d=>!dayFullyPassed(d));
+  const _ultimo=DAY_KEYS.length-1;
   if(mode==='hoy'){
-    activeDay=_pti>=0?DAY_KEYS[_pti]:DAY_KEYS[0];
+    // Hoy no está en el calendario → el próximo día con función. Si TODOS
+    // pasaron (festival terminado) queda el último, que es lo que había.
+    activeDay=_pti>=0?DAY_KEYS[_pti]:(_proximoVivo>=0?DAY_KEYS[_proximoVivo]:DAY_KEYS[_ultimo]);
   } else if(mode==='manana'){
-    activeDay=_pti>=0&&_pti<DAY_KEYS.length-1?DAY_KEYS[_pti+1]:DAY_KEYS[DAY_KEYS.length-1];
+    // Con hoy en el calendario, mañana es el siguiente. Sin hoy, «mañana» es
+    // igualmente el próximo día vivo: en un hueco, el siguiente día programado
+    // ES el mañana del usuario.
+    const _base=_pti>=0?_pti+1:_proximoVivo;
+    activeDay=(_base>=0&&_base<=_ultimo)?DAY_KEYS[_base]:DAY_KEYS[_ultimo];
   }
   // filter-row visibility handled by initProgramaModeBar() below
   // filter updates handled by lugarOpen()

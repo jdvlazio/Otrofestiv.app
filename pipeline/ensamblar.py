@@ -29,12 +29,16 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def _plan(fid):
-    p = f'{REPO}/pipeline/{fid}.plan.json'
-    if not os.path.exists(p):
-        sys.exit(f'✗ falta {p} — el plan declara la identidad del festival y sus tablas')
-    d = json.load(open(p, encoding='utf-8'))
-    if 'festival' not in d:
-        sys.exit(f'✗ {p} no tiene bloque "festival" — ver la cabecera de ensamblar.py')
+    """El plan pasa por su contrato ANTES de tocar nada (lib.cargar_plan): lo
+    que falte sale aquí, junto y con remedio, no una vuelta más tarde en un
+    guardián de salida. Un plan legado (solo `pasos`) no entra por aquí."""
+    try:
+        d = lib.cargar_plan(fid)
+    except AssertionError as e:
+        sys.exit(f'✗ {e}')
+    if d['_clase'] != 'generico':
+        sys.exit(f'✗ pipeline/{fid}.plan.json no tiene bloque "festival": es un plan {d["_clase"]}, '
+                 f'no pasa por el ensamblador genérico')
     return d
 
 
@@ -114,13 +118,22 @@ def ensamblar(fid, escribir=True):
 
     SEDES = cfg.get('sedes', {})
     SECS = cfg.get('secciones', {})
-    dias = sorted({f['dia'] for f in crudo['funciones'] if f.get('dia')})
+    # Los días los fija el contrato del plan: los del crudo más `dias_vacios`.
+    # Un día sin programación se declara, no se omite — un día ausente rompe la
+    # aritmética de «Hoy» ([calendario-sin-huecos]); cargar_plan ya lo exigió.
+    dias = cfg['dias']
     orden = {d: i for i, d in enumerate(dias)}
 
     films, venues, secciones = [], {}, {}
     rep = collections.Counter()
     for f in crudo['funciones']:
         sede, sala = lib.sede_sala(f['sede'], SEDES)
+        # La sala es de la FUNCIÓN, como dice PROTOCOLO §3 y §4 —«la sala va
+        # fuera del nombre, campo `sala`»—. Esta línea la ignoraba y la tomaba
+        # solo de la tabla de sedes, así que quien seguía la doc la perdía en
+        # silencio. La tabla sigue mandando en el NOMBRE de la sede; la sala
+        # que la función trae gana sobre la que la tabla adivina.
+        sala = f.get('sala') or sala
         if sede not in geo and sede not in venues:
             rep['sede sin geo'] += 1
         sec_pub, sec_meta = _seccion(_seccion_de(f, cfg), SECS)
@@ -233,11 +246,20 @@ def ensamblar(fid, escribir=True):
         if len(e.get('film_list') or []) == 1:
             _u = e['film_list'][0]
             e['title'] = _u.get('title', e['title'])
-            for _c in ('director', 'year', 'poster', 'posterSource', 'lbSlug',
-                       'tmdb_id', 'synopsis', 'synopsis_lang', 'synopsis_en',
-                       'country', 'flags'):
-                if _u.get(_c):
-                    e[_c] = _u[_c]
+            # Qué se promueve NO es una lista escrita a mano: esa lista se había
+            # comido `genre` y `title_en`, que están en el contrato y viajaban en
+            # film_list — la obra los llevaba, la función promovida los perdía, y
+            # como el publicador no exige ninguno, nadie se enteró. Se promueve
+            # TODO campo de obra; lo que es de la FUNCIÓN se excluye por lista
+            # explícita, que se pudre mucho más despacio.
+            _DE_LA_FUNCION = {'day', 'day_order', 'date', 'time', 'venue', 'sala',
+                              'screenings', 'sessions', 'ticket_url', 'is_free',
+                              'requires_registration', 'registration_url', 'has_qa',
+                              'qa_type', 'film_list', 'is_cortos', 'is_programa',
+                              'type', 'unscheduled', '_src', 'title'}
+            for _c, _v in _u.items():
+                if _c not in _DE_LA_FUNCION and _v:
+                    e[_c] = _v
             if _u.get('duration'):
                 e['duration'] = _u['duration']
             # La sinopsis promovida se lleva su idioma: sin `synopsis_lang`

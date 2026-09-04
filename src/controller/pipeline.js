@@ -10,7 +10,7 @@ import { venueSelLabel } from '../view/helpers.js';
 import { _renderProgramaContent, renderProgramaChips, scrollDtabsToActive } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda, renderFilmListHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
-import { _renderSplashRail, _renderFestivalSelector, renderPostponedBanner } from './festival.js';
+import { _renderSplashRail, _renderFestivalSelector, renderPostponedBanner, renderFestBar } from './festival.js';
 import { dayFullyPassed, festivalEnded, simNow, simTodayStr } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -175,8 +175,16 @@ export function _updateProgramaActiveFilter(){
   if(!af) return;
   const hasSec=activeSec!=='all';
   const hasVenue=activeVenue!=='all';
-  if(!hasSec&&!hasVenue){af.classList.remove('visible');return;}
+  // Prensa e Industria entra acá porque su botón es solo un icono: la barra a
+  // 390px no admite una cuarta etiqueta, así que la palabra la pone la píldora.
+  // Y sirve de recordatorio: el usuario está viendo pases a los que el público
+  // general no entra, y puede apagarlo desde la misma × que los otros filtros.
+  const hasPress=!!showPress;
+  if(!hasSec&&!hasVenue&&!hasPress){af.classList.remove('visible');return;}
   let pills='';
+  if(hasPress){
+    pills+='<div class="paf-pill" data-action="togglePressScreenings">'+t('paf_prensa')+'<span class="paf-pill-x">×</span></div>';
+  }
   if(hasSec){
     const lbl=_seccionPillLabel(activeSec);
     pills+='<div class="paf-pill" data-action="pafClearSec">'+lbl+'<span class="paf-pill-x">×</span></div>';
@@ -282,6 +290,9 @@ export function setLang(code){
     // Banda APLAZADO: persistente → no pasa por loadFestival; se rehornea acá con
     // la etiqueta/enlace del idioma nuevo (la cita del festival queda en ES).
     renderPostponedBanner(FESTIVAL_CONFIG[_activeFestId]);
+    // El chip del encabezado tampoco pasa por loadFestival al cambiar idioma:
+    // sin esto quedaba con las fechas en el orden del idioma anterior.
+    renderFestBar(FESTIVAL_CONFIG[_activeFestId]);
     requestAnimationFrame(()=>{
       _fadeEls.forEach(el=>el.classList.remove('lang-fade'));
     });

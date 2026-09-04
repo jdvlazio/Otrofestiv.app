@@ -75,6 +75,7 @@
   "title_en": {
    "tipo": "string"
   },
+  "title_es": {"tipo": "string", "nota": "Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial."},
   "director": {
    "tipo": "string"
   },
@@ -189,6 +190,14 @@
   "sala": {
    "tipo": "string",
    "nota": "Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede])."
+  },
+  "audience": {
+   "tipo": "string",
+   "enum": [
+    "press"
+   ],
+   "grupo": "acceso",
+   "nota": "Solo cuando la función NO es para el público general. Ausente = público (el caso normal, no se declara). «press» = pase de prensa e industria: la app los OCULTA salvo que el usuario active el filtro. TIFF 2026 trae 247 (audienceType=Press & Market en su endpoint)."
   },
   "date": {
    "tipo": "string",

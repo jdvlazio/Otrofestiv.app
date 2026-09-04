@@ -86,12 +86,12 @@
    "Apertura": {
     "emoji": "🛰️",
     "en": "Opening · Expanded FullDome",
-    "archetype": "Apertura"
+    "archetype": "Apertura / Gala"
    },
    "Encuentro": {
     "emoji": "🤝",
     "en": "Gathering",
-    "archetype": "Industria / Formación"
+    "archetype": "Charlas / Industria"
    }
   },
   "name": "CineAutopsia",
@@ -105,7 +105,6 @@
   "storageKey": "cineautopsia2026_",
   "festivalStartStr": "2026-08-21T00:00:00",
   "festivalEndStr": "2026-08-29T23:59:00",
-  "prioLimit": 4,
   "sharedSlotIsOneScreening": false,
   "ticketing_model": "mixed",
   "mes_es": "agosto",
@@ -118,6 +117,10 @@
    "destacados": "Destacados",
    "panorama": "Panorama"
   },
-  "geo": "festivals/staging/cineautopsia-2026-geo.json"
+  "geo": "festivals/staging/cineautopsia-2026-geo.json",
+  "dias_vacios": [
+   "2026-08-24"
+  ],
+  "_dias_vacios_por_que": "el 24 no tiene programación y el JSON publicado ya lo declaraba: el plan no reproducía producción hasta que el contrato lo pidió (2 sep 2026)"
  }
 }

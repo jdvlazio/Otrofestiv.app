@@ -7,7 +7,7 @@
 
 import { FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG, TMDB_IMG } from '../config.js';
 import {
-  DAY_ABBR, DAY_NUM, ICONS, _buildPosterV16, _fitLines, _secLabel, _sectionColor,
+  DAY_ABBR, DAY_NUM, ICONS, _buildPosterMini, _buildPosterV16, _datoCompuesto, _fitLines, _secLabel, _seccionPartes, _sectionColor,
   makeProgramPoster, makeEventPoster, makeSorpresaPoster, makeSharedSlotSVG, escXML, _langDates, parseProgramTitle,
 } from './components.js';
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
@@ -77,11 +77,38 @@ export function getFilmPoster(f){
   // 7. f.poster directo — editorial cloudfront o formato Jardín 2026
   if(f.poster) return (f.poster.startsWith('http')||f.poster.startsWith('/assets/'))?f.poster:TMDB_IMG+f.poster;
   // 8. Poster generativo
+  // Regla de carga (Juan, 24 ago): rótulo = primera oración; la firma de
+  // curaduría solo baja al pie con TÍTULO SIMPLE — con pila/compuesto cede y
+  // vive en la ficha. Tres voces: sección, cuerpo, pie.
+  const _partes=_seccionPartes(_secLabel(f.section||''));
+  const _compuesto=/\s\+\s/.test(f.title||'');
   return _buildPosterV16({
     accent: _sectionColor(f.section||''),
-    headerLabel: _secLabel(f.section||'')||'TRIBECA',
+    headerLabel: _partes.rotulo||'TRIBECA',
     title: f.title,
-    num: null
+    num: null,
+    dato: _datoCompuesto(f.title, f.duration), // «3 obras · 99 min» si es compuesto
+    firma: _compuesto?null:_partes.firma
+  });
+}
+
+// ── LA MINI para superficies de 56px (mejora 1, auditoría Apple Music) ──────
+// Espeja las decisiones de getFilmPoster y solo sustituye los caminos que
+// terminarían en la Forma A generativa: custom/evento/sorpresa/TMDB/editorial
+// pasan tal cual (la sorpresa conserva su «?», que es marca). El chip de la
+// lista y el thumb de cortos muestran el título AL LADO, así que acá el
+// generativo responde con UNA voz: ordinal de serie o la marca de la obra
+// (_buildPosterMini). El GRID no pasa por acá — queda tipográfico puro
+// (decisión de Juan, 25 ago: la marca en grande era «demasiado ruidosa»).
+export function getFilmPosterMini(f){
+  const src=getFilmPoster(f);
+  if(!src||!String(src).startsWith('data:image/svg')) return src;   // póster real
+  if(f&&f.type==='event') return src;                                // evento: ámbar propio
+  if(f&&f.title&&f.title.toLowerCase().includes('sorpresa')) return src; // la «?» es marca
+  return _buildPosterMini({
+    accent:_sectionColor(f&&f.section||''),
+    title:f&&f.title||'',
+    esPrograma:!!(f&&(f.is_cortos||f.is_programa)),
   });
 }
 
@@ -99,7 +126,7 @@ export function getFilmPosterUntitled(f){
   if(f.is_cortos||(f.is_programa&&f.film_list&&f.film_list.length)) return makeProgramPoster(state,f.title,f.duration,f.section,{untitled:true});
   return _buildPosterV16({
     accent: _sectionColor(f.section||''),
-    headerLabel: _secLabel(f.section||'')||'TRIBECA', // mismo fallback que getFilmPoster #8
+    headerLabel: _seccionPartes(_secLabel(f.section||'')).rotulo||'TRIBECA', // mismo rótulo que #8
     title: '',
     num: null
   });
@@ -122,7 +149,11 @@ export function getCortoItemPoster(item){
 // poster-ed + --ed-accent). Ninguna superficie de cortos debe volver a construir
 // el <img> del still a mano — enforced por validate.py [poster-editorial-parity].
 export function itemPosterParts(item, section, imgClass, {header=false}={}){
-  const src=getCortoItemPoster(item)||makeProgramPoster(state,item.title,item.duration||'',section||'');
+  // Sin póster propio: la CARD grande (header) conserva el generativo entero;
+  // el thumb de 56px recibe la mini — la marca de la obra, su título va al lado.
+  const src=getCortoItemPoster(item)
+    ||(header?makeProgramPoster(state,item.title,item.duration||'',section||'')
+             :_buildPosterMini({accent:_sectionColor(section||''), title:item.title, esPrograma:false}));
   if(_isEditorialPoster(item)){
     // thumb pequeño → still enmarcado SIN banda de texto (precedente _posterThumb);
     // card grande (Diario) → con banda de sección, como _recapPosterCard.
@@ -214,17 +245,25 @@ export function posterAmbient(src,fallbackHex,cb){
 //     cada obra conserva su card, como hoy. Nada se inventa.
 //   · Delantero = primera obra en orden de catálogo (regla neutra).
 // El dibujo lo hace components.makeSharedSlotSVG — acá solo el modelo.
-// legacyProgramParts — el póster de un programa LEGACY «Film A + Film B».
-// Ese modelo (is_programa) es una FUNCIÓN COMPARTIDA modelada a la vieja usanza
-// —el template dice que la reemplazó el anclaje Tipo 2—, así que le corresponde
-// la misma forma C. Y arregla una mentira vieja: getFilmPoster (camino 5)
-// devuelve el afiche de la PRIMERA obra, así que «Esperando abril + Los bandidos
-// del hotel azul» se mostraba —en el Diario y en todas partes— como si fuera
-// «Esperando abril» sola. Con las dos obras apiladas, la tarjeta dice la verdad.
-// Devuelve null cuando no califica (afiches incompletos, still, 4+): ahí el
-// camino viejo sigue mandando y no se toca nada.
-export function legacyProgramParts(f){
-  if(!f||!f.is_programa||!Array.isArray(f.film_list)) return null;
+// programParts — el póster de una función que agrupa 2-3 obras, sea programa
+// legacy («A + B», is_programa) o de cortos (is_cortos, como se modelan hoy).
+// Arregla una mentira vieja: getFilmPoster (camino 5) devuelve el afiche de la
+// PRIMERA obra, así que «Esperando abril + Los bandidos del hotel azul» se
+// mostraba como si fuera «Esperando abril» sola. Con la Escalera dice la verdad.
+// Antes se llamaba legacyProgramParts y solo miraba is_programa: las 31
+// funciones de cortos de 2-3 obras caían al generativo teniendo los afiches.
+// Devuelve null si no califica (afiche incompleto, still, 4+) → camino viejo.
+export function programParts(f){
+  if(!f||!(f.is_programa||f.is_cortos)||!Array.isArray(f.film_list)) return null;
+  // EL AFICHE DEL FESTIVAL MANDA (regla de Juan, 26 ago 2026). La Escalera es un
+  // póster NUESTRO: solo tiene sentido cuando el festival no mandó uno para la
+  // función. Si el programa trae el suyo —«Competencia de cortos Programa 1»,
+  // las secciones de Cinemancia, los programas de CineAutopsia— ese gana, y la
+  // pila no se dibuja. Medido antes de la regla: de 59 compuestos que dibujaban
+  // Escalera, 19 tapaban el afiche oficial (Cinemancia y Leviza, publicados).
+  // El orden es jerarquía, no preferencia: oficial del programa → Escalera con
+  // los afiches oficiales de TODAS sus obras → generativo nuestro.
+  if(f.poster) return null;
   return slotPosterParts(f.film_list.map(it=>({
     title:it.title, poster:it.poster, posterSource:it.posterSource,
     duration:it.duration||f.duration, section:f.section,
@@ -232,7 +271,10 @@ export function legacyProgramParts(f){
 }
 
 export function slotPosterParts(members){
-  if(!Array.isArray(members)||members.length<2||members.length>3) return null;
+  // Tope 8 (prototipo aprobado, 25 ago): la Escalera escala a cualquier N porque
+  // el paso es fracción de la lámina — ver makeSharedSlotSVG. Con 9+ la lámina
+  // baja del 23% y a 56px queda en textura, así que ahí sí cae a la forma vieja.
+  if(!Array.isArray(members)||members.length<2||members.length>8) return null;
   const clasif=members.map(f=>{
     const src=getPosterSrc(f.title,true)||f.poster||null;
     const real=!!src&&!_isEditorialPoster(f);
@@ -244,7 +286,7 @@ export function slotPosterParts(members){
   const modules=[...reales.slice(1).reverse().map(c=>c.src), reales[0].src];
   const lider=reales[0].f;
   const dur=blockDuration(lider);
-  const dato=`${members.length} obras${dur?` · ${dur} min`:''}`;
+  const dato=`${members.length} ${t('misc_peliculas')}${dur?` · ${dur} min`:''}`;
   return {modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato,
     svg:makeSharedSlotSVG({modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato})};
 }
@@ -253,7 +295,7 @@ export function posterParts(f,{header=false,body='',loading}={}){
   const m=posterModel(f);
   if(m.kind!=='editorial') return m;                       // {kind,src,...} decidido
   return {...m, ed:true,
-    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading, accent:m.accent})};
+    inner:editorialFrame({header:header?m.header:undefined, body, src:m.src, title:m.title, loading, accent:m.accent, firma:body?m.firma:undefined})};
 }
 
 export function _getItemPoster(item){
@@ -313,6 +355,24 @@ export function _edHdrSVG(label, accent){
   return `<svg class="ed-hdr-svg" viewBox="0 0 100 ${VH}" preserveAspectRatio="xMinYMin meet">${text}</svg>`;
 }
 
+// ── hayEvento — dueño único del sustantivo que nombra un conjunto ───────────
+// «actividad» es el PARAGUAS y un taller no es una obra (regla de vocabulario de
+// Juan): el sustantivo se elige por el contenido, no por la pantalla. «obras» si
+// TODAS son proyecciones; «actividades» si alguna no lo es.
+//
+// Vivía inline en el titular de Mi Plan y lo vigilaba T132b, pero las dos líneas
+// de Planear —«N obras por planear» y «N obras · N días»— se habían quedado
+// afuera: medido en FICDEH con «Los frutos que dan vida» (taller de 2 sesiones)
+// más una película, decían «2 obras» sobre 1 película y 1 taller. El número
+// estaba bien; el sustantivo no. Con tres copias del predicado, la próxima
+// pantalla iba a quedarse afuera igual.
+export function hayEvento(entradas, films){
+  return (entradas||[]).some(e=>{
+    const _t=typeof e==='string'?e:(e&&(e._title||e.title));
+    return ((films||[]).find(f=>f.title===_t)||{}).type==='event';
+  });
+}
+
 export function _posterThumb(f, cssClass, loading){
   const p = f ? getFilmPoster(f) : null;
   const _load = loading || 'lazy';
@@ -347,7 +407,7 @@ export function posterModel(f){
   const src=getFilmPoster(f);
   if(!src) return {kind:'empty'};
   if(src.startsWith('data:image/svg+xml')) return {kind:'generative', src};
-  if(_isEditorialPoster(f)) return {kind:'editorial', src, accent:_sectionColor(f.section||''), header:_secLabel(f.section||''), title:f.title||''};
+  if(_isEditorialPoster(f)) return {kind:'editorial', src, accent:_sectionColor(f.section||''), header:_seccionPartes(_secLabel(f.section||'')).rotulo, firma:(/\s\+\s/.test(f.title||'')?null:_seccionPartes(_secLabel(f.section||'')).firma), title:f.title||''};
   return {kind:'image', src, objectPosition:(f.posterPosition&&f.posterPosition!=='center')?f.posterPosition:'', title:f.title||''};
 }
 
@@ -368,7 +428,7 @@ export function posterModel(f){
 // cae a generativo. `body` con texto → scrim con título (grid); undefined/''  →
 // sin scrim (thumb/lista/sheet y ended-poster, que trae su propio footer).
 
-export function editorialFrame({header, body, src, title, loading, accent, dato}={}){
+export function editorialFrame({header, body, src, title, loading, accent, dato, firma}={}){
   // Forma B (§6.0) = forma A + UN campo 16:9 constante (8u×4,5u en y=3,5u). Sin
   // blur ni banda de color; la geometría vive en el CSS de .poster-ed, en %.
   const _l=loading||'lazy';
@@ -385,13 +445,21 @@ export function editorialFrame({header, body, src, title, loading, accent, dato}
   // se apaga con máscara antes del borde. En el póster grande no aplica: ahí el
   // vacío no existe, lo llenan el título y el dato.
   const _mini=!header&&!_ttl;
-  const halo=(_mini&&src)?`<div class="ed-halo"><img src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt=""></div>`:'';
+  // El halo llena el vacío TAMBIÉN en el póster grande (Juan, 24 ago 2026: «esa
+  // línea negra debajo del still genera distancia y ruido»). Medido en la app:
+  // el still termina en 66,67% y el título arranca en 86,4% — 23,6px de negro
+  // muerto en una card de 120. La premisa que lo excluía («en el póster grande
+  // el vacío no existe, lo llenan el título y el dato») era falsa en pantalla.
+  // Mismo mecanismo que la miniatura —contenido, con máscara— pero anclado al
+  // borde del campo grande (66,67%, clase ed-halo-full) para no dejar costura.
+  const halo=(src)?`<div class="ed-halo${_mini?'':' ed-halo-full'}"><img src="${src}" loading="${_l}" aria-hidden="true" onerror="this.remove()" alt=""></div>`:'';
   return `<div class="ed-fil"></div>`
     + `<div class="ed-hdr">${header?_edHdrSVG(header, accent):''}</div>`
     + halo
     + `<div class="ed-img${_mini?' ed-img-mid':''}">${img}</div>`
     + `<div class="ed-foot">`
       + (_ttl?`<div class="ed-title">${escXML(_ttl)}</div>`:'')
+      + ((firma&&_ttl)?`<div class="ed-firma">${escXML(firma)}</div>`:'')
       + (_dato?`<div class="ed-dato">${escXML(_dato)}</div>`:'')
     + `</div>`;
 }
@@ -515,12 +583,20 @@ export function festivalCities(films){
     if(f.info||!f.venue||!f.day) return;
     const c=vcfg(f.venue).city;
     if(!c) return;
-    (map[c] ||= {name:c,count:0,days:new Set()});
+    (map[c] ||= {name:c,count:0,vivas:0,days:new Set()});
     map[c].count++;
+    if(!f._cancelled) map[c].vivas++;
     map[c].days.add(f.day);
   });
+  // `cancelled` sale de ACÁ y no de un predicado al lado (2 sep 2026): esta
+  // función ya recorre todas las funciones y ya es el dueño único que comparten
+  // la hoja de apertura («¿A cuál ciudad vas?») y el nivel de ciudades del filtro
+  // de Lugar. Con dos derivaciones, una superficie podía decir CANCELADA y la
+  // otra ofrecer la misma ciudad como si nada.
+  // Medido en FICDEH tras el sismo: Pereira 0/29, Manizales 0/26, Cali 0/17 y
+  // Quibdó 0/16 — cuatro de once, ofrecidas con la misma tipografía que las vivas.
   return Object.values(map)
-    .map(c=>({...c, days:[...c.days].sort()}))
+    .map(c=>({...c, days:[...c.days].sort(), cancelled:c.vivas===0}))
     .sort((a,b)=>b.count-a.count);
 }
 
@@ -596,7 +672,14 @@ export function planInputSignature(){
     .filter(x=>!x.endsWith(':'))
     .join(';');
   const _ciudad=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
-  return `${_int}#${_pri}#${_av}#${_ciudad}`;
+  // El interruptor de PRENSA es un insumo del plan (30 ago 2026). Faltaba, y por
+  // eso apagarlo dejaba el Plan agendado en un pase de acreditados que la app
+  // misma ya no listaba: la función desaparecía de FILMS y la entrada seguía en
+  // savedAgenda, sin aviso. Con el interruptor dentro de la firma, el Plan queda
+  // marcado como desactualizado y el usuario decide cuándo recalcular — que es la
+  // regla de Juan del 18 ago: «el Plan en pantalla no se reemplaza solo».
+  const _prensa=(typeof showPress!=='undefined'&&showPress)?'P':'-';
+  return `${_int}#${_pri}#${_av}#${_ciudad}#${_prensa}`;
 }
 
 export function travelWarn(s1,s2){
@@ -813,6 +896,12 @@ export function _metaBadges(f){
   // sobre los de servicio: si no va a ocurrir, no hay nada que ofrecer.
   if(f&&f._cancelled) return '';
   let b='';
+  // PRENSA — va PRIMERO, antes incluso que premium, porque no describe la
+  // función sino QUIÉN puede entrar: es un pase de acreditados. Solo se ve
+  // cuando el usuario activó el filtro de Prensa e Industria — apagado, la
+  // función ni siquiera está en FILMS —, así que el badge es el recordatorio
+  // de que esta fila no es para el público general.
+  if(f.audience==='press') b+=`<span class="meta-badge">${t('press_badge')}</span>`;
   // PREMIUM — la función cuesta más que el resto. Va PRIMERO entre los de
   // servicio porque es lo único que cambia el precio: los demás dicen qué te dan,
   // éste dice cuánto te cuesta. En TIFF son 61 de 638 funciones (las galas del
@@ -831,19 +920,40 @@ export function _metaBadges(f){
   return b;
 }
 
+// _programaStack — el chip de 56px de la LISTA para una función compuesta.
+//
+// Era el TERCER dibujante de «afiches apilados», junto a la Escalera del grid y
+// el generativo: dos imágenes a 50/50, y con el gate puesto en `is_programa`.
+// Ese gate lo dejaba fuera de casi todo: de los 215 compuestos del catálogo,
+// 207 son `is_cortos` y solo 8 son `is_programa` — disparaba en el 3,7%. El
+// grid ya había corregido exactamente esto (ver programParts, «antes se
+// llamaba legacyProgramParts y solo miraba is_programa») y la lista se quedó
+// atrás: la misma obra se veía apilada en grilla y generativa en lista.
+//
+// Ahora la lista PREGUNTA AL MISMO DUEÑO que el grid (programParts) y dibuja la
+// misma Escalera. Un compuesto se ve igual en las dos vistas y quedan dos
+// dibujantes en vez de tres. El stack de dos imágenes se conserva solo como
+// respaldo para los que no califican (afiche incompleto, still, 9+ obras).
 export function _programaStack(f){
-  if(!f.is_programa||!f.film_list||f.film_list.length<2) return null;
+  if(!f||!f.film_list||f.film_list.length<2) return null;
+  const _pp=programParts(f);
+  if(_pp&&_pp.svg) return`<div class="plist-poster">${_pp.svg}</div>`;
+  if(!f.is_programa) return null;
   const p1=_getItemPoster(f.film_list[0]);
   const p2=_getItemPoster(f.film_list[1]);
-  // Fallback unificado (como el stack del sheet): item sin póster → generativo
-  // del programa, nunca un hueco vacío.
-  const _gen=()=>makeProgramPoster(state,f.title,f.duration||'',f.section||'');
+  // Fallback unificado (como el stack del sheet): item sin póster → la MINI del
+  // programa (mejora 1 — el stack vive en el chip de 56px de la lista), nunca
+  // un hueco vacío ni el póster entero ilegible.
+  const _gen=()=>getFilmPosterMini(f);
   const imgB=`<img class="ps-back" src="${p2||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
   const imgF=`<img class="ps-front" src="${p1||_gen()}" loading="lazy" onerror="this.remove()" alt="">`;
   return`<div class="plist-poster-stack">${imgB}${imgF}</div>`;
 }
 
 export function _plistPosterHtml(f, src){
+  // Chip de 56px: el generativo entero era ruido ilegible que repetía la fila
+  // (mejora 1) → la mini. Los pósters reales y la sorpresa pasan tal cual.
+  if(src&&String(src).startsWith('data:image/svg')) src=getFilmPosterMini(f);
   const _pp=posterParts(f);
   if(_pp.ed){
     // Marco editorial único (lista = banda + img, sin label) vía posterParts.

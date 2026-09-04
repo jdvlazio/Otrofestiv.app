@@ -12,6 +12,7 @@
 
 import { FESTIVAL_CONFIG, SECTION_COLORS, SECTION_EN, ARCHETYPE_COLORS, SECTION_ARCHETYPES } from "../config.js";
 import { toMin } from "../domain/time.js";
+import { _djb2, _mulberry32 } from "../domain/film.js";
 import { t } from "../i18n/i18n.js";
 import { state } from "../state/state.js";
 
@@ -33,7 +34,12 @@ export function makeProgramPoster(state, title, duration, section, opts){
   // ES→original sin emoji), uppercase. Así el poster editorial coincide con el
   // separador del grid en cada idioma — antes horneaba f.section crudo y se
   // quedaba en español aunque la UI estuviera en EN.
-  const cleanSection=_secLabel(filmSec).toUpperCase();
+  // Rótulo = primera oración (regla de carga, 24 ago): el programa de cortos es
+  // pila por naturaleza, así que la firma de curaduría CEDE — no se pasa. Sin
+  // esto, los programas de secciones curadas seguían con el rótulo completo
+  // muriendo en «…» mientras los films de al lado ya lo llevaban corto: dos
+  // pósters de la MISMA sección con dos rótulos distintos.
+  const cleanSection=_seccionPartes(_secLabel(filmSec)).rotulo.toUpperCase();
   const headerLabel=cleanSection||t('poster_programa');
 
   // Número — patrones: "Prog. 4", "Prog. 1 · 16mm", "Voces 2", número al final
@@ -295,7 +301,90 @@ export function _fitLines(str, {boxW, boxH, maxLines, fsMax, fsMin, lhRatio=1.16
   return {lines:K, fs:fsMin, lh:+lh.toFixed(2)};
 }
 
-export function _buildPosterV16({accent, headerLabel, title, num, dato}){
+// _datoCompuesto — el pie de un programa dice cuántas obras trae.
+// Juan, 24 ago 2026: un compuesto de tres obras decía «99 min», el mismo pie que
+// una obra sola. La Forma C ya lo resolvió («2 obras · 77 min»); esto se lo da a
+// la Forma A. El conteo sale del « + » CON espacios — el separador que usan los
+// títulos compuestos reales (Cinemancia: 14 de 32)— para no confundir un «+»
+// interno de un nombre. El sustantivo sale de misc_peliculas —mismo dueño de
+// vocabulario— y no de un literal: en inglés las cards decían «2 obras · 93 min».
+// La Forma C (slotPosterParts) llevaba el mismo literal y se localiza CON esta,
+// como este comentario decía que había que hacer.
+export function _datoCompuesto(title, duration){
+  const _partes=String(title||'').split(/\s\+\s/);
+  if(_partes.length<2) return duration||'';
+  return `${_partes.length} ${t('misc_peliculas')}${duration?` · ${duration}`:''}`;
+}
+
+// _seccionPartes — separa el rótulo de la FIRMA en una sección curada.
+// Cinemancia escribe la curaduría dentro del nombre de sección: «La primavera
+// llega para los que esperan. El cine de José Luis Torres Leiva». En el póster,
+// ese rótulo moría en 84px justo donde va el autor («…EL CINE DE JOSÉ…»).
+//
+// La firma se reconoce ESTRICTA, no por cualquier punto: solo si tras la primera
+// oración viene «Curaduría…» / «El cine de…» (o su inglés) o un nombre propio
+// corto (≤4 palabras, todas capitalizadas — «Sergio Navarro»). Sin eso, el punto
+// es parte del nombre y NO se parte: «Programa 1. El espesor de las formas» es
+// un solo rótulo, no un rótulo con firma — partirlo por el punto a secas habría
+// convertido «El espesor de las formas» en curador.
+export function _seccionPartes(label){
+  const _l=String(label||'').trim();
+  const _i=_l.indexOf('. ');
+  if(_i<0) return {rotulo:_l, firma:null};
+  const _rot=_l.slice(0,_i), _resto=_l.slice(_i+2).trim();
+  const _esFirma=/^(curadur[ií]a|curated|el cine de|the cinema of|o cinema de)/i.test(_resto)
+    || (_resto.split(/\s+/).length<=4 && _resto.split(/\s+/).every(w=>/^[A-ZÁÉÍÓÚÑÜ]/.test(w)));
+  return _esFirma ? {rotulo:_rot, firma:_resto} : {rotulo:_l, firma:null};
+}
+
+// ── LA MINI — el generativo en superficies de 56px (mejora 1, Apple Music) ──
+// Regla oficial que la motiva: «legible en TODO el rango de tamaños» (Curator
+// Best Practices). Medido: en el chip de la lista el póster entero escalado
+// dejaba la sección en 3,3px y el dato en 2,8px — ruido que además REPITE lo
+// que la fila ya dice al lado (anti-repetición). La mini responde con UNA voz:
+//  · SERIE (título con «Programa N»): el ordinal a 5u — legible de verdad.
+//  · Obra o programa con nombre: SU MARCA — 2-3 formas geométricas sobre
+//    retícula de 2u, sembradas por _djb2(título) → _mulberry32. Determinista:
+//    la misma obra dibuja SIEMPRE la misma marca — se reconoce como una
+//    portada de disco, sin leer. (Primera versión sin marca: Juan la tumbó —
+//    «no hay diferenciador, no sirve». El color es de la SECCIÓN; a 56px solo
+//    una marca por obra distingue a dos vecinas.)
+// El GRID NO CAMBIA (decisión de Juan, 25 ago): la marca ahí era «demasiado
+// ruidosa, minimalismo cero». La mini vive solo donde el título va al lado.
+export function _buildPosterMini({accent, title, esPrograma}){
+  const VW=120, VH=180, U=15, M=11.25;
+  const _acc=accent||'#D85A30';
+  const base=`<defs><radialGradient id="lz" cx="1" cy="1" r="1">`
+    +`<stop offset="0" stop-color="${_acc}" stop-opacity=".28"/>`
+    +`<stop offset="1" stop-color="${_acc}" stop-opacity="0"/>`
+    +`</radialGradient></defs>`
+    +`<rect width="${VW}" height="${VH}" fill="#0B0A08"/>`
+    +`<rect width="${VW}" height="${VH}" fill="url(#lz)"/>`
+    +`<rect width="${VW}" height="${0.25*U}" fill="${_acc}"/>`;
+  let cuerpo='';
+  const _m=esPrograma&&String(title||'').match(/(?:programa|program|programme|prog\.?|pgm)\s*0?(\d+)/i);
+  if(_m){
+    cuerpo=`<text x="${M}" y="${VH-M}" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="${5*U}" font-weight="800" fill="#F0EDE8">${escXML(_m[1])}</text>`;
+  } else {
+    const rnd=_mulberry32(_djb2(String(title||'')));
+    const cel=2*U, usadas=new Set(), n=2+Math.floor(rnd()*2);
+    for(let i=0;i<n;i++){
+      let cx,cy,k=0;
+      do{ cx=Math.floor(rnd()*4); cy=1+Math.floor(rnd()*4); k++; }while(usadas.has(cx+'-'+cy)&&k<8);
+      usadas.add(cx+'-'+cy);
+      const x=cx*cel, y=cy*cel, op=i===0?'':' opacity=".45"';
+      switch(Math.floor(rnd()*4)){
+        case 0: cuerpo+=`<circle cx="${x+cel/2}" cy="${y+cel/2}" r="${cel/2}" fill="${_acc}"${op}/>`; break;
+        case 1: cuerpo+=`<path d="M${x} ${y+cel} A${cel} ${cel} 0 0 1 ${x+cel} ${y} L${x+cel} ${y+cel} Z" fill="${_acc}"${op}/>`; break;
+        case 2: cuerpo+=`<rect x="${x}" y="${y}" width="${cel}" height="${cel/2}" fill="${_acc}"${op}/>`; break;
+        case 3: cuerpo+=`<path d="M${x} ${y} L${x+cel} ${y} L${x} ${y+cel} Z" fill="${_acc}"${op}/>`; break;
+      }
+    }
+  }
+  return 'data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">${base}${cuerpo}</svg>`);
+}
+
+export function _buildPosterV16({accent, headerLabel, title, num, dato, firma, kindLabel}){
   // ── Póster nuestro — anatomía aprobada (POSTERS.md §6.0, Juan 18 ago 2026) ──
   // Retícula: u = ancho/8 → 8u × 12u. Margen 0,75u. Filete de sección de 0,25u a
   // sangre. Sección arriba, título anclado abajo, dato al pie, luz abajo a la
@@ -304,6 +393,12 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
   // Lo que murió acá: la banda de color como losa (el color de sección pasó al
   // filete y a la propia tipografía), el chevron (a 84px era suciedad) y el
   // número gigante — que era un DATO y ahora vive como tal, en el pie.
+  //
+  // La LUZ hereda el acento de sección (Juan, 24 ago 2026 — auditoría con
+  // Cinemancia): era ámbar fija en los 32 generativos del festival y una pared
+  // de Forma A se veía monótona. Con la luz en el color de sección, Competencia
+  // se distingue de Iluminaciones de un golpe de vista, sin tocar la retícula.
+  // Es la doctrina de color ambiental, aplicada al generativo.
   const VW=120, VH=180, U=VW/8;              // 15
   const M=0.75*U, CW=VW-2*M;                 // margen 11.25 · caja de contenido 97.5
   const esc=escXML;
@@ -315,9 +410,71 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
   // viewBox: «la mayor que quepa» sin techo llevaba «CHARLA» a 17,9px, más grande
   // que el título de la obra. El techo mantiene la jerarquía: la sección orienta,
   // el título es el protagonista.
+  // EL TÍTULO NO REPITE LA SECCIÓN (Juan: «una regla que he repetido mil veces
+  // y nunca la aplican» — 24 ago 2026). Si el título arranca con el nombre del
+  // rótulo («Competencia de cortometrajes Programa 1» bajo COMPETENCIA DE
+  // CORTOMETRAJES), el prefijo se recorta y queda «Programa 1», grande y limpio:
+  // la sección ya lo dijo arriba. Comparación sin acentos/case; solo prefijo
+  // EXACTO — nada de adivinar coincidencias parciales. Si el recorte deja vacío,
+  // se conserva el título original.
+  const _norm=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+  {
+    const _nt=_norm(title), _nh=_norm(headerLabel);
+    if(_nh&&_nt.startsWith(_nh)){
+      const _tras=String(title).trim().slice(String(headerLabel).trim().length);
+      // Con rótulo de TIPO la palabra puede ser la CABEZA de la frase y no un
+      // prefijo: «Encuentro Internacional de…» quedaba «Internacional de…», a
+      // media frase. Ahí solo se recorta si sigue un separador («Seminario ·
+      // Apreciación…»). Las secciones conservan la regla exacta de siempre.
+      const _hayCorte=!kindLabel||/^\s*[·:—–-]/.test(_tras);
+      const _resto=_tras.replace(/^[\s·:—–-]+/,'');
+      if(_resto&&_hayCorte) title=_resto;
+    }
+    // Eco en MEDIO con forma de ETIQUETA: «Nombre — Debate: pregunta» bajo DEBATE.
+    // El recorte de arriba solo mira el PREFIJO, así que este sobrevivía y la
+    // palabra salía dos veces en 4 cm² (Cinemancia). Se va el rótulo con sus dos
+    // puntos; el guion queda, que sigue separando nombre de pregunta. SOLO esa
+    // forma: «Tercera charla…» y «…: Taller de Herramientas» no la tienen. Match
+    // sobre el título CRUDO — ningún rótulo de tipo lleva acentos.
+    if(kindLabel&&String(headerLabel||'').trim()){
+      const _lbl=String(headerLabel).trim().replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      const _re=new RegExp('(\\s[—–-]\\s*)'+_lbl+'\\s*:\\s*','i');
+      const _t2=String(title).replace(_re,'$1');
+      if(_t2.trim()&&_t2!==String(title)) title=_t2;
+    }
+  }
+  // MISMA REGLA, EL ECO AL FINAL (Juan, 24 ago 2026 — lo cazó en Cinemancia).
+  // El recorte de arriba solo mira el PREFIJO, y en Cinemancia el eco venía por
+  // el otro lado: sección «Programa 1. El espesor de las formas» con título
+  // «Fuera de competencia programa 1» → «Programa 1» dos veces en el mismo
+  // póster. Si la sección YA identifica el programa, el título no lo repite,
+  // quede donde quede: acá se recorta el identificador final y queda «Fuera de
+  // competencia». No se pierde nada — el número lo dice la sección, arriba y
+  // grande.
+  // Solo actúa cuando la sección nombra ESE MISMO número: «programa 2» bajo
+  // «Programa 1» se conserva, porque ahí el número SÍ informa (son distintos).
+  {
+    const _m=String(title).trim().match(/[\s·:—-]*\b(?:programa|program|programme)\s*(\d+)\s*$/i);
+    if(_m){
+      const _nEnSeccion=_norm(headerLabel).match(/\b(?:programa|program|programme)\s*(\d+)\b/);
+      if(_nEnSeccion&&_nEnSeccion[1]===_m[1]){
+        const _resto=String(title).trim().slice(0,_m.index).replace(/[\s·:—-]+$/,'');
+        if(_resto) title=_resto;
+      }
+    }
+  }
   const SEC_FS_MAX=15*VW/84;
+  // REGLA DE CARGA (Juan, 24 ago 2026): el póster habla con TRES voces —
+  // sección ≤2 líneas, cuerpo, pie de UNA línea. La sección bajó de 4 líneas a
+  // 2: con 4, los rótulos curados se comían medio póster y aun así morían en
+  // «…»; la primera oración (via _seccionPartes, en los llamadores) cabe en 2.
   const sec=_fitLines(String(headerLabel||'').toUpperCase(),
-    {boxW:CW, boxH:3.4*U, maxLines:4, fsMax:Math.min(SEC_FS_MAX, 3.4*U/1.16), fsMin:9, lhRatio:1.16, lsEm:0.02, upper:true});
+    {boxW:CW, boxH:3.4*U, maxLines:2, fsMax:Math.min(SEC_FS_MAX, 3.4*U/1.16), fsMin:7, lhRatio:1.16, lsEm:0.02, upper:true});
+  // fsMin bajó de 9 a 7 CON el techo de 2 líneas (24 ago): a fsMin 9, «LA
+  // PRIMAVERA LLEGA PARA LOS QUE ESPERAN» necesitaba 3 líneas y el motor
+  // recortaba con «…» — y recortar una sección está prohibido (§6.0). A 7
+  // (≈4,9px en la card de 84) el rótulo entero cabe en dos líneas. Preferimos
+  // pequeño y completo a grande y mutilado.
   const secY=1*U+sec.fs;                     // primera línea base a 1u
   const secText=sec.lines.map((l,i)=>_lineaSVG(l,
     {x:M, y:secY+i*sec.lh, fs:sec.fs, ls:sec.fs*0.02, fill:accent, boxW:CW, upper:true})).join('');
@@ -337,30 +494,111 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
   const datoText=datoStr
     ? _lineaSVG(datoStr, {x:M, y:datoY, fs:datoFS, ls:datoFS*0.02, fill:'#888', boxW:CW, upper:false})
     : '';
+  // FIRMA de curaduría — línea propia en itálica sobre el dato, a 1,5·fs. Solo
+  // llega cuando el llamador la permite (título simple: la regla de carga manda
+  // que con pila de obras la firma CEDE y vive en la ficha, no en el póster).
+  const _firmaStr=String(firma||'').trim();
+  const firmaY=_firmaStr?(datoStr?datoY-datoFS*1.5:datoY):null;
+  const firmaText=_firmaStr
+    ? `<text x="${M}" y="${round(firmaY)}" font-family="${FONT}" font-size="${datoFS}" font-style="italic" font-weight="600" fill="#888">${escXML(_firmaStr)}</text>`
+    : '';
 
-  // Título — anclado abajo, sobre el dato: 6,5u × 2,4u, máx 4 líneas
-  const tTop=datoStr?datoY-datoFS*1.6:datoY;
-  const ttl=_fitLines(_tituloVacio?_datoCrudo:String(title||'').trim(),
-    {boxW:CW, boxH:2.4*U, maxLines:4, fsMax:2.4*U/1.2, fsMin:12, lhRatio:1.2, lsEm:-0.02, upper:false});
-  // fsMin=12 (≈8,4px en tarjeta) es SUELO DE LEGIBILIDAD: por debajo se recorta
-  // con elipsis en vez de encoger hasta lo ilegible. La sección usa un suelo más
-  // bajo a propósito — recortar el nombre del festival está prohibido.
-  const tBottom=tTop;                        // el bloque CRECE hacia arriba
-  const tStartY=tBottom-(ttl.lines.length-1)*ttl.lh;
-  const ttlText=ttl.lines.map((l,i)=>_lineaSVG(l,
-    {x:M, y:tStartY+i*ttl.lh, fs:ttl.fs, ls:ttl.fs*-0.02, fill:'#F0EDE8', boxW:CW, upper:false})).join('');
+  // Título — anclado abajo, sobre el dato (y sobre la firma si la hay)
+  const tTop=_firmaStr?firmaY-datoFS*1.6:(datoStr?datoY-datoFS*1.6:datoY);
+  const _titulo=_tituloVacio?_datoCrudo:String(title||'').trim();
+  const _obras=_titulo.split(/\s\+\s/).map(x=>x.trim()).filter(Boolean);
+
+  // ── LA PILA (Juan, 24 ago 2026) ───────────────────────────────────────────
+  // «El + no es un título: es una pila de obras». Un compuesto llegaba como una
+  // frase y el motor lo partía donde caía: «La tempestá + No contéis con los
+  // dedos + Vampir Cuadecuc» rompía a mitad de un nombre y moría en elipsis.
+  // El cartel de un programa doble nunca tipografía así: apila las obras.
+  //
+  // Retícula (medida con Juan sobre grid y rulers, no a ojo):
+  //  · todas las obras al MISMO cuerpo — hermanas iguales: el menor de los
+  //    ajustes individuales. Una obra corta no puede gritar más que su vecina.
+  //  · 1u exacto entre bloques; el «+» vive EN ese gap, a 0,6u, al margen
+  //    izquierdo como todo el sistema, en el color de la sección.
+  //  · la pila crece hacia arriba desde la misma base que el título de §6.0 —
+  //    no inventa anclas nuevas.
+  //  · FRONTERA 2–3 obras, la misma de la forma C. Con 4+ el cuerpo caería a un
+  //    tamaño ilegible: se conserva la forma de siempre y el pie ya dice
+  //    «4 obras» (_datoCompuesto), que es la información que salva el caso.
+  const _esPila=_obras.length>=2&&_obras.length<=3;
+  let ttlText, ttl;
+  if(_esPila){
+    const GAP=U;
+    const PILA_FS_MAX=16;                    // tope de cuerpo de la pila (Juan)
+    // TECHO REAL, MEDIDO: la pila no vive en la caja de 2,4u del título — crece
+    // hacia arriba por aire vacío (la Forma A no tiene campo de imagen). Su
+    // único límite por arriba es el bloque de sección YA AJUSTADO, no una
+    // constante inventada: fondo de la sección + 0,5u de aire para descendentes.
+    const _techo=secY+(sec.lines.length-1)*sec.lh+0.5*U;
+    const _presupuesto=tTop-_techo;
+    // EL PRESUPUESTO SE REPARTE POR USO REAL, NO EN PARTES IGUALES (Juan, 24
+    // ago). Darle a cada obra un tercio exacto del alto castigaba a las tres por
+    // culpa de una: con dos nombres de una línea y uno de dos, sobraban ~3,7u de
+    // aire muerto y la pila igual se dibujaba pequeña. Ahora el alto no acota el
+    // ajuste individual (boxH abierto): las líneas de cada obra las decide su
+    // ANCHO, que es lo único que de verdad la limita, y el presupuesto se cobra
+    // una sola vez, sobre el alto que la pila realmente ocupa.
+    const _ajusta=(f)=>_obras.map(o=>_fitLines(o,
+      {boxW:CW, boxH:1e4, maxLines:2, fsMax:f, fsMin:f, lhRatio:1.2, lsEm:-0.02, upper:false}));
+    const _altoDe=(re,f)=>re.reduce((a,x)=>a+x.lines.length*f*1.2,0)+GAP*(_obras.length-1);
+    // Cuerpo común = el MENOR de los ajustes individuales: mandan las anchas.
+    let _fs=Math.min(PILA_FS_MAX, ..._obras.map(o=>_fitLines(o,
+      {boxW:CW, boxH:1e4, maxLines:2, fsMax:PILA_FS_MAX, fsMin:9, lhRatio:1.2, lsEm:-0.02, upper:false}).fs));
+    let _re=_ajusta(_fs);
+    // Y ahora sí, el techo: se baja el cuerpo de a poco hasta que la pila entera
+    // quepa bajo la sección. Este lazo SÍ vive —el de la primera versión era
+    // código muerto porque la caja de cada obra ya lo adelantaba— y se prueba con
+    // el peor caso real: tres nombres medianos bajo un rótulo de dos líneas.
+    // Suelo 9: por debajo no se lee, y el pie ya salva el caso con «N obras».
+    while(_fs>9 && _altoDe(_re,_fs)>_presupuesto){
+      _fs=Math.max(9, +(_fs-0.25).toFixed(2));
+      _re=_ajusta(_fs);
+    }
+    const _lh=_fs*1.2;
+    const _alto=_altoDe(_re,_fs);
+    let _y=tTop-_alto;                                     // crece hacia arriba
+    const _partes=[];
+    _re.forEach((f,i)=>{
+      f.lines.forEach(l=>{ _y+=_lh;
+        _partes.push(_lineaSVG(l,{x:M, y:_y, fs:_fs, ls:_fs*-0.02, fill:'#F0EDE8', boxW:CW, upper:false})); });
+      if(i<_re.length-1){
+        // el «+» centrado en el gap: 0,6u, apoyado en su tercio para ópticamente
+        // caer en el medio del aire, no en su borde superior. Subió de 0,5u a
+        // 0,6u (Juan, 24 ago): a 0,5u quedaba casi un punto — leía como suciedad
+        // antes que como el signo que une dos obras.
+        const _fsMas=0.6*U;
+        _partes.push(`<text x="${round(M)}" y="${round(_y+GAP*0.5+_fsMas*0.35)}" font-family="${FONT}" font-size="${round(_fsMas)}" font-weight="800" fill="${accent}">+</text>`);
+        _y+=GAP;
+      }
+    });
+    ttlText=_partes.join('');
+    ttl={fs:_fs, lines:_re.flatMap(f=>f.lines)};
+  } else {
+    ttl=_fitLines(_titulo,
+      {boxW:CW, boxH:2.4*U, maxLines:4, fsMax:2.4*U/1.2, fsMin:12, lhRatio:1.2, lsEm:-0.02, upper:false});
+    // fsMin=12 (≈8,4px en tarjeta) es SUELO DE LEGIBILIDAD: por debajo se recorta
+    // con elipsis en vez de encoger hasta lo ilegible. La sección usa un suelo más
+    // bajo a propósito — recortar el nombre del festival está prohibido.
+    const tStartY=tTop-(ttl.lines.length-1)*ttl.lh;
+    ttlText=ttl.lines.map((l,i)=>_lineaSVG(l,
+      {x:M, y:tStartY+i*ttl.lh, fs:ttl.fs, ls:ttl.fs*-0.02, fill:'#F0EDE8', boxW:CW, upper:false})).join('');
+  }
 
   const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">
     <defs><radialGradient id="lz" cx="1" cy="1" r="1">
-      <stop offset="0" stop-color="#F59E0B" stop-opacity=".28"/>
-      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+      <stop offset="0" stop-color="${accent}" stop-opacity=".28"/>
+      <stop offset="1" stop-color="${accent}" stop-opacity="0"/>
     </radialGradient></defs>
     <rect width="${VW}" height="${VH}" fill="#0B0A08"/>
     <rect x="${round(VW*0.45)}" y="${round(VH*0.55)}" width="${round(VW*0.55)}" height="${round(VH*0.45)}" fill="url(#lz)"/>
     <rect width="${VW}" height="${round(0.25*U)}" fill="${accent}"/>
     ${secText}
     ${ttlText}
-    ${datoText}
+    ${firmaText}${datoText}
   </svg>`;
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
@@ -378,44 +616,59 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato}){
 // Devuelve MARKUP SVG INLINE, no data-uri: contiene <image> y un SVG dentro de
 // <img> tiene prohibido cargar recursos — los afiches saldrían rotos.
 export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
-  const U=15, VW=120, VH=180, M=11.25, CW=VW-2*M, NEGRO='#0B0A08', HAIR='#26231F';
+  const U=15, VW=120, VH=180, M=11.25, CW=VW-2*M, NEGRO='#0B0A08';
   const r=n=>+n.toFixed(2);
+  // slice y NO meet (26 ago): meet dejaba bandas negras en todo afiche que no
+  // fuera 2:3 exacto. slice CUBRE = object-fit:cover. Sin stroke. Ver POSTERS.md.
+  // UID por póster: los clipPath se llamaban ssp0/ssp1/… IGUAL en todos. Con más
+  // de una Escalera en la misma página —o sea, la grilla— cada url(#ssp0) resuelve
+  // al PRIMERO del documento y recorta los demás contra el rectángulo ajeno.
+  const UID='ssp'+Math.abs(_djb2(modules.join('|')+modules.length)).toString(36);
   const mod=(ux,uy,uw,src,i)=>{
     const x=ux*U,y=uy*U,w=uw*U,h=uw*1.5*U,rx=w*0.13;
-    const id=`ssp${i}`;
+    const id=`${UID}_${i}`;
     return `<clipPath id="${id}"><rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}"/></clipPath>`
-      +`<rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}" fill="${NEGRO}" stroke="${HAIR}" stroke-width="0.5"/>`
-      +`<image href="${escXML(src)}" x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" preserveAspectRatio="xMidYMid meet" clip-path="url(#${id})"/>`;
+      +`<rect x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" rx="${r(rx)}" fill="${NEGRO}"/>`
+      +`<image href="${escXML(src)}" x="${r(x)}" y="${r(y)}" width="${r(w)}" height="${r(h)}" preserveAspectRatio="xMidYMid slice" clip-path="url(#${id})"/>`;
   };
-  const sombra=(ux,uy,uw)=>`<rect x="${r(ux*U+2.85)}" y="${r(uy*U-2.85)}" width="${r(uw*U)}" height="${r(uw*1.5*U)}" rx="${r(uw*U*0.13)}" fill="#000" opacity=".5"/>`;
-  // Geometrías aprobadas (en u, pasos de 0,25u). modules viene atrás→delante,
-  // con los mudos SIEMPRE atrás. El delantero es la primera obra con afiche.
-  // El «módulo mudo» murió (Juan, 21 ago): la Escalera existe solo completa,
-  // así que acá solo llegan afiches reales.
+  // Sombra DIFUSA y a la IZQUIERDA (26 ago): cae SOBRE el afiche de atrás, que
+  // es lo que lo hace leer como lámina encima. Antes: rect duro a la derecha.
+  const sombra=(ux,uy,uw)=>`<rect x="${r(ux*U-3.2)}" y="${r(uy*U-1)}" width="${r(uw*U)}" height="${r(uw*1.5*U)}" rx="${r(uw*U*0.13)}" fill="#000" opacity=".55" filter="url(#${UID}-sb)"/>`;
+  // RIMA 2:3 (25 ago) — POSTERS.md §Forma C. dy = 1,5·dx → envolvente 2:3 para
+  // cualquier N. modules va atrás→delante: el ÚLTIMO al frente.
   const n=modules.length;
+  const datoFS=VW*0.05;
+  // 2,2·datoFS de aire sobre el dato: antes parecían apoyados encima (26 ago).
+  const YTOP=0.9*U, YBOT=VH-M-datoFS*0.30-datoFS*2.2;
+  const HENV=YBOT-YTOP, WENV=HENV/1.5;
+  // EL PASO ES FRACCIÓN DE LA LÁMINA, NO DE LA ENVOLVENTE (26 ago 2026).
+  // Antes: K fija sobre la envolvente (0,30 con 2 obras, 0,235 con 3+). Esa forma
+  // no escala — el ancho de lámina es 1-(n-1)K, que con 5 obras cae al 6% y con 6
+  // da NEGATIVO: no había dibujo posible, y por eso el modelo cortaba en 3.
+  // Pero las dos constantes viejas YA ERAN esta regla congelada: 0,30/0,70 = 0,429
+  // y 0,235/0,53 = 0,443. Escribiéndola como dx = P·w se despeja
+  //   w = WENV / (1 + (n-1)·P)
+  // y la forma vale para CUALQUIER n conservando lo aprobado (70,0% con 2 obras,
+  // 53,7% con 3), sin una forma para el par y otra para el programa. La rima 2:3
+  // se sostiene sola: alto = 1,5w + (n-1)·1,5dx = 1,5·(w + (n-1)dx) = 1,5·ancho.
+  const P=0.43;
+  const MW=WENV/(1+(n-1)*P)/U, DX=P*MW*U, X0=(VW-WENV)/2;
   let comp='';
-  if(n===2){
-    const [atras,frente]=modules;
-    comp = mod(0.75,3,4.5,atras,0) + sombra(2.75,3.75,4.5) + mod(2.75,3.75,4.5,frente,1);
-  } else {
-    const pos=[[0.75,3],[2,3.75],[3.25,4.5]]; // atrás→delante, módulos 4u
-    comp = modules.map((src,i)=>
-      (i===n-1?sombra(pos[i][0],pos[i][1],4):'')+mod(pos[i][0],pos[i][1],4,src,i)).join('');
-  }
-  const SEC_FS_MAX=15*VW/84;
-  const sec=_fitLines(String(secLabel||'').toUpperCase(),
-    {boxW:CW, boxH:1.9*U, maxLines:2, fsMax:Math.min(SEC_FS_MAX, 1.9*U/1.16), fsMin:9, lhRatio:1.16, lsEm:0.02, upper:true});
-  const secTxt=sec.lines.map((l,i)=>_lineaSVG(l,{x:M,y:1*U+sec.fs+i*sec.lh,fs:sec.fs,ls:sec.fs*0.02,fill:accent,boxW:CW,upper:true})).join('');
-  const datoFS=VW*0.05, datoY=VH-M-datoFS*0.30;
+  modules.forEach((src,i)=>{
+    const ux=(X0+i*DX)/U, uy=(YTOP+i*DX*1.5)/U;
+    comp += (i===n-1?sombra(ux,uy,MW):'') + mod(ux,uy,MW,src,i);
+  });
+  // SIN rótulo (Juan, 25 ago): robaba 3u a los afiches. La sección la dice el filete.
+  const datoY=VH-M-datoFS*0.30;
   const datoTxt=dato?_lineaSVG(dato,{x:M,y:datoY,fs:datoFS,ls:datoFS*0.02,fill:'#888',boxW:CW,upper:false}):'';
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${VW} ${VH}">`
-    +`<defs><radialGradient id="ssp-luz" cx="1" cy="1" r="1"><stop offset="0" stop-color="#F59E0B" stop-opacity=".28"/><stop offset="1" stop-color="#F59E0B" stop-opacity="0"/></radialGradient>`
-    +`</defs>`
+    +`<defs><radialGradient id="${UID}-luz" cx="0" cy="1" r="1"><stop offset="0" stop-color="${accent}" stop-opacity=".28"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></radialGradient>`
+    +`<filter id="${UID}-sb" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.6"/></filter></defs>`
     +`<rect width="${VW}" height="${VH}" fill="${NEGRO}"/>`
-    +`<rect x="54" y="99" width="66" height="81" fill="url(#ssp-luz)"/>`
+    +`<rect x="0" y="99" width="66" height="81" fill="url(#${UID}-luz)"/>`
     +comp
     +`<rect width="${VW}" height="3.75" fill="${accent}"/>`
-    +secTxt+datoTxt+`</svg>`;
+    +datoTxt+`</svg>`;
 }
 
 export function makeEventPoster(state,title,duration,eventKind,section,opts){
@@ -474,7 +727,7 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
   // está en la cabecera del sheet. La banda de kind/sección se conserva.
   const _bodyTitle=(opts&&opts.untitled)?'':title;
   const kind=_kindMap[eventKind];
-  if(kind) return _buildPosterV16({...kind, title:_bodyTitle, num:null});
+  if(kind) return _buildPosterV16({...kind, title:_bodyTitle, num:null, kindLabel:true});
   // Fallback — usa la sección del film si existe, sino eventPosterLabel del config
   const _secFallback=section?_secLabel(section):'';
   const lbl=_secFallback?[_secFallback]:((festCfg.eventPosterLabel)||[t('poster_evento'),'']);
@@ -810,8 +1063,11 @@ function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang, review}){
   // Distintivo APLAZADO sobre el afiche — fuente única: sale en el riel del splash
   // Y en el sheet «cambiar festival» sin tocar cada superficie.
   const _postponed=_classifyFestival(cfg)==='postponed';
-  const badge=review?`<span class="splash-card-badge">${t('fest_review_label')}</span>`
-    :_postponed?`<span class="splash-card-badge">${t('fest_postponed_label')}</span>`:'';
+  // Sin badge para revisión (Juan, 23 ago 2026): las cards en revisión viven
+  // DESPUÉS del divisor «EN REVISIÓN» del riel, así que el badge decía lo que la
+  // pantalla ya dice al lado. El de APLAZADO se queda: su grupo no tiene divisor
+  // propio y el badge es la única señal en la card.
+  const badge=_postponed?`<span class="splash-card-badge">${t('fest_postponed_label')}</span>`:'';
   return`<button class="splash-card${isPast?' past':''}${isActive?' on':''}${_postponed?' postponed':''}${review?' review':''}" data-fest="${id}" role="option" aria-selected="${isActive}" data-action="${action}" data-name="${label}" data-meta="${meta}"><span class="splash-card-tpl">${art}</span>${badge}</button>`;
 }
 

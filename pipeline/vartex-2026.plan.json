@@ -23,7 +23,6 @@
   "storageKey": "vartex2026_",
   "festivalStartStr": "2026-08-19T00:00:00",
   "festivalEndStr": "2026-08-22T23:59:00",
-  "prioLimit": 3,
   "sharedSlotIsOneScreening": false,
   "mes_es": "agosto",
   "sedes": {
@@ -68,7 +67,7 @@
    "Formación": {
     "emoji": "🎓",
     "en": "Workshops & Seminar",
-    "archetype": "Industria / Formación"
+    "archetype": "Charlas / Industria"
    }
   },
   "seccion_default": "Muestra Local",

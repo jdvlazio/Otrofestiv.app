@@ -214,7 +214,12 @@ def main():
 
         films.append({
             'title': f['titulo'],
-            'type': 'film',
+            # El crudo distingue 'charla' (los 5 In Conversation With...) de
+            # 'proyeccion'. Estaba quemado a 'film' y las charlas salían como
+            # película: sin la plantilla de evento y contadas en el catálogo.
+            # Se descubrió reconciliando el build ATRASADO: producción ya las
+            # tenía corregidas a mano como 'event'.
+            'type': 'event' if f.get('tipo') == 'charla' else 'film',
             'director': f.get('director'),
             'year': int(f['anio']) if str(f.get('anio') or '').isdigit() else None,
             'duration': f'{f["duracion_min"]} min' if f.get('duracion_min') else None,
@@ -239,6 +244,9 @@ def main():
             'tmdb_id': f.get('tmdb_id'),
             'day': f['dia'], 'time': f['hora'], 'day_order': orden_dia[f['dia']],
             'venue': f['sede'], 'sala': f['sala'],
+            # Ausente = público. Solo se emite en los 247 pases de Prensa e
+            # Industria, que la app oculta salvo que el usuario los pida.
+            **({'audience': 'press'} if f.get('audience') == 'press' else {}),
             'has_qa': f.get('has_qa', False),
             'flags': flags_de(f.get('pais')),
             'is_cortos': f['is_cortos'],
@@ -255,7 +263,10 @@ def main():
                 # estable de un corto dentro de su programa.
                 'id': c['id'],
                 'title': c['titulo'],
-                'title_orig': c.get('titulo_original'),
+                # SIN title_orig: nadie lo lee ([campo-huerfano]) y producción ya
+                # lo había quitado a mano. Los 39 originales (armenios de la
+                # retrospectiva Pelechian, etc.) siguen en el sidecar oficial;
+                # si un día la ficha de corto los pinta, se declaran y vuelven.
                 'director': c.get('director'),
                 'country': (pais_es(', '.join(c['pais'].split(', ')))[0]
                             if c.get('pais') else None),
@@ -344,6 +355,67 @@ def main():
         'sections': secciones, 'venues': venues, 'films': films,
     }
     p = f'{ST}/tiff-2026-build.json'
+    # ── HERENCIA DEL PUBLICADO — el build estaba ATRASADO ────────────────────
+    # Descubierto el 23 ago al re-publicar: 85 duraciones, 19 países/banderas de
+    # programas, 7 tmdb/lbSlug y 5 sinopsis de charlas se arreglaron SOBRE el
+    # JSON publicado y nunca volvieron aguas arriba — la lección de FICDEH.
+    # Este paso las recupera del publicado ANTES de escribir: solo llena campos
+    # que el build trae VACÍOS, nunca pisa un valor fresco de la fuente. Así el
+    # build deja de perder la curaduría en cada regeneración, sin invertir la
+    # dirección del pipeline para datos que la fuente sí trae.
+    import os as _os
+    _pub_p = f'{REPO}/festivals/tiff-2026.json'
+    if _os.path.exists(_pub_p):
+        _pub = json.load(open(_pub_p, encoding='utf-8'))
+        _idx = {(x['title'], x['day'], x['time'], x.get('sala') or ''): x
+                for x in _pub['films']}
+        _her = {}
+        _CAMPOS = ('duration', 'flags', 'country', 'tmdb_id', 'lbSlug',
+                   'synopsis', 'synopsis_en', 'synopsis_lang')
+        # Respaldo POR TÍTULO: duration/país/sinopsis son de la OBRA, no de la
+        # función. Sin esto, el pase de prensa de «Slow Horses» quedaba sin
+        # duración mientras su gemelo público la tenía — mismo contenido, misma
+        # duración. Solo campos de obra; nada de día/hora/sala por título.
+        # El donante por título FUSIONA el primer valor no vacío por campo: la
+        # primera función del título puede ser justo el pase de prensa vacío
+        # (pasó: Slow Horses 10 sep press sin duración elegida como donante de
+        # sí misma). También cubre que este archivo ya puede ser el re-publicado.
+        _por_titulo = {}
+        for x in _pub['films']:
+            _d = _por_titulo.setdefault(x['title'], {})
+            for _c in _CAMPOS:
+                if not _d.get(_c) and x.get(_c):
+                    _d[_c] = x[_c]
+        for x in out['films']:
+            # DOS donantes EN CASCADA, no un `or`: la clave exacta puede existir
+            # y estar vacía — si este archivo ya es el re-publicado, el pase de
+            # prensa se encuentra a SÍ MISMO como donante y el `or` nunca cae al
+            # respaldo por título (pasó: Slow Horses press, tres corridas
+            # idénticas sin heredar nada). Con la cascada, cada campo toma el
+            # primer valor no vacío entre función exacta y obra — idempotente.
+            _don = [_d for _d in (
+                _idx.get((x['title'], x['day'], x['time'], x.get('sala') or '')),
+                _por_titulo.get(x['title'])) if _d]
+            if not _don:
+                continue
+            for _c in _CAMPOS:
+                if not x.get(_c):
+                    _v = next((d[_c] for d in _don if d.get(_c)), None)
+                    if _v:
+                        x[_c] = _v
+                        _her[_c] = _her.get(_c, 0) + 1
+            _p = _don[0]
+            _pc = {c.get('id'): c for c in (_p.get('film_list') or []) if c.get('id')}
+            for c in (x.get('film_list') or []):
+                _cp = _pc.get(c.get('id'))
+                if not _cp:
+                    continue
+                for _c in _CAMPOS + ('year',):
+                    if not c.get(_c) and _cp.get(_c):
+                        c[_c] = _cp[_c]
+                        _her[f'corto.{_c}'] = _her.get(f'corto.{_c}', 0) + 1
+        if _her:
+            print(f'   heredado del publicado (build atrasado): {_her}')
     json.dump(out, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
     obras = {x['title'] for x in films}

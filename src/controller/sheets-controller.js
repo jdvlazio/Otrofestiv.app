@@ -7,17 +7,17 @@
 // (lo escribe loadFestival). Roster/viewstate vía bridge.
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
-import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
-import { _getItemPoster, _mkCortoItemHtml, _posterStyle, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount } from '../view/helpers.js';
+import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, makeSharedSlotSVG, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
+import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts} from '../view/helpers.js';
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
-import { showConflictModal, showToast } from '../view/feedback.js';
+import { showConflictModal, showToast, _toastArriba } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
 import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
 import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
 import { screeningPassed, effectiveDuration, blockDuration } from '../domain/film.js';
-import { isScreeningBlocked, screensConflictReason, plannableScreens } from '../domain/schedule.js';
+import { sameEntry, isScreeningBlocked, screensConflictReason, plannableScreens } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
 // Vivía acá un driver rAF que pisaba radio+opacidad por frame. Medido en device
 // con el video de Juan (7 de 7 aperturas): progresaba hasta ~68%, se congelaba
@@ -120,6 +120,13 @@ let _cortoParentHtml=null;
 // `pairs` = [{s, owner}] — `owner` es el film que manda sobre el Plan. Para un corto
 // es su PROGRAMA: agregar un corto agrega el programa completo (regla establecida) y
 // addSuggestion solo entiende títulos que existen en FILMS.
+// El distintivo de un pase de prensa en la fila es el MISMO icono del
+// interruptor que el usuario acaba de pulsar para verlo — vocabulario ya
+// aprendido, cero palabras (decisión de Juan, 24 ago: «no quiero tanto
+// texto»). Inline y sin flex-shrink:0, para no repetir la cicatriz del badge
+// «En tu Plan» que le robaba ancho a la sede. El texto queda en sr-only.
+const _PRESS_ICO=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 011-1h11a1 1 0 011 1v18"/><path d="M17 8h2a1 1 0 011 1v10a2 2 0 01-2 2H4"/><line x1="7" y1="7" x2="14" y2="7"/><line x1="7" y1="11" x2="14" y2="11"/><line x1="7" y1="15" x2="11" y2="15"/></svg>`;
+
 function _screeningRows(pairs, opts){
   return pairs.map(({s,owner})=>{
     const dayAbb=dayLabel(s.day)||s.day;
@@ -147,7 +154,7 @@ function _screeningRows(pairs, opts){
     // marcaban aunque el bloque estuviera en el plan.
     // No hace falta una rama especial para el bloque: como entra entero (o no
     // entra), la comparación exacta marca sus N filas igual.
-    _planned=savedAgenda&&savedAgenda.schedule.some(e=>e._title===owner.title&&e.day===s.day&&e.time===s.time);
+    _planned=savedAgenda&&savedAgenda.schedule.some(e=>sameEntry(e,{title:owner.title,day:s.day,time:s.time,venue:s.venue}));
     // El botón POR SESIÓN, en cambio, no existe para un recurrente: su control
     // vive abajo, a nivel de bloque (ver _bloqueCtrl).
     if(!owner.is_recurring&&!s._cancelled){
@@ -159,7 +166,7 @@ function _screeningRows(pairs, opts){
       ${_planned?`<span class="sr-only">${t('plan_en_tu_plan')}</span>`:''}
       <span class="pelicula-day" data-day="${s.day}">${dayAbb}</span>
       <span class="pelicula-time">${s.time}</span>
-      <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span></span>
+      <span class="pelicula-venue" data-venue="${s.venue.replace(/"/g,'&quot;')}" data-action="openVenueSheet">${ICONS.pin} <span class="venue-text">${vc.short}${sl?' · '+sl:''}${_city?`<span class="venue-municipio">${_city}</span>`:''}</span>${s.audience==='press'?`<span class="scr-press" aria-hidden="true">${_PRESS_ICO}</span><span class="sr-only">${t('press_badge')}</span>`:''}</span>
       ${_addCtrl}
     </div>`;
   }).join('');
@@ -195,7 +202,19 @@ export function openPelSheet(title){
   const inWL=watchlist.has(f.title),inW=watched.has(f.title),inPrio=prioritized.has(f.title);
   const posterSrc=getFilmPoster(f);
   let posterHtml;
-  if(f.is_programa&&f.film_list&&f.film_list.length>=2){
+  // LA FICHA PREGUNTA AL MISMO DUEÑO que la grilla y la lista (26 ago 2026). Era
+  // el CUARTO sitio con el gate viejo en `is_programa`: un compuesto de cortos
+  // —207 de los 215 del catálogo— caía al generativo, que trae banda de sección
+  // y duración justo al lado del encabezado, que ya las dice. Se leía doble.
+  // La jerarquía la resuelve programParts: si el festival mandó afiche, no entra.
+  //
+  // MUDA: el `dato` se vacía. La regla anti-repetición de la ficha ya existía
+  // para el generativo («el título vive en la cabecera») y vale igual acá: el
+  // encabezado dice sección, duración y título, así que el póster no los repite.
+  const _escF=programParts(f);
+  if(_escF){
+    posterHtml=`<div class="psp-escalera">${makeSharedSlotSVG({modules:_escF.modules, secLabel:_escF.secLabel, accent:_escF.accent, dato:''})}</div>`;
+  } else if(f.is_programa&&f.film_list&&f.film_list.length>=2){
     const _sp1=_getItemPoster(f.film_list[0]);
     const _sp2=_getItemPoster(f.film_list[1]);
     const _fd1=JSON.stringify(f.film_list[0]).replace(/"/g,'&quot;');
@@ -245,7 +264,7 @@ export function openPelSheet(title){
   // Por eso una función que está en tu plan se muestra SIEMPRE, aunque sea de otra
   // ciudad: sin esa excepción la app te ofrecería «Agregar» algo que ya tenés.
   const _ciudadSel=isCitySel(activeVenue)?activeVenue.slice(5):'';
-  const _yaElegida=sc=>savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===sc.day&&e.time===sc.time);
+  const _yaElegida=sc=>savedAgenda&&savedAgenda.schedule.some(e=>sameEntry(e,{title:f.title,day:sc.day,time:sc.time,venue:sc.venue}));
   const _todas=[...future,...past];
   const allScr=_ciudadSel?_todas.filter(sc=>venueMatches(sc.venue,activeVenue)||_yaElegida(sc)):_todas;
   // Cuántas compañeras anuncia el aviso: se cuenta sobre allScr —las funciones
@@ -311,7 +330,10 @@ export function openPelSheet(title){
     :rows;
   // Lista de cortos si es programa
   let cortosHtml='';
-  if(f.is_cortos&&f.film_list?.length){
+  // Antes exigía is_cortos, y los programas legacy daban acceso a sus obras por
+  // los afiches TOCABLES del stack. Al pasar esos a la Escalera —una sola
+  // imagen— ese acceso desaparecía: la lista lo repone para todo compuesto.
+  if(f.film_list?.length>=2){
     const cortoItems=f.film_list.map((item,n)=>{
       const r=filmRatings[item.title]||0;
       const ratingEl=r
@@ -511,7 +533,7 @@ export function openVenueSheet(venueName){
   const fns=FILMS.filter(f=>f.venue===venueName)
     .sort((a,b)=>(a.day_order-b.day_order)||(toMin(a.time)-toMin(b.time)));
   const _fnRow=f=>{
-    const _inPlan=savedAgenda&&savedAgenda.schedule.some(e=>e._title===f.title&&e.day===f.day&&e.time===f.time);
+    const _inPlan=savedAgenda&&savedAgenda.schedule.some(e=>sameEntry(e,f));
     return`<div class="venue-fn-row" data-action="openPelFromVenue" data-title="${f.title.replace(/"/g,'&quot;')}">
       <span class="venue-fn-time">${f.time}</span>
       <span class="venue-fn-title">${filmDisplayTitle(f).main}</span>
@@ -851,9 +873,15 @@ export function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   // Nombres y horarios
   const setEl=(id,txt)=>{const el=document.getElementById(id);if(el)el.textContent=txt;};
   setEl('cs-incoming-name', inDT);
-  setEl('cs-incoming-when', `${(dayLabel(incomingScreen.day)||'').split(' ')[0]} · ${incomingScreen.time} · ${inF?.duration||''}`);
+  // El día va CON su número (2 sep 2026). `.split(' ')[0]` dejaba «JUE» a secas,
+  // y 9 de los 15 festivales de la app repiten nombre de día —todos los de 8
+  // días o más: Tribeca tiene 5 pares, TIFF 4, Cinemancia 3—, así que «JUE» no
+  // distinguía el 3 del 10. Medido a 375px en las cuatro superficies: el número
+  // no cuesta nada —misma altura, misma caja, sin desbordar ni partir línea—
+  // porque ninguna de estas clases lleva `nowrap` y la caja sobraba.
+  setEl('cs-incoming-when', `${dayLabel(incomingScreen.day)||''} · ${incomingScreen.time} · ${inF?.duration||''}`);
   setEl('cs-existing-name', exDT);
-  const exWhen=existingEntry.day?`${(dayLabel(existingEntry.day)||'').split(' ')[0]} · ${existingEntry.time} · ${exF?.duration||''}`:'';
+  const exWhen=existingEntry.day?`${dayLabel(existingEntry.day)||''} · ${existingEntry.time} · ${exF?.duration||''}`:'';
   setEl('cs-existing-when', exWhen);
 
   // Título del sheet: si el conflicto es por margen (salas/viaje), el título
@@ -897,7 +925,7 @@ export function confirmConflictReplace(){
   // 3. MUTATE — quitar la existente e insertar la nueva
   commitPlan(a=>{const b=a||{schedule:[]};return {...b,
     schedule: [
-      ...b.schedule.filter(s=>!(s._title===existingEntry._title&&s.day===existingEntry.day&&s.time===existingEntry.time)),
+      ...b.schedule.filter(s=>!sameEntry(s,existingEntry)),
       {...incomingScreen,_title:incomingTitle}
     ].sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
   };});
@@ -931,12 +959,19 @@ export function openPrioLimit(newTitle){
   // Lista de prioritarias actuales
   const list=document.getElementById('prio-limit-list');
   if(list){
-    const items=[...prioritized].map(t=>{
-      const{displayTitle:dt}=parseProgramTitle(t);
-      const f=FILMS.find(fi=>fi.title===t&&!screeningPassed(fi));
-      const when=f?`${(dayLabel(f.day)||f.day).split(' ')[0]} · ${f.time}`:'';
+    // `_ttl` y NO `t`: el nombre del parámetro pisaba la t() de i18n, y la llamada
+    // a t('misc_cambiar') de doce líneas más abajo reventaba con «t is not a
+    // function». La hoja del tope de prioridades no abría NUNCA —en todos los
+    // festivales— y el usuario se pasaba del tope justo porque lo que debía
+    // frenarlo se caía antes del classList.add('open'). Cubierto por [shadow-t].
+    const items=[...prioritized].map(_ttl=>{
+      const{displayTitle:dt}=parseProgramTitle(_ttl);
+      const f=FILMS.find(fi=>fi.title===_ttl&&!screeningPassed(fi));
+      // Día con número (ver cs-incoming-when): esta lista muestra hasta PRIO_LIMIT
+      // obras de días distintos, y es donde dos «JUE» a secas más engañan.
+      const when=f?`${dayLabel(f.day)||f.day} · ${f.time}`:'';
       const poster=getFilmPoster(f)||'';
-      const safeSwap=t.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
+      const safeSwap=_ttl.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const safeNew=newTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       return`<div class="prio-limit-item">
         ${poster?`<img class="prio-limit-thumb" src="${poster}" onerror="this.remove()" alt="" loading="lazy">`:'<div class="prio-limit-thumb"></div>'}
@@ -961,27 +996,49 @@ export function openPlanConfirm(schedule){
     return (ai<0?999:ai)-(bi<0?999:bi)||a.time.localeCompare(b.time);
   });
   const total=sorted.length;
-  const days=[...new Set(sorted.map(s=>s.day))];
-  const dayRange=days.length===1?dayLabel(days[0]):`${dayLabel(days[0])}–${dayLabel(days[days.length-1])}`;
+  // Dueño único del rango de días de un tramo del Plan: lo piden el subtítulo
+  // (el Plan entero) y el pie (solo las que no se muestran). Eran dos fórmulas.
+  const _rango=e=>{const d=[...new Set(e.map(x=>x.day))];
+    return d.length?(d.length===1?dayLabel(d[0]):`${dayLabel(d[0])}–${dayLabel(d[d.length-1])}`):'';};
+  const dayRange=_rango(sorted);
 
   // Sub: N películas · DÍAS
   const sub=document.getElementById('plan-confirm-sub');
   if(sub) sub.innerHTML=`<span class="mr-1 count-badge cb-neutral">${total}</span> · ${dayRange}`;
 
-  // Lista — máx 3 + resumen del resto
+  // Lista — máx 3 + resumen del resto. Fila canónica (anatomía y porqué: el
+  // comentario de .plan-confirm-film en index.html). El día no es un agregado:
+  // es el renglón que la fila ya tiene para el cuándo, y sin él la hoja mostraba
+  // «19:00 · 14:30 · 14:00» (medido en Cinemancia) — el orden es por día.
+  // dayLabel COMPLETO («JUE 3»), no el «JUE» que recortan otros 4 sitios:
+  // Cinemancia dura 10 días y tiene dos jueves, dos viernes y dos sábados.
   const show=sorted.slice(0,3);
   const rest=total-show.length;
   const filmsEl=document.getElementById('plan-confirm-films');
   if(filmsEl){
     filmsEl.innerHTML=show.map(s=>{
       const{displayTitle:dt}=parseProgramTitle(s._title||'');
-      const short=dt.length>28?dt.slice(0,26)+'…':dt;
+      // La función exacta; el fallback por título deja viva la fila si el
+      // catálogo cambió bajo un plan ya guardado.
+      const f=FILMS.find(fi=>fi.title===s._title&&fi.day===s.day&&fi.time===s.time)
+             ||FILMS.find(fi=>fi.title===s._title);
       return`<div class="plan-confirm-film">
-        <div class="plan-confirm-dot"></div>
-        <div class="plan-confirm-time">${s.time}</div>
-        <div class="plan-confirm-name">${short}</div>
+        ${_posterThumb(f,'lb-poster')}
+        <div class="plan-confirm-info">
+          <div class="plan-confirm-name">${dt}</div>
+          <div class="plan-confirm-when">${dayLabel(s.day)||s.day} · ${s.time}</div>
+        </div>
       </div>`;
-    }).join('')+(rest>0?`<div class="plan-confirm-film" style="color:var(--gray)"><div class="bg-gray plan-confirm-dot"></div><div class="plan-confirm-name">+ ${rest} ${t('misc_mas')} ${dayRange}</div></div>`:'');
+    }).join('');
+  }
+  // El pie cuenta el rango de LAS QUE FALTAN, no el del Plan entero: decía
+  // «+ 5 más · JUE 3–VIE 11» y JUE 3 es la primera fila, ya está arriba.
+  const masEl=document.getElementById('plan-confirm-mas');
+  if(masEl){
+    // Sin «·» propio: misc_mas ya lo trae dentro («más ·»). Lo cazó la auditoría
+    // de lo pintado — la plantilla se leía bien y la pantalla decía «más · ·».
+    masEl.textContent=rest>0?`+ ${rest} ${t('misc_mas')} ${_rango(sorted.slice(3))}`:'';
+    masEl.style.display=rest>0?'':'none';
   }
 
   const _pcSheet=document.getElementById('plan-confirm-sheet');
@@ -1037,7 +1094,7 @@ export function openPostViewRating(title, day, time, venue, duration){
   const ctx=document.getElementById('pv-context');
   if(ctx){
     const parts=[];
-    if(day) parts.push((dayLabel(day)||day).split(' ')[0]);
+    if(day) parts.push(dayLabel(day)||day);   // con número (ver cs-incoming-when)
     if(venue) parts.push(venue.split('·')[0].trim().split('‒')[0].trim());
     if(duration) parts.push(duration);
     ctx.textContent=parts.join(' · ');
@@ -1261,7 +1318,10 @@ export function openAvSheet(){
       const isPast=dayFullyPassed(d);
       const lbl=(DAY_ABBR&&DAY_ABBR[d])||d.slice(0,3).toUpperCase();
       const num=(DAY_NUM&&DAY_NUM[d])||'';
-      const sel=_avSheetDay===d?' selected':'';
+      // ' on', no ' selected': el CSS solo pinta .av-day-chip.on, así que el día
+      // preseleccionado se veía IDÉNTICO a los no elegidos — y «Confirmar» sin
+      // tocar nada bloqueaba ese día en silencio.
+      const sel=_avSheetDay===d?' on':'';
       return`<button class="av-day-chip${isPast?' past':''}${sel}" data-day="${d}" data-action="selectAvDay">${lbl} ${num}</button>`;
     }).join('');
   }
@@ -1449,7 +1509,7 @@ export function showActionToast(msg,actionLabel,actionFn,duration=4000){
   _toastActionFn=actionFn;
   let t=document.getElementById('prio-toast');
   if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
-  t.className='prio-toast action';
+  t.className='prio-toast action';_toastArriba(t);
   t.innerHTML=`<span>${msg}</span><button class="toast-action-btn" data-action="dismissToastAction">${actionLabel}</button>`;
   t.style.opacity='1';t.style.pointerEvents='all';
   clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';t.style.pointerEvents='none';},duration);

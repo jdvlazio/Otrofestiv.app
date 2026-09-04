@@ -3,6 +3,7 @@
 
 import { _renderProgramaContent } from '../view/programa.js';
 import { _cloudLoad, _cloudSave, _sbUpdateUI, subscribePlanCloud, unsubscribePlanCloud, _hasLocalPlan } from './persistence.js';
+import { subscribeDelaysCloud } from './delays-cloud.js';
 import { showDayView } from './pipeline.js';
 import { t } from '../i18n/i18n.js';
 import { onWindowLoad } from '../util/ready.js';
@@ -36,6 +37,10 @@ export function _sbInit(){
         const _applied=await _cloudLoad();
         if(!_applied && _hasLocalPlan()) _cloudSave();
         subscribePlanCloud();      // sync EN VIVO desde ya
+        // …y los retrasos: la suscripción se crea al CARGAR el festival, cuando
+        // todavía no había sesión. Sin esto, quien inicia sesión después de
+        // entrar se queda sin consenso hasta cambiar de festival — mudo, sin aviso.
+        subscribeDelaysCloud();
         _renderAfterSync();
       }
       // INITIAL_SESSION (arranque con sesión restaurada): cubre la CARRERA del
@@ -101,17 +106,37 @@ export function _promptDisplayName(onSave){
     <div class="sheet-title">${t('export_como_aparecer')}</div>
     <div class="sheet-subtitle">${t('export_aparecera')}</div>
     <input class="sheet-input" id="dname-input" type="text" maxlength="30" placeholder="${t('auth_nombre')}" autocomplete="name">
-    <button class="sheet-cta" id="dname-save">${t('export_guardar_compartir')}</button>
+    <button class="sheet-cta" id="dname-save">${t('export_compartir_sin_nombre')}</button>
+    <button type="button" class="auth-cancel" id="dname-cancel">${t('misc_cancelar')}</button>
   </div>`;
   document.body.appendChild(el);
   const input=document.getElementById('dname-input');
   input.focus();
-  document.getElementById('dname-save').onclick=async()=>{
+  // El nombre es OPCIONAL y siempre lo fue: el subtítulo de la imagen se arma
+  // con `(_dn?_dn+' · ':'')` (share.js), o sea que sin nombre sale «Mi Plan ·
+  // Festival · N días», publicable. La compuerta decía lo contrario, y con el
+  // campo vacío el botón solo pintaba el borde de rojo: sin mensaje, sin salida
+  // visible y sin forma de compartir. Dos afirmaciones opuestas sobre el mismo
+  // dato, y ganaba la que bloqueaba.
+  // Un solo control cuyo rótulo dice qué va a pasar, según el campo — el patrón
+  // que ya usa la fila de Mi Plan. Vacío deja de ser un estado inválido, así que
+  // el borde rojo no tiene nada que señalar y se va con él.
+  const cta=document.getElementById('dname-save');
+  const _rotulo=()=>{cta.textContent=input.value.trim()
+    ?t('export_guardar_compartir'):t('export_compartir_sin_nombre');};
+  input.addEventListener('input',_rotulo);
+  cta.onclick=async()=>{
     const v=input.value.trim();
-    if(!v){input.style.borderColor='var(--red)';return;}
-    await _saveDisplayName(v);
+    if(v) await _saveDisplayName(v);
     el.remove();
     if(onSave) onSave();
   };
+  // Salida VISIBLE (2 sep 2026): la hoja solo se cerraba tocando el fondo, que no
+  // se anuncia. Es el mismo `.auth-cancel` con que terminan los tres pasos de la
+  // hoja de cuenta —de la que esta ya reusa `.auth-sheet-body`, el título, el
+  // subtítulo, el input y el CTA—: mismo gris 136, mismo 11px, misma altura de
+  // 33px, medido. Ni CSS ni copy nuevos; solo la pieza que faltaba de la anatomía.
+  // Cancelar NO comparte: `onSave` no corre.
+  document.getElementById('dname-cancel').onclick=()=>el.remove();
   el.addEventListener('click',e=>{if(e.target===el)el.remove();});
 }

@@ -152,20 +152,46 @@ Un solo camino para pintar cualquier póster — los call sites NO re-derivan fl
   `kind ∈ {image, editorial, generative, empty}`. Es el **único** lugar que
   clasifica (usa `getFilmPoster` + `_isEditorialPoster`). `generative` se detecta
   por el prefijo data-URI; el default es `image` (fail-safe, §5).
-- **`editorialFrame({header, body, src, title, loading})`** (`helpers.js`) → el
-  **único** builder del marco editorial-con-imagen. Devuelve los **hijos**
-  (`.ed-hdr` + `.ed-img`); el **contenedor** aporta tamaño y color vía la clase
-  **`poster-ed`** + `style="--ed-accent:…"`.
-- **Anatomía A3 de `.ed-img`** (Fase C) — respeta el **16:9 completo** (el
-  cover-crop decapitaba composiciones con gente a los lados):
-  - `.ed-blur` — blur-fill del mismo still, de fondo (decorativo, `aria-hidden`).
-  - `.ed-still` — el still **16:9 al ras del banner**, sin recortar (`aspect-ratio:16/9`,
-    top-flush). Lleva `data-title` y el `onerror` que cae a generativo.
-  - `.ed-scrim` — degradado inferior con el **título**, solo cuando `body` trae
-    texto (grid). `undefined`/`''` → sin scrim (thumb/sheet/ended-poster, que
-    muestran el título aparte). Murió la zona `.ed-body`.
+- **`editorialFrame({header, body, src, title, loading, accent, dato, firma})`**
+  (`helpers.js`) → el **único** builder del marco editorial-con-imagen (Forma B
+  §6.0 = Forma A + un campo 16:9 constante). Devuelve los **hijos**; el
+  **contenedor** aporta tamaño y color vía la clase **`poster-ed`** +
+  `style="--ed-accent:…"`.
+- **Anatomía §6.0 del marco** — respeta el **16:9 completo** (el cover-crop
+  decapitaba composiciones con gente a los lados). La geometría vive en el CSS
+  de `.poster-ed`, en %:
+  - `.ed-fil` — el filete de sección de 0,25u a sangre (color de sección).
+  - `.ed-hdr` — la sección tipografiada (`_edHdrSVG`, mismo motor de ajuste).
+  - `.ed-halo` — la propia obra desenfocada llenando el vacío bajo el campo,
+    contenida y con máscara (no es el blur a sangre que mató §6.0). En la
+    miniatura va bajo el campo centrado; en el póster grande ancla al borde del
+    campo (66,67%, `.ed-halo-full` — 24 ago 2026: la línea negra bajo el still
+    «genera distancia y ruido»).
+  - `.ed-img` + `.ed-still` — el still **16:9 sin recortar**; `.ed-img-mid`
+    centra el campo en la miniatura (corto dentro de programa, sin sección ni
+    título). El still lleva `data-title` y `onerror` → `_edPosterErr`.
+  - `.ed-foot` — el pie: `.ed-title` (solo cuando `body` trae texto — grid;
+    thumb/sheet muestran el título aparte), `.ed-firma` (curatorial, itálica,
+    solo junto al título) y `.ed-dato` (gris, 5%).
+  - Muertos y enterrados: `.ed-blur` (blur a sangre), `.ed-scrim` (degradado
+    con título encima del still) y `.ed-body`. Si aparecen en código nuevo, es
+    regresión.
 - **CSS `.poster-ed`** (`index.html`) — **un** componente; el alto de la banda es
   `var(--ed-hdr-ratio)` (una fuente, antes `28.89%` hardcodeado en CSS y JS).
+- **La Forma B es de la MISMA FAMILIA que la A** (24 ago 2026): mismo **suelo**
+  (negro de marca `--bg`) y misma **luz** de sección. Dos trampas, las dos
+  visibles solo EN PANTALLA:
+  1. El marco **pinta su propio suelo** —es el póster, no un contenedor de
+     `<img>`—, pero la card del grid llega con `bg-surf-2 … poster-ed` y
+     `.bg-surf-2` **gana la cascada** (misma especificidad, ~1950 líneas más
+     abajo). Por eso la regla del suelo va con la clase repetida
+     (`.poster-ed.poster-ed`). La Forma A nunca lo sufrió: su `<img>` SVG tapa
+     el fondo del contenedor.
+  2. La luz **hereda `--ed-accent`** (que el contenedor ya trae). Estuvo ámbar
+     fija mientras la Forma A ya heredaba el acento → una pared con las dos
+     formas mezclaba ámbar entre colores de sección.
+  Guardián: **T105**, que MIDE estilos computados. Un check estático del CSS
+  habría dado verde con el bug puesto: la regla correcta existía, solo perdía.
 - **`onerror` unificado** — los marcos editoriales usan **`_edPosterErr`**
   (`poster-err.js`): si la imagen falla, reemplaza **toda** la pieza por un póster
   generativo (no deja la banda con hueco).
@@ -337,29 +363,135 @@ ninguna superficie: la grilla y la lista muestran cada obra con su card, y la
 calendario semanal. La Escalera le da forma: **los afiches de las obras,
 apilados en diagonal dentro del póster nuestro**.
 
-**Geometría** (viewBox 120×180, `u=15`, todo en pasos de 0,25u):
+**Geometría — RIMA 2:3** (viewBox 120×180, `u=15`; revisada 25 ago 2026, Juan).
+El desplazamiento entre módulos es **paralelo a la diagonal del marco**:
 
-| elemento | 2 obras | 3 obras |
+> **dy = 1,5 · dx**
+
+y con eso el rectángulo que envuelve a la pila mide exactamente 2:3 — la misma
+proporción del marco y la de cada afiche, tres 2:3 anidados. La demostración es
+de una línea, y vale para cualquier N:
+
+> alto = 1,5w + (N−1)·1,5dx = 1,5·(w + (N−1)dx) = 1,5 × ancho
+
+Una sola perilla, `k = dx / ancho del envolvente`:
+
+| | 2 obras | 3 obras |
 |---|---|---|
-| módulo | 4,5u × 6,75u | 4u × 6u |
-| trasero | `x=0,75u · y=3u` | `0,75 · 3` |
-| siguiente | `x=2,75u · y=3,75u` | `2 · 3,75` → `3,25 · 4,5` |
-| paso | +2u x · +0,75u y | +1,25u x · +0,75u y |
+| k | 0,30 | 0,235 |
+| envolvente | de `y=0,9u` a `y=datoY−2,2·datoFS`, centrado en x | ídem |
+| módulo | ≈ 4,25u de ancho | ≈ 3,6u |
 
-Sombra dura de 0,19u bajo el delantero (la del apilado de miniaturas). Afiches
-2:3 **completos**, nunca recortados. Filete de sección, negro de marca y luz
-ámbar como en toda forma; la luz va **debajo** de los módulos.
+Con más solape el de atrás se lee como sombra del de adelante y se pierde la
+pluralidad; con menos, sobra campo. El fondo del envolvente deja **2,2·datoFS**
+de aire sobre la línea del dato: con menos, los afiches parecen apoyados encima
+del texto (26 ago). **El ÚLTIMO módulo va al frente** y su
+sombra cae sobre el anterior: con el primero al frente cae en campo vacío y la
+pieza se aplana. La sombra es **difusa y va a la IZQUIERDA** (26 ago) — un rect
+duro desplazado a la derecha se leía como un borde sucio, no como sombra.
+
+Cada módulo lleva el radio del token (13% de SU ancho) y va **a cara limpia**:
+sin filete de contorno (26 ago — ensuciaba el contenedor).
+
+**`preserveAspectRatio="xMidYMid slice"`, nunca `meet`.** `meet` encaja la
+imagen DENTRO de la caja, así que todo afiche que no fuera 2:3 al pixel dejaba
+ver el fondo negro como bandas arriba y abajo, y la esquina redondeada del rect
+no coincidía con la de la imagen encajada. `slice` **cubre**, igual que el
+`object-fit: cover` con el que estos mismos afiches se ven bien en la ficha y en
+toda superficie de póster de la app. Costo aceptado y consistente con el resto:
+un afiche que no sea 2:3 exacto pierde unos pixeles por el lado largo.
+
+**La luz va abajo a la IZQUIERDA**, que es el triángulo que deja libre la
+diagonal. En su posición canónica (abajo-derecha, §6.0) queda tapada por el
+módulo delantero y no ilumina nada. Es una excepción deliberada de esta forma;
+no se "corrige" de vuelta.
+
+Sustituye a la geometría de pasos fijos del 21 ago, que reservaba 3u arriba
+para el rótulo de sección.
 
 **SIN TÍTULO interno** (decisión de Juan): *«en una película con póster nunca
 vemos títulos»*. Se auditaron las cinco superficies antes de quitarlo: en lista,
 ficha, Intereses, Mi Plan y buscador el título ya vive **al lado** del póster —
 era duplicado; y en grilla y Diario **ninguna obra se nombra**, así que la
-identidad queda a un tap, igual que para cualquier película. Se conservan:
-- **la sección con su filete** — sin el título, es lo único que distingue
-  «función curada por el festival» de «póster de una película», y el separador
-  de sección de la grilla solo existe en la vista «todos los días»;
-- **el dato al pie** («2 obras · 92 min») — pasa a ser la **única declaración de
-  pluralidad** dentro del póster. Llena vacío con información, no con decoración.
+identidad queda a un tap, igual que para cualquier película. Se conserva **el dato al pie** («2 obras · 92 min»): es la **única declaración
+de pluralidad** dentro del póster, y lo único que las imágenes no pueden decir.
+
+**El RÓTULO de sección salió también** (25 ago 2026, Juan). Competía con los
+afiches y les robaba 3u de alto —el mismo argumento que mató el título—, y la
+sección sigue dicha por **el filete**, que es de su color y va a sangre arriba.
+Queda anotado el costo, para que se sepa que se aceptó y no que se pasó por
+alto: el separador de sección de la grilla solo existe en la vista «todos los
+días», así que en la vista por día el filete es la única señal de sección.
+
+**DÓNDE ALCANZA (ampliado 25 ago 2026).** La forma nació para la función
+compartida y su modelo se llamaba `legacyProgramParts`, con el gate puesto en
+`is_programa`. Pero la pregunta que responde —«¿esta función agrupa 2-3 obras
+y tenemos el afiche REAL de todas?»— no depende de cómo esté modelada la
+función. Los **programas de cortos** (`is_cortos`), que es como se modelan hoy,
+quedaban fuera: **31 funciones del catálogo** caían al generativo teniendo los
+dos o tres afiches guardados. Y en la grilla los programas legacy mostraban
+`poster-card-stack` — dos mitades a 50/50 que recortan cada afiche a una tira
+y le parten la tipografía impresa, justo lo que la Escalera existe para evitar.
+
+El modelo pasó a llamarse `programParts` y mira `is_programa || is_cortos`.
+
+**LA JERARQUÍA (regla de Juan, 26 ago 2026).** La Escalera es un póster
+**nuestro**, así que solo entra donde íbamos a inventar uno. El orden no es
+preferencia, es rango:
+
+1. **El afiche OFICIAL del programa**, si el festival mandó uno. Manda siempre.
+2. **La Escalera**, si no hay oficial del programa pero tenemos los afiches
+   oficiales de **todas** sus obras y ninguno es un still nuestro.
+3. **El generativo nuestro**, para todo lo demás.
+
+Antes de la regla, `programParts` se preguntaba «ANTES que nada» y su modelo
+solo miraba los afiches de las OBRAS, nunca si el programa traía el suyo: la
+pila tapaba el arte del festival. Medido en el catálogo: **de 59 compuestos que
+dibujaban Escalera, 19 tapaban un afiche oficial** —«Historia(s) del Cine
+Argentina», las secciones de Cinemancia, «Competencia de cortos Programa 1/2/3»—
+con Cinemancia y Leviza ya publicados. Hoy son **91** los que muestran el arte
+del festival. Blindaje: `poster.test.js`, «el afiche oficial del programa gana
+sobre la Escalera»; el mutante que quita `if(f.poster) return null` lo tumba.
+
+**LA LISTA PREGUNTA AL MISMO DUEÑO (26 ago 2026).** El chip de 56px tenía su
+propio dibujante —`_programaStack`, dos imágenes a 50/50— con el gate viejo en
+`is_programa`. De los **215 compuestos del catálogo, 207 son `is_cortos`**: el
+chip disparaba en el 3,7% y la misma obra se veía apilada en grilla y generativa
+en lista. Ahora `_programaStack` llama a `programParts` y dibuja la misma
+Escalera; el stack de dos imágenes queda solo como respaldo de los que no
+califican. Quedan dos dibujantes de pósters apilados en vez de tres.
+
+**ESCALA A CUALQUIER N (26 ago 2026).** El paso del escalón es fracción de la
+**lámina**, no de la envolvente: `dx = 0,43 · w`, de donde `w = WENV/(1+(N-1)·0,43)`.
+Escrito al revés —K fija sobre la envolvente— el ancho de lámina es `1-(N-1)K`,
+que con 5 obras cae al 6% y con 6 da **negativo**: no había dibujo posible, y por
+eso el modelo cortaba en 3. Las dos constantes viejas YA ERAN esta regla
+congelada (0,30/0,70 = 0,429 · 0,235/0,53 = 0,443), así que generalizarla no
+cambia lo aprobado: con 2 obras da 69,9% donde daba 70%. La rima 2:3 se sostiene
+sola —`alto = 1,5w + (N-1)·1,5dx = 1,5·(w + (N-1)dx) = 1,5·ancho`— y por eso no
+hace falta una forma para el par y otra para el programa. **Tope 8**: con 9 la
+lámina baja del 23% y en el chip de 56px queda en textura.
+
+**IDS ÚNICOS POR PÓSTER.** Los `clipPath` se llamaban `ssp0`/`ssp1`… y el
+gradiente y el filtro `ssp-luz`/`ssp-sb`, **iguales en cada póster**. En SVG
+`url(#id)` resuelve al PRIMERO del documento: con varias Escaleras en pantalla
+—o sea, la grilla— todas se recortaban contra el rectángulo de la primera.
+Medido en la app con Cinemancia publicado: 14 Escaleras, 11 de 2 obras y 3 de 3;
+las de 3 declaraban 49,55 de ancho y se recortaban con 65,45, un 32% de más.
+Ahora el prefijo sale de `_djb2(modules+n)`: único por contenido y determinista,
+así que el mismo póster da el mismo id y no ensucia los diffs. Nadie lo cazó
+porque ningún test miraba DOS pósters a la vez; ahora `poster.test.js` lo hace.
+
+> **El SVG va INLINE, nunca como `src` de un `<img>`.** Sus módulos son
+> `<image href>` remotos y un SVG dentro de `<img>` no carga recursos externos:
+> saldría en negro. Es el mismo camino que ya usaba el Diario (`.dw-svg`).
+
+**Por qué la sección se queda, aunque la grilla tenga banda.** Se propuso
+quitarla (25 ago) con el argumento de que el separador de sección está unos
+pixeles más arriba. **Es cierto solo en la vista «todos los días»**: en la
+vista por día ese separador no existe, y la tarjeta se quedaría sin ninguna
+señal de que es una función curada. La medición que sostenía la propuesta se
+había hecho únicamente en modo TODO.
 
 **LAS FRONTERAS, y de dónde salió cada una.** Las tres primeras las encontró
 Juan mirando render real, no razonando en abstracto:
@@ -469,6 +601,106 @@ esas bajan a la línea siguiente con el sustantivo que introducen.
 3. **Todo programa produce un póster único** — lo blinda el check
    `[poster-editorial-unique]` (corre el `makeProgramPoster` real sobre cada
    programa y falla si dos coinciden). **ERROR, sin falsos positivos.**
+4. **La serie se ve como serie** — regla de las portadas de playlists dinámicas
+   de Apple («easily identified as being part of a series», auditoría 24 ago
+   2026): los programas numerados de una misma sección cuyo título solo difiere
+   en el ordinal renderizan la MISMA composición. Lo blinda
+   `[poster-serie-consistente]` (el inverso del anterior: idénticos-salvo-el-
+   ordinal dentro de la serie; enmascara ordinales y coordenadas para comparar
+   solo estructura, colores y voces). 21 series reales en 8 festivales.
+
+### 6.2b El título no repite la sección — por delante Y por detrás
+
+Si la sección ya lo dijo, el título no lo repite. Dos formas del mismo eco:
+
+1. **Prefijo**: título que ARRANCA con el rótulo («Competencia de cortometrajes
+   Programa 1» bajo COMPETENCIA DE CORTOMETRAJES) → queda «Programa 1».
+2. **Identificador de programa al final** (24 ago 2026, cazado por Juan en
+   Cinemancia): sección «Programa 1. El espesor de las formas» con título «Fuera
+   de competencia programa 1» → «Programa 1» **dos veces** en el mismo póster.
+   Queda «Fuera de competencia»: el número lo dice la sección, arriba y grande.
+
+**Dos frenos, los dos con test:**
+- Solo si la sección nombra **ESE MISMO número**. «programa 2» bajo «Programa 1»
+  se conserva — ahí el número informa, no repite.
+- Solo el eco **FINAL** (regla anclada). «…programa 1 (restaurada)» va entero:
+  lo que viene después del número no es eco, y recortar ahí se lo comería.
+
+Comparación sin acentos ni case; si el recorte dejara el título vacío, se
+conserva el original.
+
+---
+
+### 6.2c La MINI — el generativo en superficies de 56px
+
+Regla de Apple que la motiva («legible en TODO el rango de tamaños», Curator
+Best Practices) + medición propia: en el chip de la lista el póster entero
+escalado dejaba la sección en **3,3px** y el dato en 2,8px — ruido que además
+REPITE lo que la fila dice al lado (anti-repetición).
+
+La mini responde con **UNA voz** (dueño: `_buildPosterMini`, servida por
+`getFilmPosterMini` que espeja las decisiones de `getFilmPoster` y solo
+sustituye los caminos generativos — custom/evento/sorpresa/TMDB/editorial pasan
+intactos):
+- **Serie** («Programa N»): el **ordinal a 5u** — legible de verdad.
+- **Obra o programa con nombre**: **SU MARCA** — 2-3 formas geométricas sobre
+  retícula de 2u, sembradas por `_djb2(título)` → `_mulberry32`. Determinista:
+  la misma obra dibuja siempre la misma marca, se reconoce sin leer, como una
+  portada de disco. (La v1 sin marca murió en revisión: «no hay diferenciador,
+  no sirve» — el color es de la SECCIÓN y dos vecinas quedaban idénticas.)
+
+**El GRID no cambia** (Juan, 25 ago): la marca en el póster grande era
+«demasiado ruidosa, minimalismo cero» — el grid queda tipográfico puro.
+Superficies de la mini: chip de la lista (`_plistPosterHtml`), thumb de corto
+(`itemPosterParts` sin header) y el fallback del stack (`_programaStack`).
+Guardián: T106 (lista → mini, grid → intacto) + unit posterMini (5 mutantes).
+
+---
+
+### 6.3 La pila de obras — un compuesto se apila, no se escribe como frase
+
+Un título compuesto (`«A + B»`, `«A + B + C»`) **no es una frase**: es una lista
+de obras. Escrito corrido, el motor lo partía donde cayera —línea rota a mitad de
+un nombre, el « + » colgando al final del renglón, elipsis al cierre—. Un cartel
+de programa doble nunca tipografía así.
+
+**Retícula** (medida sobre grid y rulers, `_buildPosterV16`):
+
+1. **Un bloque tipográfico por obra**, todos al **mismo cuerpo** — el menor de
+   los ajustes individuales, tope **16**. Una obra corta no puede gritar más que
+   su vecina.
+2. **1u exacto** entre bloques. El « + » vive **en ese gap**, a **0,6u**, al
+   margen izquierdo como todo el sistema, en el **color de la sección**, y
+   ópticamente centrado en el aire (no apoyado en su borde). Subió de 0,5u a
+   0,6u (Juan, 24 ago): a 0,5u quedaba casi un punto y leía como suciedad antes
+   que como el signo que une dos obras.
+3. La pila **crece hacia arriba** desde la misma base que cualquier título
+   (§6.0): su última línea se apoya donde se apoyaba el título de una sola obra.
+4. **Frontera 2–3 obras** — para la PILA DE TÍTULOS (esta forma). Con **4 o más**
+   se conserva la forma de siempre: el cuerpo caería a ilegible y el pie ya dice
+   «4 obras» (`_datoCompuesto`). Ojo: la Escalera —que apila AFICHES, no
+   títulos— dejó de compartir esta frontera el 26 ago y llega hasta 8.
+
+**El presupuesto se reparte por USO REAL, no en partes iguales.** Darle a cada
+obra un tercio exacto del alto castigaba a las tres por culpa de una: con dos
+nombres de una línea y uno de dos sobraban ~3,7u de aire muerto y la pila igual
+salía pequeña (10,8 donde cabía 14). El alto **no acota** el ajuste individual:
+las líneas de cada obra las decide su **ancho**, que es lo único que de verdad la
+limita, y el presupuesto —base del título − fondo del rótulo **ya ajustado** −
+0,5u de aire— se cobra **una sola vez**, sobre el alto que la pila realmente
+ocupa: si no cabe, el cuerpo baja de a 0,25 hasta que quepa (suelo 9).
+
+Ojo con el orden: la primera versión repartía el presupuesto como caja de cada
+obra y llevaba además un lazo correctivo. Ese lazo era **código muerto**
+—`_fitLines` lo adelantaba siempre— y un guardián que nunca dispara no es de
+fiar. Con el reparto por uso real el lazo **sí vive**, y es lo único que impide
+que un cartel real de Cinemancia invada la sección.
+
+Lo blindan 7 tests en `tests/unit/poster.test.js` (11 mutantes, todos mueren).
+Ojo con los inputs: dos mutantes sobrevivieron a la primera versión porque los
+casos de prueba caían al suelo **por ancho** antes de que el techo mandara. El
+input que prueba el techo salió de una búsqueda por fuerza bruta sobre el espacio
+de compuestos — **tres nombres medianos bajo un rótulo de 2 líneas**.
 
 ---
 

@@ -10,6 +10,7 @@
 //   binding importado) — sin exposición globalThis nueva.
 
 import { t } from "../i18n/i18n.js";
+import { storage } from '../storage/storage.js';
 import { FESTIVAL_CONFIG } from "../config.js";
 import { ICONS, festivalShortName } from "./components.js";
 import { festivalCities } from "./helpers.js";
@@ -58,17 +59,15 @@ export function _pintarBannerRevision(){
 // de revocarlo.
 //
 // Se recuerda por festival y no globalmente: entrar a uno no abre los otros.
-const _REVIEW_LS='otrofestiv_review_ok';
 
 export function _reviewDesbloqueado(festId){
-  try{ return (JSON.parse(localStorage.getItem(_REVIEW_LS)||'[]')||[]).includes(festId); }
+  try{ return storage.getReviewOk().includes(festId); }
   catch(e){ return false; }
 }
 
 function _recordarReview(festId){
   try{
-    const v=JSON.parse(localStorage.getItem(_REVIEW_LS)||'[]')||[];
-    if(!v.includes(festId)){ v.push(festId); localStorage.setItem(_REVIEW_LS,JSON.stringify(v)); }
+    storage.addReviewOk(festId);
   }catch(e){}
 }
 
@@ -157,9 +156,15 @@ export function openCitySheet(){
   // casi lo mismo y es repetición visual. Los tabs de día siguen siendo los del
   // festival ENTERO —la madre— y un día sin funciones en tu ciudad simplemente
   // se ve vacío. La ciudad se elige por su nombre, nada más.
+  // CON marca de caída (Juan, 2 sep 2026): la pregunta que abre la app ofrecía
+  // las ciudades del sismo con la misma tipografía que las vivas. La fila sigue
+  // siendo TOCABLE —no se oculta, se dice— y al entrar el banner explica con las
+  // palabras del festival; lo que cambia es que ahora se sabe antes de elegir.
+  // La palabra es la MISMA del rótulo de ese banner (notice_cancelada), así que
+  // la pregunta y la respuesta se nombran igual y no hace falta copy nuevo.
   document.getElementById('city-sheet-list').innerHTML=cities.map(c=>
     `<div class="lugar-opt city" data-action="citySheetPick" data-city="${String(c.name).replace(/"/g,'&quot;')}">
-      <span>${c.name}</span>${ICONS.chevronR}
+      <span>${c.name}</span>${c.cancelled?`<span class="lugar-canc">${t('notice_cancelada')}</span>`:''}${ICONS.chevronR}
     </div>`).join('')
   // La salida es una fila más de la lista (como "todos los lugares" en el filtro),
   // no un "cancelar": no está cancelando nada, está eligiendo la otra opción.

@@ -247,6 +247,69 @@ export const SECTION_EN = {
 // `categoria` va VERBATIM del festival — misma regla que las secciones.
 // `nivel`: 'ganadora' | 'mencion'.
 export const PALMARES=[
+  // ── FINCA 2026 (8ª ed., Buenos Aires) — 5 posts del 22 ago en @festivalfinca ──
+  // Se leyeron EN EL NAVEGADOR y expandiendo el caption: los cinco llegaban
+  // truncados en «… more», y el texto corto no nombra ni una sola premiada.
+  //
+  // DOS TÍTULOS QUE ARREGLAMOS EN EL CATÁLOGO al cruzar, y los dos eran NUESTROS:
+  // «Mora» era «Amora» (se cayó la A inicial) y «Sobre Ruinas» era «Sobre
+  // Ruínas». El sidecar finca-2026-funciones.json —lo que mandó el festival—
+  // trae las dos bien; se rompieron aguas abajo. «Amora» además se verificó
+  // fuera (Cinemateca Brasileira, Mostra SP, IMDb): Ana Petta, Brasil 2025.
+  //
+  // LOS CORTOS ENLAZAN COMO CUALQUIER OBRA. «Sobre Ruínas» y «Dígale no a los
+  // poalets» viven dentro de «Cortometrajes en Competencia Oficial — Programa
+  // 2». La primera versión los dejó en obra:null porque el palmarés solo
+  // buscaba títulos de nivel superior; Juan lo corrigió el 24 ago: «para eso
+  // existe la ficha independiente por película o cortometraje, sin
+  // discriminación». Ahora `_palmBuscar` mira también dentro de los programas y
+  // el clic abre la ficha del CORTO (openCortoSheet), no la de su envase.
+  //
+  // «No als poalets» ya no necesita reconciliación: el catálogo lo muestra con
+  // su título original desde el 24 ago, cuando se aplicó a FINCA la regla de
+  // QAFF (el original manda). Queda UNO: el palmarés dice «How Deep Is Your
+  // Love» y el catálogo «¿Cuán profundo es tu amor?» — ahí mostramos el del
+  // catálogo, que es el que el usuario vio, hasta que se decida ese caso: es
+  // el único de FINCA sin original declarado en nuestros datos.
+  //
+  // EL PREMIO EXACTO, en `premio`. La primera versión metió el Segundo Premio
+  // como una segunda `ganadora` y dio a entender que FINCA premió a dos obras
+  // por igual en esa competencia — no lo hizo. `nivel` sigue decidiendo el
+  // TAMAÑO (grande = ganadora, pequeña = mención), que es lo visual; `premio`
+  // dice el nombre que le puso el festival y se pinta encima del título.
+  // Es opcional: la mayoría de categorías tienen una sola ganadora y no lo
+  // necesitan. Sirve para lo que venga —Tercer Premio, Premio Especial del
+  // Jurado— sin volver a tocar el modelo.
+
+  {fest:'finca2026', categoria:'Premio del Público · Largometrajes Internacionales', nivel:'ganadora',
+   titulo:'La vida fracturada', autoria:'Cristian Cartier, Martín Longo, Pablo Piovano, Maximiliano Goldschmidt', obra:'La vida fracturada'},
+  {fest:'finca2026', categoria:'Premio del Público · Corto y Mediometrajes Internacionales', nivel:'ganadora',
+   titulo:'Ziki', autoria:'Roberta Palmieri, Olga Sargenti', obra:'Ziki'},
+  {fest:'finca2026', categoria:'Premio del Público · Documentales Latinoamericanos', nivel:'ganadora',
+   titulo:'Amora', autoria:'Ana Petta', obra:'Amora'},
+
+  {fest:'finca2026', categoria:'Largometrajes Internacionales', nivel:'ganadora',
+   titulo:'Yintah', autoria:'Jennifer Wickham, Brenda Michell, Michael Toledano', obra:'Yintah'},
+  {fest:'finca2026', categoria:'Largometrajes Internacionales', nivel:'mencion',
+   titulo:'¿Cuán profundo es tu amor?', autoria:'Eleanor Mortimer', obra:'¿Cuán profundo es tu amor?'},
+
+  {fest:'finca2026', categoria:'Corto y Mediometrajes Internacionales', nivel:'ganadora',
+   titulo:'Sobre Ruínas', autoria:'Carol Benjamin', obra:'Sobre Ruínas'},
+  {fest:'finca2026', categoria:'Corto y Mediometrajes Internacionales', nivel:'mencion',
+   titulo:'No als poalets', autoria:'Laura García Andreu', obra:'No als poalets'},
+
+  {fest:'finca2026', categoria:'Documentales Latinoamericanos', nivel:'ganadora', premio:'Primer Premio',
+   titulo:'Karuara, la gente del río', autoria:'Miguel Araoz Cartagena, Stephanie Boyd', obra:'Karuara, la gente del río'},
+  {fest:'finca2026', categoria:'Documentales Latinoamericanos', nivel:'ganadora', premio:'Segundo Premio',
+   titulo:'Toroboro: el nombre de las plantas', autoria:'Manolo Sarmiento', obra:'Toroboro: el nombre de las plantas'},
+
+  // Premio de la Red Argentina de Festivales y Muestras Audiovisuales (RAFMA),
+  // con el nombre del documentalista Edgardo «Pipo» Bechara el Khoury.
+  {fest:'finca2026', categoria:'Premio «Edgardo Pipo Bechara el Khoury»', nivel:'ganadora',
+   titulo:'La vida fracturada', autoria:'Cristian Cartier, Martín Longo, Pablo Piovano, Maximiliano Goldschmidt', obra:'La vida fracturada'},
+  {fest:'finca2026', categoria:'Premio «Edgardo Pipo Bechara el Khoury»', nivel:'mencion',
+   titulo:'La granja de la libertad', autoria:'Luciano Militello', obra:'La granja de la libertad'},
+
   // FICDEH 2026 — 8 posts del 21 ago en @ficdeh, uno por categoría.
   // Tres correcciones sobre la fuente, documentadas porque publicar mal un premio
   // es mentirle al usuario sobre su propio festival:
@@ -537,27 +600,18 @@ export const FESTIVAL_CONFIG={
     // anterior marcaba las 89 funciones como gratis por igual.
     ticketing_model:'mixed',
     keyArt:'/assets/keyart/cinemancia2026.jpg',
-    // group:'test' — Cinemancia NO se publica todavía, pero ya NO por datos:
-    // el montaje está completo (79 funciones, 108 obras, todas con afiche,
-    // sinopsis, país y duración; 13 sedes ubicadas; cero programas sin
-    // contenido). Falta que el equipo del festival lo revise y lo apruebe,
-    // y para eso entran por ?fest=cinemancia2026 sin que nadie más lo vea.
-    // Quitar esta línea ES publicar.
-    group:'test',
     // Sus seis municipios son el Valle de Aburrá: un solo territorio de
     // traslado. Sin esto, la app se niega a estimar el viaje entre ellos —una
     // regla pensada para FICDEH, que corre en ciudades a cientos de km— y le
     // dice al usuario «es en otra ciudad» en vez de cuántos minutos le faltan.
     metroArea:true,
-    // EN REVISIÓN — el festival ve su montaje en la app real, antes de que lo
-    // vea nadie más. `group:'test'` lo mantiene fuera de todo lo demás; esto lo
-    // devuelve al riel en su propio grupo, al final, tras los pasados.
-    //   · solo dentro de la app (en web el store gate manda a las tiendas);
-    //   · pide `key` para entrar — va en el bundle a propósito: protege de
-    //     entrar por accidente, no de alguien decidido, y eso basta;
-    //   · `until` la apaga sola. Un permiso temporal que hay que acordarse de
-    //     revocar es un permiso permanente.
-    review:{key:'cine26', until:'2026-09-03'},
+    // PUBLICADO el 25 AGO 2026, con el visto bueno del festival. Se fueron
+    // JUNTAS las dos líneas que lo escondían: la marca de grupo de pruebas y
+    // `review`. La segunda no es decorativa —`_esRevisionActiva()` la lee como
+    // «esto no se publica» y de ahí cuelgan tres restricciones: no sincroniza,
+    // no se comparte y pinta la banda «En revisión»—; además `dismissSplash()`
+    // pide la clave con solo ver `review.key`, sin mirar `until` ni el grupo,
+    // así que dejarla habría pedido la clave a todo el que entrara.
     tagline:'Festival de Cine del Valle de Aburrá',
     films:null,posters:null,lbSlugs:{}
   },
@@ -566,12 +620,12 @@ export const FESTIVAL_CONFIG={
     city:'Bogotá',country:'CO',
     dates:'21–29 AGO',dates_en:'AUG 21–29',year:2026,timezoneOffset:'-05:00',
     storageKey:'cineautopsia2026_',festivalStartStr:'2026-08-21T00:00:00',festivalEndStr:'2026-08-29T23:59:00',
-    festivalDates:{'2026-08-21': '2026-08-21', '2026-08-22': '2026-08-22', '2026-08-23': '2026-08-23', '2026-08-25': '2026-08-25', '2026-08-26': '2026-08-26', '2026-08-27': '2026-08-27', '2026-08-28': '2026-08-28', '2026-08-29': '2026-08-29'},
-    days:[{k: '2026-08-21', d: 21, lbl: 'VIE'}, {k: '2026-08-22', d: 22, lbl: 'SÁB'}, {k: '2026-08-23', d: 23, lbl: 'DOM'}, {k: '2026-08-25', d: 25, lbl: 'MAR'}, {k: '2026-08-26', d: 26, lbl: 'MIÉ'}, {k: '2026-08-27', d: 27, lbl: 'JUE'}, {k: '2026-08-28', d: 28, lbl: 'VIE'}, {k: '2026-08-29', d: 29, lbl: 'SÁB'}],
-    dayKeys:['2026-08-21','2026-08-22','2026-08-23','2026-08-25','2026-08-26','2026-08-27','2026-08-28','2026-08-29'],
-    dayShort:{'2026-08-21': 'VIE 21', '2026-08-22': 'SÁB 22', '2026-08-23': 'DOM 23', '2026-08-25': 'MAR 25', '2026-08-26': 'MIÉ 26', '2026-08-27': 'JUE 27', '2026-08-28': 'VIE 28', '2026-08-29': 'SÁB 29'},
-    dayShort_en:{'2026-08-21': 'FRI 21', '2026-08-22': 'SAT 22', '2026-08-23': 'SUN 23', '2026-08-25': 'TUE 25', '2026-08-26': 'WED 26', '2026-08-27': 'THU 27', '2026-08-28': 'FRI 28', '2026-08-29': 'SAT 29'},
-    dayLong:{'2026-08-21': 'Viernes 21 de agosto', '2026-08-22': 'Sábado 22 de agosto', '2026-08-23': 'Domingo 23 de agosto', '2026-08-25': 'Martes 25 de agosto', '2026-08-26': 'Miércoles 26 de agosto', '2026-08-27': 'Jueves 27 de agosto', '2026-08-28': 'Viernes 28 de agosto', '2026-08-29': 'Sábado 29 de agosto'},
+    festivalDates:{'2026-08-21': '2026-08-21', '2026-08-22': '2026-08-22', '2026-08-23': '2026-08-23', '2026-08-24': '2026-08-24', '2026-08-25': '2026-08-25', '2026-08-26': '2026-08-26', '2026-08-27': '2026-08-27', '2026-08-28': '2026-08-28', '2026-08-29': '2026-08-29'},
+    days:[{k: '2026-08-21', d: 21, lbl: 'VIE'}, {k: '2026-08-22', d: 22, lbl: 'SÁB'}, {k: '2026-08-23', d: 23, lbl: 'DOM'}, {k: '2026-08-24', d: 24, lbl: 'LUN'}, {k: '2026-08-25', d: 25, lbl: 'MAR'}, {k: '2026-08-26', d: 26, lbl: 'MIÉ'}, {k: '2026-08-27', d: 27, lbl: 'JUE'}, {k: '2026-08-28', d: 28, lbl: 'VIE'}, {k: '2026-08-29', d: 29, lbl: 'SÁB'}],
+    dayKeys:['2026-08-21','2026-08-22','2026-08-23','2026-08-24','2026-08-25','2026-08-26','2026-08-27','2026-08-28','2026-08-29'],
+    dayShort:{'2026-08-21': 'VIE 21', '2026-08-22': 'SÁB 22', '2026-08-23': 'DOM 23', '2026-08-24': 'LUN 24', '2026-08-25': 'MAR 25', '2026-08-26': 'MIÉ 26', '2026-08-27': 'JUE 27', '2026-08-28': 'VIE 28', '2026-08-29': 'SÁB 29'},
+    dayShort_en:{'2026-08-21': 'FRI 21', '2026-08-22': 'SAT 22', '2026-08-23': 'SUN 23', '2026-08-24': 'MON 24', '2026-08-25': 'TUE 25', '2026-08-26': 'WED 26', '2026-08-27': 'THU 27', '2026-08-28': 'FRI 28', '2026-08-29': 'SAT 29'},
+    dayLong:{'2026-08-21': 'Viernes 21 de agosto', '2026-08-22': 'Sábado 22 de agosto', '2026-08-23': 'Domingo 23 de agosto', '2026-08-24': 'Lunes 24 de agosto', '2026-08-25': 'Martes 25 de agosto', '2026-08-26': 'Miércoles 26 de agosto', '2026-08-27': 'Jueves 27 de agosto', '2026-08-28': 'Viernes 28 de agosto', '2026-08-29': 'Sábado 29 de agosto'},
     prioLimit:3,
     keyArt:'/assets/keyart/cineautopsia2026-v2.jpg',
     tagline:'Festival de Cine Experimental de Bogotá',
@@ -598,6 +652,26 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'qaff2026':{
+    // OCULTO (Juan, 23 ago 2026). El festival trasladó LA TOTALIDAD de las
+    // proyecciones a Bogotá por el terremoto del 10 ago que golpeó Quibdó y el
+    // Chocó — el MISMO sismo que aplazó FICMA. Comunicado en su Instagram el 20
+    // ago: instagram.com/p/DcREogQER9d
+    //
+    // Lo publicado esta misma mañana dice justo lo contrario: 47 funciones en la
+    // Biblioteca Departamental de QUIBDÓ, una ciudad donde ya no se proyecta
+    // nada. Por eso se oculta en vez de corregirse: no tenemos programación
+    // válida —la de Bogotá no está publicada—, y un festival con sedes falsas es
+    // peor que un festival ausente.
+    //
+    // NO es `status:postponed` como FICMA: el festival SÍ se hace, en sus fechas
+    // (14–18 SEP, confirmadas en su bio de IG). Cambia la ciudad, que es el
+    // nivel 2 del modelo de situaciones excepcionales.
+    //
+    // REVERSIÓN: cuando publiquen las sedes de Bogotá → re-ensamblar desde el
+    // crudo (festivals/staging/qaff-2026-programacion-raw.json, que conserva las
+    // 14 funciones de Cinemateca y Museo Nacional con sus sedes reales), quitar
+    // el filtro solo-Quibdó de pipeline/qaff-2026-build.py y borrar esta línea.
+    group:'test',
     name:'QAFF',fullName:'QAFF — Quibdó África Film Festival',shortName:'QAFF',
     city:'Quibdó',country:'CO',
     dates:'14–18 SEP',dates_en:'SEP 14–18',year:2026,timezoneOffset:'-05:00',
@@ -651,7 +725,33 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     keyArt:'/assets/keyart/ficmontanas2026-v2.jpg',
     films:null,posters:null,lbSlugs:{}
-  }
+  },
+  'siembrafest2026': {
+    name:'SiembraFest',fullName:'SiembraFest — Festival de Cine Colombiano al Campo',shortName:'SIEMBRAFEST',
+    city:'Sasaima y Villeta',country:'CO',
+    dates:'9–18 SEP',dates_en:'SEP 9–18',year:2026,timezoneOffset:'-05:00',
+    storageKey:'siembrafest2026_',festivalStartStr:'2026-09-09T00:00:00',festivalEndStr:'2026-09-18T23:00:00',
+    festivalDates:{'2026-09-09':'2026-09-09','2026-09-10':'2026-09-10','2026-09-11':'2026-09-11','2026-09-12':'2026-09-12','2026-09-13':'2026-09-13','2026-09-14':'2026-09-14','2026-09-15':'2026-09-15','2026-09-16':'2026-09-16','2026-09-17':'2026-09-17','2026-09-18':'2026-09-18'},
+    days:[{k:'2026-09-09',d:9,lbl:'MIÉ'},{k:'2026-09-10',d:10,lbl:'JUE'},{k:'2026-09-11',d:11,lbl:'VIE'},{k:'2026-09-12',d:12,lbl:'SÁB'},{k:'2026-09-13',d:13,lbl:'DOM'},{k:'2026-09-14',d:14,lbl:'LUN'},{k:'2026-09-15',d:15,lbl:'MAR'},{k:'2026-09-16',d:16,lbl:'MIÉ'},{k:'2026-09-17',d:17,lbl:'JUE'},{k:'2026-09-18',d:18,lbl:'VIE'}],
+    dayKeys:['2026-09-09','2026-09-10','2026-09-11','2026-09-12','2026-09-13','2026-09-14','2026-09-15','2026-09-16','2026-09-17','2026-09-18'],
+    dayShort:{'2026-09-09':'MIÉ 9','2026-09-10':'JUE 10','2026-09-11':'VIE 11','2026-09-12':'SÁB 12','2026-09-13':'DOM 13','2026-09-14':'LUN 14','2026-09-15':'MAR 15','2026-09-16':'MIÉ 16','2026-09-17':'JUE 17','2026-09-18':'VIE 18'},
+    dayShort_en:{'2026-09-09':'WED 9','2026-09-10':'THU 10','2026-09-11':'FRI 11','2026-09-12':'SAT 12','2026-09-13':'SUN 13','2026-09-14':'MON 14','2026-09-15':'TUE 15','2026-09-16':'WED 16','2026-09-17':'THU 17','2026-09-18':'FRI 18'},
+    dayLong:{'2026-09-09':'Miércoles 9 de septiembre','2026-09-10':'Jueves 10 de septiembre','2026-09-11':'Viernes 11 de septiembre','2026-09-12':'Sábado 12 de septiembre','2026-09-13':'Domingo 13 de septiembre','2026-09-14':'Lunes 14 de septiembre','2026-09-15':'Martes 15 de septiembre','2026-09-16':'Miércoles 16 de septiembre','2026-09-17':'Jueves 17 de septiembre','2026-09-18':'Viernes 18 de septiembre'},
+    prioLimit:5,
+    // NO SE PUBLICA: falta la programación entera. El catálogo está completo (84
+    // obras en 24 programas) pero sin día·hora·sede no hay films[]. La entrada
+    // existe desde ya para que el montaje sea solo ensamblar cuando llegue.
+    group:'test',
+    // Sasaima y Villeta están a 12 km por la misma vía: es UN territorio de
+    // traslado. Sin esto la app diría «es en otra ciudad» en vez de los minutos
+    // — el mismo caso que Cinemancia en el Valle de Aburrá. REVISAR cuando
+    // lleguen las sedes: el radar dice que Proimágenes lista además Supatá y
+    // Anolaima, y eso cambiaría el veredicto.
+    metroArea:true,
+    keyArt:'/assets/keyart/siembrafest2026-v2.jpg',
+    tagline:'Festival de Cine Colombiano al Campo',
+    films:null,posters:null,lbSlugs:{}
+  },
 };// Festival data loaded async from festivals/<id>.json via loadFestival()
 
 // ── VENUES ───────────────────────────────────────────────────────────────────
@@ -692,6 +792,20 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── SiembraFest 11 · Sasaima y Villeta ────────────────────────────────
+  // Nombres VERBATIM del festival; el emoji y el arquetipo son nuestra capa.
+  // Sin display EN a propósito: son nombres de autor en español —«Ojo Pelao»,
+  // «Cinema Patatús»— y la regla de esta tabla omite las secciones de marca
+  // antes que inventarles traducción.
+  '🏺 Mujeres que sostienen la vida': 'Perspectivas / Miradas',
+  '❤️‍🩹 Amores & Desamores': 'Perspectivas / Miradas',
+  '🪶 Estampas': 'Cortos / Programas',
+  '👻 Cinema Patatús': 'Muestra / País',
+  '🎞️ Buenos, Malos y Feos': 'Cortos / Programas',
+  '💀 Muertos de Risa': 'Cortos / Programas',
+  '👁️ Ojo Pelao': 'Perspectivas / Miradas',
+  '🍲 Sabores en Escena': 'Muestra / País',
+  '🗺️ Así es Cundinamarca': 'Muestra / País',
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
   '📺 Primetime': 'Especiales / Eventos',
   '🔎 Discovery': 'Perspectivas / Miradas',

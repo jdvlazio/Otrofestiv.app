@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202608231625">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202608231625">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609031733">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609031733">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -501,7 +501,16 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* CANCEL canónico (auditoría 18 jul): 4 copias casi idénticas → una anatomía.
    background none, texto --gray t-sm w-semi, padding 10px. Layout por clase. */
 .auth-cancel,.conflict-btn-cancel,.prio-limit-cancel{background:none;border:none;color:var(--gray);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);padding:10px;cursor:pointer}
-.auth-cancel{display:block;text-align:center;margin-top:var(--sp-3)}
+/* `width:100%` porque .auth-cancel pasó de <span> a <button> (2 sep 2026):
+   un botón `display:block` se encoge a su contenido —medido, 68px contra los
+   335px del span— y esta salida se lee como una fila, no como una pastilla.
+   El cambio de etiqueta es de accesibilidad: era el ÚNICO span con
+   data-action de todo el index, así que las cinco salidas «Cancelar» no se
+   alcanzaban por teclado. Sus dos hermanas de esta misma regla
+   (.conflict-btn-cancel, .prio-limit-cancel) ya eran <button>: la regla es
+   un reset de botón y solo esta clase no lo era. El anillo de foco ya
+   existía: `:focus-visible{outline:2px solid var(--amber)}`. */
+.auth-cancel{display:block;width:100%;text-align:center;margin-top:var(--sp-3)}
 
 .auth-delete-btn{display:block;width:100%;padding:var(--sp-btn);margin-top:var(--sp-1);border:none;background:transparent;color:var(--red);font-size:var(--t-sm);font-weight:var(--w-med);cursor:pointer;transition:opacity .2s}
 .auth-delete-btn:hover{opacity:.7}
@@ -560,7 +569,15 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* Navegación principal (bottom tabs) */
 .main-nav{display:flex;border-bottom:1px solid var(--bdr);background:var(--surf);padding-bottom:max(env(safe-area-inset-bottom),20px)}
-.main-nav-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:var(--sp-2) var(--sp-1) var(--sp-3);cursor:pointer;color:var(--gray);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-semi);letter-spacing:.3px;text-align:center;transition:color var(--tr-base),border-color var(--tr-base);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-1);height:52px;box-sizing:border-box;position:relative}
+/* El rótulo inactivo sube a --white-60 (no --gray) por CONTRASTE, no por gusto:
+   el vidrio de la barra deja pasar luz, y con pósters claros detrás el fondo
+   llega a rgb(52,49,44). Ahí #888 cae a 3,65:1, bajo el 4,5:1 que pide AA para
+   11px (medido en TIFF, scrollTop 1800); --white-60 da 5,09:1 y 6,38:1 sobre
+   fondo oscuro. Se aclara el RÓTULO y no el vidrio porque subir su alfa está
+   prohibido por [chrome-glass] (≤0,6, decisión del 18 jul: muro, no vidrio) —
+   lo intenté con 0,80 y el guardián lo paró. La jerarquía no se apoya en la
+   luminancia sino en el COLOR: la activa (.on) sigue siendo ámbar. */
+.main-nav-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:var(--sp-2) var(--sp-1) var(--sp-3);cursor:pointer;color:var(--white-60);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-semi);letter-spacing:.3px;text-align:center;transition:color var(--tr-base),border-color var(--tr-base);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-1);height:52px;box-sizing:border-box;position:relative}
 .main-nav-tab:active{opacity:.6}
 .main-nav-tab.on{color:var(--amber);border-bottom-color:var(--amber)}
 .main-nav-tab .tab-badge{position:absolute;top:4px;right:calc(50% - 18px);min-width:16px;height:16px;border-radius:var(--r-pill);background:var(--amber);color:var(--black);font-size:var(--t-xs);font-weight:var(--w-display);line-height:16px;text-align:center;padding:0 4px;pointer-events:none;box-sizing:border-box;display:none}
@@ -626,11 +643,19 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .conflict-modal-btn{width:100%;padding:var(--sp-btn);border-radius:var(--r-pill);border:none;font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);cursor:pointer;touch-action:manipulation;text-align:center}
 .conflict-modal-btn.cancel{background:none;border:none;color:var(--gray);padding:10px}
 .conflict-modal-btn.confirm{font-size:var(--t-base)} /* anatomía amber: suscrito a la regla dueña PRIMARIO */
+/* .alt — la 2ª intención de un modal de tres acciones. NO es primario (la regla
+   dueña admite uno solo) ni el cancelar pelado: es el mismo contorno que ya usa
+   .conflict-btn-keep en el sheet de conflicto, que es la misma forma de decisión. */
+.conflict-modal-btn.alt{background:none;border:1px solid var(--bdr);color:var(--gray)}
 
 /* ── Toast ── */
 .prio-toast{position:fixed;bottom:calc(max(env(safe-area-inset-bottom),20px) + 52px + 10px);left:12px;right:12px;background:var(--surf-2);border:1px solid var(--bdr);color:var(--white);font-size:var(--t-base);padding:var(--sp-3) var(--sp-4);border-radius:var(--r-md);z-index:9999;transition:opacity var(--tr-smooth);text-align:left;pointer-events:none;line-height:1.5;display:flex;align-items:center;gap:var(--sp-3)}
 .prio-toast.warn{border-color:var(--yellow-12);color:var(--yellow)}
 .prio-toast.action{pointer-events:all;justify-content:space-between}
+/* Con una hoja abierta el toast se va ARRIBA: las hojas son bottom-anchored y
+   el aviso caía sobre sus controles (medido: 38 de 84px del área de estrellas).
+   Arriba no hay nada que tocar y el aviso sigue a la vista. */
+.prio-toast.arriba{bottom:auto;top:calc(max(env(safe-area-inset-top),12px) + 12px)}
 .toast-action-btn{background:none;border:none;color:var(--amber);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer;padding:0;white-space:nowrap;flex-shrink:0}
 
 /* ── Badges ── */
@@ -652,7 +677,16 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    chevron se abre, y aprender dos gestos para lo mismo sería peor. */
 .palm-band{cursor:pointer}
 .palm-band .hdr-end svg{color:var(--gray)}
-.palm-strip{display:flex;align-items:center;padding:var(--sp-2) var(--sp-4) var(--sp-1);cursor:pointer;min-height:86px}
+/* El contenedor de la banda del palmarés DEBE tener el padding lateral que
+   .sec-hdr descuenta: la banda usa margin-left/right:-sp-4 para romper el
+   padding de su contenedor y ocupar el ancho completo con el texto metido.
+   `.palm-wrap` no tenía NINGUNA regla —padding 0—, así que esos márgenes no
+   compensaban nada: la banda medía 422px en un viewport de 390 y el icono
+   quedaba en x=0, cortado contra el borde. El contenedor del Diario
+   (.ag-summary) sí lo tiene, y por eso su banda gemela se veía bien. */
+.palm-wrap{padding:0 var(--sp-4)}
+/* La tira pierde su padding lateral: ahora lo pone el wrap. */
+.palm-strip{display:flex;align-items:center;padding:var(--sp-2) 0 var(--sp-1);cursor:pointer;min-height:86px}
 .palm-strip-p{width:52px;flex:0 0 52px;position:relative;filter:drop-shadow(-6px 0 12px rgba(0,0,0,.55))}
 .palm-strip-p .palm-po{border-radius:7px;border:1px solid rgba(255,255,255,.06)}
 /* Riel horizontal: mismo gesto que el carrusel del splash — las obras primero,
@@ -668,12 +702,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .palm-seen{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,var(--overlay-60));
   color:var(--amber);font-size:var(--t-badge);text-align:center;padding:9px 0 2px;letter-spacing:.6px}
 /* Marca honesta: lo nuestro no se hace pasar por material del festival. */
-/* Se ancla con el MISMO token que el badge de cancelada (--poster-badge-top):
-   arriba chocaba con el rótulo de sección de la Forma A — exactamente el bug
-   que Juan reportó el 23 ago en la grilla. La regla ya existía; la ignoré al
-   escribir esto y el render me lo devolvió. */
-.palm-own{position:absolute;top:var(--poster-badge-top);right:5px;background:var(--overlay-60);
-  color:var(--gray);font-size:var(--t-badge);padding:1.5px 4px;border-radius:var(--r-sm);letter-spacing:.04em}
+
 .palm-div{height:1px;background:var(--bdr);margin:var(--sp-4) var(--sp-4) 0}
 .palm-sec{margin-top:var(--sp-5)}
 .palm-cat{display:flex;align-items:center;gap:var(--sp-2);margin:0 var(--sp-4) var(--sp-3);
@@ -693,6 +722,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .palm-g .palm-po{width:76px;flex:0 0 76px}
 .palm-wtx{flex:1;min-width:0}
 .palm-wt{font-size:var(--t-md);font-weight:var(--w-bold);letter-spacing:-.02em;line-height:1.15}
+/* Rótulo del premio EXACTO cuando el festival lo distingue (Primer/Segundo
+   Premio, Premio Especial…). Va ENCIMA del título, en pequeño: el nombre del
+   premio es del festival, el título es de la obra. Solo aparece si la entrada
+   lo trae — la mayoría de categorías tienen una sola ganadora y no lo necesita. */
+.palm-premio{font-size:var(--t-caption);color:var(--txt-3);letter-spacing:.04em;margin-bottom:2px}
+
 .palm-wm{margin-top:2px}
 .palm-ms{display:flex;gap:6px;flex:0 0 auto}
 /* 52px, el mismo ancho que los afiches del Diario (.dw-strip-p): es el tamaño
@@ -789,7 +824,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* Expander táctil (auditoría iconos 18 jul): botones icon-only AISLADOS llegan a
    ~44px de área sin agrandar su caja visual. Solo aislados — los pares adyacentes
    no se expanden (robarían taps al vecino). Guardián [icon-touch]. */
-.notice-banner-close::after,.poster-wl-dot::after,.prio-chip-rm::after,.av-pill-rm::after{content:'';position:absolute;inset:-14px;border-radius:50%}
+.notice-banner-close::after,.poster-wl-dot::after,.prio-chip-rm::after,.av-pill-rm::after,.plist-heart::after{content:'';position:absolute;inset:-14px;border-radius:50%}
+/* .plist-heart entra al expansor (30 ago 2026): medía 26×26 sin área ampliada y
+   a 14px del centro el toque ya abría la ficha en vez de sumar a Intereses. Su
+   hermano de la GRILLA (.poster-wl-dot) ya estaba en esta regla — el patrón
+   existía y no se había aplicado al de la lista. Necesita position:relative
+   para que el ::after ancle en él. */
+.plist-heart{position:relative}
 /* Banda APLAZADO — persistente en el header del Programa. Misma anatomía que
    .notice-banner (punto ámbar + etiqueta + texto): el estado del festival habla el
    idioma que la app ya usa para canceladas/reprogramadas. SIN botón de cerrar: es
@@ -867,6 +908,12 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    línea. La banda contrasta con su contenedor: surf-2 sobre página; card-b
    (token existente) dentro de sheets/cards — scoped abajo. Los días (saved-day-lbl,
    horas del horario) quedan SIN banda: jerarquía mayor, respiran solos. */
+/* CONTRATO: los margin negativos de abajo ROMPEN el padding del contenedor
+   para lograr el full-bleed, y lo reponen como padding propio. Por tanto el
+   contenedor —él o un ancestro— DEBE aportar var(--sp-4) lateral; si no, la
+   banda se sale del viewport y su icono queda cortado contra el borde (pasó
+   con #palmares-slot el 24 ago: 422px en un viewport de 390). Doctrina y
+   comprobación en docs/ARQUITECTURA.md § sec-hdr. */
 .sec-hdr{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white-60);display:flex;align-items:center;gap:var(--sp-1);margin-bottom:var(--sp-2);width:auto;background:var(--surf-2);margin-left:calc(-1*var(--sp-4));margin-right:calc(-1*var(--sp-4));padding:var(--sp-2) var(--sp-4)}
 .sec-hdr>svg{color:var(--amber);flex-shrink:0}
 .sec-hdr .hdr-end{margin-left:auto;display:inline-flex;align-items:center;gap:var(--sp-1)}
@@ -1085,6 +1132,14 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    align-items:flex-start alinea los badges (NOW/Q&A) a la 1ª línea (1 línea = igual
    que center). line-height ajustado para 2 líneas legibles. */
 .plist-title-txt{flex:1;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.25}
+/* La etiqueta de metadato («CON BOLETA», PRENSA…) es hermana FLEX del título,
+   no está dentro de su texto. Con align-items:flex-start quedaba pegada a la
+   PRIMERA línea mientras la frase seguía debajo, y se leía «El viento sabe que
+   vuelvo [CON BOLETA] / a casa»: un título mal cortado antes que una etiqueta.
+   Bajándola a la última línea TERMINA la frase en vez de interrumpirla. Va en
+   .meta-badge y no en el contenedor: el badge de CANCELADA (prefijo) y los
+   puntos de estado siguen anclados arriba, que es donde los puso el diseño. */
+.plist-title .meta-badge{align-self:flex-end}
 .plist-meta{font-size:var(--t-sm);font-weight:var(--w-thin);color:var(--gray);margin-bottom:var(--sp-1)}
 /* plist-city — la CIUDAD en la card del modo por días (festivales multiciudad).
    FICDEH 2026: 11 ciudades y 387 funciones; sin esto había que abrir cada ficha
@@ -1143,12 +1198,28 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    psp-editorial, plist-poster…); el alto del header es var(--ed-hdr-ratio).
    Lo construye editorialFrame() (helpers.js). Sustituye a las 7 copias bespoke. */
 .poster-ed{position:relative;overflow:hidden;background:var(--bg);container-type:inline-size}
+/* CLASE REPETIDA A PROPÓSITO (24 ago 2026). El marco editorial PINTA SU PROPIO
+   SUELO —es el póster, no un contenedor de <img>—, pero la card del grid llega
+   con `bg-surf-2 poster-card … poster-ed` (programa.js) y `.bg-surf-2` gana por
+   orden: misma especificidad, definida ~1950 líneas más abajo. Resultado medido
+   en Cinemancia: la Forma B se pintaba sobre #1B1917 mientras sus hermanas
+   generativas usan el negro de marca #0B0A08 → al lado se veía más clara y
+   plana, otra familia. Duplicar la clase la sube a (0,2,0) sin suponer qué otras
+   clases trae el contenedor: sirve para el grid y para cualquier sizer futuro.
+   Es la misma lección de siempre: el CSS por-contenedor puede pisar al builder. */
+.poster-ed.poster-ed{background:var(--bg)}
 /* Luz de marca en la esquina inferior derecha — la misma firma que el póster
    generativo (§6.0), pero DISCRETA: a 64px de ancho una luz como la del póster
    grande es un manchón que compite con la imagen, que es lo único que informa
-   (Juan, 19 ago). Se dimensiona en % del contenedor, así escala con la tarjeta. */
-.poster-ed::after{content:'';position:absolute;right:0;bottom:0;width:55%;height:32%;pointer-events:none;
-background:radial-gradient(circle at 100% 100%,rgba(245,158,11,.16),rgba(245,158,11,0) 70%)}
+   (Juan, 19 ago). Se dimensiona en % del contenedor, así escala con la tarjeta.
+   LA LUZ HEREDA EL ACENTO DE SECCIÓN (24 ago 2026): estaba ámbar fija mientras
+   la Forma A ya la heredaba — una pared con las dos formas mezclaba una luz
+   ámbar entre luces de sección. El contenedor ya trae `--ed-accent`, así que no
+   hace falta tocar JS. El 0,16 de alfa va como `opacity` de la capa y no dentro
+   del color: interpolar un hex en rgba() exigiría color-mix, que este proyecto
+   todavía no usa en ninguna parte — no vale estrenar una dependencia por esto. */
+.poster-ed::after{content:'';position:absolute;right:0;bottom:0;width:55%;height:32%;pointer-events:none;opacity:.16;
+background:radial-gradient(circle at 100% 100%,var(--ed-accent),transparent 70%)}
 /* ── Forma B (POSTERS.md §6.0): la forma A más UN campo de imagen ───────────
    Retícula del póster 2:3 en %: 1u = 12,5% del ancho = 8,33% del alto. Filete
    0,25u · sección a 1u · campo de imagen 8u×4,5u en y=3,5u (29,17% / 37,5%) ·
@@ -1165,6 +1236,10 @@ background:radial-gradient(circle at 100% 100%,rgba(245,158,11,.16),rgba(245,158
    del borde: a 52px no se lee como imagen, se lee como calor. */
 .poster-ed .ed-img-mid{top:31.25%;z-index:2}
 .poster-ed .ed-halo{position:absolute;left:0;right:0;top:68.75%;bottom:0;overflow:hidden;z-index:1;pointer-events:none}
+/* El halo del póster GRANDE ancla al borde de SU campo (3,5u+4,5u=8u → 66,67%),
+   no al de la miniatura (68,75%): con el top de la mini quedaba una costura de
+   2,08% de negro entre still y halo — la «línea negra» que vio Juan. */
+.poster-ed .ed-halo-full{top:66.67%}
 .poster-ed .ed-halo img{position:absolute;left:0;bottom:0;width:100%;height:260%;object-fit:cover;
 filter:blur(10px) saturate(1.15);opacity:.55;
 -webkit-mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100%);
@@ -1175,8 +1250,15 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    uno más largo, más. Ahora su techo es la línea de retícula que cierra el campo
    (3,5u + 4,5u = 8u → 66,67%) más media unidad de aire, y lo que no entra se
    corta: el título cede, la imagen no. */
-.poster-ed .ed-foot{position:absolute;left:0;right:0;top:70.83%;bottom:6.25%;padding:0 9.4%;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.poster-ed .ed-foot{position:absolute;left:0;right:0;top:70.83%;bottom:6.25%;padding:0 9.4%;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;z-index:2}
 .poster-ed .ed-title{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.2cqi;font-weight:var(--w-display);letter-spacing:-.02em;color:var(--white);line-height:1.2;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+/* La firma de curaduría bajo el título (regla de carga: solo con título simple).
+   Itálica, tamaño del dato: es una firma, no un segundo título. */
+/* 4.2cqi y SIN nowrap: a 5cqi con nowrap, «The Cinema of José Luis Torres
+   Leiva» moría en «…Tor…» — y la promesa de esta regla es que la firma nunca se
+   corta. Puede partir en dos líneas; el techo del pie (overflow del ed-foot) es
+   el límite duro, y el título cede antes que la firma desaparezca. */
+.poster-ed .ed-firma{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:4.2cqi;font-style:italic;font-weight:var(--w-semi);color:var(--gray2);margin-top:1.5%;line-height:1.3}
 .poster-ed .ed-dato{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:5cqi;font-weight:var(--w-semi);color:var(--gray);margin-top:2%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 /* Anatomía A3 (Fase C): blur-fill de fondo + still 16:9 al ras del banner (sin
    recortar) + scrim de título opcional. El blur es decorativo; el still es el 16:9. */
@@ -1188,6 +1270,11 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .pel-sheet-poster-stage{display:flex;gap:1px;background:var(--bdr);flex-shrink:0;width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-poster);overflow:hidden}
 .psp-card{flex:1;height:100%;object-fit:cover;object-position:center;display:block;min-width:0;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .psp-front,.psp-back{/* split visual — sin posicionamiento absoluto */}
+/* .psp-escalera — la Escalera dentro de la ficha. Mismo tamaño y radio que
+   el póster de la ficha; el SVG va inline (sus módulos son <image href>
+   remotos y dentro de un <img> no cargarían). */
+.psp-escalera{flex-shrink:0;width:var(--poster-lg-w);height:var(--poster-lg-h);border-radius:var(--r-poster);overflow:hidden}
+.psp-escalera svg{width:100%;height:100%;display:block}
 
 .psp-swap-zone{display:none}
 .ended-poster .ended-poster-footer{position:absolute;bottom:0;left:0;right:0;padding:var(--sp-5) 6px 7px;background:linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,.55) 45%,transparent);display:flex;flex-direction:column;gap:2px;align-items:center}
@@ -1365,7 +1452,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .pel-sheet.vt-in .pel-sheet-meta>*:nth-child(2){animation-delay:.1s}
 .pel-sheet.vt-in .pel-sheet-meta>*:nth-child(3){animation-delay:.14s}
 .pel-sheet.vt-in .pel-sheet-inner>*:not(.pel-sheet-header){animation:vtRise .28s cubic-bezier(.16,1,.3,1) both;animation-delay:.12s}
-/* El enlace de Letterboxd descansa en opacity:.6 → sube sin fundir (ver vtRiseNoFade). */
+/* El enlace de Letterboxd descansa en la opacity:.55 de .c-lb → sube sin fundir (ver vtRiseNoFade). */
 .pel-sheet.vt-in .pel-sheet-lb{animation-name:vtRiseNoFade}
 .pel-sheet.amb.vt-in{--amb-o:0}
 @media(prefers-reduced-motion:reduce){.pel-sheet.vt-in .pel-sheet-meta>*,.pel-sheet.vt-in .pel-sheet-inner>*:not(.pel-sheet-header){animation:none}}
@@ -1392,7 +1479,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .pel-sheet.compact .psp-editorial{width:72px;height:108px}
 .pel-sheet-header{display:flex;gap:var(--sp-btn);margin-bottom:var(--sp-4)}
 /* Modo compacto: films con 3+ funciones reducen el poster para que CTAs sean visibles */
-.pel-sheet.compact .pel-sheet-poster,.pel-sheet.compact .pel-sheet-poster-ph,.pel-sheet.compact .pel-sheet-poster-stage{width:72px;height:108px}
+.pel-sheet.compact .pel-sheet-poster,.pel-sheet.compact .pel-sheet-poster-ph,.pel-sheet.compact .pel-sheet-poster-stage,.pel-sheet.compact .psp-escalera{width:72px;height:108px}
 .pel-sheet.compact .pel-sheet-header{margin-bottom:var(--sp-3)}
 
 .pel-sheet-meta{flex:1;min-width:0;display:flex;flex-direction:column;gap:var(--sp-1);padding-top:2px}
@@ -1545,7 +1632,10 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .prio-limit-thumb{width:32px;height:48px;border-radius:var(--r-poster);flex-shrink:0;object-fit:cover;background:var(--surf-3)}
 .prio-limit-info{flex:1;min-width:0}
 .prio-limit-name{font-size:var(--t-base);font-weight:var(--w-semi);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.prio-limit-when{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
+/* Un solo dueño para la línea «día · hora» de las dos hojas hermanas: si cambia
+   el ritmo o el gris, cambia en las dos. Declararla otra vez con otro nombre
+   habría sido la variante gris número 90 — que es justo lo que [dato-linea] frena. */
+.prio-limit-when,.plan-confirm-when{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
 .prio-limit-swap{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);padding:5px 11px;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all var(--tr-base)}
 .prio-limit-swap:active{border-color:var(--amber-30);color:var(--amber);background:var(--amber-10)}
 .prio-limit-cancel{width:calc(100% - 40px);margin:8px 20px 44px;display:block;text-align:center} /* anatomía: regla CANCEL canónica */
@@ -1558,13 +1648,25 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .plan-confirm-ico{width:48px;height:48px;background:var(--green-10);border:1px solid var(--green-30);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .plan-confirm-title{font-size:var(--t-md);font-weight:var(--w-display);color:var(--white);letter-spacing:-.02em}
 .plan-confirm-sub{font-size:var(--t-base);color:var(--gray);margin-top:3px}
-.plan-confirm-films{border:1px solid var(--bdr);border-radius:var(--r);overflow:hidden;margin-bottom:18px}
-.plan-confirm-film{display:flex;align-items:center;gap:10px;padding:var(--sp-btn) var(--sp-3);border-bottom:1px solid var(--bdr-l);font-size:var(--t-base);color:var(--white)}
-.plan-confirm-film:last-child{border-bottom:none;color:var(--gray)}
-.plan-confirm-dot{width:5px;height:5px;background:var(--amber);border-radius:50%;flex-shrink:0}
-.plan-confirm-time{color:var(--amber);font-weight:var(--w-bold);font-size:var(--t-caption);flex-shrink:0;min-width:40px}
-.plan-confirm-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.plan-confirm-cta{width:100%} /* anatomía: regla dueña */
+/* Anatomía canónica de fila de obra (2 sep 2026). Auditado: de las SEIS listas
+   de obras de la app, esta era la única sin póster, la única encajada en un marco
+   (18 listas usan separador a sangre) y la única con un gap crudo — el título se
+   cortaba a mano en 28 caracteres. Su hoja HERMANA (prio-limit: misma familia,
+   mismo z-index 9200/9201, mismo trabajo) ya usaba el canon, día incluido.
+   La fila adopta ahora la anatomía de .saved-item, que es la fila de Mi Plan —
+   el destino al que lleva el CTA de esta misma hoja. El póster es el token más
+   chico que existe (--poster-xs, vía .lb-poster, el mismo de Mi Plan): el 32x48
+   de la hermana es un tamaño crudo, no un token. El título se clampea a 2 líneas
+   como las otras cuatro listas, en vez de cortarse en JS. */
+.plan-confirm-films{margin-bottom:var(--sp-2)}
+.plan-confirm-film{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) 0;border-bottom:1px solid var(--bdr-l)}
+.plan-confirm-film:last-child{border-bottom:none}
+.plan-confirm-info{flex:1;min-width:0}
+.plan-confirm-name{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);overflow:hidden;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.25}
+/* El aire vive en el CTA y no en la línea «+N más», que puede no existir:
+   medido, el pie quedaba a 0px del botón primario y a 16px de la lista que
+   resume — pegado a lo que no es suyo y suelto de lo que sí. */
+.plan-confirm-cta{width:100%;margin-top:var(--sp-5)} /* anatomía: regla dueña */
 .rating-action-btn.skip{background:none;color:var(--gray)}
 .rating-action-btn.save{background:var(--amber-10);border:1px solid var(--amber-30);color:var(--amber)}
 
@@ -1645,8 +1747,8 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .pel-sheet-ctas .pel-sheet-action-btn svg{width:13px;height:13px}
 .pel-sheet-ctas-watched{display:flex;gap:var(--sp-2);margin-top:var(--sp-6)}
 
-.pel-sheet-lb{display:inline-flex;align-items:center;gap:6px;margin-top:var(--sp-4);opacity:.6;text-decoration:none}
-.pel-sheet-lb-text{font-size:var(--t-sm);color:var(--gray2)}
+.pel-sheet-lb{display:inline-flex;align-items:center;gap:6px;margin-top:var(--sp-4);text-decoration:none}
+.pel-sheet-lb-text{font-size:var(--t-sm)}
 .pel-sheet-remove-plan{width:100%;margin-top:var(--sp-2);background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-caption);font-weight:var(--w-semi);padding:8px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)}
 .pel-sheet-corto-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-2) 0;border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base);border-radius:var(--r-sm);margin:0 -6px;padding-left:6px;padding-right:6px}
 .pel-sheet-corto-item:last-child{border-bottom:none}
@@ -1666,7 +1768,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 
 .c-lb{display:inline-flex;align-items:center;gap:var(--sp-1);background:none;border:none;padding:0;cursor:pointer;transition:opacity var(--tr-base);line-height:1;flex-shrink:0;text-decoration:none;opacity:.55}
 .c-lb:hover{opacity:.9}
-.c-lb-text{font-size:var(--t-sm);font-weight:var(--w-regular);color:var(--gray2);letter-spacing:.2px;white-space:nowrap}
+.c-lb-text{font-size:var(--t-sm);font-weight:var(--w-regular);color:var(--white);letter-spacing:.2px;white-space:nowrap}
 
 /* ── MI LISTA ── */
 .ag-section{margin-bottom:var(--sp-4)}
@@ -1803,7 +1905,18 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .mplan-wk-col:last-child{border-right:none}
 
 .mplan-wk-col:hover{background:var(--amber-06)}
-.mplan-wk-col.wk-active{background:var(--amber-06)}
+/* La columna elegida se marca por su CONTENEDOR, no por su contenido
+   (2 sep 2026). Los bloques solo saben de pasado/futuro —.mp-past va a
+   opacity .35— así que toda la emphasis de la selección vivía en la
+   cabecera y en este tinte, que medido en píxeles pintados es
+   rgb(24,18,8) contra rgb(11,10,8): Δ(13,8,0) sobre 255, un 5%. Con hoy
+   ya empezado, la columna activa quedaba en fantasmas y la de mañana,
+   entera en futuro, se llevaba la mirada. Pasa todos los días desde el
+   mediodía.
+   El borde mide Δ(79,50,0) — seis veces el tinte— y no toca ninguna señal
+   verdadera: el pasado sigue atenuado y los otros días siguen enteros, que
+   es lo que hace de la grilla un panorama de la semana. */
+.mplan-wk-col.wk-active{background:var(--amber-06);box-shadow:inset 1px 0 0 var(--amber-30),inset -1px 0 0 var(--amber-30)}
 .mplan-wk-col-hdr{height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-bottom:1px solid var(--bdr);background:var(--surf);position:sticky;top:0;z-index:4}
 .mplan-wk-col.wk-today .mplan-wk-col-hdr{background:var(--amber-08)}
 .mplan-wk-col.wk-today .mplan-wk-col-date{color:var(--amber-60);line-height:1}
@@ -1854,6 +1967,11 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .diary-band{margin-left:0;margin-right:0;margin-bottom:var(--sp-3)}
 .dw-svg{display:block;line-height:0}
 .dw-svg svg{width:100%;height:100%;display:block}
+/* LA ESCALERA en el grid — el SVG va inline (sus módulos son <image href>
+   remotos y dentro de un <img> no cargarían). line-height:0 mata el hueco del
+   baseline que dejaría el inline-block. El radio lo pone .poster-card. */
+.poster-esc{display:block;line-height:0;width:100%;height:100%}
+.poster-esc svg{width:100%;height:100%;display:block}
 .dw-card{cursor:pointer;min-width:0}
 .dw-poster{position:relative;aspect-ratio:2/3;border-radius:var(--r-poster);overflow:hidden;background:var(--surf-3)}
 .dw-poster .img-cover{width:100%;height:100%;object-fit:cover;display:block}
@@ -1907,6 +2025,20 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    compartida). Se clampan a 1 línea para que entren todas: lo que importa es
    saber qué obras hay, no leer el título completo de cada una. */
 .mplan-wk-title.mp-multi{-webkit-line-clamp:1;font-size:var(--t-xs);margin-bottom:1px}
+/* Bloque de UNA obra que no alcanza para hora + título (ver _fitMiPlanBlocks):
+   comparten línea y el que cede es el título. `mp-linea-corta` es el escalón
+   para el piso de 20px, donde el interlineado normal tampoco entra. */
+.mplan-wk-block.mp-linea{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:var(--sp-1)}
+.mp-linea .mplan-wk-time{margin-bottom:0;flex-shrink:0}
+.mp-linea .mplan-wk-title{min-width:0;flex:1;-webkit-line-clamp:1;white-space:nowrap;text-overflow:ellipsis}
+.mp-linea .mplan-wk-venue{flex-basis:100%}
+.mp-linea-corta{padding-top:2px;padding-bottom:2px}
+.mp-linea-corta .mplan-wk-title,.mp-linea-corta .mplan-wk-time{line-height:1.1}
+/* «+N» — lo que no cupo (ver _fitMiPlanBlocks): la última obra visible cede
+   con elipsis y el contador queda a su derecha, en la misma línea. */
+.mplan-wk-title.mp-mas{display:flex;align-items:baseline}
+.mp-mas .mplan-wk-title-txt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap} /* sin min-width:0: con overflow≠visible el mínimo automático ya es 0 — medido, la línea no movía nada */
+.mplan-wk-block .dw-strip-mas{font-size:var(--t-xs);margin-left:var(--sp-1)} /* el mismo contador de las tiras de pósters, a la escala del bloque */
 .mplan-wk-venue{font-size:var(--t-xs);color:var(--gray);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 /* Lista de detalle */
@@ -1918,7 +2050,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    (.ag-day-band): nombre
    + badge a los lados, flush horizontal, sin border-bottom (no separa header
    de sus funciones). Mi Plan muestra un solo día, así que no lleva border-top. */
-.mplan-list-hdr{display:flex;flex-direction:row;align-items:baseline;justify-content:space-between;gap:var(--sp-2);padding:var(--sp-3) var(--sp-2) 0}
+.mplan-list-hdr{display:flex;flex-direction:row;align-items:baseline;justify-content:space-between;gap:var(--sp-2);padding:var(--sp-3) var(--sp-2) var(--sp-2)}
 .mplan-day-name{font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);line-height:1}
 /* film-list-item: flush horizontal (16px vía .ag-view), flex-start, sin
    divisor por item (agrupa por día, igual que Planear). */
@@ -1940,9 +2072,29 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .mplan-t1 svg{vertical-align:-1px;margin-left:1px;opacity:.7}
 .mplan-t1:active{opacity:.6}
 .mplan-t1.mp-past{color:var(--gray2);cursor:default}
-.mplan-t2{font-size:var(--t-xs);color:var(--gray2);margin-top:2px;display:flex;align-items:center;gap:3px}
+.mplan-t2{font-size:var(--t-xs);color:var(--gray2);margin-top:2px;display:flex;align-items:center;gap:3px;flex-wrap:wrap}
+/* La línea lleva TRES cosas cuando la función se cayó: badge CANCELADA (77px),
+   la hora tachada y «Buscar reemplazo» (111px). Sin flex-wrap iban a la fuerza
+   en una sola línea de 230px y el que cedía era el texto: «hasta 17:05» quedaba
+   en 23px, partido en dos líneas tachadas encima una de otra, ilegible (medido
+   en 390 y 375). Ahora baja el botón, que es lo que puede bajar.
+   El nowrap va ACOTADO al span: .mp-void-t también viste .mplan-t1 —el título—,
+   que sí tiene que envolver. */
+.mplan-t2 .mp-void-t{white-space:nowrap}
 .mplan-ri{flex:1;min-width:0}
-.mplan-rtitle{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* El título cede, el distintivo no (auditoría A-5, 2 sep 2026): el badge Q&A
+   vivía DENTRO de este mismo nodo, que es `nowrap + overflow:hidden`, así que
+   se recortaba junto con el título. Medido en Mi Plan: el renglón terminaba en
+   x=323 y el badge arrancaba en x=587 — no se dibujaba NUNCA. La ficha y
+   Planear sí avisan «Q&A · +30 min estimados»; en el Plan —el único lugar
+   donde el dato cambia a qué hora salís del cine— desaparecía.
+   Fila flex: la elipsis se muda al span del texto, que es quien cede.
+   Sin `flex-shrink:0` en el badge ni `min-width:0` en el span: medidos, los
+   dos son no-op acá —el texto puede encoger hasta 0 por su overflow:hidden,
+   así que el badge nunca necesita ceder— y una línea que ninguna mutación
+   mueve es una línea que el test no protege. */
+.mplan-rtitle{display:flex;align-items:baseline;min-width:0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white)}
+.mplan-rtitle-txt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mplan-rtitle.mp-event-title{color:var(--event-blue-title)}
 .mplan-rvenue{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
 .mplan-rvenue.mp-event-venue{color:var(--event-blue-60)}
@@ -1997,7 +2149,14 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .cta-ctx{border-radius:var(--r-md);padding:var(--sp-3) var(--sp-4);display:flex;align-items:center;gap:var(--sp-3);cursor:pointer;margin-bottom:var(--sp-2)}
 
 .cta-ctx-b{background:var(--amber-08);border:1px solid var(--amber-30)}
-.cta-ctx-c{background:var(--surf);border:1px solid var(--bdr);border-left:3px solid var(--amber)}
+/* SIN CAJA (regla de Juan, 29 jul 2026, aplicada acá el 26 ago): un aviso es una
+   NOTA al margen, no una tarjeta. Esta variante vive DENTRO de .mplan-wrap, que
+   ya es el contenedor con su borde y su radio — el fondo + borde + radio de acá
+   dibujaban una segunda caja anidada. Se queda SOLO el filete ámbar, que no es
+   un recuadro sino la marca de accionable (el tap lleva a Sugerencias), y el
+   padding izquierdo que le da aire al texto. Se escapó de [aviso-sin-caja]
+   porque el guardián vigilaba 5 selectores por nombre y este no estaba. */
+.cta-ctx-c{background:none;border:none;border-left:3px solid var(--amber);border-radius:0;padding-left:var(--sp-3)}
 .cta-ctx-ico{font-size:var(--t-md);flex-shrink:0}
 .cta-ctx-body{flex:1;min-width:0}
 .cta-ctx-title{font-size:var(--t-base);font-weight:var(--w-bold);margin-bottom:2px;line-height:1.3}
@@ -2590,6 +2749,12 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    ya desmintió— asomaba en blanco por debajo (Juan, 10 ago). Medido sobre el
    afiche real: bottom 5.5% + min-width 62% lo cubre por completo, sin la banda
    opaca que se comía un sexto del cartel. Verificado a 4x en el pie de la card. */
+/* La card ES el contexto de posicionamiento de su badge. Sin esto, el badge
+   solo quedaba dentro de las cards que casualmente tenían transform (que crea
+   containing block); la card seleccionada lo pierde y el badge se escapaba al
+   fondo del SPLASH — medido: card termina en y=395, badge pintado en y=747.
+   Así lo encontró Juan: un «EN REVISIÓN» suelto al pie de la pantalla. */
+.splash-card{position:relative}
 .splash-card-badge{position:absolute;left:50%;bottom:5.5%;transform:translateX(-50%);
   min-width:62%;text-align:center;
   font-size:var(--t-badge);letter-spacing:.6px;font-weight:var(--w-display);color:var(--amber);
@@ -2798,10 +2963,22 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .seccion-btn.on{color:var(--amber)}
 /* Lugar filter — nuevo sistema ────────────────────────── */
 .lugar-btn{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);background:none;border:none;cursor:pointer;font-family:var(--font);padding:var(--sp-1) 0;transition:color var(--tr-base);white-space:nowrap;-webkit-tap-highlight-color:transparent;touch-action:manipulation;position:relative}
+/* Prensa e Industria — mismo cuerpo que los otros chips de la barra; en `.on`
+   toma el ámbar del estado activo, igual que el resto del canon de botones. */
+.prensa-btn{display:flex;align-items:center;gap:var(--sp-1);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--gray);background:none;border:none;cursor:pointer;font-family:var(--font);padding:var(--sp-1) 0;transition:color var(--tr-base);white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.prensa-btn.on{color:var(--amber)}
+/* El eco del interruptor dentro de la fila de función: mismo icono, atenuado,
+   inline tras la sede — sin flex-shrink, no puede robarle ancho. */
+.scr-press{display:inline-flex;margin-left:var(--sp-1);color:rgba(240,237,232,.35);flex:none;align-self:center}
+
 .lugar-btn::after{content:'';position:absolute;inset:-12px -8px}
 .lugar-btn.on{color:var(--amber)}
 .sec-drop-hdr{padding:10px var(--sp-4) 4px;font-size:var(--t-label);font-weight:var(--w-bold);letter-spacing:.8px;color:var(--gray2);text-transform:uppercase;pointer-events:none;user-select:none}
 .lugar-opt{display:flex;align-items:center;gap:var(--sp-2);padding:10px var(--sp-4);min-height:44px;box-sizing:border-box;cursor:pointer;font-size:var(--t-base);color:var(--gray);border-bottom:1px solid var(--bdr-l);transition:background var(--tr-base);white-space:nowrap}
+/* Hueco del ancho del pin para la fila que filtra la ciudad entera: es la única
+   sin icono y su texto colgaba 21px a la izquierda de sus hermanas, así que se
+   leía como el título de la lista y no como la opción que es. */
+.lugar-opt span.lugar-gutter{flex:0 0 13px}
 .lugar-opt:last-child{border-bottom:none}
 .lugar-opt:active,.lugar-opt:hover{background:var(--surf-2)}
 .lugar-opt.on{color:var(--white);font-weight:var(--w-semi)}
@@ -2810,6 +2987,9 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    empujaban el pin fuera de la caja y pegaban el conteo al borde. */
 .lugar-opt span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
 .lugar-cnt{font-size:var(--t-sm);color:var(--gray2);flex:none!important}
+/* Marca de ciudad caída: mismo `flex:none!important` que el conteo — sin él,
+   `.lugar-opt span{flex:1}` la estira y le come el nombre a la ciudad. */
+.lugar-canc{font-size:var(--t-sm);font-weight:var(--w-bold);letter-spacing:.5px;color:var(--amber);flex:none!important}
 /* lugar-back — fila de regreso del drill-down de ciudad (festivales multiciudad).
    Ámbar = navegación, no selección: no filtra, vuelve al nivel de ciudades. */
 .lugar-back{color:var(--amber);font-weight:var(--w-semi);font-size:var(--t-sm)}
@@ -2829,7 +3009,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    El techo en vh deja entrar las 11 ciudades sin scroll en un teléfono normal y
    recorta con scroll solo en pantallas cortas. */
 .lugar-opt.city{font-weight:var(--w-semi);color:var(--white)}
-.lugar-opt.escape{color:var(--gray2);font-size:var(--t-sm);justify-content:center}
+.lugar-opt.escape{color:var(--gray);font-size:var(--t-sm);justify-content:center}
 #city-sheet-list{max-height:66vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--sp-5))}
 .lugar-back svg{color:var(--amber)}
 @keyframes lugarFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
@@ -2837,7 +3017,11 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    Antes: ~11 líneas de cssText inline DUPLICADAS que además divergieron
    (max-width 300 vs 280, max-height 55vh vs 50vh, scroll props solo en lugar).
    El build sólo aporta position top/right. Guardián [filter-drop-canon]. */
-.filter-drop{position:fixed;min-width:200px;max-width:min(300px,90vw);max-height:55vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);box-shadow:0 8px 24px var(--overlay-55);z-index:9999;animation:lugarFadeIn .12s ease}
+.filter-drop{position:fixed;min-width:200px;max-width:calc(100vw - 16px);max-height:55vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);box-shadow:0 8px 24px var(--overlay-55);z-index:9999;animation:lugarFadeIn .12s ease}
+/* El pie se desvanece SOLO mientras queda lista por debajo (clase puesta por
+   _velaElCorte). Fija, la máscara se comía la última opción al llegar al final:
+   el corte a media letra que viene a arreglar es menos grave que eso. */
+.filter-drop.hay-mas{-webkit-mask-image:linear-gradient(to bottom,#000 calc(100% - 22px),transparent);mask-image:linear-gradient(to bottom,#000 calc(100% - 22px),transparent)}
 
 /* ── BUSCADOR — arquitectura overlay ─────────────────────────────────────
    El overlay cubre la pantalla desde el topbar hacia abajo.
@@ -2963,7 +3147,15 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .int-item-poster{width:56px;height:84px;border-radius:var(--r-poster);background:var(--surf-2);flex-shrink:0;overflow:hidden;object-fit:cover}
 
 .int-item-info{flex:1;min-width:0}
-.int-item-title{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px}
+/* El recorte se lo come el NOMBRE, nunca el número (30 ago 2026). Con nowrap +
+   ellipsis sobre toda la fila, «Competencia de cortometrajes Programa 1» y
+   «… Programa 2» quedaban idénticas en pantalla: faltaban 28px y el corte caía
+   justo antes del dígito que las distingue. Tres pares indistinguibles en la
+   pantalla donde el usuario revisa lo que eligió. El sufijo ya viajaba en su
+   propio span (parseProgramTitle lo separa); solo faltaba blindarlo. */
+.int-item-title{display:flex;align-items:baseline;gap:4px;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);margin-bottom:2px;min-width:0}
+.int-item-name{overflow:hidden;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.25}
+.int-item-title>:not(.int-item-name){flex-shrink:0}
 .int-item-sec{font-size:var(--t-label);font-weight:var(--w-semi);color:var(--white-60);margin-bottom:var(--sp-1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 /* La función propia de una obra excluida: fecha y hora en el sitio de siempre
    (la razón de abajo ya no las repite). */
@@ -3008,8 +3200,20 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .txt-amber60-xs{color:var(--amber-60);font-size:var(--t-xs)}
 .txt-green-semi{color:var(--green);font-weight:var(--w-semi)}
 .prog-suffix{font-size:var(--t-sm);color:var(--amber);font-weight:var(--w-bold);line-height:1;margin-top:2px}
-.col-end{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;flex-shrink:0}
-.icon-btn-circle{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;border-radius:50%;border:none}
+/* gap = 14px = --sp-btn, y no es casual: los dos .icon-btn-circle apilados
+   («Cambiar» y «Quitar del Plan») extienden su caja de impacto 7px a cada lado.
+   Con gap 0 (medido) las zonas se solapaban 14px y en toda la franja el
+   toque iba al de ABAJO, el destructivo — peor que sin ampliar. Con 14 las
+   zonas se tocan sin solaparse. La fila no crece: 30+14+30 = 74 < 132. */
+.col-end{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;flex-shrink:0;gap:var(--sp-btn)}
+/* Área de toque de 44px sobre un círculo DIBUJADO de 30 (auditoría B-9, 2 sep
+   2026): los dos recorridos independientes midieron lo mismo —30×30 en los
+   botones de las filas del Plan, donde el error de dedo borra una función—.
+   El dibujo no cambia: el ::before extiende la caja de impacto 7px a cada
+   lado (30 + 14 = 44, el mínimo de iOS). `position:relative` solo para
+   anclarlo; no afecta el flujo ni la altura de las filas. */
+.icon-btn-circle{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;border-radius:50%;border:none;position:relative}
+.icon-btn-circle::before{content:"";position:absolute;inset:-7px;border-radius:50%}
 
 .poster-label-amber{color:var(--amber);display:block;font-size:var(--t-xs);margin-top:1px}
 .film-sub-label{font-size:var(--t-sm);color:var(--amber);font-weight:var(--w-bold);margin-top:1px;line-height:1}
@@ -3220,6 +3424,21 @@ setTimeout(function(){
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
       <span id="lugar-lbl" data-i18n="bar_lugar">Lugar</span>
     </button>
+    <!-- Prensa e Industria: solo se muestra en festivales que traen pases de
+         acreditados (loader._sincronizarBotonPrensa). CON ETIQUETA desde el
+         26 ago: era un cuadrado de 26px con fondo, un componente distinto al de
+         sus dos hermanos, y la usuaria que pidió el filtro no lo encontró. La
+         razón vieja —«la barra a 390px no admite una cuarta etiqueta»— se midió
+         y era falsa: con Hoy+Mañana visibles y todos los filtros, el espaciador
+         deja 46px a 390 y 31px a 375, y la palabra cuesta 18-25px. Ahora es
+         texto+icono como Sección y Lugar, y marca activo igual que ellos: el
+         texto en ámbar, no un fondo. -->
+    <button class="prensa-btn" id="prensa-btn" data-action="togglePressScreenings" style="display:none"
+            aria-pressed="false" data-i18n-aria="bar_prensa" data-i18n-title="bar_prensa"
+            title="Prensa e Industria" aria-label="Prensa e Industria">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a1 1 0 011-1h11a1 1 0 011 1v18"/><path d="M17 8h2a1 1 0 011 1v10a2 2 0 01-2 2H4"/><line x1="7" y1="7" x2="14" y2="7"/><line x1="7" y1="11" x2="14" y2="11"/><line x1="7" y1="15" x2="11" y2="15"/></svg>
+      <span id="prensa-lbl" data-i18n="bar_prensa_corto">Prensa</span>
+    </button>
     <!-- single toggle btn — icono refleja estado actual -->
     <button class="view-toggle-btn" id="view-toggle-btn" data-action="toggleProgramaView" data-i18n-aria="aria_cambiar_vista" data-i18n-title="aria_cambiar_vista" title="Cambiar vista" aria-label="Cambiar vista">
       <svg id="view-toggle-ico-grid" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
@@ -3412,6 +3631,7 @@ setTimeout(function(){
     </div>
   </div>
   <div class="plan-confirm-films" id="plan-confirm-films"></div>
+  <div class="dato-linea" id="plan-confirm-mas"></div>
   <button class="plan-confirm-cta" data-i18n="cta_mi_plan" data-action="closePlanConfirm" data-force="1">Ver Mi Plan</button>
 </div>
 <!-- ── Rating Sheet ── -->
@@ -3537,7 +3757,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202608231625";
+    s.src="/src/main.js?v=202609031733";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
@@ -3687,7 +3907,7 @@ setTimeout(function(){
     <input class="pin-display auth-email-inp" id="review-key-inp" type="text" placeholder="••••••" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="24" onkeydown="if(event.key==='Enter')submitReviewKey()">
     <button class="auth-send-btn" id="review-key-btn" data-action="submitReviewKey" data-i18n="av_confirmar">Confirmar</button>
     <div class="auth-msg" id="review-msg"></div>
-    <span class="auth-cancel" data-action="closeReviewSheet" data-i18n="misc_cancelar">Cancelar</span>
+    <button type="button" class="auth-cancel" data-action="closeReviewSheet" data-i18n="misc_cancelar">Cancelar</button>
   </div>
 </div>
 
@@ -3699,7 +3919,7 @@ setTimeout(function(){
       <input class="auth-email-inp" id="auth-email-inp" type="email" placeholder="tu@email.com" data-i18n-ph="auth_email" autocomplete="email" onkeydown="if(event.key==='Enter')submitAuthEmail()">
       <button class="auth-send-btn" id="auth-send-btn" data-action="submitAuthEmail" data-i18n="auth_enviar">Enviar código</button>
       <div class="auth-msg" id="auth-msg"></div>
-      <span class="auth-cancel" data-action="closeAuthSheet" data-i18n="misc_cancelar">Cancelar</span>
+      <button type="button" class="auth-cancel" data-action="closeAuthSheet" data-i18n="misc_cancelar">Cancelar</button>
     </div>
     <div id="auth-sheet-step2" style="display:none">
       <div class="auth-sheet-title" data-i18n="auth_revisa">Revisá tu email</div>
@@ -3707,7 +3927,7 @@ setTimeout(function(){
       <input class="pin-display auth-email-inp" id="auth-otp-inp" type="text" placeholder="12345678" inputmode="numeric" autocomplete="one-time-code" maxlength="8" onkeydown="if(event.key==='Enter')submitOTP()"><!-- maxlength=8: el Email OTP de Supabase de este proyecto es de 8 dígitos (no 6). maxlength=6 impedía tipear el código a mano (solo entraba por autofill/link). one-time-code: iOS autofill; type=text no bloquea el autofill y respeta maxlength. 16px: prevents iOS auto-zoom -->
       <button class="auth-send-btn" data-i18n="av_confirmar" id="auth-otp-btn" data-action="submitOTP">Confirmar</button>
       <div class="auth-msg" id="auth-otp-msg"></div>
-      <span class="auth-cancel" data-action="closeAuthAndReset" data-i18n="misc_cancelar">Cancelar</span>
+      <button type="button" class="auth-cancel" data-action="closeAuthAndReset" data-i18n="misc_cancelar">Cancelar</button>
     </div>
     <div id="auth-sheet-step3" style="display:none">
       <div class="auth-sheet-title" data-i18n="auth_cuenta">Cuenta</div>
@@ -3716,7 +3936,7 @@ setTimeout(function(){
       <div class="mt-2 auth-sheet-sub" data-i18n="auth_eliminar_aviso" style="color:var(--gray2);font-size:var(--t-xs)"></div>
       <button class="auth-signout-btn" data-action="signOutAndClose" data-i18n="auth_cerrar">Cerrar sesión</button>
       <button class="auth-delete-btn" id="auth-delete-btn" data-action="deleteAccount" data-i18n="auth_eliminar">Eliminar cuenta</button>
-      <span class="auth-cancel" data-action="closeAuthSheet" data-i18n="misc_cancelar">Cancelar</span>
+      <button type="button" class="auth-cancel" data-action="closeAuthSheet" data-i18n="misc_cancelar">Cancelar</button>
     </div>
   </div>
 </div>
@@ -3755,7 +3975,7 @@ setTimeout(function(){
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
       <input type="text" id="search-input" placeholder="Buscar…" data-i18n-ph="search_placeholder" oninput="searchQuery()" onkeyup="searchQuery()" onkeydown="setTimeout(searchQuery,0)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
     </div>
-    <button class="search-cancel" data-action="searchClose" data-i18n="misc_cancelar">Cancelar</button><span id="dbg-ver" style="position:absolute;bottom:2px;right:4px;font-size:9px;color:var(--gray2)/* exception:build-ver */;opacity:.5;pointer-events:none">202605102032</span>
+    <button class="search-cancel" data-action="searchClose" data-i18n="misc_cancelar">Cancelar</button><span id="dbg-ver" style="position:absolute;bottom:2px;right:4px;font-size:9px;color:var(--gray2)/* exception:build-ver */;opacity:.5;pointer-events:none"></span>
   </div>
   <div id="search-results"></div>
 </div>

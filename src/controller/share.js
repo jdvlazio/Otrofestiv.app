@@ -119,7 +119,7 @@ export async function shareDiary(){
   _dlDirect(c.toDataURL('image/png'));
 }
 
-export async function sharePlan(){
+export async function sharePlan(_yaPregunte){
   // RESTRICCIÓN 2 — de un festival en revisión no sale nada. Su programación
   // es provisional y compartirla la hace circular como si fuera definitiva:
   // una captura del plan o un .ics en el calendario de alguien sobreviven a
@@ -129,9 +129,13 @@ export async function sharePlan(){
   if(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length){
     showToast(t('plan_sin_plan'),'warn');return;
   }
-  // Pedir nombre si no existe — solo la primera vez
-  if(!_getDisplayName()){
-    _promptDisplayName(()=>sharePlan());
+  // Pedir nombre si no existe. El flag corta la RECURSIÓN: el nombre es
+  // opcional, así que al volver de la hoja sin haberlo puesto esta misma
+  // condición era verdadera otra vez y la hoja se reabría en bucle — medido:
+  // con el campo vacío no se cerraba nunca. La compuerta pregunta una vez por
+  // gesto de compartir, no hasta que haya nombre.
+  if(!_getDisplayName()&&!_yaPregunte){
+    _promptDisplayName(()=>sharePlan(true));
     return;
   }
   let canvas,dataUrl;
@@ -219,7 +223,16 @@ export function _buildAgendaCanvas(){
   c.fillStyle='#888888';
   c.font='500 11px system-ui,-apple-system,sans-serif';
   const _dn=_getDisplayName();
-  const _sub=(_dn?_dn+' · ':'')+t('share_mi_plan')+' · '+(cfg.name||'Festival')+' · '+active.length+' '+(active.length!==1?t('misc_dias'):t('misc_dia'));
+  // Los días del PLAN, no los del festival (2 sep 2026). El subtítulo reusaba
+  // `active.length`, y `active` son TODOS los días del festival a propósito —la
+  // grilla es un registro completo, con sus columnas vacías—: medido en FICDEH
+  // con 3 obras en 4 días, la imagen decía «8 días». Leído bajo «Mi Plan» eso
+  // es el tamaño de tu Plan, y era el del festival.
+  // Misma derivación que la línea de resultado de Planear (días con algo
+  // adentro), no el lapso entre la primera y la última: con una obra el lunes y
+  // otra el viernes, tu Plan es de 2 días, no de 5.
+  const _diasPlan=new Set((savedAgenda.schedule||[]).map(s=>s.day)).size||1;
+  const _sub=(_dn?_dn+' · ':'')+t('share_mi_plan')+' · '+(cfg.name||'Festival')+' · '+_diasPlan+' '+(_diasPlan!==1?t('misc_dias'):t('misc_dia'));
   c.fillText(_sub,PAD,HDR/2+20);
   active.forEach((day,ci)=>{
     const x=PAD+ci*(CW+CGAP);

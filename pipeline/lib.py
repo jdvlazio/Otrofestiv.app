@@ -31,7 +31,11 @@ fuente, escribe
 y las herramientas genéricas leen ESO, no el JSON de cada festival. N lectores
 → 1 formato → M herramientas. Documentado en pipeline/PROTOCOLO.md.
 """
-import json, os, re, collections, subprocess, time, unicodedata, datetime
+import os, io, re, json, datetime
+# La raíz del repo, para que cargar_plan resuelva rutas relativas del plan
+# sin depender de quién lo llama (ensamblar, correr o el guardián).
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import io, json, os, re, collections, subprocess, time, unicodedata, datetime
 
 # User-Agent de navegador: ficdeh.com (Vercel) y varios CDN bloquean curl pelado.
 UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
@@ -341,6 +345,147 @@ def acceso_declarado(f):
 
 
 # ── el formato intermedio: cargar validando ──────────────────────────────────
+def arquetipos():
+    """Los 9 arquetipos canónicos, leídos de ARCHETYPE_COLORS en src/config.js.
+    La app colorea por SECTION_ARCHETYPES, así que un arquetipo fuera de los 9
+    no rompe la pantalla — pero el plan es el contrato, y un contrato con
+    valores inventados deja de servir para leerse."""
+    cfg = io.open(f'{REPO}/src/config.js', encoding='utf-8').read()
+    m = re.search(r'ARCHETYPE_COLORS\s*=\s*\{(.*?)\};', cfg, re.S)
+    return set(re.findall(r"'([^']+)'\s*:", m.group(1))) if m else set()
+
+
+CABECERA = ('name', 'fullName', 'city', 'country', 'dates', 'dates_en', 'year',
+            'timezoneOffset', 'storageKey', 'festivalStartStr', 'festivalEndStr', 'mes_es')
+
+
+def _forma_sidecar(clase, d):
+    """La forma que ensamblar.py LEE de cada sidecar. Un sidecar con otra forma
+    se carga sin error y no aporta nada: el enriquecido de QAFF Bogotá llevó
+    once entradas sin efecto durante días porque era un diccionario donde el
+    cargador buscaba una lista. Aquí eso falla en la cara."""
+    if clase == 'crudo':
+        return bool(d.get('funciones') or d.get('programas')), 'la lista `funciones` (o `programas`)'
+    if clase == 'enriquecido':
+        return isinstance(d.get('obras'), list) and bool(d['obras']), 'la lista `obras`'
+    if clase == 'geo':
+        v = d.get('venues') if isinstance(d.get('venues'), dict) else {k: x for k, x in d.items() if not k.startswith('_')}
+        return bool(v) and all(isinstance(x, dict) and 'lat' in x for x in v.values()), '`venues` (o un diccionario sede→{lat,lng})'
+    return True, ''
+
+
+def cargar_plan(fid, repo=None):
+    """El plan del festival, y FALLA si no cumple su contrato — igual que
+    cargar_crudo con el crudo. Antes el plan se leía con .get() y lo que
+    faltaba, faltaba: QAFF Bogotá ensambló sin cabecera, sin secciones y sin
+    `pasos`, y cada ausencia se descubrió al final de una vuelta entera, de
+    una en una. Aquí salen todas juntas, antes del primer paso.
+
+    Devuelve el plan con `_clase`: 'generico' (bloque `festival`: pasa por el
+    ensamblador y este contrato), 'legado' (solo `pasos`: lo corre correr.py,
+    el ensamblador es propio — FICMA, FICDEH) o 'vacio' (ni una cosa ni otra).
+    En 'generico' escribe `festival.prioLimit` calculado y `festival.dias`."""
+    R = repo or REPO
+    path = fid if fid.endswith('.json') else f'{R}/pipeline/{fid}.plan.json'
+    assert os.path.exists(path), f'{path}: no existe el plan'
+    d = json.load(open(path, encoding='utf-8'))
+    cfg = d.get('festival')
+    if not cfg:
+        d['_clase'] = 'legado' if d.get('pasos') else 'vacio'
+        return d
+    d['_clase'] = 'generico'
+    fallos = []
+    if not d.get('pasos'):
+        fallos.append('sin `pasos`: correr.py no puede correrlo (formato en pipeline/correr.py)')
+    faltan = [k for k in CABECERA if not cfg.get(k)]
+    if faltan:
+        fallos.append(f'cabecera incompleta, faltan {faltan} (plantilla: pipeline/festival.plan.example.json)')
+    secs = cfg.get('secciones') or {}
+    if not secs:
+        fallos.append('sin mapa `secciones` (nombre del festival → {emoji, en, archetype})')
+    ARQ = arquetipos()
+    for k, v in secs.items():
+        for c in ('emoji', 'en', 'archetype'):
+            if not (v or {}).get(c):
+                fallos.append(f'sección «{k}» sin `{c}`')
+        if (v or {}).get('archetype') and ARQ and v['archetype'] not in ARQ:
+            fallos.append(f'sección «{k}»: arquetipo «{v["archetype"]}» no es uno de los 9 ({", ".join(sorted(ARQ))})')
+    crudo = None
+    for clase in ('crudo', 'enriquecido', 'geo'):
+        rel = cfg.get(clase)
+        if not rel:
+            if clase == 'crudo':
+                fallos.append('sin `crudo` declarado')
+            continue
+        sp = f'{R}/{rel}'
+        if not os.path.exists(sp):
+            fallos.append(f'`{clase}` declara {rel} y no existe'); continue
+        try:
+            sd = json.load(open(sp, encoding='utf-8'))
+        except Exception as e:
+            fallos.append(f'`{clase}` {rel} no es JSON: {e}'); continue
+        if not (sd.get('_provenance') or {}).get('capturado'):
+            fallos.append(f'`{clase}` {rel} sin _provenance.capturado')
+        ok, forma = _forma_sidecar(clase, sd)
+        if not ok:
+            fallos.append(f'`{clase}` {rel} no tiene la forma que el ensamblador lee: falta {forma}')
+        if clase == 'crudo':
+            crudo = sd
+    if crudo:
+        fs = crudo.get('funciones') or crudo.get('programas') or []
+        dias = sorted({f['dia'] for f in fs if f.get('dia')} | set(cfg.get('dias_vacios') or []))
+        if dias:
+            d0, d1 = datetime.date.fromisoformat(dias[0]), datetime.date.fromisoformat(dias[-1])
+            todos = [(d0 + datetime.timedelta(i)).isoformat() for i in range((d1 - d0).days + 1)]
+            huecos = [x for x in todos if x not in dias]
+            if huecos:
+                fallos.append(f'calendario con hueco {huecos}: un día sin programación se DECLARA '
+                              f'en `dias_vacios`, no se omite ([calendario-sin-huecos])')
+            esperado = min(8, max(3, round(len(todos) / 2)))
+            if cfg.get('prioLimit') not in (None, esperado):
+                fallos.append(f'prioLimit={cfg["prioLimit"]} pero con {len(todos)} días es {esperado} '
+                              f'(round(días/2), tope [3,8]) — no hace falta escribirlo')
+            cfg['prioLimit'] = esperado
+            cfg['dias'] = todos
+    assert not fallos, f'{path}: el plan no cumple su contrato —\n  · ' + '\n  · '.join(fallos)
+    return d
+
+
+def sello_plan(fid, repo=None):
+    """El SHA del plan tal como está en disco. Es lo que el sello guarda: un
+    plan editado después de correr deja de casar, y el build hay que volver a
+    correrlo — no publicarlo desde un plan que ya no es el suyo."""
+    import hashlib
+    p = f'{repo or REPO}/pipeline/{fid}.plan.json'
+    return hashlib.sha256(open(p, 'rb').read()).hexdigest()[:16]
+
+
+def sellar_build(fid, paso, cmd, repo=None):
+    """correr.py lo llama tras cada paso que reescribió el build: deja en él
+    `_corrido` = {por, fecha, plan_sha, paso, cmd}. Un build sin sello, o con
+    el sello de otro plan, no lo publica publicar.py."""
+    R = repo or REPO
+    b = f'{R}/festivals/staging/{fid}-build.json'
+    if not os.path.exists(b):
+        return None
+    d = json.load(open(b, encoding='utf-8'))
+    d['_corrido'] = {'por': 'pipeline/correr.py', 'fecha': datetime.datetime.now().isoformat(timespec='seconds'),
+                     'plan_sha': sello_plan(fid, R), 'paso': paso, 'cmd': cmd}
+    json.dump(d, open(b, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    return d['_corrido']
+
+
+def sello_valido(fid, build, repo=None):
+    """(ok, motivo). El build viene de correr.py Y del plan que hay ahora."""
+    c = (build or {}).get('_corrido') or {}
+    if not c:
+        return False, 'el build no lleva sello: no lo produjo pipeline/correr.py'
+    if c.get('plan_sha') != sello_plan(fid, repo):
+        return False, (f'el sello es de otro plan (sha {c.get("plan_sha")} ≠ {sello_plan(fid, repo)}): '
+                       f'el plan cambió después de correr')
+    return True, f'sellado por {c.get("por")} el {c.get("fecha")} (paso {c.get("paso")})'
+
+
 def cargar_crudo(path):
     """Carga un sidecar del formato intermedio y FALLA si no lo cumple. Las
     herramientas genéricas solo aceptan este shape: mejor un error a la cara
@@ -511,6 +656,61 @@ def _selftest():
     except AssertionError as e:
         assert 'cómo se entra' in str(e); ok[0] += 1
     _os.unlink(tf.name)
+    # ── cargar_plan: el contrato del plan, caso por caso ──────────────────
+    import tempfile as _tf, shutil as _sh
+    _root = _tf.mkdtemp(); _os.makedirs(f'{_root}/pipeline'); _os.makedirs(f'{_root}/festivals/staging'); _os.makedirs(f'{_root}/src')
+    _sh.copy(f'{REPO}/src/config.js', f'{_root}/src/config.js')
+    def _crudo(dias):
+        json.dump({'_provenance': provenance('t'), 'funciones': [
+            {'titulo': 'X', 'dia': dd, 'hora': '10:00', 'sede': 'S', 'acceso': 'Entrada libre'} for dd in dias]},
+            open(f'{_root}/festivals/staging/t-crudo.json', 'w'))
+    def _plan(**over):
+        base = {'pasos': [{'cmd': 'x', 'que': 'x'}], 'festival': {
+            'crudo': 'festivals/staging/t-crudo.json', 'sedes': {},
+            'secciones': {'Panorama': {'emoji': '🌀', 'en': 'Panorama', 'archetype': 'Muestra / País'}},
+            'name': 'T', 'fullName': 'T', 'city': 'B', 'country': 'CO', 'dates': '1–3 SEP', 'dates_en': 'SEP 1–3',
+            'year': 2026, 'timezoneOffset': '-05:00', 'storageKey': 't_', 'festivalStartStr': '2026-09-01T00:00:00',
+            'festivalEndStr': '2026-09-03T23:00:00', 'mes_es': 'septiembre'}}
+        for k, v in over.items():
+            if v is None: base.pop(k, None) if k in base else base['festival'].pop(k, None)
+            elif k in ('pasos',): base[k] = v
+            else: base['festival'][k] = v
+        json.dump(base, open(f'{_root}/pipeline/t.plan.json', 'w')); return f'{_root}/pipeline/t.plan.json'
+    def _falla(nombre, frag, **over):
+        try:
+            cargar_plan(_plan(**over), repo=_root); assert False, f'{nombre}: debió fallar'
+        except AssertionError as e:
+            assert frag in str(e), f'{nombre}: {e}'; ok[0] += 1
+    _crudo(['2026-09-01', '2026-09-02', '2026-09-03'])
+    _d = cargar_plan(_plan(), repo=_root)
+    t('plan bueno pasa y calcula prioLimit', _d['festival']['prioLimit'], 3)
+    t('plan bueno clase', _d['_clase'], 'generico')
+    _falla('sin pasos', 'sin `pasos`', pasos=None)
+    _falla('sin cabecera', 'cabecera incompleta', name=None)
+    _falla('sin secciones', 'sin mapa `secciones`', secciones=None)
+    _falla('arquetipo inventado', 'no es uno de los 9',
+           secciones={'X': {'emoji': '🎬', 'en': 'X', 'archetype': 'Industria / Formación'}})
+    json.dump({'_provenance': provenance('t'), 'MANGO': {'tmdb_id': 1}}, open(f'{_root}/festivals/staging/t-enr.json', 'w'))
+    _falla('enriquecido con forma de diccionario', 'falta la lista `obras`', enriquecido='festivals/staging/t-enr.json')
+    _crudo(['2026-09-01', '2026-09-03'])
+    _falla('hueco en el calendario', "hueco ['2026-09-02']")
+    t('hueco declarado pasa', cargar_plan(_plan(dias_vacios=['2026-09-02']), repo=_root)['festival']['dias'],
+      ['2026-09-01', '2026-09-02', '2026-09-03'])
+    json.dump({'pasos': [{'cmd': 'x', 'que': 'x'}]}, open(f'{_root}/pipeline/l.plan.json', 'w'))
+    t('plan legado se clasifica, no reprueba', cargar_plan(f'{_root}/pipeline/l.plan.json', repo=_root)['_clase'], 'legado')
+    _sh.rmtree(_root)
+    # ── el sello del build: viene del runner Y del plan que hay ahora ─────
+    _root = _tf.mkdtemp(); _os.makedirs(f'{_root}/pipeline'); _os.makedirs(f'{_root}/festivals/staging')
+    json.dump({'pasos': []}, open(f'{_root}/pipeline/s.plan.json', 'w'))
+    json.dump({'films': []}, open(f'{_root}/festivals/staging/s-build.json', 'w'))
+    t('build sin sello no vale', sello_valido('s', json.load(open(f'{_root}/festivals/staging/s-build.json')), repo=_root)[0], False)
+    sellar_build('s', 1, 'x', repo=_root)
+    t('build sellado vale', sello_valido('s', json.load(open(f'{_root}/festivals/staging/s-build.json')), repo=_root)[0], True)
+    json.dump({'pasos': [], 'x': 1}, open(f'{_root}/pipeline/s.plan.json', 'w'))   # el plan cambia después
+    _v = sello_valido('s', json.load(open(f'{_root}/festivals/staging/s-build.json')), repo=_root)
+    t('plan editado tras correr invalida el sello', _v[0], False)
+    assert 'otro plan' in _v[1]; ok[0] += 1
+    _sh.rmtree(_root)
     print(f'✓ selftest: {ok[0]} casos')
 
 

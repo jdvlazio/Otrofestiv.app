@@ -71,6 +71,66 @@ AFICHES_OFICIALES = {
 }
 
 
+# Artes de SECCIÓN que envió el festival (25 AGO). Son las piezas que usan en
+# redes: identidad de la retrospectiva o el foco, no de una obra. Se usan como
+# afiche de las tarjetas que NO tienen uno propio, que en estas secciones son
+# TODAS programas —ninguna película suelta— así que el arte nunca suplanta el
+# póster de una obra: cubre un envase que no tenía ninguno.
+#
+# Vienen en 4:5 (formato de sus redes) y se ESTIRAN a 2:3, la misma regla que
+# el keyArt del splash: se estira en un eje, no se recorta, no se ponen bandas
+# ni blur. Ver assets/cinemancia/seccion-*.jpg.
+ARTE_DE_SECCION = {
+    'Febril incisión':                 '/assets/cinemancia/seccion-febril-incision-thomas-furhapter.jpg',
+    'Historia(s) del cine: Argentina': '/assets/cinemancia/seccion-historias-del-cine-argentina.jpg',
+    'La primavera llega':              '/assets/cinemancia/seccion-la-primavera-torres-leiva.jpg',
+    'La sutil materia':                '/assets/cinemancia/seccion-la-sutil-materia-sergio-navarro.jpg',
+    'Sick and Dirty':                  '/assets/cinemancia/seccion-sick-and-dirty.jpg',
+}
+
+# Por TÍTULO, para lo que la sección no alcanza a cubrir:
+#  · el foco de Luciana Decker no es sección — vive dentro de Proyecciones
+#    Especiales, con dos funciones de nombres distintos;
+#  · «Retrospectiva Sergio Navarro Programa 2» tiene DOS pases y el festival
+#    los archivó en secciones distintas (uno en «La sutil materia», otro en
+#    Proyecciones Especiales). Sin esto, el mismo programa salía con arte en
+#    un pase y sin él en el otro.
+ARTE_DE_FOCO = {
+    'Alquimia de la luz':          '/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg',
+    'Carta Blanca Luciana Decker': '/assets/cinemancia/seccion-alquimia-de-la-luz-luciana-decker.jpg',
+    'Retrospectiva Sergio Navarro': '/assets/cinemancia/seccion-la-sutil-materia-sergio-navarro.jpg',
+}
+
+
+# Artes de PROGRAMA de la Competencia de cortometrajes (llegaron el 25 AGO,
+# aparte de los de sección). Cada pieza lista sus cinco cortos con su director,
+# así que la correspondencia se verificó título a título contra el film_list:
+# los 5 de cada arte coinciden con los 5 del programa, sin sobras ni faltantes.
+# Cubren 6 tarjetas (cada programa tiene dos pases) que no tenían afiche.
+# Mismo tratamiento que los de sección: 4:5 estirado a 2:3, sin recorte.
+# Conversatorios que declaran los propios artes del festival, y que su hoja de
+# charlas no traía. El arte de Nuevas Voces 1 y 2 dice «Foro Metropolitano -
+# Teatro Caribe (Conversación con directores)»: el conversatorio es del pase de
+# TEATRO CARIBE, no de los cuatro. Marcar también los de La Capilla les alargaría
+# la duración en el planificador sin que haya conversatorio — has_qa alimenta
+# durationForTravel.
+CON_CONVERSATORIO = {
+    ('2026-09-08', '18:00', 'Teatro Caribe Itagüí'): 'guests',
+    ('2026-09-10', '18:00', 'Teatro Caribe Itagüí'): 'guests',
+}
+
+ARTE_DE_PROGRAMA = {
+    'Competencia de cortometrajes Programa 1': '/assets/cinemancia/programa-cortos-1.jpg',
+    'Competencia de cortometrajes Programa 2': '/assets/cinemancia/programa-cortos-2.jpg',
+    'Competencia de cortometrajes Programa 3': '/assets/cinemancia/programa-cortos-3.jpg',
+    # Llegaron el 28 AGO. El arte los titula solo «Programa 01» y «02», sin
+    # nombrar la sección: si se hubieran leído por el número habrían ido a la
+    # Competencia de cortometrajes y le habrían cambiado el afiche. Son de
+    # NUEVAS VOCES — lo dicen sus cinco obras, cruzadas 5/5 contra el film_list.
+    'Competencia Nuevas Voces Programa 1': '/assets/cinemancia/nuevas-voces-1.jpg',
+    'Competencia Nuevas Voces Programa 2': '/assets/cinemancia/nuevas-voces-2.jpg',
+}
+
 # ── Fotogramas oficiales del festival ─────────────────────────────────────────
 # TMDB no sirve para estas obras: se consultaron las 11 que tenían tmdbId y las
 # 11 devolvieron poster_path vacío. No es un fallo de la consulta —se verificó
@@ -175,13 +235,36 @@ DURACION_CORREGIDA = {
     # 67′ y el del domingo 6, con las MISMAS cinco obras, 85′. El festival
     # confirma que lo correcto son 85 y que los dos pases duran igual.
     ('2026-09-11', '18:00', 'Teatro Caribe Itagüí'): 85,
+    # «Programa de cortometrajes Rajenda Gour»: la parrilla dice 71′ y los cinco
+    # cortos que el propio festival listó suman 65′. Confirmado por ellos el
+    # 25 ago: son 65. El descuadre era de su parrilla, no de nuestra copia.
+    # Queda 1′ de residuo: sus obras suman 66 porque «Sight and Desire» figura
+    # con 23′ en el catálogo y 22′ en la hoja del festival. Un minuto sobre un
+    # corto de los sesenta no vale forzar una regla; queda dicho para que la
+    # próxima auditoría de duraciones no lo persiga.
+    ('2026-09-11', '17:00', 'Centro Colombo Americano Sede centro sala 2 Medellín'): 65,
 }
 
 # 2) «Fuera de competencia programa 1» — declaraba 88′ y sus obras sumaban 74′.
 #    Faltaba una, y el festival la mandó. Sus cinco duraciones suman 90′; los
 #    dos minutos de diferencia con los 88′ de la parrilla son de su propio
 #    dato y no se tocan.
+# 3) «Dice que…» del 4 SEP salía como película SOLA y es un programa de DOS.
+#    La parrilla lo dice —«Dice que... + Las picapiedreras»— y sus 84′ cuadran
+#    exactos con 68+16. Lo perdimos por una LETRA: la parrilla escribe
+#    «picapiEdreras» y el catálogo «picapedreras», así que el cruce por título
+#    exacto no encontró la obra y la función quedó de una sola. La cazó el
+#    equipo del festival revisando la app, el 25 ago.
+#
+#    Es la tercera vez en este festival que un título escrito distinto rompe un
+#    cruce (ver también «Borrachos escuchando…» vs «Borrachos mientras
+#    escuchamos…» y «Para no regresar» vs «Para no volver», que sí casaron por
+#    otras vías). El emparejamiento exacto es el punto débil de este montaje.
 OBRAS_AÑADIDAS = {
+    ('2026-09-04', '19:00', 'Casa Museo Otraparte Envigado'): [
+        {'title': 'Las picapedreras', 'director': 'Azul Aizenberg',
+         'country': 'Argentina', 'year': 2021, 'duration': 16},
+    ],
     ('2026-09-10', '16:00', 'Centro Colombo Americano Sede centro sala 1 Medellín'): [
         {'title': 'Ya se ven los tigres en la lluvia', 'director': 'Oscar Ruiz Navia',
          'country': 'Colombia, Canadá', 'year': 2025, 'duration': 16},
@@ -584,6 +667,10 @@ def main():
             e['_src'] = 'hoja «Otros programas» que envió el festival (orden de proyección)'
 
         _k2 = (f['dia'], f['hora'], f['sede'])
+        if _k2 in CON_CONVERSATORIO:
+            e['has_qa'] = True
+            e['qa_type'] = CON_CONVERSATORIO[_k2]
+            e['_qa_src'] = 'lo declara el arte del programa que envió el festival (28 AGO)'
         if _k2 in DURACION_CORREGIDA:
             e['duracion_min'] = DURACION_CORREGIDA[_k2]
             e['_duracion_src'] = 'confirmada por el festival (21 AGO)'
@@ -597,6 +684,22 @@ def main():
                 _dd.update({k: v for k, v in _extra.items() if v not in (None, '')})
                 e.setdefault('obras', []).append(_dd)
                 e['_obras_src'] = 'obra que faltaba, enviada por el festival (21 AGO)'
+        # El TÍTULO se decidió arriba, con las obras que el cruce encontró. Si
+        # acabamos de meter una que faltaba, quedó vencido: «Dice que…» seguía
+        # anunciándose sola cuando ya eran DOS, y «Las picapedreras» no existía
+        # para quien mirara la tarjeta —el mismo agujero que veníamos de tapar,
+        # tapado a medias—. Se rehace con la regla que ya usa este archivo para
+        # los programas dobles: unir con «+», como los escribe el festival.
+        # Solo cuando el título ES el de una de sus obras: un programa con
+        # nombre propio («… Programa 2») no se renombra.
+        if len(e.get('obras') or []) > 1:
+            # Dentro del crudo la obra se llama `titulo`; `title` solo aparece
+            # en las que entran por OBRAS_AÑADIDAS. Mirar una sola forma dejaba
+            # la lista vacía y el retitulado no ocurría (sin fallar).
+            _tits = [t for t in ((o.get('titulo') or o.get('title')) for o in e['obras']) if t]
+            if e.get('titulo') in _tits:
+                e['titulo'] = ' + '.join(_tits)
+                e['_titulo_src'] = 'programa doble: unido con «+», como lo escribe la parrilla'
 
         # El kind se decide sobre el título FINAL: el de «Michael Koresky y José
         # Miccio» lo pone la hoja de charlas, no la celda de la parrilla.
@@ -618,6 +721,21 @@ def main():
             if _k and ch and ch.get('descripcion') and not e.get('sinopsis'):
                 e['sinopsis'] = ch['descripcion']
                 e['_sinopsis_src'] = 'hoja oficial del festival (conversatorios y charlas)'
+        # ── ARTE DE SECCIÓN, el ÚLTIMO recurso ──────────────────────────────
+        # Solo si la tarjeta no tiene afiche propio. Se resuelve por sección y,
+        # si no, por el título de la función (el foco de Luciana Decker, que no
+        # es sección). Con esto los programas de retrospectiva dejan de caer al
+        # afiche generado y muestran la pieza que el festival usa en redes.
+        if not e.get('poster'):
+            _sec = e.get('seccion') or ''
+            _tit = e.get('titulo') or ''
+            _arte = ARTE_DE_PROGRAMA.get(_tit) \
+                 or next((v for k, v in ARTE_DE_SECCION.items() if k in _sec), None) \
+                 or next((v for k, v in ARTE_DE_FOCO.items() if k in _tit), None)
+            if _arte:
+                e['poster'], e['posterSource'] = _arte, 'oficial'
+                _cual = 'programa' if _tit in ARTE_DE_PROGRAMA else 'sección'
+                e['_poster_src'] = f'arte de {_cual} enviado por el festival (25 AGO), estirado a 2:3'
         if NO_PUBLICAR.search(e.get('titulo') or '') or NO_PUBLICAR.search(titulo_crudo):
             retiradas.append(e.get('titulo') or titulo_crudo)
             continue
