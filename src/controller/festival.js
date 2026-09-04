@@ -2,7 +2,8 @@
 // p8 Step 7e — Lifecycle de splash/selector de festival + auto-resolve posters. POSTERS/CUSTOM_POSTERS vía bridge.
 
 import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX, festivalLocationLabel } from '../config.js';
-import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, festivalShortName, festivalTagline, festivalSeasonYear, postponedBannerHTML } from '../view/components.js';
+import { festivalEnded } from '../domain/time.js';
+import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, endedBannerHTML, festivalShortName, festivalTagline, festivalSeasonYear, postponedBannerHTML } from '../view/components.js';
 import { t } from '../i18n/i18n.js';
 import { _langDates, setPosters } from '../view/helpers.js';
 import { render } from '../view/programa.js';
@@ -222,6 +223,26 @@ export function renderPostponedBanner(cfg){
   const _hdrP=document.getElementById('hdr-programa');
   if(!cfg||!cfg.status||cfg.status.kind!=='postponed'||!_hdrP) return;
   _hdrP.insertAdjacentHTML('beforeend', postponedBannerHTML(cfg,{id:'fest-postponed-banner'}));
+}
+
+// renderEndedBanner — banda TERMINÓ en el header del Programa. DUEÑO ÚNICO, y
+// hermana de renderPostponedBanner: la llaman los MISMOS dos sitios y por la misma
+// razón (persiste, y el cambio de idioma no pasa por loadFestival).
+// Un festival APLAZADO no dice «terminó»: su estado declarado le gana a la
+// aritmética de fechas, igual que en _classifyFestival.
+export function renderEndedBanner(cfg){
+  document.getElementById('fest-ended-banner')?.remove();
+  const _hdrP=document.getElementById('hdr-programa');
+  if(!_hdrP||!cfg) return;
+  // REDUNDANTE hoy, y dicho a propósito: `festivalEnded()` ya devuelve false para
+  // un festival aplazado (medido con FICMA, cerrado el 17 AGO por calendario y
+  // aplazado por estado: festivalEnded=false). Ninguna mutación mueve esta línea.
+  // Se conserva porque son DOS dueños distintos —el estado declarado y la
+  // aritmética de fechas— y el día que uno cambie, esta banda no debe ser la que
+  // se entere tarde.
+  if(cfg.status&&cfg.status.kind==='postponed') return;
+  if(!festivalEnded()) return;
+  _hdrP.insertAdjacentHTML('beforeend', endedBannerHTML(cfg,{id:'fest-ended-banner'}));
 }
 
 export function selectSplashFest(name,meta,festId){

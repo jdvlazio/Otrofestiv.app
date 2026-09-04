@@ -10,7 +10,7 @@ import { venueSelLabel } from '../view/helpers.js';
 import { _renderProgramaContent, renderProgramaChips, scrollDtabsToActive } from '../view/programa.js';
 import { _fixStickyOffset, renderAgenda, renderFilmListHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
-import { _renderSplashRail, _renderFestivalSelector, renderPostponedBanner, renderFestBar } from './festival.js';
+import { _renderSplashRail, _renderFestivalSelector, renderEndedBanner, renderPostponedBanner, renderFestBar } from './festival.js';
 import { dayFullyPassed, festivalEnded, simNow, simTodayStr } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
 import { state } from '../state/state.js';
@@ -53,6 +53,14 @@ export function switchMainNav(id){
   // nav-row solo visible en tab Programa
   const navRow=document.getElementById('nav-row');
   if(navRow) navRow.classList.toggle('hidden', id!=='mnav-cartelera');
+  // La banda TERMINÓ se repinta en CADA cambio de pestaña, no solo al cargar el
+  // festival: «terminó» se deriva del tiempo, así que pintarla una vez y no
+  // volver a mirarla significa que a quien deja la app abierta el día del cierre
+  // no le aparece nunca. Su hermana APLAZADO no lo necesita —es un estado
+  // declarado, no cambia solo—. `renderEndedBanner` quita y vuelve a poner, así
+  // que llamarla de más no duplica nada. Va acá y no en showDayView porque este
+  // es el paso por el que se entra SIEMPRE.
+  renderEndedBanner(FESTIVAL_CONFIG[_activeFestId]);
 }
 
 export function showDayView(){
@@ -290,6 +298,7 @@ export function setLang(code){
     // Banda APLAZADO: persistente → no pasa por loadFestival; se rehornea acá con
     // la etiqueta/enlace del idioma nuevo (la cita del festival queda en ES).
     renderPostponedBanner(FESTIVAL_CONFIG[_activeFestId]);
+    renderEndedBanner(FESTIVAL_CONFIG[_activeFestId]);
     // El chip del encabezado tampoco pasa por loadFestival al cambiar idioma:
     // sin esto quedaba con las fechas en el orden del idioma anterior.
     renderFestBar(FESTIVAL_CONFIG[_activeFestId]);
