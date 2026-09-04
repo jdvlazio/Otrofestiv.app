@@ -4,29 +4,17 @@
   "capturado": "2026-09-04",
   "metodo": "capa de texto del PDF (no OCR). Parrilla y fichas cruzadas entre sí; la transcripción verificada contra la página que declara; contrastada con dos auditorías independientes del flip book",
   "quibdo": "CANCELADO por el terremoto — la 8ª edición es solo en Bogotá",
-  "prelanzamiento": "el 5 SEP en el Museo Nacional NO se incluye",
-  "revision_4_sep": "El festival reexportó el programa el 4 sep («hicimos los ajustes», Wilfrid Massamba). PDF nuevo, 86 páginas, mismo recuento. Cambios REALES, todos en la Universidad de los Andes: aparecen las salas (Auditorio ML-C, Salón RGD08, Salón ML513) y se movieron tres franjas — 16 SEP 13:00→12:00 (120→180 min), 17 SEP 14:00→13:00 (120→180), 18 SEP 13:00→12:00 (120→240), y con ella el diálogo NOIR Y GÉNERO. Alianza Francesa, Javeriana, Cinemateca, Museo Nacional y UNAL: sin cambios de día ni hora. En la ficha de FACE TO FACE el festival cambió «Performance de danza» por «Performance de cine expandido» (no es un campo que llevemos). La cabecera FECHA de la p51 dice «15 DE SEPTIEMBRE» y sus dos bloques son el 17 y el 18: error del PDF del festival, no del modelo."
+  "prelanzamiento": "el 5 SEP en el Museo Nacional NO se incluye"
  },
  "_pendiente_del_festival": {
   "fechas": "el lomo dice «14 - 18 SEPTIEMBRE» en 10 páginas y «14 - 17» en las 2 de Alianza Francesa, pero hay parrillas del 19 y el 20 en Cinemateca",
-  "secciones": "el programa de Bogotá NO imprime secciones en ninguna parte",
-  "museo_y_unal": {
-   "Museo Nacional de Colombia": [
-    "POSESAS",
-    "LA TINAJA",
-    "WATERFRONT MEMORIES",
-    "MANMAN CHADWON"
-   ],
-   "Universidad Nacional de Colombia": [
-    "KANEKALON",
-    "AMELIA",
-    "ONE SUNDAY"
-   ]
-  },
+  "secciones": "RESUELTO el 4 sep. NO era cierto que el festival no las publicara: las declara en las 15 categorías de su calendario oficial (capturado el 2 ago) y las imprime en el propio PDF para los diálogos. El cruce fallaba porque buscábamos por el título en ESPAÑOL contra una fuente que los lleva en ORIGINAL. 43 de 44 programas tienen sección.",
   "franjas_que_no_caben": [
-   "Alianza Francesa 15 SEP 15:00: 4 obras suman 79' en una franja de 60 min",
-   "Universidad de los Andes 15 SEP 14:00: 2 obras suman 128' en una franja de 120 min"
-  ]
+   "Universidad de los Andes 15 SEP 14:00: 2 obras suman 128′ en una franja de 120",
+   "Alianza Francesa 15 SEP 15:00: 4 obras suman ~79′ en una franja de 60"
+  ],
+  "la_unica_que_falta": "«Orango» (Samuel Kay Forrest, Guinea-Bisáu, 94′). Está en la selección oficial del sitio pero sin categoría en el calendario, ni en /catalog, ni en las páginas de sección. Es la ÚNICA pregunta pendiente sobre secciones.",
+  "museo_y_unal_RESUELTO": "las 7 obras del Museo Nacional y la Universidad Nacional ya tienen función: lo resolvió guardar el sello de fecha de cada ficha."
  },
  "programas": [
   {
@@ -60,7 +48,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Diaspórica",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/mango.jpg",
      "posterSource": "custom",
      "lbSlug": "mango-2025",
@@ -79,7 +67,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Africano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/concrete-moves.jpg",
      "posterSource": "custom",
      "lbSlug": "concrete-moves",
@@ -88,6 +76,7 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p14",
    "seccion": "Imaginarios Afrodisruptivos"
   },
@@ -99,9 +88,12 @@
    "obras": [],
    "event_kind": "dialogo",
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "sinopsis": "Florent Mahoukou · Gwladys Gambie · Catalina Mosquera · Shamyr Caicedo Rivas · Santiago Trujillo",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p15",
+   "seccion": "Diálogo Improbable",
+   "_section_src": "impresa en la página del programa y declarada como categoría en el calendario oficial",
    "hora_fin": "17:00",
    "duracion_min": 78,
    "_duracion_src": "la parrilla imprime una ventana de 120 min (p14) y las obras ocupan 42",
@@ -125,7 +117,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/free-fall.jpg",
      "posterSource": "custom",
      "lbSlug": "caida-libre",
@@ -145,7 +137,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/kanekalon.jpg",
      "posterSource": "custom",
      "lbSlug": "kanekalon",
@@ -165,7 +157,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/bertha.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -183,7 +175,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Fronteras Latam",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/hacker-leonilia.jpg",
      "posterSource": "custom",
      "lbSlug": "hacker-leonilia",
@@ -203,7 +195,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/viche.jpg",
      "posterSource": "custom",
      "lbSlug": "viche",
@@ -225,6 +217,7 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p27",
    "seccion": "Panorama Colombiano",
    "has_qa": true,
@@ -238,9 +231,12 @@
    "obras": [],
    "event_kind": "dialogo",
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "sinopsis": "Modera María José López · Emma Van Lare · Ana Beatriz Silva · Mariana Campos · Wilson Borja",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p32",
+   "seccion": "Diálogo Improbable",
+   "_section_src": "impresa en la página del programa y declarada como categoría en el calendario oficial",
    "hora_fin": "13:00",
    "duracion_min": 90,
    "_duracion_src": "la parrilla imprime una ventana de 180 min (p27) y las obras ocupan 90",
@@ -263,11 +259,15 @@
      "genre": "Documental",
      "sinopsis": "The Banjo Boys sigue el electrizante ascenso de Madalitso Band, un dúo malauí—Yobu Maligwa y Yosefe Kalekeni—que construyeron sus propios instrumentos en un banjo, un babatone (bajo) de una cuerda y un bombo de pie, creando un sonido que realmente hace mover a la gente. Una vez despedidos como locos por sus incansables actuaciones callejeras en Lilongwe, llaman la atención de Neil Nayar, un músico británico cautivado por la vibrante alma de Malaui. Lo que comienza como un encuentro casual enciende un trío inesperado, catapultándolos desde las calles locales hasta los escenarios más grandes del mundo",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Otra Mirada",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p70"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src": "parrilla impresa en el PDF oficial del programa, p70",
+   "seccion": "Otra Mirada"
   },
   {
    "dia": "2026-09-15",
@@ -303,7 +303,7 @@
      "title_en": "Aisha Can't Fly Away",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Africano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/aisha-can-t-fly-away.jpg",
      "posterSource": "custom",
      "lbSlug": "aisha-cant-fly-away",
@@ -311,6 +311,7 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p45",
    "seccion": "Panorama Africano",
    "has_qa": true,
@@ -324,9 +325,12 @@
    "obras": [],
    "event_kind": "dialogo",
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "sinopsis": "Moderan Melissa Riquet, Sofía Espinosa y María José Durán · Juan Manuel Amaya · Douna Tongrongru · Petra Ventana · Maguemati Wabgou",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p47",
+   "seccion": "Diálogo Improbable",
+   "_section_src": "impresa en la página del programa y declarada como categoría en el calendario oficial",
    "hora_fin": "16:00",
    "duracion_min": 120,
    "_ojo": "la franja impresa es de 120 min y solo las obras ya suman 128: no cabe además la actividad",
@@ -351,7 +355,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Diaspórica",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/cafe.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -369,7 +373,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Prisma Femenino",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/happy-meal.jpg",
      "posterSource": "custom",
      "lbSlug": "happy-meal-2026",
@@ -388,7 +392,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Fronteras Latam",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/gloria.jpg",
      "posterSource": "custom",
      "lbSlug": "gloria-2025-2",
@@ -405,10 +409,13 @@
      "genre": "Ficción",
      "sinopsis": "Una pastora es convencida por su amigo de la infancia, convertido en vendedor de medicamentos falsos, de que vaya a buscar los bienes que un espíritu le habría robado. De hecho, circula el rumor de que un demonio ronda las calles de Abiyán: \"El que llora\".",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Diaspórica",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p14",
    "seccion": "Panorama Diaspórica"
   },
@@ -429,11 +436,15 @@
      "genre": "Documental",
      "sinopsis": "Cuando Nicole le revela a su amiga de la infancia y prima, Reine, que ha sido adicta a la heroína desde los 13 años, deciden documentar el proceso de rehabilitación de Nicole. Hyphen sigue su lucha por salir al mundo como adulta y mujer hecha y derecha, a pesar de la falta de oportunidades económicas y una educación cultural tóxica que enseña a las jóvenes a suprimir sus ideas y su sexualidad, y a seguir un conjunto de reglas religiosas y culturales.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Miradas Especiales",
+     "_section_src": "marcada «(out of competition)» en la selección oficial del sitio del festival"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p70"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src": "parrilla impresa en el PDF oficial del programa, p70",
+   "seccion": "Miradas Especiales"
   },
   {
    "dia": "2026-09-15",
@@ -452,11 +463,15 @@
      "genre": "Ficción",
      "sinopsis": "IZIDINE, un detective de policía recientemente ascendido, es llamado a un hogar de ancianos ubicado en una antigua fortaleza colonial para investigar un crimen: el director del hogar ha sido asesinado.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Otra Mirada",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p70"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src": "parrilla impresa en el PDF oficial del programa, p70",
+   "seccion": "Otra Mirada"
   },
   {
    "dia": "2026-09-16",
@@ -477,7 +492,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/posesas-possessed.jpg",
      "posterSource": "custom",
      "title_en": "Possessed",
@@ -496,7 +511,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/the-clay-vase.jpg",
      "posterSource": "custom",
      "lbSlug": "la-tinaja",
@@ -505,6 +520,7 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p(57, 58)",
    "seccion": "Panorama Colombiano"
   },
@@ -516,9 +532,12 @@
    "obras": [],
    "event_kind": "dialogo",
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "sinopsis": "Modera Indhira Serrano · César Palacios Chaverra · Patricia Mena · Nicolás Vizcaíno Sánchez · Alejandra Mina",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p58",
+   "seccion": "Diálogo Improbable",
+   "_section_src": "impresa en la página del programa y declarada como categoría en el calendario oficial",
    "hora_fin": "12:00",
    "duracion_min": 91,
    "_duracion_src": "la parrilla imprime una ventana de 120 min (p58) y las obras ocupan 29",
@@ -543,7 +562,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/the-clay-vase.jpg",
      "posterSource": "custom",
      "lbSlug": "la-tinaja",
@@ -563,7 +582,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Diaspórica",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/the-last-dance.jpg",
      "posterSource": "custom",
      "lbSlug": "the-last-dance-2025",
@@ -580,7 +599,9 @@
      "genre": "Ficción",
      "sinopsis": "Un pintor negro de 80 años escapa de un asilo y se refugia en un banco de la playa. Allí, los recuerdos perdidos resurgen gradualmente. Al enfrentarse a las olas de su pasado, reevalúa su vida, esboza nuevas perspectivas y se reconecta con su hijo.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Fronteras Latam",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     },
     {
      "titulo": "When the World Broke Open",
@@ -595,13 +616,14 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Diaspórica",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/when-the-world-broke-open.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p27",
    "seccion": "Panorama Diaspórica"
   },
@@ -613,9 +635,12 @@
    "obras": [],
    "event_kind": "dialogo",
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "sinopsis": "Modera Marcio Brito Neto · Andrea V. Naranjo · Yenni Córdoba · Marino Aguado · Marton Olympio",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p36",
+   "seccion": "Diálogo Improbable",
+   "_section_src": "impresa en la página del programa y declarada como categoría en el calendario oficial",
    "hora_fin": "13:00",
    "duracion_min": 102,
    "_duracion_src": "la parrilla imprime una ventana de 180 min (p27) y las obras ocupan 78",
@@ -639,7 +664,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/free-fall.jpg",
      "posterSource": "custom",
      "lbSlug": "caida-libre",
@@ -659,7 +684,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/sheltering-gestures.jpg",
      "posterSource": "custom",
      "lbSlug": "sheltering-gestures",
@@ -679,7 +704,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/kanekalon.jpg",
      "posterSource": "custom",
      "lbSlug": "kanekalon",
@@ -699,7 +724,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/bertha.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -717,7 +742,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Fronteras Latam",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/hacker-leonilia.jpg",
      "posterSource": "custom",
      "lbSlug": "hacker-leonilia",
@@ -739,6 +764,7 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p45",
    "seccion": "Panorama Colombiano",
    "has_qa": true,
@@ -761,11 +787,15 @@
      "genre": "Documental",
      "sinopsis": "Surviving Biafra es un largometraje documental dirigido por Meji Alabi y Leke Alabi-Isama que explora la guerra civil nigeriana a través de los testimonios de quienes la sobrevivieron. Como nieto e hijo de Godwin Alabi-Isama, los cineastas combinan archivos poco comunes, fotografías del frente nunca antes vistas y testimonios profundamente personales para desenterrar una historia largamente enterrada y raramente enseñada a las generaciones más jóvenes.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Africano",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p73"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src": "parrilla impresa en el PDF oficial del programa, p73",
+   "seccion": "Panorama Africano"
   },
   {
    "dia": "2026-09-16",
@@ -784,7 +814,9 @@
      "genre": "Ficción",
      "sinopsis": "En 1942, Anthony es un niño de diez años que vive en la isla de Providencia, Colombia. Sueña con ser un gran capitán de goleta como su padre, y va a la escuela todos los días para aprender sobre el mar y la navegación con su maestro Fabio. Las motivaciones de Anthony se ven afectadas cuando el maestro es reemplazado por una hermosa profesora del continente, que despertará en él el amor por primera vez. Este amor llevará a Anthony de regreso a su verdadero amor: el mar.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Colombiano",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     },
     {
      "titulo": "Leer en las Gotas de Lluvia",
@@ -798,8 +830,8 @@
      "sinopsis": "Una artista y madre angoleña, su hija de cuatro años y un pintor neozelandés crean mundos imaginarios en tierras nuevas. Estos encuentran eco en el poema de Xisca Minart «Read in Raindrops",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "_seccion": "Imaginarios Afrodisruptivos",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_seccion": "IMAGINARIOS AFRODISRUPTIVO",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/leer-en-las-gotas-de-lluvia.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -819,7 +851,7 @@
      "title_en": "A King Displaced",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Prisma Femenino",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/a-king-displaced.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -846,8 +878,9 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p19",
-   "seccion": "Imaginarios Afrodisruptivos"
+   "seccion": "Panorama Colombiano"
   },
   {
    "dia": "2026-09-16",
@@ -866,11 +899,15 @@
      "genre": "Documental",
      "sinopsis": "¿Puede la negritud escapar de la violencia de sus orígenes? Tres hombres negros emprenden un viaje transformador a lo largo de la ruta de la esclavitud transatlántica en sentido inverso, explorando la resistencia, la liberación y una nueva comprensión de la negritud. Su épica travesía los lleva desde Los Ángeles hasta Salvador de Bahía en Brasil, y finalmente a Acra en Ghana. Su misión es redefinir la negritud, sanar el trauma histórico y vislumbrar nuevos caminos hacia la liberación más allá de las ataduras de la supremacía blanca.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Diaspórica",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p73"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src": "parrilla impresa en el PDF oficial del programa, p73",
+   "seccion": "Panorama Diaspórica"
   },
   {
    "dia": "2026-09-16",
@@ -891,7 +928,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Fronteras Latam",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/nunkui.jpg",
      "posterSource": "custom",
      "lbSlug": "nunkui-2026",
@@ -900,6 +937,7 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p73",
    "seccion": "Fronteras Latam"
   },
@@ -922,7 +960,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/sheltering-gestures.jpg",
      "posterSource": "custom",
      "lbSlug": "sheltering-gestures",
@@ -942,7 +980,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/posesas-possessed.jpg",
      "posterSource": "custom",
      "title_en": "Possessed",
@@ -960,7 +998,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/altanegra.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -988,6 +1026,7 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p37",
    "seccion": "Panorama Colombiano",
    "has_qa": true,
@@ -1001,9 +1040,12 @@
    "obras": [],
    "event_kind": "dialogo",
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "sinopsis": "Modera Frida Muenala · Julián Díaz · Juliana Carabalí · Nina Caicedo · Yenni Córdoba",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p38",
+   "seccion": "Diálogo Improbable",
+   "_section_src": "impresa en la página del programa y declarada como categoría en el calendario oficial",
    "hora_fin": "13:00",
    "duracion_min": 44,
    "_duracion_src": "la parrilla imprime una ventana de 180 min (p37) y las obras ocupan 136",
@@ -1028,7 +1070,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Diaspórica",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/the-black-bart-of-taco-king-17.jpg",
      "posterSource": "custom",
      "lbSlug": "the-black-bart-of-taco-king-17",
@@ -1046,7 +1088,9 @@
      "genre": "Animación",
      "sinopsis": "Ahura es un portador de silla de ruedas que intenta escapar a toda costa, pero encuentra a Gymbia siendo atacada. Él la salva y comienza su viaje en busca de amor y libertad, lo que lo lleva a involucrarse en la Revolta dos Malês (1835), la mayor rebelión contra la esclavitud en la historia de Brasil.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Fronteras Latam",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     },
     {
      "titulo": "Amelia",
@@ -1061,7 +1105,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Africano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/amelia.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -1081,7 +1125,7 @@
      "title_en": "My Daily Viche",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/mi-viche-todo-el-dia.jpg",
      "posterSource": "custom",
      "lbSlug": "my-daily-viche",
@@ -1090,6 +1134,7 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p51",
    "seccion": "Panorama Diaspórica"
   },
@@ -1110,11 +1155,15 @@
      "genre": "Documental",
      "sinopsis": "En Numbi, una aldea aislada en las montañas del Congo, la vida gira en torno a la fiebre del coltán, una \"tierra rara\" indispensable para la electrónica. La fatalidad que afecta a los habitantes encarna los mecanismos tortuosos del capitalismo en la década de 2020.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Otra Mirada",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p76"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src": "parrilla impresa en el PDF oficial del programa, p76",
+   "seccion": "Otra Mirada"
   },
   {
    "dia": "2026-09-17",
@@ -1124,7 +1173,9 @@
    "obras": [
     {
      "titulo": "Performance Artistica e Musical",
-     "_obra_src": "parrilla del PDF oficial del programa"
+     "_obra_src": "parrilla del PDF oficial del programa",
+     "_seccion": "Prisma Femenino",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     },
     {
      "titulo": "Ni Chaînes ni Maîtres",
@@ -1140,7 +1191,9 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p19"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src": "parrilla impresa en el PDF oficial del programa, p19",
+   "seccion": "Prisma Femenino"
   },
   {
    "dia": "2026-09-17",
@@ -1150,9 +1203,12 @@
    "obras": [],
    "event_kind": "dialogo",
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "sinopsis": "Modera Ángel Perea Escobar · Essehomo Pino Valoyes · Alain Nkosi Nkonda · Zanu · Lucas Silva",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p22",
+   "seccion": "Diálogo Improbable",
+   "_section_src": "impresa en la página del programa y declarada como categoría en el calendario oficial",
    "hora_fin": "18:00",
    "duracion_min": 101,
    "_duracion_src": "la parrilla imprime una ventana de 300 min (p19), las obras ocupan 98 y el resto se reparte entre 2 actividad(es)",
@@ -1166,9 +1222,12 @@
    "obras": [],
    "event_kind": "vernissage",
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "sinopsis": "Exposición de Phalonne Pierre Louis. Entrada libre.",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p(19, 24)",
+   "seccion": "Muestra Artística",
+   "_section_src": "impresa en la página del programa y declarada como categoría en el calendario oficial",
    "hora_fin": "20:00",
    "duracion_min": 101,
    "_duracion_src": "la parrilla imprime una ventana de 300 min (p19), las obras ocupan 98 y el resto se reparte entre 2 actividad(es)",
@@ -1193,13 +1252,14 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/viva-yurumangui.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p76",
    "seccion": "Panorama Colombiano"
   },
@@ -1220,7 +1280,9 @@
      "genre": "Ficción",
      "sinopsis": "Un pintor negro de 80 años escapa de un asilo y se refugia en un banco de la playa. Allí, los recuerdos perdidos resurgen gradualmente. Al enfrentarse a las olas de su pasado, reevalúa su vida, esboza nuevas perspectivas y se reconecta con su hijo.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Fronteras Latam",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     },
     {
      "titulo": "Manman Chadwon",
@@ -1235,13 +1297,14 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Fronteras Latam",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/manman-chadwon.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p(60, 62)",
    "seccion": "Fronteras Latam"
   },
@@ -1253,9 +1316,12 @@
    "obras": [],
    "event_kind": "dialogo",
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "sinopsis": "Modera Catherine Dunga · Gwladys Gambie · Ángela Carabalí · Carlos Correa Angulo · Mercedes Angola",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p62",
+   "seccion": "Diálogo Improbable",
+   "_section_src": "impresa en la página del programa y declarada como categoría en el calendario oficial",
    "hora_fin": "18:00",
    "duracion_min": 90,
    "_duracion_src": "la parrilla imprime una ventana de 120 min (p62) y las obras ocupan 30",
@@ -1279,11 +1345,15 @@
      "sinopsis": "En un edificio abandonado a las afueras de Durban, un grupo de hombres sin hogar construye una existencia frágil en medio de la violencia, la adicción y la constante amenaza de ser borrados. Sus vidas transcurren en ritmos de supervivencia, hermandad y memoria, hasta que la llegada de un equipo de cine promete visibilidad, pero empieza a desdibujar los límites entre la realidad y la representación.",
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "_ojo": "la ficha del programa dice 122' y la parrilla 126'; TMDB confirma 126"
+     "_ojo": "la ficha del programa dice 122' y la parrilla 126'; TMDB confirma 126",
+     "_seccion": "Otra Mirada",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p76"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src": "parrilla impresa en el PDF oficial del programa, p76",
+   "seccion": "Otra Mirada"
   },
   {
    "dia": "2026-09-18",
@@ -1322,7 +1392,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/mojugba.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -1339,7 +1409,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Prisma Femenino",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/a-cor-da-patroa.jpg",
      "posterSource": "custom",
      "lbSlug": "a-cor-da-patroa",
@@ -1359,7 +1429,7 @@
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_ojo": "la ficha del programa imprime «Nigeria» como país, pero su propia sinopsis sitúa la obra en Becerril, Cesar: es Colombia",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/stories-from-la-guajirita.jpg",
      "posterSource": "custom",
      "title_en": "Stories from La Guajirita",
@@ -1367,6 +1437,7 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p37",
    "seccion": "Panorama Colombiano",
    "has_qa": true,
@@ -1380,9 +1451,12 @@
    "obras": [],
    "event_kind": "dialogo",
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "sinopsis": "Modera Ana Camila Jaramillo · Miguel Ángel Abadía · Ricardo Malagón",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p43",
+   "seccion": "Diálogo Improbable",
+   "_section_src": "impresa en la página del programa y declarada como categoría en el calendario oficial",
    "hora_fin": "13:00",
    "duracion_min": 69,
    "_duracion_src": "la parrilla imprime una ventana de 180 min (p37) y las obras ocupan 111",
@@ -1409,6 +1483,7 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p51"
   },
   {
@@ -1419,9 +1494,12 @@
    "obras": [],
    "event_kind": "dialogo",
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "sinopsis": "Moderan Melissa Riquet, Sofía Espinosa y María José Durán · Catalina Mosquera · Frida Muenala · Nina Caicedo",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p54",
+   "seccion": "Diálogo Improbable",
+   "_section_src": "impresa en la página del programa y declarada como categoría en el calendario oficial",
    "hora_fin": "16:00",
    "duracion_min": 146,
    "_duracion_src": "la parrilla imprime una ventana de 240 min (p51) y las obras ocupan 94",
@@ -1444,11 +1522,15 @@
      "genre": "Documental",
      "sinopsis": "En la frontera entre Marruecos y España, esperamos impacientemente la \"boza\" para cruzar a Europa. Tras un intento fallido tras otro, sobrevivimos, y yo, el \"Artista\", debo mantener viva la llama de la esperanza para todo el grupo.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Africano",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p79"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src": "parrilla impresa en el PDF oficial del programa, p79",
+   "seccion": "Panorama Africano"
   },
   {
    "dia": "2026-09-18",
@@ -1467,11 +1549,15 @@
      "genre": "Documental",
      "sinopsis": "Cinco personajes afrocolombianos en medio de Bogotá, cinco destinos dispares en una ciudad que les es hostil. Rubi Quejada, una joven modelo desplazada del Chocó; Shaka, un rapero y champetúo que trabaja en un cibercafé; Makambile, un cantante de champeta y mesero; Jah-Man, un profeta autodidacta de Buenaventura; y Afreeway, un joven pandillero que busca llegar lejos.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Colombiano",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p79",
+   "seccion": "Panorama Colombiano",
    "has_qa": true,
    "_qa_src": "el programa anuncia la presencia del director de «Iniciación en la Octava Dimensión»"
   },
@@ -1492,11 +1578,15 @@
      "genre": "Ficción",
      "sinopsis": "Tras una serie de brutales asesinatos, el último de los cuales acaba con la vida de su compañero de la infancia, un grupo de mejores amigos distanciados se reconecta para organizar la protesta más grande en la Namibia posterior al apartheid.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Africano",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p79"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src": "parrilla impresa en el PDF oficial del programa, p79",
+   "seccion": "Panorama Africano"
   },
   {
    "dia": "2026-09-19",
@@ -1516,7 +1606,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/free-fall.jpg",
      "posterSource": "custom",
      "lbSlug": "caida-libre",
@@ -1536,7 +1626,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/bertha.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -1565,7 +1655,9 @@
      "titulo_original": "One Sunday",
      "title_en": "One Sunday",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
-     "_ojo": "la ficha del programa dice 12' y la parrilla 20'; TMDB confirma 20'"
+     "_ojo": "la ficha del programa dice 12' y la parrilla 20'; TMDB confirma 20'",
+     "_seccion": "Fronteras Latam",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     },
     {
      "titulo": "Amelia",
@@ -1580,7 +1672,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Africano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/amelia.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -1598,13 +1690,14 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Diaspórica",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/cafe.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p82",
    "seccion": "Panorama Colombiano",
    "sinopsis": "Seis miradas breves que encuentran lo extraordinario en lo cotidiano, un domingo cualquiera, una taza de café, un encuentro casual y revelan las tensiones raciales, familiares y sociales que atraviesan la vida diaria en cuatro continentes.",
@@ -1629,11 +1722,15 @@
      "genre": "Documental",
      "sinopsis": "Father's Day es un documental íntimo y poderoso que explora el legado de los padres ausentes en las comunidades negras de América del Norte y el Caribe. Impulsada por el viaje personal de la directora, la película entrelaza las historias de mujeres de Canadá y Guadalupe que crecieron navegando el silencio, las heridas y la resiliencia moldeadas por la ausencia paterna.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Panorama Diaspórica",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p82"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src": "parrilla impresa en el PDF oficial del programa, p82",
+   "seccion": "Panorama Diaspórica"
   },
   {
    "dia": "2026-09-20",
@@ -1672,7 +1769,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Fronteras Latam",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/carabali.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -1692,7 +1789,7 @@
      "title_en": "A King Displaced",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Prisma Femenino",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/a-king-displaced.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -1719,6 +1816,7 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p84",
    "seccion": "Fronteras Latam",
    "sinopsis": "Cuatro documentales que rescatan saberes, historias y luchas silenciadas, para reafirmar que la memoria es, en sí misma, un acto de resistencia.",
@@ -1741,11 +1839,15 @@
      "genre": "Documental",
      "sinopsis": "En Dakar, Malick Biteye forma un equipo de fútbol compuesto por jugadores con trastornos mentales. En un contexto de pobreza absoluta, las historias y los deseos de estos hombres, que luchan contra el estigma, se entrelazan. Su viaje culmina en Italia, donde cumplen su sueño de jugar en un partido de fútbol internacional.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Otra Mirada",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p84"
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
+   "_src": "parrilla impresa en el PDF oficial del programa, p84",
+   "seccion": "Otra Mirada"
   },
   {
    "dia": "2026-09-20",
@@ -1768,7 +1870,7 @@
      "title_en": "Aisha Can't Fly Away",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Africano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/aisha-can-t-fly-away.jpg",
      "posterSource": "custom",
      "lbSlug": "aisha-cant-fly-away",
@@ -1776,6 +1878,7 @@
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p84",
    "seccion": "Panorama Africano"
   },
@@ -1798,7 +1901,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Colombiano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/kanekalon.jpg",
      "posterSource": "custom",
      "lbSlug": "kanekalon",
@@ -1818,7 +1921,7 @@
      "synopsis_lang": "es",
      "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
      "_seccion": "Panorama Africano",
-     "_section_src": "heredada de la selección oficial del Chocó ya publicada; el programa de Bogotá no imprime secciones",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)",
      "poster": "/assets/qaff/amelia.jpg",
      "posterSource": "custom",
      "_poster_src": "heredado del onboarding de QAFF Quibdó (agosto 2026)"
@@ -1834,10 +1937,13 @@
      "genre": "Ficción",
      "sinopsis": "Un domingo cuenta la historia de un posible encuentro entre Samuel y una bala perdida. La bala proviene de un disparo realizado en la favela donde vive Samuel. Un domingo soleado, Samuel decide aprovechar su día libre para ir a la playa. En el camino, vemos los desafíos particulares que enfrenta un joven negro al moverse por la sociedad. La violencia, la comedia, el romance y el suspenso atraviesan el curso de este día, que podría resultar fatídico.",
      "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)",
+     "_seccion": "Fronteras Latam",
+     "_section_src": "categoría del calendario oficial del festival (qaff-2026-programacion-raw.json, 2 ago)"
     }
    ],
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "_src": "parrilla impresa en el PDF oficial del programa, p(65, 66, 67)",
    "seccion": "Panorama Colombiano"
   },
@@ -1849,9 +1955,12 @@
    "obras": [],
    "event_kind": "dialogo",
    "acceso": "Entrada libre con inscripción previa",
+   "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
    "sinopsis": "Modera Iván Jiménez · Wilson Borja · Francisco Caldas Vela · Rafael Antonio Díaz",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p67",
+   "seccion": "Diálogo Improbable",
+   "_section_src": "impresa en la página del programa y declarada como categoría en el calendario oficial",
    "hora_fin": "18:00",
    "duracion_min": 73,
    "_duracion_src": "la parrilla imprime una ventana de 120 min (p67) y las obras ocupan 47",

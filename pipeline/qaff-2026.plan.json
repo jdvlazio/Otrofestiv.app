@@ -88,9 +88,17 @@
         "Universidad Nacional de Colombia - Bogotá",
         "Facultad de Artes"
       ],
-      "Universidad de los Andes": [
+      "Universidad de los Andes · Auditorio (ML-C)": [
         "Universidad de los Andes - Bogotá",
-        ""
+        "Auditorio (ML-C)"
+      ],
+      "Universidad de los Andes · Salón (ML513)": [
+        "Universidad de los Andes - Bogotá",
+        "Salón (ML513)"
+      ],
+      "Universidad de los Andes · Salón (RGD08)": [
+        "Universidad de los Andes - Bogotá",
+        "Salón (RGD08)"
       ]
     },
     "secciones": {
@@ -149,6 +157,20 @@
         "archetype": "Especiales / Eventos",
         "color": "#467808",
         "order": 90
+      },
+      "Diálogo Improbable": {
+        "emoji": "💬",
+        "en": "Improbable Dialogue",
+        "archetype": "Charlas / Industria",
+        "color": "#8B5CF6",
+        "order": 3
+      },
+      "Miradas Especiales": {
+        "emoji": "✨",
+        "en": "Special Screenings",
+        "archetype": "Especiales / Eventos",
+        "color": "#EC4899",
+        "order": 3
       }
     },
     "_secciones_src": "verbatim del QAFF ya publicado (festivals/qaff-2026.json): emoji, inglés, arquetipo, color y orden son curaduría YA APROBADA — no se reinventa al cambiar de ciudad, el festival es el mismo",
@@ -224,5 +246,6 @@
       "cmd": "python3 pipeline/publicar.py qaff-2026",
       "que": "build → festivals/ (valida el contrato al escribir)"
     }
-  ]
+  ],
+  "_copy_pendiente": "Diálogo Improbable y Miradas Especiales: el NOMBRE es del festival (el PDF imprime «DIÁLOGO IMPROBABLE»; su web titula /outofcompetition «MIRADAS ESPECIALES»). El emoji, la traducción y el arquetipo son nuestros y están pendientes del visto bueno de Juan — 💬/Charlas Industria sigue el precedente de FICMA y FICDEH."
 }

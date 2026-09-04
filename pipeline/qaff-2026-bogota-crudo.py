@@ -26,6 +26,12 @@ del 5 SEP en el Museo Nacional NO se incluye.
 import json, os, re, sys, unicodedata, datetime
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# El RSVP de QAFF es el nativo de Boom y vive a nivel de CALENDARIO, no por
+# evento: no hay deep-link por función. El formulario está en la página del
+# programa, que es a donde apuntaba el build de Quibdó ya publicado. Sin esto la
+# app dice que hay que inscribirse y no dice a dónde ir.
+INSCRIPCION = 'https://www.quibdoafricafilmfestival.com/es/program-2026'
 SCR  = os.path.join(BASE, 'pipeline', 'qaff_pdf')
 sys.path.insert(0, SCR)
 import programa as pr                                        # noqa: E402
@@ -243,6 +249,89 @@ def obra(titulo, fichas, cred):
     return {k: v for k, v in o.items() if v not in (None, '', [], {})}
 
 
+def _canon_seccion():
+    """El festival escribe sus categorías en MAYÚSCULAS («PANORAMA COLOMBIANO»)
+    y el plan las declara con su grafía de publicación («Panorama Colombiano»).
+    Es la MISMA sección: se canoniza a la del plan, que es la que lleva emoji,
+    arquetipo y traducción. Lo que no esté declarado se deja tal cual, para que
+    el ensamblador lo cante en vez de inventarle una."""
+    pl = os.path.join(BASE, 'pipeline', 'qaff-2026.plan.json')
+    if not os.path.exists(pl):
+        return {}
+    dec = json.load(open(pl, encoding='utf-8'))['festival']['secciones']
+    out = {n(k): k for k in dec}
+    # El festival escribe «PRISMA FEMININO» (con i) en su calendario y en su web.
+    # Ya publicamos Quibdó con «Prisma Femenino», que es la grafía correcta y la
+    # que lleva emoji y traducción; dos grafías de la misma sección parten la
+    # sección en dos en la app.
+    out.setdefault('prismafeminino', 'Prisma Femenino')
+    # El calendario dice «FUERA DE COMPETICION»; la propia web del festival
+    # titula esa página «MIRADAS ESPECIALES», que es el nombre publicable.
+    out.setdefault('fueradecompeticion', 'Miradas Especiales')
+    return out
+
+
+def del_calendario():
+    """La SEGUNDA fuente de secciones, y la que de verdad manda: el calendario
+    oficial del festival, con sus 15 categorías propias.
+
+    Estaba capturado desde el 2 de agosto y no se consultaba. El cruce miraba
+    solo el build de Quibdó, que lleva los títulos en ESPAÑOL, y el calendario
+    los lleva en ORIGINAL: «Los Chicos del Banjo» nunca iba a encontrar a «THE
+    BANJO BOYS». Por eso 26 de 44 programas salían sin sección y dábamos por
+    ausente algo que el festival sí había publicado. El fallo no fue de lectura
+    —eso lo vigilan verifica.py y cobertura.py— sino de CRUCE, que no lo miraba
+    nadie: se buscó en una fuente por una clave que esa fuente no usa.
+
+    Devuelve {clave normalizada → categoría}. La categoría dueña es la PRIMERA
+    del evento (decisión de Juan, 2 ago): varias obras traen dos o tres."""
+    p = os.path.join(BASE, 'festivals', 'staging', 'qaff-2026-programacion-raw.json')
+    if not os.path.exists(p):
+        return {}
+    raw = json.load(open(p, encoding='utf-8'))
+    out = {}
+    for e in raw.get('events', []):
+        if not str(e.get('start', '')).startswith('2026-09'):
+            continue
+        cats = [c['name'] for c in (e.get('categories') or []) if c.get('name')]
+        t = (e.get('title') or '').strip()
+        if not t or not cats:
+            continue
+        # «GOD'S WORK (Copy)» es la segunda función de la misma obra, no otra obra
+        t = re.sub(r'\s*\(copy\)\s*$', '', t, flags=re.I)
+        out.setdefault(n(t), cats[0])
+    return out
+
+
+# Títulos que el PDF de Bogotá castellaniza y el calendario NO. Cada uno se
+# comprobó contra la selección oficial del sitio, no se adivinó.
+PUENTE_SECCION = {
+    'Los Chicos del Banjo': 'THE BANJO BOYS',
+    'El Anclaje del Tiempo': 'THE ANCHORAGE OF THE TIME',
+    'Sobreviviendo a Biafra': 'SURVIVING BIAFRA',
+    'Tres Hombres Negros': 'THREE BLACK MEN',
+    'De Barro y Sangre': 'OF MUD AND BLOOD',
+    'La Obra de Dios': "GOD'S WORK",
+    'Los Viajeros': 'THE TRAVELERS',
+    'Iniciación en la Octava Dimensión': 'INITIATION INTO THE EIGHTH DIMENSION',
+    'Generación Equivocada': 'WRONG GENERATION',
+    'Día del Padre': "FATHER'S DAY",
+    'El Coach de los Locos': 'THE MADMEN COACH',
+    'Performance Artistica e Musical': 'MUESTRA ARTISTICA',
+    # En la selección oficial del sitio va marcada «(out of competition)», que es
+    # una sección del festival, no una nota.
+}
+
+# Sección que NO sale de cruzar nada, sino de lo que el propio festival IMPRIME.
+# Va aparte del puente para que se vea de dónde viene cada una.
+SECCION_DIRECTA = {
+    # La selección oficial de su web la marca «(out of competition)».
+    'hyphen': ('FUERA DE COMPETICION', 'marcada «(out of competition)» en la '
+               'selección oficial del sitio del festival'),
+}
+_PUENTE_N = None
+
+
 def del_chocho():
     """La SECCIÓN no está en el programa de Bogotá: no la imprime ni la parrilla
     ni la ficha, en ninguna de las 86 páginas. Pero es el MISMO festival y
@@ -279,6 +368,10 @@ def del_chocho():
 def main():
     fichas, cred = cargar()
     choco = del_chocho()
+    calen = del_calendario()
+    canon = _canon_seccion()
+    _cn = lambda x: canon.get(n(x), x)
+    sin_cruce = []
     # El Q&A no se escribe a mano: se lee del PDF. «con la presencia de la
     # directora» va pegada a UNA obra, y el extractor exige que cada marca caiga
     # en una sola función. Si el festival mueve una obra de franja, esto deja de
@@ -291,7 +384,25 @@ def main():
         for o, t in zip(obs, obras):
             h = (choco.get(n(o['titulo'])) or choco.get(n(t))
                  or choco.get(n(o.get('titulo_original') or '')) or {})
-            if h.get('section'):
+            # 1º el calendario oficial (la categoría que declara el FESTIVAL),
+            # 2º la selección del Chocó que ya publicamos. El calendario manda:
+            # es su dato, no nuestra herencia.
+            global _PUENTE_N
+            if _PUENTE_N is None:
+                _PUENTE_N = {n(k): v for k, v in PUENTE_SECCION.items()}
+            _dir = SECCION_DIRECTA.get(n(t)) or SECCION_DIRECTA.get(n(o['titulo']))
+            _cat = (calen.get(n(_PUENTE_N.get(n(t)) or ''))
+                    or calen.get(n(o['titulo'])) or calen.get(n(t))
+                    or calen.get(n(o.get('titulo_original') or ''))
+                    or calen.get(n(o.get('title_en') or '')))
+            if _dir:
+                o['_seccion'] = _cn(sin_emoji(_dir[0]))
+                o['_section_src'] = _dir[1]
+            elif _cat:
+                o['_seccion'] = _cn(sin_emoji(_cat))
+                o['_section_src'] = ('categoría del calendario oficial del festival '
+                                     '(qaff-2026-programacion-raw.json, 2 ago)')
+            elif h.get('section'):
                 # Clave INTERNA: solo sirve para votar la sección de la función.
                 # Publicada en la obra, el festival acaba con dos strings para la
                 # misma sección —«🛶 Panorama Colombiano» en la función y
@@ -325,7 +436,11 @@ def main():
              # traduce sola a is_free + requires_registration. FALTA el enlace de
              # inscripción: sin él la app dice que hay que registrarse y no a dónde.
              'acceso': 'Entrada libre con inscripción previa',
+             'ticket_url': INSCRIPCION,
              '_src': f'parrilla impresa en el PDF oficial del programa, p{pag}'}
+        for o in obs:
+            if not o.get('_seccion'):
+                sin_cruce.append(o['titulo'])
         _s = [o['_seccion'] for o in obs if o.get('_seccion')]
         if _s:
             # La sección del programa es la de la MAYORÍA de sus obras. En
@@ -354,8 +469,18 @@ def main():
              'titulo': titulo, 'obras': [],
              'event_kind': 'dialogo' if tipo == 'dialogo' else tipo,
              'acceso': 'Entrada libre con inscripción previa',
+             'ticket_url': INSCRIPCION,
              'sinopsis': quien, 'synopsis_lang': 'es',
              '_src': f'PDF oficial del programa, p{pag}'}
+        # La sección de una actividad NO se inventa: «DIÁLOGO IMPROBABLE» está
+        # impreso en su propia página del programa, y es además una de las 15
+        # categorías del calendario oficial. La Muestra Artística, igual.
+        a['seccion'] = {'dialogo': 'DIALOGO IMPROBABLE',
+                        'muestra': 'MUESTRA ARTISTICA',
+                        'vernissage': 'MUESTRA ARTISTICA'}.get(tipo)
+        a['seccion'] = _cn(a['seccion']) if a['seccion'] else None
+        a['_section_src'] = ('impresa en la página del programa y declarada como '
+                             'categoría en el calendario oficial')
         if fin:
             a['hora_fin'] = fin
             # La duración de una actividad es OBLIGATORIA: alimenta el plan, y sin
