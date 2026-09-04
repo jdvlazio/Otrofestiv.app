@@ -339,7 +339,17 @@ export async function exportICS(){
     // para una obra anclada cuyo bloque real termina 19:51 (la mentira de la
     // captura del 31 jul, fugada al calendario del teléfono).
     const end=new Date(start.getTime()+blockDuration(s)*60000);
-    const clean=str=>(str||'').replace(/[\r\n,;\\]/g,' ').trim();
+    // RFC 5545 §3.3.11: en un valor TEXT la barra invertida, la coma, el punto y
+    // coma y el salto de línea se ESCAPAN; borrarlos es perder el dato. Acá se
+    // reemplazaban por un espacio y «Ni un minuto de silencio, toda una vida de
+    // búsqueda» llegaba al calendario del teléfono partido en dos, con doble
+    // espacio donde iba la coma. Medido: 39 obras en 12 festivales lo sufren
+    // (auditoría 4 sep 2026). El orden importa — la barra primero, o se escaparían
+    // las barras que agrega el propio escape.
+    const clean=str=>(str||'').trim()
+      .replace(/\\/g,'\\\\')
+      .replace(/\r?\n/g,'\\n')
+      .replace(/([,;])/g,'\\$1');
     lines.push('BEGIN:VEVENT',
       `DTSTART:${fmt(start)}`,`DTEND:${fmt(end)}`,
       `SUMMARY:${clean(s._title)}`,
