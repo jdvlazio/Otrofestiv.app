@@ -397,7 +397,26 @@ export async function exportICS(){
       'END:VEVENT');
   });
   lines.push('END:VCALENDAR');
-  const icsText=lines.join('\r\n');
+  // PLEGADO — RFC 5545 §3.1: ninguna línea pasa de 75 OCTETOS; la continuación
+  // empieza con un espacio. Medido en un .ics de FICDEH: 10 de 53 líneas se
+  // pasaban, hasta 138 (el UID del Encuentro) y 98 (un SUMMARY largo). Ningún
+  // calendario nos lo rechazó —Google y Apple son tolerantes—, así que es deuda
+  // de formato, no un fallo visto; se paga porque el estándar es el contrato con
+  // un programa que no controlamos.
+  // Se cuenta en OCTETOS y se corta por punto de código: partir un carácter de
+  // varios bytes por la mitad rompería el UTF-8, y los títulos traen acentos.
+  const _plegar=l=>{
+    const _oct=c=>new TextEncoder().encode(c).length;
+    if(_oct(l)<=75) return l;
+    const out=[]; let cur='', max=75;
+    for(const ch of l){
+      if(_oct(cur)+_oct(ch)>max){ out.push(cur); cur=' '; max=76; }  // 1 octeto se va en el espacio
+      cur+=ch;
+    }
+    if(cur.trim()!=='') out.push(cur);
+    return out.join('\r\n');
+  };
+  const icsText=lines.map(_plegar).join('\r\n');
   const fileName=`otrofestiv-${_icsId}.ics`;
   // iOS nativo (SwiftUI WKWebView + EventKit): alta directa al Calendario,
   // sin hoja de compartir. El puente Swift expone messageHandler 'calendar'.
