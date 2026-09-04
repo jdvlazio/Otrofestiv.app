@@ -652,31 +652,17 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'qaff2026':{
-    // OCULTO todavía (group:'test'), a la espera del aviso de traslado.
+    // VISIBLE desde el 4 sep 2026, con la banda de TRASLADADO.
     //
-    // El festival trasladó LA TOTALIDAD de las proyecciones a Bogotá por el
+    // El festival trasladó LA TOTALIDAD de sus proyecciones a Bogotá por el
     // terremoto del 10 ago que golpeó Quibdó y el Chocó — el MISMO sismo que
     // aplazó FICMA. Comunicado del 20 ago: instagram.com/p/DcREogQER9d
     //
-    // Ya NO es el caso de agosto —entonces se ocultó porque lo publicado decía
-    // Quibdó y no teníamos Bogotá—. Ahora el JSON es el de Bogotá: 44 funciones,
-    // 6 sedes, 14–22 SEP. Lo que falta para mostrarlo es la BANDA de traslado,
-    // que necesita un `status` nuevo: no es `postponed` (el festival SÍ se hace,
-    // en sus fechas) ni el `NOTICES` con `cities` de FICDEH (ese se engancha a
-    // funciones de la ciudad cancelada, y aquí Quibdó no tiene ninguna).
+    // Estuvo oculto con `group:'test'` entre el 23 ago y el 4 sep, mientras lo
+    // publicado seguía siendo el programa de Quibdó —una ciudad donde ya no se
+    // proyecta nada— y no teníamos el de Bogotá. Ya no: el JSON es el de
+    // Bogotá, 44 funciones en 6 sedes, y la banda explica el cambio.
     //
-    // El afiche se queda: es el suyo, el de la 8ª edición. Dice «14-18
-    // SEPTIEMBRE» y el programa llega al 22 — la banda de traslado es lo que
-    // explica esa diferencia.
-    // TRASLADADO, no aplazado: el festival SÍ se hace y en sus fechas, solo que
-    // toda su programación se movió de Quibdó a Bogotá. Por eso `kind:'moved'`,
-    // que pinta la banda y NADA más — punto verde, preselección y fechas reales
-    // siguen intactos. `note` es nuestra frase con la cita entrecomillada donde
-    // son sus palabras (comunicado del 20 ago); `note_en` es traducción nuestra,
-    // aprobada por Juan. Reversión: borrar este bloque.
-    //
-    // El afiche es el suyo y dice «14-18 SEPTIEMBRE» mientras el programa llega
-    // al 22: es esta banda la que explica esa diferencia.
     status:{
       kind:'moved',
       since:'2026-08-20',
