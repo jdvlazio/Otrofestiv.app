@@ -3128,88 +3128,144 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar icon-single-source: {_e}')
 
-# ── [country-flags] si hay país, hay bandera (regla Juan 18 jul 2026) ──────────
+# ── [country-flags] si hay país, hay bandera (regla Juan 18 jul 2026) ─────────
 # El bug Voces del Territorio: countryToFlags partía solo por "/" y el string con
-# comas caía al globo 🌍. Fix aplicado; este guardián evita la recaída a nivel de
-# DATOS: en los festivales VIVOS, todo país (partido por coma/barra) debe estar en
-# _COUNTRY_FLAGS o el film debe traer un campo `flags` autorizado. Un país nuevo sin
-# mapear se caza aquí antes de mostrar globo. Festival nuevo activo → sumarlo abajo.
+# comas caía al globo 🌍. Este guardián evita la recaída a nivel de DATOS.
+#
+# Ya no lee una tabla escrita a mano: usa lib.banderas(), el MISMO motor y la
+# MISMA tabla generada que el app (src/domain/banderas.js sobre paises.js). Antes
+# comparaba contra un literal del controlador con reglas propias, y eso era
+# justamente el fallo que perseguía: la tabla del app decía «Países Bajos» y
+# Cinemancia escribió «Países bajos», así que el guardián daba verde y la ficha
+# de «Koki, Ciao» mostraba un globo, con el festival en curso (Juan, 4 sep 2026).
+#
+# Y mira TODOS los festivales, no solo los vivos: un archivado se sigue abriendo
+# desde el splash, y la lista de vivos ya envejeció una vez.
 check = 'country-flags'
 try:
-    import re as _re, json as _json, datetime as _dt, glob as _g2
-    # Los festivales VIVOS se DERIVAN de FESTIVAL_CONFIG (festivalEndStr futuro).
-    # Antes era una lista escrita a mano y nadie la actualizó nunca: el guardián
-    # llevaba meses dando verde sobre dos festivales ya pasados mientras
-    # FICMontañas y FINCA se publicaban sin revisar — "el segundo festival
-    # consecutivo con globos" (Juan, 29 jul 2026). Un guardián con lista manual
-    # no es un guardián: es una foto que envejece.
-    _cfg = open('src/config.js', encoding='utf-8').read()
-    _hoy = _dt.date.today().isoformat()
-    _vivos = set()
-    for _fid, _end in _re.findall(r"'([a-z0-9]+)':\s*\{.*?festivalEndStr:\s*'(\d{4}-\d{2}-\d{2})", _cfg, _re.S):
-        if _end >= _hoy:
-            _vivos.add(_re.sub(r'([a-zA-Z]+)(\d+)$', r'\1-\2', _fid))
-    _ACTIVE = [f'festivals/{_v}.json' for _v in sorted(_vivos)]
-    if not _ACTIVE:  # sin festivales vivos, revisar el más reciente igual
-        _ACTIVE = sorted(_g2.glob('festivals/*.json'))[-1:]
-    _js = open('src/controller/sheets-controller.js', encoding='utf-8').read()
-    _m = _re.search(r'const _COUNTRY_FLAGS=\{(.*?)\};', _js, _re.S)
-    _mapped = set(_re.findall(r"'([^']+)':", _m.group(1))) if _m else set()
-    _bad = []
-    def _walk_films(_films, _fid):
-        for _f in _films or []:
-            _c = (_f.get('country') or '').strip()
-            # SIN el `and not flags`. Ese atajo daba por buena la obra que ya
-            # traía bandera en el dato, y hay superficies que NO la usan: la
-            # ficha de un corto la vuelve a derivar del país (`data-cc`) con
-            # countryToFlags. «Koki, Ciao» tenía su 🇳🇱 y mostraba 🌍 porque
-            # Cinemancia escribió «Países bajos» y la tabla del app decía
-            # «Países Bajos» (Juan, 4 sep 2026). El país tiene que mapear
-            # AUNQUE la bandera ya esté: si no, el guardián verde y el globo en
-            # pantalla conviven, que es como llevábamos meses.
-            if _c:
-                _parts = [p.strip() for p in _re.split(r'[,/()]', _c) if p.strip()]
-                # Estados que ya no existen: Unicode no tiene bandera para
-                # ellos y ponerles la de su sucesor falsearía la procedencia de
-                # la obra. Se declaran aquí, no se mapean.
-                _SIN_BANDERA = {'URSS', 'Yugoslavia', 'Checoslovaquia'}
-                _unmapped = [p for p in _parts if p not in _mapped and p not in _SIN_BANDERA]
-                if _unmapped:
-                    _bad.append(f"{_fid}: '{_f.get('title','?')[:30]}' país sin bandera: {', '.join(_unmapped)}")
-            _walk_films(_f.get('film_list'), _fid)
-    for _af in _ACTIVE:
+    import glob as _g2, json as _json, sys as _sys
+    _sys.path.insert(0, 'pipeline')
+    import lib as _lib
+    # «Varios», «Iberoamérica», la URSS: no llevan bandera A PROPÓSITO, y están
+    # declaradas en el generador. Perseguirlas sería pedir que alguien invente
+    # una bandera para un Estado que no existe.
+    _SINB = set(_json.load(open('pipeline/paises.json', encoding='utf-8'))['sin_bandera'])
+    _declarado = lambda _c: all(_lib.norm(_x) in _SINB or not _lib.norm(_x)
+                                for _x in __import__('re').split(r'[,/()]', _c))
+    _bad, _mudos = [], []
+    for _af in sorted(_g2.glob('festivals/*.json')):
+        _fid = _af.split('/')[-1]
         try:
             _d = _json.load(open(_af, encoding='utf-8'))
-        except FileNotFoundError:
+        except Exception:
             continue
-        _walk_films(_d.get('films'), _af.split('/')[-1])
-    # SEGUNDA MITAD, la que faltaba. Lo de arriba comprueba que el país SE PUEDA
-    # mapear; no que la bandera EXISTA en el dato. FICDEH pasó en verde durante
-    # todo el festival con 415 films mostrando su país y ninguna bandera: sus
-    # países estaban perfectamente mapeados y el pipeline nunca emitió `flags`,
-    # que es lo único que la ficha pinta (`flagFmt(f.flags)`, sin derivar).
-    # Un guardián que verifica que algo SE PUEDE hacer no verifica que se haya
-    # hecho. Lo encontró Juan mirando la app, 13 ago 2026.
-    _mudos = []
-    for _af in _ACTIVE:
-        try:
-            _d = _json.load(open(_af, encoding='utf-8'))
-        except FileNotFoundError:
-            continue
+        _vistos = set()
+        def _walk_films(_films):
+            for _f in _films or []:
+                _c = (_f.get('country') or '').strip()
+                # SIN el `and not flags`. Ese atajo daba por buena la obra que ya
+                # traía bandera en el dato, y hay superficies que NO la usan: la
+                # ficha de un corto la vuelve a derivar del país (`data-cc`). El
+                # país tiene que mapear AUNQUE la bandera ya esté; si no, el
+                # guardián verde y el globo en pantalla conviven.
+                if _c and _c not in _vistos and not _lib.banderas(_c) and not _declarado(_c):
+                    _vistos.add(_c)
+                    _bad.append(f"{_fid}: '{_f.get('title','?')[:30]}' país sin bandera: {_c}")
+                _walk_films(_f.get('film_list'))
+        _walk_films(_d.get('films'))
+        # SEGUNDA MITAD. Lo de arriba comprueba que el país SE PUEDA mapear; no
+        # que la bandera EXISTA en el dato. FICDEH pasó en verde todo el festival
+        # con 415 films mostrando su país y ninguna bandera: los países estaban
+        # mapeados y el pipeline nunca emitió `flags`, que es lo único que pinta
+        # la ficha (`flagFmt(f.flags)`, sin derivar). Un guardián que verifica que
+        # algo SE PUEDA hacer no verifica que se haya hecho (Juan, 13 ago 2026).
         _cc = [f for f in (_d.get('films') or []) if (f.get('country') or '').strip()]
         _sin = [f for f in _cc if not f.get('flags')]
         if _cc and len(_sin) == len(_cc):
-            _mudos.append(f'{_af.split("/")[-1]}: {len(_cc)} films con país y '
-                          f'NINGUNO con flags')
+            _mudos.append(f'{_fid}: {len(_cc)} films con país y NINGUNO con flags')
     if _bad:
-        fail(check, 'país sin bandera en festival vivo (mapear en _COUNTRY_FLAGS o añadir flags): ' + '; '.join(_bad[:6]))
+        fail(check, 'país que saldría con globo (mapear en scripts/generate-paises.js '
+                    'o declararlo sin bandera): ' + '; '.join(_bad[:6]))
     elif _mudos:
-        fail(check, 'festival vivo que muestra país sin una sola bandera: '
-                    + '; '.join(_mudos))
+        fail(check, 'festival que muestra país sin una sola bandera: ' + '; '.join(_mudos))
     else:
-        ok(check, 'todo país de festivales vivos produce bandera (nunca globo)')
+        ok(check, 'todo país de los 18 festivales produce bandera (nunca globo)')
 except Exception as _e:
-    warn(check, f'no se pudo verificar country-flags: {_e}')
+    fail(check, f'no se pudo verificar country-flags: {_e}')
+
+# ── [paises-generados] la tabla de países no se toca a mano ───────────────────
+# Había DOS tablas escritas a mano —_COUNTRY_FLAGS en el app y BANDERAS en
+# lib.py— y divergieron en todo: contenido, normalización y hasta el modo de
+# partir un string. Ahora se generan las dos de scripts/generate-paises.js. Este
+# guardián comprueba que sigan siendo lo que el generador produce: sin él, la
+# fuente única dura hasta el primer arreglo apurado a mano.
+check = 'paises-generados'
+try:
+    import subprocess as _sp
+    _r = _sp.run(['node', 'scripts/generate-paises.js', '--check'],
+                 capture_output=True, text=True, timeout=60)
+    if _r.returncode:
+        fail(check, (_r.stderr or _r.stdout).strip().replace('\n', ' · ')[:300])
+    else:
+        ok(check, _r.stdout.strip().lstrip('✓ '))
+except FileNotFoundError:
+    warn(check, 'node no disponible en este entorno')
+except Exception as _e:
+    fail(check, f'no se pudo verificar paises-generados: {_e}')
+
+# ── [banderas-paridad] los dos motores dan LO MISMO ───────────────────────────
+# El algoritmo está escrito dos veces por fuerza —Python en el pipeline, JS en el
+# app— y es exactamente ahí donde nacen estos bugs: mismo dato, dos respuestas.
+# La tabla ya es única; esto comprueba lo otro, que se lea igual. Se prueba sobre
+# los países REALES del repo más los casos que alguna vez se rompieron.
+check = 'banderas-paridad'
+try:
+    import glob as _g3, json as _json3, subprocess as _sp3, sys as _sys3
+    _sys3.path.insert(0, 'pipeline')
+    import lib as _lib3
+    _toks = set()
+    for _af in sorted(_g3.glob('festivals/*.json')):
+        try:
+            _d = _json3.load(open(_af, encoding='utf-8'))
+        except Exception:
+            continue
+        def _w(_o):
+            if isinstance(_o, dict):
+                for _k, _v in _o.items():
+                    if _k.startswith('_'):
+                        continue
+                    if _k == 'country' and isinstance(_v, str) and _v.strip():
+                        _toks.add(_v.strip())
+                    else:
+                        _w(_v)
+            elif isinstance(_o, list):
+                for _x in _o:
+                    _w(_x)
+        _w(_d)
+    _toks |= {'Antigua y Barbuda', 'Guinea-Bissau', 'Colombia y México', 'Países bajos',
+              'España (Austria)', 'Rep. Dominicana', 'URSS', 'Varios', ''}
+    _lista = sorted(_toks)
+    _js = ('const {countryToFlags}=await import("./src/domain/banderas.js");'
+           'const t=JSON.parse(process.argv[1]);'
+           'console.log(JSON.stringify(t.map(x=>countryToFlags(x))));')
+    _r = _sp3.run(['node', '--input-type=module', '-e', _js, _json3.dumps(_lista)],
+                  capture_output=True, text=True, timeout=60)
+    if _r.returncode:
+        raise RuntimeError((_r.stderr or '?').strip()[:200])
+    _des = _json3.loads(_r.stdout)
+    # El app pinta 🌍 donde el pipeline devuelve vacío: es el mismo veredicto.
+    _dif = [f'«{t}» pipeline={p or "(vacío)"} app={a}'
+            for t, p, a in zip(_lista, [_lib3.banderas(x) for x in _lista], _des)
+            if (p or '🌍') != a]
+    if _dif:
+        fail(check, f'{len(_dif)} país(es) con distinta respuesta según el motor: '
+                    + '; '.join(_dif[:5]))
+    else:
+        ok(check, f'los dos motores coinciden en los {len(_lista)} países del repo')
+except FileNotFoundError:
+    warn(check, 'node no disponible en este entorno')
+except Exception as _e:
+    fail(check, f'no se pudo verificar banderas-paridad: {_e}')
 
 # ── [poster-radio-unico] toda superficie de póster usa var(--r-poster) ────────
 # El póster se ve IGUAL en toda la app. Hasta ago 2026 convivían TRES radios

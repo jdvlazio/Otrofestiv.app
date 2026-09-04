@@ -886,10 +886,28 @@ sobreviven las **funcionales de lista** (`--bdr-l` entre ítems, con `:last-chil
 sin borde): entre películas de un programa, opciones de menú, funciones sin
 confirmar. Toda divisoria de lista usa `--bdr-l` (el tenue), nunca `--bdr`.
 
-### 8.7 · Banderas de país (`[country-flags]`)
-`countryToFlags()` parte por coma Y barra (no por guion: "Guinea-Bissau" es un
-país). En festivales vivos, todo país debe producir bandera (mapeado en
-`_COUNTRY_FLAGS` o campo `flags` autorizado) — nunca globo 🌍.
+### 8.7 · Banderas de país (`[country-flags]`, `[paises-generados]`, `[banderas-paridad]`)
+Un país **siempre** produce bandera. Nunca globo 🌍.
+
+La tabla NO se escribe a mano: la genera `scripts/generate-paises.js` a partir de
+ICU (`Intl.DisplayNames`, español e inglés) y la bandera se **calcula** del código
+ISO. Escribe los dos consumidores —`src/domain/paises.js` para el app y
+`pipeline/paises.json` para el pipeline— y `[paises-generados]` comprueba que
+nadie los haya retocado. Un país nuevo, un alias o una etiqueta sin bandera se
+añade **en el generador**, nunca en el archivo generado.
+
+El motor es uno por lado y hace lo mismo: `countryToFlags()`
+(`src/domain/banderas.js`) y `lib.banderas()`. Parten por coma, barra y
+paréntesis —«España (Austria)» son dos países— y por « y » o guion **solo si el
+token entero no resuelve**: «Antigua y Barbuda» y «Guinea-Bissau» son un país
+cada uno. `[banderas-paridad]` comprueba que los dos den la misma respuesta sobre
+todos los países del repo.
+
+Por qué tanto aparato: hasta sep 2026 había dos tablas a mano con dos
+normalizaciones distintas. Cinemancia escribió «Países bajos» con b minúscula, el
+pipeline lo normalizaba y el app comparaba exacto, y «Koki, Ciao» mostró un globo
+teniendo su 🇳🇱 en el dato, con el festival en curso. Al destapar el guardián
+aparecieron 23 países más en la misma situación.
 
 ### 8.8 · Ficha — el título le hace sitio a la X (`sheet-close.spec.js`)
 `.pel-sheet-title::before` es un espaciador flotante que reserva la esquina

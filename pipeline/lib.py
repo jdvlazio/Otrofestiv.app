@@ -270,21 +270,49 @@ ALIAS = {'rep dominicana': '🇩🇴', 'rd congo': '🇨🇩', 'guinea bissau': 
          'republica democratica del congo': '🇨🇩'}
 
 
+def _paises():
+    """La tabla generada por scripts/generate-paises.js: español, inglés, código
+    ISO y los alias que de verdad escriben los festivales. Antes había un literal
+    a mano AQUÍ y otro en la app, y divergieron: el pipeline normalizaba y la app
+    comparaba exacto, así que «Países bajos» con b minúscula daba 🇳🇱 en el dato
+    y 🌍 en la pantalla."""
+    global _PAISES_CACHE
+    if _PAISES_CACHE is None:
+        _PAISES_CACHE = json.load(open(os.path.join(REPO, 'pipeline', 'paises.json'),
+                                      encoding='utf-8'))
+    return _PAISES_CACHE
+
+
+_PAISES_CACHE = None
+
+
 def banderas(pais):
     """País(es) → banderas, deduplicadas y en orden de aparición.
 
-    Separa por coma, barra, « y » Y POR PARÉNTESIS: «España (Austria)» es una
-    coproducción de dos países, y quedarse con uno pierde el otro — 84 casos
-    medidos en el repo el 17 ago 2026. Un país que no se reconoce no inventa
-    bandera: se omite, y el guardián [country-flags] lo cuenta."""
+    Parte por los separadores INEQUÍVOCOS —coma, barra, paréntesis: «España
+    (Austria)» es una coproducción de dos países—. Por « y » y por guion NO se
+    parte a ciegas: «Antigua y Barbuda», «Bosnia y Herzegovina» y «Guinea-Bissau»
+    son UN país cada uno, y partirlos los dejaba a los ocho sin bandera. Solo si
+    el token entero no resuelve se intenta partirlo, que es el caso de
+    «Colombia y México» y «Ecuador-Chile-Alemania».
+
+    Un país que no se reconoce no inventa bandera: se omite, y el guardián
+    [country-flags] lo cuenta."""
+    d = _paises()
+    mapa, sin = d['paises'], set(d['sin_bandera'])
     out = []
-    for p in re.split(r'[,/()]| y | - |—', pais or ''):
-        k = norm(p)
-        if not k:
+    for parte in re.split(r'[,/()]', pais or ''):
+        k = norm(parte)
+        if not k or k in sin:
             continue
-        b = BANDERAS.get(k) or ALIAS.get(k) or (ISO2.get(k) if len(k) == 2 else None)
-        if b:
-            out.append(b)
+        f = mapa.get(k)
+        if f:
+            out.append(f)
+            continue
+        for sub in re.split(r'\s+y\s+|[-–—]', parte):
+            g = mapa.get(norm(sub))
+            if g:
+                out.append(g)
     return ''.join(dict.fromkeys(out))
 
 

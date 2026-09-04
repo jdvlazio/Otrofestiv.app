@@ -9,6 +9,13 @@
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, makeSharedSlotSVG, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
 import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts} from '../view/helpers.js';
+// countryToFlags vive en dominio (src/domain/banderas.js), junto a la tabla de
+// países GENERADA (scripts/generate-paises.js, ICU es+en). Aquí había un
+// literal escrito a mano y en pipeline/lib.py otro: divergieron en contenido y
+// en criterio de comparación, y «Koki, Ciao» mostró un globo teniendo su 🇳🇱 en
+// el dato. Se re-exporta para no mover a sus llamadores.
+import { countryToFlags } from '../domain/banderas.js';
+export { countryToFlags };
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast, _toastArriba } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
@@ -56,69 +63,6 @@ let _pvQueue=null, _pvQueueIdx=0, _pvRatedCount=0, _pvSection='';
 let _conflictPending=null;
 let _ratingTitle='';
 let _currentRating=0;
-const _COUNTRY_FLAGS={
-  'Bangladés':'🇧🇩','Chad':'🇹🇩','Finlandia':'🇫🇮','Hong Kong':'🇭🇰','República Centroafricana':'🇨🇫','República Democrática del Congo':'🇨🇩','Ucrania':'🇺🇦',
-  'Irlanda':'🇮🇪','Ruanda':'🇷🇼','Gabón':'🇬🇦',
-  'Angola':'🇦🇴','Arabia Saudita':'🇸🇦','Catar':'🇶🇦','Guadalupe':'🇬🇵','Guayana Francesa':'🇬🇫','Malaui':'🇲🇼','Martinica':'🇲🇶','Sudán':'🇸🇩','Túnez':'🇹🇳',
-  // Faltaban y salían como globo en Cinemancia, EN CURSO: los encontró el
-  // guardián [country-flags] al dejar de saltarse las obras que ya traen
-  // `flags` (4 sep 2026).
-  'Egipto':'🇪🇬','Singapur':'🇸🇬',
-  'Alemania':'🇩🇪','Argentina':'🇦🇷','Austria':'🇦🇹','Bolivia':'🇧🇴',
-  'Brasil':'🇧🇷','Bélgica':'🇧🇪','Canadá':'🇨🇦','Chile':'🇨🇱',
-  'Colombia':'🇨🇴','Cuba':'🇨🇺','EEUU':'🇺🇸','Estados Unidos':'🇺🇸',
-  'Ecuador':'🇪🇨','Eslovaquia':'🇸🇰','España':'🇪🇸','Estonia':'🇪🇪',
-  'Filipinas':'🇵🇭','Francia':'🇫🇷','Grecia':'🇬🇷','Inglaterra':'🇬🇧','Irán':'🇮🇷',
-  'Italia':'🇮🇹','Kenia':'🇰🇪','México':'🇲🇽','Nicaragua':'🇳🇮','Palestina':'🇵🇸',
-  'Perú':'🇵🇪','Portugal':'🇵🇹','Reino Unido':'🇬🇧','Rep. Dominicana':'🇩🇴','Rusia':'🇷🇺',
-  'Suiza':'🇨🇭','Taiwán':'🇹🇼','Turquía':'🇹🇷','UK':'🇬🇧',
-  'Venezuela':'🇻🇪','Vietnam':'🇻🇳',
-  'United States':'🇺🇸','USA':'🇺🇸','US':'🇺🇸',
-  'United Kingdom':'🇬🇧','England':'🇬🇧','Scotland':'🇬🇧','Ireland':'🇮🇪',
-  'France':'🇫🇷','Germany':'🇩🇪','Italy':'🇮🇹','Spain':'🇪🇸',
-  'Portugal':'🇵🇹','Belgium':'🇧🇪','Switzerland':'🇨🇭','Austria':'🇦🇹',
-  'Netherlands':'🇳🇱','Sweden':'🇸🇪','Denmark':'🇩🇰','Norway':'🇳🇴',
-  'Finland':'🇫🇮','Poland':'🇵🇱','Czech Republic':'🇨🇿','Hungary':'🇭🇺',
-  'Romania':'🇷🇴','Greece':'🇬🇷','Turkey':'🇹🇷','Russia':'🇷🇺',
-  'Ukraine':'🇺🇦','Israel':'🇮🇱','Palestine':'🇵🇸','Lebanon':'🇱🇧',
-  'Iran':'🇮🇷','Iraq':'🇮🇶','Saudi Arabia':'🇸🇦','Egypt':'🇪🇬',
-  'Morocco':'🇲🇦','Tunisia':'🇹🇳','Algeria':'🇩🇿','South Africa':'🇿🇦',
-  'Nigeria':'🇳🇬','Kenya':'🇰🇪','Ethiopia':'🇪🇹','Ghana':'🇬🇭',
-  'Senegal':'🇸🇳','Mali':'🇲🇱','Cameroon':'🇨🇲','Rwanda':'🇷🇼',
-  'Democratic Republic of Congo':'🇨🇩','Congo':'🇨🇬','Ivory Coast':'🇨🇮',
-  'India':'🇮🇳','Pakistan':'🇵🇰','Bangladesh':'🇧🇩','Nepal':'🇳🇵',
-  'Sri Lanka':'🇱🇰','Afghanistan':'🇦🇫','Iran':'🇮🇷',
-  'China':'🇨🇳','Japan':'🇯🇵','South Korea':'🇰🇷','Taiwan':'🇹🇼',
-  'Thailand':'🇹🇭','Vietnam':'🇻🇳','Indonesia':'🇮🇩','Philippines':'🇵🇭',
-  'Malaysia':'🇲🇾','Singapore':'🇸🇬','Myanmar':'🇲🇲',
-  'Australia':'🇦🇺','New Zealand':'🇳🇿','Canada':'🇨🇦','Mexico':'🇲🇽',
-  'Brazil':'🇧🇷','Argentina':'🇦🇷','Chile':'🇨🇱','Colombia':'🇨🇴',
-  'Peru':'🇵🇪','Venezuela':'🇻🇪','Cuba':'🇨🇺','Haiti':'🇭🇹',
-  'Dominican Republic':'🇩🇴','Puerto Rico':'🇵🇷',
-  'North Macedonia':'🇲🇰','Macedonia':'🇲🇰','Serbia':'🇷🇸','Croatia':'🇭🇷',
-  'Bosnia':'🇧🇦','Slovenia':'🇸🇮','Albania':'🇦🇱','Kosovo':'🇽🇰',
-  'Bulgaria':'🇧🇬','Slovakia':'🇸🇰','Estonia':'🇪🇪','Latvia':'🇱🇻','Lithuania':'🇱🇹',
-  'Georgia':'🇬🇪','Armenia':'🇦🇲','Azerbaijan':'🇦🇿','Kazakhstan':'🇰🇿',
-  'Mongolia':'🇲🇳','Malta':'🇲🇹','Cyprus':'🇨🇾','Iceland':'🇮🇸',
-  'Luxembourg':'🇱🇺','Liechtenstein':'🇱🇮','Monaco':'🇲🇨',
-  'Jamaica':'🇯🇲','Trinidad and Tobago':'🇹🇹','Barbados':'🇧🇧',
-  'Ecuador':'🇪🇨','Bolivia':'🇧🇴','Paraguay':'🇵🇾','Uruguay':'🇺🇾',
-  'Honduras':'🇭🇳','Guatemala':'🇬🇹','El Salvador':'🇸🇻','Nicaragua':'🇳🇮',
-  'Costa Rica':'🇨🇷','Panama':'🇵🇦',
-  // Huecos cazados por la auditoría del 29 jul 2026: el mapa tenía los nombres
-  // en inglés de estos países pero NO los castellanos, que es lo que traen los
-  // JSON de festivales hispanohablantes. Cada uno era un globo en pantalla.
-  'Polonia':'🇵🇱','Japón':'🇯🇵','Dinamarca':'🇩🇰','Suecia':'🇸🇪',
-  'Noruega':'🇳🇴','Países Bajos':'🇳🇱','Corea del Sur':'🇰🇷','Hungría':'🇭🇺',
-  'Letonia':'🇱🇻','República Checa':'🇨🇿','Rumania':'🇷🇴','Croacia':'🇭🇷',
-  'Eslovenia':'🇸🇮','Luxemburgo':'🇱🇺','Islandia':'🇮🇸','Camerún':'🇨🇲',
-  'Malí':'🇲🇱','Panamá':'🇵🇦','Haití':'🇭🇹','Qatar':'🇶🇦','Malasia':'🇲🇾',
-  'Tailandia':'🇹🇭','Afganistán':'🇦🇫','Kazajistán':'🇰🇿','Kirguistán':'🇰🇬',
-  'Marruecos':'🇲🇦','Mozambique':'🇲🇿','Sudáfrica':'🇿🇦','Somalia':'🇸🇴',
-  'Vanuatu':'🇻🇺','Türkiye':'🇹🇷','Guinea-Bissau':'🇬🇼','Líbano':'🇱🇧',
-  'Nueva Zelanda':'🇳🇿','Bulgaria':'🇧🇬','Serbia':'🇷🇸','Senegal':'🇸🇳',
-  'Indonesia':'🇮🇩','Nigeria':'🇳🇬','Palestina':'🇵🇸','Suiza':'🇨🇭'
-};
 let _cortoParentHtml=null;
 
 // _screeningRows — DUEÑO ÚNICO de la fila de función (día · hora · sede [· Añadir]),
@@ -1555,32 +1499,6 @@ export function lbLink(title,film){
   return`<a class="c-lb pel-sheet-lb" href="${url}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>`;
 }
 
-export function countryToFlags(countryStr){
-  if(!countryStr) return '🌍';
-  // Separadores REALES de los datos: coma ("España, Costa Rica, Francia") y barra
-  // ("España/Francia"). Antes solo partía por "/" → un string con comas quedaba
-  // como una sola clave inexistente y caía al globo pese a tener países mapeados
-  // (bug Voces del Territorio, 18 jul). NO se parte por guion: "Guinea-Bissau" es
-  // un país. Guardián [country-flags] verifica que todo país de un festival activo
-  // produzca bandera. Ver docs/ICONS.md.
-  // PARÉNTESIS: varios festivales marcan la coproducción entre paréntesis —
-  // "España (Austria)", "República Democrática del Congo (Bélgica, Francia)"
-  // (FINCA 2026), "Republic of Korea (South Korea)" (Tribeca). Sin partirlos,
-  // TODO el string quedaba como una clave inexistente y caía al globo pese a
-  // ser países mapeados. Mismo bug que el de las comas, otro separador.
-  // NORMALIZA antes de buscar. La tabla se escribió con la grafía «bonita»
-  // ('Países Bajos') y comparaba EXACTO, así que una sola letra distinta caía al
-  // globo: Cinemancia publicó «Países bajos» con b minúscula y «Koki, Ciao»
-  // mostró 🌍 en la ficha teniendo su 🇳🇱 en el dato (Juan, 4 sep 2026). El
-  // pipeline no tenía el bug porque lib.banderas() sí normaliza — eran dos
-  // tablas con dos criterios, y el usuario veía la peor.
-  const _k=x=>x.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
-  const _NORM=_COUNTRY_FLAGS.__norm||(_COUNTRY_FLAGS.__norm=Object.fromEntries(
-    Object.entries(_COUNTRY_FLAGS).map(([k,v])=>[_k(k),v])));
-  const parts=countryStr.split(/[,/()]/).map(s=>s.trim());
-  const flags=[...new Set(parts.map(p=>_COUNTRY_FLAGS[p]||_NORM[_k(p)]||'').filter(Boolean))];
-  return flags.length?flags.join(''):'🌍';
-}
 
 export function filmDisplayTitle(f) {
   // Compone las DOS reglas de título en un solo resolvedor: (1) quitar prefijo de
