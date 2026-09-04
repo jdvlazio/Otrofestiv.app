@@ -1108,3 +1108,58 @@ test('T44 — al reabrir el chooser, chip, info, marca y centro dicen lo mismo',
     .toBe(d.chipNombre);
   expect(d.infoNombre, 'y no el que estaba antes').not.toBe(antes.infoNombre);
 });
+
+// ── P10 — Programa dice que el festival terminó ──────────────────────────────
+// Auditoría 4 sep 2026: con el reloj seis días después del cierre de FICDEH,
+// PROGRAMA no decía en ningún lado que el festival había terminado —medido:
+// `/termin/i` sobre el texto de la página daba false— y es donde aterriza quien
+// entra. El aviso solo vivía en Mi Plan, a un toque de distancia.
+//
+// La banda es la hermana de la de APLAZADO: mismo lugar, misma forma, mismo dueño
+// único, sin botón de cerrar (es un estado, no una novedad). Una palabra nueva,
+// la etiqueta; el resto sale de lo que Mi Plan ya dice.
+//
+// Se afirma: (1) terminado, PROGRAMA lo dice y nombra al festival; (2) control:
+// EN CURSO no aparece —anunciar el final de un festival que está pasando sería
+// peor que callarlo—; (3) un festival APLAZADO sigue diciendo APLAZADO y no
+// «terminó»: su estado declarado le gana a la aritmética de fechas.
+test('P10 — el Programa de un festival terminado lo dice', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  const banda = async (fid, sim) => {
+    await enterFestival(page, fid, sim);
+    await page.evaluate(async () => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await new Promise(r => setTimeout(r, 300));
+      switchMainNav('mnav-cartelera');
+      await new Promise(r => setTimeout(r, 900));
+    });
+    return page.evaluate(() => {
+      const t = document.getElementById('fest-ended-banner');
+      const p = document.getElementById('fest-postponed-banner');
+      const vis = e => !!(e && e.getBoundingClientRect().height > 0);
+      return { termino: vis(t), textoTermino: t ? t.textContent.replace(/\s+/g, ' ').trim() : null,
+        aplazado: vis(p), textoAplazado: p ? p.textContent.replace(/\s+/g, ' ').trim().slice(0, 30) : null,
+        enElHeader: !!(t && document.getElementById('hdr-programa')?.contains(t)) };
+    });
+  };
+
+  // 1 · FICDEH cerró el 19 AGO: con el reloj al 25, Programa lo dice
+  const cerrado = await banda('ficdeh2026', '2026-08-25T11:00');
+  expect(cerrado.termino, 'la banda existe y se ve').toBe(true);
+  expect(cerrado.enElHeader, 'y vive en el encabezado del Programa, donde la de aplazado').toBe(true);
+  expect(cerrado.textoTermino, `nombra al festival y dice que terminó (dice: ${cerrado.textoTermino})`)
+    .toMatch(/FICDEH/i);
+  expect(cerrado.textoTermino, 'con las palabras que Mi Plan ya usa').toMatch(/termin/i);
+
+  // 2 · control: EN CURSO no aparece. Sin esto, pintarla siempre pasaría el test
+  // y la app anunciaría el final de un festival que está pasando.
+  const vivo = await banda('ficdeh2026', '2026-08-15T11:00');
+  expect(vivo.termino, 'con el festival en curso no hay banda de terminado').toBe(false);
+
+  // 3 · un festival APLAZADO no dice «terminó»: su estado declarado manda
+  const aplazado = await banda('ficma2026', '2026-08-25T11:00');
+  expect(aplazado.aplazado, 'FICMA sigue mostrando su banda de aplazado').toBe(true);
+  expect(aplazado.termino, 'y NO dice que terminó — el estado declarado le gana a las fechas').toBe(false);
+});

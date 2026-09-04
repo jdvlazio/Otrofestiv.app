@@ -28,7 +28,7 @@ import { state } from '../state/state.js';
 import { deriveClear } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
-import { _autoResolveFestivalPosters, _renderFestivalSelector, renderPostponedBanner } from './festival.js';
+import { _autoResolveFestivalPosters, _renderFestivalSelector, renderEndedBanner, renderPostponedBanner } from './festival.js';
 
 // Fetch del JSON de festival con timeout + reintentos (AbortController).
 // GitHub Pages a veces entrega los headers (200) pero el cuerpo se cuelga → el
@@ -592,6 +592,7 @@ export async function loadFestival(id){
   // SIEMPRE (limpia sola si no aplica; cambio de festival la retira) y también
   // desde setLang, porque la banda persiste y el cambio de idioma no pasa por acá.
   renderPostponedBanner(cfg);
+  renderEndedBanner(cfg);
   // Re-render festival selector con el nuevo festival activo
   _renderFestivalSelector(id);
   // Persist choice
