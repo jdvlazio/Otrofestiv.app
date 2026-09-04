@@ -134,7 +134,44 @@ function construir() {
   return { mapa, iso };
 }
 
-const { mapa, iso } = construir();
+// ICU NO es igual en todas las versiones de Node: la 22 trae CLDR 47 y la 20 otra
+// más vieja, con nombres distintos. Exigir que el archivo salga byte a byte igual
+// ata el repo a la máquina de quien lo generó — CI (Node 20) rechazó una tabla
+// perfectamente buena hecha en Node 22.
+//
+// Así que la tabla solo CRECE: al escribirla se une lo que ya había con lo que
+// diga el ICU de turno. Una grafía que una versión conocía no se pierde porque
+// otra la haya dejado de nombrar, y reconocer más formas nunca es peor. Lo que no
+// se tolera es un CONFLICTO —la misma clave apuntando a dos banderas—, que es lo
+// que de verdad significaría un error o una edición a mano.
+function unir(stored, fresh) {
+  const out = {...stored};
+  const choques = [];
+  for (const [k, v] of Object.entries(fresh)) {
+    if (out[k] && out[k] !== v) { choques.push(`${k}: ${out[k]} (guardado) vs ${v} (ICU ${process.versions.cldr})`); continue; }
+    out[k] = v;
+  }
+  return {out, choques};
+}
+
+function leerGuardado() {
+  try {
+    return JSON.parse(fs.readFileSync('pipeline/paises.json', 'utf8')).paises || {};
+  } catch { return {}; }
+}
+
+const { mapa: fresco, iso } = construir();
+const guardado = leerGuardado();
+const { out: mapa, choques: enConflicto } = unir(guardado, fresco);
+if (enConflicto.length) {
+  console.error('✗ la tabla guardada y el ICU de este Node no coinciden en una clave:');
+  for (const x of enConflicto) console.error('   ' + x);
+  console.error('  Una de las dos está mal. NO se resuelve solo.');
+  process.exit(1);
+}
+
+
+
 const claves = Object.keys(mapa).sort();
 
 const JS = `// GENERADO por scripts/generate-paises.js — NO editar a mano.
@@ -159,13 +196,44 @@ const JSON_PY = JSON.stringify({
 
 const destinos = [['src/domain/paises.js', JS], ['pipeline/paises.json', JSON_PY]];
 if (process.argv.includes('--check')) {
-  let mal = 0;
-  for (const [p, c] of destinos) {
-    const actual = fs.existsSync(p) ? fs.readFileSync(p, 'utf8') : '';
-    if (actual !== c) { console.error(`✗ ${p} no coincide con el generador`); mal++; }
-  }
-  if (mal) { console.error('  correr: node scripts/generate-paises.js'); process.exit(1); }
-  console.log(`✓ países sincronizados · ${claves.length} claves · ${Object.keys(iso).length} regiones`);
+  // Se comprueba lo que NO depende de la versión de Node:
+  //   · que los dos archivos digan lo mismo (si uno se editó a mano, se ve aquí)
+  //   · que no falte nada de lo que este ICU sí sabe
+  //   · que las aserciones de DEBE, los alias y los «sin bandera» sigan en pie
+  // Que el archivo tenga ADEMÁS grafías que este Node no nombra es normal y
+  // correcto: las puso otra versión, y reconocer más formas no es un defecto.
+  const errs = [];
+  const py = JSON.parse(fs.readFileSync('pipeline/paises.json', 'utf8'));
+  const js = fs.readFileSync('src/domain/paises.js', 'utf8');
+  const mJs = /export const PAISES = (\{.*?\});/s.exec(js);
+  const jsTab = mJs ? JSON.parse(mJs[1]) : null;
+  if (!jsTab) errs.push('src/domain/paises.js no expone una tabla legible');
+  else if (JSON.stringify(jsTab) !== JSON.stringify(py.paises))
+    errs.push('src/domain/paises.js y pipeline/paises.json ya no dicen lo mismo');
+  // Faltantes: hay que distinguir DERIVA de BORRADO. Que un ICU más nuevo nombre
+  // un país de otra forma y el archivo no la tenga es deriva — se avisa, no se
+  // bloquea, o el guardián rompe CI cada vez que GitHub sube el Node. Que falten
+  // MUCHAS, o que falte un código ISO (que no depende de ICU: se calcula), es
+  // otra cosa: alguien editó el archivo a mano.
+  const falta = Object.entries(fresco).filter(([k, v]) => py.paises[k] !== v);
+  const isoFalta = falta.filter(([k]) => /^[a-z]{2}$/.test(k));
+  const DERIVA_MAX = 15;
+  if (isoFalta.length || falta.length > DERIVA_MAX)
+    errs.push(`${falta.length} clave(s) ausentes${isoFalta.length ? ` (${isoFalta.length} son códigos ISO, que no dependen de ICU)` : ''}: `
+      + falta.slice(0, 5).map(([k, v]) => `${k}→${v}`).join(', ')
+      + ' — correr: node scripts/generate-paises.js');
+  else if (falta.length)
+    console.log(`  · ${falta.length} grafía(s) que este ICU (CLDR ${process.versions.cldr}) nombra `
+      + `distinto y la tabla no trae — deriva de versión, no error: `
+      + falta.slice(0, 4).map(([k]) => k).join(', '));
+  for (const [nombre, esperada] of DEBE)
+    if (py.paises[norm(nombre)] !== esperada)
+      errs.push(`«${nombre}» debería dar ${esperada} y da ${py.paises[norm(nombre)] || '(nada)'}`);
+  for (const s2 of SIN_BANDERA.map(norm))
+    if (!py.sin_bandera.includes(s2)) errs.push(`«${s2}» dejó de estar declarado sin bandera`);
+  if (errs.length) { for (const e of errs) console.error('✗ ' + e); process.exit(1); }
+  console.log(`✓ países en orden · ${claves.length} claves · ${Object.keys(iso).length} regiones `
+    + `(ICU CLDR ${process.versions.cldr})`);
 } else {
   for (const [p, c] of destinos) fs.writeFileSync(p, c);
   console.log(`✓ ${claves.length} claves (es+en+ISO+alias) · ${Object.keys(iso).length} regiones → ${destinos.map(d => d[0]).join(' · ')}`);
