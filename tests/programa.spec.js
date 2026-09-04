@@ -1,7 +1,7 @@
 // @ts-check
 // programa.spec.js — Tab Programa: lista, grid, filtros, posters, topbar.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival, goToPlanear, reentrar, esperarCalculo } = require('./helpers');
+const { LEVIZA_SIMTIME, abrirHojaCiudad, enterFestival, goToPlanear, reentrar, esperarCalculo } = require('./helpers');
 
 // T01 — Apóstrofe: corazón en lista agrega al watchlist
 test('T01 — apóstrofe: corazón en lista agrega al watchlist', async ({ page }) => {
@@ -375,13 +375,17 @@ test('T51 — donde gratis es la excepción, el badge GRATIS sigue igual', async
 // es un catálogo, es ruido. El sheet pregunta al entrar, guarda la respuesta y
 // no vuelve a preguntar. En un festival de una ciudad no existe.
 test('T52 — sheet de ciudad: solo multiciudad, y no reaparece', async ({ page }) => {
+  // El reloj va DENTRO de cada festival y viaja por URL: la pregunta de ciudad
+  // la decide el ARRANQUE, y un festival terminado ya no la hace (T177). Sin
+  // reloj pre-arranque las dos afirmaciones de abajo pasarían por esa razón y
+  // no por la que este test quiere medir.
   // mono-ciudad: el sheet NO existe
-  await enterFestival(page, 'tercertiempo2026');
+  await enterFestival(page, 'tercertiempo2026', '2026-07-15T10:00:00-05:00');
   await page.waitForTimeout(600);
   expect(await page.evaluate(() => document.getElementById('city-sheet')?.classList.contains('open'))).toBeFalsy();
 
   // multiciudad: aparece con una fila por ciudad + la salida
-  await enterFestival(page, 'cinemancia2025');
+  await enterFestival(page, 'cinemancia2025', '2025-09-15T10:00:00-05:00');
   await page.waitForSelector('#city-sheet.open', { timeout: 5000 });
   const filas = await page.evaluate(() => ({
     ciudades: document.querySelectorAll('#city-sheet-list .lugar-opt.city').length,
@@ -398,7 +402,7 @@ test('T52 — sheet de ciudad: solo multiciudad, y no reaparece', async ({ page 
   expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
 
   // reabrir: ya respondió, no se vuelve a preguntar
-  await enterFestival(page, 'cinemancia2025');
+  await enterFestival(page, 'cinemancia2025', '2025-09-15T10:00:00-05:00');
   await page.waitForTimeout(900);
   expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
   expect(await page.evaluate(() => activeVenue)).toBe('city:' + filas.nombre);
@@ -407,13 +411,15 @@ test('T52 — sheet de ciudad: solo multiciudad, y no reaparece', async ({ page 
 // La salida ("ver todas") también es una respuesta: no puede reabrir el sheet en
 // bucle cada vez que el usuario entra.
 test('T53 — "ver todas" se recuerda como respuesta, no como silencio', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2025');
+  // Reloj dentro del festival, por URL: lo que se mide es que la RESPUESTA se
+  // recuerde en el arranque siguiente, y el arranque mira la hora (T177).
+  await enterFestival(page, 'cinemancia2025', '2025-09-15T10:00:00-05:00');
   await page.waitForSelector('#city-sheet.open', { timeout: 5000 });
   await page.evaluate(() => document.querySelector('#city-sheet-list .lugar-opt.escape').click());
   await page.waitForTimeout(500);
   expect(await page.evaluate(() => activeVenue)).toBe('all');
 
-  await enterFestival(page, 'cinemancia2025');
+  await enterFestival(page, 'cinemancia2025', '2025-09-15T10:00:00-05:00');
   await page.waitForTimeout(900);
   expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
 });
@@ -3137,7 +3143,10 @@ test('T146 — el pie del dropdown se desvanece solo mientras queda lista', asyn
 // (festivalCities). Marcar una sola las pondría a decir cosas distintas de la
 // misma ciudad, que es peor que no marcar ninguna.
 test('T149 — la ciudad sin programación viva se marca en las dos superficies', async ({ page }) => {
-  await enterFestival(page, 'ficdeh2026');
+  // El reloj va DENTRO del festival y la hoja se abre después: es la fase en la
+  // que esta pregunta existe. Un festival terminado ya no la hace (T177).
+  await enterFestival(page, 'ficdeh2026', '2026-08-16T10:00:00-05:00');
+  await abrirHojaCiudad(page);
   await page.waitForTimeout(1200);
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
@@ -3553,4 +3562,53 @@ test('T166 — las dos salidas de texto gris cumplen AA pintadas', async ({ page
   expect(lb.contraste,
     `«${lb.txt}»: ${lb.declarado} al ${lb.alfa} pinta ${lb.pintado} sobre ${lb.bg} y da ${lb.contraste}`)
     .toBeGreaterThanOrEqual(_AA_NORMAL);
+});
+
+// ── T177 — un festival terminado no pregunta ciudad, pero deja elegirla ──────
+// «¿A cuál ciudad vas?» está en futuro. En un festival pasado era lo primero y
+// ÚNICO que se veía al entrar: medido en FICDEH, la hoja ocupa 390x844 —el
+// viewport entero— con z-index 9999, así que también se comía el toque a las
+// pestañas. Once ciudades preguntadas a alguien que viene a RECORDAR.
+//
+// Las dos mitades van juntas a propósito, y es la decisión de Juan (4 sep 2026):
+// lo que se retira es la PREGUNTA, no la posibilidad. Sin la segunda mitad, este
+// test se «arregla» borrando la elección de ciudad por completo —que es
+// exactamente lo que no se quiere—: el filtro de Lugar tiene que seguir
+// ofreciendo las mismas ciudades para releer el programa de una.
+test('T177 — el festival terminado no pregunta ciudad, y el filtro sigue ofreciéndolas', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-25T10:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const H = await import('/src/view/helpers.js');
+    const T = await import('/src/domain/time.js');
+    await w(1400);
+    // 1 · la pregunta no aparece
+    const sh = document.getElementById('city-sheet');
+    const hoja = { abierta: !!sh && sh.classList.contains('open'),
+                   display: sh ? getComputedStyle(sh).display : null };
+    // 2 · pero las ciudades siguen estando, y el filtro las ofrece
+    switchMainNav('mnav-cartelera');
+    await w(1400);
+    const lb = document.getElementById('lugar-btn');
+    if (!lb) return { hoja, sinFiltro: true };
+    lb.click();
+    await w(800);
+    const drop = document.querySelector('#lugar-drop, .filter-drop');
+    const opciones = drop ? [...drop.querySelectorAll('[data-v]')].map(e => e.dataset.v) : [];
+    return { hoja,
+      terminado: T.festivalEnded(),
+      ciudadesDelDato: H.festivalCities(FILMS).length,
+      ciudadesEnFiltro: opciones.filter(v => v.startsWith('drill:')).length };
+  });
+  // Premisas: sin ellas no hay nada que medir, y tienen que sonar ([test-salida-muda])
+  expect(r.sinFiltro, 'el filtro de Lugar existe').toBeUndefined();
+  expect(r.terminado, 'el fixture es un festival TERMINADO').toBe(true);
+  expect(r.ciudadesDelDato, 'y multiciudad — con una sola no habría pregunta que retirar')
+    .toBeGreaterThanOrEqual(2);
+  // 1 · no se pregunta
+  expect(r.hoja.abierta, 'la hoja que pregunta la ciudad no se abre').toBe(false);
+  expect(r.hoja.display, 'y no queda tapando la pantalla').not.toBe('flex');
+  // 2 · pero se puede elegir igual — la mitad que impide «arreglarlo» borrando todo
+  expect(r.ciudadesEnFiltro, 'el filtro de Lugar sigue ofreciendo las mismas ciudades')
+    .toBe(r.ciudadesDelDato);
 });
