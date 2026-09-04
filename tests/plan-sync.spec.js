@@ -204,3 +204,85 @@ test('PS06 — el ICS escapa la coma en vez de borrarla', async ({ page }) => {
   expect(l3, 'el punto y coma va escapado').toContain('\\;');
   expect(l3, 'y la barra invertida también').toContain('\\\\');
 });
+
+// ── PS07 — los afiches del export se cargan, aunque la pantalla ya los mostró ─
+// Reporte de Juan (4 sep 2026, FICCI desde iPhone): exportó su festival y los
+// pósters no salieron. Reproducido: el canvas EXIGE permiso cruzado —dibujar sin
+// él lo contamina y `toBlob` tira excepción, medido—, pero la grilla ya cargó ese
+// mismo afiche SIN pedirlo, y la copia guardada no sirve para una petición que sí
+// lo pide. Con un póster real de FICCI (TMDB w185): con permiso cruzado falla,
+// sin él carga, y con permiso cruzado más una dirección distinta carga. El
+// servidor autoriza (manda `access-control-allow-origin: *`); lo que falla es
+// reusar la copia vieja.
+//
+// Se afirma sobre el ARCHIVO producido, no sobre el flujo: cada celda del muro
+// tiene la variedad de color de una foto. El mosaico de reemplazo —el que se
+// dibuja cuando el afiche no carga— es plano y se distingue por eso.
+test('PS07 — el export dibuja los afiches, no sus reemplazos', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'ficci65');
+  const r = await page.evaluate(async () => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 500));
+    // obras con afiche de OTRO ORIGEN: es el caso reportado y el que fallaba.
+    // Anotado y fuera de este arreglo: los 7 afiches incrustados (`data:`) de
+    // FICCI tampoco se dibujan, pero por otra razón —cargan perfecto con y sin
+    // permiso cruzado, medido 180x270; lo que no los entrega es `getFilmPoster`,
+    // el dueño único de qué afiche va—. Ensanchar acá sería tocar ese dueño a
+    // ciegas.
+    const el = [];
+    const vis = new Set();
+    for (const f of FILMS) {
+      if (f._cancelled || !f.title || vis.has(f.title)) continue;
+      if (!/^https?:/i.test(f.poster || '')) continue;
+      vis.add(f.title); el.push(f);
+      if (el.length === 3) break;
+    }
+    if (el.length < 3) return { pocas: el.length };
+    state.set('watchlist', new Set(el.map(f => f.title)));
+    state.set('watched', new Set(el.map(f => f.title)));
+    // 1 · la pantalla los pinta PRIMERO, sin permiso cruzado: así queda la copia
+    //     que rompía el export. Sin este paso el defecto no se reproduce.
+    switchMainNav('mnav-seleccion');
+    if (typeof renderAgenda === 'function') renderAgenda();
+    await new Promise(r => setTimeout(r, 2500));
+    const pintados = [...document.querySelectorAll('img')].filter(i => i.naturalWidth > 0).length;
+
+    let blob = null;
+    const origTB = HTMLCanvasElement.prototype.toBlob;
+    HTMLCanvasElement.prototype.toBlob = function (cb, ...a) {
+      return origTB.call(this, x => { if (!blob) blob = x; cb(x); }, ...a);
+    };
+    const bt = document.createElement('button'); bt.setAttribute('data-action', 'shareDiary');
+    document.body.appendChild(bt); bt.click(); bt.remove();
+    await new Promise(r => setTimeout(r, 6000));
+    HTMLCanvasElement.prototype.toBlob = origTB;
+    if (!blob) return { pintados, sinBlob: true, toast: document.getElementById('prio-toast')?.textContent };
+
+    const bmp = await createImageBitmap(blob);
+    const cv = document.createElement('canvas'); cv.width = bmp.width; cv.height = bmp.height;
+    const cx = cv.getContext('2d'); cx.drawImage(bmp, 0, 0);
+    const COLS = 3, PAD = 64, HDR = 240, GAP = 24;
+    const cw = Math.floor((bmp.width - PAD * 2 - GAP * (COLS - 1)) / COLS), ch = Math.round(cw * 1.5);
+    const celdas = [];
+    for (let i = 0; i < 3; i++) {
+      const col = i % COLS, row = Math.floor(i / COLS);
+      const d = cx.getImageData(PAD + col * (cw + GAP) + 4, HDR + row * (ch + GAP) + 4, cw - 8, ch - 8).data;
+      const s = new Set();
+      for (let p = 0; p < d.length; p += 4 * 97) s.add(`${d[p]},${d[p + 1]},${d[p + 2]}`);
+      celdas.push(s.size);
+    }
+    return { pintados, dim: [bmp.width, bmp.height], colores: celdas };
+  });
+
+  expect(r.pocas, 'FICCI tiene obras con afiche de otro origen').toBeUndefined();
+  expect(r.sinBlob, `el export produce su imagen (toast: ${r.toast})`).toBeUndefined();
+  expect(r.pintados, 'la pantalla pintó los afiches ANTES — sin eso el defecto no se reproduce')
+    .toBeGreaterThan(0);
+  // el reemplazo es un degradado plano: mide decenas de colores, no cientos
+  for (const [i, n] of r.colores.entries()) {
+    expect(n, `la celda ${i} trae un afiche, no su reemplazo (${r.colores.join(', ')} colores)`)
+      .toBeGreaterThan(200);
+  }
+});
