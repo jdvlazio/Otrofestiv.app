@@ -4592,14 +4592,12 @@ try:
 
     # Línea base al 4 sep 2026. Solo puede BAJAR: cuando un test cambie su
     # `return` por una afirmación o un test.skip, bajá el número acá.
-    _BASE = {
-        'tests/festivals.spec.js': 3,
-        'tests/miplan.spec.js': 22,
-        'tests/programa.spec.js': 8,
-        # sheet.spec.js bajó a 0 el 4 sep: su única salida muda pasó a ser una
-        # afirmación de premisa. Así se drena esta lista — de a una, midiendo.
-        'tests/sheet.spec.js': 0,
-    }
+    # DRENADA COMPLETA (4 sep 2026): las 34 pasaron a ser afirmaciones de
+    # premisa. Ninguna necesitó `test.skip`: todas apuntan a UN festival fijo,
+    # así que el caso que miden o está en su fixture o el test no mide nada —
+    # que es justo lo que ahora dicen en voz alta. La línea base queda VACÍA a
+    # propósito: desde acá cualquier `return;` suelto en un test es nuevo.
+    _BASE = {}
     _mal, _sobra, _total = [], [], 0
     for _f in sorted(_glob.glob('tests/**/*.spec.js', recursive=True)):
         _f = _f.replace('\\', '/')
