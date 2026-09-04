@@ -57,6 +57,13 @@ let _conflictPending=null;
 let _ratingTitle='';
 let _currentRating=0;
 const _COUNTRY_FLAGS={
+  'Bangladés':'🇧🇩','Chad':'🇹🇩','Finlandia':'🇫🇮','Hong Kong':'🇭🇰','República Centroafricana':'🇨🇫','República Democrática del Congo':'🇨🇩','Ucrania':'🇺🇦',
+  'Irlanda':'🇮🇪','Ruanda':'🇷🇼','Gabón':'🇬🇦',
+  'Angola':'🇦🇴','Arabia Saudita':'🇸🇦','Catar':'🇶🇦','Guadalupe':'🇬🇵','Guayana Francesa':'🇬🇫','Malaui':'🇲🇼','Martinica':'🇲🇶','Sudán':'🇸🇩','Túnez':'🇹🇳',
+  // Faltaban y salían como globo en Cinemancia, EN CURSO: los encontró el
+  // guardián [country-flags] al dejar de saltarse las obras que ya traen
+  // `flags` (4 sep 2026).
+  'Egipto':'🇪🇬','Singapur':'🇸🇬',
   'Alemania':'🇩🇪','Argentina':'🇦🇷','Austria':'🇦🇹','Bolivia':'🇧🇴',
   'Brasil':'🇧🇷','Bélgica':'🇧🇪','Canadá':'🇨🇦','Chile':'🇨🇱',
   'Colombia':'🇨🇴','Cuba':'🇨🇺','EEUU':'🇺🇸','Estados Unidos':'🇺🇸',
@@ -1561,8 +1568,17 @@ export function countryToFlags(countryStr){
   // (FINCA 2026), "Republic of Korea (South Korea)" (Tribeca). Sin partirlos,
   // TODO el string quedaba como una clave inexistente y caía al globo pese a
   // ser países mapeados. Mismo bug que el de las comas, otro separador.
+  // NORMALIZA antes de buscar. La tabla se escribió con la grafía «bonita»
+  // ('Países Bajos') y comparaba EXACTO, así que una sola letra distinta caía al
+  // globo: Cinemancia publicó «Países bajos» con b minúscula y «Koki, Ciao»
+  // mostró 🌍 en la ficha teniendo su 🇳🇱 en el dato (Juan, 4 sep 2026). El
+  // pipeline no tenía el bug porque lib.banderas() sí normaliza — eran dos
+  // tablas con dos criterios, y el usuario veía la peor.
+  const _k=x=>x.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+  const _NORM=_COUNTRY_FLAGS.__norm||(_COUNTRY_FLAGS.__norm=Object.fromEntries(
+    Object.entries(_COUNTRY_FLAGS).map(([k,v])=>[_k(k),v])));
   const parts=countryStr.split(/[,/()]/).map(s=>s.trim());
-  const flags=[...new Set(parts.map(p=>_COUNTRY_FLAGS[p]||'').filter(Boolean))];
+  const flags=[...new Set(parts.map(p=>_COUNTRY_FLAGS[p]||_NORM[_k(p)]||'').filter(Boolean))];
   return flags.length?flags.join(''):'🌍';
 }
 
