@@ -86,24 +86,17 @@ try {
   KIND_MAPS_OK = KIND_KEYS.es.size > 0 && KIND_KEYS.en.size > 0;
 } catch (e) { /* KIND_MAPS_OK queda false → el check se declara ciego */ }
 
-// ── Mapa de países → emoji bandera ───────────────────────────────────────────
-const FLAGS_MAP = {
-  'Colombia':'🇨🇴','UK':'🇬🇧','Chile':'🇨🇱','Brasil':'🇧🇷','Bolivia':'🇧🇴',
-  'México':'🇲🇽','Guatemala':'🇬🇹','Francia':'🇫🇷','EEUU':'🇺🇸','Panamá':'🇵🇦',
-  'Venezuela':'🇻🇪','Haití':'🇭🇹','España':'🇪🇸','Argentina':'🇦🇷','Uruguay':'🇺🇾',
-  'Perú':'🇵🇪','Ecuador':'🇪🇨','Cuba':'🇨🇺','Paraguay':'🇵🇾','Costa Rica':'🇨🇷',
-  'Alemania':'🇩🇪','Italia':'🇮🇹','Portugal':'🇵🇹','Suiza':'🇨🇭','Bélgica':'🇧🇪',
-  'Países Bajos':'🇳🇱','Suecia':'🇸🇪','Noruega':'🇳🇴','Dinamarca':'🇩🇰',
-  'Polonia':'🇵🇱','Austria':'🇦🇹','Grecia':'🇬🇷','Turquía':'🇹🇷','Israel':'🇮🇱',
-  'Irán':'🇮🇷','Corea del Sur':'🇰🇷','Japón':'🇯🇵','China':'🇨🇳','Taiwán':'🇹🇼',
-  'India':'🇮🇳','Australia':'🇦🇺','Senegal':'🇸🇳','Palestina':'🇵🇸',
-  'Rep. Dominicana':'🇩🇴','Nicaragua':'🇳🇮','Canadá':'🇨🇦','Eslovaquia':'🇸🇰',
-  'Estonia':'🇪🇪','Vietnam':'🇻🇳','Bolivia':'🇧🇴','Reino Unido':'🇬🇧',
-  'Inglaterra':'🇬🇧','Rumania':'🇷🇴','Hungría':'🇭🇺','Finlandia':'🇫🇮',
-  'Namibia':'🇳🇦','Nigeria':'🇳🇬','Marruecos':'🇲🇦','Sudáfrica':'🇿🇦',
-  'Estados Unidos':'🇺🇸','Nueva Zelanda':'🇳🇿','USA':'🇺🇸','US':'🇺🇸',
-  'Honduras':'🇭🇳','El Salvador':'🇸🇻','Puerto Rico':'🇵🇷','Jamaica':'🇯🇲',
-};
+// ── Países → bandera: la tabla GENERADA, no una copia ────────────────────────
+// Había aquí una quinta tabla escrita a mano, con 66 países. El validador que
+// vigila los datos no puede tener un criterio propio: daba por bueno lo que él
+// conocía y por sospechoso lo que no. Ahora lee pipeline/paises.json
+// (scripts/generate-paises.js, ICU es+en) — el mismo que el app y el pipeline.
+// El validador es CommonJS y src/domain/paises.js es ESM, de ahí el JSON.
+const _PAISES = JSON.parse(fs.readFileSync(
+  path.join(__dirname, '..', 'pipeline', 'paises.json'), 'utf8'));
+const _kPais = x => (x || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  .toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const banderaDe = p => _PAISES.paises[_kPais(p)] || '';
 
 // Emojis que NO son banderas de país — usados como sección, no como flags
 const NON_FLAG_EMOJIS = new Set([
@@ -122,7 +115,8 @@ function getFlagsFromList(filmList) {
   for (const film of filmList) {
     for (const country of (film.country || '').split('/')) {
       const c = country.trim();
-      if (c && FLAGS_MAP[c] && !seen.includes(FLAGS_MAP[c])) seen.push(FLAGS_MAP[c]);
+      const _f = banderaDe(c);
+      if (_f && !seen.includes(_f)) seen.push(_f);
     }
   }
   return seen.join('');

@@ -903,6 +903,11 @@ token entero no resuelve**: «Antigua y Barbuda» y «Guinea-Bissau» son un pa�
 cada uno. `[banderas-paridad]` comprueba que los dos den la misma respuesta sobre
 todos los países del repo.
 
+Y una bandera son **dos** «regional indicator»: un número impar es media bandera
+y se dibuja como una letra en un recuadro. `[country-flags]` lo cuenta, porque es
+un error fácil de escribir —derivar banderas recorriendo el string carácter a
+carácter en vez de por pares— que no rompe nada ni da error.
+
 Por qué tanto aparato: hasta sep 2026 había dos tablas a mano con dos
 normalizaciones distintas. Cinemancia escribió «Países bajos» con b minúscula, el
 pipeline lo normalizaba y el app comparaba exacto, y «Koki, Ciao» mostró un globo

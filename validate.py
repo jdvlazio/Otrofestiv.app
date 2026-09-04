@@ -3152,7 +3152,12 @@ try:
     _SINB = set(_json.load(open('pipeline/paises.json', encoding='utf-8'))['sin_bandera'])
     _declarado = lambda _c: all(_lib.norm(_x) in _SINB or not _lib.norm(_x)
                                 for _x in __import__('re').split(r'[,/()]', _c))
-    _bad, _mudos = [], []
+    # Una bandera son DOS «regional indicator». Un número impar es media
+    # bandera: se dibuja como una letra en un recuadro. Lo escribí yo mismo hoy
+    # derivando banderas de un film_list, iterando el string carácter a carácter
+    # en vez de por pares — «🇨🇴🇨🇺» salió «🇨🇴🇺». No rompe nada y no da error.
+    _IND = __import__('re').compile('[\U0001F1E6-\U0001F1FF]')
+    _bad, _mudos, _rotas = [], [], []
     for _af in sorted(_g2.glob('festivals/*.json')):
         _fid = _af.split('/')[-1]
         try:
@@ -3171,6 +3176,9 @@ try:
                 if _c and _c not in _vistos and not _lib.banderas(_c) and not _declarado(_c):
                     _vistos.add(_c)
                     _bad.append(f"{_fid}: '{_f.get('title','?')[:30]}' país sin bandera: {_c}")
+                _fl = _f.get('flags')
+                if isinstance(_fl, str) and len(_IND.findall(_fl)) % 2:
+                    _rotas.append(f"{_fid}: '{_f.get('title','?')[:30]}' flags={_fl!r}")
                 _walk_films(_f.get('film_list'))
         _walk_films(_d.get('films'))
         # SEGUNDA MITAD. Lo de arriba comprueba que el país SE PUEDA mapear; no
@@ -3183,7 +3191,9 @@ try:
         _sin = [f for f in _cc if not f.get('flags')]
         if _cc and len(_sin) == len(_cc):
             _mudos.append(f'{_fid}: {len(_cc)} films con país y NINGUNO con flags')
-    if _bad:
+    if _rotas:
+        fail(check, 'bandera partida por la mitad (indicador suelto): ' + '; '.join(_rotas[:5]))
+    elif _bad:
         fail(check, 'país que saldría con globo (mapear en scripts/generate-paises.js '
                     'o declararlo sin bandera): ' + '; '.join(_bad[:6]))
     elif _mudos:
