@@ -84,8 +84,15 @@ export function renderAgenda(){
           ${_canc?'':`<button class="saved-check${seen?' done':''}" data-title="${title.replace(/"/g,'&quot;')}" data-action="toggleWatched">${seen?ICONS.check+' '+t('cta_vista'):t('cta_vista')}</button>`}
         </div>`;
       };
-      const _vistas=_wl.filter(x=>watched.has(x));
-      const _ganas=_wl.filter(x=>!watched.has(x));
+      // effectiveWatched, el DUEÑO ÚNICO (film.js): una función del plan que ya
+      // terminó SE ASUME vista. Acá se preguntaba por el `watched` crudo y las dos
+      // pantallas se contradecían a dos toques: Mi Plan titulaba «Viste 4
+      // actividades» —ese sí usa el dueño, vía _endedStats— mientras Intereses
+      // archivaba dos de ellas bajo «Te quedaste con ganas» (auditoría 4 sep).
+      // Esta rama vive dentro de festivalEnded(), así que no cambia nada en vivo.
+      const _eff=effectiveWatched();
+      const _vistas=_wl.filter(x=>_eff.has(x));
+      const _ganas=_wl.filter(x=>!_eff.has(x));
       view.innerHTML=`<div class="ag-section">
         ${_vistas.length?`<div class="sec-hdr sm">${ICONS.eye} <span>${t('int_vistas_hdr')}</span></div>${_vistas.map(x=>_row(x,true)).join('')}`:''}
         ${_ganas.length?`<div class="sec-hdr sm">${ICONS.heart} <span>${t('int_ganas')}</span></div>${_ganas.map(x=>_row(x,false)).join('')}`:''}
@@ -1265,8 +1272,14 @@ export function _renderSavedAgendaHTML(state, consensus){
     // El plan vivido NO desaparece: recap (si hay vistas) + calendario read-only
     // con marca Vista retroactiva por ítem (toggleWatched — par ya aprendido).
     const _plan=(savedAgenda&&savedAgenda.schedule)?savedAgenda.schedule:[];
+    // Las tres puertas de abajo preguntaban por el `watched` CRUDO, y el recap que
+    // abren cuenta con effectiveWatched (vía _endedStats). Quien armó su plan, fue
+    // a todo y no volvió a tocar la app —el uso más natural— entraba y encontraba
+    // sus afiches pintados, «Marcá lo que viste», y NINGÚN botón de compartir: se
+    // le escondía justo lo que el modo Recuerdo promete (auditoría 4 sep).
+    const _eff=effectiveWatched();
     // Con vistas: hero recap existente (pósters + estrellas)
-    const _recap=watched.size>0?(renderContextualHeader(state, consensus)||''):'';
+    const _recap=_eff.size>0?(renderContextualHeader(state, consensus)||''):'';
     // Sin vistas pero con plan: hero "Tu festival" invitando a marcar
     const _hero=(!_recap&&_plan.length)?`<div class="ag-section">
       <div class="mb-2 sec-hdr">${ICONS.sparkles} ${t('recap_tu_festival')}</div>
@@ -1275,11 +1288,11 @@ export function _renderSavedAgendaHTML(state, consensus){
     // Cuerpo: el DIARIO — el mismo muro que la sección (anatomía única; los
     // vistos, por obra) + los del plan sin marcar (atenuados, ✓ Vista). El póster
     // prima: mismo modelo del share del Diario.
-    const _vivido=(_plan.length||watched.size)?`<div class="ag-section">
+    const _vivido=(_plan.length||_eff.size)?`<div class="ag-section">
       <div class="mb-2 sec-hdr">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span></div>
       ${renderDiaryHTML(state)}</div>`:'';
     // Compartir mi festival (RFC F2): reutiliza el export del Diario.
-    const _shareBtn=watched.size>0?`<button class="ag-save-btn" data-action="shareDiary">${ICONS.share} ${t('recap_compartir')}</button>`:'';
+    const _shareBtn=_eff.size>0?`<button class="ag-save-btn" data-action="shareDiary">${ICONS.share} ${t('recap_compartir')}</button>`:'';
     if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_hero}${_vivido}${_shareBtn}</div>`;
     // Sin vistas NI plan: empty state canónico
     const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
