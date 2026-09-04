@@ -189,6 +189,17 @@
   "mes_es": "septiembre",
   "sharedSlotIsOneScreening": true,
   "_jerarquia_de_fuentes": "programa PDF de Villeta (4 sep) > selección oficial (23 ago) > IG. El PDF manda en el horario y en lo que imprime; el catálogo rellena sinopsis, póster, país, género y lbSlug.",
-  "_alcance": "SOLO VILLETA. Sasaima se añade cuando el festival publique su PDF; entonces volverán la ciudad «Sasaima y Villeta» y probablemente el 18 SEP."
+  "_alcance": "SOLO VILLETA. Sasaima se añade cuando el festival publique su PDF; entonces volverán la ciudad «Sasaima y Villeta» y probablemente el 18 SEP.",
+  "_acceso": {
+   "estado": "no publicado por el festival",
+   "revisado": "2026-09-04",
+   "fuentes": [
+    "PDF oficial de la programación de Villeta (12 páginas) — ni una palabra sobre entrada, inscripción o boletería",
+    "siembrafest.com: inicio, /festival/, /festival/programacion/, /seleccion-sf-2026/, /quiero-cine/",
+    "páginas de evento de ediciones anteriores (/programacion-archivo/) — tampoco lo declaran",
+    "Instagram y Facebook del festival, post del 4 sep incluido"
+   ],
+   "nota": "El festival no publica cómo se entra en NINGUNA edición, y no responde a los correos (Juan, 4 sep 2026). Las 23 funciones van con acceso desconocido: es el dato que hay. Si algún día lo publican, se declara y se quita esto."
+  }
  }
 }

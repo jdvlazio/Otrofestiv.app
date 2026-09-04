@@ -5170,6 +5170,22 @@ except Exception as _e:
 # es una omisión. Gratis se DECLARA (`is_free: true`), no se deja en blanco.
 # Solo aplica a festivales vigentes: los archivados quedaron como quedaron y
 # reescribir su pasado no le sirve a nadie.
+#
+# LO QUE ESTA REGLA NO DISTINGUIA (4 sep 2026, SiembraFest). «El silencio no es
+# un dato» se escribio desde CineAutopsia, donde el dato SI estaba en la fuente y
+# no lo miramos: eso es una omision nuestra y tiene que doler. Pero hay otro
+# caso, y no es el mismo: el festival que NO LO PUBLICA. SiembraFest no dice como
+# se entra en su PDF, ni en su web, ni en sus paginas de evento, ni en las
+# ediciones anteriores archivadas —medido pagina por pagina— y no responde a los
+# correos. Bajo la regla vieja ese festival se queda ROJO para siempre por algo
+# que no esta en nuestra mano, y un guardian que no se puede satisfacer se acaba
+# ignorando: asi mueren los guardianes.
+#
+# Se acepta el desconocido DECLARADO Y CON PRUEBA: `_acceso` en la raiz del JSON,
+# con la FECHA en que se reviso y la LISTA de fuentes miradas. Sigue saliendo
+# como AVISO, para volver a mirar. Lo que NO se acepta es el blanco: dejar el
+# campo vacio y seguir es exactamente lo que paso con CineAutopsia. La diferencia
+# entre las dos cosas es una frase escrita por alguien que fue a mirar.
 # ── [campo-huerfano] un campo que nadie lee no es un dato: es peso muerto ────
 # EL HUECO QUE TAPA. `[campo-contrato]` caza el campo mal ESCRITO (`ticketUrl`
 # contra `ticket_url`): el dato quiere llegar a la app y se pierde por el
@@ -5707,7 +5723,7 @@ try:
     import json as _j, glob as _g
     from datetime import date as _date
     _hoy = _date.today().isoformat()
-    _mudos = []
+    _mudos, _declarados = [], []
     for _f in sorted(_g.glob('festivals/*.json')):
         _d = _j.load(open(_f, encoding='utf-8'))
         _F = _d.get('films') or []
@@ -5720,11 +5736,22 @@ try:
             continue
         _habla = sum(1 for _x in _F
                      if _x.get('ticket_url') or _x.get('is_free') or _x.get('registration_url'))
-        if _habla == 0:
+        if _habla:
+            continue
+        _ac = _d.get('_acceso') or {}
+        if _ac.get('revisado') and _ac.get('fuentes'):
+            _declarados.append(f'{_f.split("/")[-1]}: no publicado, revisado el '
+                               f'{_ac["revisado"]} en {len(_ac["fuentes"])} fuentes')
+        else:
             _mudos.append(f'{_f.split("/")[-1]} ({len(_F)} funciones)')
     if _mudos:
         fail(check, 'festival vigente sin una sola función que diga cómo se entra '
-                    '(ni ticket_url, ni is_free, ni registration_url): ' + '; '.join(_mudos))
+                    '(ni ticket_url, ni is_free, ni registration_url) y SIN `_acceso` '
+                    'declarado: ' + '; '.join(_mudos))
+    elif _declarados:
+        warn(check, 'el festival NO PUBLICA cómo se entra; queda declarado y hay que '
+                    'volver a mirar: ' + '; '.join(_declarados))
+        ok(check, 'ningún festival vigente calla sin declararlo')
     else:
         ok(check, 'todo festival vigente declara cómo se entra a sus funciones')
 except Exception as _e:
