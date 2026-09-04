@@ -221,7 +221,9 @@ export function renderFestBar(cfg){
 export function renderPostponedBanner(cfg){
   document.getElementById('fest-postponed-banner')?.remove();
   const _hdrP=document.getElementById('hdr-programa');
-  if(!cfg||!cfg.status||cfg.status.kind!=='postponed'||!_hdrP) return;
+  // 'postponed' y 'moved': las dos pintan banda. Lo demás sigue atado SOLO a
+  // 'postponed' — un festival trasladado está en curso y muestra sus fechas.
+  if(!cfg||!cfg.status||!['postponed','moved'].includes(cfg.status.kind)||!_hdrP) return;
   _hdrP.insertAdjacentHTML('beforeend', postponedBannerHTML(cfg,{id:'fest-postponed-banner'}));
 }
 

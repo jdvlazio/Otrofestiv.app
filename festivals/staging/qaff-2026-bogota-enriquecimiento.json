@@ -1,0 +1,319 @@
+{
+ "_provenance": {
+  "fuente": "TMDB",
+  "capturado": "2026-09-02",
+  "metodo": "búsqueda por título original y, cuando falló, por filmografía del director; cada ficha aceptada SOLO si el director de TMDB coincide con el de la ficha del festival. Los pósters que ya teníamos del onboarding de Quibdó se heredan en el crudo, no aquí: este archivo solo trae lo que hubo que buscar de nuevo para las obras que Bogotá añadió",
+  "lbSlug": "resuelto por letterboxd.com/tmdb/<id>/, que redirige (302) a la ficha. NO por /search/: ese camino devuelve 403 tras Cloudflare y ya nos costó una cosecha entera de ceros"
+ },
+ "_formato": "lista bajo «obras», que es lo único que ensamblar.py indexa. Como diccionario plano título→ficha el archivo se lee sin error y NO ENRIQUECE NADA: _lista queda vacía y el fallo es mudo.",
+ "obras": [
+  {
+   "titulo": "NI CHAÎNES NI MAÎTRES",
+   "tmdb_id": 1126692,
+   "poster_tmdb": "/dVJ91RJuPsdr9F0zIMskWcSNoHi.jpg",
+   "synopsis_en": "1759, Mauritius Island, Indian Ocean. The island is controlled by French settlers and the deported slave population live in fear while toiling in the sugar cane plantations. Unlike her disillusioned father Massamba, 16-year-old Mati refuses to keep her head down and accept her fate.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "lbSlug": "no-chains-no-masters"
+  },
+  {
+   "titulo": "FITOFASCIAS",
+   "tmdb_id": 1548637,
+   "poster_tmdb": "/uAj0iQAgnvSFbSpSAeKG6pXEL2T.jpg",
+   "synopsis_en": "Fitofascias is an artistic project that combines body movement with the natural environment. The work explores the deep connection between the body and the earth through interventions in public spaces.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "lbSlug": "fitofascias"
+  },
+  {
+   "titulo": "TIA CIATA",
+   "tmdb_id": 602540,
+   "poster_tmdb": "/iwvrGBWNVna32CMwWEAuRmCUkmG.jpg",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "lbSlug": "aunt-ciata"
+  },
+  {
+   "titulo": "ORANGO",
+   "tmdb_id": 1395425,
+   "poster_tmdb": "/qP4VdEx1Ez6FJxbqZd3ul1VqNbp.jpg",
+   "synopsis_en": "For the first time since they escaped the war in Guinea-Bissau, Eny, a painter living in Berlin, and his sister Titina, go on a journey through West Africa. After 17 years of exile and the passing of their mother, they are guided to the land of their ancestors.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "lbSlug": "orango-2024"
+  },
+  {
+   "titulo": "HYPHEN",
+   "tmdb_id": 1102404,
+   "poster_tmdb": "/vgnxchnFnaXMFWOrCxCd5EuHgkD.jpg",
+   "synopsis_en": "When Nicole reveals to her childhood friend and cousin, Reine, that she’s been addicted to heroin since she was 13, they decide to document Nicole’s rehab journey. Hyphen follows her struggle to move out into the world as an adult and grown woman despite the lack of economic opportunities and a poisonous cultural upbringing that teaches young women to suppress their ideas and sexuality and to follow a set of religious and cultural rules.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "lbSlug": "hyphen-2023"
+  },
+  {
+   "titulo": "LOS CHICOS DEL BANJO",
+   "tmdb_id": 1547480,
+   "poster_tmdb": "/6CmwyWw15chXWgBcYi5qBYtcIGc.jpg",
+   "synopsis_en": "The Banjo Boys follows the rise of Madalitso Band, Malawian musicians Yobu Maligwa and Yosefe Kalekeni, who craft a banjo, a one-stringed babatone, and foot drum, creating a sound that moves audiences. Once mocked as madmen in Lilongwe’s streets, they meet Neil Nayar, a British musician drawn to Malawi’s spirit. Their chance encounter sparks a trio, propelling them from local busking to global stages like Sauti za Busara, WOMAD, and Joshua Tree. Facing visa struggles, personal tragedies—including original member Rice’s imprisonment for murder—and cultural tensions, their grit fuels joyous performances. Yobu’s pastoral visions, Yosefe’s resilience, and Neil’s purpose drive their bond. Their minimalist sound bridges continents, culminating in a 2023 world tour and a legendary Malawi homecoming. Intimate interviews and vibrant performances reveal music’s power to unite and transform.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "_ojo": "TMDB acredita «Johan Nayar»; la ficha del festival, «Johan R. Nayar» — la inicial del medio rompió el cruce por persona.",
+   "lbSlug": "the-banjo-boys"
+  },
+  {
+   "titulo": "EL ANCLAJE DEL TIEMPO",
+   "tmdb_id": 1369889,
+   "poster_tmdb": "/tGWncDcXXr9WQOzs6oaUnsFL85I.jpg",
+   "synopsis_en": "In Mozambique, Izidine, a young police inspector, is called to investigate the murder of Vasto Excelêncio, the director of a nursing home built within the walls of an old colonial slave fortress. He is shocked when all the elderly residents, as well as the head nurse, Marta, confess to the murder. Each one has motive, given Excelêncio’s abusive behavior. With only a week to solve the case, the detective slowly unravels truths about the murder, Mozambique's colonial past, and himself.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "lbSlug": "the-anchorage-of-time"
+  },
+  {
+   "titulo": "SOBREVIVIENDO A BIAFRA",
+   "tmdb_id": 1713898,
+   "poster_tmdb": "/cEcb4J4zVAq80jVVYWYBsrgm7Yk.jpg",
+   "synopsis_en": "Some of the last survivors from Nigeria’s Civil War, also known as the Biafran War, share their memories from the frontline.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "lbSlug": "surviving-biafra"
+  },
+  {
+   "titulo": "TRES HOMBRES NEGROS",
+   "tmdb_id": 1616280,
+   "poster_tmdb": "/3hgFsxxC3ByUjaXUA9qp9DNboGi.jpg",
+   "synopsis_en": "Can blackness escape the violence of its origins?  Three Black men set out on a transformative journey along the transatlantic slave route in reverse, exploring resistance, liberation and a new understanding of Blackness.  Their epic voyage takes them from Los Angeles to Salvador da Bahia in Brazil, and finally to Accra in Ghana. Their mission is to redefine Blackness, heal from historical trauma, and envision new paths to liberation beyond the constraints of white supremacy.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "lbSlug": "three-black-men"
+  },
+  {
+   "titulo": "DE BARRO Y SANGRE",
+   "tmdb_id": 1108782,
+   "poster_tmdb": "/nrlLcvB9xi2MjXP8UjGEIygkEoE.jpg",
+   "synopsis_en": "Numbi, a little village hidden deep in the Democratic Republic of Congo mountains, lies nonetheless at the heart of our world. Here, with their bare hands, miners dig the coltan which will find its way – legally or otherwise – to our industrialized world. For decades this grey gold, indispensable to the manufacture of almost all contemporary technological devices, has been the cause of conflicts and a bitter exploitation. In Numbi, bodies are covered in mud, hands red with blood, and coltan hides in every pocket. Every inhabitant lives with the illusory hope of escaping fate and enjoying for themselves the riches of the Congo. Sensitive, shocking and deeply moving, Of Mud and Blood documents the everyday existence of the inhabitant of Numbi, revealing the hardships and trials of a story from which we must not look away.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "lbSlug": "of-mud-and-blood"
+  },
+  {
+   "titulo": "GENERACIÓN EQUIVOCADA",
+   "tmdb_id": 1742419,
+   "poster_tmdb": "/vRY4JXAYZi8ZMsMVSX5I5l3GnFU.jpg",
+   "synopsis_en": "Following a series of brutal murders, a generation of young Namibians refuses to stay silent and turns grief into protest.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "lbSlug": "wrong-generation"
+  },
+  {
+   "titulo": "LOS VIAJEROS",
+   "tmdb_id": 1463516,
+   "poster_tmdb": "/sSMEXMfV9njHYVuZpHCzReqYRs7.jpg",
+   "synopsis_en": "On the border between Morocco and Spain, a group of travelers is eagerly waiting to cross over to Europe.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "lbSlug": "the-travelers-2025"
+  },
+  {
+   "titulo": "DÍA DEL PADRE",
+   "tmdb_id": 1432916,
+   "poster_tmdb": "/bG0McA7iij9elYDGPSA15N3uApb.jpg",
+   "synopsis_en": "In this film, Ayana O'Shun investigates the phenomenon of absent fathers in black communities, through her personal story and that of luminous and resilient women from Quebec and Guadeloupe.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "lbSlug": "fathers-day-2025"
+  },
+  {
+   "titulo": "AISHA NO PUEDE VOLAR LEJOS",
+   "tmdb_id": 1337148,
+   "poster_tmdb": "/no8SXwqDhAVE8SMDILdEqS6qxh8.jpg",
+   "synopsis_en": "Aisha, a 26-year-old Sudanese woman, lives in Ain-Shams, a neighborhood in Cairo with a large African migrant community. The authorities’ indifference to the violent tensions between Egyptians and various African nationalities, has allowed different gangs to seize control of the neighborhood. The situation quickly turns sour after one of them offers Aisha security in exchange for a favor.",
+   "_verificado": "TMDB, verificado por director coincidente (2 SEP 2026)",
+   "_ojo": "TMDB lo acredita como «Murad Mustafa»; la ficha del festival, «Morad Mostafa» — misma persona, otra transliteración del árabe. Por eso la búsqueda por director falló y hubo que ir por el título.",
+   "lbSlug": "aisha-cant-fly-away"
+  },
+  {
+   "titulo": "LA OBRA DE DIOS",
+   "tmdb_id": 1742391,
+   "poster_tmdb": "/gqLhJWfLO3AOAqs79HsDaXkDesU.jpg",
+   "synopsis_en": "In a derelict building on the outskirts of Durban, a group of homeless men carve out a fragile existence amid violence, addiction, and the constant threat of being erased.",
+   "_verificado": "TMDB, director coincidente (Michael James) — 2 SEP 2026",
+   "lbSlug": "gods-work-2025"
+  },
+  {
+   "titulo": "EL COACH DE LOS LOCOS",
+   "tmdb_id": 1675697,
+   "poster_tmdb": "/D8N4FBRKkPM8laxkVHPiv6ZDfY.jpg",
+   "_verificado": "TMDB, director coincidente (Carlo Liberatore) — 2 SEP 2026",
+   "lbSlug": "the-madmen-coach"
+  },
+  {
+   "titulo": "AVENIDA FISHKILL 305",
+   "tmdb_id": 1742377,
+   "poster_tmdb": "/lmvDPCXBNgG0Bxai4PY3JI2qXT5.jpg",
+   "synopsis_en": "A kind-hearted janitor witnesses dangerous criminal activity at his workplace and must decide whether to stay silent or risk everything to do what is right.",
+   "_verificado": "TMDB, director coincidente (Ramel Westry) — 2 SEP 2026",
+   "lbSlug": "305-fishkill-avenue"
+  },
+  {
+   "titulo": "UN REY DESPLAZADO",
+   "tmdb_id": 1742381,
+   "poster_tmdb": "/qbJykTZCFOIfx8kNJmdYwgoMLEB.jpg",
+   "synopsis_en": "Daniel Hungbeji navigates his daily life both as a fisherman and as a traditional ruler, holding together the weight of a crown and the demands of survival.",
+   "_verificado": "TMDB, director coincidente (Olayinka Eno Babalola) — 2 SEP 2026",
+   "lbSlug": "a-king-displaced"
+  },
+  {
+   "titulo": "HERMANAS EN EL DESTINO - ANGELA & GERTY ARCHIMÈDE",
+   "tmdb_id": 1742412,
+   "poster_tmdb": "/taznOT0q9UkUmA1ijRT1DDA1PTP.jpg",
+   "synopsis_en": "Two women. Two continents. One shared fight. From Guadeloupe to the United States, the parallel paths of Angela Davis and Gerty Archimède trace a common struggle for justice.",
+   "_verificado": "TMDB, director coincidente (Pascal Archimède, Dimitry Zandronis) — 2 SEP 2026",
+   "lbSlug": "sisters-in-destiny-angela-davis-gerty-archimede"
+  },
+  {
+   "titulo": "INICIACIÓN EN LA OCTAVA DIMENSIÓN",
+   "tmdb_id": 1742327,
+   "poster_tmdb": "/apQpk4kG29oQMpAJKYzeMC6aYhF.jpg",
+   "synopsis_en": "Five Afro-Colombian characters in the middle of Bogotá, five disparate destinies in a city that is hostile to them. Rubi Quejada, a young model displaced from Chocó.",
+   "_verificado": "TMDB, director coincidente (Lucas Silva) — 2 SEP 2026",
+   "lbSlug": "iniciacion-en-la-octava-dimension"
+  },
+  {
+   "titulo": "STORMY DAYS",
+   "tmdb_id": 1742417,
+   "poster_tmdb": "/tFmN5xRoi9YekNH4BF103bwzGt1.jpg",
+   "synopsis_en": "Ahura is a wheelchair carrier who tries to escape at all costs, but finds Gymbia being a decisive presence on a stormy day.",
+   "_verificado": "TMDB, director coincidente (Vitor Bitencourt Rocha) — 2 SEP 2026",
+   "lbSlug": "dias-de-tempestade"
+  },
+  {
+   "titulo": "THE ONE WHO CRIES",
+   "tmdb_id": 1628580,
+   "poster_tmdb": "/cmvFvwo7MR3xtpCdBYwJJMZSKAh.jpg",
+   "synopsis_en": "A pastor allows himself to be persuaded by his childhood friend, now a trafficker of smuggled medicines, to recover goods that a spirit has stolen from him. Indeed, rumors say that a demon haunts the streets of Abidjan: the one who cries.",
+   "_verificado": "TMDB, director coincidente (Cyrille Gueï) — 2 SEP 2026",
+   "lbSlug": "celui-qui-pleure"
+  },
+  {
+   "titulo": "ALTANEGRA",
+   "tmdb_id": 1742175,
+   "lbSlug": "altanegra",
+   "poster_tmdb": "/4QX7gAv2wdGnxUK9u499alFITj0.jpg",
+   "synopsis_en": "In a territory marked by promises of equality and realities of exclusion, being young, Black, and from a rural community becomes an act of everyday resistance.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes"
+  },
+  {
+   "titulo": "AMAZONAS COCINAS INDÍGENAS DE SELVA Y RÍO",
+   "tmdb_id": 1742315,
+   "lbSlug": "amazonas-cocinas-indigenas-de-selva-y-rio",
+   "poster_tmdb": "/klWZaBAXwXFXmx1PKHxxbP7HZSG.jpg",
+   "synopsis_en": "This documentary explores the ancestral knowledge preserved through the kitchens of the forest and the river. Through traditional recipes, gathering practices, and the deep relationship between people and nature.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes",
+   "_ojo": "TMDB la titula «Amazonas: Cocinas Indígenas de Selva y Río»; el festival la lista como «Amazonas Cocinas Indígenas de Selva y Río»"
+  },
+  {
+   "titulo": "AMELIA",
+   "tmdb_id": 1742383,
+   "lbSlug": "amelia-2025",
+   "poster_tmdb": "/1mA3Dho6eQ4vrfssMpTeKwKt1V.jpg",
+   "synopsis_en": "Defiance, strength, bravery, love, and loss—these are the hearts of a woman who refuses to be broken.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes"
+  },
+  {
+   "titulo": "BERTHA",
+   "tmdb_id": 1742324,
+   "lbSlug": "bertha",
+   "poster_tmdb": "/6I4LOmyGtkv8KP9YFm72VlNHhv7.jpg",
+   "synopsis_en": "ULDA (65) refuses to take charge of her macho husband's funeral because he died in another woman's bed. At home, only Bertha, a mischievous goat, remains as her companion while she returns to the woman she once was.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes"
+  },
+  {
+   "titulo": "CAFÉ ?",
+   "tmdb_id": 1742385,
+   "lbSlug": "cafe-2025-1",
+   "poster_tmdb": "/2WQLw7RrG6f1N2EhZeMkSCqEYuv.jpg",
+   "synopsis_en": "Ouzin, Baba and Sémou, longtime friends and retirees, never miss their daily coffee meetup — until the day one of them fails to show up.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes"
+  },
+  {
+   "titulo": "CAPTAIN ANTHONY",
+   "tmdb_id": 1742317,
+   "lbSlug": "el-capitan-anthony-2023",
+   "poster_tmdb": "/tMr0NQH1n6mXb1aXu0YdOBIFYBj.jpg",
+   "synopsis_en": "In 1942, Anthony is a ten-year-old boy living on the island of Providencia, Colombia. He dreams of becoming a great schooner captain like his father, and goes to school every day to learn about the sea and navigation from his teacher Fabio.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes",
+   "_ojo": "TMDB la titula «El Capitán Anthony»; el festival la lista como «Captain Anthony»"
+  },
+  {
+   "titulo": "CARABALÍ",
+   "tmdb_id": 1742387,
+   "lbSlug": "carabali",
+   "poster_tmdb": "/sOKq6nWLOhUEdxBU4ORLB9PVJ8H.jpg",
+   "synopsis_en": "An Afro-Colombian community leader is threatened and forced into exile in Mexico, where she rebuilds her life while keeping her fight alive.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes"
+  },
+  {
+   "titulo": "FACE TO FACE",
+   "tmdb_id": 1742389,
+   "lbSlug": "face-to-face-2021-4",
+   "poster_tmdb": "/5YZbChHbYZsyC9ekaLylgywha1C.jpg",
+   "synopsis_en": "At a difficult moment in his personal and professional life, choreographer Florent Mahoukou confronts himself and his own reflection in a performance filmed on the shore.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes",
+   "_ojo": "TMDB la titula «Face to Face»; el festival la lista como «Face to Face»"
+  },
+  {
+   "titulo": "LEER EN LAS GOTAS DE LLUVIA",
+   "tmdb_id": 1742403,
+   "lbSlug": "leer-en-las-gotas-de-lluvia",
+   "poster_tmdb": "/7OEEcVx5I7x3mdcYv8HulCaHY0K.jpg",
+   "synopsis_en": "An Angolan artist and mother, her four-year-old daughter, and a New Zealand painter create together from a poem, turning rain into a shared language.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes"
+  },
+  {
+   "titulo": "MOJUGBA",
+   "tmdb_id": 1742321,
+   "lbSlug": "mojugba",
+   "poster_tmdb": "/xjvrQIiSA7rWcqOOmTx8It7xFF3.jpg",
+   "synopsis_en": "Fanny, an Afro-Colombian leader, turns the Mojugba, a Yoruba ritual of ancestral invocation, into an act of resistance. In a country that tries to erase its history, she teaches that remembering is revolutionary.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes"
+  },
+  {
+   "titulo": "POSESAS",
+   "tmdb_id": 1742320,
+   "lbSlug": "posesas",
+   "poster_tmdb": "/nHTPpkzN3SKpmmataSkyaRwaG4S.jpg",
+   "synopsis_en": "Based on a critical and counter-current review of the historical figure of Javiera Londoño, an 18th-century landowner who supposedly contributed to the abolition of slavery in the region of Antioquia, Colombia.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes"
+  },
+  {
+   "titulo": "RELATOS DE LA GUAJIRITA",
+   "tmdb_id": 1742318,
+   "lbSlug": "relatos-de-la-guajirita",
+   "poster_tmdb": "/9syzQ1KKYdwq95t4lXgT7feLe6D.jpg",
+   "synopsis_en": "Relatos de la Guajirita tells the story of the Afro-descendant communities of Becerril, Cesar, through their memories, traditions, music, and oral narratives.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes"
+  },
+  {
+   "titulo": "UN DOMINGO",
+   "tmdb_id": 1742409,
+   "lbSlug": "domingo-2026",
+   "poster_tmdb": "/bdbv398RGs61f9DbSgOwpnMIftF.jpg",
+   "synopsis_en": "One Sunday tells the story of a possible encounter between Samuel and a stranger, on a day when the ordinary opens a crack toward something else.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes",
+   "_ojo": "TMDB la titula «Domingo»; el festival la lista como «Un Domingo»"
+  },
+  {
+   "titulo": "VIVA YURUMANGUI",
+   "tmdb_id": 1742319,
+   "lbSlug": "viva-yurumangui",
+   "poster_tmdb": "/J2Ndk9l2iTlB1x2wDFRyn1PpLk.jpg",
+   "synopsis_en": "On the remote Pacific coast of Colombia, the inhabitants of the Yurumanguí palenque still fight for freedom, hundreds of years after their ancestors fled slavery.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes"
+  },
+  {
+   "titulo": "WATERFRONT MEMORIES",
+   "tmdb_id": 1542983,
+   "lbSlug": "memorias-com-vista-para-o-mar",
+   "poster_tmdb": "/x84OaQ6Ymo6RiOfd1oSDtlCfZyu.jpg",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes",
+   "_ojo": "TMDB la titula «Memórias com vista para o mar»; el festival la lista como «Waterfront Memories»"
+  },
+  {
+   "titulo": "WHEN THE WORLD BROKE OPEN",
+   "tmdb_id": 1742418,
+   "lbSlug": "when-the-world-broke-open",
+   "poster_tmdb": "/jbZaIOy1oDCeWWpWlcstq4AE7H6.jpg",
+   "synopsis_en": "At the height of the 1904 Herero and Nama genocide, a mother carries the hope of her people across a landscape of loss.",
+   "_verificado": "ya EXISTÍA en TMDB; hallada por las 3 sondas previas al alta (2 SEP 2026), director y duración coincidentes"
+  }
+ ]
+}

@@ -267,7 +267,15 @@ ISO2 = {'co': '🇨🇴', 'ar': '🇦🇷', 'br': '🇧🇷', 'cl': '🇨🇱', 
 
 # Abreviaturas y nombres a medias que los festivales publican tal cual.
 ALIAS = {'rep dominicana': '🇩🇴', 'rd congo': '🇨🇩', 'guinea bissau': '🇬🇼',
-         'republica democratica del congo': '🇨🇩'}
+         'republica democratica del congo': '🇨🇩',
+         # Los festivales escriben el país como les llega de la ficha del
+         # director: a veces en inglés o en francés. Un país que no se reconoce
+         # se queda sin bandera y nadie lo nota —el guardián lo cuenta, pero no
+         # falla—. Estos cuatro salieron de QAFF Bogotá (SEP 2026).
+         'guadeloupe': '🇬🇵', 'martinique': '🇲🇶', 'malawi': '🇲🇼', 'zambia': '🇿🇲',
+         'armenia': '🇦🇲',
+         # errata de imprenta del programa de QAFF; el país es ese
+         'estados unido': '🇺🇸'}
 
 
 def banderas(pais):
@@ -279,13 +287,23 @@ def banderas(pais):
     bandera: se omite, y el guardián [country-flags] lo cuenta."""
     out = []
     for p in re.split(r'[,/()]| y | - |—', pais or ''):
-        k = norm(p)
-        if not k:
-            continue
-        b = BANDERAS.get(k) or ALIAS.get(k) or (ISO2.get(k) if len(k) == 2 else None)
-        if b:
-            out.append(b)
+        # El guion PEGADO no se puede partir a ciegas: «Guinea-Bissau» es UN
+        # país y partirlo lo borra del mapa. Se intenta entero primero y solo se
+        # parte si entero no da bandera, que es justo el caso de
+        # «Argentina-Colombia» —seis coproducciones del repo estaban mudas—.
+        trozos = [p] if _bandera(p) else (p.split('-') if '-' in p else [p])
+        for t in trozos:
+            b = _bandera(t)
+            if b:
+                out.append(b)
     return ''.join(dict.fromkeys(out))
+
+
+def _bandera(p):
+    k = norm(p)
+    if not k:
+        return None
+    return BANDERAS.get(k) or ALIAS.get(k) or (ISO2.get(k) if len(k) == 2 else None)
 
 
 # ── procedencia ──────────────────────────────────────────────────────────────
