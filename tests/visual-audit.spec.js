@@ -32,20 +32,38 @@ test.describe('Visual audit — Leviza', () => {
   });
 
   test('03 — Intereses', async ({ page }) => {
-    await page.evaluate(() => switchMainNav('mnav-intereses'));
+    await page.evaluate(() => switchMainNav('mnav-seleccion'));
     await page.waitForTimeout(800);
+    // La captura tiene que ser de la pantalla que dice su nombre. Sin esta
+    // línea no probaba nada: con un id de pestaña inexistente el screenshot
+    // salía igual, y «intereses» y «planear» eran BYTE A BYTE la misma imagen,
+    // las dos de Programa (medido, 4 sep 2026). Es lo que la cabecera de este
+    // archivo ya promete: falla si la pantalla no cargó.
+    await expect(page.locator('#mnav-seleccion')).toHaveClass(/\bon\b/, { timeout: 3000 });
     await page.screenshot({ path: 'test-results/visual/leviza-intereses.png', fullPage: false });
   });
 
   test('04 — Planear', async ({ page }) => {
-    await page.evaluate(() => switchMainNav('mnav-planear'));
+    await page.evaluate(() => switchMainNav('mnav-planner'));
     await page.waitForTimeout(800);
+    // La captura tiene que ser de la pantalla que dice su nombre. Sin esta
+    // línea no probaba nada: con un id de pestaña inexistente el screenshot
+    // salía igual, y «intereses» y «planear» eran BYTE A BYTE la misma imagen,
+    // las dos de Programa (medido, 4 sep 2026). Es lo que la cabecera de este
+    // archivo ya promete: falla si la pantalla no cargó.
+    await expect(page.locator('#mnav-planner')).toHaveClass(/\bon\b/, { timeout: 3000 });
     await page.screenshot({ path: 'test-results/visual/leviza-planear.png', fullPage: false });
   });
 
   test('05 — Mi Plan', async ({ page }) => {
     await page.evaluate(() => switchMainNav('mnav-miplan'));
     await page.waitForTimeout(800);
+    // La captura tiene que ser de la pantalla que dice su nombre. Sin esta
+    // línea no probaba nada: con un id de pestaña inexistente el screenshot
+    // salía igual, y «intereses» y «planear» eran BYTE A BYTE la misma imagen,
+    // las dos de Programa (medido, 4 sep 2026). Es lo que la cabecera de este
+    // archivo ya promete: falla si la pantalla no cargó.
+    await expect(page.locator('#mnav-miplan')).toHaveClass(/\bon\b/, { timeout: 3000 });
     await page.screenshot({ path: 'test-results/visual/leviza-miplan.png', fullPage: false });
   });
 
