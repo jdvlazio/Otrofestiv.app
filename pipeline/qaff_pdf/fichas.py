@@ -71,7 +71,14 @@ def extrae():
             if 'SINOPSIS' in cuerpo:
                 s = cuerpo.index('SINOPSIS') + 1
                 e = next((j for j in range(s, len(cuerpo)) if BIO.match(cuerpo[j])), len(cuerpo))
-                # la fecha de sede («14 SEPT.» / «2026») cierra la página, no la sinopsis
+                # La fecha («14 SEPT.» / «2026») no es parte de la sinopsis, pero
+                # TAMPOCO es adorno: es el DÍA en que se proyecta esa obra, y en
+                # las sedes sin parrilla —Museo Nacional, Universidad Nacional—
+                # es el único dato que la coloca. Filtrarla del texto estaba bien;
+                # tirarla, no. Se guarda.
+                _fecha = [x for x in cuerpo[s:e] if re.match(r'^\d{1,2}\s*SEPT\.?$', x)]
+                if _fecha:
+                    f['dia_sello'] = int(re.match(r'^(\d{1,2})', _fecha[0]).group(1))
                 txt = [x for x in cuerpo[s:e]
                        if not re.match(r'^\d{1,2}\s*SEPT\.?$|^20\d\d$', x)]
                 if txt: f['sinopsis'] = ' '.join(txt).strip()
