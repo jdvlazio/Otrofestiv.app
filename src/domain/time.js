@@ -13,6 +13,13 @@
 //   portable. Las copias worker-local (FESTIVAL_BUFFER, etc.) se mantienen en
 //   main.js; [worker-overlap] valida.
 import { DEFAULT_DURATION_MIN } from "../config.js";
+// film.js importa de este módulo y este módulo importa de film.js: es un ciclo
+// ESM deliberado y seguro — ninguno usa al otro en la evaluación del módulo,
+// solo dentro de funciones, así que los enlaces vivos ya están inicializados
+// cuando se llaman. La alternativa era duplicar la regla del fin de bloque
+// acá, y un segundo dueño de «¿hasta qué hora estoy en la sala?» es justo lo
+// que blockDuration vino a matar.
+import { blockDuration } from "./film.js";
 export function toMin(t){
   if(!t) return 0;
   const isPM=/ PM$/i.test(t), isAM=/ AM$/i.test(t);
@@ -27,7 +34,20 @@ export function toMin(t){
   return h*60+m; // 24h format
 }
 
-export function parseDur(d){const s=d!=null?String(d):'';const m=s&&s.replace('~','').match(/(\d+)/);return m?parseInt(m[1]):DEFAULT_DURATION_MIN;}
+// Un solo lector del texto de duración, para que «cuánto dura» y «¿lo sabemos?»
+// no puedan divergir nunca.
+// El `.replace('~','')` es INERTE con este regex —«~120 min» da 120 igual— y
+// ninguna mutación lo mueve. Se conserva porque venía de parseDur y quitarlo no
+// es parte de este arreglo; queda dicho para que nadie lo lea como protección.
+export function _durMatch(d){const s=d!=null?String(d):'';return s?s.replace('~','').match(/(\d+)/):null;}
+export function parseDur(d){const m=_durMatch(d);return m?parseInt(m[1]):DEFAULT_DURATION_MIN;}
+// «No la sabemos» tiene que poder decirse. parseDur rellena con DEFAULT_DURATION_MIN
+// y hasta ahora nada distinguía un 90 real de uno inventado: la app afirmaba la hora
+// de salida, reservaba 90 minutos en tu calendario y descartaba obras de tu plan
+// sobre un número que no tiene. Medido: 28 registros en 7 festivales sin duración.
+// Su propia doctrina ya dice que lo estimado se rotula («+30 min estimados» del Q&A)
+// y que lo no confiable no se muestra (el viaje entre ciudades, schedule.js).
+export function durEstimada(d){return !_durMatch(d);}
 
 export function minToStr(m){
   const h=Math.floor(((m%1440)+1440)%1440/60),mn=((m%1440)+1440)%1440%60;
@@ -71,17 +91,30 @@ export function simTodayStr(){
 export function dayFullyPassed(day){
   const dateStr=FESTIVAL_DATES[day];
   if(!dateStr) return false;
-  // Day passed if last function of that day has passed
-  const dayFilms=FILMS.filter(f=>f.day===day);
-  // Día SIN programación: no hay "última función" que mirar → el día pasó cuando
-  // terminó su FECHA. Antes devolvía false SIEMPRE, así que un día vacío nunca se
-  // atenuaba (bug: MAR sin programación en TT seguía en opacidad alta) y peor: se
-  // colaba como "primer día futuro" en la navegación y en la hoja de Disponibilidad.
+  // El día pasó cuando TERMINÓ su última función, no cuando empezó (auditoría
+  // B-4, 2 sep 2026): con «El juego de la vida» a las 19:00 y 95 min, a las
+  // 19:30 el LUN 17 salía `past` a opacity .35 —contraste 2,04:1 sobre el día
+  // que estabas viviendo— mientras la cabecera de la MISMA pantalla decía «En
+  // curso · Termina en 1 h 05». La regla vieja tomaba la última hora de INICIO
+  // más 10 minutos fijos: ignoraba la duración. Diecisiete sitios cuelgan de
+  // esta función (tabs de día, «primer día futuro», Disponibilidad,
+  // sugerencias): se corrige acá y se corrigen todos.
+  // Las canceladas no cuentan: una función que no va a ocurrir no mantiene
+  // vivo el día. Y sin gracia de 10 min: el fin del bloque ya es el fin.
+  const dayFilms=FILMS.filter(f=>f.day===day&&!f._cancelled);
+  // Día SIN programación (o toda caída): no hay última función que mirar → el
+  // día pasó cuando terminó su FECHA. Antes devolvía false SIEMPRE, así que un
+  // día vacío nunca se atenuaba y se colaba como «primer día futuro».
   if(!dayFilms.length) return simNow()>_festDate(dateStr,'23:59');
-  const lastTime=dayFilms.reduce((max,f)=>f.time>max?f.time:max,'00:00');
-  const lastScreen=_festDate(dateStr,lastTime);
-  lastScreen.setMinutes(lastScreen.getMinutes()+10);
-  return simNow()>lastScreen;
+  // Fecha por función (no minutos del día): una función que cruza medianoche
+  // termina al día siguiente y la aritmética en minutos la daría por acabada.
+  const lastEnd=dayFilms.reduce((max,f)=>{
+    if(!f.time) return max;
+    const d=_festDate(dateStr,f.time);
+    d.setMinutes(d.getMinutes()+blockDuration(f));
+    return d>max?d:max;
+  },new Date(0));
+  return simNow()>lastEnd;
 }
 
 // Un festival APLAZADO no terminó: NO ocurrió. Sin esto, la aritmética contra

@@ -15,7 +15,7 @@ import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js
 import { runCalc } from './calc.js';
 import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
-import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
+import { dayFullyPassed, durEstimada, festivalEnded, parseDur, toMin } from '../domain/time.js';
 import { screeningPassed, effectiveDuration, blockDuration } from '../domain/film.js';
 import { sameEntry, isScreeningBlocked, screensConflictReason, plannableScreens } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
@@ -421,7 +421,7 @@ export function openPelSheet(title){
       </div>`
     :`<div class="pel-sheet-ctas">
         <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(f.title)}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
-        <button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(f.title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
+        ${festivalEnded()?'':`<button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(f.title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>`}
         <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-secondary" data-title="${escXML(f.title)}" data-action="toggleWatched">${ICONS.eye} ${t('cta_vista')}</button>
       </div>`}
     ${_inPlan&&activeView==='agenda'?`<button data-title="${escXML(f.title)}" data-action="closePelAndRemove" class="pel-sheet-remove-plan">${ICONS.x} ${t('plan_quitar_plan')}</button>`:''}
@@ -757,7 +757,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
     <div class="pel-sheet-foot">
     <div class="pel-sheet-ctas">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
-      <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(parentTitle||title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
+      ${festivalEnded()?'':`<button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(parentTitle||title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>`}
       <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${escXML(title)}" data-action="closePelAndRate">${ICONS.star} ${filmRatings[title]?t('misc_cambiar'):t('cta_calificar')}</button>
     </div>
     </div>
@@ -873,9 +873,15 @@ export function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   // Nombres y horarios
   const setEl=(id,txt)=>{const el=document.getElementById(id);if(el)el.textContent=txt;};
   setEl('cs-incoming-name', inDT);
-  setEl('cs-incoming-when', `${(dayLabel(incomingScreen.day)||'').split(' ')[0]} · ${incomingScreen.time} · ${inF?.duration||''}`);
+  // El día va CON su número (2 sep 2026). `.split(' ')[0]` dejaba «JUE» a secas,
+  // y 9 de los 15 festivales de la app repiten nombre de día —todos los de 8
+  // días o más: Tribeca tiene 5 pares, TIFF 4, Cinemancia 3—, así que «JUE» no
+  // distinguía el 3 del 10. Medido a 375px en las cuatro superficies: el número
+  // no cuesta nada —misma altura, misma caja, sin desbordar ni partir línea—
+  // porque ninguna de estas clases lleva `nowrap` y la caja sobraba.
+  setEl('cs-incoming-when', `${dayLabel(incomingScreen.day)||''} · ${incomingScreen.time} · ${inF?.duration||''}`);
   setEl('cs-existing-name', exDT);
-  const exWhen=existingEntry.day?`${(dayLabel(existingEntry.day)||'').split(' ')[0]} · ${existingEntry.time} · ${exF?.duration||''}`:'';
+  const exWhen=existingEntry.day?`${dayLabel(existingEntry.day)||''} · ${existingEntry.time} · ${exF?.duration||''}`:'';
   setEl('cs-existing-when', exWhen);
 
   // Título del sheet: si el conflicto es por margen (salas/viaje), el título
@@ -961,7 +967,9 @@ export function openPrioLimit(newTitle){
     const items=[...prioritized].map(_ttl=>{
       const{displayTitle:dt}=parseProgramTitle(_ttl);
       const f=FILMS.find(fi=>fi.title===_ttl&&!screeningPassed(fi));
-      const when=f?`${(dayLabel(f.day)||f.day).split(' ')[0]} · ${f.time}`:'';
+      // Día con número (ver cs-incoming-when): esta lista muestra hasta PRIO_LIMIT
+      // obras de días distintos, y es donde dos «JUE» a secas más engañan.
+      const when=f?`${dayLabel(f.day)||f.day} · ${f.time}`:'';
       const poster=getFilmPoster(f)||'';
       const safeSwap=_ttl.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const safeNew=newTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
@@ -1086,7 +1094,7 @@ export function openPostViewRating(title, day, time, venue, duration){
   const ctx=document.getElementById('pv-context');
   if(ctx){
     const parts=[];
-    if(day) parts.push((dayLabel(day)||day).split(' ')[0]);
+    if(day) parts.push(dayLabel(day)||day);   // con número (ver cs-incoming-when)
     if(venue) parts.push(venue.split('·')[0].trim().split('‒')[0].trim());
     if(duration) parts.push(duration);
     ctx.textContent=parts.join(' · ');
@@ -1621,9 +1629,21 @@ export function _avisosBand(f, opts){
   // solo si ESTA obra recorre ≥2 ciudades; si no, sería ruido en cada línea.
   const _ciudades=new Set(_src.map(x=>x&&venueCity(x.venue)).filter(Boolean));
   const _conCiudad=_ciudades.size>1;
-  const _cual=h=>(h.length&&h.length<_src.length)?' · '+h.map(x=>_coord(x,_conCiudad)).join(' / '):'';
+  const _cual=(h,_u)=>{const _n=(_u||_src).length;return (h.length&&h.length<_n)?' · '+h.map(x=>_coord(x,_conCiudad)).join(' / '):'';};
   const _qa=_con('has_qa');
   if(_qa.length) rows.push(['Q&A', t(_qa[0].qa_type==='guests'?'aviso_qa_ref':'aviso_qa_equipo')+_cual(_qa)]);
+  // Duración no publicada (auditoría 4 sep 2026). El festival no la dice, así que
+  // la app rellena con DEFAULT_DURATION_MIN y sobre ese número calcula la hora de
+  // salida y descarta obras del plan. Es un rasgo de la función, igual que el Q&A,
+  // y su casa es esta banda: se lee ANTES de decidir, no después en el calendario.
+  // Decisión de Juan (4 sep): acá, y no metido en las notas del evento exportado.
+  // Se deriva de las FUNCIONES, no del film: la ficha de un corto no tiene film
+  // propio (`f` es null ahí) y leerlo directo reventaba las 6 pruebas de esa
+  // ficha con «Cannot read properties of null». Mismo camino único que el Q&A,
+  // dos líneas más arriba, y por la misma razón que dice su comentario.
+  const _sinDur=_src.filter(x=>x&&durEstimada(x.duration));
+  if(_sinDur.length) rows.push([t('badge_duracion'),
+    t('aviso_dur_estimada',{n:blockDuration(_sinDur[0])})+_cual(_sinDur)]);
   // «Va con otras 4 obras» y no «Verás las otras obras» (ronda 3 del QA, 16 ago):
   // el tiempo verbal describía la SALA —«cuando vayas verás más cosas»— y el
   // usuario lo leyó como dato de la función; por eso marcar una y que quedaran
@@ -1643,12 +1663,26 @@ export function _avisosBand(f, opts){
   // único de qué se marca (la minoría). Si la card de una función dice CON
   // BOLETA y su ficha dijera GRATIS, se contradirían.
   const _tb=ticketBadgeTarget();
+  // El precio se dice de las funciones VIVAS (auditoría 4 sep 2026). La banda
+  // listaba «CON BOLETA · mié 12 · jue 13 · jue 13» nombrando funciones que ella
+  // misma marca CANCELADA tres renglones más arriba: la misma tarjeta se
+  // desmentía sola. Una función cancelada no tiene precio — no va a ocurrir—, y
+  // lo que la invalida se lee ANTES que lo que la matiza (DESIGN 8.4.6).
+  // Si TODAS están canceladas no se dice nada de precio: el aviso de cancelada ya
+  // lo dijo todo.
+  // QUÉ funciones se nombran: solo las VIVAS. La fila sigue apareciendo igual que
+  // antes —ticketBadgeTarget manda, y la ficha tiene que decir lo MISMO que la
+  // card—; lo que cambia es a cuáles nombra. Filtrar la fila entera la silenciaba
+  // cuando las de precio estaban todas canceladas, y entonces el usuario dejaba de
+  // saber si paga (medido: la banda quedó en «Cancelada / Programa», sin precio).
+  const _vivas=_src.filter(x=>x&&!x._cancelled);
+  const _soloVivas=h=>h.filter(x=>!x._cancelled);
   if(_tb==='free'){
     const _g=_con('is_free');
-    if(_g.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_g)]);
+    if(_g.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_soloVivas(_g),_vivas)]);
   } else if(_tb==='paid'){
     const _p=_src.filter(x=>x&&x.is_free!==true);
-    if(_p.length) rows.push([t('badge_con_boleta'), t('aviso_con_boleta')+_cual(_p)]);
+    if(_p.length) rows.push([t('badge_con_boleta'), t('aviso_con_boleta')+_cual(_soloVivas(_p),_vivas)]);
   }
   if(!rows.length) return '';
   return `<div class="sec-hdr sm">${ICONS.alert} <span>${t('label_avisos')}</span></div>`

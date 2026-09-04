@@ -501,7 +501,16 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* CANCEL canónico (auditoría 18 jul): 4 copias casi idénticas → una anatomía.
    background none, texto --gray t-sm w-semi, padding 10px. Layout por clase. */
 .auth-cancel,.conflict-btn-cancel,.prio-limit-cancel{background:none;border:none;color:var(--gray);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);padding:10px;cursor:pointer}
-.auth-cancel{display:block;text-align:center;margin-top:var(--sp-3)}
+/* `width:100%` porque .auth-cancel pasó de <span> a <button> (2 sep 2026):
+   un botón `display:block` se encoge a su contenido —medido, 68px contra los
+   335px del span— y esta salida se lee como una fila, no como una pastilla.
+   El cambio de etiqueta es de accesibilidad: era el ÚNICO span con
+   data-action de todo el index, así que las cinco salidas «Cancelar» no se
+   alcanzaban por teclado. Sus dos hermanas de esta misma regla
+   (.conflict-btn-cancel, .prio-limit-cancel) ya eran <button>: la regla es
+   un reset de botón y solo esta clase no lo era. El anillo de foco ya
+   existía: `:focus-visible{outline:2px solid var(--amber)}`. */
+.auth-cancel{display:block;width:100%;text-align:center;margin-top:var(--sp-3)}
 
 .auth-delete-btn{display:block;width:100%;padding:var(--sp-btn);margin-top:var(--sp-1);border:none;background:transparent;color:var(--red);font-size:var(--t-sm);font-weight:var(--w-med);cursor:pointer;transition:opacity .2s}
 .auth-delete-btn:hover{opacity:.7}
@@ -1443,7 +1452,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .pel-sheet.vt-in .pel-sheet-meta>*:nth-child(2){animation-delay:.1s}
 .pel-sheet.vt-in .pel-sheet-meta>*:nth-child(3){animation-delay:.14s}
 .pel-sheet.vt-in .pel-sheet-inner>*:not(.pel-sheet-header){animation:vtRise .28s cubic-bezier(.16,1,.3,1) both;animation-delay:.12s}
-/* El enlace de Letterboxd descansa en opacity:.6 → sube sin fundir (ver vtRiseNoFade). */
+/* El enlace de Letterboxd descansa en la opacity:.55 de .c-lb → sube sin fundir (ver vtRiseNoFade). */
 .pel-sheet.vt-in .pel-sheet-lb{animation-name:vtRiseNoFade}
 .pel-sheet.amb.vt-in{--amb-o:0}
 @media(prefers-reduced-motion:reduce){.pel-sheet.vt-in .pel-sheet-meta>*,.pel-sheet.vt-in .pel-sheet-inner>*:not(.pel-sheet-header){animation:none}}
@@ -1738,8 +1747,8 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .pel-sheet-ctas .pel-sheet-action-btn svg{width:13px;height:13px}
 .pel-sheet-ctas-watched{display:flex;gap:var(--sp-2);margin-top:var(--sp-6)}
 
-.pel-sheet-lb{display:inline-flex;align-items:center;gap:6px;margin-top:var(--sp-4);opacity:.6;text-decoration:none}
-.pel-sheet-lb-text{font-size:var(--t-sm);color:var(--gray2)}
+.pel-sheet-lb{display:inline-flex;align-items:center;gap:6px;margin-top:var(--sp-4);text-decoration:none}
+.pel-sheet-lb-text{font-size:var(--t-sm)}
 .pel-sheet-remove-plan{width:100%;margin-top:var(--sp-2);background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-caption);font-weight:var(--w-semi);padding:8px 0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)}
 .pel-sheet-corto-item{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-2) 0;border-bottom:1px solid var(--bdr-l);cursor:pointer;transition:background var(--tr-base);border-radius:var(--r-sm);margin:0 -6px;padding-left:6px;padding-right:6px}
 .pel-sheet-corto-item:last-child{border-bottom:none}
@@ -1759,7 +1768,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 
 .c-lb{display:inline-flex;align-items:center;gap:var(--sp-1);background:none;border:none;padding:0;cursor:pointer;transition:opacity var(--tr-base);line-height:1;flex-shrink:0;text-decoration:none;opacity:.55}
 .c-lb:hover{opacity:.9}
-.c-lb-text{font-size:var(--t-sm);font-weight:var(--w-regular);color:var(--gray2);letter-spacing:.2px;white-space:nowrap}
+.c-lb-text{font-size:var(--t-sm);font-weight:var(--w-regular);color:var(--white);letter-spacing:.2px;white-space:nowrap}
 
 /* ── MI LISTA ── */
 .ag-section{margin-bottom:var(--sp-4)}
@@ -2016,6 +2025,20 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    compartida). Se clampan a 1 línea para que entren todas: lo que importa es
    saber qué obras hay, no leer el título completo de cada una. */
 .mplan-wk-title.mp-multi{-webkit-line-clamp:1;font-size:var(--t-xs);margin-bottom:1px}
+/* Bloque de UNA obra que no alcanza para hora + título (ver _fitMiPlanBlocks):
+   comparten línea y el que cede es el título. `mp-linea-corta` es el escalón
+   para el piso de 20px, donde el interlineado normal tampoco entra. */
+.mplan-wk-block.mp-linea{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:var(--sp-1)}
+.mp-linea .mplan-wk-time{margin-bottom:0;flex-shrink:0}
+.mp-linea .mplan-wk-title{min-width:0;flex:1;-webkit-line-clamp:1;white-space:nowrap;text-overflow:ellipsis}
+.mp-linea .mplan-wk-venue{flex-basis:100%}
+.mp-linea-corta{padding-top:2px;padding-bottom:2px}
+.mp-linea-corta .mplan-wk-title,.mp-linea-corta .mplan-wk-time{line-height:1.1}
+/* «+N» — lo que no cupo (ver _fitMiPlanBlocks): la última obra visible cede
+   con elipsis y el contador queda a su derecha, en la misma línea. */
+.mplan-wk-title.mp-mas{display:flex;align-items:baseline}
+.mp-mas .mplan-wk-title-txt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap} /* sin min-width:0: con overflow≠visible el mínimo automático ya es 0 — medido, la línea no movía nada */
+.mplan-wk-block .dw-strip-mas{font-size:var(--t-xs);margin-left:var(--sp-1)} /* el mismo contador de las tiras de pósters, a la escala del bloque */
 .mplan-wk-venue{font-size:var(--t-xs);color:var(--gray);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 /* Lista de detalle */
@@ -2059,7 +2082,19 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    que sí tiene que envolver. */
 .mplan-t2 .mp-void-t{white-space:nowrap}
 .mplan-ri{flex:1;min-width:0}
-.mplan-rtitle{font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* El título cede, el distintivo no (auditoría A-5, 2 sep 2026): el badge Q&A
+   vivía DENTRO de este mismo nodo, que es `nowrap + overflow:hidden`, así que
+   se recortaba junto con el título. Medido en Mi Plan: el renglón terminaba en
+   x=323 y el badge arrancaba en x=587 — no se dibujaba NUNCA. La ficha y
+   Planear sí avisan «Q&A · +30 min estimados»; en el Plan —el único lugar
+   donde el dato cambia a qué hora salís del cine— desaparecía.
+   Fila flex: la elipsis se muda al span del texto, que es quien cede.
+   Sin `flex-shrink:0` en el badge ni `min-width:0` en el span: medidos, los
+   dos son no-op acá —el texto puede encoger hasta 0 por su overflow:hidden,
+   así que el badge nunca necesita ceder— y una línea que ninguna mutación
+   mueve es una línea que el test no protege. */
+.mplan-rtitle{display:flex;align-items:baseline;min-width:0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--white)}
+.mplan-rtitle-txt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mplan-rtitle.mp-event-title{color:var(--event-blue-title)}
 .mplan-rvenue{font-size:var(--t-sm);color:var(--gray);margin-top:2px}
 .mplan-rvenue.mp-event-venue{color:var(--event-blue-60)}
@@ -2974,7 +3009,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    El techo en vh deja entrar las 11 ciudades sin scroll en un teléfono normal y
    recorta con scroll solo en pantallas cortas. */
 .lugar-opt.city{font-weight:var(--w-semi);color:var(--white)}
-.lugar-opt.escape{color:var(--gray2);font-size:var(--t-sm);justify-content:center}
+.lugar-opt.escape{color:var(--gray);font-size:var(--t-sm);justify-content:center}
 #city-sheet-list{max-height:66vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--sp-5))}
 .lugar-back svg{color:var(--amber)}
 @keyframes lugarFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
@@ -2982,7 +3017,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    Antes: ~11 líneas de cssText inline DUPLICADAS que además divergieron
    (max-width 300 vs 280, max-height 55vh vs 50vh, scroll props solo en lugar).
    El build sólo aporta position top/right. Guardián [filter-drop-canon]. */
-.filter-drop{position:fixed;min-width:200px;max-width:min(300px,90vw);max-height:55vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);box-shadow:0 8px 24px var(--overlay-55);z-index:9999;animation:lugarFadeIn .12s ease}
+.filter-drop{position:fixed;min-width:200px;max-width:calc(100vw - 16px);max-height:55vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r);box-shadow:0 8px 24px var(--overlay-55);z-index:9999;animation:lugarFadeIn .12s ease}
 /* El pie se desvanece SOLO mientras queda lista por debajo (clase puesta por
    _velaElCorte). Fija, la máscara se comía la última opción al llegar al final:
    el corte a media letra que viene a arreglar es menos grave que eso. */
@@ -3165,8 +3200,20 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .txt-amber60-xs{color:var(--amber-60);font-size:var(--t-xs)}
 .txt-green-semi{color:var(--green);font-weight:var(--w-semi)}
 .prog-suffix{font-size:var(--t-sm);color:var(--amber);font-weight:var(--w-bold);line-height:1;margin-top:2px}
-.col-end{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;flex-shrink:0}
-.icon-btn-circle{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;border-radius:50%;border:none}
+/* gap = 14px = --sp-btn, y no es casual: los dos .icon-btn-circle apilados
+   («Cambiar» y «Quitar del Plan») extienden su caja de impacto 7px a cada lado.
+   Con gap 0 (medido) las zonas se solapaban 14px y en toda la franja el
+   toque iba al de ABAJO, el destructivo — peor que sin ampliar. Con 14 las
+   zonas se tocan sin solaparse. La fila no crece: 30+14+30 = 74 < 132. */
+.col-end{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;flex-shrink:0;gap:var(--sp-btn)}
+/* Área de toque de 44px sobre un círculo DIBUJADO de 30 (auditoría B-9, 2 sep
+   2026): los dos recorridos independientes midieron lo mismo —30×30 en los
+   botones de las filas del Plan, donde el error de dedo borra una función—.
+   El dibujo no cambia: el ::before extiende la caja de impacto 7px a cada
+   lado (30 + 14 = 44, el mínimo de iOS). `position:relative` solo para
+   anclarlo; no afecta el flujo ni la altura de las filas. */
+.icon-btn-circle{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;padding:0;border-radius:50%;border:none;position:relative}
+.icon-btn-circle::before{content:"";position:absolute;inset:-7px;border-radius:50%}
 
 .poster-label-amber{color:var(--amber);display:block;font-size:var(--t-xs);margin-top:1px}
 .film-sub-label{font-size:var(--t-sm);color:var(--amber);font-weight:var(--w-bold);margin-top:1px;line-height:1}
@@ -3860,7 +3907,7 @@ setTimeout(function(){
     <input class="pin-display auth-email-inp" id="review-key-inp" type="text" placeholder="••••••" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" maxlength="24" onkeydown="if(event.key==='Enter')submitReviewKey()">
     <button class="auth-send-btn" id="review-key-btn" data-action="submitReviewKey" data-i18n="av_confirmar">Confirmar</button>
     <div class="auth-msg" id="review-msg"></div>
-    <span class="auth-cancel" data-action="closeReviewSheet" data-i18n="misc_cancelar">Cancelar</span>
+    <button type="button" class="auth-cancel" data-action="closeReviewSheet" data-i18n="misc_cancelar">Cancelar</button>
   </div>
 </div>
 
@@ -3872,7 +3919,7 @@ setTimeout(function(){
       <input class="auth-email-inp" id="auth-email-inp" type="email" placeholder="tu@email.com" data-i18n-ph="auth_email" autocomplete="email" onkeydown="if(event.key==='Enter')submitAuthEmail()">
       <button class="auth-send-btn" id="auth-send-btn" data-action="submitAuthEmail" data-i18n="auth_enviar">Enviar código</button>
       <div class="auth-msg" id="auth-msg"></div>
-      <span class="auth-cancel" data-action="closeAuthSheet" data-i18n="misc_cancelar">Cancelar</span>
+      <button type="button" class="auth-cancel" data-action="closeAuthSheet" data-i18n="misc_cancelar">Cancelar</button>
     </div>
     <div id="auth-sheet-step2" style="display:none">
       <div class="auth-sheet-title" data-i18n="auth_revisa">Revisá tu email</div>
@@ -3880,7 +3927,7 @@ setTimeout(function(){
       <input class="pin-display auth-email-inp" id="auth-otp-inp" type="text" placeholder="12345678" inputmode="numeric" autocomplete="one-time-code" maxlength="8" onkeydown="if(event.key==='Enter')submitOTP()"><!-- maxlength=8: el Email OTP de Supabase de este proyecto es de 8 dígitos (no 6). maxlength=6 impedía tipear el código a mano (solo entraba por autofill/link). one-time-code: iOS autofill; type=text no bloquea el autofill y respeta maxlength. 16px: prevents iOS auto-zoom -->
       <button class="auth-send-btn" data-i18n="av_confirmar" id="auth-otp-btn" data-action="submitOTP">Confirmar</button>
       <div class="auth-msg" id="auth-otp-msg"></div>
-      <span class="auth-cancel" data-action="closeAuthAndReset" data-i18n="misc_cancelar">Cancelar</span>
+      <button type="button" class="auth-cancel" data-action="closeAuthAndReset" data-i18n="misc_cancelar">Cancelar</button>
     </div>
     <div id="auth-sheet-step3" style="display:none">
       <div class="auth-sheet-title" data-i18n="auth_cuenta">Cuenta</div>
@@ -3889,7 +3936,7 @@ setTimeout(function(){
       <div class="mt-2 auth-sheet-sub" data-i18n="auth_eliminar_aviso" style="color:var(--gray2);font-size:var(--t-xs)"></div>
       <button class="auth-signout-btn" data-action="signOutAndClose" data-i18n="auth_cerrar">Cerrar sesión</button>
       <button class="auth-delete-btn" id="auth-delete-btn" data-action="deleteAccount" data-i18n="auth_eliminar">Eliminar cuenta</button>
-      <span class="auth-cancel" data-action="closeAuthSheet" data-i18n="misc_cancelar">Cancelar</span>
+      <button type="button" class="auth-cancel" data-action="closeAuthSheet" data-i18n="misc_cancelar">Cancelar</button>
     </div>
   </div>
 </div>

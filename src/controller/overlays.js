@@ -20,11 +20,18 @@ import { countryToFlags } from './sheets-controller.js';
 // leía "odo el programa" sin la T y los emojis salían partidos. Le pasa a
 // cualquier festival cuyo panel llegue al máximo — con secciones de nombre largo
 // es sistemático. El clamp deja al menos MARGEN px de aire a la izquierda.
-function _dropRight(btnRight){
+// El ancho llega MEDIDO, no supuesto (auditoría A-6, 3 sep 2026). Antes esta
+// función espejaba el tope de `.filter-drop` (300px) y se posicionaba por el peor
+// caso, así que un panel angosto se anclaba como si midiera 300 y uno ancho
+// desperdiciaba lo que le sobraba: medido en Sección con TODO, el panel quedaba
+// de 8 a 308 en un viewport de 390 —82px sin usar— y 4 de 15 secciones salían
+// cortadas, una perdiendo el 45% del nombre. Con el ancho real, el panel angosto
+// sigue pegado a su botón y el ancho usa la pantalla.
+function _dropRight(btnRight, ancho){
   const MARGEN=8;
-  const ancho=Math.min(300, window.innerWidth*0.9); // espejo de .filter-drop max-width
+  const _a=ancho||Math.min(300, window.innerWidth*0.9);
   const right=window.innerWidth-btnRight;
-  return Math.max(MARGEN, Math.min(right, window.innerWidth-ancho-MARGEN))+'px';
+  return Math.max(MARGEN, Math.min(right, window.innerWidth-_a-MARGEN))+'px';
 }
 
 // _velaElCorte — DUEÑO ÚNICO del desvanecido al pie de un dropdown de filtro.
@@ -118,6 +125,8 @@ export function seccionOpen(){
     if(activeMNav==='mnav-cartelera') _renderProgramaContent(true); else render(); // selección sección → scroll al tope
   });
   document.body.appendChild(drop);
+  // Recién acá el panel tiene ancho: se posiciona con el REAL, no con el tope.
+  drop.style.right = _dropRight(r.right, drop.offsetWidth);
   _velaElCorte(drop);
   btn.classList.add('on');
   setTimeout(()=>{ document.addEventListener('click',seccionOutside); },0);
@@ -220,11 +229,20 @@ export function _searchAll(q){
   FILMS.forEach(f=>{if(!titleMap[f.title]) titleMap[f.title]=f;});
   Object.values(titleMap).forEach(f=>{
     const r1=fuzzyMatch(q,f.title);
-    const r2=f.title_en?fuzzyMatch(q,f.title_en):{match:false,score:0};
+    // Títulos alternos: el usuario busca lo que TIENE DELANTE, y la única pista
+    // frente a él es el afiche. Cuando nuestro póster viene con el arte de
+    // distribución en español y el festival titula en otro idioma, esas dos
+    // cosas no coinciden: «Hoja seca» en el afiche sobre una ficha que se llama
+    // «Dry Leaf» (Cinemancia 2026, título correcto por doctrina — así lo publica
+    // el festival). Medido: buscar «hoja» daba «Sin resultados».
+    // Un solo dueño para todos los alternos, así agregar otro idioma no vuelve
+    // a tocar la fórmula del puntaje.
+    const rAlt=[f.title_en,f.title_es].filter(Boolean)
+      .reduce((mej,alt)=>{const r=fuzzyMatch(q,alt);return r.score>mej.score?r:mej;},{match:false,score:0});
     const secScore=(f.section||'').toLowerCase().includes(ql)?0.3:0;
     const cntScore=(f.country||'').toLowerCase().includes(ql)?0.2:0;
-    const score=Math.max(r1.score,r2.score)+secScore+cntScore;
-    if((r1.match||r2.match||secScore||cntScore)&&!seen.has(f.title)){
+    const score=Math.max(r1.score,rAlt.score)+secScore+cntScore;
+    if((r1.match||rAlt.match||secScore||cntScore)&&!seen.has(f.title)){
       seen.add(f.title);
       results.push({...f,_score:score});
     }
@@ -433,6 +451,7 @@ export function lugarOpen(){
   });
 
   document.body.appendChild(drop);
+  drop.style.right = _dropRight(r.right, drop.offsetWidth);   // ancho real (ver _dropRight)
   _velaElCorte(drop);
   btn.classList.add('on');
 

@@ -6,7 +6,7 @@ import { DAYS, _langDates, dayLabel, starsText, vcfg, venueLabel, getFilmPoster,
 import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
-import { _festDate } from '../domain/time.js';
+import { _festDate, durEstimada } from '../domain/time.js';
 import { blockDuration } from '../domain/film.js';
 import { t } from '../i18n/i18n.js';
 import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→auth (sharePlan pide nombre)
@@ -64,7 +64,40 @@ export async function shareDiary(){
   x.fillText(_dt?`${_n} · ${String(_dt).toUpperCase()}`:_n,PAD,192);
   // helpers
   const rr=(px,py,w,h,r)=>{ x.beginPath(); x.moveTo(px+r,py); x.arcTo(px+w,py,px+w,py+h,r); x.arcTo(px+w,py+h,px,py+h,r); x.arcTo(px,py+h,px,py,r); x.arcTo(px,py,px+w,py,r); x.closePath(); };
-  const load=src=>new Promise(res=>{ if(!src){res(null);return;} const im=new Image(); im.crossOrigin='anonymous'; im.onload=()=>res(im); im.onerror=()=>res(null); im.src=src; });
+  // Los afiches del export se piden de otra forma que en la pantalla, y ESA es la
+  // razón por la que no cargaban (reportado por Juan, FICCI desde iPhone, 4 sep
+  // 2026). El canvas EXIGE permiso cruzado —dibujar una imagen sin él lo
+  // contamina y `toBlob` tira excepción, medido—, pero la grilla ya cargó ese
+  // mismo afiche SIN pedirlo, y la copia guardada no sirve para una petición que
+  // sí lo pide: el navegador la rechaza. Medido con un póster real de FICCI
+  // (TMDB w185): con permiso cruzado falla, sin él carga, y con permiso cruzado
+  // más una dirección distinta carga. El servidor autoriza —manda
+  // `access-control-allow-origin: *`—; lo que falla es reusar la copia vieja.
+  //
+  // Tres casos, cada uno con lo que necesita:
+  //  · `data:` — no hay servidor ni copia que arreglar, y pedirle permiso cruzado
+  //    la rompe en WebKit (el motor de la app de iPhone). Se pide tal cual.
+  //  · mismo origen — no hay permiso que pedir: el canvas no se contamina.
+  //  · otro origen — permiso cruzado Y una dirección distinta, para no recibir la
+  //    copia que la pantalla dejó sin permiso.
+  const load=src=>new Promise(res=>{
+    if(!src){res(null);return;}
+    const im=new Image();
+    let _u=src;
+    if(/^https?:/i.test(src)){
+      let _ajeno=true;
+      try{ _ajeno=new URL(src,location.href).origin!==location.origin; }catch(e){}
+      // El mismo origen no necesita ninguna de las dos cosas: no hay permiso que
+      // pedir ni copia envenenada. Distinguirlo evita descargar dos veces cada
+      // afiche propio — ninguna mutación mueve esta rama (el archivo sale igual),
+      // así que queda dicho: la protege el sentido, no el test.
+      if(_ajeno){
+        im.crossOrigin='anonymous';
+        _u=src+(src.includes('?')?'&':'?')+'ofx=1';
+      }
+    }
+    im.onload=()=>res(im); im.onerror=()=>res(null); im.src=_u;
+  });
   const imgs=await Promise.all(rows.map(rw=>load(rw.src)));
   // celdas
   for(let i=0;i<rows.length;i++){
@@ -223,7 +256,16 @@ export function _buildAgendaCanvas(){
   c.fillStyle='#888888';
   c.font='500 11px system-ui,-apple-system,sans-serif';
   const _dn=_getDisplayName();
-  const _sub=(_dn?_dn+' · ':'')+t('share_mi_plan')+' · '+(cfg.name||'Festival')+' · '+active.length+' '+(active.length!==1?t('misc_dias'):t('misc_dia'));
+  // Los días del PLAN, no los del festival (2 sep 2026). El subtítulo reusaba
+  // `active.length`, y `active` son TODOS los días del festival a propósito —la
+  // grilla es un registro completo, con sus columnas vacías—: medido en FICDEH
+  // con 3 obras en 4 días, la imagen decía «8 días». Leído bajo «Mi Plan» eso
+  // es el tamaño de tu Plan, y era el del festival.
+  // Misma derivación que la línea de resultado de Planear (días con algo
+  // adentro), no el lapso entre la primera y la última: con una obra el lunes y
+  // otra el viernes, tu Plan es de 2 días, no de 5.
+  const _diasPlan=new Set((savedAgenda.schedule||[]).map(s=>s.day)).size||1;
+  const _sub=(_dn?_dn+' · ':'')+t('share_mi_plan')+' · '+(cfg.name||'Festival')+' · '+_diasPlan+' '+(_diasPlan!==1?t('misc_dias'):t('misc_dia'));
   c.fillText(_sub,PAD,HDR/2+20);
   active.forEach((day,ci)=>{
     const x=PAD+ci*(CW+CGAP);
@@ -330,17 +372,51 @@ export async function exportICS(){
     // para una obra anclada cuyo bloque real termina 19:51 (la mentira de la
     // captura del 31 jul, fugada al calendario del teléfono).
     const end=new Date(start.getTime()+blockDuration(s)*60000);
-    const clean=str=>(str||'').replace(/[\r\n,;\\]/g,' ').trim();
+    // RFC 5545 §3.3.11: en un valor TEXT la barra invertida, la coma, el punto y
+    // coma y el salto de línea se ESCAPAN; borrarlos es perder el dato. Acá se
+    // reemplazaban por un espacio y «Ni un minuto de silencio, toda una vida de
+    // búsqueda» llegaba al calendario del teléfono partido en dos, con doble
+    // espacio donde iba la coma. Medido: 39 obras en 12 festivales lo sufren
+    // (auditoría 4 sep 2026). El orden importa — la barra primero, o se escaparían
+    // las barras que agrega el propio escape.
+    const clean=str=>(str||'').trim()
+      .replace(/\\/g,'\\\\')
+      .replace(/\r?\n/g,'\\n')
+      .replace(/([,;])/g,'\\$1');
     lines.push('BEGIN:VEVENT',
       `DTSTART:${fmt(start)}`,`DTEND:${fmt(end)}`,
       `SUMMARY:${clean(s._title)}`,
       `LOCATION:${clean(venueLabel(s.venue))}`,   // edificio · sala (dueño único)
-      `DESCRIPTION:${clean(_icsCfg.name||'Festival')} - ${clean(s.section)} - ${clean(s.duration)}`,
+      // Sin duración publicada, `clean(s.duration)` salía VACÍO y la descripción
+      // terminaba colgando en « - » mientras el evento reservaba 90 minutos reales.
+      // Ahora dice los minutos que efectivamente bloquea, con la `~` de siempre
+      // para lo estimado. La explicación de por qué no se sabe vive en Avisos, en
+      // la ficha, que es donde se decide (decisión de Juan, 4 sep).
+      `DESCRIPTION:${clean(_icsCfg.name||'Festival')} - ${clean(s.section)} - ${durEstimada(s.duration)?'~'+blockDuration(s)+' min':clean(s.duration)}`,
       `UID:otrofestiv-${_icsId}-${s._title?.replace(/\s/g,'')}-${fmt(start)}@otrofestiv.app`,
       'END:VEVENT');
   });
   lines.push('END:VCALENDAR');
-  const icsText=lines.join('\r\n');
+  // PLEGADO — RFC 5545 §3.1: ninguna línea pasa de 75 OCTETOS; la continuación
+  // empieza con un espacio. Medido en un .ics de FICDEH: 10 de 53 líneas se
+  // pasaban, hasta 138 (el UID del Encuentro) y 98 (un SUMMARY largo). Ningún
+  // calendario nos lo rechazó —Google y Apple son tolerantes—, así que es deuda
+  // de formato, no un fallo visto; se paga porque el estándar es el contrato con
+  // un programa que no controlamos.
+  // Se cuenta en OCTETOS y se corta por punto de código: partir un carácter de
+  // varios bytes por la mitad rompería el UTF-8, y los títulos traen acentos.
+  const _plegar=l=>{
+    const _oct=c=>new TextEncoder().encode(c).length;
+    if(_oct(l)<=75) return l;
+    const out=[]; let cur='', max=75;
+    for(const ch of l){
+      if(_oct(cur)+_oct(ch)>max){ out.push(cur); cur=' '; max=76; }  // 1 octeto se va en el espacio
+      cur+=ch;
+    }
+    if(cur.trim()!=='') out.push(cur);
+    return out.join('\r\n');
+  };
+  const icsText=lines.map(_plegar).join('\r\n');
   const fileName=`otrofestiv-${_icsId}.ics`;
   // iOS nativo (SwiftUI WKWebView + EventKit): alta directa al Calendario,
   // sin hoja de compartir. El puente Swift expone messageHandler 'calendar'.

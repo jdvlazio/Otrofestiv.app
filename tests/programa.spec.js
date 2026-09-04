@@ -3076,8 +3076,16 @@ test('T145 — el rótulo inactivo de la barra cumple AA sobre pósters claros',
 //
 // Las dos mitades van juntas a propósito: la primera sola se «arregla» con una
 // máscara fija, y la segunda lo impide.
+//
+// FIXTURE — se mide sobre ficci65 y NO sobre un festival vivo. El test estaba
+// apuntado a cinemancia2026 y se volvió mudo sin avisar: su lista de Sección
+// bajó a 8 opciones (352px) y dejó de tocar el tope de 464,2 — sin desborde no
+// hay máscara que medir, así que salía verde probando nada (medido 4 sep 2026).
+// ficci65 está archivado (su dato ya no cambia) y desborda con margen amplio:
+// 22 opciones, 968px contra los mismos 464,2. Y si aun así dejara de desbordar,
+// abajo se cae en vez de callarse.
 test('T146 — el pie del dropdown se desvanece solo mientras queda lista', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'ficci65');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
@@ -3102,7 +3110,10 @@ test('T146 — el pie del dropdown se desvanece solo mientras queda lista', asyn
     const db = d.getBoundingClientRect(), ub = ult.getBoundingClientRect();
     return { arriba, abajo, pieUltimaALaBase: Math.round(db.bottom - ub.bottom) };
   });
-  if (r.sinBoton || r.noScrollea) return;
+  // Estas dos NO son escapes: son la premisa del test. Cuando no se cumplen no
+  // hay nada que medir, y eso tiene que sonar — antes eran un `return` mudo.
+  expect(r.sinBoton, 'el filtro de Sección existe en este festival').toBeUndefined();
+  expect(r.noScrollea, 'y su lista desborda el panel: sin desborde no hay máscara que probar').toBeUndefined();
   expect(r.arriba.clase, 'con lista por debajo, el pie se desvanece').toBe(true);
   expect(r.arriba.mask, 'y la máscara aplica de verdad, no solo la clase').toMatch(/gradient/);
   expect(r.abajo.clase, 'al final de la lista la clase se retira').toBe(false);
@@ -3185,7 +3196,10 @@ test('T149 — la ciudad sin programación viva se marca en las dos superficies'
   expect(r.hoja.cortado, 'la marca no recorta el nombre de la ciudad').toBe(false);
 
   // 4 · y el filtro de Lugar dice LO MISMO — dos superficies, un dueño
-  if (!r.sinFiltro) {
+  // La otra mitad no se salta en silencio: si el filtro de Lugar no está, las
+  // dos superficies dejan de compararse y el test se queda a medias sin decirlo.
+  expect(r.sinFiltro, 'el filtro de Lugar existe: es la otra superficie que este test compara').toBeUndefined();
+  {
     expect(r.filtro.marcadas, 'el filtro de Lugar marca las mismas que la hoja de apertura')
       .toEqual(r.hoja.marcadas);
     expect(r.filtro.sinMarca, 'y deja sin marcar las mismas').toEqual(r.hoja.sinMarca);
@@ -3251,4 +3265,292 @@ test('T153 — el sustantivo de Planear sigue al contenido, no a la pantalla', a
   expect(sinT.insumo, 'sin taller el insumo vuelve a la palabra específica')
     .toMatch(/\bobras?\b/i);
   expect(sinT.resultado, 'y el resultado también').toMatch(/\bobras?\b/i);
+});
+
+// ── T157 — las salidas «Cancelar» se alcanzan con el teclado ────────────────
+// `.auth-cancel` eran los ÚNICOS `<span data-action>` de todo el index: cinco
+// salidas «Cancelar» —los tres pasos de la hoja de cuenta, la de reseña y la
+// del nombre al compartir— que ningún teclado podía alcanzar.
+//
+// Y estaban en la MISMA regla CSS que `.conflict-btn-cancel` y
+// `.prio-limit-cancel`, que es un reset de botón (background:none, border:none,
+// cursor:pointer) y cuyas otras dos clases ya eran `<button>`. La etiqueta era
+// lo único que faltaba; el anillo de foco ya existía
+// (`:focus-visible{outline:2px solid var(--amber)}`).
+//
+// Se afirman las tres cosas que hacen falta para poder usarla sin mouse:
+// alcanzable, con foco VISIBLE, y que Enter la opere. Una de las tres sola no
+// sirve de nada.
+test('T157 — Cancelar es alcanzable, se ve enfocada y responde a Enter', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+  });
+  await page.waitForTimeout(700);
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'openAuthSheet');
+    document.body.appendChild(b); b.click(); b.remove();
+  });
+  await page.waitForTimeout(1200);
+
+  // 1 · TODAS las salidas de la app son alcanzables, incluidas las de los pasos
+  //     que ahora mismo están ocultos
+  const todas = await page.evaluate(() => {
+    const out = [...document.querySelectorAll('.auth-cancel')].map(e => ({
+      tag: e.tagName, tab: e.tabIndex
+    }));
+    return { n: out.length, inalcanzables: out.filter(o => !(o.tab >= 0)),
+      spansConAccion: document.querySelectorAll('span[data-action]').length };
+  });
+  expect(todas.n, 'la hoja de cuenta trae sus salidas').toBeGreaterThan(0);
+  expect(todas.inalcanzables,
+    'ninguna salida «Cancelar» puede quedar fuera del recorrido del teclado').toEqual([]);
+  expect(todas.spansConAccion,
+    'y no queda ningún <span> haciendo de botón, que es como empezó esto').toBe(0);
+
+  // 2 · llegar con Tab de verdad: :focus-visible solo se arma con el teclado
+  await page.evaluate(() => { const i = document.getElementById('auth-email-inp'); if (i) i.focus(); });
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
+  await page.waitForTimeout(300);
+  const foco = await page.evaluate(() => {
+    const a = document.activeElement;
+    return { esCancelar: a.classList.contains('auth-cancel'),
+      visible: (() => { try { return a.matches(':focus-visible'); } catch (e) { return null; } })() };
+  });
+  expect(foco.esCancelar, 'tabulando desde el campo se llega a Cancelar').toBe(true);
+  expect(foco.visible, 'y el foco se VE — un foco invisible no sirve de nada').toBe(true);
+
+  // 3 · y Enter la opera
+  await page.keyboard.press('Enter');
+  await page.waitForTimeout(900);
+  const cerrada = await page.evaluate(() => {
+    const sh = document.getElementById('auth-sheet');
+    return !sh || !sh.classList.contains('open');
+  });
+  expect(cerrada, 'Enter cierra la hoja: es un botón de verdad, no un span con onclick').toBe(true);
+});
+
+// ── T158 — un corto dentro de una charla no sigue «En curso» cuando la charla terminó ──
+// FICDEH, 17 AGO, Cinemateca Sala 2 a las 16:00: dos cortos (18 y 14 min) y una
+// charla de 180 que los proyecta adentro. El bloque sumaba 212 y los cortos
+// quedaban «En curso» hasta las 19:32, tres horas y media después de terminar,
+// mientras el bloque real terminó a las 19:00 (auditoría B-2, 2 sep 2026).
+//
+// Se afirma sobre lo PINTADO —el punto verde y su aria— en dos instantes: a las
+// 18:50 sigue en curso (la charla no terminó: el anclaje es correcto), a las
+// 19:30 ya no. Con la suma vieja el segundo instante falla; sin anclaje el
+// primero — las dos mitades se sostienen mutuamente.
+// El reloj del navegador se CONGELA (page.clock): «en curso» lee la hora del
+// navegador, y con solo _simTime esta medición no reproducía.
+test('T158 — el punto verde de un corto se apaga cuando termina la charla que lo contiene', async ({ page }) => {
+  const leer = async (iso) => {
+    try { await page.clock.setFixedTime(new Date(iso)); } catch (e) {}
+    await page.evaluate(t => { _simTime = t; activeDay = '2026-08-17'; programaViewMode = 'list';
+      _renderProgramaContent && _renderProgramaContent(); }, iso);
+    await page.waitForTimeout(1200);
+    return page.evaluate(() => {
+      const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+      const fila = [...document.querySelectorAll('.plist-item')].filter(vis).find(e => e.innerText.includes('Los pliegues de la falda'));
+      if (!fila) return null;
+      const dot = fila.querySelector('.live-dot,.row-dot');
+      return { enCurso: !!dot, aria: dot ? dot.getAttribute('aria-label') : null, opacity: getComputedStyle(fila).opacity };
+    });
+  };
+  await enterFestival(page, 'ficdeh2026', '2026-08-17T18:50:00-05:00');
+  await page.evaluate(() => { const f = [...document.querySelectorAll('#city-sheet-list .lugar-opt')].find(e => e.dataset.city === 'Bogotá'); if (f) f.click(); });
+  await page.waitForTimeout(1400);
+
+  const antes = await leer('2026-08-17T18:50:00-05:00');
+  expect(antes, 'la fila del corto se pintó').not.toBeNull();
+  expect(antes.enCurso, 'a las 18:50 la charla que lo contiene sigue: el corto está EN CURSO — es el anclaje, y es correcto')
+    .toBe(true);
+
+  const despues = await leer('2026-08-17T19:30:00-05:00');
+  expect(despues, 'la fila del corto se pintó').not.toBeNull();
+  expect(despues.enCurso, 'a las 19:30 la charla terminó (16:00 + 180): el punto verde se apaga')
+    .toBe(false);
+  expect(parseFloat(despues.opacity), 'y la fila pasa a atenuada, como toda función pasada')
+    .toBeLessThan(0.9);
+});
+
+// ── T160 — el día de hoy no se atenúa mientras su última función sigue ───────
+// Auditoría B-4 (2 sep 2026): 17 AGO 19:30, Bogotá. «El juego de la vida»
+// (19:00, 95 min) corre hasta las 20:35 y la cabecera dice «En curso · Termina
+// en 1 h 05» — pero la pestaña LUN 17 salía `past` a opacity .35 (2,04:1),
+// porque dayFullyPassed tomaba el último INICIO más 10 minutos.
+//
+// Dos instantes, y el segundo impide arreglar de más: a las 19:30 el día está
+// vivo; a las 21:00 (la última terminó 20:35) ya pasó y se atenúa. El reloj del
+// navegador se congela (page.clock): esta medición no reproducía con _simTime
+// solo, y así fue como la primera verificación la dio por falsa.
+test('T160 — LUN 17 sigue encendido a las 19:30 con su última función en curso, y pasado a las 21:00', async ({ page }) => {
+  // Cada instante ENTRA a la app de nuevo: la clase `past` de las pestañas se
+  // decide al construirlas (pipeline/loader), no en cada render, así que mover
+  // el reloj con la app abierta no la recalcula — y eso es lo que hace un
+  // usuario que abre la app a esa hora. La primera versión de este test movía
+  // _simTime en caliente y fallaba con el dominio SANO: medía el arnés.
+  const tab = async (iso) => {
+    await enterFestival(page, 'ficdeh2026', iso);
+    try { await page.clock.setFixedTime(new Date(iso)); } catch (e) {}
+    await page.evaluate(() => { const f = [...document.querySelectorAll('#city-sheet-list .lugar-opt')].find(e => e.dataset.city === 'Bogotá'); if (f) f.click(); });
+    await page.waitForTimeout(1400);
+    return page.evaluate(() => {
+      const t = [...document.querySelectorAll('.dtab')].find(e => (e.dataset.day || e.getAttribute('data-day')) === '2026-08-17');
+      if (!t) return null;
+      const bog = FILMS.filter(f => f.day === '2026-08-17' && f.time && !f._cancelled && /Bogot/.test(f.venue || ''));
+      const u = bog.sort((a, b) => a.time.localeCompare(b.time)).pop();
+      return { past: t.classList.contains('past'), opacity: parseFloat(getComputedStyle(t).opacity), ultima: u ? u.time + ' · ' + u.duration : null };
+    });
+  };
+  const vivo = await tab('2026-08-17T19:30:00-05:00');
+  expect(vivo, 'la pestaña del 17 se pintó').not.toBeNull();
+  expect(vivo.ultima, 'el fixture: la última de Bogotá empieza a las 19:00 y dura 95 — el caso medido').toBe('19:00 · 95 min');
+  expect(vivo.past, 'a las 19:30 la última función sigue: el día NO es pasado').toBe(false);
+  expect(vivo.opacity, 'y no se atenúa — es el día que estás viviendo').toBeGreaterThan(0.9);
+
+  const pasado = await tab('2026-08-17T21:00:00-05:00');
+  expect(pasado.past, 'a las 21:00 la última terminó (19:00 + 95 = 20:35): el día pasó').toBe(true);
+  expect(pasado.opacity, 'y se atenúa como todo día pasado').toBeLessThan(0.5);
+});
+// ── T164 — el panel de filtro no deja aire sin usar mientras corta nombres ──
+// Auditoría A-6 (2 sep 2026): en Sección con TODO el panel quedaba de x=8 a
+// x=308 en un viewport de 390 —82px sin usar— y 4 de 15 secciones salían
+// cortadas, la peor perdiendo el 45% de su nombre («🌷 La primavera llega para
+// los que esperan…», 453px de texto en 251 de caja).
+//
+// La causa no era el tope sino CUÁNDO se mide: _dropRight se llamaba antes de
+// que el panel tuviera contenido, así que espejaba el máximo (300) y posicionaba
+// por el peor caso. Con el ancho real, el panel ancho usa la pantalla y el
+// angosto queda pegado a su botón.
+//
+// Las dos mitades: si algo se corta, no puede sobrar espacio; si nada se corta,
+// el panel sigue anclado a su botón. Una sola de las dos se «arregla» sola.
+test('T164 — el panel usa el ancho que necesita, y no más', async ({ page }) => {
+  const abrir = async (todo) => {
+    await page.evaluate(t => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      if (t) { activeDay = 'all'; programaViewMode = 'grid'; _renderProgramaContent && _renderProgramaContent(); }
+    }, todo);
+    await page.waitForTimeout(1200);
+    return page.evaluate(async () => {
+      document.querySelector('.filter-drop')?.remove();
+      document.getElementById('seccion-btn').click();
+      await new Promise(r => setTimeout(r, 800));
+      const d = document.querySelector('.filter-drop'); if (!d) return null;
+      const dr = d.getBoundingClientRect();
+      const btn = document.getElementById('seccion-btn').getBoundingClientRect();
+      const spans = [...d.querySelectorAll('.lugar-opt span')];
+      return { left: Math.round(dr.left), right: Math.round(dr.right), width: Math.round(dr.width),
+        vp: innerWidth, btnRight: Math.round(btn.right),
+        filas: spans.length, cortadas: spans.filter(s => s.scrollWidth > s.clientWidth + 1).length };
+    });
+  };
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'cinemancia2026');
+
+  // 1 · catálogo entero: hay nombres largos, así que el panel tiene que usar todo
+  const todo = await abrir(true);
+  expect(todo, 'el panel de Sección abre').not.toBeNull();
+  expect(todo.filas, 'con TODO hay muchas secciones — si no, el test no mide nada').toBeGreaterThan(5);
+  expect(todo.left, 'no se sale por la izquierda').toBeGreaterThanOrEqual(0);
+  expect(todo.right, 'ni por la derecha').toBeLessThanOrEqual(todo.vp);
+  if (todo.cortadas > 0) {
+    const sobra = todo.vp - todo.width;
+    expect(sobra,
+      `${todo.cortadas} nombres cortados y ${sobra}px de pantalla sin usar: si algo se corta, el panel usa todo lo que hay`)
+      .toBeLessThanOrEqual(20);
+  }
+
+  // 2 · y con pocas secciones (el día de hoy) NO se estira: queda anclado al botón
+  const hoy = await abrir(false);
+  if (hoy && hoy.cortadas === 0 && hoy.width < todo.vp - 40) {
+    expect(Math.abs(hoy.right - hoy.btnRight),
+      `sin nada que cortar, el panel se ancla al borde del botón (panel ${hoy.right}, botón ${hoy.btnRight})`)
+      .toBeLessThanOrEqual(2);
+  }
+});
+
+// ── T166 — las dos salidas de texto gris se leen (contraste PINTADO) ─────────
+// Auditorías A-7 y A-3 (2 sep 2026), medido a 390x844 con el color COMPUESTO
+// (color × opacidades heredadas sobre el fondo real), no con el declarado:
+//   «Ver todas las ciudades» (hoja de ciudad) → #555555 sobre #1D1B18 = 2,30
+//   «Letterboxd» (ficha)                     → #555555 al .55 = pintado #3B3A39 = 1,54
+// Los dos son texto de 11px, así que les aplica el 4,5:1 de AA normal.
+//
+// Por qué PINTADO y no declarado: el enlace de Letterboxd hereda el opacity:.55
+// de `.c-lb`, y ningún guardián estático lo ve. Cambiarle solo el color a
+// --gray daba 2,39 —seguía fallando— y un grep habría cantado victoria.
+// Con --white bajo la misma opacidad pinta #908E8A y da 5,34.
+const _AA_NORMAL = 4.5;
+
+test('T166 — las dos salidas de texto gris cumplen AA pintadas', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  const sonda = () => {
+    const lin = c => { c /= 255; return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
+    const L = ([a, b, c]) => 0.2126 * lin(a) + 0.7152 * lin(b) + 0.0722 * lin(c);
+    const nums = s => (s.match(/[\d.]+/g) || []).map(Number);
+    // fondo: el primer ancestro con un relleno realmente opaco
+    const fondo = el => { let n = el;
+      while (n && n !== document.documentElement) {
+        const p = nums(getComputedStyle(n).backgroundColor);
+        if (p.length >= 3 && (p[3] === undefined || p[3] > 0.9)) return p.slice(0, 3);
+        n = n.parentElement; }
+      return nums(getComputedStyle(document.body).backgroundColor).slice(0, 3); };
+    // alfa compuesto: el propio y el de TODOS sus ancestros
+    const alfa = el => { let a = 1, n = el;
+      while (n && n !== document.documentElement) { a *= parseFloat(getComputedStyle(n).opacity) || 1; n = n.parentElement; }
+      return a; };
+    window.__sonda = sel => {
+      const el = document.querySelector(sel); if (!el) return null;
+      const r = el.getBoundingClientRect(); if (!r.width || !r.height) return null;
+      const cs = getComputedStyle(el), c = nums(cs.color);
+      const aTxt = c.length > 3 ? c[3] : 1;
+      const a = alfa(el) * aTxt, bg = fondo(el);
+      const pintado = c.slice(0, 3).map((v, i) => Math.round(v * a + bg[i] * (1 - a)));
+      const l1 = L(pintado), l2 = L(bg);
+      return { txt: el.textContent.trim().slice(0, 26), px: parseFloat(cs.fontSize),
+        peso: cs.fontWeight, declarado: cs.color, alfa: Math.round(a * 100) / 100,
+        pintado: '#' + pintado.map(v => v.toString(16).padStart(2, '0')).join(''), bg,
+        contraste: +(((Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05)).toFixed(2)) }; };
+  };
+
+  // 1 · A-7 · el escape de la hoja de ciudad (festival multiciudad: la hoja abre sola)
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  await page.evaluate(sonda);
+  const esc = await page.evaluate(() => window.__sonda('.lugar-opt.escape'));
+  expect(esc, 'la hoja de ciudad muestra su escape').not.toBeNull();
+  expect(esc.px, 'es texto pequeño: le aplica el 4,5:1').toBeLessThan(18);
+  expect(esc.contraste,
+    `«${esc.txt}»: ${esc.declarado} pintado ${esc.pintado} sobre ${esc.bg} da ${esc.contraste}`)
+    .toBeGreaterThanOrEqual(_AA_NORMAL);
+
+  // 2 · A-3 · el enlace de Letterboxd de la ficha
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00');
+  const abierta = await page.evaluate(async () => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 500));
+    for (const f of FILMS.filter(x => !x._cancelled && x.type !== 'event')) {
+      openPelSheet(f.title);
+      await new Promise(r => setTimeout(r, 800));
+      if (document.querySelector('.c-lb-text')) return f.title;
+      closePelSheet && closePelSheet();
+      await new Promise(r => setTimeout(r, 200));
+    }
+    return null;
+  });
+  expect(abierta, 'alguna obra del catálogo trae enlace de Letterboxd').toBeTruthy();
+  await page.evaluate(sonda);
+  const lb = await page.evaluate(() => window.__sonda('.c-lb-text'));
+  expect(lb, 'el enlace se dibuja').not.toBeNull();
+  expect(lb.px, 'también es texto pequeño').toBeLessThan(18);
+  expect(lb.alfa, 'y sigue atenuado — el arreglo NO fue subirle la opacidad').toBeLessThan(0.7);
+  expect(lb.contraste,
+    `«${lb.txt}»: ${lb.declarado} al ${lb.alfa} pinta ${lb.pintado} sobre ${lb.bg} y da ${lb.contraste}`)
+    .toBeGreaterThanOrEqual(_AA_NORMAL);
 });

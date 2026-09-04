@@ -932,6 +932,24 @@ export function postponedBannerHTML(cfg,{id=''}={}){
   </div>`;
 }
 
+// endedBannerHTML — la MISMA banda, para el festival que ya terminó. Vive al lado
+// de postponedBannerHTML porque es su hermana: un estado del festival anunciado
+// arriba del Programa. Nace de la auditoría del 4 sep 2026: con el reloj seis días
+// después del cierre, PROGRAMA no decía en ningún lado que el festival había
+// terminado —medido: `/termin/i` sobre el texto de la página daba false— y es
+// donde aterriza quien entra. El aviso solo vivía en Mi Plan.
+// Sin botón de cerrar, igual que la de aplazado: es un estado, no una novedad.
+export function endedBannerHTML(cfg,{id=''}={}){
+  if(!cfg) return '';
+  return`<div class="fest-postponed-banner"${id?` id="${id}"`:''}>
+    <div class="notice-banner-dot"></div>
+    <div class="notice-banner-body">
+      <div class="notice-banner-label">${t('fest_ended_label')}</div>
+      <div class="notice-banner-text">${cfg.name||t('misc_festival_default')} ${t('plan_fest_terminado')}</div>
+    </div>
+  </div>`;
+}
+
 export function _langDates(cfg,lang){
   if(cfg&&cfg.status&&cfg.status.kind==='postponed') return t('fest_postponed_dates');
   const _l=lang||state.snapshot()._lang;

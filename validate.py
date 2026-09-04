@@ -2291,10 +2291,17 @@ except Exception as _e:
 # Reporte Juan 18 jul 2026: duración/director/año de la ficha en #555 eran
 # ilegibles sobre el tinte ambiental. Regla: lo que se LEE para decidir
 # (metadata de obra) va en --gray o más claro; --gray2 es UI pasiva.
+# Ampliado 3 sep 2026 (auditorías A-7 y A-3) con dos salidas que se leen para
+# ACTUAR, no solo para decidir: el escape de la hoja de ciudad medía 2,30 y el
+# enlace de Letterboxd 1,54. Se re-apunta este guardián en vez de crear otro:
+# la regla «esto no va en --gray2» ya tiene dueño. Ojo: acá el estático no
+# alcanza —el enlace de LB vive bajo una opacidad que ningún grep ve—, así que
+# el contraste PINTADO lo mide T166.
 check = 'sheet-meta-legible'
 try:
     _html = open('index.html', encoding='utf-8').read()
-    _INFO = ['.pel-sheet-flags-dur{', '.pel-sheet-metaline{', '.rating-title{']
+    _INFO = ['.pel-sheet-flags-dur{', '.pel-sheet-metaline{', '.rating-title{',
+             '.lugar-opt.escape{', '.c-lb-text{']
     _bad = []
     for _sel in _INFO:
         _i = _html.find(_sel)
@@ -2306,7 +2313,7 @@ try:
     if _bad:
         fail(check, 'metadata informativa degradada: ' + '; '.join(_bad))
     else:
-        ok(check, 'duración/director/año de la ficha en --gray o más claro')
+        ok(check, f'{len(_INFO)} superficies de lectura en --gray o más claro')
 except Exception as _e:
     warn(check, f'no se pudo verificar sheet-meta-legible: {_e}')
 
@@ -4452,20 +4459,20 @@ try:
         # _buildPosterV16) y el dueño del color de sección. Entra a la lista con la
         # razón escrita, que es lo que este guardián pide, en vez de seguir
         # recortando comentarios que explican POR QUÉ el código es así.
-        'src/view/components.js': 1208,  # +8: la banda de festival TRASLADADO (QAFF a Bogotá) — el mapa BANDA y la etiqueta por kind (4 sep)  # antes 1200,  # +14: «diálogo» y «vernissage» entran al vocabulario de actividad (QAFF Bogotá) — 2 sep  # antes 1186,  # +18: el título de un evento no repite su TIPO (prefijo con separador + eco en medio) — 1 sep  # antes 1168,  # +2: «obras» sale de misc_peliculas, no de un literal — 1 sep  # antes 1166,  # +15: la Escalera escala a cualquier N (paso = fracción de la LÁMINA, no de la envolvente) + UID por póster (los clipPath fijos se pisaban entre sí en la grilla) — 26 ago  # antes 1151,  # +48: _buildPosterMini — la mini de 56px con marca determinista por obra (mejora 1 Apple Music) — 25 ago  # +20: el título tampoco repite el programa cuando el eco va al final (Cinemancia) — 24 ago  # +11: la pila reparte el presupuesto por uso real (el lazo del techo ahora SÍ vive) — 24 ago  # +2: el « + » de la pila sube a 0,6u (a 0,5u leía como suciedad, no como signo) — 24 ago  # +60: la pila de obras — un compuesto se apila, no se escribe como frase (mejora 1 de la auditoría de pósters) — 24 ago  # +10: makeProgramPoster con rótulo corto + suelo de sección 7 con su porqué — 24 ago  # +33: _seccionPartes + firma en el motor + sección a 2 líneas (regla de carga) — 24 ago  # +34: auditoría Forma A — luz por sección, título sin repetir la sección, _datoCompuesto — 24 ago  # +3: muere el badge EN REVISIÓN de la card (redundante con el divisor) — 23 ago  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago  # +24: _postponedElapsed — un aplazado baja a pasados cuando sus fechas anunciadas pasan — 23 ago
+        'src/view/components.js': 1226,  # +8: la banda de festival TRASLADADO (QAFF a Bogotá), hermana de la de aplazado y la de terminó (4 sep)  # antes 1204,  # +18: endedBannerHTML — la banda TERMINÓ, hermana de la de aplazado (4 sep)  # antes 1186,  # +18: el título de un evento no repite su TIPO (prefijo con separador + eco en medio) — 1 sep  # antes 1168,  # +2: «obras» sale de misc_peliculas, no de un literal — 1 sep  # antes 1166,  # +15: la Escalera escala a cualquier N (paso = fracción de la LÁMINA, no de la envolvente) + UID por póster (los clipPath fijos se pisaban entre sí en la grilla) — 26 ago  # antes 1151,  # +48: _buildPosterMini — la mini de 56px con marca determinista por obra (mejora 1 Apple Music) — 25 ago  # +20: el título tampoco repite el programa cuando el eco va al final (Cinemancia) — 24 ago  # +11: la pila reparte el presupuesto por uso real (el lazo del techo ahora SÍ vive) — 24 ago  # +2: el « + » de la pila sube a 0,6u (a 0,5u leía como suciedad, no como signo) — 24 ago  # +60: la pila de obras — un compuesto se apila, no se escribe como frase (mejora 1 de la auditoría de pósters) — 24 ago  # +10: makeProgramPoster con rótulo corto + suelo de sección 7 con su porqué — 24 ago  # +33: _seccionPartes + firma en el motor + sección a 2 líneas (regla de carga) — 24 ago  # +34: auditoría Forma A — luz por sección, título sin repetir la sección, _datoCompuesto — 24 ago  # +3: muere el badge EN REVISIÓN de la card (redundante con el divisor) — 23 ago  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago  # +24: _postponedElapsed — un aplazado baja a pasados cuando sus fechas anunciadas pasan — 23 ago
         # helpers.js estaba EXACTAMENTE en 800 antes del rediseño de pósters
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
         # guardián pide. Baja cuando se migre algo fuera de helpers.
-        'src/view/helpers.js': 993,  # +18: hayEvento pasa a ser dueño único del sustantivo (obras vs actividades), con su porqué (2 sep)  # antes 969,  # +8: festivalCities marca la ciudad cuya programación cayó entera — dueño único de la hoja de apertura y del filtro de Lugar (Juan, 2 sep)  # antes 961,  # +7: el interruptor de Prensa entra a planInputSignature — apagarlo dejaba el Plan en un pase que ya no existía — 30 ago  # antes 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago  # +6: la Escalera dice la duración DEL BLOQUE, no la de la primera obra (209 programas del repo la tenían mal) — 2 sep  # antes 961,  # +7: el interruptor de Prensa entra a planInputSignature — apagarlo dejaba el Plan en un pase que ya no existía — 30 ago  # antes 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
-        'src/view/agenda.js': 2102,  # +8: el sustantivo de las dos líneas de Planear sale del dueño hayEvento — un taller no es una obra (2 sep)  # antes 2094,  # +13: el vacío manda al primer lugar donde se puede hacer algo — se corta la cadena Mi Plan→Planear→Intereses de tres pantallas vacías (2 sep)  # antes 2081,  # +6: la cifra de «por planear» se distingue de la del resultado — 1 sep  # antes 2075,  # +6: el aviso del hueco se deriva del plan, no de un temporizador — 31 ago  # antes 2069,  # +4: por qué el vacío de PLANEAR no puede decir «Tu Plan aparece aquí» — 31 ago  # antes 2065,  # +5: la tarjeta de cierre del día usa todayWatched (effectiveWatched) en vez del set explícito — 31 ago  # antes 2060,  # +9: con el plan desactualizado «Usar este Plan» está disabled, así que el primario pasa a ser Recalcular — la pantalla no tenía ninguna acción que pareciera acción — 30 ago  # antes 2051,  # +15: la fila de una reprogramada dice A DÓNDE se movió — «Actualizar» era un botón a ciegas — 30 ago  # antes 2036,  # +22: el hero no le cuenta atrás a una cancelada, la alternativa de otra ciudad lleva su marca, y el resumen cuenta OBRAS y no funciones — P1 del recorrido — 30 ago  # antes 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
-        'src/main.js': 1809,  # +10: #dbg-ver sale del BUILD_VERSION que corre, no de un literal de mayo — 31 ago  # antes 1799,  # +12: el listener de captura honra data-stop — «Agendar» en NO INCLUIDAS abría además la ficha y te dejaba ahí — 30 ago  # antes 1787,  # +7: closeCitySheet al ACTION_REGISTRY — la hoja de ciudad prometía cerrarse tocando el fondo y el registro no la tenía (fallo mudo) — 30 ago  # antes 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
-        'src/i18n/i18n.js': 1706,  # +3: fest_moved_label en es/en/pt (4 sep)  # antes 1703,  # +6: pre_actividades_planear y pre_actividad_planear en es/en/pt — aprobado por Juan (2 sep)  # antes 1697,  # +3: export_compartir_sin_nombre en es/en/pt — compartir el Plan deja de exigir nombre (aprobado por Juan, 2 sep)  # antes 1694,  # +6: pre_obras_planear/pre_obra_planear — 1 sep  # antes 1688,  # +3: plan_falta_intereses — PLANEAR y MI PLAN dejan de tener el mismo titular — 31 ago  # antes 1685,  # +6: dia_sin_funciones_ciudad(+_sub) — el vacío del día con SOLO ciudad puesta no culpa a sección/sede — 30 ago  # antes 1679,  # +3: conflict_choca_intro_bloque — «función» no se le dice a un taller — 30 ago  # antes 1676,  # +3: bar_prensa_corto en es-en-pt — el filtro de Prensa gana etiqueta (una usuaria no lo encontraba) — 26 ago  # antes 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
-        'src/controller/sheets-controller.js': 1763,  # +22: la hoja «¡Tu Plan está listo!» adopta la fila canónica — era la única de las 6 listas de obras sin póster y la única encajada; entran el thumb por el dueño único, la línea «día · hora» y el rango del pie, y sale la fórmula de rango duplicada — 2 sep  # antes 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
+        'src/view/helpers.js': 1000,  # +6: la fusión de la rama de QAFF con main — las dos tocaron el archivo y el techo cuenta el resultado (4 sep)  # antes 994,  # +7: la cuenta del cruce marca el fin como estimado si la duración no está publicada (4 sep)  # antes 987,  # +18: hayEvento pasa a ser dueño único del sustantivo (obras vs actividades), con su porqué (2 sep)  # antes 969,  # +8: festivalCities marca la ciudad cuya programación cayó entera — dueño único de la hoja de apertura y del filtro de Lugar (Juan, 2 sep)  # antes 961,  # +7: el interruptor de Prensa entra a planInputSignature — apagarlo dejaba el Plan en un pase que ya no existía — 30 ago  # antes 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
+        'src/view/agenda.js': 2231,  # +15: el titular del Plan nombra la ciudad cuando el filtro la restringe (4 sep)  # antes 2216,  # +8: la fila de Intereses deja de decir «Vista» dos veces — el dato muestra la sección (4 sep)  # antes 2208,  # +13: «qué viste» se pregunta al dueño único en las 4 puertas del modo Recuerdo (auditoría 4 sep)  # antes 2195,  # +4: la hora de salida se marca estimada cuando la duración no está publicada (4 sep)  # antes 2191,
+        'src/main.js': 1815,  # +6: el que abre la ficha no se veta a sí mismo con data-stop — el póster de Mi Plan no abría (4 sep)  # antes 1809,  # +10: #dbg-ver sale del BUILD_VERSION que corre, no de un literal de mayo — 31 ago  # antes 1799,  # +12: el listener de captura honra data-stop — «Agendar» en NO INCLUIDAS abría además la ficha y te dejaba ahí — 30 ago  # antes 1787,  # +7: closeCitySheet al ACTION_REGISTRY — la hoja de ciudad prometía cerrarse tocando el fondo y el registro no la tenía (fallo mudo) — 30 ago  # antes 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
+        'src/i18n/i18n.js': 1721,  # +3: fest_moved_label en es/en/pt (4 sep)  # antes 1718,  # +3: fest_ended_label en es/en/pt (4 sep)  # antes 1715,  # +3: res_en_ciudad en es/en/pt (4 sep)  # antes 1712,  # +6: badge_duracion + aviso_dur_estimada en es/en/pt (4 sep)  # antes 1709,  # +3: ics_dur_estimada en es/en/pt — el calendario dice de dónde salen los 90 min (4 sep)  # antes 1706,  # +3: cta_deshacer en es/en/pt — la vuelta atrás al quitar de Intereses, auditoría A-2 (3 sep)  # antes 1703,  # +6: pre_actividades_planear y pre_actividad_planear en es/en/pt — aprobado por Juan (2 sep)  # antes 1697,  # +3: export_compartir_sin_nombre en es/en/pt — compartir el Plan deja de exigir nombre (aprobado por Juan, 2 sep)  # antes 1694,  # +6: pre_obras_planear/pre_obra_planear — 1 sep  # antes 1688,  # +3: plan_falta_intereses — PLANEAR y MI PLAN dejan de tener el mismo titular — 31 ago  # antes 1685,  # +6: dia_sin_funciones_ciudad(+_sub) — el vacío del día con SOLO ciudad puesta no culpa a sección/sede — 30 ago  # antes 1679,  # +3: conflict_choca_intro_bloque — «función» no se le dice a un taller — 30 ago  # antes 1676,  # +3: bar_prensa_corto en es-en-pt — el filtro de Prensa gana etiqueta (una usuaria no lo encontraba) — 26 ago  # antes 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
+        'src/controller/sheets-controller.js': 1797,  # +14: el precio se dice de las funciones VIVAS — la banda listaba como CON BOLETA funciones que ella misma marca CANCELADA (4 sep)  # antes 1783,  # +6: el aviso se deriva de las FUNCIONES (la ficha de corto no tiene film propio)  # antes 1777,  # +6: Avisos dice cuando la duración no está publicada — es un rasgo de la función, como el Q&A (4 sep)  # antes 1771,  # +8: el día se muestra con su número en las 4 superficies — 9 de 15 festivales repiten nombre de día (2 sep)  # antes 1763,  # +22: la hoja «¡Tu Plan está listo!» adopta la fila canónica — era la única de las 6 listas de obras sin póster y la única encajada; entran el thumb por el dueño único, la línea «día · hora» y el rango del pie, y sale la fórmula de rango duplicada — 2 sep  # antes 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
         # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres
         # correcciones sobre la fuente, que valen más escritas que ahorradas.
-        'src/controller/handlers.js': 1148,  # +11: las compañeras de función son la INTERSECCIÓN, no la unión — un toque metía 15 obras ajenas (recorrido de usuario) — 30 ago  # antes 1137,  # +4: el aviso de reprogramada declara {mudar:true} — T52/AV04 lo cazaron — 26 ago  # antes 1133,  # +28: «verla otra vez» rehecha — no-op por sameEntry, conflicto sin excluirse a sí misma, modal de 3 acciones y el taller ruteado entero (H6+H7 del informe) — 26 ago  # antes 1105,  # revert #746/#748 (25 ago): «verla otra vez» salió — ver el informe adversarial  # +4: {mudar:true} — «Actualizar» una reprogramada no pregunta (T52) — 25 ago  # antes 1145,  # +40: «verla otra vez» — el diálogo de obra repetida y el borrado por función — 25 ago  # antes 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
+        'src/controller/handlers.js': 1161,  # +13: quitar de Intereses ofrece «Deshacer» y repone los 3 conjuntos, auditoría A-2 (3 sep)  # antes 1148,  # +11: las compañeras de función son la INTERSECCIÓN, no la unión — un toque metía 15 obras ajenas (recorrido de usuario) — 30 ago  # antes 1137,  # +4: el aviso de reprogramada declara {mudar:true} — T52/AV04 lo cazaron — 26 ago  # antes 1133,  # +28: «verla otra vez» rehecha — no-op por sameEntry, conflicto sin excluirse a sí misma, modal de 3 acciones y el taller ruteado entero (H6+H7 del informe) — 26 ago  # antes 1105,  # revert #746/#748 (25 ago): «verla otra vez» salió — ver el informe adversarial  # +4: {mudar:true} — «Actualizar» una reprogramada no pregunta (T52) — 25 ago  # antes 1145,  # +40: «verla otra vez» — el diálogo de obra repetida y el borrado por función — 25 ago  # antes 1105,  # +2: el límite de prioridades mide las vivas (prioLiveCount) (17 ago)  # +26: includeAnyway — agendar la que solo choca por el Q&A, marcada como decisión deliberada (17 ago)  # +12: _vueltaA — el toast nombra la sección REAL donde reaparece (la prioridad sobrevive al desmarcar) (16 ago)  # +6: los dos toasts dicen «también en Intereses», solo cuando de verdad sumaron (16 ago)  # +18: el squeeze y «+ Incluir» usan el dueño del predicado (el plan volvía a cruzar ciudades al GUARDAR) (16 ago)  # +8: el toast del programa dice cuántas obras y por qué (15 ago)  # +45: taller multi-día — addRecurringBlock/removeRecurringBlock (bloque entero en un solo commitPlan) (8 ago)  # +15: acciones del sheet de ciudad (7 ago)  # +20: anclaje de función en toggleWL, simétrico al quitar (29 jul)
     }
     # src/config.js NO tiene techo (Juan, 23 ago 2026). Es DATA de festival
     # —FESTIVAL_CONFIG, VENUES, NOTICES, PALMARES— y crece con cada onboarding,
@@ -4501,6 +4508,120 @@ try:
         ok(check, f'ningún módulo sobre su techo (nuevos <{_CAP}; {len(_ALLOW)} grandes grandfathered no crecieron)')
 except Exception as _e:
     warn(check, f'no se pudo verificar module-size: {_e}')
+
+# ── [test-salida-muda] una salida temprana en un test tiene que sonar ─────────
+# Un `return;` suelto en el cuerpo de un test lo apaga SIN dejar rastro: el
+# informe lo cuenta como verde y nadie se entera de que no midió nada. No es
+# hipotético — T146 protegía que el desvanecido del dropdown fuera condicional,
+# su festival de prueba encogió a 8 opciones, dejó de desbordar el panel, y el
+# test se fue por su `return` durante quién sabe cuánto (medido y arreglado el
+# 4 sep 2026, PR #847).
+#
+# Las dos formas honestas de no medir son ruidosas y las dos sirven:
+#   · una AFIRMACIÓN — `expect(r.sinBoton, '…').toBeUndefined()` — cuando la
+#     premisa es parte del contrato del test y su ausencia es un fallo;
+#   · un `test.skip(cond, 'razón')` cuando el festival de turno legítimamente no
+#     tiene el caso: sale contado como «skipped» en el informe, que es visible.
+#
+# LÍNEA BASE, no barrido: las 34 de hoy quedan grandfathered por archivo. Se
+# congelan porque no todas son iguales —algunas son saltos legítimos entre
+# festivales y forzarlas a afirmar las rompería—, y cada una pide un juicio
+# propio. Lo que este check impide es que el número CREZCA: se medió que la
+# clase estaba creciendo rápido (1 en julio, 20 en agosto, 13 en los primeros
+# cuatro días de septiembre), así que un techo acá se cobra la misma semana.
+#
+# Los `return` DENTRO de un bucle o de un callback no cuentan: ahí saltar un
+# elemento es lo correcto. Solo se miran los del cuerpo del test.
+check = 'test-salida-muda'
+try:
+    import glob as _glob, re as _re
+
+    def _cuerpos_anidados(_c):
+        """Rangos [abre, cierra] de todo bloque interno: bucles, callbacks, if."""
+        _r = []
+        for _m in _re.finditer(r'=>\s*\{|\bfunction\s*\w*\s*\([^)]*\)\s*\{'
+                               r'|\.(?:forEach|map|filter|some|every)\s*\('
+                               r'|(?<![\w.])for\s*\(|\bif\s*\(', _c):
+            _i = _m.end()
+            if _c[_i - 1] == '{':
+                _abre = _i - 1
+            else:
+                _p, _abre = 0, None
+                while _i < len(_c):
+                    _ch = _c[_i]
+                    if _ch == '(':
+                        _p += 1
+                    elif _ch == ')':
+                        if _p == 0:
+                            break
+                        _p -= 1
+                    elif _ch == '{' and _p == 0:
+                        _abre = _i
+                        break
+                    elif _ch == ';' and _p == 0:
+                        break
+                    _i += 1
+                if _abre is None:
+                    continue
+            _d = 0
+            for _j in range(_abre, len(_c)):
+                if _c[_j] == '{':
+                    _d += 1
+                elif _c[_j] == '}':
+                    _d -= 1
+                    if _d == 0:
+                        _r.append((_abre, _j))
+                        break
+        return _r
+
+    def _salidas_mudas(_ruta):
+        _s = open(_ruta, encoding='utf-8').read()
+        _idx = [_m.start() for _m in _re.finditer(r"^\s*test\(\s*['\"]", _s, _re.M)]
+        _out = []
+        for _k, _a in enumerate(_idx):
+            _b = _idx[_k + 1] if _k + 1 < len(_idx) else len(_s)
+            _c = _s[_a:_b]
+            _rg = _cuerpos_anidados(_c)
+            for _m in _re.finditer(r'^\s*(?:if\s*\([^\n]*\)\s*)?return\s*;', _c, _re.M):
+                _q = _m.start()
+                # prof 0 = suelto en el cuerpo; 1 = dentro del callback del test.
+                # Más que eso ya es un bucle o un if anidado: no cuenta.
+                if sum(1 for _x, _y in _rg if _x < _q < _y) <= 1:
+                    _out.append(_s[:_a + _q].count('\n') + 1)
+        return _out
+
+    # Línea base al 4 sep 2026. Solo puede BAJAR: cuando un test cambie su
+    # `return` por una afirmación o un test.skip, bajá el número acá.
+    _BASE = {
+        'tests/festivals.spec.js': 3,
+        'tests/miplan.spec.js': 22,
+        'tests/programa.spec.js': 8,
+        # sheet.spec.js bajó a 0 el 4 sep: su única salida muda pasó a ser una
+        # afirmación de premisa. Así se drena esta lista — de a una, midiendo.
+        'tests/sheet.spec.js': 0,
+    }
+    _mal, _sobra, _total = [], [], 0
+    for _f in sorted(_glob.glob('tests/**/*.spec.js', recursive=True)):
+        _f = _f.replace('\\', '/')
+        _hits = _salidas_mudas(_f)
+        _total += len(_hits)
+        _tope = _BASE.get(_f, 0)
+        if len(_hits) > _tope:
+            _nuevas = ', '.join(f'línea {_l}' for _l in _hits[_tope:])
+            _mal.append(f'{_f}: {len(_hits)} salidas mudas > línea base {_tope} ({_nuevas})')
+        elif len(_hits) < _tope:
+            _sobra.append(f'{_f}: {len(_hits)} (la base dice {_tope})')
+    if _mal:
+        fail(check, 'un `return;` suelto apaga el test en silencio — usá '
+                    '`expect(cond, "…").toBeUndefined()` o `test.skip(cond, "razón")`: '
+                    + '; '.join(_mal))
+    elif _sobra:
+        ok(check, f'{_total} salidas mudas, ninguna nueva — bajá la línea base: '
+                  + '; '.join(_sobra))
+    else:
+        ok(check, f'{_total} salidas mudas grandfathered, ninguna nueva')
+except Exception as _e:
+    warn(check, f'no se pudo verificar test-salida-muda: {_e}')
 
 # ── [layer-direction] las dependencias apuntan hacia adentro ───────────────────
 # La modularidad por capas solo se sostiene si las dependencias van en UNA

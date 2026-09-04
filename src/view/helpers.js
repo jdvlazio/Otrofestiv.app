@@ -13,7 +13,7 @@ import {
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
-import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
+import { toMin, minToStr, parseDur, durEstimada, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
 import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
@@ -720,12 +720,19 @@ export function conflictAccount(a,b,r){
   const [f1,f2]=r.bFirst?[b,a]:[a,b];
   const t1=parseProgramTitle(f1._title||f1.title||'').displayTitle;
   const t2=parseProgramTitle(f2._title||f2.title||'').displayTitle;
-  const end=screeningBlockEndMin(f1);                   // fin de película: dato
+  // fin de película: dato… salvo cuando la duración no está publicada, y entonces
+  // sale de rellenar el hueco con DEFAULT_DURATION_MIN. La doctrina de acá abajo
+  // dice que la `~` marca lo estimado: si el fin lo es, se marca igual que el
+  // viaje y el Q&A. Si no, la cuenta que descarta una obra se apoya en un número
+  // inventado y lo presenta como hecho.
+  const end=screeningBlockEndMin(f1);
+  const _endEst=durEstimada(f1.duration);
+  const _end=x=>(_endEst?'~':'')+minToStr(x);
   const start=toMin(f2.time);
   const _b=x=>`<b>${x}</b>`;
   if(r.kind==='ajustado'){
     // misma sede: el Q&A no compromete (doctrina 30 jul) — cuenta con el buffer
-    return t('cuenta_salas',{t1:`<i>${t1}</i>`,end:_b(minToStr(end)),buffer:FESTIVAL_BUFFER,
+    return t('cuenta_salas',{t1:`<i>${t1}</i>`,end:_b(_end(end)),buffer:FESTIVAL_BUFFER,
       arr:_b(minToStr(end+FESTIVAL_BUFFER)),t2:`<i>${t2}</i>`,start:_b(minToStr(start))});
   }
   // viaje: con traslado el Q&A sí cuenta (durationForTravel) — se muestra aparte.
@@ -740,7 +747,7 @@ export function conflictAccount(a,b,r){
   const qaEnd=end+(f1.has_qa?FESTIVAL_QA_MIN:0);
   const total=qaEnd+r.travel+FESTIVAL_BUFFER;
   const base=t(f1.has_qa?'cuenta_viaje_qa':'cuenta_viaje',
-    {t1:`<i>${t1}</i>`,end:_b(minToStr(end)),qa:FESTIVAL_QA_MIN,
+    {t1:`<i>${t1}</i>`,end:_b(_end(end)),qa:FESTIVAL_QA_MIN,
      // travel en minutos PELADOS: la cadena declara la unidad una sola vez, al
      // final («margen 15 min»). Con _minFmt salía «viaje ~10 min + margen 15 min».
      travel:r.travel,buffer:FESTIVAL_BUFFER,

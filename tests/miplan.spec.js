@@ -1628,3 +1628,1007 @@ test('T152 — la columna activa se distingue aunque su día esté vacío o pasa
       .toMatch(/245,\s*158,\s*11/);
   }
 });
+
+// ── T154 — la imagen compartida dice los días del PLAN, no los del festival ──
+// El subtítulo del PNG reusaba `active.length`, y `active` son TODOS los días
+// del festival a propósito: la grilla es un registro completo, con sus columnas
+// vacías. Medido en FICDEH con 3 obras repartidas en 4 días, la imagen decía
+// «Mi Plan · FICDEH · 8 días». Leído bajo «Mi Plan», ese número es el tamaño de
+// tu Plan, y era el del festival.
+//
+// Se afirma sobre el TEXTO QUE ENTRA AL CANVAS (fillText), que es lo que queda
+// pintado en la imagen que se comparte — no sobre la variable que lo calcula.
+// Y son días CON algo adentro, no el lapso: con una obra el lunes y otra el
+// viernes tu Plan es de 2 días, no de 5. Misma derivación que usa la línea de
+// resultado de Planear.
+test('T154 — el subtítulo de la imagen cuenta los días que tienen algo', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-12T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    tap('closeCitySheet'); await w(500);
+    try { localStorage.removeItem('otrofestiv_display_name'); } catch (e) {}
+    // Plan repartido: días con algo < días del festival, o el test no mide nada
+    const pel = FILMS.filter(f => f.type !== 'event' && !f._cancelled && f.day && f.time);
+    const sch = [];
+    ['2026-08-13', '2026-08-15', '2026-08-17'].forEach(d => {
+      const f = pel.find(x => x.day === d); if (f) sch.push({ ...f, _title: f.title });
+    });
+    if (sch.length < 2) return { sinFixture: true };
+    commitPlan(() => ({ schedule: sch }));
+    await w(700);
+
+    // lo que se PINTA en la imagen
+    const textos = [];
+    const _fill = CanvasRenderingContext2D.prototype.fillText;
+    CanvasRenderingContext2D.prototype.fillText = function (t, ...rest) {
+      textos.push(String(t)); return _fill.call(this, t, ...rest);
+    };
+    tap('sharePlan'); await w(1200);
+    const cta = document.getElementById('dname-save');
+    if (cta) { cta.click(); await w(2500); }
+    CanvasRenderingContext2D.prototype.fillText = _fill;
+
+    const dias = [...new Set(sch.map(s => s.day))].sort();
+    const i0 = DAY_KEYS.indexOf(dias[0]), i1 = DAY_KEYS.indexOf(dias[dias.length - 1]);
+    return {
+      sub: textos.find(t => t.includes('Mi Plan')) || null,
+      diasConPlan: dias.length,
+      diasFestival: DAY_KEYS.length,
+      lapso: (i0 >= 0 && i1 >= 0) ? (i1 - i0 + 1) : null
+    };
+  });
+  if (r.sinFixture) return;
+  expect(r.sub, 'el subtítulo se pintó en la imagen').toBeTruthy();
+  expect(r.diasConPlan, 'el fixture reparte el Plan en menos días que el festival')
+    .toBeLessThan(r.diasFestival);
+
+  const n = parseInt((r.sub.match(/(\d+)\s*d[ií]as?\b/i) || [])[1], 10);
+  expect(Number.isFinite(n), 'el subtítulo declara un número de días').toBe(true);
+  expect(n, 'y son los días del PLAN, no los del festival').toBe(r.diasConPlan);
+  if (r.lapso && r.lapso !== r.diasConPlan) {
+    expect(n, 'días CON algo adentro, no el lapso entre el primero y el último')
+      .not.toBe(r.lapso);
+  }
+});
+
+// ── T155 — el día se muestra con su número, no recortado a «JUE» ────────────
+// Cuatro superficies de sheets-controller cortaban `dayLabel()` con
+// `.split(' ')[0]` y dejaban «JUE» a secas. Medido: 9 de los 15 festivales de
+// la app repiten nombre de día —todos los de 8 días o más; Tribeca tiene 5
+// pares, TIFF 4, Cinemancia 3—, así que «JUE» no distingue el 3 del 10.
+//
+// El recorte no protegía ningún layout: ninguna de esas clases lleva `nowrap`,
+// y medido a 375px en las cuatro, el número no cambia ni la altura ni la caja.
+//
+// Se afirma que la superficie muestra EXACTAMENTE lo que devuelve el dueño
+// (dayLabel), no un prefijo suyo: es la forma de que un recorte futuro —de un
+// carácter o de dos— caiga igual.
+// El reloj va CONGELADO (4 sep 2026). Corría contra la fecha real y se rompió
+// solo al pasar el día: Cinemancia empezó el 3 SEP, y con el festival adentro las
+// primeras funciones del catálogo ya pasaron, así que la hoja del tope se quedó
+// sin filas que pintar. Medido en main limpio: con reloj real pasaba el 1 y el 3
+// de septiembre y fallaba el 5. La hoja del tope y la de conflicto no dependen de
+// la fase, así que se ancla ANTES del arranque, donde todas las funciones son
+// futuras y el fixture es estable para siempre.
+test('T155 — la hoja del tope y la de conflicto muestran el día completo', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026', '2026-09-01T10:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const H = await import('/src/view/helpers.js');
+    const S = await import('/src/domain/schedule.js');
+    const tap = (a, attrs = {}) => {
+      const b = document.createElement('button'); b.setAttribute('data-action', a);
+      Object.entries(attrs).forEach(([k, v]) => b.setAttribute(k, v));
+      document.body.appendChild(b); b.click(); b.remove();
+    };
+    tap('closeCitySheet'); await w(600);
+
+    // ¿este festival repite nombres de día? si no, el test no mide nada
+    const cortos = DAY_KEYS.map(k => String(H.dayLabel(k) || k).split(' ')[0]);
+    const repetidos = cortos.filter((c, i) => cortos.indexOf(c) !== i).length;
+
+    const pel = FILMS.filter(f => f.day && f.time && !f._cancelled);
+
+    // 1 · hoja del tope de prioridades: varias obras de días distintos
+    watchlist.clear(); prioritized.clear();
+    const titulos = [...new Set(pel.map(f => f.title))].slice(0, PRIO_LIMIT + 1);
+    titulos.forEach(t => watchlist.add(t));
+    titulos.slice(0, PRIO_LIMIT).forEach(t => prioritized.add(t));
+    tap('togglePriority', { 'data-title': titulos[PRIO_LIMIT] });
+    await w(1200);
+    const prio = [...document.querySelectorAll('.prio-limit-when')]
+      .map(e => (e.textContent || '').split('·')[0].trim()).filter(Boolean);
+    tap('closePrioLimit'); await w(500);
+
+    // 2 · hoja de conflicto: dos funciones que se pisan de verdad
+    let a = null, b = null;
+    for (let i = 0; i < pel.length && !b; i++)
+      for (let j = i + 1; j < pel.length; j++)
+        if (pel[i].title !== pel[j].title && S.screensConflict(pel[i], pel[j])) { a = pel[i]; b = pel[j]; break; }
+    let conflicto = null;
+    if (b) {
+      commitPlan(() => ({ schedule: [{ ...a, _title: a.title }] }));
+      await w(500);
+      openConflictSheet(b.title, b, { ...a, _title: a.title });
+      await w(1000);
+      conflicto = {
+        entra: (document.getElementById('cs-incoming-when') || {}).textContent || '',
+        estaba: (document.getElementById('cs-existing-when') || {}).textContent || '',
+        diaEntra: H.dayLabel(b.day), diaEstaba: H.dayLabel(a.day)
+      };
+    }
+    return { repetidos, prio, conflicto,
+      etiquetasValidas: DAY_KEYS.map(k => H.dayLabel(k)) };
+  });
+
+  expect(r.repetidos, 'el festival de prueba repite nombres de día — si no, no hay ambigüedad que medir')
+    .toBeGreaterThan(0);
+  expect(r.prio.length, 'la hoja del tope pintó sus filas').toBeGreaterThan(0);
+
+  // cada día mostrado es EXACTAMENTE una etiqueta del dueño, no un prefijo
+  for (const d of r.prio) {
+    expect(d, `«${d}» lleva su número: sin él no se distingue de otro ${d.split(' ')[0]}`)
+      .toMatch(/^[A-ZÁÉÍÓÚ]{3}\s\d{1,2}$/);
+    expect(r.etiquetasValidas, `y es una etiqueta real del calendario, no un recorte`)
+      .toContain(d);
+  }
+  if (r.conflicto) {
+    expect(r.conflicto.entra, 'la función que entra dice su día entero')
+      .toContain(r.conflicto.diaEntra);
+    expect(r.conflicto.estaba, 'y la que ya estaba, también')
+      .toContain(r.conflicto.diaEstaba);
+  }
+});
+
+// ── T156 — la hoja del nombre tiene una salida visible ──────────────────────
+// Solo se cerraba tocando el fondo, que no se anuncia. La hoja reusa de la de
+// cuenta el contenedor (.auth-sheet-body), el título, el subtítulo, el input y
+// el CTA — pero no la última pieza de esa anatomía: los TRES pasos de la hoja
+// de cuenta terminan en `<span class="auth-cancel">Cancelar</span>`.
+//
+// Se afirman las dos mitades: que la salida se VE (existe, tiene caja y entra
+// en el viewport) y que hace lo que dice — cerrar SIN compartir. Una salida que
+// igual comparte es peor que ninguna, y arreglar solo la primera mitad la
+// dejaría pasar.
+test('T156 — Compartir se puede cancelar, y cancelar no comparte', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    const porDia = {};
+    FILMS.forEach(f => { (porDia[f.day] = porDia[f.day] || []).push(f.title); });
+    watchlist.clear();
+    Object.keys(porDia).sort().slice(0, 3).forEach(d => watchlist.add(porDia[d][0]));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+    try { localStorage.removeItem('otrofestiv_display_name'); } catch (e) {}
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(900);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const save = document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]');
+    if (!save) return { sinPlan: true };
+    save.click(); await w(1400);
+    tap('closePlanConfirm'); await w(800);
+    tap('sharePlan'); await w(1000);
+    const sh = document.getElementById('display-name-sheet');
+    if (!sh) return { noPide: true };
+
+    // 1 · ¿hay una salida que se VEA?
+    const c = document.getElementById('dname-cancel');
+    const rc = c ? c.getBoundingClientRect() : null;
+    const visible = { hay: !!c, txt: c ? c.textContent.trim() : null,
+      caja: rc ? (rc.width > 0 && rc.height > 0) : false,
+      enPantalla: rc ? (rc.bottom <= innerHeight + 0.5 && rc.top >= 0) : false };
+    if (!c) return { visible };
+
+    // 2 · ¿cierra SIN compartir?
+    let imagen = 0;
+    const _o = HTMLCanvasElement.prototype.toDataURL;
+    HTMLCanvasElement.prototype.toDataURL = function (...a) {
+      const u = _o.apply(this, a);
+      if (this.width > 400) imagen = Math.max(imagen, u.length);
+      return u;
+    };
+    c.click(); await w(2000);
+    HTMLCanvasElement.prototype.toDataURL = _o;
+    return { visible, cerro: !document.getElementById('display-name-sheet'),
+      imagen, nombre: localStorage.getItem('otrofestiv_display_name') };
+  });
+  if (r.sinPlan || r.noPide) return;
+
+  expect(r.visible.hay, 'la hoja ofrece una salida visible, no solo el fondo').toBe(true);
+  expect(r.visible.caja, 'y esa salida ocupa lugar en la pantalla').toBe(true);
+  expect(r.visible.enPantalla, 'y entra en el viewport, no queda debajo del borde').toBe(true);
+
+  expect(r.cerro, 'cancelar cierra la hoja').toBe(true);
+  expect(r.imagen, 'y NO comparte: una salida que igual comparte es peor que ninguna').toBe(0);
+  expect(r.nombre, 'ni guarda un nombre que no diste').toBeNull();
+});
+
+// ── T159 — la fila de una obra excluida ofrece una función VIVA, no una cancelada ──
+// Auditoría B-1 (2 sep 2026), FICDEH tras el sismo: «Honorablé» tiene una
+// función cancelada (SÁB 15 · Cali) y una viva (MIÉ 19 · Barranquilla). Con el
+// Plan en Bogotá, la fila de «En otra ciudad» decía «SÁB 15 17:00 · Cali», en
+// ámbar y sin marca: el bucle tomaba la PRIMERA que chocaba con el Plan, y la
+// cancelada iba primero. Mandaba a viajar a otra ciudad a una función que no
+// existe, teniendo una viva que nunca miró.
+//
+// Tres afirmaciones, y la tercera es la que impide arreglar de más: una obra
+// con TODAS sus funciones caídas tiene que seguir marcada CANCELADA (regla del
+// 30 ago). Si las canceladas se excluyeran del todo, esa fila perdería su marca.
+test('T159 — la excluida se explica con su función viva, y la toda-caída sigue marcada', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T14:00:00-05:00');
+  await page.evaluate(() => { const f = [...document.querySelectorAll('#city-sheet-list .lugar-opt')].find(e => e.dataset.city === 'Bogotá'); if (f) f.click(); });
+  await page.waitForTimeout(1400);
+  const fx = await page.evaluate(() => {
+    watchlist.clear();
+    // una obra con función cancelada Y función viva, y otra con TODAS caídas
+    const porT = {}; FILMS.forEach(f => { if (f.day && f.time) (porT[f.title] ||= []).push(f); });
+    // La condición EXACTA del hallazgo: en el orden del catálogo, la función
+    // cancelada va ANTES que la viva — es lo que hacía que el bucle la tomara.
+    // Con una obra donde la viva va primero, el bug no cambia nada y el test
+    // pasaría con el bug puesto (la primera versión de este test, mutada, pasó).
+    // …Y el segundo ingrediente: todas sus funciones vivas caen FUERA de la
+    // ciudad del Plan. Solo así el motor la excluye y existe una fila que medir.
+    // Con una viva en Bogotá el motor la incluye, no hay fila, y el test pasaría
+    // con el bug puesto (la segunda versión de este test, mutada, pasó).
+    const ciudadDe = f => (typeof venueCity === 'function' ? venueCity(f.venue) : '') || (f.venue || '').split(' - ').pop();
+    const mixta = Object.keys(porT).find(t => {
+      const noPasadas = porT[t].filter(f => f.day >= '2026-08-15');
+      const iCanc = noPasadas.findIndex(f => f._cancelled), iViva = noPasadas.findIndex(f => !f._cancelled);
+      const vivas = noPasadas.filter(f => !f._cancelled);
+      return iCanc >= 0 && iViva >= 0 && iCanc < iViva && vivas.every(f => ciudadDe(f) && ciudadDe(f) !== 'Bogotá');
+    });
+    const caida = Object.keys(porT).find(t => porT[t].every(f => f._cancelled));
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f._cancelled).map(f => f.title))].filter(t => t !== mixta).slice(0, 12);
+    [mixta, caida, ...vivas].filter(Boolean).forEach(t => watchlist.add(t));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+    savedAgenda = null; cachedResult = null;
+    return { mixta, caida, vivasDeLaMixta: mixta ? porT[mixta].filter(f => !f._cancelled).map(f => f.day + ' ' + f.time) : [],
+      canceladaPrimero: mixta ? porT[mixta].filter(f => f.day >= '2026-08-15')[0].day + ' ' + porT[mixta].filter(f => f.day >= '2026-08-15')[0].time : null };
+  });
+  if (!fx.mixta) return; // festival sin el caso: nada que afirmar
+  console.log(`T159 fixture: ${fx.mixta} · cancelada primero ${fx.canceladaPrimero} · vivas ${fx.vivasDeLaMixta.join(', ')}`);
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(1000);
+  const r = await page.evaluate(async (fx) => {
+    const det = document.querySelector('details.ag-excl-city'); if (det) det.open = true;
+    await new Promise(r => setTimeout(r, 400));
+    const sc = cachedResult.scenarios[cachedResult.currentIdx || 0];
+    const fila = t => { const e = [...document.querySelectorAll('.int-item')].find(x => x.dataset.title === t); if (!e) return null;
+      const when = (e.querySelector('.int-item-when') || {}).innerText || '';
+      const s = FILMS.find(f => f.title === t && when.includes(f.time) && (window.dayLabel ? true : true));
+      return { when, marca: !!e.querySelector('.notice-badge'), boton: !!e.querySelector('.excl-include-btn'),
+        // ¿la función que muestra está cancelada?
+        muestraCancelada: FILMS.filter(f => f.title === t && when.includes(f.time)).every(f => f._cancelled) }; };
+    return { excluidaMixta: sc.excluded.includes(fx.mixta), mixta: fila(fx.mixta), caida: fx.caida ? fila(fx.caida) : null };
+  }, fx);
+  // Sin `return` temprano: el fixture está construido para que la obra quede
+  // excluida y tenga fila. Si no pasa, el test tiene que FALLAR, no callarse.
+  expect(r.excluidaMixta, `${fx.mixta}: sus vivas están fuera de Bogotá, el motor tiene que excluirla`).toBe(true);
+  expect(r.mixta, 'la obra excluida tiene su fila').not.toBeNull();
+  expect(r.mixta.when, 'la fila dice cuándo').toBeTruthy();
+  // 1 · la función que muestra es VIVA
+  expect(r.mixta.muestraCancelada, `la fila no puede ofrecer una función cancelada — la obra tiene viva: ${fx.vivasDeLaMixta.join(', ')}`)
+    .toBe(false);
+  expect(r.mixta.marca, 'y como tiene función viva, no lleva CANCELADA').toBe(false);
+  // 2 · y no ofrece agendarla en otra ciudad (regla #594)
+  expect(r.mixta.boton, 'sin botón: el motor no cruza ciudades').toBe(false);
+  // 3 · la que perdió TODAS sus funciones sigue marcada — no se arregla de más
+  if (r.caida) {
+    expect(r.caida.marca, 'una obra con todas sus funciones caídas sigue diciendo CANCELADA').toBe(true);
+  }
+});
+
+// ── T161 — Intereses muestra la función de TU ciudad cuando la hay ──────────
+// Auditoría B-5 (2 sep 2026): con Bogotá elegida al entrar, la fila de «Sukua»
+// decía «Centro Cultural Panóptico de Ibagué» por ser la más temprana del
+// catálogo, teniendo función en Bogotá ese mismo día — la que estaba en su Plan.
+// La elección de ciudad se pidió como un dato sobre la persona; acá la lista de
+// sus intereses le proponía salas a 200 km.
+//
+// La segunda mitad impide arreglar de más: una obra SIN función en tu ciudad
+// sigue mostrando dónde existe (el comentario `plannable-ok` de _nextScreening
+// protegía justo eso: filtrar por ciudad escondería que la obra existe en otra
+// parte). Preferir no es filtrar.
+test('T161 — la fila de Intereses prefiere tu ciudad, y sin función ahí muestra dónde existe', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-18T09:00:00-05:00');
+  await page.evaluate(() => { const f = [...document.querySelectorAll('#city-sheet-list .lugar-opt')].find(e => e.dataset.city === 'Bogotá'); if (f) f.click(); });
+  await page.waitForTimeout(1400);
+  const r = await page.evaluate(async () => {
+    const H = await import('/src/view/helpers.js');
+    const D = await import('/src/domain/film.js');
+    const viva = f => f.day && f.time && !f._cancelled && !D.screeningPassed(f);
+    const enBogota = f => H.venueMatches(f.venue, 'city:Bogotá');
+    const porT = {}; FILMS.forEach(f => { if (viva(f)) (porT[f.title] ||= []).push(f); });
+    // una obra con función viva en Bogotá Y otra más temprana fuera; y una sin ninguna en Bogotá
+    const conBogota = Object.keys(porT).find(t => porT[t].some(enBogota) && porT[t].some(f => !enBogota(f)));
+    const sinBogota = Object.keys(porT).find(t => !porT[t].some(enBogota));
+    watchlist.clear(); [conBogota, sinBogota].filter(Boolean).forEach(t => watchlist.add(t));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+    switchMainNav('mnav-seleccion'); showAgView();
+    await new Promise(r => setTimeout(r, 1500));
+    const vis = e => { const b = e.getBoundingClientRect(); return b.width > 0 && b.height > 0; };
+    const fila = t => { const e = [...document.querySelectorAll('.int-item')].filter(vis).find(x => x.dataset.title === t); return e ? e.innerText.replace(/\s+/g, ' ') : null; };
+    const sedesBogota = t => [...new Set(porT[t].filter(enBogota).map(f => H.vcfg(f.venue).short || f.venue))];
+    const sedesFuera = t => [...new Set(porT[t].filter(f => !enBogota(f)).map(f => H.vcfg(f.venue).short || f.venue))];
+    return { activeVenue, conBogota, sinBogota,
+      filaCon: conBogota ? fila(conBogota) : null, sedesBogotaDeCon: conBogota ? sedesBogota(conBogota) : [], sedesFueraDeCon: conBogota ? sedesFuera(conBogota) : [],
+      filaSin: sinBogota ? fila(sinBogota) : null, sedesFueraDeSin: sinBogota ? sedesFuera(sinBogota) : [] };
+  });
+  expect(r.activeVenue, 'la ciudad elegida está activa').toBe('city:Bogotá');
+  expect(r.conBogota, 'el fixture trae una obra con función en Bogotá y otra más temprana fuera').toBeTruthy();
+  expect(r.filaCon, 'la fila se pintó').toBeTruthy();
+  const enBog = r.sedesBogotaDeCon.some(s => r.filaCon.includes(s));
+  expect(enBog, `«${r.conBogota}» tiene función en Bogotá (${r.sedesBogotaDeCon.join(' / ')}): la fila la muestra, no la de ${r.sedesFueraDeCon.join(' / ')}`)
+    .toBe(true);
+  if (r.sinBogota) {
+    expect(r.filaSin, 'la obra sin función en Bogotá también tiene fila').toBeTruthy();
+    const fuera = r.sedesFueraDeSin.some(s => r.filaSin.includes(s));
+    expect(fuera, `«${r.sinBogota}» no tiene función en Bogotá: la fila muestra dónde existe (${r.sedesFueraDeSin.slice(0, 2).join(' / ')}), no la esconde`)
+      .toBe(true);
+  }
+});
+
+// ── T162 — los botones de la fila del Plan se tocan con el dedo, y no se pisan ──
+// Auditoría B-9 (2 sep 2026), y los dos recorridos independientes midieron lo
+// mismo: los .icon-btn-circle de las filas del Plan —«Cambiar» y «Quitar del
+// Plan», apilados— miden 30×30, en una lista donde el error de dedo borra una
+// función. iOS pide 44.
+//
+// La caja de impacto se extiende 7px a cada lado con un ::before; el dibujo
+// sigue en 30. Y la segunda mitad es la que importa: medido, los dos botones
+// tenían gap 0, así que ampliar cada uno 14px los hacía SOLAPARSE 14px y en
+// toda la franja el toque iba al de abajo — el destructivo. Peor que antes.
+// El gap de 14 (--sp-btn) hace que las zonas se toquen sin pisarse. Se afirma
+// con elementFromPoint, que es lo que el dedo encuentra.
+test('T162 — cada botón de la fila responde a 20px de su centro, y la franja entre los dos va al más cercano', async ({ page }) => {
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    const porDia = {}; FILMS.forEach(f => { (porDia[f.day] = porDia[f.day] || []).push(f.title); });
+    watchlist.clear();
+    Object.keys(porDia).sort().slice(0, 3).forEach(d => watchlist.add(porDia[d][0]));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(900);
+  const r = await page.evaluate(() => {
+    const col = document.querySelector('.col-end'); if (!col) return null;
+    const [a, b] = [...col.querySelectorAll('.ag-fi-btn')]; if (!a || !b) return null;
+    const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+    const fila = col.closest('.saved-item').getBoundingClientRect();
+    const cx = ra.left + ra.width / 2, ca = ra.top + ra.height / 2, cb = rb.top + rb.height / 2;
+    const quien = (x, y) => { const e = document.elementFromPoint(x, y); return e === a || a.contains(e) ? 'A' : (e === b || b.contains(e) ? 'B' : 'otro'); };
+    return {
+      dibujado: [Math.round(ra.width), Math.round(ra.height)],
+      gap: Math.round(rb.top - ra.bottom),
+      colNoDesborda: col.getBoundingClientRect().height <= fila.height + 0.5,
+      a20: [quien(cx, ca - 20), quien(cx - 20, ca), quien(cx + 20, ca)],
+      b20: [quien(cx, cb + 20), quien(cx - 20, cb), quien(cx + 20, cb)],
+      franja: { bajoA: quien(cx, ra.bottom + 3), sobreB: quien(cx, rb.top - 3) }
+    };
+  });
+  expect(r, 'hay una fila del Plan con sus dos botones').not.toBeNull();
+  expect(r.dibujado, 'el dibujo sigue siendo el círculo de 30 — no cambió la anatomía').toEqual([30, 30]);
+  expect(r.colNoDesborda, 'la columna de botones no hace crecer la fila').toBe(true);
+  // 1 · cada botón responde a 20px de su centro (caja ≥ 44)
+  expect(r.a20, '«Cambiar» responde a 20px arriba/izquierda/derecha de su centro').toEqual(['A', 'A', 'A']);
+  expect(r.b20, '«Quitar» responde a 20px abajo/izquierda/derecha de su centro').toEqual(['B', 'B', 'B']);
+  // 2 · y NO se pisan: la franja entre los dos va al más cercano
+  expect(r.gap, 'hay aire entre los dos: sin él las zonas ampliadas se solapan y gana el de abajo').toBeGreaterThanOrEqual(14);
+  expect(r.franja.bajoA, 'justo debajo de «Cambiar» sigue siendo «Cambiar» — no «Quitar»').toBe('A');
+  expect(r.franja.sobreB, 'justo encima de «Quitar» es «Quitar»').toBe('B');
+});
+// ── T163 — el distintivo Q&A del Plan se dibuja; el que cede es el título ────
+// Auditoría A-5 (2 sep 2026): el badge vivía DENTRO de `.mplan-rtitle`, que es
+// `nowrap + overflow:hidden`, así que se recortaba junto con el título. Medido
+// en Mi Plan: el renglón terminaba en x=323 y el badge arrancaba en x=587 — no
+// se dibujaba nunca. La ficha y Planear sí avisan «Q&A · +30 min estimados»; en
+// el Plan, el único lugar donde el dato cambia a qué hora salís del cine,
+// desaparecía.
+//
+// Se afirma que el badge queda DENTRO de la caja de la fila (no que exista en
+// el DOM: existía y no se veía). Y la fila sin Q&A es el control que impide
+// arreglar de más poniéndole un distintivo a todo el mundo.
+test('T163 — con Q&A el distintivo entra en la fila, y sin Q&A no aparece', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  await enterFestival(page, 'cinemancia2026');
+  await page.evaluate(() => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    watchlist.clear();
+    // una obra CON Q&A y una SIN, las dos con función
+    FILMS.filter(f => f.has_qa && f.day && f.time).slice(0, 2).forEach(f => watchlist.add(f.title));
+    FILMS.filter(f => !f.has_qa && f.day && f.time).slice(0, 2).forEach(f => watchlist.add(f.title));
+    if (typeof saveState === 'function') saveState('wl', 'watched');
+  });
+  await goToPlanear(page);
+  await esperarCalculo(page);
+  await page.waitForTimeout(900);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const save = document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]');
+    if (!save) return { sinPlan: true };
+    save.click(); await w(1400);
+    const cta = document.querySelector('.plan-confirm-cta'); if (cta) cta.click();
+    await w(1800);
+    const conQA = (savedAgenda.schedule || []).find(s => (FILMS.find(f => f.title === s._title && f.day === s.day) || {}).has_qa);
+    if (!conQA) return { sinQAenPlan: true };
+    const idx = DAY_KEYS.indexOf(conQA.day);
+    const b = document.createElement('button');
+    b.setAttribute('data-action', 'selectMiPlanDay'); b.setAttribute('data-index', String(idx));
+    document.body.appendChild(b); b.click(); b.remove();
+    await w(1200);
+    const filas = [...document.querySelectorAll('.mplan-rtitle')].map(rt => {
+      const bd = rt.querySelector('.meta-badge'), tx = rt.querySelector('.mplan-rtitle-txt');
+      const rr = rt.getBoundingClientRect();
+      const br = bd ? bd.getBoundingClientRect() : null;
+      const tr = tx ? tx.getBoundingClientRect() : null;
+      const cs = getComputedStyle(rt);
+      const lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.2;
+      return { texto: rt.textContent.trim().slice(0, 30), hayBadge: !!bd,
+        dentroDeLaFila: br ? (br.width > 0 && br.right <= rr.right + 0.5) : null,
+        tituloCede: tx ? tx.scrollWidth > tx.clientWidth + 1 : null,
+        badgeRight: br ? Math.round(br.right) : null, filaRight: Math.round(rr.right),
+        // el renglón es UNO: sin esto, un `display:block` deja el badge «dentro»
+        // de la caja pero en una segunda línea, con el título desbordando
+        lineas: Math.round(rr.height / lh),
+        mismaLinea: (br && tr) ? Math.abs(br.top - tr.top) < lh * 0.6 : null,
+        tituloDesborda: tr ? tr.right > rr.right + 0.5 : null };
+    });
+    return { dia: conQA.day, filas };
+  });
+  if (r.sinPlan || r.sinQAenPlan) return;
+  const conBadge = r.filas.filter(f => f.hayBadge);
+  const sinBadge = r.filas.filter(f => !f.hayBadge);
+  expect(conBadge.length, 'el día elegido tiene la obra con Q&A — si no, el test no mide nada').toBeGreaterThan(0);
+  for (const f of conBadge) {
+    expect(f.dentroDeLaFila,
+      `«${f.texto}»: el distintivo termina en x=${f.badgeRight} y la fila en x=${f.filaRight} — tiene que ENTRAR, no solo existir en el DOM`)
+      .toBe(true);
+    expect(f.lineas, `«${f.texto}»: el renglón sigue siendo UNO — el distintivo no baja a una segunda línea`).toBe(1);
+    expect(f.mismaLinea, 'y va en la misma línea que el título').toBe(true);
+    expect(f.tituloDesborda, 'con el título recortado dentro de la fila, no desbordándola').toBe(false);
+  }
+  // el que cede es el título, no el distintivo (si el título entra entero, nada que afirmar)
+  const cortada = conBadge.find(f => f.tituloCede);
+  if (cortada) {
+    expect(cortada.dentroDeLaFila, 'con el título recortado, el distintivo sigue entero').toBe(true);
+  }
+  // control: una fila sin Q&A no inventa distintivo
+  for (const f of sinBadge) {
+    expect(f.hayBadge, `«${f.texto}» no tiene Q&A: no lleva distintivo`).toBe(false);
+  }
+});
+
+// ── T165 — el bloque de la grilla dice cuántas obras no le caben ──────────────
+// Auditoría B-3 (2 sep 2026): un bloque compartido mide lo que dura la función y
+// lista todas sus obras; con `overflow:hidden`, las que no entraban se cortaban
+// en silencio —la última por la mitad—. Medido en FICDEH a 390px: 7 obras en
+// 98 min → bloque de 61px con 3 enteras, 1 partida y 3 invisibles.
+//
+// Lo que se afirma: (1) toda obra que queda en el bloque se ve ENTERA; (2) el
+// «+N» existe, cuenta exactamente las que faltan y también se ve entero, en la
+// línea de la última visible; (3) un bloque donde todo cabe no lleva contador
+// ni pierde obras — el control contra arreglar de más.
+test('T165 — el bloque de la grilla dice cuántas obras no le caben', async ({ page }) => {
+  const medir = async (key, slotDur) => page.evaluate(async ([key, slotDur]) => {
+    const g = FILMS.filter(f => f._slotKey === key);
+    // slotDur: la misma función pero más corta (bloque más bajo) — ver el caso 3
+    state.set('savedAgenda', { schedule: g.map(f => ({ ...f, _title: f.title, ...(slotDur ? { _slotDur: slotDur } : {}) })), scenarioIdx: 0 });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 900));
+    const b = document.querySelector('.mplan-col-mobile .mplan-wk-block');
+    if (!b) return null;
+    const br = b.getBoundingClientRect();
+    const lim = br.bottom - parseFloat(getComputedStyle(b).paddingBottom) + 0.5;
+    const ts = [...b.querySelectorAll('.mplan-wk-title')].map(t => t.getBoundingClientRect());
+    const mas = b.querySelector('.dw-strip-mas');
+    const mr = mas && mas.getBoundingClientRect();
+    return { n: g.length, h: Math.round(br.height), titulos: ts.length,
+      enteros: ts.filter(r => r.bottom <= lim).length,
+      mas: mas ? mas.textContent : null, masEntero: mr ? mr.bottom <= lim && mr.right <= br.right : null,
+      masEnLineaUltima: mr && ts.length ? Math.abs(mr.top - ts[ts.length - 1].top) <= 3 : null,
+      sedeEntera: (() => { const v = b.querySelector('.mplan-wk-venue'); return v ? v.getBoundingClientRect().bottom <= lim : null; })(),
+      // junto a la hora: cuánto aire hay entre «19:00» y «+N»
+      gapHora: (() => { const tm = b.querySelector('.mplan-wk-time'); if (!mas || !tm || mas.parentElement !== tm) return null;
+        const r = document.createRange(); r.selectNodeContents(tm.firstChild); return mr.left - r.getBoundingClientRect().right; })(),
+      // con un nombre que no cabe, el que cede es el nombre: el contador sigue a la vista
+      masEnteroLargo: (() => { const txt = b.querySelector('.mp-mas .mplan-wk-title-txt'); if (!txt || !mas) return null;
+        txt.textContent = 'Un nombre largo, largo, largo, que no cabe en la columna de la grilla';
+        const m2 = mas.getBoundingClientRect(), l2 = txt.parentElement.getBoundingClientRect();
+        return m2.right <= br.right + 0.5 && m2.bottom <= lim && l2.bottom <= lim && l2.height < m2.height * 2; })() };
+  }, [key, slotDur || 0]);
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  const picks = await page.evaluate(() => {
+    const groups = {};
+    FILMS.forEach(f => { if (f._slotKey && !f._cancelled) (groups[f._slotKey] ||= []).push(f); });
+    const arr = Object.values(groups).sort((a, b) => b.length - a.length);
+    const chico = arr.find(g => g.length === 2 && g.reduce((a, f) => a + parseInt(f.duration), 0) >= 80);
+    return { grande: { key: arr[0][0]._slotKey, day: arr[0][0].day, n: arr[0].length },
+             chico: chico && { key: chico[0]._slotKey, day: chico[0].day } };
+  });
+  expect(picks.grande.n, 'hace falta una función con 5+ obras — si no, el test no mide nada').toBeGreaterThanOrEqual(5);
+  expect(picks.chico, 'y una de 2 obras con tiempo de sobra, como control').toBeTruthy();
+
+  // 1 · la función grande: entra lo que entra, y el resto se cuenta
+  await enterFestival(page, 'ficdeh2026', picks.grande.day + 'T10:00');
+  const g = await medir(picks.grande.key);
+  expect(g, 'el bloque de la función grande se dibuja').not.toBeNull();
+  expect(g.enteros, `las ${g.titulos} obras que quedan se ven enteras (bloque de ${g.h}px)`).toBe(g.titulos);
+  expect(g.titulos, 'quedan menos obras de las que hay — si caben todas, el fixture no sirve').toBeLessThan(g.n);
+  expect(g.titulos, 'al menos una obra se queda').toBeGreaterThanOrEqual(1);
+  expect(g.mas, 'el contador dice exactamente cuántas faltan').toBe(`+${g.n - g.titulos}`);
+  expect(g.masEntero, 'y se ve entero, dentro del bloque').toBe(true);
+  expect(g.masEnLineaUltima, 'en la misma línea que la última obra visible').toBe(true);
+  expect(g.masEnteroLargo, 'con un nombre largo el contador sigue a la vista: el que cede es el nombre').toBe(true);
+  expect(g.sedeEntera, 'la sede, si quedó, se ve entera — no escondida bajo el borde').not.toBe(false);
+
+  // 2 · control: donde todo cabe, no hay contador ni se pierde nada
+  await enterFestival(page, 'ficdeh2026', picks.chico.day + 'T10:00');
+  const c = await medir(picks.chico.key);
+  expect(c, 'el bloque de control se dibuja').not.toBeNull();
+  expect(c.titulos, 'las 2 obras siguen ahí').toBe(2);
+  expect(c.enteros, 'enteras').toBe(2);
+  expect(c.mas, 'y sin contador: no falta nada').toBeNull();
+  expect(c.sedeEntera, 'la sede del control también entera').not.toBe(false);
+
+  // 3 · y si no entra ni una obra (ningún festival tiene hoy un bloque compartido
+  // tan corto: se simula la misma función de 30 min), el contador va junto a la hora
+  const z = await medir(picks.chico.key, 30);
+  expect(z, 'el bloque corto se dibuja').not.toBeNull();
+  expect(z.titulos, 'con 30 min no cabe ninguna obra').toBe(0);
+  expect(z.mas, 'el contador dice que faltan las 2').toBe('+2');
+  expect(z.masEntero, 'y se ve entero').toBe(true);
+  expect(z.gapHora, 'separado de la hora, no pegado').toBeGreaterThanOrEqual(3);
+  expect(z.gapHora, 'con el aire del bloque (sp-1), no el de la tira de pósters (sp-3)').toBeLessThanOrEqual(8);
+});
+
+// ── T168 — el bloque de UNA obra corta no recorta su título ──────────────────
+// Auditoría del bloque corto (3 sep 2026). El bloque mide lo que dura la
+// función y apila hora sobre título: hacen falta 36px para una línea (≈61 min)
+// y 51 para dos (≈76 min). Debajo de eso el título se cortaba, y en el piso de
+// 20px no se veía ni una letra. Censo a 390px: 148 bloques en 14 de 15
+// festivales, 21 de ellos en Cinemancia, en curso.
+//
+// La altura mínima se descartó MIDIENDO: arregla el bloque de 16 min y falla en
+// los de 43 y 60 —ya son altos; lo que no entra es la segunda línea— y cubrirlos
+// exigiría 51px fijos, con lo que 16 min se dibujaría del alto de 76. El bloque
+// dejaría de decir cuánto dura, que es su única razón de ser.
+//
+// Lo que se afirma: (1) donde no entraba, hora y título comparten UNA línea y
+// el título entra entero en el bloque; (2) el bloque NO cambia de alto, o sea
+// que sigue diciendo la duración; (3) el título cede con elipsis, no se corta a
+// la mitad; (4) control: un bloque donde el título ya entraba no se toca.
+test('T168 — el bloque de una obra corta dice su título en una línea', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  // `elegir` corre EN la página: 'corta' es la del censo (por nombre) y 'larga'
+  // se busca por dato. La primera versión fijaba también el control por nombre
+  // y ese título no existía en el catálogo: el control se saltaba en silencio y
+  // la mutación «una línea SIEMPRE» pasaba limpia.
+  const medir = async (elegir, dia) => {
+    await enterFestival(page, 'cinemancia2026', dia + 'T10:00');
+    return page.evaluate(async ([elegir, dia]) => {
+      const b0 = document.createElement('button'); b0.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b0); b0.click(); b0.remove();
+      await new Promise(r => setTimeout(r, 400));
+      const solas = FILMS.filter(x => !x._cancelled && !x._slotKey && x.day === dia && x.time);
+      const f = elegir.tit
+        ? solas.find(x => x.title === elegir.tit)
+        : solas.filter(x => (parseInt(x.duration) || 0) >= 95)
+               .sort((a, b) => parseInt(b.duration) - parseInt(a.duration))[0];
+      if (!f) return null;
+      const alto = Math.max(parseInt(f.duration) / 60 * 40 - 4, 20);   // lo que DEBE medir
+      state.set('savedAgenda', { schedule: [{ ...f, _title: f.title }], scenarioIdx: 0 });
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 900));
+      const b = document.querySelector('.mplan-col-mobile .mplan-wk-block');
+      if (!b) return null;
+      const br = b.getBoundingClientRect();
+      const lim = br.bottom - parseFloat(getComputedStyle(b).paddingBottom);
+      const ti = b.querySelector('.mplan-wk-title'), tm = b.querySelector('.mplan-wk-time');
+      const rt = ti.getBoundingClientRect(), rm = tm.getBoundingClientRect();
+      return { dur: parseInt(f.duration), h: +br.height.toFixed(1), altoEsperado: +alto.toFixed(1),
+        unaLinea: b.classList.contains('mp-linea'),
+        excede: +(rt.bottom - lim).toFixed(1),
+        mismaLinea: Math.abs(rt.top - rm.top) <= 3,
+        desborda: ti.scrollWidth > ti.clientWidth + 1,
+        // el corte con puntos suspensivos no deja rastro medible en el DOM:
+        // se afirma la declaración, que es lo que lo produce
+        cortaConPuntos: getComputedStyle(ti).textOverflow === 'ellipsis',
+        lineas: Math.round(rt.height / 12) };
+    }, [elegir, dia]);
+  };
+
+  // 1 · el caso que se cortaba: 43 min, título de dos líneas, faltaban 26px
+  const corto = await medir({ tit: 'Fuera de competencia programa 2' }, '2026-09-10');
+  expect(corto, 'Cinemancia tiene la función corta del censo').not.toBeNull();
+  expect(corto.unaLinea, 'el bloque pasa a una línea').toBe(true);
+  expect(corto.excede, `el título entra en el bloque de ${corto.h}px`).toBeLessThanOrEqual(0.5);
+  expect(corto.mismaLinea, 'hora y título comparten línea').toBe(true);
+  expect(corto.desborda, 'el título no cabía entero: por eso hay algo que ceder').toBe(true);
+  expect(corto.cortaConPuntos, 'y cede con puntos suspensivos, no cortado a la mitad').toBe(true);
+  expect(corto.lineas, 'en UNA línea').toBe(1);
+  expect(corto.h, 'el bloque NO creció: sigue diciendo cuánto dura').toBeCloseTo(corto.altoEsperado, 0);
+
+  // 2 · control: una obra larga conserva su forma de siempre. Sin este control,
+  // «pasar TODOS los bloques a una línea» sería indistinguible del arreglo.
+  const largo = await medir({ largo: true }, '2026-09-04');
+  expect(largo, 'hace falta una obra sola de 95+ min como control').not.toBeNull();
+  expect(largo.unaLinea, 'un bloque que ya tenía lugar no se toca').toBe(false);
+  expect(largo.excede, 'y su título sigue entrando').toBeLessThanOrEqual(0.5);
+});
+
+// ── T169 — ningún bloque de obra sola recorta su título ─────────────────────
+// El barrido que el caso a caso no puede dar: mete en el Plan las obras solas
+// MÁS CORTAS de cada catálogo y afirma que ninguna se sale de su caja. Es el
+// que caza el festival que todavía no existe.
+//
+// Se entra una vez por DÍA y se pintan juntas las de ese día: la grilla móvil
+// muestra dos columnas, así que un bloque de otro día no se dibuja y no se
+// puede medir. (La primera versión midió 2 de 14 por esto y no probaba nada;
+// la segunda, con un render por obra, se pasaba del tiempo.)
+for (const fid of ['cinemancia2026', 'ficdeh2026', 'olhar2026']) {
+test(`T169 — ningún bloque de obra sola recorta su título · ${fid}`, async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, fid);
+  const porDia = await page.evaluate(() => {
+    const v = new Map();
+    FILMS.filter(f => !f._slotKey && !f._cancelled && f.day && f.time)
+      .forEach(f => { if (!v.has(f.title + f.day + f.time)) v.set(f.title + f.day + f.time, f); });
+    const g = {};
+    [...v.values()].sort((a, b) => (parseInt(a.duration) || 90) - (parseInt(b.duration) || 90))
+      .slice(0, 16).forEach(f => (g[f.day] ||= []).push(f.title));
+    return g;
+  });
+  let medidos = 0; const malos = [];
+  for (const [dia, titulos] of Object.entries(porDia)) {
+    await enterFestival(page, fid, dia + 'T10:00');
+    const r = await page.evaluate(async ([dia, titulos]) => {
+      const b0 = document.createElement('button'); b0.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b0); b0.click(); b0.remove();
+      await new Promise(r => setTimeout(r, 300));
+      const fs = titulos.map(t => FILMS.find(x => x.title === t && x.day === dia && !x._slotKey && !x._cancelled)).filter(Boolean);
+      if (!fs.length) return { n: 0, malos: [] };
+      state.set('savedAgenda', { schedule: fs.map(f => ({ ...f, _title: f.title })), scenarioIdx: 0 });
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 900));
+      const out = { n: 0, malos: [] };
+      for (const b of document.querySelectorAll('.mplan-col-mobile .mplan-wk-block')) {
+        const br = b.getBoundingClientRect();
+        if (!br.height) continue;
+        const ti = b.querySelector('.mplan-wk-title');
+        if (!ti || b.querySelectorAll('.mplan-wk-title').length > 1) continue;   // los compartidos son de T165
+        out.n++;
+        const lim = br.bottom - parseFloat(getComputedStyle(b).paddingBottom);
+        const ex = +(ti.getBoundingClientRect().bottom - lim).toFixed(1);
+        if (ex > 0.5) out.malos.push(`${ti.textContent.trim().slice(0, 22)} (caja ${Math.round(br.height)}px, se sale ${ex})`);
+      }
+      return out;
+    }, [dia, titulos]);
+    medidos += r.n; malos.push(...r.malos);
+  }
+  expect(medidos, `${fid}: hay bloques de obra sola que medir`).toBeGreaterThan(5);
+  expect(malos, `${fid}: ${malos.length} de ${medidos} bloques recortan su título — ${malos.slice(0, 3).join(' · ')}`).toHaveLength(0);
+});
+}
+
+// ── T170 — sin duración publicada, la app no afirma la hora de salida ────────
+// Auditoría del 4 sep 2026. `parseDur` rellena con DEFAULT_DURATION_MIN (90)
+// cuando el dato no trae número, y nada distinguía ese 90 de uno real. Sobre él
+// la app afirmaba «hasta 15:30», reservaba 90 minutos en el calendario y
+// descartaba obras del plan con una cuenta que se presenta como dato. Medido en
+// el catálogo: 28 registros en 7 festivales sin duración.
+//
+// El arreglo NO cambia la aritmética —hace falta algún número para dibujar y
+// para no armar un plan imposible—: cambia lo que la app AFIRMA. La `~` ya es la
+// convención de la casa para lo estimado (helpers.js: «llegarías ~21:15»).
+//
+// Se afirma: (1) la fila marca la salida como estimada cuando no hay duración;
+// (2) NO la marca cuando sí la hay, ni siquiera con un 90 real — el control que
+// impide «marcar todo»; (3) el calendario dice de dónde salen esos minutos.
+test('T170 — la hora de salida se marca estimada si la duración no está publicada', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'cinemancia2026', '2026-09-09T15:00');
+
+  // Se entra por el DÍA de la obra: la grilla móvil muestra dos columnas y la
+  // fila de un día fuera de la ventana no se dibuja (la primera versión midió
+  // null por esto y no probaba nada).
+  const fila = async (conDuracion) => {
+    const elegida = await page.evaluate(conD => {
+      const f = FILMS.find(x => !x._cancelled && x.day && x.time && (conD ? x.duration : !x.duration));
+      return f ? { title: f.title, day: f.day, duration: f.duration || null } : null;
+    }, conDuracion);
+    if (!elegida) return null;
+    await enterFestival(page, 'cinemancia2026', elegida.day + 'T10:00');
+    return page.evaluate(async (el) => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await new Promise(r => setTimeout(r, 300));
+      const f = FILMS.find(x => x.title === el.title && x.day === el.day);
+      state.set('savedAgenda', { schedule: [{ ...f, _title: f.title }], scenarioIdx: 0 });
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 900));
+      const t2 = document.querySelector('.mplan-t2');
+      return { obra: f.title.slice(0, 30), duration: f.duration || null,
+        texto: t2 ? t2.textContent.replace(/\s+/g, ' ').trim().slice(0, 40) : null };
+    }, elegida);
+  };
+
+  // 1 · sin duración publicada: la salida va marcada
+  const sin = await fila(false);
+  expect(sin, 'Cinemancia tiene la actividad sin duración del censo').not.toBeNull();
+  expect(sin.duration, 'y de verdad no la trae').toBeNull();
+  expect(sin.texto, `«${sin.obra}» marca la salida como estimada (dice: ${sin.texto})`).toContain('~');
+
+  // 2 · control: con duración publicada NO se marca. Sin esto, «marcar siempre»
+  // pasaría el test y la tilde dejaría de querer decir algo.
+  const con = await fila(true);
+  expect(con, 'y hay obras con duración').not.toBeNull();
+  expect(con.duration, 'esta sí la trae').toBeTruthy();
+  expect(con.texto, `«${con.obra}» NO se marca: su duración es dato (dice: ${con.texto})`).not.toContain('~');
+});
+
+// ── T172 — «qué viste» se cuenta una sola vez ────────────────────────────────
+// Auditoría 4 sep 2026. `effectiveWatched` está declarado DUEÑO ÚNICO de «qué se
+// vio» (film.js): una función del plan que ya terminó SE ASUME vista. Pero cuatro
+// puertas del modo Recuerdo preguntaban por el `watched` CRUDO, y las pantallas
+// se contradecían a dos toques de distancia:
+//
+//   · con 4 obras en el plan y 2 marcadas a mano, Mi Plan titulaba «Viste 4
+//     actividades» mientras Intereses archivaba 2 bajo «te quedaste con ganas»;
+//   · y a quien fue a TODO sin marcar nada —armás el plan, vas, volvés cuando
+//     terminó— se le escondía «Compartir mi festival», que es lo que el modo
+//     Recuerdo promete. Medido: 4 afiches pintados, 0 botones de compartir.
+//
+// Las cuatro puertas viven dentro de festivalEnded(), así que nada cambia en vivo.
+test('T172 — Mi Plan e Intereses cuentan lo mismo, y quien fue a todo puede compartir', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  const escenario = async (marcadas) => {
+    await enterFestival(page, 'ficdeh2026', '2026-08-25T11:00');
+    return page.evaluate(async (marcadas) => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await new Promise(r => setTimeout(r, 400));
+      // OJO: post-festival screeningPassed() devuelve false a propósito (todo
+      // vuelve a plena opacidad), así que las pasadas se eligen por FECHA.
+      const vistos = new Set(); const el = [];
+      for (const f of FILMS.filter(x => !x._cancelled && x.day && x.time && x.day < '2026-08-20')) {
+        if (!vistos.has(f.title)) { vistos.add(f.title); el.push(f); }
+        if (el.length === 4) break;
+      }
+      // Una obra de MÁS en la watchlist que NO está en el plan y nadie marcó: es
+      // el control de que el reparto siga significando algo. Sin ella, «contar
+      // todo como visto» pasaba el test igual.
+      const suelta = [...FILMS].find(x => !x._cancelled && x.title && !vistos.has(x.title));
+      state.set('watchlist', new Set([...el.map(f => f.title), suelta.title]));
+      state.set('savedAgenda', { schedule: el.map(f => ({ ...f, _title: f.title })), scenarioIdx: 0 });
+      state.set('notWatched', new Set());
+      state.set('watched', new Set(el.slice(0, marcadas).map(f => f.title)));
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 900));
+      const recap = document.querySelector('.recap-hdr');
+      const compartir = [...document.querySelectorAll('.ag-save-btn[data-action="shareDiary"]')]
+        .filter(e => e.getBoundingClientRect().height > 0).length;
+      // renderAgenda() explícito: cambiar de pestaña sola no re-dibuja la vista
+      // (medido: #ag-view queda con el contenido anterior y en display:none).
+      switchMainNav('mnav-seleccion');
+      if (typeof renderAgenda === 'function') renderAgenda();
+      await new Promise(r => setTimeout(r, 900));
+      const vista = document.getElementById('ag-view');
+      const hdrs = [...vista.querySelectorAll('.sec-hdr')].map(e => e.textContent.replace(/\s+/g, ' ').trim());
+      const filas = [...vista.querySelectorAll('.saved-item')];
+      const conMarca = filas.filter(f => f.classList.contains('done')).length;
+      return { enPlan: el.length, marcadasAMano: marcadas, suelta: suelta.title.slice(0, 26),
+        recapTxt: recap ? recap.textContent.replace(/\s+/g, ' ').trim().slice(0, 40) : null,
+        compartir, filas: filas.length, comoVistas: conMarca,
+        hayGanas: hdrs.some(h => /no viste|missed/i.test(h)) };
+    }, marcadas);
+  };
+
+  // 1 · fue a todo y no marcó nada: el caso del hallazgo
+  const nada = await escenario(0);
+  expect(nada.enPlan, 'el fixture arma un plan de 4 funciones ya pasadas').toBe(4);
+  expect(nada.recapTxt, 'Mi Plan lo recibe con su recap, no pidiéndole que marque').not.toBeNull();
+  expect(nada.recapTxt, 'y cuenta las 4').toMatch(/4/);
+  expect(nada.compartir, '«Compartir mi festival» existe: es lo que el modo Recuerdo promete').toBe(1);
+  expect(nada.comoVistas, 'Intereses da por vistas las 4 del plan, igual que Mi Plan').toBe(4);
+  expect(nada.filas, 'y lista también la que quedó fuera del plan').toBe(5);
+  expect(nada.hayGanas,
+    `«${nada.suelta}» no estuvo en el plan y nadie la marcó: va en «te quedaste con ganas»`).toBe(true);
+
+  // 2 · marcó 2 de 4 a mano: las dos pantallas siguen de acuerdo
+  const dos = await escenario(2);
+  expect(dos.recapTxt, 'Mi Plan sigue contando 4').toMatch(/4/);
+  expect(dos.comoVistas, 'e Intereses también las da las 4 por vistas').toBe(4);
+  expect(dos.hayGanas, 'y la que quedó fuera del plan sigue del otro lado').toBe(true);
+
+  // 2b · quien NIEGA haber ido: `notWatched` es su memoria propia. El plan existe,
+  // así que el diario se pinta igual — pero no hay festival que compartir. Es el
+  // control de la puerta: sin él, «mostrar el botón siempre» pasaba el test.
+  const negadas = await page.evaluate(async () => {
+    const plan = savedAgenda.schedule.map(s => s._title);
+    state.set('watched', new Set());
+    state.set('notWatched', new Set(plan));
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 900));
+    return { diario: !!document.querySelector('.saved-agenda'),
+      compartir: [...document.querySelectorAll('.ag-save-btn[data-action="shareDiary"]')]
+        .filter(e => e.getBoundingClientRect().height > 0).length };
+  });
+  expect(negadas.diario, 'el plan vivido se sigue pintando').toBe(true);
+  expect(negadas.compartir, 'pero si negaste haber ido a todo, no hay festival que compartir').toBe(0);
+
+  // 3 · control: sin plan y sin marcas no se inventa nada
+  const vacio = await page.evaluate(async () => {
+    state.set('savedAgenda', null); state.set('watched', new Set()); state.set('notWatched', new Set());
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 900));
+    return { recap: !!document.querySelector('.recap-hdr'),
+      compartir: [...document.querySelectorAll('.ag-save-btn[data-action="shareDiary"]')]
+        .filter(e => e.getBoundingClientRect().height > 0).length };
+  });
+  expect(vacio.recap, 'sin plan ni marcas no hay recap que mostrar').toBe(false);
+  expect(vacio.compartir, 'ni festival que compartir').toBe(0);
+});
+
+// ── T173 — la fila de Intereses no dice «Vista» dos veces ────────────────────
+// Auditoría 4 sep 2026: una obra vista y SIN calificar mostraba la palabra dos
+// veces en la misma fila —«Madres de nacimiento | Vista | Vista»—: una en la
+// línea de metadatos (`.saved-venue`, gris) y otra en el botón (`.saved-check`,
+// verde). Con estrellas se veía bien; sin ellas, la fila tartamudeaba.
+//
+// La línea de metadatos dice lo que SABEMOS de la obra; que esté vista ya lo
+// dicen el botón, la marca ✓ y el atenuado. Sin calificación muestra la sección,
+// igual que una obra no vista.
+//
+// Se afirma: (1) sin calificar, la palabra aparece UNA vez y el dato es la
+// sección; (2) con calificación, el dato son las estrellas —el arreglo no se las
+// come—; (3) control: una obra NO vista sigue mostrando su sección y su botón.
+test('T173 — la fila de Intereses no repite «Vista»', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'ficdeh2026', '2026-08-25T11:00');
+
+  const fila = async (opts) => page.evaluate(async (o) => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 300));
+    const f = FILMS.find(x => !x._cancelled && x.title && x.section);
+    state.set('watchlist', new Set([f.title]));
+    state.set('savedAgenda', null);
+    state.set('notWatched', new Set());
+    state.set('watched', new Set(o.vista ? [f.title] : []));
+    state.set('filmRatings', o.estrellas ? { [f.title]: 4 } : {});
+    switchMainNav('mnav-seleccion');
+    if (typeof renderAgenda === 'function') renderAgenda();
+    await new Promise(r => setTimeout(r, 800));
+    const vista = document.getElementById('ag-view');
+    const row = vista.querySelector('.saved-item');
+    if (!row) return null;
+    const dato = row.querySelector('.saved-venue'), btn = row.querySelector('.saved-check');
+    const txt = row.innerText.replace(/\s+/g, ' ').trim();
+    return { obra: f.title.slice(0, 26), seccion: f.section,
+      dato: dato ? dato.textContent.replace(/\s+/g, ' ').trim() : null,
+      boton: btn ? btn.textContent.replace(/\s+/g, ' ').trim() : null,
+      vecesVista: (txt.match(/vista/gi) || []).length, texto: txt.slice(0, 60) };
+  }, opts);
+
+  // 1 · vista y sin calificar: el caso del hallazgo
+  const sinEstrellas = await fila({ vista: true, estrellas: false });
+  expect(sinEstrellas, 'la fila de Intereses se dibuja').not.toBeNull();
+  expect(sinEstrellas.vecesVista,
+    `«Vista» aparece una sola vez en la fila (dice: ${sinEstrellas.texto})`).toBe(1);
+  expect(sinEstrellas.boton, 'y la que queda es la del botón, que es la acción').toMatch(/vista/i);
+  expect(sinEstrellas.dato, 'el dato muestra la sección, no el estado')
+    .not.toMatch(/^vista$/i);
+  expect(sinEstrellas.dato, 'y esa sección es la suya').toBeTruthy();
+
+  // 2 · con calificación, el dato son las estrellas: el arreglo no se las come
+  const conEstrellas = await fila({ vista: true, estrellas: true });
+  expect(conEstrellas.dato, `«${conEstrellas.obra}» calificada muestra sus estrellas`).toMatch(/★|☆|\*/);
+  expect(conEstrellas.vecesVista, 'y «Vista» sigue apareciendo una sola vez').toBe(1);
+
+  // 3 · control: una obra NO vista conserva su fila de siempre. El botón dice
+  // «Vista» en los dos estados —es la ACCIÓN, no el estado—, así que la palabra
+  // aparece una vez también acá: lo que no puede es aparecer dos.
+  const noVista = await fila({ vista: false, estrellas: false });
+  expect(noVista.dato, 'sin ver, el dato sigue siendo la sección').toBeTruthy();
+  expect(noVista.dato, 'y no es el estado').not.toMatch(/^vista$/i);
+  expect(noVista.vecesVista, 'y la palabra sigue apareciendo una sola vez, en el botón').toBe(1);
+});
+
+// ── T175 — el póster de Mi Plan abre la ficha, siempre ───────────────────────
+// Reporte de Juan (4 sep 2026): tocar el póster en Mi Plan no abría la ficha.
+// Medido en Cinemancia, día de hoy, plan de 4: NINGUNA fila abría —obra,
+// programa y evento por igual—. Solo funcionaba el póster de un corto dentro de
+// un programa expandido, que no declara `data-stop`.
+//
+// Causa: el listener honra `data-stop="1"` desde el 30 ago —«yo me encargo de
+// este toque», para que «Agendar» no abriera la ficha detrás del modal—, y el
+// póster de Mi Plan lleva las DOS cosas: la marca de abrir y el `data-stop`, que
+// ahí significa «no actúe la FILA». El guard lo vetaba antes de mirar quién era.
+// El que abre no puede vetarse a sí mismo.
+//
+// Se afirma: (1) el póster de cada fila abre la ficha, sea obra, programa o
+// evento; (2) el título que abre es el de ESA fila, no el de otra; (3) control:
+// un control con `data-stop` que NO abre —el botón de agendar— sigue sin abrir.
+test('T175 — tocar el póster en Mi Plan abre la ficha de esa obra', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T15:00');
+  await page.evaluate(async () => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 400));
+    const hoy = FILMS.filter(f => !f._cancelled && f.day === '2026-09-04' && f.time);
+    const el = []; const vis = new Set();
+    for (const f of hoy) { if (!vis.has(f.title)) { vis.add(f.title); el.push(f); } if (el.length === 4) break; }
+    state.set('savedAgenda', { schedule: el.map(f => ({ ...f, _title: f.title })), scenarioIdx: 0 });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1200));
+  });
+
+  const n = await page.locator('.mplan-row .js-open-pel').count();
+  expect(n, 'el plan pinta sus filas con póster — si no, el test no mide nada').toBeGreaterThan(2);
+
+  const fallidas = [];
+  for (let i = 0; i < n; i++) {
+    // se cierra por el camino de la app: quitar la clase deja el telón puesto y
+    // el toque siguiente lo recibe la ficha, no la fila.
+    await page.evaluate(async () => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closePelSheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await new Promise(r => setTimeout(r, 500));
+    });
+    const loc = page.locator('.mplan-row .js-open-pel').nth(i);
+    const titulo = await loc.getAttribute('data-title');
+    await loc.scrollIntoViewIfNeeded();
+    await loc.click({ timeout: 5000 }).catch(() => {});
+    await page.waitForTimeout(900);
+    const r = await page.evaluate(() => ({
+      abierta: !!document.querySelector('#pel-sheet.open'),
+      titulo: document.querySelector('#pel-sheet .pel-sheet-title')?.textContent?.trim() || null }));
+    if (!r.abierta) fallidas.push(`${i}: «${(titulo || '').slice(0, 30)}» no abrió`);
+    else if (titulo && r.titulo && !titulo.startsWith(r.titulo.slice(0, 12)))
+      fallidas.push(`${i}: abrió «${r.titulo.slice(0, 24)}» y se tocó «${titulo.slice(0, 24)}»`);
+  }
+  expect(fallidas, `las ${n} filas abren su ficha — ${fallidas.join(' · ')}`).toHaveLength(0);
+
+  // control: un control que declara data-stop y NO abre ficha sigue sin abrirla.
+  // Sin esto, quitar el guard entero pasaría el test y volvería el defecto que
+  // lo trajo: agendar desde NO INCLUIDAS y terminar en la ficha, detrás del modal.
+  const control = await page.evaluate(async () => {
+    const c = document.createElement('button'); c.setAttribute('data-action', 'closePelSheet');
+    document.body.appendChild(c); c.click(); c.remove();
+    await new Promise(r => setTimeout(r, 500));
+    // el botón va DENTRO del que abre la ficha: ese es el caso real («Agendar»
+    // dentro de una fila que abre). Puesto fuera, no había ficha que abrir y el
+    // control pasaba con el guard desactivado — mutación comprobada.
+    const abridor = document.querySelector('.mplan-row .js-open-pel');
+    if (!abridor) return { sinFila: true };
+    const b = document.createElement('button');
+    b.setAttribute('data-stop', '1'); b.setAttribute('data-action', 'nadaQueHacer');
+    b.textContent = 'x'; b.style.cssText = 'position:relative;z-index:5';
+    abridor.appendChild(b);
+    b.click();
+    await new Promise(r => setTimeout(r, 700));
+    const abierta = !!document.querySelector('#pel-sheet.open');
+    b.remove();
+    return { abierta };
+  });
+  expect(control.abierta, 'un control con data-stop que no abre ficha sigue sin abrirla').toBe(false);
+});
