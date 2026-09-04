@@ -27,11 +27,15 @@ import json, os, re, sys, unicodedata, datetime, collections
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# El RSVP de QAFF es el nativo de Boom y vive a nivel de CALENDARIO, no por
-# evento: no hay deep-link por función. El formulario está en la página del
-# programa, que es a donde apuntaba el build de Quibdó ya publicado. Sin esto la
-# app dice que hay que inscribirse y no dice a dónde ir.
-INSCRIPCION = 'https://www.quibdoafricafilmfestival.com/es/program-2026'
+# ENTRADA LIBRE, y nada más. El director dijo por correo que el acceso es
+# gratuito con inscripcion previa, pero el formulario NO existe en ninguna parte:
+# ni en el PDF, ni en la pagina del programa —el widget de Boom desaparecio y
+# ahora hay un flipbook—, ni en su web. Decirle a alguien que TIENE que
+# inscribirse sin poder decirle donde es peor que no decirlo: le inventa un
+# tramite y lo deja sin salida. Decision de Juan, 4 sep 2026.
+#
+# Si publican el formulario: volver a «Entrada libre con inscripcion previa» y
+# pasar su URL como ticket_url — lib.acceso_campos hace el resto.
 SCR  = os.path.join(BASE, 'pipeline', 'qaff_pdf')
 sys.path.insert(0, SCR)
 import programa as pr                                        # noqa: E402
@@ -453,8 +457,7 @@ def main():
              # todas las sedes, con inscripción previa». lib.acceso_campos() la
              # traduce sola a is_free + requires_registration. FALTA el enlace de
              # inscripción: sin él la app dice que hay que registrarse y no a dónde.
-             'acceso': 'Entrada libre con inscripción previa',
-             'ticket_url': INSCRIPCION,
+             'acceso': 'Entrada libre',
              '_src': f'parrilla impresa en el PDF oficial del programa, p{pag}'}
         for o in obs:
             if not o.get('_seccion'):
@@ -486,8 +489,7 @@ def main():
              'sede': f'{sede} · {sala}' if sala else sede,
              'titulo': titulo, 'obras': [],
              'event_kind': 'dialogo' if tipo == 'dialogo' else tipo,
-             'acceso': 'Entrada libre con inscripción previa',
-             'ticket_url': INSCRIPCION,
+             'acceso': 'Entrada libre',
              'sinopsis': quien, 'synopsis_lang': 'es',
              '_src': f'PDF oficial del programa, p{pag}'}
         # La sección de una actividad NO se inventa: «DIÁLOGO IMPROBABLE» está
