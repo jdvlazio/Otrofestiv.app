@@ -466,7 +466,10 @@ test('T143 — el toast se aparta de la hoja, y solo cuando hay hoja', async ({ 
       conHoja: { y: Math.round(caja(t2).y), solape: solape(caja(estrellas), caja(t2)),
         altoEstrellas: Math.round(caja(estrellas).bot - caja(estrellas).y) } };
   });
-  if (r.sinEstrellas) return;
+  // Premisa, no escape: sin el área de estrellas no hay hoja contra la que
+  // medir el toast, y eso tiene que sonar en vez de dar verde ([test-salida-muda]).
+  expect(r.sinEstrellas, 'la hoja de calificación abre: es contra ella que se mide el toast')
+    .toBeUndefined();
   expect(r.sinHoja.y, 'sin hoja el toast sigue abajo, encima de los tabs')
     .toBeGreaterThan(r.sinHoja.vp / 2);
   expect(r.conHoja.altoEstrellas, 'la hoja muestra su área de estrellas').toBeGreaterThan(40);

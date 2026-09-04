@@ -4507,6 +4507,120 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar module-size: {_e}')
 
+# ── [test-salida-muda] una salida temprana en un test tiene que sonar ─────────
+# Un `return;` suelto en el cuerpo de un test lo apaga SIN dejar rastro: el
+# informe lo cuenta como verde y nadie se entera de que no midió nada. No es
+# hipotético — T146 protegía que el desvanecido del dropdown fuera condicional,
+# su festival de prueba encogió a 8 opciones, dejó de desbordar el panel, y el
+# test se fue por su `return` durante quién sabe cuánto (medido y arreglado el
+# 4 sep 2026, PR #847).
+#
+# Las dos formas honestas de no medir son ruidosas y las dos sirven:
+#   · una AFIRMACIÓN — `expect(r.sinBoton, '…').toBeUndefined()` — cuando la
+#     premisa es parte del contrato del test y su ausencia es un fallo;
+#   · un `test.skip(cond, 'razón')` cuando el festival de turno legítimamente no
+#     tiene el caso: sale contado como «skipped» en el informe, que es visible.
+#
+# LÍNEA BASE, no barrido: las 34 de hoy quedan grandfathered por archivo. Se
+# congelan porque no todas son iguales —algunas son saltos legítimos entre
+# festivales y forzarlas a afirmar las rompería—, y cada una pide un juicio
+# propio. Lo que este check impide es que el número CREZCA: se medió que la
+# clase estaba creciendo rápido (1 en julio, 20 en agosto, 13 en los primeros
+# cuatro días de septiembre), así que un techo acá se cobra la misma semana.
+#
+# Los `return` DENTRO de un bucle o de un callback no cuentan: ahí saltar un
+# elemento es lo correcto. Solo se miran los del cuerpo del test.
+check = 'test-salida-muda'
+try:
+    import glob as _glob, re as _re
+
+    def _cuerpos_anidados(_c):
+        """Rangos [abre, cierra] de todo bloque interno: bucles, callbacks, if."""
+        _r = []
+        for _m in _re.finditer(r'=>\s*\{|\bfunction\s*\w*\s*\([^)]*\)\s*\{'
+                               r'|\.(?:forEach|map|filter|some|every)\s*\('
+                               r'|(?<![\w.])for\s*\(|\bif\s*\(', _c):
+            _i = _m.end()
+            if _c[_i - 1] == '{':
+                _abre = _i - 1
+            else:
+                _p, _abre = 0, None
+                while _i < len(_c):
+                    _ch = _c[_i]
+                    if _ch == '(':
+                        _p += 1
+                    elif _ch == ')':
+                        if _p == 0:
+                            break
+                        _p -= 1
+                    elif _ch == '{' and _p == 0:
+                        _abre = _i
+                        break
+                    elif _ch == ';' and _p == 0:
+                        break
+                    _i += 1
+                if _abre is None:
+                    continue
+            _d = 0
+            for _j in range(_abre, len(_c)):
+                if _c[_j] == '{':
+                    _d += 1
+                elif _c[_j] == '}':
+                    _d -= 1
+                    if _d == 0:
+                        _r.append((_abre, _j))
+                        break
+        return _r
+
+    def _salidas_mudas(_ruta):
+        _s = open(_ruta, encoding='utf-8').read()
+        _idx = [_m.start() for _m in _re.finditer(r"^\s*test\(\s*['\"]", _s, _re.M)]
+        _out = []
+        for _k, _a in enumerate(_idx):
+            _b = _idx[_k + 1] if _k + 1 < len(_idx) else len(_s)
+            _c = _s[_a:_b]
+            _rg = _cuerpos_anidados(_c)
+            for _m in _re.finditer(r'^\s*(?:if\s*\([^\n]*\)\s*)?return\s*;', _c, _re.M):
+                _q = _m.start()
+                # prof 0 = suelto en el cuerpo; 1 = dentro del callback del test.
+                # Más que eso ya es un bucle o un if anidado: no cuenta.
+                if sum(1 for _x, _y in _rg if _x < _q < _y) <= 1:
+                    _out.append(_s[:_a + _q].count('\n') + 1)
+        return _out
+
+    # Línea base al 4 sep 2026. Solo puede BAJAR: cuando un test cambie su
+    # `return` por una afirmación o un test.skip, bajá el número acá.
+    _BASE = {
+        'tests/festivals.spec.js': 3,
+        'tests/miplan.spec.js': 22,
+        'tests/programa.spec.js': 8,
+        # sheet.spec.js bajó a 0 el 4 sep: su única salida muda pasó a ser una
+        # afirmación de premisa. Así se drena esta lista — de a una, midiendo.
+        'tests/sheet.spec.js': 0,
+    }
+    _mal, _sobra, _total = [], [], 0
+    for _f in sorted(_glob.glob('tests/**/*.spec.js', recursive=True)):
+        _f = _f.replace('\\', '/')
+        _hits = _salidas_mudas(_f)
+        _total += len(_hits)
+        _tope = _BASE.get(_f, 0)
+        if len(_hits) > _tope:
+            _nuevas = ', '.join(f'línea {_l}' for _l in _hits[_tope:])
+            _mal.append(f'{_f}: {len(_hits)} salidas mudas > línea base {_tope} ({_nuevas})')
+        elif len(_hits) < _tope:
+            _sobra.append(f'{_f}: {len(_hits)} (la base dice {_tope})')
+    if _mal:
+        fail(check, 'un `return;` suelto apaga el test en silencio — usá '
+                    '`expect(cond, "…").toBeUndefined()` o `test.skip(cond, "razón")`: '
+                    + '; '.join(_mal))
+    elif _sobra:
+        ok(check, f'{_total} salidas mudas, ninguna nueva — bajá la línea base: '
+                  + '; '.join(_sobra))
+    else:
+        ok(check, f'{_total} salidas mudas grandfathered, ninguna nueva')
+except Exception as _e:
+    warn(check, f'no se pudo verificar test-salida-muda: {_e}')
+
 # ── [layer-direction] las dependencias apuntan hacia adentro ───────────────────
 # La modularidad por capas solo se sostiene si las dependencias van en UNA
 # dirección: domain (puro) ← state/storage ← controller/view ← main. Una capa
