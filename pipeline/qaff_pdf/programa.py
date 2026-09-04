@@ -117,6 +117,10 @@ VENTANAS = {
 # ── actividades: los Diálogos Improbables y lo que no es proyección ─────────
 # Cada uno tiene DOS páginas: la parrilla lo anuncia y una página propia da
 # moderador, panelistas, fecha, hora y sede. La hora sale de la página propia.
+# QUIÉN MODERA se verificó a ojo en las 12 páginas el 4 sep 2026: en la p36 y
+# la p38 el texto extraído ponía «Moderadora:» junto al nombre equivocado —el
+# orden del texto en un PDF no es el de la maqueta—. verifica.py no lo cazaba
+# porque comprueba que los NOMBRES estén en la página, no cuál lleva el rótulo.
 ACTIVIDADES = [
  ('dialogo', AF,  None, '14', '15:00', '17:00', 'NOIR ESTÉTICO: La estética de la oscuridad',
   'Florent Mahoukou · Gwladys Gambie · Catalina Mosquera · Shamyr Caicedo Rivas · Santiago Trujillo', 15),
@@ -127,13 +131,13 @@ ACTIVIDADES = [
   'Moderan Melissa Riquet, Sofía Espinosa y María José Durán · Juan Manuel Amaya · Douna Tongrongru · Petra Ventana · Maguemati Wabgou', 47),
  ('dialogo', PUJ, 'Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes', '16', '10:00', '13:00',
   'NOIR INDUSTRIA: Redes Sur-Sur. Circulación y mercados Sur-Sur',
-  'Modera Marcio Brito Neto · Andrea V. Naranjo · Yenni Córdoba · Marino Aguado · Marton Olympio', 36),
+  'Modera Andrea V. Naranjo · Marcio Brito Neto · Yenni Córdoba · Marino Aguado · Marton Olympio', 36),
  ('dialogo', MN,  'Auditorio Teresa Cuervo Borda', '16', '10:00', '12:00',
   'NOIR IDENTIDAD: Ser negro no es un género',
   'Modera Indhira Serrano · César Palacios Chaverra · Patricia Mena · Nicolás Vizcaíno Sánchez · Alejandra Mina', 58),
  ('dialogo', PUJ, 'Sala 901 - Edificio Jorge Hoyos Vásquez, S.J.', '17', '10:00', '13:00',
   'NOIR: Después de la tormenta — cuerpo, tierra y renacer',
-  'Modera Frida Muenala · Julián Díaz · Juliana Carabalí · Nina Caicedo · Yenni Córdoba', 38),
+  'Modera Yenni Córdoba · Nina Caicedo · Julián Díaz · Juliana Carabalí · Frida Muenala', 38),
  ('dialogo', AF,  None, '17', '15:00', '18:00', 'NOIR INDUSTRIA: Circulación y mercados Sur-Sur',
   'Modera Ángel Perea Escobar · Essehomo Pino Valoyes · Alain Nkosi Nkonda · Zanu · Lucas Silva', 22),
  ('dialogo', MN,  'Auditorio Teresa Cuervo Borda', '17', '16:00', '18:00',

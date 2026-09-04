@@ -863,7 +863,7 @@
    "sala": "Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Modera Marcio Brito Neto · Andrea V. Naranjo · Yenni Córdoba · Marino Aguado · Marton Olympio",
+   "synopsis": "Modera Andrea V. Naranjo · Marcio Brito Neto · Yenni Córdoba · Marino Aguado · Marton Olympio",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p36",
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
@@ -1246,7 +1246,7 @@
    "sala": "Sala 901 - Edificio Jorge Hoyos Vásquez, S.J.",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Modera Frida Muenala · Julián Díaz · Juliana Carabalí · Nina Caicedo · Yenni Córdoba",
+   "synopsis": "Modera Yenni Córdoba · Nina Caicedo · Julián Díaz · Juliana Carabalí · Frida Muenala",
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p38",
    "ticket_url": "https://www.quibdoafricafilmfestival.com/es/program-2026",
@@ -2186,7 +2186,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-04T15:08:47",
+  "fecha": "2026-09-04T15:20:50",
   "plan_sha": "6a649a44be31e1b6",
   "paso": 5,
   "cmd": "python3 pipeline/ensamblar.py qaff-2026"
