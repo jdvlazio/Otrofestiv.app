@@ -2965,7 +2965,7 @@ test('T141 — el rótulo de la ciudad se alinea con el de sus sedes', async ({ 
 // porque un segundo salto sorprende más que quedarse. Sin ese aserto, «arreglar»
 // esto navegando siempre pasaría el test.
 test('T142 — Prensa ON salta a donde se ven los pases; OFF no mueve a nadie', async ({ page }) => {
-  await enterFestival(page, 'tiff2026');
+  await enterFestival(page, 'tiff2026', '2026-09-09T10:00:00-04:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
@@ -3031,7 +3031,7 @@ test('T142 — Prensa ON salta a donde se ven los pases; OFF no mueve a nadie', 
 const _FONDO_MAS_CLARO_MEDIDO = [52, 49, 44];   // TIFF · scrollTop 1800 · 1 sep 2026
 
 test('T145 — el rótulo inactivo de la barra cumple AA sobre pósters claros', async ({ page }) => {
-  await enterFestival(page, 'tiff2026');
+  await enterFestival(page, 'tiff2026', '2026-09-09T10:00:00-04:00');
   const r = await page.evaluate(async (fondo) => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
@@ -3282,7 +3282,7 @@ test('T153 — el sustantivo de Planear sigue al contenido, no a la pantalla', a
 // alcanzable, con foco VISIBLE, y que Enter la opere. Una de las tres sola no
 // sirve de nada.
 test('T157 — Cancelar es alcanzable, se ve enfocada y responde a Enter', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button');
     b.setAttribute('data-action', 'closeCitySheet');
@@ -3451,7 +3451,7 @@ test('T164 — el panel usa el ancho que necesita, y no más', async ({ page }) 
     });
   };
   await page.setViewportSize({ width: 390, height: 844 });
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
 
   // 1 · catálogo entero: hay nombres largos, así que el panel tiene que usar todo
   const todo = await abrir(true);
