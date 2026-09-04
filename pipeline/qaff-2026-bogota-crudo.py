@@ -319,10 +319,12 @@ def main():
              'sede': f'{sede} · {sala}' if sala else sede,
              'titulo': nombre or ' + '.join(o['titulo'] for o in obs),
              'obras': obs,
-             # El programa no dice CÓMO se entra a ninguna sede de Bogotá, y la
-             # agenda de la Cinemateca no ha publicado el ciclo. Declararlo
-             # desconocido es el dato; suponer «entrada libre» sería inventarlo.
-             'acceso': 'desconocido',
+             # La palabra es del festival: Wilfrid Massamba, director de la
+             # Fundación QAFF, por correo el 4 sep 2026 — «la entrada es libre en
+             # todas las sedes, con inscripción previa». lib.acceso_campos() la
+             # traduce sola a is_free + requires_registration. FALTA el enlace de
+             # inscripción: sin él la app dice que hay que registrarse y no a dónde.
+             'acceso': 'Entrada libre con inscripción previa',
              '_src': f'parrilla impresa en el PDF oficial del programa, p{pag}'}
         _s = [o['_seccion'] for o in obs if o.get('_seccion')]
         if _s:
@@ -345,7 +347,7 @@ def main():
              'sede': f'{sede} · {sala}' if sala else sede,
              'titulo': titulo, 'obras': [],
              'event_kind': 'dialogo' if tipo == 'dialogo' else tipo,
-             'acceso': 'gratis' if tipo == 'vernissage' else 'desconocido',
+             'acceso': 'Entrada libre con inscripción previa',
              'sinopsis': quien, 'synopsis_lang': 'es',
              '_src': f'PDF oficial del programa, p{pag}'}
         if fin:

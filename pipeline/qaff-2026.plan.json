@@ -184,7 +184,8 @@
     "dias_vacios": [
       "2026-09-21"
     ],
-    "_dias_vacios_por_que": "el último Diálogo es el 22 en la Universidad Nacional y las proyecciones acaban el 20: el 21 no tiene nada. Se declara vacío porque un día ausente rompe la aritmética de «Hoy» y «Mañana»"
+    "_dias_vacios_por_que": "el último Diálogo es el 22 en la Universidad Nacional y las proyecciones acaban el 20: el 21 no tiene nada. Se declara vacío porque un día ausente rompe la aritmética de «Hoy» y «Mañana»",
+    "_acceso_4_sep_2026": "Wilfrid Massamba, director de la Fundación QAFF, por correo: «la entrada es libre en todas las sedes, con inscripción previa». PENDIENTE el enlace de inscripción: la app dice que hay que registrarse y todavía no a dónde."
   },
   "_publicar": {
     "estado": "NO publicado. src/config.js sigue apuntando al QAFF de Quibdó, y el JSON publicado sigue siendo el de Quibdó: la rama queda coherente consigo misma.",

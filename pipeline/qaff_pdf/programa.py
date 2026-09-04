@@ -66,6 +66,18 @@ FUNCIONES = [
                                  'HERMANAS EN EL DESTINO - ANGELA & GERTY ARCHIMÈDE'], 84),
  (CIN, 'Sala 3', '20', '17:30', ['EL COACH DE LOS LOCOS'], 84),
  (CIN, 'Sala Capital', '20', '18:30', ['AISHA NO PUEDE VOLAR LEJOS'], 84),
+
+ # Museo Nacional y Universidad Nacional. NO tienen página de parrilla, y por eso
+ # las dimos por «sedes anunciadas sin programación». Las tenían: cada página de
+ # FICHA lleva su fecha estampada («16 SEPT.»), y la hora es la del Diálogo de ese
+ # mismo día, que comparte franja —el mismo patrón que Alianza, Javeriana y
+ # Uniandes—. Nos lo señaló Wilfrid Massamba, director del festival (4 sep 2026):
+ # «son bloques de horarios… ubícalos por sede y franja». Yo había filtrado esas
+ # fechas como ruido de cierre de página en el extractor de fichas: eran dato.
+ (MN, 'Auditorio Teresa Cuervo Borda', '16', '10:00', ['POSESAS', 'LA TINAJA'], (57, 58)),
+ (MN, 'Auditorio Teresa Cuervo Borda', '17', '16:00',
+      ['WATERFRONT MEMORIES', 'MANMAN CHADWON'], (60, 62)),
+ (UN, 'Facultad de Artes', '22', '16:00', ['KANEKALON', 'AMELIA', 'ONE SUNDAY'], (65, 66, 67)),
 ]
 
 # Nombre y sinopsis que el propio festival le puso a dos bloques (p82, p84).
@@ -97,6 +109,9 @@ VENTANAS = {
  (PUJ, '17', '10:00'): (180, 37), (PUJ, '18', '10:00'): (180, 37),
  (UA,  '15', '14:00'): (120, 45), (UA,  '16', '13:00'): (120, 45),
  (UA,  '17', '14:00'): (120, 51), (UA,  '18', '13:00'): (120, 51),
+ # el Museo y la Nacional: la ventana la imprime la página del Diálogo
+ (MN,  '16', '10:00'): (120, 58), (MN,  '17', '16:00'): (120, 62),
+ (UN,  '22', '16:00'): (120, 67),
 }
 
 # ── actividades: los Diálogos Improbables y lo que no es proyección ─────────

@@ -24,16 +24,22 @@ P = {k: limpia(v) for k, v in paginas().items()}
 fallos = []
 
 for sede, sala, dia, hora, obras, pag in pr.FUNCIONES:
-    txt = n(' '.join(P[str(pag)]))
+    # La fuente puede ser MÁS de una página: el Museo Nacional y la Universidad
+    # Nacional no tienen parrilla, así que el día sale de la ficha (que lo lleva
+    # estampado) y la hora y la sala de la página del Diálogo de ese mismo día.
+    pags = pag if isinstance(pag, tuple) else (pag,)
+    pl = ' '.join(l for q in pags for l in P[str(q)])
+    txt = n(pl)
     for o in obras:
         if n(o) not in txt:
-            fallos.append(f'p{pag}: la obra «{o}» ({sede} {dia} {hora}) NO está en la página')
-    if not any(h in ' '.join(P[str(pag)]) for h in hora12(hora)):
-        fallos.append(f'p{pag}: la hora {hora} ({sede} {dia}) no aparece impresa')
-    if f'{int(dia)} DE SEPTIEMBRE' not in ' '.join(P[str(pag)]).upper():
-        fallos.append(f'p{pag}: el día {dia} no aparece impreso')
+            fallos.append(f'p{pags}: la obra «{o}» ({sede} {dia} {hora}) NO está en la página')
+    if not any(h in pl for h in hora12(hora)):
+        fallos.append(f'p{pags}: la hora {hora} ({sede} {dia}) no aparece impresa')
+    up = pl.upper()
+    if not (f'{int(dia)} DE SEPTIEMBRE' in up or re.search(rf'\b{int(dia)}\s*SEPT', up)):
+        fallos.append(f'p{pags}: el día {dia} no aparece impreso')
     if sala and n(sala.split(' - ')[0]) not in txt:
-        fallos.append(f'p{pag}: la sala «{sala}» no aparece impresa')
+        fallos.append(f'p{pags}: la sala «{sala}» no aparece impresa')
 
 for tipo, sede, sala, dia, ini, fin, titulo, quien, pag in pr.ACTIVIDADES:
     pags = pag if isinstance(pag, tuple) else (pag,)
