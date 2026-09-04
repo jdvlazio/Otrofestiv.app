@@ -23,6 +23,8 @@ const fs = require('fs');
 const ALIAS = {
   'EEUU': 'US', 'EE.UU.': 'US', 'EE UU': 'US', 'USA': 'US', 'Estados Unidos de América': 'US',
   'Inglaterra': 'GB', 'UK': 'GB', 'Gran Bretaña': 'GB',
+  'United States of America': 'US',    // la grafía larga que usa TIFF
+  'Turkey': 'TR', 'Turquía': 'TR',     // ICU dice «Türkiye»; los catálogos, no
   'Palestina': 'PS', 'Palestine': 'PS',
   'República Checa': 'CZ', 'Czech Republic': 'CZ', 'Chequia': 'CZ',
   'Arabia Saudita': 'SA',
@@ -41,7 +43,7 @@ const ALIAS = {
 // obra— y etiquetas que no son un país. Se declaran para que el guardián no las
 // persiga y para que nadie las «arregle» mañana.
 const SIN_BANDERA = [
-  'URSS', 'Yugoslavia', 'Checoslovaquia',
+  'URSS', 'USSR', 'Yugoslavia', 'Checoslovaquia',
   'Varios', 'Iberoamérica', 'Internacional', 'Coproducción',
 ];
 
