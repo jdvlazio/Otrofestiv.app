@@ -491,7 +491,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202609041025';
+const BUILD_VERSION='202609041056';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1049,7 +1049,13 @@ document.addEventListener('click',function(e){
   // más. Honrar la declaración cubre a los que vengan; la lista se queda para
   // .int-seen-btn, el único que no la declara.
   const _stop=e.target.closest('[data-stop="1"]');
-  if(_stop) return;
+  // …salvo cuando el que declara `data-stop` es EL MISMO que abre la ficha.
+  // El póster de Mi Plan y el de las no incluidas llevan las dos cosas: la marca
+  // de abrir y el `data-stop`, que ahí dice «no actúe la FILA», no «no me abras».
+  // Al empezar a honrar `data-stop` (30 ago) el toque al póster quedó muerto en
+  // Mi Plan — medido el 4 sep: las 4 filas de un plan de Cinemancia, obra,
+  // programa y evento, ninguna abría. El que abre no puede vetarse a sí mismo.
+  if(_stop&&!(_stop.classList.contains('js-open-pel')||_stop.classList.contains('js-open-corto'))) return;
   if(e.target.closest('.plist-heart')) return; // heart toggle — no abrir sheet
   if(e.target.closest('.suggestion-add')) return; // botón Añadir — no abrir sheet
   if(e.target.closest('.int-prio-btn')) return; // estrella priorizar — no abrir sheet

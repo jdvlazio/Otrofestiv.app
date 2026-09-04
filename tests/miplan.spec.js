@@ -2551,3 +2551,84 @@ test('T173 — la fila de Intereses no repite «Vista»', async ({ page }) => {
   expect(noVista.dato, 'y no es el estado').not.toMatch(/^vista$/i);
   expect(noVista.vecesVista, 'y la palabra sigue apareciendo una sola vez, en el botón').toBe(1);
 });
+
+// ── T175 — el póster de Mi Plan abre la ficha, siempre ───────────────────────
+// Reporte de Juan (4 sep 2026): tocar el póster en Mi Plan no abría la ficha.
+// Medido en Cinemancia, día de hoy, plan de 4: NINGUNA fila abría —obra,
+// programa y evento por igual—. Solo funcionaba el póster de un corto dentro de
+// un programa expandido, que no declara `data-stop`.
+//
+// Causa: el listener honra `data-stop="1"` desde el 30 ago —«yo me encargo de
+// este toque», para que «Agendar» no abriera la ficha detrás del modal—, y el
+// póster de Mi Plan lleva las DOS cosas: la marca de abrir y el `data-stop`, que
+// ahí significa «no actúe la FILA». El guard lo vetaba antes de mirar quién era.
+// El que abre no puede vetarse a sí mismo.
+//
+// Se afirma: (1) el póster de cada fila abre la ficha, sea obra, programa o
+// evento; (2) el título que abre es el de ESA fila, no el de otra; (3) control:
+// un control con `data-stop` que NO abre —el botón de agendar— sigue sin abrir.
+test('T175 — tocar el póster en Mi Plan abre la ficha de esa obra', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T15:00');
+  await page.evaluate(async () => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 400));
+    const hoy = FILMS.filter(f => !f._cancelled && f.day === '2026-09-04' && f.time);
+    const el = []; const vis = new Set();
+    for (const f of hoy) { if (!vis.has(f.title)) { vis.add(f.title); el.push(f); } if (el.length === 4) break; }
+    state.set('savedAgenda', { schedule: el.map(f => ({ ...f, _title: f.title })), scenarioIdx: 0 });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1200));
+  });
+
+  const n = await page.locator('.mplan-row .js-open-pel').count();
+  expect(n, 'el plan pinta sus filas con póster — si no, el test no mide nada').toBeGreaterThan(2);
+
+  const fallidas = [];
+  for (let i = 0; i < n; i++) {
+    // se cierra por el camino de la app: quitar la clase deja el telón puesto y
+    // el toque siguiente lo recibe la ficha, no la fila.
+    await page.evaluate(async () => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closePelSheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await new Promise(r => setTimeout(r, 500));
+    });
+    const loc = page.locator('.mplan-row .js-open-pel').nth(i);
+    const titulo = await loc.getAttribute('data-title');
+    await loc.scrollIntoViewIfNeeded();
+    await loc.click({ timeout: 5000 }).catch(() => {});
+    await page.waitForTimeout(900);
+    const r = await page.evaluate(() => ({
+      abierta: !!document.querySelector('#pel-sheet.open'),
+      titulo: document.querySelector('#pel-sheet .pel-sheet-title')?.textContent?.trim() || null }));
+    if (!r.abierta) fallidas.push(`${i}: «${(titulo || '').slice(0, 30)}» no abrió`);
+    else if (titulo && r.titulo && !titulo.startsWith(r.titulo.slice(0, 12)))
+      fallidas.push(`${i}: abrió «${r.titulo.slice(0, 24)}» y se tocó «${titulo.slice(0, 24)}»`);
+  }
+  expect(fallidas, `las ${n} filas abren su ficha — ${fallidas.join(' · ')}`).toHaveLength(0);
+
+  // control: un control que declara data-stop y NO abre ficha sigue sin abrirla.
+  // Sin esto, quitar el guard entero pasaría el test y volvería el defecto que
+  // lo trajo: agendar desde NO INCLUIDAS y terminar en la ficha, detrás del modal.
+  const control = await page.evaluate(async () => {
+    const c = document.createElement('button'); c.setAttribute('data-action', 'closePelSheet');
+    document.body.appendChild(c); c.click(); c.remove();
+    await new Promise(r => setTimeout(r, 500));
+    // el botón va DENTRO del que abre la ficha: ese es el caso real («Agendar»
+    // dentro de una fila que abre). Puesto fuera, no había ficha que abrir y el
+    // control pasaba con el guard desactivado — mutación comprobada.
+    const abridor = document.querySelector('.mplan-row .js-open-pel');
+    if (!abridor) return { sinFila: true };
+    const b = document.createElement('button');
+    b.setAttribute('data-stop', '1'); b.setAttribute('data-action', 'nadaQueHacer');
+    b.textContent = 'x'; b.style.cssText = 'position:relative;z-index:5';
+    abridor.appendChild(b);
+    b.click();
+    await new Promise(r => setTimeout(r, 700));
+    const abierta = !!document.querySelector('#pel-sheet.open');
+    b.remove();
+    return { abierta };
+  });
+  expect(control.abierta, 'un control con data-stop que no abre ficha sigue sin abrirla').toBe(false);
+});
