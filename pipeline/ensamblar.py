@@ -73,7 +73,12 @@ def _enriquece(dst, it):
                           ('lbSlug', ('lbSlug',)), ('tmdb_id', ('tmdb_id',)),
                           ('synopsis', ('sinopsis', 'synopsis_es')),
                           ('synopsis_en', ('synopsis_en',)),
-                          ('title_en', ('title_en',)), ('genre', ('genero', 'genre'))):
+                          ('title_en', ('title_en',)), ('genre', ('genero', 'genre')),
+                          # el título que dice el AFICHE cuando es el arte en español y
+                          # el festival titula en otro idioma; lo escribe
+                          # pipeline/afiche-vs-titulo.py en el sidecar de TMDB y el
+                          # buscador lo mira (#833). El `title` sigue siendo el oficial.
+                          ('title_es', ('title_es',))):
         if dst.get(campo):
             continue
         v = next((it[o] for o in origen if it.get(o)), None)
