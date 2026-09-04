@@ -21,6 +21,26 @@ def hora12(h):
     return [f'{h12}:{M:02d}']
 
 P = {k: limpia(v) for k, v in paginas().items()}
+
+
+def imprime_dia(lineas, dia):
+    """¿Esta página estampa ese día?
+
+    El sello sale del PDF partido de formas distintas según la exportación:
+    «17 SEPT.» en una línea, o «SEPT.» / «2026» / «17» en tres y desordenadas.
+    Exigirlos juntos hacía fallar una página que SÍ lo imprime. Se acepta el
+    número suelto solo si hay un «SEPT» cerca — si no, cualquier 17 del texto
+    (una duración, una dirección) daría el día por bueno, que es ablandarlo."""
+    d = int(dia)
+    up = [l.upper() for l in lineas]
+    for i, l in enumerate(up):
+        if re.search(rf'\b{d}\s*SEPT', l) or f'{d} DE SEPTIEMBRE' in l:
+            return True
+        if l.strip().rstrip('.') == str(d):
+            vecinas = up[max(0, i - 2):i + 3]
+            if any('SEPT' in v for v in vecinas):
+                return True
+    return False
 fallos = []
 
 for sede, sala, dia, hora, obras, pag in pr.FUNCIONES:
@@ -35,8 +55,7 @@ for sede, sala, dia, hora, obras, pag in pr.FUNCIONES:
             fallos.append(f'p{pags}: la obra «{o}» ({sede} {dia} {hora}) NO está en la página')
     if not any(h in pl for h in hora12(hora)):
         fallos.append(f'p{pags}: la hora {hora} ({sede} {dia}) no aparece impresa')
-    up = pl.upper()
-    if not (f'{int(dia)} DE SEPTIEMBRE' in up or re.search(rf'\b{int(dia)}\s*SEPT', up)):
+    if not imprime_dia([l for q in pags for l in P[str(q)]], dia):
         fallos.append(f'p{pags}: el día {dia} no aparece impreso')
     if sala and n(sala.split(' - ')[0]) not in txt:
         fallos.append(f'p{pags}: la sala «{sala}» no aparece impresa')
@@ -45,9 +64,7 @@ for tipo, sede, sala, dia, ini, fin, titulo, quien, pag in pr.ACTIVIDADES:
     pags = pag if isinstance(pag, tuple) else (pag,)
     pl = ' '.join(l for q in pags for l in P[str(q)])
     txt = n(pl)
-    up = pl.upper()
-    if not (re.search(rf'\b{int(dia)}\s*SEPT', up) or f'{int(dia)} DE SEPTIEMBRE' in up
-            or re.search(rf'\b{int(dia)}\s+SEPTIEMBRE', up)):
+    if not imprime_dia([l for q in pags for l in P[str(q)]], dia):
         fallos.append(f'p{pags}: «{titulo}» dice día {dia} y la página no lo imprime')
     if not any(h in pl for h in hora12(ini)):
         fallos.append(f'p{pags}: «{titulo}» dice {ini} y la página no lo imprime')

@@ -328,7 +328,13 @@ def main():
              '_src': f'parrilla impresa en el PDF oficial del programa, p{pag}'}
         _s = [o['_seccion'] for o in obs if o.get('_seccion')]
         if _s:
-            f['seccion'] = max(set(_s), key=_s.count)
+            # La sección del programa es la de la MAYORÍA de sus obras. En
+            # empate NO vale `max(set(...))`: el orden de iteración de un set de
+            # strings cambia en cada proceso, así que la misma entrada daba tres
+            # secciones distintas en tres corridas — medido. Empate lo rompe la
+            # primera obra del programa, que es la que lo encabeza.
+            _orden = {x: i for i, x in enumerate(dict.fromkeys(_s))}
+            f['seccion'] = max(dict.fromkeys(_s), key=lambda x: (_s.count(x), -_orden[x]))
         if nombre:
             f['sinopsis'] = sinopsis
             f['synopsis_lang'] = 'es'

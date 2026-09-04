@@ -4,7 +4,8 @@
   "capturado": "2026-09-04",
   "metodo": "capa de texto del PDF (no OCR). Parrilla y fichas cruzadas entre sí; la transcripción verificada contra la página que declara; contrastada con dos auditorías independientes del flip book",
   "quibdo": "CANCELADO por el terremoto — la 8ª edición es solo en Bogotá",
-  "prelanzamiento": "el 5 SEP en el Museo Nacional NO se incluye"
+  "prelanzamiento": "el 5 SEP en el Museo Nacional NO se incluye",
+  "revision_4_sep": "El festival reexportó el programa el 4 sep («hicimos los ajustes», Wilfrid Massamba). PDF nuevo, 86 páginas, mismo recuento. Cambios REALES, todos en la Universidad de los Andes: aparecen las salas (Auditorio ML-C, Salón RGD08, Salón ML513) y se movieron tres franjas — 16 SEP 13:00→12:00 (120→180 min), 17 SEP 14:00→13:00 (120→180), 18 SEP 13:00→12:00 (120→240), y con ella el diálogo NOIR Y GÉNERO. Alianza Francesa, Javeriana, Cinemateca, Museo Nacional y UNAL: sin cambios de día ni hora. En la ficha de FACE TO FACE el festival cambió «Performance de danza» por «Performance de cine expandido» (no es un campo que llevemos). La cabecera FECHA de la p51 dice «15 DE SEPTIEMBRE» y sus dos bloques son el 17 y el 18: error del PDF del festival, no del modelo."
  },
  "_pendiente_del_festival": {
   "fechas": "el lomo dice «14 - 18 SEPTIEMBRE» en 10 páginas y «14 - 17» en las 2 de Alianza Francesa, pero hay parrillas del 19 y el 20 en Cinemateca",
@@ -88,7 +89,7 @@
    ],
    "acceso": "Entrada libre con inscripción previa",
    "_src": "parrilla impresa en el PDF oficial del programa, p14",
-   "seccion": "Panorama Diaspórica"
+   "seccion": "Imaginarios Afrodisruptivos"
   },
   {
    "dia": "2026-09-14",
@@ -271,7 +272,7 @@
   {
    "dia": "2026-09-15",
    "hora": "14:00",
-   "sede": "Universidad de los Andes",
+   "sede": "Universidad de los Andes · Auditorio (ML-C)",
    "titulo": "Fitofascias + Aisha No Puede Volar Lejos",
    "obras": [
     {
@@ -318,7 +319,7 @@
   {
    "dia": "2026-09-15",
    "hora": "14:00",
-   "sede": "Universidad de los Andes",
+   "sede": "Universidad de los Andes · Auditorio (ML-C)",
    "titulo": "NOIR IDENTIDAD: Territorios rotos, cuerpos que resisten",
    "obras": [],
    "event_kind": "dialogo",
@@ -622,8 +623,8 @@
   },
   {
    "dia": "2026-09-16",
-   "hora": "13:00",
-   "sede": "Universidad de los Andes",
+   "hora": "12:00",
+   "sede": "Universidad de los Andes · Salón (RGD08)",
    "titulo": "Caída Libre + Refugiar el Gesto + Kanekalon + Bertha + Hacker Leonilia + Tia Ciata",
    "obras": [
     {
@@ -846,7 +847,7 @@
    ],
    "acceso": "Entrada libre con inscripción previa",
    "_src": "parrilla impresa en el PDF oficial del programa, p19",
-   "seccion": "Prisma Femenino"
+   "seccion": "Imaginarios Afrodisruptivos"
   },
   {
    "dia": "2026-09-16",
@@ -1010,31 +1011,8 @@
   },
   {
    "dia": "2026-09-17",
-   "hora": "14:00",
-   "sede": "Cinemateca de Bogotá · Sala 3",
-   "titulo": "De Barro y Sangre",
-   "obras": [
-    {
-     "titulo": "De Barro y Sangre",
-     "director": "Jean-Gabriel Leynaud",
-     "duracion_min": 94,
-     "pais": "RD Congo",
-     "anio": 2025,
-     "tipo": "Largometraje Documental",
-     "idioma": "Francés - Subt. Español",
-     "genre": "Documental",
-     "sinopsis": "En Numbi, una aldea aislada en las montañas del Congo, la vida gira en torno a la fiebre del coltán, una \"tierra rara\" indispensable para la electrónica. La fatalidad que afecta a los habitantes encarna los mecanismos tortuosos del capitalismo en la década de 2020.",
-     "synopsis_lang": "es",
-     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
-    }
-   ],
-   "acceso": "Entrada libre con inscripción previa",
-   "_src": "parrilla impresa en el PDF oficial del programa, p76"
-  },
-  {
-   "dia": "2026-09-17",
-   "hora": "14:00",
-   "sede": "Universidad de los Andes",
+   "hora": "13:00",
+   "sede": "Universidad de los Andes · Salón (ML513)",
    "titulo": "The Black Bart of Taco King #17 + Stormy Days + Amelia + Mi Viche Todo el Día",
    "obras": [
     {
@@ -1114,6 +1092,29 @@
    "acceso": "Entrada libre con inscripción previa",
    "_src": "parrilla impresa en el PDF oficial del programa, p51",
    "seccion": "Panorama Diaspórica"
+  },
+  {
+   "dia": "2026-09-17",
+   "hora": "14:00",
+   "sede": "Cinemateca de Bogotá · Sala 3",
+   "titulo": "De Barro y Sangre",
+   "obras": [
+    {
+     "titulo": "De Barro y Sangre",
+     "director": "Jean-Gabriel Leynaud",
+     "duracion_min": 94,
+     "pais": "RD Congo",
+     "anio": 2025,
+     "tipo": "Largometraje Documental",
+     "idioma": "Francés - Subt. Español",
+     "genre": "Documental",
+     "sinopsis": "En Numbi, una aldea aislada en las montañas del Congo, la vida gira en torno a la fiebre del coltán, una \"tierra rara\" indispensable para la electrónica. La fatalidad que afecta a los habitantes encarna los mecanismos tortuosos del capitalismo en la década de 2020.",
+     "synopsis_lang": "es",
+     "_obra_src": "ficha y parrilla del PDF oficial del programa (capa de texto, no OCR)"
+    }
+   ],
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": "parrilla impresa en el PDF oficial del programa, p76"
   },
   {
    "dia": "2026-09-17",
@@ -1389,8 +1390,8 @@
   },
   {
    "dia": "2026-09-18",
-   "hora": "13:00",
-   "sede": "Universidad de los Andes",
+   "hora": "12:00",
+   "sede": "Universidad de los Andes · Salón (ML513)",
    "titulo": "Orango",
    "obras": [
     {
@@ -1412,8 +1413,8 @@
   },
   {
    "dia": "2026-09-18",
-   "hora": "13:00",
-   "sede": "Universidad de los Andes",
+   "hora": "12:00",
+   "sede": "Universidad de los Andes · Salón (ML513)",
    "titulo": "NOIR Y GÉNERO: Mujeres en el cine",
    "obras": [],
    "event_kind": "dialogo",
@@ -1422,9 +1423,9 @@
    "synopsis_lang": "es",
    "_src": "PDF oficial del programa, p54",
    "hora_fin": "16:00",
-   "duracion_min": 26,
-   "_duracion_src": "la parrilla imprime una ventana de 120 min (p51) y las obras ocupan 94",
-   "duration": "26 min"
+   "duracion_min": 146,
+   "_duracion_src": "la parrilla imprime una ventana de 240 min (p51) y las obras ocupan 94",
+   "duration": "146 min"
   },
   {
    "dia": "2026-09-18",
@@ -1838,7 +1839,7 @@
    ],
    "acceso": "Entrada libre con inscripción previa",
    "_src": "parrilla impresa en el PDF oficial del programa, p(65, 66, 67)",
-   "seccion": "Panorama Africano"
+   "seccion": "Panorama Colombiano"
   },
   {
    "dia": "2026-09-22",

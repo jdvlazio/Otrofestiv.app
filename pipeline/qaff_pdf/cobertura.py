@@ -232,14 +232,27 @@ def dias_fuera_de_sitio():
         add(pag, dia)
     for t, sede, sala, dia, ini, fin, tit, quien, pag in pr.ACTIVIDADES:
         add(pag, dia)
-    fuera = {}
+    # El campo FECHA de la cabecera NO es un encabezado de bloque: nombra el
+    # rango de la página, y a veces solo su primer día (p45 dice «15» y programa
+    # el 15 y el 16). Además el festival lo tiene MAL en la p51: dice «15» y sus
+    # dos bloques son el 17 y el 18. Es un error de su documento, no del modelo,
+    # así que se informa aparte en vez de bloquear — pero se informa, porque un
+    # día equivocado en la cabecera es justo lo que confunde a quien transcribe.
+    fuera, cabeceras = {}, {}
     for pag, crudo in paginas().items():
         if pag in FUERA or str(pag) not in dias:
             continue
-        for l in limpia(crudo):
+        ls = limpia(crudo)
+        for i, l in enumerate(ls):
             m = DIA_LARGO.match(l)
-            if m and int(m.group(1)) not in dias[str(pag)]:
-                fuera.setdefault(pag, []).append(l)
+            if not m or int(m.group(1)) in dias[str(pag)]:
+                continue
+            es_campo = i and ls[i - 1].strip().upper().startswith('FECHA')
+            (cabeceras if es_campo else fuera).setdefault(pag, []).append(l)
+    if cabeceras:
+        for pag in sorted(cabeceras, key=int):
+            print(f'   · p{pag}: la cabecera FECHA dice {cabeceras[pag]} y la página '
+                  f'programa {sorted(dias[str(pag)])} — error del PDF del festival')
     return fuera
 
 
