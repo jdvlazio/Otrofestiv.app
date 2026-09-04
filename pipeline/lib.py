@@ -193,81 +193,10 @@ def dias_config(dias, mes_es='agosto'):
 
 
 # ── banderas ─────────────────────────────────────────────────────────────────
-BANDERAS = {
-    'colombia': '🇨🇴', 'argentina': '🇦🇷', 'brasil': '🇧🇷', 'chile': '🇨🇱', 'mexico': '🇲🇽',
-    'peru': '🇵🇪', 'panama': '🇵🇦', 'ecuador': '🇪🇨', 'venezuela': '🇻🇪', 'bolivia': '🇧🇴',
-    'uruguay': '🇺🇾', 'paraguay': '🇵🇾', 'cuba': '🇨🇺', 'espana': '🇪🇸', 'francia': '🇫🇷',
-    'italia': '🇮🇹', 'alemania': '🇩🇪', 'reino unido': '🇬🇧', 'estados unidos': '🇺🇸',
-    'canada': '🇨🇦', 'japon': '🇯🇵', 'china': '🇨🇳', 'iran': '🇮🇷', 'india': '🇮🇳',
-    'rusia': '🇷🇺',
-    'federacion rusa': '🇷🇺',   # así lo escribe CineAutopsia
-    'polonia': '🇵🇱', 'dinamarca': '🇩🇰', 'suecia': '🇸🇪', 'noruega': '🇳🇴',
-    'irlanda': '🇮🇪', 'belgica': '🇧🇪', 'paises bajos': '🇳🇱', 'portugal': '🇵🇹',
-    'suiza': '🇨🇭', 'austria': '🇦🇹', 'grecia': '🇬🇷', 'turquia': '🇹🇷', 'kenia': '🇰🇪',
-    'filipinas': '🇵🇭', 'macedonia del norte': '🇲🇰', 'nueva zelanda': '🇳🇿',
-    'australia': '🇦🇺', 'luxemburgo': '🇱🇺', 'sudafrica': '🇿🇦', 'senegal': '🇸🇳',
-    # ── medidos contra los 13 festivales del repo el 17 ago 2026 ──────────────
-    # La tabla se escribía a mano y a demanda, así que le faltaba lo que ningún
-    # festival anterior había traído: «Hungría» apareció con CineAutopsia y se
-    # quedó sin bandera. En vez de añadir una, se midió TODO el repo y se cerró
-    # el hueco entero. Los nombres en inglés entran porque los festivales
-    # internacionales publican así (TIFF, Tribeca) y traducirlos en la línea de
-    # salida sería inventar la palabra del festival.
-    'hungria': '🇭🇺', 'palestina': '🇵🇸', 'honduras': '🇭🇳', 'taiwan': '🇹🇼',
-    'qatar': '🇶🇦', 'bangladesh': '🇧🇩', 'corea del sur': '🇰🇷', 'corea': '🇰🇷',
-    'sri lanka': '🇱🇰', 'malasia': '🇲🇾', 'eslovaquia': '🇸🇰', 'vietnam': '🇻🇳',
-    'nigeria': '🇳🇬', 'puerto rico': '🇵🇷', 'rumania': '🇷🇴', 'rumania (romania)': '🇷🇴',
-    'estonia': '🇪🇪', 'republica dominicana': '🇩🇴', 'rep. dominicana': '🇩🇴',
-    'israel': '🇮🇱', 'tailandia': '🇹🇭', 'kosovo': '🇽🇰', 'bulgaria': '🇧🇬',
-    'costa rica': '🇨🇷', 'georgia': '🇬🇪', 'guatemala': '🇬🇹', 'nicaragua': '🇳🇮',
-    'el salvador': '🇸🇻', 'haiti': '🇭🇹', 'jamaica': '🇯🇲', 'marruecos': '🇲🇦',
-    'egipto': '🇪🇬', 'tunez': '🇹🇳', 'argelia': '🇩🇿', 'libano': '🇱🇧',
-    'siria': '🇸🇾', 'irak': '🇮🇶', 'afganistan': '🇦🇫', 'pakistan': '🇵🇰',
-    'indonesia': '🇮🇩', 'singapur': '🇸🇬', 'camboya': '🇰🇭', 'nepal': '🇳🇵',
-    'mongolia': '🇲🇳', 'ucrania': '🇺🇦', 'republica checa': '🇨🇿', 'chequia': '🇨🇿',
-    'hungria (magyarorszag)': '🇭🇺', 'serbia': '🇷🇸', 'croacia': '🇭🇷',
-    'eslovenia': '🇸🇮', 'bosnia y herzegovina': '🇧🇦', 'albania': '🇦🇱',
-    'letonia': '🇱🇻', 'lituania': '🇱🇹', 'finlandia': '🇫🇮', 'islandia': '🇮🇸',
-    'etiopia': '🇪🇹', 'ghana': '🇬🇭', 'mali': '🇲🇱', 'burkina faso': '🇧🇫',
-    'ruanda': '🇷🇼', 'tanzania': '🇹🇿', 'uganda': '🇺🇬', 'mozambique': '🇲🇿',
-    'angola': '🇦🇴', 'congo': '🇨🇬', 'republica democratica del congo': '🇨🇩',
-    'costa de marfil': '🇨🇮', 'camerun': '🇨🇲', 'zimbabue': '🇿🇼', 'namibia': '🇳🇦',
-    'botsuana': '🇧🇼', 'sudan': '🇸🇩', 'somalia': '🇸🇴', 'yemen': '🇾🇪',
-    'arabia saudita': '🇸🇦', 'saudi arabia': '🇸🇦', 'turkiye': '🇹🇷', 'emiratos arabes unidos': '🇦🇪', 'jordania': '🇯🇴',
-    # nombres en inglés, tal como los publican los festivales internacionales
-    'united states': '🇺🇸', 'usa': '🇺🇸', 'eeuu': '🇺🇸', 'ee.uu.': '🇺🇸',
-    'united kingdom': '🇬🇧', 'uk': '🇬🇧', 'inglaterra': '🇬🇧', 'england': '🇬🇧',
-    'scotland': '🏴󠁧󠁢󠁳󠁣󠁴󠁿', 'france': '🇫🇷', 'spain': '🇪🇸', 'germany': '🇩🇪',
-    'italy': '🇮🇹', 'norway': '🇳🇴', 'sweden': '🇸🇪', 'denmark': '🇩🇰',
-    'ireland': '🇮🇪', 'netherlands': '🇳🇱', 'belgium': '🇧🇪', 'switzerland': '🇨🇭',
-    'austria': '🇦🇹', 'poland': '🇵🇱', 'portugal': '🇵🇹', 'greece': '🇬🇷',
-    'japan': '🇯🇵', 'south korea': '🇰🇷', 'korea': '🇰🇷', 'india': '🇮🇳',
-    'brazil': '🇧🇷', 'mexico': '🇲🇽', 'chile': '🇨🇱', 'colombia': '🇨🇴',
-    'argentina': '🇦🇷', 'peru': '🇵🇪', 'canada': '🇨🇦', 'australia': '🇦🇺',
-    'new zealand': '🇳🇿', 'south africa': '🇿🇦', 'israel': '🇮🇱', 'turkey': '🇹🇷',
-    'china': '🇨🇳', 'taiwan': '🇹🇼', 'hong kong': '🇭🇰', 'philippines': '🇵🇭',
-    'thailand': '🇹🇭', 'vietnam': '🇻🇳', 'indonesia': '🇮🇩', 'malaysia': '🇲🇾',
-    'ukraine': '🇺🇦', 'russia': '🇷🇺', 'czech republic': '🇨🇿', 'czechia': '🇨🇿',
-    'hungary': '🇭🇺', 'romania': '🇷🇴', 'bulgaria': '🇧🇬', 'serbia': '🇷🇸',
-    'croatia': '🇭🇷', 'slovenia': '🇸🇮', 'slovakia': '🇸🇰', 'estonia': '🇪🇪',
-    'latvia': '🇱🇻', 'lithuania': '🇱🇹', 'finland': '🇫🇮', 'iceland': '🇮🇸',
-    'egypt': '🇪🇬', 'morocco': '🇲🇦', 'tunisia': '🇹🇳', 'algeria': '🇩🇿',
-    'nigeria': '🇳🇬', 'kenya': '🇰🇪', 'senegal': '🇸🇳', 'ethiopia': '🇪🇹',
-    # Territorios de ultramar del Caribe francés. No son estados soberanos,
-    # pero tienen bandera propia y los festivales los publican como país de
-    # la obra — QAFF 2026 trae tres. Puerto Rico ya sentaba el criterio.
-    'martinica': '🇲🇶', 'guadalupe': '🇬🇵', 'guayana francesa': '🇬🇫',
-}
-
-# ISO2, porque los catálogos y TMDB los publican así y un país escrito «CO» es
-# el mismo país. Solo los que aparecen de verdad en el repo.
-ISO2 = {'co': '🇨🇴', 'ar': '🇦🇷', 'br': '🇧🇷', 'cl': '🇨🇱', 'mx': '🇲🇽', 'pe': '🇵🇪',
-        'us': '🇺🇸', 'gb': '🇬🇧', 'fr': '🇫🇷', 'es': '🇪🇸', 'de': '🇩🇪', 'it': '🇮🇹',
-        'ca': '🇨🇦', 'pt': '🇵🇹', 'jp': '🇯🇵', 'cn': '🇨🇳', 'kr': '🇰🇷', 'in': '🇮🇳'}
-
-# Abreviaturas y nombres a medias que los festivales publican tal cual.
-ALIAS = {'rep dominicana': '🇩🇴', 'rd congo': '🇨🇩', 'guinea bissau': '🇬🇼',
-         'republica democratica del congo': '🇨🇩'}
+# Las tablas de países ya no viven aquí: las genera scripts/generate-paises.js
+# (ICU es+en) en pipeline/paises.json, y banderas() las lee de ahí. Quedaban
+# BANDERAS, ISO2 y ALIAS escritas a mano y sin un solo lector — es como
+# vuelven a divergir dos copias: una se queda quieta y nadie lo nota.
 
 
 def _paises():

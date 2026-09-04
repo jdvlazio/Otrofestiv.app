@@ -4754,9 +4754,14 @@ try:
     # `country → flags` es aparte: solo es hueco si la bandera SE PODÍA derivar.
     # Un país que no está en la tabla («Varios», o un idioma colado en el campo)
     # es otro problema, y de ese ya se ocupa [country-flags].
-    _js = open('src/controller/sheets-controller.js', encoding='utf-8').read()
-    _m = _re.search(r'const _COUNTRY_FLAGS=\{(.*?)\};', _js, _re.S)
-    _TAB = dict(_re.findall(r"'([^']+)'\s*:\s*'([^']+)'", _m.group(1))) if _m else {}
+    # Se pregunta al MOTOR, no a un literal del controlador. Cuando la tabla se
+    # movió a src/domain/paises.js este regex dejó de encontrar nada, `_TAB`
+    # quedó vacío y esta mitad del guardián pasó a no comprobar absolutamente
+    # nada — en verde. Un guardián que se queda sin su fuente no falla: calla.
+    import sys as _sys4
+    _sys4.path.insert(0, 'pipeline')
+    import lib as _lib4
+    _mapea = _lib4.banderas
 
     def _vacio(v):
         return v in (None, '', [], {})
@@ -4779,7 +4784,7 @@ try:
             _c = (_x.get('country') or '').strip()
             if not _c or not _vacio(_x.get('flags')):
                 continue
-            if any(_p.strip() in _TAB for _p in _re.split(r'[,/()]', _c)):
+            if _mapea(_c):
                 _sinf.append(_x.get('title', '?'))
         if _sinf:
             _viol.append(f'{_n}: {len(_sinf)} film(s) con país mapeable y sin «flags» '
