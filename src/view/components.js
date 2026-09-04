@@ -903,19 +903,30 @@ export function renderRatingStarsHTML(state, current){
 // `lang` opcional: default al estado global, pero quien ya tiene el idioma en la
 // mano (la card del riel lo recibe de su render) lo pasa explícito — el unit test
 // del riel cazó que ignorarlo rompía el contrato de _renderSplashRailHTML(state).
+// Los dos estados de festival que pintan banda. Se declaran juntos para que se
+// vea que son DOS y en qué se diferencian: 'postponed' saca al festival de «en
+// curso» (sin punto verde, sin preselección, fechas por anunciar), 'moved' NO
+// toca nada de eso —el festival se hace, en sus fechas— y solo explica el
+// cambio. QAFF 2026 trasladó a Bogotá la totalidad de sus proyecciones por el
+// terremoto del 10 ago; el `NOTICES` con `cities` de FICDEH no servía, porque
+// ese se engancha a funciones de la ciudad cancelada y aquí Quibdó no tiene
+// ninguna. Ver pipeline/PROTOCOLO.md §2·bis.
+const BANDA = {postponed: 'fest_postponed_label', moved: 'fest_moved_label'};
+
 // postponedBannerHTML — markup ÚNICO del aviso de festival aplazado. Dos hosts lo
 // pintan: el header del Programa (renderPostponedBanner) y Mi Plan (renderAgenda).
 // Las palabras son del FESTIVAL (note verbatim; note_en traducción aprobada por
 // Juan). Sin botón de cerrar: es contexto, no notificación.
 export function postponedBannerHTML(cfg,{id=''}={}){
-  if(!cfg||!cfg.status||cfg.status.kind!=='postponed') return '';
+  const _lbl=cfg&&cfg.status&&BANDA[cfg.status.kind];
+  if(!_lbl) return '';
   const {_lang}=state.snapshot();
   const _esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
   const note=(_lang!=='es'&&cfg.status.note_en)||cfg.status.note;
   return`<div class="fest-postponed-banner"${id?` id="${id}"`:''}>
     <div class="notice-banner-dot"></div>
     <div class="notice-banner-body">
-      <div class="notice-banner-label">${t('fest_postponed_label')}</div>
+      <div class="notice-banner-label">${t(_lbl)}</div>
       <div class="notice-banner-text">${_esc(note)}${cfg.status.url?`<br><a class="fest-postponed-link" href="${_esc(cfg.status.url)}" target="_blank" rel="noopener">${t('fest_postponed_link')}</a>`:''}</div>
     </div>
   </div>`;

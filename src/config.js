@@ -668,7 +668,22 @@ export const FESTIVAL_CONFIG={
     // El afiche se queda: es el suyo, el de la 8ª edición. Dice «14-18
     // SEPTIEMBRE» y el programa llega al 22 — la banda de traslado es lo que
     // explica esa diferencia.
-    group:'test',
+    // TRASLADADO, no aplazado: el festival SÍ se hace y en sus fechas, solo que
+    // toda su programación se movió de Quibdó a Bogotá. Por eso `kind:'moved'`,
+    // que pinta la banda y NADA más — punto verde, preselección y fechas reales
+    // siguen intactos. `note` es nuestra frase con la cita entrecomillada donde
+    // son sus palabras (comunicado del 20 ago); `note_en` es traducción nuestra,
+    // aprobada por Juan. Reversión: borrar este bloque.
+    //
+    // El afiche es el suyo y dice «14-18 SEPTIEMBRE» mientras el programa llega
+    // al 22: es esta banda la que explica esa diferencia.
+    status:{
+      kind:'moved',
+      since:'2026-08-20',
+      note:'Por el terremoto del 10 de agosto, el festival trasladó «excepcionalmente la totalidad de las proyecciones» a Bogotá.',
+      note_en:'Due to the August 10 earthquake, the festival "exceptionally relocated all screenings" to Bogotá.',
+      url:'https://www.instagram.com/p/DcREogQER9d',
+    },
     name:'QAFF',fullName:'QAFF — Quibdó África Film Festival',shortName:'QAFF',
     city:'Bogotá',country:'CO',
     dates:'14–22 SEP',dates_en:'SEP 14–22',year:2026,timezoneOffset:'-05:00',
