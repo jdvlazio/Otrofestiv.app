@@ -14,6 +14,7 @@ import { storage } from '../storage/storage.js';
 import { FESTIVAL_CONFIG } from "../config.js";
 import { ICONS, festivalShortName } from "./components.js";
 import { festivalCities } from "./helpers.js";
+import { festivalEnded } from "../domain/time.js";
 
 export function openAuthSheet(){
   if(_sbUser){_showSignedInSheet();return;}
@@ -135,6 +136,16 @@ export function openCitySheet(){
   if(!sh) return;
   const cities=festivalCities(FILMS);
   if(cities.length<2) return;               // no multiciudad → no hay nada que preguntar
+  // Festival TERMINADO → tampoco hay nada que preguntar (Juan, 4 sep 2026).
+  // «¿A cuál ciudad vas?» está en futuro, y era lo primero y ÚNICO que veía
+  // quien abría un festival pasado: medido en FICDEH, la hoja ocupa 390x844
+  // —el viewport entero— con z-index 9999, así que además se comía el toque a
+  // las pestañas. Lo que se retira es la PREGUNTA, no la posibilidad: el filtro
+  // de Lugar sigue ofreciendo las mismas ciudades para releer el programa de
+  // una (decisión de Juan; T177 vigila las dos mitades).
+  // Se descarta acá, junto al otro caso de «no hay nada que preguntar», y no en
+  // el disparador: así vale para cualquiera que la abra, no solo para el arranque.
+  if(festivalEnded()) return;
   const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
   // El afiche da la identidad; por eso el sheet NO repite el nombre del festival
   // (el usuario acaba de elegirlo en el splash). Si no hay keyArt, cae al

@@ -71,7 +71,13 @@ async function enterFestival(page, festId, simTime, opts) {
   // opts.query: query string extra para el goto — precedente de simTime: los
   // interruptores de dev/test viajan por URL (T101 usa updPoll= para acortar
   // el ciclo del poll de actualización).
-  await page.goto('/' + (opts && opts.query ? '?' + opts.query : ''));
+  // El reloj viaja por URL para que el ARRANQUE ya lo vea: lo que el boot decide
+  // mirando la hora —la fase del festival, si se abre la pregunta de ciudad—
+  // quedaba fuera de alcance cuando `_simTime` se fijaba recién al final. Se
+  // suma al query existente en vez de pisarlo (T101 manda `updPoll=`).
+  const _qs = [opts && opts.query, simTime && 'simTime=' + encodeURIComponent(simTime)]
+    .filter(Boolean).join('&');
+  await page.goto('/' + (_qs ? '?' + _qs : ''));
   // Gate de readiness JS DEFINITIVO: el marcador [data-app-ready="1"] se setea al
   // FINAL del bootstrap síncrono (main.js) — módulo evaluado, STATE/TEST BRIDGE
   // instalado (FESTIVAL_CONFIG/selectSplashFest expuestos en globalThis), listener
@@ -117,6 +123,24 @@ async function enterFestival(page, festId, simTime, opts) {
   }
 }
 
+// abrirHojaCiudad — abre la hoja de ciudad DESPUÉS de congelar el reloj.
+//
+// Hace falta porque enterFestival fija `_simTime` al FINAL, cuando el arranque
+// ya decidió si la hoja se abría o no. Desde el 4 sep 2026 un festival TERMINADO
+// no la abre (decisión de Juan: la pregunta «¿a cuál ciudad vas?» está en
+// futuro), así que un test con el reloj en plena programación la encontraba
+// igual sin abrir — el arranque la había mirado con la hora REAL.
+//
+// Llamarla explícitamente deja dicho en el test qué fase está ejerciendo, que es
+// lo que el arranque hacía a espaldas suyas.
+async function abrirHojaCiudad(page) {
+  await page.evaluate(async () => {
+    const S = await import('/src/view/sheets.js');
+    S.openCitySheet();
+  });
+  await page.waitForTimeout(450);
+}
+
 async function freezeSimTime(page, isoStr) {
   await page.evaluate((t) => { _simTime = t; }, isoStr);
 }
@@ -153,4 +177,4 @@ async function goToPlanear(page) {
   await page.waitForFunction(() => !!cachedResult, null, { timeout: 20000 }).catch(() => {});
 }
 
-module.exports = { LEVIZA_SIMTIME, esperarCalculo, festivalTestIds, selectFestival, enterFestival, reentrar, freezeSimTime, addToWatchlist, goToPlanear };
+module.exports = { LEVIZA_SIMTIME, abrirHojaCiudad, esperarCalculo, festivalTestIds, selectFestival, enterFestival, reentrar, freezeSimTime, addToWatchlist, goToPlanear };
