@@ -127,6 +127,12 @@ TITULO_ES = {
  # Cinemateca. Mismo director, misma duración, misma obra. El catálogo de Bogotá
  # va en español; el título original viaja en `titulo_original`.
  'A KING DISPLACED': 'UN REY DESPLAZADO',
+ # Igual que las anteriores: la Cinemateca la programa «UN DOMINGO» el 19 y la
+ # Universidad Nacional «ONE SUNDAY» el 22. Misma obra (Day Sena, 20', Brasil).
+ # Sin unificar salían como dos obras con la MISMA sinopsis, que es lo que el
+ # guardián [sinopsis-duplicada] llama cross-contaminación — y en pantalla
+ # parecerían dos películas distintas que cuentan lo mismo.
+ 'ONE SUNDAY': 'UN DOMINGO',
  'SISTERS IN DESTINY: ANGELA DAVIS & GERTY ARCHIMEDE':
      'HERMANAS EN EL DESTINO - ANGELA & GERTY ARCHIMÈDE',
 }
@@ -329,6 +335,13 @@ SECCION_DIRECTA = {
     # La selección oficial de su web la marca «(out of competition)».
     'hyphen': ('FUERA DE COMPETICION', 'marcada «(out of competition)» en la '
                'selección oficial del sitio del festival'),
+    # La ÚNICA que no estaba publicada en ninguna parte: ni en el calendario, ni
+    # en /catalog, ni en las páginas de sección. La respondió el festival por
+    # correo el 4 sep 2026: «Orango lo encontrará en la sección África
+    # Panorama». Es su nombre; se canoniza a «Panorama Africano», que es como la
+    # titula su propia web y como ya la publicamos.
+    'orango': ('PANORAMA AFRICANO', 'respuesta del festival por correo, 4 sep 2026 '
+               '(Wilfrid Massamba): «Orango lo encontrará en la sección África Panorama»'),
 }
 _PUENTE_N = None
 
