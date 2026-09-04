@@ -1835,9 +1835,24 @@ export function buildResultHTML(scenarios){
   // no cruza ciudades (#594), así que una obra de otra ciudad nunca fue
   // candidata — contarla como costo del Plan inflaba el número al doble. Mismo
   // argumento que ya sacó del conteo a las que el festival se llevó.
-  const _fuera=_nFuera
-    ?` <span class="dato-linea">· ${_nFuera===1?t('res_fuera_1'):t('res_fuera',{n:_nFuera})}</span>`
-    :'';
+  // El titular NOMBRA la ciudad cuando el filtro la restringe (auditoría 4 sep
+  // 2026). El planificador no cruza ciudades, y el comentario de arriba ya lo
+  // usaba para no inflar «quedaron fuera» — o sea que la ciudad era un insumo del
+  // resultado que el resultado no decía. Medido en FICDEH con la MISMA lista de
+  // intereses y el mismo reloj, cambiando solo el filtro: «7 obras · 4 días»
+  // (Bogotá), «7 obras · 2 días» (Ibagué) y «7 obras · 5 días» (todas). Tres
+  // planes sin nada en común y el mismo titular. La barra de Lugar vive en
+  // Programa, así que en Planear no hay dónde leerlo.
+  // Una SOLA línea gris con la cola del titular: la ciudad y las que quedaron
+  // fuera. Iban en dos `.dato-linea` y T93 —que busca «cuántas quedaron fuera»
+  // como la primera línea gris del resultado— encontraba la ciudad y no veía
+  // ningún número. Juntas también se leen mejor: son la misma aclaración.
+  const _selCiudad=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
+  const _cola=[
+    _selCiudad==='all'?'':t('res_en_ciudad',{c:_selCiudad.slice(5)}),
+    _nFuera?(_nFuera===1?t('res_fuera_1'):t('res_fuera',{n:_nFuera})):'',
+  ].filter(Boolean).join(' · ');
+  const _fuera=_cola?` <span class="dato-linea">· ${_cola}</span>`:'';
   let html=`${_staleBanner}<div class="ag-summary ag-summary-res">
     <div class="dato-resultado">${hayEvento(sc.schedule,FILMS)
       ?`${ok} ${ok!==1?t('misc_actividades'):t('misc_actividad')}`

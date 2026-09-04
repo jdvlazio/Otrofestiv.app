@@ -126,3 +126,70 @@ test('T109 — un taller con una sesión reprogramada se re-toma ENTERO', async 
   expect(r.violaciones.map(x => x.kind)).not.toContain('bloque-incompleto');
   expect(r.ok).toBe(true);
 });
+
+// ── PC10 — el titular del Plan nombra la ciudad que lo restringió ────────────
+// Auditoría 4 sep 2026. El planificador NO cruza ciudades, así que el filtro de
+// Lugar decide qué obras compitieron. Medido en FICDEH con la MISMA lista de
+// intereses y el mismo reloj, cambiando solo el filtro: «7 obras · 4 días»
+// (Bogotá), «7 obras · 2 días» (Ibagué), «7 obras · 5 días» (todas). Tres planes
+// sin nada en común, el mismo titular, y la barra de Lugar vive en Programa: en
+// Planear no había dónde leer con qué ciudad se calculó.
+//
+// El código ya usaba la ciudad para no inflar «quedaron fuera» —o sea que era un
+// insumo del resultado que el resultado no decía—.
+//
+// Se afirma: (1) con una ciudad puesta, el titular la nombra; (2) con «todas» NO
+// nombra ninguna —el control: nombrarla siempre sería inventar un filtro que el
+// usuario no puso—; (3) el titular sigue diciendo lo que decía.
+test('PC10 — el titular nombra la ciudad cuando el filtro la restringe', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  const titular = async (filtro) => {
+    await enterFestival(page, 'ficdeh2026', '2026-08-15T11:00');
+    return page.evaluate(async (filtro) => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await new Promise(r => setTimeout(r, 400));
+      activeVenue = filtro;
+      const t = [...new Set(FILMS.filter(f => !f._cancelled && f.day >= '2026-08-16').map(f => f.title))].slice(0, 8);
+      state.set('watchlist', new Set(t));
+      state.set('savedAgenda', null);
+      cachedResult = null;
+      switchMainNav('mnav-planner'); showAgView();
+      await new Promise(r => setTimeout(r, 2500));
+      const d = document.querySelector('.dato-resultado');
+      return { filtro, texto: d ? d.textContent.replace(/\s+/g, ' ').trim() : null };
+    }, filtro);
+  };
+
+  // 1 · con ciudad: el titular la nombra
+  const bogota = await titular('city:Bogotá');
+  expect(bogota.texto, 'Planear muestra su resultado').toBeTruthy();
+  expect(bogota.texto, `el titular nombra la ciudad (dice: ${bogota.texto})`).toContain('Bogotá');
+  expect(bogota.texto, 'y sigue diciendo cuántos días').toMatch(/d[íi]as?/i);
+
+  // 2 · control: sin filtro NO nombra ninguna. Nombrarla siempre sería inventar
+  // un filtro que el usuario no puso.
+  const todas = await titular('all');
+  expect(todas.texto, 'con «todas» el resultado sigue estando').toBeTruthy();
+  expect(todas.texto, `y no nombra ninguna ciudad (dice: ${todas.texto})`)
+    .not.toMatch(/Bogot|Ibagu|Medell|Armenia|Cartagena|Quibd/i);
+
+  // 3 · otra ciudad, otro nombre: no está cableado a una sola
+  const ibague = await titular('city:Ibagué');
+  expect(ibague.texto, `el titular nombra Ibagué (dice: ${ibague.texto})`).toContain('Ibagué');
+
+  // 4 · una SEDE elegida no restringe el plan —la ciudad es contexto, la sede es
+  // un filtro momentáneo (isCitySel/keepCityOnly)—, así que el titular NO la
+  // nombra. Sin este caso, quitar keepCityOnly pasaba limpio y el titular
+  // atribuiría el resultado a un filtro que no lo produjo.
+  const unaSede = await page.evaluate(() => {
+    const vs = Object.keys((FESTIVAL_CONFIG[_activeFestId] || {}).venues || {});
+    return vs.find(v => !v.startsWith('city:')) || null;
+  });
+  expect(unaSede, 'FICDEH tiene sedes con clave propia').toBeTruthy();
+  const sede = await titular(unaSede);
+  expect(sede.texto, 'con una sede elegida el resultado sigue estando').toBeTruthy();
+  expect(sede.texto, `una sede no restringe el plan: el titular no la nombra (dice: ${sede.texto})`)
+    .not.toMatch(/·\s*(en|in|em)\s+\S/);
+});
