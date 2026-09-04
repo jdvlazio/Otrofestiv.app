@@ -632,3 +632,80 @@ test('T171 — Avisos avisa que la duración es estimada, y solo cuando lo es', 
     expect(corto.abrio, 'la ficha del corto abre — sin esto el caso no se prueba').toBe(true);
   }
 });
+
+// ── T174 — la prioridad se retira con el planeador ───────────────────────────
+// Auditoría 4 sep 2026: con el festival terminado, la ficha seguía ofreciendo
+// «Priorizar» y, con el cupo lleno, abría una hoja de canje de 575px —el 68% de
+// la pantalla— pidiendo cambiar una prioridad por otra. En la misma sesión,
+// Planear ya decía «El planeador descansa hasta el próximo festival».
+//
+// Las prioridades no tienen otro consumidor que el planeador: ofrecerlas cuando
+// se retiró es ofrecer una acción sin consecuencia. Se retiran con él. Las que
+// ya existían siguen visibles (la marca ámbar del bloque en Mi Plan): lo que se
+// va es la posibilidad de negociar un cupo que no alimenta a nadie.
+//
+// Nota de lo medido, sin tocar: el cupo se calcula con `prioLiveCount`, que llama
+// a `screeningPassed`, y ESE devuelve false post-festival a propósito («todo
+// vuelve a plena opacidad»). O sea que después del cierre el cupo cuenta TODAS
+// como vivas y se llena. No se corrige acá porque, sin el botón, ningún camino lo
+// consulta y ninguna superficie post-festival muestra el contador (verificado en
+// las cuatro pestañas).
+test('T174 — un festival terminado no ofrece priorizar', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  const ficha = async (sim) => {
+    await enterFestival(page, 'ficdeh2026', sim);
+    return page.evaluate(async () => {
+      // se cierran las hojas que pudo dejar abiertas la medición anterior: sin
+      // esto, la hoja de canje del caso «en curso» seguía en pantalla y el caso
+      // «terminado» la contaba como suya.
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      // la hoja de canje del caso anterior se cierra a mano: sin esto seguía en
+      // pantalla y el caso «terminado» la contaba como suya.
+      document.getElementById('prio-limit-sheet')?.classList.remove('open');
+      await new Promise(r => setTimeout(r, 500));
+      const t = [...new Set(FILMS.filter(f => !f._cancelled && f.title).map(f => f.title))].slice(0, PRIO_LIMIT + 1);
+      state.set('watchlist', new Set(t));
+      state.set('prioritized', new Set(t.slice(0, PRIO_LIMIT)));   // cupo LLENO
+      state.set('watched', new Set());
+      if (typeof closePelSheet === 'function') closePelSheet();
+      await new Promise(r => setTimeout(r, 200));
+      openPelSheet(t[PRIO_LIMIT]);                                  // una que NO está priorizada
+      await new Promise(r => setTimeout(r, 1000));
+      const btn = [...document.querySelectorAll('[data-action="togglePelPrio"]')]
+        .filter(e => e.getBoundingClientRect().height > 0);
+      // si el botón existe, se toca: es lo que abría la hoja de canje
+      if (btn.length) { btn[0].click(); await new Promise(r => setTimeout(r, 900)); }
+      // el nodo de la hoja existe SIEMPRE y tiene caja aunque esté cerrada: lo que
+      // dice si está abierta es la clase `.open`, que es la que conmuta el código.
+      // Medirlo por el rect daba «abierta» en los dos casos y el test no probaba nada.
+      const hoja = document.querySelector('#prio-limit-sheet');
+      const abierta = !!(hoja && hoja.classList.contains('open'));
+      const hr = hoja ? hoja.getBoundingClientRect() : null;
+      return { obra: t[PRIO_LIMIT].slice(0, 26), limite: PRIO_LIMIT,
+        ofreceBoton: btn.length, etiqueta: btn.length ? btn[0].textContent.trim().slice(0, 18) : null,
+        hojaDeCanje: abierta, altoHoja: abierta && hr ? Math.round(hr.height) : 0,
+        // qué botones quedan, POR NOMBRE: contar no alcanza —borrar otro botón
+        // bajaba los dos lados por igual y la mutación pasaba limpia—.
+        botones: ['pel-wl-btn', 'pel-prio-btn', 'pel-vista-btn']
+          .filter(id => { const e = document.getElementById(id); return e && e.getBoundingClientRect().height > 0; }) };
+    });
+  };
+
+  // 1 · control primero: EN CURSO el botón está y el cupo se defiende. Va antes a
+  // propósito — si la ficha no abriera, el caso de abajo pasaría solo.
+  const vivo = await ficha('2026-08-15T11:00');
+  expect(vivo.ofreceBoton, 'con el festival en curso la ficha ofrece priorizar').toBeGreaterThan(0);
+  expect(vivo.botones, 'y la fila viva tiene sus tres botones').toEqual(['pel-wl-btn', 'pel-prio-btn', 'pel-vista-btn']);
+  expect(vivo.hojaDeCanje, 'y con el cupo lleno abre la hoja de canje, como está diseñada').toBe(true);
+  expect(vivo.altoHoja, 'que ocupa media pantalla').toBeGreaterThan(300);
+
+  // 2 · el hallazgo: TERMINADO no ofrece la acción, y por lo tanto no hay canje
+  const cerrado = await ficha('2026-08-25T11:00');
+  expect(cerrado.ofreceBoton, 'terminado, la ficha ya no ofrece priorizar').toBe(0);
+  expect(cerrado.hojaDeCanje, 'y no hay cupo que negociar').toBe(false);
+  // «no se retiró de más», por nombre: se va el de priorizar y SOLO ese.
+  expect(cerrado.botones, `los botones que quedan (viva: ${vivo.botones.join(', ')})`)
+    .toEqual(vivo.botones.filter(b => b !== 'pel-prio-btn'));
+});
