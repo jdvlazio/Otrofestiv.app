@@ -15,7 +15,7 @@ import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js
 import { runCalc } from './calc.js';
 import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
-import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
+import { dayFullyPassed, durEstimada, festivalEnded, parseDur, toMin } from '../domain/time.js';
 import { screeningPassed, effectiveDuration, blockDuration } from '../domain/film.js';
 import { sameEntry, isScreeningBlocked, screensConflictReason, plannableScreens } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
@@ -1632,6 +1632,18 @@ export function _avisosBand(f, opts){
   const _cual=h=>(h.length&&h.length<_src.length)?' · '+h.map(x=>_coord(x,_conCiudad)).join(' / '):'';
   const _qa=_con('has_qa');
   if(_qa.length) rows.push(['Q&A', t(_qa[0].qa_type==='guests'?'aviso_qa_ref':'aviso_qa_equipo')+_cual(_qa)]);
+  // Duración no publicada (auditoría 4 sep 2026). El festival no la dice, así que
+  // la app rellena con DEFAULT_DURATION_MIN y sobre ese número calcula la hora de
+  // salida y descarta obras del plan. Es un rasgo de la función, igual que el Q&A,
+  // y su casa es esta banda: se lee ANTES de decidir, no después en el calendario.
+  // Decisión de Juan (4 sep): acá, y no metido en las notas del evento exportado.
+  // Se deriva de las FUNCIONES, no del film: la ficha de un corto no tiene film
+  // propio (`f` es null ahí) y leerlo directo reventaba las 6 pruebas de esa
+  // ficha con «Cannot read properties of null». Mismo camino único que el Q&A,
+  // dos líneas más arriba, y por la misma razón que dice su comentario.
+  const _sinDur=_src.filter(x=>x&&durEstimada(x.duration));
+  if(_sinDur.length) rows.push([t('badge_duracion'),
+    t('aviso_dur_estimada',{n:blockDuration(_sinDur[0])})+_cual(_sinDur)]);
   // «Va con otras 4 obras» y no «Verás las otras obras» (ronda 3 del QA, 16 ago):
   // el tiempo verbal describía la SALA —«cuando vayas verás más cosas»— y el
   // usuario lo leyó como dato de la función; por eso marcar una y que quedaran

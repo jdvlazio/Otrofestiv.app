@@ -16,7 +16,7 @@ import {
   DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, hayEvento, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, programParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
 } from './helpers.js';
 import {
-  _festDate, _festNowMin, dayFullyPassed, festivalEnded, minToStr, simNow, simTodayStr, toMin,
+  _festDate, _festNowMin, dayFullyPassed, durEstimada, festivalEnded, minToStr, simNow, simTodayStr, toMin,
 } from '../domain/time.js';
 // Consenso colaborativo de retraso (Fase B): renderAgenda (impura/exenta) lo lee
 // del controller y lo pasa como dato a las funciones puras del view.
@@ -577,7 +577,11 @@ export function renderMiPlanCalendar(state){
             // la fila muestra dos horas y no decía cuál era cuál — y la duración,
             // que es lo único que las conectaría, no está en la fila. No repite el
             // inicio porque ya vive arriba, grande y en ámbar.
-            const _fin=t('plan_hasta',{h:mplanEndStr(s.time,dur)});
+            // La `~` marca lo ESTIMADO — misma convención que la cuenta del cruce
+            // (helpers.js: «llegarías ~21:15»). Sin duración publicada, la hora de
+            // salida NO es dato: sale de rellenar el hueco con DEFAULT_DURATION_MIN.
+            const _durEst=durEstimada((FILMS.find(fi=>sameEntry(fi,s))||s).duration);
+            const _fin=t('plan_hasta',{h:(_durEst?'~':'')+mplanEndStr(s.time,dur)});
             if(!_void) return _fin;
             // REPROGRAMADA: DÓNDE quedó, no dónde estaba (30 ago 2026). La fila
             // mostraba la hora VIEJA («17:00 · REPROG. · hasta 18:30») y el día y

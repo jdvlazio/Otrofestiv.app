@@ -2326,3 +2326,59 @@ test(`T169 — ningún bloque de obra sola recorta su título · ${fid}`, async 
   expect(malos, `${fid}: ${malos.length} de ${medidos} bloques recortan su título — ${malos.slice(0, 3).join(' · ')}`).toHaveLength(0);
 });
 }
+
+// ── T170 — sin duración publicada, la app no afirma la hora de salida ────────
+// Auditoría del 4 sep 2026. `parseDur` rellena con DEFAULT_DURATION_MIN (90)
+// cuando el dato no trae número, y nada distinguía ese 90 de uno real. Sobre él
+// la app afirmaba «hasta 15:30», reservaba 90 minutos en el calendario y
+// descartaba obras del plan con una cuenta que se presenta como dato. Medido en
+// el catálogo: 28 registros en 7 festivales sin duración.
+//
+// El arreglo NO cambia la aritmética —hace falta algún número para dibujar y
+// para no armar un plan imposible—: cambia lo que la app AFIRMA. La `~` ya es la
+// convención de la casa para lo estimado (helpers.js: «llegarías ~21:15»).
+//
+// Se afirma: (1) la fila marca la salida como estimada cuando no hay duración;
+// (2) NO la marca cuando sí la hay, ni siquiera con un 90 real — el control que
+// impide «marcar todo»; (3) el calendario dice de dónde salen esos minutos.
+test('T170 — la hora de salida se marca estimada si la duración no está publicada', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'cinemancia2026', '2026-09-09T15:00');
+
+  // Se entra por el DÍA de la obra: la grilla móvil muestra dos columnas y la
+  // fila de un día fuera de la ventana no se dibuja (la primera versión midió
+  // null por esto y no probaba nada).
+  const fila = async (conDuracion) => {
+    const elegida = await page.evaluate(conD => {
+      const f = FILMS.find(x => !x._cancelled && x.day && x.time && (conD ? x.duration : !x.duration));
+      return f ? { title: f.title, day: f.day, duration: f.duration || null } : null;
+    }, conDuracion);
+    if (!elegida) return null;
+    await enterFestival(page, 'cinemancia2026', elegida.day + 'T10:00');
+    return page.evaluate(async (el) => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await new Promise(r => setTimeout(r, 300));
+      const f = FILMS.find(x => x.title === el.title && x.day === el.day);
+      state.set('savedAgenda', { schedule: [{ ...f, _title: f.title }], scenarioIdx: 0 });
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 900));
+      const t2 = document.querySelector('.mplan-t2');
+      return { obra: f.title.slice(0, 30), duration: f.duration || null,
+        texto: t2 ? t2.textContent.replace(/\s+/g, ' ').trim().slice(0, 40) : null };
+    }, elegida);
+  };
+
+  // 1 · sin duración publicada: la salida va marcada
+  const sin = await fila(false);
+  expect(sin, 'Cinemancia tiene la actividad sin duración del censo').not.toBeNull();
+  expect(sin.duration, 'y de verdad no la trae').toBeNull();
+  expect(sin.texto, `«${sin.obra}» marca la salida como estimada (dice: ${sin.texto})`).toContain('~');
+
+  // 2 · control: con duración publicada NO se marca. Sin esto, «marcar siempre»
+  // pasaría el test y la tilde dejaría de querer decir algo.
+  const con = await fila(true);
+  expect(con, 'y hay obras con duración').not.toBeNull();
+  expect(con.duration, 'esta sí la trae').toBeTruthy();
+  expect(con.texto, `«${con.obra}» NO se marca: su duración es dato (dice: ${con.texto})`).not.toContain('~');
+});
