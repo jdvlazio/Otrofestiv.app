@@ -1241,7 +1241,7 @@ test('T144 — el título de la hoja de disponibilidad pregunta por la negación
 // El día va CON su número: Cinemancia dura 10 días y tiene dos jueves, dos
 // viernes y dos sábados — «JUE» a secas no distingue el 3 del 10.
 test('T147 — cada fila del Plan listo trae póster y su día, y el pie cuenta las que faltan', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button');
     b.setAttribute('data-action', 'closeCitySheet');
@@ -1328,7 +1328,7 @@ test('T147 — cada fila del Plan listo trae póster y su día, y el pie cuenta 
 // reabriéndose en bucle — sharePlan volvía a no encontrar nombre y la pedía
 // otra vez. Eso lo cazó la medición, no la lectura.
 test('T148 — con el campo vacío, Compartir comparte igual', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button');
     b.setAttribute('data-action', 'closeCitySheet');
@@ -1438,7 +1438,7 @@ test('T150 — con la app en cero, el vacío lleva al Programa de un toque', asy
     await page.waitForTimeout(1600);
   };
 
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
 
   // ── 1 · desde CADA uno de los tres vacíos, un solo toque llega a las obras ──
   for (const tab of ['mnav-miplan', 'mnav-planner', 'mnav-seleccion']) {
@@ -1478,7 +1478,7 @@ test('T150 — con la app en cero, el vacío lleva al Programa de un toque', asy
 // `column-reverse` lo dejarían pasar mientras la pantalla dice otra cosa. Acá
 // se afirma sobre lo que el pulgar encuentra.
 test('T151 — en los dos modales el escape es el botón de abajo', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button');
     b.setAttribute('data-action', 'closeCitySheet');
@@ -1793,7 +1793,7 @@ test('T155 — la hoja del tope y la de conflicto muestran el día completo', as
 // igual comparte es peor que ninguna, y arreglar solo la primera mitad la
 // dejaría pasar.
 test('T156 — Compartir se puede cancelar, y cancelar no comparte', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button');
     b.setAttribute('data-action', 'closeCitySheet');
@@ -1991,7 +1991,7 @@ test('T161 — la fila de Intereses prefiere tu ciudad, y sin función ahí mues
 // El gap de 14 (--sp-btn) hace que las zonas se toquen sin pisarse. Se afirma
 // con elementFromPoint, que es lo que el dedo encuentra.
 test('T162 — cada botón de la fila responde a 20px de su centro, y la franja entre los dos va al más cercano', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
     document.body.appendChild(b); b.click(); b.remove();
@@ -2043,7 +2043,7 @@ test('T162 — cada botón de la fila responde a 20px de su centro, y la franja 
 // arreglar de más poniéndole un distintivo a todo el mundo.
 test('T163 — con Q&A el distintivo entra en la fila, y sin Q&A no aparece', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 });
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
     document.body.appendChild(b); b.click(); b.remove();
