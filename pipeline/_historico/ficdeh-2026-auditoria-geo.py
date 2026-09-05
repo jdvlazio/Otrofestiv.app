@@ -25,7 +25,7 @@ OUT = f'{REPO}/festivals/staging/ficdeh-2026-geo-auditoria.json'
 CERCA_M = 600
 VENTANA = {f'2026-08-{d}' for d in range(12, 20)}
 
-spec = importlib.util.spec_from_file_location('geo', f'{REPO}/pipeline/ficdeh-2026-geocode.py')
+spec = importlib.util.spec_from_file_location('geo', f'{REPO}/pipeline/_historico/ficdeh-2026-geocode.py')
 G = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(G)
 
