@@ -25,6 +25,9 @@ TRES COSAS QUE ESTE PASO RESUELVE Y QUE NO SON OBVIAS
    no un descuido: queda declarada, no escondida.
 """
 import json, os, re, sys, collections
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import lib  # noqa: E402 — banderas() y su tabla generada
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import dias_config, provenance, slug
@@ -107,15 +110,14 @@ def bandera(iso):
 
 
 def flags_de(txt):
-    """Banderas de una lista de países en inglés, sin repetir y en orden."""
-    out = []
-    for p in re.split(r',\s*', txt or ''):
-        p = p.strip()
-        if p in ISO2 and ISO2[p]:
-            f = bandera(ISO2[p])
-            if f not in out:
-                out.append(f)
-    return ''.join(out)
+    """Banderas de una lista de países en inglés, sin repetir y en orden.
+
+    Delega en lib.banderas() y su tabla generada, que conoce los nombres en
+    inglés (ICU en) además de los españoles. La tabla ISO2 de arriba se queda
+    porque de ella salen las TRADUCCIONES al español, que es otra cosa; las
+    banderas ya no, para que no haya dos criterios. Comprobado sobre los 91
+    nombres de ISO2: mismo resultado en los 91."""
+    return lib.banderas(txt)
 
 
 
