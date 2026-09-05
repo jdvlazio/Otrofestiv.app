@@ -3128,76 +3128,154 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar icon-single-source: {_e}')
 
-# ── [country-flags] si hay país, hay bandera (regla Juan 18 jul 2026) ──────────
+# ── [country-flags] si hay país, hay bandera (regla Juan 18 jul 2026) ─────────
 # El bug Voces del Territorio: countryToFlags partía solo por "/" y el string con
-# comas caía al globo 🌍. Fix aplicado; este guardián evita la recaída a nivel de
-# DATOS: en los festivales VIVOS, todo país (partido por coma/barra) debe estar en
-# _COUNTRY_FLAGS o el film debe traer un campo `flags` autorizado. Un país nuevo sin
-# mapear se caza aquí antes de mostrar globo. Festival nuevo activo → sumarlo abajo.
+# comas caía al globo 🌍. Este guardián evita la recaída a nivel de DATOS.
+#
+# Ya no lee una tabla escrita a mano: usa lib.banderas(), el MISMO motor y la
+# MISMA tabla generada que el app (src/domain/banderas.js sobre paises.js). Antes
+# comparaba contra un literal del controlador con reglas propias, y eso era
+# justamente el fallo que perseguía: la tabla del app decía «Países Bajos» y
+# Cinemancia escribió «Países bajos», así que el guardián daba verde y la ficha
+# de «Koki, Ciao» mostraba un globo, con el festival en curso (Juan, 4 sep 2026).
+#
+# Y mira TODOS los festivales, no solo los vivos: un archivado se sigue abriendo
+# desde el splash, y la lista de vivos ya envejeció una vez.
 check = 'country-flags'
 try:
-    import re as _re, json as _json, datetime as _dt, glob as _g2
-    # Los festivales VIVOS se DERIVAN de FESTIVAL_CONFIG (festivalEndStr futuro).
-    # Antes era una lista escrita a mano y nadie la actualizó nunca: el guardián
-    # llevaba meses dando verde sobre dos festivales ya pasados mientras
-    # FICMontañas y FINCA se publicaban sin revisar — "el segundo festival
-    # consecutivo con globos" (Juan, 29 jul 2026). Un guardián con lista manual
-    # no es un guardián: es una foto que envejece.
-    _cfg = open('src/config.js', encoding='utf-8').read()
-    _hoy = _dt.date.today().isoformat()
-    _vivos = set()
-    for _fid, _end in _re.findall(r"'([a-z0-9]+)':\s*\{.*?festivalEndStr:\s*'(\d{4}-\d{2}-\d{2})", _cfg, _re.S):
-        if _end >= _hoy:
-            _vivos.add(_re.sub(r'([a-zA-Z]+)(\d+)$', r'\1-\2', _fid))
-    _ACTIVE = [f'festivals/{_v}.json' for _v in sorted(_vivos)]
-    if not _ACTIVE:  # sin festivales vivos, revisar el más reciente igual
-        _ACTIVE = sorted(_g2.glob('festivals/*.json'))[-1:]
-    _js = open('src/controller/sheets-controller.js', encoding='utf-8').read()
-    _m = _re.search(r'const _COUNTRY_FLAGS=\{(.*?)\};', _js, _re.S)
-    _mapped = set(_re.findall(r"'([^']+)':", _m.group(1))) if _m else set()
-    _bad = []
-    def _walk_films(_films, _fid):
-        for _f in _films or []:
-            _c = (_f.get('country') or '').strip()
-            if _c and not _f.get('flags'):
-                _parts = [p.strip() for p in _re.split(r'[,/()]', _c) if p.strip()]
-                _unmapped = [p for p in _parts if p not in _mapped]
-                if _unmapped:
-                    _bad.append(f"{_fid}: '{_f.get('title','?')[:30]}' país sin bandera: {', '.join(_unmapped)}")
-            _walk_films(_f.get('film_list'), _fid)
-    for _af in _ACTIVE:
+    import glob as _g2, json as _json, sys as _sys
+    _sys.path.insert(0, 'pipeline')
+    import lib as _lib
+    # «Varios», «Iberoamérica», la URSS: no llevan bandera A PROPÓSITO, y están
+    # declaradas en el generador. Perseguirlas sería pedir que alguien invente
+    # una bandera para un Estado que no existe.
+    _SINB = set(_json.load(open('pipeline/paises.json', encoding='utf-8'))['sin_bandera'])
+    _declarado = lambda _c: all(_lib.norm(_x) in _SINB or not _lib.norm(_x)
+                                for _x in __import__('re').split(r'[,/()]', _c))
+    # Una bandera son DOS «regional indicator». Un número impar es media
+    # bandera: se dibuja como una letra en un recuadro. Lo escribí yo mismo hoy
+    # derivando banderas de un film_list, iterando el string carácter a carácter
+    # en vez de por pares — «🇨🇴🇨🇺» salió «🇨🇴🇺». No rompe nada y no da error.
+    _IND = __import__('re').compile('[\U0001F1E6-\U0001F1FF]')
+    _bad, _mudos, _rotas = [], [], []
+    for _af in sorted(_g2.glob('festivals/*.json')):
+        _fid = _af.split('/')[-1]
         try:
             _d = _json.load(open(_af, encoding='utf-8'))
-        except FileNotFoundError:
+        except Exception:
             continue
-        _walk_films(_d.get('films'), _af.split('/')[-1])
-    # SEGUNDA MITAD, la que faltaba. Lo de arriba comprueba que el país SE PUEDA
-    # mapear; no que la bandera EXISTA en el dato. FICDEH pasó en verde durante
-    # todo el festival con 415 films mostrando su país y ninguna bandera: sus
-    # países estaban perfectamente mapeados y el pipeline nunca emitió `flags`,
-    # que es lo único que la ficha pinta (`flagFmt(f.flags)`, sin derivar).
-    # Un guardián que verifica que algo SE PUEDE hacer no verifica que se haya
-    # hecho. Lo encontró Juan mirando la app, 13 ago 2026.
-    _mudos = []
-    for _af in _ACTIVE:
-        try:
-            _d = _json.load(open(_af, encoding='utf-8'))
-        except FileNotFoundError:
-            continue
+        _vistos = set()
+        def _walk_films(_films):
+            for _f in _films or []:
+                _c = (_f.get('country') or '').strip()
+                # SIN el `and not flags`. Ese atajo daba por buena la obra que ya
+                # traía bandera en el dato, y hay superficies que NO la usan: la
+                # ficha de un corto la vuelve a derivar del país (`data-cc`). El
+                # país tiene que mapear AUNQUE la bandera ya esté; si no, el
+                # guardián verde y el globo en pantalla conviven.
+                if _c and _c not in _vistos and not _lib.banderas(_c) and not _declarado(_c):
+                    _vistos.add(_c)
+                    _bad.append(f"{_fid}: '{_f.get('title','?')[:30]}' país sin bandera: {_c}")
+                _fl = _f.get('flags')
+                if isinstance(_fl, str) and len(_IND.findall(_fl)) % 2:
+                    _rotas.append(f"{_fid}: '{_f.get('title','?')[:30]}' flags={_fl!r}")
+                _walk_films(_f.get('film_list'))
+        _walk_films(_d.get('films'))
+        # SEGUNDA MITAD. Lo de arriba comprueba que el país SE PUEDA mapear; no
+        # que la bandera EXISTA en el dato. FICDEH pasó en verde todo el festival
+        # con 415 films mostrando su país y ninguna bandera: los países estaban
+        # mapeados y el pipeline nunca emitió `flags`, que es lo único que pinta
+        # la ficha (`flagFmt(f.flags)`, sin derivar). Un guardián que verifica que
+        # algo SE PUEDA hacer no verifica que se haya hecho (Juan, 13 ago 2026).
         _cc = [f for f in (_d.get('films') or []) if (f.get('country') or '').strip()]
         _sin = [f for f in _cc if not f.get('flags')]
         if _cc and len(_sin) == len(_cc):
-            _mudos.append(f'{_af.split("/")[-1]}: {len(_cc)} films con país y '
-                          f'NINGUNO con flags')
-    if _bad:
-        fail(check, 'país sin bandera en festival vivo (mapear en _COUNTRY_FLAGS o añadir flags): ' + '; '.join(_bad[:6]))
+            _mudos.append(f'{_fid}: {len(_cc)} films con país y NINGUNO con flags')
+    if _rotas:
+        fail(check, 'bandera partida por la mitad (indicador suelto): ' + '; '.join(_rotas[:5]))
+    elif _bad:
+        fail(check, 'país que saldría con globo (mapear en scripts/generate-paises.js '
+                    'o declararlo sin bandera): ' + '; '.join(_bad[:6]))
     elif _mudos:
-        fail(check, 'festival vivo que muestra país sin una sola bandera: '
-                    + '; '.join(_mudos))
+        fail(check, 'festival que muestra país sin una sola bandera: ' + '; '.join(_mudos))
     else:
-        ok(check, 'todo país de festivales vivos produce bandera (nunca globo)')
+        ok(check, 'todo país de los 18 festivales produce bandera (nunca globo)')
 except Exception as _e:
-    warn(check, f'no se pudo verificar country-flags: {_e}')
+    fail(check, f'no se pudo verificar country-flags: {_e}')
+
+# ── [paises-generados] la tabla de países no se toca a mano ───────────────────
+# Había DOS tablas escritas a mano —_COUNTRY_FLAGS en el app y BANDERAS en
+# lib.py— y divergieron en todo: contenido, normalización y hasta el modo de
+# partir un string. Ahora se generan las dos de scripts/generate-paises.js. Este
+# guardián comprueba que sigan siendo lo que el generador produce: sin él, la
+# fuente única dura hasta el primer arreglo apurado a mano.
+check = 'paises-generados'
+try:
+    import subprocess as _sp
+    _r = _sp.run(['node', 'scripts/generate-paises.js', '--check'],
+                 capture_output=True, text=True, timeout=60)
+    if _r.returncode:
+        fail(check, (_r.stderr or _r.stdout).strip().replace('\n', ' · ')[:300])
+    else:
+        ok(check, _r.stdout.strip().lstrip('✓ '))
+except FileNotFoundError:
+    warn(check, 'node no disponible en este entorno')
+except Exception as _e:
+    fail(check, f'no se pudo verificar paises-generados: {_e}')
+
+# ── [banderas-paridad] los dos motores dan LO MISMO ───────────────────────────
+# El algoritmo está escrito dos veces por fuerza —Python en el pipeline, JS en el
+# app— y es exactamente ahí donde nacen estos bugs: mismo dato, dos respuestas.
+# La tabla ya es única; esto comprueba lo otro, que se lea igual. Se prueba sobre
+# los países REALES del repo más los casos que alguna vez se rompieron.
+check = 'banderas-paridad'
+try:
+    import glob as _g3, json as _json3, subprocess as _sp3, sys as _sys3
+    _sys3.path.insert(0, 'pipeline')
+    import lib as _lib3
+    _toks = set()
+    for _af in sorted(_g3.glob('festivals/*.json')):
+        try:
+            _d = _json3.load(open(_af, encoding='utf-8'))
+        except Exception:
+            continue
+        def _w(_o):
+            if isinstance(_o, dict):
+                for _k, _v in _o.items():
+                    if _k.startswith('_'):
+                        continue
+                    if _k == 'country' and isinstance(_v, str) and _v.strip():
+                        _toks.add(_v.strip())
+                    else:
+                        _w(_v)
+            elif isinstance(_o, list):
+                for _x in _o:
+                    _w(_x)
+        _w(_d)
+    _toks |= {'Antigua y Barbuda', 'Guinea-Bissau', 'Colombia y México', 'Países bajos',
+              'España (Austria)', 'Rep. Dominicana', 'URSS', 'Varios', ''}
+    _lista = sorted(_toks)
+    _js = ('const {countryToFlags}=await import("./src/domain/banderas.js");'
+           'const t=JSON.parse(process.argv[1]);'
+           'console.log(JSON.stringify(t.map(x=>countryToFlags(x))));')
+    _r = _sp3.run(['node', '--input-type=module', '-e', _js, _json3.dumps(_lista)],
+                  capture_output=True, text=True, timeout=60)
+    if _r.returncode:
+        raise RuntimeError((_r.stderr or '?').strip()[:200])
+    _des = _json3.loads(_r.stdout)
+    # El app pinta 🌍 donde el pipeline devuelve vacío: es el mismo veredicto.
+    _dif = [f'«{t}» pipeline={p or "(vacío)"} app={a}'
+            for t, p, a in zip(_lista, [_lib3.banderas(x) for x in _lista], _des)
+            if (p or '🌍') != a]
+    if _dif:
+        fail(check, f'{len(_dif)} país(es) con distinta respuesta según el motor: '
+                    + '; '.join(_dif[:5]))
+    else:
+        ok(check, f'los dos motores coinciden en los {len(_lista)} países del repo')
+except FileNotFoundError:
+    warn(check, 'node no disponible en este entorno')
+except Exception as _e:
+    fail(check, f'no se pudo verificar banderas-paridad: {_e}')
 
 # ── [poster-radio-unico] toda superficie de póster usa var(--r-poster) ────────
 # El póster se ve IGUAL en toda la app. Hasta ago 2026 convivían TRES radios
@@ -4468,7 +4546,7 @@ try:
         'src/view/agenda.js': 2231,  # +15: el titular del Plan nombra la ciudad cuando el filtro la restringe (4 sep)  # antes 2216,  # +8: la fila de Intereses deja de decir «Vista» dos veces — el dato muestra la sección (4 sep)  # antes 2208,  # +13: «qué viste» se pregunta al dueño único en las 4 puertas del modo Recuerdo (auditoría 4 sep)  # antes 2195,  # +4: la hora de salida se marca estimada cuando la duración no está publicada (4 sep)  # antes 2191,
         'src/main.js': 1829,  # +14: `?simTime=` fija el reloj ANTES del arranque — sin eso lo que el boot decide mirando la hora quedaba fuera de toda prueba (4 sep)  # antes 1815,  # +6: el que abre la ficha no se veta a sí mismo con data-stop — el póster de Mi Plan no abría (4 sep)  # antes 1809,  # +10: #dbg-ver sale del BUILD_VERSION que corre, no de un literal de mayo — 31 ago  # antes 1799,  # +12: el listener de captura honra data-stop — «Agendar» en NO INCLUIDAS abría además la ficha y te dejaba ahí — 30 ago  # antes 1787,  # +7: closeCitySheet al ACTION_REGISTRY — la hoja de ciudad prometía cerrarse tocando el fondo y el registro no la tenía (fallo mudo) — 30 ago  # antes 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
         'src/i18n/i18n.js': 1721,  # +3: fest_moved_label en es/en/pt (4 sep)  # antes 1718,  # +3: fest_ended_label en es/en/pt (4 sep)  # antes 1715,  # +3: res_en_ciudad en es/en/pt (4 sep)  # antes 1712,  # +6: badge_duracion + aviso_dur_estimada en es/en/pt (4 sep)  # antes 1709,  # +3: ics_dur_estimada en es/en/pt — el calendario dice de dónde salen los 90 min (4 sep)  # antes 1706,  # +3: cta_deshacer en es/en/pt — la vuelta atrás al quitar de Intereses, auditoría A-2 (3 sep)  # antes 1703,  # +6: pre_actividades_planear y pre_actividad_planear en es/en/pt — aprobado por Juan (2 sep)  # antes 1697,  # +3: export_compartir_sin_nombre en es/en/pt — compartir el Plan deja de exigir nombre (aprobado por Juan, 2 sep)  # antes 1694,  # +6: pre_obras_planear/pre_obra_planear — 1 sep  # antes 1688,  # +3: plan_falta_intereses — PLANEAR y MI PLAN dejan de tener el mismo titular — 31 ago  # antes 1685,  # +6: dia_sin_funciones_ciudad(+_sub) — el vacío del día con SOLO ciudad puesta no culpa a sección/sede — 30 ago  # antes 1679,  # +3: conflict_choca_intro_bloque — «función» no se le dice a un taller — 30 ago  # antes 1676,  # +3: bar_prensa_corto en es-en-pt — el filtro de Prensa gana etiqueta (una usuaria no lo encontraba) — 26 ago  # antes 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
-        'src/controller/sheets-controller.js': 1797,  # +14: el precio se dice de las funciones VIVAS — la banda listaba como CON BOLETA funciones que ella misma marca CANCELADA (4 sep)  # antes 1783,  # +6: el aviso se deriva de las FUNCIONES (la ficha de corto no tiene film propio)  # antes 1777,  # +6: Avisos dice cuando la duración no está publicada — es un rasgo de la función, como el Q&A (4 sep)  # antes 1771,  # +8: el día se muestra con su número en las 4 superficies — 9 de 15 festivales repiten nombre de día (2 sep)  # antes 1763,  # +22: la hoja «¡Tu Plan está listo!» adopta la fila canónica — era la única de las 6 listas de obras sin póster y la única encajada; entran el thumb por el dueño único, la línea «día · hora» y el rango del pie, y sale la fórmula de rango duplicada — 2 sep  # antes 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
+        'src/controller/sheets-controller.js': 1731,  # −66: la tabla de países sale a la fuente única generada (esta rama); el techo BAJA con ella, que es lo que pide este guardián  # antes 1797,  # +14: el precio se dice de las funciones VIVAS — la banda listaba como CON BOLETA funciones que ella misma marca CANCELADA (4 sep)  # antes 1783,  # +6: el aviso se deriva de las FUNCIONES (la ficha de corto no tiene film propio)  # antes 1777,  # +6: Avisos dice cuando la duración no está publicada — es un rasgo de la función, como el Q&A (4 sep)  # antes 1771,  # +8: el día se muestra con su número en las 4 superficies — 9 de 15 festivales repiten nombre de día (2 sep)  # antes 1763,  # +22: la hoja «¡Tu Plan está listo!» adopta la fila canónica — era la única de las 6 listas de obras sin póster y la única encajada; entran el thumb por el dueño único, la línea «día · hora» y el rango del pie, y sale la fórmula de rango duplicada — 2 sep  # antes 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
         # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres
         # correcciones sobre la fuente, que valen más escritas que ahorradas.
@@ -4800,9 +4878,14 @@ try:
     # `country → flags` es aparte: solo es hueco si la bandera SE PODÍA derivar.
     # Un país que no está en la tabla («Varios», o un idioma colado en el campo)
     # es otro problema, y de ese ya se ocupa [country-flags].
-    _js = open('src/controller/sheets-controller.js', encoding='utf-8').read()
-    _m = _re.search(r'const _COUNTRY_FLAGS=\{(.*?)\};', _js, _re.S)
-    _TAB = dict(_re.findall(r"'([^']+)'\s*:\s*'([^']+)'", _m.group(1))) if _m else {}
+    # Se pregunta al MOTOR, no a un literal del controlador. Cuando la tabla se
+    # movió a src/domain/paises.js este regex dejó de encontrar nada, `_TAB`
+    # quedó vacío y esta mitad del guardián pasó a no comprobar absolutamente
+    # nada — en verde. Un guardián que se queda sin su fuente no falla: calla.
+    import sys as _sys4
+    _sys4.path.insert(0, 'pipeline')
+    import lib as _lib4
+    _mapea = _lib4.banderas
 
     def _vacio(v):
         return v in (None, '', [], {})
@@ -4825,7 +4908,7 @@ try:
             _c = (_x.get('country') or '').strip()
             if not _c or not _vacio(_x.get('flags')):
                 continue
-            if any(_p.strip() in _TAB for _p in _re.split(r'[,/()]', _c)):
+            if _mapea(_c):
                 _sinf.append(_x.get('title', '?'))
         if _sinf:
             _viol.append(f'{_n}: {len(_sinf)} film(s) con país mapeable y sin «flags» '
