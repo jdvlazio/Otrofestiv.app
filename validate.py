@@ -3740,18 +3740,10 @@ try:
             _reales.setdefault(_l, os.path.basename(_f))
     # Deuda al introducir la regla: guardianes que ya existían sin documentar.
     # Se DOCUMENTA y se saca de acá; nunca se agrega uno nuevo.
-    _DEUDA_DOC = {
-        'activity-duration','apostrophe-onclick','aviso-antes-sinopsis','bare-t-in-template',
-        'day-order-indice','dead-code','design-banned-classes','diary-poster-grid','doctype',
-        'dom-ready-guard','dtab-sin-linea','fc-bootstrap','filter-drop-canon','html-divs',
-        'i18n-hardcoded','i18n-interpolation','i18n-voseo','json-fields','keyart-write-once',
-        'no-underscore-actions','onclick-syntax','pais-conocido','pipeline-circuito',
-        'poster-editorial-parity','poster-radio-unico','pressed-canon',
-        'plan-contrato','prio-limit','responsive-contract','sched-pure-fns','section-display-raw',
-        'sedes-apiladas','shadow-t','sheet-meta-legible','staging-provenance','static-html-template',
-        'synopsis-helper','synopsis-length','tasks-sync','template-al-dia','title-normalization',
-        'validate-film-tests','version-json','viewstate-shadow','worker-deps',
-    }
+    # Deuda SALDADA el 5 sep 2026: los 45 están en docs/ARQUITECTURA.md §15.4e,
+    # escritos leyendo el cuerpo de cada uno. Queda vacía a propósito: desde acá
+    # un guardián sin línea en la doc es NUEVO, y el check lo nombra.
+    _DEUDA_DOC = set()
     _sin_doc = sorted(k for k in _reales if ('[' + k + ']') not in _docs)
     _nuevos = [k for k in _sin_doc if k not in _DEUDA_DOC]
     # docs → código: etiqueta citada con backticks que no existe como guardián
