@@ -2,7 +2,7 @@
 // p8 Step 7e — Compartir plan (canvas/imagen) + export ICS.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import { DAYS, _langDates, dayLabel, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster } from '../view/helpers.js';
+import {_langDates, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster} from '../view/helpers.js';
 import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
@@ -203,7 +203,7 @@ export async function sharePlan(_yaPregunte){
   _dlDirect(dataUrl);
 }
 
-export function _buildAgendaCanvas(){
+function _buildAgendaCanvas(){
   const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
   const festDays=cfg.days||DAY_KEYS.map(k=>({k,lbl:k.slice(0,3).toUpperCase(),d:parseInt(k.slice(-2))||''}));
   const DAYS=festDays.map(d=>d.k);
@@ -305,7 +305,7 @@ export function _buildAgendaCanvas(){
   return cv;
 }
 
-export function _measureLines(c,text,maxW,maxLines){
+function _measureLines(c,text,maxW,maxLines){
   const words=text.split(' ');let line='',lines=1;
   for(let i=0;i<words.length;i++){
     const t=line?line+' '+words[i]:words[i];
@@ -315,7 +315,7 @@ export function _measureLines(c,text,maxW,maxLines){
   return lines;
 }
 
-export function _drawWrapped(c,text,x,y,maxW,lh,maxLines){
+function _drawWrapped(c,text,x,y,maxW,lh,maxLines){
   c.textBaseline='top';
   const words=text.split(' ');let line='',ln=0;
   for(let i=0;i<words.length;i++){
@@ -329,7 +329,7 @@ export function _drawWrapped(c,text,x,y,maxW,lh,maxLines){
   return y+ln*lh+lh;
 }
 
-export function _rr(c,x,y,w,h,r){
+function _rr(c,x,y,w,h,r){
   r=Math.min(r,w/2,h/2);
   c.beginPath();c.moveTo(x+r,y);c.lineTo(x+w-r,y);c.quadraticCurveTo(x+w,y,x+w,y+r);
   c.lineTo(x+w,y+h-r);c.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
@@ -337,7 +337,7 @@ export function _rr(c,x,y,w,h,r){
   c.lineTo(x,y+r);c.quadraticCurveTo(x,y,x+r,y);c.closePath();
 }
 
-export function _dlDirect(dataUrl){
+function _dlDirect(dataUrl){
   const a=document.createElement('a');
   a.href=dataUrl;a.download='otrofestiv-miplan.png';
   a.style.cssText='position:fixed;top:-999px;left:-999px;opacity:0';

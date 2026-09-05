@@ -81,17 +81,6 @@ def bandas(sedes):
     return out
 
 
-def sede_de(y, sedes):
-    # Fallback a la PRIMERA, no a la última: lo que se sale por arriba está
-    # arriba.
-    """La sede cuya banda contiene y. La banda arranca un poco ARRIBA del
-    rótulo: la primera función de la fila se pinta por encima del texto."""
-    for i, (ys, nom) in enumerate(sedes):
-        techo = ys + 9 if i == 0 else (sedes[i-1][0] + ys) / 2
-        piso  = (ys + sedes[i+1][0]) / 2 if i + 1 < len(sedes) else -1e9
-        if piso < y <= techo: return nom
-    return sedes[0][1] if sedes else None
-
 def parsea_pagina(page):
     items = fragmentos(page)
     if not items: return None, []

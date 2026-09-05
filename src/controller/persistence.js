@@ -344,7 +344,7 @@ export function _hasLocalPlan(){
   return watchlist.size>0 || watched.size>0 || prioritized.size>0 || !!(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length);
 }
 
-export async function _sbSignIn(email){
+async function _sbSignIn(email){
   if(!_sb) return {error:'no client'};
   const{error}=await _sb.auth.signInWithOtp({
     email,
@@ -353,7 +353,7 @@ export async function _sbSignIn(email){
   return{error};
 }
 
-export async function _sbSignOut(){
+async function _sbSignOut(){
   if(!_sb) return;
   await _sb.auth.signOut();
   _sbUser=null;
@@ -417,7 +417,7 @@ export async function submitOTP(){
   if(!token||token.length<6){msg.textContent=t('auth_cod_hint');return;}
   btn.disabled=true;btn.textContent=t('auth_verificando');
   try{
-    const{data,error}=await _sb.auth.verifyOtp({email,token,type:'email'});
+    const{error}=await _sb.auth.verifyOtp({email,token,type:'email'});
     if(error){
       msg.textContent=t('toast_cod_mal');
       btn.disabled=false;btn.textContent=t('av_confirmar');
@@ -489,7 +489,7 @@ function _notifBase(festId){
   return 1000+(idx<0?0:idx)*_NOTIF_SLOT; // festId desconocido → base 1000 (defensivo)
 }
 
-export async function _scheduleNotifications(){
+async function _scheduleNotifications(){
   if(!window.Capacitor?.isNativePlatform()) return;
   try{
     const {LocalNotifications}=window.Capacitor.Plugins;
@@ -528,7 +528,7 @@ export async function _scheduleNotifications(){
   }catch(e){console.warn('Notifications error:',e);}
 }
 
-export async function _cancelNotifications(){
+async function _cancelNotifications(){
   if(!window.Capacitor?.isNativePlatform()) return;
   try{
     const {LocalNotifications}=window.Capacitor.Plugins;

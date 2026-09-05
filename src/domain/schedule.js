@@ -14,8 +14,8 @@
 //   worker las consume vía eval(name).toString(). [worker-overlap] valida.
 
 import { FESTIVAL_BUFFER, FESTIVAL_CONFIG } from "../config.js";
-import { toMin, parseDur } from "./time.js";
-import { effectiveDuration, blockDuration, durationForTravel, screeningPassed, shuffle, scoreFilm, _titleSeed, _mulberry32 } from "./film.js";
+import { toMin } from "./time.js";
+import { blockDuration, durationForTravel, screeningPassed, shuffle, scoreFilm, _titleSeed, _mulberry32 } from "./film.js";
 import { travelMins, _resolveVenue } from "./festival.js";
 export function screensConflict(a,b){
   // Eventos informativos (info:true) — drop-in / sin hora fija: nunca generan

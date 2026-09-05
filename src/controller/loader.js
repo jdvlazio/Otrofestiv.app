@@ -6,10 +6,9 @@
 // detección-festival). Escribe bridge globals en runtime (no eval-time).
 
 import { FESTIVAL_CONFIG, NOTICES, mergeFestivalSections } from '../config.js';
-import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
-import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
-import { DAYS, DAY_SHORT_EN, _langDates, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
+import {DAY_ABBR, DAY_NUM, _classifyFestival} from '../view/components.js';
+import {DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly} from '../view/helpers.js';
 import { closeFestivalSheet, openCitySheet, openReviewSheet, _reviewDesbloqueado, _pintarBannerRevision } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, scrollDtabsToActive } from '../view/programa.js';
@@ -717,7 +716,7 @@ export function dismissSplash(){
 
 // ── el filtro de audiencia y su interruptor ─────────────────────────────────
 // Un solo dueño para las dos direcciones: al cargar (arriba) y al conmutar.
-export function _filtrarPorAudiencia(films){
+function _filtrarPorAudiencia(films){
   return showPress ? films : films.filter(f=>f.audience!=='press');
 }
 
@@ -775,7 +774,7 @@ export function togglePressScreenings(){
 
 // Lee la preferencia guardada de ESTE festival. La llama loadFestival antes de
 // publicar FILMS, para que la primera pintura ya sea la correcta.
-export function _restaurarPrensa(cfg){
+function _restaurarPrensa(cfg){
   let v = false;
   v = storage.getShowPress(cfg.storageKey);
   showPress = v;

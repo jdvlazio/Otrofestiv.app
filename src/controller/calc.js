@@ -19,7 +19,7 @@ import { blockDuration, effectiveDuration, durationForTravel, screeningPassed, _
 // traspaso de Onboarding del 17: dos siembras distintas parecían dos motores.
 import { screensConflict, isScreeningBlocked, screeningPlannable, plannableScreens, sortScreensByStrategy, computeScenarios } from '../domain/schedule.js';
 import { renderAgenda } from '../view/agenda.js';
-import { keepCityOnly, planCityVenues, venueMatches, planInputSignature } from '../view/helpers.js';
+import {planCityVenues, planInputSignature} from '../view/helpers.js';
 import { showToast } from '../view/feedback.js';
 import { t } from '../i18n/i18n.js';
 

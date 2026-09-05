@@ -13,7 +13,7 @@ import {
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
-import { toMin, minToStr, parseDur, durEstimada, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
+import { toMin, minToStr, durEstimada, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
 import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
@@ -46,7 +46,7 @@ export function _posterStyle(f){
   return (pos&&pos!=='center')?` style="object-position:${pos}"`:'';
 }
 
-export function getPosterSrc(title, isCortos, section){
+export function getPosterSrc(title, isCortos, _section){
   const t = normKey(title);
   if(_CUSTOM_N[t]) return _CUSTOM_N[t];
   if(_POSTERS_N[t]) return (_POSTERS_N[t].startsWith('http')||_POSTERS_N[t].startsWith('/assets/'))?_POSTERS_N[t]:TMDB_IMG+_POSTERS_N[t];
@@ -316,7 +316,7 @@ export function _getItemPoster(item){
 // largo plazo es declarar posterSource en el JSON (gana sobre el host); ver
 // _isEditorialPoster + docs/POSTERS.md §5.
 const EDITORIAL_CDN_HOSTS=['cloudfront.net','supabase.co']; // Tribeca, Olhar+
-export function _isEditorialImageUrl(url){
+function _isEditorialImageUrl(url){
   return !!(url && EDITORIAL_CDN_HOSTS.some(h=>url.includes(h)));
 }
 

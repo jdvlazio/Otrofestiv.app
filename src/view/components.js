@@ -19,7 +19,6 @@ import { state } from "../state/state.js";
 export function makeProgramPoster(state, title, duration, section, opts){
   const {FILMS, _lang} = state.snapshot();
   const filmSec=section||(FILMS.find(f=>f.title===title)?.section)||'';
-  const sec=filmSec.toLowerCase();
 
   // ── Color de sección — MISMA fuente que el marco editorial ────────────────
   // El acento del generativo debe coincidir con _sectionColor() (lo que usa el
@@ -131,16 +130,6 @@ export function _sectionColor(sec){
   if(arch && ARCHETYPE_COLORS[arch]) return ARCHETYPE_COLORS[arch];
   return SECTION_COLORS[sec] || ACCENT_PALETTE[Math.abs(_secHash(sec))%ACCENT_PALETTE.length];
 }
-// Texto legible sobre un color: negro o blanco por MÁXIMO contraste real (WCAG),
-// no por umbral. Garantiza banda legible sobre cualquier color de sección.
-export function _contrastText(hex){
-  const c = String(hex||'').replace('#','');
-  if(c.length < 6) return '#0B0A08';
-  const r=parseInt(c.slice(0,2),16)/255, g=parseInt(c.slice(2,4),16)/255, b=parseInt(c.slice(4,6),16)/255;
-  const L = 0.2126*r + 0.7152*g + 0.0722*b;
-  return ((L+0.05)/0.05) >= (1.05/(L+0.05)) ? '#0B0A08' : '#FFFFFF';
-}
-
 // ── REGLA INAMOVIBLE DE ARQUITECTURA ─────────────────────────────────────────
 // Todo display de nombre de sección DEBE pasar por _secLabel() (o _secLabelFull()
 // si se necesita preservar el emoji). NUNCA usar `f.section` directamente en
@@ -262,7 +251,7 @@ function _emWidth(str, upper){
 // no logra evitarlo —la regla de Juan prohíbe dejar «de» al final, así que «DE
 // CORTOMETRAJES» viaja pegado— se fija el ancho con textLength y el navegador
 // condensa unos puntos. Solo se activa ahí; el resto se dibuja sin tocar.
-export function _lineaSVG(txt, {x, y, fs, ls, fill, boxW, upper}){
+function _lineaSVG(txt, {x, y, fs, ls, fill, boxW, upper}){
   const est=(_emWidth(txt,upper)*fs+txt.length*ls)*1.12;
   const tope=boxW*0.98;
   const ajuste=est>tope?` textLength="${(+tope).toFixed(2)}" lengthAdjust="spacingAndGlyphs"`:'';
@@ -401,7 +390,6 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma, k
   // Es la doctrina de color ambiental, aplicada al generativo.
   const VW=120, VH=180, U=VW/8;              // 15
   const M=0.75*U, CW=VW-2*M;                 // margen 11.25 · caja de contenido 97.5
-  const esc=escXML;
   const round=n=>+n.toFixed(2);
   const FONT='-apple-system,BlinkMacSystemFont,sans-serif';
 
@@ -615,7 +603,7 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma, k
 // toma helpers (slotPosterParts), dueño del modelo de póster.
 // Devuelve MARKUP SVG INLINE, no data-uri: contiene <image> y un SVG dentro de
 // <img> tiene prohibido cargar recursos — los afiches saldrían rotos.
-export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
+export function makeSharedSlotSVG({modules, secLabel:_secLabel, accent, dato}){
   const U=15, VW=120, VH=180, M=11.25, CW=VW-2*M, NEGRO='#0B0A08';
   const r=n=>+n.toFixed(2);
   // slice y NO meet (26 ago): meet dejaba bandas negras en todo afiche que no
@@ -1035,7 +1023,7 @@ export function _sortFestivals(entries, activeFestId){
 // mal (Tercer Tiempo Fest), el config pone un `displayName` explícito. NO confundir
 // con `shortName` (slug MAYÚSCULA para nombres de archivo en share.js).
 export function festivalShortName(cfg){ return cfg.displayName || (cfg.name||'').split(' ')[0]; }
-export function festivalLabel(cfg){ const n=festivalShortName(cfg); return cfg.year?`${n} · ${cfg.year}`:n; }
+function festivalLabel(cfg){ const n=festivalShortName(cfg); return cfg.year?`${n} · ${cfg.year}`:n; }
 
 // festivalSeasonYear — el año "vigente" que ancla el header del selector UNA sola
 // vez (minimalismo: no repetir 2026 en cada fila). Es el año más reciente entre
@@ -1120,7 +1108,7 @@ function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang, review}){
 // mandó al usuario a las tiendas, así que web y app se ven distinto a propósito.
 // `until` la apaga sola: un permiso temporal que hay que acordarse de revocar
 // es, en la práctica, un permiso permanente.
-export function _enRevision(cfg){
+function _enRevision(cfg){
   const r=cfg&&cfg.review;
   if(!r||!r.key) return false;
   if(r.until&&new Date()>new Date(r.until+'T23:59:59')) return false;
