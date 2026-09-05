@@ -285,6 +285,44 @@ def _canon_seccion():
     return out
 
 
+# ── Afiches oficiales de las ACTIVIDADES ────────────────────────────────────
+# QAFF diseñó una pieza por diálogo y una para la Exposición. Van AQUÍ y no
+# editando el JSON publicado: se aplicaron a mano aguas abajo y la siguiente
+# corrida del pipeline los borró los doce de golpe. El gate de pérdida de
+# publicar.py lo dijo y se pasó con --forzar. Lo que no está en el crudo no
+# sobrevive a un rebuild.
+#
+# Método (regla de Juan, 4 sep 2026): sus páginas son 0.857 y el sistema pide
+# 2:3, así que se añade ALTO arriba y el diseño va a ras del borde inferior —
+# nunca recortar ni deformar a un invitado.
+AFICHE_ACTIVIDAD = {
+    "NOIR ESTÉTICO: La estética de la oscuridad":
+        "/assets/qaff/noir-estetico-la-estetica-de-la-oscuridad.jpg",
+    "NOIR ESTÉTICO: La imagen entre el lienzo, el archivo y la pantalla":
+        "/assets/qaff/noir-estetico-la-imagen-entre-el-lienzo-el-archivo-y-la-pant.jpg",
+    "NOIR FOGÓN: Cocina, territorio y memoria":
+        "/assets/qaff/noir-fogon-cocina-territorio-y-memoria.jpg",
+    "NOIR HISTÓRICO: Las sombras del archivo":
+        "/assets/qaff/noir-historico-las-sombras-del-archivo.jpg",
+    "NOIR IDENTIDAD: Ser negro no es un género":
+        "/assets/qaff/noir-identidad-ser-negro-no-es-un-genero.jpg",
+    "NOIR IDENTIDAD: Territorios rotos, cuerpos que resisten":
+        "/assets/qaff/noir-identidad-territorios-rotos-cuerpos-que-resisten.jpg",
+    "NOIR INDUSTRIA: Circulación y mercados Sur-Sur":
+        "/assets/qaff/noir-industria-circulacion-y-mercados-sur-sur.jpg",
+    "NOIR INDUSTRIA: Redes Sur-Sur. Circulación y mercados Sur-Sur":
+        "/assets/qaff/noir-industria-redes-sur-sur-circulacion-y-mercados-sur-sur.jpg",
+    "NOIR MEMORIA: Matriarcado negro y territorio sonoro":
+        "/assets/qaff/noir-memoria-matriarcado-negro-y-territorio-sonoro.jpg",
+    "NOIR Y GÉNERO: Mujeres en el cine":
+        "/assets/qaff/noir-y-genero-mujeres-en-el-cine.jpg",
+    "NOIR: Después de la tormenta — cuerpo, tierra y renacer":
+        "/assets/qaff/noir-despues-de-la-tormenta-cuerpo-tierra-y-renacer.jpg",
+    "Vernissage — Ma chérie, coiffure?, de Phalonne Pierre Louis":
+        "/assets/qaff/vernissage-ma-cherie-coiffure-de-phalonne-pierre-louis.jpg",
+}
+
+
 def del_calendario():
     """La SEGUNDA fuente de secciones, y la que de verdad manda: el calendario
     oficial del festival, con sus 15 categorías propias.
@@ -499,6 +537,13 @@ def main():
         # La sección de una actividad NO se inventa: «DIÁLOGO IMPROBABLE» está
         # impreso en su propia página del programa, y es además una de las 15
         # categorías del calendario oficial. La Muestra Artística, igual.
+        _af = AFICHE_ACTIVIDAD.get(titulo)
+        if _af:
+            a['poster'] = _af
+            a['posterSource'] = 'custom'
+            a['_poster_src'] = ('afiche oficial del festival, de su página del PDF. Alto añadido '
+                                'ARRIBA y diseño a ras del borde inferior: ni un invitado recortado '
+                                'ni deformado (regla de Juan, 4 sep 2026).')
         a['seccion'] = {'dialogo': 'DIALOGO IMPROBABLE',
                         'muestra': 'MUESTRA ARTISTICA',
                         'vernissage': 'MUESTRA ARTISTICA'}.get(tipo)
