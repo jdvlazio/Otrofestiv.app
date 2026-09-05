@@ -32,10 +32,12 @@
    "obras": [
     {
      "titulo": "Andariega",
-     "director": "Rául Soto",
+     "director": "Raúl Soto Rodríguez",
      "anio": 2025,
      "duracion_min": 94,
-     "seccion": "Película Invitada"
+     "seccion": "Película Invitada",
+     "_errata_impresa": "el programa imprime «Rául Soto»",
+     "_director_del_catalogo": true
     }
    ]
   },

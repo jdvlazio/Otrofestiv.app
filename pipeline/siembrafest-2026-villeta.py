@@ -179,6 +179,10 @@ EVENT_KIND = {'apertura': 'apertura', 'convite': 'convite', 'taller': 'taller',
 # fuente, es recortarla. Cuando se CONTRADICEN de verdad —«Noche de vuelo»— manda
 # el PDF por ser lo más reciente, y queda declarado para preguntárselo.
 DIRECTOR_CATALOGO = {
+ # El programa imprime «Rául Soto» —tilde cambiada de sitio y sin apellido—;
+ # TMDB y el propio Instagram del festival (@raulsotorodriguez) coinciden en
+ # Raúl Soto Rodríguez. No es una abreviatura: es una errata.
+ 'Andariega',
  'Somos historias: Casaramano, sagrado y vida',
  'Mingoya: tierra de ornitólogos',
  'La muerte de Elías',
@@ -193,6 +197,15 @@ CONTRADICCIONES = {
 }
 # el mismo título escrito de dos formas por el propio festival
 ALIAS_CATALOGO = {'Flores Miro': 'Floresmiro'}
+
+# BLOQUES transcribe el PDF tal cual —es lo que verificar() comprueba—, así que
+# una errata del impreso se corrige AQUÍ y con su motivo, no reescribiendo la
+# transcripción. Solo erratas demostrables, no preferencias de estilo.
+ERRATAS_DIRECTOR = {
+ # el PDF imprime «Rául Soto»: tilde cambiada de vocal y sin apellido. TMDB
+ # (1456127) y el propio festival (@raulsotorodriguez) coinciden en el nombre.
+ 'Andariega': 'Raúl Soto Rodríguez',
+}
 
 
 def verificar():
@@ -235,7 +248,10 @@ def crudo():
             f['titulo'] = ' + '.join(o[0] for o in reales)
             f['obras'] = []
             for t, d, a, m in reales:
-                o = {'titulo': t, 'director': d, 'anio': a, 'duracion_min': m, 'seccion': sec}
+                o = {'titulo': t, 'director': ERRATAS_DIRECTOR.get(t, d),
+                     'anio': a, 'duracion_min': m, 'seccion': sec}
+                if t in ERRATAS_DIRECTOR:
+                    o['_errata_impresa'] = f'el programa imprime «{d}»'
                 if t in ALIAS_CATALOGO:
                     o['_alias_catalogo'] = ALIAS_CATALOGO[t]
                 if t in DIRECTOR_CATALOGO:

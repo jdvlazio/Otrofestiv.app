@@ -32,8 +32,13 @@ WEB = '/assets/siembrafest'
 
 ANCHO, LADO, CALIDAD = 500, 0.06, 82
 
-# Los ocho carruseles «Presentamos <sección>» de @siembrafest.
+# Los NUEVE carruseles «Presentamos <sección>» de @siembrafest, uno por sección.
+# El de Mujeres que sostienen la vida abre la serie (17 ago) y ya no se alcanza
+# desde el perfil —sin sesión solo se ven ~12 publicaciones—: su shortcode salió
+# de nuestro propio sidecar siembrafest-2026-programas-ig.json, capturado el 23
+# ago. Lo que ya está en el repo se busca en el repo antes que en la web.
 POSTS = {
+    'mujeres-que-sostienen-la-vida': 'DcJ9J4toPgL',
     'sabores-en-escena':   'DcelBcQoD1S',
     'asi-es-cundinamarca': 'Dcb_hTGICGX',
     'ojo-pelao':           'DcZZ0sJoOBN',
@@ -49,6 +54,10 @@ POSTS = {
 # la última son los créditos de los socios; ninguna de las dos es una obra, y
 # por eso cada carrusel trae exactamente (obras de la sección + 2) láminas.
 OBRAS = {
+ 'mujeres-que-sostienen-la-vida': {
+  2: 'La gallina saraviada', 3: 'En su sombra fértil', 4: 'La grandiosa',
+  5: 'Paramunas: El alma de la montaña', 6: 'La tinaja', 7: 'Cayenas libertarias',
+  8: 'Pasta negra', 9: 'Victorias y Glorias – Relatos de campeonas'},
  'sabores-en-escena': {
   2: "Phakhakhe Pi'txi – Minga de pensamiento", 3: 'La Asociación',
   4: 'Somos historias: Casaramano, sagrado y vida'},
@@ -149,7 +158,7 @@ def main(escribir):
                     _bajar(d['laminas'][i - 1]['url'], bruto)
                 a_poster(bruto, f'{ASSETS}/{slug(titulo)}.jpg')
 
-    print(f'  láminas de obra en los 8 carruseles: {sum(len(v) for v in OBRAS.values())}')
+    print(f'  láminas de obra en los {len(POSTS)} carruseles: {sum(len(v) for v in OBRAS.values())}')
     print(f'  ya tenían póster original (se respeta):  {len(ya_tenia)}')
     print(f'  póster NUEVO desde la lámina oficial:    {len(obras)}')
     if sin_cruce:
@@ -162,7 +171,7 @@ def main(escribir):
         return
     json.dump({'_provenance': provenance(
                  'carruseles «Presentamos <sección>» de instagram.com/siembrafest '
-                 '(8 posts, uno por sección; embed público)',
+                 '(9 posts, uno por sección; embed público)',
                  metodo='una lámina por obra, con el título PINTADO en la imagen: el '
                         'mapa lámina→obra se leyó imagen por imagen, no por el orden '
                         'del carrusel. 4:5 → 2:3 con recorte del 6% por lado (medido: '

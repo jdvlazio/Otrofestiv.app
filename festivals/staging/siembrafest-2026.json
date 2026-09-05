@@ -280,7 +280,7 @@
    "country": "Colombia",
    "section": "❤️‍🩹 Amores & Desamores",
    "genre": "Ficción",
-   "synopsis": "",
+   "synopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
    "synopsis_lang": "es",
    "poster": "",
    "posterSource": "",
@@ -289,7 +289,9 @@
     "date": "2026-08-02",
     "ficha_raw": "2025 | 11' | Ficción",
     "formato": "Ficción",
-    "produccion": "Simon Ramírez"
+    "produccion": "Simon Ramírez",
+    "tmdb_id": 1497688,
+    "barrido": "Segundo barrido TMDB (5 sep 2026), con el año y el director que el propio festival publicó en sus cápsulas de Instagram — el de agosto no los tenía. Confirmado por coincidencia de director."
    }
   },
   {
@@ -1363,11 +1365,15 @@
     "proimagenes_id": "3116",
     "proimagenes_verificado": "título exacto + director coincidente — 26 ago 2026",
     "poster_original": "https://www.proimagenescolombia.com/photos/57150_10961__imagen_270_400.jpg",
-    "poster": "Afiche oficial de Proimágenes Colombia, re-hosteado en assets/ — [poster-host] no admite ese dominio y un host ajeno se cae solo."
+    "poster": "Afiche oficial de Proimágenes Colombia, re-hosteado en assets/ — [poster-host] no admite ese dominio y un host ajeno se cae solo.",
+    "tmdb_id": 1547047,
+    "barrido": "Segundo barrido TMDB (5 sep 2026), con el año y el director que el propio festival publicó en sus cápsulas de Instagram — el de agosto no los tenía. Confirmado por coincidencia de director."
    },
    "_inherited": {
     "director": "grafia-unificada-con-el-huaquero"
-   }
+   },
+   "synopsis_en": "While enjoying retirement in his home village, the respected Colonel Augusto Almendros learns that \"Salazar,\" one of the guerrilla fighters he pursued throughout his career, has been pardoned by the Justice for Peace and is living out his final years in the same town. Unable to sleep, the colonel sets in motion a plan to challenge him and settle old scores.",
+   "lbSlug": "irredentos-lejos-del-perdon"
   },
   {
    "title": "Entre 2 aguas",

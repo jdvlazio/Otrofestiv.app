@@ -42,6 +42,25 @@ def _genero(g):
     return None
 
 
+# La película invitada NO está en el catálogo —ese es la Selección Oficial— y
+# tampoco tiene lámina: la serie de carruseles solo cubre la Selección. Viene del
+# programa impreso y se enriquece a mano, contra TMDB.
+INVITADA = {
+    'titulo': 'Andariega',
+    '_director_catalogo': 'Raúl Soto Rodríguez',   # = @raulsotorodriguez, el del festival
+    'anio': 2025, 'pais': 'Colombia', 'genero': 'Documental',
+    'poster_tmdb': '/uA5PZ9RBb23ESi1RVmnCosygXE0.jpg',
+    'tmdb_id': 1456127,
+    'lbSlug': 'nomad-spirit',                 # letterboxd.com/tmdb/1456127/ → 302
+    # La ficha de TMDB tiene el overview en inglés y vacío en español; la frase
+    # en español es la del propio festival, en su post de apertura.
+    'sinopsis': 'Acompaña a una joven madre campesina en los caminos del trabajo '
+                'rural y la cosecha de café.',
+    'synopsis_en': 'Each year, 26-year-old María Yessenia Herrera, best known as '
+                   '“Chena”, joins the traveling diaspora of peasants who move '
+                   'around Colombia working as hand-picking coffee harvesters.',
+}
+
 CAT = f'{REPO}/festivals/staging/siembrafest-2026.json'
 LAM = f'{REPO}/festivals/staging/siembrafest-2026-laminas.json'
 OUT = f'{REPO}/festivals/staging/siembrafest-2026-enriquecido.json'
@@ -68,6 +87,7 @@ if __name__ == '__main__':
         if f['title'] in inverso:
             o['_titulo_catalogo'] = f['title']
         obras.append(o)
+    obras.append(dict(INVITADA))
     json.dump({'_provenance': provenance(
                  'selección oficial publicada por el festival — siembrafest.com/seleccion-sf-2026/',
                  metodo='traducción del catálogo (films[]) al sidecar de enriquecimiento '

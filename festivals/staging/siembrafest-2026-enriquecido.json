@@ -32,13 +32,17 @@
    "_director_catalogo": "Luber Yesid Zúñiga Ordóñez",
    "pais": "Colombia",
    "genero": "Documental",
-   "sinopsis": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo."
+   "sinopsis": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo.",
+   "poster": "/assets/siembrafest/victorias-y-glorias-relatos-de-campeonas.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Paramunas: El alma de la montaña",
    "_director_catalogo": "Alejandro Calderón",
    "pais": "Colombia",
-   "sinopsis": "Acompaña a tres mujeres campesinas de Sumapaz y Chingaza que lideran acciones frente al cambio climático."
+   "sinopsis": "Acompaña a tres mujeres campesinas de Sumapaz y Chingaza que lideran acciones frente al cambio climático.",
+   "poster": "/assets/siembrafest/paramunas-el-alma-de-la-montana.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "La tinaja",
@@ -66,7 +70,9 @@
    "_director_catalogo": "Viviana Reinoso",
    "pais": "Colombia",
    "genero": "Documental",
-   "sinopsis": "Concepción Matabanchoy recorre el páramo que rodea la laguna de La Cocha y relata más de cuatro décadas de defensa comunitaria de la tierra y el agua."
+   "sinopsis": "Concepción Matabanchoy recorre el páramo que rodea la laguna de La Cocha y relata más de cuatro décadas de defensa comunitaria de la tierra y el agua.",
+   "poster": "/assets/siembrafest/la-grandiosa.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Pasta negra",
@@ -84,6 +90,7 @@
    "_director_catalogo": "Violeta Barrios Ramírez",
    "pais": "Colombia",
    "genero": "Ficción",
+   "sinopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
    "poster": "/assets/siembrafest/carola.jpg",
    "posterSource": "custom"
   },
@@ -491,8 +498,10 @@
    "_director_catalogo": "Harold De Vasten",
    "pais": "Colombia",
    "sinopsis": "El condecorado coronel Augusto Almendros, desde su lejano retiro, se entera que \"El comandante Salazar\", uno de los guerrilleros más perseguidos en su época activa, ha sido perdonado por la justicia para la paz (JEP) y llega a radicarse en la misma población que está viviendo. Sin poder conciliar el sueño, el coronel, pone en marcha un plan para desafiarlo a un duelo en la montaña, como dos guerreros de honor y cobrarle las deudas del pasado.",
+   "synopsis_en": "While enjoying retirement in his home village, the respected Colonel Augusto Almendros learns that \"Salazar,\" one of the guerrilla fighters he pursued throughout his career, has been pardoned by the Justice for Peace and is living out his final years in the same town. Unable to sleep, the colonel sets in motion a plan to challenge him and settle old scores.",
    "poster": "/assets/siembrafest/irredentos.jpg",
-   "posterSource": "custom"
+   "posterSource": "custom",
+   "lbSlug": "irredentos-lejos-del-perdon"
   },
   {
    "titulo": "Entre 2 aguas",
@@ -740,6 +749,18 @@
    "poster": "/knhGoKZFD0s4CyvzpMFXsqrkdPO.jpg",
    "posterSource": "tmdb",
    "lbSlug": "chicha-la-chicharra"
+  },
+  {
+   "titulo": "Andariega",
+   "_director_catalogo": "Raúl Soto Rodríguez",
+   "anio": 2025,
+   "pais": "Colombia",
+   "genero": "Documental",
+   "poster_tmdb": "/uA5PZ9RBb23ESi1RVmnCosygXE0.jpg",
+   "tmdb_id": 1456127,
+   "lbSlug": "nomad-spirit",
+   "sinopsis": "Acompaña a una joven madre campesina en los caminos del trabajo rural y la cosecha de café.",
+   "synopsis_en": "Each year, 26-year-old María Yessenia Herrera, best known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters."
   }
  ]
 }

@@ -1,11 +1,29 @@
 {
  "_provenance": {
-  "fuente": "carruseles «Presentamos <sección>» de instagram.com/siembrafest (8 posts, uno por sección; embed público)",
+  "fuente": "carruseles «Presentamos <sección>» de instagram.com/siembrafest (9 posts, uno por sección; embed público)",
   "capturado": "2026-09-05",
   "metodo": "una lámina por obra, con el título PINTADO en la imagen: el mapa lámina→obra se leyó imagen por imagen, no por el orden del carrusel. 4:5 → 2:3 con recorte del 6% por lado (medido: ningún título baja del 10.2%) más el 5.6% de estirón restante",
   "regla": "solo donde el catálogo NO tiene póster; el original de TMDB manda"
  },
  "obras": [
+  {
+   "titulo": "La grandiosa",
+   "poster": "/assets/siembrafest/la-grandiosa.jpg",
+   "posterSource": "custom",
+   "_lamina": "instagram.com/p/DcJ9J4toPgL #4"
+  },
+  {
+   "titulo": "Paramunas: El alma de la montaña",
+   "poster": "/assets/siembrafest/paramunas-el-alma-de-la-montana.jpg",
+   "posterSource": "custom",
+   "_lamina": "instagram.com/p/DcJ9J4toPgL #5"
+  },
+  {
+   "titulo": "Victorias y Glorias – Relatos de campeonas",
+   "poster": "/assets/siembrafest/victorias-y-glorias-relatos-de-campeonas.jpg",
+   "posterSource": "custom",
+   "_lamina": "instagram.com/p/DcJ9J4toPgL #9"
+  },
   {
    "titulo": "Phakhakhe Pi'txi – Minga de pensamiento",
    "poster": "/assets/siembrafest/phakhakhe-pi-txi-minga-de-pensamiento.jpg",
