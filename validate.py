@@ -5798,6 +5798,98 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [raiz-limpia] la raíz del repo es del producto, no un escritorio ────────────
+# Medido el 5 sep 2026: 81 archivos rastreados en la raíz, 21 del producto y
+# 60 restos de una sesión de depuración (s1…s33.js, run1…8.js, leak.js, mocks)
+# commiteados a main el 15 ago. Nadie los citaba; nadie los borró, porque lo
+# que no falla no llama la atención. La regla: en la raíz vive solo lo que la
+# app, el build o la config necesitan (ALLOWLIST). Lo de hoy queda como deuda
+# declarada que SOLO BAJA — mismo patrón que [module-size] y [test-salida-muda].
+check = 'raiz-limpia'
+try:
+    import subprocess as _sp7
+    _RAIZ_OK = {'.gitattributes', '.gitignore', '.nojekyll', 'CLAUDE.md', 'CNAME', 'LICENSE', 'eslint.config.js', 'favicon-192.png', 'favicon.png', 'icon-192.png', 'icon-512.png', 'index.html', 'manifest.json', 'package-lock.json', 'package.json', 'playwright.config.js', 'privacy.html', 'robots.txt', 'sw.js', 'validate.py', 'version.json'}
+    _RAIZ_DEUDA = set()   # los 60 se borraron el 5 sep 2026 (Juan); desde acá cualquier resto es nuevo
+    _raiz = sorted(_f for _f in _sp7.run(['git','ls-files'],capture_output=True,text=True).stdout.split('\n') if _f and '/' not in _f)
+    _nuevos = [_f for _f in _raiz if _f not in _RAIZ_OK and _f not in _RAIZ_DEUDA]
+    _sobra = [_f for _f in _RAIZ_DEUDA if _f not in _raiz]
+    if _nuevos:
+        fail(check, 'archivo(s) NUEVO(s) en la raíz que no son del producto — van a scripts/, docs/, '
+                    'festivals/staging/ o fuera del repo: ' + ', '.join(_nuevos))
+    elif _sobra:
+        ok(check, f'{len(_RAIZ_DEUDA)-len(_sobra)} resto(s) en la raíz, ninguno nuevo — bajá la deuda: ya no están ' + ', '.join(_sobra[:6]))
+    else:
+        ok(check, f'{len(_RAIZ_DEUDA)} resto(s) declarados en la raíz, ninguno nuevo')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [asset-huerfano] toda imagen de assets/ la nombra algo rastreado ────────────
+# Medido el 5 sep 2026: 494 imágenes, 16 que NADA del repo menciona —dos son
+# gemelas por tilde o doble guion de otra que sí se usa, el resto quedaron de
+# obras que salieron del catálogo—. 2,6 MB que el SW cachea para siempre y que
+# nadie va a ver. Verificado antes: getFilmPoster no construye rutas desde el
+# slug; los pósters vienen de la ruta LITERAL del JSON o de TMDB, así que un
+# nombre que ningún texto rastreado contiene es un archivo que nadie sirve.
+# Las de hoy quedan como deuda que SOLO BAJA.
+check = 'asset-huerfano'
+try:
+    import subprocess as _sp8, os as _os8, re as _re8
+    _ASSET_DEUDA = set()   # las 16 se borraron el 5 sep 2026 tras triple verificación (texto, historia de git, pantalla)
+    _tr = [_f for _f in _sp8.run(['git','ls-files'],capture_output=True,text=True).stdout.split('\n') if _f]
+    # validate.py NO es corpus: la propia lista _ASSET_DEUDA nombra a las huérfanas y
+    # el guardián se aprobaba a sí mismo (cazado al estrenarlo: «0 huérfanas» con 16).
+    _txt = [_f for _f in _tr if _f != 'validate.py'
+            and _re8.search(r'\.(js|json|html|md|css|py|yml|webmanifest|txt|sh)$', _f) and _os8.path.isfile(_f)]
+    _corpus = '\n'.join(open(_f, encoding='utf-8', errors='ignore').read() for _f in _txt)
+    _imgs = [_f for _f in _tr if _re8.search(r'^assets/.*\.(jpg|jpeg|png|webp)$', _f)]
+    _huer = sorted(_f for _f in _imgs if _os8.path.basename(_f) not in _corpus and _f not in _corpus)
+    _nuevas = [_f for _f in _huer if _f not in _ASSET_DEUDA]
+    _sobran = [_f for _f in _ASSET_DEUDA if _f not in _huer]
+    if _nuevas:
+        fail(check, 'imagen(es) en assets/ que nada rastreado nombra — o se referencia o no se sube: ' + ', '.join(_nuevas[:8]))
+    elif _sobran:
+        ok(check, f'{len(_huer)} huérfana(s) declaradas, ninguna nueva — bajá la deuda: ' + ', '.join(_os8.path.basename(_x) for _x in _sobran[:6]))
+    else:
+        ok(check, f'{len(_huer)} huérfana(s) declaradas de {len(_imgs)} imágenes, ninguna nueva')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [staging-huerfano] un sidecar que nada vivo lee y la doctrina no ampara ─────
+# Medido el 5 sep 2026: 8,4 MB en festivals/staging/, 2,4 de sidecars intermedios
+# (letterboxd, lbslug, oficial, auditoria-3, fichas…) que ningún script vivo ni
+# plan lee. Son DERIVADOS, no fuentes —las fuentes viven fuera del repo desde
+# #522—, así que se borran, no se archivan. La EXCEPCIÓN es de doctrina, no de
+# uso: PROTOCOLO declara el `-crudo.json` como salida no negociable del pipeline
+# y el `-build.json` como su entrada; con `-correcciones.json` son fuente aunque
+# hoy nadie los lea (TIFF quedó sin lector al archivar sus scripts y NO por eso
+# es basura). validate.py no es corpus: se nombraría a sí mismo.
+# Lo que sale del camino va a staging/_historico/ —no se borra— por coherencia
+# con pipeline/_historico/: 29 de los 35 los nombra el script que los produjo,
+# y ese script está archivado. Archivar la herramienta y tirar su dato deja las
+# dos mitades inservibles.
+check = 'staging-huerfano'
+try:
+    import glob as _g9, os as _os9, re as _re9
+    _CANON = {'crudo.json', 'correcciones.json', 'build.json'}
+    _viv = ['pipeline/lib.py','pipeline/ensamblar.py','pipeline/correr.py','pipeline/publicar.py'] + \
+           sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+-20\d\d-', _f))
+    _corp = '\n'.join(open(_f, encoding='utf-8', errors='ignore').read() for _f in _viv if _os9.path.exists(_f)) + \
+            '\n' + '\n'.join(open(_p, encoding='utf-8').read() for _p in _g9.glob('pipeline/*.plan.json'))
+    _huer = []
+    for _f in sorted(_g9.glob('festivals/staging/**/*', recursive=True)):
+        if not _os9.path.isfile(_f): continue
+        _b = _os9.path.basename(_f); _m = _re9.match(r'([a-z]+-\d{2,4})-(.+)$', _b)
+        _suf = _m.group(2) if _m else _b
+        if '/_historico/' in _f or _suf in _CANON or _b == 'README.md' or _b in _corp: continue
+        _huer.append(_f)
+    if _huer:
+        fail(check, 'sidecar(s) en staging/ que nada vivo lee y no son crudo/correcciones/build — '
+                    'o los lee un paso del plan o no se versionan: ' + ', '.join(_os9.path.basename(_x) for _x in _huer[:8]))
+    else:
+        ok(check, 'todo sidecar de staging/ es canónico o lo lee un paso vivo')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 check = 'lib-unica'
 try:
     import ast as _ast, glob as _g4, os as _os4
