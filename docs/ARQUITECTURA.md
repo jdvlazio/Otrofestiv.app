@@ -1022,6 +1022,85 @@ mergea?», que costó más tiempo que los conflictos.
 
 ---
 
+### 15.4e Guardianes de detalle — la deuda de documentación saldada
+
+Los 45 de abajo existían y se cumplían, pero ninguno tenía una línea en la doc:
+`[doc-cadena]` los llevaba en `_DEUDA_DOC` como deuda declarada. El 5 sep 2026
+la lista bajó a cero — lo único a lo que podía llegar — leyendo el **cuerpo** de
+cada uno, no su cabecera (varias cabeceras eran del guardián de al lado). Un
+guardián que nadie sabe qué protege es uno que el próximo que toque
+`validate.py` puede borrar sin saber qué rompe.
+
+**Código y arranque**
+
+| Guardián | Qué congela |
+|---|---|
+| `[doctype]` | `index.html` empieza con `<!DOCTYPE`: texto antes se renderiza, y empujó el topbar 115px en producción. |
+| `[html-divs]` | Los divs de `CRITICAL_DIVS` existen en `index.html` o en las vistas; si uno desaparece por un `str_replace` mal hecho, la app rompe en silencio en iOS Safari. |
+| `[dead-code]` | Restos conocidos (`_CALC_WORKER_SRC`, `wl-add-sheet`, `openWLAdd`) no vuelven a `index.html`. |
+| `[fc-bootstrap]` | Cada entrada de `FESTIVAL_CONFIG` trae lo que el splash necesita antes del fetch (`name`, `city`, `dates`, `dates_en`, `year`, `storageKey`, `festivalEndStr`), leída ENTERA hasta el siguiente festival. |
+| `[dom-ready-guard]` | Ningún `addEventListener('DOMContentLoaded'\|'load')` desnudo en `src/`: `main.js` se inyecta como módulo y esos eventos ya pasaron; se usa `onDomReady`/`onWindowLoad` de `src/util/ready.js`. |
+| `[viewstate-shadow]` | `src/state/viewstate.js` expone exactamente los 29 lets del bridge y `main.js` no redeclara ninguno: una redeclaración sombrea el bridge y el write no llega a los otros módulos. |
+| `[no-underscore-actions]` | Cero `data-action="_…"` en `src/`: el nombre público de una acción es la clave del registry y nunca empieza con `_`. |
+| `[sched-pure-fns]` | Toda función de `_SCHED_PURE_FNS` (`controller/calc.js`) es resoluble desde `main` + `src/domain/*.js`: el worker las consume vía `.toString()`. |
+| `[worker-deps]` | Ninguna pure fn del worker llama a una función de nivel módulo que el worker no tenga: el `ReferenceError` saldría en runtime, no en CI. |
+| `[shadow-t]` | Ningún binding local `t` que dentro llame `t('clave')`: pisaba la `t()` de i18n y la hoja del tope de prioridades moría con «t is not a function». Reapuntado con territorio completo el 30 ago. |
+| `[onclick-syntax]` | Todo `onclick="…"` estático de `index.html` es JS válido (`node --check`). |
+| `[apostrophe-onclick]` | Ningún `onclick` inline interpola `&#39;`: rompe con apóstrofes; el escape es `\'` o mejor `dataset.title`. |
+| `[static-html-template]` | Ningún `${…}` en el HTML estático (antes del primer `<script>`): ahí no hay template literal y el navegador lo pinta como texto. |
+| `[bare-t-in-template]` | Ningún `>t('clave')<` como texto en un template literal: falta el `${}` y se renderiza «t('clave')». |
+| `[tasks-sync]` | Ninguna feature en `.specify/features/*/tasks.md` con 0 de N tareas marcadas: implementada sin documentar, o abandonada. |
+| `[version-json]` | `version.json` con `android` e `ios` numéricos y `ios ≤ android`; el formato legado `{"build":…}` ya no vale. |
+
+**i18n**
+
+| Guardián | Qué congela |
+|---|---|
+| `[i18n-hardcoded]` | Los strings de `UI_STRINGS_MUST_USE_T` no aparecen hardcodeados en `main.js` + `view/` + `controller/`: van por `t()`. |
+| `[i18n-interpolation]` | Toda clave con `{placeholder}` en ES se llama con parámetros: `t('warn_qa_tiempo')` a secas dejaba «~{n} min» en pantalla. |
+| `[i18n-voseo]` | Cero tuteo en el bloque ES («Ingresa», «Ajusta», «Permite el»…): la voz de la casa es voseo. Sus `\b` fueron bytes 0x08 literales durante semanas y no vigiló nada; curado el 25 ago. |
+| `[synopsis-helper]` | La sinopsis localizada sale solo de `locSynopsis(f)`: ninguna línea de `src/` combina `_lang` con `synopsis_en\|synopsis_es` salvo `i18n.js`. |
+| `[section-display-raw]` | Todo nombre de sección pintado como texto (`>${…X.section…}`) pasa por `_secLabel()`/`_secLabelFull()`; los usos como clave no cuentan. Lleva test negativo obligatorio. |
+
+**Diseño y superficie**
+
+| Guardián | Qué congela |
+|---|---|
+| `[design-banned-classes]` | Las clases retiradas el 17–18 jul (`empty-msg`, `mplan-empty`, `pel-sheet-divider`, `hr-bdr`…) no reaparecen en `src/`. |
+| `[pressed-canon]` | Todo `:active` con `transform:scale()` usa `.96`; había seis escalas. Cards y links, solo opacidad. |
+| `[filter-drop-canon]` | Los dropdowns de filtro usan `.filter-drop` y `overlays.js` no re-declara su anatomía inline. |
+| `[dtab-sin-linea]` | `.dtab.on` marca el día activo solo con color, sin `border-bottom` ámbar: decisión del 18 may que un «unificar» del 18 jul deshizo sin saber que existía. |
+| `[sheet-meta-legible]` | Lo que se lee para decidir o actuar (`.pel-sheet-flags-dur`, `.pel-sheet-metaline`, `.rating-title`, `.lugar-opt.escape`, `.c-lb-text`) nunca va en `--gray2`. El contraste pintado lo mide T166. |
+| `[aviso-antes-sinopsis]` | En `sheets-controller.js` y `agenda.js` el último `meta-banner` de cada bloque va ANTES de `pel-sheet-synopsis` (§8.4.4). |
+| `[poster-editorial-parity]` | El markup `c-film-thumb` nace solo en `view/helpers.js` (`itemPosterParts`/`_mkCortoItemHtml`): un solo póster propio en todas las superficies. |
+| `[poster-radio-unico]` | Todo selector con `poster`/`thumb` usa `var(--r-poster)`; los overlays encima del póster (`.poster-now`, `.poster-past-badge`, `.pv-poster-check`) llevan el suyo por nombre. |
+| `[diary-poster-grid]` | `shareDiary` dibuja un muro de afiches: resuelve por obra y film, `drawImage`, tile de fallback `_sectionColor`, orden por calificación. |
+| `[responsive-contract]` | `backdrop-filter` pareado con `-webkit-`, cero `100vh` (usar `dvh`), y todo `.woff2` de `@font-face` existe en disco: el 404 hacía caer la fuente al fallback y divergían iOS/Android. |
+| `[keyart-write-once]` | Un `keyArt` publicado nunca se sobreescribe in-place (huellas en `assets/keyart/HUELLAS.txt`): el SW lo cachea para siempre; el de FICDEH se pisó cuatro veces con el mismo nombre. |
+| `[validate-film-tests]` | Si `domain/film.js` exporta `validateFilm`, hay ≥5 tests que la cubren. |
+
+**Datos de festival**
+
+| Guardián | Qué congela |
+|---|---|
+| `[json-fields]` | Todo `festivals/*.json` trae los campos que el tab de días y el cálculo necesitan. |
+| `[prio-limit]` | Todo JSON declara `prioLimit`, coherente con sus `dayKeys`. |
+| `[title-normalization]` | Ningún título con comillas tipográficas (`‘’“”«»`). |
+| `[activity-duration]` | Toda actividad de un festival vivo tiene duración; las que la organización no publicó viven en `_PENDING` con su razón y se borran de ahí al llegar el dato. |
+| `[pais-conocido]` | Todo `country` de `FESTIVAL_CONFIG` tiene entrada en `COUNTRY_NAMES`: FINCA salió con `'AR'` sin la suya y el splash dijo «BUENOS AIRES» sin Argentina. `country:''` es legítimo. |
+| `[sedes-apiladas]` | Dos sedes de un festival vivo a <60 m casi siempre son la misma (se declara con `_nota`), y la sala no va dentro del nombre de la sede. Warning; los archivados no se reescriben. |
+| `[day-order-indice]` (validate-festivals.js) | `day_order` es el índice del día en `dayKeys`, no un contador: ordena ficha, Mi Plan, Programa y el plan. Deuda por festival en `DAY_ORDER_DEUDA`, que solo baja. |
+| `[synopsis-length]` (validate-festivals.js) | Warning generoso: sinopsis > 600 caracteres, para cazar un dump sin condensar sin spamear. |
+
+**Pipeline**
+
+| Guardián | Qué congela |
+|---|---|
+| `[plan-contrato]` | El único guardián de ENTRADA: cada `*.plan.json` pasa por `lib.cargar_plan()`, el contrato que corren ensamblador y runner. Si no puede correr, falla — no avisa. |
+| `[pipeline-circuito]` | Ningún sidecar que se escribe y nadie lee junto a otro del mismo propósito que se lee y nadie escribe: el barrido escribía `-canonica` y el ensamblador leía `-oficial`. |
+| `[staging-provenance]` | Todo sidecar nuevo en `festivals/staging/` declara `_provenance.capturado`; los anteriores están congelados en `_LEGACY_SIN_FECHA`, que no admite nombres nuevos. |
+| `[template-al-dia]` | Todo campo que usan los dos festivales más recientes está en `pipeline/festival-template.json` o en las omisiones deliberadas: dos onboardings seguidos ya es vocabulario. |
+
 ### 15.5 Cómo se corre la suite — un puerto por corrida
 
 **Correr siempre `./scripts/test.sh`**, nunca `npx playwright test` a secas:
