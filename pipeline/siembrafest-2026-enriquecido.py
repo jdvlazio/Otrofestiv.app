@@ -25,20 +25,40 @@ _v = _iu.module_from_spec(_s); _s.loader.exec_module(_v)
 
 # El vocabulario de género de la app (_GENRE_EN en sheets-controller.js) más
 # «Ficción», que no está en el mapa pero lleva 110 obras en el repo.
-GENEROS = {'accion', 'aventura', 'comedia', 'drama', 'documental', 'experimental',
-           'romance', 'satira', 'terror', 'thriller', 'animacion', 'cienciaficcion',
-           'fantasia', 'misterio', 'musical', 'musica', 'crimen', 'historia',
-           'suspense', 'belica', 'familia', 'western', 'ficcion'}
+#
+# Se guarda como {clave normalizada: forma canónica} por dos razones. Una: la
+# comparación va por norm(), que colapsa lo no alfanumérico en espacios — escrito
+# 'cienciaficcion' la entrada estaba MUERTA, ningún texto podía producirla, y
+# «CIENCIA FICCIÓN» caía. Dos: la app traduce por cadena exacta, así que hay que
+# devolver «Drama», no el «DRAMA» que grita el catálogo.
+GENEROS = {
+ 'accion': 'Acción', 'aventura': 'Aventura', 'comedia': 'Comedia', 'drama': 'Drama',
+ 'documental': 'Documental', 'experimental': 'Experimental', 'romance': 'Romance',
+ 'satira': 'Sátira', 'terror': 'Terror', 'thriller': 'Thriller',
+ 'animacion': 'Animación', 'ciencia ficcion': 'Ciencia ficción',
+ 'fantasia': 'Fantasía', 'misterio': 'Misterio', 'musical': 'Musical',
+ 'musica': 'Música', 'crimen': 'Crimen', 'historia': 'Historia',
+ 'suspense': 'Suspense', 'belica': 'Bélica', 'familia': 'Familia',
+ 'western': 'Western', 'ficcion': 'Ficción',
+}
 
 
-def _genero(g):
-    """UNO, el primero de la fuente que sea un género de verdad. El catálogo trae
-    descripciones («Social, war, peace, religión») que no son géneros: la app las
-    pintaría enteras en la ficha y no sabría traducirlas."""
+def _genero(*fuentes):
+    """UNO, el primero de las fuentes que sea un género de verdad.
+
+    El catálogo trae descripciones («Social, war, peace, religión», «ADOLESCENTE»,
+    «Comedy, Horror») que no son géneros: la app las pintaría enteras en la ficha y
+    no sabría traducirlas. Cuando el campo `genre` no resuelve, entra `_src.formato`
+    —Documental / Ficción / Animación / Experimental—, que es la clasificación del
+    propio festival y justo el vocabulario que la app conoce. Se prueba en ese
+    orden: `genre` es más específico cuando sirve.
+    """
     from lib import norm
-    for x in re.split(r'[,/]| y ', g or ''):
-        if norm(x.strip()) in GENEROS:
-            return x.strip()
+    for g in fuentes:
+        for x in re.split(r'[,;/]| y ', g or ''):
+            canon = GENEROS.get(norm(x.strip()))
+            if canon:
+                return canon
     return None
 
 
@@ -78,7 +98,8 @@ if __name__ == '__main__':
                          ('genre', 'genero'), ('synopsis', 'sinopsis'),
                          ('synopsis_en', 'synopsis_en'), ('poster', 'poster'),
                          ('posterSource', 'posterSource'), ('lbSlug', 'lbSlug')):
-            v = _genero(f[src]) if src == 'genre' else f.get(src)
+            v = (_genero(f[src], (f.get('_src') or {}).get('formato'))
+                 if src == 'genre' else f.get(src))
             if v:
                 o[dst] = v
         if not o.get('poster') and f['title'] in lam:

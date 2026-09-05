@@ -2,7 +2,7 @@
  "_provenance": {
   "fuente": "Nominatim/OSM, con la dirección del municipio",
   "capturado": "2026-09-04",
-  "metodo": "SENA CDAE Villeta e IED Alonso de Olalla NO están en OSM. Se declaran PENDIENTES y SIN punto: una coordenada aproximada en un municipio pequeño manda a alguien al sitio equivocado, y eso es peor que no tener mapa"
+  "metodo": "Nominatim/OSM con la dirección del municipio. SENA CDAE e IED Alonso de Olalla no están en OSM ni por nombre (Overpass: 0 elementos en 6 km) — Villeta está poco mapeada. El 5 sep se les buscó la DIRECCIÓN, que es lo que sirve para llegar: las dos confirmadas en dos fuentes independientes. El IED gana punto a nivel de calle; el SENA no, porque su calle sale ambigua y una coordenada aproximada en un municipio pequeño manda a alguien al sitio equivocado, y eso es peor que no tener mapa."
  },
  "venues": {
   "Cinema Villeta - Villeta": {
@@ -32,13 +32,17 @@
    "city": "Villeta",
    "short": "SENA CDAE Villeta",
    "_prec": "pendiente",
-   "_nota": "no está en OSM — geocodificar a mano (pipeline/sedes-html.py)"
+   "_nota": "dirección confirmada en dos fuentes (directorio de centros de formación del SENA y ficha de Waze). SIGUE SIN PUNTO: «Calle 2» devuelve dos tramos distintos en Villeta y no hay forma de elegir — la dirección lleva a la sede, una coordenada ambigua no.",
+   "address": "Calle 2 n.º 13-03, barrio San Rafael"
   },
   "IED Alonso de Olalla - Villeta": {
    "city": "Villeta",
    "short": "IED Alonso de Olalla",
-   "_prec": "pendiente",
-   "_nota": "no está en OSM — geocodificar a mano (pipeline/sedes-html.py)"
+   "_prec": "calle",
+   "_nota": "dirección confirmada en dos fuentes (Waze e Insor). El punto es la Diagonal 1 Sur, la única de ese nombre en Villeta y la que nombra la dirección: es la calle, no el edificio — el mismo criterio que Vda. Chapaima.",
+   "lat": 5.0046407,
+   "lng": -74.4709365,
+   "address": "Diagonal 1 Sur n.º 72-31, barrio Carlos Lleras"
   }
  }
 }

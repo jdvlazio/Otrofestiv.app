@@ -213,14 +213,18 @@
   "IED Alonso de Olalla - Villeta": {
    "short": "IED Alonso de Olalla",
    "city": "Villeta",
-   "_prec": "pendiente",
-   "_nota": "no está en OSM — geocodificar a mano (pipeline/sedes-html.py)"
+   "_prec": "calle",
+   "_nota": "dirección confirmada en dos fuentes (Waze e Insor). El punto es la Diagonal 1 Sur, la única de ese nombre en Villeta y la que nombra la dirección: es la calle, no el edificio — el mismo criterio que Vda. Chapaima.",
+   "lat": 5.0046407,
+   "lng": -74.4709365,
+   "address": "Diagonal 1 Sur n.º 72-31, barrio Carlos Lleras"
   },
   "SENA CDAE Villeta - Villeta": {
    "short": "SENA CDAE Villeta",
    "city": "Villeta",
    "_prec": "pendiente",
-   "_nota": "no está en OSM — geocodificar a mano (pipeline/sedes-html.py)"
+   "_nota": "dirección confirmada en dos fuentes (directorio de centros de formación del SENA y ficha de Waze). SIGUE SIN PUNTO: «Calle 2» devuelve dos tramos distintos en Villeta y no hay forma de elegir — la dirección lleva a la sede, una coordenada ambigua no.",
+   "address": "Calle 2 n.º 13-03, barrio San Rafael"
   },
   "Vda. Chapaima - Villeta": {
    "short": "Vda. Chapaima",
@@ -324,6 +328,7 @@
      "year": 2026,
      "duration": "10 min",
      "poster": "/assets/siembrafest/desde-aca-veo-la-tormenta.jpg",
+     "genre": "Familia",
      "country": "Colombia",
      "posterSource": "oficial",
      "flags": "🇨🇴"
@@ -336,6 +341,7 @@
      "poster": "https://image.tmdb.org/t/p/w500/67p1TQnM2idYzE3rpWRs5wmnilJ.jpg",
      "lbSlug": "unlearning-motherhood",
      "synopsis_en": "Unlearning Motherhood is an animated documentary that tells the tearing and empowering stories of women with their unconventional motherhood experiences, through the journey of a fictional main character who is looking for answers about pregnancy.",
+     "genre": "Animación",
      "country": "Colombia",
      "posterSource": "tmdb",
      "flags": "🇨🇴"
@@ -389,6 +395,7 @@
    "is_free": true,
    "lbSlug": "floresmiro",
    "synopsis_en": "In San Vicente de Chucurí, Father Floro sets up a fruit processing plant to stem the losses caused by the war. The film also remembers Floresmiro López, a priest who risked his life defending peasant farmers during the armed conflict. With love and moral firmness, he faced down the guns and left a legacy of community organizing that still shapes the region.",
+   "genre": "Documental",
    "year": 2025,
    "_programa_original": "Flores Miro"
   },
@@ -413,6 +420,7 @@
    "is_free": true,
    "lbSlug": "herencia-los-cantos-de-la-tierra",
    "synopsis_en": "A documentary celebrating peasant 'carranguera' music —voices, stories and instruments like the requinto, tiple and guacharaca— as the root of rural Colombian identity.",
+   "genre": "Familia",
    "year": 2026,
    "_programa_original": "Herencia: los cantos de la tierra"
   },
@@ -519,6 +527,7 @@
      "year": 2025,
      "duration": "17 min",
      "poster": "/assets/siembrafest/dios-y-suerte.jpg",
+     "genre": "Documental",
      "country": "Colombia",
      "posterSource": "oficial",
      "flags": "🇨🇴"
@@ -557,6 +566,7 @@
      "lbSlug": "y-el-rio-lloro",
      "synopsis": "En el corazón del Pacífico colombiano, Manuel Cruz y su esposa Angy luchan por sanar las heridas de su comunidad, devastada por el conflicto armado. Lo hacen preservando sus tradiciones ancestrales y honrando la memoria de las víctimas, mientras el río, testigo silencioso, fluye como símbolo de resistencia y esperanza.",
      "synopsis_en": "In the heart of the Colombian Pacific, Manuel Cruz and his wife Angy work to heal the wounds of a community devastated by the armed conflict. They do it by keeping their ancestral traditions alive and honoring the memory of the victims, while the river, a silent witness, flows on as a symbol of resistance and hope.",
+     "genre": "Documental",
      "country": "Colombia",
      "posterSource": "tmdb",
      "synopsis_lang": "es",
@@ -612,6 +622,7 @@
      "poster": "https://image.tmdb.org/t/p/w500/6sjnMZAvX6ZvV80OKDeqJjWUEDS.jpg",
      "lbSlug": "la-calle-del-amor",
      "synopsis_en": "Deisy is a teenager who believes she has found in Felipe—a truck driver older than she is—a chance to run away from home. But her decision will have consequences that will shape her forever.",
+     "genre": "Ficción",
      "country": "Colombia",
      "posterSource": "tmdb",
      "flags": "🇨🇴"
@@ -625,6 +636,7 @@
      "lbSlug": "galvanic-heart",
      "synopsis": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella.",
      "synopsis_en": "This is a story set on the future Caribbean coast, which is almost  uninhabitable due to pollution and climate change. Amidst the gloomy landscape of the new world order OHM, we find Ivy, our protagonist, who, after a heartbreaking breakup, is left in a very delicate emotional state.",
+     "genre": "Animación",
      "country": "Colombia",
      "posterSource": "tmdb",
      "synopsis_lang": "es",
@@ -694,6 +706,7 @@
      "duration": "6 min",
      "poster": "https://image.tmdb.org/t/p/w500/klFalxUJaemUMN7YiJIqzpD6oOH.jpg",
      "lbSlug": "elipsis-2021",
+     "genre": "Ciencia ficción",
      "country": "Colombia",
      "posterSource": "tmdb",
      "flags": "🇨🇴"
@@ -707,6 +720,7 @@
      "lbSlug": "trigos",
      "synopsis": "Una película sobre la siembra y cosecha del trigo en el altiplano cundiboyacense. Entre intertítulos bíblicos y escenas pastoriles, emerge un poema bucólico sobre el trabajo agrícola, los ritmos de la tierra y la vida campesina.",
      "synopsis_en": "A film about the sowing and harvesting of wheat in Colombia’s Cundiboyacense high plateau. Through biblical intertitles and pastoral scenes, a bucolic poem unfolds—evoking the rhythms of the land, the dignity of agricultural labor, and the soul of rural life.",
+     "genre": "Documental",
      "country": "Colombia",
      "posterSource": "tmdb",
      "synopsis_lang": "es",
@@ -740,7 +754,7 @@
      "year": 2023,
      "duration": "9 min",
      "poster": "/assets/siembrafest/la-muerte-de-elias.jpg",
-     "genre": "CRIMEN",
+     "genre": "Crimen",
      "country": "Colombia",
      "posterSource": "oficial",
      "flags": "🇨🇴"
@@ -895,6 +909,7 @@
    "is_free": true,
    "lbSlug": "irredentos-lejos-del-perdon",
    "synopsis_en": "While enjoying retirement in his home village, the respected Colonel Augusto Almendros learns that \"Salazar,\" one of the guerrilla fighters he pursued throughout his career, has been pardoned by the Justice for Peace and is living out his final years in the same town. Unable to sleep, the colonel sets in motion a plan to challenge him and settle old scores.",
+   "genre": "Ficción",
    "year": 2025,
    "_programa_original": "Irredentos"
   },
@@ -937,6 +952,7 @@
      "year": 2024,
      "duration": "10 min",
      "poster": "/assets/siembrafest/phakhakhe-pi-txi-minga-de-pensamiento.jpg",
+     "genre": "Documental",
      "country": "Colombia",
      "posterSource": "oficial",
      "flags": "🇨🇴"
@@ -988,6 +1004,7 @@
      "year": 2024,
      "duration": "8 min",
      "poster": "/assets/siembrafest/mingoya-tierra-de-ornitologos.jpg",
+     "genre": "Animación",
      "country": "Colombia",
      "posterSource": "oficial",
      "flags": "🇨🇴"
@@ -1001,6 +1018,7 @@
      "lbSlug": "sheltering-gestures",
      "synopsis": "A group of young dancers who witnessed the gradual disappearance of the traditional Danza de las Tabliteras.",
      "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+     "genre": "Documental",
      "country": "Colombia",
      "posterSource": "tmdb",
      "synopsis_lang": "es",
@@ -1012,6 +1030,7 @@
      "year": 2025,
      "duration": "52 min",
      "poster": "/assets/siembrafest/guatape-no-ha-muerto.jpg",
+     "genre": "Documental",
      "country": "Colombia",
      "posterSource": "oficial",
      "flags": "🇨🇴"
@@ -1084,6 +1103,7 @@
      "duration": "18 min",
      "poster": "/assets/siembrafest/paramunas-el-alma-de-la-montana.jpg",
      "synopsis": "Acompaña a tres mujeres campesinas de Sumapaz y Chingaza que lideran acciones frente al cambio climático.",
+     "genre": "Documental",
      "country": "Colombia",
      "posterSource": "oficial",
      "synopsis_lang": "es",
@@ -1167,7 +1187,7 @@
      "lbSlug": "pasta-negra",
      "synopsis": "Una fábula sobre migración, sacrificio y supervivencia protagonizada por tres mujeres venezolanas y estrenada mundialmente en el Sundance Film Festival 2025.",
      "synopsis_en": "Three Venezuelan women cross the border into Colombia to buy a packet of pasta.",
-     "genre": "DRAMA",
+     "genre": "Drama",
      "country": "Colombia",
      "posterSource": "tmdb",
      "synopsis_lang": "es",
@@ -1216,6 +1236,7 @@
      "year": 2025,
      "duration": "19 min",
      "poster": "/assets/siembrafest/noche-de-vuelo.jpg",
+     "genre": "Ficción",
      "country": "Colombia",
      "posterSource": "oficial",
      "flags": "🇨🇴"
@@ -1226,6 +1247,7 @@
      "year": 2021,
      "duration": "8 min",
      "poster": "/assets/siembrafest/villa-feliz.jpg",
+     "genre": "Ficción",
      "country": "Colombia",
      "posterSource": "oficial",
      "flags": "🇨🇴"
@@ -1247,6 +1269,7 @@
      "year": 2024,
      "duration": "8 min",
      "poster": "/assets/siembrafest/linfernum.jpg",
+     "genre": "Ficción",
      "country": "Colombia",
      "posterSource": "oficial",
      "flags": "🇨🇴"
@@ -1260,6 +1283,7 @@
      "lbSlug": "clownin-around",
      "synopsis": "En una reunión de payasos, quien sonríe es el verdadero infeliz.",
      "synopsis_en": "Nicolás, a DJ overwhelmed by his past, meets a disturbing neighbor who introduces him to a cult made up of eccentric clowns. Between laughter and tension, the young man discovers a strange escape from his problems that puts his sanity to the test.",
+     "genre": "Ficción",
      "country": "Colombia",
      "posterSource": "tmdb",
      "synopsis_lang": "es",
@@ -1289,7 +1313,7 @@
      "year": 2024,
      "duration": "8 min",
      "poster": "/assets/siembrafest/el-dia-de-mi-suerte.jpg",
-     "genre": "COMEDIA",
+     "genre": "Comedia",
      "country": "Colombia",
      "posterSource": "oficial",
      "flags": "🇨🇴"
@@ -1300,7 +1324,7 @@
      "year": 2025,
      "duration": "18 min",
      "poster": "/assets/siembrafest/hdlt.jpg",
-     "genre": "DRAMA",
+     "genre": "Drama",
      "country": "Colombia",
      "posterSource": "oficial",
      "flags": "🇨🇴"
@@ -1325,6 +1349,7 @@
      "lbSlug": "muertos-que-no-son-muertos",
      "synopsis": "Durante la grabación de un supuesto exorcismo, el presentador de Muertos Que No Son Muertos, enfrenta su peor miedo: Un hogar campesino donde no pasa absolutamente nada.",
      "synopsis_en": "While filming a so-called exorcism, the host of the TV show \"Muertos Que No Son Muertos\" faces his worst fear: a rural house where absolutely nothing paranormal happens.",
+     "genre": "Ficción",
      "country": "Colombia",
      "posterSource": "tmdb",
      "synopsis_lang": "es",
@@ -1351,7 +1376,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-05T06:22:22",
+  "fecha": "2026-09-05T06:38:53",
   "plan_sha": "be79a49d18a035ac",
   "paso": 4,
   "cmd": "python3 pipeline/ensamblar.py siembrafest-2026"
