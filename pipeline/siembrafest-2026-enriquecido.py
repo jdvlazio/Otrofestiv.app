@@ -67,7 +67,6 @@ def _genero(*fuentes):
 # programa impreso y se enriquece a mano, contra TMDB.
 INVITADA = {
     'titulo': 'Andariega',
-    '_director_catalogo': 'Raúl Soto Rodríguez',   # = @raulsotorodriguez, el del festival
     'anio': 2025, 'pais': 'Colombia', 'genero': 'Documental',
     'poster_tmdb': '/uA5PZ9RBb23ESi1RVmnCosygXE0.jpg',
     'tmdb_id': 1456127,
@@ -94,7 +93,7 @@ if __name__ == '__main__':
     obras = []
     for f in cat['films']:
         o = {'titulo': inverso.get(f['title'], f['title'])}
-        for src, dst in (('director', '_director_catalogo'), ('country', 'pais'),
+        for src, dst in (('country', 'pais'),
                          ('genre', 'genero'), ('synopsis', 'sinopsis'),
                          ('synopsis_en', 'synopsis_en'), ('poster', 'poster'),
                          ('posterSource', 'posterSource'), ('lbSlug', 'lbSlug')):

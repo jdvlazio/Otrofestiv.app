@@ -167,29 +167,6 @@ EVENT_KIND = {'apertura': 'apertura', 'convite': 'convite', 'taller': 'taller',
               'experiencia': 'experiencia'}
 
 
-# ── jerarquía de fuentes, declarada (PROTOCOLO §1) ─────────────────────────
-# programa PDF (4 sep) > selección oficial (23 ago) > IG. El PDF es lo más nuevo
-# y es el documento operativo: manda en el horario y en lo que imprime de la
-# obra. El catálogo rellena lo que el PDF no trae —sinopsis, póster, país,
-# género, lbSlug— vía _enriquece().
-#
-# UNA excepción, y por una razón: cuando el catálogo trae MÁS directores que el
-# PDF, manda el catálogo. El PDF es un cartel y abrevia; «Somos historias» lo
-# firman diez personas y el programa imprime una. Perder nueve no es respetar la
-# fuente, es recortarla. Cuando se CONTRADICEN de verdad —«Noche de vuelo»— manda
-# el PDF por ser lo más reciente, y queda declarado para preguntárselo.
-DIRECTOR_CATALOGO = {
- # El programa imprime «Rául Soto» —tilde cambiada de sitio y sin apellido—;
- # TMDB y el propio Instagram del festival (@raulsotorodriguez) coinciden en
- # Raúl Soto Rodríguez. No es una abreviatura: es una errata.
- 'Andariega',
- 'Somos historias: Casaramano, sagrado y vida',
- 'Mingoya: tierra de ornitólogos',
- 'La muerte de Elías',
- 'Pudor ante el asalto de los ojos furtivos',
- 'La gallina saraviada',
- 'HDLT',
-}
 CONTRADICCIONES = {
  'Noche de vuelo': 'el catálogo de la selección oficial la firma Juan Alvarado y el '
                    'programa Zacarías Flores del Campo — no es una abreviatura, son '
@@ -270,8 +247,6 @@ def crudo():
                     o['_credito_impreso'] = f'{credito} · {d}'
                 if t in ALIAS_CATALOGO:
                     o['_alias_catalogo'] = ALIAS_CATALOGO[t]
-                if t in DIRECTOR_CATALOGO:
-                    o['_director_del_catalogo'] = True
                 if t in CONTRADICCIONES:
                     o['_ojo'] = CONTRADICCIONES[t]
                 f['obras'].append(o)
