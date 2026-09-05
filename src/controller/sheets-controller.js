@@ -6,7 +6,7 @@
 // la importa (sin ciclo). Lets de UI-state module-local; LB_SLUGS vía bridge
 // (lo escribe loadFestival). Roster/viewstate vía bridge.
 
-import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
+import {FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG} from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, makeSharedSlotSVG, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
 import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts} from '../view/helpers.js';
 // countryToFlags vive en dominio (src/domain/banderas.js), junto a la tabla de
@@ -34,7 +34,7 @@ import { sameEntry, isScreeningBlocked, screensConflictReason, plannableScreens 
 // animadas por opacity, index.html .pel-sheet-overlay): vive en el compositor,
 // que un hilo principal bloqueado no puede detener.
 import { state } from '../state/state.js';
-import { storage } from '../storage/storage.js';
+
 import { t, locSynopsis } from '../i18n/i18n.js';
 
 // ── UI-state module-local + consts privados ──────────────────────────────────

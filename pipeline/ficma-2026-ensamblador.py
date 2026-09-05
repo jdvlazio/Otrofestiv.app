@@ -187,16 +187,6 @@ SINOPSIS_PRIMERA_FUENTE = {
 
 # [lib-unica] renombrada desde `sinacento` el 17 ago 2026.
 # Sube a MAYÚSCULAS además de quitar acentos; `lib.sinacento` respeta la caja.
-def mayus_sin_acento(s):
-    return ''.join(c for c in unicodedata.normalize('NFD', (s or '').lower())
-                   if unicodedata.category(c) != 'Mn').strip()
-
-
-# [lib-unica] renombrada desde `banderas` el 17 ago 2026. Tenía tabla propia —la
-# TERCERA del repo— y su propio modo de partir. Medido contra el motor sobre los
-# 25 países de FICMA, se comía dos: RD Congo (partía por coma pero no reconocía
-# la abreviatura) y Sudáfrica (no estaba en su tabla). Volver a correr este
-# ensamblador habría DESHECHO las banderas corregidas. Ahora delega.
 def banderas_ficma(pais):
     return lib.banderas(pais)
 

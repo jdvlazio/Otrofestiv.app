@@ -105,18 +105,6 @@ def rango_horario(txt):
 
 
 # ── red ──────────────────────────────────────────────────────────────────────
-def curl_get(url, retries=3, min_bytes=3000, timeout=40):
-    """GET con UA de navegador y reintentos. '' si no hay respuesta útil."""
-    for _ in range(retries):
-        r = subprocess.run(['curl', '-sL', '--compressed', '--max-time', str(timeout),
-                            '-A', UA, '-H', 'Accept: text/html,application/xhtml+xml', url],
-                           capture_output=True)
-        if r.returncode == 0 and len(r.stdout) > min_bytes:
-            return r.stdout.decode('utf-8', 'ignore')
-        time.sleep(1.2)
-    return ''
-
-
 def tmdb_get(path, api_key, **params):
     """GET a api.themoviedb.org v3. {} si falla."""
     url = f'https://api.themoviedb.org/3{path}?api_key={api_key}&' + '&'.join(

@@ -131,16 +131,6 @@ export function _sectionColor(sec){
   if(arch && ARCHETYPE_COLORS[arch]) return ARCHETYPE_COLORS[arch];
   return SECTION_COLORS[sec] || ACCENT_PALETTE[Math.abs(_secHash(sec))%ACCENT_PALETTE.length];
 }
-// Texto legible sobre un color: negro o blanco por MÁXIMO contraste real (WCAG),
-// no por umbral. Garantiza banda legible sobre cualquier color de sección.
-export function _contrastText(hex){
-  const c = String(hex||'').replace('#','');
-  if(c.length < 6) return '#0B0A08';
-  const r=parseInt(c.slice(0,2),16)/255, g=parseInt(c.slice(2,4),16)/255, b=parseInt(c.slice(4,6),16)/255;
-  const L = 0.2126*r + 0.7152*g + 0.0722*b;
-  return ((L+0.05)/0.05) >= (1.05/(L+0.05)) ? '#0B0A08' : '#FFFFFF';
-}
-
 // ── REGLA INAMOVIBLE DE ARQUITECTURA ─────────────────────────────────────────
 // Todo display de nombre de sección DEBE pasar por _secLabel() (o _secLabelFull()
 // si se necesita preservar el emoji). NUNCA usar `f.section` directamente en

@@ -8,8 +8,8 @@
 import { FESTIVAL_CONFIG, NOTICES, mergeFestivalSections } from '../config.js';
 import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
-import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
-import { DAYS, DAY_SHORT_EN, _langDates, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
+import {DAY_ABBR, DAY_NUM, _classifyFestival} from '../view/components.js';
+import {DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly} from '../view/helpers.js';
 import { closeFestivalSheet, openCitySheet, openReviewSheet, _reviewDesbloqueado, _pintarBannerRevision } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, scrollDtabsToActive } from '../view/programa.js';

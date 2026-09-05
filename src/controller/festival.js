@@ -4,7 +4,7 @@
 import { FESTIVAL_CONFIG, TMDB_API_BASE, TMDB_API_KEY, TMDB_POSTER_BASE, _DEFAULT_FEST_ID, _POSTER_CACHE_PFX, festivalLocationLabel } from '../config.js';
 import { festivalEnded } from '../domain/time.js';
 import { _renderFestivalSelectorHTML, _renderSplashRailHTML, _classifyFestival, endedBannerHTML, festivalShortName, festivalTagline, festivalSeasonYear, postponedBannerHTML } from '../view/components.js';
-import { t } from '../i18n/i18n.js';
+
 import { _langDates, setPosters } from '../view/helpers.js';
 import { render } from '../view/programa.js';
 import { state } from '../state/state.js';

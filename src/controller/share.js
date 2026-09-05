@@ -2,7 +2,7 @@
 // p8 Step 7e — Compartir plan (canvas/imagen) + export ICS.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import { DAYS, _langDates, dayLabel, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster } from '../view/helpers.js';
+import {_langDates, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster} from '../view/helpers.js';
 import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
