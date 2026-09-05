@@ -316,7 +316,7 @@ export function _getItemPoster(item){
 // largo plazo es declarar posterSource en el JSON (gana sobre el host); ver
 // _isEditorialPoster + docs/POSTERS.md §5.
 const EDITORIAL_CDN_HOSTS=['cloudfront.net','supabase.co']; // Tribeca, Olhar+
-export function _isEditorialImageUrl(url){
+function _isEditorialImageUrl(url){
   return !!(url && EDITORIAL_CDN_HOSTS.some(h=>url.includes(h)));
 }
 

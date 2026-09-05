@@ -1152,7 +1152,7 @@ export function _searchOpenCorto(title, country, dur, section, flags) {
   openCortoSheet(title, country, dur, section, flags);
 }
 
-export function _scrollToMplanDetail(){
+function _scrollToMplanDetail(){
   const el=document.getElementById('mplan-detail');
   if(!el) return;
   const tb=document.querySelector('.topbar');

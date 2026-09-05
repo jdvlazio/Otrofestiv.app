@@ -429,7 +429,7 @@ export function closePelSheet(){
   document.getElementById('pel-sheet').classList.remove('open');
 }
 
-export function _pspAttach(){
+function _pspAttach(){
   const stage=document.getElementById('psp-stage');
   if(!stage||stage._pspReady) return;
   stage._pspReady=true;
@@ -453,7 +453,7 @@ export function _pspAttach(){
   });
 }
 
-export function _pspSwap(idx){
+function _pspSwap(idx){
   const stage=document.getElementById('psp-stage');
   if(!stage) return;
   stage.dataset.front=idx;
@@ -465,7 +465,7 @@ export function _pspSwap(idx){
   });
 }
 
-export function _pushSheetState(){
+function _pushSheetState(){
   try{history.pushState({sheet:true},'','');}catch(e){console.warn('[sheet] pushState failed',e);}
 }
 
@@ -593,7 +593,7 @@ export function closeDiary(){
 
 // Si el Diario está abierto detrás (calificaste desde una card), repintarlo para que
 // las estrellas nuevas aparezcan al volver — el sheet no participa del pipeline.
-export function _refreshDiaryIfOpen(){
+function _refreshDiaryIfOpen(){
   const sheet=document.getElementById('diary-sheet');
   if(!sheet||!sheet.classList.contains('open')) return;
   const body=document.getElementById('diary-body');
@@ -796,7 +796,7 @@ export function _findParentProgram(cortoTitle){
 // FINCA: 13 AGO Cacodelphia + 15 AGO Cine York; en Olhar, 10 cortos repiten en la
 // "Sessão com Acessibilidade"). Mostrar solo el primero es PEOR que no mostrar nada:
 // el usuario confía en una única función y se pierde la otra.
-export function _findParentPrograms(cortoTitle){
+function _findParentPrograms(cortoTitle){
   const out=[],seen=new Set();
   FILMS.forEach(f=>{
     if(!f.is_cortos||!f.film_list?.some(c=>c.title===cortoTitle)) return;
@@ -869,7 +869,7 @@ export function closeConflictSheet(){
   document.getElementById('conflict-sheet').classList.remove('open');
 }
 
-export function confirmConflictReplace(){
+function confirmConflictReplace(){
   // 1. READ + 2. GUARD
   if(!_conflictPending) return;
   const{incomingTitle, incomingScreen, existingEntry}=_conflictPending;
@@ -1156,13 +1156,13 @@ export function closeRatingSheet(){
   }
 }
 
-export function renderRatingStars(current){
+function renderRatingStars(current){
   const el=document.getElementById('rating-stars');
   if(!el) return;
   el.innerHTML=renderRatingStarsHTML(state, current);
 }
 
-export function updateRatingStars(current){
+function updateRatingStars(current){
   const el=document.getElementById('rating-stars');
   if(!el) return;
   const wraps=el.querySelectorAll('div');
@@ -1195,7 +1195,7 @@ export function updateRatingStars(current){
   }
 }
 
-export function setRating(val){
+function setRating(val){
   _currentRating=val;
   updateRatingStars(val); // rápido, sin recrear DOM
   const btn=document.getElementById('rating-action-btn');
@@ -1205,7 +1205,7 @@ export function setRating(val){
   }
 }
 
-export function _initRatingInteraction(){
+function _initRatingInteraction(){
   const range=document.getElementById('rating-range');
   if(!range||range._ratingInit) return;
   range._ratingInit=true;
@@ -1214,13 +1214,13 @@ export function _initRatingInteraction(){
   });
 }
 
-export function _pvStarSVG(fill){
+function _pvStarSVG(fill){
   if(fill==='full')  return`<svg width="34" height="34" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.75" stroke-linejoin="round"/></svg>`;
   if(fill==='half')  return`<svg width="34" height="34" viewBox="0 0 24 24"><defs><linearGradient id="pvhg"><stop offset="50%" stop-color="var(--amber)"/><stop offset="50%" stop-color="transparent"/></linearGradient></defs><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="url(#pvhg)" stroke="var(--amber)" stroke-width="1.75" stroke-linejoin="round"/></svg>`;
   return`<svg width="34" height="34" viewBox="0 0 24 24" style="opacity:.15"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="none" stroke="var(--amber)" stroke-width="1.75" stroke-linejoin="round"/></svg>`;
 }
 
-export function _pvRenderStars(val){
+function _pvRenderStars(val){
   const row=document.getElementById('pv-stars-row');
   if(!row) return;
   row.innerHTML='';
@@ -1239,7 +1239,7 @@ export function _pvRenderStars(val){
   if(btn)  btn.disabled=val===0;
 }
 
-export function starsDisplay(rating,size){
+function starsDisplay(rating,size){
   // size en px para display compacto
   if(!rating) return '';
   let html='';
@@ -1292,7 +1292,7 @@ export function selectAvDay(day){
   _refreshAvDayChips();
 }
 
-export function _refreshAvDayChips(){
+function _refreshAvDayChips(){
   document.querySelectorAll('.av-day-chip').forEach(btn=>{
     btn.classList.toggle('on', btn.dataset.day===_avSheetDay);
   });
@@ -1356,7 +1356,7 @@ export function renderAvDay(day){
   }
 }
 
-export function renderAvDayHTML(state, day){
+function renderAvDayHTML(state, day){
   const {availability} = state.snapshot();
   const fullBlocked=isFullDayBlocked(day);
   const visibleBlocks=availability[day].blocks.filter(b=>!(toMin(b.from)<=0&&toMin(b.to)>=toMin('23:59')));
@@ -1474,7 +1474,7 @@ export function _dismissToastAction() {
   }
 }
 
-export function lbUrl(title){
+function lbUrl(title){
   // Use festival-specific slug map from active festival config
   const _cfg=FESTIVAL_CONFIG[_activeFestId]||{};
   const _slugMap=_cfg.lbSlugs||LB_SLUGS;
@@ -1484,7 +1484,7 @@ export function lbUrl(title){
   return`https://letterboxd.com/film/${slug}/`;
 }
 
-export function lbUrlForFilm(f){
+function lbUrlForFilm(f){
   if(!f) return null;
   // Guard: el pipeline marca slugs sin resolver con "⚠️ LB PENDIENTE" — un marcador
   // NUNCA es un slug (produciría un href roto). Solo se acepta un slug plausible.
@@ -1493,7 +1493,7 @@ export function lbUrlForFilm(f){
   return lbUrl(f.title);
 }
 
-export function lbLink(title,film){
+function lbLink(title,film){
   const url=film?lbUrlForFilm(film):lbUrl(title);
   if(!url) return'';
   return`<a class="c-lb pel-sheet-lb" href="${url}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>`;
@@ -1535,7 +1535,7 @@ export function _genreEN(g) {
 //
 // `opts.prog`: 'cortos' (corto dentro de un bloque) | 'obras' (slot compartido) |
 // null. El texto cambia; la etiqueta es la misma.
-export function _avisosBand(f, opts){
+function _avisosBand(f, opts){
   const rows=[];
   // ROJO primero: lo que INVALIDA se lee antes de lo que matiza (DESIGN 8.4.4).
   // `_cancelled` / `_movedFrom` los sella el loader; acá solo se leen.
@@ -1635,7 +1635,7 @@ function _coord(sc, conCiudad){
   return [c, d, sc.time||''].filter(Boolean).join(' · ');
 }
 
-export function _checkRecalcOpportunity(){
+function _checkRecalcOpportunity(){
   if(!savedAgenda||!savedAgenda.schedule.length) return;
   const planTitles=new Set(savedAgenda.schedule.map(s=>s._title));
   const candidates=[...watchlist].filter(t=>!planTitles.has(t)&&!watched.has(t));
@@ -1662,7 +1662,7 @@ export function _removePlanItem(title){
   saveSavedAgenda();
 }
 
-export function checkPlanConflictsWithBlock(day, fromStr, toStr){
+function checkPlanConflictsWithBlock(day, fromStr, toStr){
   if(!savedAgenda||!savedAgenda.schedule.length) return[];
   const bFrom=toMin(fromStr), bTo=toMin(toStr);
   return savedAgenda.schedule.filter(s=>{
@@ -1672,7 +1672,7 @@ export function checkPlanConflictsWithBlock(day, fromStr, toStr){
   });
 }
 
-export function invalidateCalcResult(){
+function invalidateCalcResult(){
   // Called when availability changes — resets result prompt
   const _wrap=document.getElementById('ag-result-wrap');
   if(_wrap) _wrap.style.display='none';

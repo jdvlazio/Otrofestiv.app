@@ -1273,7 +1273,7 @@ export function renderSavedAgendaHTML(state, consensus){
   }
 }
 
-export function _renderSavedAgendaHTML(state, consensus){
+function _renderSavedAgendaHTML(state, consensus){
   const {savedAgenda, FILMS, watched, watchlist, _activeFestId, FESTIVAL_DATES} = state.snapshot();
   if(festivalEnded()){
     // ── Modo Recuerdo (RFC docs/RFC-modo-recuerdo.md) ──
@@ -1481,7 +1481,7 @@ function _dwCard(state,{title,poster,posterSVG,rating,off}){
 // renderDiaryWall — el muro CONTINUO de lo visto (Juan, 18 ago: los días
 // «limitan la visual y generan muchos espacios»). Una sola retícula en orden
 // cronológico, sin separadores: la tapa manda y los afiches casi se tocan.
-export function renderDiaryWall(state){
+function renderDiaryWall(state){
   const {FILMS, savedAgenda, filmRatings, notWatched} = state.snapshot();
   const eff=effectiveWatched();
   const all=(savedAgenda&&savedAgenda.schedule)||[];
@@ -1516,7 +1516,7 @@ export function renderDiaryWall(state){
   return`<div class="dw-grid">${cards.map(c=>_dwCard(state,c)).join('')}</div>`;
 }
 
-export function renderDiarioSection(state){
+function renderDiarioSection(state){
   // Estado REPLEGADO dentro de Mi Plan (Juan, 18 ago): alto FIJO — no crece con
   // lo visto, así no le come el scroll al calendario ni a Sugerencias, que son
   // lo único accionable. La tira insinúa la colección; el Diario vive detrás.

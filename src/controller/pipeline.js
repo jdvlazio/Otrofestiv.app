@@ -172,7 +172,7 @@ export function _getProgramaPhase(){
   return{tabs,default:'hoy'};
 }
 
-export function _seccionPillLabel(sec){
+function _seccionPillLabel(sec){
   // Pill: emoji + label localizado (EN→SECTION_EN, ES→original con emoji).
   if(!sec||sec==='all') return sec;
   return _secLabelFull(sec);
@@ -348,7 +348,7 @@ export function closeLangDropdown(){
   document.removeEventListener('click', langOutside);
 }
 
-export function langOutside(e){
+function langOutside(e){
   // El dropdown vive en <body> mientras está abierto, no dentro de .lang-toggle:
   // chequear contra el dropdown y el trigger directamente.
   const dd=document.getElementById('lang-dropdown');

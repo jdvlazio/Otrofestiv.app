@@ -87,7 +87,7 @@ export function _getDisplayName(){
   return null;
 }
 
-export async function _saveDisplayName(name){
+async function _saveDisplayName(name){
   const n=name.trim().slice(0,30);
   if(!n) return;
   localStorage.setItem('otrofestiv_display_name',n);

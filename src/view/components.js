@@ -262,7 +262,7 @@ function _emWidth(str, upper){
 // no logra evitarlo —la regla de Juan prohíbe dejar «de» al final, así que «DE
 // CORTOMETRAJES» viaja pegado— se fija el ancho con textLength y el navegador
 // condensa unos puntos. Solo se activa ahí; el resto se dibuja sin tocar.
-export function _lineaSVG(txt, {x, y, fs, ls, fill, boxW, upper}){
+function _lineaSVG(txt, {x, y, fs, ls, fill, boxW, upper}){
   const est=(_emWidth(txt,upper)*fs+txt.length*ls)*1.12;
   const tope=boxW*0.98;
   const ajuste=est>tope?` textLength="${(+tope).toFixed(2)}" lengthAdjust="spacingAndGlyphs"`:'';
@@ -1035,7 +1035,7 @@ export function _sortFestivals(entries, activeFestId){
 // mal (Tercer Tiempo Fest), el config pone un `displayName` explícito. NO confundir
 // con `shortName` (slug MAYÚSCULA para nombres de archivo en share.js).
 export function festivalShortName(cfg){ return cfg.displayName || (cfg.name||'').split(' ')[0]; }
-export function festivalLabel(cfg){ const n=festivalShortName(cfg); return cfg.year?`${n} · ${cfg.year}`:n; }
+function festivalLabel(cfg){ const n=festivalShortName(cfg); return cfg.year?`${n} · ${cfg.year}`:n; }
 
 // festivalSeasonYear — el año "vigente" que ancla el header del selector UNA sola
 // vez (minimalismo: no repetir 2026 en cada fila). Es el año más reciente entre
@@ -1120,7 +1120,7 @@ function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang, review}){
 // mandó al usuario a las tiendas, así que web y app se ven distinto a propósito.
 // `until` la apaga sola: un permiso temporal que hay que acordarse de revocar
 // es, en la práctica, un permiso permanente.
-export function _enRevision(cfg){
+function _enRevision(cfg){
   const r=cfg&&cfg.review;
   if(!r||!r.key) return false;
   if(r.until&&new Date()>new Date(r.until+'T23:59:59')) return false;

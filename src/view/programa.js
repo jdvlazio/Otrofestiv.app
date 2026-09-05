@@ -54,7 +54,7 @@ export function renderProgramaChipsHTML(state){
 // Un aviso por CIUDADES no tiene `title`: su clave estable es `id`. Sin esto, la
 // clave sería «…\0undefined» y descartar un aviso ocultaría cualquier otro sin título.
 export function _noticeKey(title){ return (_activeFestId||_DEFAULT_FEST_ID)+String.fromCharCode(0)+title; }
-export function noticeId(n){ return n.id||n.title||''; }
+function noticeId(n){ return n.id||n.title||''; }
 
 // _noticeAfecta — ¿este aviso alcanza a ESTA función? Es el alcance del aviso, el
 // mismo que sella el loader: por CIUDADES, o por título (+fecha si la trae).
@@ -136,7 +136,7 @@ export function renderNoticesBanner(){
 
 
 // ── Step 6g: render dispatchers programa + pelicula (8 fns). ──────────────────
-export function renderProgramaList(){
+function renderProgramaList(){
   const el=document.getElementById('programa-list');
   if(!el) return;
   el.scrollTop=0;// always reset before re-render
@@ -159,7 +159,7 @@ function vacioDelDia(){
   return emptyState(ICONS.search, t('filter_sin_actividades'), t('empty_filtros'));
 }
 
-export function renderProgramaListHTML(state){
+function renderProgramaListHTML(state){
   try{
   const {FILMS, _activeFestId, watchlist} = state.snapshot();
   let films=FILMS.filter(f=>f.day===activeDay);
@@ -314,13 +314,13 @@ export function renderProgramaChips(){
   el.innerHTML=renderProgramaChipsHTML(state);
 }
 
-export function _renderExploreLista(){
+function _renderExploreLista(){
   const el=document.getElementById('programa-list');
   if(!el) return;
   el.innerHTML=_renderExploreListaHTML(state);
 }
 
-export function _renderExploreListaHTML(state){
+function _renderExploreListaHTML(state){
   try{
   const {FILMS, _activeFestId, watchlist} = state.snapshot();
   const titleMap={};
@@ -393,7 +393,7 @@ export function renderPeliculaView(){
   if(hasEntries) requestAnimationFrame(()=>window.dispatchEvent(new Event('scroll')));// trigger lazy load
 }
 
-export function renderPeliculaViewHTML(state){
+function renderPeliculaViewHTML(state){
   const {FILMS, watched, watchlist} = state.snapshot();
   const _dayFilms = activeDay==='all' ? FILMS : FILMS.filter(f=>f.day===activeDay);
   const titleMap={};
@@ -676,7 +676,7 @@ function _palmPoster(entry, accent, tira){
   return `<div class="palm-po">${inner}${laurel}${estrellas}</div>`;
 }
 
-export function renderPalmaresBandHTML(festId){
+function renderPalmaresBandHTML(festId){
   // REPLEGADO, como el Diario (Juan, 23 ago 2026): la primera versión desplegaba
   // el palmarés entero encima de la cartelera y había que navegar media pantalla
   // para llegar al programa. La banda + la tira ocupan ~110px y cuentan lo mismo:
@@ -744,7 +744,7 @@ export function renderPalmaresHTML(festId){
 }
 
 
-export function renderSbar(){
+function renderSbar(){
   // Reclasificada Group II durante 6c: no usa innerHTML para contenido —
   // crea botones con createElement + appendChild + handlers programáticos
   // (.onclick = fn). Split E1a no aplica sin cambiar byte-identity del DOM.

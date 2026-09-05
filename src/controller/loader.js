@@ -717,7 +717,7 @@ export function dismissSplash(){
 
 // ── el filtro de audiencia y su interruptor ─────────────────────────────────
 // Un solo dueño para las dos direcciones: al cargar (arriba) y al conmutar.
-export function _filtrarPorAudiencia(films){
+function _filtrarPorAudiencia(films){
   return showPress ? films : films.filter(f=>f.audience!=='press');
 }
 
@@ -775,7 +775,7 @@ export function togglePressScreenings(){
 
 // Lee la preferencia guardada de ESTE festival. La llama loadFestival antes de
 // publicar FILMS, para que la primera pintura ya sea la correcta.
-export function _restaurarPrensa(cfg){
+function _restaurarPrensa(cfg){
   let v = false;
   v = storage.getShowPress(cfg.storageKey);
   showPress = v;
