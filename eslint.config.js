@@ -46,6 +46,23 @@ module.exports = [
     },
     rules: {
       'no-undef': 'error',
+      // no-unused-vars (5 sep 2026, auditoría de salud): lo que se asigna y
+      // nadie lee es deuda que no falla. Excepciones DE ARQUITECTURA, no de
+      // comodidad: `_x` es un parámetro que la firma exige y el cuerpo no usa;
+      // `_` es el descarte del omit `{[k]:_, ...rest}`; catch(e) sin leer `e`
+      // es idiomático acá. main.js va aparte, abajo.
+      'no-unused-vars': ['error', {
+        args: 'after-used', argsIgnorePattern: '^_', varsIgnorePattern: '^_$',
+        caughtErrors: 'none', ignoreRestSiblings: true,
+      }],
     },
+  },
+  {
+    // main.js y calc.js (la casa de _SCHED_PURE_FNS) importan por NOMBRE lo que el worker resuelve con eval(name)
+    // (_SCHED_PURE_FNS → .toString()); para no-unused-vars son imports sin
+    // uso y son justo lo contrario. [sched-pure-fns] y [worker-deps] en
+    // validate.py vigilan ese contrato; acá la regla se apaga solo en ese archivo.
+    files: ['src/main.js', 'src/controller/calc.js'],
+    rules: { 'no-unused-vars': 'off' },
   },
 ];

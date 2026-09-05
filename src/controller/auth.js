@@ -9,7 +9,6 @@ import { t } from '../i18n/i18n.js';
 import { onWindowLoad } from '../util/ready.js';
 
 // _sb/_sbUser viven en main.js (backing del STATE BRIDGE); aquí solo el flag interno.
-let _sbReady=false;
 const _SB_URL='https://eytxrvbnwzxuedbmnnqr.supabase.co';
 const _SB_KEY='sb_publishable_-edEGNPRmpsRy7ThJMWtdw_bs6IVZSC';
 
@@ -57,7 +56,6 @@ export function _sbInit(){
     _sb.auth.getSession().then(({data:{session}})=>{
       _sbUser=session?.user??null;
       if(session?.access_token) try{ _sb.realtime.setAuth(session.access_token); }catch(e){} // token al socket de Realtime (cold start)
-      _sbReady=true;
       _sbUpdateUI();
       // Sin auth anónima (Camino A). La identidad es SOLO la sesión de email (opt-in).
       // Antes, signInAnonymously() abría una sesión de dispositivo que pisaba el slot

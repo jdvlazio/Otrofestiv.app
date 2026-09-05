@@ -417,7 +417,7 @@ export async function submitOTP(){
   if(!token||token.length<6){msg.textContent=t('auth_cod_hint');return;}
   btn.disabled=true;btn.textContent=t('auth_verificando');
   try{
-    const{data,error}=await _sb.auth.verifyOtp({email,token,type:'email'});
+    const{error}=await _sb.auth.verifyOtp({email,token,type:'email'});
     if(error){
       msg.textContent=t('toast_cod_mal');
       btn.disabled=false;btn.textContent=t('av_confirmar');

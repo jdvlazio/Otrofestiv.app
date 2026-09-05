@@ -6,7 +6,6 @@
 // detección-festival). Escribe bridge globals en runtime (no eval-time).
 
 import { FESTIVAL_CONFIG, NOTICES, mergeFestivalSections } from '../config.js';
-import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
 import {DAY_ABBR, DAY_NUM, _classifyFestival} from '../view/components.js';
 import {DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly} from '../view/helpers.js';

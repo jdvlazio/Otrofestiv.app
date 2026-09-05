@@ -19,7 +19,6 @@ import { state } from "../state/state.js";
 export function makeProgramPoster(state, title, duration, section, opts){
   const {FILMS, _lang} = state.snapshot();
   const filmSec=section||(FILMS.find(f=>f.title===title)?.section)||'';
-  const sec=filmSec.toLowerCase();
 
   // ── Color de sección — MISMA fuente que el marco editorial ────────────────
   // El acento del generativo debe coincidir con _sectionColor() (lo que usa el
@@ -391,7 +390,6 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma, k
   // Es la doctrina de color ambiental, aplicada al generativo.
   const VW=120, VH=180, U=VW/8;              // 15
   const M=0.75*U, CW=VW-2*M;                 // margen 11.25 · caja de contenido 97.5
-  const esc=escXML;
   const round=n=>+n.toFixed(2);
   const FONT='-apple-system,BlinkMacSystemFont,sans-serif';
 
@@ -605,7 +603,7 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma, k
 // toma helpers (slotPosterParts), dueño del modelo de póster.
 // Devuelve MARKUP SVG INLINE, no data-uri: contiene <image> y un SVG dentro de
 // <img> tiene prohibido cargar recursos — los afiches saldrían rotos.
-export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
+export function makeSharedSlotSVG({modules, secLabel:_secLabel, accent, dato}){
   const U=15, VW=120, VH=180, M=11.25, CW=VW-2*M, NEGRO='#0B0A08';
   const r=n=>+n.toFixed(2);
   // slice y NO meet (26 ago): meet dejaba bandas negras en todo afiche que no

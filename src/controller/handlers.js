@@ -3,7 +3,7 @@
 // mutators (toggleWL/setDelay/...) + filters (filterByX/setProgramaX) + composites
 // (_closePelAndRemove/_navTo/...) + scenario ops. Importa overlays + sheets-
 // controller + pipeline + persistence + calc + view. normTitle/selectedIdx vía
-// bridge. _ctaRemovedTimer module-local; PROGRAMA_CHIPS const privado.
+// bridge. _ctaRemovedTimer module-local;
 
 import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS } from '../config.js';
 import { ICONS, parseProgramTitle } from '../view/components.js';
@@ -27,25 +27,6 @@ import { _removePlanItem, closePelSheet, openConflictSheet, openCortoSheet, open
 
 // ── module-local + const privado ─────────────────────────────────────────────
 let _ctaRemovedTimer=null;
-const PROGRAMA_CHIPS=[
-  {id:'all',      label:'Todo',              match:null},
-  {id:'colombia', label:'🇨🇴 Colombia',     match:s=>s.includes('Colombia')},
-  {id:'ibero',    label:'🌎 Iberoamérica',  match:s=>s.includes('Iberoamérica')},
-  {id:'inter',    label:'🌍 Internacional',  match:s=>s.includes('Internacional')},
-  {id:'spaces',   label:'⏳ (s)paces',      match:s=>s.includes('paces')},
-  {id:'afro',     label:'✊ Afro',           match:s=>s.includes('Afro')},
-  {id:'indigena', label:'🪶 Indígena',       match:s=>s.includes('Indígena')},
-  {id:'barrios',  label:'🏆 Barrios',        match:s=>s.includes('Barrios')},
-  {id:'costas',   label:'🌊 Costas',         match:s=>s.includes('Costas')},
-  {id:'rivers',   label:'🎖️ Ben Rivers',    match:s=>s.includes('Rivers')},
-  {id:'retro',    label:'📽️ Retrospectiva', match:s=>s.includes('Retrospectiva')},
-  {id:'midnight', label:'🌙 Medianoche',    match:s=>s.includes('Medianoche')},
-  {id:'españa',   label:'🇪🇸 Muestra España',  match:s=>s.includes('España')},
-  {id:'suiza',    label:'🇨🇭 Muestra Suiza',   match:s=>s.includes('Suiza')},
-  {id:'argentina',label:'🇦🇷 Muestra Argentina',match:s=>s.includes('Argentina')},
-  {id:'brasil',   label:'🇧🇷 Casa Brasil',      match:s=>s.includes('Brasil')},
-  {id:'especial', label:'⭐ Especiales',     match:s=>s.includes('Especiales')||s.includes('Animación')||s.includes('Indias')},
-];
 
 export function toggleWL(title,e){
   if(e) e.stopPropagation();
@@ -431,7 +412,7 @@ export function addSuggestion(title,day,time,opts){
   opts=opts||{};
   title=normTitle(title);
   // 1. READ
-  const {FILMS, _activeFestId, savedAgenda, watchlist, watched} = state.snapshot();
+  const {FILMS, _activeFestId, watchlist, watched} = state.snapshot();
   // 2. GUARD
   if(festivalEnded()) return;
   // 3. MUTATE (step 1): Add to watchlist if not already there.
@@ -562,7 +543,7 @@ export function forceInclude(title){
   showToast(t('plan_sin_horario'),'info');
 }
 
-export function togglePriority(title,cost){
+export function togglePriority(title,_cost){
   // 1. READ
   const {prioritized, watchlist, watched, PRIO_LIMIT} = state.snapshot();
   // 2. GUARD + 3. MUTATE — branch A: unprioritize
@@ -606,7 +587,7 @@ export function swapPriority(removeTitle, addTitle){
 export function markWatchedFromPlan(title, day, time, venue, duration, e){
   if(e) e.stopPropagation();
   // 1. READ
-  const {FILMS, watched, watchlist} = state.snapshot();
+  const {watched, watchlist} = state.snapshot();
   // 2. GUARD + 3. MUTATE — branch A: desmarcar (ya watched)
   if(watched.has(title)){
     state.batchUpdate({
@@ -652,7 +633,7 @@ export function confirmReplace(removedTitle,newTitle,day,time,isScenario){
     const btn=document.getElementById('replace-ok');
     if(btn) btn.onclick=()=>{
       // Handler real — fresh snapshot al ejecutarse (post user-click)
-      const {FILMS, savedAgenda, watchlist} = state.snapshot();
+      const {watchlist} = state.snapshot();
       modal.remove();
       const screen=_pickScreen(newTitle,day,time);
       if(!screen){
@@ -785,7 +766,7 @@ export function selectFromDetail(el){
   renderAgenda();
 }
 
-export function toggleFilmAlternatives(key,title,day,time){
+export function toggleFilmAlternatives(key,_title,_day,_time){
   if(_expandedFilm===key){_expandedFilm='';renderAgenda();return;}
   _expandedFilm=key;
   // Marcar hint como visto la primera vez que se usa
@@ -919,7 +900,6 @@ export function setProgramaChip(chipId){
     el.classList.toggle('on',el.dataset.chip===chipId);
   });
   // Guardar la función de match — soporta múltiples secciones
-  const chip=(_currentChips.length?_currentChips:PROGRAMA_CHIPS).find(c=>c.id===chipId);
   // Chips ocultos — activeSec siempre directo
   _programaChipMatchFn=null;
   activeSec='all';

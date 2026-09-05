@@ -161,7 +161,7 @@ function vacioDelDia(){
 
 function renderProgramaListHTML(state){
   try{
-  const {FILMS, _activeFestId, watchlist} = state.snapshot();
+  const {FILMS, watchlist} = state.snapshot();
   let films=FILMS.filter(f=>f.day===activeDay);
   if(activeVenue!=='all') films=films.filter(f=>venueMatches(f.venue,activeVenue));
   if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
@@ -216,7 +216,6 @@ function renderProgramaListHTML(state){
       // se dice en gris (`.plist-item.is-cancelled`), y le siguen respondiendo el
       // badge y el tachado de la meta, que sí son señales propias suyas.
       const itemStyle=passed&&!isNow&&!festivalEnded()?'opacity:.45':'';
-      const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const _stk=_programaStack(f);
       return`<div class="plist-item js-open-pel${f._cancelled?' is-cancelled':''}" style="${itemStyle}" data-title="${escXML(f.title)}">
         ${_stk||_plistPosterHtml(f,src)}
@@ -259,7 +258,6 @@ export function _renderProgramaContent(resetScroll=false){
   // por estado (toggle WL/prio, sync nube) queda false → preserva el scroll del usuario.
   const grid=document.getElementById('grid');
   const lista=document.getElementById('programa-list');
-  const cntEl=document.getElementById('cnt');
   if(!grid||!lista) return;
   renderNoticesBanner();
   // ── El palmarés vive en PROGRAMA, encima de la cartelera ────────────────
@@ -322,7 +320,7 @@ function _renderExploreLista(){
 
 function _renderExploreListaHTML(state){
   try{
-  const {FILMS, _activeFestId, watchlist} = state.snapshot();
+  const {FILMS, watchlist} = state.snapshot();
   const titleMap={};
   FILMS.forEach(f=>{
     if(!titleMap[f.title]){titleMap[f.title]={film:f,screenings:[]};}
@@ -356,7 +354,6 @@ function _renderExploreListaHTML(state){
   return entries.map(({film:f,screenings})=>{
     const inWL=watchlist.has(f.title);
     const isEvent=f.type==='event';
-    const safeT=f.title.replace(/\'/g,"\\'").replace(/"/g,'&quot;');
     const{displayTitle:dt}=parseProgramTitle(f.title);
     const src=isEvent?'':getFilmPoster(f)||'';
     const allPast=screenings.every(s=>screeningPassed(s));
@@ -460,7 +457,6 @@ function renderPeliculaViewHTML(state){
     // ficha y la vista por día. Aquí la card es la OBRA, no la función.
     const allCancelled=screenings.length>0&&screenings.every(s=>s._cancelled);
     const posterSrc=getFilmPoster(f);
-    const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
     const{displayTitle}=parseProgramTitle(f.title);
     const progBadge='';//REMOVED: no count badge
     const _ended=festivalEnded();
@@ -534,7 +530,7 @@ function renderPeliculaViewHTML(state){
 export function render(){
   // Group II Tier 3 (p6c): branchy multi-dispatcher con 4 early returns.
   // Split impráctico — body se queda monolítico con state.snapshot() destructure.
-  const {FILMS, _activeFestId, watched, watchlist} = state.snapshot();
+  const {FILMS, watched, watchlist} = state.snapshot();
   if(activeView==='agenda') return;
   // Si estamos en Cartelera con el nuevo sistema, _renderProgramaContent lo maneja
   if(activeView==='day'&&document.getElementById('programa-mode-bar')?.style.display!=='none'){
@@ -553,14 +549,11 @@ export function render(){
   const grid=document.getElementById('grid');
   if(!films.length){grid.innerHTML=vacioDelDia();return;}
   // ── Vista horario: poster-grid 3 col + overlay de hora ──
-  grid.innerHTML='<div class="poster-grid">'+films.map((f,i)=>{
-    const isProg=f.is_cortos;
-    const isEvent=f.type==='event';
+  grid.innerHTML='<div class="poster-grid">'+films.map(f=>{
     const passed=screeningPassed(f);
     const inWL=watchlist.has(f.title),inW=watched.has(f.title);
     const isNow=isNowShowing(f);
     const isQa=isNow&&isQaOnlyNow(f);
-    const safeT=f.title.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
     const posterSrc=getFilmPoster(f);
     const _cardBg2='';
     const posterImg=posterSrc
@@ -590,7 +583,6 @@ return`<div class="poster-card js-open-pel${f._cancelled?' is-cancelled':''}${in
   // Flow progress bar belongs in INTERESES/PLANEAR/MI PLAN tabs, not in PROGRAMA.
   if(activeView==='day'){
     const _cStepper=document.getElementById('cartelera-stepper');
-    const _cCta=document.getElementById('cartelera-cta');
     if(_cStepper) _cStepper.style.display='none';// always hidden in day/hora view
   }
 }
@@ -637,10 +629,9 @@ export function _palmBuscar(titulo){
   return null;
 }
 
-function _palmPoster(entry, accent, tira){
+function _palmPoster(entry, accent, _tira){
   const {watched, filmRatings}=state.snapshot();
   const _h=entry.obra?_palmBuscar(entry.obra):null;
-  const f=_h?(_h.tipo==='film'?_h.film:_h.corto):null;
   // Prioridad: afiche de la obra en el catálogo → afiche propio de la entrada del
   // palmarés (una premiada que no tenemos pero cuyo póster oficial sí existe) →
   // Forma A. La Forma A es el último recurso, no el primero.

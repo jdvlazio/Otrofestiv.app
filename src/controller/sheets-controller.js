@@ -22,9 +22,9 @@ import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js
 import { runCalc } from './calc.js';
 import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
-import { dayFullyPassed, durEstimada, festivalEnded, parseDur, toMin } from '../domain/time.js';
-import { screeningPassed, effectiveDuration, blockDuration } from '../domain/film.js';
-import { sameEntry, isScreeningBlocked, screensConflictReason, plannableScreens } from '../domain/schedule.js';
+import { dayFullyPassed, durEstimada, festivalEnded, toMin } from '../domain/time.js';
+import { screeningPassed, blockDuration } from '../domain/film.js';
+import { sameEntry, screensConflictReason, plannableScreens } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
 // Vivía acá un driver rAF que pisaba radio+opacidad por frame. Medido en device
 // con el video de Juan (7 de 7 aperturas): progresaba hasta ~68%, se congelaba
@@ -191,15 +191,12 @@ export function openPelSheet(title){
         :`<div class="pel-sheet-poster-ph" aria-hidden="true">🎬</div>`;
     }
   }
-  const{displayTitle}=parseProgramTitle(f.title);
   const secLabel=_secLabel(f.section);
   // ANCLAJE: ¿esta obra comparte función con otra? (`_slotKey` lo marca el
   // loader en los festivales que declaran `sharedSlotIsOneScreening`).
   const _anclada=screenings.some(s=>s._slotKey&&FILMS.some(o=>o._slotKey===s._slotKey&&o.title!==f.title));
   // cuántas COMPAÑERAS tiene: títulos distintos que comparten su slot.
   const totalFn=FILMS.filter(fi=>fi.title===f.title).length;
-  const unica=totalFn===1;
-  const DAY_ABB=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
   // Solo funciones AGENDADAS (con día/hora/sede) generan fila de screening. Un
   // bloque-catálogo de cortos sin sesión asignada (is_cortos+unscheduled) no tiene
   // función → 0 filas (abajo se muestra su lista de cortos). Los films normales
@@ -299,10 +296,8 @@ export function openPelSheet(title){
     cortosHtml=`      <div class="sec-hdr sm">${ICONS.film} <span>${t('label_programa')}</span> <span class="count-badge cb-neutral">${f.film_list.length}</span></div>
       <div class="pel-sheet-cortos-wrap">${cortoItems}</div>`;
   }
-  const wlLabel=inWL?`${ICONS.heartFill} ${t('cta_en_intereses')}`:`${ICONS.heart} ${t('nav_intereses')}`;
 
   const _inPlan=savedAgenda&&savedAgenda.schedule.some(s=>s._title===f.title);
-  const _planEntry=_inPlan?savedAgenda.schedule.find(s=>s._title===f.title):null;
   const _ps=document.getElementById('pel-sheet');
   if(_ps) _ps.scrollTop=0;
   _pushSheetState();
@@ -749,7 +744,7 @@ export function _openCombinedFilmSheet(filmData){
   if(pelSheet&&pelSheet.classList.contains('open')){
     _cortoParentHtml=inner.innerHTML;
   }
-  const{title='',director='',year='',duration='',flags='🌐',country='',lbSlug='',poster:_fPoster='',posterSource:_fPS=''}=filmData;
+  const{title='',director='',year='',duration='',flags='🌐',lbSlug='',poster:_fPoster='',posterSource:_fPS=''}=filmData;
   const posterUrl=_fPoster?((_fPoster.startsWith('http')||_fPoster.startsWith('/assets/'))?_fPoster:TMDB_IMG+_fPoster):getPosterSrc(title,false)||null;
   const _sec4=(()=>{const _p=FILMS.find(f=>f.film_list&&f.film_list.some(c=>c.title===title));return _p?.section||'';})();
   const _pp4=itemPosterParts({title, poster:posterUrl, posterSource:_fPS}, _sec4, 'pel-sheet-poster', {header:true});
