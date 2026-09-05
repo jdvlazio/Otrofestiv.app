@@ -1049,13 +1049,17 @@
      "director": "Pascal Frederic Archimede, Dimitry Zandronis",
      "country": "Guadeloupe",
      "flags": "🇬🇵",
+     "year": 2025,
      "duration": "52 min",
      "title_en": "Sisters in Destiny: Angela Davis & Gerty Archimede",
+     "genre": "Documental",
      "synopsis_en": "Two women. Two continents. One shared fight. From Guadeloupe to the United States, the parallel paths of Angela Davis and Gerty Archimède trace a common struggle for justice.",
+     "synopsis_lang": "es",
      "poster": "/assets/qaff/sisters-in-destiny-angela-davis-gerty-archimede.jpg",
      "posterSource": "custom",
      "lbSlug": "sisters-in-destiny-angela-davis-gerty-archimede",
-     "tmdb_id": 1742412
+     "tmdb_id": 1742412,
+     "synopsis": "Dos mujeres. Dos continentes. Una misma lucha. Desde Guadalupe hasta Estados Unidos, Sisters in Destiny explora los caminos entrelazados de Gerty Archimède, pionera del feminismo y la lucha anticolonial, y Angela Davis, símbolo global de los derechos civiles y la resistencia. A través de sus activismos, sus voces y su encuentro histórico, la película descubre una poderosa historia de hermandad negra, resiliencia y legado — un capítulo olvidado que aún resuena hoy."
     }
    ]
   },
@@ -1458,7 +1462,9 @@
      "synopsis_lang": "es",
      "poster": "/assets/qaff/manman-chadwon.jpg",
      "posterSource": "custom",
-     "synopsis": "Manman Chadwon\" — un himno a la feminidad fantástica, a la vida, a la libertad y a la metamorfosis, a la vez íntimo y revolucionario. Es un canto sensorial, una reflexión onírica sobre la condición femenina dentro de un mundo masculino destructor. Un viaje poético que traza la silueta roja y cubierta de espinas de un ser mitológico que, desde su nacimiento hasta su búsqueda de liberación, se transforma a través de los lugares que atraviesa. ¿Existe realmente o es un espejismo, una leyenda que murmuran quienes creen haberla visto?"
+     "synopsis": "Manman Chadwon\" — un himno a la feminidad fantástica, a la vida, a la libertad y a la metamorfosis, a la vez íntimo y revolucionario. Es un canto sensorial, una reflexión onírica sobre la condición femenina dentro de un mundo masculino destructor. Un viaje poético que traza la silueta roja y cubierta de espinas de un ser mitológico que, desde su nacimiento hasta su búsqueda de liberación, se transforma a través de los lugares que atraviesa. ¿Existe realmente o es un espejismo, una leyenda que murmuran quienes creen haberla visto?",
+     "lbSlug": "manman-chadwon",
+     "tmdb_id": 1742406
     }
    ]
   },
@@ -1947,13 +1953,17 @@
      "director": "Pascal Frederic Archimede, Dimitry Zandronis",
      "country": "Guadeloupe",
      "flags": "🇬🇵",
+     "year": 2025,
      "duration": "52 min",
      "title_en": "Sisters in Destiny: Angela Davis & Gerty Archimede",
+     "genre": "Documental",
      "synopsis_en": "Two women. Two continents. One shared fight. From Guadeloupe to the United States, the parallel paths of Angela Davis and Gerty Archimède trace a common struggle for justice.",
+     "synopsis_lang": "es",
      "poster": "/assets/qaff/sisters-in-destiny-angela-davis-gerty-archimede.jpg",
      "posterSource": "custom",
      "lbSlug": "sisters-in-destiny-angela-davis-gerty-archimede",
-     "tmdb_id": 1742412
+     "tmdb_id": 1742412,
+     "synopsis": "Dos mujeres. Dos continentes. Una misma lucha. Desde Guadalupe hasta Estados Unidos, Sisters in Destiny explora los caminos entrelazados de Gerty Archimède, pionera del feminismo y la lucha anticolonial, y Angela Davis, símbolo global de los derechos civiles y la resistencia. A través de sus activismos, sus voces y su encuentro histórico, la película descubre una poderosa historia de hermandad negra, resiliencia y legado — un capítulo olvidado que aún resuena hoy."
     }
    ]
   },
@@ -2098,7 +2108,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-04T16:08:11",
+  "fecha": "2026-09-04T20:47:06",
   "plan_sha": "6a649a44be31e1b6",
   "paso": 5,
   "cmd": "python3 pipeline/ensamblar.py qaff-2026"
