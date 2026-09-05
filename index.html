@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609051622">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609051622">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609051705">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609051705">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -464,9 +464,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .auth-btn.signed-in .auth-avatar{display:flex}
 .sync-dot{position:absolute;bottom:0;right:0;width:7px;height:7px;border-radius:50%;border:1.5px solid transparent;display:none} /* anillo transparente: sobre glass no hay fondo sólido que imitar */
 /* Estados del sync-dot (F0.5). Antes _sbShowSyncDot seteaba sync-ok/sync-err sin CSS → el punto nunca fue visible. */
-.sync-dot.sync-live{display:block;background:var(--green)}   /* canal Realtime conectado: sync en vivo */
-.sync-dot.sync-dirty{display:block;background:var(--amber)}  /* cambio local pendiente de subir */
-.sync-dot.sync-err{display:block;background:var(--red)}      /* la última subida falló */
+.sync-dot.sync-live{display:block;background:var(--green)}      /* la última subida falló */
 
 .lang-toggle{position:relative;margin-left:var(--sp-2);flex-shrink:0}
 .lang-trigger{display:flex;align-items:center;gap:var(--sp-1);background:none;border:none;cursor:pointer;padding:var(--sp-1);border-radius:var(--r-sm);-webkit-tap-highlight-color:transparent}
@@ -580,8 +578,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .main-nav-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;padding:var(--sp-2) var(--sp-1) var(--sp-3);cursor:pointer;color:var(--white-60);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-semi);letter-spacing:.3px;text-align:center;transition:color var(--tr-base),border-color var(--tr-base);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-1);height:52px;box-sizing:border-box;position:relative}
 .main-nav-tab:active{opacity:.6}
 .main-nav-tab.on{color:var(--amber);border-bottom-color:var(--amber)}
-.main-nav-tab .tab-badge{position:absolute;top:4px;right:calc(50% - 18px);min-width:16px;height:16px;border-radius:var(--r-pill);background:var(--amber);color:var(--black);font-size:var(--t-xs);font-weight:var(--w-display);line-height:16px;text-align:center;padding:0 4px;pointer-events:none;box-sizing:border-box;display:none}
-.main-nav-tab .tab-badge.visible{display:block}
 .main-nav-tab:hover:not(.on){color:var(--white)}
 .main-nav-ico{font-size:var(--t-icon);line-height:1;height:20px;display:flex;align-items:center;justify-content:center}
 .main-nav-lbl{font-size:var(--t-label);letter-spacing:.08em;text-transform:uppercase;font-family:var(--font);font-weight:var(--w-bold)}
@@ -657,18 +653,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    Arriba no hay nada que tocar y el aviso sigue a la vista. */
 .prio-toast.arriba{bottom:auto;top:calc(max(env(safe-area-inset-top),12px) + 12px)}
 .toast-action-btn{background:none;border:none;color:var(--amber);font-family:var(--font);font-size:var(--t-base);font-weight:var(--w-bold);cursor:pointer;padding:0;white-space:nowrap;flex-shrink:0}
-
-/* ── Badges ── */
-
-
-/* ── PALMARÉS ─────────────────────────────────────────────────────────────
-   Superficie del festival terminado. Todo lleva afiche —menciones incluidas—
-   porque una lista de títulos sueltos al lado de tarjetas con póster se lee
-   como material de segunda. Una premiada que no está en el catálogo NO deja
-   casilla vacía: nace con su afiche propio (Forma A), que es lo que la app ya
-   hace con cualquier obra sin póster. */
-.palm-hdr{padding:var(--sp-4) var(--sp-4) 0}
-.palm-eye{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--amber);font-weight:var(--w-bold)}
 .palm-sub{margin-top:var(--sp-1)}
 .palm-cruce{margin:var(--sp-3) var(--sp-4) 0}
 .palm-cruce b{color:var(--amber)}
@@ -689,21 +673,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .palm-strip{display:flex;align-items:center;padding:var(--sp-2) 0 var(--sp-1);cursor:pointer;min-height:86px}
 .palm-strip-p{width:52px;flex:0 0 52px;position:relative;filter:drop-shadow(-6px 0 12px rgba(0,0,0,.55))}
 .palm-strip-p .palm-po{border-radius:7px;border:1px solid rgba(255,255,255,.06)}
-/* Riel horizontal: mismo gesto que el carrusel del splash — las obras primero,
-   el detalle por categoría después. Escanea igual con 3 categorías que con 30. */
-/* Un solo pie de afiche para el riel y para las menciones: es el mismo objeto
-   —el nombre debajo de una imagen— y solo cambia de tamaño según el contenedor.
-   Dos clases habrían sido dos variantes de gris más, que es justo lo que
-   [dato-linea] existe para frenar. */
-.palm-cap{line-height:1.25;margin-top:var(--sp-2);color:var(--gray2);font-size:var(--t-xs)}
-.palm-mgrid .palm-cap{font-size:var(--t-badge);margin-top:var(--sp-1)}
 .palm-po{position:relative;width:100%;aspect-ratio:2/3;border-radius:var(--r-poster);overflow:hidden;background:var(--surf-2)}
 .palm-po .img-cover{width:100%;height:100%;object-fit:cover;display:block}
 .palm-seen{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,var(--overlay-60));
   color:var(--amber);font-size:var(--t-badge);text-align:center;padding:9px 0 2px;letter-spacing:.6px}
-/* Marca honesta: lo nuestro no se hace pasar por material del festival. */
-
-.palm-div{height:1px;background:var(--bdr);margin:var(--sp-4) var(--sp-4) 0}
 .palm-sec{margin-top:var(--sp-5)}
 .palm-cat{display:flex;align-items:center;gap:var(--sp-2);margin:0 var(--sp-4) var(--sp-3);
   font-size:var(--t-xs);letter-spacing:.1em;text-transform:uppercase;font-weight:var(--w-bold);color:var(--c);line-height:1.3}
@@ -752,14 +725,11 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .count-badge{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 5px;border-radius:var(--r-pill);font-size:var(--t-label);font-weight:var(--w-bold);font-family:var(--font);line-height:1;vertical-align:middle;flex-shrink:0}
 .count-badge.cb-neutral{background:var(--surf-2);color:var(--gray);border:1px solid var(--bdr)}
 .count-badge.cb-amber{background:var(--amber-10);color:var(--amber);border:1px solid var(--amber-30)}
-
-.count-badge.cb-green{background:var(--green-12);color:var(--green);border:1px solid var(--green-20)}
 /* Sin caja: el aviso es una NOTA al margen, no una tarjeta. El recuadro competía
    con las superficies reales (sec-hdr, filas de función) y pesaba más que su
    contenido. Queda el punto ámbar como ancla visual. (Juan, 29 jul 2026) */
 .meta-banner{display:flex;align-items:flex-start;gap:var(--sp-2);margin-bottom:var(--sp-3)}
 .meta-banner-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:var(--sp-1)}
-.meta-banner-label{font-size:var(--t-xs);font-weight:var(--w-display);color:var(--amber);letter-spacing:.5px;text-transform:uppercase}
 .meta-banner-text{font-size:var(--t-sm);color:var(--white);margin-top:2px;line-height:1.4}
 .meta-banner-text span{color:var(--gray)}
 /* ── BANDA AVISOS ────────────────────────────────────────────────────────────
@@ -873,7 +843,7 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 /* ── Sugerencias ── */
 .suggestion-wrap{margin-top:var(--sp-5)}
-.suggestion-day-lbl,.saved-day-lbl{font-size:var(--t-md);font-weight:var(--w-semi);color:var(--white);display:flex;flex-direction:column;align-items:flex-start;gap:var(--sp-1);margin:var(--sp-3) 0 var(--sp-2);padding-left:2px}
+.suggestion-day-lbl{font-size:var(--t-md);font-weight:var(--w-semi);color:var(--white);display:flex;flex-direction:column;align-items:flex-start;gap:var(--sp-1);margin:var(--sp-3) 0 var(--sp-2);padding-left:2px}
 /* Sugerencias en formato largo ("Viernes 5") — igual que el day landmark de
    Mi Plan/Planear (t-md/w-semi/white). El archive (.saved-day-lbl) sigue con
    dayChip: sus spans internos (.day-chip-*) tienen font propio y no se afectan. */
@@ -890,11 +860,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .suggestion-sec{font-size:var(--t-label);color:var(--white-60);font-weight:var(--w-semi);margin-bottom:2px;letter-spacing:.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .suggestion-add{background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-size:var(--t-sm);padding:var(--sp-1) var(--sp-2);cursor:pointer;font-family:var(--font);transition:background var(--tr-base),color var(--tr-base);white-space:nowrap;flex-shrink:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent;min-width:fit-content;text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:3px}
 .suggestion-add:hover{border-color:var(--amber);color:var(--amber)}
-
-/* ── Tira próxima función ── */
-.next-film-strip{background:var(--amber-08);border:1px solid var(--amber-30);border-radius:var(--r);padding:var(--sp-3) var(--sp-4);margin-bottom:var(--sp-3);display:flex;align-items:center;gap:var(--sp-3)}
-
-.next-film-strip.now{background:var(--amber-12);border-color:var(--amber)}
 
 /* ── Strip de prioridades ── */
 .prio-strip{margin-bottom:var(--sp-4)}
@@ -1040,7 +1005,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 .card.program{background:var(--surf-2)!important}
 .card.conflict{opacity:.22;filter:grayscale(.8);cursor:default;pointer-events:none}
 .card.conflict::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 6px,var(--overlay-15) 6px,var(--overlay-15) 7px);border-radius:var(--r);pointer-events:none}
-.card.apertura{border-color:var(--amber-55);box-shadow:0 0 16px var(--amber-10)}
 .card.in-wl{border-color:var(--amber-40)}
 .card.in-watched{border-color:var(--green-20)}
 .card.past-card{opacity:.35}
@@ -1165,20 +1129,6 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
  * Ratio 2:3 → 177px alto. Estándar one-sheet cinematográfico.          */
 /* padding-top 0: el grid arranca a la MISMA distancia del chrome que los demás tabs (guardián tests/geometry.spec.js) */
 .poster-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-2);padding:0 var(--sp-4) calc(var(--nav-h,56px) + max(env(safe-area-inset-bottom),20px) + 16px);transition:opacity var(--tr-fast)}
-/* poster-grid-sep — ahora ES un sec-hdr sm (banda del sistema); aquí solo lo grid-specific. margin-top separa de la sección anterior. */
-/* Mi Plan (Recuerdo) apila UNA grilla POR SECCIÓN. El padding-bottom de .poster-grid
-   es la holgura para la barra de tabs y está pensado para UNA grilla al final: aquí
-   se multiplicaba por sección → ~92px de vacío entre cada una (medido 20 jul 2026,
-   reporte de Juan). Mismo problema y misma solución que el Diario (ver .diary-body
-   .poster-grid). Se anula en todas MENOS la última, que conserva la holgura heredada
-   para no quedar tapada por la barra. */
-.poster-grid.pg-miplan:not(:last-child){padding-bottom:0;margin-bottom:var(--sp-3)}
-/* Recuerdo CON botón "Compartir mi festival": el botón va DESPUÉS de la última grid,
-   así que la holgura de la barra de tabs le toca al BOTÓN, no a la grid. Sin esto, los
-   92px de padding de la última grid abrían un hueco enorme entre pósters y botón
-   (reporte de Juan 21 jul 2026). Acotado vía :has() → solo el Recuerdo (único con
-   .ag-save-btn); el Mi Plan activo y el Programa no se tocan. */
-.saved-agenda:has(.ag-save-btn) .poster-grid.pg-miplan{padding-bottom:0}
 .saved-agenda:has(.ag-save-btn) .ag-save-btn{margin-bottom:calc(var(--nav-h,56px) + max(env(safe-area-inset-bottom),20px) + 16px)}
 .poster-grid-sep{grid-column:1/-1;pointer-events:none;user-select:none;margin-top:var(--sp-3)}
 .poster-grid-sep:first-child{margin-top:0}
@@ -1277,8 +1227,6 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .psp-escalera svg{width:100%;height:100%;display:block}
 
 .psp-swap-zone{display:none}
-.ended-poster .ended-poster-footer{position:absolute;bottom:0;left:0;right:0;padding:var(--sp-5) 6px 7px;background:linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,.55) 45%,transparent);display:flex;flex-direction:column;gap:2px;align-items:center}
-.ended-rate-btn{background:var(--overlay-60);border:1px solid var(--white-20);border-radius:var(--r-pill);color:var(--white);font-size:var(--t-xs);font-weight:var(--w-bold);font-family:var(--font);padding:2px 6px;cursor:pointer}
 .poster-card img{width:100%;height:100%;object-fit:cover;display:block}
 .poster-card.in-wl{outline:2px solid var(--amber-30);outline-offset:-2px}
 .poster-card.in-watched{opacity:.45}
@@ -1290,9 +1238,6 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    es el salto que se lee sin pagar la densidad. */
 .excl-reason{font-size:var(--t-sm);color:var(--gray)}
 .excl-reason.conflict{color:var(--amber-60);font-weight:var(--w-semi)}
-/* Detalle del conflicto por desplazamiento: los minutos (viaje vs hueco) que
-   convierten la advertencia en algo verificable. Secundario al mensaje. */
-.excl-reason-det{font-size:var(--t-xs);color:var(--gray2);margin-top:1px}
 .excl-include-btn{flex-shrink:0;height:28px;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;gap:4px;border-radius:var(--r-pill);border:1px solid var(--bdr);background:none;color:var(--gray);font-size:var(--t-xs);font-weight:var(--w-bold);font-family:var(--font);cursor:pointer;white-space:nowrap;transition:border-color var(--tr-base),color var(--tr-base);-webkit-tap-highlight-color:transparent}
 .poster-card:active{opacity:.85}
 /* Overlay de hora (Por Horario) */
@@ -1548,7 +1493,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .rating-handle{width:36px;height:4px;background:var(--bdr);border-radius:var(--r-handle);margin:0 auto 18px}
 .rating-title{font-size:var(--t-base);color:var(--gray);margin-bottom:var(--sp-1)} /* prompt legible (--gray 4.94:1, no --gray2 2.35 que falla AA) — [sheet-meta-legible] */
 .rating-film{font-size:var(--t-md);font-weight:var(--w-bold);color:var(--white);margin-bottom:var(--sp-5);line-height:1.3}
-.rating-stars-wrap, #rating-stars-wrap{position:relative;margin-bottom:var(--sp-5)}
+#rating-stars-wrap{position:relative;margin-bottom:var(--sp-5)}
 #rating-range{position:absolute;inset:0;width:100%;height:100%;opacity:0.01;cursor:pointer;z-index:2;-webkit-appearance:none;appearance:none;background:transparent;touch-action:none;margin:0}
 #rating-range::-webkit-slider-thumb{-webkit-appearance:none;width:44px;height:44px;background:transparent}
 #rating-stars{padding:4px 0}
@@ -1691,10 +1636,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 
 /* Agenda */
 .ag-fi-btn:active,.ag-save-btn:active{opacity:.6;transform:scale(.96)}
-
-/* Disponibilidad */
-.av-add-btn:active,.av-plus-btn:active,.av-full-btn:active,
-.av-calc-btn:active,.av-add-unavail:active{opacity:.6;transform:scale(.96)}
+.av-add-btn:active, .av-plus-btn:active, .av-full-btn:active, .av-calc-btn:active{opacity:.6;transform:scale(.96)}
 
 /* Intereses tab */
 .int-prio-btn:active,.int-seen-btn:active{opacity:.6;transform:scale(.96)}
@@ -1702,18 +1644,14 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 /* Conflict modal */
 .conflict-btn-cancel:active,.conflict-btn-keep:active,
 .conflict-btn-replace:active,.conflict-modal-btn:active{opacity:.6;transform:scale(.96)}
-
-/* Sheet extras */
-.pel-sheet-remove-plan:active,.corto-rate-btn:active,.rating-action-btn:active,.ended-rate-btn:active,.checkin-btn:active,.checkin-result-btn:active{opacity:.6;transform:scale(.96)}
+.pel-sheet-remove-plan:active, .corto-rate-btn:active, .rating-action-btn:active, .checkin-result-btn:active{opacity:.6;transform:scale(.96)}
 
 /* Miscelánea */
 .toast-action-btn:active,.prio-limit-item:active,.excl-include-btn:active,.notice-banner-close:active,.link-gray-xs:active{opacity:.6}
 
 /* Auth */
 .auth-cancel:active,.auth-signout-btn:active,.auth-send-btn:active{opacity:.6}
-
-/* touch-action:manipulation — elimina delay 300ms iOS en elementos de alta frecuencia */
-.lugar-opt,.fdr-opt,.pchip,.prio-chip,.av-day-chip,.av-type-btn,.dtab,.ag-fi-btn,.int-prio-btn,.int-seen-btn,.conflict-btn-cancel,.conflict-btn-keep,.conflict-btn-replace,.conflict-modal-btn,.pmode-tab,.av-add-btn,.av-plus-btn,.corto-rate-btn,.rating-action-btn,.toast-action-btn,.checkin-btn,.checkin-result-btn{
+.lugar-opt, .fdr-opt, .pchip, .prio-chip, .av-day-chip, .av-type-btn, .dtab, .ag-fi-btn, .int-prio-btn, .int-seen-btn, .conflict-btn-cancel, .conflict-btn-keep, .conflict-btn-replace, .conflict-modal-btn, .pmode-tab, .av-add-btn, .av-plus-btn, .corto-rate-btn, .rating-action-btn, .toast-action-btn, .checkin-result-btn{
   touch-action:manipulation
 }
 .pel-sheet-action-btn.act-on{background:rgba(39,174,96,.08);border-color:rgba(39,174,96,.25);color:var(--green)}
@@ -1727,9 +1665,6 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .pel-sheet-action-btn.act-prio{background:var(--amber-cta-soft) border-box;border-color:var(--amber-30);color:var(--amber)}
 .pel-sheet-action-btn.btn-primary{background:var(--amber-cta);border-color:var(--amber);color:var(--black);font-size:var(--t-sm);padding:13px 4px}
 .pel-sheet-action-btn.btn-secondary{background:var(--surf-cta) border-box;border-color:transparent;color:rgba(255,255,255,.5);font-size:var(--t-sm);padding:13px 4px}
-/* font-size igual que primario y secundario (t-sm): sin él heredaba t-caption (12px)
-   y el terciario medía 43px contra 41 de sus vecinos en la misma fila. */
-.pel-sheet-action-btn.btn-tertiary{background:none;border-color:transparent;color:var(--gray2);flex:none;font-size:var(--t-sm);padding:13px var(--sp-3)}
 /* Los tres CTAs miden IGUAL. No con align-items:stretch —eso taparía la causa—
    sino igualando el icono: el corazón viene de ICONS a 14 y marcador/estrella a 13,
    con el mismo padding, así que el primario medía 42px y los secundarios 41 en la
@@ -1945,7 +1880,6 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .diario-wrap{margin-top:var(--sp-5)}
 .dw-band{cursor:pointer}
 .dw-band .hdr-end svg{color:var(--gray)}
-.dw-day-lbl{font-size:var(--t-caption);font-weight:var(--w-semi);color:var(--white);letter-spacing:.2px;margin:var(--sp-4) 0 var(--sp-2)}
 /* Muro CONTINUO y compacto: los afiches casi se tocan (Juan, 18 ago). */
 .dw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-1);margin-bottom:var(--sp-2)}
 /* Estado replegado: tira solapada de alto FIJO — no crece con lo visto. */
@@ -2000,7 +1934,6 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .checkin-opt-title{font-size:var(--t-base);color:var(--white);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .checkin-opt-venue{font-size:var(--t-sm);color:var(--gray);margin-top:1px}
 .checkin-opt-add{font-size:var(--t-lg);color:var(--amber);flex-shrink:0;padding:0 var(--sp-1)}
-.mplan-bottom-btn:active{opacity:.6}
 .mplan-wk-hline{position:absolute;left:0;right:0;height:0.5px;background:var(--bdr-l);pointer-events:none}
 .mplan-wk-hline.mp-major{background:var(--bdr)}
 .mplan-wk-nowline{position:absolute;left:0;right:0;height:2px;background:var(--green);z-index:10;pointer-events:none}
@@ -2114,9 +2047,6 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 /* Los grids del Diario anulan el padding-bottom de .poster-grid (~100px, pensado para
    scrollear bajo el nav en la grilla principal) — acá era el hueco entre grupos. */
 .diary-body .poster-grid{padding:0;margin:0 0 var(--sp-3)}
-.diary-chip{display:flex;align-items:center;gap:4px;background:none;border:none;padding:0;font:inherit;color:var(--amber);cursor:pointer;-webkit-tap-highlight-color:transparent}
-.diary-chip:active{opacity:.6}
-.diary-chip svg:last-child{opacity:.7}
 /* Sub-etiqueta de programa en el Diario: el programa no es card — es el contexto
    de sus obras (crítica de Juan 17 jul: la vista es de películas y calificaciones). */
 /* Botones del header del Diario: tokens de la casa (icon-btn-circle base no define
@@ -2167,7 +2097,6 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .cta-ctx-arr{font-size:var(--t-icon);flex-shrink:0}
 
 .cta-ctx-arr-b{color:var(--amber)}
-.cta-ctx-arr-c{color:var(--gray)}
 
 /* Saved items */
 /* .saved-day-lbl — estilos compartidos con .suggestion-day-lbl */
@@ -2508,13 +2437,7 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
   .main-nav-tab:hover{cursor:pointer}
   .main-nav-ico svg{width:14px;height:14px}
   .main-nav-lbl{font-size:var(--t-sm)}
-
-  /* ══════════════════════════════════════════════
-     CONTENIDO — body ya limita a 960px.
-     Solo queda padding horizontal interno.
-  ══════════════════════════════════════════════ */
-  .nav-row,
-  .filter-row{
+.nav-row{
     position:sticky;
     top:var(--tb-total);
     z-index:198;
@@ -2563,7 +2486,6 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
   /* Grids — 6 cols uniformes en desktop */
   
   .poster-grid{grid-template-columns:repeat(6,1fr)}
-  .pg-miplan{grid-template-columns:repeat(6,1fr)}
 
   /* Intereses hover */
 
@@ -3179,7 +3101,6 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .row-xs{display:inline-flex;align-items:center;gap:var(--sp-1)}
 .row-center-xs{display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)}
 .block-shrink{display:block;flex-shrink:0}
-.txt-dim-xs{opacity:.6;font-size:var(--t-xs)}
 .ml-1{margin-left:var(--sp-1)}
 .txt-amber-xs{color:var(--amber);font-size:var(--t-xs)}
 .img-cover{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
@@ -3191,7 +3112,6 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .pad-muted{padding:var(--sp-4);color:var(--gray);font-size:var(--t-base)}
 /* notice-detail = detalle del notice-badge. Sin caja: el color ya lo distingue. */
 .notice-detail-amber{font-size:var(--t-xs);color:var(--amber);font-weight:var(--w-semi);margin-top:var(--sp-1);display:inline-block}
-.notice-detail-green{font-size:var(--t-xs);color:var(--green);font-weight:var(--w-semi);margin-top:var(--sp-1);display:inline-block}
 
 /* ── Utility classes (pasada 2) ─────────────────────────────────────────── */
 .stars-row{display:flex;justify-content:center;gap:2px;pointer-events:none}
@@ -3226,13 +3146,9 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .scenario-label{padding:var(--sp-btn) var(--sp-3);font-size:var(--t-sm);color:var(--gray)}
 .scenario-footer{padding:var(--sp-1) var(--sp-btn) 10px}
 .w-full-sm{width:100%;font-size:var(--t-sm)}
-
-.label-track-amber{font-size:var(--t-xs);color:var(--amber);letter-spacing:1px}
 .poster-sm{width:36px;height:54px;border-radius:var(--r-poster);flex-shrink:0}
 .bg-surf-3{background:var(--surf-3)}
 .txt-gray-sm-mb1{font-size:var(--t-sm);color:var(--gray);margin-bottom:var(--sp-1)}
-.txt-caption-gray{font-size:var(--t-caption);color:var(--gray)}
-.txt-green70{color:var(--green-70)}
 .txt-gray-sm-vm{font-size:var(--t-sm);color:var(--gray);margin:6px 0 10px}
 .mt-3{margin-top:var(--sp-3)}
 .prio-chip-wrap{position:relative;flex-shrink:0;cursor:pointer}
@@ -3247,31 +3163,16 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .sheet-subtitle{font-size:var(--t-sm);color:var(--gray);margin-bottom:var(--sp-4)}
 .sheet-input{width:100%;background:var(--surf);border:1px solid var(--bdr);border-radius:var(--r-md);padding:12px 14px;font-size:16px;color:var(--white);outline:none;box-sizing:border-box;font-family:var(--font);margin-bottom:var(--sp-3)}
 .sheet-cta{width:100%;background:var(--amber-cta);border:none;border-radius:var(--r-md);padding:var(--sp-btn) 0;font-size:var(--t-base);font-weight:var(--w-bold);color:var(--black);cursor:pointer;font-family:var(--font)}
-
-.txt-gray2-sm{font-size:var(--t-sm);color:var(--gray2)}
 .mt-4{margin-top:var(--sp-4)}
 .mr-1{margin-right:var(--sp-1)}
-.bg-gray{background:var(--gray)}
-.txt-gray2-sm-lh{font-size:var(--t-sm);color:var(--gray2);margin-bottom:var(--sp-3);line-height:1.5}
 
 .touch-44{width:44px;height:44px;display:flex;align-items:center;justify-content:center}
-.ml-2{margin-left:var(--sp-2)}
-/* Sin caja: ningún aviso lleva recuadro sobre el texto — solo el badge conserva
-   su pastilla. Misma regla que .meta-banner (Juan, 29 jul 2026). */
-.notice-banner-row{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-2)}
-.notice-banner-txt{font-size:var(--t-sm);color:var(--amber-60)}
-.meta-xs-gray{font-size:var(--t-xs);color:var(--gray);margin-bottom:var(--sp-2)}
 
 .row-center-xs{display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-1)}
 
 .txt-white60{color:var(--white-60)}
 .txt-white60-semi{color:var(--white-60);font-weight:var(--w-semi)}
 .film-count-badge{font-size:var(--t-xs);background:var(--surf-3);color:var(--amber);border-radius:var(--r);padding:1px 5px;margin-left:5px;font-weight:var(--w-bold)}
-.film-check-badge{font-size:var(--t-xs);font-weight:var(--w-display);color:var(--green);background:var(--green-10);border:1px solid var(--green-30);border-radius:var(--r);padding:2px 6px;margin-left:var(--sp-1);flex-shrink:0}
-/* Ventana del Q&A: la película terminó y quedan los ~30 min ESTIMADOS de la
-   charla. Ámbar en vez de verde — el verde dice «esto está pasando, vení», y lo
-   que está pasando ya no es la película. Mismo par de tokens, otro acento. */
-.film-check-badge.qa-only{color:var(--amber);background:var(--amber-10);border-color:var(--amber-30)}
 .bg-surf-2{background:var(--surf-2)}
 .badge-past{background:var(--amber-60);color:var(--black)}
 .txt-amber-sm{color:var(--amber);font-size:var(--t-sm)}
@@ -3757,7 +3658,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609051622";
+    s.src="/src/main.js?v=202609051705";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
