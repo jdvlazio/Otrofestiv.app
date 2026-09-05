@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "selección oficial publicada por el festival — siembrafest.com/seleccion-sf-2026/",
-  "capturado": "2026-09-04",
+  "capturado": "2026-09-05",
   "metodo": "traducción del catálogo (films[]) al sidecar de enriquecimiento ({obras:[…]}), que es la forma que lee el ensamblador"
  },
  "obras": [
@@ -10,6 +10,7 @@
    "_director_catalogo": "Andrés Dávila",
    "pais": "Colombia",
    "genero": "Documental",
+   "sinopsis": "Se acerca a la chagra de Mercedes Cuatindioy, donde el policultivo es cuidado, resistencia y transmisión de saberes.",
    "synopsis_en": "In the Sibundoy Valley, Mercedes Cuatindioy cultivates her chagra as an act of resistance and remembrance. Between seeds and polyculture practices, her life embodies the transmission of indigenous knowledge threatened by oblivion.",
    "poster": "/2eNN7S45048PDcKKz2uRmEnpkQr.jpg",
    "posterSource": "tmdb",
@@ -20,6 +21,7 @@
    "_director_catalogo": "Ingrid Paola Bonilla Rodríguez",
    "pais": "Colombia",
    "genero": "Ficción",
+   "sinopsis": "Convierte el empeño de una mujer mayor por preservar el linaje de su última gallina en un relato íntimo sobre la persistencia de la vida.",
    "synopsis_en": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
    "poster": "/8zhRsq8nEjsjFLl29onD7LXeQfz.jpg",
    "posterSource": "tmdb",
@@ -29,12 +31,14 @@
    "titulo": "Victorias y Glorias – Relatos de campeonas",
    "_director_catalogo": "Luber Yesid Zúñiga Ordóñez",
    "pais": "Colombia",
-   "genero": "Documental"
+   "genero": "Documental",
+   "sinopsis": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo."
   },
   {
    "titulo": "Paramunas: El alma de la montaña",
    "_director_catalogo": "Alejandro Calderón",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "sinopsis": "Acompaña a tres mujeres campesinas de Sumapaz y Chingaza que lideran acciones frente al cambio climático."
   },
   {
    "titulo": "La tinaja",
@@ -61,13 +65,15 @@
    "titulo": "La grandiosa",
    "_director_catalogo": "Viviana Reinoso",
    "pais": "Colombia",
-   "genero": "Documental"
+   "genero": "Documental",
+   "sinopsis": "Concepción Matabanchoy recorre el páramo que rodea la laguna de La Cocha y relata más de cuatro décadas de defensa comunitaria de la tierra y el agua."
   },
   {
    "titulo": "Pasta negra",
    "_director_catalogo": "Jorge Thielen Armand",
    "pais": "Colombia",
    "genero": "DRAMA",
+   "sinopsis": "Una fábula sobre migración, sacrificio y supervivencia protagonizada por tres mujeres venezolanas y estrenada mundialmente en el Sundance Film Festival 2025.",
    "synopsis_en": "Three Venezuelan women cross the border into Colombia to buy a packet of pasta.",
    "poster": "/eETZnvE46E29uCsxpK3anseNfmy.jpg",
    "posterSource": "tmdb",
@@ -77,7 +83,9 @@
    "titulo": "Carola",
    "_director_catalogo": "Violeta Barrios Ramírez",
    "pais": "Colombia",
-   "genero": "Ficción"
+   "genero": "Ficción",
+   "poster": "/assets/siembrafest/carola.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Corazón Galvánico",
@@ -93,7 +101,9 @@
    "titulo": "Orígenes",
    "_director_catalogo": "Daniel Rodríguez Gaitán",
    "pais": "Colombia",
-   "genero": "Drama"
+   "genero": "Drama",
+   "poster": "/assets/siembrafest/origenes.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Take it off",
@@ -129,7 +139,9 @@
    "titulo": "Tres gatos parias",
    "_director_catalogo": "Ivan Sierra",
    "pais": "Colombia",
-   "genero": "Animación"
+   "genero": "Animación",
+   "poster": "/assets/siembrafest/tres-gatos-parias.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Desarraigo",
@@ -166,24 +178,32 @@
    "titulo": "Make up: El arte de amar",
    "_director_catalogo": "Daniel Calderón",
    "pais": "Colombia",
-   "genero": "Drama"
+   "genero": "Drama",
+   "poster": "/assets/siembrafest/make-up-el-arte-de-amar.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Amor",
    "_director_catalogo": "Dayana González Fajardo",
    "pais": "Colombia",
-   "genero": "Drama"
+   "genero": "Drama",
+   "poster": "/assets/siembrafest/amor.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Elementales",
    "_director_catalogo": "Camilo Botero",
    "pais": "Colombia",
-   "genero": "Familia"
+   "genero": "Familia",
+   "poster": "/assets/siembrafest/elementales.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Desde acá veo la tormenta",
    "_director_catalogo": "Juan Felipe Restrepo",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/desde-aca-veo-la-tormenta.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "La calle del amor",
@@ -197,7 +217,9 @@
   {
    "titulo": "Idilio",
    "_director_catalogo": "Luz Rincón Barahona",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/idilio.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Unlearning Motherhood",
@@ -222,13 +244,17 @@
    "titulo": "Animero: Son de la muerte",
    "_director_catalogo": "Nadine Holguín",
    "pais": "Colombia",
-   "genero": "Drama"
+   "genero": "Drama",
+   "poster": "/assets/siembrafest/animero-son-de-la-muerte.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Nativos de la tierra negra",
    "_director_catalogo": "Juan Pablo Ríos",
    "pais": "Colombia",
-   "genero": "Thriller"
+   "genero": "Thriller",
+   "poster": "/assets/siembrafest/nativos-de-la-tierra-negra.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "La Oscurana",
@@ -264,7 +290,9 @@
    "titulo": "Bajo el mismo techo",
    "_director_catalogo": "Sophia Cadavid",
    "pais": "Colombia",
-   "genero": "Thriller"
+   "genero": "Thriller",
+   "poster": "/assets/siembrafest/bajo-el-mismo-techo.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Payasadas",
@@ -279,17 +307,23 @@
   {
    "titulo": "Noche de vuelo",
    "_director_catalogo": "Juan Alvarado",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/noche-de-vuelo.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Villa Feliz",
    "_director_catalogo": "James Camargo De Alba",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/villa-feliz.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Linfernum",
    "_director_catalogo": "Dayana González Fajardo",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/linfernum.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Muertos que no son muertos",
@@ -305,29 +339,39 @@
    "titulo": "HDLT",
    "_director_catalogo": "Artefactum Suba",
    "pais": "Colombia",
-   "genero": "DRAMA"
+   "genero": "DRAMA",
+   "poster": "/assets/siembrafest/hdlt.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
    "_director_catalogo": "Juan David Rodríguez",
    "pais": "Colombia",
-   "genero": "Drama"
+   "genero": "Drama",
+   "poster": "/assets/siembrafest/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "El día de mi suerte",
    "_director_catalogo": "Dayana González Fajardo",
    "pais": "Colombia",
-   "genero": "COMEDIA"
+   "genero": "COMEDIA",
+   "poster": "/assets/siembrafest/el-dia-de-mi-suerte.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Dios y suerte",
    "_director_catalogo": "Carol Duran Pulido",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/dios-y-suerte.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Catatumbo: Casa del trueno, memoria y dignidad",
    "_director_catalogo": "Jhonattan Sarmiento",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/catatumbo-casa-del-trueno-memoria-y-dignidad.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Preguntas frecuentes",
@@ -346,13 +390,17 @@
    "pais": "Colombia",
    "genero": "Ficción",
    "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
-   "lbSlug": "heat-wave-2025"
+   "lbSlug": "heat-wave-2025",
+   "poster": "/assets/siembrafest/la-mona.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Desde la ventana",
    "_director_catalogo": "Mike Pitalua",
    "pais": "Colombia",
-   "genero": "Ficción"
+   "genero": "Ficción",
+   "poster": "/assets/siembrafest/desde-la-ventana.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Flores Miro",
@@ -369,7 +417,9 @@
    "titulo": "Relatos del camino",
    "_director_catalogo": "Daniel Prieto",
    "pais": "Colombia",
-   "genero": "Animación"
+   "genero": "Animación",
+   "poster": "/assets/siembrafest/relatos-del-camino.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Términa",
@@ -385,7 +435,9 @@
    "titulo": "6 de diciembre",
    "_director_catalogo": "Nelson Rodríguez Tequia",
    "pais": "Colombia",
-   "genero": "Documental"
+   "genero": "Documental",
+   "poster": "/assets/siembrafest/6-de-diciembre.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Pudor ante el asalto de los ojos furtivos",
@@ -412,7 +464,9 @@
    "titulo": "Las piedras del río",
    "_director_catalogo": "Edna Sierra",
    "pais": "Colombia",
-   "genero": "Drama"
+   "genero": "Drama",
+   "poster": "/assets/siembrafest/las-piedras-del-rio.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "La Europa",
@@ -437,8 +491,8 @@
    "_director_catalogo": "Harold De Vasten",
    "pais": "Colombia",
    "sinopsis": "El condecorado coronel Augusto Almendros, desde su lejano retiro, se entera que \"El comandante Salazar\", uno de los guerrilleros más perseguidos en su época activa, ha sido perdonado por la justicia para la paz (JEP) y llega a radicarse en la misma población que está viviendo. Sin poder conciliar el sueño, el coronel, pone en marcha un plan para desafiarlo a un duelo en la montaña, como dos guerreros de honor y cobrarle las deudas del pasado.",
-   "poster": "https://www.proimagenescolombia.com/photos/57150_10961__imagen_270_400.jpg",
-   "posterSource": "oficial"
+   "poster": "/assets/siembrafest/irredentos.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Entre 2 aguas",
@@ -463,19 +517,28 @@
   {
    "titulo": "Extinta",
    "_director_catalogo": "Yesid Soacha",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/extinta.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Un pájaro más",
    "_director_catalogo": "Julián Gómez Reyes",
    "pais": "Colombia",
-   "genero": "Animación"
+   "genero": "Animación",
+   "poster": "/assets/siembrafest/un-pajaro-mas.jpg",
+   "posterSource": "custom"
   },
   {
-   "titulo": "Cantos al fuego de “Bolar”",
+   "titulo": "Cantos al juego de “Bolar”",
    "_director_catalogo": "Ivan Sierra",
    "pais": "Colombia",
-   "genero": "Animación"
+   "genero": "Animación",
+   "sinopsis": "Un ensayo audiovisual y poético sobre la infancia, el balón y la esencia del juego. Una reflexión sobre el fútbol como libertad, imaginación y encuentro colectivo.",
+   "synopsis_en": "A poetic audiovisual essay on childhood, the ball and the essence of play. A reflection on football as freedom, imagination and collective encounter.",
+   "lbSlug": "cantos-al-juego-de-bolar",
+   "poster": "/assets/siembrafest/cantos-al-juego-de-bolar.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "La gran hazaña",
@@ -492,13 +555,17 @@
    "titulo": "La pecera",
    "_director_catalogo": "Angela Tatiana Fonseca Galvez",
    "pais": "Colombia",
-   "genero": "Animación"
+   "genero": "Animación",
+   "poster": "/assets/siembrafest/la-pecera.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Daniel",
    "_director_catalogo": "Armando Velásquez Ramírez",
    "pais": "Colombia",
-   "genero": "Drama"
+   "genero": "Drama",
+   "poster": "/assets/siembrafest/daniel.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Emechiche, el renacer de los Cabeciblanco",
@@ -513,12 +580,16 @@
   {
    "titulo": "Zizuma, nuestra casa de agua y nubes",
    "_director_catalogo": "Fátima Correa",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/zizuma-nuestra-casa-de-agua-y-nubes.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "En el mar",
    "_director_catalogo": "Alfred Robinson",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/en-el-mar.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "La asociación",
@@ -533,28 +604,38 @@
    "titulo": "Somos historias: Casaramano, sagrado y vida",
    "_director_catalogo": "Paola Diaz Gómez, Juven Piranga Valencia, Gustavo Cabezas Tenorio, María Fernanda Pinilla Segura, Lorena Herran Sánchez, Ursula Baylon Londoño, Melvin Rivero Guerra, Liceth Duran Herrera, Sonia Jaimes Rodríguez, Nicolas Cuéllar Gempeler",
    "pais": "Colombia",
-   "genero": "Documental"
+   "genero": "Documental",
+   "poster": "/assets/siembrafest/somos-historias-casaramano-sagrado-y-vida.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Phakhakhe Pi'txi – Minga de pensamiento",
    "_director_catalogo": "Duvier Baicue",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/phakhakhe-pi-txi-minga-de-pensamiento.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Sinfonía incompleta de oficios del Fonce",
    "_director_catalogo": "Nelson Omar Silva Sánchez",
    "pais": "Colombia",
-   "genero": "Documental"
+   "genero": "Documental",
+   "poster": "/assets/siembrafest/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Mingoya: Tierra de ornitólogos",
    "_director_catalogo": "Juan Esteban Quintero",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/mingoya-tierra-de-ornitologos.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Camino al Chicamocha",
    "_director_catalogo": "Frank Alexander Rodríguez Rojas",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/camino-al-chicamocha.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Refugiar el gesto",
@@ -569,7 +650,9 @@
   {
    "titulo": "Donde nace el nombre",
    "_director_catalogo": "Juan Vanegas",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/donde-nace-el-nombre.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Herencia: Los cantos de la tierra",
@@ -584,7 +667,9 @@
   {
    "titulo": "Guatapé (No) ha muerto",
    "_director_catalogo": "Laurence Paciarelli",
-   "pais": "Colombia"
+   "pais": "Colombia",
+   "poster": "/assets/siembrafest/guatape-no-ha-muerto.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "XIE. Defensa de la vida",
@@ -600,19 +685,25 @@
    "titulo": "Teresa",
    "_director_catalogo": "Edgar Medina Fetecua",
    "pais": "Colombia",
-   "genero": "Ficción"
+   "genero": "Ficción",
+   "poster": "/assets/siembrafest/teresa.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Gachalá, entre el miedo y la memoria",
    "_director_catalogo": "María Camila Mariño",
    "pais": "Colombia",
-   "genero": "Documental"
+   "genero": "Documental",
+   "poster": "/assets/siembrafest/gachala-entre-el-miedo-y-la-memoria.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Herminda",
    "_director_catalogo": "Ernesto Lozano Redondo",
    "pais": "Colombia",
-   "genero": "Ficción"
+   "genero": "Ficción",
+   "poster": "/assets/siembrafest/herminda.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Elipsis",
@@ -626,7 +717,9 @@
    "titulo": "La muerte de Elías",
    "_director_catalogo": "Gustavo Valcárcel",
    "pais": "Colombia",
-   "genero": "CRIMEN"
+   "genero": "CRIMEN",
+   "poster": "/assets/siembrafest/la-muerte-de-elias.jpg",
+   "posterSource": "custom"
   },
   {
    "titulo": "Trigos",

@@ -1,8 +1,8 @@
 {
- "_etapa": "Villeta montado desde el PDF oficial (4 sep 2026). Sasaima pendiente: su PDF no existe.",
+ "_etapa": "Villeta montado desde el PDF oficial (4 sep 2026) y enriquecido con las láminas de la Selección Oficial que el festival publicó en Instagram (5 sep). Sasaima pendiente: su PDF no existe.",
  "_provenance": {
   "fuente": "PDF oficial de la programación de Villeta — siembrafest.com/descargas/programacion_11sf_villeta.pdf",
-  "capturado": "2026-09-04",
+  "capturado": "2026-09-05",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_sedes_src": "el programa escribe «SENA - CDAE VILLETA»; el guion interno rompe la convención «Sede - Ciudad», así que la sede se registra «SENA CDAE Villeta». Es puntuación, no el nombre.",
@@ -251,7 +251,8 @@
    "venue": "Cinema Villeta - Villeta",
    "event_kind": "apertura",
    "has_qa": false,
-   "_src": "PDF oficial de la programación de Villeta, p2"
+   "_src": "PDF oficial de la programación de Villeta, p2",
+   "is_free": true
   },
   {
    "title": "Andariega",
@@ -265,6 +266,7 @@
    "venue": "Cinema Villeta - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p2",
+   "is_free": true,
    "year": 2025,
    "_programa_original": "Andariega"
   },
@@ -281,6 +283,7 @@
    "venue": "IED Alonso de Olalla - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p3",
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -288,8 +291,10 @@
      "director": "Camilo Botero Jaramillo",
      "year": 2025,
      "duration": "8 min",
+     "poster": "/assets/siembrafest/elementales.jpg",
      "genre": "Familia",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -297,8 +302,10 @@
      "director": "Daniel Rodríguez Gaitán",
      "year": 2025,
      "duration": "7 min",
+     "poster": "/assets/siembrafest/origenes.jpg",
      "genre": "Drama",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -306,7 +313,9 @@
      "director": "Juan Felipe Restrepo",
      "year": 2026,
      "duration": "10 min",
+     "poster": "/assets/siembrafest/desde-aca-veo-la-tormenta.jpg",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -326,8 +335,10 @@
      "director": "Dayana González Fajardo",
      "year": 2026,
      "duration": "13 min",
+     "poster": "/assets/siembrafest/amor.jpg",
      "genre": "Drama",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -365,6 +376,7 @@
    "poster": "https://image.tmdb.org/t/p/w500/946mgZZneD5dezapP1PcPwoUlfu.jpg",
    "posterSource": "tmdb",
    "_src": "PDF oficial de la programación de Villeta, p3",
+   "is_free": true,
    "lbSlug": "floresmiro",
    "synopsis_en": "In San Vicente de Chucurí, Father Floro sets up a fruit processing plant to stem the losses caused by the war. The film also remembers Floresmiro López, a priest who risked his life defending peasant farmers during the armed conflict. With love and moral firmness, he faced down the guns and left a legacy of community organizing that still shapes the region.",
    "year": 2025,
@@ -388,6 +400,7 @@
    "poster": "https://image.tmdb.org/t/p/w500/jCdjqbA6mKPlpDkFgufv1zf5RnF.jpg",
    "posterSource": "tmdb",
    "_src": "PDF oficial de la programación de Villeta, p3",
+   "is_free": true,
    "lbSlug": "herencia-los-cantos-de-la-tierra",
    "synopsis_en": "A documentary celebrating peasant 'carranguera' music —voices, stories and instruments like the requinto, tiple and guacharaca— as the root of rural Colombian identity.",
    "year": 2026,
@@ -406,6 +419,7 @@
    "venue": "SENA CDAE Villeta - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p4",
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -426,8 +440,10 @@
      "director": "Nadine Holguín",
      "year": 2025,
      "duration": "11 min",
+     "poster": "/assets/siembrafest/animero-son-de-la-muerte.jpg",
      "genre": "Drama",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -435,8 +451,10 @@
      "director": "Juan Pablo Ríos",
      "year": 2026,
      "duration": "18 min",
+     "poster": "/assets/siembrafest/nativos-de-la-tierra-negra.jpg",
      "genre": "Thriller",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -482,6 +500,7 @@
    "venue": "IED Alonso de Olalla - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p5",
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -489,7 +508,9 @@
      "director": "Carol Durán",
      "year": 2025,
      "duration": "17 min",
+     "poster": "/assets/siembrafest/dios-y-suerte.jpg",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -511,8 +532,10 @@
      "director": "Edna Sierra",
      "year": 2026,
      "duration": "16 min",
+     "poster": "/assets/siembrafest/las-piedras-del-rio.jpg",
      "genre": "Drama",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -544,6 +567,7 @@
    "venue": "SENA CDAE Villeta - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p5",
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -551,8 +575,10 @@
      "director": "Iván Sierra",
      "year": 2025,
      "duration": "7 min",
+     "poster": "/assets/siembrafest/tres-gatos-parias.jpg",
      "genre": "Animación",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -612,8 +638,10 @@
      "director": "Daniel Calderón",
      "year": 2025,
      "duration": "19 min",
+     "poster": "/assets/siembrafest/make-up-el-arte-de-amar.jpg",
      "genre": "Drama",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     }
    ]
@@ -630,7 +658,8 @@
    "has_qa": false,
    "synopsis": "Producto del proceso de formación LABRA.",
    "synopsis_lang": "es",
-   "_src": "PDF oficial de la programación de Villeta, p6"
+   "_src": "PDF oficial de la programación de Villeta, p6",
+   "is_free": true
   },
   {
    "title": "Elipsis + Trigos + Herminda + Teresa + La muerte de Elías + Gachalá, entre el miedo y la memoria",
@@ -645,6 +674,7 @@
    "venue": "Cinema Villeta - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p6",
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -677,8 +707,10 @@
      "director": "Ernesto Lozano Redondo",
      "year": 2024,
      "duration": "9 min",
+     "poster": "/assets/siembrafest/herminda.jpg",
      "genre": "Ficción",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -686,8 +718,10 @@
      "director": "Edgar Medina Fetecua",
      "year": 2025,
      "duration": "18 min",
+     "poster": "/assets/siembrafest/teresa.jpg",
      "genre": "Ficción",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -695,8 +729,10 @@
      "director": "Gustavo Alejandro Valcárcel Sierra",
      "year": 2023,
      "duration": "9 min",
+     "poster": "/assets/siembrafest/la-muerte-de-elias.jpg",
      "genre": "CRIMEN",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -704,8 +740,10 @@
      "director": "María Camila Mariño",
      "year": 2026,
      "duration": "11 min",
+     "poster": "/assets/siembrafest/gachala-entre-el-miedo-y-la-memoria.jpg",
      "genre": "Documental",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     }
    ]
@@ -721,7 +759,8 @@
    "venue": "Cinema Villeta - Villeta",
    "event_kind": "convite",
    "has_qa": false,
-   "_src": "PDF oficial de la programación de Villeta, p6"
+   "_src": "PDF oficial de la programación de Villeta, p6",
+   "is_free": true
   },
   {
    "title": "Preguntas frecuentes + Pudor ante el asalto de los ojos furtivos + La mona + Términa + Desde la ventana",
@@ -736,6 +775,7 @@
    "venue": "SENA CDAE Villeta - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p7",
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -773,10 +813,12 @@
      "director": "Laura Gutiérrez Ardila",
      "year": 2025,
      "duration": "18 min",
+     "poster": "/assets/siembrafest/la-mona.jpg",
      "lbSlug": "heat-wave-2025",
      "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
      "genre": "Ficción",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -798,8 +840,10 @@
      "director": "Mike Pitalua",
      "year": 2021,
      "duration": "9 min",
+     "poster": "/assets/siembrafest/desde-la-ventana.jpg",
      "genre": "Ficción",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     }
    ]
@@ -817,7 +861,8 @@
    "has_qa": false,
    "synopsis": "A cargo de Kinotov.",
    "synopsis_lang": "es",
-   "_src": "PDF oficial de la programación de Villeta, p8"
+   "_src": "PDF oficial de la programación de Villeta, p8",
+   "is_free": true
   },
   {
    "title": "Irredentos",
@@ -834,9 +879,10 @@
    "has_qa": false,
    "synopsis": "El condecorado coronel Augusto Almendros, desde su lejano retiro, se entera que \"El comandante Salazar\", uno de los guerrilleros más perseguidos en su época activa, ha sido perdonado por la justicia para la paz (JEP) y llega a radicarse en la misma población que está viviendo. Sin poder conciliar el sueño, el coronel, pone en marcha un plan para desafiarlo a un duelo en la montaña, como dos guerreros de honor y cobrarle las deudas del pasado.",
    "synopsis_lang": "es",
-   "poster": "https://www.proimagenescolombia.com/photos/57150_10961__imagen_270_400.jpg",
+   "poster": "/assets/siembrafest/irredentos.jpg",
    "posterSource": "oficial",
    "_src": "PDF oficial de la programación de Villeta, p8",
+   "is_free": true,
    "year": 2025,
    "_programa_original": "Irredentos"
   },
@@ -854,7 +900,8 @@
    "has_qa": false,
    "synopsis": "Una invitación a recorrer Villeta y Sasaima para descubrir, fotografiar y compartir las historias, gestos y escenas que muestran cómo las mujeres sostienen la vida en sus territorios.",
    "synopsis_lang": "es",
-   "_src": "PDF oficial de la programación de Villeta, p8"
+   "_src": "PDF oficial de la programación de Villeta, p8",
+   "is_free": true
   },
   {
    "title": "Phakhakhe Pi'txi - Minga de pensamiento + La Asociación + Somos historias: Casaramano, sagrado y vida",
@@ -869,6 +916,7 @@
    "venue": "SENA CDAE Villeta - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p9",
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -876,7 +924,9 @@
      "director": "Duvier Baicue",
      "year": 2024,
      "duration": "10 min",
+     "poster": "/assets/siembrafest/phakhakhe-pi-txi-minga-de-pensamiento.jpg",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -896,8 +946,10 @@
      "director": "Juven A. Piranga",
      "year": 2023,
      "duration": "30 min",
+     "poster": "/assets/siembrafest/somos-historias-casaramano-sagrado-y-vida.jpg",
      "genre": "Documental",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     }
    ]
@@ -915,6 +967,7 @@
    "venue": "SENA CDAE Villeta - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p9",
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -922,7 +975,9 @@
      "director": "Nelsy Niño R. & Juan Esteban Quintero",
      "year": 2024,
      "duration": "8 min",
+     "poster": "/assets/siembrafest/mingoya-tierra-de-ornitologos.jpg",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -944,7 +999,9 @@
      "director": "Laurence Paciarelli",
      "year": 2025,
      "duration": "52 min",
+     "poster": "/assets/siembrafest/guatape-no-ha-muerto.jpg",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     }
    ]
@@ -962,6 +1019,7 @@
    "venue": "IED Alonso de Olalla - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p10",
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -971,10 +1029,12 @@
      "duration": "11 min",
      "poster": "https://image.tmdb.org/t/p/w500/8zhRsq8nEjsjFLl29onD7LXeQfz.jpg",
      "lbSlug": "la-gallina-saraviada",
+     "synopsis": "Convierte el empeño de una mujer mayor por preservar el linaje de su última gallina en un relato íntimo sobre la persistencia de la vida.",
      "synopsis_en": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
      "genre": "Ficción",
      "country": "Colombia",
      "posterSource": "tmdb",
+     "synopsis_lang": "es",
      "flags": "🇨🇴"
     },
     {
@@ -984,10 +1044,12 @@
      "duration": "11 min",
      "poster": "https://image.tmdb.org/t/p/w500/2eNN7S45048PDcKKz2uRmEnpkQr.jpg",
      "lbSlug": "en-su-sombra-fertil",
+     "synopsis": "Se acerca a la chagra de Mercedes Cuatindioy, donde el policultivo es cuidado, resistencia y transmisión de saberes.",
      "synopsis_en": "In the Sibundoy Valley, Mercedes Cuatindioy cultivates her chagra as an act of resistance and remembrance. Between seeds and polyculture practices, her life embodies the transmission of indigenous knowledge threatened by oblivion.",
      "genre": "Documental",
      "country": "Colombia",
      "posterSource": "tmdb",
+     "synopsis_lang": "es",
      "flags": "🇨🇴"
     },
     {
@@ -995,8 +1057,10 @@
      "director": "Viviana Reinoso",
      "year": 2025,
      "duration": "13 min",
+     "synopsis": "Concepción Matabanchoy recorre el páramo que rodea la laguna de La Cocha y relata más de cuatro décadas de defensa comunitaria de la tierra y el agua.",
      "genre": "Documental",
      "country": "Colombia",
+     "synopsis_lang": "es",
      "flags": "🇨🇴"
     },
     {
@@ -1004,7 +1068,9 @@
      "director": "Alejandro Calderón González",
      "year": 2024,
      "duration": "18 min",
+     "synopsis": "Acompaña a tres mujeres campesinas de Sumapaz y Chingaza que lideran acciones frente al cambio climático.",
      "country": "Colombia",
+     "synopsis_lang": "es",
      "flags": "🇨🇴"
     },
     {
@@ -1028,7 +1094,8 @@
    "has_qa": false,
    "synopsis": "A cargo de la Fundación Patrimonio Fílmico Colombiano.",
    "synopsis_lang": "es",
-   "_src": "PDF oficial de la programación de Villeta, p10"
+   "_src": "PDF oficial de la programación de Villeta, p10",
+   "is_free": true
   },
   {
    "title": "La tinaja + Cayenas libertarias + Pasta negra + Victorias y glorias - relatos de campeonas + El tiempo de las mujeres transforma el territorio",
@@ -1043,6 +1110,7 @@
    "venue": "IED Alonso de Olalla - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p11",
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1081,10 +1149,12 @@
      "duration": "15 min",
      "poster": "https://image.tmdb.org/t/p/w500/eETZnvE46E29uCsxpK3anseNfmy.jpg",
      "lbSlug": "pasta-negra",
+     "synopsis": "Una fábula sobre migración, sacrificio y supervivencia protagonizada por tres mujeres venezolanas y estrenada mundialmente en el Sundance Film Festival 2025.",
      "synopsis_en": "Three Venezuelan women cross the border into Colombia to buy a packet of pasta.",
      "genre": "DRAMA",
      "country": "Colombia",
      "posterSource": "tmdb",
+     "synopsis_lang": "es",
      "flags": "🇨🇴"
     },
     {
@@ -1092,8 +1162,10 @@
      "director": "Luber Yesid Zúñiga Ordóñez",
      "year": 2025,
      "duration": "11 min",
+     "synopsis": "Recupera la historia de Lucila Rodríguez y su trayectoria en el ciclismo.",
      "genre": "Documental",
      "country": "Colombia",
+     "synopsis_lang": "es",
      "flags": "🇨🇴"
     },
     {
@@ -1117,6 +1189,7 @@
    "venue": "SENA CDAE Villeta - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p11",
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1124,7 +1197,9 @@
      "director": "Zacarías Flores del Campo",
      "year": 2025,
      "duration": "19 min",
+     "poster": "/assets/siembrafest/noche-de-vuelo.jpg",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -1132,7 +1207,9 @@
      "director": "James Camargo de Alba",
      "year": 2021,
      "duration": "8 min",
+     "poster": "/assets/siembrafest/villa-feliz.jpg",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -1140,8 +1217,10 @@
      "director": "Sophia Cadavid",
      "year": 2026,
      "duration": "13 min",
+     "poster": "/assets/siembrafest/bajo-el-mismo-techo.jpg",
      "genre": "Thriller",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -1149,7 +1228,9 @@
      "director": "Dayana González Fajardo",
      "year": 2024,
      "duration": "8 min",
+     "poster": "/assets/siembrafest/linfernum.jpg",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -1181,6 +1262,7 @@
    "venue": "IED Alonso de Olalla - Villeta",
    "has_qa": false,
    "_src": "PDF oficial de la programación de Villeta, p12",
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -1188,8 +1270,10 @@
      "director": "Dayana González Fajardo",
      "year": 2024,
      "duration": "8 min",
+     "poster": "/assets/siembrafest/el-dia-de-mi-suerte.jpg",
      "genre": "COMEDIA",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -1197,8 +1281,10 @@
      "director": "Colectivo Artefactum Suba",
      "year": 2025,
      "duration": "18 min",
+     "poster": "/assets/siembrafest/hdlt.jpg",
      "genre": "DRAMA",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -1206,8 +1292,10 @@
      "director": "Juan David Rodríguez Pantoja",
      "year": 2025,
      "duration": "13 min",
+     "poster": "/assets/siembrafest/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
      "genre": "Drama",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -1239,14 +1327,15 @@
    "has_qa": false,
    "synopsis": "A cargo de Señal Memoria e Inravisión, Sistema de Medios Públicos.",
    "synopsis_lang": "es",
-   "_src": "PDF oficial de la programación de Villeta, p12"
+   "_src": "PDF oficial de la programación de Villeta, p12",
+   "is_free": true
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-04T06:03:05",
-  "plan_sha": "e1cfa536f7ad39af",
-  "paso": 3,
+  "fecha": "2026-09-05T05:13:09",
+  "plan_sha": "be79a49d18a035ac",
+  "paso": 4,
   "cmd": "python3 pipeline/ensamblar.py siembrafest-2026"
  }
 }

@@ -27,7 +27,9 @@ import json, os, re, sys, datetime
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
-from lib import norm, provenance, DESCONOCIDO                      # noqa: E402
+from lib import norm, provenance                                   # noqa: E402
+
+ACCESO = 'Entrada libre'      # instagram.com/p/Dc4AhaFwFOg, 5 sep 2026
 
 TEXTO = f'{REPO}/festivals/staging/siembrafest-2026-villeta-texto.json'
 SALIDA = f'{REPO}/festivals/staging/siembrafest-2026-crudo.json'
@@ -221,9 +223,13 @@ def crudo():
         reales = [o for o in obras if o[1] is not None]
         f = {'dia': f'2026-09-{dia}', 'hora': ini, 'hora_fin': fin,
              'sede': sede, 'seccion': sec,
-             # El programa no dice CÓMO se entra a ninguna actividad, y la web
-             # tampoco. Se declara desconocido: no saber es legítimo, no mirar no.
-             'acceso': DESCONOCIDO,
+             # El festival lo publicó el 5 sep, en el post de apertura: «Entrada
+             # libre hasta completar aforo» y «Todas las actividades del
+             # SiembraFest son gratuitas» —es esa segunda frase la que cubre
+             # TODAS las funciones, no solo la inaugural—. El QR de la pieza
+             # registra asistencia; no es una inscripción y no se declara como
+             # tal: si no la hay, no se pone.
+             'acceso': ACCESO,
              '_src': f'PDF oficial de la programación de Villeta, p{pag}'}
         if reales:
             f['titulo'] = ' + '.join(o[0] for o in reales)

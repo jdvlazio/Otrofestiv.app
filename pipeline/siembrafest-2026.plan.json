@@ -1,5 +1,5 @@
 {
- "_etapa": "Villeta montado desde el PDF oficial (4 sep 2026). Sasaima pendiente: su PDF no existe.",
+ "_etapa": "Villeta montado desde el PDF oficial (4 sep 2026) y enriquecido con las láminas de la Selección Oficial que el festival publicó en Instagram (5 sep). Sasaima pendiente: su PDF no existe.",
  "_historial": {
   "_etapa": "PRE-ONBOARDING. Catálogo staged (85 obras, 9 secciones). El festival NO ha publicado programación ni fichas de obra de esta edición. NO PUBLICAR.",
   "_festival": "11° SiembraFest — Festival de Cine Colombiano al Campo · 9–18 SEP 2026 · Sasaima y Villeta (Cundinamarca) · funciones en plazas, veredas y espacios no convencionales",
@@ -51,6 +51,10 @@
   {
    "cmd": "python3 pipeline/siembrafest-2026-villeta.py --escribir",
    "que": "PDF oficial de Villeta (doble lectura) → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/siembrafest-2026-laminas.py --escribir",
+   "que": "carruseles de Instagram → pósters 2:3 en assets/ + sidecar de láminas"
   },
   {
    "cmd": "python3 pipeline/siembrafest-2026-enriquecido.py",

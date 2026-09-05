@@ -727,10 +727,12 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'siembrafest2026': {
-    // SIGUE OCULTO por una sola cosa: el festival no dice CÓMO SE ENTRA. Ni el
-    // PDF del programa ni la web ni sus redes lo mencionan, así que las 23
-    // funciones van con `acceso: desconocido` y [boleteria-muda] queda rojo —
-    // que es lo correcto: el silencio no es un dato. Es la pregunta al festival.
+    // El bloqueo anterior —no saber CÓMO SE ENTRA— se cerró el 5 sep: el propio
+    // festival publicó «Entrada libre hasta completar aforo» y «todas las
+    // actividades del SiembraFest son gratuitas», así que las 23 funciones van
+    // con is_free y [boleteria-muda] pasa. Villeta está completo y abre el 9.
+    // SIGUE OCULTO solo a la espera del visto bueno para publicar: falta Sasaima,
+    // cuyo PDF no existe («muy pronto» en su web).
     group:'test',
     // VILLETA, del 9 al 17. El festival completo es 9–18 en Sasaima y Villeta
     // (así lo dice su propia bio), pero el PDF de Sasaima no existe todavía: la

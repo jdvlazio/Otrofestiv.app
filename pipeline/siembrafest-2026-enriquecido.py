@@ -8,6 +8,10 @@ sidecar con otra forma se carga sin error y no enriquece nada—. Esto lo traduc
 
 Aporta lo que el programa impreso NO trae: sinopsis, póster, país, género y
 lbSlug. La jerarquía va declarada en siembrafest-2026-villeta.py.
+
+Del póster hay dos fuentes y un orden entre ellas: el original de TMDB que trae
+el catálogo, y —solo donde no hay original— la lámina que el festival publicó
+en Instagram (siembrafest-2026-laminas.py). Nunca al revés.
 """
 import json, os, re, sys
 
@@ -39,10 +43,13 @@ def _genero(g):
 
 
 CAT = f'{REPO}/festivals/staging/siembrafest-2026.json'
+LAM = f'{REPO}/festivals/staging/siembrafest-2026-laminas.json'
 OUT = f'{REPO}/festivals/staging/siembrafest-2026-enriquecido.json'
 
 if __name__ == '__main__':
     cat = json.load(open(CAT, encoding='utf-8'))
+    lam = {o['titulo']: o for o in json.load(open(LAM, encoding='utf-8'))['obras']} \
+        if os.path.exists(LAM) else {}
     # el título con que lo llama el PROGRAMA, cuando el catálogo lo escribe de otra forma
     inverso = {v: k for k, v in _v.ALIAS_CATALOGO.items()}
     obras = []
@@ -55,6 +62,9 @@ if __name__ == '__main__':
             v = _genero(f[src]) if src == 'genre' else f.get(src)
             if v:
                 o[dst] = v
+        if not o.get('poster') and f['title'] in lam:
+            o['poster'] = lam[f['title']]['poster']
+            o['posterSource'] = lam[f['title']]['posterSource']
         if f['title'] in inverso:
             o['_titulo_catalogo'] = f['title']
         obras.append(o)
