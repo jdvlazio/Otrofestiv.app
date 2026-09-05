@@ -195,6 +195,16 @@ CONTRADICCIONES = {
                    'programa Zacarías Flores del Campo — no es una abreviatura, son '
                    'personas distintas. Se toma la del programa por ser lo más reciente.',
 }
+# Donde las demás obras dicen «DIR. Nombre», estas dicen otra cosa: el programa no
+# les atribuye dirección. Se guarda el crédito tal como lo imprime y NO se le llama
+# director —igual que en los talleres, cuya segunda línea es quien los imparte—.
+# Va por OBRA: estas viven dentro de un programa de varias, y una nota de función
+# contaminaría a las demás (lo caza [sinopsis-duplicada]).
+CREDITO_NO_DIRECTOR = {
+ 'El tiempo de las mujeres transforma el territorio':
+     ('Video institucional', 'Video institucional de FAO Colombia.'),
+}
+
 # el mismo título escrito de dos formas por el propio festival
 ALIAS_CATALOGO = {'Flores Miro': 'Floresmiro'}
 
@@ -252,6 +262,12 @@ def crudo():
                      'anio': a, 'duracion_min': m, 'seccion': sec}
                 if t in ERRATAS_DIRECTOR:
                     o['_errata_impresa'] = f'el programa imprime «{d}»'
+                if t in CREDITO_NO_DIRECTOR:
+                    credito, nota = CREDITO_NO_DIRECTOR[t]
+                    o.pop('director', None)
+                    o['sinopsis'] = nota
+                    o['synopsis_lang'] = 'es'
+                    o['_credito_impreso'] = f'{credito} · {d}'
                 if t in ALIAS_CATALOGO:
                     o['_alias_catalogo'] = ALIAS_CATALOGO[t]
                 if t in DIRECTOR_CATALOGO:

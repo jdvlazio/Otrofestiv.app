@@ -222,9 +222,11 @@
   "SENA CDAE Villeta - Villeta": {
    "short": "SENA CDAE Villeta",
    "city": "Villeta",
-   "_prec": "pendiente",
-   "_nota": "dirección confirmada en dos fuentes (directorio de centros de formación del SENA y ficha de Waze). SIGUE SIN PUNTO: «Calle 2» devuelve dos tramos distintos en Villeta y no hay forma de elegir — la dirección lleva a la sede, una coordenada ambigua no.",
-   "address": "Calle 2 n.º 13-03, barrio San Rafael"
+   "_prec": "oficial",
+   "_nota": "coordenada del propio SENA: dataset «Georeferenciación Centros de Aprendizaje» (datos.gov.co 8cnh-7asj), centro 9509 — el mismo código que usa la web del centro (sedes9509). Estaba escondida porque el dataset lo registra en el municipio BOGOTÁ, que es su REGIONAL, no su sede: buscarlo por «Villeta» da cero. Contrastado: cae a 804 m del casco urbano y a 325 m de la Calle 2 que nombra su dirección.",
+   "address": "Calle 2 n.º 13-03, barrio San Rafael",
+   "lat": 5.00638,
+   "lng": -74.4755
   },
   "Vda. Chapaima - Villeta": {
    "short": "Vda. Chapaima",
@@ -1111,9 +1113,10 @@
     },
     {
      "title": "El tiempo de las mujeres transforma el territorio",
-     "director": "FAO Colombia",
      "year": 2025,
-     "duration": "17 min"
+     "duration": "17 min",
+     "synopsis_lang": "es",
+     "synopsis": "Video institucional de FAO Colombia."
     }
    ]
   },
@@ -1208,9 +1211,10 @@
     },
     {
      "title": "El tiempo de las mujeres transforma el territorio",
-     "director": "FAO Colombia",
      "year": 2025,
-     "duration": "17 min"
+     "duration": "17 min",
+     "synopsis_lang": "es",
+     "synopsis": "Video institucional de FAO Colombia."
     }
    ]
   },
@@ -1376,7 +1380,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-05T06:38:53",
+  "fecha": "2026-09-05T07:00:22",
   "plan_sha": "be79a49d18a035ac",
   "paso": 4,
   "cmd": "python3 pipeline/ensamblar.py siembrafest-2026"

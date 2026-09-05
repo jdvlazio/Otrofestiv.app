@@ -2,7 +2,7 @@
  "_provenance": {
   "fuente": "Nominatim/OSM, con la dirección del municipio",
   "capturado": "2026-09-04",
-  "metodo": "Nominatim/OSM con la dirección del municipio. SENA CDAE e IED Alonso de Olalla no están en OSM ni por nombre (Overpass: 0 elementos en 6 km) — Villeta está poco mapeada. El 5 sep se les buscó la DIRECCIÓN, que es lo que sirve para llegar: las dos confirmadas en dos fuentes independientes. El IED gana punto a nivel de calle; el SENA no, porque su calle sale ambigua y una coordenada aproximada en un municipio pequeño manda a alguien al sitio equivocado, y eso es peor que no tener mapa."
+  "metodo": "Nominatim/OSM con la dirección del municipio. Villeta está poco mapeada: Overpass devuelve 0 elementos en 6 km y ninguna de las dos sedes grandes está en OSM. Se resolvieron el 5 sep por fuentes oficiales y con la dirección confirmada en dos fuentes independientes cada una — el SENA con su propia georreferenciación publicada en datos.gov.co, el IED con el punto de su calle. Regla: antes que una coordenada aproximada, la dirección; una coordenada mal puesta en un municipio pequeño manda a alguien al sitio equivocado."
  },
  "venues": {
   "Cinema Villeta - Villeta": {
@@ -31,9 +31,11 @@
   "SENA CDAE Villeta - Villeta": {
    "city": "Villeta",
    "short": "SENA CDAE Villeta",
-   "_prec": "pendiente",
-   "_nota": "dirección confirmada en dos fuentes (directorio de centros de formación del SENA y ficha de Waze). SIGUE SIN PUNTO: «Calle 2» devuelve dos tramos distintos en Villeta y no hay forma de elegir — la dirección lleva a la sede, una coordenada ambigua no.",
-   "address": "Calle 2 n.º 13-03, barrio San Rafael"
+   "_prec": "oficial",
+   "_nota": "coordenada del propio SENA: dataset «Georeferenciación Centros de Aprendizaje» (datos.gov.co 8cnh-7asj), centro 9509 — el mismo código que usa la web del centro (sedes9509). Estaba escondida porque el dataset lo registra en el municipio BOGOTÁ, que es su REGIONAL, no su sede: buscarlo por «Villeta» da cero. Contrastado: cae a 804 m del casco urbano y a 325 m de la Calle 2 que nombra su dirección.",
+   "address": "Calle 2 n.º 13-03, barrio San Rafael",
+   "lat": 5.00638,
+   "lng": -74.4755
   },
   "IED Alonso de Olalla - Villeta": {
    "city": "Villeta",
