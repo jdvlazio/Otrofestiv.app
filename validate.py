@@ -5942,6 +5942,74 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [i18n-huerfana] toda clave del diccionario la pide alguien ──────────────────
+# Medido el 5 sep 2026: 442 claves ES, 81 que nada pedía — ni t('literal'), ni
+# data-i18n*, ni los mapas que producen claves por dato, ni las concatenaciones
+# base+'_1'/'_s', ni los ternarios t(c?'a':'b'). Se verificó con tres métodos
+# (estática, resolución de canales dinámicos, sonda de DOM en 18 festivales × ES
+# y EN) y coincidieron. Una clave muerta pesa ×3 idiomas y engaña al próximo que
+# la vea: cree que hay una pantalla que la dice.
+#
+# LOS CANALES DINÁMICOS VAN ESCRITOS AQUÍ, porque un guardián que no los conoce
+# acusa a claves vivas. Si aparece un canal nuevo, se agrega acá con su porqué —
+# no se apaga el guardián.
+check = 'i18n-huerfana'
+try:
+    import re as _r, glob as _g
+    # El diccionario NO es corpus de uso: sus propias líneas «asignan» literales
+    # ("clave": "texto con n = …") y el canal de identificadores cosechaba claves
+    # de ahí — cazado al recalibrar sobre la copia purgada (5 sep 2026).
+    _src = '\n'.join(open(_f, encoding='utf-8').read() for _f in _g.glob('src/**/*.js', recursive=True) if not _f.endswith('i18n/i18n.js'))
+    _html = open('index.html', encoding='utf-8').read()
+    _corp = _src + '\n' + _html
+    _i18n = open('src/i18n/i18n.js', encoding='utf-8').read()
+    # El bloque ES va de su cabecera a la cabecera de EN — por cabecera, no por
+    # la primera "en" del texto: ésa vive dentro de un valor y se mueve con
+    # cualquier borrado (cazado al recalibrar sobre la copia purgada).
+    _hdr = [m.start() for m in _r.finditer(r'^\s*"?(?:es|en|pt)"?\s*:\s*\{\s*$', _i18n, _r.M)]
+    _es = _i18n[_hdr[0]:_hdr[1]] if len(_hdr) >= 2 else _i18n
+    _claves = set(_r.findall(r'^\s*"([a-z][a-z0-9_]+)"\s*:', _es, _r.M))
+    _usadas = set(_r.findall(r"""\bt\(\s*['"]([a-z][a-z0-9_]+)['"]""", _corp))              # t('literal')
+    _usadas |= set(_r.findall(r'data-i18n(?:-[a-z]+)?="([a-z][a-z0-9_]+)"', _corp))           # data-i18n / -ph / -aria / -title
+    _usadas |= set(_r.findall(r"""data-i18n(?:-[a-z]+)?=\\?['"]?\$?\{?['"]?([a-z][a-z0-9_]+)""", _src))
+    for _a, _b in _r.findall(r"\bt\(\s*[^)]*\?\s*['\"]([a-z][a-z0-9_]+)['\"]\s*:\s*['\"]([a-z][a-z0-9_]+)['\"]", _corp):
+        _usadas |= {_a, _b}                                                                    # t(c ? 'a' : 'b')
+    # identificador que se ASIGNA con literales y después se pasa a t(): el patrón
+    # `const _k = cond ? 'a' : 'b'; … t(_k + '_1')` (sheets-controller) y
+    # `const _yaPaso = x ? 'ya_paso' : 'empty_sin_funciones'; t(_yaPaso)` (agenda).
+    # Se resuelve por nombre: cada t(IDENT…) busca las asignaciones de IDENT.
+    for _id in set(_r.findall(r"\bt\(\s*(_[\w$]+|[A-Za-z][\w$]+)\s*[,)+]", _src)):   # `_k` vale; `t(n)` a secas no es un canal
+        for _asg in _r.finditer(r"\b" + _r.escape(_id) + r"\s*=\s*([^;\n]{0,200})", _src):
+            _usadas |= set(_r.findall(r"['\"]([a-z][a-z0-9_]+)['\"]", _asg.group(1)))
+    # Canal de fondo, y el que de verdad decide: cualquier literal con forma de
+    # clave en código SIN comentarios es un uso. Cubre lo que los canales de
+    # arriba nombran y lo que no: un ternario anidado dentro de otro
+    # (`_ev?'pre_actividad_planear':'pre_obra_planear'`) se le escapaba a todos.
+    # Calibrado el 5 sep 2026: las 94 claves muertas tienen CERO menciones; toda
+    # clave viva tiene al menos una. Los comentarios van fuera porque «// ver
+    # misc_x» no es un uso.
+    _code = _r.sub(r'/\*.*?\*/', ' ', _corp, flags=_r.S); _code = _r.sub(r'(?m)^\s*//.*$', ' ', _code)
+    _usadas |= set(_r.findall(r"['\"`]([a-z][a-z0-9_]+)['\"`]", _code)) & _claves
+    # mapas dato→clave (_EN_TO_I18N y parientes): sus VALORES son claves
+    for _m in _r.finditer(r"(_EN_TO_I18N|_kindMap\w*|_\w*I18N\w*|\w*_KEYS?|_keys)\s*=\s*(\{[^;]*?\})", _src, _r.S):
+        _usadas |= set(_r.findall(r":\s*['\"]([a-z][a-z0-9_]+)['\"]", _m.group(2)))
+    # sufijos por concatenación: t(base + '_1') / t(base + '_s') → la base y sus variantes valen
+    _sufijos = set(_r.findall(r"\bt\([^)]*\+\s*['\"](_[a-z0-9_]+)['\"]", _src))
+    _prefijos = set(_r.findall(r"\bt\(\s*['\"]([a-z][a-z0-9_]*)['\"]\s*\+", _src)) | set(_r.findall(r"\bt\(\s*`([a-z][a-z0-9_]*)\$\{", _src))
+    _prefijos |= set(_r.findall(r"(?:const|let)\s+\w+\s*=\s*['\"]([a-z][a-z0-9_]*_)['\"]", _src))
+    def _viva(_k):
+        if _k in _usadas: return True
+        if any(_k.startswith(_p) for _p in _prefijos): return True
+        if any(_k.endswith(_s) and (_k[:-len(_s)] in _usadas or any(_k[:-len(_s)] + _o in _usadas for _o in _sufijos)) for _s in _sufijos): return True
+        return False
+    _huer = sorted(_k for _k in _claves if not _viva(_k))
+    if _huer:
+        fail(check, f'{len(_huer)} clave(s) del diccionario que nada pide — o se usa o se borra en los TRES idiomas: ' + ', '.join(_huer[:8]) + (' …' if len(_huer) > 8 else ''))
+    else:
+        ok(check, f'{len(_claves)} claves ES y todas las pide alguien')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 check = 'lib-unica'
 try:
     import ast as _ast, glob as _g4, os as _os4
