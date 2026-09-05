@@ -318,6 +318,27 @@ function _renderExploreLista(){
   el.innerHTML=_renderExploreListaHTML(state);
 }
 
+// _filtrarEntradas — la cola común de las dos vistas de obras: de titleMap a la
+// lista filtrada por sección y por sede. Vivía copiada en _renderExploreListaHTML
+// y en renderPeliculaViewHTML (auditoría de salud, 5 sep 2026): el único bloque
+// duplicado de src/. Lo que NO se unifica es cómo cada vista elige el
+// REPRESENTANTE de la obra —la más temprana, o la pública primero—: son reglas
+// distintas a propósito y cada una tiene su porqué escrito donde vive.
+// Lee activeSec/activeVenue en el momento de la llamada, igual que antes.
+function _filtrarEntradas(titleMap){
+  let entries=Object.values(titleMap);
+  if(activeSec!=='all'){
+    entries=entries.filter(e=>e.film.section===activeSec);
+  }
+  if(activeVenue!=='all'){
+    entries=entries.filter(e=>e.screenings.some(s=>{
+      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>venueMatches(sc.venue,activeVenue));
+      return venueMatches(s.venue,activeVenue);
+    }));
+  }
+  return entries;
+}
+
 function _renderExploreListaHTML(state){
   try{
   const {FILMS, watchlist} = state.snapshot();
@@ -332,16 +353,7 @@ function _renderExploreListaHTML(state){
     }
     titleMap[f.title].screenings.push(f);
   });
-  let entries=Object.values(titleMap);
-  if(activeSec!=='all'){
-    entries=entries.filter(e=>e.film.section===activeSec);
-  }
-  if(activeVenue!=='all'){
-    entries=entries.filter(e=>e.screenings.some(s=>{
-      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>venueMatches(sc.venue,activeVenue));
-      return venueMatches(s.venue,activeVenue);
-    }));
-  }
+  const entries=_filtrarEntradas(titleMap);
   const _typeOrder=f=>f.type==='event'?2:f.is_cortos?1:0;
   entries.sort((a,b)=>{
     const do_diff=(a.film.day_order||0)-(b.film.day_order||0);
@@ -420,16 +432,7 @@ function renderPeliculaViewHTML(state){
     }
     titleMap[f.title].screenings.push(f);
   });
-  let entries=Object.values(titleMap);
-  if(activeSec!=='all'){
-    entries=entries.filter(e=>e.film.section===activeSec);
-  }
-  if(activeVenue!=='all'){
-    entries=entries.filter(e=>e.screenings.some(s=>{
-      if(s.screenings&&s.screenings.length) return s.screenings.some(sc=>venueMatches(sc.venue,activeVenue));
-      return venueMatches(s.venue,activeVenue);
-    }));
-  }
+  const entries=_filtrarEntradas(titleMap);
   const _unknownSecMap=(()=>{const m={};let i=SECTION_ORDER_LIST.length;FILMS.forEach(f=>{if(f.section&&SECTION_ORDER_LIST.indexOf(f.section)<0&&!(f.section in m))m[f.section]=i++;});return m;})();
   const _secIdx=f=>{const i=SECTION_ORDER_LIST.indexOf(f.section??'');return i>=0?i:(_unknownSecMap[f.section??'']??99999);};
   entries.sort((a,b)=>{
