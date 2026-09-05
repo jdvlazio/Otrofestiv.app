@@ -329,7 +329,13 @@ for (const festId of MAIN_FESTIVALS) {
 // al menos un festival en curso y uno por empezar; si el config cambia y deja de
 // haberlos, el test lo dice y se saltea en vez de fallar por una premisa vieja.
 test('P06 — el riel separa PRÓXIMOS sin mover el arranque del snap', async ({ page }) => {
-  await page.clock.install({ time: new Date('2026-08-11T10:00:00-05:00') });
+  // FECHA — 14 MAY 2026, no 11 AGO. La original la invalidó un hecho REAL: el
+  // sismo del Chocó aplazó FICMA el 10 de agosto (`status.kind='postponed'`) y
+  // _classifyFestival dejó de contarlo como en curso, así que al 11 AGO quedaban
+  // CERO en curso y este test se saltaba solo. Nadie rompió nada: la realidad
+  // invalidó el fixture y la prueba se calló en vez de protestar. El 14 MAY tiene
+  // Leviza en curso —archivado, su dato ya no se mueve— y once próximos.
+  await page.clock.install({ time: new Date('2026-05-14T10:00:00-05:00') });
   await page.goto('/');
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
   await page.waitForSelector('#splash-rail .splash-card[data-fest]', { state: 'attached', timeout: 15000 });
@@ -357,8 +363,11 @@ test('P06 — el riel separa PRÓXIMOS sin mover el arranque del snap', async ({
     };
   });
 
-  if (!r.enCurso || !r.proximos) {
-    test.skip(true, `P06: al 11 AGO 2026 no hay en-curso + próximos (${r.enCurso}/${r.proximos}), skip`); return; }
+  // Premisas, no escape: la fecha se eligió para que se cumplan. Si dejaran de
+  // cumplirse, el riel no trae los dos grupos que este test separa — y eso
+  // tiene que sonar.
+  expect(r.enCurso, 'al 14 MAY 2026 hay festivales EN CURSO en el riel').toBeGreaterThan(0);
+  expect(r.proximos, 'y también PRÓXIMOS: son los dos grupos que el divisor separa').toBeGreaterThan(0);
 
   // ORDEN: ningún próximo antes de un en-curso, y el divisor justo entre los grupos.
   const idxDivProx = r.tira.findIndex(x => x.div);
@@ -397,7 +406,13 @@ test('P07 — el markup del selector es el mismo del splash (una implementación
   // Reloj fijo: 11 AGO 2026 tiene un festival en curso y dos por empezar, así que
   // la comparación ejerce las cards Y los dos divisores. Sin congelarlo, el test
   // compararía rieles distintos según el día.
-  await page.clock.install({ time: new Date('2026-08-11T10:00:00-05:00') });
+  // FECHA — 14 MAY 2026, no 11 AGO. La original la invalidó un hecho REAL: el
+  // sismo del Chocó aplazó FICMA el 10 de agosto (`status.kind='postponed'`) y
+  // _classifyFestival dejó de contarlo como en curso, así que al 11 AGO quedaban
+  // CERO en curso y este test se saltaba solo. Nadie rompió nada: la realidad
+  // invalidó el fixture y la prueba se calló en vez de protestar. El 14 MAY tiene
+  // Leviza en curso —archivado, su dato ya no se mueve— y once próximos.
+  await page.clock.install({ time: new Date('2026-05-14T10:00:00-05:00') });
   await page.goto('/');
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
   await page.waitForSelector('#splash-rail .splash-card[data-fest]', { state: 'attached', timeout: 15000 });
@@ -409,8 +424,10 @@ test('P07 — el markup del selector es el mismo del splash (una implementación
       .filter(([, c]) => c.name && c.group !== 'test' && _classifyFestival(c) === 'ongoing')
       .map(([id]) => id);
   });
-  if (enCurso.length !== 1) {
-    test.skip(true, `P07: al 11 AGO 2026 hay ${enCurso.length} festivales en curso (se necesita 1), skip`); return; }
+  // Premisa: la regla de preselección del riel es «exactamente 1 en curso». Al
+  // 14 MAY 2026 ese uno es Leviza (medido). Si cambiara, este test dejaría de
+  // ejercer la regla y hay que enterarse, no callarlo con un skip.
+  expect(enCurso.length, 'al 14 MAY 2026 hay exactamente un festival en curso').toBe(1);
   const fest = enCurso[0];
 
   const splash = await page.evaluate(() => ({
