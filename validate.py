@@ -5890,6 +5890,58 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [css-huerfana] toda clase del <style> la emite alguien ───────────────────────
+# Medido el 5 sep 2026: 825 clases en index.html, 45 que nada emitía — 14 nunca
+# en toda la historia, 27 cuya emisión se quitó (17 en agosto), 3 solo en
+# comentarios, 1 subcadena. Tres métodos (estática con comentarios fuera, sonda
+# de DOM en 18 festivales × pantallas, historia de git) y coincidieron.
+#
+# Lo que la estática NO ve, y va escrito para no acusar a clases vivas:
+#   · composición dinámica: `ed-img-${pos}`, `sev-${nivel}` — la clase entera no
+#     existe en el código, su PREFIJO sí. Se acepta si algún prefijo (cortado en
+#     un guion) aparece en src/ seguido de `${` o `'+` o `"+`.
+#   · clases por estado que solo aparecen en pantalla bajo condición (mp-now,
+#     av-full, sync-live…): ésas SÍ están en src/ como literal — no hay problema.
+# Y lo que la purga de CSS enseñó a golpes (css-purge-regex-desastre): las
+# reglas se quitan POR LÍNEA, y este guardián solo acusa — nunca borra.
+check = 'css-huerfana'
+try:
+    import re as _r, glob as _g
+    _html = open('index.html', encoding='utf-8').read()
+    _sin_com = _r.sub(r'/\*.*?\*/', lambda m: _r.sub(r'[^\n]', ' ', m.group(0)), _html, flags=_r.S)
+    _css = '\n'.join(_r.findall(r'<style[^>]*>(.*?)</style>', _sin_com, _r.S))
+    _defs = set(_r.findall(r'\.([a-zA-Z][\w-]+)(?=[\s{,:.\[>#+~)])', _css))
+    _src = '\n'.join(open(_f, encoding='utf-8').read() for _f in _g.glob('src/**/*.js', recursive=True))
+    # los comentarios de JS NO emiten clases: `// filter-row visibility…` daba por
+    # viva una clase que ningún código escribe (cazado al calibrar, 5 sep 2026).
+    _src = _r.sub(r'/\*.*?\*/', ' ', _src, flags=_r.S)
+    _src = _r.sub(r'(?m)^\s*//.*$', ' ', _src)
+    _body = _html[_html.find('<body'):]
+    # Solo cuenta lo que EMITE una clase: los valores de class="…" del HTML y las
+    # cadenas de JS. Un id homónimo (`id="rating-stars-wrap"`) no salva a la
+    # clase — cazado al calibrar: la mitad `.rating-stars-wrap,` del selector
+    # estaba muerta y el id la tapaba.
+    _tokens = set(_r.findall(r'[a-zA-Z][\w-]+', _src))          # JS sin comentarios: todo token
+    for _v in _r.findall(r'class=["\']([^"\']*)', _body): _tokens |= set(_v.split())   # HTML: solo class="…"
+    # y los <script> inline de index.html (el store gate vive ahí y arma clases
+    # como `' sg-kick-caps'`): código de la app, mismo trato que src/ — sin comentarios.
+    _inl = '\n'.join(_r.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>', _html, _r.S))
+    _inl = _r.sub(r'/\*.*?\*/', ' ', _inl, flags=_r.S); _inl = _r.sub(r'(?m)^\s*//.*$', ' ', _inl)
+    _tokens |= set(_r.findall(r'[a-zA-Z][\w-]+', _inl))
+    def _dinamica(_c):
+        _p = _c.split('-')
+        for _i in range(1, len(_p)):
+            _pref = '-'.join(_p[:_i]) + '-'
+            if _r.search(r'[`\'"]' + _r.escape(_pref) + r'(\$\{|[\'"]\s*\+)', _src): return True
+        return False
+    _huer = sorted(_c for _c in _defs if _c not in _tokens and not _dinamica(_c))
+    if _huer:
+        fail(check, f'{len(_huer)} clase(s) en <style> que nada emite — o se emite o se quita su regla POR LÍNEA: ' + ', '.join(_huer[:10]) + (' …' if len(_huer) > 10 else ''))
+    else:
+        ok(check, f'{len(_defs)} clases en <style> y todas las emite alguien')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 check = 'lib-unica'
 try:
     import ast as _ast, glob as _g4, os as _os4
