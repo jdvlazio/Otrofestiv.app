@@ -45,7 +45,7 @@ AMBOS = 'Villeta y Sasaima'
 BLOQUES = [
  ('09', '14:00', '15:30', CIN, 'apertura', 'Mujeres que sostienen la vida', [
     ('Acto inaugural', None, None, None),
-    ('Convite: Sembrar soberanía — agricultura, semillas y territorio', None, None, None)], 2),
+    ('Convite — Sembrar soberanía: agricultura, semillas y territorio', None, None, None)], 2),
  ('09', '16:00', '18:00', CIN, 'exhibicion', 'Película Invitada', [
     ('Andariega', 'Rául Soto', 2025, 94)], 2),
 
@@ -89,7 +89,7 @@ BLOQUES = [
     ('La muerte de Elías', 'Gustavo Alejandro Valcárcel Sierra', 2023, 9),
     ('Gachalá, entre el miedo y la memoria', 'María Camila Mariño', 2026, 11)], 6),
  ('11', '17:30', '18:00', CIN, 'convite', 'Así es Cundinamarca', [
-    ('Convite: La tierra no olvida — historias contadas desde la región', None, None, None)], 6),
+    ('La tierra no olvida - historias contadas desde la región', None, None, None)], 6),
  ('11', '18:00', '20:00', SENA, 'exhibicion', 'Buenos, Malos y Feos', [
     ('Preguntas frecuentes', 'Sofía Salinas Barrera', 2025, 16),
     ('Pudor ante el asalto de los ojos furtivos', 'Laura Rodríguez', 2025, 9),
@@ -172,6 +172,17 @@ CONTRADICCIONES = {
                    'programa Zacarías Flores del Campo — no es una abreviatura, son '
                    'personas distintas. Se toma la del programa por ser lo más reciente.',
 }
+# TÍTULOS DE ACTIVIDAD. El programa las imprime en dos líneas —qué es / cómo se
+# llama—, igual que las obras. Reglas, en este orden:
+#   1. El nombre va VERBATIM: su puntuación no se toca. Las juntas que
+#      componemos nosotros (« + » entre dos actos, la raya ante su nombre) son
+#      nuestras y se distinguen de lo suyo.
+#   2. Nunca se repiten los dos puntos (Juan, 5 sep 2026).
+#   3. No se prefija lo que la tarjeta ya dice sola: `event_kind` pinta CONVITE,
+#      APERTURA, TALLER… en la lámina del evento. El prefijo solo entra cuando la
+#      etiqueta no lo cubre — el bloque del día 9 dice APERTURA y lleva DOS actos,
+#      así que ahí «Convite» sí informa.
+#
 # Donde las demás obras dicen «DIR. Nombre», estas dicen otra cosa: el programa no
 # les atribuye dirección. Se guarda el crédito tal como lo imprime y NO se le llama
 # director —igual que en los talleres, cuya segunda línea es quien los imparte—.

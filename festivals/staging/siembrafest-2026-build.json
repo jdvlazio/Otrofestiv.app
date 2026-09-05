@@ -247,7 +247,7 @@
  },
  "films": [
   {
-   "title": "Acto inaugural + Convite: Sembrar soberanía — agricultura, semillas y territorio",
+   "title": "Acto inaugural + Convite — Sembrar soberanía: agricultura, semillas y territorio",
    "type": "event",
    "section": "🏺 Mujeres que sostienen la vida",
    "duration": "90 min",
@@ -775,7 +775,7 @@
    ]
   },
   {
-   "title": "Convite: La tierra no olvida — historias contadas desde la región",
+   "title": "La tierra no olvida - historias contadas desde la región",
    "type": "event",
    "section": "🗺️ Así es Cundinamarca",
    "duration": "30 min",
@@ -1380,7 +1380,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-05T07:38:59",
+  "fecha": "2026-09-05T10:33:25",
   "plan_sha": "be79a49d18a035ac",
   "paso": 4,
   "cmd": "python3 pipeline/ensamblar.py siembrafest-2026"
