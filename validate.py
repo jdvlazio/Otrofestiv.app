@@ -5751,7 +5751,10 @@ try:
     import glob as _g5, os as _os5
     # CineAutopsia salió de esta lista: se montó entero con el camino genérico
     # y su publicador propio se borró. La lista solo encoge.
-    _HEREDADOS = {'ficdeh-2026-publicar.py'}   # pre-genérico; su build está atrasado
+    # ficdeh-2026-publicar.py también salió (5 sep 2026): a pipeline/_historico/,
+    # con los demás scripts que ningún plan invoca. La lista llegó a cero, que
+    # es lo único a lo que podía llegar.
+    _HEREDADOS = set()
     _propios = {_os5.path.basename(_p) for _p in _g5.glob('pipeline/*-publicar.py')}
     _nuevos = sorted(_propios - _HEREDADOS)
     _faltan = [_f for _f in ('pipeline/ensamblar.py', 'pipeline/publicar.py')
@@ -5766,6 +5769,42 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar pipeline-generico: {_e}')
 
+
+# ── [pipeline-huerfano] un script de festival que ningún plan invoca no vive en el camino ──
+# Había 42 scripts `pipeline/<festival>-*.py` y 32 no los nombraba ningún
+# `.plan.json` (medido 5 sep 2026): quedaron de montar un festival y nadie los
+# borró, y quien entra al pipeline no sabe cuáles corren. La regla es la que
+# ejecuta correr.py, literal: vivo = citado en un `cmd` de algún plan. La cita en
+# un `_provenance` de festivals/ NO cuenta — es historia del dato, no invocación.
+# Lo que no está vivo se ARCHIVA en pipeline/_historico/ (decisión de Juan: se
+# archiva, no se borra), y esa carpeta queda fuera del glob por construcción.
+check = 'pipeline-huerfano'
+try:
+    import glob as _g6, os as _os6, re as _re6, json as _json6
+    _cmds = []
+    def _walk6(_o):
+        if isinstance(_o, dict):
+            for _k, _v in _o.items():
+                if _k == 'cmd' and isinstance(_v, str): _cmds.append(_v)
+                else: _walk6(_v)
+        elif isinstance(_o, list):
+            for _v in _o: _walk6(_v)
+    for _pl in _g6.glob('pipeline/*.plan.json'):
+        _walk6(_json6.load(open(_pl, encoding='utf-8')))
+    _C = '\n'.join(_cmds)
+    _huerf = sorted(_os6.path.basename(_f) for _f in _g6.glob('pipeline/*.py')
+                    if _re6.search(r'^pipeline/[a-z]+-20\d\d-.*\.py$', _f)
+                    and _os6.path.basename(_f) not in _C)
+    if not _cmds:
+        fail(check, 'ningún plan.json con `cmd`: el guardián no puede distinguir vivo de huérfano')
+    elif _huerf:
+        fail(check, 'script(s) de festival que ningún plan invoca — nombralo en su plan.json o '
+                    'archivalo en pipeline/_historico/: ' + ', '.join(_huerf))
+    else:
+        _n = sum(1 for _f in _g6.glob('pipeline/*.py') if _re6.search(r'^pipeline/[a-z]+-20\d\d-', _f))
+        ok(check, f'{_n} script(s) de festival en el camino, todos invocados por un plan')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 check = 'lib-unica'
 try:
