@@ -1,36 +1,251 @@
 {
- "_etapa": "B-ensamblada (staged, sin publicar). 64 funciones completas. Publicar en la ventana 20 AGO – 13 SEP, después de FINCA y FICDEH.",
- "_festival": "Quibdó África Film Festival 2026 · 14–20 SEP · Quibdó (Chocó) · 55 obras en 64 funciones, 3 sedes, 9 secciones",
- "_fuente": {
-  "que": "Boom Calendar «Program QAFF2026» (published=1), el widget del sitio en https://www.quibdoafricafilmfestival.com/program-2026",
-  "endpoint": "https://calendar.apiboomtech.com/api/published_calendar?comp_id=comp-ms99pkc3&instance=<TOKEN>",
-  "COMO_VOLVER_A_CONSULTARLA": [
-   "El endpoint EXIGE un `instance` firmado por Wix que CADUCA — no basta con comp_id, y sin él la API responde 200 con «Something went wrong», no un error HTTP. Guardar el token no sirve: hay que sacar uno nuevo cada vez.",
-   "1 · abrir https://www.quibdoafricafilmfestival.com/program-2026 en un navegador real (el widget es un iframe y curl no lo ejecuta).",
-   "2 · leer el src del iframe de calendar.boomte.ch/widget y copiar el parámetro `instance` (el payload lleva un signDate: así se ve si está fresco).",
-   "3 · llamar al endpoint con ese instance más los headers `PLATFORM: WIX` y un User-Agent de navegador.",
-   "La respuesta trae 160 eventos: 95 son de 2025-09 (edición pasada) y 65 de 2026-09. FILTRAR SIEMPRE por 2026-09."
+  "_etapa": "B-ensamblada (staged, sin publicar). 64 funciones completas. Publicar en la ventana 20 AGO – 13 SEP, después de FINCA y FICDEH.",
+  "_festival": "Quibdó África Film Festival 2026 · 14–20 SEP · Quibdó (Chocó) · 55 obras en 64 funciones, 3 sedes, 9 secciones",
+  "_fuente": {
+    "que": "Boom Calendar «Program QAFF2026» (published=1), el widget del sitio en https://www.quibdoafricafilmfestival.com/program-2026",
+    "endpoint": "https://calendar.apiboomtech.com/api/published_calendar?comp_id=comp-ms99pkc3&instance=<TOKEN>",
+    "COMO_VOLVER_A_CONSULTARLA": [
+      "El endpoint EXIGE un `instance` firmado por Wix que CADUCA — no basta con comp_id, y sin él la API responde 200 con «Something went wrong», no un error HTTP. Guardar el token no sirve: hay que sacar uno nuevo cada vez.",
+      "1 · abrir https://www.quibdoafricafilmfestival.com/program-2026 en un navegador real (el widget es un iframe y curl no lo ejecuta).",
+      "2 · leer el src del iframe de calendar.boomte.ch/widget y copiar el parámetro `instance` (el payload lleva un signDate: así se ve si está fresco).",
+      "3 · llamar al endpoint con ese instance más los headers `PLATFORM: WIX` y un User-Agent de navegador.",
+      "La respuesta trae 160 eventos: 95 son de 2025-09 (edición pasada) y 65 de 2026-09. FILTRAR SIEMPRE por 2026-09."
+    ],
+    "registro": "registration y tickets vienen null en los 65 eventos, y sigue igual el 9 ago. El RSVP no está por evento: vive en addons.registration a nivel de CALENDARIO. El ticket_url de las 64 funciones se construyó en el montaje."
+  },
+  "_revision_9_ago_2026": {
+    "resultado": "SIN CAMBIOS. Los 65 eventos de 2026-09 son exactamente los mismos que el 2 de agosto: 0 nuevos, 0 retirados, y CERO diferencias campo por campo (end, desc, venue, image, registration, tickets, categories, color, limited_guests, all_day, organizer).",
+    "catalogo": "La página /catalog («CATALOG QAFF 2026 OFFICIAL SELECTION») es solo una galería de imágenes. Sus dos PDF NO sirven: uno es el catálogo de 2019 y el otro los términos y condiciones. No hay catálogo 2026 descargable.",
+    "otras_paginas": "El menú tiene /selection-2026, /catalog, /program-2026, /copie-de-directors, /official-jury-2026, /competition, /african-panorama, /colombianpanorama.",
+    "obras_sin_funcion": "Dos obras de la Selección Oficial NO tienen función en el calendario y NO aparecen en ningún evento, ni en título ni en descripción: «Orango» (Samuel Kay Forrest, Guinea-Bisáu, 94 min) y «Hyphen» (Reine Razzouk, Líbano, 98 min), ambas Largometraje Documental y ambas sin sinopsis ni póster. PREGUNTAR al festival si quedaron fuera de programación o si falta cargarlas. Sus fichas de Etapa A se recuperaron del commit 5863d69: el ensamblador las había consumido al sobreescribir su propia entrada.",
+    "falsas_alarmas_descartadas": [
+      "«The Banjo Boys» (15 SEP) y «Three Black Men» (16 SEP) salen dos veces el mismo día: son Quibdó y Bogotá en paralelo, correcto.",
+      "«GOD'S WORK (Copy)» en el calendario no es un duplicado accidental: es su segunda función, en la Cinemateca de Bogotá el 15 SEP.",
+      "Los 64 eventos de la ventana produjeron 64 funciones; los 12 títulos que parecían huérfanos estaban mapeados por ALIAS_EV."
+    ]
+  },
+  "_pendientes": [
+    "PREGUNTAR al festival por «Orango» y «Hyphen» (ver arriba).",
+    "PUBLICAR en la ventana 20 AGO – 13 SEP, después de FINCA y FICDEH. Falta el script de publicar y la entrada en FESTIVAL_CONFIG.",
+    "VERIFICACIÓN HUMANA del catálogo film por film (el gate de tools/audit.html).",
+    "synopsis_en: 15 de 64. No la publica el festival; el catálogo 2026 no existe como PDF. O se pide, o se queda vacía — NUNCA traducida (incidente Tribeca).",
+    "lbSlug: 35 de 64. Es enriquecimiento nuestro, no depende del festival.",
+    "PÓSTERS: 61 de 64. Faltan 3.",
+    "REVISIÓN PERIÓDICA: re-consultar la API con un instance nuevo (ver arriba) y diffear contra qaff-2026-programacion-raw.json. Vigilar sobre todo que registration deje de ser null: sería señal de que abrieron inscripciones por evento."
   ],
-  "registro": "registration y tickets vienen null en los 65 eventos, y sigue igual el 9 ago. El RSVP no está por evento: vive en addons.registration a nivel de CALENDARIO. El ticket_url de las 64 funciones se construyó en el montaje."
- },
- "_revision_9_ago_2026": {
-  "resultado": "SIN CAMBIOS. Los 65 eventos de 2026-09 son exactamente los mismos que el 2 de agosto: 0 nuevos, 0 retirados, y CERO diferencias campo por campo (end, desc, venue, image, registration, tickets, categories, color, limited_guests, all_day, organizer).",
-  "catalogo": "La página /catalog («CATALOG QAFF 2026 OFFICIAL SELECTION») es solo una galería de imágenes. Sus dos PDF NO sirven: uno es el catálogo de 2019 y el otro los términos y condiciones. No hay catálogo 2026 descargable.",
-  "otras_paginas": "El menú tiene /selection-2026, /catalog, /program-2026, /copie-de-directors, /official-jury-2026, /competition, /african-panorama, /colombianpanorama.",
-  "obras_sin_funcion": "Dos obras de la Selección Oficial NO tienen función en el calendario y NO aparecen en ningún evento, ni en título ni en descripción: «Orango» (Samuel Kay Forrest, Guinea-Bisáu, 94 min) y «Hyphen» (Reine Razzouk, Líbano, 98 min), ambas Largometraje Documental y ambas sin sinopsis ni póster. PREGUNTAR al festival si quedaron fuera de programación o si falta cargarlas. Sus fichas de Etapa A se recuperaron del commit 5863d69: el ensamblador las había consumido al sobreescribir su propia entrada.",
-  "falsas_alarmas_descartadas": [
-   "«The Banjo Boys» (15 SEP) y «Three Black Men» (16 SEP) salen dos veces el mismo día: son Quibdó y Bogotá en paralelo, correcto.",
-   "«GOD'S WORK (Copy)» en el calendario no es un duplicado accidental: es su segunda función, en la Cinemateca de Bogotá el 15 SEP.",
-   "Los 64 eventos de la ventana produjeron 64 funciones; los 12 títulos que parecían huérfanos estaban mapeados por ALIAS_EV."
-  ]
- },
- "_pendientes": [
-  "PREGUNTAR al festival por «Orango» y «Hyphen» (ver arriba).",
-  "PUBLICAR en la ventana 20 AGO – 13 SEP, después de FINCA y FICDEH. Falta el script de publicar y la entrada en FESTIVAL_CONFIG.",
-  "VERIFICACIÓN HUMANA del catálogo film por film (el gate de tools/audit.html).",
-  "synopsis_en: 15 de 64. No la publica el festival; el catálogo 2026 no existe como PDF. O se pide, o se queda vacía — NUNCA traducida (incidente Tribeca).",
-  "lbSlug: 35 de 64. Es enriquecimiento nuestro, no depende del festival.",
-  "PÓSTERS: 61 de 64. Faltan 3.",
-  "REVISIÓN PERIÓDICA: re-consultar la API con un instance nuevo (ver arriba) y diffear contra qaff-2026-programacion-raw.json. Vigilar sobre todo que registration deje de ser null: sería señal de que abrieron inscripciones por evento."
- ]
+  "_revision_2_sep_2026": {
+    "quibdo": "CANCELADO por el terremoto del 10 ago (confirmado por Juan). La edición es solo en Bogotá.",
+    "parrilla": "del programa oficial en flipbook del 2 SEP, verificada por dos auditorías independientes que coincidieron en los 68 cupos sin una sola diferencia.",
+    "obras": "38 de las 57 se heredan del catálogo del Chocó; 19 se siembran con la ficha impresa y quedan por enriquecer (afiche, sinopsis, lbSlug).",
+    "acceso": "DESCONOCIDO y declarado: el programa no dice cómo se entra a ninguna función de Bogotá, y no se hereda el «entrada libre» de Quibdó.",
+    "sin_prelanzamiento": "el prelanzamiento del 5 SEP en el Museo Nacional queda fuera por decisión de Juan.",
+    "pendiente_del_festival": [
+      "dos franjas imposibles (Alianza 15 SEP y Uniandes 15 SEP: las obras no caben en su horario)",
+      "dos sedes anunciadas sin parrilla (Museo Nacional 16-17, Universidad Nacional 22)",
+      "las fechas: el lomo dice 14-18 en unas páginas y 14-17 en otras, y hay funciones el 19 y el 20"
+    ]
+  },
+  "festival": {
+    "crudo": "festivals/staging/qaff-2026-bogota-crudo.json",
+    "sedes": {
+      "Alianza Francesa": [
+        "Alianza Francesa - Bogotá",
+        ""
+      ],
+      "Cinemateca de Bogotá · Sala 2": [
+        "Cinemateca de Bogotá - Bogotá",
+        "Sala 2"
+      ],
+      "Cinemateca de Bogotá · Sala 3": [
+        "Cinemateca de Bogotá - Bogotá",
+        "Sala 3"
+      ],
+      "Cinemateca de Bogotá · Sala Capital": [
+        "Cinemateca de Bogotá - Bogotá",
+        "Sala Capital"
+      ],
+      "Museo Nacional de Colombia · Auditorio Teresa Cuervo Borda": [
+        "Museo Nacional de Colombia - Bogotá",
+        "Auditorio Teresa Cuervo Borda"
+      ],
+      "Pontificia Universidad Javeriana · Auditorio Centro Ático": [
+        "Pontificia Universidad Javeriana - Bogotá",
+        "Auditorio Centro Ático"
+      ],
+      "Pontificia Universidad Javeriana · Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes": [
+        "Pontificia Universidad Javeriana - Bogotá",
+        "Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes"
+      ],
+      "Pontificia Universidad Javeriana · Sala 901 - Edificio Jorge Hoyos Vásquez, S.J.": [
+        "Pontificia Universidad Javeriana - Bogotá",
+        "Sala 901 - Edificio Jorge Hoyos Vásquez, S.J."
+      ],
+      "Pontificia Universidad Javeriana · Sala 903 - Edificio Jorge Hoyos Vásquez, S.J.": [
+        "Pontificia Universidad Javeriana - Bogotá",
+        "Sala 903 - Edificio Jorge Hoyos Vásquez, S.J."
+      ],
+      "Universidad Nacional de Colombia · Facultad de Artes": [
+        "Universidad Nacional de Colombia - Bogotá",
+        "Facultad de Artes"
+      ],
+      "Universidad de los Andes · Auditorio (ML-C)": [
+        "Universidad de los Andes - Bogotá",
+        "Auditorio (ML-C)"
+      ],
+      "Universidad de los Andes · Salón (ML513)": [
+        "Universidad de los Andes - Bogotá",
+        "Salón (ML513)"
+      ],
+      "Universidad de los Andes · Salón (RGD08)": [
+        "Universidad de los Andes - Bogotá",
+        "Salón (RGD08)"
+      ]
+    },
+    "secciones": {
+      "Panorama Colombiano": {
+        "emoji": "🛶",
+        "en": "Colombian Panorama",
+        "archetype": "Muestra / País",
+        "color": "#F0CD0B",
+        "order": 1
+      },
+      "Panorama Africano": {
+        "emoji": "🌳",
+        "en": "African Panorama",
+        "archetype": "Muestra / País",
+        "color": "#E05B1B",
+        "order": 1
+      },
+      "Imaginarios Afrodisruptivos": {
+        "emoji": "🌧️",
+        "en": "Afrodisruptive Imaginaries",
+        "archetype": "Perspectivas / Miradas",
+        "color": "#15A327",
+        "order": 2
+      },
+      "Fronteras Latam": {
+        "emoji": "🌊",
+        "en": "Latam Borders",
+        "archetype": "Muestra / País",
+        "color": "#62778B",
+        "order": 3
+      },
+      "Otra Mirada": {
+        "emoji": "🪕",
+        "en": "Another View",
+        "archetype": "Perspectivas / Miradas",
+        "color": "#1839D1",
+        "order": 4
+      },
+      "Prisma Femenino": {
+        "emoji": "🪞",
+        "en": "Women's Prism",
+        "archetype": "Perspectivas / Miradas",
+        "color": "#E875FC",
+        "order": 7
+      },
+      "Panorama Diaspórica": {
+        "emoji": "☕",
+        "en": "Diasporic Panorama",
+        "archetype": "Muestra / País",
+        "color": "#57248A",
+        "order": 14
+      },
+      "Muestra Artística": {
+        "emoji": "🖼️",
+        "en": "Art Exhibition",
+        "archetype": "Especiales / Eventos",
+        "color": "#467808",
+        "order": 90
+      },
+      "Diálogo Improbable": {
+        "emoji": "💬",
+        "en": "Improbable Dialogue",
+        "archetype": "Charlas / Industria",
+        "color": "#8B5CF6",
+        "order": 3
+      },
+      "Miradas Especiales": {
+        "emoji": "✨",
+        "en": "Special Screenings",
+        "archetype": "Especiales / Eventos",
+        "color": "#EC4899",
+        "order": 3
+      }
+    },
+    "_secciones_src": "verbatim del QAFF ya publicado (festivals/qaff-2026.json): emoji, inglés, arquetipo, color y orden son curaduría YA APROBADA — no se reinventa al cambiar de ciudad, el festival es el mismo",
+    "geo": "festivals/staging/qaff-2026-bogota-geo.json",
+    "enriquecido": "festivals/staging/qaff-2026-bogota-enriquecimiento.json",
+    "_sedes_src": "clave = «Sede · Sala» tal como la escribe el crudo; valor = (sede canónica, sala). La sala NO puede ir suelta en el crudo: ensamblar.py la toma de esta tabla y descarta f['sala'].",
+    "_direcciones": {
+      "Alianza Francesa": "Cra. 3 # 18-45, Bogotá",
+      "Cinemateca de Bogotá · Sala 2": "Cra. 3 # 19-10, Bogotá",
+      "Cinemateca de Bogotá · Sala 3": "Cra. 3 # 19-10, Bogotá",
+      "Cinemateca de Bogotá · Sala Capital": "Cra. 3 # 19-10, Bogotá",
+      "Museo Nacional de Colombia · Auditorio Teresa Cuervo Borda": "Cra. 7 # 28-66, Bogotá",
+      "Pontificia Universidad Javeriana · Auditorio Centro Ático": "Cra. 7 # 40-62, Bogotá",
+      "Pontificia Universidad Javeriana · Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes": "Calle 40B # 5-37, Bogotá",
+      "Pontificia Universidad Javeriana · Sala 901 - Edificio Jorge Hoyos Vásquez, S.J.": "Cra. 7 # 40-62, Bogotá",
+      "Pontificia Universidad Javeriana · Sala 903 - Edificio Jorge Hoyos Vásquez, S.J.": "Cra. 7 # 40-62, Bogotá",
+      "Universidad Nacional de Colombia · Facultad de Artes": "Cra. 45 # 26-85, Bogotá",
+      "Universidad de los Andes": "Cra. 1 # 18A-12, Bogotá"
+    },
+    "name": "QAFF",
+    "fullName": "QAFF — Quibdó África Film Festival",
+    "city": "Bogotá",
+    "country": "CO",
+    "dates": "14–22 SEP",
+    "dates_en": "SEP 14–22",
+    "year": 2026,
+    "timezoneOffset": "-05:00",
+    "storageKey": "qaff2026_",
+    "festivalStartStr": "2026-09-14T00:00:00",
+    "festivalEndStr": "2026-09-22T23:00:00",
+    "sharedSlotIsOneScreening": true,
+    "mes_es": "septiembre",
+    "dias_vacios": [
+      "2026-09-21"
+    ],
+    "_dias_vacios_por_que": "el último Diálogo es el 22 en la Universidad Nacional y las proyecciones acaban el 20: el 21 no tiene nada. Se declara vacío porque un día ausente rompe la aritmética de «Hoy» y «Mañana»",
+    "_acceso_4_sep_2026": "Wilfrid Massamba, director de la Fundación QAFF, por correo: «la entrada es libre en todas las sedes, con inscripción previa». PENDIENTE el enlace de inscripción: la app dice que hay que registrarse y todavía no a dónde."
+  },
+  "_publicar": {
+    "estado": "NO publicado. src/config.js sigue apuntando al QAFF de Quibdó, y el JSON publicado sigue siendo el de Quibdó: la rama queda coherente consigo misma.",
+    "bloqueo": "faltan la sección de 14 funciones y la boletería de las cuatro sedes (issue #566). El ensamblador exige sección explícita, así que sin eso no hay build publicable.",
+    "receta": [
+      "1. añadir al bloque `festival` las secciones que responda el festival",
+      "2. python3 pipeline/qaff-2026-bogota-crudo.py",
+      "3. python3 pipeline/ensamblar.py qaff-2026",
+      "4. python3 pipeline/publicar.py qaff-2026 --forzar   (el gate compara contra el Quibdó publicado, que es OTRO programa: la pérdida es real y deliberada)",
+      "5. regenerar el bloque qaff2026 de src/config.js desde el JSON: ciudad Bogotá, 14–22 SEP, 9 días con el 21 vacío, prioLimit 4 — y con COMILLAS SIMPLES, que es lo único que leen los guardianes que parsean config.js con regex",
+      "6. quitar group:test cuando Juan lo decida"
+    ]
+  },
+  "pasos": [
+    {
+      "cmd": "python3 pipeline/qaff_pdf/fichas.py",
+      "que": "fichas de obra del PDF oficial → staging"
+    },
+    {
+      "cmd": "python3 pipeline/qaff_pdf/parrilla.py",
+      "que": "créditos de parrilla + invitados → staging"
+    },
+    {
+      "cmd": "python3 pipeline/qaff_pdf/verifica.py",
+      "que": "cada dato transcrito contra su página del PDF"
+    },
+    {
+      "cmd": "python3 pipeline/qaff-2026-bogota-crudo.py",
+      "que": "parrilla + fichas + herencia del Chocó → crudo"
+    },
+    {
+      "cmd": "python3 pipeline/ensamblar.py qaff-2026",
+      "que": "crudo + plan → build"
+    },
+    {
+      "cmd": "python3 pipeline/publicar.py qaff-2026",
+      "que": "build → festivals/ (valida el contrato al escribir)"
+    }
+  ],
+  "_copy_pendiente": "Diálogo Improbable y Miradas Especiales: el NOMBRE es del festival (el PDF imprime «DIÁLOGO IMPROBABLE»; su web titula /outofcompetition «MIRADAS ESPECIALES»). El emoji, la traducción y el arquetipo son nuestros y están pendientes del visto bueno de Juan — 💬/Charlas Industria sigue el precedente de FICMA y FICDEH."
 }

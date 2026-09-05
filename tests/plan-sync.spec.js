@@ -286,3 +286,52 @@ test('PS07 — el export dibuja los afiches, no sus reemplazos', async ({ page }
       .toBeGreaterThan(200);
   }
 });
+
+// ── PS08 — ninguna línea del .ics pasa de 75 octetos ─────────────────────────
+// Auditoría 4 sep 2026: 10 de 53 líneas de un .ics de FICDEH pasaban el límite
+// del RFC 5545 §3.1 —hasta 138 octetos el UID de una actividad de nombre largo, y
+// 98 un SUMMARY—. Ningún calendario nos lo rechazó (Google y Apple son
+// tolerantes), así que es deuda de formato, no un fallo visto; se paga porque el
+// estándar es el contrato con un programa que no controlamos.
+//
+// Se afirma: (1) ninguna línea pasa de 75 octetos; (2) el contenido sobrevive al
+// plegado —desplegando se recupera lo que había—; (3) control: el archivo sigue
+// teniendo sus propiedades y sus finales de línea CRLF.
+test('PS08 — el ICS pliega sus líneas largas sin perder contenido', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  const ics = await page.evaluate(async () => {
+    // se eligen las obras de TÍTULO más largo: son las que producen líneas largas
+    const vis = new Set(); const todas = [];
+    for (const f of FILMS) { if (!f._cancelled && f.day && f.time && !vis.has(f.title)) { vis.add(f.title); todas.push(f); } }
+    const el = todas.sort((a, b) => b.title.length - a.title.length).slice(0, 5);
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: el.map(f => ({ ...f, _title: f.title })) });
+    let cap = null;
+    const orig = URL.createObjectURL.bind(URL);
+    URL.createObjectURL = b => { cap = b; return orig(b); };
+    await exportICS();
+    URL.createObjectURL = orig;
+    return cap ? await cap.text() : null;
+  });
+  expect(ics, 'el export produce su archivo').toBeTruthy();
+
+  const oct = s => new TextEncoder().encode(s).length;
+  const lineas = ics.split('\r\n');
+  const largas = lineas.filter(l => oct(l) > 75).map(l => `${oct(l)} octetos: ${l.slice(0, 30)}…`);
+  expect(largas, `ninguna línea pasa de 75 octetos — ${largas.slice(0, 3).join(' · ')}`).toHaveLength(0);
+
+  // el contenido sobrevive: al desplegar (quitar CRLF+espacio) vuelve a estar entero
+  const desplegado = ics.replace(/\r\n /g, '');
+  expect(desplegado, 'el calendario conserva su estructura').toContain('BEGIN:VEVENT');
+  const sums = desplegado.split('\r\n').filter(l => l.startsWith('SUMMARY:'));
+  expect(sums.length, 'con un evento por obra del plan').toBe(5);
+  const titulos = await page.evaluate(() => savedAgenda.schedule.map(s => s._title));
+  for (const t of titulos) {
+    const esperado = t.replace(/\\/g, '\\\\').replace(/([,;])/g, '\\$1');
+    expect(desplegado, `«${t.slice(0, 28)}» llega entero`).toContain('SUMMARY:' + esperado);
+  }
+
+  // control: no queda ningún salto de línea SUELTO — el RFC pide CRLF, y el
+  // plegado es justamente quien podría introducir uno. (La última línea no lleva
+  // salto: por eso se busca el `\n` sin `\r` delante, no que todas terminen en CRLF.)
+  expect(/[^\r]\n/.test(ics), 'no hay saltos de línea sueltos: todo va en CRLF').toBe(false);
+});

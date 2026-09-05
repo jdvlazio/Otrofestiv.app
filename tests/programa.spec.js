@@ -1,7 +1,7 @@
 // @ts-check
 // programa.spec.js — Tab Programa: lista, grid, filtros, posters, topbar.
 const { test, expect } = require('@playwright/test');
-const { LEVIZA_SIMTIME, enterFestival, goToPlanear, reentrar, esperarCalculo } = require('./helpers');
+const { LEVIZA_SIMTIME, abrirHojaCiudad, enterFestival, goToPlanear, reentrar, esperarCalculo } = require('./helpers');
 
 // T01 — Apóstrofe: corazón en lista agrega al watchlist
 test('T01 — apóstrofe: corazón en lista agrega al watchlist', async ({ page }) => {
@@ -103,7 +103,9 @@ test('T12 — día específico carga en vista lista por defecto', async ({ page 
   test.setTimeout(40000);
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   const activeDay = await page.evaluate(() => activeDay);
-  if (activeDay === 'all') return;
+  // Premisa: con el reloj DENTRO de Leviza se aterriza en un día concreto. Si
+  // cayera en «todos» no hay día específico que cargar y el test no mide nada.
+  expect(activeDay, 'el arranque elige un día concreto, no «todos los días»').not.toBe('all');
   // Esperar a que .plist-item sea visible y .poster-card desaparezca del DOM visible
   await page.waitForSelector('.plist-item', { timeout: 8000 });
   await page.waitForFunction(() => {
@@ -375,13 +377,17 @@ test('T51 — donde gratis es la excepción, el badge GRATIS sigue igual', async
 // es un catálogo, es ruido. El sheet pregunta al entrar, guarda la respuesta y
 // no vuelve a preguntar. En un festival de una ciudad no existe.
 test('T52 — sheet de ciudad: solo multiciudad, y no reaparece', async ({ page }) => {
+  // El reloj va DENTRO de cada festival y viaja por URL: la pregunta de ciudad
+  // la decide el ARRANQUE, y un festival terminado ya no la hace (T177). Sin
+  // reloj pre-arranque las dos afirmaciones de abajo pasarían por esa razón y
+  // no por la que este test quiere medir.
   // mono-ciudad: el sheet NO existe
-  await enterFestival(page, 'tercertiempo2026');
+  await enterFestival(page, 'tercertiempo2026', '2026-07-15T10:00:00-05:00');
   await page.waitForTimeout(600);
   expect(await page.evaluate(() => document.getElementById('city-sheet')?.classList.contains('open'))).toBeFalsy();
 
   // multiciudad: aparece con una fila por ciudad + la salida
-  await enterFestival(page, 'cinemancia2025');
+  await enterFestival(page, 'cinemancia2025', '2025-09-15T10:00:00-05:00');
   await page.waitForSelector('#city-sheet.open', { timeout: 5000 });
   const filas = await page.evaluate(() => ({
     ciudades: document.querySelectorAll('#city-sheet-list .lugar-opt.city').length,
@@ -398,7 +404,7 @@ test('T52 — sheet de ciudad: solo multiciudad, y no reaparece', async ({ page 
   expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
 
   // reabrir: ya respondió, no se vuelve a preguntar
-  await enterFestival(page, 'cinemancia2025');
+  await enterFestival(page, 'cinemancia2025', '2025-09-15T10:00:00-05:00');
   await page.waitForTimeout(900);
   expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
   expect(await page.evaluate(() => activeVenue)).toBe('city:' + filas.nombre);
@@ -407,13 +413,15 @@ test('T52 — sheet de ciudad: solo multiciudad, y no reaparece', async ({ page 
 // La salida ("ver todas") también es una respuesta: no puede reabrir el sheet en
 // bucle cada vez que el usuario entra.
 test('T53 — "ver todas" se recuerda como respuesta, no como silencio', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2025');
+  // Reloj dentro del festival, por URL: lo que se mide es que la RESPUESTA se
+  // recuerde en el arranque siguiente, y el arranque mira la hora (T177).
+  await enterFestival(page, 'cinemancia2025', '2025-09-15T10:00:00-05:00');
   await page.waitForSelector('#city-sheet.open', { timeout: 5000 });
   await page.evaluate(() => document.querySelector('#city-sheet-list .lugar-opt.escape').click());
   await page.waitForTimeout(500);
   expect(await page.evaluate(() => activeVenue)).toBe('all');
 
-  await enterFestival(page, 'cinemancia2025');
+  await enterFestival(page, 'cinemancia2025', '2025-09-15T10:00:00-05:00');
   await page.waitForTimeout(900);
   expect(await page.evaluate(() => document.getElementById('city-sheet').classList.contains('open'))).toBe(false);
 });
@@ -2729,7 +2737,7 @@ test('T126 — el corazón de la lista llega al área de toque de sus hermanos',
       borde: [sonda(-30, 0), sonda(0, -30)]
     };
   });
-  if (r.sinCorazon) return;
+  expect(r.sinCorazon, 'la lista trae su corazón: es el área táctil que se mide').toBeUndefined();
   expect(r.caja, 'el botón sigue siendo el chico de 26 px').toBeLessThan(44);
   expect(r.dentro, 'a 14 px del centro responde el corazón, no la fila')
     .toEqual(['CORAZON', 'CORAZON', 'CORAZON', 'CORAZON']);
@@ -2798,7 +2806,8 @@ test('T133 — el número del filtro de sección es el de las filas que pinta', 
     const dd = FILMS.filter(f => f.day === activeDay && f.section === activeSec);
     return { dice, pinta: vis(), funciones: dd.length, obras: new Set(dd.map(f => f.title)).size };
   });
-  if (r.sinBoton || r.sinOpciones) return;
+  expect(r.sinBoton, 'el filtro de Sección existe').toBeUndefined();
+  expect(r.sinOpciones, 'y ofrece secciones con cuenta: son las que se comparan').toBeUndefined();
   expect(r.funciones, 'la sección elegida repite algún título ese día — si no, el caso no distingue')
     .toBeGreaterThan(r.obras);
   expect(r.dice, 'el número dice lo que se va a pintar').toBe(r.pinta);
@@ -2829,7 +2838,8 @@ test('T133b — la fila de ciudad no cuenta dos veces la obra que va a dos salas
     cityRow.click(); await w(1500);
     return { diceNivel1, diceNivel2, pinta: vis(), total: new Set(FILMS.map(f => f.title)).size };
   });
-  if (r.sinBoton || r.sinCiudades) return;
+  expect(r.sinBoton, 'el filtro de Lugar existe').toBeUndefined();
+  expect(r.sinCiudades, 'y el festival es multiciudad: sin dos niveles no hay nada que comparar').toBeUndefined();
   expect(r.diceNivel1, 'los dos niveles dicen lo mismo de la misma ciudad').toBe(r.diceNivel2);
   expect(r.diceNivel1, 'y ese número es el de las tarjetas que pinta').toBe(r.pinta);
   expect(r.pinta, 'la ciudad no puede tener más obras que el festival entero')
@@ -2876,7 +2886,9 @@ test('T140 — con el título en dos líneas, la etiqueta va en la última', asy
     });
     return { casos };
   });
-  if (!r.casos.length) return;                      // ningún título de 2 líneas con etiqueta
+  // Premisa: hace falta al menos un título de dos líneas CON etiqueta. Sin
+  // ninguno el bucle de abajo no itera y el test pasa sin mirar nada.
+  expect(r.casos.length, 'el fixture trae títulos de dos líneas con etiqueta').toBeGreaterThan(0);
   for (const c of r.casos) {
     expect(c.alPie, `«${c.etiqueta}» en ${c.txt}: va con la última línea`).toBeLessThanOrEqual(4);
     expect(c.alTecho, `«${c.etiqueta}» en ${c.txt}: y NO junto a la primera`).toBeGreaterThan(4);
@@ -2936,7 +2948,9 @@ test('T141 — el rótulo de la ciudad se alinea con el de sus sedes', async ({ 
       pinSede: sedes[0].querySelectorAll('svg').length
     };
   });
-  if (r.sinBoton || r.sinDrill || r.sinNivel2) return;
+  expect(r.sinBoton, 'el filtro de Lugar existe').toBeUndefined();
+  expect(r.sinDrill, 'y baja a ciudades').toBeUndefined();
+  expect(r.sinNivel2, 'y la ciudad abre sus sedes: es la columna que se mide').toBeUndefined();
   expect(r.xSedes.length, 'las sedes comparten una sola columna').toBe(1);
   expect(Math.abs(r.xCiudad - r.xSedes[0]), 'la ciudad está en esa misma columna')
     .toBeLessThanOrEqual(2);
@@ -2965,7 +2979,7 @@ test('T141 — el rótulo de la ciudad se alinea con el de sus sedes', async ({ 
 // porque un segundo salto sorprende más que quedarse. Sin ese aserto, «arreglar»
 // esto navegando siempre pasaría el test.
 test('T142 — Prensa ON salta a donde se ven los pases; OFF no mueve a nadie', async ({ page }) => {
-  await enterFestival(page, 'tiff2026');
+  await enterFestival(page, 'tiff2026', '2026-09-09T10:00:00-04:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
@@ -2996,7 +3010,7 @@ test('T142 — Prensa ON salta a donde se ven los pases; OFF no mueve a nadie', 
     const trasApagar = snap();
     return { enGrilla, conPrensa, trasApagar, diaTienePases };
   });
-  if (r.sinBoton) return;                       // festival sin pases de prensa
+  expect(r.sinBoton, 'el fixture tiene pases de prensa: sin ellos no hay interruptor que probar').toBeUndefined();
   expect(r.enGrilla.modo, 'se parte de la grilla de todas').toBe('grid');
   expect(r.enGrilla.dia, 'y de «todos los días»').toBe('all');
   // ENCENDER: lleva a donde lo añadido se ve
@@ -3031,7 +3045,7 @@ test('T142 — Prensa ON salta a donde se ven los pases; OFF no mueve a nadie', 
 const _FONDO_MAS_CLARO_MEDIDO = [52, 49, 44];   // TIFF · scrollTop 1800 · 1 sep 2026
 
 test('T145 — el rótulo inactivo de la barra cumple AA sobre pósters claros', async ({ page }) => {
-  await enterFestival(page, 'tiff2026');
+  await enterFestival(page, 'tiff2026', '2026-09-09T10:00:00-04:00');
   const r = await page.evaluate(async (fondo) => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
@@ -3056,7 +3070,7 @@ test('T145 — el rótulo inactivo de la barra cumple AA sobre pósters claros',
       alfaVelo, blur: csN.backdropFilter || csN.webkitBackdropFilter,
       colorTexto: csT.color, fs: parseFloat(csT.fontSize) };
   }, _FONDO_MAS_CLARO_MEDIDO);
-  if (r.sinBarra) return;
+  expect(r.sinBarra, 'la barra de filtros está en pantalla: es la superficie que se mide').toBeUndefined();
   expect(r.alfaVelo, 'la barra sigue siendo vidrio, no muro ([chrome-glass])').toBeLessThanOrEqual(0.6);
   expect(r.blur, 'y conserva su desenfoque').toMatch(/blur/);
   expect(r.fs, 'el rótulo es texto pequeño: le aplica el 4,5:1').toBeLessThan(18);
@@ -3076,8 +3090,16 @@ test('T145 — el rótulo inactivo de la barra cumple AA sobre pósters claros',
 //
 // Las dos mitades van juntas a propósito: la primera sola se «arregla» con una
 // máscara fija, y la segunda lo impide.
+//
+// FIXTURE — se mide sobre ficci65 y NO sobre un festival vivo. El test estaba
+// apuntado a cinemancia2026 y se volvió mudo sin avisar: su lista de Sección
+// bajó a 8 opciones (352px) y dejó de tocar el tope de 464,2 — sin desborde no
+// hay máscara que medir, así que salía verde probando nada (medido 4 sep 2026).
+// ficci65 está archivado (su dato ya no cambia) y desborda con margen amplio:
+// 22 opciones, 968px contra los mismos 464,2. Y si aun así dejara de desbordar,
+// abajo se cae en vez de callarse.
 test('T146 — el pie del dropdown se desvanece solo mientras queda lista', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'ficci65');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
@@ -3102,7 +3124,10 @@ test('T146 — el pie del dropdown se desvanece solo mientras queda lista', asyn
     const db = d.getBoundingClientRect(), ub = ult.getBoundingClientRect();
     return { arriba, abajo, pieUltimaALaBase: Math.round(db.bottom - ub.bottom) };
   });
-  if (r.sinBoton || r.noScrollea) return;
+  // Estas dos NO son escapes: son la premisa del test. Cuando no se cumplen no
+  // hay nada que medir, y eso tiene que sonar — antes eran un `return` mudo.
+  expect(r.sinBoton, 'el filtro de Sección existe en este festival').toBeUndefined();
+  expect(r.noScrollea, 'y su lista desborda el panel: sin desborde no hay máscara que probar').toBeUndefined();
   expect(r.arriba.clase, 'con lista por debajo, el pie se desvanece').toBe(true);
   expect(r.arriba.mask, 'y la máscara aplica de verdad, no solo la clase').toMatch(/gradient/);
   expect(r.abajo.clase, 'al final de la lista la clase se retira').toBe(false);
@@ -3126,7 +3151,10 @@ test('T146 — el pie del dropdown se desvanece solo mientras queda lista', asyn
 // (festivalCities). Marcar una sola las pondría a decir cosas distintas de la
 // misma ciudad, que es peor que no marcar ninguna.
 test('T149 — la ciudad sin programación viva se marca en las dos superficies', async ({ page }) => {
-  await enterFestival(page, 'ficdeh2026');
+  // El reloj va DENTRO del festival y la hoja se abre después: es la fase en la
+  // que esta pregunta existe. Un festival terminado ya no la hace (T177).
+  await enterFestival(page, 'ficdeh2026', '2026-08-16T10:00:00-05:00');
+  await abrirHojaCiudad(page);
   await page.waitForTimeout(1200);
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
@@ -3185,7 +3213,10 @@ test('T149 — la ciudad sin programación viva se marca en las dos superficies'
   expect(r.hoja.cortado, 'la marca no recorta el nombre de la ciudad').toBe(false);
 
   // 4 · y el filtro de Lugar dice LO MISMO — dos superficies, un dueño
-  if (!r.sinFiltro) {
+  // La otra mitad no se salta en silencio: si el filtro de Lugar no está, las
+  // dos superficies dejan de compararse y el test se queda a medias sin decirlo.
+  expect(r.sinFiltro, 'el filtro de Lugar existe: es la otra superficie que este test compara').toBeUndefined();
+  {
     expect(r.filtro.marcadas, 'el filtro de Lugar marca las mismas que la hoja de apertura')
       .toEqual(r.hoja.marcadas);
     expect(r.filtro.sinMarca, 'y deja sin marcar las mismas').toEqual(r.hoja.sinMarca);
@@ -3268,7 +3299,7 @@ test('T153 — el sustantivo de Planear sigue al contenido, no a la pantalla', a
 // alcanzable, con foco VISIBLE, y que Enter la opere. Una de las tres sola no
 // sirve de nada.
 test('T157 — Cancelar es alcanzable, se ve enfocada y responde a Enter', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button');
     b.setAttribute('data-action', 'closeCitySheet');
@@ -3437,7 +3468,7 @@ test('T164 — el panel usa el ancho que necesita, y no más', async ({ page }) 
     });
   };
   await page.setViewportSize({ width: 390, height: 844 });
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
 
   // 1 · catálogo entero: hay nombres largos, así que el panel tiene que usar todo
   const todo = await abrir(true);
@@ -3539,4 +3570,53 @@ test('T166 — las dos salidas de texto gris cumplen AA pintadas', async ({ page
   expect(lb.contraste,
     `«${lb.txt}»: ${lb.declarado} al ${lb.alfa} pinta ${lb.pintado} sobre ${lb.bg} y da ${lb.contraste}`)
     .toBeGreaterThanOrEqual(_AA_NORMAL);
+});
+
+// ── T177 — un festival terminado no pregunta ciudad, pero deja elegirla ──────
+// «¿A cuál ciudad vas?» está en futuro. En un festival pasado era lo primero y
+// ÚNICO que se veía al entrar: medido en FICDEH, la hoja ocupa 390x844 —el
+// viewport entero— con z-index 9999, así que también se comía el toque a las
+// pestañas. Once ciudades preguntadas a alguien que viene a RECORDAR.
+//
+// Las dos mitades van juntas a propósito, y es la decisión de Juan (4 sep 2026):
+// lo que se retira es la PREGUNTA, no la posibilidad. Sin la segunda mitad, este
+// test se «arregla» borrando la elección de ciudad por completo —que es
+// exactamente lo que no se quiere—: el filtro de Lugar tiene que seguir
+// ofreciendo las mismas ciudades para releer el programa de una.
+test('T177 — el festival terminado no pregunta ciudad, y el filtro sigue ofreciéndolas', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-25T10:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const H = await import('/src/view/helpers.js');
+    const T = await import('/src/domain/time.js');
+    await w(1400);
+    // 1 · la pregunta no aparece
+    const sh = document.getElementById('city-sheet');
+    const hoja = { abierta: !!sh && sh.classList.contains('open'),
+                   display: sh ? getComputedStyle(sh).display : null };
+    // 2 · pero las ciudades siguen estando, y el filtro las ofrece
+    switchMainNav('mnav-cartelera');
+    await w(1400);
+    const lb = document.getElementById('lugar-btn');
+    if (!lb) return { hoja, sinFiltro: true };
+    lb.click();
+    await w(800);
+    const drop = document.querySelector('#lugar-drop, .filter-drop');
+    const opciones = drop ? [...drop.querySelectorAll('[data-v]')].map(e => e.dataset.v) : [];
+    return { hoja,
+      terminado: T.festivalEnded(),
+      ciudadesDelDato: H.festivalCities(FILMS).length,
+      ciudadesEnFiltro: opciones.filter(v => v.startsWith('drill:')).length };
+  });
+  // Premisas: sin ellas no hay nada que medir, y tienen que sonar ([test-salida-muda])
+  expect(r.sinFiltro, 'el filtro de Lugar existe').toBeUndefined();
+  expect(r.terminado, 'el fixture es un festival TERMINADO').toBe(true);
+  expect(r.ciudadesDelDato, 'y multiciudad — con una sola no habría pregunta que retirar')
+    .toBeGreaterThanOrEqual(2);
+  // 1 · no se pregunta
+  expect(r.hoja.abierta, 'la hoja que pregunta la ciudad no se abre').toBe(false);
+  expect(r.hoja.display, 'y no queda tapando la pantalla').not.toBe('flex');
+  // 2 · pero se puede elegir igual — la mitad que impide «arreglarlo» borrando todo
+  expect(r.ciudadesEnFiltro, 'el filtro de Lugar sigue ofreciendo las mismas ciudades')
+    .toBe(r.ciudadesDelDato);
 });

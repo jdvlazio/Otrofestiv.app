@@ -36,6 +36,11 @@ const ALIAS = {
   'Hong Kong': 'HK', 'Holanda': 'NL', 'Países bajos': 'NL',
   'Guinea Bissau': 'GW', 'Costa de Marfil': 'CI', 'Bielorrusia': 'BY',
   'Birmania': 'MM', 'Burma': 'MM', 'Timor Oriental': 'TL', 'Cabo Verde': 'CV',
+  // Errata de imprenta del programa de QAFF Bogotá (SEP 2026): el país es ese.
+  // Vivía en la tabla a mano de pipeline/lib.py; al fusionar con esta rama —que
+  // hace de esta la fuente ÚNICA— se habría perdido en silencio, y «Estados
+  // Unido» habría vuelto a salir sin bandera. Medido antes de fusionar.
+  'Estados Unido': 'US',
 };
 
 // NO llevan bandera, y es deliberado: Estados que dejaron de existir —Unicode no

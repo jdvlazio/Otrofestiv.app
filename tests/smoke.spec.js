@@ -66,7 +66,7 @@ test('T136 — un visitante sin sesión no dispara peticiones a Supabase', async
       aSupabase.push({ status: r.status(), tabla: u.includes('screening_reports') ? 'screening_reports' : u.slice(-40) });
     }
   });
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.waitForTimeout(3000);
   const conSesion = await page.evaluate(() => !!(typeof _sbUser !== 'undefined' && _sbUser));
   expect(conSesion, 'el visitante del test no tiene sesión — es el caso del bug').toBe(false);

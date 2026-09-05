@@ -491,7 +491,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202609041254';
+const BUILD_VERSION='202609041809';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -548,7 +548,21 @@ filmDelays={};            // retrasos manuales: key=title|day|time, val=mins
 filmDelaysHistory={};     // p5.5: undo stack — key=title|day|time, val=[prev1, prev2, ...]
                               // Separado de filmDelays para inmutabilidad (era ._hist anidado pre-p5.5).
 // ── Simulation clock (dev tool) ──
-_simTime=null; // null = real time
+// `?simTime=` lo fija ANTES del arranque, y eso es lo que aporta sobre ponerlo
+// desde afuera: todo lo que el arranque decide MIRANDO LA HORA —en qué fase está
+// el festival, si se abre la pregunta de ciudad (loader.js)— quedaba fuera del
+// alcance de cualquier prueba, porque el reloj solo se podía mover después.
+// T52/T53 lo cazaron: comprueban que la hoja no vuelva a preguntar, y el
+// arranque las miraba siempre con la hora real. (Juan, 4 sep 2026; precedente:
+// `?fest=` y `?updPoll=`.)
+// Una fecha ilegible cae a tiempo real en vez de propagar un Invalid Date a
+// todas las comparaciones de la app.
+_simTime=(function(){
+  var m=location.search.match(/[?&]simTime=([^&]+)/);
+  if(!m) return null;
+  var v=decodeURIComponent(m[1]);
+  return isNaN(new Date(v).getTime()) ? null : v;
+})(); // null = real time
 // simNow() → Date — Date de "ahora" controlable para sim/QA.
 // Lee (contrato implícito): _simTime (null = tiempo real; string ISO = override).
 // Returns: new Date(_simTime) si _simTime es truthy, sino new Date() (tiempo real).

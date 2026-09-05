@@ -1563,7 +1563,7 @@ export function _avisosBand(f, opts){
   // solo si ESTA obra recorre ≥2 ciudades; si no, sería ruido en cada línea.
   const _ciudades=new Set(_src.map(x=>x&&venueCity(x.venue)).filter(Boolean));
   const _conCiudad=_ciudades.size>1;
-  const _cual=h=>(h.length&&h.length<_src.length)?' · '+h.map(x=>_coord(x,_conCiudad)).join(' / '):'';
+  const _cual=(h,_u)=>{const _n=(_u||_src).length;return (h.length&&h.length<_n)?' · '+h.map(x=>_coord(x,_conCiudad)).join(' / '):'';};
   const _qa=_con('has_qa');
   if(_qa.length) rows.push(['Q&A', t(_qa[0].qa_type==='guests'?'aviso_qa_ref':'aviso_qa_equipo')+_cual(_qa)]);
   // Duración no publicada (auditoría 4 sep 2026). El festival no la dice, así que
@@ -1597,12 +1597,26 @@ export function _avisosBand(f, opts){
   // único de qué se marca (la minoría). Si la card de una función dice CON
   // BOLETA y su ficha dijera GRATIS, se contradirían.
   const _tb=ticketBadgeTarget();
+  // El precio se dice de las funciones VIVAS (auditoría 4 sep 2026). La banda
+  // listaba «CON BOLETA · mié 12 · jue 13 · jue 13» nombrando funciones que ella
+  // misma marca CANCELADA tres renglones más arriba: la misma tarjeta se
+  // desmentía sola. Una función cancelada no tiene precio — no va a ocurrir—, y
+  // lo que la invalida se lee ANTES que lo que la matiza (DESIGN 8.4.6).
+  // Si TODAS están canceladas no se dice nada de precio: el aviso de cancelada ya
+  // lo dijo todo.
+  // QUÉ funciones se nombran: solo las VIVAS. La fila sigue apareciendo igual que
+  // antes —ticketBadgeTarget manda, y la ficha tiene que decir lo MISMO que la
+  // card—; lo que cambia es a cuáles nombra. Filtrar la fila entera la silenciaba
+  // cuando las de precio estaban todas canceladas, y entonces el usuario dejaba de
+  // saber si paga (medido: la banda quedó en «Cancelada / Programa», sin precio).
+  const _vivas=_src.filter(x=>x&&!x._cancelled);
+  const _soloVivas=h=>h.filter(x=>!x._cancelled);
   if(_tb==='free'){
     const _g=_con('is_free');
-    if(_g.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_g)]);
+    if(_g.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_soloVivas(_g),_vivas)]);
   } else if(_tb==='paid'){
     const _p=_src.filter(x=>x&&x.is_free!==true);
-    if(_p.length) rows.push([t('badge_con_boleta'), t('aviso_con_boleta')+_cual(_p)]);
+    if(_p.length) rows.push([t('badge_con_boleta'), t('aviso_con_boleta')+_cual(_soloVivas(_p),_vivas)]);
   }
   if(!rows.length) return '';
   return `<div class="sec-hdr sm">${ICONS.alert} <span>${t('label_avisos')}</span></div>`
