@@ -19,13 +19,16 @@ const { enterFestival } = require('./helpers');
 const FEST = 'finca2026';
 
 // applyNotices — inyecta avisos y fuerza la recarga por el camino de producción.
-async function applyNotices(page, notices) {
+// `fest` por parámetro: estaba cableado a FEST, así que un test que entrara a
+// OTRO festival recargaba FINCA encima y se quedaba sin sus obras (me pasó con
+// AV02 el 5 sep 2026: `total` daba 0 y parecía dato roto, era el fixture pisado).
+async function applyNotices(page, notices, fest = FEST) {
   return page.evaluate(async ({ id, notices }) => {
     NOTICES.length = 0;
     notices.forEach(n => NOTICES.push(Object.assign({ festival: id }, n)));
     FESTIVAL_CONFIG[id].films = null;   // sin esto, el caché de sesión salta el sellado
     await loadFestival(id);
-  }, { id: FEST, notices });
+  }, { id: fest, notices });
 }
 
 // AV01 — el loader sella la cancelación y la reprogramación desde NOTICES
@@ -64,13 +67,27 @@ test('AV01 — el aviso llega al dato: cancelada marcada, reprogramada movida', 
 // El matcher es (title, date opcional): con `date`, solo esa función. Sin esta
 // guarda, un festival con dos funciones del mismo título perdería las dos.
 test('AV02 — el aviso con fecha toca UNA función, no todas las del título', async ({ page }) => {
-  await enterFestival(page, FEST, '2026-08-12T10:00');
-  const title = await page.evaluate(() =>
-    (FILMS.filter(f => !f.info).map(f => f.title)
-      .find((t, i, a) => a.indexOf(t) !== i)) || null);
-  if (!title) { test.skip(true, 'AV02: sin título con dos funciones, skip'); return; }
-  const day = await page.evaluate(t => FILMS.find(f => f.title === t).day, title);
-  await applyNotices(page, [{ title, type: 'cancelled', date: day }]);
+  // FIXTURE — FICDEH, no FINCA. Este test necesita un título con DOS funciones
+  // EN DÍAS DISTINTOS, y FINCA no tiene ni un título repetido: se saltaba
+  // siempre, así que nunca corrió (medido 5 sep 2026 sobre los 18 festivales).
+  // FICDEH está terminado —su dato ya no cambia—, usa días ISO y trae 82
+  // títulos repetidos. Descartado FICCI 65 pese a tener 66: sus días son
+  // nombres («Martes»), no fechas, así que un aviso con `date` no puede casar —
+  // lo probé y marcaba cero.
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00:00-05:00');
+  // La condición se pide COMPLETA: dos funciones en días distintos. Con las dos
+  // el mismo día, el aviso con fecha marcaría las dos y el test mediría al revés.
+  const caso = await page.evaluate(() => {
+    const por = {};
+    FILMS.filter(f => !f.info && f.day).forEach(f => (por[f.title] ||= new Set()).add(f.day));
+    const t = Object.keys(por).find(t => por[t].size > 1);
+    return t ? { title: t, day: [...por[t]].sort()[0] } : null;
+  });
+  expect(caso, 'el fixture trae un título con funciones en dos días: es el caso que mide')
+    .not.toBe(null);
+  const title = caso.title;
+  const day = caso.day;
+  await applyNotices(page, [{ title, type: 'cancelled', date: day }], 'ficdeh2026');
   const r = await page.evaluate(t => {
     const fs = FILMS.filter(f => f.title === t);
     return { total: fs.length, marcadas: fs.filter(f => f._cancelled).length };

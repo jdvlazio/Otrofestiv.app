@@ -5,12 +5,24 @@ const { LEVIZA_SIMTIME, enterFestival, addToWatchlist, goToPlanear, esperarCalcu
 
 // T11 — Cerrar alternativas en Mi Plan cierra el panel
 test('T11 — cerrar alternativas en Mi Plan cierra el panel', async ({ page }) => {
-  await enterFestival(page, 'tribeca2026');
-  await page.locator('.mnav-tab[data-nav="mnav-cartelera"], .main-nav-tab').first().click();
-  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  // Leviza con su reloj dentro: medido, pinta 3 filas de plan (5 sep 2026).
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  // El plan se CONSTRUYE. Antes el test entraba a Mi Plan sin haber creado
+  // ninguno, no encontraba una sola fila y se saltaba: no es que dejara de
+  // correr, es que NUNCA corrió (medido 5 sep 2026). commitPlan es el
+  // chokepoint del plan, el mismo que usan T132 y sus hermanos.
+  await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const sel = FILMS.filter(f => f.day && f.time && !f._cancelled).slice(0, 4);
+    commitPlan(() => ({ schedule: sel.map(f => ({ ...f, _title: f.title })) }));
+    await w(500);
+    switchMainNav('mnav-miplan'); showAgView();
+    await w(1600);
+  });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
-  if (hasPlan === 0) { test.skip(true, 'T11: sin plan activo, skip'); return; }
+  expect(hasPlan, 'el plan construido pinta sus filas: sin ellas no hay panel que abrir ni cerrar')
+    .toBeGreaterThan(0);
   await page.locator('.mplan-t1').first().click();
   const altPanel = page.locator('.film-alts').first();
   await expect(altPanel).toBeVisible({ timeout: 5000 });
@@ -52,13 +64,24 @@ test('T25 — datos del plan disponibles para el día seleccionado', async ({ pa
 
 // T26 — Hora punteada abre panel de alternativas
 test('T26 — hora punteada abre panel de alternativas', async ({ page }) => {
-  await enterFestival(page, 'tribeca2026');
-  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  // El plan se CONSTRUYE. Antes el test entraba a Mi Plan sin haber creado
+  // ninguno, no encontraba una sola fila y se saltaba: no es que dejara de
+  // correr, es que NUNCA corrió (medido 5 sep 2026). commitPlan es el
+  // chokepoint del plan, el mismo que usan T132 y sus hermanos.
+  await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const sel = FILMS.filter(f => f.day && f.time && !f._cancelled).slice(0, 4);
+    commitPlan(() => ({ schedule: sel.map(f => ({ ...f, _title: f.title })) }));
+    await w(500);
+    switchMainNav('mnav-miplan'); showAgView();
+    await w(1600);
+  });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
-  // Salida MUDA: sin plan el test pasaba en verde sin ejercer una sola aserción.
-  // Un test que no corre tiene que decirlo — si no, la suite miente.
-  test.skip(!hasPlan, 'T26: sin plan activo en el festival de prueba');
+  // El `skip` de antes era honesto —decía que no corría— pero no arreglaba la
+  // causa: el plan nunca se construía. Ahora se construye y esto es premisa.
+  expect(hasPlan, 'el plan construido pinta la fila de hora punteada').toBeGreaterThan(0);
   await page.locator('.mplan-t1').first().click();
   await expect(page.locator('.film-alts').first()).toBeVisible({ timeout: 5000 });
   expect(await page.locator('.film-alts').count()).toBeGreaterThan(0);
@@ -66,28 +89,59 @@ test('T26 — hora punteada abre panel de alternativas', async ({ page }) => {
 
 // T27 — Sugerencias: botón Añadir NO abre sheet de película
 test('T27 — sugerencias: añadir no abre sheet', async ({ page }) => {
-  await enterFestival(page, 'tribeca2026');
-  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  // Tribeca CON su reloj dentro: medido, 41 sugerencias (5 sep 2026). Sin reloj
+  // el festival está terminado, no hay nada que sugerir y el test se saltaba.
+  await enterFestival(page, 'tribeca2026', '2026-06-08T11:00:00-04:00');
+  // El plan se CONSTRUYE. Antes el test entraba a Mi Plan sin haber creado
+  // ninguno, no encontraba una sola fila y se saltaba: no es que dejara de
+  // correr, es que NUNCA corrió (medido 5 sep 2026). commitPlan es el
+  // chokepoint del plan, el mismo que usan T132 y sus hermanos.
+  await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const sel = FILMS.filter(f => f.day && f.time && !f._cancelled).slice(0, 4);
+    commitPlan(() => ({ schedule: sel.map(f => ({ ...f, _title: f.title })) }));
+    await w(500);
+    switchMainNav('mnav-miplan'); showAgView();
+    await w(1600);
+  });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
-  // Salida MUDA: sin botón de sugerencia no se ejercía nada y daba verde.
-  test.skip(!await addBtn.count(), 'sin sugerencia disponible para agregar');
+  expect(await addBtn.count(), 'con un plan armado, Mi Plan ofrece sugerencias que añadir')
+    .toBeGreaterThan(0);
   await addBtn.click();
   await expect(page.locator('#pel-sheet.open')).toHaveCount(0, { timeout: 3000 });
 });
 
 // T28 — Sugerencias: botón Añadir muestra toast de confirmación
 test('T28 — sugerencias: añadir muestra toast', async ({ page }) => {
-  await enterFestival(page, 'tribeca2026');
-  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  // Tribeca CON su reloj dentro: medido, 41 sugerencias (5 sep 2026). Sin reloj
+  // el festival está terminado, no hay nada que sugerir y el test se saltaba.
+  await enterFestival(page, 'tribeca2026', '2026-06-08T11:00:00-04:00');
+  // El plan se CONSTRUYE. Antes el test entraba a Mi Plan sin haber creado
+  // ninguno, no encontraba una sola fila y se saltaba: no es que dejara de
+  // correr, es que NUNCA corrió (medido 5 sep 2026). commitPlan es el
+  // chokepoint del plan, el mismo que usan T132 y sus hermanos.
+  await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const sel = FILMS.filter(f => f.day && f.time && !f._cancelled).slice(0, 4);
+    commitPlan(() => ({ schedule: sel.map(f => ({ ...f, _title: f.title })) }));
+    await w(500);
+    switchMainNav('mnav-miplan'); showAgView();
+    await w(1600);
+  });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
-  // Salida MUDA: sin botón de sugerencia no se ejercía nada y daba verde.
-  test.skip(!await addBtn.count(), 'sin sugerencia disponible para agregar');
+  expect(await addBtn.count(), 'con un plan armado, Mi Plan ofrece sugerencias que añadir')
+    .toBeGreaterThan(0);
   await addBtn.click();
-  await page.waitForSelector('.toast, .toast-msg, #toast', { timeout: 5000 });
-  const toast = await page.locator('.toast, .toast-msg, #toast').count();
-  expect(toast).toBeGreaterThan(0);
+  // El selector estaba PODRIDO: buscaba `.toast, .toast-msg, #toast` y el toast
+  // de esta app es `#prio-toast` (el mismo que mide T143). Como el test nunca
+  // llegaba a correr —se saltaba por falta de plan— nadie se enteró de que
+  // apuntaba a un elemento que no existe. Medido el 5 sep 2026: al añadir una
+  // sugerencia aparece «<obra> · <día> · <hora> · también en Intereses».
+  const toast = page.locator('#prio-toast');
+  await expect(toast).toBeVisible({ timeout: 5000 });
+  await expect(toast, 'el toast nombra la obra que se añadió').not.toHaveText('');
 });
 
 // T40 — Mi Plan vacío muestra estado vacío
