@@ -388,12 +388,13 @@ export const PALMARES=[
   // hubo que buscarlas por director:
   //   · «Si yo fuese fuego» en el palmarés es «Si yo fuese fuego (If I Were
   //     Fire)» en el catálogo, que lleva la traducción entre paréntesis.
-  //   · «INMARCESIBLE» en el anuncio del premio es «Inmarcesbile» en el
-  //     catálogo — y NO es un error nuestro: su propia página de Selección
-  //     Oficial también escribe «Inmarcesbile». El festival tiene las dos
-  //     grafías en circulación; la correcta en español es «inmarcesible».
-  //     Mostramos la del catálogo, que es la que el usuario vio en la app —
-  //     misma regla que se aplicó a FINCA con «How Deep Is Your Love».
+  //   · «INMARCESIBLE» en el anuncio del premio venía como «Inmarcesbile» en el
+  //     catálogo, y NO era un error nuestro: su PDF y su página de Selección
+  //     Oficial escriben «Inmarcesbile». Pero el propio festival se contradice en
+  //     el anuncio del fallo, y la palabra en español es «inmarcesible» —«oh
+  //     gloria inmarcesible»—. Juan lo cerró el 6 sep: se corrige EN TODO. La
+  //     errata queda declarada en pipeline/cineautopsia-2026-pdf.py, y el crudo
+  //     guarda en `_impreso` lo que dice el impreso.
   //
   // `autoria` toma el nombre COMPLETO del director tal como lo publica su
   // Selección Oficial, no la forma corta del anuncio: ahí «Miguel S. Molina» es
@@ -401,7 +402,7 @@ export const PALMARES=[
   // Caballero». El anuncio abrevia; la selección no.
 
   {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Colombia', nivel:'ganadora',
-   titulo:'Inmarcesbile', autoria:'Juan Sebastián Parra Posso', obra:'Inmarcesbile'},
+   titulo:'Inmarcesible', autoria:'Juan Sebastián Parra Posso', obra:'Inmarcesible'},
   {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Colombia', nivel:'mencion',
    titulo:'Posdata para el fin del mundo', autoria:'John Melo', obra:'Posdata para el fin del mundo'},
   {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Colombia', nivel:'mencion',
