@@ -1102,10 +1102,13 @@
     },
     {
      "title": "El tiempo de las mujeres transforma el territorio",
+     "director": "William Ospina Ramírez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "17 min",
      "synopsis_lang": "es",
-     "synopsis": "Video institucional de FAO Colombia."
+     "synopsis": "Reúne las historias de mujeres de diferentes regiones del país y muestra cómo la innovación y la tecnología pueden contribuir a reducir la carga de cuidado y trabajo doméstico no remunerado que enfrentan especialmente las mujeres campesinas."
     }
    ]
   },
@@ -1200,10 +1203,13 @@
     },
     {
      "title": "El tiempo de las mujeres transforma el territorio",
+     "director": "William Ospina Ramírez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "17 min",
      "synopsis_lang": "es",
-     "synopsis": "Video institucional de FAO Colombia."
+     "synopsis": "Reúne las historias de mujeres de diferentes regiones del país y muestra cómo la innovación y la tecnología pueden contribuir a reducir la carga de cuidado y trabajo doméstico no remunerado que enfrentan especialmente las mujeres campesinas."
     }
    ]
   },
@@ -1369,7 +1375,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-07T12:36:38",
+  "fecha": "2026-09-07T13:49:23",
   "plan_sha": "20ad2e69102bff33",
   "paso": 4,
   "cmd": "python3 pipeline/ensamblar.py siembrafest-2026"

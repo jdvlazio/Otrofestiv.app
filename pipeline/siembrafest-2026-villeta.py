@@ -189,8 +189,18 @@ CONTRADICCIONES = {
 # Va por OBRA: estas viven dentro de un programa de varias, y una nota de función
 # contaminaría a las demás (lo caza [sinopsis-duplicada]).
 CREDITO_NO_DIRECTOR = {
+ # El programa la acredita «VIDEO INSTITUCIONAL · FAO COLOMBIA» donde las demás
+ # dicen «DIR. Nombre», así que el impreso no le da autoría. Pero SÍ la tiene: el
+ # boletín de FAO con el festival (31 ago 2026) la firma William Ospina Ramírez y
+ # produce FAO Colombia — verificado idéntico en technocio.com y sercolombiano.com.
+ # El impreso abrevia al productor; no es que la obra no tenga director.
+ # Se guarda el crédito impreso en `_credito_impreso` y se publica la autoría real.
  'El tiempo de las mujeres transforma el territorio':
-     ('Video institucional', 'Video institucional de FAO Colombia.'),
+     ('Video institucional', 'William Ospina Ramírez',
+      'Reúne las historias de mujeres de diferentes regiones del país y muestra cómo la '
+      'innovación y la tecnología pueden contribuir a reducir la carga de cuidado y '
+      'trabajo doméstico no remunerado que enfrentan especialmente las mujeres campesinas.',
+      'Colombia'),
 }
 
 # el mismo título escrito de dos formas por el propio festival
@@ -251,11 +261,12 @@ def crudo():
                 if t in ERRATAS_DIRECTOR:
                     o['_errata_impresa'] = f'el programa imprime «{d}»'
                 if t in CREDITO_NO_DIRECTOR:
-                    credito, nota = CREDITO_NO_DIRECTOR[t]
-                    o.pop('director', None)
+                    credito, autoria, nota, pais = CREDITO_NO_DIRECTOR[t]
+                    o['_credito_impreso'] = f'{credito} · {d}'
+                    o['director'] = autoria
                     o['sinopsis'] = nota
                     o['synopsis_lang'] = 'es'
-                    o['_credito_impreso'] = f'{credito} · {d}'
+                    o['pais'] = pais
                 if t in ALIAS_CATALOGO:
                     o['_alias_catalogo'] = ALIAS_CATALOGO[t]
                 if t in CONTRADICCIONES:
