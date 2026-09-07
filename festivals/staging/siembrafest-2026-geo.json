@@ -1,0 +1,50 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim/OSM, con la dirección del municipio",
+  "capturado": "2026-09-04",
+  "metodo": "Nominatim/OSM con la dirección del municipio. Villeta está poco mapeada: Overpass devuelve 0 elementos en 6 km y ninguna de las dos sedes grandes está en OSM. Se resolvieron el 5 sep por fuentes oficiales y con la dirección confirmada en dos fuentes independientes cada una — el SENA con su propia georreferenciación publicada en datos.gov.co, el IED con el punto de su calle. Regla: antes que una coordenada aproximada, la dirección; una coordenada mal puesta en un municipio pequeño manda a alguien al sitio equivocado."
+ },
+ "venues": {
+  "Cinema Villeta - Villeta": {
+   "lat": 5.010889,
+   "lng": -74.46983,
+   "city": "Villeta",
+   "short": "Cinema Villeta",
+   "_prec": "osm"
+  },
+  "Vda. Chapaima - Villeta": {
+   "lat": 4.991911,
+   "lng": -74.490832,
+   "city": "Villeta",
+   "short": "Vda. Chapaima",
+   "_prec": "aproximada",
+   "_nota": "vereda: OSM devuelve la vía a Chapaima, no un punto exacto"
+  },
+  "Villeta y Sasaima - Villeta": {
+   "lat": 5.011258,
+   "lng": -74.47023,
+   "city": "Villeta",
+   "short": "Villeta y Sasaima",
+   "_prec": "aproximada",
+   "_nota": "recorrido por dos municipios; el punto es el casco urbano de Villeta"
+  },
+  "SENA CDAE Villeta - Villeta": {
+   "city": "Villeta",
+   "short": "SENA CDAE Villeta",
+   "_prec": "oficial",
+   "_nota": "coordenada del propio SENA: dataset «Georeferenciación Centros de Aprendizaje» (datos.gov.co 8cnh-7asj), centro 9509 — el mismo código que usa la web del centro (sedes9509). Estaba escondida porque el dataset lo registra en el municipio BOGOTÁ, que es su REGIONAL, no su sede: buscarlo por «Villeta» da cero. Contrastado: cae a 804 m del casco urbano y a 325 m de la Calle 2 que nombra su dirección.",
+   "address": "Calle 2 n.º 13-03, barrio San Rafael",
+   "lat": 5.00638,
+   "lng": -74.4755
+  },
+  "IED Alonso de Olalla - Villeta": {
+   "city": "Villeta",
+   "short": "IED Alonso de Olalla",
+   "_prec": "calle",
+   "_nota": "dirección confirmada en dos fuentes (Waze e Insor). El punto es la Diagonal 1 Sur, la única de ese nombre en Villeta y la que nombra la dirección: es la calle, no el edificio — el mismo criterio que Vda. Chapaima.",
+   "lat": 5.0046407,
+   "lng": -74.4709365,
+   "address": "Diagonal 1 Sur n.º 72-31, barrio Carlos Lleras"
+  }
+ }
+}

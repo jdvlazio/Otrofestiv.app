@@ -36,7 +36,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CONSERVAR = {'_src', '_pendiente', '_inherited', '_nota'}
+# `_acceso` lo LEE [boleteria-muda]: es la declaración de que fuimos a mirar
+# cómo se entra y el festival no lo publica. Si el publicador lo borra, el
+# guardián no lo ve y el festival vuelve a estar mudo.
+CONSERVAR = {'_src', '_pendiente', '_inherited', '_nota', '_acceso'}
 
 
 def limpio(d):

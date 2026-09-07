@@ -4,11 +4,9 @@
 # los deploys, así que un keyArt es WRITE-ONCE: sobreescribirlo in-place deja a
 # los usuarios recurrentes viendo el afiche viejo PARA SIEMPRE, sin arreglo desde
 # la app (reinstalar tampoco basta: el caché del WebView persiste).
-#
 # Pasó con FICDEH 2026: el afiche se sobreescribió 4 veces con el mismo nombre y
 # el aliado de comunicaciones en Medellín seguía viendo el anterior a 4 días de
 # que abriera el festival.
-#
 # Para cambiar un afiche: `python3 scripts/compose-keyart.py <archivo>` escribe a
 # -v2/-v3, se actualiza el path en src/config.js y se regenera este archivo con
 # `python3 scripts/keyart-huellas.py`.
@@ -28,6 +26,7 @@ e06e3f43f4786ccb  finca2026.jpg
 53c43bb2fc8ce189  leviza2026.jpg
 a1f6bbce6ea878d1  olhar2026-v2.jpg
 87d3cd3a4f28ac12  olhar2026.jpg
+27b0b1565e67a11f  siembrafest2026.jpg
 f265570c7b4e2977  qaff2026-v2.jpg
 eea132b324947ebf  qaff2026.jpg
 042fe8ee08e810cb  siembrafest2026-v2.jpg
