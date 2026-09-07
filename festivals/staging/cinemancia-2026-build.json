@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PDF oficial de programación + hoja de programas y charlas enviada por el festival",
-  "capturado": "2026-08-28",
+  "capturado": "2026-09-04",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "Cinemancia",
@@ -16,9 +16,21 @@
  "storageKey": "cinemancia2026_",
  "festivalStartStr": "2026-09-03T00:00:00",
  "festivalEndStr": "2026-09-12T23:59:00",
- "prioLimit": 5,
  "sharedSlotIsOneScreening": true,
  "ticketing_model": "mixed",
+ "prioLimit": 5,
+ "dias": [
+  "2026-09-03",
+  "2026-09-04",
+  "2026-09-05",
+  "2026-09-06",
+  "2026-09-07",
+  "2026-09-08",
+  "2026-09-09",
+  "2026-09-10",
+  "2026-09-11",
+  "2026-09-12"
+ ],
  "festivalDates": {
   "2026-09-03": "2026-09-03",
   "2026-09-04": "2026-09-04",
@@ -541,9 +553,10 @@
    "_src": "hoja oficial del festival (conversatorios y charlas)",
    "is_free": true,
    "year": 2022,
+   "title_en": "Zusammenleben",
+   "synopsis_en": "A documentary following immigrants attending voluntary integration courses in Vienna.",
    "lbSlug": "zusammenleben",
    "tmdb_id": 1041158,
-   "synopsis_en": "A documentary following immigrants attending voluntary integration courses in Vienna.",
    "_programa_original": "Thomas Fülhapter: Febril incisión"
   },
   {
@@ -3587,9 +3600,10 @@
    "_src": "hoja oficial del festival (conversatorios y charlas)",
    "is_free": true,
    "year": 2026,
+   "title_en": "Foreign Travel",
+   "synopsis_en": "A year in Berlin: Leonie wanders through the city and the texts of Anna Maria Ortese. Speaking with friends and translator Sigrid Vagt, she is also looking for the narrative threads of her own life. A film of reading shot in glowing, matter-of-fact 16mm.",
    "lbSlug": "foreign-travel",
    "tmdb_id": 1616882,
-   "synopsis_en": "A year in Berlin: Leonie wanders through the city and the texts of Anna Maria Ortese. Speaking with friends and translator Sigrid Vagt, she is also looking for the narrative threads of her own life. A film of reading shot in glowing, matter-of-fact 16mm.",
    "_programa_original": "Leonie Rodrian: Contra la falsa intensidad"
   },
   {
@@ -4135,9 +4149,10 @@
    "_src": "hoja oficial del festival (conversatorios y charlas)",
    "is_free": true,
    "year": 2024,
+   "title_en": "Cleaning & Cleansing",
+   "synopsis_en": "CLEANING AND CLEANSING tells of the glamor and misery of hygiene. Without resorting to interviews or explanatory off-camera commentary, it stages its subject in a way that can be experienced by the senses. In doing so, it follows an analytical approach that thematizes hygiene as an order of the „healthy“ and the „harmful“, which is reflected in institutions, architectures and production processes and regulates human behavior. The filmthus raises a topic that has been central to our society since the beginning of modernity: the optimization and improvement of life, which – if pursued with too much commitment and carelessly – can quickly turn against itself.",
    "lbSlug": "cleaning-cleansing",
    "tmdb_id": 1361665,
-   "synopsis_en": "CLEANING AND CLEANSING tells of the glamor and misery of hygiene. Without resorting to interviews or explanatory off-camera commentary, it stages its subject in a way that can be experienced by the senses. In doing so, it follows an analytical approach that thematizes hygiene as an order of the „healthy“ and the „harmful“, which is reflected in institutions, architectures and production processes and regulates human behavior. The filmthus raises a topic that has been central to our society since the beginning of modernity: the optimization and improvement of life, which – if pursued with too much commitment and carelessly – can quickly turn against itself.",
    "_programa_original": "Ciencia, cuerpos, trabajos y las políticas de la pureza"
   },
   {

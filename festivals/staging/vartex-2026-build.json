@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "afiche oficial de programación (dos carruseles de Instagram: la parrilla de 4 láminas y el post de la Muestra Internacional) + hoja «Seleccionados» de la convocatoria + vartexmedellin.co + los cuatro artes por programa de vartexmedellin.co + agenda por salas del Centro Colombo Americano",
-  "capturado": "2026-08-20",
+  "capturado": "2026-09-04",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "Vartex",
@@ -16,8 +16,14 @@
  "storageKey": "vartex2026_",
  "festivalStartStr": "2026-08-19T00:00:00",
  "festivalEndStr": "2026-08-22T23:59:00",
- "prioLimit": 3,
  "sharedSlotIsOneScreening": false,
+ "prioLimit": 3,
+ "dias": [
+  "2026-08-19",
+  "2026-08-20",
+  "2026-08-21",
+  "2026-08-22"
+ ],
  "festivalDates": {
   "2026-08-19": "2026-08-19",
   "2026-08-20": "2026-08-20",
@@ -88,7 +94,7 @@
   },
   "🎓 Formación": {
    "en": "Workshops & Seminar",
-   "archetype": "Industria / Formación",
+   "archetype": "Charlas / Industria",
    "order": 4
   },
   "🏆 Muestra Local": {
@@ -99,16 +105,16 @@
  },
  "venues": {
   "Centro Colombo Americano - Medellín": {
+   "short": "Centro Colombo Americano",
+   "city": "Medellín",
    "lat": 6.2497341,
    "lng": -75.5627237,
-   "city": "Medellín",
-   "short": "Centro Colombo Americano",
    "address": "Calle 43 # 54–139, Medellín, Antioquia",
    "_prec": "heredada de cinemancia-2026"
   },
   "Fundación Universitaria Bellas Artes - Medellín": {
-   "city": "Medellín",
    "short": "Instituto de Bellas Artes",
+   "city": "Medellín",
    "address": "Calle 52 # 42–08, Medellín, Antioquia",
    "_src": "Juan, 20 ago 2026: de las cuatro sedes de Bellas Artes en Medellín, el Laboratorio es en el INSTITUTO (Palacio de Bellas Artes), Calle 52 # 42–08. El afiche decía solo «Bellas Artes».",
    "lat": 6.248511,
