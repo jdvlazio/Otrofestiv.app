@@ -2,23 +2,28 @@
  "_provenance": {
   "fuente": "Nominatim/OSM, con la dirección del municipio",
   "capturado": "2026-09-04",
-  "metodo": "Nominatim/OSM con la dirección del municipio. Villeta está poco mapeada: Overpass devuelve 0 elementos en 6 km y ninguna de las dos sedes grandes está en OSM. Se resolvieron el 5 sep por fuentes oficiales y con la dirección confirmada en dos fuentes independientes cada una — el SENA con su propia georreferenciación publicada en datos.gov.co, el IED con el punto de su calle. Regla: antes que una coordenada aproximada, la dirección; una coordenada mal puesta en un municipio pequeño manda a alguien al sitio equivocado."
+  "metodo": "Nominatim/OSM con la dirección del municipio. Villeta está poco mapeada: Overpass devuelve 0 elementos en 6 km y ninguna de las dos sedes grandes está en OSM. Se resolvieron el 5 sep por fuentes oficiales y con la dirección confirmada en dos fuentes independientes cada una — el SENA con su propia georreferenciación publicada en datos.gov.co, el IED con el punto de su calle. Regla: antes que una coordenada aproximada, la dirección; una coordenada mal puesta en un municipio pequeño manda a alguien al sitio equivocado.",
+  "sasaima": "7 sep: seis sedes nuevas. Tres con punto a nivel de VEREDA (Santa Ana y San Bernardo ×2), que en zona rural es la granularidad correcta —la vereda es la dirección—. Tres PENDIENTES: el IED San Nicolás tiene dirección oficial pero no está mapeado; la Rotonda Tienda Museo del Café no aparece en ninguna fuente; y de Ilo Alto solo hay «Ilo Grande», que es otra vereda. Regla de siempre: antes que una coordenada aproximada, la dirección o nada.",
+  "metodo_7_sep": "LECCIÓN: se buscó primero en OSM/Nominatim/Overpass y se dio por perdido lo que no estaba. Google Maps SÍ tiene estos pueblos —Juan lo señaló— y de ahí salieron el IED San Nicolás y la Escuela Santa Ana, más la Rotonda por Plus Code. Pero Maps también devuelve la SEDE equivocada de un colegio con varias: hay que comprobar cuál es contra la dirección oficial.",
+  "cierre_7_sep": "Las 11 sedes con coordenada. Las dos que ninguna fuente pública resolvía —Vda. Chapaima y Vereda Ilo Alto, las dos rurales— las cerró Juan: la primera mirando el satélite, la segunda con un Plus Code. Cuando el mapa no alcanza, alguien que conoce el terreno sí."
  },
  "venues": {
   "Cinema Villeta - Villeta": {
-   "lat": 5.010889,
-   "lng": -74.46983,
+   "lat": 5.0110174,
+   "lng": -74.4699592,
    "city": "Villeta",
    "short": "Cinema Villeta",
-   "_prec": "osm"
+   "_prec": "sede",
+   "address": "Parque de la Molienda — parque principal",
+   "_nota": "Google Maps, lugar con nombre «Cine Villeta C». Coincide a 20 m con OSM."
   },
   "Vda. Chapaima - Villeta": {
-   "lat": 4.991911,
-   "lng": -74.490832,
    "city": "Villeta",
    "short": "Vda. Chapaima",
-   "_prec": "aproximada",
-   "_nota": "vereda: OSM devuelve la vía a Chapaima, no un punto exacto"
+   "_prec": "vereda",
+   "_nota": "Google Maps: «chapaima - higuerón». Juan confirmó el 7 sep que ESE es el caserío de la vereda —en el satélite se ven las casas—. El punto anterior era de OSM (4.991911,-74.490832) y estaba 5,4 km al noreste: era la VÍA a Chapaima, no el caserío. Las dos fuentes no se podían desempatar solas; lo desempató quien conoce el terreno.",
+   "lat": 4.9573716,
+   "lng": -74.5255619
   },
   "Villeta y Sasaima - Villeta": {
    "lat": 5.011258,
@@ -31,20 +36,70 @@
   "SENA CDAE Villeta - Villeta": {
    "city": "Villeta",
    "short": "SENA CDAE Villeta",
-   "_prec": "oficial",
-   "_nota": "coordenada del propio SENA: dataset «Georeferenciación Centros de Aprendizaje» (datos.gov.co 8cnh-7asj), centro 9509 — el mismo código que usa la web del centro (sedes9509). Estaba escondida porque el dataset lo registra en el municipio BOGOTÁ, que es su REGIONAL, no su sede: buscarlo por «Villeta» da cero. Contrastado: cae a 804 m del casco urbano y a 325 m de la Calle 2 que nombra su dirección.",
+   "_prec": "sede",
+   "_nota": "Google Maps, lugar con nombre «SENA, CDAE Villeta» y la MISMA dirección que ya teníamos (Cl. 2 #13-3). OJO: la georreferenciación que el propio SENA publica en datos.gov.co (8cnh-7asj) da 5.006380,-74.475500, a 372 m de aquí. Se toma la de Maps porque es el lugar con la dirección que coincide; queda anotada la otra por si se quiere contrastar en terreno.",
    "address": "Calle 2 n.º 13-03, barrio San Rafael",
-   "lat": 5.00638,
-   "lng": -74.4755
+   "lat": 5.0072155,
+   "lng": -74.4787477
   },
   "IED Alonso de Olalla - Villeta": {
    "city": "Villeta",
    "short": "IED Alonso de Olalla",
-   "_prec": "calle",
-   "_nota": "dirección confirmada en dos fuentes (Waze e Insor). El punto es la Diagonal 1 Sur, la única de ese nombre en Villeta y la que nombra la dirección: es la calle, no el edificio — el mismo criterio que Vda. Chapaima.",
-   "lat": 5.0046407,
-   "lng": -74.4709365,
+   "_prec": "sede",
+   "_nota": "Google Maps, lugar con nombre y con la MISMA dirección que ya teníamos (Dg. 1 Sur #72-31). Sube de punto de calle a edificio; 88 m de diferencia.",
+   "lat": 5.0044879,
+   "lng": -74.4701587,
    "address": "Diagonal 1 Sur n.º 72-31, barrio Carlos Lleras"
+  },
+  "Escuela Rural Santa Ana - Sasaima": {
+   "lat": 4.9288644,
+   "lng": -74.4321437,
+   "city": "Sasaima",
+   "short": "Escuela Rural Santa Ana",
+   "_prec": "sede",
+   "_nota": "Google Maps: «Escuela Santa Ana, Taboga, Sasaima». Coincide a 500 m con el punto de la vereda Santa Ana en OSM, que es lo que teníamos antes: dos fuentes en la misma zona, y esta es el edificio."
+  },
+  "IED Rural San Bernardo - Sasaima": {
+   "lat": 4.915146,
+   "lng": -74.41883,
+   "city": "Sasaima",
+   "short": "IED Rural San Bernardo",
+   "address": "Vereda San Bernardo",
+   "_prec": "vereda",
+   "_nota": "Punto del caserío de la vereda San Bernardo (OSM), que es lo que dice su dirección oficial (datos.gov.co jn4a-aqyh: «VEREDA SAN BERNARDO»). NO se usa el resultado de Google Maps: devuelve la sede «Escuela Rural La Candelaria», que es OTRA de las 6 sedes del colegio y está a 4,7 km. Con 6 sedes, elegir la equivocada es peor que quedarse en la vereda."
+  },
+  "Salón Comunal Vda. San Bernardo - Sasaima": {
+   "lat": 4.915146,
+   "lng": -74.41883,
+   "city": "Sasaima",
+   "short": "Salón Comunal Vda. San Bernardo",
+   "_prec": "vereda",
+   "_nota": "mismo caserío que el IED Rural San Bernardo: es la misma vereda."
+  },
+  "IED San Nicolás - Sasaima": {
+   "city": "Sasaima",
+   "short": "IED San Nicolás",
+   "address": "Urbanización San José",
+   "_prec": "sede",
+   "_nota": "Google Maps, lugar con nombre: «Institución Educativa Departamental San Nicolás de Tolentino, Sasaima». Coincide con el directorio oficial (datos.gov.co jn4a-aqyh), que la da urbana. OSM no la tiene: Maps sí cubre estos pueblos y OSM no.",
+   "lat": 4.9648759,
+   "lng": -74.4333762
+  },
+  "Rotonda Tienda Museo del Café - Sasaima": {
+   "city": "Sasaima",
+   "short": "Rotonda Tienda Museo del Café",
+   "_prec": "sede",
+   "_nota": "Plus Code XH78+P2 (Sasaima) que aportó Juan, decodificado a 67P7XH78+P2. Cae a 204 m del centro del pueblo. No aparece en OSM ni en Nominatim.",
+   "lat": 4.964313,
+   "lng": -74.434938
+  },
+  "Vereda Ilo Alto - Sasaima": {
+   "city": "Sasaima",
+   "short": "Vereda Ilo Alto",
+   "_prec": "vereda",
+   "_nota": "Plus Code 2H6Q+HV (Sasaima) que aportó Juan → 67Q72H6Q+HV. OJO al decodificar: recuperar el prefijo pegándolo sin más daba un punto a 106 km; hay que elegir el prefijo vecino MÁS CERCANO a la referencia, que es lo que dice el algoritmo. Contrastado: cae a 1,17 km de «Ilo Grande» —la vereda vecina, lo único que OSM tenía por ahí— y entre los dos cascos, 6,6 km de Villeta y 5,8 de Sasaima.",
+   "lat": 5.01144,
+   "lng": -74.410313
   }
  }
 }

@@ -32,7 +32,9 @@ from lib import norm, provenance                                   # noqa: E402
 ACCESO = 'Entrada libre'      # instagram.com/p/Dc4AhaFwFOg, 5 sep 2026
 
 TEXTO = f'{REPO}/festivals/staging/siembrafest-2026-villeta-texto.json'
-SALIDA = f'{REPO}/festivals/staging/siembrafest-2026-crudo.json'
+# Cada municipio escribe SU crudo; siembrafest-2026-crudo.py los une en el
+# canónico. Villeta escribía directo el canónico cuando era el único.
+SALIDA = f'{REPO}/festivals/staging/siembrafest-2026-villeta-crudo.json'
 
 CIN = 'Cinema Villeta'
 SENA = 'SENA CDAE Villeta'          # el programa lo escribe «SENA - CDAE VILLETA»
@@ -203,8 +205,15 @@ CREDITO_NO_DIRECTOR = {
       'Colombia'),
 }
 
-# el mismo título escrito de dos formas por el propio festival
-ALIAS_CATALOGO = {'Flores Miro': 'Floresmiro'}
+# El mismo título escrito de dos formas por el propio festival: {como lo llama el
+# PROGRAMA impreso: como lo llama su catálogo}. Es de TODO el festival, no solo de
+# Villeta —el enriquecido la importa desde aquí—, y sin ella la obra no hereda
+# NADA: ni póster, ni país, ni bandera, ni género.
+ALIAS_CATALOGO = {
+ 'Flores Miro': 'Floresmiro',
+ # el PDF de Sasaima la escribe en plural y el catálogo en singular
+ 'Emechiche, el renacer de los cabeciblancos': 'Emechiche, el renacer de los Cabeciblanco',
+}
 
 # BLOQUES transcribe el PDF tal cual —es lo que verificar() comprueba—, así que
 # una errata del impreso se corrige AQUÍ y con su motivo, no reescribiendo la

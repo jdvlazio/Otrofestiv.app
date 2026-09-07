@@ -501,7 +501,7 @@
    "posterSource": "custom"
   },
   {
-   "titulo": "Cantos al juego de “Bolar”",
+   "titulo": "Cantos al juego de \"Bolar\"",
    "pais": "Colombia",
    "genero": "Animación",
    "sinopsis": "Un ensayo audiovisual y poético sobre la infancia, el balón y la esencia del juego. Una reflexión sobre el fútbol como libertad, imaginación y encuentro colectivo.",
@@ -535,13 +535,14 @@
    "posterSource": "custom"
   },
   {
-   "titulo": "Emechiche, el renacer de los Cabeciblanco",
+   "titulo": "Emechiche, el renacer de los cabeciblancos",
    "pais": "Colombia",
    "genero": "Drama",
    "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
    "poster": "/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
    "posterSource": "tmdb",
-   "lbSlug": "emechiche-the-rebirth-of-white-headed"
+   "lbSlug": "emechiche-the-rebirth-of-white-headed",
+   "_titulo_catalogo": "Emechiche, el renacer de los Cabeciblanco"
   },
   {
    "titulo": "Zizuma, nuestra casa de agua y nubes",
@@ -693,11 +694,28 @@
   {
    "titulo": "Chicha la chicharra",
    "pais": "Colombia",
+   "genero": "Animación",
    "sinopsis": "Una chicharra llamada Chicha emerge de la tierra para su metamorfosis, y descubre que el árbol de aguacate donde nació ha sido talado; decidida a crear un bosque, deposita sus esperanzas en un retoño de aguacate, pero pronto debe enfrentar la realidad de su corta vida y aprender a aceptar el presente.",
    "synopsis_en": "Chicha emerges from the soil for her metamorphosis, only to find the avocado tree where she was born gone. Determined to create a forest, she waits for a new tree to grow, unaware her life will be too short to see it flourish.",
    "poster": "/knhGoKZFD0s4CyvzpMFXsqrkdPO.jpg",
    "posterSource": "tmdb",
    "lbSlug": "chicha-la-chicharra"
+  },
+  {
+   "titulo": "Madre",
+   "pais": "Colombia",
+   "genero": "Ficción",
+   "poster": "https://image.tmdb.org/t/p/w500/oB765L88GmwWNis8Dd4byVBsxuE.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "madre-1924"
+  },
+  {
+   "titulo": "Tres cuentos colombianos - Tiempos de sequía",
+   "pais": "Colombia",
+   "genero": "Ficción",
+   "poster": "https://image.tmdb.org/t/p/w500/lsEKD5rs8jDKhaytcFUTGkPurae.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "tres-cuentos-colombianos"
   },
   {
    "titulo": "Andariega",

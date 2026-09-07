@@ -1,9 +1,9 @@
 {
  "_provenance": {
-  "fuente": "PDF oficial de cada municipio — Villeta · Sasaima",
+  "fuente": "PDF oficial de la programación de Villeta — siembrafest.com/descargas/programacion_11sf_villeta.pdf",
   "capturado": "2026-09-07",
-  "metodo": "unión de los crudos por municipio; cada uno verifica su propio PDF",
-  "partes": "Villeta: 23 funciones, 5 sedes · Sasaima: 11 funciones, 6 sedes"
+  "metodo": "doble lectura: capa de texto del PDF (no OCR) + lectura visual de cada página, que es la que fija el layout a dos columnas",
+  "alcance": "SOLO VILLETA. El PDF de Sasaima no existe todavía (la web dice «muy pronto» y su URL devuelve HTML)"
  },
  "funciones": [
   {
@@ -523,126 +523,6 @@
    ]
   },
   {
-   "dia": "2026-09-14",
-   "hora": "18:00",
-   "hora_fin": "20:00",
-   "sede": "Rotonda Tienda Museo del Café",
-   "seccion": "Amores & Desamores",
-   "acceso": "Entrada libre",
-   "titulo": "Tres cuentos colombianos - Tiempos de sequía + Soñé su nombre",
-   "_src": "PDF oficial de la programación de Sasaima, p2",
-   "obras": [
-    {
-     "titulo": "Tres cuentos colombianos - Tiempos de sequía",
-     "director": "Julio Luzardo",
-     "anio": 1963,
-     "duracion_min": 28,
-     "seccion": "Amores & Desamores"
-    },
-    {
-     "titulo": "Soñé su nombre",
-     "director": "Ángela Carabalí",
-     "anio": 2025,
-     "duracion_min": 86,
-     "seccion": "Amores & Desamores"
-    }
-   ]
-  },
-  {
-   "dia": "2026-09-15",
-   "hora": "08:00",
-   "hora_fin": "10:00",
-   "sede": "Escuela Rural Santa Ana",
-   "seccion": "Ojo Pelao",
-   "acceso": "Entrada libre",
-   "titulo": "En el mar + Emechiche, el renacer de los cabeciblancos + Chicha la chicharra + Daniel + Zizuma, nuestra casa de agua y nubes",
-   "_src": "PDF oficial de la programación de Sasaima, p2",
-   "obras": [
-    {
-     "titulo": "En el mar",
-     "director": "Alfred Robinson",
-     "anio": 2024,
-     "duracion_min": 7,
-     "seccion": "Ojo Pelao"
-    },
-    {
-     "titulo": "Emechiche, el renacer de los cabeciblancos",
-     "director": "Juan Camilo González",
-     "anio": 2025,
-     "duracion_min": 11,
-     "seccion": "Ojo Pelao"
-    },
-    {
-     "titulo": "Chicha la chicharra",
-     "director": "Sofía Alejandra Uzcátegui León",
-     "anio": 2025,
-     "duracion_min": 10,
-     "seccion": "Ojo Pelao"
-    },
-    {
-     "titulo": "Daniel",
-     "director": "Armando Velásquez",
-     "anio": 2025,
-     "duracion_min": 12,
-     "seccion": "Ojo Pelao"
-    },
-    {
-     "titulo": "Zizuma, nuestra casa de agua y nubes",
-     "director": "Fátima Correa",
-     "anio": 2026,
-     "duracion_min": 12,
-     "seccion": "Ojo Pelao"
-    }
-   ]
-  },
-  {
-   "dia": "2026-09-15",
-   "hora": "10:00",
-   "hora_fin": "12:00",
-   "sede": "Escuela Rural Santa Ana",
-   "seccion": "Ojo Pelao",
-   "acceso": "Entrada libre",
-   "titulo": "Cantos al juego de \"Bolar\" + La gran hazaña + Extinta + La pecera + Un pájaro más",
-   "_src": "PDF oficial de la programación de Sasaima, p3",
-   "obras": [
-    {
-     "titulo": "Cantos al juego de \"Bolar\"",
-     "director": "Iván Sierra",
-     "anio": 2025,
-     "duracion_min": 8,
-     "seccion": "Ojo Pelao"
-    },
-    {
-     "titulo": "La gran hazaña",
-     "director": "Luber Yesid Zúñiga Ordóñez",
-     "anio": 2024,
-     "duracion_min": 15,
-     "seccion": "Ojo Pelao"
-    },
-    {
-     "titulo": "Extinta",
-     "director": "Yesid Soacha",
-     "anio": 2024,
-     "duracion_min": 7,
-     "seccion": "Ojo Pelao"
-    },
-    {
-     "titulo": "La pecera",
-     "director": "Ángela Tatiana Fonseca Gálvez",
-     "anio": 2025,
-     "duracion_min": 8,
-     "seccion": "Ojo Pelao"
-    },
-    {
-     "titulo": "Un pájaro más",
-     "director": "Julián Gómez Reyes",
-     "anio": 2026,
-     "duracion_min": 17,
-     "seccion": "Ojo Pelao"
-    }
-   ]
-  },
-  {
    "dia": "2026-09-15",
    "hora": "10:00",
    "hora_fin": "12:00",
@@ -711,100 +591,6 @@
   },
   {
    "dia": "2026-09-16",
-   "hora": "07:00",
-   "hora_fin": "08:30",
-   "sede": "IED Rural San Bernardo",
-   "seccion": "Amores & Desamores",
-   "acceso": "Entrada libre",
-   "titulo": "Take It Off + Carola + Desarraigo + Gladiolos + Idilio",
-   "_src": "PDF oficial de la programación de Sasaima, p4",
-   "obras": [
-    {
-     "titulo": "Take It Off",
-     "director": "Sergio Tovar Uribe",
-     "anio": 2025,
-     "duracion_min": 10,
-     "seccion": "Amores & Desamores"
-    },
-    {
-     "titulo": "Carola",
-     "director": "Violeta Barrios Ramírez",
-     "anio": 2025,
-     "duracion_min": 11,
-     "seccion": "Amores & Desamores"
-    },
-    {
-     "titulo": "Desarraigo",
-     "director": "Nicolás Patiño H. & Santiago Cely O.",
-     "anio": 2026,
-     "duracion_min": 15,
-     "seccion": "Amores & Desamores"
-    },
-    {
-     "titulo": "Gladiolos",
-     "director": "Mónica Juanita Hernández Duquino",
-     "anio": 2024,
-     "duracion_min": 15,
-     "seccion": "Amores & Desamores"
-    },
-    {
-     "titulo": "Idilio",
-     "director": "Luz Rincón Barahona",
-     "anio": 2024,
-     "duracion_min": 18,
-     "seccion": "Amores & Desamores"
-    }
-   ]
-  },
-  {
-   "dia": "2026-09-16",
-   "hora": "08:30",
-   "hora_fin": "09:45",
-   "sede": "IED Rural San Bernardo",
-   "seccion": "Ojo Pelao",
-   "acceso": "Entrada libre",
-   "titulo": "Cantos al juego de \"Bolar\" + La gran hazaña + Extinta + La pecera + Un pájaro más",
-   "_src": "PDF oficial de la programación de Sasaima, p4",
-   "obras": [
-    {
-     "titulo": "Cantos al juego de \"Bolar\"",
-     "director": "Iván Sierra",
-     "anio": 2025,
-     "duracion_min": 8,
-     "seccion": "Ojo Pelao"
-    },
-    {
-     "titulo": "La gran hazaña",
-     "director": "Luber Yesid Zúñiga Ordóñez",
-     "anio": 2024,
-     "duracion_min": 15,
-     "seccion": "Ojo Pelao"
-    },
-    {
-     "titulo": "Extinta",
-     "director": "Yesid Soacha",
-     "anio": 2024,
-     "duracion_min": 7,
-     "seccion": "Ojo Pelao"
-    },
-    {
-     "titulo": "La pecera",
-     "director": "Ángela Tatiana Fonseca Gálvez",
-     "anio": 2025,
-     "duracion_min": 8,
-     "seccion": "Ojo Pelao"
-    },
-    {
-     "titulo": "Un pájaro más",
-     "director": "Julián Gómez Reyes",
-     "anio": 2026,
-     "duracion_min": 17,
-     "seccion": "Ojo Pelao"
-    }
-   ]
-  },
-  {
-   "dia": "2026-09-16",
    "hora": "10:00",
    "hora_fin": "12:00",
    "sede": "IED Alonso de Olalla",
@@ -851,39 +637,6 @@
      "sinopsis": "Reúne las historias de mujeres de diferentes regiones del país y muestra cómo la innovación y la tecnología pueden contribuir a reducir la carga de cuidado y trabajo doméstico no remunerado que enfrentan especialmente las mujeres campesinas.",
      "synopsis_lang": "es",
      "pais": "Colombia"
-    }
-   ]
-  },
-  {
-   "dia": "2026-09-16",
-   "hora": "10:15",
-   "hora_fin": "11:30",
-   "sede": "IED Rural San Bernardo",
-   "seccion": "Estampas",
-   "acceso": "Entrada libre",
-   "titulo": "Donde nace el nombre + Camino al Chicamocha + Sinfonía incompleta de oficios del Fonce",
-   "_src": "PDF oficial de la programación de Sasaima, p5",
-   "obras": [
-    {
-     "titulo": "Donde nace el nombre",
-     "director": "Juan Vanegas",
-     "anio": 2025,
-     "duracion_min": 27,
-     "seccion": "Estampas"
-    },
-    {
-     "titulo": "Camino al Chicamocha",
-     "director": "Frank Alexander Rodríguez Rojas",
-     "anio": 2024,
-     "duracion_min": 15,
-     "seccion": "Estampas"
-    },
-    {
-     "titulo": "Sinfonía incompleta de oficios del Fonce",
-     "director": "Nelson Omar Silva Sánchez",
-     "anio": 2024,
-     "duracion_min": 16,
-     "seccion": "Estampas"
     }
    ]
   },
@@ -936,25 +689,6 @@
    ]
   },
   {
-   "dia": "2026-09-16",
-   "hora": "18:00",
-   "hora_fin": "20:00",
-   "sede": "Salón Comunal Vda. San Bernardo",
-   "seccion": "Buenos, Malos y Feos",
-   "acceso": "Entrada libre",
-   "titulo": "Entre 2 aguas",
-   "_src": "PDF oficial de la programación de Sasaima, p5",
-   "obras": [
-    {
-     "titulo": "Entre 2 aguas",
-     "director": "Carlos Gabriel Vergara M.",
-     "anio": 2025,
-     "duracion_min": 93,
-     "seccion": "Buenos, Malos y Feos"
-    }
-   ]
-  },
-  {
    "dia": "2026-09-17",
    "hora": "10:00",
    "hora_fin": "12:00",
@@ -996,46 +730,6 @@
   },
   {
    "dia": "2026-09-17",
-   "hora": "10:00",
-   "hora_fin": "12:00",
-   "sede": "IED San Nicolás",
-   "seccion": "Buenos, Malos y Feos",
-   "acceso": "Entrada libre",
-   "titulo": "Catatumbo: Casa del trueno, memoria y dignidad + 6 de diciembre + Relatos del camino + La Europa",
-   "_src": "PDF oficial de la programación de Sasaima, p6",
-   "obras": [
-    {
-     "titulo": "Catatumbo: Casa del trueno, memoria y dignidad",
-     "director": "Jhonattan Sarmiento",
-     "anio": 2025,
-     "duracion_min": 8,
-     "seccion": "Buenos, Malos y Feos"
-    },
-    {
-     "titulo": "6 de diciembre",
-     "director": "Nelson Rodríguez Tequia",
-     "anio": 2026,
-     "duracion_min": 30,
-     "seccion": "Buenos, Malos y Feos"
-    },
-    {
-     "titulo": "Relatos del camino",
-     "director": "Daniel Prieto Muriel",
-     "anio": 2025,
-     "duracion_min": 12,
-     "seccion": "Buenos, Malos y Feos"
-    },
-    {
-     "titulo": "La Europa",
-     "director": "Jorge Pérez Aldana",
-     "anio": 2025,
-     "duracion_min": 22,
-     "seccion": "Buenos, Malos y Feos"
-    }
-   ]
-  },
-  {
-   "dia": "2026-09-17",
    "hora": "11:00",
    "hora_fin": "13:00",
    "sede": "SENA CDAE Villeta",
@@ -1049,72 +743,6 @@
    "event_kind": "taller",
    "sinopsis": "A cargo de Señal Memoria e Inravisión, Sistema de Medios Públicos.",
    "synopsis_lang": "es"
-  },
-  {
-   "dia": "2026-09-17",
-   "hora": "18:00",
-   "hora_fin": "20:00",
-   "sede": "Vereda Ilo Alto",
-   "seccion": "Buenos, Malos y Feos",
-   "acceso": "Entrada libre",
-   "titulo": "El huaquero",
-   "_src": "PDF oficial de la programación de Sasaima, p6",
-   "obras": [
-    {
-     "titulo": "El huaquero",
-     "director": "Harold De Vasten",
-     "anio": 2026,
-     "duracion_min": 94,
-     "seccion": "Buenos, Malos y Feos"
-    }
-   ]
-  },
-  {
-   "dia": "2026-09-18",
-   "hora": "10:00",
-   "hora_fin": "12:00",
-   "sede": "IED San Nicolás",
-   "seccion": "Así es Cundinamarca",
-   "acceso": "Entrada libre",
-   "titulo": "Xie. Defensa de la vida",
-   "_src": "PDF oficial de la programación de Sasaima, p7",
-   "obras": [
-    {
-     "titulo": "Xie. Defensa de la vida",
-     "director": "Adriana Bernal-Mor y Paola Zuluaga P.",
-     "anio": 2025,
-     "duracion_min": 70,
-     "seccion": "Así es Cundinamarca"
-    }
-   ],
-   "_errata_impresa": "el PDF encabeza «Lunes 14/9», que es el día 6 y ya tiene bloque propio"
-  },
-  {
-   "dia": "2026-09-18",
-   "hora": "18:00",
-   "hora_fin": "20:00",
-   "sede": "Rotonda Tienda Museo del Café",
-   "seccion": "Buenos, Malos y Feos",
-   "acceso": "Entrada libre",
-   "titulo": "Madre + El huaquero",
-   "_src": "PDF oficial de la programación de Sasaima, p7",
-   "obras": [
-    {
-     "titulo": "Madre",
-     "director": "Samuel Velasquez",
-     "anio": 1924,
-     "duracion_min": 17,
-     "seccion": "Buenos, Malos y Feos"
-    },
-    {
-     "titulo": "El huaquero",
-     "director": "Harold De Vasten",
-     "anio": 2026,
-     "duracion_min": 94,
-     "seccion": "Buenos, Malos y Feos"
-    }
-   ],
-   "_errata_impresa": "el PDF encabeza «Lunes 14/9», que es el día 6 y ya tiene bloque propio"
   }
  ]
 }

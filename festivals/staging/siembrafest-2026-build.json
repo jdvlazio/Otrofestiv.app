@@ -1,14 +1,14 @@
 {
  "_etapa": "Villeta montado desde el PDF oficial (4 sep 2026) y enriquecido con las láminas de la Selección Oficial que el festival publicó en Instagram (5 sep). Sasaima pendiente: su PDF no existe.",
  "_provenance": {
-  "fuente": "PDF oficial de la programación de Villeta — siembrafest.com/descargas/programacion_11sf_villeta.pdf",
+  "fuente": "PDF oficial de cada municipio — Villeta · Sasaima",
   "capturado": "2026-09-07",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_sedes_src": "el programa escribe «SENA - CDAE VILLETA»; el guion interno rompe la convención «Sede - Ciudad», así que la sede se registra «SENA CDAE Villeta». Es puntuación, no el nombre.",
  "name": "SiembraFest",
  "fullName": "SiembraFest — Festival de Cine Colombiano al Campo",
- "city": "Villeta",
+ "city": "Sasaima y Villeta",
  "country": "CO",
  "dates": "9–18 SEP",
  "dates_en": "SEP 9–18",
@@ -20,7 +20,7 @@
  "sharedSlotIsOneScreening": true,
  "_jerarquia_de_fuentes": "programa PDF de Villeta (4 sep) > selección oficial (23 ago) > IG. El PDF manda en el horario y en lo que imprime; el catálogo rellena sinopsis, póster, país, género y lbSlug.",
  "_alcance": "SOLO VILLETA. Sasaima se añade cuando el festival publique su PDF; entonces volverán la ciudad «Sasaima y Villeta» y probablemente el 18 SEP.",
- "prioLimit": 4,
+ "prioLimit": 5,
  "dias": [
   "2026-09-09",
   "2026-09-10",
@@ -30,7 +30,8 @@
   "2026-09-14",
   "2026-09-15",
   "2026-09-16",
-  "2026-09-17"
+  "2026-09-17",
+  "2026-09-18"
  ],
  "festivalDates": {
   "2026-09-09": "2026-09-09",
@@ -41,7 +42,8 @@
   "2026-09-14": "2026-09-14",
   "2026-09-15": "2026-09-15",
   "2026-09-16": "2026-09-16",
-  "2026-09-17": "2026-09-17"
+  "2026-09-17": "2026-09-17",
+  "2026-09-18": "2026-09-18"
  },
  "days": [
   {
@@ -88,6 +90,11 @@
    "k": "2026-09-17",
    "d": 17,
    "lbl": "JUE"
+  },
+  {
+   "k": "2026-09-18",
+   "d": 18,
+   "lbl": "VIE"
   }
  ],
  "dayKeys": [
@@ -99,7 +106,8 @@
   "2026-09-14",
   "2026-09-15",
   "2026-09-16",
-  "2026-09-17"
+  "2026-09-17",
+  "2026-09-18"
  ],
  "dayShort": {
   "2026-09-09": "MIÉ 9",
@@ -110,7 +118,8 @@
   "2026-09-14": "LUN 14",
   "2026-09-15": "MAR 15",
   "2026-09-16": "MIÉ 16",
-  "2026-09-17": "JUE 17"
+  "2026-09-17": "JUE 17",
+  "2026-09-18": "VIE 18"
  },
  "dayShort_en": {
   "2026-09-09": "WED 9",
@@ -121,7 +130,8 @@
   "2026-09-14": "MON 14",
   "2026-09-15": "TUE 15",
   "2026-09-16": "WED 16",
-  "2026-09-17": "THU 17"
+  "2026-09-17": "THU 17",
+  "2026-09-18": "FRI 18"
  },
  "dayLong": {
   "2026-09-09": "Miércoles 9 de septiembre",
@@ -132,7 +142,8 @@
   "2026-09-14": "Lunes 14 de septiembre",
   "2026-09-15": "Martes 15 de septiembre",
   "2026-09-16": "Miércoles 16 de septiembre",
-  "2026-09-17": "Jueves 17 de septiembre"
+  "2026-09-17": "Jueves 17 de septiembre",
+  "2026-09-18": "Viernes 18 de septiembre"
  },
  "sections": {
   "🏺 Mujeres que sostienen la vida": {
@@ -185,45 +196,52 @@
    "archetype": "Perspectivas / Miradas",
    "order": 10
   },
+  "👁️ Ojo Pelao": {
+   "en": "Eyes Peeled",
+   "archetype": "Cortos / Programas",
+   "order": 11
+  },
   "💀 Muertos de Risa": {
    "en": "Dying of Laughter",
    "archetype": "Perspectivas / Miradas",
-   "order": 11
+   "order": 12
   }
  },
  "venues": {
   "Cinema Villeta - Villeta": {
    "short": "Cinema Villeta",
    "city": "Villeta",
-   "lat": 5.010889,
-   "lng": -74.46983,
-   "_prec": "osm"
+   "lat": 5.0110174,
+   "lng": -74.4699592,
+   "_prec": "sede",
+   "address": "Parque de la Molienda — parque principal",
+   "_nota": "Google Maps, lugar con nombre «Cine Villeta C». Coincide a 20 m con OSM."
   },
   "IED Alonso de Olalla - Villeta": {
    "short": "IED Alonso de Olalla",
    "city": "Villeta",
-   "_prec": "calle",
-   "_nota": "dirección confirmada en dos fuentes (Waze e Insor). El punto es la Diagonal 1 Sur, la única de ese nombre en Villeta y la que nombra la dirección: es la calle, no el edificio — el mismo criterio que Vda. Chapaima.",
-   "lat": 5.0046407,
-   "lng": -74.4709365,
+   "_prec": "sede",
+   "_nota": "Google Maps, lugar con nombre y con la MISMA dirección que ya teníamos (Dg. 1 Sur #72-31). Sube de punto de calle a edificio; 88 m de diferencia.",
+   "lat": 5.0044879,
+   "lng": -74.4701587,
    "address": "Diagonal 1 Sur n.º 72-31, barrio Carlos Lleras"
   },
   "SENA CDAE Villeta - Villeta": {
    "short": "SENA CDAE Villeta",
    "city": "Villeta",
-   "_prec": "oficial",
-   "_nota": "coordenada del propio SENA: dataset «Georeferenciación Centros de Aprendizaje» (datos.gov.co 8cnh-7asj), centro 9509 — el mismo código que usa la web del centro (sedes9509). Estaba escondida porque el dataset lo registra en el municipio BOGOTÁ, que es su REGIONAL, no su sede: buscarlo por «Villeta» da cero. Contrastado: cae a 804 m del casco urbano y a 325 m de la Calle 2 que nombra su dirección.",
+   "_prec": "sede",
+   "_nota": "Google Maps, lugar con nombre «SENA, CDAE Villeta» y la MISMA dirección que ya teníamos (Cl. 2 #13-3). OJO: la georreferenciación que el propio SENA publica en datos.gov.co (8cnh-7asj) da 5.006380,-74.475500, a 372 m de aquí. Se toma la de Maps porque es el lugar con la dirección que coincide; queda anotada la otra por si se quiere contrastar en terreno.",
    "address": "Calle 2 n.º 13-03, barrio San Rafael",
-   "lat": 5.00638,
-   "lng": -74.4755
+   "lat": 5.0072155,
+   "lng": -74.4787477
   },
   "Vda. Chapaima - Villeta": {
    "short": "Vda. Chapaima",
    "city": "Villeta",
-   "lat": 4.991911,
-   "lng": -74.490832,
-   "_prec": "aproximada",
-   "_nota": "vereda: OSM devuelve la vía a Chapaima, no un punto exacto"
+   "_prec": "vereda",
+   "_nota": "Google Maps: «chapaima - higuerón». Juan confirmó el 7 sep que ESE es el caserío de la vereda —en el satélite se ven las casas—. El punto anterior era de OSM (4.991911,-74.490832) y estaba 5,4 km al noreste: era la VÍA a Chapaima, no el caserío. Las dos fuentes no se podían desempatar solas; lo desempató quien conoce el terreno.",
+   "lat": 4.9573716,
+   "lng": -74.5255619
   },
   "Villeta y Sasaima - Villeta": {
    "short": "Villeta y Sasaima",
@@ -232,6 +250,56 @@
    "lng": -74.47023,
    "_prec": "aproximada",
    "_nota": "recorrido por dos municipios; el punto es el casco urbano de Villeta"
+  },
+  "Rotonda Tienda Museo del Café - Sasaima": {
+   "short": "Rotonda Tienda Museo del Café",
+   "city": "Sasaima",
+   "_prec": "sede",
+   "_nota": "Plus Code XH78+P2 (Sasaima) que aportó Juan, decodificado a 67P7XH78+P2. Cae a 204 m del centro del pueblo. No aparece en OSM ni en Nominatim.",
+   "lat": 4.964313,
+   "lng": -74.434938
+  },
+  "Escuela Rural Santa Ana - Sasaima": {
+   "short": "Escuela Rural Santa Ana",
+   "city": "Sasaima",
+   "lat": 4.9288644,
+   "lng": -74.4321437,
+   "_prec": "sede",
+   "_nota": "Google Maps: «Escuela Santa Ana, Taboga, Sasaima». Coincide a 500 m con el punto de la vereda Santa Ana en OSM, que es lo que teníamos antes: dos fuentes en la misma zona, y esta es el edificio."
+  },
+  "IED Rural San Bernardo - Sasaima": {
+   "short": "IED Rural San Bernardo",
+   "city": "Sasaima",
+   "lat": 4.915146,
+   "lng": -74.41883,
+   "address": "Vereda San Bernardo",
+   "_prec": "vereda",
+   "_nota": "Punto del caserío de la vereda San Bernardo (OSM), que es lo que dice su dirección oficial (datos.gov.co jn4a-aqyh: «VEREDA SAN BERNARDO»). NO se usa el resultado de Google Maps: devuelve la sede «Escuela Rural La Candelaria», que es OTRA de las 6 sedes del colegio y está a 4,7 km. Con 6 sedes, elegir la equivocada es peor que quedarse en la vereda."
+  },
+  "Salón Comunal Vda. San Bernardo - Sasaima": {
+   "short": "Salón Comunal Vda. San Bernardo",
+   "city": "Sasaima",
+   "lat": 4.915146,
+   "lng": -74.41883,
+   "_prec": "vereda",
+   "_nota": "mismo caserío que el IED Rural San Bernardo: es la misma vereda."
+  },
+  "IED San Nicolás - Sasaima": {
+   "short": "IED San Nicolás",
+   "city": "Sasaima",
+   "address": "Urbanización San José",
+   "_prec": "sede",
+   "_nota": "Google Maps, lugar con nombre: «Institución Educativa Departamental San Nicolás de Tolentino, Sasaima». Coincide con el directorio oficial (datos.gov.co jn4a-aqyh), que la da urbana. OSM no la tiene: Maps sí cubre estos pueblos y OSM no.",
+   "lat": 4.9648759,
+   "lng": -74.4333762
+  },
+  "Vereda Ilo Alto - Sasaima": {
+   "short": "Vereda Ilo Alto",
+   "city": "Sasaima",
+   "_prec": "vereda",
+   "_nota": "Plus Code 2H6Q+HV (Sasaima) que aportó Juan → 67Q72H6Q+HV. OJO al decodificar: recuperar el prefijo pegándolo sin más daba un punto a 106 km; hay que elegir el prefijo vecino MÁS CERCANO a la referencia, que es lo que dice el algoritmo. Contrastado: cae a 1,17 km de «Ilo Grande» —la vereda vecina, lo único que OSM tenía por ahí— y entre los dos cascos, 6,6 km de Villeta y 5,8 de Sasaima.",
+   "lat": 5.01144,
+   "lng": -74.410313
   }
  },
  "films": [
@@ -1029,6 +1097,211 @@
    ]
   },
   {
+   "title": "Tres cuentos colombianos - Tiempos de sequía + Soñé su nombre",
+   "type": "film",
+   "section": "❤️‍🩹 Amores & Desamores",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "114 min",
+   "day": "2026-09-14",
+   "time": "18:00",
+   "day_order": 5,
+   "venue": "Rotonda Tienda Museo del Café - Sasaima",
+   "has_qa": false,
+   "_src": "PDF oficial de la programación de Sasaima, p2",
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Tres cuentos colombianos - Tiempos de sequía",
+     "director": "Julio Luzardo",
+     "year": 1963,
+     "duration": "28 min",
+     "poster": "https://image.tmdb.org/t/p/w500/lsEKD5rs8jDKhaytcFUTGkPurae.jpg",
+     "lbSlug": "tres-cuentos-colombianos",
+     "genre": "Ficción",
+     "country": "Colombia",
+     "posterSource": "tmdb",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Soñé su nombre",
+     "director": "Ángela Carabalí",
+     "year": 2025,
+     "duration": "86 min",
+     "poster": "https://image.tmdb.org/t/p/w500/xlXvgdoTqDdzUFoBAb2ANqka4tC.jpg",
+     "lbSlug": "i-dreamed-his-name",
+     "synopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre se le aparece en un sueño y le pide que lo busque. Junto a su hermana Juliana, emprende un viaje por Colombia hasta los terriotiros indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada.",
+     "synopsis_en": "Thirty years after his forced disappearance, the filmmaker’s Afro Colombian father comes to her in a dream, asking her to find him. With her sister, she sets out on a journey of discovery across Colombia’s painful history, reconnecting with their father and his activism.",
+     "genre": "Documental",
+     "country": "Colombia",
+     "posterSource": "tmdb",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
+   "title": "En el mar + Emechiche, el renacer de los cabeciblancos + Chicha la chicharra + Daniel + Zizuma, nuestra casa de agua y nubes",
+   "type": "film",
+   "section": "👁️ Ojo Pelao",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "52 min",
+   "day": "2026-09-15",
+   "time": "08:00",
+   "day_order": 6,
+   "venue": "Escuela Rural Santa Ana - Sasaima",
+   "has_qa": false,
+   "_src": "PDF oficial de la programación de Sasaima, p2",
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "En el mar",
+     "director": "Alfred Robinson",
+     "year": 2024,
+     "duration": "7 min",
+     "poster": "/assets/siembrafest/en-el-mar.jpg",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Emechiche, el renacer de los cabeciblancos",
+     "director": "Juan Camilo González",
+     "year": 2025,
+     "duration": "11 min",
+     "poster": "https://image.tmdb.org/t/p/w500/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
+     "lbSlug": "emechiche-the-rebirth-of-white-headed",
+     "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+     "genre": "Drama",
+     "country": "Colombia",
+     "posterSource": "tmdb",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Chicha la chicharra",
+     "director": "Sofía Alejandra Uzcátegui León",
+     "year": 2025,
+     "duration": "10 min",
+     "poster": "https://image.tmdb.org/t/p/w500/knhGoKZFD0s4CyvzpMFXsqrkdPO.jpg",
+     "lbSlug": "chicha-la-chicharra",
+     "synopsis": "Una chicharra llamada Chicha emerge de la tierra para su metamorfosis, y descubre que el árbol de aguacate donde nació ha sido talado; decidida a crear un bosque, deposita sus esperanzas en un retoño de aguacate, pero pronto debe enfrentar la realidad de su corta vida y aprender a aceptar el presente.",
+     "synopsis_en": "Chicha emerges from the soil for her metamorphosis, only to find the avocado tree where she was born gone. Determined to create a forest, she waits for a new tree to grow, unaware her life will be too short to see it flourish.",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "tmdb",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Daniel",
+     "director": "Armando Velásquez",
+     "year": 2025,
+     "duration": "12 min",
+     "poster": "/assets/siembrafest/daniel.jpg",
+     "genre": "Drama",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Zizuma, nuestra casa de agua y nubes",
+     "director": "Fátima Correa",
+     "year": 2026,
+     "duration": "12 min",
+     "poster": "/assets/siembrafest/zizuma-nuestra-casa-de-agua-y-nubes.jpg",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
+   "title": "Cantos al juego de \"Bolar\" + La gran hazaña + Extinta + La pecera + Un pájaro más",
+   "type": "film",
+   "section": "👁️ Ojo Pelao",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "55 min",
+   "day": "2026-09-15",
+   "time": "10:00",
+   "day_order": 6,
+   "venue": "Escuela Rural Santa Ana - Sasaima",
+   "has_qa": false,
+   "_src": "PDF oficial de la programación de Sasaima, p3",
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Cantos al juego de \"Bolar\"",
+     "director": "Iván Sierra",
+     "year": 2025,
+     "duration": "8 min",
+     "poster": "/assets/siembrafest/cantos-al-juego-de-bolar.jpg",
+     "lbSlug": "cantos-al-juego-de-bolar",
+     "synopsis": "Un ensayo audiovisual y poético sobre la infancia, el balón y la esencia del juego. Una reflexión sobre el fútbol como libertad, imaginación y encuentro colectivo.",
+     "synopsis_en": "A poetic audiovisual essay on childhood, the ball and the essence of play. A reflection on football as freedom, imagination and collective encounter.",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez",
+     "year": 2024,
+     "duration": "15 min",
+     "poster": "https://image.tmdb.org/t/p/w500/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+     "lbSlug": "the-great-feat",
+     "synopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña.",
+     "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+     "genre": "Ficción",
+     "country": "Colombia",
+     "posterSource": "tmdb",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Extinta",
+     "director": "Yesid Soacha",
+     "year": 2024,
+     "duration": "7 min",
+     "poster": "/assets/siembrafest/extinta.jpg",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La pecera",
+     "director": "Ángela Tatiana Fonseca Gálvez",
+     "year": 2025,
+     "duration": "8 min",
+     "poster": "/assets/siembrafest/la-pecera.jpg",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Un pájaro más",
+     "director": "Julián Gómez Reyes",
+     "year": 2026,
+     "duration": "17 min",
+     "poster": "/assets/siembrafest/un-pajaro-mas.jpg",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
    "title": "La gallina saraviada + En su sombra fértil + La grandiosa + Paramunas: el alma de la montaña + El tiempo de las mujeres transforma el territorio",
    "type": "film",
    "section": "🏺 Mujeres que sostienen la vida",
@@ -1129,6 +1402,169 @@
    "is_free": true
   },
   {
+   "title": "Take It Off + Carola + Desarraigo + Gladiolos + Idilio",
+   "type": "film",
+   "section": "❤️‍🩹 Amores & Desamores",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "69 min",
+   "day": "2026-09-16",
+   "time": "07:00",
+   "day_order": 7,
+   "venue": "IED Rural San Bernardo - Sasaima",
+   "has_qa": false,
+   "_src": "PDF oficial de la programación de Sasaima, p4",
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Take It Off",
+     "director": "Sergio Tovar Uribe",
+     "year": 2025,
+     "duration": "10 min",
+     "poster": "https://image.tmdb.org/t/p/w500/b4RHj48yxGqcCh8FUeAfJDLTs9Z.jpg",
+     "lbSlug": "take-it-off-2025",
+     "synopsis_en": "Milo has a mask, and every time he puts it on, he is transported to a world full of sunflowers. There, he meets a girl in a white dress who, without realizing it, will lead him to face his greatest fear: taking off the mask.",
+     "genre": "Drama",
+     "country": "Colombia",
+     "posterSource": "tmdb",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Carola",
+     "director": "Violeta Barrios Ramírez",
+     "year": 2025,
+     "duration": "11 min",
+     "poster": "/assets/siembrafest/carola.jpg",
+     "synopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
+     "genre": "Ficción",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Desarraigo",
+     "director": "Nicolás Patiño H. & Santiago Cely O.",
+     "year": 2026,
+     "duration": "15 min",
+     "poster": "https://image.tmdb.org/t/p/w500/ncFypC1QoQQVdm4rnhfTA9BgOGN.jpg",
+     "lbSlug": "desarraigo-2026",
+     "synopsis": "Tras la muerte de su esposa, Ángel enfrenta un duelo solitario en su hogar rural. Una gotera crece como una presencia abrumadora, transformando su espacio y empujándolo a decisiones irracionales mientras intenta reconciliarse con su pérdida.",
+     "genre": "Drama",
+     "country": "Colombia",
+     "posterSource": "tmdb",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Gladiolos",
+     "director": "Mónica Juanita Hernández Duquino",
+     "year": 2024,
+     "duration": "15 min",
+     "poster": "https://image.tmdb.org/t/p/w500/hPcSDRpwapMHGFdi6dJ6pPLQAPf.jpg",
+     "lbSlug": "gladiolos",
+     "synopsis_en": "Waldina, the flowers seller of the little town of Arcabuco, has died. Her son Humberto arrives from the big city and decides to make the last delivery of flowers to her clients without knowing that in one of that doors could find his happiness.",
+     "genre": "Ficción",
+     "country": "Colombia",
+     "posterSource": "tmdb",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Idilio",
+     "director": "Luz Rincón Barahona",
+     "year": 2024,
+     "duration": "18 min",
+     "poster": "/assets/siembrafest/idilio.jpg",
+     "genre": "Ciencia ficción",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
+   "title": "Cantos al juego de \"Bolar\" + La gran hazaña + Extinta + La pecera + Un pájaro más",
+   "type": "film",
+   "section": "👁️ Ojo Pelao",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "55 min",
+   "day": "2026-09-16",
+   "time": "08:30",
+   "day_order": 7,
+   "venue": "IED Rural San Bernardo - Sasaima",
+   "has_qa": false,
+   "_src": "PDF oficial de la programación de Sasaima, p4",
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Cantos al juego de \"Bolar\"",
+     "director": "Iván Sierra",
+     "year": 2025,
+     "duration": "8 min",
+     "poster": "/assets/siembrafest/cantos-al-juego-de-bolar.jpg",
+     "lbSlug": "cantos-al-juego-de-bolar",
+     "synopsis": "Un ensayo audiovisual y poético sobre la infancia, el balón y la esencia del juego. Una reflexión sobre el fútbol como libertad, imaginación y encuentro colectivo.",
+     "synopsis_en": "A poetic audiovisual essay on childhood, the ball and the essence of play. A reflection on football as freedom, imagination and collective encounter.",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez",
+     "year": 2024,
+     "duration": "15 min",
+     "poster": "https://image.tmdb.org/t/p/w500/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+     "lbSlug": "the-great-feat",
+     "synopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña.",
+     "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+     "genre": "Ficción",
+     "country": "Colombia",
+     "posterSource": "tmdb",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Extinta",
+     "director": "Yesid Soacha",
+     "year": 2024,
+     "duration": "7 min",
+     "poster": "/assets/siembrafest/extinta.jpg",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La pecera",
+     "director": "Ángela Tatiana Fonseca Gálvez",
+     "year": 2025,
+     "duration": "8 min",
+     "poster": "/assets/siembrafest/la-pecera.jpg",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Un pájaro más",
+     "director": "Julián Gómez Reyes",
+     "year": 2026,
+     "duration": "17 min",
+     "poster": "/assets/siembrafest/un-pajaro-mas.jpg",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
    "title": "La tinaja + Cayenas libertarias + Pasta negra + Victorias y glorias - relatos de campeonas + El tiempo de las mujeres transforma el territorio",
    "type": "film",
    "section": "🏺 Mujeres que sostienen la vida",
@@ -1214,6 +1650,57 @@
    ]
   },
   {
+   "title": "Donde nace el nombre + Camino al Chicamocha + Sinfonía incompleta de oficios del Fonce",
+   "type": "film",
+   "section": "🪶 Estampas",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "58 min",
+   "day": "2026-09-16",
+   "time": "10:15",
+   "day_order": 7,
+   "venue": "IED Rural San Bernardo - Sasaima",
+   "has_qa": false,
+   "_src": "PDF oficial de la programación de Sasaima, p5",
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Donde nace el nombre",
+     "director": "Juan Vanegas",
+     "year": 2025,
+     "duration": "27 min",
+     "poster": "/assets/siembrafest/donde-nace-el-nombre.jpg",
+     "genre": "Documental",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Camino al Chicamocha",
+     "director": "Frank Alexander Rodríguez Rojas",
+     "year": 2024,
+     "duration": "15 min",
+     "poster": "/assets/siembrafest/camino-al-chicamocha.jpg",
+     "genre": "Documental",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Sinfonía incompleta de oficios del Fonce",
+     "director": "Nelson Omar Silva Sánchez",
+     "year": 2024,
+     "duration": "16 min",
+     "poster": "/assets/siembrafest/sinfonia-incompleta-de-oficios-del-fonce.jpg",
+     "genre": "Documental",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
    "title": "Noche de vuelo + Villa Feliz + Bajo el mismo techo + Linfernum + Payasadas",
    "type": "film",
    "section": "👻 Cinema Patatús",
@@ -1291,6 +1778,31 @@
    ]
   },
   {
+   "title": "Entre 2 aguas",
+   "type": "film",
+   "section": "🎞️ Buenos, Malos y Feos",
+   "director": "Carlos Gabriel Vergara M.",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "93 min",
+   "day": "2026-09-16",
+   "time": "18:00",
+   "day_order": 7,
+   "venue": "Salón Comunal Vda. San Bernardo - Sasaima",
+   "has_qa": false,
+   "synopsis": "Cuando Moisés descubre la red que está apoderándose del agua, debe elegir entre seguir en el negocio que lo sacó de la pobreza... o denunciarlo y asumir las consecuencias. En un país sediento de verdad, Moisés deberá decidir qué está dispuesto a arriesgar: su comodidad, su familia o la vida de millones. Y tendrá que hacerlo antes de que la corriente lo arrastre. Entre 2 Aguas es un thriller ambiental sobre el recurso más importante del planeta y la estrategia de un poderoso grupo económico decidido a convertir su acceso en un negocio multimillonario, cueste lo que cueste.",
+   "synopsis_lang": "es",
+   "poster": "https://image.tmdb.org/t/p/w500/1sHXXkdwsKwrwSrfLmvCG9WL2EW.jpg",
+   "posterSource": "tmdb",
+   "_src": "PDF oficial de la programación de Sasaima, p5",
+   "is_free": true,
+   "lbSlug": "entre-2-aguas",
+   "synopsis_en": "When Moses discovers the network taking control of the water supply, he must choose between staying in the business that lifted him out of poverty… or exposing it and facing the consequences. In a country thirsty for truth, Moses will have to decide what he’s willing to risk: his comfort, his family, or the lives of millions. And he’ll have to do it before the current pulls him under.  Between Two Waters is an environmental thriller about the planet’s most vital resource and the strategy of a powerful economic group determined to turn access to it into a multibillion-dollar business—no matter the cost.",
+   "genre": "Ficción",
+   "year": 2025,
+   "_programa_original": "Entre 2 aguas"
+  },
+  {
    "title": "El día de mi suerte + HDLT + Miguel Ángel, Federico, y el carro que pasó encima de las gafas + Muertos que no son muertos",
    "type": "film",
    "section": "💀 Muertos de Risa",
@@ -1357,6 +1869,70 @@
    ]
   },
   {
+   "title": "Catatumbo: Casa del trueno, memoria y dignidad + 6 de diciembre + Relatos del camino + La Europa",
+   "type": "film",
+   "section": "🎞️ Buenos, Malos y Feos",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "72 min",
+   "day": "2026-09-17",
+   "time": "10:00",
+   "day_order": 8,
+   "venue": "IED San Nicolás - Sasaima",
+   "has_qa": false,
+   "_src": "PDF oficial de la programación de Sasaima, p6",
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Catatumbo: Casa del trueno, memoria y dignidad",
+     "director": "Jhonattan Sarmiento",
+     "year": 2025,
+     "duration": "8 min",
+     "poster": "/assets/siembrafest/catatumbo-casa-del-trueno-memoria-y-dignidad.jpg",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "6 de diciembre",
+     "director": "Nelson Rodríguez Tequia",
+     "year": 2026,
+     "duration": "30 min",
+     "poster": "/assets/siembrafest/6-de-diciembre.jpg",
+     "genre": "Documental",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Relatos del camino",
+     "director": "Daniel Prieto Muriel",
+     "year": 2025,
+     "duration": "12 min",
+     "poster": "/assets/siembrafest/relatos-del-camino.jpg",
+     "genre": "Animación",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La Europa",
+     "director": "Jorge Pérez Aldana",
+     "year": 2025,
+     "duration": "22 min",
+     "poster": "https://image.tmdb.org/t/p/w500/pxCKt70n1FtUug8GW9h01eYz8l.jpg",
+     "lbSlug": "the-europe",
+     "synopsis_en": "Andrés Narváez, Colombian social leader, music minstrel and empirical poet, returns to the Montes de María after his exile in Spain, following an attempt on his life in which he was shot four times.  His time in Asturias and the melancholy of a forced migration inspired him to compose several of his best known songs, connecting through song the two Europes: the one he left and the one that welcomed him.  Upon his return, with the violence still latent, Andrés delves into the deepest landscapes of his territory and the most painful memories that the war left behind, composing in memory of those who no longer walk with him; music saved him and that is why he decided that 'it is better to sing than to point out'.",
+     "genre": "Música",
+     "country": "Colombia",
+     "posterSource": "tmdb",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
    "title": "Taller: paisajes sonoros, archivo y memoria",
    "type": "event",
    "section": "🛠️ SiembraLAB",
@@ -1371,13 +1947,106 @@
    "synopsis_lang": "es",
    "_src": "PDF oficial de la programación de Villeta, p12",
    "is_free": true
+  },
+  {
+   "title": "El huaquero",
+   "type": "film",
+   "section": "🎞️ Buenos, Malos y Feos",
+   "director": "Harold De Vasten",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "94 min",
+   "day": "2026-09-17",
+   "time": "18:00",
+   "day_order": 8,
+   "venue": "Vereda Ilo Alto - Sasaima",
+   "has_qa": false,
+   "synopsis": "Manuel quiere vender su cosecha de maíz para costear el viaje a la ciudad y dejar la vereda de sus padres ancianos. Conocer a Ezequiel —un viejo ermitaño y huaquero que parece haber hallado algo grande— lo enfrenta a su ambición, el amor y sus anhelos más profundos.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficmontanas/el-huaquero.jpg",
+   "posterSource": "oficial",
+   "_src": "PDF oficial de la programación de Sasaima, p6",
+   "is_free": true,
+   "synopsis_en": "Manuel wants to sell his corn harvest to fund his trip to the city and leave the hamlet where his elderly parents live. Meeting Ezequiel —an old hermit and treasure-hunting huaquero who seems to have found something big— forces him to confront his ambition, love and his deepest longings.",
+   "genre": "Familia",
+   "year": 2026,
+   "_programa_original": "El huaquero"
+  },
+  {
+   "title": "Xie. Defensa de la vida",
+   "type": "film",
+   "section": "🗺️ Así es Cundinamarca",
+   "director": "Adriana Bernal-Mor y Paola Zuluaga P.",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "70 min",
+   "day": "2026-09-18",
+   "time": "10:00",
+   "day_order": 9,
+   "venue": "IED San Nicolás - Sasaima",
+   "has_qa": false,
+   "synopsis": "Desde 1977, mujeres campesinas tejedoras de las montañas de Cundinamarca resisten la explotación irregular de nacimientos de agua por industrias de bebidas y ultraprocesados. Mientras el agua se convierte en un negocio, las comunidades padecen sequías y el deterioro de sus ecosistemas. Ahora, frente a una nueva concesión para embotellar agua, se organizan para defender el territorio y exigir que el agua prevalezca como un derecho, no como una mercancía.",
+   "synopsis_lang": "es",
+   "poster": "https://image.tmdb.org/t/p/w500/r1udprF9gtCMICkYfHXZ4rISD8U.jpg",
+   "posterSource": "tmdb",
+   "_src": "PDF oficial de la programación de Sasaima, p7",
+   "is_free": true,
+   "lbSlug": "xie-defensa-de-la-vida",
+   "synopsis_en": "Since 1977, peasant women weavers in the mountains of Cundinamarca have resisted the unregulated exploitation of freshwater springs by the beverage and ultra-processed food industries. As water becomes a business, communities endure drought and the decay of their ecosystems. Now, facing a new concession to bottle water, they organize to defend their territory and demand that water remain a right, not a commodity.",
+   "genre": "Documental",
+   "year": 2025,
+   "_programa_original": "Xie. Defensa de la vida"
+  },
+  {
+   "title": "Madre + El huaquero",
+   "type": "film",
+   "section": "🎞️ Buenos, Malos y Feos",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "111 min",
+   "day": "2026-09-18",
+   "time": "18:00",
+   "day_order": 9,
+   "venue": "Rotonda Tienda Museo del Café - Sasaima",
+   "has_qa": false,
+   "_src": "PDF oficial de la programación de Sasaima, p7",
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Madre",
+     "director": "Samuel Velasquez",
+     "year": 1924,
+     "duration": "17 min",
+     "poster": "https://image.tmdb.org/t/p/w500/oB765L88GmwWNis8Dd4byVBsxuE.jpg",
+     "lbSlug": "madre-1924",
+     "genre": "Ficción",
+     "country": "Colombia",
+     "posterSource": "tmdb",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "El huaquero",
+     "director": "Harold De Vasten",
+     "year": 2026,
+     "duration": "94 min",
+     "poster": "/assets/ficmontanas/el-huaquero.jpg",
+     "synopsis": "Manuel quiere vender su cosecha de maíz para costear el viaje a la ciudad y dejar la vereda de sus padres ancianos. Conocer a Ezequiel —un viejo ermitaño y huaquero que parece haber hallado algo grande— lo enfrenta a su ambición, el amor y sus anhelos más profundos.",
+     "synopsis_en": "Manuel wants to sell his corn harvest to fund his trip to the city and leave the hamlet where his elderly parents live. Meeting Ezequiel —an old hermit and treasure-hunting huaquero who seems to have found something big— forces him to confront his ambition, love and his deepest longings.",
+     "genre": "Familia",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    }
+   ]
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-07T15:15:36",
-  "plan_sha": "e65431fd5e1109e8",
-  "paso": 4,
+  "fecha": "2026-09-07T17:33:37",
+  "plan_sha": "c96d4eeb9f634619",
+  "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py siembrafest-2026"
  }
 }
