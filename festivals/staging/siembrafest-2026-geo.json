@@ -19,8 +19,10 @@
   "Vda. Chapaima - Villeta": {
    "city": "Villeta",
    "short": "Vda. Chapaima",
-   "_prec": "pendiente",
-   "_nota": "SIN PUNTO desde el 7 sep. Había uno de OSM (4.991911,-74.490832) que era la VÍA a Chapaima, no un lugar; Google Maps solo conoce un tramo llamado «chapaima - higuerón» a 4.957372,-74.525562. Las dos candidatas están a 5,4 km una de otra y ninguna es una sede. Con esa diferencia no se puede afirmar ninguna: mandar a alguien 5 km al sitio equivocado es peor que no tener mapa. PREGUNTAR AL FESTIVAL."
+   "_prec": "vereda",
+   "_nota": "Google Maps: «chapaima - higuerón». Juan confirmó el 7 sep que ESE es el caserío de la vereda —en el satélite se ven las casas—. El punto anterior era de OSM (4.991911,-74.490832) y estaba 5,4 km al noreste: era la VÍA a Chapaima, no el caserío. Las dos fuentes no se podían desempatar solas; lo desempató quien conoce el terreno.",
+   "lat": 4.9573716,
+   "lng": -74.5255619
   },
   "Villeta y Sasaima - Villeta": {
    "lat": 5.011258,
