@@ -105,18 +105,6 @@ def rango_horario(txt):
 
 
 # ── red ──────────────────────────────────────────────────────────────────────
-def curl_get(url, retries=3, min_bytes=3000, timeout=40):
-    """GET con UA de navegador y reintentos. '' si no hay respuesta útil."""
-    for _ in range(retries):
-        r = subprocess.run(['curl', '-sL', '--compressed', '--max-time', str(timeout),
-                            '-A', UA, '-H', 'Accept: text/html,application/xhtml+xml', url],
-                           capture_output=True)
-        if r.returncode == 0 and len(r.stdout) > min_bytes:
-            return r.stdout.decode('utf-8', 'ignore')
-        time.sleep(1.2)
-    return ''
-
-
 def tmdb_get(path, api_key, **params):
     """GET a api.themoviedb.org v3. {} si falla."""
     url = f'https://api.themoviedb.org/3{path}?api_key={api_key}&' + '&'.join(
@@ -193,98 +181,55 @@ def dias_config(dias, mes_es='agosto'):
 
 
 # ── banderas ─────────────────────────────────────────────────────────────────
-BANDERAS = {
-    'colombia': '🇨🇴', 'argentina': '🇦🇷', 'brasil': '🇧🇷', 'chile': '🇨🇱', 'mexico': '🇲🇽',
-    'peru': '🇵🇪', 'panama': '🇵🇦', 'ecuador': '🇪🇨', 'venezuela': '🇻🇪', 'bolivia': '🇧🇴',
-    'uruguay': '🇺🇾', 'paraguay': '🇵🇾', 'cuba': '🇨🇺', 'espana': '🇪🇸', 'francia': '🇫🇷',
-    'italia': '🇮🇹', 'alemania': '🇩🇪', 'reino unido': '🇬🇧', 'estados unidos': '🇺🇸',
-    'canada': '🇨🇦', 'japon': '🇯🇵', 'china': '🇨🇳', 'iran': '🇮🇷', 'india': '🇮🇳',
-    'rusia': '🇷🇺',
-    'federacion rusa': '🇷🇺',   # así lo escribe CineAutopsia
-    'polonia': '🇵🇱', 'dinamarca': '🇩🇰', 'suecia': '🇸🇪', 'noruega': '🇳🇴',
-    'irlanda': '🇮🇪', 'belgica': '🇧🇪', 'paises bajos': '🇳🇱', 'portugal': '🇵🇹',
-    'suiza': '🇨🇭', 'austria': '🇦🇹', 'grecia': '🇬🇷', 'turquia': '🇹🇷', 'kenia': '🇰🇪',
-    'filipinas': '🇵🇭', 'macedonia del norte': '🇲🇰', 'nueva zelanda': '🇳🇿',
-    'australia': '🇦🇺', 'luxemburgo': '🇱🇺', 'sudafrica': '🇿🇦', 'senegal': '🇸🇳',
-    # ── medidos contra los 13 festivales del repo el 17 ago 2026 ──────────────
-    # La tabla se escribía a mano y a demanda, así que le faltaba lo que ningún
-    # festival anterior había traído: «Hungría» apareció con CineAutopsia y se
-    # quedó sin bandera. En vez de añadir una, se midió TODO el repo y se cerró
-    # el hueco entero. Los nombres en inglés entran porque los festivales
-    # internacionales publican así (TIFF, Tribeca) y traducirlos en la línea de
-    # salida sería inventar la palabra del festival.
-    'hungria': '🇭🇺', 'palestina': '🇵🇸', 'honduras': '🇭🇳', 'taiwan': '🇹🇼',
-    'qatar': '🇶🇦', 'bangladesh': '🇧🇩', 'corea del sur': '🇰🇷', 'corea': '🇰🇷',
-    'sri lanka': '🇱🇰', 'malasia': '🇲🇾', 'eslovaquia': '🇸🇰', 'vietnam': '🇻🇳',
-    'nigeria': '🇳🇬', 'puerto rico': '🇵🇷', 'rumania': '🇷🇴', 'rumania (romania)': '🇷🇴',
-    'estonia': '🇪🇪', 'republica dominicana': '🇩🇴', 'rep. dominicana': '🇩🇴',
-    'israel': '🇮🇱', 'tailandia': '🇹🇭', 'kosovo': '🇽🇰', 'bulgaria': '🇧🇬',
-    'costa rica': '🇨🇷', 'georgia': '🇬🇪', 'guatemala': '🇬🇹', 'nicaragua': '🇳🇮',
-    'el salvador': '🇸🇻', 'haiti': '🇭🇹', 'jamaica': '🇯🇲', 'marruecos': '🇲🇦',
-    'egipto': '🇪🇬', 'tunez': '🇹🇳', 'argelia': '🇩🇿', 'libano': '🇱🇧',
-    'siria': '🇸🇾', 'irak': '🇮🇶', 'afganistan': '🇦🇫', 'pakistan': '🇵🇰',
-    'indonesia': '🇮🇩', 'singapur': '🇸🇬', 'camboya': '🇰🇭', 'nepal': '🇳🇵',
-    'mongolia': '🇲🇳', 'ucrania': '🇺🇦', 'republica checa': '🇨🇿', 'chequia': '🇨🇿',
-    'hungria (magyarorszag)': '🇭🇺', 'serbia': '🇷🇸', 'croacia': '🇭🇷',
-    'eslovenia': '🇸🇮', 'bosnia y herzegovina': '🇧🇦', 'albania': '🇦🇱',
-    'letonia': '🇱🇻', 'lituania': '🇱🇹', 'finlandia': '🇫🇮', 'islandia': '🇮🇸',
-    'etiopia': '🇪🇹', 'ghana': '🇬🇭', 'mali': '🇲🇱', 'burkina faso': '🇧🇫',
-    'ruanda': '🇷🇼', 'tanzania': '🇹🇿', 'uganda': '🇺🇬', 'mozambique': '🇲🇿',
-    'angola': '🇦🇴', 'congo': '🇨🇬', 'republica democratica del congo': '🇨🇩',
-    'costa de marfil': '🇨🇮', 'camerun': '🇨🇲', 'zimbabue': '🇿🇼', 'namibia': '🇳🇦',
-    'botsuana': '🇧🇼', 'sudan': '🇸🇩', 'somalia': '🇸🇴', 'yemen': '🇾🇪',
-    'arabia saudita': '🇸🇦', 'saudi arabia': '🇸🇦', 'turkiye': '🇹🇷', 'emiratos arabes unidos': '🇦🇪', 'jordania': '🇯🇴',
-    # nombres en inglés, tal como los publican los festivales internacionales
-    'united states': '🇺🇸', 'usa': '🇺🇸', 'eeuu': '🇺🇸', 'ee.uu.': '🇺🇸',
-    'united kingdom': '🇬🇧', 'uk': '🇬🇧', 'inglaterra': '🇬🇧', 'england': '🇬🇧',
-    'scotland': '🏴󠁧󠁢󠁳󠁣󠁴󠁿', 'france': '🇫🇷', 'spain': '🇪🇸', 'germany': '🇩🇪',
-    'italy': '🇮🇹', 'norway': '🇳🇴', 'sweden': '🇸🇪', 'denmark': '🇩🇰',
-    'ireland': '🇮🇪', 'netherlands': '🇳🇱', 'belgium': '🇧🇪', 'switzerland': '🇨🇭',
-    'austria': '🇦🇹', 'poland': '🇵🇱', 'portugal': '🇵🇹', 'greece': '🇬🇷',
-    'japan': '🇯🇵', 'south korea': '🇰🇷', 'korea': '🇰🇷', 'india': '🇮🇳',
-    'brazil': '🇧🇷', 'mexico': '🇲🇽', 'chile': '🇨🇱', 'colombia': '🇨🇴',
-    'argentina': '🇦🇷', 'peru': '🇵🇪', 'canada': '🇨🇦', 'australia': '🇦🇺',
-    'new zealand': '🇳🇿', 'south africa': '🇿🇦', 'israel': '🇮🇱', 'turkey': '🇹🇷',
-    'china': '🇨🇳', 'taiwan': '🇹🇼', 'hong kong': '🇭🇰', 'philippines': '🇵🇭',
-    'thailand': '🇹🇭', 'vietnam': '🇻🇳', 'indonesia': '🇮🇩', 'malaysia': '🇲🇾',
-    'ukraine': '🇺🇦', 'russia': '🇷🇺', 'czech republic': '🇨🇿', 'czechia': '🇨🇿',
-    'hungary': '🇭🇺', 'romania': '🇷🇴', 'bulgaria': '🇧🇬', 'serbia': '🇷🇸',
-    'croatia': '🇭🇷', 'slovenia': '🇸🇮', 'slovakia': '🇸🇰', 'estonia': '🇪🇪',
-    'latvia': '🇱🇻', 'lithuania': '🇱🇹', 'finland': '🇫🇮', 'iceland': '🇮🇸',
-    'egypt': '🇪🇬', 'morocco': '🇲🇦', 'tunisia': '🇹🇳', 'algeria': '🇩🇿',
-    'nigeria': '🇳🇬', 'kenya': '🇰🇪', 'senegal': '🇸🇳', 'ethiopia': '🇪🇹',
-    # Territorios de ultramar del Caribe francés. No son estados soberanos,
-    # pero tienen bandera propia y los festivales los publican como país de
-    # la obra — QAFF 2026 trae tres. Puerto Rico ya sentaba el criterio.
-    'martinica': '🇲🇶', 'guadalupe': '🇬🇵', 'guayana francesa': '🇬🇫',
-}
+# Las tablas de países ya no viven aquí: las genera scripts/generate-paises.js
+# (ICU es+en) en pipeline/paises.json, y banderas() las lee de ahí. Quedaban
+# BANDERAS, ISO2 y ALIAS escritas a mano y sin un solo lector — es como
+# vuelven a divergir dos copias: una se queda quieta y nadie lo nota.
 
-# ISO2, porque los catálogos y TMDB los publican así y un país escrito «CO» es
-# el mismo país. Solo los que aparecen de verdad en el repo.
-ISO2 = {'co': '🇨🇴', 'ar': '🇦🇷', 'br': '🇧🇷', 'cl': '🇨🇱', 'mx': '🇲🇽', 'pe': '🇵🇪',
-        'us': '🇺🇸', 'gb': '🇬🇧', 'fr': '🇫🇷', 'es': '🇪🇸', 'de': '🇩🇪', 'it': '🇮🇹',
-        'ca': '🇨🇦', 'pt': '🇵🇹', 'jp': '🇯🇵', 'cn': '🇨🇳', 'kr': '🇰🇷', 'in': '🇮🇳'}
 
-# Abreviaturas y nombres a medias que los festivales publican tal cual.
-ALIAS = {'rep dominicana': '🇩🇴', 'rd congo': '🇨🇩', 'guinea bissau': '🇬🇼',
-         'republica democratica del congo': '🇨🇩'}
+def _paises():
+    """La tabla generada por scripts/generate-paises.js: español, inglés, código
+    ISO y los alias que de verdad escriben los festivales. Antes había un literal
+    a mano AQUÍ y otro en la app, y divergieron: el pipeline normalizaba y la app
+    comparaba exacto, así que «Países bajos» con b minúscula daba 🇳🇱 en el dato
+    y 🌍 en la pantalla."""
+    global _PAISES_CACHE
+    if _PAISES_CACHE is None:
+        _PAISES_CACHE = json.load(open(os.path.join(REPO, 'pipeline', 'paises.json'),
+                                      encoding='utf-8'))
+    return _PAISES_CACHE
+
+
+_PAISES_CACHE = None
 
 
 def banderas(pais):
     """País(es) → banderas, deduplicadas y en orden de aparición.
 
-    Separa por coma, barra, « y » Y POR PARÉNTESIS: «España (Austria)» es una
-    coproducción de dos países, y quedarse con uno pierde el otro — 84 casos
-    medidos en el repo el 17 ago 2026. Un país que no se reconoce no inventa
-    bandera: se omite, y el guardián [country-flags] lo cuenta."""
+    Parte por los separadores INEQUÍVOCOS —coma, barra, paréntesis: «España
+    (Austria)» es una coproducción de dos países—. Por « y » y por guion NO se
+    parte a ciegas: «Antigua y Barbuda», «Bosnia y Herzegovina» y «Guinea-Bissau»
+    son UN país cada uno, y partirlos los dejaba a los ocho sin bandera. Solo si
+    el token entero no resuelve se intenta partirlo, que es el caso de
+    «Colombia y México» y «Ecuador-Chile-Alemania».
+
+    Un país que no se reconoce no inventa bandera: se omite, y el guardián
+    [country-flags] lo cuenta."""
+    d = _paises()
+    mapa, sin = d['paises'], set(d['sin_bandera'])
     out = []
-    for p in re.split(r'[,/()]| y | - |—', pais or ''):
-        k = norm(p)
-        if not k:
+    for parte in re.split(r'[,/()]', pais or ''):
+        k = norm(parte)
+        if not k or k in sin:
             continue
-        b = BANDERAS.get(k) or ALIAS.get(k) or (ISO2.get(k) if len(k) == 2 else None)
-        if b:
-            out.append(b)
+        f = mapa.get(k)
+        if f:
+            out.append(f)
+            continue
+        for sub in re.split(r'\s+y\s+|[-–—]', parte):
+            g = mapa.get(norm(sub))
+            if g:
+                out.append(g)
     return ''.join(dict.fromkeys(out))
 
 

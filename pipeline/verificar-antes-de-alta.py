@@ -81,10 +81,28 @@ def sonda_lb(title, director):
     except Exception:
         return None
 
-d = json.load(open('/Users/Juanda/Documents/Otrofestiv-dev/festivals/staging/qaff-2026.json'))
+# Entrada y salida por argumento: la versión anterior llevaba clavada la ruta
+# del staging de QAFF y el scratchpad de la sesión que la escribió, así que la
+# segunda vez que se usó había que editarla. Una herramienta reutilizable no se
+# edita para reutilizarla.
+#
+# Y recorre TAMBIÉN las obras dentro de film_list: en un festival de cortos, casi
+# todo lo que falta por dar de alta vive ahí dentro, no en las funciones de
+# primer nivel. Mirando solo el primer nivel, este verificador habría dicho que
+# no falta nada.
+if len(sys.argv) < 2:
+    sys.exit('uso: verificar-antes-de-alta.py <build.json> [salida.json]')
+ENTRADA = sys.argv[1]
+SALIDA = sys.argv[2] if len(sys.argv) > 2 else 'altas-verificacion.json'
+
+d = json.load(open(ENTRADA, encoding='utf-8'))
 uniq = {}
 for f in d['films']:
-    if f.get('type') == 'film': uniq.setdefault(f['title'], f)
+    if f.get('type') == 'event':
+        continue
+    for o in ([f] if not f.get('film_list') else f['film_list']):
+        if o.get('title') and o.get('director'):
+            uniq.setdefault(o['title'], o)
 pendientes = [(t, f) for t, f in uniq.items() if not f.get('lbSlug')]
 print(f'verificando {len(pendientes)} obras sin lbSlug\n')
 
@@ -95,15 +113,18 @@ for t, f in sorted(pendientes):
     b = sonda_persona(dirs) if not a else None
     c = sonda_lb(t, dirs) if not a else None
     estado = 'EXISTE' if a else ('REVISAR' if (b or c) else 'ALTA-OK')
-    reporte.append({'title': t, 'director': dirs, 'year': year,
-                    'country': f.get('country',''), 'duration': f.get('duration',''),
+    reporte.append({'title': t, 'title_en': f.get('title_en'), 'director': dirs,
+                    'year': year, 'country': f.get('country', ''),
+                    'duration': f.get('duration', ''), 'genre': f.get('genre'),
+                    'poster': f.get('poster'), 'posterSource': f.get('posterSource'),
                     'synopsis': (f.get('synopsis') or '')[:400],
                     'estado': estado, 'tmdb': a, 'persona': b, 'lb': c})
-    print(f"[{estado:8}] {t[:44]:45} {dirs[:28]:29} {year}")
-    if a: print(f"           → TMDB {a['id']} '{a['title']}' ({a['year']}) dir={a['dir']} via={a['via']}")
-    if b: print(f"           → persona TMDB '{b['persona']}' dirige: {b['films'][:4]}")
-    if c: print(f"           → LB posibles: {c[:3]}")
+    print(f"[{estado:8}] {t[:42]:43} {dirs[:26]:27} {year}")
+    if a: print(f"           -> TMDB {a['id']} '{a['title']}' ({a['year']}) dir={a['dir']} via={a['via']}")
+    if b: print(f"           -> persona TMDB '{b['persona']}' dirige: {b['films'][:4]}")
+    if c: print(f"           -> LB posibles: {c[:3]}")
 
-json.dump(reporte, open('/private/tmp/claude-501/-Users-Juanda-Documents-Otrofestiv-dev/76d8e69e-96d8-4c9a-bd3e-6c690afe74f5/scratchpad/qaff/altas-verificacion.json','w',encoding='utf-8'), ensure_ascii=False, indent=1)
+json.dump(reporte, open(SALIDA, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 from collections import Counter
 print('\nRESUMEN:', dict(Counter(r['estado'] for r in reporte)))
+print('->', SALIDA)

@@ -370,6 +370,78 @@ export const PALMARES=[
 
   {fest:'ficdeh2026', categoria:'Cine Comunitario Nacional', nivel:'ganadora',
    titulo:'Por una gota de leche', autoria:'Esteban J. Corzo', obra:'Por una gota de leche'},
+
+  // ── CineAutopsia 2026 (12ª ed., Bogotá) — 2 posts del 3 sep en @bogotaexperimental ──
+  // Uno con los seis PREMIOS (Dc14zD7jlvn) y otro con las doce MENCIONES
+  // (Dc173D2Drst). Las dos cápsulas se leyeron enteras; ninguna venía truncada.
+  // Su web no publicó el fallo: no hay entrada en su feed ni sitemap, y la nota
+  // de la Alcaldía que aparece al buscar es de 2023.
+  //
+  // Seis categorías, una ganadora cada una. La estructura la confirma su propia
+  // convocatoria: «seis premios principales», corto/medio/largo en nacional e
+  // internacional. Las categorías van VERBATIM salvo el título-caso de
+  // Instagram: la cápsula escribe «Europa Y Norteamérica» y «Resto Del Mundo»
+  // con mayúscula en la conjunción y el artículo, que es cómo capitaliza esa
+  // pieza, no ortografía suya.
+  //
+  // LAS 18 CRUZAN CON NUESTRO CATÁLOGO, pero dos no lo hacían por título y
+  // hubo que buscarlas por director:
+  //   · «Si yo fuese fuego» en el palmarés es «Si yo fuese fuego (If I Were
+  //     Fire)» en el catálogo, que lleva la traducción entre paréntesis.
+  //   · «INMARCESIBLE» en el anuncio del premio venía como «Inmarcesbile» en el
+  //     catálogo, y NO era un error nuestro: su PDF y su página de Selección
+  //     Oficial escriben «Inmarcesbile». Pero el propio festival se contradice en
+  //     el anuncio del fallo, y la palabra en español es «inmarcesible» —«oh
+  //     gloria inmarcesible»—. Juan lo cerró el 6 sep: se corrige EN TODO. La
+  //     errata queda declarada en pipeline/cineautopsia-2026-pdf.py, y el crudo
+  //     guarda en `_impreso` lo que dice el impreso.
+  //
+  // `autoria` toma el nombre COMPLETO del director tal como lo publica su
+  // Selección Oficial, no la forma corta del anuncio: ahí «Miguel S. Molina» es
+  // «Miguel Sebastian Molina Ruiz» y «Laura Caballero» es «Laura Camila
+  // Caballero». El anuncio abrevia; la selección no.
+
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Colombia', nivel:'ganadora',
+   titulo:'Inmarcesible', autoria:'Juan Sebastián Parra Posso', obra:'Inmarcesible'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Colombia', nivel:'mencion',
+   titulo:'Posdata para el fin del mundo', autoria:'John Melo', obra:'Posdata para el fin del mundo'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Colombia', nivel:'mencion',
+   titulo:'Mal de Tierra', autoria:'Laura Camila Caballero, Sara Idárraga', obra:'Mal de Tierra'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Colombia', nivel:'mencion',
+   titulo:'CHAIKA', autoria:'Ingrid Paola Bonilla Rodriguez', obra:'CHAIKA'},
+
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Latinoamérica', nivel:'ganadora',
+   titulo:'Si yo fuese fuego (If I Were Fire)', autoria:'Bruno Aroesty', obra:'Si yo fuese fuego (If I Were Fire)'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Latinoamérica', nivel:'mencion',
+   titulo:'Flujos rectificados', autoria:'Sebastian Arriagada', obra:'Flujos rectificados'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Latinoamérica', nivel:'mencion',
+   titulo:'Toda la vida para siempre', autoria:'Miguel Sebastian Molina Ruiz', obra:'Toda la vida para siempre'},
+
+  {fest:'cineautopsia2026', categoria:'Mediometrajes Destacados Latinoamérica', nivel:'ganadora',
+   titulo:'Miren Felder', autoria:'Malen Otaño', obra:'Miren Felder'},
+  {fest:'cineautopsia2026', categoria:'Mediometrajes Destacados Latinoamérica', nivel:'mencion',
+   titulo:'Evil Evol Love', autoria:'Stella Bastart', obra:'Evil Evol Love'},
+  {fest:'cineautopsia2026', categoria:'Mediometrajes Destacados Latinoamérica', nivel:'mencion',
+   titulo:'De Tragedia Haré Gloria', autoria:'Giselle Hauscarriaga', obra:'De Tragedia Haré Gloria'},
+
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Europa y Norteamérica', nivel:'ganadora',
+   titulo:'Tamashi', autoria:'Ashima Shiraishi, Jess X. Snow', obra:'Tamashi'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Europa y Norteamérica', nivel:'mencion',
+   titulo:'I Was There', autoria:'Kamila Kuc', obra:'I Was There'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Europa y Norteamérica', nivel:'mencion',
+   titulo:'Fort Garry Lions Pool', autoria:'Ryan Steel', obra:'Fort Garry Lions Pool'},
+
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Resto del Mundo', nivel:'ganadora',
+   titulo:'Allegory of the Cave', autoria:'Weipeng Huang, Yajing Wang', obra:'Allegory of the Cave'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Resto del Mundo', nivel:'mencion',
+   titulo:'Abjad Hawaz', autoria:'Hadi Moussally', obra:'Abjad Hawaz'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Resto del Mundo', nivel:'mencion',
+   titulo:'Lost Fragments of a Seizure', autoria:'Michael Martinez', obra:'Lost Fragments of a Seizure'},
+
+  {fest:'cineautopsia2026', categoria:'Mediometrajes Destacados del Mundo', nivel:'ganadora',
+   titulo:'The Walnut of Knowledge', autoria:'Niyaz Saghari', obra:'The Walnut of Knowledge'},
+  {fest:'cineautopsia2026', categoria:'Mediometrajes Destacados del Mundo', nivel:'mencion',
+   titulo:'Analogue Natives', autoria:'Bernd Lützeler', obra:'Analogue Natives'},
 ];
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
@@ -652,37 +724,35 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'qaff2026':{
-    // OCULTO (Juan, 23 ago 2026). El festival trasladó LA TOTALIDAD de las
-    // proyecciones a Bogotá por el terremoto del 10 ago que golpeó Quibdó y el
-    // Chocó — el MISMO sismo que aplazó FICMA. Comunicado en su Instagram el 20
-    // ago: instagram.com/p/DcREogQER9d
+    // VISIBLE desde el 4 sep 2026, con la banda de TRASLADADO.
     //
-    // Lo publicado esta misma mañana dice justo lo contrario: 47 funciones en la
-    // Biblioteca Departamental de QUIBDÓ, una ciudad donde ya no se proyecta
-    // nada. Por eso se oculta en vez de corregirse: no tenemos programación
-    // válida —la de Bogotá no está publicada—, y un festival con sedes falsas es
-    // peor que un festival ausente.
+    // El festival trasladó LA TOTALIDAD de sus proyecciones a Bogotá por el
+    // terremoto del 10 ago que golpeó Quibdó y el Chocó — el MISMO sismo que
+    // aplazó FICMA. Comunicado del 20 ago: instagram.com/p/DcREogQER9d
     //
-    // NO es `status:postponed` como FICMA: el festival SÍ se hace, en sus fechas
-    // (14–18 SEP, confirmadas en su bio de IG). Cambia la ciudad, que es el
-    // nivel 2 del modelo de situaciones excepcionales.
+    // Estuvo oculto con `group:'test'` entre el 23 ago y el 4 sep, mientras lo
+    // publicado seguía siendo el programa de Quibdó —una ciudad donde ya no se
+    // proyecta nada— y no teníamos el de Bogotá. Ya no: el JSON es el de
+    // Bogotá, 44 funciones en 6 sedes, y la banda explica el cambio.
     //
-    // REVERSIÓN: cuando publiquen las sedes de Bogotá → re-ensamblar desde el
-    // crudo (festivals/staging/qaff-2026-programacion-raw.json, que conserva las
-    // 14 funciones de Cinemateca y Museo Nacional con sus sedes reales), quitar
-    // el filtro solo-Quibdó de pipeline/qaff-2026-build.py y borrar esta línea.
-    group:'test',
+    status:{
+      kind:'moved',
+      since:'2026-08-20',
+      note:'Por el terremoto del 10 de agosto, el festival trasladó «excepcionalmente la totalidad de las proyecciones» a Bogotá.',
+      note_en:'Due to the August 10 earthquake, the festival "exceptionally relocated all screenings" to Bogotá.',
+      url:'https://www.instagram.com/p/DcREogQER9d',
+    },
     name:'QAFF',fullName:'QAFF — Quibdó África Film Festival',shortName:'QAFF',
-    city:'Quibdó',country:'CO',
-    dates:'14–18 SEP',dates_en:'SEP 14–18',year:2026,timezoneOffset:'-05:00',
+    city:'Bogotá',country:'CO',
+    dates:'14–22 SEP',dates_en:'SEP 14–22',year:2026,timezoneOffset:'-05:00',
     keyArt:'/assets/keyart/qaff2026-v2.jpg',
-    storageKey:'qaff2026_',festivalStartStr:'2026-09-14T00:00:00',festivalEndStr:'2026-09-18T23:00:00',
-    festivalDates:{'2026-09-14':'2026-09-14','2026-09-15':'2026-09-15','2026-09-16':'2026-09-16','2026-09-17':'2026-09-17','2026-09-18':'2026-09-18'},
-    days:[{k:'2026-09-14',d:14,lbl:'LUN'},{k:'2026-09-15',d:15,lbl:'MAR'},{k:'2026-09-16',d:16,lbl:'MIÉ'},{k:'2026-09-17',d:17,lbl:'JUE'},{k:'2026-09-18',d:18,lbl:'VIE'}],
-    dayKeys:['2026-09-14','2026-09-15','2026-09-16','2026-09-17','2026-09-18'],
-    dayShort:{'2026-09-14':'LUN 14','2026-09-15':'MAR 15','2026-09-16':'MIÉ 16','2026-09-17':'JUE 17','2026-09-18':'VIE 18'},
-    dayShort_en:{'2026-09-14':'MON 14','2026-09-15':'TUE 15','2026-09-16':'WED 16','2026-09-17':'THU 17','2026-09-18':'FRI 18'},
-    dayLong:{'2026-09-14':'Lunes 14 de septiembre','2026-09-15':'Martes 15 de septiembre','2026-09-16':'Miércoles 16 de septiembre','2026-09-17':'Jueves 17 de septiembre','2026-09-18':'Viernes 18 de septiembre'},
+    storageKey:'qaff2026_',festivalStartStr:'2026-09-14T00:00:00',festivalEndStr:'2026-09-22T23:00:00',
+    festivalDates:{'2026-09-14':'2026-09-14','2026-09-15':'2026-09-15','2026-09-16':'2026-09-16','2026-09-17':'2026-09-17','2026-09-18':'2026-09-18','2026-09-19':'2026-09-19','2026-09-20':'2026-09-20','2026-09-21':'2026-09-21','2026-09-22':'2026-09-22'},
+    days:[{k:'2026-09-14',d:14,lbl:'LUN'},{k:'2026-09-15',d:15,lbl:'MAR'},{k:'2026-09-16',d:16,lbl:'MIÉ'},{k:'2026-09-17',d:17,lbl:'JUE'},{k:'2026-09-18',d:18,lbl:'VIE'},{k:'2026-09-19',d:19,lbl:'SÁB'},{k:'2026-09-20',d:20,lbl:'DOM'},{k:'2026-09-21',d:21,lbl:'LUN'},{k:'2026-09-22',d:22,lbl:'MAR'}],
+    dayKeys:['2026-09-14','2026-09-15','2026-09-16','2026-09-17','2026-09-18','2026-09-19','2026-09-20','2026-09-21','2026-09-22'],
+    dayShort:{'2026-09-14':'LUN 14','2026-09-15':'MAR 15','2026-09-16':'MIÉ 16','2026-09-17':'JUE 17','2026-09-18':'VIE 18','2026-09-19':'SÁB 19','2026-09-20':'DOM 20','2026-09-21':'LUN 21','2026-09-22':'MAR 22'},
+    dayShort_en:{'2026-09-14':'MON 14','2026-09-15':'TUE 15','2026-09-16':'WED 16','2026-09-17':'THU 17','2026-09-18':'FRI 18','2026-09-19':'SAT 19','2026-09-20':'SUN 20','2026-09-21':'MON 21','2026-09-22':'TUE 22'},
+    dayLong:{'2026-09-14':'Lunes 14 de septiembre','2026-09-15':'Martes 15 de septiembre','2026-09-16':'Miércoles 16 de septiembre','2026-09-17':'Jueves 17 de septiembre','2026-09-18':'Viernes 18 de septiembre','2026-09-19':'Sábado 19 de septiembre','2026-09-20':'Domingo 20 de septiembre','2026-09-21':'Lunes 21 de septiembre','2026-09-22':'Martes 22 de septiembre'},
     prioLimit:3,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
@@ -727,13 +797,13 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'siembrafest2026': {
-    // El bloqueo anterior —no saber CÓMO SE ENTRA— se cerró el 5 sep: el propio
-    // festival publicó «Entrada libre hasta completar aforo» y «todas las
-    // actividades del SiembraFest son gratuitas», así que las 23 funciones van
-    // con is_free y [boleteria-muda] pasa. Villeta está completo y abre el 9.
-    // SIGUE OCULTO solo a la espera del visto bueno para publicar: falta Sasaima,
-    // cuyo PDF no existe («muy pronto» en su web).
-    group:'test',
+    // PUBLICADO el 7 sep (Juan), dos días antes de que abra. Entra SOLO con
+    // Villeta: el PDF de Sasaima no existe —su web dice «muy pronto» y la URL
+    // devuelve el HTML comodín, comprobado contra un nombre inventado—. Por eso
+    // `city` y `dates` describen lo que de verdad tenemos y no lo que anuncia el
+    // festival (9–18 en las dos poblaciones). Cuando salga Sasaima esto es
+    // aditivo: sedes con su `city`, el paraguas de vuelta en `city` y el 18 en
+    // `dates`; el multiciudad ya existe y no hay que tocar nada más.
     // VILLETA, del 9 al 17. El festival completo es 9–18 en Sasaima y Villeta
     // (así lo dice su propia bio), pero el PDF de Sasaima no existe todavía: la
     // web dice «muy pronto» y su URL devuelve HTML. Cuando salga vuelven la
@@ -897,6 +967,12 @@ export const SECTION_ARCHETYPES = {
   '🌿 Free Outdoor Screenings': 'Especiales / Eventos',
   '🎉 Eventos Especiales': 'Especiales / Eventos',
   '🎓 Talleres': 'Charlas / Industria',
+  // QAFF 2026 Bogotá. Los NOMBRES son del festival: «DIÁLOGO IMPROBABLE» está
+  // impreso en cada una de sus páginas de diálogo y es una de las 15 categorías
+  // de su calendario; «Miradas Especiales» es como su web titula la página de
+  // fuera de competencia. El arquetipo y el emoji son nuestros.
+  '💬 Diálogo Improbable': 'Charlas / Industria',
+  '✨ Miradas Especiales': 'Especiales / Eventos',
   '🎖️ Tributo Ben Rivers': 'Retrospectiva / Tributo',
   '🎙️ Podcasts': 'Charlas / Industria',
   '🎞️ Clásicos': 'Retrospectiva / Tributo',

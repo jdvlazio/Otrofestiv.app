@@ -63,7 +63,7 @@ function _filasQueVeras(films){
   return activeDay==='all' ? new Set(films.map(f=>f.title)).size : films.length;
 }
 
-export function seccionOpen(){
+function seccionOpen(){
   const btn = document.getElementById('seccion-btn');
   const r = btn.getBoundingClientRect();
   const drop = document.createElement('div');
@@ -142,7 +142,7 @@ export function seccionClose(){
   if(lbl) lbl.textContent = _seccionLabel(activeSec);
 }
 
-export function seccionOutside(e){
+function seccionOutside(e){
   const drop = document.getElementById('seccion-drop');
   const btn = document.getElementById('seccion-btn');
   if(drop && !drop.contains(e.target) && e.target!==btn && !btn?.contains(e.target)){
@@ -156,7 +156,7 @@ export function seccionToggle(){
   else seccionOpen();
 }
 
-export function _seccionLabel(sec){
+function _seccionLabel(sec){
   // Botón mode bar: solo el emoji que ya viene en el nombre de sección
   // Las secciones tienen formato "🏆 Nombre" en todos los festivales
   if(!sec||sec==='all') return t('label_seccion');

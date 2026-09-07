@@ -180,7 +180,7 @@ function extractObject(source, name) {
 }
 
 const DEFAULT_FNS = [
-  'toMin', 'minToStr', 'parseDur', 'blockDuration', 'effectiveDuration', 'durationForTravel', 'screeningEndDate',
+  'toMin', 'minToStr', 'parseDur', 'durEstimada', 'blockDuration', 'effectiveDuration', 'durationForTravel', 'screeningEndDate',
   'screeningEndMin', 'screeningEnded', 'screeningNow',
   '_resolveVenue', 'venueTravelMins', 'travelMins',
   'screensConflict', 'verifyPlan', '_cityOf', // helper local de schedule.js (kind 'ciudad')
@@ -206,9 +206,18 @@ function configConst(name, fallback) {
   } catch { return fallback; }
 }
 
+// Ayudantes de módulo que una fn de dominio necesita para evaluar. No son API:
+// nadie los pide por nombre, pero sin ellos la fn que los llama tira
+// ReferenceError. Agregar `_durMatch` a DEFAULT_FNS no alcanzaba — 60 tests
+// pasan su propia lista de `functions` y DEFAULT_FNS no les aplica (4 sep 2026).
+const DEPS_INTERNAS = { parseDur: ['_durMatch'], durEstimada: ['_durMatch'] };
+
 function loadDomain(opts = {}) {
   const globals = { FESTIVAL_QA_MIN: configConst('FESTIVAL_QA_MIN', 30), ...(opts.globals || {}) };
-  const fns = opts.functions || DEFAULT_FNS;
+  const pedidas = opts.functions || DEFAULT_FNS;
+  // se arrastran las deps internas de lo pedido, sin duplicar ni reordenar
+  const _extra = pedidas.flatMap(n => DEPS_INTERNAS[n] || []).filter(n => !pedidas.includes(n));
+  const fns = _extra.length ? [..._extra, ...pedidas] : pedidas;
   const objects = opts.objects || [];
   const source = readScripts();
 
@@ -236,7 +245,7 @@ function loadDomain(opts = {}) {
     .map(k => `let ${k} = __g[${JSON.stringify(k)}];`)
     .join('\n');
 
-  const returnNames = [...fns, ...objects];
+  const returnNames = [...new Set([...pedidas, ...objects])];
   const returnObj = '{' + returnNames.join(', ') + '}';
   const src = `(function (__g) {\n${globalDecls}\n${declarations}\nreturn ${returnObj};\n})`;
 

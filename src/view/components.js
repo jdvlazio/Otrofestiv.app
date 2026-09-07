@@ -19,7 +19,6 @@ import { state } from "../state/state.js";
 export function makeProgramPoster(state, title, duration, section, opts){
   const {FILMS, _lang} = state.snapshot();
   const filmSec=section||(FILMS.find(f=>f.title===title)?.section)||'';
-  const sec=filmSec.toLowerCase();
 
   // ── Color de sección — MISMA fuente que el marco editorial ────────────────
   // El acento del generativo debe coincidir con _sectionColor() (lo que usa el
@@ -131,16 +130,6 @@ export function _sectionColor(sec){
   if(arch && ARCHETYPE_COLORS[arch]) return ARCHETYPE_COLORS[arch];
   return SECTION_COLORS[sec] || ACCENT_PALETTE[Math.abs(_secHash(sec))%ACCENT_PALETTE.length];
 }
-// Texto legible sobre un color: negro o blanco por MÁXIMO contraste real (WCAG),
-// no por umbral. Garantiza banda legible sobre cualquier color de sección.
-export function _contrastText(hex){
-  const c = String(hex||'').replace('#','');
-  if(c.length < 6) return '#0B0A08';
-  const r=parseInt(c.slice(0,2),16)/255, g=parseInt(c.slice(2,4),16)/255, b=parseInt(c.slice(4,6),16)/255;
-  const L = 0.2126*r + 0.7152*g + 0.0722*b;
-  return ((L+0.05)/0.05) >= (1.05/(L+0.05)) ? '#0B0A08' : '#FFFFFF';
-}
-
 // ── REGLA INAMOVIBLE DE ARQUITECTURA ─────────────────────────────────────────
 // Todo display de nombre de sección DEBE pasar por _secLabel() (o _secLabelFull()
 // si se necesita preservar el emoji). NUNCA usar `f.section` directamente en
@@ -262,7 +251,7 @@ function _emWidth(str, upper){
 // no logra evitarlo —la regla de Juan prohíbe dejar «de» al final, así que «DE
 // CORTOMETRAJES» viaja pegado— se fija el ancho con textLength y el navegador
 // condensa unos puntos. Solo se activa ahí; el resto se dibuja sin tocar.
-export function _lineaSVG(txt, {x, y, fs, ls, fill, boxW, upper}){
+function _lineaSVG(txt, {x, y, fs, ls, fill, boxW, upper}){
   const est=(_emWidth(txt,upper)*fs+txt.length*ls)*1.12;
   const tope=boxW*0.98;
   const ajuste=est>tope?` textLength="${(+tope).toFixed(2)}" lengthAdjust="spacingAndGlyphs"`:'';
@@ -401,7 +390,6 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma, k
   // Es la doctrina de color ambiental, aplicada al generativo.
   const VW=120, VH=180, U=VW/8;              // 15
   const M=0.75*U, CW=VW-2*M;                 // margen 11.25 · caja de contenido 97.5
-  const esc=escXML;
   const round=n=>+n.toFixed(2);
   const FONT='-apple-system,BlinkMacSystemFont,sans-serif';
 
@@ -615,7 +603,7 @@ export function _buildPosterV16({accent, headerLabel, title, num, dato, firma, k
 // toma helpers (slotPosterParts), dueño del modelo de póster.
 // Devuelve MARKUP SVG INLINE, no data-uri: contiene <image> y un SVG dentro de
 // <img> tiene prohibido cargar recursos — los afiches saldrían rotos.
-export function makeSharedSlotSVG({modules, secLabel, accent, dato}){
+export function makeSharedSlotSVG({modules, secLabel:_secLabel, accent, dato}){
   const U=15, VW=120, VH=180, M=11.25, CW=VW-2*M, NEGRO='#0B0A08';
   const r=n=>+n.toFixed(2);
   // slice y NO meet (26 ago): meet dejaba bandas negras en todo afiche que no
@@ -700,6 +688,15 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     // de la franja académica; sin entrada aquí su card mostraba EVENTO genérico.
     'foro':         {accent:'#F59E0B', headerLabel:'FORO'},
     'debate':       {accent:'#F59E0B', headerLabel:'DEBATE'},
+    // «diálogo» llegó con QAFF Bogotá: sus «Diálogos Improbables» son once mesas
+    // con moderador y panelistas —la mitad del programa de las universidades—.
+    // Mismo ámbar de la franja de conversación; sin entrada aquí, once cards
+    // mostraban EVENTO genérico. Se conserva la palabra del festival.
+    'dialogo':      {accent:'#F59E0B', headerLabel:'DIÁLOGO'},
+    // «vernissage» no es franja académica: es la apertura de una exposición, con
+    // entrada libre. Azul de «encuentro». La palabra es la misma en español,
+    // inglés y francés, y es la que usa la Alianza Francesa: no se traduce.
+    'vernissage':   {accent:'#378ADD', headerLabel:'VERNISSAGE'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'ENCUENTRO'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'CINECONCIERTO'},
@@ -724,6 +721,8 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'seminario':    {accent:'#F59E0B', headerLabel:'SEMINAR'},
     'foro':         {accent:'#F59E0B', headerLabel:'FORUM'},
     'debate':       {accent:'#F59E0B', headerLabel:'DEBATE'},
+    'dialogo':      {accent:'#F59E0B', headerLabel:'DIALOGUE'},
+    'vernissage':   {accent:'#378ADD', headerLabel:'VERNISSAGE'},
     'masterclass':  {accent:'#7F77DD', headerLabel:'MASTERCLASS'},
     'encuentro':    {accent:'#378ADD', headerLabel:'MEETING'},
     'cineconcierto':{accent:'#D85A30', headerLabel:'FILM CONCERT'},
@@ -903,20 +902,49 @@ export function renderRatingStarsHTML(state, current){
 // `lang` opcional: default al estado global, pero quien ya tiene el idioma en la
 // mano (la card del riel lo recibe de su render) lo pasa explícito — el unit test
 // del riel cazó que ignorarlo rompía el contrato de _renderSplashRailHTML(state).
+// Los dos estados de festival que pintan banda. Se declaran juntos para que se
+// vea que son DOS y en qué se diferencian: 'postponed' saca al festival de «en
+// curso» (sin punto verde, sin preselección, fechas por anunciar), 'moved' NO
+// toca nada de eso —el festival se hace, en sus fechas— y solo explica el
+// cambio. QAFF 2026 trasladó a Bogotá la totalidad de sus proyecciones por el
+// terremoto del 10 ago; el `NOTICES` con `cities` de FICDEH no servía, porque
+// ese se engancha a funciones de la ciudad cancelada y aquí Quibdó no tiene
+// ninguna. Ver pipeline/PROTOCOLO.md §2·bis.
+const BANDA = {postponed: 'fest_postponed_label', moved: 'fest_moved_label'};
+
 // postponedBannerHTML — markup ÚNICO del aviso de festival aplazado. Dos hosts lo
 // pintan: el header del Programa (renderPostponedBanner) y Mi Plan (renderAgenda).
 // Las palabras son del FESTIVAL (note verbatim; note_en traducción aprobada por
 // Juan). Sin botón de cerrar: es contexto, no notificación.
 export function postponedBannerHTML(cfg,{id=''}={}){
-  if(!cfg||!cfg.status||cfg.status.kind!=='postponed') return '';
+  const _lbl=cfg&&cfg.status&&BANDA[cfg.status.kind];
+  if(!_lbl) return '';
   const {_lang}=state.snapshot();
   const _esc=s=>String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
   const note=(_lang!=='es'&&cfg.status.note_en)||cfg.status.note;
   return`<div class="fest-postponed-banner"${id?` id="${id}"`:''}>
     <div class="notice-banner-dot"></div>
     <div class="notice-banner-body">
-      <div class="notice-banner-label">${t('fest_postponed_label')}</div>
+      <div class="notice-banner-label">${t(_lbl)}</div>
       <div class="notice-banner-text">${_esc(note)}${cfg.status.url?`<br><a class="fest-postponed-link" href="${_esc(cfg.status.url)}" target="_blank" rel="noopener">${t('fest_postponed_link')}</a>`:''}</div>
+    </div>
+  </div>`;
+}
+
+// endedBannerHTML — la MISMA banda, para el festival que ya terminó. Vive al lado
+// de postponedBannerHTML porque es su hermana: un estado del festival anunciado
+// arriba del Programa. Nace de la auditoría del 4 sep 2026: con el reloj seis días
+// después del cierre, PROGRAMA no decía en ningún lado que el festival había
+// terminado —medido: `/termin/i` sobre el texto de la página daba false— y es
+// donde aterriza quien entra. El aviso solo vivía en Mi Plan.
+// Sin botón de cerrar, igual que la de aplazado: es un estado, no una novedad.
+export function endedBannerHTML(cfg,{id=''}={}){
+  if(!cfg) return '';
+  return`<div class="fest-postponed-banner"${id?` id="${id}"`:''}>
+    <div class="notice-banner-dot"></div>
+    <div class="notice-banner-body">
+      <div class="notice-banner-label">${t('fest_ended_label')}</div>
+      <div class="notice-banner-text">${cfg.name||t('misc_festival_default')} ${t('plan_fest_terminado')}</div>
     </div>
   </div>`;
 }
@@ -1006,7 +1034,7 @@ export function _sortFestivals(entries, activeFestId){
 // mal (Tercer Tiempo Fest), el config pone un `displayName` explícito. NO confundir
 // con `shortName` (slug MAYÚSCULA para nombres de archivo en share.js).
 export function festivalShortName(cfg){ return cfg.displayName || (cfg.name||'').split(' ')[0]; }
-export function festivalLabel(cfg){ const n=festivalShortName(cfg); return cfg.year?`${n} · ${cfg.year}`:n; }
+function festivalLabel(cfg){ const n=festivalShortName(cfg); return cfg.year?`${n} · ${cfg.year}`:n; }
 
 // festivalSeasonYear — el año "vigente" que ancla el header del selector UNA sola
 // vez (minimalismo: no repetir 2026 en cada fila). Es el año más reciente entre
@@ -1091,7 +1119,7 @@ function _festivalCardHTML([id,cfg], {isPast, isActive, action, lang, review}){
 // mandó al usuario a las tiendas, así que web y app se ven distinto a propósito.
 // `until` la apaga sola: un permiso temporal que hay que acordarse de revocar
 // es, en la práctica, un permiso permanente.
-export function _enRevision(cfg){
+function _enRevision(cfg){
   const r=cfg&&cfg.review;
   if(!r||!r.key) return false;
   if(r.until&&new Date()>new Date(r.until+'T23:59:59')) return false;

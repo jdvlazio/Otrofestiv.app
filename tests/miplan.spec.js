@@ -5,12 +5,24 @@ const { LEVIZA_SIMTIME, enterFestival, addToWatchlist, goToPlanear, esperarCalcu
 
 // T11 — Cerrar alternativas en Mi Plan cierra el panel
 test('T11 — cerrar alternativas en Mi Plan cierra el panel', async ({ page }) => {
-  await enterFestival(page, 'tribeca2026');
-  await page.locator('.mnav-tab[data-nav="mnav-cartelera"], .main-nav-tab').first().click();
-  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  // Leviza con su reloj dentro: medido, pinta 3 filas de plan (5 sep 2026).
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  // El plan se CONSTRUYE. Antes el test entraba a Mi Plan sin haber creado
+  // ninguno, no encontraba una sola fila y se saltaba: no es que dejara de
+  // correr, es que NUNCA corrió (medido 5 sep 2026). commitPlan es el
+  // chokepoint del plan, el mismo que usan T132 y sus hermanos.
+  await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const sel = FILMS.filter(f => f.day && f.time && !f._cancelled).slice(0, 4);
+    commitPlan(() => ({ schedule: sel.map(f => ({ ...f, _title: f.title })) }));
+    await w(500);
+    switchMainNav('mnav-miplan'); showAgView();
+    await w(1600);
+  });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
-  if (hasPlan === 0) { test.skip(true, 'T11: sin plan activo, skip'); return; }
+  expect(hasPlan, 'el plan construido pinta sus filas: sin ellas no hay panel que abrir ni cerrar')
+    .toBeGreaterThan(0);
   await page.locator('.mplan-t1').first().click();
   const altPanel = page.locator('.film-alts').first();
   await expect(altPanel).toBeVisible({ timeout: 5000 });
@@ -52,13 +64,24 @@ test('T25 — datos del plan disponibles para el día seleccionado', async ({ pa
 
 // T26 — Hora punteada abre panel de alternativas
 test('T26 — hora punteada abre panel de alternativas', async ({ page }) => {
-  await enterFestival(page, 'tribeca2026');
-  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  // El plan se CONSTRUYE. Antes el test entraba a Mi Plan sin haber creado
+  // ninguno, no encontraba una sola fila y se saltaba: no es que dejara de
+  // correr, es que NUNCA corrió (medido 5 sep 2026). commitPlan es el
+  // chokepoint del plan, el mismo que usan T132 y sus hermanos.
+  await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const sel = FILMS.filter(f => f.day && f.time && !f._cancelled).slice(0, 4);
+    commitPlan(() => ({ schedule: sel.map(f => ({ ...f, _title: f.title })) }));
+    await w(500);
+    switchMainNav('mnav-miplan'); showAgView();
+    await w(1600);
+  });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const hasPlan = await page.locator('.mplan-t1').count();
-  // Salida MUDA: sin plan el test pasaba en verde sin ejercer una sola aserción.
-  // Un test que no corre tiene que decirlo — si no, la suite miente.
-  test.skip(!hasPlan, 'T26: sin plan activo en el festival de prueba');
+  // El `skip` de antes era honesto —decía que no corría— pero no arreglaba la
+  // causa: el plan nunca se construía. Ahora se construye y esto es premisa.
+  expect(hasPlan, 'el plan construido pinta la fila de hora punteada').toBeGreaterThan(0);
   await page.locator('.mplan-t1').first().click();
   await expect(page.locator('.film-alts').first()).toBeVisible({ timeout: 5000 });
   expect(await page.locator('.film-alts').count()).toBeGreaterThan(0);
@@ -66,28 +89,59 @@ test('T26 — hora punteada abre panel de alternativas', async ({ page }) => {
 
 // T27 — Sugerencias: botón Añadir NO abre sheet de película
 test('T27 — sugerencias: añadir no abre sheet', async ({ page }) => {
-  await enterFestival(page, 'tribeca2026');
-  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  // Tribeca CON su reloj dentro: medido, 41 sugerencias (5 sep 2026). Sin reloj
+  // el festival está terminado, no hay nada que sugerir y el test se saltaba.
+  await enterFestival(page, 'tribeca2026', '2026-06-08T11:00:00-04:00');
+  // El plan se CONSTRUYE. Antes el test entraba a Mi Plan sin haber creado
+  // ninguno, no encontraba una sola fila y se saltaba: no es que dejara de
+  // correr, es que NUNCA corrió (medido 5 sep 2026). commitPlan es el
+  // chokepoint del plan, el mismo que usan T132 y sus hermanos.
+  await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const sel = FILMS.filter(f => f.day && f.time && !f._cancelled).slice(0, 4);
+    commitPlan(() => ({ schedule: sel.map(f => ({ ...f, _title: f.title })) }));
+    await w(500);
+    switchMainNav('mnav-miplan'); showAgView();
+    await w(1600);
+  });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
-  // Salida MUDA: sin botón de sugerencia no se ejercía nada y daba verde.
-  test.skip(!await addBtn.count(), 'sin sugerencia disponible para agregar');
+  expect(await addBtn.count(), 'con un plan armado, Mi Plan ofrece sugerencias que añadir')
+    .toBeGreaterThan(0);
   await addBtn.click();
   await expect(page.locator('#pel-sheet.open')).toHaveCount(0, { timeout: 3000 });
 });
 
 // T28 — Sugerencias: botón Añadir muestra toast de confirmación
 test('T28 — sugerencias: añadir muestra toast', async ({ page }) => {
-  await enterFestival(page, 'tribeca2026');
-  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  // Tribeca CON su reloj dentro: medido, 41 sugerencias (5 sep 2026). Sin reloj
+  // el festival está terminado, no hay nada que sugerir y el test se saltaba.
+  await enterFestival(page, 'tribeca2026', '2026-06-08T11:00:00-04:00');
+  // El plan se CONSTRUYE. Antes el test entraba a Mi Plan sin haber creado
+  // ninguno, no encontraba una sola fila y se saltaba: no es que dejara de
+  // correr, es que NUNCA corrió (medido 5 sep 2026). commitPlan es el
+  // chokepoint del plan, el mismo que usan T132 y sus hermanos.
+  await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const sel = FILMS.filter(f => f.day && f.time && !f._cancelled).slice(0, 4);
+    commitPlan(() => ({ schedule: sel.map(f => ({ ...f, _title: f.title })) }));
+    await w(500);
+    switchMainNav('mnav-miplan'); showAgView();
+    await w(1600);
+  });
   await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
   const addBtn = page.locator('.suggestion-add').first();
-  // Salida MUDA: sin botón de sugerencia no se ejercía nada y daba verde.
-  test.skip(!await addBtn.count(), 'sin sugerencia disponible para agregar');
+  expect(await addBtn.count(), 'con un plan armado, Mi Plan ofrece sugerencias que añadir')
+    .toBeGreaterThan(0);
   await addBtn.click();
-  await page.waitForSelector('.toast, .toast-msg, #toast', { timeout: 5000 });
-  const toast = await page.locator('.toast, .toast-msg, #toast').count();
-  expect(toast).toBeGreaterThan(0);
+  // El selector estaba PODRIDO: buscaba `.toast, .toast-msg, #toast` y el toast
+  // de esta app es `#prio-toast` (el mismo que mide T143). Como el test nunca
+  // llegaba a correr —se saltaba por falta de plan— nadie se enteró de que
+  // apuntaba a un elemento que no existe. Medido el 5 sep 2026: al añadir una
+  // sugerencia aparece «<obra> · <día> · <hora> · también en Intereses».
+  const toast = page.locator('#prio-toast');
+  await expect(toast).toBeVisible({ timeout: 5000 });
+  await expect(toast, 'el toast nombra la obra que se añadió').not.toHaveText('');
 });
 
 // T40 — Mi Plan vacío muestra estado vacío
@@ -611,7 +665,7 @@ test('T120 — el día preseleccionado de Disponibilidad se ve elegido', async (
     return { chips: chips.length, marcados: marcados.length, fondosDistintos: fondos.length,
       claseSelectHuerfana: chips.some(c => c.classList.contains('selected')) };
   });
-  if (!r.chips) return;                       // festival sin hoja de disponibilidad
+  expect(r.chips, 'la hoja de Disponibilidad trae sus chips de día').toBeGreaterThan(0);
   expect(r.claseSelectHuerfana, 'no queda la clase que el CSS no pinta').toBe(false);
   expect(r.marcados, 'hay un día marcado con la clase que el CSS SÍ pinta').toBeGreaterThan(0);
   expect(r.fondosDistintos, 'el elegido se distingue de los demás').toBeGreaterThan(1);
@@ -641,7 +695,8 @@ test('T121 — el hero dice CANCELADA en vez de contar atrás', async ({ page })
     const txt = hero.innerText.replace(/\s+/g, ' ').trim();
     return { txt, marca: /cancel/i.test(txt), countdown: /\bEn \d+\s*(min|h)\b/i.test(txt) };
   });
-  if (r.falta || r.sinHero) return;
+  expect(r.falta, 'el fixture trae la función cancelada que este test mira').toBeUndefined();
+  expect(r.sinHero, 'y el hero está en pantalla: es donde se lee CANCELADA').toBeUndefined();
   expect(r.marca, 'el hero dice que está cancelada').toBe(true);
   expect(r.countdown, 'y NO cuenta atrás hacia algo que no va a pasar').toBe(false);
 });
@@ -665,7 +720,7 @@ test('T122 — el resumen del Plan cuenta OBRAS, no funciones', async ({ page })
     otras.forEach(t => tap('toggleWL', { title: t }));
     return watchlist.size;
   });
-  if (!listo) return;
+  expect(listo, 'quedaron obras en Intereses para que Planear tenga qué resumir').toBeGreaterThan(0);
   await goToPlanear(page);
   await esperarCalculo(page);
   const r = await page.evaluate(() => {
@@ -681,7 +736,7 @@ test('T122 — el resumen del Plan cuenta OBRAS, no funciones', async ({ page })
       entradas: sch.length
     };
   });
-  if (!r.resumen) return;
+  expect(r.resumen, 'el Plan pintó su resumen: es la cifra que se cuenta').toBeTruthy();
   // El sustantivo dejó de ser «obra» fijo (2 sep 2026): el fixture de este test
   // ES un taller, y con un taller en la cuenta la línea usa el paraguas
   // («actividades»), que es la regla de vocabulario y la vigila T153. Lo que
@@ -713,7 +768,7 @@ test('T123 — el interruptor de Prensa es un insumo del Plan', async ({ page })
     tap('toggleWL', { title: p[0].title });
     return true;
   });
-  if (!hayPrensa) return;
+  expect(hayPrensa, 'el fixture tiene pases de prensa: son el insumo de este test').toBe(true);
   await goToPlanear(page);
   await esperarCalculo(page);
   const r = await page.evaluate(async () => {
@@ -758,7 +813,8 @@ test('T124 — la fila de una reprogramada revela su destino', async ({ page }) 
     const txt = fila.innerText.replace(/\s+/g, ' ').trim();
     return { txt: txt.slice(0, 140), horaNueva: txt.includes('20:00'), diaNuevo: /19/.test(txt) };
   });
-  if (r.falta || r.sinBadge) return;
+  expect(r.falta, 'el fixture trae la función reprogramada').toBeUndefined();
+  expect(r.sinBadge, 'y su distintivo está en la fila: es lo que revela el destino').toBeUndefined();
   expect(r.horaNueva, 'la fila dice la hora NUEVA').toBe(true);
   expect(r.diaNuevo, 'y el día nuevo').toBe(true);
 });
@@ -789,7 +845,8 @@ test('T125 — con un taller, el conflicto anuncia las sesiones que se van', asy
       diceCuantas: txt.includes(sesiones + ' sesiones'),
       leDiceFuncion: /esta funci[oó]n/i.test(txt) };
   });
-  if (r.falta || r.sinModal) return;
+  expect(r.falta, 'el fixture trae el taller de varias sesiones').toBeUndefined();
+  expect(r.sinModal, 'y el conflicto abre su modal: es donde se anuncian las sesiones').toBeUndefined();
   expect(r.sesiones, 'el taller tiene varias sesiones').toBeGreaterThan(1);
   expect(r.diceCuantas, 'el aviso dice cuántas sesiones se van').toBe(true);
   expect(r.leDiceFuncion, 'y no le dice «función» a un taller').toBe(false);
@@ -827,7 +884,7 @@ test('T128 — tocar «Agendar» en NO INCLUIDAS no abre la ficha detrás', asyn
     const sh = document.querySelector('#pel-sheet.open'); if (sh) sh.classList.remove('open');
     return { abiertoAntes, abiertoDespues };
   });
-  if (r.sinObra) return;
+  expect(r.sinObra, 'NO INCLUIDAS trae una obra con su «Agendar»').toBeUndefined();
   expect(r.abiertoAntes, 'no había ficha abierta').toBe(false);
   expect(r.abiertoDespues, 'un control con data-stop no abre la ficha').toBe(false);
 });
@@ -869,7 +926,7 @@ test('T129 — los programas numerados se distinguen entre sí en Intereses', as
       desbordanEnAlto: filas.filter(e => e.scrollHeight > e.clientHeight + 1).length
     };
   });
-  if (r.sinCaso) return;
+  expect(r.sinCaso, 'el fixture trae programas numerados que distinguir').toBeUndefined();
   expect(r.filas, 'las filas están en pantalla').toBeGreaterThan(1);
   expect(r.desbordanEnAncho, 'ningún título se corta a lo ancho (ahí muere el número)').toBe(0);
   expect(r.desbordanEnAlto, 'ni se pasa del clamp de dos líneas').toBe(0);
@@ -898,7 +955,7 @@ test('T130 — el primario de Planear es el botón que se puede tocar', async ({
     t.forEach(x => tap('toggleWL', { title: x }));
     return t.length;
   });
-  if (!hay) return;
+  expect(hay, 'quedaron obras en Intereses para que Planear calcule algo').toBeGreaterThan(0);
   await goToPlanear(page);
   await esperarCalculo(page);
   const r = await page.evaluate(async () => {
@@ -926,7 +983,7 @@ test('T130 — el primario de Planear es el botón que se puede tocar', async ({
   expect(r.conPlan.saveEsPrimario, 'con plan válido, «Usar este Plan» es el primario').toBe(true);
   expect(r.conPlan.calcEsPrimario, 'y Recalcular NO compite con él').toBe(false);
   // desactualizado: «Usar este Plan» no se puede tocar → el primario es Recalcular
-  if (!r.hayAviso) return;
+  expect(r.hayAviso, 'el plan quedó desactualizado: es el estado que se mide abajo').toBeTruthy();
   expect(r.stale.saveDisabled, 'con el plan viejo no se puede guardar').toBe(true);
   expect(r.stale.calcEsPrimario, 'así que Recalcular es el primario').toBe(true);
 });
@@ -986,7 +1043,7 @@ test('T132b — con un taller en el día, el titular usa el paraguas', async ({ 
     return { conEvento: sel.some(f => f.type === 'event'), n: sel.length,
       titular: h ? h.innerText.replace(/\s+/g, ' ').trim() : null };
   });
-  if (!r.conEvento) return; // festival sin eventos ese día: nada que afirmar
+  expect(r.conEvento, 'el día trae un taller: es lo que hace al titular usar el paraguas').toBe(true);
   expect(r.titular, 'la tarjeta se pintó').not.toBe(null);
   expect(r.titular, 'un taller no se cuenta como obra').not.toMatch(/obras?\b/);
   expect(r.titular, 'se cuenta como actividad').toMatch(/actividades?\b/);
@@ -1085,7 +1142,8 @@ test('T137 — «hasta HH:MM» de una función cancelada entra en una línea', a
       botonSeSale: bb ? Math.round(bb.right) > Math.round(fb.right) + 1 : null
     };
   });
-  if (r.sinCanceladas || r.sinHora) return;
+  expect(r.sinCanceladas, 'el fixture trae funciones canceladas').toBeUndefined();
+  expect(r.sinHora, 'y con hora de salida: es la línea que tiene que caber').toBeUndefined();
   expect(r.txt, 'la fila muestra la hora hasta la que iba').toMatch(/\d{1,2}:\d{2}/);
   expect(r.desborda, 'el texto no se sale de su caja').toBe(false);
   expect(r.alto, 'y entra en UNA línea (dos serían ~2× el tamaño de fuente)')
@@ -1140,7 +1198,7 @@ test('T138 — al volver a poner lo que sacaste, el aviso del hueco desaparece',
     return { antes, conHueco, tapado: aviso(),
       volvio: (savedAgenda && savedAgenda.schedule || []).some(s => s._title === hoy[0].title) };
   });
-  if (r.pocasFunciones) return;
+  expect(r.pocasFunciones, 'el día trae funciones suficientes para abrir un hueco').toBeUndefined();
   expect(r.antes, 'sin haber sacado nada no hay aviso de hueco').toBe(false);
   expect(r.conHueco, 'al sacar algo, el aviso aparece — si no, el test no prueba nada').toBe(true);
   expect(r.volvio, 'la entrada volvió al Plan').toBe(true);
@@ -1176,7 +1234,8 @@ test('T139 — la cifra de «por planear» no se confunde con la del resultado',
       separacion: (pre && res)
         ? Math.round(res.getBoundingClientRect().top - pre.getBoundingClientRect().top) : null };
   });
-  if (!r.pre || !r.res) return;            // sin cálculo en pantalla no hay dos cifras
+  expect(r.pre, 'la cifra de «por planear» está en pantalla').toBeTruthy();
+  expect(r.res, 'y la del resultado también: son las dos que no deben confundirse').toBeTruthy();
   expect(r.separacion, 'las dos cifras conviven en la misma pantalla').toBeLessThan(400);
   expect(r.pre, 'la de arriba dice de qué conjunto habla').toMatch(/planear|schedule|planejar/i);
   expect(r.pre, 'y no es el mismo texto que la de abajo').not.toBe(r.res);
@@ -1241,7 +1300,7 @@ test('T144 — el título de la hoja de disponibilidad pregunta por la negación
 // El día va CON su número: Cinemancia dura 10 días y tiene dos jueves, dos
 // viernes y dos sábados — «JUE» a secas no distingue el 3 del 10.
 test('T147 — cada fila del Plan listo trae póster y su día, y el pie cuenta las que faltan', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button');
     b.setAttribute('data-action', 'closeCitySheet');
@@ -1280,7 +1339,7 @@ test('T147 — cada fila del Plan listo trae póster y su día, y el pie cuenta 
       diasQueFaltan: [...new Set(plan.slice(3).map(s => s.day))]
     };
   });
-  if (r.sinBoton) return;
+  expect(r.sinBoton, 'el Plan listo trae su botón: es desde donde se lee la lista').toBeUndefined();
   expect(r.pocasFilas, 'el fixture tiene que pintar 3 filas o el test no mide nada').toBeUndefined();
 
   // 1 · cada fila dice su día, CON número, antes de la hora
@@ -1328,7 +1387,7 @@ test('T147 — cada fila del Plan listo trae póster y su día, y el pie cuenta 
 // reabriéndose en bucle — sharePlan volvía a no encontrar nombre y la pedía
 // otra vez. Eso lo cazó la medición, no la lectura.
 test('T148 — con el campo vacío, Compartir comparte igual', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button');
     b.setAttribute('data-action', 'closeCitySheet');
@@ -1375,7 +1434,7 @@ test('T148 — con el campo vacío, Compartir comparte igual', async ({ page }) 
       guardo: localStorage.getItem('otrofestiv_display_name'),
       imagen };
   });
-  if (r.sinPlan) return;
+  expect(r.sinPlan, 'hay un Plan que compartir').toBeUndefined();
   expect(r.noPide, 'sin nombre guardado, compartir tiene que ofrecer ponerlo').toBeUndefined();
 
   // 1 · con el campo vacío el botón OFRECE la salida, en vez de un borde rojo mudo
@@ -1438,7 +1497,7 @@ test('T150 — con la app en cero, el vacío lleva al Programa de un toque', asy
     await page.waitForTimeout(1600);
   };
 
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
 
   // ── 1 · desde CADA uno de los tres vacíos, un solo toque llega a las obras ──
   for (const tab of ['mnav-miplan', 'mnav-planner', 'mnav-seleccion']) {
@@ -1478,7 +1537,7 @@ test('T150 — con la app en cero, el vacío lleva al Programa de un toque', asy
 // `column-reverse` lo dejarían pasar mientras la pantalla dice otra cosa. Acá
 // se afirma sobre lo que el pulgar encuentra.
 test('T151 — en los dos modales el escape es el botón de abajo', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button');
     b.setAttribute('data-action', 'closeCitySheet');
@@ -1517,7 +1576,7 @@ test('T151 — en los dos modales el escape es el botón de abajo', async ({ pag
     await w(900);
     return { ok: !!document.getElementById('conflict-modal') };
   });
-  if (!r.ok) return;
+  expect(r.ok, 'el modal de conflicto se abrió: es uno de los dos que se comparan').toBe(true);
   const quitar = await leer();
   expect(quitar, 'el modal de sacar del Plan abre').not.toBeNull();
 
@@ -1679,7 +1738,7 @@ test('T154 — el subtítulo de la imagen cuenta los días que tienen algo', asy
       lapso: (i0 >= 0 && i1 >= 0) ? (i1 - i0 + 1) : null
     };
   });
-  if (r.sinFixture) return;
+  expect(r.sinFixture, 'el fixture trae días con algo, que es lo que el subtítulo cuenta').toBeUndefined();
   expect(r.sub, 'el subtítulo se pintó en la imagen').toBeTruthy();
   expect(r.diasConPlan, 'el fixture reparte el Plan en menos días que el festival')
     .toBeLessThan(r.diasFestival);
@@ -1705,8 +1764,15 @@ test('T154 — el subtítulo de la imagen cuenta los días que tienen algo', asy
 // Se afirma que la superficie muestra EXACTAMENTE lo que devuelve el dueño
 // (dayLabel), no un prefijo suyo: es la forma de que un recorte futuro —de un
 // carácter o de dos— caiga igual.
+// El reloj va CONGELADO (4 sep 2026). Corría contra la fecha real y se rompió
+// solo al pasar el día: Cinemancia empezó el 3 SEP, y con el festival adentro las
+// primeras funciones del catálogo ya pasaron, así que la hoja del tope se quedó
+// sin filas que pintar. Medido en main limpio: con reloj real pasaba el 1 y el 3
+// de septiembre y fallaba el 5. La hoja del tope y la de conflicto no dependen de
+// la fase, así que se ancla ANTES del arranque, donde todas las funciones son
+// futuras y el fixture es estable para siempre.
 test('T155 — la hoja del tope y la de conflicto muestran el día completo', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-01T10:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const H = await import('/src/view/helpers.js');
@@ -1786,7 +1852,7 @@ test('T155 — la hoja del tope y la de conflicto muestran el día completo', as
 // igual comparte es peor que ninguna, y arreglar solo la primera mitad la
 // dejaría pasar.
 test('T156 — Compartir se puede cancelar, y cancelar no comparte', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button');
     b.setAttribute('data-action', 'closeCitySheet');
@@ -1834,7 +1900,8 @@ test('T156 — Compartir se puede cancelar, y cancelar no comparte', async ({ pa
     return { visible, cerro: !document.getElementById('display-name-sheet'),
       imagen, nombre: localStorage.getItem('otrofestiv_display_name') };
   });
-  if (r.sinPlan || r.noPide) return;
+  expect(r.sinPlan, 'hay un Plan que compartir').toBeUndefined();
+  expect(r.noPide, 'y sin nombre guardado compartir pide ponerlo: es el diálogo que se cancela').toBeUndefined();
 
   expect(r.visible.hay, 'la hoja ofrece una salida visible, no solo el fondo').toBe(true);
   expect(r.visible.caja, 'y esa salida ocupa lugar en la pantalla').toBe(true);
@@ -1887,7 +1954,7 @@ test('T159 — la excluida se explica con su función viva, y la toda-caída sig
     return { mixta, caida, vivasDeLaMixta: mixta ? porT[mixta].filter(f => !f._cancelled).map(f => f.day + ' ' + f.time) : [],
       canceladaPrimero: mixta ? porT[mixta].filter(f => f.day >= '2026-08-15')[0].day + ' ' + porT[mixta].filter(f => f.day >= '2026-08-15')[0].time : null };
   });
-  if (!fx.mixta) return; // festival sin el caso: nada que afirmar
+  expect(fx.mixta, 'el fixture trae la obra con funciones vivas Y caídas: es el caso mixto').toBeTruthy();
   console.log(`T159 fixture: ${fx.mixta} · cancelada primero ${fx.canceladaPrimero} · vivas ${fx.vivasDeLaMixta.join(', ')}`);
   await goToPlanear(page);
   await esperarCalculo(page);
@@ -1984,7 +2051,7 @@ test('T161 — la fila de Intereses prefiere tu ciudad, y sin función ahí mues
 // El gap de 14 (--sp-btn) hace que las zonas se toquen sin pisarse. Se afirma
 // con elementFromPoint, que es lo que el dedo encuentra.
 test('T162 — cada botón de la fila responde a 20px de su centro, y la franja entre los dos va al más cercano', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
     document.body.appendChild(b); b.click(); b.remove();
@@ -2036,7 +2103,7 @@ test('T162 — cada botón de la fila responde a 20px de su centro, y la franja 
 // arreglar de más poniéndole un distintivo a todo el mundo.
 test('T163 — con Q&A el distintivo entra en la fila, y sin Q&A no aparece', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 });
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
     document.body.appendChild(b); b.click(); b.remove();
@@ -2082,7 +2149,8 @@ test('T163 — con Q&A el distintivo entra en la fila, y sin Q&A no aparece', as
     });
     return { dia: conQA.day, filas };
   });
-  if (r.sinPlan || r.sinQAenPlan) return;
+  expect(r.sinPlan, 'hay un Plan en pantalla').toBeUndefined();
+  expect(r.sinQAenPlan, 'y trae una función con Q&A: es la que lleva el distintivo').toBeUndefined();
   const conBadge = r.filas.filter(f => f.hayBadge);
   const sinBadge = r.filas.filter(f => !f.hayBadge);
   expect(conBadge.length, 'el día elegido tiene la obra con Q&A — si no, el test no mide nada').toBeGreaterThan(0);
@@ -2319,3 +2387,309 @@ test(`T169 — ningún bloque de obra sola recorta su título · ${fid}`, async 
   expect(malos, `${fid}: ${malos.length} de ${medidos} bloques recortan su título — ${malos.slice(0, 3).join(' · ')}`).toHaveLength(0);
 });
 }
+
+// ── T170 — sin duración publicada, la app no afirma la hora de salida ────────
+// Auditoría del 4 sep 2026. `parseDur` rellena con DEFAULT_DURATION_MIN (90)
+// cuando el dato no trae número, y nada distinguía ese 90 de uno real. Sobre él
+// la app afirmaba «hasta 15:30», reservaba 90 minutos en el calendario y
+// descartaba obras del plan con una cuenta que se presenta como dato. Medido en
+// el catálogo: 28 registros en 7 festivales sin duración.
+//
+// El arreglo NO cambia la aritmética —hace falta algún número para dibujar y
+// para no armar un plan imposible—: cambia lo que la app AFIRMA. La `~` ya es la
+// convención de la casa para lo estimado (helpers.js: «llegarías ~21:15»).
+//
+// Se afirma: (1) la fila marca la salida como estimada cuando no hay duración;
+// (2) NO la marca cuando sí la hay, ni siquiera con un 90 real — el control que
+// impide «marcar todo»; (3) el calendario dice de dónde salen esos minutos.
+test('T170 — la hora de salida se marca estimada si la duración no está publicada', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'cinemancia2026', '2026-09-09T15:00');
+
+  // Se entra por el DÍA de la obra: la grilla móvil muestra dos columnas y la
+  // fila de un día fuera de la ventana no se dibuja (la primera versión midió
+  // null por esto y no probaba nada).
+  const fila = async (conDuracion) => {
+    const elegida = await page.evaluate(conD => {
+      const f = FILMS.find(x => !x._cancelled && x.day && x.time && (conD ? x.duration : !x.duration));
+      return f ? { title: f.title, day: f.day, duration: f.duration || null } : null;
+    }, conDuracion);
+    if (!elegida) return null;
+    await enterFestival(page, 'cinemancia2026', elegida.day + 'T10:00');
+    return page.evaluate(async (el) => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await new Promise(r => setTimeout(r, 300));
+      const f = FILMS.find(x => x.title === el.title && x.day === el.day);
+      state.set('savedAgenda', { schedule: [{ ...f, _title: f.title }], scenarioIdx: 0 });
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 900));
+      const t2 = document.querySelector('.mplan-t2');
+      return { obra: f.title.slice(0, 30), duration: f.duration || null,
+        texto: t2 ? t2.textContent.replace(/\s+/g, ' ').trim().slice(0, 40) : null };
+    }, elegida);
+  };
+
+  // 1 · sin duración publicada: la salida va marcada
+  const sin = await fila(false);
+  expect(sin, 'Cinemancia tiene la actividad sin duración del censo').not.toBeNull();
+  expect(sin.duration, 'y de verdad no la trae').toBeNull();
+  expect(sin.texto, `«${sin.obra}» marca la salida como estimada (dice: ${sin.texto})`).toContain('~');
+
+  // 2 · control: con duración publicada NO se marca. Sin esto, «marcar siempre»
+  // pasaría el test y la tilde dejaría de querer decir algo.
+  const con = await fila(true);
+  expect(con, 'y hay obras con duración').not.toBeNull();
+  expect(con.duration, 'esta sí la trae').toBeTruthy();
+  expect(con.texto, `«${con.obra}» NO se marca: su duración es dato (dice: ${con.texto})`).not.toContain('~');
+});
+
+// ── T172 — «qué viste» se cuenta una sola vez ────────────────────────────────
+// Auditoría 4 sep 2026. `effectiveWatched` está declarado DUEÑO ÚNICO de «qué se
+// vio» (film.js): una función del plan que ya terminó SE ASUME vista. Pero cuatro
+// puertas del modo Recuerdo preguntaban por el `watched` CRUDO, y las pantallas
+// se contradecían a dos toques de distancia:
+//
+//   · con 4 obras en el plan y 2 marcadas a mano, Mi Plan titulaba «Viste 4
+//     actividades» mientras Intereses archivaba 2 bajo «te quedaste con ganas»;
+//   · y a quien fue a TODO sin marcar nada —armás el plan, vas, volvés cuando
+//     terminó— se le escondía «Compartir mi festival», que es lo que el modo
+//     Recuerdo promete. Medido: 4 afiches pintados, 0 botones de compartir.
+//
+// Las cuatro puertas viven dentro de festivalEnded(), así que nada cambia en vivo.
+test('T172 — Mi Plan e Intereses cuentan lo mismo, y quien fue a todo puede compartir', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  const escenario = async (marcadas) => {
+    await enterFestival(page, 'ficdeh2026', '2026-08-25T11:00');
+    return page.evaluate(async (marcadas) => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await new Promise(r => setTimeout(r, 400));
+      // OJO: post-festival screeningPassed() devuelve false a propósito (todo
+      // vuelve a plena opacidad), así que las pasadas se eligen por FECHA.
+      const vistos = new Set(); const el = [];
+      for (const f of FILMS.filter(x => !x._cancelled && x.day && x.time && x.day < '2026-08-20')) {
+        if (!vistos.has(f.title)) { vistos.add(f.title); el.push(f); }
+        if (el.length === 4) break;
+      }
+      // Una obra de MÁS en la watchlist que NO está en el plan y nadie marcó: es
+      // el control de que el reparto siga significando algo. Sin ella, «contar
+      // todo como visto» pasaba el test igual.
+      const suelta = [...FILMS].find(x => !x._cancelled && x.title && !vistos.has(x.title));
+      state.set('watchlist', new Set([...el.map(f => f.title), suelta.title]));
+      state.set('savedAgenda', { schedule: el.map(f => ({ ...f, _title: f.title })), scenarioIdx: 0 });
+      state.set('notWatched', new Set());
+      state.set('watched', new Set(el.slice(0, marcadas).map(f => f.title)));
+      switchMainNav('mnav-miplan'); showAgView();
+      await new Promise(r => setTimeout(r, 900));
+      const recap = document.querySelector('.recap-hdr');
+      const compartir = [...document.querySelectorAll('.ag-save-btn[data-action="shareDiary"]')]
+        .filter(e => e.getBoundingClientRect().height > 0).length;
+      // renderAgenda() explícito: cambiar de pestaña sola no re-dibuja la vista
+      // (medido: #ag-view queda con el contenido anterior y en display:none).
+      switchMainNav('mnav-seleccion');
+      if (typeof renderAgenda === 'function') renderAgenda();
+      await new Promise(r => setTimeout(r, 900));
+      const vista = document.getElementById('ag-view');
+      const hdrs = [...vista.querySelectorAll('.sec-hdr')].map(e => e.textContent.replace(/\s+/g, ' ').trim());
+      const filas = [...vista.querySelectorAll('.saved-item')];
+      const conMarca = filas.filter(f => f.classList.contains('done')).length;
+      return { enPlan: el.length, marcadasAMano: marcadas, suelta: suelta.title.slice(0, 26),
+        recapTxt: recap ? recap.textContent.replace(/\s+/g, ' ').trim().slice(0, 40) : null,
+        compartir, filas: filas.length, comoVistas: conMarca,
+        hayGanas: hdrs.some(h => /no viste|missed/i.test(h)) };
+    }, marcadas);
+  };
+
+  // 1 · fue a todo y no marcó nada: el caso del hallazgo
+  const nada = await escenario(0);
+  expect(nada.enPlan, 'el fixture arma un plan de 4 funciones ya pasadas').toBe(4);
+  expect(nada.recapTxt, 'Mi Plan lo recibe con su recap, no pidiéndole que marque').not.toBeNull();
+  expect(nada.recapTxt, 'y cuenta las 4').toMatch(/4/);
+  expect(nada.compartir, '«Compartir mi festival» existe: es lo que el modo Recuerdo promete').toBe(1);
+  expect(nada.comoVistas, 'Intereses da por vistas las 4 del plan, igual que Mi Plan').toBe(4);
+  expect(nada.filas, 'y lista también la que quedó fuera del plan').toBe(5);
+  expect(nada.hayGanas,
+    `«${nada.suelta}» no estuvo en el plan y nadie la marcó: va en «te quedaste con ganas»`).toBe(true);
+
+  // 2 · marcó 2 de 4 a mano: las dos pantallas siguen de acuerdo
+  const dos = await escenario(2);
+  expect(dos.recapTxt, 'Mi Plan sigue contando 4').toMatch(/4/);
+  expect(dos.comoVistas, 'e Intereses también las da las 4 por vistas').toBe(4);
+  expect(dos.hayGanas, 'y la que quedó fuera del plan sigue del otro lado').toBe(true);
+
+  // 2b · quien NIEGA haber ido: `notWatched` es su memoria propia. El plan existe,
+  // así que el diario se pinta igual — pero no hay festival que compartir. Es el
+  // control de la puerta: sin él, «mostrar el botón siempre» pasaba el test.
+  const negadas = await page.evaluate(async () => {
+    const plan = savedAgenda.schedule.map(s => s._title);
+    state.set('watched', new Set());
+    state.set('notWatched', new Set(plan));
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 900));
+    return { diario: !!document.querySelector('.saved-agenda'),
+      compartir: [...document.querySelectorAll('.ag-save-btn[data-action="shareDiary"]')]
+        .filter(e => e.getBoundingClientRect().height > 0).length };
+  });
+  expect(negadas.diario, 'el plan vivido se sigue pintando').toBe(true);
+  expect(negadas.compartir, 'pero si negaste haber ido a todo, no hay festival que compartir').toBe(0);
+
+  // 3 · control: sin plan y sin marcas no se inventa nada
+  const vacio = await page.evaluate(async () => {
+    state.set('savedAgenda', null); state.set('watched', new Set()); state.set('notWatched', new Set());
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 900));
+    return { recap: !!document.querySelector('.recap-hdr'),
+      compartir: [...document.querySelectorAll('.ag-save-btn[data-action="shareDiary"]')]
+        .filter(e => e.getBoundingClientRect().height > 0).length };
+  });
+  expect(vacio.recap, 'sin plan ni marcas no hay recap que mostrar').toBe(false);
+  expect(vacio.compartir, 'ni festival que compartir').toBe(0);
+});
+
+// ── T173 — la fila de Intereses no dice «Vista» dos veces ────────────────────
+// Auditoría 4 sep 2026: una obra vista y SIN calificar mostraba la palabra dos
+// veces en la misma fila —«Madres de nacimiento | Vista | Vista»—: una en la
+// línea de metadatos (`.saved-venue`, gris) y otra en el botón (`.saved-check`,
+// verde). Con estrellas se veía bien; sin ellas, la fila tartamudeaba.
+//
+// La línea de metadatos dice lo que SABEMOS de la obra; que esté vista ya lo
+// dicen el botón, la marca ✓ y el atenuado. Sin calificación muestra la sección,
+// igual que una obra no vista.
+//
+// Se afirma: (1) sin calificar, la palabra aparece UNA vez y el dato es la
+// sección; (2) con calificación, el dato son las estrellas —el arreglo no se las
+// come—; (3) control: una obra NO vista sigue mostrando su sección y su botón.
+test('T173 — la fila de Intereses no repite «Vista»', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'ficdeh2026', '2026-08-25T11:00');
+
+  const fila = async (opts) => page.evaluate(async (o) => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 300));
+    const f = FILMS.find(x => !x._cancelled && x.title && x.section);
+    state.set('watchlist', new Set([f.title]));
+    state.set('savedAgenda', null);
+    state.set('notWatched', new Set());
+    state.set('watched', new Set(o.vista ? [f.title] : []));
+    state.set('filmRatings', o.estrellas ? { [f.title]: 4 } : {});
+    switchMainNav('mnav-seleccion');
+    if (typeof renderAgenda === 'function') renderAgenda();
+    await new Promise(r => setTimeout(r, 800));
+    const vista = document.getElementById('ag-view');
+    const row = vista.querySelector('.saved-item');
+    if (!row) return null;
+    const dato = row.querySelector('.saved-venue'), btn = row.querySelector('.saved-check');
+    const txt = row.innerText.replace(/\s+/g, ' ').trim();
+    return { obra: f.title.slice(0, 26), seccion: f.section,
+      dato: dato ? dato.textContent.replace(/\s+/g, ' ').trim() : null,
+      boton: btn ? btn.textContent.replace(/\s+/g, ' ').trim() : null,
+      vecesVista: (txt.match(/vista/gi) || []).length, texto: txt.slice(0, 60) };
+  }, opts);
+
+  // 1 · vista y sin calificar: el caso del hallazgo
+  const sinEstrellas = await fila({ vista: true, estrellas: false });
+  expect(sinEstrellas, 'la fila de Intereses se dibuja').not.toBeNull();
+  expect(sinEstrellas.vecesVista,
+    `«Vista» aparece una sola vez en la fila (dice: ${sinEstrellas.texto})`).toBe(1);
+  expect(sinEstrellas.boton, 'y la que queda es la del botón, que es la acción').toMatch(/vista/i);
+  expect(sinEstrellas.dato, 'el dato muestra la sección, no el estado')
+    .not.toMatch(/^vista$/i);
+  expect(sinEstrellas.dato, 'y esa sección es la suya').toBeTruthy();
+
+  // 2 · con calificación, el dato son las estrellas: el arreglo no se las come
+  const conEstrellas = await fila({ vista: true, estrellas: true });
+  expect(conEstrellas.dato, `«${conEstrellas.obra}» calificada muestra sus estrellas`).toMatch(/★|☆|\*/);
+  expect(conEstrellas.vecesVista, 'y «Vista» sigue apareciendo una sola vez').toBe(1);
+
+  // 3 · control: una obra NO vista conserva su fila de siempre. El botón dice
+  // «Vista» en los dos estados —es la ACCIÓN, no el estado—, así que la palabra
+  // aparece una vez también acá: lo que no puede es aparecer dos.
+  const noVista = await fila({ vista: false, estrellas: false });
+  expect(noVista.dato, 'sin ver, el dato sigue siendo la sección').toBeTruthy();
+  expect(noVista.dato, 'y no es el estado').not.toMatch(/^vista$/i);
+  expect(noVista.vecesVista, 'y la palabra sigue apareciendo una sola vez, en el botón').toBe(1);
+});
+
+// ── T175 — el póster de Mi Plan abre la ficha, siempre ───────────────────────
+// Reporte de Juan (4 sep 2026): tocar el póster en Mi Plan no abría la ficha.
+// Medido en Cinemancia, día de hoy, plan de 4: NINGUNA fila abría —obra,
+// programa y evento por igual—. Solo funcionaba el póster de un corto dentro de
+// un programa expandido, que no declara `data-stop`.
+//
+// Causa: el listener honra `data-stop="1"` desde el 30 ago —«yo me encargo de
+// este toque», para que «Agendar» no abriera la ficha detrás del modal—, y el
+// póster de Mi Plan lleva las DOS cosas: la marca de abrir y el `data-stop`, que
+// ahí significa «no actúe la FILA». El guard lo vetaba antes de mirar quién era.
+// El que abre no puede vetarse a sí mismo.
+//
+// Se afirma: (1) el póster de cada fila abre la ficha, sea obra, programa o
+// evento; (2) el título que abre es el de ESA fila, no el de otra; (3) control:
+// un control con `data-stop` que NO abre —el botón de agendar— sigue sin abrir.
+test('T175 — tocar el póster en Mi Plan abre la ficha de esa obra', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T15:00');
+  await page.evaluate(async () => {
+    const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+    document.body.appendChild(b); b.click(); b.remove();
+    await new Promise(r => setTimeout(r, 400));
+    const hoy = FILMS.filter(f => !f._cancelled && f.day === '2026-09-04' && f.time);
+    const el = []; const vis = new Set();
+    for (const f of hoy) { if (!vis.has(f.title)) { vis.add(f.title); el.push(f); } if (el.length === 4) break; }
+    state.set('savedAgenda', { schedule: el.map(f => ({ ...f, _title: f.title })), scenarioIdx: 0 });
+    switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 1200));
+  });
+
+  const n = await page.locator('.mplan-row .js-open-pel').count();
+  expect(n, 'el plan pinta sus filas con póster — si no, el test no mide nada').toBeGreaterThan(2);
+
+  const fallidas = [];
+  for (let i = 0; i < n; i++) {
+    // se cierra por el camino de la app: quitar la clase deja el telón puesto y
+    // el toque siguiente lo recibe la ficha, no la fila.
+    await page.evaluate(async () => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closePelSheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await new Promise(r => setTimeout(r, 500));
+    });
+    const loc = page.locator('.mplan-row .js-open-pel').nth(i);
+    const titulo = await loc.getAttribute('data-title');
+    await loc.scrollIntoViewIfNeeded();
+    await loc.click({ timeout: 5000 }).catch(() => {});
+    await page.waitForTimeout(900);
+    const r = await page.evaluate(() => ({
+      abierta: !!document.querySelector('#pel-sheet.open'),
+      titulo: document.querySelector('#pel-sheet .pel-sheet-title')?.textContent?.trim() || null }));
+    if (!r.abierta) fallidas.push(`${i}: «${(titulo || '').slice(0, 30)}» no abrió`);
+    else if (titulo && r.titulo && !titulo.startsWith(r.titulo.slice(0, 12)))
+      fallidas.push(`${i}: abrió «${r.titulo.slice(0, 24)}» y se tocó «${titulo.slice(0, 24)}»`);
+  }
+  expect(fallidas, `las ${n} filas abren su ficha — ${fallidas.join(' · ')}`).toHaveLength(0);
+
+  // control: un control que declara data-stop y NO abre ficha sigue sin abrirla.
+  // Sin esto, quitar el guard entero pasaría el test y volvería el defecto que
+  // lo trajo: agendar desde NO INCLUIDAS y terminar en la ficha, detrás del modal.
+  const control = await page.evaluate(async () => {
+    const c = document.createElement('button'); c.setAttribute('data-action', 'closePelSheet');
+    document.body.appendChild(c); c.click(); c.remove();
+    await new Promise(r => setTimeout(r, 500));
+    // el botón va DENTRO del que abre la ficha: ese es el caso real («Agendar»
+    // dentro de una fila que abre). Puesto fuera, no había ficha que abrir y el
+    // control pasaba con el guard desactivado — mutación comprobada.
+    const abridor = document.querySelector('.mplan-row .js-open-pel');
+    if (!abridor) return { sinFila: true };
+    const b = document.createElement('button');
+    b.setAttribute('data-stop', '1'); b.setAttribute('data-action', 'nadaQueHacer');
+    b.textContent = 'x'; b.style.cssText = 'position:relative;z-index:5';
+    abridor.appendChild(b);
+    b.click();
+    await new Promise(r => setTimeout(r, 700));
+    const abierta = !!document.querySelector('#pel-sheet.open');
+    b.remove();
+    return { abierta };
+  });
+  expect(control.abierta, 'un control con data-stop que no abre ficha sigue sin abrirla').toBe(false);
+});

@@ -13,7 +13,7 @@ import {
 // _langDates se REEXPORTA: el dueño vive en components.js (helpers importa
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
-import { toMin, minToStr, parseDur, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
+import { toMin, minToStr, durEstimada, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
 import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
@@ -46,7 +46,7 @@ export function _posterStyle(f){
   return (pos&&pos!=='center')?` style="object-position:${pos}"`:'';
 }
 
-export function getPosterSrc(title, isCortos, section){
+export function getPosterSrc(title, isCortos, _section){
   const t = normKey(title);
   if(_CUSTOM_N[t]) return _CUSTOM_N[t];
   if(_POSTERS_N[t]) return (_POSTERS_N[t].startsWith('http')||_POSTERS_N[t].startsWith('/assets/'))?_POSTERS_N[t]:TMDB_IMG+_POSTERS_N[t];
@@ -267,10 +267,16 @@ export function programParts(f){
   return slotPosterParts(f.film_list.map(it=>({
     title:it.title, poster:it.poster, posterSource:it.posterSource,
     duration:it.duration||f.duration, section:f.section,
-  })));
+  })), blockDuration(f));
 }
 
-export function slotPosterParts(members){
+// `blockDur` es la duración DEL BLOQUE y viaja aparte a propósito: el pie dice
+// «N obras · X min», y esa X es lo que dura la función, no lo que dura la
+// primera. Sin ella se leía la del líder —«3 obras · 19 min» para un bloque de
+// 42—, y el número engañaba justo donde el usuario decide si le cabe en la
+// tarde. Medido: 209 de los 225 programas del repo tenían el líder con otra
+// duración que su bloque.
+export function slotPosterParts(members, blockDur){
   // Tope 8 (prototipo aprobado, 25 ago): la Escalera escala a cualquier N porque
   // el paso es fracción de la lámina — ver makeSharedSlotSVG. Con 9+ la lámina
   // baja del 23% y a 56px queda en textura, así que ahí sí cae a la forma vieja.
@@ -285,7 +291,7 @@ export function slotPosterParts(members){
   // atrás→delante: el 1º del catálogo queda delante
   const modules=[...reales.slice(1).reverse().map(c=>c.src), reales[0].src];
   const lider=reales[0].f;
-  const dur=blockDuration(lider);
+  const dur=blockDur||blockDuration(lider);
   const dato=`${members.length} ${t('misc_peliculas')}${dur?` · ${dur} min`:''}`;
   return {modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato,
     svg:makeSharedSlotSVG({modules, secLabel:_secLabel(lider.section||''), accent:_sectionColor(lider.section||''), dato})};
@@ -310,7 +316,7 @@ export function _getItemPoster(item){
 // largo plazo es declarar posterSource en el JSON (gana sobre el host); ver
 // _isEditorialPoster + docs/POSTERS.md §5.
 const EDITORIAL_CDN_HOSTS=['cloudfront.net','supabase.co']; // Tribeca, Olhar+
-export function _isEditorialImageUrl(url){
+function _isEditorialImageUrl(url){
   return !!(url && EDITORIAL_CDN_HOSTS.some(h=>url.includes(h)));
 }
 
@@ -714,12 +720,19 @@ export function conflictAccount(a,b,r){
   const [f1,f2]=r.bFirst?[b,a]:[a,b];
   const t1=parseProgramTitle(f1._title||f1.title||'').displayTitle;
   const t2=parseProgramTitle(f2._title||f2.title||'').displayTitle;
-  const end=screeningBlockEndMin(f1);                   // fin de película: dato
+  // fin de película: dato… salvo cuando la duración no está publicada, y entonces
+  // sale de rellenar el hueco con DEFAULT_DURATION_MIN. La doctrina de acá abajo
+  // dice que la `~` marca lo estimado: si el fin lo es, se marca igual que el
+  // viaje y el Q&A. Si no, la cuenta que descarta una obra se apoya en un número
+  // inventado y lo presenta como hecho.
+  const end=screeningBlockEndMin(f1);
+  const _endEst=durEstimada(f1.duration);
+  const _end=x=>(_endEst?'~':'')+minToStr(x);
   const start=toMin(f2.time);
   const _b=x=>`<b>${x}</b>`;
   if(r.kind==='ajustado'){
     // misma sede: el Q&A no compromete (doctrina 30 jul) — cuenta con el buffer
-    return t('cuenta_salas',{t1:`<i>${t1}</i>`,end:_b(minToStr(end)),buffer:FESTIVAL_BUFFER,
+    return t('cuenta_salas',{t1:`<i>${t1}</i>`,end:_b(_end(end)),buffer:FESTIVAL_BUFFER,
       arr:_b(minToStr(end+FESTIVAL_BUFFER)),t2:`<i>${t2}</i>`,start:_b(minToStr(start))});
   }
   // viaje: con traslado el Q&A sí cuenta (durationForTravel) — se muestra aparte.
@@ -734,7 +747,7 @@ export function conflictAccount(a,b,r){
   const qaEnd=end+(f1.has_qa?FESTIVAL_QA_MIN:0);
   const total=qaEnd+r.travel+FESTIVAL_BUFFER;
   const base=t(f1.has_qa?'cuenta_viaje_qa':'cuenta_viaje',
-    {t1:`<i>${t1}</i>`,end:_b(minToStr(end)),qa:FESTIVAL_QA_MIN,
+    {t1:`<i>${t1}</i>`,end:_b(_end(end)),qa:FESTIVAL_QA_MIN,
      // travel en minutos PELADOS: la cadena declara la unidad una sola vez, al
      // final («margen 15 min»). Con _minFmt salía «viaje ~10 min + margen 15 min».
      travel:r.travel,buffer:FESTIVAL_BUFFER,

@@ -329,7 +329,13 @@ for (const festId of MAIN_FESTIVALS) {
 // al menos un festival en curso y uno por empezar; si el config cambia y deja de
 // haberlos, el test lo dice y se saltea en vez de fallar por una premisa vieja.
 test('P06 — el riel separa PRÓXIMOS sin mover el arranque del snap', async ({ page }) => {
-  await page.clock.install({ time: new Date('2026-08-11T10:00:00-05:00') });
+  // FECHA — 14 MAY 2026, no 11 AGO. La original la invalidó un hecho REAL: el
+  // sismo del Chocó aplazó FICMA el 10 de agosto (`status.kind='postponed'`) y
+  // _classifyFestival dejó de contarlo como en curso, así que al 11 AGO quedaban
+  // CERO en curso y este test se saltaba solo. Nadie rompió nada: la realidad
+  // invalidó el fixture y la prueba se calló en vez de protestar. El 14 MAY tiene
+  // Leviza en curso —archivado, su dato ya no se mueve— y once próximos.
+  await page.clock.install({ time: new Date('2026-05-14T10:00:00-05:00') });
   await page.goto('/');
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
   await page.waitForSelector('#splash-rail .splash-card[data-fest]', { state: 'attached', timeout: 15000 });
@@ -357,8 +363,11 @@ test('P06 — el riel separa PRÓXIMOS sin mover el arranque del snap', async ({
     };
   });
 
-  if (!r.enCurso || !r.proximos) {
-    test.skip(true, `P06: al 11 AGO 2026 no hay en-curso + próximos (${r.enCurso}/${r.proximos}), skip`); return; }
+  // Premisas, no escape: la fecha se eligió para que se cumplan. Si dejaran de
+  // cumplirse, el riel no trae los dos grupos que este test separa — y eso
+  // tiene que sonar.
+  expect(r.enCurso, 'al 14 MAY 2026 hay festivales EN CURSO en el riel').toBeGreaterThan(0);
+  expect(r.proximos, 'y también PRÓXIMOS: son los dos grupos que el divisor separa').toBeGreaterThan(0);
 
   // ORDEN: ningún próximo antes de un en-curso, y el divisor justo entre los grupos.
   const idxDivProx = r.tira.findIndex(x => x.div);
@@ -397,7 +406,13 @@ test('P07 — el markup del selector es el mismo del splash (una implementación
   // Reloj fijo: 11 AGO 2026 tiene un festival en curso y dos por empezar, así que
   // la comparación ejerce las cards Y los dos divisores. Sin congelarlo, el test
   // compararía rieles distintos según el día.
-  await page.clock.install({ time: new Date('2026-08-11T10:00:00-05:00') });
+  // FECHA — 14 MAY 2026, no 11 AGO. La original la invalidó un hecho REAL: el
+  // sismo del Chocó aplazó FICMA el 10 de agosto (`status.kind='postponed'`) y
+  // _classifyFestival dejó de contarlo como en curso, así que al 11 AGO quedaban
+  // CERO en curso y este test se saltaba solo. Nadie rompió nada: la realidad
+  // invalidó el fixture y la prueba se calló en vez de protestar. El 14 MAY tiene
+  // Leviza en curso —archivado, su dato ya no se mueve— y once próximos.
+  await page.clock.install({ time: new Date('2026-05-14T10:00:00-05:00') });
   await page.goto('/');
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
   await page.waitForSelector('#splash-rail .splash-card[data-fest]', { state: 'attached', timeout: 15000 });
@@ -409,8 +424,10 @@ test('P07 — el markup del selector es el mismo del splash (una implementación
       .filter(([, c]) => c.name && c.group !== 'test' && _classifyFestival(c) === 'ongoing')
       .map(([id]) => id);
   });
-  if (enCurso.length !== 1) {
-    test.skip(true, `P07: al 11 AGO 2026 hay ${enCurso.length} festivales en curso (se necesita 1), skip`); return; }
+  // Premisa: la regla de preselección del riel es «exactamente 1 en curso». Al
+  // 14 MAY 2026 ese uno es Leviza (medido). Si cambiara, este test dejaría de
+  // ejercer la regla y hay que enterarse, no callarlo con un skip.
+  expect(enCurso.length, 'al 14 MAY 2026 hay exactamente un festival en curso').toBe(1);
   const fest = enCurso[0];
 
   const splash = await page.evaluate(() => ({
@@ -973,7 +990,10 @@ test('T127 — la hoja de ciudad se puede cerrar tocando el fondo', async ({ pag
     await new Promise(r => setTimeout(r, 500));
     return { cerro: !sh.classList.contains('open') };
   });
-  if (r.sinHoja || r.noAbrio) return;
+  // Premisas, no escapes: el reloj va DENTRO de FICDEH y ahí la hoja existe y
+  // abre. Si dejara de hacerlo no hay fondo que tocar y el test no mide nada.
+  expect(r.sinHoja, 'la hoja de ciudad existe en el DOM').toBeUndefined();
+  expect(r.noAbrio, 'y se abre: es la que este test cierra tocando el fondo').toBeUndefined();
   expect(r.cerro, 'tocar el fondo la cierra').toBe(true);
 });
 
@@ -1009,7 +1029,9 @@ test('T43 — en el chooser, arrastrar no cambia de festival; tocar sí', async 
     const b = c.getBoundingClientRect();
     return { x: Math.round(b.left + b.width / 2), y: Math.round(b.top + b.height / 2), fest: c.dataset.fest };
   });
-  if (!caja) return;                  // un solo festival visible: nada que arrastrar
+  // Premisa: el chooser lista los festivales del riel, así que siempre hay otra
+  // card que la activa. Sin ella no hay nada que arrastrar y el test es mudo.
+  expect(caja, 'el chooser ofrece otra card además de la activa').not.toBe(null);
 
   // 1 · arrastre horizontal que SUELTA encima de otra card
   await page.mouse.move(caja.x + 120, caja.y);
@@ -1087,7 +1109,9 @@ test('T44 — al reabrir el chooser, chip, info, marca y centro dicen lo mismo',
     const c = cards.slice(1).find(x => x.dataset.fest && x.dataset.fest !== _activeFestId);
     return c ? c.dataset.fest : null;
   });
-  if (!otro) return;                               // un solo festival: nada que cambiar
+  // Premisa: hace falta una card que no sea la activa NI la primera del riel
+  // (ver arriba: con la primera el aserto dejaría de discriminar).
+  expect(otro, 'el riel ofrece una card distinta de la activa y de la primera').not.toBe(null);
   await page.locator(`#fs-festival-list .splash-card[data-fest="${otro}"]`).click();
   await page.waitForTimeout(2400);
   // El festival nuevo puede ser multiciudad a su vez: su hoja nace tapando el chip.
@@ -1107,4 +1131,59 @@ test('T44 — al reabrir el chooser, chip, info, marca y centro dicen lo mismo',
   expect(d.infoNombre, 'el bloque de info describe el mismo festival que la marca')
     .toBe(d.chipNombre);
   expect(d.infoNombre, 'y no el que estaba antes').not.toBe(antes.infoNombre);
+});
+
+// ── P10 — Programa dice que el festival terminó ──────────────────────────────
+// Auditoría 4 sep 2026: con el reloj seis días después del cierre de FICDEH,
+// PROGRAMA no decía en ningún lado que el festival había terminado —medido:
+// `/termin/i` sobre el texto de la página daba false— y es donde aterriza quien
+// entra. El aviso solo vivía en Mi Plan, a un toque de distancia.
+//
+// La banda es la hermana de la de APLAZADO: mismo lugar, misma forma, mismo dueño
+// único, sin botón de cerrar (es un estado, no una novedad). Una palabra nueva,
+// la etiqueta; el resto sale de lo que Mi Plan ya dice.
+//
+// Se afirma: (1) terminado, PROGRAMA lo dice y nombra al festival; (2) control:
+// EN CURSO no aparece —anunciar el final de un festival que está pasando sería
+// peor que callarlo—; (3) un festival APLAZADO sigue diciendo APLAZADO y no
+// «terminó»: su estado declarado le gana a la aritmética de fechas.
+test('P10 — el Programa de un festival terminado lo dice', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+
+  const banda = async (fid, sim) => {
+    await enterFestival(page, fid, sim);
+    await page.evaluate(async () => {
+      const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
+      document.body.appendChild(b); b.click(); b.remove();
+      await new Promise(r => setTimeout(r, 300));
+      switchMainNav('mnav-cartelera');
+      await new Promise(r => setTimeout(r, 900));
+    });
+    return page.evaluate(() => {
+      const t = document.getElementById('fest-ended-banner');
+      const p = document.getElementById('fest-postponed-banner');
+      const vis = e => !!(e && e.getBoundingClientRect().height > 0);
+      return { termino: vis(t), textoTermino: t ? t.textContent.replace(/\s+/g, ' ').trim() : null,
+        aplazado: vis(p), textoAplazado: p ? p.textContent.replace(/\s+/g, ' ').trim().slice(0, 30) : null,
+        enElHeader: !!(t && document.getElementById('hdr-programa')?.contains(t)) };
+    });
+  };
+
+  // 1 · FICDEH cerró el 19 AGO: con el reloj al 25, Programa lo dice
+  const cerrado = await banda('ficdeh2026', '2026-08-25T11:00');
+  expect(cerrado.termino, 'la banda existe y se ve').toBe(true);
+  expect(cerrado.enElHeader, 'y vive en el encabezado del Programa, donde la de aplazado').toBe(true);
+  expect(cerrado.textoTermino, `nombra al festival y dice que terminó (dice: ${cerrado.textoTermino})`)
+    .toMatch(/FICDEH/i);
+  expect(cerrado.textoTermino, 'con las palabras que Mi Plan ya usa').toMatch(/termin/i);
+
+  // 2 · control: EN CURSO no aparece. Sin esto, pintarla siempre pasaría el test
+  // y la app anunciaría el final de un festival que está pasando.
+  const vivo = await banda('ficdeh2026', '2026-08-15T11:00');
+  expect(vivo.termino, 'con el festival en curso no hay banda de terminado').toBe(false);
+
+  // 3 · un festival APLAZADO no dice «terminó»: su estado declarado manda
+  const aplazado = await banda('ficma2026', '2026-08-25T11:00');
+  expect(aplazado.aplazado, 'FICMA sigue mostrando su banda de aplazado').toBe(true);
+  expect(aplazado.termino, 'y NO dice que terminó — el estado declarado le gana a las fechas').toBe(false);
 });

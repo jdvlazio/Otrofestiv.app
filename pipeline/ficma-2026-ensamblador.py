@@ -17,7 +17,10 @@ El PDF es la autoridad porque es el programa del festival; TMDB es una fuente de
 ficha, no de programación. Esa jerarquía evita que un dato de catálogo mueva una
 función, que es como se rompió Medellín en FICDEH.
 """
-import json, os, re, shutil, unicodedata, collections, datetime
+import json, os, re, shutil, unicodedata, collections, datetime, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import lib  # noqa: E402  — banderas() y su tabla generada, única para todo el repo
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
@@ -59,16 +62,6 @@ SECCIONES = {
     'CHARLAS':                    ('💬 Charlas', 'Talks', 'Charlas / Industria', 14),
 }
 
-BANDERAS = {
-    'colombia': '🇨🇴', 'argentina': '🇦🇷', 'brasil': '🇧🇷', 'chile': '🇨🇱', 'mexico': '🇲🇽',
-    'peru': '🇵🇪', 'panama': '🇵🇦', 'espana': '🇪🇸', 'francia': '🇫🇷', 'italia': '🇮🇹',
-    'alemania': '🇩🇪', 'reino unido': '🇬🇧', 'estados unidos': '🇺🇸', 'canada': '🇨🇦',
-    'japon': '🇯🇵', 'china': '🇨🇳', 'iran': '🇮🇷', 'india': '🇮🇳', 'rusia': '🇷🇺',
-    'polonia': '🇵🇱', 'dinamarca': '🇩🇰', 'suecia': '🇸🇪', 'noruega': '🇳🇴', 'irlanda': '🇮🇪',
-    'belgica': '🇧🇪', 'paises bajos': '🇳🇱', 'portugal': '🇵🇹', 'suiza': '🇨🇭',
-    'macedonia del norte': '🇲🇰', 'nueva zelanda': '🇳🇿', 'australia': '🇦🇺',
-    'grecia': '🇬🇷', 'turquia': '🇹🇷', 'austria': '🇦🇹', 'luxemburgo': '🇱🇺',
-}
 DIA_ES = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
 DIA_AB = ['LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB', 'DOM']
 DIA_EN = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
@@ -194,17 +187,8 @@ SINOPSIS_PRIMERA_FUENTE = {
 
 # [lib-unica] renombrada desde `sinacento` el 17 ago 2026.
 # Sube a MAYÚSCULAS además de quitar acentos; `lib.sinacento` respeta la caja.
-def mayus_sin_acento(s):
-    return ''.join(c for c in unicodedata.normalize('NFD', (s or '').lower())
-                   if unicodedata.category(c) != 'Mn').strip()
-
-
-# [lib-unica] renombrada desde `banderas` el 17 ago 2026.
-# Usa la tabla de países propia de FICMA, no la de lib.
 def banderas_ficma(pais):
-    out = [BANDERAS[k] for p in re.split(r'[,/]| y ', pais or '')
-           if (k := mayus_sin_acento(p)) in BANDERAS]
-    return ''.join(dict.fromkeys(out))
+    return lib.banderas(pais)
 
 
 # [lib-unica] renombrada desde `slug` el 17 ago 2026.

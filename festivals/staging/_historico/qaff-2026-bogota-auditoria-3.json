@@ -1,0 +1,1317 @@
+{
+ "_provenance": {
+  "fuente": "auditoría independiente 3 del flip book del programa de Bogotá (online.fliphtml5.com/QAFF2026)",
+  "capturado": "2026-09-02"
+ },
+ "inventario": {
+  "paginas_totales": 86,
+  "paginas_parrilla": [
+   "5999132651974788d018f6cf02a9ae33.jpg",
+   "9da227a29a00f44c3a9a859269c6611d.jpg",
+   "03d3450974919ac5db40eee608565614.jpg",
+   "fa5caa355429be31291bdee349d6933a.jpg",
+   "49865e69f6087991f6acb1cf53e21b23.jpg",
+   "2d99599a9b06ef084df012e5b7a9c095.jpg",
+   "c0f5bdac817a4fa94dd73448cb70b42f.jpg",
+   "2e7a74d14d2bddbad0ac340d93766e87.jpg",
+   "a8a8aed2c35dc66975028ef34da0de1c.jpg",
+   "b09bf8f458e56d46723893a2aa4d42eb.jpg",
+   "3794294afdeff7b36e6c454eeca7aaf5.jpg",
+   "e82d0d755c71fa3069af0b188e21bb69.jpg"
+  ],
+  "n_paginas_parrilla": 12,
+  "como_lo_verifique": "1) Confirmé por shell que hay exactamente 86 ficheros con nombre de 32 hex y extensión .jpg (ls | grep -E '^[0-9a-f]{32}\\.jpg$' | wc -l = 86). 2) Corrí el binario ./ocr sobre las 86 y guardé el texto de cada una. 3) Detector primario: páginas cuyo texto contiene simultáneamente 'PROGRAMA QAFF', 'FECHA', 'SEDE' y 'HORA' → 12 ficheros. Los tres criterios coinciden exactamente en el mismo conjunto de 12 (12 con 'PROGRAMA QAFF', 12 con FECHA+SEDE+HORA). 4) Detector secundario independiente: páginas con >=3 patrones de hora h:mm → 13 ficheros, los mismos 12 más 96139cf5... que resultó ser la página 'Programa Prelanzamiento' del Museo Nacional, sin el encabezado PROGRAMA QAFF/FECHA/SEDE (queda registrada como incoherencia/ambigüedad, no como parrilla). 5) Revisé las otras 74 páginas por sus primeras líneas de OCR y por los 12 ficheros con OCR más corto (riesgo de falso negativo por página muy gráfica): todas resultaron ser fichas de obra del catálogo, biografías de jurado/invitados, páginas de 'DIÁLOGO IMPROBABLE', piezas promocionales de sede, plano de orientación o portadas. Ninguna es parrilla. 6) Finalmente abrí las 12 candidatas con la herramienta de imagen y verifiqué visualmente que las 12 llevan el encabezado 'PROGRAMA QAFF' con FECHA y SEDE y una tabla con columna HORA. La extracción de datos se hizo mirando las imágenes, no del OCR."
+ },
+ "paginas": [
+  {
+   "img": "5999132651974788d018f6cf02a9ae33.jpg",
+   "sede": "Alianza Francesa - Bogotá",
+   "fecha_cabecera": "14 -15 DE SEPTIEMBRE",
+   "apertura_cabecera": null,
+   "funciones": [
+    {
+     "dia": "2026-09-14",
+     "hora": "15:00",
+     "hora_fin": "17:00",
+     "sala": null,
+     "es_bloque": true,
+     "obras": [
+      {
+       "titulo": "FACE TO FACE",
+       "director": "Florent Mahoukou",
+       "duracion": "19'54",
+       "pais": "Congo",
+       "anio": null,
+       "genero": "Performance de danza",
+       "nota": "rotulada 'Performance de danza'; no es proyeccion"
+      },
+      {
+       "titulo": "MANGO",
+       "director": "Joan Iyiola",
+       "duracion": "11'",
+       "pais": "Francia, Reino Unido",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "CONCRETE MOVES",
+       "director": "Fagamou Fama Ndiaye",
+       "duracion": "12'",
+       "pais": "Senegal",
+       "anio": null,
+       "genero": null
+      }
+     ],
+     "actividades": [
+      {
+       "tipo": "DIÁLOGO IMPROBABLE",
+       "titulo": "NOIR ESTÉTICO: La estética de la oscuridad"
+      }
+     ],
+     "suma_duraciones_min": 42.9,
+     "franja_min": 120
+    },
+    {
+     "dia": "2026-09-15",
+     "hora": "15:00",
+     "hora_fin": "16:00",
+     "sala": null,
+     "es_bloque": true,
+     "obras": [
+      {
+       "titulo": "CAFE ?",
+       "director": "Bamar Kane",
+       "duracion": "24'59",
+       "pais": "Francia",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "Happy Meal",
+       "director": "Johanna Makabi",
+       "duracion": "19'50",
+       "pais": "Francia",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "GLORIA",
+       "director": "Marvin Yamb",
+       "duracion": "15'",
+       "pais": "Guyana Frances",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "THE ONE WHO CRIES",
+       "director": "Cyrille Guei",
+       "duracion": "20'",
+       "pais": "Francia",
+       "anio": null,
+       "genero": null
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 79.82,
+     "franja_min": 60
+    }
+   ],
+   "actividades_sede": []
+  },
+  {
+   "img": "9da227a29a00f44c3a9a859269c6611d.jpg",
+   "sede": "Alianza Francesa - Bogotá",
+   "fecha_cabecera": "16 -17 DE SEPTIEMBRE",
+   "apertura_cabecera": null,
+   "funciones": [
+    {
+     "dia": "2026-09-16",
+     "hora": "15:00",
+     "hora_fin": "17:00",
+     "sala": null,
+     "es_bloque": true,
+     "obras": [
+      {
+       "titulo": "CAPTAIN ANTHONY",
+       "director": "Gregory Robinson",
+       "duracion": "8'",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "LEER EN LAS GOTAS DE LLUVIA",
+       "director": "Lilian Pallares, Charles Olsen",
+       "duracion": "10'24",
+       "pais": "España",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "A KING DISPLACED",
+       "director": "Olayinka Eno Babalola",
+       "duracion": "19'57",
+       "pais": "Nigeria",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "SISTERS IN DESTINY: ANGELA DAVIS & GERTY ARCHIMEDE",
+       "director": "Pascal Frederic Archimede, Dimitry Zandronis",
+       "duracion": "52'40",
+       "pais": "Guadeloupe",
+       "anio": null,
+       "genero": null
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 91.02,
+     "franja_min": 120
+    },
+    {
+     "dia": "2026-09-17",
+     "hora": "15:00",
+     "hora_fin": "20:00",
+     "sala": null,
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "NI CHAÎNES NI MAÎTRES",
+       "director": "Simon Moutaïrou",
+       "duracion": "98'",
+       "pais": "Francia",
+       "anio": null,
+       "genero": null
+      }
+     ],
+     "actividades": [
+      {
+       "tipo": "PERFORMANCE ARTISTICA E MUSICAL",
+       "titulo": "Alain Nkosi Konda + Zanu — Live Acustico"
+      },
+      {
+       "tipo": "DIÁLOGO IMPROBABLE",
+       "titulo": "\"NOIR Industria: Redes Sur-Sur\" — Circulación y Mercados Sur-Sur"
+      },
+      {
+       "tipo": "VERNISSAGE EXPOSICIÓN",
+       "titulo": "Phalonne Pierre Louis"
+      }
+     ],
+     "suma_duraciones_min": 98.0,
+     "franja_min": 300
+    }
+   ],
+   "actividades_sede": []
+  },
+  {
+   "img": "03d3450974919ac5db40eee608565614.jpg",
+   "sede": "Universidad de los Andes - Bogotá",
+   "fecha_cabecera": "15 DE SEPTIEMBRE",
+   "apertura_cabecera": null,
+   "funciones": [
+    {
+     "dia": "2026-09-15",
+     "hora": "14:00",
+     "hora_fin": "16:00",
+     "sala": null,
+     "es_bloque": true,
+     "obras": [
+      {
+       "titulo": "FITOFASCIAS",
+       "director": "Petra Ventana, Lucía Benamo",
+       "duracion": "8'",
+       "pais": "Argentina-Colombia",
+       "anio": null,
+       "genero": null,
+       "nota": "con la presencia de la directora"
+      },
+      {
+       "titulo": "AISHA NO PUEDE VOLAR LEJOS",
+       "director": "Morad Mostafa",
+       "duracion": "120'",
+       "pais": "Egypt",
+       "anio": "2025",
+       "genero": "Ficción"
+      }
+     ],
+     "actividades": [
+      {
+       "tipo": "DIÁLOGO IMPROBABLE",
+       "titulo": "NOIR IDENTIDAD — Territorios Rotos, Cuerpos que Resisten"
+      }
+     ],
+     "suma_duraciones_min": 128.0,
+     "franja_min": 120
+    },
+    {
+     "dia": "2026-09-16",
+     "hora": "13:00",
+     "hora_fin": "15:00",
+     "sala": null,
+     "es_bloque": true,
+     "obras": [
+      {
+       "titulo": "CAIDA LIBRE",
+       "director": "WILSON BORJA",
+       "duracion": "9'",
+       "pais": "COLOMBIA",
+       "anio": null,
+       "genero": null,
+       "nota": "CON LA PRESENCIA DE LA DIRECTORA"
+      },
+      {
+       "titulo": "REFUGIAR EL GESTO",
+       "director": "ADRIAN VILLA-DAVILA, ANDRES PRADO",
+       "duracion": "10'53",
+       "pais": "COLOMBIA",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "KANEKALON",
+       "director": "SARA J. ASPRILLA",
+       "duracion": "12'30",
+       "pais": "COLOMBIA",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "BERTHA",
+       "director": "LAURA ASPRILLA",
+       "duracion": "12'44",
+       "pais": "COLOMBIA",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "HACKER LEONILIA",
+       "director": "GUSTAVO FONTELE DOURADO",
+       "duracion": "14'59",
+       "pais": "BRAZIL",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "TIA CIATA",
+       "director": "MARIANA CAMPOS Y RAQUEL BEATRIZ",
+       "duracion": "26'",
+       "pais": "BRASIL",
+       "anio": null,
+       "genero": null,
+       "nota": "CON LA PRESENCIA DE LA DIRECTORA"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 86.1,
+     "franja_min": 120
+    }
+   ],
+   "actividades_sede": []
+  },
+  {
+   "img": "fa5caa355429be31291bdee349d6933a.jpg",
+   "sede": "Universidad de los Andes - Bogotá",
+   "fecha_cabecera": "15 DE SEPTIEMBRE",
+   "apertura_cabecera": null,
+   "funciones": [
+    {
+     "dia": "2026-09-17",
+     "hora": "14:00",
+     "hora_fin": "16:00",
+     "sala": null,
+     "es_bloque": true,
+     "obras": [
+      {
+       "titulo": "THE BLACK BART OF TACO KING #17",
+       "director": "Rickey Larke",
+       "duracion": "11'20",
+       "pais": "United States",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "STORMY DAYS",
+       "director": "Vitor Bitencourt Rocha",
+       "duracion": "19'20",
+       "pais": "Brazil",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "AMELIA",
+       "director": "Badewa Adeseye Ajibade",
+       "duracion": "23'03",
+       "pais": "Nigeria",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "MI VICHE TODO EL DIA",
+       "director": "Juan Camilo Moreno",
+       "duracion": "26'26",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 80.15,
+     "franja_min": 120
+    },
+    {
+     "dia": "2026-09-18",
+     "hora": "13:00",
+     "hora_fin": "15:00",
+     "sala": null,
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "ORANGO",
+       "director": "Samuel Kay Forrest",
+       "duracion": "94'",
+       "pais": "Guinea-Bissau",
+       "anio": null,
+       "genero": null
+      }
+     ],
+     "actividades": [
+      {
+       "tipo": "DIÁLOGO IMPROBABLE",
+       "titulo": "NOIR Y GÉNERO: Mujeres en el cine"
+      }
+     ],
+     "suma_duraciones_min": 94.0,
+     "franja_min": 120
+    }
+   ],
+   "actividades_sede": []
+  },
+  {
+   "img": "49865e69f6087991f6acb1cf53e21b23.jpg",
+   "sede": "Pontificia Universidad Javeriana - Bogotá",
+   "fecha_cabecera": "15 -16 DE SEPTIEMBRE",
+   "apertura_cabecera": null,
+   "funciones": [
+    {
+     "dia": "2026-09-15",
+     "hora": "10:00",
+     "hora_fin": "13:00",
+     "sala": "Auditorio Centro Ático (Carrera 7 # 40-62)",
+     "es_bloque": true,
+     "obras": [
+      {
+       "titulo": "CAIDA LIBRE",
+       "director": "Wilson Borja",
+       "duracion": "9'",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null,
+       "nota": "con la presencia de la directora"
+      },
+      {
+       "titulo": "KANEKALON",
+       "director": "Sara J. Asprilla",
+       "duracion": "12'30",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "BERTHA",
+       "director": "Laura Asprilla",
+       "duracion": "12'44",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "HACKER LEONILIA",
+       "director": "Gustavo Fontele Dourado",
+       "duracion": "14'59",
+       "pais": "Brazil",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "VICHE",
+       "director": "Jorge Eliecer Leudo Murillo",
+       "duracion": "17'10",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "TIA CIATA",
+       "director": "Mariana Campos y Raquel Beatriz",
+       "duracion": "26'",
+       "pais": "Brasil",
+       "anio": null,
+       "genero": null,
+       "nota": "con la presencia de la directora"
+      }
+     ],
+     "actividades": [
+      {
+       "tipo": "DIÁLOGO IMPROBABLE",
+       "titulo": "NOIR MEMORIA — Matriarcado negro y territorio sonoro"
+      }
+     ],
+     "suma_duraciones_min": 92.38,
+     "franja_min": 180
+    },
+    {
+     "dia": "2026-09-16",
+     "hora": "10:00",
+     "hora_fin": "13:00",
+     "sala": "Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes (Calle 40B # 5-37)",
+     "es_bloque": true,
+     "obras": [
+      {
+       "titulo": "LA TINAJA",
+       "director": "Ernestina Miranda, Mar Aje",
+       "duracion": "13'47",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "THE LAST DANCE",
+       "director": "Hayden Mclean",
+       "duracion": "16'39",
+       "pais": "Reino Unido",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "WATERFRONT MEMORIES",
+       "director": "Marton Olympio",
+       "duracion": "20'",
+       "pais": "Brazil",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "WHEN THE WORLD BROKE OPEN",
+       "director": "Desiree Mbakumua Meiffret",
+       "duracion": "29'59",
+       "pais": "Estados Unido",
+       "anio": null,
+       "genero": null
+      }
+     ],
+     "actividades": [
+      {
+       "tipo": "DIÁLOGO IMPROBABLE",
+       "titulo": "\"NOIR Industria: Redes Sur-Sur\" — Circulación y Mercados Sur-Sur"
+      }
+     ],
+     "suma_duraciones_min": 80.42,
+     "franja_min": 180
+    }
+   ],
+   "actividades_sede": []
+  },
+  {
+   "img": "2d99599a9b06ef084df012e5b7a9c095.jpg",
+   "sede": "Pontificia Universidad Javeriana - Bogotá",
+   "fecha_cabecera": "17 -18 DE SEPTIEMBRE",
+   "apertura_cabecera": null,
+   "funciones": [
+    {
+     "dia": "2026-09-17",
+     "hora": "10:00",
+     "hora_fin": "13:00",
+     "sala": "Sala 901 - Edificio Jorge Hoyos Vásquez, S.J. – Facultad de Ciencias Económicas y Administrativas (Carrera 7 # 40-62)",
+     "es_bloque": true,
+     "obras": [
+      {
+       "titulo": "REFUGIAR EL GESTO",
+       "director": "Adrian Villa-Davila, Andres Prado",
+       "duracion": "10'53",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "POSESAS",
+       "director": "Sebastian Wiedemann, Daniel Cortes",
+       "duracion": "16'18",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "ALTANEGRA",
+       "director": "Raiza De La Hoz, Daniela Ponce",
+       "duracion": "25'59",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "SOÑÉ SU NOMBRE",
+       "director": "Ángela Carabalí",
+       "duracion": "85'",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null,
+       "nota": "con la presencia de la guinista [sic]"
+      }
+     ],
+     "actividades": [
+      {
+       "tipo": "DIÁLOGO IMPROBABLE",
+       "titulo": "\"Después de la Tormenta: cuerpo, tierra y renacer\" — La emergencia en el Chocó y la capacidad de renacer"
+      }
+     ],
+     "suma_duraciones_min": 138.17,
+     "franja_min": 180
+    },
+    {
+     "dia": "2026-09-18",
+     "hora": "10:00",
+     "hora_fin": "13:00",
+     "sala": "Sala 903 - Edificio Jorge Hoyos Vásquez, S.J. – Facultad de Ciencias Económicas y Administrativas (Carrera 7 # 40-62)",
+     "es_bloque": true,
+     "obras": [
+      {
+       "titulo": "AMAZONAS COCINAS INDIGENAS DE SELVA Y RIO",
+       "director": "Jairo Garrido",
+       "duracion": "13'",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null,
+       "nota": "con la presencia del protagonista"
+      },
+      {
+       "titulo": "MOJUGBA",
+       "director": "Gustavo Alonso Arias",
+       "duracion": "23'33",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "A COR DA PATROA",
+       "director": "Milena Anjos",
+       "duracion": "24'48",
+       "pais": "Brazil",
+       "anio": null,
+       "genero": null
+      },
+      {
+       "titulo": "RELATOS DE LA GUAJIRITA",
+       "director": "David Antonio Díaz de la Rosa",
+       "duracion": "51'19",
+       "pais": "Colombia",
+       "anio": null,
+       "genero": null
+      }
+     ],
+     "actividades": [
+      {
+       "tipo": "DIÁLOGO IMPROBABLE",
+       "titulo": "NOIR FOGÓN: Cocina, Territorio y Memoria\""
+      }
+     ],
+     "suma_duraciones_min": 112.67,
+     "franja_min": 180
+    }
+   ],
+   "actividades_sede": []
+  },
+  {
+   "img": "c0f5bdac817a4fa94dd73448cb70b42f.jpg",
+   "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+   "fecha_cabecera": "15 DE SEPTIEMBRE",
+   "apertura_cabecera": "1:30 PM",
+   "funciones": [
+    {
+     "dia": "2026-09-15",
+     "hora": "14:00",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "LOS CHICOS DEL BANJO",
+       "director": "Johan R. Nayar",
+       "duracion": "76'",
+       "pais": "Malawi",
+       "anio": "2025",
+       "genero": "Documental"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 76.0,
+     "franja_min": null
+    },
+    {
+     "dia": "2026-09-15",
+     "hora": "17:00",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "HYPHEN",
+       "director": "Reine Razzouk",
+       "duracion": "98'",
+       "pais": "Lebanon",
+       "anio": "2023",
+       "genero": "Documental"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 98.0,
+     "franja_min": null
+    },
+    {
+     "dia": "2026-09-15",
+     "hora": "19:30",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "EL ANCLAJE DEL TIEMPO",
+       "director": "Sol de Carvalho",
+       "duracion": "105'",
+       "pais": "Mozambique",
+       "anio": "2024",
+       "genero": "Ficción"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 105.0,
+     "franja_min": null
+    }
+   ],
+   "actividades_sede": [
+    {
+     "dia": "2026-09-15",
+     "hora": "13:30",
+     "tipo": "APERTURA DE SEDE",
+     "titulo": "APERTURA 1:30 PM — apertura de la sede, no es una proyección"
+    }
+   ]
+  },
+  {
+   "img": "2e7a74d14d2bddbad0ac340d93766e87.jpg",
+   "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+   "fecha_cabecera": "16 DE SEPTIEMBRE",
+   "apertura_cabecera": "1:30 PM",
+   "funciones": [
+    {
+     "dia": "2026-09-16",
+     "hora": "14:00",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "SOBREVIVIENDO A BIAFRA",
+       "director": "Meji Alabi, Leke Alabi-Isama",
+       "duracion": "75'",
+       "pais": "Nigeria",
+       "anio": "2026",
+       "genero": "Documental"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 75.0,
+     "franja_min": null
+    },
+    {
+     "dia": "2026-09-16",
+     "hora": "17:00",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "TRES HOMBRES NEGROS",
+       "director": "Sienna McLean-LoGreco",
+       "duracion": "99'17",
+       "pais": "Estados Unidos",
+       "anio": "2026",
+       "genero": "Documental"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 99.28,
+     "franja_min": null
+    },
+    {
+     "dia": "2026-09-16",
+     "hora": "19:30",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "NUNKUI",
+       "director": "Verenice Benitez",
+       "duracion": "90'",
+       "pais": "Ecuador",
+       "anio": "2025",
+       "genero": "Ficción"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 90.0,
+     "franja_min": null
+    }
+   ],
+   "actividades_sede": [
+    {
+     "dia": "2026-09-16",
+     "hora": "13:30",
+     "tipo": "APERTURA DE SEDE",
+     "titulo": "APERTURA 1:30 PM — apertura de la sede, no es una proyección"
+    }
+   ]
+  },
+  {
+   "img": "a8a8aed2c35dc66975028ef34da0de1c.jpg",
+   "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+   "fecha_cabecera": "17 DE SEPTIEMBRE",
+   "apertura_cabecera": "1:30 PM",
+   "funciones": [
+    {
+     "dia": "2026-09-17",
+     "hora": "14:00",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "DE BARRO Y SANGRE",
+       "director": "Jean-Gabriel Leynaud",
+       "duracion": "94'",
+       "pais": "RD Congo",
+       "anio": "2025",
+       "genero": "Documental"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 94.0,
+     "franja_min": null
+    },
+    {
+     "dia": "2026-09-17",
+     "hora": "15:00",
+     "hora_fin": null,
+     "sala": "Sala 2",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "VIVA YURUMANGUI",
+       "director": "Emma Christopher, Sergio Leyva Seiglie",
+       "duracion": "80'",
+       "pais": "Colombia",
+       "anio": "2025",
+       "genero": "Documental"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 80.0,
+     "franja_min": null
+    },
+    {
+     "dia": "2026-09-17",
+     "hora": "16:30",
+     "hora_fin": null,
+     "sala": "Sala Capital",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "LA OBRA DE DIOS",
+       "director": "Michael James",
+       "duracion": "126'",
+       "pais": "South Africa",
+       "anio": "2025",
+       "genero": "Ficción"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 126.0,
+     "franja_min": null
+    }
+   ],
+   "actividades_sede": [
+    {
+     "dia": "2026-09-17",
+     "hora": "13:30",
+     "tipo": "APERTURA DE SEDE",
+     "titulo": "APERTURA 1:30 PM — apertura de la sede, no es una proyección"
+    }
+   ]
+  },
+  {
+   "img": "b09bf8f458e56d46723893a2aa4d42eb.jpg",
+   "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+   "fecha_cabecera": "18 DE SEPTIEMBRE",
+   "apertura_cabecera": "1:30 PM",
+   "funciones": [
+    {
+     "dia": "2026-09-18",
+     "hora": "14:00",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "LOS VIAJEROS",
+       "director": "David Bingong",
+       "duracion": "60'20",
+       "pais": "Cameroon",
+       "anio": "2025",
+       "genero": "Documental"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 60.33,
+     "franja_min": null
+    },
+    {
+     "dia": "2026-09-18",
+     "hora": "17:00",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "INICIACIÓN EN LA OCTAVA DIMENSIÓN",
+       "director": "Lucas Silva",
+       "duracion": "90'",
+       "pais": "Colombia",
+       "anio": "2025",
+       "genero": "Documental",
+       "nota": "+ (Presencia del director)"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 90.0,
+     "franja_min": null
+    },
+    {
+     "dia": "2026-09-18",
+     "hora": "19:30",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "GENERACIÓN EQUIVOCADA",
+       "director": "Shili Munyama",
+       "duracion": "64'53",
+       "pais": "Namibia",
+       "anio": "2026",
+       "genero": "Ficción"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 64.88,
+     "franja_min": null
+    }
+   ],
+   "actividades_sede": [
+    {
+     "dia": "2026-09-18",
+     "hora": "13:30",
+     "tipo": "APERTURA DE SEDE",
+     "titulo": "APERTURA 1:30 PM — apertura de la sede, no es una proyección"
+    }
+   ]
+  },
+  {
+   "img": "3794294afdeff7b36e6c454eeca7aaf5.jpg",
+   "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+   "fecha_cabecera": "19 DE SEPTIEMBRE",
+   "apertura_cabecera": "1:30 PM",
+   "funciones": [
+    {
+     "dia": "2026-09-19",
+     "hora": "14:00",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": true,
+     "bloque_titulo": "BLOQUE CORTOS FICCIÓN — NOIR URBANO: HISTORIAS EN CLAVE MENOR",
+     "layout": "tabla a dos columnas (izq/der) bajo un mismo horario",
+     "obras": [
+      {
+       "titulo": "CAIDA LIBRE",
+       "director": "Wilson Borja",
+       "duracion": "9'",
+       "pais": "Colombia",
+       "anio": "2024",
+       "genero": "Animación",
+       "nota": "+ (Presencia del director)"
+      },
+      {
+       "titulo": "BERTHA",
+       "director": "Laura Asprilla",
+       "duracion": "12'44",
+       "pais": "Colombia",
+       "anio": "2025",
+       "genero": "Ficción"
+      },
+      {
+       "titulo": "AVENIDA FISHKILL 305",
+       "director": "Ramel Westry",
+       "duracion": "15'",
+       "pais": "Estados Unidos",
+       "anio": "2026",
+       "genero": "Ficción"
+      },
+      {
+       "titulo": "UN DOMINGO",
+       "director": "Day Sena",
+       "duracion": "20'",
+       "pais": "Brasil",
+       "anio": "2026",
+       "genero": "Ficción"
+      },
+      {
+       "titulo": "AMELIA",
+       "director": "Badewa Adeseye Ajibade",
+       "duracion": "23'03",
+       "pais": "Nigeria",
+       "anio": "2025",
+       "genero": "Ficción"
+      },
+      {
+       "titulo": "CAFE ?",
+       "director": "Bamar Kane",
+       "duracion": "24'59",
+       "pais": "France",
+       "anio": "2025",
+       "genero": "Ficción"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 104.77,
+     "franja_min": null
+    },
+    {
+     "dia": "2026-09-19",
+     "hora": "19:30",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "DÍA DEL PADRE",
+       "director": "Ayana O'Shun",
+       "duracion": "74'",
+       "pais": "Canadá",
+       "anio": "2025",
+       "genero": "Documental"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 74.0,
+     "franja_min": null
+    }
+   ],
+   "actividades_sede": [
+    {
+     "dia": "2026-09-19",
+     "hora": "13:30",
+     "tipo": "APERTURA DE SEDE",
+     "titulo": "APERTURA 1:30 PM — apertura de la sede, no es una proyección"
+    }
+   ]
+  },
+  {
+   "img": "e82d0d755c71fa3069af0b188e21bb69.jpg",
+   "sede": "Cinemateca de Bogotá - Cra. 3 # 19-10",
+   "fecha_cabecera": "20 DE SEPTIEMBRE",
+   "apertura_cabecera": "1:30 PM",
+   "funciones": [
+    {
+     "dia": "2026-09-20",
+     "hora": "14:00",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": true,
+     "bloque_titulo": "BLOQUE CORTOS DOCUMENTAL — NOIR MEMORIAS: DE LA SOMBRA AL TESTIMONIO",
+     "layout": "tabla a dos columnas (izq/der) bajo un mismo horario",
+     "obras": [
+      {
+       "titulo": "AMAZONAS COCINAS INDÍGENAS",
+       "director": "Jairo Garrido",
+       "duracion": "13'",
+       "pais": "Colombia",
+       "anio": "2026",
+       "genero": "Documental"
+      },
+      {
+       "titulo": "CARABALÍ",
+       "director": "Medhin Tewolde",
+       "duracion": "18'20",
+       "pais": "México",
+       "anio": "2026",
+       "genero": "Documental"
+      },
+      {
+       "titulo": "UN REY DESPLAZADO",
+       "director": "Olayinka Eno Babalola",
+       "duracion": "19'57",
+       "pais": "Nigeria",
+       "anio": "2026",
+       "genero": "Documental"
+      },
+      {
+       "titulo": "HERMANAS EN EL DESTINO - ANGELA & GERTY ARCHIMÈDE",
+       "director": "Pascal Frederic Archimede, Dimitry Zandronis",
+       "duracion": "52'40",
+       "pais": "Guadeloupe",
+       "anio": "2025",
+       "genero": "Documental"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 103.95,
+     "franja_min": null
+    },
+    {
+     "dia": "2026-09-20",
+     "hora": "17:30",
+     "hora_fin": null,
+     "sala": "Sala 3",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "EL COACH DE LOS LOCOS",
+       "director": "Carlo Liberatore",
+       "duracion": "60'",
+       "pais": "Senegal",
+       "anio": "2025",
+       "genero": "Documental"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 60.0,
+     "franja_min": null
+    },
+    {
+     "dia": "2026-09-20",
+     "hora": "18:30",
+     "hora_fin": null,
+     "sala": "Sala Capital",
+     "es_bloque": false,
+     "obras": [
+      {
+       "titulo": "AISHA NO PUEDE VOLAR LEJOS",
+       "director": "Morad Mostafa",
+       "duracion": "120'",
+       "pais": "Egypt",
+       "anio": "2025",
+       "genero": "Ficción"
+      }
+     ],
+     "actividades": [],
+     "suma_duraciones_min": 120.0,
+     "franja_min": null
+    }
+   ],
+   "actividades_sede": [
+    {
+     "dia": "2026-09-20",
+     "hora": "13:30",
+     "tipo": "APERTURA DE SEDE",
+     "titulo": "APERTURA 1:30 PM — apertura de la sede, no es una proyección"
+    }
+   ]
+  }
+ ],
+ "totales": {
+  "funciones": 29,
+  "cupos_obra": 68,
+  "por_sede": {
+   "Alianza Francesa - Bogotá": {
+    "funciones": 4,
+    "cupos_obra": 12
+   },
+   "Universidad de los Andes - Bogotá": {
+    "funciones": 4,
+    "cupos_obra": 13
+   },
+   "Pontificia Universidad Javeriana - Bogotá": {
+    "funciones": 4,
+    "cupos_obra": 18
+   },
+   "Cinemateca de Bogotá - Cra. 3 # 19-10": {
+    "funciones": 17,
+    "cupos_obra": 25
+   }
+  },
+  "por_dia": {
+   "2026-09-14": {
+    "funciones": 1,
+    "cupos_obra": 3
+   },
+   "2026-09-15": {
+    "funciones": 6,
+    "cupos_obra": 15
+   },
+   "2026-09-16": {
+    "funciones": 6,
+    "cupos_obra": 17
+   },
+   "2026-09-17": {
+    "funciones": 6,
+    "cupos_obra": 12
+   },
+   "2026-09-18": {
+    "funciones": 5,
+    "cupos_obra": 8
+   },
+   "2026-09-19": {
+    "funciones": 2,
+    "cupos_obra": 7
+   },
+   "2026-09-20": {
+    "funciones": 3,
+    "cupos_obra": 6
+   }
+  },
+  "nota": "No se cuentan como 'funciones' las 6 aperturas de sede (1:30 PM Cinemateca), que van en actividades_sede. 'cupos_obra' cuenta apariciones de obra en la programación (una misma obra puede repetirse en varias funciones)."
+ },
+ "incoherencias": [
+  {
+   "img": "5999132651974788d018f6cf02a9ae33.jpg",
+   "dia": "2026-09-14",
+   "hora": "15:00-17:00",
+   "sede": "Alianza Francesa - Bogotá",
+   "tipo": "SOBRA MAS DE UNA HORA",
+   "detalle": "3 obra(s) suman 42.9 min en una franja de 120 min; sobran 77.1 min (hay 1 actividad(es) sin duración declarada en la franja)"
+  },
+  {
+   "img": "5999132651974788d018f6cf02a9ae33.jpg",
+   "dia": "2026-09-15",
+   "hora": "15:00-16:00",
+   "sede": "Alianza Francesa - Bogotá",
+   "tipo": "NO CABE",
+   "detalle": "4 obras suman 79.82 min y la franja declarada es de 60 min"
+  },
+  {
+   "img": "9da227a29a00f44c3a9a859269c6611d.jpg",
+   "dia": "2026-09-17",
+   "hora": "15:00-20:00",
+   "sede": "Alianza Francesa - Bogotá",
+   "tipo": "SOBRA MAS DE UNA HORA",
+   "detalle": "1 obra(s) suman 98.0 min en una franja de 300 min; sobran 202.0 min (hay 3 actividad(es) sin duración declarada en la franja)"
+  },
+  {
+   "img": "03d3450974919ac5db40eee608565614.jpg",
+   "dia": "2026-09-15",
+   "hora": "14:00-16:00",
+   "sede": "Universidad de los Andes - Bogotá",
+   "tipo": "NO CABE",
+   "detalle": "2 obras suman 128.0 min y la franja declarada es de 120 min; además hay 1 actividad(es) en la misma franja"
+  },
+  {
+   "img": "49865e69f6087991f6acb1cf53e21b23.jpg",
+   "dia": "2026-09-15",
+   "hora": "10:00-13:00",
+   "sede": "Pontificia Universidad Javeriana - Bogotá",
+   "tipo": "SOBRA MAS DE UNA HORA",
+   "detalle": "6 obra(s) suman 92.38 min en una franja de 180 min; sobran 87.62 min (hay 1 actividad(es) sin duración declarada en la franja)"
+  },
+  {
+   "img": "49865e69f6087991f6acb1cf53e21b23.jpg",
+   "dia": "2026-09-16",
+   "hora": "10:00-13:00",
+   "sede": "Pontificia Universidad Javeriana - Bogotá",
+   "tipo": "SOBRA MAS DE UNA HORA",
+   "detalle": "4 obra(s) suman 80.42 min en una franja de 180 min; sobran 99.58 min (hay 1 actividad(es) sin duración declarada en la franja)"
+  },
+  {
+   "img": "2d99599a9b06ef084df012e5b7a9c095.jpg",
+   "dia": "2026-09-18",
+   "hora": "10:00-13:00",
+   "sede": "Pontificia Universidad Javeriana - Bogotá",
+   "tipo": "SOBRA MAS DE UNA HORA",
+   "detalle": "4 obra(s) suman 112.67 min en una franja de 180 min; sobran 67.33 min (hay 1 actividad(es) sin duración declarada en la franja)"
+  },
+  {
+   "img": "03d3450974919ac5db40eee608565614.jpg",
+   "tipo": "CABECERA INCOMPLETA",
+   "detalle": "FECHA de cabecera dice solo «15 DE SEPTIEMBRE» pero la página contiene DOS días: 15 y 16 de septiembre (títulos internos)."
+  },
+  {
+   "img": "fa5caa355429be31291bdee349d6933a.jpg",
+   "tipo": "CABECERA FALSA",
+   "detalle": "FECHA de cabecera dice «15 DE SEPTIEMBRE» pero los títulos internos son 17 y 18 de septiembre. Se tomó el título interno como verdad."
+  },
+  {
+   "img": "5999132651974788d018f6cf02a9ae33.jpg",
+   "tipo": "AMBIGÜEDAD",
+   "detalle": "FACE TO FACE se lista como obra dentro del bloque del 14 pero está rotulada «Performance de danza» (Florent Mahoukou, 19'54, Congo): es performance, no proyección. Se contabiliza como cupo de obra y se declara aquí."
+  },
+  {
+   "img": "9da227a29a00f44c3a9a859269c6611d.jpg",
+   "tipo": "AMBIGÜEDAD",
+   "detalle": "La franja 3:00-8:00 pm del 17 mezcla una sola proyección (NI CHAÎNES NI MAÎTRES, 98') con performance, diálogo y vernissage; no hay horas individuales para cada ítem."
+  },
+  {
+   "img": "varias",
+   "tipo": "DATO AUSENTE",
+   "detalle": "En Alianza Francesa, Universidad de los Andes y Javeriana el programa NO declara año ni género de las obras (salvo AISHA NO PUEDE VOLAR LEJOS en Uniandes 15). Van como null."
+  },
+  {
+   "img": "varias",
+   "tipo": "DATO AUSENTE",
+   "detalle": "Alianza Francesa y Universidad de los Andes no declaran sala en ninguna función: sala = null."
+  },
+  {
+   "img": "3794294afdeff7b36e6c454eeca7aaf5.jpg / e82d0d755c71fa3069af0b188e21bb69.jpg",
+   "tipo": "TABLA A DOS COLUMNAS",
+   "detalle": "Los bloques de cortos del 19 (6 obras) y del 20 (4 obras) están maquetados en dos columnas bajo un único horario (2:00 pm, Sala 3). Se leen como UN bloque cada uno; el texto del 19 dice «Seis miradas breves» y el del 20 «Cuatro documentales», lo que confirma 6 y 4."
+  },
+  {
+   "img": "3794294afdeff7b36e6c454eeca7aaf5.jpg",
+   "tipo": "DATO CONTRADICTORIO ENTRE PÁGINAS",
+   "detalle": "CAIDA LIBRE aparece como «2024 – Animación» el 19 en Cinemateca; en Uniandes 16 y Javeriana 15 se atribuye «con la presencia de la directora» y aquí «+ (Presencia del director)». Se copió cada página tal cual."
+  },
+  {
+   "img": "e82d0d755c71fa3069af0b188e21bb69.jpg",
+   "tipo": "TÍTULO VARIANTE ENTRE PÁGINAS",
+   "detalle": "«AMAZONAS COCINAS INDÍGENAS» (Cinemateca 20) vs «AMAZONAS COCINAS INDIGENAS DE SELVA Y RIO» (Javeriana 18). Misma obra (Jairo Garrido, 13', Colombia), dos títulos impresos; se copian ambos verbatim."
+  },
+  {
+   "img": "e82d0d755c71fa3069af0b188e21bb69.jpg",
+   "tipo": "TÍTULO VARIANTE ENTRE PÁGINAS",
+   "detalle": "«UN REY DESPLAZADO» / «HERMANAS EN EL DESTINO - ANGELA & GERTY ARCHIMÈDE» (Cinemateca 20, en español) son las mismas obras que «A KING DISPLACED» / «SISTERS IN DESTINY: ANGELA DAVIS & GERTY ARCHIMEDE» (Alianza Francesa 16, en inglés). No se unificaron."
+  },
+  {
+   "img": "2d99599a9b06ef084df012e5b7a9c095.jpg",
+   "tipo": "ERRATA DE IMPRENTA",
+   "detalle": "«con la presencia de la guinista» (sic, por «guionista») bajo SOÑÉ SU NOMBRE."
+  },
+  {
+   "img": "49865e69f6087991f6acb1cf53e21b23.jpg",
+   "tipo": "ERRATA DE IMPRENTA",
+   "detalle": "«Estados Unido» (sic) como país de WHEN THE WORLD BROKE OPEN."
+  },
+  {
+   "img": "cabeceras de todas las parrillas",
+   "tipo": "RANGO DE EDICIÓN INCONSISTENTE",
+   "detalle": "El lomo lateral dice «8ª EDICIÓN 14 - 18 SEPTIEMBRE 2026» en 10 páginas y «14 - 17 SEPTIEMBRE 2026» en las 2 de Alianza Francesa, pero hay parrillas con funciones el 19 y el 20 en Cinemateca. Ningún rango del lomo cubre la programación real (14-20 sept)."
+  },
+  {
+   "img": "96139cf54b8c2fabcd61a58be6202340.jpg",
+   "tipo": "PÁGINA DE PROGRAMA QUE NO ES PARRILLA",
+   "detalle": "Página «Programa Prelanzamiento» (Museo Nacional): tiene horarios 4:00/4:30/5:00/5:30/6:00/6:30/7:30 PM e incluye una proyección inaugural (CARABALI de Medhin Tewolde, 18'20, México, 2026), pero NO lleva el encabezado «PROGRAMA QAFF» con campos FECHA/SEDE ni columna HORA en tabla. Por la definición dada NO se cuenta como parrilla. Su fecha no aparece en la página; otra pieza gráfica (5974226f) fecha el prelanzamiento en el Museo Nacional, Auditorio Teresa Cuervo Borda, 4:00-7:00 PM, «SEPT. 2026» sin día legible."
+  },
+  {
+   "img": "2b711c2502d59af16569c574b8de4b0f.jpg / 339f364b6fa77095864b6840cb6562a5.jpg",
+   "tipo": "SEDE ANUNCIADA SIN PARRILLA",
+   "detalle": "Piezas promocionales anuncian Museo Nacional «16>17 DE SEPTIEMBRE 2026» y Universidad Nacional «22 DE SEPTIEMBRE 2026», pero NO existe ninguna página de parrilla para esas dos sedes en las 86 imágenes."
+  }
+ ]
+}

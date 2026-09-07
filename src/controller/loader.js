@@ -6,10 +6,9 @@
 // detección-festival). Escribe bridge globals en runtime (no eval-time).
 
 import { FESTIVAL_CONFIG, NOTICES, mergeFestivalSections } from '../config.js';
-import { parseDur } from '../domain/time.js';
 import { lruTouch } from '../lru.js';
-import { DAY_ABBR, DAY_NUM, _classifyFestival, festivalShortName } from '../view/components.js';
-import { DAYS, DAY_SHORT_EN, _langDates, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly } from '../view/helpers.js';
+import {DAY_ABBR, DAY_NUM, _classifyFestival} from '../view/components.js';
+import {DAYS, DAY_SHORT_EN, setCustomPosters, setDayShort, setDayShortEn, setPosters, keepCityOnly} from '../view/helpers.js';
 import { closeFestivalSheet, openCitySheet, openReviewSheet, _reviewDesbloqueado, _pintarBannerRevision } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { _renderProgramaContent, lugarClose, scrollDtabsToActive } from '../view/programa.js';
@@ -28,7 +27,7 @@ import { state } from '../state/state.js';
 import { deriveClear } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
-import { _autoResolveFestivalPosters, _renderFestivalSelector, renderPostponedBanner } from './festival.js';
+import { _autoResolveFestivalPosters, _renderFestivalSelector, renderEndedBanner, renderPostponedBanner } from './festival.js';
 
 // Fetch del JSON de festival con timeout + reintentos (AbortController).
 // GitHub Pages a veces entrega los headers (200) pero el cuerpo se cuelga → el
@@ -592,6 +591,7 @@ export async function loadFestival(id){
   // SIEMPRE (limpia sola si no aplica; cambio de festival la retira) y también
   // desde setLang, porque la banda persiste y el cambio de idioma no pasa por acá.
   renderPostponedBanner(cfg);
+  renderEndedBanner(cfg);
   // Re-render festival selector con el nuevo festival activo
   _renderFestivalSelector(id);
   // Persist choice
@@ -716,7 +716,7 @@ export function dismissSplash(){
 
 // ── el filtro de audiencia y su interruptor ─────────────────────────────────
 // Un solo dueño para las dos direcciones: al cargar (arriba) y al conmutar.
-export function _filtrarPorAudiencia(films){
+function _filtrarPorAudiencia(films){
   return showPress ? films : films.filter(f=>f.audience!=='press');
 }
 
@@ -774,7 +774,7 @@ export function togglePressScreenings(){
 
 // Lee la preferencia guardada de ESTE festival. La llama loadFestival antes de
 // publicar FILMS, para que la primera pintura ya sea la correcta.
-export function _restaurarPrensa(cfg){
+function _restaurarPrensa(cfg){
   let v = false;
   v = storage.getShowPress(cfg.storageKey);
   showPress = v;

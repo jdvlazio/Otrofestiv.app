@@ -20,7 +20,7 @@ function _genPosterFor(f){
   });
 }
 
-export function _posterGenFallback(img, f){
+function _posterGenFallback(img, f){
   const gen=_genPosterFor(f);
   if(gen) img.src=gen; else img.style.display='none';
 }

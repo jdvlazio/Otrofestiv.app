@@ -98,6 +98,20 @@ TITULO_OCR = {
     'encuentrocolombiaexperimental': 'Encuentro Colombia Experimental Contemporánea',
 }
 
+# ── erratas DEL FESTIVAL, no del OCR ────────────────────────────────────────
+# Distinto de TITULO_OCR: aquí lo transcrito SÍ es la palabra del festival, y aun
+# así se corrige, porque el propio festival la contradice en otra superficie suya.
+# Solo entra lo que se pueda demostrar con dos fuentes suyas enfrentadas.
+#   · «Inmarcesbile»: así lo escriben su Selección Oficial y el PDF, pero el
+#     anuncio del fallo del jurado (instagram.com/p/Dc14zD7jlvn, 3 sep 2026) dice
+#     INMARCESIBLE, y esa es la palabra en español —«oh gloria inmarcesible»—.
+#     Aprobado por Juan el 6 sep.
+#   · El apellido del director va en mayúscula en su Selección Oficial («Parra
+#     Posso»); el PDF lo baja. Misma obra, misma persona.
+ERRATA_FESTIVAL = {
+    'inmarcesbile': ('Inmarcesible', 'Juan Sebastián Parra Posso'),
+}
+
 # El Encuentro es al aire libre, sin hora de fin publicada: se entra y se sale.
 # `info` existe exactamente para eso — aparece en el programa y NO entra al plan
 # ni a conflictos (docs/SCHEMA.md). Inventarle una duración sería peor.
@@ -189,13 +203,18 @@ def main():
                         # basura entre paréntesis («Abjad Hawaz (i÷@-•g)»). Se
                         # quita: un título con ruido es peor que un título corto.
                         _t = re.sub(r'\s*\([^)]*[÷@|=~][^)]*\)', '', o.group('titulo'))
-                        f['obras'].append({
+                        _ob = {
                             'titulo': _t.strip(' •*.'),
                             'director': o.group('dir').strip(),
                             'anio': int(o.group('anio')) if o.group('anio') else None,
                             'pais': o.group('pais').strip(' .'),
                             'duracion_min': int(o.group('min')),
-                        })
+                        }
+                        _er = ERRATA_FESTIVAL.get(_n(_ob['titulo']).replace(' ', ''))
+                        if _er:
+                            _ob['_impreso'] = f"{_ob['titulo']} · {_ob['director']}"
+                            _ob['titulo'], _ob['director'] = _er
+                        f['obras'].append(_ob)
                     continue
                 # EL Q&A ESTABA AQUÍ Y LO ESTABA TIRANDO. Estas líneas parecen
                 # pie de página de diseño —«Esta muestra tendrá un breve

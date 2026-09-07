@@ -491,7 +491,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202609051033';
+const BUILD_VERSION='202609071136';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -548,7 +548,21 @@ filmDelays={};            // retrasos manuales: key=title|day|time, val=mins
 filmDelaysHistory={};     // p5.5: undo stack — key=title|day|time, val=[prev1, prev2, ...]
                               // Separado de filmDelays para inmutabilidad (era ._hist anidado pre-p5.5).
 // ── Simulation clock (dev tool) ──
-_simTime=null; // null = real time
+// `?simTime=` lo fija ANTES del arranque, y eso es lo que aporta sobre ponerlo
+// desde afuera: todo lo que el arranque decide MIRANDO LA HORA —en qué fase está
+// el festival, si se abre la pregunta de ciudad (loader.js)— quedaba fuera del
+// alcance de cualquier prueba, porque el reloj solo se podía mover después.
+// T52/T53 lo cazaron: comprueban que la hoja no vuelva a preguntar, y el
+// arranque las miraba siempre con la hora real. (Juan, 4 sep 2026; precedente:
+// `?fest=` y `?updPoll=`.)
+// Una fecha ilegible cae a tiempo real en vez de propagar un Invalid Date a
+// todas las comparaciones de la app.
+_simTime=(function(){
+  var m=location.search.match(/[?&]simTime=([^&]+)/);
+  if(!m) return null;
+  var v=decodeURIComponent(m[1]);
+  return isNaN(new Date(v).getTime()) ? null : v;
+})(); // null = real time
 // simNow() → Date — Date de "ahora" controlable para sim/QA.
 // Lee (contrato implícito): _simTime (null = tiempo real; string ISO = override).
 // Returns: new Date(_simTime) si _simTime es truthy, sino new Date() (tiempo real).
@@ -1049,7 +1063,13 @@ document.addEventListener('click',function(e){
   // más. Honrar la declaración cubre a los que vengan; la lista se queda para
   // .int-seen-btn, el único que no la declara.
   const _stop=e.target.closest('[data-stop="1"]');
-  if(_stop) return;
+  // …salvo cuando el que declara `data-stop` es EL MISMO que abre la ficha.
+  // El póster de Mi Plan y el de las no incluidas llevan las dos cosas: la marca
+  // de abrir y el `data-stop`, que ahí dice «no actúe la FILA», no «no me abras».
+  // Al empezar a honrar `data-stop` (30 ago) el toque al póster quedó muerto en
+  // Mi Plan — medido el 4 sep: las 4 filas de un plan de Cinemancia, obra,
+  // programa y evento, ninguna abría. El que abre no puede vetarse a sí mismo.
+  if(_stop&&!(_stop.classList.contains('js-open-pel')||_stop.classList.contains('js-open-corto'))) return;
   if(e.target.closest('.plist-heart')) return; // heart toggle — no abrir sheet
   if(e.target.closest('.suggestion-add')) return; // botón Añadir — no abrir sheet
   if(e.target.closest('.int-prio-btn')) return; // estrella priorizar — no abrir sheet

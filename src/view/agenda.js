@@ -7,16 +7,16 @@
 // runCalc NO es dep de este árbol (va a Wave 7 controller).
 
 import {
-  DEFAULT_DURATION_MIN, FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG,
+  FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG,
 } from '../config.js';
 import {
-  ICONS, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
+  ICONS, _secLabel, _secLabelFull, escXML, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
 } from './components.js';
 import {
-  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, hayEvento, getCortoItemPoster, itemPosterParts, posterParts, dayChip, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, programParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
+  DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, hayEvento, getCortoItemPoster, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, programParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
 } from './helpers.js';
 import {
-  _festDate, _festNowMin, dayFullyPassed, festivalEnded, minToStr, simNow, simTodayStr, toMin,
+  _festNowMin, dayFullyPassed, durEstimada, festivalEnded, minToStr, simTodayStr, toMin,
 } from '../domain/time.js';
 // Consenso colaborativo de retraso (Fase B): renderAgenda (impura/exenta) lo lee
 // del controller y lo pasa como dato a las funciones puras del view.
@@ -26,7 +26,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, screeningEndDate, effectiveDuration, blockDuration, durationForTravel, delayedEndMin, _delayKey, _endedStats, prioLiveCount, effectiveWatched,
+  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, blockDuration, delayedEndMin, _delayKey, _endedStats, prioLiveCount, effectiveWatched,
 } from '../domain/film.js';
 import { sameEntry,
   isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
@@ -46,7 +46,7 @@ export function renderAgenda(){
   // branch-específicos (_scrollMiPlanToNow, renderAvBlocks,
   // _agHi.style.display, requestAnimationFrame(_fixStickyOffset)). Split impráctico
   // — body se queda monolítico con state.snapshot() destructure al top.
-  const {savedAgenda, FILMS, _activeFestId, watched, watchlist, prioritized, availability} = state.snapshot();
+  const {savedAgenda, FILMS, _activeFestId, watched, watchlist} = state.snapshot();
   const view=document.getElementById('ag-view');
   if(activeMNav==='mnav-seleccion'){
     // ── Modo Recuerdo (RFC docs/RFC-modo-recuerdo.md): Intereses deja de ser
@@ -72,8 +72,16 @@ export function renderAgenda(){
         const _fs=FILMS.filter(x=>x.title===title);
         const _canc=_fs.length>0&&_fs.every(x=>x._cancelled);
         const stars=seen&&filmRatings&&filmRatings[title]?`<span class="txt-amber-sm">${starsText(filmRatings[title])}</span>`:'';
+        // La línea de metadatos dice lo que SABEMOS de la obra; el estado «vista»
+        // ya lo dicen el botón, la marca ✓ y el atenuado de la fila. Cuando la
+        // obra estaba vista y SIN calificar caía en la misma cadena que el botón
+        // y la fila tartamudeaba: «Madres de nacimiento | Vista | Vista»
+        // (auditoría 4 sep 2026). Con estrellas se veía bien; sin ellas, no.
+        // Sin calificación se muestra la sección, igual que en una obra no vista:
+        // el dato que hay, en el lugar del dato. Las estrellas siguen ganando
+        // cuando existen, así que la rama de `seen` sobraba.
         const meta=_canc?`<span class="txt-amber-sm">${t('notice_cancelada')}</span>`
-          :seen?(stars||t('cta_vista')):_secLabelFull((f&&f.section)||'');
+          :(stars||_secLabelFull((f&&f.section)||''));
         const poster=f?`<div class="js-open-pel" data-title="${title.replace(/"/g,'&quot;')}" style="cursor:pointer">${_posterThumb(f,'lb-poster')}</div>`:'';
         return`<div class="saved-item${seen&&!_canc?' done':''}"${seen&&!_canc?'':' style="opacity:.65"'}>
           ${poster}
@@ -84,8 +92,15 @@ export function renderAgenda(){
           ${_canc?'':`<button class="saved-check${seen?' done':''}" data-title="${title.replace(/"/g,'&quot;')}" data-action="toggleWatched">${seen?ICONS.check+' '+t('cta_vista'):t('cta_vista')}</button>`}
         </div>`;
       };
-      const _vistas=_wl.filter(x=>watched.has(x));
-      const _ganas=_wl.filter(x=>!watched.has(x));
+      // effectiveWatched, el DUEÑO ÚNICO (film.js): una función del plan que ya
+      // terminó SE ASUME vista. Acá se preguntaba por el `watched` crudo y las dos
+      // pantallas se contradecían a dos toques: Mi Plan titulaba «Viste 4
+      // actividades» —ese sí usa el dueño, vía _endedStats— mientras Intereses
+      // archivaba dos de ellas bajo «Te quedaste con ganas» (auditoría 4 sep).
+      // Esta rama vive dentro de festivalEnded(), así que no cambia nada en vivo.
+      const _eff=effectiveWatched();
+      const _vistas=_wl.filter(x=>_eff.has(x));
+      const _ganas=_wl.filter(x=>!_eff.has(x));
       view.innerHTML=`<div class="ag-section">
         ${_vistas.length?`<div class="sec-hdr sm">${ICONS.eye} <span>${t('int_vistas_hdr')}</span></div>${_vistas.map(x=>_row(x,true)).join('')}`:''}
         ${_ganas.length?`<div class="sec-hdr sm">${ICONS.heart} <span>${t('int_ganas')}</span></div>${_ganas.map(x=>_row(x,false)).join('')}`:''}
@@ -379,8 +394,6 @@ export function renderMiPlanCalendar(state){
 
   // ── Navigation header ──
   // En overview: no paginador
-  const lbl1=dayLabel(DAY_KEYS[vs]); // 'MIÉ 15'
-  const lbl2=dayLabel(DAY_KEYS[ve]); // 'MIÉ 15'
   const isPastVs=nowDayIdx>=0&&vs<nowDayIdx;
   const isPastVe=nowDayIdx>=0&&ve<nowDayIdx;
   const navHtml=`<div class="mplan-nav">
@@ -450,7 +463,6 @@ export function renderMiPlanCalendar(state){
       const filmKey=(s._title||'')+s.time;
       const isActive=filmKey===_activeMiPlanFilm;
       const stateClass=isPast?' mp-past':isNow?' mp-now':isActive?' mp-active':'';
-      const{displayTitle}=parseProgramTitle(s._title||'');
       const isPrio=type==='mp-priority';
       const isEvent=type==='mp-event';
       const showVenue=blockH>44;
@@ -561,7 +573,6 @@ export function renderMiPlanCalendar(state){
       const _voidFix=_void
         ?`<button class="suggestion-add mplan-fix" data-title="${safeT}" data-action="planFixNotice" data-stop="1">${_voidCanc?t('plan_fix_cancelada'):t('plan_fix_movida')}</button>`:'';
       const _isEventRow=_mf&&_mf.type==='event';
-      const _safeMpT=(s._title||"").replace(/'/g,"\\'");
       const _mphInner=_mp
           ?_posterThumb(_mf,'lb-poster')
           :_isEventRow
@@ -577,7 +588,11 @@ export function renderMiPlanCalendar(state){
             // la fila muestra dos horas y no decía cuál era cuál — y la duración,
             // que es lo único que las conectaría, no está en la fila. No repite el
             // inicio porque ya vive arriba, grande y en ámbar.
-            const _fin=t('plan_hasta',{h:mplanEndStr(s.time,dur)});
+            // La `~` marca lo ESTIMADO — misma convención que la cuenta del cruce
+            // (helpers.js: «llegarías ~21:15»). Sin duración publicada, la hora de
+            // salida NO es dato: sale de rellenar el hueco con DEFAULT_DURATION_MIN.
+            const _durEst=durEstimada((FILMS.find(fi=>sameEntry(fi,s))||s).duration);
+            const _fin=t('plan_hasta',{h:(_durEst?'~':'')+mplanEndStr(s.time,dur)});
             if(!_void) return _fin;
             // REPROGRAMADA: DÓNDE quedó, no dónde estaba (30 ago 2026). La fila
             // mostraba la hora VIEJA («17:00 · REPROG. · hasta 18:30») y el día y
@@ -712,10 +727,9 @@ export function renderDiaryHTML(state){
 }
 
 export function renderContextualHeader(state, consensus){
-  const {savedAgenda, FILMS, watched, prioritized, filmRatings, filmDelays, _activeFestId, _lang} = state.snapshot();
+  const {savedAgenda, FILMS, filmRatings, filmDelays, _activeFestId, _lang} = state.snapshot();
   const ph=_getFestivalPhase();
   if(!ph) return '';
-  const _dayAbbr=k=>(dayLabel(k)||k).split(' ')[0]||'';
 
   // ── ENDED ─────────────────────────────────────────────────
   if(ph.phase==='ended'){
@@ -872,7 +886,7 @@ export function renderContextualHeader(state, consensus){
 
   // ── BETWEEN ─────────────────────────────────────────────────
   if(ph.phase==='between'){
-    const{gapMin,gapFromMin,gapToMin,gapSuggestion,next}=ph;
+    const{gapToMin,gapSuggestion,next}=ph;
     // Cuenta regresiva DESDE AHORA hasta la siguiente actividad (decisión Juan
     // 18 jul 2026): la etiqueta dice "hasta tu siguiente actividad" → debe medir
     // desde ahora, NO el largo total del hueco (que arrancaba en el fin de la
@@ -882,7 +896,6 @@ export function renderContextualHeader(state, consensus){
     const nowMin=_festNowMin();
     const untilNextMin=Math.max(0,gapToMin-nowMin);
     const gapLabel=_minFmt(untilNextMin);
-    const fillPct=gapMin>0?Math.min(100,Math.round((nowMin-gapFromMin)/gapMin*100)):0;
     // Sugerencia SOLO cuando algo cabe en el hueco (decisión Juan 18 jul 2026):
     // sin sugerencia no se dice nada — "No hay actividades disponibles" era ruido
     // que anunciaba una ausencia. La info precisa ya está en el contador + próxima.
@@ -932,7 +945,6 @@ export function renderContextualHeader(state, consensus){
     // Consistente con el sistema: link-gray-xs, misc_ver_todo existente
     const MAX_VISIBLE=2;
     const mkChip=s=>{
-      const{displayTitle:dt}=parseProgramTitle(s._title||'');
       const f=FILMS.find(fi=>fi.title===s._title);
       // El plan guardado puede referenciar títulos que ya no existen en FILMS
       // (JSON del festival corregido/renombrado post-guardado) — sin chip, sin crash.
@@ -1028,7 +1040,7 @@ export function renderPrioStrip(state, opts={}){
 }
 
 export function renderFilmListHTML(state){
-  const {FILMS, FESTIVAL_DATES, filmRatings, PRIO_LIMIT, prioritized, savedAgenda, watched, watchlist} = state.snapshot();
+  const {FILMS, filmRatings, PRIO_LIMIT, prioritized, savedAgenda, watched, watchlist} = state.snapshot();
   const prioList=[...prioritized].filter(titleStr=>!watched.has(titleStr));
   const nonPrioList=[...watchlist].filter(titleStr=>!watched.has(titleStr)&&!prioritized.has(titleStr));
   const watchedList=[...watched];
@@ -1055,16 +1067,6 @@ export function renderFilmListHTML(state){
     return _aqui[0]||future[0]||null;
   }
 
-  // ── Label de día relativo: hoy→solo hora, mañana→MAÑANA, otro→label ──
-  function _relDayLabel(screening){
-    const todayStr=simTodayStr();
-    const todayKey=DAY_KEYS.find(d=>FESTIVAL_DATES[d]===todayStr);
-    const tomorrowIdx=todayKey?DAY_KEYS.indexOf(todayKey)+1:-1;
-    const tomorrowKey=tomorrowIdx>0&&tomorrowIdx<DAY_KEYS.length?DAY_KEYS[tomorrowIdx]:null;
-    if(screening.day===todayKey) return screening.time+(screening.venue?' · '+screening.venue:'');
-    if(tomorrowKey&&screening.day===tomorrowKey) return t('bar_manana').toUpperCase()+' · '+screening.time+(screening.venue?' · '+screening.venue:'');
-    return dayLabel(screening.day)+' · '+screening.time+(screening.venue?' · '+screening.venue:'');
-  }
 
   // ── Detecta conflicto con agenda guardada ──────────────────────────────
   function _hasConflict(title){
@@ -1254,15 +1256,21 @@ export function renderSavedAgendaHTML(state, consensus){
   }
 }
 
-export function _renderSavedAgendaHTML(state, consensus){
-  const {savedAgenda, FILMS, watched, watchlist, _activeFestId, FESTIVAL_DATES} = state.snapshot();
+function _renderSavedAgendaHTML(state, consensus){
+  const {savedAgenda, watched, watchlist, _activeFestId, FESTIVAL_DATES} = state.snapshot();
   if(festivalEnded()){
     // ── Modo Recuerdo (RFC docs/RFC-modo-recuerdo.md) ──
     // El plan vivido NO desaparece: recap (si hay vistas) + calendario read-only
     // con marca Vista retroactiva por ítem (toggleWatched — par ya aprendido).
     const _plan=(savedAgenda&&savedAgenda.schedule)?savedAgenda.schedule:[];
+    // Las tres puertas de abajo preguntaban por el `watched` CRUDO, y el recap que
+    // abren cuenta con effectiveWatched (vía _endedStats). Quien armó su plan, fue
+    // a todo y no volvió a tocar la app —el uso más natural— entraba y encontraba
+    // sus afiches pintados, «Marcá lo que viste», y NINGÚN botón de compartir: se
+    // le escondía justo lo que el modo Recuerdo promete (auditoría 4 sep).
+    const _eff=effectiveWatched();
     // Con vistas: hero recap existente (pósters + estrellas)
-    const _recap=watched.size>0?(renderContextualHeader(state, consensus)||''):'';
+    const _recap=_eff.size>0?(renderContextualHeader(state, consensus)||''):'';
     // Sin vistas pero con plan: hero "Tu festival" invitando a marcar
     const _hero=(!_recap&&_plan.length)?`<div class="ag-section">
       <div class="mb-2 sec-hdr">${ICONS.sparkles} ${t('recap_tu_festival')}</div>
@@ -1271,11 +1279,11 @@ export function _renderSavedAgendaHTML(state, consensus){
     // Cuerpo: el DIARIO — el mismo muro que la sección (anatomía única; los
     // vistos, por obra) + los del plan sin marcar (atenuados, ✓ Vista). El póster
     // prima: mismo modelo del share del Diario.
-    const _vivido=(_plan.length||watched.size)?`<div class="ag-section">
+    const _vivido=(_plan.length||_eff.size)?`<div class="ag-section">
       <div class="mb-2 sec-hdr">${ICONS.bookOpen} <span>${t('diary_eyebrow')}</span></div>
       ${renderDiaryHTML(state)}</div>`:'';
     // Compartir mi festival (RFC F2): reutiliza el export del Diario.
-    const _shareBtn=watched.size>0?`<button class="ag-save-btn" data-action="shareDiary">${ICONS.share} ${t('recap_compartir')}</button>`:'';
+    const _shareBtn=_eff.size>0?`<button class="ag-save-btn" data-action="shareDiary">${ICONS.share} ${t('recap_compartir')}</button>`:'';
     if(_recap||_vivido) return`<div class="saved-agenda">${_recap}${_hero}${_vivido}${_shareBtn}</div>`;
     // Sin vistas NI plan: empty state canónico
     const _festNameMp=(FESTIVAL_CONFIG[_activeFestId]||{}).name||t('misc_festival_default');
@@ -1291,13 +1299,7 @@ export function _renderSavedAgendaHTML(state, consensus){
     ? emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('cta_ir_planear'),'mnav-planner')
     : emptyStateHero(ICONS.calendar,t('plan_tu_plan_empty'),t('empty_intereses'),t('plan_ir_programa'),'mnav-cartelera');
   const all=savedAgenda.schedule;
-  const planTitles=new Set(all.map(s=>s._title));
   // Películas marcadas vistas FUERA del plan — en watched pero no en savedAgenda
-  const watchedOutsidePlan=[...watched]
-    .filter(t=>!planTitles.has(t))
-    .map(t=>FILMS.find(f=>f.title===t))
-    .filter(Boolean)
-    .filter((f,i,arr)=>arr.findIndex(x=>x.title===f.title)===i);
   const upcoming=all.filter(s=>!screeningPassed(s)&&!watched.has(s._title));
   const futureItems=upcoming.filter(s=>!isToday(s.day));
   const byDay={};
@@ -1307,14 +1309,12 @@ export function _renderSavedAgendaHTML(state, consensus){
   const dayIdx=DAY_KEYS.findIndex(d=>FESTIVAL_DATES[d]===today);
   const currentDayNum=dayIdx>=0?dayIdx+1:null;
   const totalDays=Math.max(1,DAY_KEYS.length);
-  const viewedCount=all.filter(s=>watched.has(s._title)).length;
   // Total del Diario en PELÍCULAS vistas: un programa cuenta por sus obras (lo que
   // el usuario vio), un film suelto por sí mismo. Plan + fuera del plan, títulos únicos.
   // La cuenta la da _endedStats (dominio, dueño único). Tenía su propia suma
   // acá y divergía del titular del Recuerdo: aquella descartaba los eventos y
   // esta no. Medido con FICDEH: 2 contra 3 con un taller marcado — dos números
   // para lo mismo, a dos centímetros uno del otro.
-  const _diaryCount=_endedStats().totalWatched;
   // ── Banda del Plan (auditoría de jerarquía, 18 ago 2026) ────────────────────
   // El calendario era la única zona funcional de la app sin identidad de
   // sección: hero, fila de progreso, grilla y botones sin un solo separador,
@@ -1334,7 +1334,6 @@ export function _renderSavedAgendaHTML(state, consensus){
   const progressBar=`<div class="sec-hdr">${ICONS.calendar} <span>${t('label_mi_plan_hdr')}</span> <span class="count-badge cb-neutral">${all.length}</span><span class="hdr-end">${currentDayNum?`<span class="sec-hdr-opt">${t('label_dia_prog')} <b>${currentDayNum}</b> ${t('label_de_dias')} ${totalDays}</span>`:''}</span></div>`;
 
   const _ctxHeader=renderContextualHeader(state, consensus);
-  const _nextStrip=''; // delay controls integrated into ctx-header
   let html=`<div class="saved-agenda">
     ${_ctxHeader}
     ${progressBar}
@@ -1383,7 +1382,6 @@ export function _renderSavedAgendaHTML(state, consensus){
       html+=`<div class="suggestion-day-lbl">${dayLabelLong(day)}</div>`;
       html+=suggsByDay[day].map(f=>{
         const vc2=vcfg(f.venue),sl=sala(f.venue);
-        const _sp=getFilmPoster(f);
         const _sph=_posterThumb(f,'lb-poster');
         return`<div class="suggestion-item js-open-pel" data-title="${escXML(f.title)}">
           ${_sph}
@@ -1456,7 +1454,7 @@ function _dwCard(state,{title,poster,posterSVG,rating,off}){
 // renderDiaryWall — el muro CONTINUO de lo visto (Juan, 18 ago: los días
 // «limitan la visual y generan muchos espacios»). Una sola retícula en orden
 // cronológico, sin separadores: la tapa manda y los afiches casi se tocan.
-export function renderDiaryWall(state){
+function renderDiaryWall(state){
   const {FILMS, savedAgenda, filmRatings, notWatched} = state.snapshot();
   const eff=effectiveWatched();
   const all=(savedAgenda&&savedAgenda.schedule)||[];
@@ -1491,11 +1489,11 @@ export function renderDiaryWall(state){
   return`<div class="dw-grid">${cards.map(c=>_dwCard(state,c)).join('')}</div>`;
 }
 
-export function renderDiarioSection(state){
+function renderDiarioSection(state){
   // Estado REPLEGADO dentro de Mi Plan (Juan, 18 ago): alto FIJO — no crece con
   // lo visto, así no le come el scroll al calendario ni a Sugerencias, que son
   // lo único accionable. La tira insinúa la colección; el Diario vive detrás.
-  const {FILMS, savedAgenda, notWatched} = state.snapshot();
+  const {FILMS, savedAgenda} = state.snapshot();
   const eff=effectiveWatched();
   if(!eff.size) return '';
   const all=(savedAgenda&&savedAgenda.schedule)||[];
@@ -1540,8 +1538,7 @@ export function buildResultHTML(scenarios){
     return`<div class="ag-calc-prompt">${t(_conBloqueos?'plan_sin_combos_av':'plan_sin_combos')}</div>`;
   }
   const{currentIdx}=cachedResult;
-  const sc=scenarios[currentIdx],n=scenarios.length;
-  const pending=[...watchlist].filter(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
+  const sc=scenarios[currentIdx];
   // `total` y `bad` alimentaban el banner «Los títulos no incluidos se solapan
   // con otros en tu Plan», retirado el 17 ago: solo podía ser cierto cuando TODAS
   // las filas compartían causa, y se mostraba con 7 de 9 que ni siquiera habían
@@ -1623,13 +1620,11 @@ export function buildResultHTML(scenarios){
   // Un segundo filtro acá sería un camino duplicado esperando divergir.
   if(_excVivas.length){
     const _excItems=_excVivas.map(excTitle=>{
-      const t_=excTitle; // alias para no pisar t() i18n
       // El motivo sale del MISMO lugar que la razón que se muestra (abajo), no
       // de un segundo cálculo: es lo que decide en qué sección cae la fila.
       let _kind='otro', _ciudadFn='', _ciudadPlan='';
       const{displayTitle:dt}=parseProgramTitle(excTitle);
       const f=FILMS.find(fi=>fi.title===excTitle);
-      const poster=f?getFilmPoster(f):null;
       const secLabel=f?_secLabel(f.section||''):'';
       const safeT=excTitle.replace(/"/g,'&quot;').replace(/'/g,"&#39;");
       const posterHtml=_posterThumb(f,'int-item-poster');
@@ -1810,9 +1805,24 @@ export function buildResultHTML(scenarios){
   // no cruza ciudades (#594), así que una obra de otra ciudad nunca fue
   // candidata — contarla como costo del Plan inflaba el número al doble. Mismo
   // argumento que ya sacó del conteo a las que el festival se llevó.
-  const _fuera=_nFuera
-    ?` <span class="dato-linea">· ${_nFuera===1?t('res_fuera_1'):t('res_fuera',{n:_nFuera})}</span>`
-    :'';
+  // El titular NOMBRA la ciudad cuando el filtro la restringe (auditoría 4 sep
+  // 2026). El planificador no cruza ciudades, y el comentario de arriba ya lo
+  // usaba para no inflar «quedaron fuera» — o sea que la ciudad era un insumo del
+  // resultado que el resultado no decía. Medido en FICDEH con la MISMA lista de
+  // intereses y el mismo reloj, cambiando solo el filtro: «7 obras · 4 días»
+  // (Bogotá), «7 obras · 2 días» (Ibagué) y «7 obras · 5 días» (todas). Tres
+  // planes sin nada en común y el mismo titular. La barra de Lugar vive en
+  // Programa, así que en Planear no hay dónde leerlo.
+  // Una SOLA línea gris con la cola del titular: la ciudad y las que quedaron
+  // fuera. Iban en dos `.dato-linea` y T93 —que busca «cuántas quedaron fuera»
+  // como la primera línea gris del resultado— encontraba la ciudad y no veía
+  // ningún número. Juntas también se leen mejor: son la misma aclaración.
+  const _selCiudad=keepCityOnly(typeof activeVenue!=='undefined'?activeVenue:'all');
+  const _cola=[
+    _selCiudad==='all'?'':t('res_en_ciudad',{c:_selCiudad.slice(5)}),
+    _nFuera?(_nFuera===1?t('res_fuera_1'):t('res_fuera',{n:_nFuera})):'',
+  ].filter(Boolean).join(' · ');
+  const _fuera=_cola?` <span class="dato-linea">· ${_cola}</span>`:'';
   let html=`${_staleBanner}<div class="ag-summary ag-summary-res">
     <div class="dato-resultado">${hayEvento(sc.schedule,FILMS)
       ?`${ok} ${ok!==1?t('misc_actividades'):t('misc_actividad')}`
@@ -1865,8 +1875,6 @@ export function mkAgendaRow(s, mode='saved'){
   const title=s._title||'';
   const{displayTitle,progSuffix}=parseProgramTitle(title);
   const f=FILMS.find(fi=>fi.title===title);
-  const _p=getFilmPoster(f);
-  const _safePT=title.replace(/'/g,"\\'");
   const _phInner=_posterThumb(f,'lb-poster');
   const _ph=`<div class="js-open-pel" data-title="${escXML(title)}" style="flex-shrink:0;cursor:pointer">${_phInner}</div>`;
   const vc2=vcfg(s.venue),sl=sala(s.venue);

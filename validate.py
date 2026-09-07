@@ -3128,76 +3128,154 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar icon-single-source: {_e}')
 
-# ── [country-flags] si hay país, hay bandera (regla Juan 18 jul 2026) ──────────
+# ── [country-flags] si hay país, hay bandera (regla Juan 18 jul 2026) ─────────
 # El bug Voces del Territorio: countryToFlags partía solo por "/" y el string con
-# comas caía al globo 🌍. Fix aplicado; este guardián evita la recaída a nivel de
-# DATOS: en los festivales VIVOS, todo país (partido por coma/barra) debe estar en
-# _COUNTRY_FLAGS o el film debe traer un campo `flags` autorizado. Un país nuevo sin
-# mapear se caza aquí antes de mostrar globo. Festival nuevo activo → sumarlo abajo.
+# comas caía al globo 🌍. Este guardián evita la recaída a nivel de DATOS.
+#
+# Ya no lee una tabla escrita a mano: usa lib.banderas(), el MISMO motor y la
+# MISMA tabla generada que el app (src/domain/banderas.js sobre paises.js). Antes
+# comparaba contra un literal del controlador con reglas propias, y eso era
+# justamente el fallo que perseguía: la tabla del app decía «Países Bajos» y
+# Cinemancia escribió «Países bajos», así que el guardián daba verde y la ficha
+# de «Koki, Ciao» mostraba un globo, con el festival en curso (Juan, 4 sep 2026).
+#
+# Y mira TODOS los festivales, no solo los vivos: un archivado se sigue abriendo
+# desde el splash, y la lista de vivos ya envejeció una vez.
 check = 'country-flags'
 try:
-    import re as _re, json as _json, datetime as _dt, glob as _g2
-    # Los festivales VIVOS se DERIVAN de FESTIVAL_CONFIG (festivalEndStr futuro).
-    # Antes era una lista escrita a mano y nadie la actualizó nunca: el guardián
-    # llevaba meses dando verde sobre dos festivales ya pasados mientras
-    # FICMontañas y FINCA se publicaban sin revisar — "el segundo festival
-    # consecutivo con globos" (Juan, 29 jul 2026). Un guardián con lista manual
-    # no es un guardián: es una foto que envejece.
-    _cfg = open('src/config.js', encoding='utf-8').read()
-    _hoy = _dt.date.today().isoformat()
-    _vivos = set()
-    for _fid, _end in _re.findall(r"'([a-z0-9]+)':\s*\{.*?festivalEndStr:\s*'(\d{4}-\d{2}-\d{2})", _cfg, _re.S):
-        if _end >= _hoy:
-            _vivos.add(_re.sub(r'([a-zA-Z]+)(\d+)$', r'\1-\2', _fid))
-    _ACTIVE = [f'festivals/{_v}.json' for _v in sorted(_vivos)]
-    if not _ACTIVE:  # sin festivales vivos, revisar el más reciente igual
-        _ACTIVE = sorted(_g2.glob('festivals/*.json'))[-1:]
-    _js = open('src/controller/sheets-controller.js', encoding='utf-8').read()
-    _m = _re.search(r'const _COUNTRY_FLAGS=\{(.*?)\};', _js, _re.S)
-    _mapped = set(_re.findall(r"'([^']+)':", _m.group(1))) if _m else set()
-    _bad = []
-    def _walk_films(_films, _fid):
-        for _f in _films or []:
-            _c = (_f.get('country') or '').strip()
-            if _c and not _f.get('flags'):
-                _parts = [p.strip() for p in _re.split(r'[,/()]', _c) if p.strip()]
-                _unmapped = [p for p in _parts if p not in _mapped]
-                if _unmapped:
-                    _bad.append(f"{_fid}: '{_f.get('title','?')[:30]}' país sin bandera: {', '.join(_unmapped)}")
-            _walk_films(_f.get('film_list'), _fid)
-    for _af in _ACTIVE:
+    import glob as _g2, json as _json, sys as _sys
+    _sys.path.insert(0, 'pipeline')
+    import lib as _lib
+    # «Varios», «Iberoamérica», la URSS: no llevan bandera A PROPÓSITO, y están
+    # declaradas en el generador. Perseguirlas sería pedir que alguien invente
+    # una bandera para un Estado que no existe.
+    _SINB = set(_json.load(open('pipeline/paises.json', encoding='utf-8'))['sin_bandera'])
+    _declarado = lambda _c: all(_lib.norm(_x) in _SINB or not _lib.norm(_x)
+                                for _x in __import__('re').split(r'[,/()]', _c))
+    # Una bandera son DOS «regional indicator». Un número impar es media
+    # bandera: se dibuja como una letra en un recuadro. Lo escribí yo mismo hoy
+    # derivando banderas de un film_list, iterando el string carácter a carácter
+    # en vez de por pares — «🇨🇴🇨🇺» salió «🇨🇴🇺». No rompe nada y no da error.
+    _IND = __import__('re').compile('[\U0001F1E6-\U0001F1FF]')
+    _bad, _mudos, _rotas = [], [], []
+    for _af in sorted(_g2.glob('festivals/*.json')):
+        _fid = _af.split('/')[-1]
         try:
             _d = _json.load(open(_af, encoding='utf-8'))
-        except FileNotFoundError:
+        except Exception:
             continue
-        _walk_films(_d.get('films'), _af.split('/')[-1])
-    # SEGUNDA MITAD, la que faltaba. Lo de arriba comprueba que el país SE PUEDA
-    # mapear; no que la bandera EXISTA en el dato. FICDEH pasó en verde durante
-    # todo el festival con 415 films mostrando su país y ninguna bandera: sus
-    # países estaban perfectamente mapeados y el pipeline nunca emitió `flags`,
-    # que es lo único que la ficha pinta (`flagFmt(f.flags)`, sin derivar).
-    # Un guardián que verifica que algo SE PUEDE hacer no verifica que se haya
-    # hecho. Lo encontró Juan mirando la app, 13 ago 2026.
-    _mudos = []
-    for _af in _ACTIVE:
-        try:
-            _d = _json.load(open(_af, encoding='utf-8'))
-        except FileNotFoundError:
-            continue
+        _vistos = set()
+        def _walk_films(_films):
+            for _f in _films or []:
+                _c = (_f.get('country') or '').strip()
+                # SIN el `and not flags`. Ese atajo daba por buena la obra que ya
+                # traía bandera en el dato, y hay superficies que NO la usan: la
+                # ficha de un corto la vuelve a derivar del país (`data-cc`). El
+                # país tiene que mapear AUNQUE la bandera ya esté; si no, el
+                # guardián verde y el globo en pantalla conviven.
+                if _c and _c not in _vistos and not _lib.banderas(_c) and not _declarado(_c):
+                    _vistos.add(_c)
+                    _bad.append(f"{_fid}: '{_f.get('title','?')[:30]}' país sin bandera: {_c}")
+                _fl = _f.get('flags')
+                if isinstance(_fl, str) and len(_IND.findall(_fl)) % 2:
+                    _rotas.append(f"{_fid}: '{_f.get('title','?')[:30]}' flags={_fl!r}")
+                _walk_films(_f.get('film_list'))
+        _walk_films(_d.get('films'))
+        # SEGUNDA MITAD. Lo de arriba comprueba que el país SE PUEDA mapear; no
+        # que la bandera EXISTA en el dato. FICDEH pasó en verde todo el festival
+        # con 415 films mostrando su país y ninguna bandera: los países estaban
+        # mapeados y el pipeline nunca emitió `flags`, que es lo único que pinta
+        # la ficha (`flagFmt(f.flags)`, sin derivar). Un guardián que verifica que
+        # algo SE PUEDA hacer no verifica que se haya hecho (Juan, 13 ago 2026).
         _cc = [f for f in (_d.get('films') or []) if (f.get('country') or '').strip()]
         _sin = [f for f in _cc if not f.get('flags')]
         if _cc and len(_sin) == len(_cc):
-            _mudos.append(f'{_af.split("/")[-1]}: {len(_cc)} films con país y '
-                          f'NINGUNO con flags')
-    if _bad:
-        fail(check, 'país sin bandera en festival vivo (mapear en _COUNTRY_FLAGS o añadir flags): ' + '; '.join(_bad[:6]))
+            _mudos.append(f'{_fid}: {len(_cc)} films con país y NINGUNO con flags')
+    if _rotas:
+        fail(check, 'bandera partida por la mitad (indicador suelto): ' + '; '.join(_rotas[:5]))
+    elif _bad:
+        fail(check, 'país que saldría con globo (mapear en scripts/generate-paises.js '
+                    'o declararlo sin bandera): ' + '; '.join(_bad[:6]))
     elif _mudos:
-        fail(check, 'festival vivo que muestra país sin una sola bandera: '
-                    + '; '.join(_mudos))
+        fail(check, 'festival que muestra país sin una sola bandera: ' + '; '.join(_mudos))
     else:
-        ok(check, 'todo país de festivales vivos produce bandera (nunca globo)')
+        ok(check, 'todo país de los 18 festivales produce bandera (nunca globo)')
 except Exception as _e:
-    warn(check, f'no se pudo verificar country-flags: {_e}')
+    fail(check, f'no se pudo verificar country-flags: {_e}')
+
+# ── [paises-generados] la tabla de países no se toca a mano ───────────────────
+# Había DOS tablas escritas a mano —_COUNTRY_FLAGS en el app y BANDERAS en
+# lib.py— y divergieron en todo: contenido, normalización y hasta el modo de
+# partir un string. Ahora se generan las dos de scripts/generate-paises.js. Este
+# guardián comprueba que sigan siendo lo que el generador produce: sin él, la
+# fuente única dura hasta el primer arreglo apurado a mano.
+check = 'paises-generados'
+try:
+    import subprocess as _sp
+    _r = _sp.run(['node', 'scripts/generate-paises.js', '--check'],
+                 capture_output=True, text=True, timeout=60)
+    if _r.returncode:
+        fail(check, (_r.stderr or _r.stdout).strip().replace('\n', ' · ')[:300])
+    else:
+        ok(check, _r.stdout.strip().lstrip('✓ '))
+except FileNotFoundError:
+    warn(check, 'node no disponible en este entorno')
+except Exception as _e:
+    fail(check, f'no se pudo verificar paises-generados: {_e}')
+
+# ── [banderas-paridad] los dos motores dan LO MISMO ───────────────────────────
+# El algoritmo está escrito dos veces por fuerza —Python en el pipeline, JS en el
+# app— y es exactamente ahí donde nacen estos bugs: mismo dato, dos respuestas.
+# La tabla ya es única; esto comprueba lo otro, que se lea igual. Se prueba sobre
+# los países REALES del repo más los casos que alguna vez se rompieron.
+check = 'banderas-paridad'
+try:
+    import glob as _g3, json as _json3, subprocess as _sp3, sys as _sys3
+    _sys3.path.insert(0, 'pipeline')
+    import lib as _lib3
+    _toks = set()
+    for _af in sorted(_g3.glob('festivals/*.json')):
+        try:
+            _d = _json3.load(open(_af, encoding='utf-8'))
+        except Exception:
+            continue
+        def _w(_o):
+            if isinstance(_o, dict):
+                for _k, _v in _o.items():
+                    if _k.startswith('_'):
+                        continue
+                    if _k == 'country' and isinstance(_v, str) and _v.strip():
+                        _toks.add(_v.strip())
+                    else:
+                        _w(_v)
+            elif isinstance(_o, list):
+                for _x in _o:
+                    _w(_x)
+        _w(_d)
+    _toks |= {'Antigua y Barbuda', 'Guinea-Bissau', 'Colombia y México', 'Países bajos',
+              'España (Austria)', 'Rep. Dominicana', 'URSS', 'Varios', ''}
+    _lista = sorted(_toks)
+    _js = ('const {countryToFlags}=await import("./src/domain/banderas.js");'
+           'const t=JSON.parse(process.argv[1]);'
+           'console.log(JSON.stringify(t.map(x=>countryToFlags(x))));')
+    _r = _sp3.run(['node', '--input-type=module', '-e', _js, _json3.dumps(_lista)],
+                  capture_output=True, text=True, timeout=60)
+    if _r.returncode:
+        raise RuntimeError((_r.stderr or '?').strip()[:200])
+    _des = _json3.loads(_r.stdout)
+    # El app pinta 🌍 donde el pipeline devuelve vacío: es el mismo veredicto.
+    _dif = [f'«{t}» pipeline={p or "(vacío)"} app={a}'
+            for t, p, a in zip(_lista, [_lib3.banderas(x) for x in _lista], _des)
+            if (p or '🌍') != a]
+    if _dif:
+        fail(check, f'{len(_dif)} país(es) con distinta respuesta según el motor: '
+                    + '; '.join(_dif[:5]))
+    else:
+        ok(check, f'los dos motores coinciden en los {len(_lista)} países del repo')
+except FileNotFoundError:
+    warn(check, 'node no disponible en este entorno')
+except Exception as _e:
+    fail(check, f'no se pudo verificar banderas-paridad: {_e}')
 
 # ── [poster-radio-unico] toda superficie de póster usa var(--r-poster) ────────
 # El póster se ve IGUAL en toda la app. Hasta ago 2026 convivían TRES radios
@@ -3662,18 +3740,10 @@ try:
             _reales.setdefault(_l, os.path.basename(_f))
     # Deuda al introducir la regla: guardianes que ya existían sin documentar.
     # Se DOCUMENTA y se saca de acá; nunca se agrega uno nuevo.
-    _DEUDA_DOC = {
-        'activity-duration','apostrophe-onclick','aviso-antes-sinopsis','bare-t-in-template',
-        'day-order-indice','dead-code','design-banned-classes','diary-poster-grid','doctype',
-        'dom-ready-guard','dtab-sin-linea','fc-bootstrap','filter-drop-canon','html-divs',
-        'i18n-hardcoded','i18n-interpolation','i18n-voseo','json-fields','keyart-write-once',
-        'no-underscore-actions','onclick-syntax','pais-conocido','pipeline-circuito',
-        'poster-editorial-parity','poster-radio-unico','pressed-canon',
-        'plan-contrato','prio-limit','responsive-contract','sched-pure-fns','section-display-raw',
-        'sedes-apiladas','shadow-t','sheet-meta-legible','staging-provenance','static-html-template',
-        'synopsis-helper','synopsis-length','tasks-sync','template-al-dia','title-normalization',
-        'validate-film-tests','version-json','viewstate-shadow','worker-deps',
-    }
+    # Deuda SALDADA el 5 sep 2026: los 45 están en docs/ARQUITECTURA.md §15.4e,
+    # escritos leyendo el cuerpo de cada uno. Queda vacía a propósito: desde acá
+    # un guardián sin línea en la doc es NUEVO, y el check lo nombra.
+    _DEUDA_DOC = set()
     _sin_doc = sorted(k for k in _reales if ('[' + k + ']') not in _docs)
     _nuevos = [k for k in _sin_doc if k not in _DEUDA_DOC]
     # docs → código: etiqueta citada con backticks que no existe como guardián
@@ -4262,7 +4332,8 @@ except Exception as _e:
 # de fechas) y pinta distintivo + banda con las palabras del propio festival. Un status
 # a medias es el peor de los mundos: sin `note` la banda sale vacía (el festival
 # desaparece de la explicación), sin `url` no hay comunicado que leer, sin `since` no
-# hay registro de cuándo. Los tres se exigen. `kind` solo admite 'postponed' (v1):
+# hay registro de cuándo. Los tres se exigen. `kind` admite 'postponed' y 'moved'
+# (QAFF 2026, que trasladó su edición entera a Bogotá y SÍ se hace, en sus fechas):
 # un typo ('postponned') haría que _classifyFestival lo ignorara EN SILENCIO y el
 # festival volvería a salir «en curso» — exactamente el bug que este estado evita.
 check = 'festival-aplazado'
@@ -4282,8 +4353,9 @@ try:
         _con_status += 1
         _st = _m.group(1)
         _k = re.search(r"kind\s*:\s*'([^']*)'", _st)
-        if not _k or _k.group(1) != 'postponed':
-            _malos.append(f"{_fid}: kind {_k.group(1)!r} desconocido (v1 solo 'postponed') — _classifyFestival lo IGNORARÍA y el festival saldría en curso" if _k else f'{_fid}: status sin kind')
+        _KINDS = ('postponed', 'moved')
+        if not _k or _k.group(1) not in _KINDS:
+            _malos.append(f"{_fid}: kind {_k.group(1)!r} desconocido (solo {_KINDS}) — la banda NO se pintaría y el cambio quedaría sin explicar" if _k else f'{_fid}: status sin kind')
             continue
         for _campo, _por in [('note', 'la banda saldría vacía'), ('url', 'no habría comunicado que leer'), ('since', 'sin registro de cuándo')]:
             if not re.search(_campo + r"\s*:\s*'[^']+'", _st):
@@ -4457,16 +4529,16 @@ try:
         # _buildPosterV16) y el dueño del color de sección. Entra a la lista con la
         # razón escrita, que es lo que este guardián pide, en vez de seguir
         # recortando comentarios que explican POR QUÉ el código es así.
-        'src/view/components.js': 1197,  # +11: «apertura», «convite» y «experiencia» entran al vocabulario de actividad (SiembraFest 11) — 4 sep  # antes 1186,  # +18: el título de un evento no repite su TIPO (prefijo con separador + eco en medio) — 1 sep  # antes 1168,  # +2: «obras» sale de misc_peliculas, no de un literal — 1 sep  # antes 1166,  # +15: la Escalera escala a cualquier N (paso = fracción de la LÁMINA, no de la envolvente) + UID por póster (los clipPath fijos se pisaban entre sí en la grilla) — 26 ago  # antes 1151,  # +48: _buildPosterMini — la mini de 56px con marca determinista por obra (mejora 1 Apple Music) — 25 ago  # +20: el título tampoco repite el programa cuando el eco va al final (Cinemancia) — 24 ago  # +11: la pila reparte el presupuesto por uso real (el lazo del techo ahora SÍ vive) — 24 ago  # +2: el « + » de la pila sube a 0,6u (a 0,5u leía como suciedad, no como signo) — 24 ago  # +60: la pila de obras — un compuesto se apila, no se escribe como frase (mejora 1 de la auditoría de pósters) — 24 ago  # +10: makeProgramPoster con rótulo corto + suelo de sección 7 con su porqué — 24 ago  # +33: _seccionPartes + firma en el motor + sección a 2 líneas (regla de carga) — 24 ago  # +34: auditoría Forma A — luz por sección, título sin repetir la sección, _datoCompuesto — 24 ago  # +3: muere el badge EN REVISIÓN de la card (redundante con el divisor) — 23 ago  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago  # +24: _postponedElapsed — un aplazado baja a pasados cuando sus fechas anunciadas pasan — 23 ago
+        'src/view/components.js': 1225,  # la fusión de la rama de SiembraFest con main — las dos tocaron el archivo y el techo cuenta el RESULTADO (7 sep)  # antes 1226,  # +8: la banda de festival TRASLADADO (QAFF a Bogotá), hermana de la de aplazado y la de terminó (4 sep)  # antes 1204,  # +18: endedBannerHTML — la banda TERMINÓ, hermana de la de aplazado (4 sep)  # antes 1186,  # +18: el título de un evento no repite su TIPO (prefijo con separador + eco en medio) — 1 sep  # antes 1168,  # +2: «obras» sale de misc_peliculas, no de un literal — 1 sep  # antes 1166,  # +15: la Escalera escala a cualquier N (paso = fracción de la LÁMINA, no de la envolvente) + UID por póster (los clipPath fijos se pisaban entre sí en la grilla) — 26 ago  # antes 1151,  # +48: _buildPosterMini — la mini de 56px con marca determinista por obra (mejora 1 Apple Music) — 25 ago  # +20: el título tampoco repite el programa cuando el eco va al final (Cinemancia) — 24 ago  # +11: la pila reparte el presupuesto por uso real (el lazo del techo ahora SÍ vive) — 24 ago  # +2: el « + » de la pila sube a 0,6u (a 0,5u leía como suciedad, no como signo) — 24 ago  # +60: la pila de obras — un compuesto se apila, no se escribe como frase (mejora 1 de la auditoría de pósters) — 24 ago  # +10: makeProgramPoster con rótulo corto + suelo de sección 7 con su porqué — 24 ago  # +33: _seccionPartes + firma en el motor + sección a 2 líneas (regla de carga) — 24 ago  # +34: auditoría Forma A — luz por sección, título sin repetir la sección, _datoCompuesto — 24 ago  # +3: muere el badge EN REVISIÓN de la card (redundante con el divisor) — 23 ago  # +4: icono `award` de Lucide — la estrella ya significa calificación — 23 ago  # +5: el grupo de revisión NO se filtra al sheet «cambiar festival» — 23 ago  # +24: grupo «en revisión» en el riel — 23 ago  # +58: makeSharedSlotSVG — el póster de función compartida (Escalera mayor §6.0) — 21 ago  # +7: «foro» y «debate» entran al vocabulario (Cinemancia 2026) — 21 ago  # +24: _postponedElapsed — un aplazado baja a pasados cuando sus fechas anunciadas pasan — 23 ago  # +11: «apertura», «convite» y «experiencia» entran al vocabulario de actividad (SiembraFest 11) — 4 sep
         # helpers.js estaba EXACTAMENTE en 800 antes del rediseño de pósters
         # (§6.0): el marco de la forma B y el header con ajuste tipográfico no
         # entran sin pasarse. Se sube 15 con la razón escrita, que es lo que este
         # guardián pide. Baja cuando se migre algo fuera de helpers.
-        'src/view/helpers.js': 987,  # +18: hayEvento pasa a ser dueño único del sustantivo (obras vs actividades), con su porqué (2 sep)  # antes 969,  # +8: festivalCities marca la ciudad cuya programación cayó entera — dueño único de la hoja de apertura y del filtro de Lugar (Juan, 2 sep)  # antes 961,  # +7: el interruptor de Prensa entra a planInputSignature — apagarlo dejaba el Plan en un pase que ya no existía — 30 ago  # antes 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
-        'src/view/agenda.js': 2191,  # +18: el bloque de UNA obra corta pasa a una línea (hora+título) en vez de recortar — 148 bloques en 14 festivales, aprobado por Juan (3 sep)  # antes 2173,  # +37: _fitMiPlanBlocks — el bloque de la grilla dice cuántas obras no le caben, auditoría B-3 (3 sep)  # antes 2136,  # +9: _nextScreening prefiere la función viva de TU ciudad y cae al catálogo si no hay — auditoría B-5 (2 sep)  # antes 2127,  # +25: la fila de excluida se explica con una función VIVA y pregunta a screeningPlannable si quedó fuera por ciudad — auditoría B-1 (2 sep)  # antes 2102,  # +8: el sustantivo de las dos líneas de Planear sale del dueño hayEvento — un taller no es una obra (2 sep)  # antes 2094,  # +13: el vacío manda al primer lugar donde se puede hacer algo — se corta la cadena Mi Plan→Planear→Intereses de tres pantallas vacías (2 sep)  # antes 2081,  # +6: la cifra de «por planear» se distingue de la del resultado — 1 sep  # antes 2075,  # +6: el aviso del hueco se deriva del plan, no de un temporizador — 31 ago  # antes 2069,  # +4: por qué el vacío de PLANEAR no puede decir «Tu Plan aparece aquí» — 31 ago  # antes 2065,  # +5: la tarjeta de cierre del día usa todayWatched (effectiveWatched) en vez del set explícito — 31 ago  # antes 2060,  # +9: con el plan desactualizado «Usar este Plan» está disabled, así que el primario pasa a ser Recalcular — la pantalla no tenía ninguna acción que pareciera acción — 30 ago  # antes 2051,  # +15: la fila de una reprogramada dice A DÓNDE se movió — «Actualizar» era un botón a ciegas — 30 ago  # antes 2036,  # +22: el hero no le cuenta atrás a una cancelada, la alternativa de otra ciudad lleva su marca, y el resumen cuenta OBRAS y no funciones — P1 del recorrido — 30 ago  # antes 2014,  # +11: el Diario deja de mostrar un programa como su primera obra — 21 ago  # +3: respaldo de nombre de sede — una sede sin `short` pintaba «undefined» — 21 ago
-        'src/main.js': 1809,  # +10: #dbg-ver sale del BUILD_VERSION que corre, no de un literal de mayo — 31 ago  # antes 1799,  # +12: el listener de captura honra data-stop — «Agendar» en NO INCLUIDAS abría además la ficha y te dejaba ahí — 30 ago  # antes 1787,  # +7: closeCitySheet al ACTION_REGISTRY — la hoja de ciudad prometía cerrarse tocando el fondo y el registro no la tenía (fallo mudo) — 30 ago  # antes 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
-        'src/i18n/i18n.js': 1706,  # +3: cta_deshacer en es/en/pt — la vuelta atrás al quitar de Intereses, auditoría A-2 (3 sep)  # antes 1703,  # +6: pre_actividades_planear y pre_actividad_planear en es/en/pt — aprobado por Juan (2 sep)  # antes 1697,  # +3: export_compartir_sin_nombre en es/en/pt — compartir el Plan deja de exigir nombre (aprobado por Juan, 2 sep)  # antes 1694,  # +6: pre_obras_planear/pre_obra_planear — 1 sep  # antes 1688,  # +3: plan_falta_intereses — PLANEAR y MI PLAN dejan de tener el mismo titular — 31 ago  # antes 1685,  # +6: dia_sin_funciones_ciudad(+_sub) — el vacío del día con SOLO ciudad puesta no culpa a sección/sede — 30 ago  # antes 1679,  # +3: conflict_choca_intro_bloque — «función» no se le dice a un taller — 30 ago  # antes 1676,  # +3: bar_prensa_corto en es-en-pt — el filtro de Prensa gana etiqueta (una usuaria no lo encontraba) — 26 ago  # antes 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
-        'src/controller/sheets-controller.js': 1771,  # +8: el día se muestra con su número en las 4 superficies — 9 de 15 festivales repiten nombre de día (2 sep)  # antes 1763,  # +22: la hoja «¡Tu Plan está listo!» adopta la fila canónica — era la única de las 6 listas de obras sin póster y la única encajada; entran el thumb por el dueño único, la línea «día · hora» y el rango del pie, y sale la fórmula de rango duplicada — 2 sep  # antes 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
+        'src/view/helpers.js': 1000,  # +6: la fusión de la rama de QAFF con main — las dos tocaron el archivo y el techo cuenta el resultado (4 sep)  # antes 994,  # +7: la cuenta del cruce marca el fin como estimado si la duración no está publicada (4 sep)  # antes 987,  # +18: hayEvento pasa a ser dueño único del sustantivo (obras vs actividades), con su porqué (2 sep)  # antes 969,  # +8: festivalCities marca la ciudad cuya programación cayó entera — dueño único de la hoja de apertura y del filtro de Lugar (Juan, 2 sep)  # antes 961,  # +7: el interruptor de Prensa entra a planInputSignature — apagarlo dejaba el Plan en un pase que ya no existía — 30 ago  # antes 954,  # +17: la LISTA pregunta al mismo dueño que el grid — 207 de 215 compuestos son is_cortos y el gate viejo los dejaba fuera — 26 ago  # antes 926,  # +28: getFilmPosterMini + cableado de lista/thumb/stack a la mini — 25 ago  # antes 898,  # +14: rótulo/firma en los llamadores + halo en el póster grande — 24 ago  # +1: el camino #8 pasa el dato compuesto — 24 ago  # +6: badge PRENSA en _metaBadges — 23 ago  # +17: legacyProgramParts — el programa «A + B» usa la forma C — 21 ago  # +5: la sección nunca se pinta con fill undefined — 19 ago
+        'src/view/agenda.js': 2231,  # +15: el titular del Plan nombra la ciudad cuando el filtro la restringe (4 sep)  # antes 2216,  # +8: la fila de Intereses deja de decir «Vista» dos veces — el dato muestra la sección (4 sep)  # antes 2208,  # +13: «qué viste» se pregunta al dueño único en las 4 puertas del modo Recuerdo (auditoría 4 sep)  # antes 2195,  # +4: la hora de salida se marca estimada cuando la duración no está publicada (4 sep)  # antes 2191,
+        'src/main.js': 1829,  # +14: `?simTime=` fija el reloj ANTES del arranque — sin eso lo que el boot decide mirando la hora quedaba fuera de toda prueba (4 sep)  # antes 1815,  # +6: el que abre la ficha no se veta a sí mismo con data-stop — el póster de Mi Plan no abría (4 sep)  # antes 1809,  # +10: #dbg-ver sale del BUILD_VERSION que corre, no de un literal de mayo — 31 ago  # antes 1799,  # +12: el listener de captura honra data-stop — «Agendar» en NO INCLUIDAS abría además la ficha y te dejaba ahí — 30 ago  # antes 1787,  # +7: closeCitySheet al ACTION_REGISTRY — la hoja de ciudad prometía cerrarse tocando el fondo y el registro no la tenía (fallo mudo) — 30 ago  # antes 1780,  # +4: el botón de DESHACER declara su intención (data-restaurar) — usa la misma acción que agendar y sin la marca preguntaría lo que no toca — 26 ago  # antes 1776,  # +4: sameEntry al TEST BRIDGE — el test pregunta al dueño, no reimplementa la identidad — 25 ago  # antes 1772,  # +4: los tres canales vivos también refrescan DATOS (capa 2, live-refresh) — 24 ago  # +15: canales de update fuera del guard de SW + guardián de que no vuelvan (bug iOS sin updates) — 24 ago  # +5: el clic de corto en el palmarés abre su ficha — 24 ago  # +41: canal #4 — poll en primer plano que OFRECE la actualización (doctrina T97) — 24 ago  # +1: accion togglePressScreenings — 23 ago  # +2: acciones openPalmares/closePalmares — 23 ago  # +5: acciones de la hoja de clave de revisión — 23 ago  # +29: vista previa por ?fest= — que el equipo de un festival revise su montaje sin publicarlo — 21 ago
+        'src/i18n/i18n.js': 1721,  # +3: fest_moved_label en es/en/pt (4 sep)  # antes 1718,  # +3: fest_ended_label en es/en/pt (4 sep)  # antes 1715,  # +3: res_en_ciudad en es/en/pt (4 sep)  # antes 1712,  # +6: badge_duracion + aviso_dur_estimada en es/en/pt (4 sep)  # antes 1709,  # +3: ics_dur_estimada en es/en/pt — el calendario dice de dónde salen los 90 min (4 sep)  # antes 1706,  # +3: cta_deshacer en es/en/pt — la vuelta atrás al quitar de Intereses, auditoría A-2 (3 sep)  # antes 1703,  # +6: pre_actividades_planear y pre_actividad_planear en es/en/pt — aprobado por Juan (2 sep)  # antes 1697,  # +3: export_compartir_sin_nombre en es/en/pt — compartir el Plan deja de exigir nombre (aprobado por Juan, 2 sep)  # antes 1694,  # +6: pre_obras_planear/pre_obra_planear — 1 sep  # antes 1688,  # +3: plan_falta_intereses — PLANEAR y MI PLAN dejan de tener el mismo titular — 31 ago  # antes 1685,  # +6: dia_sin_funciones_ciudad(+_sub) — el vacío del día con SOLO ciudad puesta no culpa a sección/sede — 30 ago  # antes 1679,  # +3: conflict_choca_intro_bloque — «función» no se le dice a un taller — 30 ago  # antes 1676,  # +3: bar_prensa_corto en es-en-pt — el filtro de Prensa gana etiqueta (una usuaria no lo encontraba) — 26 ago  # antes 1673,  # +12: vov_titulo/cuerpo/repetir/mudar en es-en-pt (los TRES: el revert anterior dejó la lección de que el PT se queda atrás) — 26 ago  # antes 1661,  # revert #746/#747 (25 ago): las claves del diálogo salieron con la función  # +6: update_disponible/update_cta es-en-pt — 24 ago  # +6: el día vacío dice que el festival no programa, no que ajustes filtros — 24 ago  # +9: Prensa e Industria en es/en/pt — 23 ago  # +36: las strings del palmarés en es/en/pt — 23 ago  # +12: cadenas de festival en revisión (es/en/pt) — 23 ago  # +3: av_recalcular en es/en/pt — 18 ago
+        'src/controller/sheets-controller.js': 1731,  # −66: la tabla de países sale a la fuente única generada (esta rama); el techo BAJA con ella, que es lo que pide este guardián  # antes 1797,  # +14: el precio se dice de las funciones VIVAS — la banda listaba como CON BOLETA funciones que ella misma marca CANCELADA (4 sep)  # antes 1783,  # +6: el aviso se deriva de las FUNCIONES (la ficha de corto no tiene film propio)  # antes 1777,  # +6: Avisos dice cuando la duración no está publicada — es un rasgo de la función, como el Q&A (4 sep)  # antes 1771,  # +8: el día se muestra con su número en las 4 superficies — 9 de 15 festivales repiten nombre de día (2 sep)  # antes 1763,  # +22: la hoja «¡Tu Plan está listo!» adopta la fila canónica — era la única de las 6 listas de obras sin póster y la única encajada; entran el thumb por el dueño único, la línea «día · hora» y el rango del pie, y sale la fórmula de rango duplicada — 2 sep  # antes 1741,  # +7: el .map(t=>) que pisaba la t() de i18n y tumbaba la hoja del tope + el chip del día usa .on — 30 ago  # antes 1733,  # +15: la FICHA pregunta al mismo dueño que grilla y lista (era el 4º sitio con el gate is_programa) + la lista de obras deja de exigir is_cortos — 26 ago  # antes 1718,  # revert #746 (25 ago)  # +7: icono de prensa en la fila de función — 24 ago  # +29: openPalmares/closePalmares — el palmarés usa el patrón sheet del Diario — 23 ago  # +4: el nombre completo del festival en la tapa, vía festivalTagline (18 ago)
         # config.js es DATA de festival (FESTIVAL_CONFIG, VENUES, NOTICES y ahora
         # PALMARES). El palmarés de FICDEH son 19 entradas + el porqué de tres
         # correcciones sobre la fuente, que valen más escritas que ahorradas.
@@ -4506,6 +4578,118 @@ try:
         ok(check, f'ningún módulo sobre su techo (nuevos <{_CAP}; {len(_ALLOW)} grandes grandfathered no crecieron)')
 except Exception as _e:
     warn(check, f'no se pudo verificar module-size: {_e}')
+
+# ── [test-salida-muda] una salida temprana en un test tiene que sonar ─────────
+# Un `return;` suelto en el cuerpo de un test lo apaga SIN dejar rastro: el
+# informe lo cuenta como verde y nadie se entera de que no midió nada. No es
+# hipotético — T146 protegía que el desvanecido del dropdown fuera condicional,
+# su festival de prueba encogió a 8 opciones, dejó de desbordar el panel, y el
+# test se fue por su `return` durante quién sabe cuánto (medido y arreglado el
+# 4 sep 2026, PR #847).
+#
+# Las dos formas honestas de no medir son ruidosas y las dos sirven:
+#   · una AFIRMACIÓN — `expect(r.sinBoton, '…').toBeUndefined()` — cuando la
+#     premisa es parte del contrato del test y su ausencia es un fallo;
+#   · un `test.skip(cond, 'razón')` cuando el festival de turno legítimamente no
+#     tiene el caso: sale contado como «skipped» en el informe, que es visible.
+#
+# LÍNEA BASE, no barrido: las 34 de hoy quedan grandfathered por archivo. Se
+# congelan porque no todas son iguales —algunas son saltos legítimos entre
+# festivales y forzarlas a afirmar las rompería—, y cada una pide un juicio
+# propio. Lo que este check impide es que el número CREZCA: se medió que la
+# clase estaba creciendo rápido (1 en julio, 20 en agosto, 13 en los primeros
+# cuatro días de septiembre), así que un techo acá se cobra la misma semana.
+#
+# Los `return` DENTRO de un bucle o de un callback no cuentan: ahí saltar un
+# elemento es lo correcto. Solo se miran los del cuerpo del test.
+check = 'test-salida-muda'
+try:
+    import glob as _glob, re as _re
+
+    def _cuerpos_anidados(_c):
+        """Rangos [abre, cierra] de todo bloque interno: bucles, callbacks, if."""
+        _r = []
+        for _m in _re.finditer(r'=>\s*\{|\bfunction\s*\w*\s*\([^)]*\)\s*\{'
+                               r'|\.(?:forEach|map|filter|some|every)\s*\('
+                               r'|(?<![\w.])for\s*\(|\bif\s*\(', _c):
+            _i = _m.end()
+            if _c[_i - 1] == '{':
+                _abre = _i - 1
+            else:
+                _p, _abre = 0, None
+                while _i < len(_c):
+                    _ch = _c[_i]
+                    if _ch == '(':
+                        _p += 1
+                    elif _ch == ')':
+                        if _p == 0:
+                            break
+                        _p -= 1
+                    elif _ch == '{' and _p == 0:
+                        _abre = _i
+                        break
+                    elif _ch == ';' and _p == 0:
+                        break
+                    _i += 1
+                if _abre is None:
+                    continue
+            _d = 0
+            for _j in range(_abre, len(_c)):
+                if _c[_j] == '{':
+                    _d += 1
+                elif _c[_j] == '}':
+                    _d -= 1
+                    if _d == 0:
+                        _r.append((_abre, _j))
+                        break
+        return _r
+
+    def _salidas_mudas(_ruta):
+        _s = open(_ruta, encoding='utf-8').read()
+        _idx = [_m.start() for _m in _re.finditer(r"^\s*test\(\s*['\"]", _s, _re.M)]
+        _out = []
+        for _k, _a in enumerate(_idx):
+            _b = _idx[_k + 1] if _k + 1 < len(_idx) else len(_s)
+            _c = _s[_a:_b]
+            _rg = _cuerpos_anidados(_c)
+            for _m in _re.finditer(r'^\s*(?:if\s*\([^\n]*\)\s*)?return\s*;', _c, _re.M):
+                _q = _m.start()
+                # prof 0 = suelto en el cuerpo; 1 = dentro del callback del test.
+                # Más que eso ya es un bucle o un if anidado: no cuenta.
+                if sum(1 for _x, _y in _rg if _x < _q < _y) <= 1:
+                    _out.append(_s[:_a + _q].count('\n') + 1)
+        return _out
+
+    # Línea base al 4 sep 2026. Solo puede BAJAR: cuando un test cambie su
+    # `return` por una afirmación o un test.skip, bajá el número acá.
+    # DRENADA COMPLETA (4 sep 2026): las 34 pasaron a ser afirmaciones de
+    # premisa. Ninguna necesitó `test.skip`: todas apuntan a UN festival fijo,
+    # así que el caso que miden o está en su fixture o el test no mide nada —
+    # que es justo lo que ahora dicen en voz alta. La línea base queda VACÍA a
+    # propósito: desde acá cualquier `return;` suelto en un test es nuevo.
+    _BASE = {}
+    _mal, _sobra, _total = [], [], 0
+    for _f in sorted(_glob.glob('tests/**/*.spec.js', recursive=True)):
+        _f = _f.replace('\\', '/')
+        _hits = _salidas_mudas(_f)
+        _total += len(_hits)
+        _tope = _BASE.get(_f, 0)
+        if len(_hits) > _tope:
+            _nuevas = ', '.join(f'línea {_l}' for _l in _hits[_tope:])
+            _mal.append(f'{_f}: {len(_hits)} salidas mudas > línea base {_tope} ({_nuevas})')
+        elif len(_hits) < _tope:
+            _sobra.append(f'{_f}: {len(_hits)} (la base dice {_tope})')
+    if _mal:
+        fail(check, 'un `return;` suelto apaga el test en silencio — usá '
+                    '`expect(cond, "…").toBeUndefined()` o `test.skip(cond, "razón")`: '
+                    + '; '.join(_mal))
+    elif _sobra:
+        ok(check, f'{_total} salidas mudas, ninguna nueva — bajá la línea base: '
+                  + '; '.join(_sobra))
+    else:
+        ok(check, f'{_total} salidas mudas grandfathered, ninguna nueva')
+except Exception as _e:
+    warn(check, f'no se pudo verificar test-salida-muda: {_e}')
 
 # ── [layer-direction] las dependencias apuntan hacia adentro ───────────────────
 # La modularidad por capas solo se sostiene si las dependencias van en UNA
@@ -4686,9 +4870,14 @@ try:
     # `country → flags` es aparte: solo es hueco si la bandera SE PODÍA derivar.
     # Un país que no está en la tabla («Varios», o un idioma colado en el campo)
     # es otro problema, y de ese ya se ocupa [country-flags].
-    _js = open('src/controller/sheets-controller.js', encoding='utf-8').read()
-    _m = _re.search(r'const _COUNTRY_FLAGS=\{(.*?)\};', _js, _re.S)
-    _TAB = dict(_re.findall(r"'([^']+)'\s*:\s*'([^']+)'", _m.group(1))) if _m else {}
+    # Se pregunta al MOTOR, no a un literal del controlador. Cuando la tabla se
+    # movió a src/domain/paises.js este regex dejó de encontrar nada, `_TAB`
+    # quedó vacío y esta mitad del guardián pasó a no comprobar absolutamente
+    # nada — en verde. Un guardián que se queda sin su fuente no falla: calla.
+    import sys as _sys4
+    _sys4.path.insert(0, 'pipeline')
+    import lib as _lib4
+    _mapea = _lib4.banderas
 
     def _vacio(v):
         return v in (None, '', [], {})
@@ -4711,7 +4900,7 @@ try:
             _c = (_x.get('country') or '').strip()
             if not _c or not _vacio(_x.get('flags')):
                 continue
-            if any(_p.strip() in _TAB for _p in _re.split(r'[,/()]', _c)):
+            if _mapea(_c):
                 _sinf.append(_x.get('title', '?'))
         if _sinf:
             _viol.append(f'{_n}: {len(_sinf)} film(s) con país mapeable y sin «flags» '
@@ -5509,8 +5698,16 @@ try:
         for _x in _d.get('films') or []:
             _fichas.append(_x)
             _fichas += _x.get('film_list') or []
+        # «Volver con las manos vacías» es volver SIN NINGÚN texto. Si TMDB solo
+        # tiene la sinopsis en inglés —pasa con estrenos recientes y con cortos—,
+        # traerse `synopsis_en` ES la cosecha completa: no hay más que traer. El
+        # guardián miraba solo `synopsis` y acusaba de no cosechar a quien había
+        # cosechado todo lo que existía. Medido antes de tocarlo: en todo el repo
+        # esto excusa exactamente 2 obras, las dos de QAFF, y no afloja en ningún
+        # otro festival.
         _huecos = [_x.get('title', '?') for _x in _fichas
-                   if _x.get('tmdb_id') and not _x.get('synopsis')]
+                   if _x.get('tmdb_id') and not _x.get('synopsis')
+                   and not _x.get('synopsis_en')]
         if _huecos:
             _malos.append((_fid, _huecos))
     if _malos:
@@ -5562,7 +5759,10 @@ try:
     import glob as _g5, os as _os5
     # CineAutopsia salió de esta lista: se montó entero con el camino genérico
     # y su publicador propio se borró. La lista solo encoge.
-    _HEREDADOS = {'ficdeh-2026-publicar.py'}   # pre-genérico; su build está atrasado
+    # ficdeh-2026-publicar.py también salió (5 sep 2026): a pipeline/_historico/,
+    # con los demás scripts que ningún plan invoca. La lista llegó a cero, que
+    # es lo único a lo que podía llegar.
+    _HEREDADOS = set()
     _propios = {_os5.path.basename(_p) for _p in _g5.glob('pipeline/*-publicar.py')}
     _nuevos = sorted(_propios - _HEREDADOS)
     _faltan = [_f for _f in ('pipeline/ensamblar.py', 'pipeline/publicar.py')
@@ -5577,6 +5777,254 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar pipeline-generico: {_e}')
 
+
+# ── [pipeline-huerfano] un script de festival que ningún plan invoca no vive en el camino ──
+# Había 42 scripts `pipeline/<festival>-*.py` y 32 no los nombraba ningún
+# `.plan.json` (medido 5 sep 2026): quedaron de montar un festival y nadie los
+# borró, y quien entra al pipeline no sabe cuáles corren. La regla es la que
+# ejecuta correr.py, literal: vivo = citado en un `cmd` de algún plan. La cita en
+# un `_provenance` de festivals/ NO cuenta — es historia del dato, no invocación.
+# Lo que no está vivo se ARCHIVA en pipeline/_historico/ (decisión de Juan: se
+# archiva, no se borra), y esa carpeta queda fuera del glob por construcción.
+check = 'pipeline-huerfano'
+try:
+    import glob as _g6, os as _os6, re as _re6, json as _json6
+    _cmds = []
+    def _walk6(_o):
+        if isinstance(_o, dict):
+            for _k, _v in _o.items():
+                if _k == 'cmd' and isinstance(_v, str): _cmds.append(_v)
+                else: _walk6(_v)
+        elif isinstance(_o, list):
+            for _v in _o: _walk6(_v)
+    for _pl in _g6.glob('pipeline/*.plan.json'):
+        _walk6(_json6.load(open(_pl, encoding='utf-8')))
+    _C = '\n'.join(_cmds)
+    _huerf = sorted(_os6.path.basename(_f) for _f in _g6.glob('pipeline/*.py')
+                    if _re6.search(r'^pipeline/[a-z]+-20\d\d-.*\.py$', _f)
+                    and _os6.path.basename(_f) not in _C)
+    if not _cmds:
+        fail(check, 'ningún plan.json con `cmd`: el guardián no puede distinguir vivo de huérfano')
+    elif _huerf:
+        fail(check, 'script(s) de festival que ningún plan invoca — nombralo en su plan.json o '
+                    'archivalo en pipeline/_historico/: ' + ', '.join(_huerf))
+    else:
+        _n = sum(1 for _f in _g6.glob('pipeline/*.py') if _re6.search(r'^pipeline/[a-z]+-20\d\d-', _f))
+        ok(check, f'{_n} script(s) de festival en el camino, todos invocados por un plan')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [raiz-limpia] la raíz del repo es del producto, no un escritorio ────────────
+# Medido el 5 sep 2026: 81 archivos rastreados en la raíz, 21 del producto y
+# 60 restos de una sesión de depuración (s1…s33.js, run1…8.js, leak.js, mocks)
+# commiteados a main el 15 ago. Nadie los citaba; nadie los borró, porque lo
+# que no falla no llama la atención. La regla: en la raíz vive solo lo que la
+# app, el build o la config necesitan (ALLOWLIST). Lo de hoy queda como deuda
+# declarada que SOLO BAJA — mismo patrón que [module-size] y [test-salida-muda].
+check = 'raiz-limpia'
+try:
+    import subprocess as _sp7
+    _RAIZ_OK = {'.gitattributes', '.gitignore', '.nojekyll', 'CLAUDE.md', 'CNAME', 'LICENSE', 'eslint.config.js', 'favicon-192.png', 'favicon.png', 'icon-192.png', 'icon-512.png', 'index.html', 'manifest.json', 'package-lock.json', 'package.json', 'playwright.config.js', 'privacy.html', 'robots.txt', 'sw.js', 'validate.py', 'version.json'}
+    _RAIZ_DEUDA = set()   # los 60 se borraron el 5 sep 2026 (Juan); desde acá cualquier resto es nuevo
+    _raiz = sorted(_f for _f in _sp7.run(['git','ls-files'],capture_output=True,text=True).stdout.split('\n') if _f and '/' not in _f)
+    _nuevos = [_f for _f in _raiz if _f not in _RAIZ_OK and _f not in _RAIZ_DEUDA]
+    _sobra = [_f for _f in _RAIZ_DEUDA if _f not in _raiz]
+    if _nuevos:
+        fail(check, 'archivo(s) NUEVO(s) en la raíz que no son del producto — van a scripts/, docs/, '
+                    'festivals/staging/ o fuera del repo: ' + ', '.join(_nuevos))
+    elif _sobra:
+        ok(check, f'{len(_RAIZ_DEUDA)-len(_sobra)} resto(s) en la raíz, ninguno nuevo — bajá la deuda: ya no están ' + ', '.join(_sobra[:6]))
+    else:
+        ok(check, f'{len(_RAIZ_DEUDA)} resto(s) declarados en la raíz, ninguno nuevo')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [asset-huerfano] toda imagen de assets/ la nombra algo rastreado ────────────
+# Medido el 5 sep 2026: 494 imágenes, 16 que NADA del repo menciona —dos son
+# gemelas por tilde o doble guion de otra que sí se usa, el resto quedaron de
+# obras que salieron del catálogo—. 2,6 MB que el SW cachea para siempre y que
+# nadie va a ver. Verificado antes: getFilmPoster no construye rutas desde el
+# slug; los pósters vienen de la ruta LITERAL del JSON o de TMDB, así que un
+# nombre que ningún texto rastreado contiene es un archivo que nadie sirve.
+# Las de hoy quedan como deuda que SOLO BAJA.
+check = 'asset-huerfano'
+try:
+    import subprocess as _sp8, os as _os8, re as _re8
+    _ASSET_DEUDA = set()   # las 16 se borraron el 5 sep 2026 tras triple verificación (texto, historia de git, pantalla)
+    _tr = [_f for _f in _sp8.run(['git','ls-files'],capture_output=True,text=True).stdout.split('\n') if _f]
+    # validate.py NO es corpus: la propia lista _ASSET_DEUDA nombra a las huérfanas y
+    # el guardián se aprobaba a sí mismo (cazado al estrenarlo: «0 huérfanas» con 16).
+    _txt = [_f for _f in _tr if _f != 'validate.py'
+            and _re8.search(r'\.(js|json|html|md|css|py|yml|webmanifest|txt|sh)$', _f) and _os8.path.isfile(_f)]
+    _corpus = '\n'.join(open(_f, encoding='utf-8', errors='ignore').read() for _f in _txt)
+    _imgs = [_f for _f in _tr if _re8.search(r'^assets/.*\.(jpg|jpeg|png|webp)$', _f)]
+    _huer = sorted(_f for _f in _imgs if _os8.path.basename(_f) not in _corpus and _f not in _corpus)
+    _nuevas = [_f for _f in _huer if _f not in _ASSET_DEUDA]
+    _sobran = [_f for _f in _ASSET_DEUDA if _f not in _huer]
+    if _nuevas:
+        fail(check, 'imagen(es) en assets/ que nada rastreado nombra — o se referencia o no se sube: ' + ', '.join(_nuevas[:8]))
+    elif _sobran:
+        ok(check, f'{len(_huer)} huérfana(s) declaradas, ninguna nueva — bajá la deuda: ' + ', '.join(_os8.path.basename(_x) for _x in _sobran[:6]))
+    else:
+        ok(check, f'{len(_huer)} huérfana(s) declaradas de {len(_imgs)} imágenes, ninguna nueva')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [staging-huerfano] un sidecar que nada vivo lee y la doctrina no ampara ─────
+# Medido el 5 sep 2026: 8,4 MB en festivals/staging/, 2,4 de sidecars intermedios
+# (letterboxd, lbslug, oficial, auditoria-3, fichas…) que ningún script vivo ni
+# plan lee. Son DERIVADOS, no fuentes —las fuentes viven fuera del repo desde
+# #522—, así que se borran, no se archivan. La EXCEPCIÓN es de doctrina, no de
+# uso: PROTOCOLO declara el `-crudo.json` como salida no negociable del pipeline
+# y el `-build.json` como su entrada; con `-correcciones.json` son fuente aunque
+# hoy nadie los lea (TIFF quedó sin lector al archivar sus scripts y NO por eso
+# es basura). validate.py no es corpus: se nombraría a sí mismo.
+# Lo que sale del camino va a staging/_historico/ —no se borra— por coherencia
+# con pipeline/_historico/: 29 de los 35 los nombra el script que los produjo,
+# y ese script está archivado. Archivar la herramienta y tirar su dato deja las
+# dos mitades inservibles.
+check = 'staging-huerfano'
+try:
+    import glob as _g9, os as _os9, re as _re9
+    _CANON = {'crudo.json', 'correcciones.json', 'build.json'}
+    _viv = ['pipeline/lib.py','pipeline/ensamblar.py','pipeline/correr.py','pipeline/publicar.py'] + \
+           sorted(_f for _f in _g9.glob('pipeline/*.py') if _re9.search(r'^pipeline/[a-z]+-20\d\d-', _f))
+    _corp = '\n'.join(open(_f, encoding='utf-8', errors='ignore').read() for _f in _viv if _os9.path.exists(_f)) + \
+            '\n' + '\n'.join(open(_p, encoding='utf-8').read() for _p in _g9.glob('pipeline/*.plan.json'))
+    _huer = []
+    for _f in sorted(_g9.glob('festivals/staging/**/*', recursive=True)):
+        if not _os9.path.isfile(_f): continue
+        _b = _os9.path.basename(_f); _m = _re9.match(r'([a-z]+-\d{2,4})-(.+)$', _b)
+        _suf = _m.group(2) if _m else _b
+        if '/_historico/' in _f or _suf in _CANON or _b == 'README.md' or _b in _corp: continue
+        _huer.append(_f)
+    if _huer:
+        fail(check, 'sidecar(s) en staging/ que nada vivo lee y no son crudo/correcciones/build — '
+                    'o los lee un paso del plan o no se versionan: ' + ', '.join(_os9.path.basename(_x) for _x in _huer[:8]))
+    else:
+        ok(check, 'todo sidecar de staging/ es canónico o lo lee un paso vivo')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [css-huerfana] toda clase del <style> la emite alguien ───────────────────────
+# Medido el 5 sep 2026: 825 clases en index.html, 45 que nada emitía — 14 nunca
+# en toda la historia, 27 cuya emisión se quitó (17 en agosto), 3 solo en
+# comentarios, 1 subcadena. Tres métodos (estática con comentarios fuera, sonda
+# de DOM en 18 festivales × pantallas, historia de git) y coincidieron.
+#
+# Lo que la estática NO ve, y va escrito para no acusar a clases vivas:
+#   · composición dinámica: `ed-img-${pos}`, `sev-${nivel}` — la clase entera no
+#     existe en el código, su PREFIJO sí. Se acepta si algún prefijo (cortado en
+#     un guion) aparece en src/ seguido de `${` o `'+` o `"+`.
+#   · clases por estado que solo aparecen en pantalla bajo condición (mp-now,
+#     av-full, sync-live…): ésas SÍ están en src/ como literal — no hay problema.
+# Y lo que la purga de CSS enseñó a golpes (css-purge-regex-desastre): las
+# reglas se quitan POR LÍNEA, y este guardián solo acusa — nunca borra.
+check = 'css-huerfana'
+try:
+    import re as _r, glob as _g
+    _html = open('index.html', encoding='utf-8').read()
+    _sin_com = _r.sub(r'/\*.*?\*/', lambda m: _r.sub(r'[^\n]', ' ', m.group(0)), _html, flags=_r.S)
+    _css = '\n'.join(_r.findall(r'<style[^>]*>(.*?)</style>', _sin_com, _r.S))
+    _defs = set(_r.findall(r'\.([a-zA-Z][\w-]+)(?=[\s{,:.\[>#+~)])', _css))
+    _src = '\n'.join(open(_f, encoding='utf-8').read() for _f in _g.glob('src/**/*.js', recursive=True))
+    # los comentarios de JS NO emiten clases: `// filter-row visibility…` daba por
+    # viva una clase que ningún código escribe (cazado al calibrar, 5 sep 2026).
+    _src = _r.sub(r'/\*.*?\*/', ' ', _src, flags=_r.S)
+    _src = _r.sub(r'(?m)^\s*//.*$', ' ', _src)
+    _body = _html[_html.find('<body'):]
+    # Solo cuenta lo que EMITE una clase: los valores de class="…" del HTML y las
+    # cadenas de JS. Un id homónimo (`id="rating-stars-wrap"`) no salva a la
+    # clase — cazado al calibrar: la mitad `.rating-stars-wrap,` del selector
+    # estaba muerta y el id la tapaba.
+    _tokens = set(_r.findall(r'[a-zA-Z][\w-]+', _src))          # JS sin comentarios: todo token
+    for _v in _r.findall(r'class=["\']([^"\']*)', _body): _tokens |= set(_v.split())   # HTML: solo class="…"
+    # y los <script> inline de index.html (el store gate vive ahí y arma clases
+    # como `' sg-kick-caps'`): código de la app, mismo trato que src/ — sin comentarios.
+    _inl = '\n'.join(_r.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>', _html, _r.S))
+    _inl = _r.sub(r'/\*.*?\*/', ' ', _inl, flags=_r.S); _inl = _r.sub(r'(?m)^\s*//.*$', ' ', _inl)
+    _tokens |= set(_r.findall(r'[a-zA-Z][\w-]+', _inl))
+    def _dinamica(_c):
+        _p = _c.split('-')
+        for _i in range(1, len(_p)):
+            _pref = '-'.join(_p[:_i]) + '-'
+            if _r.search(r'[`\'"]' + _r.escape(_pref) + r'(\$\{|[\'"]\s*\+)', _src): return True
+        return False
+    _huer = sorted(_c for _c in _defs if _c not in _tokens and not _dinamica(_c))
+    if _huer:
+        fail(check, f'{len(_huer)} clase(s) en <style> que nada emite — o se emite o se quita su regla POR LÍNEA: ' + ', '.join(_huer[:10]) + (' …' if len(_huer) > 10 else ''))
+    else:
+        ok(check, f'{len(_defs)} clases en <style> y todas las emite alguien')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
+# ── [i18n-huerfana] toda clave del diccionario la pide alguien ──────────────────
+# Medido el 5 sep 2026: 442 claves ES, 81 que nada pedía — ni t('literal'), ni
+# data-i18n*, ni los mapas que producen claves por dato, ni las concatenaciones
+# base+'_1'/'_s', ni los ternarios t(c?'a':'b'). Se verificó con tres métodos
+# (estática, resolución de canales dinámicos, sonda de DOM en 18 festivales × ES
+# y EN) y coincidieron. Una clave muerta pesa ×3 idiomas y engaña al próximo que
+# la vea: cree que hay una pantalla que la dice.
+#
+# LOS CANALES DINÁMICOS VAN ESCRITOS AQUÍ, porque un guardián que no los conoce
+# acusa a claves vivas. Si aparece un canal nuevo, se agrega acá con su porqué —
+# no se apaga el guardián.
+check = 'i18n-huerfana'
+try:
+    import re as _r, glob as _g
+    # El diccionario NO es corpus de uso: sus propias líneas «asignan» literales
+    # ("clave": "texto con n = …") y el canal de identificadores cosechaba claves
+    # de ahí — cazado al recalibrar sobre la copia purgada (5 sep 2026).
+    _src = '\n'.join(open(_f, encoding='utf-8').read() for _f in _g.glob('src/**/*.js', recursive=True) if not _f.endswith('i18n/i18n.js'))
+    _html = open('index.html', encoding='utf-8').read()
+    _corp = _src + '\n' + _html
+    _i18n = open('src/i18n/i18n.js', encoding='utf-8').read()
+    # El bloque ES va de su cabecera a la cabecera de EN — por cabecera, no por
+    # la primera "en" del texto: ésa vive dentro de un valor y se mueve con
+    # cualquier borrado (cazado al recalibrar sobre la copia purgada).
+    _hdr = [m.start() for m in _r.finditer(r'^\s*"?(?:es|en|pt)"?\s*:\s*\{\s*$', _i18n, _r.M)]
+    _es = _i18n[_hdr[0]:_hdr[1]] if len(_hdr) >= 2 else _i18n
+    _claves = set(_r.findall(r'^\s*"([a-z][a-z0-9_]+)"\s*:', _es, _r.M))
+    _usadas = set(_r.findall(r"""\bt\(\s*['"]([a-z][a-z0-9_]+)['"]""", _corp))              # t('literal')
+    _usadas |= set(_r.findall(r'data-i18n(?:-[a-z]+)?="([a-z][a-z0-9_]+)"', _corp))           # data-i18n / -ph / -aria / -title
+    _usadas |= set(_r.findall(r"""data-i18n(?:-[a-z]+)?=\\?['"]?\$?\{?['"]?([a-z][a-z0-9_]+)""", _src))
+    for _a, _b in _r.findall(r"\bt\(\s*[^)]*\?\s*['\"]([a-z][a-z0-9_]+)['\"]\s*:\s*['\"]([a-z][a-z0-9_]+)['\"]", _corp):
+        _usadas |= {_a, _b}                                                                    # t(c ? 'a' : 'b')
+    # identificador que se ASIGNA con literales y después se pasa a t(): el patrón
+    # `const _k = cond ? 'a' : 'b'; … t(_k + '_1')` (sheets-controller) y
+    # `const _yaPaso = x ? 'ya_paso' : 'empty_sin_funciones'; t(_yaPaso)` (agenda).
+    # Se resuelve por nombre: cada t(IDENT…) busca las asignaciones de IDENT.
+    for _id in set(_r.findall(r"\bt\(\s*(_[\w$]+|[A-Za-z][\w$]+)\s*[,)+]", _src)):   # `_k` vale; `t(n)` a secas no es un canal
+        for _asg in _r.finditer(r"\b" + _r.escape(_id) + r"\s*=\s*([^;\n]{0,200})", _src):
+            _usadas |= set(_r.findall(r"['\"]([a-z][a-z0-9_]+)['\"]", _asg.group(1)))
+    # Canal de fondo, y el que de verdad decide: cualquier literal con forma de
+    # clave en código SIN comentarios es un uso. Cubre lo que los canales de
+    # arriba nombran y lo que no: un ternario anidado dentro de otro
+    # (`_ev?'pre_actividad_planear':'pre_obra_planear'`) se le escapaba a todos.
+    # Calibrado el 5 sep 2026: las 94 claves muertas tienen CERO menciones; toda
+    # clave viva tiene al menos una. Los comentarios van fuera porque «// ver
+    # misc_x» no es un uso.
+    _code = _r.sub(r'/\*.*?\*/', ' ', _corp, flags=_r.S); _code = _r.sub(r'(?m)^\s*//.*$', ' ', _code)
+    _usadas |= set(_r.findall(r"['\"`]([a-z][a-z0-9_]+)['\"`]", _code)) & _claves
+    # mapas dato→clave (_EN_TO_I18N y parientes): sus VALORES son claves
+    for _m in _r.finditer(r"(_EN_TO_I18N|_kindMap\w*|_\w*I18N\w*|\w*_KEYS?|_keys)\s*=\s*(\{[^;]*?\})", _src, _r.S):
+        _usadas |= set(_r.findall(r":\s*['\"]([a-z][a-z0-9_]+)['\"]", _m.group(2)))
+    # sufijos por concatenación: t(base + '_1') / t(base + '_s') → la base y sus variantes valen
+    _sufijos = set(_r.findall(r"\bt\([^)]*\+\s*['\"](_[a-z0-9_]+)['\"]", _src))
+    _prefijos = set(_r.findall(r"\bt\(\s*['\"]([a-z][a-z0-9_]*)['\"]\s*\+", _src)) | set(_r.findall(r"\bt\(\s*`([a-z][a-z0-9_]*)\$\{", _src))
+    _prefijos |= set(_r.findall(r"(?:const|let)\s+\w+\s*=\s*['\"]([a-z][a-z0-9_]*_)['\"]", _src))
+    def _viva(_k):
+        if _k in _usadas: return True
+        if any(_k.startswith(_p) for _p in _prefijos): return True
+        if any(_k.endswith(_s) and (_k[:-len(_s)] in _usadas or any(_k[:-len(_s)] + _o in _usadas for _o in _sufijos)) for _s in _sufijos): return True
+        return False
+    _huer = sorted(_k for _k in _claves if not _viva(_k))
+    if _huer:
+        fail(check, f'{len(_huer)} clave(s) del diccionario que nada pide — o se usa o se borra en los TRES idiomas: ' + ', '.join(_huer[:8]) + (' …' if len(_huer) > 8 else ''))
+    else:
+        ok(check, f'{len(_claves)} claves ES y todas las pide alguien')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
 
 check = 'lib-unica'
 try:

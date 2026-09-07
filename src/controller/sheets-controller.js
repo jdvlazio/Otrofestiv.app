@@ -6,18 +6,25 @@
 // la importa (sin ciclo). Lets de UI-state module-local; LB_SLUGS vía bridge
 // (lo escribe loadFestival). Roster/viewstate vía bridge.
 
-import { FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG, _DEFAULT_FEST_ID } from '../config.js';
+import {FESTIVAL_CONFIG, MAX_REMEMBERED_SLOTS, TMDB_IMG} from '../config.js';
 import { DAY_ABBR, DAY_NUM, ICONS, _secLabel, _sectionColor, escXML, festivalTagline, isFullDayBlocked, makeProgramPoster, makeSharedSlotSVG, parseProgramTitle, renderRatingStarsHTML } from '../view/components.js';
 import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel, emptyState, durFmt, flagFmt, getCortoItemPoster, getFilmPoster, getFilmPosterUntitled, getPosterSrc, itemPosterParts, posterAmbient, posterParts, sala, starsText, vcfg, venueCity, venueMatches, isCitySel, ticketBadgeTarget, conflictAccount, programParts} from '../view/helpers.js';
+// countryToFlags vive en dominio (src/domain/banderas.js), junto a la tabla de
+// países GENERADA (scripts/generate-paises.js, ICU es+en). Aquí había un
+// literal escrito a mano y en pipeline/lib.py otro: divergieron en contenido y
+// en criterio de comparación, y «Koki, Ciao» mostró un globo teniendo su 🇳🇱 en
+// el dato. Se re-exporta para no mover a sus llamadores.
+import { countryToFlags } from '../domain/banderas.js';
+export { countryToFlags };
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
 import { showConflictModal, showToast, _toastArriba } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
 import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
-import { dayFullyPassed, festivalEnded, parseDur, toMin } from '../domain/time.js';
-import { screeningPassed, effectiveDuration, blockDuration } from '../domain/film.js';
-import { sameEntry, isScreeningBlocked, screensConflictReason, plannableScreens } from '../domain/schedule.js';
+import { dayFullyPassed, durEstimada, festivalEnded, toMin } from '../domain/time.js';
+import { screeningPassed, blockDuration } from '../domain/film.js';
+import { sameEntry, screensConflictReason, plannableScreens } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
 // Vivía acá un driver rAF que pisaba radio+opacidad por frame. Medido en device
 // con el video de Juan (7 de 7 aperturas): progresaba hasta ~68%, se congelaba
@@ -27,7 +34,7 @@ import { sameEntry, isScreeningBlocked, screensConflictReason, plannableScreens 
 // animadas por opacity, index.html .pel-sheet-overlay): vive en el compositor,
 // que un hilo principal bloqueado no puede detener.
 import { state } from '../state/state.js';
-import { storage } from '../storage/storage.js';
+
 import { t, locSynopsis } from '../i18n/i18n.js';
 
 // ── UI-state module-local + consts privados ──────────────────────────────────
@@ -56,62 +63,6 @@ let _pvQueue=null, _pvQueueIdx=0, _pvRatedCount=0, _pvSection='';
 let _conflictPending=null;
 let _ratingTitle='';
 let _currentRating=0;
-const _COUNTRY_FLAGS={
-  'Alemania':'🇩🇪','Argentina':'🇦🇷','Austria':'🇦🇹','Bolivia':'🇧🇴',
-  'Brasil':'🇧🇷','Bélgica':'🇧🇪','Canadá':'🇨🇦','Chile':'🇨🇱',
-  'Colombia':'🇨🇴','Cuba':'🇨🇺','EEUU':'🇺🇸','Estados Unidos':'🇺🇸',
-  'Ecuador':'🇪🇨','Eslovaquia':'🇸🇰','España':'🇪🇸','Estonia':'🇪🇪',
-  'Filipinas':'🇵🇭','Francia':'🇫🇷','Grecia':'🇬🇷','Inglaterra':'🇬🇧','Irán':'🇮🇷',
-  'Italia':'🇮🇹','Kenia':'🇰🇪','México':'🇲🇽','Nicaragua':'🇳🇮','Palestina':'🇵🇸',
-  'Perú':'🇵🇪','Portugal':'🇵🇹','Reino Unido':'🇬🇧','Rep. Dominicana':'🇩🇴','Rusia':'🇷🇺',
-  'Suiza':'🇨🇭','Taiwán':'🇹🇼','Turquía':'🇹🇷','UK':'🇬🇧',
-  'Venezuela':'🇻🇪','Vietnam':'🇻🇳',
-  'United States':'🇺🇸','USA':'🇺🇸','US':'🇺🇸',
-  'United Kingdom':'🇬🇧','England':'🇬🇧','Scotland':'🇬🇧','Ireland':'🇮🇪',
-  'France':'🇫🇷','Germany':'🇩🇪','Italy':'🇮🇹','Spain':'🇪🇸',
-  'Portugal':'🇵🇹','Belgium':'🇧🇪','Switzerland':'🇨🇭','Austria':'🇦🇹',
-  'Netherlands':'🇳🇱','Sweden':'🇸🇪','Denmark':'🇩🇰','Norway':'🇳🇴',
-  'Finland':'🇫🇮','Poland':'🇵🇱','Czech Republic':'🇨🇿','Hungary':'🇭🇺',
-  'Romania':'🇷🇴','Greece':'🇬🇷','Turkey':'🇹🇷','Russia':'🇷🇺',
-  'Ukraine':'🇺🇦','Israel':'🇮🇱','Palestine':'🇵🇸','Lebanon':'🇱🇧',
-  'Iran':'🇮🇷','Iraq':'🇮🇶','Saudi Arabia':'🇸🇦','Egypt':'🇪🇬',
-  'Morocco':'🇲🇦','Tunisia':'🇹🇳','Algeria':'🇩🇿','South Africa':'🇿🇦',
-  'Nigeria':'🇳🇬','Kenya':'🇰🇪','Ethiopia':'🇪🇹','Ghana':'🇬🇭',
-  'Senegal':'🇸🇳','Mali':'🇲🇱','Cameroon':'🇨🇲','Rwanda':'🇷🇼',
-  'Democratic Republic of Congo':'🇨🇩','Congo':'🇨🇬','Ivory Coast':'🇨🇮',
-  'India':'🇮🇳','Pakistan':'🇵🇰','Bangladesh':'🇧🇩','Nepal':'🇳🇵',
-  'Sri Lanka':'🇱🇰','Afghanistan':'🇦🇫','Iran':'🇮🇷',
-  'China':'🇨🇳','Japan':'🇯🇵','South Korea':'🇰🇷','Taiwan':'🇹🇼',
-  'Thailand':'🇹🇭','Vietnam':'🇻🇳','Indonesia':'🇮🇩','Philippines':'🇵🇭',
-  'Malaysia':'🇲🇾','Singapore':'🇸🇬','Myanmar':'🇲🇲',
-  'Australia':'🇦🇺','New Zealand':'🇳🇿','Canada':'🇨🇦','Mexico':'🇲🇽',
-  'Brazil':'🇧🇷','Argentina':'🇦🇷','Chile':'🇨🇱','Colombia':'🇨🇴',
-  'Peru':'🇵🇪','Venezuela':'🇻🇪','Cuba':'🇨🇺','Haiti':'🇭🇹',
-  'Dominican Republic':'🇩🇴','Puerto Rico':'🇵🇷',
-  'North Macedonia':'🇲🇰','Macedonia':'🇲🇰','Serbia':'🇷🇸','Croatia':'🇭🇷',
-  'Bosnia':'🇧🇦','Slovenia':'🇸🇮','Albania':'🇦🇱','Kosovo':'🇽🇰',
-  'Bulgaria':'🇧🇬','Slovakia':'🇸🇰','Estonia':'🇪🇪','Latvia':'🇱🇻','Lithuania':'🇱🇹',
-  'Georgia':'🇬🇪','Armenia':'🇦🇲','Azerbaijan':'🇦🇿','Kazakhstan':'🇰🇿',
-  'Mongolia':'🇲🇳','Malta':'🇲🇹','Cyprus':'🇨🇾','Iceland':'🇮🇸',
-  'Luxembourg':'🇱🇺','Liechtenstein':'🇱🇮','Monaco':'🇲🇨',
-  'Jamaica':'🇯🇲','Trinidad and Tobago':'🇹🇹','Barbados':'🇧🇧',
-  'Ecuador':'🇪🇨','Bolivia':'🇧🇴','Paraguay':'🇵🇾','Uruguay':'🇺🇾',
-  'Honduras':'🇭🇳','Guatemala':'🇬🇹','El Salvador':'🇸🇻','Nicaragua':'🇳🇮',
-  'Costa Rica':'🇨🇷','Panama':'🇵🇦',
-  // Huecos cazados por la auditoría del 29 jul 2026: el mapa tenía los nombres
-  // en inglés de estos países pero NO los castellanos, que es lo que traen los
-  // JSON de festivales hispanohablantes. Cada uno era un globo en pantalla.
-  'Polonia':'🇵🇱','Japón':'🇯🇵','Dinamarca':'🇩🇰','Suecia':'🇸🇪',
-  'Noruega':'🇳🇴','Países Bajos':'🇳🇱','Corea del Sur':'🇰🇷','Hungría':'🇭🇺',
-  'Letonia':'🇱🇻','República Checa':'🇨🇿','Rumania':'🇷🇴','Croacia':'🇭🇷',
-  'Eslovenia':'🇸🇮','Luxemburgo':'🇱🇺','Islandia':'🇮🇸','Camerún':'🇨🇲',
-  'Malí':'🇲🇱','Panamá':'🇵🇦','Haití':'🇭🇹','Qatar':'🇶🇦','Malasia':'🇲🇾',
-  'Tailandia':'🇹🇭','Afganistán':'🇦🇫','Kazajistán':'🇰🇿','Kirguistán':'🇰🇬',
-  'Marruecos':'🇲🇦','Mozambique':'🇲🇿','Sudáfrica':'🇿🇦','Somalia':'🇸🇴',
-  'Vanuatu':'🇻🇺','Türkiye':'🇹🇷','Guinea-Bissau':'🇬🇼','Líbano':'🇱🇧',
-  'Nueva Zelanda':'🇳🇿','Bulgaria':'🇧🇬','Serbia':'🇷🇸','Senegal':'🇸🇳',
-  'Indonesia':'🇮🇩','Nigeria':'🇳🇬','Palestina':'🇵🇸','Suiza':'🇨🇭'
-};
 let _cortoParentHtml=null;
 
 // _screeningRows — DUEÑO ÚNICO de la fila de función (día · hora · sede [· Añadir]),
@@ -240,15 +191,12 @@ export function openPelSheet(title){
         :`<div class="pel-sheet-poster-ph" aria-hidden="true">🎬</div>`;
     }
   }
-  const{displayTitle}=parseProgramTitle(f.title);
   const secLabel=_secLabel(f.section);
   // ANCLAJE: ¿esta obra comparte función con otra? (`_slotKey` lo marca el
   // loader en los festivales que declaran `sharedSlotIsOneScreening`).
   const _anclada=screenings.some(s=>s._slotKey&&FILMS.some(o=>o._slotKey===s._slotKey&&o.title!==f.title));
   // cuántas COMPAÑERAS tiene: títulos distintos que comparten su slot.
   const totalFn=FILMS.filter(fi=>fi.title===f.title).length;
-  const unica=totalFn===1;
-  const DAY_ABB=['MAR','MIÉ','JUE','VIE','SÁB','DOM'];
   // Solo funciones AGENDADAS (con día/hora/sede) generan fila de screening. Un
   // bloque-catálogo de cortos sin sesión asignada (is_cortos+unscheduled) no tiene
   // función → 0 filas (abajo se muestra su lista de cortos). Los films normales
@@ -348,10 +296,8 @@ export function openPelSheet(title){
     cortosHtml=`      <div class="sec-hdr sm">${ICONS.film} <span>${t('label_programa')}</span> <span class="count-badge cb-neutral">${f.film_list.length}</span></div>
       <div class="pel-sheet-cortos-wrap">${cortoItems}</div>`;
   }
-  const wlLabel=inWL?`${ICONS.heartFill} ${t('cta_en_intereses')}`:`${ICONS.heart} ${t('nav_intereses')}`;
 
   const _inPlan=savedAgenda&&savedAgenda.schedule.some(s=>s._title===f.title);
-  const _planEntry=_inPlan?savedAgenda.schedule.find(s=>s._title===f.title):null;
   const _ps=document.getElementById('pel-sheet');
   if(_ps) _ps.scrollTop=0;
   _pushSheetState();
@@ -421,7 +367,7 @@ export function openPelSheet(title){
       </div>`
     :`<div class="pel-sheet-ctas">
         <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(f.title)}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
-        <button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(f.title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
+        ${festivalEnded()?'':`<button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(f.title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>`}
         <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-secondary" data-title="${escXML(f.title)}" data-action="toggleWatched">${ICONS.eye} ${t('cta_vista')}</button>
       </div>`}
     ${_inPlan&&activeView==='agenda'?`<button data-title="${escXML(f.title)}" data-action="closePelAndRemove" class="pel-sheet-remove-plan">${ICONS.x} ${t('plan_quitar_plan')}</button>`:''}
@@ -478,7 +424,7 @@ export function closePelSheet(){
   document.getElementById('pel-sheet').classList.remove('open');
 }
 
-export function _pspAttach(){
+function _pspAttach(){
   const stage=document.getElementById('psp-stage');
   if(!stage||stage._pspReady) return;
   stage._pspReady=true;
@@ -502,7 +448,7 @@ export function _pspAttach(){
   });
 }
 
-export function _pspSwap(idx){
+function _pspSwap(idx){
   const stage=document.getElementById('psp-stage');
   if(!stage) return;
   stage.dataset.front=idx;
@@ -514,7 +460,7 @@ export function _pspSwap(idx){
   });
 }
 
-export function _pushSheetState(){
+function _pushSheetState(){
   try{history.pushState({sheet:true},'','');}catch(e){console.warn('[sheet] pushState failed',e);}
 }
 
@@ -642,7 +588,7 @@ export function closeDiary(){
 
 // Si el Diario está abierto detrás (calificaste desde una card), repintarlo para que
 // las estrellas nuevas aparezcan al volver — el sheet no participa del pipeline.
-export function _refreshDiaryIfOpen(){
+function _refreshDiaryIfOpen(){
   const sheet=document.getElementById('diary-sheet');
   if(!sheet||!sheet.classList.contains('open')) return;
   const body=document.getElementById('diary-body');
@@ -757,7 +703,7 @@ export function openCortoSheet(title, country, duration, section, flags, directo
     <div class="pel-sheet-foot">
     <div class="pel-sheet-ctas">
       <button id="corto-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(parentTitle||title)}" data-action="toggleWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
-      <button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(parentTitle||title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>
+      ${festivalEnded()?'':`<button id="corto-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(parentTitle||title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>`}
       <button class="row-center-xs pel-sheet-action-btn${filmRatings[title]?' act-on':' btn-secondary'}" data-title="${escXML(title)}" data-action="closePelAndRate">${ICONS.star} ${filmRatings[title]?t('misc_cambiar'):t('cta_calificar')}</button>
     </div>
     </div>
@@ -798,7 +744,7 @@ export function _openCombinedFilmSheet(filmData){
   if(pelSheet&&pelSheet.classList.contains('open')){
     _cortoParentHtml=inner.innerHTML;
   }
-  const{title='',director='',year='',duration='',flags='🌐',country='',lbSlug='',poster:_fPoster='',posterSource:_fPS=''}=filmData;
+  const{title='',director='',year='',duration='',flags='🌐',lbSlug='',poster:_fPoster='',posterSource:_fPS=''}=filmData;
   const posterUrl=_fPoster?((_fPoster.startsWith('http')||_fPoster.startsWith('/assets/'))?_fPoster:TMDB_IMG+_fPoster):getPosterSrc(title,false)||null;
   const _sec4=(()=>{const _p=FILMS.find(f=>f.film_list&&f.film_list.some(c=>c.title===title));return _p?.section||'';})();
   const _pp4=itemPosterParts({title, poster:posterUrl, posterSource:_fPS}, _sec4, 'pel-sheet-poster', {header:true});
@@ -845,7 +791,7 @@ export function _findParentProgram(cortoTitle){
 // FINCA: 13 AGO Cacodelphia + 15 AGO Cine York; en Olhar, 10 cortos repiten en la
 // "Sessão com Acessibilidade"). Mostrar solo el primero es PEOR que no mostrar nada:
 // el usuario confía en una única función y se pierde la otra.
-export function _findParentPrograms(cortoTitle){
+function _findParentPrograms(cortoTitle){
   const out=[],seen=new Set();
   FILMS.forEach(f=>{
     if(!f.is_cortos||!f.film_list?.some(c=>c.title===cortoTitle)) return;
@@ -918,7 +864,7 @@ export function closeConflictSheet(){
   document.getElementById('conflict-sheet').classList.remove('open');
 }
 
-export function confirmConflictReplace(){
+function confirmConflictReplace(){
   // 1. READ + 2. GUARD
   if(!_conflictPending) return;
   const{incomingTitle, incomingScreen, existingEntry}=_conflictPending;
@@ -1205,13 +1151,13 @@ export function closeRatingSheet(){
   }
 }
 
-export function renderRatingStars(current){
+function renderRatingStars(current){
   const el=document.getElementById('rating-stars');
   if(!el) return;
   el.innerHTML=renderRatingStarsHTML(state, current);
 }
 
-export function updateRatingStars(current){
+function updateRatingStars(current){
   const el=document.getElementById('rating-stars');
   if(!el) return;
   const wraps=el.querySelectorAll('div');
@@ -1244,7 +1190,7 @@ export function updateRatingStars(current){
   }
 }
 
-export function setRating(val){
+function setRating(val){
   _currentRating=val;
   updateRatingStars(val); // rápido, sin recrear DOM
   const btn=document.getElementById('rating-action-btn');
@@ -1254,7 +1200,7 @@ export function setRating(val){
   }
 }
 
-export function _initRatingInteraction(){
+function _initRatingInteraction(){
   const range=document.getElementById('rating-range');
   if(!range||range._ratingInit) return;
   range._ratingInit=true;
@@ -1263,13 +1209,13 @@ export function _initRatingInteraction(){
   });
 }
 
-export function _pvStarSVG(fill){
+function _pvStarSVG(fill){
   if(fill==='full')  return`<svg width="34" height="34" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.75" stroke-linejoin="round"/></svg>`;
   if(fill==='half')  return`<svg width="34" height="34" viewBox="0 0 24 24"><defs><linearGradient id="pvhg"><stop offset="50%" stop-color="var(--amber)"/><stop offset="50%" stop-color="transparent"/></linearGradient></defs><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="url(#pvhg)" stroke="var(--amber)" stroke-width="1.75" stroke-linejoin="round"/></svg>`;
   return`<svg width="34" height="34" viewBox="0 0 24 24" style="opacity:.15"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="none" stroke="var(--amber)" stroke-width="1.75" stroke-linejoin="round"/></svg>`;
 }
 
-export function _pvRenderStars(val){
+function _pvRenderStars(val){
   const row=document.getElementById('pv-stars-row');
   if(!row) return;
   row.innerHTML='';
@@ -1288,7 +1234,7 @@ export function _pvRenderStars(val){
   if(btn)  btn.disabled=val===0;
 }
 
-export function starsDisplay(rating,size){
+function starsDisplay(rating,size){
   // size en px para display compacto
   if(!rating) return '';
   let html='';
@@ -1341,7 +1287,7 @@ export function selectAvDay(day){
   _refreshAvDayChips();
 }
 
-export function _refreshAvDayChips(){
+function _refreshAvDayChips(){
   document.querySelectorAll('.av-day-chip').forEach(btn=>{
     btn.classList.toggle('on', btn.dataset.day===_avSheetDay);
   });
@@ -1405,7 +1351,7 @@ export function renderAvDay(day){
   }
 }
 
-export function renderAvDayHTML(state, day){
+function renderAvDayHTML(state, day){
   const {availability} = state.snapshot();
   const fullBlocked=isFullDayBlocked(day);
   const visibleBlocks=availability[day].blocks.filter(b=>!(toMin(b.from)<=0&&toMin(b.to)>=toMin('23:59')));
@@ -1523,7 +1469,7 @@ export function _dismissToastAction() {
   }
 }
 
-export function lbUrl(title){
+function lbUrl(title){
   // Use festival-specific slug map from active festival config
   const _cfg=FESTIVAL_CONFIG[_activeFestId]||{};
   const _slugMap=_cfg.lbSlugs||LB_SLUGS;
@@ -1533,7 +1479,7 @@ export function lbUrl(title){
   return`https://letterboxd.com/film/${slug}/`;
 }
 
-export function lbUrlForFilm(f){
+function lbUrlForFilm(f){
   if(!f) return null;
   // Guard: el pipeline marca slugs sin resolver con "⚠️ LB PENDIENTE" — un marcador
   // NUNCA es un slug (produciría un href roto). Solo se acepta un slug plausible.
@@ -1542,29 +1488,12 @@ export function lbUrlForFilm(f){
   return lbUrl(f.title);
 }
 
-export function lbLink(title,film){
+function lbLink(title,film){
   const url=film?lbUrlForFilm(film):lbUrl(title);
   if(!url) return'';
   return`<a class="c-lb pel-sheet-lb" href="${url}" target="_blank" rel="noopener">${LB_SVG}<span class="c-lb-text pel-sheet-lb-text">Letterboxd</span></a>`;
 }
 
-export function countryToFlags(countryStr){
-  if(!countryStr) return '🌍';
-  // Separadores REALES de los datos: coma ("España, Costa Rica, Francia") y barra
-  // ("España/Francia"). Antes solo partía por "/" → un string con comas quedaba
-  // como una sola clave inexistente y caía al globo pese a tener países mapeados
-  // (bug Voces del Territorio, 18 jul). NO se parte por guion: "Guinea-Bissau" es
-  // un país. Guardián [country-flags] verifica que todo país de un festival activo
-  // produzca bandera. Ver docs/ICONS.md.
-  // PARÉNTESIS: varios festivales marcan la coproducción entre paréntesis —
-  // "España (Austria)", "República Democrática del Congo (Bélgica, Francia)"
-  // (FINCA 2026), "Republic of Korea (South Korea)" (Tribeca). Sin partirlos,
-  // TODO el string quedaba como una clave inexistente y caía al globo pese a
-  // ser países mapeados. Mismo bug que el de las comas, otro separador.
-  const parts=countryStr.split(/[,/()]/).map(s=>s.trim());
-  const flags=[...new Set(parts.map(p=>_COUNTRY_FLAGS[p]||'').filter(Boolean))];
-  return flags.length?flags.join(''):'🌍';
-}
 
 export function filmDisplayTitle(f) {
   // Compone las DOS reglas de título en un solo resolvedor: (1) quitar prefijo de
@@ -1601,7 +1530,7 @@ export function _genreEN(g) {
 //
 // `opts.prog`: 'cortos' (corto dentro de un bloque) | 'obras' (slot compartido) |
 // null. El texto cambia; la etiqueta es la misma.
-export function _avisosBand(f, opts){
+function _avisosBand(f, opts){
   const rows=[];
   // ROJO primero: lo que INVALIDA se lee antes de lo que matiza (DESIGN 8.4.4).
   // `_cancelled` / `_movedFrom` los sella el loader; acá solo se leen.
@@ -1629,9 +1558,21 @@ export function _avisosBand(f, opts){
   // solo si ESTA obra recorre ≥2 ciudades; si no, sería ruido en cada línea.
   const _ciudades=new Set(_src.map(x=>x&&venueCity(x.venue)).filter(Boolean));
   const _conCiudad=_ciudades.size>1;
-  const _cual=h=>(h.length&&h.length<_src.length)?' · '+h.map(x=>_coord(x,_conCiudad)).join(' / '):'';
+  const _cual=(h,_u)=>{const _n=(_u||_src).length;return (h.length&&h.length<_n)?' · '+h.map(x=>_coord(x,_conCiudad)).join(' / '):'';};
   const _qa=_con('has_qa');
   if(_qa.length) rows.push(['Q&A', t(_qa[0].qa_type==='guests'?'aviso_qa_ref':'aviso_qa_equipo')+_cual(_qa)]);
+  // Duración no publicada (auditoría 4 sep 2026). El festival no la dice, así que
+  // la app rellena con DEFAULT_DURATION_MIN y sobre ese número calcula la hora de
+  // salida y descarta obras del plan. Es un rasgo de la función, igual que el Q&A,
+  // y su casa es esta banda: se lee ANTES de decidir, no después en el calendario.
+  // Decisión de Juan (4 sep): acá, y no metido en las notas del evento exportado.
+  // Se deriva de las FUNCIONES, no del film: la ficha de un corto no tiene film
+  // propio (`f` es null ahí) y leerlo directo reventaba las 6 pruebas de esa
+  // ficha con «Cannot read properties of null». Mismo camino único que el Q&A,
+  // dos líneas más arriba, y por la misma razón que dice su comentario.
+  const _sinDur=_src.filter(x=>x&&durEstimada(x.duration));
+  if(_sinDur.length) rows.push([t('badge_duracion'),
+    t('aviso_dur_estimada',{n:blockDuration(_sinDur[0])})+_cual(_sinDur)]);
   // «Va con otras 4 obras» y no «Verás las otras obras» (ronda 3 del QA, 16 ago):
   // el tiempo verbal describía la SALA —«cuando vayas verás más cosas»— y el
   // usuario lo leyó como dato de la función; por eso marcar una y que quedaran
@@ -1651,12 +1592,26 @@ export function _avisosBand(f, opts){
   // único de qué se marca (la minoría). Si la card de una función dice CON
   // BOLETA y su ficha dijera GRATIS, se contradirían.
   const _tb=ticketBadgeTarget();
+  // El precio se dice de las funciones VIVAS (auditoría 4 sep 2026). La banda
+  // listaba «CON BOLETA · mié 12 · jue 13 · jue 13» nombrando funciones que ella
+  // misma marca CANCELADA tres renglones más arriba: la misma tarjeta se
+  // desmentía sola. Una función cancelada no tiene precio — no va a ocurrir—, y
+  // lo que la invalida se lee ANTES que lo que la matiza (DESIGN 8.4.6).
+  // Si TODAS están canceladas no se dice nada de precio: el aviso de cancelada ya
+  // lo dijo todo.
+  // QUÉ funciones se nombran: solo las VIVAS. La fila sigue apareciendo igual que
+  // antes —ticketBadgeTarget manda, y la ficha tiene que decir lo MISMO que la
+  // card—; lo que cambia es a cuáles nombra. Filtrar la fila entera la silenciaba
+  // cuando las de precio estaban todas canceladas, y entonces el usuario dejaba de
+  // saber si paga (medido: la banda quedó en «Cancelada / Programa», sin precio).
+  const _vivas=_src.filter(x=>x&&!x._cancelled);
+  const _soloVivas=h=>h.filter(x=>!x._cancelled);
   if(_tb==='free'){
     const _g=_con('is_free');
-    if(_g.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_g)]);
+    if(_g.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_soloVivas(_g),_vivas)]);
   } else if(_tb==='paid'){
     const _p=_src.filter(x=>x&&x.is_free!==true);
-    if(_p.length) rows.push([t('badge_con_boleta'), t('aviso_con_boleta')+_cual(_p)]);
+    if(_p.length) rows.push([t('badge_con_boleta'), t('aviso_con_boleta')+_cual(_soloVivas(_p),_vivas)]);
   }
   if(!rows.length) return '';
   return `<div class="sec-hdr sm">${ICONS.alert} <span>${t('label_avisos')}</span></div>`
@@ -1675,7 +1630,7 @@ function _coord(sc, conCiudad){
   return [c, d, sc.time||''].filter(Boolean).join(' · ');
 }
 
-export function _checkRecalcOpportunity(){
+function _checkRecalcOpportunity(){
   if(!savedAgenda||!savedAgenda.schedule.length) return;
   const planTitles=new Set(savedAgenda.schedule.map(s=>s._title));
   const candidates=[...watchlist].filter(t=>!planTitles.has(t)&&!watched.has(t));
@@ -1702,7 +1657,7 @@ export function _removePlanItem(title){
   saveSavedAgenda();
 }
 
-export function checkPlanConflictsWithBlock(day, fromStr, toStr){
+function checkPlanConflictsWithBlock(day, fromStr, toStr){
   if(!savedAgenda||!savedAgenda.schedule.length) return[];
   const bFrom=toMin(fromStr), bTo=toMin(toStr);
   return savedAgenda.schedule.filter(s=>{
@@ -1712,7 +1667,7 @@ export function checkPlanConflictsWithBlock(day, fromStr, toStr){
   });
 }
 
-export function invalidateCalcResult(){
+function invalidateCalcResult(){
   // Called when availability changes — resets result prompt
   const _wrap=document.getElementById('ag-result-wrap');
   if(_wrap) _wrap.style.display='none';

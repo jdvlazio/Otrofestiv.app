@@ -82,7 +82,7 @@ test('I05 — cambio de idioma sin errores JS', async ({ page }) => {
 // Se comparan las DOS superficies entre sí y contra el config: que el encabezado
 // diga lo del idioma actual, y que en español no se haya movido.
 test('I06 — el encabezado usa las fechas del idioma activo', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
@@ -132,7 +132,7 @@ test('I06 — el encabezado usa las fechas del idioma activo', async ({ page }) 
 // «no hay palabras en español» a secas daría falsos positivos con «Proyecciones
 // Especiales». El número delante es lo que distingue una cosa de la otra.
 test('I07 — en inglés ninguna cuenta usa el sustantivo en español', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const tap = (a, ds) => { const b = document.createElement('button'); b.setAttribute('data-action', a);

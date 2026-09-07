@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "catálogo de la Selección Oficial + cápsulas «Presentamos <sección>» de instagram.com/siembrafest",
-  "capturado": "2026-09-05",
+  "capturado": "2026-09-07",
   "metodo": "obras sin ficha en TMDB tras DOS barridos: el de agosto por título, y el del 5 sep con el año y el director que el festival publica en sus cápsulas. 26 de las 43 dan CERO resultados en TMDB — no es un problema de desambiguación, no existen",
   "para": "darlas de alta en TMDB (pipeline/PROTOCOLO.md, fase 3b) y de ahí sacar el botón de Letterboxd. Sin alta no hay lbSlug: Letterboxd se alimenta de TMDB",
   "ojo": "verificar con las 3 sondas de siempre (título, filmografía del director, Letterboxd) antes de crear cada ficha"

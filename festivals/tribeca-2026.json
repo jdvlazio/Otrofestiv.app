@@ -5725,7 +5725,7 @@
    "genre": "",
    "posterPosition": "center",
    "day_order": 4,
-   "flags": "🇫🇷🇵🇹🇸🇪🇱🇺",
+   "flags": "🇫🇷🇱🇺🇵🇹🇸🇪",
    "synopsis_en": "Dayao and his pregnant wife work in the city but dream in different directions — he wants the countryside, she wants the city. When he is seriously injured at a construction site, she faces choices that belong to her alone.",
    "filmCategory": "Films",
    "synopsis_lang": "en",
@@ -6229,7 +6229,7 @@
    "poster": "https://image.tmdb.org/t/p/w500/LocCeo7mZ0PBibKioNjJwPHihb.jpg",
    "genre": "Drama",
    "day_order": 3,
-   "flags": "🇩🇪🇶🇦🇲🇹",
+   "flags": "🇲🇹🇩🇪🇶🇦",
    "synopsis_en": "Mar inherits three plots of land across Malta from her estranged mother — and with them, a chance to finally cut ties with home. She enlists an octogenarian local troubadour as guide, and finds her bitterness slowly dissolving.",
    "filmCategory": "Films",
    "synopsis_lang": "en",
@@ -7083,7 +7083,8 @@
    "filmCategory": "TV",
    "synopsis_lang": "en",
    "synopsis_es": "The World Premiere of two wonderfully quirky indie docuseries.Playing in this program:",
-   "posterSource": "editorial"
+   "posterSource": "editorial",
+   "flags": "🇺🇸"
   },
   {
    "title": "2026 Indie TV Narrative Showcase",
@@ -7169,7 +7170,8 @@
    "filmCategory": "TV",
    "synopsis_lang": "en",
    "synopsis_es": "The World Premiere of three provocative and poignant episodic projects that explore evolving relationships with motherhood, partnership and adulthood.Playing in this program:",
-   "posterSource": "editorial"
+   "posterSource": "editorial",
+   "flags": "🇺🇸🇬🇧"
   },
   {
    "title": "Tribeca NOW Creators Showcase",
@@ -7178,8 +7180,7 @@
    "type": "event",
    "director": "",
    "duration": "120 min",
-   "country": "English",
-   "language": "",
+   "language": "English",
    "premiere": "",
    "synopsis": "El programa Tribeca NOW 2026 destaca a 10 narradores digitales que transforman el panorama creativo: desde sátira romántica en found-footage y arqueología deportiva hasta documentales de migración inversa, exploración de la historia afroamericana y una comedia de lugar de trabajo ambientada en un club campestre.",
    "screenings": [

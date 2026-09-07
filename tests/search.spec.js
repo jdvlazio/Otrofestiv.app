@@ -77,7 +77,7 @@ test('S06 — búsqueda funciona en Tribeca', async ({ page }) => {
 // Los DOS asertos van juntos a propósito: el primero solo puede aprobarse
 // borrando la tolerancia a erratas, y el segundo lo impide.
 test('S07 — «techo» no trae títulos con las letras sueltas', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   const r = await page.evaluate(async () => {
     const O = await import('/src/controller/overlays.js');
     const res = O._searchAll('techo').map(x => x.title);
@@ -110,7 +110,7 @@ test('S07 — «techo» no trae títulos con las letras sueltas', async ({ page 
 // test cubre la otra mitad —que el código de verdad lo escriba—, porque un nodo
 // que nace vacío y nunca se llena pasa ese guardián sin decir nada.
 test('S08 — el número de build del buscador sale del código que corre', async ({ page }) => {
-  await enterFestival(page, 'cinemancia2026');
+  await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
     const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);

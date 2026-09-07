@@ -67,6 +67,10 @@
   {
    "cmd": "python3 pipeline/publicar.py siembrafest-2026",
    "que": "build → festivals/ (valida el contrato al escribir)"
+  },
+  {
+   "cmd": "python3 pipeline/siembrafest-2026-altas.py",
+   "que": "las 43 obras sin ficha en TMDB → lista para el alta manual"
   }
  ],
  "festival": {
