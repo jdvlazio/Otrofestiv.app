@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "PDF oficial de la programación de Villeta — siembrafest.com/descargas/programacion_11sf_villeta.pdf",
-  "capturado": "2026-09-05",
+  "capturado": "2026-09-07",
   "metodo": "doble lectura: capa de texto del PDF (no OCR) + lectura visual de cada página, que es la que fija el layout a dos columnas",
   "alcance": "SOLO VILLETA. El PDF de Sasaima no existe todavía (la web dice «muy pronto» y su URL devuelve HTML)"
  },
@@ -562,12 +562,14 @@
     },
     {
      "titulo": "El tiempo de las mujeres transforma el territorio",
+     "director": "William Ospina Ramírez",
      "anio": 2025,
      "duracion_min": 17,
      "seccion": "Mujeres que sostienen la vida",
-     "sinopsis": "Video institucional de FAO Colombia.",
+     "_credito_impreso": "Video institucional · FAO Colombia",
+     "sinopsis": "Reúne las historias de mujeres de diferentes regiones del país y muestra cómo la innovación y la tecnología pueden contribuir a reducir la carga de cuidado y trabajo doméstico no remunerado que enfrentan especialmente las mujeres campesinas.",
      "synopsis_lang": "es",
-     "_credito_impreso": "Video institucional · FAO Colombia"
+     "pais": "Colombia"
     }
    ]
   },
@@ -627,12 +629,14 @@
     },
     {
      "titulo": "El tiempo de las mujeres transforma el territorio",
+     "director": "William Ospina Ramírez",
      "anio": 2025,
      "duracion_min": 17,
      "seccion": "Mujeres que sostienen la vida",
-     "sinopsis": "Video institucional de FAO Colombia.",
+     "_credito_impreso": "Video institucional · FAO Colombia",
+     "sinopsis": "Reúne las historias de mujeres de diferentes regiones del país y muestra cómo la innovación y la tecnología pueden contribuir a reducir la carga de cuidado y trabajo doméstico no remunerado que enfrentan especialmente las mujeres campesinas.",
      "synopsis_lang": "es",
-     "_credito_impreso": "Video institucional · FAO Colombia"
+     "pais": "Colombia"
     }
    ]
   },
