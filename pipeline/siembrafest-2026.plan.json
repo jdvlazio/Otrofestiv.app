@@ -53,6 +53,14 @@
    "que": "PDF oficial de Villeta (doble lectura) → crudo"
   },
   {
+   "cmd": "python3 pipeline/siembrafest-2026-sasaima.py --escribir",
+   "que": "PDF oficial de Sasaima (doble lectura) → su crudo"
+  },
+  {
+   "cmd": "python3 pipeline/siembrafest-2026-crudo.py",
+   "que": "los crudos de los dos municipios → el crudo canónico"
+  },
+  {
    "cmd": "python3 pipeline/siembrafest-2026-laminas.py --escribir",
    "que": "carruseles de Instagram → pósters 2:3 en assets/ + sidecar de láminas"
   },
@@ -96,6 +104,30 @@
    ],
    "Villeta y Sasaima": [
     "Villeta y Sasaima - Villeta",
+    ""
+   ],
+   "Rotonda Tienda Museo del Café": [
+    "Rotonda Tienda Museo del Café - Sasaima",
+    ""
+   ],
+   "Escuela Rural Santa Ana": [
+    "Escuela Rural Santa Ana - Sasaima",
+    ""
+   ],
+   "IED Rural San Bernardo": [
+    "IED Rural San Bernardo - Sasaima",
+    ""
+   ],
+   "Salón Comunal Vda. San Bernardo": [
+    "Salón Comunal Vda. San Bernardo - Sasaima",
+    ""
+   ],
+   "IED San Nicolás": [
+    "IED San Nicolás - Sasaima",
+    ""
+   ],
+   "Vereda Ilo Alto": [
+    "Vereda Ilo Alto - Sasaima",
     ""
    ]
   },
@@ -185,7 +217,7 @@
   },
   "name": "SiembraFest",
   "fullName": "SiembraFest — Festival de Cine Colombiano al Campo",
-  "city": "Villeta",
+  "city": "Sasaima y Villeta",
   "country": "CO",
   "dates": "9–18 SEP",
   "dates_en": "SEP 9–18",
@@ -206,5 +238,6 @@
   "ojo_al_89": "El spot oficial dice «89 películas y 9 secciones» y su propia página de selección dice «84 producciones». No es una discrepancia de catálogo: es aritmética de marketing suya. No perseguir 5 obras fantasma."
  },
  "_acceso_retirado": "La declaración de «no publicado» se retiró el 7 sep: dejó de ser cierta cuando el festival publicó «Entrada libre hasta completar aforo» y «todas las actividades son gratuitas» (instagram.com/p/Dc4AhaFwFOg, 5 sep). Las 23 funciones van con is_free y [boleteria-muda] pasa por la vía normal. Un `_acceso` que sobrevive a la respuesta del festival miente en el JSON publicado.",
- "_fechas_9_18": "El festival dice 9–18 en su afiche, su bio y su prensa. Decíamos 9–17 porque es lo que tenemos programado, y eso generaba ruido contra todo lo que el usuario ve afuera (Juan, 7 sep). No era solo cosmético: festivalEndStr estaba en el 17, así que el 18 la app habría declarado TERMINADO un festival que sigue corriendo en Sasaima. Las PESTAÑAS de día se quedan en 9 (9–17): añadir el 18 pintaría «Este día no tiene actividades», y actividades hay —en Sasaima—, los que no las tenemos somos nosotros."
+ "_fechas_9_18": "El festival dice 9–18 en su afiche, su bio y su prensa. Decíamos 9–17 porque es lo que tenemos programado, y eso generaba ruido contra todo lo que el usuario ve afuera (Juan, 7 sep). No era solo cosmético: festivalEndStr estaba en el 17, así que el 18 la app habría declarado TERMINADO un festival que sigue corriendo en Sasaima. Las PESTAÑAS de día se quedan en 9 (9–17): añadir el 18 pintaría «Este día no tiene actividades», y actividades hay —en Sasaima—, los que no las tenemos somos nosotros.",
+ "_sasaima_7_sep": "Sasaima publicado el 7 sep. 11 funciones, 28 obras, 6 sedes, del 14 al 18. Programa OBRAS DISTINTAS a Villeta: ninguna de las 28 se repite. Dos no están en la Selección Oficial y son de archivo — «Madre» (1924) y «Tres cuentos colombianos - Tiempos de sequía» (1963)—, coherente con que Patrimonio Fílmico sea aliado. El PDF encabeza el día 10 como «Lunes 14/9» y es el VIERNES 18: si el 14 fuera correcto habría dos programas distintos a las 18:00 en la Rotonda el mismo día. Ver ERRATA_DIA en su generador."
 }

@@ -2,7 +2,8 @@
  "_provenance": {
   "fuente": "Nominatim/OSM, con la dirección del municipio",
   "capturado": "2026-09-04",
-  "metodo": "Nominatim/OSM con la dirección del municipio. Villeta está poco mapeada: Overpass devuelve 0 elementos en 6 km y ninguna de las dos sedes grandes está en OSM. Se resolvieron el 5 sep por fuentes oficiales y con la dirección confirmada en dos fuentes independientes cada una — el SENA con su propia georreferenciación publicada en datos.gov.co, el IED con el punto de su calle. Regla: antes que una coordenada aproximada, la dirección; una coordenada mal puesta en un municipio pequeño manda a alguien al sitio equivocado."
+  "metodo": "Nominatim/OSM con la dirección del municipio. Villeta está poco mapeada: Overpass devuelve 0 elementos en 6 km y ninguna de las dos sedes grandes está en OSM. Se resolvieron el 5 sep por fuentes oficiales y con la dirección confirmada en dos fuentes independientes cada una — el SENA con su propia georreferenciación publicada en datos.gov.co, el IED con el punto de su calle. Regla: antes que una coordenada aproximada, la dirección; una coordenada mal puesta en un municipio pequeño manda a alguien al sitio equivocado.",
+  "sasaima": "7 sep: seis sedes nuevas. Tres con punto a nivel de VEREDA (Santa Ana y San Bernardo ×2), que en zona rural es la granularidad correcta —la vereda es la dirección—. Tres PENDIENTES: el IED San Nicolás tiene dirección oficial pero no está mapeado; la Rotonda Tienda Museo del Café no aparece en ninguna fuente; y de Ilo Alto solo hay «Ilo Grande», que es otra vereda. Regla de siempre: antes que una coordenada aproximada, la dirección o nada."
  },
  "venues": {
   "Cinema Villeta - Villeta": {
@@ -45,6 +46,50 @@
    "lat": 5.0046407,
    "lng": -74.4709365,
    "address": "Diagonal 1 Sur n.º 72-31, barrio Carlos Lleras"
+  },
+  "Escuela Rural Santa Ana - Sasaima": {
+   "lat": 4.9254488,
+   "lng": -74.428051,
+   "city": "Sasaima",
+   "short": "Escuela Rural Santa Ana",
+   "_prec": "vereda",
+   "_nota": "punto de la vereda Santa Ana en OSM; la escuela no está mapeada. Misma granularidad que Vda. Chapaima: en zona rural la vereda ES la dirección."
+  },
+  "IED Rural San Bernardo - Sasaima": {
+   "lat": 4.915146,
+   "lng": -74.41883,
+   "city": "Sasaima",
+   "short": "IED Rural San Bernardo",
+   "address": "Vereda San Bernardo",
+   "_prec": "vereda",
+   "_nota": "dirección del directorio oficial de establecimientos educativos (datos.gov.co jn4a-aqyh): «VEREDA SAN BERNARDO», rural, 6 sedes. El punto es el caserío de la vereda en OSM, no el edificio."
+  },
+  "Salón Comunal Vda. San Bernardo - Sasaima": {
+   "lat": 4.915146,
+   "lng": -74.41883,
+   "city": "Sasaima",
+   "short": "Salón Comunal Vda. San Bernardo",
+   "_prec": "vereda",
+   "_nota": "mismo caserío que el IED Rural San Bernardo: es la misma vereda."
+  },
+  "IED San Nicolás - Sasaima": {
+   "city": "Sasaima",
+   "short": "IED San Nicolás",
+   "address": "Urbanización San José",
+   "_prec": "pendiente",
+   "_nota": "dirección del directorio oficial (datos.gov.co jn4a-aqyh): «URBANIZACION SAN JOSE», urbana y rural, 10 sedes. SIN PUNTO: no está en OSM y poner el casco urbano sería inventarlo. La dirección lleva a la sede; una coordenada aproximada, no."
+  },
+  "Rotonda Tienda Museo del Café - Sasaima": {
+   "city": "Sasaima",
+   "short": "Rotonda Tienda Museo del Café",
+   "_prec": "pendiente",
+   "_nota": "no está en OSM ni en Nominatim, y no encontramos su dirección. PENDIENTE — es la sede de dos funciones, incluida la de clausura del 18."
+  },
+  "Vereda Ilo Alto - Sasaima": {
+   "city": "Sasaima",
+   "short": "Vereda Ilo Alto",
+   "_prec": "pendiente",
+   "_nota": "OSM tiene «Ilo Grande» a 6 km al norte, que es OTRA vereda. Usarla sería mandar a la gente al sitio equivocado; se deja sin punto."
   }
  }
 }
