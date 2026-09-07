@@ -187,13 +187,13 @@
   "fullName": "SiembraFest — Festival de Cine Colombiano al Campo",
   "city": "Villeta",
   "country": "CO",
-  "dates": "9–17 SEP",
-  "dates_en": "SEP 9–17",
+  "dates": "9–18 SEP",
+  "dates_en": "SEP 9–18",
   "year": 2026,
   "timezoneOffset": "-05:00",
   "storageKey": "siembrafest2026_",
   "festivalStartStr": "2026-09-09T00:00:00",
-  "festivalEndStr": "2026-09-17T23:00:00",
+  "festivalEndStr": "2026-09-18T23:00:00",
   "mes_es": "septiembre",
   "sharedSlotIsOneScreening": true,
   "_jerarquia_de_fuentes": "programa PDF de Villeta (4 sep) > selección oficial (23 ago) > IG. El PDF manda en el horario y en lo que imprime; el catálogo rellena sinopsis, póster, país, género y lbSlug.",
@@ -205,5 +205,6 @@
   "catalogo": "Re-sincronizado contra la página viva: 84 = 84, sin altas ni bajas. Las dos únicas diferencias son variantes de título ya resueltas: «al fuego»/«al juego» (cerrado por Juan) y «Somos historias (Episodio 2)»/«…Casaramano, sagrado y vida» (manda el PDF del 3 sep, que es la fuente más reciente).",
   "ojo_al_89": "El spot oficial dice «89 películas y 9 secciones» y su propia página de selección dice «84 producciones». No es una discrepancia de catálogo: es aritmética de marketing suya. No perseguir 5 obras fantasma."
  },
- "_acceso_retirado": "La declaración de «no publicado» se retiró el 7 sep: dejó de ser cierta cuando el festival publicó «Entrada libre hasta completar aforo» y «todas las actividades son gratuitas» (instagram.com/p/Dc4AhaFwFOg, 5 sep). Las 23 funciones van con is_free y [boleteria-muda] pasa por la vía normal. Un `_acceso` que sobrevive a la respuesta del festival miente en el JSON publicado."
+ "_acceso_retirado": "La declaración de «no publicado» se retiró el 7 sep: dejó de ser cierta cuando el festival publicó «Entrada libre hasta completar aforo» y «todas las actividades son gratuitas» (instagram.com/p/Dc4AhaFwFOg, 5 sep). Las 23 funciones van con is_free y [boleteria-muda] pasa por la vía normal. Un `_acceso` que sobrevive a la respuesta del festival miente en el JSON publicado.",
+ "_fechas_9_18": "El festival dice 9–18 en su afiche, su bio y su prensa. Decíamos 9–17 porque es lo que tenemos programado, y eso generaba ruido contra todo lo que el usuario ve afuera (Juan, 7 sep). No era solo cosmético: festivalEndStr estaba en el 17, así que el 18 la app habría declarado TERMINADO un festival que sigue corriendo en Sasaima. Las PESTAÑAS de día se quedan en 9 (9–17): añadir el 18 pintaría «Este día no tiene actividades», y actividades hay —en Sasaima—, los que no las tenemos somos nosotros."
 }

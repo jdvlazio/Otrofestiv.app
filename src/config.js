@@ -797,21 +797,30 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'siembrafest2026': {
-    // PUBLICADO el 7 sep (Juan), dos días antes de que abra. Entra SOLO con
-    // Villeta: el PDF de Sasaima no existe —su web dice «muy pronto» y la URL
-    // devuelve el HTML comodín, comprobado contra un nombre inventado—. Por eso
-    // `city` y `dates` describen lo que de verdad tenemos y no lo que anuncia el
-    // festival (9–18 en las dos poblaciones). Cuando salga Sasaima esto es
-    // aditivo: sedes con su `city`, el paraguas de vuelta en `city` y el 18 en
-    // `dates`; el multiciudad ya existe y no hay que tocar nada más.
+    // PUBLICADO el 7 sep (Juan). Entra SOLO con Villeta: el PDF de Sasaima no
+    // existe —su web dice «muy pronto» y la URL devuelve el HTML comodín,
+    // comprobado contra un nombre inventado—.
+    //
+    // FECHAS 9–18, no 9–17 (Juan, 7 sep). El festival dice 9–18 en su afiche, su
+    // bio y su prensa; decir 9–17 porque es lo que nosotros tenemos generaba
+    // ruido contra todo lo que el usuario ve afuera. Y no era solo cosmético:
+    // `festivalEndStr` estaba en el 17, así que el 18 la app habría declarado
+    // TERMINADO un festival que sigue corriendo en Sasaima, con su banda y el
+    // modo recuerdo encima.
+    //
+    // Las PESTAÑAS DE DÍA se quedan en 9 (9–17), que es lo que está programado.
+    // Añadir el 18 pintaría «Este día no tiene actividades», y eso sí sería
+    // falso: actividades hay, en Sasaima; los que no las tenemos somos nosotros.
+    // Cuando salga su programación esto es aditivo: sedes con su `city`, el
+    // paraguas en `city` y el día 18. El multiciudad ya existe.
     // VILLETA, del 9 al 17. El festival completo es 9–18 en Sasaima y Villeta
     // (así lo dice su propia bio), pero el PDF de Sasaima no existe todavía: la
     // web dice «muy pronto» y su URL devuelve HTML. Cuando salga vuelven la
     // ciudad «Sasaima y Villeta» y, con ella, probablemente el 18.
     name:'SiembraFest',fullName:'SiembraFest — Festival de Cine Colombiano al Campo',shortName:'SIEMBRAFEST',
     city:'Villeta',country:'CO',
-    dates:'9–17 SEP',dates_en:'SEP 9–17',year:2026,timezoneOffset:'-05:00',
-    storageKey:'siembrafest2026_',festivalStartStr:'2026-09-09T00:00:00',festivalEndStr:'2026-09-17T23:00:00',
+    dates:'9–18 SEP',dates_en:'SEP 9–18',year:2026,timezoneOffset:'-05:00',
+    storageKey:'siembrafest2026_',festivalStartStr:'2026-09-09T00:00:00',festivalEndStr:'2026-09-18T23:00:00',
     festivalDates:{'2026-09-09':'2026-09-09','2026-09-10':'2026-09-10','2026-09-11':'2026-09-11','2026-09-12':'2026-09-12','2026-09-13':'2026-09-13','2026-09-14':'2026-09-14','2026-09-15':'2026-09-15','2026-09-16':'2026-09-16','2026-09-17':'2026-09-17'},
     days:[{'k':'2026-09-09','d':9,'lbl':'MIÉ'},{'k':'2026-09-10','d':10,'lbl':'JUE'},{'k':'2026-09-11','d':11,'lbl':'VIE'},{'k':'2026-09-12','d':12,'lbl':'SÁB'},{'k':'2026-09-13','d':13,'lbl':'DOM'},{'k':'2026-09-14','d':14,'lbl':'LUN'},{'k':'2026-09-15','d':15,'lbl':'MAR'},{'k':'2026-09-16','d':16,'lbl':'MIÉ'},{'k':'2026-09-17','d':17,'lbl':'JUE'}],
     dayKeys:['2026-09-09','2026-09-10','2026-09-11','2026-09-12','2026-09-13','2026-09-14','2026-09-15','2026-09-16','2026-09-17'],
