@@ -197,23 +197,13 @@
   "mes_es": "septiembre",
   "sharedSlotIsOneScreening": true,
   "_jerarquia_de_fuentes": "programa PDF de Villeta (4 sep) > selección oficial (23 ago) > IG. El PDF manda en el horario y en lo que imprime; el catálogo rellena sinopsis, póster, país, género y lbSlug.",
-  "_alcance": "SOLO VILLETA. Sasaima se añade cuando el festival publique su PDF; entonces volverán la ciudad «Sasaima y Villeta» y probablemente el 18 SEP.",
-  "_acceso": {
-   "estado": "no publicado por el festival",
-   "revisado": "2026-09-04",
-   "fuentes": [
-    "PDF oficial de la programación de Villeta (12 páginas) — ni una palabra sobre entrada, inscripción o boletería",
-    "siembrafest.com: inicio, /festival/, /festival/programacion/, /seleccion-sf-2026/, /quiero-cine/",
-    "páginas de evento de ediciones anteriores (/programacion-archivo/) — tampoco lo declaran",
-    "Instagram y Facebook del festival, post del 4 sep incluido"
-   ],
-   "nota": "El festival no publica cómo se entra en NINGUNA edición, y no responde a los correos (Juan, 4 sep 2026). Las 23 funciones van con acceso desconocido: es el dato que hay. Si algún día lo publican, se declara y se quita esto."
-  }
+  "_alcance": "SOLO VILLETA. Sasaima se añade cuando el festival publique su PDF; entonces volverán la ciudad «Sasaima y Villeta» y probablemente el 18 SEP."
  },
  "_barrido_5_sep_2026": {
   "sasaima": "SIGUE SIN EXISTIR, verificado en 6 fuentes el 5 sep: (1) su página de programación dice «muy pronto» y solo enlaza el PDF de Villeta; (2) el PDF de Sasaima no existe —cualquier nombre bajo /descargas/ devuelve 200 con el HTML comodín, comprobado contra un nombre inventado, así que el 200 NO es señal; (3) wp-sitemap project sigue en 2024 y mec-events en 2022; (4) Instagram: las mismas 12 publicaciones, ninguna nueva, cero menciones; (5) Facebook, nada; (6) prensa del 1 sep confirma 9–18 SEP en Sasaima Y Villeta, sin parrilla.",
   "url_canonica_SE_INVIRTIO": "La nota anterior quedó al revés y hay que creerle a esta. Hoy siembrafest.com/siembrafest/seleccion-oficial/ REDIRIGE A FACEBOOK, y la que está viva —con las 9 secciones, el anuncio de «84 producciones» y el enlace desde el menú del propio sitio— es la VIEJA: siembrafest.com/seleccion-sf-2026/. El radar debe mirar esa. Ojo: el sitio responde 200 a todo, así que «200» no prueba que una página exista — hay que medir el TEXTO VISIBLE (el comodín deja 11 caracteres) o compararla con una URL inventada.",
   "catalogo": "Re-sincronizado contra la página viva: 84 = 84, sin altas ni bajas. Las dos únicas diferencias son variantes de título ya resueltas: «al fuego»/«al juego» (cerrado por Juan) y «Somos historias (Episodio 2)»/«…Casaramano, sagrado y vida» (manda el PDF del 3 sep, que es la fuente más reciente).",
   "ojo_al_89": "El spot oficial dice «89 películas y 9 secciones» y su propia página de selección dice «84 producciones». No es una discrepancia de catálogo: es aritmética de marketing suya. No perseguir 5 obras fantasma."
- }
+ },
+ "_acceso_retirado": "La declaración de «no publicado» se retiró el 7 sep: dejó de ser cierta cuando el festival publicó «Entrada libre hasta completar aforo» y «todas las actividades son gratuitas» (instagram.com/p/Dc4AhaFwFOg, 5 sep). Las 23 funciones van con is_free y [boleteria-muda] pasa por la vía normal. Un `_acceso` que sobrevive a la respuesta del festival miente en el JSON publicado."
 }
