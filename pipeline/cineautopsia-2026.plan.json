@@ -122,5 +122,6 @@
    "2026-08-24"
   ],
   "_dias_vacios_por_que": "el 24 no tiene programación y el JSON publicado ya lo declaraba: el plan no reproducía producción hasta que el contrato lo pidió (2 sep 2026)"
- }
+ },
+ "_NO_RECORRER_6_sep_2026": "ESTE PIPELINE YA NO SE PUEDE RE-CORRER ENTERO, y la deuda es anterior a esta fecha. Tres cosas se rompen, comprobadas hoy:\n  (1) El paso 2 necesita fuentes/, que salió del repo (#522).\n  (2) El CRUDO está enriquecido A MANO —pósters, sinopsis, lbSlug, tmdb_id y notas de fuente— y cineautopsia-2026-pdf.py no genera nada de eso: re-correr el paso 3 borra 536 líneas.\n  (3) Por lo mismo, publicar.py rechaza el build reconstruido: synopsis 9→7, poster 9→7, lbSlug 1→0, tmdb_id 1→0. Verificado que el rechazo ocurre IGUAL sin ningún cambio nuestro, o sea que no lo causa la errata del 6 sep.\nMientras esto siga así, toda corrección se aplica con bisturí sobre crudo/build/publicado y se DECLARA además en el generador, para que quede hecha el día que el pipeline se repare. Nunca --forzar: borraría esas 2 sinopsis, 2 pósters y el lbSlug que solo viven en producción.\nPara repararlo de verdad: subir el enriquecimiento manual del crudo a un sidecar propio que el ensamblador lea, como hace siembrafest-2026-enriquecido.py."
 }

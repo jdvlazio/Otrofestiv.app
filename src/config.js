@@ -370,6 +370,78 @@ export const PALMARES=[
 
   {fest:'ficdeh2026', categoria:'Cine Comunitario Nacional', nivel:'ganadora',
    titulo:'Por una gota de leche', autoria:'Esteban J. Corzo', obra:'Por una gota de leche'},
+
+  // ── CineAutopsia 2026 (12ª ed., Bogotá) — 2 posts del 3 sep en @bogotaexperimental ──
+  // Uno con los seis PREMIOS (Dc14zD7jlvn) y otro con las doce MENCIONES
+  // (Dc173D2Drst). Las dos cápsulas se leyeron enteras; ninguna venía truncada.
+  // Su web no publicó el fallo: no hay entrada en su feed ni sitemap, y la nota
+  // de la Alcaldía que aparece al buscar es de 2023.
+  //
+  // Seis categorías, una ganadora cada una. La estructura la confirma su propia
+  // convocatoria: «seis premios principales», corto/medio/largo en nacional e
+  // internacional. Las categorías van VERBATIM salvo el título-caso de
+  // Instagram: la cápsula escribe «Europa Y Norteamérica» y «Resto Del Mundo»
+  // con mayúscula en la conjunción y el artículo, que es cómo capitaliza esa
+  // pieza, no ortografía suya.
+  //
+  // LAS 18 CRUZAN CON NUESTRO CATÁLOGO, pero dos no lo hacían por título y
+  // hubo que buscarlas por director:
+  //   · «Si yo fuese fuego» en el palmarés es «Si yo fuese fuego (If I Were
+  //     Fire)» en el catálogo, que lleva la traducción entre paréntesis.
+  //   · «INMARCESIBLE» en el anuncio del premio venía como «Inmarcesbile» en el
+  //     catálogo, y NO era un error nuestro: su PDF y su página de Selección
+  //     Oficial escriben «Inmarcesbile». Pero el propio festival se contradice en
+  //     el anuncio del fallo, y la palabra en español es «inmarcesible» —«oh
+  //     gloria inmarcesible»—. Juan lo cerró el 6 sep: se corrige EN TODO. La
+  //     errata queda declarada en pipeline/cineautopsia-2026-pdf.py, y el crudo
+  //     guarda en `_impreso` lo que dice el impreso.
+  //
+  // `autoria` toma el nombre COMPLETO del director tal como lo publica su
+  // Selección Oficial, no la forma corta del anuncio: ahí «Miguel S. Molina» es
+  // «Miguel Sebastian Molina Ruiz» y «Laura Caballero» es «Laura Camila
+  // Caballero». El anuncio abrevia; la selección no.
+
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Colombia', nivel:'ganadora',
+   titulo:'Inmarcesible', autoria:'Juan Sebastián Parra Posso', obra:'Inmarcesible'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Colombia', nivel:'mencion',
+   titulo:'Posdata para el fin del mundo', autoria:'John Melo', obra:'Posdata para el fin del mundo'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Colombia', nivel:'mencion',
+   titulo:'Mal de Tierra', autoria:'Laura Camila Caballero, Sara Idárraga', obra:'Mal de Tierra'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Colombia', nivel:'mencion',
+   titulo:'CHAIKA', autoria:'Ingrid Paola Bonilla Rodriguez', obra:'CHAIKA'},
+
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Latinoamérica', nivel:'ganadora',
+   titulo:'Si yo fuese fuego (If I Were Fire)', autoria:'Bruno Aroesty', obra:'Si yo fuese fuego (If I Were Fire)'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Latinoamérica', nivel:'mencion',
+   titulo:'Flujos rectificados', autoria:'Sebastian Arriagada', obra:'Flujos rectificados'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Latinoamérica', nivel:'mencion',
+   titulo:'Toda la vida para siempre', autoria:'Miguel Sebastian Molina Ruiz', obra:'Toda la vida para siempre'},
+
+  {fest:'cineautopsia2026', categoria:'Mediometrajes Destacados Latinoamérica', nivel:'ganadora',
+   titulo:'Miren Felder', autoria:'Malen Otaño', obra:'Miren Felder'},
+  {fest:'cineautopsia2026', categoria:'Mediometrajes Destacados Latinoamérica', nivel:'mencion',
+   titulo:'Evil Evol Love', autoria:'Stella Bastart', obra:'Evil Evol Love'},
+  {fest:'cineautopsia2026', categoria:'Mediometrajes Destacados Latinoamérica', nivel:'mencion',
+   titulo:'De Tragedia Haré Gloria', autoria:'Giselle Hauscarriaga', obra:'De Tragedia Haré Gloria'},
+
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Europa y Norteamérica', nivel:'ganadora',
+   titulo:'Tamashi', autoria:'Ashima Shiraishi, Jess X. Snow', obra:'Tamashi'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Europa y Norteamérica', nivel:'mencion',
+   titulo:'I Was There', autoria:'Kamila Kuc', obra:'I Was There'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Europa y Norteamérica', nivel:'mencion',
+   titulo:'Fort Garry Lions Pool', autoria:'Ryan Steel', obra:'Fort Garry Lions Pool'},
+
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Resto del Mundo', nivel:'ganadora',
+   titulo:'Allegory of the Cave', autoria:'Weipeng Huang, Yajing Wang', obra:'Allegory of the Cave'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Resto del Mundo', nivel:'mencion',
+   titulo:'Abjad Hawaz', autoria:'Hadi Moussally', obra:'Abjad Hawaz'},
+  {fest:'cineautopsia2026', categoria:'Cortometrajes Destacados Resto del Mundo', nivel:'mencion',
+   titulo:'Lost Fragments of a Seizure', autoria:'Michael Martinez', obra:'Lost Fragments of a Seizure'},
+
+  {fest:'cineautopsia2026', categoria:'Mediometrajes Destacados del Mundo', nivel:'ganadora',
+   titulo:'The Walnut of Knowledge', autoria:'Niyaz Saghari', obra:'The Walnut of Knowledge'},
+  {fest:'cineautopsia2026', categoria:'Mediometrajes Destacados del Mundo', nivel:'mencion',
+   titulo:'Analogue Natives', autoria:'Bernd Lützeler', obra:'Analogue Natives'},
 ];
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
