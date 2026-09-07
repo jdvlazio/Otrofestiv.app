@@ -4,7 +4,8 @@
   "capturado": "2026-09-04",
   "metodo": "Nominatim/OSM con la dirección del municipio. Villeta está poco mapeada: Overpass devuelve 0 elementos en 6 km y ninguna de las dos sedes grandes está en OSM. Se resolvieron el 5 sep por fuentes oficiales y con la dirección confirmada en dos fuentes independientes cada una — el SENA con su propia georreferenciación publicada en datos.gov.co, el IED con el punto de su calle. Regla: antes que una coordenada aproximada, la dirección; una coordenada mal puesta en un municipio pequeño manda a alguien al sitio equivocado.",
   "sasaima": "7 sep: seis sedes nuevas. Tres con punto a nivel de VEREDA (Santa Ana y San Bernardo ×2), que en zona rural es la granularidad correcta —la vereda es la dirección—. Tres PENDIENTES: el IED San Nicolás tiene dirección oficial pero no está mapeado; la Rotonda Tienda Museo del Café no aparece en ninguna fuente; y de Ilo Alto solo hay «Ilo Grande», que es otra vereda. Regla de siempre: antes que una coordenada aproximada, la dirección o nada.",
-  "metodo_7_sep": "LECCIÓN: se buscó primero en OSM/Nominatim/Overpass y se dio por perdido lo que no estaba. Google Maps SÍ tiene estos pueblos —Juan lo señaló— y de ahí salieron el IED San Nicolás y la Escuela Santa Ana, más la Rotonda por Plus Code. Pero Maps también devuelve la SEDE equivocada de un colegio con varias: hay que comprobar cuál es contra la dirección oficial."
+  "metodo_7_sep": "LECCIÓN: se buscó primero en OSM/Nominatim/Overpass y se dio por perdido lo que no estaba. Google Maps SÍ tiene estos pueblos —Juan lo señaló— y de ahí salieron el IED San Nicolás y la Escuela Santa Ana, más la Rotonda por Plus Code. Pero Maps también devuelve la SEDE equivocada de un colegio con varias: hay que comprobar cuál es contra la dirección oficial.",
+  "cierre_7_sep": "Las 11 sedes con coordenada. Las dos que ninguna fuente pública resolvía —Vda. Chapaima y Vereda Ilo Alto, las dos rurales— las cerró Juan: la primera mirando el satélite, la segunda con un Plus Code. Cuando el mapa no alcanza, alguien que conoce el terreno sí."
  },
  "venues": {
   "Cinema Villeta - Villeta": {
@@ -95,8 +96,10 @@
   "Vereda Ilo Alto - Sasaima": {
    "city": "Sasaima",
    "short": "Vereda Ilo Alto",
-   "_prec": "pendiente",
-   "_nota": "PENDIENTE. Confirmada como vereda de Sasaima (sector Casa Bonita) en datos abiertos, pero sin coordenada en OSM, Nominatim, Maps ni la prensa. OSM tiene «Ilo Grande», que es OTRA vereda a 6 km: usarla mandaría a la gente al sitio equivocado."
+   "_prec": "vereda",
+   "_nota": "Plus Code 2H6Q+HV (Sasaima) que aportó Juan → 67Q72H6Q+HV. OJO al decodificar: recuperar el prefijo pegándolo sin más daba un punto a 106 km; hay que elegir el prefijo vecino MÁS CERCANO a la referencia, que es lo que dice el algoritmo. Contrastado: cae a 1,17 km de «Ilo Grande» —la vereda vecina, lo único que OSM tenía por ahí— y entre los dos cascos, 6,6 km de Villeta y 5,8 de Sasaima.",
+   "lat": 5.01144,
+   "lng": -74.410313
   }
  }
 }

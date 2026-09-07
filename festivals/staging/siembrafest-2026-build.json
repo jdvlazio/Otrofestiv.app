@@ -296,8 +296,10 @@
   "Vereda Ilo Alto - Sasaima": {
    "short": "Vereda Ilo Alto",
    "city": "Sasaima",
-   "_prec": "pendiente",
-   "_nota": "PENDIENTE. Confirmada como vereda de Sasaima (sector Casa Bonita) en datos abiertos, pero sin coordenada en OSM, Nominatim, Maps ni la prensa. OSM tiene «Ilo Grande», que es OTRA vereda a 6 km: usarla mandaría a la gente al sitio equivocado."
+   "_prec": "vereda",
+   "_nota": "Plus Code 2H6Q+HV (Sasaima) que aportó Juan → 67Q72H6Q+HV. OJO al decodificar: recuperar el prefijo pegándolo sin más daba un punto a 106 km; hay que elegir el prefijo vecino MÁS CERCANO a la referencia, que es lo que dice el algoritmo. Contrastado: cae a 1,17 km de «Ilo Grande» —la vereda vecina, lo único que OSM tenía por ahí— y entre los dos cascos, 6,6 km de Villeta y 5,8 de Sasaima.",
+   "lat": 5.01144,
+   "lng": -74.410313
   }
  },
  "films": [
@@ -2042,7 +2044,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-07T17:24:51",
+  "fecha": "2026-09-07T17:33:37",
   "plan_sha": "c96d4eeb9f634619",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py siembrafest-2026"
