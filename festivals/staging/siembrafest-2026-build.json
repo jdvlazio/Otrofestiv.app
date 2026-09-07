@@ -211,35 +211,35 @@
   "Cinema Villeta - Villeta": {
    "short": "Cinema Villeta",
    "city": "Villeta",
-   "lat": 5.010889,
-   "lng": -74.46983,
-   "_prec": "osm"
+   "lat": 5.0110174,
+   "lng": -74.4699592,
+   "_prec": "sede",
+   "address": "Parque de la Molienda — parque principal",
+   "_nota": "Google Maps, lugar con nombre «Cine Villeta C». Coincide a 20 m con OSM."
   },
   "IED Alonso de Olalla - Villeta": {
    "short": "IED Alonso de Olalla",
    "city": "Villeta",
-   "_prec": "calle",
-   "_nota": "dirección confirmada en dos fuentes (Waze e Insor). El punto es la Diagonal 1 Sur, la única de ese nombre en Villeta y la que nombra la dirección: es la calle, no el edificio — el mismo criterio que Vda. Chapaima.",
-   "lat": 5.0046407,
-   "lng": -74.4709365,
+   "_prec": "sede",
+   "_nota": "Google Maps, lugar con nombre y con la MISMA dirección que ya teníamos (Dg. 1 Sur #72-31). Sube de punto de calle a edificio; 88 m de diferencia.",
+   "lat": 5.0044879,
+   "lng": -74.4701587,
    "address": "Diagonal 1 Sur n.º 72-31, barrio Carlos Lleras"
   },
   "SENA CDAE Villeta - Villeta": {
    "short": "SENA CDAE Villeta",
    "city": "Villeta",
-   "_prec": "oficial",
-   "_nota": "coordenada del propio SENA: dataset «Georeferenciación Centros de Aprendizaje» (datos.gov.co 8cnh-7asj), centro 9509 — el mismo código que usa la web del centro (sedes9509). Estaba escondida porque el dataset lo registra en el municipio BOGOTÁ, que es su REGIONAL, no su sede: buscarlo por «Villeta» da cero. Contrastado: cae a 804 m del casco urbano y a 325 m de la Calle 2 que nombra su dirección.",
+   "_prec": "sede",
+   "_nota": "Google Maps, lugar con nombre «SENA, CDAE Villeta» y la MISMA dirección que ya teníamos (Cl. 2 #13-3). OJO: la georreferenciación que el propio SENA publica en datos.gov.co (8cnh-7asj) da 5.006380,-74.475500, a 372 m de aquí. Se toma la de Maps porque es el lugar con la dirección que coincide; queda anotada la otra por si se quiere contrastar en terreno.",
    "address": "Calle 2 n.º 13-03, barrio San Rafael",
-   "lat": 5.00638,
-   "lng": -74.4755
+   "lat": 5.0072155,
+   "lng": -74.4787477
   },
   "Vda. Chapaima - Villeta": {
    "short": "Vda. Chapaima",
    "city": "Villeta",
-   "lat": 4.991911,
-   "lng": -74.490832,
-   "_prec": "aproximada",
-   "_nota": "vereda: OSM devuelve la vía a Chapaima, no un punto exacto"
+   "_prec": "pendiente",
+   "_nota": "SIN PUNTO desde el 7 sep. Había uno de OSM (4.991911,-74.490832) que era la VÍA a Chapaima, no un lugar; Google Maps solo conoce un tramo llamado «chapaima - higuerón» a 4.957372,-74.525562. Las dos candidatas están a 5,4 km una de otra y ninguna es una sede. Con esa diferencia no se puede afirmar ninguna: mandar a alguien 5 km al sitio equivocado es peor que no tener mapa. PREGUNTAR AL FESTIVAL."
   },
   "Villeta y Sasaima - Villeta": {
    "short": "Villeta y Sasaima",
@@ -2040,7 +2040,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-07T17:02:30",
+  "fecha": "2026-09-07T17:12:17",
   "plan_sha": "c96d4eeb9f634619",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py siembrafest-2026"
