@@ -252,16 +252,18 @@
   "Rotonda Tienda Museo del Café - Sasaima": {
    "short": "Rotonda Tienda Museo del Café",
    "city": "Sasaima",
-   "_prec": "pendiente",
-   "_nota": "no está en OSM ni en Nominatim, y no encontramos su dirección. PENDIENTE — es la sede de dos funciones, incluida la de clausura del 18."
+   "_prec": "sede",
+   "_nota": "Plus Code XH78+P2 (Sasaima) que aportó Juan, decodificado a 67P7XH78+P2. Cae a 204 m del centro del pueblo. No aparece en OSM ni en Nominatim.",
+   "lat": 4.964313,
+   "lng": -74.434938
   },
   "Escuela Rural Santa Ana - Sasaima": {
    "short": "Escuela Rural Santa Ana",
    "city": "Sasaima",
-   "lat": 4.9254488,
-   "lng": -74.428051,
-   "_prec": "vereda",
-   "_nota": "punto de la vereda Santa Ana en OSM; la escuela no está mapeada. Misma granularidad que Vda. Chapaima: en zona rural la vereda ES la dirección."
+   "lat": 4.9288644,
+   "lng": -74.4321437,
+   "_prec": "sede",
+   "_nota": "Google Maps: «Escuela Santa Ana, Taboga, Sasaima». Coincide a 500 m con el punto de la vereda Santa Ana en OSM, que es lo que teníamos antes: dos fuentes en la misma zona, y esta es el edificio."
   },
   "IED Rural San Bernardo - Sasaima": {
    "short": "IED Rural San Bernardo",
@@ -270,7 +272,7 @@
    "lng": -74.41883,
    "address": "Vereda San Bernardo",
    "_prec": "vereda",
-   "_nota": "dirección del directorio oficial de establecimientos educativos (datos.gov.co jn4a-aqyh): «VEREDA SAN BERNARDO», rural, 6 sedes. El punto es el caserío de la vereda en OSM, no el edificio."
+   "_nota": "Punto del caserío de la vereda San Bernardo (OSM), que es lo que dice su dirección oficial (datos.gov.co jn4a-aqyh: «VEREDA SAN BERNARDO»). NO se usa el resultado de Google Maps: devuelve la sede «Escuela Rural La Candelaria», que es OTRA de las 6 sedes del colegio y está a 4,7 km. Con 6 sedes, elegir la equivocada es peor que quedarse en la vereda."
   },
   "Salón Comunal Vda. San Bernardo - Sasaima": {
    "short": "Salón Comunal Vda. San Bernardo",
@@ -284,14 +286,16 @@
    "short": "IED San Nicolás",
    "city": "Sasaima",
    "address": "Urbanización San José",
-   "_prec": "pendiente",
-   "_nota": "dirección del directorio oficial (datos.gov.co jn4a-aqyh): «URBANIZACION SAN JOSE», urbana y rural, 10 sedes. SIN PUNTO: no está en OSM y poner el casco urbano sería inventarlo. La dirección lleva a la sede; una coordenada aproximada, no."
+   "_prec": "sede",
+   "_nota": "Google Maps, lugar con nombre: «Institución Educativa Departamental San Nicolás de Tolentino, Sasaima». Coincide con el directorio oficial (datos.gov.co jn4a-aqyh), que la da urbana. OSM no la tiene: Maps sí cubre estos pueblos y OSM no.",
+   "lat": 4.9648759,
+   "lng": -74.4333762
   },
   "Vereda Ilo Alto - Sasaima": {
    "short": "Vereda Ilo Alto",
    "city": "Sasaima",
    "_prec": "pendiente",
-   "_nota": "OSM tiene «Ilo Grande» a 6 km al norte, que es OTRA vereda. Usarla sería mandar a la gente al sitio equivocado; se deja sin punto."
+   "_nota": "PENDIENTE. Confirmada como vereda de Sasaima (sector Casa Bonita) en datos abiertos, pero sin coordenada en OSM, Nominatim, Maps ni la prensa. OSM tiene «Ilo Grande», que es OTRA vereda a 6 km: usarla mandaría a la gente al sitio equivocado."
   }
  },
  "films": [
@@ -1109,8 +1113,11 @@
      "director": "Julio Luzardo",
      "year": 1963,
      "duration": "28 min",
+     "poster": "https://image.tmdb.org/t/p/w500/lsEKD5rs8jDKhaytcFUTGkPurae.jpg",
+     "lbSlug": "tres-cuentos-colombianos",
      "genre": "Ficción",
      "country": "Colombia",
+     "posterSource": "tmdb",
      "flags": "🇨🇴"
     },
     {
@@ -1161,7 +1168,14 @@
      "title": "Emechiche, el renacer de los cabeciblancos",
      "director": "Juan Camilo González",
      "year": 2025,
-     "duration": "11 min"
+     "duration": "11 min",
+     "poster": "https://image.tmdb.org/t/p/w500/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
+     "lbSlug": "emechiche-the-rebirth-of-white-headed",
+     "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+     "genre": "Drama",
+     "country": "Colombia",
+     "posterSource": "tmdb",
+     "flags": "🇨🇴"
     },
     {
      "title": "Chicha la chicharra",
@@ -1172,6 +1186,7 @@
      "lbSlug": "chicha-la-chicharra",
      "synopsis": "Una chicharra llamada Chicha emerge de la tierra para su metamorfosis, y descubre que el árbol de aguacate donde nació ha sido talado; decidida a crear un bosque, deposita sus esperanzas en un retoño de aguacate, pero pronto debe enfrentar la realidad de su corta vida y aprender a aceptar el presente.",
      "synopsis_en": "Chicha emerges from the soil for her metamorphosis, only to find the avocado tree where she was born gone. Determined to create a forest, she waits for a new tree to grow, unaware her life will be too short to see it flourish.",
+     "genre": "Animación",
      "country": "Colombia",
      "posterSource": "tmdb",
      "synopsis_lang": "es",
@@ -1999,8 +2014,11 @@
      "director": "Samuel Velasquez",
      "year": 1924,
      "duration": "17 min",
+     "poster": "https://image.tmdb.org/t/p/w500/oB765L88GmwWNis8Dd4byVBsxuE.jpg",
+     "lbSlug": "madre-1924",
      "genre": "Ficción",
      "country": "Colombia",
+     "posterSource": "tmdb",
      "flags": "🇨🇴"
     },
     {
@@ -2022,7 +2040,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-07T16:39:43",
+  "fecha": "2026-09-07T17:02:30",
   "plan_sha": "c96d4eeb9f634619",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py siembrafest-2026"

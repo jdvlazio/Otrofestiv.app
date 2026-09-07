@@ -2041,8 +2041,13 @@
    "_src": {
     "url": "https://siembrafest.com/descargas/programacion_11sf_sasaima.pdf",
     "date": "2026-09-07",
-    "nota": "NO está en la Selección Oficial: la proyecta Sasaima como cine de archivo. Es la película colombiana de ficción más antigua que se conserva; el festival tiene a la Fundación Patrimonio Fílmico Colombiano como aliada."
-   }
+    "nota": "NO está en la Selección Oficial: la proyecta Sasaima como cine de archivo. Es la película colombiana de ficción más antigua que se conserva; el festival tiene a la Fundación Patrimonio Fílmico Colombiano como aliada.",
+    "tmdb_id": 271412,
+    "tmdb_nota": "TMDB 271412, confirmada por director (Samuel Velásquez) y país. TMDB la da de 21 min y el festival proyecta 17: manda el programa, que es la copia que exhiben."
+   },
+   "poster": "https://image.tmdb.org/t/p/w500/oB765L88GmwWNis8Dd4byVBsxuE.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "madre-1924"
   },
   {
    "title": "Tres cuentos colombianos - Tiempos de sequía",
@@ -2055,8 +2060,13 @@
    "_src": {
     "url": "https://siembrafest.com/descargas/programacion_11sf_sasaima.pdf",
     "date": "2026-09-07",
-    "nota": "NO está en la Selección Oficial: cine de archivo que proyecta Sasaima."
-   }
+    "nota": "NO está en la Selección Oficial: cine de archivo que proyecta Sasaima.",
+    "tmdb_id": 750279,
+    "tmdb_nota": "TMDB 750279 «Tres Cuentos Colombianos», confirmada por director (Julio Luzardo) y país. TMDB la fecha en 1962 y el programa en 1963; manda el programa. El festival proyecta UN episodio, «Tiempos de sequía», y por eso el título lleva la coletilla."
+   },
+   "poster": "https://image.tmdb.org/t/p/w500/lsEKD5rs8jDKhaytcFUTGkPurae.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "tres-cuentos-colombianos"
   }
  ]
 }

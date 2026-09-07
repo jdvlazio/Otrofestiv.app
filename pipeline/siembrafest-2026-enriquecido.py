@@ -55,7 +55,9 @@ def _genero(*fuentes):
     """
     from lib import norm
     for g in fuentes:
-        for x in re.split(r'[,;/]| y ', g or ''):
+        # la raya también separa: «Animación – Infantil» traía el género pegado
+        # al descriptor y se caía entero (Chicha la chicharra, 7 sep)
+        for x in re.split(r'[,;/–—]|\s-\s| y ', g or ''):
             canon = GENEROS.get(norm(x.strip()))
             if canon:
                 return canon
