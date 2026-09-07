@@ -10,13 +10,13 @@
  "fullName": "SiembraFest — Festival de Cine Colombiano al Campo",
  "city": "Villeta",
  "country": "CO",
- "dates": "9–17 SEP",
- "dates_en": "SEP 9–17",
+ "dates": "9–18 SEP",
+ "dates_en": "SEP 9–18",
  "year": 2026,
  "timezoneOffset": "-05:00",
  "storageKey": "siembrafest2026_",
  "festivalStartStr": "2026-09-09T00:00:00",
- "festivalEndStr": "2026-09-17T23:00:00",
+ "festivalEndStr": "2026-09-18T23:00:00",
  "sharedSlotIsOneScreening": true,
  "_jerarquia_de_fuentes": "programa PDF de Villeta (4 sep) > selección oficial (23 ago) > IG. El PDF manda en el horario y en lo que imprime; el catálogo rellena sinopsis, póster, país, género y lbSlug.",
  "_alcance": "SOLO VILLETA. Sasaima se añade cuando el festival publique su PDF; entonces volverán la ciudad «Sasaima y Villeta» y probablemente el 18 SEP.",
@@ -1375,8 +1375,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-07T13:49:23",
-  "plan_sha": "20ad2e69102bff33",
+  "fecha": "2026-09-07T15:15:36",
+  "plan_sha": "e65431fd5e1109e8",
   "paso": 4,
   "cmd": "python3 pipeline/ensamblar.py siembrafest-2026"
  }
