@@ -794,3 +794,40 @@ test('T176 — el precio se dice de las funciones vivas, no de las canceladas', 
   // 3 · y el aviso de cancelada sigue nombrando las suyas
   expect(r.hayCancelada, 'y sigue avisando de las canceladas, nombrando sus funciones').toBe(true);
 });
+
+// ── Actividad ABIERTA (info:true, drop-in con ventana) — la maratón de SiembraFest
+// (7 sep 2026). Donde las demás dicen su duración, ésta dice su FASE, con verbo:
+// antes «Abre a las 8:00», abierta «Hasta 18:00», después «Ya pasó». Y no ofrece
+// «Priorizar»: el motor nunca la coloca. Tres relojes, misma ficha.
+const MARATON = 'Maratón fotográfica SiembraFest';
+async function abrirMaraton(page, simTime) {
+  await enterFestival(page, 'siembrafest2026', simTime);
+  await page.evaluate(t => openPelSheet(t), MARATON);
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+}
+
+test('T178 — actividad abierta: la ficha dice la fase, no los minutos', async ({ page }) => {
+  await abrirMaraton(page, '2026-09-13T11:00:00-05:00');
+  const dur = page.locator('#pel-sheet.open .pel-sheet-flags-dur');
+  await expect(dur).toHaveText(/(Hasta|Until) 18:00/);
+  await expect(dur).not.toContainText('min');
+  // la fila de horario muestra la ventana entera, no solo el inicio
+  await expect(page.locator('#pel-sheet.open .pelicula-time').first()).toHaveText(/8:00 (a|to) 18:00/);
+  // sin «Priorizar»: promete algo que el motor no cumple
+  await expect(page.locator('#pel-prio-btn')).toHaveCount(0);
+  await expect(page.locator('#pel-wl-btn')).toBeVisible();
+  // y la fila del programa (lista del día) tampoco dice minutos — la pantalla lo
+  // cazó: decía «600 min · Hasta 18:00», porque la fila arrastraba la duración
+  // por otro camino que la ficha.
+  await page.evaluate(() => closePelSheet && closePelSheet());
+  const fila = page.locator('.plist-item', { hasText: MARATON }).first();
+  await expect(fila.locator('.plist-meta')).toContainText(/(Hasta|Until) 18:00/);
+  await expect(fila.locator('.plist-meta')).not.toContainText('min');
+});
+
+test('T179 — actividad abierta: antes «Abre a las», después «Ya pasó»', async ({ page }) => {
+  await abrirMaraton(page, '2026-09-13T07:00:00-05:00');
+  await expect(page.locator('#pel-sheet.open .pel-sheet-flags-dur')).toHaveText(/(Abre a las|Opens at) 8:00/);
+  await page.evaluate(() => { _simTime = '2026-09-13T19:00:00-05:00'; openPelSheet('Maratón fotográfica SiembraFest'); });
+  await expect(page.locator('#pel-sheet.open .pel-sheet-flags-dur')).toHaveText(/(Ya pasó|Already over)/);
+});

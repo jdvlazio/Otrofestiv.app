@@ -14,7 +14,7 @@ import {
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
 import { toMin, minToStr, durEstimada, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
-import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly } from '../domain/film.js';
+import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -808,6 +808,26 @@ export const _lblLocalized = lbl => {
 };
 
 export const durFmt    = d   => d ? (String(d).includes('min') ? String(d) : String(d)+' min') : '';
+// abiertaLabel — lo que se DICE de una actividad abierta donde las demás dicen su
+// duración: por fase (abiertaFase, dominio) y con verbo, sin adjetivo — «Abierta»
+// concordaba con la maratón y fallaba con el recorrido y el taller (UX Writer,
+// 7 sep 2026). Antes de abrir: «Abre a las 8:00». Abierta: «Hasta 18:00» (la
+// misma voz que `plan_hasta` en Mi Plan). Después: «Ya pasó», la clave que ya
+// existe. La hora en prosa va sin cero a la izquierda; en columnas sigue «08:00».
+export function abiertaLabel(f){
+  const fase=abiertaFase(f,simNow());
+  if(!fase) return '';
+  const _h=x=>String(x||'').replace(/^0/,'');
+  if(fase==='antes') return t('abre_a_las',{h:_h(f.time)});
+  if(fase==='abierta') return t('abierta_hasta',{h:_h(minToStr(screeningBlockEndMin(f)))});
+  return t('ya_paso');
+}
+// abiertaRango — «8:00 a 18:00», la ventana entera para la fila de horario de la ficha.
+export function abiertaRango(f){
+  if(!f||!f.info||!f.time) return '';
+  const _h=x=>String(x||'').replace(/^0/,'');
+  return t('abierta_rango',{a:_h(f.time),b:_h(minToStr(screeningBlockEndMin(f)))});
+}
 
 // _minFmt(m) — minutos (número) → "1 h 45" / "45 min". Para los detalles del conflicto
 // por desplazamiento ("~1 h 45 de viaje · 1 h 05 de hueco"). durFmt formatea la duración
