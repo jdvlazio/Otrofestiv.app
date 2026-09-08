@@ -154,7 +154,14 @@ def ensamblar(fid, escribir=True):
         obras = f.get('obras') or f.get('film_list') or []
         e = {
             'title': f['titulo'],
-            'type': f.get('type') or ('event' if f.get('event_kind') else 'film'),
+            # `info: true` IMPLICA evento: el schema lo restringe a type:'event'
+            # (lo que se entra y se sale es un evento; una obra con función
+            # anunciada siempre se planifica). Antes el tipo se derivaba solo de
+            # `event_kind`, así que un drop-in sin kind salía como 'film' — el
+            # «Encuentro Colombia Experimental Contemporánea» de CineAutopsia
+            # llevaba años así, contado como obra en las coberturas mientras el
+            # planificador lo excluía (8 sep 2026, lo cazó [info-solo-evento]).
+            'type': f.get('type') or ('event' if (f.get('event_kind') or f.get('info')) else 'film'),
             'section': sec_pub,
             'director': f.get('director') or None,
             'year': f.get('anio') or None,
