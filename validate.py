@@ -4140,9 +4140,6 @@ try:
         ('vartex-2026', 'A La Rivera: Synthfonía de un escape'),   # live cinema de apertura; no anunciado
         ('vartex-2026', 'Muestra Fashion Film Internacional'),     # 2 obras del carrusel IG, sin minutaje
         ('vartex-2026', 'Muestra Fashion Film Nacional'),          # 20 obras listadas sin duración
-        # CineAutopsia — el PDF oficial la trae sin obras y sin runtime: es una
-        # proyección al aire libre más un diálogo, y el festival no anunció cuánto dura.
-        ('cineautopsia-2026', 'Encuentro Colombia Experimental Contemporánea'),
         # QAFF — la Muestra Artística es exposición CONTINUA: el calendario Boom
         # publica un rango (14 SEP 09:00 → «17 OCT» 10:00, con el mes además mal
         # tipeado), no un minutaje de visita. No hay número honesto que poner.
@@ -4167,6 +4164,16 @@ try:
             if _tt in _seen:
                 continue
             _seen.add(_tt)
+            # `info:true` = drop-in sin hora fija (SCHEMA.md): no entra al plan ni
+            # a conflictos, así que la razón de ser de este guardián —«alimenta el
+            # cálculo del plan»— no le aplica. Exigirle duración obliga a transcribir
+            # la VENTANA de apertura como si fuera un compromiso: la maratón de
+            # SiembraFest decía «600 min» por estar abierta de 8:00 a 18:00 (Juan,
+            # 7 sep 2026). La ventana se cuenta en la sinopsis, que es donde se lee
+            # como lo que es. Esto NO es una excepción pendiente de dato: es que el
+            # campo no aplica — por eso va acá y no en _PENDING.
+            if _a.get('info'):
+                continue
             if not str(_a.get('duration', '')).strip():
                 if (_fname, _tt) not in _PENDING:
                     _viol.append(f"{_fname}: '{_tt}'")
