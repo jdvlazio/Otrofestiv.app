@@ -6,8 +6,8 @@ import {_langDates, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPost
 import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
-import { _festDate, durEstimada } from '../domain/time.js';
-import { blockDuration } from '../domain/film.js';
+import { _festDate, durEstimada, minToStr } from '../domain/time.js';
+import { blockDuration, screeningBlockEndMin } from '../domain/film.js';
 import { t } from '../i18n/i18n.js';
 import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→auth (sharePlan pide nombre)
 
@@ -392,7 +392,7 @@ export async function exportICS(){
       // Ahora dice los minutos que efectivamente bloquea, con la `~` de siempre
       // para lo estimado. La explicación de por qué no se sabe vive en Avisos, en
       // la ficha, que es donde se decide (decisión de Juan, 4 sep).
-      `DESCRIPTION:${clean(_icsCfg.name||'Festival')} - ${clean(s.section)} - ${durEstimada(s.duration)?'~'+blockDuration(s)+' min':clean(s.duration)}`,
+      `DESCRIPTION:${clean(_icsCfg.name||'Festival')} - ${clean(s.section)} - ${s.info?clean(t('abierta_hasta',{h:minToStr(screeningBlockEndMin(s)).replace(/^0/,'')})+' · '+t('vas_cuando_quieras')):durEstimada(s.duration)?'~'+blockDuration(s)+' min':clean(s.duration)}`,
       `UID:otrofestiv-${_icsId}-${s._title?.replace(/\s/g,'')}-${fmt(start)}@otrofestiv.app`,
       'END:VEVENT');
   });

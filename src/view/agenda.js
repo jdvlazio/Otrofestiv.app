@@ -16,7 +16,7 @@ import {
   DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, hayEvento, getCortoItemPoster, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, programParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
  abiertaLabel } from './helpers.js';
 import {
-  _festNowMin, dayFullyPassed, durEstimada, festivalEnded, minToStr, simTodayStr, toMin,
+  _festNowMin, dayFullyPassed, durEstimada, festivalEnded, minToStr, simNow, simTodayStr, toMin,
 } from '../domain/time.js';
 // Consenso colaborativo de retraso (Fase B): renderAgenda (impura/exenta) lo lee
 // del controller y lo pasa como dato a las funciones puras del view.
@@ -26,7 +26,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, blockDuration, delayedEndMin, _delayKey, _endedStats, prioLiveCount, effectiveWatched,
+  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, blockDuration, delayedEndMin, _delayKey, _endedStats, prioLiveCount, effectiveWatched, abiertaFase,
 } from '../domain/film.js';
 import { sameEntry,
   isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
@@ -137,7 +137,12 @@ export function renderAgenda(){
       return;
     }
     const _progressHtml=(!savedAgenda||!savedAgenda.schedule||!savedAgenda.schedule.length)?renderFlowProgress(state,'planner'):'';
-    const pending=[...watchlist].filter(titleStr=>!watched.has(titleStr)&&FILMS.some(f=>f.title===titleStr&&!screeningPassed(f)));
+    // Una actividad ABIERTA (info:true) no se planifica: se lleva. Sale de
+    // `pending` —no cuenta como «por planear»— y se cuenta aparte mientras su
+    // ventana siga abierta, para que el vacío no diga «ya pasó» a las 11 de la
+    // mañana de una maratón que cierra a las 6 (7 sep 2026).
+    const pending=[...watchlist].filter(titleStr=>!watched.has(titleStr)&&FILMS.some(f=>f.title===titleStr&&!f.info&&!screeningPassed(f)));
+    const abiertas=[...watchlist].filter(titleStr=>!watched.has(titleStr)&&FILMS.some(f=>f.title===titleStr&&f.info&&abiertaFase(f,simNow())!=='despues'));
 
     // ── Estado A: nada que planear ────────────────────────────────────────
     // `pending` vacío tenía UNA sola pantalla: la de primer uso («Tu Plan
@@ -166,7 +171,9 @@ export function renderAgenda(){
       if(watchlist.size){
         view.innerHTML=`${_progressHtml}
           <div class="ag-section">
-            ${emptyStateHero(ICONS.calendar,t('plan_nada_por_planear'),t('plan_nada_por_planear_sub'),t('plan_ir_programa'),'mnav-cartelera')}
+            ${abiertas.length
+              ?emptyStateHero(ICONS.calendar,t('plan_nada_por_planear'),t('plan_nada_sin_hora_fija'),t('cta_mi_plan'),'mnav-miplan')
+              :emptyStateHero(ICONS.calendar,t('plan_nada_por_planear'),t('plan_nada_por_planear_sub'),t('plan_ir_programa'),'mnav-cartelera')}
           </div>`;
         return;
       }
@@ -230,7 +237,7 @@ export function renderAgenda(){
           const _clave=_nP===1
             ?(_ev?'pre_actividad_planear':'pre_obra_planear')
             :(_ev?'pre_actividades_planear':'pre_obras_planear');
-          const _obras=`${t(_clave,{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}`;
+          const _obras=`${t(_clave,{n:_nP})}${_prio?t('pre_con_prio',{m:_prio}):''}${abiertas.length?` · ${t('pre_sin_hora_fija',{n:abiertas.length})}`:''}`;
           // La alerta vive SOLO antes de calcular (auditoría 18 ago): es un
           // PRE-diagnóstico —«esto va a costar»— y sobrevivía al cálculo, en
           // ámbar y con ícono, justo encima del resultado. Ahí se leía como «tu
@@ -351,7 +358,7 @@ export function renderMiPlanCalendar(state){
   }
 
   // ── Layout constants ──
-  const PHDR=44;   // px for sticky day header
+  let PHDR=44;     // px for sticky day header (+26 si hay carril de actividades abiertas, abajo)
   const PPH=window.innerWidth<=600?40:64; // mobile: 40px/hr, desktop: 64px/hr
 
   // REGLA: rango dinámico — calcular desde los días visibles solamente.
@@ -372,7 +379,15 @@ export function renderMiPlanCalendar(state){
   const _visDays=new Set([DAY_KEYS[vs],DAY_KEYS[ve]]);
   const _visSched=schedule.filter(s=>_visDays.has(s.day));
   const _src=_visSched.length?_visSched:schedule;
-  const _allMins=_src.flatMap(s=>{
+  // Las actividades ABIERTAS (info:true) no viven en la grilla de horas: van en
+  // un carril bajo la cabecera del día, como los eventos de todo el día de un
+  // calendario. Si entraran a la grilla, una ventana de 8 a 18 mediría diez
+  // horas, ocuparía la columna entera y diría algo falso: que estás ahí todo el
+  // día. Por eso tampoco fijan el rango de horas.
+  const _laneH=_src.some(s=>s.info)?26:0;
+  PHDR+=_laneH;
+  const _conHora=_src.filter(s=>!s.info);
+  const _allMins=(_conHora.length?_conHora:[{time:'10:00',duration:'120 min'}]).flatMap(s=>{
     const st=toMin(s.time), en=st+blockDuration(s);
     return[st,en];
   });
@@ -446,8 +461,14 @@ export function renderMiPlanCalendar(state){
     // hora, uno de 106 min y otro de 5 min montado encima. La función se dibuja
     // completa —el bloque mide lo que dura el conjunto— y lista TODAS sus obras,
     // que es lo único que le dice al usuario a qué está entrando.
+    const _abiertasDia=dayFilms.filter(s=>s.info);
+    const _laneHtml=_laneH?`<div class="mplan-wk-lane">${_abiertasDia.map(s=>{
+      const fase=abiertaFase(s,simNow())||'abierta';
+      const{displayTitle:_dt}=parseProgramTitle(s._title||'');
+      return`<div class="mplan-wk-open ${fase} js-open-pel" data-title="${escXML(s._title||'')}" data-stop="1">${fase==='abierta'?'<span class="live-dot"></span>':''}${_dt} · ${(l=>l.charAt(0).toLowerCase()+l.slice(1))(abiertaLabel(s))}</div>`;
+    }).join('')}</div>`:'';
     const _bloques=[];
-    dayFilms.forEach(fx=>{
+    dayFilms.filter(s=>!s.info).forEach(fx=>{
       const k=_slotKeyOf(fx);
       const g=k?_bloques.find(x=>x.k===k):null;
       if(g) g.items.push(fx); else _bloques.push({k:k||null,items:[fx]});
@@ -481,6 +502,7 @@ export function renderMiPlanCalendar(state){
         <div class="mplan-wk-col-day"><span class="mplan-wk-day-name">${_lblLocalized((DAY_SHORT_EN[DAYS[i].k]||DAYS[i].lbl).split(' ')[0])}</span><span class="mplan-wk-col-date${dayFilms.length?' wk-has':''}">${DAYS[i].d}</span></div>
         ${dayFilms.length?(isActive?'<div class="mplan-wk-col-arrow">'+ICONS.chevronD+'</div>':'<div class="mplan-wk-col-dot"></div>'):''}
       </div>
+      ${_laneHtml}
       ${gridHtml}${nowHtml}${blocksHtml}
     </div>`;
   };
@@ -522,7 +544,34 @@ export function renderMiPlanCalendar(state){
       listHtml+=emptyState(ICONS.calendar, t('plan_nada_dia'));
     }
   } else {
-    dayFilms.forEach((s,idx)=>{
+    // Las abiertas encabezan el día: donde las demás dicen su hora, ésta dice
+    // su fase («Hasta 18:00») y debajo «Vas cuando quieras». Sin botón de
+    // alternativas —no tiene otra función— y con el mismo botón de sacar.
+    const dayTimed=dayFilms.filter(s=>!s.info);
+    const dayAbiertas=dayFilms.filter(s=>s.info);
+    if(dayAbiertas.length) listHtml+=`<div class="sec-hdr sm mp-abierta-hdr">${ICONS.calendar} <span>${t('sin_hora_fija')}</span></div>`;
+    dayAbiertas.forEach(s=>{
+      const _mf=FILMS.find(fi=>fi.title===s._title);
+      const safeT=(s._title||'').replace(/"/g,'&quot;');
+      const{displayTitle:_dt}=parseProgramTitle(s._title||'');
+      const _lbl=isPastDay?t('ya_paso'):abiertaLabel(s);
+      const _isPastRow=isPastDay||abiertaFase(s,simNow())==='despues';
+      listHtml+=`<div class="mplan-row mp-abierta-row${_isPastRow?' mp-seen':''}" data-rkey="${safeT}">
+        <div class="js-open-pel" data-title="${escXML(s._title||'')}" style="flex-shrink:0;cursor:pointer" data-stop="1">${_mf&&_mf.type==='event'
+          ?`<img class="lb-poster" src="${makeEventPoster(state,_mf.title,_mf.duration,_mf.event_kind)}" alt="" loading="lazy">`
+          :_posterThumb(_mf||s,'lb-poster')}</div>
+        <div class="mplan-ri">
+          <div class="mplan-t1 mp-abierta${_isPastRow?' mp-past':''}">${_lbl}</div>
+          <div class="mplan-t2">${t('vas_cuando_quieras')}</div>
+          <div>${_dt}</div>
+          <div class="mplan-rvenue mp-event-venue">${ICONS.pin} ${vcfg(s.venue).short||s.venue}${venueCity(s.venue)?` · <span class="plist-city">${venueCity(s.venue)}</span>`:''}</div>
+        </div>
+        <div class="col-end">
+          <button class="icon-btn-circle ag-fi-btn del" data-title="${safeT}" data-action="removeFromAgenda" data-stop="1" aria-label="${t('plan_sacar')}">${ICONS.x}</button>
+        </div>
+      </div>`;
+    });
+    dayTimed.forEach((s,idx)=>{
       const fMin=toMin(s.time),dur=blockDuration(s);
       const isPast=isPastDay||(activeMiPlanDay===nowDayIdx&&screeningEnded(s,nowMin));
       const isNow=activeMiPlanDay===nowDayIdx&&screeningNow(s,nowMin);
@@ -534,8 +583,8 @@ export function renderMiPlanCalendar(state){
       const safeT=(s._title||'').replace(/"/g,'&quot;');
       // Entre dos obras de la MISMA función no hay hueco que medir, ni traslado, ni
       // "no llegás a la siguiente": la siguiente ES la misma función.
-      if(idx>0&&!_mismaFuncion(dayFilms[idx-1],s)){
-        const prev=dayFilms[idx-1];
+      if(idx>0&&!_mismaFuncion(dayTimed[idx-1],s)){
+        const prev=dayTimed[idx-1];
         const gap=fMin-(toMin(prev.time)+blockDuration(prev));
         if(gap>=0&&gap<25){
           const _isCritical=gap<=5;
@@ -2035,6 +2084,7 @@ export function getSuggestions(){
         // estas 9 horas en tu hueco» no es una sugerencia, es otro plan.
         // Su camino es el control de bloque de la ficha.
         if(f.is_recurring) return;
+        if(f.info) return; // abierta: no se sugiere en un hueco, se lleva desde Interés
         if(seenDiscover.has(f.title)||screeningPassed(f)||f.day!==day||isScreeningBlocked(f)) return;
         const fStart=toMin(f.time),fEnd=fStart+blockDuration(f);
         // Verificar que hay un slot de tiempo (check rápido)
