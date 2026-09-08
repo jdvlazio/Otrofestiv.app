@@ -200,6 +200,22 @@ export function screeningEndDate(s){
 export function isShortFilm(f){ const d=parseDur(f&&f.duration); return d>0&&d<=40; }
 export function screeningEnded(s,nowMin){ return screeningEndMin(s)<=nowMin; }
 export function screeningNow(s,nowMin){ return toMin(s.time)<=nowMin&&!screeningEnded(s,nowMin); }
+// abiertaFase — la FASE de una actividad ABIERTA (info:true, drop-in con ventana)
+// respecto a un instante: 'antes' | 'abierta' | 'despues'; '' si no es abierta.
+// Es el dueño único de esa lectura porque tres superficies la necesitan con la
+// misma respuesta (ficha, filas del programa, Mi Plan). Nació de la maratón de
+// SiembraFest (7 sep 2026): abierta de 8:00 a 18:00, la tarjeta decía «600 min»
+// —diez horas de compromiso— y sin duración la app la daba por pasada a las 8:10.
+// La ventana es dato (su duration); lo que cambia es cómo se DICE: por fase.
+export function abiertaFase(f,now){
+  if(!f||!f.info) return '';
+  const dateStr=FESTIVAL_DATES[f.day];
+  if(!dateStr||!f.time) return '';
+  const start=_festDate(dateStr,f.time);
+  if(now<start) return 'antes';
+  const end=new Date(start.getTime()+blockDuration(f)*60000);
+  return now<=end?'abierta':'despues';
+}
 // screeningQaOnly — la ventana en la que la PELÍCULA ya terminó pero la función
 // sigue: los ~30 min estimados del Q&A. Dueño único de la distinción, porque la
 // pantalla la necesita en dos lugares y con la misma respuesta.

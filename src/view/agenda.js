@@ -14,7 +14,7 @@ import {
 } from './components.js';
 import {
   DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, hayEvento, getCortoItemPoster, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, programParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
-} from './helpers.js';
+ abiertaLabel } from './helpers.js';
 import {
   _festNowMin, dayFullyPassed, durEstimada, festivalEnded, minToStr, simTodayStr, toMin,
 } from '../domain/time.js';
@@ -695,7 +695,7 @@ export function renderFilmAlternatives(state,title,day,time){
     return`<div class="checkin-opt">
       <div class="js-open-pel" data-title="${safeTNew}" data-stop="1" style="flex-shrink:0;cursor:pointer">${_posterThumb(f,'lb-poster')}</div>
       <div class="checkin-opt-info">
-        <div class="checkin-opt-time">${f.time} · ${durFmt(f.duration)}</div>
+        <div class="checkin-opt-time">${f.time} · ${f.info?abiertaLabel(f):durFmt(f.duration)}</div>
         <div class="checkin-opt-title">${short}</div>
         <div class="checkin-opt-venue">${ICONS.pin} ${vc2.short}${sala(f.venue)?' \u00b7 '+sala(f.venue):''}</div>
       </div>
@@ -1101,7 +1101,7 @@ export function renderFilmListHTML(state){
     // «undefined» en la ficha. Toda otra superficie va por venueLabel(), que ya
     // cae al nombre completo; estas dos —Mi Plan y esta— leían el campo crudo.
     const venueStr=next?(vcfg(next.venue).short||next.venue):'';             // venue de la próxima función
-    const durStr=durFmt(f?.duration);                                       // solo f.duration
+    const durStr=f?.info?abiertaLabel(f):durFmt(f?.duration);                // abierta: la fase, no los minutos
     const conflictHtml=conflict
       ?`<div class="int-item-conflict">
           ${ICONS.alert}
@@ -1389,7 +1389,7 @@ function _renderSavedAgendaHTML(state, consensus){
             <div class="suggestion-time">${f.time}</div>
             <div class="suggestion-title">${(()=>{const{displayTitle:_dt}=parseProgramTitle(f.title);return _dt;})()}</div>
             <div class="suggestion-sec">${_secLabelFull(f.section||'')}</div>
-            <div class="suggestion-meta">${durFmt(f.duration)}${vc2.short?' · '+vc2.short+(sl?' · '+sl:''):''}</div>
+            <div class="suggestion-meta">${f.info?abiertaLabel(f):durFmt(f.duration)}${vc2.short?' · '+vc2.short+(sl?' · '+sl:''):''}</div>
           </div>
           <button class="suggestion-add" data-action="addSuggestion"${f._isRestored?' data-restaurar="1"':''} data-title="${f.title.replace(/"/g,'&quot;')}" data-day="${f.day}" data-time="${f.time}" data-stop="1" style="${f._isRestored?'border-color:var(--amber);color:var(--amber);background:var(--amber-10)':''}">
             ${f._isRestored?`${ICONS.undo} ${t('misc_restaurar')}`:`${ICONS.plus} ${t('plan_agendar')}`}

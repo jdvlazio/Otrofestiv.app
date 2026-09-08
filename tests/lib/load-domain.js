@@ -181,7 +181,7 @@ function extractObject(source, name) {
 
 const DEFAULT_FNS = [
   'toMin', 'minToStr', 'parseDur', 'durEstimada', 'blockDuration', 'effectiveDuration', 'durationForTravel', 'screeningEndDate',
-  'screeningEndMin', 'screeningEnded', 'screeningNow',
+  'screeningEndMin', 'screeningEnded', 'screeningNow', 'abiertaFase',
   '_resolveVenue', 'venueTravelMins', 'travelMins',
   'screensConflict', 'verifyPlan', '_cityOf', // helper local de schedule.js (kind 'ciudad')
   'sameEntry',        // dueño de la identidad de entrada — verifyPlan lo usa para 'duplicado'
