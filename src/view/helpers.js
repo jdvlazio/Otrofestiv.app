@@ -59,7 +59,11 @@ export function getFilmPoster(f){
   // 1. Custom poster siempre primero
   const _cn=normKey(f.title||'');
   if(_CUSTOM_N[_cn]) return _CUSTOM_N[_cn];
-  // 2. Eventos — siempre poster ámbar generativo (ignora f.poster/TMDB)
+  // 2. Eventos — su AFICHE si lo tienen, y si no el ámbar generativo. Es la
+  //    doctrina escrita (docs/POSTERS.md §orden): «`f.poster` o makeEventPoster».
+  //    El comentario decía «siempre generativo, ignora f.poster» y su propia
+  //    línea decía lo contrario desde hacía meses; un comentario vencido en el
+  //    dueño único es el que convence a los llamadores de saltárselo (8 sep 2026).
   if(f.type==='event'){const _et=f.is_awards_screening?f.title.replace(/^Award Screening:\s*/i,''):f.title;return f.poster||makeEventPoster(state,_et,f.duration,f.event_kind,f.section);}
   // 3. Proyección sorpresa
   if(f.title&&f.title.toLowerCase().includes('sorpresa')) return makeSorpresaPoster();
