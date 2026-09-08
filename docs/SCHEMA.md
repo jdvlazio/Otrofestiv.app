@@ -353,6 +353,7 @@ fiestas, conciertos, performances, presentaciones virtuales.
 - Regla de clasificación al montar: *¿el asistente "reserva" ese horario?* Sí →
   `duration` (planificable). No (entra/sale cuando quiere) → `info: true`.
 - `info` se propaga a los screenings exploded vía el `Object.assign` del loader.
+- **Lo vigila `validate-festivals.js`** en las dos direcciones: `[info-solo-evento]` exige que `info` vaya sobre `type: 'event'`, y la advertencia de *duración anómala* (techo de 400 min) **no le aplica**, porque su duración es la VENTANA en que está abierta y no un compromiso del asistente. Una duración de cero sigue siendo dato roto.
 
 ### Bloques de cortos: `is_cortos` + `film_list` (+ `unscheduled`)
 

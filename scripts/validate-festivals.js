@@ -1065,10 +1065,34 @@ for (const fname of files) {
     if (_gPct < 80) warnings.push(`Cobertura de género: ${_gPct}% (${_withGenre.length}/${_auditFilms.length}) — recomendado ≥80%. Ejecutar enriquecimiento TMDB estricto.`);
   }
   // ── Duration anomalies ────────────────────────────────────────────────────
+  // El techo de 400 min vigila FUNCIONES: diez horas de proyección es un error
+  // de extracción. Una actividad ABIERTA (`info: true`, drop-in) no declara un
+  // compromiso sino una VENTANA — la maratón fotográfica de SiembraFest está
+  // abierta de 8:00 a 18:00 y sus 600 min son el dato correcto: la app los usa
+  // para el punto verde, el carril de Mi Plan y el calendario exportado. El
+  // guardián la acusaba igual (7 sep 2026), y una advertencia que miente sobre
+  // dato bueno es la que enseña a ignorar las advertencias.
+  // Lo que NO se le perdona a nadie, abierta incluida, es una duración de cero:
+  // eso no es una ventana, es dato roto.
   for (const f of (data.films || [])) {
     if (!f.duration && f.duration !== 0) continue;
     const _d = parseInt(String(f.duration).replace(/[^0-9]/g,''));
-    if (!isNaN(_d) && (_d <= 0 || _d > 400)) warnings.push(`Duración anómala: '${(f.title||'').slice(0,40)}' — ${f.duration}`);
+    if (isNaN(_d)) continue;
+    if (_d <= 0 || (!f.info && _d > 400)) warnings.push(`Duración anómala: '${(f.title||'').slice(0,40)}' — ${f.duration}`);
+  }
+  // [info-solo-evento] WARNING — `info: true` vive SOLO en `type: 'event'`.
+  // El schema lo restringe (docs/SCHEMA.md § Campo `info`) porque `info` es la
+  // excepción mínima al default de planificar: una OBRA con función anunciada
+  // siempre se planifica; lo que se entra y se sale es un evento. Nadie lo
+  // vigilaba, y al escribirlo (8 sep 2026) apareció un caso real en producción:
+  // el «Encuentro Colombia Experimental Contemporánea» de CineAutopsia lleva
+  // info sobre `type:'film'`, así que las coberturas de género y de póster lo
+  // cuentan como obra mientras el planificador lo excluye. Queda en WARNING y
+  // no en error: el festival ya terminó y el arreglo es de dato, no de código.
+  for (const f of (data.films || [])) {
+    if (f.info && f.type !== 'event') {
+      warnings.push(`[info-solo-evento] "${(f.title||'?').slice(0,40)}": info:true sobre type:'${f.type || '(sin type)'}' — el schema lo restringe a type:'event'. O es un evento, o no lleva info.`);
+    }
   }
   totalErrors += errors.length;
   totalWarnings += warnings.length;
