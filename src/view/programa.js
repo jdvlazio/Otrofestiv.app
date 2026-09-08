@@ -379,7 +379,7 @@ function _renderExploreListaHTML(state){
       <img class="plist-poster" src="${src}" alt="${dt}" loading="lazy">
       <div class="plist-info">
         <div class="plist-title">${dt}</div>
-        <div class="plist-meta">${days?`${daysHtml} · `:''}${f.info?abiertaLabel(f):durFmt(f.duration)}</div>
+        <div class="plist-meta">${days?`${daysHtml} · `:''}${f.info?abiertaLabel(f):durFmt(f.duration)}${_metaBadges(f)?` · ${_metaBadges(f)}`:''}</div>
         <div class="plist-sec">${_secLabelFull(f.section||'')}</div>
       </div>
       <div class="plist-heart${inWL?'':' empty'}" data-title="${f.title.replace(/"/g,'&quot;')}" data-action="toggleWLFromList" data-stop="1">${inWL?ICONS.heartFill:ICONS.heart}</div>

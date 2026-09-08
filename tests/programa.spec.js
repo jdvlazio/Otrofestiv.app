@@ -3651,3 +3651,35 @@ test('T182 — evento con afiche propio lo conserva en la lista; sin afiche, el 
   expect(caso.conPinta.startsWith('data:')).toBe(false);
   expect(caso.sinPinta?.startsWith('data:')).toBe(true); // sin afiche: el generativo sigue en pie
 });
+
+// ── Los badges de un EVENTO en la lista de exploración (8 sep 2026) ──────────
+// La rama de evento de «todos los días · lista» no llamaba a _metaBadges, así
+// que 25 eventos publicados con inscripción, boleta o premium no lo decían ahí
+// —y sí en la fila por día, que usa el mismo dueño—. El caso que lo hizo urgente
+// son las cinco charlas «In Conversation With…» de TIFF: todas con boleta, tres
+// premium, en un festival que abre en dos días. La rama de OBRAS de esta misma
+// lista ya los pintaba; esto la iguala, sin badge nuevo ni regla nueva.
+test('T183 — evento con premium/boleta muestra su badge en la lista de todos los días', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-12T10:00:00-05:00');
+  await abrirHojaCiudad(page);
+
+  const caso = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    // un evento cuyo badge de servicio SÍ debe verse (premium manda sobre boleta)
+    const ev = (FILMS || []).find(f => f.type === 'event' && f.premium === true && !f._cancelled);
+    if (!ev) return { err: 'sin evento premium' };
+    activeSec = ev.section || 'all';
+    activeDay = 'all'; programaViewMode = 'list'; _renderProgramaContent(); await w(900);
+    const fila = [...document.querySelectorAll('.plist-item')]
+      .find(e => e.textContent.includes(ev.title.slice(0, 20)));
+    return {
+      titulo: ev.title,
+      esRamaEvento: !!fila?.classList.contains('plist-event'),
+      badges: fila ? [...fila.querySelectorAll('.meta-badge')].map(b => b.textContent.trim()) : null,
+    };
+  });
+
+  expect(caso.err).toBeUndefined();
+  expect(caso.esRamaEvento).toBe(true);        // se pinta por la rama de evento, que es la que fallaba
+  expect(caso.badges).toContain('PREMIUM');
+});
