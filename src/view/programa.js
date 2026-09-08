@@ -11,7 +11,7 @@
 //   Los handlers _dismissNotice/setProgramaChip (data-action) viven en main.js.
 
 import { NOTICES, PALMARES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
-import { ICONS, _buildPosterV16, _secLabel, _secLabelFull, _sectionColor, escXML, makeEventPoster, makeProgramPoster, parseProgramTitle } from './components.js';
+import { ICONS, _buildPosterV16, _secLabel, _secLabelFull, _sectionColor, escXML, makeProgramPoster, parseProgramTitle } from './components.js';
 import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity, programParts, isCitySel, venueSelLabel,
  abiertaLabel } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
@@ -367,12 +367,16 @@ function _renderExploreListaHTML(state){
     const inWL=watchlist.has(f.title);
     const isEvent=f.type==='event';
     const{displayTitle:dt}=parseProgramTitle(f.title);
-    const src=isEvent?'':getFilmPoster(f)||'';
+    // Los eventos pasan por el dueño como todo lo demás (CLAUDE.md: «pósters solo
+    // vía getFilmPoster»). Acá se forzaba el generativo y 57 eventos publicados
+    // perdían el afiche que el festival sí publicó — los talleres de FICDEH salían
+    // como tarjeta ámbar teniendo su propia imagen en /assets (medido, 8 sep 2026).
+    const src=getFilmPoster(f)||'';
     const allPast=screenings.every(s=>screeningPassed(s));
     const days=[...new Set(screenings.map(s=>dayLabel(s.day)||s.day))].join(' · ');
     const daysHtml=_dayChips(screenings);
     if(isEvent) return`<div class="plist-item plist-event js-open-pel" style="${allPast?'opacity:.35':''}" data-title="${escXML(f.title)}">
-      <img class="plist-poster" src="${makeEventPoster(state,dt,f.duration,f.event_kind)}" alt="${dt}" loading="lazy">
+      <img class="plist-poster" src="${src}" alt="${dt}" loading="lazy">
       <div class="plist-info">
         <div class="plist-title">${dt}</div>
         <div class="plist-meta">${days?`${daysHtml} · `:''}${f.info?abiertaLabel(f):durFmt(f.duration)}</div>

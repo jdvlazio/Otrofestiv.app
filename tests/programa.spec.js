@@ -3620,3 +3620,34 @@ test('T177 — el festival terminado no pregunta ciudad, y el filtro sigue ofrec
   expect(r.ciudadesEnFiltro, 'el filtro de Lugar sigue ofreciendo las mismas ciudades')
     .toBe(r.ciudadesDelDato);
 });
+
+// ── El afiche de un EVENTO (8 sep 2026) ──────────────────────────────────────
+// Doctrina escrita (docs/POSTERS.md §orden): un evento usa `f.poster` y, si no
+// tiene, el ámbar generativo. La lista de exploración forzaba SIEMPRE el
+// generativo y 57 eventos publicados perdían el afiche que el festival sí
+// publicó — los talleres de FICDEH salían como tarjeta ámbar teniendo su imagen
+// en /assets. Las dos mitades de la regla se fijan acá: con afiche gana el
+// afiche; sin afiche, sigue el generativo (que es una card que se ve bien).
+test('T182 — evento con afiche propio lo conserva en la lista; sin afiche, el generativo', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-14T16:00:00-05:00');
+  await abrirHojaCiudad(page);
+  await page.evaluate(() => { activeDay = 'all'; programaViewMode = 'list'; _renderProgramaContent(); });
+  await page.waitForSelector('.plist-item', { timeout: 10000 });
+
+  const caso = await page.evaluate(() => {
+    const con = (FILMS || []).find(f => f.type === 'event' && f.poster);
+    const sin = (FILMS || []).find(f => f.type === 'event' && !f.poster);
+    const src = (f) => {
+      if (!f) return null;
+      const fila = [...document.querySelectorAll('.plist-item')]
+        .find(e => e.textContent.includes(f.title.slice(0, 20)));
+      return fila?.querySelector('img')?.getAttribute('src') || null;
+    };
+    return { conPoster: con?.poster || null, conPinta: src(con), sinPinta: src(sin) };
+  });
+
+  expect(caso.conPoster).toBeTruthy();
+  expect(caso.conPinta).toBe(caso.conPoster);          // el afiche del festival, no una card inventada
+  expect(caso.conPinta.startsWith('data:')).toBe(false);
+  expect(caso.sinPinta?.startsWith('data:')).toBe(true); // sin afiche: el generativo sigue en pie
+});

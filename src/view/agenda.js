@@ -557,9 +557,7 @@ export function renderMiPlanCalendar(state){
       const _lbl=isPastDay?t('ya_paso'):abiertaLabel(s);
       const _isPastRow=isPastDay||abiertaFase(s,simNow())==='despues';
       listHtml+=`<div class="mplan-row mp-abierta-row${_isPastRow?' mp-seen':''}" data-rkey="${safeT}">
-        <div class="js-open-pel" data-title="${escXML(s._title||'')}" style="flex-shrink:0;cursor:pointer" data-stop="1">${_mf&&_mf.type==='event'
-          ?`<img class="lb-poster" src="${makeEventPoster(state,_mf.title,_mf.duration,_mf.event_kind)}" alt="" loading="lazy">`
-          :_posterThumb(_mf||s,'lb-poster')}</div>
+        <div class="js-open-pel" data-title="${escXML(s._title||'')}" style="flex-shrink:0;cursor:pointer" data-stop="1">${_posterThumb(_mf||s,'lb-poster')}</div>
         <div class="mplan-ri">
           <div class="mplan-t1 mp-abierta${_isPastRow?' mp-past':''}">${_lbl}</div>
           <div class="mplan-t2">${t('vas_cuando_quieras')}</div>
