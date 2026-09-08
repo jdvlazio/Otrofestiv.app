@@ -1097,6 +1097,7 @@ guardián que nadie sabe qué protege es uno que el próximo que toque
 | `[sedes-apiladas]` | Dos sedes de un festival vivo a <60 m casi siempre son la misma (se declara con `_nota`), y la sala no va dentro del nombre de la sede. Warning; los archivados no se reescriben. |
 | `[day-order-indice]` (validate-festivals.js) | `day_order` es el índice del día en `dayKeys`, no un contador: ordena ficha, Mi Plan, Programa y el plan. Deuda por festival en `DAY_ORDER_DEUDA`, que solo baja. |
 | `[synopsis-length]` (validate-festivals.js) | Warning generoso: sinopsis > 600 caracteres, para cazar un dump sin condensar sin spamear. |
+| `[info-solo-evento]` (validate-festivals.js) | `info: true` vive solo en `type: 'event'`: lo que se entra y se sale es un evento; una obra con función anunciada siempre se planifica. Al escribirlo apareció un caso real en producción (CineAutopsia), que las coberturas contaban como obra mientras el planificador lo excluía. En la misma pasada, la **duración anómala** dejó de acusar a las actividades abiertas: sus minutos son una VENTANA (la maratón de SiembraFest, 8:00–18:00), no un compromiso — el techo de 400 min sigue vigilando funciones, y el cero sigue siendo dato roto para todos. |
 
 **Pipeline**
 
