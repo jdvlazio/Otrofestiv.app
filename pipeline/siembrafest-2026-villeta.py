@@ -159,7 +159,7 @@ DETALLE = {
  'Cosecha audiovisual': 'Producto del proceso de formación LABRA.',
  'Maratón fotográfica SiembraFest': ('Una invitación a recorrer Villeta y Sasaima para descubrir, '
     'fotografiar y compartir las historias, gestos y escenas que muestran cómo las mujeres '
-    'sostienen la vida en sus territorios.'),
+    'sostienen la vida en sus territorios. Abierta de 8:00 a 18:00, cuando quieras.'),
 }
 # `experiencia` es un RECORRIDO de todo el día por dos municipios: no se reserva
 # una silla, se pasa cuando se puede. PROTOCOLO §Reglas: eso es `info:true` — no
