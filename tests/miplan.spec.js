@@ -2693,3 +2693,71 @@ test('T175 — tocar el póster en Mi Plan abre la ficha de esa obra', async ({ 
   });
   expect(control.abierta, 'un control con data-stop que no abre ficha sigue sin abrirla').toBe(false);
 });
+
+// ── Actividad ABIERTA en Planear y Mi Plan (7 sep 2026) ───────────────────────
+// Una actividad abierta (info:true, drop-in con ventana) no se planifica: se
+// lleva. Marcarla como Interés la pone directo en Mi Plan; Planear no la cuenta
+// ni la explica como «ya pasó»; en Mi Plan va en el carril bajo la cabecera del
+// día y encabeza la lista con «Hasta 18:00 · Vas cuando quieras».
+const MARATON_SF = 'Maratón fotográfica SiembraFest';
+async function cerrarHojaCiudad(page) {
+  const todas = page.getByText(/ver todas las ciudades|see all cities/i).first();
+  if (await todas.isVisible().catch(() => false)) await todas.click();
+}
+// goToPlanear (helpers) vacía savedAgenda a propósito; acá el Plan es lo que se mide.
+async function irAPlanear(page) {
+  await page.evaluate(() => { cachedResult = null; switchMainNav('mnav-planner'); showAgView(); });
+  await page.waitForTimeout(300);
+}
+// El click en Interés se despacha por el registro de acciones: el estado cambia
+// un tick después. Se ESPERA el cambio (expect.poll), no se lee de una.
+async function interesEnMaraton(page) {
+  const antes = await page.evaluate(t => watchlist.has(t), MARATON_SF);
+  await page.evaluate(t => openPelSheet(t), MARATON_SF);
+  await page.waitForSelector('#pel-sheet.open', { timeout: 8000 });
+  await page.locator('#pel-wl-btn').click();
+  await expect.poll(() => page.evaluate(t => watchlist.has(t), MARATON_SF)).toBe(!antes);
+  await page.evaluate(() => closePelSheet());
+}
+
+test('T180 — abierta: Interés la lleva directo a Mi Plan, carril + fila; quitarla la saca', async ({ page }) => {
+  await enterFestival(page, 'siembrafest2026', '2026-09-13T11:00:00-05:00');
+  await cerrarHojaCiudad(page);
+  await interesEnMaraton(page);
+  const enPlan = () => page.evaluate(t => !!(savedAgenda && savedAgenda.schedule.some(s => s._title === t)), MARATON_SF);
+  await expect.poll(enPlan).toBe(true);
+
+  // Planear: no cuenta, y el vacío dice dónde está en vez de «ya pasó»
+  await irAPlanear(page);
+  await expect(page.locator('#view-agenda, #agenda, body')).toContainText(/(Sin hora fija: ya está en tu Plan|No set time: already in your Plan)/);
+
+  // Mi Plan: el carril bajo la cabecera y la fila que encabeza el día
+  await page.locator('#mnav-miplan').click();
+  // la semana pinta columnas de escritorio (ocultas en móvil) y las dos móviles: se mira la visible
+  const chip = page.locator('.mplan-col-mobile .mplan-wk-open').first();
+  await expect(chip).toBeVisible();
+  await expect(chip).toContainText(/(hasta|until) 18:00/);
+  await expect(chip).not.toContainText('min');
+  const fila = page.locator('.mp-abierta-row').first();
+  await expect(fila.locator('.mplan-t1')).toHaveText(/(Hasta|Until) 18:00/);
+  await expect(fila.locator('.mplan-t2')).toHaveText(/(Vas cuando quieras|Go anytime)/);
+  // y la grilla de horas NO creció hasta las 8 por su culpa (rango mínimo 9:00)
+  const primeraHora = await page.locator('.mplan-wk-htick').first().textContent();
+  expect(primeraHora?.trim()).not.toBe('08:00');
+
+  // quitar el Interés la saca del Plan sin preguntar
+  await interesEnMaraton(page);
+  await expect.poll(enPlan).toBe(false);
+});
+
+test('T181 — abierta + obra con hora: el contador la aparta y no queda en «No incluidas»', async ({ page }) => {
+  await enterFestival(page, 'siembrafest2026', '2026-09-13T07:00:00-05:00');
+  await cerrarHojaCiudad(page);
+  await addToWatchlist(page, "Phakhakhe Pi'txi - Minga de pensamiento + La Asociación + Somos historias: Casaramano, sagrado y vida");
+  await interesEnMaraton(page);
+  await goToPlanear(page);
+  const cuerpo = page.locator('body');
+  await expect(cuerpo).toContainText(/1 (actividad|obra|title|activity)/);
+  await expect(cuerpo).toContainText(/\+1 (sin hora fija|with no set time)/);
+  await expect(page.locator('.ag-excl-block')).toHaveCount(0);
+});

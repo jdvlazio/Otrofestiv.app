@@ -110,6 +110,7 @@ function _screeningRows(pairs, opts){
     // vive abajo, a nivel de bloque (ver _bloqueCtrl).
     if(!owner.is_recurring&&!s._cancelled){
       if(!_planned&&!festivalEnded()&&!screeningPassed(s)){
+        if(owner&&owner.info) _addCtrl=''; else
         _addCtrl=`<button class="suggestion-add" data-action="addSuggestion" data-title="${owner.title.replace(/"/g,'&quot;')}" data-day="${s.day}" data-time="${s.time}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`;
       }
     }

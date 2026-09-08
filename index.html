@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609072013">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609072013">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609072120">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609072120">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1855,6 +1855,13 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    es lo que hace de la grilla un panorama de la semana. */
 .mplan-wk-col.wk-active{background:var(--amber-06);box-shadow:inset 1px 0 0 var(--amber-30),inset -1px 0 0 var(--amber-30)}
 .mplan-wk-col-hdr{height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-bottom:1px solid var(--bdr);background:var(--surf);position:sticky;top:0;z-index:4}
+/* carril de actividades ABIERTAS bajo la cabecera del día (info:true): fuera de la grilla de horas */
+.mplan-wk-lane{height:26px;display:flex;align-items:center;padding:0 5px;border-bottom:1px solid var(--bdr);gap:4px;overflow:hidden}
+.mplan-wk-open{flex:1;min-width:0;height:18px;line-height:18px;border-radius:9px;padding:0 8px;font-size:var(--t-xs);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;background:var(--event-blue-08);border:1px solid var(--event-blue-50);color:var(--event-blue-title)}
+.mplan-wk-open.abierta{background:var(--green-12);border-color:var(--green)}
+.mplan-wk-open.despues{opacity:.35}
+.mplan-wk-open .live-dot{margin-right:5px}
+.mplan-t1.mp-abierta{color:var(--event-blue-70)}
 .mplan-wk-col.wk-today .mplan-wk-col-hdr{background:var(--amber-08)}
 .mplan-wk-col.wk-today .mplan-wk-col-date{color:var(--amber-60);line-height:1}
 .mplan-wk-col.wk-active .mplan-wk-col-hdr{box-shadow:inset 0 -2px 0 var(--amber)}
@@ -3660,7 +3667,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609072013";
+    s.src="/src/main.js?v=202609072120";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

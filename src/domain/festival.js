@@ -94,7 +94,7 @@ export function _getFestivalPhase(){
   const todayDay=DAY_KEYS.find(d=>FESTIVAL_DATES[d]===todayStr);
   if(!todayDay) return null;
   const todayScreenings=savedAgenda.schedule
-    .filter(s=>s.day===todayDay)
+    .filter(s=>s.day===todayDay&&!s.info)   // una abierta no es «la próxima»: no tiene hora a la que llegar
     .sort((a,b)=>toMin(a.time)-toMin(b.time));
   if(!todayScreenings.length) return null;
 

@@ -18,7 +18,7 @@ import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-c
 import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _syncPmodeTabs } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simNow, simTodayStr, toMin } from '../domain/time.js';
-import { scoreFilm, screeningPassed, isShortFilm, prioLiveCount, effectiveWatched, screeningEndDate } from '../domain/film.js';
+import { scoreFilm, screeningPassed, isShortFilm, prioLiveCount, effectiveWatched, screeningEndDate, abiertaFase } from '../domain/film.js';
 import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens, screeningPlannable, sameEntry } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
@@ -61,7 +61,22 @@ export function toggleWL(title,e){
     return {watchlist:a, watched:b, prioritized:c};
   };
   // 2. GUARD + 3. MUTATE — branch A: remove con modal si en savedAgenda
+  // Una actividad ABIERTA (info:true) no se planifica: se lleva. Marcarla como
+  // Interés la pone directo en Mi Plan —no choca con nada ni desplaza a nada,
+  // no hay decisión que tomar— y quitarla del Interés la saca del Plan sin
+  // preguntar: para ella las dos cosas son la misma (7 sep 2026).
+  const _abierta=FILMS.some(f=>f.title===title&&f.info);
   if(watchlist.has(title)){
+    if(_abierta){
+      state.transaction(() => {
+        commitPlan(a=>{if(!a) return a;const sch=a.schedule.filter(s=>s._title!==title);return sch.length?{...a,schedule:sch}:null;});
+        state.batchUpdate(_quitarTodas(watchlist, watched, prioritized));
+      });
+      saveSavedAgenda();
+      saveState('wl','watched','prio');updateCardState(title);
+      showToast(t('toast_fuera_intereses'),'info');
+      return;
+    }
     if(savedAgenda&&savedAgenda.schedule.some(s=>s._title===title)){
       showActionModal(t('plan_quitar_intereses'),
         `<div><b>${title.length>36?title.slice(0,34)+'…':title}</b> ${t('plan_esta_en_tu_plan')}</div><div>${t('plan_quitar_tmb')}</div>`,
@@ -109,7 +124,18 @@ export function toggleWL(title,e){
     // «bloqueada» de «no existe».
     const _allScreens=FILMS.filter(f=>f.title===title&&!screeningPassed(f));
     const _allBlocked=_allScreens.length>0&&_allScreens.every(s=>isScreeningBlocked(s));
-    if(_allBlocked){
+    if(_abierta){
+      const _ventanas=FILMS.filter(f=>f.title===title&&f.info&&f.day&&f.time&&abiertaFase(f,simNow())!=='despues');
+      if(_ventanas.length){
+        commitPlan(a=>{const b=a||{schedule:[]};return {...b,
+          schedule: [...b.schedule.filter(e=>e._title!==title), ..._ventanas.map(sc=>({...sc,_title:title}))]
+            .sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
+        };});
+        saveSavedAgenda();
+        const{displayTitle:_dtA}=parseProgramTitle(title);
+        showToast(`${ICONS.calendar} ${_dtA.length>20?_dtA.slice(0,18)+'…':_dtA} · ${t('plan_en_tu_plan')}`,'info');
+      }
+    } else if(_allBlocked){
       const{displayTitle}=parseProgramTitle(title);
       const _short=displayTitle.length>28?displayTitle.slice(0,26)+'…':displayTitle;
       setTimeout(()=>showToast(`"${_short}" ${t('plan_bloqueado_disp')}`,'warn',5000),300);
