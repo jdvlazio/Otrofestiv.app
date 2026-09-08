@@ -807,7 +807,7 @@ async function abrirMaraton(page, simTime) {
 }
 
 test('T178 — actividad abierta: la ficha dice la fase, no los minutos', async ({ page }) => {
-  await abrirMaraton(page, '2026-09-13T11:00:00');
+  await abrirMaraton(page, '2026-09-13T11:00:00-05:00');
   const dur = page.locator('#pel-sheet.open .pel-sheet-flags-dur');
   await expect(dur).toHaveText(/(Hasta|Until) 18:00/);
   await expect(dur).not.toContainText('min');
@@ -826,8 +826,8 @@ test('T178 — actividad abierta: la ficha dice la fase, no los minutos', async 
 });
 
 test('T179 — actividad abierta: antes «Abre a las», después «Ya pasó»', async ({ page }) => {
-  await abrirMaraton(page, '2026-09-13T07:00:00');
+  await abrirMaraton(page, '2026-09-13T07:00:00-05:00');
   await expect(page.locator('#pel-sheet.open .pel-sheet-flags-dur')).toHaveText(/(Abre a las|Opens at) 8:00/);
-  await page.evaluate(() => { _simTime = '2026-09-13T19:00:00'; openPelSheet('Maratón fotográfica SiembraFest'); });
+  await page.evaluate(() => { _simTime = '2026-09-13T19:00:00-05:00'; openPelSheet('Maratón fotográfica SiembraFest'); });
   await expect(page.locator('#pel-sheet.open .pel-sheet-flags-dur')).toHaveText(/(Ya pasó|Already over)/);
 });
