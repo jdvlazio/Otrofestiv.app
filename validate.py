@@ -6033,6 +6033,47 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [predicado-compartido-tests] lo que el certificado NO puede certificar ─────
+# El auditor de recorrido (tests/recorrido-festival.spec.js) certifica el plan con
+# verifyPlan, «el mismo certificador del oráculo y del chokepoint». Esa frase es
+# cierta y por eso mismo es una TRAMPA: verifyPlan, computeScenarios (que arma el
+# plan) y trueMax (que dice cuál era el máximo) comparten screensConflict. Cegar
+# ese predicado deja a los tres de acuerdo en una realidad falsa y el auditor
+# sigue VERDE — medido el 10 sep 2026: con screensConflict devolviendo false,
+# TIFF pasó de 3 a 5 obras en el plan y el recorrido no dijo nada.
+#
+# Darle al auditor un criterio propio exigiría duplicar la doctrina del buffer y
+# del viaje, o sea romper el dueño único para tapar un hueco que causa tenerlo:
+# el remedio sería peor (se probó, y un detector de solape crudo no alcanza —
+# lo que el predicado frena no son choques de reloj sino traslados imposibles).
+#
+# Lo que SÍ sostiene la red es que el predicado tenga tests PROPIOS, por sus
+# casos y no a través de sus consumidores: con la misma mutación, 21 unit tests
+# se ponen rojos. Este guardián existe para que esa cobertura no desaparezca en
+# silencio y deje al auditor sosteniendo un certificado que no puede sostener.
+# Mismo patrón que [validate-film-tests].
+check = 'predicado-compartido-tests'
+try:
+    import glob as _glob
+    _MIN = 5
+    _sched = open('src/domain/schedule.js', encoding='utf-8').read() if os.path.exists('src/domain/schedule.js') else ''
+    if 'export function screensConflict' not in _sched:
+        ok(check, 'screensConflict no exportada — sin requisito de tests')
+    else:
+        # Su ARCHIVO PROPIO, no cualquiera que lo mencione: contar los tests de
+        # todo archivo que nombre el predicado daba 99 (computeScenarios y demás
+        # consumidores lo nombran), y ese número mide a los consumidores, que es
+        # justo lo que no sirve acá.
+        _tf = 'tests/unit/screensConflict.test.js'
+        _n = open(_tf, encoding='utf-8').read().count('test(') if os.path.exists(_tf) else 0
+        if _n < _MIN:
+            fail(check, f'screensConflict lo comparten el motor, el oráculo y verifyPlan: si se ciega, el auditor de '
+                        f'recorrido sigue VERDE. Su red es {_tf}, y hoy tiene {_n} test() (mínimo {_MIN}) — no mergear')
+        else:
+            ok(check, f'screensConflict, compartido por motor/oráculo/certificador, con {_n} tests propios en su archivo')
+except Exception as _e:
+    warn(check, f'no se pudo verificar predicado-compartido-tests: {_e}')
+
 check = 'lib-unica'
 try:
     import ast as _ast, glob as _g4, os as _os4
