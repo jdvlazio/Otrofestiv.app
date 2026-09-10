@@ -1098,6 +1098,7 @@ guardián que nadie sabe qué protege es uno que el próximo que toque
 | `[day-order-indice]` (validate-festivals.js) | `day_order` es el índice del día en `dayKeys`, no un contador: ordena ficha, Mi Plan, Programa y el plan. Deuda por festival en `DAY_ORDER_DEUDA`, que solo baja. |
 | `[synopsis-length]` (validate-festivals.js) | Warning generoso: sinopsis > 600 caracteres, para cazar un dump sin condensar sin spamear. |
 | `[info-solo-evento]` (validate-festivals.js) | `info: true` vive solo en `type: 'event'`: lo que se entra y se sale es un evento; una obra con función anunciada siempre se planifica. Al escribirlo apareció un caso real en producción (CineAutopsia), que las coberturas contaban como obra mientras el planificador lo excluía. En la misma pasada, la **duración anómala** dejó de acusar a las actividades abiertas: sus minutos son una VENTANA (la maratón de SiembraFest, 8:00–18:00), no un compromiso — el techo de 400 min sigue vigilando funciones, y el cero sigue siendo dato roto para todos. |
+| `[predicado-compartido-tests]` | `screensConflict` lo comparten el motor, el oráculo y `verifyPlan`: cegarlo deja a los tres de acuerdo en una realidad falsa y el auditor de recorrido sigue **verde** (medido: TIFF pasó de 3 a 5 obras y R01 calló). Darle un criterio propio al auditor exigiría duplicar la doctrina de buffer y viaje — el remedio sería peor. Su red son sus tests PROPIOS, y este guardián exige que `tests/unit/screensConflict.test.js` mantenga ≥5. |
 
 **Pipeline**
 

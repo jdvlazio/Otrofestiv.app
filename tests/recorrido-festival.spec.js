@@ -15,6 +15,19 @@
 // y se hace CON CADA FESTIVAL del config. Un festival nuevo entra a la cobertura al
 // agregar su entrada + su JSON: cero edición de specs (festivalTestIds).
 //
+// LO QUE ESTE CERTIFICADO **NO** CERTIFICA (10 sep 2026)
+// `verifyPlan` es «el mismo certificador del oráculo y del chokepoint», y por eso
+// mismo NO es una segunda opinión: él, `computeScenarios` (que arma el plan) y
+// `trueMax` (que dice cuál era el máximo) comparten `screensConflict`. Cegar ese
+// predicado deja a los tres de acuerdo en una realidad falsa y este archivo sigue
+// VERDE — medido: con `screensConflict` devolviendo false, TIFF pasó de 3 a 5
+// obras en el plan y R01 no dijo nada. Un detector propio de solapes tampoco
+// alcanza (se probó): lo que el predicado frena no son choques de reloj sino
+// traslados imposibles, y replicar esa doctrina acá sería romper el dueño único.
+// La red de ese predicado son sus tests PROPIOS —tests/unit/screensConflict.test.js,
+// 21 unit tests se ponen rojos con esa misma mutación—, y que no desaparezcan lo
+// vigila [predicado-compartido-tests] en validate.py.
+//
 // LA AUDITORÍA ES DEL DOMINIO, NO DEL DOM
 // El plan que produce la UI se certifica con `verifyPlan` —el mismo certificador
 // que usa el oráculo en CI y el chokepoint de escritura—. El DOM se usa para
