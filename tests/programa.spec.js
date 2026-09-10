@@ -1838,7 +1838,6 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
     const _filas = _plan.querySelectorAll('.dato-linea').length;
     const fila = document.querySelector('.av-fila');
     const _filaTxt = fila?.textContent.replace(/\s+/g, ' ').trim();
-    const _editar = fila?.querySelector('.av-editar')?.textContent.trim() || null;
     // con una restricción configurada, el bloque se VE (no hay acordeón)
     const av = { ...state.snapshot().availability };
     av[Object.keys(av)[6]] = { blocks: [{ from: '09:00', to: '14:00' }] };
@@ -1847,6 +1846,11 @@ test('T90 — Planear dice qué va a procesar antes de que lo pidas', async ({ p
     await new Promise(r => setTimeout(r, 900));
     const bloqueVisible = (() => { const b = document.getElementById('av-blocks-list');
       return !!b && b.children.length > 0 && b.offsetParent !== null; })();
+    // «Editar» se mira ACÁ, con el bloque ya puesto: desde la auditoría de
+    // descubribilidad (10 sep) la fila tiene dos estados, y el verbo que hereda
+    // el objeto de la fila es el del estado que ENCABEZA una lista. Vacía la
+    // fila ofrece, que es otro trabajo y otro disparador (T184).
+    const _editar = document.querySelector('.av-fila .av-editar')?.textContent.trim() || null;
     return {
       esperados, debiles, pendientes: ts.length,
       insumo: _insumo, cruces: _crTxt, crucesColor: _crColor, fs: _fs, gapCta: _gapCta, filas: _filas,

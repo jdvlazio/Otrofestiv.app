@@ -184,3 +184,84 @@ test('T78 — el worker del planeador construye y calcula (sin fallback silencio
   expect(r.calculo, 'el cálculo llegó').toBe(true);
   expect(fallos, 'ningún «[Worker] build failed» ni error de worker').toEqual([]);
 });
+
+// ── T184/T185 — la entrada a Disponibilidad (auditoría de descubribilidad, 10 sep 2026)
+// Una usuaria de TIFF recorrió el embudo entero —38 intereses, plan guardado de 31
+// obras— sin ver nunca que podía marcar cuándo NO puede ir. Medido en su pantalla:
+// sin bloques puestos la función ocupaba 29px, un rótulo gris de 11px y un «Editar»
+// de 21px de alto (1.185px² de toque contra los 16.468px² del primario), encima de
+// un plan YA calculado. Nada ahí se leía como una oferta.
+//
+// La fila tiene DOS trabajos y ahora dos estados: con bloques ENCABEZA la lista
+// —ese rótulo es el aprobado en #802 y no se toca—, y vacía OFRECE, sacando afuera
+// la pregunta que ya vivía dentro de la hoja.
+//
+// Se afirma el CAMBIO DE ESTADO en los dos sentidos, no las cadenas exactas: el
+// copy puede afinarse sin romper la intención. Y se afirma que fila y lista están
+// de acuerdo — la primera versión de esto las desincronizaba (invalidateCalcResult
+// no repinta la fila), así que se veía «¿Cuándo NO podés ir? · Marcar» encima de un
+// bloque ya puesto.
+test('T184 — la fila de Disponibilidad ofrece vacía y encabeza con bloques', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const fila = () => document.querySelector('.av-fila')?.textContent.replace(/\s+/g, ' ').trim() || '';
+    const items = () => document.querySelectorAll('#av-blocks-list .av-block-item').length;
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f.info && !screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(vivas.slice(0, 4)));
+    cachedResult = null;
+    DAY_KEYS.forEach(d => { availability[d] = { blocks: [] }; });
+    switchMainNav('mnav-planner'); showAgView(); renderAgenda();
+    await w(900);
+    const vacio = { fila: fila(), items: items(), cta: !!document.querySelector('.av-fila .av-plus-btn') };
+    // por el camino real de la app, no escribiendo el estado a mano
+    const tap = (act, day) => { const b = document.createElement('button');
+      b.setAttribute('data-action', act); b.setAttribute('data-day', day);
+      document.body.appendChild(b); b.click(); b.remove(); };
+    const dia = DAY_KEYS[DAY_KEYS.length - 1]; // último día: vigente con el reloj congelado al inicio
+    tap('toggleFullDay', dia); await w(700);
+    const con = { fila: fila(), items: items(), editar: !!document.querySelector('.av-fila .av-editar') };
+    tap('toggleFullDay', dia); await w(700);
+    const devuelta = { fila: fila(), items: items() };
+    return { vacio, con, devuelta };
+  });
+  // vacía: ofrece — pregunta por la negación y un disparador con verbo
+  expect(r.vacio.items, 'arranca sin bloques').toBe(0);
+  expect(r.vacio.fila, 'vacía pregunta, no rotula').toMatch(/^¿.+\?/);
+  expect(r.vacio.fila, 'y nombra la negación, que es lo que se declara').toMatch(/\bNO\b|\bno\b/);
+  expect(r.vacio.cta, 'vacía ofrece un disparador con cuerpo, no un enlace').toBe(true);
+  // con bloques: encabeza — el rótulo aprobado y «Editar», que hereda el objeto
+  expect(r.con.items, 'el bloque puesto se ve en la lista').toBe(1);
+  expect(r.con.fila, 'con bloques la fila vuelve a ser el rótulo de sección').toMatch(/Disponibilidad|Availability|Disponibilidade/);
+  expect(r.con.editar, 'y su acción vuelve a ser Editar').toBe(true);
+  // y de vuelta a cero: fila y lista no pueden discrepar
+  expect(r.devuelta.items, 'al quitar el último bloque la lista queda vacía').toBe(0);
+  expect(r.devuelta.fila, 'y la fila vuelve a ofrecer — no se queda en el rótulo').toMatch(/^¿.+\?/);
+});
+
+// T185 — el área de toque se MIDE en la pantalla, no se declara en el CSS: el
+// expansor vive en un ::after y getBoundingClientRect no lo ve. Barrido con
+// elementFromPoint, que es lo que responde a un dedo.
+test('T185 — el disparador de Disponibilidad se puede tocar', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f.info && !screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(vivas.slice(0, 4)));
+    cachedResult = null;
+    DAY_KEYS.forEach(d => { availability[d] = { blocks: [] }; });
+    switchMainNav('mnav-planner'); showAgView(); renderAgenda();
+    await w(900);
+    const b = document.querySelector('.av-fila .av-plus-btn');
+    if (!b) return null;
+    const q = b.getBoundingClientRect();
+    const cx = Math.round(q.left + q.width / 2);
+    let arriba = 0, abajo = 0;
+    for (let d = 1; d <= 30; d++) { if (document.elementFromPoint(cx, Math.round(q.top) - d) === b) arriba = d; else break; }
+    for (let d = 1; d <= 30; d++) { if (document.elementFromPoint(cx, Math.round(q.bottom) + d) === b) abajo = d; else break; }
+    return { ancho: Math.round(q.width), altoTactil: Math.round(q.height) + arriba + abajo };
+  });
+  expect(r, 'el disparador existe en el estado vacío').not.toBeNull();
+  expect(r.altoTactil, 'alto táctil ≥44px (el expansor ::after, medido con el dedo)').toBeGreaterThanOrEqual(44);
+  expect(r.ancho, 'y ancho suficiente').toBeGreaterThanOrEqual(44);
+});

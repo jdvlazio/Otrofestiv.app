@@ -810,6 +810,48 @@ export const ICONS={
 
 export function isFullDayBlocked(day){return availability[day].blocks.some(b=>toMin(b.from)<=0&&toMin(b.to)>=toMin('23:59'));}
 
+// hayBloqueos — DUEÑO ÚNICO de «¿el usuario puso alguna restricción de tiempo?».
+// La pregunta ya se hacía en dos lugares por dos rutas distintas: buildResultHTML
+// recorre DAY_KEYS mirando .blocks.length para decidir si le echa la culpa a la
+// disponibilidad, y renderAvBlocksHTML la deduce de si le quedaron items. Ahora
+// que la FILA DE ENTRADA también depende de la respuesta —vacía ofrece, con
+// bloques encabeza—, tres copias eran una de más: la fila y el mensaje de «sin
+// combinaciones» tienen que estar de acuerdo SIEMPRE, y con predicados separados
+// se puede pintar «liberá disponibilidad» sobre una fila que dice que no hay nada
+// puesto.
+export function hayBloqueos(){
+  return DAY_KEYS.some(d=>availability[d]&&availability[d].blocks&&availability[d].blocks.length>0);
+}
+
+// renderAvFilaHTML — la fila de entrada a Disponibilidad, con DOS ESTADOS
+// (auditoría de descubribilidad, 10 sep 2026).
+//
+// Medido en la pantalla de TIFF con los 38 intereses de una usuaria real: sin
+// bloques puestos, la función entera ocupaba 29px —rótulo gris de 11px y un
+// «Editar» de 21px de alto, 1.185px² de toque contra los 16.468px² del primario—
+// encima de un plan YA CALCULADO (showAgView calcula solo al entrar). Nada en esa
+// franja se leía como una oferta: era el pie de una respuesta terminada. Esa
+// usuaria llegó a guardar un plan de 31 obras sin tocarla nunca.
+//
+// VACÍA la fila OFRECE: sale afuera la pregunta que ya vive dentro de la hoja —el
+// otro síntoma era ese, la frase que explica encerrada detrás de la puerta que
+// abre— y el disparador pasa a ser el pill que la app YA usa para esta misma
+// acción dentro de la hoja, con área de toque de verdad. NO va en ámbar: el
+// primario de la pantalla es Calcular/Recalcular y dos ámbar juntos no dicen
+// cuál es cuál.
+//
+// CON BLOQUES la fila ENCABEZA y no se toca: ahí el rótulo aprobado en #802
+// rotula la lista que tiene debajo, y «Editar» hereda el objeto de la fila.
+export function renderAvFilaHTML(){
+  const _vacia=!hayBloqueos();
+  return`<div class="av-fila${_vacia?' vacia':''}">
+    <span class="av-fila-valor">${ICONS.clock} ${_vacia?t('av_no_disponible'):t('av_disponibilidad')}</span>
+    ${_vacia
+      ?`<button class="av-plus-btn" data-action="openAvSheet">${ICONS.plus} ${t('av_marcar')}</button>`
+      :`<button class="av-editar" data-action="openAvSheet">${t('av_editar')} ${ICONS.chevronR}</button>`}
+  </div>`;
+}
+
 export function renderAvBlocksHTML(state){
   const {availability} = state.snapshot();
   const items=[];
