@@ -10,7 +10,7 @@ import {
   FESTIVAL_BUFFER, FESTIVAL_QA_MIN, FESTIVAL_CONFIG,
 } from '../config.js';
 import {
-  ICONS, _secLabel, _secLabelFull, escXML, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderFlowProgress,
+  ICONS, _secLabel, _secLabelFull, escXML, hayBloqueos, makeEventPoster, parseProgramTitle, renderAvBlocksHTML, renderAvFilaHTML, renderFlowProgress,
 } from './components.js';
 import {
   DAYS, DAY_SHORT_EN, _dayChips, _lblLocalized, _minFmt, _mkCortoItemHtml, _posterThumb, hayEvento, getCortoItemPoster, dayLabel, dayLabelLong, durFmt, emptyState, emptyStateHero, flagFmt, getFilmPoster, isToday, keepCityOnly, mplanBlockType, mplanEndStr, programParts, planCityVenues, planInputSignature, sala, starsText, travelWarn, vcfg, venueCity, venueMatches, delayConsensusBadge, conflictAccount,
@@ -209,11 +209,12 @@ export function renderAgenda(){
              configurados se ven — con su × — en vez de esconderse. El estado no
              se dice en palabras: los bloques visibles SON el estado (Juan:
              el «Sin restricciones» confundía). -->
-        <div class="av-fila">
-          <span class="av-fila-valor">${ICONS.clock} ${t('av_disponibilidad')}</span>
-          <button class="av-editar" data-action="openAvSheet">${t('av_editar')} ${ICONS.chevronR}</button>
-        </div>
-        <div id="av-blocks-list"></div>
+        <!-- La fila Y la lista las pinta renderAvBlocks (dueño único de la
+             superficie): con dos renders separados, agregar el primer bloque
+             actualizaba la lista y dejaba la fila en su estado vacío —medido:
+             «¿Cuándo NO podés ir? · Marcar» encima de un bloque ya puesto—,
+             porque invalidateCalcResult no repinta la fila. -->
+        <div id="av-disponibilidad"></div>
         ${(()=>{
           // Las líneas que faltaban (auditoría 18 ago): la pantalla pedía
           // calcular sin decir QUÉ iba a procesar. Insumo y pre-diagnóstico,
@@ -1569,9 +1570,9 @@ function renderDiarioSection(state){
 }
 
 export function renderAvBlocks(){
-  const el=document.getElementById('av-blocks-list');
+  const el=document.getElementById('av-disponibilidad');
   if(!el) return;
-  el.innerHTML=renderAvBlocksHTML(state);
+  el.innerHTML=renderAvFilaHTML()+`<div id="av-blocks-list">${renderAvBlocksHTML(state)}</div>`;
 }
 
 // p8 (fix urgente): buildResultHTML reubicado desde view/components.js — usa
@@ -1581,7 +1582,7 @@ export function buildResultHTML(scenarios){
     // Solo se culpa a la disponibilidad si HAY bloqueos puestos: sin ellos no es
     // la causa. La costura de dos claves («…disponibilidad. o agregá…») dejaba
     // un punto en medio de la frase — mismo patrón del «revisá Sugerencias..».
-    const _conBloqueos=!!(availability&&DAY_KEYS.some(d=>availability[d]&&availability[d].blocks&&availability[d].blocks.length));
+    const _conBloqueos=hayBloqueos();
     return`<div class="ag-calc-prompt">${t(_conBloqueos?'plan_sin_combos_av':'plan_sin_combos')}</div>`;
   }
   const{currentIdx}=cachedResult;

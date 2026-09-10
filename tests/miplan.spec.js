@@ -1106,7 +1106,8 @@ test('T137 — «hasta HH:MM» de una función cancelada entra en una línea', a
   await enterFestival(page, 'ficdeh2026', '2026-08-12T09:00:00-05:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
-    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+    const tap = (a, day) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      if (day) b.setAttribute('data-day', day);
       document.body.appendChild(b); b.click(); b.remove(); };
     tap('closeCitySheet');
     await w(500);
@@ -1170,7 +1171,8 @@ test('T138 — al volver a poner lo que sacaste, el aviso del hueco desaparece',
   await enterFestival(page, 'ficdeh2026', '2026-08-15T09:00:00-05:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
-    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+    const tap = (a, day) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      if (day) b.setAttribute('data-day', day);
       document.body.appendChild(b); b.click(); b.remove(); };
     tap('closeCitySheet');
     await w(500);
@@ -1262,13 +1264,20 @@ test('T144 — el título de la hoja de disponibilidad pregunta por la negación
   await enterFestival(page, 'ficdeh2026', '2026-08-15T09:00:00-05:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
-    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+    const tap = (a, day) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      if (day) b.setAttribute('data-day', day);
       document.body.appendChild(b); b.click(); b.remove(); };
     tap('closeCitySheet');
     await w(500);
     FILMS.filter(f => f.day === '2026-08-17').slice(0, 3).forEach(f => watchlist.add(f.title));
     switchMainNav('mnav-planner'); showAgView();
     await w(1400);
+    // La fila tiene DOS estados desde la auditoría de descubribilidad (10 sep):
+    // vacía OFRECE (saca afuera la pregunta de esta misma hoja) y con bloques
+    // ENCABEZA la lista. El rótulo aprobado acá vive en el segundo, que es donde
+    // hay una lista que rotular — se pone un bloque para mirarlo ahí.
+    tap('toggleFullDay', DAY_KEYS[DAY_KEYS.length - 1]);
+    await w(700);
     const fila = document.querySelector('.av-fila-valor');
     tap('openAvSheet');
     await w(900);
@@ -1281,8 +1290,8 @@ test('T144 — el título de la hoja de disponibilidad pregunta por la negación
   expect(r.titulo, 'la hoja tiene título').toBeTruthy();
   expect(r.titulo, 'y pregunta, como sus hermanas de declaración').toMatch(/^¿.+\?$/);
   expect(r.titulo, 'nombrando la negación, que es lo que se declara').toMatch(/\bNO\b/);
-  // La fila sigue siendo el rótulo de sección aprobado: no se toca.
-  if (r.fila) expect(r.fila, 'la fila de Planear conserva su rótulo').toContain('Disponibilidad');
+  // Con bloques puestos la fila sigue siendo el rótulo de sección aprobado.
+  if (r.fila) expect(r.fila, 'la fila de Planear conserva su rótulo al encabezar').toContain('Disponibilidad');
 });
 
 // ── T147 — la hoja «¡Tu Plan está listo!» dice de qué día es cada hora ───────
@@ -1404,7 +1413,8 @@ test('T148 — con el campo vacío, Compartir comparte igual', async ({ page }) 
   await page.waitForTimeout(800);
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
-    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+    const tap = (a, day) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      if (day) b.setAttribute('data-day', day);
       document.body.appendChild(b); b.click(); b.remove(); };
     const save = document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]');
     if (!save) return { sinPlan: true };
@@ -1622,7 +1632,8 @@ test('T152 — la columna activa se distingue aunque su día esté vacío o pasa
   await enterFestival(page, 'ficdeh2026', '2026-08-15T14:00:00-05:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
-    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+    const tap = (a, day) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      if (day) b.setAttribute('data-day', day);
       document.body.appendChild(b); b.click(); b.remove(); };
     tap('closeCitySheet'); await w(500);
     const sch = [];
@@ -1704,7 +1715,8 @@ test('T154 — el subtítulo de la imagen cuenta los días que tienen algo', asy
   await enterFestival(page, 'ficdeh2026', '2026-08-12T09:00:00-05:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
-    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+    const tap = (a, day) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      if (day) b.setAttribute('data-day', day);
       document.body.appendChild(b); b.click(); b.remove(); };
     tap('closeCitySheet'); await w(500);
     try { localStorage.removeItem('otrofestiv_display_name'); } catch (e) {}
@@ -1869,7 +1881,8 @@ test('T156 — Compartir se puede cancelar, y cancelar no comparte', async ({ pa
   await page.waitForTimeout(900);
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
-    const tap = a => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+    const tap = (a, day) => { const b = document.createElement('button'); b.setAttribute('data-action', a);
+      if (day) b.setAttribute('data-day', day);
       document.body.appendChild(b); b.click(); b.remove(); };
     const save = document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]');
     if (!save) return { sinPlan: true };

@@ -449,6 +449,7 @@ export const _I18N = {
     "pre_cruces": "{n} cruces de horario",
     "pre_cruce": "1 cruce de horario",
     "av_editar": "Editar",
+    "av_marcar": "Marcar",
     "conflict_con": "Conflicto con",
     "diary_eyebrow": "Diario",
     "palm_eyebrow": "Palmarés",
@@ -908,6 +909,7 @@ export const _I18N = {
     "pre_cruces": "{n} schedule clashes",
     "pre_cruce": "1 schedule clash",
     "av_editar": "Edit",
+    "av_marcar": "Mark",
     "conflict_con": "Conflict with",
     "diary_eyebrow": "Diary",
     "palm_eyebrow": "Awards",
@@ -1146,6 +1148,7 @@ export const _I18N = {
     "pre_cruces": "{n} cruzamentos de horário",
     "pre_cruce": "1 cruzamento de horário",
     "av_editar": "Editar",
+    "av_marcar": "Marcar",
     // ── Lote 10a: plan — CTAs + estados principales ──
     "plan_calculando": "Calculando…",
     "plan_calculando_ops": "Calculando opções…",
