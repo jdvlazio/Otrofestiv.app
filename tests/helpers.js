@@ -167,6 +167,13 @@ async function goToPlanear(page) {
   await page.evaluate(() => {
     cachedResult = null;
     savedAgenda = null;
+    // Marca de «acá ya se calculó» (10 sep 2026): desde que el auto-cálculo solo
+    // RESTAURA, la primera entrada de la vida no dispara nada — y ese es su
+    // punto (T186). Los tests que usan este helper describen a alguien que YA
+    // estuvo en Planear y vuelve, así que se les pone la marca en vez de
+    // aflojar sus asertos. El que quiera retratar la primera vez la borra.
+    state.set('planCalculado', true);
+    localStorage.setItem(FESTIVAL_STORAGE_KEY + 'calc1', '1');
     switchMainNav('mnav-planner');
     showAgView();
   });

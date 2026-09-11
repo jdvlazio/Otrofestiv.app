@@ -155,7 +155,10 @@ test('PC10 — el titular nombra la ciudad cuando el filtro la restringe', async
       state.set('watchlist', new Set(t));
       state.set('savedAgenda', null);
       cachedResult = null;
-      switchMainNav('mnav-planner'); showAgView();
+      // Premisa explícita (10 sep 2026): este test necesita un plan CALCULADO,
+      // no que entrar lo dispare. El auto-cálculo ahora solo restaura (T186), así
+      // que la premisa se pide en voz alta en vez de heredarse de un efecto lateral.
+      switchMainNav('mnav-planner'); showAgView(); runCalc();
       await new Promise(r => setTimeout(r, 2500));
       const d = document.querySelector('.dato-resultado');
       return { filtro, texto: d ? d.textContent.replace(/\s+/g, ' ').trim() : null };

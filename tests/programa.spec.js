@@ -2057,7 +2057,10 @@ test('T94 — lo que nunca compitió no cuenta como costo del Plan, y no se pier
     const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
     state.set('watchlist', new Set(fut.slice(0, 14)));
     cachedResult = null; savedAgenda = null;
-    switchMainNav('mnav-planner'); showAgView();
+    // Premisa explícita (10 sep 2026): este test necesita un plan CALCULADO,
+    // no que entrar lo dispare. El auto-cálculo ahora solo restaura (T186), así
+    // que la premisa se pide en voz alta en vez de heredarse de un efecto lateral.
+    switchMainNav('mnav-planner'); showAgView(); runCalc();
     for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
     await new Promise(r => setTimeout(r, 400));
     const sc = cachedResult.scenarios[cachedResult.currentIdx || 0];
@@ -2199,7 +2202,10 @@ test('T97 — el Plan que estás mirando no cambia solo: se marca y vos recalcul
     const fut = [...new Set(FILMS.filter(f => bog(f) && !D.screeningPassed(f)).map(f => f.title))];
     state.set('watchlist', new Set(fut.slice(0, 12)));
     cachedResult = null; savedAgenda = null;
-    switchMainNav('mnav-planner'); showAgView();
+    // Premisa explícita (10 sep 2026): este test necesita un plan CALCULADO,
+    // no que entrar lo dispare. El auto-cálculo ahora solo restaura (T186), así
+    // que la premisa se pide en voz alta en vez de heredarse de un efecto lateral.
+    switchMainNav('mnav-planner'); showAgView(); runCalc();
     for (let i = 0; i < 40 && !document.querySelector('.ag-day-band'); i++) await new Promise(r => setTimeout(r, 250));
     await new Promise(r => setTimeout(r, 300));
     const firma = () => cachedResult && cachedResult._inputSnapshot;

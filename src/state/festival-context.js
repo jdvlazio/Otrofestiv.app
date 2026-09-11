@@ -77,6 +77,8 @@ export const FESTIVAL_STATE = [
     toCloud:_id,
     // wholesale reemplaza; parcial mergea por-día sobre lo actual.
     fromCloud:(d,whole,cur)=> (whole||(d&&Object.keys(d).length)) ? (whole?(d||{}):_mergeAvail(cur,d)) : undefined },
+  { key:'planCalculado',     empty:()=>false, storage:'PlanCalculado', cloud:null,
+    hydrate:()=>storage.getPlanCalculado() },
   { key:'lastRemovedSlots',  empty:()=>[], storage:'LastRemovedSlots',  cloud:null,
     hydrate:()=>storage.getLastRemovedSlots() },
   { key:'filmDelays',        empty:()=>({}), storage:'FilmDelays',       cloud:null,
