@@ -86,7 +86,7 @@ test('PS03 — el ICS exporta el fin del BLOQUE para una obra anclada', async ({
     let captured = null;
     const orig = URL.createObjectURL.bind(URL);
     URL.createObjectURL = b => { captured = b; return orig(b); };
-    await exportICS();
+    await exportICS('todo');  // premisa explícita: este test quiere el ARCHIVO. Desde que exportar puede PREGUNTAR (PS11/PS12), un exportICS() pelado en la 2ª corrida de la misma sesión se topa con el modal y no produce nada.
     URL.createObjectURL = orig;
     return captured ? await captured.text() : null;
   });
@@ -111,7 +111,7 @@ test('PS05 — el ICS dice los minutos que reserva cuando la duración no está 
       let cap = null;
       const orig = URL.createObjectURL.bind(URL);
       URL.createObjectURL = b => { cap = b; return orig(b); };
-      await exportICS();
+      await exportICS('todo');  // premisa explícita: este test quiere el ARCHIVO. Desde que exportar puede PREGUNTAR (PS11/PS12), un exportICS() pelado en la 2ª corrida de la misma sesión se topa con el modal y no produce nada.
       URL.createObjectURL = orig;
       return cap ? await cap.text() : null;
     };
@@ -155,7 +155,7 @@ test('PS06 — el ICS escapa la coma en vez de borrarla', async ({ page }) => {
       let cap = null;
       const orig = URL.createObjectURL.bind(URL);
       URL.createObjectURL = b => { cap = b; return orig(b); };
-      await exportICS();
+      await exportICS('todo');  // premisa explícita: este test quiere el ARCHIVO. Desde que exportar puede PREGUNTAR (PS11/PS12), un exportICS() pelado en la 2ª corrida de la misma sesión se topa con el modal y no produce nada.
       URL.createObjectURL = orig;
       return cap ? await cap.text() : null;
     };
@@ -193,7 +193,7 @@ test('PS06 — el ICS escapa la coma en vez de borrarla', async ({ page }) => {
     let cap = null;
     const orig = URL.createObjectURL.bind(URL);
     URL.createObjectURL = b => { cap = b; return orig(b); };
-    await exportICS();
+    await exportICS('todo');  // premisa explícita: este test quiere el ARCHIVO. Desde que exportar puede PREGUNTAR (PS11/PS12), un exportICS() pelado en la 2ª corrida de la misma sesión se topa con el modal y no produce nada.
     URL.createObjectURL = orig;
     return { titulo, ics: cap ? await cap.text() : null };
   });
@@ -308,7 +308,7 @@ test('PS08 — el ICS pliega sus líneas largas sin perder contenido', async ({ 
     let cap = null;
     const orig = URL.createObjectURL.bind(URL);
     URL.createObjectURL = b => { cap = b; return orig(b); };
-    await exportICS();
+    await exportICS('todo');  // premisa explícita: este test quiere el ARCHIVO. Desde que exportar puede PREGUNTAR (PS11/PS12), un exportICS() pelado en la 2ª corrida de la misma sesión se topa con el modal y no produce nada.
     URL.createObjectURL = orig;
     return cap ? await cap.text() : null;
   });
@@ -460,4 +460,61 @@ test('PS11 — cuando volver a mandar duplicaría, la elección es del usuario',
   expect(r.exports[0], '1º: el Plan entero').toBe(4);
   expect(r.exports[1], '2º: solo las 2 nuevas').toBe(2);
   expect(r.exports[2], '3º: el Plan entero otra vez — la salida que faltaba').toBe(7);
+});
+
+// ── PS12 — lo que quedó colgado se dice AL EXPORTAR, una vez ────────────────
+// Si movés una obra a otra función o la sacás del Plan, el evento que ya le
+// mandamos al calendario sigue ahí. No podemos retirarlo: medimos que su
+// calendario no reconcilia por UID al importar (PS09 defiende que los nuestros
+// SÍ son estables), así que un VEVENT de cancelación llegaría igual de ignorado.
+// Y una suscripción tampoco: Google refresca un feed cada 8–24 h e iOS por
+// defecto una vez al día, y solo cargando y con Wi-Fi — lo contrario de alguien
+// en un festival.
+//
+// Decisión de Juan (11 sep 2026): la app no promete controlar lo que no
+// controla; avisa. Y el aviso NO vive en la pantalla —un bloque permanente es
+// ruido— sino en el único momento en que ella está pensando en su calendario:
+// al tocar Exportar. Se dice una vez y no se insiste.
+//
+// Se afirma lo que lo hace útil y lo que lo hace soportable: que NOMBRE cuál
+// quedó colgado, que no haya nada permanente, y que la segunda vez ya no moleste
+// sin llevarse por delante los apuntes vivos (si se los llevara, el próximo
+// export se los mandaría otra vez y volvíamos al bug del principio).
+test('PS12 — lo colgado se dice al exportar, una vez y sin bloque permanente', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const orig = URL.createObjectURL; URL.createObjectURL = () => 'blob:x';
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f.info && !screeningPassed(f)).map(f => f.title))];
+    const mk = ts => ts.map(tt => { const f = FILMS.find(x => x.title === tt); return { ...f, _title: tt }; });
+    const modal = () => { const m = document.getElementById('conflict-modal'); if (!m) return null;
+      return { titulo: m.querySelector('.conflict-modal-hdr').textContent.trim(),
+               cuerpo: m.querySelector('.conflict-modal-body').textContent.replace(/\s+/g, ' ').trim(),
+               btns: [...m.querySelectorAll('.conflict-modal-btn')].map(x => x.textContent.trim()) }; };
+    const cerrar = () => document.getElementById('conflict-modal')?.remove();
+    const enPantalla = () => { switchMainNav('mnav-miplan'); showAgView(); renderAgenda();
+      return !!document.querySelector('.ics-ghost'); };
+    state.set('icsEntregados', []);
+    state.set('savedAgenda', { schedule: mk(vivas.slice(0, 4)) });
+    await exportICS('todo'); await w(300);
+    const fuera = vivas[0];
+    state.set('savedAgenda', { schedule: mk(vivas.slice(1, 4)) });
+    const bloque = enPantalla();
+    await exportICS(); await w(300);
+    const soloColgado = modal(); cerrar();
+    // exporta de verdad: se avisó, y no se insiste
+    await exportICS('todo'); await w(400);
+    const trasExportar = { entregados: (state.get('icsEntregados') || []).length };
+    await exportICS(); await w(300);
+    const segundaVez = modal(); cerrar();
+    URL.createObjectURL = orig;
+    return { bloque, soloColgado, trasExportar, segundaVez, fuera };
+  });
+  expect(r.bloque, 'no hay ningún bloque permanente en Mi Plan').toBe(false);
+  expect(r.soloColgado, 'al tocar Exportar con algo colgado, se dice').not.toBeNull();
+  expect(r.soloColgado.cuerpo, 'y se nombra, que es lo que la deja buscarlo').toContain(r.fuera.slice(0, 12));
+  expect(r.soloColgado.cuerpo, 'con su hora').toMatch(/\d{1,2}:\d{2}/);
+  expect(r.soloColgado.btns.length, 'sin elección que no existe: exportar o cancelar').toBe(2);
+  expect(r.trasExportar.entregados, 'tras exportar, la memoria son los 3 que SIGUEN en el Plan').toBe(3);
+  expect(r.segundaVez, 'y no se insiste: la segunda vez no dice nada').toBeNull();
 });
