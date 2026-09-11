@@ -22,6 +22,8 @@ import { renderAgenda } from '../view/agenda.js';
 import {planCityVenues, planInputSignature} from '../view/helpers.js';
 import { showToast } from '../view/feedback.js';
 import { t } from '../i18n/i18n.js';
+import { state } from '../state/state.js';
+import { storage } from '../storage/storage.js';
 
 // ── Sprint 3: funciones puras que el Worker extrae del main thread ────────
 // Al añadir o modificar una función de scheduling en el main thread,
@@ -129,6 +131,13 @@ export function _planCityVenues(){ return planCityVenues(); } // dueño: view/he
 
 export function runCalc(){
   if(festivalEnded()){showToast(t('notice_fest_term'),'info');return;}
+  // Queda constancia de que en este festival YA se calculó. Va acá, en la única
+  // puerta por la que pasan los tres caminos (worker, fallback síncrono y
+  // sugerencias), y ANTES de calcular a propósito: lo que marca es que el
+  // usuario ya pidió opciones, no que le hayan llegado. Si el cálculo falla, la
+  // próxima entrada tiene que restaurar lo que había, no volver a ofrecerle el
+  // primer paso a alguien que ya lo dio.
+  if(!state.get('planCalculado')){ state.set('planCalculado',true); storage.setPlanCalculado(true); }
   // Publicar la restricción de ciudad ANTES de calcular, para el camino síncrono
   // (el worker la recibe por payload). Se recalcula en cada corrida.
   globalThis.PLAN_CITY_VENUES=_planCityVenues();

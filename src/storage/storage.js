@@ -55,6 +55,15 @@ export const storage = {
   getAvailability() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'av3'); return r?JSON.parse(r):{}; } catch(e) { return {}; } },
   setAvailability(o) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'av3', JSON.stringify(o)); } catch(e) {} },
 
+  // planCalculado — «¿ya calculaste alguna vez en ESTE festival?». No es un dato
+  // del plan: es lo que distingue la PRIMERA vez de una recarga. El escenario
+  // vive en memoria y muere al recargar, así que sin esta marca las dos
+  // situaciones son indistinguibles y el auto-cálculo tiene que atender a las
+  // dos igual. Local a propósito (cloud:null): si alguien entra desde otro
+  // aparato, lo peor que pasa es que se le ofrezca una vez más.
+  getPlanCalculado() { try { return localStorage.getItem(FESTIVAL_STORAGE_KEY+'calc1')==='1'; } catch(e) { return false; } },
+  setPlanCalculado(v) { try { v ? localStorage.setItem(FESTIVAL_STORAGE_KEY+'calc1','1') : localStorage.removeItem(FESTIVAL_STORAGE_KEY+'calc1'); } catch(e) {} },
+
   getLastRemovedSlots() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'lastslot'); if(!r) return []; const p=JSON.parse(r); return Array.isArray(p)?p:(p?[p]:[]); } catch(e) { return []; } },
   setLastRemovedSlots(a) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'lastslot', JSON.stringify(a)); } catch(e) {} },
 

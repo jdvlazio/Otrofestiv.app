@@ -39,7 +39,7 @@ export function renderActiveView(){
     // Con un resultado en pantalla NO se recalcula solo: se re-renderiza y la
     // firma de insumos lo marcará desactualizado si algo cambió. Sin resultado,
     // el primer cálculo sí es automático: no hay ningún Plan que arruinar.
-    if(_p&&!cachedResult) runCalc(); else showAgView();
+    if(_p&&!cachedResult&&planCalculado) runCalc(); else showAgView();
     return;
   }
   renderAgenda();                             // rutea internamente seleccion/miplan
@@ -130,7 +130,17 @@ export function showAgView(){
     // la pantalla «Nada por planear» — el usuario veía «Sin combinaciones»
     // culpando al armado cuando la verdad era temporal (todo lo suyo ya pasó).
     const _hayIntereses=[...watchlist].some(t=>!watched.has(t)&&FILMS.some(f=>f.title===t&&!screeningPassed(f)));
-    if(!_sa&&_hayIntereses) runCalc();
+    // …pero SOLO para RESTAURAR (10 sep 2026). Este auto-cálculo nació para que
+    // una recarga no te dejara mirando cero filas donde había cuatro, y de paso
+    // atendía la PRIMERA entrada de la vida —que no es lo mismo: ahí no hay nada
+    // que restaurar—. El efecto medido en TIFF: llegabas al paso «② PLANEAR» y el
+    // paso ya estaba hecho, con un plan armado y el primario diciendo
+    // «Recalcular», una palabra que da por sabido qué querés cambiar. En esa
+    // pantalla ningún control de entrada se lee como control de entrada, y la
+    // oferta de Disponibilidad quedaba de pie de página (auditoría #884).
+    // `planCalculado` es lo único que distingue las dos situaciones, porque el
+    // escenario vive en memoria y muere al recargar.
+    if(!_sa&&_hayIntereses&&planCalculado) runCalc();
   }
   requestAnimationFrame(_fixStickyOffset); // actualiza altura del chrome-blur
 }

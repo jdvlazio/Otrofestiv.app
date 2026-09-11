@@ -132,21 +132,29 @@ test('T54 — Ziki entra al plan pese al Q&A (misma sede) y Mi Plan advierte', a
   expect(warns.some(w => /Q&A/.test(w) && /min/.test(w))).toBe(true);
 });
 
-// T58 — entrar a Planear recalcula solo (y respeta el plan ya confirmado)
+// T58 — entrar a Planear RESTAURA el cálculo (y respeta el plan ya confirmado)
 // El escenario vive en memoria y moría al recargar: 4 filas antes, 0 después,
 // sin aviso, con los intereses intactos (medido el 16 ago con FICDEH). Lo que se
 // perdía era una DERIVACIÓN —recalcularla cuesta 2–3 ms— así que no se persiste:
 // se recalcula al entrar. Con plan YA guardado NO se toca: aparecer con una
 // opción nueva sin pedirla invita a reemplazar lo que el usuario curó a mano.
+//
+// RE-APUNTADO el 10 sep: lo que este test defiende es RESTAURAR, y restaurar
+// supone que hubo algo. La primera entrada de la vida no entra en su alcance y
+// ahora no calcula (T186) — acá se pone la marca, que es lo que describe a
+// alguien que ya estuvo y vuelve. La mitad (b) no cambia una coma.
 test('T58 — Planear recalcula al entrar, salvo si ya hay plan guardado', async ({ page }) => {
   await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
   await addToWatchlist(page, 'Taller de Guion');
 
-  // (a) sin plan guardado y sin cálculo en memoria → aparece solo, sin tocar el botón
-  await page.evaluate(() => { cachedResult = null; savedAgenda = null; switchMainNav('mnav-planner'); showAgView(); });
+  // (a) ya calculó antes, sin plan guardado y sin cálculo en memoria (la recarga
+  //     se lo llevó) → reaparece solo, sin tocar el botón
+  await page.evaluate(() => { cachedResult = null; savedAgenda = null;
+    state.set('planCalculado', true); localStorage.setItem(FESTIVAL_STORAGE_KEY + 'calc1', '1');
+    switchMainNav('mnav-planner'); showAgView(); });
   await page.waitForFunction(() => !!cachedResult, null, { timeout: 8000 });
   const auto = await page.evaluate(() => (cachedResult.scenarios || []).length);
-  expect(auto, 'entrar a Planear calcula solo').toBeGreaterThan(0);
+  expect(auto, 'entrar a Planear restaura el cálculo perdido').toBeGreaterThan(0);
 
   // (b) con plan guardado → NO recalcula al entrar; manda el botón
   await page.evaluate(() => {
@@ -264,4 +272,92 @@ test('T185 — el disparador de Disponibilidad se puede tocar', async ({ page })
   expect(r, 'el disparador existe en el estado vacío').not.toBeNull();
   expect(r.altoTactil, 'alto táctil ≥44px (el expansor ::after, medido con el dedo)').toBeGreaterThanOrEqual(44);
   expect(r.ancho, 'y ancho suficiente').toBeGreaterThanOrEqual(44);
+});
+
+// ── T186/T187 — el auto-cálculo RESTAURA, no adivina (10 sep 2026) ───────────
+// showAgView calculaba solo al entrar a Planear sin resultado en memoria. Nació
+// para una razón buena —el escenario muere al recargar, y el 16 ago en FICDEH se
+// medían 4 filas antes y 0 después— pero atendía por igual dos situaciones que no
+// son la misma: RESTAURAR algo que existía, y la PRIMERA entrada de la vida, donde
+// no hay nada que restaurar. En la segunda el efecto es que llegás al paso
+// «② PLANEAR» y el paso ya está hecho: ningún control de entrada se lee como tal,
+// y la oferta de Disponibilidad queda de pie de página (auditoría #884).
+//
+// `planCalculado` es lo único que las distingue, porque cachedResult es memoria.
+// Se afirman las DOS mitades: sin la marca no calcula, con la marca sí. Una sola
+// habría dejado pasar la mitad que importa en cada dirección.
+test('T186 — la primera vez en el festival, Planear no calcula solo', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f.info && !screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(vivas.slice(0, 4)));
+    state.set('planCalculado', false); localStorage.removeItem(FESTIVAL_STORAGE_KEY + 'calc1');
+    state.set('savedAgenda', null);
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await w(1600);
+    const btn = document.querySelector('.av-calc-btn');
+    const porShowAgView = !!cachedResult;
+    // La OTRA puerta: renderActiveView tiene su propio auto-cálculo. Si solo se
+    // tapa una, la primera vez se sigue calculando sola por el otro lado y nadie
+    // lo ve. Se dispara por su camino real —una mutación de un slice suscrito—
+    // en vez de llamarla a mano: así el test también afirma que ESE camino pasa
+    // por acá, que es lo que lo hace peligroso.
+    state.set('watchlist', new Set([...watchlist, vivas[5]].filter(Boolean)));
+    await w(1600);
+    return {
+      calculo: porShowAgView || !!cachedResult,
+      porShowAgView,
+      porRenderActiveView: !!cachedResult,
+      marca: state.get('planCalculado'),
+      btn: btn ? btn.textContent.trim() : null,
+      resultado: !!document.querySelector('#ag-result .ag-day-hdr, #ag-result .mkrow, #ag-result .dato-linea'),
+    };
+  });
+  expect(r.porShowAgView, 'showAgView no calcula solo — el paso 2 sigue siendo un paso por hacer').toBe(false);
+  expect(r.porRenderActiveView, 'renderActiveView tampoco: las dos puertas o ninguna').toBe(false);
+  expect(r.marca, 'y la marca sigue sin ponerse: nadie pidió opciones todavía').toBe(false);
+  expect(r.btn, 'el primario invita a calcular, no a RE-calcular').not.toMatch(/^Re/i);
+  expect(r.resultado, 'no hay un plan en pantalla que nadie pidió').toBe(false);
+});
+
+test('T187 — con la marca puesta (recarga), Planear sí restaura el cálculo', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f.info && !screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(vivas.slice(0, 4)));
+    state.set('planCalculado', true); localStorage.setItem(FESTIVAL_STORAGE_KEY + 'calc1', '1');  // ya calculó antes; la recarga se llevó el escenario
+    state.set('savedAgenda', null);
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await w(2500);
+    return { calculo: !!(cachedResult && cachedResult.scenarios) };
+  });
+  expect(r.calculo, 'restauró lo que la recarga se llevó').toBe(true);
+});
+
+// T188 — la marca la pone runCalc, que es la única puerta de los tres caminos
+// (worker, fallback síncrono, sugerencias). Si se pusiera en el botón, calcular
+// por cualquier otra vía dejaría al usuario recibiendo la oferta para siempre.
+test('T188 — pedir opciones deja constancia de que acá ya se calculó', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f.info && !screeningPassed(f)).map(f => f.title))];
+    state.set('watchlist', new Set(vivas.slice(0, 4)));
+    state.set('planCalculado', false); localStorage.removeItem(FESTIVAL_STORAGE_KEY + 'calc1');
+    cachedResult = null;
+    switchMainNav('mnav-planner'); showAgView();
+    await w(900);
+    const antes = { estado: state.get('planCalculado'), disco: localStorage.getItem(FESTIVAL_STORAGE_KEY + 'calc1') === '1' };
+    runCalc();
+    await w(2500);
+    return { antes, despues: { estado: state.get('planCalculado'), disco: localStorage.getItem(FESTIVAL_STORAGE_KEY + 'calc1') === '1' } };
+  });
+  expect(r.antes.estado, 'arranca sin marca').toBe(false);
+  expect(r.antes.disco, 'y sin marca en disco').toBe(false);
+  expect(r.despues.estado, 'pedir opciones la pone').toBe(true);
+  expect(r.despues.disco, 'y sobrevive a la recarga (va a disco)').toBe(true);
 });
