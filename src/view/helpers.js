@@ -732,6 +732,44 @@ export function icsNuevas(schedule,entregados){
   return (schedule||[]).filter(s=>{ const u=icsUid(s); return u&&!ya.has(u); });
 }
 
+// icsCampos — DUEÑO ÚNICO de «qué va en este evento». Los valores salen CRUDOS:
+// cada consumidor los serializa a su manera (el .ics escapa según RFC 5545, el
+// puente nativo solo aplana saltos de línea), pero el CONTENIDO se decide una
+// sola vez.
+//
+// Nace de dos necesidades que resultaron la misma. La primera: el puente nativo
+// recalculaba por su cuenta el inicio y el fin, con un comentario que prometía
+// «mismo fin que el ICS» — una promesa escrita a mano, no un dueño. La segunda:
+// para versionar un evento (SEQUENCE) hay que firmar su contenido, y si la firma
+// lo recalculara por su lado firmaríamos una cosa y mandaríamos otra; el día que
+// divergieran, el número mentiría sin que nada fallara.
+export function icsCampos(s){
+  if(!s) return null;
+  const dateStr=(FESTIVAL_DATES||{})[s.day];
+  if(!dateStr||!s.time) return null;
+  const start=_festDate(dateStr,_ics24h(s.time));
+  if(isNaN(start.getTime())) return null;
+  // blockDuration — el MISMO fin de bloque que Mi Plan (con anclaje: la función
+  // entera, no la obra suelta). parseInt(duration)||90 exportaba «18:00→18:05»
+  // para una obra anclada cuyo bloque real termina 19:51.
+  const end=new Date(start.getTime()+blockDuration(s)*60000);
+  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
+  const _p=x=>(x||'').trim();
+  // Sin duración publicada, el dato salía VACÍO y la descripción colgaba en « - »
+  // mientras el evento reservaba 90 minutos reales: se dice lo que de verdad
+  // bloquea, con la «~» de lo estimado.
+  const _dur=s.info
+    ? _p(t('abierta_hasta',{h:minToStr(screeningBlockEndMin(s)).replace(/^0/,'')})+' · '+t('vas_cuando_quieras'))
+    : (durEstimada(s.duration)?'~'+blockDuration(s)+' min':_p(s.duration));
+  return {
+    uid:icsUid(s), start, end,
+    summary:_p(s._title),
+    location:_p(venueLabel(s.venue)),          // edificio · sala (dueño único)
+    description:`${_p(cfg.name||'Festival')} - ${_p(s.section)} - ${_dur}`,
+    seccion:_p(s.section),                      // el puente nativo la usa aparte
+  };
+}
+
 // icsFantasmas — lo que le mandamos al calendario y YA NO está en su Plan: se
 // movió a otra función o lo sacó. Ahí sigue, y nosotros no podemos retractarlo
 // —su calendario no reconcilia por UID al importar un archivo, medido— así que

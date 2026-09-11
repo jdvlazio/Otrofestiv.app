@@ -2,12 +2,10 @@
 // p8 Step 7e — Compartir plan (canvas/imagen) + export ICS.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import {_langDates, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster, icsUid, icsNuevas, icsFantasmas, _icsEntrega, _ics24h, _icsUtc} from '../view/helpers.js';
+import {_langDates, starsText, vcfg, getFilmPoster, getCortoItemPoster, icsUid, icsNuevas, icsFantasmas, icsCampos, _icsEntrega, _icsUtc} from '../view/helpers.js';
 import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast, showActionModal } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
-import { _festDate, durEstimada, minToStr } from '../domain/time.js';
-import { blockDuration, screeningBlockEndMin } from '../domain/film.js';
 import { t } from '../i18n/i18n.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
@@ -393,7 +391,7 @@ export async function exportICS(modo){
   // fmt y to24h se mudaron a view/helpers junto al UID: los tres son la misma
   // pregunta —cómo se nombra este pase en un calendario— y tenerlos acá los
   // dejaba a un refactor de distancia de discrepar con el UID.
-  const fmt=_icsUtc, to24h=_ics24h;
+  const fmt=_icsUtc;
   // Lo que se va a exportar. Sin `soloNuevas` va el plan entero, que es también
   // la salida de emergencia: al que perdió su calendario le sirve pedirlo todo.
   const _entregados=state.get('icsEntregados')||[];
@@ -447,37 +445,27 @@ export async function exportICS(modo){
   const _icsCfg=FESTIVAL_CONFIG[_activeFestId]||{};
   const _icsId=(_icsCfg.shortName||'festival').toLowerCase().replace(/\s+/g,'');
   const lines=['BEGIN:VCALENDAR','VERSION:2.0',`PRODID:-//Otrofestiv//${_icsId}//ES`,'CALSCALE:GREGORIAN','METHOD:PUBLISH'];
+  // RFC 5545 §3.3.11: en un valor TEXT la barra invertida, la coma, el punto y
+  // coma y el salto de línea se ESCAPAN; borrarlos es perder el dato. Acá se
+  // reemplazaban por un espacio y «Ni un minuto de silencio, toda una vida de
+  // búsqueda» llegaba al calendario del teléfono partido en dos, con doble
+  // espacio donde iba la coma. Medido: 39 obras en 12 festivales lo sufren
+  // (auditoría 4 sep 2026). El orden importa — la barra primero, o se escaparían
+  // las barras que agrega el propio escape. El ESCAPE es de este consumidor; el
+  // CONTENIDO lo decide icsCampos, que es el dueño.
+  const clean=str=>(str||'')
+    .replace(/\\/g,'\\\\')
+    .replace(/\r?\n/g,'\\n')
+    .replace(/([,;])/g,'\\$1');
   _lote.forEach(s=>{
-    const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return;
-    const start=_festDate(dateStr,to24h(s.time));
-    if(isNaN(start.getTime())) return; // skip si fecha inválida
-    // blockDuration — el MISMO fin de bloque que Mi Plan (con anclaje: la función
-    // entera, no la obra suelta). parseInt(duration)||90 exportaba "18:00→18:05"
-    // para una obra anclada cuyo bloque real termina 19:51 (la mentira de la
-    // captura del 31 jul, fugada al calendario del teléfono).
-    const end=new Date(start.getTime()+blockDuration(s)*60000);
-    // RFC 5545 §3.3.11: en un valor TEXT la barra invertida, la coma, el punto y
-    // coma y el salto de línea se ESCAPAN; borrarlos es perder el dato. Acá se
-    // reemplazaban por un espacio y «Ni un minuto de silencio, toda una vida de
-    // búsqueda» llegaba al calendario del teléfono partido en dos, con doble
-    // espacio donde iba la coma. Medido: 39 obras en 12 festivales lo sufren
-    // (auditoría 4 sep 2026). El orden importa — la barra primero, o se escaparían
-    // las barras que agrega el propio escape.
-    const clean=str=>(str||'').trim()
-      .replace(/\\/g,'\\\\')
-      .replace(/\r?\n/g,'\\n')
-      .replace(/([,;])/g,'\\$1');
+    const c=icsCampos(s);
+    if(!c) return;                                  // sin fecha válida no hay evento
     lines.push('BEGIN:VEVENT',
-      `DTSTART:${fmt(start)}`,`DTEND:${fmt(end)}`,
-      `SUMMARY:${clean(s._title)}`,
-      `LOCATION:${clean(venueLabel(s.venue))}`,   // edificio · sala (dueño único)
-      // Sin duración publicada, `clean(s.duration)` salía VACÍO y la descripción
-      // terminaba colgando en « - » mientras el evento reservaba 90 minutos reales.
-      // Ahora dice los minutos que efectivamente bloquea, con la `~` de siempre
-      // para lo estimado. La explicación de por qué no se sabe vive en Avisos, en
-      // la ficha, que es donde se decide (decisión de Juan, 4 sep).
-      `DESCRIPTION:${clean(_icsCfg.name||'Festival')} - ${clean(s.section)} - ${s.info?clean(t('abierta_hasta',{h:minToStr(screeningBlockEndMin(s)).replace(/^0/,'')})+' · '+t('vas_cuando_quieras')):durEstimada(s.duration)?'~'+blockDuration(s)+' min':clean(s.duration)}`,
-      `UID:${icsUid(s)}`,
+      `DTSTART:${fmt(c.start)}`,`DTEND:${fmt(c.end)}`,
+      `SUMMARY:${clean(c.summary)}`,
+      `LOCATION:${clean(c.location)}`,
+      `DESCRIPTION:${clean(c.description)}`,
+      `UID:${c.uid}`,
       `DTSTAMP:${_ahora}`,
       'END:VEVENT');
   });
@@ -531,24 +519,26 @@ export async function exportICS(modo){
     const _clean=str=>(str||'').replace(/[\r\n]/g,' ').trim();
     const events=[];
     _lote.forEach(s=>{
-      const dateStr=FESTIVAL_DATES[s.day]; if(!dateStr) return;
-      const start=_festDate(dateStr,to24h(s.time));
-      if(isNaN(start.getTime())) return;
-      const end=new Date(start.getTime()+blockDuration(s)*60000); // mismo fin que el ICS
+      // MISMO dueño que el .ics: antes esto recalculaba inicio y fin por su
+      // cuenta y un comentario prometía que coincidían. Una promesa a mano no
+      // es un dueño — el día que el .ics cambiara su cálculo, el puente se
+      // quedaba atrás en silencio.
+      const c=icsCampos(s);
+      if(!c) return;
 
       events.push({
-        title:_clean(s._title),
-        start:start.getTime(),
-        end:end.getTime(),
-        location:_clean(venueLabel(s.venue)),   // MISMO texto que el ICS: a qué sala
+        title:_clean(c.summary),
+        start:c.start.getTime(),
+        end:c.end.getTime(),
+        location:_clean(c.location),            // MISMO texto que el ICS: a qué sala
                                                 //  entrar no puede depender del teléfono
-        notes:`${_clean(_icsCfg.name||'Festival')}${s.section?(' · '+_clean(s.section)):''}`,
+        notes:`${_clean(_icsCfg.name||'Festival')}${c.seccion?(' · '+_clean(c.seccion)):''}`,
         // El puente mandaba título/hora/sede y NADA que identificara el evento,
         // así que EventKit no podía deduplicar aunque quisiera: cada exportación
         // creaba eventos nuevos, siempre. Va el mismo UID del .ics para que el
         // lado Swift pueda buscar y actualizar en vez de agregar. Hasta que ese
         // lado lo use, el campo viaja y no estorba.
-        uid:icsUid(s)
+        uid:c.uid
       });
     });
     if(!events.length){ showToast(t('plan_sin_plan'),'warn'); return; }
