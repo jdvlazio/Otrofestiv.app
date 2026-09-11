@@ -2,7 +2,7 @@
 // p8 Step 7e — Compartir plan (canvas/imagen) + export ICS.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import {_langDates, starsText, vcfg, getFilmPoster, getCortoItemPoster, icsUid, icsNuevas, icsFantasmas, icsCampos, _icsEntrega, _icsUtc} from '../view/helpers.js';
+import {_langDates, starsText, vcfg, getFilmPoster, getCortoItemPoster, icsUid, icsNuevas, icsFantasmas, icsCampos, icsHuella, icsSeq, _icsEntrega, _icsUtc} from '../view/helpers.js';
 import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast, showActionModal } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
@@ -395,6 +395,7 @@ export async function exportICS(modo){
   // Lo que se va a exportar. Sin `soloNuevas` va el plan entero, que es también
   // la salida de emergencia: al que perdió su calendario le sirve pedirlo todo.
   const _entregados=state.get('icsEntregados')||[];
+  const _previos=new Map(_entregados.map(_icsEntrega).filter(e=>e.uid).map(e=>[e.uid,e]));
   const _nuevas=icsNuevas(savedAgenda.schedule,_entregados);
   // Lo ya entregado que SIGUE en el plan: es lo único que se duplicaría al
   // mandar todo. Si es cero no hay disyuntiva —nada que duplicar— y preguntar
@@ -457,9 +458,16 @@ export async function exportICS(modo){
     .replace(/\\/g,'\\\\')
     .replace(/\r?\n/g,'\\n')
     .replace(/([,;])/g,'\\$1');
+  // Versión de cada evento. Se calcula ACÁ, contra lo que se está por mandar, y
+  // el mismo número se guarda al anotar: si se recalculara en los dos lados
+  // podrían discrepar y el apunte diría una versión que nunca salió.
+  const _versiones=new Map();
   _lote.forEach(s=>{
     const c=icsCampos(s);
     if(!c) return;                                  // sin fecha válida no hay evento
+    const _h=icsHuella(c);
+    const _seq=icsSeq(_previos.get(c.uid),_h);
+    _versiones.set(c.uid,{seq:_seq,h:_h});
     lines.push('BEGIN:VEVENT',
       `DTSTART:${fmt(c.start)}`,`DTEND:${fmt(c.end)}`,
       `SUMMARY:${clean(c.summary)}`,
@@ -467,6 +475,7 @@ export async function exportICS(modo){
       `DESCRIPTION:${clean(c.description)}`,
       `UID:${c.uid}`,
       `DTSTAMP:${_ahora}`,
+      `SEQUENCE:${_seq}`,
       'END:VEVENT');
   });
   lines.push('END:VCALENDAR');
@@ -501,7 +510,11 @@ export async function exportICS(modo){
     // no se puede accionar.
     const _prev=(state.get('icsEntregados')||[]).map(_icsEntrega).filter(e=>e.uid);
     const _map=new Map(_prev.map(e=>[e.uid,e]));
-    _lote.forEach(s=>{ const u=icsUid(s); if(u) _map.set(u,{uid:u,title:s._title||'',day:s.day||'',time:s.time||''}); });
+    _lote.forEach(s=>{
+      const u=icsUid(s); if(!u) return;
+      const v=_versiones.get(u)||{seq:0,h:null};
+      _map.set(u,{uid:u,title:s._title||'',day:s.day||'',time:s.time||'',seq:v.seq,h:v.h});
+    });
     // Los colgados se OLVIDAN al exportar: ya se avisaron en el modal y nadie
     // nos va a confirmar que los borró. Insistir sería el ruido que Juan sacó de
     // la pantalla. Costo asumido: si no los borró y esa misma función vuelve al

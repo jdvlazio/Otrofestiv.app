@@ -14,7 +14,7 @@ import {
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
 import { toMin, minToStr, durEstimada, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
-import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase } from '../domain/film.js';
+import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase, _djb2 } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -768,6 +768,32 @@ export function icsCampos(s){
     description:`${_p(cfg.name||'Festival')} - ${_p(s.section)} - ${_dur}`,
     seccion:_p(s.section),                      // el puente nativo la usa aparte
   };
+}
+
+// icsHuella — la firma de lo que puede cambiar SIN cambiar el UID: la sede, la
+// hora de fin y la descripción. El inicio y el título no entran porque ya viven
+// en el UID; si cambian, es otro evento y el viejo queda colgado (icsFantasmas).
+// Sirve para saber si una re-exportación es una CORRECCIÓN o un re-envío, que es
+// lo único que separa un SEQUENCE honesto de un número inventado.
+export function icsHuella(c){
+  if(!c) return 0;
+  return _djb2(`${c.location}|${_icsUtc(c.end)}|${c.description}`);
+}
+
+// icsSeq — la versión que le toca a este evento. Un calendario que recibe el
+// mismo UID compara: número mayor = corrección, lo aplica; igual = ya lo tengo,
+// lo ignora. Sin número, TODO es la versión 0 para siempre y una sede corregida
+// no llega nunca.
+//
+// El apunte SIN huella es el de antes de esto (o el de una versión aún más vieja,
+// que era solo un string): no sabemos si cambió. Se asume que SÍ y se sube una
+// vez. Un número de más con el mismo contenido es un update que no hace nada; uno
+// de menos es la sala vieja quedándose. El error barato hacia el lado barato.
+export function icsSeq(prev,huella){
+  if(!prev) return 0;                       // nunca entregado
+  const _n=Number(prev.seq)||0;
+  if(prev.h===undefined||prev.h===null) return _n+1;
+  return prev.h===huella?_n:_n+1;
 }
 
 // icsFantasmas — lo que le mandamos al calendario y YA NO está en su Plan: se
