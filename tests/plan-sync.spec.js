@@ -518,3 +518,63 @@ test('PS12 — lo colgado se dice al exportar, una vez y sin bloque permanente',
   expect(r.trasExportar.entregados, 'tras exportar, la memoria son los 3 que SIGUEN en el Plan').toBe(3);
   expect(r.segundaVez, 'y no se insiste: la segunda vez no dice nada').toBeNull();
 });
+
+// ── PS13 — un evento corregido sale con versión NUEVA, uno repetido con la misma ─
+// Nuestro UID lleva título + hora de inicio, así que un cambio de FUNCIÓN es otro
+// evento (y el viejo queda colgado: PS12). Pero la sede, la hora de fin y la
+// descripción pueden cambiar SIN tocar el UID —el Plan guardado se re-deriva del
+// catálogo al hidratar, justamente para que una copia congelada no mienta—, y ahí
+// le mandamos el mismo UID con contenido distinto.
+//
+// Sin SEQUENCE todo es la versión 0 para siempre: un calendario que reconcilia ve
+// «ya tengo la 0» y se queda con la SALA VIEJA. Con versión, distingue corrección
+// de re-envío.
+//
+// Se afirma lo que separa un número honesto de uno inventado: que suba cuando el
+// contenido cambió y NO suba cuando no cambió. Subir siempre es la trampa fácil —
+// convierte cada export en un «update» falso; no subir nunca es no haber hecho
+// nada. Ojo con lo que este test NO prueba: que un calendario real los respete.
+// Eso pide un teléfono, y al cliente de quien reportó el bug no le cambia nada
+// (no reconcilia por UID al importar) — le sirve a quien use Google Calendar.
+test('PS13 — la versión sube al corregir y se queda al repetir', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const caps = []; const orig = URL.createObjectURL;
+    URL.createObjectURL = b => { caps.push(b.text()); return 'blob:x'; };
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f.info && !screeningPassed(f)).map(f => f.title))];
+    const mk = ts => ts.map(tt => { const f = FILMS.find(x => x.title === tt); return { ...f, _title: tt }; });
+    state.set('icsEntregados', []);
+    const plan = mk(vivas.slice(0, 2));
+    state.set('savedAgenda', { schedule: plan });
+    await exportICS('todo'); await w(300);              // 1ª entrega
+    await exportICS('todo'); await w(300);              // re-envío idéntico
+    // misma obra, misma hora → MISMO UID; cambia la sede
+    state.set('savedAgenda', { schedule: plan.map((f, i) => i === 0 ? { ...f, venue: 'Sala Inventada' } : f) });
+    await exportICS('todo'); await w(300);
+    // SEGUNDA corrección: la versión tiene que ACUMULAR. Si se mandara sin
+    // guardarse, cada corrección saldría como la 1 y un calendario que ya tiene
+    // la 1 ignoraría la segunda — justo lo que esto vino a evitar. Este caso lo
+    // agregué porque el cebo «se manda pero no se guarda» NO sonaba sin él.
+    state.set('savedAgenda', { schedule: plan.map((f, i) => i === 0 ? { ...f, venue: 'Otra Sala Más' } : f) });
+    await exportICS('todo'); await w(300);
+    // apunte VIEJO, sin huella (lo que ya tiene guardado quien viene de la versión
+    // anterior): no sabemos si cambió, así que se asume que sí
+    const uids = (state.get('icsEntregados') || []).map(e => e.uid);
+    state.set('icsEntregados', uids.map(u => ({ uid: u, title: '', day: '', time: '' })));
+    await exportICS('todo'); await w(300);
+    URL.createObjectURL = orig;
+    const textos = (await Promise.all(caps)).map(t => t.replace(/\r\n[ \t]/g, ''));
+    const seqs = t => (t.match(/^SEQUENCE:\d+$/gm) || []).map(l => +l.split(':')[1]);
+    return { primera: seqs(textos[0]), repetida: seqs(textos[1]), corregida: seqs(textos[2]),
+             corregidaOtraVez: seqs(textos[3]), sinHuella: seqs(textos[4]),
+             memoria: (state.get('icsEntregados') || []).map(e => ({ seq: e.seq, h: e.h })) };
+  });
+  expect(r.primera, 'lo nunca entregado sale en la versión 0').toEqual([0, 0]);
+  expect(r.repetida, 'repetir sin cambios NO sube la versión').toEqual([0, 0]);
+  expect(r.corregida[0], 'la sede corregida sube de versión').toBe(1);
+  expect(r.corregida[1], 'y la que no cambió se queda donde estaba').toBe(0);
+  expect(r.corregidaOtraVez[0], 'y la segunda corrección ACUMULA: 2, no otra vez 1').toBe(2);
+  expect(r.sinHuella.every(n => n >= 1), 'un apunte sin huella se asume cambiado y sube una vez').toBe(true);
+  expect(r.memoria.every(e => e.h !== undefined && e.h !== null), 'y queda con su huella para la próxima').toBe(true);
+});

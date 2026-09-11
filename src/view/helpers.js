@@ -14,7 +14,7 @@ import {
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
 import { toMin, minToStr, durEstimada, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
-import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase } from '../domain/film.js';
+import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase, _djb2 } from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -730,6 +730,70 @@ export function _icsEntrega(x){
 export function icsNuevas(schedule,entregados){
   const ya=new Set((entregados||[]).map(x=>_icsEntrega(x).uid).filter(Boolean));
   return (schedule||[]).filter(s=>{ const u=icsUid(s); return u&&!ya.has(u); });
+}
+
+// icsCampos — DUEÑO ÚNICO de «qué va en este evento». Los valores salen CRUDOS:
+// cada consumidor los serializa a su manera (el .ics escapa según RFC 5545, el
+// puente nativo solo aplana saltos de línea), pero el CONTENIDO se decide una
+// sola vez.
+//
+// Nace de dos necesidades que resultaron la misma. La primera: el puente nativo
+// recalculaba por su cuenta el inicio y el fin, con un comentario que prometía
+// «mismo fin que el ICS» — una promesa escrita a mano, no un dueño. La segunda:
+// para versionar un evento (SEQUENCE) hay que firmar su contenido, y si la firma
+// lo recalculara por su lado firmaríamos una cosa y mandaríamos otra; el día que
+// divergieran, el número mentiría sin que nada fallara.
+export function icsCampos(s){
+  if(!s) return null;
+  const dateStr=(FESTIVAL_DATES||{})[s.day];
+  if(!dateStr||!s.time) return null;
+  const start=_festDate(dateStr,_ics24h(s.time));
+  if(isNaN(start.getTime())) return null;
+  // blockDuration — el MISMO fin de bloque que Mi Plan (con anclaje: la función
+  // entera, no la obra suelta). parseInt(duration)||90 exportaba «18:00→18:05»
+  // para una obra anclada cuyo bloque real termina 19:51.
+  const end=new Date(start.getTime()+blockDuration(s)*60000);
+  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
+  const _p=x=>(x||'').trim();
+  // Sin duración publicada, el dato salía VACÍO y la descripción colgaba en « - »
+  // mientras el evento reservaba 90 minutos reales: se dice lo que de verdad
+  // bloquea, con la «~» de lo estimado.
+  const _dur=s.info
+    ? _p(t('abierta_hasta',{h:minToStr(screeningBlockEndMin(s)).replace(/^0/,'')})+' · '+t('vas_cuando_quieras'))
+    : (durEstimada(s.duration)?'~'+blockDuration(s)+' min':_p(s.duration));
+  return {
+    uid:icsUid(s), start, end,
+    summary:_p(s._title),
+    location:_p(venueLabel(s.venue)),          // edificio · sala (dueño único)
+    description:`${_p(cfg.name||'Festival')} - ${_p(s.section)} - ${_dur}`,
+    seccion:_p(s.section),                      // el puente nativo la usa aparte
+  };
+}
+
+// icsHuella — la firma de lo que puede cambiar SIN cambiar el UID: la sede, la
+// hora de fin y la descripción. El inicio y el título no entran porque ya viven
+// en el UID; si cambian, es otro evento y el viejo queda colgado (icsFantasmas).
+// Sirve para saber si una re-exportación es una CORRECCIÓN o un re-envío, que es
+// lo único que separa un SEQUENCE honesto de un número inventado.
+export function icsHuella(c){
+  if(!c) return 0;
+  return _djb2(`${c.location}|${_icsUtc(c.end)}|${c.description}`);
+}
+
+// icsSeq — la versión que le toca a este evento. Un calendario que recibe el
+// mismo UID compara: número mayor = corrección, lo aplica; igual = ya lo tengo,
+// lo ignora. Sin número, TODO es la versión 0 para siempre y una sede corregida
+// no llega nunca.
+//
+// El apunte SIN huella es el de antes de esto (o el de una versión aún más vieja,
+// que era solo un string): no sabemos si cambió. Se asume que SÍ y se sube una
+// vez. Un número de más con el mismo contenido es un update que no hace nada; uno
+// de menos es la sala vieja quedándose. El error barato hacia el lado barato.
+export function icsSeq(prev,huella){
+  if(!prev) return 0;                       // nunca entregado
+  const _n=Number(prev.seq)||0;
+  if(prev.h===undefined||prev.h===null) return _n+1;
+  return prev.h===huella?_n:_n+1;
 }
 
 // icsFantasmas — lo que le mandamos al calendario y YA NO está en su Plan: se
