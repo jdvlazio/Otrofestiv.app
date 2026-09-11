@@ -715,13 +715,30 @@ export function icsUid(s){
   return `otrofestiv-${id}-${(s._title||'').replace(/\s/g,'')}-${_icsUtc(start)}@otrofestiv.app`;
 }
 
+// _icsEntrega — normaliza un apunte de entrega. La memoria nació guardando solo
+// el UID; desde que además hay que NOMBRAR lo que quedó colgado en el calendario
+// guarda título, día y hora. Las dos formas conviven: un apunte viejo (string)
+// sigue sirviendo para restar, y solo pierde el nombre.
+export function _icsEntrega(x){
+  return typeof x==='string'?{uid:x}:(x&&x.uid?x:{uid:''});
+}
+
 // icsNuevas — lo que el calendario del usuario todavía NO recibió de nuestra
 // mano. Es una resta contra lo que NOSOTROS entregamos, no contra su calendario:
 // no podemos leerlo. Por eso la memoria puede quedar desfasada (borró eventos,
-// importó en otro aparato) y la salida «todo el plan» nunca desaparece.
+// importó en otro aparato) y la salida «todo el Plan» nunca desaparece.
 export function icsNuevas(schedule,entregados){
-  const ya=new Set(entregados||[]);
+  const ya=new Set((entregados||[]).map(x=>_icsEntrega(x).uid).filter(Boolean));
   return (schedule||[]).filter(s=>{ const u=icsUid(s); return u&&!ya.has(u); });
+}
+
+// icsFantasmas — lo que le mandamos al calendario y YA NO está en su Plan: se
+// movió a otra función o lo sacó. Ahí sigue, y nosotros no podemos retractarlo
+// —su calendario no reconcilia por UID al importar un archivo, medido— así que
+// lo único honesto es nombrarlo. La app no promete controlar lo que no controla.
+export function icsFantasmas(schedule,entregados){
+  const vivos=new Set((schedule||[]).map(icsUid).filter(Boolean));
+  return (entregados||[]).map(_icsEntrega).filter(e=>e.uid&&!vivos.has(e.uid));
 }
 
 export function planInputSignature(){

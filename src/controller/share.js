@@ -2,7 +2,7 @@
 // p8 Step 7e — Compartir plan (canvas/imagen) + export ICS.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import {_langDates, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster, icsUid, icsNuevas, _ics24h, _icsUtc} from '../view/helpers.js';
+import {_langDates, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster, icsUid, icsNuevas, icsFantasmas, _icsEntrega, _ics24h, _icsUtc} from '../view/helpers.js';
 import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast, showActionModal } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
@@ -368,6 +368,20 @@ function _dlDirect(dataUrl){
 // salidas quedan a la vista y con conducta de verdad —el modal exige etiqueta y
 // callback para su tercera acción, precisamente por el bug de la intención
 // inalcanzable— y el que no está en ese caso no paga ninguna pregunta.
+// LA ELECCIÓN ES DEL USUARIO, NO NUESTRA (Juan, 10 sep 2026). La primera versión
+// de esto decidía sola: con memoria de entregas y plan crecido, mandaba la resta
+// y punto. Juan encontró el agujero: si ella tocó «Exportar» explorando y NO
+// guardó el archivo, anotamos las N como entregadas y desde entonces solo podía
+// pedir las nuevas — el plan completo le quedaba inalcanzable. Y no es un caso
+// raro: la memoria se escribe al ENTREGAR porque ninguno de los tres caminos nos
+// devuelve un acuse del calendario, así que la primera exploración ya la
+// envenena. Peor: mi propio comentario decía que el error de anotar de más «se
+// arregla pidiendo todo el plan», y no había manera de pedirlo.
+//
+// Ahora, cuando volver a mandar todo DUPLICARÍA algo, se pregunta. Las dos
+// salidas quedan a la vista y con conducta de verdad —el modal exige etiqueta y
+// callback para su tercera acción, precisamente por el bug de la intención
+// inalcanzable— y el que no está en ese caso no paga ninguna pregunta.
 export async function exportICS(modo){
   // RESTRICCIÓN 2 — de un festival en revisión no sale nada. Su programación
   // es provisional y compartirla la hace circular como si fuera definitiva:
@@ -388,14 +402,37 @@ export async function exportICS(modo){
   // mandar todo. Si es cero no hay disyuntiva —nada que duplicar— y preguntar
   // sería un peaje sin motivo, así que el primer export de la vida no ve nada.
   const _yaEnPlan=savedAgenda.schedule.length-_nuevas.length;
-  if(!modo&&_nuevas.length&&_yaEnPlan){
+  // LO QUE QUEDÓ COLGADO se dice ACÁ y no en la pantalla (Juan, 11 sep 2026):
+  // un bloque permanente en Mi Plan era ruido, y el momento en que esto importa
+  // es el único en que ella está pensando en su calendario. Una línea, con
+  // nombres para poder encontrarlos —máximo dos, o no se lee— y sin botón
+  // propio: se dice una vez y no se insiste.
+  const _fant=icsFantasmas(savedAgenda.schedule,_entregados);
+  const _lista=_fant.slice(0,2).map(e=>{
+    const{displayTitle}=parseProgramTitle(e.title||'');
+    // Recorte de la casa (el mismo de confirmReplace): un título largo convierte
+    // una línea en un párrafo, y acá el párrafo era la queja.
+    const _d=displayTitle||e.title||'';
+    return `${_d.length>22?_d.slice(0,20)+'…':_d}${e.time?` (${e.time})`:''}`;
+  }).join(', ')+(_fant.length>2?` ${t('ics_fantasma_mas',{n:_fant.length-2})}`:'');
+  // Dos formas del mismo hecho, ninguna con variante singular/plural: cuando el
+  // aviso va SOLO, el título dice el hecho y el cuerpo son los nombres; cuando
+  // comparte modal con la elección, el hecho se pega delante de los nombres.
+  const _avisoFant=_fant.length?t('ics_fantasma_inline',{lista:_lista}):'';
+  if(!modo&&(( _nuevas.length&&_yaEnPlan)||_fant.length)){
+    const _hayEleccion=!!(_nuevas.length&&_yaEnPlan);
+    const _cuerpo=_hayEleccion
+      ? [t('ics_elegir_cuerpo',{m:_yaEnPlan,n:savedAgenda.schedule.length}),_avisoFant].filter(Boolean).join('<br>')
+      : _lista;
     showActionModal(
-      t('ics_elegir_titulo'),
-      t('ics_elegir_cuerpo',{m:_yaEnPlan,n:savedAgenda.schedule.length}),
-      _nuevas.length===1?t('ics_solo_la_nueva'):t('ics_solo_nuevas',{n:_nuevas.length}),
-      ()=>exportICS('nuevas'),
+      _hayEleccion?t('ics_elegir_titulo'):t('ics_fantasma_titulo'),
+      _cuerpo,
+      _hayEleccion
+        ?(_nuevas.length===1?t('ics_solo_la_nueva'):t('ics_solo_nuevas',{n:_nuevas.length}))
+        :t('plan_exportar_cal'),
+      ()=>exportICS(_hayEleccion?'nuevas':'todo'),
       null,
-      { altLabel:t('ics_todo_el_plan'), altCb:()=>exportICS('todo') }
+      _hayEleccion?{ altLabel:t('ics_todo_el_plan'), altCb:()=>exportICS('todo') }:undefined
     );
     return;
   }
@@ -471,9 +508,19 @@ export async function exportICS(modo){
   // el error de anotar de más (no volver a ofrecerle algo) se arregla pidiendo
   // todo el plan, mientras que el de anotar de menos vuelve a duplicarle.
   const _anotar=()=>{
-    const _ya=new Set(state.get('icsEntregados')||[]);
-    _lote.forEach(s=>{ const u=icsUid(s); if(u) _ya.add(u); });
-    const _arr=[..._ya];
+    // Se guarda el UID y además título/día/hora: sin eso, lo que quede colgado en
+    // su calendario se puede contar pero no NOMBRAR, y un aviso que no dice cuál
+    // no se puede accionar.
+    const _prev=(state.get('icsEntregados')||[]).map(_icsEntrega).filter(e=>e.uid);
+    const _map=new Map(_prev.map(e=>[e.uid,e]));
+    _lote.forEach(s=>{ const u=icsUid(s); if(u) _map.set(u,{uid:u,title:s._title||'',day:s.day||'',time:s.time||''}); });
+    // Los colgados se OLVIDAN al exportar: ya se avisaron en el modal y nadie
+    // nos va a confirmar que los borró. Insistir sería el ruido que Juan sacó de
+    // la pantalla. Costo asumido: si no los borró y esa misma función vuelve al
+    // Plan, se la mandamos como nueva y le queda duplicada — un caso de borde
+    // contra un aviso permanente, y el aviso permanente era peor.
+    const _fantUid=new Set(icsFantasmas(savedAgenda.schedule,[..._map.values()]).map(e=>e.uid));
+    const _arr=[..._map.values()].filter(e=>!_fantUid.has(e.uid));
     state.set('icsEntregados',_arr); storage.setIcsEntregados(_arr);
   };
   // iOS nativo (SwiftUI WKWebView + EventKit): alta directa al Calendario,
