@@ -64,6 +64,12 @@ export const storage = {
   getPlanCalculado() { try { return localStorage.getItem(FESTIVAL_STORAGE_KEY+'calc1')==='1'; } catch(e) { return false; } },
   setPlanCalculado(v) { try { v ? localStorage.setItem(FESTIVAL_STORAGE_KEY+'calc1','1') : localStorage.removeItem(FESTIVAL_STORAGE_KEY+'calc1'); } catch(e) {} },
 
+  // icsEntregados — los UID que YA le pasamos al calendario del usuario. No es
+  // una copia de su calendario (no podemos leerlo): es memoria de lo que salió
+  // de acá, y solo sirve para no volver a entregar lo mismo. Local por festival.
+  getIcsEntregados() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'ics1'); const p=r?JSON.parse(r):[]; return Array.isArray(p)?p:[]; } catch(e) { return []; } },
+  setIcsEntregados(a) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'ics1', JSON.stringify(a||[])); } catch(e) {} },
+
   getLastRemovedSlots() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'lastslot'); if(!r) return []; const p=JSON.parse(r); return Array.isArray(p)?p:(p?[p]:[]); } catch(e) { return []; } },
   setLastRemovedSlots(a) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'lastslot', JSON.stringify(a)); } catch(e) {} },
 

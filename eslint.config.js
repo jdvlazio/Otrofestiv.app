@@ -11,10 +11,10 @@ const globals = require('globals');
 // Si se agrega/quita un bridge key allá, actualizar acá.
 const BRIDGE = {};
 [
-  // STATE BRIDGE (22) — la cuenta venía diciendo 19 con 21 claves reales: se
+  // STATE BRIDGE (23) — la cuenta venía diciendo 19 con 21 claves reales: se
   // lleva a mano y ya había derivado antes de sumar planCalculado.
   'watchlist','watched','notWatched','prioritized','filmRatings','filmDelays','filmDelaysHistory',
-  'savedAgenda','availability','lastRemovedSlots','planCalculado','_lang','_simTime','FILMS',
+  'savedAgenda','availability','lastRemovedSlots','planCalculado','icsEntregados','_lang','_simTime','FILMS',
   'FESTIVAL_DATES','FESTIVAL_END','FESTIVAL_POSTPONED','PLAN_CITY_VENUES','PRIO_LIMIT','TZ_OFFSET','FESTIVAL_TRANSPORT',
   '_activeFestId','FESTIVAL_STORAGE_KEY',
   // VIEWSTATE BRIDGE (29)

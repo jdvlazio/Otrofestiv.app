@@ -2,13 +2,15 @@
 // p8 Step 7e — Compartir plan (canvas/imagen) + export ICS.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import {_langDates, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster} from '../view/helpers.js';
+import {_langDates, starsText, vcfg, venueLabel, getFilmPoster, getCortoItemPoster, icsUid, icsNuevas, _ics24h, _icsUtc} from '../view/helpers.js';
 import { parseProgramTitle, _sectionColor } from '../view/components.js';
-import { showToast } from '../view/feedback.js';
+import { showToast, showActionModal } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
 import { _festDate, durEstimada, minToStr } from '../domain/time.js';
 import { blockDuration, screeningBlockEndMin } from '../domain/film.js';
 import { t } from '../i18n/i18n.js';
+import { state } from '../state/state.js';
+import { storage } from '../storage/storage.js';
 import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→auth (sharePlan pide nombre)
 
 // ── shareDiary (F3 del Diario, rediseño 19 jul) — el diario como GRID de pósters.
@@ -345,7 +347,28 @@ function _dlDirect(dataUrl){
   setTimeout(()=>{document.body.removeChild(a);showToast(t('toast_imagen_guardada'),'info');},200);
 }
 
-export async function exportICS(){
+// exportICS(soloNuevas) — `soloNuevas` exporta ÚNICAMENTE lo que todavía no
+// salió de acá. Nace de un reporte real (usuaria de TIFF, 10 sep 2026): tenía su
+// plan en el calendario, agregó una obra, volvió a exportar y se le duplicó todo.
+// Medido antes de tocar nada: nuestros UID YA eran estables —3 de 3 idénticos
+// entre dos exportaciones seguidas—, así que el archivo no era el culpable: su
+// calendario sencillamente no reconcilia por UID al importar un archivo. Contra
+// eso no alcanza con ser correctos; hay que no volver a mandarle lo que ya tiene.
+// LA ELECCIÓN ES DEL USUARIO, NO NUESTRA (Juan, 10 sep 2026). La primera versión
+// de esto decidía sola: con memoria de entregas y plan crecido, mandaba la resta
+// y punto. Juan encontró el agujero: si ella tocó «Exportar» explorando y NO
+// guardó el archivo, anotamos las N como entregadas y desde entonces solo podía
+// pedir las nuevas — el plan completo le quedaba inalcanzable. Y no es un caso
+// raro: la memoria se escribe al ENTREGAR porque ninguno de los tres caminos nos
+// devuelve un acuse del calendario, así que la primera exploración ya la
+// envenena. Peor: mi propio comentario decía que el error de anotar de más «se
+// arregla pidiendo todo el plan», y no había manera de pedirlo.
+//
+// Ahora, cuando volver a mandar todo DUPLICARÍA algo, se pregunta. Las dos
+// salidas quedan a la vista y con conducta de verdad —el modal exige etiqueta y
+// callback para su tercera acción, precisamente por el bug de la intención
+// inalcanzable— y el que no está en ese caso no paga ninguna pregunta.
+export async function exportICS(modo){
   // RESTRICCIÓN 2 — de un festival en revisión no sale nada. Su programación
   // es provisional y compartirla la hace circular como si fuera definitiva:
   // una captura del plan o un .ics en el calendario de alguien sobreviven a
@@ -353,17 +376,41 @@ export async function exportICS(){
   if(_esRevisionActiva()){ showToast(t('review_no_compartir')); return; }
 
   if(!savedAgenda||!savedAgenda.schedule.length){showToast(t('plan_sin_plan'),'warn');return;}
-  const pad=n=>String(n).padStart(2,'0');
-  // UTC con sufijo Z — instante absoluto. El Date se construye con el offset del
-  // festival (_festDate usa TZ_OFFSET); aquí lo serializamos en UTC para que cada
-  // calendario lo convierta a la tz local del usuario sin ambigüedad.
-  const fmt=dt=>`${dt.getUTCFullYear()}${pad(dt.getUTCMonth()+1)}${pad(dt.getUTCDate())}T${pad(dt.getUTCHours())}${pad(dt.getUTCMinutes())}${pad(dt.getUTCSeconds())}Z`;
-  // Convierte tiempo 12h (8:00 PM) → 24h (20:00) para _festDate
-  const to24h=t=>{if(!t)return'12:00';const m=t.match(/(\d+):(\d+)\s*(AM|PM)/i);if(!m)return t;let h=parseInt(m[1]),mn=m[2],ap=m[3].toUpperCase();if(ap==='PM'&&h!==12)h+=12;if(ap==='AM'&&h===12)h=0;return pad(h)+':'+mn;};
+  // fmt y to24h se mudaron a view/helpers junto al UID: los tres son la misma
+  // pregunta —cómo se nombra este pase en un calendario— y tenerlos acá los
+  // dejaba a un refactor de distancia de discrepar con el UID.
+  const fmt=_icsUtc, to24h=_ics24h;
+  // Lo que se va a exportar. Sin `soloNuevas` va el plan entero, que es también
+  // la salida de emergencia: al que perdió su calendario le sirve pedirlo todo.
+  const _entregados=state.get('icsEntregados')||[];
+  const _nuevas=icsNuevas(savedAgenda.schedule,_entregados);
+  // Lo ya entregado que SIGUE en el plan: es lo único que se duplicaría al
+  // mandar todo. Si es cero no hay disyuntiva —nada que duplicar— y preguntar
+  // sería un peaje sin motivo, así que el primer export de la vida no ve nada.
+  const _yaEnPlan=savedAgenda.schedule.length-_nuevas.length;
+  if(!modo&&_nuevas.length&&_yaEnPlan){
+    showActionModal(
+      t('ics_elegir_titulo'),
+      t('ics_elegir_cuerpo',{m:_yaEnPlan,n:savedAgenda.schedule.length}),
+      _nuevas.length===1?t('ics_solo_la_nueva'):t('ics_solo_nuevas',{n:_nuevas.length}),
+      ()=>exportICS('nuevas'),
+      null,
+      { altLabel:t('ics_todo_el_plan'), altCb:()=>exportICS('todo') }
+    );
+    return;
+  }
+  const _lote=modo==='nuevas'?_nuevas:savedAgenda.schedule;
+  if(!_lote.length){ showToast(t('ics_nada_nuevo'),'info'); return; }
+  // DTSTAMP lo exige el RFC 5545 §3.6.1 en TODO VEVENT y no lo teníamos (medido:
+  // false). Es la marca de cuándo se publicó este objeto, y es parte de lo que un
+  // cliente mira para decidir «el mismo evento, actualizado» en vez de «otro
+  // evento». No se inventa un SEQUENCE: su valor por defecto ya es 0 y ponerlo a
+  // mano no dice nada nuevo — un SEQUENCE de verdad pide versionar cada evento.
+  const _ahora=fmt(new Date());
   const _icsCfg=FESTIVAL_CONFIG[_activeFestId]||{};
   const _icsId=(_icsCfg.shortName||'festival').toLowerCase().replace(/\s+/g,'');
   const lines=['BEGIN:VCALENDAR','VERSION:2.0',`PRODID:-//Otrofestiv//${_icsId}//ES`,'CALSCALE:GREGORIAN','METHOD:PUBLISH'];
-  savedAgenda.schedule.forEach(s=>{
+  _lote.forEach(s=>{
     const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return;
     const start=_festDate(dateStr,to24h(s.time));
     if(isNaN(start.getTime())) return; // skip si fecha inválida
@@ -393,7 +440,8 @@ export async function exportICS(){
       // para lo estimado. La explicación de por qué no se sabe vive en Avisos, en
       // la ficha, que es donde se decide (decisión de Juan, 4 sep).
       `DESCRIPTION:${clean(_icsCfg.name||'Festival')} - ${clean(s.section)} - ${s.info?clean(t('abierta_hasta',{h:minToStr(screeningBlockEndMin(s)).replace(/^0/,'')})+' · '+t('vas_cuando_quieras')):durEstimada(s.duration)?'~'+blockDuration(s)+' min':clean(s.duration)}`,
-      `UID:otrofestiv-${_icsId}-${s._title?.replace(/\s/g,'')}-${fmt(start)}@otrofestiv.app`,
+      `UID:${icsUid(s)}`,
+      `DTSTAMP:${_ahora}`,
       'END:VEVENT');
   });
   lines.push('END:VCALENDAR');
@@ -418,6 +466,16 @@ export async function exportICS(){
   };
   const icsText=lines.map(_plegar).join('\r\n');
   const fileName=`otrofestiv-${_icsId}.ics`;
+  // Memoria de lo que salió de acá. Se anota al ENTREGAR, no al confirmar que el
+  // calendario lo aceptó: no tenemos ese acuse en ninguno de los tres caminos, y
+  // el error de anotar de más (no volver a ofrecerle algo) se arregla pidiendo
+  // todo el plan, mientras que el de anotar de menos vuelve a duplicarle.
+  const _anotar=()=>{
+    const _ya=new Set(state.get('icsEntregados')||[]);
+    _lote.forEach(s=>{ const u=icsUid(s); if(u) _ya.add(u); });
+    const _arr=[..._ya];
+    state.set('icsEntregados',_arr); storage.setIcsEntregados(_arr);
+  };
   // iOS nativo (SwiftUI WKWebView + EventKit): alta directa al Calendario,
   // sin hoja de compartir. El puente Swift expone messageHandler 'calendar'.
   // Mandamos instantes absolutos en epoch ms (ya correctos: offset del festival).
@@ -425,7 +483,7 @@ export async function exportICS(){
   if(_wk){
     const _clean=str=>(str||'').replace(/[\r\n]/g,' ').trim();
     const events=[];
-    savedAgenda.schedule.forEach(s=>{
+    _lote.forEach(s=>{
       const dateStr=FESTIVAL_DATES[s.day]; if(!dateStr) return;
       const start=_festDate(dateStr,to24h(s.time));
       if(isNaN(start.getTime())) return;
@@ -437,7 +495,13 @@ export async function exportICS(){
         end:end.getTime(),
         location:_clean(venueLabel(s.venue)),   // MISMO texto que el ICS: a qué sala
                                                 //  entrar no puede depender del teléfono
-        notes:`${_clean(_icsCfg.name||'Festival')}${s.section?(' · '+_clean(s.section)):''}`
+        notes:`${_clean(_icsCfg.name||'Festival')}${s.section?(' · '+_clean(s.section)):''}`,
+        // El puente mandaba título/hora/sede y NADA que identificara el evento,
+        // así que EventKit no podía deduplicar aunque quisiera: cada exportación
+        // creaba eventos nuevos, siempre. Va el mismo UID del .ics para que el
+        // lado Swift pueda buscar y actualizar en vez de agregar. Hasta que ese
+        // lado lo use, el campo viaja y no estorba.
+        uid:icsUid(s)
       });
     });
     if(!events.length){ showToast(t('plan_sin_plan'),'warn'); return; }
@@ -446,6 +510,7 @@ export async function exportICS(){
       if(res&&res.status==='added') showToast(t('ics_success').replace('{n}',res.count),'info');
       else showToast(t('ics_permission_denied'),'warn',5000); // denied | error → mismo aviso accionable
     };
+    _anotar();
     _wk.postMessage({events});
     return;
   }
@@ -463,6 +528,7 @@ export async function exportICS(){
         title:'Otrofestiv — '+t('share_mi_plan'),
         files:[result.uri]
       });
+      _anotar();
     }catch(e){
       console.error('ICS share error:',e);
       showToast(t('toast_cal_err'),'warn');
@@ -474,6 +540,7 @@ export async function exportICS(){
     a.style.cssText='position:fixed;top:-999px;left:-999px;opacity:0';
     document.body.appendChild(a);a.click();
     setTimeout(()=>{document.body.removeChild(a);URL.revokeObjectURL(url);},200);
+    _anotar();
   }
   showToast(t('misc_calendario_listo'),'info');
 }
