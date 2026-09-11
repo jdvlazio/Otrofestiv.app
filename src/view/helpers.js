@@ -674,6 +674,56 @@ export function planCityVenues(){
 // ago: el Plan que estás mirando nunca cambia solo). Cubre todo lo que consume el
 // planificador; la ciudad va reducida con keepCityOnly — una sede concreta no
 // restringe el plan y marcarla desactualizada sería una falsa alarma.
+// ── Identidad de una función EN UN CALENDARIO ────────────────────────────────
+// icsUid — DUEÑO ÚNICO de «cómo se llama esta función allá afuera». Vivía suelto
+// dentro del template del .ics y ahora lo consultan TRES: la línea UID del
+// archivo, el cálculo de qué falta por entregar, y el puente nativo de iOS. Con
+// copias, dos calendarios distintos verían nombres distintos para el mismo pase
+// y la deduplicación del cliente dejaría de funcionar sin que nada fallara.
+//
+// La clave es festival + título + INSTANTE DE INICIO. Consecuencia buscada:
+// exportar dos veces el mismo pase da el mismo nombre (medido: 3 de 3 idénticos).
+// Consecuencia asumida: cambiarse de función es OTRO nombre —correcto para
+// agregar, pero el evento viejo se queda en el calendario; retractarlo pide un
+// VEVENT de cancelación y todavía no lo mandamos.
+export function _ics24h(v){
+  if(!v) return '12:00';
+  const m=v.match(/(\d+):(\d+)\s*(AM|PM)/i);
+  if(!m) return v;
+  let h=parseInt(m[1]); const mn=m[2], ap=m[3].toUpperCase();
+  if(ap==='PM'&&h!==12) h+=12;
+  if(ap==='AM'&&h===12) h=0;
+  return String(h).padStart(2,'0')+':'+mn;
+}
+
+// UTC con sufijo Z — instante absoluto. El Date se arma con el offset del
+// festival (_festDate usa TZ_OFFSET) y acá se serializa en UTC para que cada
+// calendario lo lleve a la zona de su dueño sin ambigüedad.
+export function _icsUtc(dt){
+  const p=n=>String(n).padStart(2,'0');
+  return `${dt.getUTCFullYear()}${p(dt.getUTCMonth()+1)}${p(dt.getUTCDate())}T${p(dt.getUTCHours())}${p(dt.getUTCMinutes())}${p(dt.getUTCSeconds())}Z`;
+}
+
+export function icsUid(s){
+  if(!s) return '';
+  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
+  const id=(cfg.shortName||'festival').toLowerCase().replace(/\s+/g,'');
+  const dateStr=(FESTIVAL_DATES||{})[s.day];
+  if(!dateStr||!s.time) return '';
+  const start=_festDate(dateStr,_ics24h(s.time));
+  if(isNaN(start.getTime())) return '';
+  return `otrofestiv-${id}-${(s._title||'').replace(/\s/g,'')}-${_icsUtc(start)}@otrofestiv.app`;
+}
+
+// icsNuevas — lo que el calendario del usuario todavía NO recibió de nuestra
+// mano. Es una resta contra lo que NOSOTROS entregamos, no contra su calendario:
+// no podemos leerlo. Por eso la memoria puede quedar desfasada (borró eventos,
+// importó en otro aparato) y la salida «todo el plan» nunca desaparece.
+export function icsNuevas(schedule,entregados){
+  const ya=new Set(entregados||[]);
+  return (schedule||[]).filter(s=>{ const u=icsUid(s); return u&&!ya.has(u); });
+}
+
 export function planInputSignature(){
   const _int=[...watchlist].filter(t=>!watched.has(t)).sort().join('|');
   const _pri=[...prioritized].sort().join('|');

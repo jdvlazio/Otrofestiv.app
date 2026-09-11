@@ -21,6 +21,7 @@ const _ROSTER = new Set([
   'FESTIVAL_STORAGE_KEY', 'PRIO_LIMIT', 'TZ_OFFSET', 'FESTIVAL_TRANSPORT',
   'watchlist', 'watched', 'notWatched', 'prioritized', 'filmRatings', 'filmDelays',
   'filmDelaysHistory', 'savedAgenda', 'availability', 'lastRemovedSlots', 'planCalculado',
+  'icsEntregados',
   '_lang', '_simTime',
 ]);
 

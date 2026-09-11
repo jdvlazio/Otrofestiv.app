@@ -335,3 +335,129 @@ test('PS08 — el ICS pliega sus líneas largas sin perder contenido', async ({ 
   // salto: por eso se busca el `\n` sin `\r` delante, no que todas terminen en CRLF.)
   expect(/[^\r]\n/.test(ics), 'no hay saltos de línea sueltos: todo va en CRLF').toBe(false);
 });
+
+// ── PS09/PS10/PS11 — que volver a exportar no te duplique el calendario ──────
+// Reporte real (usuaria de TIFF, 10 sep 2026): tenía su plan en el calendario,
+// agregó una obra, volvió a exportar y se le duplicó TODO.
+//
+// Medido antes de tocar nada: nuestros UID ya eran estables —3 de 3 idénticos
+// entre dos exportaciones seguidas— así que el archivo no era el culpable. Su
+// calendario sencillamente no reconcilia por UID al importar un archivo. Contra
+// eso no alcanza con ser correctos: hay que no volver a mandarle lo que ya tiene.
+//
+// PS09 defiende lo que ya estaba bien y no tenía red (identidad estable + el
+// DTSTAMP que el RFC exige y no poníamos). PS10 y PS11 defienden lo nuevo.
+async function icsDe(page, fn) {
+  return page.evaluate(async (src) => {
+    const caps = []; const orig = URL.createObjectURL;
+    URL.createObjectURL = b => { caps.push(b.text()); return 'blob:x'; };
+    // eslint-disable-next-line no-eval
+    const out = await eval(`(${src})`)();
+    URL.createObjectURL = orig;
+    const textos = await Promise.all(caps);
+    return { out, textos: textos.map(t => t.replace(/\r\n[ \t]/g, '')) }; // desplegados
+  }, fn.toString());
+}
+test('PS09 — el mismo pase se llama igual en las dos exportaciones, y todo evento trae DTSTAMP', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  const r = await icsDe(page, async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f.info && !screeningPassed(f)).map(f => f.title))];
+    const mk = ts => ts.map(tt => { const f = FILMS.find(x => x.title === tt); return { ...f, _title: tt }; });
+    state.set('icsEntregados', []);
+    state.set('savedAgenda', { schedule: mk(vivas.slice(0, 3)) });
+    await exportICS('todo'); await w(300);
+    state.set('savedAgenda', { schedule: mk(vivas.slice(0, 4)) });
+    await exportICS('todo'); await w(300);   // el plan entero OTRA VEZ: el caso de ella
+    return null;
+  });
+  const uids = t => (t.match(/^UID:.*$/gm) || []).map(l => l.trim());
+  const [a, b] = r.textos;
+  expect(uids(a).length, 'la 1ª exportación trae sus 3').toBe(3);
+  const comunes = uids(a).filter(u => uids(b).includes(u));
+  expect(comunes.length, 'los 3 pases de la 1ª se llaman IGUAL en la 2ª').toBe(3);
+  // DTSTAMP: RFC 5545 §3.6.1 lo exige en todo VEVENT
+  const eventos = (b.match(/BEGIN:VEVENT/g) || []).length;
+  const stamps = (b.match(/^DTSTAMP:\d{8}T\d{6}Z$/gm) || []).length;
+  expect(eventos, 'la 2ª trae 4 eventos').toBe(4);
+  expect(stamps, 'y cada uno su DTSTAMP en UTC').toBe(eventos);
+});
+
+test('PS10 — «solo lo nuevo» manda la resta, no el plan entero', async ({ page }) => {
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  const r = await icsDe(page, async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f.info && !screeningPassed(f)).map(f => f.title))];
+    const mk = ts => ts.map(tt => { const f = FILMS.find(x => x.title === tt); return { ...f, _title: tt }; });
+    state.set('icsEntregados', []);
+    state.set('savedAgenda', { schedule: mk(vivas.slice(0, 3)) });
+    await exportICS('todo'); await w(300);
+    const trasPrimera = (state.get('icsEntregados') || []).length;
+    state.set('savedAgenda', { schedule: mk(vivas.slice(0, 5)) });
+    await exportICS('nuevas'); await w(300);
+    return { trasPrimera, trasSegunda: (state.get('icsEntregados') || []).length,
+             nuevasEsperadas: vivas.slice(3, 5) };
+  });
+  const sums = t => (t.match(/^SUMMARY:.*$/gm) || []).map(l => l.replace('SUMMARY:', '').trim());
+  const [a, b] = r.textos;
+  expect(sums(a).length, 'la 1ª entrega el plan entero').toBe(3);
+  expect(sums(b).length, 'la 2ª entrega SOLO las 2 que faltaban').toBe(2);
+  expect(r.out.trasPrimera, 'y queda constancia de las 3 primeras').toBe(3);
+  expect(r.out.trasSegunda, 'y de las 5 tras la segunda').toBe(5);
+});
+
+test('PS11 — cuando volver a mandar duplicaría, la elección es del usuario', async ({ page }) => {
+  // Agujero que encontró Juan (10 sep 2026): si tocás «Exportar» explorando y NO
+  // guardás el archivo, la memoria igual anota —ninguno de los tres caminos nos
+  // devuelve acuse del calendario— y desde entonces la primera versión de esto
+  // solo dejaba pedir las nuevas: el Plan completo quedaba inalcanzable.
+  //
+  // Se afirma: (1) el primer export NO pregunta —no hay nada que duplicar y el
+  // peaje sería gratuito—; (2) con algo ya entregado que sigue en el Plan, sí
+  // pregunta; (3) las DOS salidas entregan lo que prometen. La tercera es la que
+  // faltaba y la que este test existe para custodiar.
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T10:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const caps = []; const orig = URL.createObjectURL;
+    URL.createObjectURL = b => { caps.push(b.text()); return 'blob:x'; };
+    const vivas = [...new Set(FILMS.filter(f => f.day && f.time && !f.info && !screeningPassed(f)).map(f => f.title))];
+    const mk = ts => ts.map(tt => { const f = FILMS.find(x => x.title === tt); return { ...f, _title: tt }; });
+    const modal = () => { const m = document.getElementById('conflict-modal'); if (!m) return null;
+      return { cuerpo: m.querySelector('.conflict-modal-body').textContent.trim(),
+               btns: [...m.querySelectorAll('.conflict-modal-btn')].map(b => b.textContent.trim()),
+               alt: !!document.querySelector('#cm-alt') }; };
+    state.set('icsEntregados', []);
+    state.set('savedAgenda', { schedule: mk(vivas.slice(0, 4)) });
+    await exportICS(); await w(300);
+    const primera = { modal: modal(), entregados: (state.get('icsEntregados') || []).length };
+    // agrega dos y vuelve a tocar → acá sí hay disyuntiva
+    state.set('savedAgenda', { schedule: mk(vivas.slice(0, 6)) });
+    await exportICS(); await w(300);
+    const conDisyuntiva = modal();
+    // Los clics se guardan como HECHOS en vez de reventar: si el modal no está,
+    // el test tiene que DECIRLO, no morirse con un TypeError sobre null.
+    const clic = sel => { const b = document.querySelector(sel); if (!b) return false; b.click(); return true; };
+    const okSegunda = clic('#cm-ok'); await w(400);            // «Solo las 2 nuevas»
+    // y otra vez, ahora pidiendo el Plan entero
+    state.set('savedAgenda', { schedule: mk(vivas.slice(0, 7)) });
+    await exportICS(); await w(300);
+    const altTercera = clic('#cm-alt'); await w(400);          // «Todo el Plan»
+    URL.createObjectURL = orig;
+    const textos = await Promise.all(caps);
+    const sums = t => (t.replace(/\r\n[ \t]/g, '').match(/^SUMMARY:.*$/gm) || []).length;
+    return { primera, conDisyuntiva, okSegunda, altTercera, exports: textos.map(sums) };
+  });
+  expect(r.primera.modal, 'el primer export no pregunta: no hay nada que duplicar').toBeNull();
+  expect(r.primera.entregados, 'y entrega el Plan entero').toBe(4);
+  expect(r.conDisyuntiva, 'con algo ya entregado que sigue en el Plan, pregunta').not.toBeNull();
+  expect(r.okSegunda, 'y su acción principal está ahí para tocarla').toBe(true);
+  expect(r.altTercera, 'y la de «todo el Plan» también, la vez siguiente').toBe(true);
+  expect(r.conDisyuntiva.alt, 'y la salida «todo» existe de verdad, no solo de nombre').toBe(true);
+  expect(r.conDisyuntiva.btns.length, 'dos intenciones y una salida').toBe(3);
+  expect(r.conDisyuntiva.cuerpo, 'el cuerpo dice cuántas ya te mandamos').toMatch(/\b4\b/);
+  expect(r.conDisyuntiva.cuerpo, 'y de cuántas es el Plan').toMatch(/\b6\b/);
+  expect(r.exports[0], '1º: el Plan entero').toBe(4);
+  expect(r.exports[1], '2º: solo las 2 nuevas').toBe(2);
+  expect(r.exports[2], '3º: el Plan entero otra vez — la salida que faltaba').toBe(7);
+});
