@@ -768,6 +768,53 @@ def main():
     print(f'actividades retiradas por pedido del festival (inscripción previa): {len(retiradas)}')
     for _r in sorted(set(retiradas)): print(f'   · {_r}')
 
+    # ── LO QUE ESCRIBE EL LISTADO OFICIAL ───────────────────────────────────
+    # Dos fuentes del festival deletrean distinto, y la hoja —que es la que arma
+    # estos programas— abrevia. El listado en PDF es la fuente declarada de más
+    # peso del plan («PDF oficial del listado > artículo web > fichas»), y en
+    # estos seis casos Letterboxd, que es independiente de las dos, coincide con
+    # el PDF. Salió al montar el palmarés: el festival premió a «Sofía Salinas
+    # Barrera» y a «Santiago Gómez Ramírez», y la app los acreditaba a medias.
+    #
+    # NO entran los dos que corregimos a propósito: el PDF escribe «Gabriella
+    # Castelblanco» y «Esteban Prudencia», que son erratas suyas y ya estaban
+    # arregladas. Restaurar a ciegas las habría reintroducido — por eso esto es
+    # un mapa explícito y no «lo que diga el listado».
+    DEL_LISTADO = {
+        'Ya se ven los tigres en la lluvia':            'Óscar Ruiz Navia',
+        'El cazador':                                   'Luciana Riso Soto y Manuel Villa',
+        'Las formas de la magia':                       'María Paula Lorgia Garnica',
+        'Borrachos mientras escuchamos las gotas caer': 'Santiago Gómez Ramírez',
+        'Preguntas frecuentes':                         'Sofía Salinas Barrera',
+        'Buddies':                                      'Arthur J. Bressan, Jr.',
+    }
+    # «Países bajos» con b minúscula es de la misma hoja. Ya estaba arreglado en
+    # lo publicado, pero el arreglo nunca volvió al sidecar: sin esta línea, el
+    # primer regenerado lo desharía. Un arreglo que solo vive aguas abajo se
+    # pierde en silencio la próxima vez que alguien corre el pipeline.
+    PAIS_LISTADO = {'Países bajos': 'Países Bajos'}
+
+    _porclave = {clave(t): (t, n) for t, n in DEL_LISTADO.items()}
+    _usadas = set()
+    for _p in programas:
+        for _o in (_p.get('obras') or []):
+            _hit = _porclave.get(clave(_o.get('titulo')))
+            if _hit:
+                _titulo, _nombre = _hit
+                _o['director'] = _nombre
+                _usadas.add(_titulo)
+            for _mal, _bien in PAIS_LISTADO.items():
+                if _mal in (_o.get('pais') or ''):
+                    _o['pais'] = _o['pais'].replace(_mal, _bien)
+                    _usadas.add(_mal)
+    # Un mapa que deja de aplicarse es un mapa que miente. Si una entrada no
+    # encuentra a nadie, es que la hoja cambió la grafía: hay que mirarlo, no
+    # seguir de largo.
+    _huerfanas = (set(DEL_LISTADO) | set(PAIS_LISTADO)) - _usadas
+    if _huerfanas:
+        raise SystemExit('DEL_LISTADO/PAIS_LISTADO sin aplicar: ' + ', '.join(sorted(_huerfanas)))
+    print(f'nombres restaurados del listado oficial: {len(_usadas)}')
+
     out = {'_provenance': {
         'fuente': 'PDF oficial de programación + hoja de programas y charlas enviada por el festival',
         'capturado': '2026-08-20',
