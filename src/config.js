@@ -442,6 +442,58 @@ export const PALMARES=[
    titulo:'The Walnut of Knowledge', autoria:'Niyaz Saghari', obra:'The Walnut of Knowledge'},
   {fest:'cineautopsia2026', categoria:'Mediometrajes Destacados del Mundo', nivel:'mencion',
    titulo:'Analogue Natives', autoria:'Bernd Lützeler', obra:'Analogue Natives'},
+
+  // ── CINEMANCIA 2026 (6ª ed., Valle de Aburrá) — 9 posts del 12 sep ──────────
+  // Tres competencias, y cada una reparte los mismos tres reconocimientos:
+  // Premio Iris a Mejor Película, Premio Iris a Mejor Dirección y una Mención de
+  // Honor. Son DOS ganadoras por categoría, no una: por eso las dos llevan
+  // `premio` con el nombre que les puso el festival —lo mismo que se hizo con el
+  // Segundo Premio de FINCA—, y el tamaño grande no insinúa un empate.
+  //
+  // El festival anunció una premiada por publicación, y la ficha va PINTADA en
+  // la lámina (título, autoría, año, duración, país y la competencia). Los pies
+  // de foto se leyeron con el embed, pero MANDA LA LÁMINA, y no es un detalle:
+  // el pie de «Las almas ni los ojos» encabeza «COMPETENCIA DE CORTOMETRAJES»
+  // cuando la lámina dice «Competencia Central». Tres pruebas de que la lámina
+  // tiene razón: la obra vive en nuestra Competencia central, dura 76', y la
+  // Mejor Dirección de cortometrajes ya la tiene «Henry Is a Girl Who Likes to
+  // Sleep» en su propio post. Ver [[dato-oficial-campo-que-miente]].
+  //
+  // Dos erratas más del pie, corregidas contra la lámina y contra el catálogo:
+  // «BRIGTH SUMMER DAYS» es Bright, y «Martha Peters» es Marthe —el mismo pie la
+  // llama Marthe tres líneas después—.
+  //
+  // FALTA UNO y no es nuestro: la web del festival anuncia un «Premio del
+  // público» en Nuevas Voces (bono de Libros Antimateria) que al 13 sep no se ha
+  // publicado en ninguna parte. Cuando salga, entra como una ganadora más de esa
+  // categoría, con `premio:'Premio del público'`.
+  //
+  // Los nueve títulos existen en nuestro catálogo y ocho son CORTOS dentro de un
+  // programa: `_palmBuscar` los encuentra y el clic abre la ficha del corto.
+  // `titulo` y `obra` van con la grafía del catálogo —que es la que el usuario
+  // vio en la app— y `autoria` con el nombre completo que usó el festival al
+  // premiar («Sofía Salinas Barrera», «Santiago Gómez Ramírez»).
+
+  {fest:'cinemancia2026', categoria:'Competencia Central', nivel:'ganadora', premio:'Premio Iris a Mejor Película',
+   titulo:'Así llegó la noche', autoria:'Ángel Santos', obra:'Así llegó la noche'},
+  {fest:'cinemancia2026', categoria:'Competencia Central', nivel:'ganadora', premio:'Premio Iris a Mejor Dirección',
+   titulo:'Las almas ni los ojos', autoria:'Canela Reyes y César Jaimes', obra:'Las almas ni los ojos'},
+  {fest:'cinemancia2026', categoria:'Competencia Central', nivel:'mencion',
+   titulo:'Oublie pas le gruau', autoria:'Olivier Godin', obra:'Oublie pas le gruau'},
+
+  {fest:'cinemancia2026', categoria:'Competencia de Cortometrajes', nivel:'ganadora', premio:'Premio Iris a Mejor Película',
+   titulo:'Bright Summer Days', autoria:'Nevena Desivojevic', obra:'Bright Summer Days'},
+  {fest:'cinemancia2026', categoria:'Competencia de Cortometrajes', nivel:'ganadora', premio:'Premio Iris a Mejor Dirección',
+   titulo:'Henry Is a Girl Who Likes to Sleep', autoria:'Marthe Peters', obra:'Henry Is a Girl Who Likes to Sleep'},
+  {fest:'cinemancia2026', categoria:'Competencia de Cortometrajes', nivel:'mencion',
+   titulo:'Mirando al sur', autoria:'Felipe López Gómez', obra:'Mirando al sur'},
+
+  {fest:'cinemancia2026', categoria:'Competencia Nuevas Voces', nivel:'ganadora', premio:'Premio Iris a Mejor Película',
+   titulo:'Preguntas Frecuentes', autoria:'Sofía Salinas Barrera', obra:'Preguntas Frecuentes'},
+  {fest:'cinemancia2026', categoria:'Competencia Nuevas Voces', nivel:'ganadora', premio:'Premio Iris a Mejor Dirección',
+   titulo:'El Salto', autoria:'Jerónimo Rincón', obra:'El Salto'},
+  {fest:'cinemancia2026', categoria:'Competencia Nuevas Voces', nivel:'mencion',
+   titulo:'Borrachos mientras escuchamos las gotas caer', autoria:'Santiago Gómez Ramírez', obra:'Borrachos mientras escuchamos las gotas caer'},
 ];
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
