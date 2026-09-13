@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PDF oficial de programación + hoja de programas y charlas enviada por el festival",
-  "capturado": "2026-09-04",
+  "capturado": "2026-09-13",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "name": "Cinemancia",
@@ -975,7 +975,7 @@
    "title": "Buddies",
    "type": "film",
    "section": "🖤 Sick and Dirty. Curaduría de Michael Koresky",
-   "director": "Arthur J. Bressan",
+   "director": "Arthur J. Bressan, Jr.",
    "country": "Estados Unidos",
    "flags": "🇺🇸",
    "duration": "81 min",
@@ -1028,7 +1028,7 @@
    "title": "Competencia de cortometrajes Programa 2",
    "type": "film",
    "section": "🎞️ Competencia de cortometrajes",
-   "country": "Grecia, Países bajos, Colombia, Serbia",
+   "country": "Grecia, Países Bajos, Colombia, Serbia",
    "flags": "🇬🇷🇳🇱🇨🇴🇷🇸",
    "duration": "86 min",
    "day": "2026-09-05",
@@ -1061,7 +1061,7 @@
     {
      "title": "Koki, Ciao",
      "director": "Quenton Miller",
-     "country": "Países bajos",
+     "country": "Países Bajos",
      "flags": "🇳🇱",
      "year": 2025,
      "duration": "12 min",
@@ -1168,7 +1168,7 @@
    "film_list": [
     {
      "title": "Preguntas Frecuentes",
-     "director": "Sofía Salinas",
+     "director": "Sofía Salinas Barrera",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
@@ -2046,7 +2046,7 @@
     },
     {
      "title": "Borrachos mientras escuchamos las gotas caer",
-     "director": "Santiago Gómez",
+     "director": "Santiago Gómez Ramírez",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
@@ -2400,7 +2400,7 @@
    "film_list": [
     {
      "title": "Preguntas Frecuentes",
-     "director": "Sofía Salinas",
+     "director": "Sofía Salinas Barrera",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
@@ -3207,7 +3207,7 @@
     },
     {
      "title": "El cazador",
-     "director": "Manuel Villa, Luciana Riso",
+     "director": "Luciana Riso Soto y Manuel Villa",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
@@ -3223,7 +3223,7 @@
     },
     {
      "title": "Las formas de la magia",
-     "director": "Maria Paula Lorgia",
+     "director": "María Paula Lorgia Garnica",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
@@ -3254,7 +3254,7 @@
     },
     {
      "title": "Ya se ven los tigres en la lluvia",
-     "director": "Oscar Ruiz Navia",
+     "director": "Óscar Ruiz Navia",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
@@ -3513,7 +3513,7 @@
     },
     {
      "title": "Borrachos mientras escuchamos las gotas caer",
-     "director": "Santiago Gómez",
+     "director": "Santiago Gómez Ramírez",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
@@ -4159,7 +4159,7 @@
    "title": "Competencia de cortometrajes Programa 2",
    "type": "film",
    "section": "🎞️ Competencia de cortometrajes",
-   "country": "Grecia, Países bajos, Colombia, Serbia",
+   "country": "Grecia, Países Bajos, Colombia, Serbia",
    "flags": "🇬🇷🇳🇱🇨🇴🇷🇸",
    "duration": "86 min",
    "day": "2026-09-11",
@@ -4191,7 +4191,7 @@
     {
      "title": "Koki, Ciao",
      "director": "Quenton Miller",
-     "country": "Países bajos",
+     "country": "Países Bajos",
      "flags": "🇳🇱",
      "year": 2025,
      "duration": "12 min",
@@ -4333,5 +4333,12 @@
    "tmdb_id": 1478518,
    "_programa_original": "Iluminaciones"
   }
- ]
+ ],
+ "_corrido": {
+  "por": "pipeline/correr.py",
+  "fecha": "2026-09-13T13:40:00",
+  "plan_sha": "1acf3548b90c0acc",
+  "paso": 3,
+  "cmd": "python3 pipeline/ensamblar.py cinemancia-2026"
+ }
 }
