@@ -491,7 +491,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202609131349';
+const BUILD_VERSION='202609151214';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1627,6 +1627,23 @@ setTimeout(()=>{
 // Run after layout is complete (fonts + CSS painted)
 requestAnimationFrame(()=>requestAnimationFrame(_fixStickyOffset));
 window.addEventListener('resize',function(){requestAnimationFrame(_fixStickyOffset);});
+// EL CHROME SE OBSERVA, NO SE ADIVINA CUÁNDO CAMBIA (15 sep 2026). Las llamadas
+// sueltas de arriba y las de loadFestival/showDayView fijan --sticky-top-lista en
+// momentos elegidos a mano, y todo lo que cambia la altura del chrome FUERA de
+// esos momentos deja la variable vieja: la webfont que llega tarde y re-envuelve
+// la banda de TRASLADADO, la banda que se inserta después de medir, el cambio de
+// idioma que cambia el largo de su nota. Con la variable más alta que el chrome,
+// los encabezados pegajosos («10:00») quedan flotando DEBAJO del borde y por esa
+// franja pasan los pósters — captura de Juan en QAFF, ~10px. Medido en WebKit: la
+// variable decía 225 con el chrome en 261 durante ~2 s tras entrar. El propio
+// CSS del sticky único ya nombraba esta clase de fallo («timing de fuentes»).
+// Un ResizeObserver sobre .topbar convierte «la variable sigue al chrome» en una
+// propiedad, no en una lista de sitios que hay que recordar. El rAF evita el
+// «ResizeObserver loop limit exceeded» al escribir estilos desde el callback.
+if(typeof ResizeObserver!=='undefined'){
+  const _tbObs=document.querySelector('.topbar');
+  if(_tbObs) new ResizeObserver(()=>requestAnimationFrame(_fixStickyOffset)).observe(_tbObs);
+}
 // ── Persistencia de almacenamiento (resiliencia offline) ──────────────────
 // Sin esto, WebKit/iOS desaloja el Cache Storage y puede purgar localStorage
 // tras ~7 días sin uso → el patrón "instalo la app, no la abro una semana, la
