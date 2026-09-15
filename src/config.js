@@ -1091,6 +1091,18 @@ export const SECTION_ARCHETYPES = {
   '🎟️ Invitadas': 'Especiales / Eventos',
   '💬 Charlas que Unen': 'Charlas / Industria',
   '🛠️ Formación': 'Charlas / Industria',
+  // FICMA 17 · REPROGRAMADO (19–26 SEP). Las secciones de la parrilla nueva son
+  // OTRAS: el festival ya no titula por temas de coleccionismo sino por tipo de
+  // función. Las de agosto se dejan abajo mientras el festival no reanuncie el
+  // resto — sus obras vuelven con ellas.
+  '🎬 Función de apertura': 'Apertura / Gala',
+  '✨ Función Inaugural': 'Apertura / Gala',
+  '🇨🇴 Estrenos Cine Colombiano': 'Competencia',
+  '🎞️ Cine Colombiano': 'Muestra / País',
+  '⚡ Cortometrajes': 'Cortos / Programas',
+  '📽️ Cine Clásico Colombiano': 'Retrospectiva / Tributo',
+  // «🛠️ Talleres» ya está más abajo, con la de agosto: se reusa, no se duplica.
+
   // FICMA 17 — programa por TEMAS de coleccionismo y ciudad, no por competencias.
   // Las dos de estrenos son la cabecera y llevan colores distintos entre sí; las
   // temáticas comparten «Perspectivas», salvo antigüedades y numismática, que

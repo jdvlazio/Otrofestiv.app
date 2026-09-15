@@ -52,7 +52,7 @@ SECCIONES = {
     'Cine Colombiano':          ('🎞️ Cine Colombiano', 'Colombian Cinema', 'Muestra / País', 4),
     'Cortometrajes':            ('⚡ Cortometrajes', 'Short Films', 'Cortos / Programas', 5),
     'Cine Clásico Colombiano':  ('📽️ Cine Clásico Colombiano', 'Colombian Classics', 'Retrospectiva / Tributo', 6),
-    'Talleres':                 ('🛠️ Talleres', 'Workshops', 'Formación / Industria', 7),
+    'Talleres':                 ('🛠️ Talleres', 'Workshops', 'Charlas / Industria', 7),
 }
 
 # Sede del post → (clave canónica de venues, sala). La tabla es EXPLÍCITA, nunca

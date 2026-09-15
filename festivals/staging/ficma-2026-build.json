@@ -147,7 +147,7 @@
   },
   "🛠️ Talleres": {
    "en": "Workshops",
-   "archetype": "Formación / Industria",
+   "archetype": "Charlas / Industria",
    "order": 7
   }
  },
@@ -453,7 +453,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-15T11:35:47",
+  "fecha": "2026-09-15T11:45:19",
   "plan_sha": "c778f1367bce13e7",
   "paso": 3,
   "cmd": "python3 pipeline/ficma-2026-septiembre.py"
