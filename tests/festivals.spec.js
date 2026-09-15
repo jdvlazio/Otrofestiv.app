@@ -605,17 +605,41 @@ test('AP01 — aplazado: distintivo + banda + sin AHORA + sin «hoy»', async ({
 });
 
 // AP02 — Mi Plan de un festival APLAZADO: el plan se ve, con el aviso, y NUNCA
-// entra en Modo Recuerdo. El reloj se congela DESPUÉS de las fechas viejas (18 ago,
-// FICMA cerraba el 17): sin el estado, festivalEnded() —pura aritmética contra
+// entra en Modo Recuerdo. El reloj se congela DESPUÉS de las fechas del festival:
+// sin el estado, festivalEnded() —pura aritmética contra
 // FESTIVAL_END— daba el festival por terminado y la app pedía «Marcá lo que viste y
 // calificálo» sobre ocho días que no ocurrieron. Nadie habría desplegado nada: el
 // bug llegaba solo, con el calendario.
 test('AP02 — aplazado: Mi Plan avisa y no entra en Modo Recuerdo', async ({ page }) => {
-  await page.clock.install({ time: new Date('2026-08-18T12:00:00-05:00') });
+  // Reloj DESPUÉS de cualquier fecha del festival: el 1 de enero de 2027 lo es
+  // para todo 2026. Antes era el 18 de agosto, elegido para caer justo después
+  // de las fechas que FICMA tenía entonces; cuando el festival reprogramó a
+  // septiembre esa fecha dejó de estar «después» y la prueba perdió su sentido
+  // sin dejar de compilar. Una fecha lejana no depende del calendario de nadie.
+  await page.clock.install({ time: new Date('2027-01-01T12:00:00-05:00') });
   await page.goto('/');
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
   await page.waitForSelector('#splash-rail .splash-card[data-fest="ficma2026"]', { timeout: 15000 });
-  await page.evaluate(() => { const c = FESTIVAL_CONFIG['ficma2026']; selectSplashFest(c.name, `${c.city} · ${c.dates}`, 'ficma2026'); });
+  // El estado de aplazado se INYECTA, no se toma prestado de la producción.
+  //
+  // Antes esta prueba usaba a FICMA tal cual venía, porque estaba aplazado de
+  // verdad por el sismo de agosto. El festival reprogramó, se le quitó el
+  // estado, y la prueba se puso roja sin que la regla que vigila hubiera
+  // cambiado ni un carácter: se había quedado sin premisa.
+  //
+  // Y peor: con esa forma, esta prueba SOLO podía correr mientras algún
+  // festival estuviera aplazado, que es casi nunca. El guardián del bug del
+  // sismo dependía de que el sismo siguiera vigente.
+  await page.evaluate(() => {
+    const c = FESTIVAL_CONFIG['ficma2026'];
+    c.status = {
+      kind: 'postponed', since: '2026-08-10',
+      note: '«Hoy, primero, la vida.» Estaremos anunciando nuevas fechas y actividades.',
+      note_en: '«Today, life comes first.» We will be announcing new dates and activities.',
+      url: 'https://www.instagram.com/p/Db35wc_zR5h/',
+    };
+    selectSplashFest(c.name, `${c.city} · ${c.dates}`, 'ficma2026');
+  });
   await page.locator('.splash-enter-btn').click();
   await page.waitForSelector('.poster-card, .plist-item', { timeout: 15000 });
   const r = await page.evaluate(async () => {
