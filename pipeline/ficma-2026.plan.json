@@ -1,8 +1,25 @@
 {
- "_nota": "Los pasos re-ejecutables de FICMA desde sus OCR versionados. El enriquecimiento (TMDB/Letterboxd/title-en) fue pre-formato-intermedio y sus sidecars son históricos: no se re-corre.",
+ "_nota": "Los pasos re-ejecutables de FICMA desde sus OCR versionados. El enriquecimiento (TMDB/Letterboxd/title-en) fue pre-formato-intermedio y sus sidecars son históricos: no se re-corre.\n\nREPROGRAMADO (19–26 SEP). Los dos pasos nuevos van PRIMERO y sustituyen la parrilla de agosto: el primero acumula lo que el festival publica post a post, el segundo arma el build heredando el catálogo de lo ya publicado. Los tres pasos viejos quedan para la trazabilidad de la edición de agosto; hoy no se corren.",
  "pasos": [
-  {"cmd": "python3 pipeline/ficma-2026-parse.py",       "que": "OCR → crudo (87 págs, programación)"},
-  {"cmd": "python3 pipeline/ficma-2026-franja.py",      "que": "OCR → franja académica (12 actividades)"},
-  {"cmd": "python3 pipeline/ficma-2026-ensamblador.py", "que": "crudo + franja + enriquecido + geo → festival"}
+  {
+   "cmd": "python3 pipeline/ficma-2026-reprogramado.py",
+   "que": "web + IG post a post → funciones publicadas de la reprogramación"
+  },
+  {
+   "cmd": "python3 pipeline/ficma-2026-septiembre.py",
+   "que": "parrilla nueva + catálogo publicado + geo → build"
+  },
+  {
+   "cmd": "python3 pipeline/ficma-2026-parse.py",
+   "que": "OCR → crudo (87 págs, programación)"
+  },
+  {
+   "cmd": "python3 pipeline/ficma-2026-franja.py",
+   "que": "OCR → franja académica (12 actividades)"
+  },
+  {
+   "cmd": "python3 pipeline/ficma-2026-ensamblador.py",
+   "que": "crudo + franja + enriquecido + geo → festival"
+  }
  ]
 }

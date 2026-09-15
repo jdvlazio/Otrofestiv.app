@@ -1,0 +1,226 @@
+{
+ "_provenance": {
+  "fuente": "laficma.com (/estrenosficma17/ y /talleresficma17/) + Instagram @cinemanizales_ficma, post a post",
+  "capturado": "2026-09-15",
+  "metodo": "La web NO tiene parrilla: su menú solo ofrece ESTRENOS y TALLERES. El resto sale de los posts, que desde el 14 sep ya traen la función entera (día · hora · sede · acceso). Los pies se leyeron por embed, completos.",
+  "alcance": "9 funciones y 4 talleres publicados. El festival declara «más de 60 proyecciones»: falta la inmensa mayoría."
+ },
+ "_festival": {
+  "nombre": "FICMA — Feria Internacional de Cine de Manizales",
+  "edicion": 17,
+  "titulo_edicion": "El jardín de las cosas perdidas",
+  "ciudad": "Manizales",
+  "fechas": "19–26 de septiembre de 2026",
+  "reprogramado_desde": "10–17 de agosto de 2026, aplazado por el sismo del 10 ago",
+  "acceso": "Todas las actividades son de acceso libre (declarado en laficma.com)",
+  "web": "https://laficma.com/",
+  "ig": "https://www.instagram.com/cinemanizales_ficma/",
+  "radar": "#578"
+ },
+ "_por_que_no_se_remapea": "Comparado obra por obra contra festivals/ficma-2026.json: cambian día, hora Y sede, y hay obras nuevas. NO es un desplazamiento del calendario de agosto. El catálogo (póster, sinopsis, lbSlug de las 90 funciones) sí se reutiliza entero.",
+ "_abierto": [
+  "DOS «aperturas»: «Función apertura» (El príncipe de Nanawa, sáb 19 · 09:00) y «Función Inaugural» (El hogar fue sepultado, sáb 19 · 19:00). Preguntar cuál es cuál.",
+  "La home de laficma.com fecha El príncipe de Nanawa el 16 de septiembre; el post dice sábado 19. El 16 es miércoles y cae antes del arranque. Sin resolver.",
+  "El 11 sep la página de talleres listaba SEIS (con Franco Lolli e Isabella Vega) y el 13 devolvió cuatro. No se afirma que se cayeran: puede ser lectura incompleta. Volver a mirar esa página.",
+  "Proimágenes (ntd=1320) sigue publicando las fechas de agosto."
+ ],
+ "funciones": [
+  {
+   "titulo": "El príncipe de Nanawa",
+   "director": "Clarisa Navas",
+   "dia": "2026-09-19",
+   "hora": "09:00",
+   "sede": "Centro Cultural del Banco de la República",
+   "seccion": "Función de apertura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/reel/DdMiQSozvGr/",
+    "date": "2026-09-15"
+   },
+   "_nota": "El festival lo llama «Función apertura». La home de laficma.com lo fechó el 16 de septiembre —miércoles, y ANTES del arranque declarado—: se registra el 19, que es el que dice el post y que sí es sábado. NO montar sin volver a mirar."
+  },
+  {
+   "titulo": "Soñé su nombre",
+   "director": "Ángela Carabalí",
+   "dia": "2026-09-19",
+   "hora": "14:00",
+   "sede": "Teatro Los Fundadores – Sala Olimpia",
+   "seccion": "Estrenos Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://laficma.com/estrenosficma17/",
+    "date": "2026-09-15"
+   },
+   "_nota": "Conversatorio con su directora. Entrada libre hasta completar aforo."
+  },
+  {
+   "titulo": "Ayuno y cenizas",
+   "director": "Rodrigo Dimaté",
+   "dia": "2026-09-19",
+   "hora": "16:00",
+   "sede": "Teatro Los Fundadores – Sala Olimpia",
+   "seccion": "Estrenos Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://laficma.com/estrenosficma17/",
+    "date": "2026-09-15"
+   },
+   "_nota": "Conversatorio con su director. Entrada libre hasta completar aforo.",
+   "anio": 2026,
+   "duracion_min": 100,
+   "pais": "Colombia",
+   "sinopsis": "En medio de las montañas de Bogotá, un grupo aficionado de teatro hace ensayos y lleva a escena la más famosa de todas las obras, Edipo Rey. Sus integrantes son músicos, actores, artistas de barrio y, algunos de ellos, consumidores de bazuco. Los testimonios sobre la droga, la familia y el barrio —voces, manos y rostros, a veces distantes y a veces frágiles—, contrastan con la atmósfera de tambores y luces incandescentes de la creación teatral. En las lomas de la ciudad, Edipo Rey no es una obra antigua, es una pregunta sobre el destino, sobre la posibilidad de tomar el rumbo de la propia vida.",
+   "_sinopsis_src": "https://laficma.com/estrenosficma17/"
+  },
+  {
+   "titulo": "Que el cielo nos perdone",
+   "director": "Andrés Buitrago",
+   "dia": "2026-09-19",
+   "hora": "19:00",
+   "sede": "Casa de la Cultura de Palogrande – Calle externa",
+   "seccion": "Cortometrajes",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdREw9HDXz6/",
+    "date": "2026-09-15"
+   },
+   "_nota": "Estreno en Manizales, con conversatorio. MISMO pase que «El hogar fue sepultado»: misma sede, mismo día, misma hora — corto + largo."
+  },
+  {
+   "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "director": "Deimer Quintero Vertel",
+   "dia": "2026-09-19",
+   "hora": "19:00",
+   "sede": "Casa de la Cultura de Palogrande – Calle externa",
+   "seccion": "Función Inaugural",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdSSPXwGle2/",
+    "date": "2026-09-15"
+   },
+   "_nota": "El festival la llama «Función Inaugural», y a «El príncipe de Nanawa» «Función apertura». Son dos cosas distintas o una errata: PREGUNTAR antes de montar."
+  },
+  {
+   "titulo": "Semillas",
+   "director": "Eliana Niño",
+   "dia": "2026-09-19",
+   "hora": "18:30",
+   "sede": "Confa de la 50 – Auditorio Hernando Aristizábal Botero",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdRhWhrkWKe/",
+    "date": "2026-09-15"
+   },
+   "_nota": "Dos pases: sábado 19 y domingo 20, misma hora y sede.",
+   "anio": 2026,
+   "duracion_min": 100,
+   "pais": "Colombia",
+   "sinopsis": "Shaira, una niña llanera, sueña con participar en un festival del colegio. Pero un día su caballo desaparece. En un atardecer llanero, su abuelo le cuenta que el cielo atrapa a los animales y forma sus figuras en las nubes, y que solo cuando vuelva a llover regresarán al pueblo. Decidida, Shaira emprende la búsqueda de una semilla especial capaz de hacer llover de nuevo y traer de vuelta a su caballo, Semillas.",
+   "_sinopsis_src": "https://www.instagram.com/cinemanizales_ficma/p/DdRhWhrkWKe/"
+  },
+  {
+   "titulo": "Semillas",
+   "director": "Eliana Niño",
+   "dia": "2026-09-20",
+   "hora": "18:30",
+   "sede": "Confa de la 50 – Auditorio Hernando Aristizábal Botero",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdRhWhrkWKe/",
+    "date": "2026-09-15"
+   },
+   "_nota": "Segundo pase.",
+   "anio": 2026,
+   "duracion_min": 100,
+   "pais": "Colombia",
+   "sinopsis": "Shaira, una niña llanera, sueña con participar en un festival del colegio. Pero un día su caballo desaparece. En un atardecer llanero, su abuelo le cuenta que el cielo atrapa a los animales y forma sus figuras en las nubes, y que solo cuando vuelva a llover regresarán al pueblo. Decidida, Shaira emprende la búsqueda de una semilla especial capaz de hacer llover de nuevo y traer de vuelta a su caballo, Semillas.",
+   "_sinopsis_src": "https://www.instagram.com/cinemanizales_ficma/p/DdRhWhrkWKe/"
+  },
+  {
+   "titulo": "Manizales City",
+   "director": "Félix R. Restrepo",
+   "dia": "2026-09-20",
+   "hora": "11:30",
+   "sede": "Parque Ernesto Gutiérrez",
+   "seccion": "Cine Clásico Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/reel/DdTmOB4FdTP/",
+    "date": "2026-09-15"
+   },
+   "_nota": "Documental de 1925 restaurado por la Fundación Patrimonio Fílmico Colombiano. Va dentro del Convite Solidario de Misión Comparte, por la reconstrucción tras el sismo."
+  },
+  {
+   "titulo": "El juego de la vida",
+   "director": "Mario Andrés Ruiz Zuluaga",
+   "dia": "2026-09-22",
+   "hora": "08:00",
+   "sede": "",
+   "seccion": "Estrenos Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://laficma.com/estrenosficma17/",
+    "date": "2026-09-15"
+   },
+   "_nota": "Franja con colegios. SEDE SIN DECLARAR. Presencia del director."
+  },
+  {
+   "titulo": "Cine en Movimiento: Plano Secuencia",
+   "tallerista": "Mauricio Casilimas",
+   "dia": "2026-09-19",
+   "hora": "15:00",
+   "sede": "Secretaría de Cultura de Palogrande",
+   "tipo": "taller",
+   "acceso": "Entrada libre",
+   "_cupos": "30 cupos",
+   "_src": {
+    "url": "https://laficma.com/talleresficma17/",
+    "date": "2026-09-15"
+   }
+  },
+  {
+   "titulo": "Escribir con la cámara: del guion a la puesta en escena",
+   "tallerista": "Andrés Buitrago",
+   "dia": "2026-09-22",
+   "hora": "09:00",
+   "sede": "",
+   "tipo": "taller",
+   "acceso": "Entrada libre",
+   "_cupos": "sede sin declarar",
+   "_src": {
+    "url": "https://laficma.com/talleresficma17/",
+    "date": "2026-09-15"
+   }
+  },
+  {
+   "titulo": "Poniéndole voz a tu historia silenciada",
+   "tallerista": "Diana Arias",
+   "dia": "2026-09-23",
+   "hora": "14:00",
+   "sede": "Hall Secretaría de la Mujer y Equidad de Género",
+   "tipo": "taller",
+   "acceso": "Entrada libre",
+   "_cupos": "20 cupos",
+   "_src": {
+    "url": "https://laficma.com/talleresficma17/",
+    "date": "2026-09-15"
+   }
+  },
+  {
+   "titulo": "Animación de fotografías «de cero a cien» con IA",
+   "tallerista": "Fabián Amador Salazar",
+   "dia": "2026-09-24",
+   "hora": "17:00",
+   "sede": "Secretaría de Cultura de Palogrande",
+   "tipo": "taller",
+   "acceso": "Entrada libre",
+   "_cupos": "30 cupos",
+   "_src": {
+    "url": "https://laficma.com/talleresficma17/",
+    "date": "2026-09-15"
+   }
+  }
+ ]
+}

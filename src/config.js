@@ -639,27 +639,28 @@ export const FESTIVAL_CONFIG={
   'ficma2026': {
     name:'FICMA',fullName:'FICMA — Feria Internacional de Cine de Manizales',shortName:'FICMA',
     city:'Manizales',country:'CO',
-    dates:'10–17 AGO',dates_en:'AUG 10–17',year:2026,timezoneOffset:'-05:00',
+    dates:'19–26 SEP',dates_en:'SEP 19–26',year:2026,timezoneOffset:'-05:00',
     keyArt:'/assets/keyart/ficma2026.jpg',
-    // APLAZADO por el terremoto de Manizales. Comunicado oficial del festival
-    // el 10 ago 2026; la cita son dos párrafos VERBATIM suyos —el cierre y la
-    // única información accionable— elegidos por Juan. El EN es traducción
-    // nuestra, aprobada por él. Reversión: fechas nuevas + borrar este bloque;
-    // los datos del festival nunca se tocaron.
-    status:{
-      kind:'postponed',
-      since:'2026-08-10',
-      note:'«Hoy, primero, la vida.» Estaremos anunciando nuevas fechas y actividades.',
-      note_en:'«Today, life comes first.» We will be announcing new dates and activities.',
-      url:'https://www.instagram.com/p/Db35wc_zR5h/',
-    },
-    storageKey:'ficma2026_',festivalStartStr:'2026-08-10T00:00:00',festivalEndStr:'2026-08-17T23:59:00',
-    festivalDates:{'2026-08-10':'2026-08-10','2026-08-11':'2026-08-11','2026-08-12':'2026-08-12','2026-08-13':'2026-08-13','2026-08-14':'2026-08-14','2026-08-15':'2026-08-15','2026-08-16':'2026-08-16','2026-08-17':'2026-08-17'},
-    days:[{k:'2026-08-10',d:10,lbl:'LUN'},{k:'2026-08-11',d:11,lbl:'MAR'},{k:'2026-08-12',d:12,lbl:'MIÉ'},{k:'2026-08-13',d:13,lbl:'JUE'},{k:'2026-08-14',d:14,lbl:'VIE'},{k:'2026-08-15',d:15,lbl:'SÁB'},{k:'2026-08-16',d:16,lbl:'DOM'},{k:'2026-08-17',d:17,lbl:'LUN'}],
-    dayKeys:['2026-08-10','2026-08-11','2026-08-12','2026-08-13','2026-08-14','2026-08-15','2026-08-16','2026-08-17'],
-    dayShort:{'2026-08-10':'LUN 10','2026-08-11':'MAR 11','2026-08-12':'MIÉ 12','2026-08-13':'JUE 13','2026-08-14':'VIE 14','2026-08-15':'SÁB 15','2026-08-16':'DOM 16','2026-08-17':'LUN 17'},
-    dayShort_en:{'2026-08-10':'MON 10','2026-08-11':'TUE 11','2026-08-12':'WED 12','2026-08-13':'THU 13','2026-08-14':'FRI 14','2026-08-15':'SAT 15','2026-08-16':'SUN 16','2026-08-17':'MON 17'},
-    dayLong:{'2026-08-10':'Lunes 10 de agosto','2026-08-11':'Martes 11 de agosto','2026-08-12':'Miércoles 12 de agosto','2026-08-13':'Jueves 13 de agosto','2026-08-14':'Viernes 14 de agosto','2026-08-15':'Sábado 15 de agosto','2026-08-16':'Domingo 16 de agosto','2026-08-17':'Lunes 17 de agosto'},
+    // REPROGRAMADO. El festival se aplazó por el sismo del 10 ago y volvió del
+    // 19 al 26 de SEPTIEMBRE, confirmado por sus dos fuentes propias (la bio de
+    // @cinemanizales_ficma y laficma.com). El bloque de estado APLAZADO se
+    // retiró el 15 sep: el festival ya desmintió el aplazamiento y la banda
+    // contradecía su propio anuncio. (El nombre del campo no se escribe aquí a
+    // propósito: [festival-aplazado] lo busca por texto y un comentario que lo
+    // nombre se lee como si el bloque siguiera puesto.)
+    //
+    // La programación va INCOMPLETA a propósito. El festival declara «más de 60
+    // proyecciones» y ha publicado once; la parrilla sale post a post en su
+    // Instagram, no en su web. La de agosto NO se pudo remapear —cambian día,
+    // hora y sede—, así que lo que no está anunciado no se publica: una función
+    // en una fecha que nadie declaró es peor que una función ausente.
+    storageKey:'ficma2026_',festivalStartStr:'2026-09-19T00:00:00',festivalEndStr:'2026-09-26T23:59:00',
+    festivalDates:{'2026-09-19':'2026-09-19','2026-09-20':'2026-09-20','2026-09-21':'2026-09-21','2026-09-22':'2026-09-22','2026-09-23':'2026-09-23','2026-09-24':'2026-09-24','2026-09-25':'2026-09-25','2026-09-26':'2026-09-26'},
+    days:[{k:'2026-09-19',d:19,lbl:'SÁB'},{k:'2026-09-20',d:20,lbl:'DOM'},{k:'2026-09-21',d:21,lbl:'LUN'},{k:'2026-09-22',d:22,lbl:'MAR'},{k:'2026-09-23',d:23,lbl:'MIÉ'},{k:'2026-09-24',d:24,lbl:'JUE'},{k:'2026-09-25',d:25,lbl:'VIE'},{k:'2026-09-26',d:26,lbl:'SÁB'}],
+    dayKeys:['2026-09-19','2026-09-20','2026-09-21','2026-09-22','2026-09-23','2026-09-24','2026-09-25','2026-09-26'],
+    dayShort:{'2026-09-19':'SÁB 19','2026-09-20':'DOM 20','2026-09-21':'LUN 21','2026-09-22':'MAR 22','2026-09-23':'MIÉ 23','2026-09-24':'JUE 24','2026-09-25':'VIE 25','2026-09-26':'SÁB 26'},
+    dayShort_en:{'2026-09-19':'SAT 19','2026-09-20':'SUN 20','2026-09-21':'MON 21','2026-09-22':'TUE 22','2026-09-23':'WED 23','2026-09-24':'THU 24','2026-09-25':'FRI 25','2026-09-26':'SAT 26'},
+    dayLong:{'2026-09-19':'Sábado 19 de septiembre','2026-09-20':'Domingo 20 de septiembre','2026-09-21':'Lunes 21 de septiembre','2026-09-22':'Martes 22 de septiembre','2026-09-23':'Miércoles 23 de septiembre','2026-09-24':'Jueves 24 de septiembre','2026-09-25':'Viernes 25 de septiembre','2026-09-26':'Sábado 26 de septiembre'},
     prioLimit:4,
     // El subtítulo expande la sigla, no repite el nombre: «FICMA» no le dice
     // nada a quien llega de fuera. El lema de la edición —«El jardín de las
