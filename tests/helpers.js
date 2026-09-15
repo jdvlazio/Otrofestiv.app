@@ -99,6 +99,23 @@ async function enterFestival(page, festId, simTime, opts) {
     { timeout: 15000 }
   );
 
+  // opts.aplazado: inyecta un estado APLAZADO sobre la config en memoria, antes
+  // de cargar el festival. Existe porque las pruebas de esa regla tomaban
+  // prestado el festival que estuviera aplazado de verdad —FICMA tras el sismo—
+  // y se quedaban sin premisa en cuanto reprogramaba. Peor: solo podían correr
+  // mientras hubiera uno aplazado ahí fuera, o sea casi nunca. Con esto la regla
+  // queda vigilada siempre y el escenario es de la prueba, no del calendario.
+  if (opts && opts.aplazado) {
+    await page.evaluate((fid) => {
+      FESTIVAL_CONFIG[fid].status = {
+        kind: 'postponed', since: '2026-08-10',
+        note: '«Hoy, primero, la vida.» Estaremos anunciando nuevas fechas y actividades.',
+        note_en: '«Today, life comes first.» We will be announcing new dates and activities.',
+        url: 'https://www.instagram.com/p/Db35wc_zR5h/',
+      };
+    }, festId);
+  }
+
   // Selección determinista del festival objetivo (independiente de la preselección
   // del riel: con 1 solo festival en curso viene preseleccionado, con 0/2+ no).
   await selectFestival(page, festId);

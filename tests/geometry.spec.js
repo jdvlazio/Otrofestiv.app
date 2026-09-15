@@ -208,9 +208,16 @@ const _detectorIconos = () => {
 };
 
 test('G03 — ningún icono pierde su proporción por el flex del contenedor', async ({ page }) => {
-  // FICMA a propósito: tiene las sedes más largas del catálogo, que es lo que
-  // aprieta. Con nombres cortos el defecto no aparece y el test pasaría en vano.
-  await enterFestival(page, 'ficma2026', '2026-08-09T08:00:00-05:00');
+  // El festival se elige por el caso PEOR: nombres de sede largos, que es lo que
+  // aprieta el flex. Con nombres cortos el defecto no aparece y el test pasaría
+  // en vano.
+  //
+  // Era FICMA, y lo era con razón: tenía 31 sedes y las más largas del catálogo.
+  // Tras aplazarse por el sismo reprogramó con 6, y al medirlo (15 sep 2026)
+  // quedó TERCERO: FICDEH tiene una sede de 72 caracteres contra 42, y 114
+  // sedes contra 6. La prueba seguía en verde, pero ya no sobre el caso peor —
+  // que es la forma silenciosa de dejar de vigilar. Se re-apunta a FICDEH.
+  await enterFestival(page, 'ficdeh2026', '2026-08-15T11:00:00-05:00');
   const rotos = [];
   // DOS muestras, y solo cuenta lo que aparece en las dos. Los sheets entran con
   // animación y una medición a mitad de camino inventa proporciones que no existen
