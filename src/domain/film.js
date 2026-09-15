@@ -357,9 +357,13 @@ export function sealSharedSlots(films){
     // hasta las 19:32 con un bloque que termina 19:00, y el planificador
     // bloqueaba esa media hora de más (auditoría B-2, 2 sep 2026).
     // El evento es contenedor SOLO si es tan largo como lo que contiene: un
-    // taller de 120 con un largo de 178 al lado (FICMA, Expoferias, sin sala) no
-    // contiene nada — ahí se conserva la suma de siempre, que es lo que hoy hace
-    // y que ese dato pide decidir aparte ([slots-sin-decidir]).
+    // taller de 120 con un largo de 178 al lado no contiene nada — ahí se
+    // conserva la suma de siempre, que es lo que hoy hace y que ese dato pide
+    // decidir aparte ([slots-sin-decidir]).
+    // El ejemplo era FICMA (15 AGO 17:00, Expoferias, sin sala); ese bloque ya
+    // no existe —el festival se aplazó por el sismo y reprogramó a septiembre—,
+    // así que no se busque. Hoy la rama la cubre QAFF, y el test la comprueba
+    // con un barrido del corpus entero en vez de con un bloque elegido a mano.
     const _obras=g.filter(f=>f.type!=='event').reduce((a,f)=>a+parseDur(f.duration),0);
     const _ev=g.filter(f=>f.type==='event').reduce((a,f)=>Math.max(a,parseDur(f.duration)),0);
     const base=(_ev&&_ev>=_obras)?_ev:g.reduce((a,f)=>a+parseDur(f.duration),0);

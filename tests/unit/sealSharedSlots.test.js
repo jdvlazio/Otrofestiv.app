@@ -7,10 +7,11 @@
 // hasta las 19:32 con un bloque que termina 19:00, y el planificador bloqueaba
 // esa media hora de más (auditoría B-2, 2 sep 2026).
 //
-// Se prueba sobre los JSON reales, no sobre fixtures: son los cinco bloques de
-// FICDEH, el de FICMA que NO debe cambiar (taller de 120 + largo de 178 en una
-// feria sin sala: el evento no contiene nada, se conserva la suma) y un bloque
-// de cortos de FINCA, que es la doctrina original intacta.
+// Se prueba sobre los JSON reales, no sobre fixtures: los cinco bloques de
+// FICDEH, un bloque de cortos de FINCA (la doctrina original intacta) y un
+// BARRIDO de todo el corpus para las dos ramas de la regla. El barrido sustituye
+// a un bloque de FICMA elegido a mano que desapareció cuando el festival
+// reprogramó — ver la nota en el propio test.
 const test = require('node:test');
 const assert = require('node:assert');
 const fs = require('fs');
@@ -52,11 +53,42 @@ test('FICDEH: los cinco bloques mixtos, todos a la duración de su charla', () =
   }
 });
 
-test('FICMA: un taller de 120 junto a un largo de 178 NO es contenedor — se conserva la suma', () => {
-  const films = cargar('ficma-2026.json');
-  const g = bloque(films, '2026-08-15', '17:00', /Expoferias/);
-  assert.strictEqual(g.length, 2);
-  for (const f of g) assert.strictEqual(f._slotDur, 298, 'el evento es más corto que la obra: no contiene, se suma como siempre');
+// La rama «el evento NO contiene» se probaba con UN bloque de FICMA elegido a
+// mano (15 AGO 17:00, Expoferias). FICMA se aplazó por el sismo, reprogramó a
+// septiembre con otra parrilla y ese bloque dejó de existir: el test se quedó
+// sin premisa y falló por una razón que no tenía nada que ver con la regla.
+//
+// Se cambia por un BARRIDO de todo el corpus. Es más fuerte que el caso
+// elegido —comprueba las dos ramas en cada bloque mixto que exista, no en uno—
+// y no se rompe cuando un festival reprograma. Y cuenta cuántos casos vio de
+// cada rama: un barrido que no encuentra nada pasaría en verde sin haber
+// probado nada, así que exige al menos uno de cada lado.
+test('el evento es contenedor SOLO si dura lo que las obras — en todo el corpus', () => {
+  const dir = path.join(ROOT, 'festivals');
+  let contiene = 0, suma = 0;
+  for (const nombre of fs.readdirSync(dir).filter(x => x.endsWith('.json'))) {
+    const d = JSON.parse(fs.readFileSync(path.join(dir, nombre), 'utf8'));
+    if (!d.sharedSlotIsOneScreening) continue;
+    const films = cargar(nombre);
+    const grupos = {};
+    films.forEach(f => { if (f._slotKey) (grupos[f._slotKey] ||= []).push(f); });
+    for (const g of Object.values(grupos)) {
+      if (!(g.some(f => f.type === 'event') && g.some(f => f.type !== 'event'))) continue;
+      const obras = g.filter(f => f.type !== 'event').reduce((a, f) => a + prep.parseDur(f.duration), 0);
+      const ev = g.filter(f => f.type === 'event').reduce((a, f) => Math.max(a, prep.parseDur(f.duration)), 0);
+      const total = g.reduce((a, f) => a + prep.parseDur(f.duration), 0);
+      const donde = `${nombre} ${g[0].day} ${g[0].time}`;
+      if (ev >= obras) {
+        contiene++;
+        for (const f of g) assert.strictEqual(f._slotDur, ev, `${donde}: el evento alcanza a contener, el bloque dura lo que él`);
+      } else {
+        suma++;
+        for (const f of g) assert.strictEqual(f._slotDur, total, `${donde}: el evento es más corto que las obras, no contiene: se suma`);
+      }
+    }
+  }
+  assert.ok(contiene > 0, 'el corpus tiene que traer algún bloque donde el evento SÍ contiene');
+  assert.ok(suma > 0, 'y alguno donde NO — si no, esta prueba no está probando la segunda rama');
 });
 
 test('FINCA: un bloque de solo obras sigue siendo la suma (doctrina original intacta)', () => {
