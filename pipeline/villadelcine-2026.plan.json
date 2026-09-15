@@ -1,0 +1,6 @@
+{
+ "_nota": "PRE-ONBOARDING. El 12° Festival Villa del Cine (Villa de Leyva, 23–26 sep 2026) publicó su Selección Oficial categoría por categoría en Instagram y NO ha publicado una sola función: ni día, ni hora, ni sede. Por eso acá no hay crudo —el formato intermedio exige los tres y no se inventan— sino un CATÁLOGO. Cuando salga la parrilla, este plan crece con el paso que la arma.\n\nNO HAY PASO DE ENRIQUECIMIENTO, y el motivo es del dato: el festival escribe título y dirección, pero ni año ni duración, y el candado de enriquecer.py necesita uno de los dos además del director. Las láminas tampoco los traen (se miraron: son fotogramas). Es lo primero que hay que pedirle al festival.",
+ "pasos": [
+  {"cmd": "python3 pipeline/villadelcine-2026-catalogo.py", "que": "los 9 reels de Selección Oficial → catálogo (43 cortos)"}
+ ]
+}

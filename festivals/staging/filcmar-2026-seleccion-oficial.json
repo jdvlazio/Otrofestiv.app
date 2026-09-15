@@ -1,0 +1,377 @@
+{
+ "_provenance": {
+  "fuente": "Instagram del festival (@filcmar) — los dos carruseles de Selección Oficial",
+  "capturado": "2026-09-15",
+  "metodo": "LECTURA DE LÁMINA, una por una, a resolución completa. El texto alternativo de Instagram vino VACÍO en las 13 láminas, así que la doble lectura de Jardín no era posible: solo hay lectura visual. El pie no lista títulos («desliza para conocer la lista completa»).",
+  "alcance": "Las dos competencias publicadas. NO hay funciones: ni día, ni hora, ni sede. El festival es del 9 al 13 de octubre."
+ },
+ "_festival": {
+  "nombre": "Festival de Cine de Marinilla",
+  "sigla": "FILCMAR",
+  "edicion": 8,
+  "ciudad": "Marinilla, Antioquia",
+  "fechas": "9–13 de octubre de 2026",
+  "organiza": "Cinismo y Algo Más (@cinismoyalgomas) y Corarte Marinilla",
+  "ig": "https://www.instagram.com/filcmar/",
+  "filmfreeway": "https://filmfreeway.com/FestivaldeCinedeMarinilla-FILCMAR",
+  "radar": "SIN ISSUE — descubierto el 15 sep 2026, no estaba en el radar"
+ },
+ "_trampas": [
+  "LA DURACIÓN DE LA COMPETENCIA UNIVERSITARIA VIENE EN mm:ss, no en minutos: «The Raules 1:19 min» es UN minuto con 19 segundos, no una hora y 19. Leerla como h:mm convierte un corto de un minuto en un largometraje. Se guarda `duracion_min` redondeado y `duracion_lamina` con la cadena original al lado.",
+  "En la Competencia Universitaria la lámina pone la UNIVERSIDAD donde la Latinoamericana pone el PAÍS. No es el país de la obra: va en su propio campo.",
+  "El texto alternativo de Instagram vino vacío en las 13 láminas: acá no hay red de seguridad por OCR, solo la lectura visual. Si algún título se relee y no coincide, manda una segunda lectura de la lámina."
+ ],
+ "_herencia": "Cinco obras ya están enriquecidas en otros festivales nuestros: Andariega (siembrafest-2026), La corazonada y Para no volver (cinemancia-2026), Chicha la chicharra (siembrafest-2026). Verificar por director antes de heredar.",
+ "_categorias": {
+  "Competencia Latinoamericana": {
+   "post": "https://www.instagram.com/filcmar/p/DdSWXZoDT3a/",
+   "publicado": "2026-09-14",
+   "obras": 11
+  },
+  "6ª Competencia Universitaria": {
+   "post": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+   "publicado": "2026-09-06",
+   "obras": 15
+  }
+ },
+ "obras": [
+  {
+   "titulo": "Lo demás es ruido",
+   "director": "Nicolás Pereda",
+   "pais": "México",
+   "anio": 2026,
+   "duracion_min": 70,
+   "duracion_lamina": "70 min",
+   "seccion": "Competencia Latinoamericana",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdSWXZoDT3a/",
+    "date": "2026-09-14"
+   }
+  },
+  {
+   "titulo": "La corazonada",
+   "director": "Diego Soto",
+   "pais": "Chile",
+   "anio": 2025,
+   "duracion_min": 78,
+   "duracion_lamina": "78 min",
+   "seccion": "Competencia Latinoamericana",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdSWXZoDT3a/",
+    "date": "2026-09-14"
+   }
+  },
+  {
+   "titulo": "Andariega",
+   "director": "Raúl Soto",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 94,
+   "duracion_lamina": "94 min",
+   "seccion": "Competencia Latinoamericana",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdSWXZoDT3a/",
+    "date": "2026-09-14"
+   }
+  },
+  {
+   "titulo": "El vuelo del moscardón",
+   "director": "Emanuel Di Cunto, Rodrigo Medrano y Pablo Bochard",
+   "pais": "Argentina",
+   "anio": 2025,
+   "duracion_min": 105,
+   "duracion_lamina": "105 min",
+   "seccion": "Competencia Latinoamericana",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdSWXZoDT3a/",
+    "date": "2026-09-14"
+   }
+  },
+  {
+   "titulo": "Testimonio",
+   "director": "Leonardo Amaral, Roberto Cotta",
+   "pais": "Brasil",
+   "anio": 2026,
+   "duracion_min": 14,
+   "duracion_lamina": "14 min",
+   "seccion": "Competencia Latinoamericana",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdSWXZoDT3a/",
+    "date": "2026-09-14"
+   }
+  },
+  {
+   "titulo": "Una vez un cuerpo",
+   "director": "María Cristina Pérez",
+   "pais": "Colombia, Estados Unidos",
+   "anio": 2025,
+   "duracion_min": 10,
+   "duracion_lamina": "10 min",
+   "seccion": "Competencia Latinoamericana",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdSWXZoDT3a/",
+    "date": "2026-09-14"
+   }
+  },
+  {
+   "titulo": "Pude ver un fantasma desde mi ventana",
+   "director": "Mayro Romero",
+   "pais": "Ecuador",
+   "anio": 2025,
+   "duracion_min": 9,
+   "duracion_lamina": "9 min",
+   "seccion": "Competencia Latinoamericana",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdSWXZoDT3a/",
+    "date": "2026-09-14"
+   }
+  },
+  {
+   "titulo": "Casi 30",
+   "director": "Mila Aquilia, Bianca Oliveti",
+   "pais": "Argentina",
+   "anio": 2026,
+   "duracion_min": 14,
+   "duracion_lamina": "14 min",
+   "seccion": "Competencia Latinoamericana",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdSWXZoDT3a/",
+    "date": "2026-09-14"
+   }
+  },
+  {
+   "titulo": "Persépio",
+   "director": "Felipe Bibian",
+   "pais": "Brasil",
+   "anio": 2025,
+   "duracion_min": 18,
+   "duracion_lamina": "18 min",
+   "seccion": "Competencia Latinoamericana",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdSWXZoDT3a/",
+    "date": "2026-09-14"
+   }
+  },
+  {
+   "titulo": "Lo que queda del mar",
+   "director": "Camila Adaro Liloff",
+   "pais": "Argentina",
+   "anio": 2026,
+   "duracion_min": 5,
+   "duracion_lamina": "5 min",
+   "seccion": "Competencia Latinoamericana",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdSWXZoDT3a/",
+    "date": "2026-09-14"
+   }
+  },
+  {
+   "titulo": "El día interrumpido",
+   "director": "María Villar",
+   "pais": "Argentina",
+   "anio": 2025,
+   "duracion_min": 13,
+   "duracion_lamina": "13 min",
+   "seccion": "Competencia Latinoamericana",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdSWXZoDT3a/",
+    "date": "2026-09-14"
+   }
+  },
+  {
+   "titulo": "The Raules",
+   "director": "Hugo Chamorro",
+   "universidad": "Politécnico Colombiano Jaime Isaza Cadavid",
+   "anio": 2025,
+   "duracion_min": 1,
+   "duracion_lamina": "1:19 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Desarraigo",
+   "director": "Nicolas Patiño Hortua, Andrés Santiago Cely Orjuela",
+   "universidad": "Politécnico Colombiano Jaime Isaza Cadavid",
+   "anio": 2026,
+   "duracion_min": 15,
+   "duracion_lamina": "15 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Para no volver",
+   "director": "Tania Galvis",
+   "universidad": "Universidad del Magdalena",
+   "anio": 2026,
+   "duracion_min": 10,
+   "duracion_lamina": "10:16 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
+   "director": "Juan David Rodriguez",
+   "universidad": "Universidad Central de Bogotá",
+   "anio": 2025,
+   "duracion_min": 13,
+   "duracion_lamina": "13 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Agachar el rostro",
+   "director": "Camilo Medina Noy",
+   "universidad": "Pontificia Universidad Javeriana",
+   "anio": 2025,
+   "duracion_min": 13,
+   "duracion_lamina": "12:36 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "El espejo de la vida",
+   "director": "Simón Sánchez Plazas",
+   "universidad": "Universidad Jorge Tadeo Lozano",
+   "anio": 2025,
+   "duracion_min": 9,
+   "duracion_lamina": "9:17 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "La danza del caos",
+   "director": "Valeria Preciado Romaña",
+   "universidad": "Universidad de los Andes",
+   "anio": 2025,
+   "duracion_min": 6,
+   "duracion_lamina": "5:35 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "La pecera",
+   "director": "Angela Tatiana Fonseca Galvez",
+   "universidad": "Academia de Artes de China",
+   "anio": 2025,
+   "duracion_min": 8,
+   "duracion_lamina": "7:42 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Reverb",
+   "director": "María Elizabeth López",
+   "universidad": "Universidad Nacional de Colombia",
+   "anio": 2025,
+   "duracion_min": 2,
+   "duracion_lamina": "1:55 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Chicha la chicharra",
+   "director": "Sofia Alejandra Uzcátegui",
+   "universidad": "Universidad Autónoma de Bucaramanga",
+   "anio": 2025,
+   "duracion_min": 10,
+   "duracion_lamina": "10 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "HUSH",
+   "director": "Santiago Franco",
+   "universidad": "Universidad Jorge Tadeo Lozano",
+   "anio": 2025,
+   "duracion_min": 14,
+   "duracion_lamina": "13:35 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Sol de niebla",
+   "director": "Maria José Ibarra, Florentino Vargas",
+   "universidad": "Universidad Nacional de Colombia",
+   "anio": 2026,
+   "duracion_min": 6,
+   "duracion_lamina": "5:44 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Pudor ante el asalto de los ojos furtivos",
+   "director": "Laura María Rodríguez",
+   "universidad": "Pontificia Universidad Javeriana",
+   "anio": 2025,
+   "duracion_min": 9,
+   "duracion_lamina": "8:35 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "El ocaso de los dioses",
+   "director": "Juan Pablo Rendón",
+   "universidad": "Instituto Tecnológico Metropolitano",
+   "anio": 2025,
+   "duracion_min": 19,
+   "duracion_lamina": "19:05 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Somnolítico",
+   "director": "Abril Natalia Velásquez",
+   "universidad": "Universidad Nacional de Colombia",
+   "anio": 2026,
+   "duracion_min": 11,
+   "duracion_lamina": "11 min",
+   "seccion": "6ª Competencia Universitaria",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
+    "date": "2026-09-06"
+   }
+  }
+ ]
+}
