@@ -1,0 +1,503 @@
+{
+ "_provenance": {
+  "fuente": "Instagram del festival (@festivalvilladelcine) — los nueve reels de Selección Oficial, uno por categoría",
+  "capturado": "2026-09-15",
+  "metodo": "TRANSCRIPCIÓN DEL PIE, no lectura de lámina: este festival escribe «🎬 Título – Dir. Nombre» en el texto del post. El pie se leyó por el embed, entero, sin truncar. No hizo falta la doble lectura que sí exigió Jardín.",
+  "alcance": "SOLO la Selección Oficial en competencia. NO hay una sola función con día, hora ni sede: a 8 días del arranque el festival no ha publicado parrilla."
+ },
+ "_festival": {
+  "nombre": "Festival Villa del Cine",
+  "edicion": 12,
+  "ciudad": "Villa de Leyva, Boyacá",
+  "fechas": "23–26 de septiembre de 2026",
+  "concepto": "Caminos del Tiempo",
+  "web": "https://villadelcine.com/",
+  "ig": "https://www.instagram.com/festivalvilladelcine/",
+  "radar": "#570"
+ },
+ "_trampas": [
+  "La página «Selección Oficial 2026» de villadelcine.com apunta a /festival-2024-2/ y su CONTENIDO es de 2024: encabezado nuevo sobre documento viejo. No sirve como fuente y lista categorías que no son las de esta edición.",
+  "El radar contó 7 categorías el 13 sep y son 8 a esa fecha: se le pasó «Mejor VR» (3 obras, 11 sep). Al contar categorías de este festival hay que enumerar los reels, no fiarse del acumulado anterior.",
+  "Hay categorías que NO son cine proyectable en sala de la manera habitual: «Mejor VR» (3 obras) y «Mejor Cortometraje Vertical» (5). Antes de montar hay que preguntar cómo se exhiben.",
+  "CLAQUETAZO es un laboratorio de creación (3 equipos, filminutos), no una sección de la selección: no entra al catálogo."
+ ],
+ "_categorias": {
+  "Mejor Cortometraje YoungFilm": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/Dc9eZuGzzNZ/",
+   "publicado": "2026-09-06",
+   "obras": 5
+  },
+  "Mejor Cortometraje Escolar": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/Dc_mqC_qsDc/",
+   "publicado": "2026-09-07",
+   "obras": 5
+  },
+  "Mejor Cortometraje IA": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdCfLeDBJeP/",
+   "publicado": "2026-09-08",
+   "obras": 5
+  },
+  "Mejor Cortometraje con Celular": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdEvchbu11S/",
+   "publicado": "2026-09-09",
+   "obras": 5
+  },
+  "Mejor Cortometraje Vertical": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdH9DfzO7_M/",
+   "publicado": "2026-09-10",
+   "obras": 5
+  },
+  "Mejor VR": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdJ5KDGq9Fn/",
+   "publicado": "2026-09-11",
+   "obras": 3
+  },
+  "Mejor Videoclip": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdMnxg-pWMZ/",
+   "publicado": "2026-09-12",
+   "obras": 5
+  },
+  "Mejor Cortometraje Apasionado": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdPCDPLqNx8/",
+   "publicado": "2026-09-13",
+   "obras": 5
+  },
+  "International Universities": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdRpOgSqBkz/",
+   "publicado": "2026-09-15",
+   "obras": 5
+  }
+ },
+ "obras": [
+  {
+   "titulo": "Withch and Frog",
+   "director": "Anastasia Provotorova",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje YoungFilm",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/Dc9eZuGzzNZ/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Tiro Libre",
+   "director": "Inti Deus",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje YoungFilm",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/Dc9eZuGzzNZ/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Sun Coffee",
+   "director": "Zoé Filloux",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje YoungFilm",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/Dc9eZuGzzNZ/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "La Silla",
+   "director": "Clara García",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje YoungFilm",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/Dc9eZuGzzNZ/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Far",
+   "director": "We Are Central Asia Collective",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje YoungFilm",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/Dc9eZuGzzNZ/",
+    "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "Sua y Sie: Guardianes de la vida",
+   "director": "Johanna Cortés",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Escolar",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/Dc_mqC_qsDc/",
+    "date": "2026-09-07"
+   }
+  },
+  {
+   "titulo": "Solo",
+   "director": "Agustina Lecaros",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Escolar",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/Dc_mqC_qsDc/",
+    "date": "2026-09-07"
+   }
+  },
+  {
+   "titulo": "Manos Rojas",
+   "director": "Julián Monroy",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Escolar",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/Dc_mqC_qsDc/",
+    "date": "2026-09-07"
+   }
+  },
+  {
+   "titulo": "La Presencia de Blanco",
+   "director": "Néstor Javier Serpa",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Escolar",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/Dc_mqC_qsDc/",
+    "date": "2026-09-07"
+   }
+  },
+  {
+   "titulo": "In Between",
+   "director": "Carlos Andrés Paniagua",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Escolar",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/Dc_mqC_qsDc/",
+    "date": "2026-09-07"
+   }
+  },
+  {
+   "titulo": "Prompt Zero",
+   "director": "Tomás Etter Gómez",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje IA",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdCfLeDBJeP/",
+    "date": "2026-09-08"
+   }
+  },
+  {
+   "titulo": "Catatumbo: House of Thunder, Memory, and Dignity",
+   "director": "Jhonattan Sarmiento",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje IA",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdCfLeDBJeP/",
+    "date": "2026-09-08"
+   }
+  },
+  {
+   "titulo": "Lens",
+   "director": "Eduardo Rodriguez",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje IA",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdCfLeDBJeP/",
+    "date": "2026-09-08"
+   }
+  },
+  {
+   "titulo": "They Call It Sausage",
+   "director": "Timm Osterhold",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje IA",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdCfLeDBJeP/",
+    "date": "2026-09-08"
+   }
+  },
+  {
+   "titulo": "Life is a Chessboard; Every Move is Final",
+   "director": "Wang Zhi-Zhong",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje IA",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdCfLeDBJeP/",
+    "date": "2026-09-08"
+   }
+  },
+  {
+   "titulo": "No se fía, ni aunque lloren",
+   "director": "Natalia Hernández Sánchez",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje con Celular",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdEvchbu11S/",
+    "date": "2026-09-09"
+   }
+  },
+  {
+   "titulo": "La Última Historia",
+   "director": "Eberto Manotas y Mauro Andrade",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje con Celular",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdEvchbu11S/",
+    "date": "2026-09-09"
+   }
+  },
+  {
+   "titulo": "A body without a horse?",
+   "director": "Lara Fuke",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje con Celular",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdEvchbu11S/",
+    "date": "2026-09-09"
+   }
+  },
+  {
+   "titulo": "Maleza",
+   "director": "Nicolle Estrada Díaz y Marcela Palacio Montoya",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje con Celular",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdEvchbu11S/",
+    "date": "2026-09-09"
+   }
+  },
+  {
+   "titulo": "Ventajas y desventaja de soñar despierto",
+   "director": "Lorena López",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje con Celular",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdEvchbu11S/",
+    "date": "2026-09-09"
+   }
+  },
+  {
+   "titulo": "Ánima de Marea",
+   "director": "Laury T. Herrera",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Vertical",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdH9DfzO7_M/",
+    "date": "2026-09-10"
+   }
+  },
+  {
+   "titulo": "Nahuales",
+   "director": "Alejandro Cervantes",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Vertical",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdH9DfzO7_M/",
+    "date": "2026-09-10"
+   }
+  },
+  {
+   "titulo": "Behind the Door",
+   "director": "Leonardo Valenti",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Vertical",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdH9DfzO7_M/",
+    "date": "2026-09-10"
+   }
+  },
+  {
+   "titulo": "4 Minutes",
+   "director": "Rogerio Troiani",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Vertical",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdH9DfzO7_M/",
+    "date": "2026-09-10"
+   }
+  },
+  {
+   "titulo": "Shorts",
+   "director": "Daniel Baena Pacheco",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Vertical",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdH9DfzO7_M/",
+    "date": "2026-09-10"
+   }
+  },
+  {
+   "titulo": "Floppy the Robot – El último contacto",
+   "director": "Jacobo Rendón",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor VR",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdJ5KDGq9Fn/",
+    "date": "2026-09-11"
+   }
+  },
+  {
+   "titulo": "Human",
+   "director": "Debora Bergamini",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor VR",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdJ5KDGq9Fn/",
+    "date": "2026-09-11"
+   }
+  },
+  {
+   "titulo": "Protecting Our Territory",
+   "director": "Christopher Boulton",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor VR",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdJ5KDGq9Fn/",
+    "date": "2026-09-11"
+   }
+  },
+  {
+   "titulo": "Después de tanto amor",
+   "director": "Mercedes Oviedo",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Videoclip",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdMnxg-pWMZ/",
+    "date": "2026-09-12"
+   }
+  },
+  {
+   "titulo": "Mucho gusto",
+   "director": "Cintia Obando",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Videoclip",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdMnxg-pWMZ/",
+    "date": "2026-09-12"
+   }
+  },
+  {
+   "titulo": "A pesar de mí",
+   "director": "Thomas Mejía Lozano",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Videoclip",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdMnxg-pWMZ/",
+    "date": "2026-09-12"
+   }
+  },
+  {
+   "titulo": "Benditos los viejos",
+   "director": "Camilo Duque Zuluaga y Santiago Rubio López",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Videoclip",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdMnxg-pWMZ/",
+    "date": "2026-09-12"
+   }
+  },
+  {
+   "titulo": "Aguapanela",
+   "director": "Juan José Narváez",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Videoclip",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdMnxg-pWMZ/",
+    "date": "2026-09-12"
+   }
+  },
+  {
+   "titulo": "Vía Crucis",
+   "director": "Juan Lucas Neira",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Apasionado",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdPCDPLqNx8/",
+    "date": "2026-09-13"
+   }
+  },
+  {
+   "titulo": "1 paseo por la ciudad",
+   "director": "Sara Coello Coello y Alejandro Acuña Sevilla",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Apasionado",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdPCDPLqNx8/",
+    "date": "2026-09-13"
+   }
+  },
+  {
+   "titulo": "La Sombrilla de Mamá",
+   "director": "Mateo Forero",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Apasionado",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdPCDPLqNx8/",
+    "date": "2026-09-13"
+   }
+  },
+  {
+   "titulo": "Grief",
+   "director": "Nicolas Patiño Hortua y Andrés Santiago Cely Orjuela",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Apasionado",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdPCDPLqNx8/",
+    "date": "2026-09-13"
+   }
+  },
+  {
+   "titulo": "Lost Fragments of a Seizure",
+   "director": "Michael Martinez",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Cortometraje Apasionado",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdPCDPLqNx8/",
+    "date": "2026-09-13"
+   }
+  },
+  {
+   "titulo": "Beyond the End",
+   "director": "Sara Sangiorgio",
+   "seccion": "Selección Oficial",
+   "categoria": "International Universities",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdRpOgSqBkz/",
+    "date": "2026-09-15"
+   }
+  },
+  {
+   "titulo": "I Don’t Know What to Do",
+   "director": "Akshita Tyagi, Leyla Belarbi y Lia Macruz",
+   "seccion": "Selección Oficial",
+   "categoria": "International Universities",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdRpOgSqBkz/",
+    "date": "2026-09-15"
+   }
+  },
+  {
+   "titulo": "Final Act",
+   "director": "Babi Astolfi y Lisa Soares",
+   "seccion": "Selección Oficial",
+   "categoria": "International Universities",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdRpOgSqBkz/",
+    "date": "2026-09-15"
+   }
+  },
+  {
+   "titulo": "TV Entreaberta",
+   "director": "Mateus Compart",
+   "seccion": "Selección Oficial",
+   "categoria": "International Universities",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdRpOgSqBkz/",
+    "date": "2026-09-15"
+   }
+  },
+  {
+   "titulo": "Memorias del Alba",
+   "director": "Aldair Acosta",
+   "seccion": "Selección Oficial",
+   "categoria": "International Universities",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdRpOgSqBkz/",
+    "date": "2026-09-15"
+   }
+  }
+ ]
+}
