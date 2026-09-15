@@ -341,3 +341,56 @@ test('G04 — el aviso está arriba y en la misma posición en grilla y en lista
     expect(r.enDOM, `${sel}: el DOM no coincide con getActiveNotices`).toBe(esperado);
   }
 });
+
+// ── G05 — la variable sticky SIGUE al chrome, y nunca deja el encabezado por debajo del borde
+// Captura de Juan en QAFF (15 sep 2026): el «10:00» pegajoso flotaba ~10px por
+// debajo de la banda de TRASLADADO y por esa franja pasaban los pósters. Causa:
+// --sticky-top-lista se fijaba en momentos elegidos a mano y todo lo que cambia
+// la altura del chrome FUERA de esos momentos —la webfont que llega tarde y
+// re-envuelve la banda, la banda insertada después de medir, el cambio de idioma
+// que alarga su nota— la dejaba vieja. Medido en WebKit: 225 con el chrome en 261
+// durante ~2 s tras entrar. El CSS del sticky único ya nombraba la clase de fallo.
+//
+// Se afirma la PROPIEDAD, no un disparador: se cambia la altura del chrome por un
+// camino que ninguna llamada a mano cubre (un elemento temporal dentro de
+// #hdr-programa), y la variable tiene que seguirlo al crecer Y al encoger — el
+// encoger es exactamente la captura de Juan. Y en todo momento el encabezado
+// pegajoso queda pegado al borde o medio píxel debajo de él, nunca flotando: el
+// Math.ceil de antes lo dejaba 0,95px por encima, y ese lado es el que se ve.
+test('G05 — la variable sticky sigue al chrome al crecer y al encoger, sin dejar franja', async ({ page }) => {
+  await enterFestival(page, 'qaff2026', '2026-09-15T10:00:00-05:00'); // QAFF: trae la banda de TRASLADADO
+  await page.waitForSelector('.plist-time-hdr', { timeout: 8000 });
+  await page.waitForTimeout(1200);
+  const medir = () => page.evaluate(async () => {
+    await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+    const tb = document.querySelector('.topbar').getBoundingClientRect();
+    const v = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-top-lista'));
+    // el encabezado pegajeado: el primero cuyo top esté a la altura del borde del chrome
+    const hdr = [...document.querySelectorAll('.plist-time-hdr')].map(e => e.getBoundingClientRect().top).filter(t => t >= tb.bottom - 2 && t < tb.bottom + 120).sort((a, b) => a - b)[0];
+    return { chrome: +tb.height.toFixed(2), variable: +v.toFixed(2), hdrTop: hdr == null ? null : +hdr.toFixed(2), franja: hdr == null ? null : +(hdr - tb.bottom).toFixed(2) };
+  });
+  await page.evaluate(() => window.scrollTo(0, 500)); await page.waitForTimeout(400);
+  const base = await medir();
+  expect(base.hdrTop, 'hay un encabezado de hora pegado al chrome').not.toBeNull();
+  expect(Math.abs(base.variable - base.chrome), `en reposo la variable mide el chrome (${JSON.stringify(base)})`).toBeLessThanOrEqual(0.5);
+  expect(base.franja, `en reposo el encabezado no flota por debajo del borde (${JSON.stringify(base)})`).toBeLessThanOrEqual(0);
+  // CRECE el chrome por un camino sin llamada a mano (como la banda al re-envolver)
+  await page.evaluate(() => { const d = document.createElement('div'); d.id = 'g05-extra'; d.style.cssText = 'height:40px'; document.getElementById('hdr-programa').appendChild(d); });
+  await page.waitForTimeout(300);
+  const crecido = await medir();
+  expect(crecido.chrome - base.chrome, 'el chrome creció 40px').toBeGreaterThanOrEqual(39);
+  expect(Math.abs(crecido.variable - crecido.chrome), `al crecer, la variable sigue al chrome (${JSON.stringify(crecido)})`).toBeLessThanOrEqual(0.5);
+  // Una medición A MANO con el chrome alto — así ocurre en la vida real: la banda
+  // se pinta con la fuente de respaldo (más alta), una de las llamadas sueltas la
+  // mide, y DESPUÉS llega la webfont y la banda encoge. Se dispara por `resize`,
+  // que es uno de esos sitios a mano. Con el observador es redundante; sin él, es
+  // lo que deja la variable alta.
+  await page.evaluate(() => window.dispatchEvent(new Event('resize')));
+  await page.waitForTimeout(200);
+  // ENCOGE — la captura de Juan: el chrome baja y la variable vieja dejaría la franja
+  await page.evaluate(() => document.getElementById('g05-extra').remove());
+  await page.waitForTimeout(300);
+  const encogido = await medir();
+  expect(Math.abs(encogido.variable - encogido.chrome), `al encoger, la variable sigue al chrome (${JSON.stringify(encogido)})`).toBeLessThanOrEqual(0.5);
+  expect(encogido.franja, `tras encoger no queda franja entre el chrome y el encabezado (${JSON.stringify(encogido)})`).toBeLessThanOrEqual(0);
+});

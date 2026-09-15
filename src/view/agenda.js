@@ -2139,7 +2139,11 @@ export function _fixStickyOffset(){
   const tb=document.querySelector('.topbar');
   if(!tb) return;
   const isMobile=window.innerWidth<768;
-  const tbH=Math.ceil(tb.getBoundingClientRect().height)||(isMobile?80:86);
+  // Sin Math.ceil (15 sep 2026): redondear hacia ARRIBA dejaba la variable por
+  // encima del borde real del chrome (medido: 261 contra 260.95) y ese lado es el
+  // que se ve — una costura por donde asoma el contenido. Si hay que errar, que
+  // sea hacia adentro: un encabezado medio píxel BAJO el chrome no se nota.
+  const tbH=tb.getBoundingClientRect().height||(isMobile?80:86);
   const navH=44;
   const modeH=38;
   const r=document.documentElement.style;
