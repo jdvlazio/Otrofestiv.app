@@ -58,7 +58,7 @@ T = [
   '2026-09-22', '09:00', '', 'sede sin declarar'),
  ('Poniéndole voz a tu historia silenciada', 'Diana Arias', '2026-09-23', '14:00',
   'Hall Secretaría de la Mujer y Equidad de Género', '20 cupos'),
- ('Animación de fotografías «de cero a cien» con IA', 'Fabián Amador Salazar',
+ ('Animación de fotografías "de cero a cien" con IA', 'Fabián Amador Salazar',
   '2026-09-24', '17:00', 'Secretaría de Cultura de Palogrande', '30 cupos'),
 ]
 

@@ -22,8 +22,8 @@ no ha vuelto a anunciar. No se reubican ni se adivinan: publicar una función en
 una fecha que nadie declaró es peor que no publicarla. `publicar.py` lo va a
 frenar y hay que pasarle --forzar: esa pérdida es el objetivo, no un accidente.
 
-Lee   festivals/staging/ficma-2026-reprogramado.json  (la parrilla nueva)
-      festivals/ficma-2026.json                       (el catálogo ya publicado)
+Lee   festivals/staging/ficma-2026-reprogramado.json      (la parrilla nueva)
+      festivals/staging/ficma-2026-catalogo-agosto.json  (las 86 fichas, congeladas)
       festivals/staging/ficma-2026-venues-geo.json    (+ las 3 sedes nuevas)
 Esc.  festivals/staging/ficma-2026-build.json         (lo publica publicar.py)
 """
@@ -98,7 +98,10 @@ norm = lib.norm
 
 def main():
     rep = json.load(open(f'{ST}/ficma-2026-reprogramado.json', encoding='utf-8'))
-    pub = json.load(open(f'{REPO}/festivals/ficma-2026.json', encoding='utf-8'))
+    # La foto CONGELADA, no el JSON publicado: publicar encoge ese archivo a las
+    # 11 funciones reanunciadas, y leerlo aquí haría que el segundo regenerado
+    # saliera sin catálogo. Un paso que se estropea a sí mismo al usarlo.
+    cat = json.load(open(f'{ST}/ficma-2026-catalogo-agosto.json', encoding='utf-8'))['obras']
     geo = json.load(open(f'{ST}/ficma-2026-venues-geo.json', encoding='utf-8'))
 
     # Catálogo: primero el propio FICMA publicado, y si la obra es nueva —las hay:
@@ -109,8 +112,8 @@ def main():
     # un homónimo arruina.
     import glob
     ficha, ajenas = {}, {}
-    for f in pub['films']:
-        ficha.setdefault(norm(f.get('title')), f)
+    for t, o in cat.items():
+        ficha.setdefault(norm(t), o)
     for otro in sorted(glob.glob(f'{REPO}/festivals/*.json')):
         if otro.endswith('ficma-2026.json'):
             continue
@@ -184,6 +187,10 @@ def main():
             # índice del día en la grilla, que el contrato exige derivado de `day`
             'day_order': DIAS.index(fn['dia']),
             'venue': k, 'has_qa': fn['titulo'] in CON_QA,
+            # «Todas las actividades son de acceso libre», dicho por el festival
+            # en laficma.com. La casilla de acceso no puede quedar muda: lo pide
+            # [boleteria-muda] y es de lo primero que mira quien va a ir.
+            'is_free': True,
             '_src': f"{fn['_src']['url']} ({fn['_src']['date']})",
         }
         if de_donde and de_donde != 'ficma-2026 (agosto)':
@@ -222,8 +229,13 @@ def main():
         'dates': '19–26 SEP', 'dates_en': 'SEP 19–26', 'year': 2026,
         'timezoneOffset': '-05:00', 'storageKey': 'ficma2026_',
         'festivalStartStr': f'{DIAS[0]}T00:00:00', 'festivalEndStr': f'{DIAS[-1]}T23:59:00',
-        'prioLimit': pub.get('prioLimit', 5),
+        'prioLimit': 4,
         'ticketing_model': 'free',
+        # Los dos pases del sábado 19 a las 19:00 en Palogrande son UNA función:
+        # «Que el cielo nos perdone» (16 min) va antes de «El hogar fue sepultado»
+        # (90 min), en la misma calle externa. El festival los anunció por
+        # separado porque son dos posts, no dos entradas.
+        'sharedSlotIsOneScreening': True,
         **lib.dias_config(DIAS, 'septiembre'),
         'sections': secs, 'venues': venues, 'films': films,
     }
