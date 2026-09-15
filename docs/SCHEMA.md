@@ -270,9 +270,9 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
 | `ticket_url` | string | `^https://` | 5 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
-| `is_free` | boolean | — | 9 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
-| `requires_registration` | boolean | — | 5 fest |  |
-| `registration_url` | string | `^https://` | 2 fest |  |
+| `is_free` | boolean | — | 10 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
+| `requires_registration` | boolean | — | 4 fest |  |
+| `registration_url` | string | `^https://` | 1 fest |  |
 | `audience` | string | `press` | 1 fest | Solo cuando la función NO es para el público general. Ausente = público (el caso normal, no se declara). «press» = pase de prensa e industria: la app los OCULTA salvo que el usuario active el filtro. TIFF 2026 trae 247 (audienceType=Press & Market en su endpoint). |
 
 ### Todo lo demás
@@ -294,12 +294,12 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `synopsis_lang` | string | `es` · `en` · `pt` | 18 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
 | `rating` | string | — | 2 fest |  |
 | `premiere` | string | — | 4 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
-| `type` | string | `film` · `event` · `short` | 15 fest |  |
+| `type` | string | `film` · `event` · `short` | 14 fest |  |
 | `event_kind` | string | — | 8 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
 | `is_cortos` | boolean | — | 17 fest | exige `film_list` Programa curado: exige film_list no vacío. |
 | `film_list` | array | — | 16 fest |  |
 | `is_programa` | boolean | — | 3 fest |  |
-| `is_recurring` | boolean | — | 3 fest |  |
+| `is_recurring` | boolean | — | 2 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |
 | `info` | boolean | — | 3 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |

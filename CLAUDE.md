@@ -87,10 +87,10 @@ deliberada existe la etiqueta `frontera-ok`.
 | `olhar2026` | Olhar de Cinema | Curitiba | JUN 4–13 | Archivado |
 | `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Archivado |
 | `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Archivado |
-| `ficma2026` | FICMA | Manizales | 10–17 AGO | desconocido |
+| `ficma2026` | FICMA | Manizales | 19–26 SEP | **Próximo / activo** |
 | `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | Recién terminado |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | Recién terminado |
-| `cinemancia2026` | Cinemancia | Valle de Aburrá | 3–12 SEP | **Próximo / activo** |
+| `cinemancia2026` | Cinemancia | Valle de Aburrá | 3–12 SEP | Recién terminado |
 | `cineautopsia2026` | CineAutopsia | Bogotá | 21–29 AGO | Recién terminado |
 | `vartex2026` | Vartex | Medellín | 19–22 AGO | Recién terminado |
 | `qaff2026` |  |  |  | desconocido |
