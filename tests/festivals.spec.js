@@ -1174,8 +1174,8 @@ test('T44 — al reabrir el chooser, chip, info, marca y centro dicen lo mismo',
 test('P10 — el Programa de un festival terminado lo dice', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
 
-  const banda = async (fid, sim) => {
-    await enterFestival(page, fid, sim);
+  const banda = async (fid, sim, opts) => {
+    await enterFestival(page, fid, sim, opts);
     await page.evaluate(async () => {
       const b = document.createElement('button'); b.setAttribute('data-action', 'closeCitySheet');
       document.body.appendChild(b); b.click(); b.remove();
@@ -1206,8 +1206,12 @@ test('P10 — el Programa de un festival terminado lo dice', async ({ page }) =>
   const vivo = await banda('ficdeh2026', '2026-08-15T11:00');
   expect(vivo.termino, 'con el festival en curso no hay banda de terminado').toBe(false);
 
-  // 3 · un festival APLAZADO no dice «terminó»: su estado declarado manda
-  const aplazado = await banda('ficma2026', '2026-08-25T11:00');
-  expect(aplazado.aplazado, 'FICMA sigue mostrando su banda de aplazado').toBe(true);
+  // 3 · un festival APLAZADO no dice «terminó»: su estado declarado manda.
+  // El aplazamiento se INYECTA (opts.aplazado). Antes se tomaba prestado el de
+  // FICMA, que estaba aplazado de verdad por el sismo; cuando el festival
+  // reprogramó a septiembre esta prueba se puso roja sin que la regla hubiera
+  // cambiado. Ahora el escenario es suyo.
+  const aplazado = await banda('ficma2026', '2026-08-25T11:00', { aplazado: true });
+  expect(aplazado.aplazado, 'el festival aplazado muestra su banda').toBe(true);
   expect(aplazado.termino, 'y NO dice que terminó — el estado declarado le gana a las fechas').toBe(false);
 });
