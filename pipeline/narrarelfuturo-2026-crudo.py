@@ -47,18 +47,9 @@ TITULO_OFICIAL = {
     '6 de December': '6 de diciembre',
 }
 
-# La ÚNICA obra que la tarjeta del festival se salta y la Cinemateca sí lista.
-# No es una corazonada: con ella la suma del programa pasa de 84 a 87, que es
-# exactamente lo que ese programa declara durar.
-# Se nombra SOLO EL TÍTULO: la ficha la pone la fuente. La primera versión
-# copiaba a mano los valores de la agenda de la Cinemateca —«Camboya, 2026»— y
-# la ficha del propio festival dice «Argentina · 2025 · 3 min 49s · Ficción IA».
-# Copiar valores de la fuente más débil fue peor que no tenerlos: lo cazó la
-# tercera relectura, comparando las 45 obras contra su propia página.
-FALTANTES = {'alucinacion-artificial-y-extincion': ['Malignant / Catatonic']}
-FALTANTES_NOTA = ('la tarjeta del programa no la lista y su propia ficha sí existe; la agenda '
-                  'de la Cinemateca confirma que va en este programa, y con ella la suma cuadra '
-                  'con la duración declarada')
+# (Hubo un FALTANTES para «Malignant / Catatonic»: la tarjeta no traía año y el
+# parser de la web la tiraba. Se arregló el parser — el año es opcional — y el
+# parche se fue. Un crudo que repone lo que su parser pierde esconde el hueco.)
 
 # SECCIÓN = la temática que el propio festival usa para filtrar su programa
 # («🏷️ FILTRAR POR TEMÁTICA»), más «Sala VR», que es como llama a la
@@ -103,6 +94,22 @@ def main():
     cine = cargar('cinemateca')['funciones']
 
     por_titulo = {norm(o.get('titulo')): o for o in obras if o.get('titulo')}
+
+    # FICHAS DUPLICADAS: dos páginas del festival traen la MISMA línea técnica
+    # («Argentina · 2025 · 3 min 49s · Ficción IA» en Malignant / Catatonic y en
+    # Marta Trend; «Colombia · 2026 · 27 min 59s» en Vivir de la piedra y en
+    # Venezuela: latidos entre escombros). Es copia-y-pega del sitio, no dos
+    # obras iguales, y explica las contradicciones tarjeta/ficha que salieron en
+    # tres revisiones. Regla, no parche: si la ficha técnica de una obra coincide
+    # entera con la de otra, para ESOS campos (país, año, duración, género) manda
+    # la TARJETA del programa, que es donde el festival las lista una por una.
+    # Sinopsis, dirección y póster de la ficha se conservan: esos sí son propios.
+    _firma = {}
+    for o in obras:
+        if o.get('titulo') and o.get('anio') and o.get('duracion_min'):
+            _firma.setdefault((o.get('pais'), o['anio'], o['duracion_min'], o.get('genero')), []).append(norm(o['titulo']))
+    dup = {t for k, ts in _firma.items() if len(ts) > 1 for t in ts}
+    TECNICOS = ('pais', 'anio', 'duracion_min', 'genero')
     por_programa = {}
     for o in obras:
         if o.get('programa') and o.get('titulo'):
@@ -135,21 +142,24 @@ def main():
             g['obras'] = []
             vistos = set()
             for o in f['obras']:
-                base = por_titulo.get(norm(o.get('titulo'))) or {}
-                obra = {k: (o.get(k) or base.get(k)) for k in ('titulo',) + FICHA
+                base = dict(por_titulo.get(norm(o.get('titulo'))) or {})
+                if norm(o.get('titulo')) in dup:
+                    for k in TECNICOS:
+                        base.pop(k, None)          # ficha copiada: manda la tarjeta
+                    base['_ficha_duplicada'] = 'línea técnica idéntica a otra obra; país/año/duración/género salen de la tarjeta'
+                obra = {k: (o.get(k) or base.get(k)) for k in ('titulo', '_ficha_duplicada') + FICHA
                         if (o.get(k) or base.get(k))}
                 cc = cine_obras.get(norm(o.get('titulo')))
                 if cc and cc.get('duracion_min'):
                     obra['duracion_min'] = cc['duracion_min']
                 vistos.add(norm(o.get('titulo')))
                 g['obras'].append(obra)
-            for t_ in FALTANTES.get(slug(f['titulo']), []):
-                base = por_titulo.get(norm(t_))
-                if base:
-                    g['obras'].append({**{k: base[k] for k in ('titulo',) + FICHA if base.get(k)},
-                                       '_origen': FALTANTES_NOTA})
         else:
-            base = por_titulo.get(norm(f['titulo']))
+            base = dict(por_titulo.get(norm(f['titulo'])) or {})
+            if base and norm(f['titulo']) in dup:
+                for k in TECNICOS:
+                    base.pop(k, None)              # ficha copiada: manda la tarjeta
+                g['_ficha_duplicada'] = 'línea técnica idéntica a otra obra; país/año/duración/género salen de la tarjeta'
             if base:
                 for k in FICHA:
                     if base.get(k) and not g.get(k):

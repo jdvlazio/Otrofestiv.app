@@ -5,7 +5,7 @@
   "metodo": "fusión: la parrilla de la web manda; la ficha por obra la completa; la Cinemateca contrasta",
   "nota": "la instalación VR va como actividad recurrente (is_recurring), no como seis funciones distintas"
  },
- "_funciones": 33,
+ "_funciones": 34,
  "_obras": 85,
  "_contraste_cinemateca": [
   "Llueve sobre Babel 2026-09-19: web 18:00 vs Cinemateca 18:30"
@@ -213,6 +213,7 @@
    "sede": "Universidad Jorge Tadeo Lozano",
    "registration_url": "https://bit.ly/RTElFuturo",
    "acceso": "Entrada gratis con inscripción",
+   "_ficha_duplicada": "línea técnica idéntica a otra obra; país/año/duración/género salen de la tarjeta",
    "sinopsis": "Aquel día de junio las vidas de muchos venezolanos cambiaron para siempre. Un doble terremoto desencadenó una de las mayores tragedias de la historia reciente del país. En esta situación, familiares de las víctimas, voluntarios y equipos de rescate emprendieron una carrera contrarreloj para hallar supervivientes. Mientras la búsqueda avanzaba, la gente compartía lo poco que le quedaba, en una muestra de esa férrea solidaridad que acompañará a la nación en su arduo camino hacia la reconstrucción.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/3_Venezuela-latidos-entre-escombros-1.jpg",
    "seccion": "Proyecciones & Largos"
@@ -261,7 +262,7 @@
     },
     {
      "titulo": "Chaika",
-     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado.",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó.",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/CHAIKA_POSTER-1-1.jpg",
      "genero": "Ciencia Ficción",
      "director": "Ingrid Paola Bonilla Rodriguez",
@@ -271,7 +272,8 @@
     },
     {
      "titulo": "Fail",
-     "sinopsis": "En un bosque denso devorado por la oscuridad, la tensión aumenta con cada fotograma. Un hombre deambula entre los árboles, rodeado por el sonido de los insectos y el pulso de la noche que se cierne sobre él. Algo ha ocurrido aquí, o está a punto de suceder. A medida que crece la inquietud, empezamos a cuestionar qué es real. FAIL es un descenso visual hacia el miedo, el control y los frágiles límites de la percepción.Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó.",
+     "_ficha_duplicada": "línea técnica idéntica a otra obra; país/año/duración/género salen de la tarjeta",
+     "sinopsis": "En un bosque denso devorado por la oscuridad, la tensión aumenta con cada fotograma. Un hombre deambula entre los árboles, rodeado por el sonido de los insectos y el pulso de la noche que se cierne sobre él. Algo ha ocurrido aquí, o está a punto de suceder. A medida que crece la inquietud, empezamos a cuestionar qué es real. FAIL es un descenso visual hacia el miedo, el control y los frágiles límites de la percepción.",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/FAIL_Poster-1-1.jpg",
      "genero": "Ficción IA",
      "director": "Felipe Valério",
@@ -300,7 +302,19 @@
      "duracion_min": 2
     },
     {
+     "titulo": "Malignant / Catatonic",
+     "_ficha_duplicada": "línea técnica idéntica a otra obra; país/año/duración/género salen de la tarjeta",
+     "sinopsis": "Trata de no perder la cabeza mientras los demás la pierden. Una disertación sobre la insanidad de la guerra en el mundo.",
+     "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/MALIGNANT-CATATONIC-POSTER-1.jpg",
+     "genero": "Documental, Experimental",
+     "director": "Mike Bennion",
+     "pais": "Hong Kong, Reino Unido, Estados Unidos, Vietnam",
+     "duracion_min": 3
+    },
+    {
      "titulo": "Marta Trend",
+     "_ficha_duplicada": "línea técnica idéntica a otra obra; país/año/duración/género salen de la tarjeta",
+     "sinopsis": "Él siempre vuelve a Buenos Aires. Ella también.",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/MARTA-TREND-poster1K-1.jpg",
      "genero": "Ficción IA",
      "director": "Juan Murillo",
@@ -310,6 +324,7 @@
     },
     {
      "titulo": "Outline Against the Sun",
+     "_ficha_duplicada": "línea técnica idéntica a otra obra; país/año/duración/género salen de la tarjeta",
      "sinopsis": "El cielo es a la vez testigo y abismo para una máquina forjada bajo la promesa de paz mientras asciende en vuelo solitario. Desde las alturas, contempla el mundo que juró proteger, pero al acercarse a tierra, se rompe la frontera entre metáfora y materia. En un poema visual sobre la paradoja de la civilización moderna, la película convierte la mirada del arma en un espejo de la humanidad: revela el instante en que el progreso se vuelve indistinguible de la ruina, y el cielo devuelve a la tierra la pregunta que nadie quiere escuchar: ¿cuántas veces debemos morir para aprender, por fin, a vivir?",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/poster-oficial_ENUS-1.jpg",
      "genero": "Ficción IA",
@@ -327,17 +342,6 @@
      "pais": "Brasil",
      "anio": 2025,
      "duracion_min": 2
-    },
-    {
-     "titulo": "Malignant / Catatonic",
-     "sinopsis": "Trata de no perder la cabeza mientras los demás la pierden. Una disertación sobre la insanidad de la guerra en el mundo.",
-     "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/MALIGNANT-CATATONIC-POSTER-1.jpg",
-     "genero": "Ficción IA",
-     "director": "Mike Bennion",
-     "pais": "Argentina",
-     "anio": 2025,
-     "duracion_min": 3,
-     "_origen": "la tarjeta del programa no la lista y su propia ficha sí existe; la agenda de la Cinemateca confirma que va en este programa, y con ella la suma cuadra con la duración declarada"
     }
    ],
    "_src": "https://narrarelfuturo.com/programa-2026/",
@@ -383,6 +387,7 @@
    "sede": "Universidad Jorge Tadeo Lozano",
    "registration_url": "https://narrarelfuturo.com/talleres-2026/ultima-hora/",
    "acceso": "Entrada gratis con inscripción",
+   "_ficha_duplicada": "línea técnica idéntica a otra obra; país/año/duración/género salen de la tarjeta",
    "sinopsis": "Bajo el estruendo de la dinamita, las entrañas de Vallemí esconden una paradoja. La vida gira en torno a la cal, un motor económico que sostiene a miles de familias paraguayas. Mientras el polvo asfixiante nubla el horizonte, los mineros, atraídos por promesas de progreso, desafían a diario los riesgos en las canteras. La necesidad de sustento y el orgullo por su oficio parecen acallar las dudas sobre su salud y el futuro del entorno.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/6_Vivir-de-la-piedra-1.jpg",
    "seccion": "Proyecciones & Largos"
@@ -429,6 +434,8 @@
     },
     {
      "titulo": "Marta Trend",
+     "_ficha_duplicada": "línea técnica idéntica a otra obra; país/año/duración/género salen de la tarjeta",
+     "sinopsis": "Él siempre vuelve a Buenos Aires. Ella también.",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/MARTA-TREND-poster1K-1.jpg",
      "genero": "Ficción IA",
      "director": "Juan Murillo",
@@ -498,7 +505,7 @@
     },
     {
      "titulo": "Chaika",
-     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado.",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó.",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/CHAIKA_POSTER-1-1.jpg",
      "genero": "Ciencia Ficción",
      "director": "Ingrid Paola Bonilla Rodriguez",
@@ -551,7 +558,7 @@
     },
     {
      "titulo": "Chaika",
-     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado.",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó.",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/CHAIKA_POSTER-1-1.jpg",
      "genero": "Ciencia Ficción",
      "director": "Ingrid Paola Bonilla Rodriguez",
@@ -759,6 +766,23 @@
    "seccion": "Talleres & Formación"
   },
   {
+   "titulo": "Narrativas Virales: Cómo contar historias para las audiencias digitales",
+   "dia": "2026-09-18",
+   "hora": "09:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Taller de Creación Audiovisual",
+   "tipo": "taller",
+   "event_kind": "taller",
+   "director": "Mirko Casale",
+   "pais": "Argentina",
+   "duracion_min": 240,
+   "sinopsis": "Las redes sociales han cambiado la manera en que se producen, distribuyen y consumen las noticias. Este taller explora las principales tendencias de la narrativa digital y cómo adaptar el lenguaje audiovisual para conectar con audiencias que consumen información en formatos cada vez más breves, dinámicos y multiplataforma. A partir de la experiencia de ¡Ahí les va!, uno de los proyectos digitales más reconocidos de RT en Español, los participantes conocerán el proceso creativo detrás de contenidos que combinan actualidad, análisis, humor y alto impacto en redes sociales.",
+   "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/08/ChatGPT-Image-Aug-27-2026-05_04_45-PM.jpg",
+   "acceso": "desconocido",
+   "_src": "https://narrarelfuturo.com/talleres-2026/narrativas-virales/",
+   "seccion": "Talleres & Formación"
+  },
+  {
    "titulo": "Redacciones Aumentadas: IA, periodismo y nuevos flujos de trabajo",
    "dia": "2026-09-17",
    "hora": "14:00",
@@ -857,7 +881,10 @@
      "titulo": "ECHOES OF THE JORDAN",
      "sinopsis": "Con el cambio climático como telón de fondo, este documental interactivo en realidad virtual (VR) de 360 ​​grados recorre el río Jordán —uno de los cursos de agua más sagrados del mundo—, actualmente situado en primera línea tanto de conflictos medioambientales como humanos. Los participantes se adentran en un acuífero subterráneo donde un suave resplandor azul...",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/06-26-EOTJ-Poster-2-1.jpg",
-     "director": "Roy Kimhi"
+     "genero": "VR Interactivo",
+     "director": "Roy Kimhi",
+     "pais": "2025",
+     "duracion_min": 15
     },
     {
      "titulo": "Xian’er (Chinese Immortals)",
@@ -905,7 +932,7 @@
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/Maria-Korporal_Qalvinist-Qosmos-poster-1-1.jpg",
      "genero": "VR 360",
      "director": "Maria Korporal",
-     "pais": "Italia",
+     "pais": ". Italia",
      "anio": 2025,
      "duracion_min": 7
     },
@@ -949,7 +976,10 @@
      "titulo": "ECHOES OF THE JORDAN",
      "sinopsis": "Con el cambio climático como telón de fondo, este documental interactivo en realidad virtual (VR) de 360 ​​grados recorre el río Jordán —uno de los cursos de agua más sagrados del mundo—, actualmente situado en primera línea tanto de conflictos medioambientales como humanos. Los participantes se adentran en un acuífero subterráneo donde un suave resplandor azul...",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/06-26-EOTJ-Poster-2-1.jpg",
-     "director": "Roy Kimhi"
+     "genero": "VR Interactivo",
+     "director": "Roy Kimhi",
+     "pais": "2025",
+     "duracion_min": 15
     },
     {
      "titulo": "Xian’er (Chinese Immortals)",
@@ -997,7 +1027,7 @@
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/Maria-Korporal_Qalvinist-Qosmos-poster-1-1.jpg",
      "genero": "VR 360",
      "director": "Maria Korporal",
-     "pais": "Italia",
+     "pais": ". Italia",
      "anio": 2025,
      "duracion_min": 7
     },
@@ -1041,7 +1071,10 @@
      "titulo": "ECHOES OF THE JORDAN",
      "sinopsis": "Con el cambio climático como telón de fondo, este documental interactivo en realidad virtual (VR) de 360 ​​grados recorre el río Jordán —uno de los cursos de agua más sagrados del mundo—, actualmente situado en primera línea tanto de conflictos medioambientales como humanos. Los participantes se adentran en un acuífero subterráneo donde un suave resplandor azul...",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/06-26-EOTJ-Poster-2-1.jpg",
-     "director": "Roy Kimhi"
+     "genero": "VR Interactivo",
+     "director": "Roy Kimhi",
+     "pais": "2025",
+     "duracion_min": 15
     },
     {
      "titulo": "Xian’er (Chinese Immortals)",
@@ -1089,7 +1122,7 @@
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/Maria-Korporal_Qalvinist-Qosmos-poster-1-1.jpg",
      "genero": "VR 360",
      "director": "Maria Korporal",
-     "pais": "Italia",
+     "pais": ". Italia",
      "anio": 2025,
      "duracion_min": 7
     },
@@ -1133,7 +1166,10 @@
      "titulo": "ECHOES OF THE JORDAN",
      "sinopsis": "Con el cambio climático como telón de fondo, este documental interactivo en realidad virtual (VR) de 360 ​​grados recorre el río Jordán —uno de los cursos de agua más sagrados del mundo—, actualmente situado en primera línea tanto de conflictos medioambientales como humanos. Los participantes se adentran en un acuífero subterráneo donde un suave resplandor azul...",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/06-26-EOTJ-Poster-2-1.jpg",
-     "director": "Roy Kimhi"
+     "genero": "VR Interactivo",
+     "director": "Roy Kimhi",
+     "pais": "2025",
+     "duracion_min": 15
     },
     {
      "titulo": "Xian’er (Chinese Immortals)",
@@ -1181,7 +1217,7 @@
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/Maria-Korporal_Qalvinist-Qosmos-poster-1-1.jpg",
      "genero": "VR 360",
      "director": "Maria Korporal",
-     "pais": "Italia",
+     "pais": ". Italia",
      "anio": 2025,
      "duracion_min": 7
     },
@@ -1225,7 +1261,10 @@
      "titulo": "ECHOES OF THE JORDAN",
      "sinopsis": "Con el cambio climático como telón de fondo, este documental interactivo en realidad virtual (VR) de 360 ​​grados recorre el río Jordán —uno de los cursos de agua más sagrados del mundo—, actualmente situado en primera línea tanto de conflictos medioambientales como humanos. Los participantes se adentran en un acuífero subterráneo donde un suave resplandor azul...",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/06-26-EOTJ-Poster-2-1.jpg",
-     "director": "Roy Kimhi"
+     "genero": "VR Interactivo",
+     "director": "Roy Kimhi",
+     "pais": "2025",
+     "duracion_min": 15
     },
     {
      "titulo": "Xian’er (Chinese Immortals)",
@@ -1273,7 +1312,7 @@
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/Maria-Korporal_Qalvinist-Qosmos-poster-1-1.jpg",
      "genero": "VR 360",
      "director": "Maria Korporal",
-     "pais": "Italia",
+     "pais": ". Italia",
      "anio": 2025,
      "duracion_min": 7
     },
@@ -1317,7 +1356,10 @@
      "titulo": "ECHOES OF THE JORDAN",
      "sinopsis": "Con el cambio climático como telón de fondo, este documental interactivo en realidad virtual (VR) de 360 ​​grados recorre el río Jordán —uno de los cursos de agua más sagrados del mundo—, actualmente situado en primera línea tanto de conflictos medioambientales como humanos. Los participantes se adentran en un acuífero subterráneo donde un suave resplandor azul...",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/06-26-EOTJ-Poster-2-1.jpg",
-     "director": "Roy Kimhi"
+     "genero": "VR Interactivo",
+     "director": "Roy Kimhi",
+     "pais": "2025",
+     "duracion_min": 15
     },
     {
      "titulo": "Xian’er (Chinese Immortals)",
@@ -1365,7 +1407,7 @@
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/Maria-Korporal_Qalvinist-Qosmos-poster-1-1.jpg",
      "genero": "VR 360",
      "director": "Maria Korporal",
-     "pais": "Italia",
+     "pais": ". Italia",
      "anio": 2025,
      "duracion_min": 7
     },

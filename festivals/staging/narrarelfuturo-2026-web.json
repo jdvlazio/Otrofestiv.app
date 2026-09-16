@@ -6,7 +6,7 @@
   "nota": "la web etiqueta las 24 tarjetas con la clase dia-15 —su filtro por día está roto— así que la clase no sirve"
  },
  "_funciones": 16,
- "_obras": 36,
+ "_obras": 37,
  "funciones": [
   {
    "dia": "2026-09-15",
@@ -246,6 +246,14 @@
      "genero": "Ciencia Ficción IA",
      "director": "Felipe Valério",
      "titulo": "Hybrid"
+    },
+    {
+     "pais": "Hong Kong, Reino Unido, Estados Unidos, Vietnam",
+     "anio": null,
+     "duracion_min": 3,
+     "genero": "Documental, Experimental",
+     "director": "Mike Bennion",
+     "titulo": "Malignant / Catatonic"
     },
     {
      "pais": "Argentina",

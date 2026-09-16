@@ -95,16 +95,43 @@ def parse(ruta, h):
         for s in SEDES:
             if s in x:
                 d.setdefault('sede', s)
-    # UMBRAL 100, no 160. Con 160 se perdían las sinopsis cortas que el festival
-    # sí publica: «Malignant / Catatonic» la tiene en 120 caracteres y «How
-    # things are between us» en 131. Un corto de 2 minutos no necesita un
-    # párrafo, y descartarlo por breve es descartar dato real. Se excluye el
-    # texto institucional del pie, que aparece en todas las fichas.
-    largos = [x for x in L if len(x) > 100
-              and 'Festival de Cine & Nuevos Medios es un punto' not in x
-              and not re.match(r'^(Dir\.|Compra|Inscrib)', x)]
-    if largos:
-        d['sinopsis'] = largos[0]
+    # LA SINOPSIS ES ESTRUCTURAL, NO UN UMBRAL DE LARGO. Es el párrafo que va
+    # entre la línea de acceso (o la sede) y el pie institucional «El Festival de
+    # Cine & Nuevos Medios es un punto…». Con umbral de 160 se perdían «Malignant
+    # / Catatonic» (120) y «How things are between us» (131); con 100 se perdía
+    # «Marta Trend» (48): «Él siempre vuelve a Buenos Aires. Ella también.» Una
+    # sinopsis puede ser una frase. Todo umbral que uno elige es una hipótesis
+    # sobre la fuente, y ésta la desmintió tres veces.
+    PIE = 'Festival de Cine & Nuevos Medios es un punto'
+    fin = next((k for k, x in enumerate(L) if PIE in x), len(L))
+    # El ANCLA es la SEDE, no el acceso. En las fichas de Fontanar sede y acceso
+    # van en un renglón («Cinemateca Fontanar del Río , entrada gratis…») ANTES
+    # de la sinopsis; en las de la Tadeo la sede va en dos («Hemiciclo» / «,
+    # Universidad Jorge Tadeo Lozano…») y el acceso («INSCRIPCIÓN AQUÍ» +
+    # bit.ly) va DESPUÉS. Anclar en el acceso se comía 6 sinopsis de la Tadeo.
+    ini = 0
+    for k in range(min(fin, len(L)) - 1, -1, -1):
+        if re.match(r'^(Sala|Hemiciclo|Laboratorio|Cinemateca|Universidad)\b', L[k]) \
+           or re.match(r'^, (Cinemateca|Universidad)', L[k]):
+            ini = k + 1
+            break
+    cuerpo = [x for x in L[ini:fin]
+              if not re.match(r'^(Ver Detalles|Inscribirse|INSCRIPCI|Compra|Cargando|\*|Dir\.|bit\.ly|https?://)', x)
+              and not re.match(r'^, ', x) and '#NarrarElFuturo' not in x
+              and not re.search(r'\b(entrada (gratis|libre)|hasta completar (el )?aforo|boleta)\b', x, re.I)
+              and not RE_FICHA.match(x) and not RE_CUANDO.search(x)
+              and len(x) > 20]
+    if cuerpo:
+        d['sinopsis'] = ' '.join(cuerpo)
+        # ERRATA DEL SITIO, con evidencia: la ficha de «Fail» trae pegado el 2º
+        # párrafo de la sinopsis de «Chaika» («Los paisajes, trémulos y
+        # borrosos…»), que existe tal cual en la ficha de Chaika. Se corta ahí y
+        # se deja constancia; no se reescribe nada más.
+        _c = d['sinopsis'].find('Los paisajes, trémulos y borrosos')
+        if _c > 0 and (d.get('titulo') or '').strip().lower() == 'fail':
+            d['sinopsis'] = d['sinopsis'][:_c].rstrip()
+            d['_sinopsis_nota'] = 'la web pega a continuación el 2º párrafo de la sinopsis de Chaika; se cortó'
+
     ims = [u for u in dict.fromkeys(re.findall(
         r'(https://narrarelfuturo\.com/wp-content/uploads/[^"\s]+?\.(?:jpg|jpeg|png|webp))', h, re.I))
         if not re.search(r'-\d+x\d+\.', u) and 'Mesa-de-trabajo' not in u]

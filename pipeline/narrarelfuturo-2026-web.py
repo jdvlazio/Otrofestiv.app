@@ -65,8 +65,13 @@ DIAS = {'15': '2026-09-15', '16': '2026-09-16', '17': '2026-09-17',
 RE_DIA = re.compile(r'^(?:Lun|Mar|Mié|Mie|Jue|Vie|Sáb|Sab|Dom)[a-zé]*\s+(\d{1,2})$', re.I)
 RE_HORA = re.compile(r'^(\d{1,2}):(\d{2})\s*([ap])m$', re.I)
 # «Chile · 2025 · 1h 33min · Documental, Experimental»
+# EL AÑO ES OPCIONAL. La tarjeta de «Malignant / Catatonic» dice «Hong Kong,
+# Reino Unido, Estados Unidos, Vietnam · 3 min · Documental, Experimental», sin
+# año; exigirlo tiraba la obra entera y hubo que reponerla a mano (FALTANTES) —
+# es decir, el parser tenía un hueco y el crudo lo tapaba. Lo que identifica la
+# línea es «país · … · duración», el año viene si viene.
 RE_FICHA = re.compile(
-    r'^(?P<pais>[^·]+?)\s*·\s*(?P<anio>(?:19|20)\d\d)\s*·\s*(?P<dur>[^·]+?)\s*(?:·\s*(?P<gen>.+))?$')
+    r'^(?P<pais>[^·]+?)\s*·\s*(?:(?P<anio>(?:19|20)\d\d)\s*·\s*)?(?P<dur>\d[^·]*?(?:min|h|s)\.?)\s*(?:·\s*(?P<gen>.+))?$')
 
 
 def lineas(bloque):
@@ -161,7 +166,7 @@ def una(L, bloque=''):
         x = L[k]
         mf = RE_FICHA.match(x)
         if mf and minutos(mf.group('dur')) is not None:
-            ficha = {'pais': mf.group('pais').strip(), 'anio': int(mf.group('anio')),
+            ficha = {'pais': mf.group('pais').strip(), 'anio': int(mf.group('anio')) if mf.group('anio') else None,
                      'duracion_min': minutos(mf.group('dur')),
                      'genero': (mf.group('gen') or '').strip()}
             prev = L[k - 1]
@@ -213,7 +218,7 @@ def vr(L):
     for k, x in enumerate(L):
         mf = RE_FICHA.match(x)
         if mf and minutos(mf.group('dur')) is not None:
-            o.update({'pais': mf.group('pais').strip(), 'anio': int(mf.group('anio')),
+            o.update({'pais': mf.group('pais').strip(), 'anio': int(mf.group('anio')) if mf.group('anio') else None,
                       'duracion_min': minutos(mf.group('dur')),
                       'genero': (mf.group('gen') or '').strip()})
         elif x == 'Dir.' and k + 1 < len(L):

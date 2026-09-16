@@ -174,7 +174,11 @@ def del_indice(idx):
 def main():
     idx = bajar(INDICE, 'talleres-indice.html')
     nombres = del_indice(idx)
-    urls = sorted(set(re.findall(r'href="(https://narrarelfuturo\.com/talleres-2026/[^"#?]+)"', idx)))
+    # El href de «Narrativas Virales» termina en «/?»: excluir «?» del patrón
+    # excluía el taller entero. Se captura la ruta y se corta lo que siga al «?».
+    # Lo cazó una extracción independiente que contó 12 talleres donde yo tenía 11.
+    urls = sorted(set(re.sub(r'\?.*$', '', u) for u in
+                      re.findall(r'href="(https://narrarelfuturo\.com/talleres-2026/[^"#]+)"', idx)))
     out = []
     for u in urls:
         slug = u.rstrip('/').split('/')[-1]

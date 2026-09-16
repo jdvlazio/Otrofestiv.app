@@ -5,7 +5,7 @@
   "metodo": "una ficha por taller, enlazadas desde el índice",
   "nota": "fichas NO uniformes: el rótulo del tallerista y la forma del día cambian entre ellas"
  },
- "_talleres": 11,
+ "_talleres": 12,
  "talleres": [
   {
    "_slug": "desde-el-terreno",
@@ -138,6 +138,29 @@
     "https://narrarelfuturo.com/wp-content/uploads/2026/09/cropped-NEF_PERFIL_perfil.jpg",
     "https://narrarelfuturo.com/wp-content/uploads/2026/09/7_Luisa-V.-Orozco-1.jpg",
     "https://narrarelfuturo.com/wp-content/uploads/2026/09/9_JhonHernandez-1.jpg"
+   ],
+   "acceso": "desconocido"
+  },
+  {
+   "_slug": "narrativas-virales",
+   "_src": "https://narrarelfuturo.com/talleres-2026/narrativas-virales/",
+   "tipo": "taller",
+   "titulo": "Narrativas Virales: Cómo contar historias para las audiencias digitales",
+   "tallerista": "Mirko Casale",
+   "pais": "Argentina",
+   "cupos": "25",
+   "dia": "2026-09-18",
+   "hora": "09:00",
+   "duracion_min": 240,
+   "_rango": ". de 9:00am a 1:00pm",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Taller de Creación Audiovisual",
+   "sinopsis": "Las redes sociales han cambiado la manera en que se producen, distribuyen y consumen las noticias. Este taller explora las principales tendencias de la narrativa digital y cómo adaptar el lenguaje audiovisual para conectar con audiencias que consumen información en formatos cada vez más breves, dinámicos y multiplataforma. A partir de la experiencia de ¡Ahí les va!, uno de los proyectos digitales más reconocidos de RT en Español, los participantes conocerán el proceso creativo detrás de contenidos que combinan actualidad, análisis, humor y alto impacto en redes sociales.",
+   "imagen": "https://narrarelfuturo.com/wp-content/uploads/2026/08/ChatGPT-Image-Aug-27-2026-05_04_45-PM.jpg",
+   "_imagenes": [
+    "https://narrarelfuturo.com/wp-content/uploads/2026/08/ChatGPT-Image-Aug-27-2026-05_04_45-PM.jpg",
+    "https://narrarelfuturo.com/wp-content/uploads/2026/09/cropped-NEF_PERFIL_perfil.jpg",
+    "https://narrarelfuturo.com/wp-content/uploads/2026/08/mirko.jpg"
    ],
    "acceso": "desconocido"
   },

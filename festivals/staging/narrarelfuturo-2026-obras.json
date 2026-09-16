@@ -117,7 +117,7 @@
    "hora": "17:00",
    "sala": "Sala 2",
    "sede": "Cinemateca de Bogotá",
-   "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado.",
+   "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/CHAIKA_POSTER-1-1.jpg",
    "_poster_regla": "nombre + palabra",
    "imagenes": [
@@ -143,7 +143,8 @@
    "hora": "17:00",
    "sala": "Sala 2",
    "sede": "Cinemateca de Bogotá",
-   "sinopsis": "En un bosque denso devorado por la oscuridad, la tensión aumenta con cada fotograma. Un hombre deambula entre los árboles, rodeado por el sonido de los insectos y el pulso de la noche que se cierne sobre él. Algo ha ocurrido aquí, o está a punto de suceder. A medida que crece la inquietud, empezamos a cuestionar qué es real. FAIL es un descenso visual hacia el miedo, el control y los frágiles límites de la percepción.Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó.",
+   "sinopsis": "En un bosque denso devorado por la oscuridad, la tensión aumenta con cada fotograma. Un hombre deambula entre los árboles, rodeado por el sonido de los insectos y el pulso de la noche que se cierne sobre él. Algo ha ocurrido aquí, o está a punto de suceder. A medida que crece la inquietud, empezamos a cuestionar qué es real. FAIL es un descenso visual hacia el miedo, el control y los frágiles límites de la percepción.",
+   "_sinopsis_nota": "la web pega a continuación el 2º párrafo de la sinopsis de Chaika; se cortó",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/FAIL_Poster-1-1.jpg",
    "_poster_regla": "nombre + palabra",
    "imagenes": [
@@ -248,6 +249,7 @@
    "hora": "17:00",
    "sala": "Sala 2",
    "sede": "Cinemateca de Bogotá",
+   "sinopsis": "Él siempre vuelve a Buenos Aires. Ella también.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/MARTA-TREND-poster1K-1.jpg",
    "_poster_regla": "nombre + palabra",
    "imagenes": [
@@ -874,7 +876,7 @@
    "sala": "Laboratorio 1 y 2",
    "sede": "Cinemateca de Bogotá",
    "acceso": "Entrada libre hasta completar aforo",
-   "sinopsis": "Desert Palms transcurre en la sala de espera de una pequeña clínica de urgencias colapsada por asistentes de un festival de música cercano. Lo que comienza como una serie de encuentros cotidianos se transforma poco a poco en una comedia existencial donde personajes cada vez más excéntricos ponen en duda la percepción de la realidad.",
+   "sinopsis": "Desert Palms transcurre en la sala de espera de una pequeña clínica de urgencias colapsada por asistentes de un festival de música cercano. Lo que comienza como una serie de encuentros cotidianos se transforma poco a poco en una comedia existencial donde personajes cada vez más excéntricos ponen en duda la percepción de la realidad. A través de una experiencia inmersiva continua, la obra invita al público a habitar el espacio junto a sus personajes y descubrir historias paralelas que se desarrollan simultáneamente, combinando humor, observación y surrealismo para explorar nuevas posibilidades narrativas en el cine inmersivo.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/desert-palms-poster-1.jpg",
    "_poster_regla": "nombre + palabra",
    "imagenes": [
@@ -892,7 +894,7 @@
    "sala": "Laboratorio 1 y 2",
    "sede": "Cinemateca de Bogotá",
    "acceso": "Entrada libre hasta completar aforo",
-   "sinopsis": "Con el cambio climático como telón de fondo, este documental interactivo en realidad virtual (VR) de 360 ​​grados recorre el río Jordán —uno de los cursos de agua más sagrados del mundo—, actualmente situado en primera línea tanto de conflictos medioambientales como humanos.",
+   "sinopsis": "Con el cambio climático como telón de fondo, este documental interactivo en realidad virtual (VR) de 360 ​​grados recorre el río Jordán —uno de los cursos de agua más sagrados del mundo—, actualmente situado en primera línea tanto de conflictos medioambientales como humanos. Los participantes se adentran en un acuífero subterráneo donde un suave resplandor azul —la memoria de una sola gota de agua que se remonta a veinte millones de años atrás— los guía a través de convulsiones sísmicas y exuberantes humedales prehistóricos, hasta llegar a una bulliciosa encrucijada que antaño recorrieron animales procedentes de África, Europa y Asia. Al avanzar rápidamente hacia el presente, los participantes se enfrentan a la cruda realidad actual del río y a una decisión que determinará su rumbo. «Echoes of the Jordan» (Ecos del Jordán) sumerge a los participantes en una historia de renacimiento, en la que cada onda en el agua evoca el pasado salvaje del río y su posible futuro.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/06-26-EOTJ-Poster-2-1.jpg",
    "_poster_regla": "palabra «poster»",
    "imagenes": [
@@ -984,7 +986,7 @@
    "sala": "Laboratorio 1 y 2",
    "sede": "Cinemateca de Bogotá",
    "acceso": "Entrada libre hasta completar aforo",
-   "sinopsis": "Inspirado en el ciclo pictórico del *Mensaje Bíblico* —una obra maestra de trascendencia universal y espiritual que constituye el núcleo de la colección permanente del museo—, Jérémy Griffaud creó una proyección panorámica (*mapping*) que cubre toda la superficie de las paredes. Cuatro pinturas de Chagall captaron especialmente su atención: aquellas centradas en el Paraíso original y su pérdida (*El Paraíso* y *Adán y Eva expulsados ​​del Paraíso*), en los sueños (*El sueño de Jacob*) y en la hospitalidad (*Abraham y los tres ángeles*).",
+   "sinopsis": "Inspirado en el ciclo pictórico del *Mensaje Bíblico* —una obra maestra de trascendencia universal y espiritual que constituye el núcleo de la colección permanente del museo—, Jérémy Griffaud creó una proyección panorámica (*mapping*) que cubre toda la superficie de las paredes. Cuatro pinturas de Chagall captaron especialmente su atención: aquellas centradas en el Paraíso original y su pérdida (*El Paraíso* y *Adán y Eva expulsados ​​del Paraíso*), en los sueños (*El sueño de Jacob*) y en la hospitalidad (*Abraham y los tres ángeles*). Concebida como un recorrido cíclico, la animación visual transporta al espectador al centro de un mundo onírico y rebosante de vida, donde se suceden transiciones entre jardines edénicos y ciudades insulares, entre el inframundo y la inmensidad celestial. En este movimiento hacia la interioridad o hacia «otro lugar», pulula una multitud de seres híbridos cuyos gestos y movimientos se repiten constantemente. Se trata de un eterno retorno a uno mismo que, al igual que las obras de Chagall, encierra los distintos tiempos del mundo: pasado, presente y futuro, ya sean vividos o imaginados. Para construir y habitar este universo virtual de múltiples niveles de realidad, Jérémy Griffaud realizó cerca de 300 dibujos. El uso de la acuarela permite al artista jugar con las texturas y los efectos de difuminado de la pintura sobre el papel; posteriormente, estas imágenes se digitalizan y se trasladan a un entorno de modelado tridimensional. Junto a estas creaciones, se exhiben también los bocetos preparatorios de las cuatro pinturas de Chagall, los cuales ilustran el proceso creativo del pintor de Vítebsk en sus diversas etapas técnicas, así como su evolución narrativa y simbólica.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/UnderTheSky_Jeremy-Griffaud.jpg",
    "_poster_regla": "nombre de la obra",
    "imagenes": [
@@ -1005,7 +1007,7 @@
    "sala": "Laboratorio 1 y 2",
    "sede": "Cinemateca de Bogotá",
    "acceso": "Entrada libre hasta completar aforo",
-   "sinopsis": "Resulta inconcebible imaginar que más de 1,5 millones de niños perecieran durante el Holocausto en la Segunda Guerra Mundial. Aquellos que sobrevivieron a tales horrores y escaparon de la muerte han tenido que convivir con el trauma al que fueron sometidos por sus verdugos.",
+   "sinopsis": "Resulta inconcebible imaginar que más de 1,5 millones de niños perecieran durante el Holocausto en la Segunda Guerra Mundial. Aquellos que sobrevivieron a tales horrores y escaparon de la muerte han tenido que convivir con el trauma al que fueron sometidos por sus verdugos. La primera parte consiste en una experiencia de realidad virtual (VR) en 360 grados que aborda la guerra desde la perspectiva infantil y se adentra en el mundo traumático de los niños supervivientes del Holocausto, mostrando cómo procesan sus vivencias bélicas en un esfuerzo por hallar sentido a lo ocurrido y alcanzar el cierre emocional. La segunda parte es una instalación mural que visibiliza las historias personales de niños que viven en zonas de conflicto en la actualidad (año 2025). Esta obra pone de relieve que los niños en zonas de conflicto siguen estando expuestos a la violencia y al trauma. Este documental híbrido explora testimonios auténticos de niños cuyas vivencias abarcan un periodo de ocho décadas, integrándolos con elementos de ficción y animación para acercar al público a la realidad de ser un niño atrapado en la guerra, al tiempo que ofrece un mensaje de esperanza, sanación y reconciliación.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/WWCO_Poster_02b-1.jpg",
    "_poster_regla": "palabra «poster»",
    "imagenes": [
