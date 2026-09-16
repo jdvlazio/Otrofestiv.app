@@ -183,7 +183,14 @@ def una(L, bloque=''):
         elif re.match(r'^\*?\s*Entrada', x, re.I):
             f.setdefault('acceso', x.lstrip('*').strip())
         elif re.match(r'^\.?\s*(Sala|Hemiciclo|Aula|Laboratorio)\b', x):
-            f.setdefault('sala', x.lstrip('. ').rstrip(',').strip())
+            _sala = x.lstrip('. ').rstrip(',').strip()
+            # «Sala» a secas es el RÓTULO, y el nombre viene en el renglón
+            # siguiente: la tarjeta del 16 dice «Sala» / «Aula Magistral
+            # 704-M16» y se publicaba «Sala», que no lleva a ninguna parte. Lo
+            # delató Instagram, que sí escribe la sala entera.
+            if _sala.lower() in ('sala', 'sala:') and k + 1 < len(L):
+                _sala = L[k + 1].lstrip('. ').rstrip(',').strip()
+            f.setdefault('sala', _sala)
         else:
             # La sede no siempre viene sola en su línea: a veces llega como
             # «, Universidad Jorge Tadeo Lozano, Cra. 4 #22-61», con coma

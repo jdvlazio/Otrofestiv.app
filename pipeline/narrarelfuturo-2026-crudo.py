@@ -90,6 +90,38 @@ QA = {
                                '(Instagram, post del día 1)'),
 }
 
+# LOS CONVERSATORIOS SE LEEN DEL CORPUS DE INSTAGRAM, no se escriben aquí. El
+# festival anuncia «acompañaremos la proyección y conversatorio de:» y debajo el
+# día y la hora; con eso basta para marcarlos, y el día que anuncie uno más no
+# hay que tocar código. Es la única fuente que lo dice: la web no lo menciona y
+# estas funciones son en la Tadeo, no en la agenda de la Cinemateca —de donde
+# vienen los otros seis, pintados como un color en su ficha—.
+MESES_ES = {'enero': 1, 'febrero': 2, 'marzo': 3, 'abril': 4, 'mayo': 5, 'junio': 6,
+            'julio': 7, 'agosto': 8, 'septiembre': 9, 'octubre': 10, 'noviembre': 11,
+            'diciembre': 12}
+RE_CONVERSA = re.compile(r'proyecci[oó]n y conversatorio', re.I)
+RE_DIA_IG = re.compile(r'(\d{1,2}) de (' + '|'.join(MESES_ES) + r')', re.I)
+RE_HORA_IG = re.compile(r'(\d{1,2}):(\d{2})\s*([ap])\.?\s*m', re.I)
+
+
+def qa_de_instagram():
+    """{(día, hora): url} — las funciones que Instagram anuncia con conversatorio."""
+    p = f'{ST}/narrarelfuturo-2026-ig-corpus.json'
+    if not os.path.exists(p):
+        return {}
+    out = {}
+    for post in json.load(io.open(p, encoding='utf-8'))['posts']:
+        texto = post['pie'] + '\n' + '\n'.join(x for l in post['laminas'] for x in l['texto'])
+        if not RE_CONVERSA.search(texto):
+            continue
+        md, mh = RE_DIA_IG.search(texto), RE_HORA_IG.search(texto)
+        if not (md and mh):
+            continue
+        dia = f'2026-{MESES_ES[md.group(2).lower()]:02d}-{int(md.group(1)):02d}'
+        hora = f'{int(mh.group(1)) % 12 + (12 if mh.group(3).lower() == "p" else 0):02d}:{mh.group(2)}'
+        out[(dia, hora)] = post['url']
+    return out
+
 
 # slug()/norm() son las de lib: la clave de JOIN entre el título de la tarjeta
 # («Aqua, Ensayo & Diversidad») y el slug de la ruta de la ficha
@@ -268,9 +300,14 @@ def main():
                 f['sinopsis'] = m.group(1)[0].upper() + m.group(1)[1:]
                 f['_sinopsis_src'] = 'instagram: el pie del post del programa, sin el preámbulo de logística'
 
+    _qa_ig = qa_de_instagram()
     for f in funciones:
         if f.get('titulo') in QA:
             f['has_qa'], (f['qa_type'], f['_qa_fuente']) = True, QA[f['titulo']]
+        _rt = _qa_ig.get((f.get('dia'), f.get('hora')))
+        if _rt and 'Tadeo' in (f.get('sede') or ''):
+            f['has_qa'], f['qa_type'] = True, 'team'
+            f['_qa_fuente'] = f'#RTMeetTheCreators: «proyección y conversatorio» ({_rt})'
 
     for f in funciones:
         f['seccion'] = SECCION.get(f.get('event_kind'), SECCION_DEFECTO)
