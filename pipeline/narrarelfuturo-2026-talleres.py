@@ -67,6 +67,15 @@ def bajar(url, nombre):
     return io.open(p, encoding='utf-8', errors='replace').read()
 
 
+# ERRATA DEL SITIO, corregida con evidencia y declarada aquí: la ficha del
+# taller escribe «Resonacia Cromática», y el MISMO sitio escribe «Resonancia
+# Cromática» en la ficha de «Sueño Viscoso 194» —de esa misma gente— y su
+# Instagram es @resonanciacromatica. Es una letra caída, no otro nombre. Se
+# corrige porque es el nombre propio de quien dicta el taller; queda dicho para
+# avisarle al festival.
+CORRECCION_NOMBRE = {'Resonacia Cromática': 'Resonancia Cromática'}
+
+
 def h24(hh, mm, ap):
     # «12m» es MEDIODÍA (meridiano), como lo escribe la ficha del taller de
     # podcast: «10:00am a 12m». Tratarlo como «12 sin am/pm» daba 00:00, el fin
@@ -144,6 +153,15 @@ def parse(slug, h):
                 d.setdefault('pais', L[k + 2].strip('().'))
         # «Con Nombre (País)» en UNA línea: «Señales Líquidas» lo escribe así y
         # mi regla de dos líneas lo dejaba sin tallerista.
+        # «Con Resonacia Cromática -» y los nombres en el RENGLÓN SIGUIENTE: así
+        # acredita el festival al único taller dictado por un colectivo, y mis
+        # dos reglas (una línea, o «Con» solo) lo dejaban sin tallerista.
+        mcol = re.match(r'^Con\s+(.{3,60}?)\s*[-–—]\s*$', x)
+        if mcol and not d.get('tallerista') and k + 1 < len(L):
+            _col = CORRECCION_NOMBRE.get(mcol.group(1).strip(), mcol.group(1).strip())
+            d['tallerista'] = f'{_col} — {L[k + 1].strip()}'
+            if k + 2 < len(L) and re.fullmatch(r'\(([^)]+)\)\.?', L[k + 2]):
+                d.setdefault('pais', L[k + 2].strip('().'))
         m2 = re.match(r'^Con\s+(.{3,90}?)\s*\(([^)]{3,40})\)\s*\.?$', x)
         if m2 and not d.get('tallerista'):
             d['tallerista'], _p = m2.group(1).strip(), m2.group(2).strip()
@@ -158,9 +176,23 @@ def parse(slug, h):
     if ims:
         d['imagen'] = ims[0]
         d['_imagenes'] = ims[:4]
-    m = re.search(r'href="([^"]+)"[^>]*>(?:(?!</a>).)*?Inscrib', h, re.S | re.I)
+    # EL ANCLA NO ES EL TEXTO DEL ENLACE. Buscar un <a> cuyo texto diga
+    # «Inscrib» no encontraba NADA en los doce talleres: la ficha escribe
+    # «INSCRIPCIÓN AQUÍ» FUERA del <a> y dentro pone la URL pelada
+    # («bit.ly/TalleresNEF2026»). Resultado: doce talleres publicados sin su
+    # formulario y con acceso «desconocido», teniéndolo la fuente en la cara.
+    # Es la misma familia del bug que se llevó los seis enlaces de TuBoleta de
+    # CineAutopsia. Ahora se busca el rótulo y se toma el primer href que venga
+    # detrás, y también se acepta el <a> que sí se nombre a sí mismo.
+    m = re.search(r'Inscrip\w*|Inscrib\w*', h, re.I)
     if m:
-        d['registration_url'] = re.sub(r'^http://', 'https://', m.group(1))
+        m2 = re.search(r'href="([^"]+)"', h[m.end():m.end() + 600])
+        if m2:
+            d['registration_url'] = re.sub(r'^http://', 'https://', m2.group(1))
+    if not d.get('registration_url'):
+        m3 = re.search(r'href="([^"]+)"[^>]*>(?:(?!</a>).)*?Inscrib', h, re.S | re.I)
+        if m3:
+            d['registration_url'] = re.sub(r'^http://', 'https://', m3.group(1))
     d['acceso'] = ('Entrada gratis con inscripción' if d.get('registration_url')
                    else ('Entrada libre' if re.search(r'Entrada libre', h, re.I) else lib.DESCONOCIDO))
     return d
