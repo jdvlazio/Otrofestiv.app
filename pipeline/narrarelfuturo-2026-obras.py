@@ -101,25 +101,31 @@ def parse(ruta, h):
     ims = [u for u in dict.fromkeys(re.findall(
         r'(https://narrarelfuturo\.com/wp-content/uploads/[^"\s]+?\.(?:jpg|jpeg|png|webp))', h, re.I))
         if not re.search(r'-\d+x\d+\.', u) and 'Mesa-de-trabajo' not in u]
-    # EL PÓSTER SE ELIGE POR EL NOMBRE DEL ARCHIVO, no por orden.
-    # `LATTICE-poster-1.jpg` aparece PRIMERO en todas las fichas —es un resto de
-    # la plantilla del sitio— así que «la primera imagen que diga poster» le
-    # colgaba el afiche de LATTICE a HensFluenzers, Time Capsule y Sopro. Lo cazó
-    # [posters-duplicados] en validate-festivals, no yo: mi relectura usaba la
-    # misma regla que el parser y se aprobaba a sí misma.
-    clave = re.sub(r'[^a-z0-9]+', '', (d.get('titulo') or '').lower())[:10]
-    propios = [u for u in ims
-               if 'poster' in u.lower()
-               and clave and clave[:6] in re.sub(r'[^a-z0-9]+', '', u.rsplit('/', 1)[-1].lower())]
-    if propios:
-        d['poster'] = propios[0]
-    else:
-        # sin coincidencia de nombre no se cuelga NINGUNO: un afiche ajeno es
-        # peor que ausencia, que la app ya sabe resolver con su forma propia.
-        sueltos = [u for u in ims if 'poster' in u.lower() and 'LATTICE-poster' not in u]
-        if len(sueltos) == 1:
-            d['poster'] = sueltos[0]
-            d['_poster_src'] = 'única imagen de póster de la ficha, sin coincidencia de nombre'
+    # EL PÓSTER: dos señales, y ninguna alcanza sola. Lo midió una revisión
+    # independiente que extrajo las 42 fichas sin ver este código:
+    #   · exigir «poster» EN EL NOMBRE pierde 7 afiches reales
+    #     («1_ColombiaEmbrujoVerdeEsmeralda-1.jpg» no lleva la palabra)
+    #   · exigir que el NOMBRE COINCIDA con el título pierde otros 8
+    #     («PosterQQB1-1-1.jpg», «7059170c3d-poster.webp»)
+    #   · y coincidir por título solo puede traer un FOTOGRAMA: en «Después del
+    #     frío» el archivo que lleva el título es un frame y el afiche es
+    #     «POSTER-DDF-1-1-1.jpg», que no lo lleva.
+    # Por eso: vale cualquiera de las dos señales, y cuando las dos existen
+    # MANDA la que dice «poster». `LATTICE-poster-1.jpg` se descarta siempre:
+    # está en todas las fichas, es un resto de la plantilla del sitio.
+    clave = re.sub(r'[^a-z0-9]+', '', (d.get('titulo') or '').lower())[:8]
+    # …salvo en LATTICE, donde ese archivo ES su afiche legítimo. Excluirlo
+    # siempre dejaba sin póster justo a la obra dueña de la imagen.
+    cand = [u for u in ims if 'LATTICE-poster' not in u or clave.startswith('lattice')]
+    archivo = lambda u: re.sub(r'[^a-z0-9]+', '', u.rsplit('/', 1)[-1].lower())
+    con_palabra = [u for u in cand if 'poster' in u.lower() or 'afiche' in u.lower()]
+    con_titulo = [u for u in cand if clave and clave[:6] in archivo(u)]
+    ambas = [u for u in con_palabra if u in con_titulo]
+    elegido = (ambas or con_palabra or con_titulo)
+    if elegido:
+        d['poster'] = elegido[0]
+        d['_poster_regla'] = ('nombre + palabra' if ambas else
+                              ('palabra «poster»' if con_palabra else 'nombre de la obra'))
     if ims:
         d['imagenes'] = ims[:5]
     m = re.search(r'href="([^"]+)"[^>]*>(?:(?!</a>).){0,600}?Inscrib', h, re.S | re.I)
