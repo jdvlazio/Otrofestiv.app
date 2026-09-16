@@ -40,6 +40,30 @@ def texto(h):
     return [x.strip() for x in t.split('\n') if x.strip()]
 
 
+def imagenes(h):
+    """Las imágenes DEL CONTENIDO de la ficha, en su forma original.
+
+    NO vale barrer el HTML entero buscando URLs de /uploads/: eso recoge
+    también el <meta property="og:image">, que es la imagen para COMPARTIR EN
+    REDES —siempre 16:9, a veces de otra persona («iliana.jpg» en la ficha de un
+    taller que dictan Camila Lozano y Andrés Fernández)—. Once de los doce
+    talleres publicaban esa en vez del retrato del tallerista, que estaba en el
+    contenido, en vertical, dos párrafos más abajo. El <img> del contenido es el
+    único que la página pone para que se vea.
+
+    Se devuelve la forma ORIGINAL: WordPress escribe el src con la variante de
+    tamaño («-836x1024») y la original es la que no la lleva.
+    """
+    out = []
+    for m in re.finditer(r'<img[^>]+src="(https://narrarelfuturo\.com/wp-content/uploads/[^"]+)"', h, re.I):
+        u = re.sub(r'-\d+x\d+(\.\w+)$', r'\1', m.group(1))
+        # chrome del sitio: perfil, logos y la cabecera de plantilla
+        if re.search(r'cropped-|_perfil|perfil\.|logo|favicon|icon|Mesa-de-trabajo', u, re.I):
+            continue
+        out.append(u)
+    return list(dict.fromkeys(out))
+
+
 def minutos(s):
     m = re.match(r'^(\d+)\s*h\s*(\d+)?\s*min', s.strip())
     if m:
@@ -132,13 +156,7 @@ def parse(ruta, h):
             d['sinopsis'] = d['sinopsis'][:_c].rstrip()
             d['_sinopsis_nota'] = 'la web pega a continuación el 2º párrafo de la sinopsis de Chaika; se cortó'
 
-    # DOBLE EXTENSIÓN: WordPress guarda la conversión como «foo.jpg.webp» y
-    # sirve ESA; el «foo.jpg» pelado devuelve 404 — pasó con «Under the sky
-    # DOME». La regex no codiciosa cortaba en la primera extensión y publicaba
-    # una URL muerta, que sin abrir el archivo no se nota.
-    ims = [u for u in dict.fromkeys(re.findall(
-        r'(https://narrarelfuturo\.com/wp-content/uploads/[^"\s]+?\.(?:jpg|jpeg|png|webp)(?:\.webp)?)', h, re.I))
-        if not re.search(r'-\d+x\d+\.', u) and 'Mesa-de-trabajo' not in u]
+    ims = imagenes(h)   # solo el contenido de la ficha, nunca el og:image
     # EL PÓSTER: dos señales, y ninguna alcanza sola. Lo midió una revisión
     # independiente que extrajo las 42 fichas sin ver este código:
     #   · exigir «poster» EN EL NOMBRE pierde 7 afiches reales

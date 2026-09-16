@@ -76,6 +76,30 @@ def bajar(url, nombre):
 CORRECCION_NOMBRE = {'Resonacia Cromática': 'Resonancia Cromática'}
 
 
+def imagenes(h):
+    """Las imágenes DEL CONTENIDO de la ficha, en su forma original.
+
+    NO vale barrer el HTML entero buscando URLs de /uploads/: eso recoge
+    también el <meta property="og:image">, que es la imagen para COMPARTIR EN
+    REDES —siempre 16:9, a veces de otra persona («iliana.jpg» en la ficha de un
+    taller que dictan Camila Lozano y Andrés Fernández)—. Once de los doce
+    talleres publicaban esa en vez del retrato del tallerista, que estaba en el
+    contenido, en vertical, dos párrafos más abajo. El <img> del contenido es el
+    único que la página pone para que se vea.
+
+    Se devuelve la forma ORIGINAL: WordPress escribe el src con la variante de
+    tamaño («-836x1024») y la original es la que no la lleva.
+    """
+    out = []
+    for m in re.finditer(r'<img[^>]+src="(https://narrarelfuturo\.com/wp-content/uploads/[^"]+)"', h, re.I):
+        u = re.sub(r'-\d+x\d+(\.\w+)$', r'\1', m.group(1))
+        # chrome del sitio: perfil, logos y la cabecera de plantilla
+        if re.search(r'cropped-|_perfil|perfil\.|logo|favicon|icon|Mesa-de-trabajo', u, re.I):
+            continue
+        out.append(u)
+    return list(dict.fromkeys(out))
+
+
 def h24(hh, mm, ap):
     # «12m» es MEDIODÍA (meridiano), como lo escribe la ficha del taller de
     # podcast: «10:00am a 12m». Tratarlo como «12 sin am/pm» daba 00:00, el fin
@@ -169,19 +193,8 @@ def parse(slug, h):
     largos = [x for x in L if len(x) > 140]
     if largos:
         d['sinopsis'] = largos[0]
-    # retrato del tallerista: original, sin la variante de tamaño de WordPress
-    ims = [u for u in dict.fromkeys(
-    # DOBLE EXTENSIÓN: WordPress guarda la conversión como «foo.jpg.webp» y
-    # sirve ESA; el «foo.jpg» pelado devuelve 404 — pasó con «Under the sky
-    # DOME». La regex no codiciosa cortaba en la primera extensión y publicaba
-    # una URL muerta, que sin abrir el archivo no se nota.
-        re.findall(r'(https://narrarelfuturo\.com/wp-content/uploads/[^"\s]+?\.(?:jpg|jpeg|png|webp)(?:\.webp)?)', h, re.I))
-        if not re.search(r'-\d+x\d+\.', u) and 'Mesa-de-trabajo' not in u
-        # NO ES DEL TALLER: «cropped-NEF_PERFIL_perfil.jpg» es la imagen de
-        # perfil del SITIO, y en la ficha de «Señales Líquidas» aparece antes que
-        # el retrato del colectivo, así que se publicaba esa. El retrato bueno
-        # («senales-e17882…») venía detrás. Chrome del sitio fuera, por nombre.
-        and not re.search(r'cropped-|_perfil|perfil\.|logo|favicon|icon', u, re.I)]
+    # retrato del tallerista, de las imágenes del contenido (ver imagenes())
+    ims = imagenes(h)
     if ims:
         d['imagen'] = ims[0]
         d['_imagenes'] = ims[:4]

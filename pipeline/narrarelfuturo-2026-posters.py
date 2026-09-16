@@ -58,6 +58,16 @@ def _mide(p):
 
 def main():
     os.makedirs(DEST, exist_ok=True)
+    # DE QUÉ URL SALIÓ CADA ARCHIVO. El nombre local se deriva del TÍTULO, así
+    # que cuando la fuente cambia de imagen —pasó con los once talleres, que
+    # dejaron de apuntar al og:image y pasaron al retrato del tallerista— el
+    # archivo viejo seguía ahí con el nombre correcto y no se volvía a bajar:
+    # el parser ya decía la verdad y las imágenes publicadas eran las anteriores.
+    # Un caché que solo mira si el archivo EXISTE no sabe si es el que toca.
+    previo = {}
+    if os.path.exists(f'{ST}/narrarelfuturo-2026-posters.json'):
+        _p = json.load(io.open(f'{ST}/narrarelfuturo-2026-posters.json', encoding='utf-8'))
+        previo = {v['ruta']: u for u, v in (_p.get('posters') or {}).items()}
     mapa, bajados, fallos = {}, 0, []
     for titulo, url in fuentes():
         if url in mapa:
@@ -66,7 +76,8 @@ def main():
         ext = ext if ext in ('jpg', 'jpeg', 'png', 'webp') else 'jpg'
         nombre = f'{slug(titulo)}.{ext}'
         p = f'{DEST}/{nombre}'
-        if not os.path.exists(p) or not _mide(p):
+        ruta = f'/assets/narrarelfuturo-2026/{nombre}'
+        if not os.path.exists(p) or not _mide(p) or previo.get(ruta) != url:
             r = subprocess.run(['curl', '-sL', '--max-time', '40', '-A', UA, url, '-o', p])
             time.sleep(0.2)
             bajados += 1
@@ -81,7 +92,7 @@ def main():
                 os.remove(p)
             continue
         w, h = wh
-        mapa[url] = {'ruta': f'/assets/narrarelfuturo-2026/{nombre}', 'w': w, 'h': h,
+        mapa[url] = {'ruta': ruta, 'w': w, 'h': h,
                      'posterSource': 'editorial' if w / h >= 1.2 else 'oficial'}
     io.open(f'{ST}/narrarelfuturo-2026-posters.json', 'w', encoding='utf-8').write(
         json.dumps({'_provenance': provenance('narrarelfuturo.com/wp-content (pósters de las fichas y retratos de talleres)',
