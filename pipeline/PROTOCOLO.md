@@ -21,6 +21,29 @@ FICMA (90 funciones desde un PDF de imágenes). Todo lo que dice aquí se pagó.
 
 ---
 
+## 0 · Lo primero es el issue de radar
+
+Antes de abrir la web del festival: **leer su issue de radar**, y bajarlo con
+`pipeline/radar.py <id>` para que quede como fuente versionada.
+
+No es burocracia, es lo más barato que hay. El radar vigila cada festival desde
+meses antes y escribe lo que cambia: cuándo la web seguía congelada en el año
+pasado mientras la bio ya anunciaba la edición, qué talleres aparecieron y qué
+día, qué sede nueva salió. Eso no lo puede reconstruir un onboarding de una
+tarde por más fuentes que abra.
+
+LO QUE COSTÓ APRENDERLO (16 sep 2026, #NarrarElFuturo): publiqué la sala del
+miércoles como «Sala» —un rótulo, no un lugar, en una universidad con cuatro— y
+seis conversatorios sin marcar. Las dos cosas estaban en el issue **ocho días
+antes**, con esas palabras: «#RTMeetTheCreators (proyección + conversatorio con
+quien la dirigió)» y «mié 16 SEP | 3:00 p. m. | Aula Magistral 704-M16». Se
+redescubrieron por Instagram, tarde y a empujones.
+
+`radar.py` además CRUZA: toda sala que el radar nombró cerca de una sede nuestra
+tiene que existir en el crudo, o el paso falla. Probado por mutación contra ese
+mismo error. El número de issue se declara en el plan (`festival.radar`), porque
+las decisiones viven en el plan y no en la memoria de quien monta.
+
 ## 0·bis · Instagram se LEE, y la mitad del dato está dentro de la imagen
 
 Es la fuente donde más festivales publican antes que en su web, y la que peor se

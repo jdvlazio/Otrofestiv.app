@@ -19,6 +19,7 @@
  "sharedSlotIsOneScreening": true,
  "ticketing_model": "mixed",
  "dias_vacios": [],
+ "radar": 569,
  "prioLimit": 3,
  "dias": [
   "2026-09-15",
@@ -2301,9 +2302,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-16T08:35:35",
-  "plan_sha": "964cc49c03b53a24",
-  "paso": 12,
+  "fecha": "2026-09-16T09:55:38",
+  "plan_sha": "2a2876b326495d98",
+  "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py narrarelfuturo-2026"
  }
 }
