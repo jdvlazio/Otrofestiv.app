@@ -2301,9 +2301,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-16T08:23:43",
-  "plan_sha": "03947ce3ea6ea4f9",
-  "paso": 11,
+  "fecha": "2026-09-16T08:35:35",
+  "plan_sha": "964cc49c03b53a24",
+  "paso": 12,
   "cmd": "python3 pipeline/ensamblar.py narrarelfuturo-2026"
  }
 }
