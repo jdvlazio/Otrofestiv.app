@@ -30,6 +30,10 @@
    "que": "fusión → crudo (34 funciones)"
   },
   {
+   "cmd": "python3 pipeline/enriquecer.py narrarelfuturo-2026",
+   "que": "crudo → enriquecido (TMDB + Letterboxd; 47 obras miradas, 13 verificadas). Necesita TMDB_API_KEY en el entorno: `source ~/.zshrc`. SIN --posters a propósito: el afiche oficial del festival manda y comparte nombre de archivo con el de TMDB"
+  },
+  {
    "cmd": "python3 pipeline/ensamblar.py narrarelfuturo-2026",
    "que": "crudo + plan → build"
   },

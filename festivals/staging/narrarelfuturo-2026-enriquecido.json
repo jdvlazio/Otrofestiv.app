@@ -1,9 +1,37 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-15"
+  "capturado": "2026-09-16"
  },
  "obras": [
+  {
+   "titulo": "Caldeirão",
+   "tmdb_id": 1624198,
+   "titulo_original": "Caldeirão",
+   "poster_path": "/b2eEYe2SjBsLFtVHXwr1ixshfwG.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a small village on the banks of the Caldeirão Reservoir, a film crew lingers in the tangle of time. An archive from the 1970s meets records from 2017 to 2024. The territory marks a body-landscape, a living archive of the Brazilian interior, which holds myths, memories, and longing.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 20,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Caldeirão",
+   "lbSlug": "caldeirao"
+  },
+  {
+   "titulo": "Chaika",
+   "tmdb_id": 1689999,
+   "titulo_original": "Chaika",
+   "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
+   "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Chaika",
+   "lbSlug": "chaika-2025"
+  },
   {
    "titulo": "Cosmographies",
    "tmdb_id": 1458083,
@@ -17,6 +45,20 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Cosmographies",
    "lbSlug": "cosmographies"
+  },
+  {
+   "titulo": "Desert Palms",
+   "tmdb_id": 1759059,
+   "titulo_original": "Desert Palms",
+   "poster_path": "/iVGckpv8fEbW0CRqeJMRyUGu5IE.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Set inside a hospital waiting room across the street from a hectic outdoor music festival, Desert Palms is a single-take live action immersive film that follows a throng of injured characters as they wait to be seen by an extremely slow and overwhelmed ER facility.",
+   "genero": "Comedia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 32,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Desert Palms",
+   "lbSlug": "desert-palms"
   },
   {
    "titulo": "Después del frío",
@@ -47,6 +89,34 @@
    "lbSlug": "habitante"
   },
   {
+   "titulo": "Happy People",
+   "tmdb_id": 1444060,
+   "titulo_original": "Boldog Emberek",
+   "poster_path": "/XS9ZoCtDoL61FIXEjMo2vN0qdq.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a world, where a number on the neck shows how happy people are, Kristóf (hiding his number with a turtle-neck) waits for the mandatory Annual Happiness Measurement. In the checking room, first, the contrast material is injected into his body, as every year. But this time, the examiner is shocked, when she realizes, Kristóf is a problematic 21. This happiness level barely exceeds the critical minimum limit. If he goes below 20, he has to be reported to the authorities. On his way out, he bumps into his ex-girlfriend, who surprisingly doesn't hide the number on the neck. She is a proud 80. Seeing her happy, Kristóf starts to realize, maybe he was wrong to break up with her. Maybe, they could be happy again... together.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Happy People",
+   "lbSlug": "happy-people-2025"
+  },
+  {
+   "titulo": "LATTICE",
+   "tmdb_id": 1735843,
+   "titulo_original": "Lattice",
+   "poster_path": "/A97qrG0taQzaNteVeYJuEeJcade.jpg",
+   "synopsis_es": "En el confín del cosmos, donde el tiempo se detiene y la memoria insiste en repetirse, yace A-byssos: un lugar sumergido en las profundidades del océano, donde los recuerdos se manifiestan entre imágenes y ecos persistentes.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "LATTICE",
+   "lbSlug": "lattice-1"
+  },
+  {
    "titulo": "Llueve sobre Babel",
    "tmdb_id": 1388977,
    "titulo_original": "Llueve sobre Babel",
@@ -60,6 +130,20 @@
    "_busqueda": "Llueve sobre Babel",
    "title_en": "Rains Over Babel",
    "lbSlug": "rains-over-babel"
+  },
+  {
+   "titulo": "REFRACCIÓN",
+   "tmdb_id": 1584776,
+   "titulo_original": "Refracción",
+   "poster_path": "/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+   "synopsis_es": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+   "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "REFRACCIÓN",
+   "lbSlug": "refraccion"
   },
   {
    "titulo": "Soñé su nombre",
@@ -77,6 +161,21 @@
    "lbSlug": "i-dreamed-his-name"
   },
   {
+   "titulo": "Xian’er (Chinese Immortals)",
+   "tmdb_id": 1569767,
+   "titulo_original": "仙儿",
+   "poster_path": "/qHJwjACr2J6Ca94gedlYsBATfW4.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Chinese immortals descend to a glitching, digitally scanned world, competing to inhabit statues that mirror China’s collapsing class mobility, pragmatic faith, and viral worship culture. Each statue reflects a social stratum—from state power to forgotten rural elders. A VR fable where tradition culture collides and coexists with modernity.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Xian’er (Chinese Immortals)",
+   "title_en": "Chinese Immortals",
+   "lbSlug": "chinese-immortals"
+  },
+  {
    "titulo": "¿Quién quemó el bus?",
    "tmdb_id": 1712971,
    "titulo_original": "¿Quién Quemó el Bus?",
@@ -92,6 +191,32 @@
   }
  ],
  "verificadas": {
+  "Caldeirão": {
+   "tmdb_id": 1624198,
+   "titulo_original": "Caldeirão",
+   "poster_path": "/b2eEYe2SjBsLFtVHXwr1ixshfwG.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a small village on the banks of the Caldeirão Reservoir, a film crew lingers in the tangle of time. An archive from the 1970s meets records from 2017 to 2024. The territory marks a body-landscape, a living archive of the Brazilian interior, which holds myths, memories, and longing.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 20,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Caldeirão",
+   "lbSlug": "caldeirao"
+  },
+  "Chaika": {
+   "tmdb_id": 1689999,
+   "titulo_original": "Chaika",
+   "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
+   "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Chaika",
+   "lbSlug": "chaika-2025"
+  },
   "Cosmographies": {
    "tmdb_id": 1458083,
    "titulo_original": "Cosmografias",
@@ -104,6 +229,19 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Cosmographies",
    "lbSlug": "cosmographies"
+  },
+  "Desert Palms": {
+   "tmdb_id": 1759059,
+   "titulo_original": "Desert Palms",
+   "poster_path": "/iVGckpv8fEbW0CRqeJMRyUGu5IE.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Set inside a hospital waiting room across the street from a hectic outdoor music festival, Desert Palms is a single-take live action immersive film that follows a throng of injured characters as they wait to be seen by an extremely slow and overwhelmed ER facility.",
+   "genero": "Comedia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 32,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Desert Palms",
+   "lbSlug": "desert-palms"
   },
   "Después del frío": {
    "tmdb_id": 1369339,
@@ -131,6 +269,32 @@
    "_busqueda": "Habitante",
    "lbSlug": "habitante"
   },
+  "Happy People": {
+   "tmdb_id": 1444060,
+   "titulo_original": "Boldog Emberek",
+   "poster_path": "/XS9ZoCtDoL61FIXEjMo2vN0qdq.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a world, where a number on the neck shows how happy people are, Kristóf (hiding his number with a turtle-neck) waits for the mandatory Annual Happiness Measurement. In the checking room, first, the contrast material is injected into his body, as every year. But this time, the examiner is shocked, when she realizes, Kristóf is a problematic 21. This happiness level barely exceeds the critical minimum limit. If he goes below 20, he has to be reported to the authorities. On his way out, he bumps into his ex-girlfriend, who surprisingly doesn't hide the number on the neck. She is a proud 80. Seeing her happy, Kristóf starts to realize, maybe he was wrong to break up with her. Maybe, they could be happy again... together.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Happy People",
+   "lbSlug": "happy-people-2025"
+  },
+  "LATTICE": {
+   "tmdb_id": 1735843,
+   "titulo_original": "Lattice",
+   "poster_path": "/A97qrG0taQzaNteVeYJuEeJcade.jpg",
+   "synopsis_es": "En el confín del cosmos, donde el tiempo se detiene y la memoria insiste en repetirse, yace A-byssos: un lugar sumergido en las profundidades del océano, donde los recuerdos se manifiestan entre imágenes y ecos persistentes.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "LATTICE",
+   "lbSlug": "lattice-1"
+  },
   "Llueve sobre Babel": {
    "tmdb_id": 1388977,
    "titulo_original": "Llueve sobre Babel",
@@ -145,6 +309,19 @@
    "title_en": "Rains Over Babel",
    "lbSlug": "rains-over-babel"
   },
+  "REFRACCIÓN": {
+   "tmdb_id": 1584776,
+   "titulo_original": "Refracción",
+   "poster_path": "/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+   "synopsis_es": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+   "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "REFRACCIÓN",
+   "lbSlug": "refraccion"
+  },
   "Soñé su nombre": {
    "tmdb_id": 1454365,
    "titulo_original": "Soñé su nombre",
@@ -158,6 +335,20 @@
    "_busqueda": "Soñé su nombre",
    "title_en": "I Dreamed His Name",
    "lbSlug": "i-dreamed-his-name"
+  },
+  "Xian’er (Chinese Immortals)": {
+   "tmdb_id": 1569767,
+   "titulo_original": "仙儿",
+   "poster_path": "/qHJwjACr2J6Ca94gedlYsBATfW4.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Chinese immortals descend to a glitching, digitally scanned world, competing to inhabit statues that mirror China’s collapsing class mobility, pragmatic faith, and viral worship culture. Each statue reflects a social stratum—from state power to forgotten rural elders. A VR fable where tradition culture collides and coexists with modernity.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Xian’er (Chinese Immortals)",
+   "title_en": "Chinese Immortals",
+   "lbSlug": "chinese-immortals"
   },
   "¿Quién quemó el bus?": {
    "tmdb_id": 1712971,
@@ -174,16 +365,39 @@
   }
  },
  "sin_ficha": [
+  "6 de diciembre",
   "Alucinación Artificial y Extinción",
   "Aqua, Ensayo & Diversidad",
   "Colombia: embrujo verde esmeralda",
   "Colombia: raíces arrancadas",
+  "Céremony",
+  "Despierta",
+  "ECHOES OF THE JORDAN",
   "El Futuro del Futuro",
+  "Fail",
+  "HensFluenzers",
+  "How things are between us",
+  "Hybrid",
+  "Living Metals",
+  "Malignant / Catatonic",
   "Manos que reciben vida",
+  "Marta Trend",
+  "Mercado del arte_ cómo fabricar un artista",
   "Narrar. Creer. Crecer",
   "Niños de Donbass: historias de superación",
-  "Sala VR",
+  "Outline Against the Sun",
+  "Protegiendo nuestro territorio",
+  "Puffer Fish",
+  "QALVINIST QOSMOS",
+  "Sopro",
+  "Sueño Viscoso 194",
+  "The Cinema that never was",
+  "The Sacred Clearing",
+  "Time Capsule",
+  "Under the sky DOME",
+  "VR #OtrosMundosPosibles",
   "Venezuela: latidos entre escombros",
-  "Vivir de la piedra"
+  "Vivir de la piedra",
+  "WE WERE CHILDREN ONCE"
  ]
 }

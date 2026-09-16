@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "https://narrarelfuturo.com/programa-2026/",
-  "capturado": "2026-09-15",
+  "capturado": "2026-09-16",
   "metodo": "tarjetas .evento-card del HTML servido; el día se lee del TEXTO de cada tarjeta",
   "nota": "la web etiqueta las 24 tarjetas con la clase dia-15 —su filtro por día está roto— así que la clase no sirve"
  },

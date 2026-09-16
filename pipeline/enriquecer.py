@@ -106,11 +106,27 @@ def main():
     tit_of = corr.get('titulo_oficial', {})
     alias = corr.get('alias', {})
 
+    # TODAS las obras, no solo las de nivel superior. Hasta hoy esto recorría
+    # únicamente `funciones`, así que en un festival con programas de cortos el
+    # enriquecido cubría el programa y NINGUNO de los cortos que lo componen
+    # —en #NarrarElFuturo, 17 obras miradas y 85 ignoradas—. Las obras de dentro
+    # son obras: tienen título, dirección, año y duración, que es justo lo que
+    # ficha_verifica() necesita. El candado no cambia: lo que no verifica, no
+    # entra; un corto sin ficha en TMDB simplemente sale en `sin_ficha`.
     obras = {}
     for f in crudo['funciones']:
-        if f.get('en_app', True) and f.get('tipo', 'film') in ('film', ''):
+        if not f.get('en_app', True):
+            continue
+        if f.get('tipo', 'film') in ('film', ''):
             t = tit_of.get(f['titulo'], f['titulo'])
             obras.setdefault(t, {**f, 'titulo': t})
+        for o in f.get('obras') or []:
+            if not o.get('titulo'):
+                continue
+            t = tit_of.get(o['titulo'], o['titulo'])
+            # la obra hereda el día de su función solo para el reporte; lo que
+            # verifica es su propia ficha (director, año, duración)
+            obras.setdefault(t, {**o, 'titulo': t})
 
     ok, sin = {}, []
     for i, (t, f) in enumerate(sorted(obras.items()), 1):
