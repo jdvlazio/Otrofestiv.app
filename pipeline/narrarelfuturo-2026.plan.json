@@ -1,5 +1,5 @@
 {
- "_nota": "#NarrarElFuturo 13 — Festival de Cine & Nuevos Medios, Bogotá, 15–20 SEP 2026. Montado CON EL FESTIVAL YA EN CURSO (arrancó el 15).\n\nCUATRO FUENTES, y cada una aporta algo que las otras no: (1) narrarelfuturo.com/programa-2026/ da la PARRILLA —y no está enlazada en el menú del sitio, la pasó Juan—; (2) una ficha por obra bajo esa misma ruta da sinopsis, póster, dirección y género; (3) /talleres-2026/<slug>/ da la franja académica con el retrato del tallerista; (4) Instagram da lo único que la web no publica, el bloque de la Sala VR con su horario. La agenda de la Cinemateca NO aporta dato: CONTRASTA, y ya cazó una discrepancia.\n\nSECCIONES: son las temáticas con que el propio festival filtra su programa, más «Sala VR», que es como llama a la instalación. Ninguna es nuestra.\n\nLA INSTALACIÓN VR no es una función: está abierta en bloque (15–18 de 2 a 6, 19–20 de 11 a 6) y va como actividad recurrente. Sin ella el domingo 20 quedaría vacío.",
+ "_nota": "#NarrarElFuturo 13 — Festival de Cine & Nuevos Medios, Bogotá, 15–20 SEP 2026. Montado CON EL FESTIVAL YA EN CURSO (arrancó el 15).\n\nCUATRO FUENTES, y cada una aporta algo que las otras no: (1) narrarelfuturo.com/programa-2026/ da la PARRILLA —y no está enlazada en el menú del sitio, la pasó Juan—; (2) una ficha por obra bajo esa misma ruta da sinopsis, póster, dirección y género; (3) /talleres-2026/<slug>/ da la franja académica con el retrato del tallerista; (4) Instagram da lo único que la web no publica, el bloque de la Sala VR con su horario. La agenda de la Cinemateca NO aporta dato: CONTRASTA, y ya cazó una discrepancia.\n\nSECCIONES: son las temáticas con que el propio festival filtra su programa, más «Sala VR», que es como llama a la instalación. Ninguna es nuestra.\n\nLA INSTALACIÓN VR no es una función: está abierta en bloque (15–18 de 2 a 6, 19–20 de 11 a 6) y va como actividad recurrente. Sin ella el domingo 20 quedaría vacío.\n\nSLOTS COMPARTIDOS = UNA FUNCIÓN: los tres pares de la Tadeo a las 3 pm (16, 17 y 18 SEP) son una sola sesión «RT Meet The Creators» con dos documentales y conversación con sus realizadores; el festival les da tarjeta y ficha propias a cada documental, por eso son dos entradas con la misma hora y sala.",
  "pasos": [
   {
    "cmd": "python3 pipeline/narrarelfuturo-2026-web.py",
@@ -22,8 +22,12 @@
    "que": "agenda de la Cinemateca → contraste de 8 funciones"
   },
   {
+   "cmd": "python3 pipeline/narrarelfuturo-2026-posters.py",
+   "que": "pósters y retratos → assets/narrarelfuturo-2026/ (re-host, [poster-host])"
+  },
+  {
    "cmd": "python3 pipeline/narrarelfuturo-2026-crudo.py",
-   "que": "fusión → crudo (32 funciones)"
+   "que": "fusión → crudo (34 funciones)"
   },
   {
    "cmd": "python3 pipeline/ensamblar.py narrarelfuturo-2026",
@@ -83,10 +87,11 @@
   "storageKey": "narrarelfuturo2026_",
   "festivalStartStr": "2026-09-15T00:00:00",
   "festivalEndStr": "2026-09-20T23:59:00",
-  "sharedSlotIsOneScreening": false,
+  "sharedSlotIsOneScreening": true,
   "ticketing_model": "mixed",
   "mes_es": "septiembre",
   "dias_vacios": [],
-  "geo": "festivals/staging/narrarelfuturo-2026-venues-geo.json"
+  "geo": "festivals/staging/narrarelfuturo-2026-venues-geo.json",
+  "enriquecido": "festivals/staging/narrarelfuturo-2026-enriquecido.json"
  }
 }

@@ -68,6 +68,11 @@ def bajar(url, nombre):
 
 
 def h24(hh, mm, ap):
+    # «12m» es MEDIODÍA (meridiano), como lo escribe la ficha del taller de
+    # podcast: «10:00am a 12m». Tratarlo como «12 sin am/pm» daba 00:00, el fin
+    # quedaba antes del inicio y el taller salía sin duración.
+    if (ap or '').lower() == 'm' and int(hh) == 12:
+        return '12:00'
     h = int(hh) % 12 + (12 if (ap or '').lower().startswith('p') else 0)
     return f'{h:02d}:{mm or "00"}'
 
@@ -107,6 +112,16 @@ def parse(slug, h):
         if re.match(r'^Segunda sesi', x, re.I):
             d['_segunda_sesion'] = x
         mr = RE_RANGO.search(x)
+        # SEGUNDA SESIÓN el mismo día: el taller de podcast va «10:00am a 12m» y
+        # «Segunda sesión: 2:00pm a 6:00pm». Antes se guardaba solo el rótulo y
+        # el bloque de la tarde se perdía en silencio; ahora es una sesión más,
+        # que el crudo publica como su propia actividad.
+        if mr and d.get('hora') and not d.get('sesion2'):
+            h2 = h24(mr.group(1), mr.group(2), mr.group(3) or mr.group(6))
+            f2 = h24(mr.group(4), mr.group(5), mr.group(6))
+            i2 = int(h2[:2]) * 60 + int(h2[3:])
+            e2 = int(f2[:2]) * 60 + int(f2[3:])
+            d['sesion2'] = {'hora': h2, 'duracion_min': (e2 - i2) if e2 > i2 else None, '_rango': x}
         if mr and not d.get('hora'):
             d['hora'] = h24(mr.group(1), mr.group(2), mr.group(3) or mr.group(6))
             fin = h24(mr.group(4), mr.group(5), mr.group(6))

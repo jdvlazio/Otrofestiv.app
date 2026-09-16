@@ -143,6 +143,11 @@ def main():
     json.dump({'_provenance': provenance(
         'TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() '
         '(director + año ±1 o duración ±3 min). Lo que no verifica no entra.'),
+        # `obras` es la LISTA que lee el ensamblador y exige cargar_plan (lib.
+        # _forma_sidecar): hasta hoy este archivo solo traía el diccionario
+        # `verificadas`, así que el plan que lo declaraba no cumplía su contrato
+        # y el enriquecido no llegaba a la app. Se escriben las dos formas.
+        'obras': [{'titulo': t, **e} for t, e in ok.items()],
         'verificadas': ok, 'sin_ficha': sorted(sin)},
         open(f'{ST}/{fid}-enriquecido.json', 'w', encoding='utf-8'),
         ensure_ascii=False, indent=1)

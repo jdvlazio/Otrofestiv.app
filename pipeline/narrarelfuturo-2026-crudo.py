@@ -61,25 +61,19 @@ SECCION = {
     'RT Meet The Creators': 'Proyecciones & Largos',
     'Cortos': 'Muestra de Cortos',
     'taller': 'Talleres & Formación',
-    'Sala VR': 'Sala VR',
+    # la instalación entra con su kind, no con una etiqueta de tarjeta: sin esta
+    # clave caía a «Proyecciones & Largos» y la Sala VR no existía como sección
+    'experiencia': 'Sala VR',
 }
 # La clausura no lleva etiqueta en su tarjeta: es una proyección y va con ellas.
 SECCION_DEFECTO = 'Proyecciones & Largos'
 
 
-def slug(s):
-    """Clave de JOIN entre el título que muestra la tarjeta («Aqua, Ensayo &
-    Diversidad») y el slug de la ruta de la ficha («aqua-ensayo-diversidad»).
-    Cruzarlos por `norm` NO casa nunca —coma y ampersand—, y el fallo es mudo:
-    la función se publica sin sus obras y nada avisa. Un error de join no se ve
-    verificando transcripción."""
-    s = unicodedata.normalize('NFD', (s or '').lower()).encode('ascii', 'ignore').decode()
-    return '-'.join(x for x in re.split(r'[^a-z0-9]+', s) if x)
-
-
-def norm(s):
-    s = unicodedata.normalize('NFD', (s or '').lower()).encode('ascii', 'ignore').decode()
-    return ' '.join(s.split())
+# slug()/norm() son las de lib: la clave de JOIN entre el título de la tarjeta
+# («Aqua, Ensayo & Diversidad») y el slug de la ruta de la ficha
+# («aqua-ensayo-diversidad»). Cruzar por norm() NO casa —coma y ampersand— y
+# el fallo es mudo: la función se publica sin sus obras y nada avisa.
+from lib import slug, norm  # noqa: E402
 
 
 def cargar(n):
@@ -179,6 +173,13 @@ def main():
             'poster': t.get('imagen'), 'acceso': t.get('acceso', lib.DESCONOCIDO),
             'registration_url': t.get('registration_url'), '_src': t.get('_src'),
         })
+        # Segunda sesión el mismo día (podcast: 10–12 y 2–6): su propia
+        # actividad, con la misma ficha. Sin esto el bloque de la tarde no existía.
+        if t.get('sesion2') and t['sesion2'].get('hora'):
+            g = dict(funciones[-1])
+            g.update({'hora': t['sesion2']['hora'], 'duracion_min': t['sesion2'].get('duracion_min'),
+                      '_nota': 'segunda sesión del mismo día, declarada así en la ficha del taller'})
+            funciones.append(g)
 
     # Las obras de VR también tienen ficha propia en la web: sin completarlas
     # desde ahí salían sin póster ni sinopsis las 48 entradas (8 obras × 6
@@ -190,7 +191,11 @@ def main():
                          if (o.get(k) or base.get(k))})
     for dia, hora, dur in VR_SESIONES:
         funciones.append({
-            'titulo': 'Sala VR', 'dia': dia, 'hora': hora,
+            # El nombre es el del festival, verbatim: la tarjeta de la web dice
+            # «VR» / «#OtrosMundosPosibles» y el arte de IG «Expo VR
+            # #OtrosMundosPosibles». «Sala VR» es la SECCIÓN (IG: «Proyecciones
+            # en SALA VR»), no el título de la actividad.
+            'titulo': 'VR #OtrosMundosPosibles', 'dia': dia, 'hora': hora,
             'sede': VR_SEDE, 'sala': VR_SALA,
             'duracion_min': dur,
             # ACTIVIDAD ABIERTA, no una función con hora de inicio: la
@@ -208,6 +213,22 @@ def main():
 
     for f in funciones:
         f['seccion'] = SECCION.get(f.get('event_kind'), SECCION_DEFECTO)
+        # La ETIQUETA de la tarjeta («Largometraje», «Cortos», «RT Meet The
+        # Creators») sirve para elegir la sección y ahí se queda: NO es un
+        # event_kind. Un event_kind que la app no conoce pinta «EVENTO» genérico
+        # en la card de una película. Solo los talleres y la instalación VR son
+        # actividades con kind propio.
+        if f.get('event_kind') not in ('taller', 'experiencia'):
+            f.pop('event_kind', None)
+    # Pósters RE-HOSTEADOS (paso posters.py): la tabla remota→/assets/ se aplica
+    # aquí, sobre funciones y obras, porque el crudo es el único que decide qué
+    # póster lleva cada cosa. Si la tabla no existe, quedan las URLs del festival.
+    _pp = f'{ST}/narrarelfuturo-2026-posters.json'
+    _posters = json.load(io.open(_pp, encoding='utf-8')).get('posters', {}) if os.path.exists(_pp) else {}
+    for f in funciones:
+        for x in [f] + list(f.get('obras') or []):
+            if x.get('poster') in _posters:
+                x['poster'] = _posters[x['poster']]
     funciones = [{k: v for k, v in f.items() if v not in (None, '')} for f in funciones]
     for f in funciones:
         f.setdefault('sala', '')

@@ -237,8 +237,14 @@
    "pais": "Colombia",
    "dia": "2026-09-17",
    "hora": "10:00",
+   "duracion_min": 120,
    "_rango": "10:00am a 12m",
    "_segunda_sesion": "Segunda sesión:",
+   "sesion2": {
+    "hora": "14:00",
+    "duracion_min": 240,
+    "_rango": "2:00pm a 6:00pm"
+   },
    "sede": "Cinemateca de Bogotá",
    "sala": "Taller de la Imagen",
    "sinopsis": "En este taller práctico aprenderás a darle forma a tu propio podcast. Conocerás el panorama actual de la industria del audio bajo demanda y recibirás las herramientas conceptuales y técnicas necesarias para arrancar tu proyecto hoy mismo. Contaremos con equipos a disposición de los asistentes para que la experiencia sea totalmente experimental. ¡Ven listo para grabar!",

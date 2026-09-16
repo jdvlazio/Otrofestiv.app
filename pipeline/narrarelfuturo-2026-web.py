@@ -166,9 +166,9 @@ def una(L, bloque=''):
         x = L[k]
         mf = RE_FICHA.match(x)
         if mf and minutos(mf.group('dur')) is not None:
-            ficha = {'pais': mf.group('pais').strip(), 'anio': int(mf.group('anio')) if mf.group('anio') else None,
+            ficha = _sin_pais({'pais': mf.group('pais').strip(), 'anio': int(mf.group('anio')) if mf.group('anio') else None,
                      'duracion_min': minutos(mf.group('dur')),
-                     'genero': (mf.group('gen') or '').strip()}
+                     'genero': (mf.group('gen') or '').strip()})
             prev = L[k - 1]
             if prev.startswith('Dir.'):
                 ficha['director'] = re.sub(r'^Dir\.\s*', '', prev).strip()
@@ -209,6 +209,14 @@ def una(L, bloque=''):
     return f
 
 
+def _sin_pais(d):
+    """«2025 · 15 min · VR Interactivo» (ECHOES OF THE JORDAN): la tarjeta no
+    trae país y el año cae en su hueco. Un país «2025» salía con globo."""
+    if re.fullmatch(r'(19|20)\d\d', d.get('pais') or ''):
+        d['anio'], d['pais'] = int(d['pais']), None
+    return d
+
+
 def vr(L):
     """Una tarjeta de la INSTALACIÓN VR → una obra. No son funciones: la
     instalación está abierta en bloque (15–18 de 2 a 6, 19–20 de 11 a 6) y sus
@@ -218,9 +226,9 @@ def vr(L):
     for k, x in enumerate(L):
         mf = RE_FICHA.match(x)
         if mf and minutos(mf.group('dur')) is not None:
-            o.update({'pais': mf.group('pais').strip(), 'anio': int(mf.group('anio')) if mf.group('anio') else None,
+            o.update(_sin_pais({'pais': mf.group('pais').strip(), 'anio': int(mf.group('anio')) if mf.group('anio') else None,
                       'duracion_min': minutos(mf.group('dur')),
-                      'genero': (mf.group('gen') or '').strip()})
+                      'genero': (mf.group('gen') or '').strip()}))
         elif x == 'Dir.' and k + 1 < len(L):
             o.setdefault('director', L[k + 1])
         elif len(x) > 110 and not o.get('sinopsis'):
