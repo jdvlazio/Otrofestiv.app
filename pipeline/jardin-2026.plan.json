@@ -1,0 +1,19 @@
+{
+ "_nota": "PRE-ONBOARDING. El 11° Festival de Cine de Jardín (Jardín, Antioquia, 24–27 sep 2026) publicó sus obras entre el 14 y el 15 sep —una página propia por obra, con ficha completa— y NO publicó la parrilla. Por eso esto es un catálogo y no un crudo: el formato intermedio exige día, hora y sede, y no se inventan.\n\nEL ÍNDICE ES EL SITEMAP. `post-sitemap.xml` fecha cada página al minuto, así que se sabe qué entró en esta edición y qué es de otra: el sitio RETOCÓ en septiembre fichas de ediciones pasadas, y la fecha del sitemap sola habría metido «Elementales» (Caleidoscopio 2025) como si fuera de 2026.\n\nDOS TRAMPAS REGISTRADAS POR EL RADAR (#811) Y COMPROBADAS HOY: el banner de «programación» de la home enlaza el PDF de 2025, y los sitemaps del plugin de agenda (`wcs-*`) están congelados en 2018 — no sirven de señal adelantada. La parrilla saldrá por PDF o por Instagram.\n\nY UNA DEL SITIO: el slug `deus-ex-necro-machina` REDIRIGE a la página de «Primer amor», que es otra obra (Mateo M. Correa vs Iván Luna Dulcey). O sea que un corto de la selección anunciada se quedó sin ficha porque su URL se reutilizó. Ese y «Elementales» entran desde el catálogo de Instagram, marcados con `_solo_ig`.",
+ "radar": 811,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py jardin-2026",
+   "que": "el issue de radar como fuente, y cruza sus salas contra lo extraído"
+  },
+  {
+   "cmd": "python3 pipeline/jardin-2026-catalogo.py",
+   "que": "festicinejardin.com por sitemap → catálogo de 37 obras (22 CALEIDOSCOPIO + 15 Muestra Central), con cobertura inversa contra la selección anunciada en Instagram"
+  },
+  {
+   "cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/jardin-2026-catalogo.json",
+   "que": "catálogo → festivals/staging/jardin-2026-catalogo-enriquecido.json (mismo candado que enriquecer.py)"
+  }
+ ],
+ "_falta": "LA PARRILLA. Sin día, hora ni sede no hay festival que montar. Cuando salga, este plan crece con el paso que la arma y el catálogo pasa a ser la ficha de cada obra."
+}
