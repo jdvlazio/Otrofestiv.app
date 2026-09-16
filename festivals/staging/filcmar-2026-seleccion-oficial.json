@@ -1,9 +1,9 @@
 {
  "_provenance": {
-  "fuente": "Instagram del festival (@filcmar) — los dos carruseles de Selección Oficial",
+  "fuente": "Instagram del festival (@filcmar) — los tres carruseles de Selección Oficial",
   "capturado": "2026-09-15",
-  "metodo": "LECTURA DE LÁMINA, una por una, a resolución completa. El texto alternativo de Instagram vino VACÍO en las 13 láminas, así que la doble lectura de Jardín no era posible: solo hay lectura visual. El pie no lista títulos («desliza para conocer la lista completa»).",
-  "alcance": "Las dos competencias publicadas. NO hay funciones: ni día, ni hora, ni sede. El festival es del 9 al 13 de octubre."
+  "metodo": "LECTURA DE LÁMINA, una por una, a resolución completa. El texto alternativo de Instagram vino VACÍO, así que la doble lectura de Jardín no era posible por ahí. Para Trasnoche (15 sep) sí la hubo: OCR del sistema (pipeline/ocr.py) MÁS lectura visual, y no coincidieron — el OCR leyó «HOLT» donde la lámina dice «HDLT», y puso la productora en el renglón de la dirección. Manda la vista. El pie no lista títulos («desliza para conocer la lista completa»).",
+  "alcance": "Las TRES competencias publicadas (Latinoamericana, Universitaria y Espíritu Trasnoche). NO hay funciones: ni día, ni hora, ni sede. El festival es del 9 al 13 de octubre."
  },
  "_festival": {
   "nombre": "Festival de Cine de Marinilla",
@@ -371,6 +371,71 @@
    "_src": {
     "url": "https://www.instagram.com/filcmar/p/DczfyWVjjI6/",
     "date": "2026-09-06"
+   }
+  },
+  {
+   "titulo": "HDLT",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 18,
+   "duracion_lamina": "18 min",
+   "seccion": "Competencia Espíritu Trasnoche",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdU6a5DjYji/",
+    "date": "2026-09-15"
+   },
+   "produccion": "Artefactum Suba"
+  },
+  {
+   "titulo": "El cazador",
+   "director": "Luciana Riso Soto, Manuel Villa",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 13,
+   "duracion_lamina": "13 min",
+   "seccion": "Competencia Espíritu Trasnoche",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdU6a5DjYji/",
+    "date": "2026-09-15"
+   }
+  },
+  {
+   "titulo": "Show de Ziggy: la maldición del Mariachi Bondage",
+   "director": "Giorgio Ross",
+   "pais": "México",
+   "anio": 2026,
+   "duracion_min": 10,
+   "duracion_lamina": "10 min",
+   "seccion": "Competencia Espíritu Trasnoche",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdU6a5DjYji/",
+    "date": "2026-09-15"
+   }
+  },
+  {
+   "titulo": "Merrimundi",
+   "director": "Niles Atallah",
+   "pais": "Chile",
+   "anio": 2025,
+   "duracion_min": 20,
+   "duracion_lamina": "20 min",
+   "seccion": "Competencia Espíritu Trasnoche",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdU6a5DjYji/",
+    "date": "2026-09-15"
+   }
+  },
+  {
+   "titulo": "Petra y el sol",
+   "director": "Malu Furche, Stefania Malacchini",
+   "pais": "Chile",
+   "anio": 2026,
+   "duracion_min": 10,
+   "duracion_lamina": "10 min",
+   "seccion": "Competencia Espíritu Trasnoche",
+   "_src": {
+    "url": "https://www.instagram.com/filcmar/p/DdU6a5DjYji/",
+    "date": "2026-09-15"
    }
   }
  ]

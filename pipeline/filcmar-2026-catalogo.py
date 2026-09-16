@@ -12,6 +12,7 @@ import json, os, re
 
 LAT = 'https://www.instagram.com/filcmar/p/DdSWXZoDT3a/'
 UNI = 'https://www.instagram.com/filcmar/p/DczfyWVjjI6/'
+TRA = 'https://www.instagram.com/filcmar/p/DdU6a5DjYji/'
 
 # (titulo, director, pais_o_universidad, anio, duracion tal cual la lámina)
 LATINO = [
@@ -26,6 +27,20 @@ LATINO = [
  ('Persépio', 'Felipe Bibian', 'Brasil', 2025, '18 min'),
  ('Lo que queda del mar', 'Camila Adaro Liloff', 'Argentina', 2026, '5 min'),
  ('El día interrumpido', 'María Villar', 'Argentina', 2025, '13 min'),
+]
+# Tercera competencia, anunciada el 15 SEP — el catálogo de las otras dos se
+# había capturado el día antes. La encontró el issue de radar del festival
+# (#903) el 16 SEP: cinco títulos que no teníamos.
+#
+# HDLT no lleva dirección: la lámina la acredita «Prod. Artefactum Suba», que es
+# una PRODUCTORA. Va en `produccion`, no en `director` — un crédito que no es
+# autoría no se convierte en autoría por caber en el campo.
+TRASNOCHE = [
+ ('HDLT', None, 'Artefactum Suba', 'Colombia', 2026, '18 min'),
+ ('El cazador', 'Luciana Riso Soto, Manuel Villa', None, 'Colombia', 2026, '13 min'),
+ ('Show de Ziggy: la maldición del Mariachi Bondage', 'Giorgio Ross', None, 'México', 2026, '10 min'),
+ ('Merrimundi', 'Niles Atallah', None, 'Chile', 2025, '20 min'),
+ ('Petra y el sol', 'Malu Furche, Stefania Malacchini', None, 'Chile', 2026, '10 min'),
 ]
 UNIV = [
  ('The Raules', 'Hugo Chamorro', 'Politécnico Colombiano Jaime Isaza Cadavid', 2025, '1:19 min'),
@@ -65,12 +80,21 @@ for t, dr, donde, anio, dur in UNIV:
                   'seccion': '6ª Competencia Universitaria',
                   '_src': {'url': UNI, 'date': '2026-09-06'}})
 
+for t, dr, prod, donde, anio, dur in TRASNOCHE:
+    o = {'titulo': t, 'director': dr, 'pais': donde, 'anio': anio,
+         'duracion_min': minutos(dur), 'duracion_lamina': dur,
+         'seccion': 'Competencia Espíritu Trasnoche',
+         '_src': {'url': TRA, 'date': '2026-09-15'}}
+    if prod:
+        o['produccion'] = prod
+    obras.append({k: v for k, v in o.items() if v is not None})
+
 out = {
  '_provenance': {
-   'fuente': 'Instagram del festival (@filcmar) — los dos carruseles de Selección Oficial',
+   'fuente': 'Instagram del festival (@filcmar) — los tres carruseles de Selección Oficial',
    'capturado': '2026-09-15',
-   'metodo': 'LECTURA DE LÁMINA, una por una, a resolución completa. El texto alternativo de Instagram vino VACÍO en las 13 láminas, así que la doble lectura de Jardín no era posible: solo hay lectura visual. El pie no lista títulos («desliza para conocer la lista completa»).',
-   'alcance': 'Las dos competencias publicadas. NO hay funciones: ni día, ni hora, ni sede. El festival es del 9 al 13 de octubre.'},
+   'metodo': 'LECTURA DE LÁMINA, una por una, a resolución completa. El texto alternativo de Instagram vino VACÍO, así que la doble lectura de Jardín no era posible por ahí. Para Trasnoche (15 sep) sí la hubo: OCR del sistema (pipeline/ocr.py) MÁS lectura visual, y no coincidieron — el OCR leyó «HOLT» donde la lámina dice «HDLT», y puso la productora en el renglón de la dirección. Manda la vista. El pie no lista títulos («desliza para conocer la lista completa»).',
+   'alcance': 'Las TRES competencias publicadas (Latinoamericana, Universitaria y Espíritu Trasnoche). NO hay funciones: ni día, ni hora, ni sede. El festival es del 9 al 13 de octubre.'},
  '_festival': {
    'nombre': 'Festival de Cine de Marinilla', 'sigla': 'FILCMAR', 'edicion': 8,
    'ciudad': 'Marinilla, Antioquia',
