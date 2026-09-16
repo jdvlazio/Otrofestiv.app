@@ -200,6 +200,16 @@ def ensamblar(fid, escribir=True):
             e.update(lib.acceso_campos(acc, f.get('ticket_url') or ''))
         elif f.get('ticket_url'):
             e['ticket_url'] = f['ticket_url']
+        # El ENLACE de inscripción viaja aparte de la palabra. `acceso_campos`
+        # traduce el texto del festival («con inscripción» → requires_registration)
+        # y recibe la URL de boletería, pero nunca la del formulario: un crudo con
+        # `registration_url` lo perdía aquí en silencio. PROTOCOLO §4 lo declara
+        # campo de la FUNCIÓN —«cada actividad tiene su formulario»— y es la misma
+        # familia del bug que se llevó los seis enlaces de TuBoleta de
+        # CineAutopsia: el dato estaba en la fuente y no llegaba al JSON.
+        if f.get('registration_url'):
+            e['registration_url'] = f['registration_url']
+            e.setdefault('requires_registration', True)
         if obras:
             e['is_cortos'] = True
             e['film_list'] = [{k: v for k, v in {

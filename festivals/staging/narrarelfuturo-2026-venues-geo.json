@@ -1,0 +1,24 @@
+{
+ "_provenance": {
+  "fuente": "heredado de festivals/ficdeh-2026.json, que ya publicó las tres sedes con su nombre canónico",
+  "capturado": "2026-09-15",
+  "metodo": "primero se busca EN CASA. Las tres sedes de este festival ya estaban geocodificadas en FICDEH; ir a Google Maps fue trabajo repetido, y lo señaló Juan.",
+  "verificacion": "La Cinemateca de Bogotá se consultó además en Maps y dio 4.6031614, -74.0676717 — IDÉNTICO al decimal que lo heredado, en tres festivales nuestros. La Tadeo dio 4.6070928, -74.0674184 en Maps contra 4.607911, -74.0673108 heredado: 90 m de diferencia, el mismo campus; se conserva el heredado por ser registro de sede ya publicado.",
+  "nota": "Tercer Tiempo tiene «CEFE Fontanar del Río» en 4.754983, -74.1126869, a ~200 m del registro de FICDEH. Se toma el de FICDEH porque su clave es EXACTAMENTE la canónica que este festival necesita."
+ },
+ "Cinemateca de Bogotá - Bogotá": {
+  "lat": 4.6031614, "lng": -74.0676717, "address": "Cra. 3 #19-10",
+  "_prec": "heredada-verificada",
+  "_nota": "coincide al decimal con Google Maps y con cineautopsia, ficdeh y qaff"
+ },
+ "Cinemateca Fontanar del Río - Bogotá": {
+  "lat": 4.7561244, "lng": -74.1110572, "address": "Calle 145 #138a-10",
+  "_prec": "heredada",
+  "_nota": "de ficdeh-2026, con este mismo nombre canónico"
+ },
+ "Universidad Jorge Tadeo Lozano - Bogotá": {
+  "lat": 4.607911, "lng": -74.0673108, "address": "Cra. 4 #22-61",
+  "_prec": "heredada",
+  "_nota": "de ficdeh-2026 («Salón Oval»); Maps dio un punto a 90 m, mismo campus"
+ }
+}

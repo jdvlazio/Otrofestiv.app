@@ -82,14 +82,22 @@ def tarjetas(h):
 
 
 def minutos(s):
-    """«1h 33min» → 93 · «26 min 28s» → 26 · «11 min23s» → 11 · «14 min» → 14.
-    Los segundos se DESCARTAN, no se redondean: la app muestra minutos y una
-    obra de 26 min 28 s no dura 27. Ese medio minuto inventado se acumula en la
-    suma de un programa de diez cortos."""
+    """«1h 33min» → 93 · «26 min 28s» → 26 · «14 min» → 14.
+
+    Los segundos se REDONDEAN, no se descartan. La primera versión los
+    descartaba con un razonamiento que sonaba bien —«26 min 28 s no dura 27»— y
+    era falso en agregado: 34 obras llevan segundos y truncarlas se comía 18
+    minutos del catálogo. Lo decidió el dato, no el argumento: las duraciones
+    que el festival declara por programa (83, 87, 91 min) cuadran con la suma
+    REDONDEADA, y la agenda de la Cinemateca —fuente independiente— publica esas
+    mismas obras ya redondeadas al minuto."""
     s = s.strip()
     m = re.match(r'^(\d+)\s*h\s*(\d+)?\s*min', s)
     if m:
         return int(m.group(1)) * 60 + int(m.group(2) or 0)
+    m = re.match(r'^(\d+)\s*min\s*(\d+)\s*s', s)
+    if m:
+        return int(m.group(1)) + (1 if int(m.group(2)) >= 30 else 0)
     m = re.match(r'^(\d+)\s*min', s)
     return int(m.group(1)) if m else None
 

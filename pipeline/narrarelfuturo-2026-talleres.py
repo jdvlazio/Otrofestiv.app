@@ -30,7 +30,15 @@ SALIDA = f'{ST}/narrarelfuturo-2026-talleres.json'
 MES = {'sep': '09', 'septiembre': '09'}
 RE_DIA = re.compile(r'(?:(?:Lun|Mar|Mié|Mie|Jue|Vie|Sáb|Sab|Dom)[a-zé]*\s+)?(\d{1,2})\s+de\s+(Sep\w*)', re.I)
 RE_RANGO = re.compile(r'(\d{1,2}):(\d{2})\s*([ap])?m?\s*a\s*(\d{1,2})(?::(\d{2}))?\s*([apm])', re.I)
-SEDES = ('Taller de la Imagen', 'Cinemateca de Bogotá', 'Universidad Jorge Tadeo Lozano')
+# La fuente nombra el mismo lugar de varias formas y cada variante partiría las
+# funciones: «UTADEO» es la Tadeo, y «Taller de la Imagen» es una SALA dentro de
+# la Cinemateca. Tabla explícita, nunca heurística — la lección de FICDEH.
+SEDES = {
+    'Taller de la Imagen': ('Cinemateca de Bogotá', 'Taller de la Imagen'),
+    'Cinemateca de Bogotá': ('Cinemateca de Bogotá', ''),
+    'Universidad Jorge Tadeo Lozano': ('Universidad Jorge Tadeo Lozano', ''),
+    'UTADEO': ('Universidad Jorge Tadeo Lozano', ''),
+}
 
 
 def texto(h):
@@ -83,13 +91,18 @@ def parse(slug, h):
             if f2 > ini:
                 d['duracion_min'] = f2 - ini
             d['_rango'] = x
-        for s in SEDES:
-            if s in x:
-                d.setdefault('sede', s)
-    # sala: «Taller de la Imagen» está DENTRO de la Cinemateca — la sede es la
-    # casa y el taller es la sala. La tabla del plan lo hace explícito.
-    if d.get('sede') == 'Taller de la Imagen':
-        d['sede'], d['sala'] = 'Cinemateca de Bogotá', 'Taller de la Imagen'
+        for variante, (sede, sala) in SEDES.items():
+            if variante in x:
+                d.setdefault('sede', sede)
+                if sala:
+                    d.setdefault('sala', sala)
+                break
+        # tallerista en la forma «Con NOMBRE» / «(País)», que es como lo
+        # escriben siete de las once fichas: sin el rótulo «Tallerista:».
+        if x == 'Con' and k + 1 < len(L) and not d.get('tallerista'):
+            d['tallerista'] = L[k + 1]
+            if k + 2 < len(L) and re.fullmatch(r'\(([^)]+)\)\.?', L[k + 2]):
+                d.setdefault('pais', L[k + 2].strip('().'))
     largos = [x for x in L if len(x) > 140]
     if largos:
         d['sinopsis'] = largos[0]
