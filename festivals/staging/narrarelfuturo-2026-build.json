@@ -299,8 +299,10 @@
      "year": 2025,
      "duration": "3 min",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/How-things-are-between-us-poster-1.jpg",
+     "synopsis": "Dos figuras se abren paso con esfuerzo a través de la oscuridad para encontrarse, danzando en el conflicto del tiempo y el espacio.",
      "genre": "Animación, Experimental",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis_lang": "es"
     },
     {
      "title": "LATTICE",
@@ -608,8 +610,10 @@
      "year": 2025,
      "duration": "3 min",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/MALIGNANT-CATATONIC-POSTER-1.jpg",
+     "synopsis": "Trata de no perder la cabeza mientras los demás la pierden. Una disertación sobre la insanidad de la guerra en el mundo.",
      "genre": "Ficción IA",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -685,6 +689,8 @@
    "has_qa": false,
    "synopsis": "Los bombardeos indiscriminados de Ucrania contra Donbass en los últimos diez años han causado lesiones espeluznantes a cientos de niños, que se han convertido en ejemplo de superación. Estos \"pequeños grandes valientes\" afrontan su dura rehabilitación con tal ánimo y tenacidad que sorprenden tanto al personal que los atiende en hospitales de Moscú como a sus familiares, a quienes inspiran día a día con sus contagiosas sonrisas.",
    "synopsis_lang": "es",
+   "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/2_Ninos-de-Donbass-historias-de-superacion-1.jpg",
+   "posterSource": "editorial",
    "_src": {
     "url": "https://narrarelfuturo.com/programa-2026/",
     "fuente": "narrarelfuturo.com (programa + ficha por obra + talleres) + Instagram (Sala VR) + agenda de la Cinemateca (contraste)"
@@ -754,8 +760,10 @@
      "year": 2025,
      "duration": "3 min",
      "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/How-things-are-between-us-poster-1.jpg",
+     "synopsis": "Dos figuras se abren paso con esfuerzo a través de la oscuridad para encontrarse, danzando en el conflicto del tiempo y el espacio.",
      "genre": "Animación, Experimental",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis_lang": "es"
     },
     {
      "title": "Time Capsule",
@@ -1935,7 +1943,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-15T22:28:26",
+  "fecha": "2026-09-15T22:31:25",
   "plan_sha": "911ac89fc14b86c2",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py narrarelfuturo-2026"

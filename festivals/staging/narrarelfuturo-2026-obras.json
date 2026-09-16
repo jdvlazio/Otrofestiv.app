@@ -93,7 +93,7 @@
    "sede": "Cinemateca de Bogotá",
    "sinopsis": "En un futuro cercano donde la percepción de los menores en situación de vulnerabilidad está fuertemente filtrada, la única superviviente de una ciudad arrasada por un ataque apocalíptico —una niña de 12 años— es entrevistada para contarle al mundo lo sucedido. Sin embargo, ella guarda la clave de una verdad más oscura sobre los niños en nuestra sociedad.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/Ceremony-poster-1-1.jpg",
-   "_poster_regla": "palabra «poster»",
+   "_poster_regla": "nombre + palabra",
    "imagenes": [
     "https://narrarelfuturo.com/wp-content/uploads/2026/09/Ceremony-02-1.jpg",
     "https://narrarelfuturo.com/wp-content/uploads/2026/09/cropped-NEF_PERFIL_perfil.jpg",
@@ -221,6 +221,7 @@
    "hora": "17:00",
    "sala": "Sala 2",
    "sede": "Cinemateca de Bogotá",
+   "sinopsis": "Trata de no perder la cabeza mientras los demás la pierden. Una disertación sobre la insanidad de la guerra en el mundo.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/MALIGNANT-CATATONIC-POSTER-1.jpg",
    "_poster_regla": "nombre + palabra",
    "imagenes": [
@@ -402,6 +403,7 @@
    "hora": "16:00",
    "sala": "Sala 2",
    "sede": "Cinemateca de Bogotá",
+   "sinopsis": "Dos figuras se abren paso con esfuerzo a través de la oscuridad para encontrarse, danzando en el conflicto del tiempo y el espacio.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/How-things-are-between-us-poster-1.jpg",
    "_poster_regla": "nombre + palabra",
    "imagenes": [
@@ -760,6 +762,8 @@
    "sala": "Hemiciclo",
    "sede": "Universidad Jorge Tadeo Lozano",
    "sinopsis": "Los bombardeos indiscriminados de Ucrania contra Donbass en los últimos diez años han causado lesiones espeluznantes a cientos de niños, que se han convertido en ejemplo de superación. Estos \"pequeños grandes valientes\" afrontan su dura rehabilitación con tal ánimo y tenacidad que sorprenden tanto al personal que los atiende en hospitales de Moscú como a sus familiares, a quienes inspiran día a día con sus contagiosas sonrisas.",
+   "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/2_Ninos-de-Donbass-historias-de-superacion-1.jpg",
+   "_poster_regla": "nombre de la obra",
    "imagenes": [
     "https://narrarelfuturo.com/wp-content/uploads/2026/09/2_Ninos-de-Donbass-historias-de-superacion-1.jpg",
     "https://narrarelfuturo.com/wp-content/uploads/2026/09/cropped-NEF_PERFIL_perfil.jpg"
@@ -807,7 +811,7 @@
    "acceso": "Entrada gratis reclamando boleta en taquilla 1 hora antes de la función.",
    "sinopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre, en un sueño, le pide que lo busque. Junto a su hermana Juliana, emprende un viaje a través de Colombia hasta las tierras indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada. Mientras las hermanas atraviesan el país, no solo vemos los paisajes contrastantes de Colombia, sino que también se entablan conversaciones que revelan el perfil de su padre, Esaú Carabalí Brand: un arrocero independiente, rebelde y víctima de un robo crucial. En el camino, descubren un inesperado archivo sonoro familiar y hacen una parada en la casa de su introspectiva abuela paterna. Días después, las hermanas salen del territorio, habiendo encontrado el amor, el legado de su padre y una comunidad atravesada por la violencia que aún resiste manteniendo una conexión profunda con su tierra y su alimento.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/Sone-su-nombre-afiche-1.jpg",
-   "_poster_regla": "palabra «poster»",
+   "_poster_regla": "nombre + palabra",
    "imagenes": [
     "https://narrarelfuturo.com/wp-content/uploads/2026/09/Sone-su-nombre-still-2.jpg",
     "https://narrarelfuturo.com/wp-content/uploads/2026/09/cropped-NEF_PERFIL_perfil.jpg",

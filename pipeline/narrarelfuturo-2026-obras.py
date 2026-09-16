@@ -14,7 +14,7 @@ POR QUÉ NO SE USA EL PIE DE INSTAGRAM PARA ESTO: el embed corta el pie a ~2.170
 caracteres, a mitad de palabra. Leídas así, «El Futuro del Futuro» daba 5 obras
 de 9 y «Narrar. Creer. Crecer» 2 de 10. La web no se corta.
 """
-import io, json, os, re, subprocess, sys, time
+import io, json, os, re, subprocess, sys, time, unicodedata
 from urllib.parse import unquote
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -95,7 +95,14 @@ def parse(ruta, h):
         for s in SEDES:
             if s in x:
                 d.setdefault('sede', s)
-    largos = [x for x in L if len(x) > 160 and 'Festival de Cine & Nuevos Medios es un punto' not in x]
+    # UMBRAL 100, no 160. Con 160 se perdían las sinopsis cortas que el festival
+    # sí publica: «Malignant / Catatonic» la tiene en 120 caracteres y «How
+    # things are between us» en 131. Un corto de 2 minutos no necesita un
+    # párrafo, y descartarlo por breve es descartar dato real. Se excluye el
+    # texto institucional del pie, que aparece en todas las fichas.
+    largos = [x for x in L if len(x) > 100
+              and 'Festival de Cine & Nuevos Medios es un punto' not in x
+              and not re.match(r'^(Dir\.|Compra|Inscrib)', x)]
     if largos:
         d['sinopsis'] = largos[0]
     ims = [u for u in dict.fromkeys(re.findall(
@@ -113,11 +120,19 @@ def parse(ruta, h):
     # Por eso: vale cualquiera de las dos señales, y cuando las dos existen
     # MANDA la que dice «poster». `LATTICE-poster-1.jpg` se descarta siempre:
     # está en todas las fichas, es un resto de la plantilla del sitio.
-    clave = re.sub(r'[^a-z0-9]+', '', (d.get('titulo') or '').lower())[:8]
+    # La clave se PLANCHA a ascii ANTES de quitar lo no alfanumérico. Quitarlo
+    # primero borra la ñ y las tildes —«Niños» → «nios»— mientras el nombre del
+    # archivo las transcribe («2_Ninos-de-Donbass-…»), así que la obra se
+    # quedaba sin su póster. Lo mismo valía para cualquier título con acento.
+    _t = unicodedata.normalize('NFD', (d.get('titulo') or '').lower())
+    _t = _t.encode('ascii', 'ignore').decode()
+    clave = re.sub(r'[^a-z0-9]+', '', _t)[:8]
     # …salvo en LATTICE, donde ese archivo ES su afiche legítimo. Excluirlo
     # siempre dejaba sin póster justo a la obra dueña de la imagen.
     cand = [u for u in ims if 'LATTICE-poster' not in u or clave.startswith('lattice')]
-    archivo = lambda u: re.sub(r'[^a-z0-9]+', '', u.rsplit('/', 1)[-1].lower())
+    def archivo(u):
+        x = unicodedata.normalize('NFD', u.rsplit('/', 1)[-1].lower())
+        return re.sub(r'[^a-z0-9]+', '', x.encode('ascii', 'ignore').decode())
     con_palabra = [u for u in cand if 'poster' in u.lower() or 'afiche' in u.lower()]
     con_titulo = [u for u in cand if clave and clave[:6] in archivo(u)]
     ambas = [u for u in con_palabra if u in con_titulo]
