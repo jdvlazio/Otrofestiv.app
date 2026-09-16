@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-15"
+  "capturado": "2026-09-16"
  },
  "_origen": "filcmar-2026-seleccion-oficial.json",
  "verificadas": {
@@ -196,11 +196,67 @@
    "_busqueda": "Pudor ante el asalto de los ojos furtivos",
    "title_en": "Shame in the Face of Furtive Eyes",
    "lbSlug": "shame-in-the-face-of-furtive-eyes"
+  },
+  "El cazador": {
+   "tmdb_id": 1668874,
+   "titulo_original": "El Cazador",
+   "poster_path": "/wg0kTL0ztRoFzEZsNfdGVVFf9FF.jpg",
+   "synopsis_es": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+   "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El cazador",
+   "title_en": "The Hunter",
+   "lbSlug": "the-hunter-2026-1"
+  },
+  "Show de Ziggy: la maldición del Mariachi Bondage": {
+   "tmdb_id": 1638911,
+   "titulo_original": "El show de Ziggy: La maldición del mariachi bondage",
+   "poster_path": "/2Bg77vDwoborWYy73yQiszusjhF.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Ziggy, a rising influencer, is trying to increase her number of followers on social media by awakening the curse of an old song. Now a gloomy mariachi who makes people dance until they die is chasing Ziggy until he fulfills her dream of making her viral.",
+   "genero": "Comedia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Show de Ziggy: la maldición del Mariachi Bondage",
+   "title_en": "Ziggy's Show: The Curse of Mariachi Bondage",
+   "lbSlug": "ziggys-show-the-curse-of-mariachi-bondage"
+  },
+  "Merrimundi": {
+   "tmdb_id": 1515178,
+   "titulo_original": "Merrimundi",
+   "poster_path": "/yDiQBPRvriOkP6X2adwANfZEOKc.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A twisted utopia unfolds, as singing cherubs melt to the sound of decay. Crafted by a sentient machine from the future, it unveils its own version of paradise.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 21,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Merrimundi",
+   "lbSlug": "merrimundi"
+  },
+  "Petra y el sol": {
+   "tmdb_id": 1484063,
+   "titulo_original": "Petra y el sol",
+   "poster_path": "/svjItb2OAwVUzzd7EvdFdAHW4bT.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "During a heavy snowmelt in the Andes, Petra, 71, discovers the perfectly preserved corpse of a mountaineer from the last century.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Petra y el sol",
+   "title_en": "Petra and the Sun",
+   "lbSlug": "petra-and-the-sun"
   }
  },
  "sin_ficha": [
   "El espejo de la vida",
   "El ocaso de los dioses",
+  "HDLT",
   "HUSH",
   "La danza del caos",
   "La pecera",
