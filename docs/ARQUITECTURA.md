@@ -1105,6 +1105,7 @@ guardián que nadie sabe qué protege es uno que el próximo que toque
 
 | Guardián | Qué congela |
 |---|---|
+| `[plan-radar]` | Todo `*.plan.json` dice a qué issue de radar mira (`radar: <nº>`, o `null` con `radar_nota` que explique por qué no hay). El radar vigila el festival meses antes y escribe lo que cambia; sin esta línea el onboarding se lo pierde — pasó con #NarrarElFuturo, que publicó una sala «Sala» y seis conversatorios sin marcar teniéndolo escrito ocho días antes. |
 | `[plan-contrato]` | El único guardián de ENTRADA: cada `*.plan.json` pasa por `lib.cargar_plan()`, el contrato que corren ensamblador y runner. Si no puede correr, falla — no avisa. |
 | `[pipeline-circuito]` | Ningún sidecar que se escribe y nadie lee junto a otro del mismo propósito que se lee y nadie escribe: el barrido escribía `-canonica` y el ensamblador leía `-oficial`. |
 | `[staging-provenance]` | Todo sidecar nuevo en `festivals/staging/` declara `_provenance.capturado`; los anteriores están congelados en `_LEGACY_SIN_FECHA`, que no admite nombres nuevos. |

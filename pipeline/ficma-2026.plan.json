@@ -1,5 +1,6 @@
 {
  "_nota": "Los pasos re-ejecutables de FICMA desde sus OCR versionados. El enriquecimiento (TMDB/Letterboxd/title-en) fue pre-formato-intermedio y sus sidecars son históricos: no se re-corre.\n\nREPROGRAMADO (19–26 SEP). Los dos pasos nuevos van PRIMERO y sustituyen la parrilla de agosto: el primero acumula lo que el festival publica post a post, el segundo arma el build heredando el catálogo de lo ya publicado. Los tres pasos viejos quedan para la trazabilidad de la edición de agosto; hoy no se corren.",
+ "radar": 578,
  "pasos": [
   {
    "cmd": "python3 pipeline/ficma-2026-catalogo-agosto.py",

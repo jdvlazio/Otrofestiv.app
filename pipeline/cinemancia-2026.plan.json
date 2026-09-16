@@ -1,5 +1,6 @@
 {
  "_nota": "Cinemancia 2026 — migrado al pipeline genérico. Este archivo es lo ÚNICO propio del festival: identidad, tabla de sedes y mapa de secciones. Hay DOS fuentes mandantes y se reparten el trabajo: la PARRILLA del PDF oficial dice cuándo y dónde (86 funciones), y la HOJA que el festival envió el 20 ago dice QUÉ obras van en cada programa y describe las 10 charlas. El barrido web anterior sacaba el horario de la ficha de cada película y producía 89 funciones sueltas, sin inauguración ni clausura: no se usa.",
+ "radar": 568,
  "pasos": [
   {
    "cmd": "python3 pipeline/cinemancia-2026-parrilla.py fuentes/cinemancia-2026/programacion-oficial.pdf",
