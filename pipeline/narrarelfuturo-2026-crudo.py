@@ -64,6 +64,9 @@ SECCION = {
     # la instalación entra con su kind, no con una etiqueta de tarjeta: sin esta
     # clave caía a «Proyecciones & Largos» y la Sala VR no existía como sección
     'experiencia': 'Sala VR',
+    # La franja de charlas: el festival le da página propia («Charlas 2026») y
+    # no la mete en la parrilla. Sección aparte, con su palabra.
+    'charla': 'Charlas',
 }
 # La clausura no lleva etiqueta en su tarjeta: es una proyección y va con ellas.
 SECCION_DEFECTO = 'Proyecciones & Largos'
@@ -181,6 +184,23 @@ def main():
                       '_nota': 'segunda sesión del mismo día, declarada así en la ficha del taller'})
             funciones.append(g)
 
+    # CHARLAS — la franja que la parrilla no publica (ver -charlas.py). Con día,
+    # hora, sede, sala, inscripción, sinopsis y la foto de la conversación. Los
+    # PANELISTAS van en `director` porque son quienes hacen la actividad, igual
+    # que el tallerista en un taller; el festival los rotula uno por uno, no se
+    # deduce de la posición de una línea.
+    for c in cargar('charlas')['charlas']:
+        funciones.append({
+            'titulo': c['titulo'], 'dia': c['dia'], 'hora': c['hora'],
+            'sede': c.get('sede', ''), 'sala': c.get('sala', ''),
+            'tipo': 'charla', 'event_kind': 'charla',
+            'director': ', '.join(p['nombre'] for p in c.get('panelistas') or []),
+            'duracion_min': c.get('duracion_min'), 'sinopsis': c.get('sinopsis'),
+            'poster': c.get('imagen'), 'acceso': c.get('acceso', lib.DESCONOCIDO),
+            'registration_url': c.get('registration_url'), '_src': c.get('_src'),
+            '_modera': ', '.join(p['nombre'] for p in c.get('modera') or []) or None,
+        })
+
     # Las obras de VR también tienen ficha propia en la web: sin completarlas
     # desde ahí salían sin póster ni sinopsis las 48 entradas (8 obras × 6
     # sesiones). La lista de la tarjeta dice CUÁLES son; la ficha, cómo son.
@@ -236,7 +256,11 @@ def main():
         # event_kind. Un event_kind que la app no conoce pinta «EVENTO» genérico
         # en la card de una película. Solo los talleres y la instalación VR son
         # actividades con kind propio.
-        if f.get('event_kind') not in ('taller', 'experiencia'):
+        # La lista es blanca a propósito: solo las actividades que de verdad son
+        # de un tipo —taller, charla, instalación— llevan kind. Todo lo demás
+        # («Largometraje», «Cortos», «RT Meet The Creators») es la etiqueta de
+        # la tarjeta, que sirve para elegir sección y ahí se queda.
+        if f.get('event_kind') not in ('taller', 'charla', 'experiencia'):
             f.pop('event_kind', None)
     # Pósters RE-HOSTEADOS (paso posters.py): la tabla remota→/assets/ se aplica
     # aquí, sobre funciones y obras, porque el crudo es el único que decide qué

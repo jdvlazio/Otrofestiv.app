@@ -1144,6 +1144,7 @@ export const SECTION_ARCHETYPES = {
   '⚡ Muestra de Cortos': 'Cortos / Programas',
   '🛠️ Talleres & Formación': 'Charlas / Industria',
   '🥽 Sala VR': 'Especiales / Eventos',
+  '🎙️ Charlas': 'Charlas / Industria',
   '💬 Charlas': 'Charlas / Industria',
   '🛰️ Apertura': 'Apertura / Gala',
   '🤝 Encuentro': 'Charlas / Industria',

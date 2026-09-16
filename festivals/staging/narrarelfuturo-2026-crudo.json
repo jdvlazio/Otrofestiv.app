@@ -5,7 +5,7 @@
   "metodo": "fusión: la parrilla de la web manda; la ficha por obra la completa; la Cinemateca contrasta",
   "nota": "la instalación VR va como actividad recurrente (is_recurring), no como seis funciones distintas"
  },
- "_funciones": 35,
+ "_funciones": 37,
  "_obras": 85,
  "_contraste_cinemateca": [
   "Llueve sobre Babel 2026-09-19: web 18:00 vs Cinemateca 18:30"
@@ -949,6 +949,44 @@
    "registration_url": "https://bit.ly/RTElFuturo",
    "_src": "https://narrarelfuturo.com/talleres-2026/ultima-hora/",
    "seccion": "Talleres & Formación",
+   "posterSource": "oficial"
+  },
+  {
+   "titulo": "El futuro de lo real, la no ficción y los medios tradicionales",
+   "dia": "2026-09-15",
+   "hora": "09:00",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "sala": "Aula Máxima",
+   "tipo": "charla",
+   "event_kind": "charla",
+   "director": "Alexander Luchaninov, Óscar Durán, María Camila Fonseca",
+   "duracion_min": 90,
+   "sinopsis": "La no ficción atraviesa una transformación profunda. Medios tradicionales, plataformas digitales, creadores independientes, nuevas comunidades de audiencia y herramientas de inteligencia artificial conviven hoy en un ecosistema donde las formas de producir y consumir historias están cambiando rápidamente. Esta conversación propone mirar más allá de la oposición entre lo “tradicional” y lo “nuevo” para preguntarnos qué sucede con nuestras ideas de realidad, evidencia, confianza, autoridad y responsabilidad. Desde distintas experiencias del periodismo, la academia y la creación de contenido sociopolítico, la mesa pone en diálogo prácticas y perspectivas que permiten pensar cómo narramos lo real en un presente cada vez más complejo.",
+   "poster": "/assets/narrarelfuturo-2026/charla-el-futuro-de-lo-real-la-no-ficcion-y-los-medios-tradi.jpg",
+   "acceso": "Entrada gratis con inscripción",
+   "registration_url": "https://bit.ly/RTElFuturo",
+   "_src": "https://narrarelfuturo.com/charlas-2026/",
+   "_modera": "Camila Lozano",
+   "seccion": "Charlas",
+   "posterSource": "oficial"
+  },
+  {
+   "titulo": "Pronto llegará el día de tu suerte: ¿Estamos, al fin, ante una industria del cine y los nuevos medios?",
+   "dia": "2026-09-15",
+   "hora": "11:00",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "sala": "Aula Máxima",
+   "tipo": "charla",
+   "event_kind": "charla",
+   "director": "Diego García Moreno, Juan Pablo Urgilés, Natalia Ramírez",
+   "duracion_min": 90,
+   "sinopsis": "Durante años, creadores, productores, festivales, laboratorios, mercados y plataformas han contribuido al crecimiento del ecosistema audiovisual y de nuevos medios en Colombia y América Latina. Sin embargo, una pregunta persiste: ¿hemos logrado consolidar una industria capaz de sostenerse en el tiempo o seguimos dependiendo de esfuerzos individuales y proyectos excepcionales para que las cosas sucedan? Esta conversación propone reflexionar sobre el presente y el futuro del sector, reconociendo tanto sus desafíos como las oportunidades que ya están en marcha. A partir de experiencias en cine, transmedia y audio narrativo, exploraremos qué hace falta para transformar el talento, las redes de colaboración, la financiación, la circulación y la creación de audiencias en una infraestructura cultural más sólida, sostenible y conectada.",
+   "poster": "/assets/narrarelfuturo-2026/charla-pronto-llegara-el-dia-de-tu-suerte-estamos-al-fin-ant.jpg",
+   "acceso": "Entrada gratis con inscripción",
+   "registration_url": "https://bit.ly/RTElFuturo",
+   "_src": "https://narrarelfuturo.com/charlas-2026/",
+   "_modera": "Mauricio Vélez",
+   "seccion": "Charlas",
    "posterSource": "oficial"
   },
   {

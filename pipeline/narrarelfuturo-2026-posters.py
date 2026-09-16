@@ -45,6 +45,10 @@ def fuentes():
     for t in T:
         if t.get('imagen'):
             yield 'taller ' + t['titulo'], t['imagen']
+    C = json.load(io.open(f'{ST}/narrarelfuturo-2026-charlas.json', encoding='utf-8'))
+    for c in C.get('charlas') or []:
+        if c.get('imagen'):
+            yield 'charla ' + c['titulo'], c['imagen']
 
 
 def _mide(p):

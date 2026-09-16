@@ -116,10 +116,15 @@
    "archetype": "Charlas / Industria",
    "order": 3
   },
+  "🎙️ Charlas": {
+   "en": "Talks",
+   "archetype": "Charlas / Industria",
+   "order": 4
+  },
   "🥽 Sala VR": {
    "en": "VR Room",
    "archetype": "Especiales / Eventos",
-   "order": 4
+   "order": 5
   }
  },
  "venues": {
@@ -1439,6 +1444,56 @@
    "registration_url": "https://bit.ly/RTElFuturo"
   },
   {
+   "title": "El futuro de lo real, la no ficción y los medios tradicionales",
+   "type": "event",
+   "section": "🎙️ Charlas",
+   "director": "Alexander Luchaninov, Óscar Durán, María Camila Fonseca",
+   "duration": "90 min",
+   "day": "2026-09-15",
+   "time": "09:00",
+   "day_order": 0,
+   "venue": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "sala": "Aula Máxima",
+   "event_kind": "charla",
+   "has_qa": false,
+   "synopsis": "La no ficción atraviesa una transformación profunda. Medios tradicionales, plataformas digitales, creadores independientes, nuevas comunidades de audiencia y herramientas de inteligencia artificial conviven hoy en un ecosistema donde las formas de producir y consumir historias están cambiando rápidamente. Esta conversación propone mirar más allá de la oposición entre lo “tradicional” y lo “nuevo” para preguntarnos qué sucede con nuestras ideas de realidad, evidencia, confianza, autoridad y responsabilidad. Desde distintas experiencias del periodismo, la academia y la creación de contenido sociopolítico, la mesa pone en diálogo prácticas y perspectivas que permiten pensar cómo narramos lo real en un presente cada vez más complejo.",
+   "synopsis_lang": "es",
+   "poster": "/assets/narrarelfuturo-2026/charla-el-futuro-de-lo-real-la-no-ficcion-y-los-medios-tradi.jpg",
+   "posterSource": "oficial",
+   "_src": {
+    "url": "https://narrarelfuturo.com/charlas-2026/",
+    "fuente": "narrarelfuturo.com (programa + ficha por obra + talleres) + Instagram (Sala VR) + agenda de la Cinemateca (contraste)"
+   },
+   "is_free": true,
+   "requires_registration": true,
+   "registration_url": "https://bit.ly/RTElFuturo"
+  },
+  {
+   "title": "Pronto llegará el día de tu suerte: ¿Estamos, al fin, ante una industria del cine y los nuevos medios?",
+   "type": "event",
+   "section": "🎙️ Charlas",
+   "director": "Diego García Moreno, Juan Pablo Urgilés, Natalia Ramírez",
+   "duration": "90 min",
+   "day": "2026-09-15",
+   "time": "11:00",
+   "day_order": 0,
+   "venue": "Universidad Jorge Tadeo Lozano - Bogotá",
+   "sala": "Aula Máxima",
+   "event_kind": "charla",
+   "has_qa": false,
+   "synopsis": "Durante años, creadores, productores, festivales, laboratorios, mercados y plataformas han contribuido al crecimiento del ecosistema audiovisual y de nuevos medios en Colombia y América Latina. Sin embargo, una pregunta persiste: ¿hemos logrado consolidar una industria capaz de sostenerse en el tiempo o seguimos dependiendo de esfuerzos individuales y proyectos excepcionales para que las cosas sucedan? Esta conversación propone reflexionar sobre el presente y el futuro del sector, reconociendo tanto sus desafíos como las oportunidades que ya están en marcha. A partir de experiencias en cine, transmedia y audio narrativo, exploraremos qué hace falta para transformar el talento, las redes de colaboración, la financiación, la circulación y la creación de audiencias en una infraestructura cultural más sólida, sostenible y conectada.",
+   "synopsis_lang": "es",
+   "poster": "/assets/narrarelfuturo-2026/charla-pronto-llegara-el-dia-de-tu-suerte-estamos-al-fin-ant.jpg",
+   "posterSource": "oficial",
+   "_src": {
+    "url": "https://narrarelfuturo.com/charlas-2026/",
+    "fuente": "narrarelfuturo.com (programa + ficha por obra + talleres) + Instagram (Sala VR) + agenda de la Cinemateca (contraste)"
+   },
+   "is_free": true,
+   "requires_registration": true,
+   "registration_url": "https://bit.ly/RTElFuturo"
+  },
+  {
    "title": "VR #OtrosMundosPosibles",
    "type": "event",
    "section": "🥽 Sala VR",
@@ -2239,9 +2294,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-16T05:47:46",
-  "plan_sha": "dd23aac8e705c569",
-  "paso": 9,
+  "fecha": "2026-09-16T06:02:37",
+  "plan_sha": "a3d8f57975d7dc56",
+  "paso": 10,
   "cmd": "python3 pipeline/ensamblar.py narrarelfuturo-2026"
  }
 }
