@@ -171,7 +171,8 @@
    "day_order": 0,
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala Capital",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre, en un sueño, le pide que lo busque. Junto a su hermana Juliana, emprende un viaje a través de Colombia hasta las tierras indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada. Mientras las hermanas atraviesan el país, no solo vemos los paisajes contrastantes de Colombia, sino que también se entablan conversaciones que revelan el perfil de su padre, Esaú Carabalí Brand: un arrocero independiente, rebelde y víctima de un robo crucial. En el camino, descubren un inesperado archivo sonoro familiar y hacen una parada en la casa de su introspectiva abuela paterna. Días después, las hermanas salen del territorio, habiendo encontrado el amor, el legado de su padre y una comunidad atravesada por la violencia que aún resiste manteniendo una conexión profunda con su tierra y su alimento.",
    "synopsis_lang": "es",
    "poster": "/assets/narrarelfuturo-2026/sone-su-nombre.jpg",
@@ -2294,9 +2295,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-16T06:02:37",
-  "plan_sha": "a3d8f57975d7dc56",
-  "paso": 10,
+  "fecha": "2026-09-16T06:20:02",
+  "plan_sha": "03947ce3ea6ea4f9",
+  "paso": 11,
   "cmd": "python3 pipeline/ensamblar.py narrarelfuturo-2026"
  }
 }

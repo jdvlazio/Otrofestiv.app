@@ -72,6 +72,25 @@ SECCION = {
 SECCION_DEFECTO = 'Proyecciones & Largos'
 
 
+# Q&A DECLARADOS POR EL FESTIVAL. No están en la web —la ficha de la inaugural
+# no lo menciona— sino en el pie del post del día 1 en Instagram: «Después de la
+# función tendremos un encuentro con Juliana y Ángela Carabalí para conversar
+# sobre la película y el proceso detrás de esta historia». Importa: la app pinta
+# el distintivo Q&A y le SUMA la sobremesa a la duración cuando arma el plan, así
+# que no marcarlo le quita tiempo al usuario donde decide si algo le cabe.
+#
+# Y se comprobó que la Cinemateca NO declara ninguno para este festival, aunque
+# lo parezca: sus ocho fichas contienen la frase «Sesión de preguntas y
+# respuestas», pero dentro del PIE DE LEYENDA («cuadro turquesa → …»), que es
+# cromo del sitio y sale en todas. La marca de verdad es «PROYECCIÓN CON
+# CONVERSATORIO» en el cuerpo —otros festivales de su agenda la tienen— y
+# ninguna de las nuestras la lleva.
+QA = {
+    'Soñé su nombre': ('team', 'encuentro con Juliana y Ángela Carabalí después de la función '
+                               '(Instagram, post del día 1)'),
+}
+
+
 # slug()/norm() son las de lib: la clave de JOIN entre el título de la tarjeta
 # («Aqua, Ensayo & Diversidad») y el slug de la ruta de la ficha
 # («aqua-ensayo-diversidad»). Cruzar por norm() NO casa —coma y ampersand— y
@@ -248,6 +267,10 @@ def main():
             if m:
                 f['sinopsis'] = m.group(1)[0].upper() + m.group(1)[1:]
                 f['_sinopsis_src'] = 'instagram: el pie del post del programa, sin el preámbulo de logística'
+
+    for f in funciones:
+        if f.get('titulo') in QA:
+            f['has_qa'], (f['qa_type'], f['_qa_fuente']) = True, QA[f['titulo']]
 
     for f in funciones:
         f['seccion'] = SECCION.get(f.get('event_kind'), SECCION_DEFECTO)
