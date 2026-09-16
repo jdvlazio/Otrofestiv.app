@@ -106,11 +106,27 @@ def main():
     tit_of = corr.get('titulo_oficial', {})
     alias = corr.get('alias', {})
 
+    # TODAS las obras, no solo las de nivel superior. Hasta hoy esto recorría
+    # únicamente `funciones`, así que en un festival con programas de cortos el
+    # enriquecido cubría el programa y NINGUNO de los cortos que lo componen
+    # —en #NarrarElFuturo, 17 obras miradas y 85 ignoradas—. Las obras de dentro
+    # son obras: tienen título, dirección, año y duración, que es justo lo que
+    # ficha_verifica() necesita. El candado no cambia: lo que no verifica, no
+    # entra; un corto sin ficha en TMDB simplemente sale en `sin_ficha`.
     obras = {}
     for f in crudo['funciones']:
-        if f.get('en_app', True) and f.get('tipo', 'film') in ('film', ''):
+        if not f.get('en_app', True):
+            continue
+        if f.get('tipo', 'film') in ('film', ''):
             t = tit_of.get(f['titulo'], f['titulo'])
             obras.setdefault(t, {**f, 'titulo': t})
+        for o in f.get('obras') or []:
+            if not o.get('titulo'):
+                continue
+            t = tit_of.get(o['titulo'], o['titulo'])
+            # la obra hereda el día de su función solo para el reporte; lo que
+            # verifica es su propia ficha (director, año, duración)
+            obras.setdefault(t, {**o, 'titulo': t})
 
     ok, sin = {}, []
     for i, (t, f) in enumerate(sorted(obras.items()), 1):
@@ -143,6 +159,11 @@ def main():
     json.dump({'_provenance': provenance(
         'TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() '
         '(director + año ±1 o duración ±3 min). Lo que no verifica no entra.'),
+        # `obras` es la LISTA que lee el ensamblador y exige cargar_plan (lib.
+        # _forma_sidecar): hasta hoy este archivo solo traía el diccionario
+        # `verificadas`, así que el plan que lo declaraba no cumplía su contrato
+        # y el enriquecido no llegaba a la app. Se escriben las dos formas.
+        'obras': [{'titulo': t, **e} for t, e in ok.items()],
         'verificadas': ok, 'sin_ficha': sorted(sin)},
         open(f'{ST}/{fid}-enriquecido.json', 'w', encoding='utf-8'),
         ensure_ascii=False, indent=1)

@@ -329,6 +329,82 @@ para el aviso urgente, la fuente sigue siendo el ojo humano.
 
 ---
 
+## 2·ter · Verificar — el parser no se revisa a sí mismo
+
+Escrito el 15 sep 2026 tras montar #NarrarElFuturo con el festival ya en curso.
+Nueve errores reales llegaron hasta el JSON publicado antes de que alguien los
+viera; **seis los cazó este método, no la lectura del dato**. Lo que sigue se
+pagó ese día, uno por uno.
+
+### Antes de escribir: mirar
+
+```bash
+python3 pipeline/sondear.py <url|archivo> [--bloque <clase>]
+```
+
+Enseña qué bloque se repite, qué formas de línea hay, qué etiquetas usa la
+fuente y cuántos de cada cosa. Diez segundos. Ese día el mismo parser se
+reescribió TRES veces por suponer la forma de la fuente —el día venía como
+«Martes 15» y el regex aceptaba «Mié»; el `<a>` metía 180 caracteres y la
+ventana era de 120; «la primera imagen que diga poster» era un resto de
+plantilla presente en todas las fichas—. Cada vez que se miró primero, salió
+a la primera.
+
+### Un parser por fuente, un sidecar por parser, UN escritor del crudo
+
+El crudo lo escribe solo el paso de fusión. Dos parsers que apunten al mismo
+archivo no fallan: el segundo borra al primero en silencio (8 funciones y 27
+obras perdidas sin un error en pantalla). Lo vigila `[sidecar-dos-escritores]`.
+Y la primera versión de ese guardián pasó en verde con el choque reproducido a
+propósito: **un guardián nuevo se muta antes de confiar en él**, siempre.
+
+### La fusión: quién manda en qué
+
+Cuando dos fuentes del festival hablan de lo mismo, se DECLARA cuál manda en
+cada campo, no se mezcla:
+
+- la **tarjeta del programa** decide QUÉ obras tiene un programa — la ruta de
+  la ficha no: la web archivaba cuatro cortos bajo un programa en el que no se
+  proyectan;
+- la **ficha de la obra** completa CÓMO es cada una (sinopsis, póster, ficha
+  técnica);
+- una tercera fuente independiente (la agenda de la Cinemateca) **contrasta**,
+  no aporta: sus valores no se copian a mano —«Camboya, 2026» contra la ficha
+  que decía «Argentina, 2025»—, se nombra el título y la ficha pone el resto.
+
+### Verificar lo descartado, no solo lo transcrito
+
+**Cobertura inversa primero**: cada actividad de cada fuente, ¿está publicada?
+Un taller entero se cayó del festival porque su rango horario usaba guion
+(«9:00am - 1:00pm») y el regex exigía « a ». Tres relecturas de lo transcrito no
+lo vieron; la primera pasada por lo descartado, sí.
+
+### Una relectura con la lógica del parser se aprueba a sí misma
+
+La primera revisión dio «0 problemas» sobre tres pósters corruptos, porque
+repetía la misma regla equivocada. La revisión que sirve es **una SEGUNDA
+EXTRACCIÓN INDEPENDIENTE** —otro rol, sin ver el código ni los sidecars— y un
+diff campo por campo contra la primera. Ninguna de las dos es la verdad: **la
+discrepancia es el dato**. Ese día una regla de póster perdía 7 afiches y la
+otra 8; la unión de las dos señales dio 42 de 42.
+
+### Los números tienen que cuadrar
+
+Suma de las obras de un programa = duración declarada del programa. Ese control
+encontró un corto que faltaba (84 + 3 = 87) y desmintió un razonamiento que
+sonaba bien —«26 min 28 s no dura 27», truncar segundos— que se comía 18
+minutos del catálogo: las duraciones declaradas cuadraban con la suma
+REDONDEADA. **El dato manda sobre el argumento.**
+
+### Umbrales y normalizaciones se miden, no se eligen
+
+«Sinopsis = más de 160 caracteres» perdió dos sinopsis reales de 120 y 131.
+Quitar lo no alfanumérico ANTES de planchar a ascii borró la eñe de «Niños» y
+dejó una obra sin su póster. Todo número o regla que uno pone «porque sí» es
+una hipótesis sobre la fuente, y se comprueba contra ella.
+
+---
+
 ## 3 · Checklist de publicación
 
 - [ ] Fuentes en `fuentes/<id>/` · derivados en staging con `capturado`

@@ -1,0 +1,550 @@
+{
+ "_provenance": {
+  "fuente": "https://narrarelfuturo.com/programa-2026/",
+  "capturado": "2026-09-16",
+  "metodo": "tarjetas .evento-card del HTML servido; el día se lee del TEXTO de cada tarjeta",
+  "nota": "la web etiqueta las 24 tarjetas con la clase dia-15 —su filtro por día está roto— así que la clase no sirve"
+ },
+ "_funciones": 16,
+ "_obras": 37,
+ "funciones": [
+  {
+   "dia": "2026-09-15",
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "18:00",
+   "event_kind": "Largometraje",
+   "titulo": "Soñé su nombre",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 86,
+   "genero": "Documental",
+   "director": "Angela Carabalí",
+   "sala": "Sala Capital",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Entrada gratis reclamando boleta en taquilla 1 hora antes de la función."
+  },
+  {
+   "dia": "2026-09-16",
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "10:00",
+   "event_kind": "Largometraje",
+   "titulo": "Cosmographies",
+   "pais": "Chile",
+   "anio": 2025,
+   "duracion_min": 93,
+   "genero": "Documental, Experimental",
+   "director": "Juan Fracisco Salazar",
+   "sala": "Sala Oval",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "acceso": "Entrada gratis con inscripción",
+   "registration_url": "https://bit.ly/RTElFuturo"
+  },
+  {
+   "dia": "2026-09-16",
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "15:00",
+   "event_kind": "RT Meet The Creators",
+   "titulo": "Colombia: embrujo verde esmeralda",
+   "pais": "Colombia",
+   "anio": 2024,
+   "duracion_min": 26,
+   "genero": "Documental",
+   "director": "Camila Lozano Delgado",
+   "sala": "Sala",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "registration_url": "https://bit.ly/RTElFuturo",
+   "acceso": "Entrada gratis con inscripción"
+  },
+  {
+   "dia": "2026-09-16",
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "15:00",
+   "event_kind": "RT Meet The Creators",
+   "titulo": "Colombia: raíces arrancadas",
+   "pais": "Argentina",
+   "anio": 2026,
+   "duracion_min": 28,
+   "genero": "Documental",
+   "director": "Diana Deglauy",
+   "sala": "Sala",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "registration_url": "https://bit.ly/RTElFuturo",
+   "acceso": "Entrada gratis con inscripción"
+  },
+  {
+   "dia": "2026-09-16",
+   "obras": [
+    {
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 20,
+     "genero": "Documental, Experimental",
+     "director": "Oliveira Júnior, Milena Rocha, Weslley Oliveira",
+     "titulo": "Caldeirão"
+    },
+    {
+     "pais": "Polonia",
+     "anio": 2025,
+     "duracion_min": 3,
+     "genero": "Animación, Experimental",
+     "director": "Julian Czurko",
+     "titulo": "How things are between us"
+    },
+    {
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 10,
+     "genero": "Experimental",
+     "director": "Alexander Trecco",
+     "titulo": "LATTICE"
+    },
+    {
+     "pais": "España",
+     "anio": 2026,
+     "duracion_min": 11,
+     "genero": "Video-Ensayo IA",
+     "director": "Laura Baigorri",
+     "titulo": "Mercado del arte_ cómo fabricar un artista"
+    },
+    {
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 11,
+     "genero": "Ficción",
+     "director": "Isabella Palacio Mesa",
+     "titulo": "REFRACCIÓN"
+    },
+    {
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 14,
+     "genero": "Experimental",
+     "director": "Dir. Manuela Saavedra / Resonancia Cromática",
+     "titulo": "Sueño Viscoso 194"
+    },
+    {
+     "pais": "Italia",
+     "anio": 2025,
+     "duracion_min": 7,
+     "genero": "Experimental",
+     "director": "Alessandro Amaducci",
+     "titulo": "Living Metals"
+    },
+    {
+     "pais": "Alemania",
+     "anio": 2026,
+     "duracion_min": 6,
+     "genero": "Video-Ensayo IA",
+     "director": "Mark Wachholz",
+     "titulo": "The Cinema that never was"
+    }
+   ],
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "16:00",
+   "event_kind": "Cortos",
+   "titulo": "Aqua, Ensayo & Diversidad",
+   "es_programa": true,
+   "sala": "Sala 2",
+   "sede": "Cinemateca de Bogotá",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230552990893",
+   "acceso": "Boletería"
+  },
+  {
+   "dia": "2026-09-16",
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "19:00",
+   "event_kind": "Largometraje",
+   "titulo": "¿Quién quemó el bus?",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 63,
+   "genero": "Documental",
+   "director": "Juan José Jaramillo",
+   "sala": "Sala 2",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Entrada gratis reclamando boleta en taquilla 1 hora antes de la función."
+  },
+  {
+   "dia": "2026-09-17",
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "15:00",
+   "event_kind": "RT Meet The Creators",
+   "titulo": "Venezuela: latidos entre escombros",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 28,
+   "genero": "Documental",
+   "director": "Andrés Fernández Sánchez",
+   "sala": "Hemiciclo",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "registration_url": "https://bit.ly/RTElFuturo",
+   "acceso": "Entrada gratis con inscripción"
+  },
+  {
+   "dia": "2026-09-17",
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "15:00",
+   "event_kind": "RT Meet The Creators",
+   "titulo": "Manos que reciben vida",
+   "pais": "Ecuador",
+   "anio": 2025,
+   "duracion_min": 24,
+   "genero": "Documental",
+   "director": "María Isabel Cevallos",
+   "sala": "Hemiciclo",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "registration_url": "https://bit.ly/RTElFuturo",
+   "acceso": "Entrada gratis con inscripción"
+  },
+  {
+   "dia": "2026-09-17",
+   "obras": [
+    {
+     "pais": "Colombia, Estados Unidos",
+     "anio": 2025,
+     "duracion_min": 30,
+     "genero": "Documental, Experimental",
+     "director": "Nelson Rodríguez Tequia",
+     "titulo": "6 de diciembre"
+    },
+    {
+     "pais": "Alemania",
+     "anio": 2025,
+     "duracion_min": 10,
+     "genero": "Animación",
+     "director": "Mark Wachholz",
+     "titulo": "Céremony"
+    },
+    {
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Ciencia Ficción",
+     "director": "Ingrid Paola Bonilla Rodriguez",
+     "titulo": "Chaika"
+    },
+    {
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 3,
+     "genero": "Ficción IA",
+     "director": "Felipe Valério",
+     "titulo": "Fail"
+    },
+    {
+     "pais": "Hungría",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Ciencia Ficción",
+     "director": "Balázs Budavári",
+     "titulo": "Happy People"
+    },
+    {
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 2,
+     "genero": "Ciencia Ficción IA",
+     "director": "Felipe Valério",
+     "titulo": "Hybrid"
+    },
+    {
+     "pais": "Hong Kong, Reino Unido, Estados Unidos, Vietnam",
+     "anio": null,
+     "duracion_min": 3,
+     "genero": "Documental, Experimental",
+     "director": "Mike Bennion",
+     "titulo": "Malignant / Catatonic"
+    },
+    {
+     "pais": "Argentina",
+     "anio": 2025,
+     "duracion_min": 4,
+     "genero": "Ficción IA",
+     "director": "Juan Murillo",
+     "titulo": "Marta Trend"
+    },
+    {
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 3,
+     "genero": "Ficción IA",
+     "director": "Gabriel Manso",
+     "titulo": "Outline Against the Sun"
+    },
+    {
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 2,
+     "genero": "Ficción IA",
+     "director": "Felipe Valério",
+     "titulo": "Puffer Fish"
+    }
+   ],
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "17:00",
+   "event_kind": "Cortos",
+   "titulo": "Alucinación Artificial y Extinción",
+   "es_programa": true,
+   "sala": "Sala 2",
+   "sede": "Cinemateca de Bogotá",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230552990895",
+   "acceso": "Boletería"
+  },
+  {
+   "dia": "2026-09-17",
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "19:30",
+   "event_kind": "Largometraje",
+   "titulo": "Después del frío",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 84,
+   "genero": "Documental",
+   "director": "María Jimena Duzán",
+   "sala": "Sala 2",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Entrada gratis reclamando boleta en taquilla 1 hora antes de la función."
+  },
+  {
+   "dia": "2026-09-18",
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "15:00",
+   "event_kind": "RT Meet The Creators",
+   "titulo": "Vivir de la piedra",
+   "pais": "Argentina",
+   "anio": 2026,
+   "duracion_min": 26,
+   "genero": "Documental",
+   "director": "Diana Deglauy",
+   "sala": "Hemiciclo",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "registration_url": "https://narrarelfuturo.com/talleres-2026/ultima-hora/",
+   "acceso": "Entrada gratis con inscripción"
+  },
+  {
+   "dia": "2026-09-18",
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "15:00",
+   "event_kind": "RT Meet The Creators",
+   "titulo": "Niños de Donbass: historias de superación",
+   "pais": "Ecuador",
+   "anio": 2024,
+   "duracion_min": 27,
+   "genero": "Documental",
+   "director": "María Isabel Cevallos",
+   "sala": "Hemiciclo",
+   "sede": "Universidad Jorge Tadeo Lozano",
+   "registration_url": "https://narrarelfuturo.com/talleres-2026/ultima-hora/",
+   "acceso": "Entrada gratis con inscripción"
+  },
+  {
+   "dia": "2026-09-18",
+   "obras": [
+    {
+     "pais": "México",
+     "anio": 2026,
+     "duracion_min": 1,
+     "genero": "Animación",
+     "director": "Nathalie Erika Langner",
+     "titulo": "Despierta"
+    },
+    {
+     "pais": "México",
+     "anio": 2026,
+     "duracion_min": 4,
+     "genero": "Animación",
+     "director": "Nathalie Erika Langner",
+     "titulo": "HensFluenzers"
+    },
+    {
+     "pais": "Argentina",
+     "anio": 2025,
+     "duracion_min": 4,
+     "genero": "Ficción IA",
+     "director": "Juan Murillo",
+     "titulo": "Marta Trend"
+    },
+    {
+     "pais": "Polonia",
+     "anio": 2025,
+     "duracion_min": 3,
+     "genero": "Animación, Experimental",
+     "director": "Julian Czurko",
+     "titulo": "How things are between us"
+    },
+    {
+     "pais": "Indonesia",
+     "anio": 2025,
+     "duracion_min": 8,
+     "genero": "2D, Animación",
+     "director": "Abdillah Yoga Miftakhurrizqi",
+     "titulo": "Time Capsule"
+    },
+    {
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 14,
+     "genero": "Experimental",
+     "director": "Dir. Manuela Saavedra / Resonancia Cromática",
+     "titulo": "Sueño Viscoso 194"
+    },
+    {
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 10,
+     "genero": "Experimental",
+     "director": "Alexander Trecco",
+     "titulo": "LATTICE"
+    },
+    {
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 3,
+     "genero": "AI",
+     "director": "Diego Martins",
+     "titulo": "Sopro"
+    },
+    {
+     "pais": "Hungría",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Ciencia Ficción",
+     "director": "Balázs Budavári",
+     "titulo": "Happy People"
+    },
+    {
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Ciencia Ficción",
+     "director": "Ingrid Paola Bonilla Rodriguez",
+     "titulo": "Chaika"
+    }
+   ],
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "16:00",
+   "event_kind": "Cortos",
+   "titulo": "Narrar. Creer. Crecer",
+   "es_programa": true,
+   "sede": "Cinemateca Fontanar del Río",
+   "acceso": "Entrada libre hasta completar aforo",
+   "sala": ""
+  },
+  {
+   "dia": "2026-09-18",
+   "obras": [
+    {
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 14,
+     "genero": "Experimental",
+     "director": "Dir. Manuela Saavedra / Resonancia Cromática",
+     "titulo": "Sueño Viscoso 194"
+    },
+    {
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 10,
+     "genero": "Experimental",
+     "director": "Alexander Trecco",
+     "titulo": "LATTICE"
+    },
+    {
+     "pais": "Alemania",
+     "anio": 2025,
+     "duracion_min": 10,
+     "genero": "Animación",
+     "director": "Mark Wachholz",
+     "titulo": "Céremony"
+    },
+    {
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Ciencia Ficción",
+     "director": "Ingrid Paola Bonilla Rodriguez",
+     "titulo": "Chaika"
+    },
+    {
+     "pais": "Brasil",
+     "anio": 2025,
+     "duracion_min": 2,
+     "genero": "Ficción IA",
+     "director": "Felipe Valério",
+     "titulo": "Puffer Fish"
+    },
+    {
+     "pais": "Hungría",
+     "anio": 2025,
+     "duracion_min": 15,
+     "genero": "Ciencia Ficción",
+     "director": "Balázs Budavári",
+     "titulo": "Happy People"
+    },
+    {
+     "pais": "Alemania",
+     "anio": 2026,
+     "duracion_min": 6,
+     "genero": "Video-Ensayo IA",
+     "director": "Mark Wachholz",
+     "titulo": "The Cinema that never was"
+    },
+    {
+     "pais": "España",
+     "anio": 2026,
+     "duracion_min": 11,
+     "genero": "Video-Ensayo IA",
+     "director": "Laura Baigorri",
+     "titulo": "Mercado del arte_ cómo fabricar un artista"
+    },
+    {
+     "pais": "Italia",
+     "anio": 2025,
+     "duracion_min": 7,
+     "genero": "Experimental",
+     "director": "Alessandro Amaducci",
+     "titulo": "Living Metals"
+    }
+   ],
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "16:00",
+   "event_kind": "Cortos",
+   "titulo": "El Futuro del Futuro",
+   "es_programa": true,
+   "sala": "Sala 2",
+   "sede": "Cinemateca de Bogotá",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230552990897",
+   "acceso": "Boletería"
+  },
+  {
+   "dia": "2026-09-18",
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "19:00",
+   "event_kind": "Largometraje",
+   "titulo": "Habitante",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 89,
+   "genero": "Documental",
+   "director": "José Alejandro Gonzalez",
+   "sala": "Sala 2",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Entrada gratis reclamando boleta en taquilla 1 hora antes de la función."
+  },
+  {
+   "dia": "2026-09-19",
+   "_src": "https://narrarelfuturo.com/programa-2026/",
+   "hora": "18:00",
+   "titulo": "Llueve sobre Babel",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 113,
+   "genero": "Ficción",
+   "director": "Gala del Sol",
+   "sala": "Sala Capital",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Entrada libre hasta completar aforo",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230552990899"
+  }
+ ]
+}

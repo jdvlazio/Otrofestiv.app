@@ -1,0 +1,369 @@
+# -*- coding: utf-8 -*-
+"""Funde las fuentes de #NarrarElFuturo en el crudo del formato intermedio.
+
+ESTE ES EL ÚNICO SCRIPT CON DERECHO A ESCRIBIR EL CRUDO. Los parsers escriben
+cada uno su sidecar; cuando dos de ellos apuntaron al crudo, el segundo borró al
+primero y se perdieron 8 funciones y 27 obras sin un error en pantalla.
+
+Entradas y qué aporta cada una:
+  -web.json        la PARRILLA: qué función hay, cuándo, dónde y cómo se entra
+  -obras.json      la FICHA de cada obra: sinopsis, póster, dirección, género
+  -talleres.json   la franja académica, con el retrato del tallerista
+  -ig.json         lo que la web no publica: el bloque de la Sala VR
+  -vr.json         las 8 obras de la instalación
+  -cinemateca.json CORROBORACIÓN de las 8 funciones en salas de la Cinemateca
+
+La Cinemateca no aporta dato nuevo: se usa para CONTRASTAR día, hora y sala, y
+lo que discrepe se reporta. Dos fuentes independientes que coinciden valen más
+que una que nadie contradijo.
+"""
+import io, json, os, re, sys, unicodedata
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import lib
+from lib import provenance
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ST = f'{REPO}/festivals/staging'
+SALIDA = f'{ST}/narrarelfuturo-2026-crudo.json'
+
+# La instalación VR no es una función: está ABIERTA en bloque y el festival
+# publica sus horarios en Instagram. Se modela como una actividad recurrente
+# —un bloque, `is_recurring` en cada sesión— que es el mecanismo de la casa para
+# lo multi-día. Sin esto el domingo 20 se quedaría sin nada, y sí hay algo.
+VR_SESIONES = [('2026-09-15', '14:00', 240), ('2026-09-16', '14:00', 240),
+               ('2026-09-17', '14:00', 240), ('2026-09-18', '14:00', 240),
+               ('2026-09-19', '11:00', 420), ('2026-09-20', '11:00', 420)]
+VR_SEDE, VR_SALA = 'Cinemateca de Bogotá', 'Laboratorios 1 y 2'
+
+# El mismo corto escrito de dos formas por las dos fuentes. La web de este
+# festival publica «Mercado del arte_ …» porque su gestor convirtió los dos
+# puntos del título en guion bajo; la Cinemateca lo escribe bien. Y «6 de
+# December» es la mitad en inglés de «6 de diciembre». Mapa EXPLÍCITO: la
+# versión heurística de esto añadió las dos como obras nuevas y duplicó el
+# programa.
+TITULO_OFICIAL = {
+    'Mercado del arte: cómo fabricar un artista': 'Mercado del arte_ cómo fabricar un artista',
+    '6 de December': '6 de diciembre',
+}
+
+# (Hubo un FALTANTES para «Malignant / Catatonic»: la tarjeta no traía año y el
+# parser de la web la tiraba. Se arregló el parser — el año es opcional — y el
+# parche se fue. Un crudo que repone lo que su parser pierde esconde el hueco.)
+
+# SECCIÓN = la temática que el propio festival usa para filtrar su programa
+# («🏷️ FILTRAR POR TEMÁTICA»), más «Sala VR», que es como llama a la
+# instalación en su propio índice. Ninguna es invención nuestra. El mapeo va
+# EXPLÍCITO desde la etiqueta con que el festival encabeza cada tarjeta, no por
+# heurística sobre el título.
+SECCION = {
+    'Largometraje': 'Proyecciones & Largos',
+    'RT Meet The Creators': 'Proyecciones & Largos',
+    'Cortos': 'Muestra de Cortos',
+    'taller': 'Talleres & Formación',
+    # la instalación entra con su kind, no con una etiqueta de tarjeta: sin esta
+    # clave caía a «Proyecciones & Largos» y la Sala VR no existía como sección
+    'experiencia': 'Sala VR',
+    # La franja de charlas: el festival le da página propia («Charlas 2026») y
+    # no la mete en la parrilla. Sección aparte, con su palabra.
+    'charla': 'Charlas',
+}
+# La clausura no lleva etiqueta en su tarjeta: es una proyección y va con ellas.
+SECCION_DEFECTO = 'Proyecciones & Largos'
+
+
+# Q&A DECLARADOS POR EL FESTIVAL. No están en la web —la ficha de la inaugural
+# no lo menciona— sino en el pie del post del día 1 en Instagram: «Después de la
+# función tendremos un encuentro con Juliana y Ángela Carabalí para conversar
+# sobre la película y el proceso detrás de esta historia». Importa: la app pinta
+# el distintivo Q&A y le SUMA la sobremesa a la duración cuando arma el plan, así
+# que no marcarlo le quita tiempo al usuario donde decide si algo le cabe.
+#
+# Y se comprobó que la Cinemateca NO declara ninguno para este festival, aunque
+# lo parezca: sus ocho fichas contienen la frase «Sesión de preguntas y
+# respuestas», pero dentro del PIE DE LEYENDA («cuadro turquesa → …»), que es
+# cromo del sitio y sale en todas. La marca de verdad es «PROYECCIÓN CON
+# CONVERSATORIO» en el cuerpo —otros festivales de su agenda la tienen— y
+# ninguna de las nuestras la lleva.
+QA = {
+    'Soñé su nombre': ('team', 'encuentro con Juliana y Ángela Carabalí después de la función '
+                               '(Instagram, post del día 1)'),
+}
+
+
+# slug()/norm() son las de lib: la clave de JOIN entre el título de la tarjeta
+# («Aqua, Ensayo & Diversidad») y el slug de la ruta de la ficha
+# («aqua-ensayo-diversidad»). Cruzar por norm() NO casa —coma y ampersand— y
+# el fallo es mudo: la función se publica sin sus obras y nada avisa.
+from lib import slug, norm  # noqa: E402
+
+
+def cargar(n):
+    return json.load(io.open(f'{ST}/narrarelfuturo-2026-{n}.json', encoding='utf-8'))
+
+
+def main():
+    web = cargar('web')['funciones']
+    obras = cargar('obras')['obras']
+    talleres = cargar('talleres')['talleres']
+    vr = cargar('vr')['obras']
+    cine = cargar('cinemateca')['funciones']
+
+    por_titulo = {norm(o.get('titulo')): o for o in obras if o.get('titulo')}
+
+    # FICHAS DUPLICADAS: dos páginas del festival traen la MISMA línea técnica
+    # («Argentina · 2025 · 3 min 49s · Ficción IA» en Malignant / Catatonic y en
+    # Marta Trend; «Colombia · 2026 · 27 min 59s» en Vivir de la piedra y en
+    # Venezuela: latidos entre escombros). Es copia-y-pega del sitio, no dos
+    # obras iguales, y explica las contradicciones tarjeta/ficha que salieron en
+    # tres revisiones. Regla, no parche: si la ficha técnica de una obra coincide
+    # entera con la de otra, para ESOS campos (país, año, duración, género) manda
+    # la TARJETA del programa, que es donde el festival las lista una por una.
+    # Sinopsis, dirección y póster de la ficha se conservan: esos sí son propios.
+    _firma = {}
+    for o in obras:
+        if o.get('titulo') and o.get('anio') and o.get('duracion_min'):
+            _firma.setdefault((o.get('pais'), o['anio'], o['duracion_min'], o.get('genero')), []).append(norm(o['titulo']))
+    dup = {t for k, ts in _firma.items() if len(ts) > 1 for t in ts}
+    TECNICOS = ('pais', 'anio', 'duracion_min', 'genero')
+    por_programa = {}
+    for o in obras:
+        if o.get('programa') and o.get('titulo'):
+            por_programa.setdefault(slug(o['programa']), []).append(o)
+
+    FICHA = ('sinopsis', 'poster', 'genero', 'director', 'pais', 'anio', 'duracion_min')
+
+    # La agenda de la Cinemateca publica estas mismas obras con la duración ya
+    # redondeada al minuto, y sus listas suman EXACTAMENTE lo que el programa
+    # declara (83, 87, 91). La web da segundos y al redondear cada obra por
+    # separado la suma se desvía ±1. Donde la Cinemateca tiene la obra, manda su
+    # minuto; y si tiene una obra que a la tarjeta le falta, se AÑADE y se dice.
+    cine_obras = {}
+    for c in cine:
+        for o in (c.get('obras') or []):
+            cine_obras[norm(TITULO_OFICIAL.get(o['titulo'], o['titulo']))] = o
+    funciones = []
+
+    for f in web:
+        g = dict(f)
+        g.pop('es_programa', None)
+        if f.get('obras'):
+            # LA TARJETA DECIDE QUÉ OBRAS TIENE EL PROGRAMA; la ficha por obra
+            # solo la COMPLETA. Al revés no funciona: la web archiva «Despierta!»,
+            # «HensFluenzers», «Sopro» y «Time Capsule» bajo la ruta de «Aqua,
+            # Ensayo & Diversidad» aunque se proyecten en «Narrar. Creer.
+            # Crecer». Tomando la ruta como pertenencia, ese programa salía con
+            # 12 obras en vez de 8 — y la agenda de la Cinemateca, que es
+            # independiente, también dice 8.
+            g['obras'] = []
+            vistos = set()
+            for o in f['obras']:
+                base = dict(por_titulo.get(norm(o.get('titulo'))) or {})
+                if norm(o.get('titulo')) in dup:
+                    for k in TECNICOS:
+                        base.pop(k, None)          # ficha copiada: manda la tarjeta
+                    base['_ficha_duplicada'] = 'línea técnica idéntica a otra obra; país/año/duración/género salen de la tarjeta'
+                obra = {k: (o.get(k) or base.get(k)) for k in ('titulo', '_ficha_duplicada') + FICHA
+                        if (o.get(k) or base.get(k))}
+                cc = cine_obras.get(norm(o.get('titulo')))
+                if cc and cc.get('duracion_min'):
+                    obra['duracion_min'] = cc['duracion_min']
+                vistos.add(norm(o.get('titulo')))
+                g['obras'].append(obra)
+        else:
+            base = dict(por_titulo.get(norm(f['titulo'])) or {})
+            if base and norm(f['titulo']) in dup:
+                for k in TECNICOS:
+                    base.pop(k, None)              # ficha copiada: manda la tarjeta
+                g['_ficha_duplicada'] = 'línea técnica idéntica a otra obra; país/año/duración/género salen de la tarjeta'
+            if base:
+                for k in FICHA:
+                    if base.get(k) and not g.get(k):
+                        g[k] = base[k]
+            g.pop('obras', None)
+        funciones.append(g)
+
+    for t in talleres:
+        if not (t.get('dia') and t.get('hora')):
+            continue
+        funciones.append({
+            'titulo': t['titulo'], 'dia': t['dia'], 'hora': t['hora'],
+            'sede': t.get('sede', ''), 'sala': t.get('sala', ''),
+            'tipo': 'taller', 'event_kind': 'taller',
+            'director': t.get('tallerista', ''), 'pais': t.get('pais', ''),
+            'duracion_min': t.get('duracion_min'), 'sinopsis': t.get('sinopsis'),
+            'poster': t.get('imagen'), 'acceso': t.get('acceso', lib.DESCONOCIDO),
+            'registration_url': t.get('registration_url'), '_src': t.get('_src'),
+        })
+        # Segunda sesión el mismo día (podcast: 10–12 y 2–6): su propia
+        # actividad, con la misma ficha. Sin esto el bloque de la tarde no existía.
+        if t.get('sesion2') and t['sesion2'].get('hora'):
+            g = dict(funciones[-1])
+            g.update({'hora': t['sesion2']['hora'], 'duracion_min': t['sesion2'].get('duracion_min'),
+                      '_nota': 'segunda sesión del mismo día, declarada así en la ficha del taller'})
+            funciones.append(g)
+
+    # CHARLAS — la franja que la parrilla no publica (ver -charlas.py). Con día,
+    # hora, sede, sala, inscripción, sinopsis y la foto de la conversación. Los
+    # PANELISTAS van en `director` porque son quienes hacen la actividad, igual
+    # que el tallerista en un taller; el festival los rotula uno por uno, no se
+    # deduce de la posición de una línea.
+    for c in cargar('charlas')['charlas']:
+        funciones.append({
+            'titulo': c['titulo'], 'dia': c['dia'], 'hora': c['hora'],
+            'sede': c.get('sede', ''), 'sala': c.get('sala', ''),
+            'tipo': 'charla', 'event_kind': 'charla',
+            'director': ', '.join(p['nombre'] for p in c.get('panelistas') or []),
+            'duracion_min': c.get('duracion_min'), 'sinopsis': c.get('sinopsis'),
+            'poster': c.get('imagen'), 'acceso': c.get('acceso', lib.DESCONOCIDO),
+            'registration_url': c.get('registration_url'), '_src': c.get('_src'),
+            '_modera': ', '.join(p['nombre'] for p in c.get('modera') or []) or None,
+        })
+
+    # Las obras de VR también tienen ficha propia en la web: sin completarlas
+    # desde ahí salían sin póster ni sinopsis las 48 entradas (8 obras × 6
+    # sesiones). La lista de la tarjeta dice CUÁLES son; la ficha, cómo son.
+    obras_vr = []
+    for o in vr:
+        base = por_titulo.get(norm(o.get('titulo'))) or {}
+        obras_vr.append({k: (o.get(k) or base.get(k)) for k in ('titulo',) + FICHA
+                         if (o.get(k) or base.get(k))})
+    for dia, hora, dur in VR_SESIONES:
+        funciones.append({
+            # El nombre es el del festival, verbatim: la tarjeta de la web dice
+            # «VR» / «#OtrosMundosPosibles» y el arte de IG «Expo VR
+            # #OtrosMundosPosibles». «Sala VR» es la SECCIÓN (IG: «Proyecciones
+            # en SALA VR»), no el título de la actividad.
+            'titulo': 'VR #OtrosMundosPosibles', 'dia': dia, 'hora': hora,
+            'sede': VR_SEDE, 'sala': VR_SALA,
+            'duracion_min': dur,
+            # ACTIVIDAD ABIERTA, no una función con hora de inicio: la
+            # instalación está activa toda la franja y se entra cuando uno
+            # quiere. Es el modelo `info:true` que ya existe en la app desde la
+            # maratón de SiembraFest — «se lleva, no se planifica»: la ventana
+            # es dato y se queda, lo que cambia es cómo se dice («Hasta 18:00»,
+            # «Vas cuando quieras»). Modelarla como seis funciones la habría
+            # metido en el planificador y en «la próxima», donde no va.
+            'info': True, 'type': 'event', 'event_kind': 'experiencia',
+            'acceso': 'Entrada libre hasta completar aforo',
+            'obras': obras_vr,
+            '_src': 'https://www.instagram.com/p/DdR-n97md3i/',
+        })
+
+    # SINOPSIS DE PROGRAMA — de Instagram, porque la web no la publica: las
+    # páginas de los programas traen solo el título. El pie empieza con la
+    # logística («Este viernes 18 de septiembre, #NarrarElFuturo llega a la
+    # Cinemateca Fontanar del Río con “Narrar. Creer. Crecer”,») que la tarjeta
+    # ya pinta, y sigue con la descripción de verdad, que SIEMPRE arranca en
+    # «una selección». Se corta ahí: son las palabras del festival, sin el
+    # preámbulo. Si un pie no trae esa fórmula, el programa se queda sin
+    # sinopsis — antes inventar nada, nada.
+    _ig = {norm(x.get('nombre')): x.get('caption') or ''
+           for x in cargar('ig')['posts'] if x.get('tipo') == 'programa'}
+    for f in funciones:
+        if f.get('obras') and not f.get('sinopsis'):
+            cap = _ig.get(norm(f.get('titulo')))
+            m = re.search(r'(una (?:selecci[oó]n|muestra)\b.*?\.)(?:\s|$)', (cap or '').split('\n')[0], re.I | re.S)
+            if m:
+                f['sinopsis'] = m.group(1)[0].upper() + m.group(1)[1:]
+                f['_sinopsis_src'] = 'instagram: el pie del post del programa, sin el preámbulo de logística'
+
+    for f in funciones:
+        if f.get('titulo') in QA:
+            f['has_qa'], (f['qa_type'], f['_qa_fuente']) = True, QA[f['titulo']]
+
+    for f in funciones:
+        f['seccion'] = SECCION.get(f.get('event_kind'), SECCION_DEFECTO)
+        # La ETIQUETA de la tarjeta («Largometraje», «Cortos», «RT Meet The
+        # Creators») sirve para elegir la sección y ahí se queda: NO es un
+        # event_kind. Un event_kind que la app no conoce pinta «EVENTO» genérico
+        # en la card de una película. Solo los talleres y la instalación VR son
+        # actividades con kind propio.
+        # La lista es blanca a propósito: solo las actividades que de verdad son
+        # de un tipo —taller, charla, instalación— llevan kind. Todo lo demás
+        # («Largometraje», «Cortos», «RT Meet The Creators») es la etiqueta de
+        # la tarjeta, que sirve para elegir sección y ahí se queda.
+        if f.get('event_kind') not in ('taller', 'charla', 'experiencia'):
+            f.pop('event_kind', None)
+    # Pósters RE-HOSTEADOS (paso posters.py): la tabla remota→/assets/ se aplica
+    # aquí, sobre funciones y obras, porque el crudo es el único que decide qué
+    # póster lleva cada cosa. Si la tabla no existe, quedan las URLs del festival.
+    _pp = f'{ST}/narrarelfuturo-2026-posters.json'
+    _posters = json.load(io.open(_pp, encoding='utf-8')).get('posters', {}) if os.path.exists(_pp) else {}
+    for f in funciones:
+        for x in [f] + list(f.get('obras') or []):
+            if x.get('poster') in _posters:
+                _p = _posters[x['poster']]
+                # La FORMA MEDIDA decide `posterSource`, no el tipo de actividad:
+                # este festival tiene películas con still 16:9 y talleres con
+                # afiche 2:3, así que el default del ensamblador («lo que publica
+                # el festival es editorial») acertaba en unos y fallaba en otros.
+                x['poster'], x['posterSource'] = _p['ruta'], _p['posterSource']
+    funciones = [{k: v for k, v in f.items() if v not in (None, '')} for f in funciones]
+    for f in funciones:
+        f.setdefault('sala', '')
+
+    # LA CINEMATECA TAMBIÉN APORTA DATO, no solo contraste: en su ficha, cada
+    # función lleva un color que dice si hay charla con el público («Sesión de
+    # preguntas y respuestas», «Conversatorio», «Diálogo con el público»). Se
+    # cruza por DÍA Y HORA, no por título, porque los nombres difieren entre las
+    # dos fuentes —«Programa 3 - El futuro del futuro» vs «El Futuro del Futuro»,
+    # «Películas Selección oficial 2026» vs «Narrar. Creer. Crecer»— y el día y
+    # la hora sí coinciden. Si la hora discrepa (lo reporta el contraste de
+    # abajo), el Q&A no se aplica: primero se resuelve la discrepancia.
+    # …Y CON LA SEDE EN LA CLAVE. El viernes 18 a las 4:00pm hay DOS funciones a
+    # la vez, «El Futuro del Futuro» en la Cinemateca del centro y «Narrar. Creer.
+    # Crecer» en Fontanar. Cruzando solo por día y hora, el diálogo con el
+    # público de Fontanar se le pegaba también a la del centro, que no lo tiene.
+    def _casa(x):
+        return 'fontanar' if 'fontanar' in (x or '').lower() else 'centro'
+    por_cuando = {(c['dia'], c['hora'], _casa(c.get('sede'))): c
+                  for c in cine if c.get('dia') and c.get('hora')}
+    # Respaldo por TÍTULO en la misma sede y día: «Llueve sobre Babel» tiene la
+    # marca turquesa y las dos fuentes discrepan en la hora (18:00 vs 18:30), así
+    # que la clave exacta no casaba y se perdía un Q&A que existe. La hora sigue
+    # siendo la de la web y la discrepancia se reporta igual; lo que no se pierde
+    # es el dato de que hay charla.
+    def _tit(x):
+        return norm(re.sub(r'^Programa\s*\d+\s*-\s*', '', (x or '')).rstrip('.'))
+    por_titulo_cine = {(c['dia'], _casa(c.get('sede')), _tit(c['titulo'])): c
+                       for c in cine if c.get('dia')}
+    for f in funciones:
+        c = (por_cuando.get((f.get('dia'), f.get('hora'), _casa(f.get('sede'))))
+             or por_titulo_cine.get((f.get('dia'), _casa(f.get('sede')), _tit(f['titulo']))))
+        if c and c.get('has_qa') and not f.get('has_qa'):
+            f['has_qa'] = True
+            f['_qa_fuente'] = f"agenda de la Cinemateca: «{c['marca']}» ({c['_marca_color']})"
+
+    # CONTRASTE con la Cinemateca: no corrige, reporta.
+    discrepa = []
+    porc = {(norm(c['titulo']), c['dia']): c for c in cine}
+    for f in funciones:
+        c = porc.get((norm(f['titulo']), f.get('dia')))
+        if c and c.get('hora') != f.get('hora'):
+            discrepa.append(f"{f['titulo'][:34]} {f['dia']}: web {f.get('hora')} vs Cinemateca {c.get('hora')}")
+
+    os.makedirs(ST, exist_ok=True)
+    json.dump({'_provenance': provenance(
+        'narrarelfuturo.com (programa + ficha por obra + talleres) + Instagram (Sala VR) + agenda de la Cinemateca (contraste)',
+        metodo='fusión: la parrilla de la web manda; la ficha por obra la completa; la Cinemateca contrasta',
+        nota='la instalación VR va como actividad recurrente (is_recurring), no como seis funciones distintas'),
+        '_funciones': len(funciones),
+        '_obras': sum(len(f.get('obras') or []) for f in funciones),
+        '_contraste_cinemateca': discrepa or 'sin discrepancias en día/hora',
+        '_qa': [f"{f['titulo']} — {f.get('_qa_fuente')}" for f in funciones if f.get('has_qa')],
+        'funciones': funciones},
+        io.open(SALIDA, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+    import collections
+    print(f'── {os.path.basename(SALIDA)} · {len(funciones)} funciones · '
+          f"{sum(len(f.get('obras') or []) for f in funciones)} obras en programas")
+    print('   días:', dict(sorted(collections.Counter(f['dia'][-2:] for f in funciones).items())))
+    print('   secciones:', dict(sorted(collections.Counter(f['seccion'] for f in funciones).items())))
+    for c in ('sinopsis', 'poster', 'director', 'acceso'):
+        print(f"   {c:<10} {sum(1 for f in funciones if f.get(c)):>3}/{len(funciones)}")
+    print('   contraste Cinemateca:', discrepa or 'sin discrepancias ✓')
+
+
+if __name__ == '__main__':
+    main()

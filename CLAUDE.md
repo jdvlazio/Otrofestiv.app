@@ -97,6 +97,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `tiff2026` | TIFF | Toronto | 10–20 SEP | **Próximo / activo** |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
 | `siembrafest2026` | SiembraFest | Sasaima y Villeta | 9–18 SEP | **Próximo / activo** |
+| `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | **Próximo / activo** |
 
 ### Features activas (desde `.specify/features/`)
 

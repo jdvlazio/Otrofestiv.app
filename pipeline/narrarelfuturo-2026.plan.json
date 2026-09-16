@@ -1,0 +1,114 @@
+{
+ "_nota": "#NarrarElFuturo 13 — Festival de Cine & Nuevos Medios, Bogotá, 15–20 SEP 2026. Montado CON EL FESTIVAL YA EN CURSO (arrancó el 15).\n\nCUATRO FUENTES, y cada una aporta algo que las otras no: (1) narrarelfuturo.com/programa-2026/ da la PARRILLA —y no está enlazada en el menú del sitio, la pasó Juan—; (2) una ficha por obra bajo esa misma ruta da sinopsis, póster, dirección y género; (3) /talleres-2026/<slug>/ da la franja académica con el retrato del tallerista; (4) Instagram da lo único que la web no publica, el bloque de la Sala VR con su horario. La agenda de la Cinemateca NO aporta dato: CONTRASTA, y ya cazó una discrepancia.\n\nSECCIONES: son las temáticas con que el propio festival filtra su programa, más «Sala VR», que es como llama a la instalación. Ninguna es nuestra.\n\nLA INSTALACIÓN VR no es una función: está abierta en bloque (15–18 de 2 a 6, 19–20 de 11 a 6) y va como actividad recurrente. Sin ella el domingo 20 quedaría vacío.\n\nSLOTS COMPARTIDOS = UNA FUNCIÓN: los tres pares de la Tadeo a las 3 pm (16, 17 y 18 SEP) son una sola sesión «RT Meet The Creators» con dos documentales y conversación con sus realizadores; el festival les da tarjeta y ficha propias a cada documental, por eso son dos entradas con la misma hora y sala.\n\nCINCO FUENTES, no cuatro: /charlas-2026/ es una página del menú del sitio que la parrilla no refleja —se comprobó que /programa-2026/ no menciona ninguna de las dos charlas— y sin ella el día inaugural salía con dos actividades en vez de cuatro. Del menú quedan fuera, a propósito: #HackathonVR360 (laboratorio de 20 seleccionados, convocatoria cerrada el 8 sep, sede que solo reciben por correo) y #Invitados (personas, no actividades).\n\nEL ÍNDICE ES EL SITEMAP, NO EL MENÚ. Revisé esta web más de siete veces por el menú y la parrilla, y en cada pasada apareció algo nuevo —talleres, fichas de obra, el og:image, las charlas—. /wp-sitemap.xml da la lista CERRADA: 175 páginas, 90 tocadas en 2026. El paso de cobertura las cruza contra los sidecars y falla si alguna queda sin mirar; lo que no es actividad se declara ahí con su motivo, no se descarta en silencio. El calendario de eventos del sitio (/events/, 45 entradas) es de la edición 2025 ENTERA: mirarlo sin comprobar el año habría metido una «Fiesta de Clausura» y un «Hackathon AR» que este año no existen.",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/narrarelfuturo-2026-web.py",
+   "que": "programa-2026 → parrilla (16 funciones) + obras de la Sala VR"
+  },
+  {
+   "cmd": "python3 pipeline/narrarelfuturo-2026-obras.py",
+   "que": "una ficha por obra → 42 obras con sinopsis y póster"
+  },
+  {
+   "cmd": "python3 pipeline/narrarelfuturo-2026-talleres.py",
+   "que": "talleres-2026 → 11 talleres con imagen"
+  },
+  {
+   "cmd": "python3 pipeline/narrarelfuturo-2026-charlas.py",
+   "que": "charlas-2026 → las 2 charlas inaugurales, que NO están en la parrilla"
+  },
+  {
+   "cmd": "python3 pipeline/narrarelfuturo-2026-ig.py",
+   "que": "Instagram → Sala VR y franjas que la web no publica"
+  },
+  {
+   "cmd": "python3 pipeline/narrarelfuturo-2026-cinemateca.py",
+   "que": "agenda de la Cinemateca → contraste de 8 funciones"
+  },
+  {
+   "cmd": "python3 pipeline/narrarelfuturo-2026-posters.py",
+   "que": "pósters y retratos → assets/narrarelfuturo-2026/ (re-host, [poster-host])"
+  },
+  {
+   "cmd": "python3 pipeline/narrarelfuturo-2026-cobertura.py",
+   "que": "el SITEMAP del sitio contra lo extraído: falla si hay una página de 2026 que nadie lee"
+  },
+  {
+   "cmd": "python3 pipeline/narrarelfuturo-2026-crudo.py",
+   "que": "fusión → crudo (34 funciones)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py narrarelfuturo-2026",
+   "que": "crudo → enriquecido (TMDB + Letterboxd; 47 obras miradas, 13 verificadas). Necesita TMDB_API_KEY en el entorno: `source ~/.zshrc`. SIN --posters a propósito: el afiche oficial del festival manda y comparte nombre de archivo con el de TMDB"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py narrarelfuturo-2026",
+   "que": "crudo + plan → build"
+  },
+  {
+   "cmd": "python3 pipeline/publicar.py narrarelfuturo-2026",
+   "que": "build → festivals/ (valida el contrato al escribir)"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/narrarelfuturo-2026-crudo.json",
+  "sedes": {
+   "Cinemateca de Bogotá": [
+    "Cinemateca de Bogotá - Bogotá",
+    ""
+   ],
+   "Cinemateca Fontanar del Río": [
+    "Cinemateca Fontanar del Río - Bogotá",
+    ""
+   ],
+   "Universidad Jorge Tadeo Lozano": [
+    "Universidad Jorge Tadeo Lozano - Bogotá",
+    ""
+   ]
+  },
+  "secciones": {
+   "Proyecciones & Largos": {
+    "emoji": "🎬",
+    "en": "Screenings & Features",
+    "archetype": "Competencia"
+   },
+   "Muestra de Cortos": {
+    "emoji": "⚡",
+    "en": "Short Film Showcase",
+    "archetype": "Cortos / Programas"
+   },
+   "Talleres & Formación": {
+    "emoji": "🛠️",
+    "en": "Workshops & Training",
+    "archetype": "Charlas / Industria"
+   },
+   "Sala VR": {
+    "emoji": "🥽",
+    "en": "VR Room",
+    "archetype": "Especiales / Eventos"
+   },
+   "Charlas": {
+    "emoji": "🎙️",
+    "en": "Talks",
+    "archetype": "Charlas / Industria"
+   }
+  },
+  "name": "#NarrarElFuturo",
+  "fullName": "#NarrarElFuturo — Festival de Cine & Nuevos Medios",
+  "city": "Bogotá",
+  "country": "CO",
+  "dates": "15–20 SEP",
+  "dates_en": "SEP 15–20",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "narrarelfuturo2026_",
+  "festivalStartStr": "2026-09-15T00:00:00",
+  "festivalEndStr": "2026-09-20T23:59:00",
+  "sharedSlotIsOneScreening": true,
+  "ticketing_model": "mixed",
+  "mes_es": "septiembre",
+  "dias_vacios": [],
+  "geo": "festivals/staging/narrarelfuturo-2026-venues-geo.json",
+  "enriquecido": "festivals/staging/narrarelfuturo-2026-enriquecido.json"
+ }
+}

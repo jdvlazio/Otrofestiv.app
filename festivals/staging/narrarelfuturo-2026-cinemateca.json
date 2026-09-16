@@ -1,0 +1,377 @@
+{
+ "_provenance": {
+  "fuente": "cinematecadebogota.gov.co/node/peliculas/<nodo>?sede=<id>",
+  "capturado": "2026-09-16",
+  "metodo": "fichas server-rendered de la agenda de la Cinemateca, barridas por rango de fechas y por sede",
+  "nota": "la ficha NOMBRA al festival; el listado no. En la misma semana y salas conviven CICLA, QAFF-Bogotá y los ciclos de la casa"
+ },
+ "_funciones": 8,
+ "_obras": 27,
+ "funciones": [
+  {
+   "_nodo": "3077",
+   "_sede_param": "11",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/3077?sede=11",
+   "titulo": "Programa 01 - Aqua, Ensayo y Diversidad",
+   "_festival": "#NarrarElFuturo: Festival de Cine & Nuevos Medios",
+   "anio": 2026,
+   "duracion_min": 83,
+   "clasificacion": "Apta para mayores de 15 años",
+   "idioma": "Varios",
+   "subtitulos": "Español",
+   "formato": "2D",
+   "obras": [
+    {
+     "titulo": "Sueño Viscoso 194",
+     "director": "Manuela Saavedra, Resonancia Cromática",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Lattice",
+     "director": "Alexander Trecco",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Caldeirão",
+     "director": "Oliveira Júnior, Milena Rocha, Weslley Oliveira",
+     "anio": 2026,
+     "pais": "Brasil",
+     "duracion_min": 20
+    },
+    {
+     "titulo": "The cinema that never was",
+     "director": "Mark Wachholz",
+     "anio": 2026,
+     "pais": "Alemania",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Mercado del arte: cómo fabricar un artista",
+     "director": "Laura Baigorri",
+     "anio": 2026,
+     "pais": "España",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio Mesa",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "How things are between us",
+     "director": "Julian Czurko",
+     "anio": 2026,
+     "pais": "Polonia",
+     "duracion_min": 3
+    },
+    {
+     "titulo": "Living Metals",
+     "director": "Alessandro Amaducci",
+     "anio": 2026,
+     "pais": "Italia",
+     "duracion_min": 7
+    }
+   ],
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-09-16",
+   "hora": "16:00",
+   "_marca_color": "#ffffff",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-08/Caldeira%CC%83o-poster.jpeg",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230552990893",
+   "acceso": "Boletería en taquilla"
+  },
+  {
+   "_nodo": "3078",
+   "_sede_param": "11",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/3078?sede=11",
+   "titulo": "¿Quién quemó el bus?",
+   "_festival": "#NarrarElFuturo: Festival de Cine & Nuevos Medios",
+   "anio": 2026,
+   "duracion_min": 63,
+   "clasificacion": "Recomendada para mayores de 12 años",
+   "idioma": "Español",
+   "subtitulos": "-",
+   "formato": "2D",
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-09-16",
+   "hora": "19:00",
+   "_marca_color": "#1ed6cb",
+   "marca": "Sesión de preguntas y respuestas",
+   "has_qa": true,
+   "sinopsis": "El 28 de octubre de 2021, mientras la efervescencia en las calles por el Paro Nacional caía en el olvido, Karo y Jonathan son señalados líderes de la Primera Línea BRC Suba y acusados de once delitos. La historia de un proceso judicial donde demostrar la inocencia parece un imposible.",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-08/Plantilla%20Poster%20imag%20secundaria%20%2817%29.jpg",
+   "acceso": "Entrada libre"
+  },
+  {
+   "_nodo": "3079",
+   "_sede_param": "11",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/3079?sede=11",
+   "titulo": "Programa 02 - Alucinación Artificial y Extinción",
+   "_festival": "#NarrarElFuturo: Festival de Cine & Nuevos Medios",
+   "anio": 2025,
+   "duracion_min": 87,
+   "clasificacion": "Apta para mayores de 15 años",
+   "idioma": "Varios",
+   "subtitulos": "Español",
+   "formato": "2D",
+   "obras": [
+    {
+     "titulo": "Puffer Fish",
+     "director": "Felipe Valério",
+     "anio": 2026,
+     "pais": "Brasil",
+     "duracion_min": 2
+    },
+    {
+     "titulo": "Marta trend",
+     "director": "Juan Murillo",
+     "anio": 2026,
+     "pais": "Argentina",
+     "duracion_min": 4
+    },
+    {
+     "titulo": "Fail",
+     "director": "Felipe Valério",
+     "anio": 2026,
+     "pais": "Brasil",
+     "duracion_min": 3
+    },
+    {
+     "titulo": "Happy people",
+     "director": "Balázs Budavári",
+     "anio": 2026,
+     "pais": "Hungría",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Hybrid",
+     "director": "Felipe Valério",
+     "anio": 2026,
+     "pais": "Brasil",
+     "duracion_min": 2
+    },
+    {
+     "titulo": "Ceremony",
+     "director": "Mark Wachholz",
+     "anio": 2026,
+     "pais": "Alemania",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Malignant / Catatonic",
+     "director": "Mike Bennion",
+     "anio": 2026,
+     "pais": "Camboya",
+     "duracion_min": 3
+    },
+    {
+     "titulo": "Outline against the sun",
+     "director": "Gabriel Manso, Eduardo Kissajikian",
+     "anio": 2026,
+     "pais": "Brasil",
+     "duracion_min": 3
+    },
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Paola Bonilla Rodriguez",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "6 de December",
+     "director": "Nelson Rodríguez Tequia",
+     "anio": 2026,
+     "pais": "Colombia, Estados Unidos",
+     "duracion_min": 30
+    }
+   ],
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-09-17",
+   "hora": "17:00",
+   "_marca_color": "#ffffff",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-08/Plantilla%20Poster%20imag%20secundaria%20%2818%29.jpg",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230552990895",
+   "acceso": "Boletería en taquilla"
+  },
+  {
+   "_nodo": "3080",
+   "_sede_param": "11",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/3080?sede=11",
+   "titulo": "Programa 3 - El futuro del futuro",
+   "_festival": "#NarrarElFuturo: Festival de Cine & Nuevos Medios",
+   "anio": 2026,
+   "duracion_min": 91,
+   "clasificacion": "Apta para mayores de 15 años",
+   "idioma": "Varios",
+   "subtitulos": "Español",
+   "formato": "2D",
+   "obras": [
+    {
+     "titulo": "Sueño viscoso 194",
+     "director": "Manuela Saavedra, Resonancia Cromática",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Lattice",
+     "director": "Alexander Trecco",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Ceremony",
+     "director": "Mark Wachholz",
+     "anio": 2026,
+     "pais": "Alemania",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Paola Bonilla Rodriguez",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Puffer fish",
+     "director": "Felipe Valério",
+     "anio": 2026,
+     "pais": "Brasil",
+     "duracion_min": 2
+    },
+    {
+     "titulo": "Happy people",
+     "director": "Balázs Budavári",
+     "anio": 2026,
+     "pais": "Hungría",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "The cinema that never was",
+     "director": "Mark Wachholz",
+     "anio": 2026,
+     "pais": "Alemania",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Mercado del arte: cómo fabricar un artista",
+     "director": "Laura Baigorri",
+     "anio": 2026,
+     "pais": "España",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Living metals",
+     "director": "Alessandro Amaducci",
+     "anio": 2026,
+     "pais": "Italia",
+     "duracion_min": 7
+    }
+   ],
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-09-18",
+   "hora": "16:00",
+   "_marca_color": "#ffffff",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-08/Plantilla%20Poster%20imag%20secundaria%20%2819%29.jpg",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230552990897",
+   "acceso": "Boletería en taquilla"
+  },
+  {
+   "_nodo": "3178",
+   "_sede_param": "80",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/3178?sede=80",
+   "titulo": "Películas Selección oficial 2026",
+   "_festival": "#NarrarElFuturo: Festival de Cine & Nuevos Medios",
+   "anio": 2026,
+   "duracion_min": 74,
+   "clasificacion": "Apto para todo el público",
+   "idioma": "Idioma original",
+   "subtitulos": "Español",
+   "formato": "2D",
+   "sede": "Cinemateca de Bogotá Fontanar del Río",
+   "dia": "2026-09-18",
+   "hora": "16:00",
+   "_marca_color": "#e45ba0",
+   "marca": "Diálogo con el público",
+   "has_qa": true,
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-08/669021807_1411824194308877_1829710144715648490_n.jpg",
+   "acceso": "Entrada libre"
+  },
+  {
+   "_nodo": "3211",
+   "_sede_param": "11",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/3211?sede=11",
+   "titulo": "Habitante.",
+   "_festival": "#NarrarElFuturo: Festival de Cine & Nuevos Medios",
+   "anio": 2026,
+   "duracion_min": 89,
+   "clasificacion": "Recomendada para mayores de 12 años",
+   "idioma": "Español",
+   "subtitulos": "NA",
+   "formato": "2D",
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-09-18",
+   "hora": "19:00",
+   "_marca_color": "#1ed6cb",
+   "marca": "Sesión de preguntas y respuestas",
+   "has_qa": true,
+   "sinopsis": "José Alejandro González recorrió el mundo con una cámara, retratando rostros, voces y encuentros efímeros con desconocidos. En uno de esos viajes, mientras trabajaba limpiando en un hotel del norte, la cámara se volvió hacia sí mismo. Habitante nace de ese gesto: una bitácora íntima hecha de archivos personales, fragmentos de viaje y silencios compartidos. A través de un montaje sensible y fragmentado, la película explora las resonancias entre la vida del cineasta y la de aquellos que encontró en el camino, revelando ecos comunes de migración, desarraigo y búsqueda. Más que un retrato del otro, Habitante es una pregunta sobre cómo habitamos el mundo, sobre el deseo —a veces imposible— de pertenecer. Entre la ternura y la incomodidad, entre la observación y la autoexploración, la película se convierte en un diario emocional que, al mirar hacia afuera, termina revelando el paisaje interior de quien filma.",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-09/Copia%20de%2012.%20HABITANTE_POSTER%20DE%20LA%20PEL%C3%8DCULA_%20%281%29.jpg",
+   "acceso": "Entrada libre"
+  },
+  {
+   "_nodo": "2821",
+   "_sede_param": "11",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/2821?sede=11",
+   "titulo": "Después del frío",
+   "_festival": "#NarrarElFuturo: Festival de Cine & Nuevos Medios",
+   "anio": 2025,
+   "duracion_min": 85,
+   "clasificacion": "Apta para mayores de 15 años",
+   "idioma": "Español",
+   "subtitulos": "N/A",
+   "formato": "2D",
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-09-17",
+   "hora": "19:30",
+   "_marca_color": "#1ed6cb",
+   "marca": "Sesión de preguntas y respuestas",
+   "has_qa": true,
+   "sinopsis": "En 2016, Colombia firmó un histórico acuerdo de paz con las FARC, marcando el fin de una guerra de 60 años. 'Después del frío' narra las historias de tres personas: un ganadero uribista que fue secuestrado, un coronel implicado en 'falsos positivos' y un líder social de Siloé, en Cali. A través de entrevistas cercanas y humanas, este documental revela los desafíos y las pequeñas victorias en el camino hacia la reconciliación y la justicia en un país aún marcado por la sombra del conflicto.",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-08/Despues.jpg",
+   "acceso": "Entrada libre"
+  },
+  {
+   "_nodo": "2003",
+   "_sede_param": "11",
+   "_src": "https://cinematecadebogota.gov.co/node/peliculas/2003?sede=11",
+   "titulo": "Llueve sobre Babel",
+   "_festival": "#NarrarElFuturo: Festival de Cine & Nuevos Medios",
+   "anio": 2025,
+   "duracion_min": 113,
+   "clasificacion": "Recomendada para mayores de 12 años",
+   "idioma": "Español",
+   "subtitulos": "N/A",
+   "formato": "2D",
+   "sede": "Cinemateca de Bogotá Centro",
+   "dia": "2026-09-19",
+   "hora": "18:30",
+   "_marca_color": "#1ed6cb",
+   "marca": "Sesión de preguntas y respuestas",
+   "has_qa": true,
+   "sinopsis": "La historia transcurre en Babel, un bar donde convergen personajes marcados por sus decisiones, sus culpas y sus deseos. Allí se encuentran con La Flaca, la enigmática encarnación de la Muerte, quien les ofrece la posibilidad de apostar años de sus propias vidas en un intento desesperado por cambiar su destino. Inspirada libremente en el imaginario del descenso al inframundo de Dante Alighieri, la película construye un universo visual hipnótico donde la vida, la muerte y el azar se entrelazan.",
+   "poster": "https://cinematecadebogota.gov.co/sites/default/files/2026-04/Copy%20of%20USODIGITAL_0.jpg",
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230552990899",
+   "acceso": "Boletería en taquilla"
+  }
+ ]
+}

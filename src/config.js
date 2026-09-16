@@ -888,6 +888,23 @@ export const FESTIVAL_CONFIG={
     tagline:'Festival de Cine Colombiano al Campo',
     films:null,posters:null,lbSlugs:{}
   },
+  'narrarelfuturo2026': {
+    name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
+    city:'Bogotá',country:'CO',
+    dates:'15–20 SEP',dates_en:'SEP 15–20',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/narrarelfuturo2026-v2.jpg',
+    storageKey:'narrarelfuturo2026_',festivalStartStr:'2026-09-15T00:00:00',festivalEndStr:'2026-09-20T23:00:00',
+    festivalDates:{'2026-09-15':'2026-09-15','2026-09-16':'2026-09-16','2026-09-17':'2026-09-17','2026-09-18':'2026-09-18','2026-09-19':'2026-09-19','2026-09-20':'2026-09-20'},
+    days:[{k:'2026-09-15',d:15,lbl:'MAR'},{k:'2026-09-16',d:16,lbl:'MIÉ'},{k:'2026-09-17',d:17,lbl:'JUE'},{k:'2026-09-18',d:18,lbl:'VIE'},{k:'2026-09-19',d:19,lbl:'SÁB'},{k:'2026-09-20',d:20,lbl:'DOM'}],
+    dayKeys:['2026-09-15','2026-09-16','2026-09-17','2026-09-18','2026-09-19','2026-09-20'],
+    dayShort:{'2026-09-15':'MAR 15','2026-09-16':'MIÉ 16','2026-09-17':'JUE 17','2026-09-18':'VIE 18','2026-09-19':'SÁB 19','2026-09-20':'DOM 20'},
+    dayShort_en:{'2026-09-15':'TUE 15','2026-09-16':'WED 16','2026-09-17':'THU 17','2026-09-18':'FRI 18','2026-09-19':'SAT 19','2026-09-20':'SUN 20'},
+    dayLong:{'2026-09-15':'Martes 15 de septiembre','2026-09-16':'Miércoles 16 de septiembre','2026-09-17':'Jueves 17 de septiembre','2026-09-18':'Viernes 18 de septiembre','2026-09-19':'Sábado 19 de septiembre','2026-09-20':'Domingo 20 de septiembre'},
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
+    tagline:'Festival de Cine & Nuevos Medios',
+    ticketing_model:'mixed', // entrada libre (Tadeo, Fontanar, Sala VR) + boletería de la Cinemateca (ticket_url por función) + inscripción en los talleres
+    films:null,posters:null,lbSlugs:{}
+  },
 };// Festival data loaded async from festivals/<id>.json via loadFestival()
 
 // ── VENUES ───────────────────────────────────────────────────────────────────
@@ -1121,6 +1138,13 @@ export const SECTION_ARCHETYPES = {
   '🏛️ Red de Museos': 'Especiales / Eventos',
   // Franja Académica de FICMA — el festival la divide en talleres y charlas.
   '🛠️ Talleres': 'Charlas / Industria',
+  // #NarrarElFuturo 2026 (Bogotá, 15–20 SEP): las temáticas con que el propio
+  // festival filtra su programa, más «Sala VR», que es como llama a la instalación.
+  '🎬 Proyecciones & Largos': 'Competencia',
+  '⚡ Muestra de Cortos': 'Cortos / Programas',
+  '🛠️ Talleres & Formación': 'Charlas / Industria',
+  '🥽 Sala VR': 'Especiales / Eventos',
+  '🎙️ Charlas': 'Charlas / Industria',
   '💬 Charlas': 'Charlas / Industria',
   '🛰️ Apertura': 'Apertura / Gala',
   '🤝 Encuentro': 'Charlas / Industria',
