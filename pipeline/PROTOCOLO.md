@@ -21,6 +21,38 @@ FICMA (90 funciones desde un PDF de imágenes). Todo lo que dice aquí se pagó.
 
 ---
 
+## 0·bis · Instagram se LEE, y la mitad del dato está dentro de la imagen
+
+Es la fuente donde más festivales publican antes que en su web, y la que peor se
+extrae si uno solo mira el pie. Tres hechos medidos en #NarrarElFuturo (16 sep
+2026), que valen para cualquier festival:
+
+1. **El pie viene cortado a ~2170 caracteres** sin sesión — en el embed Y en la
+   página pública, también en su `og:description`. De dos posts de programa nos
+   faltaba el final y no hay forma anónima de completarlo.
+2. **Sin sesión se ven ~10 posts.** El muro de registro corta el scroll del
+   perfil, y el bloque «More posts» del propio post devuelve los mismos.
+3. **El dato de verdad está PINTADO.** Una lámina de carrusel trae título,
+   dirección, país, año, sede, hora, el sello de sección y a veces el
+   conversatorio. El pie no repite nada de eso.
+
+Por eso el orden es: **descubrir en el navegador** (regla vieja: el fetch de
+texto da falsos negativos, cicatriz de QAFF), **bajar las láminas** —el embed
+las sirve sin sesión— y **leerlas con `pipeline/ocr.py`**, que usa el OCR del
+sistema, cachea por hash y lee las 42 de un festival en seis segundos. Mirarlas
+a ojo no escala, y la que no se mira es justo la que falta.
+
+El OCR sirve además como VERIFICACIÓN independiente: cruzar las horas y los
+títulos pintados contra la parrilla ya extraída encuentra lo que falta sin
+depender de que el festival lo haya escrito en texto. Ojo con dos cosas al
+cruzar: un título largo llega partido en dos líneas («HOW THINGS ARE / BETWEEN
+US») y el rótulo del festival aparece en todas las láminas.
+
+Lo que sigue necesitando sesión —descubrir más allá de esos ~10 posts, los pies
+enteros, las historias— se hace con una **cuenta secundaria**, nunca con la del
+festival ni la personal: Instagram limita cuentas por lectura automatizada, y lo
+que se pierde entonces es la cuenta, no el raspador.
+
 ## 1 · Qué pedir para empezar
 
 Al festival u organizador, en el primer contacto:
