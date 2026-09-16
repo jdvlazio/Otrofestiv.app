@@ -287,8 +287,14 @@ test('_edHdrSVG: sin accent cae a un color válido, nunca a "undefined"', () => 
 //      YA es un póster propio → sería un póster propio dentro de otro;
 //   2) el «módulo mudo» para los incompletos se leía como sombra sucia y la
 //      tarjeta se hacía pasar por la única obra visible.
-// De ahí la regla dura: la Escalera existe SOLO COMPLETA, y solo en Tipo 2.
-// Estos casos son las cuatro fronteras; cada uno mata una mutación distinta.
+// (1) sigue en pie y por eso el still nunca es módulo. (2) también: no hay
+// módulo mudo. Lo que CAMBIÓ el 16 sep 2026, con Juan y con la medida delante:
+// la Escalera ya no exige estar completa — dibuja las obras que tienen afiche y
+// salta las que traen still. El costo de la regla vieja se vio en
+// #NarrarElFuturo (diez programas al generativo teniendo 33 afiches, porque a
+// cada uno le estorbaba UNA obra) y la medida fue 112 → 143 programas con pila
+// en todo el repo. El tope de 8 NO se movió, y ahora cuenta LÁMINAS.
+// Estos casos son las fronteras; cada uno mata una mutación distinta.
 test('slotPosterParts: funciones compartidas de 2 a 8 obras, y solo completas', () => {
   const afiche = (title, poster) => ({ title, poster, posterSource: 'custom', duration: '90 min', section: 'Sec' });
   const still  = (title) => ({ title, poster: '/assets/x/still.jpg', posterSource: 'editorial', duration: '20 min', section: 'Sec' });
@@ -307,11 +313,20 @@ test('slotPosterParts: funciones compartidas de 2 a 8 obras, y solo completas', 
 
   assert.ok(H.slotPosterParts(tres), 'trío completo SÍ');
 
-  // Fronteras: cada una devuelve null (sin tarjeta), nunca una tarjeta a medias.
+  // El still no es módulo, y con un solo afiche al lado no hay pila que dibujar.
   assert.strictEqual(H.slotPosterParts([dos[0], still('S')]), null,
-    'un STILL no es afiche: sería un póster propio dentro de otro');
+    'un STILL no es afiche (sería un póster dentro de otro) → queda 1, y 1 no es pila');
   assert.strictEqual(H.slotPosterParts([dos[0], sinImg('X')]), null,
-    'incompleto → sin tarjeta (el módulo mudo murió: se leía como sombra)');
+    'sin imagen tampoco es módulo (el módulo mudo murió: se leía como sombra)');
+
+  // REGLA NUEVA (16 sep 2026): con afiches suficientes, la pila se dibuja
+  // saltando al que trae still. El pie sigue contando el programa entero.
+  const conStill = [...tres, still('S')];
+  const rS = H.slotPosterParts(conStill);
+  assert.ok(rS, 'tres afiches + un still SÍ recibe tarjeta');
+  assert.strictEqual(rS.modules.length, 3, 'se dibujan los tres afiches, no el still');
+  assert.ok(rS.dato.startsWith('4 obras'),
+    'el pie declara las CUATRO obras del programa: la pila es muestra, no índice');
   // FRONTERA 8 (26 ago 2026) — antes era 3, y su razón escrita era «mostrar 3 de 4
   // sería elegir por el festival». El diseño nuevo responde esa objeción en vez de
   // violarla: no muestra 3 de 4, muestra LAS 4. La forma escala porque el paso es
@@ -327,6 +342,12 @@ test('slotPosterParts: funciones compartidas de 2 a 8 obras, y solo completas', 
   }
   assert.strictEqual(H.slotPosterParts(mas(9)), null,
     '9+ → sin tarjeta: la lámina baja del 23% y en el chip de 56px es textura, no afiches');
+  // El tope cuenta LÁMINAS, no miembros: diez obras de las que ocho tienen
+  // afiche sí caben; nueve con afiche, no.
+  assert.ok(H.slotPosterParts([...mas(8), still('S1'), still('S2')]),
+    'diez obras con ocho afiches: se dibujan los ocho');
+  assert.strictEqual(H.slotPosterParts([...mas(9), still('S1')]), null,
+    'nueve afiches siguen pasándose del tope, haya stills o no');
   assert.strictEqual(H.slotPosterParts([dos[0]]), null, 'una sola obra no es función compartida');
   assert.strictEqual(H.slotPosterParts(null), null, 'sin miembros, nada');
 });

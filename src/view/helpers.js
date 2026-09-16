@@ -284,14 +284,23 @@ export function slotPosterParts(members, blockDur){
   // Tope 8 (prototipo aprobado, 25 ago): la Escalera escala a cualquier N porque
   // el paso es fracción de la lámina — ver makeSharedSlotSVG. Con 9+ la lámina
   // baja del 23% y a 56px queda en textura, así que ahí sí cae a la forma vieja.
-  if(!Array.isArray(members)||members.length<2||members.length>8) return null;
+  if(!Array.isArray(members)||members.length<2) return null;
   const clasif=members.map(f=>{
     const src=getPosterSrc(f.title,true)||f.poster||null;
     const real=!!src&&!_isEditorialPoster(f);
     return {f, src:real?src:null};
   });
-  if(clasif.some(c=>!c.src)) return null;   // solo completa: falta un afiche → sin tarjeta
-  const reales=clasif;
+  // LA PILA SE DIBUJA CON LAS OBRAS QUE TIENEN AFICHE (Juan, 16 sep 2026). Antes
+  // era «solo completa»: un still entre ocho afiches tumbaba la tarjeta entera.
+  // Con #NarrarElFuturo se vio el costo — sus diez programas caían al generativo
+  // teniendo 33 afiches propios, y a cada uno le estorbaba UNA obra—. Medido en
+  // el repo antes de cambiarlo: 112 → 143 programas con pila (+31). Lo que NO
+  // cambia es por qué el still no entra: se dibuja dentro del marco editorial,
+  // que ya es un póster, y sería un póster dentro de otro. El pie sigue diciendo
+  // la verdad del programa («10 obras · 91 min»), que es el dato con el que el
+  // usuario decide; las láminas son la muestra, no el índice.
+  const reales=clasif.filter(c=>c.src);
+  if(reales.length<2||reales.length>8) return null;
   // atrás→delante: el 1º del catálogo queda delante
   const modules=[...reales.slice(1).reverse().map(c=>c.src), reales[0].src];
   const lider=reales[0].f;
