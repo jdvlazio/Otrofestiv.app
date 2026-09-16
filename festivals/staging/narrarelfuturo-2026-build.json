@@ -163,6 +163,8 @@
    "sala": "Sala Capital",
    "event_kind": "Largometraje",
    "has_qa": false,
+   "synopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre, en un sueño, le pide que lo busque. Junto a su hermana Juliana, emprende un viaje a través de Colombia hasta las tierras indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada. Mientras las hermanas atraviesan el país, no solo vemos los paisajes contrastantes de Colombia, sino que también se entablan conversaciones que revelan el perfil de su padre, Esaú Carabalí Brand: un arrocero independiente, rebelde y víctima de un robo crucial. En el camino, descubren un inesperado archivo sonoro familiar y hacen una parada en la casa de su introspectiva abuela paterna. Días después, las hermanas salen del territorio, habiendo encontrado el amor, el legado de su padre y una comunidad atravesada por la violencia que aún resiste manteniendo una conexión profunda con su tierra y su alimento.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://narrarelfuturo.com/programa-2026/",
     "fuente": "narrarelfuturo.com (programa + ficha por obra + talleres) + Instagram (Sala VR) + agenda de la Cinemateca (contraste)"
@@ -1059,6 +1061,7 @@
    "time": "09:00",
    "day_order": 1,
    "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Taller de Creación Audiovisual",
    "event_kind": "taller",
    "has_qa": false,
    "synopsis": "Los grandes reportajes nacen de una investigación rigurosa, pero cobran vida gracias a la manera en que se narran. Este taller se adentra en el proceso creativo y periodístico detrás de",
@@ -1082,6 +1085,7 @@
    "time": "14:00",
    "day_order": 3,
    "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Taller de Creación Audiovisual",
    "event_kind": "taller",
    "has_qa": false,
    "synopsis": "¿Cómo se pasa de una idea a un plano en movimiento utilizando inteligencia artificial? Esta charla se enfoca en la práctica real de la creación audiovisual potenciada con IA. Tras un breve recorrido por el panorama actual de la IA generativa en el sector, desarrollaremos tres flujos de trabajo replicables en diferentes plataformas: de texto a video, de imagen a video y generación de videos a partir de múltiples referencias. Utilizando herramientas accesibles para integrar de forma efectiva estas tecnologías en un proceso de creación y producción real.",
@@ -1129,6 +1133,7 @@
    "time": "14:00",
    "day_order": 2,
    "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Taller de Creación Audiovisual",
    "event_kind": "taller",
    "has_qa": false,
    "synopsis": "La inteligencia artificial generativa está redefiniendo la manera en que se crean, producen y distribuyen los contenidos digitales. Este taller explora cómo periodistas, comunicadores y creadores pueden ampliar sus capacidades profesionales mediante el uso de herramientas de IA para la generación de textos, imágenes, video, gráficos y otros recursos narrativos, transformando la forma en que las redacciones responden a los desafíos del ecosistema mediático contemporáneo.",
@@ -1220,6 +1225,7 @@
    "time": "14:00",
    "day_order": 1,
    "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Taller de Creación Audiovisual",
    "event_kind": "taller",
    "has_qa": false,
    "synopsis": "En un ecosistema informativo donde las noticias se producen y circulan en cuestión de segundos, el papel del presentador va mucho más allá de leer un teleprónter. Este taller explora cómo se construye la credibilidad frente a cámara, cómo se toman decisiones bajo presión durante una noticia de última hora y cuáles son las herramientas narrativas que permiten informar con rapidez sin sacrificar el rigor periodístico.",
@@ -1876,7 +1882,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-15T22:06:23",
+  "fecha": "2026-09-15T22:09:57",
   "plan_sha": "911ac89fc14b86c2",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py narrarelfuturo-2026"

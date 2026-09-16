@@ -25,6 +25,7 @@
    "sala": "Sala Capital",
    "sede": "Cinemateca de Bogotá",
    "acceso": "Entrada gratis reclamando boleta en taquilla 1 hora antes de la función.",
+   "sinopsis": "Después de 30 años negando su dolor, Ángela se enfrenta a su pasado cuando su padre, en un sueño, le pide que lo busque. Junto a su hermana Juliana, emprende un viaje a través de Colombia hasta las tierras indígenas donde su padre, un agricultor afrodescendiente, fue víctima de desaparición forzada. Mientras las hermanas atraviesan el país, no solo vemos los paisajes contrastantes de Colombia, sino que también se entablan conversaciones que revelan el perfil de su padre, Esaú Carabalí Brand: un arrocero independiente, rebelde y víctima de un robo crucial. En el camino, descubren un inesperado archivo sonoro familiar y hacen una parada en la casa de su introspectiva abuela paterna. Días después, las hermanas salen del territorio, habiendo encontrado el amor, el legado de su padre y una comunidad atravesada por la violencia que aún resiste manteniendo una conexión profunda con su tierra y su alimento.",
    "seccion": "Proyecciones & Largos"
   },
   {
@@ -676,6 +677,7 @@
    "dia": "2026-09-16",
    "hora": "09:00",
    "sede": "Cinemateca de Bogotá",
+   "sala": "Taller de Creación Audiovisual",
    "tipo": "taller",
    "event_kind": "taller",
    "director": "Diana Deglauy",
@@ -685,14 +687,14 @@
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/08/ChatGPT-Image-Aug-27-2026-05_20_01-PM.jpg",
    "acceso": "desconocido",
    "_src": "https://narrarelfuturo.com/talleres-2026/historias-que-trascienden/",
-   "seccion": "Talleres & Formación",
-   "sala": ""
+   "seccion": "Talleres & Formación"
   },
   {
    "titulo": "IA generativa: De la idea al video",
    "dia": "2026-09-18",
    "hora": "14:00",
    "sede": "Cinemateca de Bogotá",
+   "sala": "Taller de Creación Audiovisual",
    "tipo": "taller",
    "event_kind": "taller",
    "director": "Ricardo Cortes",
@@ -702,8 +704,7 @@
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/08/ChatGPT-Image-Aug-31-2026-07_56_09-PM.jpg",
    "acceso": "desconocido",
    "_src": "https://narrarelfuturo.com/talleres-2026/ia-generativa-de-la-idea-al-video/",
-   "seccion": "Talleres & Formación",
-   "sala": ""
+   "seccion": "Talleres & Formación"
   },
   {
    "titulo": "Narrativas Verticales: Aprendizajes y experiencias en la dirección y realización de dramas verticales y series web hechos con IA",
@@ -727,6 +728,7 @@
    "dia": "2026-09-17",
    "hora": "14:00",
    "sede": "Cinemateca de Bogotá",
+   "sala": "Taller de Creación Audiovisual",
    "tipo": "taller",
    "event_kind": "taller",
    "director": "Boris Gorlov",
@@ -736,8 +738,7 @@
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/08/Gorlov.jpg",
    "acceso": "desconocido",
    "_src": "https://narrarelfuturo.com/talleres-2026/redacciones-aumentadas/",
-   "seccion": "Talleres & Formación",
-   "sala": ""
+   "seccion": "Talleres & Formación"
   },
   {
    "titulo": "Señales Líquidas: Creación Colectiva Audiovisual en Tiempo Real",
@@ -793,6 +794,7 @@
    "dia": "2026-09-16",
    "hora": "14:00",
    "sede": "Cinemateca de Bogotá",
+   "sala": "Taller de Creación Audiovisual",
    "tipo": "taller",
    "event_kind": "taller",
    "director": "María Isabel Cevallos (Ecuador)",
@@ -801,8 +803,7 @@
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/08/maxresdefault.jpg",
    "acceso": "desconocido",
    "_src": "https://narrarelfuturo.com/talleres-2026/ultima-hora/",
-   "seccion": "Talleres & Formación",
-   "sala": ""
+   "seccion": "Talleres & Formación"
   },
   {
    "titulo": "Sala VR",

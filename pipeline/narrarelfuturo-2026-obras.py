@@ -63,15 +63,23 @@ def parse(ruta, h):
     d = {'_src': BASE + ruta, '_slug': partes[-1]}
     if len(partes) > 1:
         d['programa'] = partes[0].replace('cortos ·', '').replace('cortos-·-', '').strip(' -·')
-    # el título es la línea ANTES de la ficha «País · Año · Duración · Género»
+    # EL TÍTULO SALE DEL <title> DE LA PÁGINA, no de la línea anterior a la
+    # ficha técnica. Esa línea es a veces el SUBTÍTULO: en la inaugural dice
+    # «Película inaugural», así que la obra se guardaba con ese nombre, no
+    # cruzaba con «Soñé su nombre» y perdía su sinopsis en la fusión. El <title>
+    # es el nombre de la obra y no depende de la maquetación.
+    titulo_pagina = re.sub(r'\s*-\s*#NarrarElFuturo\s*$', '', L[0]).strip() if L else ''
     for k, x in enumerate(L):
         m = RE_FICHA.match(x)
         if m and minutos(m.group('dur')) is not None and k:
-            d['titulo'] = L[k - 1]
+            d['titulo'] = titulo_pagina or L[k - 1]
             d.update({'pais': m.group('pais').strip(), 'anio': int(m.group('anio')),
                       'duracion_min': minutos(m.group('dur')),
                       'genero': (m.group('gen') or '').strip()})
             break
+    # sin línea de ficha técnica igual hay obra: el título del <title> vale.
+    # Pasa en dos piezas de VR, que no publican país/año/duración.
+    d.setdefault('titulo', titulo_pagina)
     for k, x in enumerate(L):
         if x == 'Dir.' and k + 1 < len(L):
             d.setdefault('director', L[k + 1])

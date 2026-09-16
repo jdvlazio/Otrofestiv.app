@@ -35,6 +35,11 @@ RE_RANGO = re.compile(r'(\d{1,2}):(\d{2})\s*([ap])?m?\s*a\s*(\d{1,2})(?::(\d{2})
 # la Cinemateca. Tabla explícita, nunca heurística — la lección de FICDEH.
 SEDES = {
     'Taller de la Imagen': ('Cinemateca de Bogotá', 'Taller de la Imagen'),
+    # Misma casa, otro nombre: cinco fichas escriben «Taller de Creación
+    # Audiovisual» donde otras cinco dicen «Taller de la Imagen». Las diez
+    # nombran además «Cinemateca de Bogotá», que es la sede. Sin esta entrada la
+    # sala se perdía en la mitad de los talleres.
+    'Taller de Creación Audiovisual': ('Cinemateca de Bogotá', 'Taller de Creación Audiovisual'),
     'Cinemateca de Bogotá': ('Cinemateca de Bogotá', ''),
     'Universidad Jorge Tadeo Lozano': ('Universidad Jorge Tadeo Lozano', ''),
     'UTADEO': ('Universidad Jorge Tadeo Lozano', ''),
