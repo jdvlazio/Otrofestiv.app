@@ -1,7 +1,15 @@
 {
  "_nota": "PRE-ONBOARDING. El 8° Festival de Cine de Marinilla — FILCMAR (9–13 oct 2026) publicó sus dos competencias en carrusel y todavía no la parrilla. Igual que Villa de Leyva no hay crudo sino catálogo; a diferencia de él, acá SÍ se puede enriquecer, porque la lámina trae país, año y duración además del título y la dirección.",
+ "radar": null,
+ "radar_nota": "el 8° FILCMAR (Marinilla, 9–13 oct) NO tiene issue de radar: se detectó montando el pre-onboarding, no por la corrida diaria. Hay que crearlo — hasta entonces este festival se vigila a mano, que es justo lo que el radar existe para evitar.",
  "pasos": [
-  {"cmd": "python3 pipeline/filcmar-2026-catalogo.py", "que": "los 2 carruseles de Selección Oficial → catálogo (26 obras)"},
-  {"cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/filcmar-2026-seleccion-oficial.json", "que": "catálogo → enriquecido (TMDB + Letterboxd, mismo candado que enriquecer.py)"}
+  {
+   "cmd": "python3 pipeline/filcmar-2026-catalogo.py",
+   "que": "los 2 carruseles de Selección Oficial → catálogo (26 obras)"
+  },
+  {
+   "cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/filcmar-2026-seleccion-oficial.json",
+   "que": "catálogo → enriquecido (TMDB + Letterboxd, mismo candado que enriquecer.py)"
+  }
  ]
 }

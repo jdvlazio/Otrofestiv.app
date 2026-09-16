@@ -5734,6 +5734,39 @@ except Exception as _e:
 # Falla el plan que RECLAMA el camino genérico (bloque `festival`) y no lo
 # cumple. Un plan sin `festival` es legado o vacío: se nombra, no se reprueba,
 # porque no pasa por el ensamblador genérico y nada suyo se pierde aquí.
+# ── [plan-radar] todo plan dice a qué issue de radar mira ───────────────────────
+# El 16 sep 2026 monté #NarrarElFuturo sin abrir su issue de radar, y publiqué
+# una sala que decía «Sala» y seis conversatorios sin marcar: las dos cosas
+# estaban escritas ahí ocho días antes. El radar vigila cada festival desde
+# meses antes; lo que faltaba era el enganche, y un enganche que depende de que
+# alguien se acuerde un día no pasa.
+# Se acepta `radar: null` SOLO con `radar_nota` que diga por qué —FILCMAR se
+# detectó montando el pre-onboarding, no por la corrida diaria, y no tiene
+# issue—: no saber no es lo mismo que no mirar, y lo segundo se declara.
+check = 'plan-radar'
+try:
+    import glob as _gr, json as _jr, os as _osr
+    _sin, _n = [], 0
+    for _pr in sorted(_gr.glob('pipeline/*.plan.json')):
+        if _pr.endswith('festival.plan.example.json'):
+            continue
+        _dr = _jr.load(open(_pr, encoding='utf-8'))
+        _rad = _dr.get('radar', (_dr.get('festival') or {}).get('radar'))
+        if isinstance(_rad, int):
+            _n += 1
+        elif 'radar' in _dr and _dr.get('radar_nota'):
+            _n += 1                                   # declarado sin issue, con motivo
+        else:
+            _sin.append(_osr.path.basename(_pr))
+    if _sin:
+        fail(check, 'plan(es) que no dicen a qué issue de radar miran — el radar registra el '
+                    'festival meses antes y el onboarding se lo pierde: añadí "radar": <nº> '
+                    '(o "radar": null con "radar_nota"): ' + ', '.join(_sin))
+    else:
+        ok(check, f'{_n} plan(es) declaran su issue de radar')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 check = 'plan-contrato'
 try:
     import glob as _gp, os as _osp, sys as _sysp

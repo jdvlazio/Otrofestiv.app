@@ -1,5 +1,6 @@
 {
  "_nota": "CineAutopsia 2026 — montado ENTERO con el pipeline genérico. Este archivo es lo ÚNICO propio del festival: identidad, tabla de sedes y mapa de secciones. El resto lo pone ensamblar.py igual que a todos. La fuente MANDANTE es el PDF oficial del festival; la agenda de la Cinemateca solo completa lo que el PDF no trae (enlace de compra, póster y sinopsis de sus 7 programas).",
+ "radar": 565,
  "pasos": [
   {
    "cmd": "python3 pipeline/cineautopsia-2026-cinemateca.py",

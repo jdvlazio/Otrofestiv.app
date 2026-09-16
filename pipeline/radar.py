@@ -66,14 +66,21 @@ def main():
     if len(sys.argv) < 2:
         sys.exit(__doc__)
     fid = sys.argv[1]
-    cfg = plan(fid).get('festival', {})
-    n = cfg.get('radar')
+    P = plan(fid)
+    cfg = P.get('festival', {})
+    # La declaración vive en la RAÍZ del plan: tres planes no tienen bloque
+    # `festival` —los de pre-onboarding, que aún no tienen festival que armar—
+    # y el radar se vigila desde antes de que exista la parrilla.
+    n = P.get('radar', cfg.get('radar'))
+    if n is None and 'radar' in P:
+        sys.exit(f'✗ {fid}: el plan declara `radar: null`.\n'
+                 f'  {P.get("radar_nota", "sin issue de radar: hay que crearlo")}')
     if not n:
         sys.exit(f'✗ {fid}: el plan no declara `festival.radar`.\n'
                  f'  El issue de radar es una FUENTE del onboarding, no un adorno: añadí\n'
                  f'  "radar": <número> al bloque `festival` del plan.')
 
-    destino = cfg.get('radar_volcado') or f'festivals/staging/{fid}-radar.json'
+    destino = P.get('radar_volcado') or cfg.get('radar_volcado') or f'festivals/staging/{fid}-radar.json'
     iss = gh_issue(n)
     os.makedirs(ST, exist_ok=True)
     io.open(f'{REPO}/{destino}', 'w', encoding='utf-8').write(json.dumps({
