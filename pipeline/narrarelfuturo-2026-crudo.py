@@ -303,6 +303,38 @@ def main():
     for f in funciones:
         f.setdefault('sala', '')
 
+    # LA CINEMATECA TAMBIÉN APORTA DATO, no solo contraste: en su ficha, cada
+    # función lleva un color que dice si hay charla con el público («Sesión de
+    # preguntas y respuestas», «Conversatorio», «Diálogo con el público»). Se
+    # cruza por DÍA Y HORA, no por título, porque los nombres difieren entre las
+    # dos fuentes —«Programa 3 - El futuro del futuro» vs «El Futuro del Futuro»,
+    # «Películas Selección oficial 2026» vs «Narrar. Creer. Crecer»— y el día y
+    # la hora sí coinciden. Si la hora discrepa (lo reporta el contraste de
+    # abajo), el Q&A no se aplica: primero se resuelve la discrepancia.
+    # …Y CON LA SEDE EN LA CLAVE. El viernes 18 a las 4:00pm hay DOS funciones a
+    # la vez, «El Futuro del Futuro» en la Cinemateca del centro y «Narrar. Creer.
+    # Crecer» en Fontanar. Cruzando solo por día y hora, el diálogo con el
+    # público de Fontanar se le pegaba también a la del centro, que no lo tiene.
+    def _casa(x):
+        return 'fontanar' if 'fontanar' in (x or '').lower() else 'centro'
+    por_cuando = {(c['dia'], c['hora'], _casa(c.get('sede'))): c
+                  for c in cine if c.get('dia') and c.get('hora')}
+    # Respaldo por TÍTULO en la misma sede y día: «Llueve sobre Babel» tiene la
+    # marca turquesa y las dos fuentes discrepan en la hora (18:00 vs 18:30), así
+    # que la clave exacta no casaba y se perdía un Q&A que existe. La hora sigue
+    # siendo la de la web y la discrepancia se reporta igual; lo que no se pierde
+    # es el dato de que hay charla.
+    def _tit(x):
+        return norm(re.sub(r'^Programa\s*\d+\s*-\s*', '', (x or '')).rstrip('.'))
+    por_titulo_cine = {(c['dia'], _casa(c.get('sede')), _tit(c['titulo'])): c
+                       for c in cine if c.get('dia')}
+    for f in funciones:
+        c = (por_cuando.get((f.get('dia'), f.get('hora'), _casa(f.get('sede'))))
+             or por_titulo_cine.get((f.get('dia'), _casa(f.get('sede')), _tit(f['titulo']))))
+        if c and c.get('has_qa') and not f.get('has_qa'):
+            f['has_qa'] = True
+            f['_qa_fuente'] = f"agenda de la Cinemateca: «{c['marca']}» ({c['_marca_color']})"
+
     # CONTRASTE con la Cinemateca: no corrige, reporta.
     discrepa = []
     porc = {(norm(c['titulo']), c['dia']): c for c in cine}
@@ -319,6 +351,7 @@ def main():
         '_funciones': len(funciones),
         '_obras': sum(len(f.get('obras') or []) for f in funciones),
         '_contraste_cinemateca': discrepa or 'sin discrepancias en día/hora',
+        '_qa': [f"{f['titulo']} — {f.get('_qa_fuente')}" for f in funciones if f.get('has_qa')],
         'funciones': funciones},
         io.open(SALIDA, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 

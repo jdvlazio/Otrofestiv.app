@@ -10,6 +10,14 @@
  "_contraste_cinemateca": [
   "Llueve sobre Babel 2026-09-19: web 18:00 vs Cinemateca 18:30"
  ],
+ "_qa": [
+  "Soñé su nombre — encuentro con Juliana y Ángela Carabalí después de la función (Instagram, post del día 1)",
+  "¿Quién quemó el bus? — agenda de la Cinemateca: «Sesión de preguntas y respuestas» (#1ed6cb)",
+  "Después del frío — agenda de la Cinemateca: «Sesión de preguntas y respuestas» (#1ed6cb)",
+  "Narrar. Creer. Crecer — agenda de la Cinemateca: «Diálogo con el público» (#e45ba0)",
+  "Habitante — agenda de la Cinemateca: «Sesión de preguntas y respuestas» (#1ed6cb)",
+  "Llueve sobre Babel — agenda de la Cinemateca: «Sesión de preguntas y respuestas» (#1ed6cb)"
+ ],
  "funciones": [
   {
    "dia": "2026-09-15",
@@ -206,7 +214,9 @@
    "sinopsis": "En medio del Paro Nacional de 2021 en Colombia, Karo y Jonathan, dos jóvenes de barrios obreros, se enamoran mientras registran las protestas desde su celular. Su voz se vuelve un símbolo de resistencia en Suba, pero también una amenaza para el poder. Arrestados y acusados de terrorismo, enfrentan un proceso judicial absurdo que los obliga a esconderse, huir y reencontrarse con la esperanza. Entre el amor, el miedo y la injusticia, la cámara se convierte en su única defensa frente a un sistema dispuesto a silenciar la verdad.",
    "poster": "/assets/narrarelfuturo-2026/quien-quemo-el-bus.jpg",
    "seccion": "Proyecciones & Largos",
-   "posterSource": "oficial"
+   "posterSource": "oficial",
+   "has_qa": true,
+   "_qa_fuente": "agenda de la Cinemateca: «Sesión de preguntas y respuestas» (#1ed6cb)"
   },
   {
    "dia": "2026-09-17",
@@ -389,7 +399,9 @@
    "sinopsis": "En 2016, Colombia firma un histórico acuerdo de paz con las FARC, marcando el fin de una guerra de 60 años. 'Después del frío' narra las historias de tres personas: un ganadero que fue secuestrado, un coronel implicado en 'falsos positivos' y un líder social. A través de sus experiencias, el documental revela los desafíos y las pequeñas victorias en el camino hacia la reconciliación y la justicia en un país aún marcado por la sombra del conflicto.",
    "poster": "/assets/narrarelfuturo-2026/despues-del-frio.jpg",
    "seccion": "Proyecciones & Largos",
-   "posterSource": "oficial"
+   "posterSource": "oficial",
+   "has_qa": true,
+   "_qa_fuente": "agenda de la Cinemateca: «Sesión de preguntas y respuestas» (#1ed6cb)"
   },
   {
    "dia": "2026-09-18",
@@ -553,7 +565,9 @@
    "sinopsis": "Una selección que reúne animación, ciencia ficción, experimentación e inteligencia artificial para explorar nuevas maneras de contar historias.",
    "_sinopsis_src": "instagram: el pie del post del programa, sin el preámbulo de logística",
    "seccion": "Muestra de Cortos",
-   "sala": ""
+   "sala": "",
+   "has_qa": true,
+   "_qa_fuente": "agenda de la Cinemateca: «Diálogo con el público» (#e45ba0)"
   },
   {
    "dia": "2026-09-18",
@@ -685,7 +699,9 @@
    "sinopsis": "Dar una vuelta al mundo y filmar. Habitante emerge de los archivos del fotógrafo José Alejandro González, quien por dos décadas retrató conversaciones con desconocidos mientras deambulaba por callejones sin nombre, ciudades famosas, rincones apartados y continentes. Los fragmentos de viaje reúnen encuentros fugaces: la emoción de los comienzos inesperados y también la amargura de las inevitables despedidas. Se comparten voces y silencios, algunos de ellos incómodos, otros enigmáticos y felices que revelan preguntas comunes sobre migración, desarraigo y soledad, sobre cómo habitar el mundo. En su diario, el fotógrafo mira hacia fuera, observa a otros mientras se descubre así mismo, registra con su cámara aquello que el afán de los días impide ver.",
    "poster": "/assets/narrarelfuturo-2026/habitante.jpg",
    "seccion": "Proyecciones & Largos",
-   "posterSource": "oficial"
+   "posterSource": "oficial",
+   "has_qa": true,
+   "_qa_fuente": "agenda de la Cinemateca: «Sesión de preguntas y respuestas» (#1ed6cb)"
   },
   {
    "dia": "2026-09-19",
@@ -704,7 +720,9 @@
    "sinopsis": "El limbo nunca fue tan seductor como en Llueve sobre Babel. Escrita y dirigida por Gala del Sol, esta reinterpretación del Inferno de Dante toma la forma de un drama coral. La acción se centra en Babel, un bar donde distintos personajes se cruzan con La Flaca, la mismísima encarnación de la Muerte, con quien las almas pueden apostar años de vida en un intento por burlar su destino.",
    "poster": "/assets/narrarelfuturo-2026/llueve-sobre-babel.jpg",
    "seccion": "Proyecciones & Largos",
-   "posterSource": "oficial"
+   "posterSource": "oficial",
+   "has_qa": true,
+   "_qa_fuente": "agenda de la Cinemateca: «Sesión de preguntas y respuestas» (#1ed6cb)"
   },
   {
    "titulo": "Desde el Terreno: Cómo contar la historia mientras está ocurriendo",

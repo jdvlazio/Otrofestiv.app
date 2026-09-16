@@ -64,6 +64,28 @@ def bajar(n, sede):
     return io.open(p, encoding='utf-8', errors='replace').read()
 
 
+# EL DATO VIAJA COMO COLOR. La Cinemateca dice si una función tiene charla con
+# el público, pero no con palabras: pinta un cuadrito junto a la hora y el HTML
+# imprime su hex en un <h6> —«Septiembre 17 7:30 PM <h6>#1ED6CB</h6>»—. El
+# significado está en la leyenda del PIE de la ficha, que sí está en palabras, y
+# el puente entre las dos cosas vive en su hoja de estilos (.turquesa{background:
+# #1ed6cb}). Yo había buscado «Sesión de preguntas y respuestas» en el cuerpo, la
+# encontré solo en el pie y la descarté como cromo del sitio: el texto ERA cromo,
+# el dato era el color. Lo cazó Juan, que lo vio anunciado en Instagram.
+#
+# Mapa verificado contra la hoja de estilos del sitio (style.css) el 16 sep 2026.
+MARCA = {
+    '#1ed6cb': 'Sesión de preguntas y respuestas',
+    '#ffd233': 'Presentación',
+    '#c08ceb': 'Conversatorio',
+    '#e45ba0': 'Diálogo con el público',
+}
+# Cuáles de esas cuatro son un Q&A para la app: las tres en que el público
+# conversa. «Presentación» no lo es —alguien presenta la película y se va—, y
+# marcarla inflaría la duración del plan con una sobremesa que no ocurre.
+QA = {'#1ed6cb', '#c08ceb', '#e45ba0'}
+
+
 def parse(n, h, sede):
     L = texto(h)
     d = {'_nodo': n, '_sede_param': sede,
@@ -100,6 +122,15 @@ def parse(n, h, sede):
             d['sede'] = L[i - 1] if i else ''
             d['dia'] = f'2026-{mes:02d}-{int(m.group(2)):02d}' if mes else None
             d['hora'] = f'{hh:02d}:{m.group(4)}'
+            # el color va en la misma celda que la fecha, dentro de un <h6>
+            mc = re.search(re.escape(x) + r'\s*<h6>\s*(#[0-9A-Fa-f]{6})\s*</h6>',
+                           h.replace('\n', ' '))
+            if mc:
+                col = mc.group(1).lower()
+                d['_marca_color'] = col
+                if col in MARCA:
+                    d['marca'] = MARCA[col]
+                    d['has_qa'] = col in QA
             break
     largos = [x for x in L if len(x) > 110 and 'Dir.' not in x]
     if largos:
@@ -149,6 +180,8 @@ def main():
     print(f'── {SALIDA}\n')
     for d in out:
         print(f"══ [{d['_nodo']}] {d['titulo']}")
+        if d.get('marca'):
+            print(f"   ★ {d['marca']}  ({d['_marca_color']})" + ('  → Q&A' if d.get('has_qa') else ''))
         print(f"   {d.get('dia','?')} {d.get('hora','?')} · {d.get('sede','?')} · "
               f"{d.get('duracion_min','?')} min · acceso: {d.get('acceso')}")
         for o in (d.get('obras') or []):
