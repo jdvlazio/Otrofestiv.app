@@ -5877,6 +5877,46 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [sidecar-dos-escritores] dos scripts que escriben el mismo sidecar ──────────
+# Medido el 15 sep 2026, montando #NarrarElFuturo: dos parsers del mismo festival
+# —uno de la web, otro de la agenda de la Cinemateca— apuntaban los dos a
+# `<id>-crudo.json`. El segundo que corría BORRABA al primero, y se perdieron 8
+# funciones y 27 obras sin un solo error en pantalla: el archivo existía, era
+# válido, y simplemente tenía la mitad de los datos.
+#
+# `[pipeline-circuito]` vigila lo contrario (escrito sin lector). Esto vigila dos
+# productores para una salida, que es mudo por naturaleza: nadie falla, solo se
+# pierde lo del primero. El crudo lo puede escribir UN paso; si de verdad hacen
+# falta dos fuentes, se funden en un paso de fusión que sea el único escritor.
+check = 'sidecar-dos-escritores'
+try:
+    import glob as _g10, re as _r10, os as _o10, collections as _c10
+    _esc = _c10.defaultdict(set)
+    for _f in sorted(_g10.glob('pipeline/*.py')):
+        _t = open(_f, encoding='utf-8', errors='ignore').read()
+        # 1 · constantes que APUNTAN a staging: casi ningún script escribe la
+        #     ruta entera, usan `ST = f'{REPO}/festivals/staging'`. La primera
+        #     versión de este guardián solo miraba rutas literales y por eso era
+        #     CIEGA justo al caso que lo motivó: reproduje el choque a propósito
+        #     y pasó en verde. Un guardián que no falla con su propio caso no
+        #     sirve, y casi lo doy por bueno.
+        _consts = set(_r10.findall(r"^\s*(\w+)\s*=\s*f?['\"][^'\"]*festivals/staging[^'\"]*['\"]",
+                                   _t, _r10.M))
+        _alt = '|'.join(_r10.escape(c) for c in _consts) or r'(?!x)x'
+        # 2 · asignaciones de salida que usan esa constante o la ruta literal
+        for _m in _r10.finditer(
+                rf"^\s*\w*(?:SALIDA|OUT|DEST|salida)\w*\s*=\s*f?['\"](?:\{{(?:{_alt})\}}/|[^'\"]*festivals/staging/)([^'\"]+)['\"]",
+                _t, _r10.M | _r10.I):
+            _esc[_r10.sub(r'\{[^}]*\}', '<id>', _m.group(1))].add(_o10.path.basename(_f))
+    _choque = {k: v for k, v in _esc.items() if len(v) > 1}
+    if _choque:
+        fail(check, 'sidecar(s) con DOS escritores — el segundo borra al primero en silencio: '
+                    + '; '.join(f'{k} ← {", ".join(sorted(v))}' for k, v in list(_choque.items())[:4]))
+    else:
+        ok(check, f'{len(_esc)} sidecar(s) de salida, cada uno con un solo escritor')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 # ── [staging-huerfano] un sidecar que nada vivo lee y la doctrina no ampara ─────
 # Medido el 5 sep 2026: 8,4 MB en festivals/staging/, 2,4 de sidecars intermedios
 # (letterboxd, lbslug, oficial, auditoria-3, fichas…) que ningún script vivo ni
