@@ -171,8 +171,17 @@ def parse(slug, h):
         d['sinopsis'] = largos[0]
     # retrato del tallerista: original, sin la variante de tamaño de WordPress
     ims = [u for u in dict.fromkeys(
-        re.findall(r'(https://narrarelfuturo\.com/wp-content/uploads/[^"\s]+?\.(?:jpg|jpeg|png|webp))', h, re.I))
-        if not re.search(r'-\d+x\d+\.', u) and 'Mesa-de-trabajo' not in u]
+    # DOBLE EXTENSIÓN: WordPress guarda la conversión como «foo.jpg.webp» y
+    # sirve ESA; el «foo.jpg» pelado devuelve 404 — pasó con «Under the sky
+    # DOME». La regex no codiciosa cortaba en la primera extensión y publicaba
+    # una URL muerta, que sin abrir el archivo no se nota.
+        re.findall(r'(https://narrarelfuturo\.com/wp-content/uploads/[^"\s]+?\.(?:jpg|jpeg|png|webp)(?:\.webp)?)', h, re.I))
+        if not re.search(r'-\d+x\d+\.', u) and 'Mesa-de-trabajo' not in u
+        # NO ES DEL TALLER: «cropped-NEF_PERFIL_perfil.jpg» es la imagen de
+        # perfil del SITIO, y en la ficha de «Señales Líquidas» aparece antes que
+        # el retrato del colectivo, así que se publicaba esa. El retrato bueno
+        # («senales-e17882…») venía detrás. Chrome del sitio fuera, por nombre.
+        and not re.search(r'cropped-|_perfil|perfil\.|logo|favicon|icon', u, re.I)]
     if ims:
         d['imagen'] = ims[0]
         d['_imagenes'] = ims[:4]

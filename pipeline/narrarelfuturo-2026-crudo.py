@@ -211,6 +211,24 @@ def main():
             '_src': 'https://www.instagram.com/p/DdR-n97md3i/',
         })
 
+    # SINOPSIS DE PROGRAMA — de Instagram, porque la web no la publica: las
+    # páginas de los programas traen solo el título. El pie empieza con la
+    # logística («Este viernes 18 de septiembre, #NarrarElFuturo llega a la
+    # Cinemateca Fontanar del Río con “Narrar. Creer. Crecer”,») que la tarjeta
+    # ya pinta, y sigue con la descripción de verdad, que SIEMPRE arranca en
+    # «una selección». Se corta ahí: son las palabras del festival, sin el
+    # preámbulo. Si un pie no trae esa fórmula, el programa se queda sin
+    # sinopsis — antes inventar nada, nada.
+    _ig = {norm(x.get('nombre')): x.get('caption') or ''
+           for x in cargar('ig')['posts'] if x.get('tipo') == 'programa'}
+    for f in funciones:
+        if f.get('obras') and not f.get('sinopsis'):
+            cap = _ig.get(norm(f.get('titulo')))
+            m = re.search(r'(una (?:selecci[oó]n|muestra)\b.*?\.)(?:\s|$)', (cap or '').split('\n')[0], re.I | re.S)
+            if m:
+                f['sinopsis'] = m.group(1)[0].upper() + m.group(1)[1:]
+                f['_sinopsis_src'] = 'instagram: el pie del post del programa, sin el preámbulo de logística'
+
     for f in funciones:
         f['seccion'] = SECCION.get(f.get('event_kind'), SECCION_DEFECTO)
         # La ETIQUETA de la tarjeta («Largometraje», «Cortos», «RT Meet The
@@ -228,7 +246,12 @@ def main():
     for f in funciones:
         for x in [f] + list(f.get('obras') or []):
             if x.get('poster') in _posters:
-                x['poster'] = _posters[x['poster']]
+                _p = _posters[x['poster']]
+                # La FORMA MEDIDA decide `posterSource`, no el tipo de actividad:
+                # este festival tiene películas con still 16:9 y talleres con
+                # afiche 2:3, así que el default del ensamblador («lo que publica
+                # el festival es editorial») acertaba en unos y fallaba en otros.
+                x['poster'], x['posterSource'] = _p['ruta'], _p['posterSource']
     funciones = [{k: v for k, v in f.items() if v not in (None, '')} for f in funciones]
     for f in funciones:
         f.setdefault('sala', '')

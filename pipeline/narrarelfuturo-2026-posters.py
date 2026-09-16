@@ -4,7 +4,15 @@
 Lee   festivals/staging/narrarelfuturo-2026-obras.json     (42 pósters, wp-content)
       festivals/staging/narrarelfuturo-2026-talleres.json  (retrato del tallerista)
 Esc.  assets/narrarelfuturo-2026/<slug>.<ext>
-      festivals/staging/narrarelfuturo-2026-posters.json   {url_remota: '/assets/…'}
+      festivals/staging/narrarelfuturo-2026-posters.json
+        {url_remota: {'ruta': '/assets/…', 'w', 'h', 'posterSource'}}
+
+CADA IMAGEN SE MIDE, y de la medida sale `posterSource`, con el mismo umbral que
+scripts/classify-posters.py (aspecto ≥ 1.2 → 'editorial'). Este festival mezcla
+las dos formas —afiches 2:3 de los cortos y stills 16:9 de los talleres y de
+varios documentales—, y la forma no se puede deducir del tipo de actividad: hay
+películas con still y talleres con afiche. Un still 16:9 marcado como afiche se
+publica RECORTADO en un hueco 2:3; marcado editorial va enmarcado y entero.
 
 Por qué: [poster-host] avisa que narrarelfuturo.com no está en la whitelist —
 un WordPress puede bloquear el hotlink o borrar el archivo cuando pase el
@@ -16,6 +24,8 @@ El crudo es quien decide qué póster va (línea 'poster' de cada obra); este pa
 solo le da la tabla remota→local y él la aplica. No toca ningún otro sidecar.
 """
 import io, json, os, subprocess, sys, time
+
+from PIL import Image
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import slug, provenance
 
@@ -37,6 +47,15 @@ def fuentes():
             yield 'taller ' + t['titulo'], t['imagen']
 
 
+def _mide(p):
+    """(w, h) si el archivo es de verdad una imagen; None si no lo es."""
+    try:
+        with Image.open(p) as im:
+            return im.size
+    except Exception:
+        return None
+
+
 def main():
     os.makedirs(DEST, exist_ok=True)
     mapa, bajados, fallos = {}, 0, []
@@ -47,21 +66,30 @@ def main():
         ext = ext if ext in ('jpg', 'jpeg', 'png', 'webp') else 'jpg'
         nombre = f'{slug(titulo)}.{ext}'
         p = f'{DEST}/{nombre}'
-        if not os.path.exists(p) or os.path.getsize(p) < 5000:
+        if not os.path.exists(p) or not _mide(p):
             r = subprocess.run(['curl', '-sL', '--max-time', '40', '-A', UA, url, '-o', p])
             time.sleep(0.2)
-            if r.returncode or not os.path.exists(p) or os.path.getsize(p) < 5000:
-                fallos.append((titulo, url))
-                if os.path.exists(p):
-                    os.remove(p)
-                continue
             bajados += 1
-        mapa[url] = f'/assets/narrarelfuturo-2026/{nombre}'
+        # PESAR NO ES MIRAR. El retrato de «Señales Líquidas» se guardó como un
+        # .jpg de 212 KB que era una PÁGINA HTML: pasaba de sobra el umbral de
+        # tamaño y habría llegado a producción como imagen rota. Ahora se abre:
+        # si no es una imagen, no entra en la tabla y el paso falla ruidosamente.
+        wh = _mide(p)
+        if not wh:
+            fallos.append((titulo, url))
+            if os.path.exists(p):
+                os.remove(p)
+            continue
+        w, h = wh
+        mapa[url] = {'ruta': f'/assets/narrarelfuturo-2026/{nombre}', 'w': w, 'h': h,
+                     'posterSource': 'editorial' if w / h >= 1.2 else 'oficial'}
     io.open(f'{ST}/narrarelfuturo-2026-posters.json', 'w', encoding='utf-8').write(
         json.dumps({'_provenance': provenance('narrarelfuturo.com/wp-content (pósters de las fichas y retratos de talleres)',
                                               total=len(mapa)),
                     'posters': mapa}, ensure_ascii=False, indent=1) + '\n')
+    _ed = sum(1 for v in mapa.values() if v['posterSource'] == 'editorial')
     print(f'── posters: {len(mapa)} re-hosteados ({bajados} bajados ahora) → assets/narrarelfuturo-2026/')
+    print(f'   forma: {len(mapa) - _ed} afiche (2:3) · {_ed} still 16:9 → editorial')
     for t, u in fallos:
         print(f'  ✗ {t}: {u}')
     if fallos:

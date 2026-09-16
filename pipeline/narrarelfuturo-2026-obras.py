@@ -132,8 +132,12 @@ def parse(ruta, h):
             d['sinopsis'] = d['sinopsis'][:_c].rstrip()
             d['_sinopsis_nota'] = 'la web pega a continuación el 2º párrafo de la sinopsis de Chaika; se cortó'
 
+    # DOBLE EXTENSIÓN: WordPress guarda la conversión como «foo.jpg.webp» y
+    # sirve ESA; el «foo.jpg» pelado devuelve 404 — pasó con «Under the sky
+    # DOME». La regex no codiciosa cortaba en la primera extensión y publicaba
+    # una URL muerta, que sin abrir el archivo no se nota.
     ims = [u for u in dict.fromkeys(re.findall(
-        r'(https://narrarelfuturo\.com/wp-content/uploads/[^"\s]+?\.(?:jpg|jpeg|png|webp))', h, re.I))
+        r'(https://narrarelfuturo\.com/wp-content/uploads/[^"\s]+?\.(?:jpg|jpeg|png|webp)(?:\.webp)?)', h, re.I))
         if not re.search(r'-\d+x\d+\.', u) and 'Mesa-de-trabajo' not in u]
     # EL PÓSTER: dos señales, y ninguna alcanza sola. Lo midió una revisión
     # independiente que extrajo las 42 fichas sin ver este código:
