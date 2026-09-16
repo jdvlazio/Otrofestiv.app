@@ -50,14 +50,15 @@ TITULO_OFICIAL = {
 # La ÚNICA obra que la tarjeta del festival se salta y la Cinemateca sí lista.
 # No es una corazonada: con ella la suma del programa pasa de 84 a 87, que es
 # exactamente lo que ese programa declara durar.
-FALTANTES = {
-    'alucinacion-artificial-y-extincion': [
-        {'titulo': 'Malignant / Catatonic', 'director': 'Mike Bennion',
-         'pais': 'Camboya', 'anio': 2026, 'duracion_min': 3},
-    ],
-}
-FALTANTES_NOTA = ('la lista el programa en la agenda de la Cinemateca y no la tarjeta del '
-                  'festival; con ella la suma del programa cuadra con su duración declarada')
+# Se nombra SOLO EL TÍTULO: la ficha la pone la fuente. La primera versión
+# copiaba a mano los valores de la agenda de la Cinemateca —«Camboya, 2026»— y
+# la ficha del propio festival dice «Argentina · 2025 · 3 min 49s · Ficción IA».
+# Copiar valores de la fuente más débil fue peor que no tenerlos: lo cazó la
+# tercera relectura, comparando las 45 obras contra su propia página.
+FALTANTES = {'alucinacion-artificial-y-extincion': ['Malignant / Catatonic']}
+FALTANTES_NOTA = ('la tarjeta del programa no la lista y su propia ficha sí existe; la agenda '
+                  'de la Cinemateca confirma que va en este programa, y con ella la suma cuadra '
+                  'con la duración declarada')
 
 # SECCIÓN = la temática que el propio festival usa para filtrar su programa
 # («🏷️ FILTRAR POR TEMÁTICA»), más «Sala VR», que es como llama a la
@@ -142,8 +143,11 @@ def main():
                     obra['duracion_min'] = cc['duracion_min']
                 vistos.add(norm(o.get('titulo')))
                 g['obras'].append(obra)
-            for o in FALTANTES.get(slug(f['titulo']), []):
-                g['obras'].append({**o, '_origen': FALTANTES_NOTA})
+            for t_ in FALTANTES.get(slug(f['titulo']), []):
+                base = por_titulo.get(norm(t_))
+                if base:
+                    g['obras'].append({**{k: base[k] for k in ('titulo',) + FICHA if base.get(k)},
+                                       '_origen': FALTANTES_NOTA})
         else:
             base = por_titulo.get(norm(f['titulo']))
             if base:

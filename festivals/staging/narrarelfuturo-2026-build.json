@@ -454,8 +454,8 @@
    "title": "Alucinación Artificial y Extinción",
    "type": "event",
    "section": "⚡ Muestra de Cortos",
-   "country": "Colombia, Estados Unidos, Alemania, Brasil, Hungría, Argentina, Camboya",
-   "flags": "🇨🇴🇺🇸🇩🇪🇧🇷🇭🇺🇦🇷🇰🇭",
+   "country": "Colombia, Estados Unidos, Alemania, Brasil, Hungría, Argentina",
+   "flags": "🇨🇴🇺🇸🇩🇪🇧🇷🇭🇺🇦🇷",
    "duration": "87 min",
    "day": "2026-09-17",
    "time": "17:00",
@@ -587,10 +587,13 @@
     {
      "title": "Malignant / Catatonic",
      "director": "Mike Bennion",
-     "country": "Camboya",
-     "flags": "🇰🇭",
-     "year": 2026,
-     "duration": "3 min"
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2025,
+     "duration": "3 min",
+     "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/09/MALIGNANT-CATATONIC-POSTER-1.jpg",
+     "genre": "Ficción IA",
+     "posterSource": "oficial"
     }
    ]
   },
@@ -1882,7 +1885,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-15T22:09:57",
+  "fecha": "2026-09-15T22:12:48",
   "plan_sha": "911ac89fc14b86c2",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py narrarelfuturo-2026"
