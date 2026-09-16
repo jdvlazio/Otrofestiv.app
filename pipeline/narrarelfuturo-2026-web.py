@@ -39,7 +39,22 @@ from lib import provenance, UA
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
 CACHE = f'{REPO}/fuentes/narrarelfuturo-2026'
-SALIDA = f'{ST}/narrarelfuturo-2026-crudo.json'
+# CADA PARSER ESCRIBE SU PROPIO SIDECAR. La primera versión de los dos parsers
+# de este festival escribía `-crudo.json`, y el segundo que corriera borraba al
+# primero: perdí 8 funciones y 27 obras de la Cinemateca sin un solo error en
+# pantalla. El crudo lo arma el paso de fusión, que es el único con derecho a
+# escribirlo.
+SALIDA = f'{ST}/narrarelfuturo-2026-web.json'
+SALIDA_VR = f'{ST}/narrarelfuturo-2026-vr.json'
+
+# Etiquetas con que el festival encabeza cada tarjeta. Son SUYAS y se pasan tal
+# cual (PROTOCOLO §5: la palabra la pone el festival). Sirven además para saber
+# si la 3ª línea es etiqueta o ya es el título: la clausura no lleva etiqueta.
+SEDES_CONOCIDAS = ('Cinemateca de Bogotá', 'Universidad Jorge Tadeo Lozano',
+                   'Cinemateca Fontanar del Río')
+
+ETIQUETAS = ('Largometraje', 'Cortos', 'RT Meet The Creators', 'Taller',
+             'Conversatorio', 'Masterclass', 'Instalación VR Activa')
 URL = 'https://narrarelfuturo.com/programa-2026/'
 
 DIAS = {'15': '2026-09-15', '16': '2026-09-16', '17': '2026-09-17',
@@ -88,79 +103,153 @@ def bajar():
     return io.open(p, encoding='utf-8', errors='replace').read()
 
 
-def una(L):
-    """Una tarjeta → una función del formato intermedio."""
-    f = {'obras': [], '_src': URL}
-    for k, x in enumerate(L):
-        m = RE_DIA.match(x)
-        if m and not f.get('dia'):
-            f['dia'] = DIAS.get(m.group(1))
-            continue
-        m = RE_HORA.match(x)
-        if m and not f.get('hora'):
-            hh = int(m.group(1)) % 12 + (12 if m.group(3).lower() == 'p' else 0)
-            f['hora'] = f'{hh:02d}:{m.group(2)}'
-            continue
+def enlaces(bloque):
+    """Los href de la tarjeta, por lo que dice su texto. La lección de
+    CineAutopsia: los seis enlaces de TuBoleta estaban en la fuente y no
+    llegaron al JSON porque nadie los buscó. Acá el festival no escribe
+    «Entrada…» en todas: dice «Inscribirse Aquí» o «Compra tu boleta aquí», y
+    el enlace es el dato que hace accionable la casilla."""
+    out = {}
+    # La ventana tiene que ser ANCHA: el <a> de Elementor mete ~180 caracteres
+    # de spans anidados entre el href y el texto, y con 120 no casaba ninguno
+    # —devolvía cero enlaces sin fallar—.
+    for m in re.finditer(r'<a[^>]+href="([^"]+)"[^>]*>(.{0,600}?)</a>', bloque, re.S):
+        txt = re.sub(r'<[^>]+>', '', m.group(2)).strip().lower()
+        if 'inscrib' in txt:
+            out.setdefault('registration_url', https(m.group(1)))
+        elif 'boleta' in txt or 'compra' in txt:
+            out.setdefault('ticket_url', https(m.group(1)))
+    return out
+
+
+def https(u):
+    """El contrato exige ^https:// y el festival publica su bit.ly en http.
+    Verificado el 15 sep 2026: https://bit.ly/RTElFuturo responde 301 al mismo
+    formulario. Es el MISMO recurso, no otro — por eso se normaliza el esquema y
+    no se cambia el enlace."""
+    return re.sub(r'^http://', 'https://', u)
+
+
+def una(L, bloque=''):
+    """Una tarjeta de FUNCIÓN → una función del formato intermedio."""
+    f = {'dia': DIAS.get(RE_DIA.match(L[0]).group(1)), 'obras': [], '_src': URL}
+    hh = RE_HORA.match(L[1])
+    f['hora'] = f"{int(hh.group(1)) % 12 + (12 if hh.group(3).lower() == 'p' else 0):02d}:{hh.group(2)}"
+    # 3ª línea: etiqueta del festival, o ya el título si la tarjeta no la lleva
+    # (la clausura). No se inventa una etiqueta para las que no la tienen.
+    if L[2] in ETIQUETAS or L[2].startswith('Cortos'):
+        f['event_kind'] = L[2].split(' ·')[0]
+        f['titulo'] = L[3] if len(L) > 3 else L[2]
+        resto = 4
+    else:
+        f['titulo'] = L[2]
+        resto = 3
+    # «Cortos · Nombre del programa» → el nombre del programa ES el título
+    if f['titulo'].startswith('Cortos ·'):
+        f['titulo'] = f['titulo'].split('·', 1)[1].strip()
+        f['es_programa'] = True
+
+    for k in range(resto, len(L)):
+        x = L[k]
         mf = RE_FICHA.match(x)
         if mf and minutos(mf.group('dur')) is not None:
-            prev = L[k - 1] if k else ''
             ficha = {'pais': mf.group('pais').strip(), 'anio': int(mf.group('anio')),
                      'duracion_min': minutos(mf.group('dur')),
                      'genero': (mf.group('gen') or '').strip()}
+            prev = L[k - 1]
             if prev.startswith('Dir.'):
-                # obra dentro de un programa: «Título / Dir. Nombre / ficha»
-                ficha['director'] = re.sub(r'^Dir\.\s*(Dir\.\s*)?', '', prev).strip()
-                ficha['titulo'] = L[k - 2] if k >= 2 else ''
+                ficha['director'] = re.sub(r'^Dir\.\s*', '', prev).strip()
+                ficha['titulo'] = L[k - 2]
                 f['obras'].append(ficha)
-            elif not f.get('titulo'):
-                f['titulo'] = prev
+            elif not f.get('anio'):
                 f.update(ficha)
             else:
                 f['obras'].append({**ficha, 'titulo': prev})
-            continue
-        if x == 'Dir.' and k + 1 < len(L) and not f.get('director'):
-            # en un largo la etiqueta va SOLA y el nombre en la línea siguiente
+        elif x == 'Dir.' and k + 1 < len(L) and not f.get('director'):
             f['director'] = L[k + 1]
         elif re.match(r'^\*?\s*Entrada', x, re.I):
             f.setdefault('acceso', x.lstrip('*').strip())
-        elif re.match(r'^\.?\s*Sala\b', x):
+        elif re.match(r'^\.?\s*(Sala|Hemiciclo|Aula|Laboratorio)\b', x):
             f.setdefault('sala', x.lstrip('. ').rstrip(',').strip())
-        elif x.rstrip(',') in ('Cinemateca de Bogotá', 'Universidad Jorge Tadeo Lozano',
-                               'Cinemateca Fontanar del Río'):
-            f.setdefault('sede', x.rstrip(','))
+        else:
+            # La sede no siempre viene sola en su línea: a veces llega como
+            # «, Universidad Jorge Tadeo Lozano, Cra. 4 #22-61», con coma
+            # delante y la dirección detrás. Se busca CONTENIDA, no igual.
+            for sede in SEDES_CONOCIDAS:
+                if sede in x:
+                    f.setdefault('sede', sede)
+                    break
+    f.update(enlaces(bloque))
+    # La palabra del festival manda; si no escribió «Entrada…» la deduce el
+    # enlace que SÍ publicó, y se dice cuál de las dos cosas es.
+    if not f.get('acceso'):
+        if f.get('registration_url'):
+            f['acceso'] = 'Entrada gratis con inscripción'
+        elif f.get('ticket_url'):
+            f['acceso'] = 'Boletería'
+        else:
+            f['acceso'] = lib.DESCONOCIDO
     f.setdefault('sede', '')
     f.setdefault('sala', '')
-    f.setdefault('acceso', lib.DESCONOCIDO)
     if not f['obras']:
         del f['obras']
     return f
 
 
+def vr(L):
+    """Una tarjeta de la INSTALACIÓN VR → una obra. No son funciones: la
+    instalación está abierta en bloque (15–18 de 2 a 6, 19–20 de 11 a 6) y sus
+    ocho obras no tienen hora propia. Meterlas como funciones habría inventado
+    dieciséis horarios que el festival no publica."""
+    o = {'titulo': L[0], '_src': URL}
+    for k, x in enumerate(L):
+        mf = RE_FICHA.match(x)
+        if mf and minutos(mf.group('dur')) is not None:
+            o.update({'pais': mf.group('pais').strip(), 'anio': int(mf.group('anio')),
+                      'duracion_min': minutos(mf.group('dur')),
+                      'genero': (mf.group('gen') or '').strip()})
+        elif x == 'Dir.' and k + 1 < len(L):
+            o.setdefault('director', L[k + 1])
+        elif len(x) > 110 and not o.get('sinopsis'):
+            o['sinopsis'] = x
+    return o
+
+
 def main():
     h = bajar()
-    funciones = [una(lineas(b)) for b in tarjetas(h)]
-    sin_dia = [f for f in funciones if not f.get('dia') or not f.get('hora') or not f.get('titulo')]
-    funciones = [f for f in funciones if f.get('dia') and f.get('hora') and f.get('titulo')]
+    funcs, vrs = [], []
+    for b in tarjetas(h):
+        L = lineas(b)
+        if len(L) > 1 and RE_DIA.match(L[0]) and RE_HORA.match(L[1]):
+            funcs.append(una(L, b))
+        else:
+            vrs.append(vr(L))
 
     os.makedirs(ST, exist_ok=True)
     json.dump({'_provenance': provenance(
-        URL,
-        metodo='tarjetas .evento-card del HTML servido; el día se lee del texto de cada tarjeta',
-        nota='la web del festival etiqueta las 24 tarjetas con la clase dia-15: su filtro por día está roto y la clase no sirve'),
-        '_funciones': len(funciones),
-        '_obras': sum(len(x.get('obras') or []) for x in funciones),
-        'funciones': funciones},
+        URL, metodo='tarjetas .evento-card del HTML servido; el día se lee del TEXTO de cada tarjeta',
+        nota='la web etiqueta las 24 tarjetas con la clase dia-15 —su filtro por día está roto— así que la clase no sirve'),
+        '_funciones': len(funcs), '_obras': sum(len(x.get('obras') or []) for x in funcs),
+        'funciones': funcs},
         io.open(SALIDA, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    print(f'── {SALIDA}')
-    for x in sorted(funciones, key=lambda y: (y['dia'], y['hora'])):
-        print(f"  {x['dia'][-5:]} {x['hora']}  {x['titulo'][:34]:36} "
-              f"{(x.get('sala') or '—')[:16]:18} {(x['sede'] or '—')[:28]:30} "
-              f"{len(x.get('obras') or []) or '':>2}  {x['acceso'][:30]}")
+    json.dump({'_provenance': provenance(
+        URL, metodo='tarjetas sin día/hora de la misma página',
+        nota='obras de la instalación VR: abierta en bloque, sin hora por obra'),
+        '_obras': len(vrs), 'obras': vrs},
+        io.open(SALIDA_VR, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+    print(f'── {os.path.basename(SALIDA)} · {len(funcs)} funciones · '
+          f"{sum(len(x.get('obras') or []) for x in funcs)} obras en programas")
+    for x in sorted(funcs, key=lambda y: (y['dia'], y['hora'])):
+        print(f"  {x['dia'][-5:]} {x['hora']}  {x['titulo'][:32]:34} "
+              f"{(x.get('event_kind') or '—')[:20]:22} {(x.get('sala') or '—')[:16]:18} "
+              f"{(x['sede'] or '—')[:26]:28} {len(x.get('obras') or []) or '':>2}")
     import collections
-    print(f"\n{len(funciones)} funciones · {sum(len(x.get('obras') or []) for x in funciones)} obras en programas")
-    print('días:', dict(sorted(collections.Counter(x['dia'][-2:] for x in funciones).items())))
-    if sin_dia:
-        print(f'  ⚠ {len(sin_dia)} tarjeta(s) sin día/hora/título — mirar a mano')
+    print('  días:', dict(sorted(collections.Counter(x['dia'][-2:] for x in funcs).items())))
+    print(f'── {os.path.basename(SALIDA_VR)} · {len(vrs)} obras de la instalación VR')
+    for o in vrs:
+        print(f"  {o['titulo'][:34]:36} {(o.get('director') or '—')[:22]:24} "
+              f"{(o.get('pais') or '—')[:18]:20} {o.get('duracion_min','—')} min")
 
 
 if __name__ == '__main__':

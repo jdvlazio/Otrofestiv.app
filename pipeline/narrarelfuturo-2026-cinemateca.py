@@ -31,7 +31,11 @@ from lib import provenance, UA
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
 CACHE = f'{REPO}/fuentes/narrarelfuturo-2026'
-SALIDA = f'{ST}/narrarelfuturo-2026-crudo.json'
+# Su propio sidecar, NO el crudo: el crudo lo arma el paso de fusión y es el
+# único con derecho a escribirlo. Cuando los dos parsers de este festival
+# apuntaban a `-crudo.json`, el segundo que corría borraba al primero y se
+# perdieron 8 funciones y 27 obras sin un error en pantalla.
+SALIDA = f'{ST}/narrarelfuturo-2026-cinemateca.json'
 
 NODOS = ['3077', '3078', '3079', '3080', '3178', '3211', '2821', '2003']
 SEDES = ['11', '80', '12', '112']          # Centro, Fontanar, El Tunal, CEFE
