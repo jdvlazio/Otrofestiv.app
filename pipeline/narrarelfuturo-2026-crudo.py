@@ -170,7 +170,14 @@ def main():
             'registration_url': t.get('registration_url'), '_src': t.get('_src'),
         })
 
-    obras_vr = [{k: o[k] for k in ('titulo',) + FICHA if o.get(k)} for o in vr]
+    # Las obras de VR también tienen ficha propia en la web: sin completarlas
+    # desde ahí salían sin póster ni sinopsis las 48 entradas (8 obras × 6
+    # sesiones). La lista de la tarjeta dice CUÁLES son; la ficha, cómo son.
+    obras_vr = []
+    for o in vr:
+        base = por_titulo.get(norm(o.get('titulo'))) or {}
+        obras_vr.append({k: (o.get(k) or base.get(k)) for k in ('titulo',) + FICHA
+                         if (o.get(k) or base.get(k))})
     for dia, hora, dur in VR_SESIONES:
         funciones.append({
             'titulo': 'Sala VR', 'dia': dia, 'hora': hora,
