@@ -279,7 +279,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
-| `title_en` | string | — | 10 fest |  |
+| `title_en` | string | — | 11 fest |  |
 | `title_es` | string | — | — | Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial. |
 | `director` | string | — | 19 fest |  |
 | `year` | number | — | 18 fest | Entero. Dos festivales legacy lo tienen como string. |
@@ -287,9 +287,9 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `flags` | string | — | 19 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
 | `duration` | string | `^\d+ min$` | 19 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
 | `language` | string | — | 7 fest |  |
-| `genre` | string | — | 15 fest |  |
+| `genre` | string | — | 16 fest |  |
 | `synopsis` | string | — | 19 fest | SIEMPRE en español. La traducción no es opcional. |
-| `synopsis_en` | string | — | 16 fest |  |
+| `synopsis_en` | string | — | 17 fest |  |
 | `synopsis_es` | string | — | 2 fest |  |
 | `synopsis_lang` | string | `es` · `en` · `pt` | 19 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
 | `rating` | string | — | 2 fest |  |
@@ -305,7 +305,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |
 | `sessions` | array | — | 1 fest |  |
 | `has_qa` | boolean | — | 13 fest | Afecta conflictos vía durationForTravel. |
-| `qa_type` | string | `team` · `guests` | 3 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
+| `qa_type` | string | `team` · `guests` | 4 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | 1 fest |  |
 | `sala` | string | — | 8 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
@@ -314,10 +314,10 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `poster` | string | — | 19 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |
 | `posterSource` | string | `tmdb` · `custom` · `editorial` · `letterboxd` · `oficial` | 19 fest | **derivado de `poster`** — no viene de ninguna fuente |
 | `posterPosition` | string | `center` · `top` · `bottom` | 1 fest |  |
-| `lbSlug` | string | — | 13 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
+| `lbSlug` | string | — | 14 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
 | `slug` | string | — | 1 fest |  |
 | `filmCategory` | string | — | 1 fest |  |
-| `tmdb_id` | number | — | 9 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
+| `tmdb_id` | number | — | 10 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
 | `_src` | — | — | 11 fest | De dónde salió el dato. Toda obra nueva lo lleva. |
 | `format` | string | — | 1 fest | Formato de proyección (DCP, 35mm). Lo publica el festival; TIFF es el único que lo trae. |
 | `section_tags` | array | — | 1 fest | no lo lee la vista: ninguno todavía Sellos del festival (TIFF). Decisión de Juan: etiqueta, no sección. Falta cablearlo en la vista. |
