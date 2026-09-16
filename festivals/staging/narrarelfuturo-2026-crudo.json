@@ -5,7 +5,7 @@
   "metodo": "fusión: la parrilla de la web manda; la ficha por obra la completa; la Cinemateca contrasta",
   "nota": "la instalación VR va como actividad recurrente (is_recurring), no como seis funciones distintas"
  },
- "_funciones": 32,
+ "_funciones": 33,
  "_obras": 85,
  "_contraste_cinemateca": [
   "Llueve sobre Babel 2026-09-19: web 18:00 vs Cinemateca 18:30"
@@ -653,6 +653,23 @@
    "seccion": "Proyecciones & Largos"
   },
   {
+   "titulo": "Desde el Terreno: Cómo contar la historia mientras está ocurriendo",
+   "dia": "2026-09-17",
+   "hora": "09:00",
+   "sede": "Cinemateca de Bogotá",
+   "sala": "Taller de Creación Audiovisual",
+   "tipo": "taller",
+   "event_kind": "taller",
+   "director": "Camila Lozano Delgado y Andrés Fernández Sánchez",
+   "pais": "Colombia",
+   "duracion_min": 240,
+   "sinopsis": "Los asistentes participarán en un ejercicio práctico que simulará el ciclo completo de una cobertura informativa de última hora. Desde la planificación editorial y la recolección de información hasta la construcción de despachos en vivo y la coordinación con el estudio, los participantes asumirán el rol de corresponsales enfrentándose a los desafíos reales del periodismo de campo en la era digital.",
+   "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/08/iliana.jpg",
+   "acceso": "desconocido",
+   "_src": "https://narrarelfuturo.com/talleres-2026/desde-el-terreno/",
+   "seccion": "Talleres & Formación"
+  },
+  {
    "titulo": "Después del frío, un collage para la paz",
    "dia": "2026-09-18",
    "hora": "09:00",
@@ -811,7 +828,8 @@
    "sala": "Taller de Creación Audiovisual",
    "tipo": "taller",
    "event_kind": "taller",
-   "director": "María Isabel Cevallos (Ecuador)",
+   "director": "María Isabel Cevallos",
+   "pais": "Ecuador",
    "duracion_min": 240,
    "sinopsis": "En un ecosistema informativo donde las noticias se producen y circulan en cuestión de segundos, el papel del presentador va mucho más allá de leer un teleprónter. Este taller explora cómo se construye la credibilidad frente a cámara, cómo se toman decisiones bajo presión durante una noticia de última hora y cuáles son las herramientas narrativas que permiten informar con rapidez sin sacrificar el rigor periodístico.",
    "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/08/maxresdefault.jpg",

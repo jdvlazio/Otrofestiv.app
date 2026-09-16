@@ -29,7 +29,12 @@ SALIDA = f'{ST}/narrarelfuturo-2026-talleres.json'
 
 MES = {'sep': '09', 'septiembre': '09'}
 RE_DIA = re.compile(r'(?:(?:Lun|Mar|Mié|Mie|Jue|Vie|Sáb|Sab|Dom)[a-zé]*\s+)?(\d{1,2})\s+de\s+(Sep\w*)', re.I)
-RE_RANGO = re.compile(r'(\d{1,2}):(\d{2})\s*([ap])?m?\s*a\s*(\d{1,2})(?::(\d{2}))?\s*([apm])', re.I)
+# El separador del rango NO es siempre « a »: «Desde el Terreno» escribe
+# «9:00am - 1:00pm» con guion, y por exigir « a » ese taller se cayó entero del
+# festival — una actividad real perdida por un carácter. Se aceptan « a », guion,
+# raya y «hasta».
+RE_RANGO = re.compile(
+    r'(\d{1,2}):(\d{2})\s*([ap])?m?\s*(?:a|-|–|—|hasta)\s*(\d{1,2})(?::(\d{2}))?\s*([apm])', re.I)
 # La fuente nombra el mismo lugar de varias formas y cada variante partiría las
 # funciones: «UTADEO» es la Tadeo, y «Taller de la Imagen» es una SALA dentro de
 # la Cinemateca. Tabla explícita, nunca heurística — la lección de FICDEH.
@@ -76,7 +81,16 @@ def parse(slug, h):
             d.setdefault('tallerista', L[k + 1])
         m = re.match(r'^Tallerista[s]?:\s*(.+)$', x)
         if m and m.group(1).strip():
-            d.setdefault('tallerista', m.group(1).strip())
+            # el país viene pegado entre paréntesis en la misma línea
+            # («Tallerista: María Isabel Cevallos (Ecuador)»); separarlo es lo que
+            # hace que la bandera exista.
+            _v = m.group(1).strip()
+            _mp = re.match(r'^(.+?)\s*\(([^)]{3,40})\)\s*\.?$', _v)
+            if _mp:
+                d.setdefault('tallerista', _mp.group(1).strip())
+                d.setdefault('pais', _mp.group(2).strip())
+            else:
+                d.setdefault('tallerista', _v)
         if re.fullmatch(r'\(([^)]+)\)', x) and not d.get('pais'):
             d['pais'] = x.strip('()')
         if re.match(r'^Participantes:?$', x) and k + 1 < len(L):
@@ -87,6 +101,11 @@ def parse(slug, h):
         md = RE_DIA.search(x)
         if md and not d.get('dia'):
             d['dia'] = f"2026-{MES.get(md.group(2)[:3].lower(),'09')}-{int(md.group(1)):02d}"
+        # «Primera sesión: … / Segunda sesión: …»: el taller tiene DOS sesiones
+        # el mismo día. Se toma la primera como hora y se declara la otra, en vez
+        # de publicar el taller sin duración como hacía antes.
+        if re.match(r'^Segunda sesi', x, re.I):
+            d['_segunda_sesion'] = x
         mr = RE_RANGO.search(x)
         if mr and not d.get('hora'):
             d['hora'] = h24(mr.group(1), mr.group(2), mr.group(3) or mr.group(6))
@@ -108,6 +127,12 @@ def parse(slug, h):
             d['tallerista'] = L[k + 1]
             if k + 2 < len(L) and re.fullmatch(r'\(([^)]+)\)\.?', L[k + 2]):
                 d.setdefault('pais', L[k + 2].strip('().'))
+        # «Con Nombre (País)» en UNA línea: «Señales Líquidas» lo escribe así y
+        # mi regla de dos líneas lo dejaba sin tallerista.
+        m2 = re.match(r'^Con\s+(.{3,90}?)\s*\(([^)]{3,40})\)\s*\.?$', x)
+        if m2 and not d.get('tallerista'):
+            d['tallerista'], _p = m2.group(1).strip(), m2.group(2).strip()
+            d.setdefault('pais', _p)
     largos = [x for x in L if len(x) > 140]
     if largos:
         d['sinopsis'] = largos[0]

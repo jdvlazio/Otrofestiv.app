@@ -1030,6 +1030,30 @@
    "is_free": true
   },
   {
+   "title": "Desde el Terreno: Cómo contar la historia mientras está ocurriendo",
+   "type": "event",
+   "section": "🛠️ Talleres & Formación",
+   "director": "Camila Lozano Delgado y Andrés Fernández Sánchez",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "240 min",
+   "day": "2026-09-17",
+   "time": "09:00",
+   "day_order": 2,
+   "venue": "Cinemateca de Bogotá - Bogotá",
+   "sala": "Taller de Creación Audiovisual",
+   "event_kind": "taller",
+   "has_qa": false,
+   "synopsis": "Los asistentes participarán en un ejercicio práctico que simulará el ciclo completo de una cobertura informativa de última hora. Desde la planificación editorial y la recolección de información hasta la construcción de despachos en vivo y la coordinación con el estudio, los participantes asumirán el rol de corresponsales enfrentándose a los desafíos reales del periodismo de campo en la era digital.",
+   "synopsis_lang": "es",
+   "poster": "https://narrarelfuturo.com/wp-content/uploads/2026/08/iliana.jpg",
+   "posterSource": "editorial",
+   "_src": {
+    "url": "https://narrarelfuturo.com/talleres-2026/desde-el-terreno/",
+    "fuente": "narrarelfuturo.com (programa + ficha por obra + talleres) + Instagram (Sala VR) + agenda de la Cinemateca (contraste)"
+   }
+  },
+  {
    "title": "Después del frío, un collage para la paz",
    "type": "event",
    "section": "🛠️ Talleres & Formación",
@@ -1246,7 +1270,9 @@
    "title": "Última Hora: Narrar el presente cuando el tiempo corre en contra",
    "type": "event",
    "section": "🛠️ Talleres & Formación",
-   "director": "María Isabel Cevallos (Ecuador)",
+   "director": "María Isabel Cevallos",
+   "country": "Ecuador",
+   "flags": "🇪🇨",
    "duration": "240 min",
    "day": "2026-09-16",
    "time": "14:00",
@@ -1909,7 +1935,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-15T22:20:08",
+  "fecha": "2026-09-15T22:28:26",
   "plan_sha": "911ac89fc14b86c2",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py narrarelfuturo-2026"
