@@ -90,6 +90,19 @@ QA = {
                                '(Instagram, post del día 1)'),
 }
 
+# Las tres sesiones de #RTMeetTheCreators en la Tadeo son PROYECCIÓN Y
+# CONVERSATORIO, y eso solo lo dice Instagram: la parrilla y la ficha de la web
+# no lo mencionan, y estas funciones no están en la agenda de la Cinemateca
+# —son en la universidad—, así que ninguna de nuestras otras fuentes podía
+# saberlo. El festival escribe, en los tres posts, «acompañaremos la proyección
+# y conversatorio de:». Se marcan por DÍA Y HORA porque cada sesión son dos
+# documentales, cada uno con su tarjeta.
+QA_RT = {
+    ('2026-09-16', '15:00'): 'https://www.instagram.com/p/DdCfPfqGfam/',
+    ('2026-09-17', '15:00'): 'https://www.instagram.com/p/DdChsrvGU6t/',
+    ('2026-09-18', '15:00'): 'https://www.instagram.com/p/DdCjLzpGZBH/',
+}
+
 
 # slug()/norm() son las de lib: la clave de JOIN entre el título de la tarjeta
 # («Aqua, Ensayo & Diversidad») y el slug de la ruta de la ficha
@@ -271,6 +284,10 @@ def main():
     for f in funciones:
         if f.get('titulo') in QA:
             f['has_qa'], (f['qa_type'], f['_qa_fuente']) = True, QA[f['titulo']]
+        _rt = QA_RT.get((f.get('dia'), f.get('hora')))
+        if _rt and 'Tadeo' in (f.get('sede') or ''):
+            f['has_qa'], f['qa_type'] = True, 'team'
+            f['_qa_fuente'] = f'#RTMeetTheCreators: «proyección y conversatorio» ({_rt})'
 
     for f in funciones:
         f['seccion'] = SECCION.get(f.get('event_kind'), SECCION_DEFECTO)
