@@ -128,6 +128,47 @@ DEL_POST = {
  'Dicen que tú y yo estamos locos': {'rating': '+12 años'},
 }
 
+# LA SINOPSIS EN INGLÉS, donde TMDB no la tiene. La app tiene modo en inglés y
+# una obra sin sinopsis EN se queda muda ahí. Estas cuatro son traducción de lo
+# que publica el FESTIVAL en español —su texto, no el de TMDB—, hecha acá y no
+# por una API: es el método del pipeline desde que se retiró translate-synopsis.
+SINOPSIS_EN = {
+ 'El hogar fue sepultado en esa tierra que nunca pudimos encontrar':
+   ('“Those devils took everything from me, those devils took everything from me, '
+    'those devils took everything from me”: this mantra of dispossession keeps '
+    'resurfacing in the family, like a verdict. They long to meet their disappeared '
+    'loved ones again, to play once more among plantain groves and fantastical beings, '
+    'and… the house… the house wants to be a home again. Through home movies, collective '
+    'archives, family images and a spectral, mystical presence, the film inhabits the '
+    'dreams and the nightmares left by the traces of a vanished love. The gunfire seems '
+    'to have stopped; the war feels distant now, but it left behind a deep grief and the '
+    'promise of return. Friends, family, home and territory come back, summoned by this '
+    'choral account. The past is a ghost, and this film speculates on a paradise and a '
+    'hell that can no longer be touched, hoping to inhabit this new place and conjure an '
+    'embrace inside it.'),
+ 'Que el cielo nos perdone':
+   ('Colombia, 1951. In the thick of La Violencia, the period of brutal political war '
+    'between Liberals and Conservatives, two chulavitas —hired killers on the government’s '
+    'payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in '
+    'the woods where their next victims are hiding. But the horror they find there is a '
+    'thousand times worse than the pain they meant to inflict.'),
+ 'Apuntes sobre anomalías y fantasmas':
+   ('A selection of four shorts gathering ten years of QUO CINE’s work in the neighbourhood. '
+    'Bogotá’s lesser-known corners are not silent: from the mountains, the centre and the '
+    'outskirts come the voices that shape this four-part compendium — a how-to on handling '
+    'spooks and anxieties; the diary of an art collective that never recorded a '
+    'disappointment; a cautionary tale about the time a boy tried a cigarette; and a day out '
+    'on the streets people say you should stay away from. QUO CINE’s manifesto: a decade '
+    'spent looking for ghosts, anomalies, laughter and encounters that leave a mark.'),
+ 'Dicen que tú y yo estamos locos':
+   ('The Luis Ángel Arango Public Library is the largest in Colombia and one of the most '
+    'important in Latin America. This landmark of Bogotá life outgrows its traditional '
+    'mission to become a stage for many lives: people who find in its reading rooms a '
+    'refuge, a pause, or a way out of the reality waiting beyond its doors. The film '
+    'gathers the stories of some of these “locos” — the word other readers, and even the '
+    'city itself, tend to use for them.'),
+}
+
 fun = [{'titulo': t, 'director': d, 'dia': dia, 'hora': h, 'sede': s,
         'seccion': sec, 'acceso': 'Entrada libre',
         '_src': {'url': u, 'date': '2026-09-17'}, '_nota': n}
@@ -137,6 +178,8 @@ for x in fun:
         x.update(FICHA_NUEVA[x['titulo']])
     if x['titulo'] in DEL_POST:
         x.update(DEL_POST[x['titulo']])
+    if x['titulo'] in SINOPSIS_EN:
+        x['sinopsis_en'] = SINOPSIS_EN[x['titulo']]
 
 out = {
  '_provenance': {

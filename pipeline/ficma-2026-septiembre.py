@@ -24,6 +24,8 @@ frenar y hay que pasarle --forzar: esa pérdida es el objetivo, no un accidente.
 
 Lee   festivals/staging/ficma-2026-reprogramado.json      (la parrilla nueva)
       festivals/staging/ficma-2026-franja-web.json    (la franja académica, 11)
+      festivals/staging/ficma-2026-fichas-tmdb.json   (ficha de las obras nuevas)
+      festivals/staging/ficma-2026-posters.json       (el afiche del festival)
       festivals/staging/ficma-2026-catalogo-agosto.json  (las 86 fichas, congeladas)
       festivals/staging/ficma-2026-venues-geo.json    (+ las 3 sedes nuevas)
 Esc.  festivals/staging/ficma-2026-build.json         (lo publica publicar.py)
@@ -196,6 +198,18 @@ def main():
     # saliera sin catálogo. Un paso que se estropea a sí mismo al usarlo.
     cat = json.load(open(f'{ST}/ficma-2026-catalogo-agosto.json', encoding='utf-8'))['obras']
     geo = json.load(open(f'{ST}/ficma-2026-venues-geo.json', encoding='utf-8'))
+    # Lo que la edición de agosto NO tenía: póster, género, lbSlug y título en
+    # inglés de las obras nuevas, verificado contra TMDB. Solo RELLENA: si la
+    # ficha heredada ya trae el campo, gana la heredada, que es donde viven las
+    # correcciones hechas a mano.
+    tmdb = json.load(open(f'{ST}/ficma-2026-fichas-tmdb.json',
+                          encoding='utf-8'))['fichas']
+    # …y el afiche que publica el propio festival, para las dos obras que TMDB
+    # no tiene o tiene sin imagen. Va DESPUÉS de TMDB por la misma regla: solo
+    # rellena huecos.
+    for t, f in json.load(open(f'{ST}/ficma-2026-posters.json',
+                               encoding='utf-8'))['fichas'].items():
+        tmdb.setdefault(t, {}).update(f)
 
     # Catálogo: primero el propio FICMA publicado, y si la obra es nueva —las hay:
     # el festival reprogramó y además cambió la selección— se busca en el RESTO de
@@ -263,6 +277,9 @@ def main():
         if base is None and not es_evento:
             sin_ficha.append(fn['titulo'])
         b = dict(base or {})
+        for campo, valor in (tmdb.get(fn['titulo']) or {}).items():
+            if not campo.startswith('_') and not b.get(campo):
+                b[campo] = valor
         # Lo que el PROPIO festival publica sobre esta edición manda sobre la
         # ficha heredada: es su obra y su texto, y puede haber cambiado de corte.
         for k_, k2 in (('anio', 'year'), ('pais', 'country')):
@@ -270,6 +287,8 @@ def main():
                 b[k2] = fn[k_]
         if fn.get('duracion_min'):
             b['duration'] = f"{fn['duracion_min']} min"
+        if fn.get('sinopsis_en'):
+            b['synopsis_en'] = fn['sinopsis_en']
         if fn.get('sinopsis'):
             # sinopsis del propio festival: es española y así se declara, que el
             # contrato exige el idioma y la app lo lee para no ofrecer traducción
@@ -298,7 +317,8 @@ def main():
         if sala:
             item['sala'] = sala
         for campo in ('tmdb_id', 'genre', 'poster', 'posterSource', 'synopsis',
-                      'synopsis_en', 'synopsis_lang', 'lbSlug', 'title_en'):
+                      'synopsis_en', 'synopsis_lang', 'lbSlug', 'title_en',
+                      'rating'):
             if b.get(campo):
                 item[campo] = b[campo]
         if fn.get('rating'):

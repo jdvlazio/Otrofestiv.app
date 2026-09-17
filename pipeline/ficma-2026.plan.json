@@ -15,6 +15,14 @@
    "que": "/talleresficma17/ → la franja académica reprogramada (11 actividades)"
   },
   {
+   "cmd": "TMDB_API_KEY=… python3 pipeline/ficma-2026-fichas-tmdb.py",
+   "que": "TMDB + Letterboxd → ficha de las obras que agosto no tenía (póster, género, lbSlug)"
+  },
+  {
+   "cmd": "python3 pipeline/ficma-2026-posters.py",
+   "que": "el afiche que publica el festival (web e IG) para las obras sin imagen en TMDB"
+  },
+  {
    "cmd": "python3 pipeline/ficma-2026-septiembre.py",
    "que": "parrilla nueva + catálogo publicado + geo → build"
   },

@@ -1,0 +1,25 @@
+{
+ "_provenance": {
+  "fuente": "el afiche que publica el propio festival: laficma.com y su Instagram",
+  "capturado": "2026-09-17",
+  "que_aporta": "póster de las obras que TMDB no tiene o tiene sin imagen",
+  "ojo": "las URL de Instagram caducan; la lámina se resuelve en cada corrida desde el shortcode, no se guarda"
+ },
+ "fichas": {
+  "Ayuno y cenizas": {
+   "poster": "/assets/ficma/ayuno-y-cenizas.jpg",
+   "posterSource": "custom",
+   "_medida": "1000×1429",
+   "_de": "el afiche de la obra en /estrenosficma17/ (1000×1429). TMDB tiene la ficha —1756580— pero sin imagen.",
+   "_url": "https://laficma.com/wp-content/uploads/2026/09/Ayuno.jpg"
+  },
+  "Apuntes sobre anomalías y fantasmas": {
+   "poster": "/assets/ficma/apuntes-sobre-anomalias-y-fantasmas.jpg",
+   "posterSource": "custom",
+   "_medida": "1080×1440",
+   "_de": "la lámina 1 del post es el afiche de la obra, con bloque de créditos y laureles (1080×1440). No tiene ficha en TMDB.",
+   "_url": "instagram DdUsahVGspB · lámina 1"
+  }
+ },
+ "fallos": []
+}
