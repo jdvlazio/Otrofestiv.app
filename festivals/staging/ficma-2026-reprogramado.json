@@ -3,7 +3,7 @@
   "fuente": "laficma.com (/estrenosficma17/ y /talleresficma17/) + Instagram @cinemanizales_ficma, post a post",
   "capturado": "2026-09-15",
   "metodo": "La web NO tiene parrilla: su menú solo ofrece ESTRENOS y TALLERES. El resto sale de los posts, que desde el 14 sep ya traen la función entera (día · hora · sede · acceso). Los pies se leyeron por embed, completos.",
-  "alcance": "9 funciones y 4 talleres publicados. El festival declara «más de 60 proyecciones»: falta la inmensa mayoría."
+  "alcance": "9 funciones publicadas. El festival declara «más de 60 proyecciones»: falta la inmensa mayoría. La franja académica va aparte, en ficma-2026-franja-web.json."
  },
  "_festival": {
   "nombre": "FICMA — Feria Internacional de Cine de Manizales",
@@ -21,7 +21,7 @@
  "_abierto": [
   "DOS «aperturas»: «Función apertura» (El príncipe de Nanawa, sáb 19 · 09:00) y «Función Inaugural» (El hogar fue sepultado, sáb 19 · 19:00). Preguntar cuál es cuál.",
   "La home de laficma.com fecha El príncipe de Nanawa el 16 de septiembre; el post dice sábado 19. El 16 es miércoles y cae antes del arranque. Sin resolver.",
-  "El 11 sep la página de talleres listaba SEIS (con Franco Lolli e Isabella Vega) y el 13 devolvió cuatro. No se afirma que se cayeran: puede ser lectura incompleta. Volver a mirar esa página.",
+  "La página de talleres se volvió a leer el 17 sep, ya con parser: son ONCE actividades (ficma-2026-franja-web.json). El taller de Franco Lolli sigue anunciado en el párrafo de entrada y NO tiene ficha: preguntar si se cayó.",
   "Proimágenes (ntd=1320) sigue publicando las fechas de agosto."
  ],
  "funciones": [
@@ -165,62 +165,6 @@
     "date": "2026-09-15"
    },
    "_nota": "Franja con colegios. SEDE SIN DECLARAR. Presencia del director."
-  },
-  {
-   "titulo": "Cine en Movimiento: Plano Secuencia",
-   "tallerista": "Mauricio Casilimas",
-   "dia": "2026-09-19",
-   "hora": "15:00",
-   "sede": "Secretaría de Cultura de Palogrande",
-   "tipo": "taller",
-   "acceso": "Entrada libre",
-   "_cupos": "30 cupos",
-   "_src": {
-    "url": "https://laficma.com/talleresficma17/",
-    "date": "2026-09-15"
-   }
-  },
-  {
-   "titulo": "Escribir con la cámara: del guion a la puesta en escena",
-   "tallerista": "Andrés Buitrago",
-   "dia": "2026-09-22",
-   "hora": "09:00",
-   "sede": "",
-   "tipo": "taller",
-   "acceso": "Entrada libre",
-   "_cupos": "sede sin declarar",
-   "_src": {
-    "url": "https://laficma.com/talleresficma17/",
-    "date": "2026-09-15"
-   }
-  },
-  {
-   "titulo": "Poniéndole voz a tu historia silenciada",
-   "tallerista": "Diana Arias",
-   "dia": "2026-09-23",
-   "hora": "14:00",
-   "sede": "Hall Secretaría de la Mujer y Equidad de Género",
-   "tipo": "taller",
-   "acceso": "Entrada libre",
-   "_cupos": "20 cupos",
-   "_src": {
-    "url": "https://laficma.com/talleresficma17/",
-    "date": "2026-09-15"
-   }
-  },
-  {
-   "titulo": "Animación de fotografías \"de cero a cien\" con IA",
-   "tallerista": "Fabián Amador Salazar",
-   "dia": "2026-09-24",
-   "hora": "17:00",
-   "sede": "Secretaría de Cultura de Palogrande",
-   "tipo": "taller",
-   "acceso": "Entrada libre",
-   "_cupos": "30 cupos",
-   "_src": {
-    "url": "https://laficma.com/talleresficma17/",
-    "date": "2026-09-15"
-   }
   }
  ]
 }

@@ -149,6 +149,11 @@
    "en": "Workshops",
    "archetype": "Charlas / Industria",
    "order": 7
+  },
+  "💬 Charlas": {
+   "en": "Talks",
+   "archetype": "Charlas / Industria",
+   "order": 8
   }
  },
  "venues": {
@@ -174,9 +179,9 @@
    "lat": 5.0575195,
    "lng": -75.484585,
    "city": "Manizales",
-   "address": "",
+   "address": "Cl 64A #20a-31",
    "_prec": "maps",
-   "_nota": "ficha «Casa de la cultura - Palogrande». El festival la nombra también «Secretaría de Cultura de Palogrande»: se unifican."
+   "_nota": "ficha «Casa de la cultura - Palogrande», Cl 64A #20a-31. El festival la nombra también «Secretaría de Cultura de Palogrande» y «Biblioteca Pública Satélite Palogrande»: es el mismo edificio —la alcaldía lo inauguró como «Casa de la Cultura y Biblioteca Pública Satélite de Palogrande»— y se unifican."
   },
   "Confa de la 50 - Manizales": {
    "short": "Confa de la 50",
@@ -194,6 +199,14 @@
    "city": "Manizales",
    "address": "",
    "_prec": "manual"
+  },
+  "Zoom - Manizales": {
+   "short": "Zoom",
+   "lat": null,
+   "lng": null,
+   "city": "",
+   "address": "",
+   "_nota": "transmisión por Zoom; el festival no publica más lugar que la plataforma"
   },
   "Secretaría de la Mujer y Equidad de Género - Manizales": {
    "short": "Secretaría de la Mujer y Equidad de Género",
@@ -258,10 +271,10 @@
    "title_en": "I Dreamed His Name"
   },
   {
-   "title": "Cine en Movimiento: Plano Secuencia",
+   "title": "Cine en Movimiento: Taller Teórico-Práctico de Plano Secuencia",
    "director": "Mauricio Casilimas",
    "year": null,
-   "duration": "180 min",
+   "duration": "120 min",
    "country": "",
    "flags": "",
    "section": "🛠️ Talleres",
@@ -271,8 +284,14 @@
    "venue": "Casa de la Cultura de Palogrande - Manizales",
    "has_qa": false,
    "is_free": true,
-   "_src": "https://laficma.com/talleresficma17/ (2026-09-15)",
-   "event_kind": "taller"
+   "_src": "https://laficma.com/talleresficma17/ (2026-09-17)",
+   "synopsis": "Un taller intensivo de alto impacto visual diseñado para desmitificar la complejidad del plano secuencia y la cámara en movimiento. Conectando el lenguaje del cine de autor con la narrativa pop, los cómics y los videojuegos, los participantes aprenderán a planificar y ejecutar tomas continuas sin cortar la cámara. La experiencia combina un bloque conceptual ágil con una demostración técnica en vivo (Show & Tell) y un reto práctico donde los 30 asistentes se dividen en células de rodaje simultáneas,asumiendo roles reales de un equipo de filmación (Director, Operador, Foquista, Spotter, Actores) para producir micro-historias en vivo utilizando tecnología de estabilización (Ronin) y rig de cuerpo (Snorricam).",
+   "synopsis_lang": "es",
+   "type": "event",
+   "event_kind": "taller",
+   "requires_registration": true,
+   "registration_url": "https://linktr.ee/ficma",
+   "_cupos": 30
   },
   {
    "title": "Ayuno y cenizas",
@@ -367,6 +386,28 @@
    "title_en": "May heaven forgive us"
   },
   {
+   "title": "Un sueño se hace realidad en 1 minuto",
+   "director": "Isabella Vega",
+   "year": null,
+   "duration": "150 min",
+   "country": "",
+   "flags": "",
+   "section": "🛠️ Talleres",
+   "day": "2026-09-20",
+   "time": "09:00",
+   "day_order": 1,
+   "venue": "Zoom - Manizales",
+   "has_qa": false,
+   "is_free": true,
+   "_src": "https://laficma.com/talleresficma17/ (2026-09-17)",
+   "synopsis": "Lo único que necesitas es decir sí, sí lo voy a hacer; lo demás es práctica, disciplina y diversión. En este taller aprenderás lo esencial para pescar una idea, convertirla en guión cinematográfico, organizarla y filmarla. Porque los sueños se cumplen también en 1 minuto.",
+   "synopsis_lang": "es",
+   "type": "event",
+   "event_kind": "taller",
+   "requires_registration": true,
+   "registration_url": "https://linktr.ee/ficma"
+  },
+  {
    "title": "Manizales City",
    "director": "Félix R. Restrepo",
    "year": 1925,
@@ -416,6 +457,86 @@
    "lbSlug": "semillas"
   },
   {
+   "title": "Museos sentimentales. Notas sueltas sobre el coleccionismo",
+   "director": "Pablo Cuartas",
+   "year": null,
+   "duration": "60 min",
+   "country": "",
+   "flags": "",
+   "section": "💬 Charlas",
+   "day": "2026-09-21",
+   "time": "10:00",
+   "day_order": 2,
+   "venue": "Centro Cultural del Banco de la República - Manizales",
+   "has_qa": false,
+   "is_free": true,
+   "_src": "https://laficma.com/talleresficma17/ (2026-09-17)",
+   "synopsis": "¿Por qué conservamos objetos sin valor económico y sin funcionalidad práctica? ¿Cómo se constituyen nuestros pequeños museos domésticos? Esta conversación explora la pasión por habitar entornos materiales que estimulen la memoria.",
+   "synopsis_lang": "es",
+   "type": "event",
+   "event_kind": "ponencia"
+  },
+  {
+   "title": "Taller de Periodismo Cultural",
+   "director": "Felipe Moreno Salazar",
+   "year": null,
+   "duration": "180 min",
+   "country": "",
+   "flags": "",
+   "section": "🛠️ Talleres",
+   "day": "2026-09-21",
+   "time": "16:00",
+   "day_order": 2,
+   "venue": "Casa de la Cultura de Palogrande - Manizales",
+   "has_qa": false,
+   "is_free": true,
+   "_src": "https://laficma.com/talleresficma17/ (2026-09-17)",
+   "type": "event",
+   "event_kind": "taller",
+   "requires_registration": true,
+   "registration_url": "https://linktr.ee/ficma"
+  },
+  {
+   "title": "Colombia a Través de sus Monedas y Billetes: Historia y Desarrollo del Coleccionismo",
+   "director": "Felipe Torres",
+   "year": null,
+   "duration": "60 min",
+   "country": "",
+   "flags": "",
+   "section": "💬 Charlas",
+   "day": "2026-09-22",
+   "time": "10:00",
+   "day_order": 3,
+   "venue": "Centro Cultural del Banco de la República - Manizales",
+   "has_qa": false,
+   "is_free": true,
+   "_src": "https://laficma.com/talleresficma17/ (2026-09-17)",
+   "synopsis": "Historia Numismática con enfoque en Colombia. Trayectoria y crecimiento del coleccionismo en el país.",
+   "synopsis_lang": "es",
+   "type": "event",
+   "event_kind": "ponencia"
+  },
+  {
+   "title": "Coleccionismo, Patrimonio y las distintas formas en que los objetos cuentan historias y construyen memoria",
+   "director": "Felipe Rodríguez (Proyecto Kinder), Rafael Hernández, Juan José Charry (CODISCOS), Felipe Torres (Numismática Bogotá)",
+   "year": null,
+   "duration": "120 min",
+   "country": "",
+   "flags": "",
+   "section": "💬 Charlas",
+   "day": "2026-09-23",
+   "time": "10:00",
+   "day_order": 4,
+   "venue": "Centro Cultural del Banco de la República - Manizales",
+   "has_qa": false,
+   "is_free": true,
+   "_src": "https://laficma.com/talleresficma17/ (2026-09-17)",
+   "synopsis": "¿Qué tienen en común un disco de vinilo, una moneda y un objeto de diseño? Más allá de su valor material, todos son testigos de una época, portadores de memoria y piezas fundamentales para comprender nuestra historia. En este panel, representantes del Proyecto Kinder, Codiscos y la Sociedad Colombiana de Numismática compartirán sus experiencias alrededor del coleccionismo como una práctica de conservación, investigación y divulgación del patrimonio cultural. Un diálogo que permitirá descubrir cómo diferentes disciplinas construyen memoria a partir de aquello que deciden preservar, demostrando que coleccionar es también una forma de contar quiénes somos.",
+   "synopsis_lang": "es",
+   "type": "event",
+   "event_kind": "ponencia"
+  },
+  {
    "title": "Poniéndole voz a tu historia silenciada",
    "director": "Diana Arias",
    "year": null,
@@ -429,12 +550,38 @@
    "venue": "Secretaría de la Mujer y Equidad de Género - Manizales",
    "has_qa": false,
    "is_free": true,
-   "_src": "https://laficma.com/talleresficma17/ (2026-09-15)",
+   "_src": "https://laficma.com/talleresficma17/ (2026-09-17)",
    "sala": "Hall",
-   "event_kind": "taller"
+   "synopsis": "Desde el enfoque de la FICMA 17 que reflexiona sobre el valor de coleccionar como una forma de preservar la memoria, este taller propone detenerse en aquello que nunca debería guardarse en silencio. A través de herramientas de acompañamiento psicosocial y ejercicios de expresión, las participantes podrán reconocer sus experiencias, resignificar sus historias y construir un espacio seguro donde la memoria deje de ser una carga individual para convertirse en una experiencia colectiva de escucha, cuidado y transformación.",
+   "synopsis_lang": "es",
+   "type": "event",
+   "event_kind": "taller",
+   "requires_registration": true,
+   "registration_url": "https://linktr.ee/ficma",
+   "_cupos": 20
   },
   {
-   "title": "Animación de fotografías \"de cero a cien\" con IA",
+   "title": "Coleccionar para recordar. Museos, arte y la construcción de la memoria",
+   "director": "Laura Buriticá, Angélica Avila, modera Diana Castellanos",
+   "year": null,
+   "duration": "90 min",
+   "country": "",
+   "flags": "",
+   "section": "💬 Charlas",
+   "day": "2026-09-24",
+   "time": "10:00",
+   "day_order": 5,
+   "venue": "Centro Cultural del Banco de la República - Manizales",
+   "has_qa": false,
+   "is_free": true,
+   "_src": "https://laficma.com/talleresficma17/ (2026-09-17)",
+   "synopsis": "¿Qué significa coleccionar en la actualidad? Más allá de reunir objetos, el coleccionismo es una forma de preservar historias, construir identidad y generar nuevas lecturas sobre el patrimonio. En esta conversación, la directora del Museo de la Universidad de Caldas y la artista plástica y autora de Museo voraz compartirán sus perspectivas sobre el papel de los museos, las colecciones y las prácticas artísticas como espacios vivos de memoria. Un encuentro para reflexionar sobre cómo el arte, la curaduría y el coleccionismo contribuyen a preservar el pasado y dialogar con el presente.",
+   "synopsis_lang": "es",
+   "type": "event",
+   "event_kind": "ponencia"
+  },
+  {
+   "title": "Taller de animación de fotografías e imágenes de cero a cien para dummies con ias",
    "director": "Fabián Amador Salazar",
    "year": null,
    "duration": "180 min",
@@ -447,15 +594,41 @@
    "venue": "Casa de la Cultura de Palogrande - Manizales",
    "has_qa": false,
    "is_free": true,
-   "_src": "https://laficma.com/talleresficma17/ (2026-09-15)",
-   "event_kind": "taller"
+   "_src": "https://laficma.com/talleresficma17/ (2026-09-17)",
+   "synopsis": "Aprende a transformar fotos y vectores estáticos en videos dinámicos en este taller intensivo de 4 horas. Diseñado de 0 a 100 para principiantes, descubrirás cómo reimaginar tus imágenes con el poder estilístico de Gemini, darles movimiento cinemático con Google Flow y darles el acabado perfecto en CapCut mediante la separación por capas, animación con keyframes y diseño de sonido listo para destacar en Reels por ejemplo o cualquier proyecto audiovisual que tengas en mente. ¡Lleva tus piezas gráficas al siguiente nivel visual sin necesidad de saber dibujar!",
+   "synopsis_lang": "es",
+   "type": "event",
+   "event_kind": "taller",
+   "requires_registration": true,
+   "registration_url": "https://linktr.ee/ficma",
+   "_cupos": 30
+  },
+  {
+   "title": "Propiedad intelectual en el audiovisual",
+   "director": "Patricia Rengifo",
+   "year": null,
+   "duration": "120 min",
+   "country": "",
+   "flags": "",
+   "section": "💬 Charlas",
+   "day": "2026-09-25",
+   "time": "09:00",
+   "day_order": 6,
+   "venue": "Zoom - Manizales",
+   "has_qa": false,
+   "is_free": true,
+   "_src": "https://laficma.com/talleresficma17/ (2026-09-17)",
+   "synopsis": "La protección de una obra comienza mucho antes de su estreno. Esta charla ofrecerá una mirada integral sobre la propiedad intelectual en el sector audiovisual, abordando los derechos de autor, la titularidad de las obras, la gestión de licencias, la negociación de contratos y los retos legales que enfrentan las producciones en un entorno de constante transformación. Una conversación dirigida a productores, directores, guionistas, estudiantes y creadores interesados en fortalecer sus proyectos desde una perspectiva jurídica y estratégica.",
+   "synopsis_lang": "es",
+   "type": "event",
+   "event_kind": "ponencia"
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-15T11:45:19",
-  "plan_sha": "c778f1367bce13e7",
-  "paso": 3,
+  "fecha": "2026-09-17T05:34:16",
+  "plan_sha": "1eaf0d860353ec1e",
+  "paso": 4,
   "cmd": "python3 pipeline/ficma-2026-septiembre.py"
  }
 }

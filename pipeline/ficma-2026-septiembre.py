@@ -23,6 +23,7 @@ una fecha que nadie declaró es peor que no publicarla. `publicar.py` lo va a
 frenar y hay que pasarle --forzar: esa pérdida es el objetivo, no un accidente.
 
 Lee   festivals/staging/ficma-2026-reprogramado.json      (la parrilla nueva)
+      festivals/staging/ficma-2026-franja-web.json    (la franja académica, 11)
       festivals/staging/ficma-2026-catalogo-agosto.json  (las 86 fichas, congeladas)
       festivals/staging/ficma-2026-venues-geo.json    (+ las 3 sedes nuevas)
 Esc.  festivals/staging/ficma-2026-build.json         (lo publica publicar.py)
@@ -52,8 +53,23 @@ SECCIONES = {
     'Cine Colombiano':          ('🎞️ Cine Colombiano', 'Colombian Cinema', 'Muestra / País', 4),
     'Cortometrajes':            ('⚡ Cortometrajes', 'Short Films', 'Cortos / Programas', 5),
     'Cine Clásico Colombiano':  ('📽️ Cine Clásico Colombiano', 'Colombian Classics', 'Retrospectiva / Tributo', 6),
+    # Las dos mitades de la FRANJA ACADÉMICA, con los nombres y el orden que ya
+    # tenían en la edición de agosto: es la propia división del festival, y cada
+    # lámina lleva impreso a cuál pertenece.
     'Talleres':                 ('🛠️ Talleres', 'Workshops', 'Charlas / Industria', 7),
+    'Charlas':                  ('💬 Charlas', 'Talks', 'Charlas / Industria', 8),
 }
+
+# Duración cuando el festival publica hora de inicio y no de final. No es un
+# invento: es lo que duraban en la edición de agosto, donde sí venía el rango.
+DURACION_POR_DEFECTO = {'taller': 180, 'charla': 90}
+
+# La sede que no es un lugar. «Zoom» no tiene coordenadas y no debe tenerlas:
+# el validador solo advierte, y la app cae a su tiempo de viaje por defecto.
+# `city` va vacío A PROPÓSITO —una transmisión no está en Manizales— y el filtro
+# por ciudad sigue plano porque las demás sedes sí la declaran.
+SIN_LUGAR = {'Zoom': {'city': '', '_nota': 'transmisión por Zoom; el festival no '
+                                           'publica más lugar que la plataforma'}}
 
 # Sede del post → (clave canónica de venues, sala). La tabla es EXPLÍCITA, nunca
 # heurística sobre el guion: es la lección más cara de FICDEH.
@@ -70,6 +86,29 @@ SEDES = {
     'Secretaría de Cultura de Palogrande': ('Casa de la Cultura de Palogrande', ''),
     'Hall Secretaría de la Mujer y Equidad de Género':
         ('Secretaría de la Mujer y Equidad de Género', 'Hall'),
+    # ── nombres con que la franja llama a las MISMAS sedes ──────────────────
+    # «Casa de la Cultura y Biblioteca Pública Satélite de Palogrande», Cl 64A
+    # #20a-31 —donde estuvo la estación del cable de Laureles a Los Yarumos—:
+    # UN edificio con tres nombres en la misma web del festival. Verificado el
+    # 17 sep contra la ficha de Google Maps (mismo plus code que la coordenada
+    # que ya teníamos) y contra la alcaldía, que lo inauguró con ese nombre
+    # doble. Dos sedes con el mismo `short` y sin sala son la misma sede escrita
+    # de dos formas (docs/SCHEMA.md).
+    'Biblioteca Pública Satélite Palogrande': ('Casa de la Cultura de Palogrande', ''),
+    'Secretaria de Cultura de Palogrande': ('Casa de la Cultura de Palogrande', ''),
+    'Banco de la República': ('Centro Cultural del Banco de la República', ''),
+    # La web dice solo «Secretaría de la Mujer y Equidad de Género»; la sala la
+    # publicó el festival en la lámina de la franja («Hall de la Secretaría de la
+    # Mujer y Equidad de Género – Orquídeas») y está en producción desde el 15
+    # sep. Mismo taller, misma tallerista, misma sede: no se deja caer un dato
+    # que ayuda a encontrar el salón solo porque la página nueva no lo repita.
+    'Secretaría de la Mujer y Equidad de Género':
+        ('Secretaría de la Mujer y Equidad de Género', 'Hall'),
+    # Las dos que no tienen a dónde ir: el festival las transmite. Se llaman
+    # como el festival las llama —«Zoom»— y entran al programa como cualquier
+    # actividad con día y hora: la charla del viernes 25 es la única de ese día.
+    'Zoom': ('Zoom', ''),
+    'Charla transmitida por zoom': ('Zoom', ''),
 }
 
 # Las tres que agosto no tenía, ubicadas en Google Maps el 15 sep 2026 — cada una
@@ -81,7 +120,8 @@ GEO_NUEVAS = {
         '_nota': 'ficha propia en Google Maps; a ~700 m del Teatro los Fundadores'},
     'Casa de la Cultura de Palogrande': {
         'lat': 5.0575195, 'lng': -75.484585, '_prec': 'maps',
-        '_nota': 'ficha «Casa de la cultura - Palogrande». El festival la nombra también «Secretaría de Cultura de Palogrande»: se unifican.'},
+        'address': 'Cl 64A #20a-31',
+        '_nota': 'ficha «Casa de la cultura - Palogrande», Cl 64A #20a-31. El festival la nombra también «Secretaría de Cultura de Palogrande» y «Biblioteca Pública Satélite Palogrande»: es el mismo edificio —la alcaldía lo inauguró como «Casa de la Cultura y Biblioteca Pública Satélite de Palogrande»— y se unifican.'},
     'Confa de la 50': {
         'lat': 5.0625092, 'lng': -75.4989887, '_prec': 'maps',
         '_nota': 'ficha «Confa», Cra 25 Calle 50 esquina. El auditorio Hernando Aristizábal Botero está dentro.'},
@@ -96,8 +136,39 @@ CON_QA = {'Soñé su nombre', 'Ayuno y cenizas', 'Que el cielo nos perdone',
 norm = lib.norm
 
 
+def franja(path):
+    """El sidecar de la franja académica → funciones del formato de este build.
+
+    La franja NO se transcribe aquí: la escribe `ficma-2026-franja-web.py`
+    leyendo /talleresficma17/. Esto solo la traduce a la misma forma que traen
+    las funciones para que el resto del ensamblado no tenga dos caminos."""
+    d = json.load(open(path, encoding='utf-8'))
+    src = d['_provenance']
+    out = []
+    for a in d['actividades']:
+        gente = a.get('tallerista') or a.get('invitados') or ''
+        if a.get('modera'):
+            gente = f"{gente}, modera {a['modera']}".strip(', ')
+        f = {
+            'titulo': a['titulo'], 'director': gente, 'tallerista': gente,
+            'dia': a['dia'], 'hora': a['hora'], 'sede': a['sede_cruda'],
+            'tipo': a['tipo'], 'seccion': 'Talleres' if a['tipo'] == 'taller' else 'Charlas',
+            'duracion_min': a.get('duracion_min') or DURACION_POR_DEFECTO[a['tipo']],
+            'sinopsis': a.get('sinopsis', ''),
+            'acceso': a.get('acceso', ''),
+            '_cupos': a.get('cupos'),
+            '_src': {'url': src['fuente'].split(' ')[0], 'date': src['capturado']},
+        }
+        for c in ('requires_registration', 'registration_url', 'is_free'):
+            if a.get(c):
+                f[c] = a[c]
+        out.append(f)
+    return out
+
+
 def main():
     rep = json.load(open(f'{ST}/ficma-2026-reprogramado.json', encoding='utf-8'))
+    rep['funciones'] += franja(f'{ST}/ficma-2026-franja-web.json')
     # La foto CONGELADA, no el JSON publicado: publicar encoge ese archivo a las
     # 11 funciones reanunciadas, y leerlo aquí haría que el segundo regenerado
     # saliera sin catálogo. Un paso que se estropea a sí mismo al usarlo.
@@ -141,8 +212,8 @@ def main():
 
     films, venues, sin_ficha = [], {}, []
     for fn in rep['funciones']:
-        es_taller = fn.get('tipo') == 'taller'
-        sec_src = 'Talleres' if es_taller else fn['seccion']
+        es_evento = fn.get('tipo') in ('taller', 'charla')
+        sec_src = fn['seccion']
         sec = SECCIONES[sec_src][0]
         sede_src = fn['sede']
         if not sede_src:
@@ -151,18 +222,23 @@ def main():
             sin_ficha.append(f"{fn['titulo']} — SIN SEDE declarada, no se publica")
             continue
         clave_sede, sala = SEDES[sede_src]
+        # La clave de venues SIEMPRE lleva la ciudad: el contrato la exige
+        # (`venue` ~ ' - .+$'). Es un identificador, no lo que se ve: la app
+        # pinta `short`, y ahí «Zoom» se lee «Zoom».
         k = f'{clave_sede} - {CIUDAD}'
         if k not in venues:
             g = geo.get(clave_sede) or GEO_NUEVAS.get(clave_sede) or {}
             venues[k] = {'short': clave_sede, 'lat': g.get('lat'), 'lng': g.get('lng'),
                          'city': CIUDAD, 'address': g.get('address', '')}
+            if clave_sede in SIN_LUGAR:
+                venues[k].update(SIN_LUGAR[clave_sede])
             if g.get('_prec'):
                 venues[k]['_prec'] = g['_prec']
             if g.get('_nota'):
                 venues[k]['_nota'] = g['_nota']
 
         base, de_donde = heredar(fn['titulo'], fn.get('director', ''))
-        if base is None and not es_taller:
+        if base is None and not es_evento:
             sin_ficha.append(fn['titulo'])
         b = dict(base or {})
         # Lo que el PROPIO festival publica sobre esta edición manda sobre la
@@ -201,9 +277,18 @@ def main():
                       'synopsis_en', 'synopsis_lang', 'lbSlug', 'title_en'):
             if b.get(campo):
                 item[campo] = b[campo]
-        if es_taller:
-            item['event_kind'] = 'taller'
-            item['duration'] = item['duration'] or '180 min'
+        if es_evento:
+            # `type: 'event'` es lo que la app lee para tratarlo como actividad y
+            # no como obra; `event_kind` es la palabra con que se nombra. Las dos
+            # ya venían así de la edición de agosto.
+            item['type'] = 'event'
+            item['event_kind'] = 'taller' if fn['tipo'] == 'taller' else 'ponencia'
+            item['duration'] = item['duration'] or f"{DURACION_POR_DEFECTO[fn['tipo']]} min"
+            for c in ('requires_registration', 'registration_url'):
+                if fn.get(c):
+                    item[c] = fn[c]
+            if fn.get('_cupos'):
+                item['_cupos'] = fn['_cupos']
         films.append(item)
 
     films.sort(key=lambda f: (f['day'], f['time'], f['title']))

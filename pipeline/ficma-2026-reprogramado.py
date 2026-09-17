@@ -51,16 +51,11 @@ F = [
   'Franja con colegios. SEDE SIN DECLARAR. Presencia del director.'),
 ]
 
-T = [
- ('Cine en Movimiento: Plano Secuencia', 'Mauricio Casilimas', '2026-09-19', '15:00',
-  'Secretaría de Cultura de Palogrande', '30 cupos'),
- ('Escribir con la cámara: del guion a la puesta en escena', 'Andrés Buitrago',
-  '2026-09-22', '09:00', '', 'sede sin declarar'),
- ('Poniéndole voz a tu historia silenciada', 'Diana Arias', '2026-09-23', '14:00',
-  'Hall Secretaría de la Mujer y Equidad de Género', '20 cupos'),
- ('Animación de fotografías "de cero a cien" con IA', 'Fabián Amador Salazar',
-  '2026-09-24', '17:00', 'Secretaría de Cultura de Palogrande', '30 cupos'),
-]
+# LA FRANJA ACADÉMICA YA NO SE TRANSCRIBE AQUÍ. Estaban estos cuatro talleres,
+# leídos a ojo de /talleresficma17/ el 15 sep, con una nota pendiente: «el 11 sep
+# esa página listaba seis y el 13 devolvió cuatro — volver a mirar». Hoy la lee
+# `ficma-2026-franja-web.py` y son ONCE, con hora de cierre, cupo, inscripción y
+# sinopsis. Dos copias del mismo hecho divergen siempre; la que se re-corre gana.
 
 # Las dos obras que en agosto NO estaban. La sinopsis es la que publica el
 # propio festival —fuente más fuerte que TMDB para una obra de 2026 que casi no
@@ -94,17 +89,13 @@ fun = [{'titulo': t, 'director': d, 'dia': dia, 'hora': h, 'sede': s,
 for x in fun:
     if x['titulo'] in FICHA_NUEVA:
         x.update(FICHA_NUEVA[x['titulo']])
-fun += [{'titulo': t, 'tallerista': d, 'dia': dia, 'hora': h, 'sede': s,
-         'tipo': 'taller', 'acceso': 'Entrada libre', '_cupos': c,
-         '_src': {'url': 'https://laficma.com/talleresficma17/', 'date': '2026-09-15'}}
-        for t, d, dia, h, s, c in T]
 
 out = {
  '_provenance': {
    'fuente': 'laficma.com (/estrenosficma17/ y /talleresficma17/) + Instagram @cinemanizales_ficma, post a post',
    'capturado': '2026-09-15',
    'metodo': 'La web NO tiene parrilla: su menú solo ofrece ESTRENOS y TALLERES. El resto sale de los posts, que desde el 14 sep ya traen la función entera (día · hora · sede · acceso). Los pies se leyeron por embed, completos.',
-   'alcance': f'{len(F)} funciones y {len(T)} talleres publicados. El festival declara «más de 60 proyecciones»: falta la inmensa mayoría.'},
+   'alcance': f'{len(F)} funciones publicadas. El festival declara «más de 60 proyecciones»: falta la inmensa mayoría. La franja académica va aparte, en ficma-2026-franja-web.json.'},
  '_festival': {
    'nombre': 'FICMA — Feria Internacional de Cine de Manizales', 'edicion': 17,
    'titulo_edicion': 'El jardín de las cosas perdidas',
@@ -119,11 +110,11 @@ out = {
  '_abierto': [
    'DOS «aperturas»: «Función apertura» (El príncipe de Nanawa, sáb 19 · 09:00) y «Función Inaugural» (El hogar fue sepultado, sáb 19 · 19:00). Preguntar cuál es cuál.',
    'La home de laficma.com fecha El príncipe de Nanawa el 16 de septiembre; el post dice sábado 19. El 16 es miércoles y cae antes del arranque. Sin resolver.',
-   'El 11 sep la página de talleres listaba SEIS (con Franco Lolli e Isabella Vega) y el 13 devolvió cuatro. No se afirma que se cayeran: puede ser lectura incompleta. Volver a mirar esa página.',
+   'La página de talleres se volvió a leer el 17 sep, ya con parser: son ONCE actividades (ficma-2026-franja-web.json). El taller de Franco Lolli sigue anunciado en el párrafo de entrada y NO tiene ficha: preguntar si se cayó.',
    'Proimágenes (ntd=1320) sigue publicando las fechas de agosto.'],
  'funciones': fun}
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = REPO + '/festivals/staging/ficma-2026-reprogramado.json'
 json.dump(out, open(D, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-print(f'{len(F)} funciones + {len(T)} talleres · días {sorted(set(x["dia"] for x in fun))}')
+print(f'{len(F)} funciones · días {sorted(set(x["dia"] for x in fun))}')

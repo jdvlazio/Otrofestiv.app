@@ -271,8 +271,8 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 |---|---|---|---|---|
 | `ticket_url` | string | `^https://` | 6 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
 | `is_free` | boolean | — | 11 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
-| `requires_registration` | boolean | — | 5 fest |  |
-| `registration_url` | string | `^https://` | 2 fest |  |
+| `requires_registration` | boolean | — | 6 fest |  |
+| `registration_url` | string | `^https://` | 3 fest |  |
 | `audience` | string | `press` | 1 fest | Solo cuando la función NO es para el público general. Ausente = público (el caso normal, no se declara). «press» = pase de prensa e industria: la app los OCULTA salvo que el usuario active el filtro. TIFF 2026 trae 247 (audienceType=Press & Market en su endpoint). |
 
 ### Todo lo demás
@@ -294,7 +294,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `synopsis_lang` | string | `es` · `en` · `pt` | 19 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
 | `rating` | string | — | 2 fest |  |
 | `premiere` | string | — | 4 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
-| `type` | string | `film` · `event` · `short` | 15 fest |  |
+| `type` | string | `film` · `event` · `short` | 16 fest |  |
 | `event_kind` | string | — | 9 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
 | `is_cortos` | boolean | — | 18 fest | exige `film_list` Programa curado: exige film_list no vacío. |
 | `film_list` | array | — | 17 fest |  |
