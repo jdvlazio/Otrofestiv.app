@@ -299,7 +299,7 @@
    "type": "event",
    "event_kind": "taller",
    "requires_registration": true,
-   "registration_url": "https://linktr.ee/ficma",
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScQwx4mCGbX-JGI9Y6Tranmsa1C-yet1ZDFwF8MjxcoPBUraQ/viewform",
    "_cupos": 30
   },
   {
@@ -414,7 +414,7 @@
    "type": "event",
    "event_kind": "taller",
    "requires_registration": true,
-   "registration_url": "https://linktr.ee/ficma"
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScQwx4mCGbX-JGI9Y6Tranmsa1C-yet1ZDFwF8MjxcoPBUraQ/viewform"
   },
   {
    "title": "Manizales City",
@@ -597,7 +597,7 @@
    "type": "event",
    "event_kind": "taller",
    "requires_registration": true,
-   "registration_url": "https://linktr.ee/ficma"
+   "registration_url": "https://forms.gle/Ac4Nfqqkgj3U9diF9"
   },
   {
    "title": "El juego de la vida",
@@ -735,7 +735,7 @@
    "type": "event",
    "event_kind": "taller",
    "requires_registration": true,
-   "registration_url": "https://linktr.ee/ficma",
+   "registration_url": "https://forms.gle/ouUyFzHZRfWjPxBN8",
    "_cupos": 20
   },
   {
@@ -778,7 +778,7 @@
    "type": "event",
    "event_kind": "taller",
    "requires_registration": true,
-   "registration_url": "https://linktr.ee/ficma",
+   "registration_url": "https://forms.gle/ffot3bKxNdFWQkwt9",
    "_cupos": 30
   },
   {
@@ -804,7 +804,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-17T05:50:09",
+  "fecha": "2026-09-17T06:26:19",
   "plan_sha": "1eaf0d860353ec1e",
   "paso": 4,
   "cmd": "python3 pipeline/ficma-2026-septiembre.py"

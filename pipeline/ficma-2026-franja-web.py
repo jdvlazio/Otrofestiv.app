@@ -33,6 +33,7 @@ heurística silenciosa: cada una queda escrita con lo que dice la página, lo qu
 se publica y por qué.
 
 Lee   https://laficma.com/talleresficma17/   (cacheada en fuentes/ficma-2026/)
+      https://linktr.ee/ficma                (un formulario de inscripción por taller)
 Esc.  festivals/staging/ficma-2026-franja-web.json
 """
 import html as _html
@@ -59,10 +60,15 @@ ETIQUETAS = {'DIRECTOR': 'tallerista', 'DIRECTORA': 'tallerista',
 
 # El festival escribe la inscripción UNA vez, arriba de todo: «INSCRIPCIÓN A
 # TALLERES https://linktr.ee/ficma». No es una suposición nuestra que los
-# talleres se inscriban: está dicho, y es el único enlace que la página da hoy.
-# (Los formularios sueltos de agosto que guardaba el parser del PDF apuntan a
-# unas fechas que ya no existen: no se reusan.)
+# talleres se inscriban: está dicho.
+#
+# Y ese linktree NO es solo un enlace: tiene UN FORMULARIO POR TALLER, con el
+# título del taller en el rótulo del botón. Mandar a todo el mundo al índice
+# cuando el festival publicó el formulario exacto es perder el dato que más
+# sirve — el que evita que alguien llegue sin cupo. Se leen de ahí y se cruzan
+# por título; el índice queda de respaldo para el que no aparezca.
 INSCRIPCION = 'https://linktr.ee/ficma'
+FORMULARIOS = ('forms.gle', 'docs.google.com')
 
 # ERRATAS DEL HORARIO PUBLICADO. Clave = el texto tal cual está en la página.
 # valor = (hora inicio, duración en minutos o None, por qué).
@@ -160,6 +166,51 @@ def dia_de(linea):
     return f'2026-09-{d:02d}' if d and int(m.group(2)) == d else ''
 
 
+def inscripciones(path):
+    """[(rótulo del botón, url)] del linktree, solo los formularios.
+
+    El linktree trae además una pila de enlaces de publicidad que Linktree
+    misma inyecta (Hulu, HelloFresh, vitaminas…). Se filtran por DESTINO, no
+    por posición: lo que apunta a un formulario de Google es del festival."""
+    s = open(path, encoding='utf-8', errors='replace').read()
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', s, re.S)
+    if not m:
+        return []
+    vistos, out = set(), []
+    def walk(o):
+        if isinstance(o, dict):
+            t, u = o.get('title'), o.get('url')
+            if (isinstance(t, str) and isinstance(u, str)
+                    and any(d in u for d in FORMULARIOS) and u not in vistos):
+                vistos.add(u)
+                out.append((t, u))
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    walk(json.loads(m.group(1)))
+    return out
+
+
+def formulario_de(titulo, enlaces):
+    """El formulario cuyo rótulo NOMBRA este taller.
+
+    El rótulo lo escribe el festival a mano y no coincide palabra por palabra
+    («Inscripción Taller Periodismo cultural» vs «Taller de Periodismo
+    Cultural»), así que se cruza por palabras largas: todas las del título
+    tienen que estar en el rótulo. Un botón puede nombrar DOS talleres —el
+    festival los plantea como alternativa y comparten formulario— y por eso se
+    devuelve el primero que case, no el único."""
+    pal = {p for p in lib.norm(titulo).split() if len(p) > 3}
+    if len(pal) < 3:
+        return ''
+    for rotulo_boton, url in enlaces:
+        if pal <= set(lib.norm(rotulo_boton).split()):
+            return url
+    return ''
+
+
 def rotulo(img, cache_img):
     """TALLERES o CHARLAS, leído de la lámina. '' si la imagen no lo trae."""
     if not img:
@@ -176,6 +227,7 @@ def rotulo(img, cache_img):
 def main():
     pagina = bajar(URL, 'talleresficma17.html')
     crudos = bloques(pagina)
+    enlaces = inscripciones(bajar(INSCRIPCION, 'linktree.html'))
 
     # Las láminas, para el rótulo. Se bajan una vez y el OCR se cachea por hash.
     rutas = {}
@@ -253,7 +305,7 @@ def main():
         a.update(lib.acceso_campos(cupos))
         if a['tipo'] == 'taller':
             a['requires_registration'] = True
-            a['registration_url'] = INSCRIPCION
+            a['registration_url'] = formulario_de(a['titulo'], enlaces) or INSCRIPCION
         a['acceso'] = cupos or 'Entrada libre'
 
         # La hoja de vida del invitado NO es la sinopsis de la actividad. Casi
@@ -290,7 +342,10 @@ def main():
               ensure_ascii=False, indent=1)
 
     t = sum(1 for a in acts if a['tipo'] == 'taller')
-    print(f'{len(acts)} actividades · {t} talleres · {len(acts) - t} charlas')
+    propio = sum(1 for a in acts if a.get('registration_url', '').startswith(
+        ('https://forms.gle', 'https://docs.google.com')))
+    print(f'{len(acts)} actividades · {t} talleres · {len(acts) - t} charlas · '
+          f'{propio}/{t} con formulario propio (de {len(enlaces)} en el linktree)')
     for a in acts:
         print(f"  {a['dia'][-2:]} {a['hora'] or '  ?  '} "
               f"{(str(a['duracion_min']) + 'm').rjust(5) if a['duracion_min'] else '    ?'} "
