@@ -6,6 +6,9 @@
   "alcance": "SOLO la Selección Oficial en competencia. NO hay una sola función con día, hora ni sede: a 6 días del arranque el festival no ha publicado parrilla.",
   "versales": {
    "Sylwia Szkiłądź": "la fuente lo escribe «Sylwia SZKIŁĄDŹ»"
+  },
+  "titulo_corregido": {
+   "Withch and Frog": "Witch and Frog"
   }
  },
  "_festival": {
@@ -84,14 +87,15 @@
  },
  "obras": [
   {
-   "titulo": "Withch and Frog",
+   "titulo": "Witch and Frog",
    "director": "Anastasia Provotorova",
    "seccion": "Selección Oficial",
    "categoria": "Mejor Cortometraje YoungFilm",
    "_src": {
     "url": "https://www.instagram.com/festivalvilladelcine/reel/Dc9eZuGzzNZ/",
     "date": "2026-09-06"
-   }
+   },
+   "_titulo_publicado": "Withch and Frog"
   },
   {
    "titulo": "Tiro Libre",

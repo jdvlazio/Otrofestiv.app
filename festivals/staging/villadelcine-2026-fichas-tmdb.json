@@ -1,0 +1,386 @@
+{
+ "_provenance": {
+  "fuente": "TMDB (api.themoviedb.org) + Letterboxd por el redirect /tmdb/<id>",
+  "capturado": "2026-09-17",
+  "que_aporta": "año, duración, país, género, sinopsis, póster y lbSlug de los cortos de la Selección Oficial que TMDB tiene",
+  "candado": "lib.ficha_tmdb — director ✓ SIEMPRE; en un festival de cortos el título solo no distingue nada («Solo», «Human», «Far»)",
+  "alcance": "15 de 53 cortos con ficha; los demás no están en TMDB y su dato hay que pedírselo al festival"
+ },
+ "fichas": {
+  "Witch and Frog": {
+   "tmdb_id": 1772239,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "duracion_min": 2,
+   "sinopsis": "Una aspirante a bruja quiere aprender magia y decide estudiar con una hechicera experimentada. Se presenta en su casa, pero las cosas no salen exactamente como esperaba.",
+   "lbSlug": "witch-and-frog"
+  },
+  "La Presencia de Blanco": {
+   "tmdb_id": 1753870,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2026,
+   "duracion_min": 9,
+   "genero": "Terror",
+   "sinopsis_en": "In a forgotten town, legend comes to life after dark. Four children face the mystery of “The White Presence,” a ghost that haunts the rural school.",
+   "pais": "Colombia",
+   "flags": "🇨🇴",
+   "poster": "/assets/villadelcine-2026/la-presencia-de-blanco.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "la-presencia-de-blanco"
+  },
+  "A body without a horse?": {
+   "tmdb_id": 1659047,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2025,
+   "duracion_min": 9,
+   "genero": "Fantasía",
+   "sinopsis_en": "Trying to understand what a body without a horse is by seeing what it’s capable of, the film shows a very present absence. With minimalist and handcrafted visuals, we follow the body as it performs a series of actions, yet remaining horseless. Playing with choreographic movements, language and its metaphors, the film explores how absence can shape the way we move, desire, forget and remember.",
+   "pais": "Brazil",
+   "flags": "🇧🇷",
+   "poster": "/assets/villadelcine-2026/a-body-without-a-horse.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "a-body-without-a-horse"
+  },
+  "Behind the Door": {
+   "tmdb_id": 1696442,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2026,
+   "genero": "Comedia",
+   "title_en": "Derrière la porte",
+   "pais": "France",
+   "flags": "🇫🇷",
+   "poster": "/assets/villadelcine-2026/behind-the-door.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "derriere-la-porte-2026"
+  },
+  "Vía Crucis": {
+   "tmdb_id": 1697484,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "duracion_min": 3,
+   "sinopsis_en": "Veal desires that are condemned deep within us.",
+   "title_en": "Via Crusis",
+   "poster": "/assets/villadelcine-2026/via-crucis.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "via-crusis"
+  },
+  "I Don’t Know What to Do": {
+   "tmdb_id": 1560415,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2025,
+   "duracion_min": 5,
+   "genero": "Animación",
+   "sinopsis_en": "A young girl named Lizzie spends an afternoon playing with a lizard she found in her garden. An accident occurs, and the lizard is hurt. Filled with sadness, Lizzie gently buries the lizard and places a flower on its grave, highlighting her tenderness and the fleeting nature of life.",
+   "pais": "Spain",
+   "flags": "🇪🇸",
+   "poster": "/assets/villadelcine-2026/i-don-t-know-what-to-do.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "i-dont-know-what-to-do"
+  },
+  "TV Entreaberta": {
+   "tmdb_id": 1661195,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2026,
+   "duracion_min": 9,
+   "genero": "Animación",
+   "sinopsis_en": "A woman is abducted into her TV, where she is tormented by a caricatured American presenter. Moving through various television genres, the character is gradually assimilated into the system.",
+   "pais": "Brazil",
+   "flags": "🇧🇷",
+   "poster": "/assets/villadelcine-2026/tv-entreaberta.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "tv-entreaberta"
+  },
+  "Tuktu, Padre Maíz": {
+   "tmdb_id": 1592955,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2025,
+   "duracion_min": 13,
+   "genero": "Animación",
+   "sinopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+   "title_en": "Tuktu, Father Maize",
+   "pais": "Colombia",
+   "flags": "🇨🇴",
+   "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "tuktu-father-maize"
+  },
+  "Sukua": {
+   "tmdb_id": 1456197,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2025,
+   "duracion_min": 16,
+   "sinopsis_en": "When a Kogui child is given a water pistol as a toy, he begins to explore the familiar spaces of his territory with a new look. Sukua fluidly travels through the exterior and interior of his home and some remnants of the community that are manifested around the child's playful sweetness. The strangeness of the toy adds, at the same time, childish tenderness and noisy tension by its contrast with the environment and by the suggested violence that morally affects the father.",
+   "pais": "Colombia",
+   "flags": "🇨🇴",
+   "poster": "/assets/villadelcine-2026/sukua.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "sukua"
+  },
+  "Que el cielo nos perdone": {
+   "tmdb_id": 1565878,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2025,
+   "genero": "Terror",
+   "pais": "Colombia",
+   "flags": "🇨🇴",
+   "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "que-el-cielo-nos-perdone"
+  },
+  "La Independencia": {
+   "tmdb_id": 1595081,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2025,
+   "duracion_min": 19,
+   "genero": "Drama",
+   "sinopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+   "title_en": "Independence",
+   "pais": "Colombia",
+   "flags": "🇨🇴",
+   "lbSlug": "independence-2025"
+  },
+  "Autokar": {
+   "tmdb_id": 1405315,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2025,
+   "duracion_min": 18,
+   "genero": "Animación",
+   "sinopsis": "En los años 90, una niña de 8 años llamada Agata deja Polonia para mudarse a Bélgica. Su viaje transforma la dura realidad de la migración en una emocionante aventura de autodescubrimiento.",
+   "sinopsis_en": "In the 1990s, eight-year-old Agata leaves her Polish homeland to take a bus to Belgium by herself. Anxious about the journey, she begins to write a letter to her father who has stayed behind in Poland. When she drops her pencil and it rolls away, Agata is forced to overcome her shyness. Searching for it, she weaves her way between the rows of seats and plunges into a fantastical world inhabited by strange half-human, half-animal passengers. Agata’s perceptions transform the reality of migration into an imaginative experience of initiation.",
+   "pais": "Belgium",
+   "flags": "🇧🇪",
+   "poster": "/assets/villadelcine-2026/autokar.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "autokar"
+  },
+  "Le Jeune Sofiane": {
+   "tmdb_id": 1745500,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "sinopsis_en": "After the sudden death of her son, a grieving mother begins to question the circumstances surrounding the tragedy.",
+   "poster": "/assets/villadelcine-2026/le-jeune-sofiane.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "le-jeune-sofiane"
+  },
+  "Una Torreta en Llamas": {
+   "tmdb_id": 1363835,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2025,
+   "duracion_min": 22,
+   "genero": "Drama",
+   "sinopsis_en": "After a violent confrontation, a wounded soldier is rescued by Yolanda, an elderly farmer, and her granddaughter Alejandra. The two live on a ranch in the middle of the mountains, where they hide the young man. While Yolanda decides whether they should help him, putting their own lives at risk, Alejandra will try to confirm her own suspicions.",
+   "title_en": "A Burning Turret",
+   "pais": "Mexico",
+   "flags": "🇲🇽",
+   "poster": "/assets/villadelcine-2026/una-torreta-en-llamas.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "a-burning-turret"
+  },
+  "Alivios": {
+   "tmdb_id": 1469210,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2025,
+   "duracion_min": 19,
+   "genero": "Drama",
+   "sinopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+   "title_en": "Reliefs",
+   "pais": "Mexico",
+   "flags": "🇲🇽",
+   "poster": "/assets/villadelcine-2026/alivios.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "reliefs-2025"
+  }
+ },
+ "sin_ficha": [
+  {
+   "titulo": "Tiro Libre",
+   "director": "Inti Deus",
+   "categoria": "Mejor Cortometraje YoungFilm"
+  },
+  {
+   "titulo": "Sun Coffee",
+   "director": "Zoé Filloux",
+   "categoria": "Mejor Cortometraje YoungFilm"
+  },
+  {
+   "titulo": "La Silla",
+   "director": "Clara García",
+   "categoria": "Mejor Cortometraje YoungFilm"
+  },
+  {
+   "titulo": "Far",
+   "director": "We Are Central Asia Collective",
+   "categoria": "Mejor Cortometraje YoungFilm"
+  },
+  {
+   "titulo": "Sua y Sie: Guardianes de la vida",
+   "director": "Johanna Cortés",
+   "categoria": "Mejor Cortometraje Escolar"
+  },
+  {
+   "titulo": "Solo",
+   "director": "Agustina Lecaros",
+   "categoria": "Mejor Cortometraje Escolar"
+  },
+  {
+   "titulo": "Manos Rojas",
+   "director": "Julián Monroy",
+   "categoria": "Mejor Cortometraje Escolar"
+  },
+  {
+   "titulo": "In Between",
+   "director": "Carlos Andrés Paniagua",
+   "categoria": "Mejor Cortometraje Escolar"
+  },
+  {
+   "titulo": "Prompt Zero",
+   "director": "Tomás Etter Gómez",
+   "categoria": "Mejor Cortometraje IA"
+  },
+  {
+   "titulo": "Catatumbo: House of Thunder, Memory, and Dignity",
+   "director": "Jhonattan Sarmiento",
+   "categoria": "Mejor Cortometraje IA"
+  },
+  {
+   "titulo": "Lens",
+   "director": "Eduardo Rodriguez",
+   "categoria": "Mejor Cortometraje IA"
+  },
+  {
+   "titulo": "They Call It Sausage",
+   "director": "Timm Osterhold",
+   "categoria": "Mejor Cortometraje IA"
+  },
+  {
+   "titulo": "Life is a Chessboard; Every Move is Final",
+   "director": "Wang Zhi-Zhong",
+   "categoria": "Mejor Cortometraje IA"
+  },
+  {
+   "titulo": "No se fía, ni aunque lloren",
+   "director": "Natalia Hernández Sánchez",
+   "categoria": "Mejor Cortometraje con Celular"
+  },
+  {
+   "titulo": "La Última Historia",
+   "director": "Eberto Manotas y Mauro Andrade",
+   "categoria": "Mejor Cortometraje con Celular"
+  },
+  {
+   "titulo": "Maleza",
+   "director": "Nicolle Estrada Díaz y Marcela Palacio Montoya",
+   "categoria": "Mejor Cortometraje con Celular"
+  },
+  {
+   "titulo": "Ventajas y desventaja de soñar despierto",
+   "director": "Lorena López",
+   "categoria": "Mejor Cortometraje con Celular"
+  },
+  {
+   "titulo": "Ánima de Marea",
+   "director": "Laury T. Herrera",
+   "categoria": "Mejor Cortometraje Vertical"
+  },
+  {
+   "titulo": "Nahuales",
+   "director": "Alejandro Cervantes",
+   "categoria": "Mejor Cortometraje Vertical"
+  },
+  {
+   "titulo": "4 Minutes",
+   "director": "Rogerio Troiani",
+   "categoria": "Mejor Cortometraje Vertical"
+  },
+  {
+   "titulo": "Shorts",
+   "director": "Daniel Baena Pacheco",
+   "categoria": "Mejor Cortometraje Vertical"
+  },
+  {
+   "titulo": "Floppy the Robot – El último contacto",
+   "director": "Jacobo Rendón",
+   "categoria": "Mejor VR"
+  },
+  {
+   "titulo": "Human",
+   "director": "Debora Bergamini",
+   "categoria": "Mejor VR"
+  },
+  {
+   "titulo": "Protecting Our Territory",
+   "director": "Christopher Boulton",
+   "categoria": "Mejor VR"
+  },
+  {
+   "titulo": "Después de tanto amor",
+   "director": "Mercedes Oviedo",
+   "categoria": "Mejor Videoclip"
+  },
+  {
+   "titulo": "Mucho gusto",
+   "director": "Cintia Obando",
+   "categoria": "Mejor Videoclip"
+  },
+  {
+   "titulo": "A pesar de mí",
+   "director": "Thomas Mejía Lozano",
+   "categoria": "Mejor Videoclip"
+  },
+  {
+   "titulo": "Benditos los viejos",
+   "director": "Camilo Duque Zuluaga y Santiago Rubio López",
+   "categoria": "Mejor Videoclip"
+  },
+  {
+   "titulo": "Aguapanela",
+   "director": "Juan José Narváez",
+   "categoria": "Mejor Videoclip"
+  },
+  {
+   "titulo": "1 paseo por la ciudad",
+   "director": "Sara Coello Coello y Alejandro Acuña Sevilla",
+   "categoria": "Mejor Cortometraje Apasionado"
+  },
+  {
+   "titulo": "La Sombrilla de Mamá",
+   "director": "Mateo Forero",
+   "categoria": "Mejor Cortometraje Apasionado"
+  },
+  {
+   "titulo": "Grief",
+   "director": "Nicolas Patiño Hortua y Andrés Santiago Cely Orjuela",
+   "categoria": "Mejor Cortometraje Apasionado"
+  },
+  {
+   "titulo": "Lost Fragments of a Seizure",
+   "director": "Michael Martinez",
+   "categoria": "Mejor Cortometraje Apasionado"
+  },
+  {
+   "titulo": "Beyond the End",
+   "director": "Sara Sangiorgio",
+   "categoria": "International Universities"
+  },
+  {
+   "titulo": "Final Act",
+   "director": "Babi Astolfi y Lisa Soares",
+   "categoria": "International Universities"
+  },
+  {
+   "titulo": "Memorias del Alba",
+   "director": "Aldair Acosta",
+   "categoria": "International Universities"
+  },
+  {
+   "titulo": "No es el Fin del Mundo",
+   "director": "Sebastián Florez",
+   "categoria": "Cortometraje Nacional"
+  },
+  {
+   "titulo": "On Hold",
+   "director": "Krishna Kumar Shukla",
+   "categoria": "Mejor Corto Internacional"
+  }
+ ],
+ "en_duda": {
+  "Grief": "los mismos directores firman «Desarraigo» (TMDB 1510204, Colombia 2026, 15 min). ¿Es la misma obra?"
+ }
+}
