@@ -84,6 +84,12 @@ CATS = [
    ('Alivios', 'Juan Manuel Gonzalez Fernandez')]),
 ]
 
+# EL TÍTULO QUE EL FESTIVAL ESCRIBIÓ MAL. «Withch» no es una grafía: es una
+# errata del pie. La obra se llama «Witch and Frog» —así la registra su propia
+# directora, Anastasia Provotorova, en TMDB (1772239)— y con la errata no la
+# encuentra nadie, ni nosotros ni quien la busque en la app.
+TITULO_OFICIAL = {'Withch and Frog': 'Witch and Frog'}
+
 # El festival escribe algunos apellidos en VERSALES («Sylwia SZKIŁĄDŹ»), que es
 # una convención de créditos, no la forma del nombre. Se escribe como se escribe
 # un nombre; queda dicho acá para que no parezca una transcripción descuidada.
@@ -94,9 +100,12 @@ cats = {}
 for nombre, sc, fecha, lista in CATS:
     cats[nombre] = {'reel': BASE + sc + '/', 'publicado': fecha, 'obras': len(lista)}
     for t, d in lista:
-        obras.append({'titulo': t, 'director': d, 'seccion': 'Selección Oficial',
-                      'categoria': nombre,
-                      '_src': {'url': BASE + sc + '/', 'date': fecha}})
+        o = {'titulo': TITULO_OFICIAL.get(t, t), 'director': d,
+             'seccion': 'Selección Oficial', 'categoria': nombre,
+             '_src': {'url': BASE + sc + '/', 'date': fecha}}
+        if t in TITULO_OFICIAL:
+            o['_titulo_publicado'] = t
+        obras.append(o)
 
 out = {
  '_provenance': {
@@ -104,7 +113,8 @@ out = {
    'capturado': '2026-09-17',
    'metodo': 'TRANSCRIPCIÓN DEL PIE, no lectura de lámina: este festival escribe «🎬 Título – Dir. Nombre» en el texto del post. El pie se leyó por el embed, entero, sin truncar. No hizo falta la doble lectura que sí exigió Jardín.',
    'alcance': 'SOLO la Selección Oficial en competencia. NO hay una sola función con día, hora ni sede: a 6 días del arranque el festival no ha publicado parrilla.',
-   'versales': VERSALES},
+   'versales': VERSALES,
+   'titulo_corregido': TITULO_OFICIAL},
  '_festival': {
    'nombre': 'Festival Villa del Cine', 'edicion': 12,
    'ciudad': 'Villa de Leyva, Boyacá',
