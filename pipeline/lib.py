@@ -154,6 +154,59 @@ def ficha_verifica(pdf, det, tol_anio=1, tol_dur=3):
     return bool(d_ok and (a_ok or r_ok))
 
 
+def ficha_tmdb(obra, key, paginas=6):
+    """La ficha de TMDB de esta obra, verificada, o None.
+
+    Devuelve (det, det_en, `como`), donde `como` dice con qué se verificó —eso
+    se escribe en el sidecar y es lo que se audita después—.
+
+    DOS CAMINOS, y el segundo existe porque la fuente puede estar incompleta:
+
+      · Si las DOS partes publican año o duración, decide `ficha_verifica`:
+        director ✓ Y (año ±1 O duración ±3). Es el candado de siempre.
+      · Si no hay con qué contrastar —el caso del estreno reciente, que TMDB
+        registra sin fecha ni duración, y el del corto de festival, que nadie
+        fecha—, decide el TÍTULO IDÉNTICO (normalizado) más el director.
+
+    El director se verifica SIEMPRE, en los dos caminos. Esa es la lección
+    Tribeca: lo que no verifica no entra. Lo que cambia acá es que «la fuente no
+    publica año» deje de significar lo mismo que «no casa»."""
+    titulo = obra.get('titulo') or obra.get('title') or ''
+    director = obra.get('director', '')
+    for lang in ('es-ES', 'en-US'):
+        res = tmdb_get('/search/movie', key, query=titulo, language=lang,
+                       include_adult='false')
+        for c in (res.get('results') or [])[:paginas]:
+            det = tmdb_get(f"/movie/{c['id']}", key, language='es-ES',
+                           append_to_response='credits')
+            det_en = tmdb_get(f"/movie/{c['id']}", key, language='en-US',
+                              append_to_response='credits')
+            # los créditos en-US vienen romanizados: sin ellos hay directores
+            # que no casan nunca
+            det.setdefault('credits', {}).setdefault('crew', []).extend(
+                det_en.get('credits', {}).get('crew', []))
+            dirs = [p['name'] for p in det['credits']['crew']
+                    if p.get('job') == 'Director']
+            if not director_coincide(director, dirs):
+                continue
+            if not (norm(det.get('title') or '') == norm(titulo)
+                    or norm(det.get('original_title') or '') == norm(titulo)
+                    or norm(det_en.get('title') or '') == norm(titulo)):
+                continue
+            anio = int((det.get('release_date') or '0')[:4] or 0)
+            dur = det.get('runtime') or 0
+            nuestro = {'director': director, 'anio': obra.get('anio'),
+                       'duracion_min': obra.get('duracion_min')}
+            if (anio or dur) and (nuestro['anio'] or nuestro['duracion_min']):
+                if not ficha_verifica(nuestro, det):
+                    continue
+                return det, det_en, (f'director ✓ + año/duración '
+                                     f'(TMDB: {anio or "?"}, {dur or "?"} min)')
+            return det, det_en, ('director ✓ + título idéntico; no hay año ni '
+                                 'duración en ambos lados con qué contrastar')
+    return None
+
+
 # ── sedes ────────────────────────────────────────────────────────────────────
 def sede_sala(nombre, tabla):
     """Aplica la tabla canónica sede→(sede, sala) de cada festival. La tabla es

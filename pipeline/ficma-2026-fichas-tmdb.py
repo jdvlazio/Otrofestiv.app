@@ -10,19 +10,9 @@ estaban en agosto— entran sin póster, sin género y sin botón de Letterboxd.
 Esto las busca en TMDB y rellena SOLO lo que falta; nunca pisa la ficha vieja,
 donde viven correcciones hechas a mano.
 
-EL CANDADO, Y POR QUÉ ES DISTINTO. `lib.ficha_verifica` exige director ✓ MÁS
-año (±1) o duración (±3 min). Para un documental colombiano de 2026 recién
-estrenado, TMDB suele tener la ficha con el título y el director y **sin fecha
-de estreno ni duración**: el candado no puede abrirse y la obra se queda sin
-nada, aunque la ficha sea evidentemente la suya. Acá se acepta un segundo
-camino, más estrecho y declarado en el sidecar obra por obra:
-
-    título IDÉNTICO (normalizado) + director ✓  →  válido solo si TMDB no
-    publica ni año ni duración con qué contrastar.
-
-Si TMDB SÍ los publica, manda el candado de siempre. La lección Tribeca sigue
-en pie: lo que no verifica, no entra — pero «no verifica» no puede significar
-«la fuente está incompleta».
+EL CANDADO vive en `lib.ficha_tmdb`, que es de donde lo toma también Villa del
+Cine: director ✓ SIEMPRE, y año/duración cuando las dos partes los publican.
+Cada ficha guarda en `_verificado` con qué se comprobó.
 
 Lee   festivals/staging/ficma-2026-reprogramado.json   (qué obras hay)
       festivals/staging/ficma-2026-catalogo-agosto.json (qué ya tenía ficha)
@@ -34,7 +24,7 @@ Requiere TMDB_API_KEY en el entorno.
 import json, os, subprocess, sys, time, urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from lib import UA, director_coincide, ficha_verifica, norm, provenance, slug, tmdb_get
+from lib import UA, ficha_tmdb, norm, provenance, slug
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
@@ -56,49 +46,6 @@ def lb_slug(tmdb_id):
                        capture_output=True)
     s = r.stdout.decode().strip()
     return s.rsplit('/film/', 1)[-1].strip('/') if '/film/' in s else ''
-
-
-def busca(obra, key):
-    """La ficha de TMDB de esta obra, o None. El director se verifica SIEMPRE.
-
-    Cuando las dos partes publican año o duración, decide el candado de
-    siempre (`lib.ficha_verifica`). Cuando no hay con qué contrastar —el caso
-    de la obra recién estrenada—, decide el título idéntico. Lo que quede se
-    escribe en `_verificado`, que es donde se audita."""
-    titulo, director = obra['titulo'], obra.get('director', '')
-    for lang in ('es-ES', 'en-US'):
-        res = tmdb_get('/search/movie', key, query=titulo, language=lang,
-                       include_adult='false')
-        for c in (res.get('results') or [])[:6]:
-            det = tmdb_get(f"/movie/{c['id']}", key, language='es-ES',
-                           append_to_response='credits')
-            det_en = tmdb_get(f"/movie/{c['id']}", key, language='en-US',
-                              append_to_response='credits')
-            # los créditos en-US vienen romanizados: sin ellos hay directores
-            # que nunca casan
-            det.setdefault('credits', {}).setdefault('crew', []).extend(
-                det_en.get('credits', {}).get('crew', []))
-            dirs = [p['name'] for p in det['credits']['crew']
-                    if p.get('job') == 'Director']
-            if not director_coincide(director, dirs):
-                continue
-            if not (norm(det.get('title') or '') == norm(titulo)
-                    or norm(det.get('original_title') or '') == norm(titulo)):
-                continue
-            anio = int((det.get('release_date') or '0')[:4] or 0)
-            dur = det.get('runtime') or 0
-            nuestro = {'director': director, 'anio': obra.get('anio'),
-                       'duracion_min': obra.get('duracion_min')}
-            contrastable = (anio or dur) and (nuestro['anio'] or nuestro['duracion_min'])
-            if contrastable:
-                if not ficha_verifica(nuestro, det):
-                    continue
-                como = f'director ✓ + año/duración (TMDB: {anio or "?"}, {dur or "?"} min)'
-            else:
-                como = ('director ✓ + título idéntico; no hay año ni duración '
-                        'en ambos lados con qué contrastar')
-            return det, det_en, como
-    return None
 
 
 def baja_poster(poster_path, titulo):
@@ -147,7 +94,7 @@ def main():
         faltan = [c for c in CAMPOS if not vieja.get(c)]
         if not faltan:
             continue
-        r = busca(obra, key)
+        r = ficha_tmdb(obra, key)
         time.sleep(0.2)
         if not r:
             sin.append(titulo)
