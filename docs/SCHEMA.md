@@ -292,7 +292,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `synopsis_en` | string | — | 17 fest |  |
 | `synopsis_es` | string | — | 2 fest |  |
 | `synopsis_lang` | string | `es` · `en` · `pt` | 19 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
-| `rating` | string | — | 2 fest |  |
+| `rating` | string | — | 3 fest |  |
 | `premiere` | string | — | 4 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
 | `type` | string | `film` · `event` · `short` | 16 fest |  |
 | `event_kind` | string | — | 9 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |

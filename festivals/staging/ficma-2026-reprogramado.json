@@ -1,9 +1,9 @@
 {
  "_provenance": {
   "fuente": "laficma.com (/estrenosficma17/ y /talleresficma17/) + Instagram @cinemanizales_ficma, post a post",
-  "capturado": "2026-09-15",
-  "metodo": "La web NO tiene parrilla: su menú solo ofrece ESTRENOS y TALLERES. El resto sale de los posts, que desde el 14 sep ya traen la función entera (día · hora · sede · acceso). Los pies se leyeron por embed, completos.",
-  "alcance": "9 funciones publicadas. El festival declara «más de 60 proyecciones»: falta la inmensa mayoría. La franja académica va aparte, en ficma-2026-franja-web.json."
+  "capturado": "2026-09-17",
+  "metodo": "La web NO tiene parrilla: su menú solo ofrece ESTRENOS y TALLERES. El resto sale de los posts, que desde el 14 sep ya traen la función entera (día · hora · sede · acceso). Los pies se leyeron EN EL NAVEGADOR, con sesión: el endpoint de embed dejó de devolver el pie y da falso vacío.",
+  "alcance": "15 funciones publicadas. El festival declara «más de 60 proyecciones»: falta la inmensa mayoría. La franja académica va aparte, en ficma-2026-franja-web.json."
  },
  "_festival": {
   "nombre": "FICMA — Feria Internacional de Cine de Manizales",
@@ -35,7 +35,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/cinemanizales_ficma/reel/DdMiQSozvGr/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "El festival lo llama «Función apertura». La home de laficma.com lo fechó el 16 de septiembre —miércoles, y ANTES del arranque declarado—: se registra el 19, que es el que dice el post y que sí es sábado. NO montar sin volver a mirar."
   },
@@ -49,7 +49,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://laficma.com/estrenosficma17/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "Conversatorio con su directora. Entrada libre hasta completar aforo."
   },
@@ -63,7 +63,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://laficma.com/estrenosficma17/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "Conversatorio con su director. Entrada libre hasta completar aforo.",
    "anio": 2026,
@@ -82,7 +82,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/cinemanizales_ficma/p/DdREw9HDXz6/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "Estreno en Manizales, con conversatorio. MISMO pase que «El hogar fue sepultado»: misma sede, mismo día, misma hora — corto + largo."
   },
@@ -96,7 +96,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/cinemanizales_ficma/p/DdSSPXwGle2/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "El festival la llama «Función Inaugural», y a «El príncipe de Nanawa» «Función apertura». Son dos cosas distintas o una errata: PREGUNTAR antes de montar."
   },
@@ -110,7 +110,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/cinemanizales_ficma/p/DdRhWhrkWKe/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "Dos pases: sábado 19 y domingo 20, misma hora y sede.",
    "anio": 2026,
@@ -129,7 +129,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/cinemanizales_ficma/p/DdRhWhrkWKe/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "Segundo pase.",
    "anio": 2026,
@@ -148,23 +148,113 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/cinemanizales_ficma/reel/DdTmOB4FdTP/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "Documental de 1925 restaurado por la Fundación Patrimonio Fílmico Colombiano. Va dentro del Convite Solidario de Misión Comparte, por la reconstrucción tras el sismo."
   },
   {
    "titulo": "El juego de la vida",
    "director": "Mario Andrés Ruiz Zuluaga",
-   "dia": "2026-09-22",
-   "hora": "08:00",
-   "sede": "",
+   "dia": "2026-09-21",
+   "hora": "18:30",
+   "sede": "Auditorio Olimpia – Teatro Los Fundadores",
    "seccion": "Estrenos Cine Colombiano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://laficma.com/estrenosficma17/",
-    "date": "2026-09-15"
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdXc2wiDbNz/",
+    "date": "2026-09-17"
    },
-   "_nota": "Franja con colegios. SEDE SIN DECLARAR. Presencia del director."
+   "_nota": "Presencia de su director."
+  },
+  {
+   "titulo": "El juego de la vida",
+   "director": "Mario Andrés Ruiz Zuluaga",
+   "dia": "2026-09-22",
+   "hora": "08:00",
+   "sede": "Auditorio Olga del Socorro Serna de Quintero – Fundación Batuta Caldas",
+   "seccion": "Estrenos Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdXc2wiDbNz/",
+    "date": "2026-09-17"
+   },
+   "_nota": "Función para colegios, «¡pero todos están invitados!» — el festival la declara abierta."
+  },
+  {
+   "titulo": "Brigitte, Planeta B",
+   "director": "Santiago Posada",
+   "dia": "2026-09-20",
+   "hora": "14:00",
+   "sede": "Sala Olimpia – Teatro Los Fundadores",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdVLn8pFZQV/",
+    "date": "2026-09-17"
+   },
+   "_nota": "Estreno en Manizales."
+  },
+  {
+   "titulo": "Apuntes sobre anomalías y fantasmas",
+   "director": "Rodrigo Dimaté",
+   "dia": "2026-09-20",
+   "hora": "16:00",
+   "sede": "Sala Olimpia – Teatro Los Fundadores",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdUsahVGspB/",
+    "date": "2026-09-17"
+   },
+   "_nota": "Conversatorio con su director. Es una selección de CUATRO cortos de QUO CINE —el festival la anuncia como una sola obra de 72 min y así entra; los cuatro títulos no están publicados.",
+   "anio": 2026,
+   "duracion_min": 72,
+   "pais": "Colombia",
+   "sinopsis": "Una selección de cuatro cortos que reúne diez años de trabajo de QUO CINE en el barrio. Los rincones menos conocidos de Bogotá no son silenciosos: de las montañas, el centro y la periferia surgen las voces que dan forma a este compendio de cuatro partes: una instrucción didáctica de cómo se manejan espantos y ansiedades; el diario de un grupo de creación artística que no registró desilusiones; un relato con moraleja de la vez que un niño probó un cigarrillo; y un día y una vuelta por las calles en las que dicen que no hay que meterse. El manifiesto de QUO CINE que reúne una década en busca de fantasmas, anomalías, risas y encuentros que dejan huella.",
+   "_sinopsis_src": "https://www.instagram.com/cinemanizales_ficma/p/DdUsahVGspB/"
+  },
+  {
+   "titulo": "Habitante",
+   "director": "José Alejandro González",
+   "dia": "2026-09-21",
+   "hora": "08:00",
+   "sede": "Auditorio Olga del Socorro Serna de Quintero – Fundación Batuta Caldas",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdWiX_ukZfO/",
+    "date": "2026-09-17"
+   },
+   "_nota": "Conversatorio con el director. Función para colegios «¡pero abierta a todo el que quiera venir!»."
+  },
+  {
+   "titulo": "La luz por primera vez",
+   "director": "Ibeth Johanna Rey Jerez, Frank Rodríguez Rojas",
+   "dia": "2026-09-21",
+   "hora": "15:00",
+   "sede": "Centro Cultural del Banco de la República",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/reel/DdWtHVTzi--/",
+    "date": "2026-09-17"
+   },
+   "_nota": "Entrada libre hasta completar aforo."
+  },
+  {
+   "titulo": "Dicen que tú y yo estamos locos",
+   "director": "Juan Mauricio Piñeros",
+   "dia": "2026-09-22",
+   "hora": "15:00",
+   "sede": "Centro Cultural del Banco de la República",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/reel/DdXvVyVDXh0/",
+    "date": "2026-09-17"
+   },
+   "_nota": "El post NO trae rótulo de sección —los demás sí, «#FICMA17 – Cine Colombiano»—: se le pone esa, que es la que llevan sus etiquetas (#CineColombiano). Único con clasificación de edad: +12.",
+   "rating": "+12 años"
   }
  ]
 }

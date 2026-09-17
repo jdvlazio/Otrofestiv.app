@@ -78,6 +78,14 @@ SEDES = {
         ('Centro Cultural del Banco de la República', ''),
     'Teatro Los Fundadores – Sala Olimpia':
         ('Teatro los Fundadores', 'Sala Olimpia'),
+    # La misma sala, con las tres formas en que el festival la escribe en sus
+    # posts. «Sala» y «Auditorio» Olimpia son el mismo sitio del mismo teatro.
+    'Sala Olimpia – Teatro Los Fundadores':
+        ('Teatro los Fundadores', 'Sala Olimpia'),
+    'Auditorio Olimpia – Teatro Los Fundadores':
+        ('Teatro los Fundadores', 'Sala Olimpia'),
+    'Auditorio Olga del Socorro Serna de Quintero – Fundación Batuta Caldas':
+        ('Fundación Batuta Caldas', 'Auditorio Olga del Socorro Serna de Quintero'),
     'Casa de la Cultura de Palogrande – Calle externa':
         ('Casa de la Cultura de Palogrande', 'Calle externa'),
     'Confa de la 50 – Auditorio Hernando Aristizábal Botero':
@@ -125,11 +133,25 @@ GEO_NUEVAS = {
     'Confa de la 50': {
         'lat': 5.0625092, 'lng': -75.4989887, '_prec': 'maps',
         '_nota': 'ficha «Confa», Cra 25 Calle 50 esquina. El auditorio Hernando Aristizábal Botero está dentro.'},
+    # En agosto estaba como «Batuta», geocodificada por Nominatim. La ficha de
+    # Maps («Fundación Batuta Caldas - Sede Principal», Cra. 22 #70b-31) cae a
+    # 25 m de aquella: es el mismo edificio, y se toma la de Maps con su
+    # dirección, que es lo que de verdad sirve para llegar.
+    'Fundación Batuta Caldas': {
+        'lat': 5.0508125, 'lng': -75.4828125, '_prec': 'maps',
+        'address': 'Cra. 22 #70b-31',
+        '_nota': 'ficha «Fundación Batuta Caldas - Sede Principal». El auditorio Olga del Socorro Serna de Quintero está dentro.'},
 }
 
 # Conversatorio o presencia del director declarados en el post o en la web.
 CON_QA = {'Soñé su nombre', 'Ayuno y cenizas', 'Que el cielo nos perdone',
-          'El juego de la vida', 'El hogar fue sepultado en esa tierra que nunca pudimos encontrar'}
+          'El juego de la vida', 'El hogar fue sepultado en esa tierra que nunca pudimos encontrar',
+          'Apuntes sobre anomalías y fantasmas', 'Habitante'}
+
+# …y el pase donde NO lo está. El post de «El juego de la vida» anuncia dos
+# pases y pone al director en el del lunes; el del martes es la función con
+# colegios. Marcar los dos sería prometer una charla que nadie anunció.
+SIN_QA_EN = {('El juego de la vida', '2026-09-22')}
 
 
 # el normalizador es el de lib.py: una sola casa para comparar títulos
@@ -262,7 +284,9 @@ def main():
             'section': sec, 'day': fn['dia'], 'time': fn['hora'],
             # índice del día en la grilla, que el contrato exige derivado de `day`
             'day_order': DIAS.index(fn['dia']),
-            'venue': k, 'has_qa': fn['titulo'] in CON_QA,
+            'venue': k,
+            'has_qa': (fn['titulo'] in CON_QA
+                       and (fn['titulo'], fn['dia']) not in SIN_QA_EN),
             # «Todas las actividades son de acceso libre», dicho por el festival
             # en laficma.com. La casilla de acceso no puede quedar muda: lo pide
             # [boleteria-muda] y es de lo primero que mira quien va a ir.
@@ -277,6 +301,8 @@ def main():
                       'synopsis_en', 'synopsis_lang', 'lbSlug', 'title_en'):
             if b.get(campo):
                 item[campo] = b[campo]
+        if fn.get('rating'):
+            item['rating'] = fn['rating']
         if es_evento:
             # `type: 'event'` es lo que la app lee para tratarlo como actividad y
             # no como obra; `event_kind` es la palabra con que se nombra. Las dos

@@ -46,9 +46,38 @@ F = [
  ('Manizales City', 'Félix R. Restrepo', '2026-09-20', '11:30',
   'Parque Ernesto Gutiérrez', 'Cine Clásico Colombiano', IG + 'reel/DdTmOB4FdTP/',
   'Documental de 1925 restaurado por la Fundación Patrimonio Fílmico Colombiano. Va dentro del Convite Solidario de Misión Comparte, por la reconstrucción tras el sismo.'),
+ # Los dos pases de «El juego de la vida» ya tienen sede: el post del 17 sep los
+ # fechó los dos. La web solo traía el de colegios y sin lugar.
+ ('El juego de la vida', 'Mario Andrés Ruiz Zuluaga', '2026-09-21', '18:30',
+  'Auditorio Olimpia – Teatro Los Fundadores', 'Estrenos Cine Colombiano',
+  IG + 'p/DdXc2wiDbNz/', 'Presencia de su director.'),
  ('El juego de la vida', 'Mario Andrés Ruiz Zuluaga', '2026-09-22', '08:00',
-  '', 'Estrenos Cine Colombiano', WEB_E,
-  'Franja con colegios. SEDE SIN DECLARAR. Presencia del director.'),
+  'Auditorio Olga del Socorro Serna de Quintero – Fundación Batuta Caldas',
+  'Estrenos Cine Colombiano', IG + 'p/DdXc2wiDbNz/',
+  'Función para colegios, «¡pero todos están invitados!» — el festival la declara abierta.'),
+
+ # LO QUE EL RADAR (#578) VENÍA DICIENDO Y EL ONBOARDING NO HABÍA LEÍDO. Las dos
+ # primeras las reportó la corrida del 16 sep; las tres siguientes son posts de
+ # ayer y hoy. El festival está soltando una función por post, a diario.
+ ('Brigitte, Planeta B', 'Santiago Posada', '2026-09-20', '14:00',
+  'Sala Olimpia – Teatro Los Fundadores', 'Cine Colombiano',
+  IG + 'p/DdVLn8pFZQV/', 'Estreno en Manizales.'),
+ ('Apuntes sobre anomalías y fantasmas', 'Rodrigo Dimaté', '2026-09-20', '16:00',
+  'Sala Olimpia – Teatro Los Fundadores', 'Cine Colombiano',
+  IG + 'p/DdUsahVGspB/',
+  'Conversatorio con su director. Es una selección de CUATRO cortos de QUO CINE —el festival la anuncia como una sola obra de 72 min y así entra; los cuatro títulos no están publicados.'),
+ ('Habitante', 'José Alejandro González', '2026-09-21', '08:00',
+  'Auditorio Olga del Socorro Serna de Quintero – Fundación Batuta Caldas',
+  'Cine Colombiano', IG + 'p/DdWiX_ukZfO/',
+  'Conversatorio con el director. Función para colegios «¡pero abierta a todo el que quiera venir!».'),
+ ('La luz por primera vez', 'Ibeth Johanna Rey Jerez, Frank Rodríguez Rojas',
+  '2026-09-21', '15:00', 'Centro Cultural del Banco de la República',
+  'Cine Colombiano', IG + 'reel/DdWtHVTzi--/',
+  'Entrada libre hasta completar aforo.'),
+ ('Dicen que tú y yo estamos locos', 'Juan Mauricio Piñeros', '2026-09-22', '15:00',
+  'Centro Cultural del Banco de la República', 'Cine Colombiano',
+  IG + 'reel/DdXvVyVDXh0/',
+  'El post NO trae rótulo de sección —los demás sí, «#FICMA17 – Cine Colombiano»—: se le pone esa, que es la que llevan sus etiquetas (#CineColombiano). Único con clasificación de edad: +12.'),
 ]
 
 # LA FRANJA ACADÉMICA YA NO SE TRANSCRIBE AQUÍ. Estaban estos cuatro talleres,
@@ -80,21 +109,40 @@ FICHA_NUEVA = {
      'llover regresarán al pueblo. Decidida, Shaira emprende la búsqueda de una semilla '
      'especial capaz de hacer llover de nuevo y traer de vuelta a su caballo, Semillas.'),
    '_sinopsis_src': 'https://www.instagram.com/cinemanizales_ficma/p/DdRhWhrkWKe/'},
+ 'Apuntes sobre anomalías y fantasmas': {
+   'anio': 2026, 'duracion_min': 72, 'pais': 'Colombia',
+   'sinopsis': ('Una selección de cuatro cortos que reúne diez años de trabajo de QUO CINE '
+     'en el barrio. Los rincones menos conocidos de Bogotá no son silenciosos: de las '
+     'montañas, el centro y la periferia surgen las voces que dan forma a este compendio de '
+     'cuatro partes: una instrucción didáctica de cómo se manejan espantos y ansiedades; el '
+     'diario de un grupo de creación artística que no registró desilusiones; un relato con '
+     'moraleja de la vez que un niño probó un cigarrillo; y un día y una vuelta por las calles '
+     'en las que dicen que no hay que meterse. El manifiesto de QUO CINE que reúne una década '
+     'en busca de fantasmas, anomalías, risas y encuentros que dejan huella.'),
+   '_sinopsis_src': 'https://www.instagram.com/cinemanizales_ficma/p/DdUsahVGspB/'},
+}
+
+# Lo que el POST dice de esta edición y la ficha de agosto no traía. No es una
+# obra nueva —está en el catálogo—: es un dato que solo publicó ahora.
+DEL_POST = {
+ 'Dicen que tú y yo estamos locos': {'rating': '+12 años'},
 }
 
 fun = [{'titulo': t, 'director': d, 'dia': dia, 'hora': h, 'sede': s,
         'seccion': sec, 'acceso': 'Entrada libre',
-        '_src': {'url': u, 'date': '2026-09-15'}, '_nota': n}
+        '_src': {'url': u, 'date': '2026-09-17'}, '_nota': n}
        for t, d, dia, h, s, sec, u, n in F]
 for x in fun:
     if x['titulo'] in FICHA_NUEVA:
         x.update(FICHA_NUEVA[x['titulo']])
+    if x['titulo'] in DEL_POST:
+        x.update(DEL_POST[x['titulo']])
 
 out = {
  '_provenance': {
    'fuente': 'laficma.com (/estrenosficma17/ y /talleresficma17/) + Instagram @cinemanizales_ficma, post a post',
-   'capturado': '2026-09-15',
-   'metodo': 'La web NO tiene parrilla: su menú solo ofrece ESTRENOS y TALLERES. El resto sale de los posts, que desde el 14 sep ya traen la función entera (día · hora · sede · acceso). Los pies se leyeron por embed, completos.',
+   'capturado': '2026-09-17',
+   'metodo': 'La web NO tiene parrilla: su menú solo ofrece ESTRENOS y TALLERES. El resto sale de los posts, que desde el 14 sep ya traen la función entera (día · hora · sede · acceso). Los pies se leyeron EN EL NAVEGADOR, con sesión: el endpoint de embed dejó de devolver el pie y da falso vacío.',
    'alcance': f'{len(F)} funciones publicadas. El festival declara «más de 60 proyecciones»: falta la inmensa mayoría. La franja académica va aparte, en ficma-2026-franja-web.json.'},
  '_festival': {
    'nombre': 'FICMA — Feria Internacional de Cine de Manizales', 'edicion': 17,
