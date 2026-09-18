@@ -37,6 +37,15 @@ ST = f'{REPO}/festivals/staging'
 ASSETS = f'{REPO}/assets/ficma'
 OUT = f'{ST}/ficma-2026-posters.json'
 
+# EL AFICHE ESTÁ EN SU PROPIA PÁGINA. Cinco obras no tienen imagen en TMDB ni
+# en la web, pero la lámina del programa las lleva impresas: el PDF es la
+# fuente y el recorte, la forma de sacarlas. La caja es la de la plantilla —fija
+# para las fichas de película, otra para la maqueta centrada de las muestras— y
+# cada recorte se midió mirándolo, no a ojo de regla.
+RECORTE = {'ficha': (0.105, 0.265, 0.585, 0.835),
+           'centrada': (0.285, 0.275, 0.715, 0.700)}
+PAG = f'{REPO}/fuentes/ficma-2026/programa-septiembre/pag'
+
 FUENTES = {
     'Ayuno y cenizas': (
         'web', 'https://laficma.com/wp-content/uploads/2026/09/Ayuno.jpg',
@@ -46,6 +55,24 @@ FUENTES = {
         'ig', ('DdUsahVGspB', 1),
         'la lámina 1 del post es el afiche de la obra, con bloque de créditos y '
         'laureles (1080×1440). No tiene ficha en TMDB.'),
+    'La Quimera de Oro': ('pdf', ('p-43.jpg', 'ficha'),
+        'recortado de su página del programa: no está en TMDB'),
+    'Cuando el dolor se nombra: Diálogo abierto y violencia de género': (
+        'pdf', ('p-63.jpg', 'ficha'),
+        'recortado de su página del programa: corto local, no está en TMDB'),
+    'Entrelazados': ('pdf', ('p-70.jpg', 'ficha'),
+        'recortado de su página del programa: estreno local, no está en TMDB'),
+    # LAS DOS MUESTRAS DE CORTOS NO LLEVAN AFICHE Y NO SE LES INVENTA UNO. Su
+    # lámina es de maqueta centrada y lo que hay ahí es el logo del ciclo sobre
+    # papel en blanco: recortarlo daba una tarjeta con media palabra y un sello.
+    # Son PROGRAMAS, no obras —el festival no publica qué cortos van dentro—, y
+    # la app ya sabe pintar una tarjeta sin imagen. Un recorte malo se ve peor
+    # que un hueco, y además haría creer que el afiche es ese.
+}
+SIN_AFICHE = {
+    'Cortos Colombia de película': 'su lámina solo trae el logo del ciclo',
+    'Muestra de Cortometrajes: Realizadores locales y Eje Cafetero':
+        'su lámina solo trae una ilustración del programa, no un afiche',
 }
 
 
@@ -71,10 +98,36 @@ def url_de_lamina(shortcode, i):
     return ''
 
 
+def recorta(pagina, maqueta, titulo):
+    """La caja del afiche dentro de la lámina → assets/ficma/<slug>.jpg."""
+    from PIL import Image
+    src = f'{PAG}/{pagina}'
+    if not os.path.exists(src):
+        return ''
+    im = Image.open(src)
+    W, H = im.size
+    x0, y0, x1, y1 = RECORTE[maqueta]
+    dest = f'{ASSETS}/{slug(titulo)}.jpg'
+    im.crop((int(x0 * W), int(y0 * H), int(x1 * W), int(y1 * H))).save(dest, quality=88)
+    return f'/assets/ficma/{os.path.basename(dest)}'
+
+
 def main():
     os.makedirs(ASSETS, exist_ok=True)
     fichas, fallos = {}, []
     for titulo, (clase, ref, por_que) in FUENTES.items():
+        if clase == 'pdf':
+            ruta = recorta(ref[0], ref[1], titulo)
+            if not ruta:
+                fallos.append(f'{titulo} — falta la página {ref[0]} del PDF '
+                              f'(corré ficma-2026-programa-pdf.py)')
+                continue
+            m = mide(f'{REPO}{ruta}')
+            fichas[titulo] = {'poster': ruta, 'posterSource': 'custom',
+                              '_medida': f'{m[0]}×{m[1]}' if m else '?',
+                              '_de': por_que, '_url': f'{ref[0]} del PDF de programación'}
+            print(f'OK  {titulo[:44]:46} {m[0]}×{m[1]} (recorte)')
+            continue
         url = ref if clase == 'web' else url_de_lamina(*ref)
         if not url:
             fallos.append(f'{titulo} — no se pudo resolver la lámina')
@@ -102,7 +155,7 @@ def main():
         que_aporta='póster de las obras que TMDB no tiene o tiene sin imagen',
         ojo='las URL de Instagram caducan; la lámina se resuelve en cada corrida '
             'desde el shortcode, no se guarda'),
-        'fichas': fichas, 'fallos': fallos},
+        'fichas': fichas, 'fallos': fallos, 'sin_afiche_a_proposito': SIN_AFICHE},
         open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'\n{len(fichas)} pósters · {len(fallos)} fallos')
     if fallos:

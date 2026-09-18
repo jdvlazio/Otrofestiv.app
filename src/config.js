@@ -649,11 +649,16 @@ export const FESTIVAL_CONFIG={
     // propósito: [festival-aplazado] lo busca por texto y un comentario que lo
     // nombre se lee como si el bloque siguiera puesto.)
     //
-    // La programación va INCOMPLETA a propósito. El festival declara «más de 60
-    // proyecciones» y ha publicado once; la parrilla sale post a post en su
-    // Instagram, no en su web. La de agosto NO se pudo remapear —cambian día,
-    // hora y sede—, así que lo que no está anunciado no se publica: una función
-    // en una fecha que nadie declaró es peor que una función ausente.
+    // LA PARRILLA YA ESTÁ COMPLETA. El 18 sep, a un día de abrir, el festival
+    // publicó en su home el PDF de programación: 78 páginas, una por función.
+    // Son 70 funciones más las 11 actividades de la franja académica, que va
+    // aparte (/talleresficma17/). Hasta ese día se armaba post a post desde
+    // Instagram y había once: por eso el histórico de esta entrada habla de una
+    // programación incompleta.
+    //
+    // OJO CON EL AFICHE: `ficma2026.jpg` es el del festival y lleva impreso
+    // «DEL 10 AL 17 DE AGOSTO», las fechas de antes del sismo. El festival no
+    // ha publicado una versión con las nuevas, y no se le inventa una.
     storageKey:'ficma2026_',festivalStartStr:'2026-09-19T00:00:00',festivalEndStr:'2026-09-26T23:59:00',
     festivalDates:{'2026-09-19':'2026-09-19','2026-09-20':'2026-09-20','2026-09-21':'2026-09-21','2026-09-22':'2026-09-22','2026-09-23':'2026-09-23','2026-09-24':'2026-09-24','2026-09-25':'2026-09-25','2026-09-26':'2026-09-26'},
     days:[{k:'2026-09-19',d:19,lbl:'SÁB'},{k:'2026-09-20',d:20,lbl:'DOM'},{k:'2026-09-21',d:21,lbl:'LUN'},{k:'2026-09-22',d:22,lbl:'MAR'},{k:'2026-09-23',d:23,lbl:'MIÉ'},{k:'2026-09-24',d:24,lbl:'JUE'},{k:'2026-09-25',d:25,lbl:'VIE'},{k:'2026-09-26',d:26,lbl:'SÁB'}],

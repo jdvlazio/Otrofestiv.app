@@ -209,13 +209,21 @@ GEO_NUEVAS = {
                  '_nota': 'el barrio, no una dirección: es cine al aire libre'},
     'Barrio La Estrella': {'lat': 5.0773125, 'lng': -75.4873125, '_prec': 'manual',
                            '_nota': 'la misma coordenada que usó la edición de agosto'},
-    # SIN COORDENADA, y dicho: para el Seminario Redentorista Maps da la
-    # dirección pero no una ficha con punto, y los dos últimos son canchas de
-    # barrio que ningún servicio ubica. La DIRECCIÓN sirve más que un pin
-    # inventado a 300 m.
+    # El auditorio está dentro del Colegio Seminario Redentorista. La primera
+    # búsqueda («Auditorio Redentoristas») no daba ficha; con el nombre del
+    # colegio, sí. Ahí van las TRES funciones de clausura del viernes 25.
     'Auditorio Redentoristas': {
-        'address': 'Cra. 19 #61, Colegio Seminario Redentorista',
-        '_nota': 'sin coordenada verificada: Maps tiene la ficha del colegio pero sin punto propio para el auditorio'},
+        'lat': 5.0499375, 'lng': -75.4788125, '_prec': 'maps',
+        'address': 'Cra. 19 #61, Colegio Seminario Redentorista'},
+    # Las dos de cine al aire libre en barrio. El punto es el del SECTOR y no
+    # una puerta: no hay una. Se dice cuál se tomó, porque las dos tenían más
+    # de un candidato.
+    'Barrio La Cumbre': {
+        'lat': 5.06786, 'lng': -75.473166, '_prec': 'nominatim',
+        '_nota': 'el barrio de la comuna Ecoturística Cerro de Oro. Hay otra «La Cumbre» en Río Blanco, 10 km al este: se tomó la urbana, que es donde el festival hace cine al aire libre.'},
+    'Cancha La Isla': {
+        'lat': 5.063179, 'lng': -75.517745, '_prec': 'nominatim',
+        '_nota': 'el punto es el de las escaleras de acceso al barrio La Isla (comuna La Macarena); la cancha está a metros y no tiene ficha propia.'},
 }
 
 # Conversatorio o presencia del director. El PDF lo trae impreso —«PRESENCIA DEL
