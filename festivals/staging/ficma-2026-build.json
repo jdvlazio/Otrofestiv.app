@@ -22,7 +22,6 @@
  "festivalEndStr": "2026-09-26T23:59:00",
  "prioLimit": 4,
  "ticketing_model": "mixed",
- "sharedSlotIsOneScreening": true,
  "festivalDates": {
   "2026-09-19": "2026-09-19",
   "2026-09-20": "2026-09-20",
@@ -491,7 +490,15 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-18)",
-   "_nota": "En alianza con Confa"
+   "_nota": "En alianza con Confa",
+   "tmdb_id": 508439,
+   "genre": "Aventura",
+   "poster": "/assets/ficma/onward.jpg",
+   "posterSource": "tmdb",
+   "synopsis": "Ambientado en un mundo de fantasía suburbana, dos hermanos elfos adolescentes, Ian y Barley Lightfood, se embarcan en una aventura en la que se proponen descubrir si existe aún algo de magia en el mundo que les permita pasar un último día con su padre, que falleció cuando ellos eran aún muy pequeños como para poder recordarlo.",
+   "synopsis_en": "In a suburban fantasy world, two teenage elf brothers embark on an extraordinary quest to discover if there is still a little magic left out there.",
+   "synopsis_lang": "es",
+   "lbSlug": "onward-2020"
   },
   {
    "title": "Soñé su nombre",
@@ -558,10 +565,14 @@
    "is_free": true,
    "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-18)",
    "sala": "Sala Olimpia",
+   "tmdb_id": 1756580,
+   "genre": "Documental",
    "poster": "/assets/ficma/ayuno-y-cenizas.jpg",
    "posterSource": "custom",
    "synopsis": "En medio de las montañas de Bogotá, un grupo aficionado de teatro hace ensayos y lleva a escena la más famosa de todas las obras, Edipo Rey. Sus integrantes son músicos, actores, artistas de barrio y, algunos de ellos, consumidores de bazuco. Los testimonios sobre la droga, la familia y el barrio —voces, manos y rostros, a veces distantes y a veces frágiles—, contrastan con la atmósfera de tambores y luces incandescentes de la creación teatral. En las lomas de la ciudad, Edipo Rey no es una obra antigua, es una pregunta sobre el destino, sobre la posibilidad de tomar el rumbo de la propia vida.",
-   "synopsis_lang": "es"
+   "synopsis_en": "Nestled in the mountains of Bogotá, an amateur theater group rehearses and stages the most famous of all plays, Oedipus Rex. Its members are musicians, actors, local artists, and some of them, users of crack cocaine. Testimonies about drugs, family, and the neighborhood—voices, hands, and faces, sometimes distant, sometimes fragile—contrast with the atmosphere of drums and incandescent lights of the theatrical creation. In the city's hills, Oedipus Rex is not an ancient play; it is a question about destiny, about the possibility of taking control of one's own life.",
+   "synopsis_lang": "es",
+   "lbSlug": "ayuno-y-cenizas"
   },
   {
    "title": "Las aventuras de Tintín",
@@ -605,6 +616,7 @@
    "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-18)",
    "_nota": "En alianza con Cinema Luna",
    "_ficha_heredada_de": "ficdeh-2026.json",
+   "tmdb_id": 1529622,
    "genre": "Drama",
    "poster": "/assets/ficdeh/semillas.jpg",
    "posterSource": "custom",
@@ -662,7 +674,8 @@
    "synopsis": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo.",
    "synopsis_en": "“Those devils took everything from me, those devils took everything from me, those devils took everything from me”: this mantra of dispossession keeps resurfacing in the family, like a verdict. They long to meet their disappeared loved ones again, to play once more among plantain groves and fantastical beings, and… the house… the house wants to be a home again. Through home movies, collective archives, family images and a spectral, mystical presence, the film inhabits the dreams and the nightmares left by the traces of a vanished love. The gunfire seems to have stopped; the war feels distant now, but it left behind a deep grief and the promise of return. Friends, family, home and territory come back, summoned by this choral account. The past is a ghost, and this film speculates on a paradise and a hell that can no longer be touched, hoping to inhabit this new place and conjure an embrace inside it.",
    "synopsis_lang": "es",
-   "lbSlug": "our-home-was-buried-in-a-land-we-could-never"
+   "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+   "title_en": "Our Home Was Buried in a Land We Could Never Find"
   },
   {
    "title": "Un sueño se hace realidad en 1 minuto",
@@ -701,7 +714,16 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-18)",
-   "sala": "Sala Olimpia"
+   "sala": "Sala Olimpia",
+   "tmdb_id": 1300182,
+   "genre": "Comedia",
+   "poster": "/assets/ficma/juanpis-gonzalez-el-presidente-de-la-gente.jpg",
+   "posterSource": "tmdb",
+   "synopsis": "Cuando un snob colombiano mimado se convierte en presidente gracias a su dinero y sus conexiones, descubre que mantenerse en el poder requiere más de lo que esperaba.",
+   "synopsis_en": "When a spoiled Colombian snob becomes president through money and connections, he finds staying in power takes more than he expected.",
+   "synopsis_lang": "es",
+   "lbSlug": "juanpis-gonzalez-the-peoples-president",
+   "title_en": "Juanpis González: The People's President"
   },
   {
    "title": "Memorias de un caracol",
@@ -725,7 +747,8 @@
    "synopsis": "Separada a la fuerza de su hermano gemelo cuando quedan huérfanos, una melancólica inadaptada aprende a encontrar la confianza en sí misma en medio del desorden de las desgracias y la vida cotidiana.",
    "synopsis_en": "Forcibly separated from her twin brother when they are orphaned, a melancholic misfit learns how to find confidence within herself amid the clutter of misfortunes and everyday life.",
    "synopsis_lang": "es",
-   "lbSlug": "memoir-of-a-snail"
+   "lbSlug": "memoir-of-a-snail",
+   "title_en": "Memoir of a Snail"
   },
   {
    "title": "Manizales City",
@@ -767,7 +790,15 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-18)",
-   "_nota": "En alianza con Confa"
+   "_nota": "En alianza con Confa",
+   "tmdb_id": 508439,
+   "genre": "Aventura",
+   "poster": "/assets/ficma/onward.jpg",
+   "posterSource": "tmdb",
+   "synopsis": "Ambientado en un mundo de fantasía suburbana, dos hermanos elfos adolescentes, Ian y Barley Lightfood, se embarcan en una aventura en la que se proponen descubrir si existe aún algo de magia en el mundo que les permita pasar un último día con su padre, que falleció cuando ellos eran aún muy pequeños como para poder recordarlo.",
+   "synopsis_en": "In a suburban fantasy world, two teenage elf brothers embark on an extraordinary quest to discover if there is still a little magic left out there.",
+   "synopsis_lang": "es",
+   "lbSlug": "onward-2020"
   },
   {
    "title": "Brigitte Planeta B",
@@ -860,6 +891,7 @@
    "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-18)",
    "_nota": "En alianza con Cinema Luna",
    "_ficha_heredada_de": "ficdeh-2026.json",
+   "tmdb_id": 1529622,
    "genre": "Drama",
    "poster": "/assets/ficdeh/semillas.jpg",
    "posterSource": "custom",
@@ -1204,6 +1236,7 @@
    "synopsis": "La Biblioteca Pública Luis Ángel Arango es la más grande de Colombia y una de las más importantes de América Latina. Este espacio emblemático de la vida bogotana trasciende su misión tradicional para convertirse en escenario de vida de múltiples personajes, quienes encuentran en sus salas de lectura un refugio, una pausa o una forma de escapar de la realidad que los espera más allá de sus puertas.  La película recoge las historias de algunos de estos “locos”, término con el que suelen ser identificados por otros usuarios e, incluso, por la ciudad misma.",
    "synopsis_en": "The Luis Ángel Arango Public Library is the largest in Colombia and one of the most important in Latin America. This landmark of Bogotá life outgrows its traditional mission to become a stage for many lives: people who find in its reading rooms a refuge, a pause, or a way out of the reality waiting beyond its doors. The film gathers the stories of some of these “locos” — the word other readers, and even the city itself, tend to use for them.",
    "synopsis_lang": "es",
+   "lbSlug": "dicen-que-tu-y-yo-estamos-locos",
    "rating": "+12 años"
   },
   {
@@ -1313,7 +1346,14 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-18)",
-   "sala": "Sala Olimpia"
+   "sala": "Sala Olimpia",
+   "tmdb_id": 1733124,
+   "genre": "Documental",
+   "poster": "/assets/ficma/las-bravas.jpg",
+   "posterSource": "tmdb",
+   "synopsis": "Las Bravas revela cómo un grupo de mujeres hinchas desafía el machismo y reclama su lugar en el corazón de las barras bravas del fútbol colombiano.",
+   "synopsis_lang": "es",
+   "lbSlug": "las-bravas"
   },
   {
    "title": "Buena Vista Social Club",
@@ -1690,7 +1730,16 @@
    "is_free": true,
    "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-18)",
    "_nota": "En alianza con El Festival De Cine Francés",
-   "sala": "Auditorio"
+   "sala": "Auditorio",
+   "tmdb_id": 1294698,
+   "genre": "Crimen",
+   "poster": "/assets/ficma/dossier-137.jpg",
+   "posterSource": "tmdb",
+   "synopsis": "Stéphanie, agente de policía de Asuntos Internos, es asignada a un caso relacionado con un joven gravemente herido durante una tensa y caótica manifestación en París. Si bien no encuentra pruebas de violencia policial ilegítima, el caso adquiere un cariz personal al descubrir que la víctima es de su ciudad natal y transformará el caso 137 en algo más que un simple número.",
+   "synopsis_en": "When Internal Affairs officer Stéphanie investigates a young man severely injured during a chaotic Paris demonstration and finds no police misconduct, the routine case hits close to home upon her discovering the victim is from her native town.",
+   "synopsis_lang": "es",
+   "lbSlug": "case-137-2025",
+   "title_en": "Case 137"
   },
   {
    "title": "AA965: Un rescate imposible",
@@ -1729,7 +1778,14 @@
    "is_free": true,
    "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-18)",
    "_nota": "En alianza con El Festival De Cine Francés",
-   "sala": "Auditorio"
+   "sala": "Auditorio",
+   "tmdb_id": 80543,
+   "genre": "Comedia",
+   "poster": "/assets/ficma/sois-belle-et-tais-toi.jpg",
+   "posterSource": "tmdb",
+   "synopsis_en": "A beautiful 18-year-old orphan escapes from a reformatory and hooks up with a gang of jewel smugglers, and decides on a life of crime. However, she falls for and marries a policeman, putting a crimp in her criminal career.",
+   "lbSlug": "be-beautiful-and-shut-up",
+   "title_en": "Be Beautiful and Shut Up"
   },
   {
    "title": "Microcosmos: Le peuple de l'herbe",
@@ -1915,7 +1971,14 @@
    "is_free": true,
    "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-18)",
    "_nota": "En alianza con El Festival De Cine Francés",
-   "sala": "Auditorio"
+   "sala": "Auditorio",
+   "tmdb_id": 1273044,
+   "genre": "Documental",
+   "poster": "/assets/ficma/apprendre.jpg",
+   "posterSource": "tmdb",
+   "synopsis_en": "In the Makarenko public elementary school in the Paris outskirts, children want to learn and to be cheered while teachers know they do not only teach, they also educate. With care, tenacity and efforts, children are trained to become not only responsible citizens but also human beings.",
+   "lbSlug": "elementary-2024",
+   "title_en": "Elementary"
   },
   {
    "title": "Propiedad intelectual en el audiovisual",
@@ -2125,24 +2188,6 @@
    "synopsis_lang": "es"
   },
   {
-   "title": "Entrelazados",
-   "director": "Estudio Dos Puntos Y Universidad de Caldas",
-   "year": 2026,
-   "duration": "30 min",
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "section": "🎬 Estrenos Nacionales",
-   "day": "2026-09-25",
-   "time": "19:00",
-   "day_order": 6,
-   "venue": "Auditorio Redentoristas - Manizales",
-   "has_qa": false,
-   "is_free": true,
-   "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-18)",
-   "_nota": "Estreno local",
-   "premiere": "Función de clausura"
-  },
-  {
    "title": "Exit Through the Gift Shop",
    "director": "Banksy",
    "year": 2010,
@@ -2168,6 +2213,24 @@
    "lbSlug": "exit-through-the-gift-shop"
   },
   {
+   "title": "Entrelazados",
+   "director": "Estudio Dos Puntos Y Universidad de Caldas",
+   "year": 2026,
+   "duration": "30 min",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "section": "🎬 Estrenos Nacionales",
+   "day": "2026-09-25",
+   "time": "19:20",
+   "day_order": 6,
+   "venue": "Auditorio Redentoristas - Manizales",
+   "has_qa": false,
+   "is_free": true,
+   "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-18)",
+   "_nota": "Estreno local",
+   "premiere": "Función de clausura"
+  },
+  {
    "title": "La Marcha del Hambre",
    "director": "Sorany Marin Trejos",
    "year": 2024,
@@ -2176,7 +2239,7 @@
    "flags": "🇨🇴",
    "section": "🎬 Estrenos Nacionales",
    "day": "2026-09-25",
-   "time": "19:00",
+   "time": "20:00",
    "day_order": 6,
    "venue": "Auditorio Redentoristas - Manizales",
    "has_qa": false,
@@ -2253,7 +2316,8 @@
    "synopsis": "Año 1936, Indiana Jones es un profesor de arqueología, dispuesto a correr peligrosas aventuras con tal de conseguir valiosas reliquias históricas. Después de una infructuosa misión en Sudamérica, el gobierno estadounidense le encarga la búsqueda del Arca de la Alianza, donde se conservan las Tablas de la Ley que Dios entregó a Moisés. Según la leyenda, quien las posea tendrá un poder absoluto, razón por la cual también la buscan los nazis.",
    "synopsis_en": "When Dr. Indiana Jones – the tweed-suited professor who just happens to be a celebrated archaeologist – is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.",
    "synopsis_lang": "es",
-   "lbSlug": "raiders-of-the-lost-ark"
+   "lbSlug": "raiders-of-the-lost-ark",
+   "title_en": "Raiders of the Lost Ark"
   },
   {
    "title": "La colina de las amapolas",
@@ -2304,8 +2368,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-18T18:39:08",
-  "plan_sha": "5a024fdda3d6c911",
+  "fecha": "2026-09-18T18:51:32",
+  "plan_sha": "cdad206d9518e008",
   "paso": 8,
   "cmd": "python3 pipeline/ficma-2026-septiembre.py"
  }

@@ -105,17 +105,39 @@ def rango_horario(txt):
 
 
 # ── red ──────────────────────────────────────────────────────────────────────
+class TMDBAuth(Exception):
+    """La API rechazó la llave. NO es «no encontrado»."""
+
+
 def tmdb_get(path, api_key, **params):
-    """GET a api.themoviedb.org v3. {} si falla."""
+    """GET a api.themoviedb.org v3. {} si falla la RED; revienta si la llave no
+    sirve.
+
+    LA DIFERENCIA IMPORTA Y COSTÓ CARO. Un fallo de red es transitorio y
+    devolver {} está bien: el que llama lo lee como «esta obra no está» y a lo
+    sumo pierde una ficha. Una llave inválida devuelve {} para TODAS, y entonces
+    «no está en TMDB» pasa a significar «no pregunté». El 18 sep 2026 un paso
+    del plan corrió con `TMDB_API_KEY=…` —la elipsis literal del ejemplo— y
+    borró en silencio las 36 fichas que había: el script terminó con éxito y el
+    sidecar quedó con 43 obras «sin ficha verificable». El silencio nunca
+    significa verificado (misma lección que scripts/tmdb-precheck.py)."""
     url = f'https://api.themoviedb.org/3{path}?api_key={api_key}&' + '&'.join(
         f'{k}=' + str(v).replace(' ', '%20').replace('&', '%26') for k, v in params.items())
     for _ in range(3):
         r = subprocess.run(['curl', '-s', '--max-time', '25', url], capture_output=True)
         if r.returncode == 0 and r.stdout:
             try:
-                return json.loads(r.stdout)
+                d = json.loads(r.stdout)
             except Exception:
-                pass
+                d = None
+            if isinstance(d, dict):
+                # 7 = «Invalid API key», 401 en el HTTP. Reintentar no arregla
+                # una llave mala: se para acá y se dice.
+                if d.get('success') is False and d.get('status_code') in (7, 10, 14, 32, 33):
+                    raise TMDBAuth(f'TMDB rechazó la llave: {d.get("status_message")}')
+                return d
+            if d is not None:
+                return d
         time.sleep(0.8)
     return {}
 

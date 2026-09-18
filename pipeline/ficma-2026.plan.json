@@ -23,8 +23,8 @@
    "que": "/talleresficma17/ → la franja académica (11 actividades)"
   },
   {
-   "cmd": "TMDB_API_KEY=… python3 pipeline/ficma-2026-fichas-tmdb.py",
-   "que": "TMDB + Letterboxd → ficha de las obras que agosto no tenía"
+   "cmd": "python3 pipeline/ficma-2026-fichas-tmdb.py",
+   "que": "TMDB + Letterboxd → ficha de las obras que agosto no tenía. NECESITA TMDB_API_KEY en el entorno (`source ~/.zshrc`): el paso revienta si la llave no sirve, en vez de devolver 0 fichas."
   },
   {
    "cmd": "python3 pipeline/ficma-2026-posters.py",
@@ -33,6 +33,10 @@
   {
    "cmd": "python3 pipeline/ficma-2026-septiembre.py",
    "que": "parrilla + franja + catálogo + geo → build"
+  },
+  {
+   "cmd": "python3 pipeline/ficma-2026-verificar.py",
+   "que": "doble verificación: día y hora de cada función contra el badge de su propia página, cobertura de las 78 páginas y crudo contra lo publicado"
   }
  ]
 }

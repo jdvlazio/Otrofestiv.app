@@ -79,6 +79,20 @@ CICLO_DETRAS = {'Expoferias - Cine fest': ('Expoferias', 'Cine fest')}
 # parece nombre propio.
 COLA_QUE_NO_ES_SEDE = {'Clandestino Records Di Kalibre': 'Clandestino Records',
                        'Clandestino Records Dj Kalibre': 'Clandestino Records'}
+# LA LÁMINA QUE SE CONTRADICE A SÍ MISMA. Cada página lleva la hora DOS veces:
+# en el badge de arriba y en el campo HORA de abajo. En 68 de 70 coinciden. En
+# las dos de la función de clausura no, y el campo es el que miente: los tres
+# cortos del viernes 25 en Redentoristas llevan «7:00 pm» abajo —copiado de la
+# primera lámina— mientras los badges dicen 7:00, 7:20 y 8:00 PM, que es lo
+# único coherente con sus duraciones (11, 30 y 90 min). Verificado mirando las
+# dos páginas. Se corrige por página, no con una regla general: dos casos no
+# alcanzan para decidir quién manda siempre.
+HORA_ERRATA = {
+    'p-70.jpg': ('19:20', '«Entrelazados»: el badge dice 7:20 PM y el campo HORA '
+                          '7:00 pm, copiado de la lámina anterior'),
+    'p-71.jpg': ('20:00', '«La Marcha del Hambre»: el badge dice 8:00 PM y el campo '
+                          'HORA 7:00 pm, copiado de la lámina anterior'),
+}
 ETIQUETAS = {'DIRECCIÓN':'director','DIRECCION':'director','PAÍS':'pais','PAIS':'pais',
              'DURACIÓN':'duracion','DURACION':'duracion','AÑO':'anio','ANO':'anio',
              'LUGAR':'sede','HORA':'hora',
@@ -220,9 +234,18 @@ def main():
         # esta fuente; ninguna otra lo publica.
         has_qa = 'PRESENCIA' in lib.sinacento(texto) and 'DIRECTOR' in lib.sinacento(texto)
         # badge superior derecho: «JUEVES 13» y «3:00 PM»
-        badge_dia = next((l['t'] for l in ls if l['y'] < 0.08 and re.match(rf'({DIAS})\s+\d', lib.sinacento(l['t']))), '')
-        badge_hora = next((l['t'] for l in ls if l['y'] < 0.08 and re.search(r'\d{1,2}:\d{2}\s*[AP]', l['t'], re.I)), '')
+        # El badge superior derecho trae el día y la hora, a veces en dos líneas
+        # («9:00 AM» / «SÁBADO 19») y a veces en UNA sola («4:00 PM DOMINGO 20»).
+        # Buscarlos al PRINCIPIO de la línea perdía la mitad de las páginas —40
+        # de 70— y con ellas el contraste que hace de segunda lectura.
+        _alto = [l['t'] for l in ls if l['y'] < 0.08]
+        badge_dia = next((m.group(0) for t in _alto
+                          for m in [re.search(rf'({DIAS})\s+\d{{1,2}}', lib.sinacento(t))] if m), '')
+        badge_hora = next((m.group(0) for t in _alto
+                           for m in [re.search(r'\d{1,2}:\d{2}\s*[AP]M?', t, re.I)] if m), '')
 
+        hora = hora24_pdf(campos.get('hora', '')) or hora24_pdf(badge_hora)
+        errata = HORA_ERRATA.get(pag)
         dur = re.search(r'(\d+)', campos.get('duracion', ''))
         anio = re.search(r'(19|20)\d{2}', campos.get('anio', ''))
         funcs.append({
@@ -231,7 +254,9 @@ def main():
             'costo': campos.get('costo', ''),
             'dia': dia_actual,
             'dia_badge': badge_dia,
-            'hora': hora24_pdf(campos.get('hora', '')) or hora24_pdf(badge_hora),
+            'hora': errata[0] if errata else hora,
+            **({'_hora_errata': f'{errata[1]}; se publica {errata[0]} y no {hora}'}
+               if errata else {}),
             'sede': campos.get('sede', ''),
             'seccion': seccion,
             'titulo': titulo,

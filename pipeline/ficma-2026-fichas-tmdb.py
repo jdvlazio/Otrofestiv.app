@@ -32,11 +32,13 @@ ST = f'{REPO}/festivals/staging'
 ASSETS = f'{REPO}/assets/ficma'   # FICMA guarda sus pósters acá desde agosto
 OUT = f'{ST}/ficma-2026-fichas-tmdb.json'
 
-# Campos que esta pasada puede aportar. `synopsis` NO está: la sinopsis que
-# publica el propio festival sobre su edición vale más que la de TMDB, y ya
-# viene del post o de la web.
-CAMPOS = ('tmdb_id', 'genre', 'title_en', 'synopsis_en', 'lbSlug', 'poster',
-          'posterSource')
+# Campos que esta pasada puede aportar. `synopsis` va al final a propósito: la
+# que publica el propio festival sobre su edición vale más y se aplica después,
+# pero una obra que no tiene sinopsis en NINGUNA parte se queda muda en la app
+# teniendo TMDB la suya. [cosecha-tmdb] lo vigila: el dato estaba en la fuente y
+# no cosecharlo es la misma pérdida que no haber mirado.
+CAMPOS = ('tmdb_id', 'genre', 'title_en', 'synopsis', 'synopsis_en', 'lbSlug',
+          'poster', 'posterSource')
 
 
 def lb_slug(tmdb_id):
@@ -107,6 +109,8 @@ def main():
         e = {'tmdb_id': det['id'], '_verificado': como}
         if 'genre' in faltan and det.get('genres'):
             e['genre'] = det['genres'][0]['name']
+        if 'synopsis' in faltan and det.get('overview'):
+            e['synopsis'], e['synopsis_lang'] = det['overview'], 'es'
         if 'synopsis_en' in faltan and det_en.get('overview'):
             e['synopsis_en'] = det_en['overview']
         en = det_en.get('title') or ''
@@ -124,6 +128,13 @@ def main():
         print(f'OK  {titulo[:46]:48} tmdb {det["id"]}'
               f'{"  póster✓" if e.get("poster") else ""}'
               f'{"  lb✓" if e.get("lbSlug") else ""}', flush=True)
+
+    # Si NADIE casó, no es que el festival haya programado 43 obras inéditas:
+    # es que la consulta está rota. Antes de escribir el sidecar —que es lo que
+    # pisa las fichas buenas— se para.
+    if obras and not fichas:
+        sys.exit(f'ninguna de las {len(obras)} obras casó en TMDB: eso no es un '
+                 f'resultado, es una consulta rota. No se escribe el sidecar.')
 
     json.dump({'_provenance': provenance(
         'TMDB (api.themoviedb.org) + Letterboxd por el redirect /tmdb/<id>',

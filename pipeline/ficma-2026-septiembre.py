@@ -519,11 +519,12 @@ def main():
         'prioLimit': 4,
         # Dos actividades se pagan; el resto es libre. No es 'free'.
         'ticketing_model': 'mixed',
-        # Los tres cortos locales del viernes 25 a las 19:00 en Redentoristas son
-        # UNA función de clausura, no tres que compiten: el programa les da la
-        # misma sede, la misma hora y el mismo rótulo. Es el único slot
-        # compartido de toda la parrilla.
-        'sharedSlotIsOneScreening': True,
+        # NO hay slot compartido en toda la parrilla. Parecía haberlo —los tres
+        # cortos de clausura del viernes 25 en Redentoristas— hasta que la doble
+        # lectura mostró que el campo HORA de dos láminas venía copiado: van a
+        # 19:00, 19:20 y 20:00, seguidos, no a la vez. Declarar el modelo
+        # compartido acá los habría fundido en una sola tarjeta y habría borrado
+        # justo el dato que costó encontrar.
         **lib.dias_config(DIAS, 'septiembre'),
         'sections': secs, 'venues': venues, 'films': films,
     }
