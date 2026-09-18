@@ -14,7 +14,8 @@ EL CANDADO vive en `lib.ficha_tmdb`, que es de donde lo toma también Villa del
 Cine: director ✓ SIEMPRE, y año/duración cuando las dos partes los publican.
 Cada ficha guarda en `_verificado` con qué se comprobó.
 
-Lee   festivals/staging/ficma-2026-reprogramado.json   (qué obras hay)
+Lee   festivals/staging/ficma-2026-crudo-septiembre.json (qué obras hay: la
+      parrilla oficial; antes del 18 sep era la lista armada post a post)
       festivals/staging/ficma-2026-catalogo-agosto.json (qué ya tenía ficha)
 Esc.  festivals/staging/ficma-2026-fichas-tmdb.json
       assets/ficma/<slug>.jpg                          (póster w780)
@@ -77,14 +78,16 @@ def baja_poster(poster_path, titulo):
 
 def main():
     key = os.environ.get('TMDB_API_KEY') or sys.exit('falta TMDB_API_KEY')
-    rep = json.load(open(f'{ST}/ficma-2026-reprogramado.json', encoding='utf-8'))
+    rep = json.load(open(f'{ST}/ficma-2026-crudo-septiembre.json', encoding='utf-8'))
     cat = json.load(open(f'{ST}/ficma-2026-catalogo-agosto.json',
                          encoding='utf-8'))['obras']
     tenia = {norm(t): o for t, o in cat.items()}
 
     obras = {}
     for f in rep['funciones']:
-        if f.get('tipo') in ('taller', 'charla'):
+        # las cinco actividades de maqueta centrada no son obra: no tienen
+        # dirección ni año, y buscarlas en TMDB solo puede traer un homónimo
+        if f.get('maqueta') == 'centrada':
             continue
         obras.setdefault(f['titulo'], f)
 

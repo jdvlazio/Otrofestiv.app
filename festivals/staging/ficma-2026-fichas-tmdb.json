@@ -1,55 +1,54 @@
 {
  "_provenance": {
   "fuente": "TMDB (api.themoviedb.org) + Letterboxd por el redirect /tmdb/<id>",
-  "capturado": "2026-09-17",
+  "capturado": "2026-09-18",
   "que_aporta": "póster, género, título en inglés, sinopsis EN y lbSlug de las obras que la edición de agosto no tenía",
   "candado": "director ✓ SIEMPRE, más título idéntico. Cada ficha dice en `_verificado` con qué se comprobó."
  },
- "fichas": {
-  "Ayuno y cenizas": {
-   "tmdb_id": 1756580,
-   "_verificado": "director ✓ + año/duración (TMDB: ?, 100 min)",
-   "genre": "Documental",
-   "synopsis_en": "Nestled in the mountains of Bogotá, an amateur theater group rehearses and stages the most famous of all plays, Oedipus Rex. Its members are musicians, actors, local artists, and some of them, users of crack cocaine. Testimonies about drugs, family, and the neighborhood—voices, hands, and faces, sometimes distant, sometimes fragile—contrast with the atmosphere of drums and incandescent lights of the theatrical creation. In the city's hills, Oedipus Rex is not an ancient play; it is a question about destiny, about the possibility of taking control of one's own life.",
-   "lbSlug": "ayuno-y-cenizas"
-  },
-  "Dicen que tú y yo estamos locos": {
-   "tmdb_id": 1703481,
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
-   "lbSlug": "dicen-que-tu-y-yo-estamos-locos"
-  },
-  "El hogar fue sepultado en esa tierra que nunca pudimos encontrar": {
-   "tmdb_id": 1663181,
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
-   "title_en": "Our Home Was Buried in a Land We Could Never Find"
-  },
-  "Habitante": {
-   "tmdb_id": 1571285,
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
-  },
-  "La luz por primera vez": {
-   "tmdb_id": 1705404,
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
-  },
-  "Manizales City": {
-   "tmdb_id": 271716,
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
-  },
-  "Que el cielo nos perdone": {
-   "tmdb_id": 1565878,
-   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
-  },
-  "Semillas": {
-   "tmdb_id": 1529622,
-   "_verificado": "director ✓ + año/duración (TMDB: 2025, 100 min)",
-   "genre": "Drama",
-   "synopsis_en": "In Eliana Niño’s poignant and charming feature debut, Shaira, a girl from the eastern plains of Colombia, dreams of participating in a coleo festival (an event similar to a rodeo). But after a recent drought severely damaged the crops, Shaira’s grandfather sells her horse without telling her. One day, he tells Shaira that the reason why some clouds take the shape of animals is that the sky traps them and won’t return them until it rains again. Shaira embarks on a journey to go in search of a special seed that will make the heavens rain again to bring her horse back.",
-   "poster": "/assets/ficma/semillas.jpg",
-   "posterSource": "tmdb",
-   "lbSlug": "semillas"
-  }
- },
+ "fichas": {},
  "sin_ficha": [
-  "Apuntes sobre anomalías y fantasmas"
+  "AA965: Un rescate imposible",
+  "Apprendre",
+  "Apuntes sobre anomalías y fantasmas",
+  "Ayuno y cenizas",
+  "Beautiful Losers",
+  "Buena Vista Social Club",
+  "Columbus",
+  "Con la fuerza del río",
+  "Crumb",
+  "Cuando el dolor se nombra: Diálogo abierto y violencia de género",
+  "Cómo limpiar un espejo",
+  "Dicen que tú y yo estamos locos",
+  "Dossier 137",
+  "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+  "En busca del arca perdida",
+  "Entrelazados",
+  "Exit Through the Gift Shop",
+  "Habitante",
+  "Herb & Dorothy",
+  "Juanpis González: El presidente de la gente",
+  "L'argent",
+  "La Grazia",
+  "La Luz por Primera Vez",
+  "La Marcha del Hambre",
+  "La Quimera de Oro",
+  "Las Bravas",
+  "Las aventuras de Tintín",
+  "Loving Vincent",
+  "Manizales City",
+  "Memorias de un caracol",
+  "My Favourite Cake",
+  "My Octopus Teacher",
+  "Onward",
+  "Que el cielo nos perdone",
+  "Record Safari",
+  "Semillas",
+  "Sois belle et tais-toi",
+  "System K",
+  "The Dig",
+  "The General",
+  "The Great Arch",
+  "The Human Scale",
+  "Vinyl Nation"
  ]
 }

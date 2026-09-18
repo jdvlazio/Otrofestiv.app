@@ -1128,7 +1128,10 @@ export const SECTION_ARCHETYPES = {
   '🌍 Estrenos Internacionales': 'Muestra / País',
   '🕊️ En alianza con el FICDEH': 'Especiales / Eventos',
   '🎨 Arte': 'Perspectivas / Miradas',
+  // El PDF de programación de septiembre la escribe «POP ART»; en agosto era
+  // «Arte Pop». Se conservan las dos: la vieja sigue en el JSON archivado.
   '🥫 Arte Pop': 'Perspectivas / Miradas',
+  '🥫 Pop Art': 'Perspectivas / Miradas',
   '💥 Cómic': 'Perspectivas / Miradas',
   '🎵 Música': 'Perspectivas / Miradas',
   '🏗️ Arquitectura': 'Perspectivas / Miradas',
@@ -1136,6 +1139,14 @@ export const SECTION_ARCHETYPES = {
   '🪙 Numismática': 'Retrospectiva / Tributo',
   '🌱 Medio Ambiente': 'Perspectivas / Miradas',
   '🏛️ Red de Museos': 'Especiales / Eventos',
+  // Las tres que estrenó la parrilla de septiembre. «Estrenos Locales» es la
+  // muestra de realizadores de Manizales y el Eje Cafetero: compite, como las
+  // otras dos de estrenos. Las funciones especiales y la fiesta de clausura no
+  // son cine en sala —un concierto, una noche de vinilos, una fiesta— y toman
+  // el color de eventos.
+  '🏔️ Estrenos Locales': 'Competencia',
+  '✨ Funciones Especiales': 'Especiales / Eventos',
+  '🎉 Fiesta de Clausura': 'Especiales / Eventos',
   // Franja Académica de FICMA — el festival la divide en talleres y charlas.
   '🛠️ Talleres': 'Charlas / Industria',
   // #NarrarElFuturo 2026 (Bogotá, 15–20 SEP): las temáticas con que el propio

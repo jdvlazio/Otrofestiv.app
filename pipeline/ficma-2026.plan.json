@@ -1,5 +1,5 @@
 {
- "_nota": "Los pasos re-ejecutables de FICMA desde sus OCR versionados. El enriquecimiento (TMDB/Letterboxd/title-en) fue pre-formato-intermedio y sus sidecars son históricos: no se re-corre.\n\nREPROGRAMADO (19–26 SEP). Los tres pasos nuevos van PRIMERO y sustituyen la parrilla de agosto: el primero acumula lo que el festival publica post a post, el segundo lee la franja académica de /talleresficma17/ y el tercero arma el build heredando el catálogo de lo ya publicado. Los tres pasos viejos quedan para la trazabilidad de la edición de agosto; hoy no se corren.",
+ "_nota": "LA PARRILLA SALE DEL PDF. El 18 sep 2026, a un día de abrir, el festival publicó en su home la programación completa en PDF (78 páginas, una por función). Hasta entonces se armaba post a post desde Instagram y había 15 funciones; con el PDF son 70, más las 11 de la franja académica, que va aparte porque el PDF no la incluye.\n\nLO ANUNCIADO POR INSTAGRAM NO SE TIRA: `ficma-2026-reprogramado.py` sigue corriendo porque es la única fuente con SINOPSIS de las obras que agosto no tenía, y porque el ensamblador CRUZA las dos —toda función anunciada tiene que estar en el PDF, y lo que no case sale como aviso—.\n\nLa edición de AGOSTO quedó archivada: `pipeline/_historico/ficma-2026-ensamblador.py` y `ficma-2026-franja.py` construían aquella parrilla y correrlos hoy pisaría producción con unas fechas que ya no existen. Su OCR (ficma-2026-ocr.json) se conserva como historia del dato.",
  "radar": 578,
  "pasos": [
   {
@@ -7,16 +7,24 @@
    "que": "congela las 86 fichas de la edición de agosto (idempotente: si ya existe, no la re-toma)"
   },
   {
+   "cmd": "python3 pipeline/ficma-2026-programa-pdf.py",
+   "que": "el PDF de programación de la home → OCR con cajas (78 páginas)"
+  },
+  {
+   "cmd": "python3 pipeline/ficma-2026-parse.py festivals/staging/ficma-2026-ocr-septiembre.json festivals/staging/ficma-2026-crudo-septiembre.json",
+   "que": "OCR → crudo: 70 funciones con día, hora, sede, sección y ficha"
+  },
+  {
    "cmd": "python3 pipeline/ficma-2026-reprogramado.py",
-   "que": "web + IG post a post → funciones publicadas de la reprogramación"
+   "que": "lo anunciado post a post: sinopsis de las obras nuevas + material del cruce"
   },
   {
    "cmd": "python3 pipeline/ficma-2026-franja-web.py",
-   "que": "/talleresficma17/ → la franja académica reprogramada (11 actividades)"
+   "que": "/talleresficma17/ → la franja académica (11 actividades)"
   },
   {
    "cmd": "TMDB_API_KEY=… python3 pipeline/ficma-2026-fichas-tmdb.py",
-   "que": "TMDB + Letterboxd → ficha de las obras que agosto no tenía (póster, género, lbSlug)"
+   "que": "TMDB + Letterboxd → ficha de las obras que agosto no tenía"
   },
   {
    "cmd": "python3 pipeline/ficma-2026-posters.py",
@@ -24,19 +32,7 @@
   },
   {
    "cmd": "python3 pipeline/ficma-2026-septiembre.py",
-   "que": "parrilla nueva + catálogo publicado + geo → build"
-  },
-  {
-   "cmd": "python3 pipeline/ficma-2026-parse.py",
-   "que": "OCR → crudo (87 págs, programación)"
-  },
-  {
-   "cmd": "python3 pipeline/ficma-2026-franja.py",
-   "que": "OCR → franja académica (12 actividades)"
-  },
-  {
-   "cmd": "python3 pipeline/ficma-2026-ensamblador.py",
-   "que": "crudo + franja + enriquecido + geo → festival"
+   "que": "parrilla + franja + catálogo + geo → build"
   }
  ]
 }
