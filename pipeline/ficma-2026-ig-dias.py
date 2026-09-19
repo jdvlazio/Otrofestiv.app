@@ -46,6 +46,10 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = f'{REPO}/festivals/staging/ficma-2026-ig-dias.json'
 IG = 'https://www.instagram.com/cinemanizales_ficma/p/'
 
+# OJO: del SÁBADO 19 —el día que abre— NO hay post de programación. El festival
+# publicó solo el anuncio («la programación ya está disponible, descárgala en el
+# link de la bio»). Ese día se cruza contra los posts POR PELÍCULA, que son los
+# que se usaron para armar la parrilla antes de que saliera el PDF.
 POSTS = {
     '2026-09-20': 'DdcEFYkGnCR', '2026-09-21': 'DdcDr3Zmtjf',
     '2026-09-22': 'DdcDTCamlsP', '2026-09-23': 'DdcC4ydG1Jt',
@@ -63,6 +67,20 @@ ACCESO = {
     'Sonora Vol. 4': 'Preventa $30k · en sitio $45k · gratis con acreditación',
 }
 
+# EL CONTENIDO QUE SOLO ESTÁ EN EL POST DE UN TERCERO. El concierto sinfónico
+# del jueves 24 lo anuncia la Orquesta Sinfónica de Caldas —etiquetando al
+# festival— con su programa completo. El PDF solo dice «Concierto Sinfónico».
+FICHA_EXTRA = {
+    'Concierto Sinfónico': {
+        'director': 'Orquesta Sinfónica de Caldas · dirige Leonardo Marulanda',
+        'sinopsis': 'Una noche de música sinfónica con la Orquesta Sinfónica de '
+                    'Caldas bajo la dirección de Leonardo Marulanda. En el programa: '
+                    '«Capricho español», Op. 34 de Nikolái Rimski-Kórsakov; «Vals '
+                    'triste» de Jean Sibelius; «Petite Suite» de Claude Debussy; y la '
+                    '«Danza ritual del fuego» de Manuel de Falla.',
+        '_src': 'https://www.instagram.com/p/DdcUAxysh0p/ (@sinfonicadecaldas)'},
+}
+
 # Conversatorio o presencia, dicho en el post y NO marcado en el sello del PDF.
 PRESENCIA = {
     'En Tierra': 'Presencia de la productora',
@@ -77,6 +95,19 @@ PRESENCIA = {
 # LO QUE EL POST DICE DISTINTO DEL PDF. Cada entrada dice qué se publica y por
 # qué; lo que no está acá se publica como lo dice el PDF.
 DISCREPA = {
+    # LA FUNCIÓN INAUGURAL, mañana. El PDF pone el corto a las 19:00 y el largo
+    # a las 19:30; el post propio del largo (y el del corto, que el festival
+    # titula «CORTOMETRAJE FUNCIÓN INAGURAL») dicen los dos 7:00 p.m., en la
+    # misma sede. Son UNA función: corto de 16 min y después el largo. Se
+    # publica 19:00 para los dos, que es la hora a la que hay que llegar —
+    # equivocarse hacia temprano hace esperar; hacia tarde, perderse el corto y
+    # el comienzo—. El 19:30 del PDF es el arranque del largo dentro de esa
+    # función.
+    'El hogar fue sepultado en esa tierra que nunca pudimos encontrar': {
+        'hora': '19:00',
+        'por_que': 'el PDF la pone a las 19:30 y su propio post de Instagram, más el '
+                   'del corto que la antecede, dicen 7:00 p.m. en la misma sede: es '
+                   'una sola función inaugural.'},
     # «Entrelazados» NO está acá aunque el post también opine: su caso se
     # resuelve donde nace, en HORA_ERRATA de ficma-2026-parse.py, porque lo que
     # hay que explicar es que la LÁMINA se contradice. Declararlo dos veces
@@ -114,7 +145,8 @@ def main():
         metodo='leídos en el navegador CON SESIÓN y transcritos verbatim: el pie de '
                'Instagram no se obtiene sin ella',
         posts={d: IG + s + '/' for d, s in POSTS.items()}),
-        'acceso': ACCESO, 'presencia': PRESENCIA, 'discrepa': DISCREPA,
+        'acceso': ACCESO, 'presencia': PRESENCIA, 'ficha_extra': FICHA_EXTRA,
+        'discrepa': DISCREPA,
         'solo_en_ig': SOLO_EN_IG, 'solo_en_pdf': SOLO_EN_PDF},
         open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'{len(POSTS)} días · {len(ACCESO)} con precio · {len(PRESENCIA)} con '

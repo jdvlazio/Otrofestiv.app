@@ -407,6 +407,13 @@ def main():
             avisos.append(f"«{fn['titulo']}» ({fn['dia'][-2:]}·{fn['hora']}) "
                           f"SIN SEDE declarada: no se publica")
             continue
+        # Lo que solo publicó un tercero: el programa del concierto sinfónico lo
+        # anunció la Orquesta de Caldas etiquetando al festival, y el PDF solo
+        # dice «Concierto Sinfónico». Se aplica ANTES de armar la ficha, que es
+        # donde se lee `sinopsis`.
+        for campo, valor in (ig.get('ficha_extra', {}).get(fn['titulo']) or {}).items():
+            if campo != '_src' and not fn.get(campo):
+                fn[campo] = valor
         es_evento = fn.get('tipo') in ('taller', 'charla', 'evento')
         sec = SECCIONES.get(fn['seccion'])
         if not sec:
