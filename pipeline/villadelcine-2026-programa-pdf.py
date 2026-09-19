@@ -241,10 +241,17 @@ def _unir_solapadas(cajas):
 def bloques(ls, cols, horas, cajas):
     """Una celda por mancha: sus dos horas salen del rectángulo y su contenido,
     de las líneas de texto que caen dentro."""
-    centros = [((y0 + y1) / 2, h) for y0, y1, h in horas]
+    # EL BORDE DE UNA CELDA CAE EN LA LÍNEA PUNTEADA, NO EN EL RÓTULO. Medido
+    # en la retícula: la línea de cada fila va 6,4 pt POR ENCIMA del centro del
+    # texto de su hora. Comparando contra el texto, la hora de FIN se corría una
+    # fila hacia atrás en todos los bloques —la programación infantil terminaba
+    # 12:45 en vez de 13:00, el club de pitch 10:00 en vez de 10:15— y como el
+    # inicio sí caía bien, el error no se veía por ninguna parte.
+    LINEA = 6.4
+    lineas_fila = [((y0 + y1) / 2 - LINEA, h) for y0, y1, h in horas]
 
     def rotulo(y):
-        return min(centros, key=lambda c: abs(c[0] - y))[1]
+        return min(lineas_fila, key=lambda c: abs(c[0] - y))[1]
 
     regs = []
     for x0, y0, x1, y1 in cajas:
@@ -252,10 +259,25 @@ def bloques(ls, cols, horas, cajas):
         sede = next((c['nombre'] for c in cols if c['x0'] - 14 <= cx <= c['x1'] + 14), '')
         if not sede:
             continue
+        # EL TEXTO SE DESBORDA DE SU CELDA. En «Nuevas Miradas: RESURGENCIAS»
+        # del viernes noche, las dos últimas líneas caen por debajo del borde
+        # del recuadro. Exigiendo que la línea entera quepa, se perdían —y una
+        # línea perdida es un dato que no publicamos—. Basta con que el CENTRO
+        # de la línea caiga dentro, con un margen de media fila.
         dentro = [t for _, lx0, ly0, lx1, ly1, t in ls
-                  if x0 - 3 <= (lx0 + lx1) / 2 <= x1 + 3 and y0 - 2 <= ly0 and ly1 <= y1 + 3
+                  if x0 - 3 <= (lx0 + lx1) / 2 <= x1 + 3
+                  and y0 - 5 <= (ly0 + ly1) / 2 <= y1 + 7
                   and not MARCA.match(t) and not hora24(t) and not RE_DIA.match(t)]
         if not dentro:
+            # UNA CELDA PUEDE NO TENER TEXTO Y AUN ASÍ SER PROGRAMACIÓN. Al pie
+            # del viernes tarde hay un trozo rosa mudo: es el arranque de
+            # «Territorios: PODEROSAS», cuyo rótulo el festival dibujó en la
+            # página siguiente. Descartarlo movía la función quince minutos
+            # más tarde de lo anunciado. Se conserva como colgajo y `parrilla()`
+            # lo pega al bloque que lo continúa.
+            regs.append({'sede': sede, 'hora': rotulo(y0), 'hasta': rotulo(y1),
+                         'duracion_min': 0, 'lineas': [], '_colgajo': True,
+                         'caja': [x0, y0, x1, y1]})
             continue
         ini, fin = rotulo(y0), rotulo(y1)
         if fin == ini:
@@ -304,7 +326,25 @@ def parrilla():
         for b in bloques(pl, cols, horas, manchas(pag, horas[0][0] - 6)):
             b['dia'], b['pagina'] = dia, pag
             dias.append(b)
-    return _unir_paginas(dias), fuera
+    return _unir_paginas(_pegar_colgajos(dias)), fuera
+
+
+def _pegar_colgajos(bs):
+    """Los trozos mudos del pie de una página se pegan al bloque que los
+    continúa arriba de la siguiente, en la misma sede y el mismo día."""
+    colgajos = [b for b in bs if b.get('_colgajo')]
+    resto = [b for b in bs if not b.get('_colgajo')]
+    for c in colgajos:
+        cont = [b for b in resto if b['dia'] == c['dia'] and b['sede'] == c['sede']
+                and b['pagina'] == c['pagina'] + 1
+                and _mins(b['hora']) - _mins(c['hasta']) <= 15]
+        if cont:
+            b = min(cont, key=lambda b: b['hora'])
+            b['_empieza_antes'] = (f"la página {c['pagina']} dibuja su arranque a las "
+                                   f"{c['hora']}, sin rótulo")
+            b['hora'] = min(b['hora'], c['hora'])
+            b['duracion_min'] = _mins(b['hasta']) - _mins(b['hora'])
+    return resto
 
 
 def _unir_paginas(bs):
@@ -325,6 +365,7 @@ def _unir_paginas(bs):
         if a and b['pagina'] != a['pagina'] and _mins(b['hora']) - _mins(a['hasta']) <= 15:
             a['hasta'] = max(a['hasta'], b['hasta'])
             a['duracion_min'] = _mins(a['hasta']) - _mins(a['hora'])
+            a['lineas'] = list(dict.fromkeys(a['lineas'] + b['lineas']))
             a['_partido'] = f"dibujado en las páginas {a['pagina']} y {b['pagina']}"
         else:
             por_clave[k] = b

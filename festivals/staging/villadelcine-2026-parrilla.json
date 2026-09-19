@@ -10,8 +10,8 @@
   {
    "sede": "Casa San Pedro Campestre",
    "hora": "17:00",
-   "hasta": "17:30",
-   "duracion_min": 30,
+   "hasta": "17:45",
+   "duracion_min": 45,
    "lineas": [
     "Ceremonia UNQUY de apertura y",
     "ritual con Cine Concierto CAMINOS",
@@ -29,8 +29,8 @@
   {
    "sede": "Casa San Pedro Campestre",
    "hora": "17:45",
-   "hasta": "18:00",
-   "duracion_min": 15,
+   "hasta": "18:15",
+   "duracion_min": 30,
    "lineas": [
     "AMOR A PRIMERA VISTA, Dir, Andrés",
     "Quintero Campos Cortometraje",
@@ -94,8 +94,8 @@
   {
    "sede": "Casa San Pedro Campestre",
    "hora": "09:00",
-   "hasta": "12:45",
-   "duracion_min": 225,
+   "hasta": "13:00",
+   "duracion_min": 240,
    "lineas": [
     "Programación Infantil:",
     "X-PLORA CINE",
@@ -114,8 +114,8 @@
   {
    "sede": "Biblioteca del Hotel Mesón de los Virreyes",
    "hora": "09:15",
-   "hasta": "12:15",
-   "duracion_min": 180,
+   "hasta": "12:30",
+   "duracion_min": 195,
    "lineas": [
     "Comunicaciones:",
     "ENTRE - VISTAS",
@@ -134,8 +134,8 @@
   {
    "sede": "Galería Pérez Rojas",
    "hora": "09:15",
-   "hasta": "10:00",
-   "duracion_min": 45,
+   "hasta": "10:15",
+   "duracion_min": 60,
    "lineas": [
     "#Hija",
     "Ruta Académica",
@@ -154,8 +154,8 @@
   {
    "sede": "Museo Casa Antonio Nariño Salón principal 2do piso",
    "hora": "10:00",
-   "hasta": "11:45",
-   "duracion_min": 105,
+   "hasta": "12:00",
+   "duracion_min": 120,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -175,8 +175,8 @@
   {
    "sede": "Auditorio del Hotel Mesón de los Virreyes",
    "hora": "10:30",
-   "hasta": "12:15",
-   "duracion_min": 105,
+   "hasta": "12:30",
+   "duracion_min": 120,
    "lineas": [
     "Muestra Especial:",
     "Festival de Cine",
@@ -195,8 +195,8 @@
   {
    "sede": "Galería Pérez Rojas",
    "hora": "10:45",
-   "hasta": "11:30",
-   "duracion_min": 45,
+   "hasta": "11:45",
+   "duracion_min": 60,
    "lineas": [
     "Territorios: BOYACÁ",
     "EN LOS CAMPOS",
@@ -215,8 +215,8 @@
   {
    "sede": "Auditorio del Hotel Mesón de los Virreyes",
    "hora": "14:00",
-   "hasta": "17:00",
-   "duracion_min": 180,
+   "hasta": "17:15",
+   "duracion_min": 195,
    "lineas": [
     "Nuevas Miradas:",
     "ECLIPSES",
@@ -239,8 +239,8 @@
   {
    "sede": "Biblioteca del Hotel Mesón de los Virreyes",
    "hora": "14:00",
-   "hasta": "15:45",
-   "duracion_min": 105,
+   "hasta": "16:00",
+   "duracion_min": 120,
    "lineas": [
     "Narrativas",
     "Divergentes: SEÑALES",
@@ -260,8 +260,8 @@
   {
    "sede": "Galería Pérez Rojas",
    "hora": "14:00",
-   "hasta": "14:45",
-   "duracion_min": 45,
+   "hasta": "15:00",
+   "duracion_min": 60,
    "lineas": [
     "Territorios: VOCES",
     "Selección Oficial No",
@@ -279,8 +279,8 @@
   {
    "sede": "Galería Pérez Rojas",
    "hora": "15:00",
-   "hasta": "16:45",
-   "duracion_min": 105,
+   "hasta": "17:00",
+   "duracion_min": 120,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -299,8 +299,8 @@
   {
    "sede": "Museo Casa Antonio Nariño Salón principal 2do piso",
    "hora": "15:00",
-   "hasta": "16:45",
-   "duracion_min": 105,
+   "hasta": "17:00",
+   "duracion_min": 120,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -338,8 +338,8 @@
   {
    "sede": "Auditorio del Hotel Mesón de los Virreyes",
    "hora": "17:15",
-   "hasta": "18:30",
-   "duracion_min": 75,
+   "hasta": "18:45",
+   "duracion_min": 90,
    "lineas": [
     "Lenguajes Emergentes:",
     "ECOS",
@@ -361,9 +361,9 @@
   },
   {
    "sede": "Auditorio del Hotel Mesón de los Virreyes",
-   "hora": "19:00",
-   "hasta": "21:45",
-   "duracion_min": 165,
+   "hora": "18:45",
+   "hasta": "22:00",
+   "duracion_min": 195,
    "lineas": [
     "Nuevas Miradas:",
     "TRÁNSITOS",
@@ -381,13 +381,14 @@
     282.6
    ],
    "dia": "2026-09-24",
-   "pagina": 5
+   "pagina": 5,
+   "_empieza_antes": "la página 4 dibuja su arranque a las 18:45, sin rótulo"
   },
   {
    "sede": "Galería Pérez Rojas",
    "hora": "19:00",
-   "hasta": "21:45",
-   "duracion_min": 165,
+   "hasta": "22:00",
+   "duracion_min": 180,
    "lineas": [
     "Nuevas Miradas:",
     "UMBRALES",
@@ -410,8 +411,8 @@
   {
    "sede": "Casa San Pedro Campestre",
    "hora": "09:00",
-   "hasta": "12:45",
-   "duracion_min": 225,
+   "hasta": "13:00",
+   "duracion_min": 240,
    "lineas": [
     "Programación Infantil:",
     "X-PLORA CINE",
@@ -431,8 +432,8 @@
   {
    "sede": "Biblioteca del Hotel Mesón de los Virreyes",
    "hora": "09:15",
-   "hasta": "12:15",
-   "duracion_min": 180,
+   "hasta": "12:30",
+   "duracion_min": 195,
    "lineas": [
     "Comunicaciones:",
     "ENTRE - VISTAS",
@@ -451,8 +452,8 @@
   {
    "sede": "Galería Pérez Rojas",
    "hora": "10:00",
-   "hasta": "11:30",
-   "duracion_min": 90,
+   "hasta": "11:45",
+   "duracion_min": 105,
    "lineas": [
     "Narrativas",
     "Divergentes:",
@@ -475,8 +476,8 @@
   {
    "sede": "Museo Casa Antonio Nariño Salón principal 1er piso",
    "hora": "10:00",
-   "hasta": "12:45",
-   "duracion_min": 165,
+   "hasta": "13:00",
+   "duracion_min": 180,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -499,8 +500,8 @@
   {
    "sede": "Museo Casa Antonio Nariño Salón principal 2do piso",
    "hora": "10:00",
-   "hasta": "11:45",
-   "duracion_min": 105,
+   "hasta": "12:00",
+   "duracion_min": 120,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -520,8 +521,8 @@
   {
    "sede": "Auditorio del Hotel Mesón de los Virreyes",
    "hora": "10:30",
-   "hasta": "12:30",
-   "duracion_min": 120,
+   "hasta": "12:45",
+   "duracion_min": 135,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -563,8 +564,8 @@
   {
    "sede": "Auditorio del Hotel Mesón de los Virreyes",
    "hora": "14:00",
-   "hasta": "16:45",
-   "duracion_min": 165,
+   "hasta": "17:00",
+   "duracion_min": 180,
    "lineas": [
     "Nuevas Miradas:",
     "METAMORFOSIS",
@@ -588,8 +589,8 @@
   {
    "sede": "Biblioteca del Hotel Mesón de los Virreyes",
    "hora": "14:00",
-   "hasta": "15:45",
-   "duracion_min": 105,
+   "hasta": "16:00",
+   "duracion_min": 120,
    "lineas": [
     "Narrativas",
     "Divergentes: SEÑALES",
@@ -609,8 +610,8 @@
   {
    "sede": "Galería Pérez Rojas",
    "hora": "15:00",
-   "hasta": "16:45",
-   "duracion_min": 105,
+   "hasta": "17:00",
+   "duracion_min": 120,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -629,8 +630,8 @@
   {
    "sede": "Museo Casa Antonio Nariño Salón principal 1er piso",
    "hora": "15:00",
-   "hasta": "16:15",
-   "duracion_min": 75,
+   "hasta": "16:30",
+   "duracion_min": 90,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -650,8 +651,8 @@
   {
    "sede": "Museo Casa Antonio Nariño Salón principal 2do piso",
    "hora": "15:00",
-   "hasta": "16:45",
-   "duracion_min": 105,
+   "hasta": "17:00",
+   "duracion_min": 120,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -671,8 +672,8 @@
   {
    "sede": "Auditorio del Hotel Mesón de los Virreyes",
    "hora": "17:00",
-   "hasta": "18:30",
-   "duracion_min": 90,
+   "hasta": "18:45",
+   "duracion_min": 105,
    "lineas": [
     "Lenguajes Emergentes:",
     "DESTELLOS",
@@ -694,15 +695,17 @@
   {
    "sede": "Galería Pérez Rojas",
    "hora": "17:00",
-   "hasta": "19:45",
-   "duracion_min": 165,
+   "hasta": "20:00",
+   "duracion_min": 180,
    "lineas": [
     "Nuevas Miradas:",
     "Cortometraje",
     "RESURGENCIAS",
     "Nacional - Ópera",
     "Prima Internacional",
-    "2:16:00"
+    "2:16:00",
+    "Nacional - Ópera Prima",
+    "Internacional 2:16:00"
    ],
    "caja": [
     173.2,
@@ -716,9 +719,9 @@
   },
   {
    "sede": "Auditorio del Hotel Mesón de los Virreyes",
-   "hora": "19:00",
-   "hasta": "19:45",
-   "duracion_min": 45,
+   "hora": "18:45",
+   "hasta": "20:00",
+   "duracion_min": 75,
    "lineas": [
     "Territorios:",
     "PODEROSAS",
@@ -732,13 +735,14 @@
     172.7
    ],
    "dia": "2026-09-25",
-   "pagina": 8
+   "pagina": 8,
+   "_empieza_antes": "la página 7 dibuja su arranque a las 18:45, sin rótulo"
   },
   {
    "sede": "Auditorio del Hotel Mesón de los Virreyes",
    "hora": "20:00",
-   "hasta": "21:15",
-   "duracion_min": 75,
+   "hasta": "21:30",
+   "duracion_min": 90,
    "lineas": [
     "Narrativas Divergentes:",
     "RETORNOS",
@@ -760,8 +764,8 @@
   {
    "sede": "Galería Pérez Rojas",
    "hora": "20:00",
-   "hasta": "21:45",
-   "duracion_min": 105,
+   "hasta": "22:00",
+   "duracion_min": 120,
    "lineas": [
     "Muestra Especial-",
     "Rumbo a los Macondo-",
@@ -780,8 +784,8 @@
   {
    "sede": "Biblioteca del Hotel Mesón de los Virreyes",
    "hora": "09:15",
-   "hasta": "12:15",
-   "duracion_min": 180,
+   "hasta": "12:30",
+   "duracion_min": 195,
    "lineas": [
     "Comunicaciones:",
     "ENTRE - VISTAS",
@@ -800,8 +804,8 @@
   {
    "sede": "Museo Casa Antonio Nariño Salón principal 1er piso",
    "hora": "09:30",
-   "hasta": "11:15",
-   "duracion_min": 105,
+   "hasta": "11:30",
+   "duracion_min": 120,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -823,8 +827,8 @@
   {
    "sede": "Auditorio del Hotel Mesón de los Virreyes",
    "hora": "10:00",
-   "hasta": "11:30",
-   "duracion_min": 90,
+   "hasta": "11:45",
+   "duracion_min": 105,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -844,8 +848,8 @@
   {
    "sede": "Galería Pérez Rojas",
    "hora": "10:00",
-   "hasta": "12:45",
-   "duracion_min": 165,
+   "hasta": "13:00",
+   "duracion_min": 180,
    "lineas": [
     "Nuevas Miradas G:",
     "ENCRUCIJADAS",
@@ -866,8 +870,8 @@
   {
    "sede": "Museo Casa Antonio Nariño Salón principal 2do piso",
    "hora": "10:00",
-   "hasta": "11:45",
-   "duracion_min": 105,
+   "hasta": "12:00",
+   "duracion_min": 120,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -887,8 +891,8 @@
   {
    "sede": "Museo Casa Antonio Nariño Salón principal 1er piso",
    "hora": "11:30",
-   "hasta": "12:45",
-   "duracion_min": 75,
+   "hasta": "13:00",
+   "duracion_min": 90,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -908,8 +912,8 @@
   {
    "sede": "Auditorio del Hotel Mesón de los Virreyes",
    "hora": "11:45",
-   "hasta": "12:30",
-   "duracion_min": 45,
+   "hasta": "12:45",
+   "duracion_min": 60,
    "lineas": [
     "Territorios:",
     "RAÍCES",
@@ -928,8 +932,8 @@
   {
    "sede": "Auditorio del Hotel Mesón de los Virreyes",
    "hora": "14:00",
-   "hasta": "16:45",
-   "duracion_min": 165,
+   "hasta": "17:00",
+   "duracion_min": 180,
    "lineas": [
     "Nuevas Miradas:",
     "RESISTENCIAS",
@@ -949,8 +953,8 @@
   {
    "sede": "Biblioteca del Hotel Mesón de los Virreyes",
    "hora": "14:00",
-   "hasta": "15:30",
-   "duracion_min": 90,
+   "hasta": "15:45",
+   "duracion_min": 105,
    "lineas": [
     "Narrativas Divergentes:",
     "SEÑALES",
@@ -970,8 +974,8 @@
   {
    "sede": "Galería Pérez Rojas",
    "hora": "14:00",
-   "hasta": "15:30",
-   "duracion_min": 90,
+   "hasta": "15:45",
+   "duracion_min": 105,
    "lineas": [
     "Ruta Académica",
     "CineCamino",
@@ -990,8 +994,8 @@
   {
    "sede": "Casa San Pedro Campestre",
    "hora": "15:45",
-   "hasta": "16:00",
-   "duracion_min": 15,
+   "hasta": "16:15",
+   "duracion_min": 30,
    "lineas": [
     "EL FÓSIL MÁGICO. . Selección No",
     "Competitiva"
@@ -1007,11 +1011,12 @@
   },
   {
    "sede": "Casa San Pedro Campestre",
-   "hora": "16:00",
+   "hora": "16:15",
    "hasta": "16:30",
-   "duracion_min": 30,
+   "duracion_min": 15,
    "lineas": [
-    "Ruta academica CLAQUETAZO"
+    "Ruta academica CLAQUETAZO",
+    "Reconocimiento - Mabel Teresa Velosa"
    ],
    "caja": [
     475.4,
@@ -1042,8 +1047,8 @@
   {
    "sede": "Casa San Pedro Campestre",
    "hora": "16:45",
-   "hasta": "17:45",
-   "duracion_min": 60,
+   "hasta": "18:00",
+   "duracion_min": 75,
    "lineas": [
     "Muestra Especial: AQUILEO",
     "VENGANZA, Ciro Durán",
@@ -1080,11 +1085,13 @@
   {
    "sede": "Casa San Pedro Campestre",
    "hora": "18:15",
-   "hasta": "20:00",
-   "duracion_min": 105,
+   "hasta": "20:15",
+   "duracion_min": 120,
    "lineas": [
     "Ceremonia",
-    "TAMSA Premiación y Clausura"
+    "TAMSA Premiación y Clausura",
+    "Ceremonia TAMSA Premiación y",
+    "Clausura"
    ],
    "caja": [
     475.9,

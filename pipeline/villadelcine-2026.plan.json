@@ -10,5 +10,65 @@
    "cmd": "TMDB_API_KEY=… python3 pipeline/villadelcine-2026-fichas-tmdb.py",
    "que": "TMDB + Letterboxd → ficha de los cortos que existen (15 de 53)"
   }
- ]
+ ],
+ "festival": {
+  "secciones": {
+   "Nuevas Miradas": {
+    "emoji": "👁️",
+    "en": "New Gazes",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Territorios": {
+    "emoji": "🗺️",
+    "en": "Territories",
+    "archetype": "Muestra / País"
+   },
+   "Narrativas Divergentes": {
+    "emoji": "🌀",
+    "en": "Divergent Narratives",
+    "archetype": "Cortos / Programas"
+   },
+   "Lenguajes Emergentes": {
+    "emoji": "🌱",
+    "en": "Emerging Languages",
+    "archetype": "Cortos / Programas"
+   },
+   "Programación Infantil": {
+    "emoji": "🪁",
+    "en": "Children's Programme",
+    "archetype": "Cortos / Programas"
+   },
+   "Industria": {
+    "emoji": "🎬",
+    "en": "Industry",
+    "archetype": "Charlas / Industria"
+   },
+   "Ruta Académica": {
+    "emoji": "🎓",
+    "en": "Academic Track",
+    "archetype": "Charlas / Industria"
+   },
+   "Rumbo a los Macondo": {
+    "emoji": "🏆",
+    "en": "On the Way to the Macondo Awards",
+    "archetype": "Especiales / Eventos"
+   },
+   "Exhibición Especial": {
+    "emoji": "🎞️",
+    "en": "Special Screening",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Eventos Especiales": {
+    "emoji": "🎉",
+    "en": "Special Events",
+    "archetype": "Especiales / Eventos"
+   },
+   "Comunicaciones": {
+    "emoji": "🎙️",
+    "en": "Communications",
+    "archetype": "Charlas / Industria"
+   }
+  }
+ },
+ "_nota_secciones": "LAS SECCIONES SON LAS 6 MADRE DEL FESTIVAL más 5 franjas, con el nombre VERBATIM. Los 22 programas con nombre propio (TRÁNSITO, PORTALES, ECOS, BOYACÁ EN LOS CAMPOS…) NO son secciones: son el título del bloque dentro de su sección. Emoji y arquetipo son capa nuestra, aprobados por Juan el 19 sep 2026. 🪁 para la infantil y no 🧒: dice infancia sin tratar a nadie de bebé, y el programa se llama X-PLORA CINE. 🌱 para Lenguajes Emergentes y no ✨, que ya es de FICMA."
 }
