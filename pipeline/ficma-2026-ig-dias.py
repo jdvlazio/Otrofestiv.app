@@ -46,11 +46,13 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = f'{REPO}/festivals/staging/ficma-2026-ig-dias.json'
 IG = 'https://www.instagram.com/cinemanizales_ficma/p/'
 
-# OJO: del SÁBADO 19 —el día que abre— NO hay post de programación. El festival
-# publicó solo el anuncio («la programación ya está disponible, descárgala en el
-# link de la bio»). Ese día se cruza contra los posts POR PELÍCULA, que son los
-# que se usaron para armar la parrilla antes de que saliera el PDF.
+# EL POST DEL SÁBADO 19 EXISTE Y CASI SE NOS PASA. En la grilla del perfil se ve
+# como «Photo shared by FICMA 17…», sin pie: lo descarté mirando ese preview en
+# vez de abrirlo, y dije que ese día no tenía post de programación. Lo tiene, es
+# un carrusel de NUEVE LÁMINAS —una por función— y ahí estaba lo que faltaba.
+# Un post no se juzga por su preview.
 POSTS = {
+    '2026-09-19': 'DdcEwsJmvmy',
     '2026-09-20': 'DdcEFYkGnCR', '2026-09-21': 'DdcDr3Zmtjf',
     '2026-09-22': 'DdcDTCamlsP', '2026-09-23': 'DdcC4ydG1Jt',
     '2026-09-24': 'DdcCLKum08D', '2026-09-25': 'DdcBl--G0Ub',
@@ -95,19 +97,16 @@ PRESENCIA = {
 # LO QUE EL POST DICE DISTINTO DEL PDF. Cada entrada dice qué se publica y por
 # qué; lo que no está acá se publica como lo dice el PDF.
 DISCREPA = {
-    # LA FUNCIÓN INAUGURAL, mañana. El PDF pone el corto a las 19:00 y el largo
-    # a las 19:30; el post propio del largo (y el del corto, que el festival
-    # titula «CORTOMETRAJE FUNCIÓN INAGURAL») dicen los dos 7:00 p.m., en la
-    # misma sede. Son UNA función: corto de 16 min y después el largo. Se
-    # publica 19:00 para los dos, que es la hora a la que hay que llegar —
-    # equivocarse hacia temprano hace esperar; hacia tarde, perderse el corto y
-    # el comienzo—. El 19:30 del PDF es el arranque del largo dentro de esa
-    # función.
-    'El hogar fue sepultado en esa tierra que nunca pudimos encontrar': {
-        'hora': '19:00',
-        'por_que': 'el PDF la pone a las 19:30 y su propio post de Instagram, más el '
-                   'del corto que la antecede, dicen 7:00 p.m. en la misma sede: es '
-                   'una sola función inaugural.'},
+    # LA FUNCIÓN INAUGURAL: 7:00 EL CORTO, 7:30 EL LARGO. Y aquí me equivoqué
+    # yo. Los posts sueltos de las dos obras dicen «7:00 p. m.» —el del largo
+    # también— así que las publiqué a las dos a las 19:00, razonando que era una
+    # sola función. Las LÁMINAS del carrusel del sábado lo desmienten: la 8 dice
+    # 7:00 PM para «Que el cielo nos perdone» (17 min) y la 9 dice 7:30 PM para
+    # «El hogar fue sepultado» (92 min). Coinciden con el PDF, que decía lo
+    # mismo. Manda eso: se publica 19:00 y 19:30.
+    #
+    # La lección es del método, no del dato: el pie de un post redondea, la
+    # lámina es el programa. Si las dos están, gana la lámina.
     # «Entrelazados» NO está acá aunque el post también opine: su caso se
     # resuelve donde nace, en HORA_ERRATA de ficma-2026-parse.py, porque lo que
     # hay que explicar es que la LÁMINA se contradice. Declararlo dos veces
