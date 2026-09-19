@@ -43,6 +43,7 @@ El paso lee los rótulos, no cuenta filas.
 Lee   fuentes/villadelcine-2026/programacion-2026.pdf  (del botón de la home)
 Esc.  festivals/staging/villadelcine-2026-parrilla.json
 """
+import html as _html
 import json, os, re, subprocess, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -85,7 +86,11 @@ def lineas(p0, p1):
             pag += 1
             continue
         x0, y0, x1, y1, inner = m.groups()
-        t = ' '.join(re.findall(r'>([^<]*)</word>', inner)).strip()
+        # `pdftotext -bbox-layout` devuelve XML: el apóstrofo y el ampersand
+        # viajan como entidades. Sin deshacerlas quedaban títulos como
+        # «I DON&apos;T KNOW WHAT TO DO» y «Q&amp;A», que no cruzan con
+        # ninguna otra fuente y ensucian lo que se publica.
+        t = _html.unescape(' '.join(re.findall(r'>([^<]*)</word>', inner))).strip()
         t = re.sub(r'\s+', ' ', t)
         if t:
             out.append((pag, float(x0), float(y0), float(x1), float(y1), t))
