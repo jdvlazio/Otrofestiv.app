@@ -250,11 +250,20 @@ def main():
         badge_hora = next((m.group(0) for t in _alto
                            for m in [re.search(r'\d{1,2}:\d{2}\s*[AP]M?', t, re.I)] if m), '')
 
-        hora = hora24_pdf(campos.get('hora', '')) or hora24_pdf(badge_hora)
+        # UNA LÁMINA PUEDE TRAER DOS FUNCIONES. «HORA: 1:30 pm y 4:00 pm» es una
+        # obra que se proyecta DOS veces el mismo día, en la misma sede, y el
+        # festival le dedica una sola página. Tomar solo la primera —que es lo
+        # que hacía este parser— perdía el otro pase entero: pasó con «Onward»
+        # el sábado 19 y el domingo 20, dos funciones que no llegaron a la app.
+        # El badge de arriba lo dice igual: «1:30 PM Y 4:00 PM».
+        _todas = [hora24_pdf(x) for x in re.findall(
+            r'\d{1,2}[:.]\d{2}\s*[ap]\.?m?\.?', campos.get('hora', ''), re.I)]
+        _todas = [h for h in dict.fromkeys(_todas) if h]
+        hora = (_todas[0] if _todas else '') or hora24_pdf(badge_hora)
         errata = HORA_ERRATA.get(pag)
         dur = re.search(r'(\d+)', campos.get('duracion', ''))
         anio = re.search(r'(19|20)\d{2}', campos.get('anio', ''))
-        funcs.append({
+        reg = {
             'pagina': pag,
             'maqueta': maqueta,
             'costo': campos.get('costo', ''),
@@ -272,7 +281,13 @@ def main():
             'duracion_min': int(dur.group(1)) if dur else None,
             'anio': int(anio.group(0)) if anio else None,
             'has_qa': has_qa,
-        })
+        }
+        funcs.append(reg)
+        # el resto de los pases de la misma lámina: misma ficha, otra hora
+        for _h in _todas[1:]:
+            funcs.append({**reg, 'hora': _h,
+                          '_mismo_dia_otro_pase': 'la lámina anuncia '
+                                                  + ' y '.join(_todas)})
 
     # sede/sala/ciclo, en el mismo paso: si vive fuera, una recorrida del parser
     # lo pisa (pasó en FICDEH y costó una tarde).

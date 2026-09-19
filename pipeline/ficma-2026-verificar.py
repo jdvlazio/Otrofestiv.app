@@ -9,9 +9,12 @@ que terminó publicado.
 
 LAS CUATRO PRUEBAS, y cada una puede fallar sola:
 
-  1 · CADA PÁGINA, UNA COSA. Las 78 páginas tienen que ser portada de día o
-      función, sin repetirse y sin saltarse ninguna. Es la cobertura inversa:
-      verificar lo transcrito no verifica lo descartado.
+  1 · CADA PÁGINA, CONTADA. Las 78 páginas tienen que ser portada de día o
+      función, sin saltarse ninguna. Es la cobertura inversa: verificar lo
+      transcrito no verifica lo descartado. Una página PUEDE dar más de una
+      función —«HORA: 1:30 pm y 4:00 pm» son dos pases de la misma obra el
+      mismo día— y esos registros extra lo declaran con `_mismo_dia_otro_pase`;
+      repetirse SIN declararlo sigue siendo un fallo.
 
   2 · EL DÍA, DOS VECES. El día de una función sale de la ÚLTIMA portada
       («PROGRAMACIÓN / SÁBADO 19 DE SEPTIEMBRE»), que es un arrastre: si una
@@ -77,9 +80,10 @@ def main():
     vistas = [f['pagina'] for f in crudo['funciones']] + \
              [p['pagina'] for p in crudo['portadas']] + \
              [s['pagina'] for s in crudo.get('sin_clasificar', [])]
-    if len(vistas) != len(set(vistas)):
+    _declarados = sum(1 for f in crudo['funciones'] if f.get('_mismo_dia_otro_pase'))
+    if len(vistas) - _declarados != len(set(vistas)):
         rep = {p for p in vistas if vistas.count(p) > 1}
-        fallos.append(f'páginas contadas dos veces: {sorted(rep)}')
+        fallos.append(f'páginas contadas dos veces sin declararlo: {sorted(rep)}')
     faltan = sorted(set(ocr) - set(vistas))
     if faltan:
         fallos.append(f'páginas del PDF que nadie leyó: {faltan}')
@@ -108,13 +112,17 @@ def main():
 
         # la hora del badge, contra la del campo
         ls = [l for l in ocr.get(f['pagina'], []) if l['w'] > l['h'] and l['y'] < 0.08]
-        badge_h = next((hhmm(l['t']) for l in ls
-                        if re.search(r'\d{1,2}:\d{2}\s*[AP]', l['t'], re.I)), '')
+        # El badge puede traer las DOS horas («1:30 PM Y 4:00 PM»): se aceptan
+        # todas, no solo la primera, o el segundo pase parecería un error.
+        badge_hs = [hhmm(x) for l in ls
+                    for x in re.findall(r'\d{1,2}:\d{2}\s*[AP]M?', l['t'], re.I)]
+        badge_hs = [h for h in dict.fromkeys(badge_hs) if h]
+        badge_h = badge_hs[0] if badge_hs else ''
         if not badge_h:
             mirar.append(f"{f['pagina']}: sin hora en el badge («{f['titulo'][:40]}»)")
         elif f.get('_hora_errata'):
             mirar.append(f"{f['pagina']}: errata declarada — {f['_hora_errata']}")
-        elif badge_h != f['hora']:
+        elif f['hora'] not in badge_hs:
             fallos.append(f"{f['pagina']}: la columna dice {f['hora']} y el badge "
                           f"dice {badge_h} — «{f['titulo'][:40]}»")
 
