@@ -1,0 +1,83 @@
+{
+ "_provenance": {
+  "fuente": "lo que pipeline/ig-programa.py avisó sobre los 8 carruseles diarios de @cinemanizales_ficma y ya está entendido",
+  "capturado": "2026-09-18",
+  "metodo": "cada aviso se resolvió ABRIENDO la lámina (fuentes/ig/<shortcode>/NN.jpg), no el pie ni el preview"
+ },
+ "ok": [
+  {
+   "shortcode": "DdcBl--G0Ub",
+   "lamina": 12,
+   "por_que": "Entrelazados: la lámina se contradice sola (badge 7:20 PM, campo HORA 7:00 pm), igual que su página del PDF; se publica 19:00 (HORA_ERRATA en ficma-2026-parse.py) y va en la pregunta al festival"
+  },
+  {
+   "shortcode": "DdcBl--G0Ub",
+   "lamina": 13,
+   "por_que": "La Marcha del Hambre: badge 8:00 PM y campo HORA 7:00 pm, calcado del PDF; se publica 20:00 (HORA_ERRATA) y va en la pregunta al festival. El pie del viernes no la nombra"
+  },
+  {
+   "shortcode": "DdcBl--G0Ub",
+   "lamina": 14,
+   "por_que": "Noche de Vinilos: el OCR lee «Dj Kalibre» como LUGAR; la sede es Clandestino Records (pie y lámina)"
+  },
+  {
+   "shortcode": "DdcCLKum08D",
+   "lamina": 11,
+   "por_que": "Concierto Sinfónico: la lámina dice «Óculo» y publicamos Centro Cultural Rogelio Salmona, que es donde está el Óculo"
+  },
+  {
+   "shortcode": "DdcA4G8m6O0",
+   "lamina": 2,
+   "por_que": "Muestra de Cortometrajes sáb 26: la lámina (y el PDF) dicen 10:00 am; el pie del mismo post dice «1:00 p.m. a 8:00 p.m.». Se publica 13:00 con 420 min (DISCREPA en ficma-2026-ig-dias.py) y va en la pregunta al festival"
+  },
+  {
+   "shortcode": "DdcA4G8m6O0",
+   "lamina": 0,
+   "por_que": "Largometrajes UBPD sáb 26 10:00–12:00 solo está en el pie, sin sede: no se publica (SOLO_EN_IG en ficma-2026-ig-dias.py)"
+  },
+  {
+   "titulo": "La Marcha del Hambre",
+   "por_que": "tiene lámina propia (la 13 del viernes) pero su badge dice 20:00 y el campo 19:00; publicamos 20:00"
+  },
+  {
+   "titulo": "Cine en Movimiento: Taller Teórico-Práctico de Plano Secuencia",
+   "por_que": "franja de talleres: vive en laficma.com/talleresficma17, no en los posts diarios"
+  },
+  {
+   "titulo": "Un sueño se hace realidad en 1 minuto",
+   "por_que": "franja de talleres (web), no en los posts diarios"
+  },
+  {
+   "titulo": "Museos sentimentales. Notas sueltas sobre el coleccionismo",
+   "por_que": "franja (web), no en los posts diarios"
+  },
+  {
+   "titulo": "Taller de Periodismo Cultural",
+   "por_que": "franja de talleres (web), no en los posts diarios"
+  },
+  {
+   "titulo": "Colombia a Través de sus Monedas y Billetes: Historia y Desarrollo del Coleccionismo",
+   "por_que": "franja (web), no en los posts diarios"
+  },
+  {
+   "titulo": "Coleccionismo, Patrimonio y las distintas formas en que los objetos cuentan historias y construyen memoria",
+   "por_que": "franja (web), no en los posts diarios"
+  },
+  {
+   "titulo": "Coleccionar para recordar. Museos, arte y la construcción de la memoria",
+   "por_que": "franja (web), no en los posts diarios"
+  },
+  {
+   "titulo": "Propiedad intelectual en el audiovisual",
+   "por_que": "franja de talleres (web), no en los posts diarios"
+  },
+  {
+   "titulo": "Poniéndole voz a tu historia silenciada",
+   "por_que": "franja de talleres (web), no en los posts diarios"
+  },
+  {
+   "titulo": "Taller de animación de fotografías e imágenes de cero a cien para dummies con ias",
+   "por_que": "franja de talleres (web), no en los posts diarios"
+  }
+ ]
+}

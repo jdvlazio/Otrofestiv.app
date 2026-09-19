@@ -45,6 +45,10 @@
   {
    "cmd": "python3 pipeline/ficma-2026-verificar.py",
    "que": "doble verificación: día y hora de cada función contra el badge de su propia página, cobertura de las 78 páginas y crudo contra lo publicado"
+  },
+  {
+   "cmd": "python3 pipeline/ig-programa.py ficma-2026 --pies festivals/staging/ficma-2026-ig-pies.json DdcEwsJmvmy DdcEFYkGnCR DdcDr3Zmtjf DdcDTCamlsP DdcC4ydG1Jt DdcCLKum08D DdcBl--G0Ub DdcA4G8m6O0",
+   "que": "las 78 LÁMINAS de los 8 carruseles diarios de IG, leídas con OCR y cruzadas en las dos direcciones contra lo publicado; lo ya entendido está en ficma-2026-ig-correcciones.json"
   }
  ]
 }
