@@ -28,12 +28,12 @@
   {
    "shortcode": "DdcA4G8m6O0",
    "lamina": 2,
-   "por_que": "Muestra de Cortometrajes sáb 26: publicada a las 10:00 como dicen la lámina (badge y HORA) y el PDF; el pie del mismo post dice «1:00 p.m. a 8:00 p.m.» y va en la pregunta al festival"
+   "por_que": "Muestra de Cortometrajes sáb 26: la lámina y el PDF dicen 10:00 am; el pie dice «1:00 p.m. a 8:00 p.m.» y el festival lo confirmó por DM el 19 sep. Se publica 13:00."
   },
   {
    "shortcode": "DdcA4G8m6O0",
    "lamina": 0,
-   "por_que": "Largometrajes UBPD sáb 26 10:00–12:00 solo está en el pie, sin sede: no se publica (SOLO_EN_IG en ficma-2026-ig-dias.py)"
+   "por_que": "Largometrajes UBPD sáb 26 10:00–12:00: el pie da la hora y el festival dio la sede por DM el 19 sep (Casa de la Cultura Palogrande). Publicados; no tienen lámina propia."
   },
   {
    "titulo": "La Marcha del Hambre",
@@ -82,6 +82,10 @@
   {
    "titulo": "Escribir con la cámara: Del guion a la puesta en escena",
    "por_que": "franja de talleres: su sede la dio el formulario de inscripción y la lámina 5 del carrusel de la franja (Ddd3VIODXLK), no los posts diarios"
+  },
+  {
+   "titulo": "Largometrajes UBPD",
+   "por_que": "sin lámina propia: hora del pie del sáb 26, sede por DM del festival (19 sep)"
   }
  ]
 }

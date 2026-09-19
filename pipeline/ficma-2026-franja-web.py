@@ -263,6 +263,14 @@ def formulario(url):
 # pie. Donde lámina y formulario coinciden contra la página, mandan ellas.
 IG_FRANJA = 'https://www.instagram.com/p/Ddd3VIODXLK/'
 CORRECCIONES = {
+    # RESPUESTA OFICIAL DEL FESTIVAL (DM de Instagram a Juan, 19 sep 2026, captura en
+    # fuentes/ficma-2026/dm-festival-2026-09-19.jpg): «Taller de animación es a
+    # las 4 pm hasta las 7 PM y un sueño se hace realidad 9 am».
+    'Taller de animación de fotografías e imágenes de cero a cien para dummies con ias': {
+        'hora': '16:00', 'duracion_min': 180,
+        'por_que': 'la página y el formulario dicen 5:00 pm y la lámina 6 del carrusel '
+                   '4:00 pm; el festival respondió por DM (19 sep): «es a las 4 pm hasta '
+                   'las 7 PM». Manda la respuesta oficial.'},
     'Poniéndole voz a tu historia silenciada': {
         'dia': '2026-09-25', 'hora': '17:00', 'duracion_min': 120,
         'sede_cruda': 'Biblioteca Pública Satélite Palogrande',
@@ -272,12 +280,11 @@ CORRECCIONES = {
                    'viernes 25, 5:00 a 7:00 pm, en la misma sede. Dos fuentes contra una.'},
 }
 # Y lo que se pregunta, porque las fuentes NO se ponen de acuerdo:
+# Las dos preguntas que hubo (animación 16:00/17:00, «Un sueño» am/pm) las
+# respondió el festival por DM el 19 sep: 16:00–19:00 y 9:00 am. Ya no hay.
 PREGUNTAS = [
-    '«Taller de animación…» (jue 24): la página y el formulario dicen 5:00 pm; la '
-    'lámina 6 del carrusel de IG dice 4:00 pm. Se publica 5:00 pm (dos fuentes) y se pregunta.',
-    '«Un sueño se hace realidad en 1 minuto» (dom 20): la página y la lámina 3 del '
-    'carrusel dicen 9:00 am; el formulario dice «9:00 p. m. a 11:30 p. m.». Se publica '
-    '9:00 am y se pregunta.',
+    '«Un sueño se hace realidad en 1 minuto» (dom 20): el formulario dice «9:00 p. m.»; '
+    'la página, la lámina y el festival (DM 19 sep) dicen 9:00 am. Se publica 9:00 am.',
 ]
 
 
