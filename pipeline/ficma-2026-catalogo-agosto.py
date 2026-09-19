@@ -43,6 +43,10 @@ def main():
     json.dump({'_provenance': {
         'fuente': 'festivals/ficma-2026.json en origin/main — la edición de AGOSTO, con sus 90 funciones',
         'capturado': '2026-09-15',
+        # CONGELADO A PROPÓSITO: es una foto del JSON publicado de la edición de
+        # agosto, no una lectura de una fuente viva. `fuentes-frescas.py` la
+        # salta por esta línea; sin ella parecería una captura que envejece.
+        'congelado': 'foto de la edición de agosto: no hay fuente que re-leer',
         'por_que': 'la reprogramación de septiembre publica 11 funciones; esta foto guarda '
                    'la ficha de las 90 obras para cuando salga el resto de la parrilla, y '
                    'es lo que lee ficma-2026-septiembre.py (no el JSON publicado, que cambia)'},

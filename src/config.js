@@ -640,7 +640,7 @@ export const FESTIVAL_CONFIG={
     name:'FICMA',fullName:'FICMA — Feria Internacional de Cine de Manizales',shortName:'FICMA',
     city:'Manizales',country:'CO',
     dates:'19–26 SEP',dates_en:'SEP 19–26',year:2026,timezoneOffset:'-05:00',
-    keyArt:'/assets/keyart/ficma2026.jpg',
+    keyArt:'/assets/keyart/ficma2026-v2.jpg',
     // REPROGRAMADO. El festival se aplazó por el sismo del 10 ago y volvió del
     // 19 al 26 de SEPTIEMBRE, confirmado por sus dos fuentes propias (la bio de
     // @cinemanizales_ficma y laficma.com). El bloque de estado APLAZADO se
@@ -649,11 +649,23 @@ export const FESTIVAL_CONFIG={
     // propósito: [festival-aplazado] lo busca por texto y un comentario que lo
     // nombre se lee como si el bloque siguiera puesto.)
     //
-    // La programación va INCOMPLETA a propósito. El festival declara «más de 60
-    // proyecciones» y ha publicado once; la parrilla sale post a post en su
-    // Instagram, no en su web. La de agosto NO se pudo remapear —cambian día,
-    // hora y sede—, así que lo que no está anunciado no se publica: una función
-    // en una fecha que nadie declaró es peor que una función ausente.
+    // LA PARRILLA YA ESTÁ COMPLETA. El 18 sep, a un día de abrir, el festival
+    // publicó en su home el PDF de programación: 78 páginas, una por función.
+    // Son 70 funciones más las 11 actividades de la franja académica, que va
+    // aparte (/talleresficma17/). Hasta ese día se armaba post a post desde
+    // Instagram y había once: por eso el histórico de esta entrada habla de una
+    // programación incompleta.
+    //
+    // EL AFICHE, corregido el 18 sep. `ficma2026.jpg` era el de antes del sismo
+    // y llevaba impreso «10 AL 17 DE AGOSTO». El festival SÍ publicó uno con las
+    // fechas nuevas —«19 AL 26 DE SEPTIEMBRE»—: está en su biblioteca de medios
+    // desde el 10 de septiembre, como og:image de la home, con el nombre
+    // FICMA-17-INSTAGRAM-POST-1.png. Se me pasó al revisar la web y estuve a
+    // punto de reclamárselo al festival.
+    //
+    // Viene en 4:5 (1080×1350), que es el formato de post de Instagram, y es la
+    // ÚNICA versión con las fechas buenas: su biblioteca no tiene ninguna 2:3.
+    // Se estira, que es la regla del riel (scripts/compose-keyart.py).
     storageKey:'ficma2026_',festivalStartStr:'2026-09-19T00:00:00',festivalEndStr:'2026-09-26T23:59:00',
     festivalDates:{'2026-09-19':'2026-09-19','2026-09-20':'2026-09-20','2026-09-21':'2026-09-21','2026-09-22':'2026-09-22','2026-09-23':'2026-09-23','2026-09-24':'2026-09-24','2026-09-25':'2026-09-25','2026-09-26':'2026-09-26'},
     days:[{k:'2026-09-19',d:19,lbl:'SÁB'},{k:'2026-09-20',d:20,lbl:'DOM'},{k:'2026-09-21',d:21,lbl:'LUN'},{k:'2026-09-22',d:22,lbl:'MAR'},{k:'2026-09-23',d:23,lbl:'MIÉ'},{k:'2026-09-24',d:24,lbl:'JUE'},{k:'2026-09-25',d:25,lbl:'VIE'},{k:'2026-09-26',d:26,lbl:'SÁB'}],
@@ -1128,7 +1140,10 @@ export const SECTION_ARCHETYPES = {
   '🌍 Estrenos Internacionales': 'Muestra / País',
   '🕊️ En alianza con el FICDEH': 'Especiales / Eventos',
   '🎨 Arte': 'Perspectivas / Miradas',
+  // El PDF de programación de septiembre la escribe «POP ART»; en agosto era
+  // «Arte Pop». Se conservan las dos: la vieja sigue en el JSON archivado.
   '🥫 Arte Pop': 'Perspectivas / Miradas',
+  '🥫 Pop Art': 'Perspectivas / Miradas',
   '💥 Cómic': 'Perspectivas / Miradas',
   '🎵 Música': 'Perspectivas / Miradas',
   '🏗️ Arquitectura': 'Perspectivas / Miradas',
@@ -1136,6 +1151,14 @@ export const SECTION_ARCHETYPES = {
   '🪙 Numismática': 'Retrospectiva / Tributo',
   '🌱 Medio Ambiente': 'Perspectivas / Miradas',
   '🏛️ Red de Museos': 'Especiales / Eventos',
+  // Las tres que estrenó la parrilla de septiembre. «Estrenos Locales» es la
+  // muestra de realizadores de Manizales y el Eje Cafetero: compite, como las
+  // otras dos de estrenos. Las funciones especiales y la fiesta de clausura no
+  // son cine en sala —un concierto, una noche de vinilos, una fiesta— y toman
+  // el color de eventos.
+  '🏔️ Estrenos Locales': 'Competencia',
+  '✨ Funciones Especiales': 'Especiales / Eventos',
+  '🎉 Fiesta de Clausura': 'Especiales / Eventos',
   // Franja Académica de FICMA — el festival la divide en talleres y charlas.
   '🛠️ Talleres': 'Charlas / Industria',
   // #NarrarElFuturo 2026 (Bogotá, 15–20 SEP): las temáticas con que el propio

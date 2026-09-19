@@ -1,0 +1,218 @@
+{
+ "_provenance": {
+  "fuente": "TMDB (api.themoviedb.org) + Letterboxd por el redirect /tmdb/<id>",
+  "capturado": "2026-09-18",
+  "que_aporta": "póster, género, título en inglés, sinopsis EN y lbSlug de las obras que la edición de agosto no tenía",
+  "candado": "director ✓ SIEMPRE, más título idéntico. Cada ficha dice en `_verificado` con qué se comprobó."
+ },
+ "fichas": {
+  "Apprendre": {
+   "tmdb_id": 1273044,
+   "_verificado": "director ✓ + año/duración (TMDB: 2025, 105 min)",
+   "genre": "Documental",
+   "synopsis_en": "In the Makarenko public elementary school in the Paris outskirts, children want to learn and to be cheered while teachers know they do not only teach, they also educate. With care, tenacity and efforts, children are trained to become not only responsible citizens but also human beings.",
+   "title_en": "Elementary",
+   "poster": "/assets/ficma/apprendre.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "elementary-2024"
+  },
+  "Ayuno y cenizas": {
+   "tmdb_id": 1756580,
+   "_verificado": "director ✓ + año/duración (TMDB: ?, 100 min)",
+   "genre": "Documental",
+   "synopsis_en": "Nestled in the mountains of Bogotá, an amateur theater group rehearses and stages the most famous of all plays, Oedipus Rex. Its members are musicians, actors, local artists, and some of them, users of crack cocaine. Testimonies about drugs, family, and the neighborhood—voices, hands, and faces, sometimes distant, sometimes fragile—contrast with the atmosphere of drums and incandescent lights of the theatrical creation. In the city's hills, Oedipus Rex is not an ancient play; it is a question about destiny, about the possibility of taking control of one's own life.",
+   "lbSlug": "ayuno-y-cenizas"
+  },
+  "Beautiful Losers": {
+   "tmdb_id": 27286,
+   "_verificado": "director ✓ + año/duración (TMDB: 2008, 90 min)"
+  },
+  "Buena Vista Social Club": {
+   "tmdb_id": 11779,
+   "_verificado": "director ✓ + año/duración (TMDB: 1999, 105 min)"
+  },
+  "Columbus": {
+   "tmdb_id": 414453,
+   "_verificado": "director ✓ + año/duración (TMDB: 2017, 104 min)"
+  },
+  "Con la fuerza del río": {
+   "tmdb_id": 1194822,
+   "_verificado": "director ✓ + año/duración (TMDB: 2023, 73 min)"
+  },
+  "Crumb": {
+   "tmdb_id": 26564,
+   "_verificado": "director ✓ + año/duración (TMDB: 1995, 121 min)"
+  },
+  "Dicen que tú y yo estamos locos": {
+   "tmdb_id": 1703481,
+   "_verificado": "director ✓ + año/duración (TMDB: ?, 77 min)",
+   "lbSlug": "dicen-que-tu-y-yo-estamos-locos"
+  },
+  "Dossier 137": {
+   "tmdb_id": 1294698,
+   "_verificado": "director ✓ + año/duración (TMDB: 2025, 115 min)",
+   "genre": "Crimen",
+   "synopsis": "Stéphanie, agente de policía de Asuntos Internos, es asignada a un caso relacionado con un joven gravemente herido durante una tensa y caótica manifestación en París. Si bien no encuentra pruebas de violencia policial ilegítima, el caso adquiere un cariz personal al descubrir que la víctima es de su ciudad natal y transformará el caso 137 en algo más que un simple número.",
+   "synopsis_lang": "es",
+   "synopsis_en": "When Internal Affairs officer Stéphanie investigates a young man severely injured during a chaotic Paris demonstration and finds no police misconduct, the routine case hits close to home upon her discovering the victim is from her native town.",
+   "title_en": "Case 137",
+   "poster": "/assets/ficma/dossier-137.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "case-137-2025"
+  },
+  "El hogar fue sepultado en esa tierra que nunca pudimos encontrar": {
+   "tmdb_id": 1663181,
+   "_verificado": "director ✓ + año/duración (TMDB: 2026, 92 min)",
+   "title_en": "Our Home Was Buried in a Land We Could Never Find"
+  },
+  "En busca del arca perdida": {
+   "tmdb_id": 85,
+   "_verificado": "director ✓ + año/duración (TMDB: 1981, 115 min)",
+   "title_en": "Raiders of the Lost Ark"
+  },
+  "Exit Through the Gift Shop": {
+   "tmdb_id": 39452,
+   "_verificado": "director ✓ + año/duración (TMDB: 2010, 88 min)"
+  },
+  "Habitante": {
+   "tmdb_id": 1571285,
+   "_verificado": "director ✓ + año/duración (TMDB: 2025, 88 min)"
+  },
+  "Herb & Dorothy": {
+   "tmdb_id": 37583,
+   "_verificado": "director ✓ + año/duración (TMDB: 2009, 89 min)"
+  },
+  "Juanpis González: El presidente de la gente": {
+   "tmdb_id": 1300182,
+   "_verificado": "director ✓ + año/duración (TMDB: 2024, 91 min)",
+   "genre": "Comedia",
+   "synopsis": "Cuando un snob colombiano mimado se convierte en presidente gracias a su dinero y sus conexiones, descubre que mantenerse en el poder requiere más de lo que esperaba.",
+   "synopsis_lang": "es",
+   "synopsis_en": "When a spoiled Colombian snob becomes president through money and connections, he finds staying in power takes more than he expected.",
+   "title_en": "Juanpis González: The People's President",
+   "poster": "/assets/ficma/juanpis-gonzalez-el-presidente-de-la-gente.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "juanpis-gonzalez-the-peoples-president"
+  },
+  "L'argent": {
+   "tmdb_id": 42112,
+   "_verificado": "director ✓ + año/duración (TMDB: 1983, 84 min)"
+  },
+  "La Grazia": {
+   "tmdb_id": 1397364,
+   "_verificado": "director ✓ + año/duración (TMDB: 2025, 133 min)"
+  },
+  "La Luz por Primera Vez": {
+   "tmdb_id": 1705404,
+   "_verificado": "director ✓ + año/duración (TMDB: 2026, 79 min)"
+  },
+  "La Marcha del Hambre": {
+   "tmdb_id": 1653698,
+   "_verificado": "director ✓ + año/duración (TMDB: 2024, 93 min)"
+  },
+  "Las Bravas": {
+   "tmdb_id": 1733124,
+   "_verificado": "director ✓ + año/duración (TMDB: 2026, 91 min)",
+   "genre": "Documental",
+   "synopsis": "Las Bravas revela cómo un grupo de mujeres hinchas desafía el machismo y reclama su lugar en el corazón de las barras bravas del fútbol colombiano.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficma/las-bravas.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "las-bravas"
+  },
+  "Loving Vincent": {
+   "tmdb_id": 339877,
+   "_verificado": "director ✓ + año/duración (TMDB: 2017, 80 min)"
+  },
+  "Manizales City": {
+   "tmdb_id": 271716,
+   "_verificado": "director ✓ + año/duración (TMDB: 1925, 52 min)"
+  },
+  "Memorias de un caracol": {
+   "tmdb_id": 1064486,
+   "_verificado": "director ✓ + año/duración (TMDB: 2024, 94 min)",
+   "title_en": "Memoir of a Snail"
+  },
+  "My Favourite Cake": {
+   "tmdb_id": 1234591,
+   "_verificado": "director ✓ + año/duración (TMDB: 2024, 95 min)"
+  },
+  "My Octopus Teacher": {
+   "tmdb_id": 682110,
+   "_verificado": "director ✓ + año/duración (TMDB: 2020, 85 min)"
+  },
+  "Onward": {
+   "tmdb_id": 508439,
+   "_verificado": "director ✓ + año/duración (TMDB: 2020, 102 min)",
+   "genre": "Aventura",
+   "synopsis": "Ambientado en un mundo de fantasía suburbana, dos hermanos elfos adolescentes, Ian y Barley Lightfood, se embarcan en una aventura en la que se proponen descubrir si existe aún algo de magia en el mundo que les permita pasar un último día con su padre, que falleció cuando ellos eran aún muy pequeños como para poder recordarlo.",
+   "synopsis_lang": "es",
+   "synopsis_en": "In a suburban fantasy world, two teenage elf brothers embark on an extraordinary quest to discover if there is still a little magic left out there.",
+   "poster": "/assets/ficma/onward.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "onward-2020"
+  },
+  "Que el cielo nos perdone": {
+   "tmdb_id": 1565878,
+   "_verificado": "director ✓ + año/duración (TMDB: 2025, ? min)"
+  },
+  "Record Safari": {
+   "tmdb_id": 696535,
+   "_verificado": "director ✓ + año/duración (TMDB: 2020, 102 min)"
+  },
+  "Semillas": {
+   "tmdb_id": 1529622,
+   "_verificado": "director ✓ + año/duración (TMDB: 2025, 100 min)",
+   "genre": "Drama",
+   "synopsis": "Shaira es una niña que emprende un viaje en busca de una semilla mágica que le devolverá a su querido caballo. A lo largo de su aventura, descubrirá que crecer significa seguir persiguiendo sus sueños, y que siempre hay una forma de lograr lo que realmente deseas, incluso cuando otros te dicen que no puedes hacerlo.",
+   "synopsis_lang": "es",
+   "synopsis_en": "In Eliana Niño’s poignant and charming feature debut, Shaira, a girl from the eastern plains of Colombia, dreams of participating in a coleo festival (an event similar to a rodeo). But after a recent drought severely damaged the crops, Shaira’s grandfather sells her horse without telling her. One day, he tells Shaira that the reason why some clouds take the shape of animals is that the sky traps them and won’t return them until it rains again. Shaira embarks on a journey to go in search of a special seed that will make the heavens rain again to bring her horse back.",
+   "poster": "/assets/ficma/semillas.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "semillas"
+  },
+  "Sois belle et tais-toi": {
+   "tmdb_id": 80543,
+   "_verificado": "director ✓ + año/duración (TMDB: 1958, 110 min)",
+   "genre": "Comedia",
+   "synopsis_en": "A beautiful 18-year-old orphan escapes from a reformatory and hooks up with a gang of jewel smugglers, and decides on a life of crime. However, she falls for and marries a policeman, putting a crimp in her criminal career.",
+   "title_en": "Be Beautiful and Shut Up",
+   "poster": "/assets/ficma/sois-belle-et-tais-toi.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "be-beautiful-and-shut-up"
+  },
+  "System K": {
+   "tmdb_id": 577100,
+   "_verificado": "director ✓ + año/duración (TMDB: 2020, 94 min)"
+  },
+  "The Dig": {
+   "tmdb_id": 532865,
+   "_verificado": "director ✓ + año/duración (TMDB: 2021, 112 min)"
+  },
+  "The General": {
+   "tmdb_id": 961,
+   "_verificado": "director ✓ + año/duración (TMDB: 1926, 74 min)"
+  },
+  "The Great Arch": {
+   "tmdb_id": 1290424,
+   "_verificado": "director ✓ + año/duración (TMDB: 2025, 104 min)"
+  },
+  "The Human Scale": {
+   "tmdb_id": 176182,
+   "_verificado": "director ✓ + año/duración (TMDB: 2012, 83 min)"
+  },
+  "Vinyl Nation": {
+   "tmdb_id": 692962,
+   "_verificado": "director ✓ + año/duración (TMDB: 2020, 92 min)"
+  }
+ },
+ "sin_ficha": [
+  "AA965: Un rescate imposible",
+  "Apuntes sobre anomalías y fantasmas",
+  "Cuando el dolor se nombra: Diálogo abierto y violencia de género",
+  "Cómo limpiar un espejo",
+  "Entrelazados",
+  "La Quimera de Oro",
+  "Las aventuras de Tintín"
+ ]
+}

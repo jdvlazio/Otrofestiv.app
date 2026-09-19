@@ -1,9 +1,12 @@
 {
  "_provenance": {
-  "fuente": "Instagram del festival (@festivalvilladelcine) — los nueve reels de Selección Oficial, uno por categoría",
-  "capturado": "2026-09-15",
+  "fuente": "Instagram del festival (@festivalvilladelcine) — los once reels de Selección Oficial, uno por categoría",
+  "capturado": "2026-09-17",
   "metodo": "TRANSCRIPCIÓN DEL PIE, no lectura de lámina: este festival escribe «🎬 Título – Dir. Nombre» en el texto del post. El pie se leyó por el embed, entero, sin truncar. No hizo falta la doble lectura que sí exigió Jardín.",
-  "alcance": "SOLO la Selección Oficial en competencia. NO hay una sola función con día, hora ni sede: a 8 días del arranque el festival no ha publicado parrilla."
+  "alcance": "SOLO la Selección Oficial en competencia. NO hay una sola función con día, hora ni sede: a 6 días del arranque el festival no ha publicado parrilla.",
+  "versales": {
+   "Sylwia Szkiłądź": "la fuente lo escribe «Sylwia SZKIŁĄDŹ»"
+  }
  },
  "_festival": {
   "nombre": "Festival Villa del Cine",
@@ -17,7 +20,8 @@
  },
  "_trampas": [
   "La página «Selección Oficial 2026» de villadelcine.com apunta a /festival-2024-2/ y su CONTENIDO es de 2024: encabezado nuevo sobre documento viejo. No sirve como fuente y lista categorías que no son las de esta edición.",
-  "El radar contó 7 categorías el 13 sep y son 8 a esa fecha: se le pasó «Mejor VR» (3 obras, 11 sep). Al contar categorías de este festival hay que enumerar los reels, no fiarse del acumulado anterior.",
+  "El radar contó 7 categorías el 13 sep y son 8 a esa fecha: se le pasó «Mejor VR» (3 obras, 11 sep). Al contar categorías de este festival hay que enumerar los reels, no fiarse del acumulado anterior. Volvió a pasar: el 16 y el 17 aparecieron dos categorías más (Cortometraje Nacional y Mejor Corto Internacional). Mientras el festival siga publicando, este catálogo se re-cuenta cada día.",
+  "El botón PROGRAMACIÓN de villadelcine.com enlaza un PDF de 2023 (Programafvdc23_compressed-1.pdf). Es la TERCERA capa de contenido viejo bajo encabezado nuevo, con la selección de 2024 y las fechas de 2026. Ninguna corrida debe transcribirlo.",
   "Hay categorías que NO son cine proyectable en sala de la manera habitual: «Mejor VR» (3 obras) y «Mejor Cortometraje Vertical» (5). Antes de montar hay que preguntar cómo se exhiben.",
   "CLAQUETAZO es un laboratorio de creación (3 equipos, filminutos), no una sección de la selección: no entra al catálogo."
  ],
@@ -65,6 +69,16 @@
   "International Universities": {
    "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdRpOgSqBkz/",
    "publicado": "2026-09-15",
+   "obras": 5
+  },
+  "Cortometraje Nacional": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdUN3Zoqwl4/",
+   "publicado": "2026-09-16",
+   "obras": 5
+  },
+  "Mejor Corto Internacional": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdWyHp1q4MG/",
+   "publicado": "2026-09-17",
    "obras": 5
   }
  },
@@ -497,6 +511,106 @@
    "_src": {
     "url": "https://www.instagram.com/festivalvilladelcine/reel/DdRpOgSqBkz/",
     "date": "2026-09-15"
+   }
+  },
+  {
+   "titulo": "Tuktu, Padre Maíz",
+   "director": "Mauricio Prieto Muriel",
+   "seccion": "Selección Oficial",
+   "categoria": "Cortometraje Nacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdUN3Zoqwl4/",
+    "date": "2026-09-16"
+   }
+  },
+  {
+   "titulo": "Sukua",
+   "director": "Omar Ospina Giraldo",
+   "seccion": "Selección Oficial",
+   "categoria": "Cortometraje Nacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdUN3Zoqwl4/",
+    "date": "2026-09-16"
+   }
+  },
+  {
+   "titulo": "Que el cielo nos perdone",
+   "director": "Andrés Buitrago",
+   "seccion": "Selección Oficial",
+   "categoria": "Cortometraje Nacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdUN3Zoqwl4/",
+    "date": "2026-09-16"
+   }
+  },
+  {
+   "titulo": "No es el Fin del Mundo",
+   "director": "Sebastián Florez",
+   "seccion": "Selección Oficial",
+   "categoria": "Cortometraje Nacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdUN3Zoqwl4/",
+    "date": "2026-09-16"
+   }
+  },
+  {
+   "titulo": "La Independencia",
+   "director": "Jhon Agudelo",
+   "seccion": "Selección Oficial",
+   "categoria": "Cortometraje Nacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdUN3Zoqwl4/",
+    "date": "2026-09-16"
+   }
+  },
+  {
+   "titulo": "Autokar",
+   "director": "Sylwia Szkiłądź",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Corto Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdWyHp1q4MG/",
+    "date": "2026-09-17"
+   }
+  },
+  {
+   "titulo": "Le Jeune Sofiane",
+   "director": "Fabien Ara",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Corto Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdWyHp1q4MG/",
+    "date": "2026-09-17"
+   }
+  },
+  {
+   "titulo": "Una Torreta en Llamas",
+   "director": "Humberto Flores",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Corto Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdWyHp1q4MG/",
+    "date": "2026-09-17"
+   }
+  },
+  {
+   "titulo": "On Hold",
+   "director": "Krishna Kumar Shukla",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Corto Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdWyHp1q4MG/",
+    "date": "2026-09-17"
+   }
+  },
+  {
+   "titulo": "Alivios",
+   "director": "Juan Manuel Gonzalez Fernandez",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Corto Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdWyHp1q4MG/",
+    "date": "2026-09-17"
    }
   }
  ]

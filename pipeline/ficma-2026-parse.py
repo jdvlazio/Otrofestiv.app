@@ -1,6 +1,16 @@
 # -*- coding: utf-8 -*-
 """Del OCR de FICMA 17 → un registro por función.
 
+SIRVE PARA LAS DOS EDICIONES. La plantilla del PDF de SEPTIEMBRE —la parrilla
+de la reprogramación, 78 páginas— es la misma que la de agosto, campo por
+campo. Copiar el parser habría sido la forma conocida de que dos copias del
+mismo criterio diverjan, así que el archivo de entrada y el de salida se pasan
+por argumento:
+
+    python3 pipeline/ficma-2026-parse.py [ocr.json] [crudo.json]
+
+Sin argumentos lee el OCR de agosto, que es como corrió hasta el 17 sep 2026.
+
 La plantilla del PDF es rígida y eso es lo que hace fiable el parseo: la
 columna de DATOS vive a la derecha (x≳0.55) y el póster ocupa la izquierda.
 Sin ese corte, las críticas impresas en el afiche («UMA AVENTURA SOBRE
@@ -21,6 +31,14 @@ ST = f'{REPO}/festivals/staging'
 # margen y pdftotext/Vision lo devuelven como líneas sueltas en x≳0.88, que
 # aterrizaban como nombre de sede.
 COL_X, COL_X_MAX = 0.55, 0.88
+# LA OTRA MAQUETA. Cinco páginas del PDF de septiembre no son ficha de obra sino
+# ACTIVIDAD —un concierto, una noche de vinilos, dos muestras de cortos, la
+# fiesta de clausura—: no llevan afiche a la izquierda y la columna de datos va
+# CENTRADA. Con el corte de la maqueta de película no se leía ni la sede ni la
+# hora y las cinco caían en «sin clasificar». Solo se usa cuando la columna de
+# la derecha no devolvió nada: en una ficha de obra, esta ventana se comería las
+# críticas impresas en el póster.
+COL_X_CENTRO, COL_X_CENTRO_MAX = 0.28, 0.80
 DIAS = 'LUNES|MARTES|MIÉRCOLES|MIERCOLES|JUEVES|VIERNES|SÁBADO|SABADO|DOMINGO'
 MES = {'ENERO':1,'FEBRERO':2,'MARZO':3,'ABRIL':4,'MAYO':5,'JUNIO':6,'JULIO':7,
        'AGOSTO':8,'SEPTIEMBRE':9,'OCTUBRE':10,'NOVIEMBRE':11,'DICIEMBRE':12}
@@ -55,9 +73,42 @@ SEDE_SALA = {
 # Por eso el ciclo no se deduce del guion: se declara.
 CICLOS = ('Cine al barrio', 'Cine bajo la niebla', 'Cine al aire libre')
 CICLO_DETRAS = {'Expoferias - Cine fest': ('Expoferias', 'Cine fest')}
+# La etiqueta LUGAR a veces recoge la línea de abajo, que no es el lugar: en la
+# noche de vinilos, «Clandestino Records / Dj Kalibre» — el DJ es el cartel, no
+# la sede. Se declara el recorte, no se adivina con una heurística sobre quién
+# parece nombre propio.
+COLA_QUE_NO_ES_SEDE = {'Clandestino Records Di Kalibre': 'Clandestino Records',
+                       'Clandestino Records Dj Kalibre': 'Clandestino Records'}
+# LA LÁMINA QUE SE CONTRADICE A SÍ MISMA. Cada página lleva la hora DOS veces:
+# en el badge de arriba y en el campo HORA de abajo. En 68 de 70 coinciden; en
+# las dos de la función de clausura, no. Verificado mirando las dos páginas.
+#
+# Y NO SE RESUELVEN IGUAL, porque hay una TERCERA lectura: el post de Instagram
+# del viernes 25.
+#   · «Entrelazados» — badge 7:20 PM, campo 7:00 pm, y el post la pone a las
+#     7:00 en la misma línea que «Cómo limpiar un espejo». Dos de tres dicen
+#     7:00: se publica 7:00.
+#   · «La Marcha del Hambre» — badge 8:00 PM, campo 7:00 pm, y el post NO la
+#     nombra. Manda el badge, que es lo único coherente con sus 90 min después
+#     de dos cortos de 11 y 30. Queda para preguntar.
+HORA_ERRATA = {
+    'p-70.jpg': ('19:00', '«Entrelazados»: el badge dice 7:20 PM y el campo HORA '
+                          '7:00 pm. El post de Instagram del viernes la pone a las '
+                          '7:00 junto a «Cómo limpiar un espejo»: gana el 7:00'),
+    'p-71.jpg': ('20:00', '«La Marcha del Hambre»: el badge dice 8:00 PM y el campo '
+                          'HORA 7:00 pm, copiado de la lámina anterior. El post del '
+                          'viernes no la nombra; manda el badge'),
+}
 ETIQUETAS = {'DIRECCIÓN':'director','DIRECCION':'director','PAÍS':'pais','PAIS':'pais',
              'DURACIÓN':'duracion','DURACION':'duracion','AÑO':'anio','ANO':'anio',
-             'LUGAR':'sede','HORA':'hora'}
+             'LUGAR':'sede','HORA':'hora',
+             # Solo aparece en las actividades que se PAGAN, y aparece: la
+             # noche de vinilos cuesta 20k y la fiesta de clausura tiene
+             # preventa. El festival dice en su web que «todas las actividades
+             # son de acceso libre» — con su propio programa en la mano, eso ya
+             # no es cierto, y una entrada que se cobra no puede publicarse
+             # como gratis.
+             'COSTO':'costo'}
 
 
 # [lib-unica] renombrada desde `hora24` el 17 ago 2026.
@@ -73,8 +124,32 @@ def hora24_pdf(s):
     return f'{h:02d}:{mm}'
 
 
+# La COMILLA DE APERTURA es lo único que Vision falla sistemáticamente en esta
+# plantilla: la devuelve como «¿'», «*», «ii» o «'» según la tipografía del
+# afiche de fondo. La de cierre sale bien. Por eso el título se toma hasta el
+# cierre y se le limpia el arranque — no hay título de esta parrilla que empiece
+# de verdad por un signo, y el original queda guardado en `_titulo_ocr`.
+# Las letras sueltas SOLO cuentan como basura si van seguidas de espacio: sin
+# esa condición la regla le comió el «Ll» a «Llueve sobre Babel» y lo publicó
+# como «ueve sobre Babel». Una limpieza que muerde el dato es peor que el dato
+# sucio, y por eso el título original se guarda siempre.
+_BASURA = re.compile(r'^\s*(?:[“"«*\'`~.,;:•·—–¿¡-]+\s*|(?:ii|ll|Il)\s+)+')
+
+
+def limpia_titulo(t):
+    t = re.sub(r'\s+', ' ', (t or '')).strip()
+    m = re.match(r'^(.*?)\s*["”»]\s*$', t)
+    if m:
+        t = m.group(1)
+    return _BASURA.sub('', t).strip(' "\'“”«»')
+
+
 def main():
-    d = json.load(open(f'{ST}/ficma-2026-ocr.json', encoding='utf-8'))
+    ENTRADA = sys.argv[1] if len(sys.argv) > 1 else f'{ST}/ficma-2026-ocr.json'
+    SALIDA = sys.argv[2] if len(sys.argv) > 2 else f'{ST}/ficma-2026-crudo.json'
+    d = json.load(open(ENTRADA, encoding='utf-8'))
+    # el bloque de procedencia no es una página
+    proc = d.pop('_provenance', None)
     paginas = sorted(d, key=lambda k: int(re.search(r'(\d+)', k).group(1)))
 
     dia_actual = None
@@ -105,8 +180,13 @@ def main():
             continue
 
         # ── página de función ──
-        col = [l for l in ls if COL_X <= l['x'] <= COL_X_MAX]
         es_etiqueta = lambda t: ETIQUETAS.get(lib.sinacento((re.match(r'^([A-ZÁÉÍÓÚÑ]+)\s*:', t.strip()) or [None, ''])[1]))
+        col = [l for l in ls if COL_X <= l['x'] <= COL_X_MAX]
+        if not any(es_etiqueta(l['t']) for l in col):
+            col = [l for l in ls if COL_X_CENTRO <= l['x'] <= COL_X_CENTRO_MAX]
+            maqueta = 'centrada'
+        else:
+            maqueta = 'ficha'
         campos = {}
         for i, l in enumerate(col):
             k = es_etiqueta(l['t'])
@@ -154,24 +234,39 @@ def main():
         # El título va entrecomillado y puede ocupar dos líneas. Cuando el OCR
         # pierde las comillas, se toma el resto de la cabecera tal cual.
         mt = re.search(r'[“"«]\s*(.+?)\s*[”"»]', resto, re.S)
-        titulo = re.sub(r'\s+', ' ', mt.group(1) if mt else resto).strip()
+        titulo_ocr = re.sub(r'\s+', ' ', mt.group(1) if mt else resto).strip()
+        titulo = limpia_titulo(titulo_ocr)
         # «PRESENCIA DEL DIRECTOR», sello en la esquina: es un Q&A. Solo lo trae
         # esta fuente; ninguna otra lo publica.
         has_qa = 'PRESENCIA' in lib.sinacento(texto) and 'DIRECTOR' in lib.sinacento(texto)
         # badge superior derecho: «JUEVES 13» y «3:00 PM»
-        badge_dia = next((l['t'] for l in ls if l['y'] < 0.08 and re.match(rf'({DIAS})\s+\d', lib.sinacento(l['t']))), '')
-        badge_hora = next((l['t'] for l in ls if l['y'] < 0.08 and re.search(r'\d{1,2}:\d{2}\s*[AP]', l['t'], re.I)), '')
+        # El badge superior derecho trae el día y la hora, a veces en dos líneas
+        # («9:00 AM» / «SÁBADO 19») y a veces en UNA sola («4:00 PM DOMINGO 20»).
+        # Buscarlos al PRINCIPIO de la línea perdía la mitad de las páginas —40
+        # de 70— y con ellas el contraste que hace de segunda lectura.
+        _alto = [l['t'] for l in ls if l['y'] < 0.08]
+        badge_dia = next((m.group(0) for t in _alto
+                          for m in [re.search(rf'({DIAS})\s+\d{{1,2}}', lib.sinacento(t))] if m), '')
+        badge_hora = next((m.group(0) for t in _alto
+                           for m in [re.search(r'\d{1,2}:\d{2}\s*[AP]M?', t, re.I)] if m), '')
 
+        hora = hora24_pdf(campos.get('hora', '')) or hora24_pdf(badge_hora)
+        errata = HORA_ERRATA.get(pag)
         dur = re.search(r'(\d+)', campos.get('duracion', ''))
         anio = re.search(r'(19|20)\d{2}', campos.get('anio', ''))
         funcs.append({
             'pagina': pag,
+            'maqueta': maqueta,
+            'costo': campos.get('costo', ''),
             'dia': dia_actual,
             'dia_badge': badge_dia,
-            'hora': hora24_pdf(campos.get('hora', '')) or hora24_pdf(badge_hora),
+            'hora': errata[0] if errata else hora,
+            **({'_hora_errata': f'{errata[1]}; se publica {errata[0]} y no {hora}'}
+               if errata else {}),
             'sede': campos.get('sede', ''),
             'seccion': seccion,
             'titulo': titulo,
+            **({'_titulo_ocr': titulo_ocr} if titulo != titulo_ocr else {}),
             'director': campos.get('director', ''),
             'pais': campos.get('pais', ''),
             'duracion_min': int(dur.group(1)) if dur else None,
@@ -182,7 +277,7 @@ def main():
     # sede/sala/ciclo, en el mismo paso: si vive fuera, una recorrida del parser
     # lo pisa (pasó en FICDEH y costó una tarde).
     for f in funcs:
-        cruda = f['sede']
+        cruda = COLA_QUE_NO_ES_SEDE.get(f['sede'], f['sede'])
         if cruda in CICLO_DETRAS:
             f['sede'], f['ciclo'] = CICLO_DETRAS[cruda]
             f['sala'] = ''
@@ -194,9 +289,11 @@ def main():
             f['sala'], f['ciclo'] = '', c
         f['_sede_cruda'] = cruda
 
-    json.dump({'_fuente': 'FICMA 17 - PROGRAMACIÓN.pdf · 87 páginas de imagen, OCR con Vision (macOS)',
+    json.dump({'_fuente': (proc or {}).get('fuente',
+                   'FICMA 17 - PROGRAMACIÓN.pdf · páginas de imagen, OCR con Vision (macOS)'),
+               '_provenance': proc,
                'portadas': portadas, 'funciones': funcs, 'sin_clasificar': sin_clasificar},
-              open(f'{ST}/ficma-2026-crudo.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+              open(SALIDA, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
     faltan = lambda k: sum(1 for f in funcs if not f[k])
     print(f'páginas {len(paginas)} · portadas de día {len(portadas)} · funciones {len(funcs)} · sin clasificar {len(sin_clasificar)}')

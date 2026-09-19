@@ -66,7 +66,28 @@ CATS = [
    ('Final Act', 'Babi Astolfi y Lisa Soares'),
    ('TV Entreaberta', 'Mateus Compart'),
    ('Memorias del Alba', 'Aldair Acosta')]),
+ # Las dos que faltaban: el festival las publicó el 16 y el 17 de septiembre,
+ # a una semana del arranque. Con estas son ONCE categorías, no nueve.
+ ('Cortometraje Nacional', 'DdUN3Zoqwl4', '2026-09-16', [
+   ('Tuktu, Padre Maíz', 'Mauricio Prieto Muriel'),
+   ('Sukua', 'Omar Ospina Giraldo'),
+   # La misma obra que FICMA proyecta el sáb 19 en Manizales: circula por los
+   # dos festivales, y por eso su ficha se hereda sola cuando haya parrilla.
+   ('Que el cielo nos perdone', 'Andrés Buitrago'),
+   ('No es el Fin del Mundo', 'Sebastián Florez'),
+   ('La Independencia', 'Jhon Agudelo')]),
+ ('Mejor Corto Internacional', 'DdWyHp1q4MG', '2026-09-17', [
+   ('Autokar', 'Sylwia Szkiłądź'),
+   ('Le Jeune Sofiane', 'Fabien Ara'),
+   ('Una Torreta en Llamas', 'Humberto Flores'),
+   ('On Hold', 'Krishna Kumar Shukla'),
+   ('Alivios', 'Juan Manuel Gonzalez Fernandez')]),
 ]
+
+# El festival escribe algunos apellidos en VERSALES («Sylwia SZKIŁĄDŹ»), que es
+# una convención de créditos, no la forma del nombre. Se escribe como se escribe
+# un nombre; queda dicho acá para que no parezca una transcripción descuidada.
+VERSALES = {'Sylwia Szkiłądź': 'la fuente lo escribe «Sylwia SZKIŁĄDŹ»'}
 
 obras = []
 cats = {}
@@ -79,10 +100,11 @@ for nombre, sc, fecha, lista in CATS:
 
 out = {
  '_provenance': {
-   'fuente': 'Instagram del festival (@festivalvilladelcine) — los nueve reels de Selección Oficial, uno por categoría',
-   'capturado': '2026-09-15',
+   'fuente': 'Instagram del festival (@festivalvilladelcine) — los once reels de Selección Oficial, uno por categoría',
+   'capturado': '2026-09-17',
    'metodo': 'TRANSCRIPCIÓN DEL PIE, no lectura de lámina: este festival escribe «🎬 Título – Dir. Nombre» en el texto del post. El pie se leyó por el embed, entero, sin truncar. No hizo falta la doble lectura que sí exigió Jardín.',
-   'alcance': 'SOLO la Selección Oficial en competencia. NO hay una sola función con día, hora ni sede: a 8 días del arranque el festival no ha publicado parrilla.'},
+   'alcance': 'SOLO la Selección Oficial en competencia. NO hay una sola función con día, hora ni sede: a 6 días del arranque el festival no ha publicado parrilla.',
+   'versales': VERSALES},
  '_festival': {
    'nombre': 'Festival Villa del Cine', 'edicion': 12,
    'ciudad': 'Villa de Leyva, Boyacá',
@@ -93,7 +115,8 @@ out = {
    'radar': '#570'},
  '_trampas': [
    'La página «Selección Oficial 2026» de villadelcine.com apunta a /festival-2024-2/ y su CONTENIDO es de 2024: encabezado nuevo sobre documento viejo. No sirve como fuente y lista categorías que no son las de esta edición.',
-   'El radar contó 7 categorías el 13 sep y son 8 a esa fecha: se le pasó «Mejor VR» (3 obras, 11 sep). Al contar categorías de este festival hay que enumerar los reels, no fiarse del acumulado anterior.',
+   'El radar contó 7 categorías el 13 sep y son 8 a esa fecha: se le pasó «Mejor VR» (3 obras, 11 sep). Al contar categorías de este festival hay que enumerar los reels, no fiarse del acumulado anterior. Volvió a pasar: el 16 y el 17 aparecieron dos categorías más (Cortometraje Nacional y Mejor Corto Internacional). Mientras el festival siga publicando, este catálogo se re-cuenta cada día.',
+   'El botón PROGRAMACIÓN de villadelcine.com enlaza un PDF de 2023 (Programafvdc23_compressed-1.pdf). Es la TERCERA capa de contenido viejo bajo encabezado nuevo, con la selección de 2024 y las fechas de 2026. Ninguna corrida debe transcribirlo.',
    'Hay categorías que NO son cine proyectable en sala de la manera habitual: «Mejor VR» (3 obras) y «Mejor Cortometraje Vertical» (5). Antes de montar hay que preguntar cómo se exhiben.',
    'CLAQUETAZO es un laboratorio de creación (3 equipos, filminutos), no una sección de la selección: no entra al catálogo.'],
  '_categorias': cats,

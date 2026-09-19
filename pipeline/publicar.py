@@ -42,6 +42,50 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONSERVAR = {'_src', '_pendiente', '_inherited', '_nota', '_acceso'}
 
 
+def _slot(f):
+    """Lo que una persona necesita para NO equivocarse de puerta ni de hora."""
+    return (f.get('day', ''), f.get('time', ''),
+            (f.get('venue') or '').split(' - ')[0], f.get('sala', ''),
+            'libre' if f.get('is_free') else 'pago')
+
+
+def diff_contra_produccion(viejo, nuevo):
+    """Qué cambia de lo que ya está en la calle, obra por obra.
+
+    POR QUÉ SE IMPRIME SIEMPRE. La compuerta de pérdida de abajo cuenta CAMPOS:
+    ve que no desaparezcan datos, pero no ve que una función se mueva de hora o
+    de sede, que es el error que manda a alguien a la puerta equivocada. El 18
+    sep 2026 tres funciones de FICMA cambiaron de hora entre dos publicaciones y
+    lo único que lo mostró fue un diff que hice a mano, una vez, por casualidad.
+    Lo que se revisa por casualidad no se revisa.
+
+    No es una compuerta: es un informe. Frenar una publicación porque una hora
+    cambió sería frenar justo lo que hay que publicar durante un festival. Pero
+    queda escrito en el log y en la cara de quien publica."""
+    def indice(films):
+        ix = {}
+        for f in films or []:
+            ix.setdefault(norm_t(f.get('title', '')), []).append(f)
+        return ix
+
+    def norm_t(t):
+        import unicodedata
+        t = ''.join(c for c in unicodedata.normalize('NFD', (t or '').lower())
+                    if unicodedata.category(c) != 'Mn')
+        return ' '.join(t.split())
+
+    va, vb = indice(viejo.get('films')), indice(nuevo.get('films'))
+    altas = sorted(set(vb) - set(va))
+    bajas = sorted(set(va) - set(vb))
+    movidas = []
+    for t in sorted(set(va) & set(vb)):
+        sa = sorted(_slot(f) for f in va[t])
+        sb = sorted(_slot(f) for f in vb[t])
+        if sa != sb:
+            movidas.append((vb[t][0].get('title', t), sa, sb))
+    return altas, bajas, movidas
+
+
 def limpio(d):
     return {k: v for k, v in d.items() if not k.startswith('_') or k in CONSERVAR}
 
@@ -112,6 +156,24 @@ def publicar(fid, forzar=False):
     # ── ¿esta publicación PIERDE datos? ─────────────────────────────────────
     if os.path.exists(out_p):
         viejo = json.load(open(out_p, encoding='utf-8'))
+        _alt, _baj, _mov = diff_contra_produccion(viejo, out)
+        if _alt or _baj or _mov:
+            print(f'· cambios contra lo publicado: +{len(_alt)} obra(s), '
+                  f'-{len(_baj)}, {len(_mov)} movida(s)')
+            for _t, _sa, _sb in _mov[:10]:
+                for _a, _b in zip(_sa + [None] * len(_sb), _sb + [None] * len(_sa)):
+                    if _a != _b:
+                        _f = lambda x: ('—' if x is None else
+                                        f'{x[0][-2:]}·{x[1]}·{x[2][:22]}'
+                                        + (f'·{x[3]}' if x[3] else '') +
+                                        ('' if x[4] == 'libre' else '·PAGO'))
+                        print(f'    ~ {_t[:40]:42} {_f(_a)}  →  {_f(_b)}')
+            for _t in _baj[:6]:
+                print(f'    - {_t[:60]}')
+            for _t in _alt[:6]:
+                print(f'    + {_t[:60]}')
+            if len(_alt) > 6 or len(_baj) > 6 or len(_mov) > 10:
+                print('    … (recortado)')
         ca, cb = _cobertura(viejo.get('films') or []), _cobertura(out['films'])
         perdidos = {k: (ca[k], cb[k]) for k in ca if cb[k] < ca[k]}
         menos_films = len(viejo.get('films') or []) - len(out['films'])

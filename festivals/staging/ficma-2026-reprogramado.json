@@ -1,9 +1,10 @@
 {
  "_provenance": {
   "fuente": "laficma.com (/estrenosficma17/ y /talleresficma17/) + Instagram @cinemanizales_ficma, post a post",
-  "capturado": "2026-09-15",
-  "metodo": "La web NO tiene parrilla: su menú solo ofrece ESTRENOS y TALLERES. El resto sale de los posts, que desde el 14 sep ya traen la función entera (día · hora · sede · acceso). Los pies se leyeron por embed, completos.",
-  "alcance": "9 funciones y 4 talleres publicados. El festival declara «más de 60 proyecciones»: falta la inmensa mayoría."
+  "url": "https://laficma.com/estrenosficma17/",
+  "capturado": "2026-09-17",
+  "metodo": "La web NO tiene parrilla: su menú solo ofrece ESTRENOS y TALLERES. El resto sale de los posts, que desde el 14 sep ya traen la función entera (día · hora · sede · acceso). Los pies se leyeron EN EL NAVEGADOR, con sesión: el endpoint de embed dejó de devolver el pie y da falso vacío.",
+  "alcance": "15 funciones publicadas. El festival declara «más de 60 proyecciones»: falta la inmensa mayoría. La franja académica va aparte, en ficma-2026-franja-web.json."
  },
  "_festival": {
   "nombre": "FICMA — Feria Internacional de Cine de Manizales",
@@ -21,7 +22,7 @@
  "_abierto": [
   "DOS «aperturas»: «Función apertura» (El príncipe de Nanawa, sáb 19 · 09:00) y «Función Inaugural» (El hogar fue sepultado, sáb 19 · 19:00). Preguntar cuál es cuál.",
   "La home de laficma.com fecha El príncipe de Nanawa el 16 de septiembre; el post dice sábado 19. El 16 es miércoles y cae antes del arranque. Sin resolver.",
-  "El 11 sep la página de talleres listaba SEIS (con Franco Lolli e Isabella Vega) y el 13 devolvió cuatro. No se afirma que se cayeran: puede ser lectura incompleta. Volver a mirar esa página.",
+  "La página de talleres se volvió a leer el 17 sep, ya con parser: son ONCE actividades (ficma-2026-franja-web.json). El taller de Franco Lolli sigue anunciado en el párrafo de entrada y NO tiene ficha: preguntar si se cayó.",
   "Proimágenes (ntd=1320) sigue publicando las fechas de agosto."
  ],
  "funciones": [
@@ -35,7 +36,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/cinemanizales_ficma/reel/DdMiQSozvGr/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "El festival lo llama «Función apertura». La home de laficma.com lo fechó el 16 de septiembre —miércoles, y ANTES del arranque declarado—: se registra el 19, que es el que dice el post y que sí es sábado. NO montar sin volver a mirar."
   },
@@ -49,7 +50,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://laficma.com/estrenosficma17/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "Conversatorio con su directora. Entrada libre hasta completar aforo."
   },
@@ -63,7 +64,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://laficma.com/estrenosficma17/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "Conversatorio con su director. Entrada libre hasta completar aforo.",
    "anio": 2026,
@@ -82,9 +83,10 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/cinemanizales_ficma/p/DdREw9HDXz6/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
-   "_nota": "Estreno en Manizales, con conversatorio. MISMO pase que «El hogar fue sepultado»: misma sede, mismo día, misma hora — corto + largo."
+   "_nota": "Estreno en Manizales, con conversatorio. MISMO pase que «El hogar fue sepultado»: misma sede, mismo día, misma hora — corto + largo.",
+   "sinopsis_en": "Colombia, 1951. In the thick of La Violencia, the period of brutal political war between Liberals and Conservatives, two chulavitas —hired killers on the government’s payroll— stalk a priest through the dark, waiting for him to lead them to the cabin in the woods where their next victims are hiding. But the horror they find there is a thousand times worse than the pain they meant to inflict."
   },
   {
    "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
@@ -96,9 +98,10 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/cinemanizales_ficma/p/DdSSPXwGle2/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
-   "_nota": "El festival la llama «Función Inaugural», y a «El príncipe de Nanawa» «Función apertura». Son dos cosas distintas o una errata: PREGUNTAR antes de montar."
+   "_nota": "El festival la llama «Función Inaugural», y a «El príncipe de Nanawa» «Función apertura». Son dos cosas distintas o una errata: PREGUNTAR antes de montar.",
+   "sinopsis_en": "“Those devils took everything from me, those devils took everything from me, those devils took everything from me”: this mantra of dispossession keeps resurfacing in the family, like a verdict. They long to meet their disappeared loved ones again, to play once more among plantain groves and fantastical beings, and… the house… the house wants to be a home again. Through home movies, collective archives, family images and a spectral, mystical presence, the film inhabits the dreams and the nightmares left by the traces of a vanished love. The gunfire seems to have stopped; the war feels distant now, but it left behind a deep grief and the promise of return. Friends, family, home and territory come back, summoned by this choral account. The past is a ghost, and this film speculates on a paradise and a hell that can no longer be touched, hoping to inhabit this new place and conjure an embrace inside it."
   },
   {
    "titulo": "Semillas",
@@ -110,7 +113,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/cinemanizales_ficma/p/DdRhWhrkWKe/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "Dos pases: sábado 19 y domingo 20, misma hora y sede.",
    "anio": 2026,
@@ -129,7 +132,7 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/cinemanizales_ficma/p/DdRhWhrkWKe/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "Segundo pase.",
    "anio": 2026,
@@ -148,79 +151,115 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/cinemanizales_ficma/reel/DdTmOB4FdTP/",
-    "date": "2026-09-15"
+    "date": "2026-09-17"
    },
    "_nota": "Documental de 1925 restaurado por la Fundación Patrimonio Fílmico Colombiano. Va dentro del Convite Solidario de Misión Comparte, por la reconstrucción tras el sismo."
   },
   {
    "titulo": "El juego de la vida",
    "director": "Mario Andrés Ruiz Zuluaga",
-   "dia": "2026-09-22",
-   "hora": "08:00",
-   "sede": "",
+   "dia": "2026-09-21",
+   "hora": "18:30",
+   "sede": "Auditorio Olimpia – Teatro Los Fundadores",
    "seccion": "Estrenos Cine Colombiano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://laficma.com/estrenosficma17/",
-    "date": "2026-09-15"
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdXc2wiDbNz/",
+    "date": "2026-09-17"
    },
-   "_nota": "Franja con colegios. SEDE SIN DECLARAR. Presencia del director."
+   "_nota": "Presencia de su director."
   },
   {
-   "titulo": "Cine en Movimiento: Plano Secuencia",
-   "tallerista": "Mauricio Casilimas",
-   "dia": "2026-09-19",
-   "hora": "15:00",
-   "sede": "Secretaría de Cultura de Palogrande",
-   "tipo": "taller",
-   "acceso": "Entrada libre",
-   "_cupos": "30 cupos",
-   "_src": {
-    "url": "https://laficma.com/talleresficma17/",
-    "date": "2026-09-15"
-   }
-  },
-  {
-   "titulo": "Escribir con la cámara: del guion a la puesta en escena",
-   "tallerista": "Andrés Buitrago",
+   "titulo": "El juego de la vida",
+   "director": "Mario Andrés Ruiz Zuluaga",
    "dia": "2026-09-22",
-   "hora": "09:00",
-   "sede": "",
-   "tipo": "taller",
+   "hora": "08:00",
+   "sede": "Auditorio Olga del Socorro Serna de Quintero – Fundación Batuta Caldas",
+   "seccion": "Estrenos Cine Colombiano",
    "acceso": "Entrada libre",
-   "_cupos": "sede sin declarar",
    "_src": {
-    "url": "https://laficma.com/talleresficma17/",
-    "date": "2026-09-15"
-   }
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdXc2wiDbNz/",
+    "date": "2026-09-17"
+   },
+   "_nota": "Función para colegios, «¡pero todos están invitados!» — el festival la declara abierta."
   },
   {
-   "titulo": "Poniéndole voz a tu historia silenciada",
-   "tallerista": "Diana Arias",
-   "dia": "2026-09-23",
+   "titulo": "Brigitte, Planeta B",
+   "director": "Santiago Posada",
+   "dia": "2026-09-20",
    "hora": "14:00",
-   "sede": "Hall Secretaría de la Mujer y Equidad de Género",
-   "tipo": "taller",
+   "sede": "Sala Olimpia – Teatro Los Fundadores",
+   "seccion": "Cine Colombiano",
    "acceso": "Entrada libre",
-   "_cupos": "20 cupos",
    "_src": {
-    "url": "https://laficma.com/talleresficma17/",
-    "date": "2026-09-15"
-   }
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdVLn8pFZQV/",
+    "date": "2026-09-17"
+   },
+   "_nota": "Estreno en Manizales."
   },
   {
-   "titulo": "Animación de fotografías \"de cero a cien\" con IA",
-   "tallerista": "Fabián Amador Salazar",
-   "dia": "2026-09-24",
-   "hora": "17:00",
-   "sede": "Secretaría de Cultura de Palogrande",
-   "tipo": "taller",
+   "titulo": "Apuntes sobre anomalías y fantasmas",
+   "director": "Rodrigo Dimaté",
+   "dia": "2026-09-20",
+   "hora": "16:00",
+   "sede": "Sala Olimpia – Teatro Los Fundadores",
+   "seccion": "Cine Colombiano",
    "acceso": "Entrada libre",
-   "_cupos": "30 cupos",
    "_src": {
-    "url": "https://laficma.com/talleresficma17/",
-    "date": "2026-09-15"
-   }
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdUsahVGspB/",
+    "date": "2026-09-17"
+   },
+   "_nota": "Conversatorio con su director. Es una selección de CUATRO cortos de QUO CINE —el festival la anuncia como una sola obra de 72 min y así entra; los cuatro títulos no están publicados.",
+   "anio": 2026,
+   "duracion_min": 72,
+   "pais": "Colombia",
+   "sinopsis": "Una selección de cuatro cortos que reúne diez años de trabajo de QUO CINE en el barrio. Los rincones menos conocidos de Bogotá no son silenciosos: de las montañas, el centro y la periferia surgen las voces que dan forma a este compendio de cuatro partes: una instrucción didáctica de cómo se manejan espantos y ansiedades; el diario de un grupo de creación artística que no registró desilusiones; un relato con moraleja de la vez que un niño probó un cigarrillo; y un día y una vuelta por las calles en las que dicen que no hay que meterse. El manifiesto de QUO CINE que reúne una década en busca de fantasmas, anomalías, risas y encuentros que dejan huella.",
+   "_sinopsis_src": "https://www.instagram.com/cinemanizales_ficma/p/DdUsahVGspB/",
+   "sinopsis_en": "A selection of four shorts gathering ten years of QUO CINE’s work in the neighbourhood. Bogotá’s lesser-known corners are not silent: from the mountains, the centre and the outskirts come the voices that shape this four-part compendium — a how-to on handling spooks and anxieties; the diary of an art collective that never recorded a disappointment; a cautionary tale about the time a boy tried a cigarette; and a day out on the streets people say you should stay away from. QUO CINE’s manifesto: a decade spent looking for ghosts, anomalies, laughter and encounters that leave a mark."
+  },
+  {
+   "titulo": "Habitante",
+   "director": "José Alejandro González",
+   "dia": "2026-09-21",
+   "hora": "08:00",
+   "sede": "Auditorio Olga del Socorro Serna de Quintero – Fundación Batuta Caldas",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/p/DdWiX_ukZfO/",
+    "date": "2026-09-17"
+   },
+   "_nota": "Conversatorio con el director. Función para colegios «¡pero abierta a todo el que quiera venir!»."
+  },
+  {
+   "titulo": "La luz por primera vez",
+   "director": "Ibeth Johanna Rey Jerez, Frank Rodríguez Rojas",
+   "dia": "2026-09-21",
+   "hora": "15:00",
+   "sede": "Centro Cultural del Banco de la República",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/reel/DdWtHVTzi--/",
+    "date": "2026-09-17"
+   },
+   "_nota": "Entrada libre hasta completar aforo."
+  },
+  {
+   "titulo": "Dicen que tú y yo estamos locos",
+   "director": "Juan Mauricio Piñeros",
+   "dia": "2026-09-22",
+   "hora": "15:00",
+   "sede": "Centro Cultural del Banco de la República",
+   "seccion": "Cine Colombiano",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/cinemanizales_ficma/reel/DdXvVyVDXh0/",
+    "date": "2026-09-17"
+   },
+   "_nota": "El post NO trae rótulo de sección —los demás sí, «#FICMA17 – Cine Colombiano»—: se le pone esa, que es la que llevan sus etiquetas (#CineColombiano). Único con clasificación de edad: +12.",
+   "rating": "+12 años",
+   "sinopsis_en": "The Luis Ángel Arango Public Library is the largest in Colombia and one of the most important in Latin America. This landmark of Bogotá life outgrows its traditional mission to become a stage for many lives: people who find in its reading rooms a refuge, a pause, or a way out of the reality waiting beyond its doors. The film gathers the stories of some of these “locos” — the word other readers, and even the city itself, tend to use for them."
   }
  ]
 }

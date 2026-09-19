@@ -2,32 +2,34 @@
 """Reconstruye festivals/ficma-2026.json con la programación de SEPTIEMBRE.
 
 FICMA 17 se aplazó por el sismo del 10 ago y volvió del 19 al 26 de SEPTIEMBRE.
-Lo publicado seguía siendo la parrilla de agosto bajo una banda de «aplazado»,
-o sea 90 funciones de unas fechas que ya no existen.
 
-POR QUÉ NO SE REMAPEA LO DE AGOSTO. Se comparó obra por obra: «El hogar fue
-sepultado» pasó de mar 11 · 08:00 · All Cine a sáb 19 · 19:00 · Palogrande;
-«Soñé su nombre» de mié 12 · 18:00 a sáb 19 · 14:00; «El príncipe de Nanawa» de
-jue 13 · 07:30 · Los Fundadores a sáb 19 · 09:00 · Banrep. Cambian día, hora Y
-sede, y además hay obras que en agosto no estaban. Un desplazamiento del
-calendario habría sido barato; esto es una parrilla nueva.
+DE DÓNDE SALE LA PARRILLA, Y POR QUÉ CAMBIÓ DE FUENTE. Hasta el 17 de
+septiembre el festival no había publicado parrilla: se armaba post a post desde
+Instagram, y así se montaron 15 funciones. El 18, a un día de abrir, puso en su
+home un PDF con la programación completa —78 páginas, una por función—. Ese PDF
+es ahora la fuente de la parrilla: `ficma-2026-parse.py` lo convierte en crudo.
+Lo que se leyó de los posts NO se tira: sirve para dos cosas, la ficha de las
+obras que el PDF no describe (el PDF no trae sinopsis) y el CRUCE — toda función
+que anunciaron por Instagram tiene que estar en el PDF, y si no está, se dice.
 
-QUÉ SE CONSERVA. El CATÁLOGO entero. Las fichas —póster, sinopsis, lbSlug,
-género, país, año, duración, bandera— salen de lo ya publicado, que es donde
-viven también las correcciones a mano. La obra es la misma; lo que cambió es
+QUÉ SE CONSERVA. El CATÁLOGO de agosto entero: póster, sinopsis, lbSlug,
+género, país, año, duración, bandera. La obra es la misma; lo que cambió es
 cuándo y dónde se ve.
 
-QUÉ SE PIERDE, A PROPÓSITO. Las 81 funciones de agosto que el festival todavía
-no ha vuelto a anunciar. No se reubican ni se adivinan: publicar una función en
-una fecha que nadie declaró es peor que no publicarla. `publicar.py` lo va a
-frenar y hay que pasarle --forzar: esa pérdida es el objetivo, no un accidente.
+LA FRANJA ACADÉMICA VA APARTE. El PDF no la incluye —son otras once actividades,
+talleres y charlas, que el festival publica en /talleresficma17/— y por eso
+sigue entrando por su propio sidecar.
 
-Lee   festivals/staging/ficma-2026-reprogramado.json      (la parrilla nueva)
+Lee   festivals/staging/ficma-2026-crudo-septiembre.json  (la parrilla, del PDF)
+      festivals/staging/ficma-2026-franja-web.json    (la franja académica, 11)
+      festivals/staging/ficma-2026-reprogramado.json  (lo anunciado post a post)
+      festivals/staging/ficma-2026-fichas-tmdb.json   (ficha de las obras nuevas)
+      festivals/staging/ficma-2026-posters.json       (el afiche del festival)
       festivals/staging/ficma-2026-catalogo-agosto.json  (las 86 fichas, congeladas)
-      festivals/staging/ficma-2026-venues-geo.json    (+ las 3 sedes nuevas)
+      festivals/staging/ficma-2026-venues-geo.json    (+ las sedes nuevas, abajo)
 Esc.  festivals/staging/ficma-2026-build.json         (lo publica publicar.py)
 """
-import datetime, json, os, sys
+import glob, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
@@ -35,82 +37,320 @@ import lib
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
 CIUDAD = 'Manizales'
-
-# El festival corre del 19 al 26 aunque hoy solo haya funciones en cinco de esos
-# días. El rango es el que el festival declara en su web y en su bio; los días
-# vacíos son la verdad —todavía no ha publicado esa parte— y no se recortan para
-# que la parrilla se vea más llena de lo que está.
 DIAS = [f'2026-09-{d}' for d in range(19, 27)]
 
-# Nombre de sección TAL CUAL lo escribe el festival en cada post (regla
+# Nombre de sección TAL CUAL lo escribe el festival en su programa (regla
 # permanente). Lo nuestro es solo el emoji, el inglés y el arquetipo —que no es
 # etiqueta libre: es la clave del color y hay un gate que lo exige—.
+#
+# Los once primeros son los mismos que ya se publicaron en agosto, con su mismo
+# emoji: es la taxonomía del propio festival —«los 8 universos temáticos» más
+# los estrenos—. «POP ART» cambió de forma (en agosto lo escribía «Arte Pop») y
+# se escribe como lo escribe ahora.
 SECCIONES = {
-    'Función de apertura':      ('🎬 Función de apertura', 'Opening Film', 'Apertura / Gala', 1),
-    'Función Inaugural':        ('✨ Función Inaugural', 'Inaugural Screening', 'Apertura / Gala', 2),
-    'Estrenos Cine Colombiano': ('🇨🇴 Estrenos Cine Colombiano', 'Colombian Premieres', 'Competencia', 3),
-    'Cine Colombiano':          ('🎞️ Cine Colombiano', 'Colombian Cinema', 'Muestra / País', 4),
-    'Cortometrajes':            ('⚡ Cortometrajes', 'Short Films', 'Cortos / Programas', 5),
-    'Cine Clásico Colombiano':  ('📽️ Cine Clásico Colombiano', 'Colombian Classics', 'Retrospectiva / Tributo', 6),
-    'Talleres':                 ('🛠️ Talleres', 'Workshops', 'Charlas / Industria', 7),
+    'ESTRENOS NACIONALES':     ('🎬 Estrenos Nacionales', 'National Premieres', 'Competencia', 1),
+    'ESTRENOS INTERNACIONALES': ('🌍 Estrenos Internacionales', 'International Premieres', 'Muestra / País', 2),
+    'ESTRENOS LOCALES':        ('🏔️ Estrenos Locales', 'Local Premieres', 'Competencia', 3),
+    'ARTE':                    ('🎨 Arte', 'Art', 'Perspectivas / Miradas', 4),
+    'POP ART':                 ('🥫 Pop Art', 'Pop Art', 'Perspectivas / Miradas', 5),
+    'CÓMIC':                   ('💥 Cómic', 'Comics', 'Perspectivas / Miradas', 6),
+    'MÚSICA':                  ('🎵 Música', 'Music', 'Perspectivas / Miradas', 7),
+    'ARQUITECTURA':            ('🏗️ Arquitectura', 'Architecture', 'Perspectivas / Miradas', 8),
+    'ANTIGÜEDADES':            ('🕰️ Antigüedades', 'Antiques', 'Retrospectiva / Tributo', 9),
+    'NUMISMÁTICA':             ('🪙 Numismática', 'Numismatics', 'Retrospectiva / Tributo', 10),
+    'MEDIO AMBIENTE':          ('🌱 Medio Ambiente', 'Environment', 'Perspectivas / Miradas', 11),
+    'FUNCIONES ESPECIALES':    ('✨ Funciones Especiales', 'Special Screenings', 'Especiales / Eventos', 12),
+    'FIESTA DE CLAUSURA':      ('🎉 Fiesta de Clausura', 'Closing Party', 'Especiales / Eventos', 13),
+    'TALLERES':                ('🛠️ Talleres', 'Workshops', 'Charlas / Industria', 14),
+    'CHARLAS':                 ('💬 Charlas', 'Talks', 'Charlas / Industria', 15),
 }
 
-# Sede del post → (clave canónica de venues, sala). La tabla es EXPLÍCITA, nunca
-# heurística sobre el guion: es la lección más cara de FICDEH.
+# EL RÓTULO DE SECCIÓN TRAE ADORNOS, Y NO TODOS SON SECCIÓN. El festival escribe
+# «ESTRENOS NACIONALES EN ALIANZA CON CINEMA LUNA» o «ESTRENOS NACIONALES -
+# ESTRENO LOCAL FUNCION DE CLAUSURA». Si cada combinación fuera una sección
+# habría 22 para 70 funciones y la pantalla dejaría de servir para filtrar.
+# La SECCIÓN es lo que queda al quitar estos adornos; el adorno se guarda, no se
+# tira: la alianza va a `_nota` y el rótulo de inaugural/clausura a `premiere`,
+# que es el campo del contrato para «texto libre del festival».
+ALIANZA = re.compile(r'\s+EN\s+(?:ALIANZA|ASOCIACI[OÓ]N)\s+CON\s+(.+)$')
+HITO = re.compile(r'\s*[-–]?\s*(FUNCI[OÓ]N\s+INAUGURAL|FUNCI[OÓ]N\s+DE\s+CLAUSURA)\s*')
+MATIZ = re.compile(r'\s*[-–]\s*(CORTO\s+LOCAL|ESTRENO\s+LOCAL|MUSICALIZADA\s+EN\s+VIVO)\s*')
+
+
+def parte_seccion(rotulo):
+    """«ESTRENOS NACIONALES - ESTRENO LOCAL FUNCION DE CLAUSURA» →
+    ('ESTRENOS NACIONALES', {'premiere': 'Función de clausura', ...})."""
+    s, extra = rotulo.strip(), {}
+    m = ALIANZA.search(s)
+    if m:
+        extra['alianza'] = m.group(1).strip().title()
+        s = s[:m.start()]
+    m = HITO.search(s)
+    if m:
+        extra['premiere'] = m.group(1).capitalize().replace('Funcion', 'Función')
+        s = (s[:m.start()] + ' ' + s[m.end():]).strip()
+    for m in MATIZ.finditer(s):
+        extra.setdefault('matices', []).append(m.group(1).capitalize())
+    s = MATIZ.sub(' ', s).strip(' -–')
+    # «FUNCIÓN ESPECIAL» y «FUNCIONES ESPECIALES» son la misma sección escrita en
+    # singular y en plural según le cupo al diseñador en la lámina.
+    if s.startswith('FUNCI') and 'ESPECIAL' in s:
+        s = 'FUNCIONES ESPECIALES'
+    return re.sub(r'\s{2,}', ' ', s), extra
+
+
+# Sede del programa → (clave canónica de venues, sala). La tabla es EXPLÍCITA,
+# nunca heurística sobre el guion: es la lección más cara de FICDEH. Lo que no
+# está acá entra tal cual, que es lo correcto para un parque o un barrio.
 SEDES = {
-    'Centro Cultural del Banco de la República':
-        ('Centro Cultural del Banco de la República', ''),
-    'Teatro Los Fundadores – Sala Olimpia':
-        ('Teatro los Fundadores', 'Sala Olimpia'),
-    'Casa de la Cultura de Palogrande – Calle externa':
+    # El mismo edificio, escrito de tres formas en el mismo PDF.
+    'Casa de la Cultura Palogrande': ('Casa de la Cultura de Palogrande', ''),
+    'Calle externa - Casa de la Cultura Palogrande':
         ('Casa de la Cultura de Palogrande', 'Calle externa'),
-    'Confa de la 50 – Auditorio Hernando Aristizábal Botero':
-        ('Confa de la 50', 'Auditorio Hernando Aristizábal Botero'),
-    'Parque Ernesto Gutiérrez': ('Parque Ernesto Gutiérrez', ''),
     'Secretaría de Cultura de Palogrande': ('Casa de la Cultura de Palogrande', ''),
+    'Biblioteca Pública Satélite Palogrande': ('Casa de la Cultura de Palogrande', ''),
+    'Secretaria de Cultura de Palogrande': ('Casa de la Cultura de Palogrande', ''),
+    # El Centro Cultural del Banco de la República (Cra. 23 #23-06) y el Centro
+    # Cultural Universitario Rogelio Salmona (Cra. 28D, dentro de la Universidad
+    # de Caldas) son dos edificios distintos, a 3 km. Los dos son de Salmona y
+    # por eso se confunden; verificado en Google Maps el 18 sep.
+    'Auditorio Rogelio Salmona': ('Centro Cultural Rogelio Salmona', 'Auditorio'),
+    'Oculo Rogelio Salmona': ('Centro Cultural Rogelio Salmona', 'Óculo'),
+    'Rogelio Salmona': ('Centro Cultural Rogelio Salmona', ''),
+    'Banco de la República': ('Centro Cultural del Banco de la República', ''),
+    # La Cámara de Comercio tiene UN auditorio, el Carlos E. Pinzón. Dos láminas
+    # lo nombran y una no; son la misma sala y se unifican —dos sedes con el
+    # mismo `short` y distinta sala serían dos sitios (docs/SCHEMA.md)—.
+    'Auditorio Carlos E. Pinzón - Cámara de Comercio de Manizales por Caldas':
+        ('Cámara de Comercio de Manizales por Caldas', 'Auditorio Carlos E. Pinzón'),
+    'Cámara de Comercio de Manizales por Caldas':
+        ('Cámara de Comercio de Manizales por Caldas', 'Auditorio Carlos E. Pinzón'),
+    'Auditorio Olga del Socorro Serna de Quintero - Fundación Batuta Caldas':
+        ('Fundación Batuta Caldas', 'Auditorio Olga del Socorro Serna de Quintero'),
+    'Sala Roberto Vélez Correa - Universidad de Caldas':
+        ('Universidad de Caldas', 'Sala Roberto Vélez Correa'),
+    'Auditorio Roberto Vélez Correa - Universidad de Caldas':
+        ('Universidad de Caldas', 'Auditorio Roberto Vélez Correa'),
+    'Cine al Cable - Campus El Cable UNAL, aula 007':
+        ('Universidad Nacional · El Cable', 'Aula 007'),
+    # EL ALIADO NO ES LA SEDE. «Confa - Cinema Luna» y «Fama - Cinespiral» traen
+    # detrás del guion a quien co-presenta, no un salón: el propio rótulo de
+    # sección dice «EN ALIANZA CON CINEMA LUNA». El lugar al que se va es Confa
+    # y Fama.
+    'Confa - Cinema Luna': ('Confa', ''),
+    'Fama - Cinespiral': ('Fama', ''),
+    'Parque Ernesto Gutierrez': ('Parque Ernesto Gutiérrez', ''),
+    'Universidad Autónoma - Aula Torreón F-101':
+        ('Universidad Autónoma', 'Aula Torreón F-101'),
     'Hall Secretaría de la Mujer y Equidad de Género':
         ('Secretaría de la Mujer y Equidad de Género', 'Hall'),
+    'Secretaría de la Mujer y Equidad de Género':
+        ('Secretaría de la Mujer y Equidad de Género', 'Hall'),
+    'Teatro Los Fundadores – Sala Olimpia': ('Teatro los Fundadores', 'Sala Olimpia'),
+    'Auditorio Olimpia - Teatro Los Fundadores': ('Teatro los Fundadores', 'Sala Olimpia'),
+    'Auditorio Olimpia – Teatro Los Fundadores': ('Teatro los Fundadores', 'Sala Olimpia'),
+    'Sala Olimpia – Teatro Los Fundadores': ('Teatro los Fundadores', 'Sala Olimpia'),
+    'Confa de la 50 – Auditorio Hernando Aristizábal Botero':
+        ('Confa', 'Auditorio Hernando Aristizábal Botero'),
+    'Zoom': ('Zoom', ''),
+    'Charla transmitida por zoom': ('Zoom', ''),
 }
 
-# Las tres que agosto no tenía, ubicadas en Google Maps el 15 sep 2026 — cada una
+# La sede que no es un lugar: «Zoom» no tiene coordenadas y no debe tenerlas.
+# `city` va vacío A PROPÓSITO —una transmisión no está en Manizales— y el filtro
+# por ciudad sigue plano porque las demás sedes sí la declaran.
+SIN_LUGAR = {'Zoom': {'city': '', '_nota': 'transmisión por Zoom; el festival no '
+                                           'publica más lugar que la plataforma'}}
+
+# Sedes que el sidecar de agosto no tenía, ubicadas en Google Maps — cada una
 # con ficha propia (/place/), no con el centro de un resultado de búsqueda. Para
-# sedes de ciudades colombianas Maps manda sobre Nominatim.
+# sedes de ciudades colombianas Maps manda sobre Nominatim, y la DIRECCIÓN vale
+# más que el pin: es lo que se copia a un mapa para llegar.
 GEO_NUEVAS = {
     'Centro Cultural del Banco de la República': {
-        'lat': 5.0669562, 'lng': -75.5168109, '_prec': 'maps',
-        '_nota': 'ficha propia en Google Maps; a ~700 m del Teatro los Fundadores'},
+        'lat': 5.0669375, 'lng': -75.5168125, '_prec': 'maps',
+        'address': 'Cra. 23 #23-06',
+        '_nota': 'ficha propia en Google Maps; dentro está la Biblioteca Luis Ángel Arango'},
+    'Centro Cultural Rogelio Salmona': {
+        'lat': 5.0546875, 'lng': -75.4915625, '_prec': 'maps',
+        'address': 'Cra. 28D entre Cl. 66 y 67',
+        '_nota': 'ficha «Centro Cultural Universitario Rogelio Salmona», dentro de la Universidad de Caldas. NO es el Centro Cultural del Banco de la República, que también es obra de Salmona y está a 3 km.'},
     'Casa de la Cultura de Palogrande': {
         'lat': 5.0575195, 'lng': -75.484585, '_prec': 'maps',
-        '_nota': 'ficha «Casa de la cultura - Palogrande». El festival la nombra también «Secretaría de Cultura de Palogrande»: se unifican.'},
-    'Confa de la 50': {
+        'address': 'Cl 64A #20a-31',
+        '_nota': 'ficha «Casa de la cultura - Palogrande». El festival la nombra también «Secretaría de Cultura de Palogrande» y «Biblioteca Pública Satélite Palogrande»: es el mismo edificio —la alcaldía lo inauguró como «Casa de la Cultura y Biblioteca Pública Satélite de Palogrande»— y se unifican.'},
+    'Confa': {
         'lat': 5.0625092, 'lng': -75.4989887, '_prec': 'maps',
         '_nota': 'ficha «Confa», Cra 25 Calle 50 esquina. El auditorio Hernando Aristizábal Botero está dentro.'},
+    'Fundación Batuta Caldas': {
+        'lat': 5.0508125, 'lng': -75.4828125, '_prec': 'maps',
+        'address': 'Cra. 22 #70b-31',
+        '_nota': 'ficha «Fundación Batuta Caldas - Sede Principal». El auditorio Olga del Socorro Serna de Quintero está dentro.'},
+    'Cámara de Comercio de Manizales por Caldas': {
+        'lat': 5.0670625, 'lng': -75.5144375, '_prec': 'maps',
+        'address': 'Cra. 23 #26-60'},
+    'Fama': {
+        'lat': 5.0483125, 'lng': -75.4831875, '_prec': 'maps',
+        'address': 'Av. Santander #72-118, piso 2',
+        '_nota': 'ficha «FAMA», barrio Milán. El festival lo escribe también «Fama - Cinespiral»: Cinespiral es quien co-presenta, no el lugar.'},
+    # Las de exteriores y barrios las ubica Nominatim, que para un parque o un
+    # monumento es tan bueno como Maps —y para un barrio entero, el punto es
+    # aproximado por definición—.
+    'Centro Colombo Americano': {
+        'lat': 5.058704, 'lng': -75.489655, '_prec': 'nominatim',
+        'address': 'Calle 62, La Estrella'},
+    'Bajo Tablazo': {'lat': 5.029143, 'lng': -75.53819, '_prec': 'nominatim',
+                     '_nota': 'vereda del corredor agroturístico; el punto es el del sector'},
+    'Monumento a los Colonizadores': {
+        'lat': 5.076985, 'lng': -75.52781, '_prec': 'nominatim',
+        'address': 'Avenida 12 de Octubre, Chipre'},
+    'Parque de la Mujer': {'lat': 5.065194, 'lng': -75.499274, '_prec': 'nominatim'},
+    'San José': {'lat': 5.072105, 'lng': -75.514901, '_prec': 'nominatim',
+                 '_nota': 'el barrio, no una dirección: es cine al aire libre'},
+    'Barrio La Estrella': {'lat': 5.0773125, 'lng': -75.4873125, '_prec': 'manual',
+                           '_nota': 'la misma coordenada que usó la edición de agosto'},
+    # El auditorio está dentro del Colegio Seminario Redentorista. La primera
+    # búsqueda («Auditorio Redentoristas») no daba ficha; con el nombre del
+    # colegio, sí. Ahí van las TRES funciones de clausura del viernes 25.
+    'Auditorio Redentoristas': {
+        'lat': 5.0499375, 'lng': -75.4788125, '_prec': 'maps',
+        'address': 'Cra. 19 #61, Colegio Seminario Redentorista'},
+    # Las dos de cine al aire libre en barrio. El punto es el del SECTOR y no
+    # una puerta: no hay una. Se dice cuál se tomó, porque las dos tenían más
+    # de un candidato.
+    'Barrio La Cumbre': {
+        'lat': 5.06786, 'lng': -75.473166, '_prec': 'nominatim',
+        '_nota': 'el barrio de la comuna Ecoturística Cerro de Oro. Hay otra «La Cumbre» en Río Blanco, 10 km al este: se tomó la urbana, que es donde el festival hace cine al aire libre.'},
+    'Cancha La Isla': {
+        'lat': 5.063179, 'lng': -75.517745, '_prec': 'nominatim',
+        '_nota': 'el punto es el de las escaleras de acceso al barrio La Isla (comuna La Macarena); la cancha está a metros y no tiene ficha propia.'},
 }
 
-# Conversatorio o presencia del director declarados en el post o en la web.
+# Conversatorio o presencia del director. El PDF lo trae impreso —«PRESENCIA DEL
+# DIRECTOR» en la esquina— y el parser lo saca como has_qa; esto solo añade los
+# que anunciaron los posts y el PDF no marca.
 CON_QA = {'Soñé su nombre', 'Ayuno y cenizas', 'Que el cielo nos perdone',
-          'El juego de la vida', 'El hogar fue sepultado en esa tierra que nunca pudimos encontrar'}
+          'El hogar fue sepultado en esa tierra que nunca pudimos encontrar',
+          'Apuntes sobre anomalías y fantasmas', 'Habitante'}
+SIN_QA_EN = {('El Juego de la Vida', '2026-09-22')}
 
+DURACION_POR_DEFECTO = {'taller': 180, 'charla': 90}
 
-# el normalizador es el de lib.py: una sola casa para comparar títulos
+# LAS CINCO PÁGINAS DE MAQUETA CENTRADA NO SON TODAS LO MISMO. Dos son cine
+# —muestras de cortos, que se ven sentado y a una hora— y tres no: un concierto,
+# una noche de vinilos y la fiesta de clausura. Se declara una por una porque la
+# maqueta dice «esto no es una ficha de película», no dice qué es.
+#
+# `info` marca lo que NO se planifica: a una fiesta se entra y se sale, y el
+# planificador no debe reservarle un bloque (docs/SCHEMA.md). El concierto sí
+# tiene hora de inicio y se planifica.
+#
+# Las dos muestras de cortos no traen duración en el programa —son compilados y
+# el festival no dice de cuánto—. La duración es OBLIGATORIA en un festival
+# activo porque alimenta el plan, y el contrato admite estimarla; se estiman en
+# 90 min, que es lo que dura una muestra de cortos, y queda dicho que es
+# estimación nuestra y no dato del festival.
+ACTIVIDADES = {
+    'Cortos Colombia de película': {
+        'tipo': 'pelicula', 'duracion_min': 90,
+        '_nota': 'Duración estimada: el programa no la publica'},
+    # SIETE HORAS NO SON UNA DURACIÓN, son un horario de apertura: el post dice
+    # «de 1:00 p.m. a 8:00 p.m.». Se entra y se sale. `info` es exactamente eso
+    # (docs/SCHEMA.md): aparece en el programa, no entra al plan ni a conflictos,
+    # y el techo de duración no le aplica porque su duración es la VENTANA.
+    'Muestra de Cortometrajes: Realizadores locales y Eje Cafetero': {
+        'tipo': 'evento', 'event_kind': 'experiencia', 'info': True,
+        '_nota': 'Muestra continua: se entra y se sale'},
+    'Concierto Sinfónico': {'tipo': 'evento', 'event_kind': 'experiencia',
+                            'duracion_min': 90},
+    'Noche de Vinilos': {'tipo': 'evento', 'event_kind': 'experiencia', 'info': True},
+    'Sonora Vol. 4': {'tipo': 'evento', 'event_kind': 'experiencia', 'info': True},
+}
 norm = lib.norm
 
 
+def franja(path):
+    """El sidecar de la franja académica → funciones del formato de este build."""
+    d = json.load(open(path, encoding='utf-8'))
+    src = d['_provenance']
+    out = []
+    for a in d['actividades']:
+        gente = a.get('tallerista') or a.get('invitados') or ''
+        if a.get('modera'):
+            gente = f"{gente}, modera {a['modera']}".strip(', ')
+        f = {'titulo': a['titulo'], 'director': gente,
+             'dia': a['dia'], 'hora': a['hora'], 'sede': a['sede_cruda'], 'sala': '',
+             'tipo': a['tipo'],
+             'seccion': 'TALLERES' if a['tipo'] == 'taller' else 'CHARLAS',
+             'duracion_min': a.get('duracion_min') or DURACION_POR_DEFECTO[a['tipo']],
+             'sinopsis': a.get('sinopsis', ''), '_cupos': a.get('cupos'),
+             '_src': {'url': src['fuente'].split(' ')[0], 'date': src['capturado']}}
+        for c in ('requires_registration', 'registration_url', 'is_free'):
+            if a.get(c):
+                f[c] = a[c]
+        out.append(f)
+    return out
+
+
+def parrilla(path):
+    """El crudo del PDF → funciones del formato de este build."""
+    d = json.load(open(path, encoding='utf-8'))
+    src = d.get('_provenance') or {}
+    out = []
+    for f in d['funciones']:
+        sec, extra = parte_seccion(f['seccion'])
+        g = {'titulo': f['titulo'], 'director': f.get('director', ''),
+             'dia': f['dia'], 'hora': f['hora'],
+             'sede': f['sede'], 'sala': f.get('sala', ''),
+             'ciclo': f.get('ciclo', ''), 'seccion': sec,
+             'pais': f.get('pais', ''), 'anio': f.get('anio'),
+             'duracion_min': f.get('duracion_min'),
+             'has_qa': f.get('has_qa', False), 'costo': f.get('costo', ''),
+             '_seccion_cruda': f['seccion'], '_pagina': f['pagina'],
+             '_src': {'url': 'https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf)',
+                      'date': src.get('capturado', '2026-09-18')}}
+        # Las cinco páginas de maqueta centrada no son obra: son actividad —un
+        # concierto, una noche de vinilos, dos muestras, la fiesta de clausura—.
+        if f.get('maqueta') == 'centrada':
+            decl = ACTIVIDADES.get(f['titulo'])
+            if not decl:
+                sys.exit(f"actividad de maqueta centrada sin declarar: «{f['titulo']}» "
+                         f"— decí en ACTIVIDADES si es cine o es evento")
+            g.update({k: v for k, v in decl.items() if k != '_nota'})
+            if decl.get('_nota'):
+                g['_nota'] = ' · '.join(x for x in (g.get('_nota'), decl['_nota']) if x)
+        g.update({k: v for k, v in extra.items() if k in ('premiere',)})
+        notas = []
+        if extra.get('alianza'):
+            notas.append(f"En alianza con {extra['alianza']}")
+        notas += extra.get('matices', [])
+        if notas:
+            g['_nota'] = ' · '.join(notas)
+        out.append(g)
+    return out
+
+
 def main():
-    rep = json.load(open(f'{ST}/ficma-2026-reprogramado.json', encoding='utf-8'))
-    # La foto CONGELADA, no el JSON publicado: publicar encoge ese archivo a las
-    # 11 funciones reanunciadas, y leerlo aquí haría que el segundo regenerado
-    # saliera sin catálogo. Un paso que se estropea a sí mismo al usarlo.
+    fun = parrilla(f'{ST}/ficma-2026-crudo-septiembre.json')
+    fun += franja(f'{ST}/ficma-2026-franja-web.json')
+    # La foto CONGELADA, no el JSON publicado: publicar encoge ese archivo y
+    # leerlo aquí haría que el segundo regenerado saliera sin catálogo.
     cat = json.load(open(f'{ST}/ficma-2026-catalogo-agosto.json', encoding='utf-8'))['obras']
     geo = json.load(open(f'{ST}/ficma-2026-venues-geo.json', encoding='utf-8'))
+    extra_ficha = json.load(open(f'{ST}/ficma-2026-fichas-tmdb.json',
+                                encoding='utf-8'))['fichas']
+    for t, f in json.load(open(f'{ST}/ficma-2026-posters.json',
+                               encoding='utf-8'))['fichas'].items():
+        extra_ficha.setdefault(t, {}).update(f)
+    # Lo anunciado post a post: hoy ya no es la parrilla, pero es la única
+    # fuente con SINOPSIS de las obras que agosto no tenía.
+    posts = json.load(open(f'{ST}/ficma-2026-reprogramado.json', encoding='utf-8'))
+    # La MISMA parrilla, contada por el festival en Instagram el mismo día. No
+    # reemplaza al PDF: le añade lo que el PDF no dice (el precio, la presencia
+    # del director) y marca dónde las dos fuentes no coinciden.
+    ig = json.load(open(f'{ST}/ficma-2026-ig-dias.json', encoding='utf-8'))
 
-    # Catálogo: primero el propio FICMA publicado, y si la obra es nueva —las hay:
-    # el festival reprogramó y además cambió la selección— se busca en el RESTO de
-    # nuestros festivales. La coincidencia se propone por título y se CONFIRMA por
-    # director: «Semillas» y «Solo» son títulos que dos obras distintas comparten
-    # con facilidad, y lo que se hereda (póster, sinopsis, lbSlug) es justo lo que
-    # un homónimo arruina.
-    import glob
+    avisos = []
     ficha, ajenas = {}, {}
     for t, o in cat.items():
         ficha.setdefault(norm(t), o)
@@ -139,72 +379,162 @@ def main():
                 return o, fn
         return None, ''
 
+    # Lo que solo publicaron los posts: sinopsis, año, país, duración y rating.
+    del_post = {}
+    for p in posts['funciones']:
+        e = {k: p[k] for k in ('sinopsis', 'sinopsis_en', 'anio', 'pais',
+                               'duracion_min', 'rating') if p.get(k)}
+        if e:
+            del_post.setdefault(norm(p['titulo']), e)
+
+    for t, d in ig['discrepa'].items():
+        for f in fun:
+            if f['titulo'] == t:
+                avisos.append(f'«{t}» {f["hora"]} → {d["hora"]} (IG): {d["por_que"]}')
+                f['hora'] = d['hora']
+                if d.get('duracion_min'):
+                    f['duracion_min'] = d['duracion_min']
+    for t, v in ig['solo_en_ig'].items():
+        avisos.append(f'«{t}» solo está en Instagram ({v["dia"][-2:]}·{v["hora"]}): {v["nota"]}')
+    for t, v in ig['solo_en_pdf'].items():
+        avisos.append(f'«{t}» solo está en el PDF: {v}')
+
     films, venues, sin_ficha = [], {}, []
-    for fn in rep['funciones']:
-        es_taller = fn.get('tipo') == 'taller'
-        sec_src = 'Talleres' if es_taller else fn['seccion']
-        sec = SECCIONES[sec_src][0]
-        sede_src = fn['sede']
-        if not sede_src:
-            # «Franja con colegios» sin sede declarada. No se inventa: la función
-            # no entra, y queda dicho. Entrará cuando el festival la publique.
-            sin_ficha.append(f"{fn['titulo']} — SIN SEDE declarada, no se publica")
+    for fn in fun:
+        if not fn['sede']:
+            # Una actividad sin lugar no se puede planear, y una sede inventada
+            # es peor. No entra, y queda dicho.
+            avisos.append(f"«{fn['titulo']}» ({fn['dia'][-2:]}·{fn['hora']}) "
+                          f"SIN SEDE declarada: no se publica")
             continue
-        clave_sede, sala = SEDES[sede_src]
+        # Lo que solo publicó un tercero: el programa del concierto sinfónico lo
+        # anunció la Orquesta de Caldas etiquetando al festival, y el PDF solo
+        # dice «Concierto Sinfónico». Se aplica ANTES de armar la ficha, que es
+        # donde se lee `sinopsis`.
+        for campo, valor in (ig.get('ficha_extra', {}).get(fn['titulo']) or {}).items():
+            if campo != '_src' and not fn.get(campo):
+                fn[campo] = valor
+        es_evento = fn.get('tipo') in ('taller', 'charla', 'evento')
+        sec = SECCIONES.get(fn['seccion'])
+        if not sec:
+            sys.exit(f"sección sin mapear: «{fn['seccion']}» "
+                     f"({fn['titulo']}) — añadila a SECCIONES, no la dejes caer")
+        clave_sede, sala = lib.sede_sala(fn['sede'], SEDES)
+        sala = fn.get('sala') or sala
         k = f'{clave_sede} - {CIUDAD}'
         if k not in venues:
-            g = geo.get(clave_sede) or GEO_NUEVAS.get(clave_sede) or {}
+            # GEO_NUEVAS pisa al sidecar de agosto: es lo verificado en Maps
+            # hoy, y hay entradas viejas que existen con la coordenada en nulo
+            # —«San José», «Cancha la Isla»—. Sin esta precedencia, una entrada
+            # vacía gana por el solo hecho de existir.
+            g = {**(geo.get(clave_sede) or {}), **(GEO_NUEVAS.get(clave_sede) or {})}
             venues[k] = {'short': clave_sede, 'lat': g.get('lat'), 'lng': g.get('lng'),
                          'city': CIUDAD, 'address': g.get('address', '')}
-            if g.get('_prec'):
-                venues[k]['_prec'] = g['_prec']
-            if g.get('_nota'):
-                venues[k]['_nota'] = g['_nota']
+            for c in ('_prec', '_nota'):
+                if g.get(c):
+                    venues[k][c] = g[c]
+            if clave_sede in SIN_LUGAR:
+                venues[k].update(SIN_LUGAR[clave_sede])
+            if not g.get('lat'):
+                avisos.append(f'sede sin coordenadas: {clave_sede}')
 
         base, de_donde = heredar(fn['titulo'], fn.get('director', ''))
-        if base is None and not es_taller:
+        if base is None and not es_evento:
             sin_ficha.append(fn['titulo'])
         b = dict(base or {})
-        # Lo que el PROPIO festival publica sobre esta edición manda sobre la
-        # ficha heredada: es su obra y su texto, y puede haber cambiado de corte.
-        for k_, k2 in (('anio', 'year'), ('pais', 'country')):
-            if fn.get(k_):
-                b[k2] = fn[k_]
+        for campo, valor in (extra_ficha.get(fn['titulo']) or {}).items():
+            if not campo.startswith('_') and not b.get(campo):
+                b[campo] = valor
+        # el post manda sobre la ficha vieja solo donde la vieja calla
+        for k_, k2 in (('sinopsis', 'synopsis'), ('sinopsis_en', 'synopsis_en')):
+            v = (del_post.get(norm(fn['titulo'])) or {}).get(k_)
+            if v and not b.get(k2):
+                b[k2], b['synopsis_lang'] = v, 'es' if k2 == 'synopsis' else b.get('synopsis_lang')
+        # …y el PROGRAMA manda sobre todos: es el dato de ESTA edición
+        if fn.get('anio'):
+            b['year'] = fn['anio']
+        if fn.get('pais'):
+            b['country'] = fn['pais']
+            b['flags'] = lib.banderas(fn['pais'])
         if fn.get('duracion_min'):
             b['duration'] = f"{fn['duracion_min']} min"
         if fn.get('sinopsis'):
-            # sinopsis del propio festival: es española y así se declara, que el
-            # contrato exige el idioma y la app lo lee para no ofrecer traducción
             b['synopsis'], b['synopsis_lang'] = fn['sinopsis'], 'es'
-        if fn.get('pais') and not b.get('flags'):
-            b['flags'] = lib.banderas(fn['pais'])
+
+        # El PRECIO que solo dice Instagram. La web del festival afirma que todo
+        # es de acceso libre y no es cierto: tres funciones de Fama piden aporte
+        # voluntario. Publicar como gratis algo que se paga es el peor error que
+        # puede cometer esta app.
+        acceso_ig = ig['acceso'].get(fn['titulo'], '')
+        libre = not (fn.get('costo') or acceso_ig)
         item = {
             'title': fn['titulo'],
-            'director': fn.get('director') or fn.get('tallerista') or '',
+            'director': fn.get('director') or '',
             'year': b.get('year'), 'duration': b.get('duration'),
             'country': b.get('country', ''), 'flags': b.get('flags', ''),
-            'section': sec, 'day': fn['dia'], 'time': fn['hora'],
-            # índice del día en la grilla, que el contrato exige derivado de `day`
+            'section': sec[0], 'day': fn['dia'], 'time': fn['hora'],
             'day_order': DIAS.index(fn['dia']),
-            'venue': k, 'has_qa': fn['titulo'] in CON_QA,
+            'venue': k,
+            'has_qa': bool(fn.get('has_qa') or fn['titulo'] in CON_QA
+                           or fn['titulo'] in ig['presencia'])
+                      and (fn['titulo'], fn['dia']) not in SIN_QA_EN,
             # «Todas las actividades son de acceso libre», dicho por el festival
-            # en laficma.com. La casilla de acceso no puede quedar muda: lo pide
-            # [boleteria-muda] y es de lo primero que mira quien va a ir.
-            'is_free': True,
+            # en su web — pero su propio programa cobra dos: la noche de vinilos
+            # y la fiesta de clausura. Manda el programa.
+            'is_free': libre,
             '_src': f"{fn['_src']['url']} ({fn['_src']['date']})",
         }
+        if not libre:
+            item['_nota'] = ' · '.join(x for x in (
+                # gana el texto de Instagram: el del PDF lo lee el OCR y se le
+                # pega la cola de patrocinadores del pie de la lámina
+                fn.get('_nota'), f"Costo: {acceso_ig or fn['costo']}") if x)
+        elif fn.get('_nota'):
+            item['_nota'] = fn['_nota']
+        if fn.get('premiere'):
+            item['premiere'] = fn['premiere']
+        if fn.get('ciclo'):
+            item['_nota'] = ' · '.join(x for x in (item.get('_nota'), fn['ciclo']) if x)
         if de_donde and de_donde != 'ficma-2026 (agosto)':
             item['_ficha_heredada_de'] = de_donde
         if sala:
             item['sala'] = sala
         for campo in ('tmdb_id', 'genre', 'poster', 'posterSource', 'synopsis',
-                      'synopsis_en', 'synopsis_lang', 'lbSlug', 'title_en'):
+                      'synopsis_en', 'synopsis_lang', 'lbSlug', 'title_en', 'rating'):
             if b.get(campo):
                 item[campo] = b[campo]
-        if es_taller:
-            item['event_kind'] = 'taller'
-            item['duration'] = item['duration'] or '180 min'
+        if (del_post.get(norm(fn['titulo'])) or {}).get('rating') and not item.get('rating'):
+            item['rating'] = del_post[norm(fn['titulo'])]['rating']
+        if es_evento:
+            item['type'] = 'event'
+            item['event_kind'] = fn.get('event_kind') or {
+                'taller': 'taller', 'charla': 'ponencia'}[fn['tipo']]
+            item['duration'] = item['duration'] or (
+                f"{fn['duracion_min']} min" if fn.get('duracion_min') else
+                f"{DURACION_POR_DEFECTO[fn['tipo']]} min" if fn.get('tipo') in
+                DURACION_POR_DEFECTO else '120 min')
+            if fn.get('info'):
+                item['info'] = True
+            for c in ('requires_registration', 'registration_url'):
+                if fn.get(c):
+                    item[c] = fn[c]
+            if fn.get('_cupos'):
+                item['_cupos'] = fn['_cupos']
         films.append(item)
+
+    # ── EL CRUCE: lo que anunció Instagram tiene que estar en el PDF ──────────
+    en_pdf = {(norm(f['title']), f['day'], f['time']) for f in films}
+    por_obra = {}
+    for f in films:
+        por_obra.setdefault(norm(f['title']), []).append((f['day'], f['time']))
+    for p in posts['funciones']:
+        if (norm(p['titulo']), p['dia'], p['hora']) in en_pdf:
+            continue
+        donde = por_obra.get(norm(p['titulo']))
+        avisos.append(
+            f"«{p['titulo']}» se anunció {p['dia'][-2:]}·{p['hora']} y el programa "
+            + (f"la pone {'; '.join(d[-2:] + '·' + h for d, h in donde)}"
+               if donde else 'NO la trae'))
 
     films.sort(key=lambda f: (f['day'], f['time'], f['title']))
     secs = {v[0]: {'en': v[1], 'archetype': v[2], 'order': v[3]}
@@ -213,15 +543,16 @@ def main():
 
     out = {
         '_provenance': {
-            'programacion': 'laficma.com (/estrenosficma17/, /talleresficma17/) + Instagram '
-                            '@cinemanizales_ficma, post a post — el festival NO ha publicado parrilla completa',
-            'catalogo': 'heredado de festivals/ficma-2026.json (la edición de agosto): la obra es '
-                        'la misma, solo cambió cuándo y dónde se ve',
-            'sedes': 'las de agosto + 3 nuevas ubicadas en Google Maps el 15 sep 2026',
-            'acceso': 'Todas las actividades son de acceso libre (declarado en laficma.com)',
-            'capturado': '2026-09-15',
-            'reprogramacion': 'aplazado el 10 ago por el sismo de Manizales; vuelve 19–26 SEP. '
-                              'La parrilla de agosto NO se remapea (día, hora y sede cambian).',
+            'programacion': 'PROGRAMACIÓN FICMA 17.pdf (78 páginas, una por función), '
+                            'publicado en laficma.com el 18 sep 2026 — la primera parrilla '
+                            'completa de la reprogramación',
+            'franja': 'laficma.com/talleresficma17/ — 11 actividades académicas, aparte del PDF',
+            'catalogo': 'heredado de la edición de agosto + TMDB para las obras nuevas',
+            'sedes': 'las de agosto + las nuevas ubicadas en Google Maps',
+            'acceso': 'libre salvo dos actividades que el propio programa cobra '
+                      '(noche de vinilos y fiesta de clausura)',
+            'capturado': '2026-09-18',
+            'reprogramacion': 'aplazado el 10 ago por el sismo de Manizales; vuelve 19–26 SEP',
         },
         'name': 'FICMA', 'shortName': 'FICMA',
         'fullName': 'Feria Internacional de Cine de Manizales',
@@ -230,11 +561,14 @@ def main():
         'timezoneOffset': '-05:00', 'storageKey': 'ficma2026_',
         'festivalStartStr': f'{DIAS[0]}T00:00:00', 'festivalEndStr': f'{DIAS[-1]}T23:59:00',
         'prioLimit': 4,
-        'ticketing_model': 'free',
-        # Los dos pases del sábado 19 a las 19:00 en Palogrande son UNA función:
-        # «Que el cielo nos perdone» (16 min) va antes de «El hogar fue sepultado»
-        # (90 min), en la misma calle externa. El festival los anunció por
-        # separado porque son dos posts, no dos entradas.
+        # Dos actividades se pagan; el resto es libre. No es 'free'.
+        'ticketing_model': 'mixed',
+        # EL ÚNICO SLOT COMPARTIDO: la función de clausura del viernes 25 en
+        # Redentoristas. El post de Instagram la escribe como UNA sola línea —
+        # «7:00 PM | FUNCIÓN DE CLAUSURA … Cómo limpiar un espejo … Entrelazados»—
+        # y son 11 y 30 min: un programa de dos cortos, no dos funciones que
+        # compiten. «La Marcha del Hambre» va después, a las 20:00, y por eso no
+        # entra en el mismo slot.
         'sharedSlotIsOneScreening': True,
         **lib.dias_config(DIAS, 'septiembre'),
         'sections': secs, 'venues': venues, 'films': films,
@@ -248,10 +582,15 @@ def main():
     print(f'con póster {sum(1 for f in films if f.get("poster"))} · '
           f'con sinopsis {sum(1 for f in films if f.get("synopsis"))} · '
           f'con lbSlug {sum(1 for f in films if f.get("lbSlug"))}')
-    if sin_ficha:
-        print('sin ficha heredada o sin sede:')
-        for s in sin_ficha:
+    sin_poster = sorted({f['title'] for f in films if not f.get('poster')})
+    if sin_poster:
+        print(f'sin afiche ({len(sin_poster)}):')
+        for s in sin_poster:
             print('   ·', s)
+    if avisos:
+        print(f'avisos ({len(avisos)}):')
+        for a in dict.fromkeys(avisos):
+            print('   ⚠', a)
 
 
 if __name__ == '__main__':

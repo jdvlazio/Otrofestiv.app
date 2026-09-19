@@ -105,17 +105,39 @@ def rango_horario(txt):
 
 
 # ── red ──────────────────────────────────────────────────────────────────────
+class TMDBAuth(Exception):
+    """La API rechazó la llave. NO es «no encontrado»."""
+
+
 def tmdb_get(path, api_key, **params):
-    """GET a api.themoviedb.org v3. {} si falla."""
+    """GET a api.themoviedb.org v3. {} si falla la RED; revienta si la llave no
+    sirve.
+
+    LA DIFERENCIA IMPORTA Y COSTÓ CARO. Un fallo de red es transitorio y
+    devolver {} está bien: el que llama lo lee como «esta obra no está» y a lo
+    sumo pierde una ficha. Una llave inválida devuelve {} para TODAS, y entonces
+    «no está en TMDB» pasa a significar «no pregunté». El 18 sep 2026 un paso
+    del plan corrió con `TMDB_API_KEY=…` —la elipsis literal del ejemplo— y
+    borró en silencio las 36 fichas que había: el script terminó con éxito y el
+    sidecar quedó con 43 obras «sin ficha verificable». El silencio nunca
+    significa verificado (misma lección que scripts/tmdb-precheck.py)."""
     url = f'https://api.themoviedb.org/3{path}?api_key={api_key}&' + '&'.join(
         f'{k}=' + str(v).replace(' ', '%20').replace('&', '%26') for k, v in params.items())
     for _ in range(3):
         r = subprocess.run(['curl', '-s', '--max-time', '25', url], capture_output=True)
         if r.returncode == 0 and r.stdout:
             try:
-                return json.loads(r.stdout)
+                d = json.loads(r.stdout)
             except Exception:
-                pass
+                d = None
+            if isinstance(d, dict):
+                # 7 = «Invalid API key», 401 en el HTTP. Reintentar no arregla
+                # una llave mala: se para acá y se dice.
+                if d.get('success') is False and d.get('status_code') in (7, 10, 14, 32, 33):
+                    raise TMDBAuth(f'TMDB rechazó la llave: {d.get("status_message")}')
+                return d
+            if d is not None:
+                return d
         time.sleep(0.8)
     return {}
 
@@ -152,6 +174,59 @@ def ficha_verifica(pdf, det, tol_anio=1, tol_dur=3):
     a_ok = pdf.get('anio') and abs(anio_t - pdf['anio']) <= tol_anio
     r_ok = pdf.get('duracion_min') and dur_t and abs(dur_t - pdf['duracion_min']) <= tol_dur
     return bool(d_ok and (a_ok or r_ok))
+
+
+def ficha_tmdb(obra, key, paginas=6):
+    """La ficha de TMDB de esta obra, verificada, o None.
+
+    Devuelve (det, det_en, `como`), donde `como` dice con qué se verificó —eso
+    se escribe en el sidecar y es lo que se audita después—.
+
+    DOS CAMINOS, y el segundo existe porque la fuente puede estar incompleta:
+
+      · Si las DOS partes publican año o duración, decide `ficha_verifica`:
+        director ✓ Y (año ±1 O duración ±3). Es el candado de siempre.
+      · Si no hay con qué contrastar —el caso del estreno reciente, que TMDB
+        registra sin fecha ni duración, y el del corto de festival, que nadie
+        fecha—, decide el TÍTULO IDÉNTICO (normalizado) más el director.
+
+    El director se verifica SIEMPRE, en los dos caminos. Esa es la lección
+    Tribeca: lo que no verifica no entra. Lo que cambia acá es que «la fuente no
+    publica año» deje de significar lo mismo que «no casa»."""
+    titulo = obra.get('titulo') or obra.get('title') or ''
+    director = obra.get('director', '')
+    for lang in ('es-ES', 'en-US'):
+        res = tmdb_get('/search/movie', key, query=titulo, language=lang,
+                       include_adult='false')
+        for c in (res.get('results') or [])[:paginas]:
+            det = tmdb_get(f"/movie/{c['id']}", key, language='es-ES',
+                           append_to_response='credits')
+            det_en = tmdb_get(f"/movie/{c['id']}", key, language='en-US',
+                              append_to_response='credits')
+            # los créditos en-US vienen romanizados: sin ellos hay directores
+            # que no casan nunca
+            det.setdefault('credits', {}).setdefault('crew', []).extend(
+                det_en.get('credits', {}).get('crew', []))
+            dirs = [p['name'] for p in det['credits']['crew']
+                    if p.get('job') == 'Director']
+            if not director_coincide(director, dirs):
+                continue
+            if not (norm(det.get('title') or '') == norm(titulo)
+                    or norm(det.get('original_title') or '') == norm(titulo)
+                    or norm(det_en.get('title') or '') == norm(titulo)):
+                continue
+            anio = int((det.get('release_date') or '0')[:4] or 0)
+            dur = det.get('runtime') or 0
+            nuestro = {'director': director, 'anio': obra.get('anio'),
+                       'duracion_min': obra.get('duracion_min')}
+            if (anio or dur) and (nuestro['anio'] or nuestro['duracion_min']):
+                if not ficha_verifica(nuestro, det):
+                    continue
+                return det, det_en, (f'director ✓ + año/duración '
+                                     f'(TMDB: {anio or "?"}, {dur or "?"} min)')
+            return det, det_en, ('director ✓ + título idéntico; no hay año ni '
+                                 'duración en ambos lados con qué contrastar')
+    return None
 
 
 # ── sedes ────────────────────────────────────────────────────────────────────

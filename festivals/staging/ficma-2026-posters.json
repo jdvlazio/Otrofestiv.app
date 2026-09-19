@@ -1,0 +1,50 @@
+{
+ "_provenance": {
+  "fuente": "el afiche que publica el propio festival: laficma.com y su Instagram",
+  "capturado": "2026-09-18",
+  "que_aporta": "póster de las obras que TMDB no tiene o tiene sin imagen",
+  "ojo": "las URL de Instagram caducan; la lámina se resuelve en cada corrida desde el shortcode, no se guarda"
+ },
+ "fichas": {
+  "Ayuno y cenizas": {
+   "poster": "/assets/ficma/ayuno-y-cenizas.jpg",
+   "posterSource": "custom",
+   "_medida": "1000×1429",
+   "_de": "el afiche de la obra en /estrenosficma17/ (1000×1429). TMDB tiene la ficha —1756580— pero sin imagen.",
+   "_url": "https://laficma.com/wp-content/uploads/2026/09/Ayuno.jpg"
+  },
+  "Apuntes sobre anomalías y fantasmas": {
+   "poster": "/assets/ficma/apuntes-sobre-anomalias-y-fantasmas.jpg",
+   "posterSource": "custom",
+   "_medida": "1080×1440",
+   "_de": "la lámina 1 del post es el afiche de la obra, con bloque de créditos y laureles (1080×1440). No tiene ficha en TMDB.",
+   "_url": "instagram DdUsahVGspB · lámina 1"
+  },
+  "La Quimera de Oro": {
+   "poster": "/assets/ficma/la-quimera-de-oro.jpg",
+   "posterSource": "custom",
+   "_medida": "1080×1603",
+   "_de": "recortado de su página del programa: no está en TMDB",
+   "_url": "p-43.jpg del PDF de programación"
+  },
+  "Cuando el dolor se nombra: Diálogo abierto y violencia de género": {
+   "poster": "/assets/ficma/cuando-el-dolor-se-nombra-dialogo-abierto-y-violencia-de-gen.jpg",
+   "posterSource": "custom",
+   "_medida": "1080×1603",
+   "_de": "recortado de su página del programa: corto local, no está en TMDB",
+   "_url": "p-63.jpg del PDF de programación"
+  },
+  "Entrelazados": {
+   "poster": "/assets/ficma/entrelazados.jpg",
+   "posterSource": "custom",
+   "_medida": "1080×1603",
+   "_de": "recortado de su página del programa: estreno local, no está en TMDB",
+   "_url": "p-70.jpg del PDF de programación"
+  }
+ },
+ "fallos": [],
+ "sin_afiche_a_proposito": {
+  "Cortos Colombia de película": "su lámina solo trae el logo del ciclo",
+  "Muestra de Cortometrajes: Realizadores locales y Eje Cafetero": "su lámina solo trae una ilustración del programa, no un afiche"
+ }
+}
