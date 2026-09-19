@@ -640,7 +640,7 @@ export const FESTIVAL_CONFIG={
     name:'FICMA',fullName:'FICMA — Feria Internacional de Cine de Manizales',shortName:'FICMA',
     city:'Manizales',country:'CO',
     dates:'19–26 SEP',dates_en:'SEP 19–26',year:2026,timezoneOffset:'-05:00',
-    keyArt:'/assets/keyart/ficma2026.jpg',
+    keyArt:'/assets/keyart/ficma2026-v2.jpg',
     // REPROGRAMADO. El festival se aplazó por el sismo del 10 ago y volvió del
     // 19 al 26 de SEPTIEMBRE, confirmado por sus dos fuentes propias (la bio de
     // @cinemanizales_ficma y laficma.com). El bloque de estado APLAZADO se
@@ -656,9 +656,16 @@ export const FESTIVAL_CONFIG={
     // Instagram y había once: por eso el histórico de esta entrada habla de una
     // programación incompleta.
     //
-    // OJO CON EL AFICHE: `ficma2026.jpg` es el del festival y lleva impreso
-    // «DEL 10 AL 17 DE AGOSTO», las fechas de antes del sismo. El festival no
-    // ha publicado una versión con las nuevas, y no se le inventa una.
+    // EL AFICHE, corregido el 18 sep. `ficma2026.jpg` era el de antes del sismo
+    // y llevaba impreso «10 AL 17 DE AGOSTO». El festival SÍ publicó uno con las
+    // fechas nuevas —«19 AL 26 DE SEPTIEMBRE»—: está en su biblioteca de medios
+    // desde el 10 de septiembre, como og:image de la home, con el nombre
+    // FICMA-17-INSTAGRAM-POST-1.png. Se me pasó al revisar la web y estuve a
+    // punto de reclamárselo al festival.
+    //
+    // Viene en 4:5 (1080×1350), que es el formato de post de Instagram, y es la
+    // ÚNICA versión con las fechas buenas: su biblioteca no tiene ninguna 2:3.
+    // Se estira, que es la regla del riel (scripts/compose-keyart.py).
     storageKey:'ficma2026_',festivalStartStr:'2026-09-19T00:00:00',festivalEndStr:'2026-09-26T23:59:00',
     festivalDates:{'2026-09-19':'2026-09-19','2026-09-20':'2026-09-20','2026-09-21':'2026-09-21','2026-09-22':'2026-09-22','2026-09-23':'2026-09-23','2026-09-24':'2026-09-24','2026-09-25':'2026-09-25','2026-09-26':'2026-09-26'},
     days:[{k:'2026-09-19',d:19,lbl:'SÁB'},{k:'2026-09-20',d:20,lbl:'DOM'},{k:'2026-09-21',d:21,lbl:'LUN'},{k:'2026-09-22',d:22,lbl:'MAR'},{k:'2026-09-23',d:23,lbl:'MIÉ'},{k:'2026-09-24',d:24,lbl:'JUE'},{k:'2026-09-25',d:25,lbl:'VIE'},{k:'2026-09-26',d:26,lbl:'SÁB'}],
