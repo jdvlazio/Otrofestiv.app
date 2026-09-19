@@ -1,0 +1,36 @@
+{
+ "Casa San Pedro Campestre - Villa de Leyva": {
+  "n": 13,
+  "_prec": "manual",
+  "lat": 5.630645,
+  "lng": -73.5367607,
+  "_match": "Google Maps: «Restaurante Casa San Pedro campestre» (punto del lugar, no el centro del mapa)",
+  "_nota": "a 1,5 km de la Plaza Mayor. El mapa del PDF dice «1,8 km por la vía Santa Sofía» y OSM la ubica sobre la vía a Moniquirá: la distancia concuerda y el nombre es exacto, pero la vía no. Va a la lista de preguntas."
+ },
+ "Galería Pérez Rojas - Villa de Leyva": {
+  "n": 13,
+  "_prec": "manual",
+  "_direccion": "Cra. 9, Villa de Leyva, Boyacá",
+  "lat": 5.6334099,
+  "lng": -73.5231699,
+  "_match": "Google Maps: «Galerias Perez Rojas» (punto del lugar, no el centro del mapa)"
+ },
+ "Hotel Mesón de los Virreyes - Villa de Leyva": {
+  "n": 18,
+  "_prec": "manual",
+  "lat": 5.6347096,
+  "lng": -73.5217695,
+  "_match": "Google Maps: «Hotel Mesón De Los Virreyes» (punto del lugar, no el centro del mapa)"
+ },
+ "Museo Casa Antonio Nariño - Villa de Leyva": {
+  "n": 9,
+  "_prec": "manual",
+  "lat": 5.6321598,
+  "lng": -73.5248406,
+  "_match": "Google Maps: «Casa Museo Antonio Nariño» (punto del lugar, no el centro del mapa)"
+ },
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-09-19"
+ }
+}

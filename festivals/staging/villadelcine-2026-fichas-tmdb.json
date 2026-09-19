@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB (api.themoviedb.org) + Letterboxd por el redirect /tmdb/<id>",
-  "capturado": "2026-09-17",
+  "capturado": "2026-09-19",
   "que_aporta": "año, duración, país, género, sinopsis, póster y lbSlug de los cortos de la Selección Oficial que TMDB tiene",
   "candado": "lib.ficha_tmdb — director ✓ SIEMPRE; en un festival de cortos el título solo no distingue nada («Solo», «Human», «Far»)",
   "alcance": "15 de 53 cortos con ficha; los demás no están en TMDB y su dato hay que pedírselo al festival"
@@ -10,8 +10,12 @@
   "Witch and Frog": {
    "tmdb_id": 1772239,
    "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2026,
    "duracion_min": 2,
+   "genero": "Animación",
    "sinopsis": "Una aspirante a bruja quiere aprender magia y decide estudiar con una hechicera experimentada. Se presenta en su casa, pero las cosas no salen exactamente como esperaba.",
+   "poster": "/assets/villadelcine-2026/witch-and-frog.jpg",
+   "posterSource": "tmdb",
    "lbSlug": "witch-and-frog"
   },
   "La Presencia de Blanco": {

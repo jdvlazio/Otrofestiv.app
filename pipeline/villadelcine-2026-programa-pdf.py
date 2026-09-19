@@ -97,10 +97,12 @@ def lineas(p0, p1):
     return out
 
 
-def hora24(t, ap_previo=''):
-    """«05:30 p.m» → «17:30». `ap_previo` completa el rótulo que el PDF escribió
-    mal: la última fila del sábado noche dice «10:00 0.m», y sin ella el último
-    bloque del festival terminaba quince minutos antes de lo dibujado."""
+def hora_reticula(t, ap_previo=''):
+    """«05:30 p.m» → «17:30». NO es `lib.hora24`, y por eso el otro nombre:
+    esta hereda el a.m./p.m. de la fila anterior con `ap_previo`, que es lo que
+    salva el «10:00 0.m» mal escrito de la última fila del sábado noche. Sin
+    ella el último bloque del festival terminaba quince minutos antes de lo
+    dibujado."""
     m = RE_HORA.match(t.strip())
     if not m:
         m2 = RE_HORA_ROTA.match(t.strip())
@@ -127,7 +129,7 @@ def sedes_de(ls, y_primera_hora):
     Salón principal / 1er piso»), y lo que las junta es que se solapan en x.
     """
     cab = [l for l in ls if l[2] < y_primera_hora - 2 and l[1] > 88
-           and not MARCA.match(l[5]) and not RE_DIA.match(l[5]) and not hora24(l[5])]
+           and not MARCA.match(l[5]) and not RE_DIA.match(l[5]) and not hora_reticula(l[5])]
     cols = []
     for _, x0, y0, x1, _, t in sorted(cab, key=lambda l: (l[1], l[2])):
         for c in cols:
@@ -300,7 +302,7 @@ def bloques(ls, cols, horas, cajas):
         # línea perdida es un dato que no publicamos—. Basta con que el CENTRO
         # de la línea caiga dentro, con un margen de media fila.
         dentro = [ls[i][5] for i, c in reparto.items() if c == (x0, y0, x1, y1)
-                  and not MARCA.match(ls[i][5]) and not hora24(ls[i][5])
+                  and not MARCA.match(ls[i][5]) and not hora_reticula(ls[i][5])
                   and not RE_DIA.match(ls[i][5])]
         if not dentro:
             # UNA CELDA PUEDE NO TENER TEXTO Y AUN ASÍ SER PROGRAMACIÓN. Al pie
@@ -348,7 +350,7 @@ def parrilla():
         # se leen en orden: un rótulo roto hereda el a.m./p.m. del anterior
         horas, ap = [], ''
         for l in sorted(pl, key=lambda l: l[2]):
-            h = hora24(l[5], ap)
+            h = hora_reticula(l[5], ap)
             if h:
                 horas.append((l[2], l[4], h))
                 ap = 'a' if h < '12:00' else 'p'

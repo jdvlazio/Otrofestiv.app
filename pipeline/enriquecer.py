@@ -83,6 +83,14 @@ def enriquecer_obra(f, key, alias):
                        'genero': (det.get('genres') or [{}])[0].get('name', ''),
                        'anio_tmdb': int((det.get('release_date') or '0')[:4] or 0),
                        'duracion_tmdb': det.get('runtime') or 0,
+                       # EL PAÍS, que TMDB da y no guardábamos. En Villa del
+                       # Cine faltaba en 21 obras y para varias era el único
+                       # sitio donde estaba: el PDF no lo imprime en todas las
+                       # fichas y la web solo en la mitad. Sin país no hay
+                       # bandera, y la app pinta un globo.
+                       'pais_tmdb': ', '.join(
+                           p.get('name', '') for p in (det.get('production_countries') or [])
+                           if p.get('name')),
                        '_verificado': 'director✓ + año/duración',
                        '_busqueda': q}
                 if en and norm(en) not in (norm(f['titulo']), norm(out['titulo_original'] or '')):
@@ -113,20 +121,33 @@ def main():
     # son obras: tienen título, dirección, año y duración, que es justo lo que
     # ficha_verifica() necesita. El candado no cambia: lo que no verifica, no
     # entra; un corto sin ficha en TMDB simplemente sale en `sin_ficha`.
+    # `duracion_obra` es la duración de la OBRA, que puede no ser la de la
+    # función: una película de 113 minutos en una casilla de 120 se publica
+    # con 120 —la sala está ocupada ese rato— pero se verifica con 113, que
+    # es lo que TMDB conoce. Sin esta distinción, los largos programados con
+    # holgura no verificaban y se quedaban sin ficha ni póster.
+    def _para_verificar(x):
+        return {**x, 'duracion_min': x.get('duracion_obra') or x.get('duracion_min')}
+
     obras = {}
     for f in crudo['funciones']:
         if not f.get('en_app', True):
             continue
         if f.get('tipo', 'film') in ('film', ''):
             t = tit_of.get(f['titulo'], f['titulo'])
-            obras.setdefault(t, {**f, 'titulo': t})
-        for o in f.get('obras') or []:
+            obras.setdefault(t, _para_verificar({**f, 'titulo': t}))
+        # `film_list` es el otro nombre de `obras`: el ensamblador acepta los
+        # dos desde siempre y este paso solo miraba uno. En Villa del Cine eso
+        # dejó 104 cortos sin enriquecer y el reporte decía «1 obra» tan
+        # tranquilo — el mismo fallo mudo de antes, por la otra puerta. Si dos
+        # pasos leen la misma lista, tienen que aceptar los mismos nombres.
+        for o in f.get('obras') or f.get('film_list') or []:
             if not o.get('titulo'):
                 continue
             t = tit_of.get(o['titulo'], o['titulo'])
             # la obra hereda el día de su función solo para el reporte; lo que
             # verifica es su propia ficha (director, año, duración)
-            obras.setdefault(t, {**o, 'titulo': t})
+            obras.setdefault(t, _para_verificar({**o, 'titulo': t}))
 
     ok, sin = {}, []
     for i, (t, f) in enumerate(sorted(obras.items()), 1):

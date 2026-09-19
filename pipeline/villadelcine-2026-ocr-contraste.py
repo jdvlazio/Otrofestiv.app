@@ -33,7 +33,10 @@ imprime para mirarlo, no se descarta en silencio.
     python3 pipeline/villadelcine-2026-ocr-contraste.py
     python3 pipeline/villadelcine-2026-ocr-contraste.py --todo   # las 67 páginas
 """
-import difflib, json, os, re, subprocess, sys, unicodedata
+import difflib, json, os, re, subprocess, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lib import norm
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PDF = f'{REPO}/fuentes/villadelcine-2026/programacion-2026.pdf'
@@ -75,12 +78,6 @@ FANTASMAS = {
              'OCR corta la última línea al pie de la página y devuelve «…al ai». '
              'Es límite del OCR, no texto que falte en el papel.',
 }
-
-
-def norm(s):
-    s = ''.join(c for c in unicodedata.normalize('NFD', s or '')
-                if unicodedata.category(c) != 'Mn').lower()
-    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
 
 
 def render(pag):

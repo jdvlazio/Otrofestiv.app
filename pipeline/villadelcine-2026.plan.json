@@ -3,12 +3,64 @@
  "radar": 570,
  "pasos": [
   {
-   "cmd": "python3 pipeline/villadelcine-2026-catalogo.py",
-   "que": "los 11 reels de Selección Oficial → catálogo (53 cortos)"
+   "cmd": "python3 pipeline/villadelcine-2026-programa-pdf.py",
+   "que": "el PDF de programación (67 pp.) → retícula, fichas y ruta académica"
   },
   {
-   "cmd": "TMDB_API_KEY=… python3 pipeline/villadelcine-2026-fichas-tmdb.py",
-   "que": "TMDB + Letterboxd → ficha de los cortos que existen (15 de 53)"
+   "cmd": "python3 pipeline/villadelcine-2026-obras-web.py",
+   "que": "las 81 páginas de obra de villadelcine.com → sinopsis EN, afiche e Instagram"
+  },
+  {
+   "cmd": "python3 pipeline/villadelcine-2026-obras-pdf.py",
+   "que": "las fichas del PDF → 92 obras con sinopsis ES, agrupadas por programa"
+  },
+  {
+   "cmd": "python3 pipeline/villadelcine-2026-catalogo.py",
+   "que": "los 11 reels de Selección Oficial en Instagram → catálogo (53 cortos)"
+  },
+  {
+   "cmd": "python3 pipeline/villadelcine-2026-fichas-tmdb.py",
+   "que": "TMDB + Letterboxd para los cortos del catálogo de Instagram, con lib.ficha_tmdb (el genérico pide año o duración y el festival no los da)"
+  },
+  {
+   "cmd": "python3 pipeline/villadelcine-2026-verificar.py",
+   "que": "7 chequeos de la retícula, incluido que las obras quepan en su bloque"
+  },
+  {
+   "cmd": "python3 pipeline/villadelcine-2026-cobertura.py",
+   "que": "cobertura inversa: cada línea de las 67 páginas, extraída o declarada adorno"
+  },
+  {
+   "cmd": "python3 pipeline/villadelcine-2026-ocr-contraste.py --todo",
+   "que": "tercera lectura con OCR: lo publicado se ve en la página y lo visible está leído"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py villadelcine-2026 --centro 5.6339,-73.5247 --ciudad \"Villa de Leyva, Boyacá\"",
+   "que": "las 4 sedes (ya verificadas a mano con Google Maps: _prec manual, intocables)"
+  },
+  {
+   "cmd": "python3 pipeline/villadelcine-2026-crudo.py",
+   "que": "parrilla + obras → crudo. La duración publicada es la REAL: si las obras suman más que la casilla dibujada, manda la suma"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py villadelcine-2026 --posters",
+   "que": "TMDB verificado + Letterboxd + pósters"
+  },
+  {
+   "cmd": "python3 pipeline/villadelcine-2026-posters.py",
+   "que": "el afiche que el festival publica en la página de cada obra (TMDB cubre 15 de 111)"
+  },
+  {
+   "cmd": "python3 pipeline/villadelcine-2026-crudo.py",
+   "que": "EL CRUDO OTRA VEZ, y no es un descuido: el enricher necesita el crudo para saber qué obras buscar, y el crudo necesita lo que el enricher y los pósters produjeron (tmdb_id, lbSlug, afiche). Corriéndolo una sola vez, cada obra salía con el enriquecido de la corrida ANTERIOR, y una obra nueva se publicaba sin ficha ni póster aunque TMDB la tuviera"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026",
+   "que": "crudo + plan → staging/villadelcine-2026-build.json"
+  },
+  {
+   "cmd": "/tmp/vdcenv/bin/python pipeline/villadelcine-2026-contraste.py",
+   "que": "SEGUNDA LECTURA del PDF con MuPDF (vectores) y comparación bloque a bloque. Necesita PyMuPDF, que no está en el sistema: python3 -m venv /tmp/vdcenv && /tmp/vdcenv/bin/pip install pymupdf"
   }
  ],
  "festival": {
@@ -68,7 +120,57 @@
     "en": "Communications",
     "archetype": "Charlas / Industria"
    }
-  }
+  },
+  "sedes": {
+   "Casa San Pedro Campestre": [
+    "Casa San Pedro Campestre - Villa de Leyva",
+    ""
+   ],
+   "Galería Pérez Rojas": [
+    "Galería Pérez Rojas - Villa de Leyva",
+    ""
+   ],
+   "Auditorio del Hotel Mesón de los Virreyes": [
+    "Hotel Mesón de los Virreyes - Villa de Leyva",
+    "Auditorio"
+   ],
+   "Biblioteca del Hotel Mesón de los Virreyes": [
+    "Hotel Mesón de los Virreyes - Villa de Leyva",
+    "Biblioteca"
+   ],
+   "Museo Casa Antonio Nariño Salón principal 1er piso": [
+    "Museo Casa Antonio Nariño - Villa de Leyva",
+    "Salón principal · 1er piso"
+   ],
+   "Museo Casa Antonio Nariño Salón principal 2do piso": [
+    "Museo Casa Antonio Nariño - Villa de Leyva",
+    "Salón principal · 2do piso"
+   ]
+  },
+  "acceso_por_defecto": {
+   "is_free": true,
+   "_por_que": "DECISIÓN DE JUAN, 19 sep 2026: entrada libre por defecto, que es lo normal en un festival colombiano de este tamaño. NO es un dato del festival: su web no habla de entradas, el PDF tampoco y la página /acreditación/ del menú da 404. Queda así declarado para que, si aparece una función que se paga, se vea que el supuesto vino de acá y no de una fuente. Está en la lista de preguntas."
+  },
+  "name": "Villa del Cine",
+  "fullName": "Festival Villa del Cine — Villa de Leyva",
+  "city": "Villa de Leyva",
+  "country": "CO",
+  "dates": "23–26 SEP",
+  "dates_en": "SEP 23–26",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "villadelcine2026_",
+  "festivalStartStr": "2026-09-23T00:00:00",
+  "festivalEndStr": "2026-09-26T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "ticketing_model": "mixed",
+  "mes_es": "septiembre",
+  "dias_vacios": [],
+  "crudo": "festivals/staging/villadelcine-2026-crudo.json",
+  "geo": "festivals/staging/villadelcine-2026-venues-geo.json",
+  "enriquecido": "festivals/staging/villadelcine-2026-enriquecido.json"
  },
- "_nota_secciones": "LAS SECCIONES SON LAS 6 MADRE DEL FESTIVAL más 5 franjas, con el nombre VERBATIM. Los 22 programas con nombre propio (TRÁNSITO, PORTALES, ECOS, BOYACÁ EN LOS CAMPOS…) NO son secciones: son el título del bloque dentro de su sección. Emoji y arquetipo son capa nuestra, aprobados por Juan el 19 sep 2026. 🪁 para la infantil y no 🧒: dice infancia sin tratar a nadie de bebé, y el programa se llama X-PLORA CINE. 🌱 para Lenguajes Emergentes y no ✨, que ya es de FICMA."
+ "_nota_secciones": "LAS SECCIONES SON LAS 6 MADRE DEL FESTIVAL más 5 franjas, con el nombre VERBATIM. Los 22 programas con nombre propio (TRÁNSITO, PORTALES, ECOS, BOYACÁ EN LOS CAMPOS…) NO son secciones: son el título del bloque dentro de su sección. Emoji y arquetipo son capa nuestra, aprobados por Juan el 19 sep 2026. 🪁 para la infantil y no 🧒: dice infancia sin tratar a nadie de bebé, y el programa se llama X-PLORA CINE. 🌱 para Lenguajes Emergentes y no ✨, que ya es de FICMA.",
+ "_nota_encuadre": "EL ENCUADRE DE PÓSTERS VA DESPUÉS DE PUBLICAR, no dentro de la cadena: encuadrar-posters.py lee festivals/villadelcine-2026.json —el publicado— para saber qué afiches son de este festival, y en la primera corrida ese archivo todavía no existe. Solo reescribe imágenes, así que no hace falta volver a publicar:\n\n    python3 pipeline/correr.py villadelcine-2026\n    python3 pipeline/publicar.py villadelcine-2026\n    python3 pipeline/encuadrar-posters.py villadelcine-2026 --aplicar",
+ "_nota_posters": "El póster va INLINE en cada obra del crudo (lo aplica villadelcine-2026-crudo.py leyendo el sidecar), no como mapa `posters{}` en el plan: ese modelo murió en la Fase A.1 y el gate [poster-map-legacy] lo bloquea."
 }

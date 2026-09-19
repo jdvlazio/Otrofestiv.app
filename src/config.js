@@ -636,6 +636,25 @@ export const FESTIVAL_CONFIG={
   // a propósito: el splash pinta «CIUDAD, PAÍS» y con ambos daría «COLOMBIA,
   // COLOMBIA». Además, al no coincidir con ninguna sede, el badge
   // venue-municipio y el filtro por ciudad se activan en las 11.
+  'villadelcine2026': {
+    name:'Villa del Cine',fullName:'Festival Villa del Cine',shortName:'Villa del Cine',
+    city:'Villa de Leyva',country:'CO',
+    dates:'23–26 SEP',dates_en:'SEP 23–26',year:2026,timezoneOffset:'-05:00',
+    keyArt:'/assets/keyart/villadelcine2026-v2.jpg',
+    // EL AFICHE ES LA PORTADA DE SU PROPIO PROGRAMA. El festival no publica un
+    // key art suelto —su home solo tiene el logotipo—, pero la página 1 del PDF
+    // de programación ES el afiche de la edición: «12 Festival Villa del Cine ·
+    // caminos del tiempo · 23-26 septiembre 2026». Estirado a 2:3 por
+    // compose-keyart, como manda la regla del splash.
+    //
+    // LA PROGRAMACIÓN SALIÓ EL 18 SEP, cinco días antes de abrir: hasta ese día
+    // el botón PROGRAMACIÓN de su web apuntaba a un PDF de 2023. Son 53
+    // funciones en 4 sedes, y 22 de ellas son programas de cortos con nombre
+    // propio («Nuevas Miradas: UMBRALES»), que es como el festival los agrupa.
+    storageKey:'villadelcine2026_',
+    festivalStartStr:'2026-09-23T00:00:00',festivalEndStr:'2026-09-26T23:59:00',
+    prioLimit:4,ticketing_model:'mixed',
+  },
   'ficma2026': {
     name:'FICMA',fullName:'FICMA — Feria Internacional de Cine de Manizales',shortName:'FICMA',
     city:'Manizales',country:'CO',
@@ -957,6 +976,17 @@ export const ARCHETYPE_COLORS = {
 // Cada sección de cada festival → su arquetipo. Generado por scripts/classify-posters
 // (arquetipos) + decisiones de diseño. Sección nueva sin entrada → gate lo caza.
 export const SECTION_ARCHETYPES = {
+  // ── Villa del Cine 12 · Villa de Leyva ─────────────────────────────────
+  '👁️ Nuevas Miradas': 'Perspectivas / Miradas',
+  '🗺️ Territorios': 'Muestra / País',
+  '🌀 Narrativas Divergentes': 'Cortos / Programas',
+  '🌱 Lenguajes Emergentes': 'Cortos / Programas',
+  '🪁 Programación Infantil': 'Cortos / Programas',
+  '🎬 Industria': 'Charlas / Industria',
+  '🎓 Ruta Académica': 'Charlas / Industria',
+  '🏆 Rumbo a los Macondo': 'Especiales / Eventos',
+  '🎞️ Exhibición Especial': 'Retrospectiva / Tributo',
+  '🎙️ Comunicaciones': 'Charlas / Industria',
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
   '📺 Primetime': 'Especiales / Eventos',
   '🔎 Discovery': 'Perspectivas / Miradas',

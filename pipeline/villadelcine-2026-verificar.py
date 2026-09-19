@@ -29,9 +29,10 @@ Sale con 1 si algo no cuadra. Lo entendido se declara acá, con su razón.
 
     python3 pipeline/villadelcine-2026-verificar.py
 """
-import json, os, re, sys, unicodedata
+import json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lib import norm
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAR = f'{REPO}/festivals/staging/villadelcine-2026-parrilla.json'
@@ -64,12 +65,6 @@ NO_CABE_OK = {
 DURACION_RARA_OK = {}
 
 
-def norm(s):
-    s = ''.join(c for c in unicodedata.normalize('NFD', s or '')
-                if unicodedata.category(c) != 'Mn').lower()
-    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
-
-
 def mins(h):
     return int(h[:2]) * 60 + int(h[3:])
 
@@ -96,13 +91,13 @@ def main():
     sueltas = []
     for pag in PAGS_RETICULA:
         ls = vp.lineas(pag, pag)
-        horas = [l for l in ls if vp.hora24(l[5])]
+        horas = [l for l in ls if vp.hora_reticula(l[5])]
         if not horas:
             continue
         y0 = min(l[2] for l in horas)
         for _, lx0, ly0, lx1, ly1, t in ls:
             if ly0 < y0 - 2 or vp.MARCA.match(t) or vp.RE_DIA.match(t) \
-                    or vp.hora24(t) or vp.RE_HORA_ROTA.match(t.strip()):
+                    or vp.hora_reticula(t) or vp.RE_HORA_ROTA.match(t.strip()):
                 continue
             if norm(t) not in dentro and t not in FANTASMAS:
                 sueltas.append(f'p{pag}: «{t[:52]}»')

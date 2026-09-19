@@ -92,7 +92,7 @@ def una(slug):
 
     def tras(*etiquetas):
         for i, l in enumerate(cuerpo):
-            if l.lower().rstrip(':') in etiquetas and i + 1 < len(cuerpo):
+            if l.lower().rstrip(':').strip() in etiquetas and i + 1 < len(cuerpo):
                 return cuerpo[i + 1]
         return ''
 
@@ -100,15 +100,21 @@ def una(slug):
                   if l.lower().rstrip(':') == 'duración'), len(cuerpo))
     cabeza = cuerpo[1:corte]
     director = tras('director', 'directores', 'dirección')
+    # EL PAÍS Y EL AÑO VIENEN ROTULADOS en muchas páginas («País:», «Año:») y
+    # yo los estaba adivinando de una línea suelta contra una lista blanca: 37
+    # páginas lo decían con todas las letras y no las leía. «Añ0:», con un cero
+    # en vez de la o, está así en tres de ellas.
+    pais_rot = tras('país', 'pais')
+    anio_rot = tras('año', 'ano', 'añ0', 'an0')
     dur = tras('duración') or next((c for c in cabeza if RE_DUR.match(c)), '')
-    anio = tras('año')
+    anio = anio_rot or tras('año')
     sinopsis = next((c for c in cabeza if len(c) > 60), '')
     # EL PAÍS SOLO SI ES UN PAÍS. La línea que sigue a la duración a veces es el
     # país, a veces el año y a veces nada, así que tomar «la siguiente corta»
     # dejaba países llamados «Carnal pleasures» o «Duración: 03». El país
     # normativo es el del PDF, que viene rotulado; acá solo se acepta lo que
     # figura en la lista, y lo demás se deja vacío a propósito.
-    pais = next((c for c in cabeza[1:] if PAIS.fullmatch(c.strip())), '')
+    pais = pais_rot or next((c for c in cabeza[1:] if PAIS.fullmatch(c.strip())), '')
     credito = cabeza[0] if cabeza else ''
     dur_arriba = next((c for c in cabeza if RE_DUR.match(c)), '')
 

@@ -25,7 +25,10 @@ PÁGINA y el informe dice cuál.
     python3 pipeline/villadelcine-2026-cobertura.py          # informe + fallo
     python3 pipeline/villadelcine-2026-cobertura.py --todo   # además, lo cubierto
 """
-import json, os, re, sys, unicodedata
+import json, os, re, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lib import norm
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAR = f'{REPO}/festivals/staging/villadelcine-2026-parrilla.json'
@@ -75,12 +78,6 @@ ALIAS = {
 
 RE_PROGRAMA = re.compile(r'\d{1,2}:\d{2}\s*[ap]\.?\s*m|'
                          r'\b(2[3-6])\s+de\s+septiembre\b', re.I)
-
-
-def norm(s):
-    s = ''.join(c for c in unicodedata.normalize('NFD', s or '')
-                if unicodedata.category(c) != 'Mn').lower()
-    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
 
 
 def es_adorno(t):

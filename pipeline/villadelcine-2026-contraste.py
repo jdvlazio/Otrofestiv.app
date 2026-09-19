@@ -30,7 +30,10 @@ para contrastar, no para producir—:
     python3 -m venv /tmp/vdcenv && /tmp/vdcenv/bin/pip install pymupdf
     /tmp/vdcenv/bin/python pipeline/villadelcine-2026-contraste.py
 """
-import json, os, re, sys, unicodedata
+import json, os, re, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lib import norm
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PDF = f'{REPO}/fuentes/villadelcine-2026/programacion-2026.pdf'
@@ -56,13 +59,7 @@ MARCA = re.compile(r'^(12|FESTIVAL|VILLA|DEL CINE|Septiembre|Lugar|Hora|caminos|
                    r'JUEVES|VIERNES|SÁBADO|DOMINGO)$', re.I)
 
 
-def norm(s):
-    s = ''.join(c for c in unicodedata.normalize('NFD', s or '')
-                if unicodedata.category(c) != 'Mn').lower()
-    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
-
-
-def hora24(t, ap_previo=''):
+def hora_reticula(t, ap_previo=''):
     m = RE_HORA.match(t.strip())
     if not m:
         return ''
@@ -137,7 +134,7 @@ def main():
         ls = lineas_mupdf(page)
         horas, ap = [], ''
         for x0, y0, x1, y1, t in sorted(ls, key=lambda l: l[1]):
-            h = hora24(t, ap)
+            h = hora_reticula(t, ap)
             if h:
                 horas.append(((y0 + y1) / 2, h))
                 ap = 'a' if h < '12:00' else 'p'
@@ -150,7 +147,7 @@ def main():
                     if y1 < Y_CIELO and x0 > 440 and RE_DIA.match(t)), '')
         # columnas: la cabecera, arriba de la primera hora
         cab = [l for l in ls if Y_CIELO < l[3] < horas[0][0] - 8 and l[0] > 88
-               and not MARCA.match(l[4]) and not RE_DIA.match(l[4]) and not hora24(l[4])]
+               and not MARCA.match(l[4]) and not RE_DIA.match(l[4]) and not hora_reticula(l[4])]
         cols = []
         for x0, y0, x1, y1, t in sorted(cab, key=lambda l: (l[0], l[1])):
             for c in cols:
@@ -174,7 +171,7 @@ def main():
             dentro = [t for lx0, ly0, lx1, ly1, t in ls
                       if x0 - 3 <= (lx0 + lx1) / 2 <= x1 + 3
                       and y0 - 5 <= (ly0 + ly1) / 2 <= y1 + 7
-                      and not MARCA.match(t) and not hora24(t) and not RE_DIA.match(t)]
+                      and not MARCA.match(t) and not hora_reticula(t) and not RE_DIA.match(t)]
             suyos.append({'dia': dia, 'pagina': pag, 'sede': sede,
                           'hora': rot(y0), 'hasta': rot(y1), 'lineas': dentro})
 

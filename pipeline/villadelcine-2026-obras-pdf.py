@@ -45,14 +45,38 @@ FORMATOS = {
     'ÓPERA PRIMA INTERNACIONAL', 'PODEROSAS', 'VOCES', 'PLANETA', 'RAÍCES',
     'KOREBAJU', 'BOYACÁ EN LOS CAMPOS', 'INT', 'DISCAPACIDADES',
 }
-# Países tal como los escribe el PDF, con sus erratas («Brasi», «Usbekistán»).
-PAIS = re.compile(
-    r'^(colombia|m[ée]xico|brasi[l]?|argentina|chile|per[úu]|ecuador|venezuela|uruguay|'
-    r'bolivia|guatemala|cuba|panam[áa]|espa[ñn]a|francia|italia|alemania|portugal|'
-    r'b[ée]lgica|holanda|suiza|austria|suecia|polonia|rusia|grecia|turqu[íi]a|'
-    r'usbekist[áa]n|india|china|jap[óo]n|taiw[áa]n|corea|ir[áa]n|israel|nigeria|'
-    r'sud[áa]frica|australia|canad[áa]|usa|estados unidos|animaci[óo]n|'
-    r'[a-zá-ú]+(?:\s*[,/]\s*[a-zá-ú]+)+)$', re.I)
+# EL PAÍS ES UNA LISTA, NO UNA HEURÍSTICA. El comodín «varias palabras
+# separadas por coma o barra» se tragaba los géneros: «Ficción / Drama /
+# Comedia / Fantasia» entraba como país y la app lo iba a pintar con un globo
+# terráqueo en vez de una bandera. Un país o está en la lista o no es país.
+PAISES = ['colombia', 'méxico', 'mexico', 'brasil', 'brasi', 'argentina', 'chile',
+          'perú', 'peru', 'ecuador', 'venezuela', 'uruguay', 'paraguay', 'bolivia',
+          'guatemala', 'cuba', 'panamá', 'costa rica', 'españa', 'france', 'francia',
+          'italia', 'italy', 'alemania', 'portugal', 'reino unido', 'inglaterra',
+          'bélgica', 'belgium', 'holanda', 'países bajos', 'suiza', 'austria',
+          'suecia', 'noruega', 'dinamarca', 'polonia', 'rusia', 'ucrania', 'grecia',
+          'turquía', 'usbekistán', 'uzbekistán', 'uzbekistan', 'india', 'china',
+          'japón', 'taiwán', 'taiwan', 'corea', 'irán', 'israel', 'nigeria',
+          'sudáfrica', 'australia', 'canadá', 'usa', 'estados unidos', 'spain']
+# Como el festival las escribe → como se escriben. Solo ortografía: no se
+# cambia el país, se corrige la letra.
+ERRATA_PAIS = {'brasi': 'Brasil', 'usbekistán': 'Uzbekistán', 'mexico': 'México',
+               'peru': 'Perú', 'taiwan': 'Taiwán', 'uzbekistan': 'Uzbekistán',
+               'france': 'Francia', 'italy': 'Italia', 'belgium': 'Bélgica',
+               'spain': 'España'}
+
+
+def es_pais(t):
+    """Una celda de metadatos es el país si TODAS sus partes lo son: «Brasil,
+    India, Italia, España» sí; «Ficción y Drama» no."""
+    partes = [x.strip().lower() for x in re.split(r'[,/]| y ', t or '') if x.strip()]
+    return bool(partes) and all(x in PAISES for x in partes)
+
+
+def limpia_pais(t):
+    partes = [x.strip() for x in re.split(r'([,/])', t or '') if x.strip()]
+    return ''.join(ERRATA_PAIS.get(x.lower(), x) if x not in ',/' else x + ' '
+                   for x in partes).strip()
 
 
 # LAS CUATRO PÁGINAS SIN «Dir.». No son obras en competencia: son un tributo,
@@ -78,6 +102,75 @@ IRREGULARES = [
 ]
 
 
+# Palabras que NO se capitalizan dentro de un título en español, y siglas que
+# SÍ van enteras en mayúscula. Ver `a_titulo`.
+# LA CAJA DE LOS TÍTULOS QUE LA WEB NO TRAE, escrita a mano. Se respeta la
+# ortografía del festival; lo único que cambia es la mayúscula sostenida de la
+# plantilla del PDF.
+CAJA = {
+    'UN POETA': 'Un poeta',
+    'LLUEVE SOBRE BABEL': 'Llueve sobre Babel',
+    'AQUILEO VENGANZA': 'Aquileo Venganza',
+    'FUNDACIÓN PATRIMONIO FILMICO': 'Fundación Patrimonio Fílmico',
+    'MABEL VELOSA': 'Mabel Velosa',
+    'MI TESORO': 'Mi tesoro',
+    'LA ÚLTIMA HISTORIA': 'La última historia',
+    'LE JEUNE SOFIANE': 'Le jeune Sofiane',
+    'CIANOTIPIA': 'Cianotipia',
+    'BEHIND THE DOOR': 'Behind the Door',
+    'CON LA MANO ARRIBA': 'Con la mano arriba',
+    'AMOR A PRIMERA VISTA': 'Amor a primera vista',
+    'SABOR A MI (ACÚSTICO / BOLERO JAZZ)': 'Sabor a mí (acústico / bolero jazz)',
+    'MOMENTOS EN MOVIMIENTO. PRIMEROS PASOS DEL BALLET EN COLOMBIA.':
+        'Momentos en movimiento. Primeros pasos del ballet en Colombia',
+    'KOREBAJU PAI REKOCHO': 'Korebaju Pai Rekocho',
+    'CUADRILEROS ORGULLO Y LEGADO': 'Cuadrileros, orgullo y legado',
+    'THE GUANENTÁ SYMPHONY': 'The Guanentá Symphony',
+    'FARMEANDO EL TUNJO: CREACIÓN CINEMATOGRÁFICA CON INTELIGENCIA ARTIFICIAL':
+        'Farmeando el Tunjo: creación cinematográfica con inteligencia artificial',
+}
+
+MINUS = {'a', 'al', 'ante', 'con', 'contra', 'de', 'del', 'desde', 'e', 'el', 'en',
+         'entre', 'hacia', 'hasta', 'la', 'las', 'lo', 'los', 'más', 'ni', 'o', 'para',
+         'por', 'que', 'se', 'según', 'si', 'sin', 'sobre', 'su', 'sus', 'tras', 'un',
+         'una', 'unos', 'unas', 'y', 'the', 'of', 'and', 'in', 'on', 'to', 'for', 'a'}
+SIGLAS = {'IA', 'VR', 'WIP', 'USA', 'UBPD', 'AI', 'DASC', 'ENACC', 'TV', 'II', 'III'}
+
+
+def a_titulo(t, natural=None):
+    """«AMOR A PRIMERA VISTA» → «Amor a primera vista».
+
+    El PDF imprime TODOS los títulos en mayúscula sostenida. Eso es una
+    decisión tipográfica de la plantilla, no el nombre de la obra, y publicarlo
+    así se lee a gritos (además de romper el gate de la app).
+
+    PRIMERO, LA WEB DEL PROPIO FESTIVAL: publica los mismos títulos en caja
+    natural, así que si la obra está allí se usa SU escritura y no la nuestra.
+    Es la diferencia entre respetar cómo lo escribe el festival y adivinarlo:
+    ninguna regla automática sabe que en «Sierra: el álbum mortuorio» la sierra
+    va en mayúscula y el álbum no.
+
+    SOLO SI NO ESTÁ EN LA WEB se busca en CAJA, que es una lista escrita a
+    mano. NO se aplica una regla automática: probé con caja de oración y
+    «LLUEVE SOBRE BABEL» quedó «Llueve sobre babel». Ninguna regla sabe que
+    Babel es un nombre propio y el álbum no, así que las pocas que la web no
+    trae se escriben una por una, mirando la obra.
+    """
+    # CAJA va PRIMERO: «BEHIND THE DOOR» y «AMOR A PRIMERA VISTA» están en
+    # mayúscula sostenida también en la web, así que preferir la web sin más
+    # las dejaba gritando. La lista escrita a mano es una decisión tomada
+    # mirando la obra y gana sobre las dos fuentes.
+    if t.strip() in CAJA:
+        return CAJA[t.strip()]
+    return natural or t
+
+
+def _sinacento(x):
+    import unicodedata
+    return ''.join(c for c in unicodedata.normalize('NFD', x or '')
+                   if unicodedata.category(c) != 'Mn').lower()
+
+
 def parte_cabecera(cab):
     """«NUEVAS MIRADAS TRÁNSITO» → (sección, programa). Las secciones son las
     once que aprobó Juan; lo que sobra del nombre es el programa."""
@@ -95,6 +188,12 @@ def parte_cabecera(cab):
 
 def main():
     d = json.load(open(PAR, encoding='utf-8'))
+    # los mismos títulos, como los escribe la web del festival
+    natural = {}
+    web_p = f'{ST}/villadelcine-2026-obras-web.json'
+    if os.path.exists(web_p):
+        for o in json.load(open(web_p, encoding='utf-8'))['obras']:
+            natural[re.sub(r'[^a-z0-9]+', '', _sinacento(o['titulo']))] = o['titulo']
     obras, sin_dir = [], []
 
     for f in d['fichas']:
@@ -103,7 +202,9 @@ def main():
         idx = [i for i, l in enumerate(ls) if RE_DIR.match(l)]
         for n, i in enumerate(idx):
             director = RE_DIR.match(ls[i]).group(1).strip()
-            titulo = ls[i - 1].strip() if i else ''
+            crudo_t = ls[i - 1].strip() if i else ''
+            titulo = a_titulo(crudo_t, natural.get(
+                re.sub(r'[^a-z0-9]+', '', _sinacento(crudo_t))))
             formato = ''
             if i >= 2 and ls[i - 2].strip().upper() in FORMATOS:
                 formato = ls[i - 2].strip()
@@ -125,8 +226,8 @@ def main():
                         dur_min = int(m.group(4))
                     resto = [x.strip() for x in (m.group(5) or '').split('|') if x.strip()]
                     for r in resto:
-                        if not pais and PAIS.match(r):
-                            pais = r
+                        if not pais and es_pais(r):
+                            pais = limpia_pais(r)
                         elif not genero:
                             genero = r
                     cuerpo = cuerpo[1:]
@@ -147,7 +248,7 @@ def main():
         for irr in [x for x in IRREGULARES if x['pagina'] == f['pagina']]:
             cuerpo = [l for l in ls if len(l) > 60]
             obras.append({
-                'titulo': irr['titulo'], 'director': irr['credito'],
+                'titulo': a_titulo(irr['titulo']), 'director': irr['credito'],
                 'seccion': seccion, 'programa': programa,
                 'rol_credito': irr['rol'], '_nota': irr['nota'],
                 'es_actividad': True,
