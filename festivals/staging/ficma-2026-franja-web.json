@@ -12,8 +12,7 @@
   "El taller de animación se anuncia de 5:00 a 8:00 pm y su propio texto dice «taller intensivo de 4 horas». Se publican las tres horas del horario.",
   "Las tarjetas que ilustran la página son las de la edición APLAZADA: los archivos se llaman «FRANJA-ACADEMICA-VERSION-ANTERIOR» y dentro dicen AGOSTO. Quien mire la imagen y no el texto lee la fecha vieja.",
   "La tarjeta de «Coleccionar para recordar» trae una tercera invitada, Juliana Gallego, que el texto de la página ya no nombra. Se publican las dos del texto.",
-  "«Taller de animación…» (jue 24): la página y el formulario dicen 5:00 pm; la lámina 6 del carrusel de IG dice 4:00 pm. Se publica 5:00 pm (dos fuentes) y se pregunta.",
-  "«Un sueño se hace realidad en 1 minuto» (dom 20): la página y la lámina 3 del carrusel dicen 9:00 am; el formulario dice «9:00 p. m. a 11:30 p. m.». Se publica 9:00 am y se pregunta."
+  "«Un sueño se hace realidad en 1 minuto» (dom 20): el formulario dice «9:00 p. m.»; la página, la lámina y el festival (DM 19 sep) dicen 9:00 am. Se publica 9:00 am."
  ],
  "actividades": [
   {
@@ -204,7 +203,7 @@
    "invitados": "Fabián Amador Salazar",
    "tallerista": "",
    "_horario_publicado": "5:00 pm 8:00 pm",
-   "hora": "17:00",
+   "hora": "16:00",
    "duracion_min": 180,
    "sede_cruda": "Secretaria de Cultura de Palogrande",
    "_cupos_publicado": "30, previa inscripción",
@@ -219,7 +218,14 @@
     "hasta": "20:00"
    },
    "sinopsis": "Aprende a transformar fotos y vectores estáticos en videos dinámicos en este taller intensivo de 4 horas. Diseñado de 0 a 100 para principiantes, descubrirás cómo reimaginar tus imágenes con el poder estilístico de Gemini, darles movimiento cinemático con Google Flow y darles el acabado perfecto en CapCut mediante la separación por capas, animación con keyframes y diseño de sonido listo para destacar en Reels por ejemplo o cualquier proyecto audiovisual que tengas en mente. ¡Lleva tus piezas gráficas al siguiente nivel visual sin necesidad de saber dibujar!",
-   "perfil": ""
+   "perfil": "",
+   "_pagina_decia": {
+    "dia": "2026-09-24",
+    "hora": "17:00",
+    "duracion_min": 180,
+    "sede_cruda": "Secretaria de Cultura de Palogrande"
+   },
+   "_corregido_por": "la página y el formulario dicen 5:00 pm y la lámina 6 del carrusel 4:00 pm; el festival respondió por DM (19 sep): «es a las 4 pm hasta las 7 PM». Manda la respuesta oficial. (https://www.instagram.com/p/Ddd3VIODXLK/)"
   },
   {
    "dia": "2026-09-25",

@@ -73,7 +73,12 @@ def main():
     ocr = json.load(open(OCR, encoding='utf-8'))
     ocr.pop('_provenance', None)
     pub = json.load(open(PUB, encoding='utf-8'))
-    igd = json.load(open(f'{ST}/ficma-2026-ig-dias.json', encoding='utf-8'))['discrepa']
+    _ig = json.load(open(f'{ST}/ficma-2026-ig-dias.json', encoding='utf-8'))
+    igd = _ig['discrepa']
+    # Lo que el festival AGREGÓ fuera del PDF (declarado en ig-dias con su
+    # fuente) no puede contarse como «inventado»: el programa no lo trae porque
+    # llegó después, por DM. Se acepta solo lo declarado, título por título.
+    agregadas = {lib.norm(a['titulo']) for a in _ig.get('agregar', [])}
     fallos, mirar = [], []
 
     # ── 1 · cada página, una cosa ────────────────────────────────────────────
@@ -140,7 +145,7 @@ def main():
     if perdidas:
         fallos.append(f'{len(perdidas)} función(es) del programa que NO se publicaron: '
                       + '; '.join(f'{t} {d[-2:]}·{h}' for t, d, h in sorted(perdidas)))
-    inventadas = publicadas - del_crudo
+    inventadas = {x for x in publicadas - del_crudo if x[0] not in agregadas}
     if inventadas:
         fallos.append(f'{len(inventadas)} función(es) publicadas que el programa no trae: '
                       + '; '.join(f'{t} {d[-2:]}·{h}' for t, d, h in sorted(inventadas)))

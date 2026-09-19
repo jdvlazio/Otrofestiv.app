@@ -261,6 +261,8 @@ ACTIVIDADES = {
     'Muestra de Cortometrajes: Realizadores locales y Eje Cafetero': {
         'tipo': 'evento', 'event_kind': 'experiencia', 'info': True,
         '_nota': 'Muestra continua: se entra y se sale'},
+    'Largometrajes UBPD': {'tipo': 'evento', 'event_kind': 'experiencia', 'duracion_min': 120,
+                           '_nota': 'bloque de largometrajes de la UBPD, 10:00–12:00'},
     'Concierto Sinfónico': {'tipo': 'evento', 'event_kind': 'experiencia',
                             'duracion_min': 90},
     'Noche de Vinilos': {'tipo': 'evento', 'event_kind': 'experiencia', 'info': True},
@@ -396,6 +398,16 @@ def main():
                     f['duracion_min'] = d['duracion_min']
     for t, v in ig['solo_en_ig'].items():
         avisos.append(f'«{t}» solo está en Instagram ({v["dia"][-2:]}·{v["hora"]}): {v["nota"]}')
+    # Lo que el festival completó por DM (sede de una función que el pie
+    # anunciaba sin lugar): entra como una función más, con su fuente.
+    for a in ig.get('agregar', []):
+        avisos.append(f'«{a["titulo"]}» agregada ({a["dia"][-2:]}·{a["hora"]}): {a["_src"]}')
+        fun.append({'pagina': '', 'maqueta': '', 'costo': '', 'dia': a['dia'],
+                    'dia_badge': '', 'hora': a['hora'], 'sede': a['sede'],
+                    'seccion': a['seccion'], 'titulo': a['titulo'], 'director': '',
+                    'pais': '', 'duracion_min': a.get('duracion_min'), 'anio': None,
+                    'has_qa': False, 'sinopsis': a.get('sinopsis', ''),
+                    '_src': {'url': a['_src'], 'date': a['_fecha']}})
     for t, v in ig['solo_en_pdf'].items():
         avisos.append(f'«{t}» solo está en el PDF: {v}')
 

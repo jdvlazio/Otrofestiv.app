@@ -117,16 +117,35 @@ DISCREPA = {
     # (badge y campo HORA). Un pie contra dos imágenes: ganan las imágenes.
     # Y mi argumento de que «a las 10:00 el post pone otra función en esa sede»
     # era falso: los Largometrajes UBPD no dicen sede.
+    #
+    # …Y EL FESTIVAL RESPONDIÓ (DM de Instagram a Juan, 19 sep 2026, captura en
+    # fuentes/ficma-2026/dm-festival-2026-09-19.jpg): «Los largos de la UBPD son
+    # de 10 a 12 y realizadores locales de 1 a 8 pm, todos en la casa de la
+    # cultura palogrande». El pie tenía razón y la lámina no. Manda la respuesta
+    # oficial: 13:00, siete horas.
+    'Muestra de Cortometrajes: Realizadores locales y Eje Cafetero': {
+        'hora': '13:00', 'duracion_min': 420,
+        'por_que': 'la lámina y el PDF dicen 10:00; el pie del post dice «1:00 p.m. a 8:00 '
+                   'p.m.» y el festival lo confirmó por DM el 19 sep. A las 10:00 van los '
+                   'Largometrajes UBPD en la misma sede.'},
 }
+
+# LO QUE EL FESTIVAL AGREGÓ POR DM (19 sep 2026) y ninguna fuente publicada trae
+# completo: los Largometrajes UBPD tenían hora en el pie pero no sede. Ahora sí.
+AGREGAR = [
+    {'titulo': 'Largometrajes UBPD', 'dia': '2026-09-26', 'hora': '10:00', 'duracion_min': 120,
+     'sede': 'Casa de la Cultura Palogrande', 'seccion': 'FUNCIONES ESPECIALES',
+     'sinopsis': 'Proyección de largometrajes de la Unidad de Búsqueda de Personas dadas '
+                 'por Desaparecidas (UBPD).',
+     '_src': 'https://www.instagram.com/p/DdcA4G8m6O0/ (hora) + DM del festival a Juan (sede)',
+     '_fecha': '2026-09-19'},
+]
 
 # EN EL POST Y NO EN EL PDF. Sin sede no se publica: es la misma regla que dejó
 # fuera la masterclass de Andrés Buitrago.
-SOLO_EN_IG = {
-    'Largometrajes UBPD': {
-        'dia': '2026-09-26', 'hora': '10:00', 'hasta': '12:00',
-        'nota': 'Unidad de Búsqueda de Personas dadas por Desaparecidas. El post NO '
-                'dice sede. No se publica hasta que el festival diga dónde.'},
-}
+# (Los Largometrajes UBPD estuvieron acá —«el post NO dice sede»— hasta que el
+# festival la dio por DM el 19 sep. Pasaron a AGREGAR.)
+SOLO_EN_IG = {}
 
 # EN EL PDF Y NO EN EL POST DE SU DÍA.
 SOLO_EN_PDF = {
@@ -147,7 +166,7 @@ def main():
         posts={d: IG + s + '/' for d, s in POSTS.items()}),
         'acceso': ACCESO, 'presencia': PRESENCIA, 'ficha_extra': FICHA_EXTRA,
         'discrepa': DISCREPA,
-        'solo_en_ig': SOLO_EN_IG, 'solo_en_pdf': SOLO_EN_PDF},
+        'agregar': AGREGAR, 'solo_en_ig': SOLO_EN_IG, 'solo_en_pdf': SOLO_EN_PDF},
         open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'{len(POSTS)} días · {len(ACCESO)} con precio · {len(PRESENCIA)} con '
           f'presencia · {len(DISCREPA)} discrepancias · {len(SOLO_EN_IG)} solo en IG')

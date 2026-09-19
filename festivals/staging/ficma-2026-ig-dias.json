@@ -38,15 +38,27 @@
    "_src": "https://www.instagram.com/p/DdcUAxysh0p/ (@sinfonicadecaldas)"
   }
  },
- "discrepa": {},
- "solo_en_ig": {
-  "Largometrajes UBPD": {
-   "dia": "2026-09-26",
-   "hora": "10:00",
-   "hasta": "12:00",
-   "nota": "Unidad de Búsqueda de Personas dadas por Desaparecidas. El post NO dice sede. No se publica hasta que el festival diga dónde."
+ "discrepa": {
+  "Muestra de Cortometrajes: Realizadores locales y Eje Cafetero": {
+   "hora": "13:00",
+   "duracion_min": 420,
+   "por_que": "la lámina y el PDF dicen 10:00; el pie del post dice «1:00 p.m. a 8:00 p.m.» y el festival lo confirmó por DM el 19 sep. A las 10:00 van los Largometrajes UBPD en la misma sede."
   }
  },
+ "agregar": [
+  {
+   "titulo": "Largometrajes UBPD",
+   "dia": "2026-09-26",
+   "hora": "10:00",
+   "duracion_min": 120,
+   "sede": "Casa de la Cultura Palogrande",
+   "seccion": "FUNCIONES ESPECIALES",
+   "sinopsis": "Proyección de largometrajes de la Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD).",
+   "_src": "https://www.instagram.com/p/DdcA4G8m6O0/ (hora) + DM del festival a Juan (sede)",
+   "_fecha": "2026-09-19"
+  }
+ ],
+ "solo_en_ig": {},
  "solo_en_pdf": {
   "La Marcha del Hambre": "tiene página propia en el PDF (viernes 25, badge 8:00 PM, 90 min) y el post del viernes no la nombra. Se publica —el programa oficial es fuente suficiente— y se pregunta."
  }
