@@ -80,6 +80,7 @@ def main():
         que_aporta='la parrilla COMPLETA de la reprogramación: día, hora, sede, '
                    'sección, título, dirección, país, duración, año y el sello de '
                    '«presencia del director» de cada función',
+        url=f'https://drive.google.com/file/d/{DRIVE_ID}/view',
         metodo=f'el PDF es imagen pura (Acrobat Image Conversion): pdftoppm a {DPI} '
                f'dpi + Vision con cajas, porque el parser distingue los campos por '
                f'su POSICIÓN en la plantilla'),

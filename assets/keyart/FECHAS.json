@@ -1,0 +1,191 @@
+{
+ "_doc": [
+  "Lo que cada afiche del splash lleva IMPRESO, leído con OCR (Vision).",
+  "Lo genera scripts/keyart-fechas.py; lo vigila [keyart-fechas] en",
+  "validate.py, que compara estos meses contra las fechas que el festival",
+  "declara en FESTIVAL_CONFIG. No editar a mano.",
+  "",
+  "Un afiche sin fechas impresas es normal: meses vacíos = nada que",
+  "contradecir. El caso que persigue el guardián es el afiche que anuncia",
+  "un mes que ya no es el del festival (FICMA, sep 2026: el afiche decía",
+  "AGOSTO ocho días después de que el festival se moviera a septiembre)."
+ ],
+ "afiches": {
+  "aff2026-v2.jpg": {
+   "festivales": [
+    "aff2026"
+   ],
+   "meses": [
+    "abril"
+   ],
+   "anios": [
+    "2026"
+   ],
+   "texto": "PELICULAS QUE VIAJAN, HISTORIAS QUE TRANSFORMAN Y TERNATIVA FILM FESTIVAL by inDrive ABRIL 21-30 2026 MEDELLIN A COLOMBIA"
+  },
+  "cineautopsia2026-v2.jpg": {
+   "festivales": [
+    "cineautopsia2026"
+   ],
+   "meses": [],
+   "anios": [],
+   "texto": "zoz orsob"
+  },
+  "cinemancia2026.jpg": {
+   "festivales": [
+    "cinemancia2026"
+   ],
+   "meses": [
+    "septiembre"
+   ],
+   "anios": [],
+   "texto": "www.cinemanciafestival.com cinemancia Descubri mas cine remanes gr. l. pur wh, n. ы. 1. 61.69 Interior L.Brown L.Brown Fig. 107 61. 1. 61.61 interior L. Brown n. wh. D 3-12 septiembre Valle de Aburrá"
+  },
+  "fantasofest2026.jpg": {
+   "festivales": [
+    "fantasofest2026"
+   ],
+   "meses": [],
+   "anios": [],
+   "texto": "BOGOTA FANTASOFEST"
+  },
+  "ficci65.jpg": {
+   "festivales": [
+    "ficci65"
+   ],
+   "meses": [],
+   "anios": [],
+   "texto": "Ficci 65 0 0 0- 000"
+  },
+  "ficdeh2026-v2.jpg": {
+   "festivales": [
+    "ficdeh2026"
+   ],
+   "meses": [
+    "agosto"
+   ],
+   "anios": [],
+   "texto": "B'FIGDEH Festival Internacional de Cine por los Derechos Humanos -Colombia SI HAY www.FICDEH.com MODEF ANO 12 AL 19 DE AGOSTO 20 26 76 Películas 32 Países +100 Invitadxs +120 Escenarios 20 talleres Clúster MIA Charlas que unen ImpulsoLab ENTRADA LIBRE Куродресіа le acuerdo de pa Armenia Barranquilla"
+  },
+  "ficma2026-v2.jpg": {
+   "festivales": [
+    "ficma2026"
+   ],
+   "meses": [
+    "septiembre"
+   ],
+   "anios": [],
+   "texto": "FERIA INTERNACIONAL DE CINE DE MANIZALES www.laficma.com ARDÍN DE LAS LOSAS PERDIDAS FICMA 17 19 AL 26 DE SEPTIEMBRE"
+  },
+  "ficmontanas2026-v2.jpg": {
+   "festivales": [
+    "ficmontanas2026"
+   ],
+   "meses": [
+    "julio"
+   ],
+   "anios": [
+    "2026"
+   ],
+   "texto": "12 FESTIVAL INTERNACIONAL CINE EN LAS MONTAÑAS SALENTO QUINDIO DEL 01 AL 05 DE JULIO 2026 DESCARGA RE-EXISTENCIAS ¿CAMPESINAS / Latinoamericanas"
+  },
+  "finca2026.jpg": {
+   "festivales": [
+    "finca2026"
+   ],
+   "meses": [
+    "agosto"
+   ],
+   "anios": [
+    "2026"
+   ],
+   "texto": "[FINCA] CINE AMBIENTAL 12 al 19 de agosto 2026 Bs. As. - Argentina festivalfinca.com @FestivalFINCA SEMBREMOS FUTURO"
+  },
+  "leviza2026.jpg": {
+   "festivales": [
+    "leviza2026"
+   ],
+   "meses": [
+    "mayo"
+   ],
+   "anios": [
+    "2026"
+   ],
+   "texto": "LE VI ZA Festival de cine y audiovisuales de Zapatoca TERCERA EDICIÓN DEL 14 AL17 DE MAYO 2026 LEVIZA"
+  },
+  "narrarelfuturo2026-v2.jpg": {
+   "festivales": [
+    "narrarelfuturo2026"
+   ],
+   "meses": [],
+   "anios": [],
+   "texto": "#NARRAR ELFUTURO Festival de Cine & Nuevos Medios 13 #NARRARELFUTURO amadi El Agrado F'|UTADEO ="
+  },
+  "olhar2026-v2.jpg": {
+   "festivales": [
+    "olhar2026"
+   ],
+   "meses": [],
+   "anios": [],
+   "texto": "piresdecnema.com.b Olhar de Cinema Festival Internaciona de Curitiba 15. 6 - 13 jun. 26"
+  },
+  "qaff2026-v2.jpg": {
+   "festivales": [
+    "qaff2026"
+   ],
+   "meses": [
+    "septiembre"
+   ],
+   "anios": [
+    "2026"
+   ],
+   "texto": "QUIBDO AFRICA FILM FESTIVAL NOIR 8ª EDICIÓN 14 - 18 SEPTIEMBRE 2026"
+  },
+  "siembrafest2026-v2.jpg": {
+   "festivales": [
+    "siembrafest2026"
+   ],
+   "meses": [
+    "septiembre"
+   ],
+   "anios": [],
+   "texto": "INSISTERA SASAIMA - VILLETA 9 AL 18 DE SEPTIEMBRE ...00 •SIEMBRAFEST MUJERES QUE SOSTIENEN LA VIDA ZANE Dialekta 4O SE MEMORIA CE INICIANÓN TA E AGREULTORA"
+  },
+  "tercertiempo2026-v2.jpg": {
+   "festivales": [
+    "tercertiempo2026"
+   ],
+   "meses": [],
+   "anios": [],
+   "texto": "TERCER TIEMPO FEST FESTIVAL MUNDIAL DE CINE DE FUTBOL Y DEPORTES. DEKALB/ATLANTA - BOGOTÁ - CDMX - EN 2 Veintidós BOGOTAN 22 internacional"
+  },
+  "tiff2026-v2.jpg": {
+   "festivales": [
+    "tiff2026"
+   ],
+   "meses": [],
+   "anios": [],
+   "texto": "Taronto INTEPNATIONAL FILM Festival"
+  },
+  "tribeca2026.jpg": {
+   "festivales": [
+    "tribeca2026"
+   ],
+   "meses": [
+    "junio"
+   ],
+   "anios": [],
+   "texto": "JUNE 3-14 TR BECA FEST VAL"
+  },
+  "vartex2026-v3.jpg": {
+   "festivales": [
+    "vartex2026"
+   ],
+   "meses": [
+    "agosto"
+   ],
+   "anios": [],
+   "texto": "MIESTRA DE Vartex* FASHION FILM EXPERIMENTAL 19 al 22 de agosto A poye cinéfagos - net Colombo® Americano KINITOSCOPIO On Dros / Bellas Artes"
+  }
+ }
+}

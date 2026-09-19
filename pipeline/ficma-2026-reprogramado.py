@@ -184,6 +184,10 @@ for x in fun:
 out = {
  '_provenance': {
    'fuente': 'laficma.com (/estrenosficma17/ y /talleresficma17/) + Instagram @cinemanizales_ficma, post a post',
+   # La URL, explícita y con esquema, para que `fuentes-frescas.py` pueda
+   # preguntarle al sitemap si la página cambió después de esta lectura. En
+   # prosa no sirve: nadie la puede consultar.
+   'url': WEB_E,
    'capturado': '2026-09-17',
    'metodo': 'La web NO tiene parrilla: su menú solo ofrece ESTRENOS y TALLERES. El resto sale de los posts, que desde el 14 sep ya traen la función entera (día · hora · sede · acceso). Los pies se leyeron EN EL NAVEGADOR, con sesión: el endpoint de embed dejó de devolver el pie y da falso vacío.',
    'alcance': f'{len(F)} funciones publicadas. El festival declara «más de 60 proyecciones»: falta la inmensa mayoría. La franja académica va aparte, en ficma-2026-franja-web.json.'},

@@ -5767,6 +5767,76 @@ try:
 except Exception as _e:
     fail(check, f'el guardián no pudo correr: {_e}')
 
+# ── [keyart-fechas] el afiche no puede anunciar un mes que ya no es ──────────
+# EL 18 SEP 2026, A UN DÍA DE QUE FICMA ABRIERA, el afiche del splash seguía
+# diciendo «10 AL 17 DE AGOSTO»: las fechas de antes del sismo que aplazó el
+# festival. Estuvo así ocho días. Y no lo cazó el repo — lo cazó Juan
+# preguntando, después de que yo afirmara, sin abrir un solo archivo, que el
+# festival no había publicado uno nuevo. Lo había publicado el 10 de septiembre
+# y estaba en su web como og:image.
+#
+# El afiche es lo PRIMERO que se ve de un festival y nadie lo revisa, porque
+# «es del festival». Un mes equivocado ahí manda a la gente a otra semana.
+#
+# CÓMO SE MIDE SIN OCR NI RED. `scripts/keyart-fechas.py` lee los afiches con
+# Vision y escribe en assets/keyart/FECHAS.json qué meses llevan IMPRESOS. Este
+# guardián solo compara esa tabla contra las fechas que el festival declara en
+# FESTIVAL_CONFIG. Tabla generada + guardián que la lee: el patrón de siempre,
+# porque dos copias del mismo hecho divergen.
+#
+# SOLO MIRA LOS FESTIVALES VIVOS. Un afiche de una edición pasada dice el mes de
+# su edición y eso es correcto; el daño solo existe mientras el festival esté por
+# venir o en curso. Un afiche SIN fechas impresas no contradice nada y pasa.
+check = 'keyart-fechas'
+try:
+    import datetime as _dk, json as _jk, os as _osk, re as _rk
+    _MESK = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio',
+             'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
+    _hoy = _dk.date.today()
+    _cfgk = open('src/config.js', encoding='utf-8').read()
+    _regk = {}
+    if _osk.path.exists('assets/keyart/FECHAS.json'):
+        _regk = _jk.load(open('assets/keyart/FECHAS.json', encoding='utf-8'))['afiches']
+    _malk, _sink, _okk = [], [], 0
+    for _mk in _rk.finditer(r"'([a-z0-9]+)':\s*\{(.*?)\n  \},", _cfgk, _rk.S):
+        _fid, _body = _mk.group(1), _mk.group(2)
+        _ka = _rk.search(r"keyArt:'([^']+)'", _body)
+        _ini = _rk.search(r"festivalStartStr:'(\d{4}-\d{2}-\d{2})", _body)
+        _fin = _rk.search(r"festivalEndStr:'(\d{4}-\d{2}-\d{2})", _body)
+        if not (_ka and _ini and _fin):
+            continue
+        if _dk.date.fromisoformat(_fin.group(1)) < _hoy:
+            continue                                   # edición pasada: su mes es el suyo
+        _arch = _osk.path.basename(_ka.group(1))
+        _rec = _regk.get(_arch)
+        if _rec is None:
+            _sink.append(f'{_fid} ({_arch})')
+            continue
+        # los meses que el festival ocupa de verdad, de su primer a su último día
+        _a, _b = _dk.date.fromisoformat(_ini.group(1)), _dk.date.fromisoformat(_fin.group(1))
+        _suyos = set()
+        _d = _a
+        while _d <= _b:
+            _suyos.add(_MESK[_d.month - 1])
+            _d += _dk.timedelta(days=1)
+        _impresos = set(_rec.get('meses') or [])
+        if _impresos and not (_impresos & _suyos):
+            _malk.append(f"{_fid}: el afiche dice {'/'.join(sorted(_impresos))} y el "
+                         f"festival es en {'/'.join(sorted(_suyos))} ({_arch})")
+        else:
+            _okk += 1
+    if _malk:
+        fail(check, 'afiche(s) del splash anunciando un mes que no es el del festival — '
+                    'es lo primero que se ve y manda a la gente a otra semana: '
+                    + '; '.join(_malk))
+    elif _sink:
+        fail(check, 'afiche(s) de festival vivo sin leer — corré '
+                    'python3 scripts/keyart-fechas.py: ' + ', '.join(_sink))
+    else:
+        ok(check, f'{_okk} afiche(s) de festivales vivos: ninguno anuncia un mes ajeno')
+except Exception as _e:
+    fail(check, f'el guardián no pudo correr: {_e}')
+
 check = 'plan-contrato'
 try:
     import glob as _gp, os as _osp, sys as _sysp

@@ -35,6 +35,10 @@
    "que": "el afiche que publica el festival (web e IG) para las obras sin imagen en TMDB"
   },
   {
+   "cmd": "python3 pipeline/fuentes-frescas.py ficma-2026",
+   "que": "¿alguna fuente cambió después de que la leímos? Pregunta al sitemap por cada URL declarada; falla si hay que volver a leer"
+  },
+  {
    "cmd": "python3 pipeline/ficma-2026-septiembre.py",
    "que": "parrilla + franja + catálogo + geo → build"
   },
