@@ -87,6 +87,60 @@ ERRATAS = {
         '«10:00 m» por «10:00 am»: el panel va de 10 a 12 del día.'),
 }
 
+# LO QUE EL FESTIVAL CORRIGIÓ EN INSTAGRAM Y NO EN SU WEB (19 sep 2026, 6:06 am).
+# La mañana de la apertura, @cinemanizales_ficma publicó un carrusel con UNA
+# LÁMINA POR TALLER —los seis de la franja, ninguna charla—, selladas «19 SEPT
+# 2026»: no son las de agosto que todavía ilustran /talleresficma17/. Tres dicen
+# algo distinto de la web, que no se ha tocado desde antes del aplazamiento.
+#
+# MANDA LA LÁMINA, y no por corazonada: es dos días más nueva, la hizo el
+# festival para ESTA edición, es la que ve quien se inscribe, y la web de la
+# franja ya venía escribiendo horarios imposibles («10:00 am- 11:00 pm»). Lo que
+# decía la web no se borra: queda campo por campo en `_web_decia`, para que la
+# discrepancia se pueda mirar y preguntar.
+#
+# Clave = título tal cual lo publica la web. `lamina` = el archivo en
+# fuentes/ig/<shortcode>/, que es lo que se leyó: no el pie del post.
+IG_POST = 'https://www.instagram.com/cinemanizales_ficma/p/Ddd3VIODXLK/'
+IG_MANDA = {
+    'Escribir con la cámara: Del guion a la puesta en escena': {
+        'lamina': '04.jpg',
+        'sede_cruda': 'Biblioteca Pública Satélite Palogrande',
+        'por_que': 'la web no le pone LUGAR y por eso no se publicaba. La lámina '
+                   'sí: «LUGAR: Biblioteca Pública Satélite Palogrande». Día y '
+                   'hora coinciden con la web (martes 22, 4:00 pm).'},
+    'Taller de animación de fotografías e imágenes de cero a cien para dummies con ias': {
+        'lamina': '05.jpg',
+        'hora': '16:00',
+        'por_que': 'la lámina dice «HORA: 4:00 pm»; la web, «5:00 pm 8:00 pm». '
+                   'Se mueve la hora de arranque y se conserva la duración de '
+                   'tres horas, que es lo único que dijo la web sobre el largo. '
+                   'La sede es la misma («Secretaria de Cultura de Palogrande» y '
+                   '«Biblioteca Pública Satélite Palogrande» son el mismo edificio).'},
+    'Poniéndole voz a tu historia silenciada': {
+        'lamina': '06.jpg',
+        'dia': '2026-09-25',
+        'hora': '17:00',
+        'sede_cruda': 'Biblioteca Pública Satélite Palogrande',
+        # NO SE APLICA TODAVÍA, y no porque se dude de la lámina. Mover este
+        # taller deja a la Secretaría de la Mujer y Equidad de Género SIN
+        # ninguna actividad, así que el festival pasa de 31 sedes a 30 y
+        # `publicar.py` lo frena: su compuerta cuenta campos y no puede
+        # distinguir «el festival desocupó un edificio» de «alguien rompió el
+        # build». La salida sería --forzar, que aquí no se usa. Queda dicho en
+        # el sidecar y en la pregunta al festival; se aplica borrando esta
+        # línea el día que Juan lo apruebe.
+        'espera_visto_bueno': 'vacía una sede (31 → 30) y publicar.py lo frena',
+        'por_que': 'la lámina lo pone el VIERNES 25 a las 5:00 pm en la Biblioteca '
+                   'Pública Satélite Palogrande; la web lo tiene el miércoles 23, '
+                   'de 2:00 a 5:00 pm, en la Secretaría de la Mujer y Equidad de '
+                   'Género. Cambian día, hora y sede. El carrusel reparte un '
+                   'taller por día (19, 20, 21, 22, 24 y 25) y el miércoles 23 '
+                   'queda sin taller, que es consistente con la mudanza. Se '
+                   'conservan las tres horas de duración que publicó la web.'},
+}
+
+
 # Las tarjetas que no traen rótulo pintado, con su motivo. Hoy solo una: el
 # taller de periodismo cultural se ilustra con la FOTO del tallerista, no con
 # una lámina de la franja.
@@ -106,9 +160,17 @@ HALLAZGOS = [
     'Lolli)») y NO tiene ficha en la página: ni día, ni hora, ni sede. En agosto '
     'era «De la realidad a la verdad», dos días en Casa En La Montaña. ¿Se cayó '
     'con el aplazamiento o falta publicarlo?',
-    '«Escribir con la cámara: Del guion a la puesta en escena» (mar 22, 9:00) es '
-    'la única ficha SIN LUGAR. En agosto era en la Universidad de Caldas. No se '
-    'publica hasta que el festival diga dónde.',
+    'La página de la franja NO se actualizó con lo que el festival publicó en '
+    'Instagram la mañana del 19 (post Ddd3VIODXLK, una lámina por taller). En '
+    'tres se contradicen: la web no le pone LUGAR a la masterclass de Andrés '
+    'Buitrago y la lámina sí (Biblioteca Pública Satélite Palogrande); la web '
+    'pone el taller de animación a las 5:00 pm y la lámina a las 4:00 pm; y la '
+    'web pone el taller de Diana Arias el MIÉRCOLES 23, de 2 a 5, en la '
+    'Secretaría de la Mujer y Equidad de Género, mientras la lámina lo pone el '
+    'VIERNES 25 a las 5:00 pm en la Biblioteca Pública Satélite Palogrande. '
+    '¿Cuál queda en pie en cada una? Se publica la lámina en las dos primeras; '
+    'la de Diana Arias se deja como está la web hasta tener respuesta, porque '
+    'moverla deja a la Secretaría de la Mujer sin ninguna actividad.',
     'Cuatro horarios dicen algo imposible: «10:00 am- 11:00 pm» (dos charlas de '
     'una hora), «9:00 am 11:30 pm» (el taller de Isabella Vega) y «9:00 am 12:am» '
     '(la masterclass). Se publican leyendo el cierre en la misma mitad del día.',
@@ -328,6 +390,25 @@ def main():
             resto = marcado
         a['sinopsis'] = ' '.join(x for s, x in resto if s == 'sinopsis').strip()
         a['perfil'] = ' '.join(x for s, x in resto if s == 'perfil').strip()
+
+        # La lámina de Instagram pisa a la web donde se contradicen (IG_MANDA).
+        corr = IG_MANDA.get(a['titulo'])
+        if corr and corr.get('espera_visto_bueno'):
+            # Se anota lo que dice la lámina, pero se publica lo de la web.
+            a['_ig_dice'] = {k: v for k, v in corr.items()
+                             if k not in ('lamina', 'por_que', 'espera_visto_bueno')}
+            a['_ig_dice'].update({'post': IG_POST, 'lamina': corr['lamina'],
+                                  'por_que': corr['por_que'],
+                                  'sin_aplicar': corr['espera_visto_bueno']})
+            corr = None
+        if corr:
+            campos_corr = {k: v for k, v in corr.items()
+                           if k not in ('lamina', 'por_que')}
+            a['_web_decia'] = {k: a.get(k) for k in campos_corr}
+            a.update(campos_corr)
+            a['_corrige_ig'] = {'post': IG_POST, 'lamina': corr['lamina'],
+                                'por_que': corr['por_que']}
+            a['_src'] = {'url': IG_POST, 'date': '2026-09-19'}
         acts.append(a)
 
     acts.sort(key=lambda x: (x['dia'], x['hora'] or '99:99', x['titulo']))
@@ -337,8 +418,14 @@ def main():
             que_aporta='las 11 actividades de la franja con día, hora, sede, '
                        'cupo, inscripción y sinopsis; el tipo (taller/charla) '
                        'sale del rótulo impreso en cada lámina, leído con OCR',
-            ojo='las láminas son las de AGOSTO (los archivos se llaman '
-                'VERSION-ANTERIOR): solo se les cree el rótulo, no la fecha'),
+            ojo='las láminas que ilustran la PÁGINA son las de AGOSTO (los '
+                'archivos se llaman VERSION-ANTERIOR): solo se les cree el '
+                'rótulo, no la fecha',
+            tambien=f'{IG_POST} — el carrusel de la franja que el festival '
+                    'publicó el 19 SEP a las 6:06 am, una lámina por taller. '
+                    'Pisa a la web en las actividades de IG_MANDA, porque es '
+                    'más nuevo y la web no se actualizó; lo que decía la web '
+                    'queda en `_web_decia` de cada una'),
         '_para_el_festival': HALLAZGOS,
         'actividades': acts,
     }
@@ -355,6 +442,16 @@ def main():
               f"{(str(a['duracion_min']) + 'm').rjust(5) if a['duracion_min'] else '    ?'} "
               f"{a['tipo'][:6].ljust(6)} {a['titulo'][:46].ljust(46)} "
               f"{a['sede_cruda'][:38]}")
+    for a in acts:
+        if a.get('_ig_dice'):
+            print(f"  ⏸ {a['titulo'][:46]}: la lámina "
+                  f"{a['_ig_dice']['lamina']} dice otra cosa y NO se aplica "
+                  f"— {a['_ig_dice']['sin_aplicar']}")
+        if a.get('_corrige_ig'):
+            print(f"  ↻ {a['titulo'][:46]}: la lámina "
+                  f"{a['_corrige_ig']['lamina']} pisa a la web en "
+                  f"{', '.join(sorted(a['_web_decia']))} "
+                  f"(web decía {a['_web_decia']})")
     sin = [a['titulo'] for a in acts if not a['sede_cruda']]
     if sin:
         print('SIN SEDE declarada: ' + '; '.join(sin))

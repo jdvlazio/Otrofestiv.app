@@ -284,7 +284,12 @@ def franja(path):
              'seccion': 'TALLERES' if a['tipo'] == 'taller' else 'CHARLAS',
              'duracion_min': a.get('duracion_min') or DURACION_POR_DEFECTO[a['tipo']],
              'sinopsis': a.get('sinopsis', ''), '_cupos': a.get('cupos'),
-             '_src': {'url': src['fuente'].split(' ')[0], 'date': src['capturado']}}
+             # Casi todas vienen de la página de la franja. Las que el festival
+             # corrigió en Instagram traen su propio `_src`: la procedencia es
+             # de la actividad, no del sidecar, o la ficha diría que la sede la
+             # dijo una página que no la dice.
+             '_src': a.get('_src') or {'url': src['fuente'].split(' ')[0],
+                                       'date': src['capturado']}}
         for c in ('requires_registration', 'registration_url', 'is_free'):
             if a.get(c):
                 f[c] = a[c]

@@ -2,8 +2,9 @@
  "_fuente": "PROGRAMACIÓN FICMA 17 (PDF de 78 páginas) — botón «DESCARGAR PROGRAMACIÓN» de laficma.com, alojado en Google Drive (1X2Nq3D5K7NaMjXwkROlN1JfYKbGJ__2Z)",
  "_provenance": {
   "fuente": "PROGRAMACIÓN FICMA 17 (PDF de 78 páginas) — botón «DESCARGAR PROGRAMACIÓN» de laficma.com, alojado en Google Drive (1X2Nq3D5K7NaMjXwkROlN1JfYKbGJ__2Z)",
-  "capturado": "2026-09-18",
+  "capturado": "2026-09-19",
   "que_aporta": "la parrilla COMPLETA de la reprogramación: día, hora, sede, sección, título, dirección, país, duración, año y el sello de «presencia del director» de cada función",
+  "url": "https://drive.google.com/file/d/1X2Nq3D5K7NaMjXwkROlN1JfYKbGJ__2Z/view",
   "metodo": "el PDF es imagen pura (Acrobat Image Conversion): pdftoppm a 150 dpi + Vision con cajas, porque el parser distingue los campos por su POSICIÓN en la plantilla"
  },
  "portadas": [
@@ -102,7 +103,7 @@
    "duracion_min": 102,
    "anio": 2020,
    "has_qa": false,
-   "_mismo_dia_otro_pase": "la lámina anuncia 1:30 pm y 4:00 pm centro cultura MANIZALES Culturas Sala Secretaría de CULTURA Oscura CALDAS egeda coloria",
+   "_mismo_dia_otro_pase": "la lámina anuncia 13:30 y 16:00",
    "sala": "",
    "ciclo": "",
    "_sede_cruda": "Confa"
@@ -314,7 +315,7 @@
    "duracion_min": 102,
    "anio": 2020,
    "has_qa": false,
-   "_mismo_dia_otro_pase": "la lámina anuncia 1:30 pm y 4:00 pm centro cultura MANIZALES Culturas Sala Secretaría de CULTURA Oscura CALDAS egeda coloria",
+   "_mismo_dia_otro_pase": "la lámina anuncia 13:30 y 16:00",
    "sala": "",
    "ciclo": "",
    "_sede_cruda": "Confa"
