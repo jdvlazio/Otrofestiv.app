@@ -45,6 +45,20 @@ FANTASMAS = {
              'pintado en ninguna parte; cae dentro del recuadro del CLUB DE PITCH',
 }
 
+# NO SON UN PROGRAMA: el festival los agrupa bajo una sección en las fichas,
+# pero los proyecta por separado y cada uno tiene su propio bloque. Sumarlos
+# daría un total que no corresponde a ninguna función.
+PROGRAMA_SUELTO = {
+    'Rumbo a los Macondo': 'son dos largos en dos funciones distintas — «Llueve '
+                           'sobre Babel» el viernes y «Un Poeta» el sábado',
+}
+# Programas cuyo metraje NO CABE en su bloque y ya está preguntado al festival.
+NO_CABE_OK = {
+    'Territorios RAÍCES': 'son 19 min de más en el bloque del sábado 11:45–12:45. '
+                          'Las cuatro duraciones están leídas de sus fichas y el '
+                          'bloque, dibujado. Va en la lista de preguntas.',
+}
+
 # Duraciones que el festival dibujó y NO son múltiplo de 15. Ninguna por ahora:
 # si aparece una, se mira la página antes de declararla.
 DURACION_RARA_OK = {}
@@ -157,6 +171,41 @@ def main():
             avisos.append(f'{b["dia"][-2:]} {b["hora"]}–{b["hasta"]} '
                           f'«{linea[:34]}»: el bloque dura {b["duracion_min"]} min y su '
                           f'metraje impreso es {metraje} ({m.group(0)})')
+
+    # 7 · LA SUMA DE LAS OBRAS CABE EN SU BLOQUE. Es información que ninguna
+    # otra comprobación tiene: el chequeo 6 usa el metraje que la celda imprime,
+    # y solo lo imprimen algunas. Este suma las fichas del programa. Una obra de
+    # más, una duración mal leída o un programa mal asignado se ven acá.
+    obras_p = f'{REPO}/festivals/staging/villadelcine-2026-obras-pdf.json'
+    if os.path.exists(obras_p):
+        obras = json.load(open(obras_p, encoding='utf-8'))['obras']
+        por_prog = {}
+        for o in obras:
+            k = norm(o['programa']) or norm(o['seccion'])
+            if not k:
+                continue
+            e = por_prog.setdefault(k, {'min': 0, 'n': 0, 'sin': 0,
+                                        'nombre': f"{o['seccion']} {o['programa']}".strip()})
+            e['n'] += 1
+            if o['duracion_min']:
+                e['min'] += o['duracion_min']
+            else:
+                e['sin'] += 1
+        for k, e in sorted(por_prog.items()):
+            cand = [b for b in bs if k in norm(' '.join(b['lineas']))]
+            if not cand or e['nombre'] in PROGRAMA_SUELTO:
+                continue
+            tope = max(b['duracion_min'] for b in cand)
+            if e['min'] > tope:
+                aviso = (f'«{e["nombre"]}»: sus {e["n"]} obras suman {e["min"]} min y el '
+                         f'bloque dura {tope}')
+                if e['nombre'] in NO_CABE_OK:
+                    avisos.append(aviso + f' — {NO_CABE_OK[e["nombre"]]}')
+                else:
+                    fallos.append(aviso)
+            elif e['sin']:
+                avisos.append(f'«{e["nombre"]}»: {e["sin"]} de {e["n"]} obras sin '
+                              f'duración en el PDF; el hueco lo llena el cruce con la web')
 
     print(f'villadelcine-2026: {len(bs)} bloques · {len(vistas)}/10 páginas · '
           f'{len(fichas)} páginas de ficha')
