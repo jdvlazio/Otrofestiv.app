@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "https://laficma.com/talleresficma17/ — la franja académica reprogramada (19–25 SEP)",
-  "capturado": "2026-09-18",
+  "capturado": "2026-09-19",
   "que_aporta": "las 11 actividades de la franja con día, hora, sede, cupo, inscripción y sinopsis; el tipo (taller/charla) sale del rótulo impreso en cada lámina, leído con OCR",
   "ojo": "las láminas son las de AGOSTO (los archivos se llaman VERSION-ANTERIOR): solo se les cree el rótulo, no la fecha"
  },
@@ -11,7 +11,9 @@
   "Cuatro horarios dicen algo imposible: «10:00 am- 11:00 pm» (dos charlas de una hora), «9:00 am 11:30 pm» (el taller de Isabella Vega) y «9:00 am 12:am» (la masterclass). Se publican leyendo el cierre en la misma mitad del día.",
   "El taller de animación se anuncia de 5:00 a 8:00 pm y su propio texto dice «taller intensivo de 4 horas». Se publican las tres horas del horario.",
   "Las tarjetas que ilustran la página son las de la edición APLAZADA: los archivos se llaman «FRANJA-ACADEMICA-VERSION-ANTERIOR» y dentro dicen AGOSTO. Quien mire la imagen y no el texto lee la fecha vieja.",
-  "La tarjeta de «Coleccionar para recordar» trae una tercera invitada, Juliana Gallego, que el texto de la página ya no nombra. Se publican las dos del texto."
+  "La tarjeta de «Coleccionar para recordar» trae una tercera invitada, Juliana Gallego, que el texto de la página ya no nombra. Se publican las dos del texto.",
+  "«Taller de animación…» (jue 24): la página y el formulario dicen 5:00 pm; la lámina 6 del carrusel de IG dice 4:00 pm. Se publica 5:00 pm (dos fuentes) y se pregunta.",
+  "«Un sueño se hace realidad en 1 minuto» (dom 20): la página y la lámina 3 del carrusel dicen 9:00 am; el formulario dice «9:00 p. m. a 11:30 p. m.». Se publica 9:00 am y se pregunta."
  ],
  "actividades": [
   {
@@ -30,6 +32,12 @@
    "requires_registration": true,
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScQwx4mCGbX-JGI9Y6Tranmsa1C-yet1ZDFwF8MjxcoPBUraQ/viewform",
    "acceso": "30",
+   "_formulario": {
+    "lugar": "Secretaría de Cultura de Palogrande ",
+    "dia": "2026-09-19",
+    "hora": "15:00",
+    "hasta": "17:30"
+   },
    "sinopsis": "Un taller intensivo de alto impacto visual diseñado para desmitificar la complejidad del plano secuencia y la cámara en movimiento. Conectando el lenguaje del cine de autor con la narrativa pop, los cómics y los videojuegos, los participantes aprenderán a planificar y ejecutar tomas continuas sin cortar la cámara. La experiencia combina un bloque conceptual ágil con una demostración técnica en vivo (Show & Tell) y un reto práctico donde los 30 asistentes se dividen en células de rodaje simultáneas,asumiendo roles reales de un equipo de filmación (Director, Operador, Foquista, Spotter, Actores) para producir micro-historias en vivo utilizando tecnología de estabilización (Ronin) y rig de cuerpo (Snorricam).",
    "perfil": ""
   },
@@ -50,6 +58,13 @@
    "requires_registration": true,
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScQwx4mCGbX-JGI9Y6Tranmsa1C-yet1ZDFwF8MjxcoPBUraQ/viewform",
    "acceso": "Previa inscripción",
+   "_formulario": {
+    "lugar": "Virtual, transmisión por zoom",
+    "dia": "2026-09-20",
+    "hora": "21:00",
+    "hasta": "23:30"
+   },
+   "_formulario_discrepa": "hora 21:00 (página: 09:00)",
    "sinopsis": "Lo único que necesitas es decir sí, sí lo voy a hacer; lo demás es práctica, disciplina y diversión. En este taller aprenderás lo esencial para pescar una idea, convertirla en guión cinematográfico, organizarla y filmarla. Porque los sueños se cumplen también en 1 minuto.",
    "perfil": ""
   },
@@ -89,6 +104,12 @@
    "requires_registration": true,
    "registration_url": "https://forms.gle/Ac4Nfqqkgj3U9diF9",
    "acceso": "Entrada libre",
+   "_formulario": {
+    "lugar": "Biblioteca Pública Satélite Palogrande",
+    "dia": "2026-09-21",
+    "hora": "16:00",
+    "hasta": "18:00"
+   },
    "sinopsis": "",
    "perfil": "Felipe Moreno Salazar. Cali, Colombia 1976 Doctor en Comunicación. Magíster en Escrituras creativas. Psicólogo. Periodista. Profesor asociado del Programa de cine y audiovisuales de la Facultad de Humanidades de la Universidad del Magdalena. Director y realizador de televisión, cortometrajes y documentales. Cocreador de El Espejo, programa de televisión y festival de cine. Ganador India Catalina 2026 Mejor producción periodística @elespejoc / https://www.youtube.com/@ElEspejo"
   },
@@ -120,13 +141,20 @@
    "_horario_publicado": "4:00 pm a 6:00 pm",
    "hora": "16:00",
    "duracion_min": 120,
-   "sede_cruda": "",
+   "sede_cruda": "Biblioteca Pública Satélite Palogrande",
    "_cupos_publicado": "Entrada libre con previa inscripción",
    "cupos": null,
    "is_free": true,
    "requires_registration": true,
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSd07hqBATf6G3_k06cDOulhXe3cSSgveOjwPj0iEuHDCfQVEg/viewform",
    "acceso": "Entrada libre con previa inscripción",
+   "_formulario": {
+    "lugar": "Biblioteca Pública Satélite Palogrande",
+    "dia": "2026-09-22",
+    "hora": "16:00",
+    "hasta": "18:00"
+   },
+   "_sede_de": "el formulario de inscripción (la página no la dice)",
    "sinopsis": "Masterclass dirigida a realizadores audiovisuales, guionistas, directores de fotografía y profesionales del cine y el audiovisual. También a cineclubistas, críticos de cine, comunicadores sociales y todos aquellos espectadores interesados en conocer y apreciar los fundamentos del lenguaje cinematográfico.",
    "perfil": ""
   },
@@ -147,25 +175,6 @@
    "is_free": true,
    "acceso": "Entrada libre",
    "sinopsis": "¿Qué tienen en común un disco de vinilo, una moneda y un objeto de diseño? Más allá de su valor material, todos son testigos de una época, portadores de memoria y piezas fundamentales para comprender nuestra historia. En este panel, representantes del Proyecto Kinder, Codiscos y la Sociedad Colombiana de Numismática compartirán sus experiencias alrededor del coleccionismo como una práctica de conservación, investigación y divulgación del patrimonio cultural. Un diálogo que permitirá descubrir cómo diferentes disciplinas construyen memoria a partir de aquello que deciden preservar, demostrando que coleccionar es también una forma de contar quiénes somos.",
-   "perfil": ""
-  },
-  {
-   "dia": "2026-09-23",
-   "imagen": "https://laficma.com/wp-content/uploads/2026/09/FICMA-17-FRANJA-ACADEMICA-VERSION-ANTERIOR_page-0005-1024x965.jpg",
-   "titulo": "Poniéndole voz a tu historia silenciada",
-   "tipo": "taller",
-   "invitados": "Diana Arias",
-   "tallerista": "",
-   "_horario_publicado": "2:00 pm – 5:00 pm",
-   "hora": "14:00",
-   "duracion_min": 180,
-   "sede_cruda": "Secretaría de la Mujer y Equidad de Género",
-   "_cupos_publicado": "20, previa inscripción.",
-   "cupos": 20,
-   "requires_registration": true,
-   "registration_url": "https://forms.gle/ouUyFzHZRfWjPxBN8",
-   "acceso": "20, previa inscripción.",
-   "sinopsis": "Desde el enfoque de la FICMA 17 que reflexiona sobre el valor de coleccionar como una forma de preservar la memoria, este taller propone detenerse en aquello que nunca debería guardarse en silencio. A través de herramientas de acompañamiento psicosocial y ejercicios de expresión, las participantes podrán reconocer sus experiencias, resignificar sus historias y construir un espacio seguro donde la memoria deje de ser una carga individual para convertirse en una experiencia colectiva de escucha, cuidado y transformación.",
    "perfil": ""
   },
   {
@@ -203,6 +212,12 @@
    "requires_registration": true,
    "registration_url": "https://forms.gle/ffot3bKxNdFWQkwt9",
    "acceso": "30, previa inscripción",
+   "_formulario": {
+    "lugar": "Biblioteca Pública Satélite de Palogrande",
+    "dia": "2026-09-24",
+    "hora": "17:00",
+    "hasta": "20:00"
+   },
    "sinopsis": "Aprende a transformar fotos y vectores estáticos en videos dinámicos en este taller intensivo de 4 horas. Diseñado de 0 a 100 para principiantes, descubrirás cómo reimaginar tus imágenes con el poder estilístico de Gemini, darles movimiento cinemático con Google Flow y darles el acabado perfecto en CapCut mediante la separación por capas, animación con keyframes y diseño de sonido listo para destacar en Reels por ejemplo o cualquier proyecto audiovisual que tengas en mente. ¡Lleva tus piezas gráficas al siguiente nivel visual sin necesidad de saber dibujar!",
    "perfil": ""
   },
@@ -223,6 +238,38 @@
    "acceso": "Entrada libre",
    "sinopsis": "La protección de una obra comienza mucho antes de su estreno. Esta charla ofrecerá una mirada integral sobre la propiedad intelectual en el sector audiovisual, abordando los derechos de autor, la titularidad de las obras, la gestión de licencias, la negociación de contratos y los retos legales que enfrentan las producciones en un entorno de constante transformación. Una conversación dirigida a productores, directores, guionistas, estudiantes y creadores interesados en fortalecer sus proyectos desde una perspectiva jurídica y estratégica.",
    "perfil": ""
+  },
+  {
+   "dia": "2026-09-25",
+   "imagen": "https://laficma.com/wp-content/uploads/2026/09/FICMA-17-FRANJA-ACADEMICA-VERSION-ANTERIOR_page-0005-1024x965.jpg",
+   "titulo": "Poniéndole voz a tu historia silenciada",
+   "tipo": "taller",
+   "invitados": "Diana Arias",
+   "tallerista": "",
+   "_horario_publicado": "2:00 pm – 5:00 pm",
+   "hora": "17:00",
+   "duracion_min": 120,
+   "sede_cruda": "Biblioteca Pública Satélite Palogrande",
+   "_cupos_publicado": "20, previa inscripción.",
+   "cupos": 20,
+   "requires_registration": true,
+   "registration_url": "https://forms.gle/ouUyFzHZRfWjPxBN8",
+   "acceso": "20, previa inscripción.",
+   "_formulario": {
+    "lugar": "Biblioteca Pública Satélite de Palogrande",
+    "dia": "2026-09-25",
+    "hora": "17:00",
+    "hasta": "19:00"
+   },
+   "sinopsis": "Desde el enfoque de la FICMA 17 que reflexiona sobre el valor de coleccionar como una forma de preservar la memoria, este taller propone detenerse en aquello que nunca debería guardarse en silencio. A través de herramientas de acompañamiento psicosocial y ejercicios de expresión, las participantes podrán reconocer sus experiencias, resignificar sus historias y construir un espacio seguro donde la memoria deje de ser una carga individual para convertirse en una experiencia colectiva de escucha, cuidado y transformación.",
+   "perfil": "",
+   "_pagina_decia": {
+    "dia": "2026-09-23",
+    "hora": "14:00",
+    "duracion_min": 180,
+    "sede_cruda": "Secretaría de la Mujer y Equidad de Género"
+   },
+   "_corregido_por": "la página dice miércoles 23, 2:00–5:00 pm, Secretaría de la Mujer; la lámina 7 del carrusel de IG dice VIERNES 25, 5:00 pm, Biblioteca Pública Satélite Palogrande, y el formulario de inscripción dice viernes 25, 5:00 a 7:00 pm, en la misma sede. Dos fuentes contra una. (https://www.instagram.com/p/Ddd3VIODXLK/)"
   }
  ]
 }

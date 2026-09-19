@@ -174,10 +174,32 @@ def publicar(fid, forzar=False):
                 print(f'    + {_t[:60]}')
             if len(_alt) > 6 or len(_baj) > 6 or len(_mov) > 10:
                 print('    … (recortado)')
-        ca, cb = _cobertura(viejo.get('films') or []), _cobertura(out['films'])
+        # La cobertura se compara sobre las funciones que NO se movieron: una
+        # función trasladada (título en `_mov`) cambia de sede y con ella pierde
+        # o gana los campos que son de la sede (sala, dirección). Eso no es
+        # perder datos: es la corrección misma. Lo que sí es pérdida es que una
+        # función quieta amanezca sin un campo que ayer tenía.
+        _movidos = {t for t, _a, _b in _mov}
+        _quietas = lambda fs: [f for f in fs if f.get('title') not in _movidos]
+        ca, cb = _cobertura(_quietas(viejo.get('films') or [])), _cobertura(_quietas(out['films']))
         perdidos = {k: (ca[k], cb[k]) for k in ca if cb[k] < ca[k]}
         menos_films = len(viejo.get('films') or []) - len(out['films'])
-        menos_sedes = len(viejo.get('venues') or {}) - len(out['venues'])
+        # UNA SEDE QUE SE VACIÓ NO ES UNA SEDE PERDIDA (19 sep 2026). «Poniéndole
+        # voz…» se movió de la Secretaría de la Mujer a Palogrande porque el
+        # festival lo corrigió en IG y en el formulario; la Secretaría quedó sin
+        # funciones y salió del build, y esta compuerta lo leyó como pérdida.
+        # Contar sedes no distingue «se cayó una sede» de «se trasladó su única
+        # función». La regla: una sede que desaparece es TRASLADO si todas las
+        # obras que tenía siguen publicadas (en otra sede); es pérdida si con
+        # ella se fue alguna obra.
+        _titulos_nuevos = {f.get('title') for f in out['films']}
+        _sedes_idas = set(viejo.get('venues') or {}) - set(out['venues'])
+        _trasladadas = {v for v in _sedes_idas if all(
+            f.get('title') in _titulos_nuevos
+            for f in (viejo.get('films') or []) if f.get('venue') == v)}
+        for v in sorted(_trasladadas):
+            print(f'    · sede vaciada, no perdida: {v[:50]} (sus obras siguen, en otra sede)')
+        menos_sedes = len(_sedes_idas - _trasladadas) - max(0, len(out['venues']) - len(viejo.get('venues') or {}))
         if (perdidos or menos_films > 0 or menos_sedes > 0) and not forzar:
             print(f'✗ publicar {fid} PERDERÍA datos que ya están en producción:')
             if menos_films > 0:
