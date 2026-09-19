@@ -229,10 +229,16 @@ def _unir_solapadas(cajas):
                 # FÓSIL MÁGICO, el CLAQUETAZO y el Reconocimiento del sábado se
                 # fundían en un bloque de 45 minutos—. Un trozo desprendido por
                 # el degradado, en cambio, cae DENTRO de su celda.
+                # CASI CONTENIDA, no apenas solapada. Un trozo desprendido por
+                # el degradado cae DENTRO de su celda; dos celdas vecinas solo
+                # se rozan. Con un umbral del 25% volvían a fundirse el
+                # CLAQUETAZO y el Reconocimiento del sábado, que son dos: lo
+                # cazó el contraste contra los vectores de MuPDF, donde son dos
+                # rectángulos distintos.
                 ancho = min(a[2], b[2]) - max(a[0], b[0])
                 alto = min(a[3], b[3]) - max(a[1], b[1])
                 menor = min((a[2] - a[0]) * (a[3] - a[1]), (b[2] - b[0]) * (b[3] - b[1]))
-                if ancho > 0 and alto > 0 and ancho * alto > 0.25 * menor:
+                if ancho > 0 and alto > 0 and ancho * alto > 0.80 * menor:
                     cajas[i] = (min(a[0], b[0]), min(a[1], b[1]),
                                 max(a[2], b[2]), max(a[3], b[3]))
                     del cajas[j]
@@ -241,6 +247,29 @@ def _unir_solapadas(cajas):
             if cambio:
                 break
     return cajas
+
+
+def _reparto(ls, cajas):
+    """A qué celda pertenece cada línea de texto. UNA SOLA.
+
+    Con una tolerancia hacia abajo —necesaria porque el texto se desborda de su
+    recuadro— una línea cabía en dos celdas a la vez, y el rótulo del
+    «Reconocimiento a Mabel Teresa Velosa» se colaba además en el CLAQUETAZO de
+    encima. Se resuelve eligiendo: la celda que CONTIENE el centro de la línea
+    y, si ninguna lo contiene, la más cercana por debajo, a no más de 7 pt.
+    """
+    de = {}
+    for i, (_, lx0, ly0, lx1, ly1, t) in enumerate(ls):
+        cx, cy = (lx0 + lx1) / 2, (ly0 + ly1) / 2
+        dentro = [c for c in cajas if c[0] - 3 <= cx <= c[2] + 3 and c[1] <= cy <= c[3]]
+        if not dentro:
+            dentro = [c for c in cajas if c[0] - 3 <= cx <= c[2] + 3
+                      and c[1] - 5 <= cy <= c[3] + 7]
+            if len(dentro) > 1:
+                dentro = [min(dentro, key=lambda c: min(abs(cy - c[1]), abs(cy - c[3])))]
+        if dentro:
+            de[i] = dentro[0]
+    return de
 
 
 def bloques(ls, cols, horas, cajas):
@@ -258,6 +287,7 @@ def bloques(ls, cols, horas, cajas):
     def rotulo(y):
         return min(lineas_fila, key=lambda c: abs(c[0] - y))[1]
 
+    reparto = _reparto(ls, cajas)
     regs = []
     for x0, y0, x1, y1 in cajas:
         cx = (x0 + x1) / 2
@@ -269,10 +299,9 @@ def bloques(ls, cols, horas, cajas):
         # del recuadro. Exigiendo que la línea entera quepa, se perdían —y una
         # línea perdida es un dato que no publicamos—. Basta con que el CENTRO
         # de la línea caiga dentro, con un margen de media fila.
-        dentro = [t for _, lx0, ly0, lx1, ly1, t in ls
-                  if x0 - 3 <= (lx0 + lx1) / 2 <= x1 + 3
-                  and y0 - 5 <= (ly0 + ly1) / 2 <= y1 + 7
-                  and not MARCA.match(t) and not hora24(t) and not RE_DIA.match(t)]
+        dentro = [ls[i][5] for i, c in reparto.items() if c == (x0, y0, x1, y1)
+                  and not MARCA.match(ls[i][5]) and not hora24(ls[i][5])
+                  and not RE_DIA.match(ls[i][5])]
         if not dentro:
             # UNA CELDA PUEDE NO TENER TEXTO Y AUN ASÍ SER PROGRAMACIÓN. Al pie
             # del viernes tarde hay un trozo rosa mudo: es el arranque de
