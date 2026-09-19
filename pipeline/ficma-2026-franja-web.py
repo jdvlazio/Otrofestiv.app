@@ -287,11 +287,15 @@ def main():
         if horario in ERRATAS:
             a['hora'], a['duracion_min'], a['_errata'] = ERRATAS[horario]
         else:
-            # La mitad de los rangos van sin guion («5:00 pm 8:00 pm»): se le
-            # pone para que el lector de rangos de lib los vea como uno solo.
-            # Es puntuación, no interpretación: las dos horas ya están escritas.
+            # Dos arreglos de PUNTUACIÓN, no de interpretación: las horas ya
+            # están escritas y solo se les quita la basura de tipeo.
+            #   · «4 :00 pm» — espacio suelto antes de los dos puntos. Sin
+            #     quitarlo, el lector de rangos devolvía 12:00 y 360 min para
+            #     una masterclass de 4 a 6 de la tarde.
+            #   · «5:00 pm 8:00 pm» — la mitad de los rangos van sin guion.
+            h = re.sub(r'(\d{1,2})\s+([:.]\d{2})', r'\1\2', horario)
             h = re.sub(r'(\d{1,2}[:.]\d{2}\s*[ap]\.?m\.?)\s+(?=\d{1,2}[:.]\d{2})',
-                       r'\1 – ', horario, flags=re.I)
+                       r'\1 – ', h, flags=re.I)
             a['hora'], a['duracion_min'] = lib.rango_horario(h)
 
         sede = campos.get('sede_cruda', '').strip(' .')

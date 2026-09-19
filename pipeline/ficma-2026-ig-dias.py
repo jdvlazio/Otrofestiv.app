@@ -1,0 +1,125 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+r"""ficma-2026-ig-dias.py — la programación día por día que el festival puso en IG.
+
+LA SEGUNDA FUENTE DE LA MISMA PARRILLA. El 18 de septiembre el festival publicó
+DOS cosas: el PDF de programación en su web y, horas después, un post por día en
+Instagram con la lista de funciones. No son copias: el post trae cosas que el
+PDF no dice y en tres puntos lo contradice. Tenerlas las dos permite cruzarlas,
+que es la única forma de saber si lo que publicamos es verdad.
+
+QUÉ TRAE IG Y EL PDF NO:
+
+  · EL PRECIO. El PDF solo marca COSTO en dos actividades y la web del festival
+    dice que «todas las actividades son de acceso libre». Los posts muestran que
+    las funciones de Fama - Cinespiral piden «aporte voluntario desde $20k o
+    acreditación» —tres— y dan el precio completo de la fiesta de clausura.
+    Publicar como gratis algo que se paga es el peor error de esta app.
+  · QUIÉN ESTARÁ. «Presencia de la productora», «presencia de la directora»:
+    conversatorios que el sello del PDF no marca.
+
+EN QUÉ SE CONTRADICEN (no se resuelve acá: se reporta, y se le pregunta al
+festival):
+
+  · La MUESTRA DE CORTOMETRAJES del sábado 26: el PDF la pone a las 10:00 y el
+    post, de «1:00 p.m. a 8:00 p.m.».
+  · «La Marcha del Hambre» tiene página propia en el PDF (viernes 25, 8:00 PM)
+    y NO aparece en el post de ese día.
+  · «Entrelazados»: el PDF se contradice solo —badge 7:20 PM, campo HORA 7:00
+    pm— y el post la pone a las 7:00 junto a «Cómo limpiar un espejo».
+
+Y UNA FUNCIÓN QUE SOLO ESTÁ EN IG: «Largometrajes UBPD», sábado 26 de 10:00 a
+12:00. El post no dice dónde, así que no se publica — la misma regla de siempre.
+
+TRANSCRITO A MANO, y aquí sí es lo correcto: son siete posts leídos en el
+navegador con sesión, y el pie de Instagram no se puede parsear sin ella. Lo que
+se transcribe es lo que el festival escribió, verbatim.
+
+Esc.  festivals/staging/ficma-2026-ig-dias.json
+"""
+import json, os, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lib import provenance
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = f'{REPO}/festivals/staging/ficma-2026-ig-dias.json'
+IG = 'https://www.instagram.com/cinemanizales_ficma/p/'
+
+POSTS = {
+    '2026-09-20': 'DdcEFYkGnCR', '2026-09-21': 'DdcDr3Zmtjf',
+    '2026-09-22': 'DdcDTCamlsP', '2026-09-23': 'DdcC4ydG1Jt',
+    '2026-09-24': 'DdcCLKum08D', '2026-09-25': 'DdcBl--G0Ub',
+    '2026-09-26': 'DdcA4G8m6O0',
+}
+
+# EL ACCESO, verbatim del post. Va por TÍTULO porque es de la sede y se repite:
+# las tres funciones de Fama llevan la misma línea.
+ACCESO = {
+    'La infiltrada': 'Aporte voluntario desde $20k o acreditación',
+    'La Grazia': 'Aporte voluntario desde $20k o acreditación',
+    'O Último Azul': 'Aporte voluntario desde $20k o acreditación',
+    'Noche de Vinilos': '20k (incluye Poker) o acreditación',
+    'Sonora Vol. 4': 'Preventa $30k · en sitio $45k · gratis con acreditación',
+}
+
+# Conversatorio o presencia, dicho en el post y NO marcado en el sello del PDF.
+PRESENCIA = {
+    'En Tierra': 'Presencia de la productora',
+    'Llueve sobre Babel': 'Presencia de la directora',
+    'Bien inmueble': 'Presencia del director',
+    'El Juego de la Vida': 'Presencia del director',
+    'Andariega': 'Presencia del director',
+    'Habitante': 'Presencia del director',
+    'Apuntes sobre anomalías y fantasmas': 'Presencia del director',
+}
+
+# LO QUE EL POST DICE DISTINTO DEL PDF. Cada entrada dice qué se publica y por
+# qué; lo que no está acá se publica como lo dice el PDF.
+DISCREPA = {
+    # «Entrelazados» NO está acá aunque el post también opine: su caso se
+    # resuelve donde nace, en HORA_ERRATA de ficma-2026-parse.py, porque lo que
+    # hay que explicar es que la LÁMINA se contradice. Declararlo dos veces
+    # obligaba a seguir dos saltos para entender una sola hora.
+    'Muestra de Cortometrajes: Realizadores locales y Eje Cafetero': {
+        'hora': '13:00', 'duracion_min': 420,
+        'por_que': 'el PDF la pone a las 10:00 y el post, de «1:00 p.m. a 8:00 p.m.». '
+                   'Gana el post: es de ayer, da rango completo, y a las 10:00 el '
+                   'mismo post pone otra función (Largometrajes UBPD) en esa sede.'},
+}
+
+# EN EL POST Y NO EN EL PDF. Sin sede no se publica: es la misma regla que dejó
+# fuera la masterclass de Andrés Buitrago.
+SOLO_EN_IG = {
+    'Largometrajes UBPD': {
+        'dia': '2026-09-26', 'hora': '10:00', 'hasta': '12:00',
+        'nota': 'Unidad de Búsqueda de Personas dadas por Desaparecidas. El post NO '
+                'dice sede. No se publica hasta que el festival diga dónde.'},
+}
+
+# EN EL PDF Y NO EN EL POST DE SU DÍA.
+SOLO_EN_PDF = {
+    'La Marcha del Hambre': 'tiene página propia en el PDF (viernes 25, badge 8:00 PM, '
+                            '90 min) y el post del viernes no la nombra. Se publica '
+                            '—el programa oficial es fuente suficiente— y se pregunta.',
+}
+
+
+def main():
+    json.dump({'_provenance': provenance(
+        'Instagram @cinemanizales_ficma — un post por día con la programación, '
+        'publicados el 18 sep 2026',
+        que_aporta='el precio de las funciones que no son gratis y la presencia de '
+                   'directores; y el contraste, función por función, contra el PDF',
+        metodo='leídos en el navegador CON SESIÓN y transcritos verbatim: el pie de '
+               'Instagram no se obtiene sin ella',
+        posts={d: IG + s + '/' for d, s in POSTS.items()}),
+        'acceso': ACCESO, 'presencia': PRESENCIA, 'discrepa': DISCREPA,
+        'solo_en_ig': SOLO_EN_IG, 'solo_en_pdf': SOLO_EN_PDF},
+        open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    print(f'{len(POSTS)} días · {len(ACCESO)} con precio · {len(PRESENCIA)} con '
+          f'presencia · {len(DISCREPA)} discrepancias · {len(SOLO_EN_IG)} solo en IG')
+
+
+if __name__ == '__main__':
+    main()

@@ -23,6 +23,10 @@
    "que": "/talleresficma17/ → la franja académica (11 actividades)"
   },
   {
+   "cmd": "python3 pipeline/ficma-2026-ig-dias.py",
+   "que": "los 7 posts de programación día por día de Instagram: precio, presencia de directores y el contraste contra el PDF"
+  },
+  {
    "cmd": "python3 pipeline/ficma-2026-fichas-tmdb.py",
    "que": "TMDB + Letterboxd → ficha de las obras que agosto no tenía. NECESITA TMDB_API_KEY en el entorno (`source ~/.zshrc`): el paso revienta si la llave no sirve, en vez de devolver 0 fichas."
   },

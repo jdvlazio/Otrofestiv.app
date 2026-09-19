@@ -80,18 +80,24 @@ CICLO_DETRAS = {'Expoferias - Cine fest': ('Expoferias', 'Cine fest')}
 COLA_QUE_NO_ES_SEDE = {'Clandestino Records Di Kalibre': 'Clandestino Records',
                        'Clandestino Records Dj Kalibre': 'Clandestino Records'}
 # LA LÁMINA QUE SE CONTRADICE A SÍ MISMA. Cada página lleva la hora DOS veces:
-# en el badge de arriba y en el campo HORA de abajo. En 68 de 70 coinciden. En
-# las dos de la función de clausura no, y el campo es el que miente: los tres
-# cortos del viernes 25 en Redentoristas llevan «7:00 pm» abajo —copiado de la
-# primera lámina— mientras los badges dicen 7:00, 7:20 y 8:00 PM, que es lo
-# único coherente con sus duraciones (11, 30 y 90 min). Verificado mirando las
-# dos páginas. Se corrige por página, no con una regla general: dos casos no
-# alcanzan para decidir quién manda siempre.
+# en el badge de arriba y en el campo HORA de abajo. En 68 de 70 coinciden; en
+# las dos de la función de clausura, no. Verificado mirando las dos páginas.
+#
+# Y NO SE RESUELVEN IGUAL, porque hay una TERCERA lectura: el post de Instagram
+# del viernes 25.
+#   · «Entrelazados» — badge 7:20 PM, campo 7:00 pm, y el post la pone a las
+#     7:00 en la misma línea que «Cómo limpiar un espejo». Dos de tres dicen
+#     7:00: se publica 7:00.
+#   · «La Marcha del Hambre» — badge 8:00 PM, campo 7:00 pm, y el post NO la
+#     nombra. Manda el badge, que es lo único coherente con sus 90 min después
+#     de dos cortos de 11 y 30. Queda para preguntar.
 HORA_ERRATA = {
-    'p-70.jpg': ('19:20', '«Entrelazados»: el badge dice 7:20 PM y el campo HORA '
-                          '7:00 pm, copiado de la lámina anterior'),
+    'p-70.jpg': ('19:00', '«Entrelazados»: el badge dice 7:20 PM y el campo HORA '
+                          '7:00 pm. El post de Instagram del viernes la pone a las '
+                          '7:00 junto a «Cómo limpiar un espejo»: gana el 7:00'),
     'p-71.jpg': ('20:00', '«La Marcha del Hambre»: el badge dice 8:00 PM y el campo '
-                          'HORA 7:00 pm, copiado de la lámina anterior'),
+                          'HORA 7:00 pm, copiado de la lámina anterior. El post del '
+                          'viernes no la nombra; manda el badge'),
 }
 ETIQUETAS = {'DIRECCIÓN':'director','DIRECCION':'director','PAÍS':'pais','PAIS':'pais',
              'DURACIÓN':'duracion','DURACION':'duracion','AÑO':'anio','ANO':'anio',

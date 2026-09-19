@@ -26,7 +26,9 @@ LAS CUATRO PRUEBAS, y cada una puede fallar sola:
   4 · LO PUBLICADO ES LO LEÍDO. Cada función del crudo tiene que estar en
       `festivals/ficma-2026.json` con su día y su hora, y el JSON no puede
       traer funciones que el crudo no tenga —salvo la franja académica, que
-      viene de otra fuente y se declara acá—.
+      viene de otra fuente, y salvo las horas que el festival contradijo en
+      Instagram, que están DECLARADAS en `ficma-2026-ig-dias.json`—. Una
+      diferencia declarada se imprime; una sin declarar falla.
 
 Sale con código 1 si algo no casa. Un verificador que no puede fallar no sirve.
 
@@ -68,6 +70,7 @@ def main():
     ocr = json.load(open(OCR, encoding='utf-8'))
     ocr.pop('_provenance', None)
     pub = json.load(open(PUB, encoding='utf-8'))
+    igd = json.load(open(f'{ST}/ficma-2026-ig-dias.json', encoding='utf-8'))['discrepa']
     fallos, mirar = [], []
 
     # ── 1 · cada página, una cosa ────────────────────────────────────────────
@@ -116,7 +119,13 @@ def main():
                           f"dice {badge_h} — «{f['titulo'][:40]}»")
 
     # ── 4 · lo publicado es lo leído ─────────────────────────────────────────
-    del_crudo = {(lib.norm(f['titulo']), f['dia'], f['hora']) for f in crudo['funciones']}
+    del_crudo = set()
+    for f in crudo['funciones']:
+        d = igd.get(f['titulo'])
+        if d:
+            mirar.append(f"«{f['titulo'][:40]}»: el PDF dice {f['hora']} y se publica "
+                         f"{d['hora']} por Instagram — {d['por_que'][:80]}…")
+        del_crudo.add((lib.norm(f['titulo']), f['dia'], d['hora'] if d else f['hora']))
     publicadas = {(lib.norm(f['title']), f['day'], f['time']) for f in pub['films']
                   if f.get('event_kind') not in OTRA_FUENTE}
     perdidas = del_crudo - publicadas

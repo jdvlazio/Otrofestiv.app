@@ -254,9 +254,13 @@ ACTIVIDADES = {
     'Cortos Colombia de película': {
         'tipo': 'pelicula', 'duracion_min': 90,
         '_nota': 'Duración estimada: el programa no la publica'},
+    # SIETE HORAS NO SON UNA DURACIÓN, son un horario de apertura: el post dice
+    # «de 1:00 p.m. a 8:00 p.m.». Se entra y se sale. `info` es exactamente eso
+    # (docs/SCHEMA.md): aparece en el programa, no entra al plan ni a conflictos,
+    # y el techo de duración no le aplica porque su duración es la VENTANA.
     'Muestra de Cortometrajes: Realizadores locales y Eje Cafetero': {
-        'tipo': 'pelicula', 'duracion_min': 90,
-        '_nota': 'Duración estimada: el programa no la publica'},
+        'tipo': 'evento', 'event_kind': 'experiencia', 'info': True,
+        '_nota': 'Muestra continua: se entra y se sale'},
     'Concierto Sinfónico': {'tipo': 'evento', 'event_kind': 'experiencia',
                             'duracion_min': 90},
     'Noche de Vinilos': {'tipo': 'evento', 'event_kind': 'experiencia', 'info': True},
@@ -341,7 +345,12 @@ def main():
     # Lo anunciado post a post: hoy ya no es la parrilla, pero es la única
     # fuente con SINOPSIS de las obras que agosto no tenía.
     posts = json.load(open(f'{ST}/ficma-2026-reprogramado.json', encoding='utf-8'))
+    # La MISMA parrilla, contada por el festival en Instagram el mismo día. No
+    # reemplaza al PDF: le añade lo que el PDF no dice (el precio, la presencia
+    # del director) y marca dónde las dos fuentes no coinciden.
+    ig = json.load(open(f'{ST}/ficma-2026-ig-dias.json', encoding='utf-8'))
 
+    avisos = []
     ficha, ajenas = {}, {}
     for t, o in cat.items():
         ficha.setdefault(norm(t), o)
@@ -378,7 +387,19 @@ def main():
         if e:
             del_post.setdefault(norm(p['titulo']), e)
 
-    films, venues, sin_ficha, avisos = [], {}, [], []
+    for t, d in ig['discrepa'].items():
+        for f in fun:
+            if f['titulo'] == t:
+                avisos.append(f'«{t}» {f["hora"]} → {d["hora"]} (IG): {d["por_que"]}')
+                f['hora'] = d['hora']
+                if d.get('duracion_min'):
+                    f['duracion_min'] = d['duracion_min']
+    for t, v in ig['solo_en_ig'].items():
+        avisos.append(f'«{t}» solo está en Instagram ({v["dia"][-2:]}·{v["hora"]}): {v["nota"]}')
+    for t, v in ig['solo_en_pdf'].items():
+        avisos.append(f'«{t}» solo está en el PDF: {v}')
+
+    films, venues, sin_ficha = [], {}, []
     for fn in fun:
         if not fn['sede']:
             # Una actividad sin lugar no se puede planear, y una sede inventada
@@ -433,7 +454,12 @@ def main():
         if fn.get('sinopsis'):
             b['synopsis'], b['synopsis_lang'] = fn['sinopsis'], 'es'
 
-        libre = not fn.get('costo')
+        # El PRECIO que solo dice Instagram. La web del festival afirma que todo
+        # es de acceso libre y no es cierto: tres funciones de Fama piden aporte
+        # voluntario. Publicar como gratis algo que se paga es el peor error que
+        # puede cometer esta app.
+        acceso_ig = ig['acceso'].get(fn['titulo'], '')
+        libre = not (fn.get('costo') or acceso_ig)
         item = {
             'title': fn['titulo'],
             'director': fn.get('director') or '',
@@ -442,7 +468,8 @@ def main():
             'section': sec[0], 'day': fn['dia'], 'time': fn['hora'],
             'day_order': DIAS.index(fn['dia']),
             'venue': k,
-            'has_qa': bool(fn.get('has_qa') or fn['titulo'] in CON_QA)
+            'has_qa': bool(fn.get('has_qa') or fn['titulo'] in CON_QA
+                           or fn['titulo'] in ig['presencia'])
                       and (fn['titulo'], fn['dia']) not in SIN_QA_EN,
             # «Todas las actividades son de acceso libre», dicho por el festival
             # en su web — pero su propio programa cobra dos: la noche de vinilos
@@ -451,8 +478,10 @@ def main():
             '_src': f"{fn['_src']['url']} ({fn['_src']['date']})",
         }
         if not libre:
-            item['_nota'] = ' · '.join(x for x in (fn.get('_nota'),
-                                                   f"Costo: {fn['costo']}") if x)
+            item['_nota'] = ' · '.join(x for x in (
+                # gana el texto de Instagram: el del PDF lo lee el OCR y se le
+                # pega la cola de patrocinadores del pie de la lámina
+                fn.get('_nota'), f"Costo: {acceso_ig or fn['costo']}") if x)
         elif fn.get('_nota'):
             item['_nota'] = fn['_nota']
         if fn.get('premiere'):
@@ -527,12 +556,13 @@ def main():
         'prioLimit': 4,
         # Dos actividades se pagan; el resto es libre. No es 'free'.
         'ticketing_model': 'mixed',
-        # NO hay slot compartido en toda la parrilla. Parecía haberlo —los tres
-        # cortos de clausura del viernes 25 en Redentoristas— hasta que la doble
-        # lectura mostró que el campo HORA de dos láminas venía copiado: van a
-        # 19:00, 19:20 y 20:00, seguidos, no a la vez. Declarar el modelo
-        # compartido acá los habría fundido en una sola tarjeta y habría borrado
-        # justo el dato que costó encontrar.
+        # EL ÚNICO SLOT COMPARTIDO: la función de clausura del viernes 25 en
+        # Redentoristas. El post de Instagram la escribe como UNA sola línea —
+        # «7:00 PM | FUNCIÓN DE CLAUSURA … Cómo limpiar un espejo … Entrelazados»—
+        # y son 11 y 30 min: un programa de dos cortos, no dos funciones que
+        # compiten. «La Marcha del Hambre» va después, a las 20:00, y por eso no
+        # entra en el mismo slot.
+        'sharedSlotIsOneScreening': True,
         **lib.dias_config(DIAS, 'septiembre'),
         'sections': secs, 'venues': venues, 'films': films,
     }
