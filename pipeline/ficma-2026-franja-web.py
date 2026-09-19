@@ -36,7 +36,7 @@ Lee   https://laficma.com/talleresficma17/   (cacheada en fuentes/ficma-2026/)
       https://linktr.ee/ficma                (un formulario de inscripción por taller)
 Esc.  festivals/staging/ficma-2026-franja-web.json
 """
-import html as _html
+import subprocess, html as _html
 import json, os, re, sys, urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -211,6 +211,76 @@ def formulario_de(titulo, enlaces):
     return ''
 
 
+RE_F_DIA = re.compile(r'(lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo)\s+(\d{1,2})\s+de\s+septiembre', re.I)
+RE_F_HORA = re.compile(r'(\d{1,2}:\d{2}\s*[ap]\.?\s*m\.?)\s*(?:a|–|-)\s*(\d{1,2}:\d{2}\s*[ap]\.?\s*m\.?)', re.I)
+RE_F_LUGAR = re.compile(r'📍\s*(?:Lugar:)?\s*([^\n]+)')
+
+
+def formulario(url):
+    """Lo que el FORMULARIO de inscripción dice de día, horario y lugar.
+
+    POR QUÉ (19 sep 2026, día de apertura). La página de talleres no decía
+    dónde era la masterclass de Andrés Buitrago y la dejamos fuera «hasta que
+    el festival diga dónde». El festival YA lo había dicho: en el formulario
+    de inscripción, que enlazábamos sin leer. Y ese mismo formulario, en dos
+    talleres, da un día o una hora distintos de los de la página. Un enlace
+    que se publica es una fuente que hay que leer.
+
+    Devuelve [{dia, hora, hasta, lugar}] —una entrada por bloque, porque un
+    formulario puede servir a dos talleres—."""
+    # curl y no urllib: forms.gle redirige por un interstitial de Firebase
+    # (proxy.link.app) que urllib no cruza, y el archivo que queda no es el
+    # formulario. Con -L, curl llega a docs.google.com.
+    path = f"{CACHE}/form-{re.sub(r'[^A-Za-z0-9]', '', url)[-24:]}.html"
+    if not os.path.exists(path) or os.path.getsize(path) < 500 or 'FB_PUBLIC_LOAD_DATA_' not in open(path, errors='replace').read():
+        os.makedirs(CACHE, exist_ok=True)
+        # UA corto a propósito: con el UA de Chrome, forms.gle sirve el
+        # interstitial de Firebase (proxy.link.app) y no el formulario.
+        r = subprocess.run(['curl', '-sSL', '--max-time', '60', '-A', 'Mozilla/5.0', '-o', path, url],
+                           capture_output=True, text=True)
+        if r.returncode:
+            return [{'_error': (r.stderr or '')[:80]}]
+    t = _html.unescape(re.sub(r'(?s)<[^>]+>', '\n', open(path, encoding='utf-8', errors='replace').read()))
+    t = t.replace('\\u003cbr\\u003e', '\n').replace('\\n', '\n')
+    out = []
+    # cada «📍» abre un bloque; el día y el horario se buscan alrededor
+    for m in RE_F_LUGAR.finditer(t):
+        ventana = t[max(0, m.start() - 400): m.end() + 400]
+        d = RE_F_DIA.search(ventana)
+        h = RE_F_HORA.search(ventana)
+        reg = {'lugar': m.group(1).strip(' .'),
+               'dia': f'2026-09-{int(d.group(2)):02d}' if d else '',
+               'hora': lib.hora24(h.group(1).replace(' ', '').replace('..', '.')) if h else '',
+               'hasta': lib.hora24(h.group(2).replace(' ', '').replace('..', '.')) if h else ''}
+        if reg not in out:
+            out.append(reg)
+    return out
+
+
+# LO QUE LA PÁGINA DICE MAL, con las dos fuentes que lo desmienten (19 sep 2026).
+# El festival publicó el carrusel de la franja en Instagram (post Ddd3VIODXLK,
+# 7 láminas, una por taller) el día de apertura. Se leyeron las LÁMINAS, no el
+# pie. Donde lámina y formulario coinciden contra la página, mandan ellas.
+IG_FRANJA = 'https://www.instagram.com/p/Ddd3VIODXLK/'
+CORRECCIONES = {
+    'Poniéndole voz a tu historia silenciada': {
+        'dia': '2026-09-25', 'hora': '17:00', 'duracion_min': 120,
+        'sede_cruda': 'Biblioteca Pública Satélite Palogrande',
+        'por_que': 'la página dice miércoles 23, 2:00–5:00 pm, Secretaría de la Mujer; '
+                   'la lámina 7 del carrusel de IG dice VIERNES 25, 5:00 pm, Biblioteca '
+                   'Pública Satélite Palogrande, y el formulario de inscripción dice '
+                   'viernes 25, 5:00 a 7:00 pm, en la misma sede. Dos fuentes contra una.'},
+}
+# Y lo que se pregunta, porque las fuentes NO se ponen de acuerdo:
+PREGUNTAS = [
+    '«Taller de animación…» (jue 24): la página y el formulario dicen 5:00 pm; la '
+    'lámina 6 del carrusel de IG dice 4:00 pm. Se publica 5:00 pm (dos fuentes) y se pregunta.',
+    '«Un sueño se hace realidad en 1 minuto» (dom 20): la página y la lámina 3 del '
+    'carrusel dicen 9:00 am; el formulario dice «9:00 p. m. a 11:30 p. m.». Se publica '
+    '9:00 am y se pregunta.',
+]
+
+
 def rotulo(img, cache_img):
     """TALLERES o CHARLAS, leído de la lámina. '' si la imagen no lo trae."""
     if not img:
@@ -237,7 +307,7 @@ def main():
     leidas = leer(sorted(set(rutas.values())))
     porurl = {u: leidas.get(p, []) for u, p in rutas.items()}
 
-    acts, sin_dia = [], []
+    acts, sin_dia, hallazgos = [], [], list(HALLAZGOS)
     for img, frag in crudos:
         L = [x for x in texto(frag) if x]
         if not L or not dia_de(L[0]):
@@ -312,6 +382,34 @@ def main():
             a['registration_url'] = formulario_de(a['titulo'], enlaces) or INSCRIPCION
         a['acceso'] = cupos or 'Entrada libre'
 
+        # EL FORMULARIO COMO SEGUNDA FUENTE. Si la página no dice sede y el
+        # formulario sí, se publica la del formulario y se deja dicho. Si el
+        # formulario contradice a la página en día u hora, NO se decide acá:
+        # se publica la página (es la que el festival actualizó ayer) y se
+        # lleva al festival como pregunta.
+        url_f = a.get('registration_url', '')
+        if url_f.startswith(('https://forms.gle', 'https://docs.google.com')):
+            bloques_f = [b for b in formulario(url_f) if '_error' not in b]
+            b = next((x for x in bloques_f if x['dia'] == a['dia']), None) \
+                or (bloques_f[0] if len(bloques_f) == 1 else None)
+            if b:
+                a['_formulario'] = b
+                if not a['sede_cruda'] and b['lugar']:
+                    a['sede_cruda'] = b['lugar']
+                    a['_sede_de'] = 'el formulario de inscripción (la página no la dice)'
+                dif = []
+                if b['dia'] and b['dia'] != a['dia']:
+                    dif.append(f"día {b['dia'][-2:]} (página: {a['dia'][-2:]})")
+                if b['hora'] and b['hora'] != a['hora']:
+                    dif.append(f"hora {b['hora']} (página: {a['hora']})")
+                if dif:
+                    a['_formulario_discrepa'] = ' · '.join(dif)
+                    hallazgos.append(f"«{a['titulo']}»: el formulario de inscripción dice "
+                                     f"{' y '.join(dif)}. Se publica lo de la página y se pregunta.")
+            elif bloques_f:
+                hallazgos.append(f"«{a['titulo']}»: su formulario no trae un bloque del "
+                                 f"día {a['dia'][-2:]} (trae {[x['dia'][-2:] for x in bloques_f]})")
+
         # La hoja de vida del invitado NO es la sinopsis de la actividad. Casi
         # siempre viene bajo «PERFIL DEL INVITADO», pero el taller de periodismo
         # cultural no trae descripción: solo la bio, y arranca con el nombre del
@@ -330,6 +428,16 @@ def main():
         a['perfil'] = ' '.join(x for s, x in resto if s == 'perfil').strip()
         acts.append(a)
 
+    for a in acts:
+        c = CORRECCIONES.get(a['titulo'])
+        if c:
+            a['_pagina_decia'] = {k: a.get(k) for k in ('dia', 'hora', 'duracion_min', 'sede_cruda')}
+            a.update({k: v for k, v in c.items() if k != 'por_que'})
+            a['_corregido_por'] = c['por_que'] + f' ({IG_FRANJA})'
+            a.pop('_formulario_discrepa', None)
+    # un hallazgo sobre algo ya corregido o ya preguntado no se repite
+    hallazgos = [h for h in hallazgos if not any(h.startswith(f'«{t}»') for t in CORRECCIONES)
+                 and not h.startswith('«Un sueño')] + PREGUNTAS
     acts.sort(key=lambda x: (x['dia'], x['hora'] or '99:99', x['titulo']))
     out = {
         '_provenance': lib.provenance(
@@ -339,7 +447,7 @@ def main():
                        'sale del rótulo impreso en cada lámina, leído con OCR',
             ojo='las láminas son las de AGOSTO (los archivos se llaman '
                 'VERSION-ANTERIOR): solo se les cree el rótulo, no la fecha'),
-        '_para_el_festival': HALLAZGOS,
+        '_para_el_festival': hallazgos,
         'actividades': acts,
     }
     json.dump(out, open(f'{ST}/ficma-2026-franja-web.json', 'w', encoding='utf-8'),

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB (api.themoviedb.org) + Letterboxd por el redirect /tmdb/<id>",
-  "capturado": "2026-09-18",
+  "capturado": "2026-09-19",
   "que_aporta": "póster, género, título en inglés, sinopsis EN y lbSlug de las obras que la edición de agosto no tenía",
   "candado": "director ✓ SIEMPRE, más título idéntico. Cada ficha dice en `_verificado` con qué se comprobó."
  },

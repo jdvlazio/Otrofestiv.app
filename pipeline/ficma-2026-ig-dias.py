@@ -21,8 +21,8 @@ QUÉ TRAE IG Y EL PDF NO:
 EN QUÉ SE CONTRADICEN (no se resuelve acá: se reporta, y se le pregunta al
 festival):
 
-  · La MUESTRA DE CORTOMETRAJES del sábado 26: el PDF la pone a las 10:00 y el
-    post, de «1:00 p.m. a 8:00 p.m.».
+  · La MUESTRA DE CORTOMETRAJES del sábado 26: el PDF y la lámina la ponen a
+    las 10:00 y el pie del post, de «1:00 p.m. a 8:00 p.m.». Se publica 10:00.
   · «La Marcha del Hambre» tiene página propia en el PDF (viernes 25, 8:00 PM)
     y NO aparece en el post de ese día.
   · «Entrelazados»: el PDF se contradice solo —badge 7:20 PM, campo HORA 7:00
@@ -111,11 +111,12 @@ DISCREPA = {
     # resuelve donde nace, en HORA_ERRATA de ficma-2026-parse.py, porque lo que
     # hay que explicar es que la LÁMINA se contradice. Declararlo dos veces
     # obligaba a seguir dos saltos para entender una sola hora.
-    'Muestra de Cortometrajes: Realizadores locales y Eje Cafetero': {
-        'hora': '13:00', 'duracion_min': 420,
-        'por_que': 'el PDF la pone a las 10:00 y el post, de «1:00 p.m. a 8:00 p.m.». '
-                   'Gana el post: es de ayer, da rango completo, y a las 10:00 el '
-                   'mismo post pone otra función (Largometrajes UBPD) en esa sede.'},
+    # LA MUESTRA DE CORTOS DEL SÁBADO 26 NO ESTÁ ACÁ (19 sep). El pie del post
+    # dice «1:00 p.m. a 8:00 p.m.» y la publiqué así. Juan: «es 10 am, el PDF es
+    # claro» — y la LÁMINA del mismo post también dice 10:00 AM, dos veces
+    # (badge y campo HORA). Un pie contra dos imágenes: ganan las imágenes.
+    # Y mi argumento de que «a las 10:00 el post pone otra función en esa sede»
+    # era falso: los Largometrajes UBPD no dicen sede.
 }
 
 # EN EL POST Y NO EN EL PDF. Sin sede no se publica: es la misma regla que dejó

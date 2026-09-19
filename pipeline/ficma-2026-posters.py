@@ -108,7 +108,10 @@ def recorta(pagina, maqueta, titulo):
     W, H = im.size
     x0, y0, x1, y1 = RECORTE[maqueta]
     dest = f'{ASSETS}/{slug(titulo)}.jpg'
-    im.crop((int(x0 * W), int(y0 * H), int(x1 * W), int(y1 * H))).save(dest, quality=88)
+    # write-once: el archivo publicado ya pasó por optimize-posters (500 px);
+    # re-recortarlo en cada corrida lo devolvía a 350 KB y ensuciaba el diff.
+    if not os.path.exists(dest):
+        im.crop((int(x0 * W), int(y0 * H), int(x1 * W), int(y1 * H))).save(dest, quality=88)
     return f'/assets/ficma/{os.path.basename(dest)}'
 
 
