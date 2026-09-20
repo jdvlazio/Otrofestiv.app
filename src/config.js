@@ -987,6 +987,30 @@ export const FESTIVAL_CONFIG={
     ticketing_model:'mixed', // toda la programación es gratuita (lámina 1 del carrusel); sin ticket_url no se pinta nada
     films:null,posters:null,lbSlugs:{}
   },
+  'conexcine2026': {
+    name:'CONEXCINE',displayName:'CONEXCINE',fullName:'CONEXCINE — Festival Audiovisual FEDECAJAS',
+    shortName:'CONEXCINE',tagline:'Festival Audiovisual FEDECAJAS',
+    city:'Cúcuta',country:'CO',
+    dates:'23–26 SEP',dates_en:'SEP 23–26',year:2026,timezoneOffset:'-05:00',
+    // AFICHE PROVISIONAL, y dicho para que no se pierda: el festival NO publica
+    // uno vertical. Su identidad está en la portada del PDF de programación,
+    // que es APAISADA (949×697): estirarla a 2:3 la comprimiría un 51%, que es
+    // el error cometido con Villa del Cine. Lo único vertical que publican son
+    // sus tarjetas de Instagram a 4:5, que se comprimen un 17% —dentro de lo
+    // aprobado— pero son pieza de anuncio, no afiche. Pedido al festival.
+    keyArt:'/assets/keyart/conexcine2026-v2.jpg',
+    storageKey:'conexcine2026_',
+    festivalStartStr:'2026-09-23T00:00:00',festivalEndStr:'2026-09-26T23:59:00',
+    prioLimit:3,ticketing_model:'mixed',
+    festivalDates:{'2026-09-23':'2026-09-23','2026-09-24':'2026-09-24','2026-09-25':'2026-09-25','2026-09-26':'2026-09-26'},
+    days:[{k:'2026-09-23',d:23,lbl:'MIÉ'},{k:'2026-09-24',d:24,lbl:'JUE'},{k:'2026-09-25',d:25,lbl:'VIE'},{k:'2026-09-26',d:26,lbl:'SÁB'}],
+    dayKeys:['2026-09-23','2026-09-24','2026-09-25','2026-09-26'],
+    dayShort:{'2026-09-23':'MIÉ 23','2026-09-24':'JUE 24','2026-09-25':'VIE 25','2026-09-26':'SÁB 26'},
+    dayShort_en:{'2026-09-23':'WED 23','2026-09-24':'THU 24','2026-09-25':'FRI 25','2026-09-26':'SAT 26'},
+    dayLong:{'2026-09-23':'Miércoles 23 de septiembre','2026-09-24':'Jueves 24 de septiembre','2026-09-25':'Viernes 25 de septiembre','2026-09-26':'Sábado 26 de septiembre'},
+    films:null,posters:null,lbSlugs:{}
+  },
+
   'narrarelfuturo2026': {
     name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
     city:'Bogotá',country:'CO',
@@ -1058,6 +1082,14 @@ export const SECTION_ARCHETYPES = {
   // ── Festival de Cine de Jardín 11 · Jardín, Antioquia ──────────────────
   '🎬 Muestra Central': 'Muestra / País',
   '🔮 CALEIDOSCOPIO': 'Competencia',
+  // ── CONEXCINE 2026 · Cúcuta ────────────────────────────────────────────
+  '🏆 Competencia Adultos': 'Competencia',
+  '🌱 Competencia Juvenil': 'Competencia',
+  '🗺️ Competencia En(Foco) Santanderes': 'Competencia',
+  '🎞️ Proyecciones Especiales': 'Muestra / País',
+  '🎙️ Conversatorios': 'Charlas / Industria',
+  '🎉 Actividades Culturales': 'Especiales / Eventos',
+
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
   '📺 Primetime': 'Especiales / Eventos',
   '🔎 Discovery': 'Perspectivas / Miradas',

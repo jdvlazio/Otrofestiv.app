@@ -1,0 +1,256 @@
+{
+ "_provenance": {
+  "fuente": "Programación Oficial CONEXCINE 2026 (PDF de 4 páginas), página 2",
+  "capturado": "2026-09-19",
+  "que_aporta": "los bloques con día, hora de inicio y de fin, el nombre de la jornada y las líneas que el festival imprime en cada uno",
+  "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+  "metodo": "pdftotext -bbox-layout: los cuatro días son tarjetas en un collage, con sus regiones declaradas y auto-verificadas por la etiqueta y el número que deben caer dentro. Cada bloque arranca en su línea de hora y toma lo que le sigue en la misma columna"
+ },
+ "bloques": [
+  {
+   "dia": "2026-09-23",
+   "jornada": "DÍA 1: HiSTORiAS QUE NOS ENCUENTRAN Inauguración Festival CONEXCINE",
+   "hora": "08:00",
+   "fin": "10:00",
+   "lineas": [
+    "Competencia Adultos",
+    "PROGRAMA 1: Aventuras mágicas y amistades",
+    "inolvidables"
+   ],
+   "_x": 45,
+   "_y": 436.639,
+   "pagina": 2,
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-09-23",
+   "jornada": "DÍA 1: HiSTORiAS QUE NOS ENCUENTRAN Inauguración Festival CONEXCINE",
+   "hora": "10:00",
+   "fin": "12:00",
+   "lineas": [
+    "Competencia Adultos",
+    "PROGRAMA 3: Horizontes que florecen"
+   ],
+   "_x": 45,
+   "_y": 490.639,
+   "pagina": 2,
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-09-23",
+   "jornada": "DÍA 1: HiSTORiAS QUE NOS ENCUENTRAN Inauguración Festival CONEXCINE",
+   "hora": "17:30",
+   "fin": "20:00",
+   "lineas": [
+    "INAUGURACIÓN - 3° CONEXCINE",
+    "Proyección Competencia En(Foco) Santanderes",
+    "Presentaciones Culturales"
+   ],
+   "_x": 45,
+   "_y": 533.839,
+   "pagina": 2,
+   "duracion_min": 150
+  },
+  {
+   "dia": "2026-09-24",
+   "jornada": "DÍA 2: CONVERSACIONES QUE INSPIRAN Charla con invitados",
+   "hora": "08:00",
+   "fin": "10:00",
+   "lineas": [
+    "Competencia Juvenil",
+    "PROGRAMA 1: Voces, miradas y paisajes",
+    "propios"
+   ],
+   "_x": 306,
+   "_y": 188.863,
+   "pagina": 2,
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-09-24",
+   "jornada": "DÍA 2: CONVERSACIONES QUE INSPIRAN Charla con invitados",
+   "hora": "10:00",
+   "fin": "12:00",
+   "lineas": [
+    "Competencia Adultos",
+    "PROGRAMA 2: Entre el mar y la luna"
+   ],
+   "_x": 306,
+   "_y": 242.863,
+   "pagina": 2,
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-09-24",
+   "jornada": "DÍA 2: CONVERSACIONES QUE INSPIRAN Charla con invitados",
+   "hora": "14:30",
+   "fin": "15:30",
+   "lineas": [
+    "Conversatorio sobre formulación de",
+    "proyectos para convocatorias, mercados",
+    "y festivales.",
+    "Con: Elkin Zair Manco y Danniela Castro",
+    "Auditorio TORRE DEL RELOJ"
+   ],
+   "_x": 306,
+   "_y": 286.063,
+   "pagina": 2,
+   "duracion_min": 60
+  },
+  {
+   "dia": "2026-09-24",
+   "jornada": "DÍA 2: CONVERSACIONES QUE INSPIRAN Charla con invitados",
+   "hora": "16:00",
+   "fin": "19:00",
+   "lineas": [
+    "PROYECCIÓN",
+    "¡EL CINE COLOMBIANO NOS LATE!",
+    "El Juego de la Vida",
+    "Dir. Mario Andrés Ruiz",
+    "(Proyección mini competencia",
+    "virtual)",
+    "Presentaciones Culturales"
+   ],
+   "_x": 498,
+   "_y": 234.948,
+   "pagina": 2,
+   "duracion_min": 180
+  },
+  {
+   "dia": "2026-09-25",
+   "jornada": "DÍA 3: MiRADAS QUE NOS CONECTAN",
+   "hora": "08:00",
+   "fin": "10:00",
+   "lineas": [
+    "Competencia Juvenil",
+    "PROGRAMA 2: Camino de historias vivas"
+   ],
+   "_x": 684,
+   "_y": 208.468,
+   "pagina": 2,
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-09-25",
+   "jornada": "DÍA 3: MiRADAS QUE NOS CONECTAN",
+   "hora": "10:00",
+   "fin": "12:00",
+   "lineas": [
+    "Competencia Adultos",
+    "PROGRAMA 4: Transitando del norte al sur"
+   ],
+   "_x": 684,
+   "_y": 251.668,
+   "pagina": 2,
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-09-25",
+   "jornada": "DÍA 3: MiRADAS QUE NOS CONECTAN",
+   "hora": "17:30",
+   "fin": "20:00",
+   "lineas": [
+    "PROYECCIÓN",
+    "¡EL CINE COLOMBIANO NOS LATE!",
+    "Adiós al Amigo",
+    "Dir. Iván D. Gaona",
+    "Presentaciones Culturales"
+   ],
+   "_x": 684,
+   "_y": 294.868,
+   "pagina": 2,
+   "duracion_min": 150
+  },
+  {
+   "dia": "2026-09-26",
+   "jornada": "DÍA 4: INFiNiTOS PAiSAJES, HiSTORiAS QUE NOS HACEN PAÍS Premiación y Clausura CONEXCINE Comparte en familia",
+   "hora": "10:00",
+   "fin": "12:15",
+   "lineas": [
+    "Proyección Infantil",
+    "MU-KI-RA",
+    "Dir. Estefanía Piñeres",
+    "Presentaciones Culturales"
+   ],
+   "_x": 540,
+   "_y": 559.724111,
+   "pagina": 2,
+   "duracion_min": 135
+  },
+  {
+   "dia": "2026-09-26",
+   "jornada": "DÍA 4: INFiNiTOS PAiSAJES, HiSTORiAS QUE NOS HACEN PAÍS Premiación y Clausura CONEXCINE Comparte en familia",
+   "hora": "15:00",
+   "fin": "18:00",
+   "lineas": [
+    "EXPOSICIÓN PROYECTARTE",
+    "Con la presencia de los artistas",
+    "(Exposición disponible durante todo el festival)"
+   ],
+   "_x": 704,
+   "_y": 485.035366,
+   "pagina": 2,
+   "duracion_min": 180
+  },
+  {
+   "dia": "2026-09-26",
+   "jornada": "DÍA 4: INFiNiTOS PAiSAJES, HiSTORiAS QUE NOS HACEN PAÍS Premiación y Clausura CONEXCINE Comparte en familia",
+   "hora": "16:30",
+   "fin": "19:00",
+   "lineas": [
+    "CEREMONIA DE CLAUSURA",
+    "Premiación y proyección de las películas",
+    "ganadoras",
+    "RIFA CONEXCINE",
+    "Presentaciones Culturales"
+   ],
+   "_x": 704,
+   "_y": 538.985566,
+   "pagina": 2,
+   "duracion_min": 150
+  }
+ ],
+ "transversales": [],
+ "mojibake_corregido": {
+  "PROGRAMA 3: BŀŝėƝŀĶŭ÷ŤɑŜŵ÷ɑƣŀŝ÷ë÷Ķ": {
+   "leido": "PROGRAMA 3: BŀŝėƝŀĶŭ÷ŤɑŜŵ÷ɑƣŀŝ÷ë÷Ķ",
+   "publicado": "PROGRAMA 3: Horizontes que florecen",
+   "fuente": "p3: «3. HORiZONTES QUE FLORECEN, donde el campo se convierte…»"
+  }
+ },
+ "sin_clasificar": [
+  "ENTRADA LIBRE",
+  "Ingreso hasta completar aforo",
+  "Nos reservamos el derecho de admisión.",
+  "Cúcuta, Norte de Santander",
+  "JUEVES",
+  "24",
+  "MIÉRCOLES",
+  "25",
+  "DÍA 3: MiRADAS QUE",
+  "NOS CONECTAN",
+  "23",
+  "VIERNES",
+  "DÍA 2: CONVERSACIONES",
+  "QUE INSPIRAN",
+  "Charla con invitados",
+  "especiales",
+  "DÍA 1: HiSTORiAS QUE NOS",
+  "ENCUENTRAN",
+  "Inauguración Festival CONEXCINE",
+  "SÁBADO",
+  "26",
+  "DÍA 4: INFiNiTOS PAiSAJES,",
+  "HiSTORiAS QUE NOS",
+  "HACEN PAÍS",
+  "Premiación y Clausura",
+  "CONEXCINE",
+  "Comparte en familia",
+  "EVENTO RECREACIÓN COMFANORTE",
+  "¡VEN Y DISFRUTA EN FAMILIA!",
+  "EXPOSICIÓN PERMANENTE PROYECTARTE",
+  "DE DiBUJO Y PLASTiLiNA",
+  "Desde el miércoles 23 a las 8:00 a.m. • Hasta el sábado 26 a las 6:00 p.m."
+ ],
+ "avisos": []
+}

@@ -107,6 +107,12 @@ def main():
     nuestras_salas = {norm(f.get('sala')) for f in crudo['funciones']} | \
                      {norm(f.get('sede')) for f in crudo['funciones']}
     nuestras_horas = {f.get('hora') for f in crudo['funciones']}
+    # UNA SALA QUE SE DEJA FUERA A PROPÓSITO SE DECLARA EN EL PLAN, con su
+    # razón, y no en la lista genérica IGNORA —que es de palabras sueltas
+    # («sala», «auditorio») y vale para todos los festivales—. Meter ahí el
+    # nombre propio de una sede la escondería en TODOS. Las decisiones viven
+    # en el plan del festival, que es lo que se revisa en el PR.
+    fuera = {norm(k): v for k, v in (cfg.get('radar_salas_fuera') or {}).items()}
 
     # Una sala solo cuenta si está CERCA DE UNA SEDE NUESTRA. El radar cita de
     # pasada otros festivales —«Teatro los Fundadores – Sala Olimpia
@@ -114,7 +120,7 @@ def main():
     # ajeno, que es la forma más rápida de que un aviso deje de leerse.
     sedes = {norm(f.get('sede')) for f in crudo['funciones'] if f.get('sede')}
     sedes |= {norm(s.split(' - ')[0]) for s in sedes}
-    salas = {}
+    salas, declaradas = {}, {}
     for m in RE_SALA.finditer(texto):
         s = m.group(1).strip()
         if norm(s) in IGNORA:
@@ -122,6 +128,9 @@ def main():
         # la captura puede quedarse corta («Aula Magistral» por «Aula Magistral
         # 704-M16»): cuenta como presente si una contiene a la otra
         if any(norm(s) in x or x in norm(s) for x in nuestras_salas if x):
+            continue
+        if norm(s) in fuera:
+            declaradas[norm(s)] = (s, fuera[norm(s)])
             continue
         cerca = norm(texto[max(0, m.start() - 140):m.end() + 140])
         if not any(sede in cerca for sede in sedes if sede):
@@ -145,6 +154,8 @@ def main():
             print(f'      «{s}»')
     else:
         print('   ✓ toda sala nombrada por el radar existe en el crudo')
+    for s, por_que in sorted(declaradas.values()):
+        print(f'   · «{s}» fuera a propósito: {por_que}')
     if horas:
         print(f'   ⚠ horas del radar sin función nuestra: {", ".join(sorted(horas))}'
               f'  (puede ser de otra edición: mirar)')

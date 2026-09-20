@@ -100,6 +100,8 @@ deliberada existe la etiqueta `frontera-ok`.
 | `siembrafest2026` | SiembraFest | Sasaima y Villeta | 9–18 SEP | Recién terminado |
 | `jardin2026` | Festival de Cine de Jardín | Jardín | 24–27 SEP | **Próximo / activo** |
 | `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Recién terminado |
+| `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | **Próximo / activo** |
+>>>>>>> 71f271dd (feat(conexcine): 3° CONEXCINE — Cúcuta, 23–26 SEP)
 
 ### Features activas (desde `.specify/features/`)
 

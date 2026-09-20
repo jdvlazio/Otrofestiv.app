@@ -1,0 +1,34 @@
+{
+ "Auditorio Torre del Reloj - Cúcuta": {
+  "n": 1,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 7.8840563,
+  "lng": -72.5017453,
+  "_match": "OpenStreetMap: «Centro Cultural Torre del Reloj», amenity=events_venue, Calle 13, El Centro, Cúcuta. A 250 m de la Biblioteca, en el mismo centro histórico.",
+  "_nota": "La ÚNICA sede que el PDF nombra, y solo para el conversatorio del jueves 24."
+ },
+ "Biblioteca Pública Julio Pérez Ferrero - Cúcuta": {
+  "n": 12,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 7.8853563,
+  "lng": -72.4997477,
+  "_match": "OpenStreetMap: nodo «Biblioteca Pública Julio Pérez Ferrero», amenity=library, Calle 12, El Centro, Comuna 1, Cúcuta. La búsqueda automática no la halló porque el nombre completo con «Cúcuta» detrás no casa con su etiqueta; buscándola por su nombre propio sí, y la clase de lugar (biblioteca) confirma que es ella.",
+  "_nota": "Aliada institucional del festival (@bibliocucuta_) y sede de todo el programa salvo el conversatorio del jueves."
+ },
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-09-19"
+ },
+ "Auditorio TORRE DEL RELOJ": {
+  "n": 1,
+  "_prec": "sin verificar",
+  "_todo": "buscar a mano (sedes-html.py genera la página)"
+ },
+ "Biblioteca Pública Julio Pérez Ferrero": {
+  "n": 12,
+  "_prec": "sin verificar",
+  "_todo": "buscar a mano (sedes-html.py genera la página)"
+ }
+}
