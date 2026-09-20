@@ -90,6 +90,18 @@ def main():
 
     # el director, por título, desde Instagram
     dires = {norm(o['titulo']): o['director'] for o in ig if o.get('director')}
+    # LA FICHA DE TMDB, para los cortos que la tienen. La trae un paso propio y
+    # no `enriquecer.py`: el candado genérico exige año o duración y el PDF de
+    # este festival no publica ninguno de los dos, así que no podía abrirse ni
+    # con la obra delante. El de `lib.ficha_tmdb` decide por título idéntico +
+    # director, que es el caso de un festival de cortos.
+    ft = {}
+    ft_p = f'{ST}/conexcine-2026-fichas-tmdb.json'
+    if os.path.exists(ft_p):
+        for t, e in json.load(open(ft_p, encoding='utf-8'))['fichas'].items():
+            ft[norm(t)] = e
+    CAMPOS = ('tmdb_id', 'anio', 'duracion_min', 'genero', 'sinopsis',
+              'sinopsis_en', 'title_en', 'pais', 'poster', 'posterSource', 'lbSlug')
     # las obras de cada programa, y las de cada sección suelta
     porprog, porsec = {}, {}
     for o in cat['obras']:
@@ -101,9 +113,11 @@ def main():
 
     def obra(o):
         d = dires.get(norm(o['titulo']), '')
+        f = ft.get(norm(o['titulo']), {})
         return {'titulo': o['titulo'], **({'director': d} if d else {}),
                 'pais': o.get('pais') or 'Colombia',
                 '_departamento': o.get('departamento', ''),
+                **{k: f[k] for k in CAMPOS if f.get(k)},
                 '_src': o['_src']}
 
     funciones, avisos = [], []

@@ -30,11 +30,12 @@ import unicodedata
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ig_carrusel import laminas
 from ocr import leer
-from lib import provenance, norm
+from lib import provenance, norm, hora24
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CAT = f'{REPO}/festivals/staging/conexcine-2026-catalogo.json'
 PAR = f'{REPO}/festivals/staging/conexcine-2026-parrilla.json'
+CRUDO = f'{REPO}/festivals/staging/conexcine-2026-crudo.json'
 OUT = f'{REPO}/festivals/staging/conexcine-2026-ig.json'
 POST = 'DbYizbxjmEQ'
 # Los posts que PINTAN día, hora o sede. Se leen sus láminas y se cruza lo
@@ -43,6 +44,20 @@ POST = 'DbYizbxjmEQ'
 POSTS_HORARIO = {
     'DdWWCJijPdT': 'las dos funciones de «El Cine Colombiano Nos Late», 18 sep',
     'DcWGnJrEWrP': 'el MISMO anuncio, una semana antes',
+}
+# EL CARTEL CON LA PARRILLA ENTERA (19 sep). El festival publicó la
+# programación completa como UNA IMAGEN: los cuatro días con sus horas y sus
+# programas. Es una lectura independiente del PDF —otra pieza, otro diseño— y
+# por eso se cruza aparte.
+#
+# NO se le piden los DÍAS. El cartel va a columnas y el OCR las lee en zigzag:
+# las horas del jueves y las del viernes salen intercaladas, y repartirlas por
+# día sería inventar. Lo que sí es firme es el CONJUNTO de horas y de
+# programas pintados, y eso es lo que se compara.
+POST_CARTEL = 'DdeEWMmjULL'
+HORA_CARTEL_OK = {
+    '18:00': 'el FIN de la exposición permanente («Sábado 26 6:00 p.m.»), que es '
+             'una franja de todo el festival y no una función',
 }
 # EL FESTIVAL CAMBIÓ LA HORA Y LO DIJO DOS VECES. El post viejo pinta jueves
 # 5:00 p.m. y viernes 6:00 p.m.; el PDF (8 sep) y el post del 18 sep pintan
@@ -150,16 +165,39 @@ def lee_laminas(ps):
 
 
 def baja_post(sc):
-    d = laminas(sc)
+    """Las imágenes de un post. `ig_carrusel` sabe de CARRUSELES: lee el
+    `contextJSON` del embed, que solo existe cuando el post es un GraphSidecar.
+    Un post de UNA imagen —como el cartel con la parrilla entera— lo hace
+    reventar, así que se cae al <img> del propio embed, que siempre está."""
     os.makedirs(f'{REPO}/fuentes/ig/{sc}', exist_ok=True)
+    try:
+        urls = laminas(sc).get('laminas') or []
+    except Exception:
+        h = subprocess.run(['curl', '-sSL', '--max-time', '25', '-A', UA,
+                            f'https://www.instagram.com/p/{sc}/embed/captioned/'],
+                           capture_output=True, text=True).stdout
+        m = re.findall(r'<img[^>]+class="EmbeddedMediaImage"[^>]+src="([^"]+)"', h) \
+            or re.findall(r'"display_url":"([^"]+)"', h)
+        urls = [m[0].replace('\\u0026', '&').replace('&amp;', '&')] if m else []
     ps = []
-    for i, u in enumerate(d.get('laminas') or [], 1):
+    for i, u in enumerate(urls, 1):
         q = f'{REPO}/fuentes/ig/{sc}/{i:02d}.jpg'
         if not os.path.exists(q) or os.path.getsize(q) < 5000:
             subprocess.run(['curl', '-sSL', '--max-time', '45', '-A', UA, '-o', q,
                             u if isinstance(u, str) else u.get('url')], check=False)
-        ps.append(q)
+        if os.path.exists(q) and os.path.getsize(q) > 5000:
+            ps.append(q)
     return ps
+
+
+RE_HORA_SUELTA = re.compile(r'\b(\d{1,2}):(\d{2})\s*([ap])\.?\s*m', re.I)
+
+
+def horas_de(txt):
+    """Las horas que un texto pinta, en 24 h y sin repetir."""
+    return list(dict.fromkeys(
+        hora24(f'{m.group(1)}:{m.group(2)} {m.group(3)}.m.')
+        for m in RE_HORA_SUELTA.finditer(txt)))
 
 
 RE_HORA_PINTADA = re.compile(
@@ -249,6 +287,42 @@ def main():
             print(f'   ✗ {v["dia"][-2:]} {v["hora"]}  {v["post"]}/{v["lamina"]}  '
                   f'NO existe en la parrilla — «{v["texto"][:46]}»')
     if choques:
+        sys.exit(1)
+
+    # ── el CARTEL de programación, contra la parrilla entera ─────────────────
+    fallos = []
+    cartel = []
+    for q in baja_post(POST_CARTEL):
+        cartel += leer([q]).get(q, [])
+    txt_c = ' '.join(cartel)
+    horas_c = set(horas_de(txt_c))
+    nuestras = {b['hora'] for b in par}
+    print(f'\ncartel de programación ({POST_CARTEL}), {len(cartel)} líneas pintadas:')
+    faltan_c = nuestras - horas_c
+    if faltan_c:
+        fallos.append(f'el cartel NO pinta estas horas que publicamos: {sorted(faltan_c)}')
+    else:
+        print(f'   ✓ las {len(nuestras)} horas que publicamos están pintadas en el cartel')
+    sobran = {h for h in horas_c - nuestras if h not in HORA_CARTEL_OK}
+    for h in sorted(horas_c - nuestras):
+        if h in HORA_CARTEL_OK:
+            print(f'   · {h} pintada y sin función: {HORA_CARTEL_OK[h]}')
+    if sobran:
+        fallos.append(f'el cartel pinta horas que no tenemos: {sorted(sobran)}')
+    # y los programas: el nombre de cada uno tiene que estar pintado
+    sin_pintar = [f['titulo'] for f in
+                  json.load(open(CRUDO, encoding='utf-8'))['funciones']
+                  if f.get('is_cortos') and f['titulo'].startswith('PROGRAMA')
+                  and norm(f['titulo'].split(':', 1)[1]) not in norm(txt_c)]
+    if sin_pintar:
+        fallos.append(f'programas que el cartel no nombra: {sin_pintar}')
+    else:
+        print('   ✓ los 6 programas de cortos están nombrados en el cartel')
+
+    if fallos:
+        print(f'\n✗ {len(fallos)} diferencia(s):')
+        for f_ in fallos:
+            print('   ✗', f_)
         sys.exit(1)
 
 

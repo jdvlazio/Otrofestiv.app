@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Programación Oficial CONEXCINE 2026 (PDF, páginas 2 y 3) + las láminas de «Selección Oficial» en Instagram",
-  "capturado": "2026-09-19",
+  "capturado": "2026-09-20",
   "que_aporta": "13 funciones con día, hora y sede; los cortos de cada programa con su departamento; y el director de cada obra",
   "url": "https://www.fedecajas.com/conexcine/",
   "metodo": "el PDF leído tres veces con herramientas distintas (poppler, MuPDF y el OCR del sistema sobre los píxeles) y cruzado contra Instagram, que es la que aporta los directores"
@@ -28,6 +28,15 @@
      "director": "Jairo Tarapuez Jaramillo",
      "pais": "Colombia",
      "_departamento": "Nariño",
+     "tmdb_id": 1486078,
+     "anio": 2025,
+     "duracion_min": 12,
+     "genero": "Animación",
+     "sinopsis": "El Chucur”, una intrépida comadreja andina, se prepara para participar en la fiesta de la cosecha, sin embargo, tendrá que llenarse de valor y enfrentar el rechazo de los humanos quienes lo consideran un roedor desagradable para sorprenderlos con sus habilidades como danzante.",
+     "sinopsis_en": "An intrepid Andean weasel prepares to participate in the harvest festival. However, he will have to muster up his courage and face rejection from humans who consider him an unpleasant rodent in order to surprise them with his dancing skills.",
+     "poster": "/assets/conexcine-2026/el-chucur.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-chucur",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -38,6 +47,13 @@
      "director": "Manuel José Martínez",
      "pais": "Colombia",
      "_departamento": "Córdoba",
+     "tmdb_id": 1746351,
+     "anio": 2026,
+     "duracion_min": 10,
+     "sinopsis_en": "From his chair, Jesús watches the kites dancing in the sky. Longingly, he writes a wish on a piece of paper: “I want to fly a kite.” His friends, moved by innocent faith, send the note up on the kite’s string, but the message is lost in the sky.",
+     "poster": "/assets/conexcine-2026/hilo-al-cielo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "hilo-al-cielo",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -48,6 +64,14 @@
      "director": "Kizzis Ramirez",
      "pais": "Colombia",
      "_departamento": "Bolívar",
+     "tmdb_id": 1668920,
+     "anio": 2026,
+     "duracion_min": 9,
+     "sinopsis": "Cantos que abren puertas y revelan lo que somos",
+     "sinopsis_en": "Every November 1, Choco eagerly awaits “Ángeles Somos,” the celebration during which boys and girls parade through the neighborhood in costumes, singing traditional refrains while banging on lids and pots, collecting ingredients to prepare the big community stew.",
+     "poster": "/assets/conexcine-2026/angeles-somos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "angeles-somos",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -56,8 +80,16 @@
     {
      "titulo": "Epifanía",
      "director": "Mila Useche",
-     "pais": "Colombia",
+     "pais": "Germany",
      "_departamento": "Boyacá",
+     "tmdb_id": 1575190,
+     "anio": 2025,
+     "duracion_min": 9,
+     "genero": "Animación",
+     "sinopsis_en": "Doña Marta, an elderly farmer, is mourning her daughter. One day, she finds a magic creature on the potato field. \"Epifania” brings back happiness to her life. Joyfully she raises the dragon-like creature. But when it discovers that it can fly, Doña Marta must accept that true love means letting go.",
+     "poster": "/assets/conexcine-2026/epifania.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "epifania-2025-1",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -68,6 +100,16 @@
      "director": "Raquel Tamayo",
      "pais": "Colombia",
      "_departamento": "Antioquia",
+     "tmdb_id": 1617929,
+     "anio": 2025,
+     "duracion_min": 9,
+     "genero": "Documental",
+     "sinopsis": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre.",
+     "sinopsis_en": "I remember very little from those years: the years of the rabbit. My favorite animal, my favorite color, the mountain in front of my house, my friends’ faces, the games with my sisters. Leaving my life in Mexico like that erased my memory. I color in these memories as an attempt to gather them. Forever.",
+     "title_en": "The Years of the rabbit",
+     "poster": "/assets/conexcine-2026/los-anos-del-conejo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-years-of-the-rabbit",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -96,6 +138,13 @@
      "director": "Ingrid Paola Bonilla Rodriguez",
      "pais": "Colombia",
      "_departamento": "Risaralda",
+     "tmdb_id": 1746279,
+     "anio": 2026,
+     "duracion_min": 12,
+     "sinopsis_en": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+     "poster": "/assets/conexcine-2026/la-gallina-saraviada.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-gallina-saraviada",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -106,6 +155,14 @@
      "director": "Cesar Tapia / Colectivo Barranco de Loba",
      "pais": "Colombia",
      "_departamento": "Bolívar",
+     "tmdb_id": 1745787,
+     "anio": 2026,
+     "duracion_min": 7,
+     "genero": "Documental",
+     "sinopsis_en": "The short film portrays the cultural heritage of Barranco de Loba through the tambora and the people who keep the town's traditions and identity alive.",
+     "poster": "/assets/conexcine-2026/lovavieja.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lovavieja",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -116,6 +173,15 @@
      "director": "Joan Mayorga",
      "pais": "Colombia",
      "_departamento": "Antioquia",
+     "tmdb_id": 1740149,
+     "anio": 2025,
+     "duracion_min": 5,
+     "genero": "Animación",
+     "sinopsis": "Con humor satírico, Mi casa es su casa explora las consecuencias de la llegada de los hipopótamos a Colombia, una especie invasora convertida en parte del paisaje. La inacción del Estado frente a este fenómeno abre una reflexión sobre el equilibrio entre la naturaleza y las decisiones humanas.",
+     "sinopsis_en": "A new arrival threatens the home of Magdaleno and his son Sinú. And it brings with it changes that could destroy their way of life. Will they find a way to coexist in the depths of the Magdalena River?",
+     "poster": "/assets/conexcine-2026/mi-casa-es-su-casa.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mi-casa-es-su-casa",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -136,6 +202,15 @@
      "director": "Erika Andrea David",
      "pais": "Colombia",
      "_departamento": "Cundinamarca",
+     "tmdb_id": 1737971,
+     "anio": 2025,
+     "duracion_min": 11,
+     "genero": "Documental",
+     "sinopsis": "Una mujer campesina, que ha dedicado su vida a preservar el territorio mediante la agroecología, huye de su hogar por la llegada de grupos armados y encuentra refugio en Usme, el corazón rural de Bogotá. A través de cartas a mujeres de la zona, comparte su visión sobre la importancia de la tierra y el agua para sostener la vida. Este documental recorre la ruralidad Usmeña, mientras las palabras de la protagonista resuenan como un llamado a preservar el medio ambiente.",
+     "sinopsis_en": "A peasant leader who has taken refuge in Usme is calling for the protection of the land, water, and rural life as the foundation of existence through letters she writes to women in the area.",
+     "poster": "/assets/conexcine-2026/cartas-a-la-tierra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cartas-a-la-tierra",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -146,6 +221,11 @@
      "director": "Halley Rolando Alvarez Moreno",
      "pais": "Colombia",
      "_departamento": "Boyacá",
+     "tmdb_id": 1745802,
+     "anio": 2026,
+     "duracion_min": 8,
+     "sinopsis_en": "In a fast-paced, urban world, this short film tells the story of a young man who has left behind the tranquility of his life in the countryside to seek opportunities in the city.",
+     "lbSlug": "origen-2026",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -176,6 +256,13 @@
      "director": "Yosman Serrano",
      "pais": "Colombia",
      "_departamento": "Norte de Santander",
+     "tmdb_id": 1753864,
+     "anio": 2026,
+     "duracion_min": 8,
+     "sinopsis_en": "Cristian, a cold and weary man, wanders through the town with his nephew Oscar, collecting scrap metal, as the two try to cope with the absence of the boy’s mother, who is serving a prison sentence far away. One day, they receive an instant camera as payment: something insignificant to Cristian, but revealing to Oscar.",
+     "poster": "/assets/conexcine-2026/promesa.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "promesa-2026",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -186,6 +273,14 @@
      "director": "Heiny Camila Gómez",
      "pais": "Colombia",
      "_departamento": "Norte de Santander",
+     "tmdb_id": 1753861,
+     "anio": 2025,
+     "duracion_min": 10,
+     "genero": "Documental",
+     "sinopsis_en": "In the shadow of neglect and violence, a generation shaped by precarious circumstances seeks to transcend conflict through dialogue. Amid the territorial control exercised by armed groups, the voices of farmers and young people emerge in an act of civil resistance—a narrative that calls for peace as a common good and a collective commitment that must encompass all of Colombian society.",
+     "poster": "/assets/conexcine-2026/resistencia-civil-entre-la-tierra-y-la-memoria.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "resistencia-civil-entre-la-tierra-y-la-memoria",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -196,6 +291,13 @@
      "director": "John Agudelo",
      "pais": "Colombia",
      "_departamento": "Santander",
+     "tmdb_id": 1753835,
+     "anio": 2026,
+     "duracion_min": 16,
+     "sinopsis_en": "A journalist returns to her war-torn hometown to write about a cocoa contest, and there she rediscovers her past—and finds a chance for redemption—in the brother of her murdered first love.",
+     "poster": "/assets/conexcine-2026/el-mejor-chocolate-del-mundo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-mejor-chocolate-del-mundo",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -206,6 +308,13 @@
      "director": "Absalon Rincón",
      "pais": "Colombia",
      "_departamento": "Santander",
+     "tmdb_id": 1753860,
+     "anio": 2026,
+     "duracion_min": 10,
+     "sinopsis_en": "In an old carpentry shop, Estiven confronts the souls and the incessant echo of the cicadas. Between life and limbo, his spirit is trapped in a spiritual plane where unfinished work, memory, and the supernatural merge in a state of confusion.",
+     "poster": "/assets/conexcine-2026/escision-de-la-cigarra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "escision-de-la-cigarra",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -216,6 +325,14 @@
      "director": "Stephania Solano López",
      "pais": "Colombia",
      "_departamento": "Norte de Santander",
+     "tmdb_id": 1753838,
+     "anio": 2026,
+     "duracion_min": 6,
+     "genero": "Documental",
+     "sinopsis_en": "Through Don Luis’s testimony, we piece together the experience of someone who lived through the disaster that forced an entire community to leave their homes. More than just a tragedy, it reveals a capacity for resilience.",
+     "poster": "/assets/conexcine-2026/memorias-de-un-renacer.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "memorias-de-un-renacer",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -226,6 +343,13 @@
      "director": "Juan Carlos Gutierrez",
      "pais": "Colombia",
      "_departamento": "Norte de Santander",
+     "tmdb_id": 1753830,
+     "anio": 2026,
+     "duracion_min": 15,
+     "sinopsis_en": "Two groups of local and migrant children will represent the neighborhood in a tournament, an idea that will spark a tomato fight; a charismatic girl will bring out the best in everyone as she tries to unite an unlikely team against an unexpected rival.",
+     "poster": "/assets/conexcine-2026/la-guerra-de-los-tomates.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-guerra-de-los-tomates",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -254,6 +378,14 @@
      "director": "Santiago Parra Perez",
      "pais": "Colombia",
      "_departamento": "Norte de Santander",
+     "tmdb_id": 1753805,
+     "anio": 2026,
+     "duracion_min": 10,
+     "genero": "Historia",
+     "sinopsis_en": "A student caught up in xenophobia rediscovers the history of his border and, together with his classmate, embarks on a journey through memory that transforms his prejudices and replaces hatred with brotherhood.",
+     "poster": "/assets/conexcine-2026/cronicas-de-un-viaje.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cronicas-de-un-viaje",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -264,6 +396,14 @@
      "director": "Sharon Vega",
      "pais": "Colombia",
      "_departamento": "Vichada",
+     "tmdb_id": 1753800,
+     "anio": 2026,
+     "duracion_min": 4,
+     "genero": "Terror",
+     "sinopsis_en": "On the plains of Vichada, under endless nights and along lonely paths through pastures where cows watch in silence, a figure shrouded in mystery appears beside the morichal.",
+     "poster": "/assets/conexcine-2026/la-sayona.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-sayona-2026",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -274,6 +414,14 @@
      "director": "Ludysney Mosquera Quintana",
      "pais": "Colombia",
      "_departamento": "Antioquia",
+     "tmdb_id": 1753796,
+     "anio": 2026,
+     "duracion_min": 6,
+     "genero": "Documental",
+     "sinopsis_en": "Through testimonials from local organizers and young people, the short film describes the characteristics of its three traditional rhythms: the sentao (slow and deliberate), the chalupa (fast, lively, and ideal for improvisation), and the fandango de lengua.",
+     "poster": "/assets/conexcine-2026/bullerengue-ritmo-que-sigue-sonando.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "bullerengue-ritmo-que-sigue-sonando",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -284,6 +432,13 @@
      "director": "Jhoan Steban Molina Rodríguez",
      "pais": "Colombia",
      "_departamento": "Norte de Santander",
+     "tmdb_id": 1753823,
+     "anio": 2026,
+     "duracion_min": 3,
+     "sinopsis_en": "A young man from Los Patios believes his future lies far from home. However, as he goes about his daily routine, he discovers that the place he wanted to escape from can also become the source of his dreams.",
+     "poster": "/assets/conexcine-2026/todavia-aqui.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "todavia-aqui",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -332,6 +487,13 @@
      "director": "Sara J. Asprilla",
      "pais": "Colombia",
      "_departamento": "Chocó",
+     "tmdb_id": 1454683,
+     "anio": 2025,
+     "duracion_min": 12,
+     "sinopsis_en": "Teyo, a young trans woman, prepares to enter her new female school. In the middle of a trip through Quibdó, a hot city of sound, rhythms and glances that she faces before entering class converge.",
+     "poster": "/assets/conexcine-2026/kanekalon.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "kanekalon",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -342,6 +504,13 @@
      "director": "Jerson Ruiz Lizcano",
      "pais": "Colombia",
      "_departamento": "Santander",
+     "tmdb_id": 1745800,
+     "anio": 2026,
+     "duracion_min": 8,
+     "sinopsis_en": "Salomé and Valentina, two young explorers with a passion for history and nature, set out in search of ancient water reservoirs hidden within the rocks of the Chicamocha Canyon.",
+     "poster": "/assets/conexcine-2026/antes-era-mar.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "antes-era-mar",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -352,6 +521,13 @@
      "director": "Ramón Contreras",
      "pais": "Colombia",
      "_departamento": "Norte de Santander",
+     "tmdb_id": 1746336,
+     "anio": 2026,
+     "duracion_min": 9,
+     "sinopsis_en": "Deisy is a teenager who believes she has found in Felipe—a truck driver older than she is—a chance to run away from home. But her decision will have consequences that will shape her forever.",
+     "poster": "/assets/conexcine-2026/la-calle-del-amor.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-calle-del-amor",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -362,6 +538,14 @@
      "director": "Lady Vásquez - Colectivo Inunku",
      "pais": "Colombia",
      "_departamento": "Nariño",
+     "tmdb_id": 1746367,
+     "anio": 2026,
+     "duracion_min": 5,
+     "genero": "Documental",
+     "sinopsis_en": "Amparo and Ana get up at 5 a.m. to take care of their home, raise animals, and harvest potatoes. Their work sustains the community, even though many dismiss it by saying that “they don’t do anything.”",
+     "poster": "/assets/conexcine-2026/tambien-nosotras.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "tambien-nosotras",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -427,6 +611,13 @@
      "director": "Nayelit Eliana Tamara",
      "pais": "Colombia",
      "_departamento": "Norte de Santander",
+     "tmdb_id": 1753825,
+     "anio": 2026,
+     "duracion_min": 10,
+     "sinopsis_en": "This short film explores the impact of the armed conflict on children through the stories of five children, whose voices reflect the resilience, dignity, and hope of a region.",
+     "poster": "/assets/conexcine-2026/las-voces-del-catatumbo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "las-voces-del-catatumbo",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -437,6 +628,14 @@
      "director": "Charith Dayana Ruiz",
      "pais": "Colombia",
      "_departamento": "Santander",
+     "tmdb_id": 1753809,
+     "anio": 2026,
+     "duracion_min": 5,
+     "genero": "Terror",
+     "sinopsis_en": "A group of schoolmates ventures into a forest. After ignoring a warning, they get lost and enter a mysterious cabin from which they never emerge.",
+     "poster": "/assets/conexcine-2026/el-bosque-maldito.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-bosque-maldito",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -447,6 +646,14 @@
      "director": "Deiris Arrieta",
      "pais": "Colombia",
      "_departamento": "Magdalena",
+     "tmdb_id": 1753798,
+     "anio": 2026,
+     "duracion_min": 4,
+     "genero": "Documental",
+     "sinopsis_en": "“When the Old Wind Dances” depicts the encounter between students and two elders from Pijiño, whose knowledge keeps the region’s traditions alive.",
+     "poster": "/assets/conexcine-2026/cuando-el-viento-viejo-baila.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cuando-el-viento-viejo-baila",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -457,6 +664,13 @@
      "director": "Ayelen Sophie Salazar",
      "pais": "Colombia",
      "_departamento": "Meta",
+     "tmdb_id": 1753826,
+     "anio": 2026,
+     "duracion_min": 7,
+     "sinopsis_en": "Diego, a young farmer, leaves home to study in the city. There, the pressure and social rejection overwhelm him and make him forget who he is and where he comes from. Only when he returns to his roots does he realize that, in order to move forward, he must first rediscover and accept his roots.",
+     "poster": "/assets/conexcine-2026/regresar-para-encontrarme.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "regresar-para-encontrarme",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -467,6 +681,14 @@
      "director": "Tania Garay",
      "pais": "Colombia",
      "_departamento": "Norte de Santander",
+     "tmdb_id": 1753818,
+     "anio": 2026,
+     "duracion_min": 5,
+     "genero": "Aventura",
+     "sinopsis_en": "A boy and a star remind us that magic never disappears; it just waits for us to look again with our hearts. A story that invites us to grow up without ever losing our faith.",
+     "poster": "/assets/conexcine-2026/la-ultima-estrella.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-ultima-estrella",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -495,6 +717,14 @@
      "director": "Diego Caceres",
      "pais": "Colombia",
      "_departamento": "Bolívar",
+     "tmdb_id": 1668919,
+     "anio": 2026,
+     "duracion_min": 12,
+     "sinopsis": "En palenque, un pueblo afrodescendiente en el departamento de Bolívar ubicado a una hora de Cartagena, se viven diariamente las tradiciones que gestaron nuestros ancestros. Los kuagros es una de ellas; siendo esta la forma organizacional que existe en el territorio. Se entiende el Kuagro como una segunda familia que nace gracias a los años de andanzas de un grupo de niños o jóvenes de una misma calle, barrio o sector.  La película KUAGRO cuenta como se da esta formación de grupo cuando no hay un rumbo seguro o fijo, solo la amistad y hermandad que nace del corazón y los amigos de infancia, esta película habla desde el relevo generacional, la lengua palenquera, el amor de mama y la libertad de ser niño en el palenque de Benko.",
+     "sinopsis_en": "Makakito tries to escape his mother’s punishment so he can play with his friends in a magical place in Palenque. His grandfather, a storyteller, captivates him with a traditional folk tale, which is interrupted by the adventures that ensnare Makakito.",
+     "poster": "/assets/conexcine-2026/kuagro.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "kuagro",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -505,6 +735,13 @@
      "director": "Zaira Alejandra Gomez Rojas",
      "pais": "Colombia",
      "_departamento": "Bogotá D.C.",
+     "tmdb_id": 1746343,
+     "anio": 2026,
+     "duracion_min": 8,
+     "sinopsis_en": "An old legend says that couples who climb Monserrate together will break up, unless their love is true. During the climb, two young people will put that belief to the test.",
+     "poster": "/assets/conexcine-2026/lo-que-vimos-desde-arriba.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lo-que-vimos-desde-arriba",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -515,6 +752,14 @@
      "director": "Miguel Angel Ordoñez",
      "pais": "Colombia",
      "_departamento": "Atlántico",
+     "tmdb_id": 1745797,
+     "anio": 2026,
+     "duracion_min": 11,
+     "genero": "Documental",
+     "sinopsis_en": "An independent theater group continues to build up its puppet troupe as part of the Barranquilla Carnival, despite financial and structural constraints.",
+     "poster": "/assets/conexcine-2026/con-la-mano-arriba.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "con-la-mano-arriba",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -525,6 +770,14 @@
      "director": "Joan Sebastian Rodríguez",
      "pais": "Colombia",
      "_departamento": "Cundinamarca",
+     "tmdb_id": 1746282,
+     "anio": 2026,
+     "duracion_min": 10,
+     "genero": "Ciencia ficción",
+     "sinopsis_en": "A tourist arrives in Guaduas thinking it’s “just another little town.” But an unexpected journey will lead him to discover the town’s magic and walk among the echoes of history.",
+     "poster": "/assets/conexcine-2026/200-anos-despues-ecos-del-pasado.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "200-anos-despues-ecos-del-pasado",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -535,6 +788,14 @@
      "director": "Elizabeth Gaviria",
      "pais": "Colombia",
      "_departamento": "Atlántico",
+     "tmdb_id": 1746370,
+     "anio": 2026,
+     "duracion_min": 3,
+     "genero": "Comedia",
+     "sinopsis_en": "The transformation of his neighborhood has breathed new life into Don Pacho. Neither his daughter nor his asthma will stop him from enjoying himself, because making the most of what the city has to offer isn’t a hassle—it’s pure joy!",
+     "poster": "/assets/conexcine-2026/corroncho-y-que.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "corroncho-y-que",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
@@ -545,6 +806,14 @@
      "director": "Greg Mendez / Prod. Fabian Patermina",
      "pais": "Colombia",
      "_departamento": "Sucre",
+     "tmdb_id": 1745793,
+     "anio": 2026,
+     "duracion_min": 9,
+     "genero": "Documental",
+     "sinopsis_en": "Alma Sucreña is a documentary that travels through the department of Sucre to discover the stories, traditions, and cultural expressions that give life to the identity of its people.",
+     "poster": "/assets/conexcine-2026/alma-sucrena.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "alma-sucrena",
      "_src": {
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
