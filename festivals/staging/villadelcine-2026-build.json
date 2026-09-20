@@ -7,7 +7,7 @@
  },
  "acceso_por_defecto": {
   "is_free": true,
-  "_por_que": "DECISIÓN DE JUAN, 19 sep 2026: entrada libre por defecto, que es lo normal en un festival colombiano de este tamaño. NO es un dato del festival: su web no habla de entradas, el PDF tampoco y la página /acreditación/ del menú da 404. Queda así declarado para que, si aparece una función que se paga, se vea que el supuesto vino de acá y no de una fuente. Está en la lista de preguntas."
+  "_por_que": "DECISIÓN DE JUAN, confirmada el 19 sep 2026: todas las funciones son de entrada libre. Queda dicho de dónde viene, porque NO sale de una fuente del festival: su web no habla de entradas, el PDF de programación tampoco, la página /acreditación/ de su menú da 404 y la nota de prensa de Canal Trece dice explícitamente que no informa precios. Es el criterio de Juan —«entrada libre por ahora, es el defecto de un festival en Colombia en este tamaño»— reafirmado al cerrar la lista de preguntas. Si aparece una función que se paga, se ve que el supuesto vino de acá."
  },
  "name": "Villa del Cine",
  "fullName": "Festival Villa del Cine — Villa de Leyva",
@@ -2395,8 +2395,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-19T22:14:43",
-  "plan_sha": "159f65c7fa6a18ee",
+  "fecha": "2026-09-19T23:05:18",
+  "plan_sha": "a33a8c35b79230e1",
   "paso": 14,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"
  }
