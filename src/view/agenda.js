@@ -585,7 +585,12 @@ export function renderMiPlanCalendar(state){
       if(idx>0&&!_mismaFuncion(dayTimed[idx-1],s)){
         const prev=dayTimed[idx-1];
         const gap=fMin-(toMin(prev.time)+blockDuration(prev));
-        if(gap>=0&&gap<25){
+        // Un solapamiento es un hueco NEGATIVO: caía por debajo del rango [0,25)
+        // y la fila callaba (20 sep 2026: dos funciones encimadas en el mismo
+        // Lightbox, sin una palabra). Ahora se nombra, con los minutos.
+        if(gap<0){
+          listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${ICONS.alert} ${t('warn_se_solapan',{n:-gap})}</div>`;
+        } else if(gap<25){
           const _isCritical=gap<=5;
           listHtml+=`<div class="mplan-warn-row" style="${_isCritical?'color:var(--red)':''}">${ICONS.alert} ${_isCritical?t('warn_sin_tiempo'):`~${gap} ${t('warn_min_hasta_sig')}`}</div>`;
         }
