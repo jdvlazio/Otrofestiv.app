@@ -2774,3 +2774,76 @@ test('T181 — abierta + obra con hora: el contador la aparta y no queda en «No
   await expect(cuerpo).toContainText(/\+1 (sin hora fija|with no set time)/);
   await expect(page.locator('.ag-excl-block')).toHaveCount(0);
 });
+
+// ── T189/T190 — reemplazar desde Mi Plan no deja dos funciones encimadas ──────
+// Defecto verificado en producción (20 sep 2026, TIFF): el Plan tenía Trash
+// Mountain 18:15 y The Secret Lives… 21:00; reemplazar la primera por The
+// Remotes 18:30 (153 min) dejó «18:30 hasta 21:03» + «21:00», mismo Lightbox,
+// sin una palabra en pantalla — y verifyPlan reportándolo a Sentry, escrito para
+// nosotros y no para ella. Tres cosas se sumaban: la rama de Mi Plan de
+// confirmReplace no revalidaba (Planear sí, desde #243; la doctrina de preguntar
+// es de #485 y esta rama nunca recibió ninguna), la lista del día solo avisaba
+// huecos en [0,25) —un solapamiento es NEGATIVO y caía por debajo—, y
+// travelWarn calla con la misma sede.
+//
+// T189 afirma que se PREGUNTA con la hoja que ya existe, no que se filtre en
+// silencio como Planear: acá es su agenda. T190 afirma que si de todos modos hay
+// dos encimadas en el Plan, la fila lo dice con los minutos.
+const _PLAN_TIFF = async (page) => page.evaluate(async () => {
+  const f = t => FILMS.find(x => x.title === t && x.day === '2026-09-11');
+  const plan = ['Trash Mountain', "The Secret Lives of Baba Segi's Wives"].map(t => ({ ...f(t), _title: t }));
+  state.set('savedAgenda', { schedule: plan }); saveSavedAgenda();
+  switchMainNav('mnav-miplan'); showAgView();
+  await new Promise(r => setTimeout(r, 600));
+  return f('The Remotes');
+});
+const _tap = (page, a, d) => page.evaluate(([a, d]) => { const b = document.createElement('button'); b.setAttribute('data-action', a); Object.entries(d).forEach(([k, v]) => b.setAttribute('data-' + k, v)); document.body.appendChild(b); b.click(); b.remove(); }, [a, d]);
+
+test('T189 — reemplazar en Mi Plan con choque: pregunta con la hoja de conflicto, no escribe encimado', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-11T17:00:00-04:00');
+  const nuevo = await _PLAN_TIFF(page);
+  expect(nuevo, 'The Remotes existe el viernes 11').toBeTruthy();
+  await _tap(page, 'confirmReplace', { rmtitle: 'Trash Mountain', newtitle: 'The Remotes', day: nuevo.day, time: nuevo.time });
+  await page.waitForTimeout(300);
+  await expect(page.locator('#conflict-modal .conflict-modal-hdr'), 'primero, el «¿Reemplazar función?» de siempre').toContainText(/Reemplazar/);
+  await page.locator('#replace-ok').click();
+  await page.waitForTimeout(700);
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/schedule.js');
+    const hoja = document.querySelector('#conflict-sheet');
+    const r = hoja && hoja.getBoundingClientRect();
+    // «abierta» = pintada DENTRO del viewport; un transform o una clase no bastan
+    const abierta = !!r && r.height > 0 && r.top < innerHeight && r.bottom > 0 && getComputedStyle(hoja).visibility !== 'hidden';
+    return { hoja: abierta, existente: document.getElementById('cs-existing-name')?.textContent.trim(), entrante: document.getElementById('cs-incoming-name')?.textContent.trim(),
+             plan: savedAgenda.schedule.map(s => s._title), certificado: D.verifyPlan(savedAgenda.schedule, { catalog: FILMS }).ok };
+  });
+  expect(r.hoja, `la hoja de conflicto se abre en vez de escribir (plan quedó: ${JSON.stringify(r.plan)})`).toBe(true);
+  expect(r.entrante || '', 'con la nueva').toContain('Remotes');
+  expect(r.existente, 'y la que choca').toContain('Secret Lives');
+  expect(r.plan, 'el Plan NO tiene a The Remotes todavía').not.toContain('The Remotes');
+  expect(r.certificado, 'y sigue certificado: nada encimado').toBe(true);
+  // Elegir «Agendar» en la hoja resuelve: entra la nueva y sale la que chocaba
+  await page.locator('#cs-replace-btn').click(); await page.waitForTimeout(700);
+  const fin = await page.evaluate(async () => { const D = await import('/src/domain/schedule.js'); return { plan: savedAgenda.schedule.map(s => s._title), ok: D.verifyPlan(savedAgenda.schedule, { catalog: FILMS }).ok }; });
+  expect(fin.plan, 'tras Agendar: The Remotes entra').toContain('The Remotes');
+  expect(fin.plan, 'y la que chocaba sale').not.toContain("The Secret Lives of Baba Segi's Wives");
+  expect(fin.ok, 'y el Plan queda certificado').toBe(true);
+});
+
+test('T190 — dos funciones encimadas en el Plan: la fila del día dice cuántos minutos se solapan', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-11T17:00:00-04:00');
+  const r = await page.evaluate(async () => {
+    // el Plan encimado se ESCRIBE a mano (es lo que un plan viejo pudo dejar antes de T189)
+    const f = t => FILMS.find(x => x.title === t && x.day === '2026-09-11');
+    const plan = ['The Remotes', "The Secret Lives of Baba Segi's Wives"].map(t => ({ ...f(t), _title: t }));
+    state.set('savedAgenda', { schedule: plan }); switchMainNav('mnav-miplan'); showAgView();
+    await new Promise(r => setTimeout(r, 700));
+    const filas = [...document.querySelectorAll('.mplan-warn-row')].filter(e => e.offsetParent).map(e => ({ txt: e.textContent.replace(/\s+/g, ' ').trim(), color: getComputedStyle(e).color }));
+    return { filas };
+  });
+  const solapa = r.filas.find(f => /solapa|overlap|sobrep/i.test(f.txt));
+  expect(solapa, `hay una fila que nombra el solapamiento (filas: ${JSON.stringify(r.filas)})`).toBeTruthy();
+  expect(solapa.txt, 'con los minutos').toMatch(/\d+ min/);
+  const rojo = await page.evaluate(() => { const d = document.createElement('div'); d.style.color = 'var(--red)'; document.body.appendChild(d); const c = getComputedStyle(d).color; d.remove(); return c; });
+  expect(solapa.color, `y en rojo (--red = ${rojo}): es un choque, no un hueco corto`).toBe(rojo);
+});

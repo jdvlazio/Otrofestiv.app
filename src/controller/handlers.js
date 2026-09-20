@@ -687,9 +687,22 @@ export function confirmReplace(removedTitle,newTitle,day,time,isScenario){
           cachedResult._prioSnapshot=[...state.get('prioritized')];
         }
       } else {
-        // Mi Plan (saved): comportamiento histórico — escribe a savedAgenda.
+        // Mi Plan (saved): escribe a savedAgenda.
         if(removedTitle) _removePlanItem(removedTitle);
         if(!watchlist.has(newTitle)){state.update('watchlist', s=>state._addToSet(s,newTitle));saveWL();}
+        // REVALIDA antes de escribir (defecto verificado en prod, 20 sep 2026): la
+        // función nueva puede chocar con OTRA del Plan, no solo con la que
+        // reemplaza. Planear filtra lo que choca en silencio —es exploración—;
+        // acá es SU agenda, y mover algo en la agenda de alguien sin preguntar es
+        // la misma falta que borrarlo (doctrina de _planFixNotice). Se pregunta
+        // con la hoja de siempre, la misma de addSuggestion. Sin esto: «18:30 The
+        // Remotes hasta 21:03» + «21:00 The Secret Lives», mismo Lightbox, cero
+        // avisos, y verifyPlan reportándolo a Sentry — escrito para nosotros, no
+        // para ella. La rama de Planear lleva esta revalidación desde #243 y la
+        // doctrina desde #485; esta rama nunca recibió ninguna de las dos.
+        const _sa=state.get('savedAgenda');
+        const _choca=_sa&&_sa.schedule.find(s=>s._title!==newTitle&&s._title!==removedTitle&&s.day===screen.day&&screensConflict(s,screen));
+        if(_choca){ _expandedFilm=''; renderAgenda(); openConflictSheet(newTitle, screen, _choca); return; }
         commitPlan(a=>{const b=a||{schedule:[]};return {...b,
           schedule: [...b.schedule.filter(s=>s._title!==newTitle), {...screen,_title:newTitle}]
             .sort((x,y)=>DAY_KEYS.indexOf(x.day)-DAY_KEYS.indexOf(y.day)||toMin(x.time)-toMin(y.time))
