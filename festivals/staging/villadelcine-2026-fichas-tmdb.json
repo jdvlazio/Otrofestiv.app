@@ -4,7 +4,7 @@
   "capturado": "2026-09-19",
   "que_aporta": "año, duración, país, género, sinopsis, póster y lbSlug de los cortos de la Selección Oficial que TMDB tiene",
   "candado": "lib.ficha_tmdb — director ✓ SIEMPRE; en un festival de cortos el título solo no distingue nada («Solo», «Human», «Far»)",
-  "alcance": "15 de 53 cortos con ficha; los demás no están en TMDB y su dato hay que pedírselo al festival"
+  "alcance": "19 de 68 cortos con ficha; los demás no están en TMDB y su dato hay que pedírselo al festival"
  },
  "fichas": {
   "Witch and Frog": {
@@ -190,6 +190,59 @@
    "poster": "/assets/villadelcine-2026/alivios.jpg",
    "posterSource": "tmdb",
    "lbSlug": "reliefs-2025"
+  },
+  "KMKZ: Salvaje, Libre y Valiente": {
+   "tmdb_id": 1570393,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2025,
+   "duracion_min": 88,
+   "genero": "Drama",
+   "sinopsis_en": "Camila, a lonely communications student, is rescued from a street robbery by Ruco and Alexa, two young anarchists and street vendors who use violence to punish thieves in the neighborhood. Through her growing friendship with Ruco and Alexa, Camila meets Leonor, with whom she forms a deep mother-daughter bond. When Leonor mysteriously disappears, Camila embarks on a quest to discover the truth.",
+   "pais": "Colombia",
+   "flags": "🇨🇴",
+   "lbSlug": "kmkz-salvaje-libre-y-valiente"
+  },
+  "Enemigo en el espejo": {
+   "tmdb_id": 1354698,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2025,
+   "duracion_min": 87,
+   "genero": "Drama",
+   "sinopsis": "Camilo es un joven agobiado por el dolor de la pérdida y la ausencia. De la mano de Sol, por quien se siente atraído, encuentra un aparente alivio a su dolor dentro de un culto religioso del que ella forma parte. Sin embargo, las contradicciones del culto hacen que Camilo se dé cuenta de que, para encontrar la paz «consigo mismo», debe distanciarse de todos, incluida Sol.",
+   "sinopsis_en": "Camilo is a young man burdened with the grief of loss and absence. Hand in hand with Sol, whom he feels attracted to, he finds an apparent relief for his pain inside a religious cult to which she’ part of . However, the contradictions of the cult make Camilo realize that, in order to find peace “with himself” , he must distance from everyone including  Sol.",
+   "title_en": "Enemy in the Mirror",
+   "pais": "Colombia",
+   "flags": "🇨🇴",
+   "poster": "/assets/villadelcine-2026/enemigo-en-el-espejo.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "enemy-in-the-mirror"
+  },
+  "Comparsa": {
+   "tmdb_id": 1480404,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2025,
+   "duracion_min": 79,
+   "genero": "Documental",
+   "sinopsis_en": "From the shadows of a Guatemalan neighbourhood scared into silence, two sisters lead a luminous rebellion—unleashing joy, art, and radical truth in a fight for survival.",
+   "pais": "Guatemala",
+   "flags": "🇬🇹",
+   "poster": "/assets/villadelcine-2026/comparsa.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "comparsa-2025"
+  },
+  "O Cravista": {
+   "tmdb_id": 1621972,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "anio": 2026,
+   "duracion_min": 104,
+   "genero": "Documental",
+   "sinopsis_en": "Nearing his 100th birthday, harpsichordist and conductor Roberto De Regina revisits his pioneering journey in reintroducing early classical music to Brazil. Through personal memories and artistic achievements, he reflects on the legacy he built while facing prejudice and cultural resistance. A poignant portrait of art, time, and the courage to break barriers and transform traditions.",
+   "title_en": "The Harpsichordist",
+   "pais": "Brazil",
+   "flags": "🇧🇷",
+   "poster": "/assets/villadelcine-2026/o-cravista.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "the-harpsichordist"
   }
  },
  "sin_ficha": [
@@ -382,6 +435,61 @@
    "titulo": "On Hold",
    "director": "Krishna Kumar Shukla",
    "categoria": "Mejor Corto Internacional"
+  },
+  {
+   "titulo": "El último campeón",
+   "director": "Daniel Jesús Parra Jaimes",
+   "categoria": "Mejor Work in Progress"
+  },
+  {
+   "titulo": "Mi Tesoro",
+   "director": "Dayana Gonzalez y Brian Congolez",
+   "categoria": "Mejor Work in Progress"
+  },
+  {
+   "titulo": "Extinction",
+   "director": "Frank Benitez",
+   "categoria": "Mejor Work in Progress"
+  },
+  {
+   "titulo": "El cine dentro del cine dentro del cine",
+   "director": "Diana Kuéllar y Manuel Silva",
+   "categoria": "Mejor Work in Progress"
+  },
+  {
+   "titulo": "Cuba 2001. Imágenes del futuro I",
+   "director": "Felipe Moreno Salazar",
+   "categoria": "Mejor Work in Progress"
+  },
+  {
+   "titulo": "Volar",
+   "director": "Jeiver Pinto Vargas",
+   "categoria": "Mejor Ópera Prima Nacional"
+  },
+  {
+   "titulo": "Sierra: El álbum mortuorio",
+   "director": "Carlos Ortiz Alarcón",
+   "categoria": "Mejor Ópera Prima Nacional"
+  },
+  {
+   "titulo": "Arenas",
+   "director": "John Bolívar",
+   "categoria": "Mejor Ópera Prima Nacional"
+  },
+  {
+   "titulo": "Estepa el lugar menos esperado",
+   "director": "Mariano Benito",
+   "categoria": "Mejor Ópera Prima Internacional"
+  },
+  {
+   "titulo": "Language Of The Wind",
+   "director": "Shimataver Igbawua",
+   "categoria": "Mejor Ópera Prima Internacional"
+  },
+  {
+   "titulo": "Cos de vidre",
+   "director": "Marc Comabella",
+   "categoria": "Mejor Ópera Prima Internacional"
   }
  ],
  "en_duda": {

@@ -82,6 +82,30 @@ CATS = [
    ('Una Torreta en Llamas', 'Humberto Flores'),
    ('On Hold', 'Krishna Kumar Shukla'),
    ('Alivios', 'Juan Manuel Gonzalez Fernandez')]),
+ # Y siguieron: tres categorías más entre el 18 y el 19 de septiembre, la
+ # última a dos horas de esta corrida. Con estas son CATORCE, no once. Mientras
+ # el festival publique, este catálogo se vuelve a contar cada día.
+ ('Mejor Work in Progress', 'DdZbVwxpCmu', '2026-09-18', [
+   ('El último campeón', 'Daniel Jesús Parra Jaimes'),
+   ('Mi Tesoro', 'Dayana Gonzalez y Brian Congolez'),
+   ('Extinction', 'Frank Benitez'),
+   ('El cine dentro del cine dentro del cine', 'Diana Kuéllar y Manuel Silva'),
+   ('Cuba 2001. Imágenes del futuro I', 'Felipe Moreno Salazar')]),
+ ('Mejor Ópera Prima Nacional', 'DdcPmTNPrXp', '2026-09-19', [
+   ('Volar', 'Jeiver Pinto Vargas'),
+   ('Sierra: El álbum mortuorio', 'Carlos Ortiz Alarcón'),
+   # El PDF y la web la titulan en inglés, «KMKZ: Wild, free and brave»; el
+   # pie de IG la nombra en español. Es la misma obra, mismo director.
+   ('KMKZ: Salvaje, Libre y Valiente', 'Andrés Hernández'),
+   ('Enemigo en el espejo', 'Julián Camilo Sánchez'),
+   ('Arenas', 'John Bolívar')]),
+ ('Mejor Ópera Prima Internacional', 'DdfI-H5O5z4', '2026-09-19', [
+   # Igual que KMKZ: en el programa es «STEPPE».
+   ('Estepa el lugar menos esperado', 'Mariano Benito'),
+   ('Language Of The Wind', 'Shimataver Igbawua'),
+   ('Cos de vidre', 'Marc Comabella'),
+   ('Comparsa', 'Vickie Curtis y Doug Anderson'),
+   ('O Cravista', 'Luiz Eduardo Ozório')]),
 ]
 
 # EL TÍTULO QUE EL FESTIVAL ESCRIBIÓ MAL. «Withch» no es una grafía: es una
@@ -109,10 +133,10 @@ for nombre, sc, fecha, lista in CATS:
 
 out = {
  '_provenance': {
-   'fuente': 'Instagram del festival (@festivalvilladelcine) — los once reels de Selección Oficial, uno por categoría',
-   'capturado': '2026-09-17',
+   'fuente': 'Instagram del festival (@festivalvilladelcine) — los catorce reels de Selección Oficial, uno por categoría',
+   'capturado': '2026-09-19',
    'metodo': 'TRANSCRIPCIÓN DEL PIE, no lectura de lámina: este festival escribe «🎬 Título – Dir. Nombre» en el texto del post. El pie se leyó por el embed, entero, sin truncar. No hizo falta la doble lectura que sí exigió Jardín.',
-   'alcance': 'SOLO la Selección Oficial en competencia. NO hay una sola función con día, hora ni sede: a 6 días del arranque el festival no ha publicado parrilla.',
+   'alcance': 'SOLO la Selección Oficial en competencia: el reel dice en qué categoría compite cada obra. La PARRILLA no sale de aquí —sale del PDF de programación—, y lo leído acá se cruza contra ella: las catorce categorías cubren 68 obras y todas están en el programa.',
    'versales': VERSALES,
    'titulo_corregido': TITULO_OFICIAL},
  '_festival': {

@@ -32,7 +32,19 @@ ST = f'{REPO}/festivals/staging'
 PAR = f'{ST}/villadelcine-2026-parrilla.json'
 OUT = f'{ST}/villadelcine-2026-obras-pdf.json'
 
-RE_DIR = re.compile(r'^\s*(?:Dir|DIR|Dirección|DIRECCIÓN)\.?\s*[:.]?\s*(.+)$')
+# EL CRÉDITO NO SIEMPRE SE ESCRIBE «Dir.». En la página 18 el festival acredita
+# «Productora Lorena López», y cortando las fichas solo por la línea de
+# dirección la obra entera —«Pros and Cons of Daydreaming», que compite en
+# Mejor Cortometraje con Celular— se caía del programa sin hacer ruido: el
+# informe de «páginas sin dirección» no sonó porque esa página tiene otras dos
+# fichas que sí la traen, y ese informe cuenta PÁGINAS, no fichas.
+#
+# El censo que la encontró va por METRAJE: toda ficha imprime su duración,
+# lleve o no la palabra «Dir.». 83 líneas de metraje en las páginas 12–50, y
+# una sola sin crédito de dirección. Se captura el ROL además del nombre para
+# no llamar director a quien el impreso no llamó así.
+RE_DIR = re.compile(r'^\s*(Dir|DIR|Dirección|DIRECCIÓN|Productora|Productor)'
+                    r'\.?\s*[:.]?\s*(.+)$')
 # «0:17:40 | México | Ficción» o «120 minutos | Ficción / Drama»
 RE_META = re.compile(r'^\s*(?:(\d{1,2}):(\d{2}):(\d{2})|(\d{1,3})\s*minutos?)\s*\|?\s*(.*)$')
 RE_SOLO_DUR = re.compile(r'^\s*(\d{1,2}):(\d{2}):(\d{2})\s*$')
@@ -130,6 +142,15 @@ CAJA = {
         'Farmeando el Tunjo: creación cinematográfica con inteligencia artificial',
 }
 
+# UN TÍTULO PEGADO A SU CATEGORÍA. La plantilla del PDF imprime la categoría
+# del premio en una línea encima del título («ESCOLAR», «YOUNGFILM»). En la
+# página 45 esa línea y la del título salen a la misma altura y pdftotext las
+# entrega juntas: «INTFINAL ACT». No se de-pega con una regla —ninguna sabe
+# dónde acaba la categoría y empieza el nombre, y hay títulos que empiezan por
+# «INT»—, así que va declarado, con la web del festival como testigo: la ficha
+# de la obra en villadelcine.com se llama «Final Act».
+PEGADOS = {'INTFINAL ACT': ('Final Act', 'la categoría INT pegada al título, p45')}
+
 MINUS = {'a', 'al', 'ante', 'con', 'contra', 'de', 'del', 'desde', 'e', 'el', 'en',
          'entre', 'hacia', 'hasta', 'la', 'las', 'lo', 'los', 'más', 'ni', 'o', 'para',
          'por', 'que', 'se', 'según', 'si', 'sin', 'sobre', 'su', 'sus', 'tras', 'un',
@@ -160,6 +181,8 @@ def a_titulo(t, natural=None):
     # mayúscula sostenida también en la web, así que preferir la web sin más
     # las dejaba gritando. La lista escrita a mano es una decisión tomada
     # mirando la obra y gana sobre las dos fuentes.
+    if t.strip() in PEGADOS:
+        return PEGADOS[t.strip()][0]
     if t.strip() in CAJA:
         return CAJA[t.strip()]
     return natural or t
@@ -201,7 +224,8 @@ def main():
         ls = [x.strip() for x in f['texto'].split('\n') if x.strip()]
         idx = [i for i, l in enumerate(ls) if RE_DIR.match(l)]
         for n, i in enumerate(idx):
-            director = RE_DIR.match(ls[i]).group(1).strip()
+            _m = RE_DIR.match(ls[i])
+            rol, director = _m.group(1), _m.group(2).strip()
             crudo_t = ls[i - 1].strip() if i else ''
             titulo = a_titulo(crudo_t, natural.get(
                 re.sub(r'[^a-z0-9]+', '', _sinacento(crudo_t))))
@@ -237,6 +261,16 @@ def main():
                     cuerpo = cuerpo[1:]
             obras.append({
                 'titulo': titulo, 'director': director,
+                # QUIÉN ES ESA PERSONA, con la palabra del impreso. El PDF la
+                # acredita como «Productora» y la ficha de la obra en la propia
+                # web del festival la lista bajo «Director»: son dos fuentes del
+                # mismo festival diciendo cosas distintas, así que se publica lo
+                # que dice la página de la obra y queda anotado de dónde sale la
+                # diferencia, en vez de escoger en silencio.
+                **({'rol_credito': rol.lower(),
+                    '_nota': f'el PDF la acredita «{rol} {director}»; la ficha de '
+                             'la obra en villadelcine.com la lista como Director'}
+                   if rol.lower().startswith('productor') else {}),
                 'seccion': seccion, 'programa': programa,
                 **({'formato': formato} if formato else {}),
                 'duracion_min': dur_min, 'pais': pais, 'genero': genero,
@@ -273,6 +307,19 @@ def main():
                'páginas con dos y tres obras'),
         'obras': obras, 'sin_direccion': sin_dir},
         open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+
+    # EL CENSO QUE FALTABA. `sin_direccion` cuenta PÁGINAS sin ninguna línea de
+    # crédito, y por eso se calló con la página 18: tenía otras dos fichas que
+    # sí la traían. Toda ficha imprime su metraje, con crédito o sin él, así
+    # que se cuentan las líneas de metraje y se comparan con lo extraído.
+    metrajes = sum(1 for f in d['fichas']
+                   for l in f['texto'].split('\n') if RE_SOLO_DUR.match(l.strip())
+                   or (RE_META.match(l.strip()) and RE_META.match(l.strip()).group(1)))
+    cubiertas = sum(1 for o in obras if o['duracion_min'])
+    if metrajes > cubiertas:
+        print(f'✗ {metrajes} líneas de metraje en las fichas y solo {cubiertas} '
+              f'obras con duración: hay una ficha que no se está cortando')
+        sys.exit(1)
 
     con_dur = sum(1 for o in obras if o['duracion_min'])
     con_sin = sum(1 for o in obras if o['sinopsis'])

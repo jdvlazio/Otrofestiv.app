@@ -38,7 +38,7 @@ import json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
-from lib import provenance, norm
+from lib import provenance, norm, slug
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
@@ -66,7 +66,10 @@ ACTIVIDAD = [
      'taller', 'Ruta Académica', 'taller'),
     (r'comunicaciones|entre\s*vistas', 'charla', 'Comunicaciones', 'charla'),
     (r'ceremonia unquy|apertura', 'evento', 'Eventos Especiales', 'apertura'),
-    (r'tamsa|premiaci[oó]n|clausura', 'evento', 'Eventos Especiales', 'awards'),
+    # 'clausura' y no 'awards': el rótulo 'awards' es el de los Award Screenings
+    # de TIFF —reproyecciones de las premiadas— y en la vista en español salía
+    # «AWARDS SCREENINGS». Necesita el PR de app que añade el vocabulario.
+    (r'tamsa|premiaci[oó]n|clausura', 'evento', 'Eventos Especiales', 'clausura'),
     (r'reconocimiento|tributo', 'evento', 'Eventos Especiales', 'encuentro'),
     (r'muestra especial: *festival de cine|eureka', 'evento', 'Eventos Especiales',
      'experiencia'),
@@ -127,6 +130,27 @@ SIN_SECCION = {}
 # obliga a inventarle la sección para que la app pueda agruparla, y eso es
 # precisamente lo que no hacemos. Queda fuera hasta que el festival la
 # catalogue, y la pregunta está en la lista.
+# EL PAÍS QUE NINGUNA DE LAS CUATRO FUENTES IMPRIME. Ni el PDF (su ficha pone
+# solo el metraje) ni la web del festival (que nunca publica país en estas) ni
+# TMDB ni el pie de IG. Se busca obra por obra y se escribe acá CON LA FUENTE
+# QUE LO DICE: no es una deducción a partir de la sección ni del nombre del
+# director, es una página que lo afirma. Lo que no aparezca se queda sin país,
+# que es más honesto que un globo mal puesto.
+PAIS_EXTERNO = {
+    'korebaju pai rekocho': ('Colombia',
+        'tesis de la Universidad Los Libertadores, rodada en Caquetá con la '
+        'comunidad coreguaje — https://cam.libertadores.edu.co/'
+        'korebaju-pat-rekochola-lengua-coreguaje/'),
+    'the guanenta symphony': ('Colombia',
+        'como «La sinfonía de Guanentá», de Víctor Jaramillo Arias, en la '
+        'selección oficial de BOGOCINE 2026 — https://www.bogocine.co/'
+        'seleccion-oficial-2026/'),
+    'aquileo venganza': ('Colombia, Venezuela',
+        'coproducción de 1968, el primer western colombiano — '
+        'https://en.wikipedia.org/wiki/Aquileo_Venganza y el perfil de Ciro '
+        'Durán en Proimágenes Colombia'),
+}
+
 NO_PUBLICAR = {
     'el fosil magico': 'solo está en la retícula: sin ficha, sin sección y sin país '
                        'en ninguna de las cuatro fuentes. Preguntado al festival.',
@@ -183,6 +207,28 @@ def main():
         for t, v in json.load(open(pos_p, encoding='utf-8'))['posters'].items():
             pos[norm(t)] = v
 
+    def de_tmdb_local(t):
+        """El póster de TMDB, SERVIDO POR NOSOTROS. `enriquecer.py --posters`
+        ya lo baja a assets/ con el slug del título; publicando en su lugar la
+        URL remota de image.tmdb.org ese archivo se quedaba en el repo sin que
+        nada lo nombrara —de ahí el JPEG huérfano que cazó el CI— y además se
+        saltaba `encuadrar-posters.py`, que solo recorta archivos locales. Con
+        el mismo paso, FICMA publica 67 pósters locales y ningún remoto: acá
+        se bajaban y no se usaban."""
+        f = f'{REPO}/assets/villadelcine-2026/{slug(t)}.jpg'
+        if os.path.exists(f) and os.path.getsize(f) > 5000:
+            return f'/assets/villadelcine-2026/{slug(t)}.jpg'
+        return ''
+
+    def de_pos(t):
+        """El afiche, por título, CON EL MISMO ALIAS que la ficha. El sidecar
+        de pósters se llena desde la web, que titula en inglés lo que el PDF
+        titula en español; buscando solo por el título del PDF, «TORMENTA EN
+        LLAMAS», «ENEMIGO EN EL ESPEJO», «SUN COFFE» y «LENS» quedaban sin
+        afiche con el afiche ya descargado en assets/."""
+        k = norm(t)
+        return pos.get(k) or pos.get(norm(ALIAS.get(k, ''))) or {}
+
     # TMDB, para el hueco que ni el PDF ni la web llenan
     tm = {}
     enr_p = f'{ST}/villadelcine-2026-enriquecido.json'
@@ -196,30 +242,60 @@ def main():
         mezcla dentro de un campo: cada uno viene entero de una fuente."""
         k = norm(o['titulo'])
         w, t, i = de_web(o['titulo']), tm.get(k, {}), ig.get(k, {})
+        pf = de_pos(o['titulo'])
+        pl = de_tmdb_local(o['titulo']) if t.get('poster_path') else ''
         return {
             'duracion_min': o.get('duracion_min') or w.get('duracion_min')
                             or t.get('duracion_tmdb'),
-            'pais': o.get('pais') or w.get('pais') or t.get('pais_tmdb') or '',
+            'pais': (o.get('pais') or w.get('pais') or t.get('pais_tmdb')
+                     or (PAIS_EXTERNO.get(k) or ('', ''))[0]),
+            **({'_pais_fuente': PAIS_EXTERNO[k][1]}
+               if k in PAIS_EXTERNO and not (o.get('pais') or w.get('pais')
+                                             or t.get('pais_tmdb')) else {}),
             'genero': o.get('genero') or t.get('genero') or '',
             'anio': o.get('anio') or w.get('anio') or t.get('anio_tmdb'),
             'sinopsis': o.get('sinopsis') or t.get('synopsis_es') or '',
             'sinopsis_en': w.get('sinopsis_en') or t.get('synopsis_en') or '',
             **({'categoria': i['categoria']} if i.get('categoria') else {}),
             **({'tmdb_id': t['tmdb_id']} if t.get('tmdb_id') else {}),
-            **({'poster': t['poster_path'], 'posterSource': 'tmdb'}
+            **({'poster': pl or t['poster_path'], 'posterSource': 'tmdb'}
                if t.get('poster_path') else
-               {'poster': pos[k]['poster'], 'posterSource': 'oficial'}
-               if k in pos else {}),
+               {'poster': pf['poster'], 'posterSource': 'oficial'}
+               if pf.get('poster') else {}),
             **({'lbSlug': t['lbSlug']} if t.get('lbSlug') else {}),
         }
 
     # las obras, agrupadas por programa
+    #
+    # UN TALLER NO ES UNA OBRA, y el dato ya lo decía: `rol_credito` sale de
+    # obras-pdf con la palabra del impreso —«Tallerista: Isabella Bobadilla»—
+    # y acá nadie lo leía, así que CIANOTIPIA y FARMEANDO EL TUNJO, que sus
+    # fichas describen como «laboratorio» y «el taller», entraban a la lista de
+    # obras de X-PLORA CINE como si fueran cortos: sin país, sin género y sin
+    # afiche, porque un taller no tiene ninguno de los tres.
+    #
+    # Lo confirma un conteo ajeno: la nota de Canal Trece sobre el festival
+    # dice 19 obras en las secciones no competitivas y nosotros teníamos 21.
+    # La diferencia eran exactamente estas dos.
+    #
+    # Salen de la lista. NO se publican todavía como actividad propia porque el
+    # PDF no dice a qué hora ocurren dentro del bloque de 4 horas de
+    # Programación Infantil, y una hora inventada es peor que una ausencia:
+    # está preguntado al festival (decisión de Juan, 19 sep).
+    talleres = []
     porprog = {}
     for o in pdf:
+        if str(o.get('rol_credito', '')).startswith('tallerista'):
+            talleres.append(o['titulo'])
+            continue
         k = norm(o['programa']) or norm(o['seccion'])
         porprog.setdefault(k, []).append(o)
 
     funciones, avisos = [], []
+    for t_ in talleres:
+        avisos.append(f'«{t_[:40]}» NO entra como obra: su ficha la acredita a un '
+                      f'TALLERISTA y la describe como taller. Falta su hora dentro '
+                      f'del bloque de Programación Infantil — preguntado al festival')
     for b in sorted(par['bloques'], key=lambda b: (b['dia'], b['hora'], b['sede'])):
         texto = ' '.join(b['lineas'])
         sede_cruda = b['sede']
@@ -331,13 +407,14 @@ def main():
                                  **({'formato': o['formato']} if o.get('formato') else {})}
                                 for o in obras]
         elif solo_web:
-            reg.update({
-                'director': solo_web.get('director', ''),
-                'pais': solo_web.get('pais', ''),
-                **({'sinopsis_en': solo_web['sinopsis_en']}
-                   if solo_web.get('sinopsis_en') else {}),
-                '_sin_ficha_en_el_pdf': True,
-            })
+            # MISMA FICHA QUE CUALQUIER OTRA. Copiar a mano tres campos dejaba a
+            # ARENAS —la obra que abre el miércoles y que el PDF no ficha— sin
+            # sinopsis, sin género, sin año y sin su afiche, que estaba
+            # descargado en assets/ desde el primer día.
+            reg.update({'director': solo_web.get('director', ''),
+                        **{k: v for k, v in ficha(solo_web).items()
+                           if v and k != 'duracion_min'},
+                        '_sin_ficha_en_el_pdf': True})
         elif obras:
             o = obras[0]
             reg.update({'director': o['director'],

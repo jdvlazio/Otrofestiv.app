@@ -5,7 +5,7 @@
   "lat": 5.630645,
   "lng": -73.5367607,
   "_match": "Google Maps: «Restaurante Casa San Pedro campestre» (punto del lugar, no el centro del mapa)",
-  "_nota": "a 1,5 km de la Plaza Mayor. El mapa del PDF dice «1,8 km por la vía Santa Sofía» y OSM la ubica sobre la vía a Moniquirá: la distancia concuerda y el nombre es exacto, pero la vía no. Va a la lista de preguntas."
+  "_nota": "a 1,5 km en línea recta de la Plaza Mayor (1,8 km por carretera). El mapa del PDF (p66) la sitúa «Vía Santa Sofía · 1,8 km» y OpenStreetMap la direcciona en «Vía Moniquirá - Villa de Leyva». NO SE CONTRADICEN: es la misma carretera. Saliendo de Villa de Leyva hacia el noroeste se pasa primero por Santa Sofía (5,733/-73,605) y después por Moniquirá (5,876/-73,573); el festival la nombra por el pueblo vecino y OSM por el destino final. Overpass confirma que el nodo del restaurante está sobre esa secundaria, prolongación de la Carrera 12, y la distancia cuadra con los 1,8 km impresos. Comprobado el 19 sep 2026 — deja de ser pregunta al festival."
  },
  "Galería Pérez Rojas - Villa de Leyva": {
   "n": 13,

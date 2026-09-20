@@ -637,15 +637,31 @@ export const FESTIVAL_CONFIG={
   // COLOMBIA». Además, al no coincidir con ninguna sede, el badge
   // venue-municipio y el filtro por ciudad se activan en las 11.
   'villadelcine2026': {
-    name:'Villa del Cine',fullName:'Festival Villa del Cine',shortName:'Villa del Cine',
+    name:'Villa del Cine',displayName:'Villa del Cine',fullName:'Festival Villa del Cine',
+    // displayName porque el nombre es MULTI-PALABRA: sin él, festivalShortName()
+    // corta por el primer espacio y el splash lo anunciaba como «Villa».
+    // shortName es otra cosa: el slug en mayúscula con que share.js nombra los
+    // archivos (otrofestiv-plan-villadelcine.png), como CINEMANCIA o QAFF.
+    shortName:'VILLADELCINE',tagline:'Festival de Cine de Villa de Leyva',
+    // El subtítulo dice QUÉ ES, no repite el nombre: es la forma de la casa en
+    // 18 de 20 festivales (FICMA «Feria Internacional de Cine de Manizales»,
+    // CineAutopsia «Festival de Cine Experimental de Bogotá»). Olhar es el
+    // precedente exacto: su fullName lleva el nombre y su tagline lo quita.
+    // Que repita la CIUDAD con la línea de abajo ya es la norma aprobada en
+    // cuatro festivales; repetir el NOMBRE solo lo hace Tribeca, y ahí es
+    // deliberado (el título va en inglés y el subtítulo es su nombre en
+    // español). Decisión de Juan, 19 sep.
     city:'Villa de Leyva',country:'CO',
     dates:'23–26 SEP',dates_en:'SEP 23–26',year:2026,timezoneOffset:'-05:00',
-    keyArt:'/assets/keyart/villadelcine2026-v2.jpg',
-    // EL AFICHE ES LA PORTADA DE SU PROPIO PROGRAMA. El festival no publica un
-    // key art suelto —su home solo tiene el logotipo—, pero la página 1 del PDF
-    // de programación ES el afiche de la edición: «12 Festival Villa del Cine ·
-    // caminos del tiempo · 23-26 septiembre 2026». Estirado a 2:3 por
-    // compose-keyart, como manda la regla del splash.
+    keyArt:'/assets/keyart/villadelcine2026-v3.jpg',
+    // EL AFICHE OFICIAL, EN VERTICAL (v3, 19 sep). La v2 salía de la página 1
+    // del PDF de programación, que es APAISADA (609×394 pt, ratio 1,55):
+    // estirarla a 2:3 la comprimía un 57% y dejaba la piedra deformada, sin
+    // Vía Láctea y sin la franja de patrocinadores. La regla de compose-keyart
+    // dice «estirar siempre, nunca recortar», pero se calibró con afiches de
+    // 5,7% a 16,3% de desvío: con una fuente apaisada produce otra cosa.
+    // La v3 es el afiche vertical que publica el festival (932×1336), a 4,6%
+    // de 2:3 — la menor compresión de todo el repo.
     //
     // LA PROGRAMACIÓN SALIÓ EL 18 SEP, cinco días antes de abrir: hasta ese día
     // el botón PROGRAMACIÓN de su web apuntaba a un PDF de 2023. Son 53

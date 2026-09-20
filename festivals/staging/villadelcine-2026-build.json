@@ -148,7 +148,7 @@
    "lat": 5.630645,
    "lng": -73.5367607,
    "_match": "Google Maps: «Restaurante Casa San Pedro campestre» (punto del lugar, no el centro del mapa)",
-   "_nota": "a 1,5 km de la Plaza Mayor. El mapa del PDF dice «1,8 km por la vía Santa Sofía» y OSM la ubica sobre la vía a Moniquirá: la distancia concuerda y el nombre es exacto, pero la vía no. Va a la lista de preguntas."
+   "_nota": "a 1,5 km en línea recta de la Plaza Mayor (1,8 km por carretera). El mapa del PDF (p66) la sitúa «Vía Santa Sofía · 1,8 km» y OpenStreetMap la direcciona en «Vía Moniquirá - Villa de Leyva». NO SE CONTRADICEN: es la misma carretera. Saliendo de Villa de Leyva hacia el noroeste se pasa primero por Santa Sofía (5,733/-73,605) y después por Moniquirá (5,876/-73,573); el festival la nombra por el pueblo vecino y OSM por el destino final. Overpass confirma que el nodo del restaurante está sobre esa secundaria, prolongación de la Carrera 12, y la distancia cuadra con los 1,8 km impresos. Comprobado el 19 sep 2026 — deja de ser pregunta al festival."
   },
   "Hotel Mesón de los Virreyes - Villa de Leyva": {
    "short": "Hotel Mesón de los Virreyes",
@@ -253,6 +253,8 @@
    "day_order": 0,
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "has_qa": false,
+   "poster": "/assets/villadelcine-2026/arenas.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p2",
     "date": "2026-09-19"
@@ -309,18 +311,6 @@
      "poster": "/assets/villadelcine-2026/just-another-bird.jpg",
      "posterSource": "oficial",
      "synopsis": "Después de sufrir un accidente en la ciudad, Raquelita, una paloma nativa colombiana, encuentra refugio en la ventana de Tomás. Mientras el niño la acompaña en su recuperación, Raquelita emprende un viaje poético por la ciudad y descubre personajes, pequeños detalles y formas de vida que suelen pasar inadvertidas.",
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "Cianotipia",
-     "director": "Isabella Bobadilla Monsalve",
-     "synopsis": "Una pausa reflexiva sobre el tiempo y la materia donde la técnica fotográfica histórica dialoga directamente con el entorno botánico. A partir de la observación minuciosa, la composición manual y el juego con las siluetas de la vegetación local, el espacio aborda el proceso de insolación como un acto donde la luz solar transforma la superficie y fija lo invisible. Conducido por la fotógrafa y realizadora Isabella Bobadilla Monsalve —directora del cortometraje en stop motion Ficus y pedagoga en procesos de imagen, memoria y gráfica manual—, el taller propone un encuentro tangible con la alquimia visual, articulando el paisaje, la textura y el registro lumínico al aire",
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "Farmeando el Tunjo: creación cinematográfica con inteligencia artificial",
-     "director": "Jimena Guerrero, Vanessa Vega y PiPo Aranguren",
-     "synopsis": "La tradición oral y la tecnología generativa convergen en un laboratorio práctico donde el folclore cobra movimiento en pantalla. A partir del análisis corporal, el ritmo y la observación directa de \"El Tunjo\", los participantes deconstruyen la gestualidad para transformarla en lenguaje técnico de programación visual. Mediante metodologías de síntesis narrativa y prompt engineering sobre el motor de generación Omni Flash, el taller aborda la captura fotográfica, la dirección de arte y la animación generativa con el propósito de concebir microrrelatos de diez segundos donde la figura mítica despierta, baila y dialoga con los nuevos códigos de la narrativa digital contemporánea. Un espacio intensivo de exploración formal, criterio visual y",
      "synopsis_lang": "es"
     }
    ]
@@ -621,7 +611,7 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "11 min",
-     "poster": "https://image.tmdb.org/t/p/w500/wBNTbvLz6r8ICBHj9OtQDkkrAf3.jpg",
+     "poster": "/assets/villadelcine-2026/con-la-mano-arriba.jpg",
      "posterSource": "tmdb",
      "lbSlug": "con-la-mano-arriba",
      "tmdb_id": 1745797,
@@ -839,7 +829,7 @@
      "flags": "🇧🇷🇮🇳🇮🇹🇪🇸",
      "year": 2025,
      "duration": "4 min",
-     "poster": "https://image.tmdb.org/t/p/w500/gB8C6HENI7qyHgilZxx0LdKsnWA.jpg",
+     "poster": "/assets/villadelcine-2026/i-don-t-know-what-to-do.jpg",
      "posterSource": "tmdb",
      "lbSlug": "i-dont-know-what-to-do",
      "tmdb_id": 1560415,
@@ -913,7 +903,7 @@
      "flags": "🇲🇽",
      "year": 2025,
      "duration": "18 min",
-     "poster": "https://image.tmdb.org/t/p/w500/fuQQAuTPK0lGxsvI0yUxz9KzQCK.jpg",
+     "poster": "/assets/villadelcine-2026/alivios.jpg",
      "posterSource": "tmdb",
      "lbSlug": "reliefs-2025",
      "tmdb_id": 1469210,
@@ -942,7 +932,7 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "14 min",
-     "poster": "https://image.tmdb.org/t/p/w500/qw4zntJUuj163JdkusNUnxHvOwg.jpg",
+     "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
      "posterSource": "tmdb",
      "lbSlug": "tuktu-father-maize",
      "tmdb_id": 1592955,
@@ -958,6 +948,8 @@
      "country": "México",
      "flags": "🇲🇽",
      "duration": "22 min",
+     "poster": "/assets/villadelcine-2026/a-burning-turret.jpg",
+     "posterSource": "oficial",
      "synopsis": "Tras un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una anciana agricultora, y su nieta Alejandra. Después de esconderlo en su rancho, Yolanda debe decidir si ayudarlo —poniendo en riesgo sus propias vidas—, mientras Alejandra sigue la pista de sus propias sospechas.",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
@@ -1001,6 +993,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "107 min",
+     "poster": "/assets/villadelcine-2026/enemy-in-the-mirror.jpg",
+     "posterSource": "oficial",
      "synopsis": "Camilo, a young guitarist grieving his last relationship and broken band, faces his greatest fear of being alone. He finds apparent relief when he meets Sol and joins her religious cult. However, the group's contradictions eventually make him realize that to find inner peace, he must distance himself from everyone—even Sol—to find the strength he needs within himself.",
      "genre": "Viaje Personal",
      "synopsis_lang": "es"
@@ -1069,18 +1063,6 @@
      "poster": "/assets/villadelcine-2026/just-another-bird.jpg",
      "posterSource": "oficial",
      "synopsis": "Después de sufrir un accidente en la ciudad, Raquelita, una paloma nativa colombiana, encuentra refugio en la ventana de Tomás. Mientras el niño la acompaña en su recuperación, Raquelita emprende un viaje poético por la ciudad y descubre personajes, pequeños detalles y formas de vida que suelen pasar inadvertidas.",
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "Cianotipia",
-     "director": "Isabella Bobadilla Monsalve",
-     "synopsis": "Una pausa reflexiva sobre el tiempo y la materia donde la técnica fotográfica histórica dialoga directamente con el entorno botánico. A partir de la observación minuciosa, la composición manual y el juego con las siluetas de la vegetación local, el espacio aborda el proceso de insolación como un acto donde la luz solar transforma la superficie y fija lo invisible. Conducido por la fotógrafa y realizadora Isabella Bobadilla Monsalve —directora del cortometraje en stop motion Ficus y pedagoga en procesos de imagen, memoria y gráfica manual—, el taller propone un encuentro tangible con la alquimia visual, articulando el paisaje, la textura y el registro lumínico al aire",
-     "synopsis_lang": "es"
-    },
-    {
-     "title": "Farmeando el Tunjo: creación cinematográfica con inteligencia artificial",
-     "director": "Jimena Guerrero, Vanessa Vega y PiPo Aranguren",
-     "synopsis": "La tradición oral y la tecnología generativa convergen en un laboratorio práctico donde el folclore cobra movimiento en pantalla. A partir del análisis corporal, el ritmo y la observación directa de \"El Tunjo\", los participantes deconstruyen la gestualidad para transformarla en lenguaje técnico de programación visual. Mediante metodologías de síntesis narrativa y prompt engineering sobre el motor de generación Omni Flash, el taller aborda la captura fotográfica, la dirección de arte y la animación generativa con el propósito de concebir microrrelatos de diez segundos donde la figura mítica despierta, baila y dialoga con los nuevos códigos de la narrativa digital contemporánea. Un espacio intensivo de exploración formal, criterio visual y",
      "synopsis_lang": "es"
     }
    ]
@@ -1192,8 +1174,22 @@
      "flags": "🇺🇸",
      "year": 2026,
      "duration": "23 min",
+     "poster": "/assets/villadelcine-2026/lens-ai-short-film.jpg",
+     "posterSource": "oficial",
      "synopsis": "Cuando Alex, de nueve años, descubre LENS —un misterioso prototipo capaz de mostrar realidades alternativas—, su familia se convierte en el objetivo de despiadados agentes de operaciones especiales. Mientras huyen a través de desolados campos de maíz, Alex, su hermano Jim y su madre deben arriesgarlo todo para proteger a su nuevo amigo y liberar su verdadero potencial.",
      "genre": "Ficción y Drama",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Pros and Cons of Daydreaming",
+     "director": "Lorena López",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "5 min",
+     "poster": "/assets/villadelcine-2026/pros-and-cons-of-daydreaming.jpg",
+     "posterSource": "oficial",
+     "synopsis": "La tendencia a soñar despierto de un niño imaginativo interfiere con sus tareas escolares, lo que lleva a sus estrictos padres a retirarle todos sus juguetes y distracciones. Aunque su rendimiento académico mejora, su chispa creativa se apaga, hasta que un cachorro cariñoso que conoce reaviva su sentido del asombro y la compañía.",
      "synopsis_lang": "es"
     },
     {
@@ -1380,7 +1376,7 @@
      "flags": "🇫🇷",
      "year": 2025,
      "duration": "17 min",
-     "poster": "https://image.tmdb.org/t/p/w500/gQXR5hpXcRYcvqCvxSjS5lxa58u.jpg",
+     "poster": "/assets/villadelcine-2026/autokar.jpg",
      "posterSource": "tmdb",
      "lbSlug": "autokar",
      "tmdb_id": 1405315,
@@ -1532,7 +1528,7 @@
      "flags": "🇷🇺",
      "year": 2025,
      "duration": "2 min",
-     "poster": "https://image.tmdb.org/t/p/w500/wAjxqXkUg0Wm9SuDpRjymf8FrsY.jpg",
+     "poster": "/assets/villadelcine-2026/witch-and-frog.jpg",
      "posterSource": "tmdb",
      "lbSlug": "witch-and-frog",
      "tmdb_id": 1772239,
@@ -1586,7 +1582,7 @@
      "flags": "🇧🇷",
      "year": 2026,
      "duration": "8 min",
-     "poster": "https://image.tmdb.org/t/p/w500/lunzCoocm6PIiNnRqDJymPeFen9.jpg",
+     "poster": "/assets/villadelcine-2026/tv-entreaberta.jpg",
      "posterSource": "tmdb",
      "lbSlug": "tv-entreaberta",
      "tmdb_id": 1661195,
@@ -1602,7 +1598,7 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "3 min",
-     "poster": "https://image.tmdb.org/t/p/w500/oah91XZPUpKP0XhJ8NMa5p85pAC.jpg",
+     "poster": "/assets/villadelcine-2026/via-crusis.jpg",
      "posterSource": "tmdb",
      "lbSlug": "via-crusis",
      "tmdb_id": 1697484,
@@ -1612,11 +1608,13 @@
      "synopsis_en": "Veal desires that are condemned deep within us."
     },
     {
-     "title": "INTFINAL ACT",
+     "title": "Final Act",
      "director": "Babi Astrolfi y Lisa Soares",
      "country": "Brasil",
      "flags": "🇧🇷",
      "duration": "11 min",
+     "poster": "/assets/villadelcine-2026/final-act.jpg",
+     "posterSource": "oficial",
      "synopsis": "Tras presenciar la muerte de una famosa actriz, Mateus Santos, un pasante de periodismo, tiene la oportunidad única de investigar el caso junto a su ídolo, la reconocida periodista Miriam Matos. Juntos interrogan a tres sospechosos en busca de la verdad sobre el motivo del asesino.",
      "synopsis_lang": "es"
     },
@@ -1627,7 +1625,7 @@
      "flags": "🇦🇷",
      "year": 2025,
      "duration": "9 min",
-     "poster": "https://image.tmdb.org/t/p/w500/FY7g3jBG8FBa1wACimnMJshGWl.jpg",
+     "poster": "/assets/villadelcine-2026/la-presencia-de-blanco.jpg",
      "posterSource": "tmdb",
      "lbSlug": "la-presencia-de-blanco",
      "tmdb_id": 1753870,
@@ -1668,6 +1666,8 @@
      "flags": "🇫🇷",
      "year": 2024,
      "duration": "19 min",
+     "poster": "/assets/villadelcine-2026/sun-coffee.jpg",
+     "posterSource": "oficial",
      "synopsis": "Un café para recalentar, pero sin más electricidad: un problema que llevará a estudiantes de secundaria por distintos encuentros y conversaciones en torno a la energía fotovoltaica.",
      "genre": "Ficción",
      "synopsis_lang": "es"
@@ -1700,7 +1700,7 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "17 min",
-     "poster": "https://image.tmdb.org/t/p/w500/c9L2gGEmdYtV5EDEX6Cvo3Nf3p4.jpg",
+     "poster": "/assets/villadelcine-2026/sukua.jpg",
      "posterSource": "tmdb",
      "lbSlug": "sukua",
      "tmdb_id": 1456197,
@@ -1716,7 +1716,7 @@
      "flags": "🇧🇷",
      "year": 2026,
      "duration": "104 min",
-     "poster": "https://image.tmdb.org/t/p/w500/e58rW8tLiLaZs692Qp6YrzLIXat.jpg",
+     "poster": "/assets/villadelcine-2026/o-cravista.jpg",
      "posterSource": "tmdb",
      "lbSlug": "the-harpsichordist",
      "tmdb_id": 1621972,
@@ -1897,7 +1897,7 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "9 min",
-     "poster": "https://image.tmdb.org/t/p/w500/v4NBHjzQKFd6QQ5kSZSbrz05ej5.jpg",
+     "poster": "/assets/villadelcine-2026/a-body-without-a-horse.jpg",
      "posterSource": "tmdb",
      "lbSlug": "a-body-without-a-horse",
      "tmdb_id": 1659047,
@@ -1937,7 +1937,7 @@
    "has_qa": false,
    "synopsis": "El limbo nunca fue tan seductor como en Llueve sobre Babel. Escrita y dirigida por Gala del Sol, esta reinterpretación del Inferno de Dante toma la forma de un drama coral. La acción se centra en Babel, un bar donde distintos personajes se cruzan con La Flaca, la mismísima encarnación de la Muerte, con quien las almas pueden apostar años de vida en un intento por burlar su destino.",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/o6IDuFe3bBUR46DQbTy4tRCvnuk.jpg",
+   "poster": "/assets/villadelcine-2026/llueve-sobre-babel.jpg",
    "posterSource": "tmdb",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p8",
@@ -2108,6 +2108,8 @@
     {
      "title": "Korebaju Pai Rekocho",
      "director": "William Javier Gutiérrez Vargas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "20 min",
      "synopsis": "Estiverson, un joven indígena coreguaje que regresa a su territorio para trabajar como etnoeducador. A través de la lengua coreguaje, el río y la educación comunitaria, el cortometraje propone una experiencia sensorial de la continuidad de un pueblo.",
      "synopsis_lang": "es"
@@ -2122,6 +2124,8 @@
     {
      "title": "The Guanentá Symphony",
      "director": "Victor Jaramillo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "22 min",
      "synopsis": "Documental que explora el legado musical de la cultura guane a través de una expedición por el Cañón del Chicamocha. El maestro Giovanni Laguado reconstruye instrumentos precolombinos y crea una sinfonía ancestral que honra la memoria del pueblo guane y rescata parte de la identidad cultural de Santander.",
      "synopsis_lang": "es"
@@ -2132,7 +2136,7 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "11 min",
-     "poster": "https://image.tmdb.org/t/p/w500/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+     "poster": "/assets/villadelcine-2026/sheltering-gestures.jpg",
      "posterSource": "tmdb",
      "lbSlug": "sheltering-gestures",
      "tmdb_id": 1713804,
@@ -2169,7 +2173,7 @@
      "flags": "🇬🇹🇺🇸",
      "year": 2025,
      "duration": "79 min",
-     "poster": "https://image.tmdb.org/t/p/w500/poj5xIuW3JVs5D1iTOCAXBMG6zP.jpg",
+     "poster": "/assets/villadelcine-2026/comparsa.jpg",
      "posterSource": "tmdb",
      "lbSlug": "comparsa-2025",
      "tmdb_id": 1480404,
@@ -2309,6 +2313,8 @@
    "type": "film",
    "section": "🎞️ Exhibición Especial",
    "director": "Ciro Durán",
+   "country": "Colombia, Venezuela",
+   "flags": "🇨🇴🇻🇪",
    "duration": "75 min",
    "day": "2026-09-26",
    "time": "16:45",
@@ -2349,7 +2355,7 @@
    "time": "18:15",
    "day_order": 3,
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
-   "event_kind": "awards",
+   "event_kind": "clausura",
    "has_qa": false,
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p10",
@@ -2373,7 +2379,7 @@
    "has_qa": false,
    "synopsis": "La obsesión de Óscar Restrepo por la poesía no le trajo ninguna gloria. Envejecido y errático, ha sucumbido al cliché del poeta en la penumbra. Conocer a Yurlady, una humilde adolescente, y ayudarla a cultivar su talento trae algo de luz a sus días, pero arrastrarla al mundo de los poetas, tal vez no sea el camino.",
    "synopsis_lang": "es",
-   "poster": "https://image.tmdb.org/t/p/w500/jd2p3fdosgWgsZh558TQ1lbGbjl.jpg",
+   "poster": "/assets/villadelcine-2026/un-poeta.jpg",
    "posterSource": "tmdb",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p11",
@@ -2389,7 +2395,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-19T17:53:56",
+  "fecha": "2026-09-19T22:14:43",
   "plan_sha": "159f65c7fa6a18ee",
   "paso": 14,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"

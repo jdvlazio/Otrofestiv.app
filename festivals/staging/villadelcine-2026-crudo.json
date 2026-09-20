@@ -84,8 +84,10 @@
     "date": "2026-09-19"
    },
    "director": "JOHN BOLIVAR",
-   "pais": "",
    "sinopsis_en": "La vida desde que nace hasta que muere del escultor RODRIGO ARENAS BETANCOURT",
+   "categoria": "Mejor Ópera Prima Nacional",
+   "poster": "/assets/villadelcine-2026/arenas.jpg",
+   "posterSource": "oficial",
    "_sin_ficha_en_el_pdf": true
   },
   {
@@ -94,10 +96,6 @@
    "hora": "09:00",
    "sede": "Casa San Pedro Campestre - Villa de Leyva",
    "duracion_min": 240,
-   "_obras_sin_duracion": [
-    "Cianotipia",
-    "Farmeando el Tunjo: creación cinematográfica con inteligencia artificial"
-   ],
    "seccion": "Programación Infantil",
    "is_free": true,
    "acceso": "Entrada libre",
@@ -140,16 +138,6 @@
      "poster": "/assets/villadelcine-2026/just-another-bird.jpg",
      "posterSource": "oficial",
      "formato": "INFANTIL"
-    },
-    {
-     "titulo": "Cianotipia",
-     "director": "Isabella Bobadilla Monsalve",
-     "sinopsis": "Una pausa reflexiva sobre el tiempo y la materia donde la técnica fotográfica histórica dialoga directamente con el entorno botánico. A partir de la observación minuciosa, la composición manual y el juego con las siluetas de la vegetación local, el espacio aborda el proceso de insolación como un acto donde la luz solar transforma la superficie y fija lo invisible. Conducido por la fotógrafa y realizadora Isabella Bobadilla Monsalve —directora del cortometraje en stop motion Ficus y pedagoga en procesos de imagen, memoria y gráfica manual—, el taller propone un encuentro tangible con la alquimia visual, articulando el paisaje, la textura y el registro lumínico al aire"
-    },
-    {
-     "titulo": "Farmeando el Tunjo: creación cinematográfica con inteligencia artificial",
-     "director": "Jimena Guerrero, Vanessa Vega y PiPo Aranguren",
-     "sinopsis": "La tradición oral y la tecnología generativa convergen en un laboratorio práctico donde el folclore cobra movimiento en pantalla. A partir del análisis corporal, el ritmo y la observación directa de \"El Tunjo\", los participantes deconstruyen la gestualidad para transformarla en lenguaje técnico de programación visual. Mediante metodologías de síntesis narrativa y prompt engineering sobre el motor de generación Omni Flash, el taller aborda la captura fotográfica, la dirección de arte y la animación generativa con el propósito de concebir microrrelatos de diez segundos donde la figura mítica despierta, baila y dialoga con los nuevos códigos de la narrativa digital contemporánea. Un espacio intensivo de exploración formal, criterio visual y"
     }
    ]
   },
@@ -304,6 +292,7 @@
      "duracion_min": 90,
      "sinopsis": "La desaparición de Natalia en Pueblo Blanco lleva a la policía a descubrir un sórdido bar clandestino. Cuando dos hermanas explotadas en el lugar deciden ayudar a un extraño en el bosque, desatan una sangrienta ola de rituales a manos de una oscura secta que terminará consumiendo a todo el pueblo.",
      "sinopsis_en": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad… alguna vez también pidió ayuda.",
+     "categoria": "Mejor Ópera Prima Nacional",
      "poster": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg",
      "posterSource": "oficial",
      "formato": "ÓPERA PRIMA NACIONAL"
@@ -444,7 +433,7 @@
      "sinopsis": "En su lucha por lograr reconocimiento en el Carnaval de Barranquilla, el grupo independiente de títeres \"Con la Mano Arriba\" se enfrenta a un apoyo institucional limitado. El documental retrata un desfile decisivo en el que un fallo repentino en el sonido sume al colectivo en un caos absoluto.",
      "sinopsis_en": "Since 2023, the independent puppet troupe “Con la Mano Arriba” has struggled to find its place within the hierarchy of the Barranquilla Carnival. Led by director Eduardo Lora Cueto, the group faces systemic challenges and limited institutional support. The documentary focuses on a critical turning point during a parade at Carrera 44, where a technical sound failure left the collective exposed to chaos and uncertainty. Through intimate interviews and observational footage, the film explores how the group processes vulnerability with humor and a conscious decision to persist. It is a story about the resilience and artistic passion required to keep a puppet’s head held high against all odds.",
      "tmdb_id": 1745797,
-     "poster": "/wBNTbvLz6r8ICBHj9OtQDkkrAf3.jpg",
+     "poster": "/assets/villadelcine-2026/con-la-mano-arriba.jpg",
      "posterSource": "tmdb",
      "lbSlug": "con-la-mano-arriba",
      "formato": "VOCES"
@@ -510,6 +499,7 @@
      "genero": "Ficción y Drama",
      "sinopsis": "En el seno de una comunidad selvática amenazada por un proyecto minero, Jenawen —una joven indígena que se ha distanciado de sus raíces— atravesará un portal hacia el futuro para salvar a los únicos supervivientes de una catástrofe medioambiental que arrasó con la mayoría de los recursos naturales y convirtió la tierra en un desierto peligroso.",
      "sinopsis_en": "In the midst of a jungle community threatened by a mining project, Jenawen, a young indigenous woman who has distanced herself from her roots, will cross a portal into the future to save the only survivors of an environmental catastrophe that destroyed most of the natural resources and turned the land into a dangerous desert",
+     "categoria": "Mejor Work in Progress",
      "poster": "/assets/villadelcine-2026/extinction.jpg",
      "posterSource": "oficial",
      "formato": "WIP"
@@ -534,6 +524,7 @@
      "genero": "Documental",
      "sinopsis": "Diana y Manuel rastrean tres películas históricas casi borradas por la censura en España, Chile y Colombia. Mediante videocartas, este documental explora la memoria política y el impacto de perder y recuperar estas obras.",
      "sinopsis_en": "Tres historias, varias películas que estuvieron a punto de desaparecer: el cine clandestino que se hacía en España en los últimos años del franquismo; Queridos compañeros, la película truncada por el golpe de estado en Chile, y Garras de oro, un clásico colombiano que incomodó al poder. Diana y Manuel emprenden un viaje tras las huellas de las películas y de los protagonistas de su recuperación. En su recorrido por Barcelona, Milán, Santiago de Chile y Cali, las ciudades se revelan como archivos que sugieren otras vidas para las películas. En su viaje, con el intercambio de videocartas e imágenes los investigadores reflexionan sobre las relaciones entre el cine, la política y la memoria, mientras preguntan qué se pierde cuándo una película desaparece y qué se transforma cuando vuelve a la luz. El Cine dentro del cine entrelaza memoria política e historia con un sutil sentido del humor que antes que dar respuestas abre preguntas sobre el lugar del cine hoy.",
+     "categoria": "Mejor Work in Progress",
      "poster": "/assets/villadelcine-2026/el-cine-dentro-del-cine-dentro-del-cine.jpg",
      "posterSource": "oficial",
      "formato": "WIP"
@@ -546,6 +537,7 @@
      "genero": "Documental",
      "sinopsis": "Manifiesto de archivos audiovisuales que acomoda con zapeo historias de cámaras y sus viajes mientras graban fiestas familiares y de cine. El viaje más largo es en Cuba. Salen muchas personas, van dos en el viaje que graban para un programa de televisión.",
      "sinopsis_en": "Manifiesto de archivos audiovisuales que acomoda con zapeo historias de cámaras y sus viajes mientras graban fiestas familiares y de cine. El viaje más largo es en Cuba. Salen muchas personas, van dos en el viaje que graban para un programa de televisión. Se mezclan lugares, experimentos visuales, fragmentos de películas y protagonistas del cine.",
+     "categoria": "Mejor Work in Progress",
      "poster": "/assets/villadelcine-2026/cuba-2001-imagenes-del-futuro-i.jpg",
      "posterSource": "oficial",
      "formato": "WIP"
@@ -558,6 +550,7 @@
      "genero": "Ficción",
      "sinopsis": "Gloria (76) una prestigiosa dermatóloga, llega a un hogar geriátrico en contra de su voluntad. Allí conoce a María Lucía (74), una dulce anciana con problemas de alzheimer que intenta ayudar y sentirse útil. En la cotidianidad del asilo, Raquel (79) se revela como la líder de una especie de “cartel” entre los viejitos que intercambian dulces, medicamentos, entre otros.",
      "sinopsis_en": "Gloria (76) una prestigiosa dermatóloga, llega a un hogar geriátrico en contra de su voluntad. Allí conoce a María Lucía (74), una dulce anciana con problemas de alzheimer que intenta ayudar y sentirse útil. En la cotidianidad del asilo, Raquel (79) se revela como la líder de una especie de “cartel” entre los viejitos que intercambian dulces, medicamentos, entre otros. Gloria no compagina con Raquel, pero esta última, consigue los pequeños lujos que Gloria solicita para ganar su confianza. Las tres comparten su deseo de no estar internas, de ser libres, se sienten inútiles y olvidadas aunque aún guardan parte de su dignidad.",
+     "categoria": "Mejor Work in Progress",
      "poster": "/assets/villadelcine-2026/mi-tesoro.jpg",
      "posterSource": "oficial",
      "formato": "WIP"
@@ -661,7 +654,7 @@
      "sinopsis_en": "“I Don’t Know What to Do” is a film about a young girl named Lizzie who spends an afternoon playing with a lizard she found in her garden. An accident occurs, and the lizard is hurt. Filled with sadness, Lizzie gently buries the lizard and places a flower on its grave, highlighting her tenderness and the fleeting nature of life.",
      "categoria": "International Universities",
      "tmdb_id": 1560415,
-     "poster": "/gB8C6HENI7qyHgilZxx0LdKsnWA.jpg",
+     "poster": "/assets/villadelcine-2026/i-don-t-know-what-to-do.jpg",
      "posterSource": "tmdb",
      "lbSlug": "i-dont-know-what-to-do"
     },
@@ -732,7 +725,7 @@
      "sinopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
      "categoria": "Mejor Corto Internacional",
      "tmdb_id": 1469210,
-     "poster": "/fuQQAuTPK0lGxsvI0yUxz9KzQCK.jpg",
+     "poster": "/assets/villadelcine-2026/alivios.jpg",
      "posterSource": "tmdb",
      "lbSlug": "reliefs-2025",
      "formato": "CORTOMETRAJE INTERNACIONAL"
@@ -745,6 +738,7 @@
      "genero": "Abandono y construcción de vinculos afectivos",
      "sinopsis": "Alicia, una mujer de 75 años, es abandonada Lo que comienza como un rapto se transforma en un vínculo inesperado. Cuando Alicia muere, Alirio se niega a aceptar su partida y continúa viviendo junto a su cuerpo. Finalmente, la lleva a una montaña cercana al basurero y, al ver cómo los gallinazos.",
      "sinopsis_en": "Alicia, una mujer de 75 años perteneciente a una familia de clase alta, pasa sus días abandonada en una silla de ruedas en un parque de la ciudad. Cada mañana una cuidadora la deja allí y solo regresa al caer la tarde, mientras Alicia observa en silencio a las palomas y a los desconocidos que cruzan frente a ella, convertida en un mueble más del paisaje urbano. Alirio, un niño de 13 años que sobrevive como reciclador, la ve todos los días durante su recorrido. Vive en unos tubos junto a Claudia, una niña de 12 años que enfrenta la dureza de la calle refugiándose en el consumo de pegante. En medio de sus alucinaciones, Claudia se enamora de Alirio, pero él solo siente curiosidad y compasión por la anciana. Claudia muere, es llevada al basurero donde Alirio busca entre la basura. Destrozado por la pérdida y convencido de que Alicia también ha sido olvidada por el mundo, Alirio decide llevársela consigo. Primero la esconde en su cambuche y, cuando la salud de la mujer empeora y la policía inicia su búsqueda, ambos terminan refugiándose en un cuarto de un sector marginal de la ciudad, rodeados de habitantes de calle, prostitutas y delincuentes. Lo que comienza como un rapto termina convirtiéndose en el vínculo más importante de sus vidas. Alicia vuelve a sentirse querida y útil; Alirio encuentra por primera vez el afecto de una madre. Ella le enseña a leer y escribir, mientras él consigue trabajo en un centro de reciclaje para cuidar de ambos. Poco a poco construyen el hogar que ninguno tuvo. Una mañana, Alirio encuentra a Alicia muerta. Incapaz de aceptar la pérdida, continúa viviendo junto a su cuerpo como si ella siguiera allí: comparte las comidas, le lee libros y conversa con ella. Cuando el olor del cadáver hace imposible permanecer en el lugar, el niño lleva a Alicia hasta una montaña cercana a un basurero. Allí, mientras los gallinazos elevan hacia el cielo los últimos restos de su cuerpo, Alirio comprende que el verdadero amor también consiste en dejar partir.",
+     "categoria": "Mejor Ópera Prima Nacional",
      "poster": "/assets/villadelcine-2026/volar.jpg",
      "posterSource": "oficial",
      "formato": "ÓPERA PRIMA NACIONAL"
@@ -760,7 +754,7 @@
      "sinopsis_en": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra.",
      "categoria": "Cortometraje Nacional",
      "tmdb_id": 1592955,
-     "poster": "/qw4zntJUuj163JdkusNUnxHvOwg.jpg",
+     "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
      "posterSource": "tmdb",
      "lbSlug": "tuktu-father-maize",
      "formato": "CORTOMETRAJE NACIONAL"
@@ -773,6 +767,8 @@
      "genero": "Ficción y Drama",
      "sinopsis": "Tras un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una anciana agricultora, y su nieta Alejandra. Después de esconderlo en su rancho, Yolanda debe decidir si ayudarlo —poniendo en riesgo sus propias vidas—, mientras Alejandra sigue la pista de sus propias sospechas.",
      "sinopsis_en": "After a violent confrontation, a wounded soldier is rescued by Yolanda, an elderly farmer, and her granddaughter Alejandra. After hiding him in their ranch, Yolanda must decide whether she should help him, risking their own lives, while Alejandra pursues her own suspicions.",
+     "poster": "/assets/villadelcine-2026/a-burning-turret.jpg",
+     "posterSource": "oficial",
      "formato": "CORTOMETRAJE INTERNACIONAL"
     }
    ]
@@ -814,6 +810,9 @@
      "genero": "Viaje Personal",
      "sinopsis": "Camilo, a young guitarist grieving his last relationship and broken band, faces his greatest fear of being alone. He finds apparent relief when he meets Sol and joins her religious cult. However, the group's contradictions eventually make him realize that to find inner peace, he must distance himself from everyone—even Sol—to find the strength he needs within himself.",
      "sinopsis_en": "Camilo, a young guitarist who is grieving the end of his last relationship and the break-up of his band, faces his greatest fear, being alone. When he meets Sol, a charming woman, he finds apparent relief in a religious cult of which she is a member. Gradually, he becomes more involved in the group, but the contradictions of the cult make him realise that, to find inner peace, he must distance himself from everyone, even Sol, finding in his own reflection the strength he was looking for.",
+     "categoria": "Mejor Ópera Prima Nacional",
+     "poster": "/assets/villadelcine-2026/enemy-in-the-mirror.jpg",
+     "posterSource": "oficial",
      "formato": "ÓPERA PRIMA NACIONAL"
     },
     {
@@ -837,10 +836,6 @@
    "hora": "09:00",
    "sede": "Casa San Pedro Campestre - Villa de Leyva",
    "duracion_min": 240,
-   "_obras_sin_duracion": [
-    "Cianotipia",
-    "Farmeando el Tunjo: creación cinematográfica con inteligencia artificial"
-   ],
    "seccion": "Programación Infantil",
    "is_free": true,
    "acceso": "Entrada libre",
@@ -883,16 +878,6 @@
      "poster": "/assets/villadelcine-2026/just-another-bird.jpg",
      "posterSource": "oficial",
      "formato": "INFANTIL"
-    },
-    {
-     "titulo": "Cianotipia",
-     "director": "Isabella Bobadilla Monsalve",
-     "sinopsis": "Una pausa reflexiva sobre el tiempo y la materia donde la técnica fotográfica histórica dialoga directamente con el entorno botánico. A partir de la observación minuciosa, la composición manual y el juego con las siluetas de la vegetación local, el espacio aborda el proceso de insolación como un acto donde la luz solar transforma la superficie y fija lo invisible. Conducido por la fotógrafa y realizadora Isabella Bobadilla Monsalve —directora del cortometraje en stop motion Ficus y pedagoga en procesos de imagen, memoria y gráfica manual—, el taller propone un encuentro tangible con la alquimia visual, articulando el paisaje, la textura y el registro lumínico al aire"
-    },
-    {
-     "titulo": "Farmeando el Tunjo: creación cinematográfica con inteligencia artificial",
-     "director": "Jimena Guerrero, Vanessa Vega y PiPo Aranguren",
-     "sinopsis": "La tradición oral y la tecnología generativa convergen en un laboratorio práctico donde el folclore cobra movimiento en pantalla. A partir del análisis corporal, el ritmo y la observación directa de \"El Tunjo\", los participantes deconstruyen la gestualidad para transformarla en lenguaje técnico de programación visual. Mediante metodologías de síntesis narrativa y prompt engineering sobre el motor de generación Omni Flash, el taller aborda la captura fotográfica, la dirección de arte y la animación generativa con el propósito de concebir microrrelatos de diez segundos donde la figura mítica despierta, baila y dialoga con los nuevos códigos de la narrativa digital contemporánea. Un espacio intensivo de exploración formal, criterio visual y"
     }
    ]
   },
@@ -1008,7 +993,21 @@
      "sinopsis": "Cuando Alex, de nueve años, descubre LENS —un misterioso prototipo capaz de mostrar realidades alternativas—, su familia se convierte en el objetivo de despiadados agentes de operaciones especiales. Mientras huyen a través de desolados campos de maíz, Alex, su hermano Jim y su madre deben arriesgarlo todo para proteger a su nuevo amigo y liberar su verdadero potencial.",
      "sinopsis_en": "When nine-year-old Alex discovers LENS—a mysterious prototype capable of showing alternative realities—her family becomes the target of ruthless special ops agents. Fleeing across desolate cornfields, Alex, her brother Jim, and their mother must risk everything to protect their new friend and unlock its true potential.",
      "categoria": "Mejor Cortometraje IA",
+     "poster": "/assets/villadelcine-2026/lens-ai-short-film.jpg",
+     "posterSource": "oficial",
      "formato": "IA"
+    },
+    {
+     "titulo": "Pros and Cons of Daydreaming",
+     "director": "Lorena López",
+     "duracion_min": 5,
+     "pais": "Colombia",
+     "anio": 2025,
+     "sinopsis": "La tendencia a soñar despierto de un niño imaginativo interfiere con sus tareas escolares, lo que lleva a sus estrictos padres a retirarle todos sus juguetes y distracciones. Aunque su rendimiento académico mejora, su chispa creativa se apaga, hasta que un cachorro cariñoso que conoce reaviva su sentido del asombro y la compañía.",
+     "sinopsis_en": "The story follows an imaginative boy whose constant daydreaming hinders his performance in school and daily activities. His strict parents, seeking discipline, remove all distractions from his room, including his toys and guitar, hoping to encourage reflection. Though his academic results improve, his creative spark fades until a gentle puppy he meets on his way to school rekindles his sense of wonder and companionship.",
+     "poster": "/assets/villadelcine-2026/pros-and-cons-of-daydreaming.jpg",
+     "posterSource": "oficial",
+     "formato": "CELULAR"
     },
     {
      "titulo": "They Call It Sausage",
@@ -1106,7 +1105,8 @@
     "date": "2026-09-19"
    },
    "tipo": "charla",
-   "event_kind": "charla"
+   "event_kind": "charla",
+   "_pais_fuente": "coproducción de 1968, el primer western colombiano — https://en.wikipedia.org/wiki/Aquileo_Venganza y el perfil de Ciro Durán en Proimágenes Colombia"
   },
   {
    "titulo": "PLANETA",
@@ -1184,6 +1184,7 @@
      "genero": "Ficción y Drama",
      "sinopsis": "Una adolescente brillante, atrapada entre la presión familiar y las redes sociales, se ve arrastrada —junto a su mejor amiga— a una espiral de autoexigencia que pone en riesgo su salud, su identidad y su vida.",
      "sinopsis_en": "A brilliant teenager, caught between family pressure and social media, is drawn—together with her best friend—into a spiral of self-demand that puts her health, her identity, and her life at risk.",
+     "categoria": "Mejor Ópera Prima Internacional",
      "poster": "/assets/villadelcine-2026/cos-de-vidre.jpg",
      "posterSource": "oficial",
      "formato": "ÓPERA PRIMA INTERNACIONAL"
@@ -1199,7 +1200,7 @@
      "sinopsis_en": "In the 1990s, 8-year-old Agata leaves Poland for Belgium. Her perspective transforms the migratory reality into an initiatory experience.",
      "categoria": "Mejor Corto Internacional",
      "tmdb_id": 1405315,
-     "poster": "/gQXR5hpXcRYcvqCvxSjS5lxa58u.jpg",
+     "poster": "/assets/villadelcine-2026/autokar.jpg",
      "posterSource": "tmdb",
      "lbSlug": "autokar",
      "formato": "CORTOMETRAJE INTERNACIONAL"
@@ -1347,7 +1348,7 @@
      "sinopsis_en": "A young witch wannabe wants to learn some magic, so she decides to study with an experienced sorceress. She shows up at her place — but things don’t exactly go as planned.",
      "categoria": "Mejor Cortometraje YoungFilm",
      "tmdb_id": 1772239,
-     "poster": "/wAjxqXkUg0Wm9SuDpRjymf8FrsY.jpg",
+     "poster": "/assets/villadelcine-2026/witch-and-frog.jpg",
      "posterSource": "tmdb",
      "lbSlug": "witch-and-frog",
      "formato": "YOUNGFILM"
@@ -1405,7 +1406,7 @@
      "sinopsis_en": "A woman is abducted to the insides of her TV, where she is tormented by some sort of cartoony American host. Going through numerous genres, the character is gradually being assimilated to this television system.",
      "categoria": "International Universities",
      "tmdb_id": 1661195,
-     "poster": "/lunzCoocm6PIiNnRqDJymPeFen9.jpg",
+     "poster": "/assets/villadelcine-2026/tv-entreaberta.jpg",
      "posterSource": "tmdb",
      "lbSlug": "tv-entreaberta"
     },
@@ -1419,17 +1420,21 @@
      "sinopsis": "Placeres carnales condenados dentro de nosotras.",
      "sinopsis_en": "Veal desires that are condemned deep within us.",
      "tmdb_id": 1697484,
-     "poster": "/oah91XZPUpKP0XhJ8NMa5p85pAC.jpg",
+     "poster": "/assets/villadelcine-2026/via-crusis.jpg",
      "posterSource": "tmdb",
      "lbSlug": "via-crusis",
      "formato": "APASIONADO NACIONAL"
     },
     {
-     "titulo": "INTFINAL ACT",
+     "titulo": "Final Act",
      "director": "Babi Astrolfi y Lisa Soares",
      "duracion_min": 11,
      "pais": "Brasil",
-     "sinopsis": "Tras presenciar la muerte de una famosa actriz, Mateus Santos, un pasante de periodismo, tiene la oportunidad única de investigar el caso junto a su ídolo, la reconocida periodista Miriam Matos. Juntos interrogan a tres sospechosos en busca de la verdad sobre el motivo del asesino."
+     "sinopsis": "Tras presenciar la muerte de una famosa actriz, Mateus Santos, un pasante de periodismo, tiene la oportunidad única de investigar el caso junto a su ídolo, la reconocida periodista Miriam Matos. Juntos interrogan a tres sospechosos en busca de la verdad sobre el motivo del asesino.",
+     "sinopsis_en": "After witnessing the death of a famous actress, Mateus Santos, a journalism intern, has the unique chance to investigate the case alongside his idol, the renowned journalist Miriam Matos. Together, they interrogate three suspects in pursuit of the truth behind the killer’s motive.",
+     "categoria": "International Universities",
+     "poster": "/assets/villadelcine-2026/final-act.jpg",
+     "posterSource": "oficial"
     },
     {
      "titulo": "LA PRESENCIA DE BLANCO",
@@ -1442,7 +1447,7 @@
      "sinopsis_en": "En un pueblo olvidado, la leyenda cobra vida después del anochecer. Cuatro niños se enfrentan al misterio de “La Presencia de Blanco”, un fantasma que merodea la escuela rural. Lo que comienza como un juego se convierte en una pesadilla cuando un ruido en el salón oscuro les revela una verdad aterradora. Ellos no corrieron. Se quedaron. Y ese fue su error. ¿Qué quiere la niña? ¿Por qué los señala? La respuesta espera en la oscuridad, justo en la esquina.",
      "categoria": "Mejor Cortometraje Escolar",
      "tmdb_id": 1753870,
-     "poster": "/FY7g3jBG8FBa1wACimnMJshGWl.jpg",
+     "poster": "/assets/villadelcine-2026/la-presencia-de-blanco.jpg",
      "posterSource": "tmdb",
      "lbSlug": "la-presencia-de-blanco",
      "formato": "ESCOLAR"
@@ -1483,6 +1488,8 @@
      "anio": 2024,
      "sinopsis": "Un café para recalentar, pero sin más electricidad: un problema que llevará a estudiantes de secundaria por distintos encuentros y conversaciones en torno a la energía fotovoltaica.",
      "sinopsis_en": "A coffee to reheat, but no more electricity: a problem that will lead high school students to various meetings and discussions around photovoltaic energy…",
+     "poster": "/assets/villadelcine-2026/sun-coffee.jpg",
+     "posterSource": "oficial",
      "formato": "YOUNGFILM"
     }
    ]
@@ -1514,7 +1521,7 @@
      "sinopsis_en": "Pirimín, un niño kogui, recibe de regalo una pistola de agua. Esa noche, escucha a su padre manifestar su inconformidad , cuando unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe que hacer con el juguete.",
      "categoria": "Cortometraje Nacional",
      "tmdb_id": 1456197,
-     "poster": "/c9L2gGEmdYtV5EDEX6Cvo3Nf3p4.jpg",
+     "poster": "/assets/villadelcine-2026/sukua.jpg",
      "posterSource": "tmdb",
      "lbSlug": "sukua",
      "formato": "CORTOMETRAJE NACIONAL"
@@ -1528,8 +1535,9 @@
      "anio": 2026,
      "sinopsis": "A punto de cumplir cien años, el clavecinista y director de orquesta Roberto De Regina rememora su trayectoria pionera en la reintroducción de la música clásica antigua en Brasil. A través de recuerdos personales y logros artísticos, reflexiona sobre el legado que construyó mientras se enfrentaba a prejuicios y resistencias culturales. Un retrato conmovedor sobre el arte, el tiempo y la valentía de romper barreras y transformar tradiciones.",
      "sinopsis_en": "Nearing his 100th birthday, harpsichordist and conductor Roberto De Regina revisits his pioneering journey in reintroducing early classical music to Brazil. Through personal memories and artistic achievements, he reflects on the legacy he built while facing prejudice and cultural resistance. A poignant portrait of art, time, and the courage to break barriers and transform traditions.",
+     "categoria": "Mejor Ópera Prima Internacional",
      "tmdb_id": 1621972,
-     "poster": "/e58rW8tLiLaZs692Qp6YrzLIXat.jpg",
+     "poster": "/assets/villadelcine-2026/o-cravista.jpg",
      "posterSource": "tmdb",
      "lbSlug": "the-harpsichordist",
      "formato": "ÓPERA PRIMA INTERNACIONAL"
@@ -1715,7 +1723,7 @@
      "sinopsis_en": "Moved by a curiosity on what the body can do and searching for a playful making process, this film emerges from experimentations on the possibilities of the human body in graphic media. I wanted to shorten the distance between filmmaker and audience, so I used paper cutouts and the phone as a common and cheap shooting tool. With a narration that plays with language, the film touches on themes like the body’s possibilities, its absences and presences, humorously and deep at the same time, transitioning across different media. Working with minimal equipment pushed me to embrace improvisation, and I hope this sense of spontaneity remains visible for the audience to enjoy the sense of play and curiosity that shaped the film.",
      "categoria": "Mejor Cortometraje con Celular",
      "tmdb_id": 1659047,
-     "poster": "/v4NBHjzQKFd6QQ5kSZSbrz05ej5.jpg",
+     "poster": "/assets/villadelcine-2026/a-body-without-a-horse.jpg",
      "posterSource": "tmdb",
      "lbSlug": "a-body-without-a-horse",
      "formato": "CELULAR"
@@ -1758,7 +1766,7 @@
    "sinopsis": "El limbo nunca fue tan seductor como en Llueve sobre Babel. Escrita y dirigida por Gala del Sol, esta reinterpretación del Inferno de Dante toma la forma de un drama coral. La acción se centra en Babel, un bar donde distintos personajes se cruzan con La Flaca, la mismísima encarnación de la Muerte, con quien las almas pueden apostar años de vida en un intento por burlar su destino.",
    "sinopsis_en": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
    "tmdb_id": 1388977,
-   "poster": "/o6IDuFe3bBUR46DQbTy4tRCvnuk.jpg",
+   "poster": "/assets/villadelcine-2026/llueve-sobre-babel.jpg",
    "posterSource": "tmdb",
    "lbSlug": "rains-over-babel"
   },
@@ -1916,6 +1924,8 @@
      "titulo": "Korebaju Pai Rekocho",
      "director": "William Javier Gutiérrez Vargas",
      "duracion_min": 20,
+     "pais": "Colombia",
+     "_pais_fuente": "tesis de la Universidad Los Libertadores, rodada en Caquetá con la comunidad coreguaje — https://cam.libertadores.edu.co/korebaju-pat-rekochola-lengua-coreguaje/",
      "sinopsis": "Estiverson, un joven indígena coreguaje que regresa a su territorio para trabajar como etnoeducador. A través de la lengua coreguaje, el río y la educación comunitaria, el cortometraje propone una experiencia sensorial de la continuidad de un pueblo."
     },
     {
@@ -1929,6 +1939,8 @@
      "titulo": "The Guanentá Symphony",
      "director": "Victor Jaramillo",
      "duracion_min": 22,
+     "pais": "Colombia",
+     "_pais_fuente": "como «La sinfonía de Guanentá», de Víctor Jaramillo Arias, en la selección oficial de BOGOCINE 2026 — https://www.bogocine.co/seleccion-oficial-2026/",
      "sinopsis": "Documental que explora el legado musical de la cultura guane a través de una expedición por el Cañón del Chicamocha. El maestro Giovanni Laguado reconstruye instrumentos precolombinos y crea una sinfonía ancestral que honra la memoria del pueblo guane y rescata parte de la identidad cultural de Santander.",
      "formato": "RAÍCES"
     },
@@ -1940,7 +1952,7 @@
      "sinopsis": "Videodanza que rescata la tradicional Danza de las Tabliteras, revivida por jóvenes bailarines que aprendieron sus movimientos y ritmos de los últimos ancianos que aún conservaban esta tradición de San Antonio, Bolívar.",
      "sinopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
      "tmdb_id": 1713804,
-     "poster": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+     "poster": "/assets/villadelcine-2026/sheltering-gestures.jpg",
      "posterSource": "tmdb",
      "lbSlug": "sheltering-gestures",
      "formato": "RAÍCES"
@@ -1973,8 +1985,9 @@
      "anio": 2025,
      "sinopsis": "En Guatemala, las hermanas Lesli y Lupe movilizan a su comunidad a través del arte tras la trágica muerte de 41 niñas en un centro de acogida estatal. Al organizar una vibrante comparsa callejera, protestan con valentía contra la violencia sistémica hacia las mujeres y reivindican los espacios públicos. Filmada a lo largo de 15 años, *Comparsa* es un retrato conmovedor de la sororidad, la resiliencia y el poder sanador del arte.",
      "sinopsis_en": "Comparsa fully immerses audiences in the intense world of Ciudad Peronia, Guatemala, where sisters Lesli and Lupe use art and performance to rally local youth and heal deep wounds. After 41 girls are killed in a State-run “Safe Home” and the government refuses to act, the sisters respond with a community comparsa—an exuberant street performance featuring towering puppets, fire-breathing stilt walkers, and thundering drums. With brave vulnerability, they expose a power structure that permits and commits violence against women, and they open up about surviving violence in their own home. Their youth movement takes to the streets, confronting corruption and reclaiming public space for women and girls. Rooting their efforts in joy and community care, they find healing for themselves along the way. Comparsa is built on a 15-year relationship between the subjects and the film team to offer a stirring portrait of sisterhood, peacebuilding, and the transformational power of art.",
+     "categoria": "Mejor Ópera Prima Internacional",
      "tmdb_id": 1480404,
-     "poster": "/poj5xIuW3JVs5D1iTOCAXBMG6zP.jpg",
+     "poster": "/assets/villadelcine-2026/comparsa.jpg",
      "posterSource": "tmdb",
      "lbSlug": "comparsa-2025",
      "formato": "ÓPERA PRIMA INTERNACIONAL"
@@ -1987,6 +2000,7 @@
      "genero": "Ficción",
      "sinopsis": "Tras su boda con su tradicional primo Ardo (17), Shatu (16) descubre una oportunidad para escapar hacia su soñada vida en la ciudad. Durante un tenso arreo de ganado, las diferencias entre ambos finalmente estallan, obligando a la joven pareja a enfrentar dolorosas verdades y tomar una decisión definitiva al caer la noche.",
      "sinopsis_en": "Shatu (16) ha pasado toda su vida cuidando ganado bajo un cielo inmenso, soñando en secreto con una vida en la ciudad. Al día siguiente de su boda con su primo Ardo (17), un orgulloso defensor de las tradiciones de su pueblo, descubre una posible vía de escape. Ardo interpreta ese anhelo como una traición. Mientras conducen el ganado hacia los pastizales, el silencio entre ambos se vuelve cada vez más pesado. Cuando una obstinada vaca preñada se niega a avanzar, la tensión que los une finalmente estalla. Acusaciones y confesiones sacan a la luz verdades que llevaban demasiado tiempo sin decirse. Al caer la noche, deberán tomar una decisión, una que resonará mucho más allá de las llanuras.",
+     "categoria": "Mejor Ópera Prima Internacional",
      "poster": "/assets/villadelcine-2026/language-of-the-wind.jpg",
      "posterSource": "oficial",
      "formato": "ÓPERA PRIMA INTERNACIONAL"
@@ -2122,6 +2136,8 @@
     "date": "2026-09-19"
    },
    "director": "Ciro Durán",
+   "pais": "Colombia, Venezuela",
+   "_pais_fuente": "coproducción de 1968, el primer western colombiano — https://en.wikipedia.org/wiki/Aquileo_Venganza y el perfil de Ciro Durán en Proimágenes Colombia",
    "sinopsis": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia"
   },
   {
@@ -2142,7 +2158,8 @@
     "date": "2026-09-19"
    },
    "tipo": "evento",
-   "event_kind": "encuentro"
+   "event_kind": "encuentro",
+   "_pais_fuente": "coproducción de 1968, el primer western colombiano — https://en.wikipedia.org/wiki/Aquileo_Venganza y el perfil de Ciro Durán en Proimágenes Colombia"
   },
   {
    "titulo": "Ceremonia TAMSA — Premiación y clausura",
@@ -2159,7 +2176,7 @@
     "date": "2026-09-19"
    },
    "tipo": "evento",
-   "event_kind": "awards"
+   "event_kind": "clausura"
   },
   {
    "titulo": "Un poeta",
@@ -2183,7 +2200,7 @@
    "sinopsis": "La obsesión de Óscar Restrepo por la poesía no le trajo ninguna gloria. Envejecido y errático, ha sucumbido al cliché del poeta en la penumbra. Conocer a Yurlady, una humilde adolescente, y ayudarla a cultivar su talento trae algo de luz a sus días, pero arrastrarla al mundo de los poetas, tal vez no sea el camino.",
    "sinopsis_en": "An aging poet finds purpose mentoring Yurlady, a talented teen, though exposing her to the poetry scene might be unwise. His own poetic pursuits led nowhere, leaving him a stereotypical obscure writer.",
    "tmdb_id": 1465563,
-   "poster": "/jd2p3fdosgWgsZh558TQ1lbGbjl.jpg",
+   "poster": "/assets/villadelcine-2026/un-poeta.jpg",
    "posterSource": "tmdb",
    "lbSlug": "a-poet"
   }
