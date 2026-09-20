@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Programación Oficial CONEXCINE 2026 (PDF de 4 páginas), página 2",
-  "capturado": "2026-09-19",
+  "capturado": "2026-09-20",
   "que_aporta": "los bloques con día, hora de inicio y de fin, el nombre de la jornada y las líneas que el festival imprime en cada uno",
   "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
   "metodo": "pdftotext -bbox-layout: los cuatro días son tarjetas en un collage, con sus regiones declaradas y auto-verificadas por la etiqueta y el número que deben caer dentro. Cada bloque arranca en su línea de hora y toma lo que le sigue en la misma columna"

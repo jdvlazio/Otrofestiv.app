@@ -18,6 +18,10 @@
    "que": "CUARTA lectura: las 10 láminas de «Selección Oficial» en Instagram → el DIRECTOR de las 48 obras, que el PDF no publica, y el cruce que destapó las 2 seleccionadas que el programa no lista"
   },
   {
+   "cmd": "python3 pipeline/conexcine-2026-fichas-tmdb.py",
+   "que": "TMDB por TÍTULO IDÉNTICO + DIRECTOR (lib.ficha_tmdb), que es el candado que corresponde: el PDF no publica ni año ni duración de ningún corto, así que el de enriquecer.py no puede abrirse nunca. 35 de 38 con ficha, 34 con póster; cuatro llevan en TMDB una película del mismo título con otro director y quedan declaradas una por una"
+  },
+  {
    "cmd": "python3 pipeline/conexcine-2026-crudo.py",
    "que": "parrilla + catálogo + directores de IG → crudo"
   },
