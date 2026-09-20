@@ -992,13 +992,23 @@ export const FESTIVAL_CONFIG={
     shortName:'CONEXCINE',tagline:'Festival Audiovisual FEDECAJAS',
     city:'Cúcuta',country:'CO',
     dates:'23–26 SEP',dates_en:'SEP 23–26',year:2026,timezoneOffset:'-05:00',
-    // AFICHE PROVISIONAL, y dicho para que no se pierda: el festival NO publica
-    // uno vertical. Su identidad está en la portada del PDF de programación,
-    // que es APAISADA (949×697): estirarla a 2:3 la comprimiría un 51%, que es
-    // el error cometido con Villa del Cine. Lo único vertical que publican son
-    // sus tarjetas de Instagram a 4:5, que se comprimen un 17% —dentro de lo
-    // aprobado— pero son pieza de anuncio, no afiche. Pedido al festival.
-    keyArt:'/assets/keyart/conexcine2026-v2.jpg',
+    // EL AFICHE OFICIAL, que sí existe: lo encontró Juan en su web
+    // (wp-content/uploads/2026/07/SOCIAL_MEDIA_Reel-scaled.jpg). Yo había
+    // buscado en el PDF —cuya portada es apaisada— y en Instagram, y me quedé
+    // con una tarjeta de anuncio que decía «Desliza →».
+    //
+    // SE LE QUITA TODO EL BLANCO (decisión de Juan, 20 sep): la caja de logos
+    // del pie Y el margen crema que el export para redes deja alrededor. Lo
+    // que queda es el rectángulo azul del afiche, medido pixel a pixel:
+    // (66,66)→(1373,2134) = 1308×2069. Deforma un 5,2% al llevarlo a 2:3;
+    // entero deformaba 15,6%. La card se llena de arte, sin marco.
+    //
+    // Y SÍ, ES UN RECORTE, que la regla del splash prohíbe. La prohibición es
+    // contra recortar EL AFICHE para que quepa —el recorte automático de
+    // `object-fit:cover`, que a Tercer Tiempo le comió un quinto—. Acá el
+    // corte es deliberado, medido, y cae en el borde del arte: no se pierde
+    // ni un pixel de ilustración. Decisión de Juan.
+    keyArt:'/assets/keyart/conexcine2026-v3.jpg',
     storageKey:'conexcine2026_',
     festivalStartStr:'2026-09-23T00:00:00',festivalEndStr:'2026-09-26T23:59:00',
     prioLimit:3,ticketing_model:'mixed',
