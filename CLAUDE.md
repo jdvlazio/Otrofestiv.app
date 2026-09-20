@@ -98,6 +98,10 @@ deliberada existe la etiqueta `frontera-ok`.
 | `tiff2026` | TIFF | Toronto | 10–20 SEP | **Próximo / activo** |
 | `ficmontanas2026` | Ficmontañas | Salento | JUL 1–5 | Archivado |
 | `siembrafest2026` | SiembraFest | Sasaima y Villeta | 9–18 SEP | Recién terminado |
+<<<<<<< HEAD
+=======
+| `conexcine2026` | CONEXCINE | Cúcuta | 23–26 SEP | **Próximo / activo** |
+>>>>>>> 3ab22540 (feat(conexcine): 3° CONEXCINE — Cúcuta, 23–26 SEP)
 | `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | **Próximo / activo** |
 
 ### Features activas (desde `.specify/features/`)

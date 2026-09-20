@@ -1,0 +1,144 @@
+{
+ "_nota": "3° CONEXCINE — Festival Audiovisual FEDECAJAS, Cúcuta, 23–26 SEP 2026. Montado desde el PDF oficial de programación (4 páginas, Drive), leído TRES veces con herramientas distintas (poppler, MuPDF y el OCR de macOS sobre los píxeles) y cruzado una CUARTA vez contra las láminas de Instagram, que es otra fuente del mismo festival y la única que puede decir que al PDF le falta algo.",
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py conexcine-2026",
+   "que": "el issue de radar #719 como fuente versionada, y cruza sus salas contra las nuestras"
+  },
+  {
+   "cmd": "python3 pipeline/conexcine-2026-programa-pdf.py",
+   "que": "página 2 del PDF → las 13 funciones con día, hora de inicio y de fin"
+  },
+  {
+   "cmd": "python3 pipeline/conexcine-2026-catalogo-pdf.py",
+   "que": "página 3 del PDF → 46 cortos por programa, con su departamento, y los 3 largos con su duración"
+  },
+  {
+   "cmd": "python3 pipeline/conexcine-2026-ig-contraste.py",
+   "que": "CUARTA lectura: las 10 láminas de «Selección Oficial» en Instagram → el DIRECTOR de las 48 obras, que el PDF no publica, y el cruce que destapó las 2 seleccionadas que el programa no lista"
+  },
+  {
+   "cmd": "python3 pipeline/conexcine-2026-crudo.py",
+   "que": "parrilla + catálogo + directores de IG → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py conexcine-2026 --centro 7.8939,-72.5078 --ciudad \"Cúcuta, Norte de Santander\"",
+   "que": "las 2 sedes"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py conexcine-2026 --posters",
+   "que": "TMDB verificado por director + Letterboxd + pósters. Los 3 largos colombianos sí están en TMDB; de los 46 cortos, casi ninguno — circulan por festivales"
+  },
+  {
+   "cmd": "python3 pipeline/conexcine-2026-crudo.py",
+   "que": "EL CRUDO OTRA VEZ, y no es un descuido: el enricher necesita el crudo para saber qué obras buscar, y el crudo necesita lo que el enricher produjo (el póster ya bajado a assets/). Corriéndolo una sola vez, los tres largos se publicaban con la URL remota de TMDB y los archivos quedaban huérfanos en el repo"
+  },
+  {
+   "cmd": "python3 pipeline/conexcine-2026-verificar.py",
+   "que": "prueba sobre el crudo armado: día/hora/sede en todas, sin solapes de sala no declarados, y que todo lo que el catálogo lista tenga dónde verse"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py conexcine-2026",
+   "que": "crudo + plan → staging/conexcine-2026-build.json"
+  },
+  {
+   "cmd": "/tmp/vdcenv/bin/python pipeline/conexcine-2026-contraste.py",
+   "que": "SEGUNDA y TERCERA lectura del PDF (MuPDF + OCR de los píxeles) contra lo extraído. Necesita PyMuPDF: python3 -m venv /tmp/vdcenv && /tmp/vdcenv/bin/pip install pymupdf"
+  }
+ ],
+ "festival": {
+  "radar": 719,
+  "crudo": "festivals/staging/conexcine-2026-crudo.json",
+  "geo": "festivals/staging/conexcine-2026-venues-geo.json",
+  "sedes": {
+   "Biblioteca Pública Julio Pérez Ferrero": [
+    "Biblioteca Pública Julio Pérez Ferrero - Cúcuta",
+    ""
+   ],
+   "Auditorio TORRE DEL RELOJ": [
+    "Auditorio Torre del Reloj - Cúcuta",
+    ""
+   ]
+  },
+  "_por_que_sedes": "El PDF solo nombra una sede, «Auditorio TORRE DEL RELOJ», y solo para el conversatorio del jueves. La sede de TODO lo demás la dice el propio festival en Instagram, cuatro veces y en dos cuentas: «📍 Biblioteca Pública Julio Pérez Ferrero · 📅 23 al 26 de septiembre» (@fedecajas DdeEWMmjULL y DdWWCJijPdT, @comfanorte DdRtrPSppYy y DdHOuLONHJb), y además pintada en las láminas. No es un supuesto nuestro.",
+  "secciones": {
+   "Competencia Adultos": {
+    "emoji": "🏆",
+    "en": "Adults Competition",
+    "archetype": "Competencia",
+    "order": 1
+   },
+   "Competencia Juvenil": {
+    "emoji": "🌱",
+    "en": "Youth Competition",
+    "archetype": "Competencia",
+    "order": 2
+   },
+   "Competencia En(Foco) Santanderes": {
+    "emoji": "🗺️",
+    "en": "En(Foco) Santanderes Competition",
+    "archetype": "Competencia",
+    "order": 3
+   },
+   "Proyecciones Especiales": {
+    "emoji": "🎞️",
+    "en": "Special Screenings",
+    "archetype": "Muestra / País",
+    "order": 4
+   },
+   "Conversatorios": {
+    "emoji": "🎙️",
+    "en": "Talks",
+    "archetype": "Charlas / Industria",
+    "order": 5
+   },
+   "Actividades Culturales": {
+    "emoji": "🎉",
+    "en": "Cultural Activities",
+    "archetype": "Especiales / Eventos",
+    "order": 6
+   }
+  },
+  "acceso_por_defecto": {
+   "is_free": true,
+   "_por_que": "LO DICE EL FESTIVAL, no nosotros. El PDF de programación lo imprime en su cabecera: «ENTRADA LIBRE · Ingreso hasta completar aforo · Nos reservamos el derecho de admisión». Y lo repiten cuatro posts de Instagram de dos cuentas distintas: «🎟️ Entrada libre del 23 al 26 de septiembre». A diferencia de otros montajes, acá no hay supuesto que declarar."
+  },
+  "name": "CONEXCINE",
+  "fullName": "CONEXCINE — Festival Audiovisual FEDECAJAS",
+  "displayName": "CONEXCINE",
+  "shortName": "CONEXCINE",
+  "tagline": "Festival Audiovisual FEDECAJAS",
+  "city": "Cúcuta",
+  "country": "CO",
+  "dates": "23–26 SEP",
+  "dates_en": "SEP 23–26",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "conexcine2026_",
+  "festivalStartStr": "2026-09-23T00:00:00",
+  "festivalEndStr": "2026-09-26T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "ticketing_model": "mixed",
+  "prioLimit": 3,
+  "mes_es": "septiembre",
+  "dias_vacios": [],
+  "radar_salas_fuera": {
+   "Auditorio Comfanorte": "sede del Seminario de Educación y Cultura (24 y 25 sep), que NO está en el PDF de programación y cuya convocatoria es cerrada: «dirigido a directores administrativos de las Cajas de Compensación Familiar; jefes y equipos de educación y cultura; rectores, coordinadores académicos y docentes». No es programación pública. Preguntado al festival; si responde que es abierto, entra con su sede."
+  },
+  "enriquecido": "festivals/staging/conexcine-2026-enriquecido.json"
+ },
+ "_preguntas_al_festival": [
+  "Instagram anuncia 48 cortos en Selección Oficial y el PDF de programación lista 46: faltan «El retorno de Guayalak» (Dir. David Sandoval, Quindío, Adultos) y «Del otro lado del solar» (Dir. Kenia Alejandra Carreño Plata y Hannah Valentina Moreno Luengas, Santander, Juvenil). ¿En qué programa se proyectan?",
+  "La Competencia Virtual: el PDF dice «disponible del 11 al 25 de septiembre» y la lámina de Instagram dice «del 11 al 26». ¿Cuál es?",
+  "El banner de fedecajas.com dice que CONEXCINE «llega a Norte de Santander con actividades en Pamplona y Cúcuta», pero la programación es toda de Cúcuta. ¿Hay funciones en Pamplona?",
+  "El Seminario de Educación y Cultura (24 y 25 sep, Auditorio Comfanorte) no está en el PDF y su convocatoria es cerrada. ¿Es abierto al público?"
+ ],
+ "_no_se_publica": {
+  "Competencia Virtual (8 cortos)": "no es una función: son ocho cortos en el canal de YouTube de FEDECAJAS para el Premio del Público, sin día, sin hora y sin sede. Se extraen y quedan en el catálogo.",
+  "Seminario de Educación y Cultura (24 y 25 sep)": "no está en el PDF de programación y su convocatoria es cerrada —«dirigido a directores administrativos de las cajas, rectores, coordinadores académicos y docentes»—. Preguntado al festival.",
+  "EVENTO RECREACIÓN COMFANORTE": "el PDF lo rotula en la tarjeta del sábado pero NO le pone hora. Sin hora no es una función."
+ },
+ "_fuentes_versionadas": {
+  "festivals/staging/conexcine-2026-radar.json": "el volcado del issue de radar #719, que escribe y RELEE pipeline/radar.py: el cruce de salas lee el archivo versionado, no lo que acaba de bajar, para que el paso se pueda repetir sin red y la fuente sea de verdad el archivo y no una copia de cortesía."
+ }
+}

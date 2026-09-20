@@ -1,0 +1,631 @@
+{
+ "_provenance": {
+  "fuente": "Programación Oficial CONEXCINE 2026 (PDF, páginas 2 y 3) + las láminas de «Selección Oficial» en Instagram",
+  "capturado": "2026-09-19",
+  "que_aporta": "13 funciones con día, hora y sede; los cortos de cada programa con su departamento; y el director de cada obra",
+  "url": "https://www.fedecajas.com/conexcine/",
+  "metodo": "el PDF leído tres veces con herramientas distintas (poppler, MuPDF y el OCR del sistema sobre los píxeles) y cruzado contra Instagram, que es la que aporta los directores"
+ },
+ "funciones": [
+  {
+   "dia": "2026-09-23",
+   "hora": "08:00",
+   "sede": "Biblioteca Pública Julio Pérez Ferrero",
+   "duracion_min": 120,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 1: HiSTORiAS QUE NOS ENCUENTRAN Inauguración Festival CONEXCINE",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "PROGRAMA 1: Aventuras mágicas y amistades inolvidables",
+   "seccion": "Competencia Adultos",
+   "is_cortos": true,
+   "obras": [
+    {
+     "titulo": "El Chucur",
+     "director": "Jairo Tarapuez Jaramillo",
+     "pais": "Colombia",
+     "_departamento": "Nariño",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Hilo al cielo",
+     "director": "Manuel José Martínez",
+     "pais": "Colombia",
+     "_departamento": "Córdoba",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Ángeles Somos",
+     "director": "Kizzis Ramirez",
+     "pais": "Colombia",
+     "_departamento": "Bolívar",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Epifanía",
+     "director": "Mila Useche",
+     "pais": "Colombia",
+     "_departamento": "Boyacá",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Los años del conejo",
+     "director": "Raquel Tamayo",
+     "pais": "Colombia",
+     "_departamento": "Antioquia",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-23",
+   "hora": "10:00",
+   "sede": "Biblioteca Pública Julio Pérez Ferrero",
+   "duracion_min": 120,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 1: HiSTORiAS QUE NOS ENCUENTRAN Inauguración Festival CONEXCINE",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "PROGRAMA 3: Horizontes que florecen",
+   "seccion": "Competencia Adultos",
+   "is_cortos": true,
+   "obras": [
+    {
+     "titulo": "La Gallina Saraviada",
+     "director": "Ingrid Paola Bonilla Rodriguez",
+     "pais": "Colombia",
+     "_departamento": "Risaralda",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Lovavieja",
+     "director": "Cesar Tapia / Colectivo Barranco de Loba",
+     "pais": "Colombia",
+     "_departamento": "Bolívar",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Mi casa es su casa",
+     "director": "Joan Mayorga",
+     "pais": "Colombia",
+     "_departamento": "Antioquia",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "La Esperanza",
+     "director": "Andrés Flechas",
+     "pais": "Colombia",
+     "_departamento": "Norte de Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Cartas a la Tierra",
+     "director": "Erika Andrea David",
+     "pais": "Colombia",
+     "_departamento": "Cundinamarca",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Origen",
+     "director": "Halley Rolando Alvarez Moreno",
+     "pais": "Colombia",
+     "_departamento": "Boyacá",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-23",
+   "hora": "17:30",
+   "sede": "Biblioteca Pública Julio Pérez Ferrero",
+   "duracion_min": 150,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 1: HiSTORiAS QUE NOS ENCUENTRAN Inauguración Festival CONEXCINE",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "Inauguración 3° CONEXCINE",
+   "seccion": "Competencia En(Foco) Santanderes",
+   "tipo": "evento",
+   "event_kind": "apertura",
+   "is_cortos": true,
+   "obras": [
+    {
+     "titulo": "Promesa",
+     "director": "Yosman Serrano",
+     "pais": "Colombia",
+     "_departamento": "Norte de Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Resistencia civil: entre la tierra y la memoria",
+     "director": "Heiny Camila Gómez",
+     "pais": "Colombia",
+     "_departamento": "Norte de Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "El Mejor Chocolate del Mundo",
+     "director": "John Agudelo",
+     "pais": "Colombia",
+     "_departamento": "Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Escisión de la Cigarra",
+     "director": "Absalon Rincón",
+     "pais": "Colombia",
+     "_departamento": "Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Memorias de un renacer",
+     "director": "Stephania Solano López",
+     "pais": "Colombia",
+     "_departamento": "Norte de Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "La guerra de los tomates",
+     "director": "Juan Carlos Gutierrez",
+     "pais": "Colombia",
+     "_departamento": "Norte de Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-24",
+   "hora": "08:00",
+   "sede": "Biblioteca Pública Julio Pérez Ferrero",
+   "duracion_min": 120,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 2: CONVERSACIONES QUE INSPIRAN Charla con invitados",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "PROGRAMA 1: Voces, miradas y paisajes propios",
+   "seccion": "Competencia Juvenil",
+   "is_cortos": true,
+   "obras": [
+    {
+     "titulo": "Crónicas de un Viaje",
+     "director": "Santiago Parra Perez",
+     "pais": "Colombia",
+     "_departamento": "Norte de Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "La Sayona",
+     "director": "Sharon Vega",
+     "pais": "Colombia",
+     "_departamento": "Vichada",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Bullerengue: ritmo que sigue sonando",
+     "director": "Ludysney Mosquera Quintana",
+     "pais": "Colombia",
+     "_departamento": "Antioquia",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Todavía aquí",
+     "director": "Jhoan Steban Molina Rodríguez",
+     "pais": "Colombia",
+     "_departamento": "Norte de Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-24",
+   "hora": "10:00",
+   "sede": "Biblioteca Pública Julio Pérez Ferrero",
+   "duracion_min": 120,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 2: CONVERSACIONES QUE INSPIRAN Charla con invitados",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "PROGRAMA 2: Entre el mar y la luna",
+   "seccion": "Competencia Adultos",
+   "is_cortos": true,
+   "obras": [
+    {
+     "titulo": "Reflejos",
+     "director": "María Nicol Contreras Barbosa",
+     "pais": "Colombia",
+     "_departamento": "Tolima",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Por quien derraman las lágrimas",
+     "director": "Diego Alejandro Ruiz",
+     "pais": "Colombia",
+     "_departamento": "Valle del Cauca",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Kanekalon",
+     "director": "Sara J. Asprilla",
+     "pais": "Colombia",
+     "_departamento": "Chocó",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Antes era Mar",
+     "director": "Jerson Ruiz Lizcano",
+     "pais": "Colombia",
+     "_departamento": "Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "La calle del amor",
+     "director": "Ramón Contreras",
+     "pais": "Colombia",
+     "_departamento": "Norte de Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "También nosotras",
+     "director": "Lady Vásquez - Colectivo Inunku",
+     "pais": "Colombia",
+     "_departamento": "Nariño",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-24",
+   "hora": "14:30",
+   "sede": "Auditorio TORRE DEL RELOJ",
+   "duracion_min": 60,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 2: CONVERSACIONES QUE INSPIRAN Charla con invitados",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "Conversatorio sobre formulación de proyectos para convocatorias, mercados y festivales",
+   "seccion": "Conversatorios",
+   "tipo": "evento",
+   "event_kind": "charla"
+  },
+  {
+   "dia": "2026-09-24",
+   "hora": "16:00",
+   "sede": "Biblioteca Pública Julio Pérez Ferrero",
+   "duracion_min": 180,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 2: CONVERSACIONES QUE INSPIRAN Charla con invitados",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "El Juego de la Vida",
+   "seccion": "Proyecciones Especiales",
+   "pais": "Colombia",
+   "duracion_obra": 95,
+   "director": "Mario Andrés Ruiz",
+   "poster": "/assets/conexcine-2026/el-juego-de-la-vida.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "dia": "2026-09-25",
+   "hora": "08:00",
+   "sede": "Biblioteca Pública Julio Pérez Ferrero",
+   "duracion_min": 120,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 3: MiRADAS QUE NOS CONECTAN",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "PROGRAMA 2: Camino de historias vivas",
+   "seccion": "Competencia Juvenil",
+   "is_cortos": true,
+   "obras": [
+    {
+     "titulo": "Las voces del Catatumbo",
+     "director": "Nayelit Eliana Tamara",
+     "pais": "Colombia",
+     "_departamento": "Norte de Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "El bosque maldito",
+     "director": "Charith Dayana Ruiz",
+     "pais": "Colombia",
+     "_departamento": "Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Cuando el viento viejo baila",
+     "director": "Deiris Arrieta",
+     "pais": "Colombia",
+     "_departamento": "Magdalena",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Regresar para encontrarme",
+     "director": "Ayelen Sophie Salazar",
+     "pais": "Colombia",
+     "_departamento": "Meta",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "La última estrella",
+     "director": "Tania Garay",
+     "pais": "Colombia",
+     "_departamento": "Norte de Santander",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-25",
+   "hora": "10:00",
+   "sede": "Biblioteca Pública Julio Pérez Ferrero",
+   "duracion_min": 120,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 3: MiRADAS QUE NOS CONECTAN",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "PROGRAMA 4: Transitando del norte al sur",
+   "seccion": "Competencia Adultos",
+   "is_cortos": true,
+   "obras": [
+    {
+     "titulo": "Kuagro",
+     "director": "Diego Caceres",
+     "pais": "Colombia",
+     "_departamento": "Bolívar",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Lo que vimos desde arriba",
+     "director": "Zaira Alejandra Gomez Rojas",
+     "pais": "Colombia",
+     "_departamento": "Bogotá D.C.",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Con la Mano Arriba",
+     "director": "Miguel Angel Ordoñez",
+     "pais": "Colombia",
+     "_departamento": "Atlántico",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "200 años después: Ecos del pasado",
+     "director": "Joan Sebastian Rodríguez",
+     "pais": "Colombia",
+     "_departamento": "Cundinamarca",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "¡Corroncho, y qué!",
+     "director": "Elizabeth Gaviria",
+     "pais": "Colombia",
+     "_departamento": "Atlántico",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    },
+    {
+     "titulo": "Alma Sucreña",
+     "director": "Greg Mendez / Prod. Fabian Patermina",
+     "pais": "Colombia",
+     "_departamento": "Sucre",
+     "_src": {
+      "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
+      "date": "2026-09-19"
+     }
+    }
+   ]
+  },
+  {
+   "dia": "2026-09-25",
+   "hora": "17:30",
+   "sede": "Biblioteca Pública Julio Pérez Ferrero",
+   "duracion_min": 150,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 3: MiRADAS QUE NOS CONECTAN",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "Adiós al Amigo",
+   "seccion": "Proyecciones Especiales",
+   "pais": "Colombia",
+   "duracion_obra": 118,
+   "director": "Iván D. Gaona",
+   "poster": "/assets/conexcine-2026/adios-al-amigo.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "dia": "2026-09-26",
+   "hora": "10:00",
+   "sede": "Biblioteca Pública Julio Pérez Ferrero",
+   "duracion_min": 135,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 4: INFiNiTOS PAiSAJES, HiSTORiAS QUE NOS HACEN PAÍS Premiación y Clausura CONEXCINE Comparte en familia",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "MU-KI-RA",
+   "seccion": "Proyecciones Especiales",
+   "pais": "Colombia",
+   "duracion_obra": 81,
+   "director": "Estefanía Piñeres",
+   "poster": "/assets/conexcine-2026/mu-ki-ra.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "dia": "2026-09-26",
+   "hora": "15:00",
+   "sede": "Biblioteca Pública Julio Pérez Ferrero",
+   "duracion_min": 180,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 4: INFiNiTOS PAiSAJES, HiSTORiAS QUE NOS HACEN PAÍS Premiación y Clausura CONEXCINE Comparte en familia",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "Exposición Proyectarte",
+   "seccion": "Actividades Culturales",
+   "tipo": "evento",
+   "event_kind": "experiencia"
+  },
+  {
+   "dia": "2026-09-26",
+   "hora": "16:30",
+   "sede": "Biblioteca Pública Julio Pérez Ferrero",
+   "duracion_min": 150,
+   "is_free": true,
+   "acceso": "Entrada libre",
+   "_jornada": "DÍA 4: INFiNiTOS PAiSAJES, HiSTORiAS QUE NOS HACEN PAÍS Premiación y Clausura CONEXCINE Comparte en familia",
+   "_src": {
+    "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
+    "date": "2026-09-19"
+   },
+   "titulo": "Ceremonia de Clausura",
+   "seccion": "Actividades Culturales",
+   "tipo": "evento",
+   "event_kind": "clausura"
+  }
+ ],
+ "avisos": []
+}
