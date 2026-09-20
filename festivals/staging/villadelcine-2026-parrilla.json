@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF de 67 páginas) — botón PROGRAMACIÓN de villadelcine.com, subido el 18 sep 2026",
-  "capturado": "2026-09-19",
+  "capturado": "2026-09-20",
   "que_aporta": "la parrilla de los 4 días (día, hora de inicio y sede de cada bloque), la ficha de cada obra agrupada por programa, y la Ruta Académica",
   "url": "https://villadelcine.com/wp-content/uploads/2026/09/Programacion-caminos-del-tiempo-2026_compressed.pdf",
   "metodo": "el PDF trae capa de texto; se lee con pdftotext -bbox-layout porque en la retícula la columna es la SEDE y la fila la HORA: sin las cajas no se distingue el 1er piso del 2do en la misma sede. La hora de FIN no se deduce del alto del texto (va centrado en la celda): la duración sale de la ficha de cada obra"

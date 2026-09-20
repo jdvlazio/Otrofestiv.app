@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF) + las fichas de obra de villadelcine.com",
-  "capturado": "2026-09-19",
+  "capturado": "2026-09-20",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "acceso_por_defecto": {
@@ -469,7 +469,9 @@
    "film_list": [
     {
      "title": "Sierra: El álbum mortuorio",
-     "director": "Carlos Ortiz Alarcón 1:30:00 | Colombia",
+     "director": "Carlos Ortiz Alarcón",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "90 min",
      "poster": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg",
      "posterSource": "oficial",
@@ -2313,6 +2315,7 @@
    "type": "film",
    "section": "🎞️ Exhibición Especial",
    "director": "Ciro Durán",
+   "year": 1968,
    "country": "Colombia, Venezuela",
    "flags": "🇨🇴🇻🇪",
    "duration": "75 min",
@@ -2323,17 +2326,23 @@
    "has_qa": false,
    "synopsis": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia",
    "synopsis_lang": "es",
+   "poster": "/assets/villadelcine-2026/aquileo-venganza.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p10",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "aquileo-venganza",
+   "tmdb_id": 763505,
+   "synopsis_en": "In the begining of 20th century, after the \"thousand days war\", the country was devastated. Gunmen to the service of land lords attack small land owners to get their lands. Aquileo is the only one who survives, and promises to take revenge on the killers.",
+   "genre": "Western"
   },
   {
    "title": "Tributo a Aquileo Venganza — Joyce Ventura",
    "type": "event",
    "section": "🎞️ Exhibición Especial",
-   "duration": "15 min",
+   "duration": "70 min",
    "day": "2026-09-26",
    "time": "18:00",
    "day_order": 3,
@@ -2395,7 +2404,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-19T23:05:18",
+  "fecha": "2026-09-20T06:22:25",
   "plan_sha": "a33a8c35b79230e1",
   "paso": 14,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"

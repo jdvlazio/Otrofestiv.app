@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF) + las fichas de obra de villadelcine.com",
-  "capturado": "2026-09-19",
+  "capturado": "2026-09-20",
   "que_aporta": "las funciones del festival con día, hora, sede, sala, sección y la lista de obras de cada programa de cortos",
   "url": "https://villadelcine.com/wp-content/uploads/2026/09/Programacion-caminos-del-tiempo-2026_compressed.pdf",
   "metodo": "la duración publicada es la REAL: cuando las obras suman más que la casilla dibujada, manda la suma (regla de Juan, 19 sep 2026)"
@@ -288,8 +288,9 @@
    "film_list": [
     {
      "titulo": "Sierra: El álbum mortuorio",
-     "director": "Carlos Ortiz Alarcón 1:30:00 | Colombia",
+     "director": "Carlos Ortiz Alarcón",
      "duracion_min": 90,
+     "pais": "Colombia",
      "sinopsis": "La desaparición de Natalia en Pueblo Blanco lleva a la policía a descubrir un sórdido bar clandestino. Cuando dos hermanas explotadas en el lugar deciden ayudar a un extraño en el bosque, desatan una sangrienta ola de rituales a manos de una oscura secta que terminará consumiendo a todo el pueblo.",
      "sinopsis_en": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad… alguna vez también pidió ayuda.",
      "categoria": "Mejor Ópera Prima Nacional",
@@ -1093,9 +1094,7 @@
    "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
    "sala": "Auditorio",
    "duracion_min": 135,
-   "_obras_sin_duracion": [
-    "Aquileo Venganza"
-   ],
+   "duracion_obra": 70,
    "seccion": "Exhibición Especial",
    "is_free": true,
    "acceso": "Entrada libre",
@@ -1105,8 +1104,7 @@
     "date": "2026-09-19"
    },
    "tipo": "charla",
-   "event_kind": "charla",
-   "_pais_fuente": "coproducción de 1968, el primer western colombiano — https://en.wikipedia.org/wiki/Aquileo_Venganza y el perfil de Ciro Durán en Proimágenes Colombia"
+   "event_kind": "charla"
   },
   {
    "titulo": "PLANETA",
@@ -2124,9 +2122,7 @@
    "hora": "16:45",
    "sede": "Casa San Pedro Campestre - Villa de Leyva",
    "duracion_min": 75,
-   "_obras_sin_duracion": [
-    "Aquileo Venganza"
-   ],
+   "duracion_obra": 70,
    "seccion": "Exhibición Especial",
    "is_free": true,
    "acceso": "Entrada libre",
@@ -2137,18 +2133,22 @@
    },
    "director": "Ciro Durán",
    "pais": "Colombia, Venezuela",
-   "_pais_fuente": "coproducción de 1968, el primer western colombiano — https://en.wikipedia.org/wiki/Aquileo_Venganza y el perfil de Ciro Durán en Proimágenes Colombia",
-   "sinopsis": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia"
+   "genero": "Western",
+   "anio": 1968,
+   "sinopsis": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia",
+   "sinopsis_en": "In the begining of 20th century, after the \"thousand days war\", the country was devastated. Gunmen to the service of land lords attack small land owners to get their lands. Aquileo is the only one who survives, and promises to take revenge on the killers.",
+   "tmdb_id": 763505,
+   "poster": "/assets/villadelcine-2026/aquileo-venganza.jpg",
+   "posterSource": "oficial",
+   "lbSlug": "aquileo-venganza"
   },
   {
    "titulo": "Tributo a Aquileo Venganza — Joyce Ventura",
    "dia": "2026-09-26",
    "hora": "18:00",
    "sede": "Casa San Pedro Campestre - Villa de Leyva",
-   "duracion_min": 15,
-   "_obras_sin_duracion": [
-    "Aquileo Venganza"
-   ],
+   "duracion_min": 70,
+   "_duracion_dibujada": 15,
    "seccion": "Exhibición Especial",
    "is_free": true,
    "acceso": "Entrada libre",
@@ -2159,7 +2159,7 @@
    },
    "tipo": "evento",
    "event_kind": "encuentro",
-   "_pais_fuente": "coproducción de 1968, el primer western colombiano — https://en.wikipedia.org/wiki/Aquileo_Venganza y el perfil de Ciro Durán en Proimágenes Colombia"
+   "duracion_obra": 70
   },
   {
    "titulo": "Ceremonia TAMSA — Premiación y clausura",

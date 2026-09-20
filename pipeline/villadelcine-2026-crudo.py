@@ -151,6 +151,27 @@ PAIS_EXTERNO = {
         'Durán en Proimágenes Colombia'),
 }
 
+# LA FICHA QUE NINGUNA DE LAS CUATRO FUENTES DA, buscada a mano y con su
+# testigo. Igual que PAIS_EXTERNO: no es deducción, es una página que lo
+# afirma. El enricher no puede traerla sola —su candado compara la duración
+# con la de la CASILLA, y 70 min de película en una casilla de 75 no pasan el
+# margen de ±3— así que se declara.
+FICHA_EXTERNA = {
+    'aquileo venganza': {
+        'anio': 1968,
+        'duracion_obra': 70,
+        'poster': '/assets/villadelcine-2026/aquileo-venganza.jpg',
+        'posterSource': 'oficial',
+        'tmdb_id': 763505,
+        '_fuente': 'Proimágenes Colombia, ficha 70 '
+                   '(proimagenescolombia.com/…/pelicula_plantilla.php?id_pelicula=70): '
+                   'el afiche de prensa de 1968 con título y reparto. El año, la '
+                   'duración y el id de TMDB se comprobaron contra la ficha 763505, '
+                   'que coincide en título exacto, 1968, Ciro Durán y '
+                   'Colombia–Venezuela — cuatro campos, no una corazonada.',
+    },
+}
+
 NO_PUBLICAR = {
     'el fosil magico': 'solo está en la retícula: sin ficha, sin sección y sin país '
                        'en ninguna de las cuatro fuentes. Preguntado al festival.',
@@ -244,6 +265,7 @@ def main():
         w, t, i = de_web(o['titulo']), tm.get(k, {}), ig.get(k, {})
         pf = de_pos(o['titulo'])
         pl = de_tmdb_local(o['titulo']) if t.get('poster_path') else ''
+        fx = FICHA_EXTERNA.get(k, {})
         return {
             'duracion_min': o.get('duracion_min') or w.get('duracion_min')
                             or t.get('duracion_tmdb'),
@@ -263,6 +285,7 @@ def main():
                {'poster': pf['poster'], 'posterSource': 'oficial'}
                if pf.get('poster') else {}),
             **({'lbSlug': t['lbSlug']} if t.get('lbSlug') else {}),
+            **{kk: vv for kk, vv in fx.items() if not kk.startswith('_')},
         }
 
     # las obras, agrupadas por programa

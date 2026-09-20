@@ -226,6 +226,18 @@ def main():
         for n, i in enumerate(idx):
             _m = RE_DIR.match(ls[i])
             rol, director = _m.group(1), _m.group(2).strip()
+            # LA LÍNEA DE CRÉDITO CON LOS METADATOS PEGADOS. La plantilla los
+            # pone en renglones distintos, salvo en «SIERRA: EL ÁLBUM
+            # MORTUORIO», donde el PDF imprime «Dir. Carlos Ortiz Alarcón
+            # 1:30:00 | Colombia» de corrido. Quedándose con todo lo que sigue
+            # a «Dir.» se publicaba un director llamado «Carlos Ortiz Alarcón
+            # 1:30:00 | Colombia» y se perdían LOS DOS datos: los 90 minutos y
+            # el país. Se corta por el metraje, que es lo único que no puede
+            # ser parte de un nombre.
+            _meta = re.search(r'\s+(\d{1,2}:\d{2}:\d{2}.*)$', director)
+            cola = ''
+            if _meta:
+                director, cola = director[:_meta.start()].strip(), _meta.group(1)
             crudo_t = ls[i - 1].strip() if i else ''
             titulo = a_titulo(crudo_t, natural.get(
                 re.sub(r'[^a-z0-9]+', '', _sinacento(crudo_t))))
@@ -238,6 +250,9 @@ def main():
                     ls[idx[n + 1] - 2].strip().upper() in FORMATOS:
                 fin = idx[n + 1] - 2
             cuerpo = ls[i + 1:fin]
+            # lo que venía pegado al crédito se lee como si fuera su renglón
+            if cola:
+                cuerpo = [cola] + cuerpo
             dur_min, pais, genero = None, '', ''
             if cuerpo:
                 m = RE_META.match(cuerpo[0])

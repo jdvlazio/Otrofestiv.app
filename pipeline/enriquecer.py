@@ -24,6 +24,7 @@ Esc.  festivals/staging/<id>-enriquecido.json
 
 Requiere TMDB_API_KEY en el entorno.
 """
+import datetime
 import json, os, re, subprocess, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -149,16 +150,66 @@ def main():
             # verifica es su propia ficha (director, año, duración)
             obras.setdefault(t, _para_verificar({**o, 'titulo': t}))
 
-    ok, sin = {}, []
+    # ── LA CACHÉ ────────────────────────────────────────────────────────────
+    # Sondear TMDB cuesta. Medido en Villa del Cine: 111 obras a ~6 s por
+    # llamada son 40 minutos, y el paso se re-corre en cada pasada del plan
+    # aunque no haya cambiado nada. Con caché, la misma corrida da el MISMO
+    # resultado en menos de un segundo.
+    #
+    # DOS REGLAS, y la segunda es la que importa:
+    #   · un ACIERTO no caduca — el tmdb_id de una obra es el que es;
+    #   · un FALLO caduca a los 7 días — TMDB gana fichas todas las semanas, y
+    #     una caché que recuerde «no está» para siempre convierte un paso de
+    #     verificación en un paso que dejó de verificar.
+    # La clave es TÍTULO + DIRECTOR: si la fuente corrige cualquiera de los
+    # dos, la respuesta vieja deja de valer. `--refrescar` la ignora entera.
+    _hoy = datetime.date.today().isoformat()
+
+    def _vig(fecha, dias=7):
+        try:
+            return (datetime.date.today()
+                    - datetime.date.fromisoformat(fecha)).days < dias
+        except (TypeError, ValueError):
+            return False
+
+    prev_ok, prev_no = {}, {}
+    _dest = f'{ST}/{fid}-enriquecido.json'
+    if '--refrescar' not in sys.argv and os.path.exists(_dest):
+        _p = json.load(open(_dest, encoding='utf-8'))
+        prev_ok = {t: e for t, e in (_p.get('verificadas') or {}).items()
+                   if e.get('_sondeado')}
+        prev_no = {t: v for t, v in (_p.get('_sin_ficha_sondeo') or {}).items()
+                   if _vig(v.get('fecha'))}
+
+    ok, sin, sin_sondeo, reuso = {}, [], {}, 0
     for i, (t, f) in enumerate(sorted(obras.items()), 1):
+        _dir = (f.get('director') or '').strip()
+        c = prev_ok.get(t)
+        if c and c.get('_director') == _dir:
+            ok[t] = c
+            reuso += 1
+            print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} tmdb {c["tmdb_id"]} '
+                  f'(caché del {c["_sondeado"]})', flush=True)
+            continue
+        c = prev_no.get(t)
+        if c and c.get('director') == _dir:
+            sin.append(t)
+            sin_sondeo[t] = c
+            reuso += 1
+            print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} sin ficha '
+                  f'(caché del {c["fecha"]})', flush=True)
+            continue
+
         e = enriquecer_obra(f, key, alias)
         if e:
+            e['_director'], e['_sondeado'] = _dir, _hoy
             ok[t] = e
             print(f'[{i:3}/{len(obras)}] OK  {t[:46]:48} tmdb {e["tmdb_id"]}'
                   f'{"  lb✓" if e.get("lbSlug") else ""}'
                   f'{"  en✓" if e.get("title_en") else ""}', flush=True)
         else:
             sin.append(t)
+            sin_sondeo[t] = {'director': _dir, 'fecha': _hoy}
             print(f'[{i:3}/{len(obras)}] —   {t[:46]:48} sin ficha verificable', flush=True)
         time.sleep(0.2)
 
@@ -185,10 +236,14 @@ def main():
         # `verificadas`, así que el plan que lo declaraba no cumplía su contrato
         # y el enriquecido no llegaba a la app. Se escriben las dos formas.
         'obras': [{'titulo': t, **e} for t, e in ok.items()],
-        'verificadas': ok, 'sin_ficha': sorted(sin)},
+        'verificadas': ok, 'sin_ficha': sorted(sin),
+        # la fecha de cada sondeo fallido, que es lo que hace caducar la caché
+        '_sin_ficha_sondeo': sin_sondeo},
         open(f'{ST}/{fid}-enriquecido.json', 'w', encoding='utf-8'),
         ensure_ascii=False, indent=1)
-    print(f'\n{len(obras)} obras · verificadas {len(ok)} · sin ficha {len(sin)}')
+    print(f'\n{len(obras)} obras · verificadas {len(ok)} · sin ficha {len(sin)}'
+          f' · {reuso} de la caché, {len(obras) - reuso} sondeadas hoy'
+          f'{" (--refrescar)" if "--refrescar" in sys.argv else ""}')
     print(f'  con póster {sum(1 for e in ok.values() if e["poster_path"])} · '
           f'con lbSlug {sum(1 for e in ok.values() if e.get("lbSlug"))} · '
           f'con title_en {sum(1 for e in ok.values() if e.get("title_en"))}')

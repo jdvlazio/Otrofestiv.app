@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-19"
+  "capturado": "2026-09-20"
  },
  "obras": [
   {
@@ -18,7 +18,26 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Alivios",
    "title_en": "Reliefs",
-   "lbSlug": "reliefs-2025"
+   "lbSlug": "reliefs-2025",
+   "_director": "Juan Manuel Gonzalez Fernandez",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "Aquileo Venganza",
+   "tmdb_id": 763505,
+   "titulo_original": "Aquileo Venganza",
+   "poster_path": "/mXCGGdMME08txqo5PkYNuW95lUk.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the begining of 20th century, after the \"thousand days war\", the country was devastated. Gunmen to the service of land lords attack small land owners to get their lands. Aquileo is the only one who survives, and promises to take revenge on the killers.",
+   "genero": "Western",
+   "anio_tmdb": 1968,
+   "duracion_tmdb": 70,
+   "pais_tmdb": "Colombia, Venezuela",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Aquileo Venganza",
+   "lbSlug": "aquileo-venganza",
+   "_director": "Ciro Durán",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "Autokar",
@@ -33,7 +52,9 @@
    "pais_tmdb": "Belgium, France",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Autokar",
-   "lbSlug": "autokar"
+   "lbSlug": "autokar",
+   "_director": "Sylwia SZKIŁĄDŹ",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "Comparsa",
@@ -48,7 +69,9 @@
    "pais_tmdb": "Guatemala, United States of America",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Comparsa",
-   "lbSlug": "comparsa-2025"
+   "lbSlug": "comparsa-2025",
+   "_director": "Vickie Curtis y Doug Anderson",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "Con la mano arriba",
@@ -63,7 +86,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Con la mano arriba",
-   "lbSlug": "con-la-mano-arriba"
+   "lbSlug": "con-la-mano-arriba",
+   "_director": "Miguel Angel Ordoñez",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "I don't know what to do",
@@ -78,7 +103,9 @@
    "pais_tmdb": "Spain",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "I don't know what to do",
-   "lbSlug": "i-dont-know-what-to-do"
+   "lbSlug": "i-dont-know-what-to-do",
+   "_director": "Akshita Tyagi, Leyla Belarbi, Lia Macruz",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "LA PRESENCIA DE BLANCO",
@@ -93,7 +120,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "LA PRESENCIA DE BLANCO",
-   "lbSlug": "la-presencia-de-blanco"
+   "lbSlug": "la-presencia-de-blanco",
+   "_director": "Nestor Javier Serpa Perez",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "Llueve sobre Babel",
@@ -109,7 +138,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Llueve sobre Babel",
    "title_en": "Rains Over Babel",
-   "lbSlug": "rains-over-babel"
+   "lbSlug": "rains-over-babel",
+   "_director": "GALA DEL SOL",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "O Cravista",
@@ -125,7 +156,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "O Cravista",
    "title_en": "The Harpsichordist",
-   "lbSlug": "the-harpsichordist"
+   "lbSlug": "the-harpsichordist",
+   "_director": "Luiz Eduardo Ozóri",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "SHELTERING GESTURES",
@@ -140,7 +173,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "SHELTERING GESTURES",
-   "lbSlug": "sheltering-gestures"
+   "lbSlug": "sheltering-gestures",
+   "_director": "Adrián Villa-Dávila y Andrés Prado",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "Sukua",
@@ -155,7 +190,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Sukua",
-   "lbSlug": "sukua"
+   "lbSlug": "sukua",
+   "_director": "Omar Ospina Giraldo",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "TV Entreaberta",
@@ -170,7 +207,9 @@
    "pais_tmdb": "Brazil",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "TV Entreaberta",
-   "lbSlug": "tv-entreaberta"
+   "lbSlug": "tv-entreaberta",
+   "_director": "Mateus Compart",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "Tuktu, Padre Maíz",
@@ -186,7 +225,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Tuktu, Padre Maíz",
    "title_en": "Tuktu, Father Maize",
-   "lbSlug": "tuktu-father-maize"
+   "lbSlug": "tuktu-father-maize",
+   "_director": "Mauricio Prieto Muriel",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "Un poeta",
@@ -202,7 +243,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Un poeta",
    "title_en": "A Poet",
-   "lbSlug": "a-poet"
+   "lbSlug": "a-poet",
+   "_director": "SIMON MESA SOTO",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "Via Crusis",
@@ -217,7 +260,9 @@
    "pais_tmdb": "",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Via Crusis",
-   "lbSlug": "via-crusis"
+   "lbSlug": "via-crusis",
+   "_director": "Juan Lucas Neira",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "Witch and frog",
@@ -232,7 +277,9 @@
    "pais_tmdb": "",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Witch and frog",
-   "lbSlug": "witch-and-frog"
+   "lbSlug": "witch-and-frog",
+   "_director": "Anastasia Provotorova",
+   "_sondeado": "2026-09-20"
   },
   {
    "titulo": "a body without a horse?",
@@ -247,7 +294,9 @@
    "pais_tmdb": "Brazil",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "a body without a horse?",
-   "lbSlug": "a-body-without-a-horse"
+   "lbSlug": "a-body-without-a-horse",
+   "_director": "Lara Fuke",
+   "_sondeado": "2026-09-20"
   }
  ],
  "verificadas": {
@@ -264,7 +313,25 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Alivios",
    "title_en": "Reliefs",
-   "lbSlug": "reliefs-2025"
+   "lbSlug": "reliefs-2025",
+   "_director": "Juan Manuel Gonzalez Fernandez",
+   "_sondeado": "2026-09-20"
+  },
+  "Aquileo Venganza": {
+   "tmdb_id": 763505,
+   "titulo_original": "Aquileo Venganza",
+   "poster_path": "/mXCGGdMME08txqo5PkYNuW95lUk.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the begining of 20th century, after the \"thousand days war\", the country was devastated. Gunmen to the service of land lords attack small land owners to get their lands. Aquileo is the only one who survives, and promises to take revenge on the killers.",
+   "genero": "Western",
+   "anio_tmdb": 1968,
+   "duracion_tmdb": 70,
+   "pais_tmdb": "Colombia, Venezuela",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Aquileo Venganza",
+   "lbSlug": "aquileo-venganza",
+   "_director": "Ciro Durán",
+   "_sondeado": "2026-09-20"
   },
   "Autokar": {
    "tmdb_id": 1405315,
@@ -278,7 +345,9 @@
    "pais_tmdb": "Belgium, France",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Autokar",
-   "lbSlug": "autokar"
+   "lbSlug": "autokar",
+   "_director": "Sylwia SZKIŁĄDŹ",
+   "_sondeado": "2026-09-20"
   },
   "Comparsa": {
    "tmdb_id": 1480404,
@@ -292,7 +361,9 @@
    "pais_tmdb": "Guatemala, United States of America",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Comparsa",
-   "lbSlug": "comparsa-2025"
+   "lbSlug": "comparsa-2025",
+   "_director": "Vickie Curtis y Doug Anderson",
+   "_sondeado": "2026-09-20"
   },
   "Con la mano arriba": {
    "tmdb_id": 1745797,
@@ -306,7 +377,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Con la mano arriba",
-   "lbSlug": "con-la-mano-arriba"
+   "lbSlug": "con-la-mano-arriba",
+   "_director": "Miguel Angel Ordoñez",
+   "_sondeado": "2026-09-20"
   },
   "I don't know what to do": {
    "tmdb_id": 1560415,
@@ -320,7 +393,9 @@
    "pais_tmdb": "Spain",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "I don't know what to do",
-   "lbSlug": "i-dont-know-what-to-do"
+   "lbSlug": "i-dont-know-what-to-do",
+   "_director": "Akshita Tyagi, Leyla Belarbi, Lia Macruz",
+   "_sondeado": "2026-09-20"
   },
   "LA PRESENCIA DE BLANCO": {
    "tmdb_id": 1753870,
@@ -334,7 +409,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "LA PRESENCIA DE BLANCO",
-   "lbSlug": "la-presencia-de-blanco"
+   "lbSlug": "la-presencia-de-blanco",
+   "_director": "Nestor Javier Serpa Perez",
+   "_sondeado": "2026-09-20"
   },
   "Llueve sobre Babel": {
    "tmdb_id": 1388977,
@@ -349,7 +426,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Llueve sobre Babel",
    "title_en": "Rains Over Babel",
-   "lbSlug": "rains-over-babel"
+   "lbSlug": "rains-over-babel",
+   "_director": "GALA DEL SOL",
+   "_sondeado": "2026-09-20"
   },
   "O Cravista": {
    "tmdb_id": 1621972,
@@ -364,7 +443,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "O Cravista",
    "title_en": "The Harpsichordist",
-   "lbSlug": "the-harpsichordist"
+   "lbSlug": "the-harpsichordist",
+   "_director": "Luiz Eduardo Ozóri",
+   "_sondeado": "2026-09-20"
   },
   "SHELTERING GESTURES": {
    "tmdb_id": 1713804,
@@ -378,7 +459,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "SHELTERING GESTURES",
-   "lbSlug": "sheltering-gestures"
+   "lbSlug": "sheltering-gestures",
+   "_director": "Adrián Villa-Dávila y Andrés Prado",
+   "_sondeado": "2026-09-20"
   },
   "Sukua": {
    "tmdb_id": 1456197,
@@ -392,7 +475,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Sukua",
-   "lbSlug": "sukua"
+   "lbSlug": "sukua",
+   "_director": "Omar Ospina Giraldo",
+   "_sondeado": "2026-09-20"
   },
   "TV Entreaberta": {
    "tmdb_id": 1661195,
@@ -406,7 +491,9 @@
    "pais_tmdb": "Brazil",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "TV Entreaberta",
-   "lbSlug": "tv-entreaberta"
+   "lbSlug": "tv-entreaberta",
+   "_director": "Mateus Compart",
+   "_sondeado": "2026-09-20"
   },
   "Tuktu, Padre Maíz": {
    "tmdb_id": 1592955,
@@ -421,7 +508,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Tuktu, Padre Maíz",
    "title_en": "Tuktu, Father Maize",
-   "lbSlug": "tuktu-father-maize"
+   "lbSlug": "tuktu-father-maize",
+   "_director": "Mauricio Prieto Muriel",
+   "_sondeado": "2026-09-20"
   },
   "Un poeta": {
    "tmdb_id": 1465563,
@@ -436,7 +525,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Un poeta",
    "title_en": "A Poet",
-   "lbSlug": "a-poet"
+   "lbSlug": "a-poet",
+   "_director": "SIMON MESA SOTO",
+   "_sondeado": "2026-09-20"
   },
   "Via Crusis": {
    "tmdb_id": 1697484,
@@ -450,7 +541,9 @@
    "pais_tmdb": "",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Via Crusis",
-   "lbSlug": "via-crusis"
+   "lbSlug": "via-crusis",
+   "_director": "Juan Lucas Neira",
+   "_sondeado": "2026-09-20"
   },
   "Witch and frog": {
    "tmdb_id": 1772239,
@@ -464,7 +557,9 @@
    "pais_tmdb": "",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Witch and frog",
-   "lbSlug": "witch-and-frog"
+   "lbSlug": "witch-and-frog",
+   "_director": "Anastasia Provotorova",
+   "_sondeado": "2026-09-20"
   },
   "a body without a horse?": {
    "tmdb_id": 1659047,
@@ -478,7 +573,9 @@
    "pais_tmdb": "Brazil",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "a body without a horse?",
-   "lbSlug": "a-body-without-a-horse"
+   "lbSlug": "a-body-without-a-horse",
+   "_director": "Lara Fuke",
+   "_sondeado": "2026-09-20"
   }
  },
  "sin_ficha": [
@@ -490,7 +587,6 @@
   "Aguapanela",
   "Aguas Grandes",
   "Amor a primera vista",
-  "Aquileo Venganza",
   "Behind the Door",
   "Benditos los Viejos",
   "Beyond the end",
@@ -575,5 +671,375 @@
   "VOLAR",
   "X-Plora Cine",
   "Ánima de Marea"
- ]
+ ],
+ "_sin_ficha_sondeo": {
+  "1 Paseo por la Ciudad": {
+   "director": "Sara Coello Coello y Alejandro Acuña Sevilla",
+   "fecha": "2026-09-20"
+  },
+  "4 minutes": {
+   "director": "Rogerio Troiani",
+   "fecha": "2026-09-20"
+  },
+  "A Sweet Miracle": {
+   "director": "María José Chaparro",
+   "fecha": "2026-09-20"
+  },
+  "A pesar de mí": {
+   "director": "Thomás Mejía Lozano",
+   "fecha": "2026-09-20"
+  },
+  "ARENAS": {
+   "director": "JOHN BOLIVAR",
+   "fecha": "2026-09-20"
+  },
+  "Aguapanela": {
+   "director": "Juan José Narváez",
+   "fecha": "2026-09-20"
+  },
+  "Aguas Grandes": {
+   "director": "Presley Mendoza",
+   "fecha": "2026-09-20"
+  },
+  "Amor a primera vista": {
+   "director": "ANDRÉS QUINTERO",
+   "fecha": "2026-09-20"
+  },
+  "Behind the Door": {
+   "director": "Leonardo Valenti",
+   "fecha": "2026-09-20"
+  },
+  "Benditos los Viejos": {
+   "director": "Camilo Duque Zuluaga y Santiago Rubio",
+   "fecha": "2026-09-20"
+  },
+  "Beyond the end": {
+   "director": "Sara Sangiorgio",
+   "fecha": "2026-09-20"
+  },
+  "Boyacá en los campos": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "Catatumbo: House of Thunder, Memory, and Dignity": {
+   "director": "Jhonattan Sarmiento",
+   "fecha": "2026-09-20"
+  },
+  "Collective Memory": {
+   "director": "Cristina Colmenares",
+   "fecha": "2026-09-20"
+  },
+  "Cos de vidre": {
+   "director": "Marc Comabella Navarro",
+   "fecha": "2026-09-20"
+  },
+  "Cuadrileros, orgullo y legado": {
+   "director": "Fabián Enrique Moreno Correa",
+   "fecha": "2026-09-20"
+  },
+  "Cuba 2001. Imágenes del futuro I": {
+   "director": "Riqui Moreno Bolívar",
+   "fecha": "2026-09-20"
+  },
+  "DESTELLOS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "DIABLO BALLENA": {
+   "director": "Camilo Alfredo Barón Riveros",
+   "fecha": "2026-09-20"
+  },
+  "Después de tanto amor": {
+   "director": "Mercedes Oviedo",
+   "fecha": "2026-09-20"
+  },
+  "Drunk hearing the rain drops fall": {
+   "director": "Santiago Gómez Ramírez",
+   "fecha": "2026-09-20"
+  },
+  "ECLIPSES": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "ECOS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "ENCRUCIJADAS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "ENEMIGO EN EL ESPEJO": {
+   "director": "Julián Camilo Sánchez",
+   "fecha": "2026-09-20"
+  },
+  "El cine dentro del cine dentro del cine": {
+   "director": "Diana Kuéllar y Manuel Silva",
+   "fecha": "2026-09-20"
+  },
+  "Extinction": {
+   "director": "Frank Benítez",
+   "fecha": "2026-09-20"
+  },
+  "FAR": {
+   "director": "We are central asia collective",
+   "fecha": "2026-09-20"
+  },
+  "Final Act": {
+   "director": "Babi Astrolfi y Lisa Soares",
+   "fecha": "2026-09-20"
+  },
+  "Floppy the robot - El último contacto.": {
+   "director": "Jacobo Rendon",
+   "fecha": "2026-09-20"
+  },
+  "Grief": {
+   "director": "Nicolas Patiño Hortua y Andrés Santiago Cely Orjuela",
+   "fecha": "2026-09-20"
+  },
+  "GÉNESIS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "HUMAN": {
+   "director": "Debora Bergamini",
+   "fecha": "2026-09-20"
+  },
+  "IN BETWEEN": {
+   "director": "Carlos Andrés Paniagua",
+   "fecha": "2026-09-20"
+  },
+  "INDEPENDENCE": {
+   "director": "John Agudelo",
+   "fecha": "2026-09-20"
+  },
+  "Just Another Bird": {
+   "director": "Julián Gómez Reyes",
+   "fecha": "2026-09-20"
+  },
+  "KMKZ: Wild, free and brave.": {
+   "director": "Andrés Hernández",
+   "fecha": "2026-09-20"
+  },
+  "Korebaju Pai Rekocho": {
+   "director": "William Javier Gutiérrez Vargas",
+   "fecha": "2026-09-20"
+  },
+  "LA MONA": {
+   "director": "Diana C. Patiño",
+   "fecha": "2026-09-20"
+  },
+  "LENS": {
+   "director": "Eduardo Rodriguez",
+   "fecha": "2026-09-20"
+  },
+  "La Sombrilla de Mamá": {
+   "director": "Mateo Forero",
+   "fecha": "2026-09-20"
+  },
+  "La silla": {
+   "director": "Clara García",
+   "fecha": "2026-09-20"
+  },
+  "La última historia": {
+   "director": "Eberto Manotas y Mauro Andrade",
+   "fecha": "2026-09-20"
+  },
+  "Language Of The Wind": {
+   "director": "Shimataver Igbawua",
+   "fecha": "2026-09-20"
+  },
+  "Le jeune Sofiane": {
+   "director": "Fabien Ara",
+   "fecha": "2026-09-20"
+  },
+  "Life is a Chessboard; Every Move is Final": {
+   "director": "Wang zhi-zhong",
+   "fecha": "2026-09-20"
+  },
+  "Lost Fragments of a Seizure": {
+   "director": "Michael Martínez",
+   "fecha": "2026-09-20"
+  },
+  "METAMORFOSIS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "Maleza": {
+   "director": "Nicolle Estrada Diaz y Marcela Palacio Montoya",
+   "fecha": "2026-09-20"
+  },
+  "Manos Rojas": {
+   "director": "Julian Camilo Monroy",
+   "fecha": "2026-09-20"
+  },
+  "Memorias del Alba": {
+   "director": "Aldair Acosta Moctezuma",
+   "fecha": "2026-09-20"
+  },
+  "Mi tesoro": {
+   "director": "Dayana Gonzalez y Brian Congolez.",
+   "fecha": "2026-09-20"
+  },
+  "Momentos en movimiento. Primeros pasos del ballet en Colombia": {
+   "director": "Marybel Acevedo",
+   "fecha": "2026-09-20"
+  },
+  "Monte curandero": {
+   "director": "Andrés Felipe Velasco",
+   "fecha": "2026-09-20"
+  },
+  "Mucho Gusto": {
+   "director": "Cintia Obando",
+   "fecha": "2026-09-20"
+  },
+  "NAHUALES": {
+   "director": "Alejandro Cervantes",
+   "fecha": "2026-09-20"
+  },
+  "No es el Fin del Mundo": {
+   "director": "Santiago Medina",
+   "fecha": "2026-09-20"
+  },
+  "No se fía, ni aunque lloren": {
+   "director": "Natalia Hernández Sánchez",
+   "fecha": "2026-09-20"
+  },
+  "On Hold": {
+   "director": "Krishna Kumar Shukla",
+   "fecha": "2026-09-20"
+  },
+  "PLANETA": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "PODEROSAS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "PORTALES": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "Prompt Zero": {
+   "director": "Tomás Etter Gómez",
+   "fecha": "2026-09-20"
+  },
+  "Pros and Cons of Daydreaming": {
+   "director": "Lorena López",
+   "fecha": "2026-09-20"
+  },
+  "Protecting Our Territory 360": {
+   "director": "Christopher Boulton",
+   "fecha": "2026-09-20"
+  },
+  "QUAZAR": {
+   "director": "Alejandro Vargas",
+   "fecha": "2026-09-20"
+  },
+  "Que el cielo nos perdone": {
+   "director": "Andres Buitrago",
+   "fecha": "2026-09-20"
+  },
+  "Quimera": {
+   "director": "Santiago Rincón",
+   "fecha": "2026-09-20"
+  },
+  "RAÍCES": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "RESISTENCIAS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "RESURGENCIAS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "RETORNOS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "SEÑALES": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "SOLO": {
+   "director": "Agustina Lecaros Chavez",
+   "fecha": "2026-09-20"
+  },
+  "STEPPE": {
+   "director": "Mariano Benito",
+   "fecha": "2026-09-20"
+  },
+  "SUA Y SIE: Guardianes de la vida": {
+   "director": "Johanna Emilce Cortés Daza",
+   "fecha": "2026-09-20"
+  },
+  "SUN COFFE": {
+   "director": "Zoe Filloux",
+   "fecha": "2026-09-20"
+  },
+  "Sabor a mí (acústico / bolero jazz)": {
+   "director": "Franco Zornosa",
+   "fecha": "2026-09-20"
+  },
+  "Shorts": {
+   "director": "Daniel Baena Pacheco",
+   "fecha": "2026-09-20"
+  },
+  "Sierra: El álbum mortuorio": {
+   "director": "Carlos Ortiz Alarcón",
+   "fecha": "2026-09-20"
+  },
+  "TORMENTA EN LLAMAS": {
+   "director": "Humberto Flores",
+   "fecha": "2026-09-20"
+  },
+  "TRÁNSITO": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "The Guanentá Symphony": {
+   "director": "Victor Jaramillo",
+   "fecha": "2026-09-20"
+  },
+  "The Last Champion": {
+   "director": "Daniel Jesús Parra Jaimes",
+   "fecha": "2026-09-20"
+  },
+  "They Call It Sausage": {
+   "director": "Timm Osterhold",
+   "fecha": "2026-09-20"
+  },
+  "Tierras de Lobeiras": {
+   "director": "Carla Barrionuevo, Waira Conrady Vega, Lucia Xuric Lopez Farias,",
+   "fecha": "2026-09-20"
+  },
+  "Tiro Libre": {
+   "director": "Inti Deus Guerra Miranda",
+   "fecha": "2026-09-20"
+  },
+  "UMBRALES": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "VOCES": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "VOLAR": {
+   "director": "Jeiver Pinto Vargas",
+   "fecha": "2026-09-20"
+  },
+  "X-Plora Cine": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "Ánima de Marea": {
+   "director": "Laury T. Herrera",
+   "fecha": "2026-09-20"
+  }
+ }
 }

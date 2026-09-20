@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "villadelcine.com — el afiche que el festival publica en la página de cada obra",
-  "capturado": "2026-09-19",
+  "capturado": "2026-09-20",
   "que_aporta": "el póster de las obras que no tienen ficha en TMDB, que en un festival de cortos son casi todas",
   "url": "https://villadelcine.com/festival-2024-2/",
   "metodo": "write-once: lo ya bajado no se vuelve a pedir, porque después pasa por encuadrar-posters.py y re-bajarlo desharía el encuadre"
