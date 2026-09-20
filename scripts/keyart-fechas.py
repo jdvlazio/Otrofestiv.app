@@ -28,6 +28,26 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, f'{REPO}/pipeline')
 OUT = f'{REPO}/assets/keyart/FECHAS.json'
 
+def mes_con_fecha(mes, plano):
+    """¿Ese mes está ANUNCIANDO UNA FECHA, o es parte de un nombre?
+
+    Buscarlo con `mes in texto` cuenta como fecha cualquier aparición, y los
+    afiches están llenos de nombres propios: el de CONEXCINE dice «BIBLIOTECA
+    PÚBLICA **JULIO** PÉREZ FERRERO» y el guardián lo leyó como que el festival
+    es en julio —siendo en septiembre— y bloqueó el push.
+
+    Un mes que anuncia una fecha lleva un número cerca: «23 AL 26 SEPT»,
+    «3-12 septiembre», «septiembre de 2026». El nombre de una persona no.
+    Se pide un dígito a menos de 15 caracteres, antes o después.
+    """
+    import re as _re
+    for m in _re.finditer(_re.escape(mes), plano):
+        ventana = plano[max(0, m.start() - 15):m.end() + 15]
+        if _re.search(r'\d', ventana):
+            return True
+    return False
+
+
 MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio',
          'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
 # El OCR de un afiche mezcla idiomas: varios llevan el mes en inglés.
@@ -72,7 +92,7 @@ def main():
         plano = sinacento(texto)
         for en, es in MESES_EN.items():
             plano = plano.replace(en, es)
-        meses = [m for m in MESES if m in plano]
+        meses = [m for m in MESES if mes_con_fecha(m, plano)]
         anios = sorted(set(re.findall(r'\b(20\d{2})\b', plano)))
         reg[os.path.basename(p)] = {
             'festivales': sorted(de_quien[p]),
