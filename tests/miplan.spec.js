@@ -2847,3 +2847,34 @@ test('T190 — dos funciones encimadas en el Plan: la fila del día dice cuánto
   const rojo = await page.evaluate(() => { const d = document.createElement('div'); d.style.color = 'var(--red)'; document.body.appendChild(d); const c = getComputedStyle(d).color; d.remove(); return c; });
   expect(solapa.color, `y en rojo (--red = ${rojo}): es un choque, no un hueco corto`).toBe(rojo);
 });
+
+// ── T191 — el aviso del retraso mira la SIGUIENTE de verdad, no la más temprana del festival
+// Reportado desde el chat de Social Media (20 sep 2026, armando «Reportá un
+// retraso»): con Magazine en curso +90 min y Clarissa 14:45 el mismo día, el
+// aviso «Solo quedan N min antes de…» salía con un Plan de UN día y callaba en
+// cuanto el Plan tenía una función del sábado. `upcoming` se ordenaba solo por
+// hora: una 10:30 del sábado ganaba, y el `day===day` descartaba el bloque.
+// Reportar un retraso sirve para saber si seguís llegando a lo que viene — y
+// esa consecuencia era lo único que no se mostraba nunca. No tenía test.
+test('T191 — con un Plan de varios días, el retraso avisa sobre la siguiente del MISMO día', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-11T13:30:00-04:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const f = (t, d) => FILMS.find(x => x.title === t && x.day === d);
+    const sab = FILMS.filter(x => x.day === '2026-09-12' && x.time && !x.info && !x._cancelled).sort((a, b) => a.time.localeCompare(b.time))[0];
+    const m = f('Magazine', '2026-09-11');
+    const plan = [m, f('Clarissa', '2026-09-11'), sab].filter(Boolean).map(x => ({ ...x, _title: x.title }));
+    if (plan.length < 3) return { error: 'faltan obras' };
+    state.set('savedAgenda', { schedule: plan }); saveSavedAgenda();
+    switchMainNav('mnav-miplan'); showAgView(); await w(700);
+    const tap = (a, d) => { const b = document.createElement('button'); b.setAttribute('data-action', a); Object.entries(d).forEach(([k, v]) => b.setAttribute('data-' + k, v)); document.body.appendChild(b); b.click(); b.remove(); };
+    for (const k of [30, 30, 30]) { tap('setDelay', { title: 'Magazine', day: m.day, time: m.time, mins: k, venue: m.venue }); await w(400); }
+    const aviso = (document.querySelector('.delay-warn')?.textContent || '').replace(/\s+/g, ' ').trim();
+    return { sabado: sab.time, enCurso: !!document.querySelector('.delay-btn'), aviso };
+  });
+  expect(r.error, 'las obras del caso existen').toBeUndefined();
+  expect(r.enCurso, 'Magazine está en curso y ofrece «¿Retraso?»').toBe(true);
+  expect(r.aviso, `con +90 min y el sábado en el Plan, el aviso SALE (sábado ${r.sabado})`).not.toBe('');
+  expect(r.aviso, 'y habla de Clarissa, la siguiente del mismo día — no de la del sábado').toContain('Clarissa');
+  expect(r.aviso, 'con el margen negativo que corresponde').toMatch(/-\d+ min|quedan/);
+});

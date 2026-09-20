@@ -888,8 +888,17 @@ export function renderContextualHeader(state, consensus){
         </div>`;
         // Warning si el retraso come el buffer
         const schedule=savedAgenda&&savedAgenda.schedule||[];
+        // Por DÍA y después por hora (20 sep 2026): ordenaba solo por hora, así
+        // que en un Plan de varios días upcoming[0] era la función más temprana
+        // de TODO el festival —una 10:30 del sábado— y el `day===day` de abajo
+        // descartaba el aviso entero. Con Magazine +90 y Clarissa 14:45 el aviso
+        // salía con un plan de un día y CALLABA con el sábado agregado (medido).
+        // Reportar un retraso sirve para saber si seguís llegando a lo que viene;
+        // esa consecuencia era lo único que no se mostraba nunca. Mismo orden que
+        // computeScenarios y commitPlan; los otros seis sort por hora de src/ ya
+        // vienen filtrados a un día antes de ordenar.
         const upcoming=schedule.filter(s=>!screeningPassed(s)&&s._title!==next._title)
-          .sort((a,b)=>toMin(a.time)-toMin(b.time));
+          .sort((a,b)=>DAY_KEYS.indexOf(a.day)-DAY_KEYS.indexOf(b.day)||toMin(a.time)-toMin(b.time));
         const nextFilm=upcoming[0];
         if(nextFilm&&nextFilm.day===next.day){
           const _tv=travelMins(next.venue,nextFilm.venue);
