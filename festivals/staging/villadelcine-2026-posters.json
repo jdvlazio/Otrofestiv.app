@@ -1,0 +1,416 @@
+{
+ "_provenance": {
+  "fuente": "villadelcine.com — el afiche que el festival publica en la página de cada obra",
+  "capturado": "2026-09-21",
+  "que_aporta": "el póster de las obras que no tienen ficha en TMDB, que en un festival de cortos son casi todas",
+  "url": "https://villadelcine.com/festival-2024-2/",
+  "metodo": "write-once: lo ya bajado no se vuelve a pedir, porque después pasa por encuadrar-posters.py y re-bajarlo desharía el encuadre"
+ },
+ "posters": {
+  "Extinction": {
+   "poster": "/assets/villadelcine-2026/extinction.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/e63ebfc341-poster.webp"
+  },
+  "Benditos los Viejos": {
+   "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/BLV_COLOR_3_01_00_35_23.webp"
+  },
+  "Via Crusis": {
+   "poster": "/assets/villadelcine-2026/via-crusis.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/fotograma0023.webp"
+  },
+  "A pesar de mí": {
+   "poster": "/assets/villadelcine-2026/a-pesar-de-mi.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Untitled_1.1.4.webp"
+  },
+  "O Cravista": {
+   "poster": "/assets/villadelcine-2026/o-cravista.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/3a2c610e95-poster.webp"
+  },
+  "Grief": {
+   "poster": "/assets/villadelcine-2026/grief.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/LAVADERO.webp"
+  },
+  "FAR": {
+   "poster": "/assets/villadelcine-2026/far.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/3.webp"
+  },
+  "The Last Champion": {
+   "poster": "/assets/villadelcine-2026/the-last-champion.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Pelcula_El_ltimo_Campen_FICCI.mp4_snapshot_00.29.55.webp"
+  },
+  "IN BETWEEN": {
+   "poster": "/assets/villadelcine-2026/in-between.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/still_2.webp"
+  },
+  "Mucho Gusto": {
+   "poster": "/assets/villadelcine-2026/mucho-gusto.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-07-31-a-las-9.11.37-Cintia-Obando-scaled.webp"
+  },
+  "Sierra: El álbum mortuorio": {
+   "poster": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/WhatsApp_Image_2025-04-28_at_9.24.39_PM.webp"
+  },
+  "A Sweet Miracle": {
+   "poster": "/assets/villadelcine-2026/a-sweet-miracle.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/style_frame_francis_y_aguita.webp"
+  },
+  "Collective Memory": {
+   "poster": "/assets/villadelcine-2026/collective-memory.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Screenshot_129.webp"
+  },
+  "1 Paseo por la Ciudad": {
+   "poster": "/assets/villadelcine-2026/1-paseo-por-la-ciudad.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Still4-Sara-Coello.webp"
+  },
+  "Ánima de Marea": {
+   "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/05-ANIMA-DE-MAREA-Laury-T.-Herrera.webp"
+  },
+  "Tiro Libre": {
+   "poster": "/assets/villadelcine-2026/tiro-libre.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Tiro_Libre_3.webp"
+  },
+  "Shorts": {
+   "poster": "/assets/villadelcine-2026/shorts.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/IMG_9421.webp"
+  },
+  "TV Entreaberta": {
+   "poster": "/assets/villadelcine-2026/tv-entreaberta.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/FRAME_14.webp"
+  },
+  "Cine Concierto Villa del Cine 2021": {
+   "poster": "/assets/villadelcine-2026/cine-concierto-villa-del-cine-2021.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2023/09/STILL-VCINE4-Andres-Quintero.png"
+  },
+  "I don't know what to do": {
+   "poster": "/assets/villadelcine-2026/i-don-t-know-what-to-do.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/01.webp"
+  },
+  "Quimera": {
+   "poster": "/assets/villadelcine-2026/quimera.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/6-Santiago-Rincon-Duran.webp"
+  },
+  "STEPPE": {
+   "poster": "/assets/villadelcine-2026/steppe.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/DSC05012.webp"
+  },
+  "HUMAN": {
+   "poster": "/assets/villadelcine-2026/human.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Human_Steel_Voyager_Saturno.webp"
+  },
+  "Aguapanela": {
+   "poster": "/assets/villadelcine-2026/aguapanela.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Still_13.webp"
+  },
+  "La silla": {
+   "poster": "/assets/villadelcine-2026/la-silla.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/20-frame3_La-silla.webp"
+  },
+  "LA PRESENCIA DE BLANCO": {
+   "poster": "/assets/villadelcine-2026/la-presencia-de-blanco.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/FOTOGRAFIA-3-NESTOR-JAVIER-SERPA-PEREZ.webp"
+  },
+  "Cuba 2001. Imágenes del futuro I": {
+   "poster": "/assets/villadelcine-2026/cuba-2001-imagenes-del-futuro-i.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Still-5-Cuba-2001-El-Espejo.webp"
+  },
+  "NAHUALES": {
+   "poster": "/assets/villadelcine-2026/nahuales.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/20-e1789068209523.webp"
+  },
+  "Catatumbo: House of Thunder, Memory, and Dignity": {
+   "poster": "/assets/villadelcine-2026/catatumbo-house-of-thunder-memory-and-dignity.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/IMG_6721.webp"
+  },
+  "La Sombrilla de Mamá": {
+   "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/58-frame1_La-Sombrilla-de-Mama.webp"
+  },
+  "KMKZ: Wild, free and brave.": {
+   "poster": "/assets/villadelcine-2026/kmkz-wild-free-and-brave.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/DSC02241.webp"
+  },
+  "Prompt Zero": {
+   "poster": "/assets/villadelcine-2026/prompt-zero.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/prompt-zero-0-Tomas-Etter-Gomez-scaled.webp"
+  },
+  "Autokar": {
+   "poster": "/assets/villadelcine-2026/autokar.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/AUTOKAR_de_Sylwia_Szkiladz_06.webp"
+  },
+  "Witch and frog": {
+   "poster": "/assets/villadelcine-2026/witch-and-frog.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/witch_and_frog.still3_.webp"
+  },
+  "MI TESORO": {
+   "poster": "/assets/villadelcine-2026/mi-tesoro.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/STILL-MI-TESORO-4-Brian-Congolez.webp"
+  },
+  "Alivios": {
+   "poster": "/assets/villadelcine-2026/alivios.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/d0aa7c0f-bb94-46ea-a12c-ef1c75905239.webp"
+  },
+  "They Call It Sausage": {
+   "poster": "/assets/villadelcine-2026/they-call-it-sausage.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/3e8998d2-e7eb-44fc-98d6-2d692f32f202.webp"
+  },
+  "Manos Rojas": {
+   "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-07-31-at-5.43.45-PM-1-Martha.webp"
+  },
+  "SOLO": {
+   "poster": "/assets/villadelcine-2026/solo.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Fotograma-2-AGUSTINA-LECAROS-CHAVEZ.webp"
+  },
+  "On Hold": {
+   "poster": "/assets/villadelcine-2026/on-hold.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Screenshot_2026-04-28_024337.webp"
+  },
+  "Comparsa": {
+   "poster": "/assets/villadelcine-2026/comparsa.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/B042C168_Girls_light_candles.webp"
+  },
+  "SUA Y SIE: Guardianes de la vida": {
+   "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Imagen2-Juan-Pablo-Gonzalez.webp"
+  },
+  "Life is a Chessboard; Every Move is Final": {
+   "poster": "/assets/villadelcine-2026/life-is-a-chessboard-every-move-is-final.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/03a761e3-3b0c-4e62-9018-7e49ae613a45.webp"
+  },
+  "A Burning Turret": {
+   "poster": "/assets/villadelcine-2026/a-burning-turret.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/1-utel_stills-exc-crop-web_29.webp"
+  },
+  "LENS - AI Short Film": {
+   "poster": "/assets/villadelcine-2026/lens-ai-short-film.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Zombies.webp"
+  },
+  "La Ultima Historia": {
+   "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/fotograma-3-45-1280-x-720-px-Eberto-Manotas-ochoa.webp"
+  },
+  "Cos de vidre": {
+   "poster": "/assets/villadelcine-2026/cos-de-vidre.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/IMG-20260305-WA0100.webp"
+  },
+  "Le Jeune Sofiane": {
+   "poster": "/assets/villadelcine-2026/le-jeune-sofiane.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/3-banner_Le-Jeune-Sofiane.webp"
+  },
+  "a body without a horse?": {
+   "poster": "/assets/villadelcine-2026/a-body-without-a-horse.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/STILLS_0006_Preto-e-Branco_1_copiar_6.webp"
+  },
+  "VOLAR": {
+   "poster": "/assets/villadelcine-2026/volar.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/VOLAR-3-Jeiver-Pinto-scaled.webp"
+  },
+  "Pros and Cons of Daydreaming": {
+   "poster": "/assets/villadelcine-2026/pros-and-cons-of-daydreaming.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/imagen_2025-10-20_211005952.webp"
+  },
+  "SUN COFFEE": {
+   "poster": "/assets/villadelcine-2026/sun-coffee.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/SUN_COFFEE_V2.00_06_25_23.Still005.webp"
+  },
+  "DIABLO BALLENA": {
+   "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Timeline_1_02_28_18_19.webp"
+  },
+  "BEHIND THE DOOR": {
+   "poster": "/assets/villadelcine-2026/behind-the-door.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/IMG_3671.webp"
+  },
+  "4 minutes": {
+   "poster": "/assets/villadelcine-2026/4-minutes.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/5a322f0dc3-poster.webp"
+  },
+  "Language Of The Wind": {
+   "poster": "/assets/villadelcine-2026/language-of-the-wind.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/IMG_2245.webp"
+  },
+  "INDEPENDENCE": {
+   "poster": "/assets/villadelcine-2026/independence.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Timeline_4_01_16_57_01.webp"
+  },
+  "Final Act": {
+   "poster": "/assets/villadelcine-2026/final-act.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/AtoFinal_still31.webp"
+  },
+  "No se fía, ni aunque lloren": {
+   "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/2-Dumah-Films.webp"
+  },
+  "Drunk hearing the rain drops fall": {
+   "poster": "/assets/villadelcine-2026/drunk-hearing-the-rain-drops-fall.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Still_2025-08-20_202346_1.23.1.webp"
+  },
+  "With the Hand Up": {
+   "poster": "/assets/villadelcine-2026/with-the-hand-up.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Documental_Con_la_mano_arriba__00_06_35_02.webp"
+  },
+  "Memorias del Alba": {
+   "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Still_04_-_Memorias_del_Alba.webp"
+  },
+  "Protecting Our Territory 360": {
+   "poster": "/assets/villadelcine-2026/protecting-our-territory-360.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Protecting_Still_3.webp"
+  },
+  "Después de tanto amor": {
+   "poster": "/assets/villadelcine-2026/despues-de-tanto-amor.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/DDTA_1.1.20-mercedes.webp"
+  },
+  "Lost Fragments of a Seizure": {
+   "poster": "/assets/villadelcine-2026/lost-fragments-of-a-seizure.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/19bb4fb8-4a6b-4efe-aece-6cc727e3b4de.webp"
+  },
+  "No es el Fin del Mundo": {
+   "poster": "/assets/villadelcine-2026/no-es-el-fin-del-mundo.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/59ff7a74-a341-46c0-ac04-9c7a425e8bc0_2.webp"
+  },
+  "Sabor a mi (Acústico/ BoleroJazz)  Tatiana Jáuregui & Husil": {
+   "poster": "/assets/villadelcine-2026/sabor-a-mi-acustico-bolerojazz-tatiana-jauregui-husil.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/TATIANA-JAUREGUI-HUSIL-SABOR-A-MI-Tatiana-Jauregui.webp"
+  },
+  "Just Another Bird": {
+   "poster": "/assets/villadelcine-2026/just-another-bird.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/juntos.webp"
+  },
+  "El cine dentro del cine dentro del cine": {
+   "poster": "/assets/villadelcine-2026/el-cine-dentro-del-cine-dentro-del-cine.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/33-frame2_El-cine-dentro-del-cine-dentro-del-cine.webp"
+  },
+  "Enemy in the Mirror": {
+   "poster": "/assets/villadelcine-2026/enemy-in-the-mirror.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/ENEMY_IN_THE_MIRROR_l_Stills_l_8.webp"
+  },
+  "Sukua": {
+   "poster": "/assets/villadelcine-2026/sukua.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/10-frame2_Sukua.webp"
+  },
+  "ARENAS": {
+   "poster": "/assets/villadelcine-2026/arenas.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/D6288277-F62F-490E-8F54-2726ED246770-Gustavo-Nieto-Roa-scaled.webp"
+  },
+  "Que el cielo nos perdone": {
+   "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Still_04.webp"
+  },
+  "Floppy the robot - El último contacto.": {
+   "poster": "/assets/villadelcine-2026/floppy-the-robot-el-ultimo-contacto.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/portada3-Jacobo-Rendon.webp"
+  },
+  "Tierras de Lobeiras": {
+   "poster": "/assets/villadelcine-2026/tierras-de-lobeiras.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Tierras-de-Lobeira_EXPORT-FINAL_CON-SONIDO_01579-Carla-Barrionuevo.webp"
+  },
+  "Tuktu, Padre Maíz": {
+   "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/43-frame1_Tuktu-Padre-Maiz.webp"
+  },
+  "Maleza": {
+   "poster": "/assets/villadelcine-2026/maleza.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/06-e1789141051417.webp"
+  },
+  "Beyond the end": {
+   "poster": "/assets/villadelcine-2026/beyond-the-end.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/4.webp"
+  },
+  "AMOR A PRIMERA VISTA": {
+   "poster": "/assets/villadelcine-2026/amor-a-primera-vista.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/FOTO6-APV-Andres-Quintero-scaled.webp"
+  },
+  "Monte curandero": {
+   "poster": "/assets/villadelcine-2026/monte-curandero.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Carmela-Agreda-Andres-Felipe-Velasco-scaled.webp"
+  },
+  "Aguas Grandes": {
+   "poster": "/assets/villadelcine-2026/aguas-grandes.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/AGUAS_GRANDES_STILL_09_VERTICAL_9x16-1.webp"
+  }
+ }
+}

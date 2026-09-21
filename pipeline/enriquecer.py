@@ -24,6 +24,7 @@ Esc.  festivals/staging/<id>-enriquecido.json
 
 Requiere TMDB_API_KEY en el entorno.
 """
+import datetime
 import json, os, re, subprocess, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -83,6 +84,14 @@ def enriquecer_obra(f, key, alias):
                        'genero': (det.get('genres') or [{}])[0].get('name', ''),
                        'anio_tmdb': int((det.get('release_date') or '0')[:4] or 0),
                        'duracion_tmdb': det.get('runtime') or 0,
+                       # EL PAÍS, que TMDB da y no guardábamos. En Villa del
+                       # Cine faltaba en 21 obras y para varias era el único
+                       # sitio donde estaba: el PDF no lo imprime en todas las
+                       # fichas y la web solo en la mitad. Sin país no hay
+                       # bandera, y la app pinta un globo.
+                       'pais_tmdb': ', '.join(
+                           p.get('name', '') for p in (det.get('production_countries') or [])
+                           if p.get('name')),
                        '_verificado': 'director✓ + año/duración',
                        '_busqueda': q}
                 if en and norm(en) not in (norm(f['titulo']), norm(out['titulo_original'] or '')):
@@ -113,31 +122,94 @@ def main():
     # son obras: tienen título, dirección, año y duración, que es justo lo que
     # ficha_verifica() necesita. El candado no cambia: lo que no verifica, no
     # entra; un corto sin ficha en TMDB simplemente sale en `sin_ficha`.
+    # `duracion_obra` es la duración de la OBRA, que puede no ser la de la
+    # función: una película de 113 minutos en una casilla de 120 se publica
+    # con 120 —la sala está ocupada ese rato— pero se verifica con 113, que
+    # es lo que TMDB conoce. Sin esta distinción, los largos programados con
+    # holgura no verificaban y se quedaban sin ficha ni póster.
+    def _para_verificar(x):
+        return {**x, 'duracion_min': x.get('duracion_obra') or x.get('duracion_min')}
+
     obras = {}
     for f in crudo['funciones']:
         if not f.get('en_app', True):
             continue
         if f.get('tipo', 'film') in ('film', ''):
             t = tit_of.get(f['titulo'], f['titulo'])
-            obras.setdefault(t, {**f, 'titulo': t})
-        for o in f.get('obras') or []:
+            obras.setdefault(t, _para_verificar({**f, 'titulo': t}))
+        # `film_list` es el otro nombre de `obras`: el ensamblador acepta los
+        # dos desde siempre y este paso solo miraba uno. En Villa del Cine eso
+        # dejó 104 cortos sin enriquecer y el reporte decía «1 obra» tan
+        # tranquilo — el mismo fallo mudo de antes, por la otra puerta. Si dos
+        # pasos leen la misma lista, tienen que aceptar los mismos nombres.
+        for o in f.get('obras') or f.get('film_list') or []:
             if not o.get('titulo'):
                 continue
             t = tit_of.get(o['titulo'], o['titulo'])
             # la obra hereda el día de su función solo para el reporte; lo que
             # verifica es su propia ficha (director, año, duración)
-            obras.setdefault(t, {**o, 'titulo': t})
+            obras.setdefault(t, _para_verificar({**o, 'titulo': t}))
 
-    ok, sin = {}, []
+    # ── LA CACHÉ ────────────────────────────────────────────────────────────
+    # Sondear TMDB cuesta. Medido en Villa del Cine: 111 obras a ~6 s por
+    # llamada son 40 minutos, y el paso se re-corre en cada pasada del plan
+    # aunque no haya cambiado nada. Con caché, la misma corrida da el MISMO
+    # resultado en menos de un segundo.
+    #
+    # DOS REGLAS, y la segunda es la que importa:
+    #   · un ACIERTO no caduca — el tmdb_id de una obra es el que es;
+    #   · un FALLO caduca a los 7 días — TMDB gana fichas todas las semanas, y
+    #     una caché que recuerde «no está» para siempre convierte un paso de
+    #     verificación en un paso que dejó de verificar.
+    # La clave es TÍTULO + DIRECTOR: si la fuente corrige cualquiera de los
+    # dos, la respuesta vieja deja de valer. `--refrescar` la ignora entera.
+    _hoy = datetime.date.today().isoformat()
+
+    def _vig(fecha, dias=7):
+        try:
+            return (datetime.date.today()
+                    - datetime.date.fromisoformat(fecha)).days < dias
+        except (TypeError, ValueError):
+            return False
+
+    prev_ok, prev_no = {}, {}
+    _dest = f'{ST}/{fid}-enriquecido.json'
+    if '--refrescar' not in sys.argv and os.path.exists(_dest):
+        _p = json.load(open(_dest, encoding='utf-8'))
+        prev_ok = {t: e for t, e in (_p.get('verificadas') or {}).items()
+                   if e.get('_sondeado')}
+        prev_no = {t: v for t, v in (_p.get('_sin_ficha_sondeo') or {}).items()
+                   if _vig(v.get('fecha'))}
+
+    ok, sin, sin_sondeo, reuso = {}, [], {}, 0
     for i, (t, f) in enumerate(sorted(obras.items()), 1):
+        _dir = (f.get('director') or '').strip()
+        c = prev_ok.get(t)
+        if c and c.get('_director') == _dir:
+            ok[t] = c
+            reuso += 1
+            print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} tmdb {c["tmdb_id"]} '
+                  f'(caché del {c["_sondeado"]})', flush=True)
+            continue
+        c = prev_no.get(t)
+        if c and c.get('director') == _dir:
+            sin.append(t)
+            sin_sondeo[t] = c
+            reuso += 1
+            print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} sin ficha '
+                  f'(caché del {c["fecha"]})', flush=True)
+            continue
+
         e = enriquecer_obra(f, key, alias)
         if e:
+            e['_director'], e['_sondeado'] = _dir, _hoy
             ok[t] = e
             print(f'[{i:3}/{len(obras)}] OK  {t[:46]:48} tmdb {e["tmdb_id"]}'
                   f'{"  lb✓" if e.get("lbSlug") else ""}'
                   f'{"  en✓" if e.get("title_en") else ""}', flush=True)
         else:
             sin.append(t)
+            sin_sondeo[t] = {'director': _dir, 'fecha': _hoy}
             print(f'[{i:3}/{len(obras)}] —   {t[:46]:48} sin ficha verificable', flush=True)
         time.sleep(0.2)
 
@@ -164,10 +236,14 @@ def main():
         # `verificadas`, así que el plan que lo declaraba no cumplía su contrato
         # y el enriquecido no llegaba a la app. Se escriben las dos formas.
         'obras': [{'titulo': t, **e} for t, e in ok.items()],
-        'verificadas': ok, 'sin_ficha': sorted(sin)},
+        'verificadas': ok, 'sin_ficha': sorted(sin),
+        # la fecha de cada sondeo fallido, que es lo que hace caducar la caché
+        '_sin_ficha_sondeo': sin_sondeo},
         open(f'{ST}/{fid}-enriquecido.json', 'w', encoding='utf-8'),
         ensure_ascii=False, indent=1)
-    print(f'\n{len(obras)} obras · verificadas {len(ok)} · sin ficha {len(sin)}')
+    print(f'\n{len(obras)} obras · verificadas {len(ok)} · sin ficha {len(sin)}'
+          f' · {reuso} de la caché, {len(obras) - reuso} sondeadas hoy'
+          f'{" (--refrescar)" if "--refrescar" in sys.argv else ""}')
     print(f'  con póster {sum(1 for e in ok.values() if e["poster_path"])} · '
           f'con lbSlug {sum(1 for e in ok.values() if e.get("lbSlug"))} · '
           f'con title_en {sum(1 for e in ok.values() if e.get("title_en"))}')

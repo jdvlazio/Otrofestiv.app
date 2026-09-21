@@ -1,11 +1,14 @@
 {
  "_provenance": {
-  "fuente": "Instagram del festival (@festivalvilladelcine) — los once reels de Selección Oficial, uno por categoría",
-  "capturado": "2026-09-17",
+  "fuente": "Instagram del festival (@festivalvilladelcine) — los catorce reels de Selección Oficial, uno por categoría",
+  "capturado": "2026-09-19",
   "metodo": "TRANSCRIPCIÓN DEL PIE, no lectura de lámina: este festival escribe «🎬 Título – Dir. Nombre» en el texto del post. El pie se leyó por el embed, entero, sin truncar. No hizo falta la doble lectura que sí exigió Jardín.",
-  "alcance": "SOLO la Selección Oficial en competencia. NO hay una sola función con día, hora ni sede: a 6 días del arranque el festival no ha publicado parrilla.",
+  "alcance": "SOLO la Selección Oficial en competencia: el reel dice en qué categoría compite cada obra. La PARRILLA no sale de aquí —sale del PDF de programación—, y lo leído acá se cruza contra ella: las catorce categorías cubren 68 obras y todas están en el programa.",
   "versales": {
    "Sylwia Szkiłądź": "la fuente lo escribe «Sylwia SZKIŁĄDŹ»"
+  },
+  "titulo_corregido": {
+   "Withch and Frog": "Witch and Frog"
   }
  },
  "_festival": {
@@ -80,18 +83,34 @@
    "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdWyHp1q4MG/",
    "publicado": "2026-09-17",
    "obras": 5
+  },
+  "Mejor Work in Progress": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdZbVwxpCmu/",
+   "publicado": "2026-09-18",
+   "obras": 5
+  },
+  "Mejor Ópera Prima Nacional": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdcPmTNPrXp/",
+   "publicado": "2026-09-19",
+   "obras": 5
+  },
+  "Mejor Ópera Prima Internacional": {
+   "reel": "https://www.instagram.com/festivalvilladelcine/reel/DdfI-H5O5z4/",
+   "publicado": "2026-09-19",
+   "obras": 5
   }
  },
  "obras": [
   {
-   "titulo": "Withch and Frog",
+   "titulo": "Witch and Frog",
    "director": "Anastasia Provotorova",
    "seccion": "Selección Oficial",
    "categoria": "Mejor Cortometraje YoungFilm",
    "_src": {
     "url": "https://www.instagram.com/festivalvilladelcine/reel/Dc9eZuGzzNZ/",
     "date": "2026-09-06"
-   }
+   },
+   "_titulo_publicado": "Withch and Frog"
   },
   {
    "titulo": "Tiro Libre",
@@ -611,6 +630,156 @@
    "_src": {
     "url": "https://www.instagram.com/festivalvilladelcine/reel/DdWyHp1q4MG/",
     "date": "2026-09-17"
+   }
+  },
+  {
+   "titulo": "El último campeón",
+   "director": "Daniel Jesús Parra Jaimes",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Work in Progress",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdZbVwxpCmu/",
+    "date": "2026-09-18"
+   }
+  },
+  {
+   "titulo": "Mi Tesoro",
+   "director": "Dayana Gonzalez y Brian Congolez",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Work in Progress",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdZbVwxpCmu/",
+    "date": "2026-09-18"
+   }
+  },
+  {
+   "titulo": "Extinction",
+   "director": "Frank Benitez",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Work in Progress",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdZbVwxpCmu/",
+    "date": "2026-09-18"
+   }
+  },
+  {
+   "titulo": "El cine dentro del cine dentro del cine",
+   "director": "Diana Kuéllar y Manuel Silva",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Work in Progress",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdZbVwxpCmu/",
+    "date": "2026-09-18"
+   }
+  },
+  {
+   "titulo": "Cuba 2001. Imágenes del futuro I",
+   "director": "Felipe Moreno Salazar",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Work in Progress",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdZbVwxpCmu/",
+    "date": "2026-09-18"
+   }
+  },
+  {
+   "titulo": "Volar",
+   "director": "Jeiver Pinto Vargas",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Ópera Prima Nacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdcPmTNPrXp/",
+    "date": "2026-09-19"
+   }
+  },
+  {
+   "titulo": "Sierra: El álbum mortuorio",
+   "director": "Carlos Ortiz Alarcón",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Ópera Prima Nacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdcPmTNPrXp/",
+    "date": "2026-09-19"
+   }
+  },
+  {
+   "titulo": "KMKZ: Salvaje, Libre y Valiente",
+   "director": "Andrés Hernández",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Ópera Prima Nacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdcPmTNPrXp/",
+    "date": "2026-09-19"
+   }
+  },
+  {
+   "titulo": "Enemigo en el espejo",
+   "director": "Julián Camilo Sánchez",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Ópera Prima Nacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdcPmTNPrXp/",
+    "date": "2026-09-19"
+   }
+  },
+  {
+   "titulo": "Arenas",
+   "director": "John Bolívar",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Ópera Prima Nacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdcPmTNPrXp/",
+    "date": "2026-09-19"
+   }
+  },
+  {
+   "titulo": "Estepa el lugar menos esperado",
+   "director": "Mariano Benito",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Ópera Prima Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdfI-H5O5z4/",
+    "date": "2026-09-19"
+   }
+  },
+  {
+   "titulo": "Language Of The Wind",
+   "director": "Shimataver Igbawua",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Ópera Prima Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdfI-H5O5z4/",
+    "date": "2026-09-19"
+   }
+  },
+  {
+   "titulo": "Cos de vidre",
+   "director": "Marc Comabella",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Ópera Prima Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdfI-H5O5z4/",
+    "date": "2026-09-19"
+   }
+  },
+  {
+   "titulo": "Comparsa",
+   "director": "Vickie Curtis y Doug Anderson",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Ópera Prima Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdfI-H5O5z4/",
+    "date": "2026-09-19"
+   }
+  },
+  {
+   "titulo": "O Cravista",
+   "director": "Luiz Eduardo Ozório",
+   "seccion": "Selección Oficial",
+   "categoria": "Mejor Ópera Prima Internacional",
+   "_src": {
+    "url": "https://www.instagram.com/festivalvilladelcine/reel/DdfI-H5O5z4/",
+    "date": "2026-09-19"
    }
   }
  ]

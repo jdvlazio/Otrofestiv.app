@@ -1,0 +1,1045 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-09-21"
+ },
+ "obras": [
+  {
+   "titulo": "Alivios",
+   "tmdb_id": 1469210,
+   "titulo_original": "Alivios",
+   "poster_path": "/fuQQAuTPK0lGxsvI0yUxz9KzQCK.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Mexico, Venezuela",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Alivios",
+   "title_en": "Reliefs",
+   "lbSlug": "reliefs-2025",
+   "_director": "Juan Manuel Gonzalez Fernandez",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "Aquileo Venganza",
+   "tmdb_id": 763505,
+   "titulo_original": "Aquileo Venganza",
+   "poster_path": "/mXCGGdMME08txqo5PkYNuW95lUk.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the begining of 20th century, after the \"thousand days war\", the country was devastated. Gunmen to the service of land lords attack small land owners to get their lands. Aquileo is the only one who survives, and promises to take revenge on the killers.",
+   "genero": "Western",
+   "anio_tmdb": 1968,
+   "duracion_tmdb": 70,
+   "pais_tmdb": "Colombia, Venezuela",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Aquileo Venganza",
+   "lbSlug": "aquileo-venganza",
+   "_director": "Ciro Durán",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "Autokar",
+   "tmdb_id": 1405315,
+   "titulo_original": "Autokar",
+   "poster_path": "/gQXR5hpXcRYcvqCvxSjS5lxa58u.jpg",
+   "synopsis_es": "En los años 90, una niña de 8 años llamada Agata deja Polonia para mudarse a Bélgica. Su viaje transforma la dura realidad de la migración en una emocionante aventura de autodescubrimiento.",
+   "synopsis_en": "In the 1990s, eight-year-old Agata leaves her Polish homeland to take a bus to Belgium by herself. Anxious about the journey, she begins to write a letter to her father who has stayed behind in Poland. When she drops her pencil and it rolls away, Agata is forced to overcome her shyness. Searching for it, she weaves her way between the rows of seats and plunges into a fantastical world inhabited by strange half-human, half-animal passengers. Agata’s perceptions transform the reality of migration into an imaginative experience of initiation.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Belgium, France",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Autokar",
+   "lbSlug": "autokar",
+   "_director": "Sylwia SZKIŁĄDŹ",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "Comparsa",
+   "tmdb_id": 1480404,
+   "titulo_original": "Comparsa",
+   "poster_path": "/poj5xIuW3JVs5D1iTOCAXBMG6zP.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "From the shadows of a Guatemalan neighbourhood scared into silence, two sisters lead a luminous rebellion—unleashing joy, art, and radical truth in a fight for survival.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 79,
+   "pais_tmdb": "Guatemala, United States of America",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Comparsa",
+   "lbSlug": "comparsa-2025",
+   "_director": "Vickie Curtis y Doug Anderson",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "Con la mano arriba",
+   "tmdb_id": 1745797,
+   "titulo_original": "Con la Mano Arriba",
+   "poster_path": "/wBNTbvLz6r8ICBHj9OtQDkkrAf3.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "An independent theater group continues to build up its puppet troupe as part of the Barranquilla Carnival, despite financial and structural constraints.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Con la mano arriba",
+   "lbSlug": "con-la-mano-arriba",
+   "_director": "Miguel Angel Ordoñez",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "I don't know what to do",
+   "tmdb_id": 1560415,
+   "titulo_original": "I Don't Know What to Do",
+   "poster_path": "/gB8C6HENI7qyHgilZxx0LdKsnWA.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A young girl named Lizzie spends an afternoon playing with a lizard she found in her garden. An accident occurs, and the lizard is hurt. Filled with sadness, Lizzie gently buries the lizard and places a flower on its grave, highlighting her tenderness and the fleeting nature of life.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "Spain",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "I don't know what to do",
+   "lbSlug": "i-dont-know-what-to-do",
+   "_director": "Akshita Tyagi, Leyla Belarbi, Lia Macruz",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "LA PRESENCIA DE BLANCO",
+   "tmdb_id": 1753870,
+   "titulo_original": "La presencia de blanco",
+   "poster_path": "/FY7g3jBG8FBa1wACimnMJshGWl.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a forgotten town, legend comes to life after dark. Four children face the mystery of “The White Presence,” a ghost that haunts the rural school.",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "LA PRESENCIA DE BLANCO",
+   "lbSlug": "la-presencia-de-blanco",
+   "_director": "Nestor Javier Serpa Perez",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "Llueve sobre Babel",
+   "tmdb_id": 1388977,
+   "titulo_original": "Llueve sobre Babel",
+   "poster_path": "/o6IDuFe3bBUR46DQbTy4tRCvnuk.jpg",
+   "synopsis_es": "En el bar Babel, donde vivos y muertos se mezclan, Dante busca recordar su pasado antes de que la Flaca, la Muerte en esta ciudad, cobre su deuda. Jacob esconde de su padre, un sacerdote fanático, su deseo de ser drag queen, mientras Uma, una gitana con su propia apuesta, intenta engañar a la Flaca para salvar a su hija. Entre pactos y desafíos, sus destinos chocan en una lucha contra lo inevitable.",
+   "synopsis_en": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 113,
+   "pais_tmdb": "Colombia, United States of America, Spain",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Llueve sobre Babel",
+   "title_en": "Rains Over Babel",
+   "lbSlug": "rains-over-babel",
+   "_director": "GALA DEL SOL",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "O Cravista",
+   "tmdb_id": 1621972,
+   "titulo_original": "O Cravista",
+   "poster_path": "/e58rW8tLiLaZs692Qp6YrzLIXat.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Nearing his 100th birthday, harpsichordist and conductor Roberto De Regina revisits his pioneering journey in reintroducing early classical music to Brazil. Through personal memories and artistic achievements, he reflects on the legacy he built while facing prejudice and cultural resistance. A poignant portrait of art, time, and the courage to break barriers and transform traditions.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 104,
+   "pais_tmdb": "Brazil",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "O Cravista",
+   "title_en": "The Harpsichordist",
+   "lbSlug": "the-harpsichordist",
+   "_director": "Luiz Eduardo Ozóri",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "SHELTERING GESTURES",
+   "tmdb_id": 1713804,
+   "titulo_original": "Refugiar el gesto",
+   "poster_path": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "SHELTERING GESTURES",
+   "lbSlug": "sheltering-gestures",
+   "_director": "Adrián Villa-Dávila y Andrés Prado",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "Sukua",
+   "tmdb_id": 1456197,
+   "titulo_original": "Sukua",
+   "poster_path": "/c9L2gGEmdYtV5EDEX6Cvo3Nf3p4.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "When a Kogui child is given a water pistol as a toy, he begins to explore the familiar spaces of his territory with a new look. Sukua fluidly travels through the exterior and interior of his home and some remnants of the community that are manifested around the child's playful sweetness. The strangeness of the toy adds, at the same time, childish tenderness and noisy tension by its contrast with the environment and by the suggested violence that morally affects the father.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Sukua",
+   "lbSlug": "sukua",
+   "_director": "Omar Ospina Giraldo",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "TV Entreaberta",
+   "tmdb_id": 1661195,
+   "titulo_original": "TV Entreaberta",
+   "poster_path": "/lunzCoocm6PIiNnRqDJymPeFen9.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A woman is abducted into her TV, where she is tormented by a caricatured American presenter. Moving through various television genres, the character is gradually assimilated into the system.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Brazil",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "TV Entreaberta",
+   "lbSlug": "tv-entreaberta",
+   "_director": "Mateus Compart",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "Tuktu, Padre Maíz",
+   "tmdb_id": 1592955,
+   "titulo_original": "Tuktu, Padre Maíz",
+   "poster_path": "/qw4zntJUuj163JdkusNUnxHvOwg.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Tuktu, Padre Maíz",
+   "title_en": "Tuktu, Father Maize",
+   "lbSlug": "tuktu-father-maize",
+   "_director": "Mauricio Prieto Muriel",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "Un poeta",
+   "tmdb_id": 1465563,
+   "titulo_original": "Un poeta",
+   "poster_path": "/jd2p3fdosgWgsZh558TQ1lbGbjl.jpg",
+   "synopsis_es": "La obsesión de Óscar Restrepo por la poesía no le ha reportado ninguna gloria. Envejecido y errático, ha sucumbido al tópico del poeta en la sombra. Conocer a Yurlady, una adolescente de origen humilde, y ayudarla a cultivar su talento trae algo de luz a sus días, pero arrastrarla al mundo de la poesía quizá no sea el camino.",
+   "synopsis_en": "An aging poet finds purpose mentoring Yurlady, a talented teen, though exposing her to the poetry scene might be unwise. His own poetic pursuits led nowhere, leaving him a stereotypical obscure writer.",
+   "genero": "Comedia",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 123,
+   "pais_tmdb": "Colombia, Germany, Sweden",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Un poeta",
+   "title_en": "A Poet",
+   "lbSlug": "a-poet",
+   "_director": "SIMON MESA SOTO",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "Via Crusis",
+   "tmdb_id": 1697484,
+   "titulo_original": "Via Crusis",
+   "poster_path": "/oah91XZPUpKP0XhJ8NMa5p85pAC.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Veal desires that are condemned deep within us.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 3,
+   "pais_tmdb": "",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Via Crusis",
+   "lbSlug": "via-crusis",
+   "_director": "Juan Lucas Neira",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "Witch and frog",
+   "tmdb_id": 1772239,
+   "titulo_original": "Witch and Frog",
+   "poster_path": "/wAjxqXkUg0Wm9SuDpRjymf8FrsY.jpg",
+   "synopsis_es": "Una aspirante a bruja quiere aprender magia y decide estudiar con una hechicera experimentada. Se presenta en su casa, pero las cosas no salen exactamente como esperaba.",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 2,
+   "pais_tmdb": "",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Witch and frog",
+   "lbSlug": "witch-and-frog",
+   "_director": "Anastasia Provotorova",
+   "_sondeado": "2026-09-20"
+  },
+  {
+   "titulo": "a body without a horse?",
+   "tmdb_id": 1659047,
+   "titulo_original": "Um Corpo sem Cavalo?",
+   "poster_path": "/v4NBHjzQKFd6QQ5kSZSbrz05ej5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Trying to understand what a body without a horse is by seeing what it’s capable of, the film shows a very present absence. With minimalist and handcrafted visuals, we follow the body as it performs a series of actions, yet remaining horseless. Playing with choreographic movements, language and its metaphors, the film explores how absence can shape the way we move, desire, forget and remember.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Brazil",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "a body without a horse?",
+   "lbSlug": "a-body-without-a-horse",
+   "_director": "Lara Fuke",
+   "_sondeado": "2026-09-20"
+  }
+ ],
+ "verificadas": {
+  "Alivios": {
+   "tmdb_id": 1469210,
+   "titulo_original": "Alivios",
+   "poster_path": "/fuQQAuTPK0lGxsvI0yUxz9KzQCK.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Mexico, Venezuela",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Alivios",
+   "title_en": "Reliefs",
+   "lbSlug": "reliefs-2025",
+   "_director": "Juan Manuel Gonzalez Fernandez",
+   "_sondeado": "2026-09-20"
+  },
+  "Aquileo Venganza": {
+   "tmdb_id": 763505,
+   "titulo_original": "Aquileo Venganza",
+   "poster_path": "/mXCGGdMME08txqo5PkYNuW95lUk.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the begining of 20th century, after the \"thousand days war\", the country was devastated. Gunmen to the service of land lords attack small land owners to get their lands. Aquileo is the only one who survives, and promises to take revenge on the killers.",
+   "genero": "Western",
+   "anio_tmdb": 1968,
+   "duracion_tmdb": 70,
+   "pais_tmdb": "Colombia, Venezuela",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Aquileo Venganza",
+   "lbSlug": "aquileo-venganza",
+   "_director": "Ciro Durán",
+   "_sondeado": "2026-09-20"
+  },
+  "Autokar": {
+   "tmdb_id": 1405315,
+   "titulo_original": "Autokar",
+   "poster_path": "/gQXR5hpXcRYcvqCvxSjS5lxa58u.jpg",
+   "synopsis_es": "En los años 90, una niña de 8 años llamada Agata deja Polonia para mudarse a Bélgica. Su viaje transforma la dura realidad de la migración en una emocionante aventura de autodescubrimiento.",
+   "synopsis_en": "In the 1990s, eight-year-old Agata leaves her Polish homeland to take a bus to Belgium by herself. Anxious about the journey, she begins to write a letter to her father who has stayed behind in Poland. When she drops her pencil and it rolls away, Agata is forced to overcome her shyness. Searching for it, she weaves her way between the rows of seats and plunges into a fantastical world inhabited by strange half-human, half-animal passengers. Agata’s perceptions transform the reality of migration into an imaginative experience of initiation.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Belgium, France",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Autokar",
+   "lbSlug": "autokar",
+   "_director": "Sylwia SZKIŁĄDŹ",
+   "_sondeado": "2026-09-20"
+  },
+  "Comparsa": {
+   "tmdb_id": 1480404,
+   "titulo_original": "Comparsa",
+   "poster_path": "/poj5xIuW3JVs5D1iTOCAXBMG6zP.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "From the shadows of a Guatemalan neighbourhood scared into silence, two sisters lead a luminous rebellion—unleashing joy, art, and radical truth in a fight for survival.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 79,
+   "pais_tmdb": "Guatemala, United States of America",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Comparsa",
+   "lbSlug": "comparsa-2025",
+   "_director": "Vickie Curtis y Doug Anderson",
+   "_sondeado": "2026-09-20"
+  },
+  "Con la mano arriba": {
+   "tmdb_id": 1745797,
+   "titulo_original": "Con la Mano Arriba",
+   "poster_path": "/wBNTbvLz6r8ICBHj9OtQDkkrAf3.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "An independent theater group continues to build up its puppet troupe as part of the Barranquilla Carnival, despite financial and structural constraints.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Con la mano arriba",
+   "lbSlug": "con-la-mano-arriba",
+   "_director": "Miguel Angel Ordoñez",
+   "_sondeado": "2026-09-20"
+  },
+  "I don't know what to do": {
+   "tmdb_id": 1560415,
+   "titulo_original": "I Don't Know What to Do",
+   "poster_path": "/gB8C6HENI7qyHgilZxx0LdKsnWA.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A young girl named Lizzie spends an afternoon playing with a lizard she found in her garden. An accident occurs, and the lizard is hurt. Filled with sadness, Lizzie gently buries the lizard and places a flower on its grave, highlighting her tenderness and the fleeting nature of life.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "Spain",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "I don't know what to do",
+   "lbSlug": "i-dont-know-what-to-do",
+   "_director": "Akshita Tyagi, Leyla Belarbi, Lia Macruz",
+   "_sondeado": "2026-09-20"
+  },
+  "LA PRESENCIA DE BLANCO": {
+   "tmdb_id": 1753870,
+   "titulo_original": "La presencia de blanco",
+   "poster_path": "/FY7g3jBG8FBa1wACimnMJshGWl.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a forgotten town, legend comes to life after dark. Four children face the mystery of “The White Presence,” a ghost that haunts the rural school.",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "LA PRESENCIA DE BLANCO",
+   "lbSlug": "la-presencia-de-blanco",
+   "_director": "Nestor Javier Serpa Perez",
+   "_sondeado": "2026-09-20"
+  },
+  "Llueve sobre Babel": {
+   "tmdb_id": 1388977,
+   "titulo_original": "Llueve sobre Babel",
+   "poster_path": "/o6IDuFe3bBUR46DQbTy4tRCvnuk.jpg",
+   "synopsis_es": "En el bar Babel, donde vivos y muertos se mezclan, Dante busca recordar su pasado antes de que la Flaca, la Muerte en esta ciudad, cobre su deuda. Jacob esconde de su padre, un sacerdote fanático, su deseo de ser drag queen, mientras Uma, una gitana con su propia apuesta, intenta engañar a la Flaca para salvar a su hija. Entre pactos y desafíos, sus destinos chocan en una lucha contra lo inevitable.",
+   "synopsis_en": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 113,
+   "pais_tmdb": "Colombia, United States of America, Spain",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Llueve sobre Babel",
+   "title_en": "Rains Over Babel",
+   "lbSlug": "rains-over-babel",
+   "_director": "GALA DEL SOL",
+   "_sondeado": "2026-09-20"
+  },
+  "O Cravista": {
+   "tmdb_id": 1621972,
+   "titulo_original": "O Cravista",
+   "poster_path": "/e58rW8tLiLaZs692Qp6YrzLIXat.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Nearing his 100th birthday, harpsichordist and conductor Roberto De Regina revisits his pioneering journey in reintroducing early classical music to Brazil. Through personal memories and artistic achievements, he reflects on the legacy he built while facing prejudice and cultural resistance. A poignant portrait of art, time, and the courage to break barriers and transform traditions.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 104,
+   "pais_tmdb": "Brazil",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "O Cravista",
+   "title_en": "The Harpsichordist",
+   "lbSlug": "the-harpsichordist",
+   "_director": "Luiz Eduardo Ozóri",
+   "_sondeado": "2026-09-20"
+  },
+  "SHELTERING GESTURES": {
+   "tmdb_id": 1713804,
+   "titulo_original": "Refugiar el gesto",
+   "poster_path": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "SHELTERING GESTURES",
+   "lbSlug": "sheltering-gestures",
+   "_director": "Adrián Villa-Dávila y Andrés Prado",
+   "_sondeado": "2026-09-20"
+  },
+  "Sukua": {
+   "tmdb_id": 1456197,
+   "titulo_original": "Sukua",
+   "poster_path": "/c9L2gGEmdYtV5EDEX6Cvo3Nf3p4.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "When a Kogui child is given a water pistol as a toy, he begins to explore the familiar spaces of his territory with a new look. Sukua fluidly travels through the exterior and interior of his home and some remnants of the community that are manifested around the child's playful sweetness. The strangeness of the toy adds, at the same time, childish tenderness and noisy tension by its contrast with the environment and by the suggested violence that morally affects the father.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Sukua",
+   "lbSlug": "sukua",
+   "_director": "Omar Ospina Giraldo",
+   "_sondeado": "2026-09-20"
+  },
+  "TV Entreaberta": {
+   "tmdb_id": 1661195,
+   "titulo_original": "TV Entreaberta",
+   "poster_path": "/lunzCoocm6PIiNnRqDJymPeFen9.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A woman is abducted into her TV, where she is tormented by a caricatured American presenter. Moving through various television genres, the character is gradually assimilated into the system.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Brazil",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "TV Entreaberta",
+   "lbSlug": "tv-entreaberta",
+   "_director": "Mateus Compart",
+   "_sondeado": "2026-09-20"
+  },
+  "Tuktu, Padre Maíz": {
+   "tmdb_id": 1592955,
+   "titulo_original": "Tuktu, Padre Maíz",
+   "poster_path": "/qw4zntJUuj163JdkusNUnxHvOwg.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Tuktu, Padre Maíz",
+   "title_en": "Tuktu, Father Maize",
+   "lbSlug": "tuktu-father-maize",
+   "_director": "Mauricio Prieto Muriel",
+   "_sondeado": "2026-09-20"
+  },
+  "Un poeta": {
+   "tmdb_id": 1465563,
+   "titulo_original": "Un poeta",
+   "poster_path": "/jd2p3fdosgWgsZh558TQ1lbGbjl.jpg",
+   "synopsis_es": "La obsesión de Óscar Restrepo por la poesía no le ha reportado ninguna gloria. Envejecido y errático, ha sucumbido al tópico del poeta en la sombra. Conocer a Yurlady, una adolescente de origen humilde, y ayudarla a cultivar su talento trae algo de luz a sus días, pero arrastrarla al mundo de la poesía quizá no sea el camino.",
+   "synopsis_en": "An aging poet finds purpose mentoring Yurlady, a talented teen, though exposing her to the poetry scene might be unwise. His own poetic pursuits led nowhere, leaving him a stereotypical obscure writer.",
+   "genero": "Comedia",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 123,
+   "pais_tmdb": "Colombia, Germany, Sweden",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Un poeta",
+   "title_en": "A Poet",
+   "lbSlug": "a-poet",
+   "_director": "SIMON MESA SOTO",
+   "_sondeado": "2026-09-20"
+  },
+  "Via Crusis": {
+   "tmdb_id": 1697484,
+   "titulo_original": "Via Crusis",
+   "poster_path": "/oah91XZPUpKP0XhJ8NMa5p85pAC.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Veal desires that are condemned deep within us.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 3,
+   "pais_tmdb": "",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Via Crusis",
+   "lbSlug": "via-crusis",
+   "_director": "Juan Lucas Neira",
+   "_sondeado": "2026-09-20"
+  },
+  "Witch and frog": {
+   "tmdb_id": 1772239,
+   "titulo_original": "Witch and Frog",
+   "poster_path": "/wAjxqXkUg0Wm9SuDpRjymf8FrsY.jpg",
+   "synopsis_es": "Una aspirante a bruja quiere aprender magia y decide estudiar con una hechicera experimentada. Se presenta en su casa, pero las cosas no salen exactamente como esperaba.",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 2,
+   "pais_tmdb": "",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Witch and frog",
+   "lbSlug": "witch-and-frog",
+   "_director": "Anastasia Provotorova",
+   "_sondeado": "2026-09-20"
+  },
+  "a body without a horse?": {
+   "tmdb_id": 1659047,
+   "titulo_original": "Um Corpo sem Cavalo?",
+   "poster_path": "/v4NBHjzQKFd6QQ5kSZSbrz05ej5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Trying to understand what a body without a horse is by seeing what it’s capable of, the film shows a very present absence. With minimalist and handcrafted visuals, we follow the body as it performs a series of actions, yet remaining horseless. Playing with choreographic movements, language and its metaphors, the film explores how absence can shape the way we move, desire, forget and remember.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Brazil",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "a body without a horse?",
+   "lbSlug": "a-body-without-a-horse",
+   "_director": "Lara Fuke",
+   "_sondeado": "2026-09-20"
+  }
+ },
+ "sin_ficha": [
+  "1 Paseo por la Ciudad",
+  "4 minutes",
+  "A Sweet Miracle",
+  "A pesar de mí",
+  "ARENAS",
+  "Aguapanela",
+  "Aguas Grandes",
+  "Amor a primera vista",
+  "Behind the Door",
+  "Benditos los Viejos",
+  "Beyond the end",
+  "Boyacá en los campos",
+  "Catatumbo: House of Thunder, Memory, and Dignity",
+  "Collective Memory",
+  "Cos de vidre",
+  "Cuadrileros, orgullo y legado",
+  "Cuba 2001. Imágenes del futuro I",
+  "DESTELLOS",
+  "DIABLO BALLENA",
+  "Después de tanto amor",
+  "Drunk hearing the rain drops fall",
+  "ECLIPSES",
+  "ECOS",
+  "ENCRUCIJADAS",
+  "ENEMIGO EN EL ESPEJO",
+  "El cine dentro del cine dentro del cine",
+  "Extinction",
+  "FAR",
+  "Final Act",
+  "Floppy the robot - El último contacto.",
+  "Grief",
+  "GÉNESIS",
+  "HUMAN",
+  "IN BETWEEN",
+  "INDEPENDENCE",
+  "Just Another Bird",
+  "KMKZ: Wild, free and brave.",
+  "Korebaju Pai Rekocho",
+  "LA MONA",
+  "LENS",
+  "La Sombrilla de Mamá",
+  "La silla",
+  "La última historia",
+  "Language Of The Wind",
+  "Le jeune Sofiane",
+  "Life is a Chessboard; Every Move is Final",
+  "Lost Fragments of a Seizure",
+  "METAMORFOSIS",
+  "Maleza",
+  "Manos Rojas",
+  "Memorias del Alba",
+  "Mi tesoro",
+  "Momentos en movimiento. Primeros pasos del ballet en Colombia",
+  "Monte curandero",
+  "Mucho Gusto",
+  "NAHUALES",
+  "No es el Fin del Mundo",
+  "No se fía, ni aunque lloren",
+  "On Hold",
+  "PLANETA",
+  "PODEROSAS",
+  "PORTALES",
+  "Prompt Zero",
+  "Pros and Cons of Daydreaming",
+  "Protecting Our Territory 360",
+  "QUAZAR",
+  "Que el cielo nos perdone",
+  "Quimera",
+  "RAÍCES",
+  "RESISTENCIAS",
+  "RESURGENCIAS",
+  "RETORNOS",
+  "SEÑALES",
+  "SOLO",
+  "STEPPE",
+  "SUA Y SIE: Guardianes de la vida",
+  "SUN COFFE",
+  "Sabor a mí (acústico / bolero jazz)",
+  "Shorts",
+  "Sierra: El álbum mortuorio",
+  "TORMENTA EN LLAMAS",
+  "TRÁNSITO",
+  "The Guanentá Symphony",
+  "The Last Champion",
+  "They Call It Sausage",
+  "Tierras de Lobeiras",
+  "Tiro Libre",
+  "UMBRALES",
+  "VOCES",
+  "VOLAR",
+  "X-Plora Cine",
+  "Ánima de Marea"
+ ],
+ "_sin_ficha_sondeo": {
+  "1 Paseo por la Ciudad": {
+   "director": "Sara Coello Coello y Alejandro Acuña Sevilla",
+   "fecha": "2026-09-20"
+  },
+  "4 minutes": {
+   "director": "Rogerio Troiani",
+   "fecha": "2026-09-20"
+  },
+  "A Sweet Miracle": {
+   "director": "María José Chaparro",
+   "fecha": "2026-09-20"
+  },
+  "A pesar de mí": {
+   "director": "Thomás Mejía Lozano",
+   "fecha": "2026-09-20"
+  },
+  "ARENAS": {
+   "director": "JOHN BOLIVAR",
+   "fecha": "2026-09-20"
+  },
+  "Aguapanela": {
+   "director": "Juan José Narváez",
+   "fecha": "2026-09-20"
+  },
+  "Aguas Grandes": {
+   "director": "Presley Mendoza",
+   "fecha": "2026-09-20"
+  },
+  "Amor a primera vista": {
+   "director": "ANDRÉS QUINTERO",
+   "fecha": "2026-09-20"
+  },
+  "Behind the Door": {
+   "director": "Leonardo Valenti",
+   "fecha": "2026-09-20"
+  },
+  "Benditos los Viejos": {
+   "director": "Camilo Duque Zuluaga y Santiago Rubio",
+   "fecha": "2026-09-20"
+  },
+  "Beyond the end": {
+   "director": "Sara Sangiorgio",
+   "fecha": "2026-09-20"
+  },
+  "Boyacá en los campos": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "Catatumbo: House of Thunder, Memory, and Dignity": {
+   "director": "Jhonattan Sarmiento",
+   "fecha": "2026-09-20"
+  },
+  "Collective Memory": {
+   "director": "Cristina Colmenares",
+   "fecha": "2026-09-20"
+  },
+  "Cos de vidre": {
+   "director": "Marc Comabella Navarro",
+   "fecha": "2026-09-20"
+  },
+  "Cuadrileros, orgullo y legado": {
+   "director": "Fabián Enrique Moreno Correa",
+   "fecha": "2026-09-20"
+  },
+  "Cuba 2001. Imágenes del futuro I": {
+   "director": "Riqui Moreno Bolívar",
+   "fecha": "2026-09-20"
+  },
+  "DESTELLOS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "DIABLO BALLENA": {
+   "director": "Camilo Alfredo Barón Riveros",
+   "fecha": "2026-09-20"
+  },
+  "Después de tanto amor": {
+   "director": "Mercedes Oviedo",
+   "fecha": "2026-09-20"
+  },
+  "Drunk hearing the rain drops fall": {
+   "director": "Santiago Gómez Ramírez",
+   "fecha": "2026-09-20"
+  },
+  "ECLIPSES": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "ECOS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "ENCRUCIJADAS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "ENEMIGO EN EL ESPEJO": {
+   "director": "Julián Camilo Sánchez",
+   "fecha": "2026-09-20"
+  },
+  "El cine dentro del cine dentro del cine": {
+   "director": "Diana Kuéllar y Manuel Silva",
+   "fecha": "2026-09-20"
+  },
+  "Extinction": {
+   "director": "Frank Benítez",
+   "fecha": "2026-09-20"
+  },
+  "FAR": {
+   "director": "We are central asia collective",
+   "fecha": "2026-09-20"
+  },
+  "Final Act": {
+   "director": "Babi Astrolfi y Lisa Soares",
+   "fecha": "2026-09-20"
+  },
+  "Floppy the robot - El último contacto.": {
+   "director": "Jacobo Rendon",
+   "fecha": "2026-09-20"
+  },
+  "Grief": {
+   "director": "Nicolas Patiño Hortua y Andrés Santiago Cely Orjuela",
+   "fecha": "2026-09-20"
+  },
+  "GÉNESIS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "HUMAN": {
+   "director": "Debora Bergamini",
+   "fecha": "2026-09-20"
+  },
+  "IN BETWEEN": {
+   "director": "Carlos Andrés Paniagua",
+   "fecha": "2026-09-20"
+  },
+  "INDEPENDENCE": {
+   "director": "John Agudelo",
+   "fecha": "2026-09-20"
+  },
+  "Just Another Bird": {
+   "director": "Julián Gómez Reyes",
+   "fecha": "2026-09-20"
+  },
+  "KMKZ: Wild, free and brave.": {
+   "director": "Andrés Hernández",
+   "fecha": "2026-09-20"
+  },
+  "Korebaju Pai Rekocho": {
+   "director": "William Javier Gutiérrez Vargas",
+   "fecha": "2026-09-20"
+  },
+  "LA MONA": {
+   "director": "Diana C. Patiño",
+   "fecha": "2026-09-20"
+  },
+  "LENS": {
+   "director": "Eduardo Rodriguez",
+   "fecha": "2026-09-20"
+  },
+  "La Sombrilla de Mamá": {
+   "director": "Mateo Forero",
+   "fecha": "2026-09-20"
+  },
+  "La silla": {
+   "director": "Clara García",
+   "fecha": "2026-09-20"
+  },
+  "La última historia": {
+   "director": "Eberto Manotas y Mauro Andrade",
+   "fecha": "2026-09-20"
+  },
+  "Language Of The Wind": {
+   "director": "Shimataver Igbawua",
+   "fecha": "2026-09-20"
+  },
+  "Le jeune Sofiane": {
+   "director": "Fabien Ara",
+   "fecha": "2026-09-20"
+  },
+  "Life is a Chessboard; Every Move is Final": {
+   "director": "Wang zhi-zhong",
+   "fecha": "2026-09-20"
+  },
+  "Lost Fragments of a Seizure": {
+   "director": "Michael Martínez",
+   "fecha": "2026-09-20"
+  },
+  "METAMORFOSIS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "Maleza": {
+   "director": "Nicolle Estrada Diaz y Marcela Palacio Montoya",
+   "fecha": "2026-09-20"
+  },
+  "Manos Rojas": {
+   "director": "Julian Camilo Monroy",
+   "fecha": "2026-09-20"
+  },
+  "Memorias del Alba": {
+   "director": "Aldair Acosta Moctezuma",
+   "fecha": "2026-09-20"
+  },
+  "Mi tesoro": {
+   "director": "Dayana Gonzalez y Brian Congolez.",
+   "fecha": "2026-09-20"
+  },
+  "Momentos en movimiento. Primeros pasos del ballet en Colombia": {
+   "director": "Marybel Acevedo",
+   "fecha": "2026-09-20"
+  },
+  "Monte curandero": {
+   "director": "Andrés Felipe Velasco",
+   "fecha": "2026-09-20"
+  },
+  "Mucho Gusto": {
+   "director": "Cintia Obando",
+   "fecha": "2026-09-20"
+  },
+  "NAHUALES": {
+   "director": "Alejandro Cervantes",
+   "fecha": "2026-09-20"
+  },
+  "No es el Fin del Mundo": {
+   "director": "Santiago Medina",
+   "fecha": "2026-09-20"
+  },
+  "No se fía, ni aunque lloren": {
+   "director": "Natalia Hernández Sánchez",
+   "fecha": "2026-09-20"
+  },
+  "On Hold": {
+   "director": "Krishna Kumar Shukla",
+   "fecha": "2026-09-20"
+  },
+  "PLANETA": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "PODEROSAS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "PORTALES": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "Prompt Zero": {
+   "director": "Tomás Etter Gómez",
+   "fecha": "2026-09-20"
+  },
+  "Pros and Cons of Daydreaming": {
+   "director": "Lorena López",
+   "fecha": "2026-09-20"
+  },
+  "Protecting Our Territory 360": {
+   "director": "Christopher Boulton",
+   "fecha": "2026-09-20"
+  },
+  "QUAZAR": {
+   "director": "Alejandro Vargas",
+   "fecha": "2026-09-20"
+  },
+  "Que el cielo nos perdone": {
+   "director": "Andres Buitrago",
+   "fecha": "2026-09-20"
+  },
+  "Quimera": {
+   "director": "Santiago Rincón",
+   "fecha": "2026-09-20"
+  },
+  "RAÍCES": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "RESISTENCIAS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "RESURGENCIAS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "RETORNOS": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "SEÑALES": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "SOLO": {
+   "director": "Agustina Lecaros Chavez",
+   "fecha": "2026-09-20"
+  },
+  "STEPPE": {
+   "director": "Mariano Benito",
+   "fecha": "2026-09-20"
+  },
+  "SUA Y SIE: Guardianes de la vida": {
+   "director": "Johanna Emilce Cortés Daza",
+   "fecha": "2026-09-20"
+  },
+  "SUN COFFE": {
+   "director": "Zoe Filloux",
+   "fecha": "2026-09-20"
+  },
+  "Sabor a mí (acústico / bolero jazz)": {
+   "director": "Franco Zornosa",
+   "fecha": "2026-09-20"
+  },
+  "Shorts": {
+   "director": "Daniel Baena Pacheco",
+   "fecha": "2026-09-20"
+  },
+  "Sierra: El álbum mortuorio": {
+   "director": "Carlos Ortiz Alarcón",
+   "fecha": "2026-09-20"
+  },
+  "TORMENTA EN LLAMAS": {
+   "director": "Humberto Flores",
+   "fecha": "2026-09-20"
+  },
+  "TRÁNSITO": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "The Guanentá Symphony": {
+   "director": "Victor Jaramillo",
+   "fecha": "2026-09-20"
+  },
+  "The Last Champion": {
+   "director": "Daniel Jesús Parra Jaimes",
+   "fecha": "2026-09-20"
+  },
+  "They Call It Sausage": {
+   "director": "Timm Osterhold",
+   "fecha": "2026-09-20"
+  },
+  "Tierras de Lobeiras": {
+   "director": "Carla Barrionuevo, Waira Conrady Vega, Lucia Xuric Lopez Farias,",
+   "fecha": "2026-09-20"
+  },
+  "Tiro Libre": {
+   "director": "Inti Deus Guerra Miranda",
+   "fecha": "2026-09-20"
+  },
+  "UMBRALES": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "VOCES": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "VOLAR": {
+   "director": "Jeiver Pinto Vargas",
+   "fecha": "2026-09-20"
+  },
+  "X-Plora Cine": {
+   "director": "",
+   "fecha": "2026-09-20"
+  },
+  "Ánima de Marea": {
+   "director": "Laury T. Herrera",
+   "fecha": "2026-09-20"
+  }
+ }
+}
