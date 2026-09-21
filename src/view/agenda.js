@@ -27,6 +27,7 @@ import { cloudScreeningKey } from '../domain/delays.js';
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
   screeningPassed, screeningEnded, screeningNow, screeningQaOnly, blockDuration, delayedEndMin, _delayKey, _endedStats, prioLiveCount, effectiveWatched, abiertaFase,
+  screeningEndDate,
 } from '../domain/film.js';
 import { sameEntry,
   isScreeningBlocked, screeningPlannable, screensConflict, screensConflictReason,
@@ -2025,7 +2026,15 @@ export function getSuggestions(){
   const _citySel=keepCityOnly(activeVenue);
   const _cityOk=f=>_citySel==='all'||!f.venue||venueMatches(f.venue,_citySel);
   globalThis.PLAN_CITY_VENUES=planCityVenues(); // screeningPlannable (Recuperación) lee de acá
-  const saved=savedAgenda.schedule.filter(s=>!screeningPassed(s));
+  // Lo que sigue en el Plan = lo que aún NO TERMINÓ, no lo que «ya no llegás».
+  // screeningPassed es arranque+10 (misma trampa que #916): con Bedford Park en
+  // curso (TIFF sáb 12, 14:30–16:31) a las 16:20 la función salía del Plan, su
+  // franja quedaba libre y Sugerencias ofrecía Wavelengths 2 de las 16:15 —
+  // «+ Agendar» sobre algo a lo que no se puede llegar. La que está en curso no
+  // deja hueco ni se puede pisar; la que terminó sale como siempre.
+  const _now=simNow();
+  const _sigue=s=>{ if(!screeningPassed(s)) return true; const e=screeningEndDate(s); return !!e&&_now<e; };
+  const saved=savedAgenda.schedule.filter(_sigue);
   // OJO: NO early-return si saved quedó vacío. "Todo mi plan ya pasó" ≠ "no tengo
   // plan": en el último día de festival, con el plan de días anteriores ya cumplido,
   // el return {} dejaba CERO sugerencias (y el copy "plan cubierto" mintiendo)
