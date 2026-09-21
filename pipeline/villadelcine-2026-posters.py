@@ -226,12 +226,23 @@ def main():
 
     os.makedirs(ASSETS, exist_ok=True)
     mapa, bajados, ya, sin, descartados = {}, 0, 0, [], []
+    # EL DESTINO DE CADA OBRA, ESCRITO. No la lista de las que salieron bien:
+    # ésa no distingue «no tiene afiche» de «nunca la miré», y esa diferencia
+    # es la que costó cuatro fallos el 21 sep 2026. Acá cada obra del catálogo
+    # sale con un estado y, si no acabó con afiche, con el porqué. Lo vigila
+    # [afiche-cobertura].
+    destino = {}
     for o in obras:
         url_sel, categoria = tarjeta(o['titulo'])
         if not url_sel and not o['afiches']:
             sin.append(o['titulo'])
+            destino[o['titulo']] = {'estado': 'sin_tarjeta', '_por_que':
+                'no tiene tarjeta en la página de Selección Oficial ni galería '
+                'en su ficha: no hay imagen que bajar en ninguna fuente'}
             continue
         if norm(o['titulo']) in con_tmdb:
+            destino[o['titulo']] = {'estado': 'tmdb', '_por_que':
+                'tiene ficha verificada en TMDB y su afiche manda: es el original'}
             continue                       # el de TMDB manda: es el original
         # EL AFICHE DE SELECCIÓN OFICIAL MANDA. La galería de la ficha es el
         # último recurso, y casi siempre la descarta la medida por apaisada.
@@ -256,6 +267,8 @@ def main():
                             '-o', tmp, url], capture_output=True)
         if r.returncode or not os.path.exists(tmp) or os.path.getsize(tmp) < 4000:
             sin.append(f'{o["titulo"]} (no se pudo bajar)')
+            destino[o['titulo']] = {'estado': 'error', '_por_que':
+                f'la descarga falló o devolvió menos de 4 KB — {url}'}
             if os.path.exists(tmp):
                 os.remove(tmp)
             continue
@@ -274,6 +287,9 @@ def main():
         if not h or not (es_16_9 or R_MIN <= w / h <= R_MAX):
             descartados.append((o['titulo'], w, h, round(w / h, 2) if h else 0,
                                 url.split('/')[-1]))
+            destino[o['titulo']] = {'estado': 'descartada', '_por_que':
+                f'la imagen mide {w}x{h} (r={round(w / h, 2) if h else 0}): más '
+                f'estrecha que {R_MIN}, ni afiche ni fotograma legible'}
             os.remove(tmp)
             if os.path.exists(dest):
                 os.remove(dest)      # sin huérfanos en assets/
@@ -291,6 +307,8 @@ def main():
                 Image.open(tmp).convert('RGB').save(dest, 'JPEG', quality=90)
             except Exception as e:
                 sin.append(f'{o["titulo"]} (no se pudo convertir: {str(e)[:40]})')
+                destino[o['titulo']] = {'estado': 'error',
+                                        '_por_que': f'no se pudo convertir: {str(e)[:60]}'}
                 os.remove(tmp)
                 continue
             os.remove(tmp)
@@ -299,6 +317,8 @@ def main():
                              'posterSource': 'editorial' if es_16_9 else 'oficial',
                              '_url': url, '_medida_original': f'{w}x{h}',
                              **({'_categoria': categoria} if categoria else {})}
+        destino[o['titulo']] = {'estado': 'usada', 'medida': f'{w}x{h}',
+                                **({'categoria': categoria} if categoria else {})}
 
     json.dump({'_provenance': provenance(
         'villadelcine.com — el afiche que el festival publica en la página de cada obra',
@@ -308,6 +328,15 @@ def main():
         metodo='write-once: lo ya bajado no se vuelve a pedir, porque después pasa '
                'por encuadrar-posters.py y re-bajarlo desharía el encuadre'),
         'posters': mapa,
+        # LA COBERTURA INVERSA: el catálogo es el denominador, no nuestra lista
+        # de aciertos. Cada obra con su estado, y un porqué escrito cuando no
+        # acabó con afiche. Lo exige [afiche-cobertura] en validate.py.
+        '_cobertura': {
+            'obras': len(obras),
+            'fuente': SELECCION,
+            'tarjetas_en_la_fuente': len(sel),
+            'destino': destino,
+        },
         '_descartados_por_forma': [
             {'titulo': t, 'medida': f'{w}x{h}', 'r': r, 'archivo': f,
              '_por_que': 'más estrecha que 0,44: ni afiche ni fotograma legible.'}
