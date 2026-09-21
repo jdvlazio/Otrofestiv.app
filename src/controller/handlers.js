@@ -23,7 +23,7 @@ import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableSc
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
-import { _removePlanItem, closePelSheet, openConflictSheet, openCortoSheet, openPelSheet, openPlanConfirm, openPostViewRating, openPrioLimit, openRatingSheet, showActionToast } from './sheets-controller.js';
+import { _removePlanItem, closePelSheet, openConflictSheet, openCortoSheet, openPelSheet, openPlanConfirm, openPostViewRating, openPrioLimit, openRatingSheet, repaintPelFoot, showActionToast } from './sheets-controller.js';
 
 // ── module-local + const privado ─────────────────────────────────────────────
 let _ctaRemovedTimer=null;
@@ -197,6 +197,7 @@ export function toggleWatched(title,e){
     // 4. PERSIST + surgical (render automático vía pipeline)
     saveState('wl','watched','notWatched');
     updateCardState(title);
+    repaintPelFoot(title);
     _reRenderIntereses();
     showToast(t('plan_vuelta_a',{donde:_vueltaA(title)}),'info');
     return;
@@ -213,6 +214,8 @@ export function toggleWatched(title,e){
         notWatched: state._delFromSet(state.snapshot().notWatched, title),
       });
       saveWatched();saveNotWatched();updateCardState(title);
+      // la ficha abierta se entera: su pie pasa a Vista encendida + Calificar (#919)
+      repaintPelFoot(title);
       _reRenderIntereses();
       showToast(t('toast_marcada_vista'),'info');
       const _f=FILMS.find(fi=>fi.title===title);
