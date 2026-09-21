@@ -665,12 +665,14 @@ export const FESTIVAL_CONFIG={
     // en `festivalDates` + `days` del JSON, y BORRAR este bloque. Mientras el
     // bloque exista, las fechas viejas no se muestran.
     //
-    // Sin `note_en`: la traducción es copy nuestro y la aprueba Juan. Sin ella
-    // el inglés muestra el español intacto, que es el fallback declarado.
+    // `note_en` es traducción nuestra, aprobada por Juan el 21 sep 2026. No se
+    // traduce «lamentables sucesos» por su causa concreta —el incendio—: el
+    // festival eligió no nombrarla y la banda dice lo que dice el festival.
     status:{
       kind:'postponed',
       since:'2026-09-21',
       note:'Debido a los lamentables sucesos, y atendiendo las recomendaciones emitidas por las autoridades, el Festival cambia su fecha de realización. Próximamente estaremos anunciando nuevas fechas.',
+      note_en:'Due to the unfortunate events, and following the recommendations issued by the authorities, the Festival is changing its dates. New dates will be announced soon.',
       url:'https://www.instagram.com/p/Ddj0BETpRxF/',
     },
     keyArt:'/assets/keyart/villadelcine2026-v3.jpg',
