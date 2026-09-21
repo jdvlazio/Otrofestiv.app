@@ -39,6 +39,10 @@
    "que": "las 4 sedes (ya verificadas a mano con Google Maps: _prec manual, intocables)"
   },
   {
+   "cmd": "python3 pipeline/villadelcine-2026-actividades-pdf.py",
+   "que": "la ficha de cada actividad de la Ruta Académica (p15 y pp. 51–60), que el lector de obras no alcanzaba: se detiene en la p50. Sin esto, las 24 actividades se publicaban sin una línea de descripción"
+  },
+  {
    "cmd": "python3 pipeline/villadelcine-2026-crudo.py",
    "que": "parrilla + obras → crudo. La duración publicada es la REAL: si las obras suman más que la casilla dibujada, manda la suma"
   },
@@ -149,7 +153,8 @@
   },
   "acceso_por_defecto": {
    "is_free": true,
-   "_por_que": "DECISIÓN DE JUAN, confirmada el 19 sep 2026: todas las funciones son de entrada libre. Queda dicho de dónde viene, porque NO sale de una fuente del festival: su web no habla de entradas, el PDF de programación tampoco, la página /acreditación/ de su menú da 404 y la nota de prensa de Canal Trece dice explícitamente que no informa precios. Es el criterio de Juan —«entrada libre por ahora, es el defecto de un festival en Colombia en este tamaño»— reafirmado al cerrar la lista de preguntas. Si aparece una función que se paga, se ve que el supuesto vino de acá."
+   "_por_que": "DECISIÓN DE JUAN, confirmada el 19 sep 2026: todas las funciones son de entrada libre. Queda dicho de dónde viene, porque NO sale de una fuente del festival: su web no habla de entradas, el PDF de programación tampoco, la página /acreditación/ de su menú da 404 y la nota de prensa de Canal Trece dice explícitamente que no informa precios. Es el criterio de Juan —«entrada libre por ahora, es el defecto de un festival en Colombia en este tamaño»— reafirmado al cerrar la lista de preguntas. Si aparece una función que se paga, se ve que el supuesto vino de acá.",
+   "_acreditacion": "HAY ACREDITACIÓN Y NO ES OBLIGATORIA. El menú ACREDITACIÓN de villadelcine.com lleva a un formulario, «Acreditaciones Festival Villa del Cine 2026», que pide datos y dice que la escarapela se reclama en la Galería Pérez Rojas desde el 23 a las 10:00. Lo que el formulario NO dice es si hace falta para entrar. Lo zanjó Juan el 21 sep 2026: «La acreditación es totalmente gratis. Es para recolectar datos de asistentes, no obligatorio. Todo es gratis.» Por eso las 52 funciones van con `is_free` y NINGUNA con `requires_registration`: poner el formulario como inscripción obligatoria mandaría a la gente a un trámite que no existe."
   },
   "name": "Villa del Cine",
   "fullName": "Festival Villa del Cine — Villa de Leyva",
@@ -175,10 +180,13 @@
  "_nota_posters": "El póster va INLINE en cada obra del crudo (lo aplica villadelcine-2026-crudo.py leyendo el sidecar), no como mapa `posters{}` en el plan: ese modelo murió en la Fase A.1 y el gate [poster-map-legacy] lo bloquea.",
  "_preguntas_al_festival": [
   "Los afiches de siete cortos que no tienen imagen en el PDF ni en la web, todos dentro de programas: «Sabor a mí (acústico / bolero jazz)» (Franco Zornosa, Boyacá en los campos), «QUAZAR» (Alejandro Vargas), «Momentos en movimiento. Primeros pasos del ballet en Colombia» (Marybel Acevedo) y «LA MONA» (Diana C. Patiño), las tres en PODEROSAS, y «Korebaju Pai Rekocho» (William Javier Gutiérrez Vargas), «Cuadrileros, orgullo y legado» (Fabián Enrique Moreno Correa) y «The Guanentá Symphony» (Victor Jaramillo), las tres en RAÍCES. ESTA ES LA ÚNICA QUE SE PREGUNTÓ EN EL PRIMER MENSAJE (20 sep): un DM con cinco peticiones no se responde ninguna.",
-  "La hora de «Cianotipia» y de «Farmeando el Tunjo: creación cinematográfica» dentro del bloque de Programación Infantil. Sus fichas las acreditan a un TALLERISTA y las describen como taller, así que no entran como obra; y sin hora propia no se publican como función. Con el dato entran las dos.",
   "«EL FÓSIL MÁGICO»: está en la retícula del sábado (15:45, Casa San Pedro) y en ninguna otra parte — sin ficha en el PDF, sin página en la web, sin entrada en la Selección Oficial de Instagram. No tiene sección ni duración propia. Hoy NO se publica.",
   "El programa RAÍCES del sábado ocupa una casilla de 60 minutos y sus cuatro cortos suman 79. Publicamos 79, que es lo que de verdad dura (regla de Juan): publicar 60 escondería un choque real a las 13:00. ¿El bloque termina a las 12:45 o a las 13:04?",
   "«Sierra: El álbum mortuorio» aparece dirigida por Carlos Ortiz Alarcón en el PDF y por Cristian Gil Bayona en la web del festival. Publicamos la del PDF. ¿Cuál es?"
  ],
- "_como_se_pregunta": "CORTO Y DIRECTO, y una sola petición por mensaje. El 20 sep se redactó un DM con las cinco de arriba en una tabla y Juan lo devolvió: «El mensaje para una primera aproximación es larguísimo». Salió solo la primera. Las otras cuatro esperan a que contesten."
+ "_como_se_pregunta": "CORTO Y DIRECTO, y una sola petición por mensaje. El 20 sep se redactó un DM con las cinco de arriba en una tabla y Juan lo devolvió: «El mensaje para una primera aproximación es larguísimo». Salió solo la primera. Las otras cuatro esperan a que contesten.",
+ "_no_se_publica": {
+  "«Cianotipia» y «Farmeando el Tunjo: creación cinematográfica con inteligencia artificial»": "los dos talleres infantiles de X-PLORA CINE. Sus fichas (pp. 21 y 22) los acreditan a un TALLERISTA y los describen como taller, así que no entran como obra; y el PDF no les da hora propia dentro del bloque, así que tampoco entran como función. DECISIÓN DE JUAN, 21 sep 2026: «dejemos los talleres por fuera por ahora». Tenemos su sinopsis entera en -obras-pdf.json; solo falta la hora.",
+  "«EL FÓSIL MÁGICO»": "solo está en la retícula del sábado: sin ficha, sin sección y sin país en ninguna de las cuatro fuentes."
+ }
 }

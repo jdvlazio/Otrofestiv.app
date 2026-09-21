@@ -190,7 +190,20 @@ def tipo_de(texto):
     return '', '', ''
 
 
+def fichas_actividad():
+    """La descripción que el festival le escribió a cada actividad (pp. 51–60).
+
+    Sidecar aparte porque es otra lectura del PDF, con otra maqueta: las fichas
+    de OBRA llegan hasta la p50 y `-obras-pdf.py` se detiene ahí."""
+    p = f'{ST}/villadelcine-2026-actividades-pdf.json'
+    if not os.path.exists(p):
+        return {}
+    d = json.load(open(p, encoding='utf-8'))
+    return {norm(a['titulo']): a for a in d['actividades']}
+
+
 def main():
+    act_pdf = fichas_actividad()
     par = json.load(open(f'{ST}/villadelcine-2026-parrilla.json', encoding='utf-8'))
     pdf = json.load(open(f'{ST}/villadelcine-2026-obras-pdf.json', encoding='utf-8'))['obras']
     web = json.load(open(f'{ST}/villadelcine-2026-obras-web.json', encoding='utf-8'))['obras']
@@ -469,6 +482,19 @@ def main():
                       'tmdb_id', 'lbSlug', 'poster', 'posterSource', 'director',
                       'categoria', 'duracion_obra'):
                 reg.pop(k, None)
+            # …Y AHORA SÍ LA SUYA. Lo de arriba quita la ficha de la OBRA que la
+            # actividad menciona; esto le pone la que el festival le escribió a
+            # ELLA, en las páginas 51–60 del mismo PDF. Va después del borrado
+            # por la misma razón que el borrado va al final: puesto antes, las
+            # ramas de arriba lo pisaban.
+            #
+            # Hasta hoy las 24 actividades se publicaban sin una sola línea:
+            # alguien abría «Dirigir el tiempo» y no sabía si era una charla, un
+            # taller o una proyección. La ficha existía y no la leía nadie.
+            fa = act_pdf.get(norm(reg['titulo']))
+            if fa:
+                reg['sinopsis'] = fa['sinopsis']
+                reg['_src_ficha'] = fa['_src']
         funciones.append(reg)
 
     json.dump({'_provenance': provenance(

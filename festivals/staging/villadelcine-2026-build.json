@@ -2,12 +2,13 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF) + las fichas de obra de villadelcine.com",
-  "capturado": "2026-09-20",
+  "capturado": "2026-09-21",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "acceso_por_defecto": {
   "is_free": true,
-  "_por_que": "DECISIÓN DE JUAN, confirmada el 19 sep 2026: todas las funciones son de entrada libre. Queda dicho de dónde viene, porque NO sale de una fuente del festival: su web no habla de entradas, el PDF de programación tampoco, la página /acreditación/ de su menú da 404 y la nota de prensa de Canal Trece dice explícitamente que no informa precios. Es el criterio de Juan —«entrada libre por ahora, es el defecto de un festival en Colombia en este tamaño»— reafirmado al cerrar la lista de preguntas. Si aparece una función que se paga, se ve que el supuesto vino de acá."
+  "_por_que": "DECISIÓN DE JUAN, confirmada el 19 sep 2026: todas las funciones son de entrada libre. Queda dicho de dónde viene, porque NO sale de una fuente del festival: su web no habla de entradas, el PDF de programación tampoco, la página /acreditación/ de su menú da 404 y la nota de prensa de Canal Trece dice explícitamente que no informa precios. Es el criterio de Juan —«entrada libre por ahora, es el defecto de un festival en Colombia en este tamaño»— reafirmado al cerrar la lista de preguntas. Si aparece una función que se paga, se ve que el supuesto vino de acá.",
+  "_acreditacion": "HAY ACREDITACIÓN Y NO ES OBLIGATORIA. El menú ACREDITACIÓN de villadelcine.com lleva a un formulario, «Acreditaciones Festival Villa del Cine 2026», que pide datos y dice que la escarapela se reclama en la Galería Pérez Rojas desde el 23 a las 10:00. Lo que el formulario NO dice es si hace falta para entrar. Lo zanjó Juan el 21 sep 2026: «La acreditación es totalmente gratis. Es para recolectar datos de asistentes, no obligatorio. Todo es gratis.» Por eso las 52 funciones van con `is_free` y NINGUNA con `requires_registration`: poner el formulario como inscripción obligatoria mandaría a la gente a un trámite que no existe."
  },
  "name": "Villa del Cine",
  "fullName": "Festival Villa del Cine — Villa de Leyva",
@@ -344,6 +345,8 @@
    "venue": "Galería Pérez Rojas - Villa de Leyva",
    "event_kind": "encuentro",
    "has_qa": false,
+   "synopsis": "Un espacio de encuentro y preparación para los proyectos seleccionados en Work in Progress, pensado para compartir herramientas, consejos y estrategias que les ayuden a fortalecer su pitch antes de presentarlo ante los jurados. Una sesión abierta para quienes quieran acompañar este momento, conocer de cerca el proceso y descubrir claves para comunicar una historia, un proyecto y su potencial de manera clara, atractiva y efectiva.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p3",
     "date": "2026-09-19"
@@ -362,6 +365,8 @@
    "sala": "Salón principal · 2do piso",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "Experiencia formativa y creativa en alianza con DASC (Directores Audiovisuales Sociedad Colombiana de Gestión), en la que uno de sus directores acompañará a un equipo de cinco participantes en la creación y realización de un filminuto. Un espacio práctico para compartir conocimientos y fortalecer la formación del sector audiovisual de Boyacá.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p3",
     "date": "2026-09-19"
@@ -635,6 +640,8 @@
    "venue": "Galería Pérez Rojas - Villa de Leyva",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "¿Tienes un proyecto en desarrollo y quieres recibir retroalimentación de expertos de diferentes áreas? Espacio de escucha, intercambio y conocimiento para conversar sobre tu proyecto mientras compartes un café.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p4",
     "date": "2026-09-19"
@@ -653,6 +660,8 @@
    "sala": "Salón principal · 2do piso",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "Experiencia formativa y creativa en alianza con DASC (Directores Audiovisuales Sociedad Colombiana de Gestión), en la que uno de sus directores acompañará a un equipo de cinco participantes en la creación y realización de un filminuto. Un espacio práctico para compartir conocimientos y fortalecer la formación del sector audiovisual de Boyacá.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p4",
     "date": "2026-09-19"
@@ -1244,6 +1253,8 @@
    "sala": "Salón principal · 1er piso",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "Un taller para acercarse a la creación de imágenes para cine desde un lugar experimental, creativo y accesible. A través del póster, exploraremos cómo una película puede convertirse en una imagen: cómo traducir su atmósfera, sus personajes, conflictos, símbolos y emociones en una pieza visual que también cuenta una historia.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p6",
     "date": "2026-09-19"
@@ -1262,6 +1273,8 @@
    "sala": "Salón principal · 2do piso",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "Experiencia formativa y creativa en alianza con DASC (Directores Audiovisuales Sociedad Colombiana de Gestión), en la que uno de sus directores acompañará a un equipo de cinco participantes en la creación y realización de un filminuto. Un espacio práctico para compartir conocimientos y fortalecer la formación del sector audiovisual de Boyacá.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p6",
     "date": "2026-09-19"
@@ -1280,6 +1293,8 @@
    "sala": "Auditorio",
    "event_kind": "charla",
    "has_qa": false,
+   "synopsis": "Una charla sobre restauración. La paga tuvo su reestreno, en la versión restaurada durante Cannes Classics 2025 y Aquileo venganza tendrá el estreno de la versión restaurada durante el festival Villa del cine 2026.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p6",
     "date": "2026-09-19"
@@ -1461,6 +1476,8 @@
    "venue": "Galería Pérez Rojas - Villa de Leyva",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "¿Tienes un proyecto en desarrollo y quieres recibir retroalimentación de expertos de diferentes áreas? Espacio de escucha, intercambio y conocimiento para conversar sobre tu proyecto mientras compartes un café.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p7",
     "date": "2026-09-19"
@@ -1479,6 +1496,8 @@
    "sala": "Salón principal · 1er piso",
    "event_kind": "charla",
    "has_qa": false,
+   "synopsis": "Una conversación para descubrir cómo el podcast puede convertirse en una nueva ventana para el cine: un espacio para ampliar historias, explorar personajes y crear nuevas formas de conectar con las audiencias. Un encuentro con quienes hacen cine para conversar sobre las posibilidades narrativas de este formato y los universos que pueden surgir cuando una película encuentra nuevas voces más allá de la pantalla",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p7",
     "date": "2026-09-19"
@@ -1497,6 +1516,8 @@
    "sala": "Salón principal · 2do piso",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "Experiencia formativa y creativa en alianza con DASC (Directores Audiovisuales Sociedad Colombiana de Gestión), en la que uno de sus directores acompañará a un equipo de cinco participantes en la creación y realización de un filminuto. Un espacio práctico para compartir conocimientos y fortalecer la formación del sector audiovisual de Boyacá.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p7",
     "date": "2026-09-19"
@@ -1982,6 +2003,8 @@
    "sala": "Salón principal · 1er piso",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "Un encuentro para descubrir el mundo del maquillaje en el cine colombiano: sus secretos, sus posibilidades y la manera en que transforma rostros para contar historias. Durante dos horas conoceremos este fascinante oficio y cerraremos con una demostración en vivo, donde veremos cómo una gran artista convierte el maquillaje en una verdadera obra de arte.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p9",
     "date": "2026-09-19"
@@ -2000,6 +2023,8 @@
    "sala": "Auditorio",
    "event_kind": "masterclass",
    "has_qa": false,
+   "synopsis": "Una conversación cercana con una directora sobre el oficio de hacer cine: las decisiones, los desafíos y las intuiciones que acompañan el proceso de llevar una historia a la pantalla. Un encuentro para hablar de dirección, creación y de ese particular ejercicio de darle ritmo, sentido y tiempo a una película.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p9",
     "date": "2026-09-19"
@@ -2063,6 +2088,8 @@
    "sala": "Salón principal · 2do piso",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "Experiencia formativa y creativa en alianza con DASC (Directores Audiovisuales Sociedad Colombiana de Gestión), en la que uno de sus directores acompañará a un equipo de cinco participantes en la creación y realización de un filminuto. Un espacio práctico para compartir conocimientos y fortalecer la formación del sector audiovisual de Boyacá.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p9",
     "date": "2026-09-19"
@@ -2081,6 +2108,8 @@
    "sala": "Salón principal · 1er piso",
    "event_kind": "charla",
    "has_qa": false,
+   "synopsis": "Un encuentro con las y los realizadores de los cortometrajes seleccionados para conversar sobre las historias que los llevaron a crear sus películas. Una charla para conocer sus procesos, búsquedas y desafíos, y descubrir las distintas miradas que hoy están explorando el lenguaje del cortometraje.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p9",
     "date": "2026-09-19"
@@ -2270,6 +2299,8 @@
    "venue": "Galería Pérez Rojas - Villa de Leyva",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "¿Tienes un proyecto en desarrollo y quieres recibir retroalimentación de expertos de diferentes áreas? Espacio de escucha, intercambio y conocimiento para conversar sobre tu proyecto mientras compartes un café.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p10",
     "date": "2026-09-19"
@@ -2287,6 +2318,8 @@
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "Experiencia formativa y creativa en alianza con DASC (Directores Audiovisuales Sociedad Colombiana de Gestión), en la que uno de sus directores acompañará a un equipo de cinco participantes en la creación y realización de un filminuto. Un espacio práctico para compartir conocimientos y fortalecer la formación del sector audiovisual de Boyacá.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p10",
     "date": "2026-09-19"
@@ -2304,6 +2337,8 @@
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "event_kind": "encuentro",
    "has_qa": false,
+   "synopsis": "Hay personas que no solo recorren un camino: ayudan a que exista. Este reconocimiento celebra una labor fundamental que ha acompañado al festival desde sus primeros pasos. Edición tras edición, Mabel Velosa ha convertido su vocación de cuidado en una forma de sostener y compartir el cine en Boyacá, dejando una huella que continúa creciendo junto al festival.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p10",
     "date": "2026-09-19"
@@ -2404,9 +2439,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-20T20:33:09",
-  "plan_sha": "a33a8c35b79230e1",
-  "paso": 14,
+  "fecha": "2026-09-21T06:10:29",
+  "plan_sha": "e4dcbfefcc5ce37b",
+  "paso": 15,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"
  }
 }
