@@ -312,6 +312,13 @@ def main():
                             'en la propia ficha del festival para «Amparo»; el '
                             'PDF lo imprime en mayúscula sostenida y sin tilde, '
                             'y la sostenida se come las tildes.'),
+        'Carlos Ortiz Alarcón': ('Carlos Ortíz Alarcón',
+                                 'el director de «Sierra: El álbum mortuorio». '
+                                 'IMDb (tt38043603) lo acredita «Carlos Ortíz '
+                                 'Alarcón», dirección y guion, y confirma que el '
+                                 'PDF tenía razón frente a la web del festival, '
+                                 'que la atribuye a Cristian Gil Bayona. El PDF '
+                                 'trae Alarcón con tilde y Ortiz sin ella.'),
         'Sun Coffe': ('Sun Coffee',
                       'el PDF lo imprime «SUN COFFE» en mayúscula sostenida, con '
                       'una e de menos. Ninguna otra superficie del festival lo '
@@ -381,7 +388,10 @@ def main():
             **({'tmdb_id': t['tmdb_id']} if t.get('tmdb_id') else {}),
             **({'poster': pl or t['poster_path'], 'posterSource': 'tmdb'}
                if t.get('poster_path') else
-               {'poster': pf['poster'], 'posterSource': 'oficial'}
+               {'poster': pf['poster'],
+                # el sidecar decide la fuente: la carátula 16:9 de un videoclip
+                # entra como `editorial` y con 'oficial' fijo aquí se estiraba
+                'posterSource': pf.get('posterSource', 'oficial')}
                if pf.get('poster') else {}),
             **({'lbSlug': t['lbSlug']} if t.get('lbSlug') else {}),
             **{kk: vv for kk, vv in fx.items() if not kk.startswith('_')},

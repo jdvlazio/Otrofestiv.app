@@ -7,341 +7,488 @@
   "metodo": "write-once: lo ya bajado no se vuelve a pedir, porque después pasa por encuadrar-posters.py y re-bajarlo desharía el encuadre"
  },
  "posters": {
-  "Extinction": {
-   "poster": "/assets/villadelcine-2026/extinction.jpg",
+  "La última historia": {
+   "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
    "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/e63ebfc341-poster.webp",
-   "_medida_original": "560x800"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/poster-la-ultima-historia-oficial-720-x-1080-px-Eberto-Manotas-ochoa.webp",
+   "_medida_original": "720x1080",
+   "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
   },
-  "Benditos los Viejos": {
-   "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
+  "Behind the Door": {
+   "poster": "/assets/villadelcine-2026/behind-the-door.jpg",
    "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/4391a7540b-poster.webp",
-   "_medida_original": "600x800"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/bfc90d968b-poster.webp",
+   "_medida_original": "533x800",
+   "_categoria": "MEJOR CORTOMETRAJE VERTICAL"
   },
-  "A pesar de mí": {
-   "poster": "/assets/villadelcine-2026/a-pesar-de-mi.jpg",
+  "Prompt Zero": {
+   "poster": "/assets/villadelcine-2026/prompt-zero.jpg",
    "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/7bec7e3436-poster.webp",
-   "_medida_original": "640x800"
-  },
-  "Grief": {
-   "poster": "/assets/villadelcine-2026/grief.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/969470b53f-poster.webp",
-   "_medida_original": "518x800"
-  },
-  "FAR": {
-   "poster": "/assets/villadelcine-2026/far.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/0f6428b97f-poster.webp",
-   "_medida_original": "571x800"
-  },
-  "The Last Champion": {
-   "poster": "/assets/villadelcine-2026/the-last-champion.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/0870444ae6-poster.webp",
-   "_medida_original": "533x800"
-  },
-  "IN BETWEEN": {
-   "poster": "/assets/villadelcine-2026/in-between.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/565b0832ae-poster.webp",
-   "_medida_original": "533x800"
-  },
-  "Sierra: El álbum mortuorio": {
-   "poster": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/b7f47615c4-poster.webp",
-   "_medida_original": "518x800"
-  },
-  "Collective Memory": {
-   "poster": "/assets/villadelcine-2026/collective-memory.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/eb78e09665-poster.webp",
-   "_medida_original": "542x800"
-  },
-  "1 Paseo por la Ciudad": {
-   "poster": "/assets/villadelcine-2026/1-paseo-por-la-ciudad.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-1-PASEO-POR-LA-CIUDAS-Sara-Coello.webp",
-   "_medida_original": "1080x1350"
-  },
-  "Ánima de Marea": {
-   "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-OFICIAL-ANIMA-DE-MAREA-Laury-T.-Herrera-scaled.webp",
-   "_medida_original": "1811x2560"
-  },
-  "Shorts": {
-   "poster": "/assets/villadelcine-2026/shorts.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/acb802d06a-poster.webp",
-   "_medida_original": "640x800"
-  },
-  "Quimera": {
-   "poster": "/assets/villadelcine-2026/quimera.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/poster-quimera-Santiago-Rincon-Duran.webp",
-   "_medida_original": "1587x2245"
-  },
-  "STEPPE": {
-   "poster": "/assets/villadelcine-2026/steppe.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/91914908e7-poster.webp",
-   "_medida_original": "588x800"
-  },
-  "HUMAN": {
-   "poster": "/assets/villadelcine-2026/human.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/46807bf0fb-poster.webp",
-   "_medida_original": "640x800"
-  },
-  "Aguapanela": {
-   "poster": "/assets/villadelcine-2026/aguapanela.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/ec75b94b25-poster.webp",
-   "_medida_original": "639x800"
-  },
-  "La silla": {
-   "poster": "/assets/villadelcine-2026/la-silla.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/20-poster_La-silla.webp",
-   "_medida_original": "1500x2121"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/poster-Tomas-Etter-Gomez.webp",
+   "_medida_original": "2034x2003",
+   "_categoria": "MEJOR CORTOMETRAJE CON IA"
   },
   "NAHUALES": {
    "poster": "/assets/villadelcine-2026/nahuales.jpg",
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/d4c2b16c14-poster.webp",
-   "_medida_original": "450x800"
-  },
-  "Catatumbo: House of Thunder, Memory, and Dignity": {
-   "poster": "/assets/villadelcine-2026/catatumbo-house-of-thunder-memory-and-dignity.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/dff4e1370e-poster.webp",
-   "_medida_original": "560x800"
-  },
-  "La Sombrilla de Mamá": {
-   "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/58-poster_La-Sombrilla-de-Mama-scaled.webp",
-   "_medida_original": "1810x2560"
-  },
-  "KMKZ: Wild, free and brave.": {
-   "poster": "/assets/villadelcine-2026/kmkz-wild-free-and-brave.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/bc9326c351-poster.webp",
-   "_medida_original": "560x800"
-  },
-  "MI TESORO": {
-   "poster": "/assets/villadelcine-2026/mi-tesoro.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/AFICHE-MI-TESORO-V1-Brian-Congolez.webp",
-   "_medida_original": "1023x1537"
-  },
-  "They Call It Sausage": {
-   "poster": "/assets/villadelcine-2026/they-call-it-sausage.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/e24022a5-d7f9-4ce4-8e68-0ac26325f4c8.webp",
-   "_medida_original": "499x720"
-  },
-  "Manos Rojas": {
-   "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-07-31-at-5.43.44-PM-Martha.webp",
-   "_medida_original": "1055x1491"
-  },
-  "SOLO": {
-   "poster": "/assets/villadelcine-2026/solo.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/1789156451693.webp",
-   "_medida_original": "847x1264"
-  },
-  "On Hold": {
-   "poster": "/assets/villadelcine-2026/on-hold.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/63a32964ad-poster.webp",
-   "_medida_original": "599x800"
-  },
-  "SUA Y SIE: Guardianes de la vida": {
-   "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-SUA-Y-SIE-Juan-Pablo-Gonzalez.webp",
-   "_medida_original": "1131x1600"
-  },
-  "A Burning Turret": {
-   "poster": "/assets/villadelcine-2026/a-burning-turret.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/9d0bc2fceb-poster.webp",
-   "_medida_original": "533x800"
-  },
-  "LENS - AI Short Film": {
-   "poster": "/assets/villadelcine-2026/lens-ai-short-film.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/6c02f62929-poster.webp",
-   "_medida_original": "447x800"
-  },
-  "La Ultima Historia": {
-   "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/poster-la-ultima-historia-oficial-720-x-1080-px-Eberto-Manotas-ochoa.webp",
-   "_medida_original": "720x1080"
-  },
-  "Cos de vidre": {
-   "poster": "/assets/villadelcine-2026/cos-de-vidre.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/23fca00f1e-poster.webp",
-   "_medida_original": "566x800"
-  },
-  "Le Jeune Sofiane": {
-   "poster": "/assets/villadelcine-2026/le-jeune-sofiane.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/3-poster_Le-Jeune-Sofiane-scaled.webp",
-   "_medida_original": "1707x2560"
-  },
-  "VOLAR": {
-   "poster": "/assets/villadelcine-2026/volar.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Poster_Volar_-Jeiver-Pinto-scaled.webp",
-   "_medida_original": "1781x2560"
-  },
-  "Pros and Cons of Daydreaming": {
-   "poster": "/assets/villadelcine-2026/pros-and-cons-of-daydreaming.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/6bbcb6b2ba-poster.webp",
-   "_medida_original": "533x800"
-  },
-  "DIABLO BALLENA": {
-   "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/4f10d9c7c0-poster.webp",
-   "_medida_original": "566x800"
-  },
-  "BEHIND THE DOOR": {
-   "poster": "/assets/villadelcine-2026/behind-the-door.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/bfc90d968b-poster.webp",
-   "_medida_original": "533x800"
+   "_medida_original": "450x800",
+   "_categoria": "MEJOR CORTOMETRAJE VERTICAL"
   },
   "4 minutes": {
    "poster": "/assets/villadelcine-2026/4-minutes.jpg",
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/5a322f0dc3-poster.webp",
-   "_medida_original": "565x800"
+   "_medida_original": "565x800",
+   "_categoria": "MEJOR CORTOMETRAJE VERTICAL"
   },
-  "Language Of The Wind": {
-   "poster": "/assets/villadelcine-2026/language-of-the-wind.jpg",
+  "Pros and Cons of Daydreaming": {
+   "poster": "/assets/villadelcine-2026/pros-and-cons-of-daydreaming.jpg",
    "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/52ba89df14-poster.webp",
-   "_medida_original": "580x800"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/6bbcb6b2ba-poster.webp",
+   "_medida_original": "533x800",
+   "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
   },
-  "INDEPENDENCE": {
-   "poster": "/assets/villadelcine-2026/independence.jpg",
+  "They Call It Sausage": {
+   "poster": "/assets/villadelcine-2026/they-call-it-sausage.jpg",
    "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/59ef83a3ed-poster.webp",
-   "_medida_original": "534x800"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/e24022a5-d7f9-4ce4-8e68-0ac26325f4c8.webp",
+   "_medida_original": "499x720",
+   "_categoria": "MEJOR CORTOMETRAJE CON IA"
   },
-  "Final Act": {
-   "poster": "/assets/villadelcine-2026/final-act.jpg",
+  "Aguapanela": {
+   "poster": "/assets/villadelcine-2026/aguapanela.jpg",
    "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/26577cb0d3-poster.webp",
-   "_medida_original": "533x800"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/ec75b94b25-poster.webp",
+   "_medida_original": "639x800",
+   "_categoria": "MEJOR VIDEOCLIP NACIONAL"
   },
-  "No se fía, ni aunque lloren": {
-   "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-OFICIAL-VERTICAL-NO-SE-FIA-NI-AUNQUE-LLOREN-Dumah-Films.webp",
-   "_medida_original": "720x1080"
-  },
-  "Drunk hearing the rain drops fall": {
-   "poster": "/assets/villadelcine-2026/drunk-hearing-the-rain-drops-fall.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/31061f48c3-poster.webp",
-   "_medida_original": "560x800"
-  },
-  "With the Hand Up": {
-   "poster": "/assets/villadelcine-2026/with-the-hand-up.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/e3e07d7bcb-poster.webp",
-   "_medida_original": "533x800"
-  },
-  "Memorias del Alba": {
-   "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/614e42ad7c-poster.webp",
-   "_medida_original": "533x800"
-  },
-  "Lost Fragments of a Seizure": {
-   "poster": "/assets/villadelcine-2026/lost-fragments-of-a-seizure.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/74d0ff80-7abc-4fba-b418-c194c42d8847.webp",
-   "_medida_original": "539x720"
-  },
-  "No es el Fin del Mundo": {
-   "poster": "/assets/villadelcine-2026/no-es-el-fin-del-mundo.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/562af6f0ca-poster.webp",
-   "_medida_original": "517x800"
-  },
-  "Just Another Bird": {
-   "poster": "/assets/villadelcine-2026/just-another-bird.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/89cf7cd303-poster.webp",
-   "_medida_original": "541x800"
-  },
-  "El cine dentro del cine dentro del cine": {
-   "poster": "/assets/villadelcine-2026/el-cine-dentro-del-cine-dentro-del-cine.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/33-poster_El-cine-dentro-del-cine-dentro-del-cine-scaled.webp",
-   "_medida_original": "1656x2560"
-  },
-  "Enemy in the Mirror": {
-   "poster": "/assets/villadelcine-2026/enemy-in-the-mirror.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/07f09ca377-poster.webp",
-   "_medida_original": "560x800"
-  },
-  "Que el cielo nos perdone": {
-   "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/0342a8d928-poster.webp",
-   "_medida_original": "560x800"
+  "Mucho Gusto": {
+   "poster": "/assets/villadelcine-2026/mucho-gusto.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-07-31-a-las-9.08.43-Cintia-Obando-scaled.webp",
+   "_medida_original": "2560x1427",
+   "_categoria": "MEJOR VIDEOCLIP NACIONAL"
   },
   "Tierras de Lobeiras": {
    "poster": "/assets/villadelcine-2026/tierras-de-lobeiras.jpg",
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Tierras-de-Lobeira_Poster-Carla-Barrionuevo-scaled.webp",
-   "_medida_original": "1707x2560"
+   "_medida_original": "1707x2560",
+   "_categoria": "INFANTIL"
+  },
+  "A Sweet Miracle": {
+   "poster": "/assets/villadelcine-2026/a-sweet-miracle.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/89e84085e5-poster.webp",
+   "_medida_original": "711x800",
+   "_categoria": "INFANTIL"
+  },
+  "Just Another Bird": {
+   "poster": "/assets/villadelcine-2026/just-another-bird.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/89cf7cd303-poster.webp",
+   "_medida_original": "541x800",
+   "_categoria": "INFANTIL"
+  },
+  "VOLAR": {
+   "poster": "/assets/villadelcine-2026/volar.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Poster_Volar_-Jeiver-Pinto-scaled.webp",
+   "_medida_original": "1781x2560",
+   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
+  },
+  "Catatumbo: House of Thunder, Memory, and Dignity": {
+   "poster": "/assets/villadelcine-2026/catatumbo-house-of-thunder-memory-and-dignity.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/dff4e1370e-poster.webp",
+   "_medida_original": "560x800",
+   "_categoria": "MEJOR CORTOMETRAJE CON IA"
+  },
+  "No se fía, ni aunque lloren": {
+   "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-OFICIAL-VERTICAL-NO-SE-FIA-NI-AUNQUE-LLOREN-Dumah-Films.webp",
+   "_medida_original": "720x1080",
+   "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
+  },
+  "Ánima de Marea": {
+   "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-OFICIAL-ANIMA-DE-MAREA-Laury-T.-Herrera-scaled.webp",
+   "_medida_original": "1811x2560",
+   "_categoria": "MEJOR CORTOMETRAJE VERTICAL"
   },
   "Maleza": {
    "poster": "/assets/villadelcine-2026/maleza.jpg",
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/575262d42d-poster.webp",
-   "_medida_original": "597x800"
+   "_medida_original": "597x800",
+   "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
+  },
+  "Después de tanto amor": {
+   "poster": "/assets/villadelcine-2026/despues-de-tanto-amor.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/DDTA_1.1.8-mercedes.webp",
+   "_medida_original": "1920x1080",
+   "_categoria": "MEJOR VIDEOCLIP NACIONAL"
+  },
+  "Shorts": {
+   "poster": "/assets/villadelcine-2026/shorts.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/acb802d06a-poster.webp",
+   "_medida_original": "640x800",
+   "_categoria": "MEJOR CORTOMETRAJE VERTICAL"
+  },
+  "A pesar de mí": {
+   "poster": "/assets/villadelcine-2026/a-pesar-de-mi.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/7bec7e3436-poster.webp",
+   "_medida_original": "640x800",
+   "_categoria": "MEJOR VIDEOCLIP NACIONAL"
+  },
+  "Benditos los Viejos": {
+   "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/4391a7540b-poster.webp",
+   "_medida_original": "600x800",
+   "_categoria": "MEJOR VIDEOCLIP NACIONAL"
+  },
+  "Drunk hearing the rain drops fall": {
+   "poster": "/assets/villadelcine-2026/drunk-hearing-the-rain-drops-fall.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/31061f48c3-poster.webp",
+   "_medida_original": "560x800",
+   "_categoria": "VOCES"
+  },
+  "Collective Memory": {
+   "poster": "/assets/villadelcine-2026/collective-memory.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/eb78e09665-poster.webp",
+   "_medida_original": "542x800",
+   "_categoria": "VOCES"
+  },
+  "Extinction": {
+   "poster": "/assets/villadelcine-2026/extinction.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/e63ebfc341-poster.webp",
+   "_medida_original": "560x800",
+   "_categoria": "MEJOR WORK-IN-PROGRESS"
+  },
+  "The Last Champion": {
+   "poster": "/assets/villadelcine-2026/the-last-champion.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/0870444ae6-poster.webp",
+   "_medida_original": "533x800",
+   "_categoria": "MEJOR WORK-IN-PROGRESS"
+  },
+  "El cine dentro del cine dentro del cine": {
+   "poster": "/assets/villadelcine-2026/el-cine-dentro-del-cine-dentro-del-cine.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/33-poster_El-cine-dentro-del-cine-dentro-del-cine-scaled.webp",
+   "_medida_original": "1656x2560",
+   "_categoria": "MEJOR WORK-IN-PROGRESS"
+  },
+  "Mi tesoro": {
+   "poster": "/assets/villadelcine-2026/mi-tesoro.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/AFICHE-MI-TESORO-V1-Brian-Congolez.webp",
+   "_medida_original": "1023x1537",
+   "_categoria": "MEJOR WORK-IN-PROGRESS"
+  },
+  "Sierra: El álbum mortuorio": {
+   "poster": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/b7f47615c4-poster.webp",
+   "_medida_original": "518x800",
+   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
+  },
+  "Que el cielo nos perdone": {
+   "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/0342a8d928-poster.webp",
+   "_medida_original": "560x800",
+   "_categoria": "MEJOR CORTOMETRAJE NACIONAL"
+  },
+  "Le jeune Sofiane": {
+   "poster": "/assets/villadelcine-2026/le-jeune-sofiane.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/3-poster_Le-Jeune-Sofiane-scaled.webp",
+   "_medida_original": "1707x2560",
+   "_categoria": "MEJOR CORTOMETRAJE INTERNACIONAL"
+  },
+  "SUA Y SIE: Guardianes de la vida": {
+   "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-SUA-Y-SIE-Juan-Pablo-Gonzalez.webp",
+   "_medida_original": "1131x1600",
+   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+  },
+  "FAR": {
+   "poster": "/assets/villadelcine-2026/far.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/0f6428b97f-poster.webp",
+   "_medida_original": "571x800",
+   "_categoria": "YOUNGFILM"
+  },
+  "1 Paseo por la Ciudad": {
+   "poster": "/assets/villadelcine-2026/1-paseo-por-la-ciudad.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-1-PASEO-POR-LA-CIUDAS-Sara-Coello.webp",
+   "_medida_original": "1080x1350",
+   "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
+  },
+  "Manos Rojas": {
+   "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-07-31-at-5.43.44-PM-Martha.webp",
+   "_medida_original": "1055x1491",
+   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+  },
+  "Grief": {
+   "poster": "/assets/villadelcine-2026/grief.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/969470b53f-poster.webp",
+   "_medida_original": "518x800",
+   "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
+  },
+  "Lost Fragments of a Seizure": {
+   "poster": "/assets/villadelcine-2026/lost-fragments-of-a-seizure.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/74d0ff80-7abc-4fba-b418-c194c42d8847.webp",
+   "_medida_original": "539x720",
+   "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
+  },
+  "Memorias del Alba": {
+   "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/614e42ad7c-poster.webp",
+   "_medida_original": "533x800",
+   "_categoria": "international universities"
   },
   "Beyond the end": {
    "poster": "/assets/villadelcine-2026/beyond-the-end.jpg",
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/b2e9300e98-poster.webp",
-   "_medida_original": "564x800"
+   "_medida_original": "564x800",
+   "_categoria": "international universities"
   },
-  "AMOR A PRIMERA VISTA": {
+  "Floppy the robot - El último contacto.": {
+   "poster": "/assets/villadelcine-2026/floppy-the-robot-el-ultimo-contacto.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/portada2-Jacobo-Rendon.webp",
+   "_medida_original": "1600x1600",
+   "_categoria": "MEJOR PROYECTO VR​"
+  },
+  "HUMAN": {
+   "poster": "/assets/villadelcine-2026/human.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/46807bf0fb-poster.webp",
+   "_medida_original": "640x800",
+   "_categoria": "MEJOR PROYECTO VR​"
+  },
+  "Protecting Our Territory 360": {
+   "poster": "/assets/villadelcine-2026/protecting-our-territory-360.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/dd6b396526-poster.webp",
+   "_medida_original": "400x800",
+   "_categoria": "MEJOR PROYECTO VR​"
+  },
+  "No es el Fin del Mundo": {
+   "poster": "/assets/villadelcine-2026/no-es-el-fin-del-mundo.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/562af6f0ca-poster.webp",
+   "_medida_original": "517x800",
+   "_categoria": "MEJOR CORTOMETRAJE NACIONAL"
+  },
+  "On Hold": {
+   "poster": "/assets/villadelcine-2026/on-hold.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/63a32964ad-poster.webp",
+   "_medida_original": "599x800",
+   "_categoria": "MEJOR CORTOMETRAJE INTERNACIONAL"
+  },
+  "Amor a primera vista": {
    "poster": "/assets/villadelcine-2026/amor-a-primera-vista.jpg",
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/APVU-POSTER_FINAL-Andres-Quintero-scaled.webp",
-   "_medida_original": "1792x2560"
+   "_medida_original": "1792x2560",
+   "_categoria": "BOYACÁ EN LOS CAMPOS"
+  },
+  "Quimera": {
+   "poster": "/assets/villadelcine-2026/quimera.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/poster-quimera-Santiago-Rincon-Duran.webp",
+   "_medida_original": "1587x2245",
+   "_categoria": "BOYACÁ EN LOS CAMPOS"
+  },
+  "DIABLO BALLENA": {
+   "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/4f10d9c7c0-poster.webp",
+   "_medida_original": "566x800",
+   "_categoria": "BOYACÁ EN LOS CAMPOS"
+  },
+  "Sabor a mí (acústico / bolero jazz)": {
+   "poster": "/assets/villadelcine-2026/sabor-a-mi-acustico-bolero-jazz.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Sabor-A-mi.-Portada-Tatiana-Jauregui.webp",
+   "_medida_original": "1039x1053",
+   "_categoria": "BOYACÁ EN LOS CAMPOS"
   },
   "Monte curandero": {
    "poster": "/assets/villadelcine-2026/monte-curandero.jpg",
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Poster-Monte-Curandero-Andres-Felipe-Velasco.webp",
-   "_medida_original": "1426x2026"
+   "_medida_original": "1426x2026",
+   "_categoria": "PLANETA"
   },
   "Aguas Grandes": {
    "poster": "/assets/villadelcine-2026/aguas-grandes.jpg",
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/AGUAS_GRANDES_STILL_09_VERTICAL_9x16.webp",
-   "_medida_original": "900x1600"
+   "_medida_original": "900x1600",
+   "_categoria": "PLANETA"
+  },
+  "INDEPENDENCE": {
+   "poster": "/assets/villadelcine-2026/independence.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/59ef83a3ed-poster.webp",
+   "_medida_original": "534x800",
+   "_categoria": "MEJOR CORTOMETRAJE NACIONAL"
+  },
+  "Cos de vidre": {
+   "poster": "/assets/villadelcine-2026/cos-de-vidre.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/23fca00f1e-poster.webp",
+   "_medida_original": "566x800",
+   "_categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
+  },
+  "La silla": {
+   "poster": "/assets/villadelcine-2026/la-silla.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/20-poster_La-silla.webp",
+   "_medida_original": "1500x2121",
+   "_categoria": "YOUNGFILM"
+  },
+  "IN BETWEEN": {
+   "poster": "/assets/villadelcine-2026/in-between.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/565b0832ae-poster.webp",
+   "_medida_original": "533x800",
+   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+  },
+  "La Sombrilla de Mamá": {
+   "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/58-poster_La-Sombrilla-de-Mama-scaled.webp",
+   "_medida_original": "1810x2560",
+   "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
+  },
+  "Final Act": {
+   "poster": "/assets/villadelcine-2026/final-act.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/26577cb0d3-poster.webp",
+   "_medida_original": "533x800",
+   "_categoria": "international universities"
+  },
+  "Tiro Libre": {
+   "poster": "/assets/villadelcine-2026/tiro-libre.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/dd51e11a39-poster.webp",
+   "_medida_original": "385x800",
+   "_categoria": "YOUNGFILM"
+  },
+  "SOLO": {
+   "poster": "/assets/villadelcine-2026/solo.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/1789156451693.webp",
+   "_medida_original": "847x1264",
+   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+  },
+  "Momentos en movimiento. Primeros pasos del ballet en Colombia": {
+   "poster": "/assets/villadelcine-2026/momentos-en-movimiento-primeros-pasos-del-ballet-en-colombia.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/42-poster_Momentos-en-Movimiento.-Primeros-pasos-del-ballet-en-Colombia.webp",
+   "_medida_original": "595x842",
+   "_categoria": "PODEROSAS"
+  },
+  "STEPPE": {
+   "poster": "/assets/villadelcine-2026/steppe.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/91914908e7-poster.webp",
+   "_medida_original": "588x800",
+   "_categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
+  },
+  "KMKZ: Wild, free and brave.": {
+   "poster": "/assets/villadelcine-2026/kmkz-wild-free-and-brave.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/bc9326c351-poster.webp",
+   "_medida_original": "560x800",
+   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
+  },
+  "Korebaju Pai Rekocho": {
+   "poster": "/assets/villadelcine-2026/korebaju-pai-rekocho.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/7f8bb9c2ee-poster.webp",
+   "_medida_original": "566x800",
+   "_categoria": "RAÍCES"
+  },
+  "Cuadrileros, orgullo y legado": {
+   "poster": "/assets/villadelcine-2026/cuadrileros-orgullo-y-legado.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Cuadrilleros-POSTER-fabian-enrique-moreno-correa-scaled.webp",
+   "_medida_original": "1354x2560",
+   "_categoria": "RAÍCES"
+  },
+  "The Guanentá Symphony": {
+   "poster": "/assets/villadelcine-2026/the-guanenta-symphony.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/1e8988526f-poster.webp",
+   "_medida_original": "540x800",
+   "_categoria": "RAÍCES"
+  },
+  "Language Of The Wind": {
+   "poster": "/assets/villadelcine-2026/language-of-the-wind.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/52ba89df14-poster.webp",
+   "_medida_original": "580x800",
+   "_categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
+  },
+  "MI TESORO": {
+   "poster": "/assets/villadelcine-2026/mi-tesoro.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/AFICHE-MI-TESORO-V1-Brian-Congolez.webp",
+   "_medida_original": "1023x1537",
+   "_categoria": "MEJOR WORK-IN-PROGRESS"
+  },
+  "A Burning Turret": {
+   "poster": "/assets/villadelcine-2026/a-burning-turret.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/9d0bc2fceb-poster.webp",
+   "_medida_original": "533x800",
+   "_categoria": "MEJOR CORTOMETRAJE INTERNACIONAL"
+  },
+  "LENS - AI Short Film": {
+   "poster": "/assets/villadelcine-2026/lens-ai-short-film.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/6c02f62929-poster.webp",
+   "_medida_original": "447x800",
+   "_categoria": "MEJOR CORTOMETRAJE CON IA"
+  },
+  "With the Hand Up": {
+   "poster": "/assets/villadelcine-2026/with-the-hand-up.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/e3e07d7bcb-poster.webp",
+   "_medida_original": "533x800",
+   "_categoria": "VOCES"
+  },
+  "Enemy in the Mirror": {
+   "poster": "/assets/villadelcine-2026/enemy-in-the-mirror.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/07f09ca377-poster.webp",
+   "_medida_original": "560x800",
+   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
   }
  },
  "_descartados_por_forma": [
@@ -360,13 +507,6 @@
    "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
   },
   {
-   "titulo": "Mucho Gusto",
-   "medida": "2560x1427",
-   "r": 1.79,
-   "archivo": "Captura-de-pantalla-2026-07-31-a-las-9.08.43-Cintia-Obando-scaled.webp",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  },
-  {
    "titulo": "Cine Concierto Villa del Cine 2021",
    "medida": "2880x1618",
    "r": 1.78,
@@ -381,59 +521,10 @@
    "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
   },
   {
-   "titulo": "Después de tanto amor",
-   "medida": "1920x1080",
-   "r": 1.78,
-   "archivo": "DDTA_1.1.8-mercedes.webp",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  },
-  {
    "titulo": "ARENAS",
    "medida": "2560x1920",
    "r": 1.33,
    "archivo": "BA1C8821-94B2-45D4-95AD-D2A547F0DC5B-Gustavo-Nieto-Roa-scaled.webp",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  },
-  {
-   "titulo": "Prompt Zero",
-   "medida": "2034x2003",
-   "r": 1.02,
-   "archivo": "poster-Tomas-Etter-Gomez.webp",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  },
-  {
-   "titulo": "Floppy the robot - El último contacto.",
-   "medida": "1600x1600",
-   "r": 1.0,
-   "archivo": "portada2-Jacobo-Rendon.webp",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  },
-  {
-   "titulo": "Sabor a mi (Acústico/ BoleroJazz)  Tatiana Jáuregui & Husil",
-   "medida": "1039x1053",
-   "r": 0.99,
-   "archivo": "Sabor-A-mi.-Portada-Tatiana-Jauregui.webp",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  },
-  {
-   "titulo": "A Sweet Miracle",
-   "medida": "711x800",
-   "r": 0.89,
-   "archivo": "89e84085e5-poster.webp",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  },
-  {
-   "titulo": "Protecting Our Territory 360",
-   "medida": "400x800",
-   "r": 0.5,
-   "archivo": "dd6b396526-poster.webp",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  },
-  {
-   "titulo": "Tiro Libre",
-   "medida": "385x800",
-   "r": 0.48,
-   "archivo": "dd51e11a39-poster.webp",
    "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
   }
  ]

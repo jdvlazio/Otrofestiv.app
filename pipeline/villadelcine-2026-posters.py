@@ -61,6 +61,28 @@ UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
 # festival: 11 caen aquí y son afiches de verdad; 67 son fotogramas apaisados
 # (r de 1,78 a 2,53) y 3 son cuadradas.
 R_MIN, R_MAX = 0.55, 0.85
+# …Y SE ABRE (Juan, 21 sep 2026: «necesito solución urgente a los posters. Usa
+# la página»). La ventana estrecha dejaba fuera afiches de verdad que la página
+# publica: los 9:16 de «Tiro Libre» (385×800) y «Protecting Our Territory 360»
+# (400×800), el 1354×2560 de «Cuadrilleros» y las carátulas cuadradas de
+# «Prompt Zero», «Floppy» y «Sabor a mí». Entra todo lo que NO es apaisado;
+# `encuadrar-posters.py` ya no estira más del 16% —recorta al centro—, así que
+# abrir la ventana no vuelve a deformar nada. Lo apaisado sigue fuera: eso sí
+# es un fotograma.
+R_MIN, R_MAX = 0.44, 1.06
+
+# UN VIDEOCLIP NO TIENE AFICHE 2:3, TIENE CARÁTULA 16:9, y descartarla por
+# apaisada es aplicarle la regla de otro formato. La categoría de la página lo
+# dice en su encabezado: «MEJOR VIDEOCLIP NACIONAL». Estas entran como
+# `editorial`, que es el carril que YA existe para el 16:9 y que
+# `encuadrar-posters.py` respeta sin llevarlo al lienzo 2:3 (docs/POSTERS.md
+# §4) — así que no se deforma nada.
+#
+# No es una excepción inventada para salvar dos archivos: es la diferencia
+# entre «esta imagen no identifica la obra» (un fotograma de rodaje, que es lo
+# que la regla de Juan manda descartar) y «esta imagen ES la portada que
+# publicó su autor, en la proporción de su formato».
+CATEGORIA_16_9 = 'videoclip'
 
 
 def forma(ruta):
@@ -80,7 +102,7 @@ SELECCION = 'https://villadelcine.com/festival-2024-2/'
 
 
 def de_seleccion():
-    """[(título, url del afiche)] de la página de SELECCIÓN OFICIAL.
+    """[(categoría, título, url)] de la página de SELECCIÓN OFICIAL.
 
     AQUÍ ESTÁN LOS AFICHES, y no en la página de cada obra. La ficha de una
     obra tiene una galería de FOTOS DE RODAJE; la de Selección Oficial tiene
@@ -91,33 +113,108 @@ def de_seleccion():
     sobre el archivo entero —es recorte de CSS, no del archivo—: pedido
     directo, «Quimera» llega en 1587×2245 completo. Lo vio Juan (21 sep 2026)
     y es lo que llevó de 10 afiches a 72.
+
+    Y SE LEE LA CATEGORÍA, que es el <h5> que encabeza cada fila (Juan, 21 sep
+    2026: «Mucho gusto es Mejor Videclip Nacional, no leíste bien»). La
+    categoría dice QUÉ FORMA es la correcta para esa tarjeta: un VIDEOCLIP
+    trae carátula 16:9 y no es un fotograma robado; un CORTOMETRAJE VERTICAL
+    trae un afiche 9:16 y no es un error de medida. Una sola ventana de
+    proporción para las 86 no puede distinguirlos.
     """
     r = subprocess.run(['curl', '-sSL', '--max-time', '60', '-A', UA, SELECCION],
                        capture_output=True)
     h = r.stdout.decode('utf-8', 'replace')
-    import html as _html
-    pares = []
+    import html as _html, bisect
+    heads = [(m.start(), _html.unescape(m.group(1)).strip())
+             for m in re.finditer(r'<h[1-6][^>]*class="elementor-heading-title'
+                                  r'[^"]*"[^>]*>([^<]{3,70})</h[1-6]>', h)]
+    offs = [o for o, _ in heads]
+    tarjetas = []
     for m in re.finditer(r'background-image:\s*url\((https://villadelcine\.com/'
                          r'wp-content/uploads/2026/[^)]+)\)', h):
-        u = m.group(1)
         seg = h[m.end():m.end() + 3000]
         t = re.findall(r'class="ue_title[^"]*"[^>]*>([^<]{2,90})<', seg)
-        if t:
-            pares.append((_html.unescape(t[0]).strip(), u))
-    if len(pares) < 60:
-        sys.exit(f'✗ la página de Selección Oficial devolvió {len(pares)} '
-                 f'tarjetas: esperábamos ~86. ¿Cambió la maqueta?')
-    return pares
+        if not t:
+            continue
+        i = bisect.bisect_right(offs, m.start()) - 1
+        tarjetas.append((heads[i][1] if i >= 0 else '',
+                         _html.unescape(t[0]).strip(), m.group(1)))
+    if len(tarjetas) < 80:
+        sys.exit(f'✗ la página de Selección Oficial devolvió {len(tarjetas)} '
+                 f'tarjetas: esperábamos 86. ¿Cambió la maqueta?')
+    return tarjetas
+
+
+def clave(t):
+    """La forma del título con la que se cruzan las dos fuentes.
+
+    LA PÁGINA Y EL PDF NO ESCRIBEN EL MISMO TÍTULO, y con `norm()` a secas seis
+    afiches que SÍ estaban se daban por ausentes: «Cuadrileros, orgullo y
+    legado» contra «Cuadrileros orgullo y legado» (la coma), «Momentos en
+    movimiento…» contra «…Colombia.» (el punto final) y «Sabor a mí (acústico /
+    bolero jazz)» contra «Sabor a mi (Acústico/ BoleroJazz)  Tatiana Jáuregui &
+    Husil» (la página le añade los intérpretes y junta dos palabras).
+
+    Así que se compara SIN PUNTUACIÓN NI ESPACIOS: lo que queda es la cadena de
+    letras, que es lo que de verdad coincide. El cruce por prefijo —abajo— se
+    apoya en esta misma forma.
+    """
+    return re.sub(r'[^a-z0-9]+', '', norm(t))
 
 
 def main():
     web = json.load(open(f'{ST}/villadelcine-2026-obras-web.json',
                          encoding='utf-8'))['obras']
+    # LA PÁGINA DE SELECCIÓN OFICIAL ES LA ESPINA, NO LA LISTA DE FICHAS.
+    #
+    # Este bucle recorría `obras-web.json` —las obras que tienen PÁGINA DE
+    # FICHA en la web— y consultaba la página de Selección Oficial solo para
+    # ellas. Seis obras del festival no tienen ficha propia, así que su tarjeta
+    # NUNCA se miraba aunque estuviera ahí: «Korebaju Pai Rekocho» (566×800),
+    # «The Guanentá Symphony» (540×800) y «Momentos en Movimiento» (595×842)
+    # son afiches verticales de verdad, dentro de la ventana, y se publicaron
+    # con el generativo nuestro. Lo vio Juan el 21 sep 2026 mirando la fila de
+    # RAÍCES en la propia página: «En villadelcine.com están todos, no?».
+    #
+    # Ahora las obras SON la unión de las dos fuentes de catálogo (las fichas
+    # de la web y las del PDF), y la tarjeta se busca para todas.
+    pdf = json.load(open(f'{ST}/villadelcine-2026-obras-pdf.json',
+                         encoding='utf-8'))['obras']
+    vistas, obras = set(), []
+    # EL PDF VA PRIMERO: el crudo busca el afiche por el título del PDF, así
+    # que la clave del sidecar tiene que ser esa y no la larga de la web.
+    galeria = {clave(o['titulo']): o['afiches'] for o in web}
+    for o in ([{'titulo': o['titulo'], 'afiches': galeria.get(clave(o['titulo']), [])}
+               for o in pdf] + web):
+        k = clave(o['titulo'])
+        # la misma obra con el título largo de la web y el corto del PDF
+        # («Sabor a mi … Tatiana Jáuregui & Husil» / «Sabor a mí (acústico …)»)
+        # es UNA obra: bajaba dos veces y dejaba un asset huérfano.
+        if not k or any(k.startswith(v) or v.startswith(k)
+                        for v in vistas if min(len(k), len(v)) >= 12):
+            continue
+        vistas.add(k)
+        obras.append(o)
     # El afiche por título, de la página de Selección Oficial. Sustituye a la
     # galería de la ficha, que son fotos de rodaje.
-    sel = {}
-    for t, u in de_seleccion():
-        sel.setdefault(norm(t), u)
+    sel, cat = {}, {}
+    for c, t, u in de_seleccion():
+        sel.setdefault(clave(t), u)
+        cat.setdefault(clave(t), c)
+
+    def tarjeta(t):
+        """(url, categoría) de la tarjeta de esta obra, o (None, '')."""
+        k = clave(t)
+        if k in sel:
+            return sel[k], cat[k]
+        # la página le añade cosas al título («… Tatiana Jáuregui & Husil»):
+        # vale el prefijo, y solo si es INEQUÍVOCO —una sola tarjeta empieza
+        # así—, que es lo que impide que «Sierra» se lleve la de otra.
+        if len(k) >= 12:
+            c = [x for x in sel if x.startswith(k)]
+            if len(c) == 1:
+                return sel[c[0]], cat[c[0]]
+        return None, ''
     enr_p = f'{ST}/villadelcine-2026-enriquecido.json'
     con_tmdb = set()
     if os.path.exists(enr_p):
@@ -132,8 +229,8 @@ def main():
 
     os.makedirs(ASSETS, exist_ok=True)
     mapa, bajados, ya, sin, descartados = {}, 0, 0, [], []
-    for o in web:
-        url_sel = sel.get(norm(o['titulo']))
+    for o in obras:
+        url_sel, categoria = tarjeta(o['titulo'])
         if not url_sel and not o['afiches']:
             sin.append(o['titulo'])
             continue
@@ -166,7 +263,12 @@ def main():
                 os.remove(tmp)
             continue
         w, h = forma(tmp)
-        if not h or not (R_MIN <= w / h <= R_MAX):
+        # La carátula 16:9 de un VIDEOCLIP no se mide con la regla del afiche:
+        # entra por el carril `editorial`, que nadie estira. Solo cuenta si la
+        # imagen es de verdad apaisada —un videoclip con afiche vertical es un
+        # afiche vertical y sigue el camino normal—.
+        es_16_9 = bool(h) and CATEGORIA_16_9 in norm(categoria) and w / h > R_MAX
+        if not h or not (es_16_9 or R_MIN <= w / h <= R_MAX):
             descartados.append((o['titulo'], w, h, round(w / h, 2) if h else 0,
                                 url.split('/')[-1]))
             os.remove(tmp)
@@ -191,8 +293,9 @@ def main():
             os.remove(tmp)
             bajados += 1
         mapa[o['titulo']] = {'poster': f'/assets/villadelcine-2026/{os.path.basename(dest)}',
-                             'posterSource': 'oficial', '_url': url,
-                             '_medida_original': f'{w}x{h}'}
+                             'posterSource': 'editorial' if es_16_9 else 'oficial',
+                             '_url': url, '_medida_original': f'{w}x{h}',
+                             **({'_categoria': categoria} if categoria else {})}
 
     json.dump({'_provenance': provenance(
         'villadelcine.com — el afiche que el festival publica en la página de cada obra',
