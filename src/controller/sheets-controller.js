@@ -139,6 +139,39 @@ function _cortoScreeningPairs(cortoTitle){
   return [...fut,...past];
 }
 
+
+// ── El pie de la ficha (Intereses/Priorizar/Vista, o Vista encendida/Calificar) ──
+// Dueño único del HTML: lo pinta openPelSheet al abrir y lo REPINTA
+// repaintPelFoot cuando Vista cambia con la ficha abierta (#919, 21 sep 2026:
+// marcar Vista desde la ficha dejaba el botón idéntico — mismo control con el
+// significado opuesto, el siguiente toque la desmarcaba).
+function pelFootHTML(f){
+  const inWL=watchlist.has(f.title),inW=watched.has(f.title),inPrio=prioritized.has(f.title);
+  const _inPlan=savedAgenda&&savedAgenda.schedule.some(s=>s._title===f.title);
+  return `<div class="pel-sheet-foot">
+        ${inW?`<div class="pel-sheet-ctas-watched">
+        <button data-title="${escXML(f.title)}" data-action="toggleWatchedAndClose" class="pel-sheet-action-btn act-on">${ICONS.eye} ${t('cta_vista')}</button>
+        ${!f.is_cortos?`<button data-title="${escXML(f.title)}" data-action="closePelAndRate" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?t('misc_cambiar'):t('cta_calificar')}</button>`:``}
+      </div>`
+    :`<div class="pel-sheet-ctas">
+        <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(f.title)}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
+        ${festivalEnded()||f.info?'':`<button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(f.title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>`}
+        <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-secondary" data-title="${escXML(f.title)}" data-action="toggleWatched">${ICONS.eye} ${t('cta_vista')}</button>
+      </div>`}
+    ${_inPlan&&activeView==='agenda'?`<button data-title="${escXML(f.title)}" data-action="closePelAndRemove" class="pel-sheet-remove-plan">${ICONS.x} ${t('plan_quitar_plan')}</button>`:''}
+        </div>`;
+}
+export function repaintPelFoot(title){
+  const _ps=document.getElementById('pel-sheet');
+  const foot=_ps&&_ps.classList.contains('open')&&_ps.querySelector('.pel-sheet-foot');
+  if(!foot) return;
+  const _own=foot.querySelector('[data-title]');
+  if(!_own||_own.dataset.title!==title) return;
+  const f=FILMS.find(fi=>fi.title===title);
+  if(!f) return;
+  foot.outerHTML=pelFootHTML(f);
+}
+
 export function openPelSheet(title){
   // Decodificar entidades HTML que el inline onclick puede pasar (&#39; → ')
   const _d=document.createElement('textarea');
@@ -151,7 +184,6 @@ export function openPelSheet(title){
   })()).find(e=>e.film.title===title);
   if(!entry) return;
   const{film:f,screenings}=entry;
-  const inWL=watchlist.has(f.title),inW=watched.has(f.title),inPrio=prioritized.has(f.title);
   const posterSrc=getFilmPoster(f);
   let posterHtml;
   // LA FICHA PREGUNTA AL MISMO DUEÑO que la grilla y la lista (26 ago 2026). Era
@@ -298,7 +330,6 @@ export function openPelSheet(title){
       <div class="pel-sheet-cortos-wrap">${cortoItems}</div>`;
   }
 
-  const _inPlan=savedAgenda&&savedAgenda.schedule.some(s=>s._title===f.title);
   const _ps=document.getElementById('pel-sheet');
   if(_ps) _ps.scrollTop=0;
   _pushSheetState();
@@ -362,18 +393,7 @@ export function openPelSheet(title){
     ${f.synopsis?`    <div class="sec-hdr sm">${ICONS.text} <span>${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</span></div>
     <div class="pel-sheet-synopsis">${locSynopsis(f).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
     ${cortosHtml}
-        <div class="pel-sheet-foot">
-        ${inW?`<div class="pel-sheet-ctas-watched">
-        <button data-title="${escXML(f.title)}" data-action="toggleWatchedAndClose" class="pel-sheet-action-btn act-on">${ICONS.eye} ${t('cta_vista')}</button>
-        ${!f.is_cortos?`<button data-title="${escXML(f.title)}" data-action="closePelAndRate" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?t('misc_cambiar'):t('cta_calificar')}</button>`:``}
-      </div>`
-    :`<div class="pel-sheet-ctas">
-        <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(f.title)}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
-        ${festivalEnded()||f.info?'':`<button id="pel-prio-btn" class="row-center-xs pel-sheet-action-btn${inPrio?' act-prio':' btn-secondary'}" data-title="${escXML(f.title)}" data-action="togglePelPrio">${inPrio?ICONS.bookmarkFill:ICONS.bookmark} ${inPrio?t('cta_priorizada'):t('cta_priorizar')}</button>`}
-        <button id="pel-vista-btn" class="row-center-xs pel-sheet-action-btn btn-secondary" data-title="${escXML(f.title)}" data-action="toggleWatched">${ICONS.eye} ${t('cta_vista')}</button>
-      </div>`}
-    ${_inPlan&&activeView==='agenda'?`<button data-title="${escXML(f.title)}" data-action="closePelAndRemove" class="pel-sheet-remove-plan">${ICONS.x} ${t('plan_quitar_plan')}</button>`:''}
-        </div>
+        ${pelFootHTML(f)}
   `;
   document.getElementById('pel-overlay').classList.add('open');
   _ps.classList.add('open');

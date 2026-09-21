@@ -1694,20 +1694,45 @@ test('T87 — la card ofrece VISTA con el ojo, y calificar viene después', asyn
     // marcarla vista → la card pasa al estado ya-vista
     btn.click();
     await new Promise(r => setTimeout(r, 500));
-    const modal = [...document.querySelectorAll('button')].find(b => /Sí|Marcar|Confirmar/i.test(b.textContent));
-    if (modal) { modal.click(); await new Promise(r => setTimeout(r, 700)); }
+    // el «Sí, ya la vi» del modal de acción — por id: el buscador por texto de
+    // antes tomaba el «Confirmar» de la hoja de disponibilidad y NUNCA marcaba
+    document.getElementById('cm-ok').click();
+    await new Promise(r => setTimeout(r, 700));
+    const marcada = watched.has(f.title);
+    // «¿Qué te pareció?» se omite — como hace la usuaria — y se vuelve a la ficha
+    document.getElementById('rating-action-btn')?.click();
+    await new Promise(r => setTimeout(r, 500));
     const vistos = [...document.querySelectorAll('.pel-sheet-ctas-watched .pel-sheet-action-btn')]
-      .map(b => ({ txt: b.textContent.trim(), ojo: !!b.querySelector('circle'), estrella: !!b.querySelector('polygon') }));
-    return { antes, vistos };
+      .map(b => ({ txt: b.textContent.trim(), ojo: !!b.querySelector('circle'), estrella: !!b.querySelector('polygon'), accion: b.dataset.action }));
+    const abierta = document.getElementById('pel-sheet').classList.contains('open');
+    const secundarioQueda = !!document.getElementById('pel-vista-btn');
+    // el repintado es de ESTA ficha: pedirlo para otra obra no la toca
+    const S = await import('/src/controller/sheets-controller.js');
+    const otra = FILMS.find(x => x.title !== f.title && !x.is_cortos).title;
+    const footAntes = document.querySelector('.pel-sheet-foot').outerHTML;
+    S.repaintPelFoot(otra);
+    const ajenaIntacta = document.querySelector('.pel-sheet-foot').outerHTML === footAntes && !watched.has(otra);
+    // el segundo toque, ahora sobre el botón encendido, la DESMARCA
+    document.querySelector('.pel-sheet-ctas-watched [data-action="toggleWatchedAndClose"]')?.click();
+    await new Promise(r => setTimeout(r, 500));
+    return { antes, marcada, vistos, abierta, secundarioQueda, ajenaIntacta, desmarcada: !watched.has(f.title), titulo: f.title };
   });
   expect(r.antes.accion, 'el botón marca vista…').toBe('toggleWatched');
   expect(r.antes.txt, '…y lo dice: Vista, no Calificar').toMatch(/Vista|Seen|Watched/);
   expect(r.antes.ojo, 'con el ojo, el icono de watched').toBe(true);
   expect(r.antes.estrella, 'sin estrella: calificar es otra cosa').toBe(false);
-  if (r.vistos.length) {
-    expect(r.vistos[0].txt, 'ya vista: Vista sigue primero').toMatch(/Vista|Seen|Watched/);
-    expect(r.vistos[0].ojo, 'y con el ojo, no con el check').toBe(true);
-  }
+  // #919 (21 sep 2026): el `if (r.vistos.length)` de antes era el punto ciego — marcar
+  // Vista desde la ficha no repintaba su pie y el test pasaba en verde con la
+  // ficha idéntica (medido pixel a pixel: diferencia 0.0). Ahora se EXIGE.
+  expect(r.marcada, 'el modal la marcó vista').toBe(true);
+  expect(r.abierta, 'la ficha sigue abierta tras omitir la calificación').toBe(true);
+  expect(r.vistos.length, `la ficha abierta se entera: su pie pasa al estado ya-vista (${r.titulo})`).toBeGreaterThan(0);
+  expect(r.secundarioQueda, 'y el botón secundario «Vista» ya no está: no es el mismo control con el significado opuesto').toBe(false);
+  expect(r.vistos[0].txt, 'ya vista: Vista sigue primero').toMatch(/Vista|Seen|Watched/);
+  expect(r.vistos[0].ojo, 'y con el ojo, no con el check').toBe(true);
+  expect(r.vistos[0].accion, 'y ese botón encendido es el que desmarca').toBe('toggleWatchedAndClose');
+  expect(r.ajenaIntacta, 'repintar para otra obra no toca esta ficha').toBe(true);
+  expect(r.desmarcada, 'tocarlo la desmarca').toBe(true);
 });
 
 // 18 ago (Juan): el vacío de Sugerencias gastaba 114px y una lupa de 20 para
