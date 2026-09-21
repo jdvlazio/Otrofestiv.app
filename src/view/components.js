@@ -713,6 +713,12 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'convite':      {accent:'#F59E0B', headerLabel:'CONVITE'},
     'experiencia':  {accent:'#378ADD', headerLabel:'EXPERIENCIA'},
     'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
+    // «clausura», la gala de cierre, simétrica con «apertura» y con su ámbar.
+    // NO es 'awards': ese rótulo llegó con los Award Screenings de TIFF, que son
+    // REPROYECCIONES de premiadas, y su etiqueta está en inglés también en el
+    // mapa ES — la «Premiación y clausura» de Villa del Cine se anunciaba
+    // «AWARDS SCREENINGS» en la vista en español.
+    'clausura':     {accent:'#BA7517', headerLabel:'CLAUSURA'},
   };
   const _kindMapEN={
     'ponencia':     {accent:'#F59E0B', headerLabel:'TALK'},
@@ -731,6 +737,7 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'convite':      {accent:'#F59E0B', headerLabel:'CONVITE'},
     'experiencia':  {accent:'#378ADD', headerLabel:'EXPERIENCE'},
     'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
+    'clausura':     {accent:'#BA7517', headerLabel:'CLOSING'},
   };
   const _kindMap=_lang==='es'?_kindMapES:_kindMapEN; // PT reutiliza EN (términos internacionales)
   // opts.untitled (regla anti-repetición del sheet): cuerpo vacío — el título ya

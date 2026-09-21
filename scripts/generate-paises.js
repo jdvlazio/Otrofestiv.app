@@ -29,7 +29,11 @@ const ALIAS = {
   'República Checa': 'CZ', 'Czech Republic': 'CZ', 'Chequia': 'CZ',
   'Arabia Saudita': 'SA',
   'Rep. Dominicana': 'DO', 'República Dominicana': 'DO',
-  'Federación Rusa': 'RU', 'Rusia': 'RU',
+  'Federación Rusa': 'RU', 'Rusia': 'RU', 'Russian Federation': 'RU',
+  // Villa del Cine 2026 los escribe así en su PDF y en su web. Son erratas
+  // suyas, no países distintos: se resuelven acá y no en una tabla aparte de
+  // ese festival, que es como dos copias del mismo hecho acaban divergiendo.
+  'Brasi': 'BR', 'Usbekistán': 'UZ', 'Usbekistan': 'UZ',
   'RD Congo': 'CD', 'República Democrática del Congo': 'CD',
   'Democratic Republic of Congo': 'CD', 'Congo-Kinshasa': 'CD',
   'Republic of Korea': 'KR', 'Corea del Sur': 'KR', 'South Korea': 'KR',
