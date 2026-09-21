@@ -69,6 +69,15 @@ def main():
         'TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: '
         'director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.'),
         '_origen': os.path.basename(p),
+        # `obras` es la LISTA que lee el ensamblador y exige cargar_plan (lib.
+        # _forma_sidecar). `enriquecer.py` ya había pagado este error y lo
+        # arregló escribiendo las dos formas; su hermano se quedó atrás, y el
+        # síntoma es el mismo y es MUDO: el plan que declara este archivo como
+        # `enriquecido` no cumple su contrato, y si el contrato no lo cazara,
+        # el enriquecido se cargaría sin error y no aportaría nada. Salió a la
+        # luz montando el Festival de Cine de Jardín (20 sep 2026), que empezó
+        # como pre-onboarding —catálogo sin parrilla— y luego creció a festival.
+        'obras': [{'titulo': t, **e} for t, e in ok.items()],
         'verificadas': ok, 'sin_ficha': sorted(sin)},
         open(dest, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'\n{len(verificables)} verificables · con ficha {len(ok)} · sin ficha {len(sin)}')

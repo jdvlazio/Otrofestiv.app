@@ -1,0 +1,142 @@
+{
+ "_etapa": "build generado por pipeline/ensamblar.py",
+ "_provenance": {
+  "fuente": "festicinejardin.com (la ficha de cada obra) + las láminas de Instagram de @festicinejardin (día, hora, sede y el estreno)",
+  "capturado": "2026-09-20",
+  "ensamblador": "pipeline/ensamblar.py"
+ },
+ "radar": 811,
+ "_por_que_sedes": "LAS PUBLICÓ EL FESTIVAL EN UN MAPA, el 20 de septiembre, con los cinco lugares numerados: «Aquí tienes el mapa completo de las sedes de esta edición, con los cambios ya actualizados. Guárdalo para no perderte ninguna función». Y los cambios son del sismo del 10 de agosto —el mismo que aplazó FICMA—: «La cancha Moisés Rojas Peláez ha sido, durante varias ediciones, uno de los lugares donde más hemos hecho festival. Este año no vamos a poder volver ahí: las afectaciones que dejó el sismo no permiten usarla con las condiciones de seguridad que necesitamos. Las Charlas Académicas y la Competencia Caleidoscopio se trasladan a la Placa deportiva Simón Bolívar, y las proyecciones que antes se hacían allí, ahora en la Escuela Jahel Peláez Montoya». La cancha Moisés Rojas NO es sede de esta edición y no entra en la tabla.",
+ "acceso_por_defecto": {
+  "is_free": "desconocido",
+  "_por_que": "NO LO DICE NINGUNA FUENTE DEL FESTIVAL en esta edición. La web de la 11ª no menciona entrada, boletería ni gratuidad por ninguna parte, y los posts tampoco. Lo único que hay es un tercero: @danicooltura escribe «La entrada es libre ✨» en una recomendación del 20 sep, y un tercero no es fuente. La página de la PRIMERA edición (2016) sí dice «TODA LA PROGRAMACIÓN ES GRATUITA», pero eso es de hace diez años. Queda `desconocido`, que es lo que corresponde cuando no se sabe: no saber es legítimo y se declara. Preguntado al festival.",
+  "_zanjarlo": "basta con que el festival lo publique, o con que Juan lo decida como decisión suya —como hizo con Villa del Cine— y entonces se escribe aquí de quién es la decisión."
+ },
+ "name": "Festival de Cine de Jardín",
+ "fullName": "11° Festival de Cine de Jardín — Ecos de Voces Silenciadas",
+ "displayName": "Festival de Cine de Jardín",
+ "shortName": "JARDÍN",
+ "tagline": "Ecos de Voces Silenciadas",
+ "city": "Jardín",
+ "country": "CO",
+ "dates": "24–27 SEP",
+ "dates_en": "SEP 24–27",
+ "year": 2026,
+ "timezoneOffset": "-05:00",
+ "storageKey": "jardin2026_",
+ "festivalStartStr": "2026-09-24T00:00:00",
+ "festivalEndStr": "2026-09-27T23:59:00",
+ "sharedSlotIsOneScreening": false,
+ "ticketing_model": "mixed",
+ "dias_vacios": [
+  "2026-09-25",
+  "2026-09-26",
+  "2026-09-27"
+ ],
+ "_por_que_dias_vacios": "NO ESTÁN VACÍOS: el festival dura cuatro días y va a programar los cuatro. Están vacíos EN NUESTRO DATO porque a cuatro días del inicio la única función publicada con día, hora y sede es la inaugural del jueves 24. Se declaran para que el contrato no falle y para que quede escrito que es un hueco de la fuente, no del calendario. Esto se borra cuando salga la parrilla — y mientras esté aquí, el festival NO se publica.",
+ "prioLimit": 3,
+ "dias": [
+  "2026-09-24",
+  "2026-09-25",
+  "2026-09-26",
+  "2026-09-27"
+ ],
+ "festivalDates": {
+  "2026-09-24": "2026-09-24",
+  "2026-09-25": "2026-09-25",
+  "2026-09-26": "2026-09-26",
+  "2026-09-27": "2026-09-27"
+ },
+ "days": [
+  {
+   "k": "2026-09-24",
+   "d": 24,
+   "lbl": "JUE"
+  },
+  {
+   "k": "2026-09-25",
+   "d": 25,
+   "lbl": "VIE"
+  },
+  {
+   "k": "2026-09-26",
+   "d": 26,
+   "lbl": "SÁB"
+  },
+  {
+   "k": "2026-09-27",
+   "d": 27,
+   "lbl": "DOM"
+  }
+ ],
+ "dayKeys": [
+  "2026-09-24",
+  "2026-09-25",
+  "2026-09-26",
+  "2026-09-27"
+ ],
+ "dayShort": {
+  "2026-09-24": "JUE 24",
+  "2026-09-25": "VIE 25",
+  "2026-09-26": "SÁB 26",
+  "2026-09-27": "DOM 27"
+ },
+ "dayShort_en": {
+  "2026-09-24": "THU 24",
+  "2026-09-25": "FRI 25",
+  "2026-09-26": "SAT 26",
+  "2026-09-27": "SUN 27"
+ },
+ "dayLong": {
+  "2026-09-24": "Jueves 24 de septiembre",
+  "2026-09-25": "Viernes 25 de septiembre",
+  "2026-09-26": "Sábado 26 de septiembre",
+  "2026-09-27": "Domingo 27 de septiembre"
+ },
+ "sections": {
+  "🎬 Muestra Central": {
+   "en": "Main Selection",
+   "archetype": "Muestra / País",
+   "order": 1
+  }
+ },
+ "venues": {
+  "Teatro Municipal de Jardín - Jardín": {
+   "short": "Teatro Municipal de Jardín",
+   "city": "Jardín"
+  }
+ },
+ "films": [
+  {
+   "title": "La creciente",
+   "type": "film",
+   "section": "🎬 Muestra Central",
+   "director": "Pablo Andrés Muñoz Castrillón",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "89 min",
+   "language": "Español",
+   "genre": "Documental",
+   "day": "2026-09-24",
+   "time": "20:00",
+   "day_order": 0,
+   "venue": "Teatro Municipal de Jardín - Jardín",
+   "has_qa": false,
+   "synopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://www.instagram.com/festicinejardin/",
+    "date": "2026-09-20"
+   },
+   "premiere": "Estreno mundial"
+  }
+ ],
+ "_corrido": {
+  "por": "pipeline/correr.py",
+  "fecha": "2026-09-20T20:07:31",
+  "plan_sha": "e58cb5299f2bc9da",
+  "paso": 9,
+  "cmd": "python3 pipeline/ensamblar.py jardin-2026"
+ }
+}

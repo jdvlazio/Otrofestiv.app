@@ -15,7 +15,7 @@ geocoding pagadas con bugs:
 Las coordenadas con `_prec:"manual"` son verificación humana y NO SE TOCAN —
 correr el geocoder dos veces pisó 40 verificaciones de Juan en FICDEH.
 
-Lee   festivals/staging/<id>-crudo.json
+Lee   festivals/staging/<id>-crudo.json  +  pipeline/<id>.plan.json (festival.sedes)
 Merge festivals/staging/<id>-venues-geo.json   (se crea si no existe)
 """
 import json, os, re, sys, time
@@ -64,6 +64,28 @@ def main():
         sedes.setdefault(s, {'n': 0, 'ciudad': f.get('ciudad', '')})
         sedes[s]['n'] += 1
 
+    # LAS SEDES SON LAS DEL PLAN, NO SOLO LAS QUE YA TIENEN FUNCIÓN. La tabla
+    # canónica del plan es donde el festival declara sus sedes; derivarlas del
+    # crudo daba por inexistente la que todavía no tiene programación.
+    #
+    # Pasó con el Festival de Cine de Jardín (20 sep 2026): publicó el MAPA de
+    # sus cinco sedes —con dos reubicadas por el sismo del 10 de agosto— cuatro
+    # días antes de empezar y sin parrilla. El crudo tenía una sola función, así
+    # que el geocoder ubicaba una sede de cinco y las otras cuatro quedaban sin
+    # coordenadas hasta que saliera la programación, que es justo cuando ya no
+    # hay tiempo. El dato estaba publicado; lo que faltaba era leerlo de donde
+    # se declara.
+    #
+    # Se lee el plan A PELO y no con `cargar_plan()`: el contrato exige que el
+    # sidecar `geo` ya exista, y el sidecar `geo` es justo lo que este paso
+    # escribe. Una herramienta no puede pedir como requisito su propia salida.
+    # El contrato lo hacen cumplir `correr.py` y `ensamblar.py`, que van después.
+    plan_p = f'{REPO}/pipeline/{fid}.plan.json'
+    if os.path.exists(plan_p):
+        plan = json.load(open(plan_p, encoding='utf-8'))
+        for s in (plan.get('festival', {}).get('sedes') or {}):
+            sedes.setdefault(s, {'n': 0, 'ciudad': ''})
+
     ok = ya = falta = 0
     for i, (s, meta) in enumerate(sorted(sedes.items()), 1):
         prev = geo.get(s, {})
@@ -96,8 +118,16 @@ def main():
             # y es real»— y el guardián [sedes-apiladas] la lee en el JSON
             # publicado para dar por cerrado el aviso. Con el mismo nombre, un
             # pendiente silenciaba el aviso de una sede sin revisar.
+            #
+            # Y el `_todo` QUE YA ESTUVIERA ESCRITO no se pisa. El genérico es
+            # un recordatorio; el que escribe una persona dice qué se buscó,
+            # dónde y por qué no apareció —«no existe en OSM, ni en la web de
+            # la alcaldía; es sede nueva de esta edición»—. Pisarlo en cada
+            # corrida borra el trabajo de averiguarlo y obliga a repetirlo, que
+            # es justo lo que un pipeline re-corrible no puede hacer.
             geo[s] = {**prev, 'n': meta['n'], '_prec': 'sin verificar',
-                      '_todo': 'buscar a mano (sedes-html.py genera la página)'}
+                      '_todo': prev.get('_todo')
+                      or 'buscar a mano (sedes-html.py genera la página)'}
             falta += 1
             print(f'[{i:2}] ??  {s[:44]}', flush=True)
         time.sleep(1.1)                            # cortesía con Nominatim

@@ -1,19 +1,130 @@
 {
- "_nota": "PRE-ONBOARDING. El 11° Festival de Cine de Jardín (Jardín, Antioquia, 24–27 sep 2026) publicó sus obras entre el 14 y el 15 sep —una página propia por obra, con ficha completa— y NO publicó la parrilla. Por eso esto es un catálogo y no un crudo: el formato intermedio exige día, hora y sede, y no se inventan.\n\nEL ÍNDICE ES EL SITEMAP. `post-sitemap.xml` fecha cada página al minuto, así que se sabe qué entró en esta edición y qué es de otra: el sitio RETOCÓ en septiembre fichas de ediciones pasadas, y la fecha del sitemap sola habría metido «Elementales» (Caleidoscopio 2025) como si fuera de 2026.\n\nDOS TRAMPAS REGISTRADAS POR EL RADAR (#811) Y COMPROBADAS HOY: el banner de «programación» de la home enlaza el PDF de 2025, y los sitemaps del plugin de agenda (`wcs-*`) están congelados en 2018 — no sirven de señal adelantada. La parrilla saldrá por PDF o por Instagram.\n\nY UNA DEL SITIO: el slug `deus-ex-necro-machina` REDIRIGE a la página de «Primer amor», que es otra obra (Mateo M. Correa vs Iván Luna Dulcey). O sea que un corto de la selección anunciada se quedó sin ficha porque su URL se reutilizó. Ese y «Elementales» entran desde el catálogo de Instagram, marcados con `_solo_ig`.",
- "radar": 811,
+ "_nota": "11° Festival de Cine de Jardín — Jardín, Antioquia, 24–27 sep 2026. DOS SUPERFICIES DEL MISMO FESTIVAL, y las dos hacen falta: festicinejardin.com publica una página por obra con la ficha entera (37 obras, desde el 15 sep) y NO publica parrilla; Instagram publica lo demás, y lo publica PINTADO dentro de las láminas — las cinco sedes, la única función fechada y una segunda lectura de las obras. El pie del post de la inaugural ni siquiera nombra la película.\n\nEL ÍNDICE DEL CATÁLOGO ES EL SITEMAP. `post-sitemap.xml` fecha cada página al minuto, así que se sabe qué entró en esta edición y qué es de otra: el sitio RETOCÓ en septiembre fichas de ediciones pasadas, y la fecha del sitemap sola habría metido «Elementales» (Caleidoscopio 2025) como si fuera de 2026.\n\nTRES TRAMPAS REGISTRADAS POR EL RADAR (#811) Y COMPROBADAS: el banner de «programación» de la home enlaza el PDF de 2025; los sitemaps del plugin de agenda (`wcs-*`) están congelados en 2018 y no sirven de señal adelantada; y el slug `deus-ex-necro-machina` REDIRIGE a la página de «Primer amor», que es otra obra. Ese y «Elementales» entran desde Instagram, marcados con `_solo_ig`.\n\nY UNA CUARTA, DE INSTAGRAM: la lámina 3 del post del mapa lleva de fondo una foto de una edición anterior con títulos de cortos legibles. No son de esta edición y el lector los descarta con su razón escrita.",
  "pasos": [
   {
    "cmd": "python3 pipeline/radar.py jardin-2026",
-   "que": "el issue de radar como fuente, y cruza sus salas contra lo extraído"
+   "que": "el issue de radar #811 como fuente versionada, y cruza sus salas contra las nuestras"
   },
   {
    "cmd": "python3 pipeline/jardin-2026-catalogo.py",
    "que": "festicinejardin.com por sitemap → catálogo de 37 obras (22 CALEIDOSCOPIO + 15 Muestra Central), con cobertura inversa contra la selección anunciada en Instagram"
   },
   {
-   "cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/jardin-2026-catalogo.json",
-   "que": "catálogo → festivals/staging/jardin-2026-catalogo-enriquecido.json (mismo candado que enriquecer.py)"
+   "cmd": "python3 pipeline/jardin-2026-ig.py",
+   "que": "las láminas de seis carruseles, leídas con el OCR del sistema: las 5 SEDES de esta edición (mapa del 20 sep, con las dos reubicaciones del sismo), la ÚNICA función fechada (la inaugural) y una segunda lectura de las obras"
+  },
+  {
+   "cmd": "python3 pipeline/jardin-2026-contraste.py",
+   "que": "la web contra Instagram, campo a campo. Cada diferencia entendida va en tabla con su razón; una sin entrada hace fallar el paso"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/jardin-2026-catalogo.json",
+   "que": "catálogo → festivals/staging/jardin-2026-catalogo-enriquecido.json (mismo candado que enriquecer.py). La llave sale del entorno: `source ~/.zshrc` antes de correr. NO se escribe «TMDB_API_KEY=… » delante — el runner ejecuta el cmd tal cual y esos puntos suspensivos se le pasan a TMDB como llave, que es como este paso falló la primera vez"
+  },
+  {
+   "cmd": "python3 pipeline/jardin-2026-crudo.py",
+   "que": "catálogo + láminas → crudo. Publica SOLO lo que tiene día, hora y sede; el resto del catálogo espera la parrilla"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py jardin-2026 --centro 5.5981,-75.8189 --ciudad \"Jardín, Antioquia\" --radio 0.15",
+   "que": "las 5 sedes del mapa. Cuatro todavía no tienen función: se geocodifican igual, porque el festival ya las publicó"
+  },
+  {
+   "cmd": "python3 pipeline/jardin-2026-verificar.py",
+   "que": "prueba sobre el crudo armado: día/hora/sede en todas, sedes dentro de la tabla, y que el catálogo no pierda obras por el camino"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py jardin-2026",
+   "que": "crudo + plan → staging/jardin-2026-build.json. NO hay paso de publicar, y no es un olvido: mientras haya una sola función fechada de 37 obras, el festival se monta y se queda en staging. `publicar.py` se añade cuando salga la parrilla"
   }
  ],
- "_falta": "LA PARRILLA. Sin día, hora ni sede no hay festival que montar. Cuando salga, este plan crece con el paso que la arma y el catálogo pasa a ser la ficha de cada obra."
+ "festival": {
+  "radar": 811,
+  "crudo": "festivals/staging/jardin-2026-crudo.json",
+  "geo": "festivals/staging/jardin-2026-venues-geo.json",
+  "sedes": {
+   "Teatro Municipal de Jardín": [
+    "Teatro Municipal de Jardín - Jardín",
+    ""
+   ],
+   "Casa de la Cultura": [
+    "Casa de la Cultura - Jardín",
+    ""
+   ],
+   "Escuela Jahel Peláez Montoya": [
+    "Escuela Jahel Peláez Montoya - Jardín",
+    ""
+   ],
+   "Placa deportiva Simón Bolívar": [
+    "Placa deportiva Simón Bolívar - Jardín",
+    ""
+   ],
+   "Coliseo Municipal": [
+    "Coliseo Municipal - Jardín",
+    ""
+   ]
+  },
+  "_por_que_sedes": "LAS PUBLICÓ EL FESTIVAL EN UN MAPA, el 20 de septiembre, con los cinco lugares numerados: «Aquí tienes el mapa completo de las sedes de esta edición, con los cambios ya actualizados. Guárdalo para no perderte ninguna función». Y los cambios son del sismo del 10 de agosto —el mismo que aplazó FICMA—: «La cancha Moisés Rojas Peláez ha sido, durante varias ediciones, uno de los lugares donde más hemos hecho festival. Este año no vamos a poder volver ahí: las afectaciones que dejó el sismo no permiten usarla con las condiciones de seguridad que necesitamos. Las Charlas Académicas y la Competencia Caleidoscopio se trasladan a la Placa deportiva Simón Bolívar, y las proyecciones que antes se hacían allí, ahora en la Escuela Jahel Peláez Montoya». La cancha Moisés Rojas NO es sede de esta edición y no entra en la tabla.",
+  "secciones": {
+   "Muestra Central": {
+    "emoji": "🎬",
+    "en": "Main Selection",
+    "archetype": "Muestra / País",
+    "order": 1
+   },
+   "CALEIDOSCOPIO": {
+    "emoji": "🔮",
+    "en": "CALEIDOSCOPIO",
+    "archetype": "Competencia",
+    "order": 2
+   }
+  },
+  "acceso_por_defecto": {
+   "is_free": "desconocido",
+   "_por_que": "NO LO DICE NINGUNA FUENTE DEL FESTIVAL en esta edición. La web de la 11ª no menciona entrada, boletería ni gratuidad por ninguna parte, y los posts tampoco. Lo único que hay es un tercero: @danicooltura escribe «La entrada es libre ✨» en una recomendación del 20 sep, y un tercero no es fuente. La página de la PRIMERA edición (2016) sí dice «TODA LA PROGRAMACIÓN ES GRATUITA», pero eso es de hace diez años. Queda `desconocido`, que es lo que corresponde cuando no se sabe: no saber es legítimo y se declara. Preguntado al festival.",
+   "_zanjarlo": "basta con que el festival lo publique, o con que Juan lo decida como decisión suya —como hizo con Villa del Cine— y entonces se escribe aquí de quién es la decisión."
+  },
+  "name": "Festival de Cine de Jardín",
+  "fullName": "11° Festival de Cine de Jardín — Ecos de Voces Silenciadas",
+  "displayName": "Festival de Cine de Jardín",
+  "shortName": "JARDÍN",
+  "tagline": "Ecos de Voces Silenciadas",
+  "city": "Jardín",
+  "country": "CO",
+  "dates": "24–27 SEP",
+  "dates_en": "SEP 24–27",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "jardin2026_",
+  "festivalStartStr": "2026-09-24T00:00:00",
+  "festivalEndStr": "2026-09-27T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "ticketing_model": "mixed",
+  "mes_es": "septiembre",
+  "dias_vacios": [
+   "2026-09-25",
+   "2026-09-26",
+   "2026-09-27"
+  ],
+  "_por_que_dias_vacios": "NO ESTÁN VACÍOS: el festival dura cuatro días y va a programar los cuatro. Están vacíos EN NUESTRO DATO porque a cuatro días del inicio la única función publicada con día, hora y sede es la inaugural del jueves 24. Se declaran para que el contrato no falle y para que quede escrito que es un hueco de la fuente, no del calendario. Esto se borra cuando salga la parrilla — y mientras esté aquí, el festival NO se publica.",
+  "enriquecido": "festivals/staging/jardin-2026-catalogo-enriquecido.json"
+ },
+ "_no_se_publica": {
+  "Las otras 36 obras del catálogo": "tienen ficha completa y NO tienen función. Sin día, hora y sede no se publican: la regla es vieja y es de las que no se negocian.",
+  "La cancha Moisés Rojas Peláez": "sede de ediciones anteriores, inutilizable por el sismo del 10 de agosto. El propio festival lo anunció; no entra en la tabla de sedes.",
+  "El seminario académico y los conversatorios": "el festival anuncia invitados y «una conversación» (Sebastián Lanz, 18 sep) sin día, hora ni sede. No es una función."
+ },
+ "_preguntas_al_festival": [
+  "¿La entrada es libre? Ninguna fuente de esta edición lo dice —ni la web ni Instagram—, y necesitamos la casilla de acceso para publicar.",
+  "«La creciente» dura 89 min según su ficha en festicinejardin.com y 88 min según la lámina del acto inaugural. ¿Cuál es?",
+  "La Muestra Central: Instagram anunció la «Parte I» con 7 obras y la web tiene 15. ¿Las 15 son la muestra completa, o vienen más con la Parte II?",
+  "«Deus ex necro machina» (Mateo M. Correa) no tiene ficha en la web: su URL redirige a la de «Primer amor». ¿Pueden publicarla?",
+  "¿La programación con día, hora y sede sale antes del jueves? Es lo único que nos falta para publicar el festival.",
+  "Una dirección, para poder poner la sede en el mapa: ¿dónde queda exactamente la Placa deportiva Simón Bolívar? No está en OpenStreetMap ni en la web de la alcaldía, y entendemos que es nueva para esta edición."
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/jardin-2026-radar.json": "el volcado del issue de radar #811, que escribe y RELEE pipeline/radar.py.",
+  "festivals/staging/jardin-2026-catalogo.json": "las 37 obras desde festicinejardin.com, indexadas por post-sitemap.xml.",
+  "festivals/staging/jardin-2026-ig.json": "las láminas de Instagram leídas con el OCR del sistema: sedes, la función inaugural y la segunda lectura de las obras."
+ }
 }

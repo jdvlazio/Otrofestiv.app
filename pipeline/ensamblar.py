@@ -173,6 +173,7 @@ def ensamblar(fid, escribir=True):
             'flags': lib.banderas(f.get('pais') or '') or None,
             'duration': f"{f['duracion_min']} min" if f.get('duracion_min') else None,
             'language': f.get('idioma') or None,
+            'genre': f.get('genero') or None,
             'rating': f.get('clasificacion') or None,
             'day': f.get('dia'), 'time': f.get('hora'), 'day_order': orden.get(f.get('dia')),
             'venue': sede, 'sala': sala or None,
@@ -197,6 +198,19 @@ def ensamblar(fid, escribir=True):
                      if isinstance(f.get('_src'), str) and f['_src'].startswith('http')
                      else f.get('_src') or crudo['_provenance'].get('fuente')),
         }
+        # LO QUE LA FUENTE YA TRAE CON EL NOMBRE DEL CONTRATO, VIAJA TAL CUAL.
+        # El diccionario de arriba es una lista escrita a mano, y una lista
+        # escrita a mano se come lo que no previó. Es LITERALMENTE el bug que
+        # ya se arregló doce líneas más abajo para las obras de un programa —
+        # ahí se comía los tmdb_id, los pósters y las 37 sinopsis de
+        # CineAutopsia— y que arriba, en la función, seguía vivo: un crudo con
+        # `premiere` («Estreno mundial», palabra del festival) llegaba al build
+        # sin él, sin error y sin síntoma. Lo cazó la inaugural del Festival de
+        # Cine de Jardín (20 sep 2026). Qué campos puede llevar una función lo
+        # decide el contrato, no esta lista.
+        for _c in lib.contrato()['campos']:
+            if f.get(_c) is not None and f[_c] != '' and not e.get(_c):
+                e[_c] = f[_c]
         # La casilla de acceso: una sola traducción, la de lib. Si la fuente dice
         # `desconocido`, no se emite nada — y eso es distinto de no haber mirado.
         acc = (f.get('acceso') or '').strip()
