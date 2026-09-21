@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""encuadrar-posters.py <fest-id> [--aplicar] — el póster cubre el placeholder.
+"""encuadrar-posters.py <fest-id> [--aplicar] [--desde ruta.json] — el póster cubre el placeholder.
 
 REGLA (Juan, 9 ago 2026): todo póster debe cubrir EXACTAMENTE la proporción y el
 tamaño del placeholder. Ni marco visible, ni hueco, ni recorte del afiche. Es un
@@ -111,9 +111,23 @@ def medir(path):
 
 def main():
     fid = sys.argv[1] if len(sys.argv) > 1 else sys.exit(
-        'uso: python3 pipeline/encuadrar-posters.py <fest-id> [--aplicar]')
+        'uso: python3 pipeline/encuadrar-posters.py <fest-id> [--aplicar] '
+        '[--desde <ruta.json>]')
     aplicar = '--aplicar' in sys.argv
-    d = json.load(open(f'{REPO}/festivals/{fid}.json', encoding='utf-8'))
+    # POR DEFECTO, EL JSON PUBLICADO. Con `--desde`, cualquier sidecar que
+    # traiga una lista `films` con `poster` y `posterSource`.
+    #
+    # Hace falta porque el encuadre y la publicación no van al mismo ritmo: el
+    # Festival de Cine de Jardín (20 sep 2026) tenía sus 37 obras con afiche
+    # cuatro días antes de empezar y NINGUNA función programada, así que no
+    # había `festivals/jardin-2026.json` que leer. Dejar los afiches sin
+    # encuadrar hasta la publicación es exactamente cómo Villa del Cine acabó
+    # con 16 pósters que se saltaron este paso.
+    ruta = (sys.argv[sys.argv.index('--desde') + 1] if '--desde' in sys.argv
+            else f'{REPO}/festivals/{fid}.json')
+    if not os.path.isabs(ruta):
+        ruta = f'{REPO}/{ruta}'
+    d = json.load(open(ruta, encoding='utf-8'))
 
     vistos, plan, editorial = set(), [], []
     # Los pósters viven en DOS niveles: la función (afiche de programa) y cada

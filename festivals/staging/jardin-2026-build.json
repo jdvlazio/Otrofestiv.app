@@ -8,9 +8,9 @@
  "radar": 811,
  "_por_que_sedes": "LAS PUBLICÓ EL FESTIVAL EN UN MAPA, el 20 de septiembre, con los cinco lugares numerados: «Aquí tienes el mapa completo de las sedes de esta edición, con los cambios ya actualizados. Guárdalo para no perderte ninguna función». Y los cambios son del sismo del 10 de agosto —el mismo que aplazó FICMA—: «La cancha Moisés Rojas Peláez ha sido, durante varias ediciones, uno de los lugares donde más hemos hecho festival. Este año no vamos a poder volver ahí: las afectaciones que dejó el sismo no permiten usarla con las condiciones de seguridad que necesitamos. Las Charlas Académicas y la Competencia Caleidoscopio se trasladan a la Placa deportiva Simón Bolívar, y las proyecciones que antes se hacían allí, ahora en la Escuela Jahel Peláez Montoya». La cancha Moisés Rojas NO es sede de esta edición y no entra en la tabla. Las cinco quedan geolocalizadas: tres por Nominatim y Overpass, y las dos que estrena por el sismo —Coliseo Municipal y Placa deportiva Simón Bolívar— con el pin que verificó Juan en Google Maps, porque ninguna de las dos está mapeada con el nombre que usa el festival.",
  "acceso_por_defecto": {
-  "is_free": "desconocido",
-  "_por_que": "NO LO DICE NINGUNA FUENTE DEL FESTIVAL en esta edición. La web de la 11ª no menciona entrada, boletería ni gratuidad por ninguna parte, y los posts tampoco. Lo único que hay es un tercero: @danicooltura escribe «La entrada es libre ✨» en una recomendación del 20 sep, y un tercero no es fuente. La página de la PRIMERA edición (2016) sí dice «TODA LA PROGRAMACIÓN ES GRATUITA», pero eso es de hace diez años. Queda `desconocido`, que es lo que corresponde cuando no se sabe: no saber es legítimo y se declara. Preguntado al festival.",
-  "_zanjarlo": "basta con que el festival lo publique, o con que Juan lo decida como decisión suya —como hizo con Villa del Cine— y entonces se escribe aquí de quién es la decisión."
+  "is_free": true,
+  "_por_que": "DECISIÓN DE JUAN (20 sep 2026), no dato del festival, y la diferencia importa: «Entrada libre, siempre. A todas las funciones». Ninguna fuente de esta edición lo dice —la web de la 11ª no menciona entrada, boletería ni gratuidad por ninguna parte, y los posts tampoco—. Lo que hay alrededor lo respalda: la página de la primera edición imprime «TODA LA PROGRAMACIÓN ES GRATUITA», @danicooltura escribe «La entrada es libre» el 20 sep, y el festival es municipal y al aire libre en varias sedes. Pero nada de eso es el festival diciéndolo de esta edición, así que queda registrado de quién es la decisión. Mismo criterio que en Villa del Cine.",
+  "_si_el_festival_lo_desmiente": "se cambia acá y se re-corre el plan; la palabra viaja al crudo por este campo y de ahí a la casilla de acceso, que traduce lib.acceso_campos() una sola vez."
  },
  "name": "Festival de Cine de Jardín",
  "fullName": "11° Festival de Cine de Jardín — Ecos de Voces Silenciadas",
@@ -125,18 +125,21 @@
    "has_qa": false,
    "synopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
    "synopsis_lang": "es",
+   "poster": "/assets/jardin-2026/la-creciente.jpg",
+   "posterSource": "editorial",
    "_src": {
     "url": "https://www.instagram.com/festicinejardin/",
     "date": "2026-09-20"
    },
-   "premiere": "Estreno mundial"
+   "premiere": "Estreno mundial",
+   "is_free": true
   }
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-20T20:09:56",
-  "plan_sha": "7acaae1b53117d63",
-  "paso": 9,
+  "fecha": "2026-09-20T20:19:27",
+  "plan_sha": "591d80063ed1baac",
+  "paso": 11,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"
  }
 }

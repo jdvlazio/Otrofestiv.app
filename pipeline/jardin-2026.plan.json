@@ -22,6 +22,14 @@
    "que": "catálogo → festivals/staging/jardin-2026-catalogo-enriquecido.json (mismo candado que enriquecer.py). La llave sale del entorno: `source ~/.zshrc` antes de correr. NO se escribe «TMDB_API_KEY=… » delante — el runner ejecuta el cmd tal cual y esos puntos suspensivos se le pasan a TMDB como llave, que es como este paso falló la primera vez"
   },
   {
+   "cmd": "python3 pipeline/jardin-2026-posters.py",
+   "que": "el afiche de cada obra a assets/jardin-2026/, por el árbol de docs/POSTERS.md §2 (TMDB → Letterboxd → still del festival). CADA candidato se mide en disco antes de aceptarlo: Letterboxd devuelve una tarjeta cuadrada con su logo cuando no tiene la obra, y el encuadre la estiraba a 2:3 sin rechistar"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py jardin-2026 --desde festivals/staging/jardin-2026-posters.json --aplicar",
+   "que": "los 21 afiches al lienzo 780×1170 exacto. `--desde` porque el festival todavía no tiene JSON publicado que leer, y dejar los afiches sin encuadrar hasta entonces es como Villa del Cine acabó con 16 que se saltaron este paso"
+  },
+  {
    "cmd": "python3 pipeline/jardin-2026-crudo.py",
    "que": "catálogo + láminas → crudo. Publica SOLO lo que tiene día, hora y sede; el resto del catálogo espera la parrilla"
   },
@@ -80,9 +88,9 @@
    }
   },
   "acceso_por_defecto": {
-   "is_free": "desconocido",
-   "_por_que": "NO LO DICE NINGUNA FUENTE DEL FESTIVAL en esta edición. La web de la 11ª no menciona entrada, boletería ni gratuidad por ninguna parte, y los posts tampoco. Lo único que hay es un tercero: @danicooltura escribe «La entrada es libre ✨» en una recomendación del 20 sep, y un tercero no es fuente. La página de la PRIMERA edición (2016) sí dice «TODA LA PROGRAMACIÓN ES GRATUITA», pero eso es de hace diez años. Queda `desconocido`, que es lo que corresponde cuando no se sabe: no saber es legítimo y se declara. Preguntado al festival.",
-   "_zanjarlo": "basta con que el festival lo publique, o con que Juan lo decida como decisión suya —como hizo con Villa del Cine— y entonces se escribe aquí de quién es la decisión."
+   "is_free": true,
+   "_por_que": "DECISIÓN DE JUAN (20 sep 2026), no dato del festival, y la diferencia importa: «Entrada libre, siempre. A todas las funciones». Ninguna fuente de esta edición lo dice —la web de la 11ª no menciona entrada, boletería ni gratuidad por ninguna parte, y los posts tampoco—. Lo que hay alrededor lo respalda: la página de la primera edición imprime «TODA LA PROGRAMACIÓN ES GRATUITA», @danicooltura escribe «La entrada es libre» el 20 sep, y el festival es municipal y al aire libre en varias sedes. Pero nada de eso es el festival diciéndolo de esta edición, así que queda registrado de quién es la decisión. Mismo criterio que en Villa del Cine.",
+   "_si_el_festival_lo_desmiente": "se cambia acá y se re-corre el plan; la palabra viaja al crudo por este campo y de ahí a la casilla de acceso, que traduce lib.acceso_campos() una sola vez."
   },
   "name": "Festival de Cine de Jardín",
   "fullName": "11° Festival de Cine de Jardín — Ecos de Voces Silenciadas",
@@ -115,11 +123,11 @@
   "El seminario académico y los conversatorios": "el festival anuncia invitados y «una conversación» (Sebastián Lanz, 18 sep) sin día, hora ni sede. No es una función."
  },
  "_preguntas_al_festival": [
-  "¿La entrada es libre? Ninguna fuente de esta edición lo dice —ni la web ni Instagram—, y necesitamos la casilla de acceso para publicar.",
   "«La creciente» dura 89 min según su ficha en festicinejardin.com y 88 min según la lámina del acto inaugural. ¿Cuál es?",
   "La Muestra Central: Instagram anunció la «Parte I» con 7 obras y la web tiene 15. ¿Las 15 son la muestra completa, o vienen más con la Parte II?",
   "«Deus ex necro machina» (Mateo M. Correa) no tiene ficha en la web: su URL redirige a la de «Primer amor». ¿Pueden publicarla?",
-  "¿La programación con día, hora y sede sale antes del jueves? Es lo único que nos falta para publicar el festival."
+  "¿La programación con día, hora y sede sale antes del jueves? Es lo único que nos falta para publicar el festival.",
+  "«Elementales» (Camilo Botero Jaramillo) está anunciada en la selección de Caleidoscopio 2026 pero su ficha en la web está etiquetada «Caleidoscopio 2025», así que no sabemos su duración ni su año. ¿Nos los pueden confirmar?"
  ],
  "_fuentes_versionadas": {
   "festivals/staging/jardin-2026-radar.json": "el volcado del issue de radar #811, que escribe y RELEE pipeline/radar.py.",

@@ -1,0 +1,229 @@
+{
+ "_provenance": {
+  "fuente": "TMDB (image.tmdb.org, w780), Letterboxd (og:image) y el `og:image` de la ficha en festicinejardin.com — en ese orden, el de docs/POSTERS.md §2",
+  "capturado": "2026-09-20",
+  "que_aporta": "34 imágenes de las 37 obras del catálogo, bajadas a assets/jardin-2026/",
+  "metodo": "los dos primeros son afiches de verdad y van a 2:3; el still del festival es apaisado, se reduce a 896 px de ancho y va como `editorial`, que la vista encuadra a 16:9 en vez de estirarlo. No se publica la URL remota: el archivo se sirve desde el repo y este sidecar lo nombra"
+ },
+ "films": [
+  {
+   "title": "Alma provinciana",
+   "poster": "/assets/jardin-2026/alma-provinciana.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/zvIEdYmz3XmkYWfRFcAnzzqSAgd.jpg"
+  },
+  {
+   "title": "Criatura",
+   "poster": "/assets/jardin-2026/criatura.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/Ciratura.png"
+  },
+  {
+   "title": "Cuando las aguas se juntan",
+   "poster": "/assets/jardin-2026/cuando-las-aguas-se-juntan.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/qiPLnSUUAQ4QeeXwyVVciyCMttq.jpg"
+  },
+  {
+   "title": "Cuando las montañas tiemblan",
+   "poster": "/assets/jardin-2026/cuando-las-montanas-tiemblan.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/CUANDO-LAS-MONTANAS-TIEMBLAN.png"
+  },
+  {
+   "title": "De: Saúl",
+   "poster": "/assets/jardin-2026/de-saul.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/De-saul-scaled.jpg"
+  },
+  {
+   "title": "El mundo es afuera",
+   "poster": "/assets/jardin-2026/el-mundo-es-afuera.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/icIBCOZms2ngvpBzDZ1uQ4wjYxY.jpg"
+  },
+  {
+   "title": "En todo y en nada",
+   "poster": "/assets/jardin-2026/en-todo-y-en-nada.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/En-todo-y-en-nada-.jpg"
+  },
+  {
+   "title": "Futuros luminosos",
+   "poster": "/assets/jardin-2026/futuros-luminosos.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/dcrtvU52NOn6HTHJHC8ZyX8ySsJ.jpg"
+  },
+  {
+   "title": "Jiru iuiai \"Algo malo\"",
+   "poster": "/assets/jardin-2026/jiru-iuiai-algo-malo.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/Jiru-Algo-malo.png"
+  },
+  {
+   "title": "La Mona",
+   "poster": "/assets/jardin-2026/la-mona.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/LaMona.jpg"
+  },
+  {
+   "title": "La creciente",
+   "poster": "/assets/jardin-2026/la-creciente.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/LA-CRECIENTE.png"
+  },
+  {
+   "title": "La marcha del hambre",
+   "poster": "/assets/jardin-2026/la-marcha-del-hambre.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/Aw5ddJEgDnzC2Lbz4pajWnzqEsR.jpg"
+  },
+  {
+   "title": "La reserva",
+   "poster": "/assets/jardin-2026/la-reserva.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/fMu0fMn9c9r7UJMu8CIsFSGmK6z.jpg"
+  },
+  {
+   "title": "La sed del viento",
+   "poster": "/assets/jardin-2026/la-sed-del-viento.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/ua5JYfNM3IJpTLhiR7dKIqKsPqM.jpg"
+  },
+  {
+   "title": "Lecciones de primavera",
+   "poster": "/assets/jardin-2026/lecciones-de-primavera.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/3z7C0am8e6kS96ZBvxSDizVCx6H.jpg"
+  },
+  {
+   "title": "Lejanía",
+   "poster": "/assets/jardin-2026/lejania.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/52dY1avW5rGG5cfAO4tRpc8RbpS.jpg"
+  },
+  {
+   "title": "Los años del conejo",
+   "poster": "/assets/jardin-2026/los-anos-del-conejo.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/nFyKmHbihS1DwJeGG8NthSP9WwZ.jpg"
+  },
+  {
+   "title": "Madres de nacimiento",
+   "poster": "/assets/jardin-2026/madres-de-nacimiento.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg"
+  },
+  {
+   "title": "Malas posturas",
+   "poster": "/assets/jardin-2026/malas-posturas.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/MALAS_POSTURAS.jpg"
+  },
+  {
+   "title": "Midnight Oil: The Hardest Line",
+   "poster": "/assets/jardin-2026/midnight-oil-the-hardest-line.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/4bYaedsCYGRQvjIkWbmixPYoeMp.jpg"
+  },
+  {
+   "title": "Mûpã (Madre)",
+   "poster": "/assets/jardin-2026/mupa-madre.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/lUKLCRws4r5WN9cbyuOijBXBmEh.jpg"
+  },
+  {
+   "title": "Nuestra tierra",
+   "poster": "/assets/jardin-2026/nuestra-tierra.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/9k3dwIITeBE1Myo9KQmLeQtfIVX.jpg"
+  },
+  {
+   "title": "Primer amor",
+   "poster": "/assets/jardin-2026/primer-amor.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/primer-amor-scaled.jpg"
+  },
+  {
+   "title": "Refracción",
+   "poster": "/assets/jardin-2026/refraccion.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg"
+  },
+  {
+   "title": "Relatos del camino",
+   "poster": "/assets/jardin-2026/relatos-del-camino.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/Relatos-del-camino.jpg"
+  },
+  {
+   "title": "Romero",
+   "poster": "/assets/jardin-2026/romero.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/rM4YcDw3U3w396RNslstu1OXRDz.jpg"
+  },
+  {
+   "title": "Sirena mecánica",
+   "poster": "/assets/jardin-2026/sirena-mecanica.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/2Dga5Ik6s799QoPz2A5LIoY3a90.jpg"
+  },
+  {
+   "title": "Somnolítico",
+   "poster": "/assets/jardin-2026/somnolitico.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/Somnolitico.png"
+  },
+  {
+   "title": "Soñé su nombre",
+   "poster": "/assets/jardin-2026/sone-su-nombre.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/xlXvgdoTqDdzUFoBAb2ANqka4tC.jpg"
+  },
+  {
+   "title": "Términa",
+   "poster": "/assets/jardin-2026/termina.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/2PxyvOX5x33ZVaqFb6yHqrMbVFZ.jpg"
+  },
+  {
+   "title": "Un aparato para detectar fantasmas",
+   "poster": "/assets/jardin-2026/un-aparato-para-detectar-fantasmas.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/UnAparatoParaDetectarFantasmas-scaled.jpg"
+  },
+  {
+   "title": "Una canción para mi tierra",
+   "poster": "/assets/jardin-2026/una-cancion-para-mi-tierra.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/bdZ4ytZSyiMpho5ADYjM33V4aoL.jpg"
+  },
+  {
+   "title": "Una vez en un cuerpo",
+   "poster": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg",
+   "posterSource": "tmdb",
+   "_origen": "https://image.tmdb.org/t/p/w780/jSAfjuWwP9BLIJgofw1vVa6xWaG.jpg"
+  },
+  {
+   "title": "Volver",
+   "poster": "/assets/jardin-2026/volver.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/VOLVER.png"
+  }
+ ],
+ "sin_imagen": [
+  "Deus ex necro machina",
+  "Elementales",
+  "Ubuntu: La métrica de los afectos"
+ ],
+ "_descartados": [
+  "«La Mona»: letterboxd devolvió 500×500 (r=1.00), no es un afiche vertical — se descarta",
+  "«Malas posturas»: letterboxd devolvió 500×500 (r=1.00), no es un afiche vertical — se descarta",
+  "«Un aparato para detectar fantasmas»: letterboxd devolvió 500×500 (r=1.00), no es un afiche vertical — se descarta"
+ ],
+ "_sin_imagen_por_que": {
+  "Deus ex necro machina": "el festival no le publicó ficha: su slug `deus-ex-necro-machina` REDIRIGE a la página de «Primer amor», que es otra obra. Entra al catálogo solo desde Instagram y no hay imagen que bajar. Preguntado al festival.",
+  "Elementales": "su página en la web está etiquetada «Caleidoscopio 2025», no 2026, así que no se toma como ficha de esta edición. Entra solo desde Instagram. Preguntado al festival.",
+  "Ubuntu: La métrica de los afectos": "tiene ficha en la web pero sin imagen (`og:image` es el logo del festival, que el raspador descarta) y TMDB no la verifica."
+ }
+}
