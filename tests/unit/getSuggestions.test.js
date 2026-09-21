@@ -57,6 +57,11 @@ function load(opts = {}) {
       watched: opts.watched || new Set(),
       lastRemovedSlots: opts.lastRemovedSlots || [],
       screeningPassed: s => passed.has(s._title || s.title),
+      // «Sigue en el Plan» (20 sep 2026, #918): lo que no TERMINÓ, no lo que «ya
+      // no llegás». Stubs neutros = fin desconocido → cuenta solo screeningPassed,
+      // el contrato previo intacto; el test de la función EN CURSO inyecta el fin.
+      simNow: opts.simNow || (() => new Date(0)),
+      screeningEndDate: opts.screeningEndDate || (() => null),
       screensConflict: opts.screensConflict || mkConflict(),
       isScreeningBlocked: opts.isScreeningBlocked || (() => false),
       // screeningPlannable (dueño único, 16 ago): la Recuperación lo consume.
@@ -279,4 +284,22 @@ test('sin plan confirmado (null o schedule vacío) → {} (contrato con Mi Plan)
   assert.deepStrictEqual(a.getSuggestions(), {});
   const b = load({ FILMS: [film('F', 'D2', '19:00', '60 min')], savedAgenda: { schedule: [] } });
   assert.deepStrictEqual(b.getSuggestions(), {});
+});
+
+// ── #918 — la función EN CURSO sigue en el Plan: no deja hueco ni se puede pisar ──
+// TIFF sáb 12 (20 sep 2026): Bedford Park 14:30–16:31 en curso a las 16:20 ya
+// había «pasado» (arranque+10) y Sugerencias ofrecía Wavelengths 2 de las 16:15.
+test('#918: la función en curso (pasó su arranque, no su fin) sigue bloqueando su franja', () => {
+  const ahora = new Date('2026-09-12T16:20:00-04:00');
+  const fin = { EnCurso: new Date('2026-09-12T16:31:00-04:00'), Vieja: new Date('2026-09-12T13:00:00-04:00') };
+  const { getSuggestions } = load({
+    FILMS: [film('Pisa', 'D1', '16:15', '70 min'), film('Cabe', 'D1', '19:00', '60 min')],
+    savedAgenda: { schedule: [sched('Vieja', 'D1', '11:30', '90 min'), sched('EnCurso', 'D1', '14:30', '121 min'), sched('Luego', 'D1', '21:30', '90 min')] },
+    passed: new Set(['Vieja', 'EnCurso']),
+    simNow: () => ahora,
+    screeningEndDate: s => fin[s._title || s.title] || null,
+  });
+  const titles = (getSuggestions().D1 || []).map(f => f.title);
+  assert.ok(!titles.includes('Pisa'), `16:15 empieza antes de que termine la que está en curso (ofrecidas: ${titles})`);
+  assert.ok(titles.includes('Cabe'), 'y el hueco de después sigue ofreciéndose');
 });

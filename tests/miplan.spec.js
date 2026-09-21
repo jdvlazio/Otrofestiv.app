@@ -2878,3 +2878,26 @@ test('T191 — con un Plan de varios días, el retraso avisa sobre la siguiente 
   expect(r.aviso, 'y habla de Clarissa, la siguiente del mismo día — no de la del sábado').toContain('Clarissa');
   expect(r.aviso, 'con el margen negativo que corresponde').toMatch(/-\d+ min|quedan/);
 });
+
+// ── T192 — Sugerencias no ofrece lo que empieza antes de que termine la que está EN CURSO
+// Reportado desde el chat de Social Media (20 sep 2026, build 202609201148):
+// TIFF sáb 12, Bedford Park 14:30 (121 min, hasta 16:31) en curso a las 16:20,
+// y Sugerencias ofrecía Wavelengths 2 de las 16:15 con «+ Agendar». La causa es
+// la misma familia que #916: getSuggestions armaba el Plan vivo con
+// screeningPassed («ya no llegás», arranque+10), así que la función en curso
+// salía del Plan y su franja quedaba libre para huecos y para screensConflict.
+const _SUG_TIFF = async (page) => page.evaluate(async () => {
+  const f = t => FILMS.find(x => x.title === t && x.day === '2026-09-12');
+  const plan = ['Tender Loving Care', 'Bedford Park', 'I Play Rocky'].map(t => ({ ...f(t), _title: t }));
+  state.set('savedAgenda', { schedule: plan }); saveSavedAgenda();
+  const A = await import('/src/view/agenda.js');
+  return (A.getSuggestions()['2026-09-12'] || []).map(x => x.time + ' ' + x.title);
+});
+test('T192 — con una función en curso, Sugerencias no ofrece una que empiece antes de que termine', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-12T16:20:00-04:00');
+  const s = await _SUG_TIFF(page);
+  expect(s.length, 'hay sugerencias para el sábado (la noche está libre)').toBeGreaterThan(0);
+  expect(s.find(x => /Wavelengths 2/.test(x)), `Wavelengths 2 (16:15) NO se ofrece con Bedford Park en curso hasta 16:31 (ofrecidas: ${JSON.stringify(s.slice(0, 3))})`).toBeUndefined();
+  expect(s.every(x => toMinT(x.slice(0, 5)) >= toMinT('16:31')), 'nada de lo ofrecido empieza antes de que termine la que está en curso').toBe(true);
+});
+function toMinT(hhmm) { const [h, m] = hhmm.split(':').map(Number); return h * 60 + m; }
