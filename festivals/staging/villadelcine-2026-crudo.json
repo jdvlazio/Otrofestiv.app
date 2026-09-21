@@ -1623,7 +1623,8 @@
    "film_list": [
     {
      "titulo": "Quazar",
-     "director": "Alejandro Vargas",
+     "director": "William Alejandro Vargas Daza",
+     "pais": "Colombia",
      "sinopsis": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
      "formato": "PODEROSAS"
     },
@@ -1638,9 +1639,18 @@
     },
     {
      "titulo": "La Mona",
-     "director": "Diana C. Patiño",
+     "director": "Laura Gutiérrez Ardila",
      "duracion_min": 18,
+     "pais": "Colombia",
+     "genero": "Drama",
+     "anio": 2025,
      "sinopsis": "Entre el polvo y el calor se encuentra La Hondura, un pueblo olvidado, donde la tensión se siente como electricidad en el aire. Allí, La Mona, una paramilitar, impone el orden. Sin embargo, no puede dominar la naturaleza de su cuerpo y la menstruación la doblega hasta el punto de postrarla en la cama.",
+     "sinopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
+     "tmdb_id": 1444298,
+     "lbSlug": "heat-wave-2025",
+     "productor": "Diana C. Patiño Martínez",
+     "poster": "/assets/villadelcine-2026/la-mona.jpg",
+     "posterSource": "oficial",
      "formato": "PODEROSAS"
     }
    ]

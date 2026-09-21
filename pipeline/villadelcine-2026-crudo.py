@@ -171,6 +171,38 @@ FICHA_EXTERNA = {
                    'que coincide en título exacto, 1968, Ciro Durán y '
                    'Colombia–Venezuela — cuatro campos, no una corazonada.',
     },
+    # EL PDF ACREDITA A LA PRODUCTORA COMO DIRECTORA. «Dir. Diana C. Patiño»
+    # dice la ficha del festival; las tres fichas técnicas del corto —cinecorto
+    # (cinecorto.co/la-mona/), FilmsToFestivals (filmstofestivals.com/la-mona-7058/)
+    # y el FIFF de Fribourg (fiff.ch/en/la-mona)— dicen dirección y guion Laura
+    # Gutiérrez Ardila, producción Diana C. Patiño Martínez. Es el crédito que
+    # no es director, otra vez. El afiche es el del propio corto (cinecorto,
+    # 1344×1920): el festival no tiene tarjeta suya. Juan, 21 sep: sí a las tres.
+    'la mona': {
+        'director': 'Laura Gutiérrez Ardila',
+        'productor': 'Diana C. Patiño Martínez',
+        'pais': 'Colombia',
+        'anio': 2025,
+        'poster': '/assets/villadelcine-2026/la-mona.jpg',
+        'posterSource': 'oficial',
+        '_fuente': 'cinecorto.co/la-mona/ + filmstofestivals.com/la-mona-7058/ + '
+                   'fiff.ch/en/la-mona: dirección Laura Gutiérrez Ardila, '
+                   'producción Diana C. Patiño Martínez, Colombia, 2025, 18:18, '
+                   'rodada en Tierralta (Córdoba). Afiche: cinecorto, La-mona.jpg.',
+    },
+    # SIN IMAGEN EN NINGUNA PARTE: ni web, ni IG, ni TMDB, ni IMDb, ni
+    # Letterboxd, ni Proimágenes; el still del PDF mide 112×89. Queda con el
+    # generativo. Lo único que existe es Bogoshorts 2023, In Vitro BFM
+    # (proyectos colombianos): «Quazar – Dir. William Alejandro Vargas Daza».
+    # País por deducción aceptada por Juan (21 sep): In Vitro es para proyectos
+    # colombianos y la sinopsis del PDF dice «joven bogotana».
+    'quazar': {
+        'director': 'William Alejandro Vargas Daza',
+        'pais': 'Colombia',
+        '_fuente': 'revistadc.com — Bogoshorts 21, In Vitro BFM (oct 2023): '
+                   '«Quazar – Dir. William Alejandro Vargas Daza. Prod. Jimmy '
+                   'Andrés Villamizar Gutiérrez». País: deducción (Juan, 21 sep).',
+    },
 }
 
 NO_PUBLICAR = {
