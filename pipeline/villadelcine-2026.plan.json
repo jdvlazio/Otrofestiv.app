@@ -183,10 +183,9 @@
  "_nota_encuadre": "EL ENCUADRE DE PÓSTERS VA DESPUÉS DE PUBLICAR, no dentro de la cadena: encuadrar-posters.py lee festivals/villadelcine-2026.json —el publicado— para saber qué afiches son de este festival, y en la primera corrida ese archivo todavía no existe. Solo reescribe imágenes, así que no hace falta volver a publicar:\n\n    python3 pipeline/correr.py villadelcine-2026\n    python3 pipeline/publicar.py villadelcine-2026\n    python3 pipeline/encuadrar-posters.py villadelcine-2026 --aplicar",
  "_nota_posters": "El póster va INLINE en cada obra del crudo (lo aplica villadelcine-2026-crudo.py leyendo el sidecar), no como mapa `posters{}` en el plan: ese modelo murió en la Fase A.1 y el gate [poster-map-legacy] lo bloquea.",
  "_preguntas_al_festival": [
-  "Los afiches de «Quazar» (Alejandro Vargas) y «La Mona» (Diana C. Patiño), las dos en PODEROSAS: son las ÚNICAS dos obras del festival sin tarjeta en la página de Selección Oficial (villadelcine.com/festival-2024-2/, 86 tarjetas, 21 sep). El DM del 20 sep pedía 7; los otros 5 estaban en esa página y no los habíamos leído.",
   "La hora de los talleres «Cianotipia» y «Farmeando el Tunjo» dentro del bloque de 4 h de Programación Infantil. Sin hora no se publican. VA EN EL PRÓXIMO MENSAJE (Juan, 21 sep).",
   "AVISO, no pregunta: el programa RAÍCES del sábado ocupa una casilla de 60 min y sus cuatro cortos suman 79 (20+26+22+11). Publicamos 79 (regla de Juan). VA EN EL PRÓXIMO MENSAJE.",
-  "«El fósil mágico» (sáb 26, 15:45, Casa San Pedro, 30 min): tiene día, hora y sede, pero la celda no dice sección («Selección No Competitiva» es estado, no sección) y el ensamblador exige una declarada. NO se publica hasta que Juan decida cómo entra sin sección. ¿De quién es y en qué sección va?"
+  "«El fósil mágico» (sáb 26, 15:45, Casa San Pedro, 30 min): tiene día, hora y sede, pero la celda no dice sección («Selección No Competitiva» es estado, no sección) y el ensamblador exige una declarada. NO se publica hasta saber su sección. VA EN EL PRÓXIMO MENSAJE: ¿de quién es y en qué sección va?"
  ],
  "_como_se_pregunta": "CORTO Y DIRECTO, y una sola petición por mensaje. El 20 sep se redactó un DM con las cinco de arriba en una tabla y Juan lo devolvió: «El mensaje para una primera aproximación es larguísimo». Salió solo la primera. Las otras cuatro esperan a que contesten.",
  "_no_se_publica": {
@@ -195,5 +194,6 @@
  },
  "_resueltas": [
   "«Sierra: El álbum mortuorio»: IMDb tt38043603 acredita a Carlos Ortíz Alarcón (dirección y guion). El PDF tenía razón; la web del festival (Cristian Gil Bayona) no. Resuelto 21 sep, sin preguntar."
- ]
+ ],
+ "_no_se_pregunta": "Afiches de «Quazar» y «La Mona» (no están en la página de Selección Oficial): Juan, 21 sep — «No quiero preguntar otra vez a un festival por errores nuestros». Van con el generativo; si el PDF trae su still, entra como editorial."
 }

@@ -258,6 +258,8 @@
    "day_order": 0,
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "has_qa": false,
+   "poster": "/assets/villadelcine-2026/arenas.jpg",
+   "posterSource": "editorial",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p2",
     "date": "2026-09-19"
@@ -733,6 +735,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "5 min",
+     "poster": "/assets/villadelcine-2026/cuba-2001-imagenes-del-futuro-i.jpg",
+     "posterSource": "editorial",
      "synopsis": "Manifiesto de archivos audiovisuales que acomoda con zapeo historias de cámaras y sus viajes mientras graban fiestas familiares y de cine. El viaje más largo es en Cuba. Salen muchas personas, van dos en el viaje que graban para un programa de televisión.",
      "genre": "Documental",
      "synopsis_lang": "es"
@@ -1694,6 +1698,8 @@
      "flags": "🇫🇷",
      "year": 2024,
      "duration": "19 min",
+     "poster": "/assets/villadelcine-2026/sun-coffee.jpg",
+     "posterSource": "editorial",
      "synopsis": "Un café para recalentar, pero sin más electricidad: un problema que llevará a estudiantes de secundaria por distintos encuentros y conversaciones en torno a la energía fotovoltaica.",
      "genre": "Ficción",
      "synopsis_lang": "es"
@@ -1848,6 +1854,8 @@
      "flags": "🇹🇼",
      "year": 2026,
      "duration": "4 min",
+     "poster": "/assets/villadelcine-2026/life-is-a-chessboard-every-move-is-final.jpg",
+     "posterSource": "editorial",
      "synopsis": "En un vasto mundo de fantasía oriental, un cultivador solitario sostiene un objeto ornamental que despierta recuerdos conmovedores de su hermano, un amigo íntimo y la mujer a quien amaba. Mientras el recuerdo y la realidad se entretejen, el tiempo se fragmenta durante una partida de Go evocada, dejándolo contemplar el cielo y abrazar en silencio cada emoción que transcurre.",
      "genre": "Ficción y Ciencia Ficción",
      "synopsis_lang": "es"
@@ -2448,8 +2456,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-21T11:36:10",
-  "plan_sha": "977b3b92805635a2",
+  "fecha": "2026-09-21T11:59:59",
+  "plan_sha": "d04a08ecc22a927b",
   "paso": 16,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"
  }

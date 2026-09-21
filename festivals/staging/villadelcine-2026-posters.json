@@ -112,6 +112,13 @@
    "_medida_original": "720x1080",
    "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
   },
+  "Life is a Chessboard; Every Move is Final": {
+   "poster": "/assets/villadelcine-2026/life-is-a-chessboard-every-move-is-final.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/2b011f8c-8ea4-4054-896d-12e6e61acb97.webp",
+   "_medida_original": "2048x868",
+   "_categoria": "MEJOR CORTOMETRAJE CON IA"
+  },
   "Ánima de Marea": {
    "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
    "posterSource": "oficial",
@@ -187,6 +194,13 @@
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/33-poster_El-cine-dentro-del-cine-dentro-del-cine-scaled.webp",
    "_medida_original": "1656x2560",
+   "_categoria": "MEJOR WORK-IN-PROGRESS"
+  },
+  "Cuba 2001. Imágenes del futuro I": {
+   "poster": "/assets/villadelcine-2026/cuba-2001-imagenes-del-futuro-i.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Still-1-Cuba-2001-El-Espejo.webp",
+   "_medida_original": "1163x395",
    "_categoria": "MEJOR WORK-IN-PROGRESS"
   },
   "Mi tesoro": {
@@ -455,6 +469,12 @@
    "_medida_original": "580x800",
    "_categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
   },
+  "Cine Concierto Villa del Cine 2021": {
+   "poster": "/assets/villadelcine-2026/cine-concierto-villa-del-cine-2021.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2023/09/STILL-VCINE4-Andres-Quintero.png",
+   "_medida_original": "2880x1618"
+  },
   "MI TESORO": {
    "poster": "/assets/villadelcine-2026/mi-tesoro.jpg",
    "posterSource": "oficial",
@@ -476,6 +496,13 @@
    "_medida_original": "447x800",
    "_categoria": "MEJOR CORTOMETRAJE CON IA"
   },
+  "SUN COFFEE": {
+   "poster": "/assets/villadelcine-2026/sun-coffee.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/de150a0902-poster.webp",
+   "_medida_original": "800x450",
+   "_categoria": "YOUNGFILM"
+  },
   "With the Hand Up": {
    "poster": "/assets/villadelcine-2026/with-the-hand-up.jpg",
    "posterSource": "oficial",
@@ -489,43 +516,14 @@
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/07f09ca377-poster.webp",
    "_medida_original": "560x800",
    "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
+  },
+  "ARENAS": {
+   "poster": "/assets/villadelcine-2026/arenas.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/BA1C8821-94B2-45D4-95AD-D2A547F0DC5B-Gustavo-Nieto-Roa-scaled.webp",
+   "_medida_original": "2560x1920",
+   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
   }
  },
- "_descartados_por_forma": [
-  {
-   "titulo": "Cuba 2001. Imágenes del futuro I",
-   "medida": "1163x395",
-   "r": 2.94,
-   "archivo": "Still-1-Cuba-2001-El-Espejo.webp",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  },
-  {
-   "titulo": "Life is a Chessboard; Every Move is Final",
-   "medida": "2048x868",
-   "r": 2.36,
-   "archivo": "2b011f8c-8ea4-4054-896d-12e6e61acb97.webp",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  },
-  {
-   "titulo": "Cine Concierto Villa del Cine 2021",
-   "medida": "2880x1618",
-   "r": 1.78,
-   "archivo": "STILL-VCINE4-Andres-Quintero.png",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  },
-  {
-   "titulo": "SUN COFFEE",
-   "medida": "800x450",
-   "r": 1.78,
-   "archivo": "de150a0902-poster.webp",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  },
-  {
-   "titulo": "ARENAS",
-   "medida": "2560x1920",
-   "r": 1.33,
-   "archivo": "BA1C8821-94B2-45D4-95AD-D2A547F0DC5B-Gustavo-Nieto-Roa-scaled.webp",
-   "_por_que": "apaisada o cuadrada: es un fotograma, no un afiche. La obra se publica sin póster y la app le pone el generativo nuestro."
-  }
- ]
+ "_descartados_por_forma": []
 }

@@ -20,16 +20,13 @@ Los nombres de archivo lo decían y nadie los leyó: `Timeline_4_01_16_57_01`,
 `Screenshot_129`, `Captura-de-pantalla-2026-07-31`, `witch_and_frog.still3_`.
 De las 81 URLs, solo TRES llevan «poster» en el nombre.
 
-LA REGLA (Juan): para estos stills se usa NUESTRO PÓSTER. Y nuestro póster no
-se pone: se deja el hueco. Una obra sin `poster` cae al paso 8 de
-`getFilmPoster` y la app construye el generativo tipográfico. Poner el
-fotograma como `editorial` sería la otra opción —la vista lo encuadraría a
-16:9 sin deformarlo— pero un fotograma de rodaje no identifica la obra, y la
-jerarquía de la casa dice que la Escalera entra donde íbamos a inventar un
-afiche.
-
-POR ESO ESTE PASO MIDE. Solo entra la imagen VERTICAL, que es la forma de un
-afiche. Lo apaisado y lo cuadrado se descartan con su medida escrita.
+LA REGLA (Juan, 21 sep por la mañana): el still NO se estira a 2:3. Por la
+tarde la completó: «si tenemos los stills, por qué no los usamos con póster
+propio». Así que ESTE PASO MIDE y decide el carril, no si entra: lo vertical
+(afiche) va como `oficial` al lienzo 2:3; lo apaisado (fotograma o carátula de
+videoclip) va como `editorial`, que la vista encuadra a 16:9 con nuestro marco
+y `encuadrar-posters.py` no toca. Solo queda sin afiche lo que no está en
+ninguna fuente: cae al paso 8 de `getFilmPoster`, el generativo tipográfico.
 ════════════════════════════════════════════════════════════════════════════
 
 QUÉ HACE. Baja el afiche de cada obra a `assets/villadelcine-2026/<slug>.jpg` y
@@ -267,7 +264,13 @@ def main():
         # entra por el carril `editorial`, que nadie estira. Solo cuenta si la
         # imagen es de verdad apaisada —un videoclip con afiche vertical es un
         # afiche vertical y sigue el camino normal—.
-        es_16_9 = bool(h) and CATEGORIA_16_9 in norm(categoria) and w / h > R_MAX
+        # …Y EL FOTOGRAMA TAMBIÉN (Juan, 21 sep, tarde): «si tenemos los stills,
+        # por qué no los usamos con póster propio». Lo apaisado ya no se
+        # descarta: entra como `editorial`, la vista lo encuadra a 16:9 sin
+        # deformarlo y le pone nuestro marco. Lo que la regla de la mañana
+        # prohibía era el still ESTIRADO a 2:3, no el still. La categoría queda
+        # registrada en el sidecar para saber cuál es carátula y cuál fotograma.
+        es_16_9 = bool(h) and w / h > R_MAX
         if not h or not (es_16_9 or R_MIN <= w / h <= R_MAX):
             descartados.append((o['titulo'], w, h, round(w / h, 2) if h else 0,
                                 url.split('/')[-1]))
@@ -307,9 +310,7 @@ def main():
         'posters': mapa,
         '_descartados_por_forma': [
             {'titulo': t, 'medida': f'{w}x{h}', 'r': r, 'archivo': f,
-             '_por_que': 'apaisada o cuadrada: es un fotograma, no un afiche. '
-                         'La obra se publica sin póster y la app le pone el '
-                         'generativo nuestro.'}
+             '_por_que': 'más estrecha que 0,44: ni afiche ni fotograma legible.'}
             for t, w, h, r, f in sorted(descartados, key=lambda x: -x[3])]},
         open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(f'{len(mapa)} afiches del festival · {bajados} bajados ahora · {ya} ya estaban '
