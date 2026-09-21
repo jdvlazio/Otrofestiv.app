@@ -108,6 +108,24 @@
    "_sondeado": "2026-09-20"
   },
   {
+   "titulo": "La Mona",
+   "tmdb_id": 1444298,
+   "titulo_original": "La Mona",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La Mona",
+   "title_en": "Heat Wave",
+   "lbSlug": "heat-wave-2025",
+   "_director": "Laura Gutiérrez Ardila",
+   "_sondeado": "2026-09-21"
+  },
+  {
    "titulo": "La Presencia de Blanco",
    "tmdb_id": 1753870,
    "titulo_original": "La presencia de blanco",
@@ -397,6 +415,23 @@
    "_director": "Akshita Tyagi, Leyla Belarbi, Lia Macruz",
    "_sondeado": "2026-09-20"
   },
+  "La Mona": {
+   "tmdb_id": 1444298,
+   "titulo_original": "La Mona",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La Mona",
+   "title_en": "Heat Wave",
+   "lbSlug": "heat-wave-2025",
+   "_director": "Laura Gutiérrez Ardila",
+   "_sondeado": "2026-09-21"
+  },
   "La Presencia de Blanco": {
    "tmdb_id": 1753870,
    "titulo_original": "La presencia de blanco",
@@ -618,7 +653,6 @@
   "KMKZ: Wild, free and brave.",
   "Korebaju Pai Rekocho",
   "LENS",
-  "La Mona",
   "La Sombrilla de Mamá",
   "La silla",
   "La última historia",
@@ -829,10 +863,6 @@
    "director": "Eduardo Rodriguez",
    "fecha": "2026-09-20"
   },
-  "La Mona": {
-   "director": "Diana C. Patiño",
-   "fecha": "2026-09-21"
-  },
   "La Sombrilla de Mamá": {
    "director": "Mateo Forero",
    "fecha": "2026-09-20"
@@ -934,7 +964,7 @@
    "fecha": "2026-09-20"
   },
   "Quazar": {
-   "director": "Alejandro Vargas",
+   "director": "William Alejandro Vargas Daza",
    "fecha": "2026-09-21"
   },
   "Que el cielo nos perdone": {
