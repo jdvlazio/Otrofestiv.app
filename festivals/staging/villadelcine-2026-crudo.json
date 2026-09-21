@@ -1094,7 +1094,6 @@
    "sede": "Hotel Mesón de los Virreyes - Villa de Leyva",
    "sala": "Auditorio",
    "duracion_min": 135,
-   "duracion_obra": 70,
    "seccion": "Exhibición Especial",
    "is_free": true,
    "acceso": "Entrada libre",
@@ -2147,8 +2146,7 @@
    "dia": "2026-09-26",
    "hora": "18:00",
    "sede": "Casa San Pedro Campestre - Villa de Leyva",
-   "duracion_min": 70,
-   "_duracion_dibujada": 15,
+   "duracion_min": 15,
    "seccion": "Exhibición Especial",
    "is_free": true,
    "acceso": "Entrada libre",
@@ -2158,8 +2156,7 @@
     "date": "2026-09-19"
    },
    "tipo": "evento",
-   "event_kind": "encuentro",
-   "duracion_obra": 70
+   "event_kind": "encuentro"
   },
   {
    "titulo": "Ceremonia TAMSA — Premiación y clausura",

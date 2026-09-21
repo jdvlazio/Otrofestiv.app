@@ -399,6 +399,20 @@ def main():
         # VERIFICAR contra TMDB, que compara con ±3 minutos de margen. Con la
         # casilla, «Llueve sobre Babel» (113 min en una casilla de 120) no
         # verificaba y se quedaba sin ficha y sin póster.
+        # …PERO UNA ACTIVIDAD NO DURA LO QUE DURA LA OBRA QUE NOMBRA. La regla
+        # de arriba supone que la casilla PROYECTA esas obras; una charla, un
+        # tributo o un reconocimiento solo las MENCIONA. El «Tributo a Aquileo
+        # Venganza — Joyce Ventura» del sábado mide 15 minutos dibujados,
+        # emparejó con la película por el título y se publicó de 70: pisaba la
+        # Ceremonia de Clausura de las 18:15 y la app la habría dado por
+        # imposible de ver. La película sí se proyecta, a las 16:45, y ahí los
+        # 70 minutos son los suyos.
+        #
+        # Es el mismo error que la limpieza del final ya corrige para la
+        # sinopsis y el póster, a la que le faltaba justo este campo — y la
+        # limpieza llega tarde, porque `dur` ya está calculado.
+        if tipo:
+            suma = 0
         dur = max(b['duracion_min'], suma) if suma else b['duracion_min']
         if suma > b['duracion_min']:
             avisos.append(f'{b["dia"][-2:]} {b["hora"]} «{titulo[:34]}»: la casilla mide '
@@ -453,7 +467,7 @@ def main():
         if tipo:
             for k in ('sinopsis', 'sinopsis_en', 'pais', 'genero', 'anio',
                       'tmdb_id', 'lbSlug', 'poster', 'posterSource', 'director',
-                      'categoria'):
+                      'categoria', 'duracion_obra'):
                 reg.pop(k, None)
         funciones.append(reg)
 

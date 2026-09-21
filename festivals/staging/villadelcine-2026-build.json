@@ -2342,7 +2342,7 @@
    "title": "Tributo a Aquileo Venganza — Joyce Ventura",
    "type": "event",
    "section": "🎞️ Exhibición Especial",
-   "duration": "70 min",
+   "duration": "15 min",
    "day": "2026-09-26",
    "time": "18:00",
    "day_order": 3,
@@ -2404,7 +2404,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-20T06:22:25",
+  "fecha": "2026-09-20T20:33:09",
   "plan_sha": "a33a8c35b79230e1",
   "paso": 14,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"
