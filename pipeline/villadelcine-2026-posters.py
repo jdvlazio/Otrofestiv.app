@@ -76,9 +76,48 @@ def _slug_afiche(t):
     return re.sub(r'-+', '-', re.sub(r'[^a-z0-9]+', '-', norm(t))).strip('-')[:60]
 
 
+SELECCION = 'https://villadelcine.com/festival-2024-2/'
+
+
+def de_seleccion():
+    """[(título, url del afiche)] de la página de SELECCIÓN OFICIAL.
+
+    AQUÍ ESTÁN LOS AFICHES, y no en la página de cada obra. La ficha de una
+    obra tiene una galería de FOTOS DE RODAJE; la de Selección Oficial tiene
+    una tarjeta por obra con su afiche de fondo. Los nombres de archivo lo
+    dicen: `poster-quimera-…`, `APVU-POSTER_FINAL-…`, `AFICHE-MI-TESORO-V1-…`.
+
+    Se ven RECORTADOS en la web porque la tarjeta usa `background-size:cover`
+    sobre el archivo entero —es recorte de CSS, no del archivo—: pedido
+    directo, «Quimera» llega en 1587×2245 completo. Lo vio Juan (21 sep 2026)
+    y es lo que llevó de 10 afiches a 72.
+    """
+    r = subprocess.run(['curl', '-sSL', '--max-time', '60', '-A', UA, SELECCION],
+                       capture_output=True)
+    h = r.stdout.decode('utf-8', 'replace')
+    import html as _html
+    pares = []
+    for m in re.finditer(r'background-image:\s*url\((https://villadelcine\.com/'
+                         r'wp-content/uploads/2026/[^)]+)\)', h):
+        u = m.group(1)
+        seg = h[m.end():m.end() + 3000]
+        t = re.findall(r'class="ue_title[^"]*"[^>]*>([^<]{2,90})<', seg)
+        if t:
+            pares.append((_html.unescape(t[0]).strip(), u))
+    if len(pares) < 60:
+        sys.exit(f'✗ la página de Selección Oficial devolvió {len(pares)} '
+                 f'tarjetas: esperábamos ~86. ¿Cambió la maqueta?')
+    return pares
+
+
 def main():
     web = json.load(open(f'{ST}/villadelcine-2026-obras-web.json',
                          encoding='utf-8'))['obras']
+    # El afiche por título, de la página de Selección Oficial. Sustituye a la
+    # galería de la ficha, que son fotos de rodaje.
+    sel = {}
+    for t, u in de_seleccion():
+        sel.setdefault(norm(t), u)
     enr_p = f'{ST}/villadelcine-2026-enriquecido.json'
     con_tmdb = set()
     if os.path.exists(enr_p):
@@ -94,12 +133,15 @@ def main():
     os.makedirs(ASSETS, exist_ok=True)
     mapa, bajados, ya, sin, descartados = {}, 0, 0, [], []
     for o in web:
-        if not o['afiches']:
+        url_sel = sel.get(norm(o['titulo']))
+        if not url_sel and not o['afiches']:
             sin.append(o['titulo'])
             continue
         if norm(o['titulo']) in con_tmdb:
             continue                       # el de TMDB manda: es el original
-        url = o['afiches'][0]
+        # EL AFICHE DE SELECCIÓN OFICIAL MANDA. La galería de la ficha es el
+        # último recurso, y casi siempre la descarta la medida por apaisada.
+        url = url_sel or o['afiches'][0]
         dest = f'{ASSETS}/{_slug_afiche(o["titulo"])}.jpg'
         # SE MIDE EL ORIGINAL, SIEMPRE, Y NO LO QUE HAY EN assets/.
         #
