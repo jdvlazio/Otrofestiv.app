@@ -6,7 +6,7 @@
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 811,
- "_por_que_sedes": "LAS PUBLICÓ EL FESTIVAL EN UN MAPA, el 20 de septiembre, con los cinco lugares numerados: «Aquí tienes el mapa completo de las sedes de esta edición, con los cambios ya actualizados. Guárdalo para no perderte ninguna función». Y los cambios son del sismo del 10 de agosto —el mismo que aplazó FICMA—: «La cancha Moisés Rojas Peláez ha sido, durante varias ediciones, uno de los lugares donde más hemos hecho festival. Este año no vamos a poder volver ahí: las afectaciones que dejó el sismo no permiten usarla con las condiciones de seguridad que necesitamos. Las Charlas Académicas y la Competencia Caleidoscopio se trasladan a la Placa deportiva Simón Bolívar, y las proyecciones que antes se hacían allí, ahora en la Escuela Jahel Peláez Montoya». La cancha Moisés Rojas NO es sede de esta edición y no entra en la tabla.",
+ "_por_que_sedes": "LAS PUBLICÓ EL FESTIVAL EN UN MAPA, el 20 de septiembre, con los cinco lugares numerados: «Aquí tienes el mapa completo de las sedes de esta edición, con los cambios ya actualizados. Guárdalo para no perderte ninguna función». Y los cambios son del sismo del 10 de agosto —el mismo que aplazó FICMA—: «La cancha Moisés Rojas Peláez ha sido, durante varias ediciones, uno de los lugares donde más hemos hecho festival. Este año no vamos a poder volver ahí: las afectaciones que dejó el sismo no permiten usarla con las condiciones de seguridad que necesitamos. Las Charlas Académicas y la Competencia Caleidoscopio se trasladan a la Placa deportiva Simón Bolívar, y las proyecciones que antes se hacían allí, ahora en la Escuela Jahel Peláez Montoya». La cancha Moisés Rojas NO es sede de esta edición y no entra en la tabla. Las cinco quedan geolocalizadas: tres por Nominatim y Overpass, y las dos que estrena por el sismo —Coliseo Municipal y Placa deportiva Simón Bolívar— con el pin que verificó Juan en Google Maps, porque ninguna de las dos está mapeada con el nombre que usa el festival.",
  "acceso_por_defecto": {
   "is_free": "desconocido",
   "_por_que": "NO LO DICE NINGUNA FUENTE DEL FESTIVAL en esta edición. La web de la 11ª no menciona entrada, boletería ni gratuidad por ninguna parte, y los posts tampoco. Lo único que hay es un tercero: @danicooltura escribe «La entrada es libre ✨» en una recomendación del 20 sep, y un tercero no es fuente. La página de la PRIMERA edición (2016) sí dice «TODA LA PROGRAMACIÓN ES GRATUITA», pero eso es de hace diez años. Queda `desconocido`, que es lo que corresponde cuando no se sabe: no saber es legítimo y se declara. Preguntado al festival.",
@@ -134,8 +134,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-20T20:07:31",
-  "plan_sha": "e58cb5299f2bc9da",
+  "fecha": "2026-09-20T20:09:56",
+  "plan_sha": "7acaae1b53117d63",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"
  }

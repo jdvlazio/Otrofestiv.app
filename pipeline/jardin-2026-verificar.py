@@ -39,12 +39,9 @@ DIAS = ['2026-09-24', '2026-09-25', '2026-09-26', '2026-09-27']
 
 # SEDES SIN COORDENADA, y por qué no se inventa una. Una entrada aquí no es un
 # permiso: es una pregunta abierta con fecha.
-SIN_PUNTO_OK = {
-    'Placa deportiva Simón Bolívar':
-        'sede NUEVA de esta edición —el festival se mudó ahí por el sismo del '
-        '10 de agosto— y no está mapeada en ninguna parte. Preguntada la '
-        'dirección.',
-}
+# Hoy está VACÍA —las cinco sedes tienen punto— y se queda igual: es la puerta
+# por la que entraría la sede que el festival anuncie mañana sin dirección.
+SIN_PUNTO_OK = {}
 
 
 def mins(h):

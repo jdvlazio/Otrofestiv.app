@@ -24,8 +24,11 @@
  },
  "Placa deportiva Simón Bolívar": {
   "n": 0,
-  "_prec": "sin verificar",
-  "_todo": "No existe en OpenStreetMap, ni en el sitio de la alcaldía, ni en una búsqueda web: en Jardín no hay nada registrado con ese nombre. Es una de las dos sedes que el festival ESTRENA este año por el sismo del 10 de agosto, así que es normal que no esté mapeada. Hace falta la dirección; preguntado al festival."
+  "lat": 5.6016033,
+  "lng": -75.8220115,
+  "_prec": "manual",
+  "_match": "Google Maps «Cancha de fútbol y baloncesto», Cra. 2 #5-25, Jardín, Antioquia",
+  "_nota": "LA VERIFICÓ JUAN, con el pin de Google Maps (20 sep 2026). No está mapeada con su nombre en ninguna parte —ni OSM, ni la alcaldía, ni una búsqueda web— porque es sede NUEVA de esta edición: el festival se mudó aquí por el sismo del 10 de agosto. En Google figura como «Cancha de fútbol y baloncesto» y en OpenStreetMap como «Parque Infantil» (way, leisure=pitch, 5.601633,-75.821967, a unos 30 m). El festival la llama «Placa deportiva Simón Bolívar» y ese es el nombre que publicamos — la palabra la pone el festival."
  },
  "Teatro Municipal de Jardín": {
   "lat": 5.6002845,
