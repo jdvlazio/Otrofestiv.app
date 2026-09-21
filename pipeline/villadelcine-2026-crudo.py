@@ -39,6 +39,7 @@ import json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
 from lib import provenance, norm, slug
+from nombres import titular
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
@@ -270,6 +271,69 @@ def main():
         for o in json.load(open(enr_p, encoding='utf-8')).get('obras', []):
             tm[norm(o['titulo'])] = o
 
+    # ── LA CAJA Y LA NACIONALIDAD, DEL PROPIO FESTIVAL ──────────────────────
+    #
+    # La ficha de la web GRITA: 19 títulos y 5 directores en mayúscula
+    # sostenida («ARENAS», «JOHN BOLIVAR»). Regla de la casa, escrita desde
+    # hace tiempo en docs/DESIGN.md §7 y con herramienta propia en
+    # `pipeline/nombres.py` que NADIE importaba: los nombres propios van en
+    # caja de título, y la sostenida solo cuando la obra la justifica.
+    #
+    # Y el festival ESCRIBE BIEN sus obras en otra parte: los catorce reels de
+    # Selección Oficial dicen «Arenas» y «John Bolívar», con tilde. Esa es la
+    # superficie cuidada, así que manda ella; `titular()` es el respaldo para
+    # lo que no salió en ningún reel.
+
+    NACIONAL = {
+        'Cortometraje Nacional':
+            'el reel de la categoría habla de «voces del cine nacional»',
+        'Mejor Ópera Prima Nacional':
+            'el reel habla de «quienes comienzan su camino en el cine nacional»',
+        'Mejor Videoclip':
+            'el reel lo etiqueta #mejorvideoclipnacional',
+    }
+    # El festival no publica el país de estas obras en ninguna ficha, pero SÍ
+    # declara su nacionalidad al agruparlas: una «Ópera Prima Nacional» de un
+    # festival colombiano es colombiana. Es deducción, y por eso va declarada
+    # con el testigo de cada categoría — no se deduce de la sección ni del
+    # nombre del director.
+    PAIS_POR_CATEGORIA = 'Colombia'
+
+    # LO QUE NINGUNA SUPERFICIE DEL FESTIVAL ESCRIBE BIEN, corregido a mano y
+    # CON SU TESTIGO. `titular()` solo rebaja mayúsculas: no puede inventar una
+    # tilde que el PDF nunca puso, ni arreglar una errata. Cada entrada es una
+    # comprobación, no una corazonada, y se aplica DESPUÉS de la caja.
+    #
+    # Aprobadas por Juan el 21 sep 2026.
+    CORRIGE = {
+        'Simon Mesa Soto': ('Simón Mesa Soto',
+                            'el director de «Un poeta», Cannes 2026 (Un Certain '
+                            'Regard). Su nombre lleva tilde en su filmografía y '
+                            'en la propia ficha del festival para «Amparo»; el '
+                            'PDF lo imprime en mayúscula sostenida y sin tilde, '
+                            'y la sostenida se come las tildes.'),
+        'Sun Coffe': ('Sun Coffee',
+                      'el PDF lo imprime «SUN COFFE» en mayúscula sostenida, con '
+                      'una e de menos. Ninguna otra superficie del festival lo '
+                      'escribe, así que no hay contra qué contrastarlo: se '
+                      'corrige la errata evidente y queda declarado.'),
+    }
+
+    def corrige(t):
+        return CORRIGE[t][0] if t in CORRIGE else t
+
+    def caja(texto, del_ig):
+        """La grafía del festival para un nombre GRITADO.
+
+        Solo actúa sobre la mayúscula sostenida —lo que ya mezcla cajas se
+        respeta, puede ser deliberado—. Y prefiere la del reel a la calculada:
+        el festival escribe «John Bolívar» con tilde y `titular()`, que solo
+        rebaja mayúsculas, no puede inventarla."""
+        t = (texto or '').strip()
+        if not t or titular(t) == t:
+            return corrige(t)             # no viene gritado: solo la errata
+        return corrige(del_ig or titular(t))
+
     def ficha(o):
         """Los datos de una obra, de la fuente que los tenga. ORDEN: el PDF
         oficial primero, después la web del festival, después TMDB. Nunca se
@@ -279,15 +343,37 @@ def main():
         pf = de_pos(o['titulo'])
         pl = de_tmdb_local(o['titulo']) if t.get('poster_path') else ''
         fx = FICHA_EXTERNA.get(k, {})
+        # OJO: acá NO va `titulo`. Ponerlo fue un error de diez minutos: esta
+        # ficha se mezcla con `reg` en las ramas de abajo, y `reg['titulo']` de
+        # una ACTIVIDAD es su nombre propio («Tributo a Aquileo Venganza —
+        # Joyce Ventura»), no el de la obra que menciona. Las tres actividades
+        # de Aquileo pasaron a llamarse las tres «Aquileo Venganza». La caja
+        # del título se aplica donde el título se decide, no acá.
         return {
+            **({'director': caja(o.get('director') or w.get('director'),
+                                 i.get('director'))}
+               if (o.get('director') or w.get('director')) else {}),
             'duracion_min': o.get('duracion_min') or w.get('duracion_min')
                             or t.get('duracion_tmdb'),
             'pais': (o.get('pais') or w.get('pais') or t.get('pais_tmdb')
-                     or (PAIS_EXTERNO.get(k) or ('', ''))[0]),
+                     or (PAIS_EXTERNO.get(k) or ('', ''))[0]
+                     or (PAIS_POR_CATEGORIA if i.get('categoria') in NACIONAL
+                         else '')),
+            **({'_pais_fuente': f'categoría «{i["categoria"]}»: '
+                                f'{NACIONAL[i["categoria"]]}'}
+               if i.get('categoria') in NACIONAL
+               and not (o.get('pais') or w.get('pais') or t.get('pais_tmdb')
+                        or PAIS_EXTERNO.get(k)) else {}),
             **({'_pais_fuente': PAIS_EXTERNO[k][1]}
                if k in PAIS_EXTERNO and not (o.get('pais') or w.get('pais')
                                              or t.get('pais_tmdb')) else {}),
-            'genero': o.get('genero') or t.get('genero') or '',
+            # El género de un videoclip lo dice su categoría, y es la palabra
+            # del festival: «Mejor Videoclip». Sin esto, cinco videos musicales
+            # se publicaban sin género teniendo el festival una categoría para
+            # ellos.
+            'genero': (o.get('genero') or t.get('genero')
+                       or ('Videoclip' if i.get('categoria') == 'Mejor Videoclip'
+                           else '')),
             'anio': o.get('anio') or w.get('anio') or t.get('anio_tmdb'),
             'sinopsis': o.get('sinopsis') or t.get('synopsis_es') or '',
             'sinopsis_en': w.get('sinopsis_en') or t.get('synopsis_en') or '',
@@ -392,6 +478,21 @@ def main():
                            r'Lenguajes Emergentes|Programación Infantil|Industria)', texto)
             seccion = ms.group(1) if ms else seccion
         es_programa = bool(clave) and len(obras) > 1
+        # LA CAJA, TAMBIÉN EN LOS PROGRAMAS (Juan, 21 sep): «Destellos»,
+        # «Poderosas», «Raíces» y no DESTELLOS, PODEROSAS, RAÍCES. La retícula
+        # del festival los grita, pero la sostenida no aporta nada en la
+        # tarjeta y el conjunto se lee mejor.
+        #
+        # Y con `minimo=3`, porque el valor por defecto de `titular()` protege
+        # siglas y deja intactos los de menos de 6 letras: sin bajarlo, ECOS y
+        # VOCES seguían gritando al lado de un «Destellos» —incoherente, que es
+        # peor que cualquiera de las dos formas—. Los 19 nombres de programa de
+        # este festival no tienen siglas; se comprobó uno por uno.
+        #
+        # Va DESPUÉS de `es_programa` a la fuerza: puesto arriba, la variable
+        # todavía no existe y el paso se cae.
+        titulo = (titular(titulo, minimo=3) if es_programa
+                  else caja(titulo, (ig.get(norm(titulo)) or {}).get('titulo')))
 
         # ── LA DURACIÓN REAL MANDA ───────────────────────────────────────────
         suma = (solo_web.get('duracion_min') or 0) if solo_web else sum(
@@ -452,7 +553,9 @@ def main():
             reg['event_kind'] = kind
         if es_programa:
             reg['is_cortos'] = True
-            reg['film_list'] = [{'titulo': o['titulo'], 'director': o['director'],
+            reg['film_list'] = [{'titulo': caja(o['titulo'],
+                                                (ig.get(norm(o['titulo'])) or {}).get('titulo')),
+                                 'director': o['director'],
                                  **{k: v for k, v in ficha(o).items() if v},
                                  **({'formato': o['formato']} if o.get('formato') else {})}
                                 for o in obras]

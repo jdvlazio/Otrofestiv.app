@@ -202,7 +202,7 @@
    "title": "Amor a primera vista",
    "type": "film",
    "section": "🗺️ Territorios",
-   "director": "ANDRÉS QUINTERO",
+   "director": "Andrés Quintero",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "30 min",
@@ -213,6 +213,8 @@
    "has_qa": false,
    "synopsis": "Leseph ha dedicado toda su vida al piano, convirtiendo la música en su único y verdadero amor, mientras deja de lado los vínculos afectivos y su vida social. Desde niño rechaza el cariño de Luna, su amiga de infancia, y en la adultez mantiene la misma distancia frente al amor de pareja. Sin embargo, al conocer a Ariadna, una mujer que le recuerda profundamente a Luna, comienza a descubrir un sentimiento que siempre había evitado. Entre la música, el amor y la naturaleza, su relación atraviesa momentos de conflicto que se intensifican cuando Leseph queda ciego y el piano comienza a alejarse de su vida. Acompañado incondicionalmente por Ariadna y guiado por los recuerdos de su infancia, Leseph emprende un viaje hacia su niño interior, cuestionando las decisiones que tomó y buscando una nueva oportunidad para transformar su vida.",
    "synopsis_lang": "es",
+   "poster": "/assets/villadelcine-2026/amor-a-primera-vista.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p2",
     "date": "2026-09-19"
@@ -225,6 +227,8 @@
    "section": "🌀 Narrativas Divergentes",
    "director": "Cintia Obando",
    "year": 2025,
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "15 min",
    "day": "2026-09-23",
    "time": "18:15",
@@ -240,10 +244,12 @@
    "is_free": true
   },
   {
-   "title": "ARENAS",
+   "title": "Arenas",
    "type": "film",
    "section": "👁️ Nuevas Miradas",
-   "director": "JOHN BOLIVAR",
+   "director": "John Bolívar",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "120 min",
    "day": "2026-09-23",
    "time": "18:30",
@@ -281,6 +287,8 @@
      "country": "Argentina",
      "flags": "🇦🇷",
      "duration": "5 min",
+     "poster": "/assets/villadelcine-2026/tierras-de-lobeiras.jpg",
+     "posterSource": "oficial",
      "synopsis": "Valentina Spinelli 0:04:53 José y varios agricultores comienzan a cultivar los pastizales habitados por Gualicho, un aguará guazú protector de su territorio. La forzada convivencia provoca un grave conflicto que termina despertando una antigua leyenda local.",
      "synopsis_lang": "es"
     },
@@ -299,6 +307,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "17 min",
+     "poster": "/assets/villadelcine-2026/just-another-bird.jpg",
+     "posterSource": "oficial",
      "synopsis": "Después de sufrir un accidente en la ciudad, Raquelita, una paloma nativa colombiana, encuentra refugio en la ventana de Tomás. Mientras el niño la acompaña en su recuperación, Raquelita emprende un viaje poético por la ciudad y descubre personajes, pequeños detalles y formas de vida que suelen pasar inadvertidas.",
      "synopsis_lang": "es"
     }
@@ -400,10 +410,12 @@
    "film_list": [
     {
      "title": "Amor a primera vista",
-     "director": "ANDRÉS QUINTERO",
+     "director": "Andrés Quintero",
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "20 min",
+     "poster": "/assets/villadelcine-2026/amor-a-primera-vista.jpg",
+     "posterSource": "oficial",
      "synopsis": "Leseph ha dedicado toda su vida al piano, convirtiendo la música en su único y verdadero amor, mientras deja de lado los vínculos afectivos y su vida social. Desde niño rechaza el cariño de Luna, su amiga de infancia, y en la adultez mantiene la misma distancia frente al amor de pareja. Sin embargo, al conocer a Ariadna, una mujer que le recuerda profundamente a Luna, comienza a descubrir un sentimiento que siempre había evitado. Entre la música, el amor y la naturaleza, su relación atraviesa momentos de conflicto que se intensifican cuando Leseph queda ciego y el piano comienza a alejarse de su vida. Acompañado incondicionalmente por Ariadna y guiado por los recuerdos de su infancia, Leseph emprende un viaje hacia su niño interior, cuestionando las decisiones que tomó y buscando una nueva oportunidad para transformar su vida.",
      "synopsis_lang": "es"
     },
@@ -413,15 +425,19 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "10 min",
+     "poster": "/assets/villadelcine-2026/quimera.jpg",
+     "posterSource": "oficial",
      "synopsis": "James, de 12 años, vive en una granja hasta que la policía arresta al hombre que creía su padre. En un centro infantil, su terapeuta le revela una dura verdad: fue secuestrado a los cinco años. Este trauma le generó un trastorno que lo obliga a imitar el comportamiento ajeno. Ahora, deberá enfrentar un complejo proceso de sanación.",
      "synopsis_lang": "es"
     },
     {
-     "title": "DIABLO BALLENA",
+     "title": "Diablo Ballena",
      "director": "Camilo Alfredo Barón Riveros",
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "15 min",
+     "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
+     "posterSource": "oficial",
      "synopsis": "Carmen, una campesina de sesenta años, rescata a un hombre que flota junto a una guitarra en la laguna de Tota. Intenta descubrir su identidad, pero él se niega a hablar. Una canción, al parecer de la \"Diablo Ballena\", la última ballena de agua dulce, rompe el silencio. Entre el mito y la realidad, se enfrentan al pasado para encontrar su propia redención.",
      "synopsis_lang": "es"
     },
@@ -435,7 +451,7 @@
    ]
   },
   {
-   "title": "ECLIPSES",
+   "title": "Eclipses",
    "type": "film",
    "section": "👁️ Nuevas Miradas",
    "country": "Colombia, Francia",
@@ -460,6 +476,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "90 min",
+     "poster": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg",
+     "posterSource": "oficial",
      "synopsis": "La desaparición de Natalia en Pueblo Blanco lleva a la policía a descubrir un sórdido bar clandestino. Cuando dos hermanas explotadas en el lugar deciden ayudar a un extraño en el bosque, desatan una sangrienta ola de rituales a manos de una oscura secta que terminará consumiendo a todo el pueblo.",
      "synopsis_lang": "es"
     },
@@ -469,6 +487,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "17 min",
+     "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "oficial",
      "synopsis": "Colombia, 1951: Un par de chulavitas –asesinos pagados por el gobierno– acechan a un sacerdote en la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus víctimas. Pero el horror que encuentran allí es mil veces peor que el dolor que pensaban infligir.",
      "genre": "Ficción, drama y terror",
      "synopsis_lang": "es"
@@ -479,6 +499,8 @@
      "country": "Francia",
      "flags": "🇫🇷",
      "duration": "29 min",
+     "poster": "/assets/villadelcine-2026/le-jeune-sofiane.jpg",
+     "posterSource": "oficial",
      "synopsis": "El 1 de julio de 2005, Zoléra recibe una llamada en plena noche: su hijo Sofiane ha sufrido un accidente en escúter. Los médicos le informan que chocó contra una ambulancia y no sobrevivió. El grupo sanguíneo de Sofiane, A-, sugiere intoxicación; el joven delincuente provocó el accidente y los bomberos no tienen la culpa. Sin embargo, persiste una duda: el grupo sanguíneo de Sofiane era, en realidad, «A+».",
      "genre": "Ficción",
      "synopsis_lang": "es"
@@ -486,7 +508,7 @@
    ]
   },
   {
-   "title": "SEÑALES",
+   "title": "Señales",
    "type": "film",
    "section": "🌀 Narrativas Divergentes",
    "country": "Colombia, Brasil",
@@ -523,6 +545,8 @@
      "flags": "🇧🇷",
      "year": 2025,
      "duration": "15 min",
+     "poster": "/assets/villadelcine-2026/human.jpg",
+     "posterSource": "oficial",
      "synopsis": "¿Pueden la tecnología moderna y las experiencias virtuales reconectarnos profundamente con nuestra propia especie y con el planeta? HUMAN explora esta profunda cuestión a través de una experiencia inmersiva de XR con seguimiento manual, diseñada para Oculus Quest 3. Los participantes se embarcan en un viaje espacial virtual para interactuar con las sondas Voyager y su icónico Disco de Oro.",
      "genre": "VR",
      "synopsis_lang": "es"
@@ -541,7 +565,7 @@
    ]
   },
   {
-   "title": "VOCES",
+   "title": "Voces",
    "type": "film",
    "section": "🗺️ Territorios",
    "country": "Colombia, Peru",
@@ -565,6 +589,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "21 min",
+     "poster": "/assets/villadelcine-2026/drunk-hearing-the-rain-drops-fall.jpg",
+     "posterSource": "oficial",
      "synopsis": "Una pareja de ancianos, agobiada mientras la tierra —que debía sustentar su retiro— los mata lentamente debido a los abusos del Estado. Múltiples actos de violencia han convertido este territorio en un purgatorio que refleja la resignación de la vejez, el desarraigo y la resistencia territorial.",
      "synopsis_lang": "es"
     },
@@ -574,6 +600,8 @@
      "country": "Peru",
      "flags": "🇵🇪",
      "duration": "15 min",
+     "poster": "/assets/villadelcine-2026/collective-memory.jpg",
+     "posterSource": "oficial",
      "synopsis": "En 1983, durante los días más oscuros del conflicto armado en el Perú contra Sendero Luminoso, soldados encapuchados irrumpieron en la casa de Adelina y se llevaron a su esposo. Ella nunca volvería a verlo. Tras enfrentarse al silencio y al menosprecio de la policía y el ejército, Adelina une fuerzas con otras muchas mujeres que han perdido a sus esposos e hijos a manos de soldados que debían protegerlas.",
      "synopsis_lang": "es"
     },
@@ -635,7 +663,7 @@
    "is_free": true
   },
   {
-   "title": "GÉNESIS",
+   "title": "Génesis",
    "type": "film",
    "section": "🎬 Industria",
    "country": "Colombia",
@@ -671,6 +699,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "5 min",
+     "poster": "/assets/villadelcine-2026/the-last-champion.jpg",
+     "posterSource": "oficial",
      "synopsis": "*The Last Champion* (Mejor documental, VALEIFF 2025) rinde homenaje a una comunidad que esperó 75 años para ver al Atlético Bucaramanga ganar su primer campeonato de fútbol. A través de los conmovedores relatos de diversos aficionados —desde un seguidor de toda la vida de 90 años hasta antiguos ultras—, la película captura el espíritu incansable de una ciudad que encontró en el fútbol una razón profunda para soñar y unirse.",
      "genre": "Documental",
      "synopsis_lang": "es"
@@ -681,6 +711,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "5 min",
+     "poster": "/assets/villadelcine-2026/el-cine-dentro-del-cine-dentro-del-cine.jpg",
+     "posterSource": "oficial",
      "synopsis": "Diana y Manuel rastrean tres películas históricas casi borradas por la censura en España, Chile y Colombia. Mediante videocartas, este documental explora la memoria política y el impacto de perder y recuperar estas obras.",
      "genre": "Documental",
      "synopsis_lang": "es"
@@ -701,6 +733,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "5 min",
+     "poster": "/assets/villadelcine-2026/mi-tesoro.jpg",
+     "posterSource": "oficial",
      "synopsis": "Gloria (76) una prestigiosa dermatóloga, llega a un hogar geriátrico en contra de su voluntad. Allí conoce a María Lucía (74), una dulce anciana con problemas de alzheimer que intenta ayudar y sentirse útil. En la cotidianidad del asilo, Raquel (79) se revela como la líder de una especie de “cartel” entre los viejitos que intercambian dulces, medicamentos, entre otros.",
      "genre": "Ficción",
      "synopsis_lang": "es"
@@ -708,7 +742,7 @@
    ]
   },
   {
-   "title": "ECOS",
+   "title": "Ecos",
    "type": "film",
    "section": "🌱 Lenguajes Emergentes",
    "country": "Colombia, Uzbekistán, Brasil, India, Italia, España, México, Francia",
@@ -734,6 +768,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "4 min",
+     "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
+     "posterSource": "oficial",
      "synopsis": "En Sua y Sie: Guardianes de la Vida, dos niños del páramo boyacense encarnan al Sol y al Agua en un diálogo hablado en muisca y español. Este cortometraje escolar es un poderoso llamado infantil para proteger la naturaleza, el territorio y la memoria ancestral.",
      "genre": "Ficción",
      "synopsis_lang": "es"
@@ -745,6 +781,8 @@
      "flags": "🇺🇿",
      "year": 2026,
      "duration": "2 min",
+     "poster": "/assets/villadelcine-2026/far.jpg",
+     "posterSource": "oficial",
      "synopsis": "Un estudio táctil de un minuto sobre la deconstrucción, los bosques metálicos del valle de Ferganá y la oscuridad que la civilización humana crea a su alrededor.",
      "synopsis_lang": "es"
     },
@@ -755,6 +793,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "8 min",
+     "poster": "/assets/villadelcine-2026/1-paseo-por-la-ciudad.jpg",
+     "posterSource": "oficial",
      "synopsis": "En este cortometraje híbrido de stop motion y collage, Ema y Lautaro buscan sobrevivir al crimen y la destrucción en la Ciudad de México. Entre recortes de papel, la pareja intentará imaginar un nuevo camino para volar y florecer tras ver arder su hogar.",
      "genre": "Experimental",
      "synopsis_lang": "es"
@@ -779,6 +819,8 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "15 min",
+     "poster": "/assets/villadelcine-2026/grief.jpg",
+     "posterSource": "oficial",
      "synopsis": "Tras la muerte de su esposa, Ángel afronta un duelo solitario en su hogar rural. Una filtración cobra fuerza hasta convertirse en una presencia abrumadora que transforma su entorno y lo empuja a tomar decisiones irracionales mientras intenta asimilar su pérdida. INTERNATIONAL UNIVERSITIES",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
@@ -806,6 +848,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "11 min",
+     "poster": "/assets/villadelcine-2026/lost-fragments-of-a-seizure.jpg",
+     "posterSource": "oficial",
      "synopsis": "A través de un montaje de material de archivo, Reem busca los recuerdos perdidos durante su primera crisis epiléptica. Esta película poética explora la frágil experiencia de las convulsiones, convirtiendo el acto de recordar en una poderosa resistencia contra el olvido. INTERNATIONAL UNIVERSITIES",
      "genre": "Animación y Experimental",
      "synopsis_lang": "es"
@@ -816,6 +860,8 @@
      "country": "México",
      "flags": "🇲🇽",
      "duration": "7 min",
+     "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
+     "posterSource": "oficial",
      "synopsis": "Tatao crece junto a su abuela Alba, unidos por una rutina que da forma a su vida cotidiana. Cuando la memoria empieza a desvanecerse, su relación se transforma, revelando cómo el amor perdura incluso a medida que los recuerdos desaparecen lentamente. INTERNATIONAL UNIVERSITIES",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
@@ -826,13 +872,15 @@
      "country": "Francia",
      "flags": "🇫🇷",
      "duration": "7 min",
+     "poster": "/assets/villadelcine-2026/beyond-the-end.jpg",
+     "posterSource": "oficial",
      "synopsis": "A menudo, aquello que nos repugna es también lo que nos atrae, y a veces esta fascinación puede llevarnos a reflexionar sobre temas que, en el fondo, nos dan miedo... como la muerte. Sin embargo, la muerte forma parte de nosotros tanto como la vida; ambas coexisten de manera natural. Quizás por eso no deberíamos temerle tanto.",
      "synopsis_lang": "es"
     }
    ]
   },
   {
-   "title": "TRÁNSITO",
+   "title": "Tránsito",
    "type": "film",
    "section": "👁️ Nuevas Miradas",
    "country": "México, Colombia",
@@ -898,11 +946,13 @@
      "title_en": "Tuktu, Father Maize"
     },
     {
-     "title": "TORMENTA EN LLAMAS",
+     "title": "Tormenta en Llamas",
      "director": "Humberto Flores",
      "country": "México",
      "flags": "🇲🇽",
      "duration": "22 min",
+     "poster": "/assets/villadelcine-2026/a-burning-turret.jpg",
+     "posterSource": "oficial",
      "synopsis": "Tras un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una anciana agricultora, y su nieta Alejandra. Después de esconderlo en su rancho, Yolanda debe decidir si ayudarlo —poniendo en riesgo sus propias vidas—, mientras Alejandra sigue la pista de sus propias sospechas.",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
@@ -910,7 +960,7 @@
    ]
   },
   {
-   "title": "UMBRALES",
+   "title": "Umbrales",
    "type": "film",
    "section": "👁️ Nuevas Miradas",
    "country": "Colombia, India",
@@ -934,16 +984,20 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "17 min",
+     "poster": "/assets/villadelcine-2026/no-es-el-fin-del-mundo.jpg",
+     "posterSource": "oficial",
      "synopsis": "Ocultarle el fin del mundo a un padre ciego y exmilitar puede ser más difícil que sobrevivir a la intemperie. Tras escapar de una devastada Bogotá y ser abandonados por su hermana mayor, Carlos debe afrontar su difícil relación recurriendo a trucos para esconderle el apocalipsis zombi.",
      "genre": "Ficción",
      "synopsis_lang": "es"
     },
     {
-     "title": "ENEMIGO EN EL ESPEJO",
+     "title": "Enemigo en el espejo",
      "director": "Julián Camilo Sánchez",
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "107 min",
+     "poster": "/assets/villadelcine-2026/enemy-in-the-mirror.jpg",
+     "posterSource": "oficial",
      "synopsis": "Camilo, a young guitarist grieving his last relationship and broken band, faces his greatest fear of being alone. He finds apparent relief when he meets Sol and joins her religious cult. However, the group's contradictions eventually make him realize that to find inner peace, he must distance himself from everyone—even Sol—to find the strength he needs within himself.",
      "genre": "Viaje Personal",
      "synopsis_lang": "es"
@@ -954,6 +1008,8 @@
      "country": "India",
      "flags": "🇮🇳",
      "duration": "16 min",
+     "poster": "/assets/villadelcine-2026/on-hold.jpg",
+     "posterSource": "oficial",
      "synopsis": "*On Hold* sigue a Umesh Shukla, un vendedor de 40 años, durante el mismo día en que pierde su empleo. Atrapado en el caos implacable de Bombay, se ve llevado al límite por llamadas telefónicas que revelan deudas crecientes y relaciones tensas. Dividido entre la dignidad y la desesperación, lucha por sobrevivir al ritmo incansable de la ciudad sin derrumbarse.",
      "genre": "Ficción y Experimental",
      "synopsis_lang": "es"
@@ -985,6 +1041,8 @@
      "country": "Argentina",
      "flags": "🇦🇷",
      "duration": "5 min",
+     "poster": "/assets/villadelcine-2026/tierras-de-lobeiras.jpg",
+     "posterSource": "oficial",
      "synopsis": "Valentina Spinelli 0:04:53 José y varios agricultores comienzan a cultivar los pastizales habitados por Gualicho, un aguará guazú protector de su territorio. La forzada convivencia provoca un grave conflicto que termina despertando una antigua leyenda local.",
      "synopsis_lang": "es"
     },
@@ -1003,6 +1061,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "17 min",
+     "poster": "/assets/villadelcine-2026/just-another-bird.jpg",
+     "posterSource": "oficial",
      "synopsis": "Después de sufrir un accidente en la ciudad, Raquelita, una paloma nativa colombiana, encuentra refugio en la ventana de Tomás. Mientras el niño la acompaña en su recuperación, Raquelita emprende un viaje poético por la ciudad y descubre personajes, pequeños detalles y formas de vida que suelen pasar inadvertidas.",
      "synopsis_lang": "es"
     }
@@ -1027,7 +1087,7 @@
    "is_free": true
   },
   {
-   "title": "PORTALES",
+   "title": "Portales",
    "type": "film",
    "section": "🌀 Narrativas Divergentes",
    "country": "Colombia, Francia, México, Brasil, USA, Alemania",
@@ -1052,6 +1112,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "7 min",
+     "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
+     "posterSource": "oficial",
      "synopsis": "Un escritor busca inspiración para su nueva obra y termina enfrentándose a los fantasmas de su propio pasado. Entre la realidad y la ficción, descubrirá que algunas historias no se escriben… se viven",
      "synopsis_lang": "es"
     },
@@ -1062,6 +1124,8 @@
      "flags": "🇫🇷",
      "year": 2026,
      "duration": "4 min",
+     "poster": "/assets/villadelcine-2026/behind-the-door.jpg",
+     "posterSource": "oficial",
      "synopsis": "Leo, que llega tarde para tomar su tren, queda atrapado en la habitación de su hotel cuando una voz misteriosa afirma estar escondida en el baño. La frenética llamada que hace a su esposa se convierte rápidamente en una pesadilla surrealista de celos y malentendidos. Ambientada entre París y Bretaña, *Derrière la Porte* combina magistralmente el suspense sobrenatural y la comedia doméstica tras una única puerta entreabierta.",
      "genre": "Ficción y Horror",
      "synopsis_lang": "es"
@@ -1078,7 +1142,7 @@
      "synopsis_lang": "es"
     },
     {
-     "title": "NAHUALES",
+     "title": "Nahuales",
      "director": "Alejandro Cervantes",
      "country": "México",
      "flags": "🇲🇽",
@@ -1109,6 +1173,8 @@
      "flags": "🇺🇸",
      "year": 2026,
      "duration": "23 min",
+     "poster": "/assets/villadelcine-2026/lens-ai-short-film.jpg",
+     "posterSource": "oficial",
      "synopsis": "Cuando Alex, de nueve años, descubre LENS —un misterioso prototipo capaz de mostrar realidades alternativas—, su familia se convierte en el objetivo de despiadados agentes de operaciones especiales. Mientras huyen a través de desolados campos de maíz, Alex, su hermano Jim y su madre deben arriesgarlo todo para proteger a su nuevo amigo y liberar su verdadero potencial.",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
@@ -1120,6 +1186,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "5 min",
+     "poster": "/assets/villadelcine-2026/pros-and-cons-of-daydreaming.jpg",
+     "posterSource": "oficial",
      "synopsis": "La tendencia a soñar despierto de un niño imaginativo interfiere con sus tareas escolares, lo que lleva a sus estrictos padres a retirarle todos sus juguetes y distracciones. Aunque su rendimiento académico mejora, su chispa creativa se apaga, hasta que un cachorro cariñoso que conoce reaviva su sentido del asombro y la compañía.",
      "synopsis_lang": "es"
     },
@@ -1130,6 +1198,8 @@
      "flags": "🇩🇪",
      "year": 2026,
      "duration": "3 min",
+     "poster": "/assets/villadelcine-2026/they-call-it-sausage.jpg",
+     "posterSource": "oficial",
      "synopsis": "En una tranquila granja, la vaca Philly sospecha el oscuro destino de un camión de ganado que supuestamente parte de \"vacaciones\". Su compañero, el pragmático toro Rufus, descarta esta escalofriante teoría catalogándola como otra conspiración absurda. Cargado de humor negro, el cortometraje satírico They Call It Sausage expone esta angustia existencial.",
      "genre": "Animación",
      "synopsis_lang": "es"
@@ -1141,6 +1211,8 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "3 min",
+     "poster": "/assets/villadelcine-2026/aguapanela.jpg",
+     "posterSource": "oficial",
      "synopsis": "En un universo que fusiona la mitología colombiana y la griega, Miguel es perseguido implacablemente por un Cupido alado. Fortalecido por un cáliz celestial de aguapanela, obsequio de dos deidades musicales, emprende una misión de venganza contra el amor mismo. Sin embargo, justo cuando cree haber triunfado, una última flecha lo alcanza, demostrando que, a fin de cuentas, el amor es ineludible.",
      "genre": "Video Musical",
      "synopsis_lang": "es"
@@ -1148,9 +1220,12 @@
     {
      "title": "Mucho Gusto",
      "director": "Cintia Obando",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "5 min",
      "synopsis": "\"El nuevo álbum de Magallanes sabe la importancia de hacer del mundo un lugar más hermoso, y esa es la raíz para imaginar un video de colores, texturas, baile, animales, naturaleza, fuego, vuelo y magia, un video que haga el mundo un poquito más hermoso. 1018 dibujos hechos a mano con lápices de colores, crayolas, pasteles, pintura, marcadores y diferentes papeles le dan vida a Mucho Gusto, con el deseo de que quien lo vea vea algo más humano, más táctil y más real, aunque sea a través de una pantalla\"",
+     "genre": "Videoclip",
      "synopsis_lang": "es"
     }
    ]
@@ -1216,7 +1291,7 @@
    "is_free": true
   },
   {
-   "title": "PLANETA",
+   "title": "Planeta",
    "type": "film",
    "section": "🗺️ Territorios",
    "country": "Colombia",
@@ -1238,6 +1313,8 @@
      "title": "Monte curandero",
      "director": "Andrés Felipe Velasco",
      "duration": "9 min",
+     "poster": "/assets/villadelcine-2026/monte-curandero.jpg",
+     "posterSource": "oficial",
      "synopsis": "La medicina de la montaña es el aliento vital donde nace el agua y la vida brota en abundancia. Las abuelas custodian esta sabiduría ancestral, transmitiendo los secretos curativos de las plantas a través de los diseños plasmados en sus tejidos. Con una conexión noble y profunda.",
      "synopsis_lang": "es"
     },
@@ -1255,7 +1332,7 @@
    ]
   },
   {
-   "title": "METAMORFOSIS",
+   "title": "Metamorfosis",
    "type": "film",
    "section": "👁️ Nuevas Miradas",
    "country": "Colombia, España, Francia",
@@ -1275,11 +1352,13 @@
    "is_cortos": true,
    "film_list": [
     {
-     "title": "INDEPENDENCE",
+     "title": "Independence",
      "director": "John Agudelo",
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "19 min",
+     "poster": "/assets/villadelcine-2026/independence.jpg",
+     "posterSource": "oficial",
      "synopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
      "genre": "Ficción",
      "synopsis_lang": "es"
@@ -1290,6 +1369,8 @@
      "country": "España",
      "flags": "🇪🇸",
      "duration": "106 min",
+     "poster": "/assets/villadelcine-2026/cos-de-vidre.jpg",
+     "posterSource": "oficial",
      "synopsis": "Una adolescente brillante, atrapada entre la presión familiar y las redes sociales, se ve arrastrada —junto a su mejor amiga— a una espiral de autoexigencia que pone en riesgo su salud, su identidad y su vida.",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
@@ -1313,7 +1394,7 @@
    ]
   },
   {
-   "title": "SEÑALES",
+   "title": "Señales",
    "type": "film",
    "section": "🌀 Narrativas Divergentes",
    "country": "Colombia, Brasil",
@@ -1350,6 +1431,8 @@
      "flags": "🇧🇷",
      "year": 2025,
      "duration": "15 min",
+     "poster": "/assets/villadelcine-2026/human.jpg",
+     "posterSource": "oficial",
      "synopsis": "¿Pueden la tecnología moderna y las experiencias virtuales reconectarnos profundamente con nuestra propia especie y con el planeta? HUMAN explora esta profunda cuestión a través de una experiencia inmersiva de XR con seguimiento manual, diseñada para Oculus Quest 3. Los participantes se embarcan en un viaje espacial virtual para interactuar con las sondas Voyager y su icónico Disco de Oro.",
      "genre": "VR",
      "synopsis_lang": "es"
@@ -1427,7 +1510,7 @@
    "is_free": true
   },
   {
-   "title": "DESTELLOS",
+   "title": "Destellos",
    "type": "film",
    "section": "🌱 Lenguajes Emergentes",
    "country": "Rusia, España, Colombia, Brasil, Argentina, México, Francia",
@@ -1468,17 +1551,21 @@
      "flags": "🇪🇸",
      "year": 2024,
      "duration": "6 min",
+     "poster": "/assets/villadelcine-2026/la-silla.jpg",
+     "posterSource": "oficial",
      "synopsis": "Empatía: Capacidad de identificarse con alguien y compartir sus sentimientos.",
      "genre": "Discapacidades",
      "synopsis_lang": "es"
     },
     {
-     "title": "IN BETWEEN",
+     "title": "In Between",
      "director": "Carlos Andrés Paniagua",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "10 min",
+     "poster": "/assets/villadelcine-2026/in-between.jpg",
+     "posterSource": "oficial",
      "synopsis": "Un nuevo estudiante llega a una escuela dividida por gustos musicales y se encuentra atrapado entre dos grupos rivales. Mientras busca su lugar, descubre que, más allá de los prejuicios y las etiquetas, siempre hay espacio para la empatía, el diálogo y la comprensión.",
      "genre": "Ficción",
      "synopsis_lang": "es"
@@ -1490,6 +1577,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "19 min",
+     "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
+     "posterSource": "oficial",
      "synopsis": "En la Colombia de los años 50, la pérdida de una sombrilla desata la furia de Waldina sobre su hija Luz. Al comprender el profundo dolor oculto tras esa rabia, ambas logran una silenciosa reconciliación, descubriendo que se necesitan mutuamente para sobrevivir y sanar. INTERNATIONAL UNIVERSITIES",
      "genre": "Ficción y Drama Psicológico",
      "synopsis_lang": "es"
@@ -1532,11 +1621,13 @@
      "country": "Brasil",
      "flags": "🇧🇷",
      "duration": "11 min",
+     "poster": "/assets/villadelcine-2026/final-act.jpg",
+     "posterSource": "oficial",
      "synopsis": "Tras presenciar la muerte de una famosa actriz, Mateus Santos, un pasante de periodismo, tiene la oportunidad única de investigar el caso junto a su ídolo, la reconocida periodista Miriam Matos. Juntos interrogan a tres sospechosos en busca de la verdad sobre el motivo del asesino.",
      "synopsis_lang": "es"
     },
     {
-     "title": "LA PRESENCIA DE BLANCO",
+     "title": "La Presencia de Blanco",
      "director": "Nestor Javier Serpa Perez",
      "country": "Argentina",
      "flags": "🇦🇷",
@@ -1568,12 +1659,14 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "6 min",
+     "poster": "/assets/villadelcine-2026/solo.jpg",
+     "posterSource": "oficial",
      "synopsis": "Un joven cansado de su vida cotidiana y monótona decide emprender un recorrido que va a poner a prueba sus capacidades tanto físicas como mentales.",
      "genre": "Experimental",
      "synopsis_lang": "es"
     },
     {
-     "title": "SUN COFFE",
+     "title": "Sun Coffee",
      "director": "Zoe Filloux",
      "country": "Francia",
      "flags": "🇫🇷",
@@ -1586,7 +1679,7 @@
    ]
   },
   {
-   "title": "RESURGENCIAS",
+   "title": "Resurgencias",
    "type": "film",
    "section": "👁️ Nuevas Miradas",
    "country": "Colombia, Brasil",
@@ -1640,7 +1733,7 @@
    ]
   },
   {
-   "title": "PODEROSAS",
+   "title": "Poderosas",
    "type": "film",
    "section": "🗺️ Territorios",
    "duration": "75 min",
@@ -1658,7 +1751,7 @@
    "is_cortos": true,
    "film_list": [
     {
-     "title": "QUAZAR",
+     "title": "Quazar",
      "director": "Alejandro Vargas",
      "synopsis": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
      "synopsis_lang": "es"
@@ -1671,7 +1764,7 @@
      "synopsis_lang": "es"
     },
     {
-     "title": "LA MONA",
+     "title": "La Mona",
      "director": "Diana C. Patiño",
      "duration": "18 min",
      "synopsis": "Entre el polvo y el calor se encuentra La Hondura, un pueblo olvidado, donde la tensión se siente como electricidad en el aire. Allí, La Mona, una paramilitar, impone el orden. Sin embargo, no puede dominar la naturaleza de su cuerpo y la menstruación la doblega hasta el punto de postrarla en la cama.",
@@ -1680,7 +1773,7 @@
    ]
   },
   {
-   "title": "RETORNOS",
+   "title": "Retornos",
    "type": "film",
    "section": "🌀 Narrativas Divergentes",
    "country": "Colombia, Taiwán",
@@ -1706,6 +1799,8 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "8 min",
+     "poster": "/assets/villadelcine-2026/catatumbo-house-of-thunder-memory-and-dignity.jpg",
+     "posterSource": "oficial",
      "synopsis": "El Catatumbo es una subregión de Norte de Santander, situada en la frontera con Venezuela. Sus selvas, montañas y ríos albergan el singular Relámpago del Catatumbo, que ilumina el cielo cada noche. La violencia se intensificó a finales de la década de 1970, cuando grupos guerrilleros como el ELN, el EPL y las FARC incrementaron sus acciones armadas mediante asesinatos, secuestros y tomas de poblaciones.",
      "genre": "Ficción y Ciencia ficción",
      "synopsis_lang": "es"
@@ -1717,6 +1812,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "7 min",
+     "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
+     "posterSource": "oficial",
      "synopsis": "Tras la muerte de su abuela, Mateo intenta asumir el legado familiar siguiendo unas absurdas reglas que escribió durante su niñez. Lo que inicia como una peculiar historia criminal pronto se convierte en una tierna comedia sobre el duelo, la familia y los inesperados legados de quienes ya partieron. IA 落⼦無悔 (LÀOZǏ WÚ HUǏ)",
      "synopsis_lang": "es"
     },
@@ -1816,6 +1913,8 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "4 min",
+     "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
+     "posterSource": "oficial",
      "synopsis": "En una maloka, una mujer atraviesa un ritual de gestación y nacimiento que conecta su cuerpo con la tierra, los ancestros y la memoria colectiva. Una celebración poética de la vida y de los ciclos naturales que nos unen a las generaciones que nos precedieron.",
      "genre": "Video Musical",
      "synopsis_lang": "es"
@@ -1826,7 +1925,7 @@
    "title": "Llueve sobre Babel",
    "type": "film",
    "section": "🏆 Rumbo a los Macondo",
-   "director": "GALA DEL SOL",
+   "director": "Gala del Sol",
    "year": 2026,
    "country": "Colombia, United States of America, Spain",
    "flags": "🇨🇴🇺🇸🇪🇸",
@@ -1910,7 +2009,7 @@
    "is_free": true
   },
   {
-   "title": "ENCRUCIJADAS",
+   "title": "Encrucijadas",
    "type": "film",
    "section": "👁️ Nuevas Miradas",
    "country": "Argentina, Colombia",
@@ -1929,11 +2028,13 @@
    "is_cortos": true,
    "film_list": [
     {
-     "title": "STEPPE",
+     "title": "Steppe",
      "director": "Mariano Benito",
      "country": "Argentina",
      "flags": "🇦🇷",
      "duration": "86 min",
+     "poster": "/assets/villadelcine-2026/steppe.jpg",
+     "posterSource": "oficial",
      "synopsis": "El joven agente de policía Francisco Revenga es enviado a cubrir un puesto de guardia en plena estepa. De camino, se detiene en un parador para comprar comida; allí graban con sus teléfonos móviles unas imágenes comprometedoras que pondrán a Francisco ante un dilema moral.",
      "genre": "Ficción",
      "synopsis_lang": "es"
@@ -1944,6 +2045,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "90 min",
+     "poster": "/assets/villadelcine-2026/kmkz-wild-free-and-brave.jpg",
+     "posterSource": "oficial",
      "synopsis": "Combinando ficción y documental, KMKZ sigue a Kamila, una joven que graba con su teléfono móvil las hostiles calles de Bogotá. Cuando su amiga Leonor desaparece, las grabaciones crudas y en formato vertical de Kamila se transforman en un archivo desafiante de memoria y resistencia. En última instancia, esta película visceral actúa como un manifiesto político que desafía al cine latinoamericano a confrontar las duras realidades de la juventud marginada.",
      "genre": "Juventud, Resistencia e Identidad Frente a la Violencia Urbana",
      "synopsis_lang": "es"
@@ -1991,7 +2094,7 @@
    "is_free": true
   },
   {
-   "title": "RAÍCES",
+   "title": "Raíces",
    "type": "film",
    "section": "🗺️ Territorios",
    "country": "Colombia",
@@ -2036,7 +2139,7 @@
      "synopsis_lang": "es"
     },
     {
-     "title": "SHELTERING GESTURES",
+     "title": "Sheltering Gestures",
      "director": "Adrián Villa-Dávila y Andrés Prado",
      "country": "Colombia",
      "flags": "🇨🇴",
@@ -2052,7 +2155,7 @@
    ]
   },
   {
-   "title": "RESISTENCIAS",
+   "title": "Resistencias",
    "type": "film",
    "section": "👁️ Nuevas Miradas",
    "country": "Guatemala/ USA, Nigeria",
@@ -2093,6 +2196,8 @@
      "country": "Nigeria",
      "flags": "🇳🇬",
      "duration": "83 min",
+     "poster": "/assets/villadelcine-2026/language-of-the-wind.jpg",
+     "posterSource": "oficial",
      "synopsis": "Tras su boda con su tradicional primo Ardo (17), Shatu (16) descubre una oportunidad para escapar hacia su soñada vida en la ciudad. Durante un tenso arreo de ganado, las diferencias entre ambos finalmente estallan, obligando a la joven pareja a enfrentar dolorosas verdades y tomar una decisión definitiva al caer la noche.",
      "genre": "Ficción",
      "synopsis_lang": "es"
@@ -2100,7 +2205,7 @@
    ]
   },
   {
-   "title": "SEÑALES",
+   "title": "Señales",
    "type": "film",
    "section": "🌀 Narrativas Divergentes",
    "country": "Colombia, Brasil",
@@ -2137,6 +2242,8 @@
      "flags": "🇧🇷",
      "year": 2025,
      "duration": "15 min",
+     "poster": "/assets/villadelcine-2026/human.jpg",
+     "posterSource": "oficial",
      "synopsis": "¿Pueden la tecnología moderna y las experiencias virtuales reconectarnos profundamente con nuestra propia especie y con el planeta? HUMAN explora esta profunda cuestión a través de una experiencia inmersiva de XR con seguimiento manual, diseñada para Oculus Quest 3. Los participantes se embarcan en un viaje espacial virtual para interactuar con las sondas Voyager y su icónico Disco de Oro.",
      "genre": "VR",
      "synopsis_lang": "es"
@@ -2277,7 +2384,7 @@
    "title": "Un poeta",
    "type": "film",
    "section": "🏆 Rumbo a los Macondo",
-   "director": "SIMON MESA SOTO",
+   "director": "Simón Mesa Soto",
    "year": 2025,
    "country": "Colombia, Germany, Sweden",
    "flags": "🇨🇴🇩🇪🇸🇪",
@@ -2305,7 +2412,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-21T08:32:29",
+  "fecha": "2026-09-21T10:31:31",
   "plan_sha": "065523a0e857de42",
   "paso": 16,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"
