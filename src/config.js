@@ -653,6 +653,26 @@ export const FESTIVAL_CONFIG={
     // español). Decisión de Juan, 19 sep.
     city:'Villa de Leyva',country:'CO',
     dates:'23–26 SEP',dates_en:'SEP 23–26',year:2026,timezoneOffset:'-05:00',
+    // APLAZADO. El festival publicó su comunicado oficial el 21 sep 2026, dos
+    // días antes de abrir, por el incendio del Cerro San Marcos: «el Festival
+    // cambia su fecha de realización» y «pronto estaremos anunciando una nueva
+    // fecha». Las 52 funciones y las 90 obras se quedan tal cual —los datos son
+    // buenos, lo que cambió es CUÁNDO—: el estado las saca de «en curso», quita
+    // el punto verde y la preselección, y pinta la banda con las palabras del
+    // propio festival. Las fechas del encabezado pasan a «FECHAS POR ANUNCIAR».
+    //
+    // Reversión, cuando anuncien: fechas nuevas en `dates`/`dates_en`/`year` y
+    // en `festivalDates` + `days` del JSON, y BORRAR este bloque. Mientras el
+    // bloque exista, las fechas viejas no se muestran.
+    //
+    // Sin `note_en`: la traducción es copy nuestro y la aprueba Juan. Sin ella
+    // el inglés muestra el español intacto, que es el fallback declarado.
+    status:{
+      kind:'postponed',
+      since:'2026-09-21',
+      note:'Debido a los lamentables sucesos, y atendiendo las recomendaciones emitidas por las autoridades, el Festival cambia su fecha de realización. Próximamente estaremos anunciando nuevas fechas.',
+      url:'https://www.instagram.com/p/Ddj0BETpRxF/',
+    },
     keyArt:'/assets/keyart/villadelcine2026-v3.jpg',
     // EL AFICHE OFICIAL, EN VERTICAL (v3, 19 sep). La v2 salía de la página 1
     // del PDF de programación, que es APAISADA (609×394 pt, ratio 1,55):
