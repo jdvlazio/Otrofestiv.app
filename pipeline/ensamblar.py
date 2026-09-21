@@ -72,7 +72,11 @@ def _enriquece(dst, it):
     for campo, origen in (('poster', ('poster', 'poster_tmdb', 'poster_url')),
                           ('lbSlug', ('lbSlug',)), ('tmdb_id', ('tmdb_id',)),
                           ('synopsis', ('sinopsis', 'synopsis_es')),
-                          ('synopsis_en', ('synopsis_en',)),
+                          # `sinopsis_en` también: el crudo la escribe con el
+                          # nombre español —como `sinopsis`— y acá solo se
+                          # miraba la inglesa, así que la sinopsis en inglés del
+                          # crudo se caía entera y en silencio.
+                          ('synopsis_en', ('synopsis_en', 'sinopsis_en')),
                           ('title_en', ('title_en',)), ('genre', ('genero', 'genre')),
                           # El PAÍS también puede venir del enriquecido: hasta hoy
                           # solo se leía del crudo, y un festival cuya fuente no lo

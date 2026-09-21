@@ -138,6 +138,24 @@ SIN_SECCION = {}
 # director, es una página que lo afirma. Lo que no aparezca se queda sin país,
 # que es más honesto que un globo mal puesto.
 PAIS_EXTERNO = {
+    # LOS CUATRO QUE NINGUNA FUENTE ROTULA Y SU PROPIA SINOPSIS AFIRMA. No es
+    # deducción por la sección ni por el nombre del director: es el texto que
+    # el festival imprime para cada una (Juan, 21 sep).
+    'cuadrileros orgullo y legado': ('Colombia',
+        'su sinopsis en el PDF: «Los Juegos de Cuadrillas de San Martín, Meta, '
+        'son una tradición ecuestre… forma parte del patrimonio cultural de '
+        'Colombia»'),
+    'momentos en movimiento primeros pasos del ballet en colombia': ('Colombia',
+        'su sinopsis en el PDF: «Historia de los primeros pasos del ballet y la '
+        'danza en Colombia… a partir del archivo personal de Beatriz Kopp»'),
+    'monte curandero': ('Colombia',
+        'su ficha en la web del festival la sitúa en la montaña andina con las '
+        'abuelas y la medicina tradicional, y compite en la categoría nacional'),
+    'sabor a mi acustico bolero jazz': ('Colombia',
+        'compite en BOYACÁ EN LOS CAMPOS, la franja del departamento, con la '
+        'cantante boyacense Tatiana Jáuregui; el peruano Husil es artista '
+        'invitado, no coproductor. Colombia a secas — decisión de Juan, 21 sep'),
+
     'korebaju pai rekocho': ('Colombia',
         'tesis de la Universidad Los Libertadores, rodada en Caquetá con la '
         'comunidad coreguaje — https://cam.libertadores.edu.co/'
