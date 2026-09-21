@@ -25,6 +25,7 @@ struct ContentView: View {
 private struct MiPlan: View {
     @EnvironmentObject var plan: PlanStore
     @EnvironmentObject var auth: WatchAuthManager
+    @Environment(\.scenePhase) private var scenePhase
     @State private var day = 0
 
     var body: some View {
@@ -56,6 +57,18 @@ private struct MiPlan: View {
         .onChange(of: auth.activeFestival) { _, new in
             guard let new, !new.isEmpty, new != plan.festival else { return }
             Task { await plan.load() }
+        }
+        // Refresco (21 sep 2026): el plan se leía UNA vez por proceso. Ahora se relee
+        // en silencio al volver al primer plano (mirás el reloj → está al día) y cuando
+        // el teléfono avisa que cambió (con la app abierta → inmediato).
+        .onChange(of: scenePhase) { _, phase in
+            guard phase == .active, case .loaded = plan.state else { return }
+            Task { await plan.load(silent: true) }
+        }
+        .onChange(of: auth.planChangedAt) { _, _ in
+            if case .loading = plan.state { return }
+            if case .idle = plan.state { return }
+            Task { await plan.load(silent: true) }
         }
     }
 }

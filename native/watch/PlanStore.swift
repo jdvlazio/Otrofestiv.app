@@ -19,8 +19,12 @@ final class PlanStore: ObservableObject {
     @Published var sections: [DaySection] = []   // el plan agrupado por día
     @Published var defaultDay: Int = 0            // página inicial (hoy / recap)
 
-    func load() async {
-        state = .loading
+    // silent: refresco con datos ya en pantalla (volver al primer plano, aviso del
+    // teléfono). No pasa por .loading —la lista no parpadea— y si la red falla se
+    // conserva lo que había. La carga inicial y el cambio de festival siguen siendo
+    // visibles (load() a secas).
+    func load(silent: Bool = false) async {
+        if !silent || state != .loaded { state = .loading }
         do {
             // Festival en curso que empujó el teléfono (F1.6). Si aún no llegó,
             // fallback a la fila más reciente por updated_at.
@@ -45,7 +49,7 @@ final class PlanStore: ObservableObject {
             publishNextUp()
             state = .loaded
         } catch {
-            state = .error(error.localizedDescription)
+            if !silent { state = .error(error.localizedDescription) }
         }
     }
 

@@ -59,6 +59,19 @@ final class WatchAuthBridge: NSObject, WCSessionDelegate, WKScriptMessageHandler
             try? WCSession.default.updateApplicationContext(["activeFestival": fid])
             return
         }
+        // El plan cambió en la web (21 sep 2026): avisar al reloj para que relea la
+        // nube. Alcanzable → sendMessage (inmediato); si no, o si falla, transferUserInfo
+        // (cola: llega cuando el reloj vuelva). No lleva el plan: el reloj lo lee él.
+        if (body["type"] as? String) == "plan", let fid = body["id"] as? String, !fid.isEmpty {
+            let s = WCSession.default
+            let info: [String: Any] = ["planChanged": fid, "at": Date().timeIntervalSince1970]
+            if s.isReachable {
+                s.sendMessage(info, replyHandler: nil, errorHandler: { _ in s.transferUserInfo(info) })
+            } else {
+                s.transferUserInfo(info)
+            }
+            return
+        }
         guard let requestId = body["requestId"] as? String else { return }
         var reply: (([String: Any]) -> Void)?
         q.sync { reply = pending.removeValue(forKey: requestId) }

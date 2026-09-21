@@ -42,6 +42,10 @@ final class WatchAuthManager: NSObject, ObservableObject {
 
     // Festival activo publicado → ContentView recarga el plan al cambiar (live-reload).
     @Published var activeFestival: String?
+    // El teléfono avisó que el plan cambió (21 sep 2026): epoch del último aviso.
+    // ContentView lo observa y recarga en silencio. Sin esto el reloj leía la nube
+    // UNA vez por proceso y un «+ Agendar» en el teléfono nunca llegaba.
+    @Published var planChangedAt: Double = 0
 
     private var authRequestContinuation: CheckedContinuation<String, Error>?
 
@@ -136,6 +140,20 @@ extension WatchAuthManager: WCSessionDelegate {
     nonisolated func session(_ session: WCSession,
                              didReceiveApplicationContext applicationContext: [String: Any]) {
         applyActiveFestival(from: applicationContext)
+    }
+
+    // El teléfono avisó que el plan cambió: sendMessage si el reloj estaba alcanzable,
+    // transferUserInfo (cola) si no — el wrapper elige; acá se aceptan los dos.
+    nonisolated func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
+        applyPlanChanged(message)
+    }
+    nonisolated func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
+        applyPlanChanged(userInfo)
+    }
+    nonisolated private func applyPlanChanged(_ m: [String: Any]) {
+        guard m["planChanged"] != nil else { return }
+        let at = (m["at"] as? Double) ?? Date().timeIntervalSince1970
+        Task { @MainActor in self.planChangedAt = at }
     }
 
     // Persistir (para el load inicial de PlanStore) + publicar (para el live-reload).
