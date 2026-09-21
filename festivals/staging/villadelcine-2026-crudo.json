@@ -67,7 +67,9 @@
    "genero": "Videoclip",
    "anio": 2025,
    "sinopsis": "\"El nuevo álbum de Magallanes sabe la importancia de hacer del mundo un lugar más hermoso, y esa es la raíz para imaginar un video de colores, texturas, baile, animales, naturaleza, fuego, vuelo y magia, un video que haga el mundo un poquito más hermoso. 1018 dibujos hechos a mano con lápices de colores, crayolas, pasteles, pintura, marcadores y diferentes papeles le dan vida a Mucho Gusto, con el deseo de que quien lo vea vea algo más humano, más táctil y más real, aunque sea a través de una pantalla\"",
-   "categoria": "Mejor Videoclip"
+   "categoria": "Mejor Videoclip",
+   "poster": "/assets/villadelcine-2026/mucho-gusto.jpg",
+   "posterSource": "editorial"
   },
   {
    "titulo": "Arenas",
@@ -89,6 +91,8 @@
    "_pais_fuente": "categoría «Mejor Ópera Prima Nacional»: el reel habla de «quienes comienzan su camino en el cine nacional»",
    "sinopsis_en": "La vida desde que nace hasta que muere del escultor RODRIGO ARENAS BETANCOURT",
    "categoria": "Mejor Ópera Prima Nacional",
+   "poster": "/assets/villadelcine-2026/arenas.jpg",
+   "posterSource": "editorial",
    "_sin_ficha_en_el_pdf": true
   },
   {
@@ -125,6 +129,8 @@
      "pais": "Colombia",
      "sinopsis": "Francis, un niño optimista de origen rural, desea recuperar la alegría y la unión de su familia. La llegada de un inesperado “milagro dulce” parece traer la esperanza que tanto buscaba, pero pronto le enseñará que las soluciones mágicas no siempre son lo que parecen.",
      "sinopsis_en": "Francis, an optimistic boy from a rural background, tries to restore unity and happiness to his home despite his parents’ lack of motivation and conflicts. Everything changes with the arrival of a “sweet miracle,” which seems like a ray of hope but ends up turning into something much worse",
+     "poster": "/assets/villadelcine-2026/a-sweet-miracle.jpg",
+     "posterSource": "oficial",
      "formato": "INFANTIL"
     },
     {
@@ -274,6 +280,8 @@
      "director": "Franco Zornosa",
      "duracion_min": 4,
      "sinopsis": "En la calidez de un hogar, una pareja comparte un refugio íntimo entre silencios elocuentes y copas de vino. En este ambiente, Tatiana Jáuregui y el artista peruano Husil reinterpretan el clásico bolero Sabor a Mí en un formato acústico. La sala se transforma en un escenario donde la música y el amor dialogan con total naturalidad.",
+     "poster": "/assets/villadelcine-2026/sabor-a-mi-acustico-bolero-jazz.jpg",
+     "posterSource": "oficial",
      "formato": "BOYACÁ EN LOS CAMPOS"
     }
    ]
@@ -297,7 +305,7 @@
    "film_list": [
     {
      "titulo": "Sierra: El álbum mortuorio",
-     "director": "Carlos Ortiz Alarcón",
+     "director": "Carlos Ortíz Alarcón",
      "duracion_min": 90,
      "pais": "Colombia",
      "sinopsis": "La desaparición de Natalia en Pueblo Blanco lleva a la policía a descubrir un sórdido bar clandestino. Cuando dos hermanas explotadas en el lugar deciden ayudar a un extraño en el bosque, desatan una sangrienta ola de rituales a manos de una oscura secta que terminará consumiendo a todo el pueblo.",
@@ -362,6 +370,8 @@
      "sinopsis": "En un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren invita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots capaces de ayudar, proteger y acompañar a las personas.",
      "sinopsis_en": "En un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren invita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots capaces de ayudar, proteger y acompañar a las personas. Durante este recorrido inmersivo en realidad virtual, el público descubre robots domésticos, militares, cuidadores, constructores y exploradores, además de sorprendentes vehículos voladores y de búsqueda. Entre ellos se encuentran CLU y RAM, dos robots que más adelante tendrán un papel fundamental en la historia de Floppy.",
      "categoria": "Mejor VR",
+     "poster": "/assets/villadelcine-2026/floppy-the-robot-el-ultimo-contacto.jpg",
+     "posterSource": "oficial",
      "formato": "VR"
     },
     {
@@ -387,6 +397,8 @@
      "anio": 2026,
      "sinopsis": "Combina un video en 360 grados —que sitúa al espectador en el papel de «Cachufina», una compañera de clase imaginaria— con un registro del «detrás de cámaras» que muestra cómo los estudiantes peruanos utilizaron una cámara de acción y teléfonos móviles para cocrear una experiencia inmersiva sobre sus vidas y el mundo natural.",
      "sinopsis_en": "Protecting Our Territory 360” combines a 360 video that positions the viewer as the imaginary classmate “Cachufina” with behind-the-scenes documentation of how the Peruvian students used an action camera and mobile phones to co-create an immersive experience of their lives and the natural world. Bishu Cine is a non-profit cultural association that uses film, audiovisual media, the arts, and new information and communication technologies as tools for social change. Together with the Great Ingenious Readers Club of Carabayllo (located on the outskirts of Lima, Peru), Bishu Cine created the participatory exhibition “Protecting Our Territory and Environment,” which gave twenty young people their first virtual reality experience. Bishu Cine began by adapting the interests of the club’s members to a story based on everyday spaces, such as their soccer field and the nearby Bed of Clouds in the Spring Hills, and then helped them film scenes with a specialized camera to capture 360-degree landscapes and transcoded the footage so they could explore them with virtual reality headsets. The experience strengthened the young people’s collective sense of belonging and care for their surroundings and emphasized the importance of preserving environmental memories through their own perspectives.",
+     "poster": "/assets/villadelcine-2026/protecting-our-territory-360.jpg",
+     "posterSource": "oficial",
      "formato": "VR"
     }
    ]
@@ -554,6 +566,8 @@
      "sinopsis": "Manifiesto de archivos audiovisuales que acomoda con zapeo historias de cámaras y sus viajes mientras graban fiestas familiares y de cine. El viaje más largo es en Cuba. Salen muchas personas, van dos en el viaje que graban para un programa de televisión.",
      "sinopsis_en": "Manifiesto de archivos audiovisuales que acomoda con zapeo historias de cámaras y sus viajes mientras graban fiestas familiares y de cine. El viaje más largo es en Cuba. Salen muchas personas, van dos en el viaje que graban para un programa de televisión. Se mezclan lugares, experimentos visuales, fragmentos de películas y protagonistas del cine.",
      "categoria": "Mejor Work in Progress",
+     "poster": "/assets/villadelcine-2026/cuba-2001-imagenes-del-futuro-i.jpg",
+     "posterSource": "editorial",
      "formato": "WIP"
     },
     {
@@ -878,6 +892,8 @@
      "pais": "Colombia",
      "sinopsis": "Francis, un niño optimista de origen rural, desea recuperar la alegría y la unión de su familia. La llegada de un inesperado “milagro dulce” parece traer la esperanza que tanto buscaba, pero pronto le enseñará que las soluciones mágicas no siempre son lo que parecen.",
      "sinopsis_en": "Francis, an optimistic boy from a rural background, tries to restore unity and happiness to his home despite his parents’ lack of motivation and conflicts. Everything changes with the arrival of a “sweet miracle,” which seems like a ray of hope but ends up turning into something much worse",
+     "poster": "/assets/villadelcine-2026/a-sweet-miracle.jpg",
+     "posterSource": "oficial",
      "formato": "INFANTIL"
     },
     {
@@ -964,6 +980,8 @@
      "sinopsis": "Un hombre que crea mundos con inteligencia artificial ve cómo una de sus creaciones regresa para terminar la historia.",
      "sinopsis_en": "Un hombre que crea mundos con inteligencia artificial ve cómo una de sus creaciones regresa para terminar la historia.",
      "categoria": "Mejor Cortometraje IA",
+     "poster": "/assets/villadelcine-2026/prompt-zero.jpg",
+     "posterSource": "oficial",
      "formato": "IA"
     },
     {
@@ -1057,6 +1075,8 @@
      "anio": 2025,
      "sinopsis": "\"El nuevo álbum de Magallanes sabe la importancia de hacer del mundo un lugar más hermoso, y esa es la raíz para imaginar un video de colores, texturas, baile, animales, naturaleza, fuego, vuelo y magia, un video que haga el mundo un poquito más hermoso. 1018 dibujos hechos a mano con lápices de colores, crayolas, pasteles, pintura, marcadores y diferentes papeles le dan vida a Mucho Gusto, con el deseo de que quien lo vea vea algo más humano, más táctil y más real, aunque sea a través de una pantalla\"",
      "categoria": "Mejor Videoclip",
+     "poster": "/assets/villadelcine-2026/mucho-gusto.jpg",
+     "posterSource": "editorial",
      "formato": "VIDEO MUSICAL"
     }
    ]
@@ -1256,6 +1276,8 @@
      "sinopsis": "En un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren invita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots capaces de ayudar, proteger y acompañar a las personas.",
      "sinopsis_en": "En un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren invita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots capaces de ayudar, proteger y acompañar a las personas. Durante este recorrido inmersivo en realidad virtual, el público descubre robots domésticos, militares, cuidadores, constructores y exploradores, además de sorprendentes vehículos voladores y de búsqueda. Entre ellos se encuentran CLU y RAM, dos robots que más adelante tendrán un papel fundamental en la historia de Floppy.",
      "categoria": "Mejor VR",
+     "poster": "/assets/villadelcine-2026/floppy-the-robot-el-ultimo-contacto.jpg",
+     "posterSource": "oficial",
      "formato": "VR"
     },
     {
@@ -1281,6 +1303,8 @@
      "anio": 2026,
      "sinopsis": "Combina un video en 360 grados —que sitúa al espectador en el papel de «Cachufina», una compañera de clase imaginaria— con un registro del «detrás de cámaras» que muestra cómo los estudiantes peruanos utilizaron una cámara de acción y teléfonos móviles para cocrear una experiencia inmersiva sobre sus vidas y el mundo natural.",
      "sinopsis_en": "Protecting Our Territory 360” combines a 360 video that positions the viewer as the imaginary classmate “Cachufina” with behind-the-scenes documentation of how the Peruvian students used an action camera and mobile phones to co-create an immersive experience of their lives and the natural world. Bishu Cine is a non-profit cultural association that uses film, audiovisual media, the arts, and new information and communication technologies as tools for social change. Together with the Great Ingenious Readers Club of Carabayllo (located on the outskirts of Lima, Peru), Bishu Cine created the participatory exhibition “Protecting Our Territory and Environment,” which gave twenty young people their first virtual reality experience. Bishu Cine began by adapting the interests of the club’s members to a story based on everyday spaces, such as their soccer field and the nearby Bed of Clouds in the Spring Hills, and then helped them film scenes with a specialized camera to capture 360-degree landscapes and transcoded the footage so they could explore them with virtual reality headsets. The experience strengthened the young people’s collective sense of belonging and care for their surroundings and emphasized the importance of preserving environmental memories through their own perspectives.",
+     "poster": "/assets/villadelcine-2026/protecting-our-territory-360.jpg",
+     "posterSource": "oficial",
      "formato": "VR"
     }
    ]
@@ -1494,6 +1518,8 @@
      "sinopsis": "Tiro Libre es una cinedanza de atmósfera onírica que retrata el viaje de introspección y autodescubrimiento de Tori, de 14 años. A través de una narrativa poética y coreografías que transitan entre la naturaleza y un universo abstracto, el joven explora sus miedos, sus recuerdos y la incertidumbre de tomar riesgos en la vida.",
      "sinopsis_en": "“Tiro Libre” es una Cinedanza de atmósfera onírica que retrata el viaje de introspección y autodescubrimiento de Tori, un joven de 14 años. A través de una narrativa poética en voz en off y una coreografía que transita entre la naturaleza, habitaciones cerradas y un universo abstracto, Tori explora sus miedos, sus recuerdos y la incertidumbre de tomar riesgos en la vida.",
      "categoria": "Mejor Cortometraje YoungFilm",
+     "poster": "/assets/villadelcine-2026/tiro-libre.jpg",
+     "posterSource": "oficial",
      "formato": "YOUNGFILM"
     },
     {
@@ -1519,6 +1545,8 @@
      "anio": 2024,
      "sinopsis": "Un café para recalentar, pero sin más electricidad: un problema que llevará a estudiantes de secundaria por distintos encuentros y conversaciones en torno a la energía fotovoltaica.",
      "sinopsis_en": "A coffee to reheat, but no more electricity: a problem that will lead high school students to various meetings and discussions around photovoltaic energy…",
+     "poster": "/assets/villadelcine-2026/sun-coffee.jpg",
+     "posterSource": "editorial",
      "formato": "YOUNGFILM"
     }
    ]
@@ -1604,6 +1632,8 @@
      "director": "Marybel Acevedo",
      "duracion_min": 19,
      "sinopsis": "Historia de los primeros pasos del ballet y la danza en Colombia, recopilada por Marybel Acevedo a partir del archivo personal de Beatriz Kopp. Documentos como fotografías, cartas, revistas y scrapbooks dieron origen al primer Fondo de Danza Beatriz Kopp y Karen Balg, conservado en la Facultad de Artes ASAB de la Universidad Distrital.",
+     "poster": "/assets/villadelcine-2026/momentos-en-movimiento-primeros-pasos-del-ballet-en-colombia.jpg",
+     "posterSource": "oficial",
      "formato": "PODEROSAS"
     },
     {
@@ -1668,7 +1698,9 @@
      "anio": 2026,
      "sinopsis": "En un vasto mundo de fantasía oriental, un cultivador solitario sostiene un objeto ornamental que despierta recuerdos conmovedores de su hermano, un amigo íntimo y la mujer a quien amaba. Mientras el recuerdo y la realidad se entretejen, el tiempo se fragmenta durante una partida de Go evocada, dejándolo contemplar el cielo y abrazar en silencio cada emoción que transcurre.",
      "sinopsis_en": "No Regrets in the Fall A lone cultivator sits at the edge of a cliff, surrounded by rolling hills of wildflowers and mountains. The camera wanders through this vast eastern fantasy world before returning to the ornament held in his hands. The ornament unlocks memory — an elder brother’s silhouette moving through a bustling ancient street, a close friend gazing quietly from a pavilion railing, a beloved woman placing the ornament into his palm, and a game of Go beneath an ancient tree. Memory and reality interweave until time shatters at the moment a stone is placed on the board. He looks up at the sky, letting every emotion pass through him. Then he rises, closes his hand around the ornament, and reaches for the dragon. Together they break through the mountain mist — and for the first time, the world beyond the mountains is revealed: a vast, living, human world stretching to the sea. No regrets after the move. Not because there is nothing to regret — but because even in regret, you place the stone anyway. Technical Disclosure: This short film is driven by an original concept, with world-building, script, and storyboards entirely designed by the director. Visuals and music were created using Generative AI tools (base images via Nanobanana pro, video and raw SFX via Kling AI, and music via Suno). All audio fine-tuning, final video editing, and narrative pacing were manually executed by the director in Premiere Pro to fulfill a highly specific creative vision.",
-     "categoria": "Mejor Cortometraje IA"
+     "categoria": "Mejor Cortometraje IA",
+     "poster": "/assets/villadelcine-2026/life-is-a-chessboard-every-move-is-final.jpg",
+     "posterSource": "editorial"
     },
     {
      "titulo": "Ánima de Marea",
@@ -1708,6 +1740,8 @@
      "sinopsis": "Tras una dolorosa ruptura, una mujer atraviesa un duelo íntimo dentro de un universo simbólico de colores y memoria. En escenarios minimalistas, performa su dolor y reconstruye la figura ausente, emprendiendo un viaje sensorial que culmina al lograr habitar su pérdida desde un nuevo lugar.",
      "sinopsis_en": "Tras una ruptura amorosa, una mujer atraviesa un duelo íntimo en un universo simbólico construido por colores y memoria. En escenarios minimalistas, performa su dolor: llora, escribe, grita, se arranca espinas del pecho y reconstruye con ropa la figura ausente del otro. La maqueta de una casa rota y un poema interminable la acompañan en este viaje sensorial entre el deseo y la pérdida. Al final, bajo un cielo ilusorio, se recuesta sobre sus palabras, habitando su dolor desde otro lugar.",
      "categoria": "Mejor Videoclip",
+     "poster": "/assets/villadelcine-2026/despues-de-tanto-amor.jpg",
+     "posterSource": "editorial",
      "formato": "VIDEO MUSICAL"
     },
     {
@@ -1971,13 +2005,17 @@
      "duracion_min": 20,
      "pais": "Colombia",
      "_pais_fuente": "tesis de la Universidad Los Libertadores, rodada en Caquetá con la comunidad coreguaje — https://cam.libertadores.edu.co/korebaju-pat-rekochola-lengua-coreguaje/",
-     "sinopsis": "Estiverson, un joven indígena coreguaje que regresa a su territorio para trabajar como etnoeducador. A través de la lengua coreguaje, el río y la educación comunitaria, el cortometraje propone una experiencia sensorial de la continuidad de un pueblo."
+     "sinopsis": "Estiverson, un joven indígena coreguaje que regresa a su territorio para trabajar como etnoeducador. A través de la lengua coreguaje, el río y la educación comunitaria, el cortometraje propone una experiencia sensorial de la continuidad de un pueblo.",
+     "poster": "/assets/villadelcine-2026/korebaju-pai-rekocho.jpg",
+     "posterSource": "oficial"
     },
     {
      "titulo": "Cuadrileros, orgullo y legado",
      "director": "Fabián Enrique Moreno Correa",
      "duracion_min": 26,
      "sinopsis": "Los Juegos de Cuadrillas de San Martín, Meta, son una tradición ecuestre que se celebra desde 1735 y forma parte del patrimonio cultural de Colombia. Generaciones de familias mantienen viva esta expresión folclórica que representa la diversidad y la historia de la región.",
+     "poster": "/assets/villadelcine-2026/cuadrileros-orgullo-y-legado.jpg",
+     "posterSource": "oficial",
      "formato": "RAÍCES"
     },
     {
@@ -1987,6 +2025,8 @@
      "pais": "Colombia",
      "_pais_fuente": "como «La sinfonía de Guanentá», de Víctor Jaramillo Arias, en la selección oficial de BOGOCINE 2026 — https://www.bogocine.co/seleccion-oficial-2026/",
      "sinopsis": "Documental que explora el legado musical de la cultura guane a través de una expedición por el Cañón del Chicamocha. El maestro Giovanni Laguado reconstruye instrumentos precolombinos y crea una sinfonía ancestral que honra la memoria del pueblo guane y rescata parte de la identidad cultural de Santander.",
+     "poster": "/assets/villadelcine-2026/the-guanenta-symphony.jpg",
+     "posterSource": "oficial",
      "formato": "RAÍCES"
     },
     {
@@ -2079,6 +2119,8 @@
      "sinopsis": "En un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren invita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots capaces de ayudar, proteger y acompañar a las personas.",
      "sinopsis_en": "En un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren invita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots capaces de ayudar, proteger y acompañar a las personas. Durante este recorrido inmersivo en realidad virtual, el público descubre robots domésticos, militares, cuidadores, constructores y exploradores, además de sorprendentes vehículos voladores y de búsqueda. Entre ellos se encuentran CLU y RAM, dos robots que más adelante tendrán un papel fundamental en la historia de Floppy.",
      "categoria": "Mejor VR",
+     "poster": "/assets/villadelcine-2026/floppy-the-robot-el-ultimo-contacto.jpg",
+     "posterSource": "oficial",
      "formato": "VR"
     },
     {
@@ -2104,6 +2146,8 @@
      "anio": 2026,
      "sinopsis": "Combina un video en 360 grados —que sitúa al espectador en el papel de «Cachufina», una compañera de clase imaginaria— con un registro del «detrás de cámaras» que muestra cómo los estudiantes peruanos utilizaron una cámara de acción y teléfonos móviles para cocrear una experiencia inmersiva sobre sus vidas y el mundo natural.",
      "sinopsis_en": "Protecting Our Territory 360” combines a 360 video that positions the viewer as the imaginary classmate “Cachufina” with behind-the-scenes documentation of how the Peruvian students used an action camera and mobile phones to co-create an immersive experience of their lives and the natural world. Bishu Cine is a non-profit cultural association that uses film, audiovisual media, the arts, and new information and communication technologies as tools for social change. Together with the Great Ingenious Readers Club of Carabayllo (located on the outskirts of Lima, Peru), Bishu Cine created the participatory exhibition “Protecting Our Territory and Environment,” which gave twenty young people their first virtual reality experience. Bishu Cine began by adapting the interests of the club’s members to a story based on everyday spaces, such as their soccer field and the nearby Bed of Clouds in the Spring Hills, and then helped them film scenes with a specialized camera to capture 360-degree landscapes and transcoded the footage so they could explore them with virtual reality headsets. The experience strengthened the young people’s collective sense of belonging and care for their surroundings and emphasized the importance of preserving environmental memories through their own perspectives.",
+     "poster": "/assets/villadelcine-2026/protecting-our-territory-360.jpg",
+     "posterSource": "oficial",
      "formato": "VR"
     }
    ]

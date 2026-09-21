@@ -237,6 +237,8 @@
    "has_qa": false,
    "synopsis": "\"El nuevo álbum de Magallanes sabe la importancia de hacer del mundo un lugar más hermoso, y esa es la raíz para imaginar un video de colores, texturas, baile, animales, naturaleza, fuego, vuelo y magia, un video que haga el mundo un poquito más hermoso. 1018 dibujos hechos a mano con lápices de colores, crayolas, pasteles, pintura, marcadores y diferentes papeles le dan vida a Mucho Gusto, con el deseo de que quien lo vea vea algo más humano, más táctil y más real, aunque sea a través de una pantalla\"",
    "synopsis_lang": "es",
+   "poster": "/assets/villadelcine-2026/mucho-gusto.jpg",
+   "posterSource": "editorial",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p2",
     "date": "2026-09-19"
@@ -256,6 +258,8 @@
    "day_order": 0,
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "has_qa": false,
+   "poster": "/assets/villadelcine-2026/arenas.jpg",
+   "posterSource": "editorial",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p2",
     "date": "2026-09-19"
@@ -298,6 +302,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "7 min",
+     "poster": "/assets/villadelcine-2026/a-sweet-miracle.jpg",
+     "posterSource": "oficial",
      "synopsis": "Francis, un niño optimista de origen rural, desea recuperar la alegría y la unión de su familia. La llegada de un inesperado “milagro dulce” parece traer la esperanza que tanto buscaba, pero pronto le enseñará que las soluciones mágicas no siempre son lo que parecen.",
      "synopsis_lang": "es"
     },
@@ -445,6 +451,8 @@
      "title": "Sabor a mí (acústico / bolero jazz)",
      "director": "Franco Zornosa",
      "duration": "4 min",
+     "poster": "/assets/villadelcine-2026/sabor-a-mi-acustico-bolero-jazz.jpg",
+     "posterSource": "oficial",
      "synopsis": "En la calidez de un hogar, una pareja comparte un refugio íntimo entre silencios elocuentes y copas de vino. En este ambiente, Tatiana Jáuregui y el artista peruano Husil reinterpretan el clásico bolero Sabor a Mí en un formato acústico. La sala se transforma en un escenario donde la música y el amor dialogan con total naturalidad.",
      "synopsis_lang": "es"
     }
@@ -472,7 +480,7 @@
    "film_list": [
     {
      "title": "Sierra: El álbum mortuorio",
-     "director": "Carlos Ortiz Alarcón",
+     "director": "Carlos Ortíz Alarcón",
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "90 min",
@@ -534,6 +542,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "20 min",
+     "poster": "/assets/villadelcine-2026/floppy-the-robot-el-ultimo-contacto.jpg",
+     "posterSource": "oficial",
      "synopsis": "En un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren invita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots capaces de ayudar, proteger y acompañar a las personas.",
      "genre": "VR",
      "synopsis_lang": "es"
@@ -558,6 +568,8 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "7 min",
+     "poster": "/assets/villadelcine-2026/protecting-our-territory-360.jpg",
+     "posterSource": "oficial",
      "synopsis": "Combina un video en 360 grados —que sitúa al espectador en el papel de «Cachufina», una compañera de clase imaginaria— con un registro del «detrás de cámaras» que muestra cómo los estudiantes peruanos utilizaron una cámara de acción y teléfonos móviles para cocrear una experiencia inmersiva sobre sus vidas y el mundo natural.",
      "genre": "VR",
      "synopsis_lang": "es"
@@ -723,6 +735,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "5 min",
+     "poster": "/assets/villadelcine-2026/cuba-2001-imagenes-del-futuro-i.jpg",
+     "posterSource": "editorial",
      "synopsis": "Manifiesto de archivos audiovisuales que acomoda con zapeo historias de cámaras y sus viajes mientras graban fiestas familiares y de cine. El viaje más largo es en Cuba. Salen muchas personas, van dos en el viaje que graban para un programa de televisión.",
      "genre": "Documental",
      "synopsis_lang": "es"
@@ -1052,6 +1066,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "7 min",
+     "poster": "/assets/villadelcine-2026/a-sweet-miracle.jpg",
+     "posterSource": "oficial",
      "synopsis": "Francis, un niño optimista de origen rural, desea recuperar la alegría y la unión de su familia. La llegada de un inesperado “milagro dulce” parece traer la esperanza que tanto buscaba, pero pronto le enseñará que las soluciones mágicas no siempre son lo que parecen.",
      "synopsis_lang": "es"
     },
@@ -1137,6 +1153,8 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "3 min",
+     "poster": "/assets/villadelcine-2026/prompt-zero.jpg",
+     "posterSource": "oficial",
      "synopsis": "Un hombre que crea mundos con inteligencia artificial ve cómo una de sus creaciones regresa para terminar la historia.",
      "genre": "Ficción",
      "synopsis_lang": "es"
@@ -1224,6 +1242,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "5 min",
+     "poster": "/assets/villadelcine-2026/mucho-gusto.jpg",
+     "posterSource": "editorial",
      "synopsis": "\"El nuevo álbum de Magallanes sabe la importancia de hacer del mundo un lugar más hermoso, y esa es la raíz para imaginar un video de colores, texturas, baile, animales, naturaleza, fuego, vuelo y magia, un video que haga el mundo un poquito más hermoso. 1018 dibujos hechos a mano con lápices de colores, crayolas, pasteles, pintura, marcadores y diferentes papeles le dan vida a Mucho Gusto, con el deseo de que quien lo vea vea algo más humano, más táctil y más real, aunque sea a través de una pantalla\"",
      "genre": "Videoclip",
      "synopsis_lang": "es"
@@ -1420,6 +1440,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "20 min",
+     "poster": "/assets/villadelcine-2026/floppy-the-robot-el-ultimo-contacto.jpg",
+     "posterSource": "oficial",
      "synopsis": "En un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren invita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots capaces de ayudar, proteger y acompañar a las personas.",
      "genre": "VR",
      "synopsis_lang": "es"
@@ -1444,6 +1466,8 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "7 min",
+     "poster": "/assets/villadelcine-2026/protecting-our-territory-360.jpg",
+     "posterSource": "oficial",
      "synopsis": "Combina un video en 360 grados —que sitúa al espectador en el papel de «Cachufina», una compañera de clase imaginaria— con un registro del «detrás de cámaras» que muestra cómo los estudiantes peruanos utilizaron una cámara de acción y teléfonos móviles para cocrear una experiencia inmersiva sobre sus vidas y el mundo natural.",
      "genre": "VR",
      "synopsis_lang": "es"
@@ -1649,6 +1673,8 @@
      "flags": "🇲🇽",
      "year": 2026,
      "duration": "5 min",
+     "poster": "/assets/villadelcine-2026/tiro-libre.jpg",
+     "posterSource": "oficial",
      "synopsis": "Tiro Libre es una cinedanza de atmósfera onírica que retrata el viaje de introspección y autodescubrimiento de Tori, de 14 años. A través de una narrativa poética y coreografías que transitan entre la naturaleza y un universo abstracto, el joven explora sus miedos, sus recuerdos y la incertidumbre de tomar riesgos en la vida.",
      "synopsis_lang": "es"
     },
@@ -1672,6 +1698,8 @@
      "flags": "🇫🇷",
      "year": 2024,
      "duration": "19 min",
+     "poster": "/assets/villadelcine-2026/sun-coffee.jpg",
+     "posterSource": "editorial",
      "synopsis": "Un café para recalentar, pero sin más electricidad: un problema que llevará a estudiantes de secundaria por distintos encuentros y conversaciones en torno a la energía fotovoltaica.",
      "genre": "Ficción",
      "synopsis_lang": "es"
@@ -1760,6 +1788,8 @@
      "title": "Momentos en movimiento. Primeros pasos del ballet en Colombia",
      "director": "Marybel Acevedo",
      "duration": "19 min",
+     "poster": "/assets/villadelcine-2026/momentos-en-movimiento-primeros-pasos-del-ballet-en-colombia.jpg",
+     "posterSource": "oficial",
      "synopsis": "Historia de los primeros pasos del ballet y la danza en Colombia, recopilada por Marybel Acevedo a partir del archivo personal de Beatriz Kopp. Documentos como fotografías, cartas, revistas y scrapbooks dieron origen al primer Fondo de Danza Beatriz Kopp y Karen Balg, conservado en la Facultad de Artes ASAB de la Universidad Distrital.",
      "synopsis_lang": "es"
     },
@@ -1824,6 +1854,8 @@
      "flags": "🇹🇼",
      "year": 2026,
      "duration": "4 min",
+     "poster": "/assets/villadelcine-2026/life-is-a-chessboard-every-move-is-final.jpg",
+     "posterSource": "editorial",
      "synopsis": "En un vasto mundo de fantasía oriental, un cultivador solitario sostiene un objeto ornamental que despierta recuerdos conmovedores de su hermano, un amigo íntimo y la mujer a quien amaba. Mientras el recuerdo y la realidad se entretejen, el tiempo se fragmenta durante una partida de Go evocada, dejándolo contemplar el cielo y abrazar en silencio cada emoción que transcurre.",
      "genre": "Ficción y Ciencia Ficción",
      "synopsis_lang": "es"
@@ -1861,6 +1893,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "4 min",
+     "poster": "/assets/villadelcine-2026/despues-de-tanto-amor.jpg",
+     "posterSource": "editorial",
      "synopsis": "Tras una dolorosa ruptura, una mujer atraviesa un duelo íntimo dentro de un universo simbólico de colores y memoria. En escenarios minimalistas, performa su dolor y reconstruye la figura ausente, emprendiendo un viaje sensorial que culmina al lograr habitar su pérdida desde un nuevo lugar.",
      "genre": "Video Musical",
      "synopsis_lang": "es"
@@ -2119,6 +2153,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "20 min",
+     "poster": "/assets/villadelcine-2026/korebaju-pai-rekocho.jpg",
+     "posterSource": "oficial",
      "synopsis": "Estiverson, un joven indígena coreguaje que regresa a su territorio para trabajar como etnoeducador. A través de la lengua coreguaje, el río y la educación comunitaria, el cortometraje propone una experiencia sensorial de la continuidad de un pueblo.",
      "synopsis_lang": "es"
     },
@@ -2126,6 +2162,8 @@
      "title": "Cuadrileros, orgullo y legado",
      "director": "Fabián Enrique Moreno Correa",
      "duration": "26 min",
+     "poster": "/assets/villadelcine-2026/cuadrileros-orgullo-y-legado.jpg",
+     "posterSource": "oficial",
      "synopsis": "Los Juegos de Cuadrillas de San Martín, Meta, son una tradición ecuestre que se celebra desde 1735 y forma parte del patrimonio cultural de Colombia. Generaciones de familias mantienen viva esta expresión folclórica que representa la diversidad y la historia de la región.",
      "synopsis_lang": "es"
     },
@@ -2135,6 +2173,8 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "duration": "22 min",
+     "poster": "/assets/villadelcine-2026/the-guanenta-symphony.jpg",
+     "posterSource": "oficial",
      "synopsis": "Documental que explora el legado musical de la cultura guane a través de una expedición por el Cañón del Chicamocha. El maestro Giovanni Laguado reconstruye instrumentos precolombinos y crea una sinfonía ancestral que honra la memoria del pueblo guane y rescata parte de la identidad cultural de Santander.",
      "synopsis_lang": "es"
     },
@@ -2231,6 +2271,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "20 min",
+     "poster": "/assets/villadelcine-2026/floppy-the-robot-el-ultimo-contacto.jpg",
+     "posterSource": "oficial",
      "synopsis": "En un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren invita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots capaces de ayudar, proteger y acompañar a las personas.",
      "genre": "VR",
      "synopsis_lang": "es"
@@ -2255,6 +2297,8 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "7 min",
+     "poster": "/assets/villadelcine-2026/protecting-our-territory-360.jpg",
+     "posterSource": "oficial",
      "synopsis": "Combina un video en 360 grados —que sitúa al espectador en el papel de «Cachufina», una compañera de clase imaginaria— con un registro del «detrás de cámaras» que muestra cómo los estudiantes peruanos utilizaron una cámara de acción y teléfonos móviles para cocrear una experiencia inmersiva sobre sus vidas y el mundo natural.",
      "genre": "VR",
      "synopsis_lang": "es"
@@ -2412,8 +2456,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-21T10:31:31",
-  "plan_sha": "065523a0e857de42",
+  "fecha": "2026-09-21T11:59:59",
+  "plan_sha": "d04a08ecc22a927b",
   "paso": 16,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"
  }

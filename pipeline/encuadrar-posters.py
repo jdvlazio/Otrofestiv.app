@@ -40,6 +40,7 @@ PLANO, MAX_FRAC = 45, 0.12
 # arriesga comerse arte— se escala un 4% y se recorta al centro: se traga el
 # residuo perdiendo un 2% por lado, imperceptible. Es el «hacer zoom» de Juan.
 OVERSCAN = 1.04
+ESTIRON_MAX = 0.16                       # más deformación que esto → recortar
 MUESTRA = 220                            # ancho de análisis
 
 
@@ -150,7 +151,7 @@ def main():
         print('\n(simulación — usar --aplicar)')
         return
 
-    fallos = 0
+    fallos, recortados = 0, []
     for real, n, t, b, l, r, aw, ah in plan:
         W = int(subprocess.run(['sips', '-g', 'pixelWidth', real], capture_output=True)
                 .stdout.decode().split(':')[-1])
@@ -177,7 +178,27 @@ def main():
                 fallos += 1
         # 2 · escalar al lienzo con overscan y recortar al centro: llena el
         #     placeholder exacto y se traga el residuo del borde.
+        #
+        #     ESTIRAR HASTA EL 16%; MÁS ALLÁ, RECORTAR (Juan, 21 sep 2026). La
+        #     regla del 9 ago —«estirar, no recortar»— se calibró con afiches
+        #     ya casi 2:3, donde el estirón no se ve. Villa del Cine trae
+        #     afiches 9:16 («Tiro Libre» 385×800) y carátulas cuadradas
+        #     («Prompt Zero» 2034×2003): llevarlos a 2:3 con `-z` los deforma
+        #     un 39% y un 50%, el mismo desastre de los stills en el otro
+        #     sentido. Con más del 16% se escala PROPORCIONAL hasta cubrir el
+        #     lienzo y se recorta al centro: se pierde borde, no se deforma
+        #     nada. La medida se toma DESPUÉS del recorte del marco.
+        W2 = int(subprocess.run(['sips', '-g', 'pixelWidth', real], capture_output=True)
+                 .stdout.decode().split(':')[-1])
+        H2 = int(subprocess.run(['sips', '-g', 'pixelHeight', real], capture_output=True)
+                 .stdout.decode().split(':')[-1])
         gz_h, gz_w = round(LIENZO_H * OVERSCAN), round(LIENZO_W * OVERSCAN)
+        estiron = (W2 / H2) / (LIENZO_W / LIENZO_H) if H2 else 1
+        if abs(estiron - 1) > ESTIRON_MAX:
+            # proporcional a cubrir: el lado corto llega al lienzo, el otro sobra
+            k = max(gz_w / W2, gz_h / H2)
+            gz_w, gz_h = max(gz_w, round(W2 * k)), max(gz_h, round(H2 * k))
+            recortados.append((n, W2, H2, round(estiron, 2)))
         q = subprocess.run(['sips', '-z', str(gz_h), str(gz_w), real, '--out', real],
                            capture_output=True)
         if q.returncode != 0:
@@ -189,6 +210,10 @@ def main():
             print(f'   ✗ encuadre falló en {n}: {q.stderr.decode().strip()[:70]}')
             fallos += 1
 
+    if recortados:
+        print(f'\n{len(recortados)} recortados al centro en vez de estirados (deformación > {int(ESTIRON_MAX*100)}%):')
+        for n, w2, h2, e in recortados:
+            print(f'   {n[:46]:48} {w2}×{h2}  estirón habría sido ×{e}')
     # ── verificación: el objetivo es 0 con marco y 0 fuera de lienzo ─────────
     quedan, fuera = [], []
     for real, n, *_ in plan:
