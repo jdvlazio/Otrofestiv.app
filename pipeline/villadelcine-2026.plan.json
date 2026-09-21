@@ -43,6 +43,10 @@
    "que": "la ficha de cada actividad de la Ruta Académica (p15 y pp. 51–60), que el lector de obras no alcanzaba: se detiene en la p50. Sin esto, las 24 actividades se publicaban sin una línea de descripción"
   },
   {
+   "cmd": "/tmp/vdcenv/bin/python pipeline/villadelcine-2026-actividades-contraste.py",
+   "que": "las mismas fichas leídas TRES veces —poppler, MuPDF y el OCR de Vision sobre los píxeles— y enfrentadas. A y B tienen que coincidir carácter a carácter; con C se comprueba que lo que publicamos está pintado de verdad. Necesita PyMuPDF: /tmp/vdcenv"
+  },
+  {
    "cmd": "python3 pipeline/villadelcine-2026-crudo.py",
    "que": "parrilla + obras → crudo. La duración publicada es la REAL: si las obras suman más que la casilla dibujada, manda la suma"
   },
