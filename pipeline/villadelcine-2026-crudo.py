@@ -138,6 +138,24 @@ SIN_SECCION = {}
 # director, es una página que lo afirma. Lo que no aparezca se queda sin país,
 # que es más honesto que un globo mal puesto.
 PAIS_EXTERNO = {
+    # LOS CUATRO QUE NINGUNA FUENTE ROTULA Y SU PROPIA SINOPSIS AFIRMA. No es
+    # deducción por la sección ni por el nombre del director: es el texto que
+    # el festival imprime para cada una (Juan, 21 sep).
+    'cuadrileros orgullo y legado': ('Colombia',
+        'su sinopsis en el PDF: «Los Juegos de Cuadrillas de San Martín, Meta, '
+        'son una tradición ecuestre… forma parte del patrimonio cultural de '
+        'Colombia»'),
+    'momentos en movimiento primeros pasos del ballet en colombia': ('Colombia',
+        'su sinopsis en el PDF: «Historia de los primeros pasos del ballet y la '
+        'danza en Colombia… a partir del archivo personal de Beatriz Kopp»'),
+    'monte curandero': ('Colombia',
+        'su ficha en la web del festival la sitúa en la montaña andina con las '
+        'abuelas y la medicina tradicional, y compite en la categoría nacional'),
+    'sabor a mi acustico bolero jazz': ('Colombia',
+        'compite en BOYACÁ EN LOS CAMPOS, la franja del departamento, con la '
+        'cantante boyacense Tatiana Jáuregui; el peruano Husil es artista '
+        'invitado, no coproductor. Colombia a secas — decisión de Juan, 21 sep'),
+
     'korebaju pai rekocho': ('Colombia',
         'tesis de la Universidad Los Libertadores, rodada en Caquetá con la '
         'comunidad coreguaje — https://cam.libertadores.edu.co/'
@@ -157,6 +175,27 @@ PAIS_EXTERNO = {
 # afirma. El enricher no puede traerla sola —su candado compara la duración
 # con la de la CASILLA, y 70 min de película en una casilla de 75 no pasan el
 # margen de ±3— así que se declara.
+# EL METRAJE QUE MANDA SOBRE LA CASILLA. La regla de la casa publica el máximo
+# entre la casilla dibujada y lo que dura el contenido, para que el
+# planificador no libere una sala que sigue ocupada. Acá Juan la levanta a
+# mano, obra por obra, cuando el metraje real está confirmado y la diferencia
+# con la casilla es presentación, no proyección.
+#
+# «ARENAS» abre el festival. Su casilla mide 120 minutos; la ficha de la web
+# del festival dice 01:42:00 (102) y la distribución dice 106. Los 102 son de
+# un corte anterior: «Arenas» existió primero como serie de seis capítulos de
+# 24 minutos en Teleantioquia, y John Bolívar la rehízo «en un formato más
+# amplio que permitiera proyectarse en salas» (elpilon.com.co). El largo de
+# 106 es el que se proyecta. Decisión de Juan, 21 sep 2026: «106 con Prime
+# como fuente». La casilla queda registrada en `_duracion_dibujada`.
+DURACION_PUBLICADA = {
+    'arenas': (106,
+        'Prime Video, ficha del título (primevideo.com/detail/'
+        '0LNKTAOGUKGUGO40AFWAM5G7F4): «Arenas · Documental · 2025 · 1 h 46 min · '
+        'Estudio Ammo Content». Es la ficha de distribución del largometraje '
+        'estrenado, no la del corte de televisión. No está en TMDB.'),
+}
+
 FICHA_EXTERNA = {
     'aquileo venganza': {
         'anio': 1968,
@@ -570,6 +609,9 @@ def main():
         if tipo:
             suma = 0
         dur = max(b['duracion_min'], suma) if suma else b['duracion_min']
+        _dp = DURACION_PUBLICADA.get(norm(titulo))
+        if _dp and not tipo:
+            dur = _dp[0]
         if suma > b['duracion_min']:
             avisos.append(f'{b["dia"][-2:]} {b["hora"]} «{titulo[:34]}»: la casilla mide '
                           f'{b["duracion_min"]} min y sus obras suman {suma} — se publica '
@@ -580,6 +622,7 @@ def main():
             **({'sala': sala} if sala else {}),
             'duracion_min': dur,
             **({'_duracion_dibujada': b['duracion_min']} if dur != b['duracion_min'] else {}),
+            **({'_duracion_fuente': _dp[1]} if _dp and not tipo else {}),
             **({'duracion_obra': suma} if suma and not es_programa
                and suma != dur else {}),
             **({'_obras_sin_duracion': sin_dur} if sin_dur else {}),

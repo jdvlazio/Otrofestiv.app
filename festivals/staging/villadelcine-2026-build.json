@@ -252,12 +252,14 @@
    "director": "John Bolívar",
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "120 min",
+   "duration": "106 min",
    "day": "2026-09-23",
    "time": "18:30",
    "day_order": 0,
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "has_qa": false,
+   "synopsis": "La vida desde que nace hasta que muere del escultor RODRIGO ARENAS BETANCOURT",
+   "synopsis_lang": "es",
    "poster": "/assets/villadelcine-2026/arenas.jpg",
    "posterSource": "editorial",
    "_src": {
@@ -305,6 +307,7 @@
      "poster": "/assets/villadelcine-2026/a-sweet-miracle.jpg",
      "posterSource": "oficial",
      "synopsis": "Francis, un niño optimista de origen rural, desea recuperar la alegría y la unión de su familia. La llegada de un inesperado “milagro dulce” parece traer la esperanza que tanto buscaba, pero pronto le enseñará que las soluciones mágicas no siempre son lo que parecen.",
+     "synopsis_en": "Francis, an optimistic boy from a rural background, tries to restore unity and happiness to his home despite his parents’ lack of motivation and conflicts. Everything changes with the arrival of a “sweet miracle,” which seems like a ray of hope but ends up turning into something much worse",
      "synopsis_lang": "es"
     },
     {
@@ -316,6 +319,7 @@
      "poster": "/assets/villadelcine-2026/just-another-bird.jpg",
      "posterSource": "oficial",
      "synopsis": "Después de sufrir un accidente en la ciudad, Raquelita, una paloma nativa colombiana, encuentra refugio en la ventana de Tomás. Mientras el niño la acompaña en su recuperación, Raquelita emprende un viaje poético por la ciudad y descubre personajes, pequeños detalles y formas de vida que suelen pasar inadvertidas.",
+     "synopsis_en": "Raquelita, a native Colombian dove injured after an accident in the city, finds refuge at Tomás’s window, where the boy accompanies her as she heals. From that encounter, Raquelita begins a poetic journey through the city, discovering characters, lives, details invisible to others, and her place in the world.",
      "synopsis_lang": "es"
     }
    ]
@@ -450,6 +454,8 @@
     {
      "title": "Sabor a mí (acústico / bolero jazz)",
      "director": "Franco Zornosa",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "4 min",
      "poster": "/assets/villadelcine-2026/sabor-a-mi-acustico-bolero-jazz.jpg",
      "posterSource": "oficial",
@@ -558,6 +564,7 @@
      "poster": "/assets/villadelcine-2026/human.jpg",
      "posterSource": "oficial",
      "synopsis": "¿Pueden la tecnología moderna y las experiencias virtuales reconectarnos profundamente con nuestra propia especie y con el planeta? HUMAN explora esta profunda cuestión a través de una experiencia inmersiva de XR con seguimiento manual, diseñada para Oculus Quest 3. Los participantes se embarcan en un viaje espacial virtual para interactuar con las sondas Voyager y su icónico Disco de Oro.",
+     "synopsis_en": "Can modern technology humanize us? Can a virtual experience connect us more deeply with our own species and our planet? These questions guided the research and production of this work. HUMAN is an XR hand-tracking experience designed for the OCULUS QUEST 3, offering an innovative interaction with the history of the Voyager I and II probes and their iconic Golden Record. HUMAN is a XR hand-tracking experience designed for the OCULUS QUEST 3, offering an innovative interaction with the history of the Voyager I and II probes and their iconic Golden Record.",
      "genre": "VR",
      "synopsis_lang": "es"
     },
@@ -571,6 +578,7 @@
      "poster": "/assets/villadelcine-2026/protecting-our-territory-360.jpg",
      "posterSource": "oficial",
      "synopsis": "Combina un video en 360 grados —que sitúa al espectador en el papel de «Cachufina», una compañera de clase imaginaria— con un registro del «detrás de cámaras» que muestra cómo los estudiantes peruanos utilizaron una cámara de acción y teléfonos móviles para cocrear una experiencia inmersiva sobre sus vidas y el mundo natural.",
+     "synopsis_en": "Protecting Our Territory 360” combines a 360 video that positions the viewer as the imaginary classmate “Cachufina” with behind-the-scenes documentation of how the Peruvian students used an action camera and mobile phones to co-create an immersive experience of their lives and the natural world. Bishu Cine is a non-profit cultural association that uses film, audiovisual media, the arts, and new information and communication technologies as tools for social change. Together with the Great Ingenious Readers Club of Carabayllo (located on the outskirts of Lima, Peru), Bishu Cine created the participatory exhibition “Protecting Our Territory and Environment,” which gave twenty young people their first virtual reality experience. Bishu Cine began by adapting the interests of the club’s members to a story based on everyday spaces, such as their soccer field and the nearby Bed of Clouds in the Spring Hills, and then helped them film scenes with a specialized camera to capture 360-degree landscapes and transcoded the footage so they could explore them with virtual reality headsets. The experience strengthened the young people’s collective sense of belonging and care for their surroundings and emphasized the importance of preserving environmental memories through their own perspectives.",
      "genre": "VR",
      "synopsis_lang": "es"
     }
@@ -604,6 +612,7 @@
      "poster": "/assets/villadelcine-2026/drunk-hearing-the-rain-drops-fall.jpg",
      "posterSource": "oficial",
      "synopsis": "Una pareja de ancianos, agobiada mientras la tierra —que debía sustentar su retiro— los mata lentamente debido a los abusos del Estado. Múltiples actos de violencia han convertido este territorio en un purgatorio que refleja la resignación de la vejez, el desarraigo y la resistencia territorial.",
+     "synopsis_en": "An elderly couple, burdened as the land that was meant to provide their retirement now slowly kills them due to state abuse. Multiple violences have turned this land into a purgatory, reflecting the resignation of old age, uprooting, and territorial resistance.",
      "synopsis_lang": "es"
     },
     {
@@ -629,9 +638,9 @@
      "lbSlug": "con-la-mano-arriba",
      "tmdb_id": 1745797,
      "synopsis": "En su lucha por lograr reconocimiento en el Carnaval de Barranquilla, el grupo independiente de títeres \"Con la Mano Arriba\" se enfrenta a un apoyo institucional limitado. El documental retrata un desfile decisivo en el que un fallo repentino en el sonido sume al colectivo en un caos absoluto.",
+     "synopsis_en": "Since 2023, the independent puppet troupe “Con la Mano Arriba” has struggled to find its place within the hierarchy of the Barranquilla Carnival. Led by director Eduardo Lora Cueto, the group faces systemic challenges and limited institutional support. The documentary focuses on a critical turning point during a parade at Carrera 44, where a technical sound failure left the collective exposed to chaos and uncertainty. Through intimate interviews and observational footage, the film explores how the group processes vulnerability with humor and a conscious decision to persist. It is a story about the resilience and artistic passion required to keep a puppet’s head held high against all odds.",
      "genre": "Documental",
-     "synopsis_lang": "es",
-     "synopsis_en": "An independent theater group continues to build up its puppet troupe as part of the Barranquilla Carnival, despite financial and structural constraints."
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -702,6 +711,7 @@
      "poster": "/assets/villadelcine-2026/extinction.jpg",
      "posterSource": "oficial",
      "synopsis": "En el seno de una comunidad selvática amenazada por un proyecto minero, Jenawen —una joven indígena que se ha distanciado de sus raíces— atravesará un portal hacia el futuro para salvar a los únicos supervivientes de una catástrofe medioambiental que arrasó con la mayoría de los recursos naturales y convirtió la tierra en un desierto peligroso.",
+     "synopsis_en": "In the midst of a jungle community threatened by a mining project, Jenawen, a young indigenous woman who has distanced herself from her roots, will cross a portal into the future to save the only survivors of an environmental catastrophe that destroyed most of the natural resources and turned the land into a dangerous desert",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
     },
@@ -714,6 +724,7 @@
      "poster": "/assets/villadelcine-2026/the-last-champion.jpg",
      "posterSource": "oficial",
      "synopsis": "*The Last Champion* (Mejor documental, VALEIFF 2025) rinde homenaje a una comunidad que esperó 75 años para ver al Atlético Bucaramanga ganar su primer campeonato de fútbol. A través de los conmovedores relatos de diversos aficionados —desde un seguidor de toda la vida de 90 años hasta antiguos ultras—, la película captura el espíritu incansable de una ciudad que encontró en el fútbol una razón profunda para soñar y unirse.",
+     "synopsis_en": "“The Last Champion” (Winner of Best Documentary Feature at the 2025 Valencia Indie Film Festival-VALEIFF).is an emotional celebration of the passion, faith, and resilience of a community that waited 75 years to see Atlético Bucaramanga win its first star in Colombian professional football. Through the stories of its fans: from “Monchito,” a 60-year-old father who promises to tattoo the team’s crest on his body, a 90-year-old grandmother who has cheered for the club her entire life, a teacher who fights to keep children away from crime, ultras who leave behind violence and addiction to find new inspiration in the team, to a community that vibrates to the rhythm of the “Cumbia de los Trapos,” an unofficial anthem that unites hearts and accompanies the euphoria of every victory, this film captures the tireless spirit of a city that found in football a reason to dream and bond. Amongst defeats, ties, and an epic final decided by penalties, the transformative power of sport emerges. Beyond the victory, this intimate story is a tribute to unity, transformation, and dreams that define us as a society.",
      "genre": "Documental",
      "synopsis_lang": "es"
     },
@@ -798,6 +809,7 @@
      "poster": "/assets/villadelcine-2026/far.jpg",
      "posterSource": "oficial",
      "synopsis": "Un estudio táctil de un minuto sobre la deconstrucción, los bosques metálicos del valle de Ferganá y la oscuridad que la civilización humana crea a su alrededor.",
+     "synopsis_en": "A one-minute tactile study of deconstruction, metallic forests of Fergana Valley, and the darkness human civilization creates around itself.",
      "synopsis_lang": "es"
     },
     {
@@ -836,6 +848,7 @@
      "poster": "/assets/villadelcine-2026/grief.jpg",
      "posterSource": "oficial",
      "synopsis": "Tras la muerte de su esposa, Ángel afronta un duelo solitario en su hogar rural. Una filtración cobra fuerza hasta convertirse en una presencia abrumadora que transforma su entorno y lo empuja a tomar decisiones irracionales mientras intenta asimilar su pérdida. INTERNATIONAL UNIVERSITIES",
+     "synopsis_en": "After the death of his wife, Angel faces a lonely grief in his rural home. A leak grows as an overwhelming presence, transforming his space and pushing him to irrational decisions as he tries to come to terms with his loss.",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
     },
@@ -851,9 +864,9 @@
      "lbSlug": "i-dont-know-what-to-do",
      "tmdb_id": 1560415,
      "synopsis": "Película sobre una niña llamada Lizzie que pasa una tarde jugando con un lagarto que encontró en su jardín. Ocurre un accidente y el lagarto resulta herido. Llena de tristeza, Lizzie entierra al lagarto con delicadeza y coloca una flor sobre su tumba, poniendo de relieve su ternura y la naturaleza efímera de la vida.",
+     "synopsis_en": "“I Don’t Know What to Do” is a film about a young girl named Lizzie who spends an afternoon playing with a lizard she found in her garden. An accident occurs, and the lizard is hurt. Filled with sadness, Lizzie gently buries the lizard and places a flower on its grave, highlighting her tenderness and the fleeting nature of life.",
      "genre": "Animación",
-     "synopsis_lang": "es",
-     "synopsis_en": "A young girl named Lizzie spends an afternoon playing with a lizard she found in her garden. An accident occurs, and the lizard is hurt. Filled with sadness, Lizzie gently buries the lizard and places a flower on its grave, highlighting her tenderness and the fleeting nature of life."
+     "synopsis_lang": "es"
     },
     {
      "title": "Lost Fragments of a Seizure",
@@ -865,6 +878,7 @@
      "poster": "/assets/villadelcine-2026/lost-fragments-of-a-seizure.jpg",
      "posterSource": "oficial",
      "synopsis": "A través de un montaje de material de archivo, Reem busca los recuerdos perdidos durante su primera crisis epiléptica. Esta película poética explora la frágil experiencia de las convulsiones, convirtiendo el acto de recordar en una poderosa resistencia contra el olvido. INTERNATIONAL UNIVERSITIES",
+     "synopsis_en": "A series of questions and statements unfolds around the experience and revelation of living with epilepsy. Through a collage of archival footage and fragmented images, Reem searches for the memory she lost during her first seizure. The film weaves together fragments that evoke the poetic and fragile symbols surrounding a convulsion, the before, the in-between and the after. Childhood and memory accompany this journey, where the act of remembering becomes a way of resisting oblivion and confronting the fleeting nature of a seizure.",
      "genre": "Animación y Experimental",
      "synopsis_lang": "es"
     },
@@ -877,6 +891,7 @@
      "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
      "posterSource": "oficial",
      "synopsis": "Tatao crece junto a su abuela Alba, unidos por una rutina que da forma a su vida cotidiana. Cuando la memoria empieza a desvanecerse, su relación se transforma, revelando cómo el amor perdura incluso a medida que los recuerdos desaparecen lentamente. INTERNATIONAL UNIVERSITIES",
+     "synopsis_en": "Tatao grows up alongside his grandmother Alba, held together by a routine that shapes their everyday life. When memory begins to fade, their relationship transforms, revealing how love endures even as memories slowly disappear.",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
     },
@@ -889,6 +904,7 @@
      "poster": "/assets/villadelcine-2026/beyond-the-end.jpg",
      "posterSource": "oficial",
      "synopsis": "A menudo, aquello que nos repugna es también lo que nos atrae, y a veces esta fascinación puede llevarnos a reflexionar sobre temas que, en el fondo, nos dan miedo... como la muerte. Sin embargo, la muerte forma parte de nosotros tanto como la vida; ambas coexisten de manera natural. Quizás por eso no deberíamos temerle tanto.",
+     "synopsis_en": "Often, what disgusts us is also what attracts us and sometimes this fascination can lead us to reflect on subjects we’re mostly afraid of… like death. However death is part of us just like life, they coexist in a natural sense. Perhaps, this is why we should not be so afraid of it.",
      "synopsis_lang": "es"
     }
    ]
@@ -925,9 +941,9 @@
      "lbSlug": "reliefs-2025",
      "tmdb_id": 1469210,
      "synopsis": "Carlos se acerca a la mediana edad atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, padece un dolor incapacitante que solo se alivia con las aguas cálidas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio supremo para que ambos puedan transitar hacia un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos.",
+     "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
      "genre": "Ficción",
      "synopsis_lang": "es",
-     "synopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
      "title_en": "Reliefs"
     },
     {
@@ -954,9 +970,9 @@
      "lbSlug": "tuktu-father-maize",
      "tmdb_id": 1592955,
      "synopsis": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra.",
+     "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
      "genre": "Ficción y Cultura",
      "synopsis_lang": "es",
-     "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
      "title_en": "Tuktu, Father Maize"
     },
     {
@@ -968,6 +984,7 @@
      "poster": "/assets/villadelcine-2026/a-burning-turret.jpg",
      "posterSource": "oficial",
      "synopsis": "Tras un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una anciana agricultora, y su nieta Alejandra. Después de esconderlo en su rancho, Yolanda debe decidir si ayudarlo —poniendo en riesgo sus propias vidas—, mientras Alejandra sigue la pista de sus propias sospechas.",
+     "synopsis_en": "After a violent confrontation, a wounded soldier is rescued by Yolanda, an elderly farmer, and her granddaughter Alejandra. After hiding him in their ranch, Yolanda must decide whether she should help him, risking their own lives, while Alejandra pursues her own suspicions.",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
     }
@@ -1013,6 +1030,7 @@
      "poster": "/assets/villadelcine-2026/enemy-in-the-mirror.jpg",
      "posterSource": "oficial",
      "synopsis": "Camilo, a young guitarist grieving his last relationship and broken band, faces his greatest fear of being alone. He finds apparent relief when he meets Sol and joins her religious cult. However, the group's contradictions eventually make him realize that to find inner peace, he must distance himself from everyone—even Sol—to find the strength he needs within himself.",
+     "synopsis_en": "Camilo, a young guitarist who is grieving the end of his last relationship and the break-up of his band, faces his greatest fear, being alone. When he meets Sol, a charming woman, he finds apparent relief in a religious cult of which she is a member. Gradually, he becomes more involved in the group, but the contradictions of the cult make him realise that, to find inner peace, he must distance himself from everyone, even Sol, finding in his own reflection the strength he was looking for.",
      "genre": "Viaje Personal",
      "synopsis_lang": "es"
     },
@@ -1025,6 +1043,7 @@
      "poster": "/assets/villadelcine-2026/on-hold.jpg",
      "posterSource": "oficial",
      "synopsis": "*On Hold* sigue a Umesh Shukla, un vendedor de 40 años, durante el mismo día en que pierde su empleo. Atrapado en el caos implacable de Bombay, se ve llevado al límite por llamadas telefónicas que revelan deudas crecientes y relaciones tensas. Dividido entre la dignidad y la desesperación, lucha por sobrevivir al ritmo incansable de la ciudad sin derrumbarse.",
+     "synopsis_en": "On Hold follows Umesh Shukla, a 40-year-old salesman, on the very day he is fired from his job. Thrown into sudden uncertainty, he finds himself caught in the relentless chaos of Mumbai—crowded local trains, the metro, traffic, and constant city noise. Surrounded by this relentless noise and a series of back-to-back phone calls about mounting debt, strained relationships, and an uncertain future, he is pushed to his limits. As the day unfolds, each call reveals a new layer of his reality, deepening the pressure around him.",
      "genre": "Ficción y Experimental",
      "synopsis_lang": "es"
     }
@@ -1069,6 +1088,7 @@
      "poster": "/assets/villadelcine-2026/a-sweet-miracle.jpg",
      "posterSource": "oficial",
      "synopsis": "Francis, un niño optimista de origen rural, desea recuperar la alegría y la unión de su familia. La llegada de un inesperado “milagro dulce” parece traer la esperanza que tanto buscaba, pero pronto le enseñará que las soluciones mágicas no siempre son lo que parecen.",
+     "synopsis_en": "Francis, an optimistic boy from a rural background, tries to restore unity and happiness to his home despite his parents’ lack of motivation and conflicts. Everything changes with the arrival of a “sweet miracle,” which seems like a ray of hope but ends up turning into something much worse",
      "synopsis_lang": "es"
     },
     {
@@ -1080,6 +1100,7 @@
      "poster": "/assets/villadelcine-2026/just-another-bird.jpg",
      "posterSource": "oficial",
      "synopsis": "Después de sufrir un accidente en la ciudad, Raquelita, una paloma nativa colombiana, encuentra refugio en la ventana de Tomás. Mientras el niño la acompaña en su recuperación, Raquelita emprende un viaje poético por la ciudad y descubre personajes, pequeños detalles y formas de vida que suelen pasar inadvertidas.",
+     "synopsis_en": "Raquelita, a native Colombian dove injured after an accident in the city, finds refuge at Tomás’s window, where the boy accompanies her as she heals. From that encounter, Raquelita begins a poetic journey through the city, discovering characters, lives, details invisible to others, and her place in the world.",
      "synopsis_lang": "es"
     }
    ]
@@ -1143,6 +1164,7 @@
      "poster": "/assets/villadelcine-2026/behind-the-door.jpg",
      "posterSource": "oficial",
      "synopsis": "Leo, que llega tarde para tomar su tren, queda atrapado en la habitación de su hotel cuando una voz misteriosa afirma estar escondida en el baño. La frenética llamada que hace a su esposa se convierte rápidamente en una pesadilla surrealista de celos y malentendidos. Ambientada entre París y Bretaña, *Derrière la Porte* combina magistralmente el suspense sobrenatural y la comedia doméstica tras una única puerta entreabierta.",
+     "synopsis_en": "Trapped inside a hotel room called the White Room, Leo is running late for his train when a simple problem becomes something far more disturbing. A strange girl’s voice from reception claims she is already inside his room, hidden in the bathroom. As panic rises, Leo calls his wife for help, only to be caught in a surreal misunderstanding that turns fear into jealousy, and jealousy into nightmare. Moving between Paris and Brittany, DERRIÈRE LA PORTE is a family-made supernatural short where domestic comedy, eerie suspense, and a creeping sense of unreality collide behind a half-open door.",
      "genre": "Ficción y Horror",
      "synopsis_lang": "es"
     },
@@ -1168,6 +1190,7 @@
      "poster": "/assets/villadelcine-2026/nahuales.jpg",
      "posterSource": "oficial",
      "synopsis": "En un pueblo aparentemente tranquilo, una noche de violencia desata el horror en una cantina, donde una joven lucha por sobrevivir al ataque de una criatura ancestral. Mientras se propagan los rumores sobre un monstruo, un viejo agricultor niega obstinadamente la existencia de los nahuales.",
+     "synopsis_en": "In a seemingly quiet town, a night of violence unleashes horror in a cantina, where a young woman fights to survive an attack by an ancient creature. As rumors spread about a monster, an old farmer stubbornly denies the existence of Nahuales.",
      "genre": "Ficción y Horror / Triller",
      "synopsis_lang": "es"
     },
@@ -1181,6 +1204,7 @@
      "poster": "/assets/villadelcine-2026/4-minutes.jpg",
      "posterSource": "oficial",
      "synopsis": "Cuatro amigos se ven arrastrados hacia un destino misterioso y explosivo.",
+     "synopsis_en": "Four friends are thrust into a mysterious and explosive destiny.",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
     },
@@ -1194,6 +1218,7 @@
      "poster": "/assets/villadelcine-2026/lens-ai-short-film.jpg",
      "posterSource": "oficial",
      "synopsis": "Cuando Alex, de nueve años, descubre LENS —un misterioso prototipo capaz de mostrar realidades alternativas—, su familia se convierte en el objetivo de despiadados agentes de operaciones especiales. Mientras huyen a través de desolados campos de maíz, Alex, su hermano Jim y su madre deben arriesgarlo todo para proteger a su nuevo amigo y liberar su verdadero potencial.",
+     "synopsis_en": "When nine-year-old Alex discovers LENS—a mysterious prototype capable of showing alternative realities—her family becomes the target of ruthless special ops agents. Fleeing across desolate cornfields, Alex, her brother Jim, and their mother must risk everything to protect their new friend and unlock its true potential.",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
     },
@@ -1207,6 +1232,7 @@
      "poster": "/assets/villadelcine-2026/pros-and-cons-of-daydreaming.jpg",
      "posterSource": "oficial",
      "synopsis": "La tendencia a soñar despierto de un niño imaginativo interfiere con sus tareas escolares, lo que lleva a sus estrictos padres a retirarle todos sus juguetes y distracciones. Aunque su rendimiento académico mejora, su chispa creativa se apaga, hasta que un cachorro cariñoso que conoce reaviva su sentido del asombro y la compañía.",
+     "synopsis_en": "The story follows an imaginative boy whose constant daydreaming hinders his performance in school and daily activities. His strict parents, seeking discipline, remove all distractions from his room, including his toys and guitar, hoping to encourage reflection. Though his academic results improve, his creative spark fades until a gentle puppy he meets on his way to school rekindles his sense of wonder and companionship.",
      "synopsis_lang": "es"
     },
     {
@@ -1232,6 +1258,7 @@
      "poster": "/assets/villadelcine-2026/aguapanela.jpg",
      "posterSource": "oficial",
      "synopsis": "En un universo que fusiona la mitología colombiana y la griega, Miguel es perseguido implacablemente por un Cupido alado. Fortalecido por un cáliz celestial de aguapanela, obsequio de dos deidades musicales, emprende una misión de venganza contra el amor mismo. Sin embargo, justo cuando cree haber triunfado, una última flecha lo alcanza, demostrando que, a fin de cuentas, el amor es ineludible.",
+     "synopsis_en": "In a universe blending Colombia and Greek mythology, Miguel is attacked by a Cupid in sandals and fabric wings who tries to shoot him with an arrow. During this chase, Miguel receives a chalice of aguapanela from David and Manuel, musical deities. Charged with celestial energy, he embarks on his revenge against love. But just when he thinks he has won, one last arrow strikes him… no matter how fast you run, you can’t escape love",
      "genre": "Video Musical",
      "synopsis_lang": "es"
     },
@@ -1332,6 +1359,8 @@
     {
      "title": "Monte curandero",
      "director": "Andrés Felipe Velasco",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "9 min",
      "poster": "/assets/villadelcine-2026/monte-curandero.jpg",
      "posterSource": "oficial",
@@ -1380,6 +1409,7 @@
      "poster": "/assets/villadelcine-2026/independence.jpg",
      "posterSource": "oficial",
      "synopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+     "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son’s irresponsibility and her family’s ingratitude, finally seeking her independence.",
      "genre": "Ficción",
      "synopsis_lang": "es"
     },
@@ -1392,6 +1422,7 @@
      "poster": "/assets/villadelcine-2026/cos-de-vidre.jpg",
      "posterSource": "oficial",
      "synopsis": "Una adolescente brillante, atrapada entre la presión familiar y las redes sociales, se ve arrastrada —junto a su mejor amiga— a una espiral de autoexigencia que pone en riesgo su salud, su identidad y su vida.",
+     "synopsis_en": "A brilliant teenager, caught between family pressure and social media, is drawn—together with her best friend—into a spiral of self-demand that puts her health, her identity, and her life at risk.",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
     },
@@ -1407,9 +1438,9 @@
      "lbSlug": "autokar",
      "tmdb_id": 1405315,
      "synopsis": "En la década de 1990, Agata, de ocho años, deja Polonia para trasladarse a Bélgica. Su perspectiva transforma la realidad migratoria en una experiencia iniciática.",
+     "synopsis_en": "In the 1990s, 8-year-old Agata leaves Poland for Belgium. Her perspective transforms the migratory reality into an initiatory experience.",
      "genre": "Animación",
-     "synopsis_lang": "es",
-     "synopsis_en": "In the 1990s, eight-year-old Agata leaves her Polish homeland to take a bus to Belgium by herself. Anxious about the journey, she begins to write a letter to her father who has stayed behind in Poland. When she drops her pencil and it rolls away, Agata is forced to overcome her shyness. Searching for it, she weaves her way between the rows of seats and plunges into a fantastical world inhabited by strange half-human, half-animal passengers. Agata’s perceptions transform the reality of migration into an imaginative experience of initiation."
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -1456,6 +1487,7 @@
      "poster": "/assets/villadelcine-2026/human.jpg",
      "posterSource": "oficial",
      "synopsis": "¿Pueden la tecnología moderna y las experiencias virtuales reconectarnos profundamente con nuestra propia especie y con el planeta? HUMAN explora esta profunda cuestión a través de una experiencia inmersiva de XR con seguimiento manual, diseñada para Oculus Quest 3. Los participantes se embarcan en un viaje espacial virtual para interactuar con las sondas Voyager y su icónico Disco de Oro.",
+     "synopsis_en": "Can modern technology humanize us? Can a virtual experience connect us more deeply with our own species and our planet? These questions guided the research and production of this work. HUMAN is an XR hand-tracking experience designed for the OCULUS QUEST 3, offering an innovative interaction with the history of the Voyager I and II probes and their iconic Golden Record. HUMAN is a XR hand-tracking experience designed for the OCULUS QUEST 3, offering an innovative interaction with the history of the Voyager I and II probes and their iconic Golden Record.",
      "genre": "VR",
      "synopsis_lang": "es"
     },
@@ -1469,6 +1501,7 @@
      "poster": "/assets/villadelcine-2026/protecting-our-territory-360.jpg",
      "posterSource": "oficial",
      "synopsis": "Combina un video en 360 grados —que sitúa al espectador en el papel de «Cachufina», una compañera de clase imaginaria— con un registro del «detrás de cámaras» que muestra cómo los estudiantes peruanos utilizaron una cámara de acción y teléfonos móviles para cocrear una experiencia inmersiva sobre sus vidas y el mundo natural.",
+     "synopsis_en": "Protecting Our Territory 360” combines a 360 video that positions the viewer as the imaginary classmate “Cachufina” with behind-the-scenes documentation of how the Peruvian students used an action camera and mobile phones to co-create an immersive experience of their lives and the natural world. Bishu Cine is a non-profit cultural association that uses film, audiovisual media, the arts, and new information and communication technologies as tools for social change. Together with the Great Ingenious Readers Club of Carabayllo (located on the outskirts of Lima, Peru), Bishu Cine created the participatory exhibition “Protecting Our Territory and Environment,” which gave twenty young people their first virtual reality experience. Bishu Cine began by adapting the interests of the club’s members to a story based on everyday spaces, such as their soccer field and the nearby Bed of Clouds in the Spring Hills, and then helped them film scenes with a specialized camera to capture 360-degree landscapes and transcoded the footage so they could explore them with virtual reality headsets. The experience strengthened the young people’s collective sense of belonging and care for their surroundings and emphasized the importance of preserving environmental memories through their own perspectives.",
      "genre": "VR",
      "synopsis_lang": "es"
     }
@@ -1565,6 +1598,7 @@
      "lbSlug": "witch-and-frog",
      "tmdb_id": 1772239,
      "synopsis": "Una joven aspirante a bruja quiere aprender magia, así que decide estudiar con una hechicera experimentada. Se presenta en su casa, pero las cosas no salen exactamente según lo planeado.",
+     "synopsis_en": "A young witch wannabe wants to learn some magic, so she decides to study with an experienced sorceress. She shows up at her place — but things don’t exactly go as planned.",
      "genre": "Animación",
      "synopsis_lang": "es"
     },
@@ -1619,9 +1653,9 @@
      "lbSlug": "tv-entreaberta",
      "tmdb_id": 1661195,
      "synopsis": "Una mujer es abducida al interior de su televisor, donde es atormentada por una especie de presentador estadounidense al estilo de los dibujos animados. A medida que atraviesa diversos géneros, el personaje va siendo asimilado gradualmente por este sistema televisivo.",
+     "synopsis_en": "A woman is abducted to the insides of her TV, where she is tormented by some sort of cartoony American host. Going through numerous genres, the character is gradually being assimilated to this television system.",
      "genre": "Discapacidades",
-     "synopsis_lang": "es",
-     "synopsis_en": "A woman is abducted into her TV, where she is tormented by a caricatured American presenter. Moving through various television genres, the character is gradually assimilated into the system."
+     "synopsis_lang": "es"
     },
     {
      "title": "Via Crusis",
@@ -1635,9 +1669,9 @@
      "lbSlug": "via-crusis",
      "tmdb_id": 1697484,
      "synopsis": "Placeres carnales condenados dentro de nosotras.",
+     "synopsis_en": "Veal desires that are condemned deep within us.",
      "genre": "Animación",
-     "synopsis_lang": "es",
-     "synopsis_en": "Veal desires that are condemned deep within us."
+     "synopsis_lang": "es"
     },
     {
      "title": "Final Act",
@@ -1648,6 +1682,7 @@
      "poster": "/assets/villadelcine-2026/final-act.jpg",
      "posterSource": "oficial",
      "synopsis": "Tras presenciar la muerte de una famosa actriz, Mateus Santos, un pasante de periodismo, tiene la oportunidad única de investigar el caso junto a su ídolo, la reconocida periodista Miriam Matos. Juntos interrogan a tres sospechosos en busca de la verdad sobre el motivo del asesino.",
+     "synopsis_en": "After witnessing the death of a famous actress, Mateus Santos, a journalism intern, has the unique chance to investigate the case alongside his idol, the renowned journalist Miriam Matos. Together, they interrogate three suspects in pursuit of the truth behind the killer’s motive.",
      "synopsis_lang": "es"
     },
     {
@@ -1662,9 +1697,9 @@
      "lbSlug": "la-presencia-de-blanco",
      "tmdb_id": 1753870,
      "synopsis": "En una escuela rural, cuatro niños enfrentan la leyenda de \"La Presencia de Blanco\". Lo que empieza como un juego se transforma en pesadilla cuando, al decidir no huir, descubren una aterradora verdad que los aguarda en la oscuridad.",
+     "synopsis_en": "In a forgotten town, legend comes to life after dark. Four children face the mystery of “The White Presence,” a ghost that haunts the rural school.",
      "genre": "Ficción",
-     "synopsis_lang": "es",
-     "synopsis_en": "In a forgotten town, legend comes to life after dark. Four children face the mystery of “The White Presence,” a ghost that haunts the rural school."
+     "synopsis_lang": "es"
     },
     {
      "title": "Tiro Libre",
@@ -1701,6 +1736,7 @@
      "poster": "/assets/villadelcine-2026/sun-coffee.jpg",
      "posterSource": "editorial",
      "synopsis": "Un café para recalentar, pero sin más electricidad: un problema que llevará a estudiantes de secundaria por distintos encuentros y conversaciones en torno a la energía fotovoltaica.",
+     "synopsis_en": "A coffee to reheat, but no more electricity: a problem that will lead high school students to various meetings and discussions around photovoltaic energy…",
      "genre": "Ficción",
      "synopsis_lang": "es"
     }
@@ -1737,9 +1773,9 @@
      "lbSlug": "sukua",
      "tmdb_id": 1456197,
      "synopsis": "Pirimín, un niño kogui, recibe de regalo una pistola de agua. Esa noche, escucha a su padre manifestar su inconformidad , cuando unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe que hacer con el juguete.",
+     "synopsis_en": "When a Kogui child is given a water pistol as a toy, he begins to explore the familiar spaces of his territory with a new look. Sukua fluidly travels through the exterior and interior of his home and some remnants of the community that are manifested around the child's playful sweetness. The strangeness of the toy adds, at the same time, childish tenderness and noisy tension by its contrast with the environment and by the suggested violence that morally affects the father.",
      "genre": "Ficción y Drama",
-     "synopsis_lang": "es",
-     "synopsis_en": "When a Kogui child is given a water pistol as a toy, he begins to explore the familiar spaces of his territory with a new look. Sukua fluidly travels through the exterior and interior of his home and some remnants of the community that are manifested around the child's playful sweetness. The strangeness of the toy adds, at the same time, childish tenderness and noisy tension by its contrast with the environment and by the suggested violence that morally affects the father."
+     "synopsis_lang": "es"
     },
     {
      "title": "O Cravista",
@@ -1753,9 +1789,9 @@
      "lbSlug": "the-harpsichordist",
      "tmdb_id": 1621972,
      "synopsis": "A punto de cumplir cien años, el clavecinista y director de orquesta Roberto De Regina rememora su trayectoria pionera en la reintroducción de la música clásica antigua en Brasil. A través de recuerdos personales y logros artísticos, reflexiona sobre el legado que construyó mientras se enfrentaba a prejuicios y resistencias culturales. Un retrato conmovedor sobre el arte, el tiempo y la valentía de romper barreras y transformar tradiciones.",
+     "synopsis_en": "Nearing his 100th birthday, harpsichordist and conductor Roberto De Regina revisits his pioneering journey in reintroducing early classical music to Brazil. Through personal memories and artistic achievements, he reflects on the legacy he built while facing prejudice and cultural resistance. A poignant portrait of art, time, and the courage to break barriers and transform traditions.",
      "genre": "Documental",
      "synopsis_lang": "es",
-     "synopsis_en": "Nearing his 100th birthday, harpsichordist and conductor Roberto De Regina revisits his pioneering journey in reintroducing early classical music to Brazil. Through personal memories and artistic achievements, he reflects on the legacy he built while facing prejudice and cultural resistance. A poignant portrait of art, time, and the courage to break barriers and transform traditions.",
      "title_en": "The Harpsichordist"
     }
    ]
@@ -1791,6 +1827,8 @@
     {
      "title": "Momentos en movimiento. Primeros pasos del ballet en Colombia",
      "director": "Marybel Acevedo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "19 min",
      "poster": "/assets/villadelcine-2026/momentos-en-movimiento-primeros-pasos-del-ballet-en-colombia.jpg",
      "posterSource": "oficial",
@@ -1809,9 +1847,9 @@
      "lbSlug": "heat-wave-2025",
      "tmdb_id": 1444298,
      "synopsis": "Entre el polvo y el calor se encuentra La Hondura, un pueblo olvidado, donde la tensión se siente como electricidad en el aire. Allí, La Mona, una paramilitar, impone el orden. Sin embargo, no puede dominar la naturaleza de su cuerpo y la menstruación la doblega hasta el punto de postrarla en la cama.",
+     "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
      "genre": "Drama",
      "synopsis_lang": "es",
-     "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
      "title_en": "Heat Wave"
     }
    ]
@@ -1846,6 +1884,7 @@
      "poster": "/assets/villadelcine-2026/catatumbo-house-of-thunder-memory-and-dignity.jpg",
      "posterSource": "oficial",
      "synopsis": "El Catatumbo es una subregión de Norte de Santander, situada en la frontera con Venezuela. Sus selvas, montañas y ríos albergan el singular Relámpago del Catatumbo, que ilumina el cielo cada noche. La violencia se intensificó a finales de la década de 1970, cuando grupos guerrilleros como el ELN, el EPL y las FARC incrementaron sus acciones armadas mediante asesinatos, secuestros y tomas de poblaciones.",
+     "synopsis_en": "Catatumbo is a subregion of Norte de Santander, on the border with Venezuela. Its jungles, mountains, and rivers shelter the unique Catatumbo Lightning, which lights the skies every night. Violence escalated in the late 1970s, when guerrilla groups like the ELN, EPL, and FARC increased armed actions with killings, kidnappings, and town takeovers.",
      "genre": "Ficción y Ciencia ficción",
      "synopsis_lang": "es"
     },
@@ -1871,6 +1910,7 @@
      "poster": "/assets/villadelcine-2026/life-is-a-chessboard-every-move-is-final.jpg",
      "posterSource": "editorial",
      "synopsis": "En un vasto mundo de fantasía oriental, un cultivador solitario sostiene un objeto ornamental que despierta recuerdos conmovedores de su hermano, un amigo íntimo y la mujer a quien amaba. Mientras el recuerdo y la realidad se entretejen, el tiempo se fragmenta durante una partida de Go evocada, dejándolo contemplar el cielo y abrazar en silencio cada emoción que transcurre.",
+     "synopsis_en": "No Regrets in the Fall A lone cultivator sits at the edge of a cliff, surrounded by rolling hills of wildflowers and mountains. The camera wanders through this vast eastern fantasy world before returning to the ornament held in his hands. The ornament unlocks memory — an elder brother’s silhouette moving through a bustling ancient street, a close friend gazing quietly from a pavilion railing, a beloved woman placing the ornament into his palm, and a game of Go beneath an ancient tree. Memory and reality interweave until time shatters at the moment a stone is placed on the board. He looks up at the sky, letting every emotion pass through him. Then he rises, closes his hand around the ornament, and reaches for the dragon. Together they break through the mountain mist — and for the first time, the world beyond the mountains is revealed: a vast, living, human world stretching to the sea. No regrets after the move. Not because there is nothing to regret — but because even in regret, you place the stone anyway. Technical Disclosure: This short film is driven by an original concept, with world-building, script, and storyboards entirely designed by the director. Visuals and music were created using Generative AI tools (base images via Nanobanana pro, video and raw SFX via Kling AI, and music via Suno). All audio fine-tuning, final video editing, and narrative pacing were manually executed by the director in Premiere Pro to fulfill a highly specific creative vision.",
      "genre": "Ficción y Ciencia Ficción",
      "synopsis_lang": "es"
     },
@@ -1897,6 +1937,7 @@
      "poster": "/assets/villadelcine-2026/maleza.jpg",
      "posterSource": "oficial",
      "synopsis": "Guiada por el espíritu de su gato fallecido, una sanadora y partera solitaria, dedicada a preservar la vida, sufre una profunda conmoción interior cuando una joven desesperada llega a su puerta. Durante una noche de cruda confrontación y dolor, Alba comprende que ayudar a alguien significa caminar a su lado, no tomar decisiones por esa persona.",
+     "synopsis_en": "Guided by the spirit of her deceased cat, a reclusive healer and midwife devoted to preserving life suffers a profound inner rupture when a desperate young woman arrives at her door. During a night of raw confrontation and pain, Alba comes to realize that helping someone means walking beside them—not making their choices for them.",
      "genre": "Ficción y Ciencia ficción",
      "synopsis_lang": "es"
     },
@@ -1923,6 +1964,7 @@
      "poster": "/assets/villadelcine-2026/shorts.jpg",
      "posterSource": "oficial",
      "synopsis": "Tras un caótico episodio de acoso callejero mientras regresaba a casa, Samir, de 17 años, lucha contra sentimientos abrumadores de vergüenza y culpa. A medida que el recuerdo transforma silenciosamente su rutina diaria, un simple par de pantalones cortos se convierte en un doloroso recordatorio de una experiencia que no logra dejar atrás.",
+     "synopsis_en": "After a chaotic episode of street harassment on his way home, 17-year-old Samir struggles with overwhelming feelings of shame and self-blame. As the memory quietly reshapes his daily routine, a simple pair of shorts becomes a painful reminder of an experience he cannot leave behind.",
      "genre": "Ficción y Drama",
      "synopsis_lang": "es"
     },
@@ -1950,9 +1992,9 @@
      "lbSlug": "a-body-without-a-horse",
      "tmdb_id": 1659047,
      "synopsis": "En un intento por identificarse, un cuerpo sin caballo se desplaza a través de sus ausencias y vacíos.",
+     "synopsis_en": "Moved by a curiosity on what the body can do and searching for a playful making process, this film emerges from experimentations on the possibilities of the human body in graphic media. I wanted to shorten the distance between filmmaker and audience, so I used paper cutouts and the phone as a common and cheap shooting tool. With a narration that plays with language, the film touches on themes like the body’s possibilities, its absences and presences, humorously and deep at the same time, transitioning across different media. Working with minimal equipment pushed me to embrace improvisation, and I hope this sense of spontaneity remains visible for the audience to enjoy the sense of play and curiosity that shaped the film.",
      "genre": "Fantasía",
-     "synopsis_lang": "es",
-     "synopsis_en": "Trying to understand what a body without a horse is by seeing what it’s capable of, the film shows a very present absence. With minimalist and handcrafted visuals, we follow the body as it performs a series of actions, yet remaining horseless. Playing with choreographic movements, language and its metaphors, the film explores how absence can shape the way we move, desire, forget and remember."
+     "synopsis_lang": "es"
     },
     {
      "title": "Benditos los Viejos",
@@ -1964,6 +2006,7 @@
      "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
      "posterSource": "oficial",
      "synopsis": "En una maloka, una mujer atraviesa un ritual de gestación y nacimiento que conecta su cuerpo con la tierra, los ancestros y la memoria colectiva. Una celebración poética de la vida y de los ciclos naturales que nos unen a las generaciones que nos precedieron.",
+     "synopsis_en": "The music video for Benditos los Viejos presents a symbolic narrative about the birth of life as an act of gratitude toward ancestors and collective memory. The story takes place in a maloka, where a woman undergoes a ritual process representing the spiritual and physical gestation of a new existence. Accompanied by fire, dance, and the intervention of clay drawings on her abdomen, the protagonist experiences an intimate transition that connects her body with the earth and with ancestral wisdom. The climax of the video transforms the moment of childbirth into a visual metaphor of life emerging from nature: aerial images of mountains, waterfalls, and flowing rivers evoke the vital current that runs through territories and generations. In this way, the video proposes a poetic narrative in which birth symbolizes not only the arrival of a new being, but also the continuity of memory, gratitude toward those who came before, and the profound connection between the human body and the natural cycles of the Earth.",
      "genre": "Video Musical",
      "synopsis_lang": "es"
     }
@@ -2084,6 +2127,7 @@
      "poster": "/assets/villadelcine-2026/steppe.jpg",
      "posterSource": "oficial",
      "synopsis": "El joven agente de policía Francisco Revenga es enviado a cubrir un puesto de guardia en plena estepa. De camino, se detiene en un parador para comprar comida; allí graban con sus teléfonos móviles unas imágenes comprometedoras que pondrán a Francisco ante un dilema moral.",
+     "synopsis_en": "The young police officer Francisco Revenga is sent to cover a guard in the middle of the steppe. On the way he stops at a parador to buy food; There they record compromising images on their cell phones that will put Francisco in a moral dilemma.",
      "genre": "Ficción",
      "synopsis_lang": "es"
     },
@@ -2096,6 +2140,7 @@
      "poster": "/assets/villadelcine-2026/kmkz-wild-free-and-brave.jpg",
      "posterSource": "oficial",
      "synopsis": "Combinando ficción y documental, KMKZ sigue a Kamila, una joven que graba con su teléfono móvil las hostiles calles de Bogotá. Cuando su amiga Leonor desaparece, las grabaciones crudas y en formato vertical de Kamila se transforman en un archivo desafiante de memoria y resistencia. En última instancia, esta película visceral actúa como un manifiesto político que desafía al cine latinoamericano a confrontar las duras realidades de la juventud marginada.",
+     "synopsis_en": "At the crossroads of fiction and documentary, KMKZ: Wild, Free, and Brave tells the story of Kamila, a young woman who films the hostile streets of Bogotá with her cellphone. Kamila finds refuge in Ruco and Alexa, urban guardians who defy the city’s everyday violence. Through a bond with Leonor, a woman marked by time, Kamila discovers a mirror of her own fragility and strength.When Leonor disappears, Kamila is drawn into a journey that is both deeply personal and collective, where the image becomes archive, memory, and resistance. Shot in both horizontal and vertical formats, KMKZ is a manifesto film—a political and aesthetic statement that challenges the imposed frameworks of Latin American cinema. The use of vertical video is not a technical choice, but an act of defiance: a reflection of a youth that doesn’t fit in, that films with whatever tools they have, and demands to be heard in a world that turns its back on them.",
      "genre": "Juventud, Resistencia e Identidad Frente a la Violencia Urbana",
      "synopsis_lang": "es"
     }
@@ -2175,6 +2220,8 @@
     {
      "title": "Cuadrileros, orgullo y legado",
      "director": "Fabián Enrique Moreno Correa",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "duration": "26 min",
      "poster": "/assets/villadelcine-2026/cuadrileros-orgullo-y-legado.jpg",
      "posterSource": "oficial",
@@ -2203,8 +2250,8 @@
      "lbSlug": "sheltering-gestures",
      "tmdb_id": 1713804,
      "synopsis": "Videodanza que rescata la tradicional Danza de las Tabliteras, revivida por jóvenes bailarines que aprendieron sus movimientos y ritmos de los últimos ancianos que aún conservaban esta tradición de San Antonio, Bolívar.",
-     "synopsis_lang": "es",
-     "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit."
+     "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -2240,9 +2287,9 @@
      "lbSlug": "comparsa-2025",
      "tmdb_id": 1480404,
      "synopsis": "En Guatemala, las hermanas Lesli y Lupe movilizan a su comunidad a través del arte tras la trágica muerte de 41 niñas en un centro de acogida estatal. Al organizar una vibrante comparsa callejera, protestan con valentía contra la violencia sistémica hacia las mujeres y reivindican los espacios públicos. Filmada a lo largo de 15 años, *Comparsa* es un retrato conmovedor de la sororidad, la resiliencia y el poder sanador del arte.",
+     "synopsis_en": "Comparsa fully immerses audiences in the intense world of Ciudad Peronia, Guatemala, where sisters Lesli and Lupe use art and performance to rally local youth and heal deep wounds. After 41 girls are killed in a State-run “Safe Home” and the government refuses to act, the sisters respond with a community comparsa—an exuberant street performance featuring towering puppets, fire-breathing stilt walkers, and thundering drums. With brave vulnerability, they expose a power structure that permits and commits violence against women, and they open up about surviving violence in their own home. Their youth movement takes to the streets, confronting corruption and reclaiming public space for women and girls. Rooting their efforts in joy and community care, they find healing for themselves along the way. Comparsa is built on a 15-year relationship between the subjects and the film team to offer a stirring portrait of sisterhood, peacebuilding, and the transformational power of art.",
      "genre": "Documental",
-     "synopsis_lang": "es",
-     "synopsis_en": "From the shadows of a Guatemalan neighbourhood scared into silence, two sisters lead a luminous rebellion—unleashing joy, art, and radical truth in a fight for survival."
+     "synopsis_lang": "es"
     },
     {
      "title": "Language Of The Wind",
@@ -2301,6 +2348,7 @@
      "poster": "/assets/villadelcine-2026/human.jpg",
      "posterSource": "oficial",
      "synopsis": "¿Pueden la tecnología moderna y las experiencias virtuales reconectarnos profundamente con nuestra propia especie y con el planeta? HUMAN explora esta profunda cuestión a través de una experiencia inmersiva de XR con seguimiento manual, diseñada para Oculus Quest 3. Los participantes se embarcan en un viaje espacial virtual para interactuar con las sondas Voyager y su icónico Disco de Oro.",
+     "synopsis_en": "Can modern technology humanize us? Can a virtual experience connect us more deeply with our own species and our planet? These questions guided the research and production of this work. HUMAN is an XR hand-tracking experience designed for the OCULUS QUEST 3, offering an innovative interaction with the history of the Voyager I and II probes and their iconic Golden Record. HUMAN is a XR hand-tracking experience designed for the OCULUS QUEST 3, offering an innovative interaction with the history of the Voyager I and II probes and their iconic Golden Record.",
      "genre": "VR",
      "synopsis_lang": "es"
     },
@@ -2314,6 +2362,7 @@
      "poster": "/assets/villadelcine-2026/protecting-our-territory-360.jpg",
      "posterSource": "oficial",
      "synopsis": "Combina un video en 360 grados —que sitúa al espectador en el papel de «Cachufina», una compañera de clase imaginaria— con un registro del «detrás de cámaras» que muestra cómo los estudiantes peruanos utilizaron una cámara de acción y teléfonos móviles para cocrear una experiencia inmersiva sobre sus vidas y el mundo natural.",
+     "synopsis_en": "Protecting Our Territory 360” combines a 360 video that positions the viewer as the imaginary classmate “Cachufina” with behind-the-scenes documentation of how the Peruvian students used an action camera and mobile phones to co-create an immersive experience of their lives and the natural world. Bishu Cine is a non-profit cultural association that uses film, audiovisual media, the arts, and new information and communication technologies as tools for social change. Together with the Great Ingenious Readers Club of Carabayllo (located on the outskirts of Lima, Peru), Bishu Cine created the participatory exhibition “Protecting Our Territory and Environment,” which gave twenty young people their first virtual reality experience. Bishu Cine began by adapting the interests of the club’s members to a story based on everyday spaces, such as their soccer field and the nearby Bed of Clouds in the Spring Hills, and then helped them film scenes with a specialized camera to capture 360-degree landscapes and transcoded the footage so they could explore them with virtual reality headsets. The experience strengthened the young people’s collective sense of belonging and care for their surroundings and emphasized the importance of preserving environmental memories through their own perspectives.",
      "genre": "VR",
      "synopsis_lang": "es"
     }
@@ -2470,7 +2519,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-21T13:48:34",
+  "fecha": "2026-09-21T14:36:34",
   "plan_sha": "d04a08ecc22a927b",
   "paso": 16,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"

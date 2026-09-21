@@ -6,8 +6,12 @@ QUÉ APORTA QUE EL PDF NO TIENE. El sitio publica una ficha por obra bajo
 `/festival-2024-2/<slug>/` —82 páginas, listadas en `wp-sitemap-posts-page-1.xml`,
 la ruta se llama así por herencia de 2024 y no por el año—. De cada una salen:
 
-  · la SINOPSIS EN INGLÉS. El PDF trae la española; juntas dan el par
-    sinopsis/sinopsis_en sin traducir nada nosotros.
+  · la SINOPSIS, en el idioma en que la entregó cada realizador. Durante toda
+    la extracción se guardó como `sinopsis_en` a secas, dando por hecho que el
+    PDF traía la española y la web la inglesa. Es falso en 37 de las 81
+    páginas, que están en español. Ahora se MIRA el texto y se archiva donde
+    corresponde; solo se nota en las obras que no tienen ficha en el PDF, y
+    «ARENAS» —la película que abre el festival— se publicaba sin una línea.
   · el AFICHE de la obra (webp subido en 2026/09).
   · el INSTAGRAM del director o de la obra, cuando lo ponen.
   · la duración como «17:40» y el país, que sirven para CONTRASTAR el PDF.
@@ -53,6 +57,45 @@ PAIS = re.compile(
     r'usa|ee\.?uu\.?|estados unidos|guatemala / usa|[a-zá-ú]+(?:\s*[,/]\s*[a-zá-ú]+)+)'
     r'\s*')
 
+
+
+# LA SINOPSIS NO SIEMPRE ESTÁ EN INGLÉS. Se decide por palabras función, que
+# son las que no cambian entre obras: si el español gana por dos o más, es
+# español. El margen evita que un título en español dentro de un texto inglés
+# («…in La Hondura…») lo vuelque. Lo que no gane claro se queda como estaba —
+# `sinopsis_en`—, que es el comportamiento de siempre y no inventa nada.
+ES_FUN = re.compile(r'\b(el|la|los|las|del|que|una|unos|unas|con|para|por|'
+                    r'su|sus|desde|hasta|entre|como|pero|sobre|donde|cuando|'
+                    r'se|es|son|está|más|también|sin|muy)\b', re.I)
+EN_FUN = re.compile(r'\b(the|of|and|to|is|are|was|were|his|her|their|with|'
+                    r'from|that|which|who|while|after|before|between|about|'
+                    r'into|through|it|its)\b', re.I)
+
+
+# …Y EL FRANCÉS COMPARTE DEMASIADO CON EL ESPAÑOL. «Le Jeune Sofiane» («Le 1er
+# juillet 2005, Zoléra reçoit un appel dans la nuit…») ganaba la cuenta del
+# español —«un», «son», «la»— y se habría publicado como sinopsis española.
+# Se comprobó contra las 81 páginas: sin este candado, 1 de 37 estaba mal.
+FR_FUN = re.compile(r'\b(le|les|des|du|dans|est|sont|une|qui|pour|avec|sur|'
+                    r'il|elle|ses|leur|mais|plus|nuit|jour|vers|chez|apr[èe]s)\b',
+                    re.I)
+
+
+def idioma(t):
+    """'es', 'en' o '' cuando no es ninguno de los dos.
+
+    El tercer caso NO es un detalle: «Le Jeune Sofiane» está en francés, y
+    darlo por inglés —que es lo que hacía este paso— publica francés bajo la
+    etiqueta English. Su sinopsis española sale del PDF, así que descartarla
+    acá no pierde nada."""
+    t = t or ''
+    es, en, fr = (len(ES_FUN.findall(t)), len(EN_FUN.findall(t)),
+                  len(FR_FUN.findall(t)))
+    if es >= en + 2 and es >= fr + 2:
+        return 'es'
+    if en >= es + 2 and en >= fr + 2:
+        return 'en'
+    return ''
 
 def baja(url, nombre):
     p = f'{CACHE}/{nombre}'
@@ -135,7 +178,10 @@ def una(slug):
            and credito != director else {}),
         **({'_duracion_arriba': dur_arriba} if dur_arriba and dur_arriba != dur else {}),
         'pais': pais, 'anio': int(anio) if re.fullmatch(r'(19|20)\d{2}', anio or '') else None,
-        'duracion_texto': dur, 'duracion_min': mins, 'sinopsis_en': sinopsis,
+        'duracion_texto': dur, 'duracion_min': mins,
+        **({'sinopsis': sinopsis} if idioma(sinopsis) == 'es'
+           else {'sinopsis_en': sinopsis} if idioma(sinopsis) == 'en'
+           else {'_sinopsis_otro_idioma': sinopsis} if sinopsis else {}),
         'afiches': afiches[:3], 'instagram': list(dict.fromkeys(igs))[:2],
         '_src': BASE + slug + '/'}
 
@@ -166,9 +212,12 @@ def main():
                'fuentes/: son 82 peticiones al sitio de un festival chico en su '
                'semana de apertura y no se repiten en cada corrida'),
         'obras': obras}, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    con_sin = sum(1 for o in obras if o['sinopsis_en'])
+    con_es = sum(1 for o in obras if o.get('sinopsis'))
+    con_sin = sum(1 for o in obras if o.get('sinopsis') or o.get('sinopsis_en'))
+    otro = sum(1 for o in obras if o.get('_sinopsis_otro_idioma'))
     con_af = sum(1 for o in obras if o['afiches'])
-    print(f'{len(obras)}/{len(slugs)} obras · {con_sin} con sinopsis EN · '
+    print(f'{len(obras)}/{len(slugs)} obras · {con_sin} con sinopsis '
+          f'({con_es} ES, {con_sin - con_es} EN, {otro} en otro idioma) · '
           f'{con_af} con afiche → {os.path.basename(OUT)}')
     if sin_leer:
         print(f'⚠ {len(sin_leer)} sin leer: ' + ', '.join(sin_leer[:6]))
