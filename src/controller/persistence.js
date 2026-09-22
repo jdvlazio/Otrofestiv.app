@@ -346,8 +346,17 @@ export function _hasLocalPlan(){
   return watchlist.size>0 || watched.size>0 || prioritized.size>0 || !!(savedAgenda&&savedAgenda.schedule&&savedAgenda.schedule.length);
 }
 
+// ── Cuenta demo para la revisión de App Store (21 sep 2026) ───────────────────
+// Guideline 2.1: el login es un código por email y el revisor no puede recibirlo.
+// Para ESTE email el código es fijo y lo canjea la Edge Function demo-auth por un
+// pase de un solo uso (mismo mecanismo que el reloj); la sesión que resulta es
+// normal. Ningún otro email pasa por acá. La cuenta solo tiene un plan de muestra.
+const DEMO_REVIEW_EMAIL='demo@otrofestiv.app';
+const _esDemo=email=>String(email||'').trim().toLowerCase()===DEMO_REVIEW_EMAIL;
+
 async function _sbSignIn(email){
   if(!_sb) return {error:'no client'};
+  if(_esDemo(email)) return {error:null}; // no se manda ningún email: el código es fijo
   const{error}=await _sb.auth.signInWithOtp({
     email,
     options:{shouldCreateUser:true}
@@ -419,7 +428,14 @@ export async function submitOTP(){
   if(!token||token.length<6){msg.textContent=t('auth_cod_hint');return;}
   btn.disabled=true;btn.textContent=t('auth_verificando');
   try{
-    const{error}=await _sb.auth.verifyOtp({email,token,type:'email'});
+    let error;
+    if(_esDemo(email)){
+      const r=await _sb.functions.invoke('demo-auth',{body:{email,code:token}});
+      const th=r?.data?.token_hash;
+      ({error}=th?await _sb.auth.verifyOtp({token_hash:th,type:'email'}):{error:r?.error||new Error('demo')});
+    } else {
+      ({error}=await _sb.auth.verifyOtp({email,token,type:'email'}));
+    }
     if(error){
       msg.textContent=t('toast_cod_mal');
       btn.disabled=false;btn.textContent=t('av_confirmar');

@@ -76,14 +76,26 @@ enum PlanComputeTests {
         check("catalogFile ficci65 → ficci-65.json", PlanCompute.catalogFile(for: "ficci65") == "ficci-65.json")
         let keys = ["2026-09-10", "2026-09-11", "2026-09-12", "2026-09-13"]
         let sat = PlanCompute.startDate(item("X", "2026-09-12", "16:08"))!
+        // En curso: hoy y el siguiente; «Hoy» y «Mañana» son ciertos.
         let pd = PlanCompute.programDays(keys, now: sat)
-        check("programDays en curso: hoy sáb, mañana dom", pd.today == "2026-09-12" && pd.tomorrow == "2026-09-13" && pd.startsOn == nil)
+        check("en curso: sáb y dom", pd.days == ["2026-09-12", "2026-09-13"])
+        check("en curso: hoy es sáb y mañana es dom", pd.todayKey == "2026-09-12" && pd.tomorrowKey == "2026-09-13")
+        // Último día: solo él, sin segunda página.
         let last = PlanCompute.programDays(keys, now: PlanCompute.startDate(item("X", "2026-09-13", "10:00"))!)
-        check("último día: sin Mañana", last.today == "2026-09-13" && last.tomorrow == nil)
-        let before = PlanCompute.programDays(keys, now: PlanCompute.startDate(item("X", "2026-09-07", "10:00"))!)
-        check("antes del festival: Hoy vacío, empieza el 10, Mañana = primer día", before.today == nil && before.startsOn == "2026-09-10" && before.tomorrow == "2026-09-10")
+        check("último día: una sola página", last.days == ["2026-09-13"] && last.todayKey == "2026-09-13")
+        // ANTES del festival (el caso que rompía: el 22 sep, con Jardín el 24, el
+        // título decía «Today»). Dos días adelante → NINGUNO es hoy ni mañana.
+        let dosAntes = PlanCompute.programDays(keys, now: PlanCompute.startDate(item("X", "2026-09-08", "10:00"))!)
+        check("no empezó: los dos primeros días", dosAntes.days == ["2026-09-10", "2026-09-11"])
+        check("no empezó: hoy no es día de festival", dosAntes.todayKey == nil)
+        check("no empezó a dos días: el primero NO es mañana", dosAntes.days.first != dosAntes.tomorrowKey)
+        // Empieza MAÑANA → ahí sí, el primer día es «Mañana».
+        let vispera = PlanCompute.programDays(keys, now: PlanCompute.startDate(item("X", "2026-09-09", "10:00"))!)
+        check("víspera: el primer día ES mañana", vispera.days.first == vispera.tomorrowKey && vispera.todayKey == nil)
+        // Terminado: el último día, y no se dice «Hoy».
         let after = PlanCompute.programDays(keys, now: PlanCompute.startDate(item("X", "2026-09-21", "10:00"))!)
-        check("terminado: nada", after.ended && after.startsOn == nil)
+        check("terminado: el último día", after.days == ["2026-09-13"] && after.todayKey == nil)
+        check("catálogo sin días: nada que mostrar", PlanCompute.programDays([], now: sat).days.isEmpty)
         check("programDays desordenados no importan", PlanCompute.programDays(keys.reversed(), now: sat) == pd)
         let cat = [item("A", "2026-09-12", "11:30", duration: "90 min"), item("B", "2026-09-12", "16:00", duration: "70 min"),
                    item("C", "2026-09-12", "16:15", duration: "70 min"), item("D", "2026-09-12", "17:15"), item("E", "2026-09-13", "08:15")]
@@ -101,7 +113,6 @@ enum PlanComputeTests {
 
         // ── Programa: copy y día corto (22 sep 2026) ──────────────────────────
         let en = Lang.current == .en
-        check("startsOn según idioma", L.startsOn(en ? "THU 10" : "JUE 10") == (en ? "Starts Thu 10" : "Empieza el jue 10"))
         check("scheduleFrom", L.scheduleFrom(hours: 3) == (en ? "Schedule from 3 h ago" : "Programa de hace 3 h"))
         check("today/tomorrow", L.today == (en ? "Today" : "Hoy") && L.tomorrow == (en ? "Tomorrow" : "Mañana"))
         let catJSON = #"{"timezoneOffset":"-04:00","dayKeys":["2026-09-12"],"dayShort":{"2026-09-12":"SÁB 12"},"dayShort_en":{"2026-09-12":"SAT 12"},"films":[]}"#

@@ -89,3 +89,45 @@ test('A07 — auth sheet funciona en Tribeca', async ({ page }) => {
   await page.waitForSelector('#auth-sheet.open', { timeout: 5000 });
   expect(await page.locator('#auth-delete-btn').count()).toBeGreaterThan(0);
 });
+
+// ── A08 — cuenta demo para la revisión de App Store (21 sep 2026) ─────────────
+// Guideline 2.1: el login es un código por email y el revisor no puede recibirlo.
+// Para demo@otrofestiv.app NO se manda email y el código va a la Edge Function
+// demo-auth, que lo canjea por un token_hash que verifyOtp acepta. Cualquier
+// otro email sigue por el camino normal, intacto.
+test('A08 — demo@otrofestiv.app: sin email, el código va a demo-auth y entra con token_hash; otro email sigue igual', async ({ page }) => {
+  await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
+  const r = await page.evaluate(async () => {
+    const calls = { signIn: [], invoke: [], verify: [] };
+    _sb = {
+      auth: {
+        signInWithOtp: async a => { calls.signIn.push(a); return { error: null }; },
+        verifyOtp: async a => { calls.verify.push(a); return { error: null }; },
+      },
+      functions: { invoke: async (n, o) => { calls.invoke.push({ n, body: o?.body }); return { data: { token_hash: 'HASH-DEMO' }, error: null }; } },
+    };
+    const run = async (email, code) => {
+      document.getElementById('auth-email-inp').value = email;
+      await submitAuthEmail();
+      const paso2 = document.getElementById('auth-sheet-step2').style.display === 'block';
+      document.getElementById('auth-otp-inp').value = code;
+      await submitOTP();
+      return paso2;
+    };
+    const demoPaso2 = await run('demo@otrofestiv.app', '246810');
+    const snapDemo = JSON.parse(JSON.stringify(calls));
+    calls.signIn.length = 0; calls.invoke.length = 0; calls.verify.length = 0;
+    const otroPaso2 = await run('alguien@correo.com', '12345678');
+    return { demoPaso2, snapDemo, otro: JSON.parse(JSON.stringify(calls)), otroPaso2 };
+  });
+  // demo
+  expect(r.demoPaso2, 'demo: pasa al paso del código').toBe(true);
+  expect(r.snapDemo.signIn.length, 'demo: NO se manda ningún email').toBe(0);
+  expect(r.snapDemo.invoke, 'demo: el código va a demo-auth con email y código').toEqual([{ n: 'demo-auth', body: { email: 'demo@otrofestiv.app', code: '246810' } }]);
+  expect(r.snapDemo.verify, 'demo: verifyOtp con el token_hash de la función').toEqual([{ token_hash: 'HASH-DEMO', type: 'email' }]);
+  // otro
+  expect(r.otroPaso2, 'otro: pasa al paso del código').toBe(true);
+  expect(r.otro.signIn.length, 'otro: se manda el email como siempre').toBe(1);
+  expect(r.otro.invoke.length, 'otro: demo-auth ni se entera').toBe(0);
+  expect(r.otro.verify, 'otro: verifyOtp con email y código').toEqual([{ email: 'alguien@correo.com', token: '12345678', type: 'email' }]);
+});
