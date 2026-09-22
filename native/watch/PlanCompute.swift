@@ -5,7 +5,74 @@
 import Foundation
 
 enum PlanCompute {
-    static let tz = TimeZone(identifier: "America/Bogota") ?? TimeZone(secondsFromGMT: -5 * 3600)!
+    // Zona del FESTIVAL (22 sep 2026): antes Bogotá fijo, y para TIFF (Toronto)
+    // «AHORA» iba una hora corrido. La fija CatalogStore desde timezoneOffset
+    // del JSON («-04:00»); Bogotá queda como fallback hasta que llegue.
+    static let defaultTz = TimeZone(identifier: "America/Bogota") ?? TimeZone(secondsFromGMT: -5 * 3600)!
+    static var tz: TimeZone = defaultTz
+    // "-04:00" / "+05:30" → segundos desde GMT. nil si no parsea.
+    static func offsetSeconds(_ s: String?) -> Int? {
+        guard let s = s, s.count == 6, let sign = s.first, sign == "+" || sign == "-",
+              let h = Int(s.dropFirst().prefix(2)), let m = Int(s.suffix(2)), h <= 14, m < 60 else { return nil }
+        return (sign == "-" ? -1 : 1) * (h * 3600 + m * 60)
+    }
+    @discardableResult static func setTimeZone(offset: String?) -> Bool {
+        guard let secs = offsetSeconds(offset), let z = TimeZone(secondsFromGMT: secs) else { return false }
+        tz = z; return true
+    }
+
+    // ── Programa (Hoy / Mañana) ───────────────────────────────────────────────
+    // Archivo del catálogo: espeja loader.js → 'tiff2026' → 'tiff-2026.json'.
+    static func catalogFile(for festivalId: String) -> String {
+        let re = try! NSRegularExpression(pattern: "([a-zA-Z]+)(\\d+)$")
+        let r = NSRange(festivalId.startIndex..., in: festivalId)
+        return re.stringByReplacingMatches(in: festivalId, range: r, withTemplate: "$1-$2") + ".json"
+    }
+    static func catalogURL(for festivalId: String) -> URL {
+        URL(string: "https://otrofestiv.app/festivals/" + catalogFile(for: festivalId))!
+    }
+    // "2026-09-12" — hoy en la zona del festival.
+    static func dayKey(_ date: Date) -> String {
+        var cal = Calendar(identifier: .gregorian); cal.timeZone = tz
+        let c = cal.dateComponents([.year, .month, .day], from: date)
+        return String(format: "%04d-%02d-%02d", c.year ?? 0, c.month ?? 0, c.day ?? 0)
+    }
+    // Hoy y Mañana contra los dayKeys del festival (ordenados). Antes del festival:
+    // Hoy vacío («Empieza el jue 10») y Mañana = primer día. Último día: sin Mañana.
+    // Terminado: nada.
+    static func programDays(_ dayKeys: [String], now: Date) -> ProgramDays {
+        let keys = dayKeys.sorted(); let today = dayKey(now)
+        guard let first = keys.first, let last = keys.last else { return ProgramDays(today: nil, tomorrow: nil, startsOn: nil) }
+        if today < first { return ProgramDays(today: nil, tomorrow: first, startsOn: first) }
+        if today > last { return ProgramDays(today: nil, tomorrow: nil, startsOn: nil) }
+        let idx = keys.firstIndex(of: today)
+        let tomorrow = idx.flatMap { $0 + 1 < keys.count ? keys[$0 + 1] : nil } ?? keys.first { $0 > today }
+        return ProgramDays(today: idx != nil ? today : nil, tomorrow: tomorrow, startsOn: nil)
+    }
+    // Las funciones de un día. Hoy: desde la próxima (misma gracia que el teléfono:
+    // 10 min tras el arranque todavía se ofrece). Otro día: completo.
+    static let graceMinutes = 10
+    static func program(_ items: [ScheduleItem], day: String, now: Date?) -> [ScheduleItem] {
+        let ofDay = sortedByStart(items.filter { $0.dayStr == day })
+        guard let now = now else { return ofDay }
+        let cutoff = now.addingTimeInterval(-Double(graceMinutes) * 60)
+        return ofDay.filter { (startDate($0) ?? .distantPast) >= cutoff }
+    }
+    // Tramos por hora, en orden: "16:00" → [16:15], "17:00" → [17:15, 17:30, …]
+    static func groupedByHour(_ items: [ScheduleItem]) -> [HourSection] {
+        var order: [String] = []; var buckets: [String: [ScheduleItem]] = [:]
+        for it in sortedByStart(items) {
+            guard let t = it.time, let h = t.split(separator: ":").first else { continue }
+            let key = String(format: "%02d:00", Int(h) ?? 0)
+            if buckets[key] == nil { order.append(key); buckets[key] = [] }
+            buckets[key]!.append(it)
+        }
+        return order.map { HourSection(id: $0, items: buckets[$0]!) }
+    }
+    // «En tu Plan»: misma función (título + día + hora), como sameEntry en el web.
+    static func inPlan(_ item: ScheduleItem, plan: [ScheduleItem]) -> Bool {
+        plan.contains { $0.title == item.title && $0.dayStr == item.dayStr && $0.time == item.time }
+    }
 
     // ── URL del poster ────────────────────────────────────────────────────────
     // Espeja la resolución del web (getFilmPoster): URL completa → tal cual;

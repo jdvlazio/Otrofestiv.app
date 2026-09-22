@@ -8,12 +8,14 @@ import SwiftUI
 struct OtrofestivWatchApp: App {
     @StateObject private var auth = WatchAuthManager()
     @StateObject private var plan = PlanStore()
+    @StateObject private var catalog = CatalogStore()   // Programa + zona del festival (22 sep 2026)
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(auth)
                 .environmentObject(plan)
+                .environmentObject(catalog)
                 .task { await auth.bootstrap() }
         }
     }
