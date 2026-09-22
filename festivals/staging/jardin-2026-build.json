@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festicinejardin.com (la ficha de cada obra) + las láminas de Instagram de @festicinejardin (día, hora, sede y el estreno)",
-  "capturado": "2026-09-21",
+  "capturado": "2026-09-22",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 811,
@@ -538,8 +538,13 @@
     {
      "title": "Deus ex necro machina",
      "director": "Mateo M. Correa",
+     "year": 2026,
      "duration": "6 min",
-     "genre": "Experimental"
+     "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
+     "posterSource": "editorial",
+     "synopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa.",
+     "genre": "Experimental",
+     "synopsis_lang": "es"
     },
     {
      "title": "Futuros luminosos",
@@ -559,8 +564,13 @@
     {
      "title": "Elementales",
      "director": "Camilo Botero Jaramillo",
-     "duration": "9 min",
-     "genre": "Documental"
+     "year": 2025,
+     "duration": "8 min",
+     "poster": "/assets/jardin-2026/elementales.jpg",
+     "posterSource": "editorial",
+     "synopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
+     "genre": "Documental",
+     "synopsis_lang": "es"
     },
     {
      "title": "Una vez en un cuerpo",
@@ -1841,7 +1851,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-21T21:03:52",
+  "fecha": "2026-09-22T05:33:39",
   "plan_sha": "4977a7663617bd88",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"

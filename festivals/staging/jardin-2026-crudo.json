@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "festicinejardin.com (la ficha de cada obra) + las láminas de Instagram de @festicinejardin (día, hora, sede y el estreno)",
-  "capturado": "2026-09-21",
+  "capturado": "2026-09-22",
   "que_aporta": "la única función que el festival ha fechado, con la ficha completa de su obra",
   "url": "https://festicinejardin.com/",
   "metodo": "las dos superficies del festival, contrastadas campo a campo en jardin-2026-contraste.py. Donde discrepan manda la web, que está escrita a máquina, y la discrepancia queda declarada",
@@ -335,7 +335,11 @@
      "titulo": "Deus ex necro machina",
      "director": "Mateo M. Correa",
      "duracion_min": 6,
-     "genero": "Experimental"
+     "sinopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa.",
+     "anio": 2026,
+     "genero": "Experimental",
+     "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
+     "posterSource": "editorial"
     },
     {
      "titulo": "Futuros luminosos",
@@ -350,8 +354,12 @@
     {
      "titulo": "Elementales",
      "director": "Camilo Botero Jaramillo",
-     "duracion_min": 9,
-     "genero": "Documental"
+     "duracion_min": 8,
+     "sinopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
+     "anio": 2025,
+     "genero": "Documental",
+     "poster": "/assets/jardin-2026/elementales.jpg",
+     "posterSource": "editorial"
     },
     {
      "titulo": "Una vez en un cuerpo",
