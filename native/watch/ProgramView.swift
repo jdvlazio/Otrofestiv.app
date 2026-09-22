@@ -1,17 +1,25 @@
 // ── ProgramView.swift — Programa en el reloj: Hoy y Mañana (22 sep 2026) ─────
-// FUENTE CANÓNICA: repo web, native/watch/. Segunda página de la raíz (bajo Mi
-// Plan). Dos páginas horizontales: Hoy (desde la próxima función, con la gracia
-// del teléfono) y Mañana (día completo). Solo lectura: agendar es del teléfono.
-// Fila: póster (2:3, o editorial 16:9 ancho) + título + «hora ámbar · sala».
-// «En tu Plan» = filete ámbar a la izquierda, el mismo idioma que la ficha del
-// teléfono (.pel-sheet-screening.in-plan); el texto va solo a accesibilidad.
-// Diseño: mockup v3 aprobado por Juan (barra de título nativa, hora del sistema).
+// FUENTE CANÓNICA: repo web, native/watch/. Se abre desde el botón de calendario
+// de Mi Plan y vive DENTRO de su pila de navegación (volver = flecha o gesto).
+// Dos páginas laterales con los días que correspondan. Solo lectura: agendar es
+// del teléfono. Fila: póster (2:3, o editorial 16:9 ancho) + título + «hora ámbar
+// · sala». «En tu Plan» = filete ámbar a la izquierda, el mismo idioma que la
+// ficha del teléfono; el texto va solo a accesibilidad.
+//
+// Dos correcciones verificadas en device (build 1.12 (2), fotos de Juan):
+//  1. El título NO puede ir en cada página: en un TabView watchOS se queda con el
+//     de la primera y decía «Today» sobre el jueves 24. Va en el TabView, atado a
+//     la página seleccionada.
+//  2. «Hoy» y «Mañana» solo cuando SON hoy y mañana. Con el festival sin empezar
+//     el título es el día con su fecha, y la página de «Empieza el…» desaparece:
+//     ver la programación del primer día es más útil que un aviso.
 
 import SwiftUI
 
 struct ProgramView: View {
     @EnvironmentObject var catalog: CatalogStore
     @EnvironmentObject var plan: PlanStore
+    @State private var page = 0
 
     var body: some View {
         Group {
@@ -28,37 +36,40 @@ struct ProgramView: View {
     @ViewBuilder private func pages(_ c: Catalog) -> some View {
         TimelineView(.everyMinute) { ctx in
             let days = PlanCompute.programDays(c.dayKeys, now: ctx.date)
-            NavigationStack {
-                TabView {
-                    // Hoy: el día en curso, o el vacío «Empieza el…», o (terminado) el último día
-                    if let today = days.today {
-                        ProgramDayPage(catalog: c, day: today, now: ctx.date, title: L.today)
-                    } else if let first = days.startsOn {
-                        ProgramEmpty(title: L.startsOn(c.shortDay(first)), detail: L.swipeFirstDay)
-                            .navigationTitle(L.today)
-                    } else if let last = c.dayKeys.sorted().last {
-                        ProgramDayPage(catalog: c, day: last, now: nil, title: PlanCompute.dayLabel(last))
-                    }
-                    if let tomorrow = days.tomorrow {
-                        ProgramDayPage(catalog: c, day: tomorrow, now: nil, title: L.tomorrow)
+            if days.days.isEmpty {
+                MessageView(title: L.noPlanTitle, detail: nil)
+            } else {
+                TabView(selection: $page) {
+                    ForEach(Array(days.days.enumerated()), id: \.element) { idx, day in
+                        ProgramDayPage(catalog: c, day: day,
+                                       now: day == days.todayKey ? ctx.date : nil)
+                            .tag(idx)
                     }
                 }
                 .tabViewStyle(.page)
                 .tint(OT.amber)
-                .navigationDestination(for: ScheduleItem.self) { FilmDetail(item: $0) }
+                // El título vive acá, no en cada página (ver cabecera).
+                .navigationTitle(title(days, c))
             }
         }
     }
+
+    // «Hoy» / «Mañana» solo cuando es cierto; si no, el día con su fecha.
+    private func title(_ days: ProgramDays, _ c: Catalog) -> String {
+        guard let day = days.days.indices.contains(page) ? days.days[page] : days.days.first else { return L.program }
+        if day == days.todayKey { return L.today }
+        if day == days.tomorrowKey { return L.tomorrow }
+        return c.shortDay(day)
+    }
 }
 
-// Un día del Programa: encabezado del día, tramos por hora, filas.
+// Un día del Programa: tramos por hora y sus funciones.
 private struct ProgramDayPage: View {
     @EnvironmentObject var store: CatalogStore
     @EnvironmentObject var plan: PlanStore
     let catalog: Catalog
     let day: String
     let now: Date?        // Hoy → desde la próxima; nil → día completo
-    let title: String
 
     private var items: [ScheduleItem] { PlanCompute.program(catalog.films, day: day, now: now) }
     private var planItems: [ScheduleItem] { plan.sections.flatMap { $0.items } }
@@ -71,33 +82,28 @@ private struct ProgramDayPage: View {
 
     var body: some View {
         List {
-            Section {
-                ForEach(PlanCompute.groupedByHour(items)) { hour in
-                    Section {
-                        ForEach(hour.items) { item in
-                            NavigationLink(value: item) {
-                                ProgramRow(item: item, inPlan: PlanCompute.inPlan(item, plan: planItems))
-                            }
-                            .listRowInsets(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
+            // Secciones por hora, SIN anidar (anidadas, watchOS pintaba la hora
+            // como una tarjeta vacía — device, 22 sep 2026).
+            ForEach(PlanCompute.groupedByHour(items)) { hour in
+                Section {
+                    ForEach(hour.items) { item in
+                        NavigationLink(value: item) {
+                            ProgramRow(item: item, inPlan: PlanCompute.inPlan(item, plan: planItems))
                         }
-                    } header: {
-                        Text(hour.id).font(.caption2).fontWeight(.semibold).tracking(1.2)
-                            .foregroundStyle(OT.faint).monospacedDigit()
+                        .listRowInsets(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                     }
-                }
-                if items.isEmpty {
-                    Text(L.noPlanDetail).font(.caption).foregroundStyle(OT.secondary)
-                }
-            } header: {
-                Text(PlanCompute.dayLabel(day))
-                    .font(.caption2).fontWeight(.semibold).tracking(1.2).foregroundStyle(OT.faint)
-            } footer: {
-                if let h = staleHours {
-                    Text(L.scheduleFrom(hours: h)).font(.caption2).foregroundStyle(OT.faint)
+                } header: {
+                    Text(hour.id).font(.caption2).fontWeight(.semibold).tracking(1.2)
+                        .foregroundStyle(OT.faint).monospacedDigit()
                 }
             }
+            if items.isEmpty {
+                Text(catalog.shortDay(day)).font(.caption).foregroundStyle(OT.secondary)
+            }
+            if let h = staleHours {
+                Text(L.scheduleFrom(hours: h)).font(.caption2).foregroundStyle(OT.faint)
+            }
         }
-        .navigationTitle(title)
     }
 }
 
@@ -134,9 +140,4 @@ private struct ProgramRow: View {
         .accessibilityElement(children: .combine)
         .accessibilityLabel(inPlan ? "\(item.title). \(L.inPlan)" : item.title)
     }
-}
-
-private struct ProgramEmpty: View {
-    let title: String; let detail: String
-    var body: some View { MessageView(title: title, detail: detail) }
 }

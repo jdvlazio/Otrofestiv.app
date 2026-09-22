@@ -61,12 +61,14 @@ struct HourSection: Identifiable {
     let items: [ScheduleItem]
 }
 
-// Qué día es Hoy y Mañana para el Programa, en la zona del festival.
+// Qué días muestra el Programa, y cuál es HOY y cuál MAÑANA de verdad.
+// El título de cada página se decide comparando: «Hoy» solo si ese día ES hoy,
+// «Mañana» solo si ES mañana; si no, el día con su fecha (22 sep 2026, cazado en
+// device: el festival empieza el jueves y la página decía «Today»).
 struct ProgramDays: Equatable {
-    let today: String?     // dayKey de hoy si el festival está en curso
-    let tomorrow: String?  // dayKey siguiente (o el primero, si aún no empezó)
-    let startsOn: String?  // primer dayKey cuando el festival no empezó
-    var ended: Bool { today == nil && tomorrow == nil }
+    let days: [String]        // hasta 2 dayKeys, los que se pintan
+    let todayKey: String?     // hoy, si el festival corre hoy
+    let tomorrowKey: String   // mañana en el calendario, sea o no del festival
 }
 
 // Un día del plan (una página en el reloj).

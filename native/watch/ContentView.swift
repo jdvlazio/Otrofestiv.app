@@ -13,23 +13,11 @@ struct ContentView: View {
 
     var body: some View {
         switch auth.status {
-        case .authenticated:      RootPager()
+        case .authenticated:      MiPlan()
         case .checking:           StatusScreen(text: L.opening)
         case .waitingForPhone:    StatusScreen(text: L.connectingPhone)
         case .failed(let reason): FailScreen(reason: reason) { Task { await auth.requestHandoffFromPhone() } }
         }
-    }
-}
-
-// ── Raíz: Mi Plan arriba, Programa abajo (pager vertical, 22 sep 2026) ────────
-// Con la corona o deslizando. Los puntos a la derecha anuncian la segunda página.
-private struct RootPager: View {
-    var body: some View {
-        TabView {
-            MiPlan()
-            ProgramView()
-        }
-        .tabViewStyle(.verticalPage)
     }
 }
 
@@ -60,6 +48,19 @@ private struct MiPlan: View {
                         .tabViewStyle(.page)
                         .tint(OT.amber)
                         .navigationTitle(L.miPlan)   // barra nativa, hermana de «Hoy»/«Mañana»
+                        // Programa: BOTÓN en la barra, no una página vertical (22 sep 2026).
+                        // El pager vertical no llegaba nunca: la lista de días es un TabView
+                        // paginado y watchOS le da a ESE la corona y el gesto; el de afuera
+                        // no recibía su turno (verificado en device, build 1.12 (1)).
+                        .toolbar {
+                            ToolbarItem(placement: .topBarLeading) {
+                                NavigationLink { ProgramView() } label: {
+                                    Image(systemName: "calendar")
+                                        .foregroundStyle(OT.amber)
+                                        .accessibilityLabel(L.program)
+                                }
+                            }
+                        }
                         .navigationDestination(for: ScheduleItem.self) { FilmDetail(item: $0) }
                     }
                 }
