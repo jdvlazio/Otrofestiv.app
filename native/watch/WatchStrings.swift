@@ -40,6 +40,19 @@ enum L {
     // el teléfono («Termina en»). Se retiró «faltan» en la revisión de copy.
     static func endsIn(_ min: Int) -> String { t("Termina en \(min) min", "Ends in \(min) min") }
     static var complicationLiveName: String { t("En curso", "Now playing") }
+    // Programa en el reloj (22 sep 2026, copy aprobado con Juan en el mockup v3).
+    static var miPlan: String         { t("Mi Plan", "My Plan") }
+    static var program: String        { t("Programa", "Schedule") }
+    static var today: String          { t("Hoy", "Today") }
+    static var tomorrow: String       { t("Mañana", "Tomorrow") }
+    static var inPlan: String         { t("En tu Plan", "In your Plan") }     // solo accesibilidad: el filete ámbar lo dice
+    static var swipeFirstDay: String  { t("Deslizá para ver el primer día.", "Swipe to see day one.") }
+    // «Empieza el jue 10» / «Starts Thu 10» — el día corto viene del festival (dayShort).
+    static func startsOn(_ dayShort: String) -> String {
+        Lang.current == .en ? "Starts " + dayShort.capitalized : "Empieza el " + dayShort.lowercased()
+    }
+    // «Programa de hace 3 h» — la caché envejeció y la red no la renovó.
+    static func scheduleFrom(hours h: Int) -> String { t("Programa de hace \(h) h", "Schedule from \(h) h ago") }
     static var complicationName: String { t("Próxima función", "Next screening") }
     static var complicationDesc: String { t("Tu próxima película del festival.", "Your next festival film.") }
 }
