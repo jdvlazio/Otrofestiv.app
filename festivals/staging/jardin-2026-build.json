@@ -1841,7 +1841,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-21T20:23:02",
+  "fecha": "2026-09-21T20:58:33",
   "plan_sha": "4977a7663617bd88",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"
