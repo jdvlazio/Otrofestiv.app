@@ -169,6 +169,8 @@ async function _doCloudSave(){
     storage.setCloudSyncedAt(_ts, _sk);
     storage.setCloudDirty(false, _sk);
     if(_fest===_activeFestId) _sbShowSyncDot('ok'); // el dot refleja el festival visible
+    // El plan ya está en la nube → el reloj puede releerlo (solo si subió savedAgenda)
+    if(_dirtySnap.has('savedAgenda')) window.__otfPushWatchPlan?.(_fest);
   }catch(e){
     report(e,'cloudSave');
     if(_fest===_activeFestId) _sbShowSyncDot('err'); // queda dirty → reintenta en la próxima mutación/boot

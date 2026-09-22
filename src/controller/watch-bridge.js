@@ -56,6 +56,14 @@ export function initWatchBridge(){
     setTimeout(_pushFest, 1500);
     setTimeout(_pushFest, 4000);
   };
+  // Avisar al reloj que el PLAN cambió (21 sep 2026). Lo llama persistence tras
+  // el upsert exitoso de saved_agenda —no antes: el reloj relee la nube, y si se
+  // le avisa antes de que la fila esté escrita, lee la vieja. No lleva el plan.
+  // Requiere wrapper + reloj con el receptor (build del 21 sep); versiones
+  // anteriores ignoran el type desconocido. Inerte en web/Android.
+  window.__otfPushWatchPlan = (fid) => {
+    try{ if(fid) window.webkit?.messageHandlers?.watchAuth?.postMessage({ type:'plan', id: fid }); }catch(e){ /* no-op */ }
+  };
   // Re-empujar al volver a primer plano (el usuario abre la app en la sede) — garantiza
   // que el reloj tenga el festival activo aunque el push del boot se haya perdido.
   document.addEventListener('visibilitychange', () => { if(!document.hidden) _pushFest(); });

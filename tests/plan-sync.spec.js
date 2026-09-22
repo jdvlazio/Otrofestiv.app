@@ -578,3 +578,36 @@ test('PS13 — la versión sube al corregir y se queda al repetir', async ({ pag
   expect(r.sinHuella.every(n => n >= 1), 'un apunte sin huella se asume cambiado y sube una vez').toBe(true);
   expect(r.memoria.every(e => e.h !== undefined && e.h !== null), 'y queda con su huella para la próxima').toBe(true);
 });
+
+// ── PS14 — el reloj se entera: tras subir el plan, el teléfono le avisa ───────
+// Juan (21 sep 2026): con la app del reloj abierta, un «+ Agendar» en el teléfono
+// nunca llegaba — el reloj leía la nube UNA vez por proceso. El lado web de la
+// cura: cuando el upsert de saved_agenda TERMINA, se avisa por el canal watchAuth
+// {type:'plan'} (el reloj relee). Después del upsert y no antes: si se avisa con
+// la fila vieja, relee la vieja. Y solo cuando subió el plan: subir la watchlist
+// no despierta al reloj.
+test('PS14 — tras subir saved_agenda a la nube, el teléfono avisa al reloj {type:"plan"}; subir la watchlist no', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-11T10:00:00-04:00');
+  const r = await page.evaluate(async () => {
+    const msgs = [];
+    window.webkit = { messageHandlers: { watchAuth: { postMessage: m => msgs.push({ ...m, upserted: window.__ups }) } } };
+    window.__ups = 0;
+    // Supabase de mentira: la lectura previa no encuentra fila, el upsert «tarda» 150 ms
+    const q = { select: () => q, eq: () => q, single: async () => ({ data: null }) };
+    _sb = { from: () => ({ ...q, upsert: async () => { await new Promise(r => setTimeout(r, 150)); window.__ups++; return { data: null, error: null }; } }) };
+    _sbUser = { id: 'u-test', email: 'test@test.com', is_anonymous: false };
+    const f = FILMS.find(x => x.day === '2026-09-11');
+    state.set('savedAgenda', { schedule: [{ ...f, _title: f.title }] }); saveSavedAgenda();
+    await new Promise(r => setTimeout(r, 2800)); // debounce 2 s + upsert
+    const trasPlan = msgs.filter(m => m.type === 'plan');
+    saveWL();
+    await new Promise(r => setTimeout(r, 2800));
+    const trasWL = msgs.filter(m => m.type === 'plan').length - trasPlan.length;
+    return { trasPlan, trasWL, ups: window.__ups, fest: _activeFestId };
+  });
+  expect(r.ups, 'la nube recibió las dos subidas').toBe(2);
+  expect(r.trasPlan.length, 'un aviso al reloj tras subir el plan').toBe(1);
+  expect(r.trasPlan[0].id, 'con el festival que se subió').toBe(r.fest);
+  expect(r.trasPlan[0].upserted, 'DESPUÉS del upsert, no antes').toBe(1);
+  expect(r.trasWL, 'subir la watchlist no despierta al reloj').toBe(0);
+});
