@@ -5621,6 +5621,135 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar poster-mirado: {_e}')
 
+# ── [afiche-origen-apaisado] un fotograma apaisado NO se publica como 2:3 ─────
+# EL FALLO DEL 21 SEP 2026, escrito como policía. 67 fotogramas apaisados de
+# Villa del Cine salieron a producción estirados entre un 62% y un 74%, y lo
+# vio Juan en la app: «FATAL! Otra vez teniendo problemas con los posters».
+#
+# Ninguno de los guardianes de póster podía cazarlo. `[poster-mirado]` —el
+# único que abre el archivo— mide el PUBLICADO, y el publicado siempre mide
+# 780×1170 porque `encuadrar-posters.py` lo lleva ahí: un fotograma estirado
+# pasa su examen con nota. La deformación solo se ve comparando con el
+# ORIGINAL, y el original no está en el JSON: está en el sidecar de pósters,
+# en `_medida_original`, que hasta hoy no leía nadie.
+#
+# La regla es la de Juan, del mismo día: un afiche es vertical; un fotograma
+# apaisado se publica como `editorial` —que la vista encuadra a 16:9 sin
+# deformarlo— o no se publica. Así que: si el original es apaisado y el
+# `posterSource` NO es `editorial`, está deformado. Es aritmética, no opinión.
+#
+# Se salta la obra cuyo sidecar no registre la medida original: no se puede
+# juzgar lo que no se midió, y el guardián dice cuántas examinó para que un
+# sidecar que deje de escribirla se note en el número.
+check = 'afiche-origen-apaisado'
+try:
+    import json as _j9, glob as _g9
+    _R_APAISADO = 1.06          # por encima de esto ya no es «vertical o cuadrada»
+    _malos, _vistos, _ed = [], 0, 0
+    for _sp in sorted(_g9.glob('festivals/staging/*-posters.json')):
+        _fest = _sp.split('/')[-1].replace('-posters.json', '')
+        try:
+            _side = _j9.load(open(_sp, encoding='utf-8'))
+        except Exception:
+            continue
+        for _tit, _v in (_side.get('posters') or {}).items():
+            _mo = str(_v.get('_medida_original') or '')
+            if 'x' not in _mo:
+                continue
+            try:
+                _w, _h = (int(_n) for _n in _mo.split('x', 1))
+            except ValueError:
+                continue
+            if not _h:
+                continue
+            _vistos += 1
+            _r = _w / _h
+            _src = _v.get('posterSource') or ''
+            if _src == 'editorial':
+                _ed += 1
+                continue
+            if _r > _R_APAISADO:
+                _malos.append(f'{_fest}/«{_tit[:34]}»: original {_mo} (r={_r:.2f}) '
+                              f'publicado como {_src or "sin posterSource"} — al '
+                              f'lienzo 2:3 se deforma un {round((0.667 / _r - 1) * -100)}%')
+    if _malos:
+        fail(check, 'fotograma apaisado publicado como afiche 2:3: ' + ' · '.join(_malos[:6])
+             + (f' (+{len(_malos) - 6})' if len(_malos) > 6 else ''))
+    elif _vistos:
+        ok(check, f'{_vistos} afiches con medida original registrada, '
+                  f'ninguno apaisado fuera de editorial ({_ed} editorial 16:9)')
+    else:
+        warn(check, 'ningún sidecar de pósters registra `_medida_original`: '
+                    'sin original no hay deformación que medir')
+except Exception as _e:
+    warn(check, f'no se pudo verificar afiche-origen-apaisado: {_e}')
+
+# ── [afiche-cobertura] una obra sin afiche lleva el porqué ESCRITO ───────────
+# COBERTURA INVERSA, la doctrina que ya teníamos escrita y no habíamos aplicado
+# a los afiches: verificar lo transcrito no verifica lo DESCARTADO. El 21 sep
+# 2026 el paso de afiches de Villa del Cine recorría las fichas de la web en vez
+# de la página donde están los afiches, y seis obras no se consultaron NUNCA.
+# El paso terminó en verde: su cuenta era de aciertos, y lo que no miró no
+# aparecía en ninguna parte. Dos días de «77 con afiche» que en realidad eran
+# «77 con afiche y 6 que no busqué».
+#
+# La regla: el catálogo PUBLICADO es el denominador —otro archivo, escrito por
+# otro paso, así que el sidecar no puede aprobarse a sí mismo—. Toda obra
+# publicada SIN `poster` tiene que aparecer en `_cobertura.destino` de su
+# sidecar con un `_por_que` escrito. No se prohíbe publicar sin afiche: se
+# prohíbe hacerlo EN SILENCIO.
+#
+# Solo alcanza a los festivales cuyo sidecar declara `_cobertura`. Los que no
+# la declaran quedan fuera a propósito: este estado nace hoy y se adopta
+# festival por festival, no se inventa deuda retroactiva.
+check = 'afiche-cobertura'
+try:
+    import json as _ja, glob as _ga, unicodedata as _ua
+    def _n_afi(_s):
+        _s = _ua.normalize('NFD', str(_s or '')).lower()
+        return ''.join(_c for _c in _s if _c.isalnum())
+    _huerfanas, _cubiertos = [], 0
+    for _sp in sorted(_ga.glob('festivals/staging/*-posters.json')):
+        _fest = _sp.split('/')[-1].replace('-posters.json', '')
+        try:
+            _cob = (_ja.load(open(_sp, encoding='utf-8')) or {}).get('_cobertura')
+        except Exception:
+            continue
+        if not _cob:
+            continue
+        _fp = f'festivals/{_fest}.json'
+        if not _os8.path.exists(_fp):
+            continue
+        _cubiertos += 1
+        _dst = {_n_afi(_k): _v for _k, _v in (_cob.get('destino') or {}).items()}
+        _d = _ja.load(open(_fp, encoding='utf-8'))
+        _ya = set()
+        for _x in (_d.get('films') or []):
+            for _o in (list(_x.get('film_list') or []) or
+                       ([_x] if not _x.get('event_kind') else [])):
+                _t = _o.get('title')
+                if not _t or _n_afi(_t) in _ya or _o.get('poster'):
+                    continue
+                _ya.add(_n_afi(_t))
+                _e = _dst.get(_n_afi(_t))
+                if not _e:
+                    _huerfanas.append(f'{_fest}/«{_t[:34]}»: sin afiche y sin rastro '
+                                      f'en _cobertura — nadie la miró')
+                elif not str(_e.get('_por_que') or '').strip():
+                    _huerfanas.append(f'{_fest}/«{_t[:34]}»: sin afiche, estado '
+                                      f'{_e.get("estado")!r} y sin porqué escrito')
+    if _huerfanas:
+        fail(check, 'obra sin afiche y sin explicación: ' + ' · '.join(_huerfanas[:6])
+             + (f' (+{len(_huerfanas) - 6})' if len(_huerfanas) > 6 else ''))
+    elif _cubiertos:
+        ok(check, f'{_cubiertos} festival(es) con cobertura inversa de afiches, '
+                  f'toda obra sin afiche lleva su porqué')
+    else:
+        warn(check, 'ningún sidecar de pósters declara `_cobertura`')
+except Exception as _e:
+    warn(check, f'no se pudo verificar afiche-cobertura: {_e}')
+
+
 
 # ── [config-esm] node --check da un VERDE FALSO ─────────────────────────────
 # src/config.js es un MÓDULO ES, y `node --check` lo analiza como script: un

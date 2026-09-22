@@ -528,6 +528,43 @@ no una miniatura) → ahora va por el lado corto; y perseguía bandas planas en
 afiches ajenos, donde una franja de color sólido es una decisión de diseño →
 ahora solo en los EDITORIALES, que son los que recortamos nosotros.
 
+**Decimoséptimo: `[afiche-origen-apaisado]` — el estirón solo se ve contra el
+original.**
+
+67 fotogramas apaisados de Villa del Cine salieron a producción estirados entre
+un 62% y un 74%, y lo vio Juan en la app: *«FATAL! Otra vez teniendo problemas
+con los posters»*. Ninguno de los guardianes de póster podía cazarlo, **ni
+siquiera `[poster-mirado]`**: mide el archivo PUBLICADO, y el publicado siempre
+mide 780×1170 porque `encuadrar-posters.py` lo lleva ahí. Un fotograma estirado
+pasa su examen con nota.
+
+La deformación solo existe COMPARADA con el original, y el original no está en
+el JSON: está en el sidecar de pósters, en `_medida_original`, que hasta
+entonces no leía nadie. La regla es de Juan, del mismo día: un afiche es
+vertical; un fotograma apaisado se publica como `editorial` —que la vista
+encuadra a 16:9 sin deformarlo— o no se publica. Así que si el original es
+apaisado y el `posterSource` NO es `editorial`, está deformado. Aritmética.
+
+Se salta la obra cuyo sidecar no registre la medida, y dice cuántas examinó:
+un sidecar que deje de escribirla se nota en el número, no en el silencio.
+
+**Decimoctavo: `[afiche-cobertura]` — una obra sin afiche lleva el porqué
+escrito.**
+
+Cobertura inversa, la doctrina que ya estaba escrita y no se había aplicado a
+los afiches: **verificar lo transcrito no verifica lo descartado.** El paso de
+afiches de Villa del Cine recorría las fichas de la web en vez de la página
+donde están los afiches, y seis obras no se consultaron NUNCA. El paso terminó
+en verde: su cuenta era de aciertos, y lo que no miró no aparecía en ninguna
+parte. Dos días de «77 con afiche» que eran «77 con afiche y 6 que no busqué».
+
+El catálogo PUBLICADO es el denominador —otro archivo, escrito por otro paso,
+así que el sidecar no puede aprobarse a sí mismo—. Toda obra publicada sin
+`poster` tiene que aparecer en `_cobertura.destino` de su sidecar con un
+`_por_que` escrito. **No se prohíbe publicar sin afiche: se prohíbe hacerlo en
+silencio.** Alcanza solo a los festivales cuyo sidecar declara `_cobertura`; se
+adopta festival por festival, sin inventar deuda retroactiva.
+
 **Decimoquinto: `[arquetipo-existe]` — el color que no existe se pinta gris.**
 `[seccion-sin-arquetipo]` comprueba que la sección ESTÉ en `SECTION_ARCHETYPES`.
 Nadie comprobaba que el arquetipo asignado sea uno de los NUEVE que tienen
