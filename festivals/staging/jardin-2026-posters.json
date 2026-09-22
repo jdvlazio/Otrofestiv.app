@@ -2,7 +2,7 @@
  "_provenance": {
   "fuente": "TMDB (image.tmdb.org, w780), Letterboxd (og:image) y el `og:image` de la ficha en festicinejardin.com — en ese orden, el de docs/POSTERS.md §2",
   "capturado": "2026-09-22",
-  "que_aporta": "36 imágenes de las 42 obras del catálogo, bajadas a assets/jardin-2026/",
+  "que_aporta": "37 imágenes de las 42 obras del catálogo, bajadas a assets/jardin-2026/",
   "metodo": "los dos primeros son afiches de verdad y van a 2:3; el still del festival es apaisado, se reduce a 896 px de ancho y va como `editorial`, que la vista encuadra a 16:9 en vez de estirarlo. No se publica la URL remota: el archivo se sirve desde el repo y este sidecar lo nombra"
  },
  "films": [
@@ -77,6 +77,12 @@
    "poster": "/assets/jardin-2026/la-mona.jpg",
    "posterSource": "editorial",
    "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/LaMona.jpg"
+  },
+  {
+   "title": "La casa del trueno",
+   "poster": "/assets/jardin-2026/la-casa-del-trueno.jpg",
+   "posterSource": "oficial",
+   "_origen": "Cinemateca de Bogotá, ficha de la película (cinematecadebogota.gov.co/node/peliculas/2045). 810×1080, vertical, y el nombre del archivo dice «cartel». Comprobado el 22 sep 2026."
   },
   {
    "title": "La creciente",
@@ -226,7 +232,6 @@
  "sin_imagen": [
   "Cien años de soledad (SO2E6): Eran más de tres mil",
   "Cien años de soledad: Eran más de tres mil",
-  "La casa del trueno",
   "Tres Mujeres guerreras",
   "Ubuntu: La métrica de los afectos",
   "Una sola golondrina no hace llover"
@@ -240,7 +245,6 @@
   "Cien años de soledad: Eran más de tres mil": "es un EPISODIO de la serie de Netflix (S02E06, dir. Laura Mora), no una película: TMDB la tiene como serie y el candado de `ficha_tmdb` compara películas por año y duración, así que no verifica. El festival no le publicó ficha. Sin afiche hasta decidir si se usa el arte de la serie, que es una decisión de Juan.",
   "Cien años de soledad (SO2E6): Eran más de tres mil": "la misma obra con el rótulo del episodio en el título: la parrilla la imprime de las dos formas, el sábado y el viernes. Mismo motivo.",
   "Una sola golondrina no hace llover": "documental de Caribe Afirmativo (2021, 86 min). Sin página en festicinejardin.com —no está en su sitemap— y sin ficha verificable en TMDB. No hay imagen que bajar en ninguna fuente conocida.",
-  "La casa del trueno": "sin página en la web del festival y sin ficha en TMDB. Cuatro directores acreditados (Dahian Cifuentes, Raúl Cifuentes, Tatiana Rojas, Marta Saiz), Colombia 2025, 33 min — solo lo dice la parrilla.",
   "Tres Mujeres guerreras": "EXISTE Y NO ESTÁ EN TMDB — candidata a alta. Lo destapó Juan (22 sep): IMDb la tiene como «Tres Mujeres Guerreras: 3 Kriegerinnen» (2014), tt4402368, porque es coproducción Colombia–Alemania y su otro título es alemán. Yo la había buscado solo por el título español. Comprobado después: TMDB no la tiene ni por «3 Kriegerinnen», ni por «Drei Kriegerinnen», ni por el español, ni por imdb_id. Camino de la casa para esto: darla de alta en TMDB (scripts/verificar-antes-de-alta.py y docs/PIPELINE Fase 3b), no inventarle un afiche.",
   "Gustavo, el observador invisible": "estreno de Antena 4 Jardín (25 min). Sin página en la web y sin TMDB: es una producción local que estrena en este festival.",
   "Deus ex necro machina": "el festival no le publicó ficha: su slug `deus-ex-necro-machina` REDIRIGE a la página de «Primer amor», que es otra obra. Entra al catálogo solo desde Instagram y no hay imagen que bajar. Preguntado al festival.",

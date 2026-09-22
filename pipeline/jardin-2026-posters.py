@@ -136,6 +136,25 @@ CALIDAD_STILL = 72  # con 100 (el defecto de sips) un still de 896 px pesa 700 K
 
 # OBRAS SIN NINGUNA IMAGEN, y por qué. Una obra sin entrada acá hace fallar el
 # paso: el hueco se declara o se arregla, no se deja pasar.
+# EL CARTEL QUE GUARDA UN ARCHIVO PÚBLICO. Para el cine colombiano hay
+# superficies que ni el festival ni TMDB tienen: la Cinemateca de Bogotá,
+# Retina Latina y Proimágenes conservan el cartel de estreno. Lo destapó Juan
+# (22 sep) con «La casa del trueno», que yo había declarado sin imagen en
+# ninguna fuente conocida: la Cinemateca la tiene, y el archivo se llama
+# literalmente `_cartel_`.
+#
+# Va declarado obra por obra, con la URL de la página que lo publica y su
+# medida comprobada: no es un raspado a ciegas de un sitio ajeno, es una
+# fuente citada. `es_afiche()` lo verifica igual que a cualquier otro.
+CARTEL_DE_ARCHIVO = {
+    'La casa del trueno': (
+        'https://cinematecadebogota.gov.co/sites/default/files/2026-04/'
+        'LA_CASA_DEL_TRUENO_cartel-transformed.png',
+        'Cinemateca de Bogotá, ficha de la película '
+        '(cinematecadebogota.gov.co/node/peliculas/2045). 810×1080, vertical, '
+        'y el nombre del archivo dice «cartel». Comprobado el 22 sep 2026.'),
+}
+
 SIN_IMAGEN_OK = {
     # LAS QUE SE PROYECTAN Y EL FESTIVAL NUNCA FICHÓ. Entran por la parrilla
     # —antes ni se intentaban, porque la espina de este paso era el catálogo—,
@@ -156,10 +175,6 @@ SIN_IMAGEN_OK = {
         'documental de Caribe Afirmativo (2021, 86 min). Sin página en '
         'festicinejardin.com —no está en su sitemap— y sin ficha verificable '
         'en TMDB. No hay imagen que bajar en ninguna fuente conocida.',
-    'La casa del trueno':
-        'sin página en la web del festival y sin ficha en TMDB. Cuatro '
-        'directores acreditados (Dahian Cifuentes, Raúl Cifuentes, Tatiana '
-        'Rojas, Marta Saiz), Colombia 2025, 33 min — solo lo dice la parrilla.',
     'Tres Mujeres guerreras':
         'EXISTE Y NO ESTÁ EN TMDB — candidata a alta. Lo destapó Juan (22 sep): '
         'IMDb la tiene como «Tres Mujeres Guerreras: 3 Kriegerinnen» (2014), '
@@ -250,6 +265,14 @@ def main():
         e = E.get(norm(t), {})
         dest = f'{ASSETS}/{slug(t)}.jpg'
         origen = fuente = ''
+        # El cartel de archivo, si esta obra tiene uno declarado. Ojo con el
+        # write-once: `baja()` devuelve True sin pedir nada cuando el archivo
+        # ya está, así que la fuente se marca IGUAL — la primera versión solo
+        # entraba si el archivo no existía y en la segunda corrida la obra
+        # volvía a quedar «sin imagen y sin declarar».
+        _ca = CARTEL_DE_ARCHIVO.get(t)
+        if _ca and baja(_ca[0], dest) and es_afiche(dest):
+            origen, fuente = _ca[1], 'oficial'
         # EL ÁRBOL DE docs/POSTERS.md §2, y cada candidato SE COMPRUEBA en disco
         # antes de aceptarlo: un afiche que no es vertical no es un afiche.
         candidatos = []
