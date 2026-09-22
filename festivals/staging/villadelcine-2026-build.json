@@ -2519,7 +2519,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-21T14:36:34",
+  "fecha": "2026-09-21T15:56:12",
   "plan_sha": "d04a08ecc22a927b",
   "paso": 16,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"
