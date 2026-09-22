@@ -37,18 +37,30 @@ enum PlanCompute {
         let c = cal.dateComponents([.year, .month, .day], from: date)
         return String(format: "%04d-%02d-%02d", c.year ?? 0, c.month ?? 0, c.day ?? 0)
     }
-    // Hoy y Mañana contra los dayKeys del festival (ordenados). Antes del festival:
-    // Hoy vacío («Empieza el jue 10») y Mañana = primer día. Último día: sin Mañana.
-    // Terminado: nada.
+    // Qué dos días muestra el Programa. En curso: hoy y el siguiente. Antes de
+    // empezar: los dos primeros. Terminado: el último. Los títulos NO se deciden
+    // acá: la vista compara cada día con todayKey/tomorrowKey y solo dice «Hoy» o
+    // «Mañana» cuando es cierto.
     static func programDays(_ dayKeys: [String], now: Date) -> ProgramDays {
-        let keys = dayKeys.sorted(); let today = dayKey(now)
-        guard let first = keys.first, let last = keys.last else { return ProgramDays(today: nil, tomorrow: nil, startsOn: nil) }
-        if today < first { return ProgramDays(today: nil, tomorrow: first, startsOn: first) }
-        if today > last { return ProgramDays(today: nil, tomorrow: nil, startsOn: nil) }
-        let idx = keys.firstIndex(of: today)
-        let tomorrow = idx.flatMap { $0 + 1 < keys.count ? keys[$0 + 1] : nil } ?? keys.first { $0 > today }
-        return ProgramDays(today: idx != nil ? today : nil, tomorrow: tomorrow, startsOn: nil)
+        let keys = dayKeys.sorted()
+        let today = dayKey(now)
+        let tomorrow = dayKey(now.addingTimeInterval(86_400))
+        guard let first = keys.first, let last = keys.last else {
+            return ProgramDays(days: [], todayKey: nil, tomorrowKey: tomorrow)
+        }
+        let shown: [String]
+        if today > last {                                  // terminado
+            shown = [last]
+        } else if let i = keys.firstIndex(of: today) {     // en curso
+            shown = Array(keys[i...].prefix(2))
+        } else if today < first {                          // aún no empieza
+            shown = Array(keys.prefix(2))
+        } else {                                           // hueco entre días
+            shown = Array(keys.filter { $0 > today }.prefix(2))
+        }
+        return ProgramDays(days: shown, todayKey: keys.contains(today) ? today : nil, tomorrowKey: tomorrow)
     }
+
     // Las funciones de un día. Hoy: desde la próxima (misma gracia que el teléfono:
     // 10 min tras el arranque todavía se ofrece). Otro día: completo.
     static let graceMinutes = 10
