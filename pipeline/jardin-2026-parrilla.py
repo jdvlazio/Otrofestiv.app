@@ -358,12 +358,24 @@ def ficha(f):
     t0 = titulo[0]
     for x in titulo[1:]:
         t0 = t0[:-1] + x if t0.endswith('-') else t0 + ' ' + x
-    # UNA OBRA, UN TÍTULO. La parrilla imprime el episodio de «Cien años de
-    # soledad» con el rótulo de temporada el sábado —«(SO2E6)»— y sin él el
-    # viernes, y eso la partía en DOS obras: dos fichas, dos afiches iguales y
-    # el guardián [posters-duplicados] marcándolo como dato corrupto, que es
-    # exactamente lo que era. El rótulo del episodio no es parte del nombre.
-    t0 = re.sub(r'\s*\(S[O0]?\d+E\d+\)\s*', ' ', t0)
+    # UNA OBRA, UN TÍTULO — PERO SIN PERDER EL EPISODIO. La parrilla imprime
+    # el de «Cien años de soledad» con el rótulo de temporada el sábado
+    # —«(SO2E6)»— y sin él el viernes, y eso la partía en DOS obras: dos
+    # fichas, dos afiches iguales y [posters-duplicados] marcándolo como dato
+    # corrupto, que es lo que era.
+    #
+    # La primera versión lo resolvió BORRANDO el rótulo, y así el título ya no
+    # decía en ninguna parte que es el capítulo 6 de la segunda temporada. Eso
+    # es tirar un dato para arreglar otro —lo vio Juan—: es el MISMO episodio
+    # los dos días, así que lo correcto es que los dos lo lleven. Se normaliza
+    # a una forma legible en español y con eso los dos títulos vuelven a ser
+    # idénticos, que es lo que la identidad necesita.
+    #
+    # El impreso pone «SO2E6», con O de letra y un solo dígito; se lee el
+    # número, no la grafía.
+    def _episodio(m):
+        return f' (T{int(m.group(1))} E{int(m.group(2))}) '
+    t0 = re.sub(r'\s*\(S[O0]?(\d+)\s*E\s*(\d+)\)\s*', _episodio, t0, flags=re.I)
     t0 = re.sub(r'\s+([:;,.])', r'\1', re.sub(r'\s{2,}', ' ', t0)).strip()
     d['titulo'] = t0
     resto = ls
@@ -422,6 +434,36 @@ def ficha(f):
     return d
 
 
+def propaga_episodio(funciones):
+    """EL TÍTULO MÁS COMPLETO MANDA, y no es una preferencia estética: cuando
+    la misma obra aparece con el rótulo de episodio en una lámina y sin él en
+    otra —«Cien años de soledad (T2 E6): Eran más de tres mil» el sábado,
+    «Cien años de soledad: Eran más de tres mil» el viernes— son DOS cosas a la
+    vez. Dos títulos distintos parten la obra en dos y la app, que identifica
+    por título, enseña el contenido de una para las dos; y borrar el rótulo
+    para igualarlos tira el dato de qué capítulo es, que es justamente lo que
+    el espectador necesita saber.
+
+    Así que se propaga: si un título es otro más un «(Tn Em)», el largo gana
+    para todas sus funciones.
+
+    Vive acá afuera, y no dentro de `main`, porque la verificación corre este
+    mismo parser sobre las láminas al doble: un retoque que solo `main` aplica
+    sale como diferencia entre las dos lecturas y hace fallar el paso 11 por
+    una discrepancia que no está en las imágenes, sino en el camino.
+    """
+    ep = re.compile(r'\s*\(T\d+\s+E\d+\)')
+    largos = {}
+    for f in funciones:
+        t = f.get('titulo') or ''
+        if ep.search(t):
+            largos[ep.sub('', t).strip()] = t
+    for f in funciones:
+        if f.get('titulo') in largos:
+            f['titulo'] = largos[f['titulo']]
+    return funciones
+
+
 def main():
     rutas = sorted(f'{LAMINAS}/{n}' for n in os.listdir(LAMINAS) if n.endswith('.jpg'))
     crudo = ocr(rutas)
@@ -448,6 +490,8 @@ def main():
             f.pop('ficha', None)
             f['_lamina'] = k
             funciones.append(f)
+    propaga_episodio(funciones)
+
     funciones.sort(key=lambda f: (f['dia'], f['hora'], f['sede']))
     json.dump({'_provenance': provenance(
         'Instagram @festicinejardin — el carrusel de programación',

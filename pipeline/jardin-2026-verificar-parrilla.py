@@ -125,7 +125,9 @@ def lee(rutas):
             f.update(P.ficha(f))
             f.pop('ficha', None)
             fun.append(f)
-    return fun
+    # EL MISMO parser incluye sus retoques: si esta lectura se saltara uno,
+    # la diferencia que saldría sería contra el camino, no contra la imagen.
+    return P.propaga_episodio(fun)
 
 
 def clave(f):
