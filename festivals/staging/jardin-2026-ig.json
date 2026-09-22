@@ -1,0 +1,263 @@
+{
+ "_provenance": {
+  "fuente": "Instagram de @festicinejardin — las láminas de seis carruseles, leídas con el OCR del sistema sobre los píxeles",
+  "capturado": "2026-09-21",
+  "que_aporta": "las 5 sedes de la edición (mapa del 20 sep, con las dos reubicaciones del sismo), la única función fechada (la inaugural) y una segunda lectura de 7 obras de la Muestra Central y de los 22 cortos de CALEIDOSCOPIO",
+  "url": "https://www.instagram.com/festicinejardin/",
+  "metodo": "el dato está PINTADO: el pie del post de la inaugural no nombra siquiera la película. Se bajan las láminas por el embed público y se leen con pipeline/ocr.py",
+  "alcance": "6 posts · 45 láminas"
+ },
+ "sedes": [
+  "Teatro Municipal de Jardín",
+  "Casa de la Cultura",
+  "Escuela Jahel Peláez Montoya",
+  "Placa deportiva Simón Bolívar",
+  "Coliseo Municipal"
+ ],
+ "funciones": [
+  {
+   "dia": "2026-09-24",
+   "hora": "20:00",
+   "sede": "Teatro Municipal de Jardín",
+   "titulo": "La creciente",
+   "seccion": "Muestra Central",
+   "event_kind": "apertura",
+   "anio": 2026,
+   "duracion_obra": 88,
+   "director": "Pablo Andrés Muñoz",
+   "_estreno": "Estreno mundial, según el pie y la lámina 1"
+  }
+ ],
+ "muestra_central": [
+  {
+   "titulo": "Soñé su nombre",
+   "_lamina": "DdVAi3zliEt-01.jpg",
+   "pais": "Colombia",
+   "director": "Ángela Carabalí",
+   "anio": 2026,
+   "duracion_min": 86
+  },
+  {
+   "titulo": "Mûpã (Madre)",
+   "_lamina": "DdVAi3zliEt-02.jpg",
+   "pais": "Colombia",
+   "director": "David Herrera",
+   "anio": 2025,
+   "duracion_min": 71
+  },
+  {
+   "titulo": "La reserva",
+   "_lamina": "DdVAi3zliEt-03.jpg",
+   "pais": "México",
+   "director": "Pablo Pérez Lombardini",
+   "anio": 2025,
+   "duracion_min": 92
+  },
+  {
+   "titulo": "Una canción para mi tierra",
+   "_lamina": "DdVAi3zliEt-04.jpg",
+   "pais": "Argentina, Alemania y Colombia",
+   "director": "Mauricio Albornoz Iniesta",
+   "anio": 2024,
+   "duracion_min": 96
+  },
+  {
+   "titulo": "La marcha del hambre",
+   "_lamina": "DdVAi3zliEt-05.jpg",
+   "pais": "Colombia",
+   "director": "Sorany Marín Trejos",
+   "anio": 2026,
+   "duracion_min": 92,
+   "_duracion_literal": "92 min. según Proimágenes / 94 min. según OjoAgua"
+  },
+  {
+   "titulo": "Cuando las montañas tiemblan",
+   "_lamina": "DdVAi3zliEt-06.jpg",
+   "title_en": "When the Mountains Tremble",
+   "director": "Pamela Yates y Newton Thomas Sigel",
+   "anio": 1983,
+   "duracion_min": 83,
+   "_pais_dudoso": "Español, inglés y lenguas indígenas de Guatemala"
+  },
+  {
+   "titulo": "Nuestra tierra",
+   "_solo_en_el_pie": true,
+   "anio": 2025,
+   "pais": "Argentina",
+   "director": "Lucrecia Martel",
+   "_por_que": "el pie de «MUESTRA CENTRAL Parte I» la lista como una de las siete, pero el carrusel solo trae seis láminas y ninguna es suya. Ficha desde el pie; la duración no la da (la web dice 122 min)"
+  }
+ ],
+ "caleidoscopio": [
+  {
+   "titulo": "Lejanía",
+   "director": "Daniel Velásquez Patarroyo",
+   "_lamina": "DcytNbdlgrv-02.jpg",
+   "categoria": "Documental",
+   "_post": "DcytNbdlgrv"
+  },
+  {
+   "titulo": "Un aparato para detectar fantasmas",
+   "director": "Mauricio Maldonado",
+   "_lamina": "DcytNbdlgrv-03.jpg",
+   "categoria": "Documental",
+   "_post": "DcytNbdlgrv"
+  },
+  {
+   "titulo": "Lecciones de primavera",
+   "director": "Antonio Mariño Lizarazo",
+   "_lamina": "DcytNbdlgrv-04.jpg",
+   "categoria": "Documental",
+   "_post": "DcytNbdlgrv"
+  },
+  {
+   "titulo": "Madres de nacimiento",
+   "director": "Gloria Isabel Gómez",
+   "_lamina": "DcytNbdlgrv-05.jpg",
+   "categoria": "Documental",
+   "_post": "DcytNbdlgrv"
+  },
+  {
+   "titulo": "Elementales",
+   "director": "Camilo Botero Jaramillo",
+   "_lamina": "DcytNbdlgrv-06.jpg",
+   "categoria": "Documental",
+   "_post": "DcytNbdlgrv"
+  },
+  {
+   "titulo": "Relatos del camino",
+   "director": "Daniel Prieto Muriel",
+   "_lamina": "DcytNbdlgrv-07.jpg",
+   "categoria": "Documental",
+   "_post": "DcytNbdlgrv"
+  },
+  {
+   "titulo": "Los años del conejo",
+   "director": "Raquel Tamayo Gutiérrez",
+   "_lamina": "DcytNbdlgrv-08.jpg",
+   "categoria": "Documental",
+   "_post": "DcytNbdlgrv"
+  },
+  {
+   "titulo": "Malas posturas",
+   "director": "Juan Pablo Castro",
+   "_lamina": "Dczc9LIls6f-02.jpg",
+   "categoria": "Ficción",
+   "_post": "Dczc9LIls6f"
+  },
+  {
+   "titulo": "Futuros luminosos",
+   "director": "Ismael García Ramírez",
+   "_lamina": "Dczc9LIls6f-03.jpg",
+   "categoria": "Ficción",
+   "_post": "Dczc9LIls6f"
+  },
+  {
+   "titulo": "Criatura",
+   "director": "Juan Pablo Ríos",
+   "_lamina": "Dczc9LIls6f-04.jpg",
+   "categoria": "Ficción",
+   "_post": "Dczc9LIls6f"
+  },
+  {
+   "titulo": "Jiru luiai \"Algo malo\"",
+   "director": "Yon Arley Agreda Jamioy",
+   "_lamina": "Dczc9LIls6f-05.jpg",
+   "categoria": "Ficción",
+   "_post": "Dczc9LIls6f"
+  },
+  {
+   "titulo": "Primer amor",
+   "director": "Iván Luna Dulcey",
+   "_lamina": "Dczc9LIls6f-06.jpg",
+   "categoria": "Ficción",
+   "_post": "Dczc9LIls6f"
+  },
+  {
+   "titulo": "Términa",
+   "director": "Juan José Guevara Ruiz",
+   "_lamina": "Dczc9LIls6f-07.jpg",
+   "categoria": "Ficción",
+   "_post": "Dczc9LIls6f"
+  },
+  {
+   "titulo": "La Mona",
+   "director": "Laura Gutiérrez Ardila",
+   "_lamina": "Dczc9LIls6f-08.jpg",
+   "categoria": "Ficción",
+   "_post": "Dczc9LIls6f"
+  },
+  {
+   "titulo": "Refracción",
+   "director": "Isabella Palacio Mesa",
+   "_lamina": "Dczc9LIls6f-09.jpg",
+   "categoria": "Ficción",
+   "_post": "Dczc9LIls6f"
+  },
+  {
+   "titulo": "El mundo es afuera",
+   "director": "Pablo Roldán",
+   "_lamina": "Dczc9LIls6f-10.jpg",
+   "categoria": "Ficción",
+   "_post": "Dczc9LIls6f"
+  },
+  {
+   "titulo": "Una vez en un cuerpo",
+   "director": "María Cristina Pérez",
+   "_lamina": "DczQXk6Ft3W-02.jpg",
+   "categoria": "Experimental",
+   "_post": "DczQXk6Ft3W"
+  },
+  {
+   "titulo": "Somnolitico",
+   "director": "Abril Velásquez",
+   "_lamina": "DczQXk6Ft3W-03.jpg",
+   "categoria": "Experimental",
+   "_post": "DczQXk6Ft3W"
+  },
+  {
+   "titulo": "Sirena mecánica",
+   "director": "Violeta Vieytes Vivares, Damián Sato",
+   "_lamina": "DczQXk6Ft3W-04.jpg",
+   "categoria": "Experimental",
+   "_post": "DczQXk6Ft3W"
+  },
+  {
+   "titulo": "En todo y en nada",
+   "director": "Ximena Pérez, Raquel Zapata",
+   "_lamina": "DczQXk6Ft3W-05.jpg",
+   "categoria": "Experimental",
+   "_post": "DczQXk6Ft3W"
+  },
+  {
+   "titulo": "De: Saul",
+   "director": "Santiago Gomxz, Cristian Rojas",
+   "_lamina": "DczQXk6Ft3W-06.jpg",
+   "categoria": "Experimental",
+   "_post": "DczQXk6Ft3W"
+  },
+  {
+   "titulo": "Deus ex necro machina",
+   "director": "Mateo M. Correa",
+   "_lamina": "DczQXk6Ft3W-07.jpg",
+   "categoria": "Experimental",
+   "_post": "DczQXk6Ft3W"
+  }
+ ],
+ "_hallazgos": [
+  "DdhXOGxgS3U lámina 3: descartada — de fondo, una foto de una edición anterior proyectando Caleidoscopio en la cancha Moisés Rojas: se leen títulos de cortos («Tierra encima», «El sol del río», «TRIO») que NO son de esta edición",
+  "«La marcha del hambre»: la lámina publica DOS duraciones con su fuente cada una — «92 min. según Proimágenes / 94 min. según OjoAgua». Se toma la primera y queda el literal.",
+  "«Cuando las montañas tiemblan»: el campo País de la lámina trae los IDIOMAS («Español, inglés y lenguas indígenas de Guatemala»). No se publica.",
+  "«Nuestra tierra» la nombra el pie y no tiene lámina: el pie de «MUESTRA CENTRAL Parte I» la lista como una de las siete, pero el carrusel solo trae seis láminas y ninguna es suya. Ficha desde el pie; la duración no la da (la web dice 122 min)",
+  "el pie del post de la inaugural NO nombra la película: da día, hora y sede, y la obra solo está pintada en la lámina 1."
+ ],
+ "_descartados": {
+  "DdaCzQoS_cE": "reel: los mismos 22 cortos de los tres carruseles, en vídeo",
+  "DcUMTxQAc2x": "anuncio de la edición: tema, fechas y qué habrá. Sin parrilla",
+  "DdXuartlmbJ": "invitado (Sebastián Lanz) y «una conversación» — sin día, hora ni sede: no es una función",
+  "Ddh0vXUCa64": "NO ES DEL FESTIVAL: @danicooltura, «Películas imperdibles». Recomendación de un tercero, no fuente"
+ },
+ "_ruido_de_fondo": {
+  "DdhXOGxgS3U lámina 3": "de fondo, una foto de una edición anterior proyectando Caleidoscopio en la cancha Moisés Rojas: se leen títulos de cortos («Tierra encima», «El sol del río», «TRIO») que NO son de esta edición"
+ }
+}

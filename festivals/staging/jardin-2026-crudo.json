@@ -1,0 +1,1403 @@
+{
+ "_provenance": {
+  "fuente": "festicinejardin.com (la ficha de cada obra) + las láminas de Instagram de @festicinejardin (día, hora, sede y el estreno)",
+  "capturado": "2026-09-21",
+  "que_aporta": "la única función que el festival ha fechado, con la ficha completa de su obra",
+  "url": "https://festicinejardin.com/",
+  "metodo": "las dos superficies del festival, contrastadas campo a campo en jardin-2026-contraste.py. Donde discrepan manda la web, que está escrita a máquina, y la discrepancia queda declarada",
+  "alcance": "62 función de las 37 obras del catálogo — el resto no tiene día, hora ni sede"
+ },
+ "funciones": [
+  {
+   "titulo": "Origen y conceptualización de la categoría de líder social.",
+   "dia": "2026-09-24",
+   "hora": "17:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "_rotulo": "LECCIÓN INAUGURAL",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "La creciente",
+   "dia": "2026-09-24",
+   "hora": "20:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "_rotulo": "ACTO INAUGURAL",
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Español",
+   "genero": "Documental",
+   "duracion_min": 89,
+   "sinopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
+   "anio": 2026,
+   "director": "Pablo Andrés Muñoz Castrillón",
+   "poster": "/assets/jardin-2026/la-creciente.jpg",
+   "posterSource": "editorial"
+  },
+  {
+   "titulo": "Alma provinciana",
+   "dia": "2026-09-25",
+   "hora": "10:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Español / película silente",
+   "genero": "Ficción — drama / comedia / romance / costumbrista",
+   "duracion_min": 111,
+   "sinopsis": "Los hijos de un gran hacendado estudian en la ciudad. Durante unas vacaciones, la hija se enamora del encargado de la finca, pero su padre se opone debido a la diferencia de clase social. Al mismo tiempo, su hermano, un joven bohemio universitario, conoce a una humilde obrera de la que se enamora. El padre también rechaza esta relación. Las dos historias de amor se enfrentan así a los prejuicios y jerarquías sociales de la época.",
+   "anio": 1926,
+   "director": "Félix Joaquín Rodríguez",
+   "poster": "/assets/jardin-2026/alma-provinciana.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Panel: Desarrollo del Liderazgo y Procesos Sociales",
+   "dia": "2026-09-25",
+   "hora": "10:00",
+   "sede": "Placa deportiva Simón Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "foro",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "La sed del viento",
+   "dia": "2026-09-25",
+   "hora": "10:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Canadá / Colombia",
+   "idioma": "Wayuunaiki y español, con subtítulos en inglés",
+   "genero": "Documental / derechos humanos / ambiental / indígena",
+   "duracion_min": 84,
+   "sinopsis": "En La Guajira, tres guardianes Wayuu defienden sus tierras ancestrales, el agua y sus tradiciones espirituales frente a proyectos mineros y de energía renovable que prometen desarrollo pero amenazan con transformar el territorio y ocupar lugares sagrados.",
+   "anio": 2026,
+   "director": "Alejandro Valbuena",
+   "poster": "/assets/jardin-2026/la-sed-del-viento.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Midnight Oil: The Hardest Line",
+   "dia": "2026-09-25",
+   "hora": "13:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Australia",
+   "idioma": "Inglés",
+   "genero": "Documental / musical / biográfico",
+   "duracion_min": 105,
+   "sinopsis": "Más de 45 años de historia de Midnight Oil, desde sus comienzos hasta convertirse en una de las bandas más influyentes de Australia. El documental combina entrevistas inéditas, material de archivo, conciertos y la dimensión política y ambiental que convirtió al grupo en mucho más que una banda de rock.",
+   "anio": 2024,
+   "director": "Paul Clarke",
+   "poster": "/assets/jardin-2026/midnight-oil-the-hardest-line.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Cuando las aguas se juntan",
+   "dia": "2026-09-25",
+   "hora": "13:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Español",
+   "genero": "Documental / derechos humanos / memoria / género",
+   "duracion_min": 85,
+   "sinopsis": "Mujeres colombianas que han vivido diferentes formas de violencia durante el conflicto armado cuentan sus historias y muestran cómo han convertido el dolor en organización, resistencia y construcción de paz.",
+   "anio": 2023,
+   "director": "Margarita Martínez Escallón",
+   "poster": "/assets/jardin-2026/cuando-las-aguas-se-juntan.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Panel: La defensa del liderazgo social",
+   "dia": "2026-09-25",
+   "hora": "15:00",
+   "sede": "Placa deportiva Simón Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "foro",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "Muestra Red de Audiovisuales de Medellín",
+   "dia": "2026-09-25",
+   "hora": "16:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 90,
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "Cuando las montañas tiemblan",
+   "dia": "2026-09-25",
+   "hora": "16:00",
+   "sede": "Coliseo Municipal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Guatemala / España",
+   "idioma": "Español, inglés y lenguas indígenas de Guatemala",
+   "genero": "Documental / histórico / político / derechos humanos",
+   "duracion_min": 83,
+   "sinopsis": "Un retrato de la guerra y la represión contra las comunidades indígenas mayas de Guatemala, construido a partir de testimonios, imágenes registradas durante el conflicto y la experiencia de Rigoberta Menchú.",
+   "anio": 1983,
+   "director": "Pamela Yates y Newton Thomas Sigel",
+   "poster": "/assets/jardin-2026/cuando-las-montanas-tiemblan.jpg",
+   "posterSource": "editorial"
+  },
+  {
+   "titulo": "Ágora: Por el derecho a defender",
+   "dia": "2026-09-25",
+   "hora": "16:30",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "foro",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "Premiación del concurso de fotografía",
+   "dia": "2026-09-25",
+   "hora": "18:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "La creciente",
+   "dia": "2026-09-25",
+   "hora": "19:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Español",
+   "genero": "Documental",
+   "duracion_min": 89,
+   "sinopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
+   "anio": 2026,
+   "director": "Pablo Andrés Muñoz Castrillón",
+   "poster": "/assets/jardin-2026/la-creciente.jpg",
+   "posterSource": "editorial"
+  },
+  {
+   "titulo": "Romero",
+   "dia": "2026-09-25",
+   "hora": "19:00",
+   "sede": "Coliseo Municipal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Estados Unidos / México",
+   "idioma": "Inglés y español",
+   "genero": "Drama / biografía / histórico / religioso",
+   "duracion_min": 105,
+   "sinopsis": "La vida de monseñor Óscar Arnulfo Romero, arzobispo de San Salvador, quien pasó de una posición inicialmente moderada a convertirse en una de las voces más firmes contra la represión, la injusticia y la violencia que azotaban El Salvador. Fue asesinado mientras celebraba misa en 1980.",
+   "anio": 1989,
+   "director": "John Duigan",
+   "poster": "/assets/jardin-2026/romero.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Tres Mujeres guerreras + Ubuntu: La métrica de los afectos",
+   "dia": "2026-09-25",
+   "hora": "19:00",
+   "sede": "Escuela Jahel Peláez Montoya",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "is_cortos": true,
+   "duracion_min": 85,
+   "film_list": [
+    {
+     "titulo": "Tres Mujeres guerreras",
+     "director": "Alexander Preuss, Cletus Gregor Barié",
+     "duracion_min": 55,
+     "pais": "Colombia, Alemania",
+     "anio": 2014,
+     "genero": "documental",
+     "_sin_ficha_en_la_web": true
+    },
+    {
+     "titulo": "Ubuntu: La métrica de los afectos",
+     "director": "Leo Rua",
+     "duracion_min": 30,
+     "pais": "Colombia",
+     "idioma": "No publicado oficialmente",
+     "genero": "Documental",
+     "anio": 2026
+    }
+   ]
+  },
+  {
+   "titulo": "Presentación del libro: Morir es un país que amabas: Poesía y memoria por nuestros líderes",
+   "dia": "2026-09-25",
+   "hora": "19:00",
+   "sede": "Fonda Hotel Hacienda Balandú Comfenalco",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "charla",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "Competencia nacional de cortometrajes",
+   "dia": "2026-09-25",
+   "hora": "19:15",
+   "sede": "Placa deportiva Simón Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "_rotulo": "CALEIDOSCOPIO",
+   "seccion": "CALEIDOSCOPIO",
+   "is_cortos": true,
+   "duracion_min": 100,
+   "film_list": [
+    {
+     "titulo": "Deus ex necro machina",
+     "director": "Mateo M. Correa",
+     "duracion_min": 6,
+     "genero": "Experimental"
+    },
+    {
+     "titulo": "Futuros luminosos",
+     "director": "Ismael García Ramírez",
+     "duracion_min": 25,
+     "sinopsis": "Simón (13) vive en un pueblo abandonado, allí pasa una última noche junto a su hermana Sol (18), quien se irá a trabajar a la ciudad. Junto a un grupo de amigxs, recorren los oscuros caminos del lugar en el que crecieron, iluminando las ruinas, que cobran vida con el paso de sus linternas.",
+     "anio": 2026,
+     "genero": "Ficción",
+     "poster": "/assets/jardin-2026/futuros-luminosos.jpg",
+     "posterSource": "tmdb"
+    },
+    {
+     "titulo": "Elementales",
+     "director": "Camilo Botero Jaramillo",
+     "duracion_min": 9,
+     "genero": "Documental"
+    },
+    {
+     "titulo": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez",
+     "duracion_min": 10,
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita.",
+     "anio": 2025,
+     "genero": "Experimental",
+     "poster": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb"
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio Mesa",
+     "duracion_min": 11,
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+     "anio": 2025,
+     "genero": "Ficción",
+     "poster": "/assets/jardin-2026/refraccion.jpg",
+     "posterSource": "tmdb"
+    },
+    {
+     "titulo": "Madres de nacimiento",
+     "director": "Gloria Isabel Gómez Ceballos",
+     "duracion_min": 8,
+     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
+     "anio": 2026,
+     "genero": "Documental",
+     "poster": "/assets/jardin-2026/madres-de-nacimiento.jpg",
+     "posterSource": "tmdb"
+    },
+    {
+     "titulo": "Jiru iuiai \"Algo malo\"",
+     "director": "Yon Arley Agreda Jamioy",
+     "duracion_min": 14,
+     "sinopsis": "En el corazón del Territorio Inga de Manoi, el Taita Sinchi Rumi, líder espiritual, presiente una amenaza inminente. Un Chaski, mensajero Inca, llega con un Kipu ancestral que confirma sus peores temores. Consciente del peligro, el Taita se sumerge en una búsqueda de fortaleza espiritual y física para enfrentar la oscuridad que se acerca.",
+     "anio": 2024,
+     "genero": "Ficción",
+     "poster": "/assets/jardin-2026/jiru-iuiai-algo-malo.jpg",
+     "posterSource": "editorial"
+    },
+    {
+     "titulo": "Lejanía",
+     "director": "Daniel Velásquez Patarroyo",
+     "duracion_min": 17,
+     "sinopsis": "Un viajero se dirige hacia Lejanía, una playa en una isla escondida en la inmensidad del océano pacífico, donde se presume, sus visitantes tienen visiones sobrenaturales. En medio de paisajes fragmentados y presencias clandestinas entre las sombras ,la realidad se desdibuja y el tiempo se deshace.",
+     "anio": 2026,
+     "genero": "Documental",
+     "poster": "/assets/jardin-2026/lejania.jpg",
+     "posterSource": "tmdb"
+    }
+   ]
+  },
+  {
+   "titulo": "Soñé su nombre",
+   "dia": "2026-09-25",
+   "hora": "19:45",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Español",
+   "genero": "Documental / memoria / familia / derechos humanos",
+   "duracion_min": 86,
+   "sinopsis": "Después de 30 años negando su dolor, Ángela sueña con su padre desaparecido, quien le pide que lo busque. Junto a su hermana Juliana emprende un viaje por Colombia hacia el territorio indígena donde él desapareció. El viaje se convierte en una búsqueda familiar, territorial y espiritual alrededor de la memoria y la desaparición forzada.",
+   "anio": 2026,
+   "director": "Ángela Carabalí",
+   "poster": "/assets/jardin-2026/sone-su-nombre.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Muestra Memoria y Territorio",
+   "dia": "2026-09-25",
+   "hora": "22:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 90,
+   "director": "Gustavo Hincapié",
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "Cien años de soledad: Eran más de tres mil",
+   "dia": "2026-09-25",
+   "hora": "22:00",
+   "sede": "Coliseo Municipal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 77,
+   "director": "Laura Mora",
+   "pais": "Colombia",
+   "anio": 2026,
+   "genero": "ficción",
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "La casa del trueno",
+   "dia": "2026-09-25",
+   "hora": "22:00",
+   "sede": "Escuela Jahel Peláez Montoya",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 33,
+   "director": "Dahian Cifuentes, Raúl Cifuentes,",
+   "pais": "Colombia",
+   "anio": 2025,
+   "genero": "documental",
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "La reserva",
+   "dia": "2026-09-25",
+   "hora": "22:00",
+   "sede": "Placa deportiva Simón Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "México",
+   "idioma": "Español",
+   "genero": "Thriller / drama / naturaleza",
+   "duracion_min": 92,
+   "sinopsis": "Julia, una guardabosques de Monte Virgen, descubre que los talamontes están destruyendo la reserva natural que rodea su comunidad. Mientras intenta detenerlos y conseguir el apoyo de los habitantes del pueblo, se enfrenta al miedo, la indiferencia y las amenazas de quienes controlan la tala ilegal.",
+   "anio": 2025,
+   "director": "Pablo Pérez Lombardini",
+   "rating": "Pendiente",
+   "poster": "/assets/jardin-2026/la-reserva.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Una canción para mi tierra",
+   "dia": "2026-09-25",
+   "hora": "22:30",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Argentina, Alemania y Colombia",
+   "idioma": "Español",
+   "genero": "Documental / musical / ambiental",
+   "duracion_min": 96,
+   "sinopsis": "Ramiro Lezcano, maestro de música en una zona rural argentina, descubre que las fumigaciones con agroquímicos están afectando la salud de sus estudiantes. Junto a ellos transforma la preocupación en canciones y emprende una cruzada musical que termina convirtiéndose en un gran concierto por la defensa del territorio y el ambiente.",
+   "anio": 2024,
+   "director": "Mauricio Albornoz Iniesta",
+   "rating": "Pendiente",
+   "poster": "/assets/jardin-2026/una-cancion-para-mi-tierra.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Charla: Arte, verdad y compromiso social",
+   "dia": "2026-09-26",
+   "hora": "09:30",
+   "sede": "Placa deportiva Simón Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "charla",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "Muestra de cortos",
+   "dia": "2026-09-26",
+   "hora": "10:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 90,
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "Una sola golondrina no hace llover",
+   "dia": "2026-09-26",
+   "hora": "10:00",
+   "sede": "Coliseo Municipal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 90,
+   "director": "Natalia Pinilla Rodríguez",
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "Muestra documental: Defender la vida y la naturaleza",
+   "dia": "2026-09-26",
+   "hora": "10:00",
+   "sede": "Escuela Jahel Peláez Montoya",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 90,
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "Alma provinciana",
+   "dia": "2026-09-26",
+   "hora": "10:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Español / película silente",
+   "genero": "Ficción — drama / comedia / romance / costumbrista",
+   "duracion_min": 111,
+   "sinopsis": "Los hijos de un gran hacendado estudian en la ciudad. Durante unas vacaciones, la hija se enamora del encargado de la finca, pero su padre se opone debido a la diferencia de clase social. Al mismo tiempo, su hermano, un joven bohemio universitario, conoce a una humilde obrera de la que se enamora. El padre también rechaza esta relación. Las dos historias de amor se enfrentan así a los prejuicios y jerarquías sociales de la época.",
+   "anio": 1926,
+   "director": "Félix Joaquín Rodríguez",
+   "poster": "/assets/jardin-2026/alma-provinciana.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Panel: Memoria Histórica, construcción de Imaginarios y representación.",
+   "dia": "2026-09-26",
+   "hora": "11:00",
+   "sede": "Placa deportiva Simón Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "foro",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "Muestra estudiantil La Mostra",
+   "dia": "2026-09-26",
+   "hora": "13:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 90,
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "Cuando las aguas se juntan",
+   "dia": "2026-09-26",
+   "hora": "13:00",
+   "sede": "Coliseo Municipal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Español",
+   "genero": "Documental / derechos humanos / memoria / género",
+   "duracion_min": 85,
+   "sinopsis": "Mujeres colombianas que han vivido diferentes formas de violencia durante el conflicto armado cuentan sus historias y muestran cómo han convertido el dolor en organización, resistencia y construcción de paz.",
+   "anio": 2023,
+   "director": "Margarita Martínez Escallón",
+   "poster": "/assets/jardin-2026/cuando-las-aguas-se-juntan.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La sed del viento",
+   "dia": "2026-09-26",
+   "hora": "13:00",
+   "sede": "Escuela Jahel Peláez Montoya",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Canadá / Colombia",
+   "idioma": "Wayuunaiki y español, con subtítulos en inglés",
+   "genero": "Documental / derechos humanos / ambiental / indígena",
+   "duracion_min": 84,
+   "sinopsis": "En La Guajira, tres guardianes Wayuu defienden sus tierras ancestrales, el agua y sus tradiciones espirituales frente a proyectos mineros y de energía renovable que prometen desarrollo pero amenazan con transformar el territorio y ocupar lugares sagrados.",
+   "anio": 2026,
+   "director": "Alejandro Valbuena",
+   "poster": "/assets/jardin-2026/la-sed-del-viento.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La marcha del hambre",
+   "dia": "2026-09-26",
+   "hora": "13:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Español",
+   "genero": "Documental / memoria / educación / historia social",
+   "duracion_min": 92,
+   "sinopsis": "En 1966, cientos de maestros colombianos recorrieron 1.600 kilómetros a pie para defender la educación pública. Sesenta años después, una joven profesora llamada Sor intenta reconstruir aquella marcha y devolverle su lugar en la memoria colectiva.",
+   "anio": 2026,
+   "director": "Sorany Marín Trejos",
+   "poster": "/assets/jardin-2026/la-marcha-del-hambre.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Panel: Diversidad de liderazgos y relevo generacional",
+   "dia": "2026-09-26",
+   "hora": "15:00",
+   "sede": "Placa deportiva Simón Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "foro",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "Muestra Memoria y Territorio",
+   "dia": "2026-09-26",
+   "hora": "16:00",
+   "sede": "Coliseo Municipal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 90,
+   "director": "Gustavo Hincapié",
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "Soñé su nombre",
+   "dia": "2026-09-26",
+   "hora": "16:00",
+   "sede": "Escuela Jahel Peláez Montoya",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Español",
+   "genero": "Documental / memoria / familia / derechos humanos",
+   "duracion_min": 86,
+   "sinopsis": "Después de 30 años negando su dolor, Ángela sueña con su padre desaparecido, quien le pide que lo busque. Junto a su hermana Juliana emprende un viaje por Colombia hacia el territorio indígena donde él desapareció. El viaje se convierte en una búsqueda familiar, territorial y espiritual alrededor de la memoria y la desaparición forzada.",
+   "anio": 2026,
+   "director": "Ángela Carabalí",
+   "poster": "/assets/jardin-2026/sone-su-nombre.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La creciente",
+   "dia": "2026-09-26",
+   "hora": "16:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Español",
+   "genero": "Documental",
+   "duracion_min": 89,
+   "sinopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
+   "anio": 2026,
+   "director": "Pablo Andrés Muñoz Castrillón",
+   "poster": "/assets/jardin-2026/la-creciente.jpg",
+   "posterSource": "editorial"
+  },
+  {
+   "titulo": "Volver",
+   "dia": "2026-09-26",
+   "hora": "16:30",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "_formato": "Cine foro",
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Español",
+   "genero": "Ficción / drama social / derechos humanos",
+   "duracion_min": 40,
+   "sinopsis": "Matilde, una campesina desplazada por la violencia, intenta regresar a su territorio después de haber perdido a su familia. A través de su historia, la película aborda el desplazamiento, el despojo y la persecución de quienes defienden sus comunidades.",
+   "anio": 2016,
+   "director": "Carlos A. Guevara",
+   "poster": "/assets/jardin-2026/volver.jpg",
+   "posterSource": "editorial"
+  },
+  {
+   "titulo": "La casa del trueno",
+   "dia": "2026-09-26",
+   "hora": "19:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 33,
+   "director": "Dahian Cifuentes, Raúl Cifuentes,",
+   "pais": "Colombia",
+   "anio": 2025,
+   "genero": "documental",
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "La reserva",
+   "dia": "2026-09-26",
+   "hora": "19:00",
+   "sede": "Coliseo Municipal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "México",
+   "idioma": "Español",
+   "genero": "Thriller / drama / naturaleza",
+   "duracion_min": 92,
+   "sinopsis": "Julia, una guardabosques de Monte Virgen, descubre que los talamontes están destruyendo la reserva natural que rodea su comunidad. Mientras intenta detenerlos y conseguir el apoyo de los habitantes del pueblo, se enfrenta al miedo, la indiferencia y las amenazas de quienes controlan la tala ilegal.",
+   "anio": 2025,
+   "director": "Pablo Pérez Lombardini",
+   "rating": "Pendiente",
+   "poster": "/assets/jardin-2026/la-reserva.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Una canción para mi tierra",
+   "dia": "2026-09-26",
+   "hora": "19:00",
+   "sede": "Escuela Jahel Peláez Montoya",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Argentina, Alemania y Colombia",
+   "idioma": "Español",
+   "genero": "Documental / musical / ambiental",
+   "duracion_min": 96,
+   "sinopsis": "Ramiro Lezcano, maestro de música en una zona rural argentina, descubre que las fumigaciones con agroquímicos están afectando la salud de sus estudiantes. Junto a ellos transforma la preocupación en canciones y emprende una cruzada musical que termina convirtiéndose en un gran concierto por la defensa del territorio y el ambiente.",
+   "anio": 2024,
+   "director": "Mauricio Albornoz Iniesta",
+   "rating": "Pendiente",
+   "poster": "/assets/jardin-2026/una-cancion-para-mi-tierra.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Competencia nacional de cortometrajes",
+   "dia": "2026-09-26",
+   "hora": "19:00",
+   "sede": "Placa deportiva Simón Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "_rotulo": "CALEIDOSCOPIO",
+   "seccion": "CALEIDOSCOPIO",
+   "is_cortos": true,
+   "duracion_min": 206,
+   "film_list": [
+    {
+     "titulo": "Los años del conejo",
+     "director": "Raquel Tamayo Gutiérrez",
+     "duracion_min": 9,
+     "sinopsis": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre.",
+     "anio": 2025,
+     "genero": "Documental",
+     "poster": "/assets/jardin-2026/los-anos-del-conejo.jpg",
+     "posterSource": "tmdb"
+    },
+    {
+     "titulo": "El mundo es afuera",
+     "director": "Pablo Roldán",
+     "duracion_min": 22,
+     "sinopsis": "David, un joven escultor en formación, acepta la invitación de una amiga a un paseo en una finca calurosa. Tímido, confía sus días a la lectura. Al llegar y encontrar allí más gente, todos hombres cómodos mostrando sus cuerpos, se siente emboscado. David se ve obligado a convivir durante un fin de semana con unos extraños con los que no tiene nada en común.",
+     "anio": 2025,
+     "genero": "Ficción",
+     "poster": "/assets/jardin-2026/el-mundo-es-afuera.jpg",
+     "posterSource": "tmdb"
+    },
+    {
+     "titulo": "En todo y en nada",
+     "director": "Ximena Pérez y Raquel Zapata",
+     "duracion_min": 11,
+     "sinopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer.",
+     "anio": 2026,
+     "genero": "Experimental",
+     "poster": "/assets/jardin-2026/en-todo-y-en-nada.jpg",
+     "posterSource": "editorial"
+    },
+    {
+     "titulo": "Un aparato para detectar fantasmas",
+     "director": "Mauricio Maldonado",
+     "duracion_min": 18,
+     "anio": 2025,
+     "_sinopsis_en_disputa": "la web del festival publica el mismo texto en esta obra y en la otra; se omite hasta que lo aclaren",
+     "genero": "Documental",
+     "poster": "/assets/jardin-2026/un-aparato-para-detectar-fantasmas.jpg",
+     "posterSource": "editorial"
+    },
+    {
+     "titulo": "De: Saúl",
+     "director": "Santiago Gomxz, Cristian Rojas",
+     "duracion_min": 4,
+     "sinopsis": "Saúl duerme en la casa de su abuela y sueña con una pitonisa que le dice que la única forma de acabar con el pecado que siente en la intimidad es matando al pecador. Saúl recuerda a un ser amado mientras la voz de la pitonisa crece cada vez más dentro de su cabeza, hasta entender que la única forma de liberarse es perdonándose a sí mismo.",
+     "anio": 2026,
+     "genero": "Experimental",
+     "poster": "/assets/jardin-2026/de-saul.jpg",
+     "posterSource": "editorial"
+    },
+    {
+     "titulo": "La Mona",
+     "director": "Laura Gutiérrez Ardila",
+     "duracion_min": 18,
+     "sinopsis": "La Mona está dispuesta a cualquier sacrificio para garantizar su autoridad en La Hondura, aunque el precio que pague sea la soledad.",
+     "anio": 2025,
+     "genero": "Ficción",
+     "poster": "/assets/jardin-2026/la-mona.jpg",
+     "posterSource": "editorial"
+    },
+    {
+     "titulo": "Criatura",
+     "director": "Juan Pablo Ríos",
+     "duracion_min": 17,
+     "anio": 2025,
+     "genero": "Ficción",
+     "poster": "/assets/jardin-2026/criatura.jpg",
+     "posterSource": "editorial"
+    },
+    {
+     "titulo": "Malas posturas",
+     "director": "Juan Pablo Castro",
+     "duracion_min": 1,
+     "sinopsis": "Entre más insiste en cumplir su rol de padre proveedor, Henry más se aleja de la posibilidad de volver a su hogar. Desde la finca de su hermano, él busca vender un ternero para así enviar dinero a su casa. Las malas posturas arrojarán su cuerpo, cansado de insistir.",
+     "anio": 2025,
+     "genero": "Ficción",
+     "poster": "/assets/jardin-2026/malas-posturas.jpg",
+     "posterSource": "editorial"
+    },
+    {
+     "titulo": "Somnolítico",
+     "director": "Abril Velasquez",
+     "duracion_min": 11,
+     "sinopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, pasando de un lugar a otro sin encontrar una salida. Los caminos se ven invadidos por recorridos acelerados que van y vuelven como cascadas humanas. Los transeúntes, sin identidad, se mueven automáticamente, creando un laberinto en el que las rutas parecen no tener fin. Personas dormidas y agotadas parecen fusionarse con el entorno y, mientras el bus sigue su marcha, el ser finalmente logra descubrirse a si mismx.",
+     "anio": 2025,
+     "genero": "Experimental",
+     "poster": "/assets/jardin-2026/somnolitico.jpg",
+     "posterSource": "editorial"
+    },
+    {
+     "titulo": "Primer amor",
+     "director": "Iván Luna Dulcey",
+     "duracion_min": 17,
+     "sinopsis": "Manolo es un joven barra brava hincha del club de fútbol Deportivo Cali, que debe huir de la ciudad junto a Camila, su novia embarazada, luego de estar involucrado en un hecho violento por peleas entre barristas. Manolo y Camila llegan a la casa del abuelo en medio del campo, donde deben acostumbrarse a una vida diferente a medida que avanzan tanto el embarazo, como el torneo de fútbol. Cuando el Deportivo Cali logra llegar a la final, Manolo se enfrenta ante la decisión de viajar a verla en el estadio y seguir su pasión por el equipo o acompañar el nacimiento de su hijo: una difícil decisión para un hincha apasionado por el fútbol.",
+     "anio": 2025,
+     "genero": "Ficción",
+     "poster": "/assets/jardin-2026/primer-amor.jpg",
+     "posterSource": "editorial"
+    },
+    {
+     "titulo": "Lecciones de primavera",
+     "director": "Antonio Mariño",
+     "duracion_min": 14,
+     "sinopsis": "Dominik, un niño de 11 años, pasas las tardes soleadas de primavera con su padre Szolt, un hombre marcado por un pasado brusco en medio de peleas callejeras. Creciendo entre enormes pastizales y pequeños bosques, Dominik habita la ternura con la que cuidadosamente trata a los animales que allí viven. Sin embargo, la imagen del hombre fuerte y rudo cada vez lo fascina más.",
+     "anio": 2025,
+     "genero": "Documental",
+     "poster": "/assets/jardin-2026/lecciones-de-primavera.jpg",
+     "posterSource": "tmdb"
+    },
+    {
+     "titulo": "Términa",
+     "director": "Juan José Guevara Ruiz",
+     "duracion_min": 27,
+     "sinopsis": "Alex, un jóven sumido en la depresión y consumido por la promesa de acabar con su propia vida, viaja a Bogotá con un único propósito: vengarse de su abusador, la persona que para él, es el causante de todo el camino de miseria que ha llevado hasta ahora, antes de poner fin a su propia vida.",
+     "anio": 2025,
+     "genero": "Ficción",
+     "poster": "/assets/jardin-2026/termina.jpg",
+     "posterSource": "tmdb"
+    },
+    {
+     "titulo": "Sirena mecánica",
+     "director": "Violeta Vieytes Vivares y Damián Sato",
+     "duracion_min": 9,
+     "sinopsis": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
+     "anio": 2026,
+     "genero": "Experimental",
+     "poster": "/assets/jardin-2026/sirena-mecanica.jpg",
+     "posterSource": "tmdb"
+    },
+    {
+     "titulo": "Relatos del camino",
+     "director": "Daniel Prieto Muriel",
+     "duracion_min": 12,
+     "anio": 2025,
+     "_sinopsis_en_disputa": "la web del festival publica el mismo texto en esta obra y en la otra; se omite hasta que lo aclaren",
+     "genero": "Documental",
+     "poster": "/assets/jardin-2026/relatos-del-camino.jpg",
+     "posterSource": "editorial"
+    }
+   ]
+  },
+  {
+   "titulo": "Cien años de soledad (SO2E6): Eran más de tres mil",
+   "dia": "2026-09-26",
+   "hora": "19:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 77,
+   "director": "Laura Mora",
+   "pais": "Colombia",
+   "anio": 2026,
+   "genero": "ficción",
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "Romero",
+   "dia": "2026-09-26",
+   "hora": "22:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Estados Unidos / México",
+   "idioma": "Inglés y español",
+   "genero": "Drama / biografía / histórico / religioso",
+   "duracion_min": 105,
+   "sinopsis": "La vida de monseñor Óscar Arnulfo Romero, arzobispo de San Salvador, quien pasó de una posición inicialmente moderada a convertirse en una de las voces más firmes contra la represión, la injusticia y la violencia que azotaban El Salvador. Fue asesinado mientras celebraba misa en 1980.",
+   "anio": 1989,
+   "director": "John Duigan",
+   "poster": "/assets/jardin-2026/romero.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Midnight Oil: The Hardest Line",
+   "dia": "2026-09-26",
+   "hora": "22:00",
+   "sede": "Coliseo Municipal",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Australia",
+   "idioma": "Inglés",
+   "genero": "Documental / musical / biográfico",
+   "duracion_min": 105,
+   "sinopsis": "Más de 45 años de historia de Midnight Oil, desde sus comienzos hasta convertirse en una de las bandas más influyentes de Australia. El documental combina entrevistas inéditas, material de archivo, conciertos y la dimensión política y ambiental que convirtió al grupo en mucho más que una banda de rock.",
+   "anio": 2024,
+   "director": "Paul Clarke",
+   "poster": "/assets/jardin-2026/midnight-oil-the-hardest-line.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La marcha del hambre",
+   "dia": "2026-09-26",
+   "hora": "22:00",
+   "sede": "Escuela Jahel Peláez Montoya",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Español",
+   "genero": "Documental / memoria / educación / historia social",
+   "duracion_min": 92,
+   "sinopsis": "En 1966, cientos de maestros colombianos recorrieron 1.600 kilómetros a pie para defender la educación pública. Sesenta años después, una joven profesora llamada Sor intenta reconstruir aquella marcha y devolverle su lugar en la memoria colectiva.",
+   "anio": 2026,
+   "director": "Sorany Marín Trejos",
+   "poster": "/assets/jardin-2026/la-marcha-del-hambre.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Una sola golondrina no hace llover",
+   "dia": "2026-09-26",
+   "hora": "22:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 86,
+   "director": "Natalia Pinilla Rodríguez",
+   "pais": "Colombia",
+   "anio": 2021,
+   "genero": "documental",
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "Competencia nacional de cortometrajes",
+   "dia": "2026-09-26",
+   "hora": "23:00",
+   "sede": "Placa deportiva Simón Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "_rotulo": "ACTO DE PREMIACIÓN",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "Tres Mujeres guerreras + Ubuntu: La métrica de los afectos",
+   "dia": "2026-09-27",
+   "hora": "10:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "is_cortos": true,
+   "duracion_min": 85,
+   "film_list": [
+    {
+     "titulo": "Tres Mujeres guerreras",
+     "director": "Alexander Preuss, Cletus Gregor Barié",
+     "duracion_min": 55,
+     "pais": "Colombia, Alemania",
+     "anio": 2014,
+     "genero": "documental",
+     "_sin_ficha_en_la_web": true
+    },
+    {
+     "titulo": "Ubuntu: La métrica de los afectos",
+     "director": "Leo Rua",
+     "duracion_min": 30,
+     "pais": "Colombia",
+     "idioma": "No publicado oficialmente",
+     "genero": "Documental",
+     "anio": 2026
+    }
+   ]
+  },
+  {
+   "titulo": "Panel: Liderazgo y educación",
+   "dia": "2026-09-27",
+   "hora": "10:00",
+   "sede": "Placa deportiva Simón Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "foro",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "Muestra documental: Defender la vida y la naturaleza",
+   "dia": "2026-09-27",
+   "hora": "10:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 90,
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "Panel: Liderazgo y territorio",
+   "dia": "2026-09-27",
+   "hora": "11:30",
+   "sede": "Placa deportiva Simón Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "foro",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "Proyección resultados del Taller De la ideación a la acción",
+   "dia": "2026-09-27",
+   "hora": "13:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "duracion_min": 90,
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "Cuando las montañas tiemblan",
+   "dia": "2026-09-27",
+   "hora": "13:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "Guatemala / España",
+   "idioma": "Español, inglés y lenguas indígenas de Guatemala",
+   "genero": "Documental / histórico / político / derechos humanos",
+   "duracion_min": 83,
+   "sinopsis": "Un retrato de la guerra y la represión contra las comunidades indígenas mayas de Guatemala, construido a partir de testimonios, imágenes registradas durante el conflicto y la experiencia de Rigoberta Menchú.",
+   "anio": 1983,
+   "director": "Pamela Yates y Newton Thomas Sigel",
+   "poster": "/assets/jardin-2026/cuando-las-montanas-tiemblan.jpg",
+   "posterSource": "editorial"
+  },
+  {
+   "titulo": "Presentación del libro: Días de noche. Crónicas de cine - Víctor Gaviria",
+   "dia": "2026-09-27",
+   "hora": "14:30",
+   "sede": "Placa deportiva Simón Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "charla",
+   "duracion_min": 60,
+   "seccion": "Muestra Central"
+  },
+  {
+   "titulo": "Gustavo, el observador invisible",
+   "dia": "2026-09-27",
+   "hora": "16:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "_rotulo": "ESTRENO",
+   "seccion": "Muestra Central",
+   "duracion_min": 25,
+   "pais": "Colombia",
+   "anio": 1926,
+   "genero": "documental",
+   "_sin_ficha_en_la_web": true
+  },
+  {
+   "titulo": "La reserva",
+   "dia": "2026-09-27",
+   "hora": "16:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "seccion": "Muestra Central",
+   "pais": "México",
+   "idioma": "Español",
+   "genero": "Thriller / drama / naturaleza",
+   "duracion_min": 92,
+   "sinopsis": "Julia, una guardabosques de Monte Virgen, descubre que los talamontes están destruyendo la reserva natural que rodea su comunidad. Mientras intenta detenerlos y conseguir el apoyo de los habitantes del pueblo, se enfrenta al miedo, la indiferencia y las amenazas de quienes controlan la tala ilegal.",
+   "anio": 2025,
+   "director": "Pablo Pérez Lombardini",
+   "rating": "Pendiente",
+   "poster": "/assets/jardin-2026/la-reserva.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Mûpã (Madre)",
+   "dia": "2026-09-27",
+   "hora": "19:30",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "_rotulo": "ACTO DE CLAUSURA",
+   "seccion": "Muestra Central",
+   "pais": "Colombia",
+   "idioma": "Emberá / español",
+   "genero": "Documental / derechos humanos / indígena / social",
+   "duracion_min": 71,
+   "sinopsis": "Morelia, primera mujer en convertirse en gobernadora de su comunidad Emberá, emprende la búsqueda de una niña de 13 años que fue obligada a casarse con un profesor y desapareció poco después. La investigación la obliga a enfrentarse tanto a estructuras patriarcales como a los fantasmas de su propia historia.",
+   "anio": 2025,
+   "director": "David Herrera",
+   "poster": "/assets/jardin-2026/mupa-madre.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Lo que vemos, lo que decimos",
+   "dia": "2026-09-24",
+   "hora": "09:00",
+   "sede": "I.E San Antonio",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "duracion_min": 120,
+   "seccion": "Muestra Central",
+   "_credito": "Defensoría del pueblo"
+  },
+  {
+   "titulo": "Masculinidades para la igualdad",
+   "dia": "2026-09-25",
+   "hora": "09:00",
+   "sede": "I.E San Antonio",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "duracion_min": 120,
+   "seccion": "Muestra Central",
+   "_credito": "Defensoría del pueblo"
+  },
+  {
+   "titulo": "Taller Cartacartografías de memorias territoriales",
+   "dia": "2026-09-26",
+   "hora": "11:00",
+   "sede": "Teatro Municipal de Jardín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "sala": "Café Tinta y Tinto, piso 2",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "duracion_min": 60,
+   "seccion": "Muestra Central",
+   "_credito": "Colectivo JÓDETE"
+  },
+  {
+   "titulo": "Intervención artística",
+   "dia": "2026-09-26",
+   "hora": "13:00",
+   "sede": "Casa de la Cultura",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdkY5ejlraV/",
+    "date": "2026-09-21"
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "info": true,
+   "duracion_min": 240,
+   "seccion": "Muestra Central",
+   "_credito": "Colectivo Imagina Jericó"
+  }
+ ],
+ "_talleres_fuera": [
+  {
+   "titulo": "De la ideación a la acción",
+   "_por_que": "sin dia, sin lugar, sin hora"
+  },
+  {
+   "titulo": "Taller de fotografía cinematográfica",
+   "_por_que": "sin dia, sin lugar, sin hora"
+  },
+  {
+   "titulo": "Talleres, actividades digitales y proyecciones",
+   "_por_que": "sin hora"
+  }
+ ],
+ "_sin_funcion": {
+  "Muestra Central": {
+   "n": 1,
+   "_por_que": "con la parrilla completa del 21 sep quedan DOS obras fichadas en la web que no aparecen en ninguna lámina: «Nuestra tierra» (Lucrecia Martel) —que el propio festival anunció en el post de Muestra Central Parte I— y «Ubuntu: La métrica de los afectos». No es que no tengan día: es que la programación publicada no las incluye. Preguntado al festival.",
+   "obras": [
+    "Nuestra tierra"
+   ]
+  }
+ },
+ "_sedes_publicadas_sin_funcion": []
+}
