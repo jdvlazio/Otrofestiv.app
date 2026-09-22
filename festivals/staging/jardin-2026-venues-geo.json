@@ -39,6 +39,22 @@
  },
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-09-20"
+  "capturado": "2026-09-21"
+ },
+ "Fonda Hotel Hacienda Balandú Comfenalco": {
+  "n": 0,
+  "lat": 5.5910773,
+  "lng": -75.8133935,
+  "_prec": "nominatim",
+  "_match": "Hacienda Balandú, Camino de la Herrera, Cabecera Municipal de Jardín, Antioquia",
+  "_nota": "UNA SOLA FUNCIÓN en toda la parrilla, y por eso se pasó hasta ahora. Está a 1,1 km al sur del parque principal, fuera del casco donde caen las otras seis: el geocodificador la rechazó por radio y se ubica declarándolo, no ampliando el radio para todas."
+ },
+ "I.E San Antonio": {
+  "n": 0,
+  "lat": 5.6004441,
+  "lng": -75.8197326,
+  "_prec": "nominatim",
+  "_match": "Institución Educativa San Antonio Sección Moises Rojas P, Calle 9, Carrera 2, Cabecera Municipal de Jardín, Antioquia",
+  "_nota": "SEDE NUEVA, la destapó la lámina de TALLERES del carrusel del 21 sep: ahí van el taller ELO (jueves 24, 9:00) y «Masculinidades para la igualdad» (viernes 25, 9:00). El nombre que OSM le da incluye «Sección Moisés Rojas P», que es la misma referencia de la cancha Moisés Rojas que el sismo del 10 de agosto dejó inutilizable: el colegio y la cancha son vecinos, y por eso el festival se mueve entre ellos. A 100 m del Teatro Municipal, coherente con un pueblo de este tamaño."
  }
 }

@@ -80,7 +80,11 @@ EXPLICADAS = {
 }
 
 
-def norm(s):
+def clave_titulo(s):
+    """El título sin acentos, espacios ni puntuación. No se llama `norm`: ésa
+    es de lib.py y hace otra cosa —deja los espacios—, y dos funciones con el
+    mismo nombre y distinto comportamiento es exactamente lo que [lib-unica]
+    existe para impedir."""
     s = unicodedata.normalize('NFD', str(s or '').lower())
     s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
     return re.sub(r'[^a-z0-9]+', '', s)
@@ -125,7 +129,7 @@ def lee(rutas):
 
 
 def clave(f):
-    return (f['dia'], f['hora'], norm(f['sede']), norm(f.get('titulo')))
+    return (f['dia'], f['hora'], clave_titulo(f['sede']), clave_titulo(f.get('titulo')))
 
 
 def main():
@@ -147,10 +151,10 @@ def main():
 
     # C · contra el catálogo de la web
     cat = json.load(open(f'{ST}/jardin-2026-catalogo.json', encoding='utf-8'))['obras']
-    por_tit = {norm(o['titulo']): o for o in cat}
+    por_tit = {clave_titulo(o['titulo']): o for o in cat}
     cruzadas, choques, explicadas = 0, [], []
     for f in A:
-        o = por_tit.get(norm(f.get('titulo')))
+        o = por_tit.get(clave_titulo(f.get('titulo')))
         if not o:
             continue
         cruzadas += 1
@@ -166,7 +170,7 @@ def main():
             anota('duracion', f'«{f["titulo"][:26]}» dura {f["duracion_min"]} en la '
                               f'parrilla y {o["duracion_min"]} en la web')
         if f.get('director') and o.get('director') \
-                and norm(f['director']) != norm(o['director']):
+                and clave_titulo(f['director']) != clave_titulo(o['director']):
             anota('director', f'«{f["titulo"][:26]}»: dir. {f["director"][:22]} en la '
                               f'parrilla y {o["director"][:22]} en la web')
         if f.get('anio') and o.get('anio') and f['anio'] != o['anio']:

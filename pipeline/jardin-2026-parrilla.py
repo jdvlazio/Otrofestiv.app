@@ -191,6 +191,12 @@ def talleres(lineas):
         md = re.search(r'(jueves|viernes|s[áa]bado|domingo)\s+(\d{1,2})\s+de\s+septiembre', t, re.I)
         ml = re.match(r'Lugar:\s*(.+)$', t, re.I)
         mh = re.match(r'Hora(?:rio)?:\s*(\d{1,2}):(\d{2})\s*([ap])\.?\s*m', t, re.I)
+        # «Horario: 11:00 a.m. - 12:00 p.m.» trae también el FIN, y con él la
+        # duración real. Sin leerlo les puse 120 minutos por defecto a los
+        # cuatro y el verificador cazó nueve solapes falsos: el taller de
+        # cartografías dura una hora, no dos.
+        mf = re.match(r'Hora(?:rio)?:\s*\d{1,2}:\d{2}\s*[ap]\.?\s*m\.?\s*[-–]\s*'
+                      r'(\d{1,2}):(\d{2})\s*([ap])\.?\s*m', t, re.I)
         mo = re.match(r'(Organiza|Tallerista):\s*(.+)$', t, re.I)
         if not (md or ml or mh or mo):
             # Línea sin rótulo: título nuevo, o subtítulo del bloque en curso.
@@ -219,6 +225,13 @@ def talleres(lineas):
             act['lugar'] = ml.group(1).strip()
         if mh:
             act['hora'] = h24(mh)
+        if mf:
+            fin = h24(mf)
+            ini = act.get('hora') or ''
+            if ini:
+                d_ = (int(fin[:2]) * 60 + int(fin[3:])) - (int(ini[:2]) * 60 + int(ini[3:]))
+                if d_ > 0:
+                    act['duracion_min'] = d_
         if mo:
             act[mo.group(1).lower()] = mo.group(2).strip(' .')
     out = []
@@ -231,6 +244,50 @@ def talleres(lineas):
             falta = [k for k in ('dia', 'lugar', 'hora') if not b.get(k)]
             b['_no_se_publica'] = 'sin ' + ', sin '.join(falta)
             out.append(b)
+    return out
+
+
+# «Título (Director) 17 min.» — cada corto de un bloque de Caleidoscopio, en
+# una línea. El paréntesis de apertura falta en alguna («El mundo es afuera
+# Dir. Pablo Roldán) 22 min.»), así que se ancla por el CIERRE y los minutos.
+RE_CORTO = re.compile(r'^(.*?)[\(]?\s*(?:Dir\.\s*)?([^()]+)\)\s*(\d{1,3})\s*min', re.I)
+
+
+def cortos_de(lineas):
+    """Los cortos que un bloque de Caleidoscopio proyecta.
+
+    La lámina los lista uno por línea DENTRO de la ficha del bloque, con su
+    director y su metraje. Sin esto, «Competencia nacional de cortometrajes»
+    se publicaría como una función opaca de dos horas y las 22 obras del
+    catálogo se quedarían sin función: son las que el festival compite.
+
+    Un título largo se parte y su paréntesis cae en la línea siguiente
+    («Un aparato para detectar fantasmas» / «(Mauricio Maldonado) 18 min.»),
+    así que se intenta primero la línea sola y después pegada a la anterior.
+    """
+    out, pend = [], ''
+    for x in lineas:
+        x = x.strip()
+        if not x or 'CALEIDOSCOPIO' in x or 'ompetencia nacional' in x:
+            continue
+        m = RE_CORTO.match(x) or (RE_CORTO.match(f'{pend} {x}') if pend else None)
+        if not m:
+            pend = x
+            continue
+        t, dire = m.group(1).strip(' .-'), m.group(2).strip(' .')
+        # DOS LÍNEAS QUE DEJABAN EL TÍTULO VACÍO, y las cazó la cuenta del
+        # catálogo: 20 cortos leídos contra 22 fichas de Caleidoscopio.
+        #   · «El mundo es afuera Dir. Pablo Roldán) 22 min.» — al impreso le
+        #     falta el paréntesis de apertura, así que todo cae en el director.
+        #   · «Un aparato para detectar fantasmas» / «(Mauricio Maldonado) 18
+        #     min.» — el título va en la línea de arriba.
+        if not t and 'Dir.' in dire:
+            t, dire = [x.strip(' .') for x in dire.split('Dir.', 1)]
+        if not t and pend:
+            t = pend.strip(' .-')
+        if t:
+            out.append({'titulo': t, 'director': dire, 'duracion_min': int(m.group(3))})
+        pend = ''
     return out
 
 
@@ -253,8 +310,31 @@ def ficha(f):
         d.setdefault('rotulo', ls.pop(0).strip())
     if not ls:
         return d
-    d['titulo'] = ls[0].strip()
-    resto = ls[1:]
+    # EL TÍTULO QUE SIGUE EN LA LÍNEA DE ABAJO. La columna es estrecha y el
+    # festival parte los títulos largos: «Cien años de soledad (SO2E6):» /
+    # «Eran más de tres mil», «Panel: Diversidad de liderazgos y» / «relevo
+    # generacional». Tomando solo la primera línea salían ocho funciones con
+    # el título a medias, una de ellas terminada en dos puntos.
+    #
+    # Se une SOLO cuando la primera línea pide continuación —acaba en dos
+    # puntos o en conjunción/preposición—, que es lo que se puede afirmar sin
+    # adivinar. «Charla: Arte, verdad y compromiso social» está completa y la
+    # línea siguiente («Ponentes:») no se le pega.
+    # El guión final parte una PALABRA («Días de noche. Cró-» / «nica…») y se
+    # une sin espacio; lo demás se une con espacio.
+    corte = re.compile(r'(-|:|\b(?:y|e|o|u|de|del|la|el|los|las|en|con|para|'
+                       r'por|a|al|que|su)\.?)$', re.I)
+    titulo = [ls.pop(0).strip()]
+    while ls and corte.search(titulo[-1]) and not ls[0].startswith('Dir.') \
+            and not RE_FICHA.match(ls[0]) \
+            and not re.match(r'^(Ponentes|Conversatorio|Organiza|Producci[óo]n|'
+                             r'Tallerista|Modera)\b', ls[0], re.I):
+        titulo.append(ls.pop(0).strip())
+    t0 = titulo[0]
+    for x in titulo[1:]:
+        t0 = t0[:-1] + x if t0.endswith('-') else t0 + ' ' + x
+    d['titulo'] = t0
+    resto = ls
     for x in resto:
         if x.startswith('Dir.'):
             d['director'] = x[4:].strip(' .')
@@ -264,6 +344,12 @@ def ficha(f):
             d['anio'] = int(m.group(2))
             d['duracion_min'] = int(m.group(3))
             d['genero'] = m.group(4).strip()
+    if d.get('rotulo') == 'CALEIDOSCOPIO':
+        cortos = cortos_de(resto)
+        if cortos:
+            d['cortos'] = cortos
+            d['duracion_min'] = sum(c['duracion_min'] for c in cortos)
+            return d
     notas = [x for x in resto if not x.startswith('Dir.') and not RE_FICHA.match(x)]
     if notas:
         d['_extra'] = ' '.join(notas)

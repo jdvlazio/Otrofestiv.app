@@ -30,12 +30,20 @@
    "que": "los 21 afiches al lienzo 780×1170 exacto. `--desde` porque el festival todavía no tiene JSON publicado que leer, y dejar los afiches sin encuadrar hasta entonces es como Villa del Cine acabó con 16 que se saltaron este paso"
   },
   {
+   "cmd": "python3 pipeline/jardin-2026-parrilla.py",
+   "que": "la PARRILLA, que solo existe como imágenes: el carrusel de 14 láminas que el festival publicó el 21 sep (su web sigue enlazando el PDF de 2025). Lee el día de la cabecera de cada lámina, arma las filas desde la columna de la sede y saca los cortos de cada bloque de Caleidoscopio. También los TALLERES, que van en otra maqueta y solo publican los que traen día, lugar y hora."
+  },
+  {
    "cmd": "python3 pipeline/jardin-2026-crudo.py",
    "que": "catálogo + láminas → crudo. Publica SOLO lo que tiene día, hora y sede; el resto del catálogo espera la parrilla"
   },
   {
    "cmd": "python3 pipeline/geocodificar.py jardin-2026 --centro 5.5981,-75.8189 --ciudad \"Jardín, Antioquia\" --radio 0.15",
    "que": "las 5 sedes del mapa. Cuatro todavía no tienen función: se geocodifican igual, porque el festival ya las publicó"
+  },
+  {
+   "cmd": "python3 pipeline/jardin-2026-verificar-parrilla.py",
+   "que": "la parrilla, leída TRES veces: OCR nativo, OCR al doble con el mismo parser, y el catálogo de la web —la única fuente independiente de la imagen—. Falla si queda una diferencia sin explicar. Con `python3` y no `/usr/bin/python3`: la lectura B escala las láminas con Pillow, que el Python del sistema no trae."
   },
   {
    "cmd": "python3 pipeline/jardin-2026-verificar.py",
@@ -69,6 +77,14 @@
    ],
    "Coliseo Municipal": [
     "Coliseo Municipal - Jardín",
+    ""
+   ],
+   "I.E San Antonio": [
+    "Institución Educativa San Antonio - Jardín",
+    ""
+   ],
+   "Fonda Hotel Hacienda Balandú Comfenalco": [
+    "Hotel Hacienda Balandú - Jardín",
     ""
    ]
   },
@@ -109,13 +125,13 @@
   "sharedSlotIsOneScreening": false,
   "ticketing_model": "mixed",
   "mes_es": "septiembre",
-  "dias_vacios": [
-   "2026-09-25",
-   "2026-09-26",
-   "2026-09-27"
-  ],
+  "dias_vacios": [],
   "_por_que_dias_vacios": "NO ESTÁN VACÍOS: el festival dura cuatro días y va a programar los cuatro. Están vacíos EN NUESTRO DATO porque a cuatro días del inicio la única función publicada con día, hora y sede es la inaugural del jueves 24. Se declaran para que el contrato no falle y para que quede escrito que es un hueco de la fuente, no del calendario. Esto se borra cuando salga la parrilla — y mientras esté aquí, el festival NO se publica.",
-  "enriquecido": "festivals/staging/jardin-2026-catalogo-enriquecido.json"
+  "enriquecido": "festivals/staging/jardin-2026-catalogo-enriquecido.json",
+  "_sede_conocida_sin_funcion": {
+   "Parque principal de Jardín": "la lámina de talleres lo da como lugar de «Talleres, actividades digitales y proyecciones» (IU Digital), pero ese bloque NO trae hora y sin hora no se publica. Queda ubicado por si el festival la anuncia: 5.5989998, -75.8192122 (Parque Principal El Libertador, Nominatim)."
+  },
+  "_dias_vacios_nota": "los tres estaban declarados vacíos porque solo teníamos la función inaugural. Con la parrilla del 21 sep los cuatro días tienen programación."
  },
  "_no_se_publica": {
   "Las otras 36 obras del catálogo": "tienen ficha completa y NO tienen función. Sin día, hora y sede no se publican: la regla es vieja y es de las que no se negocian.",

@@ -12,8 +12,8 @@
    "hora": "17:00",
    "sede": "Teatro Municipal de Jardín",
    "rotulo": "LECCIÓN INAUGURAL",
-   "titulo": "Origen y conceptualización de la categoría de",
-   "_extra": "líder social. Ponentes Francy Carranza (Investigadora en derechos humanos y análisis de conflicto). César Jerez (Líder del movimiento de zonas de reserva campesina).",
+   "titulo": "Origen y conceptualización de la categoría de líder social.",
+   "_extra": "Ponentes Francy Carranza (Investigadora en derechos humanos y análisis de conflicto). César Jerez (Líder del movimiento de zonas de reserva campesina).",
    "_lamina": "02.jpg"
   },
   {
@@ -46,8 +46,8 @@
    "dia": "2026-09-25",
    "sede": "Placa deportiva Barrio Simón Bolívar",
    "hora": "10:00",
-   "titulo": "Panel: Desarrollo del Liderazgo y",
-   "_extra": "Procesos Sociales Ponentes: Francisco Gutiérrez (Docente e investigador de la Universidad Nacional de Colombia), Carlos Rosero (Cofundador del Proceso de Comunidades Negras, PCN), Jani Silva (Lideresa socioambiental, presidenta ADISPA), Wilson Castañeda (Director Caribe Afirmativo) Modera: León Valencia (Escritor y director PARES)",
+   "titulo": "Panel: Desarrollo del Liderazgo y Procesos Sociales",
+   "_extra": "Ponentes: Francisco Gutiérrez (Docente e investigador de la Universidad Nacional de Colombia), Carlos Rosero (Cofundador del Proceso de Comunidades Negras, PCN), Jani Silva (Lideresa socioambiental, presidenta ADISPA), Wilson Castañeda (Director Caribe Afirmativo) Modera: León Valencia (Escritor y director PARES)",
    "_lamina": "03.jpg"
   },
   {
@@ -173,8 +173,8 @@
    "dia": "2026-09-25",
    "sede": "Fonda Hotel Hacienda Balandú Comfenalco",
    "hora": "19:00",
-   "titulo": "Presentación del libro:",
-   "_extra": "Morir es un país que amabas: Poesía y memoria por nuestros líderes y lideresas sociales Conversan: Iris Marin (Defensora del Pueblo de Colombia), Eduardo Bechara (Escritor y fundador de Escarabajo Editorial), Víctor Gaviria (Director de cine, escritor)",
+   "titulo": "Presentación del libro: Morir es un país que amabas: Poesía y memoria por nuestros líderes",
+   "_extra": "y lideresas sociales Conversan: Iris Marin (Defensora del Pueblo de Colombia), Eduardo Bechara (Escritor y fundador de Escarabajo Editorial), Víctor Gaviria (Director de cine, escritor)",
    "_lamina": "04.jpg"
   },
   {
@@ -183,7 +183,49 @@
    "hora": "19:15",
    "rotulo": "CALEIDOSCOPIO",
    "titulo": "Competencia nacional de cortometrajes",
-   "_extra": "Deus ex necro machina (Mateo M. Correa) 6 min. Futuros luminosos (Ismael García Ramírez) 25 min. Elementales (Camilo Botero Jaramillo.) 9 min. Una vez en un cuerpo (María Cristina Pérez) 10 min. Refracción (Isabella Palacio Mesa) 11 min. Madres de nacimiento (Gloria Isabel Gómez) 8 min. Jiru iuiai \"Algo malo\" (Yon Arley Agreda Jamioy) 14 min. Lejanía (Daniel Velásquez Patarroyo) 17 min.",
+   "cortos": [
+    {
+     "titulo": "Deus ex necro machina",
+     "director": "Mateo M. Correa",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Futuros luminosos",
+     "director": "Ismael García Ramírez",
+     "duracion_min": 25
+    },
+    {
+     "titulo": "Elementales",
+     "director": "Camilo Botero Jaramillo",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Refracción",
+     "director": "Isabella Palacio Mesa",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "Madres de nacimiento",
+     "director": "Gloria Isabel Gómez",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Jiru iuiai \"Algo malo\"",
+     "director": "Yon Arley Agreda Jamioy",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Lejanía",
+     "director": "Daniel Velásquez Patarroyo",
+     "duracion_min": 17
+    }
+   ],
+   "duracion_min": 100,
    "_lamina": "04.jpg"
   },
   {
@@ -212,13 +254,12 @@
    "dia": "2026-09-25",
    "sede": "Coliseo municipal",
    "hora": "22:00",
-   "titulo": "Cien años de soledad:",
+   "titulo": "Cien años de soledad: Eran más de tres mil",
    "director": "Laura Mora",
    "pais": "Colombia",
    "anio": 2026,
    "duracion_min": 77,
    "genero": "ficción",
-   "_extra": "Eran más de tres mil",
    "_lamina": "05.jpg"
   },
   {
@@ -284,8 +325,8 @@
    "dia": "2026-09-26",
    "sede": "Escuela Jahel Peláez Montoya",
    "hora": "10:00",
-   "titulo": "Muestra documental:",
-   "_extra": "Defender la vida y la naturaleza CINEP - CJL - IPC - CEDH Conversatorio con los realizadores",
+   "titulo": "Muestra documental: Defender la vida y la naturaleza",
+   "_extra": "CINEP - CJL - IPC - CEDH Conversatorio con los realizadores",
    "_lamina": "06.jpg"
   },
   {
@@ -305,8 +346,8 @@
    "dia": "2026-09-26",
    "sede": "Placa deportiva Barrio Simón Bolívar",
    "hora": "11:00",
-   "titulo": "Panel: Memoria Histórica, construcción de",
-   "_extra": "Imaginarios y representación. Ponentes: Francy Carranza (Investigadora en derechos humanos y análisis de conflicto), Leonardo González (Director INDEPAZ), Marta Ruiz (Periodista y miembro de la Comisión de la Verdad) Modera: Pedro Adrián Zuluaga (Periodista)",
+   "titulo": "Panel: Memoria Histórica, construcción de Imaginarios y representación.",
+   "_extra": "Ponentes: Francy Carranza (Investigadora en derechos humanos y análisis de conflicto), Leonardo González (Director INDEPAZ), Marta Ruiz (Periodista y miembro de la Comisión de la Verdad) Modera: Pedro Adrián Zuluaga (Periodista)",
    "_lamina": "06.jpg"
   },
   {
@@ -360,8 +401,8 @@
    "dia": "2026-09-26",
    "sede": "Placa deportiva Barrio Simón Bolívar",
    "hora": "15:00",
-   "titulo": "Panel: Diversidad de liderazgos y",
-   "_extra": "relevo generacional Ponentes: Francisco Daza (Coordinador PARES), Sebastián Lanz (Defensor DD. HH.), Jani Silva (Lideresa socioambiental, presidenta de ADISPA), Sara Orozco (Integrante del colectivo JÓDETE), María José Cano (Cofundadora del colectivo Imagina Jericó) Modera: Lautaro Medina Bernal (Investigador de la Línea Movimientos Sociales, Tierra y Territorio CINEP).",
+   "titulo": "Panel: Diversidad de liderazgos y relevo generacional",
+   "_extra": "Ponentes: Francisco Daza (Coordinador PARES), Sebastián Lanz (Defensor DD. HH.), Jani Silva (Lideresa socioambiental, presidenta de ADISPA), Sara Orozco (Integrante del colectivo JÓDETE), María José Cano (Cofundadora del colectivo Imagina Jericó) Modera: Lautaro Medina Bernal (Investigador de la Línea Movimientos Sociales, Tierra y Territorio CINEP).",
    "_lamina": "07.jpg"
   },
   {
@@ -452,20 +493,92 @@
    "hora": "19:00",
    "rotulo": "CALEIDOSCOPIO",
    "titulo": "Competencia nacional de cortometrajes",
-   "_extra": "Los años del conejo (Raquel Tamayo Gutiérrez) 9 min. El mundo es afuera Dir. Pablo Roldán) 22 min. En todo y en nada (ximena Pérez, Raquel Zapata) 11 min. Un aparato para detectar fantasmas (Mauricio Maldonado) 18 min. De: Saúl (Santiago Gomxz, Cristian Rojas) 4 min. La Mona (Laura Gutiérrez Ardila) 18 min. Criatura (Juan Pablo Ríos) 17 min. Malas posturas (Juan Pablo Castro) 17 min. Somnolítico (Abril Velásquez) 11 min. Primer amor (Iván Luna Dulcey) 17 min. Lecciones de primavera (Antonio Mariño Lizarazo) 14 min. Términa (Juan José Guevara Ruiz) 27 min. Sirena mecánica (Violeta Vieytes Vivares, Damián Sato) 9 min. Relatos del camino (Daniel Prieto Muriel) 12 min.",
+   "cortos": [
+    {
+     "titulo": "Los años del conejo",
+     "director": "Raquel Tamayo Gutiérrez",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "El mundo es afuera",
+     "director": "Pablo Roldán",
+     "duracion_min": 22
+    },
+    {
+     "titulo": "En todo y en nada",
+     "director": "ximena Pérez, Raquel Zapata",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "Un aparato para detectar fantasmas",
+     "director": "Mauricio Maldonado",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "De: Saúl",
+     "director": "Santiago Gomxz, Cristian Rojas",
+     "duracion_min": 4
+    },
+    {
+     "titulo": "La Mona",
+     "director": "Laura Gutiérrez Ardila",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "Criatura",
+     "director": "Juan Pablo Ríos",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "Malas posturas",
+     "director": "Juan Pablo Castro",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "Somnolítico",
+     "director": "Abril Velásquez",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "Primer amor",
+     "director": "Iván Luna Dulcey",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "Lecciones de primavera",
+     "director": "Antonio Mariño Lizarazo",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Términa",
+     "director": "Juan José Guevara Ruiz",
+     "duracion_min": 27
+    },
+    {
+     "titulo": "Sirena mecánica",
+     "director": "Violeta Vieytes Vivares, Damián Sato",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Relatos del camino",
+     "director": "Daniel Prieto Muriel",
+     "duracion_min": 12
+    }
+   ],
+   "duracion_min": 206,
    "_lamina": "08.jpg"
   },
   {
    "dia": "2026-09-26",
    "sede": "Teatro Municipal de Jardín",
    "hora": "19:00",
-   "titulo": "Cien años de soledad (SO2E6):",
+   "titulo": "Cien años de soledad (SO2E6): Eran más de tres mil",
    "director": "Laura Mora",
    "pais": "Colombia",
    "anio": 2026,
    "duracion_min": 77,
    "genero": "ficción",
-   "_extra": "Eran más de tres mil Conversatorio con Julián Román (Actor colombiano) y Víctor Gaviria (Director de cine, escritor)",
+   "_extra": "Conversatorio con Julián Román (Actor colombiano) y Víctor Gaviria (Director de cine, escritor)",
    "_lamina": "07.jpg"
   },
   {
@@ -552,8 +665,8 @@
    "dia": "2026-09-27",
    "sede": "Teatro Municipal de Jardín",
    "hora": "10:00",
-   "titulo": "Muestra documental:",
-   "_extra": "Defender la vida y la naturaleza CINEP - CJL - IPC - CEDH Coversatorio con los realizadores",
+   "titulo": "Muestra documental: Defender la vida y la naturaleza",
+   "_extra": "CINEP - CJL - IPC - CEDH Coversatorio con los realizadores",
    "_lamina": "10.jpg"
   },
   {
@@ -568,8 +681,7 @@
    "dia": "2026-09-27",
    "sede": "Casa de la cultura",
    "hora": "13:00",
-   "titulo": "Proyección resultados del Taller De la",
-   "_extra": "ideación a la acción",
+   "titulo": "Proyección resultados del Taller De la ideación a la acción",
    "_lamina": "10.jpg"
   },
   {
@@ -588,8 +700,8 @@
    "dia": "2026-09-27",
    "sede": "Placa deportiva Barrio Simón Bolívar",
    "hora": "14:30",
-   "titulo": "Presentación del libro: Días de noche. Cró-",
-   "_extra": "nicas de cine - Víctor Gaviria Conversan: Víctor Gaviria (Director de cine, escritor), William Rouge (Escritor)",
+   "titulo": "Presentación del libro: Días de noche. Crónicas de cine - Víctor Gaviria",
+   "_extra": "Conversan: Víctor Gaviria (Director de cine, escritor), William Rouge (Escritor)",
    "_lamina": "10.jpg"
   },
   {
@@ -670,6 +782,7 @@
    "dia": "2026-09-26",
    "lugar": "Teatro municipal de Jardín - Café Tinta y Tinto Piso 2",
    "hora": "11:00",
+   "duracion_min": 60,
    "subtitulo": ""
   },
   {
@@ -681,6 +794,7 @@
    "dia": "2026-09-26",
    "lugar": "Casa de la cultura",
    "hora": "13:00",
+   "duracion_min": 240,
    "subtitulo": "Crea tu propia serigrafía"
   },
   {

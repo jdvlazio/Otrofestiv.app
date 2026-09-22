@@ -1025,6 +1025,9 @@ export const SECTION_ARCHETYPES = {
   '🏆 Rumbo a los Macondo': 'Especiales / Eventos',
   '🎞️ Exhibición Especial': 'Retrospectiva / Tributo',
   '🎙️ Comunicaciones': 'Charlas / Industria',
+  // ── Festival de Cine de Jardín 11 · Jardín, Antioquia ──────────────────
+  '🎬 Muestra Central': 'Muestra / País',
+  '🔮 CALEIDOSCOPIO': 'Competencia',
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
   '📺 Primetime': 'Especiales / Eventos',
   '🔎 Discovery': 'Perspectivas / Miradas',

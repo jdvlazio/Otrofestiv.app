@@ -48,9 +48,18 @@ def mins(h):
     return int(h[:2]) * 60 + int(h[3:])
 
 
+SEDE_PLAN = {
+    'Casa de la cultura': 'Casa de la Cultura',
+    'Coliseo municipal': 'Coliseo Municipal',
+    'Placa deportiva Barrio Simón Bolívar': 'Placa deportiva Simón Bolívar',
+    'Teatro municipal de Jardín - Café Tinta y Tinto Piso 2': 'Teatro Municipal de Jardín',
+}
+
+
 def main():
     c = json.load(open(CRUDO, encoding='utf-8'))
     cat = json.load(open(CAT, encoding='utf-8'))
+    parr = json.load(open(f'{ST}/jardin-2026-parrilla.json', encoding='utf-8'))
     ig = json.load(open(IG, encoding='utf-8'))
     geo = json.load(open(GEO, encoding='utf-8'))
     cfg = json.load(open(PLAN, encoding='utf-8'))['festival']
@@ -71,14 +80,39 @@ def main():
     for i, f in enumerate(fs):
         fin = mins(f['hora']) + (f.get('duracion_min') or 0)
         for g in fs[i + 1:]:
-            if g['dia'] == f['dia'] and g['sede'] == f['sede'] and mins(g['hora']) < fin:
+            # LA SALA CUENTA, y el festival la escribe: el taller de
+            # cartografías es en el «Café Tinta y Tinto, piso 2» DEL Teatro
+            # Municipal mientras abajo se proyecta. Misma sede, sala distinta,
+            # ningún choque. Y una actividad de puertas abiertas —la
+            # intervención artística de la Casa de la Cultura, cuatro horas de
+            # serigrafía— se lleva, no se planifica: `info` la saca del cruce.
+            if f.get('info') or g.get('info'):
+                continue
+            if (g['dia'] == f['dia'] and g['sede'] == f['sede']
+                    and (g.get('sala') or '') == (f.get('sala') or '')
+                    and mins(g['hora']) < fin):
                 fallos.append(f'{f["dia"][-2:]} «{f["titulo"][:26]}» solapa con '
                               f'«{g["titulo"][:26]}» en {f["sede"][:26]}')
 
     # 3 · LAS SEDES, en los dos sentidos. El festival publicó su mapa el 20 sep:
     #     ni nos podemos inventar una ni podemos perder una que él sí nombró.
-    del_mapa, del_plan = set(ig['sedes']), set(cfg['sedes'])
-    for s in sorted(del_mapa - del_plan):
+    # EL MAPA YA NO ES LA ÚNICA FUENTE. El festival publicó su mapa el 20 sep
+    # con cinco sedes y al día siguiente una parrilla que usa DOS MÁS: la Fonda
+    # Hotel Hacienda Balandú (una función el domingo) y la I.E San Antonio (dos
+    # talleres). Las nombra él, en su propia programación, así que cuentan
+    # igual que las del mapa — lo que este chequeo impide es que las
+    # inventemos nosotros, no que el festival añada.
+    de_la_parrilla = {f.get('sede') or f.get('lugar')
+                      for f in (parr['funciones'] + parr['talleres'])}
+    del_mapa = set(ig['sedes']) | {SEDE_PLAN.get(x, x) for x in de_la_parrilla if x}
+    del_plan = set(cfg['sedes'])
+    # UNA SEDE NOMBRADA SIN FUNCIÓN PUBLICABLE se declara y no se inventa.
+    # El Parque principal es el lugar de «Talleres, actividades digitales y
+    # proyecciones» (IU Digital), y ese bloque NO trae hora: sin hora no se
+    # publica, así que la sede queda nombrada y sin nada que colgarle. Está
+    # ubicada y escrita en el plan, en `_sede_conocida_sin_funcion`.
+    declarada_sin_funcion = set(cfg.get('_sede_conocida_sin_funcion') or {})
+    for s in sorted(del_mapa - del_plan - declarada_sin_funcion):
         fallos.append(f'el mapa del festival nombra «{s}» y la tabla del plan no')
     for s in sorted(del_plan - del_mapa):
         fallos.append(f'la tabla del plan trae «{s}» y el mapa del festival no')
@@ -92,7 +126,12 @@ def main():
             fallos.append(f'«{s}» sin coordenada y sin entrada en SIN_PUNTO_OK')
 
     # 4 · el catálogo entero, contado: o tiene función, o está declarado
+    # LOS CORTOS DE UN PROGRAMA TIENEN FUNCIÓN: la suya es el bloque que los
+    # contiene. Contando solo el título de primer nivel, los 22 de
+    # CALEIDOSCOPIO salían como «en el catálogo y sin función» aunque se
+    # proyectan el viernes y el sábado dentro de la competencia.
     con_funcion = {norm(f['titulo']) for f in fs}
+    con_funcion |= {norm(it['titulo']) for f in fs for it in (f.get('film_list') or [])}
     declaradas = {norm(t) for v in (c.get('_sin_funcion') or {}).values()
                   for t in v['obras']}
     for o in cat['obras']:

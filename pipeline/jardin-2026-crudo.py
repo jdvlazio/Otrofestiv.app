@@ -31,6 +31,7 @@ Esc.  festivals/staging/jardin-2026-crudo.json
 """
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -41,6 +42,54 @@ ST = f'{REPO}/festivals/staging'
 PLAN = f'{REPO}/pipeline/jardin-2026.plan.json'
 CAT = f'{ST}/jardin-2026-catalogo.json'
 IG = f'{ST}/jardin-2026-ig.json'
+PARR = f'{ST}/jardin-2026-parrilla.json'
+
+# EL NOMBRE DE LA SEDE EN LA PARRILLA Y EN EL PLAN. La retícula imprime «Casa
+# de la cultura» y el plan la declara «Casa de la Cultura»; son la misma y el
+# geocodificador solo conoce la del plan.
+# DONDE LA PARRILLA GANA A LA FICHA, declarado en el verificador a tres bandas:
+# «Alma provinciana» es silente y dura distinto según la velocidad de la copia
+# (111 a 16 fps, 93 a 19) y la parrilla anuncia la que se proyecta; «La marcha
+# del hambre» son 94 según OjoAgua, su productora, y 92 según Proimágenes.
+DURA_PARRILLA = {'almaprovinciana', 'lamarchadelhambre'}
+
+# LA MISMA SINOPSIS EN DOS OBRAS DISTINTAS, y el error es del festival: sus
+# páginas de «Relatos del camino» y «Un aparato para detectar fantasmas»
+# publican palabra por palabra el mismo texto —«Un director de casting regresa
+# a la ladera de la ciudad…»—. Comprobado en las dos URL el 21 sep.
+#
+# No se adivina cuál es cuál: se publican SIN sinopsis las dos. Poner el mismo
+# texto en dos obras es peor que no ponerlo, y elegir a ojo sería inventar.
+# Preguntado al festival.
+SINOPSIS_EN_DISPUTA = {'relatos del camino', 'un aparato para detectar fantasmas'}
+
+SEDE_PLAN = {
+    'Casa de la cultura': 'Casa de la Cultura',
+    'Coliseo municipal': 'Coliseo Municipal',
+    'Placa deportiva Barrio Simón Bolívar': 'Placa deportiva Simón Bolívar',
+    'Teatro municipal de Jardín - Café Tinta y Tinto Piso 2': 'Teatro Municipal de Jardín',
+}
+SALA = {'Teatro municipal de Jardín - Café Tinta y Tinto Piso 2': 'Café Tinta y Tinto, piso 2'}
+
+# QUÉ ES CADA COSA QUE NO ES UNA OBRA. La parrilla mezcla proyecciones con
+# paneles, charlas, muestras y actos, y el `event_kind` que publicamos tiene
+# que salir del enum que la app sabe pintar (_kindMapES) o la card muestra el
+# genérico «EVENTO» —lo vigila [event-kind-conocido]—.
+#
+# PENDIENTE DE JUAN: esto es vocabulario y se ve en la tarjeta. Mi lectura es
+# que un «Panel» con ponentes y moderador es un FORO, y que la lección
+# inaugural y la presentación del libro de Víctor Gaviria son CHARLAS. Las
+# «Muestras» NO llevan kind: son proyecciones de un bloque de obras, aunque no
+# sepamos cuáles; publicarlas como evento las sacaría del planificador.
+ACTIVIDAD = [
+    (r'^acto inaugural',            'apertura'),
+    (r'^acto de clausura',          'clausura'),
+    (r'^acto de premiaci|^premiaci', 'encuentro'),
+    (r'^lecci[óo]n inaugural|^origen y conceptualizaci', 'charla'),
+    (r'^panel:|^[áa]gora:',         'foro'),
+    (r'^charla:',                   'charla'),
+    (r'^presentaci[óo]n del libro', 'charla'),
+]
 POS = f'{ST}/jardin-2026-posters.json'
 OUT = f'{ST}/jardin-2026-crudo.json'
 
@@ -53,13 +102,12 @@ DE_LA_WEB = {'pais': 'pais', 'idioma': 'idioma', 'genero': 'genero',
 # POR QUÉ CADA GRUPO DE OBRAS SE QUEDA FUERA. La clave es la sección tal como
 # la escribe el catálogo; un grupo sin entrada hace fallar el paso.
 SIN_FUNCION_OK = {
-    'Muestra Central': 'el festival publicó su ficha el 15 sep y no ha '
-                       'publicado en qué día, a qué hora ni en qué sede se '
-                       'proyectan. Solo la inaugural tiene función.',
-    'CALEIDOSCOPIO': 'los 22 cortos de la competencia nacional están '
-                     'anunciados desde el 2 y el 4 de septiembre, y el propio '
-                     'festival dice que se exhiben — pero no ha publicado las '
-                     'sesiones. Sin día, hora y sede no hay función.',
+    'Muestra Central': 'con la parrilla completa del 21 sep quedan DOS obras '
+        'fichadas en la web que no aparecen en ninguna lámina: «Nuestra tierra» '
+        '(Lucrecia Martel) —que el propio festival anunció en el post de Muestra '
+        'Central Parte I— y «Ubuntu: La métrica de los afectos». No es que no '
+        'tengan día: es que la programación publicada no las incluye. '
+        'Preguntado al festival.',
 }
 
 
@@ -100,34 +148,116 @@ def main():
     palabra = 'Entrada libre' if acc.get('is_free') is True else str(acc.get('is_free'))
     web = {norm(o['titulo']): o for o in cat['obras']}
 
+    parr = json.load(open(PARR, encoding='utf-8'))
     funciones, usadas = [], set()
-    for f in ig['funciones']:
-        w = web.get(norm(f['titulo']))
-        if not w:
-            sys.exit(f'✗ «{f["titulo"]}» tiene función y no tiene ficha en el '
-                     f'catálogo. Mirar antes de publicarla a medias.')
-        usadas.add(norm(f['titulo']))
-        reg = {'titulo': w['titulo'], 'dia': f['dia'], 'hora': f['hora'],
-               'sede': f['sede'], 'seccion': w['seccion'],
+    for f in parr['funciones'] + [t for t in parr['talleres']
+                                  if not t.get('_no_se_publica')]:
+        tit = f.get('titulo') or ''
+        sede_cruda = f.get('sede') or f.get('lugar') or ''
+        reg = {'titulo': tit, 'dia': f['dia'], 'hora': f['hora'],
+               'sede': SEDE_PLAN.get(sede_cruda, sede_cruda),
                'acceso': palabra,
-               '_src': {'url': f'https://www.instagram.com/festicinejardin/',
-                        'date': '2026-09-20'}}
+               '_src': {'url': 'https://www.instagram.com/p/DdkY5ejlraV/',
+                        'date': '2026-09-21'}}
+        if SALA.get(sede_cruda):
+            reg['sala'] = SALA[sede_cruda]
+        if f.get('rotulo'):
+            reg['_rotulo'] = f['rotulo']
+
+        # UN BLOQUE DE CALEIDOSCOPIO ES UN PROGRAMA. La lámina lista sus cortos
+        # con director y metraje, y cada uno tiene ficha en el catálogo: se
+        # publica como programa con su lista, no como una función opaca.
+        if f.get('cortos'):
+            reg['seccion'] = 'CALEIDOSCOPIO'
+            reg['is_cortos'] = True
+            reg['duracion_min'] = f['duracion_min']
+            reg['film_list'] = []
+            for c in f['cortos']:
+                w = web.get(norm(c['titulo']))
+                if not w:
+                    sys.exit(f'✗ el corto «{c["titulo"]}» no tiene ficha en el '
+                             f'catálogo — mirar antes de publicarlo a medias')
+                usadas.add(norm(c['titulo']))
+                it = {'titulo': w['titulo'], 'director': w.get('director') or c['director'],
+                      'duracion_min': w.get('duracion_min') or c['duracion_min']}
+                for orig, dest in DE_LA_WEB.items():
+                    if w.get(orig):
+                        it[dest] = w[orig]
+                if norm(w['titulo']) in {norm(x) for x in SINOPSIS_EN_DISPUTA}:
+                    it.pop('sinopsis', None)
+                    it['_sinopsis_en_disputa'] = ('la web del festival publica el '
+                        'mismo texto en esta obra y en la otra; se omite hasta que '
+                        'lo aclaren')
+                it.update(genero_de(w))
+                it.update(poster_de(w, pos))
+                reg['film_list'].append(it)
+            funciones.append(reg)
+            continue
+
+        # UN CINE FORO ES UNA PROYECCIÓN, no otra cosa. Clasificarlo como
+        # evento le quitaba a «Volver» su ficha, su sinopsis y su afiche, y la
+        # dejaba en la lista de obras sin función aunque el sábado se proyecta
+        # a las 16:30. El prefijo se retira y la obra se busca por su nombre.
+        mcf = re.match(r'^Cine foro:\s*(.+)$', tit, re.I)
+        if mcf and web.get(norm(mcf.group(1))):
+            tit = mcf.group(1).strip()
+            reg['titulo'] = tit
+            reg['_formato'] = 'Cine foro'
+
+        # UNA ACTIVIDAD, y el festival la nombra
+        kind = next((k for pat, k in ACTIVIDAD if re.search(pat, tit, re.I)
+                     or re.search(pat, f.get('rotulo') or '', re.I)), '')
+        w = web.get(norm(tit))
+        if kind and not w:
+            reg['tipo'] = 'evento'
+            reg['event_kind'] = kind
+            reg['duracion_min'] = f.get('duracion_min') or 60
+            reg['seccion'] = 'Muestra Central'
+            funciones.append(reg)
+            continue
+        if f.get('lugar'):                     # taller
+            reg['tipo'] = 'evento'
+            reg['event_kind'] = 'taller'
+            # SE LLEVA, NO SE PLANIFICA. «Intervención artística · Crea tu
+            # propia serigrafía» son cuatro horas de puertas abiertas en la
+            # Casa de la Cultura mientras ahí mismo se proyecta: no es una
+            # función a la que se llega a una hora. `info` la deja en el
+            # programa sin meterla en el cruce de horarios.
+            if re.match(r'^Intervenci[óo]n art[íi]stica', tit, re.I):
+                reg['info'] = True
+            reg['duracion_min'] = f.get('duracion_min') or 120  # el default solo si la lámina no da el fin
+            reg['seccion'] = 'Muestra Central'
+            if f.get('organiza') or f.get('tallerista'):
+                reg['_credito'] = f.get('organiza') or f.get('tallerista')
+            funciones.append(reg)
+            continue
+
+        if not w:
+            # una proyección SIN ficha en el catálogo: se publica con lo que la
+            # parrilla imprime, que trae país, año, duración y género
+            reg['seccion'] = 'Muestra Central'
+            reg['duracion_min'] = f.get('duracion_min') or 90
+            for c in ('director', 'pais', 'anio', 'genero'):
+                if f.get(c):
+                    reg[c] = f[c]
+            reg['_sin_ficha_en_la_web'] = True
+            funciones.append(reg)
+            continue
+
+        usadas.add(norm(tit))
+        reg['titulo'] = w['titulo']
+        reg['seccion'] = w['seccion']
         for orig, dest in DE_LA_WEB.items():
             if w.get(orig):
                 reg[dest] = w[orig]
         reg.update(genero_de(w))
         reg.update(poster_de(w, pos))
-        # LO QUE SOLO DICE LA LÁMINA. «Estreno mundial» es palabra del festival
-        # y va verbatim en `premiere`, que es el campo del contrato para eso.
-        if f.get('_estreno'):
+        if f.get('_estreno') or (f.get('_extra') or '').lower().startswith('estreno'):
             reg['premiere'] = 'Estreno mundial'
-        # la duración de la función es la de la obra: no hay bloque que la
-        # envuelva, es una proyección y ya.
-        reg['duracion_min'] = w.get('duracion_min') or f.get('duracion_obra')
-        if f.get('event_kind') == 'apertura':
-            reg['_apertura'] = ('la lámina 1 la rotula «ACTO INAUGURAL». Se '
-                                'publica en su sección de catálogo, «Muestra '
-                                'Central», que es donde el festival la ficha.')
+        # LA DURACIÓN: manda la ficha, salvo donde la propia ficha explica que
+        # la parrilla tiene razón (ver jardin-2026-verificar-parrilla.py).
+        reg['duracion_min'] = (f['duracion_min'] if norm(tit) in DURA_PARRILLA
+                               else w.get('duracion_min') or f.get('duracion_min'))
         funciones.append(reg)
 
     sin, fallos = {}, []
@@ -152,6 +282,9 @@ def main():
         alcance=f'{len(funciones)} función de las {len(cat["obras"])} obras del '
                 f'catálogo — el resto no tiene día, hora ni sede'),
         'funciones': funciones,
+        '_talleres_fuera': [
+            {'titulo': t['titulo'], '_por_que': t['_no_se_publica']}
+            for t in parr['talleres'] if t.get('_no_se_publica')],
         '_sin_funcion': {sec: {'n': len(ts), '_por_que': SIN_FUNCION_OK.get(sec, ''),
                                'obras': sorted(ts)}
                          for sec, ts in sorted(sin.items())},

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB (image.tmdb.org, w780), Letterboxd (og:image) y el `og:image` de la ficha en festicinejardin.com — en ese orden, el de docs/POSTERS.md §2",
-  "capturado": "2026-09-20",
+  "capturado": "2026-09-21",
   "que_aporta": "34 imágenes de las 37 obras del catálogo, bajadas a assets/jardin-2026/",
   "metodo": "los dos primeros son afiches de verdad y van a 2:3; el still del festival es apaisado, se reduce a 896 px de ancho y va como `editorial`, que la vista encuadra a 16:9 en vez de estirarlo. No se publica la URL remota: el archivo se sirve desde el repo y este sidecar lo nombra"
  },
@@ -217,9 +217,9 @@
   "Ubuntu: La métrica de los afectos"
  ],
  "_descartados": [
-  "«La Mona»: letterboxd devolvió 500×500 (r=1.00), no es un afiche vertical — se descarta",
-  "«Malas posturas»: letterboxd devolvió 500×500 (r=1.00), no es un afiche vertical — se descarta",
-  "«Un aparato para detectar fantasmas»: letterboxd devolvió 500×500 (r=1.00), no es un afiche vertical — se descarta"
+  "«La Mona»: letterboxd devolvió 896×328 (r=2.73), no es un afiche vertical — se descarta",
+  "«Malas posturas»: letterboxd devolvió 896×504 (r=1.78), no es un afiche vertical — se descarta",
+  "«Un aparato para detectar fantasmas»: letterboxd devolvió 896×450 (r=1.99), no es un afiche vertical — se descarta"
  ],
  "_sin_imagen_por_que": {
   "Deus ex necro machina": "el festival no le publicó ficha: su slug `deus-ex-necro-machina` REDIRIGE a la página de «Primer amor», que es otra obra. Entra al catálogo solo desde Instagram y no hay imagen que bajar. Preguntado al festival.",

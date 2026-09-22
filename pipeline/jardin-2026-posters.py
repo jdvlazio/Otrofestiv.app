@@ -66,6 +66,34 @@ ENR = f'{ST}/jardin-2026-catalogo-enriquecido.json'
 OUT = f'{ST}/jardin-2026-posters.json'
 
 MINIMO = 5000       # menos que esto es un JPEG truncado, no una imagen
+def sin_barras(ruta):
+    """Quita las BARRAS DE CINEMASCOPE incrustadas en el fotograma.
+
+    Varios stills de la web vienen con el 2.39:1 metido dentro de un 16:9, con
+    franjas negras arriba y abajo. No son imagen: son el formato de la copia.
+    `[poster-mirado]` las caza —«banda plana en un borde»— y tiene razón: en la
+    tarjeta se ven como un recorte mal hecho.
+
+    Se recorta solo lo que es PLANO Y OSCURO de verdad, con tope del 20% por
+    lado, y se exige que la banda esté en LOS DOS bordes o que ocupe más del 4%:
+    una sola fila oscura es arte, no barra.
+    """
+    from PIL import Image
+    im = Image.open(ruta).convert('RGB')
+    w, h = im.size
+    px = im.load()
+
+    def oscura(y):
+        m = [px[x, y] for x in range(0, w, max(1, w // 40))]
+        return max(max(c) for c in m) < 26
+
+    top = next((y for y in range(int(h * 0.20)) if not oscura(y)), 0)
+    bot = next((y for y in range(int(h * 0.20)) if not oscura(h - 1 - y)), 0)
+    if max(top, bot) * 100 // h < 4:
+        return
+    im.crop((0, top, w, h - bot)).save(ruta, 'JPEG', quality=92)
+
+
 ANCHO_STILL = 896   # el ancho más común de los 66 editoriales ya en producción
 CALIDAD_STILL = 72  # con 100 (el defecto de sips) un still de 896 px pesa 700 KB
 
@@ -176,6 +204,7 @@ def main():
             print(f'[{i:2}/{len(cat)}] ✗   {t[:44]:46} falló la descarga', flush=True)
             continue
         if fuente == 'editorial':
+            sin_barras(dest)
             # Reducir NO es comprimir: `sips -Z` conserva la calidad original y
             # un fotograma de 896 px seguía pesando 716 KB. Los dos pasos.
             subprocess.run(['sips', '-Z', str(ANCHO_STILL), '-s', 'format', 'jpeg',
