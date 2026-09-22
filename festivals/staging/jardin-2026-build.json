@@ -707,7 +707,7 @@
    "is_free": true
   },
   {
-   "title": "Cien años de soledad: Eran más de tres mil",
+   "title": "Cien años de soledad (T2 E6): Eran más de tres mil",
    "type": "film",
    "section": "🎬 Muestra Central",
    "director": "Laura Mora",
@@ -721,7 +721,7 @@
    "day_order": 1,
    "venue": "Coliseo Municipal - Jardín",
    "has_qa": false,
-   "poster": "/assets/jardin-2026/cien-anos-de-soledad-eran-mas-de-tres-mil.jpg",
+   "poster": "/assets/jardin-2026/cien-anos-de-soledad-t2-e6-eran-mas-de-tres-mil.jpg",
    "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
@@ -1462,7 +1462,7 @@
    "is_free": true
   },
   {
-   "title": "Cien años de soledad: Eran más de tres mil",
+   "title": "Cien años de soledad (T2 E6): Eran más de tres mil",
    "type": "film",
    "section": "🎬 Muestra Central",
    "director": "Laura Mora",
@@ -1476,7 +1476,7 @@
    "day_order": 2,
    "venue": "Teatro Municipal de Jardín - Jardín",
    "has_qa": false,
-   "poster": "/assets/jardin-2026/cien-anos-de-soledad-eran-mas-de-tres-mil.jpg",
+   "poster": "/assets/jardin-2026/cien-anos-de-soledad-t2-e6-eran-mas-de-tres-mil.jpg",
    "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
@@ -1919,7 +1919,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-22T07:07:58",
+  "fecha": "2026-09-22T15:04:59",
   "plan_sha": "4977a7663617bd88",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"

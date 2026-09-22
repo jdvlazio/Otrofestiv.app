@@ -157,7 +157,7 @@ CALIDAD_STILL = 72  # con 100 (el defecto de sips) un still de 896 px pesa 700 K
 # que se puede volver a mirar. Una ruta que empieza por `fuentes/` se lee del
 # disco; lo demás se baja.
 CARTEL_DE_ARCHIVO = {
-    'Cien años de soledad: Eran más de tres mil': (
+    'Cien años de soledad (T2 E6): Eran más de tres mil': (
         'https://image.tmdb.org/t/p/w780/j5Hi5tm1SokRCiVs1coAjCO1ZI6.jpg',
         'TMDB, póster de la PARTE 2 de la serie (tv/207333, temporada 2, '
         'estreno 5 ago 2026). El festival proyecta su episodio 6, «Eran más de '
