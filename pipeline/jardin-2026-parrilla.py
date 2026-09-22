@@ -45,6 +45,17 @@ COL_HORA, COL_FICHA = 0.20, 0.44
 # nueva la marca el VOCABULARIO, que es lo que el festival imprime de verdad.
 CABEZA_SEDE = re.compile(r'^(Teatro|Casa|Placa|Coliseo|Escuela|Fonda|I\.?E\b|'
                          r'Instituci[óo]n|Biblioteca|Parque|Auditorio)', re.I)
+
+# LA MISMA SEDE, ESCRITA DE DOS MANERAS por el propio festival. No es
+# normalizar por gusto: la retícula imprime «Placa deportiva» a secas en las
+# láminas del domingo y «Placa deportiva Barrio Simón Bolívar» en las del
+# viernes, y son el mismo sitio —el que el festival anunció como reemplazo de
+# la cancha Moisés Rojas tras el sismo—.
+ALIAS_SEDE = {
+    'Placa deportiva': 'Placa deportiva Barrio Simón Bolívar',
+    'Casa de la Cultura': 'Casa de la cultura',
+    'Teatro municipal de Jardín': 'Teatro Municipal de Jardín',
+}
 DIAS = {'jueves': 24, 'viernes': 25, 'sábado': 26, 'sabado': 26, 'domingo': 27}
 RE_HORA = re.compile(r'^(\d{1,2}):(\d{2})\s*([ap])\.?\s*m', re.I)
 # «Colombia, 2026, 84 min, documental» — país(es), año, duración, género.
@@ -98,15 +109,24 @@ def filas(lineas, dia):
     sedes = sorted((c for c in util if COL_HORA <= c['x'] < COL_FICHA),
                    key=lambda c: c['y'])
     # una sede partida en dos líneas («Teatro Municipal» / «de Jardín») es UNA
-    filas_ = []
+    filas_, colados = [], []
     for c in sedes:
+        # UNA SEDE EMPIEZA POR PALABRA DE SEDE. Lo que cae en esa columna y no
+        # lo hace, ni continúa la fila de arriba, NO es una sede: el OCR lee el
+        # pie de la lámina («FABIOLA LALINDE», a 97% de altura) y la letra
+        # pequeña de los afiches que el festival pega debajo de la parrilla
+        # («DÍA MEAS DE LA LONA», que es el cartel de Mûpã). Las dos salían
+        # publicadas como funciones sin título. Se descartan CONTÁNDOLAS, para
+        # que el día que se caiga una sede de verdad se vea en el número.
         if filas_ and not CABEZA_SEDE.match(c['t'].strip()) \
                 and c['y'] - filas_[-1]['_y2'] < 0.05:
             filas_[-1]['sede'] += ' ' + c['t'].strip()
             filas_[-1]['_y2'] = c['y']
-        else:
+        elif CABEZA_SEDE.match(c['t'].strip()):
             filas_.append({'dia': dia, 'sede': c['t'].strip(),
                            '_y': c['y'], '_y2': c['y'], 'ficha': []})
+        else:
+            colados.append(c['t'].strip())
     for f in filas_:
         previas = [h for y, h in horas if y <= f['_y'] + 0.012]
         f['hora'] = previas[-1] if previas else ''
@@ -117,7 +137,8 @@ def filas(lineas, dia):
             cand[-1]['ficha'].append(c['t'].strip())
     for f in filas_:
         f.pop('_y2', None)
-    return [f for f in filas_ if f['hora']]
+        f['sede'] = ALIAS_SEDE.get(f['sede'], f['sede'])
+    return [f for f in filas_ if f['hora']], colados
 
 
 def una_columna(lineas, dia):
@@ -149,6 +170,70 @@ def una_columna(lineas, dia):
     return [f for f in out if f['hora'] and f['sede']]
 
 
+def talleres(lineas):
+    """La lámina de TALLERES, que no es una parrilla.
+
+    Es una lista de bloques, cada uno con lo que el festival quiso ponerle:
+    nombre, quién organiza o dicta, y a veces «Jueves 24 de septiembre»,
+    «Lugar: …» y «Hora:/Horario: …» ROTULADOS. Se lee por rótulo, no por
+    posición: acá no hay columnas.
+
+    TRES DE LOS SIETE NO SE PUBLICAN, y queda escrito cuál y por qué: el de la
+    Escuela de Cine ITM y el de fotografía cinematográfica no traen ni día ni
+    lugar ni hora, y el de la IU Digital trae día y lugar pero NO hora. Sin
+    hora no es una función —regla de la casa— y una hora inventada es peor que
+    una ausencia.
+    """
+    ls = [c['t'].strip() for c in sorted(lineas, key=lambda c: c['y'])
+          if c['y'] >= 0.075 and c['t'].strip()]
+    bloques, act = [], None
+    for t in ls:
+        md = re.search(r'(jueves|viernes|s[áa]bado|domingo)\s+(\d{1,2})\s+de\s+septiembre', t, re.I)
+        ml = re.match(r'Lugar:\s*(.+)$', t, re.I)
+        mh = re.match(r'Hora(?:rio)?:\s*(\d{1,2}):(\d{2})\s*([ap])\.?\s*m', t, re.I)
+        mo = re.match(r'(Organiza|Tallerista):\s*(.+)$', t, re.I)
+        if not (md or ml or mh or mo):
+            # Línea sin rótulo: título nuevo, o subtítulo del bloque en curso.
+            # EL CORTE LO MARCA HABER VISTO YA UN RÓTULO, no tener día. Con la
+            # regla anterior —«nuevo bloque solo si el actual ya tiene día,
+            # lugar u hora»— el taller de la Escuela de Cine ITM, que no trae
+            # ninguno de los tres, se tragó el título siguiente y encima se
+            # quedó con SU día, SU lugar y SU hora: «Lo que vemos, lo que
+            # decimos» desapareció de la lista y el de la ITM salía publicable
+            # con datos ajenos. Los ojos cuentan siete bloques en la lámina.
+            if act is None or act.get('_rotulado'):
+                act = {'titulo': t, '_lineas': [t]}
+                bloques.append(act)
+            else:
+                act['_lineas'].append(t)
+            continue
+        act['_rotulado'] = True
+        if act is None:
+            continue
+        if md:
+            d = int(md.group(2))
+            # «Viernes 25 y sábado 26» — se quedan los dos, sin elegir
+            act.setdefault('dias', []).append(f'2026-09-{d:02d}')
+            act['dia'] = act['dias'][0]
+        if ml:
+            act['lugar'] = ml.group(1).strip()
+        if mh:
+            act['hora'] = h24(mh)
+        if mo:
+            act[mo.group(1).lower()] = mo.group(2).strip(' .')
+    out = []
+    for b in bloques:
+        b.pop('_rotulado', None)
+        b['subtitulo'] = ' '.join(b.pop('_lineas')[1:])
+        if b.get('dia') and b.get('lugar') and b.get('hora'):
+            out.append(b)
+        else:
+            falta = [k for k in ('dia', 'lugar', 'hora') if not b.get(k)]
+            b['_no_se_publica'] = 'sin ' + ', sin '.join(falta)
+            out.append(b)
+    return out
+
+
 def ficha(f):
     """Título, dirección y metadatos de la columna derecha."""
     ls = [x for x in f['ficha'] if x.strip()]
@@ -159,6 +244,13 @@ def ficha(f):
     # título entero: el rótulo se lo comía y la función salía sin nombre.
     if len(ls) > 1 and re.match(r'^Franja\b', ls[0], re.I):
         d['franja'] = ls.pop(0)
+    # UN RÓTULO NO ES UN TÍTULO. La lámina grita «ESTRENO» o «ACTO DE
+    # CLAUSURA» encima de la obra, y tomando la primera línea como título la
+    # clausura del domingo se llamaba «ACTO DE CLAUSURA» y «Mûpã (Madre)»
+    # desaparecía. La mayúscula sostenida de una línea corta, con la obra
+    # debajo, es el rótulo del festival.
+    while len(ls) > 1 and re.match(r'^[A-ZÁÉÍÓÚÑÜ][A-ZÁÉÍÓÚÑÜ .:·-]{4,}$', ls[0]):
+        d.setdefault('rotulo', ls.pop(0).strip())
     if not ls:
         return d
     d['titulo'] = ls[0].strip()
@@ -181,16 +273,24 @@ def ficha(f):
 def main():
     rutas = sorted(f'{LAMINAS}/{n}' for n in os.listdir(LAMINAS) if n.endswith('.jpg'))
     crudo = ocr(rutas)
-    funciones, sin_dia = [], []
+    funciones, sin_dia, tall, colados = [], [], [], []
     for ruta in rutas:
         k = os.path.basename(ruta)
         ls = crudo.get(k) or crudo.get(ruta) or []
+        if any('TALLERES' == c['t'].strip() for c in ls if c['y'] < 0.075):
+            tall = talleres(ls)
+            continue
         dia = dia_de(ls)
         if not dia:
             sin_dia.append(k)
             continue
         hay_cols = any(c['x'] >= COL_FICHA and c['y'] > 0.075 for c in ls)
-        for f in (filas(ls, dia) if hay_cols else una_columna(ls, dia)):
+        if hay_cols:
+            fs, col = filas(ls, dia)
+            colados += [f'{k}: {c}' for c in col]
+        else:
+            fs = una_columna(ls, dia)
+        for f in fs:
             f.pop('_y', None)
             f.update(ficha(f))
             f.pop('ficha', None)
@@ -205,8 +305,18 @@ def main():
         metodo='OCR con cajas sobre las 14 láminas; el día sale de la cabecera '
                'de cada una y la hora vale para todas las sedes que cuelgan'),
         'funciones': funciones,
-        '_laminas_sin_dia': sin_dia},
+        'talleres': tall,
+        '_laminas_sin_dia': sin_dia,
+        '_colados_en_la_columna_de_sede': colados},
         open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    if colados:
+        print(f'   {len(colados)} línea(s) descartadas de la columna de sede: '
+              + ' · '.join(colados[:4]))
+    pub = [t for t in tall if not t.get('_no_se_publica')]
+    print(f'   talleres: {len(pub)} publicables de {len(tall)}')
+    for t in tall:
+        if t.get('_no_se_publica'):
+            print(f"      ✗ «{t['titulo'][:44]}» — {t['_no_se_publica']}")
     print(f'{len(funciones)} funciones · {len(rutas)} láminas '
           f'({len(sin_dia)} sin día: {", ".join(sin_dia)}) → {os.path.basename(OUT)}')
     import collections
