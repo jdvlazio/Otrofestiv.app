@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Programación Oficial CONEXCINE 2026 (PDF, páginas 2 y 3) + las láminas de «Selección Oficial» en Instagram",
-  "capturado": "2026-09-20",
+  "capturado": "2026-09-22",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 719,
@@ -182,9 +182,9 @@
       "date": "2026-09-19"
      },
      "synopsis": "El Chucur”, una intrépida comadreja andina, se prepara para participar en la fiesta de la cosecha, sin embargo, tendrá que llenarse de valor y enfrentar el rechazo de los humanos quienes lo consideran un roedor desagradable para sorprenderlos con sus habilidades como danzante.",
+     "synopsis_en": "An intrepid Andean weasel prepares to participate in the harvest festival. However, he will have to muster up his courage and face rejection from humans who consider him an unpleasant rodent in order to surprise them with his dancing skills.",
      "genre": "Animación",
-     "synopsis_lang": "es",
-     "synopsis_en": "An intrepid Andean weasel prepares to participate in the harvest festival. However, he will have to muster up his courage and face rejection from humans who consider him an unpleasant rodent in order to surprise them with his dancing skills."
+     "synopsis_lang": "es"
     },
     {
      "title": "Hilo al cielo",
@@ -219,8 +219,8 @@
       "date": "2026-09-19"
      },
      "synopsis": "Cantos que abren puertas y revelan lo que somos",
-     "synopsis_lang": "es",
-     "synopsis_en": "Every November 1, Choco eagerly awaits “Ángeles Somos,” the celebration during which boys and girls parade through the neighborhood in costumes, singing traditional refrains while banging on lids and pots, collecting ingredients to prepare the big community stew."
+     "synopsis_en": "Every November 1, Choco eagerly awaits “Ángeles Somos,” the celebration during which boys and girls parade through the neighborhood in costumes, singing traditional refrains while banging on lids and pots, collecting ingredients to prepare the big community stew.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Epifanía",
@@ -237,8 +237,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Animación",
-     "synopsis_en": "Doña Marta, an elderly farmer, is mourning her daughter. One day, she finds a magic creature on the potato field. \"Epifania” brings back happiness to her life. Joyfully she raises the dragon-like creature. But when it discovers that it can fly, Doña Marta must accept that true love means letting go."
+     "synopsis_en": "Doña Marta, an elderly farmer, is mourning her daughter. One day, she finds a magic creature on the potato field. \"Epifania” brings back happiness to her life. Joyfully she raises the dragon-like creature. But when it discovers that it can fly, Doña Marta must accept that true love means letting go.",
+     "genre": "Animación"
     },
     {
      "title": "Los años del conejo",
@@ -257,9 +257,9 @@
       "date": "2026-09-19"
      },
      "synopsis": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre.",
+     "synopsis_en": "I remember very little from those years: the years of the rabbit. My favorite animal, my favorite color, the mountain in front of my house, my friends’ faces, the games with my sisters. Leaving my life in Mexico like that erased my memory. I color in these memories as an attempt to gather them. Forever.",
      "genre": "Documental",
-     "synopsis_lang": "es",
-     "synopsis_en": "I remember very little from those years: the years of the rabbit. My favorite animal, my favorite color, the mountain in front of my house, my friends’ faces, the games with my sisters. Leaving my life in Mexico like that erased my memory. I color in these memories as an attempt to gather them. Forever."
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -314,8 +314,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Documental",
-     "synopsis_en": "The short film portrays the cultural heritage of Barranco de Loba through the tambora and the people who keep the town's traditions and identity alive."
+     "synopsis_en": "The short film portrays the cultural heritage of Barranco de Loba through the tambora and the people who keep the town's traditions and identity alive.",
+     "genre": "Documental"
     },
     {
      "title": "Mi casa es su casa",
@@ -333,9 +333,9 @@
       "date": "2026-09-19"
      },
      "synopsis": "Con humor satírico, Mi casa es su casa explora las consecuencias de la llegada de los hipopótamos a Colombia, una especie invasora convertida en parte del paisaje. La inacción del Estado frente a este fenómeno abre una reflexión sobre el equilibrio entre la naturaleza y las decisiones humanas.",
+     "synopsis_en": "A new arrival threatens the home of Magdaleno and his son Sinú. And it brings with it changes that could destroy their way of life. Will they find a way to coexist in the depths of the Magdalena River?",
      "genre": "Animación",
-     "synopsis_lang": "es",
-     "synopsis_en": "A new arrival threatens the home of Magdaleno and his son Sinú. And it brings with it changes that could destroy their way of life. Will they find a way to coexist in the depths of the Magdalena River?"
+     "synopsis_lang": "es"
     },
     {
      "title": "La Esperanza",
@@ -363,9 +363,9 @@
       "date": "2026-09-19"
      },
      "synopsis": "Una mujer campesina, que ha dedicado su vida a preservar el territorio mediante la agroecología, huye de su hogar por la llegada de grupos armados y encuentra refugio en Usme, el corazón rural de Bogotá. A través de cartas a mujeres de la zona, comparte su visión sobre la importancia de la tierra y el agua para sostener la vida. Este documental recorre la ruralidad Usmeña, mientras las palabras de la protagonista resuenan como un llamado a preservar el medio ambiente.",
+     "synopsis_en": "A peasant leader who has taken refuge in Usme is calling for the protection of the land, water, and rural life as the foundation of existence through letters she writes to women in the area.",
      "genre": "Documental",
-     "synopsis_lang": "es",
-     "synopsis_en": "A peasant leader who has taken refuge in Usme is calling for the protection of the land, water, and rural life as the foundation of existence through letters she writes to women in the area."
+     "synopsis_lang": "es"
     },
     {
      "title": "Origen",
@@ -436,8 +436,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Documental",
-     "synopsis_en": "In the shadow of neglect and violence, a generation shaped by precarious circumstances seeks to transcend conflict through dialogue. Amid the territorial control exercised by armed groups, the voices of farmers and young people emerge in an act of civil resistance—a narrative that calls for peace as a common good and a collective commitment that must encompass all of Colombian society."
+     "synopsis_en": "In the shadow of neglect and violence, a generation shaped by precarious circumstances seeks to transcend conflict through dialogue. Amid the territorial control exercised by armed groups, the voices of farmers and young people emerge in an act of civil resistance—a narrative that calls for peace as a common good and a collective commitment that must encompass all of Colombian society.",
+     "genre": "Documental"
     },
     {
      "title": "El Mejor Chocolate del Mundo",
@@ -488,8 +488,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Documental",
-     "synopsis_en": "Through Don Luis’s testimony, we piece together the experience of someone who lived through the disaster that forced an entire community to leave their homes. More than just a tragedy, it reveals a capacity for resilience."
+     "synopsis_en": "Through Don Luis’s testimony, we piece together the experience of someone who lived through the disaster that forced an entire community to leave their homes. More than just a tragedy, it reveals a capacity for resilience.",
+     "genre": "Documental"
     },
     {
      "title": "La guerra de los tomates",
@@ -544,8 +544,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Historia",
-     "synopsis_en": "A student caught up in xenophobia rediscovers the history of his border and, together with his classmate, embarks on a journey through memory that transforms his prejudices and replaces hatred with brotherhood."
+     "synopsis_en": "A student caught up in xenophobia rediscovers the history of his border and, together with his classmate, embarks on a journey through memory that transforms his prejudices and replaces hatred with brotherhood.",
+     "genre": "Historia"
     },
     {
      "title": "La Sayona",
@@ -562,8 +562,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Terror",
-     "synopsis_en": "On the plains of Vichada, under endless nights and along lonely paths through pastures where cows watch in silence, a figure shrouded in mystery appears beside the morichal."
+     "synopsis_en": "On the plains of Vichada, under endless nights and along lonely paths through pastures where cows watch in silence, a figure shrouded in mystery appears beside the morichal.",
+     "genre": "Terror"
     },
     {
      "title": "Bullerengue: ritmo que sigue sonando",
@@ -580,8 +580,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Documental",
-     "synopsis_en": "Through testimonials from local organizers and young people, the short film describes the characteristics of its three traditional rhythms: the sentao (slow and deliberate), the chalupa (fast, lively, and ideal for improvisation), and the fandango de lengua."
+     "synopsis_en": "Through testimonials from local organizers and young people, the short film describes the characteristics of its three traditional rhythms: the sentao (slow and deliberate), the chalupa (fast, lively, and ideal for improvisation), and the fandango de lengua.",
+     "genre": "Documental"
     },
     {
      "title": "Todavía aquí",
@@ -707,8 +707,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Documental",
-     "synopsis_en": "Amparo and Ana get up at 5 a.m. to take care of their home, raise animals, and harvest potatoes. Their work sustains the community, even though many dismiss it by saying that “they don’t do anything.”"
+     "synopsis_en": "Amparo and Ana get up at 5 a.m. to take care of their home, raise animals, and harvest potatoes. Their work sustains the community, even though many dismiss it by saying that “they don’t do anything.”",
+     "genre": "Documental"
     }
    ]
   },
@@ -737,6 +737,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "180 min",
+   "genre": "Documental",
    "day": "2026-09-24",
    "time": "16:00",
    "day_order": 1,
@@ -752,8 +753,7 @@
    "lbSlug": "the-game-of-life-2025",
    "tmdb_id": 1562450,
    "synopsis_en": "A documentary filmmaker follows five Colombian families for 14 years as they struggle to get ahead in a country where moving forward does not always mean progress.",
-   "title_en": "The Game of Life",
-   "genre": "Documental"
+   "title_en": "The Game of Life"
   },
   {
    "title": "PROGRAMA 2: Camino de historias vivas",
@@ -806,8 +806,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Terror",
-     "synopsis_en": "A group of schoolmates ventures into a forest. After ignoring a warning, they get lost and enter a mysterious cabin from which they never emerge."
+     "synopsis_en": "A group of schoolmates ventures into a forest. After ignoring a warning, they get lost and enter a mysterious cabin from which they never emerge.",
+     "genre": "Terror"
     },
     {
      "title": "Cuando el viento viejo baila",
@@ -824,8 +824,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Documental",
-     "synopsis_en": "“When the Old Wind Dances” depicts the encounter between students and two elders from Pijiño, whose knowledge keeps the region’s traditions alive."
+     "synopsis_en": "“When the Old Wind Dances” depicts the encounter between students and two elders from Pijiño, whose knowledge keeps the region’s traditions alive.",
+     "genre": "Documental"
     },
     {
      "title": "Regresar para encontrarme",
@@ -859,8 +859,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Aventura",
-     "synopsis_en": "A boy and a star remind us that magic never disappears; it just waits for us to look again with our hearts. A story that invites us to grow up without ever losing our faith."
+     "synopsis_en": "A boy and a star remind us that magic never disappears; it just waits for us to look again with our hearts. A story that invites us to grow up without ever losing our faith.",
+     "genre": "Aventura"
     }
    ]
   },
@@ -899,8 +899,8 @@
       "date": "2026-09-19"
      },
      "synopsis": "En palenque, un pueblo afrodescendiente en el departamento de Bolívar ubicado a una hora de Cartagena, se viven diariamente las tradiciones que gestaron nuestros ancestros. Los kuagros es una de ellas; siendo esta la forma organizacional que existe en el territorio. Se entiende el Kuagro como una segunda familia que nace gracias a los años de andanzas de un grupo de niños o jóvenes de una misma calle, barrio o sector.  La película KUAGRO cuenta como se da esta formación de grupo cuando no hay un rumbo seguro o fijo, solo la amistad y hermandad que nace del corazón y los amigos de infancia, esta película habla desde el relevo generacional, la lengua palenquera, el amor de mama y la libertad de ser niño en el palenque de Benko.",
-     "synopsis_lang": "es",
-     "synopsis_en": "Makakito tries to escape his mother’s punishment so he can play with his friends in a magical place in Palenque. His grandfather, a storyteller, captivates him with a traditional folk tale, which is interrupted by the adventures that ensnare Makakito."
+     "synopsis_en": "Makakito tries to escape his mother’s punishment so he can play with his friends in a magical place in Palenque. His grandfather, a storyteller, captivates him with a traditional folk tale, which is interrupted by the adventures that ensnare Makakito.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Lo que vimos desde arriba",
@@ -934,8 +934,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Documental",
-     "synopsis_en": "An independent theater group continues to build up its puppet troupe as part of the Barranquilla Carnival, despite financial and structural constraints."
+     "synopsis_en": "An independent theater group continues to build up its puppet troupe as part of the Barranquilla Carnival, despite financial and structural constraints.",
+     "genre": "Documental"
     },
     {
      "title": "200 años después: Ecos del pasado",
@@ -952,8 +952,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Ciencia ficción",
-     "synopsis_en": "A tourist arrives in Guaduas thinking it’s “just another little town.” But an unexpected journey will lead him to discover the town’s magic and walk among the echoes of history."
+     "synopsis_en": "A tourist arrives in Guaduas thinking it’s “just another little town.” But an unexpected journey will lead him to discover the town’s magic and walk among the echoes of history.",
+     "genre": "Ciencia ficción"
     },
     {
      "title": "¡Corroncho, y qué!",
@@ -970,8 +970,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Comedia",
-     "synopsis_en": "The transformation of his neighborhood has breathed new life into Don Pacho. Neither his daughter nor his asthma will stop him from enjoying himself, because making the most of what the city has to offer isn’t a hassle—it’s pure joy!"
+     "synopsis_en": "The transformation of his neighborhood has breathed new life into Don Pacho. Neither his daughter nor his asthma will stop him from enjoying himself, because making the most of what the city has to offer isn’t a hassle—it’s pure joy!",
+     "genre": "Comedia"
     },
     {
      "title": "Alma Sucreña",
@@ -988,8 +988,8 @@
       "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view (enlazado desde https://www.fedecajas.com/conexcine/)",
       "date": "2026-09-19"
      },
-     "genre": "Documental",
-     "synopsis_en": "Alma Sucreña is a documentary that travels through the department of Sucre to discover the stories, traditions, and cultural expressions that give life to the identity of its people."
+     "synopsis_en": "Alma Sucreña is a documentary that travels through the department of Sucre to discover the stories, traditions, and cultural expressions that give life to the identity of its people.",
+     "genre": "Documental"
     }
    ]
   },
@@ -1001,6 +1001,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "150 min",
+   "genre": "Western",
    "day": "2026-09-25",
    "time": "17:30",
    "day_order": 2,
@@ -1016,8 +1017,7 @@
    "lbSlug": "adios-amigo-2024-1",
    "tmdb_id": 1182189,
    "synopsis_en": "After a thousand days of civil war in Colombia in 1902, the revolutionary soldier Alfredo Duarte Amado receives a telegram with the news of the pregnancy of his brother Rodrigo's wife. Without knowing where to go, he convinces an amateur photographer in the bowels of the Chicamocha canyon to go with him searching for his brother lost in the war, but the photographer is also looking for someone – the man who killed his father.",
-   "title_en": "Adios Amigo",
-   "genre": "Western"
+   "title_en": "Adios Amigo"
   },
   {
    "title": "MU-KI-RA",
@@ -1027,6 +1027,7 @@
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "135 min",
+   "genre": "Animación",
    "day": "2026-09-26",
    "time": "10:00",
    "day_order": 3,
@@ -1041,8 +1042,7 @@
    "is_free": true,
    "lbSlug": "mu-ki-ra",
    "tmdb_id": 1446898,
-   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
-   "genre": "Animación"
+   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies."
   },
   {
    "title": "Exposición Proyectarte",
@@ -1054,6 +1054,7 @@
    "day_order": 3,
    "venue": "Biblioteca Pública Julio Pérez Ferrero - Cúcuta",
    "event_kind": "experiencia",
+   "info": true,
    "has_qa": false,
    "_src": {
     "url": "https://drive.google.com/file/d/1x0l0MwffrReBexjv_d312trbZvZ5JP5p/view",
@@ -1081,7 +1082,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-20T05:37:03",
+  "fecha": "2026-09-22T18:38:06",
   "plan_sha": "726761542a18e6c9",
   "paso": 11,
   "cmd": "python3 pipeline/ensamblar.py conexcine-2026"

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Programación Oficial CONEXCINE 2026 (PDF, páginas 2 y 3) + las láminas de «Selección Oficial» en Instagram",
-  "capturado": "2026-09-20",
+  "capturado": "2026-09-22",
   "que_aporta": "13 funciones con día, hora y sede; los cortos de cada programa con su departamento; y el director de cada obra",
   "url": "https://www.fedecajas.com/conexcine/",
   "metodo": "el PDF leído tres veces con herramientas distintas (poppler, MuPDF y el OCR del sistema sobre los píxeles) y cruzado contra Instagram, que es la que aporta los directores"
@@ -876,7 +876,8 @@
    "titulo": "Exposición Proyectarte",
    "seccion": "Actividades Culturales",
    "tipo": "evento",
-   "event_kind": "experiencia"
+   "event_kind": "experiencia",
+   "info": true
   },
   {
    "dia": "2026-09-26",

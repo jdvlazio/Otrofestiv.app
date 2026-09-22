@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-20"
+  "capturado": "2026-09-22"
  },
  "obras": [
   {
@@ -17,7 +17,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "200 años después: Ecos del pasado",
-   "lbSlug": "200-anos-despues-ecos-del-pasado"
+   "lbSlug": "200-anos-despues-ecos-del-pasado",
+   "_director": "Joan Sebastian Rodríguez",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Adiós al Amigo",
@@ -33,7 +35,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Adiós al Amigo",
    "title_en": "Adios Amigo",
-   "lbSlug": "adios-amigo-2024-1"
+   "lbSlug": "adios-amigo-2024-1",
+   "_director": "Iván D. Gaona",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Alma Sucreña",
@@ -48,7 +52,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Alma Sucreña",
-   "lbSlug": "alma-sucrena"
+   "lbSlug": "alma-sucrena",
+   "_director": "Greg Mendez / Prod. Fabian Patermina",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Antes era Mar",
@@ -63,7 +69,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Antes era Mar",
-   "lbSlug": "antes-era-mar"
+   "lbSlug": "antes-era-mar",
+   "_director": "Jerson Ruiz Lizcano",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Bullerengue: ritmo que sigue sonando",
@@ -78,7 +86,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Bullerengue: ritmo que sigue sonando",
-   "lbSlug": "bullerengue-ritmo-que-sigue-sonando"
+   "lbSlug": "bullerengue-ritmo-que-sigue-sonando",
+   "_director": "Ludysney Mosquera Quintana",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Cartas a la Tierra",
@@ -93,7 +103,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Cartas a la Tierra",
-   "lbSlug": "cartas-a-la-tierra"
+   "lbSlug": "cartas-a-la-tierra",
+   "_director": "Erika Andrea David",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Con la Mano Arriba",
@@ -108,7 +120,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Con la Mano Arriba",
-   "lbSlug": "con-la-mano-arriba"
+   "lbSlug": "con-la-mano-arriba",
+   "_director": "Miguel Angel Ordoñez",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Crónicas de un Viaje",
@@ -123,7 +137,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Crónicas de un Viaje",
-   "lbSlug": "cronicas-de-un-viaje"
+   "lbSlug": "cronicas-de-un-viaje",
+   "_director": "Santiago Parra Perez",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Cuando el viento viejo baila",
@@ -138,7 +154,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Cuando el viento viejo baila",
-   "lbSlug": "cuando-el-viento-viejo-baila"
+   "lbSlug": "cuando-el-viento-viejo-baila",
+   "_director": "Deiris Arrieta",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "El Chucur",
@@ -153,7 +171,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "El Chucur",
-   "lbSlug": "el-chucur"
+   "lbSlug": "el-chucur",
+   "_director": "Jairo Tarapuez Jaramillo",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "El Juego de la Vida",
@@ -169,7 +189,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "El Juego de la Vida",
    "title_en": "The Game of Life",
-   "lbSlug": "the-game-of-life-2025"
+   "lbSlug": "the-game-of-life-2025",
+   "_director": "Mario Andrés Ruiz",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "El Mejor Chocolate del Mundo",
@@ -184,7 +206,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "El Mejor Chocolate del Mundo",
-   "lbSlug": "el-mejor-chocolate-del-mundo"
+   "lbSlug": "el-mejor-chocolate-del-mundo",
+   "_director": "John Agudelo",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "El bosque maldito",
@@ -199,7 +223,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "El bosque maldito",
-   "lbSlug": "el-bosque-maldito"
+   "lbSlug": "el-bosque-maldito",
+   "_director": "Charith Dayana Ruiz",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Epifanía",
@@ -214,7 +240,9 @@
    "pais_tmdb": "Germany, Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Epifanía",
-   "lbSlug": "epifania-2025-1"
+   "lbSlug": "epifania-2025-1",
+   "_director": "Mila Useche",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Escisión de la Cigarra",
@@ -229,7 +257,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Escisión de la Cigarra",
-   "lbSlug": "escision-de-la-cigarra"
+   "lbSlug": "escision-de-la-cigarra",
+   "_director": "Absalon Rincón",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Hilo al cielo",
@@ -244,7 +274,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Hilo al cielo",
-   "lbSlug": "hilo-al-cielo"
+   "lbSlug": "hilo-al-cielo",
+   "_director": "Manuel José Martínez",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Kanekalon",
@@ -259,7 +291,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Kanekalon",
-   "lbSlug": "kanekalon"
+   "lbSlug": "kanekalon",
+   "_director": "Sara J. Asprilla",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Kuagro",
@@ -274,7 +308,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Kuagro",
-   "lbSlug": "kuagro"
+   "lbSlug": "kuagro",
+   "_director": "Diego Caceres",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "La Gallina Saraviada",
@@ -289,7 +325,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "La Gallina Saraviada",
-   "lbSlug": "la-gallina-saraviada"
+   "lbSlug": "la-gallina-saraviada",
+   "_director": "Ingrid Paola Bonilla Rodriguez",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "La Sayona",
@@ -304,7 +342,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "La Sayona",
-   "lbSlug": "la-sayona-2026"
+   "lbSlug": "la-sayona-2026",
+   "_director": "Sharon Vega",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "La calle del amor",
@@ -319,7 +359,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "La calle del amor",
-   "lbSlug": "la-calle-del-amor"
+   "lbSlug": "la-calle-del-amor",
+   "_director": "Ramón Contreras",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "La guerra de los tomates",
@@ -334,7 +376,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "La guerra de los tomates",
-   "lbSlug": "la-guerra-de-los-tomates"
+   "lbSlug": "la-guerra-de-los-tomates",
+   "_director": "Juan Carlos Gutierrez",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "La última estrella",
@@ -349,7 +393,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "La última estrella",
-   "lbSlug": "la-ultima-estrella"
+   "lbSlug": "la-ultima-estrella",
+   "_director": "Tania Garay",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Las voces del Catatumbo",
@@ -364,7 +410,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Las voces del Catatumbo",
-   "lbSlug": "las-voces-del-catatumbo"
+   "lbSlug": "las-voces-del-catatumbo",
+   "_director": "Nayelit Eliana Tamara",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Lo que vimos desde arriba",
@@ -379,7 +427,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Lo que vimos desde arriba",
-   "lbSlug": "lo-que-vimos-desde-arriba"
+   "lbSlug": "lo-que-vimos-desde-arriba",
+   "_director": "Zaira Alejandra Gomez Rojas",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Los años del conejo",
@@ -395,7 +445,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Los años del conejo",
    "title_en": "The Years of the rabbit",
-   "lbSlug": "the-years-of-the-rabbit"
+   "lbSlug": "the-years-of-the-rabbit",
+   "_director": "Raquel Tamayo",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Lovavieja",
@@ -410,7 +462,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Lovavieja",
-   "lbSlug": "lovavieja"
+   "lbSlug": "lovavieja",
+   "_director": "Cesar Tapia / Colectivo Barranco de Loba",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "MU-KI-RA",
@@ -425,7 +479,9 @@
    "pais_tmdb": "Colombia, Spain",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "MU-KI-RA",
-   "lbSlug": "mu-ki-ra"
+   "lbSlug": "mu-ki-ra",
+   "_director": "Estefanía Piñeres",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Memorias de un renacer",
@@ -440,7 +496,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Memorias de un renacer",
-   "lbSlug": "memorias-de-un-renacer"
+   "lbSlug": "memorias-de-un-renacer",
+   "_director": "Stephania Solano López",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Mi casa es su casa",
@@ -455,7 +513,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Mi casa es su casa",
-   "lbSlug": "mi-casa-es-su-casa"
+   "lbSlug": "mi-casa-es-su-casa",
+   "_director": "Joan Mayorga",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Origen",
@@ -470,7 +530,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Origen",
-   "lbSlug": "origen-2026"
+   "lbSlug": "origen-2026",
+   "_director": "Halley Rolando Alvarez Moreno",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Promesa",
@@ -485,7 +547,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Promesa",
-   "lbSlug": "promesa-2026"
+   "lbSlug": "promesa-2026",
+   "_director": "Yosman Serrano",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Regresar para encontrarme",
@@ -500,7 +564,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Regresar para encontrarme",
-   "lbSlug": "regresar-para-encontrarme"
+   "lbSlug": "regresar-para-encontrarme",
+   "_director": "Ayelen Sophie Salazar",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Resistencia civil: entre la tierra y la memoria",
@@ -515,7 +581,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Resistencia civil: entre la tierra y la memoria",
-   "lbSlug": "resistencia-civil-entre-la-tierra-y-la-memoria"
+   "lbSlug": "resistencia-civil-entre-la-tierra-y-la-memoria",
+   "_director": "Heiny Camila Gómez",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "También nosotras",
@@ -530,7 +598,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "También nosotras",
-   "lbSlug": "tambien-nosotras"
+   "lbSlug": "tambien-nosotras",
+   "_director": "Lady Vásquez - Colectivo Inunku",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Todavía aquí",
@@ -545,7 +615,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Todavía aquí",
-   "lbSlug": "todavia-aqui"
+   "lbSlug": "todavia-aqui",
+   "_director": "Jhoan Steban Molina Rodríguez",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "¡Corroncho, y qué!",
@@ -560,7 +632,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "¡Corroncho, y qué!",
-   "lbSlug": "corroncho-y-que"
+   "lbSlug": "corroncho-y-que",
+   "_director": "Elizabeth Gaviria",
+   "_sondeado": "2026-09-22"
   },
   {
    "titulo": "Ángeles Somos",
@@ -575,7 +649,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Ángeles Somos",
-   "lbSlug": "angeles-somos"
+   "lbSlug": "angeles-somos",
+   "_director": "Kizzis Ramirez",
+   "_sondeado": "2026-09-22"
   }
  ],
  "verificadas": {
@@ -591,7 +667,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "200 años después: Ecos del pasado",
-   "lbSlug": "200-anos-despues-ecos-del-pasado"
+   "lbSlug": "200-anos-despues-ecos-del-pasado",
+   "_director": "Joan Sebastian Rodríguez",
+   "_sondeado": "2026-09-22"
   },
   "Adiós al Amigo": {
    "tmdb_id": 1182189,
@@ -606,7 +684,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Adiós al Amigo",
    "title_en": "Adios Amigo",
-   "lbSlug": "adios-amigo-2024-1"
+   "lbSlug": "adios-amigo-2024-1",
+   "_director": "Iván D. Gaona",
+   "_sondeado": "2026-09-22"
   },
   "Alma Sucreña": {
    "tmdb_id": 1745793,
@@ -620,7 +700,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Alma Sucreña",
-   "lbSlug": "alma-sucrena"
+   "lbSlug": "alma-sucrena",
+   "_director": "Greg Mendez / Prod. Fabian Patermina",
+   "_sondeado": "2026-09-22"
   },
   "Antes era Mar": {
    "tmdb_id": 1745800,
@@ -634,7 +716,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Antes era Mar",
-   "lbSlug": "antes-era-mar"
+   "lbSlug": "antes-era-mar",
+   "_director": "Jerson Ruiz Lizcano",
+   "_sondeado": "2026-09-22"
   },
   "Bullerengue: ritmo que sigue sonando": {
    "tmdb_id": 1753796,
@@ -648,7 +732,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Bullerengue: ritmo que sigue sonando",
-   "lbSlug": "bullerengue-ritmo-que-sigue-sonando"
+   "lbSlug": "bullerengue-ritmo-que-sigue-sonando",
+   "_director": "Ludysney Mosquera Quintana",
+   "_sondeado": "2026-09-22"
   },
   "Cartas a la Tierra": {
    "tmdb_id": 1737971,
@@ -662,7 +748,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Cartas a la Tierra",
-   "lbSlug": "cartas-a-la-tierra"
+   "lbSlug": "cartas-a-la-tierra",
+   "_director": "Erika Andrea David",
+   "_sondeado": "2026-09-22"
   },
   "Con la Mano Arriba": {
    "tmdb_id": 1745797,
@@ -676,7 +764,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Con la Mano Arriba",
-   "lbSlug": "con-la-mano-arriba"
+   "lbSlug": "con-la-mano-arriba",
+   "_director": "Miguel Angel Ordoñez",
+   "_sondeado": "2026-09-22"
   },
   "Crónicas de un Viaje": {
    "tmdb_id": 1753805,
@@ -690,7 +780,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Crónicas de un Viaje",
-   "lbSlug": "cronicas-de-un-viaje"
+   "lbSlug": "cronicas-de-un-viaje",
+   "_director": "Santiago Parra Perez",
+   "_sondeado": "2026-09-22"
   },
   "Cuando el viento viejo baila": {
    "tmdb_id": 1753798,
@@ -704,7 +796,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Cuando el viento viejo baila",
-   "lbSlug": "cuando-el-viento-viejo-baila"
+   "lbSlug": "cuando-el-viento-viejo-baila",
+   "_director": "Deiris Arrieta",
+   "_sondeado": "2026-09-22"
   },
   "El Chucur": {
    "tmdb_id": 1486078,
@@ -718,7 +812,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "El Chucur",
-   "lbSlug": "el-chucur"
+   "lbSlug": "el-chucur",
+   "_director": "Jairo Tarapuez Jaramillo",
+   "_sondeado": "2026-09-22"
   },
   "El Juego de la Vida": {
    "tmdb_id": 1562450,
@@ -733,7 +829,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "El Juego de la Vida",
    "title_en": "The Game of Life",
-   "lbSlug": "the-game-of-life-2025"
+   "lbSlug": "the-game-of-life-2025",
+   "_director": "Mario Andrés Ruiz",
+   "_sondeado": "2026-09-22"
   },
   "El Mejor Chocolate del Mundo": {
    "tmdb_id": 1753835,
@@ -747,7 +845,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "El Mejor Chocolate del Mundo",
-   "lbSlug": "el-mejor-chocolate-del-mundo"
+   "lbSlug": "el-mejor-chocolate-del-mundo",
+   "_director": "John Agudelo",
+   "_sondeado": "2026-09-22"
   },
   "El bosque maldito": {
    "tmdb_id": 1753809,
@@ -761,7 +861,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "El bosque maldito",
-   "lbSlug": "el-bosque-maldito"
+   "lbSlug": "el-bosque-maldito",
+   "_director": "Charith Dayana Ruiz",
+   "_sondeado": "2026-09-22"
   },
   "Epifanía": {
    "tmdb_id": 1575190,
@@ -775,7 +877,9 @@
    "pais_tmdb": "Germany, Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Epifanía",
-   "lbSlug": "epifania-2025-1"
+   "lbSlug": "epifania-2025-1",
+   "_director": "Mila Useche",
+   "_sondeado": "2026-09-22"
   },
   "Escisión de la Cigarra": {
    "tmdb_id": 1753860,
@@ -789,7 +893,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Escisión de la Cigarra",
-   "lbSlug": "escision-de-la-cigarra"
+   "lbSlug": "escision-de-la-cigarra",
+   "_director": "Absalon Rincón",
+   "_sondeado": "2026-09-22"
   },
   "Hilo al cielo": {
    "tmdb_id": 1746351,
@@ -803,7 +909,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Hilo al cielo",
-   "lbSlug": "hilo-al-cielo"
+   "lbSlug": "hilo-al-cielo",
+   "_director": "Manuel José Martínez",
+   "_sondeado": "2026-09-22"
   },
   "Kanekalon": {
    "tmdb_id": 1454683,
@@ -817,7 +925,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Kanekalon",
-   "lbSlug": "kanekalon"
+   "lbSlug": "kanekalon",
+   "_director": "Sara J. Asprilla",
+   "_sondeado": "2026-09-22"
   },
   "Kuagro": {
    "tmdb_id": 1668919,
@@ -831,7 +941,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Kuagro",
-   "lbSlug": "kuagro"
+   "lbSlug": "kuagro",
+   "_director": "Diego Caceres",
+   "_sondeado": "2026-09-22"
   },
   "La Gallina Saraviada": {
    "tmdb_id": 1746279,
@@ -845,7 +957,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "La Gallina Saraviada",
-   "lbSlug": "la-gallina-saraviada"
+   "lbSlug": "la-gallina-saraviada",
+   "_director": "Ingrid Paola Bonilla Rodriguez",
+   "_sondeado": "2026-09-22"
   },
   "La Sayona": {
    "tmdb_id": 1753800,
@@ -859,7 +973,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "La Sayona",
-   "lbSlug": "la-sayona-2026"
+   "lbSlug": "la-sayona-2026",
+   "_director": "Sharon Vega",
+   "_sondeado": "2026-09-22"
   },
   "La calle del amor": {
    "tmdb_id": 1746336,
@@ -873,7 +989,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "La calle del amor",
-   "lbSlug": "la-calle-del-amor"
+   "lbSlug": "la-calle-del-amor",
+   "_director": "Ramón Contreras",
+   "_sondeado": "2026-09-22"
   },
   "La guerra de los tomates": {
    "tmdb_id": 1753830,
@@ -887,7 +1005,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "La guerra de los tomates",
-   "lbSlug": "la-guerra-de-los-tomates"
+   "lbSlug": "la-guerra-de-los-tomates",
+   "_director": "Juan Carlos Gutierrez",
+   "_sondeado": "2026-09-22"
   },
   "La última estrella": {
    "tmdb_id": 1753818,
@@ -901,7 +1021,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "La última estrella",
-   "lbSlug": "la-ultima-estrella"
+   "lbSlug": "la-ultima-estrella",
+   "_director": "Tania Garay",
+   "_sondeado": "2026-09-22"
   },
   "Las voces del Catatumbo": {
    "tmdb_id": 1753825,
@@ -915,7 +1037,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Las voces del Catatumbo",
-   "lbSlug": "las-voces-del-catatumbo"
+   "lbSlug": "las-voces-del-catatumbo",
+   "_director": "Nayelit Eliana Tamara",
+   "_sondeado": "2026-09-22"
   },
   "Lo que vimos desde arriba": {
    "tmdb_id": 1746343,
@@ -929,7 +1053,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Lo que vimos desde arriba",
-   "lbSlug": "lo-que-vimos-desde-arriba"
+   "lbSlug": "lo-que-vimos-desde-arriba",
+   "_director": "Zaira Alejandra Gomez Rojas",
+   "_sondeado": "2026-09-22"
   },
   "Los años del conejo": {
    "tmdb_id": 1617929,
@@ -944,7 +1070,9 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Los años del conejo",
    "title_en": "The Years of the rabbit",
-   "lbSlug": "the-years-of-the-rabbit"
+   "lbSlug": "the-years-of-the-rabbit",
+   "_director": "Raquel Tamayo",
+   "_sondeado": "2026-09-22"
   },
   "Lovavieja": {
    "tmdb_id": 1745787,
@@ -958,7 +1086,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Lovavieja",
-   "lbSlug": "lovavieja"
+   "lbSlug": "lovavieja",
+   "_director": "Cesar Tapia / Colectivo Barranco de Loba",
+   "_sondeado": "2026-09-22"
   },
   "MU-KI-RA": {
    "tmdb_id": 1446898,
@@ -972,7 +1102,9 @@
    "pais_tmdb": "Colombia, Spain",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "MU-KI-RA",
-   "lbSlug": "mu-ki-ra"
+   "lbSlug": "mu-ki-ra",
+   "_director": "Estefanía Piñeres",
+   "_sondeado": "2026-09-22"
   },
   "Memorias de un renacer": {
    "tmdb_id": 1753838,
@@ -986,7 +1118,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Memorias de un renacer",
-   "lbSlug": "memorias-de-un-renacer"
+   "lbSlug": "memorias-de-un-renacer",
+   "_director": "Stephania Solano López",
+   "_sondeado": "2026-09-22"
   },
   "Mi casa es su casa": {
    "tmdb_id": 1740149,
@@ -1000,7 +1134,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Mi casa es su casa",
-   "lbSlug": "mi-casa-es-su-casa"
+   "lbSlug": "mi-casa-es-su-casa",
+   "_director": "Joan Mayorga",
+   "_sondeado": "2026-09-22"
   },
   "Origen": {
    "tmdb_id": 1745802,
@@ -1014,7 +1150,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Origen",
-   "lbSlug": "origen-2026"
+   "lbSlug": "origen-2026",
+   "_director": "Halley Rolando Alvarez Moreno",
+   "_sondeado": "2026-09-22"
   },
   "Promesa": {
    "tmdb_id": 1753864,
@@ -1028,7 +1166,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Promesa",
-   "lbSlug": "promesa-2026"
+   "lbSlug": "promesa-2026",
+   "_director": "Yosman Serrano",
+   "_sondeado": "2026-09-22"
   },
   "Regresar para encontrarme": {
    "tmdb_id": 1753826,
@@ -1042,7 +1182,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Regresar para encontrarme",
-   "lbSlug": "regresar-para-encontrarme"
+   "lbSlug": "regresar-para-encontrarme",
+   "_director": "Ayelen Sophie Salazar",
+   "_sondeado": "2026-09-22"
   },
   "Resistencia civil: entre la tierra y la memoria": {
    "tmdb_id": 1753861,
@@ -1056,7 +1198,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Resistencia civil: entre la tierra y la memoria",
-   "lbSlug": "resistencia-civil-entre-la-tierra-y-la-memoria"
+   "lbSlug": "resistencia-civil-entre-la-tierra-y-la-memoria",
+   "_director": "Heiny Camila Gómez",
+   "_sondeado": "2026-09-22"
   },
   "También nosotras": {
    "tmdb_id": 1746367,
@@ -1070,7 +1214,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "También nosotras",
-   "lbSlug": "tambien-nosotras"
+   "lbSlug": "tambien-nosotras",
+   "_director": "Lady Vásquez - Colectivo Inunku",
+   "_sondeado": "2026-09-22"
   },
   "Todavía aquí": {
    "tmdb_id": 1753823,
@@ -1084,7 +1230,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Todavía aquí",
-   "lbSlug": "todavia-aqui"
+   "lbSlug": "todavia-aqui",
+   "_director": "Jhoan Steban Molina Rodríguez",
+   "_sondeado": "2026-09-22"
   },
   "¡Corroncho, y qué!": {
    "tmdb_id": 1746370,
@@ -1098,7 +1246,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "¡Corroncho, y qué!",
-   "lbSlug": "corroncho-y-que"
+   "lbSlug": "corroncho-y-que",
+   "_director": "Elizabeth Gaviria",
+   "_sondeado": "2026-09-22"
   },
   "Ángeles Somos": {
    "tmdb_id": 1668920,
@@ -1112,7 +1262,9 @@
    "pais_tmdb": "Colombia",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Ángeles Somos",
-   "lbSlug": "angeles-somos"
+   "lbSlug": "angeles-somos",
+   "_director": "Kizzis Ramirez",
+   "_sondeado": "2026-09-22"
   }
  },
  "sin_ficha": [
@@ -1125,5 +1277,43 @@
   "PROGRAMA 4: Transitando del norte al sur",
   "Por quien derraman las lágrimas",
   "Reflejos"
- ]
+ ],
+ "_sin_ficha_sondeo": {
+  "La Esperanza": {
+   "director": "Andrés Flechas",
+   "fecha": "2026-09-22"
+  },
+  "PROGRAMA 1: Aventuras mágicas y amistades inolvidables": {
+   "director": "",
+   "fecha": "2026-09-22"
+  },
+  "PROGRAMA 1: Voces, miradas y paisajes propios": {
+   "director": "",
+   "fecha": "2026-09-22"
+  },
+  "PROGRAMA 2: Camino de historias vivas": {
+   "director": "",
+   "fecha": "2026-09-22"
+  },
+  "PROGRAMA 2: Entre el mar y la luna": {
+   "director": "",
+   "fecha": "2026-09-22"
+  },
+  "PROGRAMA 3: Horizontes que florecen": {
+   "director": "",
+   "fecha": "2026-09-22"
+  },
+  "PROGRAMA 4: Transitando del norte al sur": {
+   "director": "",
+   "fecha": "2026-09-22"
+  },
+  "Por quien derraman las lágrimas": {
+   "director": "Diego Alejandro Ruiz",
+   "fecha": "2026-09-22"
+  },
+  "Reflejos": {
+   "director": "María Nicol Contreras Barbosa",
+   "fecha": "2026-09-22"
+  }
+ }
 }

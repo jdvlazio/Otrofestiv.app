@@ -45,14 +45,23 @@ SEDE_DEFECTO = 'Biblioteca Pública Julio Pérez Ferrero'
 # QUÉ ES CADA BLOQUE QUE NO ES UNA PROYECCIÓN DE COMPETENCIA. El patrón se
 # busca en las líneas del bloque; el título es VERBATIM del festival y el
 # `event_kind` es el vocabulario de la app.
+# El quinto campo es DE PASO: la actividad se visita, no se asiste a una hora.
+# Marca `info: true`, que en el dominio significa que la actividad no cruza con
+# nada (src/domain/schedule.js) ni entra al plan generado.
 ACTIVIDAD = [
     (r'conversatorio', 'Conversatorio sobre formulación de proyectos para '
                        'convocatorias, mercados y festivales',
-     'Conversatorios', 'charla'),
+     'Conversatorios', 'charla', False),
+    # LA EXPOSICIÓN ES EL ÚNICO CRUCE DE TODO EL FESTIVAL: va de 15:00 a 18:00
+    # del sábado y la Clausura arranca 16:30, así que se pisan 90 minutos en la
+    # misma sede. Sin esta marca la app obliga a elegir entre una exposición y
+    # la clausura — una decisión que el festival nunca planteó, porque a una
+    # exposición se entra y se sale. Mismo trato que las exposiciones de
+    # FICMontañas y las salas de VR de #NarrarElFuturo.
     (r'exposicion proyectarte', 'Exposición Proyectarte',
-     'Actividades Culturales', 'experiencia'),
+     'Actividades Culturales', 'experiencia', True),
     (r'ceremonia de clausura', 'Ceremonia de Clausura',
-     'Actividades Culturales', 'clausura'),
+     'Actividades Culturales', 'clausura', False),
 ]
 
 # LOS TRES LARGOS, por la línea con que el bloque los nombra.
@@ -136,9 +145,11 @@ def main():
         # ¿una actividad?
         act = next((a for a in ACTIVIDAD if re.search(a[0], n)), None)
         if act:
-            _, titulo, seccion, kind = act
+            _, titulo, seccion, kind, de_paso = act
             reg.update({'titulo': titulo, 'seccion': seccion,
                         'tipo': 'evento', 'event_kind': kind})
+            if de_paso:
+                reg['info'] = True
             # la ÚNICA sede que el PDF nombra, y solo para este bloque
             if 'torre del reloj' in n:
                 reg['sede'] = 'Auditorio TORRE DEL RELOJ'
