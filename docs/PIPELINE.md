@@ -508,6 +508,32 @@ y comprueba dos cosas que solo se ven al cargarlo: que no haya un festival
 anidado dentro de otro, y que el número de festivales no se desplome. Es la
 única forma de saber que el archivo que carga el navegador es el que creemos.
 
+**Decimoctavo: `[programa-mismo-titulo]` — mismo título ⇒ misma obra.**
+
+La app identifica las obras **por título** —`FILMS.find(f=>f.title===t)`— y de
+ahí salen el detalle, el Plan, el cruce de horarios y la watchlist. Que un
+título se repita es normal y el modelo lo espera: la misma película proyectada
+dos o tres veces. Lo que no puede pasar es que las entradas **no sean la misma
+obra**: entonces la app enseña el contenido de la primera para todas, sin error
+ni aviso.
+
+Pasó en Jardín 2026 y lo vio Juan en la app, no el repo: Caleidoscopio se
+proyecta en dos tandas de cortos DISTINTOS —8 el viernes, 14 el sábado, ninguno
+repetido— y las dos casillas llevaban por título la línea de la sección, junto
+con el acto de premiación. Tres tarjetas, los mismos ocho cortos en las tres.
+
+**Qué se exige, y por qué esos campos.** Medido sobre los 21 festivales del
+repo: `director`, `country`, `year`, `genre`, `poster` y `synopsis` no difieren
+NUNCA entre funciones del mismo título —son la identidad de la obra—, y la
+lista de obras de un programa tampoco. Los que sí varían legítimamente quedan
+fuera: `duration` (seis casos, redondeos de un minuto) y `section` (dos). Así
+nace con cero falsos positivos sobre 459 títulos repetidos, y cualquier rojo es
+una obra partida en dos.
+
+El día que nació encontró además un caso viejo: «¿Qué es la ficción?» de
+Cinemancia 2025 son cuatro cosas con un nombre. Declarado como deuda que solo
+puede encoger.
+
 **Decimosexto: `[poster-mirado]` — alguien tiene que ABRIR el archivo.**
 
 *«¿Cómo es posible crear un póster sin pasar por un guardián?»* preguntó Juan al

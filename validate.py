@@ -5544,6 +5544,68 @@ except Exception as _e:
 #   · que el archivo EXISTA (una ruta rota no se ve hasta que se ve),
 #   · que tenga resolución de póster y no de miniatura,
 #   · que no lleve una BANDA PLANA en un borde — el recorte que se comió el
+
+# ── [programa-mismo-titulo] mismo título ⇒ MISMA OBRA ───────────────────────
+# LA APP IDENTIFICA LAS OBRAS POR TÍTULO: `FILMS.find(f=>f.title===t)`, y de ahí
+# salen el detalle, el Plan, el cruce de horarios y la watchlist. Que un título
+# se repita es NORMAL y el modelo lo espera —la misma película proyectada dos o
+# tres veces—, pero entonces las entradas tienen que ser LA MISMA OBRA.
+#
+# Cuando no lo son, la app enseña el contenido de la PRIMERA para todas, sin
+# error ni aviso. Pasó en Jardín 2026 y Juan lo vio en la app, no el repo:
+# Caleidoscopio se proyecta en dos tandas de cortos DISTINTOS —8 el viernes, 14
+# el sábado, ninguno repetido— y las dos casillas llevaban por título la línea
+# de la sección, junto con el acto de premiación. Tres tarjetas, los mismos
+# ocho cortos en las tres. «Este error es fatal, no puede volver a ocurrir».
+#
+# QUÉ SE EXIGE Y POR QUÉ ESOS CAMPOS. Medido sobre los 21 festivales del repo:
+# `director`, `country`, `year`, `genre`, `poster` y `synopsis` NO difieren
+# nunca entre funciones del mismo título — son la identidad de la obra. Los que
+# sí varían legítimamente quedan fuera: `duration` (6 casos, redondeos de un
+# minuto) y `section` (2 casos). Así el guardián nace con CERO falsos positivos
+# y cualquier rojo es una obra partida en dos.
+check = 'programa-mismo-titulo'
+try:
+    import json as _jp, glob as _gp, collections as _cp
+    # DEUDA DECLARADA, y solo puede encoger. «¿Qué es la ficción?» de Cinemancia
+    # 2025 son CUATRO cosas con el mismo nombre —una ponencia y tres
+    # proyecciones de 4, 5 y 6 obras— en un festival archivado. Hallazgo real
+    # del día que nació, no falso positivo: se nombra para que no crezca.
+    _DEUDA = {('cinemancia-2025', '¿Qué es la ficción?')}
+    _IDENT = ('director', 'country', 'year', 'genre', 'poster', 'synopsis')
+    _malos, _vistos = [], 0
+    for _f in sorted(_gp.glob('festivals/*.json')):
+        _fest = _f.split('/')[-1][:-5]
+        _por = _cp.defaultdict(list)
+        for _x in (_jp.load(open(_f, encoding='utf-8')).get('films') or []):
+            if _x.get('title'):
+                _por[_x['title']].append(_x)
+        for _t, _xs in _por.items():
+            if len(_xs) < 2 or (_fest, _t) in _DEUDA:
+                continue
+            _vistos += 1
+            _fl = {tuple(sorted((_i.get('title') or '')
+                                for _i in (_x.get('film_list') or []))) for _x in _xs}
+            if len(_fl) > 1:
+                _cu = ' / '.join(str(len(_l)) for _l in sorted(_fl, key=len))
+                _malos.append(f'{_fest}: «{_t[:38]}» tiene listas de obras distintas '
+                              f'({_cu}) — la app mostrará la primera')
+                continue
+            for _c in _IDENT:
+                _v = {str(_x.get(_c)) for _x in _xs}
+                if len(_v) > 1:
+                    _malos.append(f'{_fest}: «{_t[:38]}» difiere en {_c} '
+                                  f'({" ≠ ".join(sorted(_v)[:2])[:56]}) — son dos obras '
+                                  f'con un nombre')
+                    break
+    if _malos:
+        fail(check, ' · '.join(_malos[:5]) + (f' (+{len(_malos) - 5})' if len(_malos) > 5 else ''))
+    else:
+        ok(check, f'{_vistos} título(s) repetido(s), todos la misma obra '
+                  f'(deuda declarada: {len(_DEUDA)})')
+except Exception as _e:
+    warn(check, f'no se pudo verificar programa-mismo-titulo: {_e}')
+
 #     encabezado del PDF, que es exactamente el error de hoy.
 check = 'poster-mirado'
 try:
