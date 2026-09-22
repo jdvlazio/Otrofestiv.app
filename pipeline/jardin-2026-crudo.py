@@ -61,6 +61,22 @@ DURA_PARRILLA = {'almaprovinciana', 'lamarchadelhambre'}
 # No se adivina cuál es cuál: se publican SIN sinopsis las dos. Poner el mismo
 # texto en dos obras es peor que no ponerlo, y elegir a ojo sería inventar.
 # Preguntado al festival.
+# CALEIDOSCOPIO ES LA COMPETENCIA **NACIONAL** DE CORTOMETRAJES, y el
+# festival lo escribe así en su propio logotipo: los 22 cortos son colombianos
+# por definición de la sección. Sus fichas no imprimen país —la web solo lo
+# pone en 15 de 37 obras— y salían sin bandera, que es lo que Juan preguntó de
+# «Una sola golondrina» (22 sep).
+#
+# No es adivinar por el nombre del director ni por la ciudad: es la regla de
+# admisión de la sección, publicada por el festival. Queda declarado aquí y
+# no disperso en 22 sitios.
+PAIS_POR_SECCION = {
+    'CALEIDOSCOPIO': ('Colombia',
+        'la sección es la «Competencia NACIONAL de cortometrajes» —así la '
+        'rotula el festival en su logotipo y en la parrilla—: entrar en ella '
+        'es ser colombiana.'),
+}
+
 SINOPSIS_EN_DISPUTA = {'relatos del camino', 'un aparato para detectar fantasmas'}
 
 SEDE_PLAN = {
@@ -224,6 +240,10 @@ def main():
                         'lo aclaren')
                 it.update(genero_de(w))
                 it.update(poster_de(w, pos))
+                _ps = PAIS_POR_SECCION.get(w.get('seccion'))
+                if _ps and not it.get('pais'):
+                    it['pais'] = _ps[0]
+                    it['_pais_fuente'] = _ps[1]
                 reg['film_list'].append(it)
             funciones.append(reg)
             continue
@@ -261,8 +281,22 @@ def main():
                 reg['info'] = True
             reg['duracion_min'] = f.get('duracion_min') or 120  # el default solo si la lámina no da el fin
             reg['seccion'] = 'Muestra Central'
-            if f.get('organiza') or f.get('tallerista'):
-                reg['_credito'] = f.get('organiza') or f.get('tallerista')
+            # QUIÉN LO ORGANIZA VA EN LA DESCRIPCIÓN, no en un campo interno.
+            # La lámina lo rotula —«Organiza: Defensoría del pueblo»,
+            # «Tallerista: Diego León Zapata»— y yo lo guardaba en `_credito`,
+            # que empieza por guion bajo y por tanto NO SE PUBLICA: en la
+            # tarjeta el taller salía sin una línea. Lo vio Juan (22 sep).
+            #
+            # La sinopsis se arma con lo que el festival escribió y nada más:
+            # el subtítulo cuando lo hay —«(Taller ELO - Espacios Libres de
+            # Odio)», «Crea tu propia serigrafía»— y el crédito con su rótulo.
+            _sub = (f.get('subtitulo') or '').strip()
+            _cred = ('Organiza: ' + f['organiza'] if f.get('organiza')
+                     else 'Tallerista: ' + f['tallerista'] if f.get('tallerista')
+                     else '')
+            _desc = '. '.join(x.strip(' .') for x in (_sub, _cred) if x)
+            if _desc:
+                reg['sinopsis'] = _desc + '.'
             funciones.append(reg)
             continue
 
@@ -274,6 +308,11 @@ def main():
             for c in ('director', 'pais', 'anio', 'genero'):
                 if f.get(c):
                     reg[c] = f[c]
+            # EL AFICHE TAMBIÉN PARA ÉSTAS. El paso de afiches ya las cubre
+            # —su espina incluye lo que solo está en la parrilla— pero acá no
+            # se le preguntaba, así que el cartel de «La casa del trueno» que
+            # guarda la Cinemateca se bajaba y no llegaba a publicarse.
+            reg.update(poster_de({'titulo': tit}, pos))
             reg['_sin_ficha_en_la_web'] = True
             funciones.append(reg)
             continue

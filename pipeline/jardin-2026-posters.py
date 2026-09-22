@@ -63,6 +63,43 @@ ST = f'{REPO}/festivals/staging'
 ASSETS = f'{REPO}/assets/jardin-2026'
 CAT = f'{ST}/jardin-2026-catalogo.json'
 ENR = f'{ST}/jardin-2026-catalogo-enriquecido.json'
+PARR = f'{ST}/jardin-2026-parrilla.json'
+
+
+def solo_en_la_parrilla(cat):
+    """Las obras que SE PROYECTAN y no están en el catálogo de la web.
+
+    LA ESPINA ERA EL CATÁLOGO Y LA PROGRAMACIÓN ES MÁS ANCHA. El festival
+    ficha en su web 37 obras, pero la parrilla proyecta algunas que nunca
+    fichó: «Cien años de soledad: Eran más de tres mil», «Una sola golondrina
+    no hace llover», «La casa del trueno»… Recorriendo solo el catálogo, esas
+    obras no recibían NI UN INTENTO —ni TMDB, ni Letterboxd, ni nada—, y no se
+    veía porque la cuenta del paso era sobre el catálogo: 37 de 37 parecía
+    completo. Es el mismo error de espina que costó los afiches de Villa del
+    Cine, y lo destapó Juan preguntando por qué faltaban (22 sep).
+
+    Entran con lo que la parrilla imprime, que trae director, año y duración.
+    """
+    if not os.path.exists(PARR):
+        return []
+    tengo = {norm(o['titulo']) for o in cat}
+    vistas, out = set(), []
+    for f in json.load(open(PARR, encoding='utf-8'))['funciones']:
+        for x in ([f] + (f.get('obras') or [])):
+            t = re.sub(r'^Cine foro:\s*', '', x.get('titulo') or '')
+            # los bloques («Muestra…», «Panel:…») no son obras y no llevan
+            # afiche de película: se reconocen porque la parrilla no les
+            # imprime ficha (ni director ni año).
+            if not t or not x.get('director') or not x.get('anio'):
+                continue
+            k = norm(t)
+            if k in tengo or k in vistas:
+                continue
+            vistas.add(k)
+            out.append({'titulo': t, 'director': x.get('director'),
+                        'anio': x.get('anio'), 'duracion_min': x.get('duracion_min'),
+                        '_solo_parrilla': 'se proyecta y el festival no le publicó ficha'})
+    return out
 OUT = f'{ST}/jardin-2026-posters.json'
 
 MINIMO = 5000       # menos que esto es un JPEG truncado, no una imagen
@@ -99,7 +136,57 @@ CALIDAD_STILL = 72  # con 100 (el defecto de sips) un still de 896 px pesa 700 K
 
 # OBRAS SIN NINGUNA IMAGEN, y por qué. Una obra sin entrada acá hace fallar el
 # paso: el hueco se declara o se arregla, no se deja pasar.
+# EL CARTEL QUE GUARDA UN ARCHIVO PÚBLICO. Para el cine colombiano hay
+# superficies que ni el festival ni TMDB tienen: la Cinemateca de Bogotá,
+# Retina Latina y Proimágenes conservan el cartel de estreno. Lo destapó Juan
+# (22 sep) con «La casa del trueno», que yo había declarado sin imagen en
+# ninguna fuente conocida: la Cinemateca la tiene, y el archivo se llama
+# literalmente `_cartel_`.
+#
+# Va declarado obra por obra, con la URL de la página que lo publica y su
+# medida comprobada: no es un raspado a ciegas de un sitio ajeno, es una
+# fuente citada. `es_afiche()` lo verifica igual que a cualquier otro.
+CARTEL_DE_ARCHIVO = {
+    'La casa del trueno': (
+        'https://cinematecadebogota.gov.co/sites/default/files/2026-04/'
+        'LA_CASA_DEL_TRUENO_cartel-transformed.png',
+        'Cinemateca de Bogotá, ficha de la película '
+        '(cinematecadebogota.gov.co/node/peliculas/2045). 810×1080, vertical, '
+        'y el nombre del archivo dice «cartel». Comprobado el 22 sep 2026.'),
+}
+
 SIN_IMAGEN_OK = {
+    # LAS QUE SE PROYECTAN Y EL FESTIVAL NUNCA FICHÓ. Entran por la parrilla
+    # —antes ni se intentaban, porque la espina de este paso era el catálogo—,
+    # y para las cuatro se buscó en la web del festival (no tienen página: lo
+    # dice su post-sitemap) y en TMDB con `ficha_tmdb`, que exige que año o
+    # duración cuadren. Ninguna verifica. Queda escrito para que no se vuelvan
+    # a buscar a ciegas.
+    'Cien años de soledad: Eran más de tres mil':
+        'es un EPISODIO de la serie de Netflix (S02E06, dir. Laura Mora), no '
+        'una película: TMDB la tiene como serie y el candado de `ficha_tmdb` '
+        'compara películas por año y duración, así que no verifica. El '
+        'festival no le publicó ficha. Sin afiche hasta decidir si se usa el '
+        'arte de la serie, que es una decisión de Juan.',
+    'Cien años de soledad (SO2E6): Eran más de tres mil':
+        'la misma obra con el rótulo del episodio en el título: la parrilla la '
+        'imprime de las dos formas, el sábado y el viernes. Mismo motivo.',
+    'Una sola golondrina no hace llover':
+        'documental de Caribe Afirmativo (2021, 86 min). Sin página en '
+        'festicinejardin.com —no está en su sitemap— y sin ficha verificable '
+        'en TMDB. No hay imagen que bajar en ninguna fuente conocida.',
+    'Tres Mujeres guerreras':
+        'EXISTE Y NO ESTÁ EN TMDB — candidata a alta. Lo destapó Juan (22 sep): '
+        'IMDb la tiene como «Tres Mujeres Guerreras: 3 Kriegerinnen» (2014), '
+        'tt4402368, porque es coproducción Colombia–Alemania y su otro título '
+        'es alemán. Yo la había buscado solo por el título español. Comprobado '
+        'después: TMDB no la tiene ni por «3 Kriegerinnen», ni por «Drei '
+        'Kriegerinnen», ni por el español, ni por imdb_id. Camino de la casa '
+        'para esto: darla de alta en TMDB (scripts/verificar-antes-de-alta.py '
+        'y docs/PIPELINE Fase 3b), no inventarle un afiche.',
+    'Gustavo, el observador invisible':
+        'estreno de Antena 4 Jardín (25 min). Sin página en la web y sin TMDB: '
+        'es una producción local que estrena en este festival.',
     'Deus ex necro machina': 'el festival no le publicó ficha: su slug '
                              '`deus-ex-necro-machina` REDIRIGE a la página de '
                              '«Primer amor», que es otra obra. Entra al '
@@ -163,6 +250,11 @@ def lb_poster(lb_slug):
 
 def main():
     cat = json.load(open(CAT, encoding='utf-8'))['obras']
+    extra = solo_en_la_parrilla(cat)
+    if extra:
+        print(f'   + {len(extra)} obra(s) que se proyectan sin ficha en la web: '
+              + ', '.join(o['titulo'][:26] for o in extra))
+        cat = cat + extra
     enr = json.load(open(ENR, encoding='utf-8'))['verificadas']
     E = {norm(k): v for k, v in enr.items()}
     os.makedirs(ASSETS, exist_ok=True)
@@ -173,6 +265,14 @@ def main():
         e = E.get(norm(t), {})
         dest = f'{ASSETS}/{slug(t)}.jpg'
         origen = fuente = ''
+        # El cartel de archivo, si esta obra tiene uno declarado. Ojo con el
+        # write-once: `baja()` devuelve True sin pedir nada cuando el archivo
+        # ya está, así que la fuente se marca IGUAL — la primera versión solo
+        # entraba si el archivo no existía y en la segunda corrida la obra
+        # volvía a quedar «sin imagen y sin declarar».
+        _ca = CARTEL_DE_ARCHIVO.get(t)
+        if _ca and baja(_ca[0], dest) and es_afiche(dest):
+            origen, fuente = _ca[1], 'oficial'
         # EL ÁRBOL DE docs/POSTERS.md §2, y cada candidato SE COMPRUEBA en disco
         # antes de aceptarlo: un afiche que no es vertical no es un afiche.
         candidatos = []

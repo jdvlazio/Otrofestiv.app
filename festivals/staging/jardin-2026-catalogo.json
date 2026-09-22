@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "festicinejardin.com — una página por obra, halladas por post-sitemap.xml",
-  "capturado": "2026-09-21",
+  "capturado": "2026-09-22",
   "metodo": "ficha de la web, que trae país, idioma, género, duración, dirección, producción, guion, año y sinopsis. El sitemap fecha cada página al minuto: así se sabe qué entró en esta edición.",
   "alcance": "Las obras publicadas. NO hay parrilla: ni día, ni hora, ni sede. El festival es del 24 al 27 de septiembre.",
   "trampa": "el banner de «programación» de la home enlaza el PDF de 2025; los sitemaps del plugin de agenda están congelados en 2018"
@@ -21,10 +21,7 @@
   "Muestra Central": 15
  },
  "_obras": 37,
- "_solo_en_instagram": [
-  "Elementales",
-  "Deus ex necro machina"
- ],
+ "_solo_en_instagram": [],
  "_grafia": [
   "«Jiru iuiai “Algo malo”»: la web la escribe con i latina y el catálogo leído de la lámina de Instagram tenía «luiai» con ele. Manda la web, que la escribe el festival a máquina; la lámina se leyó a ojo."
  ],
@@ -618,25 +615,34 @@
   },
   {
    "titulo": "Elementales",
+   "_slug": "elementales",
+   "_src": "https://festicinejardin.com/elementales/",
+   "duracion": "8:28",
    "director": "Camilo Botero Jaramillo",
+   "produccion": "Camilo Botero Jaramillo",
+   "guion": "Carol Ann Figueroa Rueda",
+   "anio": 2025,
+   "duracion_min": 8,
    "seccion": "CALEIDOSCOPIO",
    "categoria": "Documental",
-   "_src": {
-    "url": "https://www.instagram.com/festicinejardin/p/DcytNbdlgrv/",
-    "date": "2026-09-02"
-   },
-   "_solo_ig": "anunciada en Instagram; sin ficha en la web el 16 sep"
+   "sinopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
+   "imagen": "https://festicinejardin.com/wp-content/uploads/2026/09/Elementales.jpg",
+   "_publicado": "2026-09-21"
   },
   {
    "titulo": "Deus ex necro machina",
+   "_slug": "deus-ex-necro-machina",
+   "_src": "https://festicinejardin.com/deus-ex-necro-machina/",
+   "duracion": "6:08",
    "director": "Mateo M. Correa",
+   "produccion": "Mateo M. Correa",
+   "anio": 2026,
+   "duracion_min": 6,
    "seccion": "CALEIDOSCOPIO",
    "categoria": "Experimental",
-   "_src": {
-    "url": "https://www.instagram.com/festicinejardin/p/DczQXk6Ft3W/",
-    "date": "2026-09-04"
-   },
-   "_solo_ig": "anunciada en Instagram; sin ficha en la web el 16 sep"
+   "sinopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa.",
+   "imagen": "https://festicinejardin.com/wp-content/uploads/2026/09/Deus-necro-machina.jpg",
+   "_publicado": "2026-09-21"
   }
  ]
 }
