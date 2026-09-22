@@ -50,6 +50,7 @@ Esc.  festivals/staging/jardin-2026-posters.json
 import collections
 import json
 import os
+import shutil
 import re
 import subprocess
 import sys
@@ -146,7 +147,36 @@ CALIDAD_STILL = 72  # con 100 (el defecto de sips) un still de 896 px pesa 700 K
 # Va declarado obra por obra, con la URL de la página que lo publica y su
 # medida comprobada: no es un raspado a ciegas de un sitio ajeno, es una
 # fuente citada. `es_afiche()` lo verifica igual que a cualquier otro.
+# …Y EL QUE PUBLICA LA PRODUCTORA. El festival no publica afiches, pero cada
+# película sí: @eskala_films publicó el de «La creciente» —la que ABRE el
+# festival— diciendo «Este es el póster oficial». Lo encontró Juan (22 sep).
+#
+# La URL del CDN de Instagram va FIRMADA y caduca en horas, así que no sirve
+# como fuente durable: el archivo se guarda en `fuentes/` —donde ya viven las
+# láminas y el HTML de las fichas— y lo que se declara es el POST, que es lo
+# que se puede volver a mirar. Una ruta que empieza por `fuentes/` se lee del
+# disco; lo demás se baja.
 CARTEL_DE_ARCHIVO = {
+    'Cien años de soledad: Eran más de tres mil': (
+        'https://image.tmdb.org/t/p/w780/j5Hi5tm1SokRCiVs1coAjCO1ZI6.jpg',
+        'TMDB, póster de la PARTE 2 de la serie (tv/207333, temporada 2, '
+        'estreno 5 ago 2026). El festival proyecta su episodio 6, «Eran más de '
+        'tres mil», dirigido por Laura Mora. `ficha_tmdb` no la encontraba '
+        'porque su candado compara PELÍCULAS por año y duración y esto es una '
+        'serie; el arte de la temporada es lo que identifica lo que se '
+        'proyecta. Lo señaló Juan (22 sep). Es UNA obra: la parrilla la imprime '
+        'con el rótulo del episodio el sábado y sin él el viernes, y el título '
+        'se normaliza para que no salgan dos.'),
+    'Cien años de soledad (SO2E6): Eran más de tres mil': (
+        'https://image.tmdb.org/t/p/w780/j5Hi5tm1SokRCiVs1coAjCO1ZI6.jpg',
+        'la misma obra con el rótulo del episodio en el título: la parrilla la '
+        'imprime de las dos formas, el viernes y el sábado.'),
+    'La creciente': (
+        'fuentes/jardin-2026/afiches/la-creciente.jpg',
+        'Instagram @eskala_films, la productora '
+        '(instagram.com/p/DdfVFWAPoUK/): «Este es el póster oficial de La '
+        'Creciente». 1080×1440, con título, lema y créditos completos. '
+        'Guardado el 22 sep 2026 porque el enlace del CDN caduca.'),
     'La casa del trueno': (
         'https://cinematecadebogota.gov.co/sites/default/files/2026-04/'
         'LA_CASA_DEL_TRUENO_cartel-transformed.png',
@@ -162,15 +192,6 @@ SIN_IMAGEN_OK = {
     # dice su post-sitemap) y en TMDB con `ficha_tmdb`, que exige que año o
     # duración cuadren. Ninguna verifica. Queda escrito para que no se vuelvan
     # a buscar a ciegas.
-    'Cien años de soledad: Eran más de tres mil':
-        'es un EPISODIO de la serie de Netflix (S02E06, dir. Laura Mora), no '
-        'una película: TMDB la tiene como serie y el candado de `ficha_tmdb` '
-        'compara películas por año y duración, así que no verifica. El '
-        'festival no le publicó ficha. Sin afiche hasta decidir si se usa el '
-        'arte de la serie, que es una decisión de Juan.',
-    'Cien años de soledad (SO2E6): Eran más de tres mil':
-        'la misma obra con el rótulo del episodio en el título: la parrilla la '
-        'imprime de las dos formas, el sábado y el viernes. Mismo motivo.',
     'Una sola golondrina no hace llover':
         'documental de Caribe Afirmativo (2021, 86 min). Sin página en '
         'festicinejardin.com —no está en su sitemap— y sin ficha verificable '
@@ -271,6 +292,10 @@ def main():
         # entraba si el archivo no existía y en la segunda corrida la obra
         # volvía a quedar «sin imagen y sin declarar».
         _ca = CARTEL_DE_ARCHIVO.get(t)
+        if _ca and _ca[0].startswith('fuentes/'):
+            _loc = f'{REPO}/{_ca[0]}'
+            if os.path.exists(_loc) and not os.path.exists(dest):
+                shutil.copy(_loc, dest)
         if _ca and baja(_ca[0], dest) and es_afiche(dest):
             origen, fuente = _ca[1], 'oficial'
         # EL ÁRBOL DE docs/POSTERS.md §2, y cada candidato SE COMPRUEBA en disco

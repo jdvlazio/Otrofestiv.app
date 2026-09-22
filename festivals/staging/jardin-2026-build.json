@@ -172,7 +172,7 @@
    "synopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
-   "posterSource": "editorial",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -427,7 +427,7 @@
    "synopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
-   "posterSource": "editorial",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -721,6 +721,8 @@
    "day_order": 1,
    "venue": "Coliseo Municipal - Jardín",
    "has_qa": false,
+   "poster": "/assets/jardin-2026/cien-anos-de-soledad-eran-mas-de-tres-mil.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1117,7 +1119,7 @@
    "synopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
-   "posterSource": "editorial",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1460,7 +1462,7 @@
    "is_free": true
   },
   {
-   "title": "Cien años de soledad (SO2E6): Eran más de tres mil",
+   "title": "Cien años de soledad: Eran más de tres mil",
    "type": "film",
    "section": "🎬 Muestra Central",
    "director": "Laura Mora",
@@ -1474,6 +1476,8 @@
    "day_order": 2,
    "venue": "Teatro Municipal de Jardín - Jardín",
    "has_qa": false,
+   "poster": "/assets/jardin-2026/cien-anos-de-soledad-eran-mas-de-tres-mil.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1915,7 +1919,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-22T06:01:09",
+  "fecha": "2026-09-22T06:19:30",
   "plan_sha": "4977a7663617bd88",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"

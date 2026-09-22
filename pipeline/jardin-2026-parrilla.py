@@ -358,6 +358,13 @@ def ficha(f):
     t0 = titulo[0]
     for x in titulo[1:]:
         t0 = t0[:-1] + x if t0.endswith('-') else t0 + ' ' + x
+    # UNA OBRA, UN TÍTULO. La parrilla imprime el episodio de «Cien años de
+    # soledad» con el rótulo de temporada el sábado —«(SO2E6)»— y sin él el
+    # viernes, y eso la partía en DOS obras: dos fichas, dos afiches iguales y
+    # el guardián [posters-duplicados] marcándolo como dato corrupto, que es
+    # exactamente lo que era. El rótulo del episodio no es parte del nombre.
+    t0 = re.sub(r'\s*\(S[O0]?\d+E\d+\)\s*', ' ', t0)
+    t0 = re.sub(r'\s+([:;,.])', r'\1', re.sub(r'\s{2,}', ' ', t0)).strip()
     d['titulo'] = t0
     resto = ls
     for x in resto:
