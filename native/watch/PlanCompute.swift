@@ -55,6 +55,34 @@ enum PlanCompute {
         return s <= now && now < e
     }
 
+    // ── Progreso en vivo (21 sep 2026) — dueño único del «cuánto falta» ───────
+    // Mismo fin que el teléfono: inicio + duración de la obra, sin Q&A y (por
+    // ahora) sin retrasos reportados. Fracción en [0,1]; nil si no está en curso.
+    static func progress(_ item: ScheduleItem, now: Date) -> Double? {
+        guard isLive(item, now: now), let s = startDate(item), let e = endDate(item) else { return nil }
+        let total = e.timeIntervalSince(s); guard total > 0 else { return nil }
+        return min(1, max(0, now.timeIntervalSince(s) / total))
+    }
+    // Minutos que faltan, redondeados hacia ARRIBA: a las 16:30:20 de una función
+    // que termina 16:31 todavía «falta 1 min», no 0. nil si no está en curso.
+    static func minutesLeft(_ item: ScheduleItem, now: Date) -> Int? {
+        guard isLive(item, now: now), let e = endDate(item) else { return nil }
+        return Int(ceil(e.timeIntervalSince(now) / 60))
+    }
+    // «16:31» — la hora de salida en la zona del festival, mismo formato que item.time.
+    static func endTimeLabel(_ item: ScheduleItem) -> String? {
+        guard let e = endDate(item) else { return nil }
+        var cal = Calendar(identifier: .gregorian); cal.timeZone = tz
+        let c = cal.dateComponents([.hour, .minute], from: e)
+        guard let h = c.hour, let m = c.minute else { return nil }
+        return String(format: "%02d:%02d", h, m)
+    }
+    // La función en curso a esta hora (o nil). Distinta de nextUpcoming: no cae a
+    // la siguiente. La complication necesita las dos por separado.
+    static func current(_ items: [ScheduleItem], now: Date) -> ScheduleItem? {
+        sortedByStart(items).first { isLive($0, now: now) }
+    }
+
     // ── Agrupación por día (páginas de Mi Plan) ───────────────────────────────
     static func groupedByDay(_ items: [ScheduleItem]) -> [DaySection] {
         var order: [String] = []
