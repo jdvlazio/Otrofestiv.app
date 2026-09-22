@@ -278,12 +278,28 @@
     "date": "2026-09-21"
    },
    "seccion": "Muestra Central",
+   "is_cortos": true,
    "duracion_min": 85,
-   "director": "Leo Rua",
-   "pais": "Colombia",
-   "anio": 2026,
-   "genero": "documental",
-   "_sin_ficha_en_la_web": true
+   "film_list": [
+    {
+     "titulo": "Tres Mujeres guerreras",
+     "director": "Alexander Preuss, Cletus Gregor Barié",
+     "duracion_min": 55,
+     "pais": "Colombia, Alemania",
+     "anio": 2014,
+     "genero": "documental",
+     "_sin_ficha_en_la_web": true
+    },
+    {
+     "titulo": "Ubuntu: La métrica de los afectos",
+     "director": "Leo Rua",
+     "duracion_min": 30,
+     "pais": "Colombia",
+     "idioma": "No publicado oficialmente",
+     "genero": "Documental",
+     "anio": 2026
+    }
+   ]
   },
   {
    "titulo": "Presentación del libro: Morir es un país que amabas: Poesía y memoria por nuestros líderes",
@@ -1114,12 +1130,28 @@
     "date": "2026-09-21"
    },
    "seccion": "Muestra Central",
+   "is_cortos": true,
    "duracion_min": 85,
-   "director": "Leo Rua",
-   "pais": "Colombia",
-   "anio": 2026,
-   "genero": "documental",
-   "_sin_ficha_en_la_web": true
+   "film_list": [
+    {
+     "titulo": "Tres Mujeres guerreras",
+     "director": "Alexander Preuss, Cletus Gregor Barié",
+     "duracion_min": 55,
+     "pais": "Colombia, Alemania",
+     "anio": 2014,
+     "genero": "documental",
+     "_sin_ficha_en_la_web": true
+    },
+    {
+     "titulo": "Ubuntu: La métrica de los afectos",
+     "director": "Leo Rua",
+     "duracion_min": 30,
+     "pais": "Colombia",
+     "idioma": "No publicado oficialmente",
+     "genero": "Documental",
+     "anio": 2026
+    }
+   ]
   },
   {
    "titulo": "Panel: Liderazgo y educación",
@@ -1360,11 +1392,10 @@
  ],
  "_sin_funcion": {
   "Muestra Central": {
-   "n": 2,
+   "n": 1,
    "_por_que": "con la parrilla completa del 21 sep quedan DOS obras fichadas en la web que no aparecen en ninguna lámina: «Nuestra tierra» (Lucrecia Martel) —que el propio festival anunció en el post de Muestra Central Parte I— y «Ubuntu: La métrica de los afectos». No es que no tengan día: es que la programación publicada no las incluye. Preguntado al festival.",
    "obras": [
-    "Nuestra tierra",
-    "Ubuntu: La métrica de los afectos"
+    "Nuestra tierra"
    ]
   }
  },

@@ -167,6 +167,36 @@ def main():
         # UN BLOQUE DE CALEIDOSCOPIO ES UN PROGRAMA. La lámina lista sus cortos
         # con director y metraje, y cada uno tiene ficha en el catálogo: se
         # publica como programa con su lista, no como una función opaca.
+        # UNA CASILLA DE DOS PELÍCULAS es un programa: dos obras en una
+        # sesión, con un solo conversatorio. La primera («Tres Mujeres
+        # guerreras») no tiene ficha en la web y la segunda («Ubuntu») sí; cada
+        # una toma la mejor fuente. Sin esto, el crudo publicaba solo la
+        # primera y «Ubuntu» se caía —lo vio Juan—.
+        if f.get('obras') and len(f['obras']) > 1:
+            reg['seccion'] = 'Muestra Central'
+            reg['is_cortos'] = True
+            reg['duracion_min'] = f['duracion_min']
+            reg['film_list'] = []
+            for ob in f['obras']:
+                w2 = web.get(norm(ob['titulo']))
+                it = {'titulo': (w2 or ob)['titulo'],
+                      'director': (w2 or {}).get('director') or ob.get('director'),
+                      'duracion_min': (w2 or {}).get('duracion_min') or ob.get('duracion_min')}
+                if w2:
+                    for orig, dest in DE_LA_WEB.items():
+                        if w2.get(orig):
+                            it[dest] = w2[orig]
+                    it.update(genero_de(w2)); it.update(poster_de(w2, pos))
+                    usadas.add(norm(ob['titulo']))
+                else:
+                    for c in ('pais', 'anio', 'genero'):
+                        if ob.get(c):
+                            it[c if c != 'genero' else 'genero'] = ob[c]
+                    it['_sin_ficha_en_la_web'] = True
+                reg['film_list'].append(it)
+            funciones.append(reg)
+            continue
+
         if f.get('cortos'):
             reg['seccion'] = 'CALEIDOSCOPIO'
             reg['is_cortos'] = True

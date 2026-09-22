@@ -467,12 +467,9 @@
    "title": "Tres Mujeres guerreras",
    "type": "film",
    "section": "🎬 Muestra Central",
-   "director": "Leo Rua",
-   "year": 2026,
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "30 min",
-   "genre": "documental",
+   "country": "Colombia, Alemania",
+   "flags": "🇨🇴🇩🇪",
+   "duration": "85 min",
    "day": "2026-09-25",
    "time": "19:00",
    "day_order": 1,
@@ -482,6 +479,27 @@
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
    },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Tres Mujeres guerreras",
+     "director": "Alexander Preuss, Cletus Gregor Barié",
+     "country": "Colombia, Alemania",
+     "flags": "🇨🇴🇩🇪",
+     "year": 2014,
+     "duration": "55 min",
+     "genre": "documental"
+    },
+    {
+     "title": "Ubuntu: La métrica de los afectos",
+     "director": "Leo Rua",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "30 min",
+     "genre": "Documental"
+    }
+   ],
    "is_free": true
   },
   {
@@ -1525,12 +1543,9 @@
    "title": "Tres Mujeres guerreras",
    "type": "film",
    "section": "🎬 Muestra Central",
-   "director": "Leo Rua",
-   "year": 2026,
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "30 min",
-   "genre": "documental",
+   "country": "Colombia, Alemania",
+   "flags": "🇨🇴🇩🇪",
+   "duration": "85 min",
    "day": "2026-09-27",
    "time": "10:00",
    "day_order": 3,
@@ -1540,6 +1555,27 @@
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
    },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Tres Mujeres guerreras",
+     "director": "Alexander Preuss, Cletus Gregor Barié",
+     "country": "Colombia, Alemania",
+     "flags": "🇨🇴🇩🇪",
+     "year": 2014,
+     "duration": "55 min",
+     "genre": "documental"
+    },
+    {
+     "title": "Ubuntu: La métrica de los afectos",
+     "director": "Leo Rua",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "30 min",
+     "genre": "Documental"
+    }
+   ],
    "is_free": true
   },
   {
@@ -1805,7 +1841,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-21T19:39:15",
+  "fecha": "2026-09-21T19:52:32",
   "plan_sha": "4977a7663617bd88",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"
