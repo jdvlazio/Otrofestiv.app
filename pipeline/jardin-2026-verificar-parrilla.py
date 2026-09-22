@@ -44,6 +44,42 @@ ST = f'{REPO}/festivals/staging'
 DOBLE = f'{REPO}/fuentes/ig/{P.POST}-x2'
 
 
+# QUIÉN MANDA CUANDO LAS DOS FUENTES DISCREPAN. La regla, y no se decide obra
+# por obra: la FICHA DE LA WEB manda para los datos de la OBRA —año, director,
+# duración—, porque es la ficha completa y la parrilla es un resumen que además
+# trunca (imprime «Pablo Andrés Muñoz» donde la ficha dice «Pablo Andrés Muñoz
+# Castrillón»). La PARRILLA manda para día, hora y sede, que es lo único que
+# la web no publica.
+#
+# Las diferencias que quedan abajo están EXPLICADAS: dejan de ser un fallo
+# porque se sabe por qué existen, no porque se hayan silenciado. Cualquier otra
+# pone el verificador en rojo.
+EXPLICADAS = {
+    ('alma provinciana', 'duracion'):
+        'LA PARRILLA GANA ACÁ, y lo dice la propia ficha del festival: «111 '
+        'minutos en la ficha de Proimágenes y la Fundación Patrimonio Fílmico. '
+        'Algunas versiones restauradas/catálogos consignan otras duraciones, '
+        'debido a la velocidad de proyección de las copias». Es una película '
+        'SILENTE de 1926: a 16 fotogramas por segundo dura 111 y a 19 dura 93. '
+        'La parrilla anuncia la copia que se va a proyectar, y lo que el '
+        'planificador necesita es cuánto ocupa la sala. Se publica 93.',
+    ('cuando las aguas se juntan', 'anio'):
+        'la ficha dice «Año: 2023» sin ambigüedad y la parrilla imprime 1923: '
+        'errata del impreso en un dígito. Se publica 2023.',
+    ('la marcha del hambre', 'duracion'):
+        'LA PARRILLA GANA, y otra vez lo dice la propia ficha: «Duración: 92 '
+        'min. según Proimágenes / 94 min. según OjoAgua». OjoAgua Cine es LA '
+        'PRODUCTORA de la película, así que los 94 de la parrilla son la cifra '
+        'de quien la hizo y los 92 los del registro. Se publica 94.',
+    ('la creciente', 'director'):
+        'la parrilla trunca el apellido; la ficha dice «Pablo Andrés Muñoz '
+        'Castrillón». Manda la ficha.',
+    ('cuando las montanas tiemblan', 'director'):
+        'son los mismos dos nombres con distinto separador («,» contra «y»). '
+        'Manda la ficha.',
+}
+
+
 def norm(s):
     s = unicodedata.normalize('NFD', str(s or '').lower())
     s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
@@ -112,23 +148,30 @@ def main():
     # C · contra el catálogo de la web
     cat = json.load(open(f'{ST}/jardin-2026-catalogo.json', encoding='utf-8'))['obras']
     por_tit = {norm(o['titulo']): o for o in cat}
-    cruzadas, choques = 0, []
+    cruzadas, choques, explicadas = 0, [], []
     for f in A:
         o = por_tit.get(norm(f.get('titulo')))
         if not o:
             continue
         cruzadas += 1
+        k = re.sub(r'[^a-z ]', '', unicodedata.normalize('NFD', f['titulo'].lower())
+                   .encode('ascii', 'ignore').decode()).strip()
+        def anota(campo, texto):
+            if (k, campo) in EXPLICADAS:
+                explicadas.append(f'{texto} — {EXPLICADAS[(k, campo)][:96]}…')
+            else:
+                choques.append(texto)
         if f.get('duracion_min') and o.get('duracion_min') \
                 and abs(f['duracion_min'] - o['duracion_min']) > 1:
-            choques.append(f'«{f["titulo"][:26]}» dura {f["duracion_min"]} en la '
-                           f'parrilla y {o["duracion_min"]} en la web')
+            anota('duracion', f'«{f["titulo"][:26]}» dura {f["duracion_min"]} en la '
+                              f'parrilla y {o["duracion_min"]} en la web')
         if f.get('director') and o.get('director') \
                 and norm(f['director']) != norm(o['director']):
-            choques.append(f'«{f["titulo"][:26]}»: dir. {f["director"][:22]} en la '
-                           f'parrilla y {o["director"][:22]} en la web')
+            anota('director', f'«{f["titulo"][:26]}»: dir. {f["director"][:22]} en la '
+                              f'parrilla y {o["director"][:22]} en la web')
         if f.get('anio') and o.get('anio') and f['anio'] != o['anio']:
-            choques.append(f'«{f["titulo"][:26]}»: año {f["anio"]} en la parrilla '
-                           f'y {o["anio"]} en la web')
+            anota('anio', f'«{f["titulo"][:26]}»: año {f["anio"]} en la parrilla '
+                          f'y {o["anio"]} en la web')
     print(f'C · contra el catálogo web: {cruzadas} de {len(A)} funciones cruzan '
           f'con una de las {len(cat)} fichas')
     fallos += choques
@@ -152,6 +195,8 @@ def main():
             orden.append(f'{lam}: las horas no van en orden ({" ".join(hs)})')
     fallos += orden
 
+    for x in sorted(set(explicadas)):
+        print(f'   · diferencia EXPLICADA: {x}')
     fallos = sorted(set(fallos))      # una obra que se proyecta 3 veces choca 3 veces
     if fallos:
         for x in fallos:
