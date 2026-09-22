@@ -344,6 +344,38 @@ def ficha(f):
             d['anio'] = int(m.group(2))
             d['duracion_min'] = int(m.group(3))
             d['genero'] = m.group(4).strip()
+    # UNA CASILLA PUEDE LLEVAR DOS PELÍCULAS. El viernes a las 19:00 en la
+    # Escuela Jahel van «Tres Mujeres guerreras» (55 min) y «Ubuntu: La métrica
+    # de los afectos» (30 min), una debajo de otra con su Dir. y su ficha; el
+    # domingo se repiten. Quedándome con el primer título, «Ubuntu» desaparecía
+    # del festival — lo vio Juan, no yo—. El propio festival lo dice en plural:
+    # «Conversatorio con el equipo de LAS PELÍCULAS».
+    #
+    # Se cuenta cuántas fichas completas hay: cada «País, año, NN min, género»
+    # cierra una obra. Con dos o más, la casilla es un PROGRAMA.
+    fichas = [i for i, x in enumerate(resto) if RE_FICHA.match(x)]
+    if len(fichas) > 1:
+        obras, ini = [], -1
+        for j in fichas:
+            bloque = resto[ini + 1:j + 1]
+            tit = [x for x in bloque if not x.startswith('Dir.') and not RE_FICHA.match(x)]
+            m = RE_FICHA.match(resto[j])
+            dirs = [x[4:].strip(' .') for x in bloque if x.startswith('Dir.')]
+            obras.append({'titulo': (tit[0] if tit else d['titulo']).strip(),
+                          **({'director': dirs[0]} if dirs else {}),
+                          'pais': m.group(1).strip(), 'anio': int(m.group(2)),
+                          'duracion_min': int(m.group(3)), 'genero': m.group(4).strip()})
+            ini = j
+        # la primera obra es la que da nombre a la casilla y su título ya se
+        # consumió arriba, así que se le devuelve
+        obras[0]['titulo'] = d['titulo']
+        d['obras'] = obras
+        d['duracion_min'] = sum(o['duracion_min'] for o in obras)
+        cola = resto[fichas[-1] + 1:]
+        if cola:
+            d['_extra'] = ' '.join(cola)
+        return d
+
     if d.get('rotulo') == 'CALEIDOSCOPIO':
         cortos = cortos_de(resto)
         if cortos:

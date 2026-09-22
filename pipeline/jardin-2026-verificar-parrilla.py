@@ -132,6 +132,16 @@ def clave(f):
     return (f['dia'], f['hora'], clave_titulo(f['sede']), clave_titulo(f.get('titulo')))
 
 
+def titulos(fs):
+    """Todo título que la lectura produce, al nivel que sea."""
+    out = set()
+    for f in fs:
+        out.add(clave_titulo(f.get('titulo')))
+        for it in (f.get('cortos') or []) + (f.get('obras') or []):
+            out.add(clave_titulo(it.get('titulo')))
+    return out - {''}
+
+
 def main():
     A = json.load(open(f'{ST}/jardin-2026-parrilla.json', encoding='utf-8'))['funciones']
     print(f'A · OCR nativo: {len(A)} funciones')
@@ -148,6 +158,36 @@ def main():
             fallos.append(f'solo en la lectura AL DOBLE: {k[0]} {k[1]} {k[2][:20]} «{k[3][:26]}»')
     else:
         print(f'   ✓ las dos lecturas coinciden en las {len(ka)} funciones')
+
+    # D · LA EVIDENCIA CRUDA CONTRA LO PARSEADO, que es la única lectura de
+    #     verdad independiente. A y B pasan por el MISMO parser: si el parser
+    #     tira una película, las dos la tiran igual y coinciden — «las tres
+    #     lecturas dicen lo mismo» mientras «Ubuntu: La métrica de los afectos»
+    #     no existía en el festival. Lo vio Juan, no este archivo.
+    #
+    #     Acá se cuenta la evidencia que el OCR deja sin pasar por el parser:
+    #     cada línea «País, año, NN min, género» es UNA obra proyectada, la
+    #     imprima el festival sola en su casilla o debajo de otra. Si el parser
+    #     produce menos obras que fichas hay en las láminas, se perdió algo.
+    crudo = P.ocr(sorted(f'{P.LAMINAS}/{n}' for n in os.listdir(P.LAMINAS)
+                         if n.endswith('.jpg')))
+    fichas_ocr = 0
+    for k, ls in crudo.items():
+        if any(c['t'].strip() == 'TALLERES' for c in ls if c['y'] < 0.075):
+            continue
+        if not P.dia_de(ls):
+            continue
+        fichas_ocr += sum(1 for c in ls
+                          if c['x'] >= P.COL_FICHA and P.RE_FICHA.match(c['t'].strip()))
+    obras_parseadas = sum(
+        1 for f in A
+        for _ in (f.get('obras') or [None]) if f.get('obras') or f.get('anio'))
+    print(f'D · fichas «País, año, min, género» en el OCR: {fichas_ocr} · '
+          f'obras con ficha en lo parseado: {obras_parseadas}')
+    if obras_parseadas < fichas_ocr:
+        fallos.append(f'el OCR ve {fichas_ocr} fichas de obra en las láminas y el '
+                      f'parser produce {obras_parseadas}: se perdieron '
+                      f'{fichas_ocr - obras_parseadas}')
 
     # C · contra el catálogo de la web
     cat = json.load(open(f'{ST}/jardin-2026-catalogo.json', encoding='utf-8'))['obras']
@@ -178,6 +218,28 @@ def main():
                           f'y {o["anio"]} en la web')
     print(f'C · contra el catálogo web: {cruzadas} de {len(A)} funciones cruzan '
           f'con una de las {len(cat)} fichas')
+    # …Y EN EL OTRO SENTIDO, que es el que faltaba: toda obra del catálogo
+    # tiene que aparecer en alguna función —suelta, dentro de un programa de
+    # Caleidoscopio o dentro de una casilla de dos películas— o estar declarada
+    # en el crudo como sin función. Sin esta mitad, «Ubuntu» se cayó del
+    # festival y el verificador imprimió un ✓.
+    # El denominador se compara contra lo que SE PUBLICA, no contra la parrilla
+    # cruda: el crudo le quita el prefijo a «Cine foro: Volver» —un cine foro es
+    # una proyección— y con la parrilla a secas «Volver» salía como perdida.
+    vistos, declaradas = titulos(A), set()
+    _cr = f'{ST}/jardin-2026-crudo.json'
+    if os.path.exists(_cr):
+        _c = json.load(open(_cr, encoding='utf-8'))
+        vistos |= titulos(_c['funciones'])
+        vistos |= {clave_titulo(it.get('titulo'))
+                   for f in _c['funciones'] for it in (f.get('film_list') or [])}
+        declaradas = {clave_titulo(t) for v in (_c.get('_sin_funcion') or {}).values()
+                      for t in v['obras']}
+    perdidas = [o['titulo'] for o in cat
+                if clave_titulo(o['titulo']) not in vistos | declaradas]
+    if perdidas:
+        fallos.append('obra(s) del catálogo que no aparecen en ninguna función ni '
+                      'están declaradas: ' + ', '.join(f'«{t}»' for t in perdidas[:6]))
     fallos += choques
 
     # EL AÑO LO ARBITRA LA WEB, NO MI CORAZONADA. La primera versión marcaba

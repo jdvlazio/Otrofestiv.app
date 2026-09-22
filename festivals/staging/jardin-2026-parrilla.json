@@ -164,9 +164,27 @@
    "director": "Leo Rua",
    "pais": "Colombia",
    "anio": 2026,
-   "duracion_min": 30,
+   "duracion_min": 85,
    "genero": "documental",
-   "_extra": "Ubuntu: La métrica de los afectos Conversatorio con el equipo de las peliculas",
+   "obras": [
+    {
+     "titulo": "Tres Mujeres guerreras",
+     "director": "Alexander Preuss, Cletus Gregor Barié",
+     "pais": "Colombia, Alemania",
+     "anio": 2014,
+     "duracion_min": 55,
+     "genero": "documental"
+    },
+    {
+     "titulo": "Ubuntu: La métrica de los afectos",
+     "director": "Leo Rua",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 30,
+     "genero": "documental"
+    }
+   ],
+   "_extra": "Conversatorio con el equipo de las peliculas",
    "_lamina": "04.jpg"
   },
   {
@@ -648,9 +666,27 @@
    "director": "Leo Rua",
    "pais": "Colombia",
    "anio": 2026,
-   "duracion_min": 30,
+   "duracion_min": 85,
    "genero": "documental",
-   "_extra": "Ubuntu: La métrica de los afectos Conversatorio con el equipo de las películas",
+   "obras": [
+    {
+     "titulo": "Tres Mujeres guerreras",
+     "director": "Alexander Preuss, Cletus Gregor Barié",
+     "pais": "Colombia, Alemania",
+     "anio": 2014,
+     "duracion_min": 55,
+     "genero": "documental"
+    },
+    {
+     "titulo": "Ubuntu: La métrica de los afectos",
+     "director": "Leo Rua",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 30,
+     "genero": "documental"
+    }
+   ],
+   "_extra": "Conversatorio con el equipo de las películas",
    "_lamina": "10.jpg"
   },
   {
