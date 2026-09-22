@@ -28,7 +28,9 @@ struct ProgramView: View {
     @ViewBuilder private func pages(_ c: Catalog) -> some View {
         TimelineView(.everyMinute) { ctx in
             let days = PlanCompute.programDays(c.dayKeys, now: ctx.date)
-            NavigationStack {
+            // Sin NavigationStack propio: se empuja DENTRO de la pila de Mi Plan, que
+            // ya registra el destino de la ficha. Anidar pilas rompe el volver atrás.
+            Group {
                 TabView {
                     // Hoy: el día en curso, o el vacío «Empieza el…», o (terminado) el último día
                     if let today = days.today {
@@ -45,7 +47,6 @@ struct ProgramView: View {
                 }
                 .tabViewStyle(.page)
                 .tint(OT.amber)
-                .navigationDestination(for: ScheduleItem.self) { FilmDetail(item: $0) }
             }
         }
     }
