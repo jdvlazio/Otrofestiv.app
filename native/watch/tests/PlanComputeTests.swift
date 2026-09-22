@@ -56,6 +56,49 @@ enum PlanComputeTests {
         check("current sin en curso → nil", PlanCompute.current([later, bp], now: bpStart.addingTimeInterval(125 * 60)) == nil)
         check("nextUpcoming sigue prefiriendo la en curso", PlanCompute.nextUpcoming([later, bp], now: t1608)?.title == "Bedford Park")
 
+        // ── Zona del festival (22 sep 2026) ───────────────────────────────────
+        check("offsetSeconds -04:00", PlanCompute.offsetSeconds("-04:00") == -4 * 3600)
+        check("offsetSeconds +05:30", PlanCompute.offsetSeconds("+05:30") == 5 * 3600 + 30 * 60)
+        check("offsetSeconds basura → nil", PlanCompute.offsetSeconds("Toronto") == nil && PlanCompute.offsetSeconds(nil) == nil && PlanCompute.offsetSeconds("-4:00") == nil)
+        let tzBefore = PlanCompute.tz
+        check("setTimeZone fija Toronto", PlanCompute.setTimeZone(offset: "-04:00") && PlanCompute.tz.secondsFromGMT() == -4 * 3600)
+        // Bedford Park 14:30 en Toronto = 13:30 Bogotá: con la zona bien, a las 15:31 Toronto YA terminó
+        let bpTor = item("Bedford Park", "2026-09-12", "14:30", duration: "61 min")
+        var utc = Calendar(identifier: .gregorian); utc.timeZone = TimeZone(identifier: "UTC")!
+        let t1531Toronto = utc.date(from: DateComponents(year: 2026, month: 9, day: 12, hour: 19, minute: 31))!  // 15:31 -04:00
+        check("con zona Toronto, 15:31 ya no está en curso", !PlanCompute.isLive(bpTor, now: t1531Toronto))
+        check("setTimeZone inválido no toca la zona", !PlanCompute.setTimeZone(offset: "??") && PlanCompute.tz.secondsFromGMT() == -4 * 3600)
+        PlanCompute.tz = tzBefore
+        check("con Bogotá (fallback), a esa misma hora sigue en curso", PlanCompute.isLive(bpTor, now: t1531Toronto))
+
+        // ── Programa: archivo, Hoy/Mañana, desde ahora, por hora, en tu Plan ──
+        check("catalogFile tiff2026 → tiff-2026.json", PlanCompute.catalogFile(for: "tiff2026") == "tiff-2026.json")
+        check("catalogFile ficci65 → ficci-65.json", PlanCompute.catalogFile(for: "ficci65") == "ficci-65.json")
+        let keys = ["2026-09-10", "2026-09-11", "2026-09-12", "2026-09-13"]
+        let sat = PlanCompute.startDate(item("X", "2026-09-12", "16:08"))!
+        let pd = PlanCompute.programDays(keys, now: sat)
+        check("programDays en curso: hoy sáb, mañana dom", pd.today == "2026-09-12" && pd.tomorrow == "2026-09-13" && pd.startsOn == nil)
+        let last = PlanCompute.programDays(keys, now: PlanCompute.startDate(item("X", "2026-09-13", "10:00"))!)
+        check("último día: sin Mañana", last.today == "2026-09-13" && last.tomorrow == nil)
+        let before = PlanCompute.programDays(keys, now: PlanCompute.startDate(item("X", "2026-09-07", "10:00"))!)
+        check("antes del festival: Hoy vacío, empieza el 10, Mañana = primer día", before.today == nil && before.startsOn == "2026-09-10" && before.tomorrow == "2026-09-10")
+        let after = PlanCompute.programDays(keys, now: PlanCompute.startDate(item("X", "2026-09-21", "10:00"))!)
+        check("terminado: nada", after.ended && after.startsOn == nil)
+        check("programDays desordenados no importan", PlanCompute.programDays(keys.reversed(), now: sat) == pd)
+        let cat = [item("A", "2026-09-12", "11:30", duration: "90 min"), item("B", "2026-09-12", "16:00", duration: "70 min"),
+                   item("C", "2026-09-12", "16:15", duration: "70 min"), item("D", "2026-09-12", "17:15"), item("E", "2026-09-13", "08:15")]
+        let hoy = PlanCompute.program(cat, day: "2026-09-12", now: sat).map { $0.title }
+        check("Hoy desde la próxima: B (16:00, gracia 10 min) sigue; A no", hoy == ["B", "C", "D"])
+        let hoyTarde = PlanCompute.program(cat, day: "2026-09-12", now: sat.addingTimeInterval(3 * 60)).map { $0.title }
+        check("a las 16:11, B ya pasó su gracia", hoyTarde == ["C", "D"])
+        check("otro día: completo, sin filtro", PlanCompute.program(cat, day: "2026-09-13", now: nil).map { $0.title } == ["E"])
+        let hours = PlanCompute.groupedByHour(PlanCompute.program(cat, day: "2026-09-12", now: nil))
+        check("por hora: 11:00, 16:00 (B,C), 17:00", hours.map { $0.id } == ["11:00", "16:00", "17:00"] && hours[1].items.map { $0.title } == ["B", "C"])
+        let plan = [item("C", "2026-09-12", "16:15"), item("D", "2026-09-13", "17:15")]
+        check("inPlan: C sí", PlanCompute.inPlan(cat[2], plan: plan))
+        check("inPlan: D no — misma obra, otro día", !PlanCompute.inPlan(cat[3], plan: plan))
+        check("dayKey en la zona", PlanCompute.dayKey(sat) == "2026-09-12")
+
         // ── isLive ────────────────────────────────────────────────────────────
         let live = item("L", "2026-07-04", "10:00", duration: "124 min")   // 10:00–12:04
         let start = PlanCompute.startDate(live)!

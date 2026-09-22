@@ -25,6 +25,7 @@ struct ContentView: View {
 private struct MiPlan: View {
     @EnvironmentObject var plan: PlanStore
     @EnvironmentObject var auth: WatchAuthManager
+    @EnvironmentObject var catalog: CatalogStore
     @Environment(\.scenePhase) private var scenePhase
     @State private var day = 0
 
@@ -51,11 +52,25 @@ private struct MiPlan: View {
                 }
             }
         }
-        .task { if case .idle = plan.state { await plan.load() } }
+        .task {
+            // Zona del festival ANTES de calcular el plan (22 sep 2026): la recordada
+            // por festival; si nunca llegó, Bogotá. Luego el catálogo la confirma.
+            if let fid = auth.activeFestival ?? UserDefaults.standard.string(forKey: WatchAuthManager.activeFestivalKey), !fid.isEmpty {
+                _ = CatalogStore.applyRememberedTimeZone(festival: fid)
+                Task { await catalog.load(festival: fid) }
+            }
+            if case .idle = plan.state { await plan.load() }
+        }
+        // El catálogo trajo otra zona horaria → el plan se recalcula en silencio.
+        .onChange(of: catalog.tzVersion) { _, _ in
+            if case .loaded = plan.state { Task { await plan.load(silent: true) } }
+        }
         .onChange(of: plan.defaultDay) { _, new in day = new }
         // Live-reload: el teléfono cambió el festival en curso → recargar el plan.
         .onChange(of: auth.activeFestival) { _, new in
             guard let new, !new.isEmpty, new != plan.festival else { return }
+            _ = CatalogStore.applyRememberedTimeZone(festival: new)
+            Task { await catalog.load(festival: new) }
             Task { await plan.load() }
         }
         // Refresco (21 sep 2026): el plan se leía UNA vez por proceso. Ahora se relee
@@ -64,6 +79,7 @@ private struct MiPlan: View {
         .onChange(of: scenePhase) { _, phase in
             guard phase == .active, case .loaded = plan.state else { return }
             Task { await plan.load(silent: true) }
+            Task { await catalog.refreshIfStale() }
         }
         .onChange(of: auth.planChangedAt) { _, _ in
             if case .loading = plan.state { return }
