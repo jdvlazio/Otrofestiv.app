@@ -99,6 +99,19 @@ enum PlanComputeTests {
         check("inPlan: D no — misma obra, otro día", !PlanCompute.inPlan(cat[3], plan: plan))
         check("dayKey en la zona", PlanCompute.dayKey(sat) == "2026-09-12")
 
+        // ── Programa: copy y día corto (22 sep 2026) ──────────────────────────
+        let en = Lang.current == .en
+        check("startsOn según idioma", L.startsOn(en ? "THU 10" : "JUE 10") == (en ? "Starts Thu 10" : "Empieza el jue 10"))
+        check("scheduleFrom", L.scheduleFrom(hours: 3) == (en ? "Schedule from 3 h ago" : "Programa de hace 3 h"))
+        check("today/tomorrow", L.today == (en ? "Today" : "Hoy") && L.tomorrow == (en ? "Tomorrow" : "Mañana"))
+        let catJSON = #"{"timezoneOffset":"-04:00","dayKeys":["2026-09-12"],"dayShort":{"2026-09-12":"SÁB 12"},"dayShort_en":{"2026-09-12":"SAT 12"},"films":[]}"#
+        let catObj = try! JSONDecoder().decode(Catalog.self, from: catJSON.data(using: .utf8)!)
+        check("Catalog decodifica dayShort_en", catObj.dayShortEn?["2026-09-12"] == "SAT 12")
+        check("shortDay en el idioma del reloj", catObj.shortDay("2026-09-12") == (en ? "SAT 12" : "SÁB 12"))
+        let catSin = try! JSONDecoder().decode(Catalog.self, from: #"{"dayKeys":["2026-09-12"],"films":[]}"#.data(using: .utf8)!)
+        check("shortDay sin dayShort → dayLabel", catSin.shortDay("2026-09-12") == PlanCompute.dayLabel("2026-09-12"))
+        check("Catalog sin timezoneOffset decodifica (nil)", catSin.timezoneOffset == nil)
+
         // ── isLive ────────────────────────────────────────────────────────────
         let live = item("L", "2026-07-04", "10:00", duration: "124 min")   // 10:00–12:04
         let start = PlanCompute.startDate(live)!

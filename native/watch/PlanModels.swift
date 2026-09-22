@@ -42,8 +42,17 @@ struct ScheduleItem: Decodable, Identifiable, Hashable {
 struct Catalog: Decodable {
     let timezoneOffset: String?
     let dayKeys: [String]
-    let dayShort: [String: String]?
+    let dayShort: [String: String]?      // "2026-09-12": "SÁB 12"
+    let dayShortEn: [String: String]?    // "2026-09-12": "SAT 12"
     let films: [ScheduleItem]
+    enum CodingKeys: String, CodingKey {
+        case timezoneOffset, dayKeys, dayShort, films
+        case dayShortEn = "dayShort_en"
+    }
+    // Día corto en el idioma del reloj; si el festival no lo trae, el largo de PlanCompute.
+    func shortDay(_ key: String) -> String {
+        (Lang.current == .en ? dayShortEn?[key] : dayShort?[key]) ?? PlanCompute.dayLabel(key)
+    }
 }
 
 // Un tramo de hora del Programa (encabezado "17:00" + sus funciones).

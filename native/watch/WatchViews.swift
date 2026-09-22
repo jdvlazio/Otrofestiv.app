@@ -13,9 +13,14 @@ struct PosterThumb: View {
         // RemoteImage (NSCache + caché HTTP) en vez de AsyncImage: en listas
         // paginadas de watchOS AsyncImage cancela al deslizar y no cachea → los
         // thumbnails cargaban solo en el día abierto (o al entrar al detalle).
+        // Editorial (still 16:9 de un CDN oficial) → ancho, sin recortar; póster → 2:3.
+        // Radio proporcional (13 % del ancho del 2:3), como las 17 superficies del web.
+        let editorial = PlanCompute.isEditorial(path)
+        let w = editorial ? width * 1.6 : width
+        let h = editorial ? width * 0.9 : width * 1.5
         RemoteImage(url: url) { placeholder }
-            .frame(width: width, height: width * 1.5)
-            .clipShape(RoundedRectangle(cornerRadius: width > 30 ? 6 : 5, style: .continuous))
+            .frame(width: w, height: h)
+            .clipShape(RoundedRectangle(cornerRadius: width * 0.13, style: .continuous))
     }
     private var placeholder: some View {
         Rectangle().fill(OT.warm.opacity(0.08))

@@ -28,6 +28,20 @@ Documento normativo. Toda discrepancia entre este archivo y el código es un bug
 }
 ```
 
+### El reloj también lee este JSON (22 sep 2026)
+
+La app de Apple Watch (`native/watch/CatalogStore.swift`) baja `festivals/<id>.json`
+de producción para el Programa (Hoy y Mañana) y para fijar la **zona horaria**
+del festival. Es el SEGUNDO consumidor del esquema: un cambio de nombre o forma
+en estos campos rompe el reloj en silencio (decodifica solo lo que usa, el resto
+lo ignora). Campos que consume:
+
+- Raíz: `timezoneOffset` (fija `PlanCompute.tz`), `dayKeys`, `dayShort`, `dayShort_en`.
+- Por función (`films[]`): `title`, `day`, `time`, `venue`, `sala`, `duration`, `poster`, `section`, `type`.
+
+El nombre del archivo se deriva del id como en `loader.js` (`tiff2026` → `tiff-2026.json`);
+`PlanCompute.catalogFile` lo espeja y tiene test.
+
 ### Proyecciones conjuntas — los DOS modelos canónicos (doctrina, 30 jul 2026)
 
 Los festivales juntan proyecciones, y van a seguir haciéndolo: un bloque curado
