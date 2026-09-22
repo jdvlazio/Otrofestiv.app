@@ -37,6 +37,19 @@ enum PlanCompute {
         let c = cal.dateComponents([.year, .month, .day], from: date)
         return String(format: "%04d-%02d-%02d", c.year ?? 0, c.month ?? 0, c.day ?? 0)
     }
+    // ¿Hay que ir a la red por el catálogo? PURA porque es donde estuvo el defecto
+    // del 22 sep 2026: el atajo de frescura solo miraba «hay algo en memoria», no «lo
+    // que hay es de ESTE festival», y al volver a un festival bajado hace poco dejaba
+    // el del festival anterior (Mi Plan decía FICMA y Programa pintaba Jardín).
+    static func catalogNeedsNetwork(inMemory: String, requested: String, fetched: Date?,
+                                    now: Date, maxAge: TimeInterval, force: Bool) -> Bool {
+        if force { return true }
+        if requested.isEmpty { return false }
+        if inMemory != requested { return true }        // lo de memoria es de OTRO festival
+        guard let f = fetched else { return true }      // nunca se bajó
+        return now.timeIntervalSince(f) >= maxAge       // envejeció
+    }
+
     // Qué dos días muestra el Programa. En curso: hoy y el siguiente. Antes de
     // empezar: los dos primeros. Terminado: el último. Los títulos NO se deciden
     // acá: la vista compara cada día con todayKey/tomorrowKey y solo dice «Hoy» o

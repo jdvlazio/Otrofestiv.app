@@ -82,9 +82,13 @@ private struct MiPlan: View {
         .onChange(of: plan.defaultDay) { _, new in day = new }
         // Live-reload: el teléfono cambió el festival en curso → recargar el plan.
         .onChange(of: auth.activeFestival) { _, new in
-            guard let new, !new.isEmpty, new != plan.festival else { return }
+            guard let new, !new.isEmpty else { return }
             _ = CatalogStore.applyRememberedTimeZone(festival: new)
+            // Al catálogo se le avisa SIEMPRE: antes el guard miraba plan.festival y,
+            // si el plan ya estaba en ese festival, el catálogo no se enteraba nunca
+            // del cambio y seguía con el anterior (22 sep 2026).
             Task { await catalog.load(festival: new) }
+            guard new != plan.festival else { return }
             Task { await plan.load() }
         }
         // Refresco (21 sep 2026): el plan se leía UNA vez por proceso. Ahora se relee
