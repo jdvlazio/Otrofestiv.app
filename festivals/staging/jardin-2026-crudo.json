@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "festicinejardin.com (la ficha de cada obra) + las láminas de Instagram de @festicinejardin (día, hora, sede y el estreno)",
-  "capturado": "2026-09-21",
+  "capturado": "2026-09-22",
   "que_aporta": "la única función que el festival ha fechado, con la ficha completa de su obra",
   "url": "https://festicinejardin.com/",
   "metodo": "las dos superficies del festival, contrastadas campo a campo en jardin-2026-contraste.py. Donde discrepan manda la web, que está escrita a máquina, y la discrepancia queda declarada",
@@ -44,7 +44,7 @@
    "anio": 2026,
    "director": "Pablo Andrés Muñoz Castrillón",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
-   "posterSource": "editorial"
+   "posterSource": "oficial"
   },
   {
    "titulo": "Alma provinciana",
@@ -244,7 +244,7 @@
    "anio": 2026,
    "director": "Pablo Andrés Muñoz Castrillón",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
-   "posterSource": "editorial"
+   "posterSource": "oficial"
   },
   {
    "titulo": "Romero",
@@ -335,7 +335,13 @@
      "titulo": "Deus ex necro machina",
      "director": "Mateo M. Correa",
      "duracion_min": 6,
-     "genero": "Experimental"
+     "sinopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa.",
+     "anio": 2026,
+     "genero": "Experimental",
+     "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
+     "posterSource": "editorial",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Futuros luminosos",
@@ -345,13 +351,21 @@
      "anio": 2026,
      "genero": "Ficción",
      "poster": "/assets/jardin-2026/futuros-luminosos.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Elementales",
      "director": "Camilo Botero Jaramillo",
-     "duracion_min": 9,
-     "genero": "Documental"
+     "duracion_min": 8,
+     "sinopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
+     "anio": 2025,
+     "genero": "Documental",
+     "poster": "/assets/jardin-2026/elementales.jpg",
+     "posterSource": "editorial",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Una vez en un cuerpo",
@@ -361,7 +375,9 @@
      "anio": 2025,
      "genero": "Experimental",
      "poster": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Refracción",
@@ -371,7 +387,9 @@
      "anio": 2025,
      "genero": "Ficción",
      "poster": "/assets/jardin-2026/refraccion.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Madres de nacimiento",
@@ -381,7 +399,9 @@
      "anio": 2026,
      "genero": "Documental",
      "poster": "/assets/jardin-2026/madres-de-nacimiento.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Jiru iuiai \"Algo malo\"",
@@ -391,7 +411,9 @@
      "anio": 2024,
      "genero": "Ficción",
      "poster": "/assets/jardin-2026/jiru-iuiai-algo-malo.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Lejanía",
@@ -401,7 +423,9 @@
      "anio": 2026,
      "genero": "Documental",
      "poster": "/assets/jardin-2026/lejania.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     }
    ]
   },
@@ -457,6 +481,8 @@
    "pais": "Colombia",
    "anio": 2026,
    "genero": "ficción",
+   "poster": "/assets/jardin-2026/cien-anos-de-soledad-eran-mas-de-tres-mil.jpg",
+   "posterSource": "oficial",
    "_sin_ficha_en_la_web": true
   },
   {
@@ -475,6 +501,8 @@
    "pais": "Colombia",
    "anio": 2025,
    "genero": "documental",
+   "poster": "/assets/jardin-2026/la-casa-del-trueno.jpg",
+   "posterSource": "oficial",
    "_sin_ficha_en_la_web": true
   },
   {
@@ -561,8 +589,11 @@
     "date": "2026-09-21"
    },
    "seccion": "Muestra Central",
-   "duracion_min": 90,
+   "duracion_min": 86,
    "director": "Natalia Pinilla Rodríguez",
+   "pais": "Colombia",
+   "anio": 2021,
+   "genero": "documental",
    "_sin_ficha_en_la_web": true
   },
   {
@@ -762,7 +793,7 @@
    "anio": 2026,
    "director": "Pablo Andrés Muñoz Castrillón",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
-   "posterSource": "editorial"
+   "posterSource": "oficial"
   },
   {
    "titulo": "Volver",
@@ -802,6 +833,8 @@
    "pais": "Colombia",
    "anio": 2025,
    "genero": "documental",
+   "poster": "/assets/jardin-2026/la-casa-del-trueno.jpg",
+   "posterSource": "oficial",
    "_sin_ficha_en_la_web": true
   },
   {
@@ -871,7 +904,9 @@
      "anio": 2025,
      "genero": "Documental",
      "poster": "/assets/jardin-2026/los-anos-del-conejo.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "El mundo es afuera",
@@ -881,7 +916,9 @@
      "anio": 2025,
      "genero": "Ficción",
      "poster": "/assets/jardin-2026/el-mundo-es-afuera.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "En todo y en nada",
@@ -891,7 +928,9 @@
      "anio": 2026,
      "genero": "Experimental",
      "poster": "/assets/jardin-2026/en-todo-y-en-nada.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Un aparato para detectar fantasmas",
@@ -901,7 +940,9 @@
      "_sinopsis_en_disputa": "la web del festival publica el mismo texto en esta obra y en la otra; se omite hasta que lo aclaren",
      "genero": "Documental",
      "poster": "/assets/jardin-2026/un-aparato-para-detectar-fantasmas.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "De: Saúl",
@@ -911,7 +952,9 @@
      "anio": 2026,
      "genero": "Experimental",
      "poster": "/assets/jardin-2026/de-saul.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "La Mona",
@@ -921,7 +964,9 @@
      "anio": 2025,
      "genero": "Ficción",
      "poster": "/assets/jardin-2026/la-mona.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Criatura",
@@ -930,7 +975,9 @@
      "anio": 2025,
      "genero": "Ficción",
      "poster": "/assets/jardin-2026/criatura.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Malas posturas",
@@ -940,7 +987,9 @@
      "anio": 2025,
      "genero": "Ficción",
      "poster": "/assets/jardin-2026/malas-posturas.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Somnolítico",
@@ -950,7 +999,9 @@
      "anio": 2025,
      "genero": "Experimental",
      "poster": "/assets/jardin-2026/somnolitico.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Primer amor",
@@ -960,7 +1011,9 @@
      "anio": 2025,
      "genero": "Ficción",
      "poster": "/assets/jardin-2026/primer-amor.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Lecciones de primavera",
@@ -970,7 +1023,9 @@
      "anio": 2025,
      "genero": "Documental",
      "poster": "/assets/jardin-2026/lecciones-de-primavera.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Términa",
@@ -980,7 +1035,9 @@
      "anio": 2025,
      "genero": "Ficción",
      "poster": "/assets/jardin-2026/termina.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Sirena mecánica",
@@ -990,7 +1047,9 @@
      "anio": 2026,
      "genero": "Experimental",
      "poster": "/assets/jardin-2026/sirena-mecanica.jpg",
-     "posterSource": "tmdb"
+     "posterSource": "tmdb",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     },
     {
      "titulo": "Relatos del camino",
@@ -1000,12 +1059,14 @@
      "_sinopsis_en_disputa": "la web del festival publica el mismo texto en esta obra y en la otra; se omite hasta que lo aclaren",
      "genero": "Documental",
      "poster": "/assets/jardin-2026/relatos-del-camino.jpg",
-     "posterSource": "editorial"
+     "posterSource": "editorial",
+     "pais": "Colombia",
+     "_pais_fuente": "la sección es la «Competencia NACIONAL de cortometrajes» —así la rotula el festival en su logotipo y en la parrilla—: entrar en ella es ser colombiana."
     }
    ]
   },
   {
-   "titulo": "Cien años de soledad (SO2E6): Eran más de tres mil",
+   "titulo": "Cien años de soledad: Eran más de tres mil",
    "dia": "2026-09-26",
    "hora": "19:00",
    "sede": "Teatro Municipal de Jardín",
@@ -1020,6 +1081,8 @@
    "pais": "Colombia",
    "anio": 2026,
    "genero": "ficción",
+   "poster": "/assets/jardin-2026/cien-anos-de-soledad-eran-mas-de-tres-mil.jpg",
+   "posterSource": "oficial",
    "_sin_ficha_en_la_web": true
   },
   {
@@ -1323,7 +1386,7 @@
    "event_kind": "taller",
    "duracion_min": 120,
    "seccion": "Muestra Central",
-   "_credito": "Defensoría del pueblo"
+   "sinopsis": "(Taller ELO - Espacios Libres de Odio). Organiza: Defensoría del pueblo."
   },
   {
    "titulo": "Masculinidades para la igualdad",
@@ -1339,7 +1402,7 @@
    "event_kind": "taller",
    "duracion_min": 120,
    "seccion": "Muestra Central",
-   "_credito": "Defensoría del pueblo"
+   "sinopsis": "Organiza: Defensoría del pueblo."
   },
   {
    "titulo": "Taller Cartacartografías de memorias territoriales",
@@ -1356,7 +1419,7 @@
    "event_kind": "taller",
    "duracion_min": 60,
    "seccion": "Muestra Central",
-   "_credito": "Colectivo JÓDETE"
+   "sinopsis": "Organiza: Colectivo JÓDETE."
   },
   {
    "titulo": "Intervención artística",
@@ -1373,7 +1436,7 @@
    "info": true,
    "duracion_min": 240,
    "seccion": "Muestra Central",
-   "_credito": "Colectivo Imagina Jericó"
+   "sinopsis": "Crea tu propia serigrafía. Organiza: Colectivo Imagina Jericó."
   }
  ],
  "_talleres_fuera": [

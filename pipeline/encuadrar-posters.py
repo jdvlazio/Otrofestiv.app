@@ -165,12 +165,26 @@ def main():
         print('\n(simulación — usar --aplicar)')
         return
 
-    fallos, recortados = 0, []
+    fallos, recortados, ya = 0, [], 0
     for real, n, t, b, l, r, aw, ah in plan:
         W = int(subprocess.run(['sips', '-g', 'pixelWidth', real], capture_output=True)
                 .stdout.decode().split(':')[-1])
         H = int(subprocess.run(['sips', '-g', 'pixelHeight', real], capture_output=True)
                 .stdout.decode().split(':')[-1])
+        # ESTE PASO REESCRIBE EL ARCHIVO EN EL SITIO, así que tiene que ser
+        # IDEMPOTENTE, y no lo era: el zoom del 4% y el recorte al centro se
+        # aplicaban en CADA corrida, sobre el resultado de la anterior. Con la
+        # cadena corrida una docena de veces mientras se montaba Jardín, los
+        # afiches de TMDB acabaron ampliados ~1,6× y sin su título —«La sed del
+        # viento» perdió entero «THE WIND'S THIRST»—. Lo vio Juan: «los posters
+        # de TMDB aparecen cortados».
+        #
+        # Un afiche que YA mide el lienzo exacto y no tiene marco detectable no
+        # tiene nada que ganar con otra pasada: solo puede perder píxeles. Se
+        # salta y se cuenta, para que el número diga cuántos venían hechos.
+        if (W, H) == (LIENZO_W, LIENZO_H) and not (min(t, b) or min(l, r)):
+            ya += 1
+            continue
         # Un MARCO rodea: solo es marco lo que aparece en los DOS lados
         # opuestos, y se recorta por el menor de ellos. Si un solo lado tiene
         # borde claro es arte (el cielo de «The Dig»), y recortarlo mutila el
@@ -224,6 +238,9 @@ def main():
             print(f'   ✗ encuadre falló en {n}: {q.stderr.decode().strip()[:70]}')
             fallos += 1
 
+    if ya:
+        print(f'{ya} ya estaban encuadrados y NO se volvieron a tocar '
+              f'(este paso reescribe en el sitio: repetirlo los comería)')
     if recortados:
         print(f'\n{len(recortados)} recortados al centro en vez de estirados (deformación > {int(ESTIRON_MAX*100)}%):')
         for n, w2, h2, e in recortados:

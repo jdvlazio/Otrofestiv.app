@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festicinejardin.com (la ficha de cada obra) + las láminas de Instagram de @festicinejardin (día, hora, sede y el estreno)",
-  "capturado": "2026-09-21",
+  "capturado": "2026-09-22",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 811,
@@ -172,7 +172,7 @@
    "synopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
-   "posterSource": "editorial",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -427,7 +427,7 @@
    "synopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
-   "posterSource": "editorial",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -523,6 +523,8 @@
    "title": "Competencia nacional de cortometrajes",
    "type": "film",
    "section": "🔮 CALEIDOSCOPIO",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "100 min",
    "day": "2026-09-25",
    "time": "19:15",
@@ -538,12 +540,21 @@
     {
      "title": "Deus ex necro machina",
      "director": "Mateo M. Correa",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
      "duration": "6 min",
-     "genre": "Experimental"
+     "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
+     "posterSource": "editorial",
+     "synopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa.",
+     "genre": "Experimental",
+     "synopsis_lang": "es"
     },
     {
      "title": "Futuros luminosos",
      "director": "Ismael García Ramírez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2026,
      "duration": "25 min",
      "poster": "/assets/jardin-2026/futuros-luminosos.jpg",
@@ -559,12 +570,21 @@
     {
      "title": "Elementales",
      "director": "Camilo Botero Jaramillo",
-     "duration": "9 min",
-     "genre": "Documental"
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "8 min",
+     "poster": "/assets/jardin-2026/elementales.jpg",
+     "posterSource": "editorial",
+     "synopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
+     "genre": "Documental",
+     "synopsis_lang": "es"
     },
     {
      "title": "Una vez en un cuerpo",
      "director": "María Cristina Pérez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "10 min",
      "poster": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg",
@@ -580,6 +600,8 @@
     {
      "title": "Refracción",
      "director": "Isabella Palacio Mesa",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "11 min",
      "poster": "/assets/jardin-2026/refraccion.jpg",
@@ -594,6 +616,8 @@
     {
      "title": "Madres de nacimiento",
      "director": "Gloria Isabel Gómez Ceballos",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2026,
      "duration": "8 min",
      "poster": "/assets/jardin-2026/madres-de-nacimiento.jpg",
@@ -607,6 +631,8 @@
     {
      "title": "Jiru iuiai \"Algo malo\"",
      "director": "Yon Arley Agreda Jamioy",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2024,
      "duration": "14 min",
      "poster": "/assets/jardin-2026/jiru-iuiai-algo-malo.jpg",
@@ -618,6 +644,8 @@
     {
      "title": "Lejanía",
      "director": "Daniel Velásquez Patarroyo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2026,
      "duration": "17 min",
      "poster": "/assets/jardin-2026/lejania.jpg",
@@ -693,6 +721,8 @@
    "day_order": 1,
    "venue": "Coliseo Municipal - Jardín",
    "has_qa": false,
+   "poster": "/assets/jardin-2026/cien-anos-de-soledad-eran-mas-de-tres-mil.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -714,6 +744,8 @@
    "day_order": 1,
    "venue": "Escuela Jahel Peláez Montoya - Jardín",
    "has_qa": false,
+   "poster": "/assets/jardin-2026/la-casa-del-trueno.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -820,7 +852,11 @@
    "type": "film",
    "section": "🎬 Muestra Central",
    "director": "Natalia Pinilla Rodríguez",
-   "duration": "90 min",
+   "year": 2021,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "86 min",
+   "genre": "documental",
    "day": "2026-09-26",
    "time": "10:00",
    "day_order": 2,
@@ -1083,7 +1119,7 @@
    "synopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
-   "posterSource": "editorial",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1131,6 +1167,8 @@
    "day_order": 2,
    "venue": "Casa de la Cultura - Jardín",
    "has_qa": false,
+   "poster": "/assets/jardin-2026/la-casa-del-trueno.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1203,6 +1241,8 @@
    "title": "Competencia nacional de cortometrajes",
    "type": "film",
    "section": "🔮 CALEIDOSCOPIO",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "206 min",
    "day": "2026-09-26",
    "time": "19:00",
@@ -1218,6 +1258,8 @@
     {
      "title": "Los años del conejo",
      "director": "Raquel Tamayo Gutiérrez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "9 min",
      "poster": "/assets/jardin-2026/los-anos-del-conejo.jpg",
@@ -1233,6 +1275,8 @@
     {
      "title": "El mundo es afuera",
      "director": "Pablo Roldán",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "22 min",
      "poster": "/assets/jardin-2026/el-mundo-es-afuera.jpg",
@@ -1247,6 +1291,8 @@
     {
      "title": "En todo y en nada",
      "director": "Ximena Pérez y Raquel Zapata",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2026,
      "duration": "11 min",
      "poster": "/assets/jardin-2026/en-todo-y-en-nada.jpg",
@@ -1258,6 +1304,8 @@
     {
      "title": "Un aparato para detectar fantasmas",
      "director": "Mauricio Maldonado",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "18 min",
      "poster": "/assets/jardin-2026/un-aparato-para-detectar-fantasmas.jpg",
@@ -1271,6 +1319,8 @@
     {
      "title": "De: Saúl",
      "director": "Santiago Gomxz, Cristian Rojas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2026,
      "duration": "4 min",
      "poster": "/assets/jardin-2026/de-saul.jpg",
@@ -1282,6 +1332,8 @@
     {
      "title": "La Mona",
      "director": "Laura Gutiérrez Ardila",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "18 min",
      "poster": "/assets/jardin-2026/la-mona.jpg",
@@ -1297,6 +1349,8 @@
     {
      "title": "Criatura",
      "director": "Juan Pablo Ríos",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "17 min",
      "poster": "/assets/jardin-2026/criatura.jpg",
@@ -1306,6 +1360,8 @@
     {
      "title": "Malas posturas",
      "director": "Juan Pablo Castro",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "1 min",
      "poster": "/assets/jardin-2026/malas-posturas.jpg",
@@ -1321,6 +1377,8 @@
     {
      "title": "Somnolítico",
      "director": "Abril Velasquez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "11 min",
      "poster": "/assets/jardin-2026/somnolitico.jpg",
@@ -1332,6 +1390,8 @@
     {
      "title": "Primer amor",
      "director": "Iván Luna Dulcey",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "17 min",
      "poster": "/assets/jardin-2026/primer-amor.jpg",
@@ -1343,6 +1403,8 @@
     {
      "title": "Lecciones de primavera",
      "director": "Antonio Mariño",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "14 min",
      "poster": "/assets/jardin-2026/lecciones-de-primavera.jpg",
@@ -1358,6 +1420,8 @@
     {
      "title": "Términa",
      "director": "Juan José Guevara Ruiz",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "27 min",
      "poster": "/assets/jardin-2026/termina.jpg",
@@ -1371,6 +1435,8 @@
     {
      "title": "Sirena mecánica",
      "director": "Violeta Vieytes Vivares y Damián Sato",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2026,
      "duration": "9 min",
      "poster": "/assets/jardin-2026/sirena-mecanica.jpg",
@@ -1384,6 +1450,8 @@
     {
      "title": "Relatos del camino",
      "director": "Daniel Prieto Muriel",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "12 min",
      "poster": "/assets/jardin-2026/relatos-del-camino.jpg",
@@ -1394,7 +1462,7 @@
    "is_free": true
   },
   {
-   "title": "Cien años de soledad (SO2E6): Eran más de tres mil",
+   "title": "Cien años de soledad: Eran más de tres mil",
    "type": "film",
    "section": "🎬 Muestra Central",
    "director": "Laura Mora",
@@ -1408,6 +1476,8 @@
    "day_order": 2,
    "venue": "Teatro Municipal de Jardín - Jardín",
    "has_qa": false,
+   "poster": "/assets/jardin-2026/cien-anos-de-soledad-eran-mas-de-tres-mil.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1779,6 +1849,8 @@
    "venue": "Institución Educativa San Antonio - Jardín",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "(Taller ELO - Espacios Libres de Odio). Organiza: Defensoría del pueblo.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1796,6 +1868,8 @@
    "venue": "Institución Educativa San Antonio - Jardín",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "Organiza: Defensoría del pueblo.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1814,6 +1888,8 @@
    "sala": "Café Tinta y Tinto, piso 2",
    "event_kind": "taller",
    "has_qa": false,
+   "synopsis": "Organiza: Colectivo JÓDETE.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1832,6 +1908,8 @@
    "event_kind": "taller",
    "info": true,
    "has_qa": false,
+   "synopsis": "Crea tu propia serigrafía. Organiza: Colectivo Imagina Jericó.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1841,7 +1919,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-21T21:03:52",
+  "fecha": "2026-09-22T06:19:30",
   "plan_sha": "4977a7663617bd88",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"

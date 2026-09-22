@@ -1,8 +1,8 @@
 {
  "_provenance": {
   "fuente": "TMDB (image.tmdb.org, w780), Letterboxd (og:image) y el `og:image` de la ficha en festicinejardin.com — en ese orden, el de docs/POSTERS.md §2",
-  "capturado": "2026-09-21",
-  "que_aporta": "34 imágenes de las 37 obras del catálogo, bajadas a assets/jardin-2026/",
+  "capturado": "2026-09-22",
+  "que_aporta": "38 imágenes de las 41 obras del catálogo, bajadas a assets/jardin-2026/",
   "metodo": "los dos primeros son afiches de verdad y van a 2:3; el still del festival es apaisado, se reduce a 896 px de ancho y va como `editorial`, que la vista encuadra a 16:9 en vez de estirarlo. No se publica la URL remota: el archivo se sirve desde el repo y este sidecar lo nombra"
  },
  "films": [
@@ -11,6 +11,12 @@
    "poster": "/assets/jardin-2026/alma-provinciana.jpg",
    "posterSource": "tmdb",
    "_origen": "https://image.tmdb.org/t/p/w780/zvIEdYmz3XmkYWfRFcAnzzqSAgd.jpg"
+  },
+  {
+   "title": "Cien años de soledad: Eran más de tres mil",
+   "poster": "/assets/jardin-2026/cien-anos-de-soledad-eran-mas-de-tres-mil.jpg",
+   "posterSource": "oficial",
+   "_origen": "TMDB, póster de la PARTE 2 de la serie (tv/207333, temporada 2, estreno 5 ago 2026). El festival proyecta su episodio 6, «Eran más de tres mil», dirigido por Laura Mora. `ficha_tmdb` no la encontraba porque su candado compara PELÍCULAS por año y duración y esto es una serie; el arte de la temporada es lo que identifica lo que se proyecta. Lo señaló Juan (22 sep). Es UNA obra: la parrilla la imprime con el rótulo del episodio el sábado y sin él el viernes, y el título se normaliza para que no salgan dos."
   },
   {
    "title": "Criatura",
@@ -37,10 +43,22 @@
    "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/De-saul-scaled.jpg"
   },
   {
+   "title": "Deus ex necro machina",
+   "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/Deus-necro-machina.jpg"
+  },
+  {
    "title": "El mundo es afuera",
    "poster": "/assets/jardin-2026/el-mundo-es-afuera.jpg",
    "posterSource": "tmdb",
    "_origen": "https://image.tmdb.org/t/p/w780/icIBCOZms2ngvpBzDZ1uQ4wjYxY.jpg"
+  },
+  {
+   "title": "Elementales",
+   "poster": "/assets/jardin-2026/elementales.jpg",
+   "posterSource": "editorial",
+   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/Elementales.jpg"
   },
   {
    "title": "En todo y en nada",
@@ -67,10 +85,16 @@
    "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/LaMona.jpg"
   },
   {
+   "title": "La casa del trueno",
+   "poster": "/assets/jardin-2026/la-casa-del-trueno.jpg",
+   "posterSource": "oficial",
+   "_origen": "Cinemateca de Bogotá, ficha de la película (cinematecadebogota.gov.co/node/peliculas/2045). 810×1080, vertical, y el nombre del archivo dice «cartel». Comprobado el 22 sep 2026."
+  },
+  {
    "title": "La creciente",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
-   "posterSource": "editorial",
-   "_origen": "https://festicinejardin.com/wp-content/uploads/2026/09/LA-CRECIENTE.png"
+   "posterSource": "oficial",
+   "_origen": "Instagram @eskala_films, la productora (instagram.com/p/DdfVFWAPoUK/): «Este es el póster oficial de La Creciente». 1080×1440, con título, lema y créditos completos. Guardado el 22 sep 2026 porque el enlace del CDN caduca."
   },
   {
    "title": "La marcha del hambre",
@@ -212,9 +236,9 @@
   }
  ],
  "sin_imagen": [
-  "Deus ex necro machina",
-  "Elementales",
-  "Ubuntu: La métrica de los afectos"
+  "Tres Mujeres guerreras",
+  "Ubuntu: La métrica de los afectos",
+  "Una sola golondrina no hace llover"
  ],
  "_descartados": [
   "«La Mona»: letterboxd devolvió 896×328 (r=2.73), no es un afiche vertical — se descarta",
@@ -222,6 +246,9 @@
   "«Un aparato para detectar fantasmas»: letterboxd devolvió 896×450 (r=1.99), no es un afiche vertical — se descarta"
  ],
  "_sin_imagen_por_que": {
+  "Una sola golondrina no hace llover": "documental de Caribe Afirmativo (2021, 86 min). Sin página en festicinejardin.com —no está en su sitemap— y sin ficha verificable en TMDB. No hay imagen que bajar en ninguna fuente conocida.",
+  "Tres Mujeres guerreras": "EXISTE Y NO ESTÁ EN TMDB — candidata a alta. Lo destapó Juan (22 sep): IMDb la tiene como «Tres Mujeres Guerreras: 3 Kriegerinnen» (2014), tt4402368, porque es coproducción Colombia–Alemania y su otro título es alemán. Yo la había buscado solo por el título español. Comprobado después: TMDB no la tiene ni por «3 Kriegerinnen», ni por «Drei Kriegerinnen», ni por el español, ni por imdb_id. Camino de la casa para esto: darla de alta en TMDB (scripts/verificar-antes-de-alta.py y docs/PIPELINE Fase 3b), no inventarle un afiche.",
+  "Gustavo, el observador invisible": "estreno de Antena 4 Jardín (25 min). Sin página en la web y sin TMDB: es una producción local que estrena en este festival.",
   "Deus ex necro machina": "el festival no le publicó ficha: su slug `deus-ex-necro-machina` REDIRIGE a la página de «Primer amor», que es otra obra. Entra al catálogo solo desde Instagram y no hay imagen que bajar. Preguntado al festival.",
   "Elementales": "su página en la web está etiquetada «Caleidoscopio 2025», no 2026, así que no se toma como ficha de esta edición. Entra solo desde Instagram. Preguntado al festival.",
   "Ubuntu: La métrica de los afectos": "tiene ficha en la web pero sin imagen (`og:image` es el logo del festival, que el raspador descarta) y TMDB no la verifica."

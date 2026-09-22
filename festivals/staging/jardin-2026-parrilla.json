@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Instagram @festicinejardin — el carrusel de programación",
-  "capturado": "2026-09-21",
+  "capturado": "2026-09-22",
   "que_aporta": "la parrilla entera: día, hora, sede y ficha. La web del festival no publica programación de 2026",
   "url": "https://www.instagram.com/p/DdkY5ejlraV/",
   "metodo": "OCR con cajas sobre las 14 láminas; el día sale de la cabecera de cada una y la hora vale para todas las sedes que cuelgan"
@@ -336,7 +336,10 @@
    "hora": "10:00",
    "titulo": "Una sola golondrina no hace llover",
    "director": "Natalia Pinilla Rodríguez",
-   "_extra": "(Caribe Afirmativo) Colombia, 2021 86 min, documental.",
+   "pais": "Colombia",
+   "anio": 2021,
+   "duracion_min": 86,
+   "genero": "documental",
    "_lamina": "06.jpg"
   },
   {
@@ -590,7 +593,7 @@
    "dia": "2026-09-26",
    "sede": "Teatro Municipal de Jardín",
    "hora": "19:00",
-   "titulo": "Cien años de soledad (SO2E6): Eran más de tres mil",
+   "titulo": "Cien años de soledad: Eran más de tres mil",
    "director": "Laura Mora",
    "pais": "Colombia",
    "anio": 2026,

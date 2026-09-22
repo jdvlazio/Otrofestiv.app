@@ -54,9 +54,20 @@ CAMPOS = [('pais', 'País'), ('idioma', 'Idioma'), ('genero', 'Género'),
           ('anio', 'A[ñn]o de estreno|A[ñn]o|Estreno'), ('clasificacion', 'Clasificación de edad')]
 
 
-def bajar(url, nombre):
+def bajar(url, nombre, siempre=False):
+    """La página, de la caché o de la red.
+
+    EL ÍNDICE NUNCA SE CACHEA. Las fichas de obra sí —su contenido no cambia y
+    son 37 peticiones—, pero `post-sitemap.xml` es la lista de QUÉ EXISTE, y
+    cacheada convierte al raspador en ciego: el festival publicó las fichas de
+    «Deus ex necro machina» y «Elementales» el 21 sep y el paso siguió leyendo
+    el índice del 20 a las 20:01, así que para nosotros no existían. Se vio al
+    preguntar por qué faltaban afiches (Juan, 22 sep).
+
+    Una caché sin caducidad sobre un índice no acelera: esconde.
+    """
     p = f'{CACHE}/{nombre}'
-    if not os.path.exists(p) or os.path.getsize(p) < 3000:
+    if siempre or not os.path.exists(p) or os.path.getsize(p) < 3000:
         os.makedirs(CACHE, exist_ok=True)
         subprocess.run(['curl', '-sL', '--max-time', '35', '-A', UA, url, '-o', p], check=True)
         time.sleep(0.2)
@@ -148,7 +159,7 @@ def parse(url, h):
 
 
 def main():
-    x = bajar(SITEMAP, 'post-sitemap.xml')
+    x = bajar(SITEMAP, 'post-sitemap.xml', siempre=True)
     urls = [(u, f) for u, f in re.findall(r'<url>\s*<loc>([^<]+)</loc>\s*<lastmod>([^<]*)</lastmod>', x)
             if f.startswith('2026-09')]
     obras, fuera = [], []

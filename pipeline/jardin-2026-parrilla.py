@@ -291,9 +291,34 @@ def cortos_de(lineas):
     return out
 
 
+def une_ficha(ls):
+    """La línea «País, año, NN min, género», que la lámina a veces PARTE.
+
+    «Una sola golondrina no hace llover» la imprime en dos renglones —
+    «(Caribe Afirmativo) Colombia, 2021» y «86 min, documental.»— y el patrón,
+    que la espera entera, no casaba: la obra salía sin país, sin año y sin
+    duración, y sin país no hay bandera. Lo vio Juan (22 sep): «es producción
+    colombiana, no tiene emoji, por qué».
+
+    Se unen cuando la primera acaba en año y la segunda empieza en minutos:
+    dos condiciones a la vez, que no se cumplen por casualidad.
+    """
+    out, i = [], 0
+    while i < len(ls):
+        a = ls[i].strip()
+        b = ls[i + 1].strip() if i + 1 < len(ls) else ''
+        if re.search(r',\s*(?:1[89]|20)\d{2}\.?$', a) and re.match(r'^\d{1,3}\s*min\b', b):
+            out.append(f'{a.rstrip(".")}, {b}')
+            i += 2
+            continue
+        out.append(a)
+        i += 1
+    return out
+
+
 def ficha(f):
     """Título, dirección y metadatos de la columna derecha."""
-    ls = [x for x in f['ficha'] if x.strip()]
+    ls = une_ficha([x for x in f['ficha'] if x.strip()])
     d = {}
     # la FRANJA, cuando la lámina la rotula encima del título
     # SOLO «Franja …». Antes entraban también «Muestra …» y «Competencia …»,
@@ -333,6 +358,13 @@ def ficha(f):
     t0 = titulo[0]
     for x in titulo[1:]:
         t0 = t0[:-1] + x if t0.endswith('-') else t0 + ' ' + x
+    # UNA OBRA, UN TÍTULO. La parrilla imprime el episodio de «Cien años de
+    # soledad» con el rótulo de temporada el sábado —«(SO2E6)»— y sin él el
+    # viernes, y eso la partía en DOS obras: dos fichas, dos afiches iguales y
+    # el guardián [posters-duplicados] marcándolo como dato corrupto, que es
+    # exactamente lo que era. El rótulo del episodio no es parte del nombre.
+    t0 = re.sub(r'\s*\(S[O0]?\d+E\d+\)\s*', ' ', t0)
+    t0 = re.sub(r'\s+([:;,.])', r'\1', re.sub(r'\s{2,}', ' ', t0)).strip()
     d['titulo'] = t0
     resto = ls
     for x in resto:
@@ -340,10 +372,12 @@ def ficha(f):
             d['director'] = x[4:].strip(' .')
         m = RE_FICHA.match(x)
         if m:
-            d['pais'] = m.group(1).strip()
+            # «(Caribe Afirmativo) Colombia» — la lámina antepone la
+            # productora entre paréntesis y el país es lo que queda.
+            d['pais'] = re.sub(r'^\([^)]*\)\s*', '', m.group(1)).strip()
             d['anio'] = int(m.group(2))
             d['duracion_min'] = int(m.group(3))
-            d['genero'] = m.group(4).strip()
+            d['genero'] = m.group(4).strip(' .')
     # UNA CASILLA PUEDE LLEVAR DOS PELÍCULAS. El viernes a las 19:00 en la
     # Escuela Jahel van «Tres Mujeres guerreras» (55 min) y «Ubuntu: La métrica
     # de los afectos» (30 min), una debajo de otra con su Dir. y su ficha; el

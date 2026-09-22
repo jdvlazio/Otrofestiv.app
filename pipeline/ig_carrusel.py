@@ -28,17 +28,52 @@ def _contexto(shortcode):
         capture_output=True, text=True, check=True).stdout
     i = h.find('"contextJSON"')
     if i < 0:
-        raise SystemExit(f"{shortcode}: sin contextJSON — ¿cambió el embed?")
+        # EL EMBED YA NO SIEMPRE TRAE LOS DATOS. Para algunos posts devuelve
+        # una página de 600 KB sin imagen y sin pie —comprobado el 22 sep 2026
+        # con el póster de «La creciente» de @eskala_films—. Antes esto
+        # reventaba más abajo con un JSONDecodeError que no decía nada.
+        #
+        # El camino que sí funciona es el NAVEGADOR: la página renderizada
+        # lleva la URL firmada del CDN. Se baja de ahí y se guarda en
+        # `fuentes/`, declarando el POST como fuente —la URL del CDN caduca en
+        # horas y no sirve para volver a mirarla—.
+        raise SystemExit(
+            f"{shortcode}: el embed ya no trae los datos ({len(h)//1024} KB sin "
+            f"contextJSON). Bajarlo desde el navegador y guardarlo en fuentes/, "
+            f"declarando el post como fuente.")
     # doble codificación: un string JSON cuyo contenido es a su vez JSON.
     # No sirve un regex: el string lleva comillas escapadas. Se decodifica
     # con el propio parser desde la comilla de apertura.
     j = h.index('"', h.index(':', i) + 1)
-    crudo, _ = json.JSONDecoder().raw_decode(h[j:])
+    try:
+        crudo, _ = json.JSONDecoder().raw_decode(h[j:])
+    except json.JSONDecodeError:
+        # EL CANDADO DE ABAJO LLEGABA TARDE: comprobaba que el contenido no
+        # estuviera vacío DESPUÉS de decodificarlo, y cuando el embed sirve
+        # algo que no es JSON la decodificación revienta antes, con un
+        # «Expecting value: line 1 column 1» que no dice nada de Instagram.
+        raise SystemExit(
+            f"{shortcode}: el embed trae contextJSON pero no es JSON "
+            f"({len(h)//1024} KB). Bajarlo desde el NAVEGADOR —la página "
+            f"renderizada lleva la URL firmada— y guardarlo en fuentes/, "
+            f"declarando el post como fuente: la URL del CDN caduca en horas.")
     if not crudo.strip():
         # el embed existe pero viene sin datos: pasa cuando el post no es
         # público al mismo nivel (reel, o restringido). No es un carrusel vacío.
         raise SystemExit(f"{shortcode}: contextJSON VACÍO — leer el post en el navegador")
-    return json.loads(crudo)
+    try:
+        return json.loads(crudo)
+    except json.JSONDecodeError:
+        # La doble codificación tiene DOS sitios donde romperse y el candado
+        # solo cubría uno. Acá el string existe y no está vacío, pero su
+        # contenido no es el JSON del post: es lo que devuelve el embed cuando
+        # Instagram ya no lo sirve (comprobado el 22 sep 2026 con el póster de
+        # «La creciente» de @eskala_films, 636 KB sin imagen ni pie).
+        raise SystemExit(
+            f"{shortcode}: el embed trae contextJSON pero su contenido no es "
+            f"el post. Bajarlo desde el NAVEGADOR —la página renderizada lleva "
+            f"la URL firmada del CDN— y guardarlo en fuentes/, declarando el "
+            f"POST como fuente: la URL del CDN caduca en horas.")
 
 
 def laminas(shortcode):
