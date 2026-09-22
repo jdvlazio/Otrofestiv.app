@@ -5544,6 +5544,58 @@ except Exception as _e:
 #   · que el archivo EXISTA (una ruta rota no se ve hasta que se ve),
 #   · que tenga resolución de póster y no de miniatura,
 #   · que no lleve una BANDA PLANA en un borde — el recorte que se comió el
+
+# ── [programa-mismo-titulo] dos programas distintos no pueden llamarse igual ──
+# LA APP IDENTIFICA LAS OBRAS POR TÍTULO: `FILMS.find(f=>f.title===t)`, y de ahí
+# salen el detalle, el Plan y el cruce de horarios. Que un título se repita es
+# NORMAL y el modelo lo espera —la misma película proyectada dos o tres veces—,
+# pero entonces las dos entradas tienen que ser LA MISMA OBRA.
+#
+# Cuando no lo son, la app muestra el contenido de la primera para todas. Pasó
+# en Jardín 2026: Caleidoscopio se proyecta en dos tandas de cortos DISTINTOS
+# —8 el viernes, 14 el sábado— y las dos casillas llevaban la línea de la
+# sección por título, así que las dos tarjetas enseñaban los mismos 8. Lo vio
+# Juan en la app, no el repo: «están mostrando los mismos 8 cortometrajes».
+#
+# La regla es exacta y no opina sobre los nombres: mismo título ⇒ misma lista
+# de obras. Si dos funciones con el mismo nombre contienen cosas distintas, una
+# de las dos está mintiendo.
+check = 'programa-mismo-titulo'
+try:
+    import json as _jp, glob as _gp, collections as _cp
+    # DEUDA DECLARADA, y solo puede encoger. «¿Qué es la ficción?» de
+    # Cinemancia 2025 son CUATRO cosas con el mismo nombre —una ponencia y tres
+    # proyecciones con 4, 5 y 6 obras— en un festival ya archivado. Es un
+    # hallazgo real de este guardián el día que nació, no un falso positivo,
+    # pero nace del pasado: se nombra para que no crezca y se arregla cuando se
+    # vuelva a tocar ese festival.
+    _DEUDA = {('cinemancia-2025', '¿Qué es la ficción?')}
+    _malos, _vistos = [], 0
+    for _f in sorted(_gp.glob('festivals/*.json')):
+        _fest = _f.split('/')[-1][:-5]
+        _por = _cp.defaultdict(set)
+        for _x in (_jp.load(open(_f, encoding='utf-8')).get('films') or []):
+            _t = _x.get('title')
+            if not _t:
+                continue
+            _fl = tuple(sorted((_it.get('title') or '') for _it in (_x.get('film_list') or [])))
+            _por[_t].add(_fl)
+        for _t, _listas in _por.items():
+            if len(_listas) > 1:
+                _vistos += 1
+                if (_fest, _t) in _DEUDA:
+                    continue
+                _cuantos = ' / '.join(str(len(_l)) for _l in sorted(_listas, key=len))
+                _malos.append(f'{_fest}: «{_t[:40]}» aparece con listas de obras '
+                              f'distintas ({_cuantos} obras) — la app mostrará la primera')
+    if _malos:
+        fail(check, ' · '.join(_malos[:5]) + (f' (+{len(_malos) - 5})' if len(_malos) > 5 else ''))
+    else:
+        ok(check, f'ningún título repetido esconde dos programas distintos '
+                  f'(deuda declarada: {len(_DEUDA)})')
+except Exception as _e:
+    warn(check, f'no se pudo verificar programa-mismo-titulo: {_e}')
+
 #     encabezado del PDF, que es exactamente el error de hoy.
 check = 'poster-mirado'
 try:
