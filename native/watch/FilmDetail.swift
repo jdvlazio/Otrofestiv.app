@@ -8,8 +8,6 @@ import SwiftUI
 
 struct FilmDetail: View {
     let item: ScheduleItem
-    private var live: Bool { PlanCompute.isLive(item, now: Date()) }
-
     private var dayTimeLine: String {
         let day = item.dayStr.map { PlanCompute.dayLabel($0) } ?? ""
         let time = item.time ?? ""
@@ -21,32 +19,59 @@ struct FilmDetail: View {
     }
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 10) {
-                HStack { Spacer(); PosterLarge(path: item.poster); Spacer() }
-
-                if live {
-                    Text(L.now)
-                        .font(.caption2).fontWeight(.bold).foregroundStyle(OT.green)
-                }
-
-                Text(item.title)
-                    .font(.headline).foregroundStyle(OT.warm)
-                    .fixedSize(horizontal: false, vertical: true)
-
-                VStack(alignment: .leading, spacing: 7) {
-                    MetaRow(icon: "clock", text: dayTimeLine, tint: OT.amber)
-                    if let v = item.venue {
-                        MetaRow(icon: "mappin.and.ellipse", text: v, tint: OT.secondary)
+        // Progreso en vivo (21 sep 2026): TimelineView → «Termina en N min» avanza solo.
+        TimelineView(.everyMinute) { ctx in
+            ScrollView {
+                VStack(alignment: .leading, spacing: 8) {
+                    // El póster manda: a sangre arriba, el texto sube sobre un degradado.
+                    ZStack(alignment: .bottomLeading) {
+                        PosterLarge(path: item.poster)
+                        LinearGradient(colors: [.clear, .black.opacity(0.85), .black],
+                                       startPoint: .center, endPoint: .bottom)
+                            .allowsHitTesting(false)
+                        VStack(alignment: .leading, spacing: 3) {
+                            if PlanCompute.isLive(item, now: ctx.date) {
+                                Text(L.now).font(.system(size: 9, weight: .bold)).tracking(0.6)
+                                    .foregroundStyle(OT.green)
+                            }
+                            Text(item.title)
+                                .font(.headline).foregroundStyle(OT.warm)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                        .padding(.horizontal, 4).padding(.bottom, 2)
                     }
-                    if let d = durationLine {
-                        MetaRow(icon: "timer", text: d, tint: OT.secondary)
+
+                    if let f = PlanCompute.progress(item, now: ctx.date),
+                       let m = PlanCompute.minutesLeft(item, now: ctx.date) {
+                        VStack(alignment: .leading, spacing: 5) {
+                            LiveBar(fraction: f, height: 6)
+                            HStack {
+                                Text(L.endsIn(m)).font(.footnote).fontWeight(.semibold).monospacedDigit()
+                                    .foregroundStyle(OT.warm)
+                                Spacer()
+                                if let end = PlanCompute.endTimeLabel(item) {
+                                    Text(end).font(.footnote).monospacedDigit().foregroundStyle(OT.secondary)
+                                }
+                            }
+                        }
+                        .padding(.horizontal, 4)
+                        .accessibilityElement(children: .combine)
                     }
+
+                    VStack(alignment: .leading, spacing: 7) {
+                        MetaRow(icon: "clock", text: dayTimeLine, tint: OT.amber)
+                        if let v = item.venue {
+                            MetaRow(icon: "mappin.and.ellipse", text: v, tint: OT.secondary)
+                        }
+                        if let d = durationLine {
+                            MetaRow(icon: "timer", text: d, tint: OT.secondary)
+                        }
+                    }
+                    .padding(.horizontal, 4).padding(.top, 2)
                 }
-                .padding(.top, 2)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(.horizontal, 4)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .ignoresSafeArea(edges: .top)
         }
         .navigationTitle("")
     }
@@ -58,15 +83,16 @@ private struct PosterLarge: View {
     private var url: URL? { PlanCompute.posterURL(path, tmdbSize: "w342") }
 
     var body: some View {
-        artwork.clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+        artwork.clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
     }
 
-    // Editorial → 16:9 completo a lo ancho. Póster normal → 2:3 fijo 88×132.
+    // Editorial → 16:9 completo a lo ancho. Póster → 2:3 completo a lo ancho
+    // (protagonista, 21 sep 2026): sin recortar, la regla de siempre.
     @ViewBuilder private var artwork: some View {
         if editorial {
             image.aspectRatio(16.0 / 9.0, contentMode: .fit).frame(maxWidth: .infinity)
         } else {
-            image.frame(width: 88, height: 132)
+            image.aspectRatio(2.0 / 3.0, contentMode: .fit).frame(maxWidth: .infinity)
         }
     }
 

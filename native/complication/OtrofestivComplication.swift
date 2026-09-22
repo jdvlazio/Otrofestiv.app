@@ -9,29 +9,58 @@ import WidgetKit
 import SwiftUI
 
 // ── Timeline ──────────────────────────────────────────────────────────────────
+// Progreso en vivo (21 sep 2026): la app publica la función EN CURSO y la SIGUIENTE
+// (PlanSnapshot). Mientras hay una en curso, una entrada POR MINUTO con el número
+// exacto que faltan (el anillo circular no admite texto relativo del sistema); al
+// terminar, la siguiente entra sola. Sin función en curso, una entrada y refresco
+// al inicio de la próxima. Tope: 4 h de entradas (WidgetKit acepta cientos).
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> NextUpEntry {
-        NextUpEntry(date: Date(), next: nil)
+        NextUpEntry(date: Date(), next: nil, live: nil)
     }
     func getSnapshot(in context: Context, completion: @escaping (NextUpEntry) -> Void) {
-        completion(NextUpEntry(date: Date(), next: SharedPlan.load()))
+        completion(Self.entry(at: Date(), snap: SharedPlan.loadSnapshot()))
     }
     func getTimeline(in context: Context, completion: @escaping (Timeline<NextUpEntry>) -> Void) {
-        let next = SharedPlan.load()
-        let entry = NextUpEntry(date: Date(), next: next)
-        // Al empezar la función, refrescar para que "pase" a la siguiente.
-        var refresh = Date().addingTimeInterval(30 * 60)
-        if let n = next {
-            let start = Date(timeIntervalSince1970: n.startEpoch)
-            if start > Date() { refresh = start }
+        let snap = SharedPlan.loadSnapshot()
+        let now = Date()
+        let entries = Self.timelineDates(from: now, snap: snap).map { Self.entry(at: $0, snap: snap) }
+        completion(Timeline(entries: entries, policy: .after(Self.refreshDate(from: now, snap: snap))))
+    }
+    // Instantes de la línea de tiempo: ahora; si hay en curso, cada minuto en punto
+    // hasta el fin (máx. 4 h) y uno justo después del fin.
+    static func timelineDates(from now: Date, snap: PlanSnapshot?) -> [Date] {
+        var dates = [now]
+        if let cur = snap?.current, let end = cur.end, end > now {
+            var t = now.addingTimeInterval(60 - now.timeIntervalSince1970.truncatingRemainder(dividingBy: 60))
+            let cap = now.addingTimeInterval(4 * 3600)
+            while t < end && t < cap { dates.append(t); t += 60 }
+            dates.append(end.addingTimeInterval(1))
         }
-        completion(Timeline(entries: [entry], policy: .after(refresh)))
+        return dates
+    }
+    static func refreshDate(from now: Date, snap: PlanSnapshot?) -> Date {
+        if let cur = snap?.current, let end = cur.end, end > now { return end.addingTimeInterval(2) }
+        if let n = snap?.next, n.start > now { return n.start }
+        return now.addingTimeInterval(30 * 60)
+    }
+    // A esa hora: si la «en curso» sigue viva → ella con su progreso; si la siguiente
+    // ya arrancó → ella; si no → la siguiente como «próxima».
+    static func entry(at date: Date, snap: PlanSnapshot?) -> NextUpEntry {
+        for n in [snap?.current, snap?.next].compactMap({ $0 }) where n.isLive(at: date) {
+            return NextUpEntry(date: date, next: n,
+                               live: LiveState(fraction: n.progress(at: date) ?? 0, minutesLeft: n.minutesLeft(at: date) ?? 0))
+        }
+        return NextUpEntry(date: date, next: snap?.next ?? snap?.current, live: nil)
     }
 }
+
+struct LiveState: Equatable { let fraction: Double; let minutesLeft: Int }
 
 struct NextUpEntry: TimelineEntry {
     let date: Date
     let next: NextUp?
+    let live: LiveState?    // nil = «próxima»; con valor = «en curso», con progreso
 }
 
 // ── Vista por familia ───────────────────────────────────────────────────────
@@ -48,49 +77,75 @@ struct OtrofestivComplicationEntryView: View {
         }
     }
 
-    // Una línea: "🎬 10:00 Título"
+    // Una línea: "🎬 10:00 Título" / en curso: "🎬 Termina en 23 min · Título"
     private var inline: some View {
         Group {
             if let n = entry.next {
-                Label("\(n.time)  \(n.title)", image: "otmark")
+                if let l = entry.live { Label("\(L.endsIn(l.minutesLeft))  \(n.title)", image: "otmark") }
+                else { Label("\(n.time)  \(n.title)", image: "otmark") }
             } else {
                 Text("Otrofestiv")
             }
         }
     }
 
-    // Círculo: ícono + hora
+    // Círculo: próxima → ícono + hora. En curso → ANILLO que se vacía + minutos.
+    // Sin póster: la cara tiñe el accesorio de un solo color. Jerarquía, no color.
     private var circular: some View {
         ZStack {
             AccessoryWidgetBackground()
-            VStack(spacing: 1) {
-                Image("otmark").resizable().scaledToFit().frame(height: 13)
-                if let n = entry.next {
-                    Text(n.time).font(.system(size: 13, weight: .semibold)).widgetAccentable()
+            if let l = entry.live {
+                Gauge(value: 1 - l.fraction) { EmptyView() }
+                    .gaugeStyle(.accessoryCircularCapacity)
+                    .widgetAccentable()
+                Text("\(l.minutesLeft)").font(.system(size: 17, weight: .semibold)).monospacedDigit()
+                    .accessibilityLabel(L.endsIn(l.minutesLeft))
+            } else {
+                VStack(spacing: 1) {
+                    Image("otmark").resizable().scaledToFit().frame(height: 13)
+                    if let n = entry.next {
+                        Text(n.time).font(.system(size: 13, weight: .semibold)).widgetAccentable()
+                    }
                 }
             }
         }
     }
 
-    // Esquina: ícono + etiqueta curva
+    // Esquina: ícono + etiqueta curva (en curso: los minutos)
     private var corner: some View {
         Image("otmark").resizable().scaledToFit().frame(width: 15, height: 15)
             .widgetLabel {
-                Text(entry.next.map { "\($0.time)  \($0.title)" } ?? "Otrofestiv")
+                if let n = entry.next {
+                    if let l = entry.live { Text(L.endsIn(l.minutesLeft)) }
+                    else { Text("\(n.time)  \(n.title)") }
+                } else { Text("Otrofestiv") }
             }
     }
 
-    // Rectangular (rico, también Smart Stack)
+    // Rectangular (rico, también Smart Stack): a color → entra el póster.
     private var rectangular: some View {
-        VStack(alignment: .leading, spacing: 2) {
-            if let n = entry.next {
-                Text(n.title).font(.headline).lineLimit(2)
-                Text("\(n.dayLabel) · \(n.time)")
-                    .font(.caption2).lineLimit(1).widgetAccentable()
-            } else {
-                Text(L.noPlanTitle).font(.headline)
-                Text(L.noPlanDetail)
-                    .font(.caption2).foregroundStyle(.secondary).lineLimit(2)
+        HStack(alignment: .top, spacing: 8) {
+            if let n = entry.next, let data = SharedPlan.loadPoster(n.poster), let ui = UIImage(data: data) {
+                Image(uiImage: ui).resizable().aspectRatio(2.0 / 3.0, contentMode: .fill)
+                    .frame(width: 34, height: 51)
+                    .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+            }
+            VStack(alignment: .leading, spacing: 2) {
+                if let n = entry.next {
+                    Text(n.title).font(.headline).lineLimit(2)
+                    if let l = entry.live {
+                        Spacer(minLength: 2)
+                        ProgressView(value: l.fraction).progressViewStyle(.linear).tint(.primary)
+                        Text(L.endsIn(l.minutesLeft)).font(.caption2).monospacedDigit().lineLimit(1)
+                    } else {
+                        Text("\(n.dayLabel) · \(n.time)")
+                            .font(.caption2).lineLimit(1).widgetAccentable()
+                    }
+                } else {
+                    Text(L.noPlanTitle).font(.headline)
+                    Text(L.noPlanDetail)
+                        .font(.caption2).foregroundStyle(.secondary).lineLimit(2)
+                }
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -120,12 +175,14 @@ private let _sample = NextUp(
 #Preview("Rectangular", as: .accessoryRectangular) {
     OtrofestivComplication()
 } timeline: {
-    NextUpEntry(date: .now, next: _sample)
-    NextUpEntry(date: .now, next: nil)
+    NextUpEntry(date: .now, next: _sample, live: nil)
+    NextUpEntry(date: .now, next: _sample, live: LiveState(fraction: 0.66, minutesLeft: 23))
+    NextUpEntry(date: .now, next: nil, live: nil)
 }
 
 #Preview("Circular", as: .accessoryCircular) {
     OtrofestivComplication()
 } timeline: {
-    NextUpEntry(date: .now, next: _sample)
+    NextUpEntry(date: .now, next: _sample, live: nil)
+    NextUpEntry(date: .now, next: _sample, live: LiveState(fraction: 0.66, minutesLeft: 23))
 }

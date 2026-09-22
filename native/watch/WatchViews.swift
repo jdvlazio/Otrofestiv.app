@@ -7,14 +7,15 @@ import SwiftUI
 // Poster chico (2:3) — color/marca, como Mi Plan del teléfono. Placeholder para eventos.
 struct PosterThumb: View {
     let path: String?
+    var width: CGFloat = 30   // la fila en curso lo pide más grande (héroe, 21 sep 2026)
     private var url: URL? { PlanCompute.posterURL(path) }
     var body: some View {
         // RemoteImage (NSCache + caché HTTP) en vez de AsyncImage: en listas
         // paginadas de watchOS AsyncImage cancela al deslizar y no cachea → los
         // thumbnails cargaban solo en el día abierto (o al entrar al detalle).
         RemoteImage(url: url) { placeholder }
-            .frame(width: 30, height: 45)
-            .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+            .frame(width: width, height: width * 1.5)
+            .clipShape(RoundedRectangle(cornerRadius: width > 30 ? 6 : 5, style: .continuous))
     }
     private var placeholder: some View {
         Rectangle().fill(OT.warm.opacity(0.08))
@@ -53,5 +54,22 @@ struct FailScreen: View {
             Text(reason).font(.caption2).foregroundStyle(OT.secondary).multilineTextAlignment(.center)
             Button(L.retry, action: retry).font(.footnote).tint(OT.amber)
         }.padding()
+    }
+}
+
+// ── Barra de progreso en vivo (21 sep 2026) ───────────────────────────────────
+// Blanco cálido, no ámbar: el ámbar es hora + acción; el progreso es estado.
+struct LiveBar: View {
+    let fraction: Double
+    var height: CGFloat = 4
+    var body: some View {
+        GeometryReader { g in
+            ZStack(alignment: .leading) {
+                Capsule().fill(OT.warm.opacity(0.16))
+                Capsule().fill(OT.warm).frame(width: max(height, g.size.width * fraction))
+            }
+        }
+        .frame(height: height)
+        .accessibilityHidden(true)
     }
 }

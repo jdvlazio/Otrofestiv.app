@@ -34,6 +34,28 @@ enum PlanComputeTests {
         check("durationMinutes 124", PlanCompute.durationMinutes(item("X", nil, nil, duration: "124 min")) == 124)
         check("durationMinutes nil", PlanCompute.durationMinutes(item("X", nil, nil)) == nil)
 
+        // ── Progreso en vivo (21 sep 2026) ────────────────────────────────────
+        // Bedford Park: 14:30, 121 min → termina 16:31. A las 16:08 faltan 23.
+        let bp = item("Bedford Park", "2026-09-12", "14:30", duration: "121 min")
+        let bpStart = PlanCompute.startDate(bp)!
+        let t1608 = bpStart.addingTimeInterval(98 * 60)
+        check("minutesLeft 16:08 → 23", PlanCompute.minutesLeft(bp, now: t1608) == 23)
+        check("progress 16:08 → 98/121", abs((PlanCompute.progress(bp, now: t1608) ?? -1) - 98.0 / 121.0) < 0.001)
+        check("endTimeLabel 16:31", PlanCompute.endTimeLabel(bp) == "16:31")
+        // redondeo hacia arriba: a 16:30:20 todavía falta 1 min, no 0
+        check("minutesLeft 16:30:20 → 1", PlanCompute.minutesLeft(bp, now: bpStart.addingTimeInterval(120 * 60 + 20)) == 1)
+        check("minutesLeft en el primer segundo → 121", PlanCompute.minutesLeft(bp, now: bpStart) == 121)
+        check("progress arranca en 0", PlanCompute.progress(bp, now: bpStart) == 0)
+        // fuera de la función: nil (antes y después), no 0 ni 1
+        check("minutesLeft antes → nil", PlanCompute.minutesLeft(bp, now: bpStart.addingTimeInterval(-60)) == nil)
+        check("progress después → nil", PlanCompute.progress(bp, now: bpStart.addingTimeInterval(121 * 60)) == nil)
+        check("progress sin hora → nil", PlanCompute.progress(item("X", "2026-09-12", nil), now: t1608) == nil)
+        // current: la en curso, no la siguiente; y sin en curso → nil
+        let later = item("I Play Rocky", "2026-09-12", "18:00", duration: "90 min")
+        check("current = la en curso", PlanCompute.current([later, bp], now: t1608)?.title == "Bedford Park")
+        check("current sin en curso → nil", PlanCompute.current([later, bp], now: bpStart.addingTimeInterval(125 * 60)) == nil)
+        check("nextUpcoming sigue prefiriendo la en curso", PlanCompute.nextUpcoming([later, bp], now: t1608)?.title == "Bedford Park")
+
         // ── isLive ────────────────────────────────────────────────────────────
         let live = item("L", "2026-07-04", "10:00", duration: "124 min")   // 10:00–12:04
         let start = PlanCompute.startDate(live)!

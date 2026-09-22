@@ -76,18 +76,56 @@ private struct MiPlan: View {
 private struct DayPage: View {
     let section: DaySection
     var body: some View {
-        List {
-            Section {
-                ForEach(section.items) { item in
-                    NavigationLink(value: item) { PlanRow(item: item) }
-                        .listRowInsets(EdgeInsets(top: 6, leading: 8, bottom: 6, trailing: 8))
+        // TimelineView: la fila en curso avanza sola una vez por minuto (también en
+        // pantalla siempre activa). Sin esto «Termina en N min» se congelaba al abrir.
+        TimelineView(.everyMinute) { ctx in
+            List {
+                Section {
+                    ForEach(section.items) { item in
+                        NavigationLink(value: item) {
+                            if PlanCompute.isLive(item, now: ctx.date) { LiveRow(item: item, now: ctx.date) }
+                            else { PlanRow(item: item) }
+                        }
+                            .listRowInsets(EdgeInsets(top: 6, leading: 8, bottom: 6, trailing: 8))
+                    }
+                } header: {
+                    Text(section.label)
+                        .font(.caption2).fontWeight(.semibold).tracking(1.2)
+                        .foregroundStyle(OT.faint)
                 }
-            } header: {
-                Text(section.label)
-                    .font(.caption2).fontWeight(.semibold).tracking(1.2)
-                    .foregroundStyle(OT.faint)
             }
         }
+    }
+}
+
+// La fila EN CURSO (21 sep 2026): tarjeta propia, póster más grande, barra y la
+// frase del teléfono. Las demás filas quedan como estaban (PlanRow).
+private struct LiveRow: View {
+    let item: ScheduleItem
+    let now: Date
+    var body: some View {
+        HStack(alignment: .top, spacing: 9) {
+            PosterThumb(path: item.poster, width: 46)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(L.now).font(.system(size: 9, weight: .bold)).foregroundStyle(OT.green)
+                Text(item.title)
+                    .font(.subheadline).fontWeight(.semibold).foregroundStyle(OT.warm)
+                    .lineLimit(2).truncationMode(.tail)
+                    .fixedSize(horizontal: false, vertical: true)
+                if let v = item.venue {
+                    Text(v).font(.caption2).foregroundStyle(OT.secondary).lineLimit(1)
+                }
+                Spacer(minLength: 4)
+                LiveBar(fraction: PlanCompute.progress(item, now: now) ?? 0)
+                if let m = PlanCompute.minutesLeft(item, now: now) {
+                    Text(L.endsIn(m)).font(.caption2).fontWeight(.medium).monospacedDigit()
+                        .foregroundStyle(OT.warm)
+                }
+            }
+        }
+        .padding(8)
+        .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(OT.warm.opacity(0.06)))
+        .accessibilityElement(children: .combine)
     }
 }
 
