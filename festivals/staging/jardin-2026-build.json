@@ -464,7 +464,7 @@
    "synopsis_en": "Romero is a compelling and deeply moving look at the life of Archbishop Oscar Romero of El Salvador, who made the ultimate sacrifice in a passionate stand against social injustice and oppression in his county. This film chronicles the transformation of Romero from an apolitical, complacent priest to a committed leader of the Salvadoran people."
   },
   {
-   "title": "Tres Mujeres guerreras",
+   "title": "Tres Mujeres guerreras + Ubuntu: La métrica de los afectos",
    "type": "film",
    "section": "🎬 Muestra Central",
    "country": "Colombia, Alemania",
@@ -1540,7 +1540,7 @@
    "is_free": true
   },
   {
-   "title": "Tres Mujeres guerreras",
+   "title": "Tres Mujeres guerreras + Ubuntu: La métrica de los afectos",
    "type": "film",
    "section": "🎬 Muestra Central",
    "country": "Colombia, Alemania",
@@ -1841,7 +1841,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-21T19:52:32",
+  "fecha": "2026-09-21T20:07:45",
   "plan_sha": "4977a7663617bd88",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"

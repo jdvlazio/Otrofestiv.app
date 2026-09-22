@@ -194,6 +194,10 @@ def main():
                             it[c if c != 'genero' else 'genero'] = ob[c]
                     it['_sin_ficha_en_la_web'] = True
                 reg['film_list'].append(it)
+            # EL TÍTULO NOMBRA A LAS DOS. El festival no le pone nombre al
+            # bloque, y titularlo con la primera escondía la segunda en la
+            # tarjeta — lo caza [titulo-programa-incompleto].
+            reg['titulo'] = ' + '.join(it['titulo'] for it in reg['film_list'])
             funciones.append(reg)
             continue
 

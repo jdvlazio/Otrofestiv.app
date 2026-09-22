@@ -957,6 +957,36 @@ export const FESTIVAL_CONFIG={
     tagline:'Festival de Cine Colombiano al Campo',
     films:null,posters:null,lbSlugs:{}
   },
+  'jardin2026': {
+    name:'Festival de Cine de Jardín',displayName:'Festival de Cine de Jardín',
+    fullName:'11° Festival de Cine de Jardín — Ecos de Voces Silenciadas',shortName:'JARDÍN',
+    city:'Jardín',country:'CO',
+    dates:'24–27 SEP',dates_en:'SEP 24–27',year:2026,timezoneOffset:'-05:00',
+    // EL AFICHE OFICIAL, estirado a 2:3 como manda la regla del keyArt: ni
+    // bandas, ni blur, ni recorte. Viene en 1080×1440 (3:4) del post de
+    // anuncio de @festicinejardin —arte de @elgorditoviolento, con los
+    // líderes sociales retratados y la basílica—, y de 0,750 a 0,667 el ancho
+    // se estrecha un 11%, por debajo del 16% que la doctrina da por
+    // imperceptible. Lleva impresas las fechas, así que [keyart-fechas] lo
+    // contrasta contra `dates`.
+    keyArt:'/assets/keyart/jardin2026.jpg',
+    storageKey:'jardin2026_',festivalStartStr:'2026-09-24T00:00:00',festivalEndStr:'2026-09-27T23:59:00',
+    festivalDates:{'2026-09-24':'2026-09-24','2026-09-25':'2026-09-25','2026-09-26':'2026-09-26','2026-09-27':'2026-09-27'},
+    days:[{k:'2026-09-24',d:24,lbl:'JUE'},{k:'2026-09-25',d:25,lbl:'VIE'},{k:'2026-09-26',d:26,lbl:'SÁB'},{k:'2026-09-27',d:27,lbl:'DOM'}],
+    dayKeys:['2026-09-24','2026-09-25','2026-09-26','2026-09-27'],
+    dayShort:{'2026-09-24':'JUE 24','2026-09-25':'VIE 25','2026-09-26':'SÁB 26','2026-09-27':'DOM 27'},
+    dayShort_en:{'2026-09-24':'THU 24','2026-09-25':'FRI 25','2026-09-26':'SAT 26','2026-09-27':'SUN 27'},
+    dayLong:{'2026-09-24':'Jueves 24 de septiembre','2026-09-25':'Viernes 25 de septiembre','2026-09-26':'Sábado 26 de septiembre','2026-09-27':'Domingo 27 de septiembre'},
+    prioLimit:5,
+    // EL SUBTÍTULO ES EL LEMA DE LA EDICIÓN, no un descriptor. La forma de la
+    // casa es que el subtítulo diga QUÉ ES el festival, pero acá el nombre ya
+    // lo dice entero («Festival de Cine de Jardín») y repetirlo sería el error
+    // que la regla existe para evitar. El lema es lo que el festival pone
+    // debajo de su nombre en el afiche.
+    tagline:'Ecos de Voces Silenciadas',
+    ticketing_model:'mixed', // toda la programación es gratuita (lámina 1 del carrusel); sin ticket_url no se pinta nada
+    films:null,posters:null,lbSlugs:{}
+  },
   'narrarelfuturo2026': {
     name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
     city:'Bogotá',country:'CO',

@@ -91,13 +91,32 @@ def limpio(d):
 
 
 def _cobertura(films):
-    """Cuántas funciones traen cada campo. La unidad de la comparación: si un
-    campo baja, alguien perdió datos entre una publicación y la siguiente."""
+    """Cuántas veces aparece cada campo, DENTRO DE LOS PROGRAMAS TAMBIÉN.
+
+    La unidad de la comparación: si un campo baja, alguien perdió datos entre
+    una publicación y la siguiente.
+
+    Y `film_list` cuenta. Contando solo el primer nivel, convertir dos
+    funciones sueltas en el programa que de verdad son —dos películas en una
+    sesión, con un solo conversatorio, que es un modelo que la app tiene desde
+    hace muchas ediciones— parecía una PÉRDIDA: los directores y los años no
+    desaparecían, se movían a la lista de obras y el contador no sabía mirar
+    ahí. Pasó con Jardín 2026 el 21 sep y bloqueó una publicación correcta.
+
+    Es simétrico —los dos lados se cuentan igual—, así que la comparación
+    sigue siendo válida y además deja de mentir sobre los festivales que usan
+    programas, que son casi todos los de cortos."""
     c = collections.Counter()
     for f in films:
         for k, v in f.items():
+            if k == 'film_list':
+                continue
             if v not in (None, '', [], {}):
                 c[k] += 1
+        for it in (f.get('film_list') or []):
+            for k, v in it.items():
+                if v not in (None, '', [], {}):
+                    c[k] += 1
     return c
 
 
