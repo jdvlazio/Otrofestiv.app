@@ -77,6 +77,17 @@ PAIS_POR_SECCION = {
         'es ser colombiana.'),
 }
 
+# EL RÓTULO ES EL NOMBRE cuando la casilla no proyecta nada. La lámina del
+# sábado rotula «ACTO DE PREMIACIÓN» y debajo pone la línea de la sección
+# —«Competencia nacional de cortometrajes»—, que es de la sección y no del
+# acto. Titulándolo con esa línea, TRES casillas acababan llamándose igual, y
+# la app identifica las obras POR TÍTULO: abrir cualquiera de las tres mostraba
+# el contenido de la primera. Lo vio Juan en la app (22 sep): «Competencia
+# nacional y Caleidoscopio están mostrando los mismos 8 cortometrajes».
+TITULO_DEL_ROTULO = {
+    'ACTO DE PREMIACIÓN': 'Acto de premiación — Caleidoscopio',
+}
+
 SINOPSIS_EN_DISPUTA = {'relatos del camino', 'un aparato para detectar fantasmas'}
 
 SEDE_PLAN = {
@@ -179,6 +190,8 @@ def main():
             reg['sala'] = SALA[sede_cruda]
         if f.get('rotulo'):
             reg['_rotulo'] = f['rotulo']
+            if f['rotulo'] in TITULO_DEL_ROTULO and not f.get('cortos'):
+                tit = reg['titulo'] = TITULO_DEL_ROTULO[f['rotulo']]
 
         # UN BLOQUE DE CALEIDOSCOPIO ES UN PROGRAMA. La lámina lista sus cortos
         # con director y metraje, y cada uno tiene ficha en el catálogo: se
@@ -216,6 +229,19 @@ def main():
             reg['titulo'] = ' + '.join(it['titulo'] for it in reg['film_list'])
             funciones.append(reg)
             continue
+
+        # DOS BLOQUES DISTINTOS NO PUEDEN LLAMARSE IGUAL. Caleidoscopio se
+        # proyecta en dos tandas —8 cortos el viernes, 14 el sábado, ninguno
+        # repetido— y las dos casillas llevan la misma línea de sección. La app
+        # identifica las obras POR TÍTULO, así que abrir cualquiera mostraba el
+        # contenido de la primera: los mismos 8 en las dos tarjetas.
+        #
+        # Se numeran por orden de proyección, que es el vocabulario del PROPIO
+        # festival: su post de Muestra Central se titula «Parte I».
+        if f.get('cortos'):
+            _n_cal = sum(1 for x in funciones if x.get('_caleidoscopio')) + 1
+            reg['_caleidoscopio'] = _n_cal
+            tit = reg['titulo'] = f'{tit} · Parte {_n_cal}'
 
         if f.get('cortos'):
             reg['seccion'] = 'CALEIDOSCOPIO'

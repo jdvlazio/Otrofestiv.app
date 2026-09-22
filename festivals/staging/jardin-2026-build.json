@@ -520,7 +520,7 @@
    "is_free": true
   },
   {
-   "title": "Competencia nacional de cortometrajes",
+   "title": "Competencia nacional de cortometrajes · Parte 1",
    "type": "film",
    "section": "🔮 CALEIDOSCOPIO",
    "country": "Colombia",
@@ -1238,7 +1238,7 @@
    "title_en": "A Song for My Land"
   },
   {
-   "title": "Competencia nacional de cortometrajes",
+   "title": "Competencia nacional de cortometrajes · Parte 2",
    "type": "film",
    "section": "🔮 CALEIDOSCOPIO",
    "country": "Colombia",
@@ -1593,7 +1593,7 @@
    "is_free": true
   },
   {
-   "title": "Competencia nacional de cortometrajes",
+   "title": "Acto de premiación — Caleidoscopio",
    "type": "event",
    "section": "🎬 Muestra Central",
    "duration": "60 min",
@@ -1919,7 +1919,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-22T06:19:30",
+  "fecha": "2026-09-22T07:07:58",
   "plan_sha": "4977a7663617bd88",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"
