@@ -41,7 +41,7 @@ final class PlanStore: ObservableObject {
                 .value
             guard let row = rows.first,
                   let schedule = row.savedAgenda?.schedule, !schedule.isEmpty else {
-                SharedPlan.save(nil)
+                SharedPlan.saveSnapshot(nil)
                 state = .empty; return
             }
             festival = row.festivalId
@@ -70,8 +70,8 @@ final class PlanStore: ObservableObject {
                           poster: n.poster)
         }
         let snap = PlanSnapshot(current: pack(cur), next: pack(nxt))
-        guard snap.current != nil || snap.next != nil else { SharedPlan.save(nil); return }
-        SharedPlan.save(snap)
+        guard snap.current != nil || snap.next != nil else { SharedPlan.saveSnapshot(nil); return }
+        SharedPlan.saveSnapshot(snap)
         // Pósters chicos al App Group (el widget no baja imágenes). Al llegar, se
         // vuelve a publicar para que el widget los pinte.
         for path in [cur?.poster, nxt?.poster].compactMap({ $0 }) { cachePoster(path) }

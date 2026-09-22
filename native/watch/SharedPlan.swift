@@ -43,9 +43,11 @@ enum SharedPlan {
     static let key = "nextUp"          // legado: solo la próxima (widgets viejos)
     static let snapshotKey = "planSnapshot"
 
-    static func save(_ n: NextUp?) { save(PlanSnapshot(current: nil, next: n)) }
+    static func save(_ n: NextUp?) { saveSnapshot(PlanSnapshot(current: nil, next: n)) }
 
-    static func save(_ snap: PlanSnapshot?) {
+    // Nombre distinto a propósito: con dos save(_:) que aceptan nil el compilador
+    // no sabe cuál elegir («ambiguous use of 'save'», cazado en el archive 21 sep).
+    static func saveSnapshot(_ snap: PlanSnapshot?) {
         guard let d = UserDefaults(suiteName: suite) else { return }
         if let snap, let data = try? JSONEncoder().encode(snap) {
             d.set(data, forKey: snapshotKey)
