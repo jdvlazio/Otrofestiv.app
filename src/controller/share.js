@@ -149,7 +149,9 @@ export async function shareDiary(){
       return;
     }
   }catch(e){ if(e&&e.name==='AbortError') return; }
-  _dlDirect(c.toDataURL('image/png'));
+  const _durl=c.toDataURL('image/png');
+  if(await _shareNativeImage(fname,_durl,`${t('diary_eyebrow')} · ${cfg.name||'Otrofestiv'}`)) return;
+  _dlDirect(_durl);
 }
 
 export async function sharePlan(_yaPregunte){
@@ -199,6 +201,8 @@ export async function sharePlan(_yaPregunte){
     if(e&&e.name==='AbortError') return;  // el usuario cerró el sheet — no es error
     // cualquier otro error cae al fallback de descarga
   }
+  // App nativa de Android: por el menú del sistema (ver _shareNativeImage)
+  if(await _shareNativeImage(fname,dataUrl,`${t('share_mi_plan')} · ${cfg.name||'Otrofestiv'}`)) return;
   // Fallback: descarga directa (desktop, sin file-share, o conversión/share fallida)
   _dlDirect(dataUrl);
 }
@@ -335,6 +339,33 @@ function _rr(c,x,y,w,h,r){
   c.lineTo(x+w,y+h-r);c.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
   c.lineTo(x+r,y+h);c.quadraticCurveTo(x,y+h,x,y+h-r);
   c.lineTo(x,y+r);c.quadraticCurveTo(x,y,x+r,y);c.closePath();
+}
+
+// ── Imagen en la app nativa de ANDROID (Capacitor) ───────────────────────────
+// La vista web embebida no tiene gestor de descargas, así que el <a download> de
+// _dlDirect no escribe nada — y el aviso «Imagen guardada» salía igual, porque era
+// un temporizador (22 sep 2026, usuario de Android: «dice image saved pero no
+// aparece»). Mismo camino que el calendario: Filesystem + Share del sistema, y el
+// aviso solo si el sistema devolvió. Dueño único para el plan Y el diario (la
+// revisión cazó que el diario tenía el mismo camino muerto). El iPhone no pasa
+// por acá: su app es WKWebView, sin window.Capacitor, y su Web Share sí funciona.
+// Devuelve true si se hizo cargo (nativo), false si hay que seguir por la web.
+async function _shareNativeImage(fname,dataUrl,title){
+  if(!window.Capacitor?.isNativePlatform()) return false;
+  try{
+    const {Filesystem,Share}=window.Capacitor.Plugins;
+    // base64 crudo, sin el prefijo data: — con el prefijo el PNG sale corrupto
+    const result=await Filesystem.writeFile({path:fname,data:dataUrl.split(',')[1],directory:'CACHE'});
+    await Share.share({title,files:[result.uri]});
+    showToast(t('toast_compartido'),'info');
+  }catch(e){
+    // @capacitor/share rechaza con exactamente "Share canceled" cuando el usuario
+    // cierra el menú: no es error. Anclado al inicio para no tragar otros mensajes.
+    if(/^share cancel/i.test(String(e?.message||''))) return true;
+    console.error('share image error:',e);
+    showToast(t('toast_compartir_err'),'err'); // la imagen SÍ se generó: lo que falló fue compartirla
+  }
+  return true;
 }
 
 function _dlDirect(dataUrl){

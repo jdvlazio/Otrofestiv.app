@@ -2901,3 +2901,69 @@ test('T192 — con una función en curso, Sugerencias no ofrece una que empiece 
   expect(s.every(x => toMinT(x.slice(0, 5)) >= toMinT('16:31')), 'nada de lo ofrecido empieza antes de que termine la que está en curso').toBe(true);
 });
 function toMinT(hhmm) { const [h, m] = hhmm.split(':').map(Number); return h * 60 + m; }
+
+// ── T193 — Android (Capacitor): bajar el plan como imagen usa el menú del sistema ──
+// Reportado por un usuario de Android (22 sep 2026): «dice image saved pero no
+// aparece». La vista web embebida no tiene gestor de descargas: el <a download>
+// no escribía nada y el aviso «Imagen guardada ✓» salía igual, porque era un
+// temporizador. Ahora en la app nativa se escribe el PNG con Filesystem y se abre
+// Share, como ya hacía el calendario; el aviso solo sale si el sistema devolvió.
+const _ANDROID = async (page, modo, accion = 'sharePlan') => page.evaluate(async ([modo, accion]) => {
+  const f = FILMS.find(x => x.day === '2026-09-11' && !x.is_cortos);
+  state.set('savedAgenda', { schedule: [{ ...f, _title: f.title }] }); saveSavedAgenda();
+  if (accion === 'shareDiary') { watched.add(f.title); saveWatched(); }
+  try { localStorage.setItem('otrofestiv_display_name', 'Juanda'); } catch (e) {}
+  const tt = document.getElementById('prio-toast'); if (tt) { tt.style.opacity = '0'; tt.textContent = ''; }
+  const calls = { write: [], share: [], anchor: 0 };
+  navigator.canShare = () => false;           // la vista embebida no comparte archivos
+  const _click = HTMLAnchorElement.prototype.click;
+  HTMLAnchorElement.prototype.click = function () { if (this.download) calls.anchor++; };
+  window.Capacitor = { isNativePlatform: () => true, Plugins: {
+    Filesystem: { writeFile: async a => { calls.write.push(a); if (modo === 'nowrite') throw new Error('EACCES'); return { uri: 'file:///cache/' + a.path }; } },
+    Share: { share: async a => { calls.share.push(a); if (modo === 'cancel') throw new Error('Share canceled'); if (modo === 'fail') throw new Error('boom'); return {}; } },
+  } };
+  try {
+    const b = document.createElement('button'); b.setAttribute('data-action', accion); document.body.appendChild(b); b.click(); b.remove();
+    // esperar la SEÑAL (la llamada al sistema o el aviso), no un tiempo fijo
+    for (let i = 0; i < 60 && !(calls.share.length || (modo === 'nowrite' && calls.write.length) ) ; i++) await new Promise(r => setTimeout(r, 50));
+    await new Promise(r => setTimeout(r, 400));
+    const toast = document.getElementById('prio-toast');
+    return { ...calls, toast: toast && toast.style.opacity === '1' ? toast.textContent.trim() : '' };
+  } finally {
+    HTMLAnchorElement.prototype.click = _click; delete window.Capacitor;
+  }
+}, [modo, accion]);
+
+test('T193 — Android: la imagen del plan sale por Filesystem + Share del sistema, no por un <a download> muerto', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-11T10:00:00-04:00');
+  const r = await _ANDROID(page, 'ok');
+  expect(r.write.length, 'se escribe UN archivo').toBe(1);
+  expect(r.write[0].path, 'un PNG con nombre del festival').toMatch(/^otrofestiv-.*\.png$/);
+  expect(r.write[0].data, 'base64 de un PNG (sin el prefijo data:)').toMatch(/^iVBOR/);
+  expect(r.write[0].directory, 'en la caché, como el calendario').toBe('CACHE');
+  expect(r.share.length, 'y se abre el menú del sistema').toBe(1);
+  expect(r.share[0].files, 'con ese archivo').toEqual(['file:///cache/' + r.write[0].path]);
+  expect(r.anchor, 'el <a download> no se toca: en la vista embebida no hace nada').toBe(0);
+  expect(r.toast, 'aviso de compartido, no de «guardada»').toMatch(/Compartido|Shared/);
+});
+
+test('T193b — Android: cerrar el menú no es error; si el sistema falla, se dice que no se pudo COMPARTIR', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-11T10:00:00-04:00');
+  const c = await _ANDROID(page, 'cancel');
+  expect(c.toast, 'cerrar el menú: sin aviso alguno (ni guardada, ni error)').toBe('');
+  const f = await _ANDROID(page, 'fail');
+  expect(f.toast, 'falla del menú: «no se pudo compartir», no «error al generar» (la imagen SÍ se generó)').toMatch(/compartir|share/i);
+  expect(f.toast, 'y nunca «guardada»').not.toMatch(/guardada|saved/i);
+  const w = await _ANDROID(page, 'nowrite');
+  expect(w.share.length, 'si no se pudo escribir el archivo, no se abre el menú').toBe(0);
+  expect(w.toast, 'y se avisa').toMatch(/compartir|share/i);
+});
+
+test('T193c — Android: el DIARIO compartible va por el mismo camino (la revisión cazó el mismo <a download> muerto)', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-11T10:00:00-04:00');
+  const r = await _ANDROID(page, 'ok', 'shareDiary');
+  expect(r.write.length, 'se escribe el PNG del diario').toBe(1);
+  expect(r.write[0].path, 'con nombre de diario').toMatch(/^otrofestiv-diario-.*\.png$/);
+  expect(r.share.length, 'y se abre el menú del sistema').toBe(1);
+  expect(r.anchor, 'sin <a download>').toBe(0);
+});
