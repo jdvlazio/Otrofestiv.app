@@ -317,7 +317,7 @@
    "seccion": "Muestra Central"
   },
   {
-   "titulo": "Competencia nacional de cortometrajes",
+   "titulo": "Competencia nacional de cortometrajes · Parte 1",
    "dia": "2026-09-25",
    "hora": "19:15",
    "sede": "Placa deportiva Simón Bolívar",
@@ -327,6 +327,7 @@
     "date": "2026-09-21"
    },
    "_rotulo": "CALEIDOSCOPIO",
+   "_caleidoscopio": 1,
    "seccion": "CALEIDOSCOPIO",
    "is_cortos": true,
    "duracion_min": 100,
@@ -882,7 +883,7 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Competencia nacional de cortometrajes",
+   "titulo": "Competencia nacional de cortometrajes · Parte 2",
    "dia": "2026-09-26",
    "hora": "19:00",
    "sede": "Placa deportiva Simón Bolívar",
@@ -892,6 +893,7 @@
     "date": "2026-09-21"
    },
    "_rotulo": "CALEIDOSCOPIO",
+   "_caleidoscopio": 2,
    "seccion": "CALEIDOSCOPIO",
    "is_cortos": true,
    "duracion_min": 206,
@@ -1167,7 +1169,7 @@
    "_sin_ficha_en_la_web": true
   },
   {
-   "titulo": "Competencia nacional de cortometrajes",
+   "titulo": "Acto de premiación — Caleidoscopio",
    "dia": "2026-09-26",
    "hora": "23:00",
    "sede": "Placa deportiva Simón Bolívar",

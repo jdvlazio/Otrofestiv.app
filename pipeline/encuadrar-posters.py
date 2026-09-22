@@ -257,12 +257,43 @@ def main():
                 .stdout.decode().split(':')[-1])
         if (W, H) != (LIENZO_W, LIENZO_H):
             fuera.append(f'{n} {W}×{H}')
+    # ── LA SEGUNDA PASADA NO PUEDE CAMBIAR NADA ─────────────────────────────
+    # Este paso REESCRIBE el archivo en el sitio, y eso lo obliga a ser
+    # idempotente. No lo era: el zoom del 4% y el recorte al centro se
+    # aplicaban en cada corrida sobre el resultado de la anterior, y montar un
+    # festival lleva una docena de corridas. Los afiches de TMDB de Jardín
+    # acabaron ampliados ~1,6× y sin su título —«La sed del viento» perdió
+    # entero «THE WIND'S THIRST»—. Lo vio Juan en la app, no el repo.
+    #
+    # Así que el paso se comprueba a sí mismo: vuelve a MEDIR lo que acaba de
+    # escribir y cuenta cuántos tocaría otra vez. Tiene que ser CERO. No es
+    # una opinión sobre el resultado, es la invariante de un paso que
+    # sobrescribe: correrlo dos veces = correrlo una.
+    repetiria = []
+    for real, n, *_ in plan:
+        m = medir(real)
+        t2, b2, l2, r2 = m[0] if m else (0, 0, 0, 0)
+        W = int(subprocess.run(['sips', '-g', 'pixelWidth', real], capture_output=True)
+                .stdout.decode().split(':')[-1])
+        H = int(subprocess.run(['sips', '-g', 'pixelHeight', real], capture_output=True)
+                .stdout.decode().split(':')[-1])
+        if not ((W, H) == (LIENZO_W, LIENZO_H) and not (min(t2, b2) or min(l2, r2))):
+            repetiria.append(f'{n} ({W}×{H}, marco ↑{t2} ↓{b2} ←{l2} →{r2})')
+
     print(f'\nVERIFICACIÓN · fallos de sips {fallos} · '
           f'con marco {len(quedan)} · fuera de {LIENZO_W}×{LIENZO_H} {len(fuera)}')
     for x in quedan[:12]:
         print(f'   ⚠ {x}')
     for x in fuera[:12]:
         print(f'   ⚠ {x}')
+    if repetiria:
+        print(f'\n✗ NO ES IDEMPOTENTE: una segunda pasada volvería a tocar '
+              f'{len(repetiria)} afiche(s), y cada pasada les quita píxeles:')
+        for x in repetiria[:10]:
+            print(f'   ✗ {x}')
+        sys.exit(1)
+    print(f'✓ idempotente: una segunda pasada no tocaría ninguno de los '
+          f'{len(plan)}')
 
 
 if __name__ == '__main__':
