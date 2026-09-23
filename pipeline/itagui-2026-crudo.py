@@ -94,6 +94,26 @@ _ACCESO = {
 }
 
 
+# EL TÍTULO DE LA OBRA, cuando el festival lo imprime con un artículo que la
+# obra no lleva. NO es la regla de «la palabra la pone el festival»: esa es
+# sobre SU vocabulario —secciones, tipos de actividad, nombres de sus eventos—
+# y este es un hecho sobre una película ajena, comprobable fuera.
+#
+# «Estancia», la ópera prima de Andrés Carmona Rivera. La lámina imprime «La
+# estancia» —verificado en las tres lecturas de OCR Y en la transcripción a
+# ojo, así que el artículo lo puso el festival, no nuestro parser— y la obra se
+# llama «Estancia» en sus cuatro fuentes propias:
+#   · Proimágenes Colombia (id 3121), la base oficial del cine colombiano
+#   · el tráiler de su productora, Policéfalo Films (vimeo.com/813500907)
+#   · RTVCPlay, coproductora, donde está la película
+#   · la prensa de su estreno (12 jun 2025)
+# Tabla y no regla: quitar artículos por patrón renombraría «El paseo 7» y «La
+# estancia» con el mismo criterio, y solo una de las dos está mal.
+TITULO_OBRA = {
+    'La estancia': 'Estancia',
+}
+
+
 # Los dos títulos que la lámina imprime sin rótulos, partidos a ojo:
 # título de verdad + lo que el festival escribe debajo.
 TITULO_PARTIDO = {
@@ -220,6 +240,7 @@ def main():
         corte = TITULO_PARTIDO.get(reg['titulo'])
         if corte:
             reg['titulo'], reg['_cola_titulo'] = corte
+        reg['titulo'] = TITULO_OBRA.get(reg['titulo'], reg['titulo'])
 
         inv = (f.get('invitados') or '').strip(' .')
         cartel = CARTEL_DE_ARCHIVO.get(f['titulo'])

@@ -96,6 +96,15 @@ def _enriquece(dst, it):
     """Copia del enriquecido SOLO lo que la fuente del festival no trae. La
     fuente manda: su duración es la que programó, su título es el que publicó."""
     for campo, origen in (('poster', ('poster', 'poster_tmdb', 'poster_url')),
+                          # DE DÓNDE SALIÓ ESE PÓSTER. El enriquecido lo escribe
+                          # —'tmdb' o 'oficial'— y aquí no se copiaba: como desde
+                          # #952 el afiche de TMDB se guarda en /assets/, el
+                          # `elif` de abajo ya no ve«image.tmdb.org» y lo marcaba
+                          # 'oficial' a todos. Las 25 de Itagüí decían ser del
+                          # festival y 21 eran de TMDB. No cambia cómo se pinta
+                          # —solo 'editorial' cambia la forma— pero la
+                          # procedencia es justo lo que este repo no inventa.
+                          ('posterSource', ('posterSource',)),
                           ('lbSlug', ('lbSlug',)), ('tmdb_id', ('tmdb_id',)),
                           ('synopsis', ('sinopsis', 'synopsis_es')),
                           # `sinopsis_en` también: el crudo la escribe con el

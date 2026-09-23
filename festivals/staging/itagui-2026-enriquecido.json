@@ -169,6 +169,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Estancia",
+   "tmdb_id": 1278956,
+   "titulo_original": "Estancia",
+   "poster_path": "/eaRJbp3ymarjCS8teIDRTKYkquv.jpg",
+   "synopsis_es": "La Estancia es una casa condenada a desaparecer en una ciudad que, como Medellín, ha sido despiadada con la memoria. Esta película es un viaje a las entrañas de un conventillo habitado por hombres viejos y solitarios que nos revelan sus vidas, sus amores, sus deseos, e incluso su visión de la muerte.",
+   "synopsis_en": "La Estancia is a house doomed to disappear in a city like Medellín, where memory is treated harshly. It's a journey into a boarding house inhabited by old, lonely men who reveal their lives, loves, desires, and even their view of death. Guillermo and Álvaro, a couple for over 50 years, recall a buried city where homosexuality was silenced. Raúl, Guillermo’s current partner, seems trapped in a daily hell of bitterness. Javier, the antithesis, is a mystic who wears a kimono, is Mormon, and works in multi-level marketing. This place holds as many rooms as possible universes, separated by endless stairs, dark corridors, and glowing thresholds. A house, a labyrinth, a family—fractured like any other—where dialogue unfolds in broken conversations, where one’s view becomes another’s question. A web of silence, conflict, and mystery. A place they never expected to end up in—and from which they may never leave.",
+   "genero": "Documental",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 85,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "estancia-2024",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Estancia",
+   "_director": "Andrés Carmona Rivera",
+   "_sondeado": "2026-09-23",
+   "poster": "/assets/itagui-2026/estancia.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Habitante",
    "tmdb_id": 1571285,
    "titulo_original": "Habitante",
@@ -451,17 +470,6 @@
    "posterSource": "oficial"
   },
   {
-   "titulo": "La estancia",
-   "pais": "Colombia",
-   "_fuente": "proimagenes",
-   "_proimagenes_id": "3121",
-   "_verificado": "director: Andrés Carmona Rivera",
-   "anio": 2025,
-   "duracion_min": 85,
-   "genero": "Documental",
-   "sinopsis": "En el centro de Medellín, una ciudad que ha sido inclemente con la memoria, los habitantes de una vieja casona, condenada a desaparecer, nos revelan sus vidas, sus amores y deseos. Guillermo y Álvaro, pareja por más de 50 años, recuerdan una sociedad soterrada donde la homosexualidad ha sido silenciada. Raúl, actual pareja de Guillermo, pareciera no encontrar salida a su infierno cotidiano de amargura. Javier, un místico, que con cierta candidez reconstruye las memorias de sus fracasos amorosos, es la antípoda a la vida desenfrenada de sus vecinos contiguos. Este lugar, que posee tantas habitaciones como universos posibles, sirve de estancia a esta polifonía de hombres viejos, solos y rebeldes, que jamás esperaron terminar allí."
-  },
-  {
    "titulo": "Clave de amor",
    "pais": "Colombia",
    "_fuente": "proimagenes",
@@ -629,6 +637,24 @@
    "_director": "Jaime Escallón",
    "_sondeado": "2026-09-23",
    "poster": "/assets/itagui-2026/el-pais-mas-feliz-del-mundo.jpg",
+   "posterSource": "tmdb"
+  },
+  "Estancia": {
+   "tmdb_id": 1278956,
+   "titulo_original": "Estancia",
+   "poster_path": "/eaRJbp3ymarjCS8teIDRTKYkquv.jpg",
+   "synopsis_es": "La Estancia es una casa condenada a desaparecer en una ciudad que, como Medellín, ha sido despiadada con la memoria. Esta película es un viaje a las entrañas de un conventillo habitado por hombres viejos y solitarios que nos revelan sus vidas, sus amores, sus deseos, e incluso su visión de la muerte.",
+   "synopsis_en": "La Estancia is a house doomed to disappear in a city like Medellín, where memory is treated harshly. It's a journey into a boarding house inhabited by old, lonely men who reveal their lives, loves, desires, and even their view of death. Guillermo and Álvaro, a couple for over 50 years, recall a buried city where homosexuality was silenced. Raúl, Guillermo’s current partner, seems trapped in a daily hell of bitterness. Javier, the antithesis, is a mystic who wears a kimono, is Mormon, and works in multi-level marketing. This place holds as many rooms as possible universes, separated by endless stairs, dark corridors, and glowing thresholds. A house, a labyrinth, a family—fractured like any other—where dialogue unfolds in broken conversations, where one’s view becomes another’s question. A web of silence, conflict, and mystery. A place they never expected to end up in—and from which they may never leave.",
+   "genero": "Documental",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 85,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "estancia-2024",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Estancia",
+   "_director": "Andrés Carmona Rivera",
+   "_sondeado": "2026-09-23",
+   "poster": "/assets/itagui-2026/estancia.jpg",
    "posterSource": "tmdb"
   },
   "Habitante": {
@@ -890,7 +916,6 @@
   "Función especial de cine",
   "Función especial sobre salud mental",
   "Función especial: Recordando a Luis Buñuel",
-  "La estancia",
   "Wings of Freedom",
   "Xie. defensa de la vida"
  ],
@@ -913,10 +938,6 @@
   },
   "Función especial: Recordando a Luis Buñuel": {
    "director": "",
-   "fecha": "2026-09-23"
-  },
-  "La estancia": {
-   "director": "Andrés Carmona Rivera",
    "fecha": "2026-09-23"
   },
   "Wings of Freedom": {
