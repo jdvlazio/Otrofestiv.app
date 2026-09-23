@@ -84,7 +84,15 @@ def _enriquece(dst, it):
                           # todos (SiembraFest: 84/84 en el catálogo, 0 en la app).
                           # La bandera se recalcula abajo, que si no el país llega
                           # solo y sin bandera — que es la mitad del dato.
-                          ('country', ('pais', 'country'))):
+                          # `pais_tmdb` / `anio_tmdb` son los nombres que usa
+                          # enriquecer.py, el camino GENÉRICO. Acá solo se leían
+                          # `pais`/`country`, que es como los llama un sidecar
+                          # propio: dos productores, dos nombres, y el del
+                          # genérico se caía entero. Itagüí publicó 15 películas
+                          # colombianas sin bandera teniendo TMDB el país de cada
+                          # una, y ninguna con año (23 sep).
+                          ('country', ('pais', 'country', 'pais_tmdb')),
+                          ('year', ('anio', 'year', 'anio_tmdb'))):
         if dst.get(campo):
             continue
         v = next((it[o] for o in origen if it.get(o)), None)

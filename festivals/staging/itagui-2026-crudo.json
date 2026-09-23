@@ -214,7 +214,7 @@
    "sinopsis": "Invitados: Harold Trompetero (director) y Heidy Carrasco (actriz)."
   },
   {
-   "titulo": "función especial sobre salud mental",
+   "titulo": "Función especial sobre salud mental",
    "dia": "2026-09-24",
    "hora": "09:30",
    "sede": "I.E. Luis Carlos Galán",
@@ -409,6 +409,7 @@
     "date": "2026-09-22"
    },
    "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "John Bolívar",
    "duracion_min": 105,
    "sinopsis": "Invitados: Gustavo Nieto Roa (productor), Claudia Parra (productora), John Bolívar (Director), equipo de producción y familiares del maestro Rodrigo Arenas Betancourt."
   },
@@ -447,7 +448,7 @@
    "_duracion_de": "el hueco hasta la siguiente función en la misma sede"
   },
   {
-   "titulo": "función especial de cine",
+   "titulo": "Función especial de cine",
    "dia": "2026-09-26",
    "hora": "18:00",
    "sede": "Cineprox Mayorca",
@@ -537,7 +538,9 @@
    },
    "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
    "director": "Luis Fernando Bernal Polo",
-   "duracion_min": 100
+   "duracion_min": 100,
+   "poster": "/assets/itagui-2026/clave-de-amor.jpg",
+   "posterSource": "oficial"
   },
   {
    "titulo": "Cine, aspirinas y buitres",

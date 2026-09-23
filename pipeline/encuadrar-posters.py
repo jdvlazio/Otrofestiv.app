@@ -190,7 +190,20 @@ def main():
         # borde claro es arte (el cielo de «The Dig»), y recortarlo mutila el
         # afiche. sips recorta CENTRADO —su --cropOffset se comporta como tal,
         # verificado— así que el recorte simétrico es además el único exacto.
-        rv, rh = min(t, b), min(l, r)
+        # SUELO DE 4 PX, y no es un número al azar (23 sep 2026). Con «Tumba
+        # abierta» —el afiche de Shallow Grave, con una banda negra ARRIBA que
+        # es del arte— la medida daba ↑18 ↓3: el mínimo es 3, así que recortaba
+        # 3 px por lado; al reescalar al lienzo la banda volvía a aparecer y la
+        # corrida siguiente se comía otros 3. Una fuga de píxeles por corrida,
+        # la misma que vació los afiches de Jardín pero en pequeño, y la cazó
+        # la propia comprobación de idempotencia de este script.
+        #
+        # Un marco impreso de verdad es simétrico y grueso; 3 px sobre 1170 son
+        # el antialias del reescalado. Por eso el marco tiene que superar el
+        # suelo EN LOS DOS lados opuestos para contar.
+        MIN_MARCO = 4
+        rv = min(t, b) if min(t, b) >= MIN_MARCO else 0
+        rh = min(l, r) if min(l, r) >= MIN_MARCO else 0
         if rv or rh:
             # 1 · recortar la caja de contenido, EXACTA en los cuatro lados.
             #     sips recorta desde el centro y solo admite offset positivo,
@@ -277,7 +290,7 @@ def main():
                 .stdout.decode().split(':')[-1])
         H = int(subprocess.run(['sips', '-g', 'pixelHeight', real], capture_output=True)
                 .stdout.decode().split(':')[-1])
-        if not ((W, H) == (LIENZO_W, LIENZO_H) and not (min(t2, b2) or min(l2, r2))):
+        if not ((W, H) == (LIENZO_W, LIENZO_H) and not (min(t2, b2) >= MIN_MARCO or min(l2, r2) >= MIN_MARCO)):
             repetiria.append(f'{n} ({W}×{H}, marco ↑{t2} ↓{b2} ←{l2} →{r2})')
 
     print(f'\nVERIFICACIÓN · fallos de sips {fallos} · '

@@ -15,7 +15,7 @@ import sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
-from lib import provenance, DESCONOCIDO  # noqa: E402
+from lib import provenance, DESCONOCIDO, slug as _slug  # noqa: E402
 
 PARR = f'{REPO}/festivals/staging/itagui-2026-parrilla.json'
 OUT = f'{REPO}/festivals/staging/itagui-2026-crudo.json'
@@ -144,6 +144,25 @@ def duracion_de_actividades(funciones):
     return funciones
 
 
+# EL DIRECTOR QUE LA LÁMINA DEJA EN OTRA LÍNEA. ARENAS imprime «Director:» y
+# nada detrás, pero su línea de invitados nombra a «John Bolívar (Director)».
+# Es dato del festival, en su propia lámina; solo está en el renglón de al lado.
+# Tabla explícita y no regla: un «(Director)» dentro de una lista de invitados
+# puede ser el de OTRA película (lección de «crédito que no es director»).
+DIRECTOR_EN_INVITADOS = {
+    'ARENAS: la vida y obra del Escultor Rodrigo Arenas Betancour': 'John Bolívar',
+}
+
+
+# AFICHES QUE NO SALEN DE NINGUNA BASE. El de «Clave de amor» lo pasó Juan
+# desde su distribuidora (alternavistacine.com.co) en 1434×2048; Proimágenes
+# solo sirve una miniatura de 270×400, que a tamaño de ficha se ve blanda.
+# El del festival manda sobre el de cualquier catálogo (docs/POSTERS.md).
+CARTEL_DE_ARCHIVO = {
+    'Clave de amor': ('fuentes/itagui-2026/afiches/clave-de-amor.jpg', 'oficial'),
+}
+
+
 def main():
     parr = json.load(open(PARR, encoding='utf-8'))
     funciones = []
@@ -159,6 +178,8 @@ def main():
         sec = f.get('seccion')
         if sec and not sec.startswith(NO_ES_SECCION):
             reg['seccion'] = sec
+        if not f.get('director') and f['titulo'] in DIRECTOR_EN_INVITADOS:
+            reg['director'] = DIRECTOR_EN_INVITADOS[f['titulo']]
         for orig, dest in (('pais', 'pais'), ('director', 'director'),
                            ('duracion_min', 'duracion_min'),
                            ('titulo_original', 'titulo_original')):
@@ -196,6 +217,15 @@ def main():
             reg['titulo'], reg['_cola_titulo'] = corte
 
         inv = (f.get('invitados') or '').strip(' .')
+        cartel = CARTEL_DE_ARCHIVO.get(f['titulo'])
+        if cartel:
+            import shutil
+            os.makedirs(f'{REPO}/assets/itagui-2026', exist_ok=True)
+            destino = f'{REPO}/assets/itagui-2026/{_slug(f["titulo"])}.jpg'
+            shutil.copyfile(f'{REPO}/{cartel[0]}', destino)
+            reg['poster'] = f'/assets/itagui-2026/{_slug(f["titulo"])}.jpg'
+            reg['posterSource'] = cartel[1]
+
         _desc = [x for x in (reg.pop('_cola_titulo', None),
                              f'Invitados: {inv}.' if inv else None) if x]
         if _desc:
@@ -203,6 +233,15 @@ def main():
         funciones.append(reg)
 
     duracion_de_actividades(funciones)
+    # UN TÍTULO NO EMPIEZA EN MINÚSCULA. El festival imprime «función especial
+    # sobre salud mental» y «función especial de cine» en minúscula porque en la
+    # lámina van dentro de una frase; en una lista de la app parecen un error.
+    # Se sube SOLO la primera letra: no es renombrar, es puntuación (Juan, 23 sep).
+    for f in funciones:
+        t = f.get('titulo') or ''
+        if t[:1].islower():
+            f['titulo'] = t[0].upper() + t[1:]
+
     funciones.sort(key=lambda f: (f['dia'], f['hora'], f['sede']))
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance(
