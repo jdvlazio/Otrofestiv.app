@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festicinejardin.com (la ficha de cada obra) + las láminas de Instagram de @festicinejardin (día, hora, sede y el estreno)",
-  "capturado": "2026-09-22",
+  "capturado": "2026-09-23",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 811,
@@ -108,31 +108,71 @@
  "venues": {
   "Teatro Municipal de Jardín - Jardín": {
    "short": "Teatro Municipal de Jardín",
-   "city": "Jardín"
+   "city": "Jardín",
+   "lat": 5.6002845,
+   "lng": -75.818951,
+   "_prec": "nominatim",
+   "_match": "Teatro Municipal de Jardín, Carrera 2, Cabecera Municipal de Jardín, Jardín, Cabecera Muni",
+   "n": 1
   },
   "Casa de la Cultura - Jardín": {
    "short": "Casa de la Cultura",
-   "city": "Jardín"
+   "city": "Jardín",
+   "n": 0,
+   "lat": 5.598525,
+   "lng": -75.819492,
+   "_prec": "manual",
+   "_match": "OSM node «Casa de La Cultura César Moises Rojas P», amenity=arts_centre",
+   "_nota": "Nominatim no la devuelve porque el festival la nombra «Casa de la Cultura» y OpenStreetMap la registra con su nombre completo, «Casa de La Cultura César Moisés Rojas P». Se buscó por Overpass en la caja del casco urbano de Jardín: hay UNA sola con amenity=arts_centre y es esta, en la misma manzana que la Biblioteca Pública Municipal Gabriel Peláez Montoya (5.598476,-75.819499)."
   },
   "Placa deportiva Simón Bolívar - Jardín": {
    "short": "Placa deportiva Simón Bolívar",
-   "city": "Jardín"
+   "city": "Jardín",
+   "n": 0,
+   "lat": 5.6016033,
+   "lng": -75.8220115,
+   "_prec": "manual",
+   "_match": "Google Maps «Cancha de fútbol y baloncesto», Cra. 2 #5-25, Jardín, Antioquia",
+   "_nota": "LA VERIFICÓ JUAN, con el pin de Google Maps (20 sep 2026). No está mapeada con su nombre en ninguna parte —ni OSM, ni la alcaldía, ni una búsqueda web— porque es sede NUEVA de esta edición: el festival se mudó aquí por el sismo del 10 de agosto. En Google figura como «Cancha de fútbol y baloncesto» y en OpenStreetMap como «Parque Infantil» (way, leisure=pitch, 5.601633,-75.821967, a unos 30 m). El festival la llama «Placa deportiva Simón Bolívar» y ese es el nombre que publicamos — la palabra la pone el festival."
   },
   "Coliseo Municipal - Jardín": {
    "short": "Coliseo Municipal",
-   "city": "Jardín"
+   "city": "Jardín",
+   "n": 0,
+   "lat": 5.59612,
+   "lng": -75.8143,
+   "_prec": "manual",
+   "_match": "Google Maps «Coliseo Cubierto», Jardín, Antioquia — Plus Code H5WP+C7",
+   "_nota": "LA VERIFICÓ JUAN, con el pin de Google Maps (20 sep 2026). En Google el sitio se llama «Coliseo Cubierto» y en OpenStreetMap «Coliseo del Café» (5.595832,-75.814205, a unos 30 m): es el mismo complejo deportivo, junto al Estadio Andrés Escobar. El festival lo llama «Coliseo Municipal» y ese es el nombre que publicamos — la palabra la pone el festival."
   },
   "Escuela Jahel Peláez Montoya - Jardín": {
    "short": "Escuela Jahel Peláez Montoya",
-   "city": "Jardín"
+   "city": "Jardín",
+   "lat": 5.598333,
+   "lng": -75.820833,
+   "_prec": "nominatim",
+   "_match": "Escuela Urb Jahel Pelaez Montoya, Calle 8, Cabecera Municipal de Jardín, Jardín, Cabecera ",
+   "n": 0
   },
   "Hotel Hacienda Balandú - Jardín": {
    "short": "Hotel Hacienda Balandú",
-   "city": "Jardín"
+   "city": "Jardín",
+   "n": 0,
+   "lat": 5.5910773,
+   "lng": -75.8133935,
+   "_prec": "nominatim",
+   "_match": "Hacienda Balandú, Camino de la Herrera, Cabecera Municipal de Jardín, Antioquia",
+   "_nota": "UNA SOLA FUNCIÓN en toda la parrilla, y por eso se pasó hasta ahora. Está a 1,1 km al sur del parque principal, fuera del casco donde caen las otras seis: el geocodificador la rechazó por radio y se ubica declarándolo, no ampliando el radio para todas."
   },
   "Institución Educativa San Antonio - Jardín": {
    "short": "Institución Educativa San Antonio",
-   "city": "Jardín"
+   "city": "Jardín",
+   "n": 0,
+   "lat": 5.6004441,
+   "lng": -75.8197326,
+   "_prec": "nominatim",
+   "_match": "Institución Educativa San Antonio Sección Moises Rojas P, Calle 9, Carrera 2, Cabecera Municipal de Jardín, Antioquia",
+   "_nota": "SEDE NUEVA, la destapó la lámina de TALLERES del carrusel del 21 sep: ahí van el taller ELO (jueves 24, 9:00) y «Masculinidades para la igualdad» (viernes 25, 9:00). El nombre que OSM le da incluye «Sección Moisés Rojas P», que es la misma referencia de la cancha Moisés Rojas que el sismo del 10 de agosto dejó inutilizable: el colegio y la cancha son vecinos, y por eso el festival se mueve entre ellos. A 100 m del Teatro Municipal, coherente con un pueblo de este tamaño."
   }
  },
  "films": [
@@ -1984,7 +2024,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-22T19:28:46",
+  "fecha": "2026-09-23T06:46:10",
   "plan_sha": "4977a7663617bd88",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"

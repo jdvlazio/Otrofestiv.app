@@ -149,7 +149,7 @@ def ensamblar(fid, escribir=True):
         # silencio. La tabla sigue mandando en el NOMBRE de la sede; la sala
         # que la función trae gana sobre la que la tabla adivina.
         sala = f.get('sala') or sala
-        if sede not in geo and sede not in venues:
+        if sede not in geo and f['sede'] not in geo and sede not in venues:
             rep['sede sin geo'] += 1
         sec_pub, sec_meta = _seccion(_seccion_de(f, cfg), SECS)
         if sec_pub not in secciones:
@@ -328,8 +328,15 @@ def ensamblar(fid, escribir=True):
         # Medellín» en vez de «Centro Colombo Americano») y el filtro por
         # ciudad no se encendía pese a cubrir seis municipios, porque
         # multiCity exige ≥2 valores de `city` no vacíos.
+        # EL SIDECAR DE GEO SE BUSCA POR LOS DOS NOMBRES (23 sep 2026). El
+        # geocodificador escribe con el nombre de la FUENTE («Casa de la
+        # Cultura») porque es el que lee del plan; acá la sede ya es la
+        # PUBLICADA («Casa de la Cultura - Jardín»). Buscar solo por la
+        # publicada hacía que el pin no llegara nunca, y sin ruido: Jardín salió
+        # a producción con sus SIETE sedes sin coordenadas teniendo el sidecar
+        # completo al lado. Lo destapó Itagüí, que hizo exactamente lo mismo.
         _v = {'short': sede.split(' - ')[0], 'city': sede.split(' - ')[-1]}
-        _v.update(geo.get(sede, {}))
+        _v.update(geo.get(sede) or geo.get(f['sede']) or {})
         venues[sede] = _v
 
     out = {'_etapa': plan.get('_etapa', 'build generado por pipeline/ensamblar.py'),
