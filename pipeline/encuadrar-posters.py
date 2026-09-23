@@ -29,6 +29,7 @@ import json, os, struct, subprocess, sys, tempfile, zlib
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LIENZO_W, LIENZO_H = 780, 1170          # 2:3 exacto
+MIN_MARCO = 4                           # suelo del marco, en px (ver § del recorte)
 # Calibrado con los píxeles reales de los afiches, no a ojo. Un marco es una
 # fila PLANA —poca varianza a lo ancho— sea blanca, negra o gris: en «El juego
 # de la vida» el marco son dos filas (255 y 178) y exigir «casi blanco» dejaba
@@ -201,7 +202,6 @@ def main():
         # Un marco impreso de verdad es simétrico y grueso; 3 px sobre 1170 son
         # el antialias del reescalado. Por eso el marco tiene que superar el
         # suelo EN LOS DOS lados opuestos para contar.
-        MIN_MARCO = 4
         rv = min(t, b) if min(t, b) >= MIN_MARCO else 0
         rh = min(l, r) if min(l, r) >= MIN_MARCO else 0
         if rv or rh:

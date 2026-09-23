@@ -103,11 +103,31 @@ def ficha_de_tmdb(cid, key, titulo):
     det.setdefault('credits', {}).setdefault('crew', []).extend(
         det_en.get('credits', {}).get('crew', []))
     en = det_en.get('title') or ''
+    # LA SINOPSIS QUE NO ESTÁ EN `es-ES` NI EN `en-US`. TMDB registra algunas
+    # traducciones bajo el idioma pelado —`es`— y entonces las dos consultas
+    # con región vuelven VACÍAS aunque el texto exista: «The Nation» (1714254)
+    # tiene su sinopsis en `es` y salía sin una sola línea. Es la misma trampa
+    # que el guárdian [cosecha-tmdb] describe para `es-CO`, por la otra puerta.
+    # Solo se pregunta cuando las dos vinieron vacías: una llamada más, y solo
+    # donde si no publicaríamos nada.
+    _sin_es = not (det.get('overview') or '').strip()
+    _sin_en = not (det_en.get('overview') or '').strip()
+    _tr_es = _tr_en = ''
+    if _sin_es and _sin_en:
+        _tr = tmdb_get(f'/movie/{cid}/translations', key) or {}
+        for _t in _tr.get('translations') or []:
+            _o = ((_t.get('data') or {}).get('overview') or '').strip()
+            if not _o:
+                continue
+            if _t.get('iso_639_1') == 'es' and not _tr_es:
+                _tr_es = _o
+            elif _t.get('iso_639_1') == 'en' and not _tr_en:
+                _tr_en = _o
     out = {'tmdb_id': cid,
            'titulo_original': det.get('original_title'),
            'poster_path': det.get('poster_path'),
-           'synopsis_es': det.get('overview') or '',
-           'synopsis_en': det_en.get('overview') or '',
+           'synopsis_es': (det.get('overview') or '') or _tr_es,
+           'synopsis_en': (det_en.get('overview') or '') or _tr_en,
            'genero': (det.get('genres') or [{}])[0].get('name', ''),
            'anio_tmdb': int((det.get('release_date') or '0')[:4] or 0),
            'duracion_tmdb': det.get('runtime') or 0,

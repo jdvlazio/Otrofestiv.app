@@ -341,6 +341,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "The Nation",
+   "tmdb_id": 1714254,
+   "titulo_original": "The Nation",
+   "poster_path": "/8CpLVm3ljbaM8YapAuKwVBdfkrT.jpg",
+   "synopsis_es": "Eddie es uno de los streamers de videojuegos más populares de internet. Ha construido su carrera bajo una sola regla: nunca aceptar patrocinios que comprometan su libertad creativa. Pero una tragedia familiar y gastos médicos imposibles de afrontar lo obligan a romper su propio código y firmar con una poderosa empresa: Empire Networks. En medio de la desesperación, prueba una aplicación de inteligencia artificial diseñada para comunicarse con entidades del más allá. Lo que comienza como un intento por obtener respuestas se convierte en un error irreversible: Eddie abre un portal a Asmodeo, uno de los demonios más antiguos y peligrosos de la mitología. Como parte de su contrato, Eddie y su equipo deben completar The Nation desde un cuartel militar abandonado: un videojuego de terror bélico. Pero al quedar atrapados en su interior, descubren la verdad: The Nation no es solo un videojuego.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "the-nation-2026",
+   "pais": "México",
+   "_verificado": "declarada a mano: Misma ceguera que «Inolvidable Heidi»: TMDB tiene la fecha (2026-06-01) pero la duración en 0, y nuestro crudo no trae año, así que el candado se queda sin los dos ejes y rechaza una dirección exacta. Es la única película que dirige Erick Ismael Hernández en TMDB (persona 1099276, un solo crédito de dirección) y el título coincide; los otros dos «The Nation» son de Davis Chang y Aaron James Sorensen. El país lo declara la lámina, porque TMDB no lo registra.",
+   "_director": "Erick Ismael Hernández",
+   "_sondeado": "2026-09-23",
+   "poster": "/assets/itagui-2026/the-nation.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Tropa de élite",
    "tmdb_id": 7347,
    "titulo_original": "Tropa de Elite",
@@ -772,6 +791,24 @@
    "poster": "/assets/itagui-2026/por-si-no-te-vuelvo-a-ver.jpg",
    "posterSource": "tmdb"
   },
+  "The Nation": {
+   "tmdb_id": 1714254,
+   "titulo_original": "The Nation",
+   "poster_path": "/8CpLVm3ljbaM8YapAuKwVBdfkrT.jpg",
+   "synopsis_es": "Eddie es uno de los streamers de videojuegos más populares de internet. Ha construido su carrera bajo una sola regla: nunca aceptar patrocinios que comprometan su libertad creativa. Pero una tragedia familiar y gastos médicos imposibles de afrontar lo obligan a romper su propio código y firmar con una poderosa empresa: Empire Networks. En medio de la desesperación, prueba una aplicación de inteligencia artificial diseñada para comunicarse con entidades del más allá. Lo que comienza como un intento por obtener respuestas se convierte en un error irreversible: Eddie abre un portal a Asmodeo, uno de los demonios más antiguos y peligrosos de la mitología. Como parte de su contrato, Eddie y su equipo deben completar The Nation desde un cuartel militar abandonado: un videojuego de terror bélico. Pero al quedar atrapados en su interior, descubren la verdad: The Nation no es solo un videojuego.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "the-nation-2026",
+   "pais": "México",
+   "_verificado": "declarada a mano: Misma ceguera que «Inolvidable Heidi»: TMDB tiene la fecha (2026-06-01) pero la duración en 0, y nuestro crudo no trae año, así que el candado se queda sin los dos ejes y rechaza una dirección exacta. Es la única película que dirige Erick Ismael Hernández en TMDB (persona 1099276, un solo crédito de dirección) y el título coincide; los otros dos «The Nation» son de Davis Chang y Aaron James Sorensen. El país lo declara la lámina, porque TMDB no lo registra.",
+   "_director": "Erick Ismael Hernández",
+   "_sondeado": "2026-09-23",
+   "poster": "/assets/itagui-2026/the-nation.jpg",
+   "posterSource": "tmdb"
+  },
   "Tropa de élite": {
    "tmdb_id": 7347,
    "titulo_original": "Tropa de Elite",
@@ -854,7 +891,6 @@
   "Función especial sobre salud mental",
   "Función especial: Recordando a Luis Buñuel",
   "La estancia",
-  "The Nation",
   "Wings of Freedom",
   "Xie. defensa de la vida"
  ],
@@ -881,10 +917,6 @@
   },
   "La estancia": {
    "director": "Andrés Carmona Rivera",
-   "fecha": "2026-09-23"
-  },
-  "The Nation": {
-   "director": "Erick Ismael Hernández",
    "fecha": "2026-09-23"
   },
   "Wings of Freedom": {
