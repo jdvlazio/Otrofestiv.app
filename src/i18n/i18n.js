@@ -1487,15 +1487,16 @@ export function _applyI18nDOM(){
     const val=t(key);
     if(val && val!==key) el.title=val;
   });
-  // Lang toggle — marcar botón activo Y reflejar su bandera en el trigger cerrado.
-  // La bandera se sincroniza AQUÍ (no en una función aparte que haya que acordarse
+  // Lang toggle — marcar botón activo Y reflejar su código (ES/EN) en el trigger
+  // cerrado. Texto y no bandera (22 sep 2026): una bandera nombra un país, no un
+  // idioma. El código se sincroniza AQUÍ (no en una función aparte que haya que acordarse
   // de llamar — ese patrón fue la causa del bug de mezcla al arranque): _applyI18nDOM
   // es el único responsable de que TODO el estado visual de idioma sea coherente.
   document.getElementById('lang-btn-es')?.classList.toggle('on', _lang==='es');
   document.getElementById('lang-btn-en')?.classList.toggle('on', _lang==='en');
-  const _activeFlag=document.querySelector('#lang-dropdown .lang-opt.on .lang-opt-flag');
-  const _trgFlag=document.getElementById('lang-trigger-flag');
-  if(_activeFlag && _trgFlag) _trgFlag.textContent=_activeFlag.textContent;
+  const _activeCode=document.querySelector('#lang-dropdown .lang-opt.on .lang-opt-code');
+  const _trgCode=document.getElementById('lang-trigger-code');
+  if(_activeCode && _trgCode) _trgCode.textContent=_activeCode.textContent;
   // dtab labels — los 7 días de la semana son constantes universales
   // Se calculan desde el ISO date del día, sin depender de datos del festival
   const _DOW_ES=['DOM','LUN','MAR','MIÉ','JUE','VIE','SÁB'];

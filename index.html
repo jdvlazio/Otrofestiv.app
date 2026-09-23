@@ -468,14 +468,15 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 .lang-toggle{position:relative;margin-left:var(--sp-2);flex-shrink:0}
 .lang-trigger{display:flex;align-items:center;gap:var(--sp-1);background:none;border:none;cursor:pointer;padding:var(--sp-1);border-radius:var(--r-sm);-webkit-tap-highlight-color:transparent}
-.lang-trigger-flag{font-size:var(--t-md);line-height:1}
+.lang-trigger-code{font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.06em;line-height:1;color:var(--white)}
 .lang-trigger-chev{display:flex;align-items:center;color:var(--gray2);transition:transform var(--tr-base)}
 .lang-toggle.open .lang-trigger-chev{transform:rotate(180deg)}
 .lang-dropdown{position:absolute;top:calc(100% + var(--sp-1));right:0;z-index:201;min-width:148px;background:var(--card-a);border:1px solid var(--bdr);border-radius:var(--r-md);overflow:hidden;display:none;box-shadow:0 8px 24px var(--overlay-40)}
 .lang-toggle.open .lang-dropdown{display:block}
 .lang-opt{display:flex;align-items:center;gap:var(--sp-2);width:100%;background:none;border:none;cursor:pointer;padding:var(--sp-2) var(--sp-3);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);color:var(--white);text-align:left;-webkit-tap-highlight-color:transparent;transition:background var(--tr-base),color var(--tr-base)}
 .lang-opt:not(:last-child){border-bottom:1px solid var(--bdr-l)}
-.lang-opt-flag{font-size:var(--t-md);line-height:1}
+.lang-opt-code{font-size:var(--t-xs);font-weight:var(--w-bold);letter-spacing:.08em;line-height:1;min-width:22px;color:var(--gray2)}
+.lang-opt.on .lang-opt-code{color:var(--amber)}
 .lang-opt.on{color:var(--amber);background:rgba(245,158,11,.06)}
 /* Fila wordmark + account */
 .hdr-top{display:flex;align-items:center;padding:var(--sp-2) var(--sp-4);min-height:36px;width:100%}
@@ -3302,12 +3303,12 @@ setTimeout(function(){
          cuenta en la ESQUINA (recurrente + sync-dot; convención de avatar). -->
     <div class="lang-toggle" id="lang-toggle" aria-label="Idioma / Language">
       <button class="lang-trigger" id="lang-trigger" data-action="toggleLangDropdown" aria-haspopup="listbox" aria-expanded="false" aria-label="Idioma / Language">
-        <span class="lang-trigger-flag" id="lang-trigger-flag" aria-hidden="true">🇪🇸</span>
+        <span class="lang-trigger-code" id="lang-trigger-code" aria-hidden="true">ES</span>
         <span class="lang-trigger-chev" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></span>
       </button>
       <div class="lang-dropdown" id="lang-dropdown" role="listbox">
-        <button class="lang-btn lang-opt" id="lang-btn-es" data-action="selectLang" data-code="es" role="option" aria-label="Español"><span class="lang-opt-flag" aria-hidden="true">🇪🇸</span><span class="lang-opt-name">Español</span></button>
-        <button class="lang-btn lang-opt" id="lang-btn-en" data-action="selectLang" data-code="en" role="option" aria-label="English"><span class="lang-opt-flag" aria-hidden="true">🇺🇸</span><span class="lang-opt-name">English</span></button>
+        <button class="lang-btn lang-opt" id="lang-btn-es" data-action="selectLang" data-code="es" role="option" aria-label="Español"><span class="lang-opt-code" aria-hidden="true">ES</span><span class="lang-opt-name">Español</span></button>
+        <button class="lang-btn lang-opt" id="lang-btn-en" data-action="selectLang" data-code="en" role="option" aria-label="English"><span class="lang-opt-code" aria-hidden="true">EN</span><span class="lang-opt-name">English</span></button>
       </div>
     </div>
     <button class="auth-btn" id="auth-btn" data-action="openAuthSheet" data-i18n-title="aria_sincronizar" data-i18n-aria="aria_cuenta" title="Sincronizar entre dispositivos" aria-label="Cuenta">
