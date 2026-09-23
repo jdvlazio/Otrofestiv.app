@@ -6804,6 +6804,45 @@ except Exception as _e:
     warn(check, f'no se pudo verificar boleteria-muda: {_e}')
 
 
+# ── [poster-forma-reloj] ──────────────────────────────────────────────────────
+# El reloj decide si una imagen va apaisada (16:9) o vertical (2:3). Hasta el 23
+# sep 2026 lo adivinaba por el dominio de la URL, y con los stills hospedados en
+# /assets/ y los de TIFF en su propio CDN clasificaba mal 354 de 490: el detalle
+# salía como un recorte oscuro más alto que la pantalla («Volver», Jardín sáb 26,
+# visto en device). Ahora lo decide posterSource, que viaja en el catálogo Y en
+# saved_agenda. Este guardián vigila la PREMISA de la que depende esa cura: que
+# toda imagen editorial la declare, porque sin el campo se cae al dominio viejo.
+check = 'poster-forma-reloj'
+try:
+    import glob as _g4, json as _j4, os as _o4
+    _CDN = ('cloudfront.net', 'supabase.co')
+    _mudos, _tot = [], 0
+    for _p4 in sorted(_g4.glob('festivals/*.json')):
+        try:
+            _d4 = _j4.load(open(_p4, encoding='utf-8'))
+        except Exception:
+            continue
+        _n = 0
+        for _f4 in _d4.get('films') or []:
+            _url = _f4.get('poster')
+            if not _url:
+                continue
+            _tot += 1
+            # Una imagen que SOLO se reconoce por el dominio es la que se rompe si
+            # se re-hospeda: el reloj la necesita declarada.
+            if not _f4.get('posterSource') and any(_h in _url for _h in _CDN):
+                _n += 1
+        if _n:
+            _mudos.append(f'{_o4.path.basename(_p4)}: {_n}')
+    if _mudos:
+        fail(check, 'imagen(es) de CDN de stills sin posterSource — el reloj tendría que '
+                    'adivinar por dominio: ' + '; '.join(_mudos))
+    else:
+        ok(check, f'{_tot} imagen(es) con póster declaran su posterSource — el reloj no adivina')
+except Exception as _e:
+    warn(check, f'no se pudo verificar poster-forma-reloj: {_e}')
+
+
 # ── Report ────────────────────────────────────────────────────────────────────
 print()
 print('═' * 60)

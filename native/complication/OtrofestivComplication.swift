@@ -126,8 +126,9 @@ struct OtrofestivComplicationEntryView: View {
     private var rectangular: some View {
         HStack(alignment: .top, spacing: 8) {
             if let n = entry.next, let data = SharedPlan.loadPoster(n.poster), let ui = UIImage(data: data) {
-                Image(uiImage: ui).resizable().aspectRatio(2.0 / 3.0, contentMode: .fill)
-                    .frame(width: 34, height: 51)
+                Image(uiImage: ui).resizable()
+                    .aspectRatio(n.posterEditorial ? 16.0 / 9.0 : 2.0 / 3.0, contentMode: .fill)
+                    .frame(width: n.posterEditorial ? 54 : 34, height: n.posterEditorial ? 30 : 51)
                     .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
             }
             VStack(alignment: .leading, spacing: 2) {

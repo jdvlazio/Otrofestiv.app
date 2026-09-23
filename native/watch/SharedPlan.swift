@@ -17,6 +17,7 @@ struct NextUp: Codable {
     // Progreso en vivo (21 sep 2026). Opcionales: un snapshot viejo decodifica igual.
     var endEpoch: Double? = nil   // fin de la obra → barra/anillo y «Termina en N min»
     var poster: String? = nil     // path del póster (el widget lo pinta del caché en disco)
+    var posterEditorial: Bool = false  // still 16:9: el widget NO lo mete en un 2:3 (23 sep 2026)
 
     var start: Date { Date(timeIntervalSince1970: startEpoch) }
     var end: Date? { endEpoch.map { Date(timeIntervalSince1970: $0) } }

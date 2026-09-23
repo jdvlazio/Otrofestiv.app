@@ -110,10 +110,30 @@ enum PlanCompute {
         return URL(string: "https://image.tmdb.org/t/p/\(tmdbSize)" + p)
     }
 
-    // Editorial = still landscape 16:9 de un CDN oficial (espeja EDITORIAL_CDN_HOSTS
-    // del web). Se renderiza sin recortar; el resto es póster 2:3.
+    // Editorial = still LANDSCAPE 16:9; se dibuja sin recortar. El resto es póster 2:3.
+    //
+    // La decide `posterSource`, no el dominio (23 sep 2026). Adivinar por dominio era
+    // la mitad vieja de la regla: la web ya lee posterSource primero (_isEditorialPoster
+    // en view/helpers.js) y el reloj se había quedado atrás. Con los stills hospedados
+    // en /assets/ y los de TIFF en su propio CDN, el reloj clasificaba mal 354 de 490
+    // imágenes editoriales y las metía en una caja vertical: en el detalle salía un
+    // recorte oscuro y ampliado, más alto que la pantalla (visto en device: «Volver»,
+    // Jardín sáb 26). Estaba anotado como acople conocido desde el 9 jul 2026.
+    //
+    // Mismo orden que la web, con el mismo default a prueba de fallos:
+    //   1. posterSource explícito manda (editorial → sí; tmdb/custom/oficial → no).
+    //   2. Sin señal, el dominio de un CDN de stills conocido.
+    //   3. Ante la duda, NO editorial: meter un 16:9 en un marco 2:3 por adivinanza
+    //      es peor que dibujar un 2:3 que resultó apaisado.
     static let editorialHosts = ["cloudfront.net", "supabase.co"]
-    static func isEditorial(_ path: String?) -> Bool {
+    static func isEditorial(_ item: ScheduleItem) -> Bool {
+        switch item.posterSource {
+        case "editorial": return true
+        case "tmdb", "custom", "oficial": return false
+        default: return isEditorialHost(item.poster)
+        }
+    }
+    static func isEditorialHost(_ path: String?) -> Bool {
         guard let p = path, let host = URL(string: p)?.host else { return false }
         return editorialHosts.contains { host.hasSuffix($0) }
     }

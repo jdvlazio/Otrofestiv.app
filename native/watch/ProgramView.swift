@@ -115,7 +115,7 @@ private struct ProgramRow: View {
     let inPlan: Bool
     var body: some View {
         HStack(alignment: .center, spacing: 8) {
-            PosterThumb(path: item.poster)
+            PosterThumb(item: item)
             VStack(alignment: .leading, spacing: 3) {
                 Text(item.title)
                     .font(.subheadline).fontWeight(.medium).foregroundStyle(OT.warm)

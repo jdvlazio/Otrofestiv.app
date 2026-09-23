@@ -207,13 +207,36 @@ enum PlanComputeTests {
         check("nextUpcoming nil si todo pasó",
               PlanCompute.nextUpcoming([past], now: now.addingTimeInterval(100 * 3600)) == nil)
 
-        // ── isEditorial ───────────────────────────────────────────────────────
-        check("editorial cloudfront", PlanCompute.isEditorial("https://d13jj08vfqimqg.cloudfront.net/x.jpg"))
-        check("editorial supabase",   PlanCompute.isEditorial("https://xyz.supabase.co/x.jpg"))
-        check("no editorial assets", !PlanCompute.isEditorial("/assets/f/h.jpg"))
-        check("no editorial tmdb",   !PlanCompute.isEditorial("/abc.jpg"))
-        check("no editorial nil",    !PlanCompute.isEditorial(nil))
-        check("no editorial tmdb host", !PlanCompute.isEditorial("https://image.tmdb.org/t/p/w185/x.jpg"))
+        // ── Editorial: lo decide posterSource, no el dominio (23 sep 2026) ────
+        // EL DEFECTO: «Volver» (Jardín, sáb 26) es un still 16:9 en /assets/. Sin
+        // dominio de CDN el reloj lo daba por póster 2:3 y el detalle salía como un
+        // recorte oscuro más alto que la pantalla. 354 de 490 editoriales, mal.
+        func conFuente(_ src: String?, _ poster: String?) -> ScheduleItem {
+            var i = item("X", "2026-09-26", "16:30"); i.posterSource = src
+            return ScheduleItem(title: i.title, day: i.day, date: i.date, time: i.time, venue: i.venue,
+                                type: i.type, duration: i.duration, poster: poster,
+                                sala: nil, section: nil, posterSource: src)
+        }
+        check("EL DEFECTO: editorial en /assets/ SÍ es editorial",
+              PlanCompute.isEditorial(conFuente("editorial", "/assets/jardin-2026/volver.jpg")))
+        check("editorial en el CDN de TIFF también",
+              PlanCompute.isEditorial(conFuente("editorial", "https://images.ctfassets.net/x/y.jpg")))
+        check("tmdb NO es editorial aunque viva en un CDN de stills",
+              !PlanCompute.isEditorial(conFuente("tmdb", "https://d1.cloudfront.net/x.jpg")))
+        check("custom no es editorial", !PlanCompute.isEditorial(conFuente("custom", "/assets/f/h.jpg")))
+        check("oficial no es editorial", !PlanCompute.isEditorial(conFuente("oficial", "/assets/f/h.jpg")))
+        // Sin señal: el dominio como último recurso, y ante la duda NO editorial
+        check("sin fuente, CDN conocido → editorial",
+              PlanCompute.isEditorial(conFuente(nil, "https://xyz.supabase.co/x.jpg")))
+        check("sin fuente ni CDN → no editorial (default a prueba de fallos)",
+              !PlanCompute.isEditorial(conFuente(nil, "/assets/f/h.jpg")))
+        check("sin fuente ni póster → no editorial", !PlanCompute.isEditorial(conFuente(nil, nil)))
+        check("fuente desconocida → cae al dominio",
+              !PlanCompute.isEditorial(conFuente("inventada", "/assets/f/h.jpg")))
+        // el helper de dominio sigue existiendo y sigue siendo el de antes
+        check("isEditorialHost cloudfront", PlanCompute.isEditorialHost("https://d13.cloudfront.net/x.jpg"))
+        check("isEditorialHost assets no", !PlanCompute.isEditorialHost("/assets/f/h.jpg"))
+        check("isEditorialHost tmdb no", !PlanCompute.isEditorialHost("https://image.tmdb.org/t/p/w185/x.jpg"))
 
         // ── posterURL ─────────────────────────────────────────────────────────
         check("posterURL http tal cual",

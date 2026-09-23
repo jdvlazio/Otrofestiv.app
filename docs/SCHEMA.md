@@ -37,7 +37,16 @@ en estos campos rompe el reloj en silencio (decodifica solo lo que usa, el resto
 lo ignora). Campos que consume:
 
 - Raíz: `timezoneOffset` (fija `PlanCompute.tz`), `dayKeys`, `dayShort`, `dayShort_en`.
-- Por función (`films[]`): `title`, `day`, `time`, `venue`, `sala`, `duration`, `poster`, `section`, `type`.
+- Por función (`films[]`): `title`, `day`, `time`, `venue`, `sala`, `duration`, `poster`, `section`, `type`, **`posterSource`**.
+
+`posterSource` decide la FORMA con que el reloj dibuja la imagen: `editorial` es un
+still apaisado 16:9 y va sin recortar; `tmdb`, `custom` y `oficial` son pósters 2:3.
+Hasta el 23 sep 2026 el reloj lo adivinaba por el dominio de la URL y clasificaba mal
+354 de 490 stills —los hospedados en `/assets/` y los de TIFF—, que salían como un
+recorte oscuro más alto que la pantalla. El guardián `[poster-forma-reloj]` exige que
+toda imagen de un CDN de stills declare su `posterSource`, para que el reloj no tenga
+que volver a adivinar. La regla canónica en la web es `_isEditorialPoster`
+(`src/view/helpers.js`) y el reloj la espeja en `PlanCompute.isEditorial`.
 
 El nombre del archivo se deriva del id como en `loader.js` (`tiff2026` → `tiff-2026.json`);
 `PlanCompute.catalogFile` lo espeja y tiene test.
