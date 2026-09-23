@@ -6,16 +6,16 @@ import SwiftUI
 
 // Poster chico (2:3) — color/marca, como Mi Plan del teléfono. Placeholder para eventos.
 struct PosterThumb: View {
-    let path: String?
+    let item: ScheduleItem    // el item entero: la forma la decide posterSource, no la ruta
     var width: CGFloat = 30   // la fila en curso lo pide más grande (héroe, 21 sep 2026)
-    private var url: URL? { PlanCompute.posterURL(path) }
+    private var url: URL? { PlanCompute.posterURL(item.poster) }
     var body: some View {
         // RemoteImage (NSCache + caché HTTP) en vez de AsyncImage: en listas
         // paginadas de watchOS AsyncImage cancela al deslizar y no cachea → los
         // thumbnails cargaban solo en el día abierto (o al entrar al detalle).
         // Editorial (still 16:9 de un CDN oficial) → ancho, sin recortar; póster → 2:3.
         // Radio proporcional (13 % del ancho del 2:3), como las 17 superficies del web.
-        let editorial = PlanCompute.isEditorial(path)
+        let editorial = PlanCompute.isEditorial(item)
         let w = editorial ? width * 1.6 : width
         let h = editorial ? width * 0.9 : width * 1.5
         RemoteImage(url: url) { placeholder }

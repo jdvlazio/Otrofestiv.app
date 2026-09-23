@@ -30,6 +30,10 @@ struct ScheduleItem: Decodable, Identifiable, Hashable {
     // saved_agenda pueden faltar: opcionales con default, el decode no cambia.
     var sala: String? = nil      // "TLB 4" — en la muñeca no cabe la sede completa
     var section: String? = nil   // "📺 Primetime" (verbatim del festival)
+    // "editorial" (still 16:9) | "tmdb" | "custom" | "oficial" (póster 2:3).
+    // Viaja en el catálogo Y en saved_agenda: verificado en las 2.060 funciones con
+    // póster, ninguna sin él. Antes el reloj lo adivinaba por dominio (23 sep 2026).
+    var posterSource: String? = nil
 
     var dayStr: String? { day ?? date }
     var id: String { (dayStr ?? "") + (time ?? "") + title }

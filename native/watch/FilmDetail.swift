@@ -5,6 +5,7 @@
 // Marca: ámbar SOLO en el ícono de la hora (regla hora+acción); resto secundario.
 
 import SwiftUI
+import WatchKit   // screenBounds: el tope de alto del póster es proporcional a la pantalla
 
 struct FilmDetail: View {
     let item: ScheduleItem
@@ -25,7 +26,7 @@ struct FilmDetail: View {
                 VStack(alignment: .leading, spacing: 8) {
                     // El póster manda: a sangre arriba, el texto sube sobre un degradado.
                     ZStack(alignment: .bottomLeading) {
-                        PosterLarge(path: item.poster)
+                        PosterLarge(item: item)
                         LinearGradient(colors: [.clear, .black.opacity(0.85), .black],
                                        startPoint: .center, endPoint: .bottom)
                             .allowsHitTesting(false)
@@ -38,7 +39,7 @@ struct FilmDetail: View {
                                 .font(.headline).foregroundStyle(OT.warm)
                                 .fixedSize(horizontal: false, vertical: true)
                         }
-                        .padding(.horizontal, 4).padding(.bottom, 2)
+                        .padding(.horizontal, 8).padding(.bottom, 2)
                     }
 
                     if let f = PlanCompute.progress(item, now: ctx.date),
@@ -54,7 +55,7 @@ struct FilmDetail: View {
                                 }
                             }
                         }
-                        .padding(.horizontal, 4)
+                        .padding(.horizontal, 8)
                         .accessibilityElement(children: .combine)
                     }
 
@@ -67,34 +68,39 @@ struct FilmDetail: View {
                             MetaRow(icon: "timer", text: d, tint: OT.secondary)
                         }
                     }
-                    .padding(.horizontal, 4).padding(.top, 2)
+                    .padding(.horizontal, 8).padding(.top, 2)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .ignoresSafeArea(edges: .top)
         }
         .navigationTitle("")
     }
 }
 
 private struct PosterLarge: View {
-    let path: String?
-    private var editorial: Bool { PlanCompute.isEditorial(path) }
-    private var url: URL? { PlanCompute.posterURL(path, tmdbSize: "w342") }
+    let item: ScheduleItem
+    private var editorial: Bool { PlanCompute.isEditorial(item) }
+    private var url: URL? { PlanCompute.posterURL(item.poster, tmdbSize: "w342") }
 
     var body: some View {
         artwork.clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
     }
 
-    // Editorial → 16:9 completo a lo ancho. Póster → 2:3 completo a lo ancho
-    // (protagonista, 21 sep 2026): sin recortar, la regla de siempre.
+    // Editorial → 16:9 a lo ancho. Póster → 2:3, pero con TOPE DE ALTO: a todo el
+    // ancho un 2:3 mide 1,5 pantallas de ancho, más alto que la pantalla entera del
+    // Ultra, y el detalle arrancaba con una imagen que no cabía y un scroll larguísimo
+    // (23 sep 2026). El mockup aprobado lo mostraba ocupando el tercio de arriba: el
+    // tope lo devuelve a eso. Sin recortar, la regla de siempre.
     @ViewBuilder private var artwork: some View {
         if editorial {
             image.aspectRatio(16.0 / 9.0, contentMode: .fit).frame(maxWidth: .infinity)
         } else {
-            image.aspectRatio(2.0 / 3.0, contentMode: .fit).frame(maxWidth: .infinity)
+            image.aspectRatio(2.0 / 3.0, contentMode: .fit)
+                .frame(maxWidth: .infinity, maxHeight: PosterLarge.maxAlto)
         }
     }
+    // 40 % del alto de la pantalla: el póster encabeza, no tapa.
+    static var maxAlto: CGFloat { WKInterfaceDevice.current().screenBounds.height * 0.4 }
 
     // RemoteImage comparte la NSCache con la fila → si el thumb ya cargó, el
     // detalle aparece al instante (y viceversa); reemplaza AsyncImage (flaky).

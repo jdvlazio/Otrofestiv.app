@@ -139,7 +139,7 @@ private struct LiveRow: View {
     let now: Date
     var body: some View {
         HStack(alignment: .top, spacing: 9) {
-            PosterThumb(path: item.poster, width: 46)
+            PosterThumb(item: item, width: 46)
             VStack(alignment: .leading, spacing: 2) {
                 Text(L.now).font(.system(size: 9, weight: .bold)).foregroundStyle(OT.green)
                 Text(item.title)
@@ -168,7 +168,7 @@ private struct PlanRow: View {
     private var live: Bool { PlanCompute.isLive(item, now: Date()) }
     var body: some View {
         HStack(alignment: .center, spacing: 8) {
-            PosterThumb(path: item.poster)
+            PosterThumb(item: item)
             VStack(alignment: .leading, spacing: 3) {
                 Text(item.title)
                     .font(.subheadline).fontWeight(.medium).foregroundStyle(OT.warm)
