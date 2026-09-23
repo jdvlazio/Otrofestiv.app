@@ -231,10 +231,17 @@ def main():
             reg['poster'] = f'/assets/itagui-2026/{_slug(f["titulo"])}.jpg'
             reg['posterSource'] = cartel[1]
 
-        _desc = [x for x in (reg.pop('_cola_titulo', None),
-                             f'Invitados: {inv}.' if inv else None) if x]
-        if _desc:
-            reg['sinopsis'] = ' '.join(_desc)
+        # LA LISTA DE INVITADOS NO ES LA SINOPSIS. Iba al mismo campo, y en
+        # una obra que SÍ tiene sinopsis la tapaba: «La estancia» publicó
+        # «Invitados: Mauricio Carmona Rivera (productor)…» en vez de su
+        # historia, que Proimágenes sí publica. Va por `invitados`, que el
+        # ensamblador añade DESPUÉS de elegir la sinopsis: así acompaña a la
+        # que haya y sigue siendo el único texto cuando no hay ninguna.
+        _cola = reg.pop('_cola_titulo', None)
+        if _cola:
+            reg['sinopsis'] = _cola
+        if inv:
+            reg['invitados'] = f'Invitados: {inv}.'
         funciones.append(reg)
 
     duracion_de_actividades(funciones)

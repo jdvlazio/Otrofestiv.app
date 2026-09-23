@@ -375,7 +375,7 @@
    "venue": "Teatro Caribe - Itagüí",
    "event_kind": "apertura",
    "has_qa": false,
-   "synopsis": "Invitados: Coro Polifónico Ciudad de Itagüí.",
+   "synopsis": "Entrada libre con boletería entregada media hora antes del evento en las taquillas del teatro. Invitados: Coro Polifónico Ciudad de Itagüí.",
    "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
@@ -479,7 +479,7 @@
    "day_order": 0,
    "venue": "Teatro Caribe - Itagüí",
    "has_qa": false,
-   "synopsis": "Invitados: Harold Trompetero (director) y Heidy Carrasco (actriz).",
+   "synopsis": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias. Invitados: Harold Trompetero (director) y Heidy Carrasco (actriz).",
    "synopsis_lang": "es",
    "poster": "/assets/itagui-2026/lactar.jpg",
    "posterSource": "oficial",
@@ -576,7 +576,7 @@
    "venue": "Teatro Caribe - Itagüí",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "Invitados: Alberto Cardeño (actor).",
+   "synopsis": "Un alcalde corrupto y su ayudante emprenden un viaje en busca de un muerto para inaugurar el recién construido cementerio del pueblo, antes de que finalice su mandato. En el camino son estafados, extorsionados y humillados por los vivos a quienes solo les importa el \"¿Qué gano yo?\" Así que estos dos personajes descubrirán que la corrupción parece impregnar cada casa, cada taller y cada institución en Colombia. Invitados: Alberto Cardeño (actor).",
    "synopsis_lang": "es",
    "poster": "/assets/itagui-2026/el-pais-mas-feliz-del-mundo.jpg",
    "posterSource": "oficial",
@@ -656,7 +656,7 @@
    "venue": "Teatro Caribe - Itagüí",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "Invitados: Diógenes Cuevas (director) Alberto Cardeño (actor).",
+   "synopsis": "Después de la muerte de su padre, Alejandro decide rescatar a su madre del manicomio rural donde él cree fue recluida injustamente por su familia cuando él era niño. Determinado con regresar a su madre esquizofrénica a casa. Invitados: Diógenes Cuevas (director) Alberto Cardeño (actor).",
    "synopsis_lang": "es",
    "poster": "/assets/itagui-2026/una-madre.jpg",
    "posterSource": "oficial",
@@ -917,7 +917,7 @@
    "venue": "Teatro del Norte - Itagüí",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "Invitados: Mauricio Carmona Rivera (productor) y Javier Ocampo (protagonista).",
+   "synopsis": "En el centro de Medellín, una ciudad que ha sido inclemente con la memoria, los habitantes de una vieja casona, condenada a desaparecer, nos revelan sus vidas, sus amores y deseos. Guillermo y Álvaro, pareja por más de 50 años, recuerdan una sociedad soterrada donde la homosexualidad ha sido silenciada. Raúl, actual pareja de Guillermo, pareciera no encontrar salida a su infierno cotidiano de amargura. Javier, un místico, que con cierta candidez reconstruye las memorias de sus fracasos amorosos, es la antípoda a la vida desenfrenada de sus vecinos contiguos. Este lugar, que posee tantas habitaciones como universos posibles, sirve de estancia a esta polifonía de hombres viejos, solos y rebeldes, que jamás esperaron terminar allí. Invitados: Mauricio Carmona Rivera (productor) y Javier Ocampo (protagonista).",
    "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
@@ -1077,7 +1077,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-23T09:09:39",
+  "fecha": "2026-09-23T09:47:28",
   "plan_sha": "1da19c04d9476a80",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py itagui-2026"
