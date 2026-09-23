@@ -29,9 +29,14 @@ SEDES = {
     'Teatro del Norte':                    'Teatro del Norte',
     'Cinemas de la empresa Royal Films':   'Royal Films Plaza Arrayanes',
     'Auditorio Juan Carlos Escobar':       'Auditorio Juan Carlos Escobar',
-    'Auditorio Cultural Diego Echavarría Misas': 'Auditorio Diego Echavarría Misas',
     'I.E. Luis Carlos Galán':              'I.E. Luis Carlos Galán',
     'Cineprox':                            'Cineprox Mayorca',
+    # entera, con «Cultural» y con «Misas»: es el nombre que imprime la
+    # lámina. Acortarlo fue un retoque nuestro y el cruce del radar lo
+    # cazó — el radar nombra la sala y ni su nombre ni el nuestro contenía
+    # al otro, así que el paso 1 leía «una sala que no publicamos».
+    'Auditorio Cultural Diego Echavarría Misas':
+        'Auditorio Cultural Diego Echavarría Misas',
 }
 
 # ── 2 · QUÉ ES CADA COSA QUE NO ES UNA PROYECCIÓN ──────────────────────────

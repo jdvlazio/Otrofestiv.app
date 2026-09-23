@@ -33,6 +33,7 @@ import re
 import subprocess
 import sys
 import time
+import urllib.parse
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(REPO, 'pipeline'))
@@ -75,25 +76,55 @@ def ficha(idp):
     if m:
         sin = html.unescape(re.sub(r'<[^>]+>', ' ', m.group(1)))
         sin = re.sub(r'\s{2,}', ' ', sin).strip()
-    afiche = re.search(r'(photos/[0-9_]+__imagen_270_400\.jpg)', t)
+    # EL AFICHE EN SU TAMAÑO, NO EN MINIATURA. La ficha referencia la misma
+    # imagen en varios recortes —130×110, 270×400— y además el ORIGINAL, que
+    # es el mismo nombre con las medidas vacías: `..._imagen__.jpg`. El de
+    # «Mi abuelo, mi papá y yo» mide 760×1104 ahí y 270×392 en la miniatura,
+    # que cae por debajo del suelo de [poster-mirado] y encima se amplía a
+    # 780 de ancho inventando píxeles. Se pide el original y la miniatura
+    # queda de respaldo.
+    afiche = (re.search(r'(photos/[0-9_]+__imagen__\.jpg)', t)
+              or re.search(r'(photos/[0-9_]+__imagen_270_400\.jpg)', t))
     return {'id': idp, 'directores': dirs,
             'genero': _campo(t, 'G[ée]nero'), 'duracion': _campo(t, 'Duraci[oó]n'),
             'anio': _campo(t, 'A[ñn]o'), 'sinopsis': sin,
             'afiche': (BASE + '/' + afiche.group(1)) if afiche else ''}
 
 
-def variantes(titulo):
-    """El título entero y, si lleva punto o dos puntos, lo que va antes.
+ARTICULO = re.compile(r'^(el|la|los|las|un|una|unos|unas)\s+', re.I)
 
-    El buscador es literal: «Xie. defensa de la vida» devuelve CERO y «Xie»
-    devuelve su ficha (id 3243, con las dos directoras exactas). Medido el 23 sep.
+
+def variantes(titulo):
+    """El título entero; lo que va antes del punto o los dos puntos; y lo mismo
+    sin el artículo inicial.
+
+    El buscador es LITERAL, en los dos sentidos:
+      · «Xie. defensa de la vida» devuelve CERO y «Xie» devuelve su ficha
+        (id 3243, con las dos directoras exactas);
+      · «La estancia» devuelve CERO y «Estancia» devuelve la suya (id 3121,
+        Andrés Carmona Rivera, 85 minutos — la duración que imprime Itagüí).
+        Proimágenes cataloga sin artículo y el festival lo rotula con él, así
+        que la película estaba registrada y salía «sin ficha». Medido el 23 sep.
     """
     t = titulo.strip()
-    out = [t]
-    corte = re.split(r'[.:]', t)[0].strip()
-    if corte and corte != t and len(corte) >= 3:
-        out.append(corte)
+    out = []
+    for x in (t, re.split(r'[.:]', t)[0].strip()):
+        for y in (x, ARTICULO.sub('', x).strip()):
+            if len(y) >= 3 and y not in out:
+                out.append(y)
     return out
+
+
+def _q(s):
+    """La consulta, percent-encoded en LATIN-1, que es lo que el buscador habla.
+
+    TERCERA trampa del sitio, medida el 23 sep: «Mi abuelo, mi papá y yo»
+    devuelve CERO con la tilde en UTF-8 y con la tilde cruda, y devuelve su
+    ficha (id 280, con afiche) codificada en latin-1. Los títulos sin tilde dan
+    lo mismo en las tres. Es el mismo error de esta mañana en TMDB: escapar la
+    URL a mano en vez de dejárselo a urllib.
+    """
+    return urllib.parse.quote(s.encode('latin-1', 'ignore'), safe='')
 
 
 def busca(titulo):
@@ -101,7 +132,7 @@ def busca(titulo):
     ids = []
     for q in variantes(titulo):
         for nt in (1, 3):
-            t = baja(BUSCAR.format(nt=nt, q=re.sub(r'\s+', '%20', q)))
+            t = baja(BUSCAR.format(nt=nt, q=_q(q)))
             ids += re.findall(r'id_pelicula=(\d+)', t)
     vistos, out = set(), []
     for i in ids:
@@ -118,7 +149,17 @@ def main():
     ep = f'{REPO}/festivals/staging/{fid}-enriquecido.json'
     enr = json.load(open(ep, encoding='utf-8'))
     obras = enr.get('obras') or []
-    ya = {norm(o['titulo']) for o in obras if o.get('tmdb_id')}
+    # LO QUE TMDB VERIFICÓ MANDA... salvo el afiche que no tiene.
+    # «Mi abuelo, mi papá y yo» está en TMDB (327480) con país, año y
+    # sinopsis y su ficha NO tiene imagen (`poster_path: null`), así que
+    # salió sin afiche aunque Proimágenes sí lo publica. Una obra
+    # verificada por TMDB vuelve a consultarse SOLO si le falta el afiche, y
+    # de la segunda fuente se toma Únicamente eso: los campos verificados no
+    # se pisan nunca.
+    solo_afiche = {norm(o['titulo']) for o in obras
+                   if o.get('tmdb_id') and not o.get('poster')}
+    ya = {norm(o['titulo']) for o in obras
+          if o.get('tmdb_id') and norm(o['titulo']) not in solo_afiche}
 
     pend, vistos = [], set()
     for f in crudo['funciones']:
@@ -129,7 +170,7 @@ def main():
         if f.get('director'):        # sin director no hay candado: no se busca
             pend.append(f)
 
-    print(f'{len(pend)} obra(s) sin ficha de TMDB y CON director — se buscan en Proimágenes')
+    print(f'{len(pend)} obra(s) a buscar en Proimágenes ({len(solo_afiche)} solo por el afiche)')
     nuevas, n_post = [], 0
     for i, f in enumerate(pend, 1):
         t = f['titulo']
@@ -166,6 +207,35 @@ def main():
                 o['poster'] = f'/assets/{fid}/{slug(t)}.jpg'
                 o['posterSource'] = 'oficial'
                 n_post += 1
+        if norm(t) in solo_afiche:
+            # verificada por TMDB: SOLO se le añade el afiche que le faltaba,
+            # sobre su propia entrada. Ni un campo más, y ninguno encima.
+            if not o.get('poster'):
+                print(f'[{i:2}/{len(pend)}] —   {t[:44]:46} '
+                      'proimagenes tampoco publica su afiche')
+                continue
+            for x in obras:
+                if norm(x['titulo']) == norm(t):
+                    x['poster'], x['posterSource'] = o['poster'], o['posterSource']
+                    x['_afiche_de'] = f'proimagenes {hit["id"]} (TMDB no tiene imagen)'
+            print(f'[{i:2}/{len(pend)}] OK  {t[:44]:46} '
+                  f'proimagenes {hit["id"]}  solo el afiche')
+            continue
+        if norm(t) in solo_afiche:
+            # verificada por TMDB: SOLO se le añade el afiche que le faltaba,
+            # sobre su propia entrada. Ni un campo más, y ninguno encima.
+            if not o.get('poster'):
+                print(f'[{i:2}/{len(pend)}] —   {t[:44]:46} '
+                      'proimagenes tampoco publica su afiche')
+                continue
+            for x in obras:
+                if norm(x['titulo']) == norm(t):
+                    x['poster'] = o['poster']
+                    x['posterSource'] = o['posterSource']
+                    x['_afiche_de'] = f'proimagenes {hit["id"]}: TMDB verificó la ficha y no tiene imagen'
+            print(f'[{i:2}/{len(pend)}] OK  {t[:44]:46} '
+                  f'proimagenes {hit["id"]}  solo el afiche')
+            continue
         nuevas.append(o)
         print(f'[{i:2}/{len(pend)}] OK  {t[:44]:46} proimagenes {hit["id"]}'
               f'{"  afiche" if o.get("poster") else ""}')

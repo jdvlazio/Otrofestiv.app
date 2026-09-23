@@ -30,7 +30,7 @@
   "Teatro del Norte": "Carrera 52d con calle 73a, barrio Santa María",
   "Royal Films Plaza Arrayanes": "Carrera 59a # 36-90, barrio La Independencia",
   "Auditorio Juan Carlos Escobar": "Carrera 51 # 51-55",
-  "Auditorio Diego Echavarría Misas": "Carrera 51 # 48-71, barrio Centro",
+  "Auditorio Cultural Diego Echavarría Misas": "Carrera 51 # 48-71, barrio Centro",
   "I.E. Luis Carlos Galán": "Calle 39 # 64-41",
   "Cineprox Mayorca": "Carrera 48 # 50 sur-128"
  },
@@ -156,14 +156,14 @@
    "lng": -75.5987763,
    "_nota": "Maps por la dirección impresa «Carrera 52D con Calle 73A»: el cruce en el barrio Santa María. Corrobora: «Auditorio Cultural del Norte» cae a 25 m"
   },
-  "Auditorio Diego Echavarría Misas - Itagüí": {
-   "short": "Auditorio Diego Echavarría Misas",
+  "Auditorio Cultural Diego Echavarría Misas - Itagüí": {
+   "short": "Auditorio Cultural Diego Echavarría Misas",
    "city": "Itagüí",
    "n": 1,
    "_prec": "maps",
    "lat": 6.1722992,
    "lng": -75.6109414,
-   "_nota": "Maps por la dirección impresa «Carrera 51 #48-71»: la resuelve exacta. OJO: por NOMBRE, Nominatim devuelve una I.E. homónima en la carrera 48 — no es esta"
+   "_nota": "Maps por la dirección impresa «Carrera 51 #48-71»: la resuelve exacta. OJO: por NOMBRE, Nominatim devuelve una I.E. homónima en la carrera 48 — no es esta · la llave pasó al nombre entero que imprime la lámina («Cultural … Misas»); el punto no se re-buscó porque es la MISMA dirección, Carrera 51 # 48-71."
   },
   "Royal Films Plaza Arrayanes - Itagüí": {
    "short": "Royal Films Plaza Arrayanes",
@@ -329,15 +329,22 @@
    "country": "Argentina",
    "flags": "🇦🇷",
    "duration": "90 min",
+   "genre": "Comedia",
    "day": "2026-09-23",
    "time": "15:00",
    "day_order": 0,
    "venue": "Teatro del Norte - Itagüí",
    "has_qa": false,
+   "synopsis": "Heidi y Franco son polos opuestos, ella una chica de montaña, libre y risueña, frente a él, un chico de ciudad, snob y siempre viviendo bajo presión. Pero sus diferencias no consiguen evitar que se enamoren a primera vista, pero son condenados a vivir bajo un hechizo: si alguna vez se separan, uno de ellos morirá. Su relación se pone a prueba de nuevo cuando tras un accidente de Heidi, su amigo Nicanor borra la memoria de los tres para salvarle la vida. Es la oportunidad de poder volver a vivir el primer amor dos veces.",
+   "synopsis_lang": "es",
+   "poster": "/assets/itagui-2026/inolvidable-heidi.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
     "date": "2026-09-22"
-   }
+   },
+   "lbSlug": "inolvidable-heidi",
+   "tmdb_id": 1289382
   },
   {
    "title": "La literatura en el cine de Harold Trompetero",
@@ -347,7 +354,7 @@
    "day": "2026-09-23",
    "time": "17:30",
    "day_order": 0,
-   "venue": "Auditorio Diego Echavarría Misas - Itagüí",
+   "venue": "Auditorio Cultural Diego Echavarría Misas - Itagüí",
    "event_kind": "conversatorio",
    "has_qa": false,
    "synopsis": "Lanzamiento del libro Lactar, del escritor, director y productor de cine Harold Trompetero. Invitados: Rafael Aguirre (escritor), Heidy Carrasco (actriz) y Harold Trompetero (escritor y director de cine).",
@@ -381,6 +388,7 @@
    "type": "film",
    "section": "🌍 OTRAS MIRADAS: MUESTRA INTERNACIONAL",
    "director": "Erick Ismael Hernández",
+   "year": 2026,
    "country": "México",
    "flags": "🇲🇽",
    "duration": "91 min",
@@ -389,10 +397,16 @@
    "day_order": 0,
    "venue": "Royal Films Plaza Arrayanes - Itagüí",
    "has_qa": false,
+   "synopsis": "Eddie es uno de los streamers de videojuegos más populares de internet. Ha construido su carrera bajo una sola regla: nunca aceptar patrocinios que comprometan su libertad creativa. Pero una tragedia familiar y gastos médicos imposibles de afrontar lo obligan a romper su propio código y firmar con una poderosa empresa: Empire Networks. En medio de la desesperación, prueba una aplicación de inteligencia artificial diseñada para comunicarse con entidades del más allá. Lo que comienza como un intento por obtener respuestas se convierte en un error irreversible: Eddie abre un portal a Asmodeo, uno de los demonios más antiguos y peligrosos de la mitología. Como parte de su contrato, Eddie y su equipo deben completar The Nation desde un cuartel militar abandonado: un videojuego de terror bélico. Pero al quedar atrapados en su interior, descubren la verdad: The Nation no es solo un videojuego.",
+   "synopsis_lang": "es",
+   "poster": "/assets/itagui-2026/the-nation.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
     "date": "2026-09-22"
-   }
+   },
+   "lbSlug": "the-nation-2026",
+   "tmdb_id": 1714254
   },
   {
    "title": "Tropa de élite",
@@ -537,6 +551,8 @@
    "has_qa": false,
    "synopsis": "En esta película el amor se manifiesta en tres momentos de la vida. El primer amor¸ que nos enseña que ésta es la única felicidad que se aprende acumulando tristezas. El amor de esposos¸ que fácilmente se ahoga en las rutinas del hogar. El último amor¸ el amor maduro¸ ese que ya está libre de las ataduras¸ de la vanidad¸ pero que no por ello deja de ser emocionante y nos recuerda que¸ cuando amamos¸ somos siempre niños.",
    "synopsis_lang": "es",
+   "poster": "/assets/itagui-2026/mi-abuelo-mi-papa-y-yo.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
     "date": "2026-09-22"
@@ -761,6 +777,8 @@
    "type": "film",
    "section": "🇨🇴 COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
    "director": "John Bolívar",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "105 min",
    "day": "2026-09-25",
    "time": "18:30",
@@ -860,25 +878,39 @@
    "type": "film",
    "section": "🌍 OTRAS MIRADAS: MUESTRA INTERNACIONAL",
    "director": "Atsuji Shimizu",
+   "year": 2000,
    "country": "Japón",
    "flags": "🇯🇵",
    "duration": "60 min",
+   "genre": "Acción",
    "day": "2026-09-26",
    "time": "18:30",
    "day_order": 3,
    "venue": "Royal Films Plaza Arrayanes - Itagüí",
    "has_qa": false,
+   "synopsis": "Luffy y sus compañeros recataran a Tobio de la guarida de un pirata. Más tarde mientras prosiguen su viaje, decidiran ir a la isla dorada donde vivirán una gran aventura.",
+   "synopsis_lang": "es",
+   "poster": "/assets/itagui-2026/one-piece-la-pelicula.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
     "date": "2026-09-22"
-   }
+   },
+   "lbSlug": "one-piece-the-movie",
+   "tmdb_id": 19576,
+   "synopsis_en": "There once was a pirate known as the Great Gold Pirate Woonan, who obtained almost one-third of the world's gold. Over the course of a few years, the pirate's existence faded, and a legend grew that he disappeared with his gold to a remote island, an island pirates continue to search for. Aboard the Going Merry, Luffy and his crew, starved and reckless, are robbed of their treasure. In an attempt to get it back, they wreck the getaway ship, guided by a young boy named Tobio, who's a captured part of El Drago's pirate crew. El Drago's love for gold has driven him to look for Woonan's island, and thanks to Woonan's treasure map, he finds it. During this time, Luffy's crew have been split up, and despite their own circumstances, they must find a way to stop El Drago from obtaining Woonan's gold.",
+   "title_en": "One Piece: The Movie"
   },
   {
    "title": "La estancia",
    "type": "film",
    "section": "🇨🇴 COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
    "director": "Andrés Carmona Rivera",
+   "year": 2025,
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "85 min",
+   "genre": "Documental",
    "day": "2026-09-26",
    "time": "18:30",
    "day_order": 3,
@@ -1045,9 +1077,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-23T08:19:56",
-  "plan_sha": "fe97d59930c913d5",
-  "paso": 8,
+  "fecha": "2026-09-23T09:09:39",
+  "plan_sha": "1da19c04d9476a80",
+  "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py itagui-2026"
  }
 }
