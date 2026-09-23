@@ -4788,6 +4788,104 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar staging-provenance: {_e}')
 
+# ── [nota-capturada-muda] lo que se capturó y nunca salió a la pantalla ───────
+# EL HUECO QUE TAPA. `[campo-huerfano]` caza el campo que EMITIMOS y nadie lee.
+# Éste caza el contrario: el que el parser SÍ leyó de la fuente y se quedó en un
+# campo interno, sin llegar nunca al JSON publicado. No hay síntoma: el dato
+# existe en staging, los guardianes pasan, y en la app falta una línea.
+#
+# Pasó dos veces el mismo día (22 sep 2026, Jardín), y la segunda porque arreglé
+# la primera sin preguntar si había más:
+#   · `_credito` — 4 talleres publicados sin decir quién los organiza.
+#   · `_extra`   — 40 funciones, TODAS. Ahí estaban los ponentes de los paneles
+#     (Francisco de Roux, León Valencia, la Defensora del Pueblo), de dónde
+#     venían las muestras («Tecnológico de Artes Débora Arango», «Escuela de
+#     cine ITM»), 13 conversatorios —que `durationForTravel` suma, así que los
+#     cruces se calculaban mal— y la cola del crédito de «La casa del trueno»,
+#     que salía con la coma colgando. Lo vio Juan mirando la app.
+#
+# LA REGLA. En un crudo, todo campo de función que empieza por guion bajo y
+# lleva contenido tiene que estar declarado abajo, con su razón. Un campo nuevo
+# con guion bajo es un dato capturado que no se publica: o se reparte a campos
+# de verdad, o se declara por qué no. Lo que no vale es el silencio.
+check = 'nota-capturada-muda'
+try:
+    import json as _jn, glob as _gn, os as _on
+    # Internos POR DISEÑO, cada uno con quién lo consume:
+    _INTERNO_OK = {
+        '_src':                  'la procedencia de la función; la lee publicar.py',
+        '_lamina':               'de qué lámina salió; material de trabajo del verificador',
+        '_no_se_publica':        'exclusión explícita, con su razón en el parser',
+        '_estreno':              'se consume en `premiere`',
+        '_sinopsis_en_disputa':  'decisión declarada: dos fuentes se contradicen',
+        '_sin_ficha_en_la_web':  'bandera del informe de cobertura',
+        '_provenance':           'cabecera del sidecar',
+        '_etapa':                'en qué punto del pipeline va',
+        '_corrido':              'el sello del runner',
+        '_sede_cruda':           'el nombre crudo antes de la tabla de sedes',
+        '_errata_impresa':       'decisión declarada: el impreso se equivoca y se dice dónde',
+        '_ficha_duplicada':      'decisión declarada: dos obras comparten línea técnica',
+        '_qa_fuente':            'de dónde salió el conversatorio',
+        '_nota':                 'decisión declarada del montador',
+        '_src_ficha':            'procedencia de la ficha',
+        '_sinopsis_src':         'procedencia de la sinopsis',
+        '_pais_fuente':          'procedencia del país',
+        '_duracion_fuente':      'procedencia de la duración',
+        '_duracion_dibujada':    'la duración que el impreso DIBUJA, para contrastarla',
+        '_obras_sin_duracion':   'informe de cobertura',
+        '_sin_ficha_en_el_pdf':  'bandera del informe de cobertura',
+        '_acceso_por_defecto':   'de dónde sale el acceso cuando la función calla',
+        '_caleidoscopio':        'el número de tanda; se consume en «· Parte N» del título',
+    }
+    # DEUDA: capturado, NO publicado, y sin decidir todavía CÓMO se muestra.
+    # Está acá y no arriba a propósito: declarar algo «interno» para callar al
+    # guardián es exactamente lo que el guardián existe para impedir. Sale como
+    # aviso en cada corrida hasta que se decida con Juan.
+    _DEUDA = {
+        ('jardin-2026-crudo.json', '_rotulo'):
+            'el rótulo del festival —«ACTO INAUGURAL» en «La creciente», «LECCIÓN '
+            'INAUGURAL»—: la app no dice cuál es la función de apertura',
+        ('jardin-2026-crudo.json', '_formato'):
+            '«Cine foro» en «Volver»: se publica como proyección a secas',
+        ('narrarelfuturo-2026-crudo.json', '_modera'):
+            'quién modera dos conversatorios; el festival ya terminó',
+    }
+    _mudos, _deuda_viva = {}, []
+    for _f in sorted(_gn.glob('festivals/staging/*-crudo.json')):
+        try:
+            _d = _jn.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        if not isinstance(_d, dict):
+            continue
+        for _fn in (_d.get('funciones') or []):
+            if not isinstance(_fn, dict):
+                continue
+            for _k, _v in _fn.items():
+                if not _k.startswith('_') or _k in _INTERNO_OK:
+                    continue
+                if _v in (None, '', [], {}, False):
+                    continue
+                _b = _on.path.basename(_f)
+                if (_b, _k) in _DEUDA:
+                    if (_b, _k) not in _deuda_viva:
+                        _deuda_viva.append((_b, _k))
+                    continue
+                _mudos.setdefault(_b, set()).add(_k)
+    for _b, _k in _deuda_viva:
+        warn(check, f'{_b}:{_k} — {_DEUDA[(_b, _k)]}')
+    if _mudos:
+        fail(check, 'campo capturado que no se publica ni se declara — repartilo a '
+                    'campos de verdad o declaralo en _INTERNO_OK: '
+                    + '; '.join(f'{_b}: {", ".join(sorted(_ks))}'
+                                for _b, _ks in sorted(_mudos.items())))
+    else:
+        ok(check, f'ningún crudo guarda dato en un campo mudo sin declarar '
+                  f'({len(_INTERNO_OK)} internos, {len(_deuda_viva)} en deuda)')
+except Exception as _e:
+    warn(check, f'no se pudo verificar nota-capturada-muda: {_e}')
+
+
 # ══ GUARDIANES DE LA LÓGICA DEL CRUCE Y DEL CONTRATO CON LA APP ══════════════
 # Los guardianes anteriores revisan la FORMA del dato. Estos revisan el CRUCE
 # que lo produjo y la JUNTA con la app. Nacieron el 13 ago 2026 montando TIFF:

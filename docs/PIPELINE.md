@@ -357,6 +357,19 @@ la app con disfraz. `_tmdbId` vivió en 16 funciones de FINCA a salvo de
 repo usaba `tmdb_id`. Ahora, si al quitarle el guion el nombre coincide con un
 campo real, el guardián lo llama por su nombre: contrabando.
 
+**Y el guion bajo tampoco es una tumba (22 sep 2026).** `[nota-capturada-muda]`
+es el reverso de `[campo-huerfano]`: aquél caza el campo que EMITIMOS y nadie
+lee; éste, el que el parser SÍ leyó de la fuente y se quedó en un campo interno
+sin llegar nunca a la app. No tiene síntoma —staging lo tiene, los guardianes
+pasan, y en la pantalla falta una línea—. En Jardín fueron dos el mismo día:
+`_credito` en 4 talleres y `_extra` en **40 funciones, todas**, con los ponentes
+de los paneles, de dónde venía cada muestra, 13 conversatorios que
+`durationForTravel` suma —o sea, cruces mal calculados— y la cola de un crédito
+que salía con la coma colgando. Todo campo `_` de un crudo con contenido va
+declarado: `_INTERNO_OK` con quién lo consume, o `_DEUDA` con qué falta decidir.
+Declarar como «interno» lo que en realidad se perdió es la trampa que el
+guardián existe para impedir, así que la deuda sale como aviso en cada corrida.
+
 **Decimoquinto: `[cosecha-tmdb]` — tener la ficha y volver con las manos
 vacías.** Los catorce anteriores miran la FORMA del dato: el tipo, el enum, el
 campo que nadie lee, el camino por el que llegó. Ninguno preguntaba lo obvio:

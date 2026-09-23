@@ -164,6 +164,117 @@ def poster_de(w, pos):
     return {'poster': e['poster'], 'posterSource': e['posterSource']} if e else {}
 
 
+
+# ── LA NOTA DE LA LÁMINA, REPARTIDA ──────────────────────────────────────────
+# La parrilla guardaba en `_extra` todo lo que la celda imprime y la ficha no
+# recoge. Empieza por guion bajo, así que NO SE PUBLICA: las 40 funciones que
+# la traían llegaron a producción sin ella. Lo vio Juan (22 sep) por la muestra
+# de cortos del sábado, que en la lámina dice de dónde vienen —«Tecnológico de
+# Artes Débora Arango»— y en la app no decía nada.
+#
+# Es el mismo agujero que `_credito` en los talleres, arreglado esta misma
+# mañana sin mirar si había más. Lo había: `_credito` eran 4 y `_extra` 40.
+#
+# Cada cosa a su campo, y nada a un cajón:
+#   · «Conversatorio con el equipo/la directora/los realizadores» → has_qa +
+#     qa_type='team'. NO es cosmético: `durationForTravel` lo suma, así que
+#     los cruces se estaban calculando sin él.
+#   · «Conversatorio con <nombres>» y «Conversan: …»             → qa_type='guests'
+#   · «Ponentes: …», el origen de una muestra, el colectivo       → sinopsis,
+#     con las palabras del festival y sin rótulo inventado.
+#   · «Colombia, 70 min, documentales»                            → país,
+#     duración y género, que es lo que son.
+# Lo que quede por debajo de 4 caracteres es ruido del OCR y se tira.
+
+RE_QA_EQUIPO = re.compile(
+    r'\s*(?:C|c)o?n?versatorio con (?:el equipo|la directora|el director|'
+    r'los realizadores|las directoras|la realizadora)[^.]*', re.I)
+RE_QA_INVIT = re.compile(r'\s*(?:C|c)o?n?versatorio con (?P<q>.+)', re.I)
+RE_CONVERSAN = re.compile(r'(?:^|\s)Conversan:\s*', re.I)
+RE_FICHA_SUELTA = re.compile(
+    r'^((?:[A-ZÁÉÍÓÚÑ][\wáéíóúñ]+(?:,\s*)?)+?),\s*(?:((?:19|20)\d{2}),\s*)?'
+    r'(\d{1,3})\s*min,\s*(.+)$')
+
+
+def reparte_extra(reg):
+    """`_extra` → campos publicados. Único sitio donde se reparte."""
+    ex = (reg.pop('_extra', None) or '').strip()
+    if not ex:
+        return
+    # el conversatorio primero: se saca del texto y queda como bandera
+    if RE_QA_EQUIPO.search(ex):
+        reg['has_qa'], reg['qa_type'] = True, 'team'
+        ex = RE_QA_EQUIPO.sub('', ex).strip()
+    elif RE_CONVERSAN.search(ex):
+        reg['has_qa'], reg['qa_type'] = True, 'guests'
+        ex = RE_CONVERSAN.sub(' Conversan: ', ex).strip()
+    else:
+        m = RE_QA_INVIT.match(ex)
+        if m:
+            reg['has_qa'], reg['qa_type'] = True, 'guests'
+            ex = 'Conversan: ' + m.group('q').strip()
+    # una ficha que la celda imprimió suelta no es una nota: son sus campos
+    m = RE_FICHA_SUELTA.match(ex)
+    if m:
+        paises, anio, dura, genero = m.groups()
+        reg.setdefault('pais', paises.strip(' ,'))
+        reg.setdefault('duracion_min', int(dura))
+        reg.setdefault('genero', genero.strip(' .'))
+        if anio:
+            reg.setdefault('anio', int(anio))
+        return
+    # UN TÍTULO PARTIDO TAMPOCO ES UNA NOTA. La celda envuelve los títulos largos
+    # y la cola cae acá: «Presentación del libro: Morir es un país que amabas:
+    # Poesía y memoria por nuestros líderes» + «y lideresas sociales». Si la cola
+    # empieza por una palabra de enlace en minúscula, es el final del título.
+    if re.match(r'^(y|e|o|de|del|la|el|los|las|en|para|con|sobre)\s+[a-záéíóúñ]', ex):
+        _cola = re.match(r'^[^A-ZÁÉÍÓÚÑ]+', ex).group(0).strip(' .,;')
+        reg['titulo'] = f'{reg["titulo"]} {_cola}'.strip()
+        ex = ex[len(_cola):].strip(' .,;')
+
+    # UN CRÉDITO CORTADO NO ES UNA NOTA. «La casa del trueno» salía en producción
+    # con «Dahian Cifuentes, Raúl Cifuentes,» —la coma colgando— porque la celda
+    # parte la lista de directoras en dos líneas y la segunda caía acá. El
+    # síntoma es exacto: el crédito termina en coma, así que la nota es su cola.
+    ex = ex.strip(' .;')
+    _dir = (reg.get('director') or '').rstrip()
+    if _dir.endswith(',') and ex:
+        reg['director'] = f'{_dir} {ex}'.strip(' ,')
+        return
+
+    # el resto es la descripción, con las palabras del festival
+    ex = ex.strip(' .,;')
+    if len(ex) >= 4 and not reg.get('sinopsis'):
+        reg['sinopsis'] = ex + ('' if ex.endswith(('.', '!', '?')) else '.')
+        reg['_sinopsis_de_nota'] = True
+
+
+
+def concilia_notas(funciones):
+    """La nota es de la FUNCIÓN; la sinopsis, de la OBRA.
+
+    Lo cazó `[programa-mismo-titulo]`: «Conversan: Julián Román y Víctor
+    Gaviria» está impreso solo en el pase del sábado de «Cien años de soledad»,
+    y al volverlo sinopsis la misma obra quedaba con dos. Un invitado que va a
+    un pase no describe la obra.
+
+    Regla: una sinopsis que salió de la nota solo se publica si TODOS los pases
+    de esa obra dicen lo mismo. Si difieren, la nota era del pase y se cae —con
+    el conversatorio ya guardado en `has_qa`, que es donde sí pertenece.
+    """
+    from collections import defaultdict
+    por_titulo = defaultdict(list)
+    for f in funciones:
+        por_titulo[f.get('titulo')].append(f)
+    for regs in por_titulo.values():
+        if len({r.get('sinopsis') for r in regs}) > 1:
+            for r in regs:
+                if r.pop('_sinopsis_de_nota', None):
+                    r.pop('sinopsis', None)
+    for f in funciones:
+        f.pop('_sinopsis_de_nota', None)
+
+
 def main():
     cat = json.load(open(CAT, encoding='utf-8'))
     ig = json.load(open(IG, encoding='utf-8'))
@@ -184,6 +295,7 @@ def main():
         reg = {'titulo': tit, 'dia': f['dia'], 'hora': f['hora'],
                'sede': SEDE_PLAN.get(sede_cruda, sede_cruda),
                'acceso': palabra,
+               '_extra': f.get('_extra'),
                '_src': {'url': 'https://www.instagram.com/p/DdkY5ejlraV/',
                         'date': '2026-09-21'}}
         if SALA.get(sede_cruda):
@@ -368,6 +480,10 @@ def main():
         if sec not in SIN_FUNCION_OK:
             fallos.append(f'{len(sin[sec])} obra(s) de «{sec}» sin función y sin '
                           f'entrada en SIN_FUNCION_OK')
+
+    for reg in funciones:
+        reparte_extra(reg)
+    concilia_notas(funciones)
 
     json.dump({'_provenance': provenance(
         'festicinejardin.com (la ficha de cada obra) + las láminas de Instagram '

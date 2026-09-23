@@ -147,6 +147,8 @@
    "venue": "Teatro Municipal de Jardín - Jardín",
    "event_kind": "charla",
    "has_qa": false,
+   "synopsis": "Ponentes Francy Carranza (Investigadora en derechos humanos y análisis de conflicto). César Jerez (Líder del movimiento de zonas de reserva campesina).",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -220,6 +222,8 @@
    "venue": "Placa deportiva Simón Bolívar - Jardín",
    "event_kind": "foro",
    "has_qa": false,
+   "synopsis": "Ponentes: Francisco Gutiérrez (Docente e investigador de la Universidad Nacional de Colombia), Carlos Rosero (Cofundador del Proceso de Comunidades Negras, PCN), Jani Silva (Lideresa socioambiental, presidenta ADISPA), Wilson Castañeda (Director Caribe Afirmativo) Modera: León Valencia (Escritor y director PARES).",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -241,7 +245,8 @@
    "time": "10:00",
    "day_order": 1,
    "venue": "Teatro Municipal de Jardín - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "En La Guajira, tres guardianes Wayuu defienden sus tierras ancestrales, el agua y sus tradiciones espirituales frente a proyectos mineros y de energía renovable que prometen desarrollo pero amenazan con transformar el territorio y ocupar lugares sagrados.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/la-sed-del-viento.jpg",
@@ -300,7 +305,8 @@
    "time": "13:00",
    "day_order": 1,
    "venue": "Teatro Municipal de Jardín - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "Mujeres colombianas que han vivido diferentes formas de violencia durante el conflicto armado cuentan sus historias y muestran cómo han convertido el dolor en organización, resistencia y construcción de paz.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/cuando-las-aguas-se-juntan.jpg",
@@ -326,6 +332,8 @@
    "venue": "Placa deportiva Simón Bolívar - Jardín",
    "event_kind": "foro",
    "has_qa": false,
+   "synopsis": "Ponentes: Federico Montes (Firmante del Acuerdo de paz entre Estado y Farc EP, y miembro de la CSIVI), Francisco de Roux (Sacerdote jesuita, presidente de la Comisión de la Verdad), César Jerez (Líder del movimiento de zonas de reserva campesina), Vanessa Vasco (Subdirectora de la Corporación Jurídica Libertad), Winston Gallego (Integrante Somos Defensores) Modera: Alejandro Villa (Rector ITM).",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -385,6 +393,8 @@
    "venue": "Teatro Municipal de Jardín - Jardín",
    "event_kind": "foro",
    "has_qa": false,
+   "synopsis": "Ponentes: Iris Marín (Defensora del Pueblo de Colombia), Astrid Torres (Coordinadora ONG Somos Defensores), Andrea Bolaños (Relatora ONU).",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -402,6 +412,8 @@
    "venue": "Teatro Municipal de Jardín - Jardín",
    "event_kind": "encuentro",
    "has_qa": false,
+   "synopsis": "\"Rompe el estigma\" Defensoría del pueblo.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -423,7 +435,8 @@
    "time": "19:00",
    "day_order": 1,
    "venue": "Casa de la Cultura - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
@@ -474,7 +487,8 @@
    "time": "19:00",
    "day_order": 1,
    "venue": "Escuela Jahel Peláez Montoya - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -503,7 +517,7 @@
    "is_free": true
   },
   {
-   "title": "Presentación del libro: Morir es un país que amabas: Poesía y memoria por nuestros líderes",
+   "title": "Presentación del libro: Morir es un país que amabas: Poesía y memoria por nuestros líderes y lideresas sociales",
    "type": "event",
    "section": "🎬 Muestra Central",
    "duration": "60 min",
@@ -512,7 +526,10 @@
    "day_order": 1,
    "venue": "Hotel Hacienda Balandú - Jardín",
    "event_kind": "charla",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "guests",
+   "synopsis": "Conversan: Iris Marin (Defensora del Pueblo de Colombia), Eduardo Bechara (Escritor y fundador de Escarabajo Editorial), Víctor Gaviria (Director de cine, escritor).",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -674,7 +691,8 @@
    "time": "19:45",
    "day_order": 1,
    "venue": "Teatro Municipal de Jardín - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "Después de 30 años negando su dolor, Ángela sueña con su padre desaparecido, quien le pide que lo busque. Junto a su hermana Juliana emprende un viaje por Colombia hacia el territorio indígena donde él desapareció. El viaje se convierte en una búsqueda familiar, territorial y espiritual alrededor de la memoria y la desaparición forzada.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/sone-su-nombre.jpg",
@@ -694,12 +712,16 @@
    "type": "film",
    "section": "🎬 Muestra Central",
    "director": "Gustavo Hincapié",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "90 min",
+   "genre": "documentales",
    "day": "2026-09-25",
    "time": "22:00",
    "day_order": 1,
    "venue": "Casa de la Cultura - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -733,7 +755,7 @@
    "title": "La casa del trueno",
    "type": "film",
    "section": "🎬 Muestra Central",
-   "director": "Dahian Cifuentes, Raúl Cifuentes,",
+   "director": "Dahian Cifuentes, Raúl Cifuentes, Tatiana Rojas, Marta Saiz",
    "year": 2025,
    "country": "Colombia",
    "flags": "🇨🇴",
@@ -743,7 +765,8 @@
    "time": "22:00",
    "day_order": 1,
    "venue": "Escuela Jahel Peláez Montoya - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "poster": "/assets/jardin-2026/la-casa-del-trueno.jpg",
    "posterSource": "oficial",
    "_src": {
@@ -825,6 +848,8 @@
    "venue": "Placa deportiva Simón Bolívar - Jardín",
    "event_kind": "charla",
    "has_qa": false,
+   "synopsis": "Ponentes: Francisco de Roux (Sacerdote jesuita, presidente de la Comisión de la Verdad), Julián Román (Actor colombiano).",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -841,6 +866,8 @@
    "day_order": 2,
    "venue": "Casa de la Cultura - Jardín",
    "has_qa": false,
+   "synopsis": "Tecnológico de Artes Débora Arango.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -877,7 +904,10 @@
    "time": "10:00",
    "day_order": 2,
    "venue": "Escuela Jahel Peláez Montoya - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "CINEP - CJL - IPC - CEDH.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -925,6 +955,8 @@
    "venue": "Placa deportiva Simón Bolívar - Jardín",
    "event_kind": "foro",
    "has_qa": false,
+   "synopsis": "Ponentes: Francy Carranza (Investigadora en derechos humanos y análisis de conflicto), Leonardo González (Director INDEPAZ), Marta Ruiz (Periodista y miembro de la Comisión de la Verdad) Modera: Pedro Adrián Zuluaga (Periodista).",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -941,6 +973,8 @@
    "day_order": 2,
    "venue": "Casa de la Cultura - Jardín",
    "has_qa": false,
+   "synopsis": "Escuela de cine ITM.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -962,7 +996,8 @@
    "time": "13:00",
    "day_order": 2,
    "venue": "Coliseo Municipal - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "Mujeres colombianas que han vivido diferentes formas de violencia durante el conflicto armado cuentan sus historias y muestran cómo han convertido el dolor en organización, resistencia y construcción de paz.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/cuando-las-aguas-se-juntan.jpg",
@@ -992,7 +1027,8 @@
    "time": "13:00",
    "day_order": 2,
    "venue": "Escuela Jahel Peláez Montoya - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "En La Guajira, tres guardianes Wayuu defienden sus tierras ancestrales, el agua y sus tradiciones espirituales frente a proyectos mineros y de energía renovable que prometen desarrollo pero amenazan con transformar el territorio y ocupar lugares sagrados.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/la-sed-del-viento.jpg",
@@ -1022,7 +1058,8 @@
    "time": "13:00",
    "day_order": 2,
    "venue": "Teatro Municipal de Jardín - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "En 1966, cientos de maestros colombianos recorrieron 1.600 kilómetros a pie para defender la educación pública. Sesenta años después, una joven profesora llamada Sor intenta reconstruir aquella marcha y devolverle su lugar en la memoria colectiva.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/la-marcha-del-hambre.jpg",
@@ -1047,6 +1084,8 @@
    "venue": "Placa deportiva Simón Bolívar - Jardín",
    "event_kind": "foro",
    "has_qa": false,
+   "synopsis": "Ponentes: Francisco Daza (Coordinador PARES), Sebastián Lanz (Defensor DD. HH.), Jani Silva (Lideresa socioambiental, presidenta de ADISPA), Sara Orozco (Integrante del colectivo JÓDETE), María José Cano (Cofundadora del colectivo Imagina Jericó) Modera: Lautaro Medina Bernal (Investigador de la Línea Movimientos Sociales, Tierra y Territorio CINEP).",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1058,12 +1097,16 @@
    "type": "film",
    "section": "🎬 Muestra Central",
    "director": "Gustavo Hincapié",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "90 min",
+   "genre": "documentales",
    "day": "2026-09-26",
    "time": "16:00",
    "day_order": 2,
    "venue": "Coliseo Municipal - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1085,7 +1128,8 @@
    "time": "16:00",
    "day_order": 2,
    "venue": "Escuela Jahel Peláez Montoya - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "Después de 30 años negando su dolor, Ángela sueña con su padre desaparecido, quien le pide que lo busque. Junto a su hermana Juliana emprende un viaje por Colombia hacia el territorio indígena donde él desapareció. El viaje se convierte en una búsqueda familiar, territorial y espiritual alrededor de la memoria y la desaparición forzada.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/sone-su-nombre.jpg",
@@ -1115,7 +1159,8 @@
    "time": "16:00",
    "day_order": 2,
    "venue": "Teatro Municipal de Jardín - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "En el corazón del río Magdalena, una comunidad enfrenta cada año el avance del agua y el abandono institucional. El documental observa la relación entre territorio, inundación, dignidad y resistencia comunitaria.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
@@ -1141,7 +1186,8 @@
    "time": "16:30",
    "day_order": 2,
    "venue": "Casa de la Cultura - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "guests",
    "synopsis": "Matilde, una campesina desplazada por la violencia, intenta regresar a su territorio después de haber perdido a su familia. A través de su historia, la película aborda el desplazamiento, el despojo y la persecución de quienes defienden sus comunidades.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/volver.jpg",
@@ -1156,7 +1202,7 @@
    "title": "La casa del trueno",
    "type": "film",
    "section": "🎬 Muestra Central",
-   "director": "Dahian Cifuentes, Raúl Cifuentes,",
+   "director": "Dahian Cifuentes, Raúl Cifuentes, Tatiana Rojas, Marta Saiz",
    "year": 2025,
    "country": "Colombia",
    "flags": "🇨🇴",
@@ -1166,7 +1212,8 @@
    "time": "19:00",
    "day_order": 2,
    "venue": "Casa de la Cultura - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "poster": "/assets/jardin-2026/la-casa-del-trueno.jpg",
    "posterSource": "oficial",
    "_src": {
@@ -1475,7 +1522,8 @@
    "time": "19:00",
    "day_order": 2,
    "venue": "Teatro Municipal de Jardín - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "guests",
    "poster": "/assets/jardin-2026/cien-anos-de-soledad-t2-e6-eran-mas-de-tres-mil.jpg",
    "posterSource": "oficial",
    "_src": {
@@ -1557,7 +1605,8 @@
    "time": "22:00",
    "day_order": 2,
    "venue": "Escuela Jahel Peláez Montoya - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "En 1966, cientos de maestros colombianos recorrieron 1.600 kilómetros a pie para defender la educación pública. Sesenta años después, una joven profesora llamada Sor intenta reconstruir aquella marcha y devolverle su lugar en la memoria colectiva.",
    "synopsis_lang": "es",
    "poster": "/assets/jardin-2026/la-marcha-del-hambre.jpg",
@@ -1603,6 +1652,8 @@
    "venue": "Placa deportiva Simón Bolívar - Jardín",
    "event_kind": "encuentro",
    "has_qa": false,
+   "synopsis": "ANA FABRICIA CORDOBA.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1620,7 +1671,8 @@
    "time": "10:00",
    "day_order": 3,
    "venue": "Casa de la Cultura - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1659,6 +1711,8 @@
    "venue": "Placa deportiva Simón Bolívar - Jardín",
    "event_kind": "foro",
    "has_qa": false,
+   "synopsis": "Ponentes: Alejandro Villa (Rector ITM), Lucía González (Miembro de la Comisión de la Verdad) Modera: León Valencia (Escritor y director de PARES).",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1674,7 +1728,10 @@
    "time": "10:00",
    "day_order": 3,
    "venue": "Teatro Municipal de Jardín - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "CINEP - CJL - IPC - CEDH.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1692,6 +1749,8 @@
    "venue": "Placa deportiva Simón Bolívar - Jardín",
    "event_kind": "foro",
    "has_qa": false,
+   "synopsis": "Ponentes: María Asceneth Pérez (Integrante de la Asociación de Cabildos Indígenas del Norte del Cauca, ACIN), Laura Rosa Vélez Ramos (Lideresa social, presidenta de Madres por la Vida), Los 11 de Jericó (Líderes ambientales), Morelia Cuñapa (Gobernadora indígena del pueblo Emberá), Pastora Mira García (Líder social de San Carlos, coordinadora del CARE). Modera: Carlos Rosero (Cofundador del Proceso de Comunidades Negras, PCN).",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1750,7 +1809,10 @@
    "day_order": 3,
    "venue": "Placa deportiva Simón Bolívar - Jardín",
    "event_kind": "charla",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "guests",
+   "synopsis": "Conversan: Víctor Gaviria (Director de cine, escritor), William Rouge (Escritor).",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1770,7 +1832,10 @@
    "time": "16:00",
    "day_order": 3,
    "venue": "Casa de la Cultura - Jardín",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "Producción: Antena 4 Jardín.",
+   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
@@ -1919,7 +1984,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-22T15:04:59",
+  "fecha": "2026-09-22T19:28:46",
   "plan_sha": "4977a7663617bd88",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"
