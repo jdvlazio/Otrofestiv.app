@@ -74,22 +74,25 @@
     ""
    ]
   },
-  "_por_que_secciones": "Las TRES que el festival rotula sobre sus funciones, verbatim. Nuestra capa es el emoji, el inglés y el arquetipo. Los otros dos rótulos que la lámina pinta en ese sitio —«CONVERSATORIO:» y la línea de INAUGURACIÓN— NO son secciones: rotulan una actividad concreta, y meterlos acá inventaría dos secciones que el festival no tiene.",
+  "_por_que_secciones": "Las TRES que el festival rotula sobre sus funciones, verbatim. Nuestra capa es el emoji, el inglés y el arquetipo. Los otros dos rótulos que la lámina pinta en ese sitio —«CONVERSATORIO:» y la línea de INAUGURACIÓN— NO son secciones: rotulan una actividad concreta, y meterlos acá inventaría dos secciones que el festival no tiene. LA CAJA LA PONE LA APP, NO EL CARTEL: la lámina imprime tres de las cuatro secciones en mayúscula sostenida y así salían publicadas. Itagüí era el ÚNICO de los trece festivales con las secciones en caja alta, y el nombre de sección se pinta SIN transformar en la ficha y en la lista: al lado de «Memoria y conflicto» de FICDEH, gritaba. Las PALABRAS siguen siendo verbatim del festival —la regla de secciones tal cual es sobre su vocabulario, no sobre su tipografía—; solo cambia la caja, en `nombre`, y la llave sigue siendo la que lee la lámina. Decisión de Juan (23 sep): arreglar solo Itagüí, sin tocar a los otros doce.",
   "secciones": {
    "OTRAS MIRADAS: MUESTRA INTERNACIONAL": {
     "emoji": "🌍",
     "en": "Other Gazes: International Showcase",
-    "archetype": "Muestra / País"
+    "archetype": "Muestra / País",
+    "nombre": "Otras miradas: muestra internacional"
    },
    "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO": {
     "emoji": "🇨🇴",
     "en": "Colombia: Well-Made Cinema, Unseen Cinema",
-    "archetype": "Muestra / País"
+    "archetype": "Muestra / País",
+    "nombre": "Colombia: cine bien hecho. Cine no visto"
    },
    "FESTICINE, FESTINIÑOS": {
     "emoji": "🧒",
     "en": "Festicine, Festiniños",
-    "archetype": "Perspectivas / Miradas"
+    "archetype": "Perspectivas / Miradas",
+    "nombre": "Festicine, Festiniños"
    },
    "Actividades": {
     "emoji": "🎪",

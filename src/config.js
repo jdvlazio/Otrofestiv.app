@@ -1135,9 +1135,9 @@ export const SECTION_ARCHETYPES = {
   '🎬 Muestra Central': 'Muestra / País',
   '🔮 CALEIDOSCOPIO': 'Competencia',
   // ── 9° Festival Internacional de Cine Ciudad de Itagüí ─────────────────
-  '🌍 OTRAS MIRADAS: MUESTRA INTERNACIONAL': 'Muestra / País',
-  '🇨🇴 COLOMBIA: CINE BIEN HECHO. CINE NO VISTO': 'Muestra / País',
-  '🧒 FESTICINE, FESTINIÑOS': 'Perspectivas / Miradas',
+  '🌍 Otras miradas: muestra internacional': 'Muestra / País',
+  '🇨🇴 Colombia: cine bien hecho. Cine no visto': 'Muestra / País',
+  '🧒 Festicine, Festiniños': 'Perspectivas / Miradas',
   '🎪 Actividades': 'Especiales / Eventos',
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
   '📺 Primetime': 'Especiales / Eventos',
