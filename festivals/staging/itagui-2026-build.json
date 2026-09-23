@@ -6,7 +6,7 @@
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Las siete con su dirección impresa en la lámina. El CAMI se publica por su AUDITORIO —«Auditorio Juan Carlos Escobar»— y no por el edificio: el edificio es dónde queda, el auditorio es a dónde entra la gente.",
- "_por_que_secciones": "Las TRES que el festival rotula sobre sus funciones, verbatim. Nuestra capa es el emoji, el inglés y el arquetipo. Los otros dos rótulos que la lámina pinta en ese sitio —«CONVERSATORIO:» y la línea de INAUGURACIÓN— NO son secciones: rotulan una actividad concreta, y meterlos acá inventaría dos secciones que el festival no tiene. LA CAJA LA PONE LA APP, NO EL CARTEL: la lámina imprime tres de las cuatro secciones en mayúscula sostenida y así salían publicadas. Itagüí era el ÚNICO de los trece festivales con las secciones en caja alta, y el nombre de sección se pinta SIN transformar en la ficha y en la lista: al lado de «Memoria y conflicto» de FICDEH, gritaba. Las PALABRAS siguen siendo verbatim del festival —la regla de secciones tal cual es sobre su vocabulario, no sobre su tipografía—; solo cambia la caja, en `nombre`, y la llave sigue siendo la que lee la lámina. Decisión de Juan (23 sep): arreglar solo Itagüí, sin tocar a los otros doce.",
+ "_por_que_secciones": "Las TRES que el festival rotula sobre sus funciones, verbatim. Nuestra capa es el emoji, el inglés y el arquetipo. Los otros dos rótulos que la lámina pinta en ese sitio —«CONVERSATORIO:» y la línea de INAUGURACIÓN— NO son secciones: rotulan una actividad concreta, y meterlos acá inventaría dos secciones que el festival no tiene. LA CAJA LA PONE LA APP, NO EL CARTEL: la lámina imprime tres de las cuatro secciones en mayúscula sostenida y así salían publicadas. Itagüí era el ÚNICO de los trece festivales con las secciones en caja alta, y el nombre de sección se pinta SIN transformar en la ficha y en la lista: al lado de «Memoria y conflicto» de FICDEH, gritaba. Las PALABRAS siguen siendo verbatim del festival —la regla de secciones tal cual es sobre su vocabulario, no sobre su tipografía—; solo cambia la caja, en `nombre`, y la llave sigue siendo la que lee la lámina. La caja la eligió Juan palabra por palabra (23 sep): Título, con cada palabra en alta incluida «No» —no sentence case—, y arreglar solo Itagüí sin tocar a los otros doce.",
  "name": "Festicine Itagüí",
  "displayName": "Festicine Itagüí",
  "fullName": "9° Festival Internacional de Cine Ciudad de Itagüí",
@@ -106,12 +106,12 @@
   "2026-09-27": "Domingo 27 de septiembre"
  },
  "sections": {
-  "🌍 Otras miradas: muestra internacional": {
+  "🌍 Otras Miradas: Muestra Internacional": {
    "en": "Other Gazes: International Showcase",
    "archetype": "Muestra / País",
    "order": 1
   },
-  "🇨🇴 Colombia: cine bien hecho. Cine no visto": {
+  "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto": {
    "en": "Colombia: Well-Made Cinema, Unseen Cinema",
    "archetype": "Muestra / País",
    "order": 2
@@ -197,7 +197,7 @@
   {
    "title": "El año en que mis padres salieron de vacaciones",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "director": "Cao Hamburger",
    "year": 2006,
    "country": "Brasil",
@@ -226,7 +226,7 @@
   {
    "title": "El escritor de telenovelas",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Felipe Dothée",
    "year": 2011,
    "country": "Colombia",
@@ -251,7 +251,7 @@
   {
    "title": "Tumbas al ras de la tierra",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "director": "Danny Boyle",
    "year": 1994,
    "country": "Inglaterra",
@@ -279,7 +279,7 @@
   {
    "title": "El paseo 7",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Ricardo Coral",
    "year": 2023,
    "country": "Colombia",
@@ -306,7 +306,7 @@
   {
    "title": "Función especial: Recordando a Luis Buñuel",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "duration": "180 min",
    "day": "2026-09-23",
    "time": "15:00",
@@ -324,7 +324,7 @@
   {
    "title": "Inolvidable Heidi",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "director": "Marcela Citterio y Andrés Valencia",
    "year": 2019,
    "country": "Argentina",
@@ -387,7 +387,7 @@
   {
    "title": "The Nation",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "director": "Erick Ismael Hernández",
    "year": 2026,
    "country": "México",
@@ -412,7 +412,7 @@
   {
    "title": "Tropa de élite",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "director": "José Padilha",
    "year": 2007,
    "country": "Brasil",
@@ -441,7 +441,7 @@
   {
    "title": "Leonel",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Simón Ceballos",
    "year": 2026,
    "country": "Colombia",
@@ -468,7 +468,7 @@
   {
    "title": "Lactar",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Harold Trompetero",
    "year": 2026,
    "country": "Colombia",
@@ -495,7 +495,7 @@
   {
    "title": "Función especial sobre salud mental",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "duration": "105 min",
    "day": "2026-09-24",
    "time": "09:30",
@@ -513,7 +513,7 @@
   {
    "title": "Xie. defensa de la vida",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Adriana Bernal-Mor, Paola Zuluaga",
    "year": 2026,
    "country": "Colombia",
@@ -538,7 +538,7 @@
   {
    "title": "Mi abuelo, mi papá y yo",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Darío Armando \"Dago\" García",
    "year": 2005,
    "country": "Colombia",
@@ -564,7 +564,7 @@
   {
    "title": "El país más feliz del mundo",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Jaime Escallón",
    "year": 2017,
    "country": "Colombia",
@@ -591,7 +591,7 @@
   {
    "title": "Kon-Tiki: un viaje fantástico",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "director": "Joachim Rønning y Espen Sandberg",
    "year": 2012,
    "country": "Noruega",
@@ -618,7 +618,7 @@
   {
    "title": "Piedras preciosas",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Simón Vélez",
    "year": 2026,
    "country": "Colombia, Portugal",
@@ -644,7 +644,7 @@
   {
    "title": "Una Madre",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Diógenes Cuevas",
    "year": 2022,
    "country": "Argentina, Colombia",
@@ -673,7 +673,7 @@
   {
    "title": "Wings of Freedom",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "duration": "120 min",
    "day": "2026-09-25",
    "time": "10:00",
@@ -732,7 +732,7 @@
   {
    "title": "Habitante",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "José Alejandro González",
    "year": 2025,
    "country": "Colombia",
@@ -776,7 +776,7 @@
   {
    "title": "ARENAS: la vida y obra del Escultor Rodrigo Arenas Betancour",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "John Bolívar",
    "country": "Colombia",
    "flags": "🇨🇴",
@@ -796,7 +796,7 @@
   {
    "title": "Ciudad de los hombres",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "director": "Paulo Morelli",
    "year": 2007,
    "country": "Brasil",
@@ -843,7 +843,7 @@
   {
    "title": "Función especial de cine",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "duration": "90 min",
    "day": "2026-09-26",
    "time": "18:00",
@@ -858,7 +858,7 @@
   {
    "title": "El último caso",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Edwin Jaramillo",
    "duration": "90 min",
    "day": "2026-09-26",
@@ -877,7 +877,7 @@
   {
    "title": "One Piece: la película",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "director": "Atsuji Shimizu",
    "year": 2000,
    "country": "Japón",
@@ -905,7 +905,7 @@
   {
    "title": "Estancia",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Andrés Carmona Rivera",
    "year": 2024,
    "country": "Colombia",
@@ -933,7 +933,7 @@
   {
    "title": "Zuzu Angel",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Sérgio Rezende",
    "year": 2006,
    "country": "Brasil",
@@ -958,7 +958,7 @@
   {
    "title": "Clave de amor",
    "type": "film",
-   "section": "🇨🇴 Colombia: cine bien hecho. Cine no visto",
+   "section": "🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto",
    "director": "Luis Fernando Bernal Polo",
    "year": 2026,
    "country": "Colombia",
@@ -982,7 +982,7 @@
   {
    "title": "Cine, aspirinas y buitres",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "director": "Marcelo Gomes",
    "year": 2005,
    "country": "Brasil",
@@ -1009,7 +1009,7 @@
   {
    "title": "Por si no te vuelvo a ver",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "director": "Juan Pablo Villaseñor",
    "year": 1997,
    "country": "México",
@@ -1038,7 +1038,7 @@
   {
    "title": "Bautismo de sangre",
    "type": "film",
-   "section": "🌍 Otras miradas: muestra internacional",
+   "section": "🌍 Otras Miradas: Muestra Internacional",
    "director": "Helvécio Ratton",
    "year": 2007,
    "country": "Brasil",
@@ -1083,8 +1083,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-23T10:50:01",
-  "plan_sha": "90bb96910f84d55f",
+  "fecha": "2026-09-23T10:53:56",
+  "plan_sha": "30dcb4ccb1426d12",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py itagui-2026"
  }
