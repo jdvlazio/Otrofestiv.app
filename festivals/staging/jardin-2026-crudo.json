@@ -22,7 +22,8 @@
    "tipo": "evento",
    "event_kind": "charla",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "sinopsis": "Ponentes Francy Carranza (Investigadora en derechos humanos y análisis de conflicto). César Jerez (Líder del movimiento de zonas de reserva campesina)."
   },
   {
    "titulo": "La creciente",
@@ -80,7 +81,8 @@
    "tipo": "evento",
    "event_kind": "foro",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "sinopsis": "Ponentes: Francisco Gutiérrez (Docente e investigador de la Universidad Nacional de Colombia), Carlos Rosero (Cofundador del Proceso de Comunidades Negras, PCN), Jani Silva (Lideresa socioambiental, presidenta ADISPA), Wilson Castañeda (Director Caribe Afirmativo) Modera: León Valencia (Escritor y director PARES)."
   },
   {
    "titulo": "La sed del viento",
@@ -101,7 +103,9 @@
    "anio": 2026,
    "director": "Alejandro Valbuena",
    "poster": "/assets/jardin-2026/la-sed-del-viento.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "Midnight Oil: The Hardest Line",
@@ -143,7 +147,9 @@
    "anio": 2023,
    "director": "Margarita Martínez Escallón",
    "poster": "/assets/jardin-2026/cuando-las-aguas-se-juntan.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "Panel: La defensa del liderazgo social",
@@ -158,7 +164,8 @@
    "tipo": "evento",
    "event_kind": "foro",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "sinopsis": "Ponentes: Federico Montes (Firmante del Acuerdo de paz entre Estado y Farc EP, y miembro de la CSIVI), Francisco de Roux (Sacerdote jesuita, presidente de la Comisión de la Verdad), César Jerez (Líder del movimiento de zonas de reserva campesina), Vanessa Vasco (Subdirectora de la Corporación Jurídica Libertad), Winston Gallego (Integrante Somos Defensores) Modera: Alejandro Villa (Rector ITM)."
   },
   {
    "titulo": "Muestra Red de Audiovisuales de Medellín",
@@ -208,7 +215,8 @@
    "tipo": "evento",
    "event_kind": "foro",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "sinopsis": "Ponentes: Iris Marín (Defensora del Pueblo de Colombia), Astrid Torres (Coordinadora ONG Somos Defensores), Andrea Bolaños (Relatora ONU)."
   },
   {
    "titulo": "Premiación del concurso de fotografía",
@@ -223,7 +231,8 @@
    "tipo": "evento",
    "event_kind": "encuentro",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "sinopsis": "\"Rompe el estigma\" Defensoría del pueblo."
   },
   {
    "titulo": "La creciente",
@@ -244,7 +253,9 @@
    "anio": 2026,
    "director": "Pablo Andrés Muñoz Castrillón",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
-   "posterSource": "oficial"
+   "posterSource": "oficial",
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "Romero",
@@ -299,10 +310,12 @@
      "genero": "Documental",
      "anio": 2026
     }
-   ]
+   ],
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
-   "titulo": "Presentación del libro: Morir es un país que amabas: Poesía y memoria por nuestros líderes",
+   "titulo": "Presentación del libro: Morir es un país que amabas: Poesía y memoria por nuestros líderes y lideresas sociales",
    "dia": "2026-09-25",
    "hora": "19:00",
    "sede": "Fonda Hotel Hacienda Balandú Comfenalco",
@@ -314,7 +327,10 @@
    "tipo": "evento",
    "event_kind": "charla",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "has_qa": true,
+   "qa_type": "guests",
+   "sinopsis": "Conversan: Iris Marin (Defensora del Pueblo de Colombia), Eduardo Bechara (Escritor y fundador de Escarabajo Editorial), Víctor Gaviria (Director de cine, escritor)."
   },
   {
    "titulo": "Competencia nacional de cortometrajes · Parte 1",
@@ -449,7 +465,9 @@
    "anio": 2026,
    "director": "Ángela Carabalí",
    "poster": "/assets/jardin-2026/sone-su-nombre.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "Muestra Memoria y Territorio",
@@ -464,7 +482,11 @@
    "seccion": "Muestra Central",
    "duracion_min": 90,
    "director": "Gustavo Hincapié",
-   "_sin_ficha_en_la_web": true
+   "_sin_ficha_en_la_web": true,
+   "has_qa": true,
+   "qa_type": "team",
+   "pais": "Colombia",
+   "genero": "documentales"
   },
   {
    "titulo": "Cien años de soledad (T2 E6): Eran más de tres mil",
@@ -498,13 +520,15 @@
    },
    "seccion": "Muestra Central",
    "duracion_min": 33,
-   "director": "Dahian Cifuentes, Raúl Cifuentes,",
+   "director": "Dahian Cifuentes, Raúl Cifuentes, Tatiana Rojas, Marta Saiz",
    "pais": "Colombia",
    "anio": 2025,
    "genero": "documental",
    "poster": "/assets/jardin-2026/la-casa-del-trueno.jpg",
    "posterSource": "oficial",
-   "_sin_ficha_en_la_web": true
+   "_sin_ficha_en_la_web": true,
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "La reserva",
@@ -563,7 +587,8 @@
    "tipo": "evento",
    "event_kind": "charla",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "sinopsis": "Ponentes: Francisco de Roux (Sacerdote jesuita, presidente de la Comisión de la Verdad), Julián Román (Actor colombiano)."
   },
   {
    "titulo": "Muestra de cortos",
@@ -577,7 +602,8 @@
    },
    "seccion": "Muestra Central",
    "duracion_min": 90,
-   "_sin_ficha_en_la_web": true
+   "_sin_ficha_en_la_web": true,
+   "sinopsis": "Tecnológico de Artes Débora Arango."
   },
   {
    "titulo": "Una sola golondrina no hace llover",
@@ -609,7 +635,10 @@
    },
    "seccion": "Muestra Central",
    "duracion_min": 90,
-   "_sin_ficha_en_la_web": true
+   "_sin_ficha_en_la_web": true,
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "CINEP - CJL - IPC - CEDH."
   },
   {
    "titulo": "Alma provinciana",
@@ -645,7 +674,8 @@
    "tipo": "evento",
    "event_kind": "foro",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "sinopsis": "Ponentes: Francy Carranza (Investigadora en derechos humanos y análisis de conflicto), Leonardo González (Director INDEPAZ), Marta Ruiz (Periodista y miembro de la Comisión de la Verdad) Modera: Pedro Adrián Zuluaga (Periodista)."
   },
   {
    "titulo": "Muestra estudiantil La Mostra",
@@ -659,7 +689,8 @@
    },
    "seccion": "Muestra Central",
    "duracion_min": 90,
-   "_sin_ficha_en_la_web": true
+   "_sin_ficha_en_la_web": true,
+   "sinopsis": "Escuela de cine ITM."
   },
   {
    "titulo": "Cuando las aguas se juntan",
@@ -680,7 +711,9 @@
    "anio": 2023,
    "director": "Margarita Martínez Escallón",
    "poster": "/assets/jardin-2026/cuando-las-aguas-se-juntan.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "La sed del viento",
@@ -701,7 +734,9 @@
    "anio": 2026,
    "director": "Alejandro Valbuena",
    "poster": "/assets/jardin-2026/la-sed-del-viento.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "La marcha del hambre",
@@ -722,7 +757,9 @@
    "anio": 2026,
    "director": "Sorany Marín Trejos",
    "poster": "/assets/jardin-2026/la-marcha-del-hambre.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "Panel: Diversidad de liderazgos y relevo generacional",
@@ -737,7 +774,8 @@
    "tipo": "evento",
    "event_kind": "foro",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "sinopsis": "Ponentes: Francisco Daza (Coordinador PARES), Sebastián Lanz (Defensor DD. HH.), Jani Silva (Lideresa socioambiental, presidenta de ADISPA), Sara Orozco (Integrante del colectivo JÓDETE), María José Cano (Cofundadora del colectivo Imagina Jericó) Modera: Lautaro Medina Bernal (Investigador de la Línea Movimientos Sociales, Tierra y Territorio CINEP)."
   },
   {
    "titulo": "Muestra Memoria y Territorio",
@@ -752,7 +790,11 @@
    "seccion": "Muestra Central",
    "duracion_min": 90,
    "director": "Gustavo Hincapié",
-   "_sin_ficha_en_la_web": true
+   "_sin_ficha_en_la_web": true,
+   "has_qa": true,
+   "qa_type": "team",
+   "pais": "Colombia",
+   "genero": "documentales"
   },
   {
    "titulo": "Soñé su nombre",
@@ -773,7 +815,9 @@
    "anio": 2026,
    "director": "Ángela Carabalí",
    "poster": "/assets/jardin-2026/sone-su-nombre.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "La creciente",
@@ -794,7 +838,9 @@
    "anio": 2026,
    "director": "Pablo Andrés Muñoz Castrillón",
    "poster": "/assets/jardin-2026/la-creciente.jpg",
-   "posterSource": "oficial"
+   "posterSource": "oficial",
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "Volver",
@@ -816,7 +862,9 @@
    "anio": 2016,
    "director": "Carlos A. Guevara",
    "poster": "/assets/jardin-2026/volver.jpg",
-   "posterSource": "editorial"
+   "posterSource": "editorial",
+   "has_qa": true,
+   "qa_type": "guests"
   },
   {
    "titulo": "La casa del trueno",
@@ -830,13 +878,15 @@
    },
    "seccion": "Muestra Central",
    "duracion_min": 33,
-   "director": "Dahian Cifuentes, Raúl Cifuentes,",
+   "director": "Dahian Cifuentes, Raúl Cifuentes, Tatiana Rojas, Marta Saiz",
    "pais": "Colombia",
    "anio": 2025,
    "genero": "documental",
    "poster": "/assets/jardin-2026/la-casa-del-trueno.jpg",
    "posterSource": "oficial",
-   "_sin_ficha_en_la_web": true
+   "_sin_ficha_en_la_web": true,
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "La reserva",
@@ -1085,7 +1135,9 @@
    "genero": "ficción",
    "poster": "/assets/jardin-2026/cien-anos-de-soledad-t2-e6-eran-mas-de-tres-mil.jpg",
    "posterSource": "oficial",
-   "_sin_ficha_en_la_web": true
+   "_sin_ficha_en_la_web": true,
+   "has_qa": true,
+   "qa_type": "guests"
   },
   {
    "titulo": "Romero",
@@ -1148,7 +1200,9 @@
    "anio": 2026,
    "director": "Sorany Marín Trejos",
    "poster": "/assets/jardin-2026/la-marcha-del-hambre.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "Una sola golondrina no hace llover",
@@ -1182,7 +1236,8 @@
    "tipo": "evento",
    "event_kind": "encuentro",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "sinopsis": "ANA FABRICIA CORDOBA."
   },
   {
    "titulo": "Tres Mujeres guerreras + Ubuntu: La métrica de los afectos",
@@ -1216,7 +1271,9 @@
      "genero": "Documental",
      "anio": 2026
     }
-   ]
+   ],
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "Panel: Liderazgo y educación",
@@ -1231,7 +1288,8 @@
    "tipo": "evento",
    "event_kind": "foro",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "sinopsis": "Ponentes: Alejandro Villa (Rector ITM), Lucía González (Miembro de la Comisión de la Verdad) Modera: León Valencia (Escritor y director de PARES)."
   },
   {
    "titulo": "Muestra documental: Defender la vida y la naturaleza",
@@ -1245,7 +1303,10 @@
    },
    "seccion": "Muestra Central",
    "duracion_min": 90,
-   "_sin_ficha_en_la_web": true
+   "_sin_ficha_en_la_web": true,
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "CINEP - CJL - IPC - CEDH."
   },
   {
    "titulo": "Panel: Liderazgo y territorio",
@@ -1260,7 +1321,8 @@
    "tipo": "evento",
    "event_kind": "foro",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "sinopsis": "Ponentes: María Asceneth Pérez (Integrante de la Asociación de Cabildos Indígenas del Norte del Cauca, ACIN), Laura Rosa Vélez Ramos (Lideresa social, presidenta de Madres por la Vida), Los 11 de Jericó (Líderes ambientales), Morelia Cuñapa (Gobernadora indígena del pueblo Emberá), Pastora Mira García (Líder social de San Carlos, coordinadora del CARE). Modera: Carlos Rosero (Cofundador del Proceso de Comunidades Negras, PCN)."
   },
   {
    "titulo": "Proyección resultados del Taller De la ideación a la acción",
@@ -1310,7 +1372,10 @@
    "tipo": "evento",
    "event_kind": "charla",
    "duracion_min": 60,
-   "seccion": "Muestra Central"
+   "seccion": "Muestra Central",
+   "has_qa": true,
+   "qa_type": "guests",
+   "sinopsis": "Conversan: Víctor Gaviria (Director de cine, escritor), William Rouge (Escritor)."
   },
   {
    "titulo": "Gustavo, el observador invisible",
@@ -1328,7 +1393,10 @@
    "pais": "Colombia",
    "anio": 1926,
    "genero": "documental",
-   "_sin_ficha_en_la_web": true
+   "_sin_ficha_en_la_web": true,
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "Producción: Antena 4 Jardín."
   },
   {
    "titulo": "La reserva",
