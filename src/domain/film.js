@@ -152,6 +152,39 @@ export function effectiveDuration(f){
   return parseDur(f&&f.duration)+(f&&f.has_qa?FESTIVAL_QA_MIN:0);
 }
 
+// premiereBadgeKey — EL DISTINTIVO DE LA FUNCIÓN, en un solo dueño.
+//
+// `premiere` lo escriben 170 funciones de cuatro festivales —Tribeca 136, FINCA
+// 19, FICMontañas 11, FICMA 4— con las palabras del propio festival: «World
+// Premiere», «Estreno Latinoamericano», «Película de Apertura», «Función
+// inaugural», «Función de clausura». NINGUNA vista lo pintaba: el dato estaba
+// capturado y era invisible desde que se montó Tribeca. `[campo-huerfano]` no
+// lo cazó porque la palabra «premiere» aparece en un COMENTARIO de i18n.js, y
+// el guardián busca el nombre del campo en el texto de src/ sin distinguir
+// código de comentario.
+//
+// REGLA DE JUAN (23 sep 2026): «cortos, simples, minimalistas, SIEMPRE». En la
+// tarjeta va UNA palabra; el texto entero del festival se lee en la ficha. Por
+// eso esto devuelve una CLAVE de i18n y no el texto: la tarjeta no repite lo
+// que el festival escribió, lo resume.
+//
+// Las reglas van en orden y son abiertas a propósito: `premiere` es texto libre
+// y cada festival trae su variante. Un valor que no case con ninguna NO pierde
+// nada —la ficha sigue mostrándolo entero—, solo se queda sin badge, y el
+// guardián [premiere-sin-badge] lo lista para poder añadir la regla.
+const _PREMIERE_REGLAS = [
+  [/apertura|inaugural|opening/i, 'badge_apertura'],
+  [/clausura|cierre|closing/i,    'badge_clausura'],
+  [/estreno|premiere|estreia/i,   'badge_estreno'],
+];
+
+export function premiereBadgeKey(f){
+  const v=f&&f.premiere;
+  if(!v||typeof v!=='string') return null;
+  for(const [re,clave] of _PREMIERE_REGLAS) if(re.test(v)) return clave;
+  return null;
+}
+
 // durationForTravel — LA DOCTRINA DEL Q&A en un solo dueño (30 jul 2026):
 // el Q&A (+30 estimados) solo compromete tu tiempo cuando salir cuesta algo,
 // es decir cuando hay TRASLADO a otra sede. Misma sede → el fin duro es el

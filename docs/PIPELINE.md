@@ -357,6 +357,21 @@ la app con disfraz. `_tmdbId` vivió en 16 funciones de FINCA a salvo de
 repo usaba `tmdb_id`. Ahora, si al quitarle el guion el nombre coincide con un
 campo real, el guardián lo llama por su nombre: contrabando.
 
+**Ni un comentario es un lector (23 sep 2026).** `[campo-huerfano]` buscaba el
+nombre del campo en el TEXTO de `src/`, sin distinguir código de comentario.
+`premiere` aparecía en un comentario de `i18n.js` y con eso se daba por leído:
+**170 funciones** —Tribeca 136, FINCA 19, FICMontañas 11, FICMA 4— llevaban su
+«World Premiere» y su «Película de Apertura» guardados e invisibles desde que
+se montaron. Ahora el guardián lee `src/` sin comentarios, y al hacerlo
+destapó dos más (`competencia` de FINCA y `format` de TIFF), declarados como
+deuda porque esos festivales ya terminaron.
+
+Y su reverso, `[premiere-sin-badge]`: la tarjeta resume el distintivo a UNA
+palabra —APERTURA / CLAUSURA / ESTRENO, reglas en `premiereBadgeKey`— porque
+los distintivos van cortos (Juan, 23 sep 2026); el texto entero del festival se
+lee en la banda de avisos de la ficha. Un valor que no case con ninguna regla no
+pierde el dato, pero sí la píldora, así que sale como aviso en cada corrida.
+
 **Y el guion bajo tampoco es una tumba (22 sep 2026).** `[nota-capturada-muda]`
 es el reverso de `[campo-huerfano]`: aquél caza el campo que EMITIMOS y nadie
 lee; éste, el que el parser SÍ leyó de la fuente y se quedó en un campo interno
