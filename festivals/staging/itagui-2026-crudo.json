@@ -1,0 +1,612 @@
+{
+ "_provenance": {
+  "fuente": "Instagram @institutoitagui — el carrusel de 15 láminas de programación, y el PDF oficial de institutoitagui.gov.co",
+  "capturado": "2026-09-23",
+  "que_aporta": "la programación entera: día, hora, sede, sección y ficha",
+  "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+  "metodo": "OCR con cajas sobre las láminas, verificado contra la lectura a ojo función por función Y contra el PDF oficial, donde aparecen los 37 títulos"
+ },
+ "_acceso": {
+  "estado": "desconocido",
+  "revisado": "2026-09-23",
+  "fuentes": [
+   "las 15 láminas del carrusel de programación (instagram.com/p/DdmhX7gFIZa/)",
+   "el PDF oficial: institutoitagui.gov.co/uploads/ckbox/FESTIVAL DE CINE/programacion_festival_de_cine_2026.pdf (15 páginas con texto)",
+   "institutoitagui.gov.co (portada)",
+   "@festicineoficial y @institutoitagui (bio y posts de la edición)"
+  ],
+  "_por_que": "Dos de las siete sedes son cines comerciales: suponer que es gratis por ser un festival municipal sería inventarlo."
+ },
+ "funciones": [
+  {
+   "titulo": "El año en que mis padres salieron de vacaciones",
+   "dia": "2026-09-23",
+   "hora": "10:00",
+   "sede": "Auditorio Juan Carlos Escobar",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "pais": "Brasil",
+   "director": "Cao Hamburger",
+   "duracion_min": 103,
+   "titulo_original": "O ano em que meus pais saíram de férias",
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "El escritor de telenovelas",
+   "dia": "2026-09-23",
+   "hora": "10:00",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "Felipe Dothée",
+   "duracion_min": 90
+  },
+  {
+   "titulo": "Tumbas al ras de la tierra",
+   "dia": "2026-09-23",
+   "hora": "10:00",
+   "sede": "Teatro del Norte",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "pais": "Inglaterra",
+   "director": "Danny Boyle",
+   "duracion_min": 92,
+   "titulo_original": "Shallow Grave",
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "El paseo 7",
+   "dia": "2026-09-23",
+   "hora": "14:00",
+   "sede": "Auditorio Juan Carlos Escobar",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "Ricardo Coral",
+   "duracion_min": 88,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Función especial: Recordando a Luis Buñuel",
+   "dia": "2026-09-23",
+   "hora": "15:00",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "Invitados: Sergio Spitaletta.",
+   "duracion_min": 180,
+   "_duracion_de": "el hueco hasta la siguiente función en la misma sede"
+  },
+  {
+   "titulo": "Inolvidable Heidi",
+   "dia": "2026-09-23",
+   "hora": "15:00",
+   "sede": "Teatro del Norte",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "pais": "Argentina",
+   "director": "Marcela Citterio y Andrés Valencia",
+   "duracion_min": 90
+  },
+  {
+   "titulo": "La literatura en el cine de Harold Trompetero",
+   "dia": "2026-09-23",
+   "hora": "17:30",
+   "sede": "Auditorio Diego Echavarría Misas",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "sinopsis": "Lanzamiento del libro Lactar, del escritor, director y productor de cine Harold Trompetero. Invitados: Rafael Aguirre (escritor), Heidy Carrasco (actriz) y Harold Trompetero (escritor y director de cine).",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+  },
+  {
+   "titulo": "Concierto de inauguración",
+   "dia": "2026-09-23",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "sinopsis": "Invitados: Coro Polifónico Ciudad de Itagüí.",
+   "tipo": "evento",
+   "event_kind": "apertura",
+   "duracion_min": 40,
+   "_duracion_de": "el hueco hasta la siguiente función en la misma sede"
+  },
+  {
+   "titulo": "The Nation",
+   "dia": "2026-09-23",
+   "hora": "18:30",
+   "sede": "Royal Films Plaza Arrayanes",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "pais": "México",
+   "director": "Erick Ismael Hernández",
+   "duracion_min": 91
+  },
+  {
+   "titulo": "Tropa de élite",
+   "dia": "2026-09-23",
+   "hora": "18:30",
+   "sede": "Teatro del Norte",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "pais": "Brasil",
+   "director": "José Padilha",
+   "duracion_min": 115,
+   "titulo_original": "Tropa de elite",
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Leonel",
+   "dia": "2026-09-23",
+   "hora": "18:40",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "Simón Ceballos",
+   "duracion_min": 5,
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "Invitados: Equipo de producción."
+  },
+  {
+   "titulo": "Lactar",
+   "dia": "2026-09-23",
+   "hora": "19:00",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "Harold Trompetero",
+   "duracion_min": 75,
+   "sinopsis": "Invitados: Harold Trompetero (director) y Heidy Carrasco (actriz)."
+  },
+  {
+   "titulo": "función especial sobre salud mental",
+   "dia": "2026-09-24",
+   "hora": "09:30",
+   "sede": "I.E. Luis Carlos Galán",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "duracion_min": 105,
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "Invitados: Secretaría de la Familia."
+  },
+  {
+   "titulo": "Xie. defensa de la vida",
+   "dia": "2026-09-24",
+   "hora": "10:00",
+   "sede": "Auditorio Juan Carlos Escobar",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "Adriana Bernal-Mor, Paola Zuluaga",
+   "duracion_min": 43,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Mi abuelo, mi papá y yo",
+   "dia": "2026-09-24",
+   "hora": "10:00",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "Darío Armando \"Dago\" García",
+   "duracion_min": 95
+  },
+  {
+   "titulo": "El país más feliz del mundo",
+   "dia": "2026-09-24",
+   "hora": "15:00",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "Jaime Escallón",
+   "duracion_min": 90,
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "Invitados: Alberto Cardeño (actor)."
+  },
+  {
+   "titulo": "Kon-Tiki: un viaje fantástico",
+   "dia": "2026-09-24",
+   "hora": "15:00",
+   "sede": "Teatro del Norte",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "pais": "Noruega",
+   "director": "Joachim Rønning y Espen Sandberg",
+   "duracion_min": 118
+  },
+  {
+   "titulo": "Piedras preciosas",
+   "dia": "2026-09-24",
+   "hora": "18:30",
+   "sede": "Royal Films Plaza Arrayanes",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "Simón Vélez",
+   "duracion_min": 70
+  },
+  {
+   "titulo": "Una Madre",
+   "dia": "2026-09-24",
+   "hora": "18:30",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "Diógenes Cuevas",
+   "duracion_min": 83,
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "Invitados: Diógenes Cuevas (director) Alberto Cardeño (actor)."
+  },
+  {
+   "titulo": "Wings of Freedom",
+   "dia": "2026-09-25",
+   "hora": "10:00",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "duracion_min": 120,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "100% lobo",
+   "dia": "2026-09-25",
+   "hora": "15:00",
+   "sede": "Royal Films Plaza Arrayanes",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "FESTICINE, FESTINIÑOS",
+   "director": "Alexs Stadermann",
+   "duracion_min": 96
+  },
+  {
+   "titulo": "Sección de cortometrajes",
+   "dia": "2026-09-25",
+   "hora": "15:00",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "evento",
+   "duracion_min": 90,
+   "_duracion_de": "el hueco hasta la siguiente función en la misma sede"
+  },
+  {
+   "titulo": "Habitante",
+   "dia": "2026-09-25",
+   "hora": "15:00",
+   "sede": "Teatro del Norte",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "José Alejandro González",
+   "duracion_min": 89,
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "Invitados: José Alejandro González."
+  },
+  {
+   "titulo": "Visita guiada al museo Centro Cultural Caribe",
+   "dia": "2026-09-25",
+   "hora": "16:30",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "visita guiada",
+   "duracion_min": 120,
+   "_duracion_de": "el hueco hasta la siguiente función en la misma sede"
+  },
+  {
+   "titulo": "ARENAS: la vida y obra del Escultor Rodrigo Arenas Betancour",
+   "dia": "2026-09-25",
+   "hora": "18:30",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "duracion_min": 105,
+   "sinopsis": "Invitados: Gustavo Nieto Roa (productor), Claudia Parra (productora), John Bolívar (Director), equipo de producción y familiares del maestro Rodrigo Arenas Betancourt."
+  },
+  {
+   "titulo": "Ciudad de los hombres",
+   "dia": "2026-09-25",
+   "hora": "18:30",
+   "sede": "Teatro del Norte",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "pais": "Brasil",
+   "director": "Paulo Morelli",
+   "duracion_min": 106,
+   "titulo_original": "Cidade dos homens",
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Torneo del juego de TCG Magic The Gathering",
+   "dia": "2026-09-26",
+   "hora": "15:00",
+   "sede": "Royal Films Plaza Arrayanes",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "torneo",
+   "sinopsis": "En las modalidades tradicional (principiante y avanzado) y Commander (avanzado, hasta brackets 3).",
+   "duracion_min": 210,
+   "_duracion_de": "el hueco hasta la siguiente función en la misma sede"
+  },
+  {
+   "titulo": "función especial de cine",
+   "dia": "2026-09-26",
+   "hora": "18:00",
+   "sede": "Cineprox Mayorca",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+  },
+  {
+   "titulo": "El último caso",
+   "dia": "2026-09-26",
+   "hora": "18:00",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "Edwin Jaramillo",
+   "duracion_min": 90,
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "Invitados: Edwin Jaramillo, director de cine itagüiseño."
+  },
+  {
+   "titulo": "One Piece: la película",
+   "dia": "2026-09-26",
+   "hora": "18:30",
+   "sede": "Royal Films Plaza Arrayanes",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "pais": "Japón",
+   "director": "Atsuji Shimizu",
+   "duracion_min": 60
+  },
+  {
+   "titulo": "La estancia",
+   "dia": "2026-09-26",
+   "hora": "18:30",
+   "sede": "Teatro del Norte",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "Andrés Carmona Rivera",
+   "duracion_min": 85,
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "Invitados: Mauricio Carmona Rivera (productor) y Javier Ocampo (protagonista)."
+  },
+  {
+   "titulo": "Zuzu Angel",
+   "dia": "2026-09-26",
+   "hora": "20:00",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "pais": "Brasil",
+   "director": "Sérgio Rezende",
+   "duracion_min": 108,
+   "titulo_original": "Zuzu Angel"
+  },
+  {
+   "titulo": "Clave de amor",
+   "dia": "2026-09-27",
+   "hora": "10:00",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
+   "director": "Luis Fernando Bernal Polo",
+   "duracion_min": 100
+  },
+  {
+   "titulo": "Cine, aspirinas y buitres",
+   "dia": "2026-09-27",
+   "hora": "15:00",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "pais": "Brasil",
+   "director": "Marcelo Gomes",
+   "duracion_min": 99,
+   "titulo_original": "Cinema, Aspirinas e Urubus",
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Por si no te vuelvo a ver",
+   "dia": "2026-09-27",
+   "hora": "18:00",
+   "sede": "Royal Films Plaza Arrayanes",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "pais": "México",
+   "director": "Juan Pablo Villaseñor",
+   "duracion_min": 97,
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "Invitados: participantes del Hogar de los Recuerdos y Fausto (cantante)."
+  },
+  {
+   "titulo": "Bautismo de sangre",
+   "dia": "2026-09-27",
+   "hora": "18:30",
+   "sede": "Teatro Caribe",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
+   "pais": "Brasil",
+   "director": "Helvécio Ratton",
+   "duracion_min": 110,
+   "titulo_original": "Batismo de sangue",
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Fausto, una vida de película",
+   "dia": "2026-09-27",
+   "hora": "19:40",
+   "sede": "Royal Films Plaza Arrayanes",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+  }
+ ]
+}

@@ -60,7 +60,23 @@ def lb_slug(tmdb_id):
 
 def enriquecer_obra(f, key, alias):
     """→ dict verificado o None. `f` es una función del formato intermedio."""
-    for q in variantes(f['titulo'], alias):
+    # EL TÍTULO ORIGINAL TAMBIÉN SE BUSCA (23 sep 2026). Un festival que
+    # programa cine internacional lo rotula en su idioma y publica el original
+    # al lado: Itagüí imprime «Tumbas al ras de la tierra / Título original:
+    # Shallow Grave». Buscar solo por el título del festival dejaba a Danny
+    # Boyle «sin ficha verificable» teniendo la llave impresa en la misma
+    # lámina — y con él «Ciudad de los hombres», «Cine, aspirinas y buitres» y
+    # «El año en que mis padres salieron de vacaciones».
+    #
+    # Va DESPUÉS del título del festival, no antes: el original es el plan B.
+    # Y no relaja nada — lo que encuentre sigue pasando por ficha_verifica().
+    consultas = list(variantes(f['titulo'], alias))
+    orig = (f.get('titulo_original') or '').strip()
+    if orig and norm(orig) != norm(f['titulo']):
+        for q in variantes(orig, alias):
+            if q not in consultas:
+                consultas.append(q)
+    for q in consultas:
         for lang in ('es-ES', 'en-US'):
             res = tmdb_get('/search/movie', key, query=q, language=lang,
                            include_adult='false')
@@ -220,12 +236,20 @@ def main():
             if not e.get('poster_path'):
                 continue
             dest = f'{REPO}/assets/{fid}/{slug(t)}.jpg'
+            if not (os.path.exists(dest) and os.path.getsize(dest) > 5000):
+                subprocess.run(['curl', '-sL', '--max-time', '30', '-o', dest,
+                                f'https://image.tmdb.org/t/p/w780{e["poster_path"]}'])
             if os.path.exists(dest) and os.path.getsize(dest) > 5000:
-                n += 1; continue
-            subprocess.run(['curl', '-sL', '--max-time', '30', '-o', dest,
-                            f'https://image.tmdb.org/t/p/w780{e["poster_path"]}'])
-            if os.path.getsize(dest) > 5000:
                 n += 1
+                # LA RUTA LOCAL, ESCRITA (23 sep 2026). Este paso bajaba el
+                # archivo y no se lo decía a nadie: el sidecar guardaba el
+                # `poster_path` de TMDB —que el ensamblador convierte en URL de
+                # su CDN— y la imagen descargada en assets/ quedaba huérfana.
+                # Itagüí salió con 17 afiches en disco y 0% de cobertura, y el
+                # gate de pósters lo paró. El ensamblador ya sabe leer rutas
+                # /assets/; solo que nadie se las escribía.
+                e['poster'] = f'/assets/{fid}/{slug(t)}.jpg'
+                e['posterSource'] = 'tmdb'
         print(f'pósters en assets/{fid}/: {n}')
 
     json.dump({'_provenance': provenance(

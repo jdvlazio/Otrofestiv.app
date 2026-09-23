@@ -44,6 +44,25 @@ def buscar(q):
         return []
 
 
+def limpia_direccion(d):
+    """La dirección colombiana, como Nominatim la entiende.
+
+    Medido el 23 sep 2026 con las sedes de Itagüí:
+      «Carrera 50 # 52-77, barrio Centro» → 5 resultados, TODOS EN BOGOTÁ
+      «Carrera 50 52-77»                  → Teatro Caribe, exacto
+    El «#» y el «barrio X» no son ruido inocente: desvían la búsqueda a otra
+    ciudad, que es peor que no encontrar nada. También sobra lo que va entre
+    paréntesis («(carrera 51 # 51-55)» ya viene suelto) y el piso.
+    """
+    d = re.sub(r'\(([^)]*)\)', r' \1 ', d)          # los paréntesis, planos
+    d = re.sub(r'\s*#\s*', ' ', d)                  # «# 52-77» → «52-77»
+    d = re.sub(r',?\s*barrio\s+[^,]+', '', d, flags=re.I)
+    d = re.sub(r'^\s*(sexto|quinto|cuarto|tercer|segundo|primer)\s+piso[^,]*,?\s*',
+               '', d, flags=re.I)
+    return re.sub(r'\s{2,}', ' ', d).strip(' ,')
+
+
+
 def main():
     if len(sys.argv) < 2 or '--centro' not in sys.argv:
         sys.exit('uso: python3 pipeline/geocodificar.py <fest-id> --centro LAT,LNG [--radio 0.3] [--ciudad "Sasaima, Cundinamarca"]')
@@ -81,10 +100,12 @@ def main():
     # escribe. Una herramienta no puede pedir como requisito su propia salida.
     # El contrato lo hacen cumplir `correr.py` y `ensamblar.py`, que van después.
     plan_p = f'{REPO}/pipeline/{fid}.plan.json'
+    direcciones = {}
     if os.path.exists(plan_p):
         plan = json.load(open(plan_p, encoding='utf-8'))
         for s in (plan.get('festival', {}).get('sedes') or {}):
             sedes.setdefault(s, {'n': 0, 'ciudad': ''})
+        direcciones = plan.get('festival', {}).get('direcciones') or {}
 
     ok = ya = falta = 0
     for i, (s, meta) in enumerate(sorted(sedes.items()), 1):
@@ -93,19 +114,39 @@ def main():
             ya += 1; continue                      # verificación humana: intocable
         if prev.get('lat'):
             ya += 1; continue
-        consulta = f'{s}, {meta["ciudad"] or ciudad}'.strip(', ')
+        # LA DIRECCIÓN, CUANDO EL FESTIVAL LA PUBLICA (23 sep 2026). Nominatim
+        # no conoce «Auditorio Juan Carlos Escobar» ni «Cineprox Mayorca», pero
+        # sí conoce «carrera 51 # 51-55, Itagüí». Itagüí imprime las SIETE
+        # direcciones en sus láminas y las siete caían a mano por buscar solo
+        # por nombre. Se declara en el plan (`festival.direcciones`) y se usa
+        # como SEGUNDA consulta: el nombre primero, porque cuando acierta es más
+        # preciso que el número de la calle.
+        consultas = [f'{s}, {meta["ciudad"] or ciudad}'.strip(', ')]
+        _dir = (direcciones or {}).get(s)
+        if _dir:
+            consultas.append(f'{limpia_direccion(_dir)}, {meta["ciudad"] or ciudad}'.strip(', '))
         distintivos = set(norm(s).split()) - GENERICAS
         elegido = None
-        for r in buscar(consulta):
+        # La consulta POR DIRECCIÓN no puede exigir las palabras del nombre: el
+        # resultado de «Carrera 50 # 52-77, Itagüí» no dice «Caribe» en ninguna
+        # parte, y con el filtro del nombre las siete sedes seguían cayendo a
+        # mano. Lo que la valida es OTRA cosa: que la dirección sea del propio
+        # festival —impresa en su lámina— y que caiga dentro del radio. Se marca
+        # `_prec:'direccion'` para que se vea de dónde salió cada punto, y no se
+        # confunda con la coincidencia por nombre, que es más fuerte.
+        for r, por_direccion in [(x, i > 0) for i, c in enumerate(consultas)
+                                 for x in buscar(c)]:
             la, ln = float(r['lat']), float(r['lon'])
             if abs(la - lat0) > radio or abs(ln - lng0) > radio:
                 continue                           # otra ciudad
-            if distintivos and not (distintivos & set(norm(r.get('display_name', '')).split())):
+            if not por_direccion and distintivos and not (
+                    distintivos & set(norm(r.get('display_name', '')).split())):
                 continue                           # nombre que no distingue nada
-            if r.get('class') in CLASES_LUGAR and s not in barrios_ok:
+            if not por_direccion and r.get('class') in CLASES_LUGAR and s not in barrios_ok:
                 continue                           # una sala fija nunca es un barrio
             elegido = {'lat': round(la, 7), 'lng': round(ln, 7),
-                       '_prec': 'nominatim', '_match': r['display_name'][:90]}
+                       '_prec': 'direccion' if por_direccion else 'nominatim',
+                       '_match': r['display_name'][:90]}
             break
         if elegido:
             geo[s] = {**prev, **elegido, 'n': meta['n']}
