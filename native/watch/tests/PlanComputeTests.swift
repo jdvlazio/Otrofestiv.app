@@ -123,6 +123,35 @@ enum PlanComputeTests {
         check("shortDay sin dayShort → dayLabel", catSin.shortDay("2026-09-12") == PlanCompute.dayLabel("2026-09-12"))
         check("Catalog sin timezoneOffset decodifica (nil)", catSin.timezoneOffset == nil)
 
+        // ── Catálogo: de quién es lo que hay en memoria (22 sep 2026) ─────────
+        // EL DEFECTO: Mi Plan mostraba FICMA y Programa pintaba Jardín. El atajo de
+        // frescura miraba «hay algo en memoria», no «es de ESTE festival», así que al
+        // volver a un festival bajado hace poco conservaba el del festival anterior.
+        let ahora = Date()
+        let haceUnaHora = ahora.addingTimeInterval(-3600)
+        let haceUnDia = ahora.addingTimeInterval(-86_400)
+        let seisHoras: TimeInterval = 6 * 3600
+        func necesitaRed(_ enMemoria: String, _ pedido: String, _ bajado: Date?, force: Bool = false) -> Bool {
+            PlanCompute.catalogNeedsNetwork(inMemory: enMemoria, requested: pedido, fetched: bajado,
+                                            now: ahora, maxAge: seisHoras, force: force)
+        }
+        check("EL DEFECTO: en memoria Jardín, se pide FICMA bajado hace 1 h → SÍ va a la red",
+              necesitaRed("jardin2026", "ficma2026", haceUnaHora))
+        check("mismo festival y fresco → no va a la red",
+              !necesitaRed("ficma2026", "ficma2026", haceUnaHora))
+        check("mismo festival pero viejo → va a la red",
+              necesitaRed("ficma2026", "ficma2026", haceUnDia))
+        check("mismo festival, nunca bajado → va a la red",
+              necesitaRed("ficma2026", "ficma2026", nil))
+        check("memoria vacía → va a la red",
+              necesitaRed("", "ficma2026", haceUnaHora))
+        check("force manda aunque esté fresco",
+              necesitaRed("ficma2026", "ficma2026", haceUnaHora, force: true))
+        check("sin festival pedido no se hace nada",
+              !necesitaRed("jardin2026", "", haceUnaHora))
+        check("justo en el límite de la caché → va a la red",
+              necesitaRed("ficma2026", "ficma2026", ahora.addingTimeInterval(-seisHoras)))
+
         // ── isLive ────────────────────────────────────────────────────────────
         let live = item("L", "2026-07-04", "10:00", duration: "124 min")   // 10:00–12:04
         let start = PlanCompute.startDate(live)!

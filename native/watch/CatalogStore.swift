@@ -17,9 +17,21 @@ final class CatalogStore: ObservableObject {
     enum State: Equatable { case idle, loading, loaded, error(String) }
 
     @Published var state: State = .idle
-    @Published var festival: String = ""
+    @Published var festival: String = ""        // el festival PEDIDO
+    // El catálogo en memoria y DE QUIÉN es. Antes había solo `catalog`, y «tengo un
+    // catálogo» se confundía con «tengo el de ESTE festival»: al volver a un festival
+    // bajado hace poco, el atajo de frescura salía temprano y dejaba en memoria el del
+    // festival anterior. Mi Plan decía FICMA y Programa pintaba Jardín (22 sep 2026,
+    // visto por Juan). `catalog` solo se lee junto con `catalogFestival`.
+    @Published private(set) var catalogFestival: String = ""
     @Published var catalog: Catalog?
     @Published var fetchedAt: Date?
+
+    // El catálogo que hay en memoria PARA ese festival, o nil. Único acceso permitido
+    // desde la vista: si no es de ese festival, no existe.
+    func catalog(for fid: String) -> Catalog? {
+        (!fid.isEmpty && catalogFestival == fid) ? catalog : nil
+    }
     // Cambia cuando la zona horaria del festival cambió al cargar → Mi Plan recalcula.
     @Published var tzVersion: Int = 0
 
@@ -37,25 +49,31 @@ final class CatalogStore: ObservableObject {
 
     func load(festival fid: String, force: Bool = false) async {
         guard !fid.isEmpty else { return }
+        // CAMBIO DE FESTIVAL: soltar lo que hay en memoria ANTES de decidir nada. Si no,
+        // cualquier atajo posterior lo conserva y se pinta el festival equivocado.
+        if catalogFestival != fid { catalog = nil; catalogFestival = ""; fetchedAt = nil; state = .loading }
         festival = fid
         let d = UserDefaults.standard
         let fetched = d.object(forKey: Self.fetchedKeyPrefix + fid) as? Date
-        // 1. Caché en disco
-        if catalog == nil || festival != fid, let data = try? Data(contentsOf: Self.cacheURL(fid)),
+        // 1. Caché en disco DE ESTE festival
+        if catalog(for: fid) == nil, let data = try? Data(contentsOf: Self.cacheURL(fid)),
            let c = try? JSONDecoder().decode(Catalog.self, from: data) {
             apply(c, fid: fid, at: fetched)
         }
-        // 2. ¿Hace falta ir a la red?
-        let fresh = fetched.map { Date().timeIntervalSince($0) < Self.maxAge } ?? false
-        if catalog != nil && fresh && !force { return }
-        if catalog == nil { state = .loading }
+        // 2. ¿Hace falta ir a la red? La decide PlanCompute.catalogNeedsNetwork, que
+        //    exige que lo de memoria sea de ESTE festival (antes bastaba con que
+        //    hubiera algo: ese era el defecto). Tiene tests con mutación.
+        let enMemoria = catalog(for: fid) != nil ? catalogFestival : ""
+        if !PlanCompute.catalogNeedsNetwork(inMemory: enMemoria, requested: fid, fetched: fetched,
+                                            now: Date(), maxAge: Self.maxAge, force: force) { return }
+        if catalog(for: fid) == nil { state = .loading }
         // 3. GET condicional
         var req = URLRequest(url: PlanCompute.catalogURL(for: fid))
         if let etag = d.string(forKey: Self.etagKeyPrefix + fid) { req.setValue(etag, forHTTPHeaderField: "If-None-Match") }
         do {
             let (data, resp) = try await URLSession.shared.data(for: req)
             let http = resp as? HTTPURLResponse
-            if http?.statusCode == 304, catalog != nil {
+            if http?.statusCode == 304, catalog(for: fid) != nil {
                 d.set(Date(), forKey: Self.fetchedKeyPrefix + fid); fetchedAt = Date(); state = .loaded; return
             }
             guard http?.statusCode == 200 else { throw URLError(.badServerResponse) }
@@ -66,7 +84,7 @@ final class CatalogStore: ObservableObject {
             apply(c, fid: fid, at: Date())
         } catch {
             // Sin red: si hay caché queda .loaded (la vista dice de cuándo es); si no, error.
-            if catalog == nil { state = .error(error.localizedDescription) }
+            if catalog(for: fid) == nil { state = .error(error.localizedDescription) }
         }
     }
 
@@ -79,7 +97,7 @@ final class CatalogStore: ObservableObject {
     }
 
     private func apply(_ c: Catalog, fid: String, at: Date?) {
-        catalog = c; fetchedAt = at; state = .loaded
+        catalog = c; catalogFestival = fid; fetchedAt = at; state = .loaded
         // Zona del festival: fijarla, recordarla, y avisar si cambió.
         let before = PlanCompute.tz
         if PlanCompute.setTimeZone(offset: c.timezoneOffset) {

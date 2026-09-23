@@ -27,8 +27,11 @@ struct ProgramView: View {
             case .idle, .loading: ProgressView().tint(OT.amber)
             case .error(let e):   MessageView(title: L.loadFailed, detail: e)
             case .loaded:
-                if let c = catalog.catalog { pages(c) }
-                else { MessageView(title: L.loadFailed, detail: nil) }
+                // Red de seguridad (22 sep 2026): solo se pinta el catálogo que es DEL
+                // festival del plan. Si por lo que sea no coinciden, se espera; nunca se
+                // muestra la programación de otro festival junto al plan de este.
+                if let c = catalog.catalog(for: plan.festival) { pages(c) }
+                else { ProgressView().tint(OT.amber) }
             }
         }
     }
