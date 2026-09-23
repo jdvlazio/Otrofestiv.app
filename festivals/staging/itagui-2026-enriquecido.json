@@ -24,6 +24,13 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "ARENAS: la vida y obra del Escultor Rodrigo Arenas Betancour",
+   "pais": "Colombia",
+   "_verificado": "declarada a mano: No está en TMDB (find por imdb_id devuelve vacío) ni en el catálogo de Proimágenes: su buscador devuelve seis títulos y ninguno casa por dirección. IMDb sí la registra, con dirección Jhon Bolivar (Itagüí escribe John Bolívar) y país de origen Colombia. Se declara solo el país, que es lo único que esa ficha aporta; sin TMDB no hay afiche que bajar.",
+   "_director": "John Bolívar",
+   "_sondeado": "2026-09-23"
+  },
+  {
    "titulo": "Bautismo de sangre",
    "tmdb_id": 35967,
    "titulo_original": "Batismo de Sangue",
@@ -181,6 +188,24 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Inolvidable Heidi",
+   "tmdb_id": 1289382,
+   "titulo_original": "Inolvidable Heidi",
+   "poster_path": "/jtRuVSbs0x1DLBbfNfTiQuJkYDt.jpg",
+   "synopsis_es": "Heidi y Franco son polos opuestos, ella una chica de montaña, libre y risueña, frente a él, un chico de ciudad, snob y siempre viviendo bajo presión. Pero sus diferencias no consiguen evitar que se enamoren a primera vista, pero son condenados a vivir bajo un hechizo: si alguna vez se separan, uno de ellos morirá. Su relación se pone a prueba de nuevo cuando tras un accidente de Heidi, su amigo Nicanor borra la memoria de los tres para salvarle la vida. Es la oportunidad de poder volver a vivir el primer amor dos veces.",
+   "synopsis_en": "",
+   "genero": "Comedia",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "inolvidable-heidi",
+   "_verificado": "declarada a mano: El candado pide direccion ✓ Y (año ±1 O duración ±3). TMDB no tiene NI fecha de estreno NI duración para esta ficha, así que no hay con qué corroborar y la coincidencia de dirección se rechaza igual que una falsa. Las dos direcciones casan exactas: Marcela Citterio y Andrés Valencia, las mismas que imprime Itagüí.",
+   "_director": "Marcela Citterio y Andrés Valencia",
+   "_sondeado": "2026-09-23",
+   "poster": "/assets/itagui-2026/inolvidable-heidi.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Kon-Tiki: un viaje fantástico",
    "tmdb_id": 70667,
    "titulo_original": "Kon-Tiki",
@@ -251,7 +276,29 @@
    "_busqueda": "Mi abuelo, mi papá y yo",
    "lbSlug": "mi-abuelo-mi-papa-y-yo",
    "_director": "Darío Armando \"Dago\" García",
-   "_sondeado": "2026-09-23"
+   "_sondeado": "2026-09-23",
+   "poster": "/assets/itagui-2026/mi-abuelo-mi-papa-y-yo.jpg",
+   "posterSource": "oficial",
+   "_afiche_de": "proimagenes 280 (TMDB no tiene imagen)"
+  },
+  {
+   "titulo": "One Piece: la película",
+   "tmdb_id": 19576,
+   "titulo_original": "ワンピース",
+   "poster_path": "/g8Gaj5qlM0S0NTZSP05ETs7aFst.jpg",
+   "synopsis_es": "Luffy y sus compañeros recataran a Tobio de la guarida de un pirata. Más tarde mientras prosiguen su viaje, decidiran ir a la isla dorada donde vivirán una gran aventura.",
+   "synopsis_en": "There once was a pirate known as the Great Gold Pirate Woonan, who obtained almost one-third of the world's gold. Over the course of a few years, the pirate's existence faded, and a legend grew that he disappeared with his gold to a remote island, an island pirates continue to search for. Aboard the Going Merry, Luffy and his crew, starved and reckless, are robbed of their treasure. In an attempt to get it back, they wreck the getaway ship, guided by a young boy named Tobio, who's a captured part of El Drago's pirate crew. El Drago's love for gold has driven him to look for Woonan's island, and thanks to Woonan's treasure map, he finds it. During this time, Luffy's crew have been split up, and despite their own circumstances, they must find a way to stop El Drago from obtaining Woonan's gold.",
+   "genero": "Acción",
+   "anio_tmdb": 2000,
+   "duracion_tmdb": 51,
+   "pais_tmdb": "Japan",
+   "title_en": "One Piece: The Movie",
+   "lbSlug": "one-piece-the-movie",
+   "_verificado": "declarada a mano: El candado pide dirección ✓ Y (año ±1 O duración ±3). La dirección casa exacta (Atsuji Shimizu) y el título también, pero la lámina declara 60 minutos y la película dura 51: el festival redondeó a la hora y la diferencia de nueve minutos pasa la tolerancia. Es la única película con ese título de ese director.",
+   "_director": "Atsuji Shimizu",
+   "_sondeado": "2026-09-23",
+   "poster": "/assets/itagui-2026/one-piece-la-pelicula.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Piedras preciosas",
@@ -372,19 +419,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Clave de amor",
-   "pais": "Colombia",
-   "_fuente": "proimagenes",
-   "_proimagenes_id": "3246",
-   "_verificado": "director: Luis Fernando Bernal Polo",
-   "anio": 2026,
-   "duracion_min": 100,
-   "genero": "Ficción",
-   "sinopsis": "Clave de Amor es un largometraje de ficción dramática que rinde homenaje al patrimonio cultural inmaterial del departamento del Tolima a través de una historia de formación, amor y música. Inspirada en el universo del Sanjuanero Tolimense, la película sigue el camino de Heriberto, un joven campesino de Natagaima que, impulsado por el sueño de su padre, el maestro y músico popular Cantalicio Rojas González, viaja a la ciudad de Ibagué para ingresar al Conservatorio del Tolima y convertirse en músico profesional. Lejos de su hogar, Heriberto enfrenta los desafíos de adaptarse a un entorno urbano, superar los prejuicios hacia su origen campesino y descubrir el verdadero significado de la disciplina artística. En ese proceso conoce a Carolina, una joven estudiante de música cuya personalidad distante y sofisticada contrasta con la sencillez del protagonista. Entre ensayos, conciertos, amistades y desencuentros, ambos emprenden un recorrido emocional donde el amor y la música se convierten en lenguajes inseparables. A lo largo de su vida, Heriberto comprenderá que el verdadero éxito no consiste únicamente en el reconocimiento internacional, sino en regresar a sus raíces para honrar el l",
-   "poster": "/assets/itagui-2026/clave-de-amor.jpg",
-   "posterSource": "oficial"
-  },
-  {
    "titulo": "Xie. defensa de la vida",
    "pais": "Colombia",
    "_fuente": "proimagenes",
@@ -398,30 +432,15 @@
    "posterSource": "oficial"
   },
   {
-   "titulo": "Clave de amor",
+   "titulo": "La estancia",
    "pais": "Colombia",
    "_fuente": "proimagenes",
-   "_proimagenes_id": "3246",
-   "_verificado": "director: Luis Fernando Bernal Polo",
-   "anio": 2026,
-   "duracion_min": 100,
-   "genero": "Ficción",
-   "sinopsis": "Clave de Amor es un largometraje de ficción dramática que rinde homenaje al patrimonio cultural inmaterial del departamento del Tolima a través de una historia de formación, amor y música. Inspirada en el universo del Sanjuanero Tolimense, la película sigue el camino de Heriberto, un joven campesino de Natagaima que, impulsado por el sueño de su padre, el maestro y músico popular Cantalicio Rojas González, viaja a la ciudad de Ibagué para ingresar al Conservatorio del Tolima y convertirse en músico profesional. Lejos de su hogar, Heriberto enfrenta los desafíos de adaptarse a un entorno urbano, superar los prejuicios hacia su origen campesino y descubrir el verdadero significado de la disciplina artística. En ese proceso conoce a Carolina, una joven estudiante de música cuya personalidad distante y sofisticada contrasta con la sencillez del protagonista. Entre ensayos, conciertos, amistades y desencuentros, ambos emprenden un recorrido emocional donde el amor y la música se convierten en lenguajes inseparables. A lo largo de su vida, Heriberto comprenderá que el verdadero éxito no consiste únicamente en el reconocimiento internacional, sino en regresar a sus raíces para honrar el l",
-   "poster": "/assets/itagui-2026/clave-de-amor.jpg",
-   "posterSource": "oficial"
-  },
-  {
-   "titulo": "Xie. defensa de la vida",
-   "pais": "Colombia",
-   "_fuente": "proimagenes",
-   "_proimagenes_id": "3243",
-   "_verificado": "director: Adriana Bernal-Mor, Paola Zuluaga",
-   "anio": 2026,
-   "duracion_min": 70,
+   "_proimagenes_id": "3121",
+   "_verificado": "director: Andrés Carmona Rivera",
+   "anio": 2025,
+   "duracion_min": 85,
    "genero": "Documental",
-   "sinopsis": "Desde 1977, mujeres campesinas tejedoras de las montañas de Cundinamarca resisten la explotación irregular de nacimientos de agua por industrias de bebidas y ultraprocesados. Mientras el agua se convierte en un negocio, las comunidades padecen sequías y el deterioro de sus ecosistemas. Ahora, frente a una nueva concesión para embotellar agua, se organizan para defender el territorio y exigir que el agua prevalezca como un derecho, no como una mercancía.",
-   "poster": "/assets/itagui-2026/xie-defensa-de-la-vida.jpg",
-   "posterSource": "oficial"
+   "sinopsis": "En el centro de Medellín, una ciudad que ha sido inclemente con la memoria, los habitantes de una vieja casona, condenada a desaparecer, nos revelan sus vidas, sus amores y deseos. Guillermo y Álvaro, pareja por más de 50 años, recuerdan una sociedad soterrada donde la homosexualidad ha sido silenciada. Raúl, actual pareja de Guillermo, pareciera no encontrar salida a su infierno cotidiano de amargura. Javier, un místico, que con cierta candidez reconstruye las memorias de sus fracasos amorosos, es la antípoda a la vida desenfrenada de sus vecinos contiguos. Este lugar, que posee tantas habitaciones como universos posibles, sirve de estancia a esta polifonía de hombres viejos, solos y rebeldes, que jamás esperaron terminar allí."
   },
   {
    "titulo": "Clave de amor",
@@ -455,6 +474,12 @@
    "_sondeado": "2026-09-23",
    "poster": "/assets/itagui-2026/100-lobo.jpg",
    "posterSource": "tmdb"
+  },
+  "ARENAS: la vida y obra del Escultor Rodrigo Arenas Betancour": {
+   "pais": "Colombia",
+   "_verificado": "declarada a mano: No está en TMDB (find por imdb_id devuelve vacío) ni en el catálogo de Proimágenes: su buscador devuelve seis títulos y ninguno casa por dirección. IMDb sí la registra, con dirección Jhon Bolivar (Itagüí escribe John Bolívar) y país de origen Colombia. Se declara solo el país, que es lo único que esa ficha aporta; sin TMDB no hay afiche que bajar.",
+   "_director": "John Bolívar",
+   "_sondeado": "2026-09-23"
   },
   "Bautismo de sangre": {
    "tmdb_id": 35967,
@@ -605,6 +630,23 @@
    "poster": "/assets/itagui-2026/habitante.jpg",
    "posterSource": "tmdb"
   },
+  "Inolvidable Heidi": {
+   "tmdb_id": 1289382,
+   "titulo_original": "Inolvidable Heidi",
+   "poster_path": "/jtRuVSbs0x1DLBbfNfTiQuJkYDt.jpg",
+   "synopsis_es": "Heidi y Franco son polos opuestos, ella una chica de montaña, libre y risueña, frente a él, un chico de ciudad, snob y siempre viviendo bajo presión. Pero sus diferencias no consiguen evitar que se enamoren a primera vista, pero son condenados a vivir bajo un hechizo: si alguna vez se separan, uno de ellos morirá. Su relación se pone a prueba de nuevo cuando tras un accidente de Heidi, su amigo Nicanor borra la memoria de los tres para salvarle la vida. Es la oportunidad de poder volver a vivir el primer amor dos veces.",
+   "synopsis_en": "",
+   "genero": "Comedia",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "inolvidable-heidi",
+   "_verificado": "declarada a mano: El candado pide direccion ✓ Y (año ±1 O duración ±3). TMDB no tiene NI fecha de estreno NI duración para esta ficha, así que no hay con qué corroborar y la coincidencia de dirección se rechaza igual que una falsa. Las dos direcciones casan exactas: Marcela Citterio y Andrés Valencia, las mismas que imprime Itagüí.",
+   "_director": "Marcela Citterio y Andrés Valencia",
+   "_sondeado": "2026-09-23",
+   "poster": "/assets/itagui-2026/inolvidable-heidi.jpg",
+   "posterSource": "tmdb"
+  },
   "Kon-Tiki: un viaje fantástico": {
    "tmdb_id": 70667,
    "titulo_original": "Kon-Tiki",
@@ -673,6 +715,24 @@
    "lbSlug": "mi-abuelo-mi-papa-y-yo",
    "_director": "Darío Armando \"Dago\" García",
    "_sondeado": "2026-09-23"
+  },
+  "One Piece: la película": {
+   "tmdb_id": 19576,
+   "titulo_original": "ワンピース",
+   "poster_path": "/g8Gaj5qlM0S0NTZSP05ETs7aFst.jpg",
+   "synopsis_es": "Luffy y sus compañeros recataran a Tobio de la guarida de un pirata. Más tarde mientras prosiguen su viaje, decidiran ir a la isla dorada donde vivirán una gran aventura.",
+   "synopsis_en": "There once was a pirate known as the Great Gold Pirate Woonan, who obtained almost one-third of the world's gold. Over the course of a few years, the pirate's existence faded, and a legend grew that he disappeared with his gold to a remote island, an island pirates continue to search for. Aboard the Going Merry, Luffy and his crew, starved and reckless, are robbed of their treasure. In an attempt to get it back, they wreck the getaway ship, guided by a young boy named Tobio, who's a captured part of El Drago's pirate crew. El Drago's love for gold has driven him to look for Woonan's island, and thanks to Woonan's treasure map, he finds it. During this time, Luffy's crew have been split up, and despite their own circumstances, they must find a way to stop El Drago from obtaining Woonan's gold.",
+   "genero": "Acción",
+   "anio_tmdb": 2000,
+   "duracion_tmdb": 51,
+   "pais_tmdb": "Japan",
+   "title_en": "One Piece: The Movie",
+   "lbSlug": "one-piece-the-movie",
+   "_verificado": "declarada a mano: El candado pide dirección ✓ Y (año ±1 O duración ±3). La dirección casa exacta (Atsuji Shimizu) y el título también, pero la lámina declara 60 minutos y la película dura 51: el festival redondeó a la hora y la diferencia de nueve minutos pasa la tolerancia. Es la única película con ese título de ese director.",
+   "_director": "Atsuji Shimizu",
+   "_sondeado": "2026-09-23",
+   "poster": "/assets/itagui-2026/one-piece-la-pelicula.jpg",
+   "posterSource": "tmdb"
   },
   "Piedras preciosas": {
    "tmdb_id": 1426106,
@@ -788,24 +848,17 @@
   }
  },
  "sin_ficha": [
-  "ARENAS: la vida y obra del Escultor Rodrigo Arenas Betancour",
   "Clave de amor",
   "El último caso",
+  "Función especial de cine",
+  "Función especial sobre salud mental",
   "Función especial: Recordando a Luis Buñuel",
-  "Inolvidable Heidi",
   "La estancia",
-  "One Piece: la película",
   "The Nation",
   "Wings of Freedom",
-  "Xie. defensa de la vida",
-  "función especial de cine",
-  "función especial sobre salud mental"
+  "Xie. defensa de la vida"
  ],
  "_sin_ficha_sondeo": {
-  "ARENAS: la vida y obra del Escultor Rodrigo Arenas Betancour": {
-   "director": "",
-   "fecha": "2026-09-23"
-  },
   "Clave de amor": {
    "director": "Luis Fernando Bernal Polo",
    "fecha": "2026-09-23"
@@ -814,20 +867,20 @@
    "director": "Edwin Jaramillo",
    "fecha": "2026-09-23"
   },
+  "Función especial de cine": {
+   "director": "",
+   "fecha": "2026-09-23"
+  },
+  "Función especial sobre salud mental": {
+   "director": "",
+   "fecha": "2026-09-23"
+  },
   "Función especial: Recordando a Luis Buñuel": {
    "director": "",
    "fecha": "2026-09-23"
   },
-  "Inolvidable Heidi": {
-   "director": "Marcela Citterio y Andrés Valencia",
-   "fecha": "2026-09-23"
-  },
   "La estancia": {
    "director": "Andrés Carmona Rivera",
-   "fecha": "2026-09-23"
-  },
-  "One Piece: la película": {
-   "director": "Atsuji Shimizu",
    "fecha": "2026-09-23"
   },
   "The Nation": {
@@ -841,29 +894,9 @@
   "Xie. defensa de la vida": {
    "director": "Adriana Bernal-Mor, Paola Zuluaga",
    "fecha": "2026-09-23"
-  },
-  "función especial de cine": {
-   "director": "",
-   "fecha": "2026-09-23"
-  },
-  "función especial sobre salud mental": {
-   "director": "",
-   "fecha": "2026-09-23"
   }
  },
  "_fuentes": [
-  {
-   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-09-23",
-   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
-   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
-  },
-  {
-   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-09-23",
-   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
-   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
-  },
   {
    "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
    "capturado": "2026-09-23",

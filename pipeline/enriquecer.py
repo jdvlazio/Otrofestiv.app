@@ -81,42 +81,73 @@ def enriquecer_obra(f, key, alias):
             res = tmdb_get('/search/movie', key, query=q, language=lang,
                            include_adult='false')
             for c in (res.get('results') or [])[:6]:
-                det = tmdb_get(f"/movie/{c['id']}", key, language='es-ES',
-                               append_to_response='credits')
-                det_en = tmdb_get(f"/movie/{c['id']}", key, language='en-US',
-                                  append_to_response='credits')
-                # créditos de ambos idiomas: los en-US vienen romanizados
-                # (宮崎吾朗 → «Goro Miyazaki») y sin ellos el director nunca casa
-                det.setdefault('credits', {}).setdefault('crew', []).extend(
-                    det_en.get('credits', {}).get('crew', []))
+                det, out = ficha_de_tmdb(c['id'], key, f['titulo'])
                 if not ficha_verifica(f, det):
                     continue
-                en = det_en.get('title') or ''
-                out = {'tmdb_id': c['id'],
-                       'titulo_original': det.get('original_title'),
-                       'poster_path': det.get('poster_path'),
-                       'synopsis_es': det.get('overview') or '',
-                       'synopsis_en': det_en.get('overview') or '',
-                       'genero': (det.get('genres') or [{}])[0].get('name', ''),
-                       'anio_tmdb': int((det.get('release_date') or '0')[:4] or 0),
-                       'duracion_tmdb': det.get('runtime') or 0,
-                       # EL PAÍS, que TMDB da y no guardábamos. En Villa del
-                       # Cine faltaba en 21 obras y para varias era el único
-                       # sitio donde estaba: el PDF no lo imprime en todas las
-                       # fichas y la web solo en la mitad. Sin país no hay
-                       # bandera, y la app pinta un globo.
-                       'pais_tmdb': ', '.join(
-                           p.get('name', '') for p in (det.get('production_countries') or [])
-                           if p.get('name')),
-                       '_verificado': 'director✓ + año/duración',
-                       '_busqueda': q}
-                if en and norm(en) not in (norm(f['titulo']), norm(out['titulo_original'] or '')):
-                    out['title_en'] = en
-                sl = lb_slug(c['id'])
-                if sl:
-                    out['lbSlug'] = sl
+                out['_verificado'] = 'director✓ + año/duración'
+                out['_busqueda'] = q
                 return out
     return None
+
+
+def ficha_de_tmdb(cid, key, titulo):
+    """(ficha TMDB cruda, campos extraídos). DUEÑO ÚNICO de qué se saca de una
+    ficha: lo llaman la búsqueda automática y la declaración a mano, que
+    difieren solo en quién responde por el emparejamiento."""
+    det = tmdb_get(f'/movie/{cid}', key, language='es-ES',
+                   append_to_response='credits')
+    det_en = tmdb_get(f'/movie/{cid}', key, language='en-US',
+                      append_to_response='credits')
+    # créditos de ambos idiomas: los en-US vienen romanizados
+    # (宮崎吾朗 → «Goro Miyazaki») y sin ellos el director nunca casa
+    det.setdefault('credits', {}).setdefault('crew', []).extend(
+        det_en.get('credits', {}).get('crew', []))
+    en = det_en.get('title') or ''
+    out = {'tmdb_id': cid,
+           'titulo_original': det.get('original_title'),
+           'poster_path': det.get('poster_path'),
+           'synopsis_es': det.get('overview') or '',
+           'synopsis_en': det_en.get('overview') or '',
+           'genero': (det.get('genres') or [{}])[0].get('name', ''),
+           'anio_tmdb': int((det.get('release_date') or '0')[:4] or 0),
+           'duracion_tmdb': det.get('runtime') or 0,
+           # EL PAÍS, que TMDB da y no guardábamos. En Villa del Cine faltaba
+           # en 21 obras y para varias era el único sitio donde estaba: el PDF
+           # no lo imprime en todas las fichas y la web solo en la mitad. Sin
+           # país no hay bandera, y la app pinta un globo.
+           'pais_tmdb': ', '.join(
+               p.get('name', '') for p in (det.get('production_countries') or [])
+               if p.get('name'))}
+    if en and norm(en) not in (norm(titulo), norm(out['titulo_original'] or '')):
+        out['title_en'] = en
+    sl = lb_slug(cid)
+    if sl:
+        out['lbSlug'] = sl
+    return det, out
+
+
+def ficha_declarada(titulo, dec, key):
+    """La ficha que declara una persona, con su porqué. NO pasa por
+    ficha_verifica(): quien declara responde por el emparejamiento, y por eso
+    la declaración exige un `_por_que` y queda escrita en el sidecar.
+
+    POR QUÉ EXISTE (23 sep 2026). El candado pide director ✓ Y (año ±1 O
+    duración ±3). Cuando TMDB no tiene NI año NI duración no hay con qué
+    corroborar, y una coincidencia de dirección perfecta se rechaza igual que
+    una falsa: «Inolvidable Heidi» (TMDB 1289382, Marcela Citterio y Andrés
+    Valencia, las dos exactas) salió sin afiche, sin país y sin sinopsis
+    teniendo la ficha entera a un id de distancia. No se afloja el candado
+    —aflojarlo cuelga homónimos, que es la lección Tribeca—: se le da salida a
+    la persona que ya miró.
+    """
+    o = {k: v for k, v in dec.items() if not k.startswith('_')}
+    cid = o.pop('tmdb', None)
+    if cid:
+        _det, out = ficha_de_tmdb(cid, key, titulo)
+        out.update(o)
+        o = out
+    o['_verificado'] = 'declarada a mano: ' + dec['_por_que']
+    return o
 
 
 def main():
@@ -130,6 +161,8 @@ def main():
     corr = json.load(open(corr_p, encoding='utf-8')) if os.path.exists(corr_p) else {}
     tit_of = corr.get('titulo_oficial', {})
     alias = corr.get('alias', {})
+    # las fichas que declaró una persona, por título del festival
+    declaradas = corr.get('fichas', {})
 
     # TODAS las obras, no solo las de nivel superior. Hasta hoy esto recorría
     # únicamente `funciones`, así que en un festival con programas de cortos el
@@ -197,9 +230,28 @@ def main():
         prev_no = {t: v for t, v in (_p.get('_sin_ficha_sondeo') or {}).items()
                    if _vig(v.get('fecha'))}
 
+    # UNA DECLARACIÓN QUE NO CASA CON NINGUNA OBRA ES UN ERROR, NO UN SILENCIO.
+    # Un título mal copiado en el sidecar no haría nada y nadie se enteraría —
+    # el mismo fallo mudo de siempre, escribir un dato que nadie lee.
+    _huerf = [t for t in declaradas if t not in obras]
+    if _huerf:
+        sys.exit('ficha declarada para un título que no está en el programa: '
+                 + ' · '.join(_huerf))
+    for t, d in declaradas.items():
+        if not d.get('_por_que'):
+            sys.exit(f'la ficha declarada de «{t}» no dice por qué: falta _por_que')
+
     ok, sin, sin_sondeo, reuso = {}, [], {}, 0
     for i, (t, f) in enumerate(sorted(obras.items()), 1):
         _dir = (f.get('director') or '').strip()
+        if t in declaradas:
+            e = ficha_declarada(t, declaradas[t], key)
+            e['_director'], e['_sondeado'] = _dir, _hoy
+            ok[t] = e
+            print(f'[{i:3}/{len(obras)}] ✋  {t[:46]:48} '
+                  f'{"tmdb " + str(e["tmdb_id"]) if e.get("tmdb_id") else "campos"}'
+                  ' (declarada a mano)', flush=True)
+            continue
         c = prev_ok.get(t)
         if c and c.get('_director') == _dir:
             ok[t] = c
@@ -268,7 +320,7 @@ def main():
     print(f'\n{len(obras)} obras · verificadas {len(ok)} · sin ficha {len(sin)}'
           f' · {reuso} de la caché, {len(obras) - reuso} sondeadas hoy'
           f'{" (--refrescar)" if "--refrescar" in sys.argv else ""}')
-    print(f'  con póster {sum(1 for e in ok.values() if e["poster_path"])} · '
+    print(f'  con póster {sum(1 for e in ok.values() if e.get("poster_path"))} · '
           f'con lbSlug {sum(1 for e in ok.values() if e.get("lbSlug"))} · '
           f'con title_en {sum(1 for e in ok.values() if e.get("title_en"))}')
 

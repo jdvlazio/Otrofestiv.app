@@ -1,0 +1,24 @@
+{
+ "_provenance": {
+  "fuente": "fichas que verificó Juan a mano, una por una, revisando el festival en la app",
+  "capturado": "2026-09-23",
+  "metodo": "cada declaración nombra su fuente y por qué el candado automático no podía llegar sola"
+ },
+ "fichas": {
+  "Inolvidable Heidi": {
+   "tmdb": 1289382,
+   "_fuente": "https://www.themoviedb.org/movie/1289382-inolvidable-heidi",
+   "_por_que": "El candado pide direccion ✓ Y (año ±1 O duración ±3). TMDB no tiene NI fecha de estreno NI duración para esta ficha, así que no hay con qué corroborar y la coincidencia de dirección se rechaza igual que una falsa. Las dos direcciones casan exactas: Marcela Citterio y Andrés Valencia, las mismas que imprime Itagüí."
+  },
+  "ARENAS: la vida y obra del Escultor Rodrigo Arenas Betancour": {
+   "pais": "Colombia",
+   "_fuente": "https://www.imdb.com/title/tt22048972/",
+   "_por_que": "No está en TMDB (find por imdb_id devuelve vacío) ni en el catálogo de Proimágenes: su buscador devuelve seis títulos y ninguno casa por dirección. IMDb sí la registra, con dirección Jhon Bolivar (Itagüí escribe John Bolívar) y país de origen Colombia. Se declara solo el país, que es lo único que esa ficha aporta; sin TMDB no hay afiche que bajar."
+  },
+  "One Piece: la película": {
+   "tmdb": 19576,
+   "_fuente": "https://www.themoviedb.org/movie/19576",
+   "_por_que": "El candado pide dirección ✓ Y (año ±1 O duración ±3). La dirección casa exacta (Atsuji Shimizu) y el título también, pero la lámina declara 60 minutos y la película dura 51: el festival redondeó a la hora y la diferencia de nueve minutos pasa la tolerancia. Es la única película con ese título de ese director."
+  }
+ }
+}
