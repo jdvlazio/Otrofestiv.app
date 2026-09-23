@@ -494,6 +494,56 @@ export const PALMARES=[
    titulo:'El Salto', autoria:'Jerónimo Rincón', obra:'El Salto'},
   {fest:'cinemancia2026', categoria:'Competencia Nuevas Voces', nivel:'mencion',
    titulo:'Borrachos mientras escuchamos las gotas caer', autoria:'Santiago Gómez Ramírez', obra:'Borrachos mientras escuchamos las gotas caer'},
+
+  // ── QAFF 2026 (8ª ed.) — el carrusel de 12 láminas del 22 sep en @quibdoafricafilmfestival ──
+  // Leído DOS VECES y por caminos distintos: lámina por lámina (son hojas
+  // fotografiadas en perspectiva, que el OCR no lee bien pero el ojo sí) y el
+  // pie del post, que lista las 12 categorías con su ganadora. Coinciden en los
+  // doce sin una diferencia. El pie además aporta lo que el sello de la lámina
+  // callaba: el de corto latinoamericano es PREMIO DEL PÚBLICO.
+  //
+  // EN ESPAÑOL, y es una decisión, no un descuido (Juan, 23 sep 2026). La regla
+  // de esta tabla es `categoria` VERBATIM del festival, y QAFF publicó su
+  // palmarés en INGLÉS. Pero el mismo festival publicó su PROGRAMACIÓN en
+  // español, que es la que el usuario vio en la app: entre las dos formas en que
+  // el festival se nombra, manda la superficie que la gente ya leyó.
+  //
+  // Y por eso mismo los TÍTULOS son los del catálogo, no los del palmarés. El
+  // festival premió «God's Work», «Three Black Men» y «Domingo»; en su propia
+  // programación esas obras se llaman «La Obra de Dios», «Tres Hombres Negros» y
+  // «Un Domingo». Cruzar por título habría tirado tres de doce —incluido el
+  // premio mayor—: la llave fiable acá fue el DIRECTOR, que es igual en las dos
+  // superficies.
+  //
+  // PENDIENTE de arreglar aguas arriba: nuestro catálogo dice «Viva Yurumangui»
+  // y el festival escribe «Viva Yurumanguí», que es como se llama el río y la
+  // comunidad. El acento se perdió del lado nuestro. Acá va el del catálogo para
+  // que el enlace a la ficha funcione y la app no se contradiga; se corrige en el
+  // JSON y entonces se corrige acá.
+  {fest:'qaff2026', categoria:'Mejor largometraje', nivel:'ganadora', premio:'Gran Premio Baobab',
+   titulo:'La Obra de Dios', autoria:'Michael James', obra:'La Obra de Dios'},
+  {fest:'qaff2026', categoria:'Mejor dirección', nivel:'ganadora',
+   titulo:'Nunkui', autoria:'Verenice Benítez', obra:'Nunkui'},
+  {fest:'qaff2026', categoria:'Mejor documental', nivel:'ganadora',
+   titulo:'Tres Hombres Negros', autoria:'Sienna McLean-LoGreco', obra:'Tres Hombres Negros'},
+  {fest:'qaff2026', categoria:'Mejor documental colombiano', nivel:'ganadora',
+   titulo:'Viva Yurumangui', autoria:'Emma Christopher y Sergio Leyva', obra:'Viva Yurumangui'},
+  {fest:'qaff2026', categoria:'Mejor guion', nivel:'ganadora',
+   titulo:'Mango', autoria:'Joan Iyiola', obra:'Mango'},
+  {fest:'qaff2026', categoria:'Mejor fotografía', nivel:'ganadora',
+   titulo:'Amelia', autoria:'Gideon Chidi Chukwu', obra:'Amelia'},
+  {fest:'qaff2026', categoria:'Mejor música original', nivel:'ganadora',
+   titulo:'Refugiar el Gesto', autoria:'Bernardo Toloza, José de la Rosa Mejía, Carlos Ardila y Grupo Danzas y Enseñanzas de Mis Abuelos, dir. Javier Serpa Toloza', obra:'Refugiar el Gesto'},
+  {fest:'qaff2026', categoria:'Mejor cortometraje experimental', nivel:'ganadora',
+   titulo:'Concrete Moves', autoria:'Fagamou Fama Ndiaye', obra:'Concrete Moves'},
+  {fest:'qaff2026', categoria:'Mejor animación', nivel:'ganadora',
+   titulo:'Stormy Days', autoria:'Vitor Bitencourt Rocha', obra:'Stormy Days'},
+  {fest:'qaff2026', categoria:'Mejor cortometraje de ficción', nivel:'ganadora',
+   titulo:'Mango', autoria:'Joan Iyiola', obra:'Mango'},
+  {fest:'qaff2026', categoria:'Premio del Público · Mejor cortometraje latinoamericano', nivel:'ganadora',
+   titulo:'Un Domingo', autoria:'Day Sena', obra:'Un Domingo'},
+  {fest:'qaff2026', categoria:'Premio Arnoldo Palacios «Las Estrellas Son Negras»', nivel:'ganadora',
+   titulo:'Bertha', autoria:'Laura Asprilla', obra:'Bertha'},
 ];
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
