@@ -23,7 +23,7 @@ import { runCalc } from './calc.js';
 import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
 import { dayFullyPassed, durEstimada, festivalEnded, toMin } from '../domain/time.js';
-import { screeningPassed, blockDuration } from '../domain/film.js';
+import { screeningPassed, blockDuration, premiereBadgeKey} from '../domain/film.js';
 import { sameEntry, screensConflictReason, plannableScreens } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
 // Vivía acá un driver rAF que pisaba radio+opacidad por frame. Medido en device
@@ -1608,6 +1608,9 @@ function _avisosBand(f, opts){
     // 0 = las funciones no coinciden en cuántas compañeras hay → sin número.
     rows.push([t('badge_programa'), _n===0?t(_k+'_s'):_n===1?t(_k+'_1'):t(_k,{n:_n})]);
   }
+  // EL DISTINTIVO: misma píldora corta que la tarjeta + lo que escribió el
+  // festival, entero. La palabra abre, la frase explica (ver premiereBadgeKey).
+  const _pk=premiereBadgeKey(f);if(_pk&&f.premiere) rows.push([t(_pk), f.premiere]);
   const _ins=_con('requires_registration');
   if(_ins.length) rows.push([t('badge_inscripcion'), t('aviso_inscripcion')+_cual(_ins)]);
   // Precio: la ficha dice lo MISMO que la card — ticketBadgeTarget es el dueño

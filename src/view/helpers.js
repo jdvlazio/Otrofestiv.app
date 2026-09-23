@@ -14,7 +14,7 @@ import {
 // components — el ciclo decide dónde vive; ver el comentario del dueño).
 export { _langDates };
 import { toMin, minToStr, durEstimada, simNow, simTodayStr, _festDate, _festNowMin } from '../domain/time.js';
-import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase, _djb2 } from '../domain/film.js';
+import { blockDuration, effectiveDuration, screeningBlockEndMin, screeningQaOnly , abiertaFase, _djb2, premiereBadgeKey} from '../domain/film.js';
 import { _resolveVenue, travelMins } from '../domain/festival.js';
 import { state } from '../state/state.js';
 import { t } from '../i18n/i18n.js';
@@ -1088,6 +1088,8 @@ export function _metaBadges(f){
   // habría llevado ahí la app. Palabra del propio festival, la misma que verá en
   // Ticketmaster; no se traduce (mismo criterio que Q&A).
   if(f.premium===true) b+=`<span class="meta-badge">${t('badge_premium')}</span>`;
+  // APERTURA / CLAUSURA / ESTRENO — una palabra (ver premiereBadgeKey).
+  const _pk=premiereBadgeKey(f);if(_pk) b+=`<span class="meta-badge">${t(_pk)}</span>`;
   if(f.has_qa) b+=`<span class="meta-badge">Q&A</span>`;
   if(f.requires_registration) b+=`<span class="meta-badge">${t('badge_inscripcion')}</span>`;
   // Festival mixto: el badge marca la MINORÍA (ver ticketBadgeTarget).
