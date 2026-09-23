@@ -369,14 +369,14 @@ function langOutside(e){
 export function selectLang(el){
   const code=el && el.dataset ? el.dataset.code : null;
   if(!code) return;
-  // Reflejar la bandera en el trigger cerrado (inmediato, sin depender de _applyI18nDOM)
-  const flag=el.querySelector('.lang-opt-flag');
-  const trgFlag=document.getElementById('lang-trigger-flag');
-  if(flag && trgFlag) trgFlag.textContent=flag.textContent;
+  // Reflejar el código (ES/EN) en el trigger cerrado (inmediato, sin depender de _applyI18nDOM)
+  const code_=el.querySelector('.lang-opt-code');
+  const trgCode=document.getElementById('lang-trigger-code');
+  if(code_ && trgCode) trgCode.textContent=code_.textContent;
   closeLangDropdown();
   setLang(code);
 }
 
-// _syncLangTrigger fue absorbido por _applyI18nDOM (i18n.js): la bandera del
+// _syncLangTrigger fue absorbido por _applyI18nDOM (i18n.js): el código del
 // trigger se sincroniza en el mismo pase que marca .active — una función menos
 // que acordarse de llamar en el boot.

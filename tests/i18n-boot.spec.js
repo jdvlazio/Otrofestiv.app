@@ -27,7 +27,7 @@ test.describe('coherencia al arranque (locale EN)', () => {
   test('I06 — arranque EN: nav + bandera en EN sin toggle (cero mezcla)', async ({ page }) => {
     await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);  // NO se toca el selector de idioma
     await expect(page.locator('#lbl-nav-miplan')).toContainText(/my plan/i); // EN presente
-    await expect(page.locator('#lang-trigger-flag')).toHaveText('🇺🇸');       // bandera coincide
+    await expect(page.locator('#lang-trigger-code')).toHaveText('EN');       // código coincide
     await expect(page.locator('#lang-btn-en.on')).toHaveCount(1);          // botón activo EN
     const nav = (await page.locator('.main-nav-tab').allTextContents()).join(' ').toUpperCase();
     expect(nav).not.toContain('MI PLAN');   // sin ES mezclado
@@ -39,7 +39,18 @@ test.describe('coherencia al arranque (locale ES)', () => {
   test('I07 — arranque ES: nav + bandera en ES sin toggle', async ({ page }) => {
     await enterFestival(page, 'leviza2026', LEVIZA_SIMTIME);
     await expect(page.locator('#lbl-nav-miplan')).toContainText(/mi plan/i);
-    await expect(page.locator('#lang-trigger-flag')).toHaveText('🇪🇸');
+    await expect(page.locator('#lang-trigger-code')).toHaveText('ES');
+    // Sin banderas (22 sep 2026, Juan): una bandera nombra un país, no un idioma.
+    // Se vigila el selector ENTERO, trigger y opciones: cero indicadores regionales.
+    const toggle = await page.locator('#lang-toggle').textContent();
+    expect(toggle, `el selector de idioma no lleva banderas (tiene: ${toggle.trim()})`).not.toMatch(/[\u{1F1E6}-\u{1F1FF}]/u);
+    expect(toggle.replace(/\s+/g, ' ').trim(), 'códigos y nombres, en ese orden').toMatch(/ES.*ES\s*Español.*EN\s*English/);
+    // Y en el HTML SERVIDO, no solo en el DOM: el boot sincroniza el trigger con la
+    // opción activa, así que una bandera dejada en el markup se «cura» sola y el DOM
+    // no la delata (mutación cazada al escribir esto).
+    const html = await (await page.request.get('/')).text();
+    const markup = html.slice(html.indexOf('id="lang-toggle"'), html.indexOf('id="auth-btn"'));
+    expect(markup, 'el markup del selector tampoco lleva banderas').not.toMatch(/[\u{1F1E6}-\u{1F1FF}]/u);
     const nav = (await page.locator('.main-nav-tab').allTextContents()).join(' ').toUpperCase();
     expect(nav).not.toContain('MY PLAN');
   });
