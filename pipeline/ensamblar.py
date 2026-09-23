@@ -66,10 +66,45 @@ def _seccion(nombre, mapa):
                  f'secciones es explícito, nunca heurístico')
     return f"{s['emoji']} {s.get('nombre', nombre)}", s
 
+def _compone_invitados(dst):
+    """Los invitados ACOMPAÑAN a la sinopsis, no la sustituyen.
+
+    La lámina de un festival nombra a quién va a estar —el director, el
+    productor, el protagonista— y es la razón por la que alguien elige una
+    función sobre otra, pero no es la historia de la obra. Escribirlo en
+    `sinopsis` tapaba la de verdad, porque la fuente del festival le gana al
+    enriquecido y con razón: «La estancia» publicaba «Invitados: Mauricio
+    Carmona Rivera (productor)…» en vez de su historia, que Proimágenes sí
+    publica.
+
+    Corre para TODAS las funciones, no solo para las enriquecidas: cuando lo
+    metí dentro de _enriquece() las tres obras sin ficha se quedaron sin una
+    sola línea, y la compuerta de publicar.py lo paró (27 sinopsis → 24).
+    """
+    inv = (dst.pop('invitados', None) or '').strip()
+    if not inv:
+        return
+    dst['synopsis'] = f"{dst['synopsis']} {inv}" if dst.get('synopsis') else inv
+    # `setdefault` NO vale: la clave ya existe con valor None —el registro la
+    # pone en None cuando el crudo no trae sinopsis— y entonces 7 funciones
+    # quedaban con texto y sin idioma. Lo paró la misma compuerta.
+    if not dst.get('synopsis_lang'):
+        dst['synopsis_lang'] = 'es'
+
+
 def _enriquece(dst, it):
     """Copia del enriquecido SOLO lo que la fuente del festival no trae. La
     fuente manda: su duración es la que programó, su título es el que publicó."""
     for campo, origen in (('poster', ('poster', 'poster_tmdb', 'poster_url')),
+                          # DE DÓNDE SALIÓ ESE PÓSTER. El enriquecido lo escribe
+                          # —'tmdb' o 'oficial'— y aquí no se copiaba: como desde
+                          # #952 el afiche de TMDB se guarda en /assets/, el
+                          # `elif` de abajo ya no ve«image.tmdb.org» y lo marcaba
+                          # 'oficial' a todos. Las 25 de Itagüí decían ser del
+                          # festival y 21 eran de TMDB. No cambia cómo se pinta
+                          # —solo 'editorial' cambia la forma— pero la
+                          # procedencia es justo lo que este repo no inventa.
+                          ('posterSource', ('posterSource',)),
                           ('lbSlug', ('lbSlug',)), ('tmdb_id', ('tmdb_id',)),
                           ('synopsis', ('sinopsis', 'synopsis_es')),
                           # `sinopsis_en` también: el crudo la escribe con el
@@ -192,6 +227,8 @@ def ensamblar(fid, escribir=True):
             'qa_type': f.get('qa_type') or None,
             'synopsis': f.get('sinopsis') or None,
             'synopsis_lang': 'es' if f.get('sinopsis') else None,
+            # se consume en _enriquece(), que lo añade a la sinopsis elegida
+            'invitados': f.get('invitados') or None,
             'poster': f.get('poster') or None,
             # El póster que publica el festival es EDITORIAL: es la pieza del
             # programa, no el afiche de una obra (docs/POSTERS.md §2).
@@ -291,6 +328,7 @@ def ensamblar(fid, escribir=True):
         it = enr.get(lib.norm(f['titulo']))
         if it:
             _enriquece(e, it)
+        _compone_invitados(e)
         # UN PROGRAMA DE UNA SOLA OBRA NO ES UN PROGRAMA. La doctrina dice que
         # hay contenedor cuando el festival le puso NOMBRE A UN CONJUNTO
         # (docs/SCHEMA.md, modelo A). Con una sola obra no hay conjunto: lo que

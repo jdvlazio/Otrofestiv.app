@@ -97,7 +97,7 @@
    "seccion": "OTRAS MIRADAS: MUESTRA INTERNACIONAL",
    "has_qa": true,
    "qa_type": "team",
-   "sinopsis": "Invitados: Sergio Spitaletta.",
+   "invitados": "Invitados: Sergio Spitaletta.",
    "duracion_min": 180,
    "_duracion_de": "el hueco hasta la siguiente función en la misma sede"
   },
@@ -142,9 +142,10 @@
     "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
     "date": "2026-09-22"
    },
-   "sinopsis": "Invitados: Coro Polifónico Ciudad de Itagüí.",
+   "sinopsis": "Entrada libre con boletería entregada media hora antes del evento en las taquillas del teatro.",
    "tipo": "evento",
    "event_kind": "apertura",
+   "invitados": "Invitados: Coro Polifónico Ciudad de Itagüí.",
    "duracion_min": 40,
    "_duracion_de": "el hueco hasta la siguiente función en la misma sede"
   },
@@ -196,7 +197,7 @@
    "duracion_min": 5,
    "has_qa": true,
    "qa_type": "team",
-   "sinopsis": "Invitados: Equipo de producción."
+   "invitados": "Invitados: Equipo de producción."
   },
   {
    "titulo": "Lactar",
@@ -211,7 +212,7 @@
    "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
    "director": "Harold Trompetero",
    "duracion_min": 75,
-   "sinopsis": "Invitados: Harold Trompetero (director) y Heidy Carrasco (actriz)."
+   "invitados": "Invitados: Harold Trompetero (director) y Heidy Carrasco (actriz)."
   },
   {
    "titulo": "Función especial sobre salud mental",
@@ -227,7 +228,7 @@
    "duracion_min": 105,
    "has_qa": true,
    "qa_type": "team",
-   "sinopsis": "Invitados: Secretaría de la Familia."
+   "invitados": "Invitados: Secretaría de la Familia."
   },
   {
    "titulo": "Xie. defensa de la vida",
@@ -274,7 +275,7 @@
    "duracion_min": 90,
    "has_qa": true,
    "qa_type": "team",
-   "sinopsis": "Invitados: Alberto Cardeño (actor)."
+   "invitados": "Invitados: Alberto Cardeño (actor)."
   },
   {
    "titulo": "Kon-Tiki: un viaje fantástico",
@@ -320,7 +321,7 @@
    "duracion_min": 83,
    "has_qa": true,
    "qa_type": "team",
-   "sinopsis": "Invitados: Diógenes Cuevas (director) Alberto Cardeño (actor)."
+   "invitados": "Invitados: Diógenes Cuevas (director) Alberto Cardeño (actor)."
   },
   {
    "titulo": "Wings of Freedom",
@@ -381,7 +382,7 @@
    "duracion_min": 89,
    "has_qa": true,
    "qa_type": "team",
-   "sinopsis": "Invitados: José Alejandro González."
+   "invitados": "Invitados: José Alejandro González."
   },
   {
    "titulo": "Visita guiada al museo Centro Cultural Caribe",
@@ -411,7 +412,7 @@
    "seccion": "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO",
    "director": "John Bolívar",
    "duracion_min": 105,
-   "sinopsis": "Invitados: Gustavo Nieto Roa (productor), Claudia Parra (productora), John Bolívar (Director), equipo de producción y familiares del maestro Rodrigo Arenas Betancourt."
+   "invitados": "Invitados: Gustavo Nieto Roa (productor), Claudia Parra (productora), John Bolívar (Director), equipo de producción y familiares del maestro Rodrigo Arenas Betancourt."
   },
   {
    "titulo": "Ciudad de los hombres",
@@ -476,7 +477,7 @@
    "duracion_min": 90,
    "has_qa": true,
    "qa_type": "team",
-   "sinopsis": "Invitados: Edwin Jaramillo, director de cine itagüiseño."
+   "invitados": "Invitados: Edwin Jaramillo, director de cine itagüiseño."
   },
   {
    "titulo": "One Piece: la película",
@@ -494,7 +495,7 @@
    "duracion_min": 60
   },
   {
-   "titulo": "La estancia",
+   "titulo": "Estancia",
    "dia": "2026-09-26",
    "hora": "18:30",
    "sede": "Teatro del Norte",
@@ -508,7 +509,7 @@
    "duracion_min": 85,
    "has_qa": true,
    "qa_type": "team",
-   "sinopsis": "Invitados: Mauricio Carmona Rivera (productor) y Javier Ocampo (protagonista)."
+   "invitados": "Invitados: Mauricio Carmona Rivera (productor) y Javier Ocampo (protagonista)."
   },
   {
    "titulo": "Zuzu Angel",
@@ -576,7 +577,7 @@
    "duracion_min": 97,
    "has_qa": true,
    "qa_type": "team",
-   "sinopsis": "Invitados: participantes del Hogar de los Recuerdos y Fausto (cantante)."
+   "invitados": "Invitados: participantes del Hogar de los Recuerdos y Fausto (cantante)."
   },
   {
    "titulo": "Bautismo de sangre",
