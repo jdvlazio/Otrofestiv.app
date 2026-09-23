@@ -382,6 +382,46 @@ def arquetipos():
     return set(re.findall(r"'([^']+)'\s*:", m.group(1))) if m else set()
 
 
+# ── la caja de lo que se publica ──────────────────────────────────────────────────
+# SECCIONES Y LUGARES NO VAN EN MAYÚSCULA SOSTENIDA (regla de Juan, 23 sep 2026).
+# La lámina de un festival los imprime a menudo en caja alta porque es un
+# cartel, y así se colaban: Itagüí publicó «COLOMBIA: CINE BIEN HECHO. CINE NO
+# VISTO» y Jardín «CALEIDOSCOPIO», y la ficha y la lista pintan el nombre SIN
+# transformar —al lado del «Memoria y conflicto» de FICDEH, gritaban—. Las
+# PALABRAS siguen siendo las del festival; la caja la pone la app.
+#
+# La excepción es de TABLA, no de regla: una sigla va en alta porque es una
+# sigla, y eso no se adivina —«FUGA» es la Fundación Gilberto Alzate Avendaño
+# y «LABRA» podría ser un verbo—. Una palabra nueva en caja alta falla hasta
+# que alguien la mira y la escribe aquí. Las de 3 letras o menos no se miran:
+# en el censo de los trece festivales todas eran siglas (OKX, ELO, IAP).
+SIGLAS = {
+    # sedes y las instituciones que las nombran
+    'AECID', 'ALITIC', 'ASAB', 'BMCC', 'CCEBA', 'CDAE', 'CEFE', 'COMFAMA', 'FUGA',
+    'LGBTIQ', 'MAMB', 'MAMM', 'SENA', 'TPAC', 'UNIAGRARIA', 'UNIBAC', 'VISA',
+    # festivales nombrados dentro de una sección o una sede
+    'FICCI', 'FICDH', 'TIFF',
+    # MARCAS DE PROGRAMA que el festival escribe así —no son siglas y no
+    # gritan una sección: son el nombre de un proceso—. FINQUITA es el
+    # diminutivo de FINCA; LABRA, «el proceso de formación LABRA» de SiembraFest,
+    # junto a SiembraLAB. Pendientes del visto bueno de Juan.
+    'FINQUITA', 'LABRA',
+}
+
+
+def caja_gritada(nombre):
+    """Las palabras de 4+ letras en mayúscula sostenida que no son sigla
+    declarada. Vacía = el nombre se puede publicar.
+
+    >>> caja_gritada('🔮 CALEIDOSCOPIO')
+    ['CALEIDOSCOPIO']
+    >>> caja_gritada('Museo de Arte Moderno - MAMB')
+    []
+    """
+    return [w for w in re.findall(r'[^\W\d_]+', nombre or '')
+            if len(w) >= 4 and w.isupper() and w not in SIGLAS]
+
+
 CABECERA = ('name', 'fullName', 'city', 'country', 'dates', 'dates_en', 'year',
             'timezoneOffset', 'storageKey', 'festivalStartStr', 'festivalEndStr', 'mes_es')
 
@@ -446,6 +486,24 @@ def cargar_plan(fid, repo=None):
                 fallos.append(f'sección «{k}» sin `{c}`')
         if (v or {}).get('archetype') and ARQ and v['archetype'] not in ARQ:
             fallos.append(f'sección «{k}»: arquetipo «{v["archetype"]}» no es uno de los 9 ({", ".join(sorted(ARQ))})')
+    # LA CAJA de lo que se va a publicar, no de la llave: la llave es lo que
+    # lee la lámina y puede venir en alta; lo publicado es `nombre` o, si no
+    # lo hay, la llave misma. Aquí, antes del paso 1, cuesta una línea;
+    # descubierto en la pantalla, costó un PR por festival (Itagüí, Jardín).
+    for k, v in secs.items():
+        pub = (v or {}).get('nombre') or k
+        g = caja_gritada(pub)
+        if g:
+            fallos.append(f'sección «{pub}» en mayúscula sostenida ({", ".join(g)}): la caja '
+                          f'la pone la app — `nombre` con la caja normal, o la palabra a '
+                          f'lib.SIGLAS si de verdad es una sigla ([caja-sostenida])')
+    for k, v in (cfg.get('sedes') or {}).items():
+        for pub in (v if isinstance(v, list) else [v]):
+            g = caja_gritada(pub) if isinstance(pub, str) else []
+            if g:
+                fallos.append(f'sede «{pub}» en mayúscula sostenida ({", ".join(g)}): '
+                              f'nombre publicado con la caja normal, o la palabra a lib.SIGLAS '
+                              f'si es una sigla ([caja-sostenida])')
     crudo = None
     for clase in ('crudo', 'enriquecido', 'geo'):
         rel = cfg.get(clase)
@@ -469,6 +527,12 @@ def cargar_plan(fid, repo=None):
             crudo = sd
     if crudo:
         fs = crudo.get('funciones') or crudo.get('programas') or []
+        # la SALA también es un lugar, y viaja en la función, no en la tabla
+        for _sala in sorted({f.get('sala') for f in fs if f.get('sala')}):
+            g = caja_gritada(_sala)
+            if g:
+                fallos.append(f'sala «{_sala}» en mayúscula sostenida ({", ".join(g)}) '
+                              f'([caja-sostenida])')
         dias = sorted({f['dia'] for f in fs if f.get('dia')} | set(cfg.get('dias_vacios') or []))
         if dias:
             d0, d1 = datetime.date.fromisoformat(dias[0]), datetime.date.fromisoformat(dias[-1])
@@ -726,6 +790,17 @@ def _selftest():
     _falla('sin secciones', 'sin mapa `secciones`', secciones=None)
     _falla('arquetipo inventado', 'no es uno de los 9',
            secciones={'X': {'emoji': '🎬', 'en': 'X', 'archetype': 'Industria / Formación'}})
+    # [caja-sostenida]: lo publicado, no la llave; y la sigla declarada pasa
+    _falla('sección gritada', 'mayúscula sostenida',
+           secciones={'CALEIDOSCOPIO': {'emoji': '🔮', 'en': 'Caleidoscopio', 'archetype': 'Competencia'}})
+    t('llave en alta con `nombre` normal pasa', cargar_plan(_plan(secciones={'CALEIDOSCOPIO': {
+        'emoji': '🔮', 'nombre': 'Caleidoscopio', 'en': 'Caleidoscopio', 'archetype': 'Competencia'}}),
+        repo=_root)['_clase'], 'generico')
+    t('sigla declarada pasa', cargar_plan(_plan(secciones={'Retrospectiva FICCI': {
+        'emoji': '📽', 'en': 'FICCI Retrospective', 'archetype': 'Competencia'}}),
+        repo=_root)['_clase'], 'generico')
+    _falla('sede gritada', 'sede «TEATRO MUNICIPAL - B» en mayúscula',
+           sedes={'Teatro': ['TEATRO MUNICIPAL - B', '']})
     json.dump({'_provenance': provenance('t'), 'MANGO': {'tmdb_id': 1}}, open(f'{_root}/festivals/staging/t-enr.json', 'w'))
     _falla('enriquecido con forma de diccionario', 'falta la lista `obras`', enriquecido='festivals/staging/t-enr.json')
     _crudo(['2026-09-01', '2026-09-03'])

@@ -98,9 +98,10 @@
    },
    "CALEIDOSCOPIO": {
     "emoji": "🔮",
-    "en": "CALEIDOSCOPIO",
+    "en": "Caleidoscopio",
     "archetype": "Competencia",
-    "order": 2
+    "order": 2,
+    "nombre": "Caleidoscopio"
    }
   },
   "acceso_por_defecto": {
@@ -131,7 +132,8 @@
   "_sede_conocida_sin_funcion": {
    "Parque principal de Jardín": "la lámina de talleres lo da como lugar de «Talleres, actividades digitales y proyecciones» (IU Digital), pero ese bloque NO trae hora y sin hora no se publica. Queda ubicado por si el festival la anuncia: 5.5989998, -75.8192122 (Parque Principal El Libertador, Nominatim)."
   },
-  "_dias_vacios_nota": "los tres estaban declarados vacíos porque solo teníamos la función inaugural. Con la parrilla del 21 sep los cuatro días tienen programación."
+  "_dias_vacios_nota": "los tres estaban declarados vacíos porque solo teníamos la función inaugural. Con la parrilla del 21 sep los cuatro días tienen programación.",
+  "_por_que_secciones": "LA CAJA LA PONE LA APP: la lámina rotula la competencia en mayúscula sostenida y así se publicó, «🔮 CALEIDOSCOPIO», gritando en la ficha y en la lista. El propio festival la escribe «Competencia Caleidoscopio» en su prosa (el mapa de sedes del 20 sep), así que se publica con esa caja; la llave sigue siendo la de la lámina. El inglés también: es el nombre propio de la competencia y no se traduce, igual que «Festicine, Festiniños» en Itagüí. Regla de Juan (23 sep), vigilada en lib.cargar_plan → [caja-sostenida]."
  },
  "_no_se_publica": {
   "Las otras 36 obras del catálogo": "tienen ficha completa y NO tienen función. Sin día, hora y sede no se publican: la regla es vieja y es de las que no se negocian.",

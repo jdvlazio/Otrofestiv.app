@@ -128,6 +128,40 @@ DE_LA_WEB = {'pais': 'pais', 'idioma': 'idioma', 'genero': 'genero',
 
 # POR QUÉ CADA GRUPO DE OBRAS SE QUEDA FUERA. La clave es la sección tal como
 # la escribe el catálogo; un grupo sin entrada hace fallar el paso.
+# LAS INSCRIPCIONES, por actividad y con su fuente. La parrilla no las trae:
+# el festival las publica aparte, en una Story con un enlace, y la Story se
+# borra a las 24 horas —por eso queda escrita aquí y no en ningún lado más—.
+#
+# «Taller Cartacartografías», Story de @festicinejardin del 23 sep 2026
+# («Inscripciones acá», «Entrada libre, cupo limitado»). El formulario al que
+# enlaza se titula «Formulario de inscripción Taller Cartacartografías» —es
+# de ESTE taller, comprobado antes de publicarlo— y trae la descripción que
+# escribió el colectivo que lo organiza y el horario, 11:00 a 12:00, que casa
+# con la hora y la duración de la parrilla. La sinopsis es la frase de la Story
+# y el texto del formulario, sin tocar.
+INSCRIPCION = {
+    'Taller Cartacartografías de memorias territoriales': {
+        'registration_url': 'https://forms.gle/7fsYzgnnC51oZmGW8',
+        'acceso': 'Entrada libre, cupo limitado',
+        'sinopsis': (
+            'Un taller para escribirle una carta a eso que tu territorio ha perdido. '
+            'Cartacartografías de memorias territoriales es un taller participativo '
+            'de JÓDETE que invita a reconocer y reflexionar sobre los cambios que han '
+            'vivido nuestros territorios y las huellas que dejan los proyectos '
+            'extractivistas en lugares que hacen parte de nuestra vida cotidiana. '
+            'A través de un juego de activación y una conversación sobre el '
+            'territorio y el extractivismo, se identificarán lugares, personas o '
+            'espacios que han cambiado, desaparecido o que sentimos que hacen falta. '
+            'Luego, cada participante escribirá una carta dirigida a esa ausencia y '
+            'compartirá su relato con el grupo. Con las cartas se construirá una '
+            'cartografía colectiva de memorias y ausencias, ubicando simbólicamente '
+            'los lugares mencionados. Finalmente, cada persona dejará una palabra, '
+            'deseo o acción como una semilla para cuidar el territorio y construir '
+            'otros futuros posibles. Organiza: Colectivo JÓDETE (Jóvenes por la '
+            'Defensa del Territorio).'),
+    },
+}
+
 SIN_FUNCION_OK = {
     'Muestra Central': 'con la parrilla completa del 21 sep quedan DOS obras '
         'fichadas en la web que no aparecen en ninguna lámina: «Nuestra tierra» '
@@ -288,6 +322,7 @@ def main():
 
     parr = json.load(open(PARR, encoding='utf-8'))
     funciones, usadas = [], set()
+    usadas_insc = set()
     for f in parr['funciones'] + [t for t in parr['talleres']
                                   if not t.get('_no_se_publica')]:
         tit = f.get('titulo') or ''
@@ -435,6 +470,9 @@ def main():
             _desc = '. '.join(x.strip(' .') for x in (_sub, _cred) if x)
             if _desc:
                 reg['sinopsis'] = _desc + '.'
+            if tit in INSCRIPCION:
+                reg.update(INSCRIPCION[tit])
+                usadas_insc.add(tit)
             funciones.append(reg)
             continue
 
@@ -484,6 +522,13 @@ def main():
     for reg in funciones:
         reparte_extra(reg)
     concilia_notas(funciones)
+
+    # una inscripción declarada que no casa con ningún taller es un error, no
+    # un silencio: un título mal copiado dejaría el enlace escrito y sin publicar
+    _huerf = sorted(set(INSCRIPCION) - usadas_insc)
+    if _huerf:
+        sys.exit('✗ inscripción declarada para una actividad que no está en la '
+                 'parrilla: ' + ' · '.join(_huerf))
 
     json.dump({'_provenance': provenance(
         'festicinejardin.com (la ficha de cada obra) + las láminas de Instagram '

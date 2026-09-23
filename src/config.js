@@ -1133,7 +1133,7 @@ export const SECTION_ARCHETYPES = {
   '🎙️ Comunicaciones': 'Charlas / Industria',
   // ── Festival de Cine de Jardín 11 · Jardín, Antioquia ──────────────────
   '🎬 Muestra Central': 'Muestra / País',
-  '🔮 CALEIDOSCOPIO': 'Competencia',
+  '🔮 Caleidoscopio': 'Competencia',
   // ── 9° Festival Internacional de Cine Ciudad de Itagüí ─────────────────
   '🌍 Otras Miradas: Muestra Internacional': 'Muestra / País',
   '🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto': 'Muestra / País',

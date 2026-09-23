@@ -34,6 +34,7 @@
   "Parque principal de Jardín": "la lámina de talleres lo da como lugar de «Talleres, actividades digitales y proyecciones» (IU Digital), pero ese bloque NO trae hora y sin hora no se publica. Queda ubicado por si el festival la anuncia: 5.5989998, -75.8192122 (Parque Principal El Libertador, Nominatim)."
  },
  "_dias_vacios_nota": "los tres estaban declarados vacíos porque solo teníamos la función inaugural. Con la parrilla del 21 sep los cuatro días tienen programación.",
+ "_por_que_secciones": "LA CAJA LA PONE LA APP: la lámina rotula la competencia en mayúscula sostenida y así se publicó, «🔮 CALEIDOSCOPIO», gritando en la ficha y en la lista. El propio festival la escribe «Competencia Caleidoscopio» en su prosa (el mapa de sedes del 20 sep), así que se publica con esa caja; la llave sigue siendo la de la lámina. El inglés también: es el nombre propio de la competencia y no se traduce, igual que «Festicine, Festiniños» en Itagüí. Regla de Juan (23 sep), vigilada en lib.cargar_plan → [caja-sostenida].",
  "prioLimit": 3,
  "dias": [
   "2026-09-24",
@@ -99,8 +100,8 @@
    "archetype": "Muestra / País",
    "order": 1
   },
-  "🔮 CALEIDOSCOPIO": {
-   "en": "CALEIDOSCOPIO",
+  "🔮 Caleidoscopio": {
+   "en": "Caleidoscopio",
    "archetype": "Competencia",
    "order": 2
   }
@@ -579,7 +580,7 @@
   {
    "title": "Competencia nacional de cortometrajes · Parte 1",
    "type": "film",
-   "section": "🔮 CALEIDOSCOPIO",
+   "section": "🔮 Caleidoscopio",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "100 min",
@@ -1327,7 +1328,7 @@
   {
    "title": "Competencia nacional de cortometrajes · Parte 2",
    "type": "film",
-   "section": "🔮 CALEIDOSCOPIO",
+   "section": "🔮 Caleidoscopio",
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "206 min",
@@ -1993,13 +1994,15 @@
    "sala": "Café Tinta y Tinto, piso 2",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Organiza: Colectivo JÓDETE.",
+   "synopsis": "Un taller para escribirle una carta a eso que tu territorio ha perdido. Cartacartografías de memorias territoriales es un taller participativo de JÓDETE que invita a reconocer y reflexionar sobre los cambios que han vivido nuestros territorios y las huellas que dejan los proyectos extractivistas en lugares que hacen parte de nuestra vida cotidiana. A través de un juego de activación y una conversación sobre el territorio y el extractivismo, se identificarán lugares, personas o espacios que han cambiado, desaparecido o que sentimos que hacen falta. Luego, cada participante escribirá una carta dirigida a esa ausencia y compartirá su relato con el grupo. Con las cartas se construirá una cartografía colectiva de memorias y ausencias, ubicando simbólicamente los lugares mencionados. Finalmente, cada persona dejará una palabra, deseo o acción como una semilla para cuidar el territorio y construir otros futuros posibles. Organiza: Colectivo JÓDETE (Jóvenes por la Defensa del Territorio).",
    "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
    },
-   "is_free": true
+   "registration_url": "https://forms.gle/7fsYzgnnC51oZmGW8",
+   "is_free": true,
+   "requires_registration": true
   },
   {
    "title": "Intervención artística",
@@ -2024,8 +2027,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-23T06:46:10",
-  "plan_sha": "4977a7663617bd88",
+  "fecha": "2026-09-23T17:57:40",
+  "plan_sha": "07feb98440325160",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"
  }
