@@ -326,6 +326,7 @@
    "type": "film",
    "section": "🌍 OTRAS MIRADAS: MUESTRA INTERNACIONAL",
    "director": "Marcela Citterio y Andrés Valencia",
+   "year": 2019,
    "country": "Argentina",
    "flags": "🇦🇷",
    "duration": "90 min",
@@ -1082,7 +1083,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-23T10:08:51",
+  "fecha": "2026-09-23T10:16:25",
   "plan_sha": "1da19c04d9476a80",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py itagui-2026"
