@@ -65,6 +65,32 @@ las sirve sin sesión— y **leerlas con `pipeline/ocr.py`**, que usa el OCR del
 sistema, cachea por hash y lee las 42 de un festival en seis segundos. Mirarlas
 a ojo no escala, y la que no se mira es justo la que falta.
 
+**Y se leen CUATRO veces, por caminos que fallan distinto (22 sep 2026).** Con
+Jardín verifiqué «tres veces» y se me cayó una película igual: las tres lecturas
+compartían camino —el mismo motor y el mismo parser sobre la misma imagen a
+distinto tamaño—, así que cuando el parser tiraba algo lo tiraban las tres y
+coincidían. *Coincidir no es verificar.* `pipeline/ig-lecturas.py <shortcode>`
+corre cuatro que fallan por motivos distintos:
+
+| | lectura | qué caza que las otras no |
+|---|---|---|
+| A | Vision con corrección de idioma | el camino de siempre |
+| B | Vision **sin** corrección | lo que el modelo de idioma REESCRIBE: en la lámina 1 de Itagüí A leyó «CIUDAD DE ITAGUI» y B «CIUDAD DE ITAGÜI» |
+| C | Vision sobre la lámina al doble | lo que se pierde por tamaño: el «(SO2E6)» de «Cien años de soledad» |
+| D | el texto ALT del post | sin OCR: ni motor ni píxeles compartidos (a veces Instagram no lo sirve) |
+
+Y la quinta, que manda sobre las cuatro: **mirar la lámina**. `--ojos <json>`
+cruza lo transcrito a mano como una lectura más — es la regla que Juan puso tras
+Jardín, que el parser no se cree hasta haber comparado cada imagen con lo que
+sacó. En Itagüí las 38 funciones transcritas a ojo quedaron corroboradas por las
+tres de OCR con una sola diferencia, y explicada.
+
+Compara TOKENS —horas en 24h, duraciones, años, fechas, nombres propios—, nunca
+registros parseados: un comparador que pasa por el parser hereda su punto ciego.
+Recorta la franja de patrocinadores por geometría (`y > 0.88`), que es logotipo
+y no programación: sin ese corte, el 100% de las 175 discrepancias de la primera
+corrida eran «COMFAMA» contra «comtama».
+
 El OCR sirve además como VERIFICACIÓN independiente: cruzar las horas y los
 títulos pintados contra la parrilla ya extraída encuentra lo que falta sin
 depender de que el festival lo haya escrito en texto. Ojo con dos cosas al
