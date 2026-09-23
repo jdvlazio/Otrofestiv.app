@@ -35,7 +35,7 @@ import os, io, re, json, datetime
 # La raíz del repo, para que cargar_plan resuelva rutas relativas del plan
 # sin depender de quién lo llama (ensamblar, correr o el guardián).
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-import io, json, os, re, collections, subprocess, time, unicodedata, datetime
+import io, json, os, re, collections, subprocess, time, unicodedata, datetime, urllib.parse
 
 # User-Agent de navegador: ficdeh.com (Vercel) y varios CDN bloquean curl pelado.
 UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
@@ -121,8 +121,15 @@ def tmdb_get(path, api_key, **params):
     borró en silencio las 36 fichas que había: el script terminó con éxito y el
     sidecar quedó con 43 obras «sin ficha verificable». El silencio nunca
     significa verificado (misma lección que scripts/tmdb-precheck.py)."""
-    url = f'https://api.themoviedb.org/3{path}?api_key={api_key}&' + '&'.join(
-        f'{k}=' + str(v).replace(' ', '%20').replace('&', '%26') for k, v in params.items())
+    # ESCAPAR DE VERDAD, no a mano (23 sep 2026). Esto reemplazaba SOLO el
+    # espacio y el «&», así que «100% lobo» viajaba como «100%%20lobo» —un
+    # escape roto— y TMDB devolvía nada: la película salía «sin ficha
+    # verificable» teniendo su director y su duración exactos en el catálogo.
+    # Rompe con cualquier «%», «#», «+» o «?» en un título, en cualquier
+    # festival. `quote` con safe='' escapa todo lo que hay que escapar.
+    url = (f'https://api.themoviedb.org/3{path}?api_key={api_key}&'
+           + '&'.join(f'{k}=' + urllib.parse.quote(str(v), safe='')
+                      for k, v in params.items()))
     for _ in range(3):
         r = subprocess.run(['curl', '-s', '--max-time', '25', url], capture_output=True)
         if r.returncode == 0 and r.stdout:

@@ -1042,14 +1042,17 @@ export const FESTIVAL_CONFIG={
     fullName:'9° Festival Internacional de Cine Ciudad de Itagüí',shortName:'ITAGÜÍ',
     city:'Itagüí',country:'CO',
     dates:'23–27 SEP',dates_en:'SEP 23–27',year:2026,timezoneOffset:'-05:00',
-    // EL ARTE DEL PROPIO FESTIVAL, sacado a resolución de impresión del PDF de
-    // programación que publica institutoitagui.gov.co (la ilustración de la
-    // cabecera: la mujer con el hibisco, el barranquero, la iglesia y el rollo).
-    // No hay afiche vertical publicado. Estirado a 2:3 por compose-keyart.py:
-    // el ancho se comprime 12,5%, dentro de lo que la regla da por imperceptible.
-    keyArt:'/assets/keyart/itagui2026-v2.jpg',
-    // El lema de la edición, que el festival pone bajo su nombre y en su bio.
-    tagline:'Colombia: cine bien hecho, cine no visto',
+    // EL AFICHE OFICIAL, ENTERO — con su franja de patrocinadores. Elegido por
+    // Juan (23 sep) mirando las tres opciones a tamaño de card: recortar el pie
+    // ALEJA el afiche del 2:3 en vez de acercarlo, porque le quita altura. Los
+    // números: entero 388×515 (ratio 1,327) pide estirar el alto un 13%, dentro
+    // de lo aprobado; sin patrocinadores sube a 31% y sin el pie entero a 36%.
+    keyArt:'/assets/keyart/itagui2026-v4.jpg',
+    // LA EDICIÓN POR ENCIMA DEL LEMA (Juan, 23 sep). El festival tiene lema
+    // —«Colombia: cine bien hecho, cine no visto»— pero en el subtítulo pesa
+    // más decir QUÉ es y en qué edición va. No repite el nombre de arriba
+    // («Festicine Itagüí») ni la ciudad, que ya va en su propia línea.
+    tagline:'9° Festival Internacional de Cine',
     storageKey:'itagui2026_',festivalStartStr:'2026-09-23T00:00:00',festivalEndStr:'2026-09-27T23:59:00',
     festivalDates:{'2026-09-23':'2026-09-23','2026-09-24':'2026-09-24','2026-09-25':'2026-09-25','2026-09-26':'2026-09-26','2026-09-27':'2026-09-27'},
     days:[{k:'2026-09-23',d:23,lbl:'MIÉ'},{k:'2026-09-24',d:24,lbl:'JUE'},{k:'2026-09-25',d:25,lbl:'VIE'},{k:'2026-09-26',d:26,lbl:'SÁB'},{k:'2026-09-27',d:27,lbl:'DOM'}],

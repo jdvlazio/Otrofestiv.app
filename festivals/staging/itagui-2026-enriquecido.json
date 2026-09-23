@@ -5,6 +5,25 @@
  },
  "obras": [
   {
+   "titulo": "100% lobo",
+   "tmdb_id": 520946,
+   "titulo_original": "100% Wolf",
+   "poster_path": "/4uyDEzcIn5NDPDsjQVjLHFKCI9L.jpg",
+   "synopsis_es": "Freddy Lupin pertenece a una orgullosa familia de hombres lobo. Confiado de que pronto se convertirá en un hombre lobo de los más temidos, Freddy se queda sorprendido cuando descubre que no es todo lo feroz que esperaba.",
+   "synopsis_en": "Freddy Lupin, heir to a proud family line of werewolves, is in for a shock when on his 14th birthday his first 'warfing' goes awry, turning him into a ferocious poodle.  The pack elders give Freddy until the next moonrise to prove he has the heart of a wolf, or risk being cast out forever.  With the help of an unlikely ally in a streetwise stray named Batty, Freddy must prove he's 100% Wolf.",
+   "genero": "Animación",
+   "anio_tmdb": 2020,
+   "duracion_tmdb": 96,
+   "pais_tmdb": "Australia, Belgium",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "100% lobo",
+   "lbSlug": "100-percent-wolf",
+   "_director": "Alexs Stadermann",
+   "_sondeado": "2026-09-23",
+   "poster": "/assets/itagui-2026/100-lobo.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Bautismo de sangre",
    "tmdb_id": 35967,
    "titulo_original": "Batismo de Sangue",
@@ -351,9 +370,92 @@
    "_sondeado": "2026-09-23",
    "poster": "/assets/itagui-2026/zuzu-angel.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Clave de amor",
+   "pais": "Colombia",
+   "_fuente": "proimagenes",
+   "_proimagenes_id": "3246",
+   "_verificado": "director: Luis Fernando Bernal Polo",
+   "anio": 2026,
+   "duracion_min": 100,
+   "genero": "Ficción",
+   "sinopsis": "Clave de Amor es un largometraje de ficción dramática que rinde homenaje al patrimonio cultural inmaterial del departamento del Tolima a través de una historia de formación, amor y música. Inspirada en el universo del Sanjuanero Tolimense, la película sigue el camino de Heriberto, un joven campesino de Natagaima que, impulsado por el sueño de su padre, el maestro y músico popular Cantalicio Rojas González, viaja a la ciudad de Ibagué para ingresar al Conservatorio del Tolima y convertirse en músico profesional. Lejos de su hogar, Heriberto enfrenta los desafíos de adaptarse a un entorno urbano, superar los prejuicios hacia su origen campesino y descubrir el verdadero significado de la disciplina artística. En ese proceso conoce a Carolina, una joven estudiante de música cuya personalidad distante y sofisticada contrasta con la sencillez del protagonista. Entre ensayos, conciertos, amistades y desencuentros, ambos emprenden un recorrido emocional donde el amor y la música se convierten en lenguajes inseparables. A lo largo de su vida, Heriberto comprenderá que el verdadero éxito no consiste únicamente en el reconocimiento internacional, sino en regresar a sus raíces para honrar el l",
+   "poster": "/assets/itagui-2026/clave-de-amor.jpg",
+   "posterSource": "oficial"
+  },
+  {
+   "titulo": "Xie. defensa de la vida",
+   "pais": "Colombia",
+   "_fuente": "proimagenes",
+   "_proimagenes_id": "3243",
+   "_verificado": "director: Adriana Bernal-Mor, Paola Zuluaga",
+   "anio": 2026,
+   "duracion_min": 70,
+   "genero": "Documental",
+   "sinopsis": "Desde 1977, mujeres campesinas tejedoras de las montañas de Cundinamarca resisten la explotación irregular de nacimientos de agua por industrias de bebidas y ultraprocesados. Mientras el agua se convierte en un negocio, las comunidades padecen sequías y el deterioro de sus ecosistemas. Ahora, frente a una nueva concesión para embotellar agua, se organizan para defender el territorio y exigir que el agua prevalezca como un derecho, no como una mercancía.",
+   "poster": "/assets/itagui-2026/xie-defensa-de-la-vida.jpg",
+   "posterSource": "oficial"
+  },
+  {
+   "titulo": "Clave de amor",
+   "pais": "Colombia",
+   "_fuente": "proimagenes",
+   "_proimagenes_id": "3246",
+   "_verificado": "director: Luis Fernando Bernal Polo",
+   "anio": 2026,
+   "duracion_min": 100,
+   "genero": "Ficción",
+   "sinopsis": "Clave de Amor es un largometraje de ficción dramática que rinde homenaje al patrimonio cultural inmaterial del departamento del Tolima a través de una historia de formación, amor y música. Inspirada en el universo del Sanjuanero Tolimense, la película sigue el camino de Heriberto, un joven campesino de Natagaima que, impulsado por el sueño de su padre, el maestro y músico popular Cantalicio Rojas González, viaja a la ciudad de Ibagué para ingresar al Conservatorio del Tolima y convertirse en músico profesional. Lejos de su hogar, Heriberto enfrenta los desafíos de adaptarse a un entorno urbano, superar los prejuicios hacia su origen campesino y descubrir el verdadero significado de la disciplina artística. En ese proceso conoce a Carolina, una joven estudiante de música cuya personalidad distante y sofisticada contrasta con la sencillez del protagonista. Entre ensayos, conciertos, amistades y desencuentros, ambos emprenden un recorrido emocional donde el amor y la música se convierten en lenguajes inseparables. A lo largo de su vida, Heriberto comprenderá que el verdadero éxito no consiste únicamente en el reconocimiento internacional, sino en regresar a sus raíces para honrar el l",
+   "poster": "/assets/itagui-2026/clave-de-amor.jpg",
+   "posterSource": "oficial"
+  },
+  {
+   "titulo": "Xie. defensa de la vida",
+   "pais": "Colombia",
+   "_fuente": "proimagenes",
+   "_proimagenes_id": "3243",
+   "_verificado": "director: Adriana Bernal-Mor, Paola Zuluaga",
+   "anio": 2026,
+   "duracion_min": 70,
+   "genero": "Documental",
+   "sinopsis": "Desde 1977, mujeres campesinas tejedoras de las montañas de Cundinamarca resisten la explotación irregular de nacimientos de agua por industrias de bebidas y ultraprocesados. Mientras el agua se convierte en un negocio, las comunidades padecen sequías y el deterioro de sus ecosistemas. Ahora, frente a una nueva concesión para embotellar agua, se organizan para defender el territorio y exigir que el agua prevalezca como un derecho, no como una mercancía.",
+   "poster": "/assets/itagui-2026/xie-defensa-de-la-vida.jpg",
+   "posterSource": "oficial"
+  },
+  {
+   "titulo": "Clave de amor",
+   "pais": "Colombia",
+   "_fuente": "proimagenes",
+   "_proimagenes_id": "3246",
+   "_verificado": "director: Luis Fernando Bernal Polo",
+   "anio": 2026,
+   "duracion_min": 100,
+   "genero": "Ficción",
+   "sinopsis": "Clave de Amor es un largometraje de ficción dramática que rinde homenaje al patrimonio cultural inmaterial del departamento del Tolima a través de una historia de formación, amor y música. Inspirada en el universo del Sanjuanero Tolimense, la película sigue el camino de Heriberto, un joven campesino de Natagaima que, impulsado por el sueño de su padre, el maestro y músico popular Cantalicio Rojas González, viaja a la ciudad de Ibagué para ingresar al Conservatorio del Tolima y convertirse en músico profesional. Lejos de su hogar, Heriberto enfrenta los desafíos de adaptarse a un entorno urbano, superar los prejuicios hacia su origen campesino y descubrir el verdadero significado de la disciplina artística. En ese proceso conoce a Carolina, una joven estudiante de música cuya personalidad distante y sofisticada contrasta con la sencillez del protagonista. Entre ensayos, conciertos, amistades y desencuentros, ambos emprenden un recorrido emocional donde el amor y la música se convierten en lenguajes inseparables. A lo largo de su vida, Heriberto comprenderá que el verdadero éxito no consiste únicamente en el reconocimiento internacional, sino en regresar a sus raíces para honrar el l",
+   "poster": "/assets/itagui-2026/clave-de-amor.jpg",
+   "posterSource": "oficial"
   }
  ],
  "verificadas": {
+  "100% lobo": {
+   "tmdb_id": 520946,
+   "titulo_original": "100% Wolf",
+   "poster_path": "/4uyDEzcIn5NDPDsjQVjLHFKCI9L.jpg",
+   "synopsis_es": "Freddy Lupin pertenece a una orgullosa familia de hombres lobo. Confiado de que pronto se convertirá en un hombre lobo de los más temidos, Freddy se queda sorprendido cuando descubre que no es todo lo feroz que esperaba.",
+   "synopsis_en": "Freddy Lupin, heir to a proud family line of werewolves, is in for a shock when on his 14th birthday his first 'warfing' goes awry, turning him into a ferocious poodle.  The pack elders give Freddy until the next moonrise to prove he has the heart of a wolf, or risk being cast out forever.  With the help of an unlikely ally in a streetwise stray named Batty, Freddy must prove he's 100% Wolf.",
+   "genero": "Animación",
+   "anio_tmdb": 2020,
+   "duracion_tmdb": 96,
+   "pais_tmdb": "Australia, Belgium",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "100% lobo",
+   "lbSlug": "100-percent-wolf",
+   "_director": "Alexs Stadermann",
+   "_sondeado": "2026-09-23",
+   "poster": "/assets/itagui-2026/100-lobo.jpg",
+   "posterSource": "tmdb"
+  },
   "Bautismo de sangre": {
    "tmdb_id": 35967,
    "titulo_original": "Batismo de Sangue",
@@ -686,7 +788,6 @@
   }
  },
  "sin_ficha": [
-  "100% lobo",
   "ARENAS: la vida y obra del Escultor Rodrigo Arenas Betancour",
   "Clave de amor",
   "El último caso",
@@ -701,10 +802,6 @@
   "función especial sobre salud mental"
  ],
  "_sin_ficha_sondeo": {
-  "100% lobo": {
-   "director": "Alexs Stadermann",
-   "fecha": "2026-09-23"
-  },
   "ARENAS: la vida y obra del Escultor Rodrigo Arenas Betancour": {
    "director": "",
    "fecha": "2026-09-23"
@@ -753,5 +850,25 @@
    "director": "",
    "fecha": "2026-09-23"
   }
- }
+ },
+ "_fuentes": [
+  {
+   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
+   "capturado": "2026-09-23",
+   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
+   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
+  },
+  {
+   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
+   "capturado": "2026-09-23",
+   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
+   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
+  },
+  {
+   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
+   "capturado": "2026-09-23",
+   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
+   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
+  }
+ ]
 }
