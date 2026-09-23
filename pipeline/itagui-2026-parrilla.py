@@ -177,10 +177,21 @@ def bloques(cajas):
     """
     horas, mudas = horas_de(cajas)
     cont = sorted([c for c in cajas if c['x'] >= COL_HORA], key=lambda c: c['y'])
+    # UNA SECCIÓN ABRE TARJETA, y manda sobre el punto medio. El punto medio
+    # solo funciona si las tarjetas son parecidas; ARENAS ocupa seis líneas, así
+    # que SU hora queda muy abajo y el medio entre ella y la anterior cae por
+    # DEBAJO de su propio rótulo de sección: la sección se iba con la tarjeta de
+    # arriba y ARENAS se publicaba sin ella. El medio queda de respaldo para las
+    # tarjetas que no traen sección (el torneo, la visita guiada, el evento de
+    # cortos: el festival no se la pone).
+    secs = [c['y'] for c in cont if RE_SECCION.match(c['t'].strip())]
     out = []
     for i, (y, h) in enumerate(horas):
-        ini = (horas[i - 1][0] + y) / 2 if i else 0.0
-        fin = (y + horas[i + 1][0]) / 2 if i + 1 < len(horas) else 1.0
+        def corte(a, b):
+            entre = [s for s in secs if a < s < b]
+            return entre[-1] if entre else (a + b) / 2
+        ini = corte(horas[i - 1][0], y) if i else 0.0
+        fin = corte(y, horas[i + 1][0]) if i + 1 < len(horas) else 1.0
         out.append({'hora': h, 'y': y,
                     'lineas': [c for c in cont if ini <= c['y'] < fin]})
     return horas, cont, out, mudas
@@ -229,6 +240,17 @@ def sedes_de(cont, horas):
 ROTULOS = ('evento', 'conversatorio')
 
 
+# EL OCR SE COME LA Ñ Y LA Ü, y una sección mal escrita parte el festival en
+# dos. Verificado A OJO contra las láminas, que es la fuente: la 10 imprime
+# «FESTICINE, FESTINIÑOS» y la cabecera de todas dice «CIUDAD DE ITAGÜÍ».
+# Es corrección de LECTURA, no renombre: la palabra sigue siendo la del festival.
+SECCION_CORRIGE = {
+    'FESTICINE, FESTININOS': 'FESTICINE, FESTINIÑOS',
+    'INAUGURACIÓN DEL 9° FESTIVAL INTERNACIONAL DE CINE CIUDAD DE ITAGUÍ':
+        'INAUGURACIÓN DEL 9° FESTIVAL INTERNACIONAL DE CINE CIUDAD DE ITAGÜÍ',
+}
+
+
 def ficha(lineas):
     """Sección, título y campos de una tarjeta, leídos POR ESTADOS.
 
@@ -253,7 +275,7 @@ def ficha(lineas):
             # MIRADAS: MUESTRA INTERNACIONAL».
             if titulo or 'seccion' in d:
                 break
-            d['seccion'] = t
+            d['seccion'] = SECCION_CORRIGE.get(t, t)
             continue
         m = RE_CAMPO.match(t)
         etq = m.group(1).strip().lower() if m else None

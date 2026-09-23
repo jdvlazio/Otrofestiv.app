@@ -687,6 +687,16 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     // cuatro sesiones y el debate «Todos los planos del mundo» una. Mismo ámbar
     // de la franja académica; sin entrada aquí su card mostraba EVENTO genérico.
     'foro':         {accent:'#F59E0B', headerLabel:'FORO'},
+    // «conversatorio», «torneo», «visita guiada» y «evento» llegaron con Itagüí
+    // 9: son las palabras que su lámina imprime. Sin entrada acá sus cards
+    // decían el genérico EVENTO, que es justo lo que [event-kind-conocido]
+    // existe para impedir. Conversatorio va con el ámbar de la franja
+    // académica; el torneo y la visita guiada NO son academia, son actividades
+    // de la ciudad, así que comparten el tono de «convite».
+    'conversatorio':{accent:'#F59E0B', headerLabel:'CONVERSATORIO'},
+    'torneo':       {accent:'#22C55E', headerLabel:'TORNEO'},
+    'visita guiada':{accent:'#22C55E', headerLabel:'VISITA GUIADA'},
+    'evento':       {accent:'#22C55E', headerLabel:'EVENTO'},
     'debate':       {accent:'#F59E0B', headerLabel:'DEBATE'},
     // «diálogo» llegó con QAFF Bogotá: sus «Diálogos Improbables» son once mesas
     // con moderador y panelistas —la mitad del programa de las universidades—.
@@ -721,6 +731,10 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'clausura':     {accent:'#BA7517', headerLabel:'CLAUSURA'},
   };
   const _kindMapEN={
+    'conversatorio':{accent:'#F59E0B', headerLabel:'TALK'},
+    'torneo':       {accent:'#22C55E', headerLabel:'TOURNAMENT'},
+    'visita guiada':{accent:'#22C55E', headerLabel:'GUIDED TOUR'},
+    'evento':       {accent:'#22C55E', headerLabel:'EVENT'},
     'ponencia':     {accent:'#F59E0B', headerLabel:'TALK'},
     'charla':       {accent:'#F59E0B', headerLabel:'TALK'},
     'taller':       {accent:'#F59E0B', headerLabel:'WORKSHOP'},

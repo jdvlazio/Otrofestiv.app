@@ -1,0 +1,57 @@
+{
+ "Auditorio Diego Echavarría Misas": {
+  "n": 1,
+  "_prec": "maps",
+  "lat": 6.1722992,
+  "lng": -75.6109414,
+  "_nota": "Maps por la dirección impresa «Carrera 51 #48-71»: la resuelve exacta. OJO: por NOMBRE, Nominatim devuelve una I.E. homónima en la carrera 48 — no es esta"
+ },
+ "Auditorio Juan Carlos Escobar": {
+  "n": 3,
+  "_prec": "maps",
+  "lat": 6.1733762,
+  "lng": -75.608795,
+  "_nota": "Maps por la dirección impresa «Carrera 51 #51-55»: la resuelve exacta (el CAMI)"
+ },
+ "Cineprox Mayorca": {
+  "n": 1,
+  "_prec": "maps",
+  "lat": 6.1605495,
+  "lng": -75.6041269,
+  "_nota": "«CineProx Sabaneta» en Maps. Lo descarté primero por creerlo otro municipio y me corrigió Juan: el Centro Comercial Mayorca queda en Sabaneta, sobre la frontera con Itagüí. El cine es ese; el centro comercial cae a 200 m (6.1618172, -75.6055153)."
+ },
+ "I.E. Luis Carlos Galán": {
+  "n": 1,
+  "_prec": "maps",
+  "lat": 6.1739842,
+  "lng": -75.6288117,
+  "_nota": "Maps por la dirección impresa «Calle 39 #64-41»: resuelve el 64-65, la misma cuadra"
+ },
+ "Royal Films Plaza Arrayanes": {
+  "n": 7,
+  "_prec": "maps",
+  "lat": 6.16722,
+  "lng": -75.61923,
+  "_nota": "el centro comercial, «Plaza Arrayanes Itagui» en Nominatim; la dirección impresa cae a 25 m"
+ },
+ "Teatro Caribe": {
+  "n": 17,
+  "_prec": "maps",
+  "lat": 6.1728223,
+  "lng": -75.6074503,
+  "_match": "Centro Cultural Caribe, 52-77, Carrera 50, Itagüí, Valle de Aburrá, Antioquia, RAP del Agu",
+  "_nota": "Nominatim por la dirección impresa «Carrera 50 52-77»: devuelve «Teatro Caribe» y «Centro Cultural Caribe» en el mismo punto"
+ },
+ "Teatro del Norte": {
+  "n": 7,
+  "_prec": "maps",
+  "lat": 6.1854609,
+  "lng": -75.5987763,
+  "_nota": "Maps por la dirección impresa «Carrera 52D con Calle 73A»: el cruce en el barrio Santa María. Corrobora: «Auditorio Cultural del Norte» cae a 25 m"
+ },
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-09-23"
+ },
+ "_como": "Las siete ubicadas el 23 sep 2026 por la DIRECCIÓN que el festival imprime en cada lámina, no por el nombre: por nombre, Maps devolvió el Pequeño Teatro de Medellín para «Teatro del Norte» y CineProx Sabaneta para «Cineprox Mayorca». Cada punto se verificó contra la dirección impresa antes de aceptarlo."
+}

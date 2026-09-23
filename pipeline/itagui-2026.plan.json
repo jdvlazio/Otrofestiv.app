@@ -1,0 +1,134 @@
+{
+ "_nota": "9° Festival Internacional de Cine Ciudad de Itagüí — 23 a 27 SEP 2026. La programación SOLO existe como imágenes (el carrusel de 15 láminas de @institutoitagui) y como PDF oficial en institutoitagui.gov.co, que sirvió de cuarta lectura: los 37 títulos aparecen en él.",
+ "radar": 946,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py itagui-2026",
+   "que": "el issue de radar #946 como fuente versionada, y cruza sus salas contra las nuestras"
+  },
+  {
+   "cmd": "python3 pipeline/itagui-2026-parrilla.py --contra fuentes/itagui-2026-ojos-funciones.json",
+   "que": "las 15 láminas leídas con cajas → parrilla, y CRUZADA contra la lectura a ojo función por función y campo por campo. El paso falla si discrepan: es la regla de Juan tras Jardín, que el parser no se cree hasta comparar cada imagen con lo que sacó"
+  },
+  {
+   "cmd": "python3 pipeline/itagui-2026-crudo.py",
+   "que": "parrilla → formato intermedio: tabla de sedes explícita, el Q&A de las 18 funciones con «Conversatorio al final de la película», las actividades con la palabra del festival y el acceso DECLARADO como desconocido con su prueba"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py itagui-2026 --posters",
+   "que": "TMDB verificado (director + año o duración) + afiches a assets/itagui-2026/. Lo que no verifica NO entra"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py itagui-2026 --aplicar",
+   "que": "los afiches al lienzo 780×1170 exacto (docs/POSTERS.md §3)"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py itagui-2026 --centro 6.1719,-75.6117 --ciudad \"Itagüí, Antioquia\"",
+   "que": "las 7 sedes, todas con dirección impresa en la lámina"
+  },
+  {
+   "cmd": "python3 pipeline/itagui-2026-verificar.py",
+   "que": "prueba sobre el crudo armado: día, hora y sede en todas; las 7 sedes dentro de la tabla; y los 37 títulos cruzados contra el PDF oficial del festival, que es la fuente independiente de las láminas"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py itagui-2026",
+   "que": "crudo + plan → staging/itagui-2026-build.json"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/itagui-2026-crudo.json",
+  "enriquecido": "festivals/staging/itagui-2026-enriquecido.json",
+  "geo": "festivals/staging/itagui-2026-venues-geo.json",
+  "_por_que_sedes": "Las siete con su dirección impresa en la lámina. El CAMI se publica por su AUDITORIO —«Auditorio Juan Carlos Escobar»— y no por el edificio: el edificio es dónde queda, el auditorio es a dónde entra la gente.",
+  "sedes": {
+   "Teatro Caribe": [
+    "Teatro Caribe - Itagüí",
+    ""
+   ],
+   "Teatro del Norte": [
+    "Teatro del Norte - Itagüí",
+    ""
+   ],
+   "Royal Films Plaza Arrayanes": [
+    "Royal Films Plaza Arrayanes - Itagüí",
+    ""
+   ],
+   "Auditorio Juan Carlos Escobar": [
+    "Auditorio Juan Carlos Escobar - Itagüí",
+    ""
+   ],
+   "Auditorio Diego Echavarría Misas": [
+    "Auditorio Diego Echavarría Misas - Itagüí",
+    ""
+   ],
+   "I.E. Luis Carlos Galán": [
+    "I.E. Luis Carlos Galán - Itagüí",
+    ""
+   ],
+   "Cineprox Mayorca": [
+    "Cineprox Mayorca - Itagüí",
+    ""
+   ]
+  },
+  "_por_que_secciones": "Las TRES que el festival rotula sobre sus funciones, verbatim. Nuestra capa es el emoji, el inglés y el arquetipo. Los otros dos rótulos que la lámina pinta en ese sitio —«CONVERSATORIO:» y la línea de INAUGURACIÓN— NO son secciones: rotulan una actividad concreta, y meterlos acá inventaría dos secciones que el festival no tiene.",
+  "secciones": {
+   "OTRAS MIRADAS: MUESTRA INTERNACIONAL": {
+    "emoji": "🌍",
+    "en": "Other Gazes: International Showcase",
+    "archetype": "Muestra / País"
+   },
+   "COLOMBIA: CINE BIEN HECHO. CINE NO VISTO": {
+    "emoji": "🇨🇴",
+    "en": "Colombia: Well-Made Cinema, Unseen Cinema",
+    "archetype": "Muestra / País"
+   },
+   "FESTICINE, FESTINIÑOS": {
+    "emoji": "🧒",
+    "en": "Festicine, Festiniños",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Actividades": {
+    "emoji": "🎪",
+    "en": "Activities",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "name": "Festicine Itagüí",
+  "displayName": "Festicine Itagüí",
+  "fullName": "9° Festival Internacional de Cine Ciudad de Itagüí",
+  "shortName": "ITAGÜÍ",
+  "tagline": "Colombia: cine bien hecho, cine no visto",
+  "city": "Itagüí",
+  "country": "CO",
+  "dates": "23–27 SEP",
+  "dates_en": "SEP 23–27",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "itagui2026_",
+  "festivalStartStr": "2026-09-23T00:00:00",
+  "festivalEndStr": "2026-09-27T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "ticketing_model": "mixed",
+  "mes_es": "septiembre",
+  "dias_vacios": [],
+  "_por_que_direcciones": "Las siete, impresas en la lámina de su día. Nominatim no conoce «Auditorio Juan Carlos Escobar» ni «Cineprox Mayorca», pero sí la carrera y el número: sin esto las siete sedes caían a mano.",
+  "direcciones": {
+   "Teatro Caribe": "Carrera 50 # 52-77, barrio Centro",
+   "Teatro del Norte": "Carrera 52d con calle 73a, barrio Santa María",
+   "Royal Films Plaza Arrayanes": "Carrera 59a # 36-90, barrio La Independencia",
+   "Auditorio Juan Carlos Escobar": "Carrera 51 # 51-55",
+   "Auditorio Diego Echavarría Misas": "Carrera 51 # 48-71, barrio Centro",
+   "I.E. Luis Carlos Galán": "Calle 39 # 64-41",
+   "Cineprox Mayorca": "Carrera 48 # 50 sur-128"
+  },
+  "_por_que_actividades": "LA ÚNICA PALABRA NUESTRA DE TODO EL MONTAJE, y va declarada. Cuatro actividades no llevan sección impresa —el torneo de Magic, la visita guiada al museo, la sección de cortometrajes y el conversatorio de clausura—, y el ensamblador exige sección en todas. El festival no les puso una, así que «Actividades» la ponemos nosotros: es un cajón honesto, no un renombre de algo que el festival ya había nombrado. Pendiente de aprobación de Juan.",
+  "seccion_por_titulo": {
+   "Torneo del juego": "Actividades",
+   "Visita guiada": "Actividades",
+   "Sección de cortometrajes": "Actividades",
+   "Fausto, una vida": "Actividades",
+   "La literatura en el cine": "Actividades",
+   "Concierto de inauguración": "Actividades"
+  }
+ }
+}

@@ -987,6 +987,29 @@ export const FESTIVAL_CONFIG={
     ticketing_model:'mixed', // toda la programación es gratuita (lámina 1 del carrusel); sin ticket_url no se pinta nada
     films:null,posters:null,lbSlugs:{}
   },
+  'itagui2026': {
+    name:'Festicine Itagüí',displayName:'Festicine Itagüí',
+    fullName:'9° Festival Internacional de Cine Ciudad de Itagüí',shortName:'ITAGÜÍ',
+    city:'Itagüí',country:'CO',
+    dates:'23–27 SEP',dates_en:'SEP 23–27',year:2026,timezoneOffset:'-05:00',
+    // EL ARTE DEL PROPIO FESTIVAL, sacado a resolución de impresión del PDF de
+    // programación que publica institutoitagui.gov.co (la ilustración de la
+    // cabecera: la mujer con el hibisco, el barranquero, la iglesia y el rollo).
+    // No hay afiche vertical publicado. Estirado a 2:3 por compose-keyart.py:
+    // el ancho se comprime 12,5%, dentro de lo que la regla da por imperceptible.
+    keyArt:'/assets/keyart/itagui2026-v2.jpg',
+    // El lema de la edición, que el festival pone bajo su nombre y en su bio.
+    tagline:'Colombia: cine bien hecho, cine no visto',
+    storageKey:'itagui2026_',festivalStartStr:'2026-09-23T00:00:00',festivalEndStr:'2026-09-27T23:59:00',
+    festivalDates:{'2026-09-23':'2026-09-23','2026-09-24':'2026-09-24','2026-09-25':'2026-09-25','2026-09-26':'2026-09-26','2026-09-27':'2026-09-27'},
+    days:[{k:'2026-09-23',d:23,lbl:'MIÉ'},{k:'2026-09-24',d:24,lbl:'JUE'},{k:'2026-09-25',d:25,lbl:'VIE'},{k:'2026-09-26',d:26,lbl:'SÁB'},{k:'2026-09-27',d:27,lbl:'DOM'}],
+    dayKeys:['2026-09-23','2026-09-24','2026-09-25','2026-09-26','2026-09-27'],
+    dayShort:{'2026-09-23':'MIÉ 23','2026-09-24':'JUE 24','2026-09-25':'VIE 25','2026-09-26':'SÁB 26','2026-09-27':'DOM 27'},
+    dayShort_en:{'2026-09-23':'WED 23','2026-09-24':'THU 24','2026-09-25':'FRI 25','2026-09-26':'SAT 26','2026-09-27':'SUN 27'},
+    dayLong:{'2026-09-23':'Miércoles 23 de septiembre','2026-09-24':'Jueves 24 de septiembre','2026-09-25':'Viernes 25 de septiembre','2026-09-26':'Sábado 26 de septiembre','2026-09-27':'Domingo 27 de septiembre'},
+    prioLimit:3,ticketing_model:'mixed',
+    films:null,posters:null,lbSlugs:{}
+  },
   'narrarelfuturo2026': {
     name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
     city:'Bogotá',country:'CO',
@@ -1058,6 +1081,11 @@ export const SECTION_ARCHETYPES = {
   // ── Festival de Cine de Jardín 11 · Jardín, Antioquia ──────────────────
   '🎬 Muestra Central': 'Muestra / País',
   '🔮 CALEIDOSCOPIO': 'Competencia',
+  // ── 9° Festival Internacional de Cine Ciudad de Itagüí ─────────────────
+  '🌍 OTRAS MIRADAS: MUESTRA INTERNACIONAL': 'Muestra / País',
+  '🇨🇴 COLOMBIA: CINE BIEN HECHO. CINE NO VISTO': 'Muestra / País',
+  '🧒 FESTICINE, FESTINIÑOS': 'Perspectivas / Miradas',
+  '🎪 Actividades': 'Especiales / Eventos',
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
   '📺 Primetime': 'Especiales / Eventos',
   '🔎 Discovery': 'Perspectivas / Miradas',
