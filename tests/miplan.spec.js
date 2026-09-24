@@ -2908,10 +2908,10 @@ function toMinT(hhmm) { const [h, m] = hhmm.split(':').map(Number); return h * 6
 // no escribía nada y el aviso «Imagen guardada ✓» salía igual, porque era un
 // temporizador. Ahora en la app nativa se escribe el PNG con Filesystem y se abre
 // Share, como ya hacía el calendario; el aviso solo sale si el sistema devolvió.
-const _ANDROID = async (page, modo, accion = 'sharePlan') => page.evaluate(async ([modo, accion]) => {
+const _ANDROID = async (page, modo, accion = 'sharePlan', marcar = true) => page.evaluate(async ([modo, accion, marcar]) => {
   const f = FILMS.find(x => x.day === '2026-09-11' && !x.is_cortos);
   state.set('savedAgenda', { schedule: [{ ...f, _title: f.title }] }); saveSavedAgenda();
-  if (accion === 'shareDiary') { watched.add(f.title); saveWatched(); }
+  if (accion === 'shareDiary' && marcar) { watched.add(f.title); saveWatched(); }
   try { localStorage.setItem('otrofestiv_display_name', 'Juanda'); } catch (e) {}
   const tt = document.getElementById('prio-toast'); if (tt) { tt.style.opacity = '0'; tt.textContent = ''; }
   const calls = { write: [], share: [], anchor: 0 };
@@ -2932,7 +2932,7 @@ const _ANDROID = async (page, modo, accion = 'sharePlan') => page.evaluate(async
   } finally {
     HTMLAnchorElement.prototype.click = _click; delete window.Capacitor;
   }
-}, [modo, accion]);
+}, [modo, accion, marcar]);
 
 test('T193 — Android: la imagen del plan sale por Filesystem + Share del sistema, no por un <a download> muerto', async ({ page }) => {
   await enterFestival(page, 'tiff2026', '2026-09-11T10:00:00-04:00');
@@ -2966,4 +2966,31 @@ test('T193c — Android: el DIARIO compartible va por el mismo camino (la revisi
   expect(r.write[0].path, 'con nombre de diario').toMatch(/^otrofestiv-diario-.*\.png$/);
   expect(r.share.length, 'y se abre el menú del sistema').toBe(1);
   expect(r.anchor, 'sin <a download>').toBe(0);
+});
+
+// ── T194 — Compartir el Diario cuenta lo mismo que el Diario ──────────────────
+// Reportado por Juan (iPhone, TIFF, 24 sep 2026): el Diario mostraba 25 obras y
+// «Compartir» decía «Nada visto todavía». El muro cuenta lo visto con
+// effectiveWatched (incluye las funciones del Plan que ya terminaron); el botón
+// usaba `watched` a secas (solo lo marcado a mano). Reproducido en Android.
+test('T194 — Compartir el Diario con obras vistas por haber pasado (sin marcar a mano) genera la imagen', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-12T10:00:00-04:00');   // la del 11 ya terminó
+  const r = await _ANDROID(page, 'ok', 'shareDiary', false);
+  expect(r.toast, 'no dice «Nada visto»').not.toMatch(/Nada visto|Nothing watched/i);
+  expect(r.write.length, 'se genera el PNG del diario').toBe(1);
+  expect(r.share.length, 'y se abre el menú del sistema').toBe(1);
+});
+
+// ── T195 — Android: cancelar «Exportar» al calendario no dice «Calendario listo» ──
+// Medido en el emulador (24 sep 2026): el catch avisaba y ADEMÁS seguía hasta
+// «Calendario listo». Cerrar el menú no es error ni éxito: no se dice nada.
+test('T195 — Android: cerrar el menú del calendario no festeja; que falle tampoco', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-11T10:00:00-04:00');
+  const c = await _ANDROID(page, 'cancel', 'exportICS');
+  expect(c.share.length, 'se abrió el menú del sistema').toBe(1);
+  expect(c.toast, 'cerrar el menú: sin aviso').toBe('');
+  const f = await _ANDROID(page, 'fail', 'exportICS');
+  expect(f.toast, 'si falla, nunca «Calendario listo»').not.toMatch(/listo|ready/i);
+  const o = await _ANDROID(page, 'ok', 'exportICS');
+  expect(o.toast, 'si el sistema devolvió, sí').toMatch(/listo|ready/i);
 });
