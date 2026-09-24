@@ -7,6 +7,7 @@ import { parseProgramTitle, _sectionColor } from '../view/components.js';
 import { showToast, showActionModal } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
 import { t } from '../i18n/i18n.js';
+import { effectiveWatched } from '../domain/film.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→auth (sharePlan pide nombre)
@@ -34,8 +35,13 @@ export async function shareDiary(){
       f.film_list.forEach(it=>_push(day,it.title,getCortoItemPoster(it),f.section));
     } else _push(day,title,getFilmPoster(f),f.section);
   };
-  sched.forEach(sc=>{ if(watched.has(sc._title)&&!_seen.has(sc._title)){ _seen.add(sc._title); _add(sc.day,sc._title); } });
-  [...watched].forEach(tt=>{ if(!_seen.has(tt)&&FILMS.some(f=>f.title===tt)){ _seen.add(tt); _add(null,tt); } });
+  // MISMO dueño que el muro del Diario (effectiveWatched): lo visto incluye las
+  // funciones del Plan que ya terminaron, no solo lo marcado a mano. Con `watched`
+  // a secas el Diario mostraba 25 obras y compartirlo decía «Nada visto» (Juan,
+  // iPhone, TIFF, 24 sep 2026; reproducido en Android).
+  const _vistas=effectiveWatched();
+  sched.forEach(sc=>{ if(_vistas.has(sc._title)&&!_seen.has(sc._title)){ _seen.add(sc._title); _add(sc.day,sc._title); } });
+  [..._vistas].forEach(tt=>{ if(!_seen.has(tt)&&FILMS.some(f=>f.title===tt)){ _seen.add(tt); _add(null,tt); } });
   if(!rows.length){ showToast(t('diary_vacio'),'warn'); return; }
   // Orden del muro: de la MEJOR calificada a la peor (decisión de Juan). El grid es
   // plano (no agrupa por días), así que la jerarquía la manda la nota. Array.sort es
@@ -611,8 +617,12 @@ export async function exportICS(modo){
       });
       _anotar();
     }catch(e){
+      // Cerrar el menú no es error y no se festeja: antes caía acá y ADEMÁS
+      // seguía hasta «Calendario listo» (medido en Android, 24 sep 2026).
+      if(/^share cancel/i.test(String(e?.message||''))) return;
       console.error('ICS share error:',e);
       showToast(t('toast_cal_err'),'warn');
+      return;
     }
   } else {
     const blob=new Blob([icsText],{type:'text/calendar;charset=utf-8'});
