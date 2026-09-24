@@ -2994,3 +2994,30 @@ test('T195 — Android: cerrar el menú del calendario no festeja; que falle tam
   const o = await _ANDROID(page, 'ok', 'exportICS');
   expect(o.toast, 'si el sistema devolvió, sí').toMatch(/listo|ready/i);
 });
+
+// ── T196 — Diario: el ojo saca lo deducido por el Plan y la nota lo explica ────
+// Aprobado por Juan (24 sep 2026) tras «Nada visto» con 25 obras: la deducción
+// era invisible. Nota una vez por festival; el ojo baja la cuenta al momento.
+test('T196 — Diario: nota de lo deducido, ojo «no la vi» que baja la cuenta y retira la nota', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-12T10:00:00-04:00');
+  await page.evaluate(() => {
+    const fs = FILMS.filter(x => x.day === '2026-09-11' && !x.is_cortos).slice(0, 2);
+    state.set('savedAgenda', { schedule: fs.map(f => ({ ...f, _title: f.title })) }); saveSavedAgenda();
+    const b = document.createElement('button'); b.setAttribute('data-action', 'openDiary'); document.body.appendChild(b); b.click(); b.remove();
+  });
+  const nota = page.locator('#diary-body .dw-nota');
+  await expect(nota, 'hay obras contadas por el Plan: la nota lo dice').toBeVisible();
+  await expect(page.locator('#diary-count')).toHaveText('2');
+  const ojos = page.locator('#diary-body [data-action="diaryToggleVista"]');
+  await expect(ojos).toHaveCount(2);
+  const box = await ojos.first().boundingBox();
+  expect(box.width >= 44 && box.height >= 36, `el ojo se toca en ≥44×36 (mide ${box.width}×${box.height})`).toBe(true);
+  await page.waitForTimeout(700); await page.screenshot({ path: 'test-results/T196-antes.png' });
+  await ojos.first().click();
+  await expect(page.locator('#diary-count'), 'la cuenta baja al momento').toHaveText('1');
+  await expect(page.locator('#diary-body .dw-poster.dw-off'), 'la obra queda apagada, con el ojo tachado para devolverla').toHaveCount(1);
+  await expect(nota, 'corregir una retira la nota').toHaveCount(0);
+  await page.screenshot({ path: 'test-results/T196-despues.png' });
+  await page.locator('#diary-body .dw-poster.dw-off').locator('xpath=..').locator('[data-action="diaryToggleVista"]').click();
+  await expect(page.locator('#diary-count'), 'y el tachado la devuelve').toHaveText('2');
+});

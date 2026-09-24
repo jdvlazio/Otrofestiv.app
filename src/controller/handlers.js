@@ -23,7 +23,7 @@ import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableSc
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
-import { _removePlanItem, closePelSheet, openConflictSheet, openCortoSheet, openPelSheet, openPlanConfirm, openPostViewRating, openPrioLimit, openRatingSheet, repaintPelFoot, showActionToast } from './sheets-controller.js';
+import { _refreshDiaryIfOpen, _removePlanItem, closePelSheet, openConflictSheet, openCortoSheet, openPelSheet, openPlanConfirm, openPostViewRating, openPrioLimit, openRatingSheet, repaintPelFoot, showActionToast } from './sheets-controller.js';
 
 // ── module-local + const privado ─────────────────────────────────────────────
 let _ctaRemovedTimer=null;
@@ -1134,6 +1134,27 @@ export function _toggleCtxOlder() {
   const el = document.getElementById('ctx-older');
   if (!el) return;
   el.style.display = el.style.display === 'none' ? 'block' : 'none';
+}
+
+// El ojo del Diario (24 sep 2026): saca una obra de lo visto —o la devuelve— y
+// repinta el muro con su cuenta. Cualquier corrección retira la nota de «lo
+// contamos por tu Plan»: ya entendió de dónde salen.
+export function diaryToggleVista(title, e) {
+  title=normTitle(title);
+  // Devolver una negada es DESHACER, no «marcar como vista»: sin el modal de
+  // confirmación ni la hoja de calificar (el tachado del Diario no hacía nada
+  // visible: confirmaba detrás y el muro no se repintaba).
+  if(state.snapshot().notWatched.has(title)){
+    if(e) e.stopPropagation();
+    state.batchUpdate({ notWatched: state._delFromSet(state.snapshot().notWatched, title) });
+    saveNotWatched(); updateCardState(title);
+  } else toggleWatched(title, e);
+  storage.setDiarioNotaVista();
+  _refreshDiaryIfOpen();
+}
+export function diaryNotaCerrar() {
+  storage.setDiarioNotaVista();
+  _refreshDiaryIfOpen();
 }
 
 export function _toggleWatchedAndClose(title, e) {

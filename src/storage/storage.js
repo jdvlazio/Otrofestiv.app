@@ -70,6 +70,10 @@ export const storage = {
   getIcsEntregados() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'ics1'); const p=r?JSON.parse(r):[]; return Array.isArray(p)?p:[]; } catch(e) { return []; } },
   setIcsEntregados(a) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'ics1', JSON.stringify(a||[])); } catch(e) {} },
 
+  // Nota del Diario «Contamos lo que estaba en tu Plan» — se ve una vez por festival.
+  getDiarioNotaVista() { try { return localStorage.getItem(FESTIVAL_STORAGE_KEY+'dnota')==='1'; } catch(e) { return false; } },
+  setDiarioNotaVista() { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'dnota','1'); } catch(e) {} },
+
   getLastRemovedSlots() { try { const r=localStorage.getItem(FESTIVAL_STORAGE_KEY+'lastslot'); if(!r) return []; const p=JSON.parse(r); return Array.isArray(p)?p:(p?[p]:[]); } catch(e) { return []; } },
   setLastRemovedSlots(a) { try { localStorage.setItem(FESTIVAL_STORAGE_KEY+'lastslot', JSON.stringify(a)); } catch(e) {} },
 
