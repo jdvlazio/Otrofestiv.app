@@ -84,6 +84,21 @@
    "_busqueda": "Lecciones de primavera"
   },
   {
+   "titulo": "Somnolítico",
+   "tmdb_id": 1590709,
+   "titulo_original": "Somnolithic",
+   "poster_path": "/24MJ3IfL9LrKmAG11sCM8GfonrQ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "title_en": "Somnolytic",
+   "lbSlug": "somnolytic",
+   "_verificado": "declarada a mano: En TMDB figura como «Somnolytic» (original «Somnolithic»), por eso la búsqueda por título en español no la encuentra. Coinciden dirección (Abril Velasquez), año (2025) y duración (11 min) con el programa de Jardín. La halló la sonda de filmografía de pipeline/altas-tmdb.py (24 sep 2026)."
+  },
+  {
    "titulo": "Una vez en un cuerpo",
    "tmdb_id": 1522316,
    "titulo_original": "Una vez en un cuerpo",
@@ -253,6 +268,20 @@
    "lbSlug": "romero",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Romero"
+  },
+  {
+   "titulo": "Cuando las montañas tiemblan",
+   "tmdb_id": 259882,
+   "titulo_original": "When the Mountains Tremble",
+   "poster_path": "/1VqX91OVq8ObPQsMIe3CAixFJgz.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A documentary on the war between the Guatemalan military and the Mayan population, with first hand accounts by Nobel Peace Prize winner Rigoberta Menchú.",
+   "genero": "Documental",
+   "anio_tmdb": 1983,
+   "duracion_tmdb": 83,
+   "pais_tmdb": "Guatemala, United States of America",
+   "lbSlug": "when-the-mountains-tremble",
+   "_verificado": "declarada a mano: En TMDB figura con su título original en inglés, «When the Mountains Tremble». Coinciden dirección (Pamela Yates y Newton Thomas Sigel), año (1983) y duración (83 min) con el programa de Jardín. La halló la sonda de filmografía de pipeline/altas-tmdb.py (24 sep 2026)."
   },
   {
    "titulo": "Midnight Oil: The Hardest Line",
@@ -469,6 +498,20 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Lecciones de primavera"
   },
+  "Somnolítico": {
+   "tmdb_id": 1590709,
+   "titulo_original": "Somnolithic",
+   "poster_path": "/24MJ3IfL9LrKmAG11sCM8GfonrQ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "title_en": "Somnolytic",
+   "lbSlug": "somnolytic",
+   "_verificado": "declarada a mano: En TMDB figura como «Somnolytic» (original «Somnolithic»), por eso la búsqueda por título en español no la encuentra. Coinciden dirección (Abril Velasquez), año (2025) y duración (11 min) con el programa de Jardín. La halló la sonda de filmografía de pipeline/altas-tmdb.py (24 sep 2026)."
+  },
   "Una vez en un cuerpo": {
    "tmdb_id": 1522316,
    "titulo_original": "Una vez en un cuerpo",
@@ -629,6 +672,19 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Romero"
   },
+  "Cuando las montañas tiemblan": {
+   "tmdb_id": 259882,
+   "titulo_original": "When the Mountains Tremble",
+   "poster_path": "/1VqX91OVq8ObPQsMIe3CAixFJgz.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A documentary on the war between the Guatemalan military and the Mayan population, with first hand accounts by Nobel Peace Prize winner Rigoberta Menchú.",
+   "genero": "Documental",
+   "anio_tmdb": 1983,
+   "duracion_tmdb": 83,
+   "pais_tmdb": "Guatemala, United States of America",
+   "lbSlug": "when-the-mountains-tremble",
+   "_verificado": "declarada a mano: En TMDB figura con su título original en inglés, «When the Mountains Tremble». Coinciden dirección (Pamela Yates y Newton Thomas Sigel), año (1983) y duración (83 min) con el programa de Jardín. La halló la sonda de filmografía de pipeline/altas-tmdb.py (24 sep 2026)."
+  },
   "Midnight Oil: The Hardest Line": {
    "tmdb_id": 1279121,
    "titulo_original": "Midnight Oil: The Hardest Line",
@@ -763,7 +819,6 @@
  },
  "sin_ficha": [
   "Criatura",
-  "Cuando las montañas tiemblan",
   "De: Saúl",
   "Deus ex necro machina",
   "Elementales",
@@ -771,7 +826,6 @@
   "Jiru iuiai \"Algo malo\"",
   "Primer amor",
   "Relatos del camino",
-  "Somnolítico",
   "Ubuntu: La métrica de los afectos",
   "Volver"
  ]
