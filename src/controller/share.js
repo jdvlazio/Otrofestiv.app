@@ -43,6 +43,7 @@ export async function shareDiary(){
   sched.forEach(sc=>{ if(_vistas.has(sc._title)&&!_seen.has(sc._title)){ _seen.add(sc._title); _add(sc.day,sc._title); } });
   [..._vistas].forEach(tt=>{ if(!_seen.has(tt)&&FILMS.some(f=>f.title===tt)){ _seen.add(tt); _add(null,tt); } });
   if(!rows.length){ showToast(t('diary_vacio'),'warn'); return; }
+  storage.setDiarioNotaVista();   // compartir = ya aceptó la lista; la nota se retira
   // Orden del muro: de la MEJOR calificada a la peor (decisión de Juan). El grid es
   // plano (no agrupa por días), así que la jerarquía la manda la nota. Array.sort es
   // estable → los empates conservan el orden de recolección (cronológico); las obras

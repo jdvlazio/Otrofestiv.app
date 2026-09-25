@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609250847">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609250847">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609250947">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609250947">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1947,8 +1947,13 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
    de dibujo — el «punto negro» que vio Juan el 18 ago). */
 /* Fila de control: fuera del afiche, centrada. Reserva su alto siempre para
    que los pósters de una misma fila conserven su línea base. */
-.dw-row{display:flex;align-items:center;justify-content:center;min-height:16px;margin-top:var(--sp-1)}
-.dw-ctrl{display:flex;align-items:center;justify-content:center;background:none;border:none;padding:2px;cursor:pointer;line-height:0;color:var(--white-30,rgba(240,237,232,.32))}
+.dw-row{display:flex;align-items:center;justify-content:center;min-height:36px}
+.dw-ctrl{display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;min-width:44px;min-height:36px;cursor:pointer;line-height:0;color:var(--white-30,rgba(240,237,232,.32))}
+/* Nota «lo contamos por tu Plan» (24 sep 2026): misma superficie que las bandas. */
+.dw-nota{display:flex;gap:var(--sp-2);align-items:flex-start;background:var(--surf-2);border:1px solid var(--card-b);border-radius:var(--r-md);padding:var(--sp-2) var(--sp-3);margin-bottom:var(--sp-3)}
+.dw-nota-1{font-size:var(--t-sm);font-weight:700;color:var(--white)}
+.dw-nota-2{font-size:var(--t-xs);color:var(--gray);margin-top:var(--sp-1)}
+.dw-nota-x{margin-left:auto;background:none;border:none;padding:0;min-width:32px;min-height:32px;display:flex;align-items:center;justify-content:center;color:var(--gray);cursor:pointer}
 .dw-ctrl svg{width:14px;height:14px}
 .dw-ctrl-star svg{width:12px;height:12px;fill:currentColor;stroke:none}
 .dw-stars{display:flex;gap:2px;min-height:10px}
@@ -3707,7 +3712,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609250847";
+    s.src="/src/main.js?v=202609250947";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

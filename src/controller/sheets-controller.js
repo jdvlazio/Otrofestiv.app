@@ -588,6 +588,13 @@ export function openDiary(){
   if(fullEl) fullEl.textContent=festivalTagline(cfg, _lang)||'';
   const datesEl=document.getElementById('diary-dates');
   if(datesEl) datesEl.textContent=[(_lang==='en'&&cfg.dates_en)?cfg.dates_en:cfg.dates,cfg.year].filter(Boolean).join(' ');
+  _diaryCount(body);
+  _pushSheetState();
+  document.getElementById('diary-overlay')?.classList.add('open');
+  document.getElementById('diary-sheet')?.classList.add('open');
+}
+
+function _diaryCount(body){
   const countEl=document.getElementById('diary-count');
   if(countEl){
     // La cuenta viaja como count-badge (canon: nunca en palabras) — misma
@@ -598,9 +605,6 @@ export function openDiary(){
     countEl.textContent=n?String(n):'';
     countEl.style.display=n?'':'none';
   }
-  _pushSheetState();
-  document.getElementById('diary-overlay')?.classList.add('open');
-  document.getElementById('diary-sheet')?.classList.add('open');
 }
 
 export function closeDiary(){
@@ -610,11 +614,12 @@ export function closeDiary(){
 
 // Si el Diario está abierto detrás (calificaste desde una card), repintarlo para que
 // las estrellas nuevas aparezcan al volver — el sheet no participa del pipeline.
-function _refreshDiaryIfOpen(){
+export function _refreshDiaryIfOpen(){
   const sheet=document.getElementById('diary-sheet');
   if(!sheet||!sheet.classList.contains('open')) return;
   const body=document.getElementById('diary-body');
   if(body) body.innerHTML=renderDiaryHTML(state);
+  _diaryCount(body);   // «Lo que viste N» sigue al muro: sacar una obra baja la cuenta
 }
 
 export function _closeTopSheet(){

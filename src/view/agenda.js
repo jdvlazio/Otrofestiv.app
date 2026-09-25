@@ -21,6 +21,7 @@ import {
 // Consenso colaborativo de retraso (Fase B): renderAgenda (impura/exenta) lo lee
 // del controller y lo pasa como dato a las funciones puras del view.
 import { cloudScreeningKey } from '../domain/delays.js';
+import { storage } from '../storage/storage.js';
 // getConsensusMap lee el cache vivo de la suscripción Realtime (controller-owned):
 // es una lectura de estado derivado view→controller, no una llamada a orquestador.
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
@@ -1527,11 +1528,15 @@ function _dwCard(state,{title,poster,posterSVG,rating,off}){
   // el ojo tachado (devolverla a vista) y la no calificada, la estrella
   // opaca. Ambos son INVITACIONES (misma opacidad), no estados afirmados.
   // La fila reserva su alto siempre → los pósters de una fila no bailan.
+  // El ojo abierto (24 sep 2026, aprobado por Juan): «no la vi» a mano en cada
+  // obra — la deducción por el Plan era invisible y no tenía salida a la vista.
+  // Mismo ícono que el tachado que la devuelve: sacar y devolver, un solo gesto.
   const ctrl=off
-    ?`<button class="dw-ctrl" data-action="toggleWatched" data-title="${safe}" data-stop="1" aria-label="${t('aria_marcar_vista')}">${ICONS.eyeOff}</button>`
-    :rating
+    ?`<button class="dw-ctrl" data-action="diaryToggleVista" data-title="${safe}" data-stop="1" aria-label="${t('aria_marcar_vista')}">${ICONS.eyeOff}</button>`
+    :(rating
       ?`<div class="dw-stars">${[1,2,3,4,5].map(i=>`<span class="dw-star${i<=rating?' on':''}">${ICONS.starFill}</span>`).join('')}</div>`
-      :`<button class="dw-ctrl dw-ctrl-star" data-action="openRatingSheet" data-title="${safe}" data-stop="1" aria-label="${t('aria_calificar')}">${ICONS.starFill}</button>`;
+      :`<button class="dw-ctrl dw-ctrl-star" data-action="openRatingSheet" data-title="${safe}" data-stop="1" aria-label="${t('aria_calificar')}">${ICONS.starFill}</button>`)
+     +`<button class="dw-ctrl" data-action="diaryToggleVista" data-title="${safe}" data-stop="1" aria-label="${t('aria_no_la_vi')}">${ICONS.eye}</button>`;
   return`<div class="dw-card">
     <div class="dw-poster${off?' dw-off':''} js-open-pel" data-title="${safe}">
       ${posterSVG
@@ -1580,7 +1585,14 @@ function renderDiaryWall(state){
   });
   [...eff].filter(tt=>!_seen.has(tt)&&FILMS.some(f=>f.title===tt)).forEach(_push);
   if(!cards.length) return '';
-  return`<div class="dw-grid">${cards.map(c=>_dwCard(state,c)).join('')}</div>`;
+  // La nota sale solo si hay obras CONTADAS por el Plan (no marcadas a mano) y
+  // hasta que se cierre, se saque una o se comparta (storage, por festival).
+  const {watched}=state.snapshot();
+  const _deducidas=[...eff].some(tt=>!watched.has(tt));
+  const nota=_deducidas&&!storage.getDiarioNotaVista()
+    ?`<div class="dw-nota"><div><div class="dw-nota-1">${t('diary_nota_plan')}</div><div class="dw-nota-2">${t('diary_nota_ojo')}</div></div><button class="dw-nota-x" data-action="diaryNotaCerrar" aria-label="${t('misc_cerrar')}">${ICONS.x}</button></div>`
+    :'';
+  return`${nota}<div class="dw-grid">${cards.map(c=>_dwCard(state,c)).join('')}</div>`;
 }
 
 function renderDiarioSection(state){
