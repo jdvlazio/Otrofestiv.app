@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festicinejardin.com (la ficha de cada obra) + las láminas de Instagram de @festicinejardin (día, hora, sede y el estreno)",
-  "capturado": "2026-09-23",
+  "capturado": "2026-09-24",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 811,
@@ -220,7 +220,10 @@
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "la-creciente",
+   "tmdb_id": 1779631,
+   "synopsis_en": "In the heart of the Magdalena River region, a community confronts the encroaching waters and institutional neglect year after year. The documentary examines the relationship between territory, flooding, dignity, and community resistance."
   },
   {
    "title": "Alma provinciana",
@@ -421,7 +424,10 @@
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "when-the-mountains-tremble",
+   "tmdb_id": 259882,
+   "synopsis_en": "A documentary on the war between the Guatemalan military and the Mayan population, with first hand accounts by Nobel Peace Prize winner Rigoberta Menchú."
   },
   {
    "title": "Ágora: Por el derecho a defender",
@@ -486,7 +492,10 @@
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "la-creciente",
+   "tmdb_id": 1779631,
+   "synopsis_en": "In the heart of the Magdalena River region, a community confronts the encroaching waters and institutional neglect year after year. The documentary examines the relationship between territory, flooding, dignity, and community resistance."
   },
   {
    "title": "Romero",
@@ -1210,7 +1219,10 @@
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "la-creciente",
+   "tmdb_id": 1779631,
+   "synopsis_en": "In the heart of the Magdalena River region, a community confronts the encroaching waters and institutional neglect year after year. The documentary examines the relationship between territory, flooding, dignity, and community resistance."
   },
   {
    "title": "Volver",
@@ -1473,7 +1485,11 @@
      "posterSource": "editorial",
      "synopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, pasando de un lugar a otro sin encontrar una salida. Los caminos se ven invadidos por recorridos acelerados que van y vuelven como cascadas humanas. Los transeúntes, sin identidad, se mueven automáticamente, creando un laberinto en el que las rutas parecen no tener fin. Personas dormidas y agotadas parecen fusionarse con el entorno y, mientras el bus sigue su marcha, el ser finalmente logra descubrirse a si mismx.",
      "genre": "Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "lbSlug": "somnolytic",
+     "tmdb_id": 1590709,
+     "synopsis_en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
+     "title_en": "Somnolytic"
     },
     {
      "title": "Primer amor",
@@ -1838,7 +1854,10 @@
     "url": "https://www.instagram.com/p/DdkY5ejlraV/",
     "date": "2026-09-21"
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "when-the-mountains-tremble",
+   "tmdb_id": 259882,
+   "synopsis_en": "A documentary on the war between the Guatemalan military and the Mayan population, with first hand accounts by Nobel Peace Prize winner Rigoberta Menchú."
   },
   {
    "title": "Presentación del libro: Días de noche. Crónicas de cine - Víctor Gaviria",
@@ -2027,7 +2046,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-23T17:57:40",
+  "fecha": "2026-09-24T23:04:57",
   "plan_sha": "07feb98440325160",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"
