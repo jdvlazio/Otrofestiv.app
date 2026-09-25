@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609250709">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609250709">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609250847">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609250847">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -2093,11 +2093,27 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 /* Banners contextuales */
 
 /* ── Retraso en función en curso ── */
-.delay-row{display:flex;align-items:center;gap:var(--sp-1);padding:var(--sp-2) var(--sp-3);border-top:1px solid var(--bdr)}
-.delay-lbl{font-size:var(--t-sm);color:var(--gray2);flex-shrink:0}
-.delay-btn{background:var(--surf-2);border:1px solid var(--bdr);color:var(--white);font-size:var(--t-sm);font-weight:var(--w-semi);font-family:var(--font);padding:4px 9px;border-radius:var(--r-pill);cursor:pointer;flex-shrink:0}
-.delay-btn:active{background:var(--amber-10);border-color:var(--amber-30)}
-.delay-clear{background:none;border:none;color:var(--gray);font-size:var(--t-sm);cursor:pointer;font-family:var(--font);padding:2px 4px;flex-shrink:0}
+/* Retraso v2 (25 sep 2026): barra en el tiempo + horas reales + control − / + */
+.ctx-live{padding:var(--sp-2) var(--sp-3) 0}
+.ctx-bar{display:flex;height:6px;border-radius:var(--r-pill);background:var(--white-10,rgba(240,237,232,.12));overflow:hidden}
+.ctx-bar .w{background:repeating-linear-gradient(135deg,rgba(245,158,11,.75) 0 5px,rgba(245,158,11,.3) 5px 10px)}
+.ctx-bar .p{background:var(--white)}
+.ctx-ticks{display:flex;justify-content:space-between;margin-top:var(--sp-1);font-size:var(--t-xs);color:var(--gray);font-variant-numeric:tabular-nums}
+.ctx-ticks s{color:var(--gray2)}.ctx-ticks b{color:var(--white);font-weight:var(--w-semi)}
+.delay-ask{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2) var(--sp-3);border-top:1px solid var(--bdr);margin-top:var(--sp-2)}
+.delay-ask-l{flex:1;font-size:var(--t-sm);font-weight:var(--w-bold,700);color:var(--white)}
+.delay-ask-l span{display:block;font-size:var(--t-xs);font-weight:var(--w-medium,500);color:var(--gray)}
+.delay-ask-l.on{color:var(--amber)}
+.delay-step{display:flex;align-items:center;background:var(--surf-2);border-radius:var(--r-pill);flex-shrink:0}
+.delay-step.on{background:var(--amber-10,rgba(245,158,11,.14))}
+.delay-step button{width:40px;height:40px;background:none;border:none;color:var(--white);font-family:var(--font);font-size:var(--t-lg);font-weight:var(--w-bold,700);cursor:pointer}
+.delay-step button:disabled{color:var(--gray2);cursor:default}
+.delay-step em{font-style:normal;font-weight:var(--w-bold,700);font-size:var(--t-sm);min-width:52px;text-align:center;font-variant-numeric:tabular-nums}
+.delay-step.on em{color:var(--amber)}
+.mplan-wk-late{display:inline-block;margin-top:2px;font-size:var(--t-xs);font-weight:var(--w-bold,700);color:#000;background:var(--amber);border-radius:var(--r-pill);padding:0 var(--sp-1)}
+.mplan-wk-ghost{position:absolute;left:4px;right:4px;border:1px dashed var(--white-20,rgba(240,237,232,.22));border-radius:var(--r-sm);pointer-events:none}
+.mp-late-orig{font-size:var(--t-xs);color:var(--gray2);font-weight:var(--w-semi);margin-right:var(--sp-1)}
+.mp-late{color:var(--amber);font-weight:var(--w-semi)}
 .delay-warn{background:var(--red-08);border-top:1px solid var(--red-12);padding:var(--sp-2) var(--sp-3);font-size:var(--t-sm);color:var(--red);line-height:1.45;display:flex;gap:var(--sp-1);align-items:flex-start}
 .delay-warn-ico{flex-shrink:0;margin-top:1px}
 .delay-warn.warn-amber{color:var(--amber);background:var(--amber-06);border-color:var(--amber-20)}
@@ -3691,7 +3707,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609250709";
+    s.src="/src/main.js?v=202609250847";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
