@@ -426,6 +426,10 @@ export function sealSharedSlots(films){
 // _delayKey — clave del retraso reportado de una función (título|día|hora).
 // Vivía en la vista (agenda.js); es identidad de dominio y la usa delayedEndMin.
 export function _delayKey(s){return(s._title||s.title||'')+'|'+(s.day||'')+'|'+(s.time||'');}
+// delayMinOf — minutos que el usuario marcó que la función EMPEZÓ tarde (retraso
+// v2, 25 sep 2026: el retraso CORRE la función, no la alarga). Dueño único: la
+// tarjeta en curso, el calendario y la fila leen de acá el inicio real.
+export function delayMinOf(s){return (typeof filmDelays!=='undefined'&&filmDelays&&filmDelays[_delayKey(s)])||0;}
 
 // delayedEndMin — el fin de una función CON su retraso reportado (PR 3, 31 jul).
 // El delay se sumaba a mano en 2 sitios de la vista — el residuo real que quedó

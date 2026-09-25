@@ -28,7 +28,9 @@ export function cloudReportDelay(screeningKey, delayMin){
   _sb.from('screening_reports').upsert(
     { festival_id: _activeFestId, screening_key: screeningKey, delay_min: delayMin },
     { onConflict: 'festival_id,screening_key,reporter_id' }
-  ).then(({ error }) => { if(error) console.warn('[delays-cloud] report:', error.message); });
+  ).then(({ error }) => { if(error) console.warn('[delays-cloud] report:', error.message);
+    // el reloj lee tu retraso de esta misma tabla: avisarle cuando ya quedó escrito
+    else window.__otfPushWatchPlan?.(_activeFestId); });
 }
 
 // Borra el reporte propio (clear / retraso vuelto a 0). La RLS (reporter_id =
@@ -38,7 +40,8 @@ export function cloudClearDelay(screeningKey){
   _sb.from('screening_reports').delete()
     .eq('festival_id', _activeFestId)
     .eq('screening_key', screeningKey)
-    .then(({ error }) => { if(error) console.warn('[delays-cloud] clear:', error.message); });
+    .then(({ error }) => { if(error) console.warn('[delays-cloud] clear:', error.message);
+      else window.__otfPushWatchPlan?.(_activeFestId); });
 }
 
 // ── Fase B — suscripción Realtime + caché + consenso ──────────────────────────

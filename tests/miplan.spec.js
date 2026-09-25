@@ -2870,10 +2870,10 @@ test('T191 — con un Plan de varios días, el retraso avisa sobre la siguiente 
     const tap = (a, d) => { const b = document.createElement('button'); b.setAttribute('data-action', a); Object.entries(d).forEach(([k, v]) => b.setAttribute('data-' + k, v)); document.body.appendChild(b); b.click(); b.remove(); };
     for (const k of [30, 30, 30]) { tap('setDelay', { title: 'Magazine', day: m.day, time: m.time, mins: k, venue: m.venue }); await w(400); }
     const aviso = (document.querySelector('.delay-warn')?.textContent || '').replace(/\s+/g, ' ').trim();
-    return { sabado: sab.time, enCurso: !!document.querySelector('.delay-btn'), aviso };
+    return { sabado: sab.time, enCurso: !!document.querySelector('.delay-step'), aviso };
   });
   expect(r.error, 'las obras del caso existen').toBeUndefined();
-  expect(r.enCurso, 'Magazine está en curso y ofrece «¿Retraso?»').toBe(true);
+  expect(r.enCurso, 'Magazine está en curso y ofrece «¿Empezó a tiempo?» (retraso v2: control − / +)').toBe(true);
   expect(r.aviso, `con +90 min y el sábado en el Plan, el aviso SALE (sábado ${r.sabado})`).not.toBe('');
   expect(r.aviso, 'y habla de Clarissa, la siguiente del mismo día — no de la del sábado').toContain('Clarissa');
   expect(r.aviso, 'con el margen negativo que corresponde').toMatch(/-\d+ min|quedan/);
@@ -3064,4 +3064,33 @@ test('T197b — Ir a las dos no se ofrece si la nueva chocaría con otra cosa de
   expect(r.visible, 'no se ofrece: la nueva chocaría con la Competencia').toBe(false);
   expect(r.conSalida, 'blockDuration recorta a la salida').toBe(30);
   expect(r.noAlarga, 'una salida posterior al fin no alarga').toBe(r.sinSalida);
+});
+
+// ── T198 — Retraso v2: el retraso CORRE la función y la hora real manda ───────
+// Reporte de Juan (25 sep 2026): marcó +30 y el calendario y la fila seguían
+// diciendo 16:31. Aprobado con mockup: barra con la espera, horas reales con la
+// programada tachada, bloque corrido con su contorno, control − / + de a 5 min.
+test('T198 — retraso v2: tarjeta, calendario y fila muestran la hora REAL', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-12T15:40:00-04:00');
+  await page.evaluate(() => {
+    const f = t => FILMS.find(x => x.day === '2026-09-12' && x.title === t);
+    state.set('savedAgenda', { schedule: ['Bedford Park', 'I Play Rocky'].map(t => ({ ...f(t), _title: t })) }); saveSavedAgenda();
+    switchMainNav('mnav-miplan'); showAgView();
+  });
+  await page.waitForSelector('.delay-step', { timeout: 8000 });
+  await expect(page.locator('.delay-ask-l')).toContainText('¿Empezó a tiempo?');
+  await expect(page.locator('.delay-step button').first(), 'sin retraso, − está desactivado').toBeDisabled();
+  const blk0 = await page.locator('.mplan-col-mobile .mplan-wk-block', { hasText: 'Bedford Park' }).first().boundingBox();
+  for (let i = 0; i < 6; i++) { await page.locator('.delay-step button').last().click(); await page.waitForTimeout(150); }
+  await expect(page.locator('.delay-step em')).toHaveText('30 min');
+  await expect(page.locator('.delay-ask-l')).toContainText('Empezó con retraso');
+  await expect(page.locator('.ctx-ticks')).toContainText(/14:30\s*15:00/);
+  await expect(page.locator('.ctx-ticks')).toContainText(/16:31\s*17:01/);
+  const blk1 = await page.locator('.mplan-col-mobile .mplan-wk-block', { hasText: 'Bedford Park' }).first().boundingBox();
+  expect(blk1.y, 'el bloque del calendario se corre hacia abajo').toBeGreaterThan(blk0.y + 5);
+  await expect(page.locator('.mplan-col-mobile .mplan-wk-ghost'), 'contorno donde estaba programada').toHaveCount(1);
+  await expect(page.locator('.mplan-row', { hasText: 'Bedford Park' }).first()).toContainText(/hasta 17:01.*Empezó 30 min tarde/);
+  await page.screenshot({ path: 'test-results/T198-retraso.png' });
+  await page.locator('.delay-step button').first().click(); await page.waitForTimeout(200);
+  await expect(page.locator('.delay-step em'), '− resta de a 5').toHaveText('25 min');
 });
