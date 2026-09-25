@@ -27,7 +27,7 @@ import { storage } from '../storage/storage.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, blockDuration, delayedEndMin, _delayKey, _endedStats, prioLiveCount, effectiveWatched, abiertaFase,
+  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, blockDuration, delayedEndMin, _delayKey, delayMinOf, _endedStats, prioLiveCount, effectiveWatched, abiertaFase,
   screeningEndDate,
 } from '../domain/film.js';
 import { sameEntry,
@@ -478,7 +478,10 @@ export function renderMiPlanCalendar(state){
     });
     const blocksHtml=_bloques.map(_grp=>{
       const s=_grp.items[0];
-      const fMin=toMin(s.time),dur=blockDuration(s);
+      // Retraso v2: el bloque se CORRE a su inicio real; donde estaba programado
+      // queda un contorno punteado (se ve de dónde se movió).
+      const _dly=delayMinOf(s);
+      const fMin=toMin(s.time)+_dly,dur=blockDuration(s);
       const top=PHDR+toPx(fMin);
       const blockH=Math.max(dur/60*PPH-4,20);
       const isPast=isPastDay||(isToday&&screeningEnded(s,nowMin));
@@ -493,10 +496,11 @@ export function renderMiPlanCalendar(state){
       const vc2=vcfg(s.venue);
       return`<div class="mplan-wk-block ${type}${stateClass}" style="top:${top.toFixed(0)}px;height:${blockH.toFixed(0)}px" data-fkey="${(s._title||'')}${s.time}" data-action="activatePlanFilm" data-day-index="${i}" data-stop="1" title="${(s._title||'').replace(/"/g,'&quot;')}">
         ${isPrio?`<div class="mplan-wk-badge">${ICONS.bookmarkFill}</div>`:''}
-        <div class="mplan-wk-time${isEvent?' mp-event-time':''}">${s.time}</div>
+        <div class="mplan-wk-time${isEvent?' mp-event-time':''}">${_dly?minToStr(fMin):s.time}</div>
         ${_grp.items.map(it=>`<div class="mplan-wk-title${isEvent?' mp-event-title':''}${_grp.items.length>1?' mp-multi':''}">${parseProgramTitle(it._title||'').displayTitle}</div>`).join('')}
         ${showVenue?`<div class="mplan-wk-venue">${ICONS.pin} ${vc2.short}</div>`:''}
-      </div>${s.salida?(()=>{
+        ${_dly?`<span class="mplan-wk-late">${t('retraso_tag',{n:_dly})}</span>`:''}
+      </div>${_dly?`<div class="mplan-wk-ghost" style="top:${(PHDR+toPx(fMin-_dly)).toFixed(0)}px;height:${blockH.toFixed(0)}px"></div>`:''}${s.salida?(()=>{
         // Lo que te perdés: contorno tenue y angosto bajo el bloque recortado.
         const _full=blockDuration({...s,salida:undefined});
         const _tailH=(_full-dur)/60*PPH;
@@ -647,7 +651,7 @@ export function renderMiPlanCalendar(state){
       listHtml+=`<div class="mplan-row${_rowKey===_activeMiPlanFilm?' active':''}${isSeen?' mp-seen':''}" style="cursor:pointer" data-rkey="${_safeRowKey}" data-action="selectFromDetail">
         ${_mph}
         <div class="mplan-ri">
-          <div class="mplan-t1${isPast?' mp-past':''}${_void?' mp-void-t':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${s.time}${!isPast?ICONS.chevronD:''}</div>
+          <div class="mplan-t1${isPast?' mp-past':''}${_void?' mp-void-t':''}" ${!isPast?`data-action="toggleFilmAlternatives" data-key="${(s._title||'')+(s.day||'')+(s.time||'')}" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1"`:''} title="${!isPast?t('tooltip_cambiar_horario'):''}">${delayMinOf(s)?`<s class="mp-late-orig">${s.time}</s>${minToStr(toMin(s.time)+delayMinOf(s))}`:s.time}${!isPast?ICONS.chevronD:''}</div>
           <div class="mplan-t2">${_voidBadge}${(()=>{
             // «hasta 16:00» y no un «16:00» suelto (revisión de UX Writer, 16 ago):
             // la fila muestra dos horas y no decía cuál era cuál — y la duración,
@@ -660,7 +664,9 @@ export function renderMiPlanCalendar(state){
             // «Ir a las dos»: la fila dice a qué hora SALÍS, no a qué hora termina;
             // tocarla ofrece «Quedarme hasta el final».
             if(s.salida&&!_void) return `<button class="mp-salida" data-action="quedarmeHastaFinal" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1">${t('salir_tag',{h:s.salida})}</button>`;
-            const _fin=t('plan_hasta',{h:(_durEst?'~':'')+mplanEndStr(s.time,dur)});
+            // Retraso v2: la fila dice el final REAL y cuánto tarde empezó.
+            const _dl=delayMinOf(s);
+            const _fin=t('plan_hasta',{h:(_durEst?'~':'')+mplanEndStr(s.time,dur+_dl)})+(_dl?` · <span class="mp-late">${t('retraso_fila',{n:_dl})}</span>`:'');
             if(!_void) return _fin;
             // REPROGRAMADA: DÓNDE quedó, no dónde estaba (30 ago 2026). La fila
             // mostraba la hora VIEJA («17:00 · REPROG. · hasta 18:30») y el día y
@@ -890,17 +896,34 @@ export function renderContextualHeader(state, consensus){
       const safeV=(next.venue||'').replace(/"/g,'&quot;');
       const _dk=_delayKey(next);
       const delayMins=filmDelays[_dk]||0;
+      // RETRASO v2 (aprobado por Juan, 25 sep 2026): el retraso CORRE la función,
+      // no la alarga. La barra lo muestra en el tiempo —tramo rayado = la espera—
+      // y las horas van reales, con la programada tachada al lado. Un solo control
+      // − / + (de a 5 min) reemplaza los cuatro botones sueltos.
+      {
+        const _st0=toMin(next.time), _st=_st0+delayMins, _fin=delayedEndMin(next);
+        const _span=Math.max(1,_fin-_st0);
+        const _w=delayMins/_span*100, _p=Math.max(0,Math.min(_fin,_nowMin)-_st)/_span*100;
+        const _h=m=>minToStr(m);
+        const _dl=`data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-venue="${safeV}"`;
+        delayHtml=`<div class="ctx-live">
+          <div class="ctx-bar"><i class="w" style="width:${_w.toFixed(1)}%"></i><i class="p" style="width:${_p.toFixed(1)}%"></i></div>
+          <div class="ctx-ticks"><span>${delayMins?`<s>${next.time}</s> `:''}<b>${_h(_st)}</b></span><span>${delayMins?`<s>${_h(_fin-delayMins)}</s> `:''}<b>${_h(_fin)}</b></span></div>
+        </div>
+        <div class="delay-ask">
+          <div class="delay-ask-l${delayMins?' on':''}">${delayMins?t('retraso_estado'):t('retraso_pregunta')}<span>${delayMins?t('retraso_programada',{h:next.time}):t('retraso_ayuda')}</span></div>
+          <div class="delay-step${delayMins?' on':''}">
+            <button data-action="setDelay" ${_dl} data-mins="-5" aria-label="${t('aria_restar_5')}"${delayMins?'':' disabled'}>−</button>
+            <em>${delayMins} min</em>
+            <button data-action="setDelay" ${_dl} data-mins="5" aria-label="${t('aria_sumar_5')}">+</button>
+          </div>
+        </div>`;
+      }
       // Consenso colaborativo (Fase B) — informativo, NO toca el plan ("solo informa").
       // Se muestra aunque uno no haya reportado: es la señal de los demás asistentes.
       const _con = consensus && consensus[cloudScreeningKey(next._title, next.day, next.time, next.venue)];
       consensusHtml = delayConsensusBadge(_con);
       if(delayMins>0){
-        delayHtml=`<div class="delay-row">
-          <span class="delay-lbl">+${delayMins} min</span>
-          ${[10,15,20,30].map(m=>`<button class="delay-btn" data-action="setDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-venue="${safeV}" data-mins="${m}" title="+${m} min">+${m}</button>`).join('')}
-          <button class="delay-clear" data-action="undoDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-venue="${safeV}" title="${t('aria_deshacer')}">${ICONS.undo}</button>
-          <button class="delay-clear" data-action="clearDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-venue="${safeV}" title="${t('aria_quitar_retraso')}">${ICONS.x}</button>
-        </div>`;
         // Warning si el retraso come el buffer
         const schedule=savedAgenda&&savedAgenda.schedule||[];
         // Por DÍA y después por hora (20 sep 2026): ordenaba solo por hora, así
@@ -929,11 +952,6 @@ export function renderContextualHeader(state, consensus){
             warnHtml=`<div class="delay-warn warn-amber"><span class="delay-warn-ico">${ICONS.alert}</span><span>${t('plan_delay_warn_ajustado',{end:minToStr(effectiveEndMin),margin:`<b>${margin}</b>`,film:`<b>${nShort}</b>`})}</span></div>`;
           }
         }
-      }else{
-        delayHtml=`<div class="delay-row">
-          <span class="delay-lbl">${t('plan_retraso')}</span>
-          ${[10,15,20,30].map(m=>`<button class="delay-btn" data-action="setDelay" data-title="${safeT}" data-day="${next.day}" data-time="${next.time}" data-venue="${safeV}" data-mins="${m}" title="${t('aria_reportar_retraso',{m})}">+${m}</button>`).join('')}
-        </div>`;
       }
     }
 
