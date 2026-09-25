@@ -8,7 +8,7 @@ const { loadDomain } = require('../lib/load-domain.js');
 
 function load(){
   return loadDomain({
-    functions: ['toMin', 'parseDur', '_festDate', 'blockDuration', 'effectiveDuration', 'screeningEndDate'],
+    functions: ['toMin', 'parseDur', '_festDate', '_cutSalida', 'blockDuration', 'effectiveDuration', 'screeningEndDate'],
     globals: {
       DEFAULT_DURATION_MIN: 90,
       FESTIVAL_DATES: { D1: '2026-08-13' },

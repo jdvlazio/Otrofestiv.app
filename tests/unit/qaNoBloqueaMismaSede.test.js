@@ -13,7 +13,7 @@ const assert = require('node:assert');
 const { loadDomain } = require('../lib/load-domain.js');
 
 const { screensConflict, screensConflictReason } = loadDomain({
-  functions: ['toMin', 'parseDur', 'blockDuration', 'durationForTravel', '_resolveVenue', 'effectiveDuration',
+  functions: ['toMin', 'parseDur', '_cutSalida', 'blockDuration', 'durationForTravel', '_resolveVenue', 'effectiveDuration',
               'venueTravelMins', 'travelMins', 'screensConflict', 'screensConflictReason', '_cityOf'],
   globals: {
     FESTIVAL_BUFFER: 15,
@@ -60,7 +60,7 @@ test('simetría: el orden de los argumentos no cambia el veredicto', () => {
 
 // ── isScreeningBlocked: el bloque de disponibilidad tampoco cuenta el Q&A ──────
 const { isScreeningBlocked } = loadDomain({
-  functions: ['toMin', 'parseDur', 'blockDuration', 'effectiveDuration', 'isScreeningBlocked'],
+  functions: ['toMin', 'parseDur', '_cutSalida', 'blockDuration', 'effectiveDuration', 'isScreeningBlocked'],
   globals: {
     FESTIVAL_BUFFER: 15, DEFAULT_DURATION_MIN: 90, _activeFestId: 'test',
     FESTIVAL_CONFIG: { test: { venues: {} } },

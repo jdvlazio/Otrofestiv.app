@@ -17,7 +17,7 @@ const assert = require('node:assert');
 const { loadDomain } = require('../lib/load-domain.js');
 
 const FNS = ['screensConflict', 'screensConflictReason', 'toMin', 'parseDur',
-  'effectiveDuration', 'blockDuration', 'durationForTravel', 'travelMins',
+  'effectiveDuration', '_cutSalida', 'blockDuration', 'durationForTravel', 'travelMins',
   'venueTravelMins', '_resolveVenue', '_cityOf', 'screeningEndMin'];
 
 // Dos sedes en municipios distintos del área metropolitana, a 8 km.

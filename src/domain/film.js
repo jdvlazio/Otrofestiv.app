@@ -143,13 +143,30 @@ export function scoreFilm(title, screens, isPriority, allTitles){
 // El par: effectiveDuration = blockDuration + Q&A, para CONFLICTOS, donde
 // quedarse al Q&A tiene que caber.
 export function blockDuration(f){
-  if(f&&f._slotDur) return f._slotDur;
-  return parseDur(f&&f.duration);
+  if(f&&f._slotDur) return _cutSalida(f,f._slotDur);
+  return _cutSalida(f,parseDur(f&&f.duration));
 }
 
 export function effectiveDuration(f){
+  // Quien se va antes no se queda al Q&A: el fin es la salida, sin sumar nada.
+  if(f&&f.salida) return blockDuration(f);
   if(f&&f._slotMin) return f._slotMin;
   return parseDur(f&&f.duration)+(f&&f.has_qa?FESTIVAL_QA_MIN:0);
+}
+
+// _cutSalida — «Ir a las dos» (aprobado por Juan, 25 sep 2026): una entrada del
+// Plan puede llevar `salida` ('HH:MM'), la hora a la que el usuario DECIDIÓ irse
+// para llegar a la siguiente. La duración se recorta ACÁ y en ningún otro lado:
+// de blockDuration/effectiveDuration salen el choque, el calendario, la lista, el
+// .ics y el planeador (su worker copia estas funciones por toString, así que
+// _cutSalida va en _SCHED_PURE_FNS). Una salida que no recorta nada —anterior al
+// inicio o posterior al fin— se ignora: nunca alarga.
+export function _cutSalida(f,d){
+  if(f&&f.salida&&f.time){
+    const c=toMin(f.salida)-toMin(f.time);
+    if(c>0&&c<d) return c;
+  }
+  return d;
 }
 
 // premiereBadgeKey — EL DISTINTIVO DE LA FUNCIÓN, en un solo dueño.
