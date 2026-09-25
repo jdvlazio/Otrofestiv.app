@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-22"
+  "capturado": "2026-09-24"
  },
  "_origen": "jardin-2026-catalogo.json",
  "obras": [
@@ -16,9 +16,9 @@
    "anio_tmdb": 0,
    "duracion_tmdb": 17,
    "pais_tmdb": "",
+   "lbSlug": "lejania-1",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Lejanía",
-   "lbSlug": "lejania-1"
+   "_busqueda": "Lejanía"
   },
   {
    "titulo": "Los años del conejo",
@@ -31,10 +31,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 9,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Los años del conejo",
    "title_en": "The Years of the rabbit",
-   "lbSlug": "the-years-of-the-rabbit"
+   "lbSlug": "the-years-of-the-rabbit",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Los años del conejo"
   },
   {
    "titulo": "Un aparato para detectar fantasmas",
@@ -47,10 +47,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 18,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Un aparato para detectar fantasmas",
    "title_en": "A Ghost-Detecting Device",
-   "lbSlug": "a-ghost-detecting-device"
+   "lbSlug": "a-ghost-detecting-device",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Un aparato para detectar fantasmas"
   },
   {
    "titulo": "Madres de nacimiento",
@@ -63,9 +63,9 @@
    "anio_tmdb": 0,
    "duracion_tmdb": 8,
    "pais_tmdb": "",
+   "lbSlug": "madres-de-nacimiento",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Madres de nacimiento",
-   "lbSlug": "madres-de-nacimiento"
+   "_busqueda": "Madres de nacimiento"
   },
   {
    "titulo": "Lecciones de primavera",
@@ -78,10 +78,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 14,
    "pais_tmdb": "Colombia, Hungary, Portugal, Belgium",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Lecciones de primavera",
    "title_en": "Spring Lessons",
-   "lbSlug": "spring-lessons"
+   "lbSlug": "spring-lessons",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Lecciones de primavera"
   },
   {
    "titulo": "Una vez en un cuerpo",
@@ -94,10 +94,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 10,
    "pais_tmdb": "Colombia, United States of America",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Una vez en un cuerpo",
    "title_en": "Once in a Body",
-   "lbSlug": "once-in-a-body"
+   "lbSlug": "once-in-a-body",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una vez en un cuerpo"
   },
   {
    "titulo": "Sirena mecánica",
@@ -110,9 +110,9 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 9,
    "pais_tmdb": "",
+   "lbSlug": "sirena-mecanica",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Sirena mecánica",
-   "lbSlug": "sirena-mecanica"
+   "_busqueda": "Sirena mecánica"
   },
   {
    "titulo": "Términa",
@@ -125,9 +125,9 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 26,
    "pais_tmdb": "Colombia",
+   "lbSlug": "termina",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Términa",
-   "lbSlug": "termina"
+   "_busqueda": "Términa"
   },
   {
    "titulo": "Malas posturas",
@@ -140,10 +140,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 17,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Malas posturas",
    "title_en": "Bad Postures",
-   "lbSlug": "bad-postures"
+   "lbSlug": "bad-postures",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Malas posturas"
   },
   {
    "titulo": "El mundo es afuera",
@@ -156,9 +156,9 @@
    "anio_tmdb": 2024,
    "duracion_tmdb": 22,
    "pais_tmdb": "Colombia",
+   "lbSlug": "el-mundo-es-afuera",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "El mundo es afuera",
-   "lbSlug": "el-mundo-es-afuera"
+   "_busqueda": "El mundo es afuera"
   },
   {
    "titulo": "Futuros luminosos",
@@ -171,10 +171,10 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 25,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Futuros luminosos",
    "title_en": "A Brighter Future",
-   "lbSlug": "a-brighter-future"
+   "lbSlug": "a-brighter-future",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Futuros luminosos"
   },
   {
    "titulo": "La Mona",
@@ -187,10 +187,10 @@
    "anio_tmdb": 0,
    "duracion_tmdb": 18,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La Mona",
    "title_en": "Heat Wave",
-   "lbSlug": "heat-wave-2025"
+   "lbSlug": "heat-wave-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La Mona"
   },
   {
    "titulo": "Refracción",
@@ -203,9 +203,9 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
+   "lbSlug": "refraccion",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Refracción",
-   "lbSlug": "refraccion"
+   "_busqueda": "Refracción"
   },
   {
    "titulo": "La reserva",
@@ -218,10 +218,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 93,
    "pais_tmdb": "Mexico",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La reserva",
    "title_en": "The Reserve",
-   "lbSlug": "the-reserve-2025"
+   "lbSlug": "the-reserve-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La reserva"
   },
   {
    "titulo": "Una canción para mi tierra",
@@ -234,10 +234,10 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 93,
    "pais_tmdb": "Argentina, Germany, Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Una canción para mi tierra",
    "title_en": "A Song for My Land",
-   "lbSlug": "a-song-for-my-land-2024"
+   "lbSlug": "a-song-for-my-land-2024",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una canción para mi tierra"
   },
   {
    "titulo": "Romero",
@@ -250,9 +250,9 @@
    "anio_tmdb": 1989,
    "duracion_tmdb": 105,
    "pais_tmdb": "United States of America",
+   "lbSlug": "romero",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Romero",
-   "lbSlug": "romero"
+   "_busqueda": "Romero"
   },
   {
    "titulo": "Midnight Oil: The Hardest Line",
@@ -265,9 +265,9 @@
    "anio_tmdb": 2024,
    "duracion_tmdb": 105,
    "pais_tmdb": "Australia",
+   "lbSlug": "midnight-oil-the-hardest-line",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Midnight Oil: The Hardest Line",
-   "lbSlug": "midnight-oil-the-hardest-line"
+   "_busqueda": "Midnight Oil: The Hardest Line"
   },
   {
    "titulo": "Nuestra tierra",
@@ -280,10 +280,10 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 119,
    "pais_tmdb": "Argentina, Denmark, Mexico, United States of America, Netherlands, France, United Kingdom, Germany",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Nuestra tierra",
    "title_en": "Our Land",
-   "lbSlug": "our-land-2025-1"
+   "lbSlug": "our-land-2025-1",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Nuestra tierra"
   },
   {
    "titulo": "Cuando las aguas se juntan",
@@ -296,10 +296,10 @@
    "anio_tmdb": 2023,
    "duracion_tmdb": 85,
    "pais_tmdb": "",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Cuando las aguas se juntan",
    "title_en": "When the waters meet",
-   "lbSlug": "when-the-waters-meet"
+   "lbSlug": "when-the-waters-meet",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cuando las aguas se juntan"
   },
   {
    "titulo": "Soñé su nombre",
@@ -312,10 +312,10 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 86,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Soñé su nombre",
    "title_en": "I Dreamed His Name",
-   "lbSlug": "i-dreamed-his-name"
+   "lbSlug": "i-dreamed-his-name",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Soñé su nombre"
   },
   {
    "titulo": "Mûpã (Madre)",
@@ -328,10 +328,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 70,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Mûpã",
    "title_en": "Mother",
-   "lbSlug": "mother-2025-6"
+   "lbSlug": "mother-2025-6",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mûpã"
   },
   {
    "titulo": "La sed del viento",
@@ -344,10 +344,10 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 84,
    "pais_tmdb": "Canada, Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La sed del viento",
    "title_en": "The Wind's Thirst",
-   "lbSlug": "the-winds-thirst"
+   "lbSlug": "the-winds-thirst",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La sed del viento"
   },
   {
    "titulo": "La marcha del hambre",
@@ -360,9 +360,23 @@
    "anio_tmdb": 2024,
    "duracion_tmdb": 93,
    "pais_tmdb": "Colombia",
+   "lbSlug": "la-marcha-del-hambre",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "La marcha del hambre",
-   "lbSlug": "la-marcha-del-hambre"
+   "_busqueda": "La marcha del hambre"
+  },
+  {
+   "titulo": "La creciente",
+   "tmdb_id": 1779631,
+   "titulo_original": "La Creciente",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In the heart of the Magdalena River region, a community confronts the encroaching waters and institutional neglect year after year. The documentary examines the relationship between territory, flooding, dignity, and community resistance.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 89,
+   "pais_tmdb": "",
+   "lbSlug": "la-creciente",
+   "_verificado": "declarada a mano: Alta hecha por Juan en TMDB el 24 sep 2026 tras la triple verificación (título, filmografía del director, Letterboxd: no existía). La API tarda horas en devolver una ficha nueva en búsquedas y créditos, así que el candado no la ve todavía. Dirección (Pablo Andrés Muñoz Castrillón) y duración (89 min) son las del programa de Jardín; Letterboxd ya la enlazó: letterboxd.com/tmdb/1779631 → la-creciente."
   },
   {
    "titulo": "Alma provinciana",
@@ -375,10 +389,10 @@
    "anio_tmdb": 1926,
    "duracion_tmdb": 126,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Alma provinciana",
    "title_en": "Provincial Soul",
-   "lbSlug": "provincial-soul"
+   "lbSlug": "provincial-soul",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Alma provinciana"
   }
  ],
  "verificadas": {
@@ -392,9 +406,9 @@
    "anio_tmdb": 0,
    "duracion_tmdb": 17,
    "pais_tmdb": "",
+   "lbSlug": "lejania-1",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Lejanía",
-   "lbSlug": "lejania-1"
+   "_busqueda": "Lejanía"
   },
   "Los años del conejo": {
    "tmdb_id": 1617929,
@@ -406,10 +420,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 9,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Los años del conejo",
    "title_en": "The Years of the rabbit",
-   "lbSlug": "the-years-of-the-rabbit"
+   "lbSlug": "the-years-of-the-rabbit",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Los años del conejo"
   },
   "Un aparato para detectar fantasmas": {
    "tmdb_id": 1593571,
@@ -421,10 +435,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 18,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Un aparato para detectar fantasmas",
    "title_en": "A Ghost-Detecting Device",
-   "lbSlug": "a-ghost-detecting-device"
+   "lbSlug": "a-ghost-detecting-device",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Un aparato para detectar fantasmas"
   },
   "Madres de nacimiento": {
    "tmdb_id": 1668902,
@@ -436,9 +450,9 @@
    "anio_tmdb": 0,
    "duracion_tmdb": 8,
    "pais_tmdb": "",
+   "lbSlug": "madres-de-nacimiento",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Madres de nacimiento",
-   "lbSlug": "madres-de-nacimiento"
+   "_busqueda": "Madres de nacimiento"
   },
   "Lecciones de primavera": {
    "tmdb_id": 1456177,
@@ -450,10 +464,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 14,
    "pais_tmdb": "Colombia, Hungary, Portugal, Belgium",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Lecciones de primavera",
    "title_en": "Spring Lessons",
-   "lbSlug": "spring-lessons"
+   "lbSlug": "spring-lessons",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Lecciones de primavera"
   },
   "Una vez en un cuerpo": {
    "tmdb_id": 1522316,
@@ -465,10 +479,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 10,
    "pais_tmdb": "Colombia, United States of America",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Una vez en un cuerpo",
    "title_en": "Once in a Body",
-   "lbSlug": "once-in-a-body"
+   "lbSlug": "once-in-a-body",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una vez en un cuerpo"
   },
   "Sirena mecánica": {
    "tmdb_id": 1668871,
@@ -480,9 +494,9 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 9,
    "pais_tmdb": "",
+   "lbSlug": "sirena-mecanica",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Sirena mecánica",
-   "lbSlug": "sirena-mecanica"
+   "_busqueda": "Sirena mecánica"
   },
   "Términa": {
    "tmdb_id": 1585991,
@@ -494,9 +508,9 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 26,
    "pais_tmdb": "Colombia",
+   "lbSlug": "termina",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Términa",
-   "lbSlug": "termina"
+   "_busqueda": "Términa"
   },
   "Malas posturas": {
    "tmdb_id": 1595060,
@@ -508,10 +522,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 17,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Malas posturas",
    "title_en": "Bad Postures",
-   "lbSlug": "bad-postures"
+   "lbSlug": "bad-postures",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Malas posturas"
   },
   "El mundo es afuera": {
    "tmdb_id": 1397467,
@@ -523,9 +537,9 @@
    "anio_tmdb": 2024,
    "duracion_tmdb": 22,
    "pais_tmdb": "Colombia",
+   "lbSlug": "el-mundo-es-afuera",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "El mundo es afuera",
-   "lbSlug": "el-mundo-es-afuera"
+   "_busqueda": "El mundo es afuera"
   },
   "Futuros luminosos": {
    "tmdb_id": 1603950,
@@ -537,10 +551,10 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 25,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Futuros luminosos",
    "title_en": "A Brighter Future",
-   "lbSlug": "a-brighter-future"
+   "lbSlug": "a-brighter-future",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Futuros luminosos"
   },
   "La Mona": {
    "tmdb_id": 1444298,
@@ -552,10 +566,10 @@
    "anio_tmdb": 0,
    "duracion_tmdb": 18,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La Mona",
    "title_en": "Heat Wave",
-   "lbSlug": "heat-wave-2025"
+   "lbSlug": "heat-wave-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La Mona"
   },
   "Refracción": {
    "tmdb_id": 1584776,
@@ -567,9 +581,9 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
+   "lbSlug": "refraccion",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Refracción",
-   "lbSlug": "refraccion"
+   "_busqueda": "Refracción"
   },
   "La reserva": {
    "tmdb_id": 1537613,
@@ -581,10 +595,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 93,
    "pais_tmdb": "Mexico",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La reserva",
    "title_en": "The Reserve",
-   "lbSlug": "the-reserve-2025"
+   "lbSlug": "the-reserve-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La reserva"
   },
   "Una canción para mi tierra": {
    "tmdb_id": 1454069,
@@ -596,10 +610,10 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 93,
    "pais_tmdb": "Argentina, Germany, Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Una canción para mi tierra",
    "title_en": "A Song for My Land",
-   "lbSlug": "a-song-for-my-land-2024"
+   "lbSlug": "a-song-for-my-land-2024",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una canción para mi tierra"
   },
   "Romero": {
    "tmdb_id": 32767,
@@ -611,9 +625,9 @@
    "anio_tmdb": 1989,
    "duracion_tmdb": 105,
    "pais_tmdb": "United States of America",
+   "lbSlug": "romero",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Romero",
-   "lbSlug": "romero"
+   "_busqueda": "Romero"
   },
   "Midnight Oil: The Hardest Line": {
    "tmdb_id": 1279121,
@@ -625,9 +639,9 @@
    "anio_tmdb": 2024,
    "duracion_tmdb": 105,
    "pais_tmdb": "Australia",
+   "lbSlug": "midnight-oil-the-hardest-line",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Midnight Oil: The Hardest Line",
-   "lbSlug": "midnight-oil-the-hardest-line"
+   "_busqueda": "Midnight Oil: The Hardest Line"
   },
   "Nuestra tierra": {
    "tmdb_id": 661603,
@@ -639,10 +653,10 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 119,
    "pais_tmdb": "Argentina, Denmark, Mexico, United States of America, Netherlands, France, United Kingdom, Germany",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Nuestra tierra",
    "title_en": "Our Land",
-   "lbSlug": "our-land-2025-1"
+   "lbSlug": "our-land-2025-1",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Nuestra tierra"
   },
   "Cuando las aguas se juntan": {
    "tmdb_id": 1103169,
@@ -654,10 +668,10 @@
    "anio_tmdb": 2023,
    "duracion_tmdb": 85,
    "pais_tmdb": "",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Cuando las aguas se juntan",
    "title_en": "When the waters meet",
-   "lbSlug": "when-the-waters-meet"
+   "lbSlug": "when-the-waters-meet",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cuando las aguas se juntan"
   },
   "Soñé su nombre": {
    "tmdb_id": 1454365,
@@ -669,10 +683,10 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 86,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Soñé su nombre",
    "title_en": "I Dreamed His Name",
-   "lbSlug": "i-dreamed-his-name"
+   "lbSlug": "i-dreamed-his-name",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Soñé su nombre"
   },
   "Mûpã (Madre)": {
    "tmdb_id": 1193026,
@@ -684,10 +698,10 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 70,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Mûpã",
    "title_en": "Mother",
-   "lbSlug": "mother-2025-6"
+   "lbSlug": "mother-2025-6",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mûpã"
   },
   "La sed del viento": {
    "tmdb_id": 1686191,
@@ -699,10 +713,10 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 84,
    "pais_tmdb": "Canada, Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La sed del viento",
    "title_en": "The Wind's Thirst",
-   "lbSlug": "the-winds-thirst"
+   "lbSlug": "the-winds-thirst",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La sed del viento"
   },
   "La marcha del hambre": {
    "tmdb_id": 1653698,
@@ -714,9 +728,22 @@
    "anio_tmdb": 2024,
    "duracion_tmdb": 93,
    "pais_tmdb": "Colombia",
+   "lbSlug": "la-marcha-del-hambre",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "La marcha del hambre",
-   "lbSlug": "la-marcha-del-hambre"
+   "_busqueda": "La marcha del hambre"
+  },
+  "La creciente": {
+   "tmdb_id": 1779631,
+   "titulo_original": "La Creciente",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In the heart of the Magdalena River region, a community confronts the encroaching waters and institutional neglect year after year. The documentary examines the relationship between territory, flooding, dignity, and community resistance.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 89,
+   "pais_tmdb": "",
+   "lbSlug": "la-creciente",
+   "_verificado": "declarada a mano: Alta hecha por Juan en TMDB el 24 sep 2026 tras la triple verificación (título, filmografía del director, Letterboxd: no existía). La API tarda horas en devolver una ficha nueva en búsquedas y créditos, así que el candado no la ve todavía. Dirección (Pablo Andrés Muñoz Castrillón) y duración (89 min) son las del programa de Jardín; Letterboxd ya la enlazó: letterboxd.com/tmdb/1779631 → la-creciente."
   },
   "Alma provinciana": {
    "tmdb_id": 184373,
@@ -728,10 +755,10 @@
    "anio_tmdb": 1926,
    "duracion_tmdb": 126,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Alma provinciana",
    "title_en": "Provincial Soul",
-   "lbSlug": "provincial-soul"
+   "lbSlug": "provincial-soul",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Alma provinciana"
   }
  },
  "sin_ficha": [
@@ -742,7 +769,6 @@
   "Elementales",
   "En todo y en nada",
   "Jiru iuiai \"Algo malo\"",
-  "La creciente",
   "Primer amor",
   "Relatos del camino",
   "Somnolítico",

@@ -21,7 +21,7 @@ Esc.  festivals/staging/<lo-que-sea>-enriquecido.json
 import json, os, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from enriquecer import enriquecer_obra
+from enriquecer import enriquecer_obra, ficha_declarada
 from lib import provenance
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -51,9 +51,27 @@ def main():
         print(f'⚠ {len(obras) - len(verificables)} obras sin año ni duración: '
               f'imposibles de verificar, se saltan.')
 
+    # Las fichas que declaró una persona, con su porqué — la MISMA salida que
+    # enriquecer.py (Itagüí, «Inolvidable Heidi»). Faltaba acá: «La creciente»
+    # (Jardín, 24 sep 2026) la dio de alta Juan en TMDB esa noche y la API
+    # tarda horas en devolverla en búsquedas y créditos, así que el candado no
+    # la podía ver aunque su id ya existiera. <fest>-correcciones.json, junto
+    # al sidecar: el fest-id es el nombre del sidecar sin «-catalogo.json».
+    _fid = os.path.basename(p).replace('-catalogo.json', '')
+    corr_p = os.path.join(os.path.dirname(p), f'{_fid}-correcciones.json')
+    declaradas = (json.load(open(corr_p, encoding='utf-8')).get('fichas', {})
+                  if os.path.exists(corr_p) else {})
+    _titulos = {o['titulo'] for o in obras}
+    _huerf = [t for t in declaradas if t not in _titulos]
+    if _huerf:
+        sys.exit(f'ficha declarada para un título que no está en el catálogo: {_huerf}')
+
     ok, sin = {}, []
     for i, o in enumerate(verificables, 1):
-        e = enriquecer_obra(o, key, {})
+        if o['titulo'] in declaradas:
+            e = ficha_declarada(o['titulo'], declaradas[o['titulo']], key)
+        else:
+            e = enriquecer_obra(o, key, {})
         t = o['titulo']
         if e:
             ok[t] = e

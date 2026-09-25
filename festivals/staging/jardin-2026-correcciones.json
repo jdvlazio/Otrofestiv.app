@@ -1,0 +1,14 @@
+{
+ "_provenance": {
+  "fuente": "fichas que dio de alta o verificó Juan a mano",
+  "capturado": "2026-09-24",
+  "metodo": "cada declaración nombra su fuente y por qué el candado automático no podía llegar sola"
+ },
+ "fichas": {
+  "La creciente": {
+   "tmdb": 1779631,
+   "_fuente": "https://www.themoviedb.org/movie/1779631-la-creciente",
+   "_por_que": "Alta hecha por Juan en TMDB el 24 sep 2026 tras la triple verificación (título, filmografía del director, Letterboxd: no existía). La API tarda horas en devolver una ficha nueva en búsquedas y créditos, así que el candado no la ve todavía. Dirección (Pablo Andrés Muñoz Castrillón) y duración (89 min) son las del programa de Jardín; Letterboxd ya la enlazó: letterboxd.com/tmdb/1779631 → la-creciente."
+  }
+ }
+}
