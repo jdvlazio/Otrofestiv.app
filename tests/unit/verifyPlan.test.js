@@ -8,7 +8,7 @@ const { loadDomain } = require('../lib/load-domain.js');
 
 function load(passed = new Set()) {
   return loadDomain({
-    functions: ['toMin', 'parseDur', 'blockDuration', 'durationForTravel', 'effectiveDuration',
+    functions: ['toMin', 'parseDur', '_cutSalida', 'blockDuration', 'durationForTravel', 'effectiveDuration',
                 '_resolveVenue', 'venueTravelMins', 'travelMins', 'screensConflict', 'verifyPlan',
                 'sameEntry'],
     globals: {

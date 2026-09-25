@@ -3021,3 +3021,74 @@ test('T196 — Diario: nota de lo deducido, ojo «no la vi» que baja la cuenta 
   await page.locator('#diary-body .dw-poster.dw-off').locator('xpath=..').locator('[data-action="diaryToggleVista"]').click();
   await expect(page.locator('#diary-count'), 'y el tachado la devuelve').toHaveText('2');
 });
+
+// ── T197 — «Ir a las dos»: salir de la primera para llegar a la segunda ────────
+// Pedido de un usuario (25 sep 2026), aprobado por Juan con mockup: una charla y
+// una película que empieza durante la charla. Planear nunca lo propone; la hoja
+// de conflicto lo ofrece con la hora de salida y, si se pierde la mitad o más,
+// una segunda advertencia. La salida es UN campo de la entrada del Plan y la
+// duración se recorta en un solo dueño (blockDuration).
+test('T197 — Ir a las dos: la hoja lo ofrece, avisa dos veces si cuesta, recorta y se deshace', async ({ page }) => {
+  await enterFestival(page, 'jardin2026', '2026-09-25T10:00:00-05:00');
+  const pre = await page.evaluate(() => {
+    const f = t => FILMS.find(x => x.day === '2026-09-25' && x.title.startsWith(t));
+    const charla = f('Presentación del libro'), peli = f('Soñé su nombre');
+    state.set('savedAgenda', { schedule: [{ ...charla, _title: charla.title }] }); saveSavedAgenda();
+    openConflictSheet(peli.title, peli, savedAgenda.schedule[0]);
+    return { charla: charla.title, peli: peli.title };
+  });
+  const both = page.locator('#cs-both-btn');
+  await expect(both, 'la opción aparece').toBeVisible();
+  await expect(page.locator('#cs-both-sub')).toContainText(/Salís de .* a las \d\d:\d\d/);
+  await page.screenshot({ path: 'test-results/T197-hoja.png' });
+  await both.click();
+  // la charla dura 60 y empieza 19:00; la película 19:45 → se pierde ≥ la mitad
+  await expect(page.locator('.modal-box, #action-modal, [class*=modal]').filter({ hasText: /Salir a la mitad/ }).first(), 'segunda advertencia').toBeVisible();
+  await page.screenshot({ path: 'test-results/T197-aviso.png' });
+  await page.getByRole('button', { name: 'Ir a las dos' }).last().click();
+  await page.waitForTimeout(600);
+  const r = await page.evaluate(async ([c, p]) => {
+    const D = await import('/src/domain/schedule.js');
+    const s = savedAgenda.schedule;
+    return { titulos: s.map(x => x._title), salida: s.find(x => x._title === c)?.salida,
+             ok: D.verifyPlan(s, { catalog: FILMS }).ok,
+             sync: D.syncScheduleWithCatalog(s, FILMS).find(x => x._title === c)?.salida };
+  }, [pre.charla, pre.peli]);
+  expect(r.titulos, 'las dos en el Plan').toEqual(expect.arrayContaining([pre.charla, pre.peli]));
+  expect(r.salida, 'la charla guarda su hora de salida').toMatch(/^19:\d\d$/);
+  expect(r.ok, 'el Plan queda certificado: recortada, ya no choca').toBe(true);
+  expect(r.sync, 'y la salida sobrevive a la sincronización con el catálogo').toBe(r.salida);
+  // Mi Plan: la fila dice «Salís», el calendario pinta lo que se pierde
+  await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
+  await page.waitForSelector('#ag-view', { state: 'visible', timeout: 8000 });
+  await page.waitForTimeout(600);
+  await page.screenshot({ path: 'test-results/T197-plan.png' });
+  await expect(page.locator('.mp-salida').first()).toContainText(/Salís 19:\d\d/);
+  await expect(page.locator('.mplan-wk-tail').first(), 'contorno de lo que te perdés').toBeAttached();
+  await page.screenshot({ path: 'test-results/T197-plan.png' });
+  // deshacer
+  await page.locator('.mp-salida').first().click();
+  await page.getByRole('button', { name: 'Quedarme hasta el final' }).click();
+  await page.waitForTimeout(400);
+  const d = await page.evaluate(c => savedAgenda.schedule.find(x => x._title === c)?.salida, pre.charla);
+  expect(d, 'Quedarme hasta el final borra la salida').toBeUndefined();
+});
+
+test('T197b — Ir a las dos no se ofrece si la nueva chocaría con otra cosa del Plan, ni el planeador recorta', async ({ page }) => {
+  await enterFestival(page, 'jardin2026', '2026-09-25T10:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const D = await import('/src/domain/schedule.js');
+    const F = await import('/src/domain/film.js');
+    const f = t => FILMS.find(x => x.day === '2026-09-25' && x.title.startsWith(t));
+    const charla = f('Presentación del libro'), peli = f('Soñé su nombre'), otra = f('Competencia nacional');
+    // Soñé su nombre 19:45 choca con Competencia 19:15 → no hay «dos» que valgan
+    state.set('savedAgenda', { schedule: [{ ...charla, _title: charla.title }, { ...otra, _title: otra.title }] }); saveSavedAgenda();
+    openConflictSheet(peli.title, peli, savedAgenda.schedule[0]);
+    const visible = getComputedStyle(document.getElementById('cs-both-btn')).display !== 'none';
+    return { visible, sinSalida: F.blockDuration(charla), conSalida: F.blockDuration({ ...charla, salida: '19:30' }),
+             noAlarga: F.blockDuration({ ...charla, salida: '23:00' }) };
+  });
+  expect(r.visible, 'no se ofrece: la nueva chocaría con la Competencia').toBe(false);
+  expect(r.conSalida, 'blockDuration recorta a la salida').toBe(30);
+  expect(r.noAlarga, 'una salida posterior al fin no alarga').toBe(r.sinSalida);
+});

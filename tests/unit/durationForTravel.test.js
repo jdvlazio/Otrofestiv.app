@@ -7,7 +7,7 @@ const assert = require('node:assert');
 const { loadDomain } = require('../lib/load-domain.js');
 
 const { durationForTravel } = loadDomain({
-  functions: ['parseDur', 'blockDuration', 'effectiveDuration', 'durationForTravel'],
+  functions: ['parseDur', '_cutSalida', 'blockDuration', 'effectiveDuration', 'durationForTravel'],
   globals: { DEFAULT_DURATION_MIN: 90 },
 });
 

@@ -496,7 +496,12 @@ export function renderMiPlanCalendar(state){
         <div class="mplan-wk-time${isEvent?' mp-event-time':''}">${s.time}</div>
         ${_grp.items.map(it=>`<div class="mplan-wk-title${isEvent?' mp-event-title':''}${_grp.items.length>1?' mp-multi':''}">${parseProgramTitle(it._title||'').displayTitle}</div>`).join('')}
         ${showVenue?`<div class="mplan-wk-venue">${ICONS.pin} ${vc2.short}</div>`:''}
-      </div>`;
+      </div>${s.salida?(()=>{
+        // Lo que te perdés: contorno tenue y angosto bajo el bloque recortado.
+        const _full=blockDuration({...s,salida:undefined});
+        const _tailH=(_full-dur)/60*PPH;
+        return _tailH>2?`<div class="mplan-wk-tail" style="top:${(top+blockH+4).toFixed(0)}px;height:${(_tailH-4).toFixed(0)}px"></div>`:'';
+      })():''}`;
     }).join('');
 
     const colClass=['mplan-wk-col',isToday?'wk-today':'',isActive?'wk-active':'',extraClass].filter(Boolean).join(' ');
@@ -590,7 +595,12 @@ export function renderMiPlanCalendar(state){
         // Un solapamiento es un hueco NEGATIVO: caía por debajo del rango [0,25)
         // y la fila callaba (20 sep 2026: dos funciones encimadas en el mismo
         // Lightbox, sin una palabra). Ahora se nombra, con los minutos.
-        if(gap<0){
+        // «Ir a las dos»: la salida ya descuenta traslado + margen y el usuario
+        // decidió irse (sin Q&A) — avisarle del hueco o del Q&A sería repetirle
+        // lo que eligió a sabiendas.
+        const _salio=!!prev.salida;
+        if(_salio){ /* nada: la fila ya dice «Salís HH:MM» */ }
+        else if(gap<0){
           listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${ICONS.alert} ${t('warn_se_solapan',{n:-gap})}</div>`;
         } else if(gap<25){
           const _isCritical=gap<=5;
@@ -604,7 +614,7 @@ export function renderMiPlanCalendar(state){
         // el tiempo» era un veredicto sobre tu futuro. La línea describe la
         // aritmética de la estimación —la charla contra el reloj— y el usuario
         // decide. Nunca afirmamos: sugerimos, presupuestamos.
-        if(_slotHasQa(prev)){const qaGap=gap-FESTIVAL_QA_MIN;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${t('warn_qa_cruza',{qa:FESTIVAL_QA_MIN,n:Math.abs(qaGap)})}</div>`:listHtml+=`<div class="mplan-warn-row">${t('warn_qa_tiempo',{qa:FESTIVAL_QA_MIN,n:qaGap})}</div>`;}
+        if(!_salio&&_slotHasQa(prev)){const qaGap=gap-FESTIVAL_QA_MIN;qaGap<0?listHtml+=`<div class="mplan-warn-row" style="color:var(--red)">${t('warn_qa_cruza',{qa:FESTIVAL_QA_MIN,n:Math.abs(qaGap)})}</div>`:listHtml+=`<div class="mplan-warn-row">${t('warn_qa_tiempo',{qa:FESTIVAL_QA_MIN,n:qaGap})}</div>`;}
         const tw=travelWarn(prev,s);
         if(tw) listHtml+=`<div class="mplan-warn-row">${tw}</div>`;
       }
@@ -647,6 +657,9 @@ export function renderMiPlanCalendar(state){
             // (helpers.js: «llegarías ~21:15»). Sin duración publicada, la hora de
             // salida NO es dato: sale de rellenar el hueco con DEFAULT_DURATION_MIN.
             const _durEst=durEstimada((FILMS.find(fi=>sameEntry(fi,s))||s).duration);
+            // «Ir a las dos»: la fila dice a qué hora SALÍS, no a qué hora termina;
+            // tocarla ofrece «Quedarme hasta el final».
+            if(s.salida&&!_void) return `<button class="mp-salida" data-action="quedarmeHastaFinal" data-title="${safeT}" data-day="${s.day||''}" data-time="${s.time||''}" data-stop="1">${t('salir_tag',{h:s.salida})}</button>`;
             const _fin=t('plan_hasta',{h:(_durEst?'~':'')+mplanEndStr(s.time,dur)});
             if(!_void) return _fin;
             // REPROGRAMADA: DÓNDE quedó, no dónde estaba (30 ago 2026). La fila

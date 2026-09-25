@@ -7,7 +7,7 @@ const { loadDomain } = require('../lib/load-domain.js');
 
 function load(delays = {}) {
   return loadDomain({
-    functions: ['toMin', 'parseDur', 'blockDuration', 'effectiveDuration', 'durationForTravel', '_delayKey', 'delayedEndMin'],
+    functions: ['toMin', 'parseDur', '_cutSalida', 'blockDuration', 'effectiveDuration', 'durationForTravel', '_delayKey', 'delayedEndMin'],
     globals: { DEFAULT_DURATION_MIN: 90, filmDelays: delays },
   });
 }

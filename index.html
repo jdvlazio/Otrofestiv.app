@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609250733">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609250733">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609250838">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609250838">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -1575,6 +1575,13 @@ mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.35) 70%,transparent 100
 .conflict-vs-lbl{font-size:var(--t-label);font-weight:var(--w-display);color:var(--gray);letter-spacing:2px}
 .conflict-actions{padding:4px 20px 44px;display:flex;flex-direction:column;gap:var(--sp-2)}
 .conflict-btn-replace{width:100%} /* anatomía: regla dueña */
+/* «Ir a las dos» (25 sep 2026): una decisión, no una acción cualquiera — filete ámbar. */
+.conflict-btn-both{width:100%;display:flex;flex-direction:column;align-items:center;gap:2px;background:var(--surf-2);border:1px solid var(--amber-45,rgba(245,158,11,.45));border-radius:var(--r-pill);color:var(--white);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-bold,700);padding:var(--sp-btn);cursor:pointer}
+.conflict-btn-both small{font-size:var(--t-xs);font-weight:var(--w-medium,500);color:var(--gray)}
+.salir-bar{display:flex;height:5px;border-radius:var(--r-pill);overflow:hidden;background:var(--surf-2);margin:var(--sp-2) 0}
+.salir-bar i{background:var(--white)}.salir-bar s{background:var(--red)}
+.mp-salida{display:inline-flex;align-items:center;margin-left:var(--sp-1);font-size:var(--t-xs);font-weight:var(--w-bold,700);color:var(--white);background:var(--surf-2);border:none;border-radius:var(--r-pill);padding:1px var(--sp-2);cursor:pointer;font-family:var(--font)}
+.mplan-wk-tail{position:absolute;left:4px;width:40%;border:1px dashed var(--white-20,rgba(240,237,232,.25));border-top:none;border-radius:0 0 var(--r-sm) var(--r-sm);pointer-events:none}
 .conflict-btn-keep{width:100%;background:none;border:1px solid var(--bdr);border-radius:var(--r-pill);color:var(--gray);font-family:var(--font);font-size:var(--t-sm);font-weight:var(--w-semi);padding:var(--sp-btn);cursor:pointer} /* color unificado al secundario (--gray) */
 .conflict-btn-cancel{width:100%} /* anatomía: regla CANCEL canónica */
 
@@ -3525,6 +3532,7 @@ setTimeout(function(){
   </div>
   <div class="conflict-actions">
     <button class="conflict-btn-replace" id="cs-replace-btn" data-i18n="conflict_anadir_btn">Agendar</button>
+    <button class="conflict-btn-both" id="cs-both-btn" style="display:none"><span data-i18n="salir_ir_a_las_dos">Ir a las dos</span><small id="cs-both-sub"></small></button>
     <button class="conflict-btn-keep" id="cs-keep-btn" data-i18n="misc_conservar">Conservar</button>
     <button class="conflict-btn-cancel" data-action="closeConflictSheet" data-i18n="misc_cancelar">Cancelar</button>
   </div>
@@ -3688,7 +3696,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609250733";
+    s.src="/src/main.js?v=202609250838";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

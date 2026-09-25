@@ -72,6 +72,30 @@ function _cityOf(s){
   return (s&&s.venue)?(_resolveVenue(s.venue,vs).city||''):'';
 }
 
+// salidaParaAmbas(a,b) — «Ir a las dos» (25 sep 2026): si la que empieza PRIMERO
+// se deja antes para llegar a la otra, ¿a qué hora hay que salir y cuánto se
+// pierde? Devuelve {primera:'a'|'b', salida:'HH:MM', pierde, total} o null
+// cuando no tiene sentido: distinto día, misma hora de inicio, actividad abierta,
+// o la salida no deja ni diez minutos de la primera. La hora descuenta el MISMO
+// traslado + margen que screensConflict, y se comprueba con él: si recortada
+// siguiera chocando, no se ofrece.
+export const SALIDA_MIN_ESTADIA = 10;
+export function salidaParaAmbas(a,b){
+  if(!a||!b||a.info||b.info||a.day!==b.day) return null;
+  const aS=toMin(a.time), bS=toMin(b.time);
+  if(aS===bS) return null;
+  const [p,q,cual]=aS<bS?[a,b,'a']:[b,a,'b'];
+  const travel=(p.venue&&q.venue)?travelMins(p.venue,q.venue):0;
+  const sal=toMin(q.time)-Math.max(FESTIVAL_BUFFER, travel+FESTIVAL_BUFFER);
+  const pS=toMin(p.time);
+  const total=blockDuration({...p,salida:undefined});
+  if(sal-pS<SALIDA_MIN_ESTADIA||sal>=pS+total) return null;
+  const hh=String(Math.floor(sal/60)).padStart(2,'0'), mm=String(sal%60).padStart(2,'0');
+  const salida=`${hh}:${mm}`;
+  if(screensConflict({...p,salida},q)) return null;
+  return {primera:cual, salida, pierde:pS+total-sal, total};
+}
+
 export function screensConflictReason(a,b){
   if(!screensConflict(a,b)) return null;
   // Mismos fines que screensConflict (Q&A solo cuenta si hay traslado).
@@ -466,6 +490,9 @@ export function syncScheduleWithCatalog(schedule, films){
     if(!live) return e;
     const out={...live,_title:e._title};
     if(e._squeezed) out._squeezed=e._squeezed;
+    // La salida es una decisión del USUARIO sobre esa entrada, no un dato del
+    // catálogo: sin esta línea «Ir a las dos» se deshacía solo al recargar.
+    if(e.salida) out.salida=e.salida;
     return out;
   });
 }

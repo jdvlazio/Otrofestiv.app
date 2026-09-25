@@ -14,7 +14,7 @@ const assert = require('node:assert');
 const { loadDomain } = require('../lib/load-domain.js');
 
 const { screensConflictReason } = loadDomain({
-  functions: ['toMin', 'parseDur', 'blockDuration', 'durationForTravel', '_resolveVenue', 'effectiveDuration', 'venueTravelMins',
+  functions: ['toMin', 'parseDur', '_cutSalida', 'blockDuration', 'durationForTravel', '_resolveVenue', 'effectiveDuration', 'venueTravelMins',
               'travelMins', 'screensConflict', 'screensConflictReason', '_cityOf'],
   globals: {
     FESTIVAL_BUFFER: 15,
@@ -94,7 +94,7 @@ test('días distintos → null (delega en screensConflict)', () => {
 // fábrica local: estos casos necesitan sedes CON ciudad declarada
 function loadReason(venues){
   return loadDomain({
-    functions: ['toMin','parseDur','blockDuration','durationForTravel','_resolveVenue','effectiveDuration',
+    functions: ['toMin','parseDur','_cutSalida', 'blockDuration','durationForTravel','_resolveVenue','effectiveDuration',
                 'venueTravelMins','travelMins','screensConflict','screensConflictReason','_cityOf'],
     globals: { FESTIVAL_BUFFER:15, FESTIVAL_TRANSPORT:'transit',
                FESTIVAL_CONFIG:{ test:{ venues } }, _activeFestId:'test', DEFAULT_DURATION_MIN:90 },
