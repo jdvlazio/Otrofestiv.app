@@ -1494,7 +1494,7 @@ test('T83 — Diario Luz: muro limpio, estrellas afuera, y la negación se apaga
       // estrella opaca de la fila, no una marca encima del póster)
       assumedLimpia: cA ? !cA.querySelector('.dw-poster > :not(img)') && cA.querySelectorAll('.dw-star.on').length === 0 : null,
       // negada: apagada, con el ojo tachado en su FILA, y NO cuenta en la banda
-      negadaOff: cN ? !!cN.querySelector('.dw-row .dw-ctrl[data-action="toggleWatched"]') && !!cN.querySelector('.dw-poster.dw-off') : null,
+      negadaOff: cN ? !!cN.querySelector('.dw-row .dw-ctrl[data-action="diaryToggleVista"]') && !!cN.querySelector('.dw-poster.dw-off') : null,
     };
   });
   expect(r.alFinal, 'el Diario cierra el tab, después de Sugerencias').toBe(true);
@@ -1647,14 +1647,17 @@ test('T86 — Diario: el afiche es solo afiche; los controles viven debajo', asy
     const cal = byTitle(s[0].title), sinCal = byTitle(s[1].title), negada = byTitle(s[2].title);
     const bajoElAfiche = c => { const p = c.querySelector('.dw-poster'), row = c.querySelector('.dw-row');
       return !!p && !!row && row.getBoundingClientRect().top >= p.getBoundingClientRect().bottom - 1; };
-    const centrado = c => { const row = c.querySelector('.dw-row'), el = row.firstElementChild;
-      const rr = row.getBoundingClientRect(), er = el.getBoundingClientRect();
-      return Math.abs((er.left + er.right) / 2 - (rr.left + rr.right) / 2) <= 2; };
+    // Centrado el GRUPO de controles (25 sep 2026: la fila lleva calificar + el
+    // ojo «no la vi», aprobados por Juan): se mide del primero al último.
+    const centrado = c => { const row = c.querySelector('.dw-row');
+      const a = row.firstElementChild.getBoundingClientRect(), z = row.lastElementChild.getBoundingClientRect();
+      const rr = row.getBoundingClientRect();
+      return Math.abs((a.left + z.right) / 2 - (rr.left + rr.right) / 2) <= 2; };
     return {
       nadaEncima: cards.every(c => !c.querySelector('.dw-poster > :not(img)')),
       posterAbreFicha: cards.every(c => c.querySelector('.dw-poster')?.classList.contains('js-open-pel')),
       // la negada ofrece el ojo; la no calificada, la estrella; la calificada, sus estrellas
-      negadaOjo: !!negada?.querySelector('.dw-ctrl[data-action="toggleWatched"]'),
+      negadaOjo: !!negada?.querySelector('.dw-ctrl[data-action="diaryToggleVista"]'),
       sinCalEstrella: !!sinCal?.querySelector('.dw-ctrl-star[data-action="openRatingSheet"]'),
       calEstrellas: cal?.querySelectorAll('.dw-stars .dw-star.on').length,
       negadaSinEstrella: !negada?.querySelector('.dw-ctrl-star'),
