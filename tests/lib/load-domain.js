@@ -180,7 +180,7 @@ function extractObject(source, name) {
 }
 
 const DEFAULT_FNS = [
-  'toMin', 'minToStr', 'parseDur', 'durEstimada', 'blockDuration', 'effectiveDuration', 'durationForTravel', 'screeningEndDate',
+  'toMin', 'minToStr', 'parseDur', 'durEstimada', '_cutSalida', 'blockDuration', 'effectiveDuration', 'durationForTravel', 'screeningEndDate',
   'screeningEndMin', 'screeningEnded', 'screeningNow', 'abiertaFase',
   '_resolveVenue', 'venueTravelMins', 'travelMins',
   'screensConflict', 'verifyPlan', '_cityOf', // helper local de schedule.js (kind 'ciudad')

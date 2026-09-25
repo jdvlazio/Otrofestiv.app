@@ -11,7 +11,7 @@
 import { FESTIVAL_CONFIG } from '../config.js';
 import { toMin, minToStr, _durMatch, parseDur, _festDate, festivalEnded } from '../domain/time.js';
 import { _resolveVenue } from '../domain/festival.js';
-import { blockDuration, effectiveDuration, durationForTravel, screeningPassed, _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm } from '../domain/film.js';
+import { _cutSalida, blockDuration, effectiveDuration, durationForTravel, screeningPassed, _djb2, _titleSeed, _mulberry32, shuffle, scoreFilm } from '../domain/film.js';
 // screeningPlannable: NO lo usa este módulo directamente — lo consume el eval de
 // _mkCalcWorker (_SCHED_PURE_FNS). Sin este import el build del worker moría con
 // ReferenceError y TODO cálculo caía al fallback síncrono en el main thread —
@@ -33,7 +33,7 @@ import { storage } from '../storage/storage.js';
 // Estas se proveen como worker-local en _mkCalcWorker._venueFns.
 const _SCHED_PURE_FNS = [
   'toMin','minToStr','_durMatch','parseDur','_festDate','_resolveVenue',
-  'blockDuration','effectiveDuration','durationForTravel','screensConflict','screeningPassed',
+  '_cutSalida','blockDuration','effectiveDuration','durationForTravel','screensConflict','screeningPassed',
   'isScreeningBlocked','screeningPlannable','plannableScreens','_djb2','_titleSeed','_mulberry32',
   'shuffle','scoreFilm','sortScreensByStrategy','computeScenarios'
 ];

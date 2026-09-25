@@ -17,14 +17,14 @@ import { _getItemPoster, _mkCortoItemHtml, _posterStyle, _posterThumb, dayLabel,
 import { countryToFlags } from '../domain/banderas.js';
 export { countryToFlags };
 import { closeAvSheet, closePVRating, closePrioLimit } from '../view/sheets.js';
-import { showConflictModal, showToast, _toastArriba } from '../view/feedback.js';
+import { showActionModal, showConflictModal, showToast, _toastArriba } from '../view/feedback.js';
 import { renderAgenda, renderAvBlocks, renderDiaryHTML } from '../view/agenda.js';
 import { runCalc } from './calc.js';
 import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
 import { dayFullyPassed, durEstimada, festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed, blockDuration, premiereBadgeKey} from '../domain/film.js';
-import { sameEntry, screensConflictReason, plannableScreens } from '../domain/schedule.js';
+import { sameEntry, screensConflict, screensConflictReason, plannableScreens, salidaParaAmbas } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
 // Vivía acá un driver rAF que pisaba radio+opacidad por frame. Medido en device
 // con el video de Juan (7 de 7 aperturas): progresaba hasta ~68%, se congelaba
@@ -875,6 +875,20 @@ export function openConflictSheet(incomingTitle, incomingScreen, existingEntry){
   if(btn) btn.onclick=confirmConflictReplace;
   if(keepBtn) keepBtn.onclick=closeConflictSheet;
 
+  // «Ir a las dos» (25 sep 2026): solo si salir de la primera deja llegar a la
+  // otra Y la nueva no choca con NADA más del Plan. Nunca lo propone el planeador.
+  const bothBtn=document.getElementById('cs-both-btn');
+  const _ambas=_salidaOfrecible(incomingTitle, incomingScreen, existingEntry);
+  if(bothBtn){
+    bothBtn.style.display=_ambas?'':'none';
+    if(_ambas){
+      const _p=_ambas.primera==='a'?{...incomingScreen,_title:incomingTitle}:existingEntry;
+      const _sub=document.getElementById('cs-both-sub');
+      if(_sub) _sub.textContent=t('salir_sub',{title:_tituloCorto(_p._title),h:_ambas.salida});
+      bothBtn.onclick=()=>confirmConflictBoth(_ambas);
+    }
+  }
+
   document.getElementById('conflict-sheet-overlay').classList.add('open');
   document.getElementById('conflict-sheet').classList.add('open');
   _pushSheetState();
@@ -884,6 +898,68 @@ export function closeConflictSheet(){
   _conflictPending=null;
   document.getElementById('conflict-sheet-overlay').classList.remove('open');
   document.getElementById('conflict-sheet').classList.remove('open');
+}
+
+function _tituloCorto(tt){
+  // Dentro de una frase: la parte antes de «:» («Presentación del libro») y sin
+  // puntos suspensivos a mitad de oración.
+  const{displayTitle:dt}=parseProgramTitle(tt||'');
+  const c=dt.split(':')[0].trim();
+  return c.length>32?c.slice(0,30)+'…':c;
+}
+
+function _salidaOfrecible(incomingTitle, incomingScreen, existingEntry){
+  const r=salidaParaAmbas(incomingScreen, existingEntry);
+  if(!r) return null;
+  const inc={...incomingScreen,_title:incomingTitle};
+  const primera=r.primera==='a'?inc:existingEntry;
+  const otras=((savedAgenda&&savedAgenda.schedule)||[]).filter(s=>!sameEntry(s,existingEntry));
+  // la nueva (recortada si es la primera) no puede chocar con el resto del Plan
+  const nueva=r.primera==='a'?{...inc,salida:r.salida}:inc;
+  if(otras.some(s=>screensConflict(nueva,s))) return null;
+  return {...r, primeraEsNueva: primera===inc};
+}
+
+function confirmConflictBoth(r){
+  if(!_conflictPending) return;
+  const{incomingTitle, incomingScreen, existingEntry}=_conflictPending;
+  const _primera=r.primera==='a'?{...incomingScreen,_title:incomingTitle}:existingEntry;
+  const _hacer=()=>{
+    commitPlan(a=>{const b=a||{schedule:[]};return {...b,
+      schedule: [
+        ...b.schedule.map(s=>(!r.primeraEsNueva&&sameEntry(s,existingEntry))?{...s,salida:r.salida}:s),
+        {...incomingScreen,_title:incomingTitle,...(r.primeraEsNueva?{salida:r.salida}:{})}
+      ].sort((x,y)=>x.day_order!==y.day_order?x.day_order-y.day_order:toMin(x.time)-toMin(y.time))
+    };});
+    saveSavedAgenda();
+    const{displayTitle:dt}=parseProgramTitle(incomingTitle);
+    closeConflictSheet();
+    showToast(`${ICONS.calendar} ${t('toast_en_tu_plan',{title:dt.length>22?dt.slice(0,20)+'…':dt})}`,'info');
+    renderAgenda();
+  };
+  // Segunda advertencia, solo si cuesta mucho: la mitad o más de la primera.
+  if(r.pierde*2>=r.total){
+    const _esFilm=(_primera.type||'film')!=='event';
+    const _vista=Math.round((r.total-r.pierde)/r.total*100);
+    const body=`<div class="salir-bar"><i style="width:${_vista}%"></i><s style="width:${100-_vista}%"></s></div>`
+      +(_esFilm?t('salir_pierde_final',{n:r.pierde,total:r.total})
+               :t('salir_pierde',{n:r.pierde,total:r.total,title:_tituloCorto(_primera._title)}));
+    showActionModal(t('salir_mitad_titulo'),body,t('salir_ir_a_las_dos'),_hacer,t('salir_volver'));
+    return;
+  }
+  _hacer();
+}
+
+// «Quedarme hasta el final» — deshace la salida: la entrada vuelve a su fin
+// real y el Plan vuelve a mostrar el conflicto de siempre.
+export function quedarmeHastaFinal(title, day, time){
+  showActionModal(t('salir_tag',{h:((savedAgenda&&savedAgenda.schedule)||[]).find(s=>s._title===title&&s.day===day&&s.time===time)?.salida||''}),
+    '', t('salir_quedarme'), ()=>{
+      commitPlan(a=>{const b=a||{schedule:[]};return {...b,
+        schedule: b.schedule.map(s=>(s._title===title&&s.day===day&&s.time===time)?(({salida,...x})=>x)(s):s)};});
+      saveSavedAgenda();
+      renderAgenda();
+    }, t('misc_cancelar'));
 }
 
 function confirmConflictReplace(){

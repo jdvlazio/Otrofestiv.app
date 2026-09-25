@@ -13,7 +13,7 @@ const assert = require('node:assert');
 const { loadDomain } = require('../lib/load-domain.js');
 
 const D = () => loadDomain({ functions: ['verifyPlan', 'screensConflict', 'screeningPassed', 'sameEntry',
-  'toMin', 'parseDur', 'effectiveDuration', 'blockDuration', 'durationForTravel', 'travelMins',
+  'toMin', 'parseDur', 'effectiveDuration', '_cutSalida', 'blockDuration', 'durationForTravel', 'travelMins',
   'venueTravelMins', '_resolveVenue', 'screeningEndMin', 'screeningEndDate', '_cityOf'],
   globals: { FESTIVAL_CONFIG: { f: { venues: {} } }, _activeFestId: 'f',
              FESTIVAL_BUFFER: 15, FESTIVAL_TRANSPORT: 'driving', SIM_TIME: null } });
