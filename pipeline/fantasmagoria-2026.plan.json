@@ -1,0 +1,17 @@
+{
+ "_nota": "PRE-ONBOARDING. Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín (15–25 oct 2026, lema «Asedios: las murallas del miedo») publicó sus siete selecciones y todavía no la parrilla: ni día, ni hora, ni sede de ninguna función. Igual que FILCMAR no hay crudo sino catálogo, y se enriquece porque cada obra trae director, país, año y duración. La fuente es TEXTO (la página /edicion-2026/ de su web), cruzada con las tres noticias de cortos del 24 sep. Pendiente para montar: la parrilla, el acceso, el afiche 2026 (publicado el 15 jul) y el nombre de la sección colombiana, que la página escribe de dos maneras.",
+ "radar": 963,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/fantasmagoria-2026-catalogo.py",
+   "que": "las siete selecciones de /edicion-2026/ → catálogo (47 obras), con los cortos cruzados contra sus tres noticias"
+  },
+  {
+   "cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/fantasmagoria-2026-catalogo.json",
+   "que": "catálogo → enriquecido (TMDB + Letterboxd, mismo candado que enriquecer.py; busca también el título original y el inglés)"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/fantasmagoria-2026-catalogo-enriquecido.json": "las fichas TMDB de las 47 obras del catálogo (37 verificadas), que escribe el paso 2. Es el trabajo que el montaje reusa cuando salga la parrilla: sin versionarlo, habría que volver a sondear TMDB obra por obra."
+ }
+}
