@@ -1,0 +1,17 @@
+{
+ "_nota": "PRE-ONBOARDING. Mamut 11 — Festival de memoria audiovisual (Medellín, 5–11 oct 2026) publicó su Selección Oficial, 16 cortos en dos selecciones (Cortos Internacionales y Cortos Nacionales), y todavía no la parrilla. Como FILCMAR y Fantasmagoría: catálogo sin crudo. La fuente son las LÁMINAS del carrusel p/DdufDCkgX6- (25 sep), que dan año y duración; el pie no los da. Leídas a ojo y confirmadas por el OCR de las mismas láminas y por el pie. Pendiente para montar: la parrilla (el post la anuncia «en los próximos días»), sedes y acceso de las proyecciones, el afiche #11, y contar lo abierto al público antes de montar (criterio de volumen de Juan). Los tres laboratorios con fecha van al crudo cuando se monte, no a este catálogo.",
+ "radar": 964,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/mamut-2026-catalogo.py",
+   "que": "las láminas 1 y 2 de la Selección Oficial → catálogo (16 obras), leídas a ojo y confirmadas por el OCR y por el pie"
+  },
+  {
+   "cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/mamut-2026-catalogo.json",
+   "que": "catálogo → enriquecido (TMDB + Letterboxd, mismo candado que enriquecer.py)"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/mamut-2026-catalogo-enriquecido.json": "las fichas TMDB de las 16 obras (9 verificadas), que escribe el paso 2; el montaje las reusa cuando salga la parrilla."
+ }
+}
