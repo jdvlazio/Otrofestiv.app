@@ -18,6 +18,7 @@ struct NextUp: Codable {
     var endEpoch: Double? = nil   // fin de la obra → barra/anillo y «Termina en N min»
     var poster: String? = nil     // path del póster (el widget lo pinta del caché en disco)
     var posterEditorial: Bool = false  // still 16:9: el widget NO lo mete en un 2:3 (23 sep 2026)
+    var delayMin: Int? = nil          // retraso v2: empezó N min tarde (26 sep 2026)
 
     var start: Date { Date(timeIntervalSince1970: startEpoch) }
     var end: Date? { endEpoch.map { Date(timeIntervalSince1970: $0) } }
@@ -25,6 +26,12 @@ struct NextUp: Codable {
     func progress(at now: Date) -> Double? {
         guard isLive(at: now), let e = end else { return nil }
         return min(1, max(0, now.timeIntervalSince(start) / e.timeIntervalSince(start)))
+    }
+    // Tramo de ESPERA al inicio de la barra/anillo (0 sin retraso).
+    var waitFraction: Double {
+        guard let d = delayMin, d > 0, let e = end else { return 0 }
+        let total = e.timeIntervalSince(start); guard total > 0 else { return 0 }
+        return min(1, Double(d * 60) / total)
     }
     func minutesLeft(at now: Date) -> Int? {
         guard isLive(at: now), let e = end else { return nil }
