@@ -37,7 +37,13 @@ struct Provider: TimelineProvider {
             while t < end && t < cap { dates.append(t); t += 60 }
             dates.append(end.addingTimeInterval(1))
         }
-        return dates
+        // Relevancia (25 sep 2026): una entrada 30 min antes de la próxima, para
+        // que el Smart Stack la suba ANTES de que empiece.
+        if let n = snap?.next {
+            let pre = n.start.addingTimeInterval(-Self.preMinutes * 60)
+            if pre > now && pre < now.addingTimeInterval(24 * 3600) { dates.append(pre) }
+        }
+        return dates.sorted()
     }
     static func refreshDate(from now: Date, snap: PlanSnapshot?) -> Date {
         if let cur = snap?.current, let end = cur.end, end > now { return end.addingTimeInterval(2) }
@@ -49,10 +55,20 @@ struct Provider: TimelineProvider {
     static func entry(at date: Date, snap: PlanSnapshot?) -> NextUpEntry {
         for n in [snap?.current, snap?.next].compactMap({ $0 }) where n.isLive(at: date) {
             return NextUpEntry(date: date, next: n,
-                               live: LiveState(fraction: n.progress(at: date) ?? 0, minutesLeft: n.minutesLeft(at: date) ?? 0))
+                               live: LiveState(fraction: n.progress(at: date) ?? 0, minutesLeft: n.minutesLeft(at: date) ?? 0),
+                               relevance: TimelineEntryRelevance(score: 100, duration: (n.end ?? date).timeIntervalSince(date)))
         }
-        return NextUpEntry(date: date, next: snap?.next ?? snap?.current, live: nil)
+        let nx = snap?.next ?? snap?.current
+        // «Lo más parecido a Now Playing» sin serlo (Juan, 25 sep 2026): mientras
+        // corre una función de tu Plan el Smart Stack sube esta tarjeta sola (100);
+        // en los 30 min previos, también (60). Fuera de eso no compite (0).
+        var rel = TimelineEntryRelevance(score: 0)
+        if let n = nx, n.start > date, n.start.timeIntervalSince(date) <= Self.preMinutes * 60 {
+            rel = TimelineEntryRelevance(score: 60, duration: n.start.timeIntervalSince(date))
+        }
+        return NextUpEntry(date: date, next: nx, live: nil, relevance: rel)
     }
+    static let preMinutes: Double = 30
 }
 
 struct LiveState: Equatable { let fraction: Double; let minutesLeft: Int }
@@ -61,6 +77,7 @@ struct NextUpEntry: TimelineEntry {
     let date: Date
     let next: NextUp?
     let live: LiveState?    // nil = «próxima»; con valor = «en curso», con progreso
+    var relevance: TimelineEntryRelevance? = nil   // cuánto sube en el Smart Stack
 }
 
 // ── Vista por familia ───────────────────────────────────────────────────────
