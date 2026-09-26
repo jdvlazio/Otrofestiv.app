@@ -71,11 +71,16 @@ def enriquecer_obra(f, key, alias):
     # Va DESPUÉS del título del festival, no antes: el original es el plan B.
     # Y no relaja nada — lo que encuentre sigue pasando por ficha_verifica().
     consultas = list(variantes(f['titulo'], alias))
-    orig = (f.get('titulo_original') or '').strip()
-    if orig and norm(orig) != norm(f['titulo']):
-        for q in variantes(orig, alias):
-            if q not in consultas:
-                consultas.append(q)
+    # Y EL INGLÉS, de plan C (26 sep 2026). Fantasmagoría nombra dos cortos
+    # animados en español en su catálogo y en inglés en su noticia
+    # —«Bestias de la Muerte» / «Beasts of Death»—, y la ficha de TMDB de
+    # un corto reciente suele estar solo con el de su país. Mismo candado.
+    for extra in (f.get('titulo_original'), f.get('titulo_en')):
+        extra = (extra or '').strip()
+        if extra and norm(extra) != norm(f['titulo']):
+            for q in variantes(extra, alias):
+                if q not in consultas:
+                    consultas.append(q)
     for q in consultas:
         for lang in ('es-ES', 'en-US'):
             res = tmdb_get('/search/movie', key, query=q, language=lang,
