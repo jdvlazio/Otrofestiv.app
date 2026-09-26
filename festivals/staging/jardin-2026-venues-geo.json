@@ -16,11 +16,12 @@
   "_nota": "LA VERIFICÓ JUAN, con el pin de Google Maps (20 sep 2026). En Google el sitio se llama «Coliseo Cubierto» y en OpenStreetMap «Coliseo del Café» (5.595832,-75.814205, a unos 30 m): es el mismo complejo deportivo, junto al Estadio Andrés Escobar. El festival lo llama «Coliseo Municipal» y ese es el nombre que publicamos — la palabra la pone el festival."
  },
  "Escuela Jahel Peláez Montoya": {
-  "lat": 5.598333,
-  "lng": -75.820833,
-  "_prec": "nominatim",
-  "_match": "Escuela Urb Jahel Pelaez Montoya, Calle 8, Cabecera Municipal de Jardín, Jardín, Cabecera ",
-  "n": 0
+  "n": 0,
+  "lat": 5.5980302,
+  "lng": -75.8171352,
+  "_prec": "manual",
+  "_match": "Google Maps «Escuela Jahel Peláez Montoya», Cl. 12 #31a 3-101, Jardín, Antioquia — Plus Code H5XM+64",
+  "_nota": "LO VIO JUAN EN LA APP (26 sep 2026): el pin no era el de la escuela. Estaba el de Nominatim (5.598333,-75.820833 — «Escuela Urb Jahel Pelaez Montoya, Calle 8» en OpenStreetMap), a unos 410 m al oeste del de Google (Cl. 12 #31a). Las dos fuentes externas se contradicen, y desempata el MAPA OFICIAL del festival (IG p/DdhXOGxgS3U, lámina 4, 20 sep): el mapa está rotado —su arriba apunta al sureste, hacia el Coliseo—, y con esa orientación las otras cuatro sedes calzan con sus pines y la escuela (3) queda a dos o tres cuadras de la Basílica HACIA el Coliseo. El pin de Google queda ahí (~207 m al SE de la Basílica); el de OSM, del lado contrario (~230 m al O). La sede es donde el festival mudó las proyecciones de la cancha Moisés Rojas Peláez tras el sismo."
  },
  "Placa deportiva Simón Bolívar": {
   "n": 0,
@@ -39,7 +40,7 @@
  },
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-09-23"
+  "capturado": "2026-09-26"
  },
  "Fonda Hotel Hacienda Balandú Comfenalco": {
   "n": 0,
