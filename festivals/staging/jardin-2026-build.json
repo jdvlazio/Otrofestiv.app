@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festicinejardin.com (la ficha de cada obra) + las láminas de Instagram de @festicinejardin (día, hora, sede y el estreno)",
-  "capturado": "2026-09-24",
+  "capturado": "2026-09-26",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 811,
@@ -149,11 +149,12 @@
   "Escuela Jahel Peláez Montoya - Jardín": {
    "short": "Escuela Jahel Peláez Montoya",
    "city": "Jardín",
-   "lat": 5.598333,
-   "lng": -75.820833,
-   "_prec": "nominatim",
-   "_match": "Escuela Urb Jahel Pelaez Montoya, Calle 8, Cabecera Municipal de Jardín, Jardín, Cabecera ",
-   "n": 0
+   "n": 0,
+   "lat": 5.5980302,
+   "lng": -75.8171352,
+   "_prec": "manual",
+   "_match": "Google Maps «Escuela Jahel Peláez Montoya», Cl. 12 #31a 3-101, Jardín, Antioquia — Plus Code H5XM+64",
+   "_nota": "LO VIO JUAN EN LA APP (26 sep 2026): el pin no era el de la escuela. Estaba el de Nominatim (5.598333,-75.820833 — «Escuela Urb Jahel Pelaez Montoya, Calle 8» en OpenStreetMap), a unos 410 m al oeste del de Google (Cl. 12 #31a). Las dos fuentes externas se contradicen, y desempata el MAPA OFICIAL del festival (IG p/DdhXOGxgS3U, lámina 4, 20 sep): el mapa está rotado —su arriba apunta al sureste, hacia el Coliseo—, y con esa orientación las otras cuatro sedes calzan con sus pines y la escuela (3) queda a dos o tres cuadras de la Basílica HACIA el Coliseo. El pin de Google queda ahí (~207 m al SE de la Basílica); el de OSM, del lado contrario (~230 m al O). La sede es donde el festival mudó las proyecciones de la cancha Moisés Rojas Peláez tras el sismo."
   },
   "Hotel Hacienda Balandú - Jardín": {
    "short": "Hotel Hacienda Balandú",
@@ -2046,7 +2047,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-24T23:04:57",
+  "fecha": "2026-09-26T12:23:09",
   "plan_sha": "07feb98440325160",
   "paso": 13,
   "cmd": "python3 pipeline/ensamblar.py jardin-2026"
