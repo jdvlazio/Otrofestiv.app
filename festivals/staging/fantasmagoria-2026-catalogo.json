@@ -1,0 +1,462 @@
+{
+ "_provenance": {
+  "fuente": "https://festivalfantasmagoriamedellin.com/edicion-2026/ (las siete selecciones, con texto) + las tres noticias de cortos del 24 sep como segunda lectura",
+  "capturado": "2026-09-26"
+ },
+ "obras": [
+  {
+   "titulo": "Huo zhe yan (The Furious)",
+   "director": "Kenji Tanigaki",
+   "pais": "Hong Kong",
+   "anio": 2025,
+   "duracion_min": 113,
+   "genero": "Acción",
+   "seccion": "Selección Oficial Largometrajes de Ficción",
+   "titulo_original": "Huo zhe yan",
+   "titulo_en": "The Furious",
+   "estreno": "Estreno colombiano"
+  },
+  {
+   "titulo": "Hablando con Extraños",
+   "director": "Adrián García Bogliano",
+   "pais": "México",
+   "anio": 2026,
+   "duracion_min": 104,
+   "genero": "Terror",
+   "seccion": "Selección Oficial Largometrajes de Ficción",
+   "estreno": "Estreno colombiano"
+  },
+  {
+   "titulo": "Ghost in the Cell",
+   "director": "Joko Anwar",
+   "pais": "Indonesia y Corea del Sur",
+   "anio": 2026,
+   "duracion_min": 106,
+   "genero": "Terror, comedia",
+   "seccion": "Selección Oficial Largometrajes de Ficción",
+   "estreno": "Estreno suramericano"
+  },
+  {
+   "titulo": "Motherwitch",
+   "director": "Minos Papas",
+   "pais": "Chipre, Macedonia y Estados Unidos",
+   "anio": 2026,
+   "duracion_min": 104,
+   "genero": "Terror, fantasía",
+   "seccion": "Selección Oficial Largometrajes de Ficción",
+   "estreno": "Estreno suramericano"
+  },
+  {
+   "titulo": "You Are The Film",
+   "director": "Makoto Ueda",
+   "pais": "Japón",
+   "anio": 2026,
+   "duracion_min": 68,
+   "genero": "Ciencia ficción, fantasía",
+   "seccion": "Selección Oficial Largometrajes de Ficción",
+   "estreno": "Estreno latinoamericano"
+  },
+  {
+   "titulo": "El Despertar",
+   "director": "Jaime Osorio Marquez, Federico Durán y José Luis Rugeles",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 96,
+   "genero": "Terror",
+   "seccion": "Selección Oficial Largometrajes de Ficción",
+   "estreno": "Estreno colombiano"
+  },
+  {
+   "titulo": "Coração das Trevas (Heart of Darkness)",
+   "director": "Rogério Nunes",
+   "pais": "Brasil",
+   "anio": 2025,
+   "duracion_min": 84,
+   "genero": "Animación, thriller",
+   "seccion": "Selección Oficial Largometrajes de Ficción",
+   "titulo_original": "Coração das Trevas",
+   "titulo_en": "Heart of Darkness",
+   "estreno": "Estreno colombiano"
+  },
+  {
+   "titulo": "Familia Teme Enfrentar Una Nueva Noche de Terror",
+   "director": "Cristian Ponce",
+   "pais": "Argentina",
+   "anio": 2026,
+   "duracion_min": 81,
+   "genero": "Terror",
+   "seccion": "Selección Oficial Largometrajes de Ficción",
+   "estreno": "Estreno colombiano"
+  },
+  {
+   "titulo": "Black Zombie",
+   "director": "Maya Annik Bedward",
+   "pais": "Canadá",
+   "anio": 2026,
+   "duracion_min": 90,
+   "genero": "Documental",
+   "seccion": "Selección Oficial Largometrajes Documentales",
+   "estreno": "Estreno colombiano"
+  },
+  {
+   "titulo": "Theatre of Horrors: The Sordid Story of Paris’ Grand Guignol",
+   "director": "David Gregory",
+   "pais": "Francia",
+   "anio": 2025,
+   "duracion_min": 90,
+   "genero": "Documental",
+   "seccion": "Selección Oficial Largometrajes Documentales",
+   "estreno": "Estreno Suramericano"
+  },
+  {
+   "titulo": "Horror and Love",
+   "director": "Joaquín Oristrell",
+   "pais": "España",
+   "anio": 2026,
+   "duracion_min": 75,
+   "genero": "Documental",
+   "seccion": "Selección Oficial Largometrajes Documentales",
+   "estreno": "Estreno colombiano"
+  },
+  {
+   "titulo": "Hammer: Heroes, Legends and Monsters",
+   "director": "Benjamin Field",
+   "pais": "Inglaterra",
+   "anio": 2024,
+   "duracion_min": 90,
+   "genero": "Documental",
+   "seccion": "Selección Oficial Largometrajes Documentales",
+   "estreno": "Estreno latinoamericano"
+  },
+  {
+   "titulo": "Assault on Precinct 13",
+   "director": "John Carpenter",
+   "pais": "Estados Unidos",
+   "anio": 1976,
+   "duracion_min": 91,
+   "genero": "Thriller, acción",
+   "seccion": "Selección Asedio: Las murallas del miedo",
+   "estreno": "Aniversario 50 años"
+  },
+  {
+   "titulo": "Green Room",
+   "director": "Jeremy Saulnier",
+   "pais": "Estados Unidos",
+   "anio": 2015,
+   "duracion_min": 94,
+   "genero": "Thiller",
+   "seccion": "Selección Asedio: Las murallas del miedo"
+  },
+  {
+   "titulo": "Schichinin No Samurai (Seven Samurai)",
+   "director": "Akira Kurosawa",
+   "pais": "Japón",
+   "anio": 1954,
+   "duracion_min": 207,
+   "genero": "Acción, Drama",
+   "seccion": "Selección Asedio: Las murallas del miedo",
+   "titulo_original": "Schichinin No Samurai",
+   "titulo_en": "Seven Samurai"
+  },
+  {
+   "titulo": "Rio Bravo",
+   "director": "Howard Hawks",
+   "pais": "Estados Unidos",
+   "anio": 1959,
+   "duracion_min": 141,
+   "genero": "Western",
+   "seccion": "Selección Asedio: Las murallas del miedo"
+  },
+  {
+   "titulo": "Dèmoni",
+   "director": "Lamberto Bava",
+   "pais": "Italia",
+   "anio": 1985,
+   "duracion_min": 88,
+   "genero": "Terror",
+   "seccion": "Selección Asedio: Las murallas del miedo"
+  },
+  {
+   "titulo": "Remembrance of Night Whispers",
+   "director": "Lucien Leung",
+   "pais": "Canadá",
+   "anio": 2026,
+   "duracion_min": 8,
+   "genero": "Documental, experimental",
+   "seccion": "Selección Oficial Cortometrajes"
+  },
+  {
+   "titulo": "Lady Puritan",
+   "director": "Gustine Füdickar y Justin Streichman",
+   "pais": "Estados Unidos",
+   "anio": 2026,
+   "duracion_min": 16,
+   "genero": "Terror, experimental",
+   "seccion": "Selección Oficial Cortometrajes"
+  },
+  {
+   "titulo": "La Caça",
+   "director": "Marc Martos",
+   "pais": "España",
+   "anio": 2026,
+   "duracion_min": 6,
+   "genero": "Terror",
+   "seccion": "Selección Oficial Cortometrajes",
+   "estreno": "Estreno Colombiano"
+  },
+  {
+   "titulo": "Don´t Watch This",
+   "director": "Danny Piñeros",
+   "pais": "Estados Unidos",
+   "anio": 2024,
+   "duracion_min": 15,
+   "genero": "Terror, thriller",
+   "seccion": "Selección Oficial Cortometrajes",
+   "estreno": "Estreno latinoamericano"
+  },
+  {
+   "titulo": "Te Debo Una",
+   "director": "Santi Capuz & Diego Jiménez",
+   "pais": "España",
+   "anio": 2025,
+   "duracion_min": 11,
+   "genero": "Thriller, comedia",
+   "seccion": "Selección Oficial Cortometrajes"
+  },
+  {
+   "titulo": "Siempre Hay un Monstruo",
+   "director": "Gaston Haag",
+   "pais": "España",
+   "anio": 2026,
+   "duracion_min": 17,
+   "genero": "Terror, comedia",
+   "seccion": "Selección Oficial Cortometrajes"
+  },
+  {
+   "titulo": "Morana",
+   "director": "Ariel de la Garza Davidoff y Michal Vojtech",
+   "pais": "República Checa e Inglaterra",
+   "anio": 2026,
+   "duracion_min": 20,
+   "genero": "Terror",
+   "seccion": "Selección Oficial Cortometrajes",
+   "estreno": "Estreno latinoamericano"
+  },
+  {
+   "titulo": "Que El Cielo Nos Perdone",
+   "director": "Andrés Buitrago",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 16,
+   "genero": "Terror",
+   "seccion": "Selección Oficial Cortometrajes"
+  },
+  {
+   "titulo": "Line 12",
+   "director": "Saskia Stirn y Christopher Schmier",
+   "pais": "Alemania",
+   "anio": 2026,
+   "duracion_min": 9,
+   "genero": "Animación, fantasía",
+   "seccion": "Selección de Cortometrajes Animados"
+  },
+  {
+   "titulo": "Dormilón",
+   "director": "Olivia Marie Valdez",
+   "pais": "Estados Unidos",
+   "anio": 2025,
+   "duracion_min": 10,
+   "genero": "Animación",
+   "seccion": "Selección de Cortometrajes Animados"
+  },
+  {
+   "titulo": "Balada de Peces y Pájaros",
+   "director": "Anny Uribe y Juan José Arévalo",
+   "pais": "Colombia y España",
+   "anio": 2025,
+   "duracion_min": 8,
+   "genero": "Animación",
+   "seccion": "Selección de Cortometrajes Animados"
+  },
+  {
+   "titulo": "La Habitación del Macho Cabrío",
+   "director": "Duban Pinzón",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 12,
+   "genero": "Animación",
+   "seccion": "Selección de Cortometrajes Animados",
+   "titulo_en": "The Devil Room"
+  },
+  {
+   "titulo": "Miseros Morsu",
+   "director": "Dafne Galindo",
+   "pais": "México",
+   "anio": 2025,
+   "duracion_min": 5,
+   "genero": "Animación",
+   "seccion": "Selección de Cortometrajes Animados"
+  },
+  {
+   "titulo": "La Pena No Duerme de Noche",
+   "director": "Martín André y Josefina Montino",
+   "pais": "Chile",
+   "anio": 2025,
+   "duracion_min": 9,
+   "genero": "Animación",
+   "seccion": "Selección de Cortometrajes Animados"
+  },
+  {
+   "titulo": "Trading Cards",
+   "director": "Radheya Jang",
+   "pais": "Inglaterra y Australia",
+   "anio": 2026,
+   "duracion_min": 15,
+   "genero": "Animación",
+   "seccion": "Selección de Cortometrajes Animados"
+  },
+  {
+   "titulo": "Lullaby",
+   "director": "Helena Melin",
+   "pais": "Irlanda",
+   "anio": 2026,
+   "duracion_min": 5,
+   "genero": "Animación",
+   "seccion": "Selección de Cortometrajes Animados"
+  },
+  {
+   "titulo": "Bestias de la Muerte",
+   "director": "Sandra Powers",
+   "pais": "Irlanda",
+   "anio": 2026,
+   "duracion_min": 5,
+   "genero": "Animación",
+   "seccion": "Selección de Cortometrajes Animados",
+   "titulo_en": "Beasts of Death"
+  },
+  {
+   "titulo": "Quazar",
+   "director": "Alejandro Vargas",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 20,
+   "genero": "Fantasía",
+   "seccion": "Selección Latinoamericana de Cortometrajes"
+  },
+  {
+   "titulo": "Mucura",
+   "director": "Fabiano Barros",
+   "pais": "Brasil",
+   "anio": 2026,
+   "duracion_min": 15,
+   "genero": "Terror",
+   "seccion": "Selección Latinoamericana de Cortometrajes"
+  },
+  {
+   "titulo": "Herencia",
+   "director": "Cristóbal Miranda Cáceres",
+   "pais": "Chile",
+   "anio": 2025,
+   "duracion_min": 10,
+   "genero": "Terror",
+   "seccion": "Selección Latinoamericana de Cortometrajes"
+  },
+  {
+   "titulo": "Ubicua",
+   "director": "Juan González Henao",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 13,
+   "genero": "Terror",
+   "seccion": "Selección Latinoamericana de Cortometrajes"
+  },
+  {
+   "titulo": "Contrafrente",
+   "director": "Sean Quinn",
+   "pais": "Argentina",
+   "anio": 2026,
+   "duracion_min": 15,
+   "genero": "Fantasía",
+   "seccion": "Selección Latinoamericana de Cortometrajes"
+  },
+  {
+   "titulo": "Huasi",
+   "director": "Juan Sebastian Torales",
+   "pais": "Argentina",
+   "anio": 2026,
+   "duracion_min": 15,
+   "genero": "Horror",
+   "seccion": "Selección Latinoamericana de Cortometrajes"
+  },
+  {
+   "titulo": "Chaika",
+   "director": "Ingrid Bonilla Rodríguez",
+   "pais": "Colombia y Cuba",
+   "anio": 2025,
+   "duracion_min": 15,
+   "genero": "Ciencia ficción, experimental",
+   "seccion": "Selección de Cortometrajes Colombianos",
+   "_seccion_tambien": "Selección Colombia es Fantástica"
+  },
+  {
+   "titulo": "La Flor del Miedo",
+   "director": "Jorge Flórez Arcila",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 9,
+   "genero": "Terror, fantasía oscura",
+   "seccion": "Selección de Cortometrajes Colombianos",
+   "_seccion_tambien": "Selección Colombia es Fantástica"
+  },
+  {
+   "titulo": "No Vacancy",
+   "director": "Miguel Rodrick",
+   "pais": "Colombia-Estados Unidos",
+   "anio": 2025,
+   "duracion_min": 7,
+   "genero": "Animación, drama surreal",
+   "seccion": "Selección de Cortometrajes Colombianos",
+   "_seccion_tambien": "Selección Colombia es Fantástica"
+  },
+  {
+   "titulo": "No es el Fin del Mundo",
+   "director": "Sebastián Flórez",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 17,
+   "genero": "Terror, drama",
+   "seccion": "Selección de Cortometrajes Colombianos",
+   "_seccion_tambien": "Selección Colombia es Fantástica"
+  },
+  {
+   "titulo": "HDLT",
+   "director": "ARTEFACTUM SUBA",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 18,
+   "genero": "Documental Fantástico, experimental, mockumentary",
+   "seccion": "Selección de Cortometrajes Colombianos",
+   "_seccion_tambien": "Selección Colombia es Fantástica"
+  },
+  {
+   "titulo": "Vientre",
+   "director": "Pablo Sánchez Mejía y Moisés Cataño Rivillas",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 14,
+   "genero": "Ciencia Ficción",
+   "seccion": "Selección de Cortometrajes Colombianos",
+   "_seccion_tambien": "Selección Colombia es Fantástica"
+  },
+  {
+   "titulo": "Pudor Ante el Asalto de los Ojos Furtivos",
+   "director": "Laura María Rodríguez",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 8,
+   "genero": "Animación, experimental",
+   "seccion": "Selección de Cortometrajes Colombianos",
+   "_seccion_tambien": "Selección Colombia es Fantástica"
+  }
+ ]
+}
