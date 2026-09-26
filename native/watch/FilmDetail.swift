@@ -45,7 +45,7 @@ struct FilmDetail: View {
                     if let f = PlanCompute.progress(item, now: ctx.date),
                        let m = PlanCompute.minutesLeft(item, now: ctx.date) {
                         VStack(alignment: .leading, spacing: 5) {
-                            LiveBar(fraction: f, height: 6)
+                            LiveBar(fraction: f, height: 6, wait: PlanCompute.waitFraction(item))
                             HStack {
                                 Text(L.endsIn(m)).font(.footnote).fontWeight(.semibold).monospacedDigit()
                                     .foregroundStyle(OT.warm)
@@ -53,6 +53,10 @@ struct FilmDetail: View {
                                 if let end = PlanCompute.endTimeLabel(item) {
                                     Text(end).font(.footnote).monospacedDigit().foregroundStyle(OT.secondary)
                                 }
+                            }
+                            if PlanCompute.delay(item) > 0 {
+                                Text(L.startedLate(PlanCompute.delay(item)))
+                                    .font(.footnote).fontWeight(.semibold).foregroundStyle(OT.amber)
                             }
                         }
                         .padding(.horizontal, 8)

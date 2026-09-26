@@ -45,13 +45,34 @@ final class PlanStore: ObservableObject {
                 state = .empty; return
             }
             festival = row.festivalId
-            sections = PlanCompute.groupedByDay(schedule)
+            // Retraso v2: mis reportes de esta función («Empezó N min tarde») viven
+            // en screening_reports —la misma fila que escribe el teléfono—. Si la
+            // lectura falla, el plan se muestra igual, sin retrasos.
+            let delays = await Self.myDelays(festival: row.festivalId)
+            sections = PlanCompute.groupedByDay(PlanCompute.applyDelays(schedule, delays))
             defaultDay = PlanCompute.defaultDayIndex(sections, now: Date())
             publishNextUp()
             state = .loaded
         } catch {
             if !silent { state = .error(error.localizedDescription) }
         }
+    }
+
+    private struct DelayRow: Decodable {
+        let screeningKey: String; let delayMin: Int
+        enum CodingKeys: String, CodingKey { case screeningKey = "screening_key", delayMin = "delay_min" }
+    }
+    private static func myDelays(festival: String) async -> [String: Int] {
+        guard let uid = try? await WatchAuthManager.supabase.auth.session.user.id else { return [:] }
+        let rows: [DelayRow]? = try? await WatchAuthManager.supabase
+            .from("screening_reports")
+            .select("screening_key, delay_min")
+            .eq("festival_id", value: festival)
+            .eq("reporter_id", value: uid.uuidString.lowercased())
+            .execute().value
+        var out: [String: Int] = [:]
+        for r in rows ?? [] where r.delayMin > 0 { out[r.screeningKey] = r.delayMin }
+        return out
     }
 
     // Escribe la función EN CURSO y la SIGUIENTE al App Group para la complication

@@ -34,6 +34,9 @@ struct ScheduleItem: Decodable, Identifiable, Hashable {
     // Viaja en el catálogo Y en saved_agenda: verificado en las 2.060 funciones con
     // póster, ninguna sin él. Antes el reloj lo adivinaba por dominio (23 sep 2026).
     var posterSource: String? = nil
+    // Minutos que EMPEZÓ tarde (retraso v2, 25 sep 2026). NO viene en saved_agenda:
+    // lo pone PlanStore desde screening_reports (el mismo reporte del teléfono).
+    var delayMin: Int? = nil
 
     var dayStr: String? { day ?? date }
     var id: String { (dayStr ?? "") + (time ?? "") + title }

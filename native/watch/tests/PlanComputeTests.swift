@@ -42,6 +42,23 @@ enum PlanComputeTests {
         check("minutesLeft 16:08 → 23", PlanCompute.minutesLeft(bp, now: t1608) == 23)
         check("progress 16:08 → 98/121", abs((PlanCompute.progress(bp, now: t1608) ?? -1) - 98.0 / 121.0) < 0.001)
         check("endTimeLabel 16:31", PlanCompute.endTimeLabel(bp) == "16:31")
+
+        // ── Retraso v2 (25 sep 2026): el reporte de Juan — marcó 30 min y el reloj
+        // decía «3 min» cuando faltaban ~33. El retraso CORRE el fin.
+        var bpL = bp; bpL.delayMin = 30
+        check("retraso: endTimeLabel 17:01", PlanCompute.endTimeLabel(bpL) == "17:01")
+        check("retraso: a las 16:28 faltan 33, no 3",
+              PlanCompute.minutesLeft(bpL, now: bpStart.addingTimeInterval(118 * 60)) == 33)
+        check("retraso: sigue EN CURSO pasada la hora programada",
+              PlanCompute.isLive(bpL, now: bpStart.addingTimeInterval(125 * 60)))
+        check("retraso: tramo de espera 30/151", abs(PlanCompute.waitFraction(bpL) - 30.0 / 151.0) < 0.001)
+        check("sin retraso: sin tramo de espera", PlanCompute.waitFraction(bp) == 0)
+        let bpV = ScheduleItem(title: "Bedford Park", day: "2026-09-12", date: nil, time: "14:30",
+                               venue: "TIFF Lightbox", type: nil, duration: "121 min", poster: nil)
+        check("delayKey = cloudScreeningKey de la web",
+              PlanCompute.delayKey(bpV) == "Bedford Park|2026-09-12|14:30|TIFF Lightbox")
+        check("applyDelays pone el retraso por llave",
+              PlanCompute.applyDelays([bpV], ["Bedford Park|2026-09-12|14:30|TIFF Lightbox": 30]).first?.delayMin == 30)
         // redondeo hacia arriba: a 16:30:20 todavía falta 1 min, no 0
         check("minutesLeft 16:30:20 → 1", PlanCompute.minutesLeft(bp, now: bpStart.addingTimeInterval(120 * 60 + 20)) == 1)
         check("minutesLeft en el primer segundo → 121", PlanCompute.minutesLeft(bp, now: bpStart) == 121)
