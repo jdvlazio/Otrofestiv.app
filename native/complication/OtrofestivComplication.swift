@@ -27,28 +27,12 @@ struct Provider: TimelineProvider {
         let entries = Self.timelineDates(from: now, snap: snap).map { Self.entry(at: $0, snap: snap) }
         completion(Timeline(entries: entries, policy: .after(Self.refreshDate(from: now, snap: snap))))
     }
-    // Instantes de la línea de tiempo: ahora; si hay en curso, cada minuto en punto
-    // hasta el fin (máx. 4 h) y uno justo después del fin.
+    // La lógica de fechas vive en PlanSnapshot (SharedPlan.swift), probada.
     static func timelineDates(from now: Date, snap: PlanSnapshot?) -> [Date] {
-        var dates = [now]
-        if let cur = snap?.current, let end = cur.end, end > now {
-            var t = now.addingTimeInterval(60 - now.timeIntervalSince1970.truncatingRemainder(dividingBy: 60))
-            let cap = now.addingTimeInterval(4 * 3600)
-            while t < end && t < cap { dates.append(t); t += 60 }
-            dates.append(end.addingTimeInterval(1))
-        }
-        // Relevancia (25 sep 2026): una entrada 30 min antes de la próxima, para
-        // que el Smart Stack la suba ANTES de que empiece.
-        if let n = snap?.next {
-            let pre = n.start.addingTimeInterval(-Self.preMinutes * 60)
-            if pre > now && pre < now.addingTimeInterval(24 * 3600) { dates.append(pre) }
-        }
-        return dates.sorted()
+        snap?.timelineDates(from: now, preMinutes: preMinutes) ?? [now]
     }
     static func refreshDate(from now: Date, snap: PlanSnapshot?) -> Date {
-        if let cur = snap?.current, let end = cur.end, end > now { return end.addingTimeInterval(2) }
-        if let n = snap?.next, n.start > now { return n.start }
-        return now.addingTimeInterval(30 * 60)
+        snap?.refreshDate(from: now) ?? now.addingTimeInterval(30 * 60)
     }
     // A esa hora: si la «en curso» sigue viva → ella con su progreso; si la siguiente
     // ya arrancó → ella; si no → la siguiente como «próxima».
@@ -58,7 +42,7 @@ struct Provider: TimelineProvider {
                                live: LiveState(fraction: n.progress(at: date) ?? 0, minutesLeft: n.minutesLeft(at: date) ?? 0),
                                relevance: TimelineEntryRelevance(score: 100, duration: (n.end ?? date).timeIntervalSince(date)))
         }
-        let nx = snap?.next ?? snap?.current
+        let nx = snap?.upcoming(after: date) ?? snap?.next ?? snap?.current
         // «Lo más parecido a Now Playing» sin serlo (Juan, 25 sep 2026): mientras
         // corre una función de tu Plan el Smart Stack sube esta tarjeta sola (100);
         // en los 30 min previos, también (60). Fuera de eso no compite (0).

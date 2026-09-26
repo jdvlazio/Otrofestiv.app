@@ -37,6 +37,40 @@ struct NextUp: Codable {
 struct PlanSnapshot: Codable {
     let current: NextUp?
     let next: NextUp?
+
+    // La que está pasando A ESA HORA, sin importar en qué casilla quedó guardada.
+    // «Congelada» (Juan, 26 sep 2026): si el reloj abrió la app ANTES de la función,
+    // la película quedaba en `next`; la esfera solo contaba minuto a minuto la de
+    // `current`, así que el número quedaba quieto hasta 30 min.
+    func live(at date: Date) -> NextUp? {
+        [current, next].compactMap { $0 }.first { $0.isLive(at: date) }
+    }
+    // La próxima que todavía no empezó (para refrescar al inicio y relevancia).
+    func upcoming(after date: Date) -> NextUp? {
+        [current, next].compactMap { $0 }.filter { $0.start > date }.min { $0.start < $1.start }
+    }
+    // Instantes de la línea de tiempo: ahora; si hay una en curso, cada minuto en
+    // punto hasta su fin (máx. 4 h) y uno justo después; 30 min antes de la próxima.
+    func timelineDates(from now: Date, preMinutes: Double = 30) -> [Date] {
+        var dates = [now]
+        if let cur = live(at: now), let end = cur.end {
+            var t = now.addingTimeInterval(60 - now.timeIntervalSince1970.truncatingRemainder(dividingBy: 60))
+            let cap = now.addingTimeInterval(4 * 3600)
+            while t < end && t < cap { dates.append(t); t += 60 }
+            dates.append(end.addingTimeInterval(1))
+        }
+        if let n = upcoming(after: now) {
+            let pre = n.start.addingTimeInterval(-preMinutes * 60)
+            if pre > now && pre < now.addingTimeInterval(24 * 3600) { dates.append(pre) }
+        }
+        return dates.sorted()
+    }
+    // Cuándo pedir una línea nueva: al terminar la en curso; si no, al empezar la próxima.
+    func refreshDate(from now: Date) -> Date {
+        if let cur = live(at: now), let end = cur.end { return end.addingTimeInterval(2) }
+        if let n = upcoming(after: now) { return n.start }
+        return now.addingTimeInterval(30 * 60)
+    }
 }
 
 enum SharedPlan {

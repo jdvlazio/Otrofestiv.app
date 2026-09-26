@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 out="$(mktemp -d)/otf-plancompute-tests"
-swiftc PlanModels.swift WatchStrings.swift PlanCompute.swift tests/PlanComputeTests.swift -o "$out"
+swiftc PlanModels.swift WatchStrings.swift PlanCompute.swift SharedPlan.swift tests/PlanComputeTests.swift -o "$out"
 # Idioma forzado por proceso: cubre la cadena Lang.current → dayLabel (B2).
 echo "── AppleLanguages (es) ──"
 "$out" -AppleLanguages "(es)"
