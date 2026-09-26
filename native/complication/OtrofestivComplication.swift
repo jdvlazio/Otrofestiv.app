@@ -105,8 +105,8 @@ struct WaitBar: View {
         GeometryReader { g in
             ZStack(alignment: .leading) {
                 Capsule().opacity(0.2)
-                Capsule().frame(width: max(3, g.size.width * fraction)).widgetAccentable()
-                if wait > 0 { Capsule().foregroundStyle(BrandColor.amber.opacity(0.75)).frame(width: max(3, g.size.width * min(wait, fraction))) }
+                Capsule().foregroundStyle(BrandColor.amber).frame(width: max(3, g.size.width * fraction)).widgetAccentable()
+                if wait > 0 { Capsule().foregroundStyle(BrandColor.amber.opacity(0.4)).frame(width: max(3, g.size.width * min(wait, fraction))) }
             }
         }.frame(height: 4)
     }
@@ -147,21 +147,21 @@ struct OtrofestivComplicationEntryView: View {
                 Circle().stroke(lineWidth: 5.5).opacity(0.2)
                 Circle().trim(from: 0, to: l.fraction)
                     .stroke(style: StrokeStyle(lineWidth: 5.5, lineCap: .round)).rotationEffect(.degrees(-90))
-                    .widgetAccentable()
+                    .foregroundStyle(BrandColor.amber).widgetAccentable()
                 if l.wait > 0 {
                     Circle().trim(from: 0, to: min(l.wait, l.fraction))
                         .stroke(style: StrokeStyle(lineWidth: 5.5, lineCap: .butt)).rotationEffect(.degrees(-90))
-                        .foregroundStyle(BrandColor.amber.opacity(0.75))
+                        .foregroundStyle(BrandColor.amber.opacity(0.4))
                 }
                 VStack(spacing: 2) {
-                    BrandF().frame(width: 7, height: 9.5).widgetAccentable()
+                    BrandF().frame(width: 7, height: 9.5).foregroundStyle(BrandColor.amber).widgetAccentable()
                     Text("\(l.minutesLeft)").font(.system(size: 17, weight: .bold)).monospacedDigit()
                 }
                 .accessibilityElement(children: .ignore)
                 .accessibilityLabel(L.endsIn(l.minutesLeft))
             } else {
                 VStack(spacing: 2) {
-                    BrandIcon(size: 20).widgetAccentable()
+                    BrandIcon(size: 20).foregroundStyle(BrandColor.amber).widgetAccentable()
                     if let n = entry.next {
                         Text(n.time).font(.system(size: 13, weight: .semibold))
                     }
@@ -171,7 +171,7 @@ struct OtrofestivComplicationEntryView: View {
     }
 
     private var corner: some View {
-        BrandF().frame(width: 11, height: 15).widgetAccentable()
+        BrandF().frame(width: 11, height: 15).foregroundStyle(BrandColor.amber).widgetAccentable()
             .widgetLabel {
                 if let n = entry.next {
                     if let l = entry.live { Text(L.endsIn(l.minutesLeft)) }
@@ -222,21 +222,21 @@ struct OtrofestivComplicationEntryView: View {
                     if let n = entry.next {
                         if let l = entry.live {
                             HStack(spacing: 4) {
-                                BrandIcon(size: 12).widgetAccentable()
+                                BrandIcon(size: 12).foregroundStyle(BrandColor.amber).widgetAccentable()
                                 Text(L.endsIn(l.minutesLeft)).font(.caption2).fontWeight(.semibold).monospacedDigit().lineLimit(1)
                             }
                             Text(n.title).font(.headline).lineLimit(1)
                             WaitBar(fraction: l.fraction, wait: l.wait)
-                            if l.delayMin > 0 { Text(L.startedLate(l.delayMin)).font(.caption2).lineLimit(1).widgetAccentable() }
+                            if l.delayMin > 0 { Text(L.startedLate(l.delayMin)).font(.caption2).lineLimit(1).foregroundStyle(BrandColor.amber).widgetAccentable() }
                         } else {
                             HStack(spacing: 4) {
-                                BrandIcon(size: 12).widgetAccentable()
+                                BrandIcon(size: 12).foregroundStyle(BrandColor.amber).widgetAccentable()
                                 Text("\(n.dayLabel) · \(n.time)").font(.caption2).lineLimit(1)
                             }
                             Text(n.title).font(.headline).lineLimit(2)
                         }
                     } else {
-                        HStack(spacing: 4) { BrandIcon(size: 12).widgetAccentable(); Text(L.noPlanTitle).font(.headline) }
+                        HStack(spacing: 4) { BrandIcon(size: 12).foregroundStyle(BrandColor.amber).widgetAccentable(); Text(L.noPlanTitle).font(.headline) }
                         Text(L.noPlanDetail).font(.caption2).foregroundStyle(.secondary).lineLimit(2)
                     }
                 }
