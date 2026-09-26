@@ -18,6 +18,7 @@ struct NextUp: Codable {
     var endEpoch: Double? = nil   // fin de la obra → barra/anillo y «Termina en N min»
     var poster: String? = nil     // path del póster (el widget lo pinta del caché en disco)
     var posterEditorial: Bool = false  // still 16:9: el widget NO lo mete en un 2:3 (23 sep 2026)
+    var delayMin: Int? = nil          // retraso v2: empezó N min tarde (26 sep 2026)
 
     var start: Date { Date(timeIntervalSince1970: startEpoch) }
     var end: Date? { endEpoch.map { Date(timeIntervalSince1970: $0) } }
@@ -25,6 +26,12 @@ struct NextUp: Codable {
     func progress(at now: Date) -> Double? {
         guard isLive(at: now), let e = end else { return nil }
         return min(1, max(0, now.timeIntervalSince(start) / e.timeIntervalSince(start)))
+    }
+    // Tramo de ESPERA al inicio de la barra/anillo (0 sin retraso).
+    var waitFraction: Double {
+        guard let d = delayMin, d > 0, let e = end else { return 0 }
+        let total = e.timeIntervalSince(start); guard total > 0 else { return 0 }
+        return min(1, Double(d * 60) / total)
     }
     func minutesLeft(at now: Date) -> Int? {
         guard isLive(at: now), let e = end else { return nil }
@@ -37,6 +44,40 @@ struct NextUp: Codable {
 struct PlanSnapshot: Codable {
     let current: NextUp?
     let next: NextUp?
+
+    // La que está pasando A ESA HORA, sin importar en qué casilla quedó guardada.
+    // «Congelada» (Juan, 26 sep 2026): si el reloj abrió la app ANTES de la función,
+    // la película quedaba en `next`; la esfera solo contaba minuto a minuto la de
+    // `current`, así que el número quedaba quieto hasta 30 min.
+    func live(at date: Date) -> NextUp? {
+        [current, next].compactMap { $0 }.first { $0.isLive(at: date) }
+    }
+    // La próxima que todavía no empezó (para refrescar al inicio y relevancia).
+    func upcoming(after date: Date) -> NextUp? {
+        [current, next].compactMap { $0 }.filter { $0.start > date }.min { $0.start < $1.start }
+    }
+    // Instantes de la línea de tiempo: ahora; si hay una en curso, cada minuto en
+    // punto hasta su fin (máx. 4 h) y uno justo después; 30 min antes de la próxima.
+    func timelineDates(from now: Date, preMinutes: Double = 30) -> [Date] {
+        var dates = [now]
+        if let cur = live(at: now), let end = cur.end {
+            var t = now.addingTimeInterval(60 - now.timeIntervalSince1970.truncatingRemainder(dividingBy: 60))
+            let cap = now.addingTimeInterval(4 * 3600)
+            while t < end && t < cap { dates.append(t); t += 60 }
+            dates.append(end.addingTimeInterval(1))
+        }
+        if let n = upcoming(after: now) {
+            let pre = n.start.addingTimeInterval(-preMinutes * 60)
+            if pre > now && pre < now.addingTimeInterval(24 * 3600) { dates.append(pre) }
+        }
+        return dates.sorted()
+    }
+    // Cuándo pedir una línea nueva: al terminar la en curso; si no, al empezar la próxima.
+    func refreshDate(from now: Date) -> Date {
+        if let cur = live(at: now), let end = cur.end { return end.addingTimeInterval(2) }
+        if let n = upcoming(after: now) { return n.start }
+        return now.addingTimeInterval(30 * 60)
+    }
 }
 
 enum SharedPlan {

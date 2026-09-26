@@ -276,6 +276,25 @@ enum PlanComputeTests {
         check("defaultDayIndex recap (último)",
               PlanCompute.defaultDayIndex(secs2, now: PlanCompute.startDate(item("_", "2026-07-10", "08:00"))!) == 1)
 
+        // ── Esfera «congelada» (26 sep 2026) ─────────────────────────────────
+        // La app se abrió ANTES de la función: la película quedó en `next`, no en
+        // `current`. La línea de tiempo debe contar minuto a minuto igual.
+        let fStart = bpStart.timeIntervalSince1970
+        let peli = NextUp(title: "Bedford Park", time: "14:30", venue: nil, dayLabel: "SÁB 12",
+                          startEpoch: fStart, endEpoch: fStart + 121 * 60)
+        let snapPrevio = PlanSnapshot(current: nil, next: peli)
+        let enMedio = bpStart.addingTimeInterval(40 * 60)
+        check("congelada: la que está pasando se encuentra aunque esté en next",
+              snapPrevio.live(at: enMedio)?.title == "Bedford Park")
+        check("congelada: minuto a minuto aunque esté en next (≥ 80 entradas)",
+              snapPrevio.timelineDates(from: enMedio).count >= 80)
+        check("congelada: refresca al terminar, no en 30 min",
+              snapPrevio.refreshDate(from: enMedio) == bpStart.addingTimeInterval(121 * 60 + 2))
+        let antes = bpStart.addingTimeInterval(-3600)
+        check("antes de empezar: refresca al inicio", snapPrevio.refreshDate(from: antes) == bpStart)
+        check("antes de empezar: entrada 30 min antes (relevancia)",
+              snapPrevio.timelineDates(from: antes).contains(bpStart.addingTimeInterval(-1800)))
+
         print("\nPlanCompute: \(passed) passed, \(failed) failed")
         exit(failed == 0 ? 0 : 1)
     }

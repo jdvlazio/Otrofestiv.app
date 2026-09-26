@@ -88,7 +88,8 @@ final class PlanStore: ObservableObject {
                           dayLabel: n.dayStr.map { PlanCompute.dayLabel($0) } ?? "",
                           startEpoch: start.timeIntervalSince1970,
                           endEpoch: PlanCompute.endDate(n)?.timeIntervalSince1970,
-                          poster: n.poster, posterEditorial: PlanCompute.isEditorial(n))
+                          poster: n.poster, posterEditorial: PlanCompute.isEditorial(n),
+                          delayMin: PlanCompute.delay(n) > 0 ? PlanCompute.delay(n) : nil)
         }
         let snap = PlanSnapshot(current: pack(cur), next: pack(nxt))
         guard snap.current != nil || snap.next != nil else { SharedPlan.saveSnapshot(nil); return }
