@@ -150,10 +150,14 @@ private struct LiveRow: View {
                     Text(v).font(.caption2).foregroundStyle(OT.secondary).lineLimit(1)
                 }
                 Spacer(minLength: 4)
-                LiveBar(fraction: PlanCompute.progress(item, now: now) ?? 0)
+                LiveBar(fraction: PlanCompute.progress(item, now: now) ?? 0, wait: PlanCompute.waitFraction(item))
                 if let m = PlanCompute.minutesLeft(item, now: now) {
                     Text(L.endsIn(m)).font(.caption2).fontWeight(.medium).monospacedDigit()
                         .foregroundStyle(OT.warm)
+                }
+                if PlanCompute.delay(item) > 0 {
+                    Text(L.startedLate(PlanCompute.delay(item))).font(.caption2).fontWeight(.semibold)
+                        .foregroundStyle(OT.amber)
                 }
             }
         }

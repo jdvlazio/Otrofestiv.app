@@ -67,11 +67,15 @@ struct FailScreen: View {
 struct LiveBar: View {
     let fraction: Double
     var height: CGFloat = 4
+    var wait: Double = 0      // tramo de ESPERA al inicio (retraso), en ámbar
     var body: some View {
         GeometryReader { g in
             ZStack(alignment: .leading) {
                 Capsule().fill(OT.warm.opacity(0.16))
                 Capsule().fill(OT.warm).frame(width: max(height, g.size.width * fraction))
+                if wait > 0 {
+                    Capsule().fill(OT.amber.opacity(0.7)).frame(width: max(height, g.size.width * min(wait, fraction)))
+                }
             }
         }
         .frame(height: height)

@@ -158,9 +158,28 @@ enum PlanCompute {
         guard let d = item.duration else { return nil }
         return Int(d.filter { $0.isNumber })
     }
+    // Retraso v2 (25 sep 2026): el retraso CORRE la función. startDate sigue
+    // siendo la hora PROGRAMADA (la barra incluye la espera como tramo propio) y el
+    // fin se corre: «Termina en» y la hora de salida ya lo traen. Mismo criterio que
+    // delayedEndMin en la web.
+    static func delay(_ item: ScheduleItem) -> Int { max(0, item.delayMin ?? 0) }
     static func endDate(_ item: ScheduleItem) -> Date? {
         guard let s = startDate(item) else { return nil }
-        return s.addingTimeInterval(TimeInterval((durationMinutes(item) ?? 120) * 60))
+        return s.addingTimeInterval(TimeInterval(((durationMinutes(item) ?? 120) + delay(item)) * 60))
+    }
+    // Fracción de la barra que fue ESPERA (0 sin retraso).
+    static func waitFraction(_ item: ScheduleItem) -> Double {
+        guard delay(item) > 0, let s = startDate(item), let e = endDate(item) else { return 0 }
+        let total = e.timeIntervalSince(s); guard total > 0 else { return 0 }
+        return min(1, Double(delay(item) * 60) / total)
+    }
+    // Llave del reporte: la MISMA de cloudScreeningKey (src/domain/delays.js).
+    static func delayKey(_ item: ScheduleItem) -> String {
+        "\(item.title)|\(item.dayStr ?? "")|\(item.time ?? "")|\(item.venue ?? "")"
+    }
+    static func applyDelays(_ items: [ScheduleItem], _ byKey: [String: Int]) -> [ScheduleItem] {
+        guard !byKey.isEmpty else { return items }
+        return items.map { var i = $0; i.delayMin = byKey[delayKey($0)]; return i }
     }
     static func isLive(_ item: ScheduleItem, now: Date) -> Bool {
         guard let s = startDate(item), let e = endDate(item) else { return false }

@@ -36,6 +36,8 @@ enum L {
     static var phoneUnreachable: String { t("Abrí Otrofestiv en tu iPhone", "Open Otrofestiv on your iPhone") }
     static var phoneNoSession: String  { t("Inicia sesión en Otrofestiv en tu iPhone", "Sign in to Otrofestiv on your iPhone") }
     static var next: String           { t("PRÓXIMA", "NEXT") }
+    // Retraso v2 (aprobado por Juan, 25 sep 2026) — la misma frase que Mi Plan.
+    static func startedLate(_ n: Int) -> String { t("Empezó \(n) min tarde", "Started \(n) min late") }
     // Progreso en vivo (21 sep 2026): UNA sola frase, la misma que Mi Plan usa en
     // el teléfono («Termina en»). Se retiró «faltan» en la revisión de copy.
     static func endsIn(_ min: Int) -> String { t("Termina en \(min) min", "Ends in \(min) min") }
