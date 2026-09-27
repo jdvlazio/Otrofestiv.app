@@ -3121,3 +3121,33 @@ test('T198 — retraso v2: tarjeta, calendario y fila muestran la hora REAL', as
   await page.locator('.delay-step button').first().click(); await page.waitForTimeout(200);
   await expect(page.locator('.delay-step em'), '− resta de a 5').toHaveText('25 min');
 });
+
+// ── T199 — Avisos del Plan: el mismo dueño para Android e iPhone ─────────────
+// Pedido de Juan (26 sep 2026): notificaciones en iPhone, como en Android. Copy
+// aprobado: título = la obra, «Empieza en 30 min · sede»; con «Ir a las dos», a
+// la hora de salida, «Es hora de salir» + la siguiente con su hora.
+test('T199 — avisos: iPhone recibe la lista por el puente y con el copy aprobado', async ({ page }) => {
+  await enterFestival(page, 'jardin2026', '2026-09-25T10:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const f = t => FILMS.find(x => x.day === '2026-09-25' && x.title.startsWith(t));
+    const charla = f('Presentación del libro'), peli = f('Soñé su nombre');
+    const got = [];
+    window.webkit = { messageHandlers: { notifications: { postMessage: m => got.push(m) } } };
+    state.set('savedAgenda', { schedule: [{ ...charla, _title: charla.title, salida: '19:25' }, { ...peli, _title: peli.title }] });
+    saveSavedAgenda();
+    await new Promise(r => setTimeout(r, 100));
+    delete window.webkit;
+    return { m: got[got.length - 1], peli: peli.title, venue: peli.venue };
+  });
+  expect(r.m, 'el puente «notifications» recibe la lista').toBeTruthy();
+  expect(r.m.festival).toBe('jardin2026');
+  const a = r.m.avisos;
+  const antes = a.find(x => x.title === r.peli);
+  expect(antes?.body, '30 min antes: «Empieza en 30 min · sede»').toBe(`Empieza en 30 min · ${r.venue}`);
+  const inicio = new Date('2026-09-25T19:45:00-05:00').getTime();
+  expect(antes.at, 'a las 19:15 (zona del festival)').toBe(inicio - 30 * 60000);
+  const salir = a.find(x => x.title === 'Es hora de salir');
+  expect(salir?.body, 'la salida nombra la siguiente con su hora').toContain(`${r.peli} empieza a las 19:45`);
+  expect(salir.at, 'a la hora de salida').toBe(new Date('2026-09-25T19:25:00-05:00').getTime());
+  expect(a.every(x => !/^Otrofestiv$/.test(x.title)), 'el título nunca repite «Otrofestiv»').toBe(true);
+});
