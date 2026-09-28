@@ -11,9 +11,12 @@ No duplica la doctrina: importa `enriquecer_obra` de `enriquecer.py`, así que e
 candado sigue siendo el mismo —director ✓ Y (año ±1 O duración ±3 min)— y vive
 en un solo sitio.
 
-⚠ Ese candado necesita AÑO o DURACIÓN. Un catálogo que solo trae título y
-director NO PUEDE verificar nada, y este script lo dice en la primera línea en
-vez de devolver cero matches sin explicar por qué.
+⚠ Ese candado necesita AÑO o DURACIÓN. La obra que no trae ninguno de los dos
+va por el OTRO camino que ya tenía lib.ficha_tmdb: TÍTULO IDÉNTICO + director.
+Hasta el 28 sep 2026 se saltaba sin buscarla, y el camino existía sin que
+nadie lo llamara: en Popayán eran 25 obras y 13 tenían ficha en TMDB con su
+título original exacto y su dirección («La tinaja», «Sombras en la niebla»,
+«Los Huyentes»…). El director se exige igual en los dos caminos.
 
 Lee   festivals/staging/<lo-que-sea>.json   con obras[] de {titulo, director, …}
 Esc.  festivals/staging/<lo-que-sea>-enriquecido.json
@@ -21,8 +24,8 @@ Esc.  festivals/staging/<lo-que-sea>-enriquecido.json
 import json, os, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from enriquecer import enriquecer_obra, ficha_declarada
-from lib import provenance
+from enriquecer import enriquecer_obra, ficha_declarada, ficha_de_tmdb
+from lib import provenance, ficha_tmdb
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -39,17 +42,13 @@ def main():
     assert isinstance(obras, list) and obras, f'{p}: falta la lista obras[]'
 
     # El aviso que evita el diagnóstico equivocado: sin año NI duración el
-    # candado no puede abrirse NUNCA, y «0 verificadas» parecería un fallo de
-    # búsqueda cuando en realidad es un hueco de la fuente.
-    verificables = [o for o in obras if o.get('anio') or o.get('duracion_min')]
-    if not verificables:
-        print(f'⚠ NINGUNA de las {len(obras)} obras trae año ni duración: el '
-              f'candado director+(año|duración) no puede abrirse. Falta pedirle '
-              f'esos datos al festival — no es un problema de búsqueda.')
-        return
-    if len(verificables) < len(obras):
-        print(f'⚠ {len(obras) - len(verificables)} obras sin año ni duración: '
-              f'imposibles de verificar, se saltan.')
+    # candado no puede abrirse, y esas obras solo se encuentran con su título
+    # EXACTO. Si faltan muchas, pedirle los datos al festival sigue valiendo.
+    sin_datos = [o for o in obras if not (o.get('anio') or o.get('duracion_min'))]
+    if sin_datos:
+        print(f'⚠ {len(sin_datos)} de {len(obras)} obras sin año ni duración: solo '
+              f'entran con título idéntico + director.')
+    verificables = obras
 
     # Las fichas que declaró una persona, con su porqué — la MISMA salida que
     # enriquecer.py (Itagüí, «Inolvidable Heidi»). Faltaba acá: «La creciente»
@@ -70,8 +69,14 @@ def main():
     for i, o in enumerate(verificables, 1):
         if o['titulo'] in declaradas:
             e = ficha_declarada(o['titulo'], declaradas[o['titulo']], key)
-        else:
+        elif o.get('anio') or o.get('duracion_min'):
             e = enriquecer_obra(o, key, {})
+        else:
+            e = None
+            r = ficha_tmdb(o, key)
+            if r:
+                _det, e = ficha_de_tmdb(r[0]['id'], key, o['titulo'])
+                e['_verificado'] = r[2]
         t = o['titulo']
         if e:
             ok[t] = e
@@ -98,7 +103,7 @@ def main():
         'obras': [{'titulo': t, **e} for t, e in ok.items()],
         'verificadas': ok, 'sin_ficha': sorted(sin)},
         open(dest, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    print(f'\n{len(verificables)} verificables · con ficha {len(ok)} · sin ficha {len(sin)}')
+    print(f'\n{len(obras)} obras ({len(sin_datos)} sin año ni duración) · con ficha {len(ok)} · sin ficha {len(sin)}')
     print(f'  con póster {sum(1 for e in ok.values() if e.get("poster_path"))} · '
           f'con lbSlug {sum(1 for e in ok.values() if e.get("lbSlug"))}')
 
