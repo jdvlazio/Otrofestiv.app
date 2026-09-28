@@ -165,8 +165,9 @@ desde hace tiempo. No están en pruebas cerradas.
 > porque este archivo no puede saberlo y mentir es peor que callar.
 
 - **server.url:** `https://otrofestiv.app` — la app carga desde producción, no desde bundle local
-- **Para compilar (Android):** Android Studio → Build → Generate Signed Bundle → versionCode en `android/app/build.gradle`
-- **versionCode:** nunca reutilizar uno ya publicado — el actual se consulta en Play Console
+- **Compilar y subir (Android), desde la terminal (28 sep 2026):** `./gradlew bundleRelease` en `~/Otrofestiv.app/android` firma solo (keystore y alias en `~/.gradle/gradle.properties`, contraseñas en el Llavero de macOS — nunca en archivos) y `python3 scripts/play-subir.py <aab> --pista alpha` lo sube con la cuenta de servicio `otrofestiv-subidas@otrofestiv-play` (clave en `~/.otrofestiv/`, SOLO pistas de prueba; producción se promueve a mano). `--probar` muestra los versionCode de cada pista sin cambiar nada.
+- **versionCode:** nunca reutilizar uno ya publicado — el actual se consulta con `play-subir.py --probar` o en Play Console
+- **minSdk 24 / targetSdk 36:** Play rechaza bundles con minSdk < 24 («protección automática»)
 
 ### Checklist OBLIGATORIO antes de cada build de APK (lección del v6/v7 congelado)
 
@@ -177,7 +178,7 @@ congelados en código viejo pese a los deploys web. Antes de CADA build:
 
 1. **Refrescar `www/`** con la web actual (desde el repo web en `main` limpio):
    copiar `index.html`, `sw.js`, `version.json`, `manifest.json`, iconos, y
-   rsync `src/`, `festivals/`, `i18n/`, `assets/`.
+   rsync `src/`, `festivals/`, `assets/`, `fonts/`.
 2. **`npx cap copy android`** (regenera `assets/public/` + `assets/capacitor.config.json`).
 3. **Verificar el bundle compilado:** `grep 'main.js?v=' android/app/src/main/assets/public/index.html`
    debe coincidir con el build de `version.json` en producción.
