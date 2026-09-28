@@ -1385,8 +1385,9 @@ test('T80 — el aviso del hero: un solo vestuario en sus cinco estados', async 
   expect(noct.dot).toBe(false);
 
   const fin = await medir('2026-08-20T11:00:00-05:00', true);
-  expect(fin.txt, 'el cierre vuelve al sistema').toMatch(/Festival terminado/);
-  expect(fin.color, 'informativo = gris, no ámbar').not.toBe(AMBER);
+  // Al cierre, el hero ya no repite «Festival terminado»: la banda TERMINÓ lo dice
+  // arriba (Juan, 28 sep 2026). Cuatro estados, no cinco.
+  expect(fin.txt, 'el cierre no repite lo que dice la banda').toBeUndefined();
 });
 
 // 18 ago, auditoría de Mi Plan con Juan: el calendario es UNA pieza — grilla,
