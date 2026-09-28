@@ -43,6 +43,14 @@ PLANO, MAX_FRAC = 45, 0.12
 OVERSCAN = 1.04
 ESTIRON_MAX = 0.16                       # más deformación que esto → recortar
 MUESTRA = 220                            # ancho de análisis
+# EL FONDO QUE ES ARTE, en tabla. El detector toma por marco una franja PLANA y
+# casi negra, y protege la que llega al tope del 12%; la que queda por debajo
+# se recorta. En un afiche de fondo negro eso se come el diseño: «Funeral
+# siniestro» (Jairo Pinilla, 1977) tiene el título flotando sobre negro, la
+# primera pasada le quitó el aire de arriba y la segunda iba a seguir
+# (↑19 ↓25) — lo cazó la comprobación de idempotencia (Girardota, 27 sep 2026).
+# Estos se llevan al lienzo sin buscarles marco. Por nombre de archivo.
+FONDO_ES_ARTE = {'funeral-siniestro.jpg'}
 
 
 def rejilla(path):
@@ -155,6 +163,8 @@ def main():
         if not m:
             continue
         (t, b, l, r), (aw, ah) = m
+        if os.path.basename(p) in FONDO_ES_ARTE:
+            t = b = l = r = 0
         plan.append((real, os.path.basename(p), t, b, l, r, aw, ah))
 
     con_marco = [x for x in plan if min(x[2], x[3]) > 0 or min(x[4], x[5]) > 0]
@@ -285,7 +295,7 @@ def main():
     repetiria = []
     for real, n, *_ in plan:
         m = medir(real)
-        t2, b2, l2, r2 = m[0] if m else (0, 0, 0, 0)
+        t2, b2, l2, r2 = m[0] if m and n not in FONDO_ES_ARTE else (0, 0, 0, 0)
         W = int(subprocess.run(['sips', '-g', 'pixelWidth', real], capture_output=True)
                 .stdout.decode().split(':')[-1])
         H = int(subprocess.run(['sips', '-g', 'pixelHeight', real], capture_output=True)

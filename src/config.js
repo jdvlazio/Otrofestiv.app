@@ -1106,6 +1106,27 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,ticketing_model:'mixed',
     films:null,posters:null,lbSlugs:{}
   },
+  'girardota2026': {
+    name:'Festival Audiovisual de Girardota',displayName:'Festival Audiovisual de Girardota',
+    fullName:'9° Festival Audiovisual de Girardota 2026',shortName:'GIRARDOTA',
+    city:'Girardota',country:'CO',
+    dates:'30 SEP–4 OCT',dates_en:'SEP 30–OCT 4',year:2026,timezoneOffset:'-05:00',
+    // EL AFICHE OFICIAL (@girardotaescultura p/DdSaAR7Jbua, 14 sep 2026), con su
+    // franja de organizadores — la versión la elige Juan, como en Itagüí.
+    keyArt:'/assets/keyart/girardota2026-v2.jpg',
+    // EL LEMA DE LA EDICIÓN. El nombre ya dice qué es («Festival Audiovisual»),
+    // así que la edición en el subtítulo lo repetiría: va el lema del afiche.
+    tagline:'Fantasía Tropical',
+    storageKey:'girardota2026_',festivalStartStr:'2026-09-30T00:00:00',festivalEndStr:'2026-10-04T23:59:00',
+    festivalDates:{'2026-09-30':'2026-09-30','2026-10-01':'2026-10-01','2026-10-02':'2026-10-02','2026-10-03':'2026-10-03','2026-10-04':'2026-10-04'},
+    days:[{k:'2026-09-30',d:30,lbl:'MIÉ'},{k:'2026-10-01',d:1,lbl:'JUE'},{k:'2026-10-02',d:2,lbl:'VIE'},{k:'2026-10-03',d:3,lbl:'SÁB'},{k:'2026-10-04',d:4,lbl:'DOM'}],
+    dayKeys:['2026-09-30','2026-10-01','2026-10-02','2026-10-03','2026-10-04'],
+    dayShort:{'2026-09-30':'MIÉ 30','2026-10-01':'JUE 1','2026-10-02':'VIE 2','2026-10-03':'SÁB 3','2026-10-04':'DOM 4'},
+    dayShort_en:{'2026-09-30':'WED 30','2026-10-01':'THU 1','2026-10-02':'FRI 2','2026-10-03':'SAT 3','2026-10-04':'SUN 4'},
+    dayLong:{'2026-09-30':'Miércoles 30 de septiembre','2026-10-01':'Jueves 1 de octubre','2026-10-02':'Viernes 2 de octubre','2026-10-03':'Sábado 3 de octubre','2026-10-04':'Domingo 4 de octubre'},
+    prioLimit:3,
+    films:null,posters:null,lbSlugs:{}
+  },
   'narrarelfuturo2026': {
     name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
     city:'Bogotá',country:'CO',
@@ -1182,6 +1203,8 @@ export const SECTION_ARCHETYPES = {
   '🇨🇴 Colombia: Cine Bien Hecho. Cine No Visto': 'Muestra / País',
   '🧒 Festicine, Festiniños': 'Perspectivas / Miradas',
   '🎪 Actividades': 'Especiales / Eventos',
+  // ── 9° Festival Audiovisual de Girardota ──────────────────────────────
+  '🎬 Proyecciones': 'Muestra / País',
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
   '📺 Primetime': 'Especiales / Eventos',
   '🔎 Discovery': 'Perspectivas / Miradas',

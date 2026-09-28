@@ -1,0 +1,116 @@
+{
+ "_nota": "9° Festival Audiovisual de Girardota 2026 — «Fantasía Tropical» (Girardota, Antioquia, 30 sep–4 oct). Organiza El Lienzo de Méliès con la Alcaldía. La programación entera está en un carrusel de 5 láminas de @girardotaescultura (p/DdnD4hjHHnq, 22 sep): 28 actividades con día, hora y lugar. Ninguna lámina da direcciones ni cómo se entra.",
+ "radar": 968,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py girardota-2026",
+   "que": "el issue de radar #968 como fuente versionada, y cruza sus salas contra las nuestras"
+  },
+  {
+   "cmd": "python3 pipeline/girardota-2026-crudo.py",
+   "que": "las 4 láminas de programación → crudo: transcripción a ojo confirmada título por título y hora por hora con el OCR de las mismas láminas; tabla de sedes y de rótulos explícitas; acceso DECLARADO desconocido con su prueba"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py girardota-2026 --posters",
+   "que": "TMDB verificado (director + año o duración) + afiches a assets/"
+  },
+  {
+   "cmd": "python3 pipeline/proimagenes.py girardota-2026 --posters",
+   "que": "segunda fuente para el cine colombiano; mismo candado"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py girardota-2026 --centro 6.3777,-75.4453 --ciudad \"Girardota, Antioquia\"",
+   "que": "las 9 sedes; ninguna lámina da dirección, así que cada pin se cruza contra Google Maps y queda manual con su porqué (cicatriz de Jahel)"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py girardota-2026",
+   "que": "crudo + plan → staging/girardota-2026-build.json"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py girardota-2026 --aplicar --desde festivals/staging/girardota-2026-build.json",
+   "que": "los afiches al lienzo 780×1170 exacto (docs/POSTERS.md §3). Va DESPUÉS del ensamblador y lee el build: un festival nuevo todavía no tiene JSON publicado del que leerlos"
+  },
+  {
+   "cmd": "python3 pipeline/girardota-2026-verificar.py",
+   "que": "el BUILD contra la transcripción de las láminas, en las dos direcciones (nada que falte, nada que sobre), y toda sede con su pin verificado a mano o con su pendiente escrito"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/girardota-2026-crudo.json",
+  "enriquecido": "festivals/staging/girardota-2026-enriquecido.json",
+  "geo": "festivals/staging/girardota-2026-venues-geo.json",
+  "_por_que_sedes": "Los nueve lugares con el nombre que imprime la lámina, tal cual. Ninguna lámina da dirección.",
+  "sedes": {
+   "Comfama": [
+    "Comfama - Girardota",
+    ""
+   ],
+   "Punto de Turismo": [
+    "Punto de Turismo - Girardota",
+    ""
+   ],
+   "Palmas del Llano": [
+    "Palmas del Llano - Girardota",
+    ""
+   ],
+   "I.E. San Andrés": [
+    "I.E. San Andrés - Girardota",
+    ""
+   ],
+   "Biblioteca Municipal Alberto Aguirre Ceballos": [
+    "Biblioteca Municipal Alberto Aguirre Ceballos - Girardota",
+    ""
+   ],
+   "Morning": [
+    "Morning - Girardota",
+    ""
+   ],
+   "Escuela de Encenillos": [
+    "Escuela de Encenillos - Girardota",
+    ""
+   ],
+   "Parque de la Poesía": [
+    "Parque de la Poesía - Girardota",
+    ""
+   ],
+   "Parque Principal": [
+    "Parque Principal - Girardota",
+    ""
+   ]
+  },
+  "_por_que_secciones": "El festival NO agrupa por secciones: rotula cada actividad («Proyección», «Taller», «Conversatorio», «Show de danza»…), y ese rótulo viaja como event_kind. Se publican dos secciones, como en Itagüí: «Proyecciones» y «Actividades». LAS DOS PALABRAS SON NUESTRAS y están pendientes del visto bueno de Juan.",
+  "secciones": {
+   "Proyecciones": {
+    "emoji": "🎬",
+    "en": "Screenings",
+    "archetype": "Muestra / País"
+   },
+   "Actividades": {
+    "emoji": "🎪",
+    "en": "Activities",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "name": "Festival Audiovisual de Girardota",
+  "displayName": "Festival Audiovisual de Girardota",
+  "fullName": "9° Festival Audiovisual de Girardota 2026",
+  "shortName": "GIRARDOTA",
+  "tagline": "Fantasía Tropical",
+  "city": "Girardota",
+  "country": "CO",
+  "dates": "30 SEP–4 OCT",
+  "dates_en": "SEP 30–OCT 4",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "girardota2026_",
+  "festivalStartStr": "2026-09-30T00:00:00",
+  "festivalEndStr": "2026-10-04T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "septiembre",
+  "dias_vacios": [],
+  "_por_que_acceso": "Sin `ticketing_model`: ese campo es para festivales donde alguna función SÍ dice cómo se entra. Acá ninguna lo dice, y el acceso va declarado desconocido, con su prueba, en `_acceso` del crudo."
+ },
+ "_fuentes_versionadas": {
+  "festivals/staging/girardota-2026-radar.json": "el volcado del issue de radar #968, que escribe y RELEE pipeline/radar.py para cruzar sus salas contra las nuestras en el paso 1."
+ }
+}

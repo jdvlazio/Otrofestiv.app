@@ -88,7 +88,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `tercertiempo2026` | Tercer Tiempo Fest | Bogotá | 13–19 JUL | Archivado |
 | `fantasofest2026` | FantasoFest | Bogotá | 13–19 JUL | Archivado |
 | `villadelcine2026` | Villa del Cine | Villa de Leyva | 23–26 SEP | desconocido |
-| `ficma2026` | FICMA | Manizales | 19–26 SEP | **Próximo / activo** |
+| `ficma2026` | FICMA | Manizales | 19–26 SEP | Recién terminado |
 | `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | Archivado |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | Archivado |
 | `cinemancia2026` | Cinemancia | Valle de Aburrá | 3–12 SEP | Recién terminado |
@@ -100,6 +100,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `siembrafest2026` | SiembraFest | Sasaima y Villeta | 9–18 SEP | Recién terminado |
 | `jardin2026` | Festival de Cine de Jardín | Jardín | 24–27 SEP | **Próximo / activo** |
 | `itagui2026` | Festicine Itagüí | Itagüí | 23–27 SEP | **Próximo / activo** |
+| `girardota2026` | Festival Audiovisual de Girardota | Girardota | 30 SEP–4 OCT | **Próximo / activo** |
 | `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)

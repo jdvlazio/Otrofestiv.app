@@ -729,6 +729,15 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     // mapa ES — la «Premiación y clausura» de Villa del Cine se anunciaba
     // «AWARDS SCREENINGS» en la vista en español.
     'clausura':     {accent:'#BA7517', headerLabel:'CLAUSURA'},
+    // Las palabras del 9° Festival Audiovisual de Girardota (27 sep 2026), tal
+    // cual las rotula su lámina. El lanzamiento es academia (ámbar); la danza,
+    // la rumba y la clase de salsa son del parque (el verde del convite); el
+    // acto de premiación va con apertura/clausura.
+    'lanzamiento de libro':{accent:'#F59E0B', headerLabel:'LANZAMIENTO DE LIBRO'},
+    'show de danza':{accent:'#22C55E', headerLabel:'SHOW DE DANZA'},
+    'acto':         {accent:'#BA7517', headerLabel:'ACTO'},
+    'fiesta':       {accent:'#22C55E', headerLabel:'FIESTA'},
+    'social al parque':{accent:'#22C55E', headerLabel:'SOCIAL AL PARQUE'},
   };
   const _kindMapEN={
     'conversatorio':{accent:'#F59E0B', headerLabel:'TALK'},
@@ -752,6 +761,11 @@ export function makeEventPoster(state,title,duration,eventKind,section,opts){
     'experiencia':  {accent:'#378ADD', headerLabel:'EXPERIENCE'},
     'awards':       {accent:'#BA7517', headerLabel:'AWARDS SCREENINGS'},
     'clausura':     {accent:'#BA7517', headerLabel:'CLOSING'},
+    'lanzamiento de libro':{accent:'#F59E0B', headerLabel:'BOOK LAUNCH'},
+    'show de danza':{accent:'#22C55E', headerLabel:'DANCE SHOW'},
+    'acto':         {accent:'#BA7517', headerLabel:'CEREMONY'},
+    'fiesta':       {accent:'#22C55E', headerLabel:'PARTY'},
+    'social al parque':{accent:'#22C55E', headerLabel:'SOCIAL IN THE PARK'},
   };
   const _kindMap=_lang==='es'?_kindMapES:_kindMapEN; // PT reutiliza EN (términos internacionales)
   // opts.untitled (regla anti-repetición del sheet): cuerpo vacío — el título ya
