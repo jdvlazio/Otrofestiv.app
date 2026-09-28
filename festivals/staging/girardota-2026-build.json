@@ -7,8 +7,8 @@
  },
  "_por_que_sedes": "Los nueve lugares con el nombre que imprime la lámina, tal cual. Ninguna lámina da dirección.",
  "_por_que_secciones": "El festival NO agrupa por secciones: rotula cada actividad («Proyección», «Taller», «Conversatorio», «Show de danza»…), y ese rótulo viaja como event_kind. Se publican dos secciones, como en Itagüí: «Proyecciones» y «Actividades». LAS DOS PALABRAS SON NUESTRAS y están pendientes del visto bueno de Juan.",
- "name": "Festival Audiovisual de Girardota",
- "displayName": "Festival Audiovisual de Girardota",
+ "name": "Festigirardota",
+ "displayName": "Festigirardota",
  "fullName": "9° Festival Audiovisual de Girardota 2026",
  "shortName": "GIRARDOTA",
  "tagline": "Fantasía Tropical",
@@ -391,6 +391,8 @@
    "day_order": 1,
    "venue": "Punto de Turismo - Girardota",
    "has_qa": false,
+   "synopsis": "Una niña campesina se enfrenta a los fatídicos misterios de la muerte.",
+   "synopsis_lang": "es",
    "poster": "/assets/girardota-2026/funeral-siniestro.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -801,8 +803,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-27T19:04:54",
-  "plan_sha": "ec0a91357b818e17",
+  "fecha": "2026-09-27T19:55:14",
+  "plan_sha": "61702b7f236df64e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py girardota-2026"
  }

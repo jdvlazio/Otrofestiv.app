@@ -91,8 +91,8 @@
     "archetype": "Especiales / Eventos"
    }
   },
-  "name": "Festival Audiovisual de Girardota",
-  "displayName": "Festival Audiovisual de Girardota",
+  "name": "Festigirardota",
+  "displayName": "Festigirardota",
   "fullName": "9° Festival Audiovisual de Girardota 2026",
   "shortName": "GIRARDOTA",
   "tagline": "Fantasía Tropical",
@@ -111,6 +111,7 @@
   "_por_que_acceso": "Sin `ticketing_model`: ese campo es para festivales donde alguna función SÍ dice cómo se entra. Acá ninguna lo dice, y el acceso va declarado desconocido, con su prueba, en `_acceso` del crudo."
  },
  "_fuentes_versionadas": {
-  "festivals/staging/girardota-2026-radar.json": "el volcado del issue de radar #968, que escribe y RELEE pipeline/radar.py para cruzar sus salas contra las nuestras en el paso 1."
+  "festivals/staging/girardota-2026-radar.json": "el volcado del issue de radar #968, que escribe y RELEE pipeline/radar.py para cruzar sus salas contra las nuestras en el paso 1.",
+  "festivals/staging/girardota-2026-correcciones.json": "las fichas completadas a mano con el visto bueno de Juan (hoy, la sinopsis española de «Funeral siniestro», de Proimágenes); las lee pipeline/enriquecer.py."
  }
 }

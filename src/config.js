@@ -1107,15 +1107,18 @@ export const FESTIVAL_CONFIG={
     films:null,posters:null,lbSlugs:{}
   },
   'girardota2026': {
-    name:'Festival Audiovisual de Girardota',displayName:'Festival Audiovisual de Girardota',
+    // EL NOMBRE CORTO lo eligió Juan (27 sep): «Festival Audiovisual de Girardota»
+    // ocupaba dos líneas en el selector y se cortaba en el encabezado. Es su
+    // usuario en redes (@festigirardota); el nombre oficial queda en fullName.
+    name:'Festigirardota',displayName:'Festigirardota',
     fullName:'9° Festival Audiovisual de Girardota 2026',shortName:'GIRARDOTA',
     city:'Girardota',country:'CO',
     dates:'30 SEP–4 OCT',dates_en:'SEP 30–OCT 4',year:2026,timezoneOffset:'-05:00',
     // EL AFICHE OFICIAL (@girardotaescultura p/DdSaAR7Jbua, 14 sep 2026), con su
     // franja de organizadores — la versión la elige Juan, como en Itagüí.
     keyArt:'/assets/keyart/girardota2026-v2.jpg',
-    // EL LEMA DE LA EDICIÓN. El nombre ya dice qué es («Festival Audiovisual»),
-    // así que la edición en el subtítulo lo repetiría: va el lema del afiche.
+    // EL LEMA DE LA EDICIÓN, el del afiche. La edición («9° Festival
+    // Audiovisual…») ya está en fullName.
     tagline:'Fantasía Tropical',
     storageKey:'girardota2026_',festivalStartStr:'2026-09-30T00:00:00',festivalEndStr:'2026-10-04T23:59:00',
     festivalDates:{'2026-09-30':'2026-09-30','2026-10-01':'2026-10-01','2026-10-02':'2026-10-02','2026-10-03':'2026-10-03','2026-10-04':'2026-10-04'},
