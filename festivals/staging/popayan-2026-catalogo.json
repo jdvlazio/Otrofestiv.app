@@ -69,7 +69,19 @@
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "Ernestina Miranda y Mar Ajé"
+   "produccion": "Ernestina Miranda y Mar Ajé",
+   "_ya_publicada": [
+    {
+     "festival": "qaff-2026",
+     "titulo": "La Tinaja",
+     "poster": "/assets/qaff/the-clay-vase.jpg"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La tinaja",
+     "poster": "https://image.tmdb.org/t/p/w500/air1XOw7h9fKgRq6V7vTAt4WCIB.jpg"
+    }
+   ]
   },
   {
    "titulo": "Legado",
@@ -141,7 +153,14 @@
     "url": "https://cinecorto.co/corazon-galvanico/",
     "categoria": "Animación",
     "direccion": "Valentina Valencia Giraldo"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Corazón galvánico",
+     "poster": "https://image.tmdb.org/t/p/w500/wfamQLJcXInlAxEZ6DtbdIJxNwT.jpg"
+    }
+   ]
   },
   {
    "titulo": "decaer",
@@ -159,7 +178,19 @@
     "url": "https://cinecorto.co/decaer/",
     "categoria": "Animación",
     "direccion": "Juan Camilo González"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Decaer",
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg"
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Decaer",
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg"
+    }
+   ]
   },
   {
    "titulo": "Emechiche, El renacer de los cabeciblancos",
@@ -177,7 +208,18 @@
     "url": "https://cinecorto.co/emechiche-el-renacer-de-los-cabeciblancos/",
     "categoria": "Animación",
     "direccion": "Juan Camilo González"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Emechiche"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "poster": "https://image.tmdb.org/t/p/w500/a6MItsvgkatTwGoBzkPdho4OvU5.jpg"
+    }
+   ]
   },
   {
    "titulo": "La habitación del macho cabrío",
@@ -205,7 +247,19 @@
     "url": "https://cinecorto.co/pudor-ante-el-asalto-de-los-ojos-furtivos/",
     "categoria": "Animacion",
     "direccion": "Laura María Rodríguez Moreno"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "poster": "/assets/cineautopsia/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "poster": "https://image.tmdb.org/t/p/w500/9elraxytkfPvx8jsoLsWtDeF3pV.jpg"
+    }
+   ]
   },
   {
    "titulo": "Sapos por todos lados",
@@ -215,7 +269,14 @@
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "Beltrán Pérez"
+   "produccion": "Beltrán Pérez",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Sapos por todos lados",
+     "poster": "/assets/ficdeh/sapos-por-todos-lados.jpg"
+    }
+   ]
   },
   {
    "titulo": "Tuktu, Padre Maíz",
@@ -233,7 +294,23 @@
     "url": "https://cinecorto.co/tuktu-padre-maiz-2/",
     "categoria": "Animacion",
     "direccion": "Mauricio Prieto"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg"
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Tuktu, Padre Maíz"
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg"
+    }
+   ]
   },
   {
    "titulo": "Una vez en un cuerpo",
@@ -251,7 +328,19 @@
     "url": "https://cinecorto.co/una-vez-en-un-cuerpo-2/",
     "categoria": "Animacion",
     "direccion": "María Cristina Pérez González"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Una vez en un cuerpo",
+     "poster": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Una vez en un cuerpo",
+     "poster": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg"
+    }
+   ]
   },
   {
    "titulo": "HDLT Hijo de la Tierra",
@@ -269,7 +358,14 @@
     "url": "https://cinecorto.co/hdlt-hijo-de-la-tierra/",
     "categoria": "Experimental",
     "direccion": "Colectivo Artefactum Suba"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/siembrafest/hdlt.jpg"
+    }
+   ]
   },
   {
    "titulo": "Historias al margen: Martha y Eduardo",
@@ -359,7 +455,19 @@
     "url": "https://cinecorto.co/cayenas-libertarias/",
     "categoria": "Documental",
     "direccion": "JAVIER CAMILO ARANGUREN MONTAÑEZ"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Cayenas libertarias",
+     "poster": "/assets/ficdeh/bogota-underground-hip-hop.jpg"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Cayenas libertarias",
+     "poster": "https://image.tmdb.org/t/p/w500/dQxbmxDq320B08UKcEOHgOkIy4b.jpg"
+    }
+   ]
   },
   {
    "titulo": "Como el agua, la piedra y la espuma",
@@ -395,7 +503,14 @@
     "url": "https://cinecorto.co/la-despedida-del-rio/",
     "categoria": "Documental",
     "direccion": "Mateo Salas Puerta"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La despedida del río",
+     "poster": "https://image.tmdb.org/t/p/w500/vLfuF29EHorpUsn41GpZrxYQTnd.jpg"
+    }
+   ]
   },
   {
    "titulo": "Las tres muertes de un sol",
@@ -431,7 +546,28 @@
     "url": "https://cinecorto.co/madres-de-nacimiento/",
     "categoria": "Documental",
     "direccion": "Gloria Isabel Gómez Ceballos"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Madres de Nacimiento",
+     "poster": "https://image.tmdb.org/t/p/w500/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg"
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Madres de nacimiento",
+     "poster": "/assets/ficdeh/madres-de-nacimiento.jpg"
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Madres de nacimiento"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Madres de nacimiento",
+     "poster": "/assets/jardin-2026/madres-de-nacimiento.jpg"
+    }
+   ]
   },
   {
    "titulo": "Maravillas de la Evolución",
@@ -459,7 +595,14 @@
     "url": "https://cinecorto.co/mi-viche-todo-el-dia/",
     "categoria": "Documental",
     "direccion": "Juan Camilo Moreno"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "qaff-2026",
+     "titulo": "Mi Viche Todo el Día",
+     "poster": "/assets/qaff/mi-viche-todo-el-dia.jpg"
+    }
+   ]
   },
   {
    "titulo": "Niña Chilapa",
@@ -477,7 +620,14 @@
     "url": "https://cinecorto.co/nina-chilapa/",
     "categoria": "Documental",
     "direccion": "Juana Lotero López"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Niña Chilapa",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Nina-Chilapa-Still-3-scaled.jpg"
+    }
+   ]
   },
   {
    "titulo": "Sombras en la Niebla",
@@ -487,7 +637,18 @@
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "Sara Bautista Espinel"
+   "produccion": "Sara Bautista Espinel",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Sombras en la niebla",
+     "poster": "https://image.tmdb.org/t/p/w500/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg"
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Sombras en la niebla"
+    }
+   ]
   },
   {
    "titulo": "Tentado de difunto",
@@ -561,7 +722,24 @@
     "url": "https://cinecorto.co/chaika/",
     "categoria": "Experimental",
     "direccion": "Ingrid Paola Bonilla Rodriguez"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "CHAIKA",
+     "poster": "/assets/cineautopsia/chaika.jpg"
+    },
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/fantasofest/corto-chaika.jpg"
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/narrarelfuturo-2026/chaika.jpg"
+    }
+   ]
   },
   {
    "titulo": "El patio de la infancia",
@@ -597,7 +775,14 @@
     "url": "https://cinecorto.co/filme-pin/",
     "categoria": "Experimental",
     "direccion": "Maria Rojas Arias y Andrés Jurado"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Filme Pin",
+     "poster": "/assets/cineautopsia/filme-pin.jpg"
+    }
+   ]
   },
   {
    "titulo": "La Europa",
@@ -607,7 +792,14 @@
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "Nesto Betancourt"
+   "produccion": "Nesto Betancourt",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La Europa",
+     "poster": "https://image.tmdb.org/t/p/w500/pxCKt70n1FtUug8GW9h01eYz8l.jpg"
+    }
+   ]
   },
   {
    "titulo": "La rebelión de un fantasma",
@@ -643,7 +835,14 @@
     "url": "https://cinecorto.co/sirena-mecanica/",
     "categoria": "Experimental",
     "direccion": "Violeta Vieytes Vivares y Damián Sato"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "jardin-2026",
+     "titulo": "Sirena mecánica",
+     "poster": "/assets/jardin-2026/sirena-mecanica.jpg"
+    }
+   ]
   },
   {
    "titulo": "Soñar una serpiente",
@@ -661,7 +860,14 @@
     "url": "https://cinecorto.co/sonar-una-serpiente/",
     "categoria": "Experimental",
     "direccion": "Mária Carolina Ardila y Liliana Correa"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Soñar una serpiente",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Sonar-una-serpiente1.png"
+    }
+   ]
   },
   {
    "titulo": "Una noche en la montaña escuché una luz rugir",
@@ -689,7 +895,19 @@
     "url": "https://cinecorto.co/akababuru-expresion-de-asombro-2/",
     "categoria": "Ficción",
     "direccion": "Irati Dojura Landa Yagarí"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Akababuru: Expresión de asombro",
+     "poster": "https://admin.alternativa.film/uploads/AKABABURU_POSTER_laura_giraldo_9666ac856d.jpg"
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Akababuru: Expresión de asombro",
+     "poster": "/assets/ficdeh/herminda.jpg"
+    }
+   ]
   },
   {
    "titulo": "Tabanoka Otjenayá",
@@ -801,7 +1019,14 @@
     "url": "https://cinecorto.co/gris-2025/",
     "categoria": "Ficción",
     "direccion": "Loren Escandón"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Gris",
+     "poster": "https://admin.alternativa.film/uploads/Gris_Poster_Eng_Loren_Escandon_62e9c1d610.jpg"
+    }
+   ]
   },
   {
    "titulo": "Juan PorOcho",
@@ -829,7 +1054,23 @@
     "url": "https://cinecorto.co/la-gran-hazana/",
     "categoria": "Ficción",
     "direccion": "Luber Yesid Zúñiga Ordóñez"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La gran hazaña",
+     "poster": "/assets/ficdeh/la-gran-hazana.jpg"
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La gran hazaña"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La gran hazaña",
+     "poster": "https://image.tmdb.org/t/p/w500/luHjmi57PSrqdH20zGuojt6ivmt.jpg"
+    }
+   ]
   },
   {
    "titulo": "La guerra de los tomates",
@@ -849,7 +1090,14 @@
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "Mariangela González C"
+   "produccion": "Mariangela González C",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Los pliegues de la falda",
+     "poster": "/assets/ficdeh/los-pliegues-de-la-falda.jpg"
+    }
+   ]
   },
   {
    "titulo": "Luis Antonio",
@@ -948,7 +1196,14 @@
     "url": "https://cinecorto.co/gladiolos/",
     "categoria": "Ficción",
     "direccion": "Mónica Juanita Hernández Duquino"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Gladiolos",
+     "poster": "https://image.tmdb.org/t/p/w500/hPcSDRpwapMHGFdi6dJ6pPLQAPf.jpg"
+    }
+   ]
   },
   {
    "titulo": "La Mona",
@@ -965,7 +1220,28 @@
     "url": "https://cinecorto.co/la-mona-2/",
     "categoria": "Ficción",
     "direccion": "Laura Gutiérrez Ardila"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La Mona"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "La Mona",
+     "poster": "/assets/jardin-2026/la-mona.jpg"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La mona",
+     "poster": "/assets/siembrafest/la-mona.jpg"
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "La Mona",
+     "poster": "/assets/villadelcine-2026/la-mona.jpg"
+    }
+   ]
   },
   {
    "titulo": "Las Faldas de Tu Prima",
@@ -1001,7 +1277,14 @@
     "url": "https://cinecorto.co/las-piedras-del-rio/",
     "categoria": "Ficción",
     "direccion": "Edna Sierra"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Las piedras del río",
+     "poster": "/assets/siembrafest/las-piedras-del-rio.jpg"
+    }
+   ]
   },
   {
    "titulo": "Los Huyentes",
@@ -1021,7 +1304,14 @@
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "Marilyne LaMontagne, Bettina López Mendoza"
+   "produccion": "Marilyne LaMontagne, Bettina López Mendoza",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Más allá",
+     "poster": "/assets/ficdeh/pasta-negra.jpg"
+    }
+   ]
   },
   {
    "titulo": "Suite intercontinental",
@@ -1048,7 +1338,14 @@
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "David Rendón Peláez"
+   "produccion": "David Rendón Peláez",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Todos los días",
+     "poster": "/assets/ficdeh/color-piel.jpg"
+    }
+   ]
   },
   {
    "titulo": "Cielo Roto",
@@ -1104,7 +1401,18 @@
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "Álvaro Muñoz Sánchez"
+   "produccion": "Álvaro Muñoz Sánchez",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La asociación"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La Asociación",
+     "poster": "https://image.tmdb.org/t/p/w500/n27jihE6w5jSqeKoaXWprB1FdCR.jpg"
+    }
+   ]
   },
   {
    "titulo": "La Volqueta",

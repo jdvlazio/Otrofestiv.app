@@ -198,8 +198,50 @@ def ficha_cinecorto(titulo, director):
     return None
 
 
+def ya_publicadas():
+    """Las obras de nuestros festivales publicados, para reusarlas al montar.
+    30 de las 77 ya las publicamos en otro festival, varias con su afiche."""
+    from lib import director_coincide
+    todas = []
+    for f in sorted(os.listdir(f'{REPO}/festivals')):
+        if not f.endswith('.json'):
+            continue
+        try:
+            j = json.load(io.open(f'{REPO}/festivals/{f}', encoding='utf-8'))
+        except ValueError:
+            continue
+        for x in j.get('films') or []:
+            for o in [x] + (x.get('film_list') or []):
+                if isinstance(o, dict) and o.get('title') and o.get('director'):
+                    todas.append((f[:-5], o))
+
+    def buscar(titulo, director):
+        # TÍTULO Y DIRECCIÓN, los dos. El título es el mismo, o uno es el
+        # COMIENZO entero del otro: SiembraFest publica «HDLT» lo que aquí es
+        # «HDLT Hijo de la Tierra», y FICMontañas «Emechiche». Una palabra en
+        # común no alcanza: la primera versión cruzó «Nascemos para semente»
+        # con «Un aparato para detectar fantasmas» por «para», y dos obras
+        # con paneles de #NarrarElFuturo, cuyo «director» es la lista de ponentes.
+        a = plano(titulo)
+        vistos = []
+        for fest, o in todas:
+            b = plano(o['title'])
+            if not (a == b or a.startswith(b + ' ') or b.startswith(a + ' ')):
+                continue
+            if not director_coincide(director, [o['director']]):
+                continue
+            r = {'festival': fest, 'titulo': o['title']}
+            if o.get('poster'):
+                r['poster'] = o['poster']
+            if r not in vistos:
+                vistos.append(r)
+        return vistos
+    return buscar
+
+
 def main():
     filas = lista()
+    buscar_publicada = ya_publicadas()
     cuenta = {}
     for sec, *_ in filas:
         cuenta[sec] = cuenta.get(sec, 0) + 1
@@ -226,6 +268,9 @@ def main():
                            'direccion': cc['direccion']}
         else:
             sin_ficha.append(titulo)
+        pub = buscar_publicada(titulo, director)
+        if pub:
+            o['_ya_publicada'] = pub
         obras.append(o)
 
     json.dump({'_provenance': provenance(
@@ -242,6 +287,9 @@ def main():
           f'cinecorto.co (año/duración) → {os.path.relpath(DESTINO, REPO)}')
     for s, n in cuenta.items():
         print(f'   {n:2}  {s}')
+    n_pub = sum(1 for o in obras if o.get('_ya_publicada'))
+    print(f'   {n_pub} ya publicadas en otro festival nuestro '
+          f'({sum(1 for o in obras if any(p.get("poster") for p in o.get("_ya_publicada", [])))} con afiche)')
     if sin_ficha:
         print(f'   sin ficha en cinecorto.co ({len(sin_ficha)}): ' + ' · '.join(sin_ficha))
 
