@@ -1007,6 +1007,19 @@ window.addEventListener('popstate',function(e){
   }
 });
 
+// Botón ATRÁS de Android (APK v8, @capacitor/app — 28 sep 2026). Sin el plugin,
+// Capacitor entregaba el gesto a la Activity y la app se CERRABA con una ficha
+// abierta; al volver arrancaba de nuevo desde el splash (medido en el emulador,
+// 24 sep). Ahora: si hay una hoja abierta, la cierra; si no, la app pasa a
+// segundo plano como cualquier app de Android (minimizar, no matar: volver no
+// debe re-arrancar). En los APK viejos, sin el plugin, esto no hace nada.
+try{
+  const _capApp=window.Capacitor?.Plugins?.App;
+  if(window.Capacitor?.isNativePlatform?.()&&_capApp?.addListener){
+    _capApp.addListener('backButton',()=>{ if(!_closeTopSheet()) _capApp.minimizeApp?.(); });
+  }
+}catch(e){ /* sin plugin: comportamiento de siempre */ }
+
 // ESC cierra el sheet activo (útil en desktop/tablet)
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape') _closeTopSheet();
