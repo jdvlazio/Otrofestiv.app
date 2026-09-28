@@ -1,0 +1,458 @@
+{
+ "_provenance": {
+  "fuente": "Instagram @girardotaescultura — el carrusel de programación (5 láminas)",
+  "capturado": "2026-09-27",
+  "que_aporta": "la programación entera: día, hora, lugar, rótulo y ficha",
+  "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+  "metodo": "transcripción a ojo lámina por lámina, confirmada título por título y hora por hora con el OCR de las mismas láminas"
+ },
+ "_acceso": {
+  "estado": "desconocido",
+  "revisado": "2026-09-27",
+  "fuentes": [
+   "las 5 láminas del carrusel de programación (instagram.com/p/DdnD4hjHHnq/)",
+   "el afiche y su pie (instagram.com/p/DdSaAR7Jbua/)",
+   "@festigirardota (perfil y posts de la edición)"
+  ],
+  "_por_que": "Ninguna fuente lo dice, y entre sus sedes hay un bar y una caja de compensación: suponer que es gratis sería inventarlo."
+ },
+ "funciones": [
+  {
+   "titulo": "La otra forma",
+   "dia": "2026-09-30",
+   "hora": "10:00",
+   "sede": "Comfama",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "director": "Diego Felipe Guzmán",
+   "anio": 2022,
+   "duracion_min": 99
+  },
+  {
+   "titulo": "Muestra de cortos Girardotanos",
+   "dia": "2026-09-30",
+   "hora": "16:00",
+   "sede": "Punto de Turismo",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "Muestra de cortometrajes: Fantasía tropical",
+   "dia": "2026-09-30",
+   "hora": "17:00",
+   "sede": "Punto de Turismo",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+  },
+  {
+   "titulo": "Llueve sobre Babel",
+   "dia": "2026-09-30",
+   "hora": "19:00",
+   "sede": "Palmas del Llano",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "director": "Gala del Sol",
+   "anio": 2025,
+   "duracion_min": 111,
+   "premiere": "Proyección inaugural",
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "La otra forma",
+   "dia": "2026-10-01",
+   "hora": "10:00",
+   "sede": "Comfama",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "director": "Diego Felipe Guzmán",
+   "anio": 2022,
+   "duracion_min": 99
+  },
+  {
+   "titulo": "Cianotipia: las impresiones del sol",
+   "dia": "2026-10-01",
+   "hora": "14:00",
+   "sede": "I.E. San Andrés",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "sinopsis": "Con Veanve Fotografía.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+  },
+  {
+   "titulo": "Del vampiro del bosque al psicópata de al lado: Cómo el monstruo dejó de tener colmillos",
+   "dia": "2026-10-01",
+   "hora": "15:00",
+   "sede": "Biblioteca Municipal Alberto Aguirre Ceballos",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "duracion_min": 180,
+   "sinopsis": "Con José Andrés Gómez."
+  },
+  {
+   "titulo": "Colombia es fantástica",
+   "dia": "2026-10-01",
+   "hora": "17:30",
+   "sede": "Punto de Turismo",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "lanzamiento de libro",
+   "seccion": "Actividades",
+   "invitados": "Invitados: Vincent Gil y Cristián Jaramillo.",
+   "sinopsis": "Ediciones Fantasmagoría.",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "Funeral siniestro",
+   "dia": "2026-10-01",
+   "hora": "18:30",
+   "sede": "Punto de Turismo",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "director": "Jairo Pinilla",
+   "anio": 1977,
+   "duracion_min": 101
+  },
+  {
+   "titulo": "El Páramo",
+   "dia": "2026-10-01",
+   "hora": "20:30",
+   "sede": "Morning",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "director": "Jaime Osorio Márquez",
+   "anio": 2012,
+   "duracion_min": 108
+  },
+  {
+   "titulo": "Al final del espectro",
+   "dia": "2026-10-02",
+   "hora": "09:00",
+   "sede": "Escuela de Encenillos",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "director": "Juan Felipe Orozco",
+   "anio": 2006,
+   "duracion_min": 100
+  },
+  {
+   "titulo": "Muestra de cortometrajes: Fantasía tropical",
+   "dia": "2026-10-02",
+   "hora": "16:00",
+   "sede": "Punto de Turismo",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+  },
+  {
+   "titulo": "El gótico popular: terror en las plazas y haciendas de Colombia",
+   "dia": "2026-10-02",
+   "hora": "17:00",
+   "sede": "Biblioteca Municipal Alberto Aguirre Ceballos",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "sinopsis": "Con el director Jefferson Cardoza y la productora Melissa Salazar.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+  },
+  {
+   "titulo": "El origen de las especies",
+   "dia": "2026-10-02",
+   "hora": "18:00",
+   "sede": "Comfama",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "director": "Tiagx Vélez, Juliana Zuluaga, Analú Laferal",
+   "anio": 2024,
+   "duracion_min": 70
+  },
+  {
+   "titulo": "Fantasía disidente: Ficciones transgenerístas y antihegemónicas",
+   "dia": "2026-10-02",
+   "hora": "19:00",
+   "sede": "Comfama",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "sinopsis": "Con Tiagx Vélez y Ciara Echeverry.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+  },
+  {
+   "titulo": "Pura Sangre",
+   "dia": "2026-10-02",
+   "hora": "20:00",
+   "sede": "Parque de la Poesía",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "director": "Luis Ospina",
+   "anio": 1982,
+   "duracion_min": 90
+  },
+  {
+   "titulo": "Hacer películas: desarrollo y producción de cortometrajes de género fantástico",
+   "dia": "2026-10-03",
+   "hora": "09:00",
+   "sede": "Biblioteca Municipal Alberto Aguirre Ceballos",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "duracion_min": 240,
+   "sinopsis": "Con Melissa Salazar y Jefferson Cardoza."
+  },
+  {
+   "titulo": "La mansión de Araucaima",
+   "dia": "2026-10-03",
+   "hora": "16:00",
+   "sede": "Comfama",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "director": "Carlos Mayolo",
+   "anio": 1986,
+   "duracion_min": 85
+  },
+  {
+   "titulo": "Selección de Cortometrajes fantásticos para toda la familia",
+   "dia": "2026-10-03",
+   "hora": "16:00",
+   "sede": "Parque Principal",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "sinopsis": "Chiquishorts del Festival Bogoshorts.",
+   "duracion_min": 120,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "Vampiros acalorados",
+   "dia": "2026-10-03",
+   "hora": "17:30",
+   "sede": "Comfama",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "sinopsis": "Con Sandro Romero Rey y Oswaldo Osorio.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+  },
+  {
+   "titulo": "Competencia oficial de cortometrajes",
+   "dia": "2026-10-03",
+   "hora": "18:00",
+   "sede": "Parque Principal",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "duracion_min": 90,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "El baile de la muerte",
+   "dia": "2026-10-03",
+   "hora": "19:30",
+   "sede": "Parque Principal",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "show de danza",
+   "seccion": "Actividades",
+   "sinopsis": "Presentación de los procesos artísticos del grupo de danza urbana.",
+   "duracion_min": 90,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "Ceremonia de premiación de cortometrajes",
+   "dia": "2026-10-03",
+   "hora": "21:00",
+   "sede": "Parque Principal",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "acto",
+   "seccion": "Actividades",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+  },
+  {
+   "titulo": "Rumba tropical",
+   "dia": "2026-10-03",
+   "hora": "22:00",
+   "sede": "Morning",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "fiesta",
+   "seccion": "Actividades",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+  },
+  {
+   "titulo": "Muestra de cortos Girardotanos",
+   "dia": "2026-10-04",
+   "hora": "15:00",
+   "sede": "Parque Principal",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "El libro de Lila",
+   "dia": "2026-10-04",
+   "hora": "16:00",
+   "sede": "Parque Principal",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "director": "Marcela Rincón",
+   "anio": 2017,
+   "duracion_min": 76
+  },
+  {
+   "titulo": "Un baile de película",
+   "dia": "2026-10-04",
+   "hora": "17:00",
+   "sede": "Parque Principal",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "tipo": "evento",
+   "event_kind": "social al parque",
+   "seccion": "Actividades",
+   "sinopsis": "Una clase de salsa y ritmos tropicales a cielo abierto.",
+   "duracion_min": 90,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "La salsa vive",
+   "dia": "2026-10-04",
+   "hora": "18:30",
+   "sede": "Parque Principal",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
+    "date": "2026-09-22"
+   },
+   "seccion": "Proyecciones",
+   "director": "Juan Carvajal",
+   "anio": 2025,
+   "duracion_min": 101
+  }
+ ]
+}

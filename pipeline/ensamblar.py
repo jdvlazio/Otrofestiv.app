@@ -393,6 +393,15 @@ def ensamblar(fid, escribir=True):
                              'seccion_default', 'seccion_por_titulo', 'mes_es',
                              'posterSource_fuente')})
     out.update(lib.dias_config(dias, cfg.get('mes_es', '')) if dias else {})
+    # EL ACCESO DESCONOCIDO, CON SU PRUEBA, VIAJA A LA RAÍZ (27 sep 2026).
+    # El crudo lo declara en `_acceso` —fecha y fuentes miradas— y
+    # [boleteria-muda] lo acepta SOLO en la raíz del JSON publicado. Este
+    # paso no lo copiaba: ningún festival publicado lo tenía, y el primero cuyo
+    # programa entero calla sobre la entrada (Girardota) quedaba bloqueado
+    # por un guardián que no había forma de satisfacer. Itagüí pasó solo
+    # porque su inauguración sí decía «entrada libre».
+    if crudo.get('_acceso'):
+        out['_acceso'] = crudo['_acceso']
     out['sections'] = secciones
     out['venues'] = venues
     out['films'] = films

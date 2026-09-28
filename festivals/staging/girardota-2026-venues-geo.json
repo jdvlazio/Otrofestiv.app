@@ -1,0 +1,75 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-09-27"
+ },
+ "Comfama": {
+  "n": 0,
+  "lat": 6.3799362,
+  "lng": -75.4461132,
+  "_prec": "manual",
+  "_match": "Google Maps «Comfama Girardota», Cra. 18 #5A-65",
+  "_nota": "Un único resultado con el nombre del festival."
+ },
+ "Parque Principal": {
+  "n": 0,
+  "lat": 6.3775808,
+  "lng": -75.4461999,
+  "_prec": "manual",
+  "_match": "Google Maps «Parque Principal Girardota», Cl. 6 #12-7",
+  "_nota": "Un único resultado."
+ },
+ "Punto de Turismo": {
+  "n": 0,
+  "lat": 6.3777171,
+  "lng": -75.4462385,
+  "_prec": "manual",
+  "_match": "Google Maps «Punto del café y turismo \"del campo Girardota\"», Cra. 16 #5-55",
+  "_nota": "La lámina dice «Punto de Turismo». Es el «Punto de Turismo y Café» que el municipio inauguró el 7 nov 2025 con la renovación del Parque Principal (girardotainforma.com, 12 nov 2024; video de la inauguración). Queda a 15 m del pin del parque, que es donde debe estar."
+ },
+ "Biblioteca Municipal Alberto Aguirre Ceballos": {
+  "n": 0,
+  "lat": 6.3761472,
+  "lng": -75.4460794,
+  "_prec": "manual",
+  "_match": "Google Maps «Biblioteca Pública Municipal Girardota», Cra. 14 #9-16",
+  "_nota": "Buscada por su nombre completo, Google devuelve una sola: la Biblioteca Pública Municipal. «Alberto Aguirre Ceballos» es el nombre propio de la biblioteca municipal de Girardota."
+ },
+ "I.E. San Andrés": {
+  "n": 0,
+  "lat": 6.3992839,
+  "lng": -75.440165,
+  "_prec": "manual",
+  "_match": "Google Maps «Institución Educativa San Andrés», Girardota",
+  "_nota": "Un único resultado. Queda al norte del casco urbano, a unos 2,5 km del parque."
+ },
+ "Morning": {
+  "n": 0,
+  "lat": 6.3772694,
+  "lng": -75.4448023,
+  "_prec": "manual",
+  "_match": "Google Maps «Morning Reggae Bar», Cra. 14 #5B-54",
+  "_nota": "Un único resultado, a dos cuadras del parque; «Morning» aparece además entre los aliados en la lámina 5."
+ },
+ "Escuela de Encenillos": {
+  "n": 0,
+  "lat": 6.3769207,
+  "lng": -75.4178509,
+  "_prec": "manual",
+  "_match": "Google Maps «Escuela Encenillos», Girardota",
+  "_nota": "Un único resultado: escuela rural de la vereda Encenillos, unos 3 km al oriente del casco urbano."
+ },
+ "Parque de la Poesía": {
+  "n": 0,
+  "lat": 6.3705599,
+  "lng": -75.444781,
+  "_prec": "manual",
+  "_match": "Google Maps «Parque de la Poesía», Calle 10C con Cra. 9A",
+  "_nota": "Un único resultado."
+ },
+ "Palmas del Llano": {
+  "n": 1,
+  "_prec": "sin verificar",
+  "_todo": "NO ES UNA SEDE, ES UN BARRIO de Girardota (código postal 051030; así lo registran los portales inmobiliarios y el código postal). La lámina no dice en qué lugar del barrio es la proyección inaugural —cancha, parque, salón comunal—, y un pin en el medio del barrio sería exactamente el «aproximado» que mandó a la gente 410 m lejos en Jahel (Jardín). Buscado el 27 sep en Google Maps («Palmas del Llano Girardota»: solo la JAC de la vereda La Palma) y en la web. Se publica sin pin hasta que el festival diga el lugar."
+ }
+}
