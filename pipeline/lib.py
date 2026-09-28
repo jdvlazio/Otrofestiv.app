@@ -153,20 +153,35 @@ def tmdb_get(path, api_key, **params):
 def director_coincide(esperado, nombres):
     """¿Algún nombre de TMDB casa con el director de la fuente? Compara por
     tokens largos sin partículas: «Michaël Dudok de Wit» ≡ «Michael Dudok de
-    Wit»; con 宮崎吾朗 casan los créditos romanizados (pedirlos en en-US)."""
+    Wit»; con 宮崎吾朗 casan los créditos romanizados (pedirlos en en-US).
+
+    PERSONA CONTRA PERSONA, Y UN NOMBRE DE PILA NO ALCANZA (28 sep 2026). La
+    fuente suele nombrar a varias personas en una línea («Zumaya Mayers y
+    Rodrigo Cuervo») y antes se comparaba la línea entera contra cada nombre de
+    TMDB: bastaba UN token largo en común. «Legado», un corto colombiano de 24
+    min, quedó unido a «El legado», un documental argentino de 90 min de
+    Rodrigo Demirjian, por «rodrigo» y un año a ±1. Ahora la línea se parte en
+    personas y el token largo compartido no cuenta si es el PRIMERO de los dos
+    nombres, que es el nombre de pila. Medido contra las 550 fichas publicadas
+    en todos los festivales: no se pierde ninguna."""
     quita = {'de', 'la', 'del', 'y', 'van', 'der', 'le'}
-    a = set(norm(esperado).split()) - quita
-    for n in (nombres or []):
-        b = set(norm(n).split()) - quita
-        # tokens largos compartidos (apellidos), O casi-todos los tokens si son
-        # cortos: «Gala del Sol» no tiene ninguno de >4 letras y aun así debe
-        # casar consigo misma. Al extraer esta función a la lib se perdió la
-        # segunda cláusula y la validación contra FICMA lo cazó (obra 68/68 con
-        # una faltante). Ambas vienen del script original.
-        if {x for x in a if len(x) > 4} & {x for x in b if len(x) > 4}:
-            return True
-        if a and b and len(a & b) >= min(2, len(a), len(b)):
-            return True
+    personas = [p for p in re.split(r',|\s+y\s+|\s*&\s*|\s+e\s+|/', esperado or '')
+                if p.strip()] or [esperado or '']
+    for p in personas:
+        a = [x for x in norm(p).split() if x not in quita]
+        for n in (nombres or []):
+            b = [x for x in norm(n).split() if x not in quita]
+            sa, sb = set(a), set(b)
+            # casi-todos los tokens si son cortos: «Gala del Sol» no tiene
+            # ninguno de >4 letras y aun así debe casar consigo misma. Al
+            # extraer esta función a la lib se perdió esta cláusula y la
+            # validación contra FICMA lo cazó (obra 68/68 con una faltante).
+            if sa and sb and len(sa & sb) >= min(2, len(sa), len(sb)):
+                return True
+            # un token largo compartido (apellido), salvo que sea el nombre de
+            # pila de los dos
+            if any(len(x) > 4 and not (x == a[0] and x == b[0]) for x in sa & sb):
+                return True
     return False
 
 
@@ -695,6 +710,11 @@ def _selftest():
     t('director romanizado', director_coincide('Gorõ Miyazaki', ['宮崎吾朗', 'Goro Miyazaki']), True)
     t('director distinto', director_coincide('Lina Rodríguez', ['Maider Oleaga']), False)
     t('director tokens cortos', director_coincide('Gala del Sol', ['Gala del Sol']), True)
+    # un nombre de pila compartido no alcanza (Legado ≠ El legado, 28 sep 2026)
+    t('director solo nombre de pila', director_coincide('Zumaya Mayers y Rodrigo Cuervo', ['Rodrigo Demirjian']), False)
+    t('director varias personas', director_coincide('Zumaya Mayers y Rodrigo Cuervo', ['Rodrigo Cuervo']), True)
+    t('director nombre abreviado', director_coincide('Laura María Rodríguez Moreno', ['Laura Rodríguez']), True)
+    t('director orden invertido', director_coincide('Goro Miyazaki', ['Miyazaki Goro']), True)
     t('banderas coproducción con paréntesis', banderas('España (Austria)'), '🇪🇸🇦🇹')
     t('banderas ISO2', banderas('CO'), '🇨🇴')
     t('banderas con guion', banderas('Colombia - España'), '🇨🇴🇪🇸')
