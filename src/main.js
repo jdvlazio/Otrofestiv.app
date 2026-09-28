@@ -269,7 +269,12 @@ const ACTION_REGISTRY = {
   openVenueSheet:      (el)    => openVenueSheet(el.dataset.venue),
   closeVenueSheet:     ()      => closeVenueSheet(),
   openPelFromVenue:    (el)    => { closeVenueSheet(); openPelSheet(el.dataset.title); },
-  venueDirections:     (el)    => window.open('https://maps.apple.com/?q='+el.dataset.lat+','+el.dataset.lng,'_blank'),
+  // «Cómo llegar» con el mapa de cada plataforma (28 sep 2026): en Android abría
+  // Apple Maps en el navegador; ahora Google Maps (la app si está, que atrapa el
+  // enlace). iPhone y Mac siguen con Apple Maps.
+  venueDirections:     (el)    => window.open(/Android/i.test(navigator.userAgent)
+    ? 'https://www.google.com/maps/dir/?api=1&destination='+el.dataset.lat+','+el.dataset.lng
+    : 'https://maps.apple.com/?q='+el.dataset.lat+','+el.dataset.lng,'_blank'),
   pafClearSec:         ()      => _pafClearSec(),
   pafClearVenue:       ()      => _pafClearVenue(),
   toggleEveningFilms:  (el)    => _toggleEveningFilms(el),
@@ -494,7 +499,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202609281521';
+const BUILD_VERSION='202609281617';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
