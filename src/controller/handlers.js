@@ -18,7 +18,7 @@ import { cloudReportDelay, cloudClearDelay, cloudScreeningKey } from './delays-c
 import { _getProgramaPhase, _reRenderIntereses, _updateProgramaActiveFilter, initProgramaModeBar, showAgView, showDayView, switchMainNav, updateAgTab, _syncPmodeTabs } from './pipeline.js';
 import { searchClose, seccionClose } from './overlays.js';
 import { dayFullyPassed, festivalEnded, simNow, simTodayStr, toMin } from '../domain/time.js';
-import { scoreFilm, screeningPassed, isShortFilm, prioLiveCount, effectiveWatched, screeningEndDate, abiertaFase } from '../domain/film.js';
+import { scoreFilm, screeningPassed, isShortFilm, prioLiveCount, effectiveWatched, seCalifica, screeningEndDate, abiertaFase } from '../domain/film.js';
 import { isScreeningBlocked, screensConflict, sortScreensByStrategy, plannableScreens, screeningPlannable, sameEntry } from '../domain/schedule.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
@@ -220,7 +220,7 @@ export function toggleWatched(title,e){
       showToast(t('toast_marcada_vista'),'info');
       const _f=FILMS.find(fi=>fi.title===title);
       if(_f?.is_cortos&&_f.film_list?.length){ closePelSheet(); setTimeout(()=>openPostViewRating(title),350); }
-      else if(!_f?.is_cortos) setTimeout(()=>openRatingSheet(title),350);
+      else if(!_f?.is_cortos&&seCalifica(_f)) setTimeout(()=>openRatingSheet(title),350);
     }
   );
 }
@@ -636,7 +636,7 @@ export function markWatchedFromPlan(title, day, time, venue, duration, e){
   saveWatched();
   updateCardState(title);
   // Post-view rating SIEMPRE (programa → cola obra por obra; ver checkinLaVi).
-  setTimeout(()=>openPostViewRating(title, day, time, venue, duration), 250);
+  if(seCalifica(FILMS.find(fi=>fi.title===title))) setTimeout(()=>openPostViewRating(title, day, time, venue, duration), 250);
 }
 
 export function confirmReplace(removedTitle,newTitle,day,time,isScenario){

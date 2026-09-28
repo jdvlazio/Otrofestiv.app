@@ -73,7 +73,11 @@ test('T08 — selector-carrusel: vigentes encabezan, divisor separa grupos', asy
         const idxCard = hijos.findIndex(el => el.dataset && el.dataset.fest === id);
         return {
           id,
-          enPasados: idxDiv !== -1 && idxCard > idxDiv,
+          // Sin ningún vigente no hay divisor (separa DOS grupos): todo el riel
+          // es «anteriores» (28 sep 2026, sin festivales en curso). Si la bisagra
+          // se apagara, el aplazado volvería a vigente y el divisor aparecería
+          // ANTES de él → sigue fallando donde debe.
+          enPasados: idxCard !== -1 && (idxDiv === -1 ? !hijos.some(el => el.classList.contains('splash-rail-div')) : idxCard > idxDiv),
           marcado: !!document.querySelector(`#splash-rail .splash-card[data-fest="${id}"].postponed`),
         };
       }),
@@ -926,12 +930,18 @@ test('P09 — el splash recuerda el festival elegido, y lo olvida cuando termin�
   // contradecía. Se necesita uno VIGENTE, y cuál sea depende del día.
   await page.goto('/');
   await page.waitForSelector('html[data-app-ready="1"]', { state: 'attached', timeout: 15000 });
-  const elegido = await page.evaluate(() => {
-    const vivos = Object.entries(FESTIVAL_CONFIG).filter(([, c]) =>
-      c.name && c.group !== 'test' && c.festivalEndStr && new Date(c.festivalEndStr) > new Date());
-    return vivos.length ? vivos[0][0] : null;
+  const { elegido, finUltimo } = await page.evaluate(() => {
+    const vis = Object.entries(FESTIVAL_CONFIG).filter(([, c]) => c.name && c.group !== 'test' && c.festivalEndStr);
+    const vivos = vis.filter(([, c]) => new Date(c.festivalEndStr) > new Date());
+    const ultimo = vis.sort((a, b) => new Date(b[1].festivalEndStr) - new Date(a[1].festivalEndStr))[0];
+    return { elegido: vivos.length ? vivos[0][0] : ultimo[0], finUltimo: vivos.length ? null : ultimo[1].festivalEndStr };
   });
-  expect(elegido, 'hace falta al menos un festival vigente para este caso').not.toBeNull();
+  // Entre festivales (28 sep 2026: Jardín e Itagüí cerraron el 27 y no quedó
+  // ninguno vigente) el caso no tenía con qué correr. En vez de apagarlo, el reloj
+  // del NAVEGADOR se pone un día antes del cierre del último festival: la regla
+  // que se prueba —recordar al vigente, olvidar al terminado— lee new Date().
+  if (finUltimo) await page.clock.setFixedTime(new Date(new Date(finUltimo).getTime() - 24 * 3600 * 1000));
+  expect(elegido, 'hay un festival para el caso').toBeTruthy();
 
   await enterFestival(page, elegido);
   expect((await estado()).guardado, 'entrar guarda la elección').toBe(elegido);

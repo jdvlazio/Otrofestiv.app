@@ -68,12 +68,17 @@ test('_renderSplashRailHTML — cards de los 8 festivales visibles + divisor con
   const cards = (html.match(/data-fest=/g) || []).length;
   const visibles = Object.values(CFG).filter(c => c.name && c.group !== 'test').length;
   assert.strictEqual(cards, visibles, `${visibles} cards — todo FESTIVAL_CONFIG salvo group:test`);
+  // «Pasado» PARA EL RIEL = el mismo predicado que la app: past por fechas, o
+  // aplazado cuyas fechas anunciadas vencieron (DESIGN §5.10). Con solo
+  // _classifyFestival, Villa del Cine (aplazado, 23–26 sep) seguía contando como
+  // vigente y el test esperaba un divisor que la app —bien— no dibuja (28 sep 2026).
+  const esPasado = c => C._classifyFestival(c) === 'past' || C._postponedElapsed(c);
   const anyCurrent = Object.entries(CFG)
     .filter(([, c]) => c.name && c.group !== 'test')
-    .some(([, c]) => C._classifyFestival(c) !== 'past');
+    .some(([, c]) => !esPasado(c));
   const anyPast = Object.entries(CFG)
     .filter(([, c]) => c.name && c.group !== 'test')
-    .some(([, c]) => C._classifyFestival(c) === 'past');
+    .some(([, c]) => esPasado(c));
   assert.strictEqual(html.includes('splash-rail-div'), anyCurrent && anyPast,
     'divisor presente si y solo si hay vigentes Y pasados');
   assert.ok(html.includes('data-fest="fantasofest2026"'), 'incluye el festival activo');
