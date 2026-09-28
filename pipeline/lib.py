@@ -264,8 +264,17 @@ _D = {'ab': ['LUN','MAR','MIÉ','JUE','VIE','SÁB','DOM'],
       'en': ['MON','TUE','WED','THU','FRI','SAT','SUN'],
       'es': ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo']}
 
-def dias_config(dias, mes_es='agosto'):
-    """['2026-08-10',…] → los seis bloques de días de FESTIVAL_CONFIG/JSON."""
+_MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto',
+          'septiembre', 'octubre', 'noviembre', 'diciembre']
+
+
+def dias_config(dias, mes_es=''):
+    """['2026-08-10',…] → los seis bloques de días de FESTIVAL_CONFIG/JSON.
+
+    EL MES SALE DE CADA FECHA (27 sep 2026). Antes era un solo `mes_es` para
+    todos los días, y un festival que cruza de mes —Girardota, 30 sep a 4 oct—
+    habría publicado «Jueves 1 de septiembre». `mes_es` queda solo por
+    compatibilidad con los planes que lo declaran; ya no decide nada."""
     f = datetime.date.fromisoformat
     return {
         'festivalDates': {x: x for x in dias},
@@ -273,7 +282,7 @@ def dias_config(dias, mes_es='agosto'):
         'dayKeys': list(dias),
         'dayShort': {x: f'{_D["ab"][f(x).weekday()]} {f(x).day}' for x in dias},
         'dayShort_en': {x: f'{_D["en"][f(x).weekday()]} {f(x).day}' for x in dias},
-        'dayLong': {x: f'{_D["es"][f(x).weekday()]} {f(x).day} de {mes_es}' for x in dias},
+        'dayLong': {x: f'{_D["es"][f(x).weekday()]} {f(x).day} de {_MESES[f(x).month - 1]}' for x in dias},
     }
 
 
@@ -804,6 +813,9 @@ def _selftest():
     _crudo(['2026-09-01', '2026-09-02', '2026-09-03'])
     _d = cargar_plan(_plan(), repo=_root)
     t('plan bueno pasa y calcula prioLimit', _d['festival']['prioLimit'], 3)
+    _dc = dias_config(['2026-09-30', '2026-10-01'])
+    t('el mes sale de cada fecha, no de mes_es', [_dc['dayLong']['2026-09-30'], _dc['dayLong']['2026-10-01']],
+      ['Miércoles 30 de septiembre', 'Jueves 1 de octubre'])
     t('plan bueno clase', _d['_clase'], 'generico')
     _falla('sin pasos', 'sin `pasos`', pasos=None)
     _falla('sin cabecera', 'cabecera incompleta', name=None)
