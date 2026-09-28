@@ -23,7 +23,7 @@ import { runCalc } from './calc.js';
 import { commitPlan, saveAV, saveLastSlot, saveRating, saveSavedAgenda } from './persistence.js';
 import { _reRenderIntereses, showAgView, switchMainNav, updateAgTab } from './pipeline.js';
 import { dayFullyPassed, durEstimada, festivalEnded, toMin } from '../domain/time.js';
-import { screeningPassed, blockDuration, premiereBadgeKey} from '../domain/film.js';
+import { screeningPassed, blockDuration, premiereBadgeKey, seCalifica } from '../domain/film.js';
 import { sameEntry, screensConflict, screensConflictReason, plannableScreens, salidaParaAmbas } from '../domain/schedule.js';
 // ── Velo del sheet: SIN driver JS (29 jul 2026 — DESIGN.md §8.4.1) ───────────
 // Vivía acá un driver rAF que pisaba radio+opacidad por frame. Medido en device
@@ -151,7 +151,7 @@ function pelFootHTML(f){
   return `<div class="pel-sheet-foot">
         ${inW?`<div class="pel-sheet-ctas-watched">
         <button data-title="${escXML(f.title)}" data-action="toggleWatchedAndClose" class="pel-sheet-action-btn act-on">${ICONS.eye} ${t('cta_vista')}</button>
-        ${!f.is_cortos?`<button data-title="${escXML(f.title)}" data-action="closePelAndRate" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?t('misc_cambiar'):t('cta_calificar')}</button>`:``}
+        ${!f.is_cortos&&seCalifica(f)?`<button data-title="${escXML(f.title)}" data-action="closePelAndRate" class="pel-sheet-action-btn btn-secondary">${ICONS.star} ${filmRatings[f.title]?t('misc_cambiar'):t('cta_calificar')}</button>`:``}
       </div>`
     :`<div class="pel-sheet-ctas">
         <button id="pel-wl-btn" class="row-center-xs pel-sheet-action-btn${inWL?' act-on btn-primary':' btn-primary'}" data-title="${escXML(f.title)}" data-action="togglePelWL">${inWL?ICONS.heartFill:ICONS.heart} ${inWL?t('cta_en_intereses'):t('cta_intereses')}</button>
@@ -1112,6 +1112,7 @@ export function closePlanConfirm(goToPlan){
 
 export function openPostViewRating(title, day, time, venue, duration){
   const f=FILMS.find(fi=>fi.title===title);
+  if(f&&!seCalifica(f)) return; // un evento no lleva estrellas [califica-dueno]
   // PROGRAMA → cola paso a paso por obra. Guardar/Después operan sobre la obra visible;
   // cerrar el sheet descarta las que falten (calificar es opcional, salir siempre es libre).
   if(f&&f.is_cortos&&f.film_list&&f.film_list.length){
@@ -1203,6 +1204,8 @@ function _pvMountAndOpen(){
 }
 
 export function openRatingSheet(title){
+  const _f=FILMS.find(fi=>fi.title===title);
+  if(_f&&!seCalifica(_f)) return; // un evento no lleva estrellas [califica-dueno]
   _ratingTitle=title;
   _pushSheetState();
   const _rs=document.getElementById('rating-sheet');
