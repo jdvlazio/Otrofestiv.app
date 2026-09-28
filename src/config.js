@@ -544,6 +544,49 @@ export const PALMARES=[
    titulo:'Un Domingo', autoria:'Day Sena', obra:'Un Domingo'},
   {fest:'qaff2026', categoria:'Premio Arnoldo Palacios «Las Estrellas Son Negras»', nivel:'ganadora',
    titulo:'Bertha', autoria:'Laura Asprilla', obra:'Bertha'},
+  // ── Jardín 2026 (11ª ed.) — 2 carruseles y 1 historia del 27 sep en @festicinejardin ──
+  // · p/DdxyD7jlu7I (8 láminas): la competencia de cortos Caleidoscopio, con sus
+  //   tres categorías, 1er y 2do puesto y mención de honor.
+  // · p/DdxvitslnxM (2 láminas): «los favoritos del público», dos cortos.
+  // · La historia de la clausura: «Premio del público · La sed del viento»,
+  //   el largo de la Muestra Central. Es la última historia del cierre.
+  //
+  // MANDAN LAS LÁMINAS SOBRE EL PIE, que se escribió aparte y se equivoca en
+  // tres: «Una vez un cuerpo» (la lámina y el catálogo dicen «Una vez EN un
+  // cuerpo»), «Yong Arley» (lámina: Yon) y «Antonio Mario lizarazo» (lámina:
+  // Antonio Mariño Lizarazo). La autoría va como la imprime la lámina.
+  //
+  // UN SOLO «Premio del público» para las tres. El festival lo llama igual en
+  // la historia y en las dos láminas, sin decir si son premios distintos; los
+  // dos cortos son de la misma parte de la competencia, así que tampoco es uno
+  // por programa. Separarlos sería inventar la categoría.
+  //
+  // Los títulos son los del catálogo, para que el clic abra la ficha del corto.
+  {fest:'jardin2026', categoria:'Premio del público', nivel:'ganadora',
+   titulo:'La sed del viento', autoria:'Alejandro Valbuena', obra:'La sed del viento'},
+  {fest:'jardin2026', categoria:'Premio del público', nivel:'ganadora',
+   titulo:'Los años del conejo', autoria:'Raquel Tamayo Gutiérrez', obra:'Los años del conejo'},
+  {fest:'jardin2026', categoria:'Premio del público', nivel:'ganadora',
+   titulo:'En todo y en nada', autoria:'Ximena Pérez y Raquel Zapata', obra:'En todo y en nada'},
+
+  {fest:'jardin2026', categoria:'Caleidoscopio · Ficción', nivel:'ganadora', premio:'1er puesto',
+   titulo:'Futuros luminosos', autoria:'Ismael García Ramírez', obra:'Futuros luminosos'},
+  {fest:'jardin2026', categoria:'Caleidoscopio · Ficción', nivel:'ganadora', premio:'2do puesto',
+   titulo:'Jiru iuiai "Algo malo"', autoria:'Yon Arley Agreda Jamioy', obra:'Jiru iuiai "Algo malo"'},
+
+  {fest:'jardin2026', categoria:'Caleidoscopio · Documental', nivel:'ganadora', premio:'1er puesto',
+   titulo:'Un aparato para detectar fantasmas', autoria:'Mauricio Maldonado', obra:'Un aparato para detectar fantasmas'},
+  {fest:'jardin2026', categoria:'Caleidoscopio · Documental', nivel:'ganadora', premio:'2do puesto',
+   titulo:'Lecciones de primavera', autoria:'Antonio Mariño Lizarazo', obra:'Lecciones de primavera'},
+  {fest:'jardin2026', categoria:'Caleidoscopio · Documental', nivel:'mencion',
+   titulo:'Madres de nacimiento', autoria:'Gloria Isabel Gómez', obra:'Madres de nacimiento'},
+
+  {fest:'jardin2026', categoria:'Caleidoscopio · Experimental', nivel:'ganadora', premio:'1er puesto',
+   titulo:'Somnolítico', autoria:'Abril Velásquez', obra:'Somnolítico'},
+  {fest:'jardin2026', categoria:'Caleidoscopio · Experimental', nivel:'ganadora', premio:'2do puesto',
+   titulo:'Deus ex necro machina', autoria:'Mateo M. Correa', obra:'Deus ex necro machina'},
+  {fest:'jardin2026', categoria:'Caleidoscopio · Experimental', nivel:'mencion',
+   titulo:'Una vez en un cuerpo', autoria:'María Cristina Pérez', obra:'Una vez en un cuerpo'},
 ];
 
 // ── NOTICES ──────────────────────────────────────────────────────────────────
