@@ -155,7 +155,9 @@ struct OtrofestivComplicationEntryView: View {
                 }
                 VStack(spacing: 2) {
                     BrandF().frame(width: 7, height: 9.5).foregroundStyle(BrandColor.amber).widgetAccentable()
-                    Text("\(l.minutesLeft)").font(.system(size: 17, weight: .bold)).monospacedDigit()
+                    // «33′»: el número con su unidad (Juan, 27 sep 2026) — solo no se leía como minutos.
+                    (Text("\(l.minutesLeft)").font(.system(size: 17, weight: .bold)).monospacedDigit()
+                     + Text("′").font(.system(size: 13, weight: .semibold)))
                 }
                 .accessibilityElement(children: .ignore)
                 .accessibilityLabel(L.endsIn(l.minutesLeft))

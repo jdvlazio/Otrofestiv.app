@@ -7,7 +7,7 @@
 // Roster (watchlist/watched/…) vía bridge.
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import { _festDate } from '../domain/time.js';
+import { _festDate, simNow } from '../domain/time.js';
 import { syncScheduleWithCatalog, verifyPlan } from '../domain/schedule.js';
 import { report } from '../telemetry.js';
 import { FESTIVAL_STATE, deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge } from '../state/festival-context.js';
@@ -507,7 +507,45 @@ function _notifBase(festId){
   return 1000+(idx<0?0:idx)*_NOTIF_SLOT; // festId desconocido → base 1000 (defensivo)
 }
 
+// _planAvisos — DUEÑO ÚNICO de qué avisos genera el Plan (Android e iPhone leen
+// de acá; copy aprobado por Juan, 26 sep 2026). Dos tipos:
+//   · 30 min antes de cada actividad: título = la obra, cuerpo = «Empieza en 30 min · sede».
+//   · «Ir a las dos»: a la hora de SALIDA, «Es hora de salir» + la siguiente con su hora.
+// Instantes ABSOLUTOS en la zona del festival (_festDate aplica TZ_OFFSET — bug de
+// Argentina, 21 jul 2026: sin offset sonaban corridos desde otra zona).
+function _planAvisos(){
+  const out=[];
+  const sch=(savedAgenda&&savedAgenda.schedule)||[];
+  const now=simNow().getTime(); // = Date.now() en producción; el reloj simulado en tests
+  const at=(day,time)=>{ const d=FESTIVAL_DATES[day]; if(!d||!time) return null; const x=_festDate(d,time); return isNaN(x.getTime())?null:x; };
+  sch.forEach((s,i)=>{
+    if(i>=_NOTIF_SLOT/2) return; // mitad para «30 min antes», mitad para salidas
+    const start=at(s.day,s.time); if(!start) return;
+    const n=new Date(start.getTime()-30*60000);
+    if(n.getTime()>now) out.push({slot:i, title:s._title||'', body:t('aviso_empieza',{venue:s.venue||''}), at:n});
+    if(s.salida){
+      const sal=at(s.day,s.salida); if(!sal||sal.getTime()<=now) return;
+      // la siguiente = la primera del mismo día que empieza después de la salida
+      const sig=sch.filter(x=>x!==s&&x.day===s.day).map(x=>({x,st:at(x.day,x.time)}))
+        .filter(o=>o.st&&o.st>=sal).sort((a,b)=>a.st-b.st)[0];
+      if(sig) out.push({slot:_NOTIF_SLOT/2+i, title:t('aviso_salir'),
+        body:t('aviso_salir_body',{title:sig.x._title||'',h:sig.x.time,venue:sig.x.venue||''}), at:sal});
+    }
+  });
+  return out;
+}
+
 async function _scheduleNotifications(){
+  // iPhone (wrapper SwiftUI, sin Capacitor): el puente «notifications» programa
+  // los avisos con UNUserNotificationCenter. Le pasamos la lista entera del
+  // festival y él reemplaza la anterior (27 sep 2026).
+  const _wk=window.webkit?.messageHandlers?.notifications;
+  if(_wk){
+    try{
+      _wk.postMessage({festival:_activeFestId||'', avisos:_planAvisos().map(a=>({id:String(a.slot),title:a.title,body:a.body,at:a.at.getTime()}))});
+    }catch(e){console.warn('Notifications (iOS) error:',e);}
+    return;
+  }
   if(!window.Capacitor?.isNativePlatform()) return;
   try{
     const {LocalNotifications}=window.Capacitor.Plugins;
@@ -518,28 +556,10 @@ async function _scheduleNotifications(){
     await _cancelNotifications();
     if(!savedAgenda?.schedule?.length) return;
     const _base=_notifBase(_activeFestId);
-    const notifications=[];
-    savedAgenda.schedule.forEach((s,i)=>{
-      if(i>=_NOTIF_SLOT) return; // no desbordar al rango del siguiente festival (nunca alcanzable: <60 slots/semana)
-      const dateStr=FESTIVAL_DATES[s.day];if(!dateStr) return;
-      // Instante ABSOLUTO de la función EN LA ZONA DEL FESTIVAL. Reusa _festDate (ya
-      // aplica TZ_OFFSET del festival activo y normaliza AM/PM). Antes se construía el
-      // Date sin offset → se interpretaba en hora del DISPOSITIVO: un recordatorio
-      // sonaba corrido para quien planeaba desde otra zona (bug cazado prep. Argentina,
-      // 21 jul 2026 — el offset se calculaba pero nunca se usaba).
-      const start=_festDate(dateStr, s.time);
-      if(isNaN(start.getTime())) return;
-      // 30 min antes
-      const notify=new Date(start.getTime()-30*60000);
-      if(notify<=new Date()) return; // ya pasó
-      notifications.push({
-        id:_base+i,
-        title:'Otrofestiv',
-        body:`${s._title} · ${s.venue||''} · ${s.time}`,
-        schedule:{at:notify,allowWhileIdle:true},
-        sound:null,extra:null
-      });
-    });
+    const notifications=_planAvisos().map(a=>({
+      id:_base+a.slot, title:a.title, body:a.body,
+      schedule:{at:a.at,allowWhileIdle:true}, sound:null, extra:null
+    }));
     if(notifications.length){
       await LocalNotifications.schedule({notifications});
     }
