@@ -823,14 +823,10 @@ export function renderContextualHeader(state, consensus){
     const _chip = totalWatched===0 ? '' : (pendingRatings>0
       ? `<span class="recap-chip pend">${pendingRatings} ${t('plan_sin_calificar')}</span>`
       : `<span class="recap-chip done">${ICONS.check} ${t('empty_todo_calif')}</span>`);
-    // El aviso también corona el cierre (decisión de Juan, 18 ago): el hero
-    // no pierde su identidad justo cuando el festival la merece. Reloj: el
-    // aviso del hero habla en familia de tiempo (clock/moon).
-    return`<div class="ctx-aviso">
-      ${ICONS.clock}
-      <span>${t('aviso_fest_terminado')}</span>
-    </div>
-    <div class="recap-hdr">
+    // Sin aviso «Festival terminado» (Juan, 28 sep 2026): la banda «TERMINÓ ·
+    // … ha terminado» ya lo dice justo arriba, y eran dos líneas seguidas con el
+    // mismo dato. El recap abre directo con lo que viste.
+    return`<div class="recap-hdr">
       <span class="ctx-main-title">${mainTitle}</span>
       ${_chip}
     </div>`;
