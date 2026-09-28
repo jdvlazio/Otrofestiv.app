@@ -27,7 +27,7 @@ import { storage } from '../storage/storage.js';
 // Es la ÚNICA dependencia view→controller permitida (fijada en validate.py [view-purity]).
 import { getConsensusMap } from '../controller/delays-cloud.js';
 import {
-  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, blockDuration, delayedEndMin, _delayKey, delayMinOf, _endedStats, prioLiveCount, effectiveWatched, abiertaFase,
+  screeningPassed, screeningEnded, screeningNow, screeningQaOnly, blockDuration, delayedEndMin, _delayKey, delayMinOf, seCalifica, _endedStats, prioLiveCount, effectiveWatched, abiertaFase,
   screeningEndDate,
 } from '../domain/film.js';
 import { sameEntry,
@@ -1520,7 +1520,7 @@ function _renderSavedAgendaHTML(state, consensus){
 // de app. Un solo tamaño de póster (4 col), un solo label de día, estrellas
 // SIEMPRE bajo el afiche (Letterboxd), un solo ojo. Las 13 violaciones del
 // muro doble murieron aquí de raíz.
-function _dwCard(state,{title,poster,posterSVG,rating,off}){
+function _dwCard(state,{title,poster,posterSVG,rating,off,califica=true}){
   const safe=escXML(title||'');
   // El AFICHE es solo afiche (Juan, 18 ago): nada encima, y su tap abre la
   // ficha como en toda la app. Estado y acciones viven en la fila de control,
@@ -1533,7 +1533,8 @@ function _dwCard(state,{title,poster,posterSVG,rating,off}){
   // Mismo ícono que el tachado que la devuelve: sacar y devolver, un solo gesto.
   const ctrl=off
     ?`<button class="dw-ctrl" data-action="diaryToggleVista" data-title="${safe}" data-stop="1" aria-label="${t('aria_marcar_vista')}">${ICONS.eyeOff}</button>`
-    :(rating
+    :(!califica?''
+      :rating
       ?`<div class="dw-stars">${[1,2,3,4,5].map(i=>`<span class="dw-star${i<=rating?' on':''}">${ICONS.starFill}</span>`).join('')}</div>`
       :`<button class="dw-ctrl dw-ctrl-star" data-action="openRatingSheet" data-title="${safe}" data-stop="1" aria-label="${t('aria_calificar')}">${ICONS.starFill}</button>`)
      +`<button class="dw-ctrl" data-action="diaryToggleVista" data-title="${safe}" data-stop="1" aria-label="${t('aria_no_la_vi')}">${ICONS.eye}</button>`;
@@ -1571,9 +1572,10 @@ function renderDiaryWall(state){
       // obra, así que la tarjeta se hacía pasar por esa obra sola. Con la forma C
       // se ven las dos. Si no califica (afiches incompletos), sigue el camino viejo.
       const _lp=programParts(f);
+      const califica=seCalifica(f);
       cards.push(_lp
-        ? {title,posterSVG:_lp.svg,rating:filmRatings[title]||0,off}
-        : {title,poster:getFilmPoster(f),rating:filmRatings[title]||0,off});
+        ? {title,posterSVG:_lp.svg,rating:filmRatings[title]||0,off,califica}
+        : {title,poster:getFilmPoster(f),rating:filmRatings[title]||0,off,califica});
     }
   };
   DAY_KEYS.forEach(day=>{

@@ -3151,3 +3151,37 @@ test('T199 — avisos: iPhone recibe la lista por el puente y con el copy aproba
   expect(salir.at, 'a la hora de salida').toBe(new Date('2026-09-25T19:25:00-05:00').getTime());
   expect(a.every(x => !/^Otrofestiv$/.test(x.title)), 'el título nunca repite «Otrofestiv»').toBe(true);
 });
+
+// ── T200 — Los eventos no se califican: solo el ojo ─────────────────────────
+// Juan (27 sep 2026): el Diario de Jardín le ofrecía calificar la charla del día
+// 1. La regla «un taller no se califica» (#624) vivía solo en el contador; cinco
+// superficies ofrecían estrellas. Dueño único: seCalifica. Guardián [califica-dueno].
+test('T200 — eventos: el Diario, la ficha y la hoja de calificar no ofrecen estrellas', async ({ page }) => {
+  await enterFestival(page, 'jardin2026', '2026-09-26T10:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const ev = FILMS.find(x => x.day === '2026-09-24' && x.type === 'event' && x.title.startsWith('Origen'));
+    const peli = FILMS.find(x => x.day === '2026-09-24' && x.type !== 'event' && x.title === 'La creciente');
+    state.set('savedAgenda', { schedule: [ev, peli].map(x => ({ ...x, _title: x.title })) }); saveSavedAgenda();
+    const tap = (a, d = {}) => { const b = document.createElement('button'); b.setAttribute('data-action', a); Object.entries(d).forEach(([k, v]) => b.setAttribute('data-' + k, v)); document.body.appendChild(b); b.click(); b.remove(); };
+    tap('openDiary'); await w(700);
+    const card = t => [...document.querySelectorAll('#diary-body .dw-card')].find(c => c.querySelector(`[data-title="${CSS.escape(t)}"]`));
+    const cEv = card(ev.title), cPe = card(peli.title);
+    const out = {
+      evEstrella: !!cEv?.querySelector('.dw-ctrl-star'), evOjo: !!cEv?.querySelector('[data-action="diaryToggleVista"]'),
+      peEstrella: !!cPe?.querySelector('.dw-ctrl-star'),
+    };
+    tap('closeDiary'); await w(300);
+    openRatingSheet(ev.title); await w(400);
+    out.hojaAbre = !!document.querySelector('#rating-overlay.open, #rating-sheet.open');
+    watched.add(ev.title); saveWatched();
+    openPelSheet(ev.title); await w(600);
+    out.fichaCalificar = !!document.querySelector('#pel-sheet [data-action="closePelAndRate"]');
+    return out;
+  });
+  expect(r.evOjo, 'el evento tiene el ojo en el Diario').toBe(true);
+  expect(r.evEstrella, 'y NO la estrella').toBe(false);
+  expect(r.peEstrella, 'la obra sí conserva su estrella').toBe(true);
+  expect(r.hojaAbre, 'la hoja de calificar no abre para un evento').toBe(false);
+  expect(r.fichaCalificar, 'la ficha de un evento visto no ofrece «Calificar»').toBe(false);
+});

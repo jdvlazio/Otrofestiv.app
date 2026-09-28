@@ -311,6 +311,13 @@ export function prioLiveCount(){
 // efectivo = watched explícito ∪ asumidas del plan − notWatched.
 // El precedente ya vivía en el dominio: todayWatched (festival.js) contaba
 // screeningPassed como vista desde antes de esta decisión.
+// seCalifica — DUEÑO ÚNICO de «esto lleva estrellas» (decisión de Juan, 27 sep
+// 2026). Una obra se califica; un EVENTO (charla, taller, conversatorio,
+// premiación) no: se registra con el ojo, «fui / no fui». La regla existía desde
+// #624 solo en el contador de pendientes; el Diario, la ficha, «Vista» y «La vi»
+// ofrecían estrellas igual. Guardián [califica-dueno].
+export function seCalifica(f){ return !!f && f.type!=='event'; }
+
 export function effectiveWatched(){
   const out=new Set(watched);
   if(savedAgenda&&savedAgenda.schedule){
@@ -342,7 +349,7 @@ export function _endedStats(){
   [...effectiveWatched()].forEach(t=>{
     const f=FILMS.find(fi=>fi.title===t);
     if(!f) return;
-    if(f.type==='event'){ totalWatched+=1; return; }
+    if(!seCalifica(f)){ totalWatched+=1; return; }
     if(f.is_cortos&&f.film_list&&f.film_list.length){
       totalWatched+=f.film_list.length;
       pendingRatings+=f.film_list.filter(it=>!filmRatings[it.title]).length;
