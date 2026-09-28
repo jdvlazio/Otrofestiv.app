@@ -3722,3 +3722,20 @@ test('T183 — evento con premium/boleta muestra su badge en la lista de todos l
   expect(caso.esRamaEvento).toBe(true);        // se pinta por la rama de evento, que es la que fallaba
   expect(caso.badges).toContain('PREMIUM');
 });
+
+// ── T201 — «Cómo llegar»: Google Maps en Android, Apple Maps en iPhone ────────
+// Auditoría Android (24 sep 2026): en Android abría Apple Maps en el navegador.
+test('T201 — Cómo llegar abre el mapa de cada plataforma', async ({ page }) => {
+  await enterFestival(page, 'jardin2026', '2026-09-26T10:00:00-05:00');
+  const abrir = (ua) => page.evaluate((ua) => {
+    Object.defineProperty(navigator, 'userAgent', { value: ua, configurable: true });
+    let url = ''; const o = window.open; window.open = u => { url = u; return null; };
+    const b = document.createElement('button'); b.setAttribute('data-action', 'venueDirections');
+    b.dataset.lat = '5.598'; b.dataset.lng = '-75.819'; document.body.appendChild(b); b.click(); b.remove();
+    window.open = o; return url;
+  }, ua);
+  const and = await abrir('Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 Chrome/126 Mobile Safari/537.36');
+  expect(and, 'Android → Google Maps con destino').toBe('https://www.google.com/maps/dir/?api=1&destination=5.598,-75.819');
+  const ios = await abrir('Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148');
+  expect(ios, 'iPhone → Apple Maps').toContain('maps.apple.com');
+});
