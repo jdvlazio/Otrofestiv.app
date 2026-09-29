@@ -16,6 +16,14 @@
   {
    "cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/biff-2026-catalogo.json",
    "que": "la cascada completa (TMDB, Proimágenes, cinecorto.co y lo ya publicado)"
+  },
+  {
+   "cmd": "python3 pipeline/biff-2026-pordias.py",
+   "que": "la tabla «Programación por días» del PDF, por coordenadas"
+  },
+  {
+   "cmd": "python3 pipeline/biff-2026-iconos.py",
+   "que": "el color de sección y los íconos (equipo presente / invitación / entrada libre) de cada fila, por píxeles contra la leyenda"
   }
  ],
  "_fuentes_versionadas": {
