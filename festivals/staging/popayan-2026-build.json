@@ -1469,13 +1469,11 @@
      "poster": "/assets/siembrafest/la-mona.jpg",
      "lbSlug": "heat-wave-2025",
      "tmdb_id": 1444298,
-     "synopsis": "La Hondura es un caserío olvidado, en el que La Mona, una paramilitar, impone el orden.\nSin embargo, no puede dominar la naturaleza de su cuerpo y la menstruación la doblega hasta tirarla a la cama.\nA pesar de su carácter huraño, su feminidad aflora, revelando la sensibilidad que también la habita.",
      "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
      "title_en": "Heat Wave",
      "genre": "Drama",
      "country": "Colombia",
      "posterSource": "oficial",
-     "synopsis_lang": "es",
      "flags": "🇨🇴"
     },
     {
@@ -1509,7 +1507,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T15:18:34",
+  "fecha": "2026-09-29T15:19:33",
   "plan_sha": "1ef20173b4efc739",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"

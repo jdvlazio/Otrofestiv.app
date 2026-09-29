@@ -374,6 +374,9 @@ def main():
             # fotograma de Jardín quedó pegado a La Mona desde la caché—
             if c.get('_afiche'):
                 c = {k: v for k, v in c.items() if k not in ('poster', 'posterSource', '_afiche')}
+            # lo mismo la sinopsis declarada: si se retira del sidecar, se va
+            if c.get('_sinopsis'):
+                c = {k: v for k, v in c.items() if k not in ('sinopsis', '_sinopsis')}
             ok[t] = c
             reuso += 1
             print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} tmdb {c["tmdb_id"]} '

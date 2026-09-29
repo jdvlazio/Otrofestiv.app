@@ -5701,7 +5701,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T15:07:44",
+  "fecha": "2026-09-29T15:19:52",
   "plan_sha": "27a412368eb785c2",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py biff-2026"

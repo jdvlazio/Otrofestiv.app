@@ -1126,7 +1126,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T15:07:38",
+  "fecha": "2026-09-29T15:19:47",
   "plan_sha": "6b00e68614a359c4",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py mamut-2026"
