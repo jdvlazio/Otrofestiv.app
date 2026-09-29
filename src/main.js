@@ -100,7 +100,7 @@ import { runCalc } from './controller/calc.js';
 
 // ── Step 7b: controller/persistence.js — saves + cloud sync + Supabase auth. ──
 import {
-  saveWL, saveWatched, saveRating, saveAV, saveSavedAgenda, savePrio, saveLastSlot, saveDelays, saveState, loadState, _cloudLoad, _cloudSave, _sbUpdateUI, submitAuthEmail, submitOTP, deleteAccount, signOutAndClose, setPlanRerender, _applyCloudRow, commitPlan,
+  saveWL, saveWatched, saveRating, saveAV, saveSavedAgenda, savePrio, saveLastSlot, saveDelays, saveState, loadState, pushLiveActivity, _cloudLoad, _cloudSave, _sbUpdateUI, submitAuthEmail, submitOTP, deleteAccount, signOutAndClose, setPlanRerender, _applyCloudRow, commitPlan,
 } from './controller/persistence.js';
 
 // ── Step 7c: controller/pipeline.js — render dispatchers. ────────────────────
@@ -499,7 +499,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202609281648';
+const BUILD_VERSION='202609281905';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1584,6 +1584,7 @@ document.addEventListener('visibilitychange', function(){
       return;
     }
   }catch(e){ report(e,'visNavigate'); }
+  try{ pushLiveActivity(); }catch(e){ report(e,'liveActivity'); } // la tarjeta se corrige al volver
   // Repintar la vista activa SEA CUAL SEA (iOS suspende el setInterval en background;
   // al volver, el usuario no debe ver tiempos viejos ni por un segundo).
   _tickRender();

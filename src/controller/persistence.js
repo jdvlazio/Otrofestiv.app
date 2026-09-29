@@ -16,6 +16,8 @@ import { showToast } from '../view/feedback.js';
 import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
+import { blockDuration, delayMinOf } from '../domain/film.js';
+import { posterModel } from '../view/helpers.js';
 
 // Debounce timer de _cloudSave — module-local (solo _cloudSave lo usa).
 let _cloudSaveTimer=null;
@@ -74,7 +76,7 @@ export function savePrio(){ storage.setPrioritized(prioritized); _cloudSave('pri
 
 export function saveLastSlot(){ storage.setLastRemovedSlots(lastRemovedSlots); }
 
-export function saveDelays(){ storage.setFilmDelays(filmDelays); storage.setFilmDelaysHistory(filmDelaysHistory); }
+export function saveDelays(){ storage.setFilmDelays(filmDelays); storage.setFilmDelaysHistory(filmDelaysHistory); pushLiveActivity(); }
 
 export function saveState(...keys){
   const all=!keys.length;
@@ -535,7 +537,46 @@ function _planAvisos(){
   return out;
 }
 
+// ── Live Activity del iPhone (fase 1, aprobada por Juan el 28 sep 2026) ──────
+// DUEÑO ÚNICO de «qué función va en la tarjeta»: la que está EN CURSO o, si no hay,
+// la próxima del festival activo que empiece dentro de 2 h. Horas REALES (con el
+// retraso marcado): las mismas cuentas que Mi Plan y el reloj, así que nunca se
+// contradicen. Sin función → item null y el iPhone cierra la tarjeta.
+// Solo existe en el wrapper de iOS (messageHandler «liveActivity»); en el resto no hace nada.
+export function _planLiveActivity(){
+  const sch=(savedAgenda&&savedAgenda.schedule)||[];
+  const now=simNow().getTime();
+  const cands=[];
+  for(const s of sch){
+    const d=FESTIVAL_DATES[s.day]; if(!d||!s.time) continue;
+    const st0=_festDate(d,s.time); if(isNaN(st0.getTime())) continue;
+    const dl=delayMinOf(s);
+    const start=st0.getTime()+dl*60000;
+    const end=start+(blockDuration(s)||90)*60000;
+    if(end<=now||start-now>2*3600*1000) continue;
+    cands.push({s,start,end,dl,st0:st0.getTime()});
+  }
+  cands.sort((a,b)=>a.start-b.start);
+  const c=cands[0];
+  if(!c) return null;
+  const f=(typeof FILMS!=='undefined'?FILMS:[]).find(x=>x.title===c.s._title&&x.day===c.s.day&&x.time===c.s.time)||c.s;
+  // El marco lo decide el dueño único del póster (posterModel): mismo criterio que la app.
+  const pm=posterModel(f)||{};
+  const src=pm.src||f.poster||'';
+  const poster=src&&!/^data:/.test(src)?new URL(src,location.origin).href:null;
+  return { key:`${c.s._title}|${c.s.day}|${c.s.time}`, title:c.s._title||f.title||'', venue:c.s.venue||'',
+    start:c.start, end:c.end, delayMin:c.dl, poster, posterEditorial:pm.kind==='editorial',
+    kindLabel:f.type==='event'&&f.event_kind?String(f.event_kind).toUpperCase():null };
+}
+export function pushLiveActivity(){
+  const _wk=window.webkit?.messageHandlers?.liveActivity;
+  if(!_wk) return;
+  try{ _wk.postMessage({festival:_activeFestId||'', lang:(typeof _lang==='string'?_lang:'es'), item:_planLiveActivity()}); }
+  catch(e){ console.warn('liveActivity:',e); }
+}
+
 async function _scheduleNotifications(){
+  pushLiveActivity();
   // iPhone (wrapper SwiftUI, sin Capacitor): el puente «notifications» programa
   // los avisos con UNUserNotificationCenter. Le pasamos la lista entera del
   // festival y él reemplaza la anterior (27 sep 2026).
