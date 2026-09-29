@@ -1378,6 +1378,8 @@
    "day_order": 4,
    "venue": "Teatro Bolívar - Popayán",
    "has_qa": false,
+   "synopsis": "Tecnológico de Artes Débora Arango.",
+   "synopsis_lang": "es",
    "poster": "/assets/popayan-2026/muestra-de-cortos-internacionales.jpg",
    "posterSource": "oficial",
    "_src": {
@@ -1456,7 +1458,7 @@
      "director": "Laura Gutiérrez Ardila",
      "year": 2025,
      "duration": "18 min",
-     "poster": "/assets/jardin-2026/la-mona.jpg",
+     "poster": "/assets/siembrafest/la-mona.jpg",
      "lbSlug": "heat-wave-2025",
      "tmdb_id": 1444298,
      "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
@@ -1497,7 +1499,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T12:45:18",
+  "fecha": "2026-09-29T12:53:16",
   "plan_sha": "1351d26e95981640",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"

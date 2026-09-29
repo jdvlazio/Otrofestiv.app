@@ -378,14 +378,15 @@
   },
   {
    "titulo": "HDLT Hijo de la Tierra",
-   "poster": "/assets/siembrafest/hdlt.jpg",
    "_ya_publicada": [
     {
      "festival": "siembrafest-2026",
      "titulo": "HDLT",
-     "poster": "/assets/siembrafest/hdlt.jpg"
+     "poster": "/assets/siembrafest/hdlt.jpg",
+     "posterSource": "oficial"
     }
    ],
+   "poster": "/assets/siembrafest/hdlt.jpg",
    "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche"
   },
   {
@@ -461,8 +462,8 @@
      "sinopsis": "Entre el polvo y el calor se encuentra La Hondura, un pueblo olvidado, donde la tensión se siente como electricidad en el aire. Allí, La Mona, una paramilitar, impone el orden. Sin embargo, no puede dominar la naturaleza de su cuerpo y la menstruación la doblega hasta el punto de postrarla en la cama."
     }
    ],
-   "poster": "/assets/jardin-2026/la-mona.jpg",
-   "_afiche": "ya publicada en jardin-2026: se reusa su afiche"
+   "poster": "/assets/siembrafest/la-mona.jpg",
+   "_afiche": "ya publicada en siembrafest-2026: se reusa su afiche"
   },
   {
    "titulo": "La asociación",
@@ -544,15 +545,18 @@
   },
   {
    "titulo": "La rebelión de un fantasma",
-   "poster": "/assets/girardota-2026/la-rebelion-de-un-fantasma.jpg",
    "_ya_publicada": [
     {
      "festival": "girardota-2026",
      "titulo": "La Rebelión de un Fantasma",
-     "poster": "/assets/girardota-2026/la-rebelion-de-un-fantasma.jpg"
+     "poster": "/assets/girardota-2026/la-rebelion-de-un-fantasma.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico."
     }
    ],
-   "_verificado": "ya publicada en girardota-2026: se reusa su afiche"
+   "poster": "/assets/girardota-2026/la-rebelion-de-un-fantasma.jpg",
+   "_verificado": "ya publicada en girardota-2026: se reusa su afiche",
+   "sinopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico."
   },
   {
    "titulo": "La tinaja",
@@ -616,14 +620,15 @@
   },
   {
    "titulo": "Las piedras del río",
-   "poster": "/assets/siembrafest/las-piedras-del-rio.jpg",
    "_ya_publicada": [
     {
      "festival": "siembrafest-2026",
      "titulo": "Las piedras del río",
-     "poster": "/assets/siembrafest/las-piedras-del-rio.jpg"
+     "poster": "/assets/siembrafest/las-piedras-del-rio.jpg",
+     "posterSource": "oficial"
     }
    ],
+   "poster": "/assets/siembrafest/las-piedras-del-rio.jpg",
    "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche"
   },
   {
@@ -764,6 +769,18 @@
    ],
    "poster": "/assets/popayan-2026/mi-viche-todo-el-dia.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Muestra de Cortos Internacionales",
+   "_ya_publicada": [
+    {
+     "festival": "jardin-2026",
+     "titulo": "Muestra de cortos",
+     "sinopsis": "Tecnológico de Artes Débora Arango."
+    }
+   ],
+   "_verificado": "ya publicada en jardin-2026: se reusa su sinopsis",
+   "sinopsis": "Tecnológico de Artes Débora Arango."
   },
   {
    "titulo": "Más allá",
@@ -1653,8 +1670,8 @@
      "sinopsis": "Entre el polvo y el calor se encuentra La Hondura, un pueblo olvidado, donde la tensión se siente como electricidad en el aire. Allí, La Mona, una paramilitar, impone el orden. Sin embargo, no puede dominar la naturaleza de su cuerpo y la menstruación la doblega hasta el punto de postrarla en la cama."
     }
    ],
-   "poster": "/assets/jardin-2026/la-mona.jpg",
-   "_afiche": "ya publicada en jardin-2026: se reusa su afiche"
+   "poster": "/assets/siembrafest/la-mona.jpg",
+   "_afiche": "ya publicada en siembrafest-2026: se reusa su afiche"
   },
   "La asociación": {
    "tmdb_id": 1663705,

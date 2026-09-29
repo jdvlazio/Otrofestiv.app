@@ -160,6 +160,17 @@ def main():
         entradas.append(f)
         entradas.extend(f.get('film_list') or [])
     ajenos = []
+    # LO MIRADO A MANO NO SE RECORTA (29 sep 2026). Las láminas del festival
+    # (posterSource 'custom') y los afiches declarados en <fid>-afiches.json ya
+    # se miraron uno por uno; su fondo liso ES diseño. La primera corrida tomó el
+    # azul de las láminas de Girardota y el blanco del afiche de Negret por un
+    # marco, y se comió «Selección Oficial» y el título.
+    _dec = f'{REPO}/festivals/staging/{fid}-afiches.json'
+    mirados = set()
+    if os.path.exists(_dec):
+        import json as _json
+        from lib import slug as _slug
+        mirados = {f'{_slug(t)}.jpg' for t in (_json.load(open(_dec, encoding='utf-8')).get('afiches') or {})}
     for f in entradas:
         p = f.get('poster') or ''
         if not p.startswith('/assets/') or p in vistos:
@@ -184,7 +195,8 @@ def main():
         if not m:
             continue
         (t, b, l, r), (aw, ah) = m
-        if os.path.basename(p) in FONDO_ES_ARTE:
+        if os.path.basename(p) in FONDO_ES_ARTE or os.path.basename(p) in mirados \
+                or f.get('posterSource') == 'custom':
             t = b = l = r = 0
         plan.append((real, os.path.basename(p), t, b, l, r, aw, ah))
 
@@ -316,7 +328,7 @@ def main():
     repetiria = []
     for real, n, *_ in plan:
         m = medir(real)
-        t2, b2, l2, r2 = m[0] if m and n not in FONDO_ES_ARTE else (0, 0, 0, 0)
+        t2, b2, l2, r2 = m[0] if m and n not in FONDO_ES_ARTE and n not in mirados else (0, 0, 0, 0)
         W = int(subprocess.run(['sips', '-g', 'pixelWidth', real], capture_output=True)
                 .stdout.decode().split(':')[-1])
         H = int(subprocess.run(['sips', '-g', 'pixelHeight', real], capture_output=True)

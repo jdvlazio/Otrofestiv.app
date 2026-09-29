@@ -684,7 +684,7 @@
     {
      "title": "Elementales",
      "director": "Camilo Botero Jaramillo",
-     "poster": "/assets/jardin-2026/elementales.jpg",
+     "poster": "/assets/siembrafest/elementales.jpg",
      "synopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
      "posterSource": "oficial",
      "synopsis_lang": "es"
@@ -727,9 +727,9 @@
     {
      "title": "En Todo y en Nada",
      "director": "Raquel Zapata Ospina",
-     "poster": "/assets/jardin-2026/en-todo-y-en-nada.jpg",
+     "poster": "/assets/girardota-2026/en-todo-y-en-nada.jpg",
+     "posterSource": "custom",
      "synopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer.",
-     "posterSource": "oficial",
      "synopsis_lang": "es"
     },
     {
@@ -793,9 +793,9 @@
     {
      "title": "Deus Ex Necro Machina",
      "director": "Mateo Montoya Correa",
-     "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
+     "poster": "/assets/girardota-2026/deus-ex-necro-machina.jpg",
+     "posterSource": "custom",
      "synopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa.",
-     "posterSource": "oficial",
      "synopsis_lang": "es"
     },
     {
@@ -808,7 +808,9 @@
      "title": "La Rebelión de un Fantasma",
      "director": "Flora Rodríguez",
      "poster": "/assets/girardota-2026/la-rebelion-de-un-fantasma.jpg",
-     "posterSource": "custom"
+     "synopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico.",
+     "posterSource": "oficial",
+     "synopsis_lang": "es"
     },
     {
      "title": "Idilio",
@@ -982,7 +984,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T12:39:37",
+  "fecha": "2026-09-29T12:53:29",
   "plan_sha": "89d6e69df8fcc84e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py girardota-2026"
