@@ -369,6 +369,14 @@ def main():
             e['_director'], e['_sondeado'] = _dir, _hoy
             if pub:
                 e['_ya_publicada'] = pub
+                # TMDB SIN SINOPSIS EN ESPAÑOL, PERO YA LA PUBLICAMOS CON UNA:
+                # se reusa la nuestra —ya pasó por un montaje— antes de dejar la
+                # obra solo con la inglesa (Mamut, 28 sep 2026).
+                if not (e.get('synopsis_es') or '').strip():
+                    x = next((x for x in pub if x.get('sinopsis')), None)
+                    if x:
+                        e['synopsis_es'] = x['sinopsis']
+                        e['_sinopsis_de'] = f'ya publicada en {x["festival"]}'
             ok[t] = e
             print(f'[{i:3}/{len(obras)}] OK  {t[:46]:48} {fuente} {e["tmdb_id"]}'
                   f'{"  lb✓" if e.get("lbSlug") else ""}'

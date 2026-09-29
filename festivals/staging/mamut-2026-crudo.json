@@ -1,0 +1,555 @@
+{
+ "_provenance": {
+  "fuente": "Instagram @mamut_festival — el carrusel de programación (11 láminas)",
+  "capturado": "2026-09-29",
+  "que_aporta": "la programación entera: día, hora, lugar y créditos",
+  "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+  "metodo": "lectura a ojo lámina por lámina, confirmada con la OCR de cajas de las mismas láminas, en los dos sentidos"
+ },
+ "_excluidas": {
+  "funciones": [
+   "2026-10-07 09:00 Mitos, mitómanos y misterios",
+   "2026-10-08 09:00 Mitos, mitómanos y misterios",
+   "2026-10-09 16:00 Residencia de archivos",
+   "2026-10-10 09:00 Residencia de archivos",
+   "2026-10-11 10:00 Tarjetas de visita"
+  ],
+  "por_que": {
+   "Mitos, mitómanos y misterios": "laboratorio con convocatoria cerrada (formulario forms.gle/VM95ezS8cbEfkSc37 ya no acepta respuestas); Juan, 28 sep",
+   "Residencia de archivos": "«Residencia de archivos: laboratorio creativo de devolución», 15 cupos por selección, cerrada el 25 sep; Juan, 28 sep",
+   "Tarjetas de visita": "laboratorio de 14 cupos por selección, cerrado el 25 sep; Juan, 28 sep"
+  }
+ },
+ "funciones": [
+  {
+   "titulo": "Soplo de vida",
+   "dia": "2026-10-05",
+   "hora": "18:00",
+   "sede": "La Pascasia",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 2
+   },
+   "seccion": "Proyecciones",
+   "director": "Luis Ospina",
+   "pais": "Colombia",
+   "anio": 1999,
+   "duracion_min": 110,
+   "premiere": "Inauguración"
+  },
+  {
+   "titulo": "Bombardeo a Washington",
+   "dia": "2026-10-05",
+   "hora": "18:00",
+   "sede": "La Pascasia",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 2
+   },
+   "seccion": "Proyecciones",
+   "director": "Luis Ospina",
+   "pais": "Colombia",
+   "anio": 1972,
+   "duracion_min": 1,
+   "premiere": "Inauguración"
+  },
+  {
+   "titulo": "Archivos no hegemónicos",
+   "dia": "2026-10-06",
+   "hora": "09:00",
+   "sede": "Lab UNAL",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 3
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "duracion_min": 240,
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdYPDQSwEfwWZ72Hz6gEO0S9HgGzT1s8MODSDHOKDCXl-hAlw/viewform",
+   "sinopsis": "Taller teórico-práctico impartido por Daniel Delgado Saucedo (Archivistas Salvajes): cuatro jornadas para aproximarse a la identificación, inspección y conservación de soportes fotoquímicos y magnéticos, enfocándose en el valor de los cines amateurs, domésticos y comunitarios. Cupo: 12 personas.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Programa de cortos 1",
+   "dia": "2026-10-06",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 2",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 3
+   },
+   "seccion": "Proyecciones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "Programa de cortos 2",
+   "dia": "2026-10-06",
+   "hora": "18:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 2",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 3
+   },
+   "seccion": "Proyecciones",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da y cierra su sede ese día"
+  },
+  {
+   "titulo": "Archivos no hegemónicos",
+   "dia": "2026-10-07",
+   "hora": "09:00",
+   "sede": "Lab UNAL",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 4
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "duracion_min": 240,
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdYPDQSwEfwWZ72Hz6gEO0S9HgGzT1s8MODSDHOKDCXl-hAlw/viewform",
+   "sinopsis": "Taller teórico-práctico impartido por Daniel Delgado Saucedo (Archivistas Salvajes): cuatro jornadas para aproximarse a la identificación, inspección y conservación de soportes fotoquímicos y magnéticos, enfocándose en el valor de los cines amateurs, domésticos y comunitarios. Cupo: 12 personas.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "dia": "2026-10-07",
+   "hora": "16:30",
+   "sede": "Las Américas",
+   "sala": "Sala 3",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 4
+   },
+   "seccion": "Proyecciones",
+   "director": "Deimer Quintero Vertel",
+   "pais": "Colombia",
+   "duracion_min": 92,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Sueños sobre un mantel vacío",
+   "dia": "2026-10-07",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 1",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 4
+   },
+   "seccion": "Proyecciones",
+   "director": "Víctor Gaviria",
+   "pais": "Colombia",
+   "anio": 1981,
+   "duracion_min": 10,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Apocalipsur",
+   "dia": "2026-10-07",
+   "hora": "19:00",
+   "sede": "Capilla, Comfama",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 4
+   },
+   "seccion": "Proyecciones",
+   "director": "Javier Mejía Osorio",
+   "pais": "Colombia",
+   "anio": 2007,
+   "duracion_min": 101,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Huella mi frente",
+   "dia": "2026-10-07",
+   "hora": "20:00",
+   "sede": "Persona",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 4
+   },
+   "tipo": "evento",
+   "event_kind": "live cinema",
+   "seccion": "Actividades",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da y el hueco hasta la siguiente en la sede es de 210 min"
+  },
+  {
+   "titulo": "Minuto fatal",
+   "dia": "2026-10-07",
+   "hora": "23:30",
+   "sede": "Persona",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 4
+   },
+   "seccion": "Proyecciones",
+   "director": "Jairo Pinilla",
+   "pais": "Colombia",
+   "anio": 1974,
+   "duracion_min": 38
+  },
+  {
+   "titulo": "Archivos no hegemónicos",
+   "dia": "2026-10-08",
+   "hora": "09:00",
+   "sede": "Lab UNAL",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 5
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "duracion_min": 240,
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdYPDQSwEfwWZ72Hz6gEO0S9HgGzT1s8MODSDHOKDCXl-hAlw/viewform",
+   "sinopsis": "Taller teórico-práctico impartido por Daniel Delgado Saucedo (Archivistas Salvajes): cuatro jornadas para aproximarse a la identificación, inspección y conservación de soportes fotoquímicos y magnéticos, enfocándose en el valor de los cines amateurs, domésticos y comunitarios. Cupo: 12 personas.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "Lolita en Honda",
+   "dia": "2026-10-08",
+   "hora": "16:30",
+   "sede": "Las Américas",
+   "sala": "Sala 3",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 5
+   },
+   "seccion": "Proyecciones",
+   "director": "Daniel Torres",
+   "pais": "Colombia",
+   "duracion_min": 61,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Programa inédito: Santiago Herrera",
+   "dia": "2026-10-08",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 1",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 5
+   },
+   "seccion": "Proyecciones",
+   "has_qa": true,
+   "qa_type": "team",
+   "obras": [
+    {
+     "titulo": "Desde la ventana",
+     "director": "Santiago Herrera",
+     "duracion_min": 26
+    },
+    {
+     "titulo": "Labrador de violines",
+     "director": "Santiago Herrera",
+     "duracion_min": 13
+    }
+   ],
+   "duracion_min": 39
+  },
+  {
+   "titulo": "Programa: Alberto Giraldo",
+   "dia": "2026-10-08",
+   "hora": "18:30",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 2",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 5
+   },
+   "seccion": "Proyecciones",
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "(versión restaurada) conversacion con director.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da y cierra su sede ese día"
+  },
+  {
+   "titulo": "Frío metal",
+   "dia": "2026-10-08",
+   "hora": "18:30",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "sala": "Teatro",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 5
+   },
+   "seccion": "Proyecciones",
+   "director": "Clemente Castor",
+   "pais": "México",
+   "duracion_min": 105,
+   "has_qa": true,
+   "qa_type": "team",
+   "sinopsis": "Mario despierta sin memoria al oriente de la Ciudad de México. A la deriva, junto a Lázaro, aprende a habitar cuerpos ajenos a través de grietas en la tierra. Un viaje hipnótico donde el territorio atraviesa la piel y el paisaje se distorsiona al ritmo de los recuerdos."
+  },
+  {
+   "titulo": "Archivos no hegemónicos",
+   "dia": "2026-10-09",
+   "hora": "09:00",
+   "sede": "Lab UNAL",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 6
+   },
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Actividades",
+   "duracion_min": 240,
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdYPDQSwEfwWZ72Hz6gEO0S9HgGzT1s8MODSDHOKDCXl-hAlw/viewform",
+   "sinopsis": "Taller teórico-práctico impartido por Daniel Delgado Saucedo (Archivistas Salvajes): cuatro jornadas para aproximarse a la identificación, inspección y conservación de soportes fotoquímicos y magnéticos, enfocándose en el valor de los cines amateurs, domésticos y comunitarios. Cupo: 12 personas.",
+   "is_recurring": true
+  },
+  {
+   "titulo": "La memoria de las mariposas",
+   "dia": "2026-10-09",
+   "hora": "16:30",
+   "sede": "Las Américas",
+   "sala": "Sala 3",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 6
+   },
+   "seccion": "Proyecciones",
+   "director": "Tatiana Fuentes Sadowski",
+   "pais": "Perú, Portugal",
+   "duracion_min": 77
+  },
+  {
+   "titulo": "Manual para invocar fantasmas",
+   "dia": "2026-10-09",
+   "hora": "18:30",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 6
+   },
+   "seccion": "Proyecciones",
+   "director": "Juliana Zuluaga",
+   "pais": "Colombia",
+   "duracion_min": 71,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Carne de tu carne",
+   "dia": "2026-10-09",
+   "hora": "19:30",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 2",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 6
+   },
+   "seccion": "Proyecciones",
+   "director": "Carlos Mayolo",
+   "pais": "Colombia",
+   "duracion_min": 94
+  },
+  {
+   "titulo": "Programa SHUB: Hocico de cerdo",
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 2",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 7
+   },
+   "seccion": "Proyecciones",
+   "has_qa": true,
+   "qa_type": "guests",
+   "invitados": "Invitados: Juana Schlenker, Daniel Cortés, Ana Tiagx y Tomás Campuzano.",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "Geographies of Solitude",
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sede": "Museo de Arte Moderno de Medellín - MAMM",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 7
+   },
+   "seccion": "Proyecciones",
+   "director": "Jacquelyn Mills",
+   "pais": "Canadá",
+   "duracion_min": 103,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "Muestra: Archivistas salvajes",
+   "dia": "2026-10-10",
+   "hora": "18:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 2",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 7
+   },
+   "seccion": "Proyecciones",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da y el hueco hasta la siguiente en la sede es de 120 min"
+  },
+  {
+   "titulo": "Yo soy la muerte",
+   "dia": "2026-10-10",
+   "hora": "20:00",
+   "sede": "Centro Colombo Americano",
+   "sala": "Sala 1",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 7
+   },
+   "seccion": "Proyecciones",
+   "director": "Daniel Cortés",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 30,
+   "premiere": "Pre estreno nacional",
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "¡Sancocho!",
+   "dia": "2026-10-11",
+   "hora": "12:00",
+   "sede": "Coocine",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 8
+   },
+   "tipo": "evento",
+   "event_kind": "convite",
+   "seccion": "Actividades",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da y el hueco hasta la siguiente en la sede es de 240 min"
+  },
+  {
+   "titulo": "Muestra de cortos 1",
+   "dia": "2026-10-11",
+   "hora": "16:00",
+   "sede": "Coocine",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 8
+   },
+   "seccion": "Proyecciones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "Muestra de cortos 2",
+   "dia": "2026-10-11",
+   "hora": "16:00",
+   "sede": "Coocine",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 8
+   },
+   "seccion": "Proyecciones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "Bombardeo a Washington",
+   "dia": "2026-10-11",
+   "hora": "17:00",
+   "sede": "Coocine",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 9
+   },
+   "seccion": "Proyecciones",
+   "director": "Luis Ospina",
+   "pais": "Colombia",
+   "anio": 1972,
+   "duracion_min": 1
+  },
+  {
+   "titulo": "Fiesta clausura #MAMUT11",
+   "dia": "2026-10-11",
+   "hora": "17:00",
+   "sede": "Coocine",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 9
+   },
+   "tipo": "evento",
+   "event_kind": "fiesta",
+   "seccion": "Actividades",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da y cierra su sede ese día"
+  }
+ ]
+}

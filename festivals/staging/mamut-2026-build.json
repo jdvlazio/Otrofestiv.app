@@ -1,0 +1,922 @@
+{
+ "_etapa": "build generado por pipeline/ensamblar.py",
+ "_provenance": {
+  "fuente": "Instagram @mamut_festival — el carrusel de programación (11 láminas)",
+  "capturado": "2026-09-29",
+  "ensamblador": "pipeline/ensamblar.py"
+ },
+ "_por_que_sedes": "El nombre que imprime cada lámina de día, tal cual; la sala va aparte (crudo `sala`). La lámina 10 da la dirección de seis. «Capilla, Comfama» y «Lab UNAL» no están en esa lámina.",
+ "_por_que_secciones": "El festival no agrupa por secciones. Como en Girardota: «Proyecciones» y «Actividades», palabras nuestras.",
+ "name": "Mamut",
+ "displayName": "Mamut",
+ "fullName": "Mamut 11 — Festival de Memoria Audiovisual",
+ "shortName": "MAMUT",
+ "tagline": "Festival de Memoria Audiovisual",
+ "city": "Medellín",
+ "country": "CO",
+ "dates": "5–11 OCT",
+ "dates_en": "OCT 5–11",
+ "year": 2026,
+ "timezoneOffset": "-05:00",
+ "storageKey": "mamut2026_",
+ "festivalStartStr": "2026-10-05T00:00:00",
+ "festivalEndStr": "2026-10-11T23:59:00",
+ "sharedSlotIsOneScreening": true,
+ "_por_que_slot": "Dos pares comparten día, hora y sede sin contenedor: la inaugural (Soplo de vida + Bombardeo a Washington, que la lámina pone bajo una sola hora) y las Muestras de cortos 1 y 2 (la 2 va sin hora, dentro del bloque de las 4 p. m.). La clausura y el Bombardeo del domingo también coinciden en Coocine a las 5: la fiesta es el contenedor.",
+ "dias_vacios": [],
+ "prioLimit": 4,
+ "dias": [
+  "2026-10-05",
+  "2026-10-06",
+  "2026-10-07",
+  "2026-10-08",
+  "2026-10-09",
+  "2026-10-10",
+  "2026-10-11"
+ ],
+ "festivalDates": {
+  "2026-10-05": "2026-10-05",
+  "2026-10-06": "2026-10-06",
+  "2026-10-07": "2026-10-07",
+  "2026-10-08": "2026-10-08",
+  "2026-10-09": "2026-10-09",
+  "2026-10-10": "2026-10-10",
+  "2026-10-11": "2026-10-11"
+ },
+ "days": [
+  {
+   "k": "2026-10-05",
+   "d": 5,
+   "lbl": "LUN"
+  },
+  {
+   "k": "2026-10-06",
+   "d": 6,
+   "lbl": "MAR"
+  },
+  {
+   "k": "2026-10-07",
+   "d": 7,
+   "lbl": "MIÉ"
+  },
+  {
+   "k": "2026-10-08",
+   "d": 8,
+   "lbl": "JUE"
+  },
+  {
+   "k": "2026-10-09",
+   "d": 9,
+   "lbl": "VIE"
+  },
+  {
+   "k": "2026-10-10",
+   "d": 10,
+   "lbl": "SÁB"
+  },
+  {
+   "k": "2026-10-11",
+   "d": 11,
+   "lbl": "DOM"
+  }
+ ],
+ "dayKeys": [
+  "2026-10-05",
+  "2026-10-06",
+  "2026-10-07",
+  "2026-10-08",
+  "2026-10-09",
+  "2026-10-10",
+  "2026-10-11"
+ ],
+ "dayShort": {
+  "2026-10-05": "LUN 5",
+  "2026-10-06": "MAR 6",
+  "2026-10-07": "MIÉ 7",
+  "2026-10-08": "JUE 8",
+  "2026-10-09": "VIE 9",
+  "2026-10-10": "SÁB 10",
+  "2026-10-11": "DOM 11"
+ },
+ "dayShort_en": {
+  "2026-10-05": "MON 5",
+  "2026-10-06": "TUE 6",
+  "2026-10-07": "WED 7",
+  "2026-10-08": "THU 8",
+  "2026-10-09": "FRI 9",
+  "2026-10-10": "SAT 10",
+  "2026-10-11": "SUN 11"
+ },
+ "dayLong": {
+  "2026-10-05": "Lunes 5 de octubre",
+  "2026-10-06": "Martes 6 de octubre",
+  "2026-10-07": "Miércoles 7 de octubre",
+  "2026-10-08": "Jueves 8 de octubre",
+  "2026-10-09": "Viernes 9 de octubre",
+  "2026-10-10": "Sábado 10 de octubre",
+  "2026-10-11": "Domingo 11 de octubre"
+ },
+ "sections": {
+  "🎬 Proyecciones": {
+   "en": "Screenings",
+   "archetype": "Muestra / País",
+   "order": 1
+  },
+  "🎪 Actividades": {
+   "en": "Activities",
+   "archetype": "Especiales / Eventos",
+   "order": 2
+  }
+ },
+ "venues": {
+  "La Pascasia - Medellín": {
+   "short": "La Pascasia",
+   "city": "Medellín",
+   "n": 0,
+   "lat": 6.2449131,
+   "lng": -75.5649531,
+   "_prec": "manual",
+   "_match": "Google Maps: La Pascasia, Cl. 47 #43 88, La Candelaria"
+  },
+  "Lab UNAL - Medellín": {
+   "short": "Lab UNAL",
+   "city": "Medellín",
+   "n": 4,
+   "_prec": "sin verificar",
+   "_todo": "«Laboratorio Universidad Nacional» (post del taller): la sede Medellín de la UNAL es un campus grande y ninguna fuente dice qué laboratorio. Sin pin hasta saberlo."
+  },
+  "Centro Colombo Americano - Medellín": {
+   "short": "Centro Colombo Americano",
+   "city": "Medellín",
+   "n": 0,
+   "lat": 6.2499694,
+   "lng": -75.5626063,
+   "_prec": "manual",
+   "_match": "Google Maps: Centro Colombo Americano de Medellín (sede Centro), Cra 45 #53-24"
+  },
+  "Las Américas - Medellín": {
+   "short": "Las Américas",
+   "city": "Medellín",
+   "n": 0,
+   "lat": 6.2145832,
+   "lng": -75.5963458,
+   "_prec": "manual",
+   "_match": "Google Maps: Cineprox Las Américas, Dg. 75B #2A-120, Belén (la lámina de días dice «Las Américas»)"
+  },
+  "Capilla, Comfama - Medellín": {
+   "short": "Capilla, Comfama",
+   "city": "Medellín",
+   "n": 1,
+   "_prec": "sin verificar",
+   "_todo": "nueva en la versión corregida y ausente de la lámina de sedes; Comfama tiene varias sedes en Medellín y no dice cuál. Sin pin hasta saberlo."
+  },
+  "Persona - Medellín": {
+   "short": "Persona",
+   "city": "Medellín",
+   "n": 0,
+   "lat": 6.2433426,
+   "lng": -75.5633771,
+   "_prec": "manual",
+   "_match": "Google Maps: Persona, Cra. 42 #46-46, La Candelaria"
+  },
+  "Museo de Arte Moderno de Medellín - MAMM - Medellín": {
+   "short": "Museo de Arte Moderno de Medellín",
+   "city": "Medellín",
+   "n": 0,
+   "lat": 6.2237797,
+   "lng": -75.57384,
+   "_prec": "manual",
+   "_match": "Google Maps: MAMM, Cra 44 #19a-100, El Poblado (el post de Frío metal dice «Teatro MAMM»)"
+  },
+  "Coocine - Medellín": {
+   "short": "Coocine",
+   "city": "Medellín",
+   "n": 0,
+   "lat": 6.2063889,
+   "lng": -75.528,
+   "_prec": "manual",
+   "_match": "Google Maps: COOCINE - Cooperativa de cine, Santa Elena. Google no trae la vereda; la lámina 10 dice vereda El Plan, sector La Morena, casa 15"
+  }
+ },
+ "films": [
+  {
+   "title": "Soplo de vida",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Luis Ospina",
+   "year": 1999,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "110 min",
+   "genre": "Drama",
+   "day": "2026-10-05",
+   "time": "18:00",
+   "day_order": 0,
+   "venue": "La Pascasia - Medellín",
+   "has_qa": false,
+   "synopsis": "Emerson Roque Fierro, antiguo policía y remedo de investigador privado, indaga sobre el asesinato de “Golondrina”, una joven y bella mujer, ocurrido en un sórdido hotel del centro de Bogotá. Sin saber de quien se trata, empieza a conocer sus relaciones con una galería variopinta de hombres: un político corrupto, vinculado con narcotráfico y grupos paramilitares; un torero ladino y bueno para nada; un boxeador venido a menos con una fuerza tan bruta como escasa su inteligencia y un lotero ciego y perspicaz. Y en medio de ello, los hilos oscuros del poder que enredan a todos por igual, y de manera especial el pobre Fierro.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mamut-2026/soplo-de-vida.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 2
+   },
+   "premiere": "Inauguración",
+   "is_free": true,
+   "lbSlug": "breath-of-life",
+   "tmdb_id": 143376,
+   "synopsis_en": "It begins with the tragedy of Armero, during the course investigates the murder of a beautiful woman and on his way some people die in the end a killing and a cemetery. Emerson Roque Fierro, former policeman and private investigator shadowing, investigates the murder of \"Golondrina\", a beautiful young woman, occurred in a seedy hotel in downtown Bogota. Without knowing who it is, begins to understand their relationships with a motley gallery of men: a corrupt politician, connected to drug trafficking and paramilitary groups, a bullfighter cunning and good for nothing, a boxer fallen on hard times with a force so stupid as rare Lotero intellect and an insightful blind. And in the midst of this, the dark threads entangling power to everyone, and especially the poor Fierro.",
+   "title_en": "Breath of Life"
+  },
+  {
+   "title": "Bombardeo a Washington",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Luis Ospina",
+   "year": 1972,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "1 min",
+   "genre": "Bélica",
+   "day": "2026-10-05",
+   "time": "18:00",
+   "day_order": 0,
+   "venue": "La Pascasia - Medellín",
+   "has_qa": false,
+   "synopsis": "Film experimental hecho con materiales de archivo encontrados mediante los cuales, por medio del montaje, se crea la ilusión que Washington es bombardeada desde el aire.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mamut-2026/bombardeo-a-washington.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 2
+   },
+   "premiere": "Inauguración",
+   "is_free": true,
+   "lbSlug": "the-bombing-of-washington",
+   "tmdb_id": 493152,
+   "synopsis_en": "Satirical short comprising wartime footage, purporting to be from the Soviet Film Agency and depicting a successful bomb strike on Washington.",
+   "title_en": "The Bombing of Washington"
+  },
+  {
+   "title": "Archivos no hegemónicos",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "240 min",
+   "day": "2026-10-06",
+   "time": "09:00",
+   "day_order": 1,
+   "venue": "Lab UNAL - Medellín",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "synopsis": "Taller teórico-práctico impartido por Daniel Delgado Saucedo (Archivistas Salvajes): cuatro jornadas para aproximarse a la identificación, inspección y conservación de soportes fotoquímicos y magnéticos, enfocándose en el valor de los cines amateurs, domésticos y comunitarios. Cupo: 12 personas.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 3
+   },
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdYPDQSwEfwWZ72Hz6gEO0S9HgGzT1s8MODSDHOKDCXl-hAlw/viewform",
+   "is_free": true,
+   "requires_registration": true
+  },
+  {
+   "title": "Programa de cortos 1",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "duration": "60 min",
+   "day": "2026-10-06",
+   "time": "17:00",
+   "day_order": 1,
+   "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 3
+   },
+   "is_free": true
+  },
+  {
+   "title": "Programa de cortos 2",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "duration": "90 min",
+   "day": "2026-10-06",
+   "time": "18:00",
+   "day_order": 1,
+   "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 3
+   },
+   "is_free": true
+  },
+  {
+   "title": "Archivos no hegemónicos",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "240 min",
+   "day": "2026-10-07",
+   "time": "09:00",
+   "day_order": 2,
+   "venue": "Lab UNAL - Medellín",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "synopsis": "Taller teórico-práctico impartido por Daniel Delgado Saucedo (Archivistas Salvajes): cuatro jornadas para aproximarse a la identificación, inspección y conservación de soportes fotoquímicos y magnéticos, enfocándose en el valor de los cines amateurs, domésticos y comunitarios. Cupo: 12 personas.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 4
+   },
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdYPDQSwEfwWZ72Hz6gEO0S9HgGzT1s8MODSDHOKDCXl-hAlw/viewform",
+   "is_free": true,
+   "requires_registration": true
+  },
+  {
+   "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Deimer Quintero Vertel",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "92 min",
+   "day": "2026-10-07",
+   "time": "16:30",
+   "day_order": 2,
+   "venue": "Las Américas - Medellín",
+   "sala": "Sala 3",
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mamut-2026/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encon.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 4
+   },
+   "is_free": true,
+   "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+   "tmdb_id": 1663181
+  },
+  {
+   "title": "Sueños sobre un mantel vacío",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Víctor Gaviria",
+   "year": 1981,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "10 min",
+   "genre": "Documental",
+   "day": "2026-10-07",
+   "time": "17:00",
+   "day_order": 2,
+   "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 1",
+   "has_qa": true,
+   "qa_type": "team",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 4
+   },
+   "is_free": true
+  },
+  {
+   "title": "Apocalipsur",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Javier Mejía Osorio",
+   "year": 2007,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "101 min",
+   "genre": "Drama",
+   "day": "2026-10-07",
+   "time": "19:00",
+   "day_order": 2,
+   "venue": "Capilla, Comfama - Medellín",
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "En 1991 Medellín es un lugar peligroso para vivir. Las reglas han cambiado y hasta los policías tienen su precio. Al Flaco le toca huir hacia Londres por amenazas contra su madre. A pesar del miedo que se siente en las calles y la inseguridad en cualquier sitio, sus amigos y su novia, Malala, le hacen una gran despedida con banda de rock a bordo.\r Luego de unos meses, el Flaco regresa y en la ciudad las cosas no parecen haber cambiado: la guerra continúa y las bombas estallan. Junto a sus amigos Pipe, un inválido adicto a los psicoactivos, y la Comadreja, un perdedor inescrupuloso, van por el Flaco al aeropuerto en Bola de Nieve, camioneta en la que han recorrido juntos muchos kilómetros y se ha convertido en el refugio de todos.\r Es el momento de huir de la ciudad y meter el acelerador a fondo o simplemente adentrarse en un viaje alucinado por sus vidas. La carretera tratará de espantar ese luctuoso placer de ser de Medellín, para volver a vivir, junto al Flaco, el Apocalipsur.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mamut-2026/apocalipsur.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 4
+   },
+   "is_free": true,
+   "lbSlug": "apocalipsur",
+   "tmdb_id": 91764,
+   "synopsis_en": "El Flaco returns to Medellin after hiding for some months in London because he was threaten.  Things did not change much."
+  },
+  {
+   "title": "Huella mi frente",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "90 min",
+   "day": "2026-10-07",
+   "time": "20:00",
+   "day_order": 2,
+   "venue": "Persona - Medellín",
+   "event_kind": "live cinema",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 4
+   },
+   "is_free": true
+  },
+  {
+   "title": "Minuto fatal",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Jairo Pinilla",
+   "year": 1974,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "38 min",
+   "genre": "Drama",
+   "day": "2026-10-07",
+   "time": "23:30",
+   "day_order": 2,
+   "venue": "Persona - Medellín",
+   "has_qa": false,
+   "poster": "/assets/mamut-2026/minuto-fatal.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 4
+   },
+   "is_free": true,
+   "lbSlug": "minuto-fatal",
+   "tmdb_id": 939831,
+   "synopsis_en": "An abortion doctor confronts his family problems."
+  },
+  {
+   "title": "Archivos no hegemónicos",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "240 min",
+   "day": "2026-10-08",
+   "time": "09:00",
+   "day_order": 3,
+   "venue": "Lab UNAL - Medellín",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "synopsis": "Taller teórico-práctico impartido por Daniel Delgado Saucedo (Archivistas Salvajes): cuatro jornadas para aproximarse a la identificación, inspección y conservación de soportes fotoquímicos y magnéticos, enfocándose en el valor de los cines amateurs, domésticos y comunitarios. Cupo: 12 personas.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 5
+   },
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdYPDQSwEfwWZ72Hz6gEO0S9HgGzT1s8MODSDHOKDCXl-hAlw/viewform",
+   "is_free": true,
+   "requires_registration": true
+  },
+  {
+   "title": "Lolita en Honda",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Daniel Torres",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "61 min",
+   "day": "2026-10-08",
+   "time": "16:30",
+   "day_order": 3,
+   "venue": "Las Américas - Medellín",
+   "sala": "Sala 3",
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mamut-2026/lolita-en-honda.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 5
+   },
+   "is_free": true,
+   "lbSlug": "lolita-en-honda",
+   "tmdb_id": 1665546
+  },
+  {
+   "title": "Programa inédito: Santiago Herrera",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "duration": "39 min",
+   "day": "2026-10-08",
+   "time": "17:00",
+   "day_order": 3,
+   "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 1",
+   "has_qa": true,
+   "qa_type": "team",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 5
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Desde la ventana",
+     "director": "Santiago Herrera",
+     "duration": "26 min"
+    },
+    {
+     "title": "Labrador de violines",
+     "director": "Santiago Herrera",
+     "duration": "13 min"
+    }
+   ]
+  },
+  {
+   "title": "Programa: Alberto Giraldo",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "duration": "90 min",
+   "day": "2026-10-08",
+   "time": "18:30",
+   "day_order": 3,
+   "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "(versión restaurada) conversacion con director.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 5
+   },
+   "is_free": true
+  },
+  {
+   "title": "Frío metal",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Clemente Castor",
+   "year": 2025,
+   "country": "México",
+   "flags": "🇲🇽",
+   "duration": "105 min",
+   "genre": "Fantasía",
+   "day": "2026-10-08",
+   "time": "18:30",
+   "day_order": 3,
+   "venue": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "sala": "Teatro",
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "Mario despierta sin memoria al oriente de la Ciudad de México. A la deriva, junto a Lázaro, aprende a habitar cuerpos ajenos a través de grietas en la tierra. Un viaje hipnótico donde el territorio atraviesa la piel y el paisaje se distorsiona al ritmo de los recuerdos.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mamut-2026/frio-metal.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 5
+   },
+   "is_free": true,
+   "lbSlug": "cold-metal",
+   "tmdb_id": 1493018,
+   "synopsis_en": "Mario wakes up with no memory of his past life. His encounter with Lazare marks the beginning of a spatio-corporeal drift, from the eastern suburbs of Mexico City to the surrounding underground cavities, where bodies and landscapes crack in the same motion.",
+   "title_en": "Cold Metal"
+  },
+  {
+   "title": "Archivos no hegemónicos",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "240 min",
+   "day": "2026-10-09",
+   "time": "09:00",
+   "day_order": 4,
+   "venue": "Lab UNAL - Medellín",
+   "event_kind": "taller",
+   "is_recurring": true,
+   "has_qa": false,
+   "synopsis": "Taller teórico-práctico impartido por Daniel Delgado Saucedo (Archivistas Salvajes): cuatro jornadas para aproximarse a la identificación, inspección y conservación de soportes fotoquímicos y magnéticos, enfocándose en el valor de los cines amateurs, domésticos y comunitarios. Cupo: 12 personas.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 6
+   },
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdYPDQSwEfwWZ72Hz6gEO0S9HgGzT1s8MODSDHOKDCXl-hAlw/viewform",
+   "is_free": true,
+   "requires_registration": true
+  },
+  {
+   "title": "La memoria de las mariposas",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Tatiana Fuentes Sadowski",
+   "year": 2026,
+   "country": "Perú, Portugal",
+   "flags": "🇵🇪🇵🇹",
+   "duration": "77 min",
+   "genre": "Documental",
+   "day": "2026-10-09",
+   "time": "16:30",
+   "day_order": 4,
+   "venue": "Las Américas - Medellín",
+   "sala": "Sala 3",
+   "has_qa": false,
+   "poster": "/assets/mamut-2026/la-memoria-de-las-mariposas.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 6
+   },
+   "is_free": true,
+   "lbSlug": "the-memory-of-butterflies",
+   "tmdb_id": 1418601,
+   "synopsis_en": "A photo of two indigenous boys brought by force to Europe opens an investigation of the past with meditations on the filmmaker’s own family using roughly textured analogue footage. A monument for the indigenous victims of the rubber trade in Peru.",
+   "title_en": "The Memory of Butterflies"
+  },
+  {
+   "title": "Manual para invocar fantasmas",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Juliana Zuluaga",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "71 min",
+   "genre": "Documental",
+   "day": "2026-10-09",
+   "time": "18:30",
+   "day_order": 4,
+   "venue": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "has_qa": true,
+   "qa_type": "team",
+   "synopsis": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia con el propósito de expandir sus dominios en América, amparados por la sombra de la dictadura franquista. En el año 2021 salió a la luz la denuncia de 43 mujeres suramericanas contra esta organización, por trata de personas y explotación. En un ejercicio de memoria imaginativa, un grupo de actrices se adentra en un internado abandonado entre las frías montañas de Antioquia, para construir una obra de teatro inspirada en las vidas de aquellas mujeres. Poco a poco los ensayos se salen de control y las actrices terminan invocando a los fantasmas de sus antepasadas, que sedientas de justicia se apoderan de la cámara, transformando el rumbo de la película.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mamut-2026/manual-para-invocar-fantasmas.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 6
+   },
+   "is_free": true,
+   "lbSlug": "manual-para-invocar-fantasmas",
+   "tmdb_id": 1665528,
+   "synopsis_en": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America. In 2021, the complaint against this organization by 43 women for trafficking and exploitation reopened the historical wound. In an exercise of imaginative memory, a group of actresses enters an abandoned school to create a play inspired by those silenced lives."
+  },
+  {
+   "title": "Carne de tu carne",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Carlos Mayolo",
+   "year": 1983,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "94 min",
+   "genre": "Drama",
+   "day": "2026-10-09",
+   "time": "19:30",
+   "day_order": 4,
+   "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
+   "has_qa": false,
+   "synopsis": "6 de agosto de 1956 durante la dictadura militar de Rojas Pinilla. Explota en el centro de Cali un convoy militar cargado de dinamita¸ destrozando buena parte de las edificaciones tradicionales de la ciudad y dejando al descubierto las raíces de unas casas que por años habían guardado las historias secretas de sus habitantes: familias notables¸ propietarias de Haciendas e Ingenios azucareros circundantes. Una de estas familias recibe la visita de una muchacha¸ quien ha vivido por años en Estados Unidos¸ y es medio hermana de nuestro joven protagonista. Se conocen¸ escarban en el pasado de la familia¸ se atraen uno al otro¸ y se sumergen en un delirio en el que aparecen los antepasados como personajes míticos que protagonizaron también historias de incesto y violencia.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mamut-2026/carne-de-tu-carne.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 6
+   },
+   "is_free": true,
+   "lbSlug": "bloody-flesh",
+   "tmdb_id": 308572,
+   "synopsis_en": "August 6, 1956 during the military dictatorship of Rojas Pinilla. A military convoy loaded with dynamite explodes in the center of Cali, destroying a good part of the traditional buildings of the city and exposing the roots of some houses that for years had kept the secret stories of their inhabitants.",
+   "title_en": "Bloody Flesh"
+  },
+  {
+   "title": "Programa SHUB: Hocico de cerdo",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "duration": "60 min",
+   "day": "2026-10-10",
+   "time": "17:00",
+   "day_order": 5,
+   "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
+   "has_qa": true,
+   "qa_type": "guests",
+   "synopsis": "Invitados: Juana Schlenker, Daniel Cortés, Ana Tiagx y Tomás Campuzano.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 7
+   },
+   "is_free": true
+  },
+  {
+   "title": "Geographies of Solitude",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Jacquelyn Mills",
+   "year": 2022,
+   "country": "Canadá",
+   "flags": "🇨🇦",
+   "duration": "103 min",
+   "genre": "Documental",
+   "day": "2026-10-10",
+   "time": "17:00",
+   "day_order": 5,
+   "venue": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+   "has_qa": true,
+   "qa_type": "team",
+   "poster": "/assets/mamut-2026/geographies-of-solitude.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 7
+   },
+   "is_free": true,
+   "lbSlug": "geographies-of-solitude",
+   "tmdb_id": 927998,
+   "synopsis_en": "An immersion into the rich landscapes of Sable Island and the life of Zoe Lucas, a naturalist and environmentalist who has lived over 40 years on this remote strip of sand."
+  },
+  {
+   "title": "Muestra: Archivistas salvajes",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "duration": "90 min",
+   "day": "2026-10-10",
+   "time": "18:00",
+   "day_order": 5,
+   "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 2",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 7
+   },
+   "is_free": true
+  },
+  {
+   "title": "Yo soy la muerte",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Daniel Cortés",
+   "year": 2026,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "30 min",
+   "day": "2026-10-10",
+   "time": "20:00",
+   "day_order": 5,
+   "venue": "Centro Colombo Americano - Medellín",
+   "sala": "Sala 1",
+   "has_qa": true,
+   "qa_type": "team",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 7
+   },
+   "premiere": "Pre estreno nacional",
+   "is_free": true
+  },
+  {
+   "title": "¡Sancocho!",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "90 min",
+   "day": "2026-10-11",
+   "time": "12:00",
+   "day_order": 6,
+   "venue": "Coocine - Medellín",
+   "event_kind": "convite",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 8
+   },
+   "is_free": true
+  },
+  {
+   "title": "Muestra de cortos 1",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "duration": "60 min",
+   "day": "2026-10-11",
+   "time": "16:00",
+   "day_order": 6,
+   "venue": "Coocine - Medellín",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 8
+   },
+   "is_free": true
+  },
+  {
+   "title": "Muestra de cortos 2",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "duration": "60 min",
+   "day": "2026-10-11",
+   "time": "16:00",
+   "day_order": 6,
+   "venue": "Coocine - Medellín",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 8
+   },
+   "is_free": true
+  },
+  {
+   "title": "Bombardeo a Washington",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Luis Ospina",
+   "year": 1972,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "1 min",
+   "genre": "Bélica",
+   "day": "2026-10-11",
+   "time": "17:00",
+   "day_order": 6,
+   "venue": "Coocine - Medellín",
+   "has_qa": false,
+   "synopsis": "Film experimental hecho con materiales de archivo encontrados mediante los cuales, por medio del montaje, se crea la ilusión que Washington es bombardeada desde el aire.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mamut-2026/bombardeo-a-washington.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 9
+   },
+   "is_free": true,
+   "lbSlug": "the-bombing-of-washington",
+   "tmdb_id": 493152,
+   "synopsis_en": "Satirical short comprising wartime footage, purporting to be from the Soviet Film Agency and depicting a successful bomb strike on Washington.",
+   "title_en": "The Bombing of Washington"
+  },
+  {
+   "title": "Fiesta clausura #MAMUT11",
+   "type": "event",
+   "section": "🎪 Actividades",
+   "duration": "90 min",
+   "day": "2026-10-11",
+   "time": "17:00",
+   "day_order": 6,
+   "venue": "Coocine - Medellín",
+   "event_kind": "fiesta",
+   "has_qa": false,
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
+    "date": "2026-09-29",
+    "lamina": 9
+   },
+   "is_free": true
+  }
+ ],
+ "_corrido": {
+  "por": "pipeline/correr.py",
+  "fecha": "2026-09-29T12:02:26",
+  "plan_sha": "a928aad3537cbbd3",
+  "paso": 8,
+  "cmd": "python3 pipeline/ensamblar.py mamut-2026"
+ }
+}

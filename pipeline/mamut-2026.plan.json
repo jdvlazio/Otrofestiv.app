@@ -1,0 +1,142 @@
+{
+ "_nota": "Mamut 11 — Festival de Memoria Audiovisual (Medellín, 5–11 oct 2026). La programación es el carrusel p/Dd4A9NxERJA (29 sep), TERCERA versión: el festival borró p/Dd2bBTciVpN y p/Dd2ckXgiYW9: 11 láminas de diagramación libre, leídas a ojo y confirmadas por la OCR de cajas en los dos sentidos. Entrada libre a todo. Quedan FUERA, por decisión de Juan (28 sep), los 3 laboratorios con convocatoria cerrada. La Selección Oficial (16 cortos) tiene su catálogo enriquecido aparte: qué cortos van en cada programa no se publicó (se preguntó).",
+ "radar": 964,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py mamut-2026",
+   "que": "el volcado del radar #964 y el cruce de sus sedes contra las nuestras"
+  },
+  {
+   "cmd": "python3 pipeline/mamut-2026-catalogo.py",
+   "que": "la Selección Oficial (16 cortos), para cuando el festival diga qué va en cada programa"
+  },
+  {
+   "cmd": "python3 pipeline/mamut-2026-programa-catalogo.py",
+   "que": "las obras de la programación con su ficha de la lámina (tabla confirmada contra el crédito transcrito)"
+  },
+  {
+   "cmd": "python3 pipeline/mamut-2026-crudo.py",
+   "que": "la lectura a ojo de las láminas → crudo, confirmada por la OCR en los dos sentidos"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py mamut-2026 --posters",
+   "que": "crudo → enriquecido con la cascada de TMDB y lo ya publicado"
+  },
+  {
+   "cmd": "python3 pipeline/proimagenes.py mamut-2026 --posters",
+   "que": "el cine colombiano que TMDB no tiene"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py mamut-2026 --centro 6.2476,-75.5658 --ciudad \"Medellín, Antioquia\"",
+   "que": "pines: los manuales (Google, con la dirección de la lámina 10) se respetan"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py mamut-2026",
+   "que": "el build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py mamut-2026 --aplicar --desde festivals/staging/mamut-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/mamut-2026-verificar.py",
+   "que": "el build contra las láminas, en los dos sentidos, y cada sede con pin o con su porqué"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/mamut-2026-radar.json": "el volcado del radar #964, que escribe y relee pipeline/radar.py",
+  "festivals/staging/mamut-2026-catalogo.json": "la Selección Oficial (16 cortos), de pipeline/mamut-2026-catalogo.py; se usa cuando el festival diga qué va en cada programa",
+  "festivals/staging/mamut-2026-catalogo-enriquecido.json": "las fichas de la Selección Oficial (10 de 16), del pre-onboarding (enriquecer_catalogo.py, a mano: el catálogo comparte el id del festival y leería sus correcciones de montaje)",
+  "festivals/staging/mamut-2026-programa-catalogo-enriquecido.json": "las fichas de las obras de la programación (pre-onboarding)",
+  "festivals/staging/mamut-2026-programa-correcciones.json": "las 2 fichas declaradas del pre-onboarding",
+  "festivals/staging/mamut-2026-correcciones.json": "las mismas 2 fichas declaradas, para el montaje; las lee pipeline/enriquecer.py"
+ },
+ "_programacion": {
+  "fuente": "IG @mamut_festival p/Dd2bBTciVpN (28 sep 2026): 11 láminas; 2–9 días, 10 sedes con dirección. La web mamutfestival.co todavía tiene la de la edición 10. Pie: «Entrada libre a todas las actividades».",
+  "etapas": {
+   "E1 fuente": "HECHA 28 sep — láminas en fuentes/ig/Dd2bBTciVpN/ + post.jsonl; OCR con cajas en fuentes/mamut-2026-ocr-programa.json",
+   "E2 lectura a ojo": "HECHA 28 sep — fuentes/mamut-2026-ojos-programa.json, 33 actividades de las láminas 2–9 + las 6 sedes de la lámina 10",
+   "E3 confirmación con OCR": "HECHA en borrador 28 sep — 29/33 exactas; 4 diferencias son de la OCR («Luluaga» = Zuluaga; «5p. p.m.»/«8p. p.m.» en la lámina 7). Cobertura inversa: las horas impresas = actividades en las 8 láminas. Falta pasarla a pipeline/mamut-2026-crudo.py",
+   "E4 cruces": "REHECHA 28 sep con la cascada completa (PR de pipeline fix/enriquecer-catalogo-cascada): la primera pasada dio «Lolita en Honda» por perdida y estaba en FICCI 65 y Cinemancia 2026. Selección 10/16, programación 12/14. Auditoría estricta: 6 avisos, todos entendidos (Minuto fatal: TMDB fecha 2014, es el corto de Pinilla de 1974 → se publica 1974).",
+   "E5 montaje": "PENDIENTE — crudo, plan de montaje, verificador build↔láminas, ensamblar y revisión de Juan"
+  },
+  "dudas": [
+   "Huella mi frente (mié 8 p. m.): qué es y dónde; va unida con «+» a Minuto fatal (Persona)",
+   "Qué cortos van en cada programa y muestra (no cuadra por duración)",
+   "Dirección de Lab UNAL",
+   "Contenido de los programas Santiago Herrera, Alberto Giraldo y SHUB",
+   "DECISIÓN DE JUAN: ¿se publican los 3 talleres con la convocatoria cerrada?"
+  ]
+ },
+ "festival": {
+  "crudo": "festivals/staging/mamut-2026-crudo.json",
+  "enriquecido": "festivals/staging/mamut-2026-enriquecido.json",
+  "geo": "festivals/staging/mamut-2026-venues-geo.json",
+  "_por_que_sedes": "El nombre que imprime cada lámina de día, tal cual; la sala va aparte (crudo `sala`). La lámina 10 da la dirección de seis. «Capilla, Comfama» y «Lab UNAL» no están en esa lámina.",
+  "sedes": {
+   "Centro Colombo Americano": [
+    "Centro Colombo Americano - Medellín",
+    ""
+   ],
+   "Persona": [
+    "Persona - Medellín",
+    ""
+   ],
+   "Museo de Arte Moderno de Medellín - MAMM": [
+    "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    ""
+   ],
+   "La Pascasia": [
+    "La Pascasia - Medellín",
+    ""
+   ],
+   "Las Américas": [
+    "Las Américas - Medellín",
+    ""
+   ],
+   "Coocine": [
+    "Coocine - Medellín",
+    ""
+   ],
+   "Lab UNAL": [
+    "Lab UNAL - Medellín",
+    ""
+   ],
+   "Capilla, Comfama": [
+    "Capilla, Comfama - Medellín",
+    ""
+   ]
+  },
+  "_por_que_secciones": "El festival no agrupa por secciones. Como en Girardota: «Proyecciones» y «Actividades», palabras nuestras.",
+  "secciones": {
+   "Proyecciones": {
+    "emoji": "🎬",
+    "en": "Screenings",
+    "archetype": "Muestra / País"
+   },
+   "Actividades": {
+    "emoji": "🎪",
+    "en": "Activities",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "name": "Mamut",
+  "displayName": "Mamut",
+  "fullName": "Mamut 11 — Festival de Memoria Audiovisual",
+  "shortName": "MAMUT",
+  "tagline": "Festival de Memoria Audiovisual",
+  "city": "Medellín",
+  "country": "CO",
+  "dates": "5–11 OCT",
+  "dates_en": "OCT 5–11",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "mamut2026_",
+  "festivalStartStr": "2026-10-05T00:00:00",
+  "festivalEndStr": "2026-10-11T23:59:00",
+  "sharedSlotIsOneScreening": true,
+  "_por_que_slot": "Dos pares comparten día, hora y sede sin contenedor: la inaugural (Soplo de vida + Bombardeo a Washington, que la lámina pone bajo una sola hora) y las Muestras de cortos 1 y 2 (la 2 va sin hora, dentro del bloque de las 4 p. m.). La clausura y el Bombardeo del domingo también coinciden en Coocine a las 5: la fiesta es el contenedor.",
+  "mes_es": "octubre",
+  "dias_vacios": []
+ }
+}

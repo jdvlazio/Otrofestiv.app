@@ -1,0 +1,19 @@
+{
+ "_provenance": {
+  "fuente": "fichas verificadas a mano en el pre-onboarding de la programación",
+  "capturado": "2026-09-28",
+  "metodo": "cada declaración nombra su fuente y por qué el candado automático no podía llegar sola"
+ },
+ "fichas": {
+  "Bombardeo a Washington": {
+   "tmdb": 493152,
+   "_fuente": "https://www.themoviedb.org/movie/493152",
+   "_por_que": "TMDB la registra como «El bombardeo de Washington»: Luis Ospina, 1972, 1 min, los tres datos que imprime la lámina. La búsqueda por el título del festival («Bombardeo a Washington») no la devuelve, y por eso no casa sola. Se publica con el título del festival."
+  },
+  "Carne de tu carne": {
+   "tmdb": 308572,
+   "_fuente": "https://www.themoviedb.org/movie/308572",
+   "_por_que": "Carlos Mayolo, título idéntico, 1983, Colombia. La lámina no trae año y dice 94 min contra 86 en TMDB (Proimágenes, que también la tiene, da otra cifra): con la duración como única prueba, el candado a ±3 la rechaza. Es la única obra de Mayolo con ese título."
+  }
+ }
+}

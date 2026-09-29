@@ -1,0 +1,58 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-09-29"
+ },
+ "Centro Colombo Americano": {
+  "n": 0,
+  "lat": 6.2499694,
+  "lng": -75.5626063,
+  "_prec": "manual",
+  "_match": "Google Maps: Centro Colombo Americano de Medellín (sede Centro), Cra 45 #53-24"
+ },
+ "Persona": {
+  "n": 0,
+  "lat": 6.2433426,
+  "lng": -75.5633771,
+  "_prec": "manual",
+  "_match": "Google Maps: Persona, Cra. 42 #46-46, La Candelaria"
+ },
+ "Museo de Arte Moderno de Medellín - MAMM": {
+  "n": 0,
+  "lat": 6.2237797,
+  "lng": -75.57384,
+  "_prec": "manual",
+  "_match": "Google Maps: MAMM, Cra 44 #19a-100, El Poblado (el post de Frío metal dice «Teatro MAMM»)"
+ },
+ "La Pascasia": {
+  "n": 0,
+  "lat": 6.2449131,
+  "lng": -75.5649531,
+  "_prec": "manual",
+  "_match": "Google Maps: La Pascasia, Cl. 47 #43 88, La Candelaria"
+ },
+ "Las Américas": {
+  "n": 0,
+  "lat": 6.2145832,
+  "lng": -75.5963458,
+  "_prec": "manual",
+  "_match": "Google Maps: Cineprox Las Américas, Dg. 75B #2A-120, Belén (la lámina de días dice «Las Américas»)"
+ },
+ "Coocine": {
+  "n": 0,
+  "lat": 6.2063889,
+  "lng": -75.528,
+  "_prec": "manual",
+  "_match": "Google Maps: COOCINE - Cooperativa de cine, Santa Elena. Google no trae la vereda; la lámina 10 dice vereda El Plan, sector La Morena, casa 15"
+ },
+ "Lab UNAL": {
+  "n": 4,
+  "_prec": "sin verificar",
+  "_todo": "«Laboratorio Universidad Nacional» (post del taller): la sede Medellín de la UNAL es un campus grande y ninguna fuente dice qué laboratorio. Sin pin hasta saberlo."
+ },
+ "Capilla, Comfama": {
+  "n": 1,
+  "_prec": "sin verificar",
+  "_todo": "nueva en la versión corregida y ausente de la lámina de sedes; Comfama tiene varias sedes en Medellín y no dice cuál. Sin pin hasta saberlo."
+ }
+}

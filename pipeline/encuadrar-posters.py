@@ -58,7 +58,11 @@ FONDO_ES_ARTE = {'funeral-siniestro.jpg',
                  'el-deshielo.jpg', 'no-quiero-ser-un-hombre.jpg', 'light-pillar.jpg',
                  # Popayán 17 (29 sep): el cielo y el agua oscuros de «Niña Chilapa»
                  # llegan al borde; no hay marco
-                 'nina-chilapa.jpg'}
+                 'nina-chilapa.jpg',
+                 # «Manual para invocar fantasmas» (Juliana Zuluaga): fantasmas sobre
+                 # negro, créditos abajo sobre negro; la segunda pasada iba a quitar
+                 # ↑7 ↓5 (Mamut, 28 sep 2026)
+                 'manual-para-invocar-fantasmas.jpg'}
 
 
 def rejilla(path):

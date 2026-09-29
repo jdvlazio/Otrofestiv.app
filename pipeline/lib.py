@@ -514,7 +514,7 @@ def arquetipos():
 SIGLAS = {
     # sedes y las instituciones que las nombran
     'AECID', 'ALITIC', 'ASAB', 'BMCC', 'CCEBA', 'CDAE', 'CEFE', 'COMFAMA', 'FUGA',
-    'LGBTIQ', 'MAMB', 'MAMM', 'SENA', 'TPAC', 'UNIAGRARIA', 'UNIBAC', 'VISA',
+    'LGBTIQ', 'MAMB', 'MAMM', 'SENA', 'TPAC', 'UNAL', 'UNIAGRARIA', 'UNIBAC', 'VISA',
     # festivales nombrados dentro de una sección o una sede
     'BIFF', 'FICCI', 'FICDH', 'TIFF',
     # MARCAS DE PROGRAMA que el festival escribe así —no son siglas y no
