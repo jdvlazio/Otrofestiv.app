@@ -53,3 +53,9 @@ test('sin filtro de ciudad → todas las ciudades valen', () => {
   const D = load({ PLAN_CITY_VENUES: null });
   assert.equal(D.screeningPlannable({ ...BASE, venue: 'Colombo MED' }), true);
 });
+
+test('con invitación → NO (la gala de BIFF 12: nadie del público entra)', () => {
+  const D = load();
+  assert.equal(D.screeningPlannable({ ...BASE, by_invitation: true }), false);
+  assert.equal(D.screeningPlannable({ ...BASE, by_invitation: false }), true);
+});

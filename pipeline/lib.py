@@ -441,6 +441,12 @@ DESCONOCIDO = 'desconocido'
 
 _LIBRE = ('entrada libre', 'entrada gratuita', 'gratuita', 'gratuito', 'gratis',
           'ingreso libre', 'acceso libre', 'free admission', 'entrada franca')
+# «Ingreso únicamente con invitación» / «Función cerrada al público»: no hay
+# boleta que comprar ni fila a la que llegar. Antes no se traducía a NADA y el
+# dato moría en el ensamblador (BIFF 12: la inauguración salía como una función
+# más, 29 sep 2026).
+_INVITACION = ('con invitacion', 'solo con invitacion', 'unicamente con invitacion',
+               'cerrada al publico', 'by invitation', 'invitation only')
 _INSCRIPCION = ('inscripcion', 'inscribir', 'registro previo', 'cupo limitado',
                 'previa inscripcion', 'formulario')
 
@@ -465,6 +471,8 @@ def acceso_campos(texto, url=''):
         out['is_free'] = True
     if any(x in t for x in _INSCRIPCION):
         out['requires_registration'] = True
+    if any(x in t for x in _INVITACION):
+        out['by_invitation'] = True
     return out
 
 
@@ -836,6 +844,9 @@ def _selftest():
     t('acceso con enlace', acceso_campos('', 'https://cinemateca.checkout.tuboleta.com/x'),
       {'ticket_url': 'https://cinemateca.checkout.tuboleta.com/x'})
     t('acceso desconocido no inventa', acceso_campos(DESCONOCIDO), {})
+    t('acceso con invitación (BIFF)', acceso_campos('Ingreso únicamente con invitación'), {'by_invitation': True})
+    t('acceso cerrada al público (web BIFF)', acceso_campos('Función cerrada al público. No hay boletería disponible'),
+      {'by_invitation': True})
     t('reserva no es gratis', acceso_campos('Reserva por boletería online o presencial.'), {})
     t('declarado: vacío no cuenta', acceso_declarado({'acceso': '  '}), False)
     t('declarado: desconocido SÍ cuenta', acceso_declarado({'acceso': DESCONOCIDO}), True)

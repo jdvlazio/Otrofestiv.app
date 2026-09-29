@@ -1092,6 +1092,8 @@ export function _metaBadges(f){
   const _pk=premiereBadgeKey(f);if(_pk) b+=`<span class="meta-badge">${t(_pk)}</span>`;
   if(f.has_qa) b+=`<span class="meta-badge">Q&A</span>`;
   if(f.requires_registration) b+=`<span class="meta-badge">${t('badge_inscripcion')}</span>`;
+  // CON INVITACIÓN anula el de precio: cerrada al público no es GRATIS ni CON BOLETA.
+  if(f.by_invitation) return b+`<span class="meta-badge">${t('badge_invitacion')}</span>`;
   // Festival mixto: el badge marca la MINORÍA (ver ticketBadgeTarget).
   const _tb=ticketBadgeTarget();
   if(_tb==='free'&&f.is_free===true) b+=`<span class="meta-badge">${t('badge_gratis')}</span>`;

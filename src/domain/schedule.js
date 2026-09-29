@@ -179,6 +179,11 @@ export function isScreeningBlocked(s){
 // typeof, mismo patrón que en plannableScreens.
 export function screeningPlannable(s){
   if(!s||s._cancelled) return false;
+  // Función CON INVITACIÓN (la gala de apertura de BIFF 12): el público no puede
+  // entrar, así que el plan no la propone — proponerla es peor que no mostrarla.
+  // Se sigue viendo en el programa y en la ficha, y quien SÍ está invitado la
+  // agenda a mano (el botón no pasa por aquí). Decisión de Juan, 29 sep 2026.
+  if(s.by_invitation) return false;
   if(screeningPassed(s)) return false;
   if(isScreeningBlocked(s)) return false;
   const _pv=(typeof PLAN_CITY_VENUES!=='undefined')?PLAN_CITY_VENUES:null;
