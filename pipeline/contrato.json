@@ -72,6 +72,11 @@
    "formato": "^https://",
    "grupo": "acceso"
   },
+  "by_invitation": {
+   "tipo": "boolean",
+   "grupo": "acceso",
+   "nota": "Función CERRADA al público, solo con invitación. Anula el badge de precio y el plan no la propone (screeningPlannable); se agenda a mano. Por función: la gala sí, las demás funciones de la obra no."
+  },
   "title_en": {
    "tipo": "string"
   },

@@ -1697,6 +1697,8 @@ function _avisosBand(f, opts){
   const _pk=premiereBadgeKey(f);if(_pk&&f.premiere) rows.push([t(_pk), f.premiere]);
   const _ins=_con('requires_registration');
   if(_ins.length) rows.push([t('badge_inscripcion'), t('aviso_inscripcion')+_cual(_ins)]);
+  const _inv=_con('by_invitation');  // nombra cuáles; y sale de la fila de precio
+  if(_inv.length) rows.push([t('badge_invitacion'), t('aviso_invitacion')+_cual(_inv)]);
   // Precio: la ficha dice lo MISMO que la card — ticketBadgeTarget es el dueño
   // único de qué se marca (la minoría). Si la card de una función dice CON
   // BOLETA y su ficha dijera GRATIS, se contradirían.
@@ -1716,10 +1718,10 @@ function _avisosBand(f, opts){
   const _vivas=_src.filter(x=>x&&!x._cancelled);
   const _soloVivas=h=>h.filter(x=>!x._cancelled);
   if(_tb==='free'){
-    const _g=_con('is_free');
+    const _g=_con('is_free').filter(x=>!x.by_invitation);
     if(_g.length) rows.push([t('badge_gratis'), t('aviso_gratis')+_cual(_soloVivas(_g),_vivas)]);
   } else if(_tb==='paid'){
-    const _p=_src.filter(x=>x&&x.is_free!==true);
+    const _p=_src.filter(x=>x&&x.is_free!==true&&!x.by_invitation);
     if(_p.length) rows.push([t('badge_con_boleta'), t('aviso_con_boleta')+_cual(_soloVivas(_p),_vivas)]);
   }
   if(!rows.length) return '';
