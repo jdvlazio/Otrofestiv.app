@@ -57,7 +57,8 @@
  "_fuentes_versionadas": {
   "festivals/staging/biff-2026-catalogo-enriquecido.json": "las fichas del pre-onboarding",
   "festivals/staging/biff-2026-radar.json": "el volcado del radar #985, que escribe y relee pipeline/radar.py",
-  "festivals/staging/biff-2026-afiches.json": "afiches declarados (buscados y mirados fuera de TMDB); los lee pipeline/enriquecer.py donde TMDB y lo ya publicado no tienen"
+  "festivals/staging/biff-2026-afiches.json": "afiches declarados (buscados y mirados fuera de TMDB); los lee pipeline/enriquecer.py donde TMDB y lo ya publicado no tienen",
+  "festivals/staging/biff-2026-sinopsis.json": "sinopsis oficiales declaradas (literal, con URL); las lee pipeline/enriquecer.py donde no hay ninguna"
  },
  "_errata": {
   "El deshielo": "duración 108, no 88 (PDF del BIFF y Cinemateca, que copia al festival). 108: Festival de Cannes (Un Certain Regard), CineChile, TMDB 1210268, Wikipedia. Revisado a pedido de Juan, 29 sep."

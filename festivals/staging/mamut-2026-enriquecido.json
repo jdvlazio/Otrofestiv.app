@@ -323,7 +323,9 @@
    "_director": "Jacquelyn Mills",
    "_sondeado": "2026-09-28",
    "poster": "/assets/mamut-2026/geographies-of-solitude.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Zoe Lucas, naturalista e investigadora autodidacta, lleva más de 40 años viviendo, cuidando y documentando la isla de Sable. Es la única habitante humana de un rico ecosistema donde conviven caballos salvajes, focas, aves e insectos, pero también adonde llegan montañas de residuos plásticos.\nLa cineasta Jacquelyn Mills la acompaña en sus tareas habituales, nos muestra su proceso de descubrimiento y observa al personaje y el ciclo de la vida de la isla. Rodado en 16 mm, con luz natural, sonidos ambientales obtenidos de la propia naturaleza y técnicas respetuosas con el medio ambiente, el film experimenta con las texturas y otorga un toque poético a las imágenes. De este modo desdibuja los límites entre ciencia y arte y nos invita a reflexionar sobre nuestra propia relación con la naturaleza.",
+   "_sinopsis": "https://alternativa.cccb.org/2022/es/so/film/geographies-of-solitude"
   },
   {
    "titulo": "La memoria de las mariposas",
@@ -343,7 +345,9 @@
    "_director": "Tatiana Fuentes Sadowski",
    "_sondeado": "2026-09-28",
    "poster": "/assets/mamut-2026/la-memoria-de-las-mariposas.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
+   "_sinopsis": "https://ambulante.org/catalogo/la-memoria-de-las-mariposas"
   },
   {
    "titulo": "Lolita en Honda",
@@ -807,7 +811,9 @@
    "_director": "Jacquelyn Mills",
    "_sondeado": "2026-09-28",
    "poster": "/assets/mamut-2026/geographies-of-solitude.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Zoe Lucas, naturalista e investigadora autodidacta, lleva más de 40 años viviendo, cuidando y documentando la isla de Sable. Es la única habitante humana de un rico ecosistema donde conviven caballos salvajes, focas, aves e insectos, pero también adonde llegan montañas de residuos plásticos.\nLa cineasta Jacquelyn Mills la acompaña en sus tareas habituales, nos muestra su proceso de descubrimiento y observa al personaje y el ciclo de la vida de la isla. Rodado en 16 mm, con luz natural, sonidos ambientales obtenidos de la propia naturaleza y técnicas respetuosas con el medio ambiente, el film experimenta con las texturas y otorga un toque poético a las imágenes. De este modo desdibuja los límites entre ciencia y arte y nos invita a reflexionar sobre nuestra propia relación con la naturaleza.",
+   "_sinopsis": "https://alternativa.cccb.org/2022/es/so/film/geographies-of-solitude"
   },
   "La memoria de las mariposas": {
    "tmdb_id": 1418601,
@@ -826,7 +832,9 @@
    "_director": "Tatiana Fuentes Sadowski",
    "_sondeado": "2026-09-28",
    "poster": "/assets/mamut-2026/la-memoria-de-las-mariposas.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
+   "_sinopsis": "https://ambulante.org/catalogo/la-memoria-de-las-mariposas"
   },
   "Lolita en Honda": {
    "tmdb_id": 1665546,
@@ -1080,13 +1088,5 @@
    "director": "Daniel Cortés",
    "fecha": "2026-09-28"
   }
- },
- "_fuentes": [
-  {
-   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-09-29",
-   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
-   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
-  }
- ]
+ }
 }

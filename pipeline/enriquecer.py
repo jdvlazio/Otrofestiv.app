@@ -374,6 +374,9 @@ def main():
             # fotograma de Jardín quedó pegado a La Mona desde la caché—
             if c.get('_afiche'):
                 c = {k: v for k, v in c.items() if k not in ('poster', 'posterSource', '_afiche')}
+            # lo mismo la sinopsis declarada: si se retira del sidecar, se va
+            if c.get('_sinopsis'):
+                c = {k: v for k, v in c.items() if k not in ('sinopsis', '_sinopsis')}
             ok[t] = c
             reuso += 1
             print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} tmdb {c["tmdb_id"]} '
@@ -463,6 +466,21 @@ def main():
             declarados += 1
     if declarados:
         print(f'afiches declarados en {os.path.basename(_dec)}: {declarados}')
+    # LA SINOPSIS DECLARADA: festivals/staging/<fid>-sinopsis.json, texto
+    # OFICIAL (página del festival, catálogo, productora) copiado literal y con
+    # su URL. Entra solo donde no hay ninguna; no toca la ficha de TMDB.
+    _sdec = f'{ST}/{fid}-sinopsis.json'
+    if os.path.exists(_sdec):
+        n_s = 0
+        for t, d in (json.load(open(_sdec, encoding='utf-8')).get('sinopsis') or {}).items():
+            if t not in obras:
+                sys.exit(f'sinopsis declarada para un título que no está en el programa: {t}')
+            e = ok.get(t) or {}
+            if e.get('sinopsis') or e.get('synopsis_es'):
+                continue
+            ok[t] = {**e, 'sinopsis': d['texto'], '_sinopsis': d['fuente']}
+            n_s += 1
+        print(f'sinopsis declaradas en {os.path.basename(_sdec)}: {n_s}')
 
     if posters:
         os.makedirs(f'{REPO}/assets/{fid}', exist_ok=True)

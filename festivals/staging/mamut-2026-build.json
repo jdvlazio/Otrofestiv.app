@@ -136,14 +136,17 @@
    "lat": 6.2449131,
    "lng": -75.5649531,
    "_prec": "manual",
-   "_match": "Google Maps: La Pascasia, Cl. 47 #43 88, La Candelaria"
+   "_match": "Google Maps: La Pascasia, Cl. 47 #43 88, La Candelaria",
+   "address": "Cl. 47 #43-88"
   },
   "Lab UNAL - Medellín": {
    "short": "Lab UNAL",
    "city": "Medellín",
    "n": 4,
    "_prec": "sin verificar",
-   "_todo": "«Laboratorio Universidad Nacional» (post del taller): la sede Medellín de la UNAL es un campus grande y ninguna fuente dice qué laboratorio. Sin pin hasta saberlo."
+   "_todo": "«Laboratorio Universidad Nacional» (post del taller): la sede Medellín de la UNAL es un campus grande y ninguna fuente dice qué laboratorio. Sin pin hasta saberlo.",
+   "address": "Universidad Nacional de Colombia, sede Medellín",
+   "_nota": "«Laboratorio Universidad Nacional» (post del taller p/Ddua0DTAVEE, con @artesunalmed). Sin pin: el campus es grande y no dicen qué edificio; va la dirección del campus."
   },
   "Centro Colombo Americano - Medellín": {
    "short": "Centro Colombo Americano",
@@ -152,7 +155,8 @@
    "lat": 6.2499694,
    "lng": -75.5626063,
    "_prec": "manual",
-   "_match": "Google Maps: Centro Colombo Americano de Medellín (sede Centro), Cra 45 #53-24"
+   "_match": "Google Maps: Centro Colombo Americano de Medellín (sede Centro), Cra 45 #53-24",
+   "address": "Cra. 45 #53-24"
   },
   "Las Américas - Medellín": {
    "short": "Las Américas",
@@ -161,14 +165,18 @@
    "lat": 6.2145832,
    "lng": -75.5963458,
    "_prec": "manual",
-   "_match": "Google Maps: Cineprox Las Américas, Dg. 75B #2A-120, Belén (la lámina de días dice «Las Américas»)"
+   "_match": "Google Maps: Cineprox Las Américas, Dg. 75B #2A-120, Belén (la lámina de días dice «Las Américas»)",
+   "address": "Dg. 75B #2A-120"
   },
   "Capilla, Comfama - Medellín": {
    "short": "Capilla, Comfama",
    "city": "Medellín",
    "n": 1,
-   "_prec": "sin verificar",
-   "_todo": "nueva en la versión corregida y ausente de la lámina de sedes; Comfama tiene varias sedes en Medellín y no dice cuál. Sin pin hasta saberlo."
+   "_prec": "manual",
+   "address": "Claustro Comfama San Ignacio, Cra. 44 #48-18 (2.º piso)",
+   "lat": 6.2458698,
+   "lng": -75.5639884,
+   "_nota": "La Capilla: sala de cine patrimonial en el 2.º piso del Claustro Comfama San Ignacio (comfama.com, «Cineclub La Capilla»). Google Maps: Comfama Claustro San Ignacio, Cra. 44 #48-18 (29 sep)."
   },
   "Persona - Medellín": {
    "short": "Persona",
@@ -177,7 +185,8 @@
    "lat": 6.2433426,
    "lng": -75.5633771,
    "_prec": "manual",
-   "_match": "Google Maps: Persona, Cra. 42 #46-46, La Candelaria"
+   "_match": "Google Maps: Persona, Cra. 42 #46-46, La Candelaria",
+   "address": "Cra. 42 #46-46"
   },
   "Museo de Arte Moderno de Medellín - MAMM - Medellín": {
    "short": "Museo de Arte Moderno de Medellín",
@@ -186,7 +195,8 @@
    "lat": 6.2237797,
    "lng": -75.57384,
    "_prec": "manual",
-   "_match": "Google Maps: MAMM, Cra 44 #19a-100, El Poblado (el post de Frío metal dice «Teatro MAMM»)"
+   "_match": "Google Maps: MAMM, Cra 44 #19a-100, El Poblado (el post de Frío metal dice «Teatro MAMM»)",
+   "address": "Cra. 44 #19A-100"
   },
   "Coocine - Medellín": {
    "short": "Coocine",
@@ -195,7 +205,8 @@
    "lat": 6.2063889,
    "lng": -75.528,
    "_prec": "manual",
-   "_match": "Google Maps: COOCINE - Cooperativa de cine, Santa Elena. Google no trae la vereda; la lámina 10 dice vereda El Plan, sector La Morena, casa 15"
+   "_match": "Google Maps: COOCINE - Cooperativa de cine, Santa Elena. Google no trae la vereda; la lámina 10 dice vereda El Plan, sector La Morena, casa 15",
+   "address": "Corregimiento de Santa Elena"
   }
  },
  "films": [
@@ -843,6 +854,8 @@
    "venue": "Las Américas - Medellín",
    "sala": "Sala 3",
    "has_qa": false,
+   "synopsis": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
+   "synopsis_lang": "es",
    "poster": "/assets/mamut-2026/la-memoria-de-las-mariposas.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -954,6 +967,8 @@
    "venue": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
    "has_qa": true,
    "qa_type": "team",
+   "synopsis": "Zoe Lucas, naturalista e investigadora autodidacta, lleva más de 40 años viviendo, cuidando y documentando la isla de Sable. Es la única habitante humana de un rico ecosistema donde conviven caballos salvajes, focas, aves e insectos, pero también adonde llegan montañas de residuos plásticos.\nLa cineasta Jacquelyn Mills la acompaña en sus tareas habituales, nos muestra su proceso de descubrimiento y observa al personaje y el ciclo de la vida de la isla. Rodado en 16 mm, con luz natural, sonidos ambientales obtenidos de la propia naturaleza y técnicas respetuosas con el medio ambiente, el film experimenta con las texturas y otorga un toque poético a las imágenes. De este modo desdibuja los límites entre ciencia y arte y nos invita a reflexionar sobre nuestra propia relación con la naturaleza.",
+   "synopsis_lang": "es",
    "poster": "/assets/mamut-2026/geographies-of-solitude.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -1111,8 +1126,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T14:32:07",
-  "plan_sha": "a928aad3537cbbd3",
+  "fecha": "2026-09-29T15:19:47",
+  "plan_sha": "6b00e68614a359c4",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py mamut-2026"
  }
