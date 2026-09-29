@@ -5,6 +5,32 @@
  },
  "obras": [
   {
+   "titulo": "Acto de ver",
+   "tmdb_id": 1547380,
+   "titulo_original": "Acto de ver",
+   "poster_path": null,
+   "synopsis_es": "Cuatro rostros. Una fotografía. Cuatro miradas interpelan el acto de ver. Cuatro rostros fueron testigos de la violencia en Colombia. ¿Qué nos dicen? ¿Tenemos la posibilidad de entender el acto de violencia en Colombia?",
+   "synopsis_en": "Four faces. One photograph. Four perspectives challenge the act of seeing. Four faces witnessed the violence in Colombia. What do they tell us? Do we have a chance to understand the act of violence in Colombia?",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "acto-de-ver",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Acto de ver",
+   "_director": "Jean Paul Sánchez Flórez",
+   "_sondeado": "2026-09-29",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Acto de Ver",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Acto-de-ver-3-1-1024x576.png",
+     "sinopsis": "Cuatro rostros. Una fotografía. Cuatro miradas interpelan el acto de ver. Cuatro rostros fueron testigos de la violencia en Colombia. ¿Qué nos dicen? ¿Tenemos la posibilidad de entender el acto de violencia en Colombia?"
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cinemancia-2025"
+  },
+  {
    "titulo": "Apocalipsur",
    "tmdb_id": 91764,
    "titulo_original": "Apocalipsur",
@@ -22,6 +48,37 @@
    "_sondeado": "2026-09-28",
    "poster": "/assets/mamut-2026/apocalipsur.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Archipiélago fantasma",
+   "tmdb_id": 489896,
+   "titulo_original": "Archipiélago fantasma",
+   "poster_path": "/x5JQQVPr2pLjmxNy9lXpFyE7Y1W.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Guetón Rodríguez was one of the main actors of the first film shot in Canary Islands. His character was found guilty of a robbery he didn't commit. Years after, during the Spanish Civil War, he was arrested for political activism. This time, it was for real.",
+   "genero": "",
+   "anio_tmdb": 2017,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "archipielago-fantasma",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Archipiélago fantasma",
+   "_director": "Dailo Barco",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/archipielago-fantasma.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Belleza letal",
+   "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Belleza letal",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ"
+    }
+   ],
+   "_verificado": "ya publicada en ficci-65: se reusa su afiche"
   },
   {
    "titulo": "Bombardeo a Washington",
@@ -59,6 +116,96 @@
    "_director": "Carlos Mayolo",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/carne-de-tu-carne.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Decaer",
+   "tmdb_id": 1668881,
+   "titulo_original": "decaer",
+   "poster_path": "/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+   "synopsis_es": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
+   "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia",
+   "title_en": "decay",
+   "lbSlug": "decay-2026",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Decaer",
+   "_director": "Juan Camilo González",
+   "_sondeado": "2026-09-29",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Decaer",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj"
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "decaer",
+     "tmdb_id": 1668881,
+     "poster": "/assets/popayan-2026/decaer.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    }
+   ],
+   "poster": "/assets/mamut-2026/decaer.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Desde el principio hasta el final",
+   "tmdb_id": 1197788,
+   "titulo_original": "Desde el principio hasta el final",
+   "poster_path": "/hj2vP6PYx8RTPUtYacgD9zsqbFr.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a search for giving new meaning to the past and understanding her present, the director tries to establish a dialogue between her parents -which has been non-existent for years- through letters and family archive material prior to her birth.",
+   "genero": "Drama",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Argentina",
+   "title_en": "From Beginning to End",
+   "lbSlug": "from-beginning-to-end-2023",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Desde el principio hasta el final",
+   "_director": "Loana Pagani",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/desde-el-principio-hasta-el-final.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El Perú es un lugar para morir",
+   "tmdb_id": 1608544,
+   "titulo_original": "El Perú es un lugar para morir",
+   "poster_path": "/zXz7pWbyKP9QPHlHe0ODLhKxxS2.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Using footage filmed in Peru in 1950 by a foreigner, Víctor writes a letter to his son to question the country he will inherit: among heartbeats and ruins, he searches for a hope that still endures amid disillusionment.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Peru",
+   "lbSlug": "el-peru-es-un-lugar-para-morir",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El Perú es un lugar para morir",
+   "_director": "Víctor Augusto Mendívil",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/el-peru-es-un-lugar-para-morir.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -109,6 +256,25 @@
     }
    ],
    "poster": "/assets/mamut-2026/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encon.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Estas imágenes fueron hechas para no mirarse",
+   "tmdb_id": 1136744,
+   "titulo_original": "Estas imágenes fueron hechas para no mirarse",
+   "poster_path": "/jz87N1DVL2jti2xRemUGXnbUT6f.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Images are more than what they show, it is only necessary to look at them again. Essay that deals with images that were made not to be looked at and that, behind their appearance, reveal a dark truth.",
+   "genero": "Documental",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Mexico",
+   "lbSlug": "estas-imagenes-fueron-hechas-para-no-mirarse",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Estas imágenes fueron hechas para no mirarse",
+   "_director": "Pablo Romo Á.",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/estas-imagenes-fueron-hechas-para-no-mirarse.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -213,6 +379,26 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Los no humanos",
+   "tmdb_id": 1584750,
+   "titulo_original": "Los no humanos",
+   "poster_path": "/okc0LEi6CuAyHJC1z9tvvcwbZ2j.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "I. I examine damaged film material. II. I recover stories by breaking down the medium that contains them. III. I observe the intervention of biological processes in the production of images. IV. The life of signs makes its way.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "",
+   "title_en": "The Non-Humans",
+   "lbSlug": "the-non-humans",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Los no humanos",
+   "_director": "Ximena Gonzalez",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/los-no-humanos.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Manual para invocar fantasmas",
    "tmdb_id": 1665528,
    "titulo_original": "Manual para Invocar Fantasmas",
@@ -259,6 +445,24 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "No menguará el fuego de esta luna",
+   "tmdb_id": 1593592,
+   "titulo_original": "No menguará el fuego de esta luna",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "I seek out and speak with the dead. I write to a woman no longer here: Soraya Cataño, murdered in Medellín in 1991. Thirty years later, I find her in an image. Her voice rises as a parade climbs the hillside. The archive reveals her laughter, her gesture, and I choose to call her forth.I too was raised in this valley.  I too believed. I believe. This film is not about death. It is a dialogue between the one who narrates and the one who resists through absence. It is a fire that does not fade.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 22,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Fire of This Moon Shall Not Wane",
+   "lbSlug": "the-fire-of-this-moon-shall-not-wane",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "No menguará el fuego de esta luna",
+   "_director": "Sebastián Pérez Arbelaez",
+   "_sondeado": "2026-09-29"
+  },
+  {
    "titulo": "Soplo de vida",
    "tmdb_id": 143376,
    "titulo_original": "Soplo de Vida",
@@ -286,9 +490,53 @@
    "_verificado": "declarada a mano: Proimágenes la registra como «Sueño sobre un mantel vacío» (1240, en singular): Victor Gaviria, 1981, 10 minutos, documental; su buscador es literal y el título corregido del festival («Sueños…», en plural) no la devuelve. No está en TMDB. Proimágenes no publica su afiche, y lo que pone como sinopsis es la resolución de clasificación de 1981, que no se usa.",
    "_director": "Víctor Gaviria",
    "_sondeado": "2026-09-29"
+  },
+  {
+   "titulo": "Una habitación en Bangkok",
+   "tmdb_id": 1659048,
+   "titulo_original": "Una habitación en bangkok",
+   "poster_path": "/zoXXoqgWVtlPA9tObMOovkL9pgj.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Using Super 8 footage, the director revisits a childhood trip to Asia, where his father’s business partner documented his family. Haunted by memories of a night in a Bangkok hotel, he grapples with fragmented memories, trauma, and the power of forgetting.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "una-habitacion-en-bangkok",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una habitación en Bangkok",
+   "_director": "Javier Olivera",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/una-habitacion-en-bangkok.jpg",
+   "posterSource": "tmdb"
   }
  ],
  "verificadas": {
+  "Acto de ver": {
+   "tmdb_id": 1547380,
+   "titulo_original": "Acto de ver",
+   "poster_path": null,
+   "synopsis_es": "Cuatro rostros. Una fotografía. Cuatro miradas interpelan el acto de ver. Cuatro rostros fueron testigos de la violencia en Colombia. ¿Qué nos dicen? ¿Tenemos la posibilidad de entender el acto de violencia en Colombia?",
+   "synopsis_en": "Four faces. One photograph. Four perspectives challenge the act of seeing. Four faces witnessed the violence in Colombia. What do they tell us? Do we have a chance to understand the act of violence in Colombia?",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "acto-de-ver",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Acto de ver",
+   "_director": "Jean Paul Sánchez Flórez",
+   "_sondeado": "2026-09-29",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Acto de Ver",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Acto-de-ver-3-1-1024x576.png",
+     "sinopsis": "Cuatro rostros. Una fotografía. Cuatro miradas interpelan el acto de ver. Cuatro rostros fueron testigos de la violencia en Colombia. ¿Qué nos dicen? ¿Tenemos la posibilidad de entender el acto de violencia en Colombia?"
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cinemancia-2025"
+  },
   "Apocalipsur": {
    "tmdb_id": 91764,
    "titulo_original": "Apocalipsur",
@@ -305,6 +553,24 @@
    "_director": "Javier Mejía Osorio",
    "_sondeado": "2026-09-28",
    "poster": "/assets/mamut-2026/apocalipsur.jpg",
+   "posterSource": "tmdb"
+  },
+  "Archipiélago fantasma": {
+   "tmdb_id": 489896,
+   "titulo_original": "Archipiélago fantasma",
+   "poster_path": "/x5JQQVPr2pLjmxNy9lXpFyE7Y1W.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Guetón Rodríguez was one of the main actors of the first film shot in Canary Islands. His character was found guilty of a robbery he didn't commit. Years after, during the Spanish Civil War, he was arrested for political activism. This time, it was for real.",
+   "genero": "",
+   "anio_tmdb": 2017,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "lbSlug": "archipielago-fantasma",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Archipiélago fantasma",
+   "_director": "Dailo Barco",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/archipielago-fantasma.jpg",
    "posterSource": "tmdb"
   },
   "Bombardeo a Washington": {
@@ -341,6 +607,93 @@
    "_director": "Carlos Mayolo",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/carne-de-tu-carne.jpg",
+   "posterSource": "tmdb"
+  },
+  "Decaer": {
+   "tmdb_id": 1668881,
+   "titulo_original": "decaer",
+   "poster_path": "/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+   "synopsis_es": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
+   "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia",
+   "title_en": "decay",
+   "lbSlug": "decay-2026",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Decaer",
+   "_director": "Juan Camilo González",
+   "_sondeado": "2026-09-29",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Decaer",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj"
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "decaer",
+     "tmdb_id": 1668881,
+     "poster": "/assets/popayan-2026/decaer.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    }
+   ],
+   "poster": "/assets/mamut-2026/decaer.jpg",
+   "posterSource": "tmdb"
+  },
+  "Desde el principio hasta el final": {
+   "tmdb_id": 1197788,
+   "titulo_original": "Desde el principio hasta el final",
+   "poster_path": "/hj2vP6PYx8RTPUtYacgD9zsqbFr.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a search for giving new meaning to the past and understanding her present, the director tries to establish a dialogue between her parents -which has been non-existent for years- through letters and family archive material prior to her birth.",
+   "genero": "Drama",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Argentina",
+   "title_en": "From Beginning to End",
+   "lbSlug": "from-beginning-to-end-2023",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Desde el principio hasta el final",
+   "_director": "Loana Pagani",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/desde-el-principio-hasta-el-final.jpg",
+   "posterSource": "tmdb"
+  },
+  "El Perú es un lugar para morir": {
+   "tmdb_id": 1608544,
+   "titulo_original": "El Perú es un lugar para morir",
+   "poster_path": "/zXz7pWbyKP9QPHlHe0ODLhKxxS2.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Using footage filmed in Peru in 1950 by a foreigner, Víctor writes a letter to his son to question the country he will inherit: among heartbeats and ruins, he searches for a hope that still endures amid disillusionment.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Peru",
+   "lbSlug": "el-peru-es-un-lugar-para-morir",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El Perú es un lugar para morir",
+   "_director": "Víctor Augusto Mendívil",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/el-peru-es-un-lugar-para-morir.jpg",
    "posterSource": "tmdb"
   },
   "El hogar fue sepultado en esa tierra que nunca pudimos encontrar": {
@@ -390,6 +743,24 @@
     }
    ],
    "poster": "/assets/mamut-2026/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encon.jpg",
+   "posterSource": "tmdb"
+  },
+  "Estas imágenes fueron hechas para no mirarse": {
+   "tmdb_id": 1136744,
+   "titulo_original": "Estas imágenes fueron hechas para no mirarse",
+   "poster_path": "/jz87N1DVL2jti2xRemUGXnbUT6f.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Images are more than what they show, it is only necessary to look at them again. Essay that deals with images that were made not to be looked at and that, behind their appearance, reveal a dark truth.",
+   "genero": "Documental",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Mexico",
+   "lbSlug": "estas-imagenes-fueron-hechas-para-no-mirarse",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Estas imágenes fueron hechas para no mirarse",
+   "_director": "Pablo Romo Á.",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/estas-imagenes-fueron-hechas-para-no-mirarse.jpg",
    "posterSource": "tmdb"
   },
   "Frío metal": {
@@ -489,6 +860,25 @@
    "poster": "/assets/mamut-2026/lolita-en-honda.jpg",
    "posterSource": "tmdb"
   },
+  "Los no humanos": {
+   "tmdb_id": 1584750,
+   "titulo_original": "Los no humanos",
+   "poster_path": "/okc0LEi6CuAyHJC1z9tvvcwbZ2j.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "I. I examine damaged film material. II. I recover stories by breaking down the medium that contains them. III. I observe the intervention of biological processes in the production of images. IV. The life of signs makes its way.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "",
+   "title_en": "The Non-Humans",
+   "lbSlug": "the-non-humans",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Los no humanos",
+   "_director": "Ximena Gonzalez",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/los-no-humanos.jpg",
+   "posterSource": "tmdb"
+  },
   "Manual para invocar fantasmas": {
    "tmdb_id": 1665528,
    "titulo_original": "Manual para Invocar Fantasmas",
@@ -533,6 +923,23 @@
    "poster": "/assets/mamut-2026/minuto-fatal.jpg",
    "posterSource": "tmdb"
   },
+  "No menguará el fuego de esta luna": {
+   "tmdb_id": 1593592,
+   "titulo_original": "No menguará el fuego de esta luna",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "I seek out and speak with the dead. I write to a woman no longer here: Soraya Cataño, murdered in Medellín in 1991. Thirty years later, I find her in an image. Her voice rises as a parade climbs the hillside. The archive reveals her laughter, her gesture, and I choose to call her forth.I too was raised in this valley.  I too believed. I believe. This film is not about death. It is a dialogue between the one who narrates and the one who resists through absence. It is a fire that does not fade.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 22,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Fire of This Moon Shall Not Wane",
+   "lbSlug": "the-fire-of-this-moon-shall-not-wane",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "No menguará el fuego de esta luna",
+   "_director": "Sebastián Pérez Arbelaez",
+   "_sondeado": "2026-09-29"
+  },
   "Soplo de vida": {
    "tmdb_id": 143376,
    "titulo_original": "Soplo de Vida",
@@ -559,11 +966,32 @@
    "_verificado": "declarada a mano: Proimágenes la registra como «Sueño sobre un mantel vacío» (1240, en singular): Victor Gaviria, 1981, 10 minutos, documental; su buscador es literal y el título corregido del festival («Sueños…», en plural) no la devuelve. No está en TMDB. Proimágenes no publica su afiche, y lo que pone como sinopsis es la resolución de clasificación de 1981, que no se usa.",
    "_director": "Víctor Gaviria",
    "_sondeado": "2026-09-29"
+  },
+  "Una habitación en Bangkok": {
+   "tmdb_id": 1659048,
+   "titulo_original": "Una habitación en bangkok",
+   "poster_path": "/zoXXoqgWVtlPA9tObMOovkL9pgj.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Using Super 8 footage, the director revisits a childhood trip to Asia, where his father’s business partner documented his family. Haunted by memories of a night in a Bangkok hotel, he grapples with fragmented memories, trauma, and the power of forgetting.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "una-habitacion-en-bangkok",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una habitación en Bangkok",
+   "_director": "Javier Olivera",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/una-habitacion-en-bangkok.jpg",
+   "posterSource": "tmdb"
   }
  },
  "sin_ficha": [
+  "Belleza letal",
   "Desde la ventana",
+  "El silencio de las granadas",
   "Labrador de violines",
+  "Lo que tengo",
   "Muestra de cortos 1",
   "Muestra de cortos 2",
   "Muestra: Archivistas salvajes",
@@ -572,16 +1000,32 @@
   "Programa de cortos 2",
   "Programa inédito: Santiago Herrera",
   "Programa: Alberto Giraldo",
+  "Sol de niebla",
+  "Sólo algunos recuerdos quedan",
+  "These are not our memories",
+  "Un cuerpo cansado de esperar",
   "Yo soy la muerte"
  ],
  "_sin_ficha_sondeo": {
+  "Belleza letal": {
+   "director": "Ron Márquez, Andrés Felipe Benavides, Fiama Castro, Cindy Caffroni, Juan Camilo Olmos, Valeria Rua, Felipe Moreno, Dante Hernández, Santiago Rodríguez, Laura Gabay García, Moises Busigo, Samuel Moreno Alvarez",
+   "fecha": "2026-09-29"
+  },
   "Desde la ventana": {
    "director": "Santiago Herrera",
    "fecha": "2026-09-28"
   },
+  "El silencio de las granadas": {
+   "director": "Clara Baj",
+   "fecha": "2026-09-29"
+  },
   "Labrador de violines": {
    "director": "Santiago Herrera",
    "fecha": "2026-09-28"
+  },
+  "Lo que tengo": {
+   "director": "Sophia De Los Rios y David Rodriguez",
+   "fecha": "2026-09-29"
   },
   "Muestra de cortos 1": {
    "director": "",
@@ -614,6 +1058,22 @@
   "Programa: Alberto Giraldo": {
    "director": "",
    "fecha": "2026-09-28"
+  },
+  "Sol de niebla": {
+   "director": "María José Ibarra y Florentino Vargas",
+   "fecha": "2026-09-29"
+  },
+  "Sólo algunos recuerdos quedan": {
+   "director": "Mauricio Ortega",
+   "fecha": "2026-09-29"
+  },
+  "These are not our memories": {
+   "director": "Aseneth Suárez Ruiz, Patrick Alexander",
+   "fecha": "2026-09-29"
+  },
+  "Un cuerpo cansado de esperar": {
+   "director": "Melissa Jurado",
+   "fecha": "2026-09-29"
   },
   "Yo soy la muerte": {
    "director": "Daniel Cortés",

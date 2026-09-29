@@ -288,7 +288,9 @@
    "title": "Programa de cortos 1",
    "type": "film",
    "section": "🎬 Proyecciones",
-   "duration": "60 min",
+   "country": "Colombia, México, Perú, Argentina, España",
+   "flags": "🇨🇴🇲🇽🇵🇪🇦🇷🇪🇸",
+   "duration": "111 min",
    "day": "2026-10-06",
    "time": "17:00",
    "day_order": 1,
@@ -298,15 +300,118 @@
    "_src": {
     "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
     "date": "2026-09-29",
-    "lamina": 3
+    "lamina": 3,
+    "reparto": "mensaje del festival a Juan, 29 sep (fuentes/mamut-2026/programa-de-cortos-0N.jpg)"
    },
-   "is_free": true
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "These are not our memories",
+     "director": "Aseneth Suárez Ruiz, Patrick Alexander",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2023,
+     "duration": "21 min"
+    },
+    {
+     "title": "Estas imágenes fueron hechas para no mirarse",
+     "director": "Pablo Romo Á.",
+     "country": "México",
+     "flags": "🇲🇽",
+     "year": 2022,
+     "duration": "9 min",
+     "poster": "/assets/mamut-2026/estas-imagenes-fueron-hechas-para-no-mirarse.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "estas-imagenes-fueron-hechas-para-no-mirarse",
+     "tmdb_id": 1136744,
+     "synopsis_en": "Images are more than what they show, it is only necessary to look at them again. Essay that deals with images that were made not to be looked at and that, behind their appearance, reveal a dark truth.",
+     "genre": "Documental"
+    },
+    {
+     "title": "Decaer",
+     "director": "Juan Camilo González",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "7 min",
+     "poster": "/assets/mamut-2026/decaer.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "decay-2026",
+     "tmdb_id": 1668881,
+     "synopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
+     "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
+     "title_en": "decay",
+     "genre": "Animación",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "El Perú es un lugar para morir",
+     "director": "Víctor Augusto Mendívil",
+     "country": "Perú",
+     "flags": "🇵🇪",
+     "year": 2026,
+     "duration": "13 min",
+     "poster": "/assets/mamut-2026/el-peru-es-un-lugar-para-morir.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-peru-es-un-lugar-para-morir",
+     "tmdb_id": 1608544,
+     "synopsis_en": "Using footage filmed in Peru in 1950 by a foreigner, Víctor writes a letter to his son to question the country he will inherit: among heartbeats and ruins, he searches for a hope that still endures amid disillusionment.",
+     "genre": "Documental"
+    },
+    {
+     "title": "Lo que tengo",
+     "director": "Sophia De Los Rios y David Rodriguez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "15 min"
+    },
+    {
+     "title": "Desde el principio hasta el final",
+     "director": "Loana Pagani",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2023,
+     "duration": "16 min",
+     "poster": "/assets/mamut-2026/desde-el-principio-hasta-el-final.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "from-beginning-to-end-2023",
+     "tmdb_id": 1197788,
+     "synopsis_en": "In a search for giving new meaning to the past and understanding her present, the director tries to establish a dialogue between her parents -which has been non-existent for years- through letters and family archive material prior to her birth.",
+     "title_en": "From Beginning to End",
+     "genre": "Drama"
+    },
+    {
+     "title": "Un cuerpo cansado de esperar",
+     "director": "Melissa Jurado",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "10 min"
+    },
+    {
+     "title": "Una habitación en Bangkok",
+     "director": "Javier Olivera",
+     "country": "España",
+     "flags": "🇪🇸",
+     "year": 2025,
+     "duration": "20 min",
+     "poster": "/assets/mamut-2026/una-habitacion-en-bangkok.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "una-habitacion-en-bangkok",
+     "tmdb_id": 1659048,
+     "synopsis_en": "Using Super 8 footage, the director revisits a childhood trip to Asia, where his father’s business partner documented his family. Haunted by memories of a night in a Bangkok hotel, he grapples with fragmented memories, trauma, and the power of forgetting."
+    }
+   ]
   },
   {
    "title": "Programa de cortos 2",
    "type": "film",
    "section": "🎬 Proyecciones",
-   "duration": "90 min",
+   "country": "Italia, Francia, Colombia, Argentina, México, España (Canarias)",
+   "flags": "🇮🇹🇫🇷🇨🇴🇦🇷🇲🇽🇪🇸🇮🇨",
+   "duration": "117 min",
    "day": "2026-10-06",
    "time": "18:00",
    "day_order": 1,
@@ -316,9 +421,101 @@
    "_src": {
     "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
     "date": "2026-09-29",
-    "lamina": 3
+    "lamina": 3,
+    "reparto": "mensaje del festival a Juan, 29 sep (fuentes/mamut-2026/programa-de-cortos-0N.jpg)"
    },
-   "is_free": true
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "El silencio de las granadas",
+     "director": "Clara Baj",
+     "country": "Italia, Francia",
+     "flags": "🇮🇹🇫🇷",
+     "year": 2025,
+     "duration": "9 min"
+    },
+    {
+     "title": "Sol de niebla",
+     "director": "María José Ibarra y Florentino Vargas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "7 min"
+    },
+    {
+     "title": "Los no humanos",
+     "director": "Ximena Gonzalez",
+     "country": "Argentina",
+     "flags": "🇦🇷",
+     "year": 2025,
+     "duration": "19 min",
+     "poster": "/assets/mamut-2026/los-no-humanos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-non-humans",
+     "tmdb_id": 1584750,
+     "synopsis_en": "I. I examine damaged film material. II. I recover stories by breaking down the medium that contains them. III. I observe the intervention of biological processes in the production of images. IV. The life of signs makes its way.",
+     "title_en": "The Non-Humans",
+     "genre": "Documental"
+    },
+    {
+     "title": "No menguará el fuego de esta luna",
+     "director": "Sebastián Pérez Arbelaez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "22 min",
+     "lbSlug": "the-fire-of-this-moon-shall-not-wane",
+     "tmdb_id": 1593592,
+     "synopsis_en": "I seek out and speak with the dead. I write to a woman no longer here: Soraya Cataño, murdered in Medellín in 1991. Thirty years later, I find her in an image. Her voice rises as a parade climbs the hillside. The archive reveals her laughter, her gesture, and I choose to call her forth.I too was raised in this valley.  I too believed. I believe. This film is not about death. It is a dialogue between the one who narrates and the one who resists through absence. It is a fire that does not fade.",
+     "title_en": "The Fire of This Moon Shall Not Wane",
+     "genre": "Documental"
+    },
+    {
+     "title": "Sólo algunos recuerdos quedan",
+     "director": "Mauricio Ortega",
+     "country": "México",
+     "flags": "🇲🇽",
+     "year": 2017,
+     "duration": "6 min"
+    },
+    {
+     "title": "Acto de ver",
+     "director": "Jean Paul Sánchez Flórez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "12 min",
+     "lbSlug": "acto-de-ver",
+     "tmdb_id": 1547380,
+     "synopsis": "Cuatro rostros. Una fotografía. Cuatro miradas interpelan el acto de ver. Cuatro rostros fueron testigos de la violencia en Colombia. ¿Qué nos dicen? ¿Tenemos la posibilidad de entender el acto de violencia en Colombia?",
+     "synopsis_en": "Four faces. One photograph. Four perspectives challenge the act of seeing. Four faces witnessed the violence in Colombia. What do they tell us? Do we have a chance to understand the act of violence in Colombia?",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Archipiélago fantasma",
+     "director": "Dailo Barco",
+     "country": "España (Canarias)",
+     "flags": "🇪🇸🇮🇨",
+     "year": 2017,
+     "duration": "16 min",
+     "poster": "/assets/mamut-2026/archipielago-fantasma.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "archipielago-fantasma",
+     "tmdb_id": 489896,
+     "synopsis_en": "Guetón Rodríguez was one of the main actors of the first film shot in Canary Islands. His character was found guilty of a robbery he didn't commit. Years after, during the Spanish Civil War, he was arrested for political activism. This time, it was for real."
+    },
+    {
+     "title": "Belleza letal",
+     "director": "Ron Márquez, Andrés Felipe Benavides, Fiama Castro, Cindy Caffroni, Juan Camilo Olmos, Valeria Rua, Felipe Moreno, Dante Hernández, Santiago Rodríguez, Laura Gabay García, Moises Busigo, Samuel Moreno Alvarez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "26 min",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ",
+     "posterSource": "oficial"
+    }
+   ]
   },
   {
    "title": "Archivos no hegemónicos",
@@ -914,7 +1111,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T12:02:26",
+  "fecha": "2026-09-29T14:04:58",
   "plan_sha": "a928aad3537cbbd3",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py mamut-2026"
