@@ -62,9 +62,10 @@ SEDES = {
     'Aud. Fundadores U. Central': ('Universidad Central', 'Auditorio Fundadores'),
     'U. Tadeo, Aula Máxima': ('Universidad Jorge Tadeo Lozano', 'Aula Máxima'),
 }
-# La sala de las charlas la da la GRILLA «por salas» (págs. 35–36): la tabla
-# por días la deduce por cercanía y decía Sala 3 para sábado y domingo.
-SALA_CHARLA = {'2026-10-10': 'Sala 2', '2026-10-11': 'Sala 2',
+# La sala de las charlas, la que IMPRIMEN LAS DOS GRILLAS (por salas págs. 35–36,
+# por días 46–50). Aquí decía Sala 2 para sábado y domingo con un comentario que
+# atribuía eso a la grilla: la grilla, mirada, dice Sala 3 (triple lectura, 29 sep).
+SALA_CHARLA = {'2026-10-10': 'Sala 3', '2026-10-11': 'Sala 3',
                '2026-10-12': 'Sala Capital', '2026-10-14': 'Sala Capital'}
 
 # «BIFF Bang»: el PDF escribe BIFF BANG y la web «Biff Bang!»; BIFF es sigla

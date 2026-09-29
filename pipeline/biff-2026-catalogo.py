@@ -97,6 +97,9 @@ def cajas_cinemateca():
     return {plano(v['titulo']): v['titulo'] for v in json.load(io.open(p, encoding='utf-8')).values()}
 
 
+LEYENDA_PIE = {'Entrada libre', 'Función con presencia del equipo de la película',
+               'Ingreso únicamente con invitación'}
+
 MENORES = {'a', 'al', 'de', 'del', 'el', 'en', 'la', 'las', 'los', 'para', 'por', 'un', 'una', 'y', 'o',
            'e', 'the', 'of', 'and', 'in', 'on', 'to', 'for'}
 
@@ -147,7 +150,12 @@ def main():
                 if s['t'] in SECCIONES and s['y'] < y1 - 20:
                     if s['y'] <= y0 + 20 or not titulos[:k]:
                         seccion = s['t']
-            bloque = [c for c in col if y0 < c['y'] < y1 and c['t'] not in SECCIONES]
+            # fuera del bloque: el FOLIO de la página («9», «19») y la LEYENDA de
+            # íconos del pie («Entrada libre», «Función con presencia…»). Los dos
+            # caían al final de la sinopsis: 10 sinopsis publicadas con «… barrio. 7»
+            # (triple lectura, 29 sep)
+            bloque = [c for c in col if y0 < c['y'] < y1 and c['t'] not in SECCIONES
+                      and not re.fullmatch(r'\d{1,3}', c['t']) and c['t'] not in LEYENDA_PIE]
             # el SEGUNDO RENGLÓN de un título partido («LAS GOTAS CAER») cae
             # dentro del bloque: se salta hasta la línea de metadatos, o su
             # texto se tomaba por el país («2026»)
