@@ -49,7 +49,8 @@
   "festivals/staging/mamut-2026-catalogo-enriquecido.json": "las fichas de la Selección Oficial (10 de 16), del pre-onboarding (enriquecer_catalogo.py, a mano: el catálogo comparte el id del festival y leería sus correcciones de montaje)",
   "festivals/staging/mamut-2026-programa-catalogo-enriquecido.json": "las fichas de las obras de la programación (pre-onboarding)",
   "festivals/staging/mamut-2026-programa-correcciones.json": "las 2 fichas declaradas del pre-onboarding",
-  "festivals/staging/mamut-2026-correcciones.json": "las mismas 2 fichas declaradas, para el montaje; las lee pipeline/enriquecer.py"
+  "festivals/staging/mamut-2026-correcciones.json": "las mismas 2 fichas declaradas, para el montaje; las lee pipeline/enriquecer.py",
+  "festivals/staging/mamut-2026-sinopsis.json": "sinopsis oficiales declaradas (literal, con URL); las lee pipeline/enriquecer.py donde no hay ninguna"
  },
  "_programacion": {
   "fuente": "IG @mamut_festival p/Dd2bBTciVpN (28 sep 2026): 11 láminas; 2–9 días, 10 sedes con dirección. La web mamutfestival.co todavía tiene la de la edición 10. Pie: «Entrada libre a todas las actividades».",

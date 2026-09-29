@@ -17,8 +17,6 @@ La grilla «por salas» desempata lo que la tabla deduce mal (la sala de las
 charlas).
 
 LO QUE NO SE INVENTA:
-  · la entrada de los cine conciertos del Teatro Mayor y El Ensueño: ninguna
-    fuente la dice → DESCONOCIDO;
   · la duración de las charlas: el hueco hasta la siguiente en su sala, con
     tope de 90 min.
 """
@@ -80,6 +78,18 @@ PROGRAMA = 'Muestra de cortometrajes BIFF Bang'
 DURACION_ERRATA = {'El Deshielo': 108}
 
 ACCESO_ICONO = {'libre': 'Entrada libre', 'invitacion': 'Ingreso únicamente con invitación'}
+# LAS CINCO QUE NI EL PDF NI LA CINEMATECA DICEN, resueltas con biff.co (29
+# sep): cada ficha dice de sus funciones «Seleccione fecha y hora de la función
+# en el portal de compra». Slave Bird tiene UN evento de tuboleta por sala
+# (mirados: «Teatro Estudio - Julio Mario Santo Domingo», $20.000–$25.000;
+# «Teatro el Ensueño», $12.000–$13.350). La Bola Negra en el Multiplex: con
+# boleta, pero la web no enlaza la compra (su enlace es «#»).
+BOLETA_EN_SALA = {
+    ('Slave Bird', 'Teatro Mayor Julio Mario Santo Domingo'):
+        'https://tuboleta.com/es/eventos/bogota-international-film-festival-cine-concierto',
+    ('Slave Bird', 'Teatro El Ensueño'): 'https://www.tuboleta.com/es/eventos/cine-concierto-biff-slave-bird',
+    ('La Bola Negra', 'Cine Colombia Multiplex Avenida Chile'): None,
+}
 FUNCION = re.compile(r'^(Lun|Mar|Mié|Jue|Vie|Sáb|Dom)\. (\d{1,2}) - (\d{1,2}:\d{2}) \| (.+)$')
 
 
@@ -161,6 +171,10 @@ def main():
                     r['acceso'], r['ticket_url'] = 'Con boleta', w['cinecolombia']
                 elif r['sede'] == 'Cinemateca de Bogotá' and w.get('tuboleta'):
                     r['acceso'], r['ticket_url'] = 'Con boleta', w['tuboleta']
+                elif (o['titulo'], r['sede']) in BOLETA_EN_SALA:
+                    r['acceso'] = 'Con boleta'
+                    if BOLETA_EN_SALA[(o['titulo'], r['sede'])]:
+                        r['ticket_url'] = BOLETA_EN_SALA[(o['titulo'], r['sede'])]
                 else:
                     r['acceso'] = DESCONOCIDO
             funciones.append({k2: v for k2, v in r.items() if v not in (None, '')})

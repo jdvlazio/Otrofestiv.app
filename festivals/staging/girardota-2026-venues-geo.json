@@ -9,7 +9,8 @@
   "lng": -75.4461132,
   "_prec": "manual",
   "_match": "Google Maps «Comfama Girardota», Cra. 18 #5A-65",
-  "_nota": "Un único resultado con el nombre del festival."
+  "_nota": "Un único resultado con el nombre del festival.",
+  "address": "Cra. 18 #5A-65"
  },
  "Parque Principal": {
   "n": 0,
@@ -17,7 +18,8 @@
   "lng": -75.4461999,
   "_prec": "manual",
   "_match": "Google Maps «Parque Principal Girardota», Cl. 6 #12-7",
-  "_nota": "Un único resultado."
+  "_nota": "Un único resultado.",
+  "address": "Cl. 6 #12-7"
  },
  "Punto de Turismo": {
   "n": 0,
@@ -25,7 +27,8 @@
   "lng": -75.4462385,
   "_prec": "manual",
   "_match": "Google Maps «Punto del café y turismo \"del campo Girardota\"», Cra. 16 #5-55",
-  "_nota": "La lámina dice «Punto de Turismo». Es el «Punto de Turismo y Café» que el municipio inauguró el 7 nov 2025 con la renovación del Parque Principal (girardotainforma.com, 12 nov 2024; video de la inauguración). Queda a 15 m del pin del parque, que es donde debe estar."
+  "_nota": "La lámina dice «Punto de Turismo». Es el «Punto de Turismo y Café» que el municipio inauguró el 7 nov 2025 con la renovación del Parque Principal (girardotainforma.com, 12 nov 2024; video de la inauguración). Queda a 15 m del pin del parque, que es donde debe estar.",
+  "address": "Cra. 16 #5-55"
  },
  "Biblioteca Municipal Alberto Aguirre Ceballos": {
   "n": 0,
@@ -33,7 +36,8 @@
   "lng": -75.4460794,
   "_prec": "manual",
   "_match": "Google Maps «Biblioteca Pública Municipal Girardota», Cra. 14 #9-16",
-  "_nota": "Buscada por su nombre completo, Google devuelve una sola: la Biblioteca Pública Municipal. «Alberto Aguirre Ceballos» es el nombre propio de la biblioteca municipal de Girardota."
+  "_nota": "Buscada por su nombre completo, Google devuelve una sola: la Biblioteca Pública Municipal. «Alberto Aguirre Ceballos» es el nombre propio de la biblioteca municipal de Girardota.",
+  "address": "Cra. 14 #9-16"
  },
  "I.E. San Andrés": {
   "n": 0,
@@ -41,7 +45,8 @@
   "lng": -75.440165,
   "_prec": "manual",
   "_match": "Google Maps «Institución Educativa San Andrés», Girardota",
-  "_nota": "Un único resultado. Queda al norte del casco urbano, a unos 2,5 km del parque."
+  "_nota": "Un único resultado. Queda al norte del casco urbano, a unos 2,5 km del parque.",
+  "address": "Institución Educativa San Andrés"
  },
  "Morning": {
   "n": 0,
@@ -49,7 +54,8 @@
   "lng": -75.4448023,
   "_prec": "manual",
   "_match": "Google Maps «Morning Reggae Bar», Cra. 14 #5B-54",
-  "_nota": "Un único resultado, a dos cuadras del parque; «Morning» aparece además entre los aliados en la lámina 5."
+  "_nota": "Un único resultado, a dos cuadras del parque; «Morning» aparece además entre los aliados en la lámina 5.",
+  "address": "Cra. 14 #5B-54"
  },
  "Escuela de Encenillos": {
   "n": 0,
@@ -57,7 +63,8 @@
   "lng": -75.4178509,
   "_prec": "manual",
   "_match": "Google Maps «Escuela Encenillos», Girardota",
-  "_nota": "Un único resultado: escuela rural de la vereda Encenillos, unos 3 km al oriente del casco urbano."
+  "_nota": "Un único resultado: escuela rural de la vereda Encenillos, unos 3 km al oriente del casco urbano.",
+  "address": "Vereda Encenillos"
  },
  "Parque de la Poesía": {
   "n": 0,
@@ -65,7 +72,8 @@
   "lng": -75.444781,
   "_prec": "manual",
   "_match": "Google Maps «Parque de la Poesía», Calle 10C con Cra. 9A",
-  "_nota": "Un único resultado."
+  "_nota": "Un único resultado.",
+  "address": "Cl. 10C con Cra. 9A"
  },
  "Palmas del Llano": {
   "n": 1,

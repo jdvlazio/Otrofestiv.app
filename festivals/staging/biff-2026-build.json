@@ -181,7 +181,8 @@
    "lat": 4.6031614,
    "lng": -74.0676717,
    "_prec": "manual",
-   "_match": "Cra. 3 #19-10 (PDF: Cra. 3 # 19-10). La «Calle Museo» es la calle frente a su sede: va como sala."
+   "_match": "Cra. 3 #19-10 (PDF: Cra. 3 # 19-10). La «Calle Museo» es la calle frente a su sede: va como sala.",
+   "address": "Cra. 3 #19-10"
   },
   "Cine Colombia Multiplex Avenida Chile - Bogotá": {
    "short": "Cine Colombia Multiplex Avenida Chile",
@@ -190,7 +191,8 @@
    "lat": 4.6571677,
    "lng": -74.0575171,
    "_prec": "manual",
-   "_match": "Google «Cine Colombia Avenida Chile»; PDF: Cl. 72 # 10-34"
+   "_match": "Google «Cine Colombia Avenida Chile»; PDF: Cl. 72 # 10-34",
+   "address": "Cl. 72 #10-34"
   },
   "Centro Felicidad Chapinero - Bogotá": {
    "short": "Centro Felicidad Chapinero",
@@ -199,7 +201,8 @@
    "lat": 4.6653416,
    "lng": -74.0528448,
    "_prec": "manual",
-   "_match": "Cl. 82 #10-69 (idéntica al PDF); sala: Teatro"
+   "_match": "Cl. 82 #10-69 (idéntica al PDF); sala: Teatro",
+   "address": "Cl. 82 #10-69"
   },
   "Pontificia Universidad Javeriana - Bogotá": {
    "short": "Pontificia Universidad Javeriana",
@@ -208,7 +211,8 @@
    "lat": 4.6270553,
    "lng": -74.0644814,
    "_prec": "manual",
-   "_match": "la DIRECCIÓN del PDF, Cl. 40B # 6-23; el edificio de Artes que ofrece Google está en la 40B #5-37, a ~65 m"
+   "_match": "la DIRECCIÓN del PDF, Cl. 40B # 6-23; el edificio de Artes que ofrece Google está en la 40B #5-37, a ~65 m",
+   "address": "Cl. 40B #6-23"
   },
   "Teatro El Ensueño - Bogotá": {
    "short": "Teatro El Ensueño",
@@ -217,7 +221,8 @@
    "lat": 4.585959,
    "lng": -74.1586544,
    "_prec": "manual",
-   "_match": "Google «Teatro del Ensueño», Tv. 70 D #60-90 Sur (PDF: Tv. 70D # 60-90 Sur)"
+   "_match": "Google «Teatro del Ensueño», Tv. 70 D #60-90 Sur (PDF: Tv. 70D # 60-90 Sur)",
+   "address": "Tv. 70D #60-90 Sur"
   },
   "Parque Santander - Bogotá": {
    "short": "Parque Santander",
@@ -226,7 +231,8 @@
    "lat": 4.6019381,
    "lng": -74.0725862,
    "_prec": "manual",
-   "_match": "PDF: Cra. 7 con Cl. 16"
+   "_match": "PDF: Cra. 7 con Cl. 16",
+   "address": "Cra. 7 con Cl. 16"
   },
   "Plaza Distrital de Mercado La Concordia - Bogotá": {
    "short": "Plaza Distrital de Mercado La Concordia",
@@ -235,7 +241,8 @@
    "lat": 4.5983576,
    "lng": -74.0686397,
    "_prec": "manual",
-   "_match": "Cl 12c #1-40 (idéntica al PDF)"
+   "_match": "Cl 12c #1-40 (idéntica al PDF)",
+   "address": "Cl. 12C #1-40"
   },
   "City U - Bogotá": {
    "short": "City U",
@@ -244,7 +251,8 @@
    "lat": 4.6032278,
    "lng": -74.0672082,
    "_prec": "manual",
-   "_match": "Google: Av. Ciudad de Lima #2a-10 = PDF Cl. 19 # 2A-10; plazoleta principal"
+   "_match": "Google: Av. Ciudad de Lima #2a-10 = PDF Cl. 19 # 2A-10; plazoleta principal",
+   "address": "Cl. 19 #2A-10"
   },
   "Teatro Mayor Julio Mario Santo Domingo - Bogotá": {
    "short": "Teatro Mayor Julio Mario Santo Domingo",
@@ -253,7 +261,8 @@
    "lat": 4.756718,
    "lng": -74.0626669,
    "_prec": "manual",
-   "_match": "Cl. 170 #67-51 (idéntica al PDF); sala: Teatro Estudio"
+   "_match": "Cl. 170 #67-51 (idéntica al PDF); sala: Teatro Estudio",
+   "address": "Cl. 170 #67-51"
   },
   "Universidad Central - Bogotá": {
    "short": "Universidad Central",
@@ -262,7 +271,8 @@
    "lat": 4.6074587,
    "lng": -74.0700002,
    "_prec": "manual",
-   "_match": "Google «Sala Fundadores de la Universidad Central»; PDF: Cl. 22 # 5-91"
+   "_match": "Google «Sala Fundadores de la Universidad Central»; PDF: Cl. 22 # 5-91",
+   "address": "Cl. 22 #5-91"
   },
   "Universidad Jorge Tadeo Lozano - Bogotá": {
    "short": "Universidad Jorge Tadeo Lozano",
@@ -271,7 +281,8 @@
    "lat": 4.606567,
    "lng": -74.067801,
    "_prec": "manual",
-   "_match": "Cra. 4 #22-61 (idéntica al PDF); sala: Aula Máxima"
+   "_match": "Cra. 4 #22-61 (idéntica al PDF); sala: Aula Máxima",
+   "address": "Cra. 4 #22-61"
   }
  },
  "films": [
@@ -640,7 +651,9 @@
      "posterSource": "tmdb",
      "lbSlug": "quedamos-asi",
      "tmdb_id": 1598553,
-     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected."
+     "synopsis": "Con la promesa de un nuevo amor, Teresa viaja desde lejos a la casa de Enrique, un hombre que conoció en línea. A medida que la noche avanza, ella se da cuenta de que él no es exactamente lo que esperaba.",
+     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Para No Volver",
@@ -743,7 +756,9 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -1513,7 +1528,9 @@
      "posterSource": "tmdb",
      "lbSlug": "quedamos-asi",
      "tmdb_id": 1598553,
-     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected."
+     "synopsis": "Con la promesa de un nuevo amor, Teresa viaja desde lejos a la casa de Enrique, un hombre que conoció en línea. A medida que la noche avanza, ella se da cuenta de que él no es exactamente lo que esperaba.",
+     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Para No Volver",
@@ -1616,7 +1633,9 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -1707,6 +1726,7 @@
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
     "date": "2026-09-26"
    },
+   "ticket_url": "https://www.tuboleta.com/es/eventos/cine-concierto-biff-slave-bird",
    "lbSlug": "prisoner-number-seven",
    "tmdb_id": 235576,
    "synopsis_en": "A young woman, a prisoner who was set up to steal by her lover, is in jail. She would like to see her sweetheart. One night she succeeds in persuading the doctor of the prison who also is a woman, to be released. She finds the man, a waiter in an elegant hotel, behaving as a cynical Don Juan. He was preparing to rob the safe of the hotel and go away with his new lover, a dancer.",
@@ -2251,7 +2271,9 @@
      "posterSource": "tmdb",
      "lbSlug": "quedamos-asi",
      "tmdb_id": 1598553,
-     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected."
+     "synopsis": "Con la promesa de un nuevo amor, Teresa viaja desde lejos a la casa de Enrique, un hombre que conoció en línea. A medida que la noche avanza, ella se da cuenta de que él no es exactamente lo que esperaba.",
+     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Para No Volver",
@@ -2354,7 +2376,9 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -3084,7 +3108,9 @@
      "posterSource": "tmdb",
      "lbSlug": "quedamos-asi",
      "tmdb_id": 1598553,
-     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected."
+     "synopsis": "Con la promesa de un nuevo amor, Teresa viaja desde lejos a la casa de Enrique, un hombre que conoció en línea. A medida que la noche avanza, ella se da cuenta de que él no es exactamente lo que esperaba.",
+     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Para No Volver",
@@ -3187,7 +3213,9 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -3852,7 +3880,9 @@
      "posterSource": "tmdb",
      "lbSlug": "quedamos-asi",
      "tmdb_id": 1598553,
-     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected."
+     "synopsis": "Con la promesa de un nuevo amor, Teresa viaja desde lejos a la casa de Enrique, un hombre que conoció en línea. A medida que la noche avanza, ella se da cuenta de que él no es exactamente lo que esperaba.",
+     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Para No Volver",
@@ -3955,7 +3985,9 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -3984,6 +4016,7 @@
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
     "date": "2026-09-26"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/bogota-international-film-festival-cine-concierto",
    "lbSlug": "prisoner-number-seven",
    "tmdb_id": 235576,
    "synopsis_en": "A young woman, a prisoner who was set up to steal by her lover, is in jail. She would like to see her sweetheart. One night she succeeds in persuading the doctor of the prison who also is a woman, to be released. She finds the man, a waiter in an elegant hotel, behaving as a cynical Don Juan. He was preparing to rob the safe of the hotel and go away with his new lover, a dancer.",
@@ -4479,7 +4512,9 @@
      "posterSource": "tmdb",
      "lbSlug": "quedamos-asi",
      "tmdb_id": 1598553,
-     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected."
+     "synopsis": "Con la promesa de un nuevo amor, Teresa viaja desde lejos a la casa de Enrique, un hombre que conoció en línea. A medida que la noche avanza, ella se da cuenta de que él no es exactamente lo que esperaba.",
+     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Para No Volver",
@@ -4582,7 +4617,9 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -4763,6 +4800,7 @@
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
     "date": "2026-09-26"
    },
+   "ticket_url": "https://tuboleta.com/es/eventos/bogota-international-film-festival-cine-concierto",
    "lbSlug": "prisoner-number-seven",
    "tmdb_id": 235576,
    "synopsis_en": "A young woman, a prisoner who was set up to steal by her lover, is in jail. She would like to see her sweetheart. One night she succeeds in persuading the doctor of the prison who also is a woman, to be released. She finds the man, a waiter in an elegant hotel, behaving as a cynical Don Juan. He was preparing to rob the safe of the hotel and go away with his new lover, a dancer.",
@@ -5183,7 +5221,9 @@
      "posterSource": "tmdb",
      "lbSlug": "quedamos-asi",
      "tmdb_id": 1598553,
-     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected."
+     "synopsis": "Con la promesa de un nuevo amor, Teresa viaja desde lejos a la casa de Enrique, un hombre que conoció en línea. A medida que la noche avanza, ella se da cuenta de que él no es exactamente lo que esperaba.",
+     "synopsis_en": "Drawn by the promise of new love, Teresa travels a long way to meet Enrique, a man she met online. As the night unfolds, she begins to realize he’s not quite what she expected.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Para No Volver",
@@ -5286,7 +5326,9 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -5659,8 +5701,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T12:53:36",
-  "plan_sha": "c7830513d2d37f3c",
+  "fecha": "2026-09-29T15:07:44",
+  "plan_sha": "27a412368eb785c2",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py biff-2026"
  }
