@@ -244,6 +244,11 @@ def ensamblar(fid, escribir=True):
             'event_kind': f.get('event_kind') or None,
             # `info`: drop-in sin hora de fin — se muestra y NO se planifica.
             'info': True if f.get('info') else None,
+            # UN TALLER DE VARIAS SESIONES es un bloque: `is_recurring` en cada
+            # sesión, y la app ofrece «Añadir las N sesiones» (PROTOCOLO §4).
+            # El crudo lo escribía y acá no se copiaba: el campo del protocolo
+            # nunca llegaba a la app (lo cazó Mamut, 28 sep 2026).
+            'is_recurring': True if f.get('is_recurring') else None,
             'has_qa': bool(f.get('has_qa')),
             'qa_type': f.get('qa_type') or None,
             'synopsis': f.get('sinopsis') or None,

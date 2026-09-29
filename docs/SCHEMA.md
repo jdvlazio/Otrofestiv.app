@@ -303,7 +303,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
-| `title_en` | string | — | 16 fest |  |
+| `title_en` | string | — | 17 fest |  |
 | `title_es` | string | — | — | Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial. |
 | `director` | string | — | 24 fest |  |
 | `year` | number | — | 23 fest | Entero. Dos festivales legacy lo tienen como string. |
@@ -311,11 +311,11 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `flags` | string | — | 25 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
 | `duration` | string | `^\d+ min$` | 25 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
 | `language` | string | — | 9 fest |  |
-| `genre` | string | — | 21 fest |  |
-| `synopsis` | string | — | 24 fest | SIEMPRE en español. La traducción no es opcional. |
-| `synopsis_en` | string | — | 22 fest |  |
+| `genre` | string | — | 22 fest |  |
+| `synopsis` | string | — | 25 fest | SIEMPRE en español. La traducción no es opcional. |
+| `synopsis_en` | string | — | 23 fest |  |
 | `synopsis_es` | string | — | 2 fest |  |
-| `synopsis_lang` | string | `es` · `en` · `pt` | 24 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
+| `synopsis_lang` | string | `es` · `en` · `pt` | 25 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
 | `rating` | string | — | 4 fest |  |
 | `premiere` | string | — | 7 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
 | `type` | string | `film` · `event` · `short` | 22 fest |  |
@@ -323,7 +323,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `is_cortos` | boolean | — | 23 fest | exige `film_list` Programa curado: exige film_list no vacío. |
 | `film_list` | array | — | 22 fest |  |
 | `is_programa` | boolean | — | 3 fest |  |
-| `is_recurring` | boolean | — | 2 fest |  |
+| `is_recurring` | boolean | — | 3 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |
 | `info` | boolean | — | 6 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |
@@ -338,7 +338,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `poster` | string | — | 25 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |
 | `posterSource` | string | `tmdb` · `custom` · `editorial` · `letterboxd` · `oficial` | 25 fest | **derivado de `poster`** — no viene de ninguna fuente |
 | `posterPosition` | string | `center` · `top` · `bottom` | 1 fest |  |
-| `lbSlug` | string | — | 19 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
+| `lbSlug` | string | — | 20 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
 | `slug` | string | — | 1 fest |  |
 | `filmCategory` | string | — | 1 fest |  |
 | `tmdb_id` | number | — | 15 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |

@@ -76,6 +76,12 @@ def ficha(idp):
     if m:
         sin = html.unescape(re.sub(r'<[^>]+>', ' ', m.group(1)))
         sin = re.sub(r'\s{2,}', ' ', sin).strip()
+    # LA CLASIFICACIÓN NO ES SINOPSIS (28 sep 2026). Las fichas viejas ponen en
+    # ese campo la resolución de censura: «Sueño sobre un mantel vacío» (1240)
+    # dice «Clasificación: Aprobado por resolución 0034 de mayo 12 de 1981…», y
+    # el catálogo de Mamut la llevaba como sinopsis. Un texto así se descarta.
+    if re.match(r'clasificaci[oó]n\s*:', sin, re.I) or re.search(r'aprobad[oa] por resoluci[oó]n', sin, re.I):
+        sin = ''
     # EL AFICHE EN SU TAMAÑO, NO EN MINIATURA. La ficha referencia la misma
     # imagen en varios recortes —130×110, 270×400— y además el ORIGINAL, que
     # es el mismo nombre con las medidas vacías: `..._imagen__.jpg`. El de

@@ -1,0 +1,26 @@
+{
+ "_provenance": {
+  "fuente": "fichas verificadas a mano en el pre-onboarding de la programación",
+  "capturado": "2026-09-28",
+  "metodo": "cada declaración nombra su fuente y por qué el candado automático no podía llegar sola"
+ },
+ "fichas": {
+  "Bombardeo a Washington": {
+   "tmdb": 493152,
+   "_fuente": "https://www.themoviedb.org/movie/493152",
+   "_por_que": "TMDB la registra como «El bombardeo de Washington»: Luis Ospina, 1972, 1 min, los tres datos que imprime la lámina. La búsqueda por el título del festival («Bombardeo a Washington») no la devuelve, y por eso no casa sola. Se publica con el título del festival."
+  },
+  "Carne de tu carne": {
+   "tmdb": 308572,
+   "_fuente": "https://www.themoviedb.org/movie/308572",
+   "_por_que": "Carlos Mayolo, título idéntico, 1983, Colombia. La lámina no trae año y dice 94 min contra 86 en TMDB (Proimágenes, que también la tiene, da otra cifra): con la duración como única prueba, el candado a ±3 la rechaza. Es la única obra de Mayolo con ese título."
+  },
+  "Sueños sobre un mantel vacío": {
+   "anio": 1981,
+   "pais": "Colombia",
+   "genero": "Documental",
+   "_fuente": "https://www.proimagenescolombia.com/secciones/cine_colombiano/peliculas_colombianas/pelicula_plantilla.php?id_pelicula=1240",
+   "_por_que": "Proimágenes la registra como «Sueño sobre un mantel vacío» (1240, en singular): Victor Gaviria, 1981, 10 minutos, documental; su buscador es literal y el título corregido del festival («Sueños…», en plural) no la devuelve. No está en TMDB. Proimágenes no publica su afiche, y lo que pone como sinopsis es la resolución de clasificación de 1981, que no se usa."
+  }
+ }
+}

@@ -39,7 +39,7 @@ FID = 'mamut-2026'
 POST = 'DdufDCkgX6-'
 LAMINAS = f'{REPO}/fuentes/ig/{POST}'
 OJOS = f'{REPO}/fuentes/{FID}-ojos.json'
-DESTINO = f'{REPO}/festivals/staging/{FID}-catalogo.json'
+DESTINO = f'{REPO}/festivals/staging/mamut-2026-catalogo.json'
 ESPERADAS = {'Selección Cortos Internacionales': 8, 'Selección Cortos Nacionales': 8}
 
 # lo que el PIE escribe distinto y ya está mirado

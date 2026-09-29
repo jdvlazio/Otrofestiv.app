@@ -1170,6 +1170,26 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'mamut2026': {
+    name:'Mamut',displayName:'Mamut',fullName:'Mamut 11 — Festival de Memoria Audiovisual',shortName:'MAMUT',
+    city:'Medellín',country:'CO',
+    dates:'5–11 OCT',dates_en:'OCT 5–11',year:2026,timezoneOffset:'-05:00',
+    // LA PORTADA DEL CARRUSEL DE PROGRAMACIÓN (@mamut_festival p/Dd2ckXgiYW9,
+    // lámina 1): es la pieza oficial de la edición —nombre, fechas, «entrada
+    // libre»— y no se encontró otro afiche. 4:5 estirado a 2:3.
+    keyArt:'/assets/keyart/mamut2026-v2.jpg',
+    // lo que el festival dice de sí mismo; «Mamut» ya es el nombre
+    tagline:'Festival de Memoria Audiovisual',
+    storageKey:'mamut2026_',festivalStartStr:'2026-10-05T00:00:00',festivalEndStr:'2026-10-11T23:59:00',
+    festivalDates:{'2026-10-05':'2026-10-05','2026-10-06':'2026-10-06','2026-10-07':'2026-10-07','2026-10-08':'2026-10-08','2026-10-09':'2026-10-09','2026-10-10':'2026-10-10','2026-10-11':'2026-10-11'},
+    days:[{k:'2026-10-05',d:5,lbl:'LUN'},{k:'2026-10-06',d:6,lbl:'MAR'},{k:'2026-10-07',d:7,lbl:'MIÉ'},{k:'2026-10-08',d:8,lbl:'JUE'},{k:'2026-10-09',d:9,lbl:'VIE'},{k:'2026-10-10',d:10,lbl:'SÁB'},{k:'2026-10-11',d:11,lbl:'DOM'}],
+    dayKeys:['2026-10-05','2026-10-06','2026-10-07','2026-10-08','2026-10-09','2026-10-10','2026-10-11'],
+    dayShort:{'2026-10-05':'LUN 5','2026-10-06':'MAR 6','2026-10-07':'MIÉ 7','2026-10-08':'JUE 8','2026-10-09':'VIE 9','2026-10-10':'SÁB 10','2026-10-11':'DOM 11'},
+    dayShort_en:{'2026-10-05':'MON 5','2026-10-06':'TUE 6','2026-10-07':'WED 7','2026-10-08':'THU 8','2026-10-09':'FRI 9','2026-10-10':'SAT 10','2026-10-11':'SUN 11'},
+    dayLong:{'2026-10-05':'Lunes 5 de octubre','2026-10-06':'Martes 6 de octubre','2026-10-07':'Miércoles 7 de octubre','2026-10-08':'Jueves 8 de octubre','2026-10-09':'Viernes 9 de octubre','2026-10-10':'Sábado 10 de octubre','2026-10-11':'Domingo 11 de octubre'},
+    prioLimit:3,
+    films:null,posters:null,lbSlugs:{}
+  },
   'narrarelfuturo2026': {
     name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
     city:'Bogotá',country:'CO',
