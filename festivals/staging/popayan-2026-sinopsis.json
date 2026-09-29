@@ -6,8 +6,10 @@
   "descartadas": {
    "La Europa": "nota de curaduría firmada (FICCI), no una sinopsis",
    "El odio del padre": "una sola frase: lema, no sinopsis",
-   "Yo soy yo": "texto del director en primera persona, no una sinopsis"
-  }
+   "Yo soy yo": "texto del director en primera persona, no una sinopsis",
+   "La Mona": "su fuente (cinecorto.co/la-mona-2/) ya no existe: redirige a la portada, así que el texto no se puede verificar"
+  },
+  "verificacion": "cada fuente, releída el 29 sep: la página nombra el título y el director de nuestra ficha y contiene el texto tal cual"
  },
  "sinopsis": {
   "Negret: Génesis de una metamorfósis": {
@@ -25,10 +27,6 @@
   "Una vez en un cuerpo": {
    "texto": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita.",
    "fuente": "https://aguilarfilmfestival.es/cortometraje/una-vez-en-un-cuerpo/"
-  },
-  "La Mona": {
-   "texto": "La Hondura es un caserío olvidado, en el que La Mona, una paramilitar, impone el orden.\nSin embargo, no puede dominar la naturaleza de su cuerpo y la menstruación la doblega hasta tirarla a la cama.\nA pesar de su carácter huraño, su feminidad aflora, revelando la sensibilidad que también la habita.",
-   "fuente": "https://cinecorto.co/la-mona-2/"
   },
   "Más allá": {
    "texto": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",

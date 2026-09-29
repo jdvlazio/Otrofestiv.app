@@ -1509,7 +1509,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T15:07:23",
+  "fecha": "2026-09-29T15:18:34",
   "plan_sha": "1ef20173b4efc739",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"
