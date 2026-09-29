@@ -91,10 +91,19 @@ SECCION_ACTIVIDAD = 'Actividades'
 # EL TALLER CON DOS NOMBRES. La versión corregida lo llama «Archivos no
 # hegemónicos» en las sesiones 1 y 2 (mar, mié) y sigue diciendo «Archivistas
 # salvajes» en la 3 y la 4 (jue, vie). Es UN taller —mismo tallerista, mismo
-# lab, sesiones 01 a 04— y un bloque recurrente necesita UN título: se toma el
-# de la corrección, que es el que el festival acaba de escribir. Pendiente del
-# visto bueno de Juan.
+# lab, sesiones 01 a 04— y el nombre es el de la corrección. Verificado el 29
+# sep en el post del taller (p/Ddua0DTAVEE): «ARCHIVISTAS SALVAJES» es el
+# COLECTIVO de Daniel Saucedo («impartido por … (Archivistas Salvajes)»), que
+# firma el afiche en chico; el título, en grande, es «Una introducción al
+# universo de los archivos no hegemónicos», mar 6 a vie 9, 9:00–13:00, Lab
+# UNAL. La corrección quedó a medias en la 3 y la 4. La «Muestra: Archivistas
+# salvajes» del sábado es del colectivo y conserva su nombre.
 TITULO_UNIFICADO = {'Archivistas salvajes': 'Archivos no hegemónicos'}
+# LA HORA DE LA MUESTRA DE CORTOS 2 (dom 11, Coocine). La versión corregida no
+# le escribe hora propia: la lámina 8 la pone bajo el rótulo «4 p. m.», junto a
+# la Muestra 1, igual que la lámina 9 agrupa Bombardeo y la fiesta bajo «5 p. m.».
+# Se toma la hora del grupo (16:00). La primera versión decía 4:30 y el festival
+# la quitó. Preguntado al festival el 29 sep, junto con el reparto de cortos.
 ACTIVIDAD = {
     'Archivos no hegemónicos': 'taller',
     'Fiesta clausura #MAMUT11': 'fiesta',
