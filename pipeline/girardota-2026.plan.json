@@ -112,6 +112,7 @@
  },
  "_fuentes_versionadas": {
   "festivals/staging/girardota-2026-radar.json": "el volcado del issue de radar #968, que escribe y RELEE pipeline/radar.py para cruzar sus salas contra las nuestras en el paso 1.",
-  "festivals/staging/girardota-2026-correcciones.json": "las fichas completadas a mano con el visto bueno de Juan (hoy, la sinopsis española de «Funeral siniestro», de Proimágenes); las lee pipeline/enriquecer.py."
+  "festivals/staging/girardota-2026-correcciones.json": "las fichas completadas a mano con el visto bueno de Juan (hoy, la sinopsis española de «Funeral siniestro», de Proimágenes); las lee pipeline/enriquecer.py.",
+  "festivals/staging/girardota-2026-afiches.json": "las láminas oficiales de la competencia como afiche de cada corto (20); las lee pipeline/enriquecer.py donde TMDB y lo ya publicado no tienen afiche"
  }
 }

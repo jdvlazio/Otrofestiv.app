@@ -1,0 +1,51 @@
+{
+ "_provenance": {
+  "fuente": "afiches buscados fuera de TMDB (sitio del director o la productora, cinecorto.co, RTVC Play, Retina Latina) y MIRADOS uno por uno",
+  "capturado": "2026-09-29",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche; un fotograma sin título no es un afiche",
+  "descartados": {
+   "Hacia la raíz": "promo de la emisión en Telepacífico, con la fecha al aire pintada: no es un afiche",
+   "Ley de Origen y Espiritualidad": "afiche de la SERIE del CRIC, no de este episodio, y no nombra a su director: no pasa la verificación (título + dirección en el afiche)",
+   "Amor en los tiempos de como sea que se llame el presente": "sin créditos en el afiche; el póster entra por su ficha de TMDB declarada (correcciones), no como afiche suelto"
+  },
+  "verificacion": "cada afiche: el OCR encuentra en la imagen el nombre del director de nuestra ficha y el título (o el título se ve a ojo cuando es de palabras cortas o tipografía dibujada). El que no, sale."
+ },
+ "afiches": {
+  "Crudo": {
+   "archivo": "fuentes/afiches/popayan-2026/crudo.jpg",
+   "fuente": "https://cinecorto.co/crudo/"
+  },
+  "La Volqueta": {
+   "archivo": "fuentes/afiches/popayan-2026/la-volqueta.jpg",
+   "fuente": "https://cinecorto.co/la-volqueta/"
+  },
+  "Negret: Génesis de una metamorfósis": {
+   "archivo": "fuentes/afiches/popayan-2026/negret-genesis-de-una-metamorfosis.jpg",
+   "fuente": "https://rtvcplay.co/cortometrajes-documentales/negret-genesis-de-una-metamorfosis"
+  },
+  "El patio de la infancia": {
+   "archivo": "fuentes/afiches/popayan-2026/el-patio-de-la-infancia.jpg",
+   "fuente": "https://cinecorto.co/el-patio-de-la-infancia/"
+  },
+  "Yo soy yo": {
+   "archivo": "fuentes/afiches/popayan-2026/yo-soy-yo.png",
+   "fuente": "https://makhino.com/en/yo-soy-yo-inicia-con-buen-paso-su-participacion-en-festivales/"
+  },
+  "Yakuwasi: La Casa del Agua": {
+   "archivo": "fuentes/afiches/popayan-2026/yakuwasi-la-casa-del-agua.jpg",
+   "fuente": "https://cinecorto.co/yakuwasi-la-casa-del-agua/"
+  },
+  "Nascemos para semente": {
+   "archivo": "fuentes/afiches/popayan-2026/nascemos-para-semente.jpg",
+   "fuente": "https://cinecorto.co/nascemos-para-semente/"
+  },
+  "Abuelita caza vampiros": {
+   "archivo": "fuentes/afiches/popayan-2026/abuelita-caza-vampiros.png",
+   "fuente": "https://cinecorto.co/abuelita-caza-vampiros/"
+  },
+  "La Mona": {
+   "archivo": "fuentes/afiches/popayan-2026/la-mona.jpg",
+   "fuente": "https://cinecorto.co/la-mona/"
+  }
+ }
+}

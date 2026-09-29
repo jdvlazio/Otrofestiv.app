@@ -197,6 +197,20 @@ def cascada_tmdb(o, key, alias, pub):
     return None, None
 
 
+def a_poster(origen, destino, lamina=False, ancho=500, lado=0.06):
+    """Una imagen declarada → el JPEG del póster. Una LÁMINA de carrusel es 4:5
+    y el póster 2:3: 6% de recorte por lado y el resto de estirón (la regla de
+    SiembraFest: recortarlo todo deja el título al borde, estirarlo todo lo
+    deforma un 20%). Cualquier otra imagen va tal cual; el encuadre a 2:3 es de
+    encuadrar-posters.py."""
+    from PIL import Image
+    im = Image.open(origen).convert('RGB')
+    if lamina:
+        c = int(im.width * lado)
+        im = im.crop((c, 0, im.width - c, im.height)).resize((ancho, ancho * 3 // 2), Image.LANCZOS)
+    im.save(destino, 'JPEG', quality=86, optimize=True)
+
+
 def reuso_publicada(pub):
     """Sin ficha, pero ya la publicamos con afiche: se reusa el afiche y la
     sinopsis que mostramos entonces —ya pasaron por un montaje—. «Belleza letal»
@@ -390,6 +404,42 @@ def main():
             print(f'[{i:3}/{len(obras)}] —   {t[:46]:48} sin ficha verificable'
                   f'{"  · afiche de " + _r["_ya_publicada"][0]["festival"] if _r else ""}', flush=True)
         time.sleep(0.2)
+
+    # ── EL AFICHE QUE TMDB NO TIENE ─────────────────────────────────────────
+    # La cascada del afiche es: TMDB → lo que ya publicamos → lo DECLARADO.
+    # (1) Una obra CON ficha de TMDB pero sin póster allí no miraba lo nuestro:
+    #     el reúso solo corría para las obras sin ficha. «La asociación» tiene
+    #     ficha sin póster y SiembraFest la publicó con su lámina (29 sep).
+    # (2) Lo declarado: festivals/staging/<fid>-afiches.json, afiches que se
+    #     buscaron y se MIRARON fuera de TMDB —la lámina oficial del festival
+    #     (carrusel de IG, una por obra), la página del director— y que ningún
+    #     paso automático encuentra. Entra solo donde no hay nada de lo anterior.
+    for t, f in obras.items():
+        e = ok.get(t)
+        if e and not e.get('poster_path') and not e.get('poster'):
+            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas))
+            if _r:
+                e['poster'] = _r['poster']
+                e['_afiche'] = _r['_verificado']
+    _dec = f'{ST}/{fid}-afiches.json'
+    declarados = 0
+    if os.path.exists(_dec):
+        for t, d in (json.load(open(_dec, encoding='utf-8')).get('afiches') or {}).items():
+            e = ok.get(t) or {}
+            if e.get('poster_path') or e.get('poster'):
+                continue                           # manda lo de arriba
+            os.makedirs(f'{REPO}/assets/{fid}', exist_ok=True)
+            dest = f'{REPO}/assets/{fid}/{slug(t)}.jpg'
+            origen = f'{REPO}/{d.get("lamina") or d["archivo"]}'
+            if not os.path.exists(dest):
+                a_poster(origen, dest, lamina=bool(d.get('lamina')))
+            e = {**e, 'poster': f'/assets/{fid}/{slug(t)}.jpg',
+                 'posterSource': 'custom' if d.get('lamina') else 'oficial',
+                 '_afiche': f'declarado: {d["fuente"]}'}
+            ok[t] = e
+            declarados += 1
+    if declarados:
+        print(f'afiches declarados en {os.path.basename(_dec)}: {declarados}')
 
     if posters:
         os.makedirs(f'{REPO}/assets/{fid}', exist_ok=True)

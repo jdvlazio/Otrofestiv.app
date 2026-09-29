@@ -40,7 +40,8 @@
   "festivals/staging/popayan-2026-correcciones.json": "la ficha declarada a mano de «Tuktu, Padre Maíz» (TMDB escribe mal a su director); la lee enriquecer_catalogo.py.",
   "festivals/staging/popayan-2026-crudo.json": "la parrilla, que escribe el paso 3",
   "festivals/staging/popayan-2026-catalogo.json": "la Selección Oficial (77 obras), de pipeline/popayan-2026-catalogo.py; la lee el crudo para la ficha de cada obra",
-  "festivals/staging/popayan-2026-radar.json": "el volcado del radar #573, que escribe y relee pipeline/radar.py"
+  "festivals/staging/popayan-2026-radar.json": "el volcado del radar #573, que escribe y relee pipeline/radar.py",
+  "festivals/staging/popayan-2026-afiches.json": "afiches declarados (buscados y mirados fuera de TMDB); los lee pipeline/enriquecer.py donde TMDB y lo ya publicado no tienen"
  },
  "festival": {
   "crudo": "festivals/staging/popayan-2026-crudo.json",

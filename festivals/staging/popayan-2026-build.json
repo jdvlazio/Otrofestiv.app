@@ -238,7 +238,9 @@
      "poster": "/assets/popayan-2026/madres-de-nacimiento.jpg",
      "posterSource": "tmdb",
      "lbSlug": "madres-de-nacimiento",
-     "tmdb_id": 1668902
+     "tmdb_id": 1668902,
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Cayenas libertarias",
@@ -250,7 +252,9 @@
      "poster": "/assets/popayan-2026/cayenas-libertarias.jpg",
      "posterSource": "tmdb",
      "lbSlug": "cayenas-libertarias",
-     "tmdb_id": 1737961
+     "tmdb_id": 1737961,
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Como el agua, la piedra y la espuma",
@@ -291,7 +295,9 @@
      "year": 2025,
      "duration": "30 min",
      "synopsis": "Las Tres Muertes de un Sol sigue a Yojan, un joven campesino en un viaje introspectivo a través de sus recuerdos y las entrañas de la montaña donde vive. En medio de ruinas, caminos montañosos y ríos, el exuberante paisaje se convierte en un testigo mudo de los azares del destino que han marcado su vida.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "La despedida del río",
@@ -330,6 +336,8 @@
    "title": "Selección Oficial Cauca (primer bloque)",
    "type": "film",
    "section": "🏔️ Selección Oficial Cauca",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "66 min",
    "day": "2026-10-06",
    "time": "17:00",
@@ -349,12 +357,18 @@
      "year": 2023,
      "duration": "7 min",
      "synopsis": "Tras ser desplazada por la violencia, Edelmira acaba trabajando como empleada doméstica para el grupo armado que la desplazó. Esta situación será la oportunidad para Edelmira de redimirse o vengarse.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/crudo.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "El sincretismo del agua",
      "director": "Tito Ascendra y Laura Gutiérrez",
-     "duration": "5 min"
+     "duration": "5 min",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "La Volqueta",
@@ -362,12 +376,20 @@
      "year": 2024,
      "duration": "15 min",
      "synopsis": "En un cambuche a la orilla de un lago, Jeison, un hombre joven y pobre, vive junto a su hijo Messi. Jeison, a pesar de su vida dura, y que diariamente está marcada a través de una lucha por sobrevivir; trabajando duro bajo el sol, recogiendo arena para una volqueta con el fin de ganar un poco de dinero, se esfuerza por cuidar y alegrar a su hijo. Messi, sueña con una volqueta de juguete, pero su padre no puede permitírselo. Haciendo que Jeison tome una difícil decisión para poder darle a Messi un futuro mejor.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/la-volqueta.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Negret: Génesis de una metamorfósis",
      "director": "Marco Paredes Manzano",
-     "duration": "13 min"
+     "duration": "13 min",
+     "poster": "/assets/popayan-2026/negret-genesis-de-una-metamorfosis.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Tunesmith – Forjador de Notas",
@@ -375,7 +397,9 @@
      "year": 2025,
      "duration": "26 min",
      "synopsis": "En la pintoresca ciudad de Popayán, Colombia, donde el encanto colonial se encuentra con el valle de Pubenza, vive Gus—un herrero rudo, moldeado por el trabajo, con manos de hierro y un corazón de oro.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     }
    ]
   },
@@ -438,7 +462,9 @@
      "year": 2026,
      "duration": "8 min",
      "synopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Sirena mecánica",
@@ -450,7 +476,9 @@
      "poster": "/assets/popayan-2026/sirena-mecanica.jpg",
      "posterSource": "tmdb",
      "lbSlug": "sirena-mecanica",
-     "tmdb_id": 1668871
+     "tmdb_id": 1668871,
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Chaika",
@@ -462,7 +490,9 @@
      "poster": "/assets/popayan-2026/chaika.jpg",
      "posterSource": "tmdb",
      "lbSlug": "chaika-2025",
-     "tmdb_id": 1689999
+     "tmdb_id": 1689999,
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Filme Pin",
@@ -500,7 +530,11 @@
      "year": 2026,
      "duration": "15 min",
      "synopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/girardota-2026/la-rebelion-de-un-fantasma.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "El patio de la infancia",
@@ -508,7 +542,11 @@
      "year": 2025,
      "duration": "14 min",
      "synopsis": "Una mujer reflexiona sobre el significado de la infancia a partir de los archivos de una película incompleta que recibe. Los personajes son unas muñecas de cerámica únicas que cobran vida a su paso. ¿Es la infancia una ficción colectiva?",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/el-patio-de-la-infancia.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Soñar una serpiente",
@@ -582,7 +620,11 @@
     {
      "title": "Yo soy yo",
      "director": "Andrés Stiven Victoria Devia",
-     "duration": "21 min"
+     "duration": "21 min",
+     "poster": "/assets/popayan-2026/yo-soy-yo.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Mañanitas",
@@ -618,7 +660,9 @@
     {
      "title": "Sangre",
      "director": "Julian Andres Hoyos Pinzón",
-     "duration": "10 min"
+     "duration": "10 min",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     }
    ]
   },
@@ -661,7 +705,9 @@
     {
      "title": "Tabanoka Otjenayá",
      "director": "Yamid Alejandro Juagibioy Muchachasoy",
-     "duration": "7 min"
+     "duration": "7 min",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Ley de Origen y Espiritualidad",
@@ -669,7 +715,9 @@
      "year": 2024,
      "duration": "21 min",
      "synopsis": "Presenta la vivencia espiritual desde la Ley de Origen, que hace parte esencial de la vida de las comunidades indígenas en el departamento del Cauca, a partir de allí se orienta y se mantiene el equilibrio y la armonía personal y comunitaria. En este capítulo se detalla la ley de origen de cada uno de los 10 pueblos que integran el Consejo Regional Indígena del Cauca, CRIC.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Akababuru: Expresión de asombro",
@@ -693,7 +741,11 @@
      "year": 2025,
      "duration": "15 min",
      "synopsis": "Desde el Macizo Colombiano, útero de la Madre Tierra, dentro del Resguardo de Papallaqta de la Nación Indígena Yanakuna, este corto documental explora un territorio donde lagunas y manantiales sagrados dan origen a los ríos más importantes de Colombia.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/yakuwasi-la-casa-del-agua.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     }
    ]
   },
@@ -740,8 +792,12 @@
      "duration": "16 min",
      "synopsis": "Cesar Ngimba (Félix), Carlos Rodrigues (Nico La Famy), Ricasz,Scaitt Borrabeu,Julia Goieta,Rui César Silva,Suzete Rodrigues,Leonardo Mendes,Rui Ribeiro,José Sanchez,Carlos Fernandes, Janime Monteiro.",
      "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/nascemos-para-semente.jpg",
+     "posterSource": "oficial",
      "lbSlug": "nascemos-para-semente",
-     "tmdb_id": 1700918
+     "tmdb_id": 1700918,
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Arrullos de sol",
@@ -770,7 +826,9 @@
      "poster": "/assets/popayan-2026/la-tinaja.jpg",
      "posterSource": "tmdb",
      "lbSlug": "la-tinaja",
-     "tmdb_id": 1668923
+     "tmdb_id": 1668923,
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Chicanoa",
@@ -778,7 +836,9 @@
      "year": 2025,
      "duration": "9 min",
      "synopsis": "Lura lucia Carabali Otero, Yineth Mera Mejia, Luz Adiana Serna Lasso, Jorge Olmedo Serna Lasso, Eddy Valeria Carabali Lasso, Eddy Valeria Carabali Lasso, Ibeth Karina Correa Fajardo, Coni Estefani Lasso Gonzalias",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Hacia la raíz",
@@ -786,7 +846,9 @@
      "year": 2023,
      "duration": "25 min",
      "synopsis": "Al descubrirse como una ‘negra blanqueada’ María confronta a su padre, en búsqueda de sus raíces afro, emprende un viaje al territorio de sus ancestros así reconstruye las huellas de su pasado y abraza su identidad.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Legado",
@@ -794,7 +856,9 @@
      "year": 2024,
      "duration": "24 min",
      "synopsis": "na serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     }
    ]
   },
@@ -840,12 +904,26 @@
      "year": 2026,
      "duration": "2 min",
      "synopsis": "En medio de la noche, un vampiro irrumpe en la casa de una abuelita latinoamericana esperando encontrar una presa fácil. En su lugar, se enfrenta a una mujer valiente, dispuesta a pelear por su vida. Con la ayuda inesperada de su fiel pug, la abuelita se envuelve en una batalla bizarra por la supervivencia. Mezclando humor con una atmósfera inquietante, Abuelita Caza Vampiros es una comedia gótica tropical inspirada en memorias familiares, donde el coraje y un toque de lo absurdo transforman una noche común en un enfrentamiento inolvidable.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/abuelita-caza-vampiros.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Amor en los tiempos de como sea que se llame el presente",
      "director": "Valentina Qaszulxkef",
-     "duration": "18 min"
+     "duration": "18 min",
+     "poster": "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "love-in-times-of-whatever-the-present-is",
+     "tmdb_id": 1450727,
+     "synopsis_en": "In a museum where the paintings come to life inside their frames, a cleaning lady must decide whether to intervene when a new acquisition portrays the rape of a slave.",
+     "title_en": "Love in Times of whatever the present is called",
+     "genre": "Fantasía",
+     "country": "Colombia",
+     "year": 2025,
+     "flags": "🇨🇴"
     },
     {
      "title": "Corazón galvánico",
@@ -908,7 +986,9 @@
      "poster": "/assets/popayan-2026/sapos-por-todos-lados.jpg",
      "posterSource": "tmdb",
      "lbSlug": "sapos-por-todos-lados",
-     "tmdb_id": 1738917
+     "tmdb_id": 1738917,
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "La habitación del macho cabrío",
@@ -980,6 +1060,8 @@
    "title": "Selección Oficial Comunitario",
    "type": "film",
    "section": "🤝 Selección Oficial Comunitario",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "57 min",
    "day": "2026-10-08",
    "time": "15:30",
@@ -999,7 +1081,9 @@
      "year": 2025,
      "duration": "7 min",
      "synopsis": "Zoraida y Paulina son dos hermanas que pasan sus días en la Fundación Albeiro Vargas y Ángeles Custodios, hablando de los chismes de sus compañeros. Una noche su cotidianidad es interrumpida por unos murmullos, así que acuden a la religión para recuperar su tranquilidad.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "HDLT Hijo de la Tierra",
@@ -1009,7 +1093,9 @@
      "synopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices.",
      "synopsis_lang": "es",
      "poster": "/assets/siembrafest/hdlt.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Un abrir y cerrar de ojos",
@@ -1017,7 +1103,9 @@
      "year": 2026,
      "duration": "8 min",
      "synopsis": "Juan, un viejo minero de la comunidad de Varsovia, despierta la mañana después de una tragedia: En el silencio de su cocina y el café derramado sobre la mesa lo enfrentan a la ausencia de su nieto Pedro. Ese gesto mínimo desata una cadena de recuerdos que reconstruyen los días previos.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Historias al margen: Martha y Eduardo",
@@ -1025,7 +1113,9 @@
      "year": 2024,
      "duration": "18 min",
      "synopsis": "Desde la periferia, hay quienes observan y sostienen la transformación de una ciudad, convirtiéndose en el pilar invisible que evita el colapso de nuestra sociedad moderna. En este contexto conoceremos a Martha y Eduardo, dos adultos mayores cuya labor en el reciclaje en Popayán trasciende las décadas. Han sido testigos silenciosos de los cambios de la ciudad; su sangre y su esfuerzo han recorrido, figurativa y literalmente, cada calle. A través de sus vivencias, marcadas por el rigor de la calle pero iluminadas por sonrisas compartidas, nos invitan a una profunda reflexión: frente a tanta adversidad, ¿cómo han logrado resistir y enseñarnos a sonreír?",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Pájaros huérfanos",
@@ -1033,7 +1123,9 @@
      "year": 2026,
      "duration": "6 min",
      "synopsis": "Un juego de caza en el bosque termina en un espejo inesperado. Tres hermanos logran abatir a una paloma, solo para descubrir que han dejado un nido de pichones huérfanos. En la fragilidad de esas crías, los niños reviven el trauma de su propio pasado y el vacío que dejó el conflicto en su hogar. Una historia sobre la pérdida, la memoria y el ciclo del dolor que intentan sanar al llevarse consigo aquello que ellos mismos rompieron.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     }
    ]
   },
@@ -1110,7 +1202,9 @@
     {
      "title": "Un viernes",
      "director": "Francy Urrea Solano, Juan Diego Aguirre Gómez",
-     "duration": "9 min"
+     "duration": "9 min",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Sombras en la Niebla",
@@ -1132,7 +1226,9 @@
     {
      "title": "Tentado de difunto",
      "director": "Juan David Corredor Robles",
-     "duration": "14 min"
+     "duration": "14 min",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     }
    ]
   },
@@ -1212,13 +1308,17 @@
      "year": 2025,
      "duration": "22 min",
      "synopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "El odio del padre",
      "director": "Rodrigo Mora Yepes",
      "year": 2026,
-     "duration": "14 min"
+     "duration": "14 min",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Todos los días",
@@ -1230,7 +1330,9 @@
      "tmdb_id": 1738004,
      "synopsis": "Ramiro es despedido del trabajo al que perteneció gran parte de su vida. En medio de su nueva y solitaria libertad conoce a tres desocupados como él, que se reúnen para matar el tiempo y hacerse compañía mientras fantasean con vengarse de sus antiguos empleadores y buscan, un pequeño triunfo a la vez, ser felices. Cada día, todos los días.",
      "year": 2024,
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Gladiolos",
@@ -1331,7 +1433,9 @@
      "posterSource": "tmdb",
      "lbSlug": "suite-intercontinental",
      "tmdb_id": 1668898,
-     "synopsis_en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire."
+     "synopsis_en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire.",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Más allá",
@@ -1343,19 +1447,23 @@
      "tmdb_id": 1488751,
      "synopsis_en": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
      "title_en": "Beyond",
-     "year": 2025
+     "year": 2025,
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "La Mona",
      "director": "Laura Gutiérrez Ardila",
      "year": 2025,
      "duration": "18 min",
+     "poster": "/assets/jardin-2026/la-mona.jpg",
      "lbSlug": "heat-wave-2025",
      "tmdb_id": 1444298,
      "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
      "title_en": "Heat Wave",
      "genre": "Drama",
      "country": "Colombia",
+     "posterSource": "oficial",
      "flags": "🇨🇴"
     },
     {
@@ -1366,7 +1474,9 @@
      "synopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
      "synopsis_lang": "es",
      "poster": "/assets/siembrafest/las-piedras-del-rio.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "flags": "🇨🇴"
     },
     {
      "title": "Los Huyentes",
@@ -1387,8 +1497,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T10:14:48",
-  "plan_sha": "4d990133fcfdcb3f",
+  "fecha": "2026-09-29T12:45:18",
+  "plan_sha": "1351d26e95981640",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"
  }

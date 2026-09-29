@@ -172,6 +172,16 @@ def _enriquece(dst, it):
     return dst
 
 
+def _pais_de_respaldo(dst, src):
+    """`pais_respaldo` del crudo, solo si nadie más dio país (ver arriba)."""
+    r = src.get('pais_respaldo')
+    if r and not dst.get('country'):
+        dst['country'] = r
+        dst['flags'] = lib.banderas(r) or None
+        if not dst['flags']:
+            dst.pop('flags')
+
+
 def ensamblar(fid, escribir=True):
     plan = _plan(fid)
     cfg = plan['festival']
@@ -329,6 +339,13 @@ def ensamblar(fid, escribir=True):
                 _it = enr.get(lib.norm(item.get('title') or ''))
                 if _it:
                     _enriquece(item, _it)
+            # EL PAÍS DE RESPALDO: el que el crudo declara con una fuente del
+            # festival que vale para toda la selección (Popayán: el reglamento,
+            # «cortometrajes realizados en Colombia o por colombianos en el
+            # exterior»). Entra AL FINAL, solo donde ni la obra ni TMDB dicen
+            # país: así una coproducción de TMDB («France, Colombia») no se pisa.
+            for item, _o in zip(e['film_list'], obras):
+                _pais_de_respaldo(item, _o)
             # El país de un PROGRAMA es el de las obras que lo componen: no
             # existe «el país» de una sesión de siete cortos de cinco lugares.
             # Y su `year` tampoco: el año lo tiene cada obra, y poner el de la
@@ -362,6 +379,8 @@ def ensamblar(fid, escribir=True):
         it = enr.get(lib.norm(f['titulo']))
         if it:
             _enriquece(e, it)
+        if not e.get('film_list'):
+            _pais_de_respaldo(e, f)
         _compone_invitados(e)
         # UN PROGRAMA DE UNA SOLA OBRA NO ES UN PROGRAMA. La doctrina dice que
         # hay contenedor cuando el festival le puso NOMBRE A UN CONJUNTO

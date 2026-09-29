@@ -108,6 +108,14 @@ ALIAS = {
 #   · «Amor en los tiempos de como sea que se llame el presente»: 10.ª obra del
 #     bloque de Animación; la Selección lista 9.
 SOLO_PARRILLA = {'Amor en los tiempos de como sea que se llame el presente'}
+# EL PAÍS. La parrilla da el LUGAR DE RODAJE («Lisboa, Portugal»), no el país
+# de producción, y el catálogo tampoco lo trae: salían todas con el globo. El
+# reglamento sí lo dice para toda la Selección Oficial: «cortometrajes
+# realizados en Colombia o por colombianos en el exterior». Va como país de
+# RESPALDO: el ensamblador lo usa solo donde TMDB no da uno, que así las
+# coproducciones («France, Colombia», «Colombia, Portugal») se respetan. Las
+# 29 fichas de TMDB que ya lo tienen incluyen todas a Colombia (29 sep).
+PAIS_SELECCION = 'Colombia'
 ACTIVIDADES = {'Apertura del Festival': 'apertura', 'Conversatorio': 'conversatorio'}
 SECCION_ACTIVIDADES = 'Actividades'
 
@@ -222,7 +230,7 @@ def main():
             d = director(o['credito'])
             m = MINUTOS.search(o['credito'])
             if not c and o['titulo'] in SOLO_PARRILLA:
-                obras.append({'titulo': o['titulo'], 'director': d,
+                obras.append({'titulo': o['titulo'], 'director': d, 'pais_respaldo': PAIS_SELECCION,
                               'duracion_min': int(m.group(1)) if m else None, '_solo_parrilla': True})
                 continue
             if not c:
@@ -241,6 +249,7 @@ def main():
                 print(f'  ⚠ duración de «{c["titulo"]}»: parrilla {dur} · cinecorto.co {c["duracion_min"]}')
             usadas.add(plano(c['titulo']))
             obras.append({'titulo': pub_t or c['titulo'], 'director': c['director'], 'anio': c.get('anio'),
+                          'pais_respaldo': PAIS_SELECCION,
                           'duracion_min': dur or c.get('duracion_min'), 'sinopsis': c.get('sinopsis')})
         if obras:
             r['obras'] = [{k2: v for k2, v in o.items() if v not in (None, '')} for o in obras]

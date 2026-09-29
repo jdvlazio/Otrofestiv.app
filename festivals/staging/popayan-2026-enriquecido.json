@@ -78,6 +78,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Amor en los tiempos de como sea que se llame el presente",
+   "tmdb_id": 1450727,
+   "titulo_original": "Amor en los tiempos de como sea que se llame el presente",
+   "poster_path": "/lvDFlmq1SrHxvcd5QmQmnxJOR1y.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a museum where the paintings come to life inside their frames, a cleaning lady must decide whether to intervene when a new acquisition portrays the rape of a slave.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Love in Times of whatever the present is called",
+   "lbSlug": "love-in-times-of-whatever-the-present-is",
+   "_verificado": "declarada a mano: TMDB escribe a la directora «Valentina Qaszxulxkef» y la parrilla «Qaszulxkef»: una letra, y el candado no casa. Mismo título, animación, Medellín (búsqueda de afiches, 29 sep).",
+   "_director": "Valentina Qaszulxkef",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Arrullos de sol",
    "tmdb_id": 1594469,
    "titulo_original": "Arrullos de Sol",
@@ -441,7 +460,9 @@
      "lbSlug": "heat-wave-2025",
      "sinopsis": "Entre el polvo y el calor se encuentra La Hondura, un pueblo olvidado, donde la tensión se siente como electricidad en el aire. Allí, La Mona, una paramilitar, impone el orden. Sin embargo, no puede dominar la naturaleza de su cuerpo y la menstruación la doblega hasta el punto de postrarla en la cama."
     }
-   ]
+   ],
+   "poster": "/assets/jardin-2026/la-mona.jpg",
+   "_afiche": "ya publicada en jardin-2026: se reusa su afiche"
   },
   {
    "titulo": "La asociación",
@@ -520,6 +541,18 @@
    "_sondeado": "2026-09-29",
    "poster": "/assets/popayan-2026/la-habitacion-del-macho-cabrio.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La rebelión de un fantasma",
+   "poster": "/assets/girardota-2026/la-rebelion-de-un-fantasma.jpg",
+   "_ya_publicada": [
+    {
+     "festival": "girardota-2026",
+     "titulo": "La Rebelión de un Fantasma",
+     "poster": "/assets/girardota-2026/la-rebelion-de-un-fantasma.jpg"
+    }
+   ],
+   "_verificado": "ya publicada en girardota-2026: se reusa su afiche"
   },
   {
    "titulo": "La tinaja",
@@ -776,7 +809,10 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Nascemos para semente",
    "_director": "Mauricio Valbuena Sánchez",
-   "_sondeado": "2026-09-29"
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/popayan-2026/nascemos-para-semente.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://cinecorto.co/nascemos-para-semente/"
   },
   {
    "titulo": "Niña Chilapa",
@@ -1143,6 +1179,48 @@
    ],
    "poster": "/assets/popayan-2026/decaer.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Crudo",
+   "poster": "/assets/popayan-2026/crudo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://cinecorto.co/crudo/"
+  },
+  {
+   "titulo": "La Volqueta",
+   "poster": "/assets/popayan-2026/la-volqueta.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://cinecorto.co/la-volqueta/"
+  },
+  {
+   "titulo": "Negret: Génesis de una metamorfósis",
+   "poster": "/assets/popayan-2026/negret-genesis-de-una-metamorfosis.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://rtvcplay.co/cortometrajes-documentales/negret-genesis-de-una-metamorfosis"
+  },
+  {
+   "titulo": "El patio de la infancia",
+   "poster": "/assets/popayan-2026/el-patio-de-la-infancia.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://cinecorto.co/el-patio-de-la-infancia/"
+  },
+  {
+   "titulo": "Yo soy yo",
+   "poster": "/assets/popayan-2026/yo-soy-yo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://makhino.com/en/yo-soy-yo-inicia-con-buen-paso-su-participacion-en-festivales/"
+  },
+  {
+   "titulo": "Yakuwasi: La Casa del Agua",
+   "poster": "/assets/popayan-2026/yakuwasi-la-casa-del-agua.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://cinecorto.co/yakuwasi-la-casa-del-agua/"
+  },
+  {
+   "titulo": "Abuelita caza vampiros",
+   "poster": "/assets/popayan-2026/abuelita-caza-vampiros.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://cinecorto.co/abuelita-caza-vampiros/"
   }
  ],
  "verificadas": {
@@ -1214,6 +1292,24 @@
     }
    ],
    "poster": "/assets/popayan-2026/akababuru-expresion-de-asombro.jpg",
+   "posterSource": "tmdb"
+  },
+  "Amor en los tiempos de como sea que se llame el presente": {
+   "tmdb_id": 1450727,
+   "titulo_original": "Amor en los tiempos de como sea que se llame el presente",
+   "poster_path": "/lvDFlmq1SrHxvcd5QmQmnxJOR1y.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a museum where the paintings come to life inside their frames, a cleaning lady must decide whether to intervene when a new acquisition portrays the rape of a slave.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Love in Times of whatever the present is called",
+   "lbSlug": "love-in-times-of-whatever-the-present-is",
+   "_verificado": "declarada a mano: TMDB escribe a la directora «Valentina Qaszxulxkef» y la parrilla «Qaszulxkef»: una letra, y el candado no casa. Mismo título, animación, Medellín (búsqueda de afiches, 29 sep).",
+   "_director": "Valentina Qaszulxkef",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg",
    "posterSource": "tmdb"
   },
   "Arrullos de sol": {
@@ -1556,7 +1652,9 @@
      "lbSlug": "heat-wave-2025",
      "sinopsis": "Entre el polvo y el calor se encuentra La Hondura, un pueblo olvidado, donde la tensión se siente como electricidad en el aire. Allí, La Mona, una paramilitar, impone el orden. Sin embargo, no puede dominar la naturaleza de su cuerpo y la menstruación la doblega hasta el punto de postrarla en la cama."
     }
-   ]
+   ],
+   "poster": "/assets/jardin-2026/la-mona.jpg",
+   "_afiche": "ya publicada en jardin-2026: se reusa su afiche"
   },
   "La asociación": {
    "tmdb_id": 1663705,
@@ -1867,7 +1965,10 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Nascemos para semente",
    "_director": "Mauricio Valbuena Sánchez",
-   "_sondeado": "2026-09-29"
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/popayan-2026/nascemos-para-semente.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://cinecorto.co/nascemos-para-semente/"
   },
   "Niña Chilapa": {
    "tmdb_id": 1456186,
@@ -2226,7 +2327,6 @@
  },
  "sin_ficha": [
   "Abuelita caza vampiros",
-  "Amor en los tiempos de como sea que se llame el presente",
   "Animista",
   "Chicanoa",
   "Crudo",
@@ -2270,10 +2370,6 @@
  "_sin_ficha_sondeo": {
   "Abuelita caza vampiros": {
    "director": "Mariana Betancourt Chaves",
-   "fecha": "2026-09-29"
-  },
-  "Amor en los tiempos de como sea que se llame el presente": {
-   "director": "Valentina Qaszulxkef",
    "fecha": "2026-09-29"
   },
   "Animista": {

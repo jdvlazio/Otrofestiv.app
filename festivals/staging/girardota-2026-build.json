@@ -691,7 +691,9 @@
     },
     {
      "title": "Mantener la Democracia Maestro",
-     "director": "Jhon Fredy Machado Tuberquia"
+     "director": "Jhon Fredy Machado Tuberquia",
+     "poster": "/assets/girardota-2026/mantener-la-democracia-maestro.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Maricones",
@@ -732,11 +734,15 @@
     },
     {
      "title": "Bajo el Último Aliento",
-     "director": "Pedro Valencia"
+     "director": "Pedro Valencia",
+     "poster": "/assets/girardota-2026/bajo-el-ultimo-aliento.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "La Rata",
-     "director": "Santiago Londoño Vélez"
+     "director": "Santiago Londoño Vélez",
+     "poster": "/assets/girardota-2026/la-rata.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Maleza",
@@ -749,8 +755,10 @@
     {
      "title": "Carola",
      "director": "Violeta Barrios",
+     "poster": "/assets/siembrafest/carola.jpg",
      "tmdb_id": 1497688,
      "synopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
+     "posterSource": "oficial",
      "synopsis_lang": "es",
      "duration": "11 min"
     },
@@ -772,11 +780,15 @@
     },
     {
      "title": "Hambre",
-     "director": "Manuela Bedoya Carvajal"
+     "director": "Manuela Bedoya Carvajal",
+     "poster": "/assets/girardota-2026/hambre.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Armonía de la Entropía",
-     "director": "Alexander Ladino Giraldo"
+     "director": "Alexander Ladino Giraldo",
+     "poster": "/assets/girardota-2026/armonia-de-la-entropia.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Deus Ex Necro Machina",
@@ -788,27 +800,39 @@
     },
     {
      "title": "De lo Oculto",
-     "director": "Daniel Rúa"
+     "director": "Daniel Rúa",
+     "poster": "/assets/girardota-2026/de-lo-oculto.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "La Rebelión de un Fantasma",
-     "director": "Flora Rodríguez"
+     "director": "Flora Rodríguez",
+     "poster": "/assets/girardota-2026/la-rebelion-de-un-fantasma.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Idilio",
-     "director": "Andrés Felipe Giraldo Guisao"
+     "director": "Andrés Felipe Giraldo Guisao",
+     "poster": "/assets/girardota-2026/idilio.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Maldito Sentimiento",
-     "director": "Leidy Vanegas Bolemos"
+     "director": "Leidy Vanegas Bolemos",
+     "poster": "/assets/girardota-2026/maldito-sentimiento.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "PARE",
-     "director": "Santiago Salazar Quintana"
+     "director": "Santiago Salazar Quintana",
+     "poster": "/assets/girardota-2026/pare.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Hábitat Venus",
-     "director": "Sofía Rueda Férez"
+     "director": "Sofía Rueda Férez",
+     "poster": "/assets/girardota-2026/habitat-venus.jpg",
+     "posterSource": "custom"
     }
    ]
   },
@@ -958,8 +982,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T07:05:47",
-  "plan_sha": "61702b7f236df64e",
+  "fecha": "2026-09-29T12:39:37",
+  "plan_sha": "89d6e69df8fcc84e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py girardota-2026"
  }

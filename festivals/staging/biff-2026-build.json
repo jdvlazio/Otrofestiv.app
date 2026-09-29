@@ -741,7 +741,9 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "8 min",
-     "genre": "Animación"
+     "genre": "Animación",
+     "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
+     "posterSource": "oficial"
     }
    ]
   },
@@ -1612,7 +1614,9 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "8 min",
-     "genre": "Animación"
+     "genre": "Animación",
+     "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
+     "posterSource": "oficial"
     }
    ]
   },
@@ -2348,7 +2352,9 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "8 min",
-     "genre": "Animación"
+     "genre": "Animación",
+     "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
+     "posterSource": "oficial"
     }
    ]
   },
@@ -3179,7 +3185,9 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "8 min",
-     "genre": "Animación"
+     "genre": "Animación",
+     "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
+     "posterSource": "oficial"
     }
    ]
   },
@@ -3945,7 +3953,9 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "8 min",
-     "genre": "Animación"
+     "genre": "Animación",
+     "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
+     "posterSource": "oficial"
     }
    ]
   },
@@ -4570,7 +4580,9 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "8 min",
-     "genre": "Animación"
+     "genre": "Animación",
+     "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
+     "posterSource": "oficial"
     }
    ]
   },
@@ -5272,7 +5284,9 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "8 min",
-     "genre": "Animación"
+     "genre": "Animación",
+     "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
+     "posterSource": "oficial"
     }
    ]
   },
@@ -5645,8 +5659,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T08:31:33",
-  "plan_sha": "c818161ef9fbda01",
+  "fecha": "2026-09-29T12:44:10",
+  "plan_sha": "c7830513d2d37f3c",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py biff-2026"
  }

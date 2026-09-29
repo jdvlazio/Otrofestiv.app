@@ -64,7 +64,9 @@
      "poster": "/assets/siembrafest/carola.jpg",
      "sinopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre."
     }
-   ]
+   ],
+   "poster": "/assets/siembrafest/carola.jpg",
+   "_afiche": "ya publicada en siembrafest-2026: se reusa su afiche"
   },
   {
    "titulo": "Deus Ex Necro Machina",
@@ -418,6 +420,72 @@
    ],
    "poster": "/assets/girardota-2026/refraccion.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Mantener la Democracia Maestro",
+   "poster": "/assets/girardota-2026/mantener-la-democracia-maestro.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 5, Documental)"
+  },
+  {
+   "titulo": "Bajo el Último Aliento",
+   "poster": "/assets/girardota-2026/bajo-el-ultimo-aliento.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 3, Ficción)"
+  },
+  {
+   "titulo": "La Rata",
+   "poster": "/assets/girardota-2026/la-rata.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 4, Ficción)"
+  },
+  {
+   "titulo": "Hambre",
+   "poster": "/assets/girardota-2026/hambre.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 8, Ficción)"
+  },
+  {
+   "titulo": "Armonía de la Entropía",
+   "poster": "/assets/girardota-2026/armonia-de-la-entropia.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 3, Experimental o videoclip)"
+  },
+  {
+   "titulo": "De lo Oculto",
+   "poster": "/assets/girardota-2026/de-lo-oculto.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 5, Experimental o videoclip)"
+  },
+  {
+   "titulo": "La Rebelión de un Fantasma",
+   "poster": "/assets/girardota-2026/la-rebelion-de-un-fantasma.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 6, Experimental o videoclip)"
+  },
+  {
+   "titulo": "Idilio",
+   "poster": "/assets/girardota-2026/idilio.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 7, Experimental o videoclip)"
+  },
+  {
+   "titulo": "Maldito Sentimiento",
+   "poster": "/assets/girardota-2026/maldito-sentimiento.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 8, Experimental o videoclip)"
+  },
+  {
+   "titulo": "PARE",
+   "poster": "/assets/girardota-2026/pare.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 9, Experimental o videoclip)"
+  },
+  {
+   "titulo": "Hábitat Venus",
+   "poster": "/assets/girardota-2026/habitat-venus.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 10, Experimental o videoclip)"
   }
  ],
  "verificadas": {
@@ -478,7 +546,9 @@
      "poster": "/assets/siembrafest/carola.jpg",
      "sinopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre."
     }
-   ]
+   ],
+   "poster": "/assets/siembrafest/carola.jpg",
+   "_afiche": "ya publicada en siembrafest-2026: se reusa su afiche"
   },
   "El Páramo": {
    "tmdb_id": 83705,
@@ -854,13 +924,5 @@
    "director": "",
    "fecha": "2026-09-27"
   }
- },
- "_fuentes": [
-  {
-   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-09-29",
-   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
-   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
-  }
- ]
+ }
 }
