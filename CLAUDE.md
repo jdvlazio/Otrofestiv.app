@@ -103,6 +103,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | **Próximo / activo** |
 | `biff2026` | BIFF | Bogotá | 8–14 OCT | **Próximo / activo** |
 | `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | **Próximo / activo** |
+| `mamut2026` | Mamut | Medellín | 5–11 OCT | **Próximo / activo** |
 | `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)
