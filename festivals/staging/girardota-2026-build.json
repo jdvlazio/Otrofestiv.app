@@ -678,6 +678,7 @@
      "country": "Colombia",
      "year": 2025,
      "synopsis_lang": "es",
+     "duration": "9 min",
      "flags": "🇨🇴"
     },
     {
@@ -703,7 +704,8 @@
      "synopsis_en": "Since they were little, Ginger and Louie knew they were different. Two young Queers who, living in different spaces, face social prejudices that try to limit their way of being. This tension confronts them with their identity process and leads them to question the need for external validation. Thus, they decide to use fashion and their bodies as a tool to express and build their identity as a process of constant fluidity, free and without labels.",
      "genre": "Documental",
      "year": 2026,
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "duration": "15 min"
     },
     {
      "title": "Archivo no Encontrado",
@@ -717,6 +719,7 @@
      "genre": "Documental",
      "country": "Colombia",
      "year": 2026,
+     "duration": "13 min",
      "flags": "🇨🇴"
     },
     {
@@ -748,7 +751,8 @@
      "director": "Violeta Barrios",
      "tmdb_id": 1497688,
      "synopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "duration": "11 min"
     },
     {
      "title": "Refracción",
@@ -763,6 +767,7 @@
      "country": "Colombia",
      "year": 2025,
      "synopsis_lang": "es",
+     "duration": "11 min",
      "flags": "🇨🇴"
     },
     {
@@ -947,9 +952,13 @@
    "title_en": "Salsa Lives"
   }
  ],
+ "_avisos_duracion": [
+  "«Al final del espectro»: 100 min en el festival, 86 en TMDB",
+  "«Pura Sangre»: 90 min en el festival, 105 en TMDB"
+ ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T06:18:56",
+  "fecha": "2026-09-29T07:05:47",
   "plan_sha": "61702b7f236df64e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py girardota-2026"
