@@ -4,7 +4,7 @@
   "capturado": "2026-09-29",
   "titulo": "RADAR: BIFF 12 — Bogota International Film Festival, Bogotá, 8–14 OCT 2026",
   "estado": "OPEN",
-  "comentarios": 1
+  "comentarios": 2
  },
  "issue": 985,
  "titulo": "RADAR: BIFF 12 — Bogota International Film Festival, Bogotá, 8–14 OCT 2026",
@@ -14,6 +14,10 @@
   {
    "fecha": "2026-09-29",
    "cuerpo": "ESTADO: 29 sep 2026 · **E2 catálogo hecho** en la rama `data/biff-2026` (sin PR).\n- **61 obras**: 51 fichas + 2 cine conciertos + el programa BIFF BANG (8 cortos). Leídas del PDF por coordenadas.\n- **60 con ficha de TMDB y afiche**; 14 ya publicadas en otros festivales.\n- La auditoría estricta no da ningún aviso de dirección.\n- Las fichas anotan 142 funciones: son la cuarta lectura de la parrilla, junto con la tabla por días, la grilla por salas y la Cinemateca."
+  },
+  {
+   "fecha": "2026-09-29",
+   "cuerpo": "Registro: el issue no tenía labels, así que la corrida del radar no lo veía. Le pongo `radar` + `radar:en-onboarding` (PR [#987](https://github.com/jdvlazio/Otrofestiv.app/pull/987) abierto). ROJO a **9 días**.\n\nRevisión de hoy, 29 sep: **sin cambios.** El PDF que sirve biff.co tiene el mismo sha256 (`8d340652…`) que el de `fuentes/biff-2026/` con el que se montó; el servidor lo marca `Last-Modified: 29 sep 00:10 GMT`. En IG @biffcol, los posts nuevos son carruseles por sección (Clases de Lucha, Fantasmas de Pasado); la bio sigue igual: «8 al 14 de octubre de 2026»."
   }
  ]
 }

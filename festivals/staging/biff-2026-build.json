@@ -893,6 +893,7 @@
     "date": "2026-09-26"
    },
    "premiere": "Inauguración",
+   "by_invitation": true,
    "lbSlug": "fjord-2026",
    "tmdb_id": 1401459,
    "synopsis_en": "Following the deaths of Mihai's parents, Mihai and Lisbeth Gheorghiu leave their life behind in Romania and move with their children to a remote village in Norway, hoping to rebuild their lives near Lisbeth's family. There, they grow close to their neighbors, the Halbergs, whose warmth gives them hope for a fresh start. But the fragile peace begins to unravel when the Gheorghiu family’s young daughter, Elia, arrives at school covered in bruises."
@@ -5644,7 +5645,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T07:53:23",
+  "fecha": "2026-09-29T08:31:33",
   "plan_sha": "c818161ef9fbda01",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py biff-2026"

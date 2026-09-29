@@ -296,7 +296,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `is_free` | boolean | — | 15 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
 | `requires_registration` | boolean | — | 7 fest |  |
 | `registration_url` | string | `^https://` | 4 fest |  |
-| `by_invitation` | boolean | — | — | Función CERRADA al público, solo con invitación. Anula el badge de precio y el plan no la propone (screeningPlannable); se agenda a mano. Por función: la gala sí, las demás funciones de la obra no. |
+| `by_invitation` | boolean | — | 1 fest | Función CERRADA al público, solo con invitación. Anula el badge de precio y el plan no la propone (screeningPlannable); se agenda a mano. Por función: la gala sí, las demás funciones de la obra no. |
 | `audience` | string | `press` | 1 fest | Solo cuando la función NO es para el público general. Ausente = público (el caso normal, no se declara). «press» = pase de prensa e industria: la app los OCULTA salvo que el usuario active el filtro. TIFF 2026 trae 247 (audienceType=Press & Market en su endpoint). |
 
 ### Todo lo demás
