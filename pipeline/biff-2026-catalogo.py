@@ -44,7 +44,7 @@ PAGINAS = (9, 27)
 # BANG, que es UN PROGRAMA de 8 cortos proyectado 7 veces (una por día, en sedes
 # distintas). En esa página las funciones son del PROGRAMA, no del corto que les
 # quede encima.
-SECCION_DE_PAGINA = {26: 'Cine Conciertos', 27: 'Muestra de cortometrajes BIFF BANG'}
+SECCION_DE_PAGINA = {26: 'Cine Conciertos', 27: 'Muestra de cortometrajes BIFF Bang'}
 PAGINA_PROGRAMA = 27
 SECCIONES = ['Película de inauguración', 'Colombia viva', 'Espíritu joven', 'Masters',
              'Fantasmas del pasado', 'Clases de lucha', 'Relatos mutantes',
@@ -97,6 +97,20 @@ def cajas_cinemateca():
     return {plano(v['titulo']): v['titulo'] for v in json.load(io.open(p, encoding='utf-8')).values()}
 
 
+MENORES = {'a', 'al', 'de', 'del', 'el', 'en', 'la', 'las', 'los', 'para', 'por', 'un', 'una', 'y', 'o',
+           'e', 'the', 'of', 'and', 'in', 'on', 'to', 'for'}
+
+
+def caja_titulo(t):
+    """«NO QUIERO SER UN HOMBRE» → «No Quiero Ser un Hombre»: la caja de título
+    que usa la Cinemateca para las otras 48 (y la que prefiere Juan), para los
+    13 títulos que solo están en el PDF, que los imprime en mayúsculas."""
+    out = []
+    for i, w in enumerate(t.lower().split()):
+        out.append(w if (i and w in MENORES) else w[:1].upper() + w[1:])
+    return ' '.join(out)
+
+
 def main():
     CAJA = cajas_cinemateca()
     L = lineas()
@@ -134,11 +148,16 @@ def main():
                     if s['y'] <= y0 + 20 or not titulos[:k]:
                         seccion = s['t']
             bloque = [c for c in col if y0 < c['y'] < y1 and c['t'] not in SECCIONES]
+            # el SEGUNDO RENGLÓN de un título partido («LAS GOTAS CAER») cae
+            # dentro del bloque: se salta hasta la línea de metadatos, o su
+            # texto se tomaba por el país («2026»)
+            while bloque and not META.match(bloque[0]['t']) and bloque[0]['t'] == bloque[0]['t'].upper():
+                bloque = bloque[1:]
             meta = META.match(bloque[0]['t']) if bloque else None
             partes = [p.strip() for p in meta.group(2).split('|')] if meta else []
             if pag in SECCION_DE_PAGINA:
                 seccion = SECCION_DE_PAGINA[pag]
-            o = {'titulo': CAJA.get(plano(l['t']), l['t']), 'titulo_pdf': l['t'], 'seccion': 'Retrospectiva Rei Pictures'
+            o = {'titulo': CAJA.get(plano(l['t'])) or caja_titulo(l['t']), 'titulo_pdf': l['t'], 'seccion': 'Retrospectiva Rei Pictures'
                  if seccion == 'Retro. Rei Pictures' else seccion,
                  '_src': {'pdf': os.path.basename(PDF), 'pagina': pag}}
             if meta:

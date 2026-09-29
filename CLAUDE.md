@@ -101,6 +101,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `jardin2026` | Festival de Cine de Jardín | Jardín | 24–27 SEP | Recién terminado |
 | `itagui2026` | Festicine Itagüí | Itagüí | 23–27 SEP | Recién terminado |
 | `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | **Próximo / activo** |
+| `biff2026` | BIFF | Bogotá | 8–14 OCT | **Próximo / activo** |
 | `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)

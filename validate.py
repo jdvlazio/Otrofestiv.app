@@ -4822,7 +4822,7 @@ try:
         for _x in (_d.get('films') or []):
             _v = _x.get('premiere')
             if isinstance(_v, str) and _v.strip() and not any(_r.search(_v) for _r in _reglas):
-                _sin.setdefault(_v.strip(), set()).add(_op.basename(_f))
+                _sin.setdefault(_v.strip(), set()).add(_op.path.basename(_f))
     if _sin:
         for _v, _fs in sorted(_sin.items()):
             warn(check, f'«{_v}» no casa con ninguna regla → sin píldora en la '

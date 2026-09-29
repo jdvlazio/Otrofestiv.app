@@ -1,0 +1,19 @@
+{
+ "_provenance": {
+  "fuente": "issue de radar #985 — https://github.com/jdvlazio/Otrofestiv.app/issues/985",
+  "capturado": "2026-09-29",
+  "titulo": "RADAR: BIFF 12 — Bogota International Film Festival, Bogotá, 8–14 OCT 2026",
+  "estado": "OPEN",
+  "comentarios": 1
+ },
+ "issue": 985,
+ "titulo": "RADAR: BIFF 12 — Bogota International Film Festival, Bogotá, 8–14 OCT 2026",
+ "estado": "OPEN",
+ "cuerpo": "Fuente: IG [@biffcol](https://www.instagram.com/biffcol/) · web [biff.co](https://biff.co) · detectado 29 sep 2026 (Juan: «vamos a montar también este festival»)\n\nESTADO: 29 sep 2026 · fuentes medidas:\n- **PDF oficial** [Programacion_BIFF_12_DIGITAL.pdf](https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf) (26 sep, 56 págs, InDesign, **texto extraíble**): fichas por sección, «Programación por salas» (grilla, págs. 34–43) y **«Programación por días»** (tabla sede · sala · hora · película, págs. 44–50). **~153 funciones en 7 días**. Sección y los íconos (equipo presente / solo con invitación / entrada libre) son GRÁFICOS: se leen en la imagen.\n- **Cinemateca de Bogotá** (agenda 8–14 oct, por sede): **48 fichas del BIFF**. Tercera fuente para lo que pase en sus salas (a pedido de Juan).\n- **biff.co**: páginas por sección y por película (`pelicula.php`); la de programación todavía es plantilla (lorem ipsum). Venta de entradas abierta.\n- Sedes: Cinemateca de Bogotá (Sala Capital, 1, 2, 3), Cine Colombia Multiplex Avenida Chile (salas 1–4), CEFE Chapinero, Teatro Mayor Julio Mario Santo Domingo, Teatro El Ensueño, Plaza de Mercado La Concordia, Javeriana (Auditorio Fundadores), Universidad Central.\n- Apertura: FJORD (Cristian Mungiu). Cierre: COBARDE (Lukas Dhont). 61 películas.\n\nSiguiente: pre-onboarding (catálogo de las 61 obras + enriquecido con la cascada) y montaje por etapas en la rama `data/biff-2026`.",
+ "comentarios": [
+  {
+   "fecha": "2026-09-29",
+   "cuerpo": "ESTADO: 29 sep 2026 · **E2 catálogo hecho** en la rama `data/biff-2026` (sin PR).\n- **61 obras**: 51 fichas + 2 cine conciertos + el programa BIFF BANG (8 cortos). Leídas del PDF por coordenadas.\n- **60 con ficha de TMDB y afiche**; 14 ya publicadas en otros festivales.\n- La auditoría estricta no da ningún aviso de dirección.\n- Las fichas anotan 142 funciones: son la cuarta lectura de la parrilla, junto con la tabla por días, la grilla por salas y la Cinemateca."
+  }
+ ]
+}

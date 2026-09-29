@@ -1,0 +1,83 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-09-29"
+ },
+ "Cinemateca de Bogotá": {
+  "n": 0,
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "_prec": "manual",
+  "_match": "Cra. 3 #19-10 (PDF: Cra. 3 # 19-10). La «Calle Museo» es la calle frente a su sede: va como sala."
+ },
+ "Cine Colombia Multiplex Avenida Chile": {
+  "n": 0,
+  "lat": 4.6571677,
+  "lng": -74.0575171,
+  "_prec": "manual",
+  "_match": "Google «Cine Colombia Avenida Chile»; PDF: Cl. 72 # 10-34"
+ },
+ "Teatro Mayor Julio Mario Santo Domingo": {
+  "n": 0,
+  "lat": 4.756718,
+  "lng": -74.0626669,
+  "_prec": "manual",
+  "_match": "Cl. 170 #67-51 (idéntica al PDF); sala: Teatro Estudio"
+ },
+ "Teatro El Ensueño": {
+  "n": 0,
+  "lat": 4.585959,
+  "lng": -74.1586544,
+  "_prec": "manual",
+  "_match": "Google «Teatro del Ensueño», Tv. 70 D #60-90 Sur (PDF: Tv. 70D # 60-90 Sur)"
+ },
+ "Centro Felicidad Chapinero": {
+  "n": 0,
+  "lat": 4.6653416,
+  "lng": -74.0528448,
+  "_prec": "manual",
+  "_match": "Cl. 82 #10-69 (idéntica al PDF); sala: Teatro"
+ },
+ "Pontificia Universidad Javeriana": {
+  "n": 0,
+  "lat": 4.6270553,
+  "lng": -74.0644814,
+  "_prec": "manual",
+  "_match": "la DIRECCIÓN del PDF, Cl. 40B # 6-23; el edificio de Artes que ofrece Google está en la 40B #5-37, a ~65 m"
+ },
+ "Parque Santander": {
+  "n": 0,
+  "lat": 4.6019381,
+  "lng": -74.0725862,
+  "_prec": "manual",
+  "_match": "PDF: Cra. 7 con Cl. 16"
+ },
+ "Plaza Distrital de Mercado La Concordia": {
+  "n": 0,
+  "lat": 4.5983576,
+  "lng": -74.0686397,
+  "_prec": "manual",
+  "_match": "Cl 12c #1-40 (idéntica al PDF)"
+ },
+ "City U": {
+  "n": 0,
+  "lat": 4.6032278,
+  "lng": -74.0672082,
+  "_prec": "manual",
+  "_match": "Google: Av. Ciudad de Lima #2a-10 = PDF Cl. 19 # 2A-10; plazoleta principal"
+ },
+ "Universidad Central": {
+  "n": 0,
+  "lat": 4.6074587,
+  "lng": -74.0700002,
+  "_prec": "manual",
+  "_match": "Google «Sala Fundadores de la Universidad Central»; PDF: Cl. 22 # 5-91"
+ },
+ "Universidad Jorge Tadeo Lozano": {
+  "n": 0,
+  "lat": 4.606567,
+  "lng": -74.067801,
+  "_prec": "manual",
+  "_match": "Cra. 4 #22-61 (idéntica al PDF); sala: Aula Máxima"
+ }
+}
