@@ -7,7 +7,7 @@ el crudo EXIGE día, hora y sede —con razón: es el formato de una función—
 catálogo sin parrilla no puede cumplir ese contrato sin inventarse los tres, y
 un dato inventado para pasar una compuerta es peor que no tener el dato.
 
-No duplica la doctrina: importa `enriquecer_obra` de `enriquecer.py`, así que el
+No duplica la doctrina: importa `cascada_tmdb` de `enriquecer.py`, así que el
 candado sigue siendo el mismo —director ✓ Y (año ±1 O duración ±3 min)— y vive
 en un solo sitio.
 
@@ -21,11 +21,13 @@ título original exacto y su dirección («La tinaja», «Sombras en la niebla»
 Lee   festivals/staging/<lo-que-sea>.json   con obras[] de {titulo, director, …}
 Esc.  festivals/staging/<lo-que-sea>-enriquecido.json
 """
-import json, os, sys, time
+import json, os, re, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from enriquecer import enriquecer_obra, ficha_declarada, ficha_de_tmdb
-from lib import provenance, ficha_tmdb
+from enriquecer import ficha_declarada, cascada_tmdb
+from lib import provenance, director_coincide, obras_publicadas, ya_publicada
+import proimagenes
+import cinecorto
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -65,26 +67,78 @@ def main():
     if _huerf:
         sys.exit(f'ficha declarada para un título que no está en el catálogo: {_huerf}')
 
-    ok, sin = {}, []
+    # LA CASCADA (28 sep 2026). Cada obra pasa por todas las fuentes, en orden,
+    # hasta que una la verifica; y SIEMPRE se cruza contra lo que ya
+    # publicamos. Antes una obra que TMDB tenía sin año ni duración salía «sin
+    # ficha» aunque el título y el director casaran exactos, y nadie miraba
+    # nuestros propios festivales: «Lolita en Honda» estaba en FICCI 65 y en
+    # Cinemancia 2026, con afiche y sinopsis, y Mamut la dio por perdida.
+    #   1. la ficha declarada a mano;
+    #   2. TMDB con el candado: director ✓ Y (año ±1 O duración ±3);
+    #   3. TMDB por título idéntico + director, cuando a cualquiera de los dos
+    #      lados le faltan año y duración (lib.ficha_tmdb);
+    #   4. el tmdb_id con que ya la publicamos, si TMDB confirma la dirección;
+    #   5. Proimágenes, para el cine colombiano que TMDB no tiene (mismo
+    #      candado de dirección que proimagenes.py);
+    #   6. cinecorto.co, para el corto colombiano: año, duración y sinopsis.
+    publicadas = obras_publicadas(REPO, excluir=(_fid,))
+    ok, sin, por_fuente = {}, [], {}
     for i, o in enumerate(verificables, 1):
-        if o['titulo'] in declaradas:
-            e = ficha_declarada(o['titulo'], declaradas[o['titulo']], key)
-        elif o.get('anio') or o.get('duracion_min'):
-            e = enriquecer_obra(o, key, {})
-        else:
-            e = None
-            r = ficha_tmdb(o, key)
-            if r:
-                _det, e = ficha_de_tmdb(r[0]['id'], key, o['titulo'])
-                e['_verificado'] = r[2]
         t = o['titulo']
-        if e:
+        pub = ya_publicada(o, publicadas)
+        e, fuente = None, None
+        # la fuente se anota SOLO si devolvió algo: la primera versión la ponía
+        # antes de saberlo, y «Belleza letal» salía «OK tmdb» sin tmdb_id
+        # porque el cruce con lo publicado le daba cuerpo después.
+        if t in declaradas:
+            e = ficha_declarada(t, declaradas[t], key)
+            fuente = 'declarada' if e else None
+        if not e:
+            e, fuente = cascada_tmdb(o, key, {}, pub)
+        if not e and o.get('director'):
+            for idp in proimagenes.busca(t):
+                h = proimagenes.ficha(idp)
+                if h and director_coincide(o['director'], h['directores']):
+                    e = {'_fuente': 'proimagenes', '_proimagenes_id': h['id'],
+                         'pais': 'Colombia',
+                         '_verificado': f'Proimágenes, director: {", ".join(h["directores"])}'}
+                    if h['anio'].isdigit():
+                        e['anio'] = int(h['anio'])
+                    m = re.search(r'(\d{1,3})', h['duracion'])
+                    if m:
+                        e['duracion_min'] = int(m.group(1))
+                    if h['sinopsis']:
+                        e['sinopsis'] = h['sinopsis'][:1200]
+                    if h['afiche']:
+                        e['_afiche_proimagenes'] = h['afiche']
+                    fuente = 'proimagenes'
+                    break
+        if not e and o.get('director'):
+            c = cinecorto.ficha(t, o['director'])
+            if c:
+                e = {'_fuente': 'cinecorto', '_cinecorto': c['url'],
+                     '_verificado': f'cinecorto.co, dirección: {c["direccion"]}'}
+                for k in ('anio', 'duracion_min', 'sinopsis', 'sinopsis_en'):
+                    if c.get(k):
+                        e[k] = c[k]
+                fuente = 'cinecorto'
+        if pub:
+            e = dict(e or {})
+            e['_ya_publicada'] = pub
+        if e and fuente:
             ok[t] = e
-            print(f'[{i:3}/{len(verificables)}] OK  {t[:44]:46} tmdb {e["tmdb_id"]}'
-                  f'{"  lb✓" if e.get("lbSlug") else ""}', flush=True)
+            por_fuente[fuente] = por_fuente.get(fuente, 0) + 1
+            print(f'[{i:3}/{len(verificables)}] OK  {t[:44]:46} {fuente}'
+                  f'{" " + str(e["tmdb_id"]) if e.get("tmdb_id") else ""}'
+                  f'{"  · ya publicada: " + ", ".join(x["festival"] for x in pub) if pub else ""}',
+                  flush=True)
         else:
+            if e:           # sin ficha, pero ya la publicamos: se guarda el cruce
+                ok[t] = e
             sin.append(t)
-            print(f'[{i:3}/{len(verificables)}] —   {t[:44]:46} sin ficha verificable', flush=True)
+            print(f'[{i:3}/{len(verificables)}] —   {t[:44]:46} sin ficha verificable'
+                  f'{"  · ya publicada: " + ", ".join(x["festival"] for x in pub) if pub else ""}',
+                  flush=True)
         time.sleep(0.2)
 
     dest = p.replace('.json', '-enriquecido.json')
@@ -101,9 +155,16 @@ def main():
         # luz montando el Festival de Cine de Jardín (20 sep 2026), que empezó
         # como pre-onboarding —catálogo sin parrilla— y luego creció a festival.
         'obras': [{'titulo': t, **e} for t, e in ok.items()],
-        'verificadas': ok, 'sin_ficha': sorted(sin)},
+        # `verificadas` son SOLO las que alguna fuente verificó; una obra sin
+        # ficha que ya publicamos va en `obras` con su cruce, no acá.
+        'verificadas': {t: e for t, e in ok.items() if t not in sin},
+        'sin_ficha': sorted(sin)},
         open(dest, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    print(f'\n{len(obras)} obras ({len(sin_datos)} sin año ni duración) · con ficha {len(ok)} · sin ficha {len(sin)}')
+    print(f'\n{len(obras)} obras ({len(sin_datos)} sin año ni duración) · con ficha '
+          f'{len(obras) - len(sin)} · sin ficha {len(sin)}')
+    print('  por fuente: ' + ' · '.join(f'{k} {v}' for k, v in sorted(por_fuente.items())))
+    print(f'  ya publicadas en otro festival nuestro: '
+          f'{sum(1 for e in ok.values() if e.get("_ya_publicada"))}')
     print(f'  con póster {sum(1 for e in ok.values() if e.get("poster_path"))} · '
           f'con lbSlug {sum(1 for e in ok.values() if e.get("lbSlug"))}')
 
