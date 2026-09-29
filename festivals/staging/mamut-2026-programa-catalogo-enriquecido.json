@@ -1,0 +1,483 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-09-28"
+ },
+ "_origen": "mamut-2026-programa-catalogo.json",
+ "obras": [
+  {
+   "titulo": "Soplo de vida",
+   "tmdb_id": 143376,
+   "titulo_original": "Soplo de Vida",
+   "poster_path": "/f6g8fzhLiSRwPbuYv6Mw9hrAgjW.jpg",
+   "synopsis_es": "Emerson Roque Fierro, antiguo policía y remedo de investigador privado, indaga sobre el asesinato de “Golondrina”, una joven y bella mujer, ocurrido en un sórdido hotel del centro de Bogotá. Sin saber de quien se trata, empieza a conocer sus relaciones con una galería variopinta de hombres: un político corrupto, vinculado con narcotráfico y grupos paramilitares; un torero ladino y bueno para nada; un boxeador venido a menos con una fuerza tan bruta como escasa su inteligencia y un lotero ciego y perspicaz. Y en medio de ello, los hilos oscuros del poder que enredan a todos por igual, y de manera especial el pobre Fierro.",
+   "synopsis_en": "It begins with the tragedy of Armero, during the course investigates the murder of a beautiful woman and on his way some people die in the end a killing and a cemetery. Emerson Roque Fierro, former policeman and private investigator shadowing, investigates the murder of \"Golondrina\", a beautiful young woman, occurred in a seedy hotel in downtown Bogota. Without knowing who it is, begins to understand their relationships with a motley gallery of men: a corrupt politician, connected to drug trafficking and paramilitary groups, a bullfighter cunning and good for nothing, a boxer fallen on hard times with a force so stupid as rare Lotero intellect and an insightful blind. And in the midst of this, the dark threads entangling power to everyone, and especially the poor Fierro.",
+   "genero": "Drama",
+   "anio_tmdb": 1999,
+   "duracion_tmdb": 110,
+   "pais_tmdb": "Colombia, France",
+   "title_en": "Breath of Life",
+   "lbSlug": "breath-of-life",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Soplo de vida"
+  },
+  {
+   "titulo": "Bombardeo a Washington",
+   "tmdb_id": 493152,
+   "titulo_original": "El bombardeo de Washington",
+   "poster_path": "/mYDUnNu0rHfJ15qT4DTB6fgDqHu.jpg",
+   "synopsis_es": "Film experimental hecho con materiales de archivo encontrados mediante los cuales, por medio del montaje, se crea la ilusión que Washington es bombardeada desde el aire.",
+   "synopsis_en": "Satirical short comprising wartime footage, purporting to be from the Soviet Film Agency and depicting a successful bomb strike on Washington.",
+   "genero": "Bélica",
+   "anio_tmdb": 1972,
+   "duracion_tmdb": 1,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Bombing of Washington",
+   "lbSlug": "the-bombing-of-washington",
+   "_verificado": "declarada a mano: TMDB la registra como «El bombardeo de Washington»: Luis Ospina, 1972, 1 min, los tres datos que imprime la lámina. La búsqueda por el título del festival («Bombardeo a Washington») no la devuelve, y por eso no casa sola. Se publica con el título del festival."
+  },
+  {
+   "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "tmdb_id": 1663181,
+   "titulo_original": "Our Home Was Buried in a Land We Could Never Find",
+   "poster_path": "/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
+   "synopsis_es": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 92,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+     "tmdb_id": 1663181,
+     "poster": "https://image.tmdb.org/t/p/w500/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
+     "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+     "sinopsis": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo."
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+     "poster": "/assets/ficdeh/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar.jpg",
+     "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+     "sinopsis": "El hogar ha desaparecido; la casa fue paraíso, pero también infierno. Aunque la guerra intentó destruirlo todo a su paso, la familia intenta volver. Entre anhelos y pesadillas crean un nuevo territorio, un refugio donde se reencuentran con sus amigos y su comunidad. Allí logran volver a la casa grande, el parque de diversiones de la infancia, ahora habitado por seres fantásticos y espectros, en donde buscan conjurar un abrazo."
+    },
+    {
+     "festival": "ficma-2026",
+     "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+     "tmdb_id": 1663181,
+     "poster": "/assets/ficma/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encon.jpg",
+     "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+     "sinopsis": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "El hogar fue sepultado en esa tierra",
+     "poster": "https://image.tmdb.org/t/p/w185/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
+     "sinopsis": "Deimer Quintero Vertel documenta las memorias de comunidades colombianas desplazadas por la violencia, que intentan reconstruir su identidad y sus raíces en tierras que ya no les pertenecen."
+    }
+   ]
+  },
+  {
+   "titulo": "Sueño sobre un mantel vacío",
+   "_fuente": "proimagenes",
+   "_proimagenes_id": "1240",
+   "pais": "Colombia",
+   "_verificado": "Proimágenes, director: Victor Gaviria",
+   "anio": 1981,
+   "duracion_min": 10,
+   "sinopsis": "Clasificación: Aprobado por resolución 0034 de mayo 12 de 1981. Clasificado 1A por resolución 2070 de junio 16."
+  },
+  {
+   "titulo": "Apocalipsur",
+   "tmdb_id": 91764,
+   "titulo_original": "Apocalipsur",
+   "poster_path": "/4e1Sxa1k3dK5nwbtklORCyT92lY.jpg",
+   "synopsis_es": "En 1991 Medellín es un lugar peligroso para vivir. Las reglas han cambiado y hasta los policías tienen su precio. Al Flaco le toca huir hacia Londres por amenazas contra su madre. A pesar del miedo que se siente en las calles y la inseguridad en cualquier sitio, sus amigos y su novia, Malala, le hacen una gran despedida con banda de rock a bordo.\r Luego de unos meses, el Flaco regresa y en la ciudad las cosas no parecen haber cambiado: la guerra continúa y las bombas estallan. Junto a sus amigos Pipe, un inválido adicto a los psicoactivos, y la Comadreja, un perdedor inescrupuloso, van por el Flaco al aeropuerto en Bola de Nieve, camioneta en la que han recorrido juntos muchos kilómetros y se ha convertido en el refugio de todos.\r Es el momento de huir de la ciudad y meter el acelerador a fondo o simplemente adentrarse en un viaje alucinado por sus vidas. La carretera tratará de espantar ese luctuoso placer de ser de Medellín, para volver a vivir, junto al Flaco, el Apocalipsur.",
+   "synopsis_en": "El Flaco returns to Medellin after hiding for some months in London because he was threaten.  Things did not change much.",
+   "genero": "Drama",
+   "anio_tmdb": 2007,
+   "duracion_tmdb": 100,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "apocalipsur",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Apocalipsur"
+  },
+  {
+   "titulo": "Minuto fatal",
+   "tmdb_id": 939831,
+   "titulo_original": "Minuto Fatal",
+   "poster_path": "/gsbNjHvOGgS2os1WHe8L0snWAoR.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "An abortion doctor confronts his family problems.",
+   "genero": "Drama",
+   "anio_tmdb": 2014,
+   "duracion_tmdb": 37,
+   "pais_tmdb": "",
+   "lbSlug": "minuto-fatal",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Minuto fatal"
+  },
+  {
+   "titulo": "Lolita en Honda",
+   "tmdb_id": 1665546,
+   "titulo_original": "Lolita en Honda",
+   "poster_path": "/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
+   "synopsis_es": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "lolita-en-honda",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Lolita en Honda",
+     "tmdb_id": 1665546,
+     "poster": "https://image.tmdb.org/t/p/w500/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
+     "lbSlug": "lolita-en-honda",
+     "sinopsis": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Lolita en Honda",
+     "poster": "https://image.tmdb.org/t/p/w500/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
+     "sinopsis": "Lolita en Honda es un viaje íntimo hacia la memoria familiar, donde Daniel Torres explora la infancia de su abuela para desentrañar las marcas del abandono y la violencia internalizada que moldearon su carácter."
+    }
+   ]
+  },
+  {
+   "titulo": "Frío metal",
+   "tmdb_id": 1493018,
+   "titulo_original": "Frío Metal",
+   "poster_path": "/hs4fAhciulkzmE9Cdqw2YXxf7pm.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Mario wakes up with no memory of his past life. His encounter with Lazare marks the beginning of a spatio-corporeal drift, from the eastern suburbs of Mexico City to the surrounding underground cavities, where bodies and landscapes crack in the same motion.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 105,
+   "pais_tmdb": "Mexico",
+   "title_en": "Cold Metal",
+   "lbSlug": "cold-metal",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Frío metal",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Frío metal",
+     "poster": "https://image.tmdb.org/t/p/w185/hs4fAhciulkzmE9Cdqw2YXxf7pm.jpg",
+     "sinopsis": "¿Cómo escribir una historia que se desprende de la vida? Es decir, que queda colgando, como un pedazo de piel, un soporte fotosensible que lleva registrada en sus pliegues la luz."
+    }
+   ]
+  },
+  {
+   "titulo": "La memoria de las mariposas",
+   "tmdb_id": 1418601,
+   "titulo_original": "La memoria de las mariposas",
+   "poster_path": "/eoTEpNsHXfWAXtM2blrNiYhrjfV.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A photo of two indigenous boys brought by force to Europe opens an investigation of the past with meditations on the filmmaker’s own family using roughly textured analogue footage. A monument for the indigenous victims of the rubber trade in Peru.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 77,
+   "pais_tmdb": "Portugal, Peru",
+   "title_en": "The Memory of Butterflies",
+   "lbSlug": "the-memory-of-butterflies",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La memoria de las mariposas"
+  },
+  {
+   "titulo": "Manual para invocar fantasmas",
+   "tmdb_id": 1665528,
+   "titulo_original": "Manual para Invocar Fantasmas",
+   "poster_path": "/i7xnqfBINWSDHPNXhAqpThZJ8Fw.jpg",
+   "synopsis_es": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia con el propósito de expandir sus dominios en América, amparados por la sombra de la dictadura franquista. En el año 2021 salió a la luz la denuncia de 43 mujeres suramericanas contra esta organización, por trata de personas y explotación. En un ejercicio de memoria imaginativa, un grupo de actrices se adentra en un internado abandonado entre las frías montañas de Antioquia, para construir una obra de teatro inspirada en las vidas de aquellas mujeres. Poco a poco los ensayos se salen de control y las actrices terminan invocando a los fantasmas de sus antepasadas, que sedientas de justicia se apoderan de la cámara, transformando el rumbo de la película.",
+   "synopsis_en": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America. In 2021, the complaint against this organization by 43 women for trafficking and exploitation reopened the historical wound. In an exercise of imaginative memory, a group of actresses enters an abandoned school to create a play inspired by those silenced lives.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 71,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "manual-para-invocar-fantasmas",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Manual para invocar fantasmas",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Manual para invocar fantasmas",
+     "poster": "https://image.tmdb.org/t/p/w500/i7xnqfBINWSDHPNXhAqpThZJ8Fw.jpg",
+     "sinopsis": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia para expandir su influencia en América Latina, amparados por la sombra de la dictadura franquista."
+    }
+   ]
+  },
+  {
+   "titulo": "Carne de tu carne",
+   "tmdb_id": 308572,
+   "titulo_original": "Carne de tu carne",
+   "poster_path": "/hUNhxy7Oho00KNuSOiGtMmt8sYh.jpg",
+   "synopsis_es": "6 de agosto de 1956 durante la dictadura militar de Rojas Pinilla. Explota en el centro de Cali un convoy militar cargado de dinamita¸ destrozando buena parte de las edificaciones tradicionales de la ciudad y dejando al descubierto las raíces de unas casas que por años habían guardado las historias secretas de sus habitantes: familias notables¸ propietarias de Haciendas e Ingenios azucareros circundantes. Una de estas familias recibe la visita de una muchacha¸ quien ha vivido por años en Estados Unidos¸ y es medio hermana de nuestro joven protagonista. Se conocen¸ escarban en el pasado de la familia¸ se atraen uno al otro¸ y se sumergen en un delirio en el que aparecen los antepasados como personajes míticos que protagonizaron también historias de incesto y violencia.",
+   "synopsis_en": "August 6, 1956 during the military dictatorship of Rojas Pinilla. A military convoy loaded with dynamite explodes in the center of Cali, destroying a good part of the traditional buildings of the city and exposing the roots of some houses that for years had kept the secret stories of their inhabitants.",
+   "genero": "Drama",
+   "anio_tmdb": 1983,
+   "duracion_tmdb": 86,
+   "pais_tmdb": "Colombia",
+   "title_en": "Bloody Flesh",
+   "lbSlug": "bloody-flesh",
+   "_verificado": "declarada a mano: Carlos Mayolo, título idéntico, 1983, Colombia. La lámina no trae año y dice 94 min contra 86 en TMDB (Proimágenes, que también la tiene, da otra cifra): con la duración como única prueba, el candado a ±3 la rechaza. Es la única obra de Mayolo con ese título."
+  },
+  {
+   "titulo": "Geographies of Solitude",
+   "tmdb_id": 927998,
+   "titulo_original": "Geographies of Solitude",
+   "poster_path": "/vNNeyrc79aDPMi7GQuCDpPgLdwf.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "An immersion into the rich landscapes of Sable Island and the life of Zoe Lucas, a naturalist and environmentalist who has lived over 40 years on this remote strip of sand.",
+   "genero": "Documental",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 103,
+   "pais_tmdb": "Canada, United States of America",
+   "lbSlug": "geographies-of-solitude",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Geographies of Solitude"
+  }
+ ],
+ "verificadas": {
+  "Soplo de vida": {
+   "tmdb_id": 143376,
+   "titulo_original": "Soplo de Vida",
+   "poster_path": "/f6g8fzhLiSRwPbuYv6Mw9hrAgjW.jpg",
+   "synopsis_es": "Emerson Roque Fierro, antiguo policía y remedo de investigador privado, indaga sobre el asesinato de “Golondrina”, una joven y bella mujer, ocurrido en un sórdido hotel del centro de Bogotá. Sin saber de quien se trata, empieza a conocer sus relaciones con una galería variopinta de hombres: un político corrupto, vinculado con narcotráfico y grupos paramilitares; un torero ladino y bueno para nada; un boxeador venido a menos con una fuerza tan bruta como escasa su inteligencia y un lotero ciego y perspicaz. Y en medio de ello, los hilos oscuros del poder que enredan a todos por igual, y de manera especial el pobre Fierro.",
+   "synopsis_en": "It begins with the tragedy of Armero, during the course investigates the murder of a beautiful woman and on his way some people die in the end a killing and a cemetery. Emerson Roque Fierro, former policeman and private investigator shadowing, investigates the murder of \"Golondrina\", a beautiful young woman, occurred in a seedy hotel in downtown Bogota. Without knowing who it is, begins to understand their relationships with a motley gallery of men: a corrupt politician, connected to drug trafficking and paramilitary groups, a bullfighter cunning and good for nothing, a boxer fallen on hard times with a force so stupid as rare Lotero intellect and an insightful blind. And in the midst of this, the dark threads entangling power to everyone, and especially the poor Fierro.",
+   "genero": "Drama",
+   "anio_tmdb": 1999,
+   "duracion_tmdb": 110,
+   "pais_tmdb": "Colombia, France",
+   "title_en": "Breath of Life",
+   "lbSlug": "breath-of-life",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Soplo de vida"
+  },
+  "Bombardeo a Washington": {
+   "tmdb_id": 493152,
+   "titulo_original": "El bombardeo de Washington",
+   "poster_path": "/mYDUnNu0rHfJ15qT4DTB6fgDqHu.jpg",
+   "synopsis_es": "Film experimental hecho con materiales de archivo encontrados mediante los cuales, por medio del montaje, se crea la ilusión que Washington es bombardeada desde el aire.",
+   "synopsis_en": "Satirical short comprising wartime footage, purporting to be from the Soviet Film Agency and depicting a successful bomb strike on Washington.",
+   "genero": "Bélica",
+   "anio_tmdb": 1972,
+   "duracion_tmdb": 1,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Bombing of Washington",
+   "lbSlug": "the-bombing-of-washington",
+   "_verificado": "declarada a mano: TMDB la registra como «El bombardeo de Washington»: Luis Ospina, 1972, 1 min, los tres datos que imprime la lámina. La búsqueda por el título del festival («Bombardeo a Washington») no la devuelve, y por eso no casa sola. Se publica con el título del festival."
+  },
+  "El hogar fue sepultado en esa tierra que nunca pudimos encontrar": {
+   "tmdb_id": 1663181,
+   "titulo_original": "Our Home Was Buried in a Land We Could Never Find",
+   "poster_path": "/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
+   "synopsis_es": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 92,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+     "tmdb_id": 1663181,
+     "poster": "https://image.tmdb.org/t/p/w500/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
+     "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+     "sinopsis": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo."
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+     "poster": "/assets/ficdeh/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encontrar.jpg",
+     "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+     "sinopsis": "El hogar ha desaparecido; la casa fue paraíso, pero también infierno. Aunque la guerra intentó destruirlo todo a su paso, la familia intenta volver. Entre anhelos y pesadillas crean un nuevo territorio, un refugio donde se reencuentran con sus amigos y su comunidad. Allí logran volver a la casa grande, el parque de diversiones de la infancia, ahora habitado por seres fantásticos y espectros, en donde buscan conjurar un abrazo."
+    },
+    {
+     "festival": "ficma-2026",
+     "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
+     "tmdb_id": 1663181,
+     "poster": "/assets/ficma/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encon.jpg",
+     "lbSlug": "our-home-was-buried-in-a-land-we-could-never",
+     "sinopsis": "“Esos diablos me quitaron todo, esos diablos me quitaron todo, esos diablos me quitaron todo”: este mantra de despojo se transfigura cada tanto en la familia, como una sentencia. Ellos anhelan reencontrarse con sus seres queridos desaparecidos, jugar de nuevo entre plataneras y seres fantásticos y… la casa… la casa quiere volver a ser hogar. Entre filmaciones caseras, archivos colectivos, imágenes familiares y una presencia espectral y mística, esta película habita los sueños y las pesadillas creadas por las huellas de la desaparición de lo amado. El ruido de las balas parece haber cesado; ahora la guerra parece distante, pero a su paso dejó un profundo dolor y la promesa de volver. Los amigos, la familia, el hogar y el territorio vuelven, invocados por este relato coral. El pasado es un fantasma y este filme especula sobre un paraíso y un infierno que ya no se pueden tocar, con la ilusión de habitar este nuevo lugar para conjurar en él un abrazo."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "El hogar fue sepultado en esa tierra",
+     "poster": "https://image.tmdb.org/t/p/w185/sek5YZDIguocEvkRAaCcPb5wKW2.jpg",
+     "sinopsis": "Deimer Quintero Vertel documenta las memorias de comunidades colombianas desplazadas por la violencia, que intentan reconstruir su identidad y sus raíces en tierras que ya no les pertenecen."
+    }
+   ]
+  },
+  "Sueño sobre un mantel vacío": {
+   "_fuente": "proimagenes",
+   "_proimagenes_id": "1240",
+   "pais": "Colombia",
+   "_verificado": "Proimágenes, director: Victor Gaviria",
+   "anio": 1981,
+   "duracion_min": 10,
+   "sinopsis": "Clasificación: Aprobado por resolución 0034 de mayo 12 de 1981. Clasificado 1A por resolución 2070 de junio 16."
+  },
+  "Apocalipsur": {
+   "tmdb_id": 91764,
+   "titulo_original": "Apocalipsur",
+   "poster_path": "/4e1Sxa1k3dK5nwbtklORCyT92lY.jpg",
+   "synopsis_es": "En 1991 Medellín es un lugar peligroso para vivir. Las reglas han cambiado y hasta los policías tienen su precio. Al Flaco le toca huir hacia Londres por amenazas contra su madre. A pesar del miedo que se siente en las calles y la inseguridad en cualquier sitio, sus amigos y su novia, Malala, le hacen una gran despedida con banda de rock a bordo.\r Luego de unos meses, el Flaco regresa y en la ciudad las cosas no parecen haber cambiado: la guerra continúa y las bombas estallan. Junto a sus amigos Pipe, un inválido adicto a los psicoactivos, y la Comadreja, un perdedor inescrupuloso, van por el Flaco al aeropuerto en Bola de Nieve, camioneta en la que han recorrido juntos muchos kilómetros y se ha convertido en el refugio de todos.\r Es el momento de huir de la ciudad y meter el acelerador a fondo o simplemente adentrarse en un viaje alucinado por sus vidas. La carretera tratará de espantar ese luctuoso placer de ser de Medellín, para volver a vivir, junto al Flaco, el Apocalipsur.",
+   "synopsis_en": "El Flaco returns to Medellin after hiding for some months in London because he was threaten.  Things did not change much.",
+   "genero": "Drama",
+   "anio_tmdb": 2007,
+   "duracion_tmdb": 100,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "apocalipsur",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Apocalipsur"
+  },
+  "Minuto fatal": {
+   "tmdb_id": 939831,
+   "titulo_original": "Minuto Fatal",
+   "poster_path": "/gsbNjHvOGgS2os1WHe8L0snWAoR.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "An abortion doctor confronts his family problems.",
+   "genero": "Drama",
+   "anio_tmdb": 2014,
+   "duracion_tmdb": 37,
+   "pais_tmdb": "",
+   "lbSlug": "minuto-fatal",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Minuto fatal"
+  },
+  "Lolita en Honda": {
+   "tmdb_id": 1665546,
+   "titulo_original": "Lolita en Honda",
+   "poster_path": "/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
+   "synopsis_es": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "lolita-en-honda",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Lolita en Honda",
+     "tmdb_id": 1665546,
+     "poster": "https://image.tmdb.org/t/p/w500/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
+     "lbSlug": "lolita-en-honda",
+     "sinopsis": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Lolita en Honda",
+     "poster": "https://image.tmdb.org/t/p/w500/sKIm7ZwfuBnKuGeHJAUOYhg8DlV.jpg",
+     "sinopsis": "Lolita en Honda es un viaje íntimo hacia la memoria familiar, donde Daniel Torres explora la infancia de su abuela para desentrañar las marcas del abandono y la violencia internalizada que moldearon su carácter."
+    }
+   ]
+  },
+  "Frío metal": {
+   "tmdb_id": 1493018,
+   "titulo_original": "Frío Metal",
+   "poster_path": "/hs4fAhciulkzmE9Cdqw2YXxf7pm.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Mario wakes up with no memory of his past life. His encounter with Lazare marks the beginning of a spatio-corporeal drift, from the eastern suburbs of Mexico City to the surrounding underground cavities, where bodies and landscapes crack in the same motion.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 105,
+   "pais_tmdb": "Mexico",
+   "title_en": "Cold Metal",
+   "lbSlug": "cold-metal",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Frío metal",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Frío metal",
+     "poster": "https://image.tmdb.org/t/p/w185/hs4fAhciulkzmE9Cdqw2YXxf7pm.jpg",
+     "sinopsis": "¿Cómo escribir una historia que se desprende de la vida? Es decir, que queda colgando, como un pedazo de piel, un soporte fotosensible que lleva registrada en sus pliegues la luz."
+    }
+   ]
+  },
+  "La memoria de las mariposas": {
+   "tmdb_id": 1418601,
+   "titulo_original": "La memoria de las mariposas",
+   "poster_path": "/eoTEpNsHXfWAXtM2blrNiYhrjfV.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A photo of two indigenous boys brought by force to Europe opens an investigation of the past with meditations on the filmmaker’s own family using roughly textured analogue footage. A monument for the indigenous victims of the rubber trade in Peru.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 77,
+   "pais_tmdb": "Portugal, Peru",
+   "title_en": "The Memory of Butterflies",
+   "lbSlug": "the-memory-of-butterflies",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La memoria de las mariposas"
+  },
+  "Manual para invocar fantasmas": {
+   "tmdb_id": 1665528,
+   "titulo_original": "Manual para Invocar Fantasmas",
+   "poster_path": "/i7xnqfBINWSDHPNXhAqpThZJ8Fw.jpg",
+   "synopsis_es": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia con el propósito de expandir sus dominios en América, amparados por la sombra de la dictadura franquista. En el año 2021 salió a la luz la denuncia de 43 mujeres suramericanas contra esta organización, por trata de personas y explotación. En un ejercicio de memoria imaginativa, un grupo de actrices se adentra en un internado abandonado entre las frías montañas de Antioquia, para construir una obra de teatro inspirada en las vidas de aquellas mujeres. Poco a poco los ensayos se salen de control y las actrices terminan invocando a los fantasmas de sus antepasadas, que sedientas de justicia se apoderan de la cámara, transformando el rumbo de la película.",
+   "synopsis_en": "Between 1950 and 1960, members of Opus Dei arrived in Colombia to expand their influence in Latin America. In 2021, the complaint against this organization by 43 women for trafficking and exploitation reopened the historical wound. In an exercise of imaginative memory, a group of actresses enters an abandoned school to create a play inspired by those silenced lives.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 71,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "manual-para-invocar-fantasmas",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Manual para invocar fantasmas",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Manual para invocar fantasmas",
+     "poster": "https://image.tmdb.org/t/p/w500/i7xnqfBINWSDHPNXhAqpThZJ8Fw.jpg",
+     "sinopsis": "Entre 1950 y 1960, miembros del Opus Dei llegaron a Colombia para expandir su influencia en América Latina, amparados por la sombra de la dictadura franquista."
+    }
+   ]
+  },
+  "Carne de tu carne": {
+   "tmdb_id": 308572,
+   "titulo_original": "Carne de tu carne",
+   "poster_path": "/hUNhxy7Oho00KNuSOiGtMmt8sYh.jpg",
+   "synopsis_es": "6 de agosto de 1956 durante la dictadura militar de Rojas Pinilla. Explota en el centro de Cali un convoy militar cargado de dinamita¸ destrozando buena parte de las edificaciones tradicionales de la ciudad y dejando al descubierto las raíces de unas casas que por años habían guardado las historias secretas de sus habitantes: familias notables¸ propietarias de Haciendas e Ingenios azucareros circundantes. Una de estas familias recibe la visita de una muchacha¸ quien ha vivido por años en Estados Unidos¸ y es medio hermana de nuestro joven protagonista. Se conocen¸ escarban en el pasado de la familia¸ se atraen uno al otro¸ y se sumergen en un delirio en el que aparecen los antepasados como personajes míticos que protagonizaron también historias de incesto y violencia.",
+   "synopsis_en": "August 6, 1956 during the military dictatorship of Rojas Pinilla. A military convoy loaded with dynamite explodes in the center of Cali, destroying a good part of the traditional buildings of the city and exposing the roots of some houses that for years had kept the secret stories of their inhabitants.",
+   "genero": "Drama",
+   "anio_tmdb": 1983,
+   "duracion_tmdb": 86,
+   "pais_tmdb": "Colombia",
+   "title_en": "Bloody Flesh",
+   "lbSlug": "bloody-flesh",
+   "_verificado": "declarada a mano: Carlos Mayolo, título idéntico, 1983, Colombia. La lámina no trae año y dice 94 min contra 86 en TMDB (Proimágenes, que también la tiene, da otra cifra): con la duración como única prueba, el candado a ±3 la rechaza. Es la única obra de Mayolo con ese título."
+  },
+  "Geographies of Solitude": {
+   "tmdb_id": 927998,
+   "titulo_original": "Geographies of Solitude",
+   "poster_path": "/vNNeyrc79aDPMi7GQuCDpPgLdwf.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "An immersion into the rich landscapes of Sable Island and the life of Zoe Lucas, a naturalist and environmentalist who has lived over 40 years on this remote strip of sand.",
+   "genero": "Documental",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 103,
+   "pais_tmdb": "Canada, United States of America",
+   "lbSlug": "geographies-of-solitude",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Geographies of Solitude"
+  }
+ },
+ "sin_ficha": [
+  "Huella mi frente",
+  "Yo soy la muerte"
+ ]
+}

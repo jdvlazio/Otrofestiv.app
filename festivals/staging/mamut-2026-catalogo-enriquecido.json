@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-26"
+  "capturado": "2026-09-28"
  },
  "_origen": "mamut-2026-catalogo.json",
  "obras": [
@@ -110,7 +110,34 @@
    "pais_tmdb": "Colombia",
    "lbSlug": "acto-de-ver",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Acto de ver"
+   "_busqueda": "Acto de ver",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Acto de Ver",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Acto-de-ver-3-1-1024x576.png",
+     "sinopsis": "Cuatro rostros. Una fotografía. Cuatro miradas interpelan el acto de ver. Cuatro rostros fueron testigos de la violencia en Colombia. ¿Qué nos dicen? ¿Tenemos la posibilidad de entender el acto de violencia en Colombia?"
+    }
+   ]
+  },
+  {
+   "titulo": "These are not our memories",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/these-are-not-our-memories/",
+   "_verificado": "cinecorto.co, dirección: Patrick Alexander, Aseneth Suárez Ruiz",
+   "anio": 2022,
+   "duracion_min": 20,
+   "sinopsis": "George Besser, György Besser Jr., György Besser (1948 – 2011), Ildikó Mezei, Mónika Király, Sándor Szigeti, Zsuzsza Matthe, Patrick Alexander, Aseneth Suáre"
+  },
+  {
+   "titulo": "Belleza letal",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Belleza letal",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_afiche%20belleza%20letal%20-%20Samuel%20Moreno.jpg?itok=ZrOw0nvZ"
+    }
+   ]
   },
   {
    "titulo": "Decaer",
@@ -126,7 +153,30 @@
    "title_en": "decay",
    "lbSlug": "decay-2026",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Decaer"
+   "_busqueda": "Decaer",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Decaer",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj"
+    }
+   ]
   },
   {
    "titulo": "No menguará el fuego de esta luna",
@@ -244,7 +294,23 @@
    "pais_tmdb": "Colombia",
    "lbSlug": "acto-de-ver",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Acto de ver"
+   "_busqueda": "Acto de ver",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Acto de Ver",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Acto-de-ver-3-1-1024x576.png",
+     "sinopsis": "Cuatro rostros. Una fotografía. Cuatro miradas interpelan el acto de ver. Cuatro rostros fueron testigos de la violencia en Colombia. ¿Qué nos dicen? ¿Tenemos la posibilidad de entender el acto de violencia en Colombia?"
+    }
+   ]
+  },
+  "These are not our memories": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/these-are-not-our-memories/",
+   "_verificado": "cinecorto.co, dirección: Patrick Alexander, Aseneth Suárez Ruiz",
+   "anio": 2022,
+   "duracion_min": 20,
+   "sinopsis": "George Besser, György Besser Jr., György Besser (1948 – 2011), Ildikó Mezei, Mónika Király, Sándor Szigeti, Zsuzsza Matthe, Patrick Alexander, Aseneth Suáre"
   },
   "Decaer": {
    "tmdb_id": 1668881,
@@ -259,7 +325,30 @@
    "title_en": "decay",
    "lbSlug": "decay-2026",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Decaer"
+   "_busqueda": "Decaer",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Decaer",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj"
+    }
+   ]
   },
   "No menguará el fuego de esta luna": {
    "tmdb_id": 1593592,
@@ -283,7 +372,6 @@
   "Lo que tengo",
   "Sol de niebla",
   "Sólo algunos recuerdos quedan",
-  "These are not our memories",
   "Un cuerpo cansado de esperar"
  ]
 }

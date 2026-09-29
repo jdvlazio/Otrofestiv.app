@@ -8,11 +8,21 @@
   },
   {
    "cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/mamut-2026-catalogo.json",
-   "que": "catálogo → enriquecido (TMDB + Letterboxd, mismo candado que enriquecer.py)"
+   "que": "Selección Oficial → enriquecido con la cascada completa (TMDB, Proimágenes, cinecorto.co y lo ya publicado)"
+  },
+  {
+   "cmd": "python3 pipeline/mamut-2026-programa-catalogo.py",
+   "que": "las 14 obras de la programación (IG p/Dd2bBTciVpN), cada dato confirmado en el crédito de su lámina"
+  },
+  {
+   "cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/mamut-2026-programa-catalogo.json",
+   "que": "programación → enriquecido, con la misma cascada"
   }
  ],
  "_fuentes_versionadas": {
-  "festivals/staging/mamut-2026-catalogo-enriquecido.json": "las fichas TMDB de las 16 obras (9 verificadas), que escribe el paso 2; el montaje las reusa cuando salga la parrilla."
+  "festivals/staging/mamut-2026-catalogo-enriquecido.json": "las fichas de la Selección Oficial (10 de 16), que escribe el paso 2",
+  "festivals/staging/mamut-2026-programa-catalogo-enriquecido.json": "las fichas de la programación (12 de 14), que escribe el paso 4",
+  "festivals/staging/mamut-2026-programa-correcciones.json": "las 2 fichas declaradas a mano (Bombardeo a Washington, Carne de tu carne); las lee enriquecer_catalogo.py"
  },
  "_programacion": {
   "fuente": "IG @mamut_festival p/Dd2bBTciVpN (28 sep 2026): 11 láminas; 2–9 días, 10 sedes con dirección. La web mamutfestival.co todavía tiene la de la edición 10. Pie: «Entrada libre a todas las actividades».",
@@ -20,7 +30,7 @@
    "E1 fuente": "HECHA 28 sep — láminas en fuentes/ig/Dd2bBTciVpN/ + post.jsonl; OCR con cajas en fuentes/mamut-2026-ocr-programa.json",
    "E2 lectura a ojo": "HECHA 28 sep — fuentes/mamut-2026-ojos-programa.json, 33 actividades de las láminas 2–9 + las 6 sedes de la lámina 10",
    "E3 confirmación con OCR": "HECHA en borrador 28 sep — 29/33 exactas; 4 diferencias son de la OCR («Luluaga» = Zuluaga; «5p. p.m.»/«8p. p.m.» en la lámina 7). Cobertura inversa: las horas impresas = actividades en las 8 láminas. Falta pasarla a pipeline/mamut-2026-crudo.py",
-   "E4 cruces": "HECHA 28 sep — en fuentes/mamut-2026-ojos-programa.json (_e4 y pines_google_28sep): 8 fichas TMDB + 2 por declarar; 6 pines de Google con la dirección de la lámina 10; los formularios de los 4 talleres (1 abierto, 3 cerrados); el reparto de los cortos no se puede deducir (no cuadra por duración)",
+   "E4 cruces": "REHECHA 28 sep con la cascada completa (PR de pipeline fix/enriquecer-catalogo-cascada): la primera pasada dio «Lolita en Honda» por perdida y estaba en FICCI 65 y Cinemancia 2026. Selección 10/16, programación 12/14. Auditoría estricta: 6 avisos, todos entendidos (Minuto fatal: TMDB fecha 2014, es el corto de Pinilla de 1974 → se publica 1974).",
    "E5 montaje": "PENDIENTE — crudo, plan de montaje, verificador build↔láminas, ensamblar y revisión de Juan"
   },
   "dudas": [
