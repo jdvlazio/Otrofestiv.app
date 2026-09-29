@@ -251,6 +251,79 @@ def ficha_tmdb(obra, key, paginas=6):
     return None
 
 
+# ── lo que ya publicamos ─────────────────────────────────────────────────────
+def obras_publicadas(repo, excluir=()):
+    """Índice de todas las obras de festivals/*.json, incluidos los archivados:
+    {titulo normalizado: [(festival, obra), …]}, con las de dentro de los
+    programas de cortos.
+
+    POR QUÉ EXISTE (28 sep 2026). «Lolita en Honda» estaba en FICCI 65, el
+    primer festival que montamos, con sinopsis y afiche, y el pre-onboarding
+    de Mamut la dio por «sin ficha en ningún lado»: se buscó en TMDB y en
+    Proimágenes y nunca en lo nuestro. En Popayán ese cruce se había hecho a
+    mano, en su script; así se olvida. Ahora vive acá y lo usa el enriquecido."""
+    idx = {}
+    carpeta = os.path.join(repo, 'festivals')
+    for f in sorted(os.listdir(carpeta)):
+        if not f.endswith('.json') or f[:-5] in excluir:
+            continue
+        try:
+            j = json.load(io.open(os.path.join(carpeta, f), encoding='utf-8'))
+        except ValueError:
+            continue
+        for x in j.get('films') or []:
+            for o in [x] + (x.get('film_list') or []):
+                if isinstance(o, dict) and o.get('title') and o.get('type') != 'event':
+                    idx.setdefault(norm(o['title']), []).append((f[:-5], o))
+    return idx
+
+
+def _minutos(v):
+    m = re.search(r'\d+', str(v or ''))
+    return int(m.group()) if m else None
+
+
+def ya_publicada(obra, idx):
+    """Las veces que esta obra ya salió en un festival nuestro.
+
+    EL TÍTULO: el mismo, o uno es el comienzo entero del otro («HDLT» en
+    SiembraFest es «HDLT Hijo de la Tierra» en Popayán). Una palabra en común
+    no alcanza: cruzaba «Nascemos para semente» con «Un aparato para detectar
+    fantasmas» por «para».
+
+    Y ALGO QUE LO CORROBORE: la dirección, si los dos lados la tienen. Si el
+    publicado no la trae —FICCI 65 no guardaba director—, la duración a ±3 o
+    el año a ±1. Solo el título, sin nada más, no entra."""
+    t = norm(obra.get('titulo') or '')
+    if not t:
+        return []
+    out = []
+    for k, filas in idx.items():
+        if not (k == t or k.startswith(t + ' ') or t.startswith(k + ' ')):
+            continue
+        for fest, o in filas:
+            d_pub, d_nue = o.get('director'), obra.get('director')
+            if d_pub and d_nue:
+                if not director_coincide(d_nue, [d_pub]):
+                    continue
+            else:
+                dur_ok = (_minutos(o.get('duration')) and obra.get('duracion_min')
+                          and abs(_minutos(o.get('duration')) - obra['duracion_min']) <= 3)
+                anio_ok = (o.get('year') and obra.get('anio')
+                           and abs(int(o['year']) - obra['anio']) <= 1)
+                if not (dur_ok or anio_ok):
+                    continue
+            r = {'festival': fest, 'titulo': o['title']}
+            for campo in ('tmdb_id', 'poster', 'lbSlug'):
+                if o.get(campo):
+                    r[campo] = o[campo]
+            if o.get('synopsis'):
+                r['sinopsis'] = o['synopsis']
+            if r not in out:
+                out.append(r)
+    return out
+
+
 # ── sedes ────────────────────────────────────────────────────────────────────
 def sede_sala(nombre, tabla):
     """Aplica la tabla canónica sede→(sede, sala) de cada festival. La tabla es
@@ -719,6 +792,16 @@ def _selftest():
     t('director romanizado', director_coincide('Gorõ Miyazaki', ['宮崎吾朗', 'Goro Miyazaki']), True)
     t('director distinto', director_coincide('Lina Rodríguez', ['Maider Oleaga']), False)
     t('director tokens cortos', director_coincide('Gala del Sol', ['Gala del Sol']), True)
+    # lo que ya publicamos (28 sep 2026): Lolita en Honda estaba en FICCI 65 sin
+    # director, y la corrobora la duración; «para» en común no es la misma obra
+    _idx = {norm('Lolita en Honda'): [('ficci-65', {'title': 'Lolita en Honda', 'duration': '61 min'})],
+            norm('Un aparato para detectar fantasmas'): [('jardin-2026', {'title': 'Un aparato para detectar fantasmas', 'director': 'Mauricio Maldonado'})],
+            norm('HDLT'): [('siembrafest-2026', {'title': 'HDLT', 'director': 'Colectivo Artefactum Suba'})],
+            norm('Gris'): [('aff-2026', {'title': 'Gris'})]}
+    t('publicada sin director, por duración', len(ya_publicada({'titulo': 'Lolita en Honda', 'director': 'Daniel Torres', 'duracion_min': 61}, _idx)), 1)
+    t('publicada: una palabra no alcanza', ya_publicada({'titulo': 'Nascemos para semente', 'director': 'Mauricio Valbuena'}, _idx), [])
+    t('publicada: el comienzo entero del título', len(ya_publicada({'titulo': 'HDLT Hijo de la Tierra', 'director': 'Colectivo Artefactum Suba'}, _idx)), 1)
+    t('publicada: solo el título, sin nada que lo corrobore', ya_publicada({'titulo': 'Gris', 'director': 'Loren Escandón'}, _idx), [])
     # un nombre de pila compartido no alcanza (Legado ≠ El legado, 28 sep 2026)
     t('director solo nombre de pila', director_coincide('Zumaya Mayers y Rodrigo Cuervo', ['Rodrigo Demirjian']), False)
     t('director varias personas', director_coincide('Zumaya Mayers y Rodrigo Cuervo', ['Rodrigo Cuervo']), True)
