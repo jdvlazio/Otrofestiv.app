@@ -20,14 +20,15 @@
    "E1 fuente": "HECHA 28 sep — láminas en fuentes/ig/Dd2bBTciVpN/ + post.jsonl; OCR con cajas en fuentes/mamut-2026-ocr-programa.json",
    "E2 lectura a ojo": "HECHA 28 sep — fuentes/mamut-2026-ojos-programa.json, 33 actividades de las láminas 2–9 + las 6 sedes de la lámina 10",
    "E3 confirmación con OCR": "HECHA en borrador 28 sep — 29/33 exactas; 4 diferencias son de la OCR («Luluaga» = Zuluaga; «5p. p.m.»/«8p. p.m.» en la lámina 7). Cobertura inversa: las horas impresas = actividades en las 8 láminas. Falta pasarla a pipeline/mamut-2026-crudo.py",
-   "E4 cruces": "PENDIENTE — (a) la Selección Oficial (16 cortos del catálogo) contra Programa de cortos 1/2 (mar) y Muestra de cortos 1/2 (dom); (b) enriquecer los largos; (c) talleres con su post de IG e inscripción; (d) contenido de los programas Santiago Herrera, Alberto Giraldo y SHUB; (e) pines de las 6 sedes por dirección + Lab UNAL, que no está en la lámina 10",
+   "E4 cruces": "HECHA 28 sep — en fuentes/mamut-2026-ojos-programa.json (_e4 y pines_google_28sep): 8 fichas TMDB + 2 por declarar; 6 pines de Google con la dirección de la lámina 10; los formularios de los 4 talleres (1 abierto, 3 cerrados); el reparto de los cortos no se puede deducir (no cuadra por duración)",
    "E5 montaje": "PENDIENTE — crudo, plan de montaje, verificador build↔láminas, ensamblar y revisión de Juan"
   },
   "dudas": [
-   "Huella mi frente (mié 8 p. m.): sin crédito ni sede; va unida con «+» a Minuto fatal (11:30 p. m., Persona)",
-   "Qué cortos van en cada programa/muestra",
+   "Huella mi frente (mié 8 p. m.): qué es y dónde; va unida con «+» a Minuto fatal (Persona)",
+   "Qué cortos van en cada programa y muestra (no cuadra por duración)",
    "Dirección de Lab UNAL",
-   "Bombardeo a Washington (1 min) se proyecta dos veces: en la inaugural junto a Soplo de vida y sola el domingo en Coocine"
+   "Contenido de los programas Santiago Herrera, Alberto Giraldo y SHUB",
+   "DECISIÓN DE JUAN: ¿se publican los 3 talleres con la convocatoria cerrada?"
   ]
  }
 }
