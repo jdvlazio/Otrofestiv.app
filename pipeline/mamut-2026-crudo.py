@@ -199,8 +199,55 @@ def duracion_sin_dato(funciones):
                                     if hueco else ' y cierra su sede ese día'))
 
 
+# EL REPARTO DE LOS CORTOS. La lámina solo dice «Programa de cortos 1 / 2»; qué
+# obras van en cada uno lo mandó el festival por mensaje a Juan (29 sep): dos
+# imágenes, «PORGRAMA DE CORTOS 01/02» (sic), guardadas en fuentes/mamut-2026/.
+# 8 + 8 = las 16 de la Selección Oficial, con las mismas duraciones del
+# catálogo. Se comprueba por OCR que cada título esté en su imagen.
+#   · El DOMINGO («Muestra de cortos 1 y 2», Coocine) NO se asume igual: se
+#     preguntó (29 sep) si repiten estos dos programas.
+#   · El Programa 1 suma 111 min y empieza a las 5 p. m.; el 2 a las 6 p. m.
+#     en la misma sala. Se publica como lo da la lámina; se preguntó la hora.
+SELECCION = f'{REPO}/festivals/staging/mamut-2026-catalogo.json'
+REPARTO_IMG = {'Programa de cortos 1': f'{REPO}/fuentes/mamut-2026/programa-de-cortos-01.jpg',
+               'Programa de cortos 2': f'{REPO}/fuentes/mamut-2026/programa-de-cortos-02.jpg'}
+REPARTO = {
+    'Programa de cortos 1': ['These are not our memories', 'Estas imágenes fueron hechas para no mirarse',
+                             'Decaer', 'El Perú es un lugar para morir', 'Lo que tengo',
+                             'Desde el principio hasta el final', 'Un cuerpo cansado de esperar',
+                             'Una habitación en Bangkok'],
+    'Programa de cortos 2': ['El silencio de las granadas', 'Sol de niebla', 'Los no humanos',
+                             'No menguará el fuego de esta luna', 'Sólo algunos recuerdos quedan',
+                             'Acto de ver', 'Archipiélago fantasma', 'Belleza letal'],
+}
+
+
+def reparto():
+    """programa → obras del catálogo de la Selección, verificadas contra la OCR."""
+    from ocr import leer
+    sel = {o['titulo']: o for o in json.load(io.open(SELECCION, encoding='utf-8'))['obras']}
+    txt = {k: ' '.join(v).lower() for k, v in leer(list(REPARTO_IMG.values())).items()}
+    fallos, out = [], {}
+    for prog, titulos in REPARTO.items():
+        t = txt[REPARTO_IMG[prog]]
+        for ti in titulos:
+            if ti not in sel:
+                fallos.append(f'{prog}: «{ti}» no está en la Selección Oficial')
+            elif not all(w in t for w in ti.lower().split() if len(w) >= 4):
+                fallos.append(f'{prog}: la OCR no encuentra «{ti}» en su imagen')
+        out[prog] = [{k: v for k, v in sel[ti].items() if k in ('titulo', 'director', 'pais', 'anio', 'duracion_min')}
+                     for ti in titulos if ti in sel]
+    usadas = [ti for v in REPARTO.values() for ti in v]
+    if sorted(usadas) != sorted(sel) or len(set(usadas)) != len(usadas):
+        fallos.append('el reparto no cubre las 16 de la Selección exactamente una vez')
+    if fallos:
+        sys.exit('✗ el reparto de cortos no cuadra:\n  · ' + '\n  · '.join(fallos))
+    return out
+
+
 def main():
     ojos = json.load(io.open(OJOS, encoding='utf-8'))['actividades']
+    rep = reparto()
     fallos = verifica(ojos)
     if fallos:
         sys.exit('✗ la transcripción y la OCR no coinciden:\n  · ' + '\n  · '.join(fallos))
@@ -241,6 +288,10 @@ def main():
         if a.get('invitados'):
             reg['invitados'] = f'Invitados: {a["invitados"]}.'
         # un PROGRAMA con nombre y obras nombradas: modelo A (is_cortos + obras)
+        if t in rep:
+            reg['obras'] = rep[t]
+            reg['duracion_min'] = sum(o.get('duracion_min') or 0 for o in reg['obras'])
+            reg['_src']['reparto'] = 'mensaje del festival a Juan, 29 sep (fuentes/mamut-2026/programa-de-cortos-0N.jpg)'
         if a.get('obras'):
             reg['obras'] = [{**{k: v for k, v in catalogo[o['titulo']].items()
                                 if k in ('titulo', 'director', 'pais', 'anio', 'duracion_min')}}

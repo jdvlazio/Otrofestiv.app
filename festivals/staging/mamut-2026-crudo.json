@@ -86,11 +86,69 @@
    "_src": {
     "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
     "date": "2026-09-29",
-    "lamina": 3
+    "lamina": 3,
+    "reparto": "mensaje del festival a Juan, 29 sep (fuentes/mamut-2026/programa-de-cortos-0N.jpg)"
    },
    "seccion": "Proyecciones",
-   "duracion_min": 60,
-   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+   "obras": [
+    {
+     "titulo": "These are not our memories",
+     "director": "Aseneth Suárez Ruiz, Patrick Alexander",
+     "pais": "Colombia",
+     "anio": 2023,
+     "duracion_min": 21
+    },
+    {
+     "titulo": "Estas imágenes fueron hechas para no mirarse",
+     "director": "Pablo Romo Á.",
+     "pais": "México",
+     "anio": 2022,
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Decaer",
+     "director": "Juan Camilo González",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 7
+    },
+    {
+     "titulo": "El Perú es un lugar para morir",
+     "director": "Víctor Augusto Mendívil",
+     "pais": "Perú",
+     "anio": 2026,
+     "duracion_min": 13
+    },
+    {
+     "titulo": "Lo que tengo",
+     "director": "Sophia De Los Rios y David Rodriguez",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Desde el principio hasta el final",
+     "director": "Loana Pagani",
+     "pais": "Argentina",
+     "anio": 2023,
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Un cuerpo cansado de esperar",
+     "director": "Melissa Jurado",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Una habitación en Bangkok",
+     "director": "Javier Olivera",
+     "pais": "España",
+     "anio": 2025,
+     "duracion_min": 20
+    }
+   ],
+   "duracion_min": 111
   },
   {
    "titulo": "Programa de cortos 2",
@@ -102,11 +160,69 @@
    "_src": {
     "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
     "date": "2026-09-29",
-    "lamina": 3
+    "lamina": 3,
+    "reparto": "mensaje del festival a Juan, 29 sep (fuentes/mamut-2026/programa-de-cortos-0N.jpg)"
    },
    "seccion": "Proyecciones",
-   "duracion_min": 90,
-   "_duracion_de": "90 min declarados: la lámina no la da y cierra su sede ese día"
+   "obras": [
+    {
+     "titulo": "El silencio de las granadas",
+     "director": "Clara Baj",
+     "pais": "Italia, Francia",
+     "anio": 2025,
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Sol de niebla",
+     "director": "María José Ibarra y Florentino Vargas",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Los no humanos",
+     "director": "Ximena Gonzalez",
+     "pais": "Argentina",
+     "anio": 2025,
+     "duracion_min": 19
+    },
+    {
+     "titulo": "No menguará el fuego de esta luna",
+     "director": "Sebastián Pérez Arbelaez",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 22
+    },
+    {
+     "titulo": "Sólo algunos recuerdos quedan",
+     "director": "Mauricio Ortega",
+     "pais": "México",
+     "anio": 2017,
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Acto de ver",
+     "director": "Jean Paul Sánchez Flórez",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Archipiélago fantasma",
+     "director": "Dailo Barco",
+     "pais": "España (Canarias)",
+     "anio": 2017,
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Belleza letal",
+     "director": "Ron Márquez, Andrés Felipe Benavides, Fiama Castro, Cindy Caffroni, Juan Camilo Olmos, Valeria Rua, Felipe Moreno, Dante Hernández, Santiago Rodríguez, Laura Gabay García, Moises Busigo, Samuel Moreno Alvarez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 26
+    }
+   ],
+   "duracion_min": 117
   },
   {
    "titulo": "Archivos no hegemónicos",
