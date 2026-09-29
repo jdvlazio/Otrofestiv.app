@@ -4,7 +4,7 @@
  "_etapas": {
   "E1 fuentes": "HECHA 29 sep — fuentes/biff-2026/: el PDF oficial (26 sep, 56 págs, texto extraíble) y 48 fichas de la Cinemateca de Bogotá (agenda 8–14 oct por sede, filtradas por «Festivales y Muestras»).",
   "E2 catálogo": "HECHA 29 sep — 61 obras (51 fichas + 2 cine conciertos + el programa BIFF BANG de 8 cortos), leídas por coordenadas (pdftotext -bbox-layout). 60 con ficha de TMDB y afiche; 14 ya publicadas. Auditoría estricta: 16 avisos, ninguno de dirección (títulos originales y duraciones a ±8; El deshielo 88 en el PDF vs 108 en TMDB, se publica 88). 142 funciones anotadas en las fichas: cuarta lectura de la parrilla.",
-  "E3 parrilla": "PENDIENTE — «Programación por días» (págs. 44–50, texto: sede, sala, hora, película) como fuente principal; la grilla «por salas» (págs. 34–43) y la Cinemateca como verificación cruzada; los íconos (equipo presente / solo con invitación / entrada libre) leídos en la imagen.",
+  "E3 parrilla": "EN CURSO 29 sep — (1) fuentes/biff-2026/por-dias.json: la tabla «por días» por coordenadas, 153 filas; coincide EXACTO con las 149 funciones que anotan las fichas (día, hora, título) + 4 charlas abiertas BIFF BANG que solo están en la tabla. (2) Cinemateca: 53 de sus 55 funciones en el PDF coinciden en día, hora y sala, 52 con enlace de compra (tuboleta); faltan «No quiero ser un hombre» (Calle Museo, al aire libre) y «Hermanas» dom 14:00 (la grilla la confirma a las 14:00; la Cinemateca aún no la publica). (3) por-dias-iconos.json: color de sección (uno por sección, coherente con el catálogo) e íconos por píxeles contra la leyenda: 12 entrada libre (= muestra ×7 + charlas ×4 + No quiero ser un hombre), 1 invitación (la inaugural), 29 equipo presente. Falta: sede y sala desde las fichas (la tabla las deduce mal donde la etiqueta es de varios renglones) y el crudo.",
   "E4 entradas y sedes": "PENDIENTE — ticket_url por función desde biff.co; pines de las ~8 sedes; salas.",
   "E5 montaje": "PENDIENTE — crudo, verificador (build ↔ PDF ↔ Cinemateca), ensamblar, revisión de Juan."
  },
@@ -20,5 +20,8 @@
  ],
  "_fuentes_versionadas": {
   "festivals/staging/biff-2026-catalogo-enriquecido.json": "las fichas de las 61 obras, que escribe el paso 2"
+ },
+ "_errata": {
+  "El deshielo": "duración 108, no 88 (PDF del BIFF y Cinemateca, que copia al festival). 108: Festival de Cannes (Un Certain Regard), CineChile, TMDB 1210268, Wikipedia. Revisado a pedido de Juan, 29 sep."
  }
 }
