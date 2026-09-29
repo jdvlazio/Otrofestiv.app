@@ -64,21 +64,26 @@
      "poster": "/assets/siembrafest/carola.jpg",
      "sinopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre."
     }
-   ]
+   ],
+   "poster": "/assets/siembrafest/carola.jpg",
+   "_afiche": "ya publicada en siembrafest-2026: se reusa su afiche"
   },
   {
    "titulo": "Deus Ex Necro Machina",
-   "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
    "_ya_publicada": [
     {
      "festival": "jardin-2026",
      "titulo": "Deus ex necro machina",
      "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
+     "posterSource": "editorial",
      "sinopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa."
     }
    ],
-   "_verificado": "ya publicada en jardin-2026: se reusa su afiche",
-   "sinopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa."
+   "_verificado": "ya publicada en jardin-2026: se reusa su sinopsis",
+   "sinopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa.",
+   "poster": "/assets/girardota-2026/deus-ex-necro-machina.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 4, Experimental o videoclip)"
   },
   {
    "titulo": "El Páramo",
@@ -141,31 +146,33 @@
   },
   {
    "titulo": "Elementales",
-   "poster": "/assets/jardin-2026/elementales.jpg",
    "_ya_publicada": [
     {
      "festival": "jardin-2026",
      "titulo": "Elementales",
      "poster": "/assets/jardin-2026/elementales.jpg",
+     "posterSource": "editorial",
      "sinopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES."
     },
     {
      "festival": "siembrafest-2026",
      "titulo": "Elementales",
-     "poster": "/assets/siembrafest/elementales.jpg"
+     "poster": "/assets/siembrafest/elementales.jpg",
+     "posterSource": "oficial"
     }
    ],
-   "_verificado": "ya publicada en jardin-2026: se reusa su afiche",
+   "poster": "/assets/siembrafest/elementales.jpg",
+   "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche",
    "sinopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES."
   },
   {
    "titulo": "En Todo y en Nada",
-   "poster": "/assets/jardin-2026/en-todo-y-en-nada.jpg",
    "_ya_publicada": [
     {
      "festival": "jardin-2026",
      "titulo": "En todo y en nada",
      "poster": "/assets/jardin-2026/en-todo-y-en-nada.jpg",
+     "posterSource": "editorial",
      "sinopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer."
     },
     {
@@ -174,8 +181,11 @@
      "sinopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer."
     }
    ],
-   "_verificado": "ya publicada en jardin-2026: se reusa su afiche",
-   "sinopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer."
+   "_verificado": "ya publicada en jardin-2026: se reusa su sinopsis",
+   "sinopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer.",
+   "poster": "/assets/girardota-2026/en-todo-y-en-nada.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 8, Documental)"
   },
   {
    "titulo": "Funeral siniestro",
@@ -195,6 +205,20 @@
    "_sondeado": "2026-09-29",
    "poster": "/assets/girardota-2026/funeral-siniestro.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La Rebelión de un Fantasma",
+   "_ya_publicada": [
+    {
+     "festival": "popayan-2026",
+     "titulo": "La rebelión de un fantasma",
+     "poster": "/assets/girardota-2026/la-rebelion-de-un-fantasma.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico."
+    }
+   ],
+   "_verificado": "ya publicada en popayan-2026: se reusa su sinopsis",
+   "sinopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico."
   },
   {
    "titulo": "La mansión de Araucaima",
@@ -315,15 +339,16 @@
   },
   {
    "titulo": "Maleza",
-   "poster": "/assets/villadelcine-2026/maleza.jpg",
    "_ya_publicada": [
     {
      "festival": "villadelcine-2026",
      "titulo": "Maleza",
      "poster": "/assets/villadelcine-2026/maleza.jpg",
+     "posterSource": "oficial",
      "sinopsis": "Guiada por el espíritu de su gato fallecido, una sanadora y partera solitaria, dedicada a preservar la vida, sufre una profunda conmoción interior cuando una joven desesperada llega a su puerta. Durante una noche de cruda confrontación y dolor, Alba comprende que ayudar a alguien significa caminar a su lado, no tomar decisiones por esa persona."
     }
    ],
+   "poster": "/assets/villadelcine-2026/maleza.jpg",
    "_verificado": "ya publicada en villadelcine-2026: se reusa su afiche",
    "sinopsis": "Guiada por el espíritu de su gato fallecido, una sanadora y partera solitaria, dedicada a preservar la vida, sufre una profunda conmoción interior cuando una joven desesperada llega a su puerta. Durante una noche de cruda confrontación y dolor, Alba comprende que ayudar a alguien significa caminar a su lado, no tomar decisiones por esa persona."
   },
@@ -418,6 +443,66 @@
    ],
    "poster": "/assets/girardota-2026/refraccion.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Mantener la Democracia Maestro",
+   "poster": "/assets/girardota-2026/mantener-la-democracia-maestro.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 5, Documental)"
+  },
+  {
+   "titulo": "Bajo el Último Aliento",
+   "poster": "/assets/girardota-2026/bajo-el-ultimo-aliento.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 3, Ficción)"
+  },
+  {
+   "titulo": "La Rata",
+   "poster": "/assets/girardota-2026/la-rata.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 4, Ficción)"
+  },
+  {
+   "titulo": "Hambre",
+   "poster": "/assets/girardota-2026/hambre.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 8, Ficción)"
+  },
+  {
+   "titulo": "Armonía de la Entropía",
+   "poster": "/assets/girardota-2026/armonia-de-la-entropia.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 3, Experimental o videoclip)"
+  },
+  {
+   "titulo": "De lo Oculto",
+   "poster": "/assets/girardota-2026/de-lo-oculto.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 5, Experimental o videoclip)"
+  },
+  {
+   "titulo": "Idilio",
+   "poster": "/assets/girardota-2026/idilio.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 7, Experimental o videoclip)"
+  },
+  {
+   "titulo": "Maldito Sentimiento",
+   "poster": "/assets/girardota-2026/maldito-sentimiento.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 8, Experimental o videoclip)"
+  },
+  {
+   "titulo": "PARE",
+   "poster": "/assets/girardota-2026/pare.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 9, Experimental o videoclip)"
+  },
+  {
+   "titulo": "Hábitat Venus",
+   "poster": "/assets/girardota-2026/habitat-venus.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 10, Experimental o videoclip)"
   }
  ],
  "verificadas": {
@@ -478,7 +563,9 @@
      "poster": "/assets/siembrafest/carola.jpg",
      "sinopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre."
     }
-   ]
+   ],
+   "poster": "/assets/siembrafest/carola.jpg",
+   "_afiche": "ya publicada en siembrafest-2026: se reusa su afiche"
   },
   "El Páramo": {
    "tmdb_id": 83705,
@@ -854,13 +941,5 @@
    "director": "",
    "fecha": "2026-09-27"
   }
- },
- "_fuentes": [
-  {
-   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-09-29",
-   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
-   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
-  }
- ]
+ }
 }

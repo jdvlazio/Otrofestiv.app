@@ -1,0 +1,88 @@
+{
+ "_provenance": {
+  "fuente": "los 3 carruseles de la Selección Oficial de la competencia de cortos (@girardotaescultura / @festigirardota, 28 sep 2026), una lámina por obra con título y dirección pintados",
+  "capturado": "2026-09-29",
+  "metodo": "el mapa lámina→obra es el de fuentes/girardota-2026-competencia-ojos.json, leído a ojo y confirmado por OCR en girardota-2026-crudo.py",
+  "descartados": {
+   "La Rebelión de un Fantasma": "la lámina acredita a Andrés Muñoz, que es el productor; publicamos a Flora Rodríguez (web de Popayán). El afiche contradiría la ficha. Decisión de Juan, 29 sep."
+  }
+ },
+ "afiches": {
+  "Los Años del Conejo": {
+   "lamina": "fuentes/ig/Dd2hcuiHGOC/03.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 3, Documental)"
+  },
+  "Elementales": {
+   "lamina": "fuentes/ig/Dd2hcuiHGOC/04.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 4, Documental)"
+  },
+  "Mantener la Democracia Maestro": {
+   "lamina": "fuentes/ig/Dd2hcuiHGOC/05.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 5, Documental)"
+  },
+  "Maricones": {
+   "lamina": "fuentes/ig/Dd2hcuiHGOC/06.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 6, Documental)"
+  },
+  "Archivo no Encontrado": {
+   "lamina": "fuentes/ig/Dd2hcuiHGOC/07.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 7, Documental)"
+  },
+  "En Todo y en Nada": {
+   "lamina": "fuentes/ig/Dd2hcuiHGOC/08.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 8, Documental)"
+  },
+  "Bajo el Último Aliento": {
+   "lamina": "fuentes/ig/Dd2i8ZAHNDz/03.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 3, Ficción)"
+  },
+  "La Rata": {
+   "lamina": "fuentes/ig/Dd2i8ZAHNDz/04.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 4, Ficción)"
+  },
+  "Maleza": {
+   "lamina": "fuentes/ig/Dd2i8ZAHNDz/05.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 5, Ficción)"
+  },
+  "Carola": {
+   "lamina": "fuentes/ig/Dd2i8ZAHNDz/06.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 6, Ficción)"
+  },
+  "Refracción": {
+   "lamina": "fuentes/ig/Dd2i8ZAHNDz/07.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 7, Ficción)"
+  },
+  "Hambre": {
+   "lamina": "fuentes/ig/Dd2i8ZAHNDz/08.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 8, Ficción)"
+  },
+  "Armonía de la Entropía": {
+   "lamina": "fuentes/ig/Dd2iI6unNOM/03.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 3, Experimental o videoclip)"
+  },
+  "Deus Ex Necro Machina": {
+   "lamina": "fuentes/ig/Dd2iI6unNOM/04.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 4, Experimental o videoclip)"
+  },
+  "De lo Oculto": {
+   "lamina": "fuentes/ig/Dd2iI6unNOM/05.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 5, Experimental o videoclip)"
+  },
+  "Idilio": {
+   "lamina": "fuentes/ig/Dd2iI6unNOM/07.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 7, Experimental o videoclip)"
+  },
+  "Maldito Sentimiento": {
+   "lamina": "fuentes/ig/Dd2iI6unNOM/08.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 8, Experimental o videoclip)"
+  },
+  "PARE": {
+   "lamina": "fuentes/ig/Dd2iI6unNOM/09.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 9, Experimental o videoclip)"
+  },
+  "Hábitat Venus": {
+   "lamina": "fuentes/ig/Dd2iI6unNOM/10.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 10, Experimental o videoclip)"
+  }
+ }
+}

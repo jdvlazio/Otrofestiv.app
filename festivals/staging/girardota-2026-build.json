@@ -684,14 +684,16 @@
     {
      "title": "Elementales",
      "director": "Camilo Botero Jaramillo",
-     "poster": "/assets/jardin-2026/elementales.jpg",
+     "poster": "/assets/siembrafest/elementales.jpg",
      "synopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
      "posterSource": "oficial",
      "synopsis_lang": "es"
     },
     {
      "title": "Mantener la Democracia Maestro",
-     "director": "Jhon Fredy Machado Tuberquia"
+     "director": "Jhon Fredy Machado Tuberquia",
+     "poster": "/assets/girardota-2026/mantener-la-democracia-maestro.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Maricones",
@@ -725,18 +727,22 @@
     {
      "title": "En Todo y en Nada",
      "director": "Raquel Zapata Ospina",
-     "poster": "/assets/jardin-2026/en-todo-y-en-nada.jpg",
+     "poster": "/assets/girardota-2026/en-todo-y-en-nada.jpg",
+     "posterSource": "custom",
      "synopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer.",
-     "posterSource": "oficial",
      "synopsis_lang": "es"
     },
     {
      "title": "Bajo el Último Aliento",
-     "director": "Pedro Valencia"
+     "director": "Pedro Valencia",
+     "poster": "/assets/girardota-2026/bajo-el-ultimo-aliento.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "La Rata",
-     "director": "Santiago Londoño Vélez"
+     "director": "Santiago Londoño Vélez",
+     "poster": "/assets/girardota-2026/la-rata.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Maleza",
@@ -749,8 +755,10 @@
     {
      "title": "Carola",
      "director": "Violeta Barrios",
+     "poster": "/assets/siembrafest/carola.jpg",
      "tmdb_id": 1497688,
      "synopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
+     "posterSource": "oficial",
      "synopsis_lang": "es",
      "duration": "11 min"
     },
@@ -772,43 +780,59 @@
     },
     {
      "title": "Hambre",
-     "director": "Manuela Bedoya Carvajal"
+     "director": "Manuela Bedoya Carvajal",
+     "poster": "/assets/girardota-2026/hambre.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Armonía de la Entropía",
-     "director": "Alexander Ladino Giraldo"
+     "director": "Alexander Ladino Giraldo",
+     "poster": "/assets/girardota-2026/armonia-de-la-entropia.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Deus Ex Necro Machina",
      "director": "Mateo Montoya Correa",
-     "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
+     "poster": "/assets/girardota-2026/deus-ex-necro-machina.jpg",
+     "posterSource": "custom",
      "synopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa.",
-     "posterSource": "oficial",
      "synopsis_lang": "es"
     },
     {
      "title": "De lo Oculto",
-     "director": "Daniel Rúa"
+     "director": "Daniel Rúa",
+     "poster": "/assets/girardota-2026/de-lo-oculto.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "La Rebelión de un Fantasma",
-     "director": "Flora Rodríguez"
+     "director": "Flora Rodríguez",
+     "synopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Idilio",
-     "director": "Andrés Felipe Giraldo Guisao"
+     "director": "Andrés Felipe Giraldo Guisao",
+     "poster": "/assets/girardota-2026/idilio.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Maldito Sentimiento",
-     "director": "Leidy Vanegas Bolemos"
+     "director": "Leidy Vanegas Bolemos",
+     "poster": "/assets/girardota-2026/maldito-sentimiento.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "PARE",
-     "director": "Santiago Salazar Quintana"
+     "director": "Santiago Salazar Quintana",
+     "poster": "/assets/girardota-2026/pare.jpg",
+     "posterSource": "custom"
     },
     {
      "title": "Hábitat Venus",
-     "director": "Sofía Rueda Férez"
+     "director": "Sofía Rueda Férez",
+     "poster": "/assets/girardota-2026/habitat-venus.jpg",
+     "posterSource": "custom"
     }
    ]
   },
@@ -958,8 +982,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T07:05:47",
-  "plan_sha": "61702b7f236df64e",
+  "fecha": "2026-09-29T13:52:15",
+  "plan_sha": "89d6e69df8fcc84e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py girardota-2026"
  }

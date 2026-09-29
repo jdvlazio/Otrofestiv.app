@@ -325,7 +325,7 @@ def ya_publicada(obra, idx):
                 if not (dur_ok or anio_ok):
                     continue
             r = {'festival': fest, 'titulo': o['title']}
-            for campo in ('tmdb_id', 'poster', 'lbSlug'):
+            for campo in ('tmdb_id', 'poster', 'posterSource', 'lbSlug'):
                 if o.get(campo):
                     r[campo] = o[campo]
             if o.get('synopsis'):

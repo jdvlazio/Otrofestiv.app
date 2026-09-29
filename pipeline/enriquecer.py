@@ -197,18 +197,44 @@ def cascada_tmdb(o, key, alias, pub):
     return None, None
 
 
+def a_poster(origen, destino, lamina=False, ancho=500, lado=0.06):
+    """Una imagen declarada → el JPEG del póster. Una LÁMINA de carrusel es 4:5
+    y el póster 2:3: 6% de recorte por lado y el resto de estirón (la regla de
+    SiembraFest: recortarlo todo deja el título al borde, estirarlo todo lo
+    deforma un 20%). Cualquier otra imagen va tal cual; el encuadre a 2:3 es de
+    encuadrar-posters.py."""
+    from PIL import Image
+    im = Image.open(origen).convert('RGB')
+    if lamina:
+        c = int(im.width * lado)
+        im = im.crop((c, 0, im.width - c, im.height)).resize((ancho, ancho * 3 // 2), Image.LANCZOS)
+    im.save(destino, 'JPEG', quality=86, optimize=True)
+
+
 def reuso_publicada(pub):
     """Sin ficha, pero ya la publicamos con afiche: se reusa el afiche y la
     sinopsis que mostramos entonces —ya pasaron por un montaje—. «Belleza letal»
     no está en ningún catálogo y FICCI 65 la tiene con afiche. Va en `obras`, no
     en `verificadas`: no es una ficha verificada, es lo nuestro."""
-    x = next((x for x in pub if x.get('poster')), None)
-    if not x:
+    # solo un afiche que EXISTE: un /assets/ que no está en disco es una
+    # anotación vieja, y dos festivales que se reusan entre sí se quedan sin nada
+    # …y que SEA un afiche: el `editorial` de otro festival es un fotograma 16:9
+    # (La Mona en Jardín) y tapaba el afiche real que sí existe (29 sep)
+    x = next((x for x in pub if x.get('poster') and x.get('posterSource') != 'editorial' and not (
+        str(x['poster']).startswith('/assets/') and not os.path.exists(REPO + x['poster']))), None)
+    # la SINOPSIS se reusa de donde esté, aunque el afiche de ese festival fuera
+    # un fotograma: son dos datos distintos (Girardota perdía 2 sinopsis)
+    s = next((y for y in pub if y.get('sinopsis')), None)
+    if not x and not s:
         return None
-    e = {'poster': x['poster'], '_ya_publicada': pub,
-         '_verificado': f'ya publicada en {x["festival"]}: se reusa su afiche'}
-    if x.get('sinopsis'):
-        e['sinopsis'] = x['sinopsis']
+    e = {'_ya_publicada': pub}
+    if x:
+        e['poster'] = x['poster']
+        e['_verificado'] = f'ya publicada en {x["festival"]}: se reusa su afiche'
+    else:
+        e['_verificado'] = f'ya publicada en {s["festival"]}: se reusa su sinopsis'
+    if s:
+        e['sinopsis'] = s['sinopsis']
     return e
 
 
@@ -343,6 +369,11 @@ def main():
             continue
         c = prev_ok.get(t)
         if c and c.get('_director') == _dir:
+            # el afiche PRESTADO (de lo publicado o declarado) no se cachea: se
+            # recalcula abajo cada vez, que la regla puede haber cambiado —el
+            # fotograma de Jardín quedó pegado a La Mona desde la caché—
+            if c.get('_afiche'):
+                c = {k: v for k, v in c.items() if k not in ('poster', 'posterSource', '_afiche')}
             ok[t] = c
             reuso += 1
             print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} tmdb {c["tmdb_id"]} '
@@ -390,6 +421,48 @@ def main():
             print(f'[{i:3}/{len(obras)}] —   {t[:46]:48} sin ficha verificable'
                   f'{"  · afiche de " + _r["_ya_publicada"][0]["festival"] if _r else ""}', flush=True)
         time.sleep(0.2)
+
+    # ── EL AFICHE QUE TMDB NO TIENE ─────────────────────────────────────────
+    # La cascada del afiche es: TMDB → lo que ya publicamos → lo DECLARADO.
+    # (1) Una obra CON ficha de TMDB pero sin póster allí no miraba lo nuestro:
+    #     el reúso solo corría para las obras sin ficha. «La asociación» tiene
+    #     ficha sin póster y SiembraFest la publicó con su lámina (29 sep).
+    # (2) Lo declarado: festivals/staging/<fid>-afiches.json, afiches que se
+    #     buscaron y se MIRARON fuera de TMDB —la lámina oficial del festival
+    #     (carrusel de IG, una por obra), la página del director— y que ningún
+    #     paso automático encuentra. Entra solo donde no hay nada de lo anterior.
+    for t, f in obras.items():
+        e = ok.get(t)
+        if e and not e.get('poster_path') and not e.get('poster'):
+            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas))
+            if _r and _r.get('poster') and not _r['poster'].startswith(f'/assets/{fid}/'):
+                e['poster'] = _r['poster']
+                e['_afiche'] = _r['_verificado']
+    _dec = f'{ST}/{fid}-afiches.json'
+    declarados = 0
+    if os.path.exists(_dec):
+        for t, d in (json.load(open(_dec, encoding='utf-8')).get('afiches') or {}).items():
+            e = ok.get(t) or {}
+            _p = e.get('poster') or ''
+            # manda lo de arriba… si EXISTE: un afiche anotado de una corrida
+            # anterior, o el de otro festival nuestro que a su vez apunta aquí
+            # (La Rebelión de un Fantasma, en Girardota y en Popayán), no cuenta
+            # si el archivo no está en disco
+            if e.get('poster_path') or (_p and not (_p.startswith('/assets/')
+                                                     and not os.path.exists(REPO + _p))):
+                continue
+            os.makedirs(f'{REPO}/assets/{fid}', exist_ok=True)
+            dest = f'{REPO}/assets/{fid}/{slug(t)}.jpg'
+            origen = f'{REPO}/{d.get("lamina") or d["archivo"]}'
+            if not os.path.exists(dest):
+                a_poster(origen, dest, lamina=bool(d.get('lamina')))
+            e = {**e, 'poster': f'/assets/{fid}/{slug(t)}.jpg',
+                 'posterSource': 'custom' if d.get('lamina') else 'oficial',
+                 '_afiche': f'declarado: {d["fuente"]}'}
+            ok[t] = e
+            declarados += 1
+    if declarados:
+        print(f'afiches declarados en {os.path.basename(_dec)}: {declarados}')
 
     if posters:
         os.makedirs(f'{REPO}/assets/{fid}', exist_ok=True)
