@@ -1174,10 +1174,10 @@ export const FESTIVAL_CONFIG={
     name:'Mamut',displayName:'Mamut',fullName:'Mamut 11 — Festival de Memoria Audiovisual',shortName:'MAMUT',
     city:'Medellín',country:'CO',
     dates:'5–11 OCT',dates_en:'OCT 5–11',year:2026,timezoneOffset:'-05:00',
-    // LA PORTADA DEL CARRUSEL DE PROGRAMACIÓN (@mamut_festival p/Dd2ckXgiYW9,
-    // lámina 1): es la pieza oficial de la edición —nombre, fechas, «entrada
-    // libre»— y no se encontró otro afiche. 4:5 estirado a 2:3.
-    keyArt:'/assets/keyart/mamut2026-v2.jpg',
+    // LA IMAGEN OFICIAL de #MAMUT11 (@mamut_festival p/DdCI2ZGkQG-, «La imagen
+    // de #MAMUT11 es gracias a @atravesar_un____rio»), sin el «Programación» de
+    // la portada del carrusel. 4:5 estirado a 2:3.
+    keyArt:'/assets/keyart/mamut2026-v3.jpg',
     // lo que el festival dice de sí mismo; «Mamut» ya es el nombre
     tagline:'Festival de Memoria Audiovisual',
     storageKey:'mamut2026_',festivalStartStr:'2026-10-05T00:00:00',festivalEndStr:'2026-10-11T23:59:00',
