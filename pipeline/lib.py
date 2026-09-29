@@ -511,7 +511,7 @@ SIGLAS = {
     'AECID', 'ALITIC', 'ASAB', 'BMCC', 'CCEBA', 'CDAE', 'CEFE', 'COMFAMA', 'FUGA',
     'LGBTIQ', 'MAMB', 'MAMM', 'SENA', 'TPAC', 'UNIAGRARIA', 'UNIBAC', 'VISA',
     # festivales nombrados dentro de una sección o una sede
-    'FICCI', 'FICDH', 'TIFF',
+    'BIFF', 'FICCI', 'FICDH', 'TIFF',
     # MARCAS DE PROGRAMA que el festival escribe así —no son siglas y no
     # gritan una sección: son el nombre de un proceso—. FINQUITA es el
     # diminutivo de FINCA; LABRA, «el proceso de formación LABRA» de SiembraFest,

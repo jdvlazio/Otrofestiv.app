@@ -50,7 +50,12 @@ MUESTRA = 220                            # ancho de análisis
 # primera pasada le quitó el aire de arriba y la segunda iba a seguir
 # (↑19 ↓25) — lo cazó la comprobación de idempotencia (Girardota, 27 sep 2026).
 # Estos se llevan al lienzo sin buscarles marco. Por nombre de archivo.
-FONDO_ES_ARTE = {'funeral-siniestro.jpg'}
+FONDO_ES_ARTE = {'funeral-siniestro.jpg',
+                 # BIFF 12 (29 sep 2026): el rojo liso de «El deshielo», el papel
+                 # blanco de la ilustración de «No quiero ser un hombre» (Lubitsch,
+                 # 1918) y el paspartú blanco de «Light Pillar»: los tres son del
+                 # afiche, y la segunda pasada los seguía recortando
+                 'el-deshielo.jpg', 'no-quiero-ser-un-hombre.jpg', 'light-pillar.jpg'}
 
 
 def rejilla(path):

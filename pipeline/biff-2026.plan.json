@@ -1,0 +1,198 @@
+{
+ "_nota": "BIFF 12 — Bogota International Film Festival (Bogotá, 8–14 oct 2026). Radar #985. EN PREPARACIÓN: montaje por etapas, el estado va en `_etapas`.",
+ "radar": 985,
+ "_etapas": {
+  "E1 fuentes": "HECHA 29 sep — fuentes/biff-2026/: el PDF oficial (26 sep, 56 págs, texto extraíble) y 48 fichas de la Cinemateca de Bogotá (agenda 8–14 oct por sede, filtradas por «Festivales y Muestras»).",
+  "E2 catálogo": "HECHA 29 sep — 61 obras (51 fichas + 2 cine conciertos + el programa BIFF BANG de 8 cortos), leídas por coordenadas (pdftotext -bbox-layout). 60 con ficha de TMDB y afiche; 14 ya publicadas. Auditoría estricta: 16 avisos, ninguno de dirección (títulos originales y duraciones a ±8; El deshielo 88 en el PDF vs 108 en TMDB, se publica 88). 142 funciones anotadas en las fichas: cuarta lectura de la parrilla.",
+  "E3 parrilla": "EN CURSO 29 sep — (1) fuentes/biff-2026/por-dias.json: la tabla «por días» por coordenadas, 153 filas; coincide EXACTO con las 149 funciones que anotan las fichas (día, hora, título) + 4 charlas abiertas BIFF BANG que solo están en la tabla. (2) Cinemateca: 53 de sus 55 funciones en el PDF coinciden en día, hora y sala, 52 con enlace de compra (tuboleta); faltan «No quiero ser un hombre» (Calle Museo, al aire libre) y «Hermanas» dom 14:00 (la grilla la confirma a las 14:00; la Cinemateca aún no la publica). (3) por-dias-iconos.json: color de sección (uno por sección, coherente con el catálogo) e íconos por píxeles contra la leyenda: 12 entrada libre (= muestra ×7 + charlas ×4 + No quiero ser un hombre), 1 invitación (la inaugural), 29 equipo presente. Falta: sede y sala desde las fichas (la tabla las deduce mal donde la etiqueta es de varios renglones) y el crudo.",
+  "E4 entradas y sedes": "EN CURSO 29 sep — biff-2026-web.py: 53 fichas web, TODAS con duración y de acuerdo con el PDF y TMDB salvo El deshielo (88 en PDF y web; 108 en TMDB, Cannes, CineChile); 48 con enlace de compra de la Cinemateca (tuboleta, por película; la agenda de la Cinemateca lo da por FUNCIÓN, 52) y 50 con su página en Cine Colombia. Charlas BIFF BANG: la sala sale de la GRILLA (sáb y dom Sala 2, lun y mié Sala Capital); la tabla por cercanía decía Sala 3 y estaba mal. Faltan los pines. PINES HECHOS: 11 sedes en fuentes/biff-2026/pines.json, cada una contra la dirección del PDF (Javeriana por dirección exacta).",
+  "E5 montaje": "SIGUIENTE — crudo: funciones de las fichas (sede y sala escritas) + programa BIFF BANG + 4 charlas (sala de la grilla); íconos → equipo presente / invitación / entrada libre; tuboleta por función (Cinemateca) y página de Cine Colombia; errata El deshielo 108; caja de 13 títulos que la Cinemateca no trae (decisión de Juan)."
+ },
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py biff-2026",
+   "que": "el volcado del radar #985"
+  },
+  {
+   "cmd": "python3 pipeline/biff-2026-catalogo.py",
+   "que": "las fichas del PDF → catálogo de 61 obras con sus funciones"
+  },
+  {
+   "cmd": "python3 pipeline/biff-2026-pordias.py",
+   "que": "la tabla «Programación por días», por coordenadas"
+  },
+  {
+   "cmd": "python3 pipeline/biff-2026-iconos.py",
+   "que": "color de sección e íconos de cada fila, por píxeles"
+  },
+  {
+   "cmd": "python3 pipeline/biff-2026-web.py",
+   "que": "biff.co: duración (contrastada) y enlaces de compra"
+  },
+  {
+   "cmd": "python3 pipeline/biff-2026-crudo.py",
+   "que": "las cuatro lecturas → crudo, cruzadas en los dos sentidos"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py biff-2026 --posters",
+   "que": "la cascada de TMDB y lo ya publicado"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py biff-2026 --centro 4.6097,-74.0817 --ciudad \"Bogotá\"",
+   "que": "pines: los manuales (Google, por la dirección del PDF) se respetan"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py biff-2026",
+   "que": "el build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py biff-2026 --aplicar --desde festivals/staging/biff-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/biff-2026-verificar.py",
+   "que": "el build contra la tabla por días y la Cinemateca, en los dos sentidos; cada sede con pin"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/biff-2026-catalogo-enriquecido.json": "las fichas del pre-onboarding",
+  "festivals/staging/biff-2026-radar.json": "el volcado del radar #985, que escribe y relee pipeline/radar.py"
+ },
+ "_errata": {
+  "El deshielo": "duración 108, no 88 (PDF del BIFF y Cinemateca, que copia al festival). 108: Festival de Cannes (Un Certain Regard), CineChile, TMDB 1210268, Wikipedia. Revisado a pedido de Juan, 29 sep."
+ },
+ "_secciones_ig": {
+  "fuente": "IG @biffcol, un carrusel por sección (Masters p/DdnAu-hDu2G, Colombia Viva p/Ddpld0ujj6A, Retrospectiva Rei Pictures p/DdsNqZ6Dpqu, Fantasmas del pasado p/DdzQDKmFN5Q, Clases de Lucha p/Dd2h75CDmUn). Pedido de Juan, 29 sep.",
+  "resultado": "32 de las 33 películas de esas 5 secciones están en su carrusel, y ninguna aparece en la sección equivocada. «9 Temples to Heaven» no está en el de Clases de lucha (7 películas + portada); el PDF la pone allí y el color de sus funciones en la tabla es el de esa sección.",
+  "faltan": "Espíritu joven, Relatos mutantes, BIFF Kids y cine conciertos todavía no tienen carrusel (29 sep).",
+  "extra": "cada lámina trae día, hora y sala de la película: otra lectura de la parrilla"
+ },
+ "festival": {
+  "crudo": "festivals/staging/biff-2026-crudo.json",
+  "enriquecido": "festivals/staging/biff-2026-enriquecido.json",
+  "geo": "festivals/staging/biff-2026-venues-geo.json",
+  "_por_que_sedes": "El nombre de la sede como la presenta el PDF (págs. 28–31); la sala va aparte, desde las fichas.",
+  "sedes": {
+   "Centro Felicidad Chapinero": [
+    "Centro Felicidad Chapinero - Bogotá",
+    ""
+   ],
+   "Cine Colombia Multiplex Avenida Chile": [
+    "Cine Colombia Multiplex Avenida Chile - Bogotá",
+    ""
+   ],
+   "Cinemateca de Bogotá": [
+    "Cinemateca de Bogotá - Bogotá",
+    ""
+   ],
+   "City U": [
+    "City U - Bogotá",
+    ""
+   ],
+   "Parque Santander": [
+    "Parque Santander - Bogotá",
+    ""
+   ],
+   "Plaza Distrital de Mercado La Concordia": [
+    "Plaza Distrital de Mercado La Concordia - Bogotá",
+    ""
+   ],
+   "Pontificia Universidad Javeriana": [
+    "Pontificia Universidad Javeriana - Bogotá",
+    ""
+   ],
+   "Teatro El Ensueño": [
+    "Teatro El Ensueño - Bogotá",
+    ""
+   ],
+   "Teatro Mayor Julio Mario Santo Domingo": [
+    "Teatro Mayor Julio Mario Santo Domingo - Bogotá",
+    ""
+   ],
+   "Universidad Central": [
+    "Universidad Central - Bogotá",
+    ""
+   ],
+   "Universidad Jorge Tadeo Lozano": [
+    "Universidad Jorge Tadeo Lozano - Bogotá",
+    ""
+   ]
+  },
+  "_por_que_secciones": "Las secciones del festival, verbatim (PDF + carruseles de IG). El inglés y el emoji son nuestros, por aprobar; «Charlas abiertas BIFF BANG» es el nombre que el PDF les da en la grilla.",
+  "secciones": {
+   "Colombia viva": {
+    "emoji": "🇨🇴",
+    "en": "Colombia Viva",
+    "archetype": "Muestra / País"
+   },
+   "Espíritu joven": {
+    "emoji": "✨",
+    "en": "Young Spirit",
+    "archetype": "Competencia"
+   },
+   "Masters": {
+    "emoji": "🎩",
+    "en": "Masters",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Fantasmas del pasado": {
+    "emoji": "👻",
+    "en": "Ghosts of the Past",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Clases de lucha": {
+    "emoji": "✊",
+    "en": "Fighting Classes",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Relatos mutantes": {
+    "emoji": "🧬",
+    "en": "Mutant Tales",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Retrospectiva Rei Pictures": {
+    "emoji": "🎞️",
+    "en": "Rei Pictures Retrospective",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "BIFF Kids": {
+    "emoji": "🧒",
+    "en": "BIFF Kids",
+    "archetype": "Especiales / Eventos"
+   },
+   "Cine Conciertos": {
+    "emoji": "🎻",
+    "en": "Film Concerts",
+    "archetype": "Especiales / Eventos"
+   },
+   "Muestra de cortometrajes BIFF Bang": {
+    "emoji": "🎬",
+    "en": "BIFF BANG Short Film Showcase",
+    "archetype": "Cortos / Programas"
+   },
+   "Charlas abiertas BIFF Bang": {
+    "emoji": "🎤",
+    "en": "BIFF BANG Open Talks",
+    "archetype": "Charlas / Industria"
+   }
+  },
+  "name": "BIFF",
+  "displayName": "BIFF",
+  "fullName": "BIFF 12 — Bogota International Film Festival",
+  "shortName": "BIFF",
+  "tagline": "Bogota International Film Festival",
+  "city": "Bogotá",
+  "country": "CO",
+  "dates": "8–14 OCT",
+  "dates_en": "OCT 8–14",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "biff2026_",
+  "festivalStartStr": "2026-10-08T00:00:00",
+  "festivalEndStr": "2026-10-14T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "ticketing_model": "mixed",
+  "mes_es": "octubre",
+  "dias_vacios": []
+ }
+}

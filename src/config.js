@@ -1130,6 +1130,28 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'biff2026': {
+    name:'BIFF',displayName:'BIFF',fullName:'BIFF 12 — Bogota International Film Festival',shortName:'BIFF',
+    city:'Bogotá',country:'CO',
+    dates:'8–14 OCT',dates_en:'OCT 8–14',year:2026,timezoneOffset:'-05:00',
+    storageKey:'biff2026_',festivalStartStr:'2026-10-08T00:00:00',festivalEndStr:'2026-10-14T23:59:00',
+    festivalDates:{'2026-10-08':'2026-10-08','2026-10-09':'2026-10-09','2026-10-10':'2026-10-10','2026-10-11':'2026-10-11','2026-10-12':'2026-10-12','2026-10-13':'2026-10-13','2026-10-14':'2026-10-14'},
+    days:[{k:'2026-10-08',d:8,lbl:'JUE'},{k:'2026-10-09',d:9,lbl:'VIE'},{k:'2026-10-10',d:10,lbl:'SÁB'},{k:'2026-10-11',d:11,lbl:'DOM'},{k:'2026-10-12',d:12,lbl:'LUN'},{k:'2026-10-13',d:13,lbl:'MAR'},{k:'2026-10-14',d:14,lbl:'MIÉ'}],
+    dayKeys:['2026-10-08','2026-10-09','2026-10-10','2026-10-11','2026-10-12','2026-10-13','2026-10-14'],
+    dayShort:{'2026-10-08':'JUE 8','2026-10-09':'VIE 9','2026-10-10':'SÁB 10','2026-10-11':'DOM 11','2026-10-12':'LUN 12','2026-10-13':'MAR 13','2026-10-14':'MIÉ 14'},
+    dayShort_en:{'2026-10-08':'THU 8','2026-10-09':'FRI 9','2026-10-10':'SAT 10','2026-10-11':'SUN 11','2026-10-12':'MON 12','2026-10-13':'TUE 13','2026-10-14':'WED 14'},
+    dayLong:{'2026-10-08':'Jueves 8 de octubre','2026-10-09':'Viernes 9 de octubre','2026-10-10':'Sábado 10 de octubre','2026-10-11':'Domingo 11 de octubre','2026-10-12':'Lunes 12 de octubre','2026-10-13':'Martes 13 de octubre','2026-10-14':'Miércoles 14 de octubre'},
+    // LA IMAGEN OFICIAL de la edición, del post de @biffcol (DcSJVx7O19W), sin el
+    // «Programación» que lleva la portada del PDF (pedido de Juan), 3:4 → 2:3.
+    keyArt:'/assets/keyart/biff2026-v3.jpg',
+    // la sigla ya es el nombre: el subtítulo dice qué es
+    tagline:'Bogota International Film Festival',
+    // boleta en la Cinemateca (tuboleta, por función) y en Cine Colombia; entrada
+    // libre en la muestra de cortos, las charlas y un cine concierto
+    ticketing_model:'mixed',
+    prioLimit:5,
+    films:null,posters:null,lbSlugs:{}
+  },
   'narrarelfuturo2026': {
     name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
     city:'Bogotá',country:'CO',
@@ -1208,6 +1230,18 @@ export const SECTION_ARCHETYPES = {
   '🎪 Actividades': 'Especiales / Eventos',
   // ── 9° Festival Audiovisual de Girardota ──────────────────────────────
   '🎬 Proyecciones': 'Muestra / País',
+  // BIFF 12 (29 sep 2026)
+  '🇨🇴 Colombia viva': 'Muestra / País',
+  '✨ Espíritu joven': 'Competencia',   // compite por el Premio de la Juventud
+  '🎩 Masters': 'Perspectivas / Miradas',
+  '👻 Fantasmas del pasado': 'Perspectivas / Miradas',
+  '✊ Clases de lucha': 'Perspectivas / Miradas',
+  '🧬 Relatos mutantes': 'Perspectivas / Miradas',
+  '🎞️ Retrospectiva Rei Pictures': 'Retrospectiva / Tributo',
+  '🧒 BIFF Kids': 'Especiales / Eventos',
+  '🎻 Cine Conciertos': 'Especiales / Eventos',
+  '🎬 Muestra de cortometrajes BIFF Bang': 'Cortos / Programas',
+  '🎤 Charlas abiertas BIFF Bang': 'Charlas / Industria',
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
   '📺 Primetime': 'Especiales / Eventos',
   '🔎 Discovery': 'Perspectivas / Miradas',

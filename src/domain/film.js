@@ -190,7 +190,7 @@ export function _cutSalida(f,d){
 // nada —la ficha sigue mostrándolo entero—, solo se queda sin badge, y el
 // guardián [premiere-sin-badge] lo lista para poder añadir la regla.
 const _PREMIERE_REGLAS = [
-  [/apertura|inaugural|opening/i, 'badge_apertura'],
+  [/apertura|inaugura|opening/i,  'badge_apertura'],   // «inaugura»: inaugural E «Inauguración» (Mamut, 28 sep 2026)
   [/clausura|cierre|closing/i,    'badge_clausura'],
   [/estreno|premiere|estreia/i,   'badge_estreno'],
 ];
