@@ -8,7 +8,7 @@ las láminas, en las dos direcciones:
   · toda actividad de la lámina está en el build, con su día, su hora y su lugar;
   · todo lo que el build publica viene de una lámina (nada inventado en el camino);
   · toda sede tiene su pin verificado a mano, o un pendiente escrito que dice por
-    qué no lo tiene (Palmas del Llano: es un barrio, no una sede).
+    qué no lo tiene.
 
 Es el paso que pide [plan-verificador]: el de FICMA encontró dos horas mal en
 diez segundos.
