@@ -1,0 +1,24 @@
+{
+ "_nota": "BIFF 12 — Bogota International Film Festival (Bogotá, 8–14 oct 2026). Radar #985. EN PREPARACIÓN: montaje por etapas, el estado va en `_etapas`.",
+ "radar": 985,
+ "_etapas": {
+  "E1 fuentes": "HECHA 29 sep — fuentes/biff-2026/: el PDF oficial (26 sep, 56 págs, texto extraíble) y 48 fichas de la Cinemateca de Bogotá (agenda 8–14 oct por sede, filtradas por «Festivales y Muestras»).",
+  "E2 catálogo": "HECHA 29 sep — 61 obras (51 fichas + 2 cine conciertos + el programa BIFF BANG de 8 cortos), leídas por coordenadas (pdftotext -bbox-layout). 60 con ficha de TMDB y afiche; 14 ya publicadas. Auditoría estricta: 16 avisos, ninguno de dirección (títulos originales y duraciones a ±8; El deshielo 88 en el PDF vs 108 en TMDB, se publica 88). 142 funciones anotadas en las fichas: cuarta lectura de la parrilla.",
+  "E3 parrilla": "PENDIENTE — «Programación por días» (págs. 44–50, texto: sede, sala, hora, película) como fuente principal; la grilla «por salas» (págs. 34–43) y la Cinemateca como verificación cruzada; los íconos (equipo presente / solo con invitación / entrada libre) leídos en la imagen.",
+  "E4 entradas y sedes": "PENDIENTE — ticket_url por función desde biff.co; pines de las ~8 sedes; salas.",
+  "E5 montaje": "PENDIENTE — crudo, verificador (build ↔ PDF ↔ Cinemateca), ensamblar, revisión de Juan."
+ },
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/biff-2026-catalogo.py",
+   "que": "las fichas del PDF oficial (págs. 9–27) → catálogo de 61 obras, con las funciones que anota cada ficha"
+  },
+  {
+   "cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/biff-2026-catalogo.json",
+   "que": "la cascada completa (TMDB, Proimágenes, cinecorto.co y lo ya publicado)"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/biff-2026-catalogo-enriquecido.json": "las fichas de las 61 obras, que escribe el paso 2"
+ }
+}

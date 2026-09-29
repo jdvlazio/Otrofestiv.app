@@ -1,0 +1,1273 @@
+{
+ "_provenance": {
+  "fuente": "PDF oficial del BIFF 12 (Programacion_BIFF_12_DIGITAL.pdf, 26 sep 2026)",
+  "capturado": "2026-09-29",
+  "que_aporta": "las fichas: sección, año, país, género, duración, idiomas, dirección, sinopsis y las funciones que cada ficha anota",
+  "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
+  "metodo": "pdftotext -bbox-layout: columnas por coordenada, cada función a la ficha cuyo título está encima"
+ },
+ "obras": [
+  {
+   "titulo": "Donde Comienza el Río",
+   "titulo_pdf": "DONDE COMIENZA EL RÍO",
+   "seccion": "Colombia viva",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 9
+   },
+   "anio": 2026,
+   "duracion_min": 102,
+   "pais": "Colombia, Canadá",
+   "genero": "Drama",
+   "idioma": "Español, Emberá",
+   "director": "Juan Andrés Arango",
+   "sinopsis": "Yajaira, una joven indígena, vive con su hija María en un violento barrio de Bogotá. Perseguida por los sueños de la selva que fue su hogar, anhela regresar a la comunidad de la que huyó. Tras la muerte de su sobrino, decide irse para proteger a su hija. Jhon, un joven pandillero del centro, se une a ellas en su arriesgado viaje hacia el remoto río Andágueda. Solo la selva decidirá su destino.",
+   "funciones_ficha": [
+    "Dom. 11 - 19:30 | Cinemateca - Sala Capital",
+    "Mar. 13 - 17:00 | Av. Chile - Sala 4"
+   ]
+  },
+  {
+   "titulo": "El Despertar",
+   "titulo_pdf": "EL DESPERTAR",
+   "seccion": "Colombia viva",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 9
+   },
+   "anio": 2026,
+   "duracion_min": 96,
+   "pais": "Colombia",
+   "genero": "Acción, Horror militar",
+   "idioma": "Español",
+   "director": "Jaime Osorio Márquez",
+   "sinopsis": "En lo más profundo de la selva una unidad militar de élite entra en territorio desconocido para eliminar un objetivo estratégico. La operación, calculada como una incursión táctica, cambia de naturaleza cuando el comando invade el dominio de Mobuya, una presencia ancestral vinculada a un lugar sagrado. La selva deja de ser escenario y se convierte en fuerza activa: los soldados ya no saben si están enfrentando a un enemigo, a una memoria que vuelve o a aquello que ellos mismos han despertado.",
+   "funciones_ficha": [
+    "Vie. 9 - 20:00 | Cinemateca - Sala Capital",
+    "Mié. 14 - 17:00 | Av. Chile - Sala 4"
+   ]
+  },
+  {
+   "titulo": "Iluminada",
+   "titulo_pdf": "ILUMINADA",
+   "seccion": "Colombia viva",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 9
+   },
+   "anio": 2026,
+   "duracion_min": 120,
+   "pais": "Bélgica",
+   "genero": "Drama, Coming-of-age",
+   "idioma": "Español",
+   "director": "Nicolás Rincón Gille",
+   "sinopsis": "Iluminada tiene visiones. Intenta comprenderlas escribiendo en diarios privados. Sus escritos son poesía que nadie más escucha. Su vida en los barrios periféricos de Bogotá, plagada de dificultades, no le deja ni tiempo ni espacio. Hasta que conoce a Juan, un joven que parece abrirle las puertas a otro mundo. Pero su relación con un extraño no es bien vista por quienes controlan el barrio. 7",
+   "funciones_ficha": [
+    "Sáb. 10 - 19:30 | Cinemateca - Sala Capital",
+    "Dom. 11 - 17:00 | Av. Chile - Sala 4"
+   ]
+  },
+  {
+   "titulo": "Luis Tercero",
+   "titulo_pdf": "LUIS TERCERO",
+   "seccion": "Colombia viva",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 10
+   },
+   "anio": 2026,
+   "duracion_min": 115,
+   "pais": "Colombia",
+   "genero": "Drama, Familiar",
+   "idioma": "Español",
+   "director": "Iván David Gaona",
+   "sinopsis": "Luis se ha pensionado y no resuelve qué hacer en sus días de quietud. Su hijo llega a la ciudad con un proyecto musical al que invita a su padre, pero Luis no se siente cómodo. Luis entonces conoce a un taxista con el que se proponen crear una banda con amigos y conocidos de su edad. Padre e hijo chocan sin imaginar que la música los une, al igual que el vacío sin rumbo de sus generaciones en una sociedad que pareciera darles la espalda.",
+   "funciones_ficha": [
+    "Sáb. 10 - 17:00 | Cinemateca - Sala Capital",
+    "Dom. 11 - 14:00 | Av. Chile - Sala 4"
+   ]
+  },
+  {
+   "titulo": "6 Meses en el Edificio Rosa con Azul",
+   "titulo_pdf": "6 MESES EN EL EDIFICIO ROSA CON AZUL",
+   "seccion": "Espíritu joven",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 10
+   },
+   "anio": 2026,
+   "duracion_min": 104,
+   "pais": "México",
+   "genero": "Drama",
+   "idioma": "Español",
+   "director": "Bruno Santamaría Razo",
+   "sinopsis": "Ciudad de México, principios de los 90. El día que Bruno cumple 11 años, los sentimientos cada vez más intensos por su mejor amigo, Vladimir, chocan con el repentino anuncio de que su padre tiene el VIH. Como en las canciones de salsa, su familia intenta ahuyentar el dolor cantando y bailando. Treinta años después, Bruno rueda una película en la que reimagina el recuerdo de aquello que, de niño, no llegó a percibir con claridad.",
+   "funciones_ficha": [
+    "Jue. 8 - 17:30 | Av. Chile - Sala 1",
+    "Dom. 11 - 13:30 | Cinemateca - Sala 2",
+    "Mié. 14 - 18:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Cobarde",
+   "titulo_pdf": "COBARDE",
+   "seccion": "Espíritu joven",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 10
+   },
+   "anio": 2026,
+   "duracion_min": 125,
+   "pais": "Bélgica, Francia, Países Bajos",
+   "genero": "Drama histórico",
+   "idioma": "Francés, Neerlandés",
+   "director": "Lukas Dhont",
+   "sinopsis": "A medida que la Primera Guerra Mundial se prolonga, Pierre, un soldado recién llegado al frente, está deseando demostrar su valía. Detrás de las líneas, conoce a Francis, quien decide levantar el ánimo de sus compañeros organizando una obra de teatro. Mientras la violencia continúa, ambos intentan encontrar formas de escapar de la brutalidad de la guerra, aunque solo sea por un momento. Función con presencia del equipo de la película",
+   "funciones_ficha": [
+    "Sáb. 10 - 14:00 | Av. Chile - Sala 4",
+    "Dom. 11 - 20:00 | Av. Chile - Sala 4",
+    "Mié. 14 - 19:30 | Cinemateca - Sala Capital"
+   ]
+  },
+  {
+   "titulo": "Dua",
+   "titulo_pdf": "DUA",
+   "seccion": "Espíritu joven",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 11
+   },
+   "anio": 2026,
+   "duracion_min": 101,
+   "pais": "Kosovo, Suiza, Francia",
+   "genero": "Drama",
+   "idioma": "Albanés, Serbio",
+   "director": "Blerta Basholli",
+   "sinopsis": "Pristina, Kosovo, a finales de la década de los noventa. Mientras se cierne la guerra y se intensifican las tensiones étnicas, Dua, de 13 años, lucha por encontrar su lugar entre sus compañeros y en su cuerpo en plena transformación. Tras un incidente que sacude a su comunidad, ella misma se convierte en un objetivo y entabla amistad con una chica intrépida, Maki, que la lleva hacia una forma inesperada de resistencia. Entre la violencia cotidiana y la creciente amenaza del exilio, hay poco espacio para los despertares silenciosos.",
+   "funciones_ficha": [
+    "Vie. 9 - 21:00 | Av. Chile - Sala 2",
+    "Dom. 11 - 14:30 | Av. Chile - Sala 1",
+    "Lun. 12 - 16:00 | Cinemateca - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Eklipse",
+   "titulo_pdf": "EKLIPSE",
+   "seccion": "Espíritu joven",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 11
+   },
+   "anio": 2026,
+   "duracion_min": 91,
+   "pais": "Austria, Italia",
+   "genero": "Drama, Coming-of-age",
+   "idioma": "Alemán",
+   "director": "Manuel Wetscher",
+   "sinopsis": "Tomy y su mejor amigo, Chris, pasan el verano de 1999 en una granja alpina. Ayudan al tío de Tomy con el ordeño, construyen una presa y exploran la naturaleza. Mientras los chicos descubren nuevos mundos, la madre de Tomy decide seguir ocultándole a su hijo la verdadera razón por la que su padre está en el hospital. Cuando Chris se entera de que el motivo es “la enfermedad de los gays”, se asusta, y Tomy se ve de repente enfrentado al rechazo y al silencio de su propia familia.",
+   "funciones_ficha": [
+    "Jue. 8 - 14:30 | Cinemateca - Sala Capital",
+    "Dom. 11 - 15:30 | Av. Chile - Sala 3",
+    "Mié. 14 - 18:30 | Av. Chile - Sala 3"
+   ]
+  },
+  {
+   "titulo": "Gabin",
+   "titulo_pdf": "GABIN",
+   "seccion": "Espíritu joven",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 11
+   },
+   "anio": 2026,
+   "duracion_min": 105,
+   "pais": "Francia, Alemania, Suiza",
+   "genero": "Documental",
+   "idioma": "Francés",
+   "director": "Maxence Voiseux",
+   "sinopsis": "En el norte de Francia, Gabin, el más joven de la familia JOURDEL, se ve destinado a hacerse cargo de la carnicería de su papá. Dividido entre la lealtad familiar y el deseo de liberarse, sus sueños están en otra parte: entrenar a una vaca de competencia, convertirse en criador de perros y salvar la granja de su madre de la ruina financiera. A lo largo de una década, GABIN nos sumerge en el mundo de este joven, siguiendo su evolución desde los 8 hasta los 18 años. 9",
+   "funciones_ficha": [
+    "Jue. 8 - 13:00 | Cinemateca - Sala 2",
+    "Vie. 9 - 17:30 | Av. Chile - Sala 1",
+    "Mar. 13 - 15:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Goodbye Cruel World",
+   "titulo_pdf": "GOODBYE CRUEL WORLD",
+   "seccion": "Espíritu joven",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 12
+   },
+   "anio": 2026,
+   "duracion_min": 93,
+   "pais": "Francia, Bélgica",
+   "genero": "Drama, Coming-of-age, Romance",
+   "idioma": "Francés",
+   "director": "Félix De Givry",
+   "sinopsis": "Otto, un chico de 14 años, desaparece después de enviar una carta de despedida a cada uno de sus compañeros de clase. Aunque todos creen que está muerto, Lena, una chica de su escuela secundaria, lo reconoce una noche deambulando por las calles de la ciudad.",
+   "funciones_ficha": [
+    "Jue. 8 - 20:00 | Av. Chile - Sala 4",
+    "Sáb. 10 - 17:30 | Cinemateca - Sala 3"
+   ]
+  },
+  {
+   "titulo": "La Gradiva",
+   "titulo_pdf": "LA GRADIVA",
+   "seccion": "Espíritu joven",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 12
+   },
+   "anio": 2026,
+   "duracion_min": 145,
+   "pais": "Francia, Italia",
+   "genero": "Drama",
+   "idioma": "Francés, Italiano",
+   "director": "Marine Atlan",
+   "sinopsis": "Un grupo de alumnos de secundaria viaja a Pompeya para descubrir las ruinas y los cuerpos petrificados por el Vesubio. El viaje se convierte en un momento único en el que la fuerza de la juventud se encuentra con un mundo congelado en el tiempo. Sus deseos comienzan a aflorar con una intensidad inesperada, llevándolos hacia una ruptura irreversible.",
+   "funciones_ficha": [
+    "Sáb. 10 - 14:30 | Cinemateca - Sala 3",
+    "Lun. 12 - 17:00 | Av. Chile - Sala 4",
+    "Mié. 14 - 15:30 | Av. Chile - Sala 3"
+   ]
+  },
+  {
+   "titulo": "Siempre Soy Tu Animal Materno",
+   "titulo_pdf": "SIEMPRE SOY TU ANIMAL MATERNO",
+   "seccion": "Espíritu joven",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 12
+   },
+   "anio": 2026,
+   "duracion_min": 108,
+   "pais": "Bélgica, Francia, México",
+   "genero": "Drama",
+   "idioma": "Español",
+   "director": "Valentina Maurel",
+   "sinopsis": "Tras pasar varios años estudiando en Europa, Elsa regresa a Costa Rica para reunirse con su familia. Se encuentra a su hermana menor viviendo sola en la casa familiar, cada vez más distante y retraída, sumergida en un mundo propio. Sus padres, por su parte, están absortos en sus propias vidas. Su padre va de una aventura amorosa a otra, mientras que su madre está enfrascada en la reedición de los poemas eróticos de su juventud, sin que ninguno de los dos comprenda del todo la urgencia de la situación. El regreso de Elsa lleva a las tres mujeres a enfrentarse a lo que, a pesar de todo, aún las une.",
+   "funciones_ficha": [
+    "Vie. 9 - 16:30 | Av. Chile - Sala 4",
+    "Lun. 12 - 20:30 | Av. Chile - Sala 1",
+    "Mié. 14 - 13:30 | Cinemateca - Sala Capital"
+   ]
+  },
+  {
+   "titulo": "We Are Aliens",
+   "titulo_pdf": "WE ARE ALIENS",
+   "seccion": "Espíritu joven",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 13
+   },
+   "anio": 2026,
+   "duracion_min": 117,
+   "pais": "Japón, Francia",
+   "genero": "Animación, Coming-of-age, Drama",
+   "idioma": "Japonés",
+   "director": "Kohei Kadowaki",
+   "sinopsis": "«Oye, ¿y si te dijera que soy un extraterrestre?». En un pequeño pueblo japonés, la silenciosa traición de un chico común y corriente pone en marcha algo que se pasará el resto de su vida intentando olvidar.",
+   "funciones_ficha": [
+    "Jue. 8 - 14:00 | Av. Chile - Sala 4",
+    "Dom. 11 - 18:30 | Av. Chile - Sala 3",
+    "Lun. 12 - 19:30 | Cinemateca - Sala 3"
+   ]
+  },
+  {
+   "titulo": "Fjord",
+   "titulo_pdf": "FJORD",
+   "seccion": "Masters",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 13
+   },
+   "anio": 2026,
+   "duracion_min": 146,
+   "pais": "Rumanía",
+   "genero": "Drama",
+   "idioma": "Inglés, Rumano, Noruego, Sueco",
+   "director": "Cristian Mungiu",
+   "sinopsis": "Los Gheorghiu, una devota pareja rumano-noruega, se instalan en un pueblo situado en un fiordo remoto, donde entablan una estrecha relación con sus vecinos, los Halberg. Sus hijos se hacen amigos a pesar de sus diferentes formas de educación. Cuando la adolescente Elia Gheorghiu llega a la escuela con algunos moretones en el cuerpo, la comunidad se pregunta si la educación tradicional que los padres de los Gheorghiu les imparten tendría algo que ver con ello.",
+   "funciones_ficha": [
+    "Jue. 8 - 19:00 | Cinemateca - Sala Capital",
+    "Lun. 12 - 20:00 | Av. Chile - Sala 4",
+    "Mié. 14 - 21:30 | Av. Chile - Sala 3"
+   ]
+  },
+  {
+   "titulo": "La Libertad Doble",
+   "titulo_pdf": "LA LIBERTAD DOBLE",
+   "seccion": "Masters",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 13
+   },
+   "anio": 2026,
+   "duracion_min": 100,
+   "pais": "Chile, Argentina, Luxemburgo, Alemania,",
+   "genero": "Reino Unido | Drama",
+   "idioma": "Español",
+   "director": "Lisandro Alonso",
+   "sinopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido. 11",
+   "funciones_ficha": [
+    "Jue. 8 - 15:30 | Av. Chile - Sala 3",
+    "Vie. 9 - 14:00 | Cinemateca - Sala 3",
+    "Mar. 13 - 21:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Let Us Through, Dear Ancestors",
+   "titulo_pdf": "LET US THROUGH, DEAR ANCESTORS",
+   "seccion": "Masters",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 14
+   },
+   "anio": 2026,
+   "duracion_min": 151,
+   "pais": "Filipinas",
+   "genero": "Drama",
+   "idioma": "Filipino",
+   "director": "Lav Diaz",
+   "sinopsis": "El padre Enciso, encomendero en una de Las Islas Filipinas, gobierna con una dureza implacable y una libido insaciable, “Para domar a estos salvajes”, proclama. Tras la conversión de la mayoría de la población de la isla al cristianismo, su proyecto más importante es la construcción de una iglesia, que ya lleva más de diez años en marcha y que ha causado sufrimiento y muertes a su paso. Decide utilizar mármol para la construcción del altar, pero transportar piedras tan preciosas es muy peligroso. Encarga a su hijo joven y rebelde, Dungwen, que supervise la tarea, pues no confía en nadie.",
+   "funciones_ficha": [
+    "Jue. 8 - 21:30 | Av. Chile - Sala 3",
+    "Vie. 9 - 17:00 | Cinemateca - Sala Capital",
+    "Mar. 13 - 14:30 | Av. Chile - Sala 1"
+   ]
+  },
+  {
+   "titulo": "Minotauro",
+   "titulo_pdf": "MINOTAURO",
+   "seccion": "Masters",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 14
+   },
+   "anio": 2026,
+   "duracion_min": 141,
+   "pais": "Francia, Alemania, Letonia",
+   "genero": "Drama",
+   "idioma": "Ruso",
+   "director": "Andrey Zvyagintsev",
+   "sinopsis": "Rusia, 2022. Cuando Gleb, un exitoso director de empresa, se ve acorralado por las crecientes presiones corporativas y un mundo cada vez más inestable, el colapso de su vida, tan cuidadosamente ordenada, se precipita hacia la violencia.",
+   "funciones_ficha": [
+    "Vie. 9 - 20:30 | Av. Chile - Sala 1",
+    "Sáb. 10 - 17:30 | Av. Chile - Sala 1",
+    "Lun. 12 - 14:30 | Cinemateca - Sala Capital"
+   ]
+  },
+  {
+   "titulo": "Red Rocks",
+   "titulo_pdf": "RED ROCKS",
+   "seccion": "Masters",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 14
+   },
+   "anio": 2026,
+   "duracion_min": 90,
+   "pais": "Portugal, Francia, Italia, España, Qatar",
+   "genero": "Drama",
+   "idioma": "Francés",
+   "director": "Bruno Dumont",
+   "sinopsis": "En la Costa Azul, dos pandillas de niños compiten en el peligroso juego de saltar desde los acantilados. Géo, de apenas cinco años, descubre a lo largo de un verano un mundo en el que la amistad se entremezcla con la rivalidad y donde surgen los primeros sentimientos del corazón con el deslumbrante paisaje mediterráneo como telón de fondo.",
+   "funciones_ficha": [
+    "Vie. 9 - 15:00 | Cinemateca - Sala Capital",
+    "Sáb. 10 - 17:00 | Av. Chile - Sala 4",
+    "Mar. 13 - 17:30 | Av. Chile - Sala 1"
+   ]
+  },
+  {
+   "titulo": "Soumsoum, The Night Of The Stars",
+   "titulo_pdf": "SOUMSOUM, THE NIGHT OF THE STARS",
+   "seccion": "Masters",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 15
+   },
+   "anio": 2026,
+   "duracion_min": 101,
+   "pais": "Francia, Chad",
+   "genero": "Drama",
+   "idioma": "Francés, Árabe chadiano",
+   "director": "Mahamat-Saleh Haroun",
+   "sinopsis": "En el desierto de Ennedi, en Chad, se alzan entre la arena montañas milenarias. Estas guardan el recuerdo de un pasado olvidado y susurran antiguas leyendas. Kellou, una joven de un pueblo cercano, se ve atormentada por visiones inquietantes que la aislan de quienes la rodean. Su mundo da un vuelco el día en que conoce a Aya, una marginada rechazada por la comunidad. Mientras los habitantes del pueblo se ponen en contra de su creciente hermandad, Kellou debe defender a Aya y enfrentarse a la hostilidad de su propia gente, al tiempo que lucha por su libertad.",
+   "funciones_ficha": [
+    "Vie. 9 - 18:30 | Av. Chile - Sala 3",
+    "Lun. 12 - 14:00 | Cinemateca - Sala 3",
+    "Mié. 14 - 16:30 | Cinemateca - Sala 3"
+   ]
+  },
+  {
+   "titulo": "The Man I Love",
+   "titulo_pdf": "THE MAN I LOVE",
+   "seccion": "Masters",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 15
+   },
+   "anio": 2026,
+   "duracion_min": 97,
+   "pais": "Reino Unido",
+   "genero": "Drama",
+   "idioma": "Inglés",
+   "director": "Ira Sachs",
+   "sinopsis": "Finales de la década de 1980 en New York. Jimmy George, un carismático artista del Downtown, se rebela contra su propia mortalidad entregándose por completo a un nuevo papel, a un romance imprudente y al abrazo de su comunidad creativa.",
+   "funciones_ficha": [
+    "Jue. 8 - 16:30 | Cinemateca - Sala Capital",
+    "Dom. 11 - 21:30 | Av. Chile - Sala 3",
+    "Lun. 12 - 14:00 | Av. Chile - Sala 4"
+   ]
+  },
+  {
+   "titulo": "Tierra de Mi Padre",
+   "titulo_pdf": "TIERRA DE MI PADRE",
+   "seccion": "Masters",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 15
+   },
+   "anio": 2026,
+   "duracion_min": 82,
+   "pais": "Polonia, Alemania, Italia, Francia",
+   "genero": "Drama",
+   "idioma": "Alemán, Inglés, Francés, Ruso",
+   "director": "Paweł Pawlikowski",
+   "sinopsis": "En el verano de 1949, en pleno apogeo de la Guerra Fría, el escritor ganador del Premio Nobel, Thomas MANN, y su hija Erika, actriz, escritora y piloto de rallies, se embarcan en un desafiante y emotivo viaje por carretera en un Buick negro que les lleva a través de una Alemania en ruinas, desde Fráncfort, bajo dominio estadounidense, hasta Weimar, controlada por los soviéticos. Al regresar a casa tras dieciséis años de exilio en Estados Unidos, Thomas MANN tiene que enfrentarse no solo a una patria dividida, sino también a una profunda fractura dentro de su propia familia. 13",
+   "funciones_ficha": [
+    "Vie. 9 - 14:00 | Av. Chile - Sala 4",
+    "Lun. 12 - 20:00 | Cinemateca - Sala Capital",
+    "Mar. 13 - 20:30 | Av. Chile - Sala 1"
+   ]
+  },
+  {
+   "titulo": "El Deshielo",
+   "titulo_pdf": "EL DESHIELO",
+   "seccion": "Fantasmas del pasado",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 16
+   },
+   "anio": 2026,
+   "duracion_min": 88,
+   "pais": "Chile, Estados Unidos, España, México",
+   "genero": "Drama",
+   "idioma": "Español, Inglés, Alemán",
+   "director": "Manuela Martelli",
+   "sinopsis": "Chile, 1992. Durante su estancia en el apartado hotel de sus abuelos, cerca de una estación de esquí andina, Inès (9 años) entabla amistad con Hanna (15), una esquiadora alemana. Cuando Hanna desaparece sin dejar rastro, la búsqueda de la joven desvela verdades ocultas.",
+   "funciones_ficha": [
+    "Vie. 9 - 21:00 | Av. Chile - Sala 4",
+    "Dom. 11 - 19:00 | Cinemateca - Sala 2",
+    "Mié. 14 - 17:30 | Av. Chile - Sala 1"
+   ]
+  },
+  {
+   "titulo": "La Bola Negra",
+   "titulo_pdf": "LA BOLA NEGRA",
+   "seccion": "Fantasmas del pasado",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 16
+   },
+   "anio": 2026,
+   "duracion_min": 155,
+   "pais": "España, Francia",
+   "genero": "Drama",
+   "idioma": "Español, Inglés",
+   "director": "Javier Calvo, Javier Ambrossi",
+   "sinopsis": "LA BOLA NEGRA narra las vidas de tres hombres en tres épocas distintas —1932, 1937 y 2017— cuyas historias se entrelazan a través del deseo, el dolor y la herencia. Inspirada en una de las últimas obras inacabadas de Federico GARCÍA LORCA.",
+   "funciones_ficha": [
+    "Sáb. 10 - 20:00 | Av. Chile - Sala 4",
+    "Mar. 13 - 20:00 | Av. Chile - Sala 4",
+    "Mié. 14 - 16:00 | Cinemateca - Sala Capital"
+   ]
+  },
+  {
+   "titulo": "Lejos de los Árboles",
+   "titulo_pdf": "LEJOS DE LOS ÁRBOLES",
+   "seccion": "Fantasmas del pasado",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 16
+   },
+   "anio": 2026,
+   "duracion_min": 121,
+   "pais": "España, Perú, Italia",
+   "genero": "Drama",
+   "idioma": "Español, Catalán, Quechua",
+   "director": "Meritxell Colell Aparicio",
+   "sinopsis": "Adela, artista sonora mexicana, viaja de la selva a los Andes peruanos junto a Lucho, guía y traductor. Siguiendo el legado de su abuelo, republicano catalán exiliado en México, crea un mapa sonoro de lenguas en peligro de desaparecer. Abrumada por visiones y recuerdos, el viaje de Adela se convierte en un recorrido íntimo hacia la casa de su infancia. Una película sobre cómo nuestros orígenes nos definen, y lo difícil que es preservar el pasado y, a la vez, dejarlo atrás para poder avanzar. Función con presencia del equipo de la película",
+   "funciones_ficha": [
+    "Sáb. 10 - 14:00 | Cinemateca - Sala Capital",
+    "Dom. 11 - 18:00 | Av. Chile - Sala 2",
+    "Lun. 12 - 14:30 | Av. Chile - Sala 1"
+   ]
+  },
+  {
+   "titulo": "Light Pillar",
+   "titulo_pdf": "LIGHT PILLAR",
+   "seccion": "Fantasmas del pasado",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 17
+   },
+   "anio": 2026,
+   "duracion_min": 90,
+   "pais": "China",
+   "genero": "Animación, Romance, Drama",
+   "idioma": "Chino, Mandarín",
+   "director": "Xu Zao",
+   "sinopsis": "Un estudio cinematográfico en quiebra yace abandonado y paralizado. Zha, un solitario conserje, escapa de su vida vacía a través de un vívido mundo virtual, donde comienza un romance en línea y sueña con viajar a la Luna. Cuando la ilusión se desvanece, la destrucción real del estudio se convierte en el set de una película de ciencia ficción.",
+   "funciones_ficha": [
+    "Sáb. 10 - 20:30 | Av. Chile - Sala 1",
+    "Mar. 13 - 14:00 | Av. Chile - Sala 4",
+    "Mié. 14 - 20:00 | Cinemateca - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Nina Roza",
+   "titulo_pdf": "NINA ROZA",
+   "seccion": "Fantasmas del pasado",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 17
+   },
+   "anio": 2026,
+   "duracion_min": 103,
+   "pais": "Canadá, Bélgica, Bulgaria, Italia",
+   "genero": "Drama",
+   "idioma": "Francés, Búlgaro",
+   "director": "Geneviève Dulude-de Celles",
+   "sinopsis": "Un video viral de una artista búlgara de 8 años llama la atención de un importante coleccionista de arte. Mihail es enviado allí, treinta años después de abandonar su país natal, para evaluar el valor de la obra de la niña y enfrentarse a los fantasmas de su pasado.",
+   "funciones_ficha": [
+    "Vie. 9 - 15:30 | Av. Chile - Sala 3",
+    "Dom. 11 - 14:30 | Cinemateca - Sala 3",
+    "Mar. 13 - 21:30 | Av. Chile - Sala 3"
+   ]
+  },
+  {
+   "titulo": "Trial of Hein",
+   "titulo_pdf": "TRIAL OF HEIN",
+   "seccion": "Fantasmas del pasado",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 17
+   },
+   "anio": 2026,
+   "duracion_min": 122,
+   "pais": "Alemania",
+   "genero": "Drama",
+   "idioma": "Alemán",
+   "director": "Kai Stänicke",
+   "sinopsis": "Tras catorce años por fuera, Hein regresa a su pueblo natal, situado en una isla remota, solo para descubrir que la estrecha comunidad ya no lo reconoce. Sospechando que es un impostor, exigen un juicio para determinar su verdadera identidad. 15",
+   "funciones_ficha": [
+    "Jue. 8 - 16:00 | Cinemateca - Sala 2",
+    "Vie. 9 - 15:00 | Av. Chile - Sala 2",
+    "Mié. 14 - 20:30 | Av. Chile - Sala 1"
+   ]
+  },
+  {
+   "titulo": "Variations on a Theme",
+   "titulo_pdf": "VARIATIONS ON A THEME",
+   "seccion": "Fantasmas del pasado",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 18
+   },
+   "anio": 2026,
+   "duracion_min": 65,
+   "pais": "Sudáfrica, Países Bajos, Qatar",
+   "genero": "Drama",
+   "idioma": "Afrikáans",
+   "director": "Jason Jacobs, Devon Delmar",
+   "sinopsis": "Una anciana pastora de cabras de las montañas de Namaqualand, en Sudáfrica, es víctima de una estafa que le promete una indemnización por los servicios de su padre durante la Segunda Guerra Mundial. Mientras espera un dinero que nunca llegará, los contratiempos de su octogésimo cumpleaños amenazan con arrebatarle lo poco que le queda de independencia. Estructurada como una serie de «variaciones» visuales recurrentes, la película transforma la repetición en revelación para trazar un retrato de la espera, la resistencia y la pérdida.",
+   "funciones_ficha": [
+    "Jue. 8 - 21:00 | Av. Chile - Sala 2",
+    "Sáb. 10 - 20:00 | Cinemateca - Sala 2",
+    "Mié. 14 - 13:00 | Cinemateca - Sala 2"
+   ]
+  },
+  {
+   "titulo": "9 Temples to Heaven",
+   "titulo_pdf": "9 TEMPLES TO HEAVEN",
+   "seccion": "Clases de lucha",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 18
+   },
+   "anio": 2026,
+   "duracion_min": 140,
+   "pais": "Tailandia, Singapur, Francia, Noruega, China,",
+   "genero": "Hong Kong, Indonesia, Qatar | Drama",
+   "idioma": "Tailandés",
+   "director": "Sompot Chidgasornpongse",
+   "sinopsis": "Tras escuchar una profecía según la cual su anciana madre podría morir pronto, Sakol emprende una peregrinación de un día por nueve templos para remediarlo. Apenas dos semanas antes del cumpleaños de su madre, la lleva a ella, que se encuentra enferma, junto con su mujer, su hermano, su hermana y sus hijos, en un viaje en el que recorren el esplendor de la arquitectura de los templos tailandeses. De un templo a otro, los nueve miembros de la familia continúan con sus rituales, mientras la abuela de la familia se va agotando cada vez más, tanto física como mentalmente.",
+   "funciones_ficha": [
+    "Sáb. 10 - 19:30 | Cinemateca - Sala 3",
+    "Mar. 13 - 18:30 | Av. Chile - Sala 3"
+   ]
+  },
+  {
+   "titulo": "Elephants in the Fog",
+   "titulo_pdf": "ELEPHANTS IN THE FOG",
+   "seccion": "Clases de lucha",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 18
+   },
+   "anio": 2026,
+   "duracion_min": 108,
+   "pais": "Nepal, Alemania, Brasil, Francia, Noruega",
+   "genero": "Drama, Thriller",
+   "idioma": "Nepalí",
+   "director": "Abinash Bikram Shah",
+   "sinopsis": "En un pequeño pueblo nepalí enclavado en el corazón de un bosque poblado por elefantes salvajes, Pirati es la matriarca de una comunidad Kinnar. Sueña con escapar para llevar una vida «normal» junto al hombre del que está enamorada. Pero cuando una de sus hijas desaparece, debe investigar y elegir entre el amor y la responsabilidad hacia su comunidad.",
+   "funciones_ficha": [
+    "Vie. 9 - 21:30 | Av. Chile - Sala 3",
+    "Dom. 11 - 19:30 | Cinemateca - Sala 3",
+    "Mié. 14 - 14:00 | Cinemateca - Sala 3"
+   ]
+  },
+  {
+   "titulo": "Hangar Rojo",
+   "titulo_pdf": "HANGAR ROJO",
+   "seccion": "Clases de lucha",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 19
+   },
+   "anio": 2026,
+   "duracion_min": 83,
+   "pais": "Chile, Argentina, Italia",
+   "genero": "Thriller político",
+   "idioma": "Español",
+   "director": "Juan Pablo Sallato",
+   "sinopsis": "Mientras el golpe militar de 1973 se despliega en Chile, el Capitán Jorge Silva – antigua cabeza de la inteligencia de la Fuerza Aérea - recibe una orden que cambiará su vida para siempre: transformar la Academia de la Fuerza Aérea, donde ahora entrena a jóvenes cadetes, en un centro de tortura. Inspirada en hechos reales, HANGAR ROJO es el primer thriller político latinoamericano que se adentra en el corazón del mundo militar durante las dictaduras de los años 70.",
+   "funciones_ficha": [
+    "Jue. 8 - 19:30 | Cinemateca - Sala 3",
+    "Lun. 12 - 21:00 | Av. Chile - Sala 2",
+    "Mié. 14 - 14:00 | Av. Chile - Sala 4"
+   ]
+  },
+  {
+   "titulo": "HEAT",
+   "titulo_pdf": "HEAT",
+   "seccion": "Clases de lucha",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 19
+   },
+   "anio": 2026,
+   "duracion_min": 84,
+   "pais": "Suiza",
+   "genero": "Documental",
+   "idioma": "Árabe, Inglés",
+   "director": "Jacqueline Zünd",
+   "sinopsis": "Bajo un calor sin precedentes, las vidas y las estructuras sociales comienzan a transformarse. Más allá de las advertencias distópicas, ¿cómo afecta el calor a los seres humanos? ¿Cómo nos cambia? Mientras los ricos se retiran y otros se ven obligados a soportar las condiciones extremas, historias entrelazadas revelan cómo el aumento de las temperaturas pone de manifiesto la desigualdad, remodela el comportamiento y lleva a la humanidad al límite.",
+   "funciones_ficha": [
+    "Jue. 8 - 14:30 | Av. Chile - Sala 1",
+    "Lun. 12 - 21:30 | Av. Chile - Sala 3"
+   ]
+  },
+  {
+   "titulo": "HERMANAS",
+   "titulo_pdf": "HERMANAS",
+   "seccion": "Clases de lucha",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 19
+   },
+   "anio": 2026,
+   "duracion_min": 101,
+   "pais": "España",
+   "genero": "Drama",
+   "idioma": "Español, Euskera",
+   "director": "Ione Hernández Sáenz",
+   "sinopsis": "Chelo y Marta son hermanas, y sus vidas están a punto de cambiar para siempre. Ese verano, un suceso inesperado sacude los cimientos de su familia, trayendo fantasmas del pasado al presente. Lo que antes parecía un vínculo inquebrantable se pone a prueba, obligándolas a enfrentar un doloroso dilema: ¿hasta dónde están dispuestas a llegar para proteger a las personas que más aman, aunque eso signifique romper los lazos con parte de su propia familia? 17",
+   "funciones_ficha": [
+    "Sáb. 10 - 14:30 | Av. Chile - Sala 1",
+    "Dom. 11 - 14:00 | Cinemateca - Sala Capital",
+    "Lun. 12 - 17:30 | Av. Chile - Sala 1"
+   ]
+  },
+  {
+   "titulo": "Mariinka",
+   "titulo_pdf": "MARIINKA",
+   "seccion": "Clases de lucha",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 20
+   },
+   "anio": 2026,
+   "duracion_min": 94,
+   "pais": "Bélgica, Países Bajos, Alemania, Suecia",
+   "genero": "Documental",
+   "idioma": "Inglés, Ucraniano, Ruso",
+   "director": "Pieter-Jan De Pue",
+   "sinopsis": "En Ucrania oriental, la vida de unos vecinos de la infancia se ve violentamente trastornada por un frente de batalla en constante cambio. Natasha, una prometedora boxeadora, se convierte en paramédica militar. Ángela, que perdió a sus padres siendo muy joven, sobrevive transportando mercancías a ambos lados del frente. Atrapados en una tragedia griega moderna, los hermanos Mark y Ruslan luchan ahora en bandos opuestos, uno contra el otro. En la seguridad de su familia adoptiva en Estados Unidos, su hermano menor, Daniil, sigue la guerra desde la distancia.",
+   "funciones_ficha": [
+    "Jue. 8 - 20:30 | Av. Chile - Sala 1",
+    "Vie. 9 - 13:00 | Cinemateca - Sala 2",
+    "Mié. 14 - 15:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Sants",
+   "titulo_pdf": "SANTS",
+   "seccion": "Clases de lucha",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 20
+   },
+   "anio": 2026,
+   "duracion_min": 103,
+   "pais": "España, Italia",
+   "genero": "Drama",
+   "idioma": "Catalán, Español",
+   "director": "Mikel Gurrea",
+   "sinopsis": "Lali ha regresado a Barcelona y, dividida entre cuidar de su madre y unirse a una banda de ladrones que se ganan la vida robando iglesias, descubrirá su verdad por el camino.",
+   "funciones_ficha": [
+    "Dom. 11 - 17:30 | Av. Chile - Sala 1",
+    "Lun. 12 - 17:30 | Cinemateca - Sala Capital"
+   ]
+  },
+  {
+   "titulo": "TRISTAN FOREVER",
+   "titulo_pdf": "TRISTAN FOREVER",
+   "seccion": "Clases de lucha",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 20
+   },
+   "anio": 2026,
+   "duracion_min": 90,
+   "pais": "Suiza",
+   "genero": "Docu-ficción",
+   "idioma": "Inglés, Francés",
+   "director": "Tobias Nölle, Loran Bonnardot",
+   "sinopsis": "Desde hace treinta años, Loran BONNARDOT, un médico de París, visita Tristán da Cunha, la isla habitada más remota del mundo, situada en pleno Atlántico Sur, hogar de algunas de las especies más singulares y a la que solo llegan entre 6 y 8 barcos al año. La isla volcánica se ha convertido en el refugio espiritual de Loran, sus habitantes en su familia elegida y Martin, el pescador, en su mejor amigo. Ahora, a sus 50 años, Loran viaja de nuevo a su isla utópica, pero esta vez sin planes de regreso: quiere convertirse en uno de sus 230 residentes permanentes. ¿Lo aceptará el consejo de la isla?",
+   "funciones_ficha": [
+    "Jue. 8 - 15:00 | Av. Chile - Sala 2",
+    "Lun. 12 - 18:30 | Av. Chile - Sala 3"
+   ]
+  },
+  {
+   "titulo": "A Providência e a Guitarra",
+   "titulo_pdf": "A PROVIDÊNCIA E A GUITARRA",
+   "seccion": "Relatos mutantes",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 21
+   },
+   "anio": 2026,
+   "duracion_min": 125,
+   "pais": "Portugal",
+   "genero": "Comedia, Musical, Drama",
+   "idioma": "Portugués",
+   "director": "João Nicolau",
+   "sinopsis": "En un pasado lejano, Léon y Elvira Berthelini recorren las carreteras de pueblo en pueblo, viviendo de canciones, de espectáculos y alimentándose de ilusiones. Expulsados de una pequeña localidad por un policía autoritario, acogen bajo su protección a un estudiante inglés perdido y encuentran refugio en casa de un pintor y su mujer, que atraviesan una crisis matrimonial: ¿será el amor por el arte el remedio para salvar el arte del amor?",
+   "funciones_ficha": [
+    "Sáb. 10 - 21:30 | Av. Chile - Sala 3",
+    "Dom. 11 - 16:30 | Cinemateca - Sala Capital",
+    "Lun. 12 - 18:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Aquí",
+   "titulo_pdf": "AQUÍ",
+   "seccion": "Relatos mutantes",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 21
+   },
+   "anio": 2026,
+   "duracion_min": 204,
+   "pais": "Portugal, España",
+   "genero": "Drama",
+   "idioma": "Español",
+   "director": "Tiago Guedes",
+   "sinopsis": "En una nueva tierra donde todo el mundo recibe un nuevo nombre y empieza de cero sin pasado, Simón se hace cargo de David, un niño que conoció durante el viaje hacia una nueva vida. Impulsado por una convicción inexplicable, se propone encontrar a la madre del niño a pesar de que David no recuerda nada de ella. Cuando reconoce a Inés como la mujer adecuada, ella acepta el papel y se crea un vínculo insólito entre ambos. Mientras la sociedad impone normas y trata la diferencia como una amenaza, David se resiste a dejarse moldear y defiende la imaginación y la libertad.",
+   "funciones_ficha": [
+    "Sáb. 10 - 15:30 | Cinemateca - Sala 2",
+    "Dom. 11 - 20:30 | Av. Chile - Sala 1",
+    "Mié. 14 - 15:00 | Cinemateca - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Como Todo Mortal",
+   "titulo_pdf": "COMO TODO MORTAL",
+   "seccion": "Relatos mutantes",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 21
+   },
+   "anio": 2026,
+   "duracion_min": 93,
+   "pais": "Países Bajos, España",
+   "genero": "Documental",
+   "idioma": "Español, Inglés",
+   "director": "María Molina Peiró",
+   "sinopsis": "En un planeta lejano, un robot explora el paisaje en busca de minerales y señales de vida. A años luz, en una de las minas más antiguas del mundo, sus habitantes viven rodeados de pueblos sepultados bajo toneladas de residuos minerales, mientras unos astrobiólogos investigan una biosfera oculta que plantea una inquietante hipótesis evolutiva. Entretejiendo documental, flamenco y ciencia ficción, COMO TODO MORTAL excava los estratos sociales, históricos y especulativos de un paisaje entre la exploración y la explotación, entre Andalucía y Marte. 19",
+   "funciones_ficha": [
+    "Jue. 8 - 14:00 | Cinemateca - Sala 3",
+    "Vie. 9 - 14:30 | Av. Chile - Sala 1",
+    "Dom. 11 - 21:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Everytime",
+   "titulo_pdf": "EVERYTIME",
+   "seccion": "Relatos mutantes",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 22
+   },
+   "anio": 2026,
+   "duracion_min": 124,
+   "pais": "Alemania, Austria",
+   "genero": "Drama",
+   "idioma": "Alemán",
+   "director": "Sandra Wollner",
+   "sinopsis": "Una tragedia une a una madre, a su hija y a un chico adolescente. Mientras luchan con los sentimientos de culpa y perdón, este insólito trío se va de viaje a Tenerife para disfrutar de unas vacaciones familiares que nunca tuvieron lugar. Bajo el resplandor del sol, el pasado y el presente comienzan a entremezclarse sutilmente.",
+   "funciones_ficha": [
+    "Jue. 8 - 17:00 | Av. Chile - Sala 4",
+    "Sáb. 10 - 15:30 | Av. Chile - Sala 3",
+    "Lun. 12 - 16:30 | Cinemateca - Sala 3"
+   ]
+  },
+  {
+   "titulo": "Filipiñana",
+   "titulo_pdf": "FILIPIÑANA",
+   "seccion": "Relatos mutantes",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 22
+   },
+   "anio": 2026,
+   "duracion_min": 99,
+   "pais": "Singapur, Reino Unido, Filipinas, Francia,",
+   "genero": "Países Bajos | Drama, Comedia negra",
+   "idioma": "Filipino, Inglés, Ilocano",
+   "director": "Rafael Manuel",
+   "sinopsis": "Isabel, la nueva «chica-tee», se siente extrañamente atraída por el Dr. Palanca, el presidente del club de campo en el que trabaja. Pero a medida que Isabel empieza a desentrañar una realidad más violenta que se esconde tras la impecable fachada del club, acaba dándose cuenta de que lo que comenzó como un inocente enamoramiento por el Dr. Palanca tiene, en realidad, su origen en un pasado común mucho más siniestro.",
+   "funciones_ficha": [
+    "Jue. 8 - 18:30 | Av. Chile - Sala 3",
+    "Dom. 11 - 16:00 | Cinemateca - Sala 2",
+    "Mié. 14 - 14:30 | Av. Chile - Sala 1"
+   ]
+  },
+  {
+   "titulo": "Objet A",
+   "titulo_pdf": "OBJET A",
+   "seccion": "Relatos mutantes",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 22
+   },
+   "anio": 2026,
+   "duracion_min": 95,
+   "pais": "Alemania, Luxemburgo, Grecia",
+   "genero": "Drama, Suspenso",
+   "idioma": "Alemán",
+   "director": "Ann Oren",
+   "sinopsis": "Ingeborg y Adam son cirujanos de la mano, visionarios unidos por el amor, el control y obsesiones irresistibles. Ella siente una compulsión por robar objetos; él anhela convertirse en uno. Cuando un accidente lleva a la enigmática Gaia a sus vidas, deseos inesperados comienzan a tomar forma, alterando el delicado equilibrio que durante tanto tiempo ha definido su relación.",
+   "funciones_ficha": [
+    "Jue. 8 - 18:00 | Av. Chile - Sala 2",
+    "Lun. 12 - 19:00 | Cinemateca - Sala 2",
+    "Mié. 14 - 21:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Princesa Burro",
+   "titulo_pdf": "PRINCESA BURRO",
+   "seccion": "Relatos mutantes",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 23
+   },
+   "anio": 2026,
+   "duracion_min": 90,
+   "pais": "Chile, Francia, Países Bajos, Uruguay, Alemania",
+   "genero": "Fantasía",
+   "idioma": "Español",
+   "director": "Cristóbal León, Joaquín Cociña",
+   "sinopsis": "En un reino de cuento de hadas donde el amor está prohibido, la princesa Diana desafía el decreto del rey al enamorarse de Lalo. Cuando él es desterrado, un brazalete mágico la transporta a través de mundos y espacios-tiempos paralelos en un viaje para recuperar sus sueños y su amor perdido.",
+   "funciones_ficha": [
+    "Jue. 8 - 19:00 | Cinemateca - Sala 2",
+    "Lun. 12 - 15:30 | Av. Chile - Sala 3",
+    "Mié. 14 - 20:00 | Av. Chile - Sala 4"
+   ]
+  },
+  {
+   "titulo": "The Burning Giants",
+   "titulo_pdf": "THE BURNING GIANTS",
+   "seccion": "Relatos mutantes",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 23
+   },
+   "anio": 2026,
+   "duracion_min": 118,
+   "pais": "Tailandia, Singapur, Francia, Países Bajos",
+   "genero": "Drama",
+   "idioma": "Tailandés, Lengua Karen",
+   "director": "Phuttiphong Aroonpheng",
+   "sinopsis": "Mientras un humo misterioso envuelve el oeste de Tailandia, una pareja desplazada perteneciente a la minoría étnica karen sueña con volver a casa.",
+   "funciones_ficha": [
+    "Dom. 11 - 17:00 | Cinemateca - Sala 3",
+    "Mar. 13 - 15:30 | Av. Chile - Sala 3",
+    "Mié. 14 - 19:00 | Cinemateca - Sala 3"
+   ]
+  },
+  {
+   "titulo": "Historia del Miedo",
+   "titulo_pdf": "HISTORIA DEL MIEDO",
+   "seccion": "Retrospectiva Rei Pictures",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 23
+   },
+   "anio": 2014,
+   "duracion_min": 79,
+   "pais": "Argentina, Francia, Alemania, Uruguay, Qatar",
+   "genero": "Drama, Suspenso",
+   "idioma": "Español",
+   "director": "Benjamín Naishtat",
+   "sinopsis": "Un verano caluroso en una ciudad asediada por cortes de luz. Un barrio privado con un gigantesco parque. Un terreno aledaño abandonado y una ola incontrolable de humo desatan la incertidumbre y el caos. 21",
+   "funciones_ficha": [
+    "Vie. 9 - 19:00 | Cinemateca - Sala 2",
+    "Sáb. 10 - 21:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Temporada de Caza",
+   "titulo_pdf": "TEMPORADA DE CAZA",
+   "seccion": "Retrospectiva Rei Pictures",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 24
+   },
+   "anio": 2017,
+   "duracion_min": 105,
+   "pais": "Argentina, Estados Unidos, Alemania, Francia,",
+   "genero": "Qatar | Drama, Coming-of-age",
+   "idioma": "Español",
+   "director": "Natalia Garagiola",
+   "sinopsis": "Ernesto es un respetado guía de caza en la Patagonia, donde vive junto a su nueva familia. Tras la muerte de su última esposa, debe albergar a su hijo adolescente, Nahuel, a quien no ve hace más de una década. Confrontado al pasado que dejó atrás, Ernesto lucha por contener los arrebatos violentos de su hijo. Sin la simpatía de su nueva familia, Nahuel lleva el rechazo a su padre a un punto límite. En la crudeza de la naturaleza, la hostilidad y el rencor van dando paso a una relación posible entre estos dos hombres. El reencuentro los enfrentará a su propia capacidad de matar y perdonar.",
+   "funciones_ficha": [
+    "Vie. 9 - 16:00 | Cinemateca - Sala 2",
+    "Sáb. 10 - 18:30 | Av. Chile - Sala 3"
+   ]
+  },
+  {
+   "titulo": "Zama",
+   "titulo_pdf": "ZAMA",
+   "seccion": "Retrospectiva Rei Pictures",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 24
+   },
+   "anio": 2017,
+   "duracion_min": 115,
+   "pais": "Argentina, Brasil, España, Francia, México, Estados",
+   "genero": "Unidos, Países Bajos, Portugal | Drama",
+   "idioma": "Español",
+   "director": "Lucrecia Martel",
+   "sinopsis": "Diego de Zama es un funcionario americano de la Corona española a la espera una carta del Rey que lo aleje del puesto de frontera en el que se encuentra estancado. Su situación es delicada. Debe cuidarse de que nada empañe esa posibilidad. Se ve obligado a aceptar con sumisión cualquier tarea que le ordenen los Gobernadores que se van sucediendo mientras él permanece. Algunos años transcurren, la carta nunca llega. Tras perder todo en la espera, Zama decide sumarse a una partida de soldados en busca de un peligroso bandido.",
+   "funciones_ficha": [
+    "Vie. 9 - 19:30 | Cinemateca - Sala 3",
+    "Sáb. 10 - 15:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "El Prófugo",
+   "titulo_pdf": "EL PRÓFUGO",
+   "seccion": "Retrospectiva Rei Pictures",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 24
+   },
+   "anio": 2020,
+   "duracion_min": 95,
+   "pais": "Argentina, México",
+   "genero": "Drama, Thriller psicológico",
+   "idioma": "Español",
+   "director": "Natalia Meta",
+   "sinopsis": "Inés trabaja como actriz de doblaje y canta en un coro en Buenos Aires. Tras una experiencia traumática durante unas vacaciones, desarrolla un trastorno del sueño y empieza a sufrir pesadillas muy vívidas. En el trabajo, los micrófonos del estudio captan ruidos extraños que provienen de su cuerpo, lo que pone en peligro su carrera y su canto. Inés se vuelve paranoica, ya que cada vez le cuesta más distinguir lo real de lo irreal, y empieza a barajar una idea peligrosa: los personajes de sus sueños están intentando apoderarse de su cuerpo. Función con presencia del equipo de la película",
+   "funciones_ficha": [
+    "Jue. 8 - 16:30 | Cinemateca - Sala 3",
+    "Vie. 9 - 18:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "El Rapto",
+   "titulo_pdf": "EL RAPTO",
+   "seccion": "Retrospectiva Rei Pictures",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 25
+   },
+   "anio": 2023,
+   "duracion_min": 95,
+   "pais": "Argentina, Estados Unidos",
+   "genero": "Drama",
+   "idioma": "Español",
+   "director": "Daniela Goggi",
+   "sinopsis": "Buenos Aires, década de 1980. Julio Levy regresa del exilio político para ocupar un puesto en la gran empresa familiar cuando su hermano mayor es secuestrado. A cargo de organizar el rescate y con todo el peso de su familia sobre los hombros, Julio descubre las fuerzas que todavía operan detrás de la recién recuperada democracia argentina.",
+   "funciones_ficha": [
+    "Vie. 9 - 16:30 | Cinemateca - Sala 3",
+    "Sáb. 10 - 18:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Los Nuevos",
+   "titulo_pdf": "LOS NUEVOS",
+   "seccion": "BIFF Kids",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 25
+   },
+   "anio": 2026,
+   "duracion_min": 79,
+   "pais": "México, España",
+   "genero": "Familiar, Aventura, Drama",
+   "idioma": "Español",
+   "director": "Rodrigo Plá",
+   "sinopsis": "Al pueblo de Mateo y Tomás llegan Tiana y su familia buscando refugio. Sin embargo, la contaminación de la que huían alcanzará también este sitio. Los tres niños y la perra Nube, correrán aventuras y peligros en busca de aquello que envenena los ríos.",
+   "funciones_ficha": [
+    "Dom. 11 - 15:00 | Av. Chile - Sala 2",
+    "Lun. 12 - 13:30 | Cinemateca - Sala 2",
+    "Mar. 13 - 18:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "Papaya",
+   "titulo_pdf": "PAPAYA",
+   "seccion": "BIFF Kids",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 25
+   },
+   "anio": 2026,
+   "duracion_min": 75,
+   "pais": "Brasil",
+   "genero": "Animación, Infantil",
+   "idioma": "Sin diálogos",
+   "director": "Priscilla Kellen",
+   "sinopsis": "Apasionada por volar, una diminuta semilla de papaya en la selva amazónica debe seguir moviéndose para evitar echar raíces. Con perseverancia, descubre el poder de sus raíces, lo que desencadena una revolución que transforma su mundo y hace realidad sus sueños de una forma inesperada. 23",
+   "funciones_ficha": [
+    "Sáb. 10 - 13:30 | Cinemateca - Sala 2",
+    "Lun. 12 - 15:00 | Av. Chile - Sala 2"
+   ]
+  },
+  {
+   "titulo": "SLAVE BIRD",
+   "titulo_pdf": "SLAVE BIRD",
+   "seccion": "Cine Conciertos",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 26
+   },
+   "anio": 1929,
+   "duracion_min": 116,
+   "pais": "Hungría",
+   "genero": "Drama, Thriller",
+   "idioma": "Alemán",
+   "director": "Lajos Lázás, Pál Sugár",
+   "sinopsis": "Con la ayuda de un médico, Anna consigue salir de la cárcel en la que está recluida por tan solo una noche para ver por última vez a su amado Jenő, el hombre por el cual se convirtió en ladrona y que ahora es el jefe de camareros en un hotel. Jenő es un auténtico mujeriego que mantiene romances con la inocente mucama Madárka y con una atractiva bailarina, con quien planea robar el hotel y escapar. Sin embargo, la llegada de Anna al hotel cambia drásticamente los planes que todos tenían para esa noche. Las proyecciones contarán con música compuesta por integrantes de la Asociación Colombiana de Compositores de Música para Cine - MUCINE, interpretada por la Orquesta Filarmónica Juvenil de la Orquesta Filarmónica de Bogotá.",
+   "funciones_ficha": [
+    "Vie. 9 - 19:30 | Teatro El Ensueño",
+    "Lun. 12 - 17:00 | Teatro Mayor J. M. Santo Domingo",
+    "Mar. 13 - 20:00 | Teatro Mayor J. M. Santo Domingo"
+   ]
+  },
+  {
+   "titulo": "NO QUIERO SER UN HOMBRE",
+   "titulo_pdf": "NO QUIERO SER UN HOMBRE",
+   "seccion": "Cine Conciertos",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 26
+   },
+   "anio": 1918,
+   "duracion_min": 45,
+   "pais": "Alemania",
+   "genero": "Comedia",
+   "idioma": "Alemán",
+   "director": "Ernst Lubitsch",
+   "sinopsis": "Una adolescente, harta de que su estricto tutor le dé órdenes, se hace pasar por un hombre para poder divertirse más, pero descubre que ser del sexo opuesto no es tan fácil como esperaba. La película será musicalizada en vivo por Daniel BRODERICK, DJ, compositor y productor musical con el sello Little Human Recordings; durante una proyección imperdible de entrada libre en la Cinemateca de Bogotá. Entrada libre",
+   "funciones_ficha": [
+    "Sáb. 10 - 16:00 | Cinemateca - Calle Museo"
+   ]
+  },
+  {
+   "titulo": "QUEDAMOS ASÍ",
+   "titulo_pdf": "QUEDAMOS ASÍ",
+   "seccion": "Muestra de cortometrajes BIFF BANG",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 27
+   },
+   "anio": 2025,
+   "duracion_min": 12,
+   "pais": "Uruguay",
+   "genero": "Comedia, Drama",
+   "idioma": "Español",
+   "director": "Elías De Martino",
+   "sinopsis": "",
+   "programa": "Muestra de cortometrajes BIFF BANG",
+   "funciones_ficha": []
+  },
+  {
+   "titulo": "PARA NO VOLVER",
+   "titulo_pdf": "PARA NO VOLVER",
+   "seccion": "Muestra de cortometrajes BIFF BANG",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 27
+   },
+   "anio": 2025,
+   "duracion_min": 10,
+   "pais": "Colombia",
+   "genero": "Drama, Coming-of-age",
+   "idioma": "Español",
+   "director": "Tania Galvis",
+   "sinopsis": "",
+   "programa": "Muestra de cortometrajes BIFF BANG",
+   "funciones_ficha": []
+  },
+  {
+   "titulo": "BERTHA",
+   "titulo_pdf": "BERTHA",
+   "seccion": "Muestra de cortometrajes BIFF BANG",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 27
+   },
+   "anio": 2026,
+   "duracion_min": 13,
+   "pais": "Colombia",
+   "genero": "Comedia",
+   "idioma": "Español",
+   "director": "Laura Asprilla",
+   "sinopsis": "",
+   "programa": "Muestra de cortometrajes BIFF BANG",
+   "funciones_ficha": []
+  },
+  {
+   "titulo": "BORRACHOS MIENTRAS ESCUCHAMOS LAS GOTAS CAER",
+   "titulo_pdf": "BORRACHOS MIENTRAS ESCUCHAMOS LAS GOTAS CAER",
+   "seccion": "Muestra de cortometrajes BIFF BANG",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 27
+   },
+   "duracion_min": 22,
+   "pais": "2026",
+   "genero": "Colombia | Documental híbrido",
+   "idioma": "Español",
+   "director": "Santiago Gómez Ramírez",
+   "sinopsis": "",
+   "programa": "Muestra de cortometrajes BIFF BANG",
+   "funciones_ficha": []
+  },
+  {
+   "titulo": "LAS FLORES SON PARA LOS MUERTOS",
+   "titulo_pdf": "LAS FLORES SON PARA LOS MUERTOS",
+   "seccion": "Muestra de cortometrajes BIFF BANG",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 27
+   },
+   "anio": 2025,
+   "duracion_min": 8,
+   "pais": "Colombia",
+   "genero": "Comedia, Drama",
+   "idioma": "Español",
+   "director": "Isabella Bolívar",
+   "sinopsis": "",
+   "programa": "Muestra de cortometrajes BIFF BANG",
+   "funciones_ficha": []
+  },
+  {
+   "titulo": "YO ES OTRO",
+   "titulo_pdf": "YO ES OTRO",
+   "seccion": "Muestra de cortometrajes BIFF BANG",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 27
+   },
+   "anio": 2026,
+   "duracion_min": 9,
+   "pais": "México",
+   "genero": "Drama",
+   "idioma": "Español",
+   "director": "Jorge Carmona",
+   "sinopsis": "",
+   "programa": "Muestra de cortometrajes BIFF BANG",
+   "funciones_ficha": []
+  },
+  {
+   "titulo": "ENTRE LAS SOMBRAS ARDEN MUNDOS",
+   "titulo_pdf": "ENTRE LAS SOMBRAS ARDEN MUNDOS",
+   "seccion": "Muestra de cortometrajes BIFF BANG",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 27
+   },
+   "anio": 2023,
+   "duracion_min": 19,
+   "pais": "Colombia",
+   "genero": "Drama",
+   "idioma": "Español",
+   "director": "Ismael García Ramírez",
+   "sinopsis": "",
+   "programa": "Muestra de cortometrajes BIFF BANG",
+   "funciones_ficha": []
+  },
+  {
+   "titulo": "ESPACIO PARA PENSAR",
+   "titulo_pdf": "ESPACIO PARA PENSAR",
+   "seccion": "Muestra de cortometrajes BIFF BANG",
+   "_src": {
+    "pdf": "Programacion_BIFF_12_DIGITAL.pdf",
+    "pagina": 27
+   },
+   "anio": 2025,
+   "duracion_min": 8,
+   "pais": "Colombia",
+   "genero": "Animación",
+   "idioma": "Español",
+   "director": "La Baldosa Colectivo",
+   "sinopsis": "25",
+   "programa": "Muestra de cortometrajes BIFF BANG",
+   "funciones_ficha": []
+  }
+ ],
+ "programas": {
+  "Muestra de cortometrajes BIFF BANG": {
+   "obras": [
+    "QUEDAMOS ASÍ",
+    "PARA NO VOLVER",
+    "BERTHA",
+    "BORRACHOS MIENTRAS ESCUCHAMOS LAS GOTAS CAER",
+    "LAS FLORES SON PARA LOS MUERTOS",
+    "YO ES OTRO",
+    "ENTRE LAS SOMBRAS ARDEN MUNDOS",
+    "ESPACIO PARA PENSAR"
+   ],
+   "funciones_ficha": [
+    "Jue. 8 - 17:30 | Centro Felicidad Chapinero",
+    "Vie. 9 - 18:30 | Artes U. Javeriana, Aula Múltiple",
+    "Sáb. 10 - 17:00 | Parque Santander",
+    "Dom. 11 - 17:00 | Plaza de Mercado La Concordia",
+    "Lun. 12 - 17:00 | Plazoleta CityU",
+    "Mar. 13 - 16:00 | Aud. Fundadores U. Central",
+    "Mié. 14 - 16:00 | U. Tadeo, Aula Máxima"
+   ]
+  }
+ }
+}
