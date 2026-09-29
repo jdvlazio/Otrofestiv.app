@@ -20,7 +20,7 @@ QUÉ ES DE CADA QUIEN:
     python3 pipeline/ensamblar.py <id>            # → staging/<id>-build.json
     python3 pipeline/ensamblar.py <id> --ver      # sin escribir, solo el resumen
 """
-import json, os, sys, collections
+import json, os, re, sys, collections
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
@@ -92,6 +92,18 @@ def _compone_invitados(dst):
         dst['synopsis_lang'] = 'es'
 
 
+# LAS DURACIONES SE COMPARAN ENTRE FUENTES (regla de Juan, 29 sep 2026). Cada
+# diferencia grande entre la del festival y la de TMDB se anota aquí y se
+# imprime al final: «El deshielo» decía 88 en el BIFF y 108 en Cannes, CineChile,
+# TMDB y Wikipedia, y con 88 la app no avisa de choques en los últimos 20 min.
+AVISOS_DURACION = []
+
+
+def _min(v):
+    m = re.match(r'(\d+)', str(v or ''))
+    return int(m.group(1)) if m else None
+
+
 def _enriquece(dst, it):
     """Copia del enriquecido SOLO lo que la fuente del festival no trae. La
     fuente manda: su duración es la que programó, su título es el que publicó."""
@@ -144,6 +156,15 @@ def _enriquece(dst, it):
         dst['posterSource'] = 'tmdb' if 'image.tmdb.org' in _p else 'oficial'
     if dst.get('synopsis') and not dst.get('synopsis_lang'):
         dst['synopsis_lang'] = 'es'
+    # LA DURACIÓN: manda la del festival —es la que programó—. Si no la trae, la
+    # de TMDB (una obra dentro de un programa casi nunca la trae, y sin ella la
+    # suma del programa no se puede contrastar con su franja). Si las dos
+    # existen y difieren mucho, se avisa: la del festival puede ser un error.
+    _d, _t = _min(dst.get('duration')), it.get('duracion_tmdb')
+    if not _d and _t:
+        dst['duration'] = f'{_t} min'
+    elif _d and _t and abs(_d - _t) > max(5, 0.1 * _t):
+        AVISOS_DURACION.append(f'«{dst.get("title")}»: {_d} min en el festival, {_t} en TMDB')
     if dst.get('country') and not dst.get('flags'):
         dst['flags'] = lib.banderas(dst['country']) or None
         if not dst['flags']:
@@ -311,11 +332,19 @@ def ensamblar(fid, escribir=True):
             # para los 20 bloques de TIFF; vive aquí para que no haya que
             # volver a hacerlo en ningún festival. Solo si la fuente no la trae:
             # su número manda, porque incluye presentaciones y pausas.
+            _mins = sum(int(_m.group(1)) for o in e['film_list']
+                        if (_m := __import__('re').match(r'(\d+)', str(o.get('duration') or ''))))
+            _con = sum(1 for o in e['film_list'] if _min(o.get('duration')))
             if not e.get('duration'):
-                _mins = sum(int(_m.group(1)) for o in e['film_list']
-                            if (_m := __import__('re').match(r'(\d+)', str(o.get('duration') or ''))))
                 if _mins:
                     e['duration'] = f'{_mins} min'
+            elif _mins and _mins > _min(e['duration']) + 5:
+                # la suma de las obras NO CABE en la función (Girardota, 29 sep:
+                # 10 de 20 cortos ya sumaban 110 min en una franja de 90)
+                AVISOS_DURACION.append(
+                    f'programa «{e.get("title")}» ({e.get("day")} {e.get("time")}): sus obras '
+                    f'suman {_mins} min ({_con} de {len(e["film_list"])} con duración) y la '
+                    f'función dura {_min(e["duration"])}')
             _paises = [p for o in e['film_list'] if (p := o.get('country'))]
             if _paises and not e.get('country'):
                 # Se deduplica por PAÍS, nunca por carácter: una bandera son DOS
@@ -410,6 +439,11 @@ def ensamblar(fid, escribir=True):
           f'· {len(dias)} días')
     if rep:
         print('  contrato aplicado:', dict(rep))
+    if AVISOS_DURACION:
+        print(f'  ⚠ duraciones que no cuadran entre fuentes ({len(AVISOS_DURACION)}):')
+        for a in AVISOS_DURACION:
+            print(f'     · {a}')
+        out['_avisos_duracion'] = list(AVISOS_DURACION)
     if escribir:
         p = f'{REPO}/festivals/staging/{fid}-build.json'
         json.dump(out, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
