@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-28"
+  "capturado": "2026-09-29"
  },
  "obras": [
   {
@@ -38,7 +38,7 @@
    "lbSlug": "the-bombing-of-washington",
    "_verificado": "declarada a mano: TMDB la registra como «El bombardeo de Washington»: Luis Ospina, 1972, 1 min, los tres datos que imprime la lámina. La búsqueda por el título del festival («Bombardeo a Washington») no la devuelve, y por eso no casa sola. Se publica con el título del festival.",
    "_director": "Luis Ospina",
-   "_sondeado": "2026-09-28",
+   "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/bombardeo-a-washington.jpg",
    "posterSource": "tmdb"
   },
@@ -57,7 +57,7 @@
    "lbSlug": "bloody-flesh",
    "_verificado": "declarada a mano: Carlos Mayolo, título idéntico, 1983, Colombia. La lámina no trae año y dice 94 min contra 86 en TMDB (Proimágenes, que también la tiene, da otra cifra): con la duración como única prueba, el candado a ±3 la rechaza. Es la única obra de Mayolo con ese título.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-09-28",
+   "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/carne-de-tu-carne.jpg",
    "posterSource": "tmdb"
   },
@@ -285,7 +285,7 @@
    "genero": "Documental",
    "_verificado": "declarada a mano: Proimágenes la registra como «Sueño sobre un mantel vacío» (1240, en singular): Victor Gaviria, 1981, 10 minutos, documental; su buscador es literal y el título corregido del festival («Sueños…», en plural) no la devuelve. No está en TMDB. Proimágenes no publica su afiche, y lo que pone como sinopsis es la resolución de clasificación de 1981, que no se usa.",
    "_director": "Víctor Gaviria",
-   "_sondeado": "2026-09-28"
+   "_sondeado": "2026-09-29"
   }
  ],
  "verificadas": {
@@ -321,7 +321,7 @@
    "lbSlug": "the-bombing-of-washington",
    "_verificado": "declarada a mano: TMDB la registra como «El bombardeo de Washington»: Luis Ospina, 1972, 1 min, los tres datos que imprime la lámina. La búsqueda por el título del festival («Bombardeo a Washington») no la devuelve, y por eso no casa sola. Se publica con el título del festival.",
    "_director": "Luis Ospina",
-   "_sondeado": "2026-09-28",
+   "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/bombardeo-a-washington.jpg",
    "posterSource": "tmdb"
   },
@@ -339,7 +339,7 @@
    "lbSlug": "bloody-flesh",
    "_verificado": "declarada a mano: Carlos Mayolo, título idéntico, 1983, Colombia. La lámina no trae año y dice 94 min contra 86 en TMDB (Proimágenes, que también la tiene, da otra cifra): con la duración como única prueba, el candado a ±3 la rechaza. Es la única obra de Mayolo con ese título.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-09-28",
+   "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/carne-de-tu-carne.jpg",
    "posterSource": "tmdb"
   },
@@ -558,7 +558,7 @@
    "genero": "Documental",
    "_verificado": "declarada a mano: Proimágenes la registra como «Sueño sobre un mantel vacío» (1240, en singular): Victor Gaviria, 1981, 10 minutos, documental; su buscador es literal y el título corregido del festival («Sueños…», en plural) no la devuelve. No está en TMDB. Proimágenes no publica su afiche, y lo que pone como sinopsis es la resolución de clasificación de 1981, que no se usa.",
    "_director": "Víctor Gaviria",
-   "_sondeado": "2026-09-28"
+   "_sondeado": "2026-09-29"
   }
  },
  "sin_ficha": [
@@ -623,7 +623,7 @@
  "_fuentes": [
   {
    "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-09-28",
+   "capturado": "2026-09-29",
    "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
    "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
   }

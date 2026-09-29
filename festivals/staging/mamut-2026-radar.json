@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #964 — https://github.com/jdvlazio/Otrofestiv.app/issues/964",
-  "capturado": "2026-09-28",
+  "capturado": "2026-09-29",
   "titulo": "RADAR: Mamut 11 — Medellín, 5–11 OCT 2026",
   "estado": "OPEN",
-  "comentarios": 4
+  "comentarios": 5
  },
  "issue": 964,
  "titulo": "RADAR: Mamut 11 — Medellín, 5–11 OCT 2026",
@@ -26,6 +26,10 @@
   {
    "fecha": "2026-09-29",
    "cuerpo": "ESTADO: 28 sep 2026 · **salió la programación**: IG [p/Dd2bBTciVpN](https://www.instagram.com/mamut_festival/p/Dd2bBTciVpN/), 11 láminas. Entrada libre a todas las actividades.\n\n- **33 actividades en 6 sedes**, del 5 al 11 de octubre. Las direcciones vienen en la lámina 10.\n- Las láminas ya están leídas a ojo y confirmadas contra la OCR (E1–E3), y el avance está registrado en la rama `data/mamut-2026` (`_programacion` del plan).\n- Sigue: los cruces (qué cortos van en cada programa, largos, talleres, pines y Lab UNAL) y el montaje."
+  },
+  {
+   "fecha": "2026-09-29",
+   "cuerpo": "ESTADO: 28 sep 2026 (noche) · **MONTADO en [#983](https://github.com/jdvlazio/Otrofestiv.app/pull/983), sin mergear** (espera el visto bueno de Juan).\n\n- La fuente es la **versión corregida** del carrusel, [p/Dd2ckXgiYW9](https://www.instagram.com/p/Dd2ckXgiYW9/), que el festival volvió a publicar después de p/Dd2bBTciVpN. Cambia horas, sedes y salas y agrega conversatorios.\n- **29 actividades en 8 sedes**, con entrada libre. Quedan fuera los 3 laboratorios con convocatoria cerrada.\n- El build está verificado contra las láminas: 29/29.\n- Sin pin: Lab UNAL y Capilla, Comfama. Pendiente del festival: qué cortos van en cada programa."
   }
  ]
 }

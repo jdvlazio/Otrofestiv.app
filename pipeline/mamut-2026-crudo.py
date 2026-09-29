@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """mamut-2026-crudo.py — la programación de Mamut 11 → crudo.
 
-LA FUENTE es el carrusel de programación de @mamut_festival, `p/Dd2ckXgiYW9`
+LA FUENTE es el carrusel de programación de @mamut_festival, `p/Dd4A9NxERJA` (v3)
 (28 sep 2026) — la VERSIÓN CORREGIDA del `p/Dd2bBTciVpN` que publicaron antes
 el mismo día con el mismo pie. Las dos siguen arriba; la corregida mueve la
 inaugural a las 6, la clausura a Coocine y Apocalipsur a la Capilla de Comfama,
@@ -42,7 +42,7 @@ sys.path.insert(0, os.path.join(REPO, 'pipeline'))
 from lib import provenance  # noqa: E402
 
 FID = 'mamut-2026'
-POST = 'Dd2ckXgiYW9'
+POST = 'Dd4A9NxERJA'   # v3, 29 sep: el festival borró las dos anteriores
 LAMINAS = f'{REPO}/fuentes/ig/{POST}'
 OJOS = f'{REPO}/fuentes/mamut-2026-ojos-programa.json'
 OCR = f'{REPO}/fuentes/mamut-2026-ocr-programa.json'
@@ -165,7 +165,9 @@ def verifica(ojos):
                 fallos.append(f'«{f["titulo"]}»: la OCR no encuentra {faltan} ({campo}) en la lámina {f["lamina"]}')
         if not any(x in t for x in hora_ocr(f['hora'])) and (f['titulo'], 'hora') not in OCR_ENTENDIDO:
             fallos.append(f'«{f["titulo"]}» {f["hora"]}: la OCR no encuentra la hora en la lámina {f["lamina"]}')
-    hora_re = re.compile(r'^\s*\d{1,2}(:\d{2})?\s*(a|p)\.?')
+    # un signo suelto antes de la hora es la TEXTURA del fondo: en la v3 una
+    # mancha antes del segundo «5 p. m.» de la lámina 9 se lee «* 5 p.m.»
+    hora_re = re.compile(r'^\s*[^\w\s]?\s*\d{1,2}(:\d{2})?\s*(a|p)\.?')
     for k, v in cajas.items():
         n = int(k[:2])
         impresas = sum(1 for b in v if hora_re.match(b['t']))
@@ -216,7 +218,7 @@ def main():
                **({'sala': a.get('sala') or SALA_DE_OTRA_FUENTE[t]}
                   if (a.get('sala') or t in SALA_DE_OTRA_FUENTE) else {}),
                'acceso': 'Entrada libre',
-               '_src': {'url': f'https://www.instagram.com/p/{POST}/', 'date': '2026-09-28',
+               '_src': {'url': f'https://www.instagram.com/p/{POST}/', 'date': '2026-09-29',
                         'lamina': a['lamina']}}
         if t in ACTIVIDAD:
             reg.update(tipo='evento', event_kind=ACTIVIDAD[t], seccion=SECCION_ACTIVIDAD)

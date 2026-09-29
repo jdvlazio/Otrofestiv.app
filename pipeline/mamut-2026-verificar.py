@@ -3,7 +3,7 @@
 
 El crudo ya se confirma contra la OCR al armarse. Esto mira el OTRO extremo: el
 BUILD que sale del ensamblador —lo que llega a la app— contra la lectura a ojo
-de las láminas de la versión corregida (p/Dd2ckXgiYW9), en las dos direcciones:
+de las láminas de la versión vigente (p/Dd4A9NxERJA, la tercera), en las dos direcciones:
 
   · toda actividad de la lámina está en el build con su día, su hora, su sede y
     su sala — salvo las que Juan dejó fuera (convocatoria cerrada);
