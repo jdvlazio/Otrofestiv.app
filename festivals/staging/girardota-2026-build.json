@@ -143,8 +143,11 @@
    "short": "Palmas del Llano",
    "city": "Girardota",
    "n": 1,
-   "_prec": "sin verificar",
-   "_todo": "NO ES UNA SEDE, ES UN BARRIO de Girardota (código postal 051030; así lo registran los portales inmobiliarios y el código postal). La lámina no dice en qué lugar del barrio es la proyección inaugural —cancha, parque, salón comunal—, y un pin en el medio del barrio sería exactamente el «aproximado» que mandó a la gente 410 m lejos en Jahel (Jardín). Buscado el 27 sep en Google Maps («Palmas del Llano Girardota»: solo la JAC de la vereda La Palma) y en la web. Se publica sin pin hasta que el festival diga el lugar."
+   "lat": 6.3756709,
+   "lng": -75.4492673,
+   "_prec": "manual",
+   "address": "Calle Mall Palmas del Llano, Cl. 10A #16A",
+   "_nota": "El festival (a Juan, 29 sep): «Calle Mall Palmas del Llano, Calle 10A 16A, 051030»; el reel de @girardotaescultura (Dd4Nvlyo4ca) dice «¡El cine se toma el barrio Palmas del Llano!». Pin: Google Maps «Cl. 10a & Cra. 16a», Girardota; OSM tiene las dos calles ahí (junto a la Cra. 17, sector occidental del casco urbano). El pasaje no figura con nombre en ningún mapa."
   },
   "I.E. San Andrés - Girardota": {
    "short": "I.E. San Andrés",
@@ -990,7 +993,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T15:08:01",
+  "fecha": "2026-09-29T16:15:17",
   "plan_sha": "89d6e69df8fcc84e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py girardota-2026"
