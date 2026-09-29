@@ -1,0 +1,135 @@
+{
+ "_nota": "MONTAJE (29 sep 2026). 17 Festival de Cine Corto de Popayán, 5–11 oct. La parrilla sale de la página de programación de la web (wp-json id 13120, 29 sep), que trae lunes a viernes: 11 bloques de la Selección Oficial, la Muestra Internacional (sin obras), la apertura y 8 conversatorios. El sábado 10 y el domingo 11 no están publicados, ni la sección Infantil (10 cortos). Catálogo del pre-onboarding (77 obras, 44 con TMDB). Acceso: afiche oficial p/DdCljrXoEzp, «teatro Bolívar · entrada libre». Competencia: el reglamento prevé jurado y reconocimientos por categoría; las muestras Panorama e Internacional no compiten.",
+ "radar": 573,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py popayan-2026",
+   "que": "el volcado del radar #573"
+  },
+  {
+   "cmd": "python3 pipeline/popayan-2026-catalogo.py",
+   "que": "la Selección Oficial de la web + cinecorto.co + lo ya publicado → catálogo (77 obras)"
+  },
+  {
+   "cmd": "python3 pipeline/popayan-2026-crudo.py",
+   "que": "la parrilla de la web → crudo: 21 funciones, 68 obras cruzadas con el catálogo por título y dirección; cobertura inversa con patrón propio"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py popayan-2026 --posters",
+   "que": "la cascada de TMDB y lo ya publicado"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py popayan-2026 --centro 2.4419,-76.6063 --ciudad \"Popayán, Cauca\"",
+   "que": "pines: los manuales se respetan"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py popayan-2026",
+   "que": "el build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py popayan-2026 --aplicar --desde festivals/staging/popayan-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/popayan-2026-verificar.py",
+   "que": "el build contra la página de programación, releída por su cuenta, en los dos sentidos; cada sede con pin manual"
+  }
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/popayan-2026-catalogo-enriquecido.json": "las fichas TMDB de las 77 obras (44 verificadas), que escribe el paso 2; el montaje las reusa cuando salga la parrilla.",
+  "festivals/staging/popayan-2026-correcciones.json": "la ficha declarada a mano de «Tuktu, Padre Maíz» (TMDB escribe mal a su director); la lee enriquecer_catalogo.py.",
+  "festivals/staging/popayan-2026-crudo.json": "la parrilla, que escribe el paso 3",
+  "festivals/staging/popayan-2026-catalogo.json": "la Selección Oficial (77 obras), de pipeline/popayan-2026-catalogo.py; la lee el crudo para la ficha de cada obra",
+  "festivals/staging/popayan-2026-radar.json": "el volcado del radar #573, que escribe y relee pipeline/radar.py"
+ },
+ "festival": {
+  "crudo": "festivals/staging/popayan-2026-crudo.json",
+  "enriquecido": "festivals/staging/popayan-2026-enriquecido.json",
+  "geo": "festivals/staging/popayan-2026-venues-geo.json",
+  "_por_que_sedes": "El nombre que imprime la parrilla; el Auditorio Maya es la sala de la Facultad de Artes de Unicauca.",
+  "sedes": {
+   "Teatro Bolívar": [
+    "Teatro Bolívar - Popayán",
+    ""
+   ],
+   "Facultad de Artes Unicauca": [
+    "Facultad de Artes Unicauca - Popayán",
+    ""
+   ]
+  },
+  "_por_que_secciones": "Los nombres de la parrilla sin «(primer/segundo bloque)», en su caja. Las categorías de la Selección Oficial compiten (reglamento: jurado y reconocimientos); la Muestra Internacional no. «Actividades» es palabra nuestra.",
+  "secciones": {
+   "Selección Oficial Documental": {
+    "emoji": "📽️",
+    "en": "Official Selection: Documentary",
+    "archetype": "Competencia"
+   },
+   "Selección Oficial Cauca": {
+    "emoji": "🏔️",
+    "en": "Official Selection: Cauca",
+    "archetype": "Competencia"
+   },
+   "Selección Oficial Experimental": {
+    "emoji": "🌀",
+    "en": "Official Selection: Experimental",
+    "archetype": "Competencia"
+   },
+   "Selección Oficial Indígena": {
+    "emoji": "🪶",
+    "en": "Official Selection: Indigenous",
+    "archetype": "Competencia"
+   },
+   "Selección Oficial Afro": {
+    "emoji": "🥁",
+    "en": "Official Selection: Afro",
+    "archetype": "Competencia"
+   },
+   "Selección Oficial Animación": {
+    "emoji": "✏️",
+    "en": "Official Selection: Animation",
+    "archetype": "Competencia"
+   },
+   "Selección Oficial Comunitario": {
+    "emoji": "🤝",
+    "en": "Official Selection: Community",
+    "archetype": "Competencia"
+   },
+   "Selección Oficial Ficción": {
+    "emoji": "🎬",
+    "en": "Official Selection: Fiction",
+    "archetype": "Competencia"
+   },
+   "Muestra de Cortos Internacionales": {
+    "emoji": "🌎",
+    "en": "International Shorts Showcase",
+    "archetype": "Muestra / País"
+   },
+   "Actividades": {
+    "emoji": "🎤",
+    "en": "Activities",
+    "archetype": "Charlas / Industria"
+   }
+  },
+  "name": "Cine Corto Popayán",
+  "displayName": "Cine Corto Popayán",
+  "fullName": "17 Festival de Cine Corto de Popayán",
+  "shortName": "CINECORTO",
+  "tagline": "Festival de cortometraje colombiano",
+  "city": "Popayán",
+  "country": "CO",
+  "dates": "5–11 OCT",
+  "dates_en": "OCT 5–11",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "popayan2026_",
+  "festivalStartStr": "2026-10-05T00:00:00",
+  "festivalEndStr": "2026-10-11T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "octubre",
+  "_por_que_dias_vacios": "La parrilla publicada (29 sep) no trae sábado ni domingo, aunque el festival dura hasta el 11 (afiche y web).",
+  "dias_vacios": [
+   "2026-10-10",
+   "2026-10-11"
+  ]
+ }
+}

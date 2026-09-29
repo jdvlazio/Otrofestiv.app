@@ -1,0 +1,2548 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-09-28"
+ },
+ "_origen": "popayan-2026-catalogo.json",
+ "obras": [
+  {
+   "titulo": "Arrullos de sol",
+   "tmdb_id": 1594469,
+   "titulo_original": "Arrullos de Sol",
+   "poster_path": "/2S7uyLL3D7aIUBifmDGBP4GC19e.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After losing her son in an accident, Sol faces her grief while dealing with her in-laws’ funerary rituals. A mysterious presence forces her to confront her greatest fear: it might have been her fault.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "title_en": "Sol's Lullabies",
+   "lbSlug": "sols-lullabies",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Arrullos de sol"
+  },
+  {
+   "titulo": "Chicanoa",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/chicanoa/",
+   "_verificado": "cinecorto.co, dirección: Carlos Alberto Mera Jiménez",
+   "anio": 2025,
+   "duracion_min": 9,
+   "sinopsis": "Lura lucia Carabali Otero, Yineth Mera Mejia, Luz Adiana Serna Lasso, Jorge Olmedo Serna Lasso, Eddy Valeria Carabali Lasso, Eddy Valeria Carabali Lasso, Ibeth Karina Correa Fajardo, Coni Estefani Lasso Gonzalias"
+  },
+  {
+   "titulo": "Hacia la raíz",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/hacia-la-raiz/",
+   "_verificado": "cinecorto.co, dirección: María José Garcés Arias",
+   "anio": 2023,
+   "duracion_min": 25,
+   "sinopsis": "Al descubrirse como una ‘negra blanqueada’ María confronta a su padre, en búsqueda de sus raíces afro, emprende un viaje al territorio de sus ancestros así reconstruye las huellas de su pasado y abraza su identidad."
+  },
+  {
+   "titulo": "La tinaja",
+   "tmdb_id": 1668923,
+   "titulo_original": "La Tinaja",
+   "poster_path": "/air1XOw7h9fKgRq6V7vTAt4WCIB.jpg",
+   "synopsis_es": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos?  Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso.  Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "",
+   "lbSlug": "la-tinaja",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "qaff-2026",
+     "titulo": "La Tinaja",
+     "poster": "/assets/qaff/the-clay-vase.jpg",
+     "lbSlug": "la-tinaja",
+     "sinopsis": "¿Dónde guardamos nuestros recuerdos? ¿Dónde perduran? ¿Cómo los recordamos? Una epifanía disipa el olvido y reconstruye el vínculo entre Esther, la protagonista, y sus ancestros a través del mundo de los sueños, los recuerdos de su madre y la restauración de una vasija de barro heredada. Este cortometraje, creado en el marco de círculos de mujeres, navega de manera íntima, poética y femenina por los momentos de un rito de paso. Inmerso en la cosmovisión palenquera, con la intención de percibir los misterios más que de desvelarlos, esta obra es una ventana sutil a esos sentimientos que crecen entre ciénagas y arroyos."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La tinaja",
+     "poster": "https://image.tmdb.org/t/p/w500/air1XOw7h9fKgRq6V7vTAt4WCIB.jpg",
+     "lbSlug": "la-tinaja",
+     "sinopsis": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos?  Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso.  Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos."
+    }
+   ]
+  },
+  {
+   "titulo": "Legado",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/legado/",
+   "_verificado": "cinecorto.co, dirección: Zumaya Mayers, Rodrigo Cuervo",
+   "anio": 2024,
+   "duracion_min": 24,
+   "sinopsis": "na serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante."
+  },
+  {
+   "titulo": "Nascemos para semente",
+   "tmdb_id": 1700918,
+   "titulo_original": "Nascemos para Semente",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Born to Be Seed",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "nascemos-para-semente",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Nascemos para semente"
+  },
+  {
+   "titulo": "Abuelita caza vampiros",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/abuelita-caza-vampiros/",
+   "_verificado": "cinecorto.co, dirección: Mariana Betancourt Chaves",
+   "anio": 2026,
+   "duracion_min": 2,
+   "sinopsis": "En medio de la noche, un vampiro irrumpe en la casa de una abuelita latinoamericana esperando encontrar una presa fácil. En su lugar, se enfrenta a una mujer valiente, dispuesta a pelear por su vida. Con la ayuda inesperada de su fiel pug, la abuelita se envuelve en una batalla bizarra por la supervivencia. Mezclando humor con una atmósfera inquietante, Abuelita Caza Vampiros es una comedia gótica tropical inspirada en memorias familiares, donde el coraje y un toque de lo absurdo transforman una noche común en un enfrentamiento inolvidable."
+  },
+  {
+   "titulo": "Corazón galvánico",
+   "tmdb_id": 1376037,
+   "titulo_original": "Corazón Galvánico",
+   "poster_path": "/wfamQLJcXInlAxEZ6DtbdIJxNwT.jpg",
+   "synopsis_es": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella.",
+   "synopsis_en": "This is a story set on the future Caribbean coast, which is almost  uninhabitable due to pollution and climate change. Amidst the gloomy landscape of the new world order OHM, we find Ivy, our protagonist, who, after a heartbreaking breakup, is left in a very delicate emotional state.",
+   "genero": "Ciencia ficción",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "title_en": "Galvanic Heart",
+   "lbSlug": "galvanic-heart",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Corazón galvánico",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Corazón galvánico",
+     "poster": "https://image.tmdb.org/t/p/w500/wfamQLJcXInlAxEZ6DtbdIJxNwT.jpg",
+     "lbSlug": "galvanic-heart",
+     "sinopsis": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella."
+    }
+   ]
+  },
+  {
+   "titulo": "decaer",
+   "tmdb_id": 1668881,
+   "titulo_original": "decaer",
+   "poster_path": "/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+   "synopsis_es": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
+   "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia",
+   "title_en": "decay",
+   "lbSlug": "decay-2026",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "decaer",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Decaer",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj"
+    }
+   ]
+  },
+  {
+   "titulo": "Emechiche, El renacer de los cabeciblancos",
+   "tmdb_id": 1592964,
+   "titulo_original": "Emechiche, El renacer de los cabeciblancos",
+   "poster_path": "/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia, Argentina",
+   "title_en": "Emechiche, The Rebirth of White-Headed",
+   "lbSlug": "emechiche-the-rebirth-of-white-headed",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Emechiche, El renacer de los cabeciblancos",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Emechiche"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "poster": "https://image.tmdb.org/t/p/w500/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
+     "lbSlug": "emechiche-the-rebirth-of-white-headed"
+    }
+   ]
+  },
+  {
+   "titulo": "La habitación del macho cabrío",
+   "tmdb_id": 1554728,
+   "titulo_original": "La Habitación del Macho Cabrío",
+   "poster_path": "/xwgOpXWOcYis7A7xx3SyrgTGwyw.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a room isolated from the real world, Juan, a 10-year-old boy, lives with his grandparents. His grandfather has a strange disease that causes him to expel large amounts of matter, and because of this, every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide what is happening from the boy, but one night Juan decides to sneak out and approach the apparitions.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Devil Room",
+   "lbSlug": "the-devil-room",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
+  },
+  {
+   "titulo": "Pudor ante el asalto de los ojos furtivos",
+   "tmdb_id": 1592968,
+   "titulo_original": "Pudor ante el asalto de los ojos furtivos",
+   "poster_path": "/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Colombia",
+   "title_en": "Shame in the Face of Furtive Eyes",
+   "lbSlug": "shame-in-the-face-of-furtive-eyes",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Pudor ante el asalto de los ojos furtivos",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "tmdb_id": 1592968,
+     "poster": "/assets/cineautopsia/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "poster": "https://image.tmdb.org/t/p/w500/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    }
+   ]
+  },
+  {
+   "titulo": "Sapos por todos lados",
+   "tmdb_id": 1738917,
+   "titulo_original": "Sapos por todos lados",
+   "poster_path": "/t2zz7zftePUSQBXjDsrtWzAF3CD.jpg",
+   "synopsis_es": "Natalia no encuentra trabajo hasta que un antiguo profesor le ofrece la posibilidad de trabajar con exmiembros de la guerrilla. Esa nueva experiencia la confrontará directamente con sus prejuicios.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "",
+   "lbSlug": "sapos-por-todos-lados",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Sapos por todos lados",
+     "poster": "/assets/ficdeh/sapos-por-todos-lados.jpg",
+     "lbSlug": "sapos-por-todos-lados",
+     "sinopsis": "Natalia no encuentra trabajo hasta que un antiguo profesor le ofrece la posibilidad de trabajar con exmiembros de la guerrilla. Esa nueva experiencia la confrontará directamente con sus prejuicios."
+    }
+   ]
+  },
+  {
+   "titulo": "Tuktu, Padre Maíz",
+   "tmdb_id": 1592955,
+   "titulo_original": "Tuktu, Padre Maíz",
+   "poster_path": "/qw4zntJUuj163JdkusNUnxHvOwg.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "Tuktu, Father Maize",
+   "lbSlug": "tuktu-father-maize",
+   "_verificado": "declarada a mano: TMDB escribe al director «Mauricio Pietro Muriel» (sic); la web del festival, cinecorto.co y FICDEH, donde ya la publicamos, dicen Mauricio Prieto. Con el candado estricto del 28 sep un nombre de pila no alcanza, y por eso no casa sola. Todo lo demás coincide: título idéntico, 2025 en los dos lados y 13 min en TMDB contra 14 en cinecorto.co.",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Tuktu, Padre Maíz"
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "tmdb_id": 1592955,
+     "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra."
+    }
+   ]
+  },
+  {
+   "titulo": "Una vez en un cuerpo",
+   "tmdb_id": 1522316,
+   "titulo_original": "Una vez en un cuerpo",
+   "poster_path": "/jSAfjuWwP9BLIJgofw1vVa6xWaG.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia, United States of America",
+   "title_en": "Once in a Body",
+   "lbSlug": "once-in-a-body",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una vez en un cuerpo",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Una vez en un cuerpo",
+     "poster": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg",
+     "sinopsis": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg",
+     "lbSlug": "once-in-a-body",
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    }
+   ]
+  },
+  {
+   "titulo": "HDLT Hijo de la Tierra",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/hdlt-hijo-de-la-tierra/",
+   "_verificado": "cinecorto.co, dirección: Colectivo Artefactum Suba",
+   "anio": 2025,
+   "duracion_min": 18,
+   "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices.",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/siembrafest/hdlt.jpg"
+    }
+   ]
+  },
+  {
+   "titulo": "Historias al margen: Martha y Eduardo",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/historias-al-margen-martha-y-eduardo/",
+   "_verificado": "cinecorto.co, dirección: Juan Manuel Figueroa",
+   "anio": 2024,
+   "duracion_min": 18,
+   "sinopsis": "Desde la periferia, hay quienes observan y sostienen la transformación de una ciudad, convirtiéndose en el pilar invisible que evita el colapso de nuestra sociedad moderna. En este contexto conoceremos a Martha y Eduardo, dos adultos mayores cuya labor en el reciclaje en Popayán trasciende las décadas. Han sido testigos silenciosos de los cambios de la ciudad; su sangre y su esfuerzo han recorrido, figurativa y literalmente, cada calle. A través de sus vivencias, marcadas por el rigor de la calle pero iluminadas por sonrisas compartidas, nos invitan a una profunda reflexión: frente a tanta adversidad, ¿cómo han logrado resistir y enseñarnos a sonreír?"
+  },
+  {
+   "titulo": "Murmullos",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/murmullos/",
+   "_verificado": "cinecorto.co, dirección: Maria Camila Acevedo Mejía",
+   "anio": 2025,
+   "duracion_min": 7,
+   "sinopsis": "Zoraida y Paulina son dos hermanas que pasan sus días en la Fundación Albeiro Vargas y Ángeles Custodios, hablando de los chismes de sus compañeros. Una noche su cotidianidad es interrumpida por unos murmullos, así que acuden a la religión para recuperar su tranquilidad."
+  },
+  {
+   "titulo": "Pájaros huérfanos",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/pajaros-huerfanos/",
+   "_verificado": "cinecorto.co, dirección: Leonardo Rafael Montes Pérez",
+   "anio": 2026,
+   "duracion_min": 6,
+   "sinopsis": "Un juego de caza en el bosque termina en un espejo inesperado. Tres hermanos logran abatir a una paloma, solo para descubrir que han dejado un nido de pichones huérfanos. En la fragilidad de esas crías, los niños reviven el trauma de su propio pasado y el vacío que dejó el conflicto en su hogar. Una historia sobre la pérdida, la memoria y el ciclo del dolor que intentan sanar al llevarse consigo aquello que ellos mismos rompieron."
+  },
+  {
+   "titulo": "Un abrir y cerrar de ojos",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/un-abrir-y-cerrar-de-ojos/",
+   "_verificado": "cinecorto.co, dirección: Lia Marcela Correa Teherán",
+   "anio": 2026,
+   "duracion_min": 8,
+   "sinopsis": "Juan, un viejo minero de la comunidad de Varsovia, despierta la mañana después de una tragedia: En el silencio de su cocina y el café derramado sobre la mesa lo enfrentan a la ausencia de su nieto Pedro. Ese gesto mínimo desata una cadena de recuerdos que reconstruyen los días previos."
+  },
+  {
+   "titulo": "Cayenas libertarias",
+   "tmdb_id": 1737961,
+   "titulo_original": "Cayenas libertarias",
+   "poster_path": "/dQxbmxDq320B08UKcEOHgOkIy4b.jpg",
+   "synopsis_es": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "",
+   "lbSlug": "cayenas-libertarias",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cayenas libertarias",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Cayenas libertarias",
+     "poster": "/assets/ficdeh/bogota-underground-hip-hop.jpg",
+     "lbSlug": "cayenas-libertarias",
+     "sinopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Cayenas libertarias",
+     "poster": "https://image.tmdb.org/t/p/w500/dQxbmxDq320B08UKcEOHgOkIy4b.jpg",
+     "lbSlug": "cayenas-libertarias",
+     "sinopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero."
+    }
+   ]
+  },
+  {
+   "titulo": "Como el agua, la piedra y la espuma",
+   "tmdb_id": 1386237,
+   "titulo_original": "COMO EL AGUA, LA PIEDRA, Y LA ESPUMA",
+   "poster_path": "/llHNn16iMgMm9MQUk1KAF1D9Iso.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A young woman recalls memories of an indigenous person from Nudo de los Pastos, between Ecuador and Colombia, and reflects on the pollution that threatens her land.",
+   "genero": "Documental",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "Colombia",
+   "title_en": "Like water, stone and foam",
+   "lbSlug": "like-water-stone-and-foam",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Como el agua, la piedra y la espuma"
+  },
+  {
+   "titulo": "La despedida del río",
+   "tmdb_id": 1609572,
+   "titulo_original": "La despedida del río",
+   "poster_path": "/vLfuF29EHorpUsn41GpZrxYQTnd.jpg",
+   "synopsis_es": "Una comunidad de barequeros y pescadores tienen que aprender a vivir en medio de las consecuencias de un proyecto hidroeléctrico que al inundar las playas del río los obligó a levantar un campamento sobre el cañón del Cauca, desde donde observan un mundo mágico que confirma su tragedia y su destino.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia, United Kingdom",
+   "lbSlug": "la-despedida-del-rio",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La despedida del río",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La despedida del río",
+     "poster": "https://image.tmdb.org/t/p/w500/vLfuF29EHorpUsn41GpZrxYQTnd.jpg",
+     "lbSlug": "la-despedida-del-rio",
+     "sinopsis": "Una comunidad de barequeros y pescadores tienen que aprender a vivir en medio de las consecuencias de un proyecto hidroeléctrico que al inundar las playas del río los obligó a levantar un campamento sobre el cañón del Cauca, desde donde observan un mundo mágico que confirma su tragedia y su destino."
+    }
+   ]
+  },
+  {
+   "titulo": "Las tres muertes de un sol",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/las-tres-muertes-de-un-sol/",
+   "_verificado": "cinecorto.co, dirección: Santiago Londoño Gallego – Nicolás Ortega Baquero",
+   "anio": 2025,
+   "duracion_min": 30,
+   "sinopsis": "Las Tres Muertes de un Sol sigue a Yojan, un joven campesino en un viaje introspectivo a través de sus recuerdos y las entrañas de la montaña donde vive. En medio de ruinas, caminos montañosos y ríos, el exuberante paisaje se convierte en un testigo mudo de los azares del destino que han marcado su vida."
+  },
+  {
+   "titulo": "Madres de nacimiento",
+   "tmdb_id": 1668902,
+   "titulo_original": "Madres de Nacimiento",
+   "poster_path": "/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
+   "synopsis_es": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "madres-de-nacimiento",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Madres de nacimiento",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Madres de Nacimiento",
+     "tmdb_id": 1668902,
+     "poster": "https://image.tmdb.org/t/p/w500/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
+     "lbSlug": "madres-de-nacimiento",
+     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Madres de nacimiento",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MDN_Poster_Blanco_WEB.jpg?itok=OR2_OCi0"
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Madres de nacimiento",
+     "poster": "/assets/ficdeh/madres-de-nacimiento.jpg",
+     "lbSlug": "madres-de-nacimiento",
+     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Madres de nacimiento"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Madres de nacimiento",
+     "tmdb_id": 1668902,
+     "poster": "/assets/jardin-2026/madres-de-nacimiento.jpg",
+     "lbSlug": "madres-de-nacimiento",
+     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad."
+    }
+   ]
+  },
+  {
+   "titulo": "Maravillas de la Evolución",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/maravillas-de-la-evolucion/",
+   "_verificado": "cinecorto.co, dirección: Francisco Antonio Arango Ceballos",
+   "anio": 2025,
+   "duracion_min": 15,
+   "sinopsis": "A través de una perspectiva científica, el film explora las complejas adaptaciones evolutivas de estos insectos, destacando sus extraños diseños y su enigmática forma de comunicación. Además, revela los desafíos que enfrentan, ofreciendo una visión del papel que desempeñan en el equilibrio ecológico y la importancia de conservar su hábitat."
+  },
+  {
+   "titulo": "Mi viche todo el día",
+   "tmdb_id": 1593596,
+   "titulo_original": "Mi viche todo el día",
+   "poster_path": "/vDrXNUGsIyGRKjRdcsiglCCkvdf.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and make viche, an ancestral beverage that was once prohibited but now is in vogue. Through food, river trips, and music, viche and its knowledge not only shape people s daily lives but also raise the question of a just future, where viche serves as food, sustenance, and identity for Black families.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 26,
+   "pais_tmdb": "Colombia",
+   "title_en": "My Daily Viche",
+   "lbSlug": "my-daily-viche",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mi viche todo el día",
+   "_ya_publicada": [
+    {
+     "festival": "qaff-2026",
+     "titulo": "Mi Viche Todo el Día",
+     "poster": "/assets/qaff/mi-viche-todo-el-dia.jpg",
+     "lbSlug": "my-daily-viche",
+     "sinopsis": "En el Medio Atrato chocoano, Ana Panesso y su comunidad cultivan la caña de azúcar y fabrican el viche, bebida ancestral antes prohibida y ahora en boga. A través de la comida, los viajes en río y lamúsica, el viche y sus saberes no sólo configuran el día a día de las personas, sino que también plantea la pregunta por un futuro donde el viche sea alimento, sustento e identidad de las familias negras. Realizador y montajista de cine. Realizó los cortos de vanguardia Junio 25 Andréi Tarkovski visita a su tumba, Teatro eléctrico, Vacans, El soplo de sal. Dirigió el corto de ficción Venus en llamas y el documental Mi viche todo el día. Editor del largo La piel mordida (post), y de los cortos Los hermanos Calavera y Cabeza de torpedo. Desde 2012 codirige Playtime Cineclub, un espacio dedicado a la celebración del cine mundial. En 2022 junto a sus socios funda la productora Vértigo Cine."
+    }
+   ]
+  },
+  {
+   "titulo": "Niña Chilapa",
+   "tmdb_id": 1456186,
+   "titulo_original": "Niña chilapa",
+   "poster_path": "/AjNWPyDDpMsn1Q5nH111jtRGKZN.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia",
+   "title_en": "Chilapa Girl",
+   "lbSlug": "chilapa-girl",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Niña Chilapa",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Niña Chilapa",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Nina-Chilapa-Still-3-scaled.jpg",
+     "sinopsis": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta."
+    }
+   ]
+  },
+  {
+   "titulo": "Sombras en la Niebla",
+   "tmdb_id": 1668876,
+   "titulo_original": "Sombras en la Niebla",
+   "poster_path": "/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+   "synopsis_es": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
+   "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "Colombia",
+   "title_en": "Into the fog",
+   "lbSlug": "into-the-fog-2026",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Sombras en la niebla",
+     "tmdb_id": 1668876,
+     "poster": "https://image.tmdb.org/t/p/w500/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+     "lbSlug": "into-the-fog-2026",
+     "sinopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Sombras en la niebla"
+    }
+   ]
+  },
+  {
+   "titulo": "(El Experimento)",
+   "tmdb_id": 1270308,
+   "titulo_original": "Diamantes y caracoles (El experimento)",
+   "poster_path": "/uBgs6rt75veSKcY8YShDI0OQCDH.jpg",
+   "synopsis_es": "Una voz infantil y robótica enumera diferentes aventuras junto a sus particulares mascotas: caracoles. Como si se tratara de un informe científico, lo real y lo fantástico se fusionan en esta historia singular.",
+   "synopsis_en": "A childish and robotic voice lists different adventures together with its particular pets: snails. As if it were a scientific report, the real and the fantastic merge in this unique story.",
+   "genero": "",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia",
+   "title_en": "Diamonds & Snails (The Experiment)",
+   "lbSlug": "diamonds-snails-the-experiment",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "(El Experimento)"
+  },
+  {
+   "titulo": "Animista",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/animista/",
+   "_verificado": "cinecorto.co, dirección: Sebastian Giraldo",
+   "anio": 2026,
+   "duracion_min": 8,
+   "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo."
+  },
+  {
+   "titulo": "Chaika",
+   "tmdb_id": 1689999,
+   "titulo_original": "Chaika",
+   "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
+   "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "chaika-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Chaika",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "CHAIKA",
+     "tmdb_id": 1689999,
+     "poster": "/assets/cineautopsia/chaika.jpg",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, en la que se le invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero descubre un territorio asolado por una silenciosa crisis agrícola y ambiental; una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se alcanza a discernir: un sistema exhausto que intenta sostener un ideal ya difuso. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se confunden, Valentina busca descubrir si aún es posible alzar el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/fantasofest/corto-chaika.jpg",
+     "lbSlug": "chaika-2026"
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/narrarelfuturo-2026/chaika.jpg",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    }
+   ]
+  },
+  {
+   "titulo": "El patio de la infancia",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/el-patio-de-la-infancia/",
+   "_verificado": "cinecorto.co, dirección: Cecilia Traslaviña",
+   "anio": 2025,
+   "duracion_min": 14,
+   "sinopsis": "Una mujer reflexiona sobre el significado de la infancia a partir de los archivos de una película incompleta que recibe. Los personajes son unas muñecas de cerámica únicas que cobran vida a su paso. ¿Es la infancia una ficción colectiva?"
+  },
+  {
+   "titulo": "Filme Pin",
+   "tmdb_id": 1616856,
+   "titulo_original": "Filme Pin",
+   "poster_path": "/4nXy9clHHvJYkpdmuEQytHRKFqG.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia, Portugal",
+   "lbSlug": "filme-pin",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Filme Pin",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Filme Pin",
+     "tmdb_id": 1616856,
+     "poster": "/assets/cineautopsia/filme-pin.jpg",
+     "lbSlug": "filme-pin",
+     "sinopsis": "Entre luz, metal y plata, Filme Pin transforma una colección de pines solidarios en un archivo a otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Filme Pin",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER-FILME-PIN-2026%20-%20La%20Vulcanizadora.jpg?itok=qrKWWtjf"
+    }
+   ]
+  },
+  {
+   "titulo": "La Europa",
+   "tmdb_id": 1456264,
+   "titulo_original": "La Europa",
+   "poster_path": "/pxCKt70n1FtUug8GW9h01eYz8l.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Andrés Narváez, Colombian social leader, music minstrel and empirical poet, returns to the Montes de María after his exile in Spain, following an attempt on his life in which he was shot four times.  His time in Asturias and the melancholy of a forced migration inspired him to compose several of his best known songs, connecting through song the two Europes: the one he left and the one that welcomed him.  Upon his return, with the violence still latent, Andrés delves into the deepest landscapes of his territory and the most painful memories that the war left behind, composing in memory of those who no longer walk with him; music saved him and that is why he decided that 'it is better to sing than to point out'.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 21,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Europe",
+   "lbSlug": "the-europe",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La Europa",
+     "poster": "https://image.tmdb.org/t/p/w500/pxCKt70n1FtUug8GW9h01eYz8l.jpg",
+     "lbSlug": "the-europe"
+    }
+   ]
+  },
+  {
+   "titulo": "La rebelión de un fantasma",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/la-rebelion-de-un-fantasma/",
+   "_verificado": "cinecorto.co, dirección: Flora Rodríguez",
+   "anio": 2026,
+   "duracion_min": 15,
+   "sinopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico."
+  },
+  {
+   "titulo": "Sirena mecánica",
+   "tmdb_id": 1668871,
+   "titulo_original": "Sirena Mecánica",
+   "poster_path": "/2Dga5Ik6s799QoPz2A5LIoY3a90.jpg",
+   "synopsis_es": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "sirena-mecanica",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Sirena mecánica",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Sirena mecánica",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20205043.png?itok=BR7oyf-o"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Sirena mecánica",
+     "tmdb_id": 1668871,
+     "poster": "/assets/jardin-2026/sirena-mecanica.jpg",
+     "lbSlug": "sirena-mecanica",
+     "sinopsis": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia."
+    }
+   ]
+  },
+  {
+   "titulo": "Soñar una serpiente",
+   "tmdb_id": 1538892,
+   "titulo_original": "Soñar una serpiente",
+   "poster_path": "/qvg7VroCDGk04G8kuWbnD4dWV32.jpg",
+   "synopsis_es": "Una bióloga forense que ha pasado su vida entre fósiles y vitrinas de museos encuentra una foto que lo cambia todo: es su madre, joven, sosteniendo la mirada de una serpiente con una intensidad casi ritual. A partir de ese momento, los reptiles comienzan a infiltrarse en su vida de maneras que no puede ni quiere explicar.",
+   "synopsis_en": "A taxidermist finds a strange old photograph of her mother with a serpent that will alter her instincts and sensibilities in unpredictable ways.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia",
+   "title_en": "Dreaming a Serpent",
+   "lbSlug": "dreaming-a-serpent",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Soñar una serpiente",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Soñar una serpiente",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Sonar-una-serpiente1.png",
+     "sinopsis": "Una bióloga forense que ha pasado su vida entre fósiles y vitrinas de museo encuentra una foto que lo cambia todo: es su madre, joven, sosteniendo la mirada de una serpiente con una intensidad casi ritual. A partir de ese momento, los reptiles comienzan a infiltrarse en su vida."
+    }
+   ]
+  },
+  {
+   "titulo": "Una noche en la montaña escuché una luz rugir",
+   "tmdb_id": 1456181,
+   "titulo_original": "Una noche en la montaña escuché una luz rugir",
+   "poster_path": "/6trLIuV6WhtG0mRfMvXAq1elhHe.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "There is nothing beyond the material search for mystery. Mystery exists made matter, and in this case, made light. Two young people meet in the middle of a mountain after dying. It seems that from their urban past there is still the flicker of colors strange to the vegetable as if it attracted them; it made them get caught and merge with luminous presences that emerge from the mountain and call to it, giving notice to a path that is heard when seeing the light.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "title_en": "A Night in the Mountains I heard a Light Roar",
+   "lbSlug": "a-night-in-the-mountains-i-heard-a-light",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
+  },
+  {
+   "titulo": "Akababuru: Expresión de asombro",
+   "tmdb_id": 1418533,
+   "titulo_original": "Akababuru: Expresión de asombro",
+   "poster_path": "/bA8KrWe46yXs1J5VwL9ucSJrQHZ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "akababuru-expresion-de-asombro",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Akababuru: Expresión de asombro",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Akababuru: Expresión de asombro",
+     "poster": "https://admin.alternativa.film/uploads/AKABABURU_POSTER_laura_giraldo_9666ac856d.jpg"
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Akababuru: Expresión de asombro",
+     "poster": "/assets/ficdeh/herminda.jpg",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "sinopsis": "Kari es una niña indígena emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa."
+    }
+   ]
+  },
+  {
+   "titulo": "Yakuwasi: La Casa del Agua",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/yakuwasi-la-casa-del-agua/",
+   "_verificado": "cinecorto.co, dirección: Faisal Tisnés",
+   "anio": 2025,
+   "duracion_min": 15,
+   "sinopsis": "Desde el Macizo Colombiano, útero de la Madre Tierra, dentro del Resguardo de Papallaqta de la Nación Indígena Yanakuna, este corto documental explora un territorio donde lagunas y manantiales sagrados dan origen a los ríos más importantes de Colombia."
+  },
+  {
+   "titulo": "Cascabeles",
+   "tmdb_id": 1187808,
+   "titulo_original": "Cascabeles",
+   "poster_path": "/5s5KXxJkQRAJsnpkt9LdQFQM3gK.jpg",
+   "synopsis_es": "Emma es una niña valiente de 7 años que guarda un importante secreto: le teme a la oscuridad; para ella, allí sus miedos cobran vida. Cuando su abuelo Augusto –un hombre ciego y sabio– descubre su secreto, trama un ingenioso plan para impulsarla a enfrentar sus temores, tejiendo un emotivo vínculo intergeneracional a través del cual Emma explora el poder que se consigue al enfrentar los miedos.",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "cascabeles",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cascabeles"
+  },
+  {
+   "titulo": "Color piel",
+   "tmdb_id": 1493530,
+   "titulo_original": "Color piel",
+   "poster_path": "/pnYcOPQ8IckxVpWbtDj2BsAelyP.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Bogotá, 1996. Luis Fernando, a 9-year-old Afro-Colombian boy, will face a serious mistake in the adult world, when in class he confirms that the pinkish color in his pencil case, called “skin color”, does not correspond to the color of his skin.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Colombia",
+   "title_en": "Skin Color",
+   "lbSlug": "skin-color",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
+  },
+  {
+   "titulo": "Dientes de yuca",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/dientes-de-yuca/",
+   "_verificado": "cinecorto.co, dirección: YURIETH ROMERO VELASQUEZ",
+   "anio": 2025,
+   "duracion_min": 14,
+   "sinopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto."
+  },
+  {
+   "titulo": "Gris",
+   "tmdb_id": 1490328,
+   "titulo_original": "Gris",
+   "poster_path": "/cby63kRIy7WIVWTWZNwZfXTQYli.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sofía, a curious and imaginative young girl, faces challenges at school as she begins to navigate the complexities of her mixed-race identity. As her art springs to life through vibrant and whimsical animations, the story delves into Sofia’s journey of self-discovery, capturing her confusion, resilience, and profound lessons about belonging. Sofia learns to embrace the shades that define her, blending love, culture, and individuality into a unique narrative.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "gris-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Gris",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Gris",
+     "poster": "https://admin.alternativa.film/uploads/Gris_Poster_Eng_Loren_Escandon_62e9c1d610.jpg"
+    }
+   ]
+  },
+  {
+   "titulo": "La Gran Hazaña",
+   "tmdb_id": 1494003,
+   "titulo_original": "La gran hazaña",
+   "poster_path": "/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Great Feat",
+   "lbSlug": "the-great-feat",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La Gran Hazaña",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La gran hazaña",
+     "poster": "/assets/ficdeh/la-gran-hazana.jpg",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La gran hazaña"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La gran hazaña",
+     "poster": "https://image.tmdb.org/t/p/w500/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    }
+   ]
+  },
+  {
+   "titulo": "La guerra de los tomates",
+   "tmdb_id": 1753830,
+   "titulo_original": "La guerra de los tomates",
+   "poster_path": "/779prgLmt5WC2aHHHZtoUX6Mfzd.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Two groups of local and migrant children will represent the neighborhood in a tournament, an idea that will spark a tomato fight; a charismatic girl will bring out the best in everyone as she tries to unite an unlikely team against an unexpected rival.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-guerra-de-los-tomates",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
+  },
+  {
+   "titulo": "Los pliegues de la Falda",
+   "tmdb_id": 1738777,
+   "titulo_original": "Los pliegues de la falda",
+   "poster_path": "/bJGWAlMlzNhfG4XlsMfdbvsspo8.jpg",
+   "synopsis_es": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "los-pliegues-de-la-falda",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Los pliegues de la falda",
+     "poster": "/assets/ficdeh/los-pliegues-de-la-falda.jpg",
+     "lbSlug": "los-pliegues-de-la-falda",
+     "sinopsis": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente."
+    }
+   ]
+  },
+  {
+   "titulo": "Luis Antonio",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/luis-antonio/",
+   "_verificado": "cinecorto.co, dirección: Juan José Arias Gil",
+   "anio": 2025,
+   "duracion_min": 12,
+   "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
+  },
+  {
+   "titulo": "1 Hijo & 1 Padre",
+   "tmdb_id": 1316517,
+   "titulo_original": "1 hijo & 1 padre",
+   "poster_path": "/xV82AJimqCM1v4V2dM6tQyO7tFF.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The story follows Kevin, a young man classified as problematic due to his inability to control his impulses. After an incident, Kevin must attend therapy for teenagers, but his father refuses to accompany him. Don Andrés, his stepfather, assumes the role of companion, revealing a relationship that is more fraternal than paternal.",
+   "genero": "Comedia",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "France, Colombia",
+   "title_en": "A Son & a Father",
+   "lbSlug": "a-son-a-father",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "1 Hijo & 1 Padre"
+  },
+  {
+   "titulo": "Camino al cielo",
+   "tmdb_id": 1463422,
+   "titulo_original": "Camino al cielo",
+   "poster_path": "/daz7porQkisJmPmsE2zyprdInrZ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the middle of the banana-growing area of Urabá, Mairen, an Afro woman, eight months pregnant, goes into labor in an unpopulated area. Although her health is in danger, Mairen, resigned, lies down in a tree to await her fate.",
+   "genero": "Drama",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Way to heaven",
+   "lbSlug": "way-to-heaven-2024",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Camino al cielo"
+  },
+  {
+   "titulo": "El odio del padre",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/el-odio-del-padre/",
+   "_verificado": "cinecorto.co, dirección: Rodrigo Mora Yepes",
+   "anio": 2026,
+   "duracion_min": 14
+  },
+  {
+   "titulo": "El Segundo",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/el-segundo/",
+   "_verificado": "cinecorto.co, dirección: Pedro Miguel Rozo",
+   "anio": 2025,
+   "duracion_min": 22,
+   "sinopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones"
+  },
+  {
+   "titulo": "Gladiolos",
+   "tmdb_id": 898817,
+   "titulo_original": "Gladiolos",
+   "poster_path": "/hPcSDRpwapMHGFdi6dJ6pPLQAPf.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Waldina, the flowers seller of the little town of Arcabuco, has died. Her son Humberto arrives from the big city and decides to make the last delivery of flowers to her clients without knowing that in one of that doors could find his happiness.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "gladiolos",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Gladiolos",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Gladiolos",
+     "poster": "https://image.tmdb.org/t/p/w500/hPcSDRpwapMHGFdi6dJ6pPLQAPf.jpg",
+     "lbSlug": "gladiolos"
+    }
+   ]
+  },
+  {
+   "titulo": "La Mona",
+   "tmdb_id": 1444298,
+   "titulo_original": "La Mona",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Heat Wave",
+   "lbSlug": "heat-wave-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La Mona",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La Mona"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "La Mona",
+     "tmdb_id": 1444298,
+     "poster": "/assets/jardin-2026/la-mona.jpg",
+     "lbSlug": "heat-wave-2025",
+     "sinopsis": "La Mona está dispuesta a cualquier sacrificio para garantizar su autoridad en La Hondura, aunque el precio que pague sea la soledad."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La mona",
+     "poster": "/assets/siembrafest/la-mona.jpg",
+     "lbSlug": "heat-wave-2025"
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "La Mona",
+     "tmdb_id": 1444298,
+     "poster": "/assets/villadelcine-2026/la-mona.jpg",
+     "lbSlug": "heat-wave-2025",
+     "sinopsis": "Entre el polvo y el calor se encuentra La Hondura, un pueblo olvidado, donde la tensión se siente como electricidad en el aire. Allí, La Mona, una paramilitar, impone el orden. Sin embargo, no puede dominar la naturaleza de su cuerpo y la menstruación la doblega hasta el punto de postrarla en la cama."
+    }
+   ]
+  },
+  {
+   "titulo": "Las Faldas de Tu Prima",
+   "tmdb_id": 1542363,
+   "titulo_original": "Las Faldas De Tu Prima",
+   "poster_path": "/fyyxFtaZCBWq4Uq4K7W9Sl7nsVR.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Simón and Gabo, two 17-year-old best friends, spend the summer with Sam, Gabo's older cousin, an anxious college student seeking to escape her thesis work. They will confront love, friendship, and a malicious giant robot.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "Colombia",
+   "title_en": "Your Cousin's Skirts",
+   "lbSlug": "your-cousins-skirts",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Las Faldas de Tu Prima"
+  },
+  {
+   "titulo": "Las piedras del río",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/las-piedras-del-rio/",
+   "_verificado": "cinecorto.co, dirección: Edna Sierra",
+   "anio": 2026,
+   "duracion_min": 16,
+   "sinopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Las piedras del río",
+     "poster": "/assets/siembrafest/las-piedras-del-rio.jpg"
+    }
+   ]
+  },
+  {
+   "titulo": "Los Huyentes",
+   "tmdb_id": 1564433,
+   "titulo_original": "Los Huyentes",
+   "poster_path": "/t6b5vL5RKecCo22aKCf0FaOZdak.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Between dream and reality, two close friends try to deal with sadness and a sense of emptiness by reliving the same idyllic afternoon over and over again... or perhaps the same dream.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "los-huyentes",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
+  },
+  {
+   "titulo": "Más allá",
+   "tmdb_id": 1488751,
+   "titulo_original": "Más Allá",
+   "poster_path": "/1F7ck0bVWovhSlRqco5RePKQJZt.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "title_en": "Beyond",
+   "lbSlug": "beyond-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Más allá",
+     "poster": "/assets/ficdeh/pasta-negra.jpg",
+     "lbSlug": "beyond-2025",
+     "sinopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana se ve obligada a abandonar su infancia para sobrevivir. Zuli empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes descubre un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez."
+    }
+   ]
+  },
+  {
+   "titulo": "Suite intercontinental",
+   "tmdb_id": 1668898,
+   "titulo_original": "Suite Intercontinental",
+   "poster_path": "/i3bnvcq3Ms4E5ZW6Tp0Y9HjL9zo.jpg",
+   "synopsis_es": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, envuelta en tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo lo que la rodea. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, con el pecho desnudo y los ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo.",
+   "synopsis_en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "",
+   "lbSlug": "suite-intercontinental",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Suite intercontinental",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Suite intercontinental",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Capture_decran_2025-05-28_a_15.57.26%20-%20Marianna%20Manili.jpg?itok=alqasZXz"
+    }
+   ]
+  },
+  {
+   "titulo": "Todos los días",
+   "tmdb_id": 1738004,
+   "titulo_original": "Todos los días",
+   "poster_path": "/8Dq9Iu4y8ToT5fdnav0bNAhV32O.jpg",
+   "synopsis_es": "Ramiro es despedido del trabajo al que perteneció gran parte de su vida. En medio de su nueva y solitaria libertad conoce a tres desocupados como él, que se reúnen para matar el tiempo y hacerse compañía mientras fantasean con vengarse de sus antiguos empleadores y buscan, un pequeño triunfo a la vez, ser felices. Cada día, todos los días.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "todos-los-dias",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Todos los días",
+     "poster": "/assets/ficdeh/color-piel.jpg",
+     "lbSlug": "todos-los-dias",
+     "sinopsis": "Ramiro es despedido del trabajo al que perteneció gran parte de su vida. En medio de su nueva y solitaria libertad conoce a tres desocupados como él, que se reúnen para matar el tiempo y hacerse compañía mientras fantasean con vengarse de sus antiguos empleadores y buscan, un pequeño triunfo a la vez, ser felices. Cada día, todos los días."
+    }
+   ]
+  },
+  {
+   "titulo": "Cielo Roto",
+   "tmdb_id": 1190241,
+   "titulo_original": "Cielo Roto",
+   "poster_path": "/pkzCFj7EulreJdMHjmqnayJgAef.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The last earthquake that struck Popayán in 1983 not only destroyed the Colombian city itself, but left lasting scars on the lives of its men and women that have been inherited by younger generations. Friends María José and Alejandra deal with the traumas of the past and the pain in their own way – through sunsets, art, poetry and cinema itself.",
+   "genero": "Documental",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "Colombia",
+   "title_en": "Broken Sky",
+   "lbSlug": "broken-sky-2023",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cielo Roto"
+  },
+  {
+   "titulo": "Crudo",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/crudo/",
+   "_verificado": "cinecorto.co, dirección: Álvaro Ruiz Velasco",
+   "anio": 2023,
+   "duracion_min": 7,
+   "sinopsis": "Tras ser desplazada por la violencia, Edelmira acaba trabajando como empleada doméstica para el grupo armado que la desplazó. Esta situación será la oportunidad para Edelmira de redimirse o vengarse."
+  },
+  {
+   "titulo": "La asociación",
+   "tmdb_id": 1663705,
+   "titulo_original": "La Asociación",
+   "poster_path": "/n27jihE6w5jSqeKoaXWprB1FdCR.jpg",
+   "synopsis_es": "En las altas montañas del imponente y vital Macizo Colombiano, mujeres indígenas y campesinas se unieron junto a su comunidad para enfrentar con alegría y valentía a las multinacionales del comercio lechero en Colombia, y lograr entre la neblina y el conflicto armado que transita a diario por estos territorios, una unión de fuerzas y convicciones para superar la explotación y las injusticias de estas empresas lecheras. Toda la comunidad en el resguardo indígena de Pancitara participa en este documental para mostrarle al mundo desde paramos y cerros como es asociarse para construir un mundo desde sus propias economías.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-asociacion",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La asociación"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La Asociación",
+     "poster": "https://image.tmdb.org/t/p/w500/n27jihE6w5jSqeKoaXWprB1FdCR.jpg",
+     "lbSlug": "la-asociacion"
+    }
+   ]
+  },
+  {
+   "titulo": "La Volqueta",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/la-volqueta/",
+   "_verificado": "cinecorto.co, dirección: Wiston Fernández Madriñan",
+   "anio": 2024,
+   "duracion_min": 15,
+   "sinopsis": "En un cambuche a la orilla de un lago, Jeison, un hombre joven y pobre, vive junto a su hijo Messi. Jeison, a pesar de su vida dura, y que diariamente está marcada a través de una lucha por sobrevivir; trabajando duro bajo el sol, recogiendo arena para una volqueta con el fin de ganar un poco de dinero, se esfuerza por cuidar y alegrar a su hijo. Messi, sueña con una volqueta de juguete, pero su padre no puede permitírselo. Haciendo que Jeison tome una difícil decisión para poder darle a Messi un futuro mejor."
+  },
+  {
+   "titulo": "Mañanitas",
+   "tmdb_id": 1395206,
+   "titulo_original": "Mañanitas",
+   "poster_path": "/m0wDREI7TZAYiqodr6emNTZH7c9.jpg",
+   "synopsis_es": "Mañanitas cuenta la historia de Santiago, un niño de 12 años que se siente ingenuamente atraído por el cuerpo desnudo de Ángela, su prima mayor. Este tímido despertar sexual continúa con un encuentro confuso con otra persona.",
+   "synopsis_en": "Mañanitas tells the story of Santiago, a 12-year-old boy who is naively attracted to the naked body of Ángela, his older cousin. This timid sexual awakening continues with a confusing encounter with another person.",
+   "genero": "Drama",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "mananitas",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mañanitas"
+  },
+  {
+   "titulo": "Tunesmith - Forjador de Notas",
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/tunesmith-forjador-de-notas/",
+   "_verificado": "cinecorto.co, dirección: Jordy Marin",
+   "anio": 2025,
+   "duracion_min": 26,
+   "sinopsis": "En la pintoresca ciudad de Popayán, Colombia, donde el encanto colonial se encuentra con el valle de Pubenza, vive Gus—un herrero rudo, moldeado por el trabajo, con manos de hierro y un corazón de oro."
+  }
+ ],
+ "verificadas": {
+  "Arrullos de sol": {
+   "tmdb_id": 1594469,
+   "titulo_original": "Arrullos de Sol",
+   "poster_path": "/2S7uyLL3D7aIUBifmDGBP4GC19e.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After losing her son in an accident, Sol faces her grief while dealing with her in-laws’ funerary rituals. A mysterious presence forces her to confront her greatest fear: it might have been her fault.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "title_en": "Sol's Lullabies",
+   "lbSlug": "sols-lullabies",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Arrullos de sol"
+  },
+  "Chicanoa": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/chicanoa/",
+   "_verificado": "cinecorto.co, dirección: Carlos Alberto Mera Jiménez",
+   "anio": 2025,
+   "duracion_min": 9,
+   "sinopsis": "Lura lucia Carabali Otero, Yineth Mera Mejia, Luz Adiana Serna Lasso, Jorge Olmedo Serna Lasso, Eddy Valeria Carabali Lasso, Eddy Valeria Carabali Lasso, Ibeth Karina Correa Fajardo, Coni Estefani Lasso Gonzalias"
+  },
+  "Hacia la raíz": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/hacia-la-raiz/",
+   "_verificado": "cinecorto.co, dirección: María José Garcés Arias",
+   "anio": 2023,
+   "duracion_min": 25,
+   "sinopsis": "Al descubrirse como una ‘negra blanqueada’ María confronta a su padre, en búsqueda de sus raíces afro, emprende un viaje al territorio de sus ancestros así reconstruye las huellas de su pasado y abraza su identidad."
+  },
+  "La tinaja": {
+   "tmdb_id": 1668923,
+   "titulo_original": "La Tinaja",
+   "poster_path": "/air1XOw7h9fKgRq6V7vTAt4WCIB.jpg",
+   "synopsis_es": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos?  Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso.  Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "",
+   "lbSlug": "la-tinaja",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "qaff-2026",
+     "titulo": "La Tinaja",
+     "poster": "/assets/qaff/the-clay-vase.jpg",
+     "lbSlug": "la-tinaja",
+     "sinopsis": "¿Dónde guardamos nuestros recuerdos? ¿Dónde perduran? ¿Cómo los recordamos? Una epifanía disipa el olvido y reconstruye el vínculo entre Esther, la protagonista, y sus ancestros a través del mundo de los sueños, los recuerdos de su madre y la restauración de una vasija de barro heredada. Este cortometraje, creado en el marco de círculos de mujeres, navega de manera íntima, poética y femenina por los momentos de un rito de paso. Inmerso en la cosmovisión palenquera, con la intención de percibir los misterios más que de desvelarlos, esta obra es una ventana sutil a esos sentimientos que crecen entre ciénagas y arroyos."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La tinaja",
+     "poster": "https://image.tmdb.org/t/p/w500/air1XOw7h9fKgRq6V7vTAt4WCIB.jpg",
+     "lbSlug": "la-tinaja",
+     "sinopsis": "¿Dónde guardamos nuestras memorias? ¿Dónde perviven? ¿Cómo las recordamos?  Una epifanía despeja olvidos y repara el vínculo de Esther, la protagonista, con su ancestralidad a través del contacto con el mundo de los sueños, las memorias de su madre y la cura de una tinaja heredada. Gestado de manera grupal, este cortometraje navega de manera íntima y poética, los instantes de un rito de paso.  Sumergido en la cosmovisión palenquera y narrado sin pretensiones de develar los misterios pero sí de percibirlos, esta obra es una ventana al universo de esos sentires que crecen en ciénagas y arroyos."
+    }
+   ]
+  },
+  "Legado": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/legado/",
+   "_verificado": "cinecorto.co, dirección: Zumaya Mayers, Rodrigo Cuervo",
+   "anio": 2024,
+   "duracion_min": 24,
+   "sinopsis": "na serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante."
+  },
+  "Nascemos para semente": {
+   "tmdb_id": 1700918,
+   "titulo_original": "Nascemos para Semente",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Born to Be Seed",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "nascemos-para-semente",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Nascemos para semente"
+  },
+  "Abuelita caza vampiros": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/abuelita-caza-vampiros/",
+   "_verificado": "cinecorto.co, dirección: Mariana Betancourt Chaves",
+   "anio": 2026,
+   "duracion_min": 2,
+   "sinopsis": "En medio de la noche, un vampiro irrumpe en la casa de una abuelita latinoamericana esperando encontrar una presa fácil. En su lugar, se enfrenta a una mujer valiente, dispuesta a pelear por su vida. Con la ayuda inesperada de su fiel pug, la abuelita se envuelve en una batalla bizarra por la supervivencia. Mezclando humor con una atmósfera inquietante, Abuelita Caza Vampiros es una comedia gótica tropical inspirada en memorias familiares, donde el coraje y un toque de lo absurdo transforman una noche común en un enfrentamiento inolvidable."
+  },
+  "Corazón galvánico": {
+   "tmdb_id": 1376037,
+   "titulo_original": "Corazón Galvánico",
+   "poster_path": "/wfamQLJcXInlAxEZ6DtbdIJxNwT.jpg",
+   "synopsis_es": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella.",
+   "synopsis_en": "This is a story set on the future Caribbean coast, which is almost  uninhabitable due to pollution and climate change. Amidst the gloomy landscape of the new world order OHM, we find Ivy, our protagonist, who, after a heartbreaking breakup, is left in a very delicate emotional state.",
+   "genero": "Ciencia ficción",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "title_en": "Galvanic Heart",
+   "lbSlug": "galvanic-heart",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Corazón galvánico",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Corazón galvánico",
+     "poster": "https://image.tmdb.org/t/p/w500/wfamQLJcXInlAxEZ6DtbdIJxNwT.jpg",
+     "lbSlug": "galvanic-heart",
+     "sinopsis": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella."
+    }
+   ]
+  },
+  "decaer": {
+   "tmdb_id": 1668881,
+   "titulo_original": "decaer",
+   "poster_path": "/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+   "synopsis_es": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá.",
+   "synopsis_en": "I am grateful to the Chinese for the invention of gunpowder — it feels as if they made it for me. Its discovery happened by accident, originally conceived as a way to ward off evil spirits. This film begins in China, then moves to an event in Cartagena, and ends centuries later in Bogotá.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia",
+   "title_en": "decay",
+   "lbSlug": "decay-2026",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "decaer",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Decaer",
+     "tmdb_id": 1668881,
+     "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg",
+     "lbSlug": "decay-2026",
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Decaer",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/Captura%20de%20pantalla%202026-04-04%20a%20la%28s%29%203.43.18%20p.m..jpg?itok=SfE8u2Hj"
+    }
+   ]
+  },
+  "Emechiche, El renacer de los cabeciblancos": {
+   "tmdb_id": 1592964,
+   "titulo_original": "Emechiche, El renacer de los cabeciblancos",
+   "poster_path": "/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The Colombian Montes de María are home to the emechiche  (Saguinus oedipus). An endangered species, we will observe their complex relationship with their young and their environment. We will analyse their survival, allowing us to witness their feelings and wild instincts.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia, Argentina",
+   "title_en": "Emechiche, The Rebirth of White-Headed",
+   "lbSlug": "emechiche-the-rebirth-of-white-headed",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Emechiche, El renacer de los cabeciblancos",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Emechiche"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Emechiche, el renacer de los cabeciblancos",
+     "poster": "https://image.tmdb.org/t/p/w500/a6MItsvgkatTwGoBzkPdho4OvU5.jpg",
+     "lbSlug": "emechiche-the-rebirth-of-white-headed"
+    }
+   ]
+  },
+  "La habitación del macho cabrío": {
+   "tmdb_id": 1554728,
+   "titulo_original": "La Habitación del Macho Cabrío",
+   "poster_path": "/xwgOpXWOcYis7A7xx3SyrgTGwyw.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a room isolated from the real world, Juan, a 10-year-old boy, lives with his grandparents. His grandfather has a strange disease that causes him to expel large amounts of matter, and because of this, every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide what is happening from the boy, but one night Juan decides to sneak out and approach the apparitions.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Devil Room",
+   "lbSlug": "the-devil-room",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
+  },
+  "Pudor ante el asalto de los ojos furtivos": {
+   "tmdb_id": 1592968,
+   "titulo_original": "Pudor ante el asalto de los ojos furtivos",
+   "poster_path": "/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Colombia",
+   "title_en": "Shame in the Face of Furtive Eyes",
+   "lbSlug": "shame-in-the-face-of-furtive-eyes",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Pudor ante el asalto de los ojos furtivos",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "tmdb_id": 1592968,
+     "poster": "/assets/cineautopsia/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "poster": "https://image.tmdb.org/t/p/w500/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    }
+   ]
+  },
+  "Sapos por todos lados": {
+   "tmdb_id": 1738917,
+   "titulo_original": "Sapos por todos lados",
+   "poster_path": "/t2zz7zftePUSQBXjDsrtWzAF3CD.jpg",
+   "synopsis_es": "Natalia no encuentra trabajo hasta que un antiguo profesor le ofrece la posibilidad de trabajar con exmiembros de la guerrilla. Esa nueva experiencia la confrontará directamente con sus prejuicios.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "",
+   "lbSlug": "sapos-por-todos-lados",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Sapos por todos lados",
+     "poster": "/assets/ficdeh/sapos-por-todos-lados.jpg",
+     "lbSlug": "sapos-por-todos-lados",
+     "sinopsis": "Natalia no encuentra trabajo hasta que un antiguo profesor le ofrece la posibilidad de trabajar con exmiembros de la guerrilla. Esa nueva experiencia la confrontará directamente con sus prejuicios."
+    }
+   ]
+  },
+  "Tuktu, Padre Maíz": {
+   "tmdb_id": 1592955,
+   "titulo_original": "Tuktu, Padre Maíz",
+   "poster_path": "/qw4zntJUuj163JdkusNUnxHvOwg.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "Tuktu, Father Maize",
+   "lbSlug": "tuktu-father-maize",
+   "_verificado": "declarada a mano: TMDB escribe al director «Mauricio Pietro Muriel» (sic); la web del festival, cinecorto.co y FICDEH, donde ya la publicamos, dicen Mauricio Prieto. Con el candado estricto del 28 sep un nombre de pila no alcanza, y por eso no casa sola. Todo lo demás coincide: título idéntico, 2025 en los dos lados y 13 min en TMDB contra 14 en cinecorto.co.",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "poster": "/assets/ficdeh/tuktu-padre-maiz.jpg",
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño mestizo de 13 años, se ve obligado a huir del monstruo de la guerra. En su travesía, la tierra misma lo protege y, guiado por las voces de sus ancestros, despierta un poder ancestral llamado Tucuna, que le permite transformarse y renacer. Convertido en Tuktu, un Taita de fuerza extraordinaria, comprende que su destino no es solo sobrevivir, sino regresar para sanar la herida de la guerra y sembrar la paz en la tierra que lo vio nacer."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Tuktu, Padre Maíz"
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Tuktu, Padre Maíz",
+     "tmdb_id": 1592955,
+     "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
+     "lbSlug": "tuktu-father-maize",
+     "sinopsis": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra."
+    }
+   ]
+  },
+  "Una vez en un cuerpo": {
+   "tmdb_id": 1522316,
+   "titulo_original": "Una vez en un cuerpo",
+   "poster_path": "/jSAfjuWwP9BLIJgofw1vVa6xWaG.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia, United States of America",
+   "title_en": "Once in a Body",
+   "lbSlug": "once-in-a-body",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una vez en un cuerpo",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Una vez en un cuerpo",
+     "poster": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg",
+     "sinopsis": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg",
+     "lbSlug": "once-in-a-body",
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    }
+   ]
+  },
+  "HDLT Hijo de la Tierra": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/hdlt-hijo-de-la-tierra/",
+   "_verificado": "cinecorto.co, dirección: Colectivo Artefactum Suba",
+   "anio": 2025,
+   "duracion_min": 18,
+   "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices.",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/siembrafest/hdlt.jpg"
+    }
+   ]
+  },
+  "Historias al margen: Martha y Eduardo": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/historias-al-margen-martha-y-eduardo/",
+   "_verificado": "cinecorto.co, dirección: Juan Manuel Figueroa",
+   "anio": 2024,
+   "duracion_min": 18,
+   "sinopsis": "Desde la periferia, hay quienes observan y sostienen la transformación de una ciudad, convirtiéndose en el pilar invisible que evita el colapso de nuestra sociedad moderna. En este contexto conoceremos a Martha y Eduardo, dos adultos mayores cuya labor en el reciclaje en Popayán trasciende las décadas. Han sido testigos silenciosos de los cambios de la ciudad; su sangre y su esfuerzo han recorrido, figurativa y literalmente, cada calle. A través de sus vivencias, marcadas por el rigor de la calle pero iluminadas por sonrisas compartidas, nos invitan a una profunda reflexión: frente a tanta adversidad, ¿cómo han logrado resistir y enseñarnos a sonreír?"
+  },
+  "Murmullos": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/murmullos/",
+   "_verificado": "cinecorto.co, dirección: Maria Camila Acevedo Mejía",
+   "anio": 2025,
+   "duracion_min": 7,
+   "sinopsis": "Zoraida y Paulina son dos hermanas que pasan sus días en la Fundación Albeiro Vargas y Ángeles Custodios, hablando de los chismes de sus compañeros. Una noche su cotidianidad es interrumpida por unos murmullos, así que acuden a la religión para recuperar su tranquilidad."
+  },
+  "Pájaros huérfanos": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/pajaros-huerfanos/",
+   "_verificado": "cinecorto.co, dirección: Leonardo Rafael Montes Pérez",
+   "anio": 2026,
+   "duracion_min": 6,
+   "sinopsis": "Un juego de caza en el bosque termina en un espejo inesperado. Tres hermanos logran abatir a una paloma, solo para descubrir que han dejado un nido de pichones huérfanos. En la fragilidad de esas crías, los niños reviven el trauma de su propio pasado y el vacío que dejó el conflicto en su hogar. Una historia sobre la pérdida, la memoria y el ciclo del dolor que intentan sanar al llevarse consigo aquello que ellos mismos rompieron."
+  },
+  "Un abrir y cerrar de ojos": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/un-abrir-y-cerrar-de-ojos/",
+   "_verificado": "cinecorto.co, dirección: Lia Marcela Correa Teherán",
+   "anio": 2026,
+   "duracion_min": 8,
+   "sinopsis": "Juan, un viejo minero de la comunidad de Varsovia, despierta la mañana después de una tragedia: En el silencio de su cocina y el café derramado sobre la mesa lo enfrentan a la ausencia de su nieto Pedro. Ese gesto mínimo desata una cadena de recuerdos que reconstruyen los días previos."
+  },
+  "Cayenas libertarias": {
+   "tmdb_id": 1737961,
+   "titulo_original": "Cayenas libertarias",
+   "poster_path": "/dQxbmxDq320B08UKcEOHgOkIy4b.jpg",
+   "synopsis_es": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "",
+   "lbSlug": "cayenas-libertarias",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cayenas libertarias",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Cayenas libertarias",
+     "poster": "/assets/ficdeh/bogota-underground-hip-hop.jpg",
+     "lbSlug": "cayenas-libertarias",
+     "sinopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Cayenas libertarias",
+     "poster": "https://image.tmdb.org/t/p/w500/dQxbmxDq320B08UKcEOHgOkIy4b.jpg",
+     "lbSlug": "cayenas-libertarias",
+     "sinopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos, o cantos de trabajo del llano, que durante generaciones fueron interpretados por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición llanera, revelando su relación armónica con la naturaleza y su compleja conexión con el arraigo llanero."
+    }
+   ]
+  },
+  "Como el agua, la piedra y la espuma": {
+   "tmdb_id": 1386237,
+   "titulo_original": "COMO EL AGUA, LA PIEDRA, Y LA ESPUMA",
+   "poster_path": "/llHNn16iMgMm9MQUk1KAF1D9Iso.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A young woman recalls memories of an indigenous person from Nudo de los Pastos, between Ecuador and Colombia, and reflects on the pollution that threatens her land.",
+   "genero": "Documental",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "Colombia",
+   "title_en": "Like water, stone and foam",
+   "lbSlug": "like-water-stone-and-foam",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Como el agua, la piedra y la espuma"
+  },
+  "La despedida del río": {
+   "tmdb_id": 1609572,
+   "titulo_original": "La despedida del río",
+   "poster_path": "/vLfuF29EHorpUsn41GpZrxYQTnd.jpg",
+   "synopsis_es": "Una comunidad de barequeros y pescadores tienen que aprender a vivir en medio de las consecuencias de un proyecto hidroeléctrico que al inundar las playas del río los obligó a levantar un campamento sobre el cañón del Cauca, desde donde observan un mundo mágico que confirma su tragedia y su destino.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia, United Kingdom",
+   "lbSlug": "la-despedida-del-rio",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La despedida del río",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La despedida del río",
+     "poster": "https://image.tmdb.org/t/p/w500/vLfuF29EHorpUsn41GpZrxYQTnd.jpg",
+     "lbSlug": "la-despedida-del-rio",
+     "sinopsis": "Una comunidad de barequeros y pescadores tienen que aprender a vivir en medio de las consecuencias de un proyecto hidroeléctrico que al inundar las playas del río los obligó a levantar un campamento sobre el cañón del Cauca, desde donde observan un mundo mágico que confirma su tragedia y su destino."
+    }
+   ]
+  },
+  "Las tres muertes de un sol": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/las-tres-muertes-de-un-sol/",
+   "_verificado": "cinecorto.co, dirección: Santiago Londoño Gallego – Nicolás Ortega Baquero",
+   "anio": 2025,
+   "duracion_min": 30,
+   "sinopsis": "Las Tres Muertes de un Sol sigue a Yojan, un joven campesino en un viaje introspectivo a través de sus recuerdos y las entrañas de la montaña donde vive. En medio de ruinas, caminos montañosos y ríos, el exuberante paisaje se convierte en un testigo mudo de los azares del destino que han marcado su vida."
+  },
+  "Madres de nacimiento": {
+   "tmdb_id": 1668902,
+   "titulo_original": "Madres de Nacimiento",
+   "poster_path": "/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
+   "synopsis_es": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "madres-de-nacimiento",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Madres de nacimiento",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Madres de Nacimiento",
+     "tmdb_id": 1668902,
+     "poster": "https://image.tmdb.org/t/p/w500/kJreh6iEXQZ3NHaROQb7WJNle7l.jpg",
+     "lbSlug": "madres-de-nacimiento",
+     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Madres de nacimiento",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_MDN_Poster_Blanco_WEB.jpg?itok=OR2_OCi0"
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Madres de nacimiento",
+     "poster": "/assets/ficdeh/madres-de-nacimiento.jpg",
+     "lbSlug": "madres-de-nacimiento",
+     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Madres de nacimiento"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Madres de nacimiento",
+     "tmdb_id": 1668902,
+     "poster": "/assets/jardin-2026/madres-de-nacimiento.jpg",
+     "lbSlug": "madres-de-nacimiento",
+     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad."
+    }
+   ]
+  },
+  "Maravillas de la Evolución": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/maravillas-de-la-evolucion/",
+   "_verificado": "cinecorto.co, dirección: Francisco Antonio Arango Ceballos",
+   "anio": 2025,
+   "duracion_min": 15,
+   "sinopsis": "A través de una perspectiva científica, el film explora las complejas adaptaciones evolutivas de estos insectos, destacando sus extraños diseños y su enigmática forma de comunicación. Además, revela los desafíos que enfrentan, ofreciendo una visión del papel que desempeñan en el equilibrio ecológico y la importancia de conservar su hábitat."
+  },
+  "Mi viche todo el día": {
+   "tmdb_id": 1593596,
+   "titulo_original": "Mi viche todo el día",
+   "poster_path": "/vDrXNUGsIyGRKjRdcsiglCCkvdf.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the Medio Atrato region of Chocó, Ana Panesso and her community grow sugarcane and make viche, an ancestral beverage that was once prohibited but now is in vogue. Through food, river trips, and music, viche and its knowledge not only shape people s daily lives but also raise the question of a just future, where viche serves as food, sustenance, and identity for Black families.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 26,
+   "pais_tmdb": "Colombia",
+   "title_en": "My Daily Viche",
+   "lbSlug": "my-daily-viche",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mi viche todo el día",
+   "_ya_publicada": [
+    {
+     "festival": "qaff-2026",
+     "titulo": "Mi Viche Todo el Día",
+     "poster": "/assets/qaff/mi-viche-todo-el-dia.jpg",
+     "lbSlug": "my-daily-viche",
+     "sinopsis": "En el Medio Atrato chocoano, Ana Panesso y su comunidad cultivan la caña de azúcar y fabrican el viche, bebida ancestral antes prohibida y ahora en boga. A través de la comida, los viajes en río y lamúsica, el viche y sus saberes no sólo configuran el día a día de las personas, sino que también plantea la pregunta por un futuro donde el viche sea alimento, sustento e identidad de las familias negras. Realizador y montajista de cine. Realizó los cortos de vanguardia Junio 25 Andréi Tarkovski visita a su tumba, Teatro eléctrico, Vacans, El soplo de sal. Dirigió el corto de ficción Venus en llamas y el documental Mi viche todo el día. Editor del largo La piel mordida (post), y de los cortos Los hermanos Calavera y Cabeza de torpedo. Desde 2012 codirige Playtime Cineclub, un espacio dedicado a la celebración del cine mundial. En 2022 junto a sus socios funda la productora Vértigo Cine."
+    }
+   ]
+  },
+  "Niña Chilapa": {
+   "tmdb_id": 1456186,
+   "titulo_original": "Niña chilapa",
+   "poster_path": "/AjNWPyDDpMsn1Q5nH111jtRGKZN.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sometimes one, orphaned of one's own lungs, feels that one is drowning.  One suddenly remembers the body, breathes again, and begins to laugh. To laugh very hard. To run around the corners of the world breathing and laughing. Yulieth talks to her mother. She dances. She floats on the water. She laughs.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia",
+   "title_en": "Chilapa Girl",
+   "lbSlug": "chilapa-girl",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Niña Chilapa",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Niña Chilapa",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Nina-Chilapa-Still-3-scaled.jpg",
+     "sinopsis": "Yulieth es una niña en un momento que mide su relación con el mundo: no es todavía una adolescente pero sus experiencias la hacen sentirse una mujer grande. Ese difícil equilibrio se amplía con el espacio que la rodea: una naturaleza demasiado generosa, tupida y vasta."
+    }
+   ]
+  },
+  "Sombras en la Niebla": {
+   "tmdb_id": 1668876,
+   "titulo_original": "Sombras en la Niebla",
+   "poster_path": "/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+   "synopsis_es": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
+   "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "Colombia",
+   "title_en": "Into the fog",
+   "lbSlug": "into-the-fog-2026",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Sombras en la niebla",
+     "tmdb_id": 1668876,
+     "poster": "https://image.tmdb.org/t/p/w500/36fgDq5bvxmVXUlGHpFZLnogB5K.jpg",
+     "lbSlug": "into-the-fog-2026",
+     "sinopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Sombras en la niebla"
+    }
+   ]
+  },
+  "(El Experimento)": {
+   "tmdb_id": 1270308,
+   "titulo_original": "Diamantes y caracoles (El experimento)",
+   "poster_path": "/uBgs6rt75veSKcY8YShDI0OQCDH.jpg",
+   "synopsis_es": "Una voz infantil y robótica enumera diferentes aventuras junto a sus particulares mascotas: caracoles. Como si se tratara de un informe científico, lo real y lo fantástico se fusionan en esta historia singular.",
+   "synopsis_en": "A childish and robotic voice lists different adventures together with its particular pets: snails. As if it were a scientific report, the real and the fantastic merge in this unique story.",
+   "genero": "",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia",
+   "title_en": "Diamonds & Snails (The Experiment)",
+   "lbSlug": "diamonds-snails-the-experiment",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "(El Experimento)"
+  },
+  "Animista": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/animista/",
+   "_verificado": "cinecorto.co, dirección: Sebastian Giraldo",
+   "anio": 2026,
+   "duracion_min": 8,
+   "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo."
+  },
+  "Chaika": {
+   "tmdb_id": 1689999,
+   "titulo_original": "Chaika",
+   "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
+   "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "chaika-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Chaika",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "CHAIKA",
+     "tmdb_id": 1689999,
+     "poster": "/assets/cineautopsia/chaika.jpg",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, en la que se le invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero descubre un territorio asolado por una silenciosa crisis agrícola y ambiental; una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se alcanza a discernir: un sistema exhausto que intenta sostener un ideal ya difuso. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se confunden, Valentina busca descubrir si aún es posible alzar el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/fantasofest/corto-chaika.jpg",
+     "lbSlug": "chaika-2026"
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/narrarelfuturo-2026/chaika.jpg",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    }
+   ]
+  },
+  "El patio de la infancia": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/el-patio-de-la-infancia/",
+   "_verificado": "cinecorto.co, dirección: Cecilia Traslaviña",
+   "anio": 2025,
+   "duracion_min": 14,
+   "sinopsis": "Una mujer reflexiona sobre el significado de la infancia a partir de los archivos de una película incompleta que recibe. Los personajes son unas muñecas de cerámica únicas que cobran vida a su paso. ¿Es la infancia una ficción colectiva?"
+  },
+  "Filme Pin": {
+   "tmdb_id": 1616856,
+   "titulo_original": "Filme Pin",
+   "poster_path": "/4nXy9clHHvJYkpdmuEQytHRKFqG.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Between light, metal and silver, a collection of solidarity pins turns into an archive of another scale: spectres of exile and international struggle against Portugal’s fascist and colonial regime.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "Colombia, Portugal",
+   "lbSlug": "filme-pin",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Filme Pin",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Filme Pin",
+     "tmdb_id": 1616856,
+     "poster": "/assets/cineautopsia/filme-pin.jpg",
+     "lbSlug": "filme-pin",
+     "sinopsis": "Entre luz, metal y plata, Filme Pin transforma una colección de pines solidarios en un archivo a otra escala: espectros del exilio y de la lucha internacional contra el régimen fascista y colonial de Portugal."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "Filme Pin",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_POSTER-FILME-PIN-2026%20-%20La%20Vulcanizadora.jpg?itok=qrKWWtjf"
+    }
+   ]
+  },
+  "La Europa": {
+   "tmdb_id": 1456264,
+   "titulo_original": "La Europa",
+   "poster_path": "/pxCKt70n1FtUug8GW9h01eYz8l.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Andrés Narváez, Colombian social leader, music minstrel and empirical poet, returns to the Montes de María after his exile in Spain, following an attempt on his life in which he was shot four times.  His time in Asturias and the melancholy of a forced migration inspired him to compose several of his best known songs, connecting through song the two Europes: the one he left and the one that welcomed him.  Upon his return, with the violence still latent, Andrés delves into the deepest landscapes of his territory and the most painful memories that the war left behind, composing in memory of those who no longer walk with him; music saved him and that is why he decided that 'it is better to sing than to point out'.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 21,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Europe",
+   "lbSlug": "the-europe",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La Europa",
+     "poster": "https://image.tmdb.org/t/p/w500/pxCKt70n1FtUug8GW9h01eYz8l.jpg",
+     "lbSlug": "the-europe"
+    }
+   ]
+  },
+  "La rebelión de un fantasma": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/la-rebelion-de-un-fantasma/",
+   "_verificado": "cinecorto.co, dirección: Flora Rodríguez",
+   "anio": 2026,
+   "duracion_min": 15,
+   "sinopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico."
+  },
+  "Sirena mecánica": {
+   "tmdb_id": 1668871,
+   "titulo_original": "Sirena Mecánica",
+   "poster_path": "/2Dga5Ik6s799QoPz2A5LIoY3a90.jpg",
+   "synopsis_es": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "sirena-mecanica",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Sirena mecánica",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Sirena mecánica",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-23%20205043.png?itok=BR7oyf-o"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Sirena mecánica",
+     "tmdb_id": 1668871,
+     "poster": "/assets/jardin-2026/sirena-mecanica.jpg",
+     "lbSlug": "sirena-mecanica",
+     "sinopsis": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia."
+    }
+   ]
+  },
+  "Soñar una serpiente": {
+   "tmdb_id": 1538892,
+   "titulo_original": "Soñar una serpiente",
+   "poster_path": "/qvg7VroCDGk04G8kuWbnD4dWV32.jpg",
+   "synopsis_es": "Una bióloga forense que ha pasado su vida entre fósiles y vitrinas de museos encuentra una foto que lo cambia todo: es su madre, joven, sosteniendo la mirada de una serpiente con una intensidad casi ritual. A partir de ese momento, los reptiles comienzan a infiltrarse en su vida de maneras que no puede ni quiere explicar.",
+   "synopsis_en": "A taxidermist finds a strange old photograph of her mother with a serpent that will alter her instincts and sensibilities in unpredictable ways.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia",
+   "title_en": "Dreaming a Serpent",
+   "lbSlug": "dreaming-a-serpent",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Soñar una serpiente",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Soñar una serpiente",
+     "poster": "https://cinemanciafestival.com/wp-content/uploads/2025/08/Sonar-una-serpiente1.png",
+     "sinopsis": "Una bióloga forense que ha pasado su vida entre fósiles y vitrinas de museo encuentra una foto que lo cambia todo: es su madre, joven, sosteniendo la mirada de una serpiente con una intensidad casi ritual. A partir de ese momento, los reptiles comienzan a infiltrarse en su vida."
+    }
+   ]
+  },
+  "Una noche en la montaña escuché una luz rugir": {
+   "tmdb_id": 1456181,
+   "titulo_original": "Una noche en la montaña escuché una luz rugir",
+   "poster_path": "/6trLIuV6WhtG0mRfMvXAq1elhHe.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "There is nothing beyond the material search for mystery. Mystery exists made matter, and in this case, made light. Two young people meet in the middle of a mountain after dying. It seems that from their urban past there is still the flicker of colors strange to the vegetable as if it attracted them; it made them get caught and merge with luminous presences that emerge from the mountain and call to it, giving notice to a path that is heard when seeing the light.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "title_en": "A Night in the Mountains I heard a Light Roar",
+   "lbSlug": "a-night-in-the-mountains-i-heard-a-light",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
+  },
+  "Akababuru: Expresión de asombro": {
+   "tmdb_id": 1418533,
+   "titulo_original": "Akababuru: Expresión de asombro",
+   "poster_path": "/bA8KrWe46yXs1J5VwL9ucSJrQHZ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "akababuru-expresion-de-asombro",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Akababuru: Expresión de asombro",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Akababuru: Expresión de asombro",
+     "poster": "https://admin.alternativa.film/uploads/AKABABURU_POSTER_laura_giraldo_9666ac856d.jpg"
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Akababuru: Expresión de asombro",
+     "poster": "/assets/ficdeh/herminda.jpg",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "sinopsis": "Kari es una niña indígena emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa."
+    }
+   ]
+  },
+  "Yakuwasi: La Casa del Agua": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/yakuwasi-la-casa-del-agua/",
+   "_verificado": "cinecorto.co, dirección: Faisal Tisnés",
+   "anio": 2025,
+   "duracion_min": 15,
+   "sinopsis": "Desde el Macizo Colombiano, útero de la Madre Tierra, dentro del Resguardo de Papallaqta de la Nación Indígena Yanakuna, este corto documental explora un territorio donde lagunas y manantiales sagrados dan origen a los ríos más importantes de Colombia."
+  },
+  "Cascabeles": {
+   "tmdb_id": 1187808,
+   "titulo_original": "Cascabeles",
+   "poster_path": "/5s5KXxJkQRAJsnpkt9LdQFQM3gK.jpg",
+   "synopsis_es": "Emma es una niña valiente de 7 años que guarda un importante secreto: le teme a la oscuridad; para ella, allí sus miedos cobran vida. Cuando su abuelo Augusto –un hombre ciego y sabio– descubre su secreto, trama un ingenioso plan para impulsarla a enfrentar sus temores, tejiendo un emotivo vínculo intergeneracional a través del cual Emma explora el poder que se consigue al enfrentar los miedos.",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "cascabeles",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cascabeles"
+  },
+  "Color piel": {
+   "tmdb_id": 1493530,
+   "titulo_original": "Color piel",
+   "poster_path": "/pnYcOPQ8IckxVpWbtDj2BsAelyP.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Bogotá, 1996. Luis Fernando, a 9-year-old Afro-Colombian boy, will face a serious mistake in the adult world, when in class he confirms that the pinkish color in his pencil case, called “skin color”, does not correspond to the color of his skin.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Colombia",
+   "title_en": "Skin Color",
+   "lbSlug": "skin-color",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
+  },
+  "Dientes de yuca": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/dientes-de-yuca/",
+   "_verificado": "cinecorto.co, dirección: YURIETH ROMERO VELASQUEZ",
+   "anio": 2025,
+   "duracion_min": 14,
+   "sinopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto."
+  },
+  "Gris": {
+   "tmdb_id": 1490328,
+   "titulo_original": "Gris",
+   "poster_path": "/cby63kRIy7WIVWTWZNwZfXTQYli.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sofía, a curious and imaginative young girl, faces challenges at school as she begins to navigate the complexities of her mixed-race identity. As her art springs to life through vibrant and whimsical animations, the story delves into Sofia’s journey of self-discovery, capturing her confusion, resilience, and profound lessons about belonging. Sofia learns to embrace the shades that define her, blending love, culture, and individuality into a unique narrative.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "gris-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Gris",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Gris",
+     "poster": "https://admin.alternativa.film/uploads/Gris_Poster_Eng_Loren_Escandon_62e9c1d610.jpg"
+    }
+   ]
+  },
+  "La Gran Hazaña": {
+   "tmdb_id": 1494003,
+   "titulo_original": "La gran hazaña",
+   "poster_path": "/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Great Feat",
+   "lbSlug": "the-great-feat",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La Gran Hazaña",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La gran hazaña",
+     "poster": "/assets/ficdeh/la-gran-hazana.jpg",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La gran hazaña"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La gran hazaña",
+     "poster": "https://image.tmdb.org/t/p/w500/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    }
+   ]
+  },
+  "La guerra de los tomates": {
+   "tmdb_id": 1753830,
+   "titulo_original": "La guerra de los tomates",
+   "poster_path": "/779prgLmt5WC2aHHHZtoUX6Mfzd.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Two groups of local and migrant children will represent the neighborhood in a tournament, an idea that will spark a tomato fight; a charismatic girl will bring out the best in everyone as she tries to unite an unlikely team against an unexpected rival.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-guerra-de-los-tomates",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
+  },
+  "Los pliegues de la Falda": {
+   "tmdb_id": 1738777,
+   "titulo_original": "Los pliegues de la falda",
+   "poster_path": "/bJGWAlMlzNhfG4XlsMfdbvsspo8.jpg",
+   "synopsis_es": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "los-pliegues-de-la-falda",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Los pliegues de la falda",
+     "poster": "/assets/ficdeh/los-pliegues-de-la-falda.jpg",
+     "lbSlug": "los-pliegues-de-la-falda",
+     "sinopsis": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente."
+    }
+   ]
+  },
+  "Luis Antonio": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/luis-antonio/",
+   "_verificado": "cinecorto.co, dirección: Juan José Arias Gil",
+   "anio": 2025,
+   "duracion_min": 12,
+   "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
+  },
+  "1 Hijo & 1 Padre": {
+   "tmdb_id": 1316517,
+   "titulo_original": "1 hijo & 1 padre",
+   "poster_path": "/xV82AJimqCM1v4V2dM6tQyO7tFF.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The story follows Kevin, a young man classified as problematic due to his inability to control his impulses. After an incident, Kevin must attend therapy for teenagers, but his father refuses to accompany him. Don Andrés, his stepfather, assumes the role of companion, revealing a relationship that is more fraternal than paternal.",
+   "genero": "Comedia",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "France, Colombia",
+   "title_en": "A Son & a Father",
+   "lbSlug": "a-son-a-father",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "1 Hijo & 1 Padre"
+  },
+  "Camino al cielo": {
+   "tmdb_id": 1463422,
+   "titulo_original": "Camino al cielo",
+   "poster_path": "/daz7porQkisJmPmsE2zyprdInrZ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In the middle of the banana-growing area of Urabá, Mairen, an Afro woman, eight months pregnant, goes into labor in an unpopulated area. Although her health is in danger, Mairen, resigned, lies down in a tree to await her fate.",
+   "genero": "Drama",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Way to heaven",
+   "lbSlug": "way-to-heaven-2024",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Camino al cielo"
+  },
+  "El odio del padre": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/el-odio-del-padre/",
+   "_verificado": "cinecorto.co, dirección: Rodrigo Mora Yepes",
+   "anio": 2026,
+   "duracion_min": 14
+  },
+  "El Segundo": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/el-segundo/",
+   "_verificado": "cinecorto.co, dirección: Pedro Miguel Rozo",
+   "anio": 2025,
+   "duracion_min": 22,
+   "sinopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones"
+  },
+  "Gladiolos": {
+   "tmdb_id": 898817,
+   "titulo_original": "Gladiolos",
+   "poster_path": "/hPcSDRpwapMHGFdi6dJ6pPLQAPf.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Waldina, the flowers seller of the little town of Arcabuco, has died. Her son Humberto arrives from the big city and decides to make the last delivery of flowers to her clients without knowing that in one of that doors could find his happiness.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "gladiolos",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Gladiolos",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Gladiolos",
+     "poster": "https://image.tmdb.org/t/p/w500/hPcSDRpwapMHGFdi6dJ6pPLQAPf.jpg",
+     "lbSlug": "gladiolos"
+    }
+   ]
+  },
+  "La Mona": {
+   "tmdb_id": 1444298,
+   "titulo_original": "La Mona",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Heat Wave",
+   "lbSlug": "heat-wave-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La Mona",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La Mona"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "La Mona",
+     "tmdb_id": 1444298,
+     "poster": "/assets/jardin-2026/la-mona.jpg",
+     "lbSlug": "heat-wave-2025",
+     "sinopsis": "La Mona está dispuesta a cualquier sacrificio para garantizar su autoridad en La Hondura, aunque el precio que pague sea la soledad."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La mona",
+     "poster": "/assets/siembrafest/la-mona.jpg",
+     "lbSlug": "heat-wave-2025"
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "La Mona",
+     "tmdb_id": 1444298,
+     "poster": "/assets/villadelcine-2026/la-mona.jpg",
+     "lbSlug": "heat-wave-2025",
+     "sinopsis": "Entre el polvo y el calor se encuentra La Hondura, un pueblo olvidado, donde la tensión se siente como electricidad en el aire. Allí, La Mona, una paramilitar, impone el orden. Sin embargo, no puede dominar la naturaleza de su cuerpo y la menstruación la doblega hasta el punto de postrarla en la cama."
+    }
+   ]
+  },
+  "Las Faldas de Tu Prima": {
+   "tmdb_id": 1542363,
+   "titulo_original": "Las Faldas De Tu Prima",
+   "poster_path": "/fyyxFtaZCBWq4Uq4K7W9Sl7nsVR.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Simón and Gabo, two 17-year-old best friends, spend the summer with Sam, Gabo's older cousin, an anxious college student seeking to escape her thesis work. They will confront love, friendship, and a malicious giant robot.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 25,
+   "pais_tmdb": "Colombia",
+   "title_en": "Your Cousin's Skirts",
+   "lbSlug": "your-cousins-skirts",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Las Faldas de Tu Prima"
+  },
+  "Las piedras del río": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/las-piedras-del-rio/",
+   "_verificado": "cinecorto.co, dirección: Edna Sierra",
+   "anio": 2026,
+   "duracion_min": 16,
+   "sinopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Las piedras del río",
+     "poster": "/assets/siembrafest/las-piedras-del-rio.jpg"
+    }
+   ]
+  },
+  "Los Huyentes": {
+   "tmdb_id": 1564433,
+   "titulo_original": "Los Huyentes",
+   "poster_path": "/t6b5vL5RKecCo22aKCf0FaOZdak.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Between dream and reality, two close friends try to deal with sadness and a sense of emptiness by reliving the same idyllic afternoon over and over again... or perhaps the same dream.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "los-huyentes",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar"
+  },
+  "Más allá": {
+   "tmdb_id": 1488751,
+   "titulo_original": "Más Allá",
+   "poster_path": "/1F7ck0bVWovhSlRqco5RePKQJZt.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "title_en": "Beyond",
+   "lbSlug": "beyond-2025",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Más allá",
+     "poster": "/assets/ficdeh/pasta-negra.jpg",
+     "lbSlug": "beyond-2025",
+     "sinopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana se ve obligada a abandonar su infancia para sobrevivir. Zuli empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes descubre un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez."
+    }
+   ]
+  },
+  "Suite intercontinental": {
+   "tmdb_id": 1668898,
+   "titulo_original": "Suite Intercontinental",
+   "poster_path": "/i3bnvcq3Ms4E5ZW6Tp0Y9HjL9zo.jpg",
+   "synopsis_es": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, envuelta en tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo lo que la rodea. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, con el pecho desnudo y los ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo.",
+   "synopsis_en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "",
+   "lbSlug": "suite-intercontinental",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Suite intercontinental",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Suite intercontinental",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Capture_decran_2025-05-28_a_15.57.26%20-%20Marianna%20Manili.jpg?itok=alqasZXz"
+    }
+   ]
+  },
+  "Todos los días": {
+   "tmdb_id": 1738004,
+   "titulo_original": "Todos los días",
+   "poster_path": "/8Dq9Iu4y8ToT5fdnav0bNAhV32O.jpg",
+   "synopsis_es": "Ramiro es despedido del trabajo al que perteneció gran parte de su vida. En medio de su nueva y solitaria libertad conoce a tres desocupados como él, que se reúnen para matar el tiempo y hacerse compañía mientras fantasean con vengarse de sus antiguos empleadores y buscan, un pequeño triunfo a la vez, ser felices. Cada día, todos los días.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "todos-los-dias",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Todos los días",
+     "poster": "/assets/ficdeh/color-piel.jpg",
+     "lbSlug": "todos-los-dias",
+     "sinopsis": "Ramiro es despedido del trabajo al que perteneció gran parte de su vida. En medio de su nueva y solitaria libertad conoce a tres desocupados como él, que se reúnen para matar el tiempo y hacerse compañía mientras fantasean con vengarse de sus antiguos empleadores y buscan, un pequeño triunfo a la vez, ser felices. Cada día, todos los días."
+    }
+   ]
+  },
+  "Cielo Roto": {
+   "tmdb_id": 1190241,
+   "titulo_original": "Cielo Roto",
+   "poster_path": "/pkzCFj7EulreJdMHjmqnayJgAef.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "The last earthquake that struck Popayán in 1983 not only destroyed the Colombian city itself, but left lasting scars on the lives of its men and women that have been inherited by younger generations. Friends María José and Alejandra deal with the traumas of the past and the pain in their own way – through sunsets, art, poetry and cinema itself.",
+   "genero": "Documental",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "Colombia",
+   "title_en": "Broken Sky",
+   "lbSlug": "broken-sky-2023",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cielo Roto"
+  },
+  "Crudo": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/crudo/",
+   "_verificado": "cinecorto.co, dirección: Álvaro Ruiz Velasco",
+   "anio": 2023,
+   "duracion_min": 7,
+   "sinopsis": "Tras ser desplazada por la violencia, Edelmira acaba trabajando como empleada doméstica para el grupo armado que la desplazó. Esta situación será la oportunidad para Edelmira de redimirse o vengarse."
+  },
+  "La asociación": {
+   "tmdb_id": 1663705,
+   "titulo_original": "La Asociación",
+   "poster_path": "/n27jihE6w5jSqeKoaXWprB1FdCR.jpg",
+   "synopsis_es": "En las altas montañas del imponente y vital Macizo Colombiano, mujeres indígenas y campesinas se unieron junto a su comunidad para enfrentar con alegría y valentía a las multinacionales del comercio lechero en Colombia, y lograr entre la neblina y el conflicto armado que transita a diario por estos territorios, una unión de fuerzas y convicciones para superar la explotación y las injusticias de estas empresas lecheras. Toda la comunidad en el resguardo indígena de Pancitara participa en este documental para mostrarle al mundo desde paramos y cerros como es asociarse para construir un mundo desde sus propias economías.",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-asociacion",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La asociación"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La Asociación",
+     "poster": "https://image.tmdb.org/t/p/w500/n27jihE6w5jSqeKoaXWprB1FdCR.jpg",
+     "lbSlug": "la-asociacion"
+    }
+   ]
+  },
+  "La Volqueta": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/la-volqueta/",
+   "_verificado": "cinecorto.co, dirección: Wiston Fernández Madriñan",
+   "anio": 2024,
+   "duracion_min": 15,
+   "sinopsis": "En un cambuche a la orilla de un lago, Jeison, un hombre joven y pobre, vive junto a su hijo Messi. Jeison, a pesar de su vida dura, y que diariamente está marcada a través de una lucha por sobrevivir; trabajando duro bajo el sol, recogiendo arena para una volqueta con el fin de ganar un poco de dinero, se esfuerza por cuidar y alegrar a su hijo. Messi, sueña con una volqueta de juguete, pero su padre no puede permitírselo. Haciendo que Jeison tome una difícil decisión para poder darle a Messi un futuro mejor."
+  },
+  "Mañanitas": {
+   "tmdb_id": 1395206,
+   "titulo_original": "Mañanitas",
+   "poster_path": "/m0wDREI7TZAYiqodr6emNTZH7c9.jpg",
+   "synopsis_es": "Mañanitas cuenta la historia de Santiago, un niño de 12 años que se siente ingenuamente atraído por el cuerpo desnudo de Ángela, su prima mayor. Este tímido despertar sexual continúa con un encuentro confuso con otra persona.",
+   "synopsis_en": "Mañanitas tells the story of Santiago, a 12-year-old boy who is naively attracted to the naked body of Ángela, his older cousin. This timid sexual awakening continues with a confusing encounter with another person.",
+   "genero": "Drama",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "mananitas",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mañanitas"
+  },
+  "Tunesmith - Forjador de Notas": {
+   "_fuente": "cinecorto",
+   "_cinecorto": "https://cinecorto.co/tunesmith-forjador-de-notas/",
+   "_verificado": "cinecorto.co, dirección: Jordy Marin",
+   "anio": 2025,
+   "duracion_min": 26,
+   "sinopsis": "En la pintoresca ciudad de Popayán, Colombia, donde el encanto colonial se encuentra con el valle de Pubenza, vive Gus—un herrero rudo, moldeado por el trabajo, con manos de hierro y un corazón de oro."
+  }
+ },
+ "sin_ficha": [
+  "Diente X Diente",
+  "El sincretismo del agua",
+  "Juan PorOcho",
+  "Negret: Génesis de una metamorfósis",
+  "Sangre",
+  "Tabanoka Otjenayá",
+  "Tentado de difunto",
+  "Un viernes",
+  "Vivenciando lo Hilos de Vida del Tejido de Sabidurías y Conocimientos de la Educación Propia",
+  "Yo soy yo"
+ ]
+}
