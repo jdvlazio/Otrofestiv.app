@@ -5201,6 +5201,11 @@ try:
     def _recorrer(nodo, ruta, archivo):
         if isinstance(nodo, dict):
             for k, v in nodo.items():
+                # `_ya_publicada` son REFERENCIAS a la misma obra en otros
+                # festivales (lib.ya_publicada): que repitan su tmdb_id es el
+                # punto, no un cruce equivocado (29 sep 2026).
+                if k == '_ya_publicada':
+                    continue
                 _recorrer(v, f'{ruta}.{k}', archivo)
         elif isinstance(nodo, list) and nodo and isinstance(nodo[0], dict):
             for idk in _IDS:

@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @girardotaescultura — el carrusel de programación (5 láminas)",
-  "capturado": "2026-09-27",
+  "capturado": "2026-09-29",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Los nueve lugares con el nombre que imprime la lámina, tal cual. Ninguna lámina da dirección.",
@@ -650,6 +650,8 @@
    "title": "Competencia oficial de cortometrajes",
    "type": "film",
    "section": "🎬 Proyecciones",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "90 min",
    "day": "2026-10-03",
    "time": "18:00",
@@ -659,7 +661,151 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Los Años del Conejo",
+     "director": "Raquel Tamayo Gutiérrez",
+     "poster": "/assets/girardota-2026/los-anos-del-conejo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-years-of-the-rabbit",
+     "tmdb_id": 1617929,
+     "synopsis": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre.",
+     "synopsis_en": "I remember very little from those years: the years of the rabbit. My favorite animal, my favorite color, the mountain in front of my house, my friends’ faces, the games with my sisters. Leaving my life in Mexico like that erased my memory. I color in these memories as an attempt to gather them. Forever.",
+     "title_en": "The Years of the rabbit",
+     "genre": "Documental",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Elementales",
+     "director": "Camilo Botero Jaramillo",
+     "poster": "/assets/jardin-2026/elementales.jpg",
+     "synopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
+     "posterSource": "oficial",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Mantener la Democracia Maestro",
+     "director": "Jhon Fredy Machado Tuberquia"
+    },
+    {
+     "title": "Maricones",
+     "director": "Maria Paz Ruiz González",
+     "poster": "/assets/girardota-2026/maricones.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "maricones",
+     "tmdb_id": 1756766,
+     "synopsis": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes Queer que, al habitar distintos espacios, enfrentan prejuicios sociales que intentan limitar su forma de ser. Esta tensión los confronta con su proceso identitario y los lleva a cuestionar la necesidad de validación externa. Así, deciden usar la moda y sus cuerpos como herramienta para expresar y construir su identidad como un proceso de constante fluidez, libre y sin etiquetas.",
+     "synopsis_en": "Since they were little, Ginger and Louie knew they were different. Two young Queers who, living in different spaces, face social prejudices that try to limit their way of being. This tension confronts them with their identity process and leads them to question the need for external validation. Thus, they decide to use fashion and their bodies as a tool to express and build their identity as a process of constant fluidity, free and without labels.",
+     "genre": "Documental",
+     "year": 2026,
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Archivo no Encontrado",
+     "director": "Mariangel de la Rosa Contreras",
+     "poster": "/assets/girardota-2026/archivo-no-encontrado.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "file-not-found-2026",
+     "tmdb_id": 1754668,
+     "synopsis_en": "What weight do the images hold, the ones whose stories we’ve all forgotten? I am the image of myself I can’t recall, a place where my identity cannot rest and my soul cannot stay. Like a couple of blurry photos that don’t fully belong to me, even when there is proof that I was here.",
+     "title_en": "File not found",
+     "genre": "Documental",
+     "country": "Colombia",
+     "year": 2026,
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "En Todo y en Nada",
+     "director": "Raquel Zapata Ospina",
+     "poster": "/assets/jardin-2026/en-todo-y-en-nada.jpg",
+     "synopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer.",
+     "posterSource": "oficial",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Bajo el Último Aliento",
+     "director": "Pedro Valencia"
+    },
+    {
+     "title": "La Rata",
+     "director": "Santiago Londoño Vélez"
+    },
+    {
+     "title": "Maleza",
+     "director": "Nicolle Estrada Díaz",
+     "poster": "/assets/villadelcine-2026/maleza.jpg",
+     "synopsis": "Guiada por el espíritu de su gato fallecido, una sanadora y partera solitaria, dedicada a preservar la vida, sufre una profunda conmoción interior cuando una joven desesperada llega a su puerta. Durante una noche de cruda confrontación y dolor, Alba comprende que ayudar a alguien significa caminar a su lado, no tomar decisiones por esa persona.",
+     "posterSource": "oficial",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Carola",
+     "director": "Violeta Barrios",
+     "tmdb_id": 1497688,
+     "synopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Refracción",
+     "director": "Isabella Palacio Mesa",
+     "poster": "/assets/girardota-2026/refraccion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "refraccion",
+     "tmdb_id": 1584776,
+     "synopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+     "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+     "genre": "Drama",
+     "country": "Colombia",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Hambre",
+     "director": "Manuela Bedoya Carvajal"
+    },
+    {
+     "title": "Armonía de la Entropía",
+     "director": "Alexander Ladino Giraldo"
+    },
+    {
+     "title": "Deus Ex Necro Machina",
+     "director": "Mateo Montoya Correa",
+     "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
+     "synopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa.",
+     "posterSource": "oficial",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "De lo Oculto",
+     "director": "Daniel Rúa"
+    },
+    {
+     "title": "La Rebelión de un Fantasma",
+     "director": "Flora Rodríguez"
+    },
+    {
+     "title": "Idilio",
+     "director": "Andrés Felipe Giraldo Guisao"
+    },
+    {
+     "title": "Maldito Sentimiento",
+     "director": "Leidy Vanegas Bolemos"
+    },
+    {
+     "title": "PARE",
+     "director": "Santiago Salazar Quintana"
+    },
+    {
+     "title": "Hábitat Venus",
+     "director": "Sofía Rueda Férez"
+    }
+   ]
   },
   {
    "title": "El baile de la muerte",
@@ -803,7 +949,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-27T19:55:14",
+  "fecha": "2026-09-29T06:18:56",
   "plan_sha": "61702b7f236df64e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py girardota-2026"

@@ -71,6 +71,53 @@ INVITADOS_EN_EL_ROTULO = {
 #     lámina anterior con ese año.
 ANIO_ERRATA = {'El libro de Lila': 2017}
 
+# ── LA COMPETENCIA OFICIAL: qué cortos van en la función del sábado ─────────
+# Tres carruseles del 28 sep (uno por categoría), que el festival publicó
+# después de la programación: 20 cortos. Los tres pies dicen «Sábado 3 de
+# octubre a las 6 p. m. en el Parque Principal»: van en la función
+# «Competencia oficial de cortometrajes», que hasta hoy salía sin obras.
+# Títulos y direcciones pintados en las láminas; la OCR los confirma abajo.
+COMPETENCIA = 'Competencia oficial de cortometrajes'
+COMP_OJOS = f'{REPO}/fuentes/girardota-2026-competencia-ojos.json'
+COMP_OCR = f'{REPO}/fuentes/girardota-2026-competencia-ocr.json'
+
+# LA DIRECCIÓN QUE LA LÁMINA IMPRIME MAL, con su prueba. No se corrige a ojo:
+# cada una nombra la fuente que la contradice.
+#   · «Los Años del Conejo» sale acreditado a Juan José Arias Gil, que dirige
+#     «Luis Antonio» (Popayán). La obra es de Raquel Tamayo Gutiérrez: TMDB
+#     1617929, y así la publicamos en Jardín y en CineAutopsia; el fotograma de
+#     la lámina es el mismo conejo que Jardín usó para su premio del público.
+#   · «La Rebelión de un Fantasma» sale acreditado a «Andrés Muñoz». La web del
+#     Festival de Cine Corto de Popayán la da «dirigido por Flora Rodríguez y
+#     producido por Andrés Muñoz Escobar»: la lámina nombra al productor.
+DIRECTOR_ERRATA = {
+    'Los Años del Conejo': 'Raquel Tamayo Gutiérrez',
+    'La Rebelión de un Fantasma': 'Flora Rodríguez',
+}
+
+
+def obras_competencia():
+    """Los 20 cortos, cada título y dirección confirmados por la OCR de SU lámina."""
+    d = json.load(io.open(COMP_OJOS, encoding='utf-8'))
+    ocr_ = json.load(io.open(COMP_OCR, encoding='utf-8'))
+    fallos, obras = [], []
+    for cat, c in d['categorias'].items():
+        for o in c['obras']:
+            txt = plano(' '.join(b['t'] for b in ocr_.get(f'{c["post"]}/{o["lamina"]:02d}.jpg', [])))
+            w = set(txt.split())
+            for campo in ('titulo', 'director'):
+                faltan = [x for x in plano(o[campo]).split() if len(x) >= 4 and x not in w]
+                if faltan:
+                    fallos.append(f'«{o["titulo"]}»: la OCR no encuentra {faltan} ({campo}) en {c["post"]}/{o["lamina"]:02d}')
+            r = {'titulo': o['titulo'], 'director': DIRECTOR_ERRATA.get(o['titulo'], o['director']),
+                 'categoria': cat}
+            if o['titulo'] in DIRECTOR_ERRATA:
+                r['_director_lamina'] = o['director']
+            obras.append(r)
+    if fallos:
+        sys.exit('✗ la competencia y la OCR no coinciden:\n  · ' + '\n  · '.join(fallos))
+    return obras
+
 # ── 2 · LAS SEDES, en tabla ────────────────────────────────────────────────
 # El nombre que imprime la lámina, tal cual. Ninguna lámina da direcciones.
 SEDES = {
@@ -214,6 +261,8 @@ def main():
         if f.get('credito'):
             c = f['credito'].strip()
             reg['sinopsis'] = c if c.endswith('.') else c + '.'
+        if reg['titulo'] == COMPETENCIA:
+            reg['obras'] = obras_competencia()
         funciones.append(reg)
 
     duracion_de_actividades(funciones)

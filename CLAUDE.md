@@ -92,7 +92,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `ficdeh2026` | FICDEH | Colombia | 12–19 AGO | Archivado |
 | `finca2026` | FINCA | Buenos Aires | 12–19 AGO | Archivado |
 | `cinemancia2026` | Cinemancia | Valle de Aburrá | 3–12 SEP | Recién terminado |
-| `cineautopsia2026` | CineAutopsia | Bogotá | 21–29 AGO | Recién terminado |
+| `cineautopsia2026` | CineAutopsia | Bogotá | 21–29 AGO | Archivado |
 | `vartex2026` | Vartex | Medellín | 19–22 AGO | Archivado |
 | `qaff2026` |  |  |  | desconocido |
 | `tiff2026` | TIFF | Toronto | 10–20 SEP | Recién terminado |
