@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-26"
+  "capturado": "2026-09-28"
  },
  "_origen": "fantasmagoria-2026-catalogo.json",
  "obras": [
@@ -371,7 +371,30 @@
    "pais_tmdb": "Colombia",
    "lbSlug": "que-el-cielo-nos-perdone",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Que El Cielo Nos Perdone"
+   "_busqueda": "Que El Cielo Nos Perdone",
+   "_ya_publicada": [
+    {
+     "festival": "ficma-2026",
+     "titulo": "Que el cielo nos perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/ficma/que-el-cielo-nos-perdone.jpg",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Que el cielo nos perdone",
+     "poster": "https://image.tmdb.org/t/p/w500/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Que el cielo nos perdone",
+     "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
+     "sinopsis": "Colombia, 1951: Un par de chulavitas –asesinos pagados por el gobierno– acechan a un sacerdote en la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus víctimas. Pero el horror que encuentran allí es mil veces peor que el dolor que pensaban infligir."
+    }
+   ]
   },
   {
    "titulo": "Line 12",
@@ -417,7 +440,21 @@
    "title_en": "Ballad of Fishes and Birds",
    "lbSlug": "ballad-of-fishes-and-birds",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Balada de Peces y Pájaros"
+   "_busqueda": "Balada de Peces y Pájaros",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Balada de peces y pájaros",
+     "poster": "https://admin.alternativa.film/uploads/BLD_FRAME_5_ALTA_RESOLUCION_Balada_peces_y_pajaros_9ed5500d0a.png"
+    },
+    {
+     "festival": "olhar-2026",
+     "titulo": "Balada de peces y pájaros",
+     "poster": "/4DzqfMptovKV0IHiNc2eG1hXzR5.jpg",
+     "lbSlug": "ballad-of-fishes-and-birds",
+     "sinopsis": "Carlina perdeu o pai no conflito armado colombiano e vive sozinha com a mãe. A dor ainda é avassaladora, e ambas se apegam às suas memórias e objetos pessoais para sobreviver. Tudo muda com o aparecimento de um peixe místico que será o guia de Carlina durante sua aventura."
+    }
+   ]
   },
   {
    "titulo": "La Habitación del Macho Cabrío",
@@ -498,6 +535,16 @@
    "_busqueda": "Bestias de la Muerte"
   },
   {
+   "titulo": "Quazar",
+   "_ya_publicada": [
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Quazar",
+     "sinopsis": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial."
+    }
+   ]
+  },
+  {
    "titulo": "Mucura",
    "tmdb_id": 1774280,
    "titulo_original": "Mucura",
@@ -540,7 +587,31 @@
    "pais_tmdb": "",
    "lbSlug": "chaika-2025",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Chaika"
+   "_busqueda": "Chaika",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "CHAIKA",
+     "tmdb_id": 1689999,
+     "poster": "/assets/cineautopsia/chaika.jpg",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, en la que se le invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero descubre un territorio asolado por una silenciosa crisis agrícola y ambiental; una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se alcanza a discernir: un sistema exhausto que intenta sostener un ideal ya difuso. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se confunden, Valentina busca descubrir si aún es posible alzar el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/fantasofest/corto-chaika.jpg",
+     "lbSlug": "chaika-2026"
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/narrarelfuturo-2026/chaika.jpg",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    }
+   ]
   },
   {
    "titulo": "No Vacancy",
@@ -558,6 +629,16 @@
    "_busqueda": "No Vacancy"
   },
   {
+   "titulo": "HDLT",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/siembrafest/hdlt.jpg"
+    }
+   ]
+  },
+  {
    "titulo": "Pudor Ante el Asalto de los Ojos Furtivos",
    "tmdb_id": 1592968,
    "titulo_original": "Pudor ante el asalto de los ojos furtivos",
@@ -571,7 +652,24 @@
    "title_en": "Shame in the Face of Furtive Eyes",
    "lbSlug": "shame-in-the-face-of-furtive-eyes",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Pudor Ante el Asalto de los Ojos Furtivos"
+   "_busqueda": "Pudor Ante el Asalto de los Ojos Furtivos",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "tmdb_id": 1592968,
+     "poster": "/assets/cineautopsia/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "poster": "https://image.tmdb.org/t/p/w500/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    }
+   ]
   }
  ],
  "verificadas": {
@@ -917,7 +1015,30 @@
    "pais_tmdb": "Colombia",
    "lbSlug": "que-el-cielo-nos-perdone",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Que El Cielo Nos Perdone"
+   "_busqueda": "Que El Cielo Nos Perdone",
+   "_ya_publicada": [
+    {
+     "festival": "ficma-2026",
+     "titulo": "Que el cielo nos perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/ficma/que-el-cielo-nos-perdone.jpg",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Que el cielo nos perdone",
+     "poster": "https://image.tmdb.org/t/p/w500/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Que el cielo nos perdone",
+     "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
+     "sinopsis": "Colombia, 1951: Un par de chulavitas –asesinos pagados por el gobierno– acechan a un sacerdote en la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus víctimas. Pero el horror que encuentran allí es mil veces peor que el dolor que pensaban infligir."
+    }
+   ]
   },
   "Line 12": {
    "tmdb_id": 1493302,
@@ -960,7 +1081,21 @@
    "title_en": "Ballad of Fishes and Birds",
    "lbSlug": "ballad-of-fishes-and-birds",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Balada de Peces y Pájaros"
+   "_busqueda": "Balada de Peces y Pájaros",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Balada de peces y pájaros",
+     "poster": "https://admin.alternativa.film/uploads/BLD_FRAME_5_ALTA_RESOLUCION_Balada_peces_y_pajaros_9ed5500d0a.png"
+    },
+    {
+     "festival": "olhar-2026",
+     "titulo": "Balada de peces y pájaros",
+     "poster": "/4DzqfMptovKV0IHiNc2eG1hXzR5.jpg",
+     "lbSlug": "ballad-of-fishes-and-birds",
+     "sinopsis": "Carlina perdeu o pai no conflito armado colombiano e vive sozinha com a mãe. A dor ainda é avassaladora, e ambas se apegam às suas memórias e objetos pessoais para sobreviver. Tudo muda com o aparecimento de um peixe místico que será o guia de Carlina durante sua aventura."
+    }
+   ]
   },
   "La Habitación del Macho Cabrío": {
    "tmdb_id": 1554728,
@@ -1075,7 +1210,31 @@
    "pais_tmdb": "",
    "lbSlug": "chaika-2025",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Chaika"
+   "_busqueda": "Chaika",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "CHAIKA",
+     "tmdb_id": 1689999,
+     "poster": "/assets/cineautopsia/chaika.jpg",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, en la que se le invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero descubre un territorio asolado por una silenciosa crisis agrícola y ambiental; una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se alcanza a discernir: un sistema exhausto que intenta sostener un ideal ya difuso. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se confunden, Valentina busca descubrir si aún es posible alzar el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/fantasofest/corto-chaika.jpg",
+     "lbSlug": "chaika-2026"
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/narrarelfuturo-2026/chaika.jpg",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    }
+   ]
   },
   "No Vacancy": {
    "tmdb_id": 1461232,
@@ -1104,7 +1263,24 @@
    "title_en": "Shame in the Face of Furtive Eyes",
    "lbSlug": "shame-in-the-face-of-furtive-eyes",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Pudor Ante el Asalto de los Ojos Furtivos"
+   "_busqueda": "Pudor Ante el Asalto de los Ojos Furtivos",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "tmdb_id": 1592968,
+     "poster": "/assets/cineautopsia/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "poster": "https://image.tmdb.org/t/p/w500/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    }
+   ]
   }
  },
  "sin_ficha": [
