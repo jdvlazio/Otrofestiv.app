@@ -29,7 +29,8 @@ import json, os, re, subprocess, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import (cargar_crudo, ficha_verifica, norm, provenance, slug,
-                 tmdb_get, UA)
+                 tmdb_get, UA, ficha_tmdb, director_coincide, ya_publicada,
+                 obras_publicadas)
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
@@ -144,6 +145,42 @@ def ficha_de_tmdb(cid, key, titulo):
     if sl:
         out['lbSlug'] = sl
     return det, out
+
+
+def cascada_tmdb(o, key, alias, pub):
+    """La ficha de TMDB por todos los caminos que la pueden verificar →
+    (ficha, fuente) o (None, None). La usan el montaje (enriquecer.py) y el
+    pre-onboarding (enriquecer_catalogo.py): un solo camino para los dos.
+
+      1. el candado: director ✓ Y (año ±1 O duración ±3);
+      2. título idéntico + director, cuando a cualquiera de los dos lados le
+         faltan año y duración (lib.ficha_tmdb). «Lolita en Honda» está en
+         TMDB sin fecha ni duración y el candado no tenía con qué corroborar;
+      3. el tmdb_id con que ya la publicamos en otro festival (`pub`, de
+         lib.ya_publicada), si TMDB confirma la dirección.
+    """
+    if o.get('anio') or o.get('duracion_min'):
+        e = enriquecer_obra(o, key, alias)
+        if e:
+            return e, 'tmdb'
+    if not o.get('director'):
+        return None, None
+    r = ficha_tmdb(o, key)
+    if r:
+        _det, e = ficha_de_tmdb(r[0]['id'], key, o['titulo'])
+        e['_verificado'] = r[2]
+        return e, 'tmdb (título idéntico)'
+    for x in pub:
+        if not x.get('tmdb_id'):
+            continue
+        cr = tmdb_get(f"/movie/{x['tmdb_id']}/credits", key) or {}
+        dirs = [c['name'] for c in cr.get('crew', []) if c.get('job') == 'Director']
+        if director_coincide(o['director'], dirs):
+            _det, e = ficha_de_tmdb(x['tmdb_id'], key, o['titulo'])
+            e['_verificado'] = (f'el tmdb_id con que ya la publicamos en '
+                                f'{x["festival"]}, y TMDB confirma la dirección')
+            return e, 'tmdb (ya publicada)'
+    return None, None
 
 
 def ficha_declarada(titulo, dec, key):
@@ -261,6 +298,9 @@ def main():
         if not d.get('_por_que'):
             sys.exit(f'la ficha declarada de «{t}» no dice por qué: falta _por_que')
 
+    # lo que ya publicamos: se anota en cada obra y es el tercer camino de la
+    # cascada (ver cascada_tmdb). El festival propio se excluye.
+    publicadas = obras_publicadas(REPO, excluir=(fid,))
     ok, sin, sin_sondeo, reuso = {}, [], {}, 0
     for i, (t, f) in enumerate(sorted(obras.items()), 1):
         _dir = (f.get('director') or '').strip()
@@ -288,17 +328,33 @@ def main():
                   f'(caché del {c["fecha"]})', flush=True)
             continue
 
-        e = enriquecer_obra(f, key, alias)
+        pub = ya_publicada({**f, 'titulo': t}, publicadas)
+        e, fuente = cascada_tmdb({**f, 'titulo': t}, key, alias, pub)
         if e:
             e['_director'], e['_sondeado'] = _dir, _hoy
+            if pub:
+                e['_ya_publicada'] = pub
             ok[t] = e
-            print(f'[{i:3}/{len(obras)}] OK  {t[:46]:48} tmdb {e["tmdb_id"]}'
+            print(f'[{i:3}/{len(obras)}] OK  {t[:46]:48} {fuente} {e["tmdb_id"]}'
                   f'{"  lb✓" if e.get("lbSlug") else ""}'
                   f'{"  en✓" if e.get("title_en") else ""}', flush=True)
         else:
             sin.append(t)
             sin_sondeo[t] = {'director': _dir, 'fecha': _hoy}
-            print(f'[{i:3}/{len(obras)}] —   {t[:46]:48} sin ficha verificable', flush=True)
+            # SIN FICHA, PERO YA LA PUBLICAMOS: el afiche y la sinopsis que
+            # mostramos entonces se reusan —ya pasaron por un montaje—.
+            # «Belleza letal» no está en ningún catálogo y FICCI 65 la tiene
+            # con afiche.
+            con_afiche = [x for x in pub if x.get('poster')]
+            if con_afiche:
+                x = con_afiche[0]
+                e = {'poster': x['poster'], '_ya_publicada': pub,
+                     '_verificado': f'ya publicada en {x["festival"]}: se reusa su afiche'}
+                if x.get('sinopsis'):
+                    e['sinopsis'] = x['sinopsis']
+                ok[t] = e
+            print(f'[{i:3}/{len(obras)}] —   {t[:46]:48} sin ficha verificable'
+                  f'{"  · afiche de " + con_afiche[0]["festival"] if con_afiche else ""}', flush=True)
         time.sleep(0.2)
 
     if posters:
@@ -332,12 +388,17 @@ def main():
         # `verificadas`, así que el plan que lo declaraba no cumplía su contrato
         # y el enriquecido no llegaba a la app. Se escriben las dos formas.
         'obras': [{'titulo': t, **e} for t, e in ok.items()],
-        'verificadas': ok, 'sin_ficha': sorted(sin),
+        # `verificadas` solo las que una fuente verificó: una obra sin ficha que
+        # ya publicamos va en `obras` (con el afiche que se reusa), no acá —
+        # si no, la caché la tomaría por verificada en la próxima corrida.
+        'verificadas': {t: e for t, e in ok.items() if t not in sin},
+        'sin_ficha': sorted(sin),
         # la fecha de cada sondeo fallido, que es lo que hace caducar la caché
         '_sin_ficha_sondeo': sin_sondeo},
         open(f'{ST}/{fid}-enriquecido.json', 'w', encoding='utf-8'),
         ensure_ascii=False, indent=1)
-    print(f'\n{len(obras)} obras · verificadas {len(ok)} · sin ficha {len(sin)}'
+    print(f'\n{len(obras)} obras · verificadas {len(ok) - len([t for t in ok if t in sin])} · sin ficha {len(sin)}'
+          f' ({len([t for t in ok if t in sin])} con el afiche de un festival nuestro)'
           f' · {reuso} de la caché, {len(obras) - reuso} sondeadas hoy'
           f'{" (--refrescar)" if "--refrescar" in sys.argv else ""}')
     print(f'  con póster {sum(1 for e in ok.values() if e.get("poster_path"))} · '
