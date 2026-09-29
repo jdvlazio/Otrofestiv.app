@@ -119,7 +119,7 @@
  "sections": {
   "✨ Espíritu joven": {
    "en": "Young Spirit",
-   "archetype": "Perspectivas / Miradas",
+   "archetype": "Competencia",
    "order": 1
   },
   "🧬 Relatos mutantes": {
@@ -134,7 +134,7 @@
   },
   "🎩 Masters": {
    "en": "Masters",
-   "archetype": "Muestra / País",
+   "archetype": "Perspectivas / Miradas",
    "order": 4
   },
   "👻 Fantasmas del pasado": {
@@ -1489,7 +1489,8 @@
    "day_order": 1,
    "venue": "Pontificia Universidad Javeriana - Bogotá",
    "sala": "Aula Múltiple",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "_src": {
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
     "date": "2026-09-26"
@@ -4446,7 +4447,8 @@
    "day_order": 5,
    "venue": "Universidad Central - Bogotá",
    "sala": "Auditorio Fundadores",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "_src": {
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
     "date": "2026-09-26"
@@ -5147,7 +5149,8 @@
    "day_order": 6,
    "venue": "Universidad Jorge Tadeo Lozano - Bogotá",
    "sala": "Aula Máxima",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "_src": {
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
     "date": "2026-09-26"
@@ -5482,6 +5485,7 @@
     "date": "2026-09-26"
    },
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…",
+   "premiere": "Clausura",
    "lbSlug": "coward-2026",
    "tmdb_id": 1437981,
    "synopsis_en": "Pierre, a young Belgian soldier, wants to prove himself on the battlefield during the First World War. Behind the frontlines, he meets Francis, who is asked to find a way to boost morale."
@@ -5640,8 +5644,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T07:47:07",
-  "plan_sha": "1de7e20b37202b67",
+  "fecha": "2026-09-29T07:53:23",
+  "plan_sha": "c818161ef9fbda01",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py biff-2026"
  }

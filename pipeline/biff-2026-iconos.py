@@ -46,7 +46,10 @@ def render(pag):
     return Image.open(p).convert('RGB')
 
 
-def silueta(img, oscuro):
+def silueta(img, oscuro, rango=None):
+    """La silueta del ícono a 16×16. `rango` = (x0, x1): solo esas columnas —
+    los bordes se detectan SIEMPRE sobre la celda entera (en una pieza angosta,
+    el propio ícono cruza el 60% del ancho y se borraba como si fuera borde)."""
     g = img.convert('L')
     w, h = g.size
     px = g.load()
@@ -56,7 +59,8 @@ def silueta(img, oscuro):
     # funciones «libres»). Una fila de píxeles blancos a más del 60% del ancho
     # es borde, no ícono.
     bordes = {y for y in range(h) if sum(1 for x in range(w) if on(x, y)) > 0.6 * w}
-    pts = [(x, y) for y in range(h) if y not in bordes for x in range(w) if on(x, y)]
+    x0, x1 = rango or (0, w)
+    pts = [(x, y) for y in range(h) if y not in bordes for x in range(x0, x1) if on(x, y)]
     if len(pts) < 25:
         return None
     x0, x1 = min(p[0] for p in pts), max(p[0] for p in pts)
@@ -65,6 +69,31 @@ def silueta(img, oscuro):
     for x, y in pts:
         m.putpixel((x - x0, y - y0), 255)
     return [1 if v > 127 else 0 for v in m.resize((16, 16)).get_flattened_data()]
+
+
+def piezas(img):
+    """La celda puede traer DOS íconos lado a lado (los cortos BIFF Bang del
+    9, 13 y 14: equipo presente Y entrada libre). La primera versión hacía una
+    sola silueta de todo lo blanco y la clasificaba como uno: se perdía el
+    equipo (triple lectura, 29 sep). Se parte por columnas sin blanco, con un
+    hueco mínimo de 4 px para no partir un ícono por dentro."""
+    g = img.convert('L')
+    w, h = g.size
+    px = g.load()
+    bordes = {y for y in range(h) if sum(1 for x in range(w) if px[x, y] > 225) > 0.6 * w}
+    llenas = [any(px[x, y] > 225 for y in range(h) if y not in bordes) for x in range(w)]
+    grupos, ini, vacio = [], None, 0
+    for x, v in enumerate(llenas + [False] * 5):
+        if v:
+            if ini is None:
+                ini = x
+            vacio = 0
+        elif ini is not None:
+            vacio += 1
+            if vacio >= 4:
+                grupos.append((ini, x - vacio + 1))
+                ini, vacio = None, 0
+    return grupos or [(0, w)]
 
 
 def iou(a, b):
@@ -87,13 +116,14 @@ def main():
         px = [p for p in celda.get_flattened_data() if sum(p) < 660]
         px.sort(key=sum)
         f['color'] = '#%02x%02x%02x' % px[len(px) // 2] if px else None
-        s = silueta(celda, False)
-        if s:
-            puntaje = {k: iou(s, v) for k, v in plantillas.items()}
-            k = max(puntaje, key=puntaje.get)
-            f['icono'] = k if puntaje[k] >= 0.45 else f'?{k}:{puntaje[k]:.2f}'
-        else:
-            f['icono'] = None
+        leidos = []
+        for rango in piezas(celda):
+            s = silueta(celda, False, rango)
+            if s:
+                puntaje = {k: iou(s, v) for k, v in plantillas.items()}
+                k = max(puntaje, key=puntaje.get)
+                leidos.append(k if puntaje[k] >= 0.45 else f'?{k}:{puntaje[k]:.2f}')
+        f['icono'] = '+'.join(sorted(leidos)) or None
     json.dump({'_fuente': 'PDF oficial BIFF 12, columna «Sección» de la tabla por días, por píxeles',
                'funciones': filas}, io.open(f'{D}/por-dias-iconos.json', 'w', encoding='utf-8'),
               ensure_ascii=False, indent=1)

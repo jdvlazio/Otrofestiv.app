@@ -1232,8 +1232,8 @@ export const SECTION_ARCHETYPES = {
   '🎬 Proyecciones': 'Muestra / País',
   // BIFF 12 (29 sep 2026)
   '🇨🇴 Colombia viva': 'Muestra / País',
-  '✨ Espíritu joven': 'Perspectivas / Miradas',
-  '🎩 Masters': 'Muestra / País',
+  '✨ Espíritu joven': 'Competencia',   // compite por el Premio de la Juventud
+  '🎩 Masters': 'Perspectivas / Miradas',
   '👻 Fantasmas del pasado': 'Perspectivas / Miradas',
   '✊ Clases de lucha': 'Perspectivas / Miradas',
   '🧬 Relatos mutantes': 'Perspectivas / Miradas',

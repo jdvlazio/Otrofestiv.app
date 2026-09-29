@@ -839,6 +839,8 @@
     "date": "2026-09-26"
    },
    "sala": "Aula Múltiple",
+   "has_qa": true,
+   "qa_type": "team",
    "acceso": "Entrada libre",
    "titulo": "Muestra de cortometrajes BIFF Bang",
    "seccion": "Muestra de cortometrajes BIFF Bang",
@@ -2871,6 +2873,8 @@
     "date": "2026-09-26"
    },
    "sala": "Auditorio Fundadores",
+   "has_qa": true,
+   "qa_type": "team",
    "acceso": "Entrada libre",
    "titulo": "Muestra de cortometrajes BIFF Bang",
    "seccion": "Muestra de cortometrajes BIFF Bang",
@@ -3347,6 +3351,8 @@
     "date": "2026-09-26"
    },
    "sala": "Aula Máxima",
+   "has_qa": true,
+   "qa_type": "team",
    "acceso": "Entrada libre",
    "titulo": "Muestra de cortometrajes BIFF Bang",
    "seccion": "Muestra de cortometrajes BIFF Bang",
@@ -3565,6 +3571,7 @@
    "genero": "Drama histórico",
    "idioma": "Francés, Neerlandés",
    "sinopsis": "A medida que la Primera Guerra Mundial se prolonga, Pierre, un soldado recién llegado al frente, está deseando demostrar su valía. Detrás de las líneas, conoce a Francis, quien decide levantar el ánimo de sus compañeros organizando una obra de teatro. Mientras la violencia continúa, ambos intentan encontrar formas de escapar de la brutalidad de la guerra, aunque solo sea por un momento.",
+   "premiere": "Clausura",
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…"
   },

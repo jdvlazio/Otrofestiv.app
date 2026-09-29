@@ -17,8 +17,6 @@ La grilla «por salas» desempata lo que la tabla deduce mal (la sala de las
 charlas).
 
 LO QUE NO SE INVENTA:
-  · la función de CLAUSURA: el PDF dice que el cierre es con «Cobarde», pero
-    ninguna función lo marca (la inaugural sí: «Inauguración + FJORD»);
   · la entrada de los cine conciertos del Teatro Mayor y El Ensueño: ninguna
     fuente la dice → DESCONOCIDO;
   · la duración de las charlas: el hueco hasta la siguiente en su sala, con
@@ -119,11 +117,12 @@ def main():
              '_src': {'url': PDF_URL, 'date': '2026-09-26'}}
         if sala:
             r['sala'] = sala
-        ic = icono[k]
-        if ic == 'equipo':
+        ics = (icono[k] or '').split('+')     # una celda puede traer dos íconos
+        if 'equipo' in ics:
             r['has_qa'], r['qa_type'] = True, 'team'
-        if ic in ACCESO_ICONO:
-            r['acceso'] = ACCESO_ICONO[ic]
+        for ic in ics:
+            if ic in ACCESO_ICONO:
+                r['acceso'] = ACCESO_ICONO[ic]
         return r, k
 
     for o in cat['obras']:
@@ -147,6 +146,13 @@ def main():
                 r['_duracion_fuente'] = o.get('duracion_min')
             if o['titulo'] == 'Fjord' and dia == '2026-10-08':
                 r['premiere'] = 'Inauguración'      # «Inauguración + FJORD» en la grilla
+            # LA CLAUSURA: la Presentación del PDF (pág. 4) dice que «el cierre del
+            # BIFF tendrá como protagonista a COBARDE»; ninguna función lo rotula.
+            # De sus tres, la del último día en la sala de la inauguración (Sala
+            # Capital) y en horario de gala; las otras dos son en Cine Colombia,
+            # sáb y dom. Decisión de Juan (29 sep); la web no nombra clausura.
+            if o['titulo'] == 'Cobarde' and (dia, hora) == ('2026-10-14', '19:30'):
+                r['premiere'] = 'Clausura'
             if 'acceso' not in r:
                 c = cin.get(k[:2] + (plano(o['titulo']),))
                 if r['sede'] == 'Cinemateca de Bogotá' and c and c[5]:
@@ -188,7 +194,7 @@ def main():
                           'dia': f['dia'], 'hora': f['hora'].zfill(5), 'sede': 'Cinemateca de Bogotá',
                           'sala': SALA_CHARLA[f['dia']], 'tipo': 'evento', 'event_kind': 'charla',
                           'seccion': SECCION_CHARLA,
-                          'acceso': ACCESO_ICONO.get(f['icono'], DESCONOCIDO),
+                          'acceso': next((ACCESO_ICONO[i] for i in (f['icono'] or '').split('+') if i in ACCESO_ICONO), DESCONOCIDO),
                           '_src': {'url': PDF_URL, 'date': '2026-09-26'}})
 
     # COBERTURA INVERSA: toda fila de la tabla por días quedó en el crudo
