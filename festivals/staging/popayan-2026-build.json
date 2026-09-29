@@ -531,8 +531,6 @@
      "duration": "15 min",
      "synopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico.",
      "synopsis_lang": "es",
-     "poster": "/assets/girardota-2026/la-rebelion-de-un-fantasma.jpg",
-     "posterSource": "oficial",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -1499,7 +1497,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T12:53:16",
+  "fecha": "2026-09-29T13:52:26",
   "plan_sha": "1351d26e95981640",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"

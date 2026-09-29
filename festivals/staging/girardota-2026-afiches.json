@@ -2,7 +2,10 @@
  "_provenance": {
   "fuente": "los 3 carruseles de la Selección Oficial de la competencia de cortos (@girardotaescultura / @festigirardota, 28 sep 2026), una lámina por obra con título y dirección pintados",
   "capturado": "2026-09-29",
-  "metodo": "el mapa lámina→obra es el de fuentes/girardota-2026-competencia-ojos.json, leído a ojo y confirmado por OCR en girardota-2026-crudo.py"
+  "metodo": "el mapa lámina→obra es el de fuentes/girardota-2026-competencia-ojos.json, leído a ojo y confirmado por OCR en girardota-2026-crudo.py",
+  "descartados": {
+   "La Rebelión de un Fantasma": "la lámina acredita a Andrés Muñoz, que es el productor; publicamos a Flora Rodríguez (web de Popayán). El afiche contradiría la ficha. Decisión de Juan, 29 sep."
+  }
  },
  "afiches": {
   "Los Años del Conejo": {
@@ -64,10 +67,6 @@
   "De lo Oculto": {
    "lamina": "fuentes/ig/Dd2iI6unNOM/05.jpg",
    "fuente": "https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 5, Experimental o videoclip)"
-  },
-  "La Rebelión de un Fantasma": {
-   "lamina": "fuentes/ig/Dd2iI6unNOM/06.jpg",
-   "fuente": "https://www.instagram.com/p/Dd2iI6unNOM/ (lámina 6, Experimental o videoclip)"
   },
   "Idilio": {
    "lamina": "fuentes/ig/Dd2iI6unNOM/07.jpg",
