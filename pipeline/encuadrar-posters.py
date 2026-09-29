@@ -147,9 +147,18 @@ def main():
     for f in d['films']:
         entradas.append(f)
         entradas.extend(f.get('film_list') or [])
+    ajenos = []
     for f in entradas:
         p = f.get('poster') or ''
         if not p.startswith('/assets/') or p in vistos:
+            continue
+        # EL AFICHE DE OTRO FESTIVAL NO SE TOCA (29 sep 2026). Una obra que ya
+        # publicamos reusa su afiche por su ruta —«Elementales» apunta a
+        # /assets/jardin-2026/—, y este paso lo reencuadraba EN SITIO: le cambiaba
+        # los píxeles a Jardín, publicado, desde el montaje de Girardota. Ese
+        # afiche ya pasó por el encuadre de su festival.
+        if not p.startswith(f'/assets/{fid}/'):
+            vistos.add(p); ajenos.append(os.path.basename(p))
             continue
         vistos.add(p)
         real = REPO + p
@@ -303,6 +312,9 @@ def main():
         if not ((W, H) == (LIENZO_W, LIENZO_H) and not (min(t2, b2) >= MIN_MARCO or min(l2, r2) >= MIN_MARCO)):
             repetiria.append(f'{n} ({W}×{H}, marco ↑{t2} ↓{b2} ←{l2} →{r2})')
 
+    if ajenos:
+        print(f'\n{len(ajenos)} afiche(s) de otro festival, reusado(s) y sin tocar: '
+              + ', '.join(sorted(ajenos)))
     print(f'\nVERIFICACIÓN · fallos de sips {fallos} · '
           f'con marco {len(quedan)} · fuera de {LIENZO_W}×{LIENZO_H} {len(fuera)}')
     for x in quedan[:12]:

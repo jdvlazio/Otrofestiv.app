@@ -178,9 +178,15 @@ def director_coincide(esperado, nombres):
             # validación contra FICMA lo cazó (obra 68/68 con una faltante).
             if sa and sb and len(sa & sb) >= min(2, len(sa), len(sb)):
                 return True
-            # un token largo compartido (apellido), salvo que sea el nombre de
-            # pila de los dos
-            if any(len(x) > 4 and not (x == a[0] and x == b[0]) for x in sa & sb):
+            # UN token largo compartido (apellido), salvo que sea el nombre de
+            # pila de los dos — y SOLO si alguno de los dos nombres es corto.
+            # Con nombre y dos apellidos en ambos lados, un apellido no basta:
+            # «La rata» de Santiago Londoño Vélez (corto, Girardota) casó con la
+            # de Marco Vélez Esquivia (largo de 2019, Proimágenes) por «vélez»
+            # (29 sep 2026). Medido contra las 550 fichas publicadas: ninguna
+            # se pierde.
+            if min(len(sa), len(sb)) <= 2 and any(
+                    len(x) > 4 and not (x == a[0] and x == b[0]) for x in sa & sb):
                 return True
     return False
 
@@ -807,6 +813,9 @@ def _selftest():
     t('director varias personas', director_coincide('Zumaya Mayers y Rodrigo Cuervo', ['Rodrigo Cuervo']), True)
     t('director nombre abreviado', director_coincide('Laura María Rodríguez Moreno', ['Laura Rodríguez']), True)
     t('director orden invertido', director_coincide('Goro Miyazaki', ['Miyazaki Goro']), True)
+    # un apellido en común no alcanza si los dos tienen nombre y dos apellidos (La rata)
+    t('director un apellido de dos', director_coincide('Santiago Londoño Vélez', ['Marco Vélez Esquivia']), False)
+    t('director nombre sin segundo apellido', director_coincide('Isabella Palacio Mesa', ['Isabella Palacio']), True)
     t('banderas coproducción con paréntesis', banderas('España (Austria)'), '🇪🇸🇦🇹')
     t('banderas ISO2', banderas('CO'), '🇨🇴')
     t('banderas con guion', banderas('Colombia - España'), '🇨🇴🇪🇸')

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-27"
+  "capturado": "2026-09-29"
  },
  "obras": [
   {
@@ -23,6 +23,62 @@
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/al-final-del-espectro.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Archivo no Encontrado",
+   "tmdb_id": 1754668,
+   "titulo_original": "Archivo no encontrado",
+   "poster_path": "/eV2hQtIwsAJSX5sPjvf6K61X6hL.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "What weight do the images hold, the ones whose stories we’ve all forgotten? I am the image of myself I can’t recall, a place where my identity cannot rest and my soul cannot stay. Like a couple of blurry photos that don’t fully belong to me, even when there is proof that I was here.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "File not found",
+   "lbSlug": "file-not-found-2026",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_director": "Mariangel de la Rosa Contreras",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/girardota-2026/archivo-no-encontrado.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Carola",
+   "tmdb_id": 1497688,
+   "titulo_original": "Carola",
+   "poster_path": null,
+   "synopsis_es": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_director": "Violeta Barrios",
+   "_sondeado": "2026-09-29",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Carola",
+     "poster": "/assets/siembrafest/carola.jpg",
+     "sinopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre."
+    }
+   ]
+  },
+  {
+   "titulo": "Deus Ex Necro Machina",
+   "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
+   "_ya_publicada": [
+    {
+     "festival": "jardin-2026",
+     "titulo": "Deus ex necro machina",
+     "poster": "/assets/jardin-2026/deus-ex-necro-machina.jpg",
+     "sinopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa."
+    }
+   ],
+   "_verificado": "ya publicada en jardin-2026: se reusa su afiche",
+   "sinopsis": "¿Qué relación existe entre los trucos de inmortalidad de un videojuego y las mecánicas de poder en un país atravesado por el conflicto? DEUS EX NECRO MACHINA es un ensayo fílmico que tensiona la memoria afectiva de la infancia con la violencia estructural en Colombia. A través del despiece de archivos fotográficos, prensa y gameplay de GTA: San Andreas, el cortometraje confronta la estetización del consumo con la ausencia irremplazable de quienes fueron borrados del mapa."
   },
   {
    "titulo": "El Páramo",
@@ -84,6 +140,44 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Elementales",
+   "poster": "/assets/jardin-2026/elementales.jpg",
+   "_ya_publicada": [
+    {
+     "festival": "jardin-2026",
+     "titulo": "Elementales",
+     "poster": "/assets/jardin-2026/elementales.jpg",
+     "sinopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Elementales",
+     "poster": "/assets/siembrafest/elementales.jpg"
+    }
+   ],
+   "_verificado": "ya publicada en jardin-2026: se reusa su afiche",
+   "sinopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES."
+  },
+  {
+   "titulo": "En Todo y en Nada",
+   "poster": "/assets/jardin-2026/en-todo-y-en-nada.jpg",
+   "_ya_publicada": [
+    {
+     "festival": "jardin-2026",
+     "titulo": "En todo y en nada",
+     "poster": "/assets/jardin-2026/en-todo-y-en-nada.jpg",
+     "sinopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer."
+    },
+    {
+     "festival": "vartex-2026",
+     "titulo": "En todo y en nada",
+     "sinopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer."
+    }
+   ],
+   "_verificado": "ya publicada en jardin-2026: se reusa su afiche",
+   "sinopsis": "“En todo y en nada” es un Documental-Experimental poético donde nosotras –Ximena y Raquel– dos jóvenes foráneas antioqueñas que nos sentimos perdidas en una ciudad tan caótica como lo es Medellín, materializamos todas esas dudas y cuestionamientos sobre el no pertenecer, ese sentimiento de no encajar ya en ningún lugar, a causa de dejar lo que llamábamos hogar por seguir nuestros sueños. Este documental es un viaje introspectivo que materializa y abraza los duelos, preguntas y el limbo en el que habitamos, al intentar dejar ir lo que fuimos y afrontar lo que ahora somos, todo a través de una mirada nostálgica al material de archivo de una infancia perdida, el uso de la carretera como espacio de limbo que genera sensaciones de pérdida, y el constante movimiento, imágenes que son fusionadas entre sí e intervenidas, creando una atmósfera de confusión por ser todo y nada al mismo tiempo, sonidos desafinados, incómodos, caóticos y desenfrenados refuerzan dicha sensación. La vida es un constante devenir, todos hemos estado en todo y en nada, todos hemos cargado en algún momento con el sentimiento de no pertenecer."
+  },
+  {
    "titulo": "Funeral siniestro",
    "tmdb_id": 127593,
    "titulo_original": "Funeral siniestro",
@@ -98,7 +192,7 @@
    "lbSlug": "sinister-funeral",
    "_verificado": "declarada a mano: TMDB (127593) casa por dirección y año, pero solo tiene sinopsis en inglés: en español la obra salía sin una línea. La sinopsis es la del catálogo oficial de cine colombiano de Proimágenes (ficha 102, Jairo Pinilla, 1977), tal cual. Las láminas del festival no traen sinopsis.",
    "_director": "Jairo Pinilla",
-   "_sondeado": "2026-09-27",
+   "_sondeado": "2026-09-29",
    "poster": "/assets/girardota-2026/funeral-siniestro.jpg",
    "posterSource": "tmdb"
   },
@@ -183,6 +277,75 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Los Años del Conejo",
+   "tmdb_id": 1617929,
+   "titulo_original": "Los Años del Conejo",
+   "poster_path": "/nFyKmHbihS1DwJeGG8NthSP9WwZ.jpg",
+   "synopsis_es": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre.",
+   "synopsis_en": "I remember very little from those years: the years of the rabbit. My favorite animal, my favorite color, the mountain in front of my house, my friends’ faces, the games with my sisters. Leaving my life in Mexico like that erased my memory. I color in these memories as an attempt to gather them. Forever.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Years of the rabbit",
+   "lbSlug": "the-years-of-the-rabbit",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_director": "Raquel Tamayo Gutiérrez",
+   "_sondeado": "2026-09-29",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Los Años del Conejo",
+     "tmdb_id": 1617929,
+     "poster": "/assets/cineautopsia/los-anos-del-conejo.jpg",
+     "lbSlug": "the-years-of-the-rabbit",
+     "sinopsis": "Recuerdo muy poco de aquellos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña frente a mi casa, los rostros de mis amigos, los juegos con mis hermanas. Dejar mi vida en México de esa manera me borró la memoria. Coloreo estos recuerdos como un intento de reunirlos. Para siempre."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Los años del conejo",
+     "tmdb_id": 1617929,
+     "poster": "/assets/jardin-2026/los-anos-del-conejo.jpg",
+     "lbSlug": "the-years-of-the-rabbit",
+     "sinopsis": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre."
+    }
+   ],
+   "poster": "/assets/girardota-2026/los-anos-del-conejo.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Maleza",
+   "poster": "/assets/villadelcine-2026/maleza.jpg",
+   "_ya_publicada": [
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Maleza",
+     "poster": "/assets/villadelcine-2026/maleza.jpg",
+     "sinopsis": "Guiada por el espíritu de su gato fallecido, una sanadora y partera solitaria, dedicada a preservar la vida, sufre una profunda conmoción interior cuando una joven desesperada llega a su puerta. Durante una noche de cruda confrontación y dolor, Alba comprende que ayudar a alguien significa caminar a su lado, no tomar decisiones por esa persona."
+    }
+   ],
+   "_verificado": "ya publicada en villadelcine-2026: se reusa su afiche",
+   "sinopsis": "Guiada por el espíritu de su gato fallecido, una sanadora y partera solitaria, dedicada a preservar la vida, sufre una profunda conmoción interior cuando una joven desesperada llega a su puerta. Durante una noche de cruda confrontación y dolor, Alba comprende que ayudar a alguien significa caminar a su lado, no tomar decisiones por esa persona."
+  },
+  {
+   "titulo": "Maricones",
+   "tmdb_id": 1756766,
+   "titulo_original": "Maricones",
+   "poster_path": "/vY5Ndj4IAi5yxzGXedhkGo8Zyew.jpg",
+   "synopsis_es": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes Queer que, al habitar distintos espacios, enfrentan prejuicios sociales que intentan limitar su forma de ser. Esta tensión los confronta con su proceso identitario y los lleva a cuestionar la necesidad de validación externa. Así, deciden usar la moda y sus cuerpos como herramienta para expresar y construir su identidad como un proceso de constante fluidez, libre y sin etiquetas.",
+   "synopsis_en": "Since they were little, Ginger and Louie knew they were different. Two young Queers who, living in different spaces, face social prejudices that try to limit their way of being. This tension confronts them with their identity process and leads them to question the need for external validation. Thus, they decide to use fashion and their bodies as a tool to express and build their identity as a process of constant fluidity, free and without labels.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "maricones",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_director": "Maria Paz Ruiz González",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/girardota-2026/maricones.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Pura Sangre",
    "tmdb_id": 134245,
    "titulo_original": "Pura sangre",
@@ -200,6 +363,60 @@
    "_director": "Luis Ospina",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/pura-sangre.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Refracción",
+   "tmdb_id": 1584776,
+   "titulo_original": "Refracción",
+   "poster_path": "/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+   "synopsis_es": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+   "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "refraccion",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_director": "Isabella Palacio Mesa",
+   "_sondeado": "2026-09-29",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Refracción"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "/assets/jardin-2026/refraccion.jpg",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "leviza-2026",
+     "titulo": "Refracción",
+     "poster": "/assets/leviza/Refraccio_n.jpeg",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "REFRACCIÓN",
+     "tmdb_id": 1584776,
+     "poster": "/assets/narrarelfuturo-2026/refraccion.jpg",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    }
+   ],
+   "poster": "/assets/girardota-2026/refraccion.jpg",
    "posterSource": "tmdb"
   }
  ],
@@ -222,6 +439,46 @@
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/al-final-del-espectro.jpg",
    "posterSource": "tmdb"
+  },
+  "Archivo no Encontrado": {
+   "tmdb_id": 1754668,
+   "titulo_original": "Archivo no encontrado",
+   "poster_path": "/eV2hQtIwsAJSX5sPjvf6K61X6hL.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "What weight do the images hold, the ones whose stories we’ve all forgotten? I am the image of myself I can’t recall, a place where my identity cannot rest and my soul cannot stay. Like a couple of blurry photos that don’t fully belong to me, even when there is proof that I was here.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "File not found",
+   "lbSlug": "file-not-found-2026",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_director": "Mariangel de la Rosa Contreras",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/girardota-2026/archivo-no-encontrado.jpg",
+   "posterSource": "tmdb"
+  },
+  "Carola": {
+   "tmdb_id": 1497688,
+   "titulo_original": "Carola",
+   "poster_path": null,
+   "synopsis_es": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_director": "Violeta Barrios",
+   "_sondeado": "2026-09-29",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Carola",
+     "poster": "/assets/siembrafest/carola.jpg",
+     "sinopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre."
+    }
+   ]
   },
   "El Páramo": {
    "tmdb_id": 83705,
@@ -293,7 +550,7 @@
    "lbSlug": "sinister-funeral",
    "_verificado": "declarada a mano: TMDB (127593) casa por dirección y año, pero solo tiene sinopsis en inglés: en español la obra salía sin una línea. La sinopsis es la del catálogo oficial de cine colombiano de Proimágenes (ficha 102, Jairo Pinilla, 1977), tal cual. Las láminas del festival no traen sinopsis.",
    "_director": "Jairo Pinilla",
-   "_sondeado": "2026-09-27",
+   "_sondeado": "2026-09-29",
    "poster": "/assets/girardota-2026/funeral-siniestro.jpg",
    "posterSource": "tmdb"
   },
@@ -373,6 +630,59 @@
    "poster": "/assets/girardota-2026/llueve-sobre-babel.jpg",
    "posterSource": "tmdb"
   },
+  "Los Años del Conejo": {
+   "tmdb_id": 1617929,
+   "titulo_original": "Los Años del Conejo",
+   "poster_path": "/nFyKmHbihS1DwJeGG8NthSP9WwZ.jpg",
+   "synopsis_es": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre.",
+   "synopsis_en": "I remember very little from those years: the years of the rabbit. My favorite animal, my favorite color, the mountain in front of my house, my friends’ faces, the games with my sisters. Leaving my life in Mexico like that erased my memory. I color in these memories as an attempt to gather them. Forever.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Years of the rabbit",
+   "lbSlug": "the-years-of-the-rabbit",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_director": "Raquel Tamayo Gutiérrez",
+   "_sondeado": "2026-09-29",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Los Años del Conejo",
+     "tmdb_id": 1617929,
+     "poster": "/assets/cineautopsia/los-anos-del-conejo.jpg",
+     "lbSlug": "the-years-of-the-rabbit",
+     "sinopsis": "Recuerdo muy poco de aquellos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña frente a mi casa, los rostros de mis amigos, los juegos con mis hermanas. Dejar mi vida en México de esa manera me borró la memoria. Coloreo estos recuerdos como un intento de reunirlos. Para siempre."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Los años del conejo",
+     "tmdb_id": 1617929,
+     "poster": "/assets/jardin-2026/los-anos-del-conejo.jpg",
+     "lbSlug": "the-years-of-the-rabbit",
+     "sinopsis": "Me acuerdo muy poco de esos años: los años del conejo. Mi animal favorito, mi color favorito, la montaña al frente de mi casa, la cara de mis amigas, los juegos con mis hermanas. Dejar mi vida en México así me borró la memoria. Coloreo estos recuerdos como un intento de recolectarlos. Para siempre."
+    }
+   ],
+   "poster": "/assets/girardota-2026/los-anos-del-conejo.jpg",
+   "posterSource": "tmdb"
+  },
+  "Maricones": {
+   "tmdb_id": 1756766,
+   "titulo_original": "Maricones",
+   "poster_path": "/vY5Ndj4IAi5yxzGXedhkGo8Zyew.jpg",
+   "synopsis_es": "Desde pequeños, Ginger y Louie sabían que eran distintos. Dos jóvenes Queer que, al habitar distintos espacios, enfrentan prejuicios sociales que intentan limitar su forma de ser. Esta tensión los confronta con su proceso identitario y los lleva a cuestionar la necesidad de validación externa. Así, deciden usar la moda y sus cuerpos como herramienta para expresar y construir su identidad como un proceso de constante fluidez, libre y sin etiquetas.",
+   "synopsis_en": "Since they were little, Ginger and Louie knew they were different. Two young Queers who, living in different spaces, face social prejudices that try to limit their way of being. This tension confronts them with their identity process and leads them to question the need for external validation. Thus, they decide to use fashion and their bodies as a tool to express and build their identity as a process of constant fluidity, free and without labels.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "maricones",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_director": "Maria Paz Ruiz González",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/girardota-2026/maricones.jpg",
+   "posterSource": "tmdb"
+  },
   "Pura Sangre": {
    "tmdb_id": 134245,
    "titulo_original": "Pura sangre",
@@ -391,18 +701,142 @@
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/pura-sangre.jpg",
    "posterSource": "tmdb"
+  },
+  "Refracción": {
+   "tmdb_id": 1584776,
+   "titulo_original": "Refracción",
+   "poster_path": "/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+   "synopsis_es": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma.",
+   "synopsis_en": "Eloísa, a 20-year-old girl, is in two relationships at the same time. One night, after having been with both girls, she feels overwhelmed by living in this situation of deceit, and in the middle of her confusion she goes out to ride her bike through the streets of Medellín, where she will realize that she does not want to acknowledge who she is — but will ultimately have to come face-to-face with herself.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "refraccion",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
+   "_director": "Isabella Palacio Mesa",
+   "_sondeado": "2026-09-29",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "https://image.tmdb.org/t/p/w500/bzKNobO0N8Oqj6YU6eA2R28UgPI.jpg",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Refracción"
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Refracción",
+     "tmdb_id": 1584776,
+     "poster": "/assets/jardin-2026/refraccion.jpg",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    },
+    {
+     "festival": "leviza-2026",
+     "titulo": "Refracción",
+     "poster": "/assets/leviza/Refraccio_n.jpeg",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "REFRACCIÓN",
+     "tmdb_id": 1584776,
+     "poster": "/assets/narrarelfuturo-2026/refraccion.jpg",
+     "lbSlug": "refraccion",
+     "sinopsis": "Eloísa, una chica de 20 años, está en dos relaciones al mismo tiempo. Una noche, después de haber estado con ambas chicas, se siente agobiada por estar en esa situación de engaño y en medio de su confusión sale a recorrer las calles de Medellín en bicicleta, donde se dará cuenta de que no quiere reconocerse pero deberá encontrarse consigo misma."
+    }
+   ],
+   "poster": "/assets/girardota-2026/refraccion.jpg",
+   "posterSource": "tmdb"
   }
  },
  "sin_ficha": [
+  "Armonía de la Entropía",
+  "Bajo el Último Aliento",
   "Competencia oficial de cortometrajes",
+  "De lo Oculto",
+  "Deus Ex Necro Machina",
+  "Elementales",
+  "En Todo y en Nada",
+  "Hambre",
+  "Hábitat Venus",
+  "Idilio",
+  "La Rata",
+  "La Rebelión de un Fantasma",
+  "Maldito Sentimiento",
+  "Maleza",
+  "Mantener la Democracia Maestro",
   "Muestra de cortometrajes: Fantasía tropical",
   "Muestra de cortos Girardotanos",
+  "PARE",
   "Selección de Cortometrajes fantásticos para toda la familia"
  ],
  "_sin_ficha_sondeo": {
+  "Armonía de la Entropía": {
+   "director": "Alexander Ladino Giraldo",
+   "fecha": "2026-09-29"
+  },
+  "Bajo el Último Aliento": {
+   "director": "Pedro Valencia",
+   "fecha": "2026-09-29"
+  },
   "Competencia oficial de cortometrajes": {
    "director": "",
    "fecha": "2026-09-27"
+  },
+  "De lo Oculto": {
+   "director": "Daniel Rúa",
+   "fecha": "2026-09-29"
+  },
+  "Deus Ex Necro Machina": {
+   "director": "Mateo Montoya Correa",
+   "fecha": "2026-09-29"
+  },
+  "Elementales": {
+   "director": "Camilo Botero Jaramillo",
+   "fecha": "2026-09-29"
+  },
+  "En Todo y en Nada": {
+   "director": "Raquel Zapata Ospina",
+   "fecha": "2026-09-29"
+  },
+  "Hambre": {
+   "director": "Manuela Bedoya Carvajal",
+   "fecha": "2026-09-29"
+  },
+  "Hábitat Venus": {
+   "director": "Sofía Rueda Férez",
+   "fecha": "2026-09-29"
+  },
+  "Idilio": {
+   "director": "Andrés Felipe Giraldo Guisao",
+   "fecha": "2026-09-29"
+  },
+  "La Rata": {
+   "director": "Santiago Londoño Vélez",
+   "fecha": "2026-09-29"
+  },
+  "La Rebelión de un Fantasma": {
+   "director": "Flora Rodríguez",
+   "fecha": "2026-09-29"
+  },
+  "Maldito Sentimiento": {
+   "director": "Leidy Vanegas Bolemos",
+   "fecha": "2026-09-29"
+  },
+  "Maleza": {
+   "director": "Nicolle Estrada Díaz",
+   "fecha": "2026-09-29"
+  },
+  "Mantener la Democracia Maestro": {
+   "director": "Jhon Fredy Machado Tuberquia",
+   "fecha": "2026-09-29"
   },
   "Muestra de cortometrajes: Fantasía tropical": {
    "director": "",
@@ -412,9 +846,21 @@
    "director": "",
    "fecha": "2026-09-27"
   },
+  "PARE": {
+   "director": "Santiago Salazar Quintana",
+   "fecha": "2026-09-29"
+  },
   "Selección de Cortometrajes fantásticos para toda la familia": {
    "director": "",
    "fecha": "2026-09-27"
   }
- }
+ },
+ "_fuentes": [
+  {
+   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
+   "capturado": "2026-09-29",
+   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
+   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
+  }
+ ]
 }

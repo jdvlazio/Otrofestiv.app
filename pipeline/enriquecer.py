@@ -183,6 +183,21 @@ def cascada_tmdb(o, key, alias, pub):
     return None, None
 
 
+def reuso_publicada(pub):
+    """Sin ficha, pero ya la publicamos con afiche: se reusa el afiche y la
+    sinopsis que mostramos entonces —ya pasaron por un montaje—. «Belleza letal»
+    no está en ningún catálogo y FICCI 65 la tiene con afiche. Va en `obras`, no
+    en `verificadas`: no es una ficha verificada, es lo nuestro."""
+    x = next((x for x in pub if x.get('poster')), None)
+    if not x:
+        return None
+    e = {'poster': x['poster'], '_ya_publicada': pub,
+         '_verificado': f'ya publicada en {x["festival"]}: se reusa su afiche'}
+    if x.get('sinopsis'):
+        e['sinopsis'] = x['sinopsis']
+    return e
+
+
 def ficha_declarada(titulo, dec, key):
     """La ficha que declara una persona, con su porqué. NO pasa por
     ficha_verifica(): quien declara responde por el emparejamiento, y por eso
@@ -324,6 +339,12 @@ def main():
             sin.append(t)
             sin_sondeo[t] = c
             reuso += 1
+            # el reúso de lo publicado TAMBIÉN desde la caché: la primera
+            # versión solo lo hacía al sondear, y la segunda corrida de
+            # Girardota perdía 4 afiches (29 sep 2026, lo paró publicar.py)
+            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas))
+            if _r:
+                ok[t] = _r
             print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} sin ficha '
                   f'(caché del {c["fecha"]})', flush=True)
             continue
@@ -341,20 +362,11 @@ def main():
         else:
             sin.append(t)
             sin_sondeo[t] = {'director': _dir, 'fecha': _hoy}
-            # SIN FICHA, PERO YA LA PUBLICAMOS: el afiche y la sinopsis que
-            # mostramos entonces se reusan —ya pasaron por un montaje—.
-            # «Belleza letal» no está en ningún catálogo y FICCI 65 la tiene
-            # con afiche.
-            con_afiche = [x for x in pub if x.get('poster')]
-            if con_afiche:
-                x = con_afiche[0]
-                e = {'poster': x['poster'], '_ya_publicada': pub,
-                     '_verificado': f'ya publicada en {x["festival"]}: se reusa su afiche'}
-                if x.get('sinopsis'):
-                    e['sinopsis'] = x['sinopsis']
-                ok[t] = e
+            _r = reuso_publicada(pub)
+            if _r:
+                ok[t] = _r
             print(f'[{i:3}/{len(obras)}] —   {t[:46]:48} sin ficha verificable'
-                  f'{"  · afiche de " + con_afiche[0]["festival"] if con_afiche else ""}', flush=True)
+                  f'{"  · afiche de " + _r["_ya_publicada"][0]["festival"] if _r else ""}', flush=True)
         time.sleep(0.2)
 
     if posters:
