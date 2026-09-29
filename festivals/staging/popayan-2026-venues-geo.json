@@ -1,0 +1,20 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-09-29"
+ },
+ "Teatro Bolívar": {
+  "lat": 2.4386267,
+  "lng": -76.6041451,
+  "address": "Cl. 7 #3-105, Centro, Popayán",
+  "_prec": "manual",
+  "_nota": "Google Maps «Teatro Bolívar», Cl. 7 #3-105; OSM «Teatro Cultural Bolivar» (Carrera 3 con Calle 7) a 1,5 m. Sede principal según el afiche (p/DdCljrXoEzp)."
+ },
+ "Facultad de Artes Unicauca": {
+  "lat": 2.4429541,
+  "lng": -76.6055212,
+  "address": "Cra. 6 #3-14, Centro, Popayán",
+  "_prec": "manual",
+  "_nota": "Google Maps «Facultad de Artes Universidad del Cauca», Cra. 6 #3-14; OSM «Puerta artes, 3-14, Carrera 6» a 6 m. El Auditorio Maya es su sala."
+ }
+}

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "festicinepopayan.com (Selección Oficial 2026, vía wp-json) + cinecorto.co (ficha de cada corto, confirmada por dirección)",
-  "capturado": "2026-09-28",
+  "capturado": "2026-09-29",
   "que_aporta": "sección, título y crédito (la web); año, duración y sinopsis (cinecorto.co)",
   "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
   "metodo": "la lista emparejada pestaña por pestaña y contada contra ESPERADAS; la ficha aceptada solo si su dirección casa"
@@ -70,6 +70,14 @@
     "date": "2026-09-28"
    },
    "produccion": "Ernestina Miranda y Mar Ajé",
+   "anio": 2026,
+   "duracion_min": 14,
+   "sinopsis": "Musicos: Rosalina Cañate “La Paloma”, Emelia Reyes Salgado “La Burgo”, Felipa Tejedor, Brenda Torres, Sofia Obeso, Anita Marimón, Ali Navarro Salas “Ali MCPM”, Joao Salgado.",
+   "_ficha": {
+    "url": "https://cinecorto.co/la-tinaja/",
+    "categoria": "Documental",
+    "direccion": "Ernestina Miranda y Mar Ajé"
+   },
    "_ya_publicada": [
     {
      "festival": "qaff-2026",
@@ -270,6 +278,14 @@
     "date": "2026-09-28"
    },
    "produccion": "Beltrán Pérez",
+   "anio": 2026,
+   "duracion_min": 6,
+   "sinopsis": "Natalia no encuentra trabajo cuando un antiguo profesor le ofrece la posibilidad de trabajar con ex-miembros de la guerrilla. Esa nueva experiencia la confronta a ella y sus prejuicios.",
+   "_ficha": {
+    "url": "https://cinecorto.co/sapos-por-todos-lados/",
+    "categoria": "Animación",
+    "direccion": "Juan Jacobo Albán Torres"
+   },
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -538,7 +554,7 @@
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "Le Fresnoy - Studio national des arts contemporains",
+   "produccion": "Le Fresnoy – Studio national des arts contemporains",
    "anio": 2026,
    "duracion_min": 8,
    "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad.",
@@ -577,7 +593,15 @@
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "Francisco Antonio Arango Ceballos"
+   "produccion": "Francisco Antonio Arango Ceballos",
+   "anio": 2025,
+   "duracion_min": 15,
+   "sinopsis": "A través de una perspectiva científica, el film explora las complejas adaptaciones evolutivas de estos insectos, destacando sus extraños diseños y su enigmática forma de comunicación. Además, revela los desafíos que enfrentan, ofreciendo una visión del papel que desempeñan en el equilibrio ecológico y la importancia de conservar su hábitat.",
+   "_ficha": {
+    "url": "https://cinecorto.co/maravillas-de-la-evolucion/",
+    "categoria": "",
+    "direccion": "Francisco Antonio Arango Ceballos"
+   }
   },
   {
    "titulo": "Mi viche todo el día",
@@ -817,7 +841,13 @@
     "url": "https://cinecorto.co/la-rebelion-de-un-fantasma/",
     "categoria": "Experimental",
     "direccion": "Flora Rodríguez"
-   }
+   },
+   "_ya_publicada": [
+    {
+     "festival": "girardota-2026",
+     "titulo": "La Rebelión de un Fantasma"
+    }
+   ]
   },
   {
    "titulo": "Sirena mecánica",
@@ -920,14 +950,22 @@
    "produccion": "Loly Nereida Juajibioy Muchachasoy"
   },
   {
-   "titulo": "Vivenciando lo Hilos de Vida del Tejido de Sabidurías y Conocimientos de la Educación Propia",
+   "titulo": "Ley de Origen y Espiritualidad",
    "director": "Jhonatan David Sánchez Chate",
    "seccion_fuente": "SELECCIÓN OFICIAL CORTOMETRAJE INDÍGENA",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "Lisbeth Adriana Pizo Manquillo"
+   "produccion": "Lisbeth Adriana Pizo Manquillo",
+   "anio": 2024,
+   "duracion_min": 21,
+   "sinopsis": "Presenta la vivencia espiritual desde la Ley de Origen, que hace parte esencial de la vida de las comunidades indígenas en el departamento del Cauca, a partir de allí se orienta y se mantiene el equilibrio y la armonía personal y comunitaria. En este capítulo se detalla la ley de origen de cada uno de los 10 pueblos que integran el Consejo Regional Indígena del Cauca, CRIC.",
+   "_ficha": {
+    "url": "https://cinecorto.co/ley-de-origen-y-espiritualidad/",
+    "categoria": "Documental",
+    "direccion": "Jhonatan David Sánchez Chate"
+   }
   },
   {
    "titulo": "Yakuwasi: La Casa del Agua",
@@ -1039,7 +1077,7 @@
    "produccion": "Carolina Ramos Gaviria"
   },
   {
-   "titulo": "La Gran Hazaña",
+   "titulo": "La gran hazaña",
    "director": "Luber Yesid Zúñiga Ordóñez",
    "seccion_fuente": "SELECCIÓN OFICIAL CORTOMETRAJE INFANTIL",
    "_src": {
@@ -1083,7 +1121,7 @@
    "produccion": "Dora Nayibe Gutiérrez"
   },
   {
-   "titulo": "Los pliegues de la Falda",
+   "titulo": "Los pliegues de la falda",
    "director": "Blanca Muñoz Ávila",
    "seccion_fuente": "SELECCIÓN OFICIAL CORTOMETRAJE INFANTIL",
    "_src": {
@@ -1091,6 +1129,14 @@
     "date": "2026-09-28"
    },
    "produccion": "Mariangela González C",
+   "anio": 2025,
+   "duracion_min": 18,
+   "sinopsis": "Linda, Carlos y María son una familia convencional en la que casi todo encaja: el padre tiene la última palabra, la madre se encarga de la casa. Y Linda es una pequeña que se rehúsa a usar la falda. Ella no quiere ser la princesa de papá, solo quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que Linda interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla. Después de la función, nada será igual.",
+   "_ficha": {
+    "url": "https://cinecorto.co/los-pliegues-de-la-falda/",
+    "categoria": "Ficción",
+    "direccion": "Blanca Muñoz Avila"
+   },
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -1178,7 +1224,15 @@
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "Ariel Merchán"
+   "produccion": "Ariel Merchán",
+   "anio": 2025,
+   "duracion_min": 22,
+   "sinopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones",
+   "_ficha": {
+    "url": "https://cinecorto.co/el-segundo/",
+    "categoria": "Ficción",
+    "direccion": "Pedro Miguel Rozo"
+   }
   },
   {
    "titulo": "Gladiolos",
@@ -1244,7 +1298,7 @@
    ]
   },
   {
-   "titulo": "Las Faldas de Tu Prima",
+   "titulo": "Las faldas de tu prima",
    "director": "Jose Miguel Huertas Landero y Esteban Galindo",
    "seccion_fuente": "SELECCIÓN OFICIAL CORTOMETRAJE FICCIÓN",
    "_src": {
@@ -1471,7 +1525,7 @@
    "produccion": "Oscar Dario Arango Horta"
   },
   {
-   "titulo": "Tunesmith - Forjador de Notas",
+   "titulo": "Tunesmith – Forjador de Notas",
    "director": "Jordy Marin",
    "seccion_fuente": "SELECCIÓN OFICIAL CORTOMETRAJE CAUCA",
    "_src": {
@@ -1500,23 +1554,17 @@
   }
  ],
  "sin_ficha_cinecorto": [
-  "La tinaja",
   "La habitación del macho cabrío",
-  "Sapos por todos lados",
-  "Maravillas de la Evolución",
   "Sombras en la Niebla",
   "Tentado de difunto",
   "Un viernes",
   "La Europa",
   "Una noche en la montaña escuché una luz rugir",
   "Tabanoka Otjenayá",
-  "Vivenciando lo Hilos de Vida del Tejido de Sabidurías y Conocimientos de la Educación Propia",
   "Color piel",
   "Diente X Diente",
   "Juan PorOcho",
   "La guerra de los tomates",
-  "Los pliegues de la Falda",
-  "El Segundo",
   "Los Huyentes",
   "Más allá",
   "Todos los días",

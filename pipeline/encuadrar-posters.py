@@ -55,7 +55,10 @@ FONDO_ES_ARTE = {'funeral-siniestro.jpg',
                  # blanco de la ilustración de «No quiero ser un hombre» (Lubitsch,
                  # 1918) y el paspartú blanco de «Light Pillar»: los tres son del
                  # afiche, y la segunda pasada los seguía recortando
-                 'el-deshielo.jpg', 'no-quiero-ser-un-hombre.jpg', 'light-pillar.jpg'}
+                 'el-deshielo.jpg', 'no-quiero-ser-un-hombre.jpg', 'light-pillar.jpg',
+                 # Popayán 17 (29 sep): el cielo y el agua oscuros de «Niña Chilapa»
+                 # llegan al borde; no hay marco
+                 'nina-chilapa.jpg'}
 
 
 def rejilla(path):

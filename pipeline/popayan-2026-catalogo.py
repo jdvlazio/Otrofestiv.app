@@ -50,7 +50,7 @@ FID = 'popayan-2026'
 SELECCION = 'https://festicinepopayan.com/wp-json/wp/v2/pages?slug=seleccion-oficial-2026&_fields=content,modified'
 CINECORTO = 'https://cinecorto.co/wp-json/wp/v2'
 CACHE = f'{REPO}/fuentes/{FID}'
-DESTINO = f'{REPO}/festivals/staging/{FID}-catalogo.json'
+DESTINO = f'{REPO}/festivals/staging/popayan-2026-catalogo.json'
 
 ESPERADAS = {
     'SELECCIÓN OFICIAL CORTOMETRAJE AFRO': 6,
@@ -124,11 +124,19 @@ def lista():
         sec = pend.pop(0)
         for it in re.split(r'<br\s*/?>', p):
             m = re.match(r'\s*<strong>(.*?)</strong>(.*)', it, re.S)
-            if not m:
-                if texto(it):
-                    sys.exit(f'✗ renglón sin título en negrita en {sec}: {texto(it)!r}')
-                continue
-            titulo, rest = texto(m.group(1)), texto(m.group(2))
+            if m:
+                titulo, rest = texto(m.group(1)), texto(m.group(2))
+            else:
+                # SIN NEGRITA: la edición del 29 sep le quitó la negrita a
+                # «Arrullos de sol». El corte es el crédito: lo que va antes de
+                # «dirigido…» es el título. Un renglón sin crédito sigue parando.
+                t = texto(it)
+                if not t:
+                    continue
+                k = re.search(r'\s(?=dirigid)', t)
+                if not k:
+                    sys.exit(f'✗ renglón sin título en negrita ni crédito en {sec}: {t!r}')
+                titulo, rest = t[:k.start()].strip(), t[k.end():]
             if titulo in PEGADAS:
                 corte, segundo = PEGADAS[titulo]
                 i = rest.index(corte) + len(corte)
@@ -204,7 +212,9 @@ def ya_publicadas():
     from lib import director_coincide
     todas = []
     for f in sorted(os.listdir(f'{REPO}/festivals')):
-        if not f.endswith('.json'):
+        # el festival PROPIO no cuenta: una vez montado, su JSON está en
+        # festivals/ y cada obra se encontraba a sí misma (30 → 70, 29 sep)
+        if not f.endswith('.json') or f == f'{FID}.json':
             continue
         try:
             j = json.load(io.open(f'{REPO}/festivals/{f}', encoding='utf-8'))

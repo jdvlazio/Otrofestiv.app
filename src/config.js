@@ -1152,6 +1152,24 @@ export const FESTIVAL_CONFIG={
     prioLimit:5,
     films:null,posters:null,lbSlugs:{}
   },
+  'popayan2026': {
+    name:'Cine Corto Popayán',displayName:'Cine Corto Popayán',fullName:'17 Festival de Cine Corto de Popayán',shortName:'CINECORTO',
+    city:'Popayán',country:'CO',
+    dates:'5–11 OCT',dates_en:'OCT 5–11',year:2026,timezoneOffset:'-05:00',
+    // EL AFICHE OFICIAL de la edición (@cinecortofest p/DdCljrXoEzp, lámina 1:
+    // «5–11 octubre 2026 · teatro Bolívar · entrada libre»). 1:1 estirado a 2:3.
+    keyArt:'/assets/keyart/popayan2026-v1.jpg',
+    tagline:'Festival de cortometraje colombiano',
+    storageKey:'popayan2026_',festivalStartStr:'2026-10-05T00:00:00',festivalEndStr:'2026-10-11T23:59:00',
+    festivalDates:{'2026-10-05':'2026-10-05','2026-10-06':'2026-10-06','2026-10-07':'2026-10-07','2026-10-08':'2026-10-08','2026-10-09':'2026-10-09','2026-10-10':'2026-10-10','2026-10-11':'2026-10-11'},
+    days:[{k:'2026-10-05',d:5,lbl:'LUN'},{k:'2026-10-06',d:6,lbl:'MAR'},{k:'2026-10-07',d:7,lbl:'MIÉ'},{k:'2026-10-08',d:8,lbl:'JUE'},{k:'2026-10-09',d:9,lbl:'VIE'},{k:'2026-10-10',d:10,lbl:'SÁB'},{k:'2026-10-11',d:11,lbl:'DOM'}],
+    dayKeys:['2026-10-05','2026-10-06','2026-10-07','2026-10-08','2026-10-09','2026-10-10','2026-10-11'],
+    dayShort:{'2026-10-05':'LUN 5','2026-10-06':'MAR 6','2026-10-07':'MIÉ 7','2026-10-08':'JUE 8','2026-10-09':'VIE 9','2026-10-10':'SÁB 10','2026-10-11':'DOM 11'},
+    dayShort_en:{'2026-10-05':'MON 5','2026-10-06':'TUE 6','2026-10-07':'WED 7','2026-10-08':'THU 8','2026-10-09':'FRI 9','2026-10-10':'SAT 10','2026-10-11':'SUN 11'},
+    dayLong:{'2026-10-05':'Lunes 5 de octubre','2026-10-06':'Martes 6 de octubre','2026-10-07':'Miércoles 7 de octubre','2026-10-08':'Jueves 8 de octubre','2026-10-09':'Viernes 9 de octubre','2026-10-10':'Sábado 10 de octubre','2026-10-11':'Domingo 11 de octubre'},
+    prioLimit:3,
+    films:null,posters:null,lbSlugs:{}
+  },
   'narrarelfuturo2026': {
     name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
     city:'Bogotá',country:'CO',
@@ -1230,6 +1248,17 @@ export const SECTION_ARCHETYPES = {
   '🎪 Actividades': 'Especiales / Eventos',
   // ── 9° Festival Audiovisual de Girardota ──────────────────────────────
   '🎬 Proyecciones': 'Muestra / País',
+  // Cine Corto Popayán 17 (29 sep 2026)
+  '📽️ Selección Oficial Documental': 'Competencia',
+  '🏔️ Selección Oficial Cauca': 'Competencia',
+  '🌀 Selección Oficial Experimental': 'Competencia',
+  '🪶 Selección Oficial Indígena': 'Competencia',
+  '🥁 Selección Oficial Afro': 'Competencia',
+  '✏️ Selección Oficial Animación': 'Competencia',
+  '🤝 Selección Oficial Comunitario': 'Competencia',
+  '🎬 Selección Oficial Ficción': 'Competencia',
+  '🌎 Muestra de Cortos Internacionales': 'Muestra / País',
+  '🎤 Actividades': 'Charlas / Industria',
   // BIFF 12 (29 sep 2026)
   '🇨🇴 Colombia viva': 'Muestra / País',
   '✨ Espíritu joven': 'Competencia',   // compite por el Premio de la Juventud

@@ -247,13 +247,18 @@ def ficha_tmdb(obra, key, paginas=6):
             dur = det.get('runtime') or 0
             nuestro = {'director': director, 'anio': obra.get('anio'),
                        'duracion_min': obra.get('duracion_min')}
-            if (anio or dur) and (nuestro['anio'] or nuestro['duracion_min']):
+            # «con qué contrastar» = un campo que AMBOS lados tienen. Que cada
+            # lado tenga ALGO no alcanza: TMDB con año y sin duración (runtime 0)
+            # contra la parrilla con duración y sin año no se pueden comparar, y
+            # el camino estricto los rechazaba siempre (La asociación, Popayán,
+            # 29 sep: pasaba en el catálogo, sin duración, y caía en el montaje).
+            if (anio and nuestro['anio']) or (dur and nuestro['duracion_min']):
                 if not ficha_verifica(nuestro, det):
                     continue
                 return det, det_en, (f'director ✓ + año/duración '
                                      f'(TMDB: {anio or "?"}, {dur or "?"} min)')
             return det, det_en, ('director ✓ + título idéntico; no hay año ni '
-                                 'duración en ambos lados con qué contrastar')
+                                 'duración EN COMÚN con qué contrastar')
     return None
 
 

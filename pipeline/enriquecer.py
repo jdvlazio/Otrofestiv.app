@@ -124,11 +124,25 @@ def ficha_de_tmdb(cid, key, titulo):
                 _tr_es = _o
             elif _t.get('iso_639_1') == 'en' and not _tr_en:
                 _tr_en = _o
+    # UN TÍTULO NO ES UNA SINOPSIS. TMDB guarda a veces el título traducido
+    # como «overview»: «Born to Be Seed» (Nascemos para semente, Popayán) y
+    # «When the waters meet» (Cuando las aguas se juntan, Jardín), sin que ese
+    # texto figure como título en ningún campo de la ficha. Se descarta el
+    # overview igual a un título, y el de cinco palabras o menos SIN punto
+    # final: eso es un rótulo, no una frase.
+    _titulos = {norm(x) for x in (det.get('title'), det.get('original_title'),
+                                      det_en.get('title')) if x}
+
+    def _sinopsis(txt):
+        t = (txt or '').strip()
+        if norm(t) in _titulos or (t and len(t.split()) <= 5 and t[-1] not in '.!?…»"'):
+            return ''
+        return t
     out = {'tmdb_id': cid,
            'titulo_original': det.get('original_title'),
            'poster_path': det.get('poster_path'),
-           'synopsis_es': (det.get('overview') or '') or _tr_es,
-           'synopsis_en': (det_en.get('overview') or '') or _tr_en,
+           'synopsis_es': _sinopsis(det.get('overview')) or _sinopsis(_tr_es),
+           'synopsis_en': _sinopsis(det_en.get('overview')) or _sinopsis(_tr_en),
            'genero': (det.get('genres') or [{}])[0].get('name', ''),
            'anio_tmdb': int((det.get('release_date') or '0')[:4] or 0),
            'duracion_tmdb': det.get('runtime') or 0,

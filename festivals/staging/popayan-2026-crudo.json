@@ -1,0 +1,784 @@
+{
+ "_provenance": {
+  "fuente": "festicinepopayan.com, página de programación 2026 (wp-json, id 13120)",
+  "capturado": "2026-09-29",
+  "que_aporta": "día, hora, sede y obras de cada bloque; el resto de la ficha, del catálogo",
+  "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+  "metodo": "wp-json + parser de renglones; cruce con el catálogo por título y dirección"
+ },
+ "_sin_funcion": {
+  "porque": "la página no trae el sábado 10 ni el domingo 11",
+  "obras": [
+   "Cascabeles",
+   "Color piel",
+   "Diente X Diente",
+   "Dientes de yuca",
+   "Gris",
+   "Juan PorOcho",
+   "La gran hazaña",
+   "La guerra de los tomates",
+   "Los pliegues de la falda",
+   "Luis Antonio"
+  ]
+ },
+ "funciones": [
+  {
+   "titulo": "Apertura del Festival",
+   "dia": "2026-10-05",
+   "hora": "19:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "tipo": "evento",
+   "event_kind": "apertura",
+   "seccion": "Actividades",
+   "duracion_min": 30
+  },
+  {
+   "titulo": "Selección Oficial Documental (primer bloque)",
+   "dia": "2026-10-05",
+   "hora": "19:30",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "seccion": "Selección Oficial Documental",
+   "obras": [
+    {
+     "titulo": "Madres de nacimiento",
+     "director": "Gloria Isabel Gómez Ceballos",
+     "anio": 2026,
+     "duracion_min": 8,
+     "sinopsis": "Del olvido y la oscuridad hay imágenes y sonidos que resurgen para controlar los cuerpos de las mujeres latinoamericanas, quienes desde niñas han sido consideradas madres de nacimiento. Pero en estos archivos emerge una interferencia que proviene del pasado para evocar un mensaje de lucha, memoria y libertad."
+    },
+    {
+     "titulo": "Cayenas libertarias",
+     "director": "Javier Camilo Aranguren Montañez",
+     "anio": 2026,
+     "duracion_min": 18,
+     "sinopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos o cantos de trabajo de llano que durante generaciones fueron entonadas por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición Llanera, revelando su relación armónica con la naturaleza, y compleja con el arraigo llanero."
+    },
+    {
+     "titulo": "Como el agua, la piedra y la espuma",
+     "director": "Diana Moreno",
+     "anio": 2024,
+     "duracion_min": 25,
+     "sinopsis": "Liliana, joven indígena Pasto, recorre su territorio despertando memorias. En un encuentro con sus Mayores y con los lugares sagrados en medio de los Andes, evoca y reconstruye la sentencia de Juan Chiles, quien 200 años atrás invitaba a ser como el agua, la piedra y la espuma."
+    },
+    {
+     "titulo": "Maravillas de la Evolución",
+     "director": "Francisco Antonio Arango Ceballos",
+     "anio": 2025,
+     "duracion_min": 15,
+     "sinopsis": "A través de una perspectiva científica, el film explora las complejas adaptaciones evolutivas de estos insectos, destacando sus extraños diseños y su enigmática forma de comunicación. Además, revela los desafíos que enfrentan, ofreciendo una visión del papel que desempeñan en el equilibrio ecológico y la importancia de conservar su hábitat."
+    },
+    {
+     "titulo": "Las tres muertes de un sol",
+     "director": "Santiago Londoño Gallego y Nicolás Ortega Baquero",
+     "anio": 2025,
+     "duracion_min": 30,
+     "sinopsis": "Las Tres Muertes de un Sol sigue a Yojan, un joven campesino en un viaje introspectivo a través de sus recuerdos y las entrañas de la montaña donde vive. En medio de ruinas, caminos montañosos y ríos, el exuberante paisaje se convierte en un testigo mudo de los azares del destino que han marcado su vida."
+    },
+    {
+     "titulo": "La despedida del río",
+     "director": "Mateo Salas Puerta",
+     "anio": 2025,
+     "duracion_min": 17,
+     "sinopsis": "Mariana Escobar, Darlin Dahiana Higuita Lopera, Mónica Danisa Flórez Misas, Jherinson Alsides Torres, Gerson Daniel Torres, Sara Camila Cañas Torres"
+    }
+   ],
+   "duracion_min": 113
+  },
+  {
+   "titulo": "Conversatorio",
+   "dia": "2026-10-05",
+   "hora": "21:30",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 60
+  },
+  {
+   "titulo": "Selección Oficial Cauca (primer bloque)",
+   "dia": "2026-10-06",
+   "hora": "17:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "seccion": "Selección Oficial Cauca",
+   "obras": [
+    {
+     "titulo": "Crudo",
+     "director": "Álvaro Ruiz Velasco",
+     "anio": 2023,
+     "duracion_min": 7,
+     "sinopsis": "Tras ser desplazada por la violencia, Edelmira acaba trabajando como empleada doméstica para el grupo armado que la desplazó. Esta situación será la oportunidad para Edelmira de redimirse o vengarse."
+    },
+    {
+     "titulo": "El sincretismo del agua",
+     "director": "Tito Ascendra y Laura Gutiérrez",
+     "duracion_min": 5
+    },
+    {
+     "titulo": "La Volqueta",
+     "director": "Wiston Fernández Madriñan",
+     "anio": 2024,
+     "duracion_min": 15,
+     "sinopsis": "En un cambuche a la orilla de un lago, Jeison, un hombre joven y pobre, vive junto a su hijo Messi. Jeison, a pesar de su vida dura, y que diariamente está marcada a través de una lucha por sobrevivir; trabajando duro bajo el sol, recogiendo arena para una volqueta con el fin de ganar un poco de dinero, se esfuerza por cuidar y alegrar a su hijo. Messi, sueña con una volqueta de juguete, pero su padre no puede permitírselo. Haciendo que Jeison tome una difícil decisión para poder darle a Messi un futuro mejor."
+    },
+    {
+     "titulo": "Negret: Génesis de una metamorfósis",
+     "director": "Marco Paredes Manzano",
+     "duracion_min": 13
+    },
+    {
+     "titulo": "Tunesmith – Forjador de Notas",
+     "director": "Jordy Marin",
+     "anio": 2025,
+     "duracion_min": 26,
+     "sinopsis": "En la pintoresca ciudad de Popayán, Colombia, donde el encanto colonial se encuentra con el valle de Pubenza, vive Gus—un herrero rudo, moldeado por el trabajo, con manos de hierro y un corazón de oro."
+    }
+   ],
+   "duracion_min": 66
+  },
+  {
+   "titulo": "Conversatorio",
+   "dia": "2026-10-06",
+   "hora": "18:30",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 30
+  },
+  {
+   "titulo": "Selección Oficial Experimental",
+   "dia": "2026-10-06",
+   "hora": "18:00",
+   "sede": "Facultad de Artes Unicauca",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "sala": "Auditorio Maya",
+   "seccion": "Selección Oficial Experimental",
+   "obras": [
+    {
+     "titulo": "(El Experimento)",
+     "director": "Paola Michaels",
+     "anio": 2024,
+     "duracion_min": 8,
+     "sinopsis": "Una voz infantil y robótica enumera diferentes aventuras junto a sus particulares mascotas. Como si se tratara de un informe científico, lo real y lo fantástico se fusionan en este singular monólogo que reflexiona sobre los recuerdos y el apego. Esta película, escrita originalmente hace una década, se actualiza como si cruzara un espejo y se convierte en una metaficción, un proyecto quizás interminable."
+    },
+    {
+     "titulo": "Animista",
+     "director": "Sebastián Giraldo",
+     "anio": 2026,
+     "duracion_min": 8,
+     "sinopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo."
+    },
+    {
+     "titulo": "Sirena mecánica",
+     "director": "Violeta Vieytes Vivares y Damián Sato",
+     "anio": 2026,
+     "duracion_min": 9,
+     "sinopsis": "Sirena Mecánica es un documental fantástico que desde de los estudios transfeministas reinterpreta el modo en cómo se representa el cuerpo (material y social) femenino dentro del mito de la sirena. Este procedimiento subversivo narra a través de los recuerdos de la primera infancia y los procesos de sanación en la relación intima de la pareja codirectora de la pieza. En el desencuentro con la realidad, SM transita entre paisajes materialmente confusos (fílmicos y plásticos) TRANSitando en la ambigüedad de la protección, amenaza, belleza y violencia."
+    },
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Paola Bonilla Rodríguez",
+     "anio": 2025,
+     "duracion_min": 15,
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a la isla esperando una utopía científico–social, pero encuentra un territorio golpeado por una silenciosa crisis agrícola y ambiental, una Cuba ucrónica y nebulosa donde las promesas del pasado persisten como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se intuye: un sistema agotado que intenta sostener un ideal ya difuso."
+    },
+    {
+     "titulo": "Filme Pin",
+     "director": "Maria Rojas Arias y Andrés Jurado",
+     "anio": 2026,
+     "duracion_min": 7,
+     "sinopsis": "Entre luz, metal y destellos, Filme PIN reimagina un archivo, redimensiona el objeto popular y político: nos presenta a otra escala, espectros de las luchas, del exilio y de la solidaridad internacional contra el régimen fascista y colonial portugués."
+    },
+    {
+     "titulo": "La Europa",
+     "director": "Jorge Perez Aldana",
+     "duracion_min": 21
+    },
+    {
+     "titulo": "La rebelión de un fantasma",
+     "director": "Flora Rodríguez",
+     "anio": 2026,
+     "duracion_min": 15,
+     "sinopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico."
+    },
+    {
+     "titulo": "El patio de la infancia",
+     "director": "Cecilia Traslaviña",
+     "anio": 2025,
+     "duracion_min": 14,
+     "sinopsis": "Una mujer reflexiona sobre el significado de la infancia a partir de los archivos de una película incompleta que recibe. Los personajes son unas muñecas de cerámica únicas que cobran vida a su paso. ¿Es la infancia una ficción colectiva?"
+    },
+    {
+     "titulo": "Soñar una serpiente",
+     "director": "Mária Carolina Ardila y Liliana Correa",
+     "anio": 2025,
+     "duracion_min": 14,
+     "sinopsis": "Una joven taxidermista, criada entre fósiles y vitrinas de museo, encuentra una fotografía que lo cambia todo: su madre joven sostiene la mirada de una serpiente con intensidad casi ritual. Desde entonces, los reptiles irrumpen en su vida como obsesión y presencia inevitable, atravesando su trabajo, su cuerpo y su deseo. En esa atracción late algo primitivo y voraz que la impulsa a entrelazar la figura de la serpiente con la maternidad en un mismo impulso vital. Historia personal, linaje y el enigma de lo ofidio se enredan en una espiral de instintos y revelaciones que la arrastran más allá de lo humano."
+    },
+    {
+     "titulo": "Una noche en la montaña escuché una luz rugir",
+     "director": "Andrés Jiménez Quintero",
+     "duracion_min": 14
+    }
+   ],
+   "duracion_min": 125
+  },
+  {
+   "titulo": "Selección Oficial Cauca (segundo bloque)",
+   "dia": "2026-10-06",
+   "hora": "19:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "seccion": "Selección Oficial Cauca",
+   "obras": [
+    {
+     "titulo": "Cielo Roto",
+     "director": "María José Alarcón",
+     "anio": 2023,
+     "duracion_min": 24,
+     "sinopsis": "Desde el terremoto de 1983, Popayán jamás volvió a ser la misma. Tres décadas después, algunas de sus edificaciones abandonadas y en ruinas lo evidencian. María José y Alejandra, al igual que la ciudad en la que nacieron, también habitan grietas que les generan preguntas sobre el pasado, el presente y el futuro."
+    },
+    {
+     "titulo": "Yo soy yo",
+     "director": "Andrés Stiven Victoria Devia",
+     "duracion_min": 21
+    },
+    {
+     "titulo": "Mañanitas",
+     "director": "Santiago Chacón Narváez",
+     "anio": 2024,
+     "duracion_min": 17,
+     "sinopsis": "Santiago empieza a definir su identidad, ser arquero en fútbol, ser skate como los amigos de si prima o ser cantante de reguetón, pero le atrae su prima Sofía que cumple quince años. Sofía por el azar del destino logra escapar de la fiesta de celebración familiar y sale a celebrar con sus amigos y su novio, Santiago va con ella. Esa madrugada Sofía y Santiago se descubren."
+    },
+    {
+     "titulo": "La asociación",
+     "director": "Juan Camilo Muñoz Quintero",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "Sangre",
+     "director": "Julian Andres Hoyos Pinzón",
+     "duracion_min": 10
+    }
+   ],
+   "duracion_min": 90
+  },
+  {
+   "titulo": "Conversatorio",
+   "dia": "2026-10-06",
+   "hora": "21:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 60
+  },
+  {
+   "titulo": "Selección Oficial Indígena",
+   "dia": "2026-10-07",
+   "hora": "15:30",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "seccion": "Selección Oficial Indígena",
+   "obras": [
+    {
+     "titulo": "Tabanoka Otjenayá",
+     "director": "Yamid Alejandro Juagibioy Muchachasoy",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Ley de Origen y Espiritualidad",
+     "director": "Jhonatan David Sánchez Chate",
+     "anio": 2024,
+     "duracion_min": 21,
+     "sinopsis": "Presenta la vivencia espiritual desde la Ley de Origen, que hace parte esencial de la vida de las comunidades indígenas en el departamento del Cauca, a partir de allí se orienta y se mantiene el equilibrio y la armonía personal y comunitaria. En este capítulo se detalla la ley de origen de cada uno de los 10 pueblos que integran el Consejo Regional Indígena del Cauca, CRIC."
+    },
+    {
+     "titulo": "Akababuru: Expresión de asombro",
+     "director": "Irati Dojura Landa Yagarí",
+     "anio": 2025,
+     "duracion_min": 13,
+     "sinopsis": "Alejandra Castaño Arias, Wildier Tascón Tascón, Roxana Panchí Gutierrez, Alexa Yagarí Panchí, Isabella Palacio Mesa, Laura Rave Escalante, Juan Pablo Herrera González, Andrés Felipe Tascón Baquiaza, Irati Dojura, Laura Giraldo Mira, Cristian Navarro Araujo y Cristian Navarro Araujo"
+    },
+    {
+     "titulo": "Yakuwasi: La Casa del Agua",
+     "director": "Faisal Tisnés",
+     "anio": 2025,
+     "duracion_min": 15,
+     "sinopsis": "Desde el Macizo Colombiano, útero de la Madre Tierra, dentro del Resguardo de Papallaqta de la Nación Indígena Yanakuna, este corto documental explora un territorio donde lagunas y manantiales sagrados dan origen a los ríos más importantes de Colombia."
+    }
+   ],
+   "duracion_min": 56
+  },
+  {
+   "titulo": "Conversatorio",
+   "dia": "2026-10-07",
+   "hora": "16:30",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 30
+  },
+  {
+   "titulo": "Selección Oficial Afro",
+   "dia": "2026-10-07",
+   "hora": "17:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "seccion": "Selección Oficial Afro",
+   "obras": [
+    {
+     "titulo": "Nascemos para semente",
+     "director": "Mauricio Valbuena Sánchez",
+     "anio": 2026,
+     "duracion_min": 16,
+     "sinopsis": "Cesar Ngimba (Félix), Carlos Rodrigues (Nico La Famy), Ricasz,Scaitt Borrabeu,Julia Goieta,Rui César Silva,Suzete Rodrigues,Leonardo Mendes,Rui Ribeiro,José Sanchez,Carlos Fernandes, Janime Monteiro."
+    },
+    {
+     "titulo": "Arrullos de sol",
+     "director": "Juan José Posso",
+     "anio": 2025,
+     "duracion_min": 13,
+     "sinopsis": "Tras perder a su hijo en un accidente, Sol enfrenta el duelo mientras lidia con los rituales funerarios de la familia de su esposo. Una presencia desconocida la confronta con su mayor temor: creer que fue culpable."
+    },
+    {
+     "titulo": "La tinaja",
+     "director": "Ernestina Miranda y Mar Ajé",
+     "anio": 2026,
+     "duracion_min": 14,
+     "sinopsis": "Musicos: Rosalina Cañate “La Paloma”, Emelia Reyes Salgado “La Burgo”, Felipa Tejedor, Brenda Torres, Sofia Obeso, Anita Marimón, Ali Navarro Salas “Ali MCPM”, Joao Salgado."
+    },
+    {
+     "titulo": "Chicanoa",
+     "director": "Carlos Alberto Mera Jiménez",
+     "anio": 2025,
+     "duracion_min": 9,
+     "sinopsis": "Lura lucia Carabali Otero, Yineth Mera Mejia, Luz Adiana Serna Lasso, Jorge Olmedo Serna Lasso, Eddy Valeria Carabali Lasso, Eddy Valeria Carabali Lasso, Ibeth Karina Correa Fajardo, Coni Estefani Lasso Gonzalias"
+    },
+    {
+     "titulo": "Hacia la raíz",
+     "director": "María José Garcés Arias",
+     "anio": 2023,
+     "duracion_min": 25,
+     "sinopsis": "Al descubrirse como una ‘negra blanqueada’ María confronta a su padre, en búsqueda de sus raíces afro, emprende un viaje al territorio de sus ancestros así reconstruye las huellas de su pasado y abraza su identidad."
+    },
+    {
+     "titulo": "Legado",
+     "director": "Zumaya Mayers y Rodrigo Cuervo",
+     "anio": 2024,
+     "duracion_min": 24,
+     "sinopsis": "na serie documental que viaja por territorios mágicos y exuberantes a través de la memoria afrodescendiente de América Latina, para revelar historias entrelazadas de resistencia, lucha y preservación cultural, con el propósito de conocer la fuerza y profundidad de un legado ancestral que desafía la adversidad y se enorgullece de sus raíces africanas, donde la lucha por la libertad, la conexión con el territorio y la celebración de la vida se entrelazan en una danza de resiliencia y dignidad. Un recorrido visual y sonoro en una polifonía de saberes que resuena con los ritmos ancestrales para redescubrir un legado que sigue vivo y vibrante."
+    }
+   ],
+   "duracion_min": 101
+  },
+  {
+   "titulo": "Conversatorio",
+   "dia": "2026-10-07",
+   "hora": "18:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 60
+  },
+  {
+   "titulo": "Selección Oficial Animación",
+   "dia": "2026-10-07",
+   "hora": "19:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "seccion": "Selección Oficial Animación",
+   "obras": [
+    {
+     "titulo": "Abuelita caza vampiros",
+     "director": "Mariana Betancourt Chaves",
+     "anio": 2026,
+     "duracion_min": 2,
+     "sinopsis": "En medio de la noche, un vampiro irrumpe en la casa de una abuelita latinoamericana esperando encontrar una presa fácil. En su lugar, se enfrenta a una mujer valiente, dispuesta a pelear por su vida. Con la ayuda inesperada de su fiel pug, la abuelita se envuelve en una batalla bizarra por la supervivencia. Mezclando humor con una atmósfera inquietante, Abuelita Caza Vampiros es una comedia gótica tropical inspirada en memorias familiares, donde el coraje y un toque de lo absurdo transforman una noche común en un enfrentamiento inolvidable."
+    },
+    {
+     "titulo": "Amor en los tiempos de como sea que se llame el presente",
+     "director": "Valentina Qaszulxkef",
+     "duracion_min": 18,
+     "_solo_parrilla": true
+    },
+    {
+     "titulo": "Corazón galvánico",
+     "director": "Valentina Valencia Giraldo",
+     "anio": 2025,
+     "duracion_min": 14,
+     "sinopsis": "Ivy, ciudadana de un futuro en decadencia, se ve ahogada en una perpetua melancolía tras separarse de su enamorada. OHM, su asistente robótico y regente del nuevo orden mundial, le presenta la oportunidad única de reencontrarse con ella y trascender su forma humana."
+    },
+    {
+     "titulo": "decaer",
+     "director": "Juan Camilo González",
+     "anio": 2026,
+     "duracion_min": 7,
+     "sinopsis": "Gracias a los chinos por la pólvora, parece que la hubieran hecho para mí. Su invención sucede como un accidente, pensada inicialmente para espantar los espíritus malos. Esta película inicia en China, luego un evento en Cartagena y se acaba siglos después en Bogotá."
+    },
+    {
+     "titulo": "Emechiche, El renacer de los cabeciblancos",
+     "director": "Juan Camilo González",
+     "anio": 2025,
+     "duracion_min": 11,
+     "sinopsis": "En los Montes de María Colombianos, habita el Emechiche (Saguinus oedipus). Una especie en peligro de extinción, observamos las complejas relaciones con sus crías y su entorno. Analizaremos su supervivencia, dejándonos ser testigos de sus sentimientos e instintos salvajes."
+    },
+    {
+     "titulo": "Sapos por todos lados",
+     "director": "Juan Jacobo Albán Torres",
+     "anio": 2026,
+     "duracion_min": 6,
+     "sinopsis": "Natalia no encuentra trabajo cuando un antiguo profesor le ofrece la posibilidad de trabajar con ex-miembros de la guerrilla. Esa nueva experiencia la confronta a ella y sus prejuicios."
+    },
+    {
+     "titulo": "La habitación del macho cabrío",
+     "director": "Duban Pinzon",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Tuktu, Padre Maíz",
+     "director": "Mauricio Prieto",
+     "anio": 2025,
+     "duracion_min": 14,
+     "sinopsis": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra."
+    },
+    {
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "director": "Laura María Rodríguez Moreno",
+     "anio": 2025,
+     "duracion_min": 8,
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "titulo": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez González",
+     "anio": 2025,
+     "duracion_min": 10
+    }
+   ],
+   "duracion_min": 102
+  },
+  {
+   "titulo": "Selección Oficial Comunitario",
+   "dia": "2026-10-08",
+   "hora": "15:30",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "seccion": "Selección Oficial Comunitario",
+   "obras": [
+    {
+     "titulo": "Murmullos",
+     "director": "Maria Camila Acevedo Mejía",
+     "anio": 2025,
+     "duracion_min": 7,
+     "sinopsis": "Zoraida y Paulina son dos hermanas que pasan sus días en la Fundación Albeiro Vargas y Ángeles Custodios, hablando de los chismes de sus compañeros. Una noche su cotidianidad es interrumpida por unos murmullos, así que acuden a la religión para recuperar su tranquilidad."
+    },
+    {
+     "titulo": "HDLT Hijo de la Tierra",
+     "director": "Colectivo Artefactum Suba",
+     "anio": 2025,
+     "duracion_min": 18,
+     "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+    },
+    {
+     "titulo": "Un abrir y cerrar de ojos",
+     "director": "Lia Marcela Correa Teherán",
+     "anio": 2026,
+     "duracion_min": 8,
+     "sinopsis": "Juan, un viejo minero de la comunidad de Varsovia, despierta la mañana después de una tragedia: En el silencio de su cocina y el café derramado sobre la mesa lo enfrentan a la ausencia de su nieto Pedro. Ese gesto mínimo desata una cadena de recuerdos que reconstruyen los días previos."
+    },
+    {
+     "titulo": "Historias al margen: Martha y Eduardo",
+     "director": "Juan Manuel Figueroa",
+     "anio": 2024,
+     "duracion_min": 18,
+     "sinopsis": "Desde la periferia, hay quienes observan y sostienen la transformación de una ciudad, convirtiéndose en el pilar invisible que evita el colapso de nuestra sociedad moderna. En este contexto conoceremos a Martha y Eduardo, dos adultos mayores cuya labor en el reciclaje en Popayán trasciende las décadas. Han sido testigos silenciosos de los cambios de la ciudad; su sangre y su esfuerzo han recorrido, figurativa y literalmente, cada calle. A través de sus vivencias, marcadas por el rigor de la calle pero iluminadas por sonrisas compartidas, nos invitan a una profunda reflexión: frente a tanta adversidad, ¿cómo han logrado resistir y enseñarnos a sonreír?"
+    },
+    {
+     "titulo": "Pájaros huérfanos",
+     "director": "Leonardo Rafael Montes Pérez",
+     "anio": 2026,
+     "duracion_min": 6,
+     "sinopsis": "Un juego de caza en el bosque termina en un espejo inesperado. Tres hermanos logran abatir a una paloma, solo para descubrir que han dejado un nido de pichones huérfanos. En la fragilidad de esas crías, los niños reviven el trauma de su propio pasado y el vacío que dejó el conflicto en su hogar. Una historia sobre la pérdida, la memoria y el ciclo del dolor que intentan sanar al llevarse consigo aquello que ellos mismos rompieron."
+    }
+   ],
+   "duracion_min": 57
+  },
+  {
+   "titulo": "Conversatorio",
+   "dia": "2026-10-08",
+   "hora": "16:30",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 30
+  },
+  {
+   "titulo": "Selección Oficial Documental segundo bloque",
+   "dia": "2026-10-08",
+   "hora": "17:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "seccion": "Selección Oficial Documental",
+   "obras": [
+    {
+     "titulo": "Niña Chilapa",
+     "director": "Juana Lotero López",
+     "anio": 2025,
+     "duracion_min": 17,
+     "sinopsis": "Yulieth (11-13), se enfrenta a la dificultad de crecer en un territorio salvaje, donde coexiste la belleza natural y la hostilidad del machismo. Su identidad en construcción se disputa entre las pulsiones de sus sueños y su realidad."
+    },
+    {
+     "titulo": "Mi viche todo el día",
+     "director": "Juan Camilo Moreno",
+     "anio": 2025,
+     "duracion_min": 26,
+     "sinopsis": "En el Medio Atrato chocoano; Ana Panesso y su comunidad cultivan la caña de azúcar y fabrican el viche; bebida ancestral antes prohibida y ahora en boga. A través de la comida; los viajes en río y la música; el viche y sus saberes no sólo configuran el día a día de las personas; sino que también plantea la pregunta por un futuro justo; donde el viche sea alimento; sustento e identidad de las familias negras."
+    },
+    {
+     "titulo": "Un viernes",
+     "director": "Francy Urrea Solano, Juan Diego Aguirre Gómez",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Sombras en la Niebla",
+     "director": "Pedro Pablo Vega",
+     "duracion_min": 25
+    },
+    {
+     "titulo": "Tentado de difunto",
+     "director": "Juan David Corredor Robles",
+     "duracion_min": 14
+    }
+   ],
+   "duracion_min": 91
+  },
+  {
+   "titulo": "Conversatorio",
+   "dia": "2026-10-08",
+   "hora": "18:30",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 30
+  },
+  {
+   "titulo": "Selección Oficial Ficción primer bloque",
+   "dia": "2026-10-08",
+   "hora": "19:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "seccion": "Selección Oficial Ficción",
+   "obras": [
+    {
+     "titulo": "1 Hijo & 1 Padre",
+     "director": "Andrés Ramírez Pulido",
+     "anio": 2024,
+     "duracion_min": 25,
+     "sinopsis": "Kevin es catalogado como un chico problemático, a decir verdad, no controla sus impulsos cuando se burlan de él. Tras un nuevo error,"
+    },
+    {
+     "titulo": "Camino al cielo",
+     "director": "Miguel Vargas Mejia",
+     "anio": 2024,
+     "duracion_min": 18,
+     "sinopsis": "Mairen (32) se ve obligada a dar a luz a su bebé en una camioneta de paramilitares que rondan la región, la cual es conocida porque, quien se sube a ella, no es vuelto a ver con vida."
+    },
+    {
+     "titulo": "El Segundo",
+     "director": "Pedro Miguel Rozo",
+     "anio": 2025,
+     "duracion_min": 22,
+     "sinopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones"
+    },
+    {
+     "titulo": "El odio del padre",
+     "director": "Rodrigo Mora Yepes",
+     "anio": 2026,
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Todos los días",
+     "director": "David Rendón Peláez",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Gladiolos",
+     "director": "Mónica Juanita Hernández",
+     "anio": 2023,
+     "duracion_min": 14,
+     "sinopsis": "Waldina, la vendedora de flores del pequeño pueblo de Arcabuco, ha fallecido. Su hijo Humberto llega desde la gran ciudad y decide hacer la última entrega de flores a sus clientes sin saber que tras una de esas puertas podría encontrar su felicidad."
+    }
+   ],
+   "duracion_min": 108
+  },
+  {
+   "titulo": "Conversatorio",
+   "dia": "2026-10-08",
+   "hora": "21:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Actividades",
+   "duracion_min": 60
+  },
+  {
+   "titulo": "Muestra de Cortos Internacionales",
+   "dia": "2026-10-09",
+   "hora": "15:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "seccion": "Muestra de Cortos Internacionales",
+   "duracion_min": 90,
+   "poster": "/assets/popayan-2026/muestra-de-cortos-internacionales.jpg",
+   "posterSource": "oficial"
+  },
+  {
+   "titulo": "Selección Oficial Ficción segundo bloque",
+   "dia": "2026-10-09",
+   "hora": "17:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+    "date": "2026-09-29"
+   },
+   "seccion": "Selección Oficial Ficción",
+   "obras": [
+    {
+     "titulo": "Las faldas de tu prima",
+     "director": "Jose Miguel Huertas Landero y Esteban Galindo",
+     "anio": 2025,
+     "duracion_min": 25,
+     "sinopsis": "Simón y Gabo, dos mejores amigos de 17 años, pasan el verano con Sam, la prima mayor de Gabo, una ansiosa universitaria que busca escapar del estrés de su tesis. Juntos enfrentarán el amor, la amistad y un malvado robot gigante."
+    },
+    {
+     "titulo": "Suite intercontinental",
+     "director": "Lola Tartane",
+     "anio": 2026,
+     "duracion_min": 24,
+     "sinopsis": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo."
+    },
+    {
+     "titulo": "Más allá",
+     "director": "Bettina López Mendoza",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "La Mona",
+     "director": "Laura Gutiérrez Ardila",
+     "anio": 2025,
+     "duracion_min": 18
+    },
+    {
+     "titulo": "Las piedras del río",
+     "director": "Edna Sierra",
+     "anio": 2026,
+     "duracion_min": 16,
+     "sinopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte."
+    },
+    {
+     "titulo": "Los Huyentes",
+     "director": "Ari Lamadrid",
+     "duracion_min": 16
+    }
+   ],
+   "duracion_min": 115
+  }
+ ]
+}
