@@ -5,7 +5,7 @@
   "E1 fuentes": "HECHA 29 sep — fuentes/biff-2026/: el PDF oficial (26 sep, 56 págs, texto extraíble) y 48 fichas de la Cinemateca de Bogotá (agenda 8–14 oct por sede, filtradas por «Festivales y Muestras»).",
   "E2 catálogo": "HECHA 29 sep — 61 obras (51 fichas + 2 cine conciertos + el programa BIFF BANG de 8 cortos), leídas por coordenadas (pdftotext -bbox-layout). 60 con ficha de TMDB y afiche; 14 ya publicadas. Auditoría estricta: 16 avisos, ninguno de dirección (títulos originales y duraciones a ±8; El deshielo 88 en el PDF vs 108 en TMDB, se publica 88). 142 funciones anotadas en las fichas: cuarta lectura de la parrilla.",
   "E3 parrilla": "EN CURSO 29 sep — (1) fuentes/biff-2026/por-dias.json: la tabla «por días» por coordenadas, 153 filas; coincide EXACTO con las 149 funciones que anotan las fichas (día, hora, título) + 4 charlas abiertas BIFF BANG que solo están en la tabla. (2) Cinemateca: 53 de sus 55 funciones en el PDF coinciden en día, hora y sala, 52 con enlace de compra (tuboleta); faltan «No quiero ser un hombre» (Calle Museo, al aire libre) y «Hermanas» dom 14:00 (la grilla la confirma a las 14:00; la Cinemateca aún no la publica). (3) por-dias-iconos.json: color de sección (uno por sección, coherente con el catálogo) e íconos por píxeles contra la leyenda: 12 entrada libre (= muestra ×7 + charlas ×4 + No quiero ser un hombre), 1 invitación (la inaugural), 29 equipo presente. Falta: sede y sala desde las fichas (la tabla las deduce mal donde la etiqueta es de varios renglones) y el crudo.",
-  "E4 entradas y sedes": "PENDIENTE — ticket_url por función desde biff.co; pines de las ~8 sedes; salas.",
+  "E4 entradas y sedes": "EN CURSO 29 sep — biff-2026-web.py: 53 fichas web, TODAS con duración y de acuerdo con el PDF y TMDB salvo El deshielo (88 en PDF y web; 108 en TMDB, Cannes, CineChile); 48 con enlace de compra de la Cinemateca (tuboleta, por película; la agenda de la Cinemateca lo da por FUNCIÓN, 52) y 50 con su página en Cine Colombia. Charlas BIFF BANG: la sala sale de la GRILLA (sáb y dom Sala 2, lun y mié Sala Capital); la tabla por cercanía decía Sala 3 y estaba mal. Faltan los pines.",
   "E5 montaje": "PENDIENTE — crudo, verificador (build ↔ PDF ↔ Cinemateca), ensamblar, revisión de Juan."
  },
  "pasos": [
@@ -24,6 +24,10 @@
   {
    "cmd": "python3 pipeline/biff-2026-iconos.py",
    "que": "el color de sección y los íconos (equipo presente / invitación / entrada libre) de cada fila, por píxeles contra la leyenda"
+  },
+  {
+   "cmd": "python3 pipeline/biff-2026-web.py",
+   "que": "la ficha de cada película en biff.co: duración (se compara con PDF y TMDB) y enlaces de compra (Cinemateca por película, Cine Colombia)"
   }
  ],
  "_fuentes_versionadas": {
