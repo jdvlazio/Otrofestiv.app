@@ -35,6 +35,7 @@ struct WebViewContainer: UIViewRepresentable {
         let config = WKWebViewConfiguration()
         config.userContentController.add(context.coordinator, name: "calendar")
         config.userContentController.add(context.coordinator, name: "notifications")   // ← avisos del Plan
+        config.userContentController.add(context.coordinator.live, name: "liveActivity") // ← Live Activity
         UNUserNotificationCenter.current().delegate = context.coordinator
         config.userContentController.add(context.coordinator.watchAuth, name: "watchAuth")   // ← reloj
         let webView = WKWebView(frame: .zero, configuration: config)
@@ -69,6 +70,15 @@ struct WebViewContainer: UIViewRepresentable {
         weak var webView: WKWebView?
         let store = EKEventStore()
         let watchAuth = WatchAuthBridge()   // ← puente del reloj
+        let live = LiveActivityBridge()     // ← Live Activity (fase 1)
+
+        override init() {
+            super.init()
+            // Tocar la Live Activity abre la app EN MI PLAN (otrofestiv://plan).
+            NotificationCenter.default.addObserver(forName: .otfOpenPlan, object: nil, queue: .main) { [weak self] _ in
+                self?.webView?.evaluateJavaScript("try{switchMainNav('mnav-miplan');showAgView();}catch(e){}", completionHandler: nil)
+            }
+        }
 
         // Abre links target="_blank" en Safari del sistema
         func webView(_ webView: WKWebView,

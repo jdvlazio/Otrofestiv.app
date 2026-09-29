@@ -3185,3 +3185,33 @@ test('T200 — eventos: el Diario, la ficha y la hoja de calificar no ofrecen es
   expect(r.hojaAbre, 'la hoja de calificar no abre para un evento').toBe(false);
   expect(r.fichaCalificar, 'la ficha de un evento visto no ofrece «Calificar»').toBe(false);
 });
+
+// ── T202 — Live Activity: la web manda al iPhone la función correcta con horas reales
+// Fase 1 aprobada por Juan (28 sep 2026): la tarjeta muestra horas y sede FIJAS y el
+// reloj del sistema hace la cuenta; las horas tienen que ser las mismas de Mi Plan.
+test('T202 — Live Activity: en curso con retraso, próxima dentro de 2 h, y nada si no hay', async ({ page }) => {
+  await enterFestival(page, 'tiff2026', '2026-09-12T15:40:00-04:00');
+  const r = await page.evaluate(async () => {
+    const got = [];
+    window.webkit = { messageHandlers: { liveActivity: { postMessage: m => got.push(m) } } };
+    const f = t => FILMS.find(x => x.day === '2026-09-12' && x.title === t);
+    const P = await import('/src/controller/persistence.js');
+    state.set('savedAgenda', { schedule: ['Bedford Park', 'I Play Rocky'].map(t => ({ ...f(t), _title: t })) });
+    const bp = f('Bedford Park');
+    const sinRetraso = P._planLiveActivity();
+    state.set('filmDelays', { [`Bedford Park|${bp.day}|${bp.time}`]: 30 });
+    const conRetraso = P._planLiveActivity();
+    P.pushLiveActivity();
+    state.set('savedAgenda', { schedule: [{ ...f('I Play Rocky'), _title: 'I Play Rocky' }] }); // 18:00, a 2 h 20 → fuera
+    const lejos = P._planLiveActivity();
+    delete window.webkit;
+    return { sinRetraso, conRetraso, lejos, msg: got[got.length - 1] };
+  });
+  const hm = ms => new Date(ms).toLocaleTimeString('en-GB', { timeZone: 'America/Toronto', hour: '2-digit', minute: '2-digit' });
+  expect(r.sinRetraso.title).toBe('Bedford Park');
+  expect(hm(r.sinRetraso.start) + '–' + hm(r.sinRetraso.end), 'horas programadas').toBe('14:30–16:31');
+  expect(hm(r.conRetraso.start) + '–' + hm(r.conRetraso.end), 'con 30 min de retraso, las mismas horas que Mi Plan').toBe('15:00–17:01');
+  expect(r.conRetraso.delayMin).toBe(30);
+  expect(r.msg.festival, 'viaja por el puente del iPhone').toBe('tiff2026');
+  expect(r.lejos, 'una función a más de 2 h no abre tarjeta').toBeNull();
+});
