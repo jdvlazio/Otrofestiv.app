@@ -296,6 +296,8 @@
      "duration": "30 min",
      "synopsis": "Las Tres Muertes de un Sol sigue a Yojan, un joven campesino en un viaje introspectivo a través de sus recuerdos y las entrañas de la montaña donde vive. En medio de ruinas, caminos montañosos y ríos, el exuberante paisaje se convierte en un testigo mudo de los azares del destino que han marcado su vida.",
      "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/las-tres-muertes-de-un-sol.jpg",
+     "posterSource": "custom",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -400,6 +402,8 @@
      "duration": "26 min",
      "synopsis": "En la pintoresca ciudad de Popayán, Colombia, donde el encanto colonial se encuentra con el valle de Pubenza, vive Gus—un herrero rudo, moldeado por el trabajo, con manos de hierro y un corazón de oro.",
      "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/tunesmith-forjador-de-notas.jpg",
+     "posterSource": "custom",
      "country": "Colombia",
      "flags": "🇨🇴"
     }
@@ -465,6 +469,8 @@
      "duration": "8 min",
      "synopsis": "Karent investiga algunas memorias filmadas conversando con su abuela, acerca de una tradición familiar que conlleva ritual Animista en el que pueden descomponer su espíritu en varios fragmentos. Se prepara para hacerlo.",
      "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/animista.jpg",
+     "posterSource": "custom",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -533,6 +539,8 @@
      "duration": "15 min",
      "synopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico.",
      "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/la-rebelion-de-un-fantasma.jpg",
+     "posterSource": "custom",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -663,6 +671,8 @@
      "title": "Sangre",
      "director": "Julian Andres Hoyos Pinzón",
      "duration": "10 min",
+     "poster": "/assets/popayan-2026/sangre.jpg",
+     "posterSource": "custom",
      "country": "Colombia",
      "flags": "🇨🇴"
     }
@@ -1110,6 +1120,8 @@
      "duration": "8 min",
      "synopsis": "Juan, un viejo minero de la comunidad de Varsovia, despierta la mañana después de una tragedia: En el silencio de su cocina y el café derramado sobre la mesa lo enfrentan a la ausencia de su nieto Pedro. Ese gesto mínimo desata una cadena de recuerdos que reconstruyen los días previos.",
      "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/un-abrir-y-cerrar-de-ojos.jpg",
+     "posterSource": "custom",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -1130,6 +1142,8 @@
      "duration": "6 min",
      "synopsis": "Un juego de caza en el bosque termina en un espejo inesperado. Tres hermanos logran abatir a una paloma, solo para descubrir que han dejado un nido de pichones huérfanos. En la fragilidad de esas crías, los niños reviven el trauma de su propio pasado y el vacío que dejó el conflicto en su hogar. Una historia sobre la pérdida, la memoria y el ciclo del dolor que intentan sanar al llevarse consigo aquello que ellos mismos rompieron.",
      "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/pajaros-huerfanos.jpg",
+     "posterSource": "custom",
      "country": "Colombia",
      "flags": "🇨🇴"
     }
@@ -1209,6 +1223,8 @@
      "title": "Un viernes",
      "director": "Francy Urrea Solano, Juan Diego Aguirre Gómez",
      "duration": "9 min",
+     "poster": "/assets/popayan-2026/un-viernes.jpg",
+     "posterSource": "custom",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -1233,6 +1249,8 @@
      "title": "Tentado de difunto",
      "director": "Juan David Corredor Robles",
      "duration": "14 min",
+     "poster": "/assets/popayan-2026/tentado-de-difunto.jpg",
+     "posterSource": "custom",
      "country": "Colombia",
      "flags": "🇨🇴"
     }
@@ -1507,7 +1525,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T15:19:33",
+  "fecha": "2026-09-29T21:03:56",
   "plan_sha": "1ef20173b4efc739",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"

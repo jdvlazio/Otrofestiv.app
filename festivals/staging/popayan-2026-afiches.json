@@ -8,7 +8,8 @@
    "Ley de Origen y Espiritualidad": "afiche de la SERIE del CRIC, no de este episodio, y no nombra a su director: no pasa la verificación (título + dirección en el afiche)",
    "Amor en los tiempos de como sea que se llame el presente": "sin créditos en el afiche; el póster entra por su ficha de TMDB declarada (correcciones), no como afiche suelto"
   },
-  "verificacion": "cada afiche: el OCR encuentra en la imagen el nombre del director de nuestra ficha y el título (o el título se ve a ojo cuando es de palabras cortas o tipografía dibujada). El que no, sale."
+  "verificacion": "cada afiche: el OCR encuentra en la imagen el nombre del director de nuestra ficha y el título (o el título se ve a ojo cuando es de palabras cortas o tipografía dibujada). El que no, sale.",
+  "laminas": "láminas 1:1 de los posts por sección de @cinecortofest (29 sep): se estiran enteras a 2:3 (decisión de Juan). Cada una con el TÍTULO pintado y la dirección igual al pie del post. Fuera: El sincretismo del agua (su lámina dice «Sotará: Memorias de Montañas»), Chicanoa, Legado, Historias al margen (sin título pintado), Murmullos (título cortado); Hacia la raíz espera a Juan (es el cuadro de la promo de Telepacífico)"
  },
  "afiches": {
   "Crudo": {
@@ -46,6 +47,42 @@
   "La Mona": {
    "archivo": "fuentes/afiches/popayan-2026/la-mona.jpg",
    "fuente": "https://cinecorto.co/la-mona/"
+  },
+  "Sangre": {
+   "lamina": "fuentes/ig/Dd5LBOcFqDn/08.jpg",
+   "fuente": "https://www.instagram.com/p/Dd5LBOcFqDn/ (lámina 8)"
+  },
+  "Tunesmith – Forjador de Notas": {
+   "lamina": "fuentes/ig/Dd5LBOcFqDn/10.jpg",
+   "fuente": "https://www.instagram.com/p/Dd5LBOcFqDn/ (lámina 10)"
+  },
+  "Animista": {
+   "lamina": "fuentes/ig/DdzNIGeloJ1/02.jpg",
+   "fuente": "https://www.instagram.com/p/DdzNIGeloJ1/ (lámina 2)"
+  },
+  "La rebelión de un fantasma": {
+   "lamina": "fuentes/ig/DdzNIGeloJ1/07.jpg",
+   "fuente": "https://www.instagram.com/p/DdzNIGeloJ1/ (lámina 7)"
+  },
+  "Las tres muertes de un sol": {
+   "lamina": "fuentes/ig/Ddw8j7eFjLn/07.jpg",
+   "fuente": "https://www.instagram.com/p/Ddw8j7eFjLn/ (lámina 7)"
+  },
+  "Tentado de difunto": {
+   "lamina": "fuentes/ig/Ddw8j7eFjLn/11.jpg",
+   "fuente": "https://www.instagram.com/p/Ddw8j7eFjLn/ (lámina 11)"
+  },
+  "Un viernes": {
+   "lamina": "fuentes/ig/Ddw8j7eFjLn/12.jpg",
+   "fuente": "https://www.instagram.com/p/Ddw8j7eFjLn/ (lámina 12)"
+  },
+  "Pájaros huérfanos": {
+   "lamina": "fuentes/ig/DdwbC17FkJH/02.jpg",
+   "fuente": "https://www.instagram.com/p/DdwbC17FkJH/ (lámina 2)"
+  },
+  "Un abrir y cerrar de ojos": {
+   "lamina": "fuentes/ig/DdwbC17FkJH/06.jpg",
+   "fuente": "https://www.instagram.com/p/DdwbC17FkJH/ (lámina 6)"
   }
  }
 }
