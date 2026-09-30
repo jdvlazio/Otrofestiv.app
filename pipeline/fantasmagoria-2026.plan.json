@@ -50,7 +50,7 @@
   "crudo": "festivals/staging/fantasmagoria-2026-crudo.json",
   "enriquecido": "festivals/staging/fantasmagoria-2026-enriquecido.json",
   "geo": "festivals/staging/fantasmagoria-2026-venues-geo.json",
-  "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado.",
+  "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado, pero se publica en la ciudad «Medellín» (decisión de Juan, 30 sep): con una sola sede fuera, la app abría con «¿A cuál ciudad vas?» para 2 de 85 funciones. La dirección y el pin son los reales de Envigado, y el traslado se calcula con ellos.",
   "sedes": {
    "Centro Colombo Americano": [
     "Centro Colombo Americano - Medellín",
@@ -65,7 +65,7 @@
     ""
    ],
    "Comfama Otraparte": [
-    "Comfama Otraparte - Envigado",
+    "Comfama Otraparte - Medellín",
     ""
    ],
    "Comfama San Ignacio": [

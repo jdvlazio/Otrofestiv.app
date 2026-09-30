@@ -5,7 +5,7 @@
   "capturado": "2026-09-30",
   "ensamblador": "pipeline/ensamblar.py"
  },
- "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado.",
+ "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado, pero se publica en la ciudad «Medellín» (decisión de Juan, 30 sep): con una sola sede fuera, la app abría con «¿A cuál ciudad vas?» para 2 de 85 funciones. La dirección y el pin son los reales de Envigado, y el traslado se calcula con ellos.",
  "_por_que_secciones": "El primer rótulo de cada función, tal cual (sin el «+ …» de las combinadas). «Actividades» es palabra nuestra para lo que no trae rótulo. Compiten las seis selecciones con premio y jurado en la página de la edición: las tres Oficiales (Ficción, Documentales, Cortometrajes) y los cortos Animados («Gritos Animados»), Latinoamericanos («Jairo Pinilla») y Colombianos («Madremonte»). La Selección Asedio es el tema central, sin premio. Decisiones de Juan, 30 sep.",
  "name": "Fantasmagoría",
  "displayName": "Fantasmagoría",
@@ -443,9 +443,9 @@
    "_prec": "manual",
    "_nota": "Google Maps «Edificio Paraninfo Universidad de Antioquia»: el Paraninfo está en el centro, no en la Ciudad Universitaria"
   },
-  "Comfama Otraparte - Envigado": {
+  "Comfama Otraparte - Medellín": {
    "short": "Comfama Otraparte",
-   "city": "Envigado",
+   "city": "Medellín",
    "lat": 6.1795206,
    "lng": -75.5836212,
    "address": "Cl. 27 Sur #43A-51, Envigado",
@@ -1601,7 +1601,7 @@
    "day": "2026-10-19",
    "time": "18:30",
    "day_order": 4,
-   "venue": "Comfama Otraparte - Envigado",
+   "venue": "Comfama Otraparte - Medellín",
    "has_qa": false,
    "synopsis": "Un recorrido por la historia del cine revela cómo los zombis evolucionaron desde las tradiciones espirituales haitianas hasta el terror de Hollywood, explorando su profundo significado cultural como poderosos símbolos de resiliencia.",
    "synopsis_lang": "es",
@@ -1808,7 +1808,7 @@
    "day": "2026-10-20",
    "time": "18:30",
    "day_order": 5,
-   "venue": "Comfama Otraparte - Envigado",
+   "venue": "Comfama Otraparte - Medellín",
    "has_qa": false,
    "synopsis": "Cansada de estar sola en el enorme bosque, la unicornio Amalthea comienza a preguntarse si es la última de su especie y sale por el mundo a buscar a sus semejantes. En su viaje se une al mago Schmendick y a Molly Grue que la ayudarán a buscar al Toro Rojo, una criatura mística que caza y aprisiona unicornios. Para pasar desapercibida entre los hombres y salvarla del Toro, Schmendrik transforma a Amalthea en una bella joven. Los tres se encaminan al tenebroso país del rey Haggard, el hombre que controla al Toro Rojo.",
    "synopsis_lang": "es",
@@ -3335,8 +3335,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T18:33:50",
-  "plan_sha": "fe5ab052d3b14eea",
+  "fecha": "2026-09-30T18:42:48",
+  "plan_sha": "c1b484a196893ea0",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"
  }
