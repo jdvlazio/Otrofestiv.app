@@ -1316,22 +1316,22 @@ export const SECTION_ARCHETYPES = {
   '🎲 Jornada Juegos de Mesa Fantastable': 'Especiales / Eventos',
   '🦄 La Marmita del Hechicero': 'Especiales / Eventos',
   '🐉 Muestra Asiática El Oriente Es Rojo': 'Muestra / País',
-  '🏴 Muestra Catalana': 'Muestra / País',
+  '🎞️ Muestra Catalana': 'Muestra / País',
   '🧸 Muestra Fantasmagoritos': 'Especiales / Eventos',
   '🌀 Muestra Weird y Experimental': 'Perspectivas / Miradas',
   '💥 Muestra de acción A Quemarropa': 'Perspectivas / Miradas',
-  '♿ Muestra especial': 'Especiales / Eventos',
+  '🦯 Muestra especial': 'Especiales / Eventos',   // autodescripción para personas con discapacidad visual
   '📚 Noche de Librerías': 'Especiales / Eventos',
   '📼 Retrospectiva Cristian Ponce': 'Retrospectiva / Tributo',
   '🔦 Retrospectiva Tilman Singer': 'Retrospectiva / Tributo',
   '🌶️ Sangre Latina': 'Perspectivas / Miradas',
   '🏰 Selección Asedio: Las murallas del miedo': 'Perspectivas / Miradas',
-  '🌎 Selección Latinoamericana de Cortometrajes': 'Cortos / Programas',
+  '🌎 Selección Latinoamericana de Cortometrajes': 'Competencia',   // Premio «Jairo Pinilla», con jurado
   '🎬 Selección Oficial Cortometrajes': 'Competencia',
   '🎥 Selección Oficial Largometrajes Documentales': 'Competencia',
   '🏆 Selección Oficial Largometrajes de Ficción': 'Competencia',
-  '✏️ Selección de Cortometrajes Animados': 'Cortos / Programas',
-  '🇨🇴 Selección de Cortometrajes Colombianos': 'Cortos / Programas',
+  '✏️ Selección de Cortometrajes Animados': 'Competencia',   // Premio «Gritos Animados», con jurado
+  '🇨🇴 Selección de Cortometrajes Colombianos': 'Competencia',   // Premio «Madremonte», con jurado
   // BIFF 12 (29 sep 2026)
   '🇨🇴 Colombia viva': 'Muestra / País',
   '✨ Espíritu joven': 'Competencia',   // compite por el Premio de la Juventud

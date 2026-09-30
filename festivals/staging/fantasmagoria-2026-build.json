@@ -6,7 +6,7 @@
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado.",
- "_por_que_secciones": "El primer rótulo de cada función, tal cual (sin el «+ …» de las combinadas). «Actividades» es palabra nuestra para lo que no trae rótulo.",
+ "_por_que_secciones": "El primer rótulo de cada función, tal cual (sin el «+ …» de las combinadas). «Actividades» es palabra nuestra para lo que no trae rótulo. Compiten las seis selecciones con premio y jurado en la página de la edición: las tres Oficiales (Ficción, Documentales, Cortometrajes) y los cortos Animados («Gritos Animados»), Latinoamericanos («Jairo Pinilla») y Colombianos («Madremonte»). La Selección Asedio es el tema central, sin premio. Decisiones de Juan, 30 sep.",
  "name": "Fantasmagoría",
  "displayName": "Fantasmagoría",
  "fullName": "Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín",
@@ -181,7 +181,7 @@
    "order": 4
   },
   "🧸 Muestra Fantasmagoritos": {
-   "en": "Fantasmagoritos (kids)",
+   "en": "Fantasmagoritos: Kids Showcase",
    "archetype": "Especiales / Eventos",
    "order": 5
   },
@@ -197,10 +197,10 @@
   },
   "✏️ Selección de Cortometrajes Animados": {
    "en": "Animated Shorts Selection",
-   "archetype": "Cortos / Programas",
+   "archetype": "Competencia",
    "order": 8
   },
-  "♿ Muestra especial": {
+  "🦯 Muestra especial": {
    "en": "Special Screening",
    "archetype": "Especiales / Eventos",
    "order": 9
@@ -237,12 +237,12 @@
   },
   "🇨🇴 Selección de Cortometrajes Colombianos": {
    "en": "Colombian Shorts Selection",
-   "archetype": "Cortos / Programas",
+   "archetype": "Competencia",
    "order": 16
   },
   "🌎 Selección Latinoamericana de Cortometrajes": {
    "en": "Latin American Shorts Selection",
-   "archetype": "Cortos / Programas",
+   "archetype": "Competencia",
    "order": 17
   },
   "🌕 Homenaje a Luigi Cozzi": {
@@ -260,7 +260,7 @@
    "archetype": "Especiales / Eventos",
    "order": 20
   },
-  "🏴 Muestra Catalana": {
+  "🎞️ Muestra Catalana": {
    "en": "Catalan Showcase",
    "archetype": "Muestra / País",
    "order": 21
@@ -1004,7 +1004,7 @@
   {
    "title": "Iris de Cristal",
    "type": "film",
-   "section": "♿ Muestra especial",
+   "section": "🦯 Muestra especial",
    "duration": "60 min",
    "day": "2026-10-17",
    "time": "16:00",
@@ -1855,7 +1855,7 @@
   {
    "title": "Cuadecuc, Vampir",
    "type": "film",
-   "section": "🏴 Muestra Catalana",
+   "section": "🎞️ Muestra Catalana",
    "director": "Pere Portabella",
    "year": 1972,
    "country": "España",
@@ -2679,7 +2679,7 @@
   {
    "title": "Muestra Catalana: Cortometrajes C-Trencada",
    "type": "film",
-   "section": "🏴 Muestra Catalana",
+   "section": "🎞️ Muestra Catalana",
    "duration": "60 min",
    "day": "2026-10-23",
    "time": "17:00",
@@ -3335,8 +3335,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T17:43:50",
-  "plan_sha": "bc5bd41827ade391",
+  "fecha": "2026-09-30T18:33:50",
+  "plan_sha": "fe5ab052d3b14eea",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"
  }

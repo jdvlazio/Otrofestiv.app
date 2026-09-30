@@ -141,7 +141,7 @@
     ""
    ]
   },
-  "_por_que_secciones": "El primer rótulo de cada función, tal cual (sin el «+ …» de las combinadas). «Actividades» es palabra nuestra para lo que no trae rótulo.",
+  "_por_que_secciones": "El primer rótulo de cada función, tal cual (sin el «+ …» de las combinadas). «Actividades» es palabra nuestra para lo que no trae rótulo. Compiten las seis selecciones con premio y jurado en la página de la edición: las tres Oficiales (Ficción, Documentales, Cortometrajes) y los cortos Animados («Gritos Animados»), Latinoamericanos («Jairo Pinilla») y Colombianos («Madremonte»). La Selección Asedio es el tema central, sin premio. Decisiones de Juan, 30 sep.",
   "secciones": {
    "Actividades": {
     "emoji": "🎪",
@@ -219,13 +219,13 @@
     "archetype": "Muestra / País"
    },
    "Muestra Catalana": {
-    "emoji": "🏴",
+    "emoji": "🎞️",
     "en": "Catalan Showcase",
     "archetype": "Muestra / País"
    },
    "Muestra Fantasmagoritos": {
     "emoji": "🧸",
-    "en": "Fantasmagoritos (kids)",
+    "en": "Fantasmagoritos: Kids Showcase",
     "archetype": "Especiales / Eventos"
    },
    "Muestra Weird y Experimental": {
@@ -239,7 +239,7 @@
     "archetype": "Perspectivas / Miradas"
    },
    "Muestra especial": {
-    "emoji": "♿",
+    "emoji": "🦯",
     "en": "Special Screening",
     "archetype": "Especiales / Eventos"
    },
@@ -271,7 +271,7 @@
    "Selección Latinoamericana de Cortometrajes": {
     "emoji": "🌎",
     "en": "Latin American Shorts Selection",
-    "archetype": "Cortos / Programas"
+    "archetype": "Competencia"
    },
    "Selección Oficial Cortometrajes": {
     "emoji": "🎬",
@@ -291,12 +291,12 @@
    "Selección de Cortometrajes Animados": {
     "emoji": "✏️",
     "en": "Animated Shorts Selection",
-    "archetype": "Cortos / Programas"
+    "archetype": "Competencia"
    },
    "Selección de Cortometrajes Colombianos": {
     "emoji": "🇨🇴",
     "en": "Colombian Shorts Selection",
-    "archetype": "Cortos / Programas"
+    "archetype": "Competencia"
    }
   },
   "name": "Fantasmagoría",
