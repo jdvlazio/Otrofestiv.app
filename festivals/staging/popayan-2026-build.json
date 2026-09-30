@@ -859,6 +859,8 @@
      "duration": "25 min",
      "synopsis": "Al descubrirse como una ‘negra blanqueada’ María confronta a su padre, en búsqueda de sus raíces afro, emprende un viaje al territorio de sus ancestros así reconstruye las huellas de su pasado y abraza su identidad.",
      "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/hacia-la-raiz.jpg",
+     "posterSource": "custom",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -1525,7 +1527,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T21:03:56",
+  "fecha": "2026-09-29T21:50:11",
   "plan_sha": "1ef20173b4efc739",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"

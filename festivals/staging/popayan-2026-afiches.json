@@ -4,12 +4,11 @@
   "capturado": "2026-09-29",
   "regla": "solo donde TMDB y lo ya publicado no tienen afiche; un fotograma sin título no es un afiche",
   "descartados": {
-   "Hacia la raíz": "promo de la emisión en Telepacífico, con la fecha al aire pintada: no es un afiche",
    "Ley de Origen y Espiritualidad": "afiche de la SERIE del CRIC, no de este episodio, y no nombra a su director: no pasa la verificación (título + dirección en el afiche)",
    "Amor en los tiempos de como sea que se llame el presente": "sin créditos en el afiche; el póster entra por su ficha de TMDB declarada (correcciones), no como afiche suelto"
   },
   "verificacion": "cada afiche: el OCR encuentra en la imagen el nombre del director de nuestra ficha y el título (o el título se ve a ojo cuando es de palabras cortas o tipografía dibujada). El que no, sale.",
-  "laminas": "láminas 1:1 de los posts por sección de @cinecortofest (29 sep): se estiran enteras a 2:3 (decisión de Juan). Cada una con el TÍTULO pintado y la dirección igual al pie del post. Fuera: El sincretismo del agua (su lámina dice «Sotará: Memorias de Montañas»), Chicanoa, Legado, Historias al margen (sin título pintado), Murmullos (título cortado); Hacia la raíz espera a Juan (es el cuadro de la promo de Telepacífico)"
+  "laminas": "láminas 1:1 de los posts por sección de @cinecortofest (29 sep): se estiran enteras a 2:3 (decisión de Juan). Cada una con el TÍTULO pintado y la dirección igual al pie del post. Fuera: El sincretismo del agua (su lámina dice «Sotará: Memorias de Montañas»), Chicanoa, Legado, Historias al margen (sin título pintado), Murmullos (título cortado). Hacia la raíz: el cuadro de la promo de Telepacífico, ahora sin la fecha al aire y elegido por el festival como su lámina; entra por decisión de Juan (29 sep)"
  },
  "afiches": {
   "Crudo": {
@@ -83,6 +82,10 @@
   "Un abrir y cerrar de ojos": {
    "lamina": "fuentes/ig/DdwbC17FkJH/06.jpg",
    "fuente": "https://www.instagram.com/p/DdwbC17FkJH/ (lámina 6)"
+  },
+  "Hacia la raíz": {
+   "lamina": "fuentes/ig/Dd2BuzLluN4/03.jpg",
+   "fuente": "https://www.instagram.com/p/Dd2BuzLluN4/ (lámina 3)"
   }
  }
 }
