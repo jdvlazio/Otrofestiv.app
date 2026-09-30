@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festivalfantasmagoriamedellin.com, noticia de programación (wp-json post 6481)",
-  "capturado": "2026-09-29",
+  "capturado": "2026-09-30",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado.",
@@ -383,11 +383,11 @@
   "Nueva Villa de Aburrá - Medellín": {
    "short": "Nueva Villa de Aburrá",
    "city": "Medellín",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2353651,
+   "lng": -75.6018571,
+   "address": "Cra. 80A #32B-26, Belén, Medellín",
    "_prec": "manual",
-   "_todo": "es un BARRIO de Belén (Google Maps), no una sede: falta el lugar exacto",
-   "_nota": "SIN PIN a propósito (29 sep): mirado y no hay dónde ponerlo sin inventarlo; el geocodificador no debe rellenarlo"
+   "_nota": "PIN APROXIMADO (30 sep, pedido de Juan). La parrilla solo dice el barrio; función al aire libre. Se pone la Plazoleta Nueva Villa de Aburrá (Google Maps, Cra. 80A #32B-26), la plaza central del barrio, a ~280 m del centroide de OSM. Preguntado al festival."
   },
   "Silencio - Medellín": {
    "short": "Silencio",
@@ -482,11 +482,11 @@
   "Cámara de Comercio de Medellín - Medellín": {
    "short": "Cámara de Comercio de Medellín",
    "city": "Medellín",
-   "lat": null,
-   "lng": null,
+   "lat": 6.2501303,
+   "lng": -75.5637803,
+   "address": "Cl. 53 #45-77, Centro, Medellín",
    "_prec": "manual",
-   "_todo": "la parrilla dice «Cámara de Comercio – Auditorio» sin decir cuál sede (tiene varias en el Valle de Aburrá)",
-   "_nota": "SIN PIN a propósito (29 sep): mirado y no hay dónde ponerlo sin inventarlo; el geocodificador no debe rellenarlo"
+   "_nota": "PIN APROXIMADO (30 sep, pedido de Juan: mejor una sede ubicada que sin pin). La parrilla dice «Cámara de Comercio – Auditorio» sin la sede; se pone la Sede Centro, la principal (Google Maps «Sede Centro - Cámara de Comercio de Medellín para Antioquia», Cl. 53 #45-77). Tiene otras con auditorio (El Poblado): preguntado al festival."
   },
   "La Grieta - Medellín": {
    "short": "La Grieta",
@@ -3287,7 +3287,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T20:45:22",
+  "fecha": "2026-09-30T09:08:25",
   "plan_sha": "6432ac1811fd2246",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"
