@@ -204,10 +204,14 @@ def duracion_sin_dato(funciones):
 # imágenes, «PORGRAMA DE CORTOS 01/02» (sic), guardadas en fuentes/mamut-2026/.
 # 8 + 8 = las 16 de la Selección Oficial, con las mismas duraciones del
 # catálogo. Se comprueba por OCR que cada título esté en su imagen.
-#   · El DOMINGO («Muestra de cortos 1 y 2», Coocine) NO se asume igual: se
-#     preguntó (29 sep) si repiten estos dos programas.
+#   · El DOMINGO («Muestra de cortos 1 y 2», Coocine) REPITE los dos
+#     programas: lo respondió el festival a Juan (30 sep, «el domingo se
+#     repiten los dos programas»). Ver DOMINGO_REPITE.
 #   · El Programa 1 suma 111 min y empieza a las 5 p. m.; el 2 a las 6 p. m.
-#     en la misma sala. Se publica como lo da la lámina; se preguntó la hora.
+#     en la misma sala. El festival confirmó la sala (30 sep: «el programa 1 y
+#     2 se darán en la misma sala») pero no la hora: se publica la de la
+#     lámina y se volvió a preguntar. Igual el domingo: la lámina pone las dos
+#     muestras en el bloque de las 4 p. m. y la clausura a las 5.
 SELECCION = f'{REPO}/festivals/staging/mamut-2026-catalogo.json'
 REPARTO_IMG = {'Programa de cortos 1': f'{REPO}/fuentes/mamut-2026/programa-de-cortos-01.jpg',
                'Programa de cortos 2': f'{REPO}/fuentes/mamut-2026/programa-de-cortos-02.jpg'}
@@ -220,6 +224,9 @@ REPARTO = {
                              'No menguará el fuego de esta luna', 'Sólo algunos recuerdos quedan',
                              'Acto de ver', 'Archipiélago fantasma', 'Belleza letal'],
 }
+
+
+DOMINGO_REPITE = {'Muestra de cortos 1': 'Programa de cortos 1', 'Muestra de cortos 2': 'Programa de cortos 2'}
 
 
 def reparto():
@@ -288,8 +295,8 @@ def main():
         if a.get('invitados'):
             reg['invitados'] = f'Invitados: {a["invitados"]}.'
         # un PROGRAMA con nombre y obras nombradas: modelo A (is_cortos + obras)
-        if t in rep:
-            reg['obras'] = rep[t]
+        if t in rep or t in DOMINGO_REPITE:
+            reg['obras'] = rep[DOMINGO_REPITE.get(t, t)]
             reg['duracion_min'] = sum(o.get('duracion_min') or 0 for o in reg['obras'])
             reg['_src']['reparto'] = 'mensaje del festival a Juan, 29 sep (fuentes/mamut-2026/programa-de-cortos-0N.jpg)'
         if a.get('obras'):
