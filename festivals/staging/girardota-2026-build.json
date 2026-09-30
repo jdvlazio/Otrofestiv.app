@@ -95,14 +95,14 @@
   "2026-10-04": "Domingo 4 de octubre"
  },
  "_acceso": {
-  "estado": "desconocido",
-  "revisado": "2026-09-27",
+  "estado": "Entrada libre",
+  "revisado": "2026-09-29",
   "fuentes": [
    "las 5 láminas del carrusel de programación (instagram.com/p/DdnD4hjHHnq/)",
    "el afiche y su pie (instagram.com/p/DdSaAR7Jbua/)",
    "@festigirardota (perfil y posts de la edición)"
   ],
-  "_por_que": "Ninguna fuente lo dice, y entre sus sedes hay un bar y una caja de compensación: suponer que es gratis sería inventarlo."
+  "_por_que": "Ninguna fuente anuncia boletería ni inscripción; decisión de Juan (29 sep): sin eso, es gratis."
  },
  "sections": {
   "🎬 Proyecciones": {
@@ -240,6 +240,7 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
+   "is_free": true,
    "lbSlug": "the-other-shape",
    "tmdb_id": 970589,
    "synopsis_en": "In the near future, humanity has built a paradise on the surface of the moon, but only people with square heads can enter. One man will do anything to try to fit into this geometric world.",
@@ -258,7 +259,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "Muestra de cortometrajes: Fantasía tropical",
@@ -273,7 +275,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "Llueve sobre Babel",
@@ -300,6 +303,7 @@
     "date": "2026-09-22"
    },
    "premiere": "Proyección inaugural",
+   "is_free": true,
    "lbSlug": "rains-over-babel",
    "tmdb_id": 1388977,
    "synopsis_en": "In a retro-futuristic, tropical-punk twist on Dante’s Inferno, a group of misfits converges at Babel, a legendary dive bar that doubles as purgatory, where La Flaca—the city’s Grim Reaper—presides. Here, souls gamble years of their lives with her, daring to outwit Death Herself.",
@@ -328,6 +332,7 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
+   "is_free": true,
    "lbSlug": "the-other-shape",
    "tmdb_id": 970589,
    "synopsis_en": "In the near future, humanity has built a paradise on the surface of the moon, but only people with square heads can enter. One man will do anything to try to fit into this geometric world.",
@@ -349,7 +354,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "Del vampiro del bosque al psicópata de al lado: Cómo el monstruo dejó de tener colmillos",
@@ -367,7 +373,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "Colombia es fantástica",
@@ -385,7 +392,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "Funeral siniestro",
@@ -410,6 +418,7 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
+   "is_free": true,
    "lbSlug": "sinister-funeral",
    "tmdb_id": 127593,
    "synopsis_en": "Upon a small property in a Colombian field, a woman's ambitions against a defenceless girl result in the woman's death. As tradition, the funeral is carried out in the small house. The girl lives alone, and is accompanied only by few nearby neighbours. With great fear for the dead one, without light and without any communication, the night arrives, and at the same time the solitude. The girl suspects that the woman's bad intentions have not yet passed on...",
@@ -438,6 +447,7 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
+   "is_free": true,
    "lbSlug": "the-squad",
    "tmdb_id": 83705,
    "synopsis_en": "A special commando unit made up of 9 soldiers is sent to a military base in a moorland region after contact was lost and it was believed to have been the target of an attack. Upon arrival, they find a single mysterious survivor: a woman in chains.",
@@ -466,6 +476,7 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
+   "is_free": true,
    "lbSlug": "at-the-end-of-the-spectra",
    "tmdb_id": 40511,
    "synopsis_en": "After a traumatic situation that makes Vega become an agoraphobic person, she decides to live like a hermit in an apartment because of her father's recommendation. But some strange things start happening, she sees visions, and hears noises and voices. She starts to worry about the dark past of that apartment, and the bizarre obsession of her neighbor.",
@@ -484,7 +495,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "El gótico popular: terror en las plazas y haciendas de Colombia",
@@ -502,7 +514,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "El origen de las especies",
@@ -526,6 +539,7 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
+   "is_free": true,
    "lbSlug": "el-origen-de-las-especies",
    "tmdb_id": 1275337,
    "synopsis_en": "A misty jungle opens the confines of time and space to converge the times of a colonial era, the echoes of an apocalyptic beast and the open-air prayers of a transanimal ritual. An incantation film, composed of three invocations thirsty for rage and faith in the world."
@@ -546,7 +560,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "Pura Sangre",
@@ -571,6 +586,7 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
+   "is_free": true,
    "lbSlug": "pure-blood-1982",
    "tmdb_id": 134245,
    "synopsis_en": "Roberto Hurtado suffers from a rare disease that requires massive transfusions of blood from children or adolescents. His son blackmails three employees to get blood for him and they resort to unscrupulous methods to obtain it.",
@@ -592,7 +608,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "La mansión de Araucaima",
@@ -617,6 +634,7 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
+   "is_free": true,
    "lbSlug": "the-manor-of-araucaima",
    "tmdb_id": 327176,
    "synopsis_en": "In an old and mysterious tropical mansion cohabit the supposed owner, a friar, a convalescent pilot, the Haitian servant, the mercenary guardian and the Machiche, a mature and dominant female. A young model arrives there to unleash all kinds of passions.",
@@ -637,7 +655,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "Vampiros acalorados",
@@ -655,7 +674,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "Competencia oficial de cortometrajes",
@@ -673,6 +693,7 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
+   "is_free": true,
    "is_cortos": true,
    "film_list": [
     {
@@ -863,7 +884,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "Ceremonia de premiación de cortometrajes",
@@ -879,7 +901,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "Rumba tropical",
@@ -895,7 +918,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "Muestra de cortos Girardotanos",
@@ -910,7 +934,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "El libro de Lila",
@@ -935,6 +960,7 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
+   "is_free": true,
    "lbSlug": "lilas-book",
    "tmdb_id": 478795,
    "synopsis_en": "Lila, a character in a children's story book, suddenly falls out of her paper world and becomes trapped in a world where she doesn’t belong and discovers that only Ramón—the now–grown owner of the book who no longer believes in fantasy—can save her. With the help of her new friend Manuela, Lila tries to convince him of her situation, and together they embark on a risky journey to the Desert of Lost Memories to recover her lost book.",
@@ -956,7 +982,8 @@
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
-   }
+   },
+   "is_free": true
   },
   {
    "title": "La salsa vive",
@@ -981,6 +1008,7 @@
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
    },
+   "is_free": true,
    "lbSlug": "salsa-lives",
    "tmdb_id": 1422107,
    "synopsis_en": "La Salsa Vive is a vibrant cinematic exploration of Afro-Cuban music's history, tracing its roots from New York's lively streets to Cali, Colombia, now the global salsa capital.",
@@ -993,7 +1021,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T16:15:17",
+  "fecha": "2026-09-29T19:13:58",
   "plan_sha": "89d6e69df8fcc84e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py girardota-2026"

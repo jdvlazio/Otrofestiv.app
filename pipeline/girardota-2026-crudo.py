@@ -143,19 +143,21 @@ SECCION_ACTIVIDAD = 'Actividades'
 # El festival no publica cómo se entra. Mirado el 27 sep 2026 en: las 5 láminas
 # del carrusel de programación, el afiche (@girardotaescultura p/DdSaAR7Jbua, con
 # su pie) y el perfil y los posts de @festigirardota. Ninguno dice «entrada
-# libre», ni precio, ni inscripción. Que sea un festival municipal no lo hace
-# gratis: una de sus sedes es un bar (Morning) y otra una caja de compensación
-# (Comfama).
+# libre», ni precio, ni inscripción.
+# DECISIÓN DE JUAN (29 sep 2026): «si no dicen inscripción previa o boletería es
+# porque son gratis». Se publica ENTRADA LIBRE en las 28, talleres incluidos. Si
+# el festival anuncia boletería o inscripción para alguna, se corrige esa.
+ACCESO = 'Entrada libre'
 _ACCESO = {
-    'estado': DESCONOCIDO,
-    'revisado': '2026-09-27',
+    'estado': ACCESO,
+    'revisado': '2026-09-29',
     'fuentes': [
         'las 5 láminas del carrusel de programación (instagram.com/p/DdnD4hjHHnq/)',
         'el afiche y su pie (instagram.com/p/DdSaAR7Jbua/)',
         '@festigirardota (perfil y posts de la edición)',
     ],
-    '_por_que': 'Ninguna fuente lo dice, y entre sus sedes hay un bar y una caja '
-                'de compensación: suponer que es gratis sería inventarlo.',
+    '_por_que': 'Ninguna fuente anuncia boletería ni inscripción; decisión de Juan '
+                '(29 sep): sin eso, es gratis.',
 }
 
 
@@ -232,7 +234,7 @@ def main():
         if f['sede'] not in SEDES:
             sys.exit(f'✗ sede sin entrada en la tabla: {f["sede"]!r} — la tabla es explícita a propósito')
         reg = {'titulo': f['titulo'], 'dia': f['dia'], 'hora': f['hora'],
-               'sede': SEDES[f['sede']], 'acceso': DESCONOCIDO,
+               'sede': SEDES[f['sede']], 'acceso': ACCESO,
                '_src': {'url': f'https://www.instagram.com/p/{POST}/', 'date': '2026-09-22'}}
         if rot in PROYECCION:
             reg['seccion'] = SECCION_PROYECCION

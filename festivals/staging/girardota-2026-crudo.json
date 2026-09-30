@@ -7,14 +7,14 @@
   "metodo": "transcripción a ojo lámina por lámina, confirmada título por título y hora por hora con el OCR de las mismas láminas"
  },
  "_acceso": {
-  "estado": "desconocido",
-  "revisado": "2026-09-27",
+  "estado": "Entrada libre",
+  "revisado": "2026-09-29",
   "fuentes": [
    "las 5 láminas del carrusel de programación (instagram.com/p/DdnD4hjHHnq/)",
    "el afiche y su pie (instagram.com/p/DdSaAR7Jbua/)",
    "@festigirardota (perfil y posts de la edición)"
   ],
-  "_por_que": "Ninguna fuente lo dice, y entre sus sedes hay un bar y una caja de compensación: suponer que es gratis sería inventarlo."
+  "_por_que": "Ninguna fuente anuncia boletería ni inscripción; decisión de Juan (29 sep): sin eso, es gratis."
  },
  "funciones": [
   {
@@ -22,7 +22,7 @@
    "dia": "2026-09-30",
    "hora": "10:00",
    "sede": "Comfama",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -37,7 +37,7 @@
    "dia": "2026-09-30",
    "hora": "16:00",
    "sede": "Punto de Turismo",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -51,7 +51,7 @@
    "dia": "2026-09-30",
    "hora": "17:00",
    "sede": "Punto de Turismo",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -65,7 +65,7 @@
    "dia": "2026-09-30",
    "hora": "19:00",
    "sede": "Palmas del Llano",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -83,7 +83,7 @@
    "dia": "2026-10-01",
    "hora": "10:00",
    "sede": "Comfama",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -98,7 +98,7 @@
    "dia": "2026-10-01",
    "hora": "14:00",
    "sede": "I.E. San Andrés",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -115,7 +115,7 @@
    "dia": "2026-10-01",
    "hora": "15:00",
    "sede": "Biblioteca Municipal Alberto Aguirre Ceballos",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -131,7 +131,7 @@
    "dia": "2026-10-01",
    "hora": "17:30",
    "sede": "Punto de Turismo",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -149,7 +149,7 @@
    "dia": "2026-10-01",
    "hora": "18:30",
    "sede": "Punto de Turismo",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -164,7 +164,7 @@
    "dia": "2026-10-01",
    "hora": "20:30",
    "sede": "Morning",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -179,7 +179,7 @@
    "dia": "2026-10-02",
    "hora": "09:00",
    "sede": "Escuela de Encenillos",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -194,7 +194,7 @@
    "dia": "2026-10-02",
    "hora": "16:00",
    "sede": "Punto de Turismo",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -208,7 +208,7 @@
    "dia": "2026-10-02",
    "hora": "17:00",
    "sede": "Biblioteca Municipal Alberto Aguirre Ceballos",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -225,7 +225,7 @@
    "dia": "2026-10-02",
    "hora": "18:00",
    "sede": "Comfama",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -240,7 +240,7 @@
    "dia": "2026-10-02",
    "hora": "19:00",
    "sede": "Comfama",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -257,7 +257,7 @@
    "dia": "2026-10-02",
    "hora": "20:00",
    "sede": "Parque de la Poesía",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -272,7 +272,7 @@
    "dia": "2026-10-03",
    "hora": "09:00",
    "sede": "Biblioteca Municipal Alberto Aguirre Ceballos",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -288,7 +288,7 @@
    "dia": "2026-10-03",
    "hora": "16:00",
    "sede": "Comfama",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -303,7 +303,7 @@
    "dia": "2026-10-03",
    "hora": "16:00",
    "sede": "Parque Principal",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -318,7 +318,7 @@
    "dia": "2026-10-03",
    "hora": "17:30",
    "sede": "Comfama",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -335,7 +335,7 @@
    "dia": "2026-10-03",
    "hora": "18:00",
    "sede": "Parque Principal",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -453,7 +453,7 @@
    "dia": "2026-10-03",
    "hora": "19:30",
    "sede": "Parque Principal",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -470,7 +470,7 @@
    "dia": "2026-10-03",
    "hora": "21:00",
    "sede": "Parque Principal",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -486,7 +486,7 @@
    "dia": "2026-10-03",
    "hora": "22:00",
    "sede": "Morning",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -502,7 +502,7 @@
    "dia": "2026-10-04",
    "hora": "15:00",
    "sede": "Parque Principal",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -516,7 +516,7 @@
    "dia": "2026-10-04",
    "hora": "16:00",
    "sede": "Parque Principal",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -531,7 +531,7 @@
    "dia": "2026-10-04",
    "hora": "17:00",
    "sede": "Parque Principal",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"
@@ -548,7 +548,7 @@
    "dia": "2026-10-04",
    "hora": "18:30",
    "sede": "Parque Principal",
-   "acceso": "desconocido",
+   "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
     "date": "2026-09-22"

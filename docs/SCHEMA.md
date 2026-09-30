@@ -293,7 +293,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
 | `ticket_url` | string | `^https://` | 7 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
-| `is_free` | boolean | — | 17 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
+| `is_free` | boolean | — | 18 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
 | `requires_registration` | boolean | — | 8 fest |  |
 | `registration_url` | string | `^https://` | 5 fest |  |
 | `by_invitation` | boolean | — | 1 fest | Función CERRADA al público, solo con invitación. Anula el badge de precio y el plan no la propone (screeningPlannable); se agenda a mano. Por función: la gala sí, las demás funciones de la obra no. |

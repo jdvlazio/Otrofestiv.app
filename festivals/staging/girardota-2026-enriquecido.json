@@ -939,5 +939,13 @@
    "director": "",
    "fecha": "2026-09-27"
   }
- }
+ },
+ "_fuentes": [
+  {
+   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
+   "capturado": "2026-09-29",
+   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
+   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
+  }
+ ]
 }
