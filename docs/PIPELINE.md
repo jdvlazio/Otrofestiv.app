@@ -536,6 +536,16 @@ y comprueba dos cosas que solo se ven al cargarlo: que no haya un festival
 anidado dentro de otro, y que el número de festivales no se desplome. Es la
 única forma de saber que el archivo que carga el navegador es el que creemos.
 
+**`[sede-con-pin]` — toda sede lleva pin** (validate-festivals.js, 30 sep 2026).
+
+Regla de Juan: «una sede sin pin complica muchísimo la planeación». Si no hay
+lugar exacto va uno **aproximado**, con su `_nota` («PIN APROXIMADO») y la
+pregunta al festival; nunca vacío. La única sede sin coordenadas es la de una
+función **en línea** (`online: true`, una charla por Twitch): no hay adónde ir,
+y sin coordenadas `travelMins` da 0, que es lo que el plan necesita. Al revés
+también es error: una función en línea en una sede con pin se cobraría un
+traslado. Deuda declarada: «Zoom - Manizales» de FICMA 17 (aplazado).
+
 **Decimoctavo: `[programa-mismo-titulo]` — mismo título ⇒ misma obra.**
 
 La app identifica las obras **por título** —`FILMS.find(f=>f.title===t)`— y de

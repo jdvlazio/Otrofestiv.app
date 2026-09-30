@@ -297,6 +297,9 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `requires_registration` | boolean | — | 8 fest |  |
 | `registration_url` | string | `^https://` | 5 fest |  |
 | `by_invitation` | boolean | — | 1 fest | Función CERRADA al público, solo con invitación. Anula el badge de precio y el plan no la propone (screeningPlannable); se agenda a mano. Por función: la gala sí, las demás funciones de la obra no. |
+| `online` | boolean | — | — | Función EN LÍNEA (una charla por Twitch): su sede no tiene pin a propósito y el planificador no le suma traslado (travelMins da 0 sin coordenadas); choca solo por horario. Por función. |
+| `stream_url` | string | — | — | El link del canal de una función en línea (https). Lo abre el aviso de la ficha. |
+| `stream_platform` | string | — | — | Dónde se transmite una función en línea («Twitch»): completa el aviso «Se transmite en línea por …». |
 | `audience` | string | `press` | 1 fest | Solo cuando la función NO es para el público general. Ausente = público (el caso normal, no se declara). «press» = pase de prensa e industria: la app los OCULTA salvo que el usuario active el filtro. TIFF 2026 trae 247 (audienceType=Press & Market en su endpoint). |
 
 ### Todo lo demás

@@ -1079,6 +1079,8 @@ export function _metaBadges(f){
   // función ni siquiera está en FILMS —, así que el badge es el recordatorio
   // de que esta fila no es para el público general.
   if(f.audience==='press') b+=`<span class="meta-badge">${t('press_badge')}</span>`;
+  // EN LÍNEA: no dice el precio sino DÓNDE se ve —en una pantalla, no en una sala—.
+  if(f.online) b+=`<span class="meta-badge">${t('badge_online')}</span>`;
   // PREMIUM — la función cuesta más que el resto. Va PRIMERO entre los de
   // servicio porque es lo único que cambia el precio: los demás dicen qué te dan,
   // éste dice cuánto te cuesta. En TIFF son 61 de 638 funciones (las galas del

@@ -383,6 +383,8 @@ export function explodeScreenings(films){
           sala:s.sala||'',
           ...(s.is_free!=null?{is_free:s.is_free}:{}), // por-función (festivales mixed)
           ...(s.by_invitation?{by_invitation:true}:{}), // por-función: la gala, no las demás
+          // EN LÍNEA (Fantasmagoría 8: dos charlas por Twitch): por función, con su canal
+          ...(s.online?{online:true,stream_url:s.stream_url||'',stream_platform:s.stream_platform||''}:{}),
           // El formulario es de ESA actividad, no del festival (la Master Class de
           // FICDEH se titula con su propio nombre) → viaja por función, como is_free.
           ...(s.registration_url?{registration_url:s.registration_url}:{})
