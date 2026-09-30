@@ -171,10 +171,10 @@ def seccion_publicada(rot):
     return CAJA_SECCION.get(plano(s), s)
 
 
-# LA DURACIÓN QUE LA PARRILLA NO DA. «Vida» (Carlos Amézquita) sale con «xxx´».
-# Retina Latina (retinalatina.org/peliculas/vida/): 65 min, y la fecha 2016 (la
-# parrilla dice 2018: se deja la del festival y queda anotada).
-DURACION_DE_OTRA_FUENTE = {'Vida': (65, 'retinalatina.org/peliculas/vida/')}
+# EL AÑO Y LA DURACIÓN salen de la ficha de cada largo en la página de
+# largometrajes, no de la parrilla, que es un horario. Difieren en dos (29 sep):
+# «Vida» (parrilla 2018 y «xxx´»; ficha 2016 y 64’, y Retina Latina también da
+# 2016) y «Hammer» (parrilla 2025; ficha y página de la edición, 2024).
 
 
 def recta(s):
@@ -336,12 +336,12 @@ def main():
             r['premiere'] = 'Inauguración'
         if 'clausura' in b['rotulo'].lower() and r.get('tipo') != 'evento':
             r['premiere'] = 'Clausura'
-        # la duración que la parrilla no da («xxx´») y otra fuente sí
-        if r.get('titulo') in DURACION_DE_OTRA_FUENTE and not r.get('duracion_min'):
-            r['duracion_min'] = DURACION_DE_OTRA_FUENTE[r['titulo']][0]
         # LA SINOPSIS y el ESTRENO de la página de largometrajes (texto del festival)
         lg = lidx.get(plano(r['titulo'])) or next((v for k, v in lidx.items() if k.startswith(plano(r['titulo']) + ' ')), None)
         if lg and r.get('director'):
+            for k in ('anio', 'duracion_min'):
+                if lg.get(k):
+                    r[k] = lg[k]
             if lg.get('sinopsis') and not r.get('sinopsis'):
                 r['sinopsis'] = lg['sinopsis']
             if lg.get('estreno') and not r.get('premiere'):

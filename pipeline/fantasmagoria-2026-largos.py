@@ -24,6 +24,8 @@ URL = 'https://festivalfantasmagoriamedellin.com/largometrajes-2026/'
 DESTINO = f'{REPO}/festivals/staging/fantasmagoria-2026-largos.json'
 FECHA = re.compile(r'^(Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo)\s+(\d{1,2})\s+de\s+octubre[\s.–-]*(\d{1,2}:\d{2}\s*[ap]\.?\s*m\.?)?', re.I)
 HORA = re.compile(r'(\d{1,2}):(\d{2})\s*([ap])\.?\s*m', re.I)
+# «Colombia, 2016, 64’»: el año y la duración al final del crédito
+ANIO_DUR = re.compile(r'(\d{4})\s*,\s*(\d{1,3})\s*[´’\']?\s*$')
 
 
 def main():
@@ -38,6 +40,9 @@ def main():
             cred = L[i + 1][4:].strip() or (L[i + 2] if i + 2 < len(L) else '')
             j = i + (3 if not L[i + 1][4:].strip() else 2)
             p = {'credito': cred.strip(' /'), 'funciones': []}
+            ad = ANIO_DUR.search(p['credito'])
+            if ad:
+                p['anio'], p['duracion_min'] = int(ad.group(1)), int(ad.group(2))
             while j < len(L) and not (j + 1 < len(L) and L[j + 1].startswith('Dir:')):
                 x = L[j]
                 if re.match(r'^\(Estreno [^)]+\)$', x):
@@ -64,7 +69,7 @@ def main():
         i += 1
     io.open(DESTINO, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance('festivalfantasmagoriamedellin.com, página Largometrajes 2026 (wp-json 6440)', url=URL,
-                                  que_aporta='sinopsis y sello de estreno de cada largo; sus funciones, para el verificador'),
+                                  que_aporta='sinopsis, sello de estreno, año y duración de cada largo; sus funciones, para el verificador'),
         '_modificada': d['modified'], 'peliculas': pelis}, ensure_ascii=False, indent=1))
     print(f'✓ {len(pelis)} largometrajes · {sum(1 for p in pelis.values() if p.get("sinopsis"))} con sinopsis · '
           f'{sum(len(p["funciones"]) for p in pelis.values())} funciones → {os.path.relpath(DESTINO, REPO)}')

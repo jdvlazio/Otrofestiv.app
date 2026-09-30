@@ -5,6 +5,7 @@
     MISMAS funciones (día y hora) que esa página, en los dos sentidos;
   · el día de la semana impreso casa con la fecha;
   · el acceso («Entrada libre» / «con boleta») de cada función coincide;
+  · el año y la duración publicados son los de la ficha del largo;
   · toda sede tiene pin verificado a mano o su porqué escrito.
 
 Las dos fuentes del festival se contradicen en algunas funciones. Cada
@@ -68,6 +69,12 @@ def main():
             avisos.append((t, *kd, 'en la página de largos y NO en la parrilla (build)'))
         for kd in en_build.keys() - en_web.keys():
             avisos.append((t, *kd, 'en la parrilla (build) y NO en la página de largos'))
+        for f in {id(x): x for x in fs}.values():
+            dur = int(re.match(r'\d+', f.get('duration') or '0').group())
+            if p.get('anio') and f.get('year') != p['anio']:
+                avisos.append((t, f['day'], f['time'], f'año: la ficha dice {p["anio"]}, publicamos {f.get("year")}'))
+            if p.get('duracion_min') and dur != p['duracion_min']:
+                avisos.append((t, f['day'], f['time'], f'duración: la ficha dice {p["duracion_min"]}, publicamos {dur}'))
         for kd in en_web.keys() & en_build.keys():
             f = en_build[kd]
             a_web = acc(en_web[kd]['sede_y_acceso'])
