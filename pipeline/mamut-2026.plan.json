@@ -50,6 +50,7 @@
   "festivals/staging/mamut-2026-programa-catalogo-enriquecido.json": "las fichas de las obras de la programación (pre-onboarding)",
   "festivals/staging/mamut-2026-programa-correcciones.json": "las 2 fichas declaradas del pre-onboarding",
   "festivals/staging/mamut-2026-correcciones.json": "las mismas 2 fichas declaradas, para el montaje; las lee pipeline/enriquecer.py",
+  "festivals/staging/mamut-2026-afiches.json": "afiches declarados (buscados y mirados fuera de TMDB); los lee pipeline/enriquecer.py donde TMDB y lo ya publicado no tienen",
   "festivals/staging/mamut-2026-sinopsis.json": "sinopsis oficiales declaradas (literal, con URL); las lee pipeline/enriquecer.py donde no hay ninguna"
  },
  "_programacion": {

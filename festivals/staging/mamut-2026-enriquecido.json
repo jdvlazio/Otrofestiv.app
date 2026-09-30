@@ -66,7 +66,9 @@
    "_director": "Dailo Barco",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/archipielago-fantasma.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Guetón Rodríguez fue uno de los actores protagonistas de EL LADRÓN DE LOS GUANTES BLANCOS (1926), primera película de la historia del cine en las Islas Canarias. Interpretó el papel de un falso culpable, acusado de un robo que no cometió. Años más tarde, durante la Guerra Civil, Guetón fue detenido de nuevo por su activismo político. Esta vez en la vida real.",
+   "_sinopsis": "https://www.lpafilmfestival.com/archipielago-fantasma/"
   },
   {
    "titulo": "Belleza letal",
@@ -207,7 +209,9 @@
    "_director": "Víctor Augusto Mendívil",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/el-peru-es-un-lugar-para-morir.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "A partir de imágenes filmadas en Perú en 1950 por un extranjero, Víctor escribe una carta a su hijo para interrogar el país que hereda: entre latidos y ruinas, busca una esperanza que aún resiste en medio del desengaño.",
+   "_sinopsis": "https://festivaldemalaga.com/edicion/ver-pelicula/?id=3436"
   },
   {
    "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
@@ -260,6 +264,24 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "El silencio de las granadas",
+   "tmdb_id": 1595296,
+   "titulo_original": "The silence of pomegranates",
+   "poster_path": "/nyXbYEy7o65QBJvEdLG6WmTzUIF.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a coastal town in Calabria, southern Italy, a woman who prefers to remain anonymous breaks the silence surrounding the issue of abortion in the region.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "the-silence-of-pomegranates",
+   "_verificado": "declarada a mano: TMDB la registra con su título inglés («The silence of pomegranates»; original «Il silenzio dei melograni»): Clara Baj, 9 min, igual que el festival. La búsqueda por el título en español no la devuelve. Su póster dice «Il silenzio dei melograni — un film di Clara Baj».",
+   "_director": "Clara Baj",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/el-silencio-de-las-granadas.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Estas imágenes fueron hechas para no mirarse",
    "tmdb_id": 1136744,
    "titulo_original": "Estas imágenes fueron hechas para no mirarse",
@@ -276,7 +298,9 @@
    "_director": "Pablo Romo Á.",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/estas-imagenes-fueron-hechas-para-no-mirarse.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Las imágenes son más de lo que muestran, solo es necesario volver a mirarlas. Ensayo que trata sobre unas imágenes que estaban hechas para no mirarse y que, detrás de su apariencia, revelan una oscura verdad.",
+   "_sinopsis": "https://ficunam.unam.mx/pelicula/estas-imagenes-fueron-hechas-para-no-mirarse/"
   },
   {
    "titulo": "Frío metal",
@@ -465,7 +489,12 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "No menguará el fuego de esta luna",
    "_director": "Sebastián Pérez Arbelaez",
-   "_sondeado": "2026-09-29"
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/no-menguara-el-fuego-de-esta-luna.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://www.cinecorto.co/no-menguara-el-fuego-de-esta-luna/",
+   "sinopsis": "Busco y hablo con los muertos. Le escribo a una mujer que ya no está: Soraya Cataño; asesinada en Medellín en 1991. Treinta años después la encuentro en una imagen. Su voz emerge mientras una comparsa avanza por la ladera. El archivo revela su risa; sus gestos y yo decido invocarla. Yo también crecí en este valle. Yo también creí. Creo. Esta película no es sobre la muerte. Es una carta fílmica; un diálogo entre quien narra y quien resiste desde la ausencia. Es un fuego que no se apaga.",
+   "_sinopsis": "https://www.cinecorto.co/no-menguara-el-fuego-de-esta-luna/"
   },
   {
    "titulo": "Soplo de vida",
@@ -513,7 +542,15 @@
    "_director": "Javier Olivera",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/una-habitacion-en-bangkok.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "A través de los fotogramas granulados y efímeros de la película de Super 8, el director revisita un viaje de infancia a Asia, donde el socio de su padre—una figura constante en sus vidas—capturó la narrativa de una familia a través de su lente. Perseguido por una sospecha persistente sobre una noche en un hotel de Bangkok, el director emprende un viaje de recuerdos, lidiando con memorias fragmentadas, energías traumáticas y el poder del olvido.",
+   "_sinopsis": "https://javierolivera.net/una-habitacion-en-bangkok"
+  },
+  {
+   "titulo": "These are not our memories",
+   "poster": "/assets/mamut-2026/these-are-not-our-memories.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://www.cinecorto.co/these-are-not-our-memories/"
   }
  ],
  "verificadas": {
@@ -576,7 +613,9 @@
    "_director": "Dailo Barco",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/archipielago-fantasma.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Guetón Rodríguez fue uno de los actores protagonistas de EL LADRÓN DE LOS GUANTES BLANCOS (1926), primera película de la historia del cine en las Islas Canarias. Interpretó el papel de un falso culpable, acusado de un robo que no cometió. Años más tarde, durante la Guerra Civil, Guetón fue detenido de nuevo por su activismo político. Esta vez en la vida real.",
+   "_sinopsis": "https://www.lpafilmfestival.com/archipielago-fantasma/"
   },
   "Bombardeo a Washington": {
    "tmdb_id": 493152,
@@ -699,7 +738,9 @@
    "_director": "Víctor Augusto Mendívil",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/el-peru-es-un-lugar-para-morir.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "A partir de imágenes filmadas en Perú en 1950 por un extranjero, Víctor escribe una carta a su hijo para interrogar el país que hereda: entre latidos y ruinas, busca una esperanza que aún resiste en medio del desengaño.",
+   "_sinopsis": "https://festivaldemalaga.com/edicion/ver-pelicula/?id=3436"
   },
   "El hogar fue sepultado en esa tierra que nunca pudimos encontrar": {
    "tmdb_id": 1663181,
@@ -750,6 +791,23 @@
    "poster": "/assets/mamut-2026/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encon.jpg",
    "posterSource": "tmdb"
   },
+  "El silencio de las granadas": {
+   "tmdb_id": 1595296,
+   "titulo_original": "The silence of pomegranates",
+   "poster_path": "/nyXbYEy7o65QBJvEdLG6WmTzUIF.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a coastal town in Calabria, southern Italy, a woman who prefers to remain anonymous breaks the silence surrounding the issue of abortion in the region.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "the-silence-of-pomegranates",
+   "_verificado": "declarada a mano: TMDB la registra con su título inglés («The silence of pomegranates»; original «Il silenzio dei melograni»): Clara Baj, 9 min, igual que el festival. La búsqueda por el título en español no la devuelve. Su póster dice «Il silenzio dei melograni — un film di Clara Baj».",
+   "_director": "Clara Baj",
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/el-silencio-de-las-granadas.jpg",
+   "posterSource": "tmdb"
+  },
   "Estas imágenes fueron hechas para no mirarse": {
    "tmdb_id": 1136744,
    "titulo_original": "Estas imágenes fueron hechas para no mirarse",
@@ -766,7 +824,9 @@
    "_director": "Pablo Romo Á.",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/estas-imagenes-fueron-hechas-para-no-mirarse.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Las imágenes son más de lo que muestran, solo es necesario volver a mirarlas. Ensayo que trata sobre unas imágenes que estaban hechas para no mirarse y que, detrás de su apariencia, revelan una oscura verdad.",
+   "_sinopsis": "https://ficunam.unam.mx/pelicula/estas-imagenes-fueron-hechas-para-no-mirarse/"
   },
   "Frío metal": {
    "tmdb_id": 1493018,
@@ -947,7 +1007,12 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "No menguará el fuego de esta luna",
    "_director": "Sebastián Pérez Arbelaez",
-   "_sondeado": "2026-09-29"
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/no-menguara-el-fuego-de-esta-luna.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://www.cinecorto.co/no-menguara-el-fuego-de-esta-luna/",
+   "sinopsis": "Busco y hablo con los muertos. Le escribo a una mujer que ya no está: Soraya Cataño; asesinada en Medellín en 1991. Treinta años después la encuentro en una imagen. Su voz emerge mientras una comparsa avanza por la ladera. El archivo revela su risa; sus gestos y yo decido invocarla. Yo también crecí en este valle. Yo también creí. Creo. Esta película no es sobre la muerte. Es una carta fílmica; un diálogo entre quien narra y quien resiste desde la ausencia. Es un fuego que no se apaga.",
+   "_sinopsis": "https://www.cinecorto.co/no-menguara-el-fuego-de-esta-luna/"
   },
   "Soplo de vida": {
    "tmdb_id": 143376,
@@ -992,13 +1057,14 @@
    "_director": "Javier Olivera",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/una-habitacion-en-bangkok.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "A través de los fotogramas granulados y efímeros de la película de Super 8, el director revisita un viaje de infancia a Asia, donde el socio de su padre—una figura constante en sus vidas—capturó la narrativa de una familia a través de su lente. Perseguido por una sospecha persistente sobre una noche en un hotel de Bangkok, el director emprende un viaje de recuerdos, lidiando con memorias fragmentadas, energías traumáticas y el poder del olvido.",
+   "_sinopsis": "https://javierolivera.net/una-habitacion-en-bangkok"
   }
  },
  "sin_ficha": [
   "Belleza letal",
   "Desde la ventana",
-  "El silencio de las granadas",
   "Labrador de violines",
   "Lo que tengo",
   "Muestra de cortos 1",
@@ -1023,10 +1089,6 @@
   "Desde la ventana": {
    "director": "Santiago Herrera",
    "fecha": "2026-09-28"
-  },
-  "El silencio de las granadas": {
-   "director": "Clara Baj",
-   "fecha": "2026-09-29"
   },
   "Labrador de violines": {
    "director": "Santiago Herrera",
@@ -1088,5 +1150,13 @@
    "director": "Daniel Cortés",
    "fecha": "2026-09-28"
   }
- }
+ },
+ "_fuentes": [
+  {
+   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
+   "capturado": "2026-09-29",
+   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
+   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
+  }
+ ]
 }

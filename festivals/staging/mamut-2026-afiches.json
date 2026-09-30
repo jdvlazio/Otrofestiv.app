@@ -1,0 +1,22 @@
+{
+ "_provenance": {
+  "fuente": "afiches buscados fuera de TMDB y MIRADOS uno por uno",
+  "capturado": "2026-09-29",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche; el título y la dirección se ven en la imagen",
+  "descartados": {
+   "Desde la ventana": "recorte de la lámina del programa del festival, no un afiche",
+   "Labrador de violines": "recorte de la lámina del programa del festival, no un afiche",
+   "Minuto fatal": "lo que TMDB tiene como póster es un fotograma sin título"
+  }
+ },
+ "afiches": {
+  "These are not our memories": {
+   "archivo": "fuentes/afiches/mamut-2026/these-are-not-our-memories.jpg",
+   "fuente": "https://www.cinecorto.co/these-are-not-our-memories/"
+  },
+  "No menguará el fuego de esta luna": {
+   "archivo": "fuentes/afiches/mamut-2026/no-menguara-el-fuego-de-esta-luna.png",
+   "fuente": "https://www.cinecorto.co/no-menguara-el-fuego-de-esta-luna/"
+  }
+ }
+}
