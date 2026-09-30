@@ -1699,6 +1699,10 @@ function _avisosBand(f, opts){
   if(_ins.length) rows.push([t('badge_inscripcion'), t('aviso_inscripcion')+_cual(_ins)]);
   const _inv=_con('by_invitation');  // nombra cuáles; y sale de la fila de precio
   if(_inv.length) rows.push([t('badge_invitacion'), t('aviso_invitacion')+_cual(_inv)]);
+  // EN LÍNEA: la frase lleva el link al canal (solo https); la sede no tiene pin
+  const _onl=_con('online');
+  if(_onl.length){const _o=_onl[0], _tx=t('aviso_online',{plataforma:_o.stream_platform||''});
+    rows.push([t('badge_online'), (/^https:\/\//.test(_o.stream_url||'')?`<a href="${_o.stream_url}" target="_blank" rel="noopener">${_tx}</a>`:_tx)+_cual(_onl)]);}
   // Precio: la ficha dice lo MISMO que la card — ticketBadgeTarget es el dueño
   // único de qué se marca (la minoría). Si la card de una función dice CON
   // BOLETA y su ficha dijera GRATIS, se contradirían.

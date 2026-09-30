@@ -18,6 +18,8 @@ const { screensConflict } = loadDomain({
         venues: {
           'Sala A': { short: 'A', lat: 6.25, lng: -75.57 },
           'Sala B': { short: 'B', lat: 6.27, lng: -75.57 }, // 2.22 km north → 15 min travel
+          // la sede de una transmisión: SIN coordenadas a propósito ([sede-con-pin])
+          'Twitch · Canal': { short: 'Twitch' },
         },
       },
     },
@@ -95,4 +97,21 @@ test('reversed argument order returns the same result (commutative)', () => {
   const b = { day: sameDay, time: '11:00 AM', duration: '90 min', venue: 'Sala A' };
   assert.strictEqual(screensConflict(b, a), screensConflict(a, b));
   assert.strictEqual(screensConflict(b, a), true);
+});
+
+// ── EN LÍNEA (Fantasmagoría 8, charlas por Twitch) ──────────────────────────
+// Su sede no tiene pin a propósito: no hay adónde ir, así que el plan no le suma
+// traslado. Choca solo por horario. Si alguien cambia el fallback de travelMins
+// «sin coordenadas → 0» por un tiempo por defecto, esto lo ataja.
+test('en línea: sin traslado — Sala B 10:00–11:00 y la charla 11:20 caben (20 ≥ buffer)', () => {
+  const a = { day: sameDay, time: '10:00 AM', duration: '60 min', venue: 'Sala B' };
+  const b = { day: sameDay, time: '11:20 AM', duration: '60 min', venue: 'Twitch · Canal', online: true };
+  assert.strictEqual(screensConflict(a, b), false);
+  assert.strictEqual(screensConflict(b, a), false);
+});
+
+test('en línea: igual choca por horario si se pisa', () => {
+  const a = { day: sameDay, time: '10:00 AM', duration: '90 min', venue: 'Sala B' };
+  const b = { day: sameDay, time: '11:00 AM', duration: '60 min', venue: 'Twitch · Canal', online: true };
+  assert.strictEqual(screensConflict(a, b), true);
 });

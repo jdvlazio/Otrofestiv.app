@@ -77,6 +77,21 @@
    "grupo": "acceso",
    "nota": "Función CERRADA al público, solo con invitación. Anula el badge de precio y el plan no la propone (screeningPlannable); se agenda a mano. Por función: la gala sí, las demás funciones de la obra no."
   },
+  "online": {
+   "tipo": "boolean",
+   "grupo": "acceso",
+   "nota": "Función EN LÍNEA (una charla por Twitch): su sede no tiene pin a propósito y el planificador no le suma traslado (travelMins da 0 sin coordenadas); choca solo por horario. Por función."
+  },
+  "stream_url": {
+   "tipo": "string",
+   "grupo": "acceso",
+   "nota": "El link del canal de una función en línea (https). Lo abre el aviso de la ficha."
+  },
+  "stream_platform": {
+   "tipo": "string",
+   "grupo": "acceso",
+   "nota": "Dónde se transmite una función en línea («Twitch»): completa el aviso «Se transmite en línea por …»."
+  },
   "title_en": {
    "tipo": "string"
   },

@@ -170,6 +170,11 @@ const GENEROS = (() => {
 })();
 
 // ── Validar un festival ──────────────────────────────────────────────────────
+// [sede-con-pin] DEUDA DECLARADA, y solo puede encoger. «Zoom - Manizales» es la
+// sede virtual de FICMA 17, montado antes de que existiera `online` y aplazado
+// por el sismo de agosto (oculto): no se vuelve a montar tal cual.
+const SEDE_SIN_PIN_DEUDA = new Set(['ficma-2026.json|Zoom - Manizales']);
+
 function validateFestival(fname, data) {
   const errors = [];
   const warnings = [];
@@ -793,8 +798,26 @@ function validateFestival(fname, data) {
       errors.push(`venue "${vname}": tiene lng pero falta lat — geocoding incompleto`);
       totalErrors++;
     }
+    // [sede-con-pin] TODA SEDE LLEVA PIN (regla de Juan, 30 sep 2026: «una sede
+    // sin pin complica muchísimo la planeación»). Si no hay lugar exacto, va uno
+    // aproximado y anotado. La única sede sin pin es la de una función EN LÍNEA
+    // (una charla por Twitch): ahí no hay adónde ir, y sin coordenadas
+    // travelMins da 0, que es justo lo que el plan necesita. Al revés también es
+    // error: una función en línea en una sede CON pin se cobraría un traslado.
     if (!hasLat && !hasLng) {
-      warnings.push(`venue "${vname}": sin coordenadas GPS — travelWarn usará tiempo por defecto`);
+      const _fs = (data.films || []).filter(x => x.venue === vname);
+      const _todasOnline = _fs.length > 0 && _fs.every(x => x.online === true);
+      if (_todasOnline) {
+        // bien: la sede de una transmisión
+      } else if (SEDE_SIN_PIN_DEUDA.has(`${fname}|${vname}`)) {
+        warnings.push(`[sede-con-pin] venue "${vname}": sin pin — deuda declarada`);
+      } else {
+        errors.push(`[sede-con-pin] venue "${vname}": sin coordenadas. Toda sede lleva pin (aproximado y anotado si no hay uno exacto); solo una sede cuyas funciones son TODAS online puede no tenerlo`);
+        totalErrors++;
+      }
+    } else if ((data.films || []).some(x => x.venue === vname && x.online === true)) {
+      errors.push(`[sede-con-pin] venue "${vname}": tiene pin y funciones online — el plan les sumaría un traslado; la sede de una transmisión va sin coordenadas`);
+      totalErrors++;
     }
   }
 

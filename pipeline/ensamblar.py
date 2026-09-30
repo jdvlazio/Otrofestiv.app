@@ -399,7 +399,7 @@ def ensamblar(fid, escribir=True):
             # explícita, que se pudre mucho más despacio.
             _DE_LA_FUNCION = {'day', 'day_order', 'date', 'time', 'venue', 'sala',
                               'screenings', 'sessions', 'ticket_url', 'is_free',
-                              'requires_registration', 'registration_url', 'by_invitation', 'has_qa',
+                              'requires_registration', 'registration_url', 'by_invitation', 'online', 'stream_url', 'stream_platform', 'has_qa',
                               'qa_type', 'film_list', 'is_cortos', 'is_programa',
                               'type', 'unscheduled', '_src', 'title'}
             for _c, _v in _u.items():
