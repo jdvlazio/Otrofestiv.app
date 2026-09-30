@@ -96,6 +96,25 @@ DIRECTOR_ERRATA = {
 }
 
 
+# ── LA MUESTRA «FANTASÍA TROPICAL»: sus cinco cortos ────────────────────────
+# Carrusel del 30 sep (p/Dd6sCrsnJD5, 8 láminas): una lámina por corto con
+# título, año, dirección y minutos pintados; el pie dice lo mismo. Título como
+# lo pinta la lámina; «Tobón» con tilde como el pie (la lámina: «Tobon»). La
+# lámina es del miércoles 30; la muestra se repite el jueves 2 con el mismo
+# nombre y se le ponen los mismos cortos: dos funciones con un título y listas
+# distintas harían que la app enseñe la primera en las dos ([programa-mismo-titulo]).
+# La «Muestra de cortos girardotanos» sigue sin sus cortos: la lámina no los da.
+FANTASIA = 'Muestra de cortometrajes: Fantasía tropical'
+FANTASIA_OBRAS = [
+    {'titulo': 'Paloquemao', 'anio': 2022, 'director': 'Jefferson Cardoza', 'duracion_min': 20},
+    {'titulo': 'Silencio en la Laguna', 'anio': 2024, 'director': 'Álvaro Jiménez Garzón, Julián Montenegro', 'duracion_min': 7},
+    {'titulo': '/IMAGINA', 'anio': 2023, 'director': 'Pablo Tobón-Gallo', 'duracion_min': 12},
+    {'titulo': 'Sirenas en la Niebla', 'anio': 2023, 'director': 'Daniela Narváez', 'duracion_min': 18},
+    {'titulo': 'Alguien Mató Algo', 'anio': 1998, 'director': 'Jorge Navas', 'duracion_min': 26},
+]
+FANTASIA_SRC = 'https://www.instagram.com/p/Dd6sCrsnJD5/'
+
+
 def obras_competencia():
     """Los 20 cortos, cada título y dirección confirmados por la OCR de SU lámina."""
     d = json.load(io.open(COMP_OJOS, encoding='utf-8'))
@@ -265,6 +284,10 @@ def main():
             reg['sinopsis'] = c if c.endswith('.') else c + '.'
         if reg['titulo'] == COMPETENCIA:
             reg['obras'] = obras_competencia()
+        if reg['titulo'] == FANTASIA:
+            reg['obras'] = [dict(o) for o in FANTASIA_OBRAS]
+            reg['duracion_min'] = sum(o['duracion_min'] for o in FANTASIA_OBRAS)
+            reg.setdefault('_src', {})['obras'] = FANTASIA_SRC
         funciones.append(reg)
 
     duracion_de_actividades(funciones)
