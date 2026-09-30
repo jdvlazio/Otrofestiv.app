@@ -32,9 +32,10 @@
   "_nota": "Google Maps «Centro Comercial Terraplaza», Cra. 9 #73 AN-200 (30 sep); OSM «Centro comercial Terra Plaza» (shop=mall) a ~120 m, el mismo centro comercial. La Pantalla gigante es su sala."
  },
  "Mikuna Casa Cultural": {
-  "lat": null,
-  "lng": null,
+  "lat": 2.4285559,
+  "lng": -76.6175557,
+  "address": "Túnel bajo, Popayán",
   "_prec": "manual",
-  "_todo": "sin pin a propósito: Google solo da «Mikuna, Casa de las Artes» (Túnel bajo), otro nombre y sin dirección; OSM no la tiene. Se pide al festival."
+  "_nota": "Google Maps «Mikuna, Casa de las Artes» (plus code C9HJ+CX, Túnel bajo): el único Mikuna de Popayán en Maps, un espacio cultural y escuela de arte; el festival la llama «Mikuna Casa Cultural». OSM no la tiene (30 sep)."
  }
 }

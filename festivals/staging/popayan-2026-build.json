@@ -212,10 +212,11 @@
   "Mikuna Casa Cultural - Popayán": {
    "short": "Mikuna Casa Cultural",
    "city": "Popayán",
-   "lat": null,
-   "lng": null,
+   "lat": 2.4285559,
+   "lng": -76.6175557,
+   "address": "Túnel bajo, Popayán",
    "_prec": "manual",
-   "_todo": "sin pin a propósito: Google solo da «Mikuna, Casa de las Artes» (Túnel bajo), otro nombre y sin dirección; OSM no la tiene. Se pide al festival."
+   "_nota": "Google Maps «Mikuna, Casa de las Artes» (plus code C9HJ+CX, Túnel bajo): el único Mikuna de Popayán en Maps, un espacio cultural y escuela de arte; el festival la llama «Mikuna Casa Cultural». OSM no la tiene (30 sep)."
   },
   "Centro Comercial Terra Plaza - Popayán": {
    "short": "Centro Comercial Terra Plaza",
@@ -2243,7 +2244,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T08:16:23",
+  "fecha": "2026-09-30T08:29:48",
   "plan_sha": "4d76e7286d12841e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"
