@@ -1,5 +1,5 @@
 {
- "_nota": "MONTAJE (29 sep 2026). 17 Festival de Cine Corto de Popayán, 5–11 oct. La parrilla sale de la página de programación de la web (wp-json id 13120, 29 sep), que trae lunes a viernes: 11 bloques de la Selección Oficial, la Muestra Internacional (sin obras), la apertura y 8 conversatorios. El sábado 10 y el domingo 11 no están publicados, ni la sección Infantil (10 cortos). Catálogo del pre-onboarding (77 obras, 44 con TMDB). Acceso: afiche oficial p/DdCljrXoEzp, «teatro Bolívar · entrada libre». Competencia: el reglamento prevé jurado y reconocimientos por categoría; las muestras Panorama e Internacional no compiten.",
+ "_nota": "MONTAJE (29 sep 2026). 17 Festival de Cine Corto de Popayán, 5–11 oct. La parrilla sale de la página de programación de la web (wp-json id 13120, 29 sep), que trae lunes a viernes: 11 bloques de la Selección Oficial, la Muestra Internacional (sin obras), la apertura y 8 conversatorios. El sábado 10 y el domingo 11 no estaban publicados; la versión del 30 sep (00:12 GMT) agrega el jueves en dos barrios (Casa Taller Sirirí, Mikuna), el viernes y el sábado en la pantalla gigante de Terra Plaza (Cine Corto Familiar, con la sección Infantil, y el Vodcast en Vivo) y 7 talleres «solo inscritos y aceptados», que no se publican. El domingo sigue sin publicar. Catálogo del pre-onboarding (77 obras, 44 con TMDB). Acceso: afiche oficial p/DdCljrXoEzp, «teatro Bolívar · entrada libre». Competencia: el reglamento prevé jurado y reconocimientos por categoría; las muestras Panorama e Internacional no compiten.",
  "radar": 573,
  "pasos": [
   {
@@ -12,7 +12,7 @@
   },
   {
    "cmd": "python3 pipeline/popayan-2026-crudo.py",
-   "que": "la parrilla de la web → crudo: 21 funciones, 68 obras cruzadas con el catálogo por título y dirección; cobertura inversa con patrón propio"
+   "que": "la parrilla de la web → crudo: 32 funciones y 101 obras (versión del 30 sep, lunes a sábado) cruzadas con el catálogo por título y dirección; los 7 talleres «solo inscritos» fuera; cobertura inversa con patrón propio"
   },
   {
    "cmd": "python3 pipeline/enriquecer.py popayan-2026 --posters",
@@ -56,6 +56,18 @@
    ],
    "Facultad de Artes Unicauca": [
     "Facultad de Artes Unicauca - Popayán",
+    ""
+   ],
+   "Casa Taller Sirirí": [
+    "Casa Taller Sirirí - Popayán",
+    ""
+   ],
+   "Mikuna Casa Cultural": [
+    "Mikuna Casa Cultural - Popayán",
+    ""
+   ],
+   "Centro Comercial Terra Plaza": [
+    "Centro Comercial Terra Plaza - Popayán",
     ""
    ]
   },
@@ -105,6 +117,16 @@
     "emoji": "🌎",
     "en": "International Shorts Showcase",
     "archetype": "Muestra / País"
+   },
+   "CineCorto en el Barrio": {
+    "emoji": "🏘️",
+    "en": "CineCorto in the Neighborhood",
+    "archetype": "Cortos / Programas"
+   },
+   "Cine Corto Familiar": {
+    "emoji": "🧒",
+    "en": "Family Shorts",
+    "archetype": "Cortos / Programas"
    },
    "Actividades": {
     "emoji": "🎤",

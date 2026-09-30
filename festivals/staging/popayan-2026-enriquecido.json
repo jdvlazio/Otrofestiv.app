@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-29"
+  "capturado": "2026-09-30"
  },
  "obras": [
   {
@@ -92,7 +92,7 @@
    "lbSlug": "love-in-times-of-whatever-the-present-is",
    "_verificado": "declarada a mano: TMDB escribe a la directora «Valentina Qaszxulxkef» y la parrilla «Qaszulxkef»: una letra, y el candado no casa. Mismo título, animación, Medellín (búsqueda de afiches, 29 sep).",
    "_director": "Valentina Qaszulxkef",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg",
    "posterSource": "tmdb"
   },
@@ -134,6 +134,25 @@
    "_director": "Miguel Vargas Mejia",
    "_sondeado": "2026-09-29",
    "poster": "/assets/popayan-2026/camino-al-cielo.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Cascabeles",
+   "tmdb_id": 1187808,
+   "titulo_original": "Cascabeles",
+   "poster_path": "/5s5KXxJkQRAJsnpkt9LdQFQM3gK.jpg",
+   "synopsis_es": "Emma es una niña valiente de 7 años que guarda un importante secreto: le teme a la oscuridad; para ella, allí sus miedos cobran vida. Cuando su abuelo Augusto –un hombre ciego y sabio– descubre su secreto, trama un ingenioso plan para impulsarla a enfrentar sus temores, tejiendo un emotivo vínculo intergeneracional a través del cual Emma explora el poder que se consigue al enfrentar los miedos.",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "cascabeles",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cascabeles",
+   "_director": "Jhina Hernández Ospina",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/popayan-2026/cascabeles.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -232,6 +251,26 @@
    "_director": "María José Alarcón",
    "_sondeado": "2026-09-29",
    "poster": "/assets/popayan-2026/cielo-roto.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Color piel",
+   "tmdb_id": 1493530,
+   "titulo_original": "Color piel",
+   "poster_path": "/pnYcOPQ8IckxVpWbtDj2BsAelyP.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Bogotá, 1996. Luis Fernando, a 9-year-old Afro-Colombian boy, will face a serious mistake in the adult world, when in class he confirms that the pinkish color in his pencil case, called “skin color”, does not correspond to the color of his skin.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Colombia",
+   "title_en": "Skin Color",
+   "lbSlug": "skin-color",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Color piel",
+   "_director": "Fidel Barboza Gómez y Sebastián Castaño Tobón",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/popayan-2026/color-piel.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -374,6 +413,33 @@
     }
    ],
    "poster": "/assets/popayan-2026/gladiolos.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Gris",
+   "tmdb_id": 1490328,
+   "titulo_original": "Gris",
+   "poster_path": "/cby63kRIy7WIVWTWZNwZfXTQYli.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sofía, a curious and imaginative young girl, faces challenges at school as she begins to navigate the complexities of her mixed-race identity. As her art springs to life through vibrant and whimsical animations, the story delves into Sofia’s journey of self-discovery, capturing her confusion, resilience, and profound lessons about belonging. Sofia learns to embrace the shades that define her, blending love, culture, and individuality into a unique narrative.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "gris-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Gris",
+   "_director": "Loren Escandon",
+   "_sondeado": "2026-09-30",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Gris",
+     "poster": "https://admin.alternativa.film/uploads/Gris_Poster_Eng_Loren_Escandon_62e9c1d610.jpg",
+     "posterSource": "custom"
+    }
+   ],
+   "poster": "/assets/popayan-2026/gris.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -524,6 +590,68 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "La gran hazaña",
+   "tmdb_id": 1494003,
+   "titulo_original": "La gran hazaña",
+   "poster_path": "/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+   "synopsis_es": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña.",
+   "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Great Feat",
+   "lbSlug": "the-great-feat",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La gran hazaña",
+   "_director": "Luber Yesid Zúñiga Ordóñez",
+   "_sondeado": "2026-09-30",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La gran hazaña",
+     "poster": "/assets/ficdeh/la-gran-hazana.jpg",
+     "posterSource": "custom",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La gran hazaña"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La gran hazaña",
+     "poster": "https://image.tmdb.org/t/p/w500/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en ficdeh-2026",
+   "poster": "/assets/popayan-2026/la-gran-hazana.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La guerra de los tomates",
+   "tmdb_id": 1753830,
+   "titulo_original": "La guerra de los tomates",
+   "poster_path": "/779prgLmt5WC2aHHHZtoUX6Mfzd.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Two groups of local and migrant children will represent the neighborhood in a tournament, an idea that will spark a tomato fight; a charismatic girl will bring out the best in everyone as she tries to unite an unlikely team against an unexpected rival.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-guerra-de-los-tomates",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La guerra de los tomates",
+   "_director": "Juancarlos Gutiérrez",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/popayan-2026/la-guerra-de-los-tomates.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "La habitación del macho cabrío",
    "tmdb_id": 1554728,
    "titulo_original": "La Habitación del Macho Cabrío",
@@ -551,6 +679,8 @@
     {
      "festival": "girardota-2026",
      "titulo": "La Rebelión de un Fantasma",
+     "poster": "/assets/popayan-2026/la-rebelion-de-un-fantasma.jpg",
+     "posterSource": "oficial",
      "sinopsis": "En Medellín, el río Aburrá fluye encajonado entre autopistas y concreto, ignorado por la ciudad que creció sobre su cuerpo. Ofelia lo busca. Camina sus orillas, intenta tocarlo, es expulsada. En ese trayecto -entre el deseo de acercarse y la imposibilidad de hacerlo- emergen los fantasmas del agua: los gallinazos que alguna vez sobrevolaron sus riberas, los cuerpos que el río ha guardado en silencio, las memorias de quienes lavaban ropa y navegaban en balsas donde hoy pasa el tráfico."
     }
    ],
@@ -650,6 +780,35 @@
    "_director": "Ari Lamadrid",
    "_sondeado": "2026-09-29",
    "poster": "/assets/popayan-2026/los-huyentes.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Los pliegues de la falda",
+   "tmdb_id": 1738777,
+   "titulo_original": "Los pliegues de la falda",
+   "poster_path": "/bJGWAlMlzNhfG4XlsMfdbvsspo8.jpg",
+   "synopsis_es": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "los-pliegues-de-la-falda",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Los pliegues de la falda",
+   "_director": "Blanca Muñoz Ávila",
+   "_sondeado": "2026-09-30",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Los pliegues de la falda",
+     "poster": "/assets/ficdeh/los-pliegues-de-la-falda.jpg",
+     "posterSource": "custom",
+     "lbSlug": "los-pliegues-de-la-falda",
+     "sinopsis": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente."
+    }
+   ],
+   "poster": "/assets/popayan-2026/los-pliegues-de-la-falda.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -1098,7 +1257,7 @@
    "lbSlug": "tuktu-father-maize",
    "_verificado": "declarada a mano: TMDB escribe al director «Mauricio Pietro Muriel» (sic); la web del festival, cinecorto.co y FICDEH, donde ya la publicamos, dicen Mauricio Prieto. Con el candado estricto del 28 sep un nombre de pila no alcanza, y por eso no casa sola. Todo lo demás coincide: título idéntico, 2025 en los dos lados y 13 min en TMDB contra 14 en cinecorto.co.",
    "_director": "Mauricio Prieto",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/popayan-2026/tuktu-padre-maiz.jpg",
    "posterSource": "tmdb"
   },
@@ -1389,7 +1548,7 @@
    "lbSlug": "love-in-times-of-whatever-the-present-is",
    "_verificado": "declarada a mano: TMDB escribe a la directora «Valentina Qaszxulxkef» y la parrilla «Qaszulxkef»: una letra, y el candado no casa. Mismo título, animación, Medellín (búsqueda de afiches, 29 sep).",
    "_director": "Valentina Qaszulxkef",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg",
    "posterSource": "tmdb"
   },
@@ -1429,6 +1588,24 @@
    "_director": "Miguel Vargas Mejia",
    "_sondeado": "2026-09-29",
    "poster": "/assets/popayan-2026/camino-al-cielo.jpg",
+   "posterSource": "tmdb"
+  },
+  "Cascabeles": {
+   "tmdb_id": 1187808,
+   "titulo_original": "Cascabeles",
+   "poster_path": "/5s5KXxJkQRAJsnpkt9LdQFQM3gK.jpg",
+   "synopsis_es": "Emma es una niña valiente de 7 años que guarda un importante secreto: le teme a la oscuridad; para ella, allí sus miedos cobran vida. Cuando su abuelo Augusto –un hombre ciego y sabio– descubre su secreto, trama un ingenioso plan para impulsarla a enfrentar sus temores, tejiendo un emotivo vínculo intergeneracional a través del cual Emma explora el poder que se consigue al enfrentar los miedos.",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "cascabeles",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Cascabeles",
+   "_director": "Jhina Hernández Ospina",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/popayan-2026/cascabeles.jpg",
    "posterSource": "tmdb"
   },
   "Cayenas libertarias": {
@@ -1524,6 +1701,25 @@
    "_director": "María José Alarcón",
    "_sondeado": "2026-09-29",
    "poster": "/assets/popayan-2026/cielo-roto.jpg",
+   "posterSource": "tmdb"
+  },
+  "Color piel": {
+   "tmdb_id": 1493530,
+   "titulo_original": "Color piel",
+   "poster_path": "/pnYcOPQ8IckxVpWbtDj2BsAelyP.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Bogotá, 1996. Luis Fernando, a 9-year-old Afro-Colombian boy, will face a serious mistake in the adult world, when in class he confirms that the pinkish color in his pencil case, called “skin color”, does not correspond to the color of his skin.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Colombia",
+   "title_en": "Skin Color",
+   "lbSlug": "skin-color",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Color piel",
+   "_director": "Fidel Barboza Gómez y Sebastián Castaño Tobón",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/popayan-2026/color-piel.jpg",
    "posterSource": "tmdb"
   },
   "Como el agua, la piedra y la espuma": {
@@ -1663,6 +1859,32 @@
    "poster": "/assets/popayan-2026/gladiolos.jpg",
    "posterSource": "tmdb"
   },
+  "Gris": {
+   "tmdb_id": 1490328,
+   "titulo_original": "Gris",
+   "poster_path": "/cby63kRIy7WIVWTWZNwZfXTQYli.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Sofía, a curious and imaginative young girl, faces challenges at school as she begins to navigate the complexities of her mixed-race identity. As her art springs to life through vibrant and whimsical animations, the story delves into Sofia’s journey of self-discovery, capturing her confusion, resilience, and profound lessons about belonging. Sofia learns to embrace the shades that define her, blending love, culture, and individuality into a unique narrative.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "gris-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Gris",
+   "_director": "Loren Escandon",
+   "_sondeado": "2026-09-30",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Gris",
+     "poster": "https://admin.alternativa.film/uploads/Gris_Poster_Eng_Loren_Escandon_62e9c1d610.jpg",
+     "posterSource": "custom"
+    }
+   ],
+   "poster": "/assets/popayan-2026/gris.jpg",
+   "posterSource": "tmdb"
+  },
   "La Europa": {
    "tmdb_id": 1456264,
    "titulo_original": "La Europa",
@@ -1793,6 +2015,66 @@
    "poster": "/assets/popayan-2026/la-despedida-del-rio.jpg",
    "posterSource": "tmdb"
   },
+  "La gran hazaña": {
+   "tmdb_id": 1494003,
+   "titulo_original": "La gran hazaña",
+   "poster_path": "/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+   "synopsis_es": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña.",
+   "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Great Feat",
+   "lbSlug": "the-great-feat",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La gran hazaña",
+   "_director": "Luber Yesid Zúñiga Ordóñez",
+   "_sondeado": "2026-09-30",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La gran hazaña",
+     "poster": "/assets/ficdeh/la-gran-hazana.jpg",
+     "posterSource": "custom",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La gran hazaña"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La gran hazaña",
+     "poster": "https://image.tmdb.org/t/p/w500/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en ficdeh-2026",
+   "poster": "/assets/popayan-2026/la-gran-hazana.jpg",
+   "posterSource": "tmdb"
+  },
+  "La guerra de los tomates": {
+   "tmdb_id": 1753830,
+   "titulo_original": "La guerra de los tomates",
+   "poster_path": "/779prgLmt5WC2aHHHZtoUX6Mfzd.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Two groups of local and migrant children will represent the neighborhood in a tournament, an idea that will spark a tomato fight; a charismatic girl will bring out the best in everyone as she tries to unite an unlikely team against an unexpected rival.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-guerra-de-los-tomates",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La guerra de los tomates",
+   "_director": "Juancarlos Gutiérrez",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/popayan-2026/la-guerra-de-los-tomates.jpg",
+   "posterSource": "tmdb"
+  },
   "La habitación del macho cabrío": {
    "tmdb_id": 1554728,
    "titulo_original": "La Habitación del Macho Cabrío",
@@ -1888,6 +2170,34 @@
    "_director": "Ari Lamadrid",
    "_sondeado": "2026-09-29",
    "poster": "/assets/popayan-2026/los-huyentes.jpg",
+   "posterSource": "tmdb"
+  },
+  "Los pliegues de la falda": {
+   "tmdb_id": 1738777,
+   "titulo_original": "Los pliegues de la falda",
+   "poster_path": "/bJGWAlMlzNhfG4XlsMfdbvsspo8.jpg",
+   "synopsis_es": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "",
+   "lbSlug": "los-pliegues-de-la-falda",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Los pliegues de la falda",
+   "_director": "Blanca Muñoz Ávila",
+   "_sondeado": "2026-09-30",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Los pliegues de la falda",
+     "poster": "/assets/ficdeh/los-pliegues-de-la-falda.jpg",
+     "posterSource": "custom",
+     "lbSlug": "los-pliegues-de-la-falda",
+     "sinopsis": "Linda quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que su hija interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla, aunque eso signifique nadar a contracorriente."
+    }
+   ],
+   "poster": "/assets/popayan-2026/los-pliegues-de-la-falda.jpg",
    "posterSource": "tmdb"
   },
   "Madres de nacimiento": {
@@ -2309,7 +2619,7 @@
    "lbSlug": "tuktu-father-maize",
    "_verificado": "declarada a mano: TMDB escribe al director «Mauricio Pietro Muriel» (sic); la web del festival, cinecorto.co y FICDEH, donde ya la publicamos, dicen Mauricio Prieto. Con el candado estricto del 28 sep un nombre de pila no alcanza, y por eso no casa sola. Todo lo demás coincide: título idéntico, 2025 en los dos lados y 13 min en TMDB contra 14 en cinecorto.co.",
    "_director": "Mauricio Prieto",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/popayan-2026/tuktu-padre-maiz.jpg",
    "posterSource": "tmdb"
   },
@@ -2418,7 +2728,10 @@
   "Abuelita caza vampiros",
   "Animista",
   "Chicanoa",
+  "CineCorto en el Barrio · Casa Taller Sirirí",
+  "CineCorto en el Barrio · Mikuna Casa Cultural",
   "Crudo",
+  "Dientes de yuca",
   "El Segundo",
   "El odio del padre",
   "El patio de la infancia",
@@ -2426,15 +2739,22 @@
   "HDLT Hijo de la Tierra",
   "Hacia la raíz",
   "Historias al margen: Martha y Eduardo",
+  "Juan PorOcho",
   "La Volqueta",
   "La rebelión de un fantasma",
   "Las piedras del río",
   "Las tres muertes de un sol",
   "Legado",
   "Ley de Origen y Espiritualidad",
+  "Luis Antonio",
   "Muestra de Cortos Internacionales",
   "Murmullos",
   "Negret: Génesis de una metamorfósis",
+  "Proyección Cine Corto Familiar · Parte 1",
+  "Proyección Cine Corto Familiar · Parte 2",
+  "Proyección Cine Corto Familiar · Parte 3",
+  "Proyección Cine Corto Familiar · Parte 4",
+  "Proyección Cine Corto Familiar · Parte 5",
   "Pájaros huérfanos",
   "Sangre",
   "Selección Oficial Afro",
@@ -2469,9 +2789,21 @@
    "director": "Carlos Alberto Mera Jiménez",
    "fecha": "2026-09-29"
   },
+  "CineCorto en el Barrio · Casa Taller Sirirí": {
+   "director": "",
+   "fecha": "2026-09-30"
+  },
+  "CineCorto en el Barrio · Mikuna Casa Cultural": {
+   "director": "",
+   "fecha": "2026-09-30"
+  },
   "Crudo": {
    "director": "Álvaro Ruiz Velasco",
    "fecha": "2026-09-29"
+  },
+  "Dientes de yuca": {
+   "director": "Yurieth Romero Velasquez",
+   "fecha": "2026-09-30"
   },
   "El Segundo": {
    "director": "Pedro Miguel Rozo",
@@ -2501,6 +2833,10 @@
    "director": "Juan Manuel Figueroa",
    "fecha": "2026-09-29"
   },
+  "Juan PorOcho": {
+   "director": "Marquitos Cárdenas",
+   "fecha": "2026-09-30"
+  },
   "La Volqueta": {
    "director": "Wiston Fernández Madriñan",
    "fecha": "2026-09-29"
@@ -2525,6 +2861,10 @@
    "director": "Jhonatan David Sánchez Chate",
    "fecha": "2026-09-29"
   },
+  "Luis Antonio": {
+   "director": "Juan José Arias Gil",
+   "fecha": "2026-09-30"
+  },
   "Muestra de Cortos Internacionales": {
    "director": "",
    "fecha": "2026-09-29"
@@ -2536,6 +2876,26 @@
   "Negret: Génesis de una metamorfósis": {
    "director": "Marco Paredes Manzano",
    "fecha": "2026-09-29"
+  },
+  "Proyección Cine Corto Familiar · Parte 1": {
+   "director": "",
+   "fecha": "2026-09-30"
+  },
+  "Proyección Cine Corto Familiar · Parte 2": {
+   "director": "",
+   "fecha": "2026-09-30"
+  },
+  "Proyección Cine Corto Familiar · Parte 3": {
+   "director": "",
+   "fecha": "2026-09-30"
+  },
+  "Proyección Cine Corto Familiar · Parte 4": {
+   "director": "",
+   "fecha": "2026-09-30"
+  },
+  "Proyección Cine Corto Familiar · Parte 5": {
+   "director": "",
+   "fecha": "2026-09-30"
   },
   "Pájaros huérfanos": {
    "director": "Leonardo Rafael Montes Pérez",

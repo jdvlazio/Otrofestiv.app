@@ -20,9 +20,8 @@ dirección: un bloque que nombra una obra que el catálogo no tiene, o con otra
 dirección, detiene el crudo.
 
 LO QUE LA PÁGINA TRAE A MEDIO ARMAR (radar #573, 29 sep), y cómo se trata:
-  · el SÁBADO 10 y el DOMINGO 11 no aparecen, aunque el festival dura hasta
-    el 11: no se inventan; los 10 cortos de la sección Infantil del catálogo
-    quedan sin función (se listan al final);
+  · el DOMINGO 11 no aparece, aunque el festival dura hasta el 11: no se
+    inventa; lo del catálogo que no tiene función se lista al final;
   · la «Muestra de Cortos Internacionales» (vie 3 p. m.) tiene el encabezado
     «Películas» sin obras: se publica la función, sin obras;
   · la primera obra del bloque Experimental tiene como título el texto de
@@ -57,8 +56,17 @@ FUENTE = f'{REPO}/fuentes/{FID}/programacion2026.json'
 CATALOGO = f'{REPO}/festivals/staging/popayan-2026-catalogo.json'
 DESTINO = f'{REPO}/festivals/staging/popayan-2026-crudo.json'
 
-DIA = re.compile(r'^(Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo) (\d{1,2}) de octubre$')
-SLOT = re.compile(r'^(.+?) / (\d{1,2})(?::(\d{2}))?\s*(am|pm)$', re.I)
+# (\s+: el sábado del 30 sep sale «Sábado 10  de octubre», con doble espacio)
+DIA = re.compile(r'^(Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo)\s+(\d{1,2})\s+de\s+octubre$')
+# «Teatro Bolívar / 7:30 pm» y, desde el 30 sep, también un RANGO: «/ 9 am – 1
+# pm» (los talleres) o «/ 9 am – 1 pm y 2 a 5 pm» (el de MAMPO): el fin es la
+# última hora del renglón
+SLOT = re.compile(r'^(.+?) / (\d{1,2})(?::(\d{2}))?\s*(am|pm)((?:\s*[–-]\s*|\s+y\s+|\s+a\s+|\d|:|\s*[ap]m)*)$', re.I)
+HORA_EN = re.compile(r'(\d{1,2})(?::(\d{2}))?\s*(am|pm)', re.I)
+# LA VERSIÓN DEL 30 SEP (modificada 00:12 GMT) agrega el viernes y el sábado en
+# el Centro Comercial Terra Plaza con OTRA forma: la sede sola en un renglón y
+# debajo cada actividad con su hora delante («3:00 pm Apertura muestra …»)
+HORA_DELANTE = re.compile(r'^(\d{1,2}):(\d{2})\s*(am|pm)\s+(.+)$', re.I)
 CREDITO = re.compile(r'^(?:.*?\s)?dirigid[oa]s?\s*(?:y producid[oa]s?\s*)?por\s', re.I)
 # «dirigido por A y producido por B» / «dirigido y producido por A» — la
 # DIRECCIÓN es lo que va antes de « y producido» o, en el segundo caso, el
@@ -72,7 +80,17 @@ RELLENO = 'Lorem ipsum'
 SEDES = {
     'Teatro Bolívar': ('Teatro Bolívar', ''),
     'Auditorio Maya Facultad de Artes Unicauca': ('Facultad de Artes Unicauca', 'Auditorio Maya'),
+    # las cuatro que trae la versión del 30 sep
+    'Museo de Arte Moderno de Popayán MAMPO': ('Museo de Arte Moderno de Popayán MAMPO', ''),
+    'Casa Taller Sirirí': ('Casa Taller Sirirí', ''),
+    'Mikuna Casa Cultural': ('Mikuna Casa Cultural', ''),
+    'Centro Comercial Terra Plaza – Pantalla gigante': ('Centro Comercial Terra Plaza', 'Pantalla gigante'),
 }
+# LO QUE ES SOLO PARA INSCRITOS: los talleres y el CineCorto Lab («solo
+# inscritos y aceptados»). La convocatoria ya cerró y el público no puede ir:
+# no se publican, como los talleres de Mamut (decisión de Juan). Quedan
+# anotados en el crudo, en `_fuera`, con su día y hora.
+SOLO_INSCRITOS = re.compile(r'\(\s*s[oó]lo inscritos y aceptados\s*\)', re.I)
 
 # EL ACCESO. La página no lo dice. El afiche oficial del festival sí:
 # «teatro Bolívar · entrada libre» (IG @cinecortofest p/DdCljrXoEzp, mirado el
@@ -116,7 +134,14 @@ SOLO_PARRILLA = {'Amor en los tiempos de como sea que se llame el presente'}
 # coproducciones («France, Colombia», «Colombia, Portugal») se respetan. Las
 # 29 fichas de TMDB que ya lo tienen incluyen todas a Colombia (29 sep).
 PAIS_SELECCION = 'Colombia'
-ACTIVIDADES = {'Apertura del Festival': 'apertura', 'Conversatorio': 'conversatorio'}
+ACTIVIDADES = {'Apertura del Festival': 'apertura', 'Conversatorio': 'conversatorio',
+               # Terra Plaza (30 sep): la apertura de la muestra con la banda, y
+               # la grabación del videopodcast
+               'Apertura muestra Banda de la Academia Militar General Tomás Cipriano de Mosquera': 'apertura',
+               'Vodcast en Vivo': 'evento'}
+# LOS BLOQUES QUE MEZCLAN SECCIONES (30 sep): su sección es el nombre del
+# programa, sin el verbo
+SECCION_DE_BLOQUE = {'Proyección Cine Corto Familiar': 'Cine Corto Familiar'}
 SECCION_ACTIVIDADES = 'Actividades'
 
 
@@ -132,12 +157,64 @@ def lineas():
     # el ESPACIO DURO: «Teatro Bolívar /\xa03:30 pm» (jueves) no casaba con « / »
     # y el bloque Comunitario entero se perdía sin error
     t = t.replace('\xa0', ' ')
-    return [x.strip() for x in t.split('\n') if x.strip()], d['modified']
+    L = [x.strip() for x in t.split('\n') if x.strip()]
+    return normalizar(L), d['modified']
+
+
+def normalizar(L):
+    """Las formas que trajo la versión del 30 sep, llevadas a la de siempre
+    («<sede> / <hora>» + título). Cada una, con el renglón que la trajo:
+      · «6: 30 pm» (espacio tras los dos puntos, jueves en el barrio);
+      · «Teatro Bolívar» + «/ 9 am – 1 pm» (la sede y la hora en dos renglones);
+      · «Peliculas» sin tilde (sábado);
+      · «(Sólo inscritos y aceptados)» solo en su renglón: va con su título;
+      · «Color piel dirigido» + «por Fidel…»: el título y el crédito, partidos
+        por la mitad del crédito;
+      · la sede sola y debajo «3:00 pm <actividad>» (Terra Plaza)."""
+    L = [re.sub(r'(\d):\s+(\d{2})\s*(am|pm)', r'\1:\2 \3', x, flags=re.I) for x in L]
+    L = ['Películas' if x == 'Peliculas' else x for x in L]
+    out, sede = [], None
+    i = 0
+    while i < len(L):
+        x = L[i]
+        nxt = L[i + 1] if i + 1 < len(L) else ''
+        if x in SEDES and nxt.startswith('/ '):
+            out.append(f'{x} {nxt}')
+            sede = None
+            i += 2
+            continue
+        if SOLO_INSCRITOS.fullmatch(x) and out:
+            out[-1] = f'{out[-1]} {x}'
+            i += 1
+            continue
+        if re.search(r'\sdirigid[oa]s?$', x) and nxt.lower().startswith('por '):
+            tit, _ = re.split(r'\s(?=dirigid[oa]s?$)', x)
+            out += [tit, f'{x[len(tit):].strip()} {nxt}']
+            i += 2
+            continue
+        if x in SEDES:
+            sede = x
+            i += 1
+            continue
+        m = HORA_DELANTE.match(x)
+        if sede and m:
+            out += [f'{sede} / {m.group(1)}:{m.group(2)} {m.group(3)}', m.group(4)]
+            i += 1
+            continue
+        if DIA.match(x) or SLOT.match(x):
+            sede = None
+        out.append(x)
+        i += 1
+    return out
 
 
 def hora(h, m, ap):
     h = int(h) % 12 + (12 if ap.lower() == 'pm' else 0)
     return f'{h:02d}:{m or "00"}'
+
+
+def mins(h):
+    return int(h[:2]) * 60 + int(h[3:])
 
 
 def director(credito):
@@ -163,7 +240,15 @@ def leer():
         if m:
             b = {'dia': dia, 'hora': hora(m.group(2), m.group(3), m.group(4)), 'sede_pdf': m.group(1).strip(),
                  'titulo': L[i + 1].rstrip('.').strip(), 'obras': []}
+            fin = HORA_EN.findall(m.group(5) or '')
+            if fin:
+                b['hora_fin'] = hora(*fin[-1])
             i += 2
+            # la descripción de una actividad («Grabación de Video Podcast con…»)
+            if i < len(L) and b['titulo'] in ACTIVIDADES and not SLOT.match(L[i]) and not DIA.match(L[i]) \
+                    and L[i] != 'Películas':
+                b['descripcion'] = L[i]
+                i += 1
             if i < len(L) and L[i] == 'Películas':
                 i += 1
                 while i < len(L) and not SLOT.match(L[i]) and not DIA.match(L[i]):
@@ -196,7 +281,7 @@ def main():
     bloques, modificada = leer()
     cat = json.load(io.open(CATALOGO, encoding='utf-8'))['obras']
     idx = {plano(o['titulo']): o for o in cat}
-    fallos, funciones, vistos, usadas = [], [], set(), set()
+    fallos, funciones, vistos, usadas, fuera = [], [], set(), set(), []
     # el par del miércoles sale dos veces: la PRIMERA copia de Afro no trae
     # obras y la segunda sí → de cada repetido se toma la copia con más obras
     mejor = {}
@@ -213,15 +298,23 @@ def main():
             fallos.append(f'sede sin entrada: {b["sede_pdf"]!r}')
             continue
         sede, sala = SEDES[b['sede_pdf']]
+        if SOLO_INSCRITOS.search(b['titulo']):
+            fuera.append({'titulo': b['titulo'], 'dia': b['dia'], 'hora': b['hora'], 'sede': sede,
+                          'porque': 'solo inscritos y aceptados: no se publica'})
+            continue
         r = {'titulo': b['titulo'], 'dia': b['dia'], 'hora': b['hora'], 'sede': sede, 'acceso': ACCESO,
              '_src': {'url': URL, 'date': modificada[:10]}}
         if sala:
             r['sala'] = sala
+        if b.get('hora_fin'):
+            r['duracion_min'] = mins(b['hora_fin']) - mins(b['hora'])
         if b['titulo'] in ACTIVIDADES:
             r.update({'tipo': 'evento', 'event_kind': ACTIVIDADES[b['titulo']], 'seccion': SECCION_ACTIVIDADES})
+            if b.get('descripcion'):
+                r['sinopsis'] = b['descripcion']
             funciones.append(r)
             continue
-        seccion = BLOQUE.sub('', b['titulo']).strip()
+        seccion = SECCION_DE_BLOQUE.get(b['titulo']) or BLOQUE.sub('', b['titulo']).strip()
         r['seccion'] = seccion
         obras = []
         for o in b['obras']:
@@ -262,10 +355,13 @@ def main():
     L, _ = lineas()
     crudo_L = [x.strip() for x in html.unescape(re.sub(r'<[^>]+>', '\n', json.load(io.open(
         FUENTE, encoding='utf-8'))['content']['rendered'])).split('\n') if x.strip()]
-    horas_impresas = [x for x in crudo_L if re.search(r'\d{1,2}(:\d{2})?\s*[ap]\.?\s*m\.?\s*$', x, re.I)]
+    # (desde el 30 sep, también el renglón que EMPIEZA con la hora: Terra Plaza)
+    horas_impresas = [x for x in crudo_L if re.search(r'\d{1,2}(:\s*\d{2})?\s*[ap]\.?\s*m\.?\s*$', x, re.I)
+                      or re.match(r'^\d{1,2}:\d{2}\s*[ap]\.?\s*m\.?\s', x, re.I)]
     repetidos = len(bloques) - len(vistos)
-    if len(horas_impresas) - repetidos != len(funciones):
-        fallos.append(f'{len(horas_impresas)} renglones con hora ({repetidos} repetidos) y {len(funciones)} funciones')
+    if len(horas_impresas) - repetidos != len(funciones) + len(fuera):
+        fallos.append(f'{len(horas_impresas)} renglones con hora ({repetidos} repetidos) y '
+                      f'{len(funciones)} funciones + {len(fuera)} fuera')
     if sum(len(f.get('obras', [])) for f in funciones) != sum(1 for x in crudo_L if re.match(r'^(.*\s)?dirigid', x, re.I)):
         fallos.append('las obras del crudo no son tantas como los créditos «dirigido…» de la página')
     if fallos:
@@ -278,19 +374,40 @@ def main():
         sig = sorted(int(g['hora'][:2]) * 60 + int(g['hora'][3:]) for g in funciones
                      if g['dia'] == f['dia'] and g['sede'] == f['sede'] and g['hora'] > f['hora'])
         f['duracion_min'] = min(sig[0] - ini, 90) if sig else 60
+        f['_duracion_de'] = ('el hueco hasta la siguiente en la misma sede, con tope de 90' if sig
+                             else '60: lo último del día en su sede')
         if not f.get('obras') and f.get('tipo') != 'evento':
             f['poster'] = '/assets/popayan-2026/muestra-de-cortos-internacionales.jpg'
             f['posterSource'] = 'oficial'
+    # DOS BLOQUES DISTINTOS NO PUEDEN LLAMARSE IGUAL ([programa-mismo-titulo]):
+    # la app identifica la obra por el título y enseñaría los cortos del primero
+    # en todos. La versión del 30 sep trae cinco «Proyección Cine Corto
+    # Familiar» y dos «CineCorto en el Barrio», cada uno con otros cortos. Como
+    # en Jardín («… · Parte 1», «· Parte 2»): el orden en el festival; y si dos
+    # van a la MISMA hora, la sede, que es lo único que los distingue.
+    por_titulo = {}
+    for f in funciones:
+        if f.get('obras'):
+            por_titulo.setdefault(f['titulo'], []).append(f)
+    for t, fs in por_titulo.items():
+        if len({tuple(o['titulo'] for o in f['obras']) for f in fs}) < 2:
+            continue
+        fs.sort(key=lambda f: (f['dia'], f['hora'], f['sede']))
+        a_la_vez = len({(f['dia'], f['hora']) for f in fs}) < len(fs)
+        for n, f in enumerate(fs, 1):
+            f['titulo'] = f'{t} · {f["sede"]}' if a_la_vez else f'{t} · Parte {n}'
     sin_funcion = [o['titulo'] for o in cat if plano(o['titulo']) not in usadas]
     out = {'_provenance': provenance(
         'festicinepopayan.com, página de programación 2026 (wp-json, id 13120)',
         que_aporta='día, hora, sede y obras de cada bloque; el resto de la ficha, del catálogo',
         url=URL, metodo='wp-json + parser de renglones; cruce con el catálogo por título y dirección'),
-        '_sin_funcion': {'porque': 'la página no trae el sábado 10 ni el domingo 11', 'obras': sin_funcion},
+        '_sin_funcion': {'porque': 'la página no trae el domingo 11', 'obras': sin_funcion},
+        '_fuera': fuera,
         'funciones': funciones}
     io.open(DESTINO, 'w', encoding='utf-8').write(json.dumps(out, ensure_ascii=False, indent=1))
     n_obras = sum(len(f.get('obras', [])) for f in funciones)
     print(f'✓ {len(funciones)} funciones ({sum(1 for f in funciones if f.get("tipo") == "evento")} actividades) · '
+          f'{len(fuera)} solo para inscritos, fuera · '
           f'{n_obras} obras en programa · {len(sin_funcion)} del catálogo sin función → {os.path.relpath(DESTINO, REPO)}')
 
 
