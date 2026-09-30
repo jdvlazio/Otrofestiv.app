@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609301740">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609301740">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609301747">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609301747">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -753,6 +753,8 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    única señal — la palabra "Cancelada" hace el trabajo igual. */
 .aviso-pill.sev-red{background:var(--red-12);color:var(--red)}
 .aviso-txt s{text-decoration-color:var(--red);text-decoration-thickness:1.5px;color:var(--gray)}
+/* el link de un aviso (el canal de una función EN LÍNEA): ámbar y sin subrayar, como los demás links de la ficha */
+.aviso-txt a{color:var(--amber);text-decoration:none;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 /* La fila afectada se marca en su propia forma: la hora tachada en rojo. NO se
    atenúa: opacity .4 ya significa "función que pasó" y confundir las dos señales
    haría leer "esa ya fue" donde hay que leer "esa se canceló". (Juan, 30 jul 2026) */
@@ -3712,7 +3714,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609301740";
+    s.src="/src/main.js?v=202609301747";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
