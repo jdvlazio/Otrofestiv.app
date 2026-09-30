@@ -379,6 +379,23 @@ def main():
         if not f.get('obras') and f.get('tipo') != 'evento':
             f['poster'] = '/assets/popayan-2026/muestra-de-cortos-internacionales.jpg'
             f['posterSource'] = 'oficial'
+    # DOS BLOQUES DISTINTOS NO PUEDEN LLAMARSE IGUAL ([programa-mismo-titulo]):
+    # la app identifica la obra por el título y enseñaría los cortos del primero
+    # en todos. La versión del 30 sep trae cinco «Proyección Cine Corto
+    # Familiar» y dos «CineCorto en el Barrio», cada uno con otros cortos. Como
+    # en Jardín («… · Parte 1», «· Parte 2»): el orden en el festival; y si dos
+    # van a la MISMA hora, la sede, que es lo único que los distingue.
+    por_titulo = {}
+    for f in funciones:
+        if f.get('obras'):
+            por_titulo.setdefault(f['titulo'], []).append(f)
+    for t, fs in por_titulo.items():
+        if len({tuple(o['titulo'] for o in f['obras']) for f in fs}) < 2:
+            continue
+        fs.sort(key=lambda f: (f['dia'], f['hora'], f['sede']))
+        a_la_vez = len({(f['dia'], f['hora']) for f in fs}) < len(fs)
+        for n, f in enumerate(fs, 1):
+            f['titulo'] = f'{t} · {f["sede"]}' if a_la_vez else f'{t} · Parte {n}'
     sin_funcion = [o['titulo'] for o in cat if plano(o['titulo']) not in usadas]
     out = {'_provenance': provenance(
         'festicinepopayan.com, página de programación 2026 (wp-json, id 13120)',

@@ -109,7 +109,9 @@ def main():
         # («Vodcast en Vivo Grabación de Video Podcast…»): se busca el del build
         # que la abre
         t = plano(p['titulo'])
-        cand = [k for k in pub if k[:3] == (p['dia'], p['hora'], p['sede']) and (t == k[3] or t.startswith(k[3] + ' '))]
+        cand = [k for k in pub if k[:3] == (p['dia'], p['hora'], p['sede']) and (t == k[3] or t.startswith(k[3] + ' ') or k[3].startswith(t + ' '))]
+        # (y al revés: «CineCorto en el Barrio» en la página es «… · Casa Taller
+        # Sirirí» en el build, el sufijo que le pone el crudo para distinguirlo)
         k = cand[0] if len(cand) == 1 else (p['dia'], p['hora'], p['sede'], t)
         pag[k] = max(pag.get(k, 0), p['creditos'])      # el par repetido del miércoles
     fallos = []

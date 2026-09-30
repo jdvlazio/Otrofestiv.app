@@ -1295,7 +1295,7 @@
    ]
   },
   {
-   "title": "CineCorto en el Barrio",
+   "title": "CineCorto en el Barrio · Casa Taller Sirirí",
    "type": "film",
    "section": "🏘️ CineCorto en el Barrio",
    "country": "Colombia, United States of America, France",
@@ -1410,7 +1410,7 @@
    ]
   },
   {
-   "title": "CineCorto en el Barrio",
+   "title": "CineCorto en el Barrio · Mikuna Casa Cultural",
    "type": "film",
    "section": "🏘️ CineCorto en el Barrio",
    "country": "Colombia",
@@ -1779,7 +1779,7 @@
    "is_free": true
   },
   {
-   "title": "Proyección Cine Corto Familiar",
+   "title": "Proyección Cine Corto Familiar · Parte 1",
    "type": "film",
    "section": "🧒 Cine Corto Familiar",
    "country": "Colombia",
@@ -1861,7 +1861,7 @@
    "is_free": true
   },
   {
-   "title": "Proyección Cine Corto Familiar",
+   "title": "Proyección Cine Corto Familiar · Parte 2",
    "type": "film",
    "section": "🧒 Cine Corto Familiar",
    "country": "Colombia",
@@ -1969,7 +1969,7 @@
    ]
   },
   {
-   "title": "Proyección Cine Corto Familiar",
+   "title": "Proyección Cine Corto Familiar · Parte 3",
    "type": "film",
    "section": "🧒 Cine Corto Familiar",
    "country": "Colombia",
@@ -2064,7 +2064,7 @@
    "is_free": true
   },
   {
-   "title": "Proyección Cine Corto Familiar",
+   "title": "Proyección Cine Corto Familiar · Parte 4",
    "type": "film",
    "section": "🧒 Cine Corto Familiar",
    "country": "Colombia",
@@ -2159,7 +2159,7 @@
    "is_free": true
   },
   {
-   "title": "Proyección Cine Corto Familiar",
+   "title": "Proyección Cine Corto Familiar · Parte 5",
    "type": "film",
    "section": "🧒 Cine Corto Familiar",
    "country": "Colombia",
@@ -2243,7 +2243,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T08:13:48",
+  "fecha": "2026-09-30T08:16:23",
   "plan_sha": "4d76e7286d12841e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"
