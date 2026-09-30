@@ -1278,6 +1278,8 @@ export const SECTION_ARCHETYPES = {
   '🤝 Selección Oficial Comunitario': 'Competencia',
   '🎬 Selección Oficial Ficción': 'Competencia',
   '🌎 Muestra de Cortos Internacionales': 'Muestra / País',
+  '🏘️ CineCorto en el Barrio': 'Cortos / Programas',
+  '🧒 Cine Corto Familiar': 'Cortos / Programas',
   '🎤 Actividades': 'Charlas / Industria',
   // BIFF 12 (29 sep 2026)
   '🇨🇴 Colombia viva': 'Muestra / País',

@@ -8,7 +8,13 @@ exige, en los dos sentidos:
     build no publica ninguna función que la página no traiga;
   · cada bloque del build lleva tantas obras como créditos «dirigido…» hay
     entre su horario y el siguiente en la página;
-  · toda sede tiene pin verificado a mano.
+  · toda sede tiene pin verificado a mano, o su porqué escrito.
+
+Desde la versión del 30 sep la página trae también la sede SOLA en un renglón
+y debajo cada actividad con la hora delante («… Pantalla gigante 3:00 pm
+Apertura muestra …», Terra Plaza), «6: 30 pm» con espacio, y funciones «solo
+inscritos y aceptados» que no se publican. Este lector las busca a su manera,
+en el texto plano, sin reusar el normalizador del crudo.
 """
 import html
 import io
@@ -22,12 +28,23 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FID = 'popayan-2026'
 CIUDAD = 'Popayán'
 MESES_DIA = re.compile(r'(Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo)\s+(\d{1,2})\s+de\s+octubre')
+_H = r'(\d{1,2})(?::\s*(\d{2}))?\s*([ap])\.?\s*m\.?'
 # En texto plano no hay dónde cortar la sede del título anterior: se anclan las
 # sedes que imprime la página, y TODO « / <hora>» del texto tiene que ser una
 # de ellas (una sede nueva no pasa en silencio).
-SEDES_PAGINA = ('Teatro Bolívar', 'Auditorio Maya Facultad de Artes Unicauca')
-HORARIO = re.compile(r'(' + '|'.join(map(re.escape, SEDES_PAGINA)) + r')\s*/\s*(\d{1,2})(?::(\d{2}))?\s*([ap])\.?\s*m\.?', re.I)
-CUALQUIER_HORA = re.compile(r'/\s*\d{1,2}(?::\d{2})?\s*[ap]\.?\s*m\b', re.I)
+# la sede que imprime la página → el prefijo de su sede en el build
+SEDES_PAGINA = {'Teatro Bolívar': 'Teatro Bolívar', 'Auditorio Maya Facultad de Artes Unicauca': 'Facultad de Artes Unicauca',
+                'Museo de Arte Moderno de Popayán MAMPO': 'Museo de Arte Moderno de Popayán MAMPO',
+                'Casa Taller Sirirí': 'Casa Taller Sirirí', 'Mikuna Casa Cultural': 'Mikuna Casa Cultural',
+                'Centro Comercial Terra Plaza – Pantalla gigante': 'Centro Comercial Terra Plaza'}
+_SEDE = '(' + '|'.join(map(re.escape, SEDES_PAGINA)) + ')'
+HORARIO = re.compile(_SEDE + r'\s*/\s*' + _H, re.I)
+CUALQUIER_HORA = re.compile(r'/\s*\d{1,2}(?::\s*\d{2})?\s*[ap]\.?\s*m\b', re.I)
+# la hora DELANTE de la actividad (Terra Plaza): con minutos, sin «/» antes, y
+# seguida de mayúscula; la sede es la última impresa sola antes
+DELANTE = re.compile(r'(?<![/\d:])(?<!/\s)\b(\d{1,2}):(\d{2})\s*([ap])\.?\s*m\.?\s+(?=[A-ZÁÉÍÓÚ])')
+CON_MINUTOS = re.compile(r'\b\d{1,2}:\s*\d{2}\s*[ap]\.?\s*m\b', re.I)
+INSCRITOS = re.compile(r'inscritos\s+y\s+aceptados', re.I)
 
 
 def plano(s):
@@ -41,29 +58,59 @@ def main():
     texto = html.unescape(re.sub(r'<[^>]+>', ' ', d['content']['rendered']))
     texto = re.sub(r'\s+', ' ', texto)
     # cortes: días y horarios, en orden de aparición
+    horarios = list(HORARIO.finditer(texto))
+    delante = [m for m in DELANTE.finditer(texto)]
     marcas = sorted([(m.start(), 'dia', m) for m in MESES_DIA.finditer(texto)] +
-                    [(m.start(), 'hor', m) for m in HORARIO.finditer(texto)], key=lambda x: x[0])
-    if len(CUALQUIER_HORA.findall(texto)) != len(HORARIO.findall(texto)):
+                    [(m.start(), 'hor', m) for m in horarios] + [(m.start(), 'del', m) for m in delante],
+                    key=lambda x: x[0])
+    if len(CUALQUIER_HORA.findall(texto)) != len(horarios):
         sys.exit(f'✗ hay horarios en una sede que el verificador no conoce: '
-                 f'{len(CUALQUIER_HORA.findall(texto))} «/ hora» y {len(HORARIO.findall(texto))} con sede conocida')
-    pagina, dia = [], None
+                 f'{len(CUALQUIER_HORA.findall(texto))} «/ hora» y {len(horarios)} con sede conocida')
+    # toda hora con minutos es el arranque de algo: tras «/» o delante de una actividad
+    tras_barra = sum(1 for m in horarios if m.group(3))
+    if len(CON_MINUTOS.findall(texto)) != tras_barra + len(delante):
+        sys.exit(f'✗ {len(CON_MINUTOS.findall(texto))} horas con minutos y solo {tras_barra} tras «/» '
+                 f'+ {len(delante)} delante de una actividad: hay una forma nueva en la página')
+    pagina, dia, fuera = [], None, 0
     for n, (pos, tipo, m) in enumerate(marcas):
         if tipo == 'dia':
             dia = f'2026-10-{int(m.group(2)):02d}'
             continue
-        h = int(m.group(2)) % 12 + (12 if m.group(4).lower() == 'p' else 0)
-        hora = f'{h:02d}:{m.group(3) or "00"}'
+        if tipo == 'hor':
+            sede = m.group(1)
+            hh, mm, ap = m.group(2), m.group(3), m.group(4)
+        else:
+            antes = [x for x in re.finditer(_SEDE, texto[:pos])]
+            if not antes:
+                sys.exit(f'✗ una hora delante de una actividad sin sede antes: {texto[pos:pos + 60]!r}')
+            sede = antes[-1].group(1)
+            hh, mm, ap = m.group(1), m.group(2), m.group(3)
+        h = int(hh) % 12 + (12 if ap.lower() == 'p' else 0)
+        hora = f'{h:02d}:{mm or "00"}'
         fin = marcas[n + 1][0] if n + 1 < len(marcas) else len(texto)
         tramo = texto[m.end():fin]
-        titulo = re.split(r'\s+Películas(?:\s+|$)', tramo.strip(), maxsplit=1)[0].rstrip('. ')
-        pagina.append({'dia': dia, 'hora': hora, 'titulo': titulo,
+        # el rango de un taller («9 am – 1 pm y 2 a 5 pm») no es parte del título
+        tramo = re.sub(r'^\s*[–-]\s*\d{1,2}(?::\d{2})?\s*[ap]m(\s+y\s+\d{1,2}\s+a\s+\d{1,2}\s*[ap]m)?', '', tramo)
+        if INSCRITOS.search(tramo.split(' dirigid')[0]):
+            fuera += 1
+            continue
+        # el título: hasta «Películas», o el nombre de la sede que abre la
+        # tanda siguiente de Terra Plaza
+        titulo = re.split(r'\s+Pel[ií]culas(?:\s+|$)|\s+' + _SEDE, tramo.strip(), maxsplit=1)[0].rstrip('. ')
+        pagina.append({'dia': dia, 'hora': hora, 'sede': SEDES_PAGINA[sede], 'titulo': titulo,
                        'creditos': len(re.findall(r'dirigid[oa]s?\s*(?:y\s+producid[oa]s?\s*)?por', tramo, re.I))})
     build = json.load(io.open(f'{REPO}/festivals/staging/{FID}-build.json', encoding='utf-8'))
     geo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-venues-geo.json', encoding='utf-8'))
-    pub = {(f['day'], f['time'], plano(f['title'])): f for f in build['films']}
+    # la clave lleva la SEDE: el jueves a las 6:30 pm hay tres funciones a la vez
+    pub = {(f['day'], f['time'], f['venue'].replace(f' - {CIUDAD}', ''), plano(f['title'])): f for f in build['films']}
     pag = {}
     for p in pagina:
-        k = (p['dia'], p['hora'], plano(p['titulo']))
+        # el título de la página puede traer la descripción de la actividad detrás
+        # («Vodcast en Vivo Grabación de Video Podcast…»): se busca el del build
+        # que la abre
+        t = plano(p['titulo'])
+        cand = [k for k in pub if k[:3] == (p['dia'], p['hora'], p['sede']) and (t == k[3] or t.startswith(k[3] + ' '))]
+        k = cand[0] if len(cand) == 1 else (p['dia'], p['hora'], p['sede'], t)
         pag[k] = max(pag.get(k, 0), p['creditos'])      # el par repetido del miércoles
     fallos = []
     for k, n in pag.items():
@@ -77,12 +124,16 @@ def main():
             fallos.append(f'en el build y NO en la página: {k}')
     for v, x in build['venues'].items():
         g = geo.get(v.replace(f' - {CIUDAD}', ''), {})
-        if x.get('lat') is None or g.get('_prec') != 'manual':
-            fallos.append(f'sede {v!r} sin pin verificado a mano')
+        if x.get('lat') is None and not (g.get('_prec') == 'manual' and g.get('_todo')):
+            fallos.append(f'sede {v!r} sin pin y sin porqué')
+        elif x.get('lat') is not None and g.get('_prec') != 'manual':
+            fallos.append(f'sede {v!r}: pin sin verificar a mano')
     if fallos:
         sys.exit('✗ el build no coincide con la página:\n  · ' + '\n  · '.join(fallos))
     print(f'✓ los {len(pag)} horarios de la página están en el build con sus obras '
-          f'({sum(pag.values())}) y el build no publica ninguno más · {len(build["venues"])} sedes con pin manual')
+          f'({sum(pag.values())}) y el build no publica ninguno más · {fuera} solo para inscritos, fuera · '
+          f'{sum(1 for x in build["venues"].values() if x.get("lat") is not None)} sedes con pin manual, '
+          f'{sum(1 for x in build["venues"].values() if x.get("lat") is None)} sin pin con su porqué')
 
 
 if __name__ == '__main__':

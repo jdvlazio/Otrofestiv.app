@@ -214,7 +214,7 @@ def a_poster(origen, destino, lamina=False, ancho=500, lado=0.06):
     im.save(destino, 'JPEG', quality=86, optimize=True)
 
 
-def reuso_publicada(pub):
+def reuso_publicada(pub, fid=None):
     """Sin ficha, pero ya la publicamos con afiche: se reusa el afiche y la
     sinopsis que mostramos entonces —ya pasaron por un montaje—. «Belleza letal»
     no está en ningún catálogo y FICCI 65 la tiene con afiche. Va en `obras`, no
@@ -223,8 +223,13 @@ def reuso_publicada(pub):
     # anotación vieja, y dos festivales que se reusan entre sí se quedan sin nada
     # …y que SEA un afiche: el `editorial` de otro festival es un fotograma 16:9
     # (La Mona en Jardín) y tapaba el afiche real que sí existe (29 sep)
+    # …y que no sea EL NUESTRO de vuelta: otro festival que reusó el afiche de
+    # este (Girardota tomó el de «La Rebelión de un Fantasma» de Popayán) lo
+    # devolvía como «ya publicado» y pisaba la procedencia de la lámina
+    # declarada (custom → oficial, 30 sep); lo propio lo pone lo declarado
     x = next((x for x in pub if x.get('poster') and x.get('posterSource') != 'editorial' and not (
-        str(x['poster']).startswith('/assets/') and not os.path.exists(REPO + x['poster']))), None)
+        str(x['poster']).startswith('/assets/') and not os.path.exists(REPO + x['poster']))
+        and not (fid and str(x['poster']).startswith(f'/assets/{fid}/'))), None)
     # la SINOPSIS se reusa de donde esté, aunque el afiche de ese festival fuera
     # un fotograma: son dos datos distintos (Girardota perdía 2 sinopsis)
     s = next((y for y in pub if y.get('sinopsis')), None)
@@ -393,7 +398,7 @@ def main():
             # el reúso de lo publicado TAMBIÉN desde la caché: la primera
             # versión solo lo hacía al sondear, y la segunda corrida de
             # Girardota perdía 4 afiches (29 sep 2026, lo paró publicar.py)
-            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas))
+            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas), fid)
             if _r:
                 ok[t] = _r
             print(f'[{i:3}/{len(obras)}] ··  {t[:46]:48} sin ficha '
@@ -421,7 +426,7 @@ def main():
         else:
             sin.append(t)
             sin_sondeo[t] = {'director': _dir, 'fecha': _hoy}
-            _r = reuso_publicada(pub)
+            _r = reuso_publicada(pub, fid)
             if _r:
                 ok[t] = _r
             print(f'[{i:3}/{len(obras)}] —   {t[:46]:48} sin ficha verificable'
@@ -440,7 +445,7 @@ def main():
     for t, f in obras.items():
         e = ok.get(t)
         if e and not e.get('poster_path') and not e.get('poster'):
-            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas))
+            _r = reuso_publicada(ya_publicada({**f, 'titulo': t}, publicadas), fid)
             if _r and _r.get('poster') and not _r['poster'].startswith(f'/assets/{fid}/'):
                 e['poster'] = _r['poster']
                 e['_afiche'] = _r['_verificado']
