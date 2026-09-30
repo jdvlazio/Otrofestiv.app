@@ -202,11 +202,14 @@ def a_poster(origen, destino, lamina=False, ancho=500, lado=0.06):
     y el póster 2:3: 6% de recorte por lado y el resto de estirón (la regla de
     SiembraFest: recortarlo todo deja el título al borde, estirarlo todo lo
     deforma un 20%). Cualquier otra imagen va tal cual; el encuadre a 2:3 es de
-    encuadrar-posters.py."""
+    encuadrar-posters.py.
+
+    Una lámina CUADRADA (Popayán, 29 sep) se estira entera: cualquier recorte le
+    corta el título, que va de borde a borde. Decisión de Juan, «por ahora»."""
     from PIL import Image
     im = Image.open(origen).convert('RGB')
     if lamina:
-        c = int(im.width * lado)
+        c = 0 if im.width == im.height else int(im.width * lado)
         im = im.crop((c, 0, im.width - c, im.height)).resize((ancho, ancho * 3 // 2), Image.LANCZOS)
     im.save(destino, 'JPEG', quality=86, optimize=True)
 
