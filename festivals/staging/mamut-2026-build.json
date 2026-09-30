@@ -143,10 +143,11 @@
    "short": "Lab UNAL",
    "city": "Medellín",
    "n": 4,
-   "_prec": "sin verificar",
-   "_todo": "«Laboratorio Universidad Nacional» (post del taller): la sede Medellín de la UNAL es un campus grande y ninguna fuente dice qué laboratorio. Sin pin hasta saberlo.",
+   "_prec": "manual",
    "address": "Universidad Nacional de Colombia, sede Medellín",
-   "_nota": "«Laboratorio Universidad Nacional» (post del taller p/Ddua0DTAVEE, con @artesunalmed). Sin pin: el campus es grande y no dicen qué edificio; va la dirección del campus."
+   "_nota": "PIN APROXIMADO (30 sep, pedido de Juan: mejor una sede ubicada que sin pin). «Laboratorio Universidad Nacional» (post del taller p/Ddua0DTAVEE, con @artesunalmed) no dice qué edificio: se pone el Campus El Volador, el campus principal de la UNAL en Medellín (Google Maps «Campus El Volador», 7C6C+56).",
+   "lat": 6.260449,
+   "lng": -75.5794182
   },
   "Centro Colombo Americano - Medellín": {
    "short": "Centro Colombo Americano",
@@ -1148,7 +1149,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T07:34:51",
+  "fecha": "2026-09-30T09:10:02",
   "plan_sha": "6f9942cdcada33ca",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py mamut-2026"
