@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-29"
+  "capturado": "2026-09-30"
  },
  "obras": [
   {
@@ -98,7 +98,7 @@
    "lbSlug": "the-bombing-of-washington",
    "_verificado": "declarada a mano: TMDB la registra como «El bombardeo de Washington»: Luis Ospina, 1972, 1 min, los tres datos que imprime la lámina. La búsqueda por el título del festival («Bombardeo a Washington») no la devuelve, y por eso no casa sola. Se publica con el título del festival.",
    "_director": "Luis Ospina",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/mamut-2026/bombardeo-a-washington.jpg",
    "posterSource": "tmdb"
   },
@@ -117,7 +117,7 @@
    "lbSlug": "bloody-flesh",
    "_verificado": "declarada a mano: Carlos Mayolo, título idéntico, 1983, Colombia. La lámina no trae año y dice 94 min contra 86 en TMDB (Proimágenes, que también la tiene, da otra cifra): con la duración como única prueba, el candado a ±3 la rechaza. Es la única obra de Mayolo con ese título.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/mamut-2026/carne-de-tu-carne.jpg",
    "posterSource": "tmdb"
   },
@@ -191,6 +191,14 @@
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/desde-el-principio-hasta-el-final.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Desde la ventana",
+   "anio": 1996,
+   "synopsis_en": "Each window a look, a sojourn, where dreams rest. Dreams which project themselves towards outside the window. A new window, an obtained goal. A new sojourn which one dwells in with mixed feelings:  an unbelievable happiness, an emptiness. Starting from there, one tries to make up a dream. In that way, everyone of us rebuilds this paradise, which we will have to leave one day. Several times during this life in order to move into the newly imagined paradise. Thus, life could be considered a long row of windows, with us standing behind each of them.",
+   "_verificado": "declarada a mano: Es «Vor dem Fenster», el trabajo de diploma de Santiago Herrera Gómez en la KHM Köln (1996, 25 min, 16 mm, ensayo documental): mismo autor, misma escuela, misma duración y formato que la lámina del festival («Desde la Ventana · 16 mm · 25 Min. · Un documental de Santiago Herrera G.»). Confirmado por Juan (30 sep). La sinopsis en inglés es la del catálogo de Oberhausen 1996 que cita la ficha de la escuela, literal; no hay versión en español.",
+   "_director": "Santiago Herrera",
+   "_sondeado": "2026-09-30"
   },
   {
    "titulo": "El Perú es un lugar para morir",
@@ -277,7 +285,7 @@
    "lbSlug": "the-silence-of-pomegranates",
    "_verificado": "declarada a mano: TMDB la registra con su título inglés («The silence of pomegranates»; original «Il silenzio dei melograni»): Clara Baj, 9 min, igual que el festival. La búsqueda por el título en español no la devuelve. Su póster dice «Il silenzio dei melograni — un film di Clara Baj».",
    "_director": "Clara Baj",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/mamut-2026/el-silencio-de-las-granadas.jpg",
    "posterSource": "tmdb"
   },
@@ -372,6 +380,13 @@
    "posterSource": "tmdb",
    "sinopsis": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
    "_sinopsis": "https://ambulante.org/catalogo/la-memoria-de-las-mariposas"
+  },
+  {
+   "titulo": "Labrador de violines",
+   "anio": 1996,
+   "_verificado": "declarada a mano: Ficha de la KHM Köln «Der Geigenbauer (Eduardo Valdivia Rivera, labrador de violines)» de Santiago Herrera Gómez: 1996, 12:30, igual a los 12 min de la lámina del festival. Solo se toma el año: su sinopsis está en alemán y el país de producción no es claro.",
+   "_director": "Santiago Herrera",
+   "_sondeado": "2026-09-30"
   },
   {
    "titulo": "Lolita en Honda",
@@ -523,7 +538,7 @@
    "genero": "Documental",
    "_verificado": "declarada a mano: Proimágenes la registra como «Sueño sobre un mantel vacío» (1240, en singular): Victor Gaviria, 1981, 10 minutos, documental; su buscador es literal y el título corregido del festival («Sueños…», en plural) no la devuelve. No está en TMDB. Proimágenes no publica su afiche, y lo que pone como sinopsis es la resolución de clasificación de 1981, que no se usa.",
    "_director": "Víctor Gaviria",
-   "_sondeado": "2026-09-29"
+   "_sondeado": "2026-09-30"
   },
   {
    "titulo": "Una habitación en Bangkok",
@@ -631,7 +646,7 @@
    "lbSlug": "the-bombing-of-washington",
    "_verificado": "declarada a mano: TMDB la registra como «El bombardeo de Washington»: Luis Ospina, 1972, 1 min, los tres datos que imprime la lámina. La búsqueda por el título del festival («Bombardeo a Washington») no la devuelve, y por eso no casa sola. Se publica con el título del festival.",
    "_director": "Luis Ospina",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/mamut-2026/bombardeo-a-washington.jpg",
    "posterSource": "tmdb"
   },
@@ -649,7 +664,7 @@
    "lbSlug": "bloody-flesh",
    "_verificado": "declarada a mano: Carlos Mayolo, título idéntico, 1983, Colombia. La lámina no trae año y dice 94 min contra 86 en TMDB (Proimágenes, que también la tiene, da otra cifra): con la duración como única prueba, el candado a ±3 la rechaza. Es la única obra de Mayolo con ese título.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/mamut-2026/carne-de-tu-carne.jpg",
    "posterSource": "tmdb"
   },
@@ -721,6 +736,13 @@
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/desde-el-principio-hasta-el-final.jpg",
    "posterSource": "tmdb"
+  },
+  "Desde la ventana": {
+   "anio": 1996,
+   "synopsis_en": "Each window a look, a sojourn, where dreams rest. Dreams which project themselves towards outside the window. A new window, an obtained goal. A new sojourn which one dwells in with mixed feelings:  an unbelievable happiness, an emptiness. Starting from there, one tries to make up a dream. In that way, everyone of us rebuilds this paradise, which we will have to leave one day. Several times during this life in order to move into the newly imagined paradise. Thus, life could be considered a long row of windows, with us standing behind each of them.",
+   "_verificado": "declarada a mano: Es «Vor dem Fenster», el trabajo de diploma de Santiago Herrera Gómez en la KHM Köln (1996, 25 min, 16 mm, ensayo documental): mismo autor, misma escuela, misma duración y formato que la lámina del festival («Desde la Ventana · 16 mm · 25 Min. · Un documental de Santiago Herrera G.»). Confirmado por Juan (30 sep). La sinopsis en inglés es la del catálogo de Oberhausen 1996 que cita la ficha de la escuela, literal; no hay versión en español.",
+   "_director": "Santiago Herrera",
+   "_sondeado": "2026-09-30"
   },
   "El Perú es un lugar para morir": {
    "tmdb_id": 1608544,
@@ -804,7 +826,7 @@
    "lbSlug": "the-silence-of-pomegranates",
    "_verificado": "declarada a mano: TMDB la registra con su título inglés («The silence of pomegranates»; original «Il silenzio dei melograni»): Clara Baj, 9 min, igual que el festival. La búsqueda por el título en español no la devuelve. Su póster dice «Il silenzio dei melograni — un film di Clara Baj».",
    "_director": "Clara Baj",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/mamut-2026/el-silencio-de-las-granadas.jpg",
    "posterSource": "tmdb"
   },
@@ -895,6 +917,12 @@
    "posterSource": "tmdb",
    "sinopsis": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
    "_sinopsis": "https://ambulante.org/catalogo/la-memoria-de-las-mariposas"
+  },
+  "Labrador de violines": {
+   "anio": 1996,
+   "_verificado": "declarada a mano: Ficha de la KHM Köln «Der Geigenbauer (Eduardo Valdivia Rivera, labrador de violines)» de Santiago Herrera Gómez: 1996, 12:30, igual a los 12 min de la lámina del festival. Solo se toma el año: su sinopsis está en alemán y el país de producción no es claro.",
+   "_director": "Santiago Herrera",
+   "_sondeado": "2026-09-30"
   },
   "Lolita en Honda": {
    "tmdb_id": 1665546,
@@ -1039,7 +1067,7 @@
    "genero": "Documental",
    "_verificado": "declarada a mano: Proimágenes la registra como «Sueño sobre un mantel vacío» (1240, en singular): Victor Gaviria, 1981, 10 minutos, documental; su buscador es literal y el título corregido del festival («Sueños…», en plural) no la devuelve. No está en TMDB. Proimágenes no publica su afiche, y lo que pone como sinopsis es la resolución de clasificación de 1981, que no se usa.",
    "_director": "Víctor Gaviria",
-   "_sondeado": "2026-09-29"
+   "_sondeado": "2026-09-30"
   },
   "Una habitación en Bangkok": {
    "tmdb_id": 1659048,
@@ -1064,8 +1092,6 @@
  },
  "sin_ficha": [
   "Belleza letal",
-  "Desde la ventana",
-  "Labrador de violines",
   "Lo que tengo",
   "Muestra de cortos 1",
   "Muestra de cortos 2",
@@ -1085,14 +1111,6 @@
   "Belleza letal": {
    "director": "Ron Márquez, Andrés Felipe Benavides, Fiama Castro, Cindy Caffroni, Juan Camilo Olmos, Valeria Rua, Felipe Moreno, Dante Hernández, Santiago Rodríguez, Laura Gabay García, Moises Busigo, Samuel Moreno Alvarez",
    "fecha": "2026-09-29"
-  },
-  "Desde la ventana": {
-   "director": "Santiago Herrera",
-   "fecha": "2026-09-28"
-  },
-  "Labrador de violines": {
-   "director": "Santiago Herrera",
-   "fecha": "2026-09-28"
   },
   "Lo que tengo": {
    "director": "Sophia De Los Rios y David Rodriguez",
@@ -1150,13 +1168,5 @@
    "director": "Daniel Cortés",
    "fecha": "2026-09-28"
   }
- },
- "_fuentes": [
-  {
-   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-09-29",
-   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
-   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
-  }
- ]
+ }
 }

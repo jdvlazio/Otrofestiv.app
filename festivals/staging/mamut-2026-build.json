@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @mamut_festival — el carrusel de programación (11 láminas)",
-  "capturado": "2026-09-29",
+  "capturado": "2026-09-30",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina de día, tal cual; la sala va aparte (crudo `sala`). La lámina 10 da la dirección de seis. «Capilla, Comfama» y «Lab UNAL» no están en esa lámina.",
@@ -772,12 +772,15 @@
     {
      "title": "Desde la ventana",
      "director": "Santiago Herrera",
-     "duration": "26 min"
+     "duration": "26 min",
+     "synopsis_en": "Each window a look, a sojourn, where dreams rest. Dreams which project themselves towards outside the window. A new window, an obtained goal. A new sojourn which one dwells in with mixed feelings:  an unbelievable happiness, an emptiness. Starting from there, one tries to make up a dream. In that way, everyone of us rebuilds this paradise, which we will have to leave one day. Several times during this life in order to move into the newly imagined paradise. Thus, life could be considered a long row of windows, with us standing behind each of them.",
+     "year": 1996
     },
     {
      "title": "Labrador de violines",
      "director": "Santiago Herrera",
-     "duration": "13 min"
+     "duration": "13 min",
+     "year": 1996
     }
    ]
   },
@@ -1145,7 +1148,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T22:47:42",
+  "fecha": "2026-09-30T07:34:51",
   "plan_sha": "6f9942cdcada33ca",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py mamut-2026"
