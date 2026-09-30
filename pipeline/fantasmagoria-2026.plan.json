@@ -1,17 +1,316 @@
 {
- "_nota": "PRE-ONBOARDING. Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín (15–25 oct 2026, lema «Asedios: las murallas del miedo») publicó sus siete selecciones y todavía no la parrilla: ni día, ni hora, ni sede de ninguna función. Igual que FILCMAR no hay crudo sino catálogo, y se enriquece porque cada obra trae director, país, año y duración. La fuente es TEXTO (la página /edicion-2026/ de su web), cruzada con las tres noticias de cortos del 24 sep. Pendiente para montar: la parrilla, el acceso, el afiche 2026 (publicado el 15 jul) y el nombre de la sección colombiana, que la página escribe de dos maneras.",
+ "_nota": "MONTAJE (29 sep 2026). Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín, 15–25 oct 2026. La parrilla es la noticia de programación de su web (wp-json post 6481, 28 sep), 86 horarios: 83 presenciales y 3 charlas virtuales por Twitch (fuera, decisión de Juan pendiente). Las obras de las siete selecciones vienen del catálogo del pre-onboarding; las demás (retrospectivas, muestras, aniversarios), con la ficha que imprime la parrilla. Acceso: «Entrada con boleta» = cobro especial en Colombo Americano, CineProx y MAMM; lo demás, entrada libre.",
  "radar": 963,
  "pasos": [
   {
-   "cmd": "python3 pipeline/fantasmagoria-2026-catalogo.py",
-   "que": "las siete selecciones de /edicion-2026/ → catálogo (47 obras), con los cortos cruzados contra sus tres noticias"
+   "cmd": "python3 pipeline/radar.py fantasmagoria-2026",
+   "que": "el volcado del radar #963"
   },
   {
-   "cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/fantasmagoria-2026-catalogo.json",
-   "que": "catálogo → enriquecido (TMDB + Letterboxd, mismo candado que enriquecer.py; busca también el título original y el inglés)"
+   "cmd": "python3 pipeline/fantasmagoria-2026-catalogo.py",
+   "que": "las siete selecciones → catálogo (47 obras)"
+  },
+  {
+   "cmd": "python3 pipeline/fantasmagoria-2026-largos.py",
+   "que": "la página Largometrajes 2026 → sinopsis, estreno y funciones de cada largo"
+  },
+  {
+   "cmd": "python3 pipeline/fantasmagoria-2026-crudo.py",
+   "que": "la parrilla de la web → crudo (83 presenciales), cruzada con el catálogo"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py fantasmagoria-2026 --posters",
+   "que": "la cascada de TMDB y lo ya publicado"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py fantasmagoria-2026 --centro 6.2476,-75.5658 --ciudad \"Medellín, Antioquia\"",
+   "que": "pines: los manuales se respetan"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026",
+   "que": "el build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py fantasmagoria-2026 --aplicar --desde festivals/staging/fantasmagoria-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/fantasmagoria-2026-verificar.py",
+   "que": "el build contra las dos fuentes del festival (parrilla y largometrajes), en los dos sentidos; cada sede con pin o su porqué"
   }
  ],
  "_fuentes_versionadas": {
-  "festivals/staging/fantasmagoria-2026-catalogo-enriquecido.json": "las fichas TMDB de las 47 obras del catálogo (37 verificadas), que escribe el paso 2. Es el trabajo que el montaje reusa cuando salga la parrilla: sin versionarlo, habría que volver a sondear TMDB obra por obra."
+  "festivals/staging/fantasmagoria-2026-catalogo-enriquecido.json": "las fichas TMDB de las 47 obras del catálogo (37 verificadas), que escribe el paso 2. Es el trabajo que el montaje reusa cuando salga la parrilla: sin versionarlo, habría que volver a sondear TMDB obra por obra.",
+  "festivals/staging/fantasmagoria-2026-catalogo.json": "las siete selecciones (47 obras); las lee el crudo",
+  "festivals/staging/fantasmagoria-2026-radar.json": "el volcado del radar #963",
+  "festivals/staging/fantasmagoria-2026-sinopsis.json": "sinopsis declaradas (literal, con fuente); las lee pipeline/enriquecer.py",
+  "festivals/staging/fantasmagoria-2026-largos.json": "la página Largometrajes 2026 del festival: sinopsis y estreno de cada largo, y sus funciones para el verificador"
+ },
+ "festival": {
+  "crudo": "festivals/staging/fantasmagoria-2026-crudo.json",
+  "enriquecido": "festivals/staging/fantasmagoria-2026-enriquecido.json",
+  "geo": "festivals/staging/fantasmagoria-2026-venues-geo.json",
+  "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado.",
+  "sedes": {
+   "Centro Colombo Americano": [
+    "Centro Colombo Americano - Medellín",
+    ""
+   ],
+   "Centro de Desarrollo Cultural de Moravia": [
+    "Centro de Desarrollo Cultural de Moravia - Medellín",
+    ""
+   ],
+   "Cineprox Las Américas": [
+    "Cineprox Las Américas - Medellín",
+    ""
+   ],
+   "Comfama Otraparte": [
+    "Comfama Otraparte - Envigado",
+    ""
+   ],
+   "Comfama San Ignacio": [
+    "Comfama San Ignacio - Medellín",
+    ""
+   ],
+   "Cámara de Comercio de Medellín": [
+    "Cámara de Comercio de Medellín - Medellín",
+    ""
+   ],
+   "Draco Hobby": [
+    "Draco Hobby - Medellín",
+    ""
+   ],
+   "Estación Metrocable Andalucía": [
+    "Estación Metrocable Andalucía - Medellín",
+    ""
+   ],
+   "La Comarca": [
+    "La Comarca - Medellín",
+    ""
+   ],
+   "La Grieta": [
+    "La Grieta - Medellín",
+    ""
+   ],
+   "La Pascasia": [
+    "La Pascasia - Medellín",
+    ""
+   ],
+   "Librería Antimateria": [
+    "Librería Antimateria - Medellín",
+    ""
+   ],
+   "Museo de Arte Moderno de Medellín - MAMM": [
+    "Museo de Arte Moderno de Medellín - MAMM - Medellín",
+    ""
+   ],
+   "Nueva Villa de Aburrá": [
+    "Nueva Villa de Aburrá - Medellín",
+    ""
+   ],
+   "Paraninfo Universidad de Antioquia": [
+    "Paraninfo Universidad de Antioquia - Medellín",
+    ""
+   ],
+   "Parque Biblioteca Belén": [
+    "Parque Biblioteca Belén - Medellín",
+    ""
+   ],
+   "Parque de los Deseos": [
+    "Parque de los Deseos - Medellín",
+    ""
+   ],
+   "Planetario de Medellín": [
+    "Planetario de Medellín - Medellín",
+    ""
+   ],
+   "Silencio": [
+    "Silencio - Medellín",
+    ""
+   ],
+   "Universidad Católica Luis Amigó": [
+    "Universidad Católica Luis Amigó - Medellín",
+    ""
+   ],
+   "Universidad Nacional": [
+    "Universidad Nacional - Medellín",
+    ""
+   ]
+  },
+  "_por_que_secciones": "El primer rótulo de cada función, tal cual (sin el «+ …» de las combinadas). «Actividades» es palabra nuestra para lo que no trae rótulo.",
+  "secciones": {
+   "Actividades": {
+    "emoji": "🎪",
+    "en": "Activities",
+    "archetype": "Especiales / Eventos"
+   },
+   "Aniversario 30 años": {
+    "emoji": "🕯️",
+    "en": "30th Anniversary",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Aniversario 40 años": {
+    "emoji": "👽",
+    "en": "40th Anniversary",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Aniversario 50 años": {
+    "emoji": "🩸",
+    "en": "50th Anniversary",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Club de la Medianoche": {
+    "emoji": "📖",
+    "en": "Midnight Club",
+    "archetype": "Especiales / Eventos"
+   },
+   "Colombia es Fantástica": {
+    "emoji": "🦜",
+    "en": "Colombia es Fantástica",
+    "archetype": "Muestra / País"
+   },
+   "Evento Inaugural": {
+    "emoji": "🎉",
+    "en": "Opening Night",
+    "archetype": "Apertura / Gala"
+   },
+   "Evento de Clausura": {
+    "emoji": "🌙",
+    "en": "Closing Night",
+    "archetype": "Clausura"
+   },
+   "Expediente Fantasmagoría": {
+    "emoji": "🛸",
+    "en": "Fantasmagoría Files",
+    "archetype": "Especiales / Eventos"
+   },
+   "Fantasmagoría Académica": {
+    "emoji": "🎓",
+    "en": "Academic Program",
+    "archetype": "Charlas / Industria"
+   },
+   "Homenaje a Luigi Cozzi": {
+    "emoji": "🌕",
+    "en": "Tribute to Luigi Cozzi",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Jornada Fantasmeet": {
+    "emoji": "🤝",
+    "en": "Fantasmeet",
+    "archetype": "Charlas / Industria"
+   },
+   "Jornada Juegos de Mesa Fantastable": {
+    "emoji": "🎲",
+    "en": "Board Games Night",
+    "archetype": "Especiales / Eventos"
+   },
+   "La Marmita del Hechicero": {
+    "emoji": "🦄",
+    "en": "The Sorcerer’s Cauldron",
+    "archetype": "Especiales / Eventos"
+   },
+   "Muestra Asiática El Oriente Es Rojo": {
+    "emoji": "🐉",
+    "en": "Asian Showcase: The East Is Red",
+    "archetype": "Muestra / País"
+   },
+   "Muestra Catalana": {
+    "emoji": "🏴",
+    "en": "Catalan Showcase",
+    "archetype": "Muestra / País"
+   },
+   "Muestra Fantasmagoritos": {
+    "emoji": "🧸",
+    "en": "Fantasmagoritos (kids)",
+    "archetype": "Especiales / Eventos"
+   },
+   "Muestra Weird y Experimental": {
+    "emoji": "🌀",
+    "en": "Weird & Experimental Showcase",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Muestra de acción A Quemarropa": {
+    "emoji": "💥",
+    "en": "Action Showcase: Point Blank",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Muestra especial": {
+    "emoji": "♿",
+    "en": "Special Screening",
+    "archetype": "Especiales / Eventos"
+   },
+   "Noche de Librerías": {
+    "emoji": "📚",
+    "en": "Bookstores Night",
+    "archetype": "Especiales / Eventos"
+   },
+   "Retrospectiva Cristian Ponce": {
+    "emoji": "📼",
+    "en": "Cristian Ponce Retrospective",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Retrospectiva Tilman Singer": {
+    "emoji": "🔦",
+    "en": "Tilman Singer Retrospective",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "Sangre Latina": {
+    "emoji": "🌶️",
+    "en": "Latin Blood",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Selección Asedio: Las murallas del miedo": {
+    "emoji": "🏰",
+    "en": "Siege: The Walls of Fear",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Selección Latinoamericana de Cortometrajes": {
+    "emoji": "🌎",
+    "en": "Latin American Shorts Selection",
+    "archetype": "Cortos / Programas"
+   },
+   "Selección Oficial Cortometrajes": {
+    "emoji": "🎬",
+    "en": "Official Selection: Shorts",
+    "archetype": "Competencia"
+   },
+   "Selección Oficial Largometrajes Documentales": {
+    "emoji": "🎥",
+    "en": "Official Selection: Documentaries",
+    "archetype": "Competencia"
+   },
+   "Selección Oficial Largometrajes de Ficción": {
+    "emoji": "🏆",
+    "en": "Official Selection: Fiction Features",
+    "archetype": "Competencia"
+   },
+   "Selección de Cortometrajes Animados": {
+    "emoji": "✏️",
+    "en": "Animated Shorts Selection",
+    "archetype": "Cortos / Programas"
+   },
+   "Selección de Cortometrajes Colombianos": {
+    "emoji": "🇨🇴",
+    "en": "Colombian Shorts Selection",
+    "archetype": "Cortos / Programas"
+   }
+  },
+  "name": "Fantasmagoría",
+  "displayName": "Fantasmagoría",
+  "fullName": "Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín",
+  "shortName": "FANTASMAGORÍA",
+  "tagline": "Festival de cine fantástico y de terror",
+  "city": "Medellín",
+  "country": "CO",
+  "dates": "15–25 OCT",
+  "dates_en": "OCT 15–25",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "fantasmagoria2026_",
+  "festivalStartStr": "2026-10-15T00:00:00",
+  "festivalEndStr": "2026-10-25T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "octubre",
+  "dias_vacios": []
  }
 }

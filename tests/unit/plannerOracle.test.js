@@ -65,7 +65,8 @@ function loadFest(file) {
   return { films, api, state, dates: d.festivalDates };
 }
 
-const schedulable = films => [...new Set(films.filter(f => f.day && f.time && !f.info && !f._cancelled).map(f => f.title))];
+// `by_invitation`: cerrada al público, el planificador no la propone (screeningPlannable, #988)
+const schedulable = films => [...new Set(films.filter(f => f.day && f.time && !f.info && !f._cancelled && !f.by_invitation).map(f => f.title))];
 
 for (const file of FESTIVALS) {
   test(`oráculo · ${file}: computeScenarios alcanza el máximo exacto`, () => {
@@ -78,7 +79,7 @@ for (const file of FESTIVALS) {
     const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
 
     const groupByTitle = t => {
-      const screens = films.filter(f => f.title === t && f.day && f.time && !f.info && !f._cancelled);
+      const screens = films.filter(f => f.title === t && f.day && f.time && !f.info && !f._cancelled && !f.by_invitation);
       return { screens, recurring: screens.some(f => f.is_recurring) };
     };
 
@@ -256,7 +257,7 @@ for (const file of FESTIVALS) {
   test(`prioridades incompatibles · ${file}: los dos máximos se separan`, () => {
     const { films, api, state } = loadFest(file);
     const porTitulo = {};
-    films.filter(f => f.day && f.time && !f.info && !f._cancelled)
+    films.filter(f => f.day && f.time && !f.info && !f._cancelled && !f.by_invitation)
          .forEach(f => { (porTitulo[f.title] = porTitulo[f.title] || []).push(f); });
     // Una sola función y no recurrente: cero flexibilidad, el choque es forzoso.
     const unicas = Object.keys(porTitulo).filter(t => porTitulo[t].length === 1 && !porTitulo[t][0].is_recurring);
@@ -275,7 +276,7 @@ for (const file of FESTIVALS) {
     state.prioritized.add(a); state.prioritized.add(b);
 
     const groupByTitle = t => {
-      const screens = films.filter(f => f.title === t && f.day && f.time && !f.info && !f._cancelled);
+      const screens = films.filter(f => f.title === t && f.day && f.time && !f.info && !f._cancelled && !f.by_invitation);
       return { screens, recurring: screens.some(f => f.is_recurring) };
     };
     const exact = exactMaxEntries([a, b], groupByTitle, api.screensConflict);
