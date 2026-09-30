@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-29"
+  "capturado": "2026-09-30"
  },
  "obras": [
   {
@@ -66,7 +66,9 @@
    "_director": "Dailo Barco",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/archipielago-fantasma.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Guetón Rodríguez fue uno de los actores protagonistas de EL LADRÓN DE LOS GUANTES BLANCOS (1926), primera película de la historia del cine en las Islas Canarias. Interpretó el papel de un falso culpable, acusado de un robo que no cometió. Años más tarde, durante la Guerra Civil, Guetón fue detenido de nuevo por su activismo político. Esta vez en la vida real.",
+   "_sinopsis": "https://www.lpafilmfestival.com/archipielago-fantasma/"
   },
   {
    "titulo": "Belleza letal",
@@ -96,7 +98,7 @@
    "lbSlug": "the-bombing-of-washington",
    "_verificado": "declarada a mano: TMDB la registra como «El bombardeo de Washington»: Luis Ospina, 1972, 1 min, los tres datos que imprime la lámina. La búsqueda por el título del festival («Bombardeo a Washington») no la devuelve, y por eso no casa sola. Se publica con el título del festival.",
    "_director": "Luis Ospina",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/mamut-2026/bombardeo-a-washington.jpg",
    "posterSource": "tmdb"
   },
@@ -115,7 +117,7 @@
    "lbSlug": "bloody-flesh",
    "_verificado": "declarada a mano: Carlos Mayolo, título idéntico, 1983, Colombia. La lámina no trae año y dice 94 min contra 86 en TMDB (Proimágenes, que también la tiene, da otra cifra): con la duración como única prueba, el candado a ±3 la rechaza. Es la única obra de Mayolo con ese título.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/mamut-2026/carne-de-tu-carne.jpg",
    "posterSource": "tmdb"
   },
@@ -191,6 +193,14 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Desde la ventana",
+   "anio": 1996,
+   "synopsis_en": "Each window a look, a sojourn, where dreams rest. Dreams which project themselves towards outside the window. A new window, an obtained goal. A new sojourn which one dwells in with mixed feelings:  an unbelievable happiness, an emptiness. Starting from there, one tries to make up a dream. In that way, everyone of us rebuilds this paradise, which we will have to leave one day. Several times during this life in order to move into the newly imagined paradise. Thus, life could be considered a long row of windows, with us standing behind each of them.",
+   "_verificado": "declarada a mano: Es «Vor dem Fenster», el trabajo de diploma de Santiago Herrera Gómez en la KHM Köln (1996, 25 min, 16 mm, ensayo documental): mismo autor, misma escuela, misma duración y formato que la lámina del festival («Desde la Ventana · 16 mm · 25 Min. · Un documental de Santiago Herrera G.»). Confirmado por Juan (30 sep). La sinopsis en inglés es la del catálogo de Oberhausen 1996 que cita la ficha de la escuela, literal; no hay versión en español.",
+   "_director": "Santiago Herrera",
+   "_sondeado": "2026-09-30"
+  },
+  {
    "titulo": "El Perú es un lugar para morir",
    "tmdb_id": 1608544,
    "titulo_original": "El Perú es un lugar para morir",
@@ -207,7 +217,9 @@
    "_director": "Víctor Augusto Mendívil",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/el-peru-es-un-lugar-para-morir.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "A partir de imágenes filmadas en Perú en 1950 por un extranjero, Víctor escribe una carta a su hijo para interrogar el país que hereda: entre latidos y ruinas, busca una esperanza que aún resiste en medio del desengaño.",
+   "_sinopsis": "https://festivaldemalaga.com/edicion/ver-pelicula/?id=3436"
   },
   {
    "titulo": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar",
@@ -260,6 +272,24 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "El silencio de las granadas",
+   "tmdb_id": 1595296,
+   "titulo_original": "The silence of pomegranates",
+   "poster_path": "/nyXbYEy7o65QBJvEdLG6WmTzUIF.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a coastal town in Calabria, southern Italy, a woman who prefers to remain anonymous breaks the silence surrounding the issue of abortion in the region.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "the-silence-of-pomegranates",
+   "_verificado": "declarada a mano: TMDB la registra con su título inglés («The silence of pomegranates»; original «Il silenzio dei melograni»): Clara Baj, 9 min, igual que el festival. La búsqueda por el título en español no la devuelve. Su póster dice «Il silenzio dei melograni — un film di Clara Baj».",
+   "_director": "Clara Baj",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/mamut-2026/el-silencio-de-las-granadas.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Estas imágenes fueron hechas para no mirarse",
    "tmdb_id": 1136744,
    "titulo_original": "Estas imágenes fueron hechas para no mirarse",
@@ -276,7 +306,9 @@
    "_director": "Pablo Romo Á.",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/estas-imagenes-fueron-hechas-para-no-mirarse.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Las imágenes son más de lo que muestran, solo es necesario volver a mirarlas. Ensayo que trata sobre unas imágenes que estaban hechas para no mirarse y que, detrás de su apariencia, revelan una oscura verdad.",
+   "_sinopsis": "https://ficunam.unam.mx/pelicula/estas-imagenes-fueron-hechas-para-no-mirarse/"
   },
   {
    "titulo": "Frío metal",
@@ -348,6 +380,13 @@
    "posterSource": "tmdb",
    "sinopsis": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
    "_sinopsis": "https://ambulante.org/catalogo/la-memoria-de-las-mariposas"
+  },
+  {
+   "titulo": "Labrador de violines",
+   "anio": 1996,
+   "_verificado": "declarada a mano: Ficha de la KHM Köln «Der Geigenbauer (Eduardo Valdivia Rivera, labrador de violines)» de Santiago Herrera Gómez: 1996, 12:30, igual a los 12 min de la lámina del festival. Solo se toma el año: su sinopsis está en alemán y el país de producción no es claro.",
+   "_director": "Santiago Herrera",
+   "_sondeado": "2026-09-30"
   },
   {
    "titulo": "Lolita en Honda",
@@ -465,7 +504,12 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "No menguará el fuego de esta luna",
    "_director": "Sebastián Pérez Arbelaez",
-   "_sondeado": "2026-09-29"
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/no-menguara-el-fuego-de-esta-luna.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://www.cinecorto.co/no-menguara-el-fuego-de-esta-luna/",
+   "sinopsis": "Busco y hablo con los muertos. Le escribo a una mujer que ya no está: Soraya Cataño; asesinada en Medellín en 1991. Treinta años después la encuentro en una imagen. Su voz emerge mientras una comparsa avanza por la ladera. El archivo revela su risa; sus gestos y yo decido invocarla. Yo también crecí en este valle. Yo también creí. Creo. Esta película no es sobre la muerte. Es una carta fílmica; un diálogo entre quien narra y quien resiste desde la ausencia. Es un fuego que no se apaga.",
+   "_sinopsis": "https://www.cinecorto.co/no-menguara-el-fuego-de-esta-luna/"
   },
   {
    "titulo": "Soplo de vida",
@@ -494,7 +538,7 @@
    "genero": "Documental",
    "_verificado": "declarada a mano: Proimágenes la registra como «Sueño sobre un mantel vacío» (1240, en singular): Victor Gaviria, 1981, 10 minutos, documental; su buscador es literal y el título corregido del festival («Sueños…», en plural) no la devuelve. No está en TMDB. Proimágenes no publica su afiche, y lo que pone como sinopsis es la resolución de clasificación de 1981, que no se usa.",
    "_director": "Víctor Gaviria",
-   "_sondeado": "2026-09-29"
+   "_sondeado": "2026-09-30"
   },
   {
    "titulo": "Una habitación en Bangkok",
@@ -513,7 +557,15 @@
    "_director": "Javier Olivera",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/una-habitacion-en-bangkok.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "A través de los fotogramas granulados y efímeros de la película de Super 8, el director revisita un viaje de infancia a Asia, donde el socio de su padre—una figura constante en sus vidas—capturó la narrativa de una familia a través de su lente. Perseguido por una sospecha persistente sobre una noche en un hotel de Bangkok, el director emprende un viaje de recuerdos, lidiando con memorias fragmentadas, energías traumáticas y el poder del olvido.",
+   "_sinopsis": "https://javierolivera.net/una-habitacion-en-bangkok"
+  },
+  {
+   "titulo": "These are not our memories",
+   "poster": "/assets/mamut-2026/these-are-not-our-memories.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://www.cinecorto.co/these-are-not-our-memories/"
   }
  ],
  "verificadas": {
@@ -576,7 +628,9 @@
    "_director": "Dailo Barco",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/archipielago-fantasma.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Guetón Rodríguez fue uno de los actores protagonistas de EL LADRÓN DE LOS GUANTES BLANCOS (1926), primera película de la historia del cine en las Islas Canarias. Interpretó el papel de un falso culpable, acusado de un robo que no cometió. Años más tarde, durante la Guerra Civil, Guetón fue detenido de nuevo por su activismo político. Esta vez en la vida real.",
+   "_sinopsis": "https://www.lpafilmfestival.com/archipielago-fantasma/"
   },
   "Bombardeo a Washington": {
    "tmdb_id": 493152,
@@ -592,7 +646,7 @@
    "lbSlug": "the-bombing-of-washington",
    "_verificado": "declarada a mano: TMDB la registra como «El bombardeo de Washington»: Luis Ospina, 1972, 1 min, los tres datos que imprime la lámina. La búsqueda por el título del festival («Bombardeo a Washington») no la devuelve, y por eso no casa sola. Se publica con el título del festival.",
    "_director": "Luis Ospina",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/mamut-2026/bombardeo-a-washington.jpg",
    "posterSource": "tmdb"
   },
@@ -610,7 +664,7 @@
    "lbSlug": "bloody-flesh",
    "_verificado": "declarada a mano: Carlos Mayolo, título idéntico, 1983, Colombia. La lámina no trae año y dice 94 min contra 86 en TMDB (Proimágenes, que también la tiene, da otra cifra): con la duración como única prueba, el candado a ±3 la rechaza. Es la única obra de Mayolo con ese título.",
    "_director": "Carlos Mayolo",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/mamut-2026/carne-de-tu-carne.jpg",
    "posterSource": "tmdb"
   },
@@ -683,6 +737,13 @@
    "poster": "/assets/mamut-2026/desde-el-principio-hasta-el-final.jpg",
    "posterSource": "tmdb"
   },
+  "Desde la ventana": {
+   "anio": 1996,
+   "synopsis_en": "Each window a look, a sojourn, where dreams rest. Dreams which project themselves towards outside the window. A new window, an obtained goal. A new sojourn which one dwells in with mixed feelings:  an unbelievable happiness, an emptiness. Starting from there, one tries to make up a dream. In that way, everyone of us rebuilds this paradise, which we will have to leave one day. Several times during this life in order to move into the newly imagined paradise. Thus, life could be considered a long row of windows, with us standing behind each of them.",
+   "_verificado": "declarada a mano: Es «Vor dem Fenster», el trabajo de diploma de Santiago Herrera Gómez en la KHM Köln (1996, 25 min, 16 mm, ensayo documental): mismo autor, misma escuela, misma duración y formato que la lámina del festival («Desde la Ventana · 16 mm · 25 Min. · Un documental de Santiago Herrera G.»). Confirmado por Juan (30 sep). La sinopsis en inglés es la del catálogo de Oberhausen 1996 que cita la ficha de la escuela, literal; no hay versión en español.",
+   "_director": "Santiago Herrera",
+   "_sondeado": "2026-09-30"
+  },
   "El Perú es un lugar para morir": {
    "tmdb_id": 1608544,
    "titulo_original": "El Perú es un lugar para morir",
@@ -699,7 +760,9 @@
    "_director": "Víctor Augusto Mendívil",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/el-peru-es-un-lugar-para-morir.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "A partir de imágenes filmadas en Perú en 1950 por un extranjero, Víctor escribe una carta a su hijo para interrogar el país que hereda: entre latidos y ruinas, busca una esperanza que aún resiste en medio del desengaño.",
+   "_sinopsis": "https://festivaldemalaga.com/edicion/ver-pelicula/?id=3436"
   },
   "El hogar fue sepultado en esa tierra que nunca pudimos encontrar": {
    "tmdb_id": 1663181,
@@ -750,6 +813,23 @@
    "poster": "/assets/mamut-2026/el-hogar-fue-sepultado-en-esa-tierra-que-nunca-pudimos-encon.jpg",
    "posterSource": "tmdb"
   },
+  "El silencio de las granadas": {
+   "tmdb_id": 1595296,
+   "titulo_original": "The silence of pomegranates",
+   "poster_path": "/nyXbYEy7o65QBJvEdLG6WmTzUIF.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a coastal town in Calabria, southern Italy, a woman who prefers to remain anonymous breaks the silence surrounding the issue of abortion in the region.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "the-silence-of-pomegranates",
+   "_verificado": "declarada a mano: TMDB la registra con su título inglés («The silence of pomegranates»; original «Il silenzio dei melograni»): Clara Baj, 9 min, igual que el festival. La búsqueda por el título en español no la devuelve. Su póster dice «Il silenzio dei melograni — un film di Clara Baj».",
+   "_director": "Clara Baj",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/mamut-2026/el-silencio-de-las-granadas.jpg",
+   "posterSource": "tmdb"
+  },
   "Estas imágenes fueron hechas para no mirarse": {
    "tmdb_id": 1136744,
    "titulo_original": "Estas imágenes fueron hechas para no mirarse",
@@ -766,7 +846,9 @@
    "_director": "Pablo Romo Á.",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/estas-imagenes-fueron-hechas-para-no-mirarse.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Las imágenes son más de lo que muestran, solo es necesario volver a mirarlas. Ensayo que trata sobre unas imágenes que estaban hechas para no mirarse y que, detrás de su apariencia, revelan una oscura verdad.",
+   "_sinopsis": "https://ficunam.unam.mx/pelicula/estas-imagenes-fueron-hechas-para-no-mirarse/"
   },
   "Frío metal": {
    "tmdb_id": 1493018,
@@ -835,6 +917,12 @@
    "posterSource": "tmdb",
    "sinopsis": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
    "_sinopsis": "https://ambulante.org/catalogo/la-memoria-de-las-mariposas"
+  },
+  "Labrador de violines": {
+   "anio": 1996,
+   "_verificado": "declarada a mano: Ficha de la KHM Köln «Der Geigenbauer (Eduardo Valdivia Rivera, labrador de violines)» de Santiago Herrera Gómez: 1996, 12:30, igual a los 12 min de la lámina del festival. Solo se toma el año: su sinopsis está en alemán y el país de producción no es claro.",
+   "_director": "Santiago Herrera",
+   "_sondeado": "2026-09-30"
   },
   "Lolita en Honda": {
    "tmdb_id": 1665546,
@@ -947,7 +1035,12 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "No menguará el fuego de esta luna",
    "_director": "Sebastián Pérez Arbelaez",
-   "_sondeado": "2026-09-29"
+   "_sondeado": "2026-09-29",
+   "poster": "/assets/mamut-2026/no-menguara-el-fuego-de-esta-luna.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://www.cinecorto.co/no-menguara-el-fuego-de-esta-luna/",
+   "sinopsis": "Busco y hablo con los muertos. Le escribo a una mujer que ya no está: Soraya Cataño; asesinada en Medellín en 1991. Treinta años después la encuentro en una imagen. Su voz emerge mientras una comparsa avanza por la ladera. El archivo revela su risa; sus gestos y yo decido invocarla. Yo también crecí en este valle. Yo también creí. Creo. Esta película no es sobre la muerte. Es una carta fílmica; un diálogo entre quien narra y quien resiste desde la ausencia. Es un fuego que no se apaga.",
+   "_sinopsis": "https://www.cinecorto.co/no-menguara-el-fuego-de-esta-luna/"
   },
   "Soplo de vida": {
    "tmdb_id": 143376,
@@ -974,7 +1067,7 @@
    "genero": "Documental",
    "_verificado": "declarada a mano: Proimágenes la registra como «Sueño sobre un mantel vacío» (1240, en singular): Victor Gaviria, 1981, 10 minutos, documental; su buscador es literal y el título corregido del festival («Sueños…», en plural) no la devuelve. No está en TMDB. Proimágenes no publica su afiche, y lo que pone como sinopsis es la resolución de clasificación de 1981, que no se usa.",
    "_director": "Víctor Gaviria",
-   "_sondeado": "2026-09-29"
+   "_sondeado": "2026-09-30"
   },
   "Una habitación en Bangkok": {
    "tmdb_id": 1659048,
@@ -992,14 +1085,13 @@
    "_director": "Javier Olivera",
    "_sondeado": "2026-09-29",
    "poster": "/assets/mamut-2026/una-habitacion-en-bangkok.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "A través de los fotogramas granulados y efímeros de la película de Super 8, el director revisita un viaje de infancia a Asia, donde el socio de su padre—una figura constante en sus vidas—capturó la narrativa de una familia a través de su lente. Perseguido por una sospecha persistente sobre una noche en un hotel de Bangkok, el director emprende un viaje de recuerdos, lidiando con memorias fragmentadas, energías traumáticas y el poder del olvido.",
+   "_sinopsis": "https://javierolivera.net/una-habitacion-en-bangkok"
   }
  },
  "sin_ficha": [
   "Belleza letal",
-  "Desde la ventana",
-  "El silencio de las granadas",
-  "Labrador de violines",
   "Lo que tengo",
   "Muestra de cortos 1",
   "Muestra de cortos 2",
@@ -1019,18 +1111,6 @@
   "Belleza letal": {
    "director": "Ron Márquez, Andrés Felipe Benavides, Fiama Castro, Cindy Caffroni, Juan Camilo Olmos, Valeria Rua, Felipe Moreno, Dante Hernández, Santiago Rodríguez, Laura Gabay García, Moises Busigo, Samuel Moreno Alvarez",
    "fecha": "2026-09-29"
-  },
-  "Desde la ventana": {
-   "director": "Santiago Herrera",
-   "fecha": "2026-09-28"
-  },
-  "El silencio de las granadas": {
-   "director": "Clara Baj",
-   "fecha": "2026-09-29"
-  },
-  "Labrador de violines": {
-   "director": "Santiago Herrera",
-   "fecha": "2026-09-28"
   },
   "Lo que tengo": {
    "director": "Sophia De Los Rios y David Rodriguez",
