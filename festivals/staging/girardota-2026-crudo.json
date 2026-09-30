@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Instagram @girardotaescultura — el carrusel de programación (5 láminas)",
-  "capturado": "2026-09-29",
+  "capturado": "2026-09-30",
   "que_aporta": "la programación entera: día, hora, lugar, rótulo y ficha",
   "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
   "metodo": "transcripción a ojo lámina por lámina, confirmada título por título y hora por hora con el OCR de las mismas láminas"
@@ -54,11 +54,43 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
-    "date": "2026-09-22"
+    "date": "2026-09-22",
+    "obras": "https://www.instagram.com/p/Dd6sCrsnJD5/"
    },
    "seccion": "Proyecciones",
-   "duracion_min": 90,
-   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+   "obras": [
+    {
+     "titulo": "Paloquemao",
+     "anio": 2022,
+     "director": "Jefferson Cardoza",
+     "duracion_min": 20
+    },
+    {
+     "titulo": "Silencio en la Laguna",
+     "anio": 2024,
+     "director": "Álvaro Jiménez Garzón, Julián Montenegro",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "/IMAGINA",
+     "anio": 2023,
+     "director": "Pablo Tobón-Gallo",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Sirenas en la Niebla",
+     "anio": 2023,
+     "director": "Daniela Narváez",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "Alguien Mató Algo",
+     "anio": 1998,
+     "director": "Jorge Navas",
+     "duracion_min": 26
+    }
+   ],
+   "duracion_min": 83
   },
   {
    "titulo": "Llueve sobre Babel",
@@ -197,11 +229,43 @@
    "acceso": "Entrada libre",
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
-    "date": "2026-09-22"
+    "date": "2026-09-22",
+    "obras": "https://www.instagram.com/p/Dd6sCrsnJD5/"
    },
    "seccion": "Proyecciones",
-   "duracion_min": 90,
-   "_duracion_de": "90 min declarados: cierra su sede ese día, así que no hay horario que leer"
+   "obras": [
+    {
+     "titulo": "Paloquemao",
+     "anio": 2022,
+     "director": "Jefferson Cardoza",
+     "duracion_min": 20
+    },
+    {
+     "titulo": "Silencio en la Laguna",
+     "anio": 2024,
+     "director": "Álvaro Jiménez Garzón, Julián Montenegro",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "/IMAGINA",
+     "anio": 2023,
+     "director": "Pablo Tobón-Gallo",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Sirenas en la Niebla",
+     "anio": 2023,
+     "director": "Daniela Narváez",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "Alguien Mató Algo",
+     "anio": 1998,
+     "director": "Jorge Navas",
+     "duracion_min": 26
+    }
+   ],
+   "duracion_min": 83
   },
   {
    "titulo": "El gótico popular: terror en las plazas y haciendas de Colombia",

@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @girardotaescultura — el carrusel de programación (5 láminas)",
-  "capturado": "2026-09-29",
+  "capturado": "2026-09-30",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Los nueve lugares con el nombre que imprime la lámina, tal cual. Ninguna lámina da dirección.",
@@ -266,7 +266,9 @@
    "title": "Muestra de cortometrajes: Fantasía tropical",
    "type": "film",
    "section": "🎬 Proyecciones",
-   "duration": "90 min",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "83 min",
    "day": "2026-09-30",
    "time": "17:00",
    "day_order": 0,
@@ -274,9 +276,80 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
-    "date": "2026-09-22"
+    "date": "2026-09-22",
+    "obras": "https://www.instagram.com/p/Dd6sCrsnJD5/"
    },
-   "is_free": true
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Paloquemao",
+     "director": "Jefferson Cardoza",
+     "year": 2022,
+     "duration": "20 min",
+     "poster": "/assets/girardota-2026/paloquemao.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "paloquemao-the-vampire-market",
+     "tmdb_id": 928875,
+     "synopsis": "Pedro es uno de los vampiros del subdesarrollo que trabaja entre pasillos llenos de ajos, frutas, hierbas y crucifijos en el Mercado de Paloquemao.  Sin embargo, el 28 de mayo de 2016, cuando se desmantela la red de tráfico de sangre más grande de Bogotá, su traficante Harbey escapa y se refugia en el mercado, amenazando su relación con Angie, la chica de la que está enamorado.",
+     "synopsis_en": "Pedro is one of the vampires of underdevelopment who works amidst aisles full of garlic, fruits, herbs and crucifixes in the Paloquemao Market. However, on May 28, 2016, when the largest blood trafficking network in Bogota is dismantled, his dealer Harbey escapes and takes refuge in the market, threatening his relationship with Angie, the girl he is in love with.",
+     "title_en": "Paloquemao: the Vampire Market",
+     "genre": "Fantasía",
+     "country": "Colombia",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Silencio en la Laguna",
+     "director": "Álvaro Jiménez Garzón, Julián Montenegro",
+     "year": 2024,
+     "duration": "7 min"
+    },
+    {
+     "title": "/IMAGINA",
+     "director": "Pablo Tobón-Gallo",
+     "year": 2023,
+     "duration": "12 min",
+     "lbSlug": "imagina",
+     "tmdb_id": 1152273,
+     "synopsis": "Ana, una talentosa programadora informática, debe salvar a su hermana de una amenaza que acecha en la oscuridad.",
+     "genre": "Drama",
+     "country": "Colombia",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Sirenas en la Niebla",
+     "director": "Daniela Narváez",
+     "year": 2023,
+     "duration": "18 min",
+     "poster": "/assets/girardota-2026/sirenas-en-la-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mermaids-in-the-mist",
+     "tmdb_id": 1117116,
+     "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
+     "title_en": "Mermaids in the Mist",
+     "genre": "Drama",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Alguien Mató Algo",
+     "director": "Jorge Navas",
+     "year": 1998,
+     "duration": "26 min",
+     "poster": "/assets/girardota-2026/alguien-mato-algo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "alguien-mato-algo",
+     "tmdb_id": 453336,
+     "synopsis": "Heriberta, pequeña y hermosa niña, es hija de una madre de ortodoxa religiosidad y de un médico ya muerto, de quien heredó un libro de anatomía y un fino bisturí. Su madre cree que la niña va a ser médico como su padre, pero ella lo que quiere es ser vampiro. Heriberta le teme a crecer, a envejecer, a ser como su madre o a morir como su progenitor.",
+     "synopsis_en": "In this silent style short, filmed in black and white with intertitles instead of spoken dialog, a precocious little girl surrounded by Tv violence and bloody church images of Catholicism, yearns to stay alive forever, as a vampire.",
+     "genre": "Drama",
+     "country": "Colombia",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    }
+   ]
   },
   {
    "title": "Llueve sobre Babel",
@@ -486,7 +559,9 @@
    "title": "Muestra de cortometrajes: Fantasía tropical",
    "type": "film",
    "section": "🎬 Proyecciones",
-   "duration": "90 min",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "83 min",
    "day": "2026-10-02",
    "time": "16:00",
    "day_order": 2,
@@ -494,9 +569,80 @@
    "has_qa": false,
    "_src": {
     "url": "https://www.instagram.com/p/DdnD4hjHHnq/",
-    "date": "2026-09-22"
+    "date": "2026-09-22",
+    "obras": "https://www.instagram.com/p/Dd6sCrsnJD5/"
    },
-   "is_free": true
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Paloquemao",
+     "director": "Jefferson Cardoza",
+     "year": 2022,
+     "duration": "20 min",
+     "poster": "/assets/girardota-2026/paloquemao.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "paloquemao-the-vampire-market",
+     "tmdb_id": 928875,
+     "synopsis": "Pedro es uno de los vampiros del subdesarrollo que trabaja entre pasillos llenos de ajos, frutas, hierbas y crucifijos en el Mercado de Paloquemao.  Sin embargo, el 28 de mayo de 2016, cuando se desmantela la red de tráfico de sangre más grande de Bogotá, su traficante Harbey escapa y se refugia en el mercado, amenazando su relación con Angie, la chica de la que está enamorado.",
+     "synopsis_en": "Pedro is one of the vampires of underdevelopment who works amidst aisles full of garlic, fruits, herbs and crucifixes in the Paloquemao Market. However, on May 28, 2016, when the largest blood trafficking network in Bogota is dismantled, his dealer Harbey escapes and takes refuge in the market, threatening his relationship with Angie, the girl he is in love with.",
+     "title_en": "Paloquemao: the Vampire Market",
+     "genre": "Fantasía",
+     "country": "Colombia",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Silencio en la Laguna",
+     "director": "Álvaro Jiménez Garzón, Julián Montenegro",
+     "year": 2024,
+     "duration": "7 min"
+    },
+    {
+     "title": "/IMAGINA",
+     "director": "Pablo Tobón-Gallo",
+     "year": 2023,
+     "duration": "12 min",
+     "lbSlug": "imagina",
+     "tmdb_id": 1152273,
+     "synopsis": "Ana, una talentosa programadora informática, debe salvar a su hermana de una amenaza que acecha en la oscuridad.",
+     "genre": "Drama",
+     "country": "Colombia",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Sirenas en la Niebla",
+     "director": "Daniela Narváez",
+     "year": 2023,
+     "duration": "18 min",
+     "poster": "/assets/girardota-2026/sirenas-en-la-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mermaids-in-the-mist",
+     "tmdb_id": 1117116,
+     "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
+     "title_en": "Mermaids in the Mist",
+     "genre": "Drama",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Alguien Mató Algo",
+     "director": "Jorge Navas",
+     "year": 1998,
+     "duration": "26 min",
+     "poster": "/assets/girardota-2026/alguien-mato-algo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "alguien-mato-algo",
+     "tmdb_id": 453336,
+     "synopsis": "Heriberta, pequeña y hermosa niña, es hija de una madre de ortodoxa religiosidad y de un médico ya muerto, de quien heredó un libro de anatomía y un fino bisturí. Su madre cree que la niña va a ser médico como su padre, pero ella lo que quiere es ser vampiro. Heriberta le teme a crecer, a envejecer, a ser como su madre o a morir como su progenitor.",
+     "synopsis_en": "In this silent style short, filmed in black and white with intertitles instead of spoken dialog, a precocious little girl surrounded by Tv violence and bloody church images of Catholicism, yearns to stay alive forever, as a vampire.",
+     "genre": "Drama",
+     "country": "Colombia",
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    }
+   ]
   },
   {
    "title": "El gótico popular: terror en las plazas y haciendas de Colombia",
@@ -1023,7 +1169,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T22:27:44",
+  "fecha": "2026-09-30T16:04:42",
   "plan_sha": "89d6e69df8fcc84e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py girardota-2026"

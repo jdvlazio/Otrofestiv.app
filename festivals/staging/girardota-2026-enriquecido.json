@@ -1,9 +1,26 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-29"
+  "capturado": "2026-09-30"
  },
  "obras": [
+  {
+   "titulo": "/IMAGINA",
+   "tmdb_id": 1152273,
+   "titulo_original": "/Imagina:",
+   "poster_path": null,
+   "synopsis_es": "Ana, una talentosa programadora informática, debe salvar a su hermana de una amenaza que acecha en la oscuridad.",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "imagina",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "/IMAGINA",
+   "_director": "Pablo Tobón-Gallo",
+   "_sondeado": "2026-09-30"
+  },
   {
    "titulo": "Al final del espectro",
    "tmdb_id": 40511,
@@ -22,6 +39,25 @@
    "_director": "Juan Felipe Orozco",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/al-final-del-espectro.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Alguien Mató Algo",
+   "tmdb_id": 453336,
+   "titulo_original": "Alguien mató algo",
+   "poster_path": "/az98ex1og9eH0Ns6AmQouCuj6IR.jpg",
+   "synopsis_es": "Heriberta, pequeña y hermosa niña, es hija de una madre de ortodoxa religiosidad y de un médico ya muerto, de quien heredó un libro de anatomía y un fino bisturí. Su madre cree que la niña va a ser médico como su padre, pero ella lo que quiere es ser vampiro. Heriberta le teme a crecer, a envejecer, a ser como su madre o a morir como su progenitor.",
+   "synopsis_en": "In this silent style short, filmed in black and white with intertitles instead of spoken dialog, a precocious little girl surrounded by Tv violence and bloody church images of Catholicism, yearns to stay alive forever, as a vampire.",
+   "genero": "Drama",
+   "anio_tmdb": 1999,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "alguien-mato-algo",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Alguien Mató Algo",
+   "_director": "Jorge Navas",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/girardota-2026/alguien-mato-algo.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -202,7 +238,7 @@
    "lbSlug": "sinister-funeral",
    "_verificado": "declarada a mano: TMDB (127593) casa por dirección y año, pero solo tiene sinopsis en inglés: en español la obra salía sin una línea. La sinopsis es la del catálogo oficial de cine colombiano de Proimágenes (ficha 102, Jairo Pinilla, 1977), tal cual. Las láminas del festival no traen sinopsis.",
    "_director": "Jairo Pinilla",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/girardota-2026/funeral-siniestro.jpg",
    "posterSource": "tmdb"
   },
@@ -372,6 +408,26 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Paloquemao",
+   "tmdb_id": 928875,
+   "titulo_original": "Paloquemao: el mercado de los vampiros",
+   "poster_path": "/hB4WuZKGAYvplbKqdoYj7r8frul.jpg",
+   "synopsis_es": "Pedro es uno de los vampiros del subdesarrollo que trabaja entre pasillos llenos de ajos, frutas, hierbas y crucifijos en el Mercado de Paloquemao.  Sin embargo, el 28 de mayo de 2016, cuando se desmantela la red de tráfico de sangre más grande de Bogotá, su traficante Harbey escapa y se refugia en el mercado, amenazando su relación con Angie, la chica de la que está enamorado.",
+   "synopsis_en": "Pedro is one of the vampires of underdevelopment who works amidst aisles full of garlic, fruits, herbs and crucifixes in the Paloquemao Market. However, on May 28, 2016, when the largest blood trafficking network in Bogota is dismantled, his dealer Harbey escapes and takes refuge in the market, threatening his relationship with Angie, the girl he is in love with.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Colombia",
+   "title_en": "Paloquemao: the Vampire Market",
+   "lbSlug": "paloquemao-the-vampire-market",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Paloquemao",
+   "_director": "Jefferson Cardoza",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/girardota-2026/paloquemao.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Pura Sangre",
    "tmdb_id": 134245,
    "titulo_original": "Pura sangre",
@@ -446,6 +502,26 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Sirenas en la Niebla",
+   "tmdb_id": 1117116,
+   "titulo_original": "Sirenas en la Niebla",
+   "poster_path": "/6f1RhvLNmsxvmwOM7qhxAJMebMv.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Mermaids in the Mist",
+   "lbSlug": "mermaids-in-the-mist",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Sirenas en la Niebla",
+   "_director": "Daniela Narváez",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/girardota-2026/sirenas-en-la-niebla.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Mantener la Democracia Maestro",
    "poster": "/assets/girardota-2026/mantener-la-democracia-maestro.jpg",
    "posterSource": "custom",
@@ -507,6 +583,22 @@
   }
  ],
  "verificadas": {
+  "/IMAGINA": {
+   "tmdb_id": 1152273,
+   "titulo_original": "/Imagina:",
+   "poster_path": null,
+   "synopsis_es": "Ana, una talentosa programadora informática, debe salvar a su hermana de una amenaza que acecha en la oscuridad.",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "imagina",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "/IMAGINA",
+   "_director": "Pablo Tobón-Gallo",
+   "_sondeado": "2026-09-30"
+  },
   "Al final del espectro": {
    "tmdb_id": 40511,
    "titulo_original": "Al final del espectro",
@@ -524,6 +616,24 @@
    "_director": "Juan Felipe Orozco",
    "_sondeado": "2026-09-27",
    "poster": "/assets/girardota-2026/al-final-del-espectro.jpg",
+   "posterSource": "tmdb"
+  },
+  "Alguien Mató Algo": {
+   "tmdb_id": 453336,
+   "titulo_original": "Alguien mató algo",
+   "poster_path": "/az98ex1og9eH0Ns6AmQouCuj6IR.jpg",
+   "synopsis_es": "Heriberta, pequeña y hermosa niña, es hija de una madre de ortodoxa religiosidad y de un médico ya muerto, de quien heredó un libro de anatomía y un fino bisturí. Su madre cree que la niña va a ser médico como su padre, pero ella lo que quiere es ser vampiro. Heriberta le teme a crecer, a envejecer, a ser como su madre o a morir como su progenitor.",
+   "synopsis_en": "In this silent style short, filmed in black and white with intertitles instead of spoken dialog, a precocious little girl surrounded by Tv violence and bloody church images of Catholicism, yearns to stay alive forever, as a vampire.",
+   "genero": "Drama",
+   "anio_tmdb": 1999,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "alguien-mato-algo",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Alguien Mató Algo",
+   "_director": "Jorge Navas",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/girardota-2026/alguien-mato-algo.jpg",
    "posterSource": "tmdb"
   },
   "Archivo no Encontrado": {
@@ -638,7 +748,7 @@
    "lbSlug": "sinister-funeral",
    "_verificado": "declarada a mano: TMDB (127593) casa por dirección y año, pero solo tiene sinopsis en inglés: en español la obra salía sin una línea. La sinopsis es la del catálogo oficial de cine colombiano de Proimágenes (ficha 102, Jairo Pinilla, 1977), tal cual. Las láminas del festival no traen sinopsis.",
    "_director": "Jairo Pinilla",
-   "_sondeado": "2026-09-29",
+   "_sondeado": "2026-09-30",
    "poster": "/assets/girardota-2026/funeral-siniestro.jpg",
    "posterSource": "tmdb"
   },
@@ -771,6 +881,25 @@
    "poster": "/assets/girardota-2026/maricones.jpg",
    "posterSource": "tmdb"
   },
+  "Paloquemao": {
+   "tmdb_id": 928875,
+   "titulo_original": "Paloquemao: el mercado de los vampiros",
+   "poster_path": "/hB4WuZKGAYvplbKqdoYj7r8frul.jpg",
+   "synopsis_es": "Pedro es uno de los vampiros del subdesarrollo que trabaja entre pasillos llenos de ajos, frutas, hierbas y crucifijos en el Mercado de Paloquemao.  Sin embargo, el 28 de mayo de 2016, cuando se desmantela la red de tráfico de sangre más grande de Bogotá, su traficante Harbey escapa y se refugia en el mercado, amenazando su relación con Angie, la chica de la que está enamorado.",
+   "synopsis_en": "Pedro is one of the vampires of underdevelopment who works amidst aisles full of garlic, fruits, herbs and crucifixes in the Paloquemao Market. However, on May 28, 2016, when the largest blood trafficking network in Bogota is dismantled, his dealer Harbey escapes and takes refuge in the market, threatening his relationship with Angie, the girl he is in love with.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Colombia",
+   "title_en": "Paloquemao: the Vampire Market",
+   "lbSlug": "paloquemao-the-vampire-market",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Paloquemao",
+   "_director": "Jefferson Cardoza",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/girardota-2026/paloquemao.jpg",
+   "posterSource": "tmdb"
+  },
   "Pura Sangre": {
    "tmdb_id": 134245,
    "titulo_original": "Pura sangre",
@@ -842,6 +971,25 @@
    ],
    "poster": "/assets/girardota-2026/refraccion.jpg",
    "posterSource": "tmdb"
+  },
+  "Sirenas en la Niebla": {
+   "tmdb_id": 1117116,
+   "titulo_original": "Sirenas en la Niebla",
+   "poster_path": "/6f1RhvLNmsxvmwOM7qhxAJMebMv.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Mermaids in the Mist",
+   "lbSlug": "mermaids-in-the-mist",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Sirenas en la Niebla",
+   "_director": "Daniela Narváez",
+   "_sondeado": "2026-09-30",
+   "poster": "/assets/girardota-2026/sirenas-en-la-niebla.jpg",
+   "posterSource": "tmdb"
   }
  },
  "sin_ficha": [
@@ -863,7 +1011,8 @@
   "Muestra de cortometrajes: Fantasía tropical",
   "Muestra de cortos Girardotanos",
   "PARE",
-  "Selección de Cortometrajes fantásticos para toda la familia"
+  "Selección de Cortometrajes fantásticos para toda la familia",
+  "Silencio en la Laguna"
  ],
  "_sin_ficha_sondeo": {
   "Armonía de la Entropía": {
@@ -941,12 +1090,16 @@
   "Selección de Cortometrajes fantásticos para toda la familia": {
    "director": "",
    "fecha": "2026-09-27"
+  },
+  "Silencio en la Laguna": {
+   "director": "Álvaro Jiménez Garzón, Julián Montenegro",
+   "fecha": "2026-09-30"
   }
  },
  "_fuentes": [
   {
    "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-09-29",
+   "capturado": "2026-09-30",
    "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
    "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
   }
