@@ -1,14 +1,12 @@
 {
  "_provenance": {
   "fuente": "festivalfantasmagoriamedellin.com, noticia de programación (wp-json post 6481)",
-  "capturado": "2026-09-29",
+  "capturado": "2026-09-30",
   "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
   "metodo": "bloques por hora, ficha entre paréntesis, sede y acceso tras «/»"
  },
  "_virtuales_fuera": [
-  "2026-10-14 21:00 Fantasmagoría Académica",
-  "2026-10-19 19:00 Homenaje a Luigi Cozzi:",
-  "2026-10-19 20:30 Fantasmagoría Académica (Tema Central) – Charla virtual:"
+  "2026-10-14 21:00 Fantasmagoría Académica"
  ],
  "funciones": [
   {
@@ -739,6 +737,42 @@
    "seccion": "Selección Oficial Largometrajes Documentales",
    "sinopsis": "Un recorrido por la historia del cine revela cómo los zombis evolucionaron desde las tradiciones espirituales haitianas hasta el terror de Hollywood, explorando su profundo significado cultural como poderosos símbolos de resiliencia.",
    "premiere": "Estreno colombiano"
+  },
+  {
+   "dia": "2026-10-19",
+   "hora": "19:00",
+   "sede": "Twitch · Sociedad Fantasmagoría",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
+    "date": "2026-09-28"
+   },
+   "online": true,
+   "stream_url": "https://www.twitch.tv/sociedadfantasmagoria",
+   "stream_platform": "Twitch",
+   "titulo": "Entrevista a Luigi Cozzi con Jose Andrés Gómez",
+   "seccion": "Homenaje a Luigi Cozzi",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "duracion_min": 90
+  },
+  {
+   "dia": "2026-10-19",
+   "hora": "20:30",
+   "sede": "Twitch · Sociedad Fantasmagoría",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
+    "date": "2026-09-28"
+   },
+   "online": true,
+   "stream_url": "https://www.twitch.tv/sociedadfantasmagoria",
+   "stream_platform": "Twitch",
+   "titulo": "Una psicología de los asedios explicada con pelis de Zombies con Pedro Alejandro González",
+   "seccion": "Fantasmagoría Académica",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "duracion_min": 60
   },
   {
    "dia": "2026-10-19",

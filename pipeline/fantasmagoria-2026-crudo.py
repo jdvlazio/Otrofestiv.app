@@ -23,9 +23,10 @@ Las obras de las siete selecciones ya están en el catálogo del pre-onboarding
 la propia parrilla y las enriquece la cascada de TMDB.
 
 LO QUE NO SE INVENTA:
-  · las 3 charlas virtuales por Twitch NO se montan: no tienen sede física y
-    la app no tiene todavía cómo mostrar una actividad en línea (decisión
-    pendiente de Juan);
+  · las charlas virtuales por Twitch entran como funciones EN LÍNEA
+    (`online`, decisión de Juan, 30 sep: «alguien puede elegirla y asistir de
+    manera virtual»), con su sede de transmisión sin pin; la del miércoles 14
+    NO, porque es antes de que empiece el festival;
   · «Por confirmar» (Motherwitch del vie 23) → acceso DESCONOCIDO;
   · la duración de las ACTIVIDADES no se publica: hueco hasta la siguiente en
     la misma sede ese día, tope 90 min, 60 si es la última (regla de BIFF);
@@ -96,6 +97,11 @@ SEDES = {
     'Nueva Villa de Aburrá': ('Nueva Villa de Aburrá', ''),
 }
 VIRTUAL = re.compile(r'twitch', re.I)
+# LA SEDE DE UNA TRANSMISIÓN: el canal del festival. Sin coordenadas a propósito
+# ([sede-con-pin]): no hay adónde ir y el plan no le suma traslado.
+SEDE_EN_LINEA = 'Twitch · Sociedad Fantasmagoría'
+STREAM_URL = 'https://www.twitch.tv/sociedadfantasmagoria'   # el que da la propia noticia, al pie
+INICIO = '2026-10-15'
 
 # EL ACCESO, con las palabras de la parrilla. «Entrada con Boleta» = «funciones
 # con cobro especial en Colombo Americano, CineProx y MAMM» (nota de la noticia).
@@ -166,7 +172,8 @@ CAJA_SECCION = {'muestra asiatica el oriente es rojo': 'Muestra Asiática El Ori
 def seccion_publicada(rot):
     s = re.split(r'\s*\+\s*', rot)[0]
     s = re.sub(r'\s*\((tema central)\)', '', s, flags=re.I)
-    s = re.sub(r'\s*[–-]\s*(charla|conversatorio)?\s*$', '', s, flags=re.I)
+    # (y «– Charla virtual», la de Twitch del lunes 19: la misma sección)
+    s = re.sub(r'\s*[–-]\s*(charla(\s+virtual)?|conversatorio)?\s*$', '', s, flags=re.I)
     s = s.rstrip(' .:–-').strip()
     return CAJA_SECCION.get(plano(s), s)
 
@@ -265,13 +272,17 @@ def main():
         else:
             partes = [p.strip() for p in cuerpo[iv].split('/')]
             sede_txt, sellos = partes[0], partes[1:]
-        if VIRTUAL.search(sede_txt):
+        en_linea = bool(VIRTUAL.search(sede_txt))
+        if en_linea and b['dia'] < INICIO:
             virtuales.append(f'{b["dia"]} {b["hora"]} {b["rotulo"]}')
             continue
-        if sede_txt not in SEDES:
+        if en_linea:
+            sede, sala = SEDE_EN_LINEA, ''
+        elif sede_txt not in SEDES:
             fallos.append(f'{b["dia"]} {b["hora"]}: sede sin entrada en la tabla: {sede_txt!r}')
             continue
-        sede, sala = SEDES[sede_txt]
+        else:
+            sede, sala = SEDES[sede_txt]
         texto = cuerpo[:iv]
         rot = b['rotulo'].rstrip(':').strip()
         ifi = next((i for i, y in enumerate(texto) if FICHA.match(y)), None)
@@ -280,6 +291,8 @@ def main():
              '_src': {'url': URL, 'date': modificada[:10]}}
         if sala:
             r['sala'] = sala
+        if en_linea:
+            r.update({'online': True, 'stream_url': STREAM_URL, 'stream_platform': 'Twitch'})
         sello = ' '.join(sellos).lower()
         if 'presencia' in sello or 'q&a' in ' '.join(cuerpo).lower():
             r['has_qa'], r['qa_type'] = True, 'team'

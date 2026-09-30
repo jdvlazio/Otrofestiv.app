@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-09-29"
+  "capturado": "2026-09-30"
  },
  "Centro Colombo Americano": {
   "lat": 6.2499694,
@@ -148,5 +148,11 @@
   "address": "Cra. 80A #32B-26, Belén, Medellín",
   "_prec": "manual",
   "_nota": "PIN APROXIMADO (30 sep, pedido de Juan). La parrilla solo dice el barrio; función al aire libre. Se pone la Plazoleta Nueva Villa de Aburrá (Google Maps, Cra. 80A #32B-26), la plaza central del barrio, a ~280 m del centroide de OSM. Preguntado al festival."
+ },
+ "Twitch · Sociedad Fantasmagoría": {
+  "lat": null,
+  "lng": null,
+  "_prec": "manual",
+  "_nota": "SEDE DE TRANSMISIÓN, sin pin a propósito ([sede-con-pin]): las charlas en línea se ven desde donde sea y el plan no les suma traslado. Canal: https://www.twitch.tv/sociedadfantasmagoria"
  }
 }

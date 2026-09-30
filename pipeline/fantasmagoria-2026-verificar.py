@@ -6,7 +6,7 @@
   · el día de la semana impreso casa con la fecha;
   · el acceso («Entrada libre» / «con boleta») de cada función coincide;
   · el año y la duración publicados son los de la ficha del largo;
-  · toda sede tiene pin verificado a mano o su porqué escrito.
+  · toda sede tiene pin verificado a mano, salvo la de una transmisión en línea.
 
 Las dos fuentes del festival se contradicen en algunas funciones. Cada
 contradicción conocida está en CONTRADICCIONES con lo que se publicó y por
@@ -85,15 +85,19 @@ def main():
     fallos = [f'{t} · {d} {h}: {m}' for t, d, h, m in nuevos]
     for v, x in build['venues'].items():
         g = geo.get(v.rsplit(' - ', 1)[0], {})
-        if x.get('lat') is None and not g.get('_todo'):
-            fallos.append(f'sede {v!r} sin pin y sin porqué')
+        # toda sede lleva pin (Juan, 30 sep); la única sin él es la de una
+        # transmisión, y entonces TODAS sus funciones son en línea
+        _fs = [f for f in build['films'] if f.get('venue') == v]
+        if x.get('lat') is None and not (_fs and all(f.get('online') for f in _fs)):
+            fallos.append(f'sede {v!r} sin pin')
         elif x.get('lat') is not None and g.get('_prec') != 'manual':
             fallos.append(f'sede {v!r}: pin sin verificar a mano')
     if fallos:
         sys.exit('✗ el build y las fuentes del festival no cuadran:\n  · ' + '\n  · '.join(fallos))
     print(f'✓ {len(largos)} largometrajes con sus funciones iguales en las dos fuentes · '
           f'{len(avisos)} contradicciones conocidas, cada una con su decisión · '
-          f'{sum(1 for x in build["venues"].values() if x.get("lat") is not None)} sedes con pin manual')
+          f'{sum(1 for x in build["venues"].values() if x.get("lat") is not None)} sedes con pin manual · '
+          f'{sum(1 for f in build["films"] if f.get("online"))} funciones en línea')
 
 
 if __name__ == '__main__':

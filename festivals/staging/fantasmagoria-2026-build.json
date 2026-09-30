@@ -245,38 +245,38 @@
    "archetype": "Cortos / Programas",
    "order": 17
   },
-  "🦄 La Marmita del Hechicero": {
-   "en": "The Sorcerer’s Cauldron",
-   "archetype": "Especiales / Eventos",
+  "🌕 Homenaje a Luigi Cozzi": {
+   "en": "Tribute to Luigi Cozzi",
+   "archetype": "Retrospectiva / Tributo",
    "order": 18
-  },
-  "🏴 Muestra Catalana": {
-   "en": "Catalan Showcase",
-   "archetype": "Muestra / País",
-   "order": 19
   },
   "🎓 Fantasmagoría Académica": {
    "en": "Academic Program",
    "archetype": "Charlas / Industria",
+   "order": 19
+  },
+  "🦄 La Marmita del Hechicero": {
+   "en": "The Sorcerer’s Cauldron",
+   "archetype": "Especiales / Eventos",
    "order": 20
+  },
+  "🏴 Muestra Catalana": {
+   "en": "Catalan Showcase",
+   "archetype": "Muestra / País",
+   "order": 21
   },
   "🤝 Jornada Fantasmeet": {
    "en": "Fantasmeet",
    "archetype": "Charlas / Industria",
-   "order": 21
+   "order": 22
   },
   "🌶️ Sangre Latina": {
    "en": "Latin Blood",
    "archetype": "Perspectivas / Miradas",
-   "order": 22
+   "order": 23
   },
   "🔦 Retrospectiva Tilman Singer": {
    "en": "Tilman Singer Retrospective",
-   "archetype": "Retrospectiva / Tributo",
-   "order": 23
-  },
-  "🌕 Homenaje a Luigi Cozzi": {
-   "en": "Tribute to Luigi Cozzi",
    "archetype": "Retrospectiva / Tributo",
    "order": 24
   },
@@ -451,6 +451,14 @@
    "address": "Cl. 27 Sur #43A-51, Envigado",
    "_prec": "manual",
    "_nota": "Google Maps «Parque Cultural y Ambiental Otraparte» (Comfama), en ENVIGADO"
+  },
+  "Twitch · Sociedad Fantasmagoría - Medellín": {
+   "short": "Twitch · Sociedad Fantasmagoría",
+   "city": "Medellín",
+   "lat": null,
+   "lng": null,
+   "_prec": "manual",
+   "_nota": "SEDE DE TRANSMISIÓN, sin pin a propósito ([sede-con-pin]): las charlas en línea se ven desde donde sea y el plan no les suma traslado. Canal: https://www.twitch.tv/sociedadfantasmagoria"
   },
   "Universidad Católica Luis Amigó - Medellín": {
    "short": "Universidad Católica Luis Amigó",
@@ -1608,6 +1616,46 @@
    "lbSlug": "black-zombie",
    "tmdb_id": 1629355,
    "synopsis_en": "From the flickering screens of Hollywood horror, to the haunted cane fields of colonial Haiti, Black Zombie unearths the buried origins of the zombie, reclaiming it as a symbol of survival and spiritual resistance."
+  },
+  {
+   "title": "Entrevista a Luigi Cozzi con Jose Andrés Gómez",
+   "type": "event",
+   "section": "🌕 Homenaje a Luigi Cozzi",
+   "duration": "90 min",
+   "day": "2026-10-19",
+   "time": "19:00",
+   "day_order": 4,
+   "venue": "Twitch · Sociedad Fantasmagoría - Medellín",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
+    "date": "2026-09-28"
+   },
+   "online": true,
+   "stream_url": "https://www.twitch.tv/sociedadfantasmagoria",
+   "stream_platform": "Twitch",
+   "is_free": true
+  },
+  {
+   "title": "Una psicología de los asedios explicada con pelis de Zombies con Pedro Alejandro González",
+   "type": "event",
+   "section": "🎓 Fantasmagoría Académica",
+   "duration": "60 min",
+   "day": "2026-10-19",
+   "time": "20:30",
+   "day_order": 4,
+   "venue": "Twitch · Sociedad Fantasmagoría - Medellín",
+   "event_kind": "charla",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
+    "date": "2026-09-28"
+   },
+   "online": true,
+   "stream_url": "https://www.twitch.tv/sociedadfantasmagoria",
+   "stream_platform": "Twitch",
+   "is_free": true
   },
   {
    "title": "La Frecuencia Kirlian",
@@ -3287,8 +3335,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T09:08:25",
-  "plan_sha": "6432ac1811fd2246",
+  "fecha": "2026-09-30T17:43:50",
+  "plan_sha": "bc5bd41827ade391",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"
  }
