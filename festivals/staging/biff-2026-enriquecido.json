@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-29"
+  "capturado": "2026-10-01"
  },
  "obras": [
   {
@@ -383,6 +383,25 @@
    "_sondeado": "2026-09-29",
    "poster": "/assets/biff-2026/entre-las-sombras-arden-mundos.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Espacio para Pensar",
+   "tmdb_id": 1786042,
+   "titulo_original": "Espacio para Pensar",
+   "poster_path": null,
+   "synopsis_es": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "espacio-para-pensar",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): La Baldosa, 2025, 8 min, Colombia, Animación, con las 7 personas que el afiche acredita como directoras y su afiche oficial. Letterboxd: espacio-para-pensar.",
+   "_director": "La Baldosa Colectivo",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://www.retinalatina.org/peliculas/espacio-para-pensar-la-baldosa-colectivo/"
   },
   {
    "titulo": "Everytime",
@@ -1305,14 +1324,6 @@
    "_sondeado": "2026-09-29",
    "poster": "/assets/biff-2026/zama.jpg",
    "posterSource": "tmdb"
-  },
-  {
-   "titulo": "Espacio para Pensar",
-   "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://www.retinalatina.org/peliculas/espacio-para-pensar-la-baldosa-colectivo/",
-   "sinopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
-   "_sinopsis": "https://www.retinalatina.org/peliculas/espacio-para-pensar-la-baldosa-colectivo/"
   }
  ],
  "verificadas": {
@@ -1678,6 +1689,24 @@
    "_sondeado": "2026-09-29",
    "poster": "/assets/biff-2026/entre-las-sombras-arden-mundos.jpg",
    "posterSource": "tmdb"
+  },
+  "Espacio para Pensar": {
+   "tmdb_id": 1786042,
+   "titulo_original": "Espacio para Pensar",
+   "poster_path": null,
+   "synopsis_es": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "espacio-para-pensar",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): La Baldosa, 2025, 8 min, Colombia, Animación, con las 7 personas que el afiche acredita como directoras y su afiche oficial. Letterboxd: espacio-para-pensar.",
+   "_director": "La Baldosa Colectivo",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://www.retinalatina.org/peliculas/espacio-para-pensar-la-baldosa-colectivo/"
   },
   "Everytime": {
    "tmdb_id": 1655419,
@@ -2560,14 +2589,9 @@
   }
  },
  "sin_ficha": [
-  "Espacio para Pensar",
   "Muestra de cortometrajes BIFF Bang"
  ],
  "_sin_ficha_sondeo": {
-  "Espacio para Pensar": {
-   "director": "La Baldosa Colectivo",
-   "fecha": "2026-09-29"
-  },
   "Muestra de cortometrajes BIFF Bang": {
    "director": "",
    "fecha": "2026-09-29"

@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PDF oficial del BIFF 12 + agenda de la Cinemateca de Bogotá + biff.co",
-  "capturado": "2026-09-29",
+  "capturado": "2026-10-01",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la sede como la presenta el PDF (págs. 28–31); la sala va aparte, desde las fichas.",
@@ -757,6 +757,8 @@
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
      "posterSource": "oficial",
+     "lbSlug": "espacio-para-pensar",
+     "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
@@ -1634,6 +1636,8 @@
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
      "posterSource": "oficial",
+     "lbSlug": "espacio-para-pensar",
+     "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
@@ -2377,6 +2381,8 @@
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
      "posterSource": "oficial",
+     "lbSlug": "espacio-para-pensar",
+     "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
@@ -3214,6 +3220,8 @@
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
      "posterSource": "oficial",
+     "lbSlug": "espacio-para-pensar",
+     "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
@@ -3986,6 +3994,8 @@
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
      "posterSource": "oficial",
+     "lbSlug": "espacio-para-pensar",
+     "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
@@ -4618,6 +4628,8 @@
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
      "posterSource": "oficial",
+     "lbSlug": "espacio-para-pensar",
+     "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
@@ -5327,6 +5339,8 @@
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
      "posterSource": "oficial",
+     "lbSlug": "espacio-para-pensar",
+     "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
      "synopsis_lang": "es"
     }
@@ -5701,8 +5715,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-29T15:19:52",
-  "plan_sha": "27a412368eb785c2",
+  "fecha": "2026-10-01T08:19:59",
+  "plan_sha": "bd5e06cf76d16140",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py biff-2026"
  }
