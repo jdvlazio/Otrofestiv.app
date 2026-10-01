@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festicinepopayan.com, página de programación 2026 (wp-json, id 13120)",
-  "capturado": "2026-09-30",
+  "capturado": "2026-10-01",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime la parrilla; el Auditorio Maya es la sala de la Facultad de Artes de Unicauca.",
@@ -399,6 +399,9 @@
      "synopsis_lang": "es",
      "poster": "/assets/popayan-2026/crudo.jpg",
      "posterSource": "oficial",
+     "lbSlug": "crudo-1",
+     "tmdb_id": 1786240,
+     "genre": "Drama",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -418,6 +421,9 @@
      "synopsis_lang": "es",
      "poster": "/assets/popayan-2026/la-volqueta.jpg",
      "posterSource": "oficial",
+     "lbSlug": "la-volqueta",
+     "tmdb_id": 1786242,
+     "genre": "Drama",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -793,6 +799,9 @@
      "synopsis_lang": "es",
      "poster": "/assets/popayan-2026/yakuwasi-la-casa-del-agua.jpg",
      "posterSource": "oficial",
+     "lbSlug": "yakuwasi-la-casa-del-agua",
+     "tmdb_id": 1786236,
+     "genre": "Documental",
      "country": "Colombia",
      "flags": "🇨🇴"
     }
@@ -958,6 +967,9 @@
      "synopsis_lang": "es",
      "poster": "/assets/popayan-2026/abuelita-caza-vampiros.jpg",
      "posterSource": "oficial",
+     "lbSlug": "abuelita-caza-vampiros",
+     "tmdb_id": 1786238,
+     "genre": "Animación",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -1900,6 +1912,9 @@
      "synopsis_lang": "es",
      "poster": "/assets/popayan-2026/abuelita-caza-vampiros.jpg",
      "posterSource": "oficial",
+     "lbSlug": "abuelita-caza-vampiros",
+     "tmdb_id": 1786238,
+     "genre": "Animación",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -2244,7 +2259,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T21:29:19",
+  "fecha": "2026-10-01T15:06:05",
   "plan_sha": "4d76e7286d12841e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"

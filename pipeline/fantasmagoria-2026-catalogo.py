@@ -120,6 +120,10 @@ def texto(h):
 
 
 RE_OBRA = re.compile(r'^(?P<t>.+?)\.?\s*Dir:\s*(?P<d>[^/]+?)\s*/(?P<resto>.+)$')
+ANIO_DE_OTRA_FUENTE = {
+    'Quazar': (2023, 'Bogoshorts 2023 la programó'),
+    'No es el Fin del Mundo': (2025, 'https://macabro.mx/cortometraje/no-es-el-fin-del-mundo/ «CORTO INT · Colombia · 2025»'),
+}
 RE_FICHA = re.compile(r'(?P<pais>[^/]+?),\s*(?P<anio>\d{4}),\s*(?P<dur>\d+)\s*[´’\']')
 
 
@@ -142,6 +146,11 @@ def obra(linea, seccion):
     o = {'titulo': t, 'director': d, 'pais': pais, 'anio': int(f.group('anio')),
          'duracion_min': int(f.group('dur')), 'genero': ', '.join(generos),
          'seccion': seccion}
+    # EL AÑO DE OTRA FUENTE. La página imprime el año de la edición (2026) en
+    # dos cortos que ya habían circulado; Juan aprobó el año de su estreno
+    # (1 oct 2026) y así quedaron en las fichas que les creamos en TMDB.
+    if t in ANIO_DE_OTRA_FUENTE:
+        o['anio'] = ANIO_DE_OTRA_FUENTE[t][0]
     # «Huo zhe yan (The Furious)»: el título original y, entre paréntesis, el
     # inglés. Se publica como lo escribe el festival; el original va aparte
     # para que el enricher lo busque también.

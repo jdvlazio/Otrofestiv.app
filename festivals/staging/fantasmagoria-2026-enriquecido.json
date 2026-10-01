@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-30"
+  "capturado": "2026-10-01"
  },
  "obras": [
   {
@@ -372,7 +372,7 @@
    "lbSlug": "fight-against-evil-3",
    "_verificado": "declarada a mano: TMDB «Fight Against Evil 3» (东北警察故事3): Yang Bingjia, 2026, 100 min, China — los cuatro datos del festival. La búsqueda por la romanización del festival no la devuelve.",
    "_director": "Bingjia Yang",
-   "_sondeado": "2026-09-30",
+   "_sondeado": "2026-10-01",
    "poster": "/assets/fantasmagoria-2026/dong-bei-jing-cha-gu-shi-3-fight-against-evil-3.jpg",
    "posterSource": "tmdb"
   },
@@ -598,7 +598,7 @@
    "lbSlug": "herencia-2025-1",
    "_verificado": "declarada a mano: Cristóbal Miranda Cáceres, 2025, la misma dirección y año. TMDB no da duración.",
    "_director": "Cristóbal Miranda Cáceres",
-   "_sondeado": "2026-09-30",
+   "_sondeado": "2026-10-01",
    "poster": "/assets/fantasmagoria-2026/herencia.jpg",
    "posterSource": "tmdb"
   },
@@ -732,7 +732,7 @@
    "lbSlug": "crystal-iris",
    "_verificado": "declarada a mano: TMDB «Crystal Iris» (Iris de Cristal): Diego Gaviria, Colombia, 2024, 13 min, la única obra con ese título. El programa 2026 no da la dirección; el propio Fantasmagoría la programó en 2025 como «Iris de cristal de Diego Gaviria», y esta función es su proyección con autodescripción (Narrafilms). Ligada por decisión de Juan (30 sep).",
    "_director": "",
-   "_sondeado": "2026-09-30",
+   "_sondeado": "2026-10-01",
    "poster": "/assets/fantasmagoria-2026/iris-de-cristal.jpg",
    "posterSource": "tmdb"
   },
@@ -769,7 +769,7 @@
    "lbSlug": "the-flower-of-fear",
    "_verificado": "declarada a mano: TMDB «The Flower of Fear»: Jorge Florez Arcila, la misma dirección; ganó en Oldenburg 2025 con ese título. TMDB no tiene año NI duración, así que el candado no puede corroborar: se declara a mano (decisión de Juan, 30 sep).",
    "_director": "Jorge Flórez Arcila",
-   "_sondeado": "2026-09-30"
+   "_sondeado": "2026-10-01"
   },
   {
    "titulo": "La Frecuencia Kirlian",
@@ -936,7 +936,7 @@
    "lbSlug": "lullaby-2026-2",
    "_verificado": "declarada a mano: Helena Melin, 2026, la misma dirección y año. TMDB no da duración ni afiche.",
    "_director": "Helena Melin",
-   "_sondeado": "2026-09-30"
+   "_sondeado": "2026-10-01"
   },
   {
    "titulo": "Luz",
@@ -952,7 +952,7 @@
    "lbSlug": "luz-2019-2",
    "_verificado": "declarada a mano: Tilman Singer, 70 min, Alemania (TMDB la fecha 2019; su estreno fue la Berlinale 2018, el año del festival). «Luz» es un título genérico: las demás «Luz» de TMDB tienen otra dirección.",
    "_director": "Tilman Singer",
-   "_sondeado": "2026-09-30",
+   "_sondeado": "2026-10-01",
    "poster": "/assets/fantasmagoria-2026/luz.jpg",
    "posterSource": "tmdb"
   },
@@ -1137,6 +1137,26 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "No es el Fin del Mundo",
+   "tmdb_id": 1786249,
+   "titulo_original": "No es el fin del mundo",
+   "poster_path": null,
+   "synopsis_es": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "",
+   "lbSlug": "no-es-el-fin-del-mundo",
+   "anio": 2025,
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Sebastián Flórez, 2025 (ficha de Macabro 2026: «CORTO INT · Colombia · 2025»; publicábamos 2026), 17 min, Colombia, Terror (apocalipsis zombi), sinopsis de Macabro y su afiche oficial recortado arriba y abajo a 2:3. Letterboxd: no-es-el-fin-del-mundo. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
+   "_director": "Sebastián Flórez",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://macabro.mx/cortometraje/no-es-el-fin-del-mundo/"
+  },
+  {
    "titulo": "Pudor Ante el Asalto de los Ojos Furtivos",
    "tmdb_id": 1592968,
    "titulo_original": "Pudor ante el asalto de los ojos furtivos",
@@ -1218,15 +1238,20 @@
   },
   {
    "titulo": "Quazar",
-   "_ya_publicada": [
-    {
-     "festival": "villadelcine-2026",
-     "titulo": "Quazar",
-     "sinopsis": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial."
-    }
-   ],
-   "_verificado": "ya publicada en villadelcine-2026: se reusa su sinopsis",
-   "sinopsis": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
+   "tmdb_id": 1786245,
+   "titulo_original": "Quazar",
+   "poster_path": null,
+   "synopsis_es": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
+   "synopsis_en": "",
+   "genero": "Ciencia ficción",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "quazar",
+   "anio": 2023,
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Alejandro Vargas, 2023 (Bogoshorts 2023 la programó; publicábamos 2026, el año del festival), 20 min, Colombia, Ciencia ficción (por la sinopsis), sinopsis del festival y su afiche oficial. Letterboxd: quazar. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
+   "_director": "Alejandro Vargas",
+   "_sondeado": "2026-10-01",
    "poster": "/assets/fantasmagoria-2026/quazar.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: https://www.instagram.com/p/DZgDLE7GIDi/ — sin las franjas laterales del post"
@@ -1484,7 +1509,7 @@
    "lbSlug": "vida-2016",
    "_verificado": "declarada a mano: Carlos Santiago Amézquita Villamizar, 2016: la dirección completa y el año de la ficha de la página de largometrajes. TMDB no da duración.",
    "_director": "Carlos Amézquita",
-   "_sondeado": "2026-09-30",
+   "_sondeado": "2026-10-01",
    "poster": "/assets/fantasmagoria-2026/vida.jpg",
    "posterSource": "tmdb"
   },
@@ -1506,12 +1531,6 @@
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/you-are-the-film.jpg",
    "posterSource": "tmdb"
-  },
-  {
-   "titulo": "No es el Fin del Mundo",
-   "poster": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://macabro.mx/cortometraje/no-es-el-fin-del-mundo/"
   },
   {
    "titulo": "Ubicua",
@@ -1879,7 +1898,7 @@
    "lbSlug": "fight-against-evil-3",
    "_verificado": "declarada a mano: TMDB «Fight Against Evil 3» (东北警察故事3): Yang Bingjia, 2026, 100 min, China — los cuatro datos del festival. La búsqueda por la romanización del festival no la devuelve.",
    "_director": "Bingjia Yang",
-   "_sondeado": "2026-09-30",
+   "_sondeado": "2026-10-01",
    "poster": "/assets/fantasmagoria-2026/dong-bei-jing-cha-gu-shi-3-fight-against-evil-3.jpg",
    "posterSource": "tmdb"
   },
@@ -2074,7 +2093,7 @@
    "lbSlug": "herencia-2025-1",
    "_verificado": "declarada a mano: Cristóbal Miranda Cáceres, 2025, la misma dirección y año. TMDB no da duración.",
    "_director": "Cristóbal Miranda Cáceres",
-   "_sondeado": "2026-09-30",
+   "_sondeado": "2026-10-01",
    "poster": "/assets/fantasmagoria-2026/herencia.jpg",
    "posterSource": "tmdb"
   },
@@ -2201,7 +2220,7 @@
    "lbSlug": "crystal-iris",
    "_verificado": "declarada a mano: TMDB «Crystal Iris» (Iris de Cristal): Diego Gaviria, Colombia, 2024, 13 min, la única obra con ese título. El programa 2026 no da la dirección; el propio Fantasmagoría la programó en 2025 como «Iris de cristal de Diego Gaviria», y esta función es su proyección con autodescripción (Narrafilms). Ligada por decisión de Juan (30 sep).",
    "_director": "",
-   "_sondeado": "2026-09-30",
+   "_sondeado": "2026-10-01",
    "poster": "/assets/fantasmagoria-2026/iris-de-cristal.jpg",
    "posterSource": "tmdb"
   },
@@ -2236,7 +2255,7 @@
    "lbSlug": "the-flower-of-fear",
    "_verificado": "declarada a mano: TMDB «The Flower of Fear»: Jorge Florez Arcila, la misma dirección; ganó en Oldenburg 2025 con ese título. TMDB no tiene año NI duración, así que el candado no puede corroborar: se declara a mano (decisión de Juan, 30 sep).",
    "_director": "Jorge Flórez Arcila",
-   "_sondeado": "2026-09-30"
+   "_sondeado": "2026-10-01"
   },
   "La Frecuencia Kirlian": {
    "tmdb_id": 1239261,
@@ -2395,7 +2414,7 @@
    "lbSlug": "lullaby-2026-2",
    "_verificado": "declarada a mano: Helena Melin, 2026, la misma dirección y año. TMDB no da duración ni afiche.",
    "_director": "Helena Melin",
-   "_sondeado": "2026-09-30"
+   "_sondeado": "2026-10-01"
   },
   "Luz": {
    "tmdb_id": 498062,
@@ -2410,7 +2429,7 @@
    "lbSlug": "luz-2019-2",
    "_verificado": "declarada a mano: Tilman Singer, 70 min, Alemania (TMDB la fecha 2019; su estreno fue la Berlinale 2018, el año del festival). «Luz» es un título genérico: las demás «Luz» de TMDB tienen otra dirección.",
    "_director": "Tilman Singer",
-   "_sondeado": "2026-09-30",
+   "_sondeado": "2026-10-01",
    "poster": "/assets/fantasmagoria-2026/luz.jpg",
    "posterSource": "tmdb"
   },
@@ -2586,6 +2605,25 @@
    "poster": "/assets/fantasmagoria-2026/no-vacancy.jpg",
    "posterSource": "tmdb"
   },
+  "No es el Fin del Mundo": {
+   "tmdb_id": 1786249,
+   "titulo_original": "No es el fin del mundo",
+   "poster_path": null,
+   "synopsis_es": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "",
+   "lbSlug": "no-es-el-fin-del-mundo",
+   "anio": 2025,
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Sebastián Flórez, 2025 (ficha de Macabro 2026: «CORTO INT · Colombia · 2025»; publicábamos 2026), 17 min, Colombia, Terror (apocalipsis zombi), sinopsis de Macabro y su afiche oficial recortado arriba y abajo a 2:3. Letterboxd: no-es-el-fin-del-mundo. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
+   "_director": "Sebastián Flórez",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://macabro.mx/cortometraje/no-es-el-fin-del-mundo/"
+  },
   "Pudor Ante el Asalto de los Ojos Furtivos": {
    "tmdb_id": 1592968,
    "titulo_original": "Pudor ante el asalto de los ojos furtivos",
@@ -2663,6 +2701,25 @@
    ],
    "poster": "/assets/fantasmagoria-2026/pura-sangre.jpg",
    "posterSource": "tmdb"
+  },
+  "Quazar": {
+   "tmdb_id": 1786245,
+   "titulo_original": "Quazar",
+   "poster_path": null,
+   "synopsis_es": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
+   "synopsis_en": "",
+   "genero": "Ciencia ficción",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "quazar",
+   "anio": 2023,
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Alejandro Vargas, 2023 (Bogoshorts 2023 la programó; publicábamos 2026, el año del festival), 20 min, Colombia, Ciencia ficción (por la sinopsis), sinopsis del festival y su afiche oficial. Letterboxd: quazar. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
+   "_director": "Alejandro Vargas",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/fantasmagoria-2026/quazar.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://www.instagram.com/p/DZgDLE7GIDi/ — sin las franjas laterales del post"
   },
   "Que El Cielo Nos Perdone": {
    "tmdb_id": 1565878,
@@ -2905,7 +2962,7 @@
    "lbSlug": "vida-2016",
    "_verificado": "declarada a mano: Carlos Santiago Amézquita Villamizar, 2016: la dirección completa y el año de la ficha de la página de largometrajes. TMDB no da duración.",
    "_director": "Carlos Amézquita",
-   "_sondeado": "2026-09-30",
+   "_sondeado": "2026-10-01",
    "poster": "/assets/fantasmagoria-2026/vida.jpg",
    "posterSource": "tmdb"
   },
@@ -2936,8 +2993,6 @@
   "HDLT",
   "Muestra Catalana: Cortometrajes C-Trencada",
   "Muestra Fantasmagoritos: Cortometrajes infantiles",
-  "No es el Fin del Mundo",
-  "Quazar",
   "Selección Oficial de Cortometrajes",
   "Selección Oficial de Cortometrajes Colombianos",
   "Selección Oficial de Cortometrajes Latinoamericanos",
@@ -2975,14 +3030,6 @@
   },
   "Muestra Fantasmagoritos: Cortometrajes infantiles": {
    "director": "",
-   "fecha": "2026-09-29"
-  },
-  "No es el Fin del Mundo": {
-   "director": "Sebastián Flórez",
-   "fecha": "2026-09-29"
-  },
-  "Quazar": {
-   "director": "Alejandro Vargas",
    "fecha": "2026-09-29"
   },
   "Selección Oficial de Cortometrajes": {
