@@ -1,0 +1,44 @@
+{
+ "_provenance": {
+  "fuente": "fichas de TMDB verificadas a mano: dirección + año o duración, y la página de Letterboxd con el mismo título y director",
+  "capturado": "2026-09-30",
+  "metodo": "cada declaración nombra por qué el candado automático no llegó sola"
+ },
+ "fichas": {
+  "Dong Bei Jing Cha Gu Shi 3 – Fight Against Evil 3": {
+   "tmdb": 1618784,
+   "_fuente": "https://www.themoviedb.org/movie/1618784",
+   "_por_que": "TMDB «Fight Against Evil 3» (东北警察故事3): Yang Bingjia, 2026, 100 min, China — los cuatro datos del festival. La búsqueda por la romanización del festival no la devuelve."
+  },
+  "Luz": {
+   "tmdb": 498062,
+   "_fuente": "https://www.themoviedb.org/movie/498062",
+   "_por_que": "Tilman Singer, 70 min, Alemania (TMDB la fecha 2019; su estreno fue la Berlinale 2018, el año del festival). «Luz» es un título genérico: las demás «Luz» de TMDB tienen otra dirección."
+  },
+  "Vida": {
+   "tmdb": 1783345,
+   "_fuente": "https://www.themoviedb.org/movie/1783345",
+   "_por_que": "Carlos Santiago Amézquita Villamizar, 2016: la dirección completa y el año de la ficha de la página de largometrajes. TMDB no da duración."
+  },
+  "Herencia": {
+   "tmdb": 1619741,
+   "_fuente": "https://www.themoviedb.org/movie/1619741",
+   "_por_que": "Cristóbal Miranda Cáceres, 2025, la misma dirección y año. TMDB no da duración."
+  },
+  "Lullaby": {
+   "tmdb": 1730339,
+   "_fuente": "https://www.themoviedb.org/movie/1730339",
+   "_por_que": "Helena Melin, 2026, la misma dirección y año. TMDB no da duración ni afiche."
+  },
+  "Iris de Cristal": {
+   "tmdb": 1368500,
+   "_fuente": "https://www.themoviedb.org/movie/1368500",
+   "_por_que": "TMDB «Crystal Iris» (Iris de Cristal): Diego Gaviria, Colombia, 2024, 13 min, la única obra con ese título. El programa 2026 no da la dirección; el propio Fantasmagoría la programó en 2025 como «Iris de cristal de Diego Gaviria», y esta función es su proyección con autodescripción (Narrafilms). Ligada por decisión de Juan (30 sep)."
+  },
+  "La Flor del Miedo": {
+   "tmdb": 1546267,
+   "_fuente": "https://www.themoviedb.org/movie/1546267",
+   "_por_que": "TMDB «The Flower of Fear»: Jorge Florez Arcila, la misma dirección; ganó en Oldenburg 2025 con ese título. TMDB no tiene año NI duración, así que el candado no puede corroborar: se declara a mano (decisión de Juan, 30 sep)."
+  }
+ }
+}

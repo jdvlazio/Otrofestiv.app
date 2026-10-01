@@ -917,7 +917,11 @@
      "country": "Irlanda",
      "flags": "🇮🇪",
      "year": 2026,
-     "duration": "5 min"
+     "duration": "5 min",
+     "lbSlug": "lullaby-2026-2",
+     "tmdb_id": 1730339,
+     "synopsis_en": "A young girl and her cat come to confront grief as a haunting lullaby lures them into the depths of a night-time mansion.",
+     "genre": "Animación"
     },
     {
      "title": "Bestias de la Muerte",
@@ -1006,7 +1010,11 @@
    "title": "Iris de Cristal",
    "type": "film",
    "section": "🦯 Muestra especial",
-   "duration": "60 min",
+   "year": 2024,
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "13 min",
+   "genre": "Animación",
    "day": "2026-10-17",
    "time": "16:00",
    "day_order": 2,
@@ -1014,11 +1022,16 @@
    "has_qa": false,
    "synopsis": "Narrafilms: Proyección con autodescripción – Personas con discapacidad visual.",
    "synopsis_lang": "es",
+   "poster": "/assets/fantasmagoria-2026/iris-de-cristal.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
     "date": "2026-09-28"
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "crystal-iris",
+   "tmdb_id": 1368500,
+   "title_en": "Crystal Iris"
   },
   {
    "title": "Black Moon",
@@ -1418,7 +1431,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "9 min"
+     "duration": "9 min",
+     "lbSlug": "the-flower-of-fear",
+     "tmdb_id": 1546267
     },
     {
      "title": "No Vacancy",
@@ -1558,7 +1573,14 @@
      "country": "Chile",
      "flags": "🇨🇱",
      "year": 2025,
-     "duration": "10 min"
+     "duration": "10 min",
+     "poster": "/assets/fantasmagoria-2026/herencia.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "herencia-2025-1",
+     "tmdb_id": 1619741,
+     "synopsis": "En un campamento aislado en medio del bosque, una runa de algiz tallada en un árbol presagia lo que está por venir. Noah, de doce años, se sienta en el suelo con una libreta entre las manos. Dibuja de manera frenética, como si en esos trazos descargara lo que no puede decir. A lo lejos, el golpe de un hacha rompe el silencio: Owen, su padre de cincuenta y cinco, corta leña cerca del campamento. El sonido inquieto a Noah, que teme ser descubierto. Se levanta bruscamente, la nariz le sangra y se enfrenta a la mirada intimidante de Owen, que lo observa bebiendo en silencio. Sin decir palabra, el padre le arrebata la libreta y lo obliga a intentar partir un tronco. El hacha resulta demasiado pesada y Noah fracasa una y otra vez. La frustración del padre casi se convierte en violencia física.",
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Ubicua",
@@ -2254,7 +2276,14 @@
      "country": "Chile",
      "flags": "🇨🇱",
      "year": 2025,
-     "duration": "10 min"
+     "duration": "10 min",
+     "poster": "/assets/fantasmagoria-2026/herencia.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "herencia-2025-1",
+     "tmdb_id": 1619741,
+     "synopsis": "En un campamento aislado en medio del bosque, una runa de algiz tallada en un árbol presagia lo que está por venir. Noah, de doce años, se sienta en el suelo con una libreta entre las manos. Dibuja de manera frenética, como si en esos trazos descargara lo que no puede decir. A lo lejos, el golpe de un hacha rompe el silencio: Owen, su padre de cincuenta y cinco, corta leña cerca del campamento. El sonido inquieto a Noah, que teme ser descubierto. Se levanta bruscamente, la nariz le sangra y se enfrenta a la mirada intimidante de Owen, que lo observa bebiendo en silencio. Sin decir palabra, el padre le arrebata la libreta y lo obliga a intentar partir un tronco. El hacha resulta demasiado pesada y Noah fracasa una y otra vez. La frustración del padre casi se convierte en violencia física.",
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Ubicua",
@@ -2825,7 +2854,11 @@
      "country": "Irlanda",
      "flags": "🇮🇪",
      "year": 2026,
-     "duration": "5 min"
+     "duration": "5 min",
+     "lbSlug": "lullaby-2026-2",
+     "tmdb_id": 1730339,
+     "synopsis_en": "A young girl and her cat come to confront grief as a haunting lullaby lures them into the depths of a night-time mansion.",
+     "genre": "Animación"
     },
     {
      "title": "Bestias de la Muerte",
@@ -2922,11 +2955,15 @@
    "has_qa": false,
    "synopsis": "Augusto, un joven científico y su hermana Andrómaca, viajan a través del espacio en búsqueda de vida en otros mundos. Luego de encontrar un planeta que alberga la evidencia de que alguna vez pudo haber sido un paraíso, deciden viajar en el tiempo al pasado para iniciar de nuevo allí. Charla Futuros Improbables: La Ciencia Ficción en el Cine Colombiano por Harveth Gil.",
    "synopsis_lang": "es",
+   "poster": "/assets/fantasmagoria-2026/vida.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
     "date": "2026-09-28"
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "vida-2016",
+   "tmdb_id": 1783345
   },
   {
    "title": "Charla musicalizada en vivo – Sinners: el Asedio de los Condenados por Mario Fernando Castaño",
@@ -3040,11 +3077,16 @@
    "qa_type": "team",
    "synopsis": "La joven taxista Luz llega abatida a una comisaría de policía. Al parecer una entidad demoníaca insaciable la persigue y no descansará hasta poseerla… La ópera prima de Tilman Singer es un thriller en el que lo absurdo y lo sobrenatural convergen hasta crear un nocturno juego sensorial. Conversatorio con Tilman Singer y Jose Andrés Gómez.",
    "synopsis_lang": "es",
+   "poster": "/assets/fantasmagoria-2026/luz.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
     "date": "2026-09-28"
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "luz-2019-2",
+   "tmdb_id": 498062,
+   "synopsis_en": "Luz, a young cabdriver, drags herself into the brightly lit entrance of a run-down police station. A demonic entity follows her, determined to finally be close to the woman it loves."
   },
   {
    "title": "Selección Oficial de Cortometrajes",
@@ -3199,10 +3241,16 @@
    "has_qa": false,
    "synopsis": "Li Hongqi llegó de las calles del noreste de China a una isla tropical con la intención de preparar su boda, pero en lugar de ello se embarcó en un viaje para atrapar de nuevo a los delincuentes.",
    "synopsis_lang": "es",
+   "poster": "/assets/fantasmagoria-2026/dong-bei-jing-cha-gu-shi-3-fight-against-evil-3.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
     "date": "2026-09-28"
-   }
+   },
+   "lbSlug": "fight-against-evil-3",
+   "tmdb_id": 1618784,
+   "synopsis_en": "Li Hongqi is forced to travel for his wedding but must team up with a local cop to rescue a girl from human traffickers, fighting criminals while racing against his wedding date.",
+   "title_en": "Fight Against Evil 3"
   },
   {
    "title": "Cortometrajes colombianos que miran al cielo",
@@ -3336,8 +3384,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T19:42:30",
-  "plan_sha": "c1b484a196893ea0",
+  "fecha": "2026-09-30T20:13:29",
+  "plan_sha": "d9fa4049629a40a9",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"
  }

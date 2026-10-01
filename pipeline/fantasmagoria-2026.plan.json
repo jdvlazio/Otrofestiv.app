@@ -44,7 +44,8 @@
   "festivals/staging/fantasmagoria-2026-catalogo.json": "las siete selecciones (47 obras); las lee el crudo",
   "festivals/staging/fantasmagoria-2026-radar.json": "el volcado del radar #963",
   "festivals/staging/fantasmagoria-2026-sinopsis.json": "sinopsis declaradas (literal, con fuente); las lee pipeline/enriquecer.py",
-  "festivals/staging/fantasmagoria-2026-largos.json": "la página Largometrajes 2026 del festival: sinopsis y estreno de cada largo, y sus funciones para el verificador"
+  "festivals/staging/fantasmagoria-2026-largos.json": "la página Largometrajes 2026 del festival: sinopsis y estreno de cada largo, y sus funciones para el verificador",
+  "festivals/staging/fantasmagoria-2026-correcciones.json": "las fichas de TMDB declaradas a mano (8 obras que el candado no ligaba solo); las lee pipeline/enriquecer.py"
  },
  "festival": {
   "crudo": "festivals/staging/fantasmagoria-2026-crudo.json",
