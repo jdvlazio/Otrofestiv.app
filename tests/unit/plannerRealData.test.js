@@ -105,7 +105,9 @@ for (const file of FESTIVALS) {
         // ninguna (`allFit` en findMax) — su maximalidad se evalúa sobre el
         // conjunto completo, no por sesión individual.
         for (const ex of sc.excluded || []) {
-          const screens = d.films.filter(f => f.title === ex && f.day && f.time && !f.info);
+          // `by_invitation`: cerrada al público, el plan no la propone por diseño
+          // (screeningPlannable, #988) — quedar fuera no es falta de maximalidad
+          const screens = d.films.filter(f => f.title === ex && f.day && f.time && !f.info && !f.by_invitation);
           if (!screens.length) continue;
           if (screens[0].is_recurring) {
             const allFit = screens.every(scr => !sc.schedule.some(p => api.screensConflict(p, scr)));

@@ -62,7 +62,9 @@ FONDO_ES_ARTE = {'funeral-siniestro.jpg',
                  # «Manual para invocar fantasmas» (Juliana Zuluaga): fantasmas sobre
                  # negro, créditos abajo sobre negro; la segunda pasada iba a quitar
                  # ↑7 ↓5 (Mamut, 28 sep 2026)
-                 'manual-para-invocar-fantasmas.jpg'}
+                 'manual-para-invocar-fantasmas.jpg',
+                 # Fantasmagoría 8 (29 sep): el negro de los dos afiches es diseño
+                 'familia-teme-enfrentar-una-nueva-noche-de-terror.jpg', 'horror-and-love.jpg'}
 
 
 def rejilla(path):
