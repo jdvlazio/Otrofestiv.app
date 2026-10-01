@@ -797,7 +797,7 @@
    "sala": "Sala 2",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "(versión restaurada) conversacion con director.",
+   "synopsis": "(Versión restaurada) conversacion con director.",
    "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
@@ -1365,7 +1365,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T10:27:57",
+  "fecha": "2026-09-30T21:29:34",
   "plan_sha": "6f9942cdcada33ca",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py mamut-2026"

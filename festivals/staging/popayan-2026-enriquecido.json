@@ -446,6 +446,13 @@
    "titulo": "HDLT Hijo de la Tierra",
    "_ya_publicada": [
     {
+     "festival": "fantasmagoria-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/siembrafest/hdlt.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+    },
+    {
      "festival": "siembrafest-2026",
      "titulo": "HDLT",
      "poster": "/assets/siembrafest/hdlt.jpg",
@@ -453,7 +460,8 @@
     }
    ],
    "poster": "/assets/siembrafest/hdlt.jpg",
-   "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche"
+   "_verificado": "ya publicada en fantasmagoria-2026: se reusa su afiche",
+   "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
   },
   {
    "titulo": "La Europa",

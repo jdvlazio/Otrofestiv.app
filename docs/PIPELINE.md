@@ -536,6 +536,18 @@ y comprueba dos cosas que solo se ven al cargarlo: que no haya un festival
 anidado dentro de otro, y que el número de festivales no se desplome. Es la
 única forma de saber que el archivo que carga el navegador es el que creemos.
 
+**`[tagline-titulo]` — el tagline va en caja de título** (validate.py, 1 oct 2026). Juan: «el uppercase debería prevalecer». Cada palabra principal con mayúscula; las de enlace (de, del, la, y, por…) no. Ej.: «Festival de Cortometraje Colombiano».
+
+**`[sinopsis-mayuscula]` — la sinopsis empieza con mayúscula** (validate.py, 1 oct 2026).
+
+Juan: «empieza con minúscula, esto en español no es correcto». Llegaban así al
+cortar un rótulo por sus dos puntos o al bajar a minúsculas un crédito en
+mayúscula sostenida. `ensamblar.py` (`mayuscula_inicial`) sube la primera letra,
+después de comillas, signos de apertura o paréntesis, y no toca el resto. Una
+fuente que trae la sinopsis ROTA (le falta una letra) se repone como errata
+declarada en su crudo, con la prueba. El guardián mira lo publicado; los
+festivales cerrados que no se reensamblan quedan como deuda que solo encoge.
+
 **`[sede-con-pin]` — toda sede lleva pin** (validate-festivals.js, 30 sep 2026).
 
 Regla de Juan: «una sede sin pin complica muchísimo la planeación». Si no hay
