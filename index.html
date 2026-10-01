@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609302236">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609302236">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202610010305">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202610010305">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -721,8 +721,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 /* ── Notices: funciones canceladas / reprogramadas ── */
 /* El badge de metadato va CON CONTORNO, no relleno (Juan, 1 oct 2026): el ámbar
    sólido es del CTA primario y tres badges rellenos pesaban más que el título.
-   Mismo texto (--t-xs) con menos aire: 14 px de alto en vez de 16. */
-.meta-badge{display:inline-block;font-size:var(--t-xs);font-weight:var(--w-display);letter-spacing:.5px;padding:0 var(--sp-1);line-height:1.5;border-radius:var(--r-md);font-family:var(--font);margin-left:var(--sp-2);vertical-align:middle;flex-shrink:0;background:transparent;color:var(--amber);box-shadow:inset 0 0 0 1px var(--amber-50)}
+   Interior (V2, auditoría del 1 oct): 8 px en peso 600 —el 800 cerraba los
+   huecos de las letras y las agrandaba— con 0,8 px entre letras, y 8 px de aire
+   a cada lado: con 4 px el texto quedaba a 3 px del contorno. Píldora. */
+.meta-badge{display:inline-block;font-size:var(--t-badge);font-weight:var(--w-semi);letter-spacing:.8px;padding:1px var(--sp-2);line-height:1.25;border-radius:var(--r-pill);font-family:var(--font);margin-left:var(--sp-2);vertical-align:middle;flex-shrink:0;background:transparent;color:var(--amber);box-shadow:inset 0 0 0 1px var(--amber-50)}
 .meta-badge.sm{font-size:var(--t-badge);padding:1px 4px;margin-left:var(--sp-1)}
 .notice-badge{display:inline-block;font-size:var(--t-xs);font-weight:var(--w-display);letter-spacing:.5px;padding:2px var(--sp-2);border-radius:var(--r-md);font-family:var(--font);margin-right:var(--sp-2);vertical-align:middle;flex-shrink:0;background:var(--amber);color:var(--bg)}
 /* count-badge — círculo/píldora para conteos numéricos — regla global */
@@ -3716,7 +3718,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609302236";
+    s.src="/src/main.js?v=202610010305";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el
