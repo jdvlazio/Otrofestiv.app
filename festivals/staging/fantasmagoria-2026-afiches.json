@@ -1,0 +1,29 @@
+{
+ "_provenance": {
+  "fuente": "afiches buscados fuera de TMDB y MIRADOS uno por uno",
+  "capturado": "2026-09-30",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche; el título va en la imagen y la dirección en el afiche o en su página oficial",
+  "descartados": {
+   "Contrafrente": "su única imagen oficial (IMDb, Shortfilmwire, tarjeta del festival) es un collage de fotogramas con el título, sin créditos: no es un afiche (decisión de Juan, 30 sep)",
+   "Vientre": "solo existe la tarjeta del festival con una miniatura del afiche"
+  }
+ },
+ "afiches": {
+  "No es el Fin del Mundo": {
+   "archivo": "fuentes/afiches/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
+   "fuente": "https://macabro.mx/cortometraje/no-es-el-fin-del-mundo/"
+  },
+  "Quazar": {
+   "archivo": "fuentes/afiches/fantasmagoria-2026/quazar.jpg",
+   "fuente": "https://www.instagram.com/p/DZgDLE7GIDi/ — sin las franjas laterales del post"
+  },
+  "Ubicua": {
+   "archivo": "fuentes/afiches/fantasmagoria-2026/ubicua.jpg",
+   "fuente": "https://www.imdb.com/title/tt39674500/"
+  },
+  "Siempre Hay un Monstruo": {
+   "archivo": "fuentes/afiches/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
+   "fuente": "https://www.instagram.com/p/DZfGyK5I5w9/"
+  }
+ }
+}
