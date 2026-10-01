@@ -103,6 +103,13 @@ SEDE_EN_LINEA = 'Twitch · Sociedad Fantasmagoría'
 STREAM_URL = 'https://www.twitch.tv/sociedadfantasmagoria'   # el que da la propia noticia, al pie
 INICIO = '2026-10-15'
 
+# LA HORA QUE LA PARRILLA IMPRIME MAL, con su prueba (verificado en vivo el 30
+# sep). «Coração das Trevas» el viernes 16 en el MAMM sale «6:30pm», pero la
+# parrilla va en orden de hora y la lista entre la de las 4:00pm y las de las
+# 5:00pm (4:00 → 6:30 → 5:00 → 5:00 → 6:00…); la página de largometrajes dice
+# «4:30 p.m.». Se publica 16:30 (decisión de Juan) y se preguntó al festival.
+HORA_ERRATA = {('Coração das Trevas (Heart of Darkness)', '2026-10-16', '18:30'): '16:30'}
+
 # EL ACCESO, con las palabras de la parrilla. «Entrada con Boleta» = «funciones
 # con cobro especial en Colombo Americano, CineProx y MAMM» (nota de la noticia).
 def acceso(txt):
@@ -367,6 +374,10 @@ def main():
             o['titulo'] = recta(o['titulo'])
             if o.get('pais'):
                 o['pais'] = re.sub(r'\s+e\s+', ', ', o['pais'])
+        _k = (r.get('titulo'), r['dia'], r['hora'])
+        if _k in HORA_ERRATA:
+            r['hora'] = HORA_ERRATA[_k]
+            r.setdefault('_src', {})['hora_impresa'] = _k[2]
         funciones.append({k: v for k, v in r.items() if v not in (None, '')})
 
     # DURACIÓN DEDUCIDA de lo que no la publica (actividades y cortos sin lista)

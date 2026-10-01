@@ -26,8 +26,6 @@ DIAS = ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'doming
 
 # (título, día, hora) → qué se hizo. Mirado en las dos páginas el 29 sep.
 CONTRADICCIONES = {
-    ('Coração das Trevas (Heart of Darkness)', '2026-10-16', '16:30'): 'la página de largos dice 4:30 p. m.; la parrilla, 6:30 p. m. Se publica la parrilla; preguntado al festival',
-    ('Coração das Trevas (Heart of Darkness)', '2026-10-16', '18:30'): 'ver la de las 16:30',
     ('Al Final del Espectro', '2026-10-19', '17:00'): 'la página de largos dice lunes 19; la parrilla, martes 20 (Colombo). Se publica la parrilla; preguntado',
     ('Al Final del Espectro', '2026-10-20', '17:00'): 'ver la del lunes 19',
     ('Schichinin No Samurai (Seven Samurai)', '2026-10-16', '18:30'): 'la parrilla dice «Entrada Libre»; la página de largos, «Entrada con boleta». Se publica la parrilla; preguntado',

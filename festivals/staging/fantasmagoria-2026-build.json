@@ -584,7 +584,7 @@
    "duration": "84 min",
    "genre": "Animación",
    "day": "2026-10-16",
-   "time": "18:30",
+   "time": "16:30",
    "day_order": 1,
    "venue": "Museo de Arte Moderno de Medellín - MAMM - Medellín",
    "has_qa": false,
@@ -594,7 +594,8 @@
    "posterSource": "tmdb",
    "_src": {
     "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "date": "2026-09-28",
+    "hora_impresa": "18:30"
    },
    "premiere": "Estreno colombiano",
    "lbSlug": "heart-of-darkness-2025",
@@ -3335,7 +3336,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T18:42:48",
+  "fecha": "2026-09-30T19:42:30",
   "plan_sha": "c1b484a196893ea0",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"
