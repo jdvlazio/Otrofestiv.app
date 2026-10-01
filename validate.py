@@ -6032,6 +6032,12 @@ try:
     import glob as _g, json as _j, os as _os
     # Festivales ya publicados cuya deuda es histórica: solo puede ENCOGER.
     _DEUDA_SIN = {'ficci65': 0, 'aff2026': 0}
+    # TMDB SIN NADA QUE COSECHAR: la ficha existe pero no tiene sinopsis en
+    # ningún idioma (consultado es-ES y en-US). Cada entrada nombra la consulta;
+    # si TMDB la llena, la obra vuelve a exigirse sola al re-enriquecer.
+    _TMDB_VACIA = {('fantasmagoria-2026', 'La Flor del Miedo'):
+                   'TMDB 1546267 «The Flower of Fear»: overview vacío en es-ES y en-US (30 sep); '
+                   'la página de la edición tampoco la trae'}
     _malos = []
     for _f in sorted(_g.glob('festivals/*.json')):
         _fid = _os.path.basename(_f)[:-5]
@@ -6054,7 +6060,8 @@ try:
         # otro festival.
         _huecos = [_x.get('title', '?') for _x in _fichas
                    if _x.get('tmdb_id') and not _x.get('synopsis')
-                   and not _x.get('synopsis_en')]
+                   and not _x.get('synopsis_en')
+                   and (_fid, _x.get('title')) not in _TMDB_VACIA]
         if _huecos:
             _malos.append((_fid, _huecos))
     if _malos:

@@ -110,6 +110,12 @@ INICIO = '2026-10-15'
 # «4:30 p.m.». Se publica 16:30 (decisión de Juan) y se preguntó al festival.
 HORA_ERRATA = {('Coração das Trevas (Heart of Darkness)', '2026-10-16', '18:30'): '16:30'}
 
+# LA DURACIÓN QUE LA PARRILLA NO DA y otra fuente sí. «Iris de Cristal» se
+# imprime sin ficha («(cortometraje)»), así que caía en la deducida por el hueco
+# (60). Es el corto de Diego Gaviria, TMDB 1368500: 13 min (ligado por decisión
+# de Juan, 30 sep; ver fantasmagoria-2026-correcciones.json).
+DURACION_DE_OTRA_FUENTE = {'Iris de Cristal': (13, 'https://www.themoviedb.org/movie/1368500')}
+
 # EL ACCESO, con las palabras de la parrilla. «Entrada con Boleta» = «funciones
 # con cobro especial en Colombo Americano, CineProx y MAMM» (nota de la noticia).
 def acceso(txt):
@@ -382,6 +388,9 @@ def main():
 
     # DURACIÓN DEDUCIDA de lo que no la publica (actividades y cortos sin lista)
     for f in funciones:
+        if f.get('titulo') in DURACION_DE_OTRA_FUENTE:
+            f['duracion_min'] = DURACION_DE_OTRA_FUENTE[f['titulo']][0]
+            continue
         if f.get('duracion_min') or f.get('director'):      # una película sin duración la completa TMDB
             continue
         ini = int(f['hora'][:2]) * 60 + int(f['hora'][3:])
