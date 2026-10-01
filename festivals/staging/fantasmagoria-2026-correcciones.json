@@ -39,6 +39,20 @@
    "tmdb": 1546267,
    "_fuente": "https://www.themoviedb.org/movie/1546267",
    "_por_que": "TMDB «The Flower of Fear»: Jorge Florez Arcila, la misma dirección; ganó en Oldenburg 2025 con ese título. TMDB no tiene año NI duración, así que el candado no puede corroborar: se declara a mano (decisión de Juan, 30 sep)."
+  },
+  "Quazar": {
+   "tmdb": 1786245,
+   "anio": 2023,
+   "genero": "Ciencia ficción",
+   "_fuente": "https://www.themoviedb.org/movie/1786245",
+   "_por_que": "Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Alejandro Vargas, 2023 (Bogoshorts 2023 la programó; publicábamos 2026, el año del festival), 20 min, Colombia, Ciencia ficción (por la sinopsis), sinopsis del festival y su afiche oficial. Letterboxd: quazar. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB."
+  },
+  "No es el Fin del Mundo": {
+   "tmdb": 1786249,
+   "anio": 2025,
+   "genero": "Terror",
+   "_fuente": "https://www.themoviedb.org/movie/1786249",
+   "_por_que": "Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Sebastián Flórez, 2025 (ficha de Macabro 2026: «CORTO INT · Colombia · 2025»; publicábamos 2026), 17 min, Colombia, Terror (apocalipsis zombi), sinopsis de Macabro y su afiche oficial recortado arriba y abajo a 2:3. Letterboxd: no-es-el-fin-del-mundo. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB."
   }
  }
 }

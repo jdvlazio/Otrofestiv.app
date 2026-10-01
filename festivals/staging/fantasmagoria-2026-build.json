@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festivalfantasmagoriamedellin.com, noticia de programación (wp-json post 6481)",
-  "capturado": "2026-09-30",
+  "capturado": "2026-10-01",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado, pero se publica en la ciudad «Medellín» (decisión de Juan, 30 sep): con una sola sede fuera, la app abría con «¿A cuál ciudad vas?» para 2 de 85 funciones. La dirección y el pin son los reales de Envigado, y el traslado se calcula con ellos.",
@@ -1454,10 +1454,15 @@
      "director": "Sebastián Flórez",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "year": 2026,
+     "year": 2025,
      "duration": "17 min",
      "poster": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "no-es-el-fin-del-mundo",
+     "tmdb_id": 1786249,
+     "synopsis": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi.",
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "HDLT",
@@ -1550,11 +1555,14 @@
      "director": "Alejandro Vargas",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "year": 2026,
+     "year": 2023,
      "duration": "20 min",
      "poster": "/assets/fantasmagoria-2026/quazar.jpg",
      "posterSource": "oficial",
+     "lbSlug": "quazar",
+     "tmdb_id": 1786245,
      "synopsis": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
+     "genre": "Ciencia ficción",
      "synopsis_lang": "es"
     },
     {
@@ -2257,11 +2265,14 @@
      "director": "Alejandro Vargas",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "year": 2026,
+     "year": 2023,
      "duration": "20 min",
      "poster": "/assets/fantasmagoria-2026/quazar.jpg",
      "posterSource": "oficial",
+     "lbSlug": "quazar",
+     "tmdb_id": 1786245,
      "synopsis": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
+     "genre": "Ciencia ficción",
      "synopsis_lang": "es"
     },
     {
@@ -3398,7 +3409,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T21:28:58",
+  "fecha": "2026-10-01T15:08:04",
   "plan_sha": "29986c3c06449af1",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"
