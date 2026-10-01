@@ -1159,7 +1159,7 @@ export const FESTIVAL_CONFIG={
     // EL AFICHE OFICIAL de la edición (@cinecortofest p/DdCljrXoEzp, lámina 1:
     // «5–11 octubre 2026 · teatro Bolívar · entrada libre»). 1:1 estirado a 2:3.
     keyArt:'/assets/keyart/popayan2026-v1.jpg',
-    tagline:'Festival de cortometraje colombiano',
+    tagline:'Festival de Cortometraje Colombiano',
     storageKey:'popayan2026_',festivalStartStr:'2026-10-05T00:00:00',festivalEndStr:'2026-10-11T23:59:00',
     festivalDates:{'2026-10-05':'2026-10-05','2026-10-06':'2026-10-06','2026-10-07':'2026-10-07','2026-10-08':'2026-10-08','2026-10-09':'2026-10-09','2026-10-10':'2026-10-10','2026-10-11':'2026-10-11'},
     days:[{k:'2026-10-05',d:5,lbl:'LUN'},{k:'2026-10-06',d:6,lbl:'MAR'},{k:'2026-10-07',d:7,lbl:'MIÉ'},{k:'2026-10-08',d:8,lbl:'JUE'},{k:'2026-10-09',d:9,lbl:'VIE'},{k:'2026-10-10',d:10,lbl:'SÁB'},{k:'2026-10-11',d:11,lbl:'DOM'}],
@@ -1197,7 +1197,7 @@ export const FESTIVAL_CONFIG={
     // EL PÓSTER OFICIAL de la 8.ª edición (@mfantasmagoria p/DayyyJGFK86, lámina 1,
     // obra de Bastián Velásquez). 4:5 estirado a 2:3.
     keyArt:'/assets/keyart/fantasmagoria2026-v1.jpg',
-    tagline:'Festival de cine fantástico y de terror',
+    tagline:'Festival de Cine Fantástico y de Terror',
     // boleta en Colombo Americano, CineProx y MAMM (cobro especial); lo demás, libre
     ticketing_model:'mixed',
     storageKey:'fantasmagoria2026_',festivalStartStr:'2026-10-15T00:00:00',festivalEndStr:'2026-10-25T23:59:00',

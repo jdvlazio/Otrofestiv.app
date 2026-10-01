@@ -6020,6 +6020,63 @@ except Exception as _e:
 
 
 
+# ── [tagline-titulo] el tagline del festival va en caja de título ────────────
+# Juan (1 oct 2026): «Festival de Cine Fantástico y de Terror», «Festival de
+# Cortometraje Colombiano» — «el uppercase debería prevalecer». Cada palabra
+# principal con mayúscula; las cortas de enlace (de, del, la, y, por…) no.
+check = 'tagline-titulo'
+try:
+    import re as _rt
+    _cfg = open('src/config.js', encoding='utf-8').read()
+    _MENORES = {'de', 'del', 'la', 'las', 'el', 'los', 'y', 'e', 'en', 'por', 'para', 'al', 'con', 'a', 'o', 'u', 'the', 'of', 'and', 'for', 'in'}
+    _malos = []
+    for _m in _rt.finditer(r"tagline:'([^']+)'|tagline:\{es:'([^']+)'", _cfg):
+        _t = _m.group(1) or _m.group(2)
+        _min = [w for w in _rt.findall(r"[A-Za-zÁÉÍÓÚÑáéíóúñü]+", _t)
+                if w.lower() not in _MENORES and w[0].islower()]
+        if _min:
+            _malos.append(f'«{_t}» ({", ".join(_min)})')
+    if _malos:
+        fail(check, 'tagline con palabras principales en minúscula: ' + '; '.join(_malos))
+    else:
+        ok(check, 'todos los taglines en caja de título')
+except Exception as _e:
+    warn(check, f'no se pudo verificar tagline-titulo: {_e}')
+
+
+# ── [sinopsis-mayuscula] la sinopsis empieza con mayúscula ──────────────────
+# Juan (1 oct 2026): «empieza con minúscula, esto en español no es correcto».
+# Llegaban así por dos caminos: cortar un rótulo por sus dos puntos («…“Colombia
+# es Fantástica”: una mirada al cine…») y bajar a minúsculas un crédito en
+# mayúscula sostenida. Desde entonces ensamblar.py (mayuscula_inicial) sube la
+# PRIMERA letra; este guardián mira lo publicado. Deuda: los festivales ya
+# cerrados que no se vuelven a ensamblar (solo puede encoger).
+check = 'sinopsis-mayuscula'
+try:
+    import glob as _gm, json as _jm, os as _om
+    _DEUDA_MIN = {('cinemancia-2026', 'Solo qu3r3mos un poco de amor'), ('vartex-2026', 'Busco casa')}
+    _ANTES = ' «"“\'¿¡(—–-…'
+    _malas = []
+    for _f in sorted(_gm.glob('festivals/*.json')):
+        _fid = _om.path.basename(_f)[:-5]
+        try:
+            _d = _jm.load(open(_f, encoding='utf-8'))
+        except Exception:
+            continue
+        for _x in _d.get('films') or []:
+            for _o in [_x] + (_x.get('film_list') or []):
+                for _k in ('synopsis', 'synopsis_en'):
+                    _s = (_o.get(_k) or '').lstrip(_ANTES)
+                    if _s and _s[0].isalpha() and _s[0].islower() and (_fid, _o.get('title')) not in _DEUDA_MIN:
+                        _malas.append(f'{_fid}: «{(_o.get("title") or "?")[:30]}» ({_k}: «{_s[:25]}…»)')
+    if _malas:
+        fail(check, 'sinopsis que empieza en minúscula — correr ensamblar.py: ' + '; '.join(_malas[:5]))
+    else:
+        ok(check, 'toda sinopsis publicada empieza con mayúscula')
+except Exception as _e:
+    warn(check, f'no se pudo verificar sinopsis-mayuscula: {_e}')
+
+
 # ── [cosecha-tmdb] tener la ficha y no traerse la sinopsis ──────────────────
 # Los guardianes de este repo miraban la FORMA del dato (tipo, enum, campo
 # huérfano) y ninguno preguntaba lo obvio: si fuimos hasta TMDB y anotamos el

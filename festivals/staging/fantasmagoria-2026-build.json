@@ -718,7 +718,7 @@
    "venue": "La Pascasia - Medellín",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "una mirada al cine y televisión de género hecho en Colombia. Conversan Mauricio Romero y Cristian Jaramillo.",
+   "synopsis": "Una mirada al cine y televisión de género hecho en Colombia. Conversan Mauricio Romero y Cristian Jaramillo.",
    "synopsis_lang": "es",
    "_src": {
     "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
@@ -3398,7 +3398,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T20:37:53",
+  "fecha": "2026-09-30T21:28:58",
   "plan_sha": "29986c3c06449af1",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"

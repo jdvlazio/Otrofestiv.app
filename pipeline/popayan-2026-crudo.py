@@ -134,6 +134,10 @@ SOLO_PARRILLA = {'Amor en los tiempos de como sea que se llame el presente'}
 # coproducciones («France, Colombia», «Colombia, Portugal») se respetan. Las
 # 29 fichas de TMDB que ya lo tienen incluyen todas a Colombia (29 sep).
 PAIS_SELECCION = 'Colombia'
+# LA SINOPSIS QUE LA FUENTE TRAE ROTA, con su prueba. La ficha de «Legado» en
+# cinecorto.co (post 15569) empieza «na serie documental que viaja…»: se comió
+# la primera letra. Se repone (Juan, 1 oct 2026); el resto, literal.
+SINOPSIS_ERRATA = {'Legado': ('na serie documental', 'Una serie documental')}
 ACTIVIDADES = {'Apertura del Festival': 'apertura', 'Conversatorio': 'conversatorio',
                # Terra Plaza (30 sep): la apertura de la muestra con la banda, y
                # la grabación del videopodcast
@@ -211,6 +215,14 @@ def normalizar(L):
 def hora(h, m, ap):
     h = int(h) % 12 + (12 if ap.lower() == 'pm' else 0)
     return f'{h:02d}:{m or "00"}'
+
+
+def _sinopsis(c):
+    s = c.get('sinopsis')
+    e = SINOPSIS_ERRATA.get(c.get('titulo'))
+    if s and e and s.startswith(e[0]):
+        s = e[1] + s[len(e[0]):]
+    return s
 
 
 def mins(h):
@@ -343,7 +355,7 @@ def main():
             usadas.add(plano(c['titulo']))
             obras.append({'titulo': pub_t or c['titulo'], 'director': c['director'], 'anio': c.get('anio'),
                           'pais_respaldo': PAIS_SELECCION,
-                          'duracion_min': dur or c.get('duracion_min'), 'sinopsis': c.get('sinopsis')})
+                          'duracion_min': dur or c.get('duracion_min'), 'sinopsis': _sinopsis(c)})
         if obras:
             r['obras'] = [{k2: v for k2, v in o.items() if v not in (None, '')} for o in obras]
             r['duracion_min'] = sum(o['duracion_min'] or 0 for o in obras)

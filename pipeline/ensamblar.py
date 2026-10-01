@@ -182,6 +182,23 @@ def _pais_de_respaldo(dst, src):
             dst.pop('flags')
 
 
+_ANTES_DE_LA_LETRA = ' «"“\'¿¡(—–-…'
+
+
+def mayuscula_inicial(s):
+    """La sinopsis empieza con mayúscula (Juan, 1 oct 2026: «en español no es
+    correcto»). Un texto que llega en minúscula viene de cortar un rótulo por sus
+    dos puntos («…“Colombia es Fantástica”: una mirada al cine…») o de un crédito
+    en mayúscula sostenida pasado a minúsculas. Solo se toca la PRIMERA letra,
+    después de comillas, signos de apertura o paréntesis; el resto, literal."""
+    if not isinstance(s, str):
+        return s
+    i = len(s) - len(s.lstrip(_ANTES_DE_LA_LETRA))
+    if i < len(s) and s[i].isalpha() and s[i].islower():
+        return s[:i] + s[i].upper() + s[i + 1:]
+    return s
+
+
 def ensamblar(fid, escribir=True):
     plan = _plan(fid)
     cfg = plan['festival']
@@ -457,6 +474,11 @@ def ensamblar(fid, escribir=True):
         out['_acceso'] = crudo['_acceso']
     out['sections'] = secciones
     out['venues'] = venues
+    for _f in films:
+        for _o in [_f] + (_f.get('film_list') or []):
+            for _k in ('synopsis', 'synopsis_en'):
+                if _o.get(_k):
+                    _o[_k] = mayuscula_inicial(_o[_k])
     out['films'] = films
 
     print(f'  {fid}: {len(films)} funciones · {len(venues)} sedes · {len(secciones)} secciones '
