@@ -126,6 +126,11 @@ SINOPSIS_TALLER = {
 # LA SALA QUE LA LÁMINA NO DICE Y OTRA FUENTE DEL FESTIVAL SÍ. El post de la
 # función (p/DdwI93AkW1e, 25 sep): «08 de octubre | 6:30 p. m. | Teatro MAMM».
 SALA_DE_OTRA_FUENTE = {'Frío metal': 'Teatro'}
+# EL RENGLÓN DE LA LÁMINA, REESCRITO (decisión de Juan, 1 oct 2026). Va en
+# mayúscula sostenida y sin tildes («(VERSIÓN RESTAURADA) CONVERSACION CON
+# DIRECTOR»); pasado a minúsculas quedaba «(versión restaurada) conversacion con
+# director.», sin la tilde y con el paréntesis abriendo la frase.
+CREDITO_REESCRITO = {'Programa: Alberto Giraldo': 'Versión restaurada. Conversación con el director.'}
 # y la SINOPSIS del mismo post, que es texto del festival: le gana a la de TMDB
 # (que ni siquiera la tiene en español)
 SINOPSIS_DE_OTRA_FUENTE = {
@@ -323,7 +328,7 @@ def main():
         # distinto en cada sesión, y un bloque recurrente lleva UNA sinopsis)
         if (not catalogo.get(t) and not a.get('obras') and not a.get('invitados')
                 and t not in ACTIVIDAD and not reg.get('sinopsis') and a.get('credito')):
-            c = a['credito'].strip().capitalize()
+            c = CREDITO_REESCRITO.get(t) or a['credito'].strip().capitalize()
             reg['sinopsis'] = c if c.endswith('.') else c + '.'
         funciones.append(reg)
 
