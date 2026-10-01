@@ -59,8 +59,8 @@ window.sentryOnLoad = function() {
      contraste en la pestaña ("borde blanco"). La marca flotante contrasta sola
      en tema claro y oscuro — sin caja, sin backdrop. El apple-touch-icon del
      home screen conserva el ícono completo con fondo (ahí sí corresponde). -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609302058">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609302058">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=202609302127">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=202609302127">
 <!-- Caching gestionado por el Service Worker (sw.js) — Network First para HTML -->
 <title>Otrofestiv — Tú decides el festival</title>
 <meta name="description" content="Tu agenda personal para festivales de cine. Explorá, planificá y sacá el máximo de cada festival.">
@@ -719,7 +719,10 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
 
 
 /* ── Notices: funciones canceladas / reprogramadas ── */
-.meta-badge{display:inline-block;font-size:var(--t-xs);font-weight:var(--w-display);letter-spacing:.5px;padding:2px var(--sp-2);border-radius:var(--r-md);font-family:var(--font);margin-left:var(--sp-2);vertical-align:middle;flex-shrink:0;background:var(--amber);color:var(--bg)}
+/* El badge de metadato va CON CONTORNO, no relleno (Juan, 1 oct 2026): el ámbar
+   sólido es del CTA primario y tres badges rellenos pesaban más que el título.
+   Mismo texto (--t-xs) con menos aire: 14 px de alto en vez de 16. */
+.meta-badge{display:inline-block;font-size:var(--t-xs);font-weight:var(--w-display);letter-spacing:.5px;padding:0 var(--sp-1);line-height:1.5;border-radius:var(--r-md);font-family:var(--font);margin-left:var(--sp-2);vertical-align:middle;flex-shrink:0;background:transparent;color:var(--amber);box-shadow:inset 0 0 0 1px var(--amber-50)}
 .meta-badge.sm{font-size:var(--t-badge);padding:1px 4px;margin-left:var(--sp-1)}
 .notice-badge{display:inline-block;font-size:var(--t-xs);font-weight:var(--w-display);letter-spacing:.5px;padding:2px var(--sp-2);border-radius:var(--r-md);font-family:var(--font);margin-right:var(--sp-2);vertical-align:middle;flex-shrink:0;background:var(--amber);color:var(--bg)}
 /* count-badge — círculo/píldora para conteos numéricos — regla global */
@@ -1114,14 +1117,13 @@ h1.hdr-wordmark,.hdr-wordmark{margin:0;font-family:var(--font);font-size:var(--t
    align-items:flex-start alinea los badges (NOW/Q&A) a la 1ª línea (1 línea = igual
    que center). line-height ajustado para 2 líneas legibles. */
 .plist-title-txt{flex:1;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.25}
-/* La etiqueta de metadato («CON BOLETA», PRENSA…) es hermana FLEX del título,
-   no está dentro de su texto. Con align-items:flex-start quedaba pegada a la
-   PRIMERA línea mientras la frase seguía debajo, y se leía «El viento sabe que
-   vuelvo [CON BOLETA] / a casa»: un título mal cortado antes que una etiqueta.
-   Bajándola a la última línea TERMINA la frase en vez de interrumpirla. Va en
-   .meta-badge y no en el contenedor: el badge de CANCELADA (prefijo) y los
-   puntos de estado siguen anclados arriba, que es donde los puso el diseño. */
-.plist-title .meta-badge{align-self:flex-end}
+/* Los badges de la tarjeta van en SU PROPIA FILA, bajo el título (Juan, 1 oct
+   2026). Eran hermanos flex del título y cada uno le quitaba ancho: con tres
+   (ESTRENO · Q&A · CON BOLETA) a «Familia Teme Enfrentar Una Nueva Noche de
+   Terror» le quedaban 36 px y se leía «Famili / Te…». Ahora el título tiene la
+   fila entera y da igual si hay uno o cuatro. */
+.plist-badges{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-1);margin-bottom:var(--sp-1)}
+.plist-badges .meta-badge{margin-left:0}
 .plist-meta{font-size:var(--t-sm);font-weight:var(--w-thin);color:var(--gray);margin-bottom:var(--sp-1)}
 /* plist-city — la CIUDAD en la card del modo por días (festivales multiciudad).
    FICDEH 2026: 11 ciudades y 387 funciones; sin esto había que abrir cada ficha
@@ -3714,7 +3716,7 @@ setTimeout(function(){
   function bootApp(){
     var s = document.createElement('script');
     s.type = 'module';
-    s.src="/src/main.js?v=202609302058";
+    s.src="/src/main.js?v=202609302127";
     document.body.appendChild(s);
     // Watchdog de boot (P0 18 jul): si el grafo ESM murió en el import (caché
     // HTTP mixta tras deploys en ráfaga — main.js nuevo + módulo viejo sin el

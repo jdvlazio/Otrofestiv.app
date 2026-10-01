@@ -2885,17 +2885,17 @@ test('T133b — la fila de ciudad no cuenta dos veces la obra que va a dos salas
     .toBeLessThanOrEqual(r.total);
 });
 
-// ── T140 — la etiqueta de metadato no parte el título en dos ─────────────────
-// «CON BOLETA» quedaba pegada a la PRIMERA línea de un título de dos, y se leía
-// «El viento sabe que vuelvo [CON BOLETA] / a casa»: un título mal cortado antes
-// que una etiqueta. No estaba dentro del texto —es hermana FLEX del bloque del
-// título—, pero el align-items:flex-start del contenedor la anclaba arriba.
-// Bajándola a la última línea termina la frase en vez de interrumpirla.
+// ── T140 — las etiquetas de metadato no le quitan ancho al título ─────────────
+// Primero (sep 2026): «CON BOLETA» partía «El viento sabe que vuelvo / a casa»
+// porque era hermana flex del título, y se la bajó a la última línea. Después
+// (Juan, 1 oct 2026): con TRES etiquetas en la misma fila, a «Familia Teme
+// Enfrentar Una Nueva Noche de Terror» le quedaban 36 px y se leía «Famili /
+// Te…». La regla nueva: las etiquetas van en SU PROPIA FILA (.plist-badges),
+// debajo del título, y el título tiene la fila entera.
 //
-// Se mide la POSICIÓN de la etiqueta contra las líneas del título, que es la
-// magnitud del hallazgo; el CSS puede decir align-self y aun así no aplicar
-// (contenedor sin flex, especificidad, otro selector ganando).
-test('T140 — con el título en dos líneas, la etiqueta va en la última', async ({ page }) => {
+// Se mide la GEOMETRÍA, que es la magnitud del hallazgo: el título ocupa el
+// ancho completo de su fila y cada etiqueta queda por debajo de él.
+test('T140 — las etiquetas van debajo del título y no le quitan ancho', async ({ page }) => {
   await enterFestival(page, 'cinemancia2026', '2026-09-05T11:00:00-05:00');
   const r = await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
@@ -2905,32 +2905,30 @@ test('T140 — con el título en dos líneas, la etiqueta va en la última', asy
     await w(600);
     switchMainNav('mnav-cartelera');
     await w(1500);
-    const casos = [];
-    document.querySelectorAll('.plist-title').forEach(fila => {
-      const txt = fila.querySelector('.plist-title-txt');
-      const badge = fila.querySelector('.meta-badge');
-      if (!txt || !badge) return;
-      const tb = txt.getBoundingClientRect(), bb = badge.getBoundingClientRect();
-      const lh = parseFloat(getComputedStyle(txt).lineHeight) || 16;
-      const lineas = Math.round(tb.height / lh);
-      if (lineas < 2) return;                       // con una línea no hay dónde partirse
+    const casos = [], enElTitulo = [];
+    document.querySelectorAll('.plist-item').forEach(it => {
+      const fila = it.querySelector('.plist-title'), txt = it.querySelector('.plist-title-txt');
+      if (fila && fila.querySelector('.meta-badge')) enElTitulo.push(txt ? txt.innerText.slice(0, 30) : '?');
+      const badges = [...it.querySelectorAll('.plist-badges .meta-badge')];
+      if (!fila || !txt || !badges.length) return;
+      const tb = txt.getBoundingClientRect(), fb = fila.getBoundingClientRect();
       casos.push({
-        txt: txt.innerText.slice(0, 30), etiqueta: badge.innerText,
-        lineas,
-        // distancia del PIE de la etiqueta al pie del título: 0 = última línea
-        alPie: Math.round(tb.bottom - bb.bottom),
-        // distancia de su TECHO al techo del título: 0 = primera línea (el bug)
-        alTecho: Math.round(bb.top - tb.top)
+        txt: txt.innerText.slice(0, 30), n: badges.length,
+        // el título usa el ancho de su fila (salvo el prefijo/punto de estado)
+        anchoLibre: Math.round(fb.width - tb.width),
+        // cada etiqueta empieza por debajo del pie del título
+        debajo: Math.min(...badges.map(b => Math.round(b.getBoundingClientRect().top - tb.bottom)))
       });
     });
-    return { casos };
+    return { casos, enElTitulo };
   });
-  // Premisa: hace falta al menos un título de dos líneas CON etiqueta. Sin
-  // ninguno el bucle de abajo no itera y el test pasa sin mirar nada.
-  expect(r.casos.length, 'el fixture trae títulos de dos líneas con etiqueta').toBeGreaterThan(0);
+  // Premisa: hace falta al menos una tarjeta con etiquetas. Sin ninguna el bucle
+  // de abajo no itera y el test pasa sin mirar nada.
+  expect(r.casos.length, 'el fixture trae tarjetas con etiqueta').toBeGreaterThan(0);
+  expect(r.enElTitulo, 'ninguna etiqueta vuelve a la fila del título').toEqual([]);
   for (const c of r.casos) {
-    expect(c.alPie, `«${c.etiqueta}» en ${c.txt}: va con la última línea`).toBeLessThanOrEqual(4);
-    expect(c.alTecho, `«${c.etiqueta}» en ${c.txt}: y NO junto a la primera`).toBeGreaterThan(4);
+    expect(c.debajo, `«${c.txt}»: sus ${c.n} etiquetas van debajo del título`).toBeGreaterThanOrEqual(-1);
+    expect(c.anchoLibre, `«${c.txt}»: el título tiene la fila entera`).toBeLessThanOrEqual(24);
   }
 });
 
