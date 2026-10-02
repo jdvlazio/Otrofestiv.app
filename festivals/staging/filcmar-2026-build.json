@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @filcmar — el carrusel de programación (16 láminas)",
-  "capturado": "2026-10-01",
+  "capturado": "2026-10-02",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina, tal cual; la sala va aparte (Foso, Hall, Capilla).",
@@ -350,7 +350,7 @@
    "title_en": "After the Sea"
   },
   {
-   "title": "Si no ardemos cómo iluminar la noche",
+   "title": "Si no ardemos, cómo iluminar la noche",
    "type": "film",
    "section": "✏️ Cinescuela",
    "director": "Kim Torres",
@@ -748,7 +748,7 @@
    "requires_registration": true
   },
   {
-   "title": "MU KI RA",
+   "title": "Mu-Ki-Ra",
    "type": "film",
    "section": "✏️ Cinescuela",
    "director": "Estefanía Piñeres",
@@ -1286,7 +1286,7 @@
    "title_en": "Everything Else Is Noise"
   },
   {
-   "title": "Una vez un cuerpo",
+   "title": "Una vez en un cuerpo",
    "type": "film",
    "section": "🌎 Competencia Latinoamericana",
    "director": "María Cristina Pérez",
@@ -1300,7 +1300,9 @@
    "day_order": 3,
    "venue": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
    "has_qa": false,
-   "poster": "/assets/filcmar-2026/una-vez-un-cuerpo.jpg",
+   "synopsis": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia.",
+   "synopsis_lang": "es",
+   "poster": "/assets/filcmar-2026/una-vez-en-un-cuerpo.jpg",
    "posterSource": "tmdb",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
@@ -1346,7 +1348,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-01T21:28:07",
+  "fecha": "2026-10-02T17:02:35",
   "plan_sha": "627de20e2eb8374c",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"

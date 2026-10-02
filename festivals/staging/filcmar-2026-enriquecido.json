@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-01"
+  "capturado": "2026-10-02"
  },
  "obras": [
   {
@@ -458,37 +458,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "MU KI RA",
-   "tmdb_id": 1446898,
-   "titulo_original": "Mu-Ki-Ra",
-   "poster_path": "/arJSTCDZ1Q34c6aXZxZJF9XuhhQ.jpg",
-   "synopsis_es": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
-   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
-   "genero": "Animación",
-   "anio_tmdb": 2027,
-   "duracion_tmdb": 82,
-   "pais_tmdb": "Colombia, Spain",
-   "lbSlug": "mu-ki-ra",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "MU KI RA",
-   "_director": "Estefanía Piñeres",
-   "_sondeado": "2026-10-01",
-   "_ya_publicada": [
-    {
-     "festival": "fantasmagoria-2026",
-     "titulo": "Mu-Ki-Ra",
-     "tmdb_id": 1446898,
-     "poster": "/assets/fantasmagoria-2026/mu-ki-ra.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "mu-ki-ra",
-     "sinopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes."
-    }
-   ],
-   "_sinopsis_de": "ya publicada en fantasmagoria-2026",
-   "poster": "/assets/filcmar-2026/mu-ki-ra.jpg",
-   "posterSource": "tmdb"
-  },
-  {
    "titulo": "Merrimundi",
    "tmdb_id": 1515178,
    "titulo_original": "Merrimundi",
@@ -519,6 +488,37 @@
    ],
    "poster": "/assets/siembrafest/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
    "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche"
+  },
+  {
+   "titulo": "Mu-Ki-Ra",
+   "tmdb_id": 1446898,
+   "titulo_original": "Mu-Ki-Ra",
+   "poster_path": "/arJSTCDZ1Q34c6aXZxZJF9XuhhQ.jpg",
+   "synopsis_es": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
+   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+   "genero": "Animación",
+   "anio_tmdb": 2027,
+   "duracion_tmdb": 82,
+   "pais_tmdb": "Colombia, Spain",
+   "lbSlug": "mu-ki-ra",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mu-Ki-Ra",
+   "_director": "Estefanía Piñeres",
+   "_sondeado": "2026-10-02",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Mu-Ki-Ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/fantasmagoria-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "sinopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en fantasmagoria-2026",
+   "poster": "/assets/filcmar-2026/mu-ki-ra.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Para no volver",
@@ -676,7 +676,7 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Si no ardemos cómo iluminar la noche",
+   "titulo": "Si no ardemos, cómo iluminar la noche",
    "tmdb_id": 1327436,
    "titulo_original": "Si no ardemos, cómo iluminar la noche",
    "poster_path": "/oWAayyL2aOw5e5frKDVroK0GVfJ.jpg",
@@ -689,9 +689,9 @@
    "title_en": "If We Don't Burn, How Do We Light Up the Night",
    "lbSlug": "if-we-dont-burn-how-do-we-light-up-the-night",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Si no ardemos cómo iluminar la noche",
+   "_busqueda": "Si no ardemos, cómo iluminar la noche",
    "_director": "Kim Torres",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-02",
    "_ya_publicada": [
     {
      "festival": "ficci-65",
@@ -744,11 +744,11 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Una vez un cuerpo",
+   "titulo": "Una vez en un cuerpo",
    "tmdb_id": 1522316,
    "titulo_original": "Una vez en un cuerpo",
    "poster_path": "/jSAfjuWwP9BLIJgofw1vVa6xWaG.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia.",
    "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
    "genero": "Animación",
    "anio_tmdb": 2025,
@@ -757,10 +757,38 @@
    "title_en": "Once in a Body",
    "lbSlug": "once-in-a-body",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Una vez un cuerpo",
+   "_busqueda": "Una vez en un cuerpo",
    "_director": "María Cristina Pérez",
-   "_sondeado": "2026-10-01",
-   "poster": "/assets/filcmar-2026/una-vez-un-cuerpo.jpg",
+   "_sondeado": "2026-10-02",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Una vez en un cuerpo",
+     "poster": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg",
+     "posterSource": "custom",
+     "sinopsis": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/popayan-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en aff-2026",
+   "poster": "/assets/filcmar-2026/una-vez-en-un-cuerpo.jpg",
    "posterSource": "tmdb"
   }
  ],
@@ -1162,36 +1190,6 @@
    "poster": "/assets/filcmar-2026/lo-que-queda-del-mar.jpg",
    "posterSource": "tmdb"
   },
-  "MU KI RA": {
-   "tmdb_id": 1446898,
-   "titulo_original": "Mu-Ki-Ra",
-   "poster_path": "/arJSTCDZ1Q34c6aXZxZJF9XuhhQ.jpg",
-   "synopsis_es": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
-   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
-   "genero": "Animación",
-   "anio_tmdb": 2027,
-   "duracion_tmdb": 82,
-   "pais_tmdb": "Colombia, Spain",
-   "lbSlug": "mu-ki-ra",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "MU KI RA",
-   "_director": "Estefanía Piñeres",
-   "_sondeado": "2026-10-01",
-   "_ya_publicada": [
-    {
-     "festival": "fantasmagoria-2026",
-     "titulo": "Mu-Ki-Ra",
-     "tmdb_id": 1446898,
-     "poster": "/assets/fantasmagoria-2026/mu-ki-ra.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "mu-ki-ra",
-     "sinopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes."
-    }
-   ],
-   "_sinopsis_de": "ya publicada en fantasmagoria-2026",
-   "poster": "/assets/filcmar-2026/mu-ki-ra.jpg",
-   "posterSource": "tmdb"
-  },
   "Merrimundi": {
    "tmdb_id": 1515178,
    "titulo_original": "Merrimundi",
@@ -1208,6 +1206,36 @@
    "_director": "Niles Atallah",
    "_sondeado": "2026-10-01",
    "poster": "/assets/filcmar-2026/merrimundi.jpg",
+   "posterSource": "tmdb"
+  },
+  "Mu-Ki-Ra": {
+   "tmdb_id": 1446898,
+   "titulo_original": "Mu-Ki-Ra",
+   "poster_path": "/arJSTCDZ1Q34c6aXZxZJF9XuhhQ.jpg",
+   "synopsis_es": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
+   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+   "genero": "Animación",
+   "anio_tmdb": 2027,
+   "duracion_tmdb": 82,
+   "pais_tmdb": "Colombia, Spain",
+   "lbSlug": "mu-ki-ra",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mu-Ki-Ra",
+   "_director": "Estefanía Piñeres",
+   "_sondeado": "2026-10-02",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Mu-Ki-Ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/fantasmagoria-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "sinopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en fantasmagoria-2026",
+   "poster": "/assets/filcmar-2026/mu-ki-ra.jpg",
    "posterSource": "tmdb"
   },
   "Para no volver": {
@@ -1360,7 +1388,7 @@
    "poster": "/assets/filcmar-2026/show-de-ziggy-la-maldicion-del-mariachi-bondage.jpg",
    "posterSource": "tmdb"
   },
-  "Si no ardemos cómo iluminar la noche": {
+  "Si no ardemos, cómo iluminar la noche": {
    "tmdb_id": 1327436,
    "titulo_original": "Si no ardemos, cómo iluminar la noche",
    "poster_path": "/oWAayyL2aOw5e5frKDVroK0GVfJ.jpg",
@@ -1373,9 +1401,9 @@
    "title_en": "If We Don't Burn, How Do We Light Up the Night",
    "lbSlug": "if-we-dont-burn-how-do-we-light-up-the-night",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Si no ardemos cómo iluminar la noche",
+   "_busqueda": "Si no ardemos, cómo iluminar la noche",
    "_director": "Kim Torres",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-02",
    "_ya_publicada": [
     {
      "festival": "ficci-65",
@@ -1426,11 +1454,11 @@
    "poster": "/assets/filcmar-2026/somnolitico.jpg",
    "posterSource": "tmdb"
   },
-  "Una vez un cuerpo": {
+  "Una vez en un cuerpo": {
    "tmdb_id": 1522316,
    "titulo_original": "Una vez en un cuerpo",
    "poster_path": "/jSAfjuWwP9BLIJgofw1vVa6xWaG.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia.",
    "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
    "genero": "Animación",
    "anio_tmdb": 2025,
@@ -1439,10 +1467,38 @@
    "title_en": "Once in a Body",
    "lbSlug": "once-in-a-body",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Una vez un cuerpo",
+   "_busqueda": "Una vez en un cuerpo",
    "_director": "María Cristina Pérez",
-   "_sondeado": "2026-10-01",
-   "poster": "/assets/filcmar-2026/una-vez-un-cuerpo.jpg",
+   "_sondeado": "2026-10-02",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "Una vez en un cuerpo",
+     "poster": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg",
+     "posterSource": "custom",
+     "sinopsis": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Una vez en un cuerpo",
+     "tmdb_id": 1522316,
+     "poster": "/assets/popayan-2026/una-vez-en-un-cuerpo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-in-a-body",
+     "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en aff-2026",
+   "poster": "/assets/filcmar-2026/una-vez-en-un-cuerpo.jpg",
    "posterSource": "tmdb"
   }
  },

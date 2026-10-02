@@ -50,7 +50,7 @@ def main():
         if t in crudo.ACTIVIDAD:
             lam[(a['dia'], a['hora'], plano(crudo.TITULO.get(t, t)))] = lugar
         for o in a.get('obras', []):
-            lam[(a['dia'], a['hora'], plano(o['titulo']))] = lugar
+            lam[(a['dia'], a['hora'], plano(crudo.TITULO_OFICIAL.get(o['titulo'], o['titulo'])))] = lugar
     pub = {(f['day'], f['time'], plano(f['title'])): f for f in build['films']}
 
     fallos = []
