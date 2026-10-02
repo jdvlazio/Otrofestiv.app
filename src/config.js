@@ -1194,9 +1194,10 @@ export const FESTIVAL_CONFIG={
     name:'FILCMAR',displayName:'FILCMAR',fullName:'FILCMAR — 8° Festival de Cine de Marinilla',shortName:'FILCMAR',
     city:'Marinilla',country:'CO',
     dates:'9–13 OCT',dates_en:'OCT 9–13',year:2026,timezoneOffset:'-05:00',
-    // LA PORTADA del carrusel de programación (@filcmar p/Dd-Wc29Dhkd, lámina 0),
-    // estirada a 2:3, mientras no tengamos el afiche limpio («Érase una vez en Marinilla»).
-    keyArt:'/assets/keyart/filcmar2026-v1.jpg',
+    // EL AFICHE OFICIAL de la 8.ª edición, «Érase una vez en Marinilla» (el del
+    // post del festival; copia en alta del artículo de CoCrea, colombiacrea.org,
+    // sep 2026). 4:5 estirado a 2:3.
+    keyArt:'/assets/keyart/filcmar2026-v2.jpg',
     // lo que el festival dice de sí mismo (bio de @filcmar: «8º Festival de Cine de Marinilla»)
     tagline:'Festival de Cine de Marinilla',
     storageKey:'filcmar2026_',festivalStartStr:'2026-10-09T00:00:00',festivalEndStr:'2026-10-13T23:59:00',
