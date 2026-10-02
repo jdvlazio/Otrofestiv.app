@@ -1,0 +1,1553 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-10-01"
+ },
+ "obras": [
+  {
+   "titulo": "Adiós al amigo",
+   "tmdb_id": 1182189,
+   "titulo_original": "Adiós al amigo",
+   "poster_path": "/vOyWHDi3ZS5I7PRWINQ0twxNMAk.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After a thousand days of civil war in Colombia in 1902, the revolutionary soldier Alfredo Duarte Amado receives a telegram with the news of the pregnancy of his brother Rodrigo's wife. Without knowing where to go, he convinces an amateur photographer in the bowels of the Chicamocha canyon to go with him searching for his brother lost in the war, but the photographer is also looking for someone – the man who killed his father.",
+   "genero": "Western",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 118,
+   "pais_tmdb": "Colombia",
+   "title_en": "Adios Amigo",
+   "lbSlug": "adios-amigo-2024-1",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Adiós al amigo",
+   "_director": "Iván Gaona",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/adios-al-amigo.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Agachar el rostro",
+   "tmdb_id": 1595079,
+   "titulo_original": "Agachar el rostro",
+   "poster_path": "/vXjVnfIMxnhyvsRfjlEb6jkrmp7.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Shrouded in fog and crumbling stone, a teacher moves through his final day at a rural school, soon to be shut down for lack of students. In quiet solitude, he parts ways with a place that has been his craft and his shelter for years.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Colombia",
+   "title_en": "Lowering the Gaze",
+   "lbSlug": "lowering-the-gaze",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Agachar el rostro",
+   "_director": "Camilo Medina Noy",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/agachar-el-rostro.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Andariega",
+   "tmdb_id": 1456127,
+   "titulo_original": "Andariega",
+   "poster_path": "/uA5PZ9RBb23ESi1RVmnCosygXE0.jpg",
+   "synopsis_es": "Chena, 26 años, recorre cada año cientos de kilómetros para trabajar como jornalera en los cultivos colombianos. Lleva ocho años sin ahorrar ni alcanzar independencia. Su cuerpo y su voluntad son todo lo que tiene.",
+   "synopsis_en": "Each year, 26-year-old María Yessenia Herrera, best-known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters. Traveling and working constitute the basis of her autonomy. She keeps a notebook in her luggage where she writes and reflects about her past and the life that she faces as a woman and as a mother who must provide for a household full of problems and scarcity from afar. Despite her youth, her body is weakening, calling into question her own idea of freedom.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 94,
+   "pais_tmdb": "Colombia",
+   "title_en": "Nomad Spirit",
+   "lbSlug": "nomad-spirit",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Andariega",
+   "_director": "Raúl Soto",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Andariega",
+     "poster": "https://image.tmdb.org/t/p/w500/uA5PZ9RBb23ESi1RVmnCosygXE0.jpg",
+     "posterSource": "tmdb",
+     "sinopsis": "Chena, 26 años, recorre cada año cientos de kilómetros para trabajar como jornalera en los cultivos colombianos. Lleva ocho años sin ahorrar ni alcanzar independencia. Su cuerpo y su voluntad son todo lo que tiene."
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Andariega",
+     "poster": "/assets/ficdeh/andariega.jpg",
+     "posterSource": "custom",
+     "lbSlug": "nomad-spirit",
+     "sinopsis": "Cada año, Chena, de 26 años, se une a la diáspora de campesinos andariegos que se movilizan por Colombia recogiendo las cosechas de café. Viajar y trabajar son la base de su autonomía. En su equipaje carga un cuaderno escolar donde escribe reflexiones sobre su pasado y la vida que afronta como mujer y madre sosteniendo a los lejos un hogar lleno de dificultades y escasez. A pesar de su juventud, su cuerpo se está debilitando, poniendo en entredicho su propia idea de libertad."
+    },
+    {
+     "festival": "ficma-2026",
+     "titulo": "Andariega",
+     "tmdb_id": 1456127,
+     "poster": "/assets/ficma/andariega.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "nomad-spirit",
+     "sinopsis": "Each year, 26-year-old María Yessenia Herrera, best-known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters. Traveling and working constitute the basis of her autonomy. She keeps a notebook in her luggage where she writes and reflects about her past and the life that she faces as a woman and as a mother who must provide for a household full of problems and scarcity from afar. Despite her youth, her body is weakening, calling into question her own idea of freedom."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Andariega",
+     "tmdb_id": 1456127,
+     "poster": "https://image.tmdb.org/t/p/w500/uA5PZ9RBb23ESi1RVmnCosygXE0.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "nomad-spirit",
+     "sinopsis": "Acompaña a una joven madre campesina en los caminos del trabajo rural y la cosecha de café."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cinemancia-2025",
+   "poster": "/assets/filcmar-2026/andariega.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Aquileo Venganza",
+   "tmdb_id": 763505,
+   "titulo_original": "Aquileo Venganza",
+   "poster_path": "/mXCGGdMME08txqo5PkYNuW95lUk.jpg",
+   "synopsis_es": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia",
+   "synopsis_en": "In the begining of 20th century, after the \"thousand days war\", the country was devastated. Gunmen to the service of land lords attack small land owners to get their lands. Aquileo is the only one who survives, and promises to take revenge on the killers.",
+   "genero": "Western",
+   "anio_tmdb": 1968,
+   "duracion_tmdb": 70,
+   "pais_tmdb": "Colombia, Venezuela",
+   "lbSlug": "aquileo-venganza",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Aquileo Venganza",
+   "_director": "Ciro Durán",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Aquileo Venganza",
+     "tmdb_id": 763505,
+     "poster": "/assets/villadelcine-2026/aquileo-venganza.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "aquileo-venganza",
+     "sinopsis": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia"
+    }
+   ],
+   "_sinopsis_de": "ya publicada en villadelcine-2026",
+   "poster": "/assets/filcmar-2026/aquileo-venganza.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Casi 30",
+   "tmdb_id": 1661305,
+   "titulo_original": "Casi 30",
+   "poster_path": "/cen6BGzWZJSdsW6AuRWVrlsbmmD.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Paz leaves the house she shares with her partner and takes refuge at her friend Lula’s place. To avoid the anguish, they spend a sleepless night between karaoke, movies, cocaine, fights, and laughter: an ode to female friendship and emotional collapse.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Argentina",
+   "title_en": "Almost 30",
+   "lbSlug": "almost-30",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Casi 30",
+   "_director": "Mila Aquilia, Bianca Oliveti",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/casi-30.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Chicha la chicharra",
+   "tmdb_id": 1483504,
+   "titulo_original": "Chicha la chicharra",
+   "poster_path": "/knhGoKZFD0s4CyvzpMFXsqrkdPO.jpg",
+   "synopsis_es": "Una chicharra llamada Chicha emerge de la tierra para su metamorfosis, y descubre que el árbol de aguacate donde nació ha sido talado; decidida a crear un bosque, deposita sus esperanzas en un retoño de aguacate, pero pronto debe enfrentar la realidad de su corta vida y aprender a aceptar el presente.",
+   "synopsis_en": "Chicha emerges from the soil for her metamorphosis, only to find the avocado tree where she was born gone. Determined to create a forest, she waits for a new tree to grow, unaware her life will be too short to see it flourish.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "chicha-la-chicharra",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Chicha la chicharra",
+   "_director": "Sofia Alejandra Uzcátegui",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Chicha la chicharra",
+     "poster": "https://image.tmdb.org/t/p/w500/knhGoKZFD0s4CyvzpMFXsqrkdPO.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chicha-la-chicharra",
+     "sinopsis": "Una chicharra llamada Chicha emerge de la tierra para su metamorfosis, y descubre que el árbol de aguacate donde nació ha sido talado; decidida a crear un bosque, deposita sus esperanzas en un retoño de aguacate, pero pronto debe enfrentar la realidad de su corta vida y aprender a aceptar el presente."
+    }
+   ],
+   "poster": "/assets/filcmar-2026/chicha-la-chicharra.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Desarraigo",
+   "tmdb_id": 1510204,
+   "titulo_original": "Desarraigo",
+   "poster_path": "/ncFypC1QoQQVdm4rnhfTA9BgOGN.jpg",
+   "synopsis_es": "Tras la muerte de su esposa, Ángel enfrenta un duelo solitario en su hogar rural. Una gotera crece como una presencia abrumadora, transformando su espacio y empujándolo a decisiones irracionales mientras intenta reconciliarse con su pérdida.",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "desarraigo-2026",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Desarraigo",
+   "_director": "Nicolas Patiño Hortua, Andrés Santiago Cely Orjuela",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Desarraigo",
+     "poster": "https://image.tmdb.org/t/p/w500/ncFypC1QoQQVdm4rnhfTA9BgOGN.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "desarraigo-2026",
+     "sinopsis": "Tras la muerte de su esposa, Ángel enfrenta un duelo solitario en su hogar rural. Una gotera crece como una presencia abrumadora, transformando su espacio y empujándolo a decisiones irracionales mientras intenta reconciliarse con su pérdida."
+    }
+   ],
+   "poster": "/assets/filcmar-2026/desarraigo.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El cazador",
+   "tmdb_id": 1668874,
+   "titulo_original": "El Cazador",
+   "poster_path": "/wg0kTL0ztRoFzEZsNfdGVVFf9FF.jpg",
+   "synopsis_es": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+   "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Hunter",
+   "lbSlug": "the-hunter-2026-1",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El cazador",
+   "_director": "Luciana Riso Soto, Manuel Villa",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "El cazador",
+     "tmdb_id": 1668874,
+     "poster": "https://image.tmdb.org/t/p/w500/wg0kTL0ztRoFzEZsNfdGVVFf9FF.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-hunter-2026-1",
+     "sinopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "El cazador",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-30%20170710.png?itok=dXa68A0J",
+     "posterSource": "custom"
+    }
+   ],
+   "poster": "/assets/filcmar-2026/el-cazador.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El día interrumpido",
+   "tmdb_id": 1450681,
+   "titulo_original": "El día interrumpido",
+   "poster_path": "/sIVy1droKFM1K06lBiSP3z9tDAX.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "As the day begins, a woman sets out to go about her routine, until she decides to take her children to the cemetery to see zombies. When she returns home, this interruption in her day will leave her with a strange and magical feeling.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Argentina",
+   "title_en": "A Day Cut Short",
+   "lbSlug": "a-day-cut-short",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El día interrumpido",
+   "_director": "María Villar",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/el-dia-interrumpido.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El vuelo del moscardón",
+   "tmdb_id": 1587029,
+   "titulo_original": "El vuelo del moscardón",
+   "poster_path": "/mtKCIqaIQY5ykXPtgqjSByZNrsp.jpg",
+   "synopsis_es": "Un joven, Andrés, llega a la ciudad bonaerense de Alberti en busca de su abuelo en el momento que se desarrolla una particular situación en torno a la barihuí. Allí conoce a diferentes personajes, entre ellos a Cosme, y deben sortear obstáculos de diversa índole.",
+   "synopsis_en": "",
+   "genero": "Comedia",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 105,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "el-vuelo-del-moscardon",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El vuelo del moscardón",
+   "_director": "Emanuel Di Cunto, Rodrigo Medrano y Pablo Bochard",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/el-vuelo-del-moscardon.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "HDLT",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/siembrafest/hdlt.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/siembrafest/hdlt.jpg",
+     "posterSource": "oficial"
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "HDLT Hijo de la Tierra",
+     "poster": "/assets/siembrafest/hdlt.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+    }
+   ],
+   "poster": "/assets/siembrafest/hdlt.jpg",
+   "_verificado": "ya publicada en fantasmagoria-2026: se reusa su afiche",
+   "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+  },
+  {
+   "titulo": "La corazonada",
+   "tmdb_id": 1466153,
+   "titulo_original": "La Corazonada",
+   "poster_path": "/fvNadz6pkAhjlNQOsC20akHBgoU.jpg",
+   "synopsis_es": "Nieves lleva una piscina junto a su hijo Martín. Un verano, un motociclista se enamora de ella. Lo suyo no parece funcionar, hasta que un equipo de rodaje llega a la piscina buscando locaciones y la directora decide poner al motociclista y a Natacha en su película.",
+   "synopsis_en": "Nieves runs a swimming pool with her son Martin. One summer, a biker falls for her. Things between them don’t seem to work out, until a filming crew arrives at the pool while scouting for locations and the director decides to put Natacha and the biker in her film.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 78,
+   "pais_tmdb": "Chile",
+   "title_en": "A Heart as Willing",
+   "lbSlug": "a-heart-as-willing",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La corazonada",
+   "_director": "Diego Soto",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "La corazonada",
+     "tmdb_id": 1466153,
+     "poster": "https://image.tmdb.org/t/p/w500/fvNadz6pkAhjlNQOsC20akHBgoU.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-heart-as-willing",
+     "sinopsis": "Nieves lleva una piscina junto a su hijo Martín. Un verano, un motociclista se enamora de ella. Lo suyo no parece funcionar, hasta que un equipo de rodaje llega a la piscina buscando locaciones y la directora decide poner al motociclista y a Natacha en su película."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cinemancia-2026",
+   "poster": "/assets/filcmar-2026/la-corazonada.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La misteriosa mirada del flamenco",
+   "tmdb_id": 896096,
+   "titulo_original": "La misteriosa mirada del flamenco",
+   "poster_path": "/ra40EbZWA85Pk0ZijF9Dr78Z36o.jpg",
+   "synopsis_es": "La historia nos sitúa a comienzos de los años 80, en el desierto chileno, Lidia, una niña de once años, crece en el seno de una amorosa familia queer marginada en un polvoriento y hostil pueblo minero. Son culpados por una misteriosa enfermedad que comienza a propagarse, se dice que se transmite con una sola mirada, cuando un hombre se enamora de otro. En este western moderno, Lidia emprende una búsqueda de venganza, enfrentándose a la violencia, el miedo y el odio, donde la familia es su único refugio y el amor podría ser el verdadero peligro.",
+   "synopsis_en": "As an unknown and deadly disease begins to spread, legend has it that it is transmitted between two men, through a simple glance, when they fall in love. While people are accusing her family, Lidia must find out whether this myth is real or not.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 108,
+   "pais_tmdb": "Chile, France, Spain, Belgium, Germany",
+   "title_en": "The Mysterious Gaze of the Flamingo",
+   "lbSlug": "the-mysterious-gaze-of-the-flamingo",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La misteriosa mirada del flamenco",
+   "_director": "Diego Céspedes",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "La misteriosa mirada del flamenco",
+     "poster": "https://image.tmdb.org/t/p/w500/xfPhni21LIEmuV8HiDfrLhcmTwr.jpg",
+     "posterSource": "tmdb",
+     "sinopsis": "1982. Una enfermedad desconocida en un pueblo minero chileno lleva a acusar a los hombres gay de transmitirla con la mirada. Lidia, de 12 años, busca la verdad."
+    }
+   ],
+   "poster": "/assets/filcmar-2026/la-misteriosa-mirada-del-flamenco.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La paga",
+   "tmdb_id": 1363770,
+   "titulo_original": "La paga",
+   "poster_path": "/5nM3a0jcl9UlcCwFyELvvCvDNGq.jpg",
+   "synopsis_es": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado.",
+   "synopsis_en": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to ensure the survival of his family. His son is ill, his wife is pregnant, and he himself reproduces the violence that surrounds him. With no money for medical treatment, one night he gets drunk and is arrested. In jail, in a burst of fury, he rebels against the town's political boss in the only way he can.  La Paga was a pioneering work of social and political cinema in Latin America, released the same year as Barravento, Glauber Rocha’s debut feature, and anticipating movements such as Third Cinema. Influenced by Italian Neorealism and Soviet cinema in its aesthetics, forms, and ideological approach, the film uses the archetypal representation of characters and the social and economic forces they embody. Based on the director’s childhood observations in his hometown, La Paga denounces the exploitation of the rural peasantry.",
+   "genero": "",
+   "anio_tmdb": 1962,
+   "duracion_tmdb": 62,
+   "pais_tmdb": "Venezuela, Colombia",
+   "title_en": "The Wage",
+   "lbSlug": "the-wage",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La paga",
+   "_director": "Ciro Durán",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "La paga",
+     "poster": "https://image.tmdb.org/t/p/w500/rkxl7NFTW0KSm26XGlzUf9v1TSg.jpg",
+     "posterSource": "tmdb",
+     "sinopsis": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cinemancia-2025",
+   "poster": "/assets/filcmar-2026/la-paga.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La pecera",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La pecera",
+     "poster": "/assets/siembrafest/la-pecera.jpg",
+     "posterSource": "oficial"
+    }
+   ],
+   "poster": "/assets/siembrafest/la-pecera.jpg",
+   "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche"
+  },
+  {
+   "titulo": "Lo demás es ruido",
+   "tmdb_id": 1616861,
+   "titulo_original": "Lo demás es ruido",
+   "poster_path": "/vVK5ao81og9fcwQ5VP5frKFRe9a.jpg",
+   "synopsis_es": "A escondidas de su marido, en casa de su amiga Tere, que vive con su hija, la compositora musical Rosa concede su primera entrevista televisada. Según la conversación trata de avanzar, interrumpida por cortes de luz, ruidos externos e invitados insospechados, la relación entre estas tres mujeres revela la fuerza de la amistad y la fragilidad del prestigio.",
+   "synopsis_en": "Rosa, a contemporary music composer, agrees to give her first television interview at her colleague Tere’s apartment to keep it secret from her husband. What begins as a simple professional conversation turns into an absurd and comic portrait of rivalries and affections among three women—Rosa, Tere, and Tere’s daughter Luisa—interrupted by power outages, a constantly barking dog, and the visit of a famous composer. As the interview unravels, family and artistic tensions surface, revealing, with humor, both the fragility of prestige and the strength of complicity.",
+   "genero": "Comedia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 71,
+   "pais_tmdb": "Mexico, Germany",
+   "title_en": "Everything Else Is Noise",
+   "lbSlug": "everything-else-is-noise",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Lo demás es ruido",
+   "_director": "Nicolás Pereda",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/lo-demas-es-ruido.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Lo que queda del mar",
+   "tmdb_id": 1661515,
+   "titulo_original": "Lo que queda del mar",
+   "poster_path": "/572RSoGZK9Dqu6cjl0Aac6MPJGs.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Using archival material, a filmmaker reconstructs the figure of her father, an absent merchant seaman, and wonders what place that bond occupies in her memory.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "",
+   "title_en": "After the Sea",
+   "lbSlug": "after-the-sea",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Lo que queda del mar",
+   "_director": "Camila Adaro Liloff",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/lo-que-queda-del-mar.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "MU KI RA",
+   "tmdb_id": 1446898,
+   "titulo_original": "Mu-Ki-Ra",
+   "poster_path": "/arJSTCDZ1Q34c6aXZxZJF9XuhhQ.jpg",
+   "synopsis_es": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
+   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+   "genero": "Animación",
+   "anio_tmdb": 2027,
+   "duracion_tmdb": 82,
+   "pais_tmdb": "Colombia, Spain",
+   "lbSlug": "mu-ki-ra",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "MU KI RA",
+   "_director": "Estefanía Piñeres",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Mu-Ki-Ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/fantasmagoria-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "sinopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en fantasmagoria-2026",
+   "poster": "/assets/filcmar-2026/mu-ki-ra.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Merrimundi",
+   "tmdb_id": 1515178,
+   "titulo_original": "Merrimundi",
+   "poster_path": "/yDiQBPRvriOkP6X2adwANfZEOKc.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A twisted utopia unfolds, as singing cherubs melt to the sound of decay. Crafted by a sentient machine from the future, it unveils its own version of paradise.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 21,
+   "pais_tmdb": "Chile",
+   "lbSlug": "merrimundi",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Merrimundi",
+   "_director": "Niles Atallah",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/merrimundi.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
+     "poster": "/assets/siembrafest/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
+     "posterSource": "oficial"
+    }
+   ],
+   "poster": "/assets/siembrafest/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
+   "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche"
+  },
+  {
+   "titulo": "Para no volver",
+   "tmdb_id": 1743118,
+   "titulo_original": "Para no volver",
+   "poster_path": "/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+   "synopsis_es": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "",
+   "lbSlug": "para-no-volver",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Para no volver",
+   "_director": "Tania Galvis",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "biff-2026",
+     "titulo": "Para No Volver",
+     "tmdb_id": 1743118,
+     "poster": "/assets/biff-2026/para-no-volver.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "para-no-volver",
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Para no volver",
+     "tmdb_id": 1743118,
+     "poster": "https://image.tmdb.org/t/p/w500/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "para-no-volver",
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas."
+    }
+   ],
+   "poster": "/assets/filcmar-2026/para-no-volver.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Petra y el sol",
+   "tmdb_id": 1484063,
+   "titulo_original": "Petra y el sol",
+   "poster_path": "/svjItb2OAwVUzzd7EvdFdAHW4bT.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "During a heavy snowmelt in the Andes, Petra, 71, discovers the perfectly preserved corpse of a mountaineer from the last century.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Chile",
+   "title_en": "Petra and the Sun",
+   "lbSlug": "petra-and-the-sun",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Petra y el sol",
+   "_director": "Malu Furche, Stefania Malacchini",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/petra-y-el-sol.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Pude ver un fantasma desde mi ventana",
+   "tmdb_id": 1690034,
+   "titulo_original": "Pude ver un fantasma desde mi ventana",
+   "poster_path": null,
+   "synopsis_es": "A partir del relato de una madre y una abuela sobre el asesinato de un travesti, lx directorx estructura este corto documental que explora el ensueño —ese territorio entre la memoria y la imaginación— de un recuerdo de infancia. Con archivos de la comunidad trans en Ecuador durante los 90 y found footage se teje un microrrelato sobre la memoria, la muerte y la ausencia. Una tentativa por escapar del olvido y volverse eterna a través del cine.",
+   "synopsis_en": "Based on the account of a mother and a grandmother about the murder of a travesti, this short documentary explores the dreamlike state—that territory between memory and imagination—of a childhood recollection. Using Ecuadorian archival footage from the 1990s and found footage, it weaves a micro-narrative about memory, death, and absence. An attempt to escape oblivion and become eternal through cinema.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "title_en": "I Could See a Ghost from My Window",
+   "lbSlug": "i-could-see-a-ghost-from-my-window",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Pude ver un fantasma desde mi ventana",
+   "_director": "Mayro Romero",
+   "_sondeado": "2026-10-01"
+  },
+  {
+   "titulo": "Pudor ante el asalto de los ojos furtivos",
+   "tmdb_id": 1592968,
+   "titulo_original": "Pudor ante el asalto de los ojos furtivos",
+   "poster_path": "/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+   "synopsis_es": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público.",
+   "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Colombia",
+   "title_en": "Shame in the Face of Furtive Eyes",
+   "lbSlug": "shame-in-the-face-of-furtive-eyes",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Pudor ante el asalto de los ojos furtivos",
+   "_director": "Laura María Rodríguez",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "tmdb_id": 1592968,
+     "poster": "/assets/cineautopsia/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Pudor Ante el Asalto de los Ojos Furtivos",
+     "tmdb_id": 1592968,
+     "poster": "/assets/fantasmagoria-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "tmdb_id": 1592968,
+     "poster": "/assets/popayan-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "poster": "https://image.tmdb.org/t/p/w500/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cineautopsia-2026",
+   "poster": "/assets/filcmar-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Show de Ziggy: la maldición del Mariachi Bondage",
+   "tmdb_id": 1638911,
+   "titulo_original": "El show de Ziggy: La maldición del mariachi bondage",
+   "poster_path": "/2Bg77vDwoborWYy73yQiszusjhF.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Ziggy, a rising influencer, is trying to increase her number of followers on social media by awakening the curse of an old song. Now a gloomy mariachi who makes people dance until they die is chasing Ziggy until he fulfills her dream of making her viral.",
+   "genero": "Comedia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "title_en": "Ziggy's Show: The Curse of Mariachi Bondage",
+   "lbSlug": "ziggys-show-the-curse-of-mariachi-bondage",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Show de Ziggy: la maldición del Mariachi Bondage",
+   "_director": "Giorgio Ross",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/show-de-ziggy-la-maldicion-del-mariachi-bondage.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Si no ardemos cómo iluminar la noche",
+   "tmdb_id": 1327436,
+   "titulo_original": "Si no ardemos, cómo iluminar la noche",
+   "poster_path": "/oWAayyL2aOw5e5frKDVroK0GVfJ.jpg",
+   "synopsis_es": "Este coming of age que transita entre fábula y crónica, sigue a Laura, adolescente de 13 años que se muda a una zona rural de Costa Rica.",
+   "synopsis_en": "13-year-old Laura feels adrift in her newly stitched-together family. Just as the forests and endless palm plantations begin to feel like home, she uncovers a lurking secret that threatens the women she holds close.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "Costa Rica, Mexico, France",
+   "title_en": "If We Don't Burn, How Do We Light Up the Night",
+   "lbSlug": "if-we-dont-burn-how-do-we-light-up-the-night",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Si no ardemos cómo iluminar la noche",
+   "_director": "Kim Torres",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Si no ardemos, cómo iluminar la noche",
+     "poster": "https://image.tmdb.org/t/p/w500/aHIvJmr4s6gnUsdLs0t1FaCZOyz.jpg",
+     "posterSource": "tmdb",
+     "sinopsis": "Este coming of age que transita entre fábula y crónica, sigue a Laura, adolescente de 13 años que se muda a una zona rural de Costa Rica."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en ficci-65",
+   "poster": "/assets/filcmar-2026/si-no-ardemos-como-iluminar-la-noche.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Somnolítico",
+   "tmdb_id": 1590709,
+   "titulo_original": "Somnolithic",
+   "poster_path": "/24MJ3IfL9LrKmAG11sCM8GfonrQ.jpg",
+   "synopsis_es": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
+   "synopsis_en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "title_en": "Somnolytic",
+   "lbSlug": "somnolytic",
+   "_verificado": "el tmdb_id con que ya la publicamos en jardin-2026, y TMDB confirma la dirección",
+   "_director": "Abril Natalia Velásquez",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Somnolítico",
+     "poster": "/assets/cineautopsia/somnolitico.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Somnolítico",
+     "tmdb_id": 1590709,
+     "poster": "/assets/jardin-2026/somnolitico.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "somnolytic",
+     "sinopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, pasando de un lugar a otro sin encontrar una salida. Los caminos se ven invadidos por recorridos acelerados que van y vuelven como cascadas humanas. Los transeúntes, sin identidad, se mueven automáticamente, creando un laberinto en el que las rutas parecen no tener fin. Personas dormidas y agotadas parecen fusionarse con el entorno y, mientras el bus sigue su marcha, el ser finalmente logra descubrirse a si mismx."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cineautopsia-2026",
+   "poster": "/assets/filcmar-2026/somnolitico.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Una vez un cuerpo",
+   "tmdb_id": 1522316,
+   "titulo_original": "Una vez en un cuerpo",
+   "poster_path": "/jSAfjuWwP9BLIJgofw1vVa6xWaG.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia, United States of America",
+   "title_en": "Once in a Body",
+   "lbSlug": "once-in-a-body",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una vez un cuerpo",
+   "_director": "María Cristina Pérez",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/una-vez-un-cuerpo.jpg",
+   "posterSource": "tmdb"
+  }
+ ],
+ "verificadas": {
+  "Adiós al amigo": {
+   "tmdb_id": 1182189,
+   "titulo_original": "Adiós al amigo",
+   "poster_path": "/vOyWHDi3ZS5I7PRWINQ0twxNMAk.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After a thousand days of civil war in Colombia in 1902, the revolutionary soldier Alfredo Duarte Amado receives a telegram with the news of the pregnancy of his brother Rodrigo's wife. Without knowing where to go, he convinces an amateur photographer in the bowels of the Chicamocha canyon to go with him searching for his brother lost in the war, but the photographer is also looking for someone – the man who killed his father.",
+   "genero": "Western",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 118,
+   "pais_tmdb": "Colombia",
+   "title_en": "Adios Amigo",
+   "lbSlug": "adios-amigo-2024-1",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Adiós al amigo",
+   "_director": "Iván Gaona",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/adios-al-amigo.jpg",
+   "posterSource": "tmdb"
+  },
+  "Agachar el rostro": {
+   "tmdb_id": 1595079,
+   "titulo_original": "Agachar el rostro",
+   "poster_path": "/vXjVnfIMxnhyvsRfjlEb6jkrmp7.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Shrouded in fog and crumbling stone, a teacher moves through his final day at a rural school, soon to be shut down for lack of students. In quiet solitude, he parts ways with a place that has been his craft and his shelter for years.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Colombia",
+   "title_en": "Lowering the Gaze",
+   "lbSlug": "lowering-the-gaze",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Agachar el rostro",
+   "_director": "Camilo Medina Noy",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/agachar-el-rostro.jpg",
+   "posterSource": "tmdb"
+  },
+  "Andariega": {
+   "tmdb_id": 1456127,
+   "titulo_original": "Andariega",
+   "poster_path": "/uA5PZ9RBb23ESi1RVmnCosygXE0.jpg",
+   "synopsis_es": "Chena, 26 años, recorre cada año cientos de kilómetros para trabajar como jornalera en los cultivos colombianos. Lleva ocho años sin ahorrar ni alcanzar independencia. Su cuerpo y su voluntad son todo lo que tiene.",
+   "synopsis_en": "Each year, 26-year-old María Yessenia Herrera, best-known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters. Traveling and working constitute the basis of her autonomy. She keeps a notebook in her luggage where she writes and reflects about her past and the life that she faces as a woman and as a mother who must provide for a household full of problems and scarcity from afar. Despite her youth, her body is weakening, calling into question her own idea of freedom.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 94,
+   "pais_tmdb": "Colombia",
+   "title_en": "Nomad Spirit",
+   "lbSlug": "nomad-spirit",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Andariega",
+   "_director": "Raúl Soto",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "Andariega",
+     "poster": "https://image.tmdb.org/t/p/w500/uA5PZ9RBb23ESi1RVmnCosygXE0.jpg",
+     "posterSource": "tmdb",
+     "sinopsis": "Chena, 26 años, recorre cada año cientos de kilómetros para trabajar como jornalera en los cultivos colombianos. Lleva ocho años sin ahorrar ni alcanzar independencia. Su cuerpo y su voluntad son todo lo que tiene."
+    },
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Andariega",
+     "poster": "/assets/ficdeh/andariega.jpg",
+     "posterSource": "custom",
+     "lbSlug": "nomad-spirit",
+     "sinopsis": "Cada año, Chena, de 26 años, se une a la diáspora de campesinos andariegos que se movilizan por Colombia recogiendo las cosechas de café. Viajar y trabajar son la base de su autonomía. En su equipaje carga un cuaderno escolar donde escribe reflexiones sobre su pasado y la vida que afronta como mujer y madre sosteniendo a los lejos un hogar lleno de dificultades y escasez. A pesar de su juventud, su cuerpo se está debilitando, poniendo en entredicho su propia idea de libertad."
+    },
+    {
+     "festival": "ficma-2026",
+     "titulo": "Andariega",
+     "tmdb_id": 1456127,
+     "poster": "/assets/ficma/andariega.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "nomad-spirit",
+     "sinopsis": "Each year, 26-year-old María Yessenia Herrera, best-known as “Chena”, joins the traveling diaspora of peasants who move around Colombia working as hand-picking coffee harvesters. Traveling and working constitute the basis of her autonomy. She keeps a notebook in her luggage where she writes and reflects about her past and the life that she faces as a woman and as a mother who must provide for a household full of problems and scarcity from afar. Despite her youth, her body is weakening, calling into question her own idea of freedom."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Andariega",
+     "tmdb_id": 1456127,
+     "poster": "https://image.tmdb.org/t/p/w500/uA5PZ9RBb23ESi1RVmnCosygXE0.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "nomad-spirit",
+     "sinopsis": "Acompaña a una joven madre campesina en los caminos del trabajo rural y la cosecha de café."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cinemancia-2025",
+   "poster": "/assets/filcmar-2026/andariega.jpg",
+   "posterSource": "tmdb"
+  },
+  "Aquileo Venganza": {
+   "tmdb_id": 763505,
+   "titulo_original": "Aquileo Venganza",
+   "poster_path": "/mXCGGdMME08txqo5PkYNuW95lUk.jpg",
+   "synopsis_es": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia",
+   "synopsis_en": "In the begining of 20th century, after the \"thousand days war\", the country was devastated. Gunmen to the service of land lords attack small land owners to get their lands. Aquileo is the only one who survives, and promises to take revenge on the killers.",
+   "genero": "Western",
+   "anio_tmdb": 1968,
+   "duracion_tmdb": 70,
+   "pais_tmdb": "Colombia, Venezuela",
+   "lbSlug": "aquileo-venganza",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Aquileo Venganza",
+   "_director": "Ciro Durán",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Aquileo Venganza",
+     "tmdb_id": 763505,
+     "poster": "/assets/villadelcine-2026/aquileo-venganza.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "aquileo-venganza",
+     "sinopsis": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia"
+    }
+   ],
+   "_sinopsis_de": "ya publicada en villadelcine-2026",
+   "poster": "/assets/filcmar-2026/aquileo-venganza.jpg",
+   "posterSource": "tmdb"
+  },
+  "Casi 30": {
+   "tmdb_id": 1661305,
+   "titulo_original": "Casi 30",
+   "poster_path": "/cen6BGzWZJSdsW6AuRWVrlsbmmD.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Paz leaves the house she shares with her partner and takes refuge at her friend Lula’s place. To avoid the anguish, they spend a sleepless night between karaoke, movies, cocaine, fights, and laughter: an ode to female friendship and emotional collapse.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Argentina",
+   "title_en": "Almost 30",
+   "lbSlug": "almost-30",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Casi 30",
+   "_director": "Mila Aquilia, Bianca Oliveti",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/casi-30.jpg",
+   "posterSource": "tmdb"
+  },
+  "Chicha la chicharra": {
+   "tmdb_id": 1483504,
+   "titulo_original": "Chicha la chicharra",
+   "poster_path": "/knhGoKZFD0s4CyvzpMFXsqrkdPO.jpg",
+   "synopsis_es": "Una chicharra llamada Chicha emerge de la tierra para su metamorfosis, y descubre que el árbol de aguacate donde nació ha sido talado; decidida a crear un bosque, deposita sus esperanzas en un retoño de aguacate, pero pronto debe enfrentar la realidad de su corta vida y aprender a aceptar el presente.",
+   "synopsis_en": "Chicha emerges from the soil for her metamorphosis, only to find the avocado tree where she was born gone. Determined to create a forest, she waits for a new tree to grow, unaware her life will be too short to see it flourish.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "chicha-la-chicharra",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Chicha la chicharra",
+   "_director": "Sofia Alejandra Uzcátegui",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Chicha la chicharra",
+     "poster": "https://image.tmdb.org/t/p/w500/knhGoKZFD0s4CyvzpMFXsqrkdPO.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chicha-la-chicharra",
+     "sinopsis": "Una chicharra llamada Chicha emerge de la tierra para su metamorfosis, y descubre que el árbol de aguacate donde nació ha sido talado; decidida a crear un bosque, deposita sus esperanzas en un retoño de aguacate, pero pronto debe enfrentar la realidad de su corta vida y aprender a aceptar el presente."
+    }
+   ],
+   "poster": "/assets/filcmar-2026/chicha-la-chicharra.jpg",
+   "posterSource": "tmdb"
+  },
+  "Desarraigo": {
+   "tmdb_id": 1510204,
+   "titulo_original": "Desarraigo",
+   "poster_path": "/ncFypC1QoQQVdm4rnhfTA9BgOGN.jpg",
+   "synopsis_es": "Tras la muerte de su esposa, Ángel enfrenta un duelo solitario en su hogar rural. Una gotera crece como una presencia abrumadora, transformando su espacio y empujándolo a decisiones irracionales mientras intenta reconciliarse con su pérdida.",
+   "synopsis_en": "",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "desarraigo-2026",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Desarraigo",
+   "_director": "Nicolas Patiño Hortua, Andrés Santiago Cely Orjuela",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Desarraigo",
+     "poster": "https://image.tmdb.org/t/p/w500/ncFypC1QoQQVdm4rnhfTA9BgOGN.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "desarraigo-2026",
+     "sinopsis": "Tras la muerte de su esposa, Ángel enfrenta un duelo solitario en su hogar rural. Una gotera crece como una presencia abrumadora, transformando su espacio y empujándolo a decisiones irracionales mientras intenta reconciliarse con su pérdida."
+    }
+   ],
+   "poster": "/assets/filcmar-2026/desarraigo.jpg",
+   "posterSource": "tmdb"
+  },
+  "El cazador": {
+   "tmdb_id": 1668874,
+   "titulo_original": "El Cazador",
+   "poster_path": "/wg0kTL0ztRoFzEZsNfdGVVFf9FF.jpg",
+   "synopsis_es": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
+   "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Hunter",
+   "lbSlug": "the-hunter-2026-1",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El cazador",
+   "_director": "Luciana Riso Soto, Manuel Villa",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "El cazador",
+     "tmdb_id": 1668874,
+     "poster": "https://image.tmdb.org/t/p/w500/wg0kTL0ztRoFzEZsNfdGVVFf9FF.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-hunter-2026-1",
+     "sinopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda."
+    },
+    {
+     "festival": "ficci-65",
+     "titulo": "El cazador",
+     "poster": "https://ficcifestival.com/sites/default/files/styles/250px_x_312px/public/img-catalogo/result_Captura%20de%20pantalla%202026-03-30%20170710.png?itok=dXa68A0J",
+     "posterSource": "custom"
+    }
+   ],
+   "poster": "/assets/filcmar-2026/el-cazador.jpg",
+   "posterSource": "tmdb"
+  },
+  "El día interrumpido": {
+   "tmdb_id": 1450681,
+   "titulo_original": "El día interrumpido",
+   "poster_path": "/sIVy1droKFM1K06lBiSP3z9tDAX.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "As the day begins, a woman sets out to go about her routine, until she decides to take her children to the cemetery to see zombies. When she returns home, this interruption in her day will leave her with a strange and magical feeling.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Argentina",
+   "title_en": "A Day Cut Short",
+   "lbSlug": "a-day-cut-short",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El día interrumpido",
+   "_director": "María Villar",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/el-dia-interrumpido.jpg",
+   "posterSource": "tmdb"
+  },
+  "El vuelo del moscardón": {
+   "tmdb_id": 1587029,
+   "titulo_original": "El vuelo del moscardón",
+   "poster_path": "/mtKCIqaIQY5ykXPtgqjSByZNrsp.jpg",
+   "synopsis_es": "Un joven, Andrés, llega a la ciudad bonaerense de Alberti en busca de su abuelo en el momento que se desarrolla una particular situación en torno a la barihuí. Allí conoce a diferentes personajes, entre ellos a Cosme, y deben sortear obstáculos de diversa índole.",
+   "synopsis_en": "",
+   "genero": "Comedia",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 105,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "el-vuelo-del-moscardon",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El vuelo del moscardón",
+   "_director": "Emanuel Di Cunto, Rodrigo Medrano y Pablo Bochard",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/el-vuelo-del-moscardon.jpg",
+   "posterSource": "tmdb"
+  },
+  "La corazonada": {
+   "tmdb_id": 1466153,
+   "titulo_original": "La Corazonada",
+   "poster_path": "/fvNadz6pkAhjlNQOsC20akHBgoU.jpg",
+   "synopsis_es": "Nieves lleva una piscina junto a su hijo Martín. Un verano, un motociclista se enamora de ella. Lo suyo no parece funcionar, hasta que un equipo de rodaje llega a la piscina buscando locaciones y la directora decide poner al motociclista y a Natacha en su película.",
+   "synopsis_en": "Nieves runs a swimming pool with her son Martin. One summer, a biker falls for her. Things between them don’t seem to work out, until a filming crew arrives at the pool while scouting for locations and the director decides to put Natacha and the biker in her film.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 78,
+   "pais_tmdb": "Chile",
+   "title_en": "A Heart as Willing",
+   "lbSlug": "a-heart-as-willing",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La corazonada",
+   "_director": "Diego Soto",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "La corazonada",
+     "tmdb_id": 1466153,
+     "poster": "https://image.tmdb.org/t/p/w500/fvNadz6pkAhjlNQOsC20akHBgoU.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-heart-as-willing",
+     "sinopsis": "Nieves lleva una piscina junto a su hijo Martín. Un verano, un motociclista se enamora de ella. Lo suyo no parece funcionar, hasta que un equipo de rodaje llega a la piscina buscando locaciones y la directora decide poner al motociclista y a Natacha en su película."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cinemancia-2026",
+   "poster": "/assets/filcmar-2026/la-corazonada.jpg",
+   "posterSource": "tmdb"
+  },
+  "La misteriosa mirada del flamenco": {
+   "tmdb_id": 896096,
+   "titulo_original": "La misteriosa mirada del flamenco",
+   "poster_path": "/ra40EbZWA85Pk0ZijF9Dr78Z36o.jpg",
+   "synopsis_es": "La historia nos sitúa a comienzos de los años 80, en el desierto chileno, Lidia, una niña de once años, crece en el seno de una amorosa familia queer marginada en un polvoriento y hostil pueblo minero. Son culpados por una misteriosa enfermedad que comienza a propagarse, se dice que se transmite con una sola mirada, cuando un hombre se enamora de otro. En este western moderno, Lidia emprende una búsqueda de venganza, enfrentándose a la violencia, el miedo y el odio, donde la familia es su único refugio y el amor podría ser el verdadero peligro.",
+   "synopsis_en": "As an unknown and deadly disease begins to spread, legend has it that it is transmitted between two men, through a simple glance, when they fall in love. While people are accusing her family, Lidia must find out whether this myth is real or not.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 108,
+   "pais_tmdb": "Chile, France, Spain, Belgium, Germany",
+   "title_en": "The Mysterious Gaze of the Flamingo",
+   "lbSlug": "the-mysterious-gaze-of-the-flamingo",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La misteriosa mirada del flamenco",
+   "_director": "Diego Céspedes",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "aff-2026",
+     "titulo": "La misteriosa mirada del flamenco",
+     "poster": "https://image.tmdb.org/t/p/w500/xfPhni21LIEmuV8HiDfrLhcmTwr.jpg",
+     "posterSource": "tmdb",
+     "sinopsis": "1982. Una enfermedad desconocida en un pueblo minero chileno lleva a acusar a los hombres gay de transmitirla con la mirada. Lidia, de 12 años, busca la verdad."
+    }
+   ],
+   "poster": "/assets/filcmar-2026/la-misteriosa-mirada-del-flamenco.jpg",
+   "posterSource": "tmdb"
+  },
+  "La paga": {
+   "tmdb_id": 1363770,
+   "titulo_original": "La paga",
+   "poster_path": "/5nM3a0jcl9UlcCwFyELvvCvDNGq.jpg",
+   "synopsis_es": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado.",
+   "synopsis_en": "In the Colombian-Venezuelan Andes, a peasant works the land under exploitative conditions to ensure the survival of his family. His son is ill, his wife is pregnant, and he himself reproduces the violence that surrounds him. With no money for medical treatment, one night he gets drunk and is arrested. In jail, in a burst of fury, he rebels against the town's political boss in the only way he can.  La Paga was a pioneering work of social and political cinema in Latin America, released the same year as Barravento, Glauber Rocha’s debut feature, and anticipating movements such as Third Cinema. Influenced by Italian Neorealism and Soviet cinema in its aesthetics, forms, and ideological approach, the film uses the archetypal representation of characters and the social and economic forces they embody. Based on the director’s childhood observations in his hometown, La Paga denounces the exploitation of the rural peasantry.",
+   "genero": "",
+   "anio_tmdb": 1962,
+   "duracion_tmdb": 62,
+   "pais_tmdb": "Venezuela, Colombia",
+   "title_en": "The Wage",
+   "lbSlug": "the-wage",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La paga",
+   "_director": "Ciro Durán",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "cinemancia-2025",
+     "titulo": "La paga",
+     "poster": "https://image.tmdb.org/t/p/w500/rkxl7NFTW0KSm26XGlzUf9v1TSg.jpg",
+     "posterSource": "tmdb",
+     "sinopsis": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cinemancia-2025",
+   "poster": "/assets/filcmar-2026/la-paga.jpg",
+   "posterSource": "tmdb"
+  },
+  "Lo demás es ruido": {
+   "tmdb_id": 1616861,
+   "titulo_original": "Lo demás es ruido",
+   "poster_path": "/vVK5ao81og9fcwQ5VP5frKFRe9a.jpg",
+   "synopsis_es": "A escondidas de su marido, en casa de su amiga Tere, que vive con su hija, la compositora musical Rosa concede su primera entrevista televisada. Según la conversación trata de avanzar, interrumpida por cortes de luz, ruidos externos e invitados insospechados, la relación entre estas tres mujeres revela la fuerza de la amistad y la fragilidad del prestigio.",
+   "synopsis_en": "Rosa, a contemporary music composer, agrees to give her first television interview at her colleague Tere’s apartment to keep it secret from her husband. What begins as a simple professional conversation turns into an absurd and comic portrait of rivalries and affections among three women—Rosa, Tere, and Tere’s daughter Luisa—interrupted by power outages, a constantly barking dog, and the visit of a famous composer. As the interview unravels, family and artistic tensions surface, revealing, with humor, both the fragility of prestige and the strength of complicity.",
+   "genero": "Comedia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 71,
+   "pais_tmdb": "Mexico, Germany",
+   "title_en": "Everything Else Is Noise",
+   "lbSlug": "everything-else-is-noise",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Lo demás es ruido",
+   "_director": "Nicolás Pereda",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/lo-demas-es-ruido.jpg",
+   "posterSource": "tmdb"
+  },
+  "Lo que queda del mar": {
+   "tmdb_id": 1661515,
+   "titulo_original": "Lo que queda del mar",
+   "poster_path": "/572RSoGZK9Dqu6cjl0Aac6MPJGs.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Using archival material, a filmmaker reconstructs the figure of her father, an absent merchant seaman, and wonders what place that bond occupies in her memory.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "",
+   "title_en": "After the Sea",
+   "lbSlug": "after-the-sea",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Lo que queda del mar",
+   "_director": "Camila Adaro Liloff",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/lo-que-queda-del-mar.jpg",
+   "posterSource": "tmdb"
+  },
+  "MU KI RA": {
+   "tmdb_id": 1446898,
+   "titulo_original": "Mu-Ki-Ra",
+   "poster_path": "/arJSTCDZ1Q34c6aXZxZJF9XuhhQ.jpg",
+   "synopsis_es": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
+   "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies.",
+   "genero": "Animación",
+   "anio_tmdb": 2027,
+   "duracion_tmdb": 82,
+   "pais_tmdb": "Colombia, Spain",
+   "lbSlug": "mu-ki-ra",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "MU KI RA",
+   "_director": "Estefanía Piñeres",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Mu-Ki-Ra",
+     "tmdb_id": 1446898,
+     "poster": "/assets/fantasmagoria-2026/mu-ki-ra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mu-ki-ra",
+     "sinopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en fantasmagoria-2026",
+   "poster": "/assets/filcmar-2026/mu-ki-ra.jpg",
+   "posterSource": "tmdb"
+  },
+  "Merrimundi": {
+   "tmdb_id": 1515178,
+   "titulo_original": "Merrimundi",
+   "poster_path": "/yDiQBPRvriOkP6X2adwANfZEOKc.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A twisted utopia unfolds, as singing cherubs melt to the sound of decay. Crafted by a sentient machine from the future, it unveils its own version of paradise.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 21,
+   "pais_tmdb": "Chile",
+   "lbSlug": "merrimundi",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Merrimundi",
+   "_director": "Niles Atallah",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/merrimundi.jpg",
+   "posterSource": "tmdb"
+  },
+  "Para no volver": {
+   "tmdb_id": 1743118,
+   "titulo_original": "Para no volver",
+   "poster_path": "/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+   "synopsis_es": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "",
+   "lbSlug": "para-no-volver",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Para no volver",
+   "_director": "Tania Galvis",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "biff-2026",
+     "titulo": "Para No Volver",
+     "tmdb_id": 1743118,
+     "poster": "/assets/biff-2026/para-no-volver.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "para-no-volver",
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Para no volver",
+     "tmdb_id": 1743118,
+     "poster": "https://image.tmdb.org/t/p/w500/k2RvfqR0QSL4D5PzFkkomzRZJ8q.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "para-no-volver",
+     "sinopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas."
+    }
+   ],
+   "poster": "/assets/filcmar-2026/para-no-volver.jpg",
+   "posterSource": "tmdb"
+  },
+  "Petra y el sol": {
+   "tmdb_id": 1484063,
+   "titulo_original": "Petra y el sol",
+   "poster_path": "/svjItb2OAwVUzzd7EvdFdAHW4bT.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "During a heavy snowmelt in the Andes, Petra, 71, discovers the perfectly preserved corpse of a mountaineer from the last century.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Chile",
+   "title_en": "Petra and the Sun",
+   "lbSlug": "petra-and-the-sun",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Petra y el sol",
+   "_director": "Malu Furche, Stefania Malacchini",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/petra-y-el-sol.jpg",
+   "posterSource": "tmdb"
+  },
+  "Pude ver un fantasma desde mi ventana": {
+   "tmdb_id": 1690034,
+   "titulo_original": "Pude ver un fantasma desde mi ventana",
+   "poster_path": null,
+   "synopsis_es": "A partir del relato de una madre y una abuela sobre el asesinato de un travesti, lx directorx estructura este corto documental que explora el ensueño —ese territorio entre la memoria y la imaginación— de un recuerdo de infancia. Con archivos de la comunidad trans en Ecuador durante los 90 y found footage se teje un microrrelato sobre la memoria, la muerte y la ausencia. Una tentativa por escapar del olvido y volverse eterna a través del cine.",
+   "synopsis_en": "Based on the account of a mother and a grandmother about the murder of a travesti, this short documentary explores the dreamlike state—that territory between memory and imagination—of a childhood recollection. Using Ecuadorian archival footage from the 1990s and found footage, it weaves a micro-narrative about memory, death, and absence. An attempt to escape oblivion and become eternal through cinema.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "title_en": "I Could See a Ghost from My Window",
+   "lbSlug": "i-could-see-a-ghost-from-my-window",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Pude ver un fantasma desde mi ventana",
+   "_director": "Mayro Romero",
+   "_sondeado": "2026-10-01"
+  },
+  "Pudor ante el asalto de los ojos furtivos": {
+   "tmdb_id": 1592968,
+   "titulo_original": "Pudor ante el asalto de los ojos furtivos",
+   "poster_path": "/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+   "synopsis_es": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público.",
+   "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Colombia",
+   "title_en": "Shame in the Face of Furtive Eyes",
+   "lbSlug": "shame-in-the-face-of-furtive-eyes",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Pudor ante el asalto de los ojos furtivos",
+   "_director": "Laura María Rodríguez",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "tmdb_id": 1592968,
+     "poster": "/assets/cineautopsia/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Pudor Ante el Asalto de los Ojos Furtivos",
+     "tmdb_id": 1592968,
+     "poster": "/assets/fantasmagoria-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "tmdb_id": 1592968,
+     "poster": "/assets/popayan-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "poster": "https://image.tmdb.org/t/p/w500/9elraxytkfPvx8jsoLsWtDeF3pV.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "shame-in-the-face-of-furtive-eyes",
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cineautopsia-2026",
+   "poster": "/assets/filcmar-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+   "posterSource": "tmdb"
+  },
+  "Show de Ziggy: la maldición del Mariachi Bondage": {
+   "tmdb_id": 1638911,
+   "titulo_original": "El show de Ziggy: La maldición del mariachi bondage",
+   "poster_path": "/2Bg77vDwoborWYy73yQiszusjhF.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Ziggy, a rising influencer, is trying to increase her number of followers on social media by awakening the curse of an old song. Now a gloomy mariachi who makes people dance until they die is chasing Ziggy until he fulfills her dream of making her viral.",
+   "genero": "Comedia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "",
+   "title_en": "Ziggy's Show: The Curse of Mariachi Bondage",
+   "lbSlug": "ziggys-show-the-curse-of-mariachi-bondage",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Show de Ziggy: la maldición del Mariachi Bondage",
+   "_director": "Giorgio Ross",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/show-de-ziggy-la-maldicion-del-mariachi-bondage.jpg",
+   "posterSource": "tmdb"
+  },
+  "Si no ardemos cómo iluminar la noche": {
+   "tmdb_id": 1327436,
+   "titulo_original": "Si no ardemos, cómo iluminar la noche",
+   "poster_path": "/oWAayyL2aOw5e5frKDVroK0GVfJ.jpg",
+   "synopsis_es": "Este coming of age que transita entre fábula y crónica, sigue a Laura, adolescente de 13 años que se muda a una zona rural de Costa Rica.",
+   "synopsis_en": "13-year-old Laura feels adrift in her newly stitched-together family. Just as the forests and endless palm plantations begin to feel like home, she uncovers a lurking secret that threatens the women she holds close.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "Costa Rica, Mexico, France",
+   "title_en": "If We Don't Burn, How Do We Light Up the Night",
+   "lbSlug": "if-we-dont-burn-how-do-we-light-up-the-night",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Si no ardemos cómo iluminar la noche",
+   "_director": "Kim Torres",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "ficci-65",
+     "titulo": "Si no ardemos, cómo iluminar la noche",
+     "poster": "https://image.tmdb.org/t/p/w500/aHIvJmr4s6gnUsdLs0t1FaCZOyz.jpg",
+     "posterSource": "tmdb",
+     "sinopsis": "Este coming of age que transita entre fábula y crónica, sigue a Laura, adolescente de 13 años que se muda a una zona rural de Costa Rica."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en ficci-65",
+   "poster": "/assets/filcmar-2026/si-no-ardemos-como-iluminar-la-noche.jpg",
+   "posterSource": "tmdb"
+  },
+  "Somnolítico": {
+   "tmdb_id": 1590709,
+   "titulo_original": "Somnolithic",
+   "poster_path": "/24MJ3IfL9LrKmAG11sCM8GfonrQ.jpg",
+   "synopsis_es": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
+   "synopsis_en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "title_en": "Somnolytic",
+   "lbSlug": "somnolytic",
+   "_verificado": "el tmdb_id con que ya la publicamos en jardin-2026, y TMDB confirma la dirección",
+   "_director": "Abril Natalia Velásquez",
+   "_sondeado": "2026-10-01",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Somnolítico",
+     "poster": "/assets/cineautopsia/somnolitico.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo."
+    },
+    {
+     "festival": "jardin-2026",
+     "titulo": "Somnolítico",
+     "tmdb_id": 1590709,
+     "poster": "/assets/jardin-2026/somnolitico.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "somnolytic",
+     "sinopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, pasando de un lugar a otro sin encontrar una salida. Los caminos se ven invadidos por recorridos acelerados que van y vuelven como cascadas humanas. Los transeúntes, sin identidad, se mueven automáticamente, creando un laberinto en el que las rutas parecen no tener fin. Personas dormidas y agotadas parecen fusionarse con el entorno y, mientras el bus sigue su marcha, el ser finalmente logra descubrirse a si mismx."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en cineautopsia-2026",
+   "poster": "/assets/filcmar-2026/somnolitico.jpg",
+   "posterSource": "tmdb"
+  },
+  "Una vez un cuerpo": {
+   "tmdb_id": 1522316,
+   "titulo_original": "Una vez en un cuerpo",
+   "poster_path": "/jSAfjuWwP9BLIJgofw1vVa6xWaG.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "While dealing with a strange being that lives inside her, a woman seeks to reconcile with her sister over an incident from their adolescence.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia, United States of America",
+   "title_en": "Once in a Body",
+   "lbSlug": "once-in-a-body",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una vez un cuerpo",
+   "_director": "María Cristina Pérez",
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/una-vez-un-cuerpo.jpg",
+   "posterSource": "tmdb"
+  }
+ },
+ "sin_ficha": [
+  "6.º Competencia Universitaria — Programa 1",
+  "6.º Competencia Universitaria — Programa 2",
+  "6.º Competencia Universitaria — Programa 3",
+  "Cierra ojos",
+  "Competencia Espíritu del Trasnoche",
+  "Cortoconcierto inaugural Antioquia Super Ochera",
+  "El cargador de hombres",
+  "El espejo de la vida",
+  "El ocaso de los dioses",
+  "El pesebre",
+  "El tajamar y la astromelia",
+  "HDLT",
+  "HUSH",
+  "La danza del caos",
+  "La pecera",
+  "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
+  "Reverb",
+  "Sol de niebla",
+  "Testimonio",
+  "The Raules"
+ ],
+ "_sin_ficha_sondeo": {
+  "6.º Competencia Universitaria — Programa 1": {
+   "director": "",
+   "fecha": "2026-10-01"
+  },
+  "6.º Competencia Universitaria — Programa 2": {
+   "director": "",
+   "fecha": "2026-10-01"
+  },
+  "6.º Competencia Universitaria — Programa 3": {
+   "director": "",
+   "fecha": "2026-10-01"
+  },
+  "Cierra ojos": {
+   "director": "Marcos Mejía",
+   "fecha": "2026-10-01"
+  },
+  "Competencia Espíritu del Trasnoche": {
+   "director": "",
+   "fecha": "2026-10-01"
+  },
+  "Cortoconcierto inaugural Antioquia Super Ochera": {
+   "director": "",
+   "fecha": "2026-10-01"
+  },
+  "El cargador de hombres": {
+   "director": "Gustavo Mejía",
+   "fecha": "2026-10-01"
+  },
+  "El espejo de la vida": {
+   "director": "Simón Sánchez Plazas",
+   "fecha": "2026-10-01"
+  },
+  "El ocaso de los dioses": {
+   "director": "Juan Pablo Rendón",
+   "fecha": "2026-10-01"
+  },
+  "El pesebre": {
+   "director": "Felipe Bibian",
+   "fecha": "2026-10-01"
+  },
+  "El tajamar y la astromelia": {
+   "director": "Héctor Gallego",
+   "fecha": "2026-10-01"
+  },
+  "HDLT": {
+   "director": "",
+   "fecha": "2026-10-01"
+  },
+  "HUSH": {
+   "director": "Santiago Franco",
+   "fecha": "2026-10-01"
+  },
+  "La danza del caos": {
+   "director": "Valeria Preciado Romaña",
+   "fecha": "2026-10-01"
+  },
+  "La pecera": {
+   "director": "Angela Tatiana Fonseca Galvez",
+   "fecha": "2026-10-01"
+  },
+  "Miguel Ángel, Federico, y el carro que pasó encima de las gafas": {
+   "director": "Juan David Rodriguez",
+   "fecha": "2026-10-01"
+  },
+  "Reverb": {
+   "director": "María Elizabeth López",
+   "fecha": "2026-10-01"
+  },
+  "Sol de niebla": {
+   "director": "Maria José Ibarra, Florentino Vargas",
+   "fecha": "2026-10-01"
+  },
+  "Testimonio": {
+   "director": "Leonardo Amaral, Roberto Cotta",
+   "fecha": "2026-10-01"
+  },
+  "The Raules": {
+   "director": "Hugo Chamorro",
+   "fecha": "2026-10-01"
+  }
+ }
+}

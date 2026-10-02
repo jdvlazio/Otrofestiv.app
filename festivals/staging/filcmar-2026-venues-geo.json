@@ -1,0 +1,42 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-10-01"
+ },
+ "Teatro Regional Valerio Antonio Jiménez": {
+  "n": 0,
+  "lat": 6.1720347,
+  "lng": -75.3326927,
+  "_prec": "manual",
+  "_match": "Google Maps: TEATRO REGIONAL VALERIO A JIMENEZ, Marinilla (vecino del Centro Cultural, ~15 m)"
+ },
+ "Casa Cultural Valerio Antonio Jiménez": {
+  "n": 0,
+  "lat": 6.171947,
+  "lng": -75.3325301,
+  "_prec": "manual",
+  "_match": "Google Maps: Centro Cultural Valerio Antonio Jiménez, Cl. 30 #25-102 (la lámina dice «Casa Cultural»)",
+  "address": "Cl. 30 #25-102"
+ },
+ "Teatro Municipal Simona Duque": {
+  "n": 0,
+  "lat": 6.1729564,
+  "lng": -75.3341178,
+  "_prec": "manual",
+  "_match": "Google Maps: Teatro Municipal Simona Duque, Marinilla"
+ },
+ "Parque Principal de Marinilla": {
+  "n": 0,
+  "lat": 6.1736597,
+  "lng": -75.334636,
+  "_prec": "manual",
+  "_match": "Google Maps: Parque Principal, Marinilla"
+ },
+ "Galería San José - CBA Marinilla": {
+  "n": 0,
+  "lat": 6.1745466,
+  "lng": -75.3342677,
+  "_prec": "manual",
+  "_match": "Google Maps: Auditorio Galería San José, Cra. 31, Marinilla (CBA = Centro de Bienestar del Anciano San José, en la lámina de patrocinios)"
+ }
+}

@@ -1190,6 +1190,25 @@ export const FESTIVAL_CONFIG={
     prioLimit:3,
     films:null,posters:null,lbSlugs:{}
   },
+  'filcmar2026': {
+    name:'FILCMAR',displayName:'FILCMAR',fullName:'FILCMAR — 8° Festival de Cine de Marinilla',shortName:'FILCMAR',
+    city:'Marinilla',country:'CO',
+    dates:'9–13 OCT',dates_en:'OCT 9–13',year:2026,timezoneOffset:'-05:00',
+    // LA PORTADA del carrusel de programación (@filcmar p/Dd-Wc29Dhkd, lámina 0),
+    // estirada a 2:3, mientras no tengamos el afiche limpio («Érase una vez en Marinilla»).
+    keyArt:'/assets/keyart/filcmar2026-v1.jpg',
+    // lo que el festival dice de sí mismo (bio de @filcmar: «8º Festival de Cine de Marinilla»)
+    tagline:'Festival de Cine de Marinilla',
+    storageKey:'filcmar2026_',festivalStartStr:'2026-10-09T00:00:00',festivalEndStr:'2026-10-13T23:59:00',
+    festivalDates:{'2026-10-09':'2026-10-09','2026-10-10':'2026-10-10','2026-10-11':'2026-10-11','2026-10-12':'2026-10-12','2026-10-13':'2026-10-13'},
+    days:[{k:'2026-10-09',d:9,lbl:'VIE'},{k:'2026-10-10',d:10,lbl:'SÁB'},{k:'2026-10-11',d:11,lbl:'DOM'},{k:'2026-10-12',d:12,lbl:'LUN'},{k:'2026-10-13',d:13,lbl:'MAR'}],
+    dayKeys:['2026-10-09','2026-10-10','2026-10-11','2026-10-12','2026-10-13'],
+    dayShort:{'2026-10-09':'VIE 9','2026-10-10':'SÁB 10','2026-10-11':'DOM 11','2026-10-12':'LUN 12','2026-10-13':'MAR 13'},
+    dayShort_en:{'2026-10-09':'FRI 9','2026-10-10':'SAT 10','2026-10-11':'SUN 11','2026-10-12':'MON 12','2026-10-13':'TUE 13'},
+    dayLong:{'2026-10-09':'Viernes 9 de octubre','2026-10-10':'Sábado 10 de octubre','2026-10-11':'Domingo 11 de octubre','2026-10-12':'Lunes 12 de octubre','2026-10-13':'Martes 13 de octubre'},
+    prioLimit:3,
+    films:null,posters:null,lbSlugs:{}
+  },
   'fantasmagoria2026': {
     name:'Fantasmagoría',displayName:'Fantasmagoría',fullName:'Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín',shortName:'FANTASMAGORÍA',
     city:'Medellín',country:'CO',
@@ -1318,6 +1337,15 @@ export const SECTION_ARCHETYPES = {
   '🐉 Muestra Asiática El Oriente Es Rojo': 'Muestra / País',
   '🎞️ Muestra Catalana': 'Muestra / País',
   '🧸 Muestra Fantasmagoritos': 'Especiales / Eventos',
+  // FILCMAR 8 · Marinilla (1 oct 2026)
+  '🎓 6.º Competencia Universitaria': 'Competencia',
+  '🌎 Competencia Latinoamericana': 'Competencia',
+  '🌙 Competencia Espíritu del Trasnoche': 'Competencia',
+  '✏️ Cinescuela': 'Muestra / País',
+  '🐄 Viejos secretos del nuevo Oeste': 'Muestra / País',
+  '📚 Programación Académica': 'Charlas / Industria',
+  '🐎 Programación MORA': 'Charlas / Industria',
+  '🐓 Programación Cultural': 'Especiales / Eventos',
   '🌀 Muestra Weird y Experimental': 'Perspectivas / Miradas',
   '💥 Muestra de acción A Quemarropa': 'Perspectivas / Miradas',
   '🦯 Muestra especial': 'Especiales / Eventos',   // autodescripción para personas con discapacidad visual
