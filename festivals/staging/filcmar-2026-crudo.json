@@ -1,0 +1,852 @@
+{
+ "_provenance": {
+  "fuente": "Instagram @filcmar — el carrusel de programación (16 láminas)",
+  "capturado": "2026-10-01",
+  "que_aporta": "la programación entera: día, hora, lugar, sección y créditos",
+  "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+  "metodo": "lectura a ojo lámina por lámina, confirmada con la OCR de las mismas láminas, en los dos sentidos"
+ },
+ "_excluidas": {
+  "funciones": [
+   "2026-10-10 10:00 Taller Cacharrero Óptico",
+   "2026-10-10 22:00 Fiesta FILCMAR",
+   "2026-10-11 10:00 Taller Cacharrero Óptico",
+   "2026-10-12 15:00 Mercado MORA — Presentación y Evaluación de Biblias de Producción - programa Películas en Camino"
+  ],
+  "por_que": {
+   "Taller Cacharrero Óptico": "inscripción previa y su formulario «debe ser diligenciado antes del lunes 28 de septiembre» (linktr.ee/filcmar); Juan, 1 oct",
+   "Mercado MORA — Presentación y Evaluación de Biblias de Producción - programa Películas en Camino": "sesión de industria del mercado, no abierta al público; Juan, 1 oct",
+   "Fiesta FILCMAR": "fiesta en el Bar de Juaneto; queda fuera, 1 oct"
+  }
+ },
+ "funciones": [
+  {
+   "titulo": "MAPISTAS Expo FILCMAR 8",
+   "dia": "2026-10-09",
+   "hora": "16:00",
+   "sede": "Galería San José - CBA Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 2
+   },
+   "seccion": "Programación Cultural",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "is_recurring": true,
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "Cortoconcierto inaugural Antioquia Super Ochera",
+   "dia": "2026-10-09",
+   "hora": "18:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 2
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Programación Cultural",
+   "obras": [
+    {
+     "titulo": "El cargador de hombres",
+     "director": "Gustavo Mejía",
+     "anio": 1982,
+     "duracion_min": 25
+    },
+    {
+     "titulo": "Cierra ojos",
+     "director": "Marcos Mejía",
+     "anio": 1981,
+     "duracion_min": 20
+    },
+    {
+     "titulo": "El tajamar y la astromelia",
+     "director": "Héctor Gallego",
+     "anio": 1983,
+     "duracion_min": 18
+    }
+   ],
+   "duracion_min": 63,
+   "premiere": "Inauguración",
+   "sinopsis": "Proyección musicalizada en vivo por la Corporación Licania. Cortometrajes en 8mm del Grupo experimental cine Caldas."
+  },
+  {
+   "titulo": "Aquileo Venganza",
+   "director": "Ciro Durán",
+   "pais": "Colombia, Venezuela",
+   "anio": 1968,
+   "duracion_min": 70,
+   "dia": "2026-10-09",
+   "hora": "21:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 2
+   },
+   "clasificacion": "+14 años",
+   "seccion": "Viejos secretos del nuevo Oeste"
+  },
+  {
+   "titulo": "El pesebre",
+   "director": "Felipe Bibian",
+   "pais": "Brasil",
+   "anio": 2025,
+   "duracion_min": 18,
+   "titulo_original": "Persépio",
+   "dia": "2026-10-09",
+   "hora": "21:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 2
+   },
+   "clasificacion": "+14 años",
+   "seccion": "Competencia Latinoamericana"
+  },
+  {
+   "titulo": "Taller Escritura y Reescritura",
+   "dia": "2026-10-10",
+   "hora": "09:00",
+   "sede": "Casa Cultural Valerio Antonio Jiménez",
+   "sala": "Hall",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 3
+   },
+   "seccion": "Programación Académica",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "sinopsis": "Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. Lo guía Juan C. López, editor y postproductor. En este taller exploraremos cómo la narrativa pasa del papel y se reescribe activamente durante la etapa de edición. Cupos limitados.",
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScPop2bHx6C7Mf7yzrjH7Q1lRP9EG_DXEmzve4oJzRQ_lEsOA/viewform",
+   "is_recurring": true,
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "Lo que queda del mar",
+   "director": "Camila Adaro Liloff",
+   "pais": "Argentina",
+   "anio": 2026,
+   "duracion_min": 5,
+   "dia": "2026-10-10",
+   "hora": "11:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 3
+   },
+   "seccion": "Competencia Latinoamericana"
+  },
+  {
+   "titulo": "Si no ardemos cómo iluminar la noche",
+   "director": "Kim Torres",
+   "pais": "Costa Rica",
+   "anio": 2026,
+   "duracion_min": 95,
+   "dia": "2026-10-10",
+   "hora": "11:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 3
+   },
+   "seccion": "Cinescuela"
+  },
+  {
+   "titulo": "MAPISTAS Expo FILCMAR 8",
+   "dia": "2026-10-10",
+   "hora": "14:00",
+   "sede": "Galería San José - CBA Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 5
+   },
+   "seccion": "Programación Cultural",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "is_recurring": true,
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "Tintico Charlado: Mercado MORA — Oriente como destino audiovisual",
+   "dia": "2026-10-10",
+   "hora": "14:00",
+   "sede": "Teatro Municipal Simona Duque",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 4
+   },
+   "seccion": "Programación MORA",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "sinopsis": "Oriente como destino audiovisual. Comisión Fílmica de Antioquia.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "Conversatorio: Secretos de chifonier",
+   "dia": "2026-10-10",
+   "hora": "15:00",
+   "sede": "Galería San José - CBA Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 5
+   },
+   "seccion": "Programación Cultural",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "invitados": "Invitados: Louie Cuervo - Anamaria Jaramillo Ceballos.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "6.º Competencia Universitaria — Programa 1",
+   "dia": "2026-10-10",
+   "hora": "15:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 4
+   },
+   "seccion": "6.º Competencia Universitaria",
+   "obras": [
+    {
+     "titulo": "The Raules",
+     "director": "Hugo Chamorro",
+     "anio": 2025,
+     "duracion_min": 1
+    },
+    {
+     "titulo": "Desarraigo",
+     "director": "Nicolas Patiño Hortua, Andrés Santiago Cely Orjuela",
+     "anio": 2026,
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Para no volver",
+     "director": "Tania Galvis",
+     "anio": 2026,
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
+     "director": "Juan David Rodriguez",
+     "anio": 2025,
+     "duracion_min": 13
+    },
+    {
+     "titulo": "Agachar el rostro",
+     "director": "Camilo Medina Noy",
+     "anio": 2025,
+     "duracion_min": 13
+    }
+   ],
+   "duracion_min": 52
+  },
+  {
+   "titulo": "La misteriosa mirada del flamenco",
+   "director": "Diego Céspedes",
+   "pais": "Chile",
+   "anio": 2025,
+   "duracion_min": 110,
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sede": "Teatro Municipal Simona Duque",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 5
+   },
+   "clasificacion": "+14 años",
+   "seccion": "Viejos secretos del nuevo Oeste"
+  },
+  {
+   "titulo": "Pude ver un fantasma desde mi ventana",
+   "director": "Mayro Romero",
+   "pais": "Ecuador",
+   "anio": 2025,
+   "duracion_min": 9,
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sede": "Teatro Municipal Simona Duque",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 5
+   },
+   "clasificacion": "+14 años",
+   "seccion": "Competencia Latinoamericana"
+  },
+  {
+   "titulo": "La corazonada",
+   "director": "Diego Soto",
+   "pais": "Chile",
+   "anio": 2025,
+   "duracion_min": 78,
+   "dia": "2026-10-10",
+   "hora": "19:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 6
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Competencia Latinoamericana"
+  },
+  {
+   "titulo": "Testimonio",
+   "director": "Leonardo Amaral, Roberto Cotta",
+   "pais": "Brasil",
+   "anio": 2026,
+   "duracion_min": 14,
+   "dia": "2026-10-10",
+   "hora": "19:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 6
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Competencia Latinoamericana"
+  },
+  {
+   "titulo": "Competencia Espíritu del Trasnoche",
+   "dia": "2026-10-10",
+   "hora": "21:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "sala": "Foso",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 6
+   },
+   "clasificacion": "+14 años",
+   "seccion": "Competencia Espíritu del Trasnoche",
+   "obras": [
+    {
+     "titulo": "El cazador",
+     "director": "Luciana Riso Soto, Manuel Villa",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 13
+    },
+    {
+     "titulo": "HDLT",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 18
+    },
+    {
+     "titulo": "Show de Ziggy: la maldición del Mariachi Bondage",
+     "director": "Giorgio Ross",
+     "pais": "México",
+     "anio": 2026,
+     "duracion_min": 10
+    },
+    {
+     "titulo": "Merrimundi",
+     "director": "Niles Atallah",
+     "pais": "Chile",
+     "anio": 2025,
+     "duracion_min": 20
+    },
+    {
+     "titulo": "Petra y el sol",
+     "director": "Malu Furche, Stefania Malacchini",
+     "pais": "Chile",
+     "anio": 2026,
+     "duracion_min": 10
+    }
+   ],
+   "duracion_min": 71
+  },
+  {
+   "titulo": "Taller Escritura y Reescritura",
+   "dia": "2026-10-11",
+   "hora": "09:00",
+   "sede": "Casa Cultural Valerio Antonio Jiménez",
+   "sala": "Hall",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 7
+   },
+   "seccion": "Programación Académica",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "sinopsis": "Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. Lo guía Juan C. López, editor y postproductor. En este taller exploraremos cómo la narrativa pasa del papel y se reescribe activamente durante la etapa de edición. Cupos limitados.",
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScPop2bHx6C7Mf7yzrjH7Q1lRP9EG_DXEmzve4oJzRQ_lEsOA/viewform",
+   "is_recurring": true,
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "MU KI RA",
+   "director": "Estefanía Piñeres",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 85,
+   "dia": "2026-10-11",
+   "hora": "11:00",
+   "sede": "Parque Principal de Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 7
+   },
+   "seccion": "Cinescuela"
+  },
+  {
+   "titulo": "Taller Juguetería Audiovisual",
+   "dia": "2026-10-11",
+   "hora": "13:30",
+   "sede": "Parque Principal de Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 8
+   },
+   "seccion": "Programación Académica",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "sinopsis": "Un taller abierto a niños, jóvenes y adultos para acercarnos de forma práctica y divertida al principio didáctico y fascinante de la imagen en movimiento. La comunidad construirá sus propios juguetes ópticos y los pondrá a prueba para explorar cómo nace la ilusión que le da vida al cine. Lo guían Carolina del Castillo y Marcela Restrepo (Corporación Trama). Sin inscripción previa.",
+   "duracion_min": 90,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
+  },
+  {
+   "titulo": "MAPISTAS Expo FILCMAR 8",
+   "dia": "2026-10-11",
+   "hora": "14:00",
+   "sede": "Galería San José - CBA Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 9
+   },
+   "seccion": "Programación Cultural",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "is_recurring": true,
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "Tintico Charlado: Mercado MORA — El cine ¿es medio o es fin?",
+   "dia": "2026-10-11",
+   "hora": "14:00",
+   "sede": "Teatro Municipal Simona Duque",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 8
+   },
+   "seccion": "Programación MORA",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "sinopsis": "El cine ¿es medio o es fin? Luis Miguel Rivas y Edson Velandia.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "6.º Competencia Universitaria — Programa 2",
+   "dia": "2026-10-11",
+   "hora": "15:00",
+   "sede": "Parque Principal de Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 8
+   },
+   "seccion": "6.º Competencia Universitaria",
+   "obras": [
+    {
+     "titulo": "El espejo de la vida",
+     "director": "Simón Sánchez Plazas",
+     "anio": 2025,
+     "duracion_min": 9
+    },
+    {
+     "titulo": "La danza del caos",
+     "director": "Valeria Preciado Romaña",
+     "anio": 2025,
+     "duracion_min": 6
+    },
+    {
+     "titulo": "La pecera",
+     "director": "Angela Tatiana Fonseca Galvez",
+     "anio": 2025,
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Reverb",
+     "director": "María Elizabeth López",
+     "anio": 2025,
+     "duracion_min": 2
+    },
+    {
+     "titulo": "Chicha la chicharra",
+     "director": "Sofia Alejandra Uzcátegui",
+     "anio": 2025,
+     "duracion_min": 10
+    }
+   ],
+   "duracion_min": 35
+  },
+  {
+   "titulo": "Andariega",
+   "director": "Raúl Soto",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 94,
+   "dia": "2026-10-11",
+   "hora": "17:00",
+   "sede": "Parque Principal de Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 9
+   },
+   "seccion": "Competencia Latinoamericana"
+  },
+  {
+   "titulo": "El día interrumpido",
+   "director": "María Villar",
+   "pais": "Argentina",
+   "anio": 2025,
+   "duracion_min": 13,
+   "dia": "2026-10-11",
+   "hora": "17:00",
+   "sede": "Parque Principal de Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 9
+   },
+   "seccion": "Competencia Latinoamericana"
+  },
+  {
+   "titulo": "Adiós al amigo",
+   "director": "Iván Gaona",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 115,
+   "dia": "2026-10-11",
+   "hora": "19:00",
+   "sede": "Parque Principal de Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 9
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Viejos secretos del nuevo Oeste"
+  },
+  {
+   "titulo": "Concierto Central: Edson Velandia",
+   "dia": "2026-10-11",
+   "hora": "21:30",
+   "sede": "Parque Principal de Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 9
+   },
+   "seccion": "Programación Cultural",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "Caminata fotográfica",
+   "dia": "2026-10-12",
+   "hora": "08:00",
+   "sede": "Parque Principal de Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 10
+   },
+   "seccion": "Programación Cultural",
+   "tipo": "evento",
+   "event_kind": "experiencia",
+   "sinopsis": "Sin inscripción previa, para toda la familia.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "Taller Escritura y Reescritura",
+   "dia": "2026-10-12",
+   "hora": "09:00",
+   "sede": "Casa Cultural Valerio Antonio Jiménez",
+   "sala": "Hall",
+   "acceso": "Entrada libre con inscripción previa",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 10
+   },
+   "seccion": "Programación Académica",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "sinopsis": "Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. Lo guía Juan C. López, editor y postproductor. En este taller exploraremos cómo la narrativa pasa del papel y se reescribe activamente durante la etapa de edición. Cupos limitados.",
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScPop2bHx6C7Mf7yzrjH7Q1lRP9EG_DXEmzve4oJzRQ_lEsOA/viewform",
+   "is_recurring": true,
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "Mercado MORA — Pitch público Películas en Camino MORA",
+   "dia": "2026-10-12",
+   "hora": "10:00",
+   "sede": "Teatro Municipal Simona Duque",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 10
+   },
+   "seccion": "Programación MORA",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "MAPISTAS Expo FILCMAR 8",
+   "dia": "2026-10-12",
+   "hora": "14:00",
+   "sede": "Galería San José - CBA Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 12
+   },
+   "seccion": "Programación Cultural",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "is_recurring": true,
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "Tintico Charlado: Mercado MORA — Antioquia Film Friendly",
+   "dia": "2026-10-12",
+   "hora": "14:00",
+   "sede": "Teatro Municipal Simona Duque",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 11
+   },
+   "seccion": "Programación MORA",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "sinopsis": "Antioquia Film Friendly. Comisión Fílmica de Antioquia.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "6.º Competencia Universitaria — Programa 3",
+   "dia": "2026-10-12",
+   "hora": "15:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 11
+   },
+   "seccion": "6.º Competencia Universitaria",
+   "obras": [
+    {
+     "titulo": "HUSH",
+     "director": "Santiago Franco",
+     "anio": 2025,
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Sol de niebla",
+     "director": "Maria José Ibarra, Florentino Vargas",
+     "anio": 2026,
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "director": "Laura María Rodríguez",
+     "anio": 2025,
+     "duracion_min": 9
+    },
+    {
+     "titulo": "El ocaso de los dioses",
+     "director": "Juan Pablo Rendón",
+     "anio": 2025,
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Somnolítico",
+     "director": "Abril Natalia Velásquez",
+     "anio": 2026,
+     "duracion_min": 11
+    }
+   ],
+   "duracion_min": 59
+  },
+  {
+   "titulo": "Casi 30",
+   "director": "Mila Aquilia, Bianca Oliveti",
+   "pais": "Argentina",
+   "anio": 2026,
+   "duracion_min": 14,
+   "dia": "2026-10-12",
+   "hora": "17:00",
+   "sede": "Teatro Municipal Simona Duque",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 12
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Competencia Latinoamericana"
+  },
+  {
+   "titulo": "El vuelo del moscardón",
+   "director": "Emanuel Di Cunto, Rodrigo Medrano y Pablo Bochard",
+   "pais": "Argentina",
+   "anio": 2025,
+   "duracion_min": 105,
+   "dia": "2026-10-12",
+   "hora": "17:00",
+   "sede": "Teatro Municipal Simona Duque",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 12
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "seccion": "Competencia Latinoamericana"
+  },
+  {
+   "titulo": "Ceremonia de premiación",
+   "dia": "2026-10-12",
+   "hora": "19:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 13
+   },
+   "seccion": "Programación Cultural",
+   "tipo": "evento",
+   "event_kind": "acto",
+   "sinopsis": "Premiación MORA y Competencias.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "Lo demás es ruido",
+   "director": "Nicolás Pereda",
+   "pais": "México",
+   "anio": 2026,
+   "duracion_min": 70,
+   "dia": "2026-10-12",
+   "hora": "19:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 13
+   },
+   "seccion": "Competencia Latinoamericana"
+  },
+  {
+   "titulo": "Una vez un cuerpo",
+   "director": "María Cristina Pérez",
+   "pais": "Colombia, Estados Unidos",
+   "anio": 2025,
+   "duracion_min": 10,
+   "dia": "2026-10-12",
+   "hora": "19:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 13
+   },
+   "seccion": "Competencia Latinoamericana"
+  },
+  {
+   "titulo": "La paga",
+   "director": "Ciro Durán",
+   "pais": "Colombia",
+   "anio": 1962,
+   "duracion_min": 62,
+   "dia": "2026-10-13",
+   "hora": "18:00",
+   "sede": "Teatro Regional Valerio Antonio Jiménez",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 14
+   },
+   "seccion": "Viejos secretos del nuevo Oeste",
+   "premiere": "Clausura"
+  }
+ ]
+}

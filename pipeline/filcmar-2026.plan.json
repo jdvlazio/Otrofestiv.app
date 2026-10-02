@@ -1,14 +1,137 @@
 {
- "_nota": "PRE-ONBOARDING. El 8° Festival de Cine de Marinilla — FILCMAR (9–13 oct 2026) publicó sus dos competencias en carrusel y todavía no la parrilla. Igual que Villa de Leyva no hay crudo sino catálogo; a diferencia de él, acá SÍ se puede enriquecer, porque la lámina trae país, año y duración además del título y la dirección.",
+ "_nota": "8° Festival de Cine de Marinilla — FILCMAR (9–13 oct 2026). La programación es el carrusel p/Dd-Wc29Dhkd (1 oct): 16 láminas leídas a ojo y confirmadas por la OCR en los dos sentidos, más una lectura independiente. Entrada libre. Quedan FUERA (Juan, 1 oct) el Taller Cacharrero Óptico (inscripción cerrada el 28 sep), la evaluación de biblias del MORA (industria) y la Fiesta FILCMAR. El catálogo de la Selección Oficial (31 obras) es del pre-onboarding.",
  "radar": 903,
  "pasos": [
   {
-   "cmd": "python3 pipeline/filcmar-2026-catalogo.py",
-   "que": "los 2 carruseles de Selección Oficial → catálogo (26 obras)"
+   "cmd": "python3 pipeline/radar.py filcmar-2026",
+   "que": "el volcado del radar #903"
   },
   {
-   "cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/filcmar-2026-seleccion-oficial.json",
-   "que": "catálogo → enriquecido (TMDB + Letterboxd, mismo candado que enriquecer.py)"
+   "cmd": "python3 pipeline/filcmar-2026-catalogo.py",
+   "que": "los carruseles de Selección Oficial → catálogo (las tres competencias)"
+  },
+  {
+   "cmd": "python3 pipeline/filcmar-2026-crudo.py",
+   "que": "la lectura a ojo de las 16 láminas → crudo, confirmada por la OCR en los dos sentidos"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py filcmar-2026 --posters",
+   "que": "crudo → enriquecido con la cascada de TMDB y lo ya publicado"
+  },
+  {
+   "cmd": "python3 pipeline/proimagenes.py filcmar-2026 --posters",
+   "que": "el cine colombiano que TMDB no tiene"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py filcmar-2026 --centro 6.1737,-75.3347 --ciudad \"Marinilla, Antioquia\"",
+   "que": "pines: los manuales (Google) se respetan"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py filcmar-2026",
+   "que": "el build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py filcmar-2026 --aplicar --desde festivals/staging/filcmar-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/filcmar-2026-verificar.py",
+   "que": "el build contra las láminas, en los dos sentidos, y cada sede con pin"
   }
- ]
+ ],
+ "festival": {
+  "crudo": "festivals/staging/filcmar-2026-crudo.json",
+  "enriquecido": "festivals/staging/filcmar-2026-enriquecido.json",
+  "geo": "festivals/staging/filcmar-2026-venues-geo.json",
+  "_por_que_sedes": "El nombre que imprime cada lámina, tal cual; la sala va aparte (Foso, Hall, Capilla).",
+  "sedes": {
+   "Teatro Regional Valerio Antonio Jiménez": [
+    "Teatro Regional Valerio Antonio Jiménez - Marinilla",
+    ""
+   ],
+   "Casa Cultural Valerio Antonio Jiménez": [
+    "Casa Cultural Valerio Antonio Jiménez - Marinilla",
+    ""
+   ],
+   "Teatro Municipal Simona Duque": [
+    "Teatro Municipal Simona Duque - Marinilla",
+    ""
+   ],
+   "Parque Principal de Marinilla": [
+    "Parque Principal de Marinilla - Marinilla",
+    ""
+   ],
+   "Galería San José - CBA Marinilla": [
+    "Galería San José - CBA Marinilla - Marinilla",
+    ""
+   ]
+  },
+  "_por_que_secciones": "Las del ícono de cada bloque (lámina 1), tal cual; los encabezados del día mandan donde difieren. Emoji y EN son nuestros, por aprobar.",
+  "secciones": {
+   "6.º Competencia Universitaria": {
+    "emoji": "🎓",
+    "en": "6th University Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Latinoamericana": {
+    "emoji": "🌎",
+    "en": "Latin American Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Espíritu del Trasnoche": {
+    "emoji": "🌙",
+    "en": "Late-Night Spirit Competition",
+    "archetype": "Competencia"
+   },
+   "Cinescuela": {
+    "emoji": "✏️",
+    "en": "Cinescuela",
+    "archetype": "Muestra / País"
+   },
+   "Viejos secretos del nuevo Oeste": {
+    "emoji": "🐄",
+    "en": "Old Secrets of the New West",
+    "archetype": "Muestra / País"
+   },
+   "Programación Académica": {
+    "emoji": "📚",
+    "en": "Academic Program",
+    "archetype": "Charlas / Industria"
+   },
+   "Programación MORA": {
+    "emoji": "🐎",
+    "en": "MORA Program",
+    "archetype": "Charlas / Industria"
+   },
+   "Programación Cultural": {
+    "emoji": "🐓",
+    "en": "Cultural Program",
+    "archetype": "Especiales / Eventos"
+   }
+  },
+  "name": "FILCMAR",
+  "displayName": "FILCMAR",
+  "fullName": "FILCMAR — 8° Festival de Cine de Marinilla",
+  "shortName": "FILCMAR",
+  "tagline": "Festival de Cine de Marinilla",
+  "city": "Marinilla",
+  "country": "CO",
+  "dates": "9–13 OCT",
+  "dates_en": "OCT 9–13",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "filcmar2026_",
+  "festivalStartStr": "2026-10-09T00:00:00",
+  "festivalEndStr": "2026-10-13T23:59:00",
+  "sharedSlotIsOneScreening": true,
+  "_por_que_slot": "Los bloques sin nombre juntan un corto y un largo (o dos obras de la Competencia Latinoamericana) bajo una sola hora y sede; la ceremonia de premiación del lunes lleva dentro dos obras de la competencia.",
+  "mes_es": "octubre",
+  "dias_vacios": []
+ },
+ "_fuentes_versionadas": {
+  "festivals/staging/filcmar-2026-seleccion-oficial.json": "el catálogo de la Selección Oficial (pre-onboarding)",
+  "festivals/staging/filcmar-2026-seleccion-oficial-enriquecido.json": "sus fichas (pre-onboarding)",
+  "festivals/staging/filcmar-2026-venues-geo.json": "los pines a mano (Google Maps)",
+  "festivals/staging/filcmar-2026-radar.json": "el volcado del radar #903, que escribe y relee pipeline/radar.py"
+ }
 }
