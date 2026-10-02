@@ -134,6 +134,16 @@ INSCRIPCION = {
 # programación la traduce. Se publica como la programación; el original va aparte.
 TITULO_EN_CATALOGO = {'El pesebre': 'Persépio'}
 
+# EL TÍTULO DE LA OBRA donde la lámina se aparta de cómo la obra se llama: las
+# tres fuentes independientes coinciden (TMDB, IMDb y FilmAffinity, mirado el 2
+# oct 2026) y Juan lo aprobó. Lo demás se publica como lo escribe el festival.
+TITULO_OFICIAL = {
+    'MU KI RA': 'Mu-Ki-Ra',
+    'Si no ardemos cómo iluminar la noche': 'Si no ardemos, cómo iluminar la noche',
+    # al festival se le cayó el «en» en las dos láminas
+    'Una vez un cuerpo': 'Una vez en un cuerpo',
+}
+
 PAIS = {'Brazil': 'Brasil', 'Colombia / Estados Unidos': 'Colombia, Estados Unidos'}
 
 
@@ -189,7 +199,7 @@ def verifica(ojos):
 def obra(o, cat):
     t = o['titulo']
     c = cat.get(plano(TITULO_EN_CATALOGO.get(t, t)))
-    r = {'titulo': t, 'director': o['direccion'], 'pais': PAIS.get(o['pais'], o['pais']),
+    r = {'titulo': TITULO_OFICIAL.get(t, t), 'director': o['direccion'], 'pais': PAIS.get(o['pais'], o['pais']),
          'anio': o['anio'], 'duracion_min': dur(o['duracion'])}
     if c:
         # el catálogo trae el crédito completo («Di Cunto, Medrano y Bochard»)
