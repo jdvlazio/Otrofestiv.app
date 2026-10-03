@@ -48,7 +48,7 @@ def main():
                 plano(x) for x in (a.get('cortos') or [o['titulo'] for o in a['obras']]))
             continue
         if t in crudo.ACTIVIDAD:
-            lam[(a['dia'], a['hora'], plano(crudo.TITULO.get(t, t)))] = lugar
+            lam[(a['dia'], crudo.HORA_DE_OTRA_FUENTE.get((t, a['dia'], a['hora']), a['hora']), plano(crudo.TITULO.get(t, t)))] = lugar
         for o in a.get('obras', []):
             lam[(a['dia'], a['hora'], plano(crudo.TITULO_OFICIAL.get(o['titulo'], o['titulo'])))] = lugar
     pub = {(f['day'], f['time'], plano(f['title'])): f for f in build['films']}

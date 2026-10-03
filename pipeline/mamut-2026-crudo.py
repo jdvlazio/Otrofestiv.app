@@ -140,6 +140,12 @@ SINOPSIS_DE_OTRA_FUENTE = {
                   'se distorsiona al ritmo de los recuerdos.',
 }
 
+# LA CONVERSACIÓN QUE LA LÁMINA NO MARCA Y OTRO POST DEL FESTIVAL SÍ. El de la
+# Sala 3 de Las Américas (p/DeAIFYqJAQE, 2 oct): «tres proyecciones […]
+# acompañadas de conversaciones con sus Directores»; la lámina solo la marcaba en
+# dos de las tres.
+QA_DE_OTRA_FUENTE = {'La memoria de las mariposas': 'https://www.instagram.com/p/DeAIFYqJAQE/'}
+
 # El Q&A lo dice la lámina corregida («CONVERSACION CON DIRECTOR», `qa` en la
 # transcripción). Con invitados nombrados, `guests` y la lista va a la ficha.
 
@@ -294,7 +300,7 @@ def main():
             reg['premiere'] = 'Inauguración'
         elif a.get('premiere'):
             reg['premiere'] = a['premiere']
-        if a.get('qa'):
+        if a.get('qa') or t in QA_DE_OTRA_FUENTE:
             reg['has_qa'] = True
             reg['qa_type'] = 'guests' if a.get('invitados') else 'team'
         if a.get('invitados'):

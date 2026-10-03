@@ -302,7 +302,7 @@
    "title": "Taller Escritura y Reescritura",
    "type": "event",
    "section": "📚 Programación Académica",
-   "duration": "90 min",
+   "duration": "240 min",
    "day": "2026-10-10",
    "time": "09:00",
    "day_order": 1,
@@ -727,7 +727,7 @@
    "title": "Taller Escritura y Reescritura",
    "type": "event",
    "section": "📚 Programación Académica",
-   "duration": "90 min",
+   "duration": "240 min",
    "day": "2026-10-11",
    "time": "09:00",
    "day_order": 2,
@@ -777,26 +777,6 @@
    "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies."
   },
   {
-   "title": "Taller Juguetería Audiovisual",
-   "type": "event",
-   "section": "📚 Programación Académica",
-   "duration": "90 min",
-   "day": "2026-10-11",
-   "time": "13:30",
-   "day_order": 2,
-   "venue": "Parque Principal de Marinilla - Marinilla",
-   "event_kind": "taller",
-   "has_qa": false,
-   "synopsis": "Un taller abierto a niños, jóvenes y adultos para acercarnos de forma práctica y divertida al principio didáctico y fascinante de la imagen en movimiento. La comunidad construirá sus propios juguetes ópticos y los pondrá a prueba para explorar cómo nace la ilusión que le da vida al cine. Lo guían Carolina del Castillo y Marcela Restrepo (Corporación Trama). Sin inscripción previa.",
-   "synopsis_lang": "es",
-   "_src": {
-    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
-    "date": "2026-10-01",
-    "lamina": 8
-   },
-   "is_free": true
-  },
-  {
    "title": "MAPISTAS Expo FILCMAR 8",
    "type": "event",
    "section": "🐓 Programación Cultural",
@@ -812,6 +792,26 @@
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
     "lamina": 9
+   },
+   "is_free": true
+  },
+  {
+   "title": "Taller Juguetería Audiovisual",
+   "type": "event",
+   "section": "📚 Programación Académica",
+   "duration": "60 min",
+   "day": "2026-10-11",
+   "time": "14:00",
+   "day_order": 2,
+   "venue": "Parque Principal de Marinilla - Marinilla",
+   "event_kind": "taller",
+   "has_qa": false,
+   "synopsis": "Un taller abierto a niños, jóvenes y adultos para acercarnos de forma práctica y divertida al principio didáctico y fascinante de la imagen en movimiento. La comunidad construirá sus propios juguetes ópticos y los pondrá a prueba para explorar cómo nace la ilusión que le da vida al cine. Lo guían Carolina del Castillo y Marcela Restrepo (Corporación Trama). Sin inscripción previa.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 8
    },
    "is_free": true
   },
@@ -1028,7 +1028,7 @@
    "title": "Taller Escritura y Reescritura",
    "type": "event",
    "section": "📚 Programación Académica",
-   "duration": "90 min",
+   "duration": "240 min",
    "day": "2026-10-12",
    "time": "09:00",
    "day_order": 3,
@@ -1348,7 +1348,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-02T17:02:35",
+  "fecha": "2026-10-02T19:44:59",
   "plan_sha": "627de20e2eb8374c",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"
