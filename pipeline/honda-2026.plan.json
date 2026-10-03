@@ -1,0 +1,8 @@
+{
+ "_nota": "PRE-ONBOARDING. El 4.º Festival Latinoamericano de Cine de Honda (8–11 oct 2026) publicó su selección por convocatoria (p/Dd9_hgrFFA2, 1 oct) y todavía no la parrilla. Como FILCMAR antes de su programación: catálogo + enriquecido, sin crudo. La lámina trae solo título y dirección.",
+ "radar": 978,
+ "pasos": [
+  {"cmd": "python3 pipeline/honda-2026-catalogo.py", "que": "las 3 láminas de la selección → catálogo (23 obras), confirmado por la OCR"},
+  {"cmd": "TMDB_API_KEY=… python3 pipeline/enriquecer_catalogo.py festivals/staging/honda-2026-seleccion-oficial.json", "que": "catálogo → enriquecido (TMDB + Letterboxd + lo ya publicado, mismo candado que enriquecer.py)"}
+ ]
+}

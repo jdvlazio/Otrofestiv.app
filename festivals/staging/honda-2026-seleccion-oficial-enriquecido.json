@@ -1,0 +1,299 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, con el MISMO candado de enriquecer.py: director ✓ y (año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-10-02"
+ },
+ "_origen": "honda-2026-seleccion-oficial.json",
+ "obras": [
+  {
+   "titulo": "Selva Nublada: Un viaje al corazón del bosque de niebla",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Selva Nublada"
+    }
+   ]
+  },
+  {
+   "titulo": "La Gran Hazaña",
+   "tmdb_id": 1494003,
+   "titulo_original": "La gran hazaña",
+   "poster_path": "/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Great Feat",
+   "lbSlug": "the-great-feat",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La gran hazaña",
+     "poster": "/assets/ficdeh/la-gran-hazana.jpg",
+     "posterSource": "custom",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La gran hazaña"
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "La gran hazaña",
+     "tmdb_id": 1494003,
+     "poster": "/assets/popayan-2026/la-gran-hazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "Pablo (10) tendrá el desafío de rescatar a su mascota Pascualina, una gallina ponedora, de las garras de Don Chucho, el usurero del pueblo quien cobra las deudas con huevos. Este día Pablo tiene un accidente en su bicicleta y rompe los preciados huevos, ahora debe reponer la cubeta para saldar la deuda. La única herramienta que tiene el niño para rescatar a Pascualina es una apuesta con su trompo de madera con Felipe el mejor jugador de trompo del pueblo. Aunque todo parece jugar a favor de Pablo, quien ha ganado la cubeta que rescatará a su querida Pascualina y realizar la gran hazaña, Valeria, la hermana de Felipe, impide que el premio sea entregado y les hace caer en cuenta que no basta ganar una apuesta si entorpece el trabajo de otra familia en la misma situación. Se desata una disertación en la que todos los niños empatizan con Pablo gracias a que reconocen los obstáculos que han tenido al tratar de sortear la dura actitud de Don Chucho. Ahora, es la unión de todos los niños lo que permite que Pascualina sea rescatada. Finalmente, Pablo aprende la importancia del trabajo en equipo."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La gran hazaña",
+     "poster": "https://image.tmdb.org/t/p/w500/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    }
+   ]
+  },
+  {
+   "titulo": "O Macaco no Fim do Arco-Íris",
+   "tmdb_id": 1599341,
+   "titulo_original": "O Macaco no Fim do Arco-Íris",
+   "poster_path": "/gy5QpTZUiYg6qWSbu3eXjcyesW0.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After receiving a script that predicts her life, a young woman tracks down the writer to uncover the meaning of her existence.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "",
+   "title_en": "The Monkey at the End of the Rainbow",
+   "lbSlug": "the-monkey-at-the-end-of-the-rainbow",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "Hippomane Mancinella",
+   "tmdb_id": 1408136,
+   "titulo_original": "Hippomane Mancinella",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Although the appearance and smell of the so-called manzanilla de la muerte is similar to that of a mini apple, it is a fruit that is said to have caused considerable casualties among the Spanish invaders. Almost like a collage halfway between psychedelia, visions and surrealism, this experimental short film proposes a very peculiar journey through the history of violence in Colombia.",
+   "genero": "",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "hippomane-mancinella",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  {
+   "titulo": "HDLT",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/siembrafest/hdlt.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/siembrafest/hdlt.jpg",
+     "posterSource": "oficial"
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "HDLT Hijo de la Tierra",
+     "poster": "/assets/siembrafest/hdlt.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+    }
+   ]
+  },
+  {
+   "titulo": "La Gallina Saraviada",
+   "tmdb_id": 1746279,
+   "titulo_original": "La Gallina Saraviada",
+   "poster_path": "/8zhRsq8nEjsjFLl29onD7LXeQfz.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-gallina-saraviada",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La gallina saraviada",
+     "poster": "https://image.tmdb.org/t/p/w500/8zhRsq8nEjsjFLl29onD7LXeQfz.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-gallina-saraviada",
+     "sinopsis": "Convierte el empeño de una mujer mayor por preservar el linaje de su última gallina en un relato íntimo sobre la persistencia de la vida."
+    }
+   ]
+  },
+  {
+   "titulo": "Orígenes",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Orígenes",
+     "poster": "/assets/siembrafest/origenes.jpg",
+     "posterSource": "oficial"
+    }
+   ]
+  },
+  {
+   "titulo": "Tierra Encima",
+   "tmdb_id": 1342353,
+   "titulo_original": "Tierra encima",
+   "poster_path": "/3yh6d2Kt3wiqBMIMFlZSlru2ViD.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Clara and Amantina have been neighbors for more than fifty years. Their houses are joined and separated by a wall whose ownership is the subject of a historic dispute. They accuse each other of witchcraft and each believes that the other is responsible for the misfortunes of death, disease and misery that their families have suffered for decades.",
+   "genero": "Documental",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Under Land",
+   "lbSlug": "under-land",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  }
+ ],
+ "verificadas": {
+  "La Gran Hazaña": {
+   "tmdb_id": 1494003,
+   "titulo_original": "La gran hazaña",
+   "poster_path": "/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+   "genero": "Aventura",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Great Feat",
+   "lbSlug": "the-great-feat",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La gran hazaña",
+     "poster": "/assets/ficdeh/la-gran-hazana.jpg",
+     "posterSource": "custom",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "La gran hazaña"
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "La gran hazaña",
+     "tmdb_id": 1494003,
+     "poster": "/assets/popayan-2026/la-gran-hazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "Pablo (10) tendrá el desafío de rescatar a su mascota Pascualina, una gallina ponedora, de las garras de Don Chucho, el usurero del pueblo quien cobra las deudas con huevos. Este día Pablo tiene un accidente en su bicicleta y rompe los preciados huevos, ahora debe reponer la cubeta para saldar la deuda. La única herramienta que tiene el niño para rescatar a Pascualina es una apuesta con su trompo de madera con Felipe el mejor jugador de trompo del pueblo. Aunque todo parece jugar a favor de Pablo, quien ha ganado la cubeta que rescatará a su querida Pascualina y realizar la gran hazaña, Valeria, la hermana de Felipe, impide que el premio sea entregado y les hace caer en cuenta que no basta ganar una apuesta si entorpece el trabajo de otra familia en la misma situación. Se desata una disertación en la que todos los niños empatizan con Pablo gracias a que reconocen los obstáculos que han tenido al tratar de sortear la dura actitud de Don Chucho. Ahora, es la unión de todos los niños lo que permite que Pascualina sea rescatada. Finalmente, Pablo aprende la importancia del trabajo en equipo."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La gran hazaña",
+     "poster": "https://image.tmdb.org/t/p/w500/luHjmi57PSrqdH20zGuojt6ivmt.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "sinopsis": "A Pablo le encanta jugar al trompo. Cuando Don Chucho, el usurero del pueblo, retiene a Pascualina, su amiga y mascota, Pablo debe enfrentarse a Felipe, el mejor jugador de trompo de la región, para rescatarla. Pero ganar no es suficiente: los demás niños del pueblo se unirán a él en un acto de solidaridad, amistad y trabajo en equipo para lograr esta gran hazaña."
+    }
+   ]
+  },
+  "O Macaco no Fim do Arco-Íris": {
+   "tmdb_id": 1599341,
+   "titulo_original": "O Macaco no Fim do Arco-Íris",
+   "poster_path": "/gy5QpTZUiYg6qWSbu3eXjcyesW0.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After receiving a script that predicts her life, a young woman tracks down the writer to uncover the meaning of her existence.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "",
+   "title_en": "The Monkey at the End of the Rainbow",
+   "lbSlug": "the-monkey-at-the-end-of-the-rainbow",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "Hippomane Mancinella": {
+   "tmdb_id": 1408136,
+   "titulo_original": "Hippomane Mancinella",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Although the appearance and smell of the so-called manzanilla de la muerte is similar to that of a mini apple, it is a fruit that is said to have caused considerable casualties among the Spanish invaders. Almost like a collage halfway between psychedelia, visions and surrealism, this experimental short film proposes a very peculiar journey through the history of violence in Colombia.",
+   "genero": "",
+   "anio_tmdb": 2022,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "hippomane-mancinella",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  },
+  "La Gallina Saraviada": {
+   "tmdb_id": 1746279,
+   "titulo_original": "La Gallina Saraviada",
+   "poster_path": "/8zhRsq8nEjsjFLl29onD7LXeQfz.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "An elderly peasant woman struggles to preserve the lineage of her last hen as it faces extinction; to do so, she draws on her ingenuity and uses various methods to incubate the last few eggs she has left. An elderly woman and her animals, holding on together, because in the small, everyday things, life always finds a way to go on.",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "la-gallina-saraviada",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La gallina saraviada",
+     "poster": "https://image.tmdb.org/t/p/w500/8zhRsq8nEjsjFLl29onD7LXeQfz.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-gallina-saraviada",
+     "sinopsis": "Convierte el empeño de una mujer mayor por preservar el linaje de su última gallina en un relato íntimo sobre la persistencia de la vida."
+    }
+   ]
+  },
+  "Tierra Encima": {
+   "tmdb_id": 1342353,
+   "titulo_original": "Tierra encima",
+   "poster_path": "/3yh6d2Kt3wiqBMIMFlZSlru2ViD.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Clara and Amantina have been neighbors for more than fifty years. Their houses are joined and separated by a wall whose ownership is the subject of a historic dispute. They accuse each other of witchcraft and each believes that the other is responsible for the misfortunes of death, disease and misery that their families have suffered for decades.",
+   "genero": "Documental",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Under Land",
+   "lbSlug": "under-land",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar"
+  }
+ },
+ "sin_ficha": [
+  "40X40 La Medida de la Barbarie",
+  "Arañas cazando abejas",
+  "Ay de mi",
+  "CHAIKA",
+  "Cauce Vivo",
+  "El cronista de Ibagué",
+  "Espíritus del Bosque",
+  "Guadianes de la Fiesta",
+  "HDLT",
+  "La Profecía de la Abuela Yuraq Jukú",
+  "Los Lobo",
+  "Muerto Parado",
+  "Orígenes",
+  "Selva Nublada: Un viaje al corazón del bosque de niebla",
+  "Tejiendo Almas",
+  "Toma 10",
+  "Un Futuro Enterrado en el Pasado",
+  "Un Río que Reclama su Memoria"
+ ]
+}
