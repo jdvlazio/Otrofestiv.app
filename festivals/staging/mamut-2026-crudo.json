@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Instagram @mamut_festival — el carrusel de programación (11 láminas)",
-  "capturado": "2026-09-30",
+  "capturado": "2026-10-02",
   "que_aporta": "la programación entera: día, hora, lugar y créditos",
   "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
   "metodo": "lectura a ojo lámina por lámina, confirmada con la OCR de cajas de las mismas láminas, en los dos sentidos"
@@ -475,7 +475,9 @@
    "seccion": "Proyecciones",
    "director": "Tatiana Fuentes Sadowski",
    "pais": "Perú, Portugal",
-   "duracion_min": 77
+   "duracion_min": 77,
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "titulo": "Manual para invocar fantasmas",

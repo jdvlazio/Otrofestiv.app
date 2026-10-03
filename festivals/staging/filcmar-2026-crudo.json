@@ -129,10 +129,9 @@
    "tipo": "evento",
    "event_kind": "taller",
    "sinopsis": "Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. Lo guía Juan C. López, editor y postproductor. En este taller exploraremos cómo la narrativa pasa del papel y se reescribe activamente durante la etapa de edición. Cupos limitados.",
+   "duracion_min": 240,
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScPop2bHx6C7Mf7yzrjH7Q1lRP9EG_DXEmzve4oJzRQ_lEsOA/viewform",
-   "is_recurring": true,
-   "duracion_min": 90,
-   "_duracion_de": "90 min declarados: la lámina no la da"
+   "is_recurring": true
   },
   {
    "titulo": "Lo que queda del mar",
@@ -410,10 +409,9 @@
    "tipo": "evento",
    "event_kind": "taller",
    "sinopsis": "Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. Lo guía Juan C. López, editor y postproductor. En este taller exploraremos cómo la narrativa pasa del papel y se reescribe activamente durante la etapa de edición. Cupos limitados.",
+   "duracion_min": 240,
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScPop2bHx6C7Mf7yzrjH7Q1lRP9EG_DXEmzve4oJzRQ_lEsOA/viewform",
-   "is_recurring": true,
-   "duracion_min": 90,
-   "_duracion_de": "90 min declarados: la lámina no la da"
+   "is_recurring": true
   },
   {
    "titulo": "Mu-Ki-Ra",
@@ -433,24 +431,6 @@
    "seccion": "Cinescuela"
   },
   {
-   "titulo": "Taller Juguetería Audiovisual",
-   "dia": "2026-10-11",
-   "hora": "13:30",
-   "sede": "Parque Principal de Marinilla",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
-    "date": "2026-10-01",
-    "lamina": 8
-   },
-   "seccion": "Programación Académica",
-   "tipo": "evento",
-   "event_kind": "taller",
-   "sinopsis": "Un taller abierto a niños, jóvenes y adultos para acercarnos de forma práctica y divertida al principio didáctico y fascinante de la imagen en movimiento. La comunidad construirá sus propios juguetes ópticos y los pondrá a prueba para explorar cómo nace la ilusión que le da vida al cine. Lo guían Carolina del Castillo y Marcela Restrepo (Corporación Trama). Sin inscripción previa.",
-   "duracion_min": 90,
-   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
-  },
-  {
    "titulo": "MAPISTAS Expo FILCMAR 8",
    "dia": "2026-10-11",
    "hora": "14:00",
@@ -467,6 +447,24 @@
    "is_recurring": true,
    "duracion_min": 90,
    "_duracion_de": "90 min declarados: la lámina no la da"
+  },
+  {
+   "titulo": "Taller Juguetería Audiovisual",
+   "dia": "2026-10-11",
+   "hora": "14:00",
+   "sede": "Parque Principal de Marinilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
+    "date": "2026-10-01",
+    "lamina": 8
+   },
+   "seccion": "Programación Académica",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "sinopsis": "Un taller abierto a niños, jóvenes y adultos para acercarnos de forma práctica y divertida al principio didáctico y fascinante de la imagen en movimiento. La comunidad construirá sus propios juguetes ópticos y los pondrá a prueba para explorar cómo nace la ilusión que le da vida al cine. Lo guían Carolina del Castillo y Marcela Restrepo (Corporación Trama). Sin inscripción previa.",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
   },
   {
    "titulo": "Tintico Charlado: Mercado MORA — El cine ¿es medio o es fin?",
@@ -636,10 +634,9 @@
    "tipo": "evento",
    "event_kind": "taller",
    "sinopsis": "Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. Lo guía Juan C. López, editor y postproductor. En este taller exploraremos cómo la narrativa pasa del papel y se reescribe activamente durante la etapa de edición. Cupos limitados.",
+   "duracion_min": 240,
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScPop2bHx6C7Mf7yzrjH7Q1lRP9EG_DXEmzve4oJzRQ_lEsOA/viewform",
-   "is_recurring": true,
-   "duracion_min": 90,
-   "_duracion_de": "90 min declarados: la lámina no la da"
+   "is_recurring": true
   },
   {
    "titulo": "Mercado MORA — Pitch público Películas en Camino MORA",

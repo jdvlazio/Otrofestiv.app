@@ -106,9 +106,7 @@ TITULO = {'CAMINATA FOTOGRÁFICA': 'Caminata fotográfica',
           'Ceremonia de premiación — Premiación MORA y Competencias': 'Ceremonia de premiación'}
 
 # LO QUE EL FESTIVAL DICE DE UNA ACTIVIDAD en su propio post, que la lámina no
-# trae: frases del pie, literales y recortadas. La hora y el lugar los pone la
-# lámina, que es la más reciente: el post de la Juguetería decía 2:00 p. m. y la
-# programación del 1 oct dice 1:30.
+# trae: frases del pie, literales y recortadas.
 SINOPSIS = {
     'Taller Escritura y Reescritura':  # p/DdZWR0ulRvS
         'Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. '
@@ -123,6 +121,14 @@ SINOPSIS = {
         '(Corporación Trama). Sin inscripción previa.',
     'Ceremonia de premiación — Premiación MORA y Competencias': 'Premiación MORA y Competencias.',
 }
+
+# LO QUE LA WEB DEL FESTIVAL DICE Y LA LÁMINA NO (cinismoyalgomas.com/filcmar/
+# programacionacademica, leída el 2 oct): el taller de escritura va de 9:00 a.m. a
+# 1:00 p.m., y la Juguetería es a las 2:00 p.m. —lo mismo que su post
+# p/DdcQBaRFZqB—; la lámina de programación decía 1:30. Dos fuentes contra una,
+# aprobado por Juan (2 oct).
+DURACION_DE_OTRA_FUENTE = {'Taller Escritura y Reescritura': 240}
+HORA_DE_OTRA_FUENTE = {('Taller Juguetería Audiovisual', '2026-10-11', '13:30'): '14:00'}
 
 INSCRIPCION = {
     # linktr.ee/filcmar; inscripciones extendidas al 5 oct (p/Dd4ajjCz5Go)
@@ -282,6 +288,9 @@ def main():
                 reg['sinopsis'] = a['texto'].rstrip('.') + '.'
             if t in SINOPSIS:
                 reg['sinopsis'] = SINOPSIS[t]
+            if t in DURACION_DE_OTRA_FUENTE:
+                reg['duracion_min'] = DURACION_DE_OTRA_FUENTE[t]
+            reg['hora'] = HORA_DE_OTRA_FUENTE.get((t, a['dia'], a['hora']), reg['hora'])
             if t in INSCRIPCION:
                 reg['acceso'] = 'Entrada libre con inscripción previa'
                 reg['registration_url'] = INSCRIPCION[t]

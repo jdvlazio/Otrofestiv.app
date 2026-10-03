@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @mamut_festival — el carrusel de programación (11 láminas)",
-  "capturado": "2026-09-30",
+  "capturado": "2026-10-02",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina de día, tal cual; la sala va aparte (crudo `sala`). La lámina 10 da la dirección de seis. «Capilla, Comfama» y «Lab UNAL» no están en esa lámina.",
@@ -876,7 +876,8 @@
    "day_order": 4,
    "venue": "Las Américas - Medellín",
    "sala": "Sala 3",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "synopsis": "Emergiendo de la era del caucho, las historias perdidas de Omarino y Aredomi se revelan a través de un viaje sensorial que entrelaza la propia historia de la cineasta con archivos de la Amazonía de inicios del siglo veinte. La película es a la vez un ritual y una invocación a dialogar entre vivos y muertos, reflexionando sobre los límites de la investigación, la especulación, el poder, la memoria y las reparaciones.",
    "synopsis_lang": "es",
    "poster": "/assets/mamut-2026/la-memoria-de-las-mariposas.jpg",
@@ -1365,7 +1366,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T22:35:46",
+  "fecha": "2026-10-02T19:44:53",
   "plan_sha": "6f9942cdcada33ca",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py mamut-2026"
