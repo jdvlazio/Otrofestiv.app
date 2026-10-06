@@ -156,6 +156,24 @@ TITULO_OFICIAL_CORTO = {
     'Show de Ziggy: la maldición del Mariachi Bondage': 'Show de Ziggy: La maldición del mariachi bondage',
 }
 
+# LO QUE COMPLETAMOS NOSOTROS (Juan, 6 oct), con su porqué:
+#   · el PAÍS de la Competencia Universitaria: la lámina pone la universidad
+#     donde la Latinoamericana pone el país; las universidades colombianas dan
+#     una producción colombiana. «La pecera» (Academia de Artes de China) queda
+#     sin país;
+#   · el de los tres cortos en 8 mm: «Grupo experimental cine Caldas», la lámina;
+#   · la DIRECCIÓN de HDLT: «Colectivo Artefactum Suba», como la acreditan
+#     Popayán («dirigido y producido por») y Honda («Dir.»); acá solo producía.
+UNIVERSIDAD_COLOMBIANA = {
+    'Politécnico Colombiano Jaime Isaza Cadavid', 'Universidad del Magdalena',
+    'Universidad Central de Bogotá', 'Pontificia Universidad Javeriana',
+    'Universidad Jorge Tadeo Lozano', 'Universidad de los Andes',
+    'Universidad Nacional de Colombia', 'Universidad Autónoma de Bucaramanga',
+    'Instituto Tecnológico Metropolitano',
+}
+PAIS_8MM = 'Colombia'
+DIRECTOR_DECLARADO = {'HDLT': 'Colectivo Artefactum Suba'}
+
 PAIS = {'Brazil': 'Brasil', 'Colombia / Estados Unidos': 'Colombia, Estados Unidos'}
 
 
@@ -225,6 +243,10 @@ def corto(t, cat):
     c = cat[plano(t)]
     r = {k: c[k] for k in ('titulo', 'director', 'pais', 'anio', 'duracion_min') if c.get(k)}
     r['titulo'] = TITULO_OFICIAL_CORTO.get(r['titulo'], r['titulo'])
+    if not r.get('pais') and c.get('universidad') in UNIVERSIDAD_COLOMBIANA:
+        r['pais'] = 'Colombia'
+    if not r.get('director') and c['titulo'] in DIRECTOR_DECLARADO:
+        r['director'] = DIRECTOR_DECLARADO[c['titulo']]
     return r
 
 
@@ -274,6 +296,8 @@ def main():
             reg = {'titulo': t, **base, 'seccion': SECCION[a['icono']]}
             reg['obras'] = ([corto(x, cat) for x in a['cortos']] if a.get('cortos')
                             else [obra(o, cat) for o in a['obras']])
+            if t.startswith('Cortoconcierto'):
+                reg['obras'] = [{**o, 'pais': o.get('pais') or PAIS_8MM} for o in reg['obras']]
             reg['duracion_min'] = sum(o.get('duracion_min') or 0 for o in reg['obras'])
             if t.startswith('Cortoconcierto'):
                 reg['premiere'] = 'Inauguración'

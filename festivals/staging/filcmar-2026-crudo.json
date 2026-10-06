@@ -57,19 +57,22 @@
      "titulo": "El cargador de hombres",
      "director": "Gustavo Mejía",
      "anio": 1982,
-     "duracion_min": 25
+     "duracion_min": 25,
+     "pais": "Colombia"
     },
     {
      "titulo": "Cierra ojos",
      "director": "Marcos Mejía",
      "anio": 1981,
-     "duracion_min": 20
+     "duracion_min": 20,
+     "pais": "Colombia"
     },
     {
      "titulo": "El tajamar y la astromelia",
      "director": "Héctor Gallego",
      "anio": 1983,
-     "duracion_min": 18
+     "duracion_min": 18,
+     "pais": "Colombia"
     }
    ],
    "duracion_min": 63,
@@ -238,31 +241,36 @@
      "titulo": "The Raules",
      "director": "Hugo Chamorro",
      "anio": 2025,
-     "duracion_min": 1
+     "duracion_min": 1,
+     "pais": "Colombia"
     },
     {
      "titulo": "Desarraigo",
      "director": "Nicolas Patiño Hortua, Andrés Santiago Cely Orjuela",
      "anio": 2026,
-     "duracion_min": 15
+     "duracion_min": 15,
+     "pais": "Colombia"
     },
     {
      "titulo": "Para no volver",
      "director": "Tania Galvis",
      "anio": 2026,
-     "duracion_min": 10
+     "duracion_min": 10,
+     "pais": "Colombia"
     },
     {
      "titulo": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
      "director": "Juan David Rodriguez",
      "anio": 2025,
-     "duracion_min": 13
+     "duracion_min": 13,
+     "pais": "Colombia"
     },
     {
      "titulo": "Agachar el rostro",
      "director": "Camilo Medina Noy",
      "anio": 2025,
-     "duracion_min": 13
+     "duracion_min": 13,
+     "pais": "Colombia"
     }
    ],
    "duracion_min": 52
@@ -367,7 +375,8 @@
      "titulo": "HDLT",
      "pais": "Colombia",
      "anio": 2026,
-     "duracion_min": 18
+     "duracion_min": 18,
+     "director": "Colectivo Artefactum Suba"
     },
     {
      "titulo": "Show de Ziggy: La maldición del mariachi bondage",
@@ -501,13 +510,15 @@
      "titulo": "El espejo de la vida",
      "director": "Simón Sánchez Plazas",
      "anio": 2025,
-     "duracion_min": 9
+     "duracion_min": 9,
+     "pais": "Colombia"
     },
     {
      "titulo": "La danza del caos",
      "director": "Valeria Preciado Romaña",
      "anio": 2025,
-     "duracion_min": 6
+     "duracion_min": 6,
+     "pais": "Colombia"
     },
     {
      "titulo": "La pecera",
@@ -519,13 +530,15 @@
      "titulo": "Reverb",
      "director": "María Elizabeth López",
      "anio": 2025,
-     "duracion_min": 2
+     "duracion_min": 2,
+     "pais": "Colombia"
     },
     {
      "titulo": "Chicha la chicharra",
      "director": "Sofia Alejandra Uzcátegui",
      "anio": 2025,
-     "duracion_min": 10
+     "duracion_min": 10,
+     "pais": "Colombia"
     }
    ],
    "duracion_min": 35
@@ -708,31 +721,36 @@
      "titulo": "HUSH",
      "director": "Santiago Franco",
      "anio": 2025,
-     "duracion_min": 14
+     "duracion_min": 14,
+     "pais": "Colombia"
     },
     {
      "titulo": "Sol de niebla",
      "director": "Maria José Ibarra, Florentino Vargas",
      "anio": 2026,
-     "duracion_min": 6
+     "duracion_min": 6,
+     "pais": "Colombia"
     },
     {
      "titulo": "Pudor ante el asalto de los ojos furtivos",
      "director": "Laura María Rodríguez",
      "anio": 2025,
-     "duracion_min": 9
+     "duracion_min": 9,
+     "pais": "Colombia"
     },
     {
      "titulo": "El ocaso de los dioses",
      "director": "Juan Pablo Rendón",
      "anio": 2025,
-     "duracion_min": 19
+     "duracion_min": 19,
+     "pais": "Colombia"
     },
     {
      "titulo": "Somnolítico",
      "director": "Abril Natalia Velásquez",
      "anio": 2026,
-     "duracion_min": 11
+     "duracion_min": 11,
+     "pais": "Colombia"
     }
    ],
    "duracion_min": 59

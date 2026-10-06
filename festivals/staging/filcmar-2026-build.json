@@ -208,6 +208,8 @@
    "title": "Cortoconcierto inaugural Antioquia Super Ochera",
    "type": "film",
    "section": "🐓 Programación Cultural",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "63 min",
    "day": "2026-10-09",
    "time": "18:00",
@@ -229,18 +231,24 @@
     {
      "title": "El cargador de hombres",
      "director": "Gustavo Mejía",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 1982,
      "duration": "25 min"
     },
     {
      "title": "Cierra ojos",
      "director": "Marcos Mejía",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 1981,
      "duration": "20 min"
     },
     {
      "title": "El tajamar y la astromelia",
      "director": "Héctor Gallego",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 1983,
      "duration": "18 min"
     }
@@ -461,12 +469,16 @@
     {
      "title": "The Raules",
      "director": "Hugo Chamorro",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "1 min"
     },
     {
      "title": "Desarraigo",
      "director": "Nicolas Patiño Hortua, Andrés Santiago Cely Orjuela",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2026,
      "duration": "15 min",
      "poster": "/assets/filcmar-2026/desarraigo.jpg",
@@ -475,13 +487,13 @@
      "tmdb_id": 1510204,
      "synopsis": "Tras la muerte de su esposa, Ángel enfrenta un duelo solitario en su hogar rural. Una gotera crece como una presencia abrumadora, transformando su espacio y empujándolo a decisiones irracionales mientras intenta reconciliarse con su pérdida.",
      "genre": "Drama",
-     "country": "Colombia",
-     "synopsis_lang": "es",
-     "flags": "🇨🇴"
+     "synopsis_lang": "es"
     },
     {
      "title": "Para no volver",
      "director": "Tania Galvis",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2026,
      "duration": "10 min",
      "poster": "/assets/filcmar-2026/para-no-volver.jpg",
@@ -494,6 +506,8 @@
     {
      "title": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
      "director": "Juan David Rodriguez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "13 min",
      "poster": "/assets/siembrafest/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
@@ -502,6 +516,8 @@
     {
      "title": "Agachar el rostro",
      "director": "Camilo Medina Noy",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "13 min",
      "poster": "/assets/filcmar-2026/agachar-el-rostro.jpg",
@@ -510,9 +526,7 @@
      "tmdb_id": 1595079,
      "synopsis_en": "Shrouded in fog and crumbling stone, a teacher moves through his final day at a rural school, soon to be shut down for lack of students. In quiet solitude, he parts ways with a place that has been his craft and his shelter for years.",
      "title_en": "Lowering the Gaze",
-     "genre": "Drama",
-     "country": "Colombia",
-     "flags": "🇨🇴"
+     "genre": "Drama"
     }
    ]
   },
@@ -668,6 +682,7 @@
     },
     {
      "title": "HDLT",
+     "director": "Colectivo Artefactum Suba",
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
@@ -858,12 +873,16 @@
     {
      "title": "El espejo de la vida",
      "director": "Simón Sánchez Plazas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "9 min"
     },
     {
      "title": "La danza del caos",
      "director": "Valeria Preciado Romaña",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "6 min"
     },
@@ -878,12 +897,16 @@
     {
      "title": "Reverb",
      "director": "María Elizabeth López",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "2 min"
     },
     {
      "title": "Chicha la chicharra",
      "director": "Sofia Alejandra Uzcátegui",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "10 min",
      "poster": "/assets/filcmar-2026/chicha-la-chicharra.jpg",
@@ -893,9 +916,7 @@
      "synopsis": "Una chicharra llamada Chicha emerge de la tierra para su metamorfosis, y descubre que el árbol de aguacate donde nació ha sido talado; decidida a crear un bosque, deposita sus esperanzas en un retoño de aguacate, pero pronto debe enfrentar la realidad de su corta vida y aprender a aceptar el presente.",
      "synopsis_en": "Chicha emerges from the soil for her metamorphosis, only to find the avocado tree where she was born gone. Determined to create a forest, she waits for a new tree to grow, unaware her life will be too short to see it flourish.",
      "genre": "Animación",
-     "country": "Colombia",
-     "synopsis_lang": "es",
-     "flags": "🇨🇴"
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -1128,18 +1149,24 @@
     {
      "title": "HUSH",
      "director": "Santiago Franco",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "14 min"
     },
     {
      "title": "Sol de niebla",
      "director": "Maria José Ibarra, Florentino Vargas",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2026,
      "duration": "6 min"
     },
     {
      "title": "Pudor ante el asalto de los ojos furtivos",
      "director": "Laura María Rodríguez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "9 min",
      "poster": "/assets/filcmar-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
@@ -1150,19 +1177,21 @@
      "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
      "title_en": "Shame in the Face of Furtive Eyes",
      "genre": "Animación",
-     "country": "Colombia",
-     "synopsis_lang": "es",
-     "flags": "🇨🇴"
+     "synopsis_lang": "es"
     },
     {
      "title": "El ocaso de los dioses",
      "director": "Juan Pablo Rendón",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2025,
      "duration": "19 min"
     },
     {
      "title": "Somnolítico",
      "director": "Abril Natalia Velásquez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
      "year": 2026,
      "duration": "11 min",
      "poster": "/assets/filcmar-2026/somnolitico.jpg",
@@ -1172,9 +1201,7 @@
      "synopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
      "synopsis_en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
      "title_en": "Somnolytic",
-     "country": "Colombia",
-     "synopsis_lang": "es",
-     "flags": "🇨🇴"
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -1348,7 +1375,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-06T09:44:57",
+  "fecha": "2026-10-06T11:43:58",
   "plan_sha": "627de20e2eb8374c",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"
