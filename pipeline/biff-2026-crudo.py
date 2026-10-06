@@ -67,6 +67,57 @@ SALA_CHARLA = {'2026-10-10': 'Sala 3', '2026-10-11': 'Sala 3',
 # «BIFF Bang»: el PDF escribe BIFF BANG y la web «Biff Bang!»; BIFF es sigla
 # (lib.SIGLAS) y Bang es palabra. La caja la decide Juan.
 SECCION_CHARLA = 'Charlas abiertas BIFF Bang'
+
+# ── LOS PANELES DE INDUSTRIA del Bogotá Creative Connect (Juan, 6 oct): la
+# página biff.co/eventos_Paneles.php (guardada en fuentes/biff-2026/), 7 paneles
+# del 7 al 9 de octubre con su hora de inicio y de fin y su salón. La sede la da
+# el post p/DeHyVKVIJcP: «Cámara de Comercio de Bogotá, Sede Chapinero», y el
+# acceso el p/DeIecQYDl8G: «entrada libre y para todo el público».
+PANELES = f'{D}/eventos_Paneles.html'
+SEDE_PANELES = 'Cámara de Comercio de Bogotá - Sede Chapinero'
+SECCION_PANELES = 'Paneles de Industria'
+# los títulos que la página escribe en mayúscula sostenida, en caja normal
+# (caja-sostenida), por aprobar de Juan
+TITULO_PANEL = {
+    'ARQUITECTURA DE LO INVISIBLE: MONTAJE Y PRODUCCIÓN': 'Arquitectura de lo invisible: montaje y producción',
+    'ARQUITECTURA DE LO INVISIBLE: Montaje y Trabajo actoral': 'Arquitectura de lo invisible: montaje y trabajo actoral',
+    'ARQUITECTURA DE LO INVISIBLE Montaje y Guion': 'Arquitectura de lo invisible: montaje y guion',
+    'ARQUITECTURA DE LO INVISIBLE: Montaje y Composición musical': 'Arquitectura de lo invisible: montaje y composición musical',
+}
+
+
+def paneles():
+    import html as _h
+    s = io.open(PANELES, encoding='utf-8', errors='replace').read()
+    t = _h.unescape(re.sub(r'<[^>]+>', '\n', re.sub(r'<script.*?</script>|<style.*?</style>', '', s, flags=re.S)))
+    L = [x.strip() for x in t.split('\n') if x.strip() and x.strip() != '-->']
+    cab = re.compile(r'^OCTUBRE, \w+ (\d{1,2}) - (\d{1,2}):(\d{2}) ([ap])\.m\. - (\d{1,2}):(\d{2}) ([ap])\.m\.$')
+    h24 = lambda h, m, ap: f'{int(h) % 12 + (12 if ap == "p" else 0):02d}:{m}'
+    out, idx = [], [k for k, x in enumerate(L) if x.startswith('OCTUBRE,')]
+    for n, k in enumerate(idx):
+        bloque = L[k:idx[n + 1] if n + 1 < len(idx) else len(L)]
+        m = cab.match(bloque[0])
+        if not m:
+            sys.exit(f'✗ panel sin cabecera legible: {bloque[0]!r}')
+        i = bloque.index('Panel')
+        titulo = bloque[i + 1]
+        sala = next(x for x in bloque if re.match(r'^(Sal[oó]n|Auditorio)', x))
+        cuerpo = [x for x in bloque[i + 2:] if x != sala and not re.match(r'^(Lunes|Martes|Miércoles|Jueves|Viernes) \d', x)
+                  and x != 'Entrada libre' and not x.startswith('Evento ')]
+        # el renglón en mayúscula sostenida bajo el título es su subtítulo; la
+        # alianza va como frase
+        sinopsis = ' '.join(('En alianza con ECCA.' if x == 'EN ALIANZA CON ECCA' else x)
+                            for x in cuerpo if not (x.isupper() and x != 'EN ALIANZA CON ECCA'))
+        ini, fin = h24(m.group(2), m.group(3), m.group(4)), h24(m.group(5), m.group(6), m.group(7))
+        out.append({'titulo': TITULO_PANEL.get(titulo, titulo), 'titulo_web': titulo,
+                    'dia': f'2026-10-{int(m.group(1)):02d}', 'hora': ini, 'sede': SEDE_PANELES,
+                    'sala': sala, 'tipo': 'evento', 'event_kind': 'charla', 'seccion': SECCION_PANELES,
+                    'acceso': 'Entrada libre', 'sinopsis': re.sub(r'\s+', ' ', sinopsis).strip(),
+                    'duracion_min': mins(fin) - mins(ini),
+                    '_src': {'url': 'https://biff.co/eventos_Paneles.php', 'date': '2026-10-06'}})
+    if len(out) != len(idx) or not out:
+        sys.exit('✗ los paneles no cuadran con sus cabeceras')
+    return out
 PROGRAMA = 'Muestra de cortometrajes BIFF Bang'
 
 # ── LA DURACIÓN QUE EL FESTIVAL IMPRIME MAL, con su prueba ─────────────────
@@ -210,6 +261,10 @@ def main():
                           'seccion': SECCION_CHARLA,
                           'acceso': next((ACCESO_ICONO[i] for i in (f['icono'] or '').split('+') if i in ACCESO_ICONO), DESCONOCIDO),
                           '_src': {'url': PDF_URL, 'date': '2026-09-26'}})
+
+    # los del miércoles 7 caen un día ANTES del festival (8–14): la app no tiene
+    # ese día. Fuera hasta que Juan decida (6 oct)
+    funciones += [f for f in paneles() if f['dia'] >= '2026-10-08']
 
     # COBERTURA INVERSA: toda fila de la tabla por días quedó en el crudo
     for k in icono:

@@ -119,6 +119,10 @@
    "Universidad Jorge Tadeo Lozano": [
     "Universidad Jorge Tadeo Lozano - Bogotá",
     ""
+   ],
+   "Cámara de Comercio de Bogotá - Sede Chapinero": [
+    "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+    ""
    ]
   },
   "_por_que_secciones": "Las secciones del festival, verbatim (PDF + carruseles de IG). El inglés y el emoji son nuestros, por aprobar; «Charlas abiertas BIFF BANG» es el nombre que el PDF les da en la grilla.",
@@ -176,6 +180,11 @@
    "Charlas abiertas BIFF Bang": {
     "emoji": "🎤",
     "en": "BIFF BANG Open Talks",
+    "archetype": "Charlas / Industria"
+   },
+   "Paneles de Industria": {
+    "emoji": "🎙️",
+    "en": "Industry Panels",
     "archetype": "Charlas / Industria"
    }
   },

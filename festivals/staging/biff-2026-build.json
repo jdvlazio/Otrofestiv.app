@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PDF oficial del BIFF 12 + agenda de la Cinemateca de Bogotá + biff.co",
-  "capturado": "2026-10-01",
+  "capturado": "2026-10-06",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la sede como la presenta el PDF (págs. 28–31); la sala va aparte, desde las fichas.",
@@ -117,63 +117,78 @@
   "2026-10-14": "Miércoles 14 de octubre"
  },
  "sections": {
+  "🎙️ Paneles de Industria": {
+   "en": "Industry Panels",
+   "archetype": "Charlas / Industria",
+   "order": 1
+  },
   "✨ Espíritu joven": {
    "en": "Young Spirit",
    "archetype": "Competencia",
-   "order": 1
+   "order": 2
   },
   "🧬 Relatos mutantes": {
    "en": "Mutant Tales",
    "archetype": "Perspectivas / Miradas",
-   "order": 2
+   "order": 3
   },
   "✊ Clases de lucha": {
    "en": "Fighting Classes",
    "archetype": "Perspectivas / Miradas",
-   "order": 3
+   "order": 4
   },
   "🎩 Masters": {
    "en": "Masters",
    "archetype": "Perspectivas / Miradas",
-   "order": 4
+   "order": 5
   },
   "👻 Fantasmas del pasado": {
    "en": "Ghosts of the Past",
    "archetype": "Perspectivas / Miradas",
-   "order": 5
+   "order": 6
   },
   "🎞️ Retrospectiva Rei Pictures": {
    "en": "Rei Pictures Retrospective",
    "archetype": "Retrospectiva / Tributo",
-   "order": 6
+   "order": 7
   },
   "🎬 Muestra de cortometrajes BIFF Bang": {
    "en": "BIFF BANG Short Film Showcase",
    "archetype": "Cortos / Programas",
-   "order": 7
+   "order": 8
   },
   "🎻 Cine Conciertos": {
    "en": "Film Concerts",
    "archetype": "Especiales / Eventos",
-   "order": 8
+   "order": 9
   },
   "🇨🇴 Colombia viva": {
    "en": "Colombia Viva",
    "archetype": "Muestra / País",
-   "order": 9
+   "order": 10
   },
   "🎤 Charlas abiertas BIFF Bang": {
    "en": "BIFF BANG Open Talks",
    "archetype": "Charlas / Industria",
-   "order": 10
+   "order": 11
   },
   "🧒 BIFF Kids": {
    "en": "BIFF Kids",
    "archetype": "Especiales / Eventos",
-   "order": 11
+   "order": 12
   }
  },
  "venues": {
+  "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá": {
+   "short": "Cámara de Comercio de Bogotá",
+   "city": "Bogotá",
+   "n": 0,
+   "lat": 4.6516095,
+   "lng": -74.0594602,
+   "_prec": "manual",
+   "_match": "Google Maps: Cámara de Comercio de Bogotá, Cl. 67 #8-32, Chapinero (la sede del Bogotá Creative Connect, post p/DeHyVKVIJcP)",
+   "address": "Cl. 67 #8-32"
+  },
   "Cinemateca de Bogotá - Bogotá": {
    "short": "Cinemateca de Bogotá",
    "city": "Bogotá",
@@ -286,6 +301,26 @@
   }
  },
  "films": [
+  {
+   "title": "¿Puede Iberoamérica crear su propio circuito de festivales?",
+   "type": "event",
+   "section": "🎙️ Paneles de Industria",
+   "duration": "60 min",
+   "day": "2026-10-08",
+   "time": "09:15",
+   "day_order": 0,
+   "venue": "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+   "sala": "Auditorio principal",
+   "event_kind": "charla",
+   "has_qa": false,
+   "synopsis": "Festivales, circulación y nuevas alianzas para el cine local. Directores de festivales de distintos territorios de la región se encuentran para hablar sobre circulación, colaboración y nuevas formas de conectar películas, creadores y públicos. Una conversación sobre cómo fortalecer los vínculos entre nuestros festivales y abrir nuevos caminos para el cine iberoamericano.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://biff.co/eventos_Paneles.php",
+    "date": "2026-10-06"
+   },
+   "is_free": true
+  },
   {
    "title": "Gabin",
    "type": "film",
@@ -467,6 +502,26 @@
    "synopsis_en": "For 30 years, a doctor from Paris has maintained a friendship with a fisherman on Tristan da Cunha, the most isolated inhabited island in the world. Now he travels back one more time, with the plan to stay there for good."
   },
   {
+   "title": "Arquitectura de lo invisible: montaje y trabajo actoral",
+   "type": "event",
+   "section": "🎙️ Paneles de Industria",
+   "duration": "120 min",
+   "day": "2026-10-08",
+   "time": "15:00",
+   "day_order": 0,
+   "venue": "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+   "sala": "Salón 307/308",
+   "event_kind": "charla",
+   "has_qa": false,
+   "synopsis": "Gustavo Vasco y Estefanía Piñeres conversarán sobre la relación entre el montaje y el trabajo actoral, a partir de sus experiencias como montajista y actriz, respectivamente, y desde el proceso que hoy comparten en el montaje de la ópera prima de Estefanía como directora. Una exploración sobre cómo el montaje transforma la actuación y cómo el trabajo actoral, a su vez, construye y revela nuevas posibilidades para la pieza audiovisual. En alianza con ECCA.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://biff.co/eventos_Paneles.php",
+    "date": "2026-10-06"
+   },
+   "is_free": true
+  },
+  {
    "title": "La Libertad Doble",
    "type": "film",
    "section": "🎩 Masters",
@@ -526,6 +581,26 @@
    "lbSlug": "trial-of-hein",
    "tmdb_id": 1476466,
    "synopsis_en": "After 14 years away, Hein returns to his home village on a remote island, only to discover that the close-knit community no longer recognises him. Suspecting him to be an impostor, they demand a trial to determine his true identity."
+  },
+  {
+   "title": "Del trópico al norte: industria documental y posibilidades de coproducción",
+   "type": "event",
+   "section": "🎙️ Paneles de Industria",
+   "duration": "60 min",
+   "day": "2026-10-08",
+   "time": "16:00",
+   "day_order": 0,
+   "venue": "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+   "sala": "Salón 303",
+   "event_kind": "charla",
+   "has_qa": false,
+   "synopsis": "¿Cómo funciona la industria audiovisual en los países nórdicos y qué posibilidades existen para colaborar desde otros territorios? Anders Riis-Hansen compartirá su experiencia en la industria documental nórdica y hablará sobre sus dinámicas de producción, así como sobre las posibilidades y retos de la coproducción internacional. Un espacio para conocer de primera mano cómo se mueve el documental en los países nórdicos y qué oportunidades pueden surgir del encuentro con otros contextos audiovisuales.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://biff.co/eventos_Paneles.php",
+    "date": "2026-10-06"
+   },
+   "is_free": true
   },
   {
    "title": "El Prófugo",
@@ -756,7 +831,7 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "espacio-para-pensar",
      "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
@@ -1067,6 +1142,46 @@
    "lbSlug": "let-us-through-dear-ancestors",
    "tmdb_id": 1736478,
    "synopsis_en": "1617, Las Islas Filipinas. The Spanish friar, Father Enciso, the encomendero of one of the islands, rules with unrelenting toughness and an insatiable libido to tame the savages."
+  },
+  {
+   "title": "Arquitectura de lo invisible: montaje y guion",
+   "type": "event",
+   "section": "🎙️ Paneles de Industria",
+   "duration": "90 min",
+   "day": "2026-10-09",
+   "time": "09:00",
+   "day_order": 1,
+   "venue": "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+   "sala": "Salón 307/308",
+   "event_kind": "charla",
+   "has_qa": false,
+   "synopsis": "Aunque distantes en el proceso de creación de la obra audiovisual, el guión y el montaje se encuentran en su condición de escritura. Nicolás Serrano y María Alejandra Briganti compartirán una conversación sobre los cruces y divergencias de sus oficios, desde el vértigo frente al espacio en blanco a la versión final. En alianza con ECCA.",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://biff.co/eventos_Paneles.php",
+    "date": "2026-10-06"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Arquitectura de lo invisible: montaje y composición musical",
+   "type": "event",
+   "section": "🎙️ Paneles de Industria",
+   "duration": "120 min",
+   "day": "2026-10-09",
+   "time": "11:00",
+   "day_order": 1,
+   "venue": "Cámara de Comercio de Bogotá - Sede Chapinero - Bogotá",
+   "sala": "Salón 307/308",
+   "event_kind": "charla",
+   "has_qa": false,
+   "synopsis": "Sebastián Hernández y Camilo Sanabria conversarán, a partir de su experiencia de trabajo compartida en la segunda temporada de la serie Cien Años de Soledad, sobre la conexión entre el montaje y la composición musical. Un acercamiento al diálogo creativo para tejer estructura, ritmo y emoción. En alianza con ECCA. Prueba logos Título de la película lorem ipsum dolor 1 Lorem ipsum dolor Páis | año Nunc elementum tellus id eleifend dignissim. Vestibulum sed luctus dui. Mauris feugiat lobortis leo, sit amet vulputate augue sollicitudin id. Nulla dictum mauris ac rhoncus accumsan. Integer sed sapien feugiat [...] Título de la película lorem ipsum dolor 2 Lorem ipsum dolor Páis | año Nunc elementum tellus id eleifend dignissim. Vestibulum sed luctus dui. Mauris feugiat lobortis leo, sit amet vulputate augue sollicitudin id. Nulla dictum mauris ac rhoncus accumsan. Integer sed sapien feugiat [...] prev next © 2026 - Todos los derechos reservados - Términos y condiciones .",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://biff.co/eventos_Paneles.php",
+    "date": "2026-10-06"
+   },
+   "is_free": true
   },
   {
    "title": "Mariinka",
@@ -1635,7 +1750,7 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "espacio-para-pensar",
      "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
@@ -2380,7 +2495,7 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "espacio-para-pensar",
      "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
@@ -3219,7 +3334,7 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "espacio-para-pensar",
      "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
@@ -3993,7 +4108,7 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "espacio-para-pensar",
      "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
@@ -4627,7 +4742,7 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "espacio-para-pensar",
      "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
@@ -5338,7 +5453,7 @@
      "duration": "8 min",
      "genre": "Animación",
      "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "espacio-para-pensar",
      "tmdb_id": 1786042,
      "synopsis": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
@@ -5715,8 +5830,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-01T08:19:59",
-  "plan_sha": "bd5e06cf76d16140",
+  "fecha": "2026-10-06T09:48:23",
+  "plan_sha": "1aaa37e1829a6d31",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py biff-2026"
  }

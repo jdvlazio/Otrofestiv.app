@@ -1,12 +1,30 @@
 {
  "_provenance": {
   "fuente": "PDF oficial del BIFF 12 + agenda de la Cinemateca de Bogotá + biff.co",
-  "capturado": "2026-09-29",
+  "capturado": "2026-10-06",
   "que_aporta": "la programación entera: día, hora, sede, sala, acceso y enlaces de compra",
   "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
   "metodo": "las fichas (sede y sala escritas) cruzadas contra la tabla por días en los dos sentidos; íconos por píxeles; Cinemateca y web para las boletas"
  },
  "funciones": [
+  {
+   "titulo": "¿Puede Iberoamérica crear su propio circuito de festivales?",
+   "titulo_web": "¿Puede Iberoamérica crear su propio circuito de festivales?",
+   "dia": "2026-10-08",
+   "hora": "09:15",
+   "sede": "Cámara de Comercio de Bogotá - Sede Chapinero",
+   "sala": "Auditorio principal",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "seccion": "Paneles de Industria",
+   "acceso": "Entrada libre",
+   "sinopsis": "Festivales, circulación y nuevas alianzas para el cine local. Directores de festivales de distintos territorios de la región se encuentran para hablar sobre circulación, colaboración y nuevas formas de conectar películas, creadores y públicos. Una conversación sobre cómo fortalecer los vínculos entre nuestros festivales y abrir nuevos caminos para el cine iberoamericano.",
+   "duracion_min": 60,
+   "_src": {
+    "url": "https://biff.co/eventos_Paneles.php",
+    "date": "2026-10-06"
+   }
+  },
   {
    "dia": "2026-10-08",
    "hora": "13:00",
@@ -134,6 +152,24 @@
    "ticket_url": "https://www.cinecolombia.com/films/tristan-forever/HO00000857/"
   },
   {
+   "titulo": "Arquitectura de lo invisible: montaje y trabajo actoral",
+   "titulo_web": "ARQUITECTURA DE LO INVISIBLE: Montaje y Trabajo actoral",
+   "dia": "2026-10-08",
+   "hora": "15:00",
+   "sede": "Cámara de Comercio de Bogotá - Sede Chapinero",
+   "sala": "Salón 307/308",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "seccion": "Paneles de Industria",
+   "acceso": "Entrada libre",
+   "sinopsis": "Gustavo Vasco y Estefanía Piñeres conversarán sobre la relación entre el montaje y el trabajo actoral, a partir de sus experiencias como montajista y actriz, respectivamente, y desde el proceso que hoy comparten en el montaje de la ópera prima de Estefanía como directora. Una exploración sobre cómo el montaje transforma la actuación y cómo el trabajo actoral, a su vez, construye y revela nuevas posibilidades para la pieza audiovisual. En alianza con ECCA.",
+   "duracion_min": 120,
+   "_src": {
+    "url": "https://biff.co/eventos_Paneles.php",
+    "date": "2026-10-06"
+   }
+  },
+  {
    "dia": "2026-10-08",
    "hora": "15:30",
    "sede": "Cine Colombia Multiplex Avenida Chile",
@@ -174,6 +210,24 @@
    "sinopsis": "Tras catorce años por fuera, Hein regresa a su pueblo natal, situado en una isla remota, solo para descubrir que la estrecha comunidad ya no lo reconoce. Sospechando que es un impostor, exigen un juicio para determinar su verdadera identidad.",
    "acceso": "Con boleta",
    "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=1023057…"
+  },
+  {
+   "titulo": "Del trópico al norte: industria documental y posibilidades de coproducción",
+   "titulo_web": "Del trópico al norte: industria documental y posibilidades de coproducción",
+   "dia": "2026-10-08",
+   "hora": "16:00",
+   "sede": "Cámara de Comercio de Bogotá - Sede Chapinero",
+   "sala": "Salón 303",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "seccion": "Paneles de Industria",
+   "acceso": "Entrada libre",
+   "sinopsis": "¿Cómo funciona la industria audiovisual en los países nórdicos y qué posibilidades existen para colaborar desde otros territorios? Anders Riis-Hansen compartirá su experiencia en la industria documental nórdica y hablará sobre sus dinámicas de producción, así como sobre las posibilidades y retos de la coproducción internacional. Un espacio para conocer de primera mano cómo se mueve el documental en los países nórdicos y qué oportunidades pueden surgir del encuentro con otros contextos audiovisuales.",
+   "duracion_min": 60,
+   "_src": {
+    "url": "https://biff.co/eventos_Paneles.php",
+    "date": "2026-10-06"
+   }
   },
   {
    "dia": "2026-10-08",
@@ -529,6 +583,42 @@
    "sinopsis": "El padre Enciso, encomendero en una de Las Islas Filipinas, gobierna con una dureza implacable y una libido insaciable, “Para domar a estos salvajes”, proclama. Tras la conversión de la mayoría de la población de la isla al cristianismo, su proyecto más importante es la construcción de una iglesia, que ya lleva más de diez años en marcha y que ha causado sufrimiento y muertes a su paso. Decide utilizar mármol para la construcción del altar, pero transportar piedras tan preciosas es muy peligroso. Encarga a su hijo joven y rebelde, Dungwen, que supervise la tarea, pues no confía en nadie.",
    "acceso": "Con boleta",
    "ticket_url": "https://www.cinecolombia.com/films/makikiraan-po/HO00000872/"
+  },
+  {
+   "titulo": "Arquitectura de lo invisible: montaje y guion",
+   "titulo_web": "ARQUITECTURA DE LO INVISIBLE Montaje y Guion",
+   "dia": "2026-10-09",
+   "hora": "09:00",
+   "sede": "Cámara de Comercio de Bogotá - Sede Chapinero",
+   "sala": "Salón 307/308",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "seccion": "Paneles de Industria",
+   "acceso": "Entrada libre",
+   "sinopsis": "Aunque distantes en el proceso de creación de la obra audiovisual, el guión y el montaje se encuentran en su condición de escritura. Nicolás Serrano y María Alejandra Briganti compartirán una conversación sobre los cruces y divergencias de sus oficios, desde el vértigo frente al espacio en blanco a la versión final. En alianza con ECCA.",
+   "duracion_min": 90,
+   "_src": {
+    "url": "https://biff.co/eventos_Paneles.php",
+    "date": "2026-10-06"
+   }
+  },
+  {
+   "titulo": "Arquitectura de lo invisible: montaje y composición musical",
+   "titulo_web": "ARQUITECTURA DE LO INVISIBLE: Montaje y Composición musical",
+   "dia": "2026-10-09",
+   "hora": "11:00",
+   "sede": "Cámara de Comercio de Bogotá - Sede Chapinero",
+   "sala": "Salón 307/308",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "seccion": "Paneles de Industria",
+   "acceso": "Entrada libre",
+   "sinopsis": "Sebastián Hernández y Camilo Sanabria conversarán, a partir de su experiencia de trabajo compartida en la segunda temporada de la serie Cien Años de Soledad, sobre la conexión entre el montaje y la composición musical. Un acercamiento al diálogo creativo para tejer estructura, ritmo y emoción. En alianza con ECCA. Prueba logos Título de la película lorem ipsum dolor 1 Lorem ipsum dolor Páis | año Nunc elementum tellus id eleifend dignissim. Vestibulum sed luctus dui. Mauris feugiat lobortis leo, sit amet vulputate augue sollicitudin id. Nulla dictum mauris ac rhoncus accumsan. Integer sed sapien feugiat [...] Título de la película lorem ipsum dolor 2 Lorem ipsum dolor Páis | año Nunc elementum tellus id eleifend dignissim. Vestibulum sed luctus dui. Mauris feugiat lobortis leo, sit amet vulputate augue sollicitudin id. Nulla dictum mauris ac rhoncus accumsan. Integer sed sapien feugiat [...] prev next © 2026 - Todos los derechos reservados - Términos y condiciones .",
+   "duracion_min": 120,
+   "_src": {
+    "url": "https://biff.co/eventos_Paneles.php",
+    "date": "2026-10-06"
+   }
   },
   {
    "dia": "2026-10-09",

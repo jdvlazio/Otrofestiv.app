@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @filcmar — el carrusel de programación (16 láminas)",
-  "capturado": "2026-10-02",
+  "capturado": "2026-10-06",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina, tal cual; la sala va aparte (Foso, Hall, Capilla).",
@@ -678,7 +678,7 @@
      "synopsis_lang": "es"
     },
     {
-     "title": "Show de Ziggy: la maldición del Mariachi Bondage",
+     "title": "Show de Ziggy: La maldición del mariachi bondage",
      "director": "Giorgio Ross",
      "country": "México",
      "flags": "🇲🇽",
@@ -1348,7 +1348,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-02T19:44:59",
+  "fecha": "2026-10-06T09:44:57",
   "plan_sha": "627de20e2eb8374c",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"
