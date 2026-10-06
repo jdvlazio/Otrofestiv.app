@@ -502,7 +502,7 @@
    "synopsis_en": "For 30 years, a doctor from Paris has maintained a friendship with a fisherman on Tristan da Cunha, the most isolated inhabited island in the world. Now he travels back one more time, with the plan to stay there for good."
   },
   {
-   "title": "Arquitectura de lo invisible: montaje y trabajo actoral",
+   "title": "Arquitectura de lo Invisible: Montaje y Trabajo Actoral",
    "type": "event",
    "section": "🎙️ Paneles de Industria",
    "duration": "120 min",
@@ -1144,7 +1144,7 @@
    "synopsis_en": "1617, Las Islas Filipinas. The Spanish friar, Father Enciso, the encomendero of one of the islands, rules with unrelenting toughness and an insatiable libido to tame the savages."
   },
   {
-   "title": "Arquitectura de lo invisible: montaje y guion",
+   "title": "Arquitectura de lo Invisible: Montaje y Guion",
    "type": "event",
    "section": "🎙️ Paneles de Industria",
    "duration": "90 min",
@@ -1164,7 +1164,7 @@
    "is_free": true
   },
   {
-   "title": "Arquitectura de lo invisible: montaje y composición musical",
+   "title": "Arquitectura de lo Invisible: Montaje y Composición Musical",
    "type": "event",
    "section": "🎙️ Paneles de Industria",
    "duration": "120 min",
@@ -5830,7 +5830,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-06T09:48:23",
+  "fecha": "2026-10-06T10:04:26",
   "plan_sha": "1aaa37e1829a6d31",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py biff-2026"

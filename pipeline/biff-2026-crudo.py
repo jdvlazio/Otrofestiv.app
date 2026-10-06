@@ -77,12 +77,12 @@ PANELES = f'{D}/eventos_Paneles.html'
 SEDE_PANELES = 'Cámara de Comercio de Bogotá - Sede Chapinero'
 SECCION_PANELES = 'Paneles de Industria'
 # los títulos que la página escribe en mayúscula sostenida, en caja normal
-# (caja-sostenida), por aprobar de Juan
+# (caja-sostenida): mayúscula en cada palabra plena, como pidió Juan (6 oct)
 TITULO_PANEL = {
-    'ARQUITECTURA DE LO INVISIBLE: MONTAJE Y PRODUCCIÓN': 'Arquitectura de lo invisible: montaje y producción',
-    'ARQUITECTURA DE LO INVISIBLE: Montaje y Trabajo actoral': 'Arquitectura de lo invisible: montaje y trabajo actoral',
-    'ARQUITECTURA DE LO INVISIBLE Montaje y Guion': 'Arquitectura de lo invisible: montaje y guion',
-    'ARQUITECTURA DE LO INVISIBLE: Montaje y Composición musical': 'Arquitectura de lo invisible: montaje y composición musical',
+    'ARQUITECTURA DE LO INVISIBLE: MONTAJE Y PRODUCCIÓN': 'Arquitectura de lo Invisible: Montaje y Producción',
+    'ARQUITECTURA DE LO INVISIBLE: Montaje y Trabajo actoral': 'Arquitectura de lo Invisible: Montaje y Trabajo Actoral',
+    'ARQUITECTURA DE LO INVISIBLE Montaje y Guion': 'Arquitectura de lo Invisible: Montaje y Guion',
+    'ARQUITECTURA DE LO INVISIBLE: Montaje y Composición musical': 'Arquitectura de lo Invisible: Montaje y Composición Musical',
 }
 
 
