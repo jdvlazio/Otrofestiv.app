@@ -1,16 +1,14 @@
 {
  "_provenance": {
-  "fuente": "festicinepopayan.com, página de programación 2026 (wp-json, id 13120)",
-  "capturado": "2026-09-30",
+  "fuente": "festicinepopayan.com, página de programación 2026 (wp-json, id 12543)",
+  "capturado": "2026-10-06",
   "que_aporta": "día, hora, sede y obras de cada bloque; el resto de la ficha, del catálogo",
-  "url": "https://festicinepopayan.com/fest2026/programacion2026/",
+  "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
   "metodo": "wp-json + parser de renglones; cruce con el catálogo por título y dirección"
  },
  "_sin_funcion": {
-  "porque": "la página no trae el domingo 11",
-  "obras": [
-   "Diente X Diente"
-  ]
+  "porque": "obras del catálogo que la parrilla del 6 oct no programa",
+  "obras": []
  },
  "_fuera": [
   {
@@ -71,24 +69,24 @@
    "sede": "Teatro Bolívar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "tipo": "evento",
    "event_kind": "apertura",
    "seccion": "Actividades",
-   "duracion_min": 30,
-   "_duracion_de": "el hueco hasta la siguiente en la misma sede, con tope de 90"
+   "duracion_min": 60,
+   "_duracion_de": "60: lo último del día en su sede"
   },
   {
    "titulo": "Selección Oficial Documental (primer bloque)",
    "dia": "2026-10-05",
-   "hora": "19:30",
+   "hora": "19:00",
    "sede": "Teatro Bolívar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "seccion": "Selección Oficial Documental",
    "obras": [
@@ -144,31 +142,17 @@
    "duracion_min": 113
   },
   {
-   "titulo": "Conversatorio",
-   "dia": "2026-10-05",
-   "hora": "21:30",
-   "sede": "Teatro Bolívar",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "tipo": "evento",
-   "event_kind": "conversatorio",
-   "seccion": "Actividades",
-   "duracion_min": 60,
-   "_duracion_de": "60: lo último del día en su sede"
-  },
-  {
    "titulo": "Selección Oficial Cauca (primer bloque)",
    "dia": "2026-10-06",
    "hora": "17:00",
    "sede": "Teatro Bolívar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
+   "has_qa": true,
+   "qa_type": "team",
    "seccion": "Selección Oficial Cauca",
    "obras": [
     {
@@ -211,30 +195,14 @@
    "duracion_min": 66
   },
   {
-   "titulo": "Conversatorio",
-   "dia": "2026-10-06",
-   "hora": "18:30",
-   "sede": "Teatro Bolívar",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "tipo": "evento",
-   "event_kind": "conversatorio",
-   "seccion": "Actividades",
-   "duracion_min": 30,
-   "_duracion_de": "el hueco hasta la siguiente en la misma sede, con tope de 90"
-  },
-  {
    "titulo": "Selección Oficial Experimental",
    "dia": "2026-10-06",
    "hora": "18:00",
    "sede": "Facultad de Artes Unicauca",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "sala": "Auditorio Maya",
    "seccion": "Selección Oficial Experimental",
@@ -325,9 +293,11 @@
    "sede": "Teatro Bolívar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
+   "has_qa": true,
+   "qa_type": "team",
    "seccion": "Selección Oficial Cauca",
    "obras": [
     {
@@ -368,30 +338,14 @@
    "duracion_min": 90
   },
   {
-   "titulo": "Conversatorio",
-   "dia": "2026-10-06",
-   "hora": "21:00",
-   "sede": "Teatro Bolívar",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "tipo": "evento",
-   "event_kind": "conversatorio",
-   "seccion": "Actividades",
-   "duracion_min": 60,
-   "_duracion_de": "60: lo último del día en su sede"
-  },
-  {
    "titulo": "Selección Oficial Indígena",
    "dia": "2026-10-07",
-   "hora": "15:30",
+   "hora": "15:00",
    "sede": "Teatro Bolívar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "seccion": "Selección Oficial Indígena",
    "obras": [
@@ -429,19 +383,20 @@
    "duracion_min": 56
   },
   {
-   "titulo": "Conversatorio",
+   "titulo": "Conversatorio Autorepresentación y cosmovisiones desde los pueblos originarios en el Cine",
    "dia": "2026-10-07",
-   "hora": "16:30",
+   "hora": "16:00",
    "sede": "Teatro Bolívar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "tipo": "evento",
    "event_kind": "conversatorio",
    "seccion": "Actividades",
-   "duracion_min": 30,
+   "sinopsis": "Con el Apoyo de Origen Lab",
+   "duracion_min": 60,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede, con tope de 90"
   },
   {
@@ -451,8 +406,8 @@
    "sede": "Teatro Bolívar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "seccion": "Selección Oficial Afro",
    "obras": [
@@ -508,30 +463,14 @@
    "duracion_min": 101
   },
   {
-   "titulo": "Conversatorio",
-   "dia": "2026-10-07",
-   "hora": "18:00",
-   "sede": "Teatro Bolívar",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "tipo": "evento",
-   "event_kind": "conversatorio",
-   "seccion": "Actividades",
-   "duracion_min": 60,
-   "_duracion_de": "el hueco hasta la siguiente en la misma sede, con tope de 90"
-  },
-  {
    "titulo": "Selección Oficial Animación",
    "dia": "2026-10-07",
    "hora": "19:00",
    "sede": "Teatro Bolívar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "seccion": "Selección Oficial Animación",
    "obras": [
@@ -617,12 +556,12 @@
   {
    "titulo": "Selección Oficial Comunitario",
    "dia": "2026-10-08",
-   "hora": "15:30",
+   "hora": "16:00",
    "sede": "Teatro Bolívar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "seccion": "Selección Oficial Comunitario",
    "obras": [
@@ -670,30 +609,14 @@
    "duracion_min": 57
   },
   {
-   "titulo": "Conversatorio",
-   "dia": "2026-10-08",
-   "hora": "16:30",
-   "sede": "Teatro Bolívar",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "tipo": "evento",
-   "event_kind": "conversatorio",
-   "seccion": "Actividades",
-   "duracion_min": 30,
-   "_duracion_de": "el hueco hasta la siguiente en la misma sede, con tope de 90"
-  },
-  {
    "titulo": "Selección Oficial Documental segundo bloque",
    "dia": "2026-10-08",
    "hora": "17:00",
    "sede": "Teatro Bolívar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "seccion": "Selección Oficial Documental",
    "obras": [
@@ -735,140 +658,14 @@
    "duracion_min": 91
   },
   {
-   "titulo": "CineCorto en el Barrio · Casa Taller Sirirí",
-   "dia": "2026-10-08",
-   "hora": "18:30",
-   "sede": "Casa Taller Sirirí",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "seccion": "CineCorto en el Barrio",
-   "obras": [
-    {
-     "titulo": "Los Huyentes",
-     "director": "Ari Lamadrid",
-     "pais_respaldo": "Colombia",
-     "duracion_min": 16
-    },
-    {
-     "titulo": "Amor en los tiempos de como sea que se llame el presente",
-     "director": "Valentina Qaszulxkef",
-     "pais_respaldo": "Colombia",
-     "duracion_min": 18,
-     "_solo_parrilla": true
-    },
-    {
-     "titulo": "Pudor ante el asalto de los ojos furtivos",
-     "director": "Laura María Rodríguez Moreno",
-     "anio": 2025,
-     "pais_respaldo": "Colombia",
-     "duracion_min": 8,
-     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
-    },
-    {
-     "titulo": "Una vez en un cuerpo",
-     "director": "María Cristina Pérez González",
-     "anio": 2025,
-     "pais_respaldo": "Colombia",
-     "duracion_min": 10
-    },
-    {
-     "titulo": "La Europa",
-     "director": "Jorge Perez Aldana",
-     "pais_respaldo": "Colombia",
-     "duracion_min": 21
-    },
-    {
-     "titulo": "1 Hijo & 1 Padre",
-     "director": "Andrés Ramírez Pulido",
-     "anio": 2024,
-     "pais_respaldo": "Colombia",
-     "duracion_min": 25,
-     "sinopsis": "Kevin es catalogado como un chico problemático, a decir verdad, no controla sus impulsos cuando se burlan de él. Tras un nuevo error,"
-    }
-   ],
-   "duracion_min": 98
-  },
-  {
-   "titulo": "CineCorto en el Barrio · Mikuna Casa Cultural",
-   "dia": "2026-10-08",
-   "hora": "18:30",
-   "sede": "Mikuna Casa Cultural",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "seccion": "CineCorto en el Barrio",
-   "obras": [
-    {
-     "titulo": "La gran hazaña",
-     "director": "Luber Yesid Zúñiga Ordóñez",
-     "anio": 2024,
-     "pais_respaldo": "Colombia",
-     "duracion_min": 15,
-     "sinopsis": "Pablo (10) tendrá el desafío de rescatar a su mascota Pascualina, una gallina ponedora, de las garras de Don Chucho, el usurero del pueblo quien cobra las deudas con huevos. Este día Pablo tiene un accidente en su bicicleta y rompe los preciados huevos, ahora debe reponer la cubeta para saldar la deuda. La única herramienta que tiene el niño para rescatar a Pascualina es una apuesta con su trompo de madera con Felipe el mejor jugador de trompo del pueblo. Aunque todo parece jugar a favor de Pablo, quien ha ganado la cubeta que rescatará a su querida Pascualina y realizar la gran hazaña, Valeria, la hermana de Felipe, impide que el premio sea entregado y les hace caer en cuenta que no basta ganar una apuesta si entorpece el trabajo de otra familia en la misma situación. Se desata una disertación en la que todos los niños empatizan con Pablo gracias a que reconocen los obstáculos que han tenido al tratar de sortear la dura actitud de Don Chucho. Ahora, es la unión de todos los niños lo que permite que Pascualina sea rescatada. Finalmente, Pablo aprende la importancia del trabajo en equipo."
-    },
-    {
-     "titulo": "La guerra de los tomates",
-     "director": "Juancarlos Gutiérrez",
-     "pais_respaldo": "Colombia",
-     "duracion_min": 15
-    },
-    {
-     "titulo": "Los pliegues de la falda",
-     "director": "Blanca Muñoz Ávila",
-     "anio": 2025,
-     "pais_respaldo": "Colombia",
-     "duracion_min": 18,
-     "sinopsis": "Linda, Carlos y María son una familia convencional en la que casi todo encaja: el padre tiene la última palabra, la madre se encarga de la casa. Y Linda es una pequeña que se rehúsa a usar la falda. Ella no quiere ser la princesa de papá, solo quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que Linda interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla. Después de la función, nada será igual."
-    },
-    {
-     "titulo": "Luis Antonio",
-     "director": "Juan José Arias Gil",
-     "anio": 2025,
-     "pais_respaldo": "Colombia",
-     "duracion_min": 12,
-     "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
-    },
-    {
-     "titulo": "Historias al margen: Martha y Eduardo",
-     "director": "Juan Manuel Figueroa",
-     "anio": 2024,
-     "pais_respaldo": "Colombia",
-     "duracion_min": 18,
-     "sinopsis": "Desde la periferia, hay quienes observan y sostienen la transformación de una ciudad, convirtiéndose en el pilar invisible que evita el colapso de nuestra sociedad moderna. En este contexto conoceremos a Martha y Eduardo, dos adultos mayores cuya labor en el reciclaje en Popayán trasciende las décadas. Han sido testigos silenciosos de los cambios de la ciudad; su sangre y su esfuerzo han recorrido, figurativa y literalmente, cada calle. A través de sus vivencias, marcadas por el rigor de la calle pero iluminadas por sonrisas compartidas, nos invitan a una profunda reflexión: frente a tanta adversidad, ¿cómo han logrado resistir y enseñarnos a sonreír?"
-    }
-   ],
-   "duracion_min": 78
-  },
-  {
-   "titulo": "Conversatorio",
-   "dia": "2026-10-08",
-   "hora": "18:30",
-   "sede": "Teatro Bolívar",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "tipo": "evento",
-   "event_kind": "conversatorio",
-   "seccion": "Actividades",
-   "duracion_min": 30,
-   "_duracion_de": "el hueco hasta la siguiente en la misma sede, con tope de 90"
-  },
-  {
-   "titulo": "Selección Oficial Ficción primer bloque",
+   "titulo": "Selección Oficial Ficción Primer bloque",
    "dia": "2026-10-08",
    "hora": "19:00",
    "sede": "Teatro Bolívar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "seccion": "Selección Oficial Ficción",
    "obras": [
@@ -921,30 +718,14 @@
    "duracion_min": 108
   },
   {
-   "titulo": "Conversatorio",
-   "dia": "2026-10-08",
-   "hora": "21:00",
-   "sede": "Teatro Bolívar",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "tipo": "evento",
-   "event_kind": "conversatorio",
-   "seccion": "Actividades",
-   "duracion_min": 60,
-   "_duracion_de": "60: lo último del día en su sede"
-  },
-  {
    "titulo": "Muestra de Cortos Internacionales",
    "dia": "2026-10-09",
    "hora": "15:00",
    "sede": "Teatro Bolívar",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "seccion": "Muestra de Cortos Internacionales",
    "duracion_min": 90,
@@ -953,72 +734,14 @@
    "posterSource": "oficial"
   },
   {
-   "titulo": "Selección Oficial Ficción segundo bloque",
-   "dia": "2026-10-09",
-   "hora": "17:00",
-   "sede": "Teatro Bolívar",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "seccion": "Selección Oficial Ficción",
-   "obras": [
-    {
-     "titulo": "Las faldas de tu prima",
-     "director": "Jose Miguel Huertas Landero y Esteban Galindo",
-     "anio": 2025,
-     "pais_respaldo": "Colombia",
-     "duracion_min": 25,
-     "sinopsis": "Simón y Gabo, dos mejores amigos de 17 años, pasan el verano con Sam, la prima mayor de Gabo, una ansiosa universitaria que busca escapar del estrés de su tesis. Juntos enfrentarán el amor, la amistad y un malvado robot gigante."
-    },
-    {
-     "titulo": "Suite intercontinental",
-     "director": "Lola Tartane",
-     "anio": 2026,
-     "pais_respaldo": "Colombia",
-     "duracion_min": 24,
-     "sinopsis": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo."
-    },
-    {
-     "titulo": "Más allá",
-     "director": "Bettina López Mendoza",
-     "pais_respaldo": "Colombia",
-     "duracion_min": 16
-    },
-    {
-     "titulo": "La Mona",
-     "director": "Laura Gutiérrez Ardila",
-     "anio": 2025,
-     "pais_respaldo": "Colombia",
-     "duracion_min": 18
-    },
-    {
-     "titulo": "Las piedras del río",
-     "director": "Edna Sierra",
-     "anio": 2026,
-     "pais_respaldo": "Colombia",
-     "duracion_min": 16,
-     "sinopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte."
-    },
-    {
-     "titulo": "Los Huyentes",
-     "director": "Ari Lamadrid",
-     "pais_respaldo": "Colombia",
-     "duracion_min": 16
-    }
-   ],
-   "duracion_min": 115
-  },
-  {
    "titulo": "Apertura muestra Banda de la Academia Militar General Tomás Cipriano de Mosquera",
    "dia": "2026-10-09",
    "hora": "15:00",
    "sede": "Centro Comercial Terra Plaza",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "sala": "Pantalla gigante",
    "tipo": "evento",
@@ -1034,8 +757,8 @@
    "sede": "Centro Comercial Terra Plaza",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "sala": "Pantalla gigante",
    "seccion": "Cine Corto Familiar",
@@ -1072,8 +795,8 @@
    "sede": "Centro Comercial Terra Plaza",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "sala": "Pantalla gigante",
    "tipo": "evento",
@@ -1090,8 +813,8 @@
    "sede": "Centro Comercial Terra Plaza",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "sala": "Pantalla gigante",
    "seccion": "Cine Corto Familiar",
@@ -1152,14 +875,175 @@
    "duracion_min": 72
   },
   {
+   "titulo": "Selección Oficial Ficción segundo bloque",
+   "dia": "2026-10-09",
+   "hora": "17:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "seccion": "Selección Oficial Ficción",
+   "obras": [
+    {
+     "titulo": "Las faldas de tu prima",
+     "director": "Jose Miguel Huertas Landero y Esteban Galindo",
+     "anio": 2025,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 25,
+     "sinopsis": "Simón y Gabo, dos mejores amigos de 17 años, pasan el verano con Sam, la prima mayor de Gabo, una ansiosa universitaria que busca escapar del estrés de su tesis. Juntos enfrentarán el amor, la amistad y un malvado robot gigante."
+    },
+    {
+     "titulo": "Suite intercontinental",
+     "director": "Lola Tartane",
+     "anio": 2026,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 24,
+     "sinopsis": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo."
+    },
+    {
+     "titulo": "Más allá",
+     "director": "Bettina López Mendoza",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "La Mona",
+     "director": "Laura Gutiérrez Ardila",
+     "anio": 2025,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 18
+    },
+    {
+     "titulo": "Las piedras del río",
+     "director": "Edna Sierra",
+     "anio": 2026,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 16,
+     "sinopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte."
+    },
+    {
+     "titulo": "Los Huyentes",
+     "director": "Ari Lamadrid",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 16
+    }
+   ],
+   "duracion_min": 115
+  },
+  {
+   "titulo": "Ceremonia de premiación",
+   "dia": "2026-10-09",
+   "hora": "19:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "tipo": "evento",
+   "event_kind": "acto",
+   "seccion": "Actividades",
+   "duracion_min": 60,
+   "_duracion_de": "60: lo último del día en su sede"
+  },
+  {
+   "titulo": "Selección Oficial Infantil",
+   "dia": "2026-10-10",
+   "hora": "17:00",
+   "sede": "Teatro Bolívar",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "seccion": "Selección Oficial Infantil",
+   "obras": [
+    {
+     "titulo": "Cascabeles",
+     "director": "Jhina Hernández Ospina",
+     "anio": 2022,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 8,
+     "sinopsis": "Emma (7), es una niña caleña amante del fútbol, valiente ante los ojos de todos, pero que guarda un secreto importante, le teme a la oscuridad. Los espacios oscuros guardan sus temores, esos que pertenecen al mundo de la imaginación, pero que, para ella, cada vez que se apaga la luz, cobran vida. Augusto (69) es su abuelo, un hombre ciego, quien le enseñó a jugar al fútbol. Una tarde en medio de un entrenamiento, Augusto descubre el secreto de Emma, y planea la forma de impulsarla a superar sus temores."
+    },
+    {
+     "titulo": "Color piel",
+     "director": "Fidel Barboza Gómez y Sebastián Castaño Tobón",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Diente X Diente",
+     "director": "Julián Gómez Reyes",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Dientes de yuca",
+     "director": "Yurieth Romero Velasquez",
+     "anio": 2025,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 14,
+     "sinopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto."
+    },
+    {
+     "titulo": "Gris",
+     "director": "Loren Escandon",
+     "anio": 2025,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 15,
+     "sinopsis": "Sofía; una niña curiosa e imaginativa; enfrenta desafíos en la escuela mientras comienza a navegar las complejidades de su identidad multirracial. Sus dibujos cobran vida en animaciones llenas de fantasía y la acompañan en un viaje de autoconocimiento; marcado por dudas; resiliencia y aprendizajes sobre el sentido de pertenencia. Sofía aprende a abrazar los matices que la definen; fusionando amor; cultura e individualidad en una narrativa única."
+    },
+    {
+     "titulo": "Juan PorOcho",
+     "director": "Marquitos Cárdenas",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez",
+     "anio": 2024,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 15,
+     "sinopsis": "Pablo (10) tendrá el desafío de rescatar a su mascota Pascualina, una gallina ponedora, de las garras de Don Chucho, el usurero del pueblo quien cobra las deudas con huevos. Este día Pablo tiene un accidente en su bicicleta y rompe los preciados huevos, ahora debe reponer la cubeta para saldar la deuda. La única herramienta que tiene el niño para rescatar a Pascualina es una apuesta con su trompo de madera con Felipe el mejor jugador de trompo del pueblo. Aunque todo parece jugar a favor de Pablo, quien ha ganado la cubeta que rescatará a su querida Pascualina y realizar la gran hazaña, Valeria, la hermana de Felipe, impide que el premio sea entregado y les hace caer en cuenta que no basta ganar una apuesta si entorpece el trabajo de otra familia en la misma situación. Se desata una disertación en la que todos los niños empatizan con Pablo gracias a que reconocen los obstáculos que han tenido al tratar de sortear la dura actitud de Don Chucho. Ahora, es la unión de todos los niños lo que permite que Pascualina sea rescatada. Finalmente, Pablo aprende la importancia del trabajo en equipo."
+    },
+    {
+     "titulo": "La guerra de los tomates",
+     "director": "Juancarlos Gutiérrez",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Los pliegues de la falda",
+     "director": "Blanca Muñoz Ávila",
+     "anio": 2025,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 18,
+     "sinopsis": "Linda, Carlos y María son una familia convencional en la que casi todo encaja: el padre tiene la última palabra, la madre se encarga de la casa. Y Linda es una pequeña que se rehúsa a usar la falda. Ella no quiere ser la princesa de papá, solo quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que Linda interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla. Después de la función, nada será igual."
+    },
+    {
+     "titulo": "Luis Antonio",
+     "director": "Juan José Arias Gil",
+     "anio": 2025,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 12,
+     "sinopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina."
+    }
+   ],
+   "duracion_min": 122
+  },
+  {
    "titulo": "Proyección Cine Corto Familiar · Parte 3",
    "dia": "2026-10-10",
    "hora": "14:00",
    "sede": "Centro Comercial Terra Plaza",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "sala": "Pantalla gigante",
    "seccion": "Cine Corto Familiar",
@@ -1206,8 +1090,8 @@
    "sede": "Centro Comercial Terra Plaza",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "sala": "Pantalla gigante",
    "tipo": "evento",
@@ -1224,8 +1108,8 @@
    "sede": "Centro Comercial Terra Plaza",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "sala": "Pantalla gigante",
    "seccion": "Cine Corto Familiar",
@@ -1270,8 +1154,8 @@
    "sede": "Centro Comercial Terra Plaza",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "sala": "Pantalla gigante",
    "tipo": "evento",
@@ -1288,8 +1172,8 @@
    "sede": "Centro Comercial Terra Plaza",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "sala": "Pantalla gigante",
    "seccion": "Cine Corto Familiar",
@@ -1322,6 +1206,149 @@
     }
    ],
    "duracion_min": 85
+  },
+  {
+   "titulo": "CineCorto en el Barrio",
+   "dia": "2026-10-10",
+   "hora": "18:30",
+   "sede": "Casa Taller Sirirí",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "seccion": "CineCorto en el Barrio",
+   "obras": [
+    {
+     "titulo": "Los Huyentes",
+     "director": "Ari Lamadrid",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 16
+    },
+    {
+     "titulo": "Amor en los tiempos de como sea que se llame el presente",
+     "director": "Valentina Qaszulxkef",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 18,
+     "_solo_parrilla": true
+    },
+    {
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "director": "Laura María Rodríguez Moreno",
+     "anio": 2025,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 8,
+     "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público."
+    },
+    {
+     "titulo": "Una vez en un cuerpo",
+     "director": "María Cristina Pérez González",
+     "anio": 2025,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "La Europa",
+     "director": "Jorge Perez Aldana",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 21
+    },
+    {
+     "titulo": "1 Hijo & 1 Padre",
+     "director": "Andrés Ramírez Pulido",
+     "anio": 2024,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 25,
+     "sinopsis": "Kevin es catalogado como un chico problemático, a decir verdad, no controla sus impulsos cuando se burlan de él. Tras un nuevo error,"
+    }
+   ],
+   "duracion_min": 98
+  },
+  {
+   "titulo": "Proyección Cine Corto Familiar · Parte 6",
+   "dia": "2026-10-11",
+   "hora": "16:00",
+   "sede": "Centro Comercial Terra Plaza",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "sala": "Pantalla gigante",
+   "seccion": "Cine Corto Familiar",
+   "obras": [
+    {
+     "titulo": "Cascabeles",
+     "director": "Jhina Hernández Ospina",
+     "anio": 2022,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 8,
+     "sinopsis": "Emma (7), es una niña caleña amante del fútbol, valiente ante los ojos de todos, pero que guarda un secreto importante, le teme a la oscuridad. Los espacios oscuros guardan sus temores, esos que pertenecen al mundo de la imaginación, pero que, para ella, cada vez que se apaga la luz, cobran vida. Augusto (69) es su abuelo, un hombre ciego, quien le enseñó a jugar al fútbol. Una tarde en medio de un entrenamiento, Augusto descubre el secreto de Emma, y planea la forma de impulsarla a superar sus temores."
+    },
+    {
+     "titulo": "Color piel",
+     "director": "Fidel Barboza Gómez y Sebastián Castaño Tobón",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 8
+    },
+    {
+     "titulo": "Dientes de yuca",
+     "director": "Yurieth Romero Velasquez",
+     "anio": 2025,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 14,
+     "sinopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto."
+    },
+    {
+     "titulo": "Abuelita caza vampiros",
+     "director": "Mariana Betancourt Chaves",
+     "anio": 2026,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 2,
+     "sinopsis": "En medio de la noche, un vampiro irrumpe en la casa de una abuelita latinoamericana esperando encontrar una presa fácil. En su lugar, se enfrenta a una mujer valiente, dispuesta a pelear por su vida. Con la ayuda inesperada de su fiel pug, la abuelita se envuelve en una batalla bizarra por la supervivencia. Mezclando humor con una atmósfera inquietante, Abuelita Caza Vampiros es una comedia gótica tropical inspirada en memorias familiares, donde el coraje y un toque de lo absurdo transforman una noche común en un enfrentamiento inolvidable."
+    },
+    {
+     "titulo": "Juan PorOcho",
+     "director": "Marquitos Cárdenas",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez",
+     "anio": 2024,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 15,
+     "sinopsis": "Pablo (10) tendrá el desafío de rescatar a su mascota Pascualina, una gallina ponedora, de las garras de Don Chucho, el usurero del pueblo quien cobra las deudas con huevos. Este día Pablo tiene un accidente en su bicicleta y rompe los preciados huevos, ahora debe reponer la cubeta para saldar la deuda. La única herramienta que tiene el niño para rescatar a Pascualina es una apuesta con su trompo de madera con Felipe el mejor jugador de trompo del pueblo. Aunque todo parece jugar a favor de Pablo, quien ha ganado la cubeta que rescatará a su querida Pascualina y realizar la gran hazaña, Valeria, la hermana de Felipe, impide que el premio sea entregado y les hace caer en cuenta que no basta ganar una apuesta si entorpece el trabajo de otra familia en la misma situación. Se desata una disertación en la que todos los niños empatizan con Pablo gracias a que reconocen los obstáculos que han tenido al tratar de sortear la dura actitud de Don Chucho. Ahora, es la unión de todos los niños lo que permite que Pascualina sea rescatada. Finalmente, Pablo aprende la importancia del trabajo en equipo."
+    },
+    {
+     "titulo": "La guerra de los tomates",
+     "director": "Juancarlos Gutiérrez",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Un viernes",
+     "director": "Francy Urrea Solano, Juan Diego Aguirre Gómez",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Akababuru: Expresión de asombro",
+     "director": "Irati Dojura Landa Yagarí",
+     "anio": 2025,
+     "pais_respaldo": "Colombia",
+     "duracion_min": 13,
+     "sinopsis": "Alejandra Castaño Arias, Wildier Tascón Tascón, Roxana Panchí Gutierrez, Alexa Yagarí Panchí, Isabella Palacio Mesa, Laura Rave Escalante, Juan Pablo Herrera González, Andrés Felipe Tascón Baquiaza, Irati Dojura, Laura Giraldo Mira, Cristian Navarro Araujo y Cristian Navarro Araujo"
+    },
+    {
+     "titulo": "Negret: Génesis de una metamorfósis",
+     "director": "Marco Paredes Manzano",
+     "pais_respaldo": "Colombia",
+     "duracion_min": 13
+    }
+   ],
+   "duracion_min": 107
   }
  ]
 }

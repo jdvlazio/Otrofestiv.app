@@ -100,7 +100,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `siembrafest2026` | SiembraFest | Sasaima y Villeta | 9–18 SEP | Recién terminado |
 | `jardin2026` | Festival de Cine de Jardín | Jardín | 24–27 SEP | Recién terminado |
 | `itagui2026` | Festicine Itagüí | Itagüí | 23–27 SEP | Recién terminado |
-| `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | **Próximo / activo** |
+| `girardota2026` | Festigirardota | Girardota | 30 SEP–4 OCT | Recién terminado |
 | `biff2026` | BIFF | Bogotá | 8–14 OCT | **Próximo / activo** |
 | `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | **Próximo / activo** |
 | `mamut2026` | Mamut | Medellín | 5–11 OCT | **Próximo / activo** |

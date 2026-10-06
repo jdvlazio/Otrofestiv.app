@@ -51,7 +51,8 @@ sys.path.insert(0, os.path.join(REPO, 'pipeline'))
 from lib import DESCONOCIDO, provenance  # noqa: E402
 
 FID = 'popayan-2026'
-URL = 'https://festicinepopayan.com/fest2026/programacion2026/'
+# desde el 6 oct la página es OTRA (id 12543, slug programacion-2026): la 13120 da 404
+URL = 'https://festicinepopayan.com/fest2026/programacion-2026/'
 FUENTE = f'{REPO}/fuentes/{FID}/programacion2026.json'
 CATALOGO = f'{REPO}/festivals/staging/popayan-2026-catalogo.json'
 DESTINO = f'{REPO}/festivals/staging/popayan-2026-crudo.json'
@@ -142,7 +143,14 @@ ACTIVIDADES = {'Apertura del Festival': 'apertura', 'Conversatorio': 'conversato
                # Terra Plaza (30 sep): la apertura de la muestra con la banda, y
                # la grabación del videopodcast
                'Apertura muestra Banda de la Academia Militar General Tomás Cipriano de Mosquera': 'apertura',
-               'Vodcast en Vivo': 'evento'}
+               'Vodcast en Vivo': 'evento',
+               # 6 oct: la premiación, viernes 9 en el Teatro Bolívar
+               'Ceremonia de premiación': 'acto'}
+# EL BLOQUE QUE LA PÁGINA DEJA SIN NOMBRE (6 oct): «Casa Taller Sirirí / 6:30
+# pm» y debajo, directo, las obras. En la versión del 30 sep esa misma sede a
+# esa misma hora era «CineCorto en el Barrio» (jueves 8); la del 6 oct lo pasa
+# al sábado 10 y se come el título. Se le pone el del 30 sep, anotado.
+TITULO_SIN_NOMBRE = {('2026-10-10', '18:30', 'Casa Taller Sirirí'): 'CineCorto en el Barrio'}
 # LOS BLOQUES QUE MEZCLAN SECCIONES (30 sep): su sección es el nombre del
 # programa, sin el verbo
 SECCION_DE_BLOQUE = {'Proyección Cine Corto Familiar': 'Cine Corto Familiar'}
@@ -182,10 +190,28 @@ def normalizar(L):
     while i < len(L):
         x = L[i]
         nxt = L[i + 1] if i + 1 < len(L) else ''
+        # 6 oct: la sede y DEBAJO la hora sola, sin la barra («Teatro Bolívar» + «3 pm»)
+        if x in SEDES and re.fullmatch(r'\d{1,2}(:\d{2})?\s*(am|pm)', nxt, re.I):
+            out.append(f'{x} / {nxt}')
+            sede = None
+            i += 2
+            continue
         if x in SEDES and nxt.startswith('/ '):
             out.append(f'{x} {nxt}')
             sede = None
             i += 2
+            continue
+        # LA VERSIÓN DEL 6 OCT parte el nombre del bloque: «Selección Oficial
+        # Cauca» + «(primer bloque)»; y la primera obra de Experimental viene
+        # entre paréntesis: «(El Experimento)» + su crédito
+        if re.fullmatch(r'\(?(primer|segundo)\s+bloque\)?', x, re.I) and out:
+            out[-1] = f'{out[-1]} {x}'
+            i += 1
+            continue
+        m_par = re.fullmatch(r'\((.+)\)', x)
+        if m_par and re.match(r'^dirigid', nxt, re.I):
+            out.append(m_par.group(1))
+            i += 1
             continue
         if SOLO_INSCRITOS.fullmatch(x) and out:
             out[-1] = f'{out[-1]} {x}'
@@ -256,17 +282,44 @@ def leer():
             if fin:
                 b['hora_fin'] = hora(*fin[-1])
             i += 2
+            sin_nombre = TITULO_SIN_NOMBRE.get((b['dia'], b['hora'], b['sede_pdf']))
+            if sin_nombre:
+                b['titulo'], b['_titulo_declarado'] = sin_nombre, True
+                i -= 1
             # la descripción de una actividad («Grabación de Video Podcast con…»)
             if i < len(L) and b['titulo'] in ACTIVIDADES and not SLOT.match(L[i]) and not DIA.match(L[i]) \
-                    and L[i] != 'Películas':
+                    and L[i] != 'Películas' and not L[i].startswith('Selección Oficial'):
                 b['descripcion'] = L[i]
                 i += 1
+            # «Películas» encabezaba las obras hasta el 30 sep; el 6 oct ya no
+            # está: una obra es un renglón seguido de su crédito
             if i < len(L) and L[i] == 'Películas':
                 i += 1
+            if True:
                 while i < len(L) and not SLOT.match(L[i]) and not DIA.match(L[i]):
                     tit = L[i]
                     i += 1
                     if tit.startswith(RELLENO):          # el relleno de la plantilla
+                        continue
+                    # «Conversatorio con realizadores» cierra el bloque (6 oct)
+                    if tit == 'Conversatorio con realizadores':
+                        b['qa'] = True
+                        continue
+                    nx = L[i] if i < len(L) else ''
+                    # UN BLOQUE SIN HORA PROPIA (6 oct): «Apertura del Festival» y
+                    # debajo «Selección Oficial Documental (primer bloque)» con sus
+                    # obras, todo bajo el mismo «7:00 pm» (el 30 sep era 7:30). Es
+                    # otro bloque en la misma franja.
+                    if tit.startswith('Selección Oficial') and not CREDITO.match(nx):
+                        bloques.append(b)
+                        b = {'dia': b['dia'], 'hora': b['hora'], 'sede_pdf': b['sede_pdf'],
+                             'titulo': tit, 'obras': [], '_sin_hora_propia': True}
+                        continue
+                    if not CREDITO.match(nx) and not re.search(r'\sdirigid', nx):
+                        # un renglón sin crédito detrás no es una obra: es la
+                        # descripción de una actividad («Con el Apoyo de Origen Lab»)
+                        if not b['obras']:
+                            b['descripcion'] = f"{b.get('descripcion', '')} {tit}".strip()
                         continue
                     # EL CRÉDITO puede venir partido: el título se come el comienzo
                     # («… que se llame el» / «presente dirigido por…») o el crédito
@@ -320,8 +373,13 @@ def main():
             r['sala'] = sala
         if b.get('hora_fin'):
             r['duracion_min'] = mins(b['hora_fin']) - mins(b['hora'])
-        if b['titulo'] in ACTIVIDADES:
-            r.update({'tipo': 'evento', 'event_kind': ACTIVIDADES[b['titulo']], 'seccion': SECCION_ACTIVIDADES})
+        if b.get('qa'):
+            r['has_qa'], r['qa_type'] = True, 'team'
+        # «Conversatorio Autorepresentación y cosmovisiones…» (6 oct): un
+        # conversatorio con nombre propio
+        kind = ACTIVIDADES.get(b['titulo']) or ('conversatorio' if b['titulo'].startswith('Conversatorio ') else None)
+        if kind:
+            r.update({'tipo': 'evento', 'event_kind': kind, 'seccion': SECCION_ACTIVIDADES})
             if b.get('descripcion'):
                 r['sinopsis'] = b['descripcion']
             funciones.append(r)
@@ -371,7 +429,9 @@ def main():
     horas_impresas = [x for x in crudo_L if re.search(r'\d{1,2}(:\s*\d{2})?\s*[ap]\.?\s*m\.?\s*$', x, re.I)
                       or re.match(r'^\d{1,2}:\d{2}\s*[ap]\.?\s*m\.?\s', x, re.I)]
     repetidos = len(bloques) - len(vistos)
-    if len(horas_impresas) - repetidos != len(funciones) + len(fuera):
+    # el bloque que comparte la hora de otro no imprime la suya (ver leer())
+    sin_hora = sum(1 for b in bloques if b.get('_sin_hora_propia'))
+    if len(horas_impresas) - repetidos + sin_hora != len(funciones) + len(fuera):
         fallos.append(f'{len(horas_impresas)} renglones con hora ({repetidos} repetidos) y '
                       f'{len(funciones)} funciones + {len(fuera)} fuera')
     if sum(len(f.get('obras', [])) for f in funciones) != sum(1 for x in crudo_L if re.match(r'^(.*\s)?dirigid', x, re.I)):
@@ -410,10 +470,10 @@ def main():
             f['titulo'] = f'{t} · {f["sede"]}' if a_la_vez else f'{t} · Parte {n}'
     sin_funcion = [o['titulo'] for o in cat if plano(o['titulo']) not in usadas]
     out = {'_provenance': provenance(
-        'festicinepopayan.com, página de programación 2026 (wp-json, id 13120)',
+        'festicinepopayan.com, página de programación 2026 (wp-json, id 12543)',
         que_aporta='día, hora, sede y obras de cada bloque; el resto de la ficha, del catálogo',
         url=URL, metodo='wp-json + parser de renglones; cruce con el catálogo por título y dirección'),
-        '_sin_funcion': {'porque': 'la página no trae el domingo 11', 'obras': sin_funcion},
+        '_sin_funcion': {'porque': 'obras del catálogo que la parrilla del 6 oct no programa', 'obras': sin_funcion},
         '_fuera': fuera,
         'funciones': funciones}
     io.open(DESTINO, 'w', encoding='utf-8').write(json.dumps(out, ensure_ascii=False, indent=1))
