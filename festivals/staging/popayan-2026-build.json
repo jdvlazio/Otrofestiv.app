@@ -1,8 +1,8 @@
 {
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
-  "fuente": "festicinepopayan.com, página de programación 2026 (wp-json, id 13120)",
-  "capturado": "2026-10-01",
+  "fuente": "festicinepopayan.com, página de programación 2026 (wp-json, id 12543)",
+  "capturado": "2026-10-06",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime la parrilla; el Auditorio Maya es la sala de la Facultad de Artes de Unicauca.",
@@ -160,25 +160,30 @@
    "archetype": "Competencia",
    "order": 8
   },
-  "🏘️ CineCorto en el Barrio": {
-   "en": "CineCorto in the Neighborhood",
-   "archetype": "Cortos / Programas",
-   "order": 9
-  },
   "🎬 Selección Oficial Ficción": {
    "en": "Official Selection: Fiction",
    "archetype": "Competencia",
-   "order": 10
+   "order": 9
   },
   "🌎 Muestra de Cortos Internacionales": {
    "en": "International Shorts Showcase",
    "archetype": "Muestra / País",
-   "order": 11
+   "order": 10
   },
   "🧒 Cine Corto Familiar": {
    "en": "Family Shorts",
    "archetype": "Cortos / Programas",
+   "order": 11
+  },
+  "🎈 Selección Oficial Infantil": {
+   "en": "Official Selection: Children",
+   "archetype": "Competencia",
    "order": 12
+  },
+  "🏘️ CineCorto en el Barrio": {
+   "en": "CineCorto in the Neighborhood",
+   "archetype": "Cortos / Programas",
+   "order": 13
   }
  },
  "venues": {
@@ -200,24 +205,6 @@
    "_prec": "manual",
    "_nota": "Google Maps «Facultad de Artes Universidad del Cauca», Cra. 6 #3-14; OSM «Puerta artes, 3-14, Carrera 6» a 6 m. El Auditorio Maya es su sala."
   },
-  "Casa Taller Sirirí - Popayán": {
-   "short": "Casa Taller Sirirí",
-   "city": "Popayán",
-   "lat": 2.4869714,
-   "lng": -76.5677516,
-   "address": "Cra. 16 #67N-65, Popayán",
-   "_prec": "manual",
-   "_nota": "Google Maps «CASA TALLER SIRIRÍ», Carrera 16 # 67 N 65 (30 sep). OSM no la tiene."
-  },
-  "Mikuna Casa Cultural - Popayán": {
-   "short": "Mikuna Casa Cultural",
-   "city": "Popayán",
-   "lat": 2.4285559,
-   "lng": -76.6175557,
-   "address": "Túnel bajo, Popayán",
-   "_prec": "manual",
-   "_nota": "Google Maps «Mikuna, Casa de las Artes» (plus code C9HJ+CX, Túnel bajo): el único Mikuna de Popayán en Maps, un espacio cultural y escuela de arte; el festival la llama «Mikuna Casa Cultural». OSM no la tiene (30 sep)."
-  },
   "Centro Comercial Terra Plaza - Popayán": {
    "short": "Centro Comercial Terra Plaza",
    "city": "Popayán",
@@ -226,6 +213,15 @@
    "address": "Cra. 9 #73AN-200, Norte, Popayán",
    "_prec": "manual",
    "_nota": "Google Maps «Centro Comercial Terraplaza», Cra. 9 #73 AN-200 (30 sep); OSM «Centro comercial Terra Plaza» (shop=mall) a ~120 m, el mismo centro comercial. La Pantalla gigante es su sala."
+  },
+  "Casa Taller Sirirí - Popayán": {
+   "short": "Casa Taller Sirirí",
+   "city": "Popayán",
+   "lat": 2.4869714,
+   "lng": -76.5677516,
+   "address": "Cra. 16 #67N-65, Popayán",
+   "_prec": "manual",
+   "_nota": "Google Maps «CASA TALLER SIRIRÍ», Carrera 16 # 67 N 65 (30 sep). OSM no la tiene."
   }
  },
  "films": [
@@ -233,7 +229,7 @@
    "title": "Apertura del Festival",
    "type": "event",
    "section": "🎤 Actividades",
-   "duration": "30 min",
+   "duration": "60 min",
    "day": "2026-10-05",
    "time": "19:00",
    "day_order": 0,
@@ -241,8 +237,8 @@
    "event_kind": "apertura",
    "has_qa": false,
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true
   },
@@ -254,13 +250,13 @@
    "flags": "🇨🇴🇬🇧",
    "duration": "113 min",
    "day": "2026-10-05",
-   "time": "19:30",
+   "time": "19:00",
    "day_order": 0,
    "venue": "Teatro Bolívar - Popayán",
    "has_qa": false,
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true,
    "is_cortos": true,
@@ -355,23 +351,6 @@
    ]
   },
   {
-   "title": "Conversatorio",
-   "type": "event",
-   "section": "🎤 Actividades",
-   "duration": "60 min",
-   "day": "2026-10-05",
-   "time": "21:30",
-   "day_order": 0,
-   "venue": "Teatro Bolívar - Popayán",
-   "event_kind": "conversatorio",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true
-  },
-  {
    "title": "Selección Oficial Cauca (primer bloque)",
    "type": "film",
    "section": "🏔️ Selección Oficial Cauca",
@@ -382,10 +361,11 @@
    "time": "17:00",
    "day_order": 1,
    "venue": "Teatro Bolívar - Popayán",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true,
    "is_cortos": true,
@@ -398,8 +378,8 @@
      "synopsis": "Tras ser desplazada por la violencia, Edelmira acaba trabajando como empleada doméstica para el grupo armado que la desplazó. Esta situación será la oportunidad para Edelmira de redimirse o vengarse.",
      "synopsis_lang": "es",
      "poster": "/assets/popayan-2026/crudo.jpg",
-     "posterSource": "oficial",
-     "lbSlug": "crudo-1",
+     "posterSource": "tmdb",
+     "lbSlug": "crudo-2023",
      "tmdb_id": 1786240,
      "genre": "Drama",
      "country": "Colombia",
@@ -420,7 +400,7 @@
      "synopsis": "En un cambuche a la orilla de un lago, Jeison, un hombre joven y pobre, vive junto a su hijo Messi. Jeison, a pesar de su vida dura, y que diariamente está marcada a través de una lucha por sobrevivir; trabajando duro bajo el sol, recogiendo arena para una volqueta con el fin de ganar un poco de dinero, se esfuerza por cuidar y alegrar a su hijo. Messi, sueña con una volqueta de juguete, pero su padre no puede permitírselo. Haciendo que Jeison tome una difícil decisión para poder darle a Messi un futuro mejor.",
      "synopsis_lang": "es",
      "poster": "/assets/popayan-2026/la-volqueta.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-volqueta",
      "tmdb_id": 1786242,
      "genre": "Drama",
@@ -453,23 +433,6 @@
    ]
   },
   {
-   "title": "Conversatorio",
-   "type": "event",
-   "section": "🎤 Actividades",
-   "duration": "30 min",
-   "day": "2026-10-06",
-   "time": "18:30",
-   "day_order": 1,
-   "venue": "Teatro Bolívar - Popayán",
-   "event_kind": "conversatorio",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true
-  },
-  {
    "title": "Selección Oficial Experimental",
    "type": "film",
    "section": "🌀 Selección Oficial Experimental",
@@ -483,8 +446,8 @@
    "sala": "Auditorio Maya",
    "has_qa": false,
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true,
    "is_cortos": true,
@@ -645,10 +608,11 @@
    "time": "19:00",
    "day_order": 1,
    "venue": "Teatro Bolívar - Popayán",
-   "has_qa": false,
+   "has_qa": true,
+   "qa_type": "team",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true,
    "is_cortos": true,
@@ -722,23 +686,6 @@
    ]
   },
   {
-   "title": "Conversatorio",
-   "type": "event",
-   "section": "🎤 Actividades",
-   "duration": "60 min",
-   "day": "2026-10-06",
-   "time": "21:00",
-   "day_order": 1,
-   "venue": "Teatro Bolívar - Popayán",
-   "event_kind": "conversatorio",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true
-  },
-  {
    "title": "Selección Oficial Indígena",
    "type": "film",
    "section": "🪶 Selección Oficial Indígena",
@@ -746,13 +693,13 @@
    "flags": "🇨🇴",
    "duration": "56 min",
    "day": "2026-10-07",
-   "time": "15:30",
+   "time": "15:00",
    "day_order": 2,
    "venue": "Teatro Bolívar - Popayán",
    "has_qa": false,
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true,
    "is_cortos": true,
@@ -798,7 +745,7 @@
      "synopsis": "Desde el Macizo Colombiano, útero de la Madre Tierra, dentro del Resguardo de Papallaqta de la Nación Indígena Yanakuna, este corto documental explora un territorio donde lagunas y manantiales sagrados dan origen a los ríos más importantes de Colombia.",
      "synopsis_lang": "es",
      "poster": "/assets/popayan-2026/yakuwasi-la-casa-del-agua.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "yakuwasi-la-casa-del-agua",
      "tmdb_id": 1786236,
      "genre": "Documental",
@@ -808,19 +755,21 @@
    ]
   },
   {
-   "title": "Conversatorio",
+   "title": "Conversatorio Autorepresentación y cosmovisiones desde los pueblos originarios en el Cine",
    "type": "event",
    "section": "🎤 Actividades",
-   "duration": "30 min",
+   "duration": "60 min",
    "day": "2026-10-07",
-   "time": "16:30",
+   "time": "16:00",
    "day_order": 2,
    "venue": "Teatro Bolívar - Popayán",
    "event_kind": "conversatorio",
    "has_qa": false,
+   "synopsis": "Con el Apoyo de Origen Lab",
+   "synopsis_lang": "es",
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true
   },
@@ -837,8 +786,8 @@
    "venue": "Teatro Bolívar - Popayán",
    "has_qa": false,
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true,
    "is_cortos": true,
@@ -923,23 +872,6 @@
    ]
   },
   {
-   "title": "Conversatorio",
-   "type": "event",
-   "section": "🎤 Actividades",
-   "duration": "60 min",
-   "day": "2026-10-07",
-   "time": "18:00",
-   "day_order": 2,
-   "venue": "Teatro Bolívar - Popayán",
-   "event_kind": "conversatorio",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true
-  },
-  {
    "title": "Selección Oficial Animación",
    "type": "film",
    "section": "✏️ Selección Oficial Animación",
@@ -952,8 +884,8 @@
    "venue": "Teatro Bolívar - Popayán",
    "has_qa": false,
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true,
    "is_cortos": true,
@@ -966,7 +898,7 @@
      "synopsis": "En medio de la noche, un vampiro irrumpe en la casa de una abuelita latinoamericana esperando encontrar una presa fácil. En su lugar, se enfrenta a una mujer valiente, dispuesta a pelear por su vida. Con la ayuda inesperada de su fiel pug, la abuelita se envuelve en una batalla bizarra por la supervivencia. Mezclando humor con una atmósfera inquietante, Abuelita Caza Vampiros es una comedia gótica tropical inspirada en memorias familiares, donde el coraje y un toque de lo absurdo transforman una noche común en un enfrentamiento inolvidable.",
      "synopsis_lang": "es",
      "poster": "/assets/popayan-2026/abuelita-caza-vampiros.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "abuelita-caza-vampiros",
      "tmdb_id": 1786238,
      "genre": "Animación",
@@ -1131,13 +1063,13 @@
    "flags": "🇨🇴",
    "duration": "57 min",
    "day": "2026-10-08",
-   "time": "15:30",
+   "time": "16:00",
    "day_order": 3,
    "venue": "Teatro Bolívar - Popayán",
    "has_qa": false,
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1201,23 +1133,6 @@
    ]
   },
   {
-   "title": "Conversatorio",
-   "type": "event",
-   "section": "🎤 Actividades",
-   "duration": "30 min",
-   "day": "2026-10-08",
-   "time": "16:30",
-   "day_order": 3,
-   "venue": "Teatro Bolívar - Popayán",
-   "event_kind": "conversatorio",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true
-  },
-  {
    "title": "Selección Oficial Documental segundo bloque",
    "type": "film",
    "section": "📽️ Selección Oficial Documental",
@@ -1230,8 +1145,8 @@
    "venue": "Teatro Bolívar - Popayán",
    "has_qa": false,
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1308,20 +1223,896 @@
    ]
   },
   {
-   "title": "CineCorto en el Barrio · Casa Taller Sirirí",
+   "title": "Selección Oficial Ficción Primer bloque",
+   "type": "film",
+   "section": "🎬 Selección Oficial Ficción",
+   "country": "France, Colombia",
+   "flags": "🇫🇷🇨🇴",
+   "duration": "108 min",
+   "day": "2026-10-08",
+   "time": "19:00",
+   "day_order": 3,
+   "venue": "Teatro Bolívar - Popayán",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "1 Hijo & 1 Padre",
+     "director": "Andrés Ramírez Pulido",
+     "year": 2024,
+     "duration": "25 min",
+     "synopsis": "Kevin es catalogado como un chico problemático, a decir verdad, no controla sus impulsos cuando se burlan de él. Tras un nuevo error,",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/1-hijo-1-padre.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "a-son-a-father",
+     "tmdb_id": 1316517,
+     "synopsis_en": "The story follows Kevin, a young man classified as problematic due to his inability to control his impulses. After an incident, Kevin must attend therapy for teenagers, but his father refuses to accompany him. Don Andrés, his stepfather, assumes the role of companion, revealing a relationship that is more fraternal than paternal.",
+     "title_en": "A Son & a Father",
+     "genre": "Comedia",
+     "country": "France, Colombia",
+     "flags": "🇫🇷🇨🇴"
+    },
+    {
+     "title": "Camino al cielo",
+     "director": "Miguel Vargas Mejia",
+     "year": 2024,
+     "duration": "18 min",
+     "synopsis": "Mairen (32) se ve obligada a dar a luz a su bebé en una camioneta de paramilitares que rondan la región, la cual es conocida porque, quien se sube a ella, no es vuelto a ver con vida.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/camino-al-cielo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "way-to-heaven-2024",
+     "tmdb_id": 1463422,
+     "synopsis_en": "In the middle of the banana-growing area of Urabá, Mairen, an Afro woman, eight months pregnant, goes into labor in an unpopulated area. Although her health is in danger, Mairen, resigned, lies down in a tree to await her fate.",
+     "title_en": "Way to heaven",
+     "genre": "Drama",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "El Segundo",
+     "director": "Pedro Miguel Rozo",
+     "year": 2025,
+     "duration": "22 min",
+     "synopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones",
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "El odio del padre",
+     "director": "Rodrigo Mora Yepes",
+     "year": 2026,
+     "duration": "14 min",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Todos los días",
+     "director": "David Rendón Peláez",
+     "duration": "15 min",
+     "poster": "/assets/popayan-2026/todos-los-dias.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "todos-los-dias",
+     "tmdb_id": 1738004,
+     "synopsis": "Ramiro es despedido del trabajo al que perteneció gran parte de su vida. En medio de su nueva y solitaria libertad conoce a tres desocupados como él, que se reúnen para matar el tiempo y hacerse compañía mientras fantasean con vengarse de sus antiguos empleadores y buscan, un pequeño triunfo a la vez, ser felices. Cada día, todos los días.",
+     "year": 2024,
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Gladiolos",
+     "director": "Mónica Juanita Hernández",
+     "year": 2023,
+     "duration": "14 min",
+     "synopsis": "Waldina, la vendedora de flores del pequeño pueblo de Arcabuco, ha fallecido. Su hijo Humberto llega desde la gran ciudad y decide hacer la última entrega de flores a sus clientes sin saber que tras una de esas puertas podría encontrar su felicidad.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/gladiolos.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "gladiolos",
+     "tmdb_id": 898817,
+     "synopsis_en": "Waldina, the flowers seller of the little town of Arcabuco, has died. Her son Humberto arrives from the big city and decides to make the last delivery of flowers to her clients without knowing that in one of that doors could find his happiness.",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
+   "title": "Muestra de Cortos Internacionales",
+   "type": "film",
+   "section": "🌎 Muestra de Cortos Internacionales",
+   "duration": "90 min",
+   "day": "2026-10-09",
+   "time": "15:00",
+   "day_order": 4,
+   "venue": "Teatro Bolívar - Popayán",
+   "has_qa": false,
+   "synopsis": "Tecnológico de Artes Débora Arango.",
+   "synopsis_lang": "es",
+   "poster": "/assets/popayan-2026/muestra-de-cortos-internacionales.jpg",
+   "posterSource": "oficial",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Apertura muestra Banda de la Academia Militar General Tomás Cipriano de Mosquera",
+   "type": "event",
+   "section": "🎤 Actividades",
+   "duration": "60 min",
+   "day": "2026-10-09",
+   "time": "15:00",
+   "day_order": 4,
+   "venue": "Centro Comercial Terra Plaza - Popayán",
+   "sala": "Pantalla gigante",
+   "event_kind": "apertura",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Proyección Cine Corto Familiar · Parte 1",
+   "type": "film",
+   "section": "🧒 Cine Corto Familiar",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "30 min",
+   "day": "2026-10-09",
+   "time": "16:00",
+   "day_order": 4,
+   "venue": "Centro Comercial Terra Plaza - Popayán",
+   "sala": "Pantalla gigante",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Cascabeles",
+     "director": "Jhina Hernández Ospina",
+     "year": 2022,
+     "duration": "8 min",
+     "synopsis": "Emma (7), es una niña caleña amante del fútbol, valiente ante los ojos de todos, pero que guarda un secreto importante, le teme a la oscuridad. Los espacios oscuros guardan sus temores, esos que pertenecen al mundo de la imaginación, pero que, para ella, cada vez que se apaga la luz, cobran vida. Augusto (69) es su abuelo, un hombre ciego, quien le enseñó a jugar al fútbol. Una tarde en medio de un entrenamiento, Augusto descubre el secreto de Emma, y planea la forma de impulsarla a superar sus temores.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/cascabeles.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cascabeles",
+     "tmdb_id": 1187808,
+     "genre": "Animación",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Color piel",
+     "director": "Fidel Barboza Gómez y Sebastián Castaño Tobón",
+     "duration": "8 min",
+     "poster": "/assets/popayan-2026/color-piel.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "skin-color",
+     "tmdb_id": 1493530,
+     "synopsis_en": "Bogotá, 1996. Luis Fernando, a 9-year-old Afro-Colombian boy, will face a serious mistake in the adult world, when in class he confirms that the pinkish color in his pencil case, called “skin color”, does not correspond to the color of his skin.",
+     "title_en": "Skin Color",
+     "genre": "Aventura",
+     "country": "Colombia",
+     "year": 2025,
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Dientes de yuca",
+     "director": "Yurieth Romero Velasquez",
+     "year": 2025,
+     "duration": "14 min",
+     "synopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto.",
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
+   "title": "Vodcast en Vivo",
+   "type": "event",
+   "section": "🎤 Actividades",
+   "duration": "60 min",
+   "day": "2026-10-09",
+   "time": "16:30",
+   "day_order": 4,
+   "venue": "Centro Comercial Terra Plaza - Popayán",
+   "sala": "Pantalla gigante",
+   "event_kind": "evento",
+   "has_qa": false,
+   "synopsis": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Proyección Cine Corto Familiar · Parte 2",
+   "type": "film",
+   "section": "🧒 Cine Corto Familiar",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "72 min",
+   "day": "2026-10-09",
+   "time": "17:30",
+   "day_order": 4,
+   "venue": "Centro Comercial Terra Plaza - Popayán",
+   "sala": "Pantalla gigante",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Chicanoa",
+     "director": "Carlos Alberto Mera Jiménez",
+     "year": 2025,
+     "duration": "9 min",
+     "synopsis": "Lura lucia Carabali Otero, Yineth Mera Mejia, Luz Adiana Serna Lasso, Jorge Olmedo Serna Lasso, Eddy Valeria Carabali Lasso, Eddy Valeria Carabali Lasso, Ibeth Karina Correa Fajardo, Coni Estefani Lasso Gonzalias",
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Abuelita caza vampiros",
+     "director": "Mariana Betancourt Chaves",
+     "year": 2026,
+     "duration": "2 min",
+     "synopsis": "En medio de la noche, un vampiro irrumpe en la casa de una abuelita latinoamericana esperando encontrar una presa fácil. En su lugar, se enfrenta a una mujer valiente, dispuesta a pelear por su vida. Con la ayuda inesperada de su fiel pug, la abuelita se envuelve en una batalla bizarra por la supervivencia. Mezclando humor con una atmósfera inquietante, Abuelita Caza Vampiros es una comedia gótica tropical inspirada en memorias familiares, donde el coraje y un toque de lo absurdo transforman una noche común en un enfrentamiento inolvidable.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/abuelita-caza-vampiros.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "abuelita-caza-vampiros",
+     "tmdb_id": 1786238,
+     "genre": "Animación",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Pájaros huérfanos",
+     "director": "Leonardo Rafael Montes Pérez",
+     "year": 2026,
+     "duration": "6 min",
+     "synopsis": "Un juego de caza en el bosque termina en un espejo inesperado. Tres hermanos logran abatir a una paloma, solo para descubrir que han dejado un nido de pichones huérfanos. En la fragilidad de esas crías, los niños reviven el trauma de su propio pasado y el vacío que dejó el conflicto en su hogar. Una historia sobre la pérdida, la memoria y el ciclo del dolor que intentan sanar al llevarse consigo aquello que ellos mismos rompieron.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/pajaros-huerfanos.jpg",
+     "posterSource": "custom",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Gris",
+     "director": "Loren Escandon",
+     "year": 2025,
+     "duration": "15 min",
+     "synopsis": "Sofía; una niña curiosa e imaginativa; enfrenta desafíos en la escuela mientras comienza a navegar las complejidades de su identidad multirracial. Sus dibujos cobran vida en animaciones llenas de fantasía y la acompañan en un viaje de autoconocimiento; marcado por dudas; resiliencia y aprendizajes sobre el sentido de pertenencia. Sofía aprende a abrazar los matices que la definen; fusionando amor; cultura e individualidad en una narrativa única.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/gris.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "gris-2025",
+     "tmdb_id": 1490328,
+     "synopsis_en": "Sofía, a curious and imaginative young girl, faces challenges at school as she begins to navigate the complexities of her mixed-race identity. As her art springs to life through vibrant and whimsical animations, the story delves into Sofia’s journey of self-discovery, capturing her confusion, resilience, and profound lessons about belonging. Sofia learns to embrace the shades that define her, blending love, culture, and individuality into a unique narrative.",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Juan PorOcho",
+     "director": "Marquitos Cárdenas",
+     "duration": "10 min",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez",
+     "year": 2024,
+     "duration": "15 min",
+     "synopsis": "Pablo (10) tendrá el desafío de rescatar a su mascota Pascualina, una gallina ponedora, de las garras de Don Chucho, el usurero del pueblo quien cobra las deudas con huevos. Este día Pablo tiene un accidente en su bicicleta y rompe los preciados huevos, ahora debe reponer la cubeta para saldar la deuda. La única herramienta que tiene el niño para rescatar a Pascualina es una apuesta con su trompo de madera con Felipe el mejor jugador de trompo del pueblo. Aunque todo parece jugar a favor de Pablo, quien ha ganado la cubeta que rescatará a su querida Pascualina y realizar la gran hazaña, Valeria, la hermana de Felipe, impide que el premio sea entregado y les hace caer en cuenta que no basta ganar una apuesta si entorpece el trabajo de otra familia en la misma situación. Se desata una disertación en la que todos los niños empatizan con Pablo gracias a que reconocen los obstáculos que han tenido al tratar de sortear la dura actitud de Don Chucho. Ahora, es la unión de todos los niños lo que permite que Pascualina sea rescatada. Finalmente, Pablo aprende la importancia del trabajo en equipo.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/la-gran-hazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "tmdb_id": 1494003,
+     "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+     "title_en": "The Great Feat",
+     "genre": "Aventura",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La guerra de los tomates",
+     "director": "Juancarlos Gutiérrez",
+     "duration": "15 min",
+     "poster": "/assets/popayan-2026/la-guerra-de-los-tomates.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-guerra-de-los-tomates",
+     "tmdb_id": 1753830,
+     "synopsis_en": "Two groups of local and migrant children will represent the neighborhood in a tournament, an idea that will spark a tomato fight; a charismatic girl will bring out the best in everyone as she tries to unite an unlikely team against an unexpected rival.",
+     "country": "Colombia",
+     "year": 2026,
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
+   "title": "Selección Oficial Ficción segundo bloque",
+   "type": "film",
+   "section": "🎬 Selección Oficial Ficción",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "115 min",
+   "day": "2026-10-09",
+   "time": "17:00",
+   "day_order": 4,
+   "venue": "Teatro Bolívar - Popayán",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Las faldas de tu prima",
+     "director": "Jose Miguel Huertas Landero y Esteban Galindo",
+     "year": 2025,
+     "duration": "25 min",
+     "synopsis": "Simón y Gabo, dos mejores amigos de 17 años, pasan el verano con Sam, la prima mayor de Gabo, una ansiosa universitaria que busca escapar del estrés de su tesis. Juntos enfrentarán el amor, la amistad y un malvado robot gigante.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/las-faldas-de-tu-prima.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "your-cousins-skirts",
+     "tmdb_id": 1542363,
+     "synopsis_en": "Simón and Gabo, two 17-year-old best friends, spend the summer with Sam, Gabo's older cousin, an anxious college student seeking to escape her thesis work. They will confront love, friendship, and a malicious giant robot.",
+     "title_en": "Your Cousin's Skirts",
+     "genre": "Drama",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Suite intercontinental",
+     "director": "Lola Tartane",
+     "year": 2026,
+     "duration": "24 min",
+     "synopsis": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/suite-intercontinental.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "suite-intercontinental",
+     "tmdb_id": 1668898,
+     "synopsis_en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire.",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Más allá",
+     "director": "Bettina López Mendoza",
+     "duration": "16 min",
+     "poster": "/assets/popayan-2026/mas-alla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "beyond-2025",
+     "tmdb_id": 1488751,
+     "synopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
+     "synopsis_en": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
+     "title_en": "Beyond",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La Mona",
+     "director": "Laura Gutiérrez Ardila",
+     "year": 2025,
+     "duration": "18 min",
+     "poster": "/assets/siembrafest/la-mona.jpg",
+     "lbSlug": "heat-wave-2025",
+     "tmdb_id": 1444298,
+     "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
+     "title_en": "Heat Wave",
+     "genre": "Drama",
+     "country": "Colombia",
+     "posterSource": "oficial",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Las piedras del río",
+     "director": "Edna Sierra",
+     "year": 2026,
+     "duration": "16 min",
+     "synopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
+     "synopsis_lang": "es",
+     "poster": "/assets/siembrafest/las-piedras-del-rio.jpg",
+     "posterSource": "oficial",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Los Huyentes",
+     "director": "Ari Lamadrid",
+     "duration": "16 min",
+     "poster": "/assets/popayan-2026/los-huyentes.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "los-huyentes",
+     "tmdb_id": 1564433,
+     "synopsis_en": "Between dream and reality, two close friends try to deal with sadness and a sense of emptiness by reliving the same idyllic afternoon over and over again... or perhaps the same dream.",
+     "genre": "Fantasía",
+     "country": "Colombia",
+     "year": 2025,
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
+   "title": "Ceremonia de premiación",
+   "type": "event",
+   "section": "🎤 Actividades",
+   "duration": "60 min",
+   "day": "2026-10-09",
+   "time": "19:00",
+   "day_order": 4,
+   "venue": "Teatro Bolívar - Popayán",
+   "event_kind": "acto",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Selección Oficial Infantil",
+   "type": "film",
+   "section": "🎈 Selección Oficial Infantil",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "122 min",
+   "day": "2026-10-10",
+   "time": "17:00",
+   "day_order": 5,
+   "venue": "Teatro Bolívar - Popayán",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Cascabeles",
+     "director": "Jhina Hernández Ospina",
+     "year": 2022,
+     "duration": "8 min",
+     "synopsis": "Emma (7), es una niña caleña amante del fútbol, valiente ante los ojos de todos, pero que guarda un secreto importante, le teme a la oscuridad. Los espacios oscuros guardan sus temores, esos que pertenecen al mundo de la imaginación, pero que, para ella, cada vez que se apaga la luz, cobran vida. Augusto (69) es su abuelo, un hombre ciego, quien le enseñó a jugar al fútbol. Una tarde en medio de un entrenamiento, Augusto descubre el secreto de Emma, y planea la forma de impulsarla a superar sus temores.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/cascabeles.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cascabeles",
+     "tmdb_id": 1187808,
+     "genre": "Animación",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Color piel",
+     "director": "Fidel Barboza Gómez y Sebastián Castaño Tobón",
+     "duration": "8 min",
+     "poster": "/assets/popayan-2026/color-piel.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "skin-color",
+     "tmdb_id": 1493530,
+     "synopsis_en": "Bogotá, 1996. Luis Fernando, a 9-year-old Afro-Colombian boy, will face a serious mistake in the adult world, when in class he confirms that the pinkish color in his pencil case, called “skin color”, does not correspond to the color of his skin.",
+     "title_en": "Skin Color",
+     "genre": "Aventura",
+     "country": "Colombia",
+     "year": 2025,
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Diente X Diente",
+     "director": "Julián Gómez Reyes",
+     "duration": "7 min",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Dientes de yuca",
+     "director": "Yurieth Romero Velasquez",
+     "year": 2025,
+     "duration": "14 min",
+     "synopsis": "David, un niño negro de seis años, sufre acoso escolar por el color de su piel y la falta de dientes. Cuando le piden que lleve una foto escolar, la esconde de sus padres para evitar más burlas. Pero su bisabuelo Leandro se entera y le fabrica una dentadura postiza de yuca. Juntos, se preparan para la foto.",
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Gris",
+     "director": "Loren Escandon",
+     "year": 2025,
+     "duration": "15 min",
+     "synopsis": "Sofía; una niña curiosa e imaginativa; enfrenta desafíos en la escuela mientras comienza a navegar las complejidades de su identidad multirracial. Sus dibujos cobran vida en animaciones llenas de fantasía y la acompañan en un viaje de autoconocimiento; marcado por dudas; resiliencia y aprendizajes sobre el sentido de pertenencia. Sofía aprende a abrazar los matices que la definen; fusionando amor; cultura e individualidad en una narrativa única.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/gris.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "gris-2025",
+     "tmdb_id": 1490328,
+     "synopsis_en": "Sofía, a curious and imaginative young girl, faces challenges at school as she begins to navigate the complexities of her mixed-race identity. As her art springs to life through vibrant and whimsical animations, the story delves into Sofia’s journey of self-discovery, capturing her confusion, resilience, and profound lessons about belonging. Sofia learns to embrace the shades that define her, blending love, culture, and individuality into a unique narrative.",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Juan PorOcho",
+     "director": "Marquitos Cárdenas",
+     "duration": "10 min",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez",
+     "year": 2024,
+     "duration": "15 min",
+     "synopsis": "Pablo (10) tendrá el desafío de rescatar a su mascota Pascualina, una gallina ponedora, de las garras de Don Chucho, el usurero del pueblo quien cobra las deudas con huevos. Este día Pablo tiene un accidente en su bicicleta y rompe los preciados huevos, ahora debe reponer la cubeta para saldar la deuda. La única herramienta que tiene el niño para rescatar a Pascualina es una apuesta con su trompo de madera con Felipe el mejor jugador de trompo del pueblo. Aunque todo parece jugar a favor de Pablo, quien ha ganado la cubeta que rescatará a su querida Pascualina y realizar la gran hazaña, Valeria, la hermana de Felipe, impide que el premio sea entregado y les hace caer en cuenta que no basta ganar una apuesta si entorpece el trabajo de otra familia en la misma situación. Se desata una disertación en la que todos los niños empatizan con Pablo gracias a que reconocen los obstáculos que han tenido al tratar de sortear la dura actitud de Don Chucho. Ahora, es la unión de todos los niños lo que permite que Pascualina sea rescatada. Finalmente, Pablo aprende la importancia del trabajo en equipo.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/la-gran-hazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "tmdb_id": 1494003,
+     "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+     "title_en": "The Great Feat",
+     "genre": "Aventura",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La guerra de los tomates",
+     "director": "Juancarlos Gutiérrez",
+     "duration": "15 min",
+     "poster": "/assets/popayan-2026/la-guerra-de-los-tomates.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-guerra-de-los-tomates",
+     "tmdb_id": 1753830,
+     "synopsis_en": "Two groups of local and migrant children will represent the neighborhood in a tournament, an idea that will spark a tomato fight; a charismatic girl will bring out the best in everyone as she tries to unite an unlikely team against an unexpected rival.",
+     "country": "Colombia",
+     "year": 2026,
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Los pliegues de la falda",
+     "director": "Blanca Muñoz Ávila",
+     "year": 2025,
+     "duration": "18 min",
+     "synopsis": "Linda, Carlos y María son una familia convencional en la que casi todo encaja: el padre tiene la última palabra, la madre se encarga de la casa. Y Linda es una pequeña que se rehúsa a usar la falda. Ella no quiere ser la princesa de papá, solo quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que Linda interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla. Después de la función, nada será igual.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/los-pliegues-de-la-falda.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "los-pliegues-de-la-falda",
+     "tmdb_id": 1738777,
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Luis Antonio",
+     "director": "Juan José Arias Gil",
+     "year": 2025,
+     "duration": "12 min",
+     "synopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
+   "title": "Proyección Cine Corto Familiar · Parte 3",
+   "type": "film",
+   "section": "🧒 Cine Corto Familiar",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "52 min",
+   "day": "2026-10-10",
+   "time": "14:00",
+   "day_order": 5,
+   "venue": "Centro Comercial Terra Plaza - Popayán",
+   "sala": "Pantalla gigante",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Los pliegues de la falda",
+     "director": "Blanca Muñoz Ávila",
+     "year": 2025,
+     "duration": "18 min",
+     "synopsis": "Linda, Carlos y María son una familia convencional en la que casi todo encaja: el padre tiene la última palabra, la madre se encarga de la casa. Y Linda es una pequeña que se rehúsa a usar la falda. Ella no quiere ser la princesa de papá, solo quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que Linda interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla. Después de la función, nada será igual.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/los-pliegues-de-la-falda.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "los-pliegues-de-la-falda",
+     "tmdb_id": 1738777,
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Luis Antonio",
+     "director": "Juan José Arias Gil",
+     "year": 2025,
+     "duration": "12 min",
+     "synopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Tuktu, Padre Maíz",
+     "director": "Mauricio Prieto",
+     "year": 2025,
+     "duration": "14 min",
+     "synopsis": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/tuktu-padre-maiz.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "tuktu-father-maize",
+     "tmdb_id": 1592955,
+     "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
+     "title_en": "Tuktu, Father Maize",
+     "genre": "Animación",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Un abrir y cerrar de ojos",
+     "director": "Lia Marcela Correa Teherán",
+     "year": 2026,
+     "duration": "8 min",
+     "synopsis": "Juan, un viejo minero de la comunidad de Varsovia, despierta la mañana después de una tragedia: En el silencio de su cocina y el café derramado sobre la mesa lo enfrentan a la ausencia de su nieto Pedro. Ese gesto mínimo desata una cadena de recuerdos que reconstruyen los días previos.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/un-abrir-y-cerrar-de-ojos.jpg",
+     "posterSource": "custom",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
+   "title": "Vodcast en Vivo",
+   "type": "event",
+   "section": "🎤 Actividades",
+   "duration": "60 min",
+   "day": "2026-10-10",
+   "time": "15:00",
+   "day_order": 5,
+   "venue": "Centro Comercial Terra Plaza - Popayán",
+   "sala": "Pantalla gigante",
+   "event_kind": "evento",
+   "has_qa": false,
+   "synopsis": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Proyección Cine Corto Familiar · Parte 4",
+   "type": "film",
+   "section": "🧒 Cine Corto Familiar",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "46 min",
+   "day": "2026-10-10",
+   "time": "16:00",
+   "day_order": 5,
+   "venue": "Centro Comercial Terra Plaza - Popayán",
+   "sala": "Pantalla gigante",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Cayenas libertarias",
+     "director": "Javier Camilo Aranguren Montañez",
+     "year": 2026,
+     "duration": "18 min",
+     "synopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos o cantos de trabajo de llano que durante generaciones fueron entonadas por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición Llanera, revelando su relación armónica con la naturaleza, y compleja con el arraigo llanero.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/cayenas-libertarias.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "cayenas-libertarias",
+     "tmdb_id": 1737961,
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Un viernes",
+     "director": "Francy Urrea Solano, Juan Diego Aguirre Gómez",
+     "duration": "9 min",
+     "poster": "/assets/popayan-2026/un-viernes.jpg",
+     "posterSource": "custom",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Akababuru: Expresión de asombro",
+     "director": "Irati Dojura Landa Yagarí",
+     "year": 2025,
+     "duration": "13 min",
+     "synopsis": "Alejandra Castaño Arias, Wildier Tascón Tascón, Roxana Panchí Gutierrez, Alexa Yagarí Panchí, Isabella Palacio Mesa, Laura Rave Escalante, Juan Pablo Herrera González, Andrés Felipe Tascón Baquiaza, Irati Dojura, Laura Giraldo Mira, Cristian Navarro Araujo y Cristian Navarro Araujo",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/akababuru-expresion-de-asombro.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "akababuru-expresion-de-asombro",
+     "tmdb_id": 1418533,
+     "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free.",
+     "genre": "Fantasía",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Sapos por todos lados",
+     "director": "Juan Jacobo Albán Torres",
+     "year": 2026,
+     "duration": "6 min",
+     "synopsis": "Natalia no encuentra trabajo cuando un antiguo profesor le ofrece la posibilidad de trabajar con ex-miembros de la guerrilla. Esa nueva experiencia la confronta a ella y sus prejuicios.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/sapos-por-todos-lados.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sapos-por-todos-lados",
+     "tmdb_id": 1738917,
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
+   "title": "Vodcast en Vivo",
+   "type": "event",
+   "section": "🎤 Actividades",
+   "duration": "60 min",
+   "day": "2026-10-10",
+   "time": "17:00",
+   "day_order": 5,
+   "venue": "Centro Comercial Terra Plaza - Popayán",
+   "sala": "Pantalla gigante",
+   "event_kind": "evento",
+   "has_qa": false,
+   "synopsis": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
+   "synopsis_lang": "es",
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true
+  },
+  {
+   "title": "Proyección Cine Corto Familiar · Parte 5",
+   "type": "film",
+   "section": "🧒 Cine Corto Familiar",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "85 min",
+   "day": "2026-10-10",
+   "time": "18:00",
+   "day_order": 5,
+   "venue": "Centro Comercial Terra Plaza - Popayán",
+   "sala": "Pantalla gigante",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Sombras en la Niebla",
+     "director": "Pedro Pablo Vega",
+     "duration": "25 min",
+     "poster": "/assets/popayan-2026/sombras-en-la-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "into-the-fog-2026",
+     "tmdb_id": 1668876,
+     "synopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
+     "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
+     "title_en": "Into the fog",
+     "genre": "Documental",
+     "country": "Colombia",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Tunesmith – Forjador de Notas",
+     "director": "Jordy Marin",
+     "year": 2025,
+     "duration": "26 min",
+     "synopsis": "En la pintoresca ciudad de Popayán, Colombia, donde el encanto colonial se encuentra con el valle de Pubenza, vive Gus—un herrero rudo, moldeado por el trabajo, con manos de hierro y un corazón de oro.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/tunesmith-forjador-de-notas.jpg",
+     "posterSource": "custom",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La asociación",
+     "director": "Juan Camilo Muñoz Quintero",
+     "duration": "18 min",
+     "poster": "/assets/popayan-2026/la-asociacion.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-asociacion",
+     "tmdb_id": 1663705,
+     "synopsis": "En las altas montañas del imponente y vital Macizo Colombiano, mujeres indígenas y campesinas se unieron junto a su comunidad para enfrentar con alegría y valentía a las multinacionales del comercio lechero en Colombia, y lograr entre la neblina y el conflicto armado que transita a diario por estos territorios, una unión de fuerzas y convicciones para superar la explotación y las injusticias de estas empresas lecheras. Toda la comunidad en el resguardo indígena de Pancitara participa en este documental para mostrarle al mundo desde paramos y cerros como es asociarse para construir un mundo desde sus propias economías.",
+     "genre": "Documental",
+     "country": "Colombia",
+     "year": 2026,
+     "synopsis_lang": "es",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Más allá",
+     "director": "Bettina López Mendoza",
+     "duration": "16 min",
+     "poster": "/assets/popayan-2026/mas-alla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "beyond-2025",
+     "tmdb_id": 1488751,
+     "synopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
+     "synopsis_en": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
+     "title_en": "Beyond",
+     "year": 2025,
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
+   "title": "CineCorto en el Barrio",
    "type": "film",
    "section": "🏘️ CineCorto en el Barrio",
    "country": "Colombia, United States of America, France",
    "flags": "🇨🇴🇺🇸🇫🇷",
    "duration": "98 min",
-   "day": "2026-10-08",
+   "day": "2026-10-10",
    "time": "18:30",
-   "day_order": 3,
+   "day_order": 5,
    "venue": "Casa Taller Sirirí - Popayán",
    "has_qa": false,
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1423,390 +2214,21 @@
    ]
   },
   {
-   "title": "CineCorto en el Barrio · Mikuna Casa Cultural",
-   "type": "film",
-   "section": "🏘️ CineCorto en el Barrio",
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "78 min",
-   "day": "2026-10-08",
-   "time": "18:30",
-   "day_order": 3,
-   "venue": "Mikuna Casa Cultural - Popayán",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "La gran hazaña",
-     "director": "Luber Yesid Zúñiga Ordóñez",
-     "year": 2024,
-     "duration": "15 min",
-     "synopsis": "Pablo (10) tendrá el desafío de rescatar a su mascota Pascualina, una gallina ponedora, de las garras de Don Chucho, el usurero del pueblo quien cobra las deudas con huevos. Este día Pablo tiene un accidente en su bicicleta y rompe los preciados huevos, ahora debe reponer la cubeta para saldar la deuda. La única herramienta que tiene el niño para rescatar a Pascualina es una apuesta con su trompo de madera con Felipe el mejor jugador de trompo del pueblo. Aunque todo parece jugar a favor de Pablo, quien ha ganado la cubeta que rescatará a su querida Pascualina y realizar la gran hazaña, Valeria, la hermana de Felipe, impide que el premio sea entregado y les hace caer en cuenta que no basta ganar una apuesta si entorpece el trabajo de otra familia en la misma situación. Se desata una disertación en la que todos los niños empatizan con Pablo gracias a que reconocen los obstáculos que han tenido al tratar de sortear la dura actitud de Don Chucho. Ahora, es la unión de todos los niños lo que permite que Pascualina sea rescatada. Finalmente, Pablo aprende la importancia del trabajo en equipo.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/la-gran-hazana.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "the-great-feat",
-     "tmdb_id": 1494003,
-     "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
-     "title_en": "The Great Feat",
-     "genre": "Aventura",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "La guerra de los tomates",
-     "director": "Juancarlos Gutiérrez",
-     "duration": "15 min",
-     "poster": "/assets/popayan-2026/la-guerra-de-los-tomates.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "la-guerra-de-los-tomates",
-     "tmdb_id": 1753830,
-     "synopsis_en": "Two groups of local and migrant children will represent the neighborhood in a tournament, an idea that will spark a tomato fight; a charismatic girl will bring out the best in everyone as she tries to unite an unlikely team against an unexpected rival.",
-     "country": "Colombia",
-     "year": 2026,
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Los pliegues de la falda",
-     "director": "Blanca Muñoz Ávila",
-     "year": 2025,
-     "duration": "18 min",
-     "synopsis": "Linda, Carlos y María son una familia convencional en la que casi todo encaja: el padre tiene la última palabra, la madre se encarga de la casa. Y Linda es una pequeña que se rehúsa a usar la falda. Ella no quiere ser la princesa de papá, solo quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que Linda interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla. Después de la función, nada será igual.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/los-pliegues-de-la-falda.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "los-pliegues-de-la-falda",
-     "tmdb_id": 1738777,
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Luis Antonio",
-     "director": "Juan José Arias Gil",
-     "year": 2025,
-     "duration": "12 min",
-     "synopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
-     "synopsis_lang": "es",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Historias al margen: Martha y Eduardo",
-     "director": "Juan Manuel Figueroa",
-     "year": 2024,
-     "duration": "18 min",
-     "synopsis": "Desde la periferia, hay quienes observan y sostienen la transformación de una ciudad, convirtiéndose en el pilar invisible que evita el colapso de nuestra sociedad moderna. En este contexto conoceremos a Martha y Eduardo, dos adultos mayores cuya labor en el reciclaje en Popayán trasciende las décadas. Han sido testigos silenciosos de los cambios de la ciudad; su sangre y su esfuerzo han recorrido, figurativa y literalmente, cada calle. A través de sus vivencias, marcadas por el rigor de la calle pero iluminadas por sonrisas compartidas, nos invitan a una profunda reflexión: frente a tanta adversidad, ¿cómo han logrado resistir y enseñarnos a sonreír?",
-     "synopsis_lang": "es",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    }
-   ]
-  },
-  {
-   "title": "Conversatorio",
-   "type": "event",
-   "section": "🎤 Actividades",
-   "duration": "30 min",
-   "day": "2026-10-08",
-   "time": "18:30",
-   "day_order": 3,
-   "venue": "Teatro Bolívar - Popayán",
-   "event_kind": "conversatorio",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true
-  },
-  {
-   "title": "Selección Oficial Ficción primer bloque",
-   "type": "film",
-   "section": "🎬 Selección Oficial Ficción",
-   "country": "France, Colombia",
-   "flags": "🇫🇷🇨🇴",
-   "duration": "108 min",
-   "day": "2026-10-08",
-   "time": "19:00",
-   "day_order": 3,
-   "venue": "Teatro Bolívar - Popayán",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "1 Hijo & 1 Padre",
-     "director": "Andrés Ramírez Pulido",
-     "year": 2024,
-     "duration": "25 min",
-     "synopsis": "Kevin es catalogado como un chico problemático, a decir verdad, no controla sus impulsos cuando se burlan de él. Tras un nuevo error,",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/1-hijo-1-padre.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "a-son-a-father",
-     "tmdb_id": 1316517,
-     "synopsis_en": "The story follows Kevin, a young man classified as problematic due to his inability to control his impulses. After an incident, Kevin must attend therapy for teenagers, but his father refuses to accompany him. Don Andrés, his stepfather, assumes the role of companion, revealing a relationship that is more fraternal than paternal.",
-     "title_en": "A Son & a Father",
-     "genre": "Comedia",
-     "country": "France, Colombia",
-     "flags": "🇫🇷🇨🇴"
-    },
-    {
-     "title": "Camino al cielo",
-     "director": "Miguel Vargas Mejia",
-     "year": 2024,
-     "duration": "18 min",
-     "synopsis": "Mairen (32) se ve obligada a dar a luz a su bebé en una camioneta de paramilitares que rondan la región, la cual es conocida porque, quien se sube a ella, no es vuelto a ver con vida.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/camino-al-cielo.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "way-to-heaven-2024",
-     "tmdb_id": 1463422,
-     "synopsis_en": "In the middle of the banana-growing area of Urabá, Mairen, an Afro woman, eight months pregnant, goes into labor in an unpopulated area. Although her health is in danger, Mairen, resigned, lies down in a tree to await her fate.",
-     "title_en": "Way to heaven",
-     "genre": "Drama",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "El Segundo",
-     "director": "Pedro Miguel Rozo",
-     "year": 2025,
-     "duration": "22 min",
-     "synopsis": "Patricia Maldonado, Ariel Merchán ,Cecilia Ramírez, Mateo Galvis, Leodan Rojas, Randy Zambrano, Álvaro Quemba, Bernardo Sánchez, Wilson Cárdenas, Martha Cárdenas, Aura Rodríguez, Luis Blanco, Hirma Lunar, Diana Latorre, Producción: Merchán Producciones",
-     "synopsis_lang": "es",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "El odio del padre",
-     "director": "Rodrigo Mora Yepes",
-     "year": 2026,
-     "duration": "14 min",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Todos los días",
-     "director": "David Rendón Peláez",
-     "duration": "15 min",
-     "poster": "/assets/popayan-2026/todos-los-dias.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "todos-los-dias",
-     "tmdb_id": 1738004,
-     "synopsis": "Ramiro es despedido del trabajo al que perteneció gran parte de su vida. En medio de su nueva y solitaria libertad conoce a tres desocupados como él, que se reúnen para matar el tiempo y hacerse compañía mientras fantasean con vengarse de sus antiguos empleadores y buscan, un pequeño triunfo a la vez, ser felices. Cada día, todos los días.",
-     "year": 2024,
-     "synopsis_lang": "es",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Gladiolos",
-     "director": "Mónica Juanita Hernández",
-     "year": 2023,
-     "duration": "14 min",
-     "synopsis": "Waldina, la vendedora de flores del pequeño pueblo de Arcabuco, ha fallecido. Su hijo Humberto llega desde la gran ciudad y decide hacer la última entrega de flores a sus clientes sin saber que tras una de esas puertas podría encontrar su felicidad.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/gladiolos.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "gladiolos",
-     "tmdb_id": 898817,
-     "synopsis_en": "Waldina, the flowers seller of the little town of Arcabuco, has died. Her son Humberto arrives from the big city and decides to make the last delivery of flowers to her clients without knowing that in one of that doors could find his happiness.",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    }
-   ]
-  },
-  {
-   "title": "Conversatorio",
-   "type": "event",
-   "section": "🎤 Actividades",
-   "duration": "60 min",
-   "day": "2026-10-08",
-   "time": "21:00",
-   "day_order": 3,
-   "venue": "Teatro Bolívar - Popayán",
-   "event_kind": "conversatorio",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true
-  },
-  {
-   "title": "Muestra de Cortos Internacionales",
-   "type": "film",
-   "section": "🌎 Muestra de Cortos Internacionales",
-   "duration": "90 min",
-   "day": "2026-10-09",
-   "time": "15:00",
-   "day_order": 4,
-   "venue": "Teatro Bolívar - Popayán",
-   "has_qa": false,
-   "synopsis": "Tecnológico de Artes Débora Arango.",
-   "synopsis_lang": "es",
-   "poster": "/assets/popayan-2026/muestra-de-cortos-internacionales.jpg",
-   "posterSource": "oficial",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true
-  },
-  {
-   "title": "Selección Oficial Ficción segundo bloque",
-   "type": "film",
-   "section": "🎬 Selección Oficial Ficción",
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "115 min",
-   "day": "2026-10-09",
-   "time": "17:00",
-   "day_order": 4,
-   "venue": "Teatro Bolívar - Popayán",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "Las faldas de tu prima",
-     "director": "Jose Miguel Huertas Landero y Esteban Galindo",
-     "year": 2025,
-     "duration": "25 min",
-     "synopsis": "Simón y Gabo, dos mejores amigos de 17 años, pasan el verano con Sam, la prima mayor de Gabo, una ansiosa universitaria que busca escapar del estrés de su tesis. Juntos enfrentarán el amor, la amistad y un malvado robot gigante.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/las-faldas-de-tu-prima.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "your-cousins-skirts",
-     "tmdb_id": 1542363,
-     "synopsis_en": "Simón and Gabo, two 17-year-old best friends, spend the summer with Sam, Gabo's older cousin, an anxious college student seeking to escape her thesis work. They will confront love, friendship, and a malicious giant robot.",
-     "title_en": "Your Cousin's Skirts",
-     "genre": "Drama",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Suite intercontinental",
-     "director": "Lola Tartane",
-     "year": 2026,
-     "duration": "24 min",
-     "synopsis": "Desde el piso 30 de una torre de cristal, la ciudad de Cali, presa de la tensión, bulle bajo la mirada de Margot. Cegada por el sol tropical, Margot deambula por la ciudad, ajena a todo. Lejos de los demás y de su entorno, sus fantasías se funden con la realidad. Su mirada se cruza con la de un hombre en la calle, de torso desnudo y ojos penetrantes. Cada día, Margot sigue al joven, acercándose lentamente al objeto de su deseo.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/suite-intercontinental.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "suite-intercontinental",
-     "tmdb_id": 1668898,
-     "synopsis_en": "From the 30th floor of a glass tower, the city of Cali, gripped by tension, bubbles beneath Margot’s gaze. Blinded by the tropical sun, Margot wanders through the city, oblivious to it all. Far from others and her surroundings, her fantasies merge with reality. Her gaze meets that of a man on the street, his chest bare and his eyes piercing. Every day, Margot follows the young man, slowly drawing closer to the object of her desire.",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Más allá",
-     "director": "Bettina López Mendoza",
-     "duration": "16 min",
-     "poster": "/assets/popayan-2026/mas-alla.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "beyond-2025",
-     "tmdb_id": 1488751,
-     "synopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
-     "synopsis_en": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
-     "title_en": "Beyond",
-     "year": 2025,
-     "synopsis_lang": "es",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "La Mona",
-     "director": "Laura Gutiérrez Ardila",
-     "year": 2025,
-     "duration": "18 min",
-     "poster": "/assets/siembrafest/la-mona.jpg",
-     "lbSlug": "heat-wave-2025",
-     "tmdb_id": 1444298,
-     "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
-     "title_en": "Heat Wave",
-     "genre": "Drama",
-     "country": "Colombia",
-     "posterSource": "oficial",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Las piedras del río",
-     "director": "Edna Sierra",
-     "year": 2026,
-     "duration": "16 min",
-     "synopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
-     "synopsis_lang": "es",
-     "poster": "/assets/siembrafest/las-piedras-del-rio.jpg",
-     "posterSource": "oficial",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Los Huyentes",
-     "director": "Ari Lamadrid",
-     "duration": "16 min",
-     "poster": "/assets/popayan-2026/los-huyentes.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "los-huyentes",
-     "tmdb_id": 1564433,
-     "synopsis_en": "Between dream and reality, two close friends try to deal with sadness and a sense of emptiness by reliving the same idyllic afternoon over and over again... or perhaps the same dream.",
-     "genre": "Fantasía",
-     "country": "Colombia",
-     "year": 2025,
-     "flags": "🇨🇴"
-    }
-   ]
-  },
-  {
-   "title": "Apertura muestra Banda de la Academia Militar General Tomás Cipriano de Mosquera",
-   "type": "event",
-   "section": "🎤 Actividades",
-   "duration": "60 min",
-   "day": "2026-10-09",
-   "time": "15:00",
-   "day_order": 4,
-   "venue": "Centro Comercial Terra Plaza - Popayán",
-   "sala": "Pantalla gigante",
-   "event_kind": "apertura",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true
-  },
-  {
-   "title": "Proyección Cine Corto Familiar · Parte 1",
+   "title": "Proyección Cine Corto Familiar · Parte 6",
    "type": "film",
    "section": "🧒 Cine Corto Familiar",
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "30 min",
-   "day": "2026-10-09",
+   "duration": "107 min",
+   "day": "2026-10-11",
    "time": "16:00",
-   "day_order": 4,
+   "day_order": 6,
    "venue": "Centro Comercial Terra Plaza - Popayán",
    "sala": "Pantalla gigante",
    "has_qa": false,
    "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-06"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1850,58 +2272,6 @@
      "synopsis_lang": "es",
      "country": "Colombia",
      "flags": "🇨🇴"
-    }
-   ]
-  },
-  {
-   "title": "Vodcast en Vivo",
-   "type": "event",
-   "section": "🎤 Actividades",
-   "duration": "60 min",
-   "day": "2026-10-09",
-   "time": "16:30",
-   "day_order": 4,
-   "venue": "Centro Comercial Terra Plaza - Popayán",
-   "sala": "Pantalla gigante",
-   "event_kind": "evento",
-   "has_qa": false,
-   "synopsis": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
-   "synopsis_lang": "es",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true
-  },
-  {
-   "title": "Proyección Cine Corto Familiar · Parte 2",
-   "type": "film",
-   "section": "🧒 Cine Corto Familiar",
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "72 min",
-   "day": "2026-10-09",
-   "time": "17:30",
-   "day_order": 4,
-   "venue": "Centro Comercial Terra Plaza - Popayán",
-   "sala": "Pantalla gigante",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "Chicanoa",
-     "director": "Carlos Alberto Mera Jiménez",
-     "year": 2025,
-     "duration": "9 min",
-     "synopsis": "Lura lucia Carabali Otero, Yineth Mera Mejia, Luz Adiana Serna Lasso, Jorge Olmedo Serna Lasso, Eddy Valeria Carabali Lasso, Eddy Valeria Carabali Lasso, Ibeth Karina Correa Fajardo, Coni Estefani Lasso Gonzalias",
-     "synopsis_lang": "es",
-     "country": "Colombia",
-     "flags": "🇨🇴"
     },
     {
      "title": "Abuelita caza vampiros",
@@ -1911,37 +2281,10 @@
      "synopsis": "En medio de la noche, un vampiro irrumpe en la casa de una abuelita latinoamericana esperando encontrar una presa fácil. En su lugar, se enfrenta a una mujer valiente, dispuesta a pelear por su vida. Con la ayuda inesperada de su fiel pug, la abuelita se envuelve en una batalla bizarra por la supervivencia. Mezclando humor con una atmósfera inquietante, Abuelita Caza Vampiros es una comedia gótica tropical inspirada en memorias familiares, donde el coraje y un toque de lo absurdo transforman una noche común en un enfrentamiento inolvidable.",
      "synopsis_lang": "es",
      "poster": "/assets/popayan-2026/abuelita-caza-vampiros.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "abuelita-caza-vampiros",
      "tmdb_id": 1786238,
      "genre": "Animación",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Pájaros huérfanos",
-     "director": "Leonardo Rafael Montes Pérez",
-     "year": 2026,
-     "duration": "6 min",
-     "synopsis": "Un juego de caza en el bosque termina en un espejo inesperado. Tres hermanos logran abatir a una paloma, solo para descubrir que han dejado un nido de pichones huérfanos. En la fragilidad de esas crías, los niños reviven el trauma de su propio pasado y el vacío que dejó el conflicto en su hogar. Una historia sobre la pérdida, la memoria y el ciclo del dolor que intentan sanar al llevarse consigo aquello que ellos mismos rompieron.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/pajaros-huerfanos.jpg",
-     "posterSource": "custom",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Gris",
-     "director": "Loren Escandon",
-     "year": 2025,
-     "duration": "15 min",
-     "synopsis": "Sofía; una niña curiosa e imaginativa; enfrenta desafíos en la escuela mientras comienza a navegar las complejidades de su identidad multirracial. Sus dibujos cobran vida en animaciones llenas de fantasía y la acompañan en un viaje de autoconocimiento; marcado por dudas; resiliencia y aprendizajes sobre el sentido de pertenencia. Sofía aprende a abrazar los matices que la definen; fusionando amor; cultura e individualidad en una narrativa única.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/gris.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "gris-2025",
-     "tmdb_id": 1490328,
-     "synopsis_en": "Sofía, a curious and imaginative young girl, faces challenges at school as she begins to navigate the complexities of her mixed-race identity. As her art springs to life through vibrant and whimsical animations, the story delves into Sofia’s journey of self-discovery, capturing her confusion, resilience, and profound lessons about belonging. Sofia learns to embrace the shades that define her, blending love, culture, and individuality into a unique narrative.",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -1981,137 +2324,6 @@
      "country": "Colombia",
      "year": 2026,
      "flags": "🇨🇴"
-    }
-   ]
-  },
-  {
-   "title": "Proyección Cine Corto Familiar · Parte 3",
-   "type": "film",
-   "section": "🧒 Cine Corto Familiar",
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "52 min",
-   "day": "2026-10-10",
-   "time": "14:00",
-   "day_order": 5,
-   "venue": "Centro Comercial Terra Plaza - Popayán",
-   "sala": "Pantalla gigante",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "Los pliegues de la falda",
-     "director": "Blanca Muñoz Ávila",
-     "year": 2025,
-     "duration": "18 min",
-     "synopsis": "Linda, Carlos y María son una familia convencional en la que casi todo encaja: el padre tiene la última palabra, la madre se encarga de la casa. Y Linda es una pequeña que se rehúsa a usar la falda. Ella no quiere ser la princesa de papá, solo quiere ser la protagonista de la obra de teatro del colegio; pero, cuando Carlos descubre el rol “masculino” que Linda interpretará, intenta impedirlo. Conmovida por la tristeza de su hija, María decide ayudarla. Después de la función, nada será igual.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/los-pliegues-de-la-falda.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "los-pliegues-de-la-falda",
-     "tmdb_id": 1738777,
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Luis Antonio",
-     "director": "Juan José Arias Gil",
-     "year": 2025,
-     "duration": "12 min",
-     "synopsis": "La mañana de un sábado Luis Antonio, un niño de 8 años, quiere aprender a montar en bicicleta. Pero su madre tiene que trabajar y lo deja al cuidado de Ofelia, su estricta vecina.",
-     "synopsis_lang": "es",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Tuktu, Padre Maíz",
-     "director": "Mauricio Prieto",
-     "year": 2025,
-     "duration": "14 min",
-     "synopsis": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/tuktu-padre-maiz.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "tuktu-father-maize",
-     "tmdb_id": 1592955,
-     "synopsis_en": "In the mountains of Colombia, Juan, a 13-year-old indigenous peasant boy, is forced to flee from the monster of war. In his escape, between the whistling of bullets and the guidance of his ancestors, he awakens an ancestral power that transforms him into Tuktu: a Taita of extraordinary strength destined to return to sow the peace of the earth.",
-     "title_en": "Tuktu, Father Maize",
-     "genre": "Animación",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Un abrir y cerrar de ojos",
-     "director": "Lia Marcela Correa Teherán",
-     "year": 2026,
-     "duration": "8 min",
-     "synopsis": "Juan, un viejo minero de la comunidad de Varsovia, despierta la mañana después de una tragedia: En el silencio de su cocina y el café derramado sobre la mesa lo enfrentan a la ausencia de su nieto Pedro. Ese gesto mínimo desata una cadena de recuerdos que reconstruyen los días previos.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/un-abrir-y-cerrar-de-ojos.jpg",
-     "posterSource": "custom",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    }
-   ]
-  },
-  {
-   "title": "Vodcast en Vivo",
-   "type": "event",
-   "section": "🎤 Actividades",
-   "duration": "60 min",
-   "day": "2026-10-10",
-   "time": "15:00",
-   "day_order": 5,
-   "venue": "Centro Comercial Terra Plaza - Popayán",
-   "sala": "Pantalla gigante",
-   "event_kind": "evento",
-   "has_qa": false,
-   "synopsis": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
-   "synopsis_lang": "es",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true
-  },
-  {
-   "title": "Proyección Cine Corto Familiar · Parte 4",
-   "type": "film",
-   "section": "🧒 Cine Corto Familiar",
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "46 min",
-   "day": "2026-10-10",
-   "time": "16:00",
-   "day_order": 5,
-   "venue": "Centro Comercial Terra Plaza - Popayán",
-   "sala": "Pantalla gigante",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "Cayenas libertarias",
-     "director": "Javier Camilo Aranguren Montañez",
-     "year": 2026,
-     "duration": "18 min",
-     "synopsis": "En las llanuras de Colombia, un grupo de mujeres conserva y reinterpreta los lecos o cantos de trabajo de llano que durante generaciones fueron entonadas por hombres. A través de sus cantos de vaquería, resignifican su lugar en la tradición Llanera, revelando su relación armónica con la naturaleza, y compleja con el arraigo llanero.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/cayenas-libertarias.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "cayenas-libertarias",
-     "tmdb_id": 1737961,
-     "country": "Colombia",
-     "flags": "🇨🇴"
     },
     {
      "title": "Un viernes",
@@ -2139,117 +2351,12 @@
      "flags": "🇨🇴"
     },
     {
-     "title": "Sapos por todos lados",
-     "director": "Juan Jacobo Albán Torres",
-     "year": 2026,
-     "duration": "6 min",
-     "synopsis": "Natalia no encuentra trabajo cuando un antiguo profesor le ofrece la posibilidad de trabajar con ex-miembros de la guerrilla. Esa nueva experiencia la confronta a ella y sus prejuicios.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/sapos-por-todos-lados.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "sapos-por-todos-lados",
-     "tmdb_id": 1738917,
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    }
-   ]
-  },
-  {
-   "title": "Vodcast en Vivo",
-   "type": "event",
-   "section": "🎤 Actividades",
-   "duration": "60 min",
-   "day": "2026-10-10",
-   "time": "17:00",
-   "day_order": 5,
-   "venue": "Centro Comercial Terra Plaza - Popayán",
-   "sala": "Pantalla gigante",
-   "event_kind": "evento",
-   "has_qa": false,
-   "synopsis": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
-   "synopsis_lang": "es",
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true
-  },
-  {
-   "title": "Proyección Cine Corto Familiar · Parte 5",
-   "type": "film",
-   "section": "🧒 Cine Corto Familiar",
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "85 min",
-   "day": "2026-10-10",
-   "time": "18:00",
-   "day_order": 5,
-   "venue": "Centro Comercial Terra Plaza - Popayán",
-   "sala": "Pantalla gigante",
-   "has_qa": false,
-   "_src": {
-    "url": "https://festicinepopayan.com/fest2026/programacion2026/",
-    "date": "2026-09-30"
-   },
-   "is_free": true,
-   "is_cortos": true,
-   "film_list": [
-    {
-     "title": "Sombras en la Niebla",
-     "director": "Pedro Pablo Vega",
-     "duration": "25 min",
-     "poster": "/assets/popayan-2026/sombras-en-la-niebla.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "into-the-fog-2026",
-     "tmdb_id": 1668876,
-     "synopsis": "En el páramo de Chiscas, don Vicente Molina y su familia cuidan un enorme rebaño de ovejas. La cotidianidad de la familia transcurre entre montañas cubiertas de niebla y la cocina, cuyo fogón de leña los reúne en torno a la comida y el juego. Entre el grupo se encuentra Will, el niño de la familia, quien se debate entre jugar y acompañar a los mayores en las labores de pastoreo.",
-     "synopsis_en": "High in a páramo in Colombia, the sheep that Edualdo and Ana have tended for decades graze across the land. Amid the fog and the demands of herding, their youngest son, Will, grows up between childhood play and the rhythms of rural life.",
-     "title_en": "Into the fog",
-     "genre": "Documental",
-     "country": "Colombia",
-     "year": 2026,
-     "synopsis_lang": "es",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Tunesmith – Forjador de Notas",
-     "director": "Jordy Marin",
-     "year": 2025,
-     "duration": "26 min",
-     "synopsis": "En la pintoresca ciudad de Popayán, Colombia, donde el encanto colonial se encuentra con el valle de Pubenza, vive Gus—un herrero rudo, moldeado por el trabajo, con manos de hierro y un corazón de oro.",
-     "synopsis_lang": "es",
-     "poster": "/assets/popayan-2026/tunesmith-forjador-de-notas.jpg",
-     "posterSource": "custom",
-     "country": "Colombia",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "La asociación",
-     "director": "Juan Camilo Muñoz Quintero",
-     "duration": "18 min",
-     "poster": "/assets/popayan-2026/la-asociacion.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "la-asociacion",
-     "tmdb_id": 1663705,
-     "synopsis": "En las altas montañas del imponente y vital Macizo Colombiano, mujeres indígenas y campesinas se unieron junto a su comunidad para enfrentar con alegría y valentía a las multinacionales del comercio lechero en Colombia, y lograr entre la neblina y el conflicto armado que transita a diario por estos territorios, una unión de fuerzas y convicciones para superar la explotación y las injusticias de estas empresas lecheras. Toda la comunidad en el resguardo indígena de Pancitara participa en este documental para mostrarle al mundo desde paramos y cerros como es asociarse para construir un mundo desde sus propias economías.",
-     "genre": "Documental",
-     "country": "Colombia",
-     "year": 2026,
-     "synopsis_lang": "es",
-     "flags": "🇨🇴"
-    },
-    {
-     "title": "Más allá",
-     "director": "Bettina López Mendoza",
-     "duration": "16 min",
-     "poster": "/assets/popayan-2026/mas-alla.jpg",
-     "posterSource": "tmdb",
-     "lbSlug": "beyond-2025",
-     "tmdb_id": 1488751,
-     "synopsis": "Después de haber sido separada de su madre mientras intentaban cruzar la selva entre Colombia y Panamá, una pequeña migrante venezolana, se ve obligada a abandonar su infancia para sobrevivir y empieza a trabajar para un coyote que guía a migrantes dentro de la selva. En uno de sus viajes Zuli tropieza con un portal que la transporta a una tierra mágica donde se ve impulsada a reconectar con su inocencia y su imaginación, aprendiendo a ser una niña otra vez.",
-     "synopsis_en": "After being separated from her mother while crossing the treacherous jungle between Colombia and Panama, Zuli, a young Venezuelan migrant, is forced to abandon her childhood to survive in this dangerous place. While working for a coyote to help guide other migrants through the jungle, Zuli discovers a portal to a magical land, where she must turn to her imagination to reconnect with her innocence and, ultimately, learn how to be a kid again.",
-     "title_en": "Beyond",
-     "year": 2025,
+     "title": "Negret: Génesis de una metamorfósis",
+     "director": "Marco Paredes Manzano",
+     "duration": "13 min",
+     "poster": "/assets/popayan-2026/negret-genesis-de-una-metamorfosis.jpg",
+     "posterSource": "oficial",
+     "synopsis": "La intensa y profunda relación entre Popayán y el escultor Edgar Negret Dueñas: desde el origen de su familia, la influencia del arte religioso, la arquitectura y la poesía, hasta el ambiente intelectual de 1944 a 1948, fundamental en la formación del artista más representativo de la ciudad.",
      "synopsis_lang": "es",
      "country": "Colombia",
      "flags": "🇨🇴"
@@ -2259,8 +2366,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-01T15:06:05",
-  "plan_sha": "4d76e7286d12841e",
+  "fecha": "2026-10-06T07:19:24",
+  "plan_sha": "af098517d0317e3e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"
  }

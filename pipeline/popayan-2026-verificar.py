@@ -23,10 +23,14 @@ import os
 import re
 import sys
 import unicodedata
+import importlib.util
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FID = 'popayan-2026'
 CIUDAD = 'Popayán'
+_spec = importlib.util.spec_from_file_location('crudo', f'{REPO}/pipeline/popayan-2026-crudo.py')
+crudo = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(crudo)
 MESES_DIA = re.compile(r'(Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo)\s+(\d{1,2})\s+de\s+octubre')
 _H = r'(\d{1,2})(?::\s*(\d{2}))?\s*([ap])\.?\s*m\.?'
 # En texto plano no hay dónde cortar la sede del título anterior: se anclan las
@@ -38,8 +42,10 @@ SEDES_PAGINA = {'Teatro Bolívar': 'Teatro Bolívar', 'Auditorio Maya Facultad d
                 'Casa Taller Sirirí': 'Casa Taller Sirirí', 'Mikuna Casa Cultural': 'Mikuna Casa Cultural',
                 'Centro Comercial Terra Plaza – Pantalla gigante': 'Centro Comercial Terra Plaza'}
 _SEDE = '(' + '|'.join(map(re.escape, SEDES_PAGINA)) + ')'
-HORARIO = re.compile(_SEDE + r'\s*/\s*' + _H, re.I)
-CUALQUIER_HORA = re.compile(r'/\s*\d{1,2}(?::\s*\d{2})?\s*[ap]\.?\s*m\b', re.I)
+# desde el 6 oct la hora va también PEGADA a la sede, sin la barra
+# («Teatro Bolívar 3 pm Muestra…», «… Pantalla gigante 2:00 pm Proyección…»)
+HORARIO = re.compile(_SEDE + r'\s*(?:/\s*)?' + _H, re.I)
+CUALQUIER_HORA = re.compile(r'\b\d{1,2}(?::\s*\d{2})?\s*[ap]\.?\s*m\b', re.I)
 # la hora DELANTE de la actividad (Terra Plaza): con minutos, sin «/» antes, y
 # seguida de mayúscula; la sede es la última impresa sola antes
 DELANTE = re.compile(r'(?<![/\d:])(?<!/\s)\b(\d{1,2}):(\d{2})\s*([ap])\.?\s*m\.?\s+(?=[A-ZÁÉÍÓÚ])')
@@ -60,17 +66,19 @@ def main():
     # cortes: días y horarios, en orden de aparición
     horarios = list(HORARIO.finditer(texto))
     delante = [m for m in DELANTE.finditer(texto)]
+    # una hora DELANTE que ya es la de un horario pegado a su sede no se cuenta dos veces
+    ocupado = [(m.start(), m.end()) for m in horarios]
+    delante = [m for m in delante if not any(a <= m.start() < b for a, b in ocupado)]
     marcas = sorted([(m.start(), 'dia', m) for m in MESES_DIA.finditer(texto)] +
                     [(m.start(), 'hor', m) for m in horarios] + [(m.start(), 'del', m) for m in delante],
                     key=lambda x: x[0])
-    if len(CUALQUIER_HORA.findall(texto)) != len(horarios):
-        sys.exit(f'✗ hay horarios en una sede que el verificador no conoce: '
-                 f'{len(CUALQUIER_HORA.findall(texto))} «/ hora» y {len(horarios)} con sede conocida')
-    # toda hora con minutos es el arranque de algo: tras «/» o delante de una actividad
-    tras_barra = sum(1 for m in horarios if m.group(3))
-    if len(CON_MINUTOS.findall(texto)) != tras_barra + len(delante):
-        sys.exit(f'✗ {len(CON_MINUTOS.findall(texto))} horas con minutos y solo {tras_barra} tras «/» '
-                 f'+ {len(delante)} delante de una actividad: hay una forma nueva en la página')
+    # COBERTURA INVERSA: toda hora que ARRANCA algo (la que no es el fin de un
+    # rango «9 am – 1 pm») está en un horario con sede o delante de una actividad
+    arranques = [m for m in CUALQUIER_HORA.finditer(texto)
+                 if not re.search(r'[–-]\s*$|\by\s+\d{1,2}\s+a\s*$|\ba\s*$', texto[max(0, m.start() - 6):m.start()])]
+    if len(arranques) != len(horarios) + len(delante):
+        sys.exit(f'✗ {len(arranques)} horas que arrancan algo y {len(horarios)} con sede + {len(delante)} '
+                 f'delante de una actividad: hay una forma nueva en la página')
     pagina, dia, fuera = [], None, 0
     for n, (pos, tipo, m) in enumerate(marcas):
         if tipo == 'dia':
@@ -97,8 +105,19 @@ def main():
         # el título: hasta «Películas», o el nombre de la sede que abre la
         # tanda siguiente de Terra Plaza
         titulo = re.split(r'\s+Pel[ií]culas(?:\s+|$)|\s+' + _SEDE, tramo.strip(), maxsplit=1)[0].rstrip('. ')
+        cred = lambda t: len(re.findall(r'dirigid[oa]s?\s*(?:y\s+producid[oa]s?\s*)?por', t, re.I))
+        # LA FRANJA COMPARTIDA (6 oct): «Apertura del Festival Selección Oficial
+        # Documental (primer bloque) …» bajo un solo «7:00 pm» — dos funciones
+        par = re.match(r'^(Apertura del Festival)\s+(Selección Oficial.*)$', titulo)
+        if par:
+            pagina.append({'dia': dia, 'hora': hora, 'sede': SEDES_PAGINA[sede], 'titulo': par.group(1), 'creditos': 0})
+            titulo = par.group(2)
+        # el bloque que la página deja sin nombre: el que le declara el crudo
+        decl = crudo.TITULO_SIN_NOMBRE.get((dia, hora, sede))
+        if decl:
+            titulo = decl
         pagina.append({'dia': dia, 'hora': hora, 'sede': SEDES_PAGINA[sede], 'titulo': titulo,
-                       'creditos': len(re.findall(r'dirigid[oa]s?\s*(?:y\s+producid[oa]s?\s*)?por', tramo, re.I))})
+                       'creditos': cred(tramo)})
     build = json.load(io.open(f'{REPO}/festivals/staging/{FID}-build.json', encoding='utf-8'))
     geo = json.load(io.open(f'{REPO}/festivals/staging/{FID}-venues-geo.json', encoding='utf-8'))
     # la clave lleva la SEDE: el jueves a las 6:30 pm hay tres funciones a la vez
@@ -109,7 +128,11 @@ def main():
         # («Vodcast en Vivo Grabación de Video Podcast…»): se busca el del build
         # que la abre
         t = plano(p['titulo'])
-        cand = [k for k in pub if k[:3] == (p['dia'], p['hora'], p['sede']) and (t == k[3] or t.startswith(k[3] + ' ') or k[3].startswith(t + ' '))]
+        # (6 oct: sin «Películas», el título de la página sigue con la primera
+        # obra; y el build le pone «· Parte N» o la sede a los homónimos)
+        base = lambda x: re.sub(r' (parte \d+|casa taller siriri|mikuna casa cultural)$', '', x)
+        cand = [k for k in pub if k[:3] == (p['dia'], p['hora'], p['sede']) and
+                (t == k[3] or t.startswith(base(k[3]) + ' ') or t == base(k[3]) or k[3].startswith(t + ' '))]
         # (y al revés: «CineCorto en el Barrio» en la página es «… · Casa Taller
         # Sirirí» en el build, el sufijo que le pone el crudo para distinguirlo)
         k = cand[0] if len(cand) == 1 else (p['dia'], p['hora'], p['sede'], t)

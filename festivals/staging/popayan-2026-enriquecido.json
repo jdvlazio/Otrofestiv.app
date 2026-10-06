@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-01"
+  "capturado": "2026-10-06"
  },
  "obras": [
   {
@@ -48,7 +48,7 @@
    "titulo": "Abuelita caza vampiros",
    "tmdb_id": 1786238,
    "titulo_original": "Abuelita caza vampiros",
-   "poster_path": null,
+   "poster_path": "/nVRnGl9o7Feb6gKqYpUvKGqndgF.jpg",
    "synopsis_es": "En medio de la noche, un vampiro irrumpe en la casa de una abuelita latinoamericana esperando encontrar una presa fácil. En su lugar, se enfrenta a una mujer valiente, dispuesta a pelear por su vida. Con la ayuda inesperada de su fiel pug, la abuelita se envuelve en una batalla bizarra por la supervivencia. Mezclando humor con una atmósfera inquietante, Abuelita Caza Vampiros es una comedia gótica tropical inspirada en memorias familiares, donde el coraje y un toque de lo absurdo transforman una noche común en un enfrentamiento inolvidable.",
    "synopsis_en": "",
    "genero": "Animación",
@@ -58,10 +58,9 @@
    "lbSlug": "abuelita-caza-vampiros",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Mariana Betancourt Chaves, 2026, 2 min, Colombia, Animación, sinopsis del festival y su afiche oficial. Letterboxd: abuelita-caza-vampiros. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Mariana Betancourt Chaves",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/popayan-2026/abuelita-caza-vampiros.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://cinecorto.co/abuelita-caza-vampiros/"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Akababuru: Expresión de asombro",
@@ -111,7 +110,7 @@
    "lbSlug": "love-in-times-of-whatever-the-present-is",
    "_verificado": "declarada a mano: TMDB escribe a la directora «Valentina Qaszxulxkef» y la parrilla «Qaszulxkef»: una letra, y el candado no casa. Mismo título, animación, Medellín (búsqueda de afiches, 29 sep).",
    "_director": "Valentina Qaszulxkef",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg",
    "posterSource": "tmdb"
   },
@@ -345,20 +344,19 @@
    "titulo": "Crudo",
    "tmdb_id": 1786240,
    "titulo_original": "Crudo",
-   "poster_path": null,
+   "poster_path": "/dgIifTSZbQaecPaZRxueW72vocV.jpg",
    "synopsis_es": "Tras ser desplazada por la violencia, Edelmira acaba trabajando como empleada doméstica para el grupo armado que la desplazó. Esta situación será la oportunidad para Edelmira de redimirse o vengarse.",
    "synopsis_en": "",
    "genero": "Drama",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 7,
    "pais_tmdb": "",
-   "lbSlug": "crudo-1",
+   "lbSlug": "crudo-2023",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Álvaro Ruiz Velasco, 2023, 7 min, Colombia, Drama (Juan: el festival dice «Ficción», que no es género de TMDB; la sinopsis da Drama), sinopsis del festival y su afiche oficial. Las otras «Crudo» de TMDB son de otra dirección y otro año. Letterboxd: crudo-1. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Álvaro Ruiz Velasco",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/popayan-2026/crudo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://cinecorto.co/crudo/"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Emechiche, El renacer de los cabeciblancos",
@@ -491,6 +489,13 @@
      "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
     },
     {
+     "festival": "filcmar-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/siembrafest/hdlt.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+    },
+    {
      "festival": "siembrafest-2026",
      "titulo": "HDLT",
      "poster": "/assets/siembrafest/hdlt.jpg",
@@ -581,20 +586,19 @@
    "titulo": "La Volqueta",
    "tmdb_id": 1786242,
    "titulo_original": "La Volqueta",
-   "poster_path": null,
+   "poster_path": "/yr4IvChHxO3tzkF1a9UY123udmW.jpg",
    "synopsis_es": "En un cambuche a la orilla de un lago, Jeison, un hombre joven y pobre, vive junto a su hijo Messi. Jeison, a pesar de su vida dura, y que diariamente está marcada a través de una lucha por sobrevivir; trabajando duro bajo el sol, recogiendo arena para una volqueta con el fin de ganar un poco de dinero, se esfuerza por cuidar y alegrar a su hijo. Messi, sueña con una volqueta de juguete, pero su padre no puede permitírselo. Haciendo que Jeison tome una difícil decisión para poder darle a Messi un futuro mejor.",
    "synopsis_en": "",
    "genero": "Drama",
    "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "la-volqueta",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Wiston Fernández Madriñan, 2024, 15 min, Colombia, Drama (por la sinopsis), sinopsis del festival; el afiche oficial (600x800) recortado por los costados a 2:3 para que TMDB lo acepte. Letterboxd: la-volqueta. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Wiston Fernández Madriñan",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/popayan-2026/la-volqueta.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://cinecorto.co/la-volqueta/"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "La asociación",
@@ -1322,7 +1326,7 @@
    "lbSlug": "tuktu-father-maize",
    "_verificado": "declarada a mano: TMDB escribe al director «Mauricio Pietro Muriel» (sic); la web del festival, cinecorto.co y FICDEH, donde ya la publicamos, dicen Mauricio Prieto. Con el candado estricto del 28 sep un nombre de pila no alcanza, y por eso no casa sola. Todo lo demás coincide: título idéntico, 2025 en los dos lados y 13 min en TMDB contra 14 en cinecorto.co.",
    "_director": "Mauricio Prieto",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/popayan-2026/tuktu-padre-maiz.jpg",
    "posterSource": "tmdb"
   },
@@ -1390,20 +1394,19 @@
    "titulo": "Yakuwasi: La Casa del Agua",
    "tmdb_id": 1786236,
    "titulo_original": "Yakuwasi: La Casa del Agua",
-   "poster_path": null,
+   "poster_path": "/r5KWAJ9xapyf2n7OaOJzuECJHEs.jpg",
    "synopsis_es": "Desde el Macizo Colombiano, útero de la Madre Tierra, dentro del Resguardo de Papallaqta de la Nación Indígena Yanakuna, este corto documental explora un territorio donde lagunas y manantiales sagrados dan origen a los ríos más importantes de Colombia.",
    "synopsis_en": "",
    "genero": "Documental",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "yakuwasi-la-casa-del-agua",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Faisal Tisnés, 2025, 15 min, Colombia, Documental, sinopsis del festival y su afiche oficial. Letterboxd: yakuwasi-la-casa-del-agua. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Faisal Tisnés",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/popayan-2026/yakuwasi-la-casa-del-agua.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://cinecorto.co/yakuwasi-la-casa-del-agua/"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "decaer",
@@ -1565,7 +1568,7 @@
   "Abuelita caza vampiros": {
    "tmdb_id": 1786238,
    "titulo_original": "Abuelita caza vampiros",
-   "poster_path": null,
+   "poster_path": "/nVRnGl9o7Feb6gKqYpUvKGqndgF.jpg",
    "synopsis_es": "En medio de la noche, un vampiro irrumpe en la casa de una abuelita latinoamericana esperando encontrar una presa fácil. En su lugar, se enfrenta a una mujer valiente, dispuesta a pelear por su vida. Con la ayuda inesperada de su fiel pug, la abuelita se envuelve en una batalla bizarra por la supervivencia. Mezclando humor con una atmósfera inquietante, Abuelita Caza Vampiros es una comedia gótica tropical inspirada en memorias familiares, donde el coraje y un toque de lo absurdo transforman una noche común en un enfrentamiento inolvidable.",
    "synopsis_en": "",
    "genero": "Animación",
@@ -1575,10 +1578,9 @@
    "lbSlug": "abuelita-caza-vampiros",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Mariana Betancourt Chaves, 2026, 2 min, Colombia, Animación, sinopsis del festival y su afiche oficial. Letterboxd: abuelita-caza-vampiros. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Mariana Betancourt Chaves",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/popayan-2026/abuelita-caza-vampiros.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://cinecorto.co/abuelita-caza-vampiros/"
+   "posterSource": "tmdb"
   },
   "Akababuru: Expresión de asombro": {
    "tmdb_id": 1418533,
@@ -1626,7 +1628,7 @@
    "lbSlug": "love-in-times-of-whatever-the-present-is",
    "_verificado": "declarada a mano: TMDB escribe a la directora «Valentina Qaszxulxkef» y la parrilla «Qaszulxkef»: una letra, y el candado no casa. Mismo título, animación, Medellín (búsqueda de afiches, 29 sep).",
    "_director": "Valentina Qaszulxkef",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg",
    "posterSource": "tmdb"
   },
@@ -1850,20 +1852,19 @@
   "Crudo": {
    "tmdb_id": 1786240,
    "titulo_original": "Crudo",
-   "poster_path": null,
+   "poster_path": "/dgIifTSZbQaecPaZRxueW72vocV.jpg",
    "synopsis_es": "Tras ser desplazada por la violencia, Edelmira acaba trabajando como empleada doméstica para el grupo armado que la desplazó. Esta situación será la oportunidad para Edelmira de redimirse o vengarse.",
    "synopsis_en": "",
    "genero": "Drama",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 7,
    "pais_tmdb": "",
-   "lbSlug": "crudo-1",
+   "lbSlug": "crudo-2023",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Álvaro Ruiz Velasco, 2023, 7 min, Colombia, Drama (Juan: el festival dice «Ficción», que no es género de TMDB; la sinopsis da Drama), sinopsis del festival y su afiche oficial. Las otras «Crudo» de TMDB son de otra dirección y otro año. Letterboxd: crudo-1. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Álvaro Ruiz Velasco",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/popayan-2026/crudo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://cinecorto.co/crudo/"
+   "posterSource": "tmdb"
   },
   "Emechiche, El renacer de los cabeciblancos": {
    "tmdb_id": 1592964,
@@ -2058,20 +2059,19 @@
   "La Volqueta": {
    "tmdb_id": 1786242,
    "titulo_original": "La Volqueta",
-   "poster_path": null,
+   "poster_path": "/yr4IvChHxO3tzkF1a9UY123udmW.jpg",
    "synopsis_es": "En un cambuche a la orilla de un lago, Jeison, un hombre joven y pobre, vive junto a su hijo Messi. Jeison, a pesar de su vida dura, y que diariamente está marcada a través de una lucha por sobrevivir; trabajando duro bajo el sol, recogiendo arena para una volqueta con el fin de ganar un poco de dinero, se esfuerza por cuidar y alegrar a su hijo. Messi, sueña con una volqueta de juguete, pero su padre no puede permitírselo. Haciendo que Jeison tome una difícil decisión para poder darle a Messi un futuro mejor.",
    "synopsis_en": "",
    "genero": "Drama",
    "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "la-volqueta",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Wiston Fernández Madriñan, 2024, 15 min, Colombia, Drama (por la sinopsis), sinopsis del festival; el afiche oficial (600x800) recortado por los costados a 2:3 para que TMDB lo acepte. Letterboxd: la-volqueta. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Wiston Fernández Madriñan",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/popayan-2026/la-volqueta.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://cinecorto.co/la-volqueta/"
+   "posterSource": "tmdb"
   },
   "La asociación": {
    "tmdb_id": 1663705,
@@ -2733,7 +2733,7 @@
    "lbSlug": "tuktu-father-maize",
    "_verificado": "declarada a mano: TMDB escribe al director «Mauricio Pietro Muriel» (sic); la web del festival, cinecorto.co y FICDEH, donde ya la publicamos, dicen Mauricio Prieto. Con el candado estricto del 28 sep un nombre de pila no alcanza, y por eso no casa sola. Todo lo demás coincide: título idéntico, 2025 en los dos lados y 13 min en TMDB contra 14 en cinecorto.co.",
    "_director": "Mauricio Prieto",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/popayan-2026/tuktu-padre-maiz.jpg",
    "posterSource": "tmdb"
   },
@@ -2798,20 +2798,19 @@
   "Yakuwasi: La Casa del Agua": {
    "tmdb_id": 1786236,
    "titulo_original": "Yakuwasi: La Casa del Agua",
-   "poster_path": null,
+   "poster_path": "/r5KWAJ9xapyf2n7OaOJzuECJHEs.jpg",
    "synopsis_es": "Desde el Macizo Colombiano, útero de la Madre Tierra, dentro del Resguardo de Papallaqta de la Nación Indígena Yanakuna, este corto documental explora un territorio donde lagunas y manantiales sagrados dan origen a los ríos más importantes de Colombia.",
    "synopsis_en": "",
    "genero": "Documental",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
    "pais_tmdb": "",
    "lbSlug": "yakuwasi-la-casa-del-agua",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Faisal Tisnés, 2025, 15 min, Colombia, Documental, sinopsis del festival y su afiche oficial. Letterboxd: yakuwasi-la-casa-del-agua. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Faisal Tisnés",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/popayan-2026/yakuwasi-la-casa-del-agua.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://cinecorto.co/yakuwasi-la-casa-del-agua/"
+   "posterSource": "tmdb"
   },
   "decaer": {
    "tmdb_id": 1668881,
@@ -2859,8 +2858,8 @@
  "sin_ficha": [
   "Animista",
   "Chicanoa",
-  "CineCorto en el Barrio · Casa Taller Sirirí",
-  "CineCorto en el Barrio · Mikuna Casa Cultural",
+  "CineCorto en el Barrio",
+  "Diente X Diente",
   "Dientes de yuca",
   "El Segundo",
   "El odio del padre",
@@ -2884,6 +2883,7 @@
   "Proyección Cine Corto Familiar · Parte 3",
   "Proyección Cine Corto Familiar · Parte 4",
   "Proyección Cine Corto Familiar · Parte 5",
+  "Proyección Cine Corto Familiar · Parte 6",
   "Pájaros huérfanos",
   "Sangre",
   "Selección Oficial Afro",
@@ -2894,9 +2894,10 @@
   "Selección Oficial Documental (primer bloque)",
   "Selección Oficial Documental segundo bloque",
   "Selección Oficial Experimental",
-  "Selección Oficial Ficción primer bloque",
+  "Selección Oficial Ficción Primer bloque",
   "Selección Oficial Ficción segundo bloque",
   "Selección Oficial Indígena",
+  "Selección Oficial Infantil",
   "Tabanoka Otjenayá",
   "Tentado de difunto",
   "Tunesmith – Forjador de Notas",
@@ -2907,19 +2908,19 @@
  "_sin_ficha_sondeo": {
   "Animista": {
    "director": "Sebastián Giraldo",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Chicanoa": {
    "director": "Carlos Alberto Mera Jiménez",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
-  "CineCorto en el Barrio · Casa Taller Sirirí": {
+  "CineCorto en el Barrio": {
    "director": "",
-   "fecha": "2026-09-30"
+   "fecha": "2026-10-06"
   },
-  "CineCorto en el Barrio · Mikuna Casa Cultural": {
-   "director": "",
-   "fecha": "2026-09-30"
+  "Diente X Diente": {
+   "director": "Julián Gómez Reyes",
+   "fecha": "2026-10-06"
   },
   "Dientes de yuca": {
    "director": "Yurieth Romero Velasquez",
@@ -2927,31 +2928,31 @@
   },
   "El Segundo": {
    "director": "Pedro Miguel Rozo",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "El odio del padre": {
    "director": "Rodrigo Mora Yepes",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "El patio de la infancia": {
    "director": "Cecilia Traslaviña",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "El sincretismo del agua": {
    "director": "Tito Ascendra y Laura Gutiérrez",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "HDLT Hijo de la Tierra": {
    "director": "Colectivo Artefactum Suba",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Hacia la raíz": {
    "director": "María José Garcés Arias",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Historias al margen: Martha y Eduardo": {
    "director": "Juan Manuel Figueroa",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Juan PorOcho": {
    "director": "Marquitos Cárdenas",
@@ -2959,23 +2960,23 @@
   },
   "La rebelión de un fantasma": {
    "director": "Flora Rodríguez",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Las piedras del río": {
    "director": "Edna Sierra",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Las tres muertes de un sol": {
    "director": "Santiago Londoño Gallego y Nicolás Ortega Baquero",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Legado": {
    "director": "Zumaya Mayers y Rodrigo Cuervo",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Ley de Origen y Espiritualidad": {
    "director": "Jhonatan David Sánchez Chate",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Luis Antonio": {
    "director": "Juan José Arias Gil",
@@ -2983,15 +2984,15 @@
   },
   "Muestra de Cortos Internacionales": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Murmullos": {
    "director": "Maria Camila Acevedo Mejía",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Negret: Génesis de una metamorfósis": {
    "director": "Marco Paredes Manzano",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Proyección Cine Corto Familiar · Parte 1": {
    "director": "",
@@ -3013,81 +3014,89 @@
    "director": "",
    "fecha": "2026-09-30"
   },
+  "Proyección Cine Corto Familiar · Parte 6": {
+   "director": "",
+   "fecha": "2026-10-06"
+  },
   "Pájaros huérfanos": {
    "director": "Leonardo Rafael Montes Pérez",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Sangre": {
    "director": "Julian Andres Hoyos Pinzón",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Selección Oficial Afro": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Selección Oficial Animación": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Selección Oficial Cauca (primer bloque)": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Selección Oficial Cauca (segundo bloque)": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Selección Oficial Comunitario": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Selección Oficial Documental (primer bloque)": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Selección Oficial Documental segundo bloque": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Selección Oficial Experimental": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
-  "Selección Oficial Ficción primer bloque": {
+  "Selección Oficial Ficción Primer bloque": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Selección Oficial Ficción segundo bloque": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Selección Oficial Indígena": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
+  },
+  "Selección Oficial Infantil": {
+   "director": "",
+   "fecha": "2026-10-06"
   },
   "Tabanoka Otjenayá": {
    "director": "Yamid Alejandro Juagibioy Muchachasoy",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Tentado de difunto": {
    "director": "Juan David Corredor Robles",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Tunesmith – Forjador de Notas": {
    "director": "Jordy Marin",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Un abrir y cerrar de ojos": {
    "director": "Lia Marcela Correa Teherán",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Un viernes": {
    "director": "Francy Urrea Solano, Juan Diego Aguirre Gómez",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   },
   "Yo soy yo": {
    "director": "Andrés Stiven Victoria Devia",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   }
  }
 }

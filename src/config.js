@@ -1317,6 +1317,8 @@ export const SECTION_ARCHETYPES = {
   '✏️ Selección Oficial Animación': 'Competencia',
   '🤝 Selección Oficial Comunitario': 'Competencia',
   '🎬 Selección Oficial Ficción': 'Competencia',
+  // la Infantil llegó con la parrilla del 6 oct (sábado 10, Teatro Bolívar)
+  '🎈 Selección Oficial Infantil': 'Competencia',
   '🌎 Muestra de Cortos Internacionales': 'Muestra / País',
   '🏘️ CineCorto en el Barrio': 'Cortos / Programas',
   '🧒 Cine Corto Familiar': 'Cortos / Programas',
