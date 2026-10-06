@@ -49,6 +49,31 @@ def main():
         pub[(k[0], k[1], pdf_de.get(k, k[2]))] = f
     fallos = []
     tab = {(t['dia'], t['hora'].zfill(5), plano(t['titulo'])) for t in tabla}
+    # LOS PANELES DE INDUSTRIA (6 oct) no están en el PDF: los trae
+    # biff.co/eventos_Paneles.php. Se releen por su cuenta, del texto plano y con
+    # otro corte —cada «OCTUBRE, <día> <n> - <hora>» hasta la siguiente—, y el
+    # build los lleva por el título de la web, que el crudo guarda en `titulo_web`
+    import html as _h
+    web = _h.unescape(re.sub(r'<[^>]+>', ' ', re.sub(r'<script.*?</script>|<style.*?</style>', '',
+                      io.open(f'{D}/eventos_Paneles.html', encoding='utf-8', errors='replace').read(), flags=re.S)))
+    web = re.sub(r'\s+', ' ', web)
+    cortes = list(re.finditer(r'OCTUBRE, \w+ (\d{1,2}) - (\d{1,2}):(\d{2}) ([ap])\.m\.', web))
+    paneles = set()
+    for n, m in enumerate(cortes):
+        tramo = web[m.end():cortes[n + 1].start() if n + 1 < len(cortes) else len(web)]
+        t = re.search(r'\bPanel (.+?)(?= [A-ZÁÉÍÓÚ¿][a-záéíóú])', tramo)
+        dia = f'2026-10-{int(m.group(1)):02d}'
+        if dia < '2026-10-08':        # antes del festival: fuera, como en el crudo
+            continue
+        h = f'{int(m.group(2)) % 12 + (12 if m.group(4) == "p" else 0):02d}:{m.group(3)}'
+        paneles.add((dia, h))
+    web_de = {(f['dia'], f['hora'], plano(f['titulo'])): (f['dia'], f['hora']) for f in crudo if f.get('titulo_web')}
+    en_build = {web_de[k] for k in pub if k in web_de}
+    for k in paneles - en_build:
+        fallos.append(f'panel en biff.co y NO en el build: {k}')
+    for k in en_build - paneles:
+        fallos.append(f'panel en el build y NO en biff.co: {k}')
+    tab |= {k for k in pub if k in web_de and web_de[k] in paneles}
     for k in tab:
         if k not in pub:
             fallos.append(f'en la tabla y NO en el build: {k}')

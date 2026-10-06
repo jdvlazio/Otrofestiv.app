@@ -149,6 +149,12 @@ TITULO_OFICIAL = {
     # al festival se le cayó el «en» en las dos láminas
     'Una vez un cuerpo': 'Una vez en un cuerpo',
 }
+# EL TÍTULO DE UN CORTO DE PROGRAMA donde el festival mismo lo escribió después
+# como TMDB: su post de Espíritu del Trasnoche (p/DeH5TQzFeHV, 4 oct) dice
+# «Show de Ziggy: La maldición del mariachi bondage». Juan, 6 oct.
+TITULO_OFICIAL_CORTO = {
+    'Show de Ziggy: la maldición del Mariachi Bondage': 'Show de Ziggy: La maldición del mariachi bondage',
+}
 
 PAIS = {'Brazil': 'Brasil', 'Colombia / Estados Unidos': 'Colombia, Estados Unidos'}
 
@@ -217,7 +223,9 @@ def obra(o, cat):
 
 def corto(t, cat):
     c = cat[plano(t)]
-    return {k: c[k] for k in ('titulo', 'director', 'pais', 'anio', 'duracion_min') if c.get(k)}
+    r = {k: c[k] for k in ('titulo', 'director', 'pais', 'anio', 'duracion_min') if c.get(k)}
+    r['titulo'] = TITULO_OFICIAL_CORTO.get(r['titulo'], r['titulo'])
+    return r
 
 
 def duracion_sin_dato(funciones):

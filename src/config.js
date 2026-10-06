@@ -1375,6 +1375,8 @@ export const SECTION_ARCHETYPES = {
   '🎻 Cine Conciertos': 'Especiales / Eventos',
   '🎬 Muestra de cortometrajes BIFF Bang': 'Cortos / Programas',
   '🎤 Charlas abiertas BIFF Bang': 'Charlas / Industria',
+  // el Bogotá Creative Connect (biff.co/eventos_Paneles.php, 6 oct)
+  '🎙️ Paneles de Industria': 'Charlas / Industria',
   // ── TIFF 2026 · Toronto ────────────────────────────────────────────────
   '📺 Primetime': 'Especiales / Eventos',
   '🔎 Discovery': 'Perspectivas / Miradas',

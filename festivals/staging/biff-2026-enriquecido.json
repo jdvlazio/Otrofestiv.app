@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-01"
+  "capturado": "2026-10-06"
  },
  "obras": [
   {
@@ -388,20 +388,19 @@
    "titulo": "Espacio para Pensar",
    "tmdb_id": 1786042,
    "titulo_original": "Espacio para Pensar",
-   "poster_path": null,
+   "poster_path": "/z6y3RakOU2on8sZ8Y46Eyk03o11.jpg",
    "synopsis_es": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
    "synopsis_en": "",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
    "pais_tmdb": "",
    "lbSlug": "espacio-para-pensar",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): La Baldosa, 2025, 8 min, Colombia, Animación, con las 7 personas que el afiche acredita como directoras y su afiche oficial. Letterboxd: espacio-para-pensar.",
    "_director": "La Baldosa Colectivo",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://www.retinalatina.org/peliculas/espacio-para-pensar-la-baldosa-colectivo/"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Everytime",
@@ -1693,20 +1692,19 @@
   "Espacio para Pensar": {
    "tmdb_id": 1786042,
    "titulo_original": "Espacio para Pensar",
-   "poster_path": null,
+   "poster_path": "/z6y3RakOU2on8sZ8Y46Eyk03o11.jpg",
    "synopsis_es": "En los baños de la Universidad Nacional de Colombia, las paredes hablan. Los grafismos que emergen de ellas se transforman en un viaje vivo por la memoria estudiantil, la disputa política y la construcción de identidad, revelando cómo incluso un espacio íntimo y cotidiano puede convertirse en un escenario de resistencia y expresión colectiva.",
    "synopsis_en": "",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 8,
    "pais_tmdb": "",
    "lbSlug": "espacio-para-pensar",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas): La Baldosa, 2025, 8 min, Colombia, Animación, con las 7 personas que el afiche acredita como directoras y su afiche oficial. Letterboxd: espacio-para-pensar.",
    "_director": "La Baldosa Colectivo",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/biff-2026/espacio-para-pensar.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://www.retinalatina.org/peliculas/espacio-para-pensar-la-baldosa-colectivo/"
+   "posterSource": "tmdb"
   },
   "Everytime": {
    "tmdb_id": 1655419,
@@ -2594,7 +2592,7 @@
  "_sin_ficha_sondeo": {
   "Muestra de cortometrajes BIFF Bang": {
    "director": "",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-06"
   }
  }
 }

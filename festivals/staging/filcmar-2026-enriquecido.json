@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-02"
+  "capturado": "2026-10-06"
  },
  "obras": [
   {
@@ -656,22 +656,22 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Show de Ziggy: la maldición del Mariachi Bondage",
+   "titulo": "Show de Ziggy: La maldición del mariachi bondage",
    "tmdb_id": 1638911,
-   "titulo_original": "El show de Ziggy: La maldición del mariachi bondage",
+   "titulo_original": "El Show de Ziggy: La Maldición del Mariachi Bondage",
    "poster_path": "/2Bg77vDwoborWYy73yQiszusjhF.jpg",
    "synopsis_es": "",
    "synopsis_en": "Ziggy, a rising influencer, is trying to increase her number of followers on social media by awakening the curse of an old song. Now a gloomy mariachi who makes people dance until they die is chasing Ziggy until he fulfills her dream of making her viral.",
    "genero": "Comedia",
    "anio_tmdb": 2026,
    "duracion_tmdb": 10,
-   "pais_tmdb": "",
+   "pais_tmdb": "Mexico",
    "title_en": "Ziggy's Show: The Curse of Mariachi Bondage",
    "lbSlug": "ziggys-show-the-curse-of-mariachi-bondage",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Show de Ziggy: la maldición del Mariachi Bondage",
+   "_busqueda": "Show de Ziggy: La maldición del mariachi bondage",
    "_director": "Giorgio Ross",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/filcmar-2026/show-de-ziggy-la-maldicion-del-mariachi-bondage.jpg",
    "posterSource": "tmdb"
   },
@@ -1369,22 +1369,22 @@
    "poster": "/assets/filcmar-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
    "posterSource": "tmdb"
   },
-  "Show de Ziggy: la maldición del Mariachi Bondage": {
+  "Show de Ziggy: La maldición del mariachi bondage": {
    "tmdb_id": 1638911,
-   "titulo_original": "El show de Ziggy: La maldición del mariachi bondage",
+   "titulo_original": "El Show de Ziggy: La Maldición del Mariachi Bondage",
    "poster_path": "/2Bg77vDwoborWYy73yQiszusjhF.jpg",
    "synopsis_es": "",
    "synopsis_en": "Ziggy, a rising influencer, is trying to increase her number of followers on social media by awakening the curse of an old song. Now a gloomy mariachi who makes people dance until they die is chasing Ziggy until he fulfills her dream of making her viral.",
    "genero": "Comedia",
    "anio_tmdb": 2026,
    "duracion_tmdb": 10,
-   "pais_tmdb": "",
+   "pais_tmdb": "Mexico",
    "title_en": "Ziggy's Show: The Curse of Mariachi Bondage",
    "lbSlug": "ziggys-show-the-curse-of-mariachi-bondage",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Show de Ziggy: la maldición del Mariachi Bondage",
+   "_busqueda": "Show de Ziggy: La maldición del mariachi bondage",
    "_director": "Giorgio Ross",
-   "_sondeado": "2026-10-01",
+   "_sondeado": "2026-10-06",
    "poster": "/assets/filcmar-2026/show-de-ziggy-la-maldicion-del-mariachi-bondage.jpg",
    "posterSource": "tmdb"
   },

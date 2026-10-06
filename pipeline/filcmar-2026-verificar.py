@@ -45,7 +45,7 @@ def main():
         if a.get('cortos') or (t or '').startswith('Cortoconcierto'):
             lam[(a['dia'], a['hora'], plano(t))] = lugar
             programas[(a['dia'], a['hora'], plano(t))] = sorted(
-                plano(x) for x in (a.get('cortos') or [o['titulo'] for o in a['obras']]))
+                plano(crudo.TITULO_OFICIAL_CORTO.get(x, x)) for x in (a.get('cortos') or [o['titulo'] for o in a['obras']]))
             continue
         if t in crudo.ACTIVIDAD:
             lam[(a['dia'], crudo.HORA_DE_OTRA_FUENTE.get((t, a['dia'], a['hora']), a['hora']), plano(crudo.TITULO.get(t, t)))] = lugar
