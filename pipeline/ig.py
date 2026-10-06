@@ -22,8 +22,16 @@ Por eso el reparto: el navegador VUELCA, este script LEE. El volcado se guarda
 en fuentes/, así que el paso es re-corrible sin volver a pedirle nada a
 Instagram — que además es lo prudente.
 
-EL VOLCADO se hace en el navegador, con sesión abierta, así (el snippet vive
-aquí para que no haya que redescubrirlo):
+⚠ PROHIBIDO DESDE EL 6 OCT 2026 (issue #1016): leer Instagram CON SESIÓN. El 3
+oct Instagram frenó tres días la cuenta de Juan por las lecturas del radar con
+su sesión abierta. El volcado de abajo queda solo como historia: NO SE CORRE.
+Lo que hay ahora es pipeline/ig_sin_sesion.py (pie, fecha y láminas por el
+embed, sin cuenta) y el perfil abierto SIN sesión solo para los shortcodes.
+Lo único que se pierde es el pie entero de los posts muy largos (sin sesión
+llega cortado a ~2170 caracteres): para eso, la lámina —que es donde vive el
+dato— o un vistazo de Juan.
+
+EL VOLCADO (HISTÓRICO, NO CORRER) se hacía en el navegador, con sesión abierta:
 
     // 1 · descubrir: scrollear el perfil recogiendo enlaces
     const v=new Set(); const r=()=>document.querySelectorAll('a[href*="/p/"],a[href*="/reel/"]')
