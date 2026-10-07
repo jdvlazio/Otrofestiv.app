@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-06"
+  "capturado": "2026-10-07"
  },
  "obras": [
   {
@@ -126,7 +126,7 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Catatumbo: Casa del Trueno, Memoria y Dignidad",
+   "titulo": "Catatumbo: casa del trueno, memoria y dignidad",
    "_ya_publicada": [
     {
      "festival": "siembrafest-2026",
@@ -196,7 +196,7 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Gestos de Refugio",
+   "titulo": "Gestos de refugio",
    "tmdb_id": 1713804,
    "titulo_original": "Refugiar el gesto",
    "poster_path": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
@@ -210,7 +210,7 @@
    "lbSlug": "sheltering-gestures",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct la titula en español («Gestos de refugio»); en septiembre era «Sheltering Gestures», mismos directores Adrián Villa-Dávila y Andrés Prado y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Adrián Villa-Dávila y Andrés Prado",
-   "_sondeado": "2026-10-06",
+   "_sondeado": "2026-10-07",
    "poster": "/assets/villadelcine-2026/gestos-de-refugio.jpg",
    "posterSource": "tmdb"
   },
@@ -234,7 +234,7 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "KMKZ: Salvaje, Libre y Valiente",
+   "titulo": "KMKZ: salvaje, libre y valiente",
    "tmdb_id": 1570393,
    "titulo_original": "KMKZ: Salvaje, Libre y valiente",
    "poster_path": null,
@@ -246,12 +246,32 @@
    "pais_tmdb": "Colombia",
    "lbSlug": "kmkz-salvaje-libre-y-valiente",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "KMKZ: Salvaje, Libre y Valiente",
+   "_busqueda": "KMKZ: salvaje, libre y valiente",
    "_director": "Andrés Hernández",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-07"
   },
   {
-   "titulo": "La Independencia",
+   "titulo": "La Mona",
+   "tmdb_id": 1444298,
+   "titulo_original": "La Mona",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La Mona",
+   "title_en": "Heat Wave",
+   "lbSlug": "heat-wave-2025",
+   "_director": "Laura Gutiérrez Ardila",
+   "_sondeado": "2026-09-21",
+   "poster": "/assets/siembrafest/la-mona.jpg",
+   "_afiche": "ya publicada en popayan-2026: se reusa su afiche"
+  },
+  {
+   "titulo": "La independencia",
    "tmdb_id": 1595081,
    "titulo_original": "La independencia",
    "poster_path": null,
@@ -264,9 +284,9 @@
    "title_en": "Independence",
    "lbSlug": "independence-2025",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "La Independencia",
+   "_busqueda": "La independencia",
    "_director": "John Agudelo",
-   "_sondeado": "2026-10-06",
+   "_sondeado": "2026-10-07",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -297,27 +317,7 @@
    "_afiche": "ya publicada en ficdeh-2026: se reusa su afiche"
   },
   {
-   "titulo": "La Mona",
-   "tmdb_id": 1444298,
-   "titulo_original": "La Mona",
-   "poster_path": null,
-   "synopsis_es": "",
-   "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
-   "genero": "Drama",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 18,
-   "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La Mona",
-   "title_en": "Heat Wave",
-   "lbSlug": "heat-wave-2025",
-   "_director": "Laura Gutiérrez Ardila",
-   "_sondeado": "2026-09-21",
-   "poster": "/assets/siembrafest/la-mona.jpg",
-   "_afiche": "ya publicada en popayan-2026: se reusa su afiche"
-  },
-  {
-   "titulo": "La Presencia del Blanco",
+   "titulo": "La presencia del blanco",
    "tmdb_id": 1753870,
    "titulo_original": "La presencia de blanco",
    "poster_path": "/FY7g3jBG8FBa1wACimnMJshGWl.jpg",
@@ -330,7 +330,7 @@
    "lbSlug": "la-presencia-de-blanco",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct escribe «del Blanco» (antes «de Blanco») y abrevia al director (Néstor J. Serpa) y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Néstor J. Serpa",
-   "_sondeado": "2026-10-06",
+   "_sondeado": "2026-10-07",
    "poster": "/assets/villadelcine-2026/la-presencia-del-blanco.jpg",
    "posterSource": "tmdb"
   },
@@ -456,7 +456,7 @@
    "lbSlug": "the-harpsichordist",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct escribe al director «Luis E. Ozório» (antes «Luiz Eduardo Ozóri») y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Luis E. Ozório",
-   "_sondeado": "2026-10-06",
+   "_sondeado": "2026-10-07",
    "poster": "/assets/villadelcine-2026/o-cravista.jpg",
    "posterSource": "tmdb"
   },
@@ -622,7 +622,7 @@
    "lbSlug": "tuktu-father-maize",
    "_verificado": "declarada a mano: misma declaración que en Popayán: TMDB escribe «Mauricio Pietro Muriel» (sic) y el PDF «Mauricio Prieto»; el nombre de pila solo no alcanza para el candado estricto. Título idéntico y 2025.",
    "_director": "Mauricio Prieto",
-   "_sondeado": "2026-10-06",
+   "_sondeado": "2026-10-07",
    "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
    "posterSource": "tmdb"
   },
@@ -691,7 +691,7 @@
    "lbSlug": "via-crusis",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct corrige «Via Crusis» a «Via Crucis» y abrevia al director (Juan L. Neira) y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Juan L. Neira",
-   "_sondeado": "2026-10-06",
+   "_sondeado": "2026-10-07",
    "poster": "/assets/villadelcine-2026/via-crucis.jpg",
    "posterSource": "tmdb"
   },
@@ -894,7 +894,7 @@
    "poster": "/assets/villadelcine-2026/estepa.jpg",
    "posterSource": "tmdb"
   },
-  "Gestos de Refugio": {
+  "Gestos de refugio": {
    "tmdb_id": 1713804,
    "titulo_original": "Refugiar el gesto",
    "poster_path": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
@@ -908,7 +908,7 @@
    "lbSlug": "sheltering-gestures",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct la titula en español («Gestos de refugio»); en septiembre era «Sheltering Gestures», mismos directores Adrián Villa-Dávila y Andrés Prado y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Adrián Villa-Dávila y Andrés Prado",
-   "_sondeado": "2026-10-06",
+   "_sondeado": "2026-10-07",
    "poster": "/assets/villadelcine-2026/gestos-de-refugio.jpg",
    "posterSource": "tmdb"
   },
@@ -930,7 +930,7 @@
    "poster": "/assets/villadelcine-2026/i-don-t-know-what-to-do.jpg",
    "posterSource": "tmdb"
   },
-  "KMKZ: Salvaje, Libre y Valiente": {
+  "KMKZ: salvaje, libre y valiente": {
    "tmdb_id": 1570393,
    "titulo_original": "KMKZ: Salvaje, Libre y valiente",
    "poster_path": null,
@@ -942,11 +942,30 @@
    "pais_tmdb": "Colombia",
    "lbSlug": "kmkz-salvaje-libre-y-valiente",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "KMKZ: Salvaje, Libre y Valiente",
+   "_busqueda": "KMKZ: salvaje, libre y valiente",
    "_director": "Andrés Hernández",
-   "_sondeado": "2026-10-06"
+   "_sondeado": "2026-10-07"
   },
-  "La Independencia": {
+  "La Mona": {
+   "tmdb_id": 1444298,
+   "titulo_original": "La Mona",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La Mona",
+   "title_en": "Heat Wave",
+   "lbSlug": "heat-wave-2025",
+   "_director": "Laura Gutiérrez Ardila",
+   "_sondeado": "2026-09-21",
+   "poster": "/assets/siembrafest/la-mona.jpg",
+   "_afiche": "ya publicada en popayan-2026: se reusa su afiche"
+  },
+  "La independencia": {
    "tmdb_id": 1595081,
    "titulo_original": "La independencia",
    "poster_path": null,
@@ -959,9 +978,9 @@
    "title_en": "Independence",
    "lbSlug": "independence-2025",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "La Independencia",
+   "_busqueda": "La independencia",
    "_director": "John Agudelo",
-   "_sondeado": "2026-10-06",
+   "_sondeado": "2026-10-07",
    "_ya_publicada": [
     {
      "festival": "ficdeh-2026",
@@ -991,26 +1010,7 @@
    "poster": "/assets/ficdeh/la-independencia.jpg",
    "_afiche": "ya publicada en ficdeh-2026: se reusa su afiche"
   },
-  "La Mona": {
-   "tmdb_id": 1444298,
-   "titulo_original": "La Mona",
-   "poster_path": null,
-   "synopsis_es": "",
-   "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
-   "genero": "Drama",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 18,
-   "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La Mona",
-   "title_en": "Heat Wave",
-   "lbSlug": "heat-wave-2025",
-   "_director": "Laura Gutiérrez Ardila",
-   "_sondeado": "2026-09-21",
-   "poster": "/assets/siembrafest/la-mona.jpg",
-   "_afiche": "ya publicada en popayan-2026: se reusa su afiche"
-  },
-  "La Presencia del Blanco": {
+  "La presencia del blanco": {
    "tmdb_id": 1753870,
    "titulo_original": "La presencia de blanco",
    "poster_path": "/FY7g3jBG8FBa1wACimnMJshGWl.jpg",
@@ -1023,7 +1023,7 @@
    "lbSlug": "la-presencia-de-blanco",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct escribe «del Blanco» (antes «de Blanco») y abrevia al director (Néstor J. Serpa) y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Néstor J. Serpa",
-   "_sondeado": "2026-10-06",
+   "_sondeado": "2026-10-07",
    "poster": "/assets/villadelcine-2026/la-presencia-del-blanco.jpg",
    "posterSource": "tmdb"
   },
@@ -1130,7 +1130,7 @@
    "lbSlug": "the-harpsichordist",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct escribe al director «Luis E. Ozório» (antes «Luiz Eduardo Ozóri») y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Luis E. Ozório",
-   "_sondeado": "2026-10-06",
+   "_sondeado": "2026-10-07",
    "poster": "/assets/villadelcine-2026/o-cravista.jpg",
    "posterSource": "tmdb"
   },
@@ -1290,7 +1290,7 @@
    "lbSlug": "tuktu-father-maize",
    "_verificado": "declarada a mano: misma declaración que en Popayán: TMDB escribe «Mauricio Pietro Muriel» (sic) y el PDF «Mauricio Prieto»; el nombre de pila solo no alcanza para el candado estricto. Título idéntico y 2025.",
    "_director": "Mauricio Prieto",
-   "_sondeado": "2026-10-06",
+   "_sondeado": "2026-10-07",
    "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
    "posterSource": "tmdb"
   },
@@ -1356,7 +1356,7 @@
    "lbSlug": "via-crusis",
    "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct corrige «Via Crusis» a «Via Crucis» y abrevia al director (Juan L. Neira) y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
    "_director": "Juan L. Neira",
-   "_sondeado": "2026-10-06",
+   "_sondeado": "2026-10-07",
    "poster": "/assets/villadelcine-2026/via-crucis.jpg",
    "posterSource": "tmdb"
   },
@@ -1409,34 +1409,34 @@
   "Benditos los Viejos",
   "Beyond the end",
   "Boyacá en los campos",
-  "Catatumbo: Casa del Trueno, Memoria y Dignidad",
+  "Catatumbo: casa del trueno, memoria y dignidad",
   "Cos de vidre",
-  "Cuadrilleros, Orgullo y Legado",
-  "Cuba 2001: Imágenes del Futuro",
-  "DUELO",
+  "Cuadrilleros, orgullo y legado",
+  "Cuba 2001: imágenes del futuro",
   "Después de tanto amor",
   "Destellos",
   "Diablo Ballena",
+  "Duelo",
   "Eclipses",
   "Ecos",
-  "El Cine Dentro del Cine",
-  "El Fósil Mágico",
-  "El Último Campeón",
-  "En Medio",
+  "El cine dentro del cine",
+  "El fósil mágico",
+  "El último campeón",
+  "En medio",
   "Encrucijadas",
   "Enemigo en el espejo",
   "Extinción",
   "FAR",
   "Final Act",
   "Floppy the robot - El último contacto.",
-  "Fragmentos Perdidos de una Convulsión",
+  "Fragmentos perdidos de una convulsión",
   "Génesis",
   "HUMAN",
   "Korebaju Pai Rekocho",
   "LENS",
-  "La Sinfonía Guanentá",
   "La Sombrilla de Mamá",
   "La silla",
+  "La sinfonía Guanentá",
   "La última historia",
   "Language Of The Wind",
   "Life is a Chessboard; Every Move is Final",
@@ -1445,7 +1445,7 @@
   "Memorias del Alba",
   "Metamorfosis",
   "Mi tesoro",
-  "Momentos en Movimiento: Primeros Pasos del Ballet en Colombia",
+  "Momentos en movimiento: primeros pasos del ballet en Colombia",
   "Monte curandero",
   "Mucho Gusto",
   "Nahuales",
@@ -1455,7 +1455,7 @@
   "Poderosas",
   "Portales",
   "Prompt Zero",
-  "Pros y Contras de Soñar Despierto",
+  "Pros y contras de soñar despierto",
   "Protecting Our Territory 360",
   "Quimera",
   "Raíces",
@@ -1464,15 +1464,15 @@
   "Retornos",
   "SOLO",
   "SUA Y SIE: Guardianes de la vida",
-  "Sabor a Mí (acústico / Bolero Jazz)",
+  "Sabor a mí (acústico / bolero jazz)",
   "Señales",
   "Shorts",
-  "Solo un Ave Más",
+  "Solo un ave más",
   "Sun Coffee",
-  "TOMA 10",
   "They Call It Sausage",
   "Tierras de Lobeiras",
   "Tiro Libre",
+  "Toma 10",
   "Tránsitos",
   "Umbrales",
   "Un dulce milagro",
@@ -1526,25 +1526,21 @@
    "director": "",
    "fecha": "2026-10-06"
   },
-  "Catatumbo: Casa del Trueno, Memoria y Dignidad": {
+  "Catatumbo: casa del trueno, memoria y dignidad": {
    "director": "Jhonattan Sarmiento",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-07"
   },
   "Cos de vidre": {
    "director": "Marc Comabella",
    "fecha": "2026-10-06"
   },
-  "Cuadrilleros, Orgullo y Legado": {
+  "Cuadrilleros, orgullo y legado": {
    "director": "Fabián E. Moreno",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-07"
   },
-  "Cuba 2001: Imágenes del Futuro": {
+  "Cuba 2001: imágenes del futuro": {
    "director": "Felipe Moreno",
-   "fecha": "2026-10-06"
-  },
-  "DUELO": {
-   "director": "Nicolás Patiño y Andrés Cely",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-07"
   },
   "Después de tanto amor": {
    "director": "Mercedes Oviedo",
@@ -1558,6 +1554,10 @@
    "director": "Camilo Barón",
    "fecha": "2026-10-06"
   },
+  "Duelo": {
+   "director": "Nicolás Patiño y Andrés Cely",
+   "fecha": "2026-10-07"
+  },
   "Eclipses": {
    "director": "",
    "fecha": "2026-10-06"
@@ -1566,21 +1566,21 @@
    "director": "",
    "fecha": "2026-10-06"
   },
-  "El Cine Dentro del Cine": {
+  "El cine dentro del cine": {
    "director": "Diana Kuéllar y Manuel Silva",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-07"
   },
-  "El Fósil Mágico": {
+  "El fósil mágico": {
    "director": "Estudiantes IE Nueva Generación (Sáchica, Boyacá)",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-07"
   },
-  "El Último Campeón": {
+  "El último campeón": {
    "director": "Daniel J. Parra",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-07"
   },
-  "En Medio": {
+  "En medio": {
    "director": "Carlos A. Paniagua",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-07"
   },
   "Encrucijadas": {
    "director": "",
@@ -1606,9 +1606,9 @@
    "director": "Jacobo Rendón",
    "fecha": "2026-10-06"
   },
-  "Fragmentos Perdidos de una Convulsión": {
+  "Fragmentos perdidos de una convulsión": {
    "director": "Michael Martinez",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-07"
   },
   "Génesis": {
    "director": "",
@@ -1626,10 +1626,6 @@
    "director": "Eduardo Rodríguez",
    "fecha": "2026-10-06"
   },
-  "La Sinfonía Guanentá": {
-   "director": "Victor Jarmillo",
-   "fecha": "2026-10-06"
-  },
   "La Sombrilla de Mamá": {
    "director": "Mateo Forero",
    "fecha": "2026-10-06"
@@ -1637,6 +1633,10 @@
   "La silla": {
    "director": "Clara García y Mariano Reinaldos",
    "fecha": "2026-10-06"
+  },
+  "La sinfonía Guanentá": {
+   "director": "Victor Jarmillo",
+   "fecha": "2026-10-07"
   },
   "La última historia": {
    "director": "Eberto Manotas y Mauro Andrade",
@@ -1670,9 +1670,9 @@
    "director": "Dayana González y Brian Congolez",
    "fecha": "2026-10-06"
   },
-  "Momentos en Movimiento: Primeros Pasos del Ballet en Colombia": {
+  "Momentos en movimiento: primeros pasos del ballet en Colombia": {
    "director": "Marybel Acevedo",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-07"
   },
   "Monte curandero": {
    "director": "Andrés F. Velasco",
@@ -1710,9 +1710,9 @@
    "director": "Tomás Etter Gómez",
    "fecha": "2026-10-06"
   },
-  "Pros y Contras de Soñar Despierto": {
+  "Pros y contras de soñar despierto": {
    "director": "Lorena López",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-07"
   },
   "Protecting Our Territory 360": {
    "director": "Christopher Boulton",
@@ -1746,9 +1746,9 @@
    "director": "Johanna Cortés",
    "fecha": "2026-10-06"
   },
-  "Sabor a Mí (acústico / Bolero Jazz)": {
+  "Sabor a mí (acústico / bolero jazz)": {
    "director": "Franco Zornosa",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-07"
   },
   "Señales": {
    "director": "",
@@ -1758,16 +1758,12 @@
    "director": "Daniel Baena",
    "fecha": "2026-10-06"
   },
-  "Solo un Ave Más": {
+  "Solo un ave más": {
    "director": "Julián Gómez",
-   "fecha": "2026-10-06"
+   "fecha": "2026-10-07"
   },
   "Sun Coffee": {
    "director": "Zoé Filloux y Estudiantes del MicroLycée Périer",
-   "fecha": "2026-10-06"
-  },
-  "TOMA 10": {
-   "director": "Ángel Campaña y Juan D. Arias",
    "fecha": "2026-10-06"
   },
   "They Call It Sausage": {
@@ -1781,6 +1777,10 @@
   "Tiro Libre": {
    "director": "Inti D. Guerra",
    "fecha": "2026-10-06"
+  },
+  "Toma 10": {
+   "director": "Ángel Campaña y Juan D. Arias",
+   "fecha": "2026-10-07"
   },
   "Tránsitos": {
    "director": "",

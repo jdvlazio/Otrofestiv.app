@@ -135,6 +135,28 @@ NOMBRE_ACTIVIDAD = [
     ('cianotipia',           'Cianotipia — Taller de fotografía analógica'),
 ]
 
+# LA CAJA DE LOS TÍTULOS DEL PDF DEL 6 OCT, elegida por Juan (7 oct): el
+# estilo de septiembre, minúscula salvo nombre propio. Llave = norm del título.
+CAJA_TITULO = {
+    'duelo': 'Duelo', 'toma 10': 'Toma 10',
+    'el cine dentro del cine': 'El cine dentro del cine',
+    'cuadrilleros orgullo y legado': 'Cuadrilleros, orgullo y legado',
+    'cuba 2001 imagenes del futuro': 'Cuba 2001: imágenes del futuro',
+    'momentos en movimiento primeros pasos del ballet en colombia':
+        'Momentos en movimiento: primeros pasos del ballet en Colombia',
+    'sabor a mi acustico bolero jazz': 'Sabor a mí (acústico / bolero jazz)',
+    'fragmentos perdidos de una convulsion': 'Fragmentos perdidos de una convulsión',
+    'pros y contras de sonar despierto': 'Pros y contras de soñar despierto',
+    'kmkz salvaje libre y valiente': 'KMKZ: salvaje, libre y valiente',
+    'catatumbo casa del trueno memoria y dignidad': 'Catatumbo: casa del trueno, memoria y dignidad',
+    'gestos de refugio': 'Gestos de refugio',
+    'la presencia del blanco': 'La presencia del blanco',
+    'la sinfonia guanenta': 'La sinfonía Guanentá',
+    'solo un ave mas': 'Solo un ave más', 'en medio': 'En medio',
+    'el ultimo campeon': 'El último campeón', 'el fosil magico': 'El fósil mágico',
+    'la independencia': 'La independencia',
+}
+
 # La caja de los nombres de PROGRAMA, que el PDF imprime en mayúscula.
 # LA SECCIÓN DE LAS OBRAS QUE SU FICHA NO TRAE. El PDF del 6 oct las pone
 # bajo «EVENTOS EMBLEMÁTICOS», que no es sección; la casilla sí la dice.
@@ -488,6 +510,8 @@ def main():
         el festival escribe «John Bolívar» con tilde y `titular()`, que solo
         rebaja mayúsculas, no puede inventarla."""
         t = (texto or '').strip()
+        if norm(t) in CAJA_TITULO:
+            return CAJA_TITULO[norm(t)]
         if not t or titular(t) == t:
             return corrige(t)             # no viene gritado: solo la errata
         return corrige(del_ig or titular(t))
