@@ -6095,7 +6095,11 @@ try:
     # si TMDB la llena, la obra vuelve a exigirse sola al re-enriquecer.
     _TMDB_VACIA = {('fantasmagoria-2026', 'La Flor del Miedo'):
                    'TMDB 1546267 «The Flower of Fear»: overview vacío en es-ES y en-US (30 sep); '
-                   'la página de la edición tampoco la trae'}
+                   'la página de la edición tampoco la trae',
+                   ('bhff-2026', 'Moviedreams'):
+                   'TMDB 1776749: overview vacío en es-ES, es-MX y en-US (7 oct); la parrilla no trae sinopsis',
+                   ('bhff-2026', 'Esquirlas de Caracol'):
+                   'TMDB 1718595: overview vacío en es-ES, es-MX y en-US (7 oct); la parrilla no trae sinopsis'}
     _malos = []
     for _f in sorted(_g.glob('festivals/*.json')):
         _fid = _os.path.basename(_f)[:-5]

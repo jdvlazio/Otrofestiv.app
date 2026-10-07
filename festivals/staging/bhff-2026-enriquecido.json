@@ -1,0 +1,1689 @@
+{
+ "_provenance": {
+  "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
+  "capturado": "2026-10-07"
+ },
+ "obras": [
+  {
+   "titulo": "Año de Casados",
+   "tmdb_id": 1496765,
+   "titulo_original": "Año de casados",
+   "poster_path": "/kqk0reaDgCIzgDA6JQXy2091oCs.jpg",
+   "synopsis_es": "Es 1991, Ana María y Juan Manuel, una pareja de recién casados, reciben una criatura como regalo de bodas. ¿Lograrán cuidarla durante un año para preservar su matrimonio?.",
+   "synopsis_en": "It's 1991. Ana and Juan, a newlywed couple, receive a creature as a wedding gift. Amid the oppressive atmosphere of Juan's family, will they be able to care for it for a year to preserve their marriage?",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Mexico",
+   "title_en": "A Year of Marriage",
+   "lbSlug": "a-year-of-marriage",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Año de Casados",
+   "_director": "Pablo Camargo López",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/ano-de-casados.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Bajo El Mismo Techo",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Bajo el mismo techo",
+     "poster": "/assets/siembrafest/bajo-el-mismo-techo.jpg",
+     "posterSource": "oficial"
+    }
+   ],
+   "poster": "/assets/siembrafest/bajo-el-mismo-techo.jpg",
+   "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche"
+  },
+  {
+   "titulo": "Chaika",
+   "tmdb_id": 1689999,
+   "titulo_original": "Chaika",
+   "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
+   "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "chaika-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Chaika",
+   "_director": "Ingrid Bonilla Rodríguez",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "CHAIKA",
+     "tmdb_id": 1689999,
+     "poster": "/assets/cineautopsia/chaika.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, en la que se le invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero descubre un territorio asolado por una silenciosa crisis agrícola y ambiental; una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se alcanza a discernir: un sistema exhausto que intenta sostener un ideal ya difuso. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se confunden, Valentina busca descubrir si aún es posible alzar el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/fantasmagoria-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/fantasofest/corto-chaika.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "chaika-2026"
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/narrarelfuturo-2026/chaika.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/popayan-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a la isla esperando una utopía científico–social, pero encuentra un territorio golpeado por una silenciosa crisis agrícola y ambiental, una Cuba ucrónica y nebulosa donde las promesas del pasado persisten como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se intuye: un sistema agotado que intenta sostener un ideal ya difuso."
+    }
+   ],
+   "poster": "/assets/bhff-2026/chaika.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Donde Duermen los Sueños",
+   "tmdb_id": 1168428,
+   "titulo_original": "Donde Duermen los Sueños",
+   "poster_path": "/1g9XnA5Ro0n8ct8wVdB5K8U0F83.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A man plunged into grief connects through his dreams with the love he lost in a car accident.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 75,
+   "pais_tmdb": "Peru",
+   "title_en": "Where Dreams Sleep",
+   "lbSlug": "where-dreams-sleep",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Donde Duermen los Sueños",
+   "_director": "Daniel Riglos",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/donde-duermen-los-suenos.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El Ocaso De Los Dioses",
+   "_ya_publicada": [
+    {
+     "festival": "filcmar-2026",
+     "titulo": "El ocaso de los dioses",
+     "poster": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "Aurora, una joven que forma parte de una secta religiosa junto a su madre, duda de la veracidad de las palabras de Bernabé, el líder, y busca la manera de hacerles comprender a ella y al resto de la comunidad que la verdad no está ahí. Todo se vuelve caótico cuando Aurora comienza a tener vínculos con el ídolo sagrado y su objetivo cambia drásticamente, alterando la normalidad de la comunidad."
+    }
+   ],
+   "poster": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg",
+   "_verificado": "ya publicada en filcmar-2026: se reusa su afiche",
+   "sinopsis": "Aurora, una joven que forma parte de una secta religiosa junto a su madre, duda de la veracidad de las palabras de Bernabé, el líder, y busca la manera de hacerles comprender a ella y al resto de la comunidad que la verdad no está ahí. Todo se vuelve caótico cuando Aurora comienza a tener vínculos con el ídolo sagrado y su objetivo cambia drásticamente, alterando la normalidad de la comunidad."
+  },
+  {
+   "titulo": "El Susurro",
+   "tmdb_id": 1534530,
+   "titulo_original": "El susurro",
+   "poster_path": "/x1kKY4OvlDGxTvBn5GDyTVCYv6.jpg",
+   "synopsis_es": "Lucía y Adrián huyen de su padre violento a una mansión. Descubren una red de snuff y una maldición familiar.",
+   "synopsis_en": "Fleeing from their violent father, siblings Lucía and Adrián take refuge in a remote mansion. With the help of a hidden micro-camera on a cat, Lucía uncovers a terrifying secret: their neighbors are part of a criminal network that kidnaps teenage girls to make snuff films, and they intend to get rid of the siblings. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their newfound sanctuary.",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 89,
+   "pais_tmdb": "Argentina, Uruguay",
+   "title_en": "The Whisper",
+   "lbSlug": "the-whisper-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El Susurro",
+   "_director": "Gustavo Hernández",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "El Susurro",
+     "poster": "/assets/fantasofest/el-susurro.jpg",
+     "posterSource": "custom",
+     "lbSlug": "the-whisper-2025",
+     "sinopsis": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio."
+    }
+   ],
+   "poster": "/assets/bhff-2026/el-susurro.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El Susurro + Esquirlas de Caracol",
+   "_ya_publicada": [
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "El Susurro",
+     "poster": "/assets/fantasofest/el-susurro.jpg",
+     "posterSource": "custom",
+     "lbSlug": "the-whisper-2025",
+     "sinopsis": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio."
+    }
+   ],
+   "poster": "/assets/fantasofest/el-susurro.jpg",
+   "_verificado": "ya publicada en fantasofest-2026: se reusa su afiche",
+   "sinopsis": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio."
+  },
+  {
+   "titulo": "Esquirlas de Caracol",
+   "tmdb_id": 1718595,
+   "titulo_original": "Esquirlas de Caracol",
+   "poster_path": "/uqIZXGEkQ3QwnrfTYGEeUAtX8Lb.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "esquirlas-de-caracol",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Manuel Alejandro Sánchez",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/esquirlas-de-caracol.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Hiperrealidad",
+   "tmdb_id": 1568478,
+   "titulo_original": "Hiperrealidad",
+   "poster_path": "/2ZouwDnXbrezZTrxxRQcvTAZinm.jpg",
+   "synopsis_es": "En la antesala de su concierto, Santiago, un joven director de orquesta, recibe una noticia trágica que lo arrastra a un viaje de culpa, distorsión y terror.  La realidad se quiebra: bucles temporales, un monstruo que acecha y la posible extinción de la humanidad envuelven su mundo.",
+   "synopsis_en": "Just before his concert, Santiago, a young conductor, receives tragic news that sends him on a journey of guilt, distortion, and terror. Reality shatters: time loops, a lurking monster, and the possible extinction of humanity engulf his world.",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 81,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "hiperrealidad",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Hiperrealidad",
+   "_director": "Diego G. Medina",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/hiperrealidad.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Hush",
+   "_ya_publicada": [
+    {
+     "festival": "filcmar-2026",
+     "titulo": "HUSH",
+     "poster": "/assets/filcmar-2026/hush.jpg",
+     "posterSource": "oficial"
+    }
+   ],
+   "poster": "/assets/filcmar-2026/hush.jpg",
+   "_verificado": "ya publicada en filcmar-2026: se reusa su afiche"
+  },
+  {
+   "titulo": "Interior 8",
+   "tmdb_id": 1713410,
+   "titulo_original": "Interior 8",
+   "poster_path": "/3nuMIb1grsdy4JoiBHkWWf5m0eO.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Fernanda is forced to return to the apartment where a family tragedy occurred. Upon arriving at Unit 8, supernatural events begin to unfold.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "title_en": "Unit 8",
+   "lbSlug": "unit-8",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Interior 8",
+   "_director": "Lorena Toscano",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/interior-8.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Iris de Cristal",
+   "tmdb_id": 1368500,
+   "titulo_original": "Iris de Cristal",
+   "poster_path": "/jfD54w8TFb2IAklC4mMQv2OH4Su.jpg",
+   "synopsis_es": "Iris es una niña de 11 años que vive con su abuela y su gata Cris- tal. Una noche, mientras la abuela y la niña duermen, la Muerte llega inesperadamente para llevarse el alma de la abuela, pero por error extrae el alma de Iris. La gata Cristal, al presenciar lo ocurrido, intenta detener a la Muerte, quien escapa al más allá a través de un espejo, sin lograr atraparla.",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "Crystal Iris",
+   "lbSlug": "crystal-iris",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Iris de Cristal",
+   "_director": "Diego Gaviria Nieto",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Iris de Cristal",
+     "tmdb_id": 1368500,
+     "poster": "/assets/fantasmagoria-2026/iris-de-cristal.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "crystal-iris",
+     "sinopsis": "Narrafilms: Proyección con autodescripción – Personas con discapacidad visual."
+    }
+   ],
+   "poster": "/assets/bhff-2026/iris-de-cristal.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La Habitación del Macho Cabrío",
+   "tmdb_id": 1554728,
+   "titulo_original": "La Habitación del Macho Cabrío",
+   "poster_path": "/xwgOpXWOcYis7A7xx3SyrgTGwyw.jpg",
+   "synopsis_es": "En una habitación apartada del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones.",
+   "synopsis_en": "In a room isolated from the real world, Juan, a 10-year-old boy, lives with his grandparents. His grandfather has a strange disease that causes him to expel large amounts of matter, and because of this, every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide what is happening from the boy, but one night Juan decides to sneak out and approach the apparitions.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Devil Room",
+   "lbSlug": "the-devil-room",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La Habitación del Macho Cabrío",
+   "_director": "Duban Pinzón",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "La Habitación del Macho Cabrío",
+     "tmdb_id": 1554728,
+     "poster": "/assets/fantasmagoria-2026/la-habitacion-del-macho-cabrio.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-devil-room",
+     "sinopsis": "En una habitación apartada del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "La habitación del macho cabrío",
+     "tmdb_id": 1554728,
+     "poster": "/assets/popayan-2026/la-habitacion-del-macho-cabrio.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-devil-room",
+     "sinopsis": "En una habitación apartada del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en fantasmagoria-2026",
+   "poster": "/assets/bhff-2026/la-habitacion-del-macho-cabrio.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Leonel",
+   "tmdb_id": 1746614,
+   "titulo_original": "LEONEL",
+   "poster_path": "/acS4mEAt7qAwGoez91prbpdpQJ5.jpg",
+   "synopsis_es": "Invitados: Equipo de producción.",
+   "synopsis_en": "Leonel wakes up with no memory in an isolated farmhouse. Outside, something is watching him. As he tries to discover who he is and how he got there, strange events begin to reveal fragments of a past he would rather forget. Soon, the answers become more disturbing than the darkness surrounding him.",
+   "genero": "Suspense",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Leonel",
+   "_director": "Simón Ceballos Escobar",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "itagui-2026",
+     "titulo": "Leonel",
+     "tmdb_id": 1746614,
+     "poster": "/assets/itagui-2026/leonel.jpg",
+     "posterSource": "tmdb",
+     "sinopsis": "Invitados: Equipo de producción."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en itagui-2026",
+   "poster": "/assets/bhff-2026/leonel.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Moviedreams",
+   "tmdb_id": 1776749,
+   "titulo_original": "MOVIEDREAMS",
+   "poster_path": "/csMBQnPRqK0vsAP4lifO9Rt2Ikv.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Ciencia ficción",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 112,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "moviedreams",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Moviedreams",
+   "_director": "Horacio Maldonado, Axel Maldonado",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/moviedreams.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Muertos que no son muertos",
+   "tmdb_id": 1506756,
+   "titulo_original": "Muertos Que No Son Muertos",
+   "poster_path": "/uvJNAQPDcIIcw10zjZw8BR6OytU.jpg",
+   "synopsis_es": "Durante la grabación de un supuesto exorcismo, el presentador de Muertos Que No Son Muertos, enfrenta su peor miedo: Un hogar campesino donde no pasa absolutamente nada.",
+   "synopsis_en": "While filming a so-called exorcism, the host of the TV show \"Muertos Que No Son Muertos\" faces his worst fear: a rural house where absolutely nothing paranormal happens.",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "muertos-que-no-son-muertos",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Muertos que no son muertos",
+   "_director": "Nicolás O. Segura",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Muertos que no son muertos",
+     "poster": "https://image.tmdb.org/t/p/w500/uvJNAQPDcIIcw10zjZw8BR6OytU.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "muertos-que-no-son-muertos",
+     "sinopsis": "Durante la grabación de un supuesto exorcismo, el presentador de Muertos Que No Son Muertos, enfrenta su peor miedo: Un hogar campesino donde no pasa absolutamente nada."
+    }
+   ],
+   "poster": "/assets/bhff-2026/muertos-que-no-son-muertos.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Necrosectos",
+   "tmdb_id": 1580595,
+   "titulo_original": "Necrosectos",
+   "poster_path": "/nT8xNJF6gdLYWagftLk9KNrAi8y.jpg",
+   "synopsis_es": "Insectos astutos invaden una casa y perturban la vida de sus habitantes.",
+   "synopsis_en": "Cunning insects invade a house and disrupt the lives of its inhabitants.",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "Spain",
+   "lbSlug": "necrosectos",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Necrosectos",
+   "_director": "Javier Lozano",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/necrosectos.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "No Es El Fin Del Mundo",
+   "tmdb_id": 1786249,
+   "titulo_original": "No es el fin del mundo",
+   "poster_path": "/uXSPdeZFuzGHDA3bU9HOz9dTcZC.jpg",
+   "synopsis_es": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "",
+   "lbSlug": "no-es-el-fin-del-mundo",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "No Es El Fin Del Mundo",
+   "_director": "Sebastián Flórez",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "No es el Fin del Mundo",
+     "tmdb_id": 1786249,
+     "poster": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "no-es-el-fin-del-mundo",
+     "sinopsis": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "No es el Fin del Mundo",
+     "tmdb_id": 1786249,
+     "poster": "/assets/villadelcine-2026/no-es-el-fin-del-mundo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "no-es-el-fin-del-mundo",
+     "sinopsis": "Tras la devastación de Bogotá, Carlos se refugia con su padre ciego y exmilitar en una casa de campo. Cuando su hermana los abandona, debe protegerlo solo y esconderle una verdad imposible: afuera comenzó un apocalipsis zombi. Sobrevivir será tan difícil como enfrentar la distancia que siempre ha existido entre ambos."
+    }
+   ],
+   "poster": "/assets/bhff-2026/no-es-el-fin-del-mundo.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Pactum",
+   "tmdb_id": 1647552,
+   "titulo_original": "Pactum",
+   "poster_path": "/tDkrnDE0tpahcFjWjaybHWItL09.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Six high-society women gather in a mansion bound by a secret pact, a pact one of them has broken and whose consequences will be disastrous. Who is the traitor?",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "pactum",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Pablo Otero",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/pactum.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Parapeto",
+   "tmdb_id": 1662539,
+   "titulo_original": "Parapeto",
+   "poster_path": null,
+   "synopsis_es": "La vida de Pol se desmorona al descubrir una traición personal. A partir de ese momento, sus metas y creencias se ven puestas a prueba, enfrentándose a un entorno peligroso y conspirativo.",
+   "synopsis_en": "",
+   "genero": "Comedia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "parapeto",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Parapeto",
+   "_director": "Juan Manuel Buenaventura",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/parapeto.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: IG @bogotahorrorfest p/DcxA28kjgVo, lámina 2.jpg: el afiche, recortado por dentro del marco (714×993, marco 14 px)"
+  },
+  {
+   "titulo": "Paseo Nocturno",
+   "tmdb_id": 1744980,
+   "titulo_original": "Paseo Nocturno",
+   "poster_path": "/mzVZb4Yxm6sAHVgKvWTq9v24Hlk.jpg",
+   "synopsis_es": "Laura no puede volver a dormir después de tener una pesadilla y saca a su perro de paseo por el parque.",
+   "synopsis_en": "Laura cannot sleep after a nightmare, so she goes for a walk with her dog.",
+   "genero": "Terror",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "title_en": "Night Walk",
+   "lbSlug": "night-walk-1",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Paseo Nocturno",
+   "_director": "Víctor Martín León",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/paseo-nocturno.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Quazar",
+   "tmdb_id": 1786245,
+   "titulo_original": "Quazar",
+   "poster_path": "/inGdoVO6vMggIKmo8gX4dqHaM5p.jpg",
+   "synopsis_es": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
+   "synopsis_en": "",
+   "genero": "Ciencia ficción",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "",
+   "lbSlug": "quazar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Quazar",
+   "_director": "Alejandro Vargas",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Quazar",
+     "tmdb_id": 1786245,
+     "poster": "/assets/fantasmagoria-2026/quazar.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "quazar",
+     "sinopsis": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Quazar",
+     "tmdb_id": 1786245,
+     "poster": "/assets/villadelcine-2026/quazar.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "quazar",
+     "sinopsis": "Tras una ruptura, Kim acude a terapia para entender por qué Ana, su expareja, la visita cada noche convertida en una criatura extraterrestre. Mientras reconstruye la transformación de aquella relación, deberá enfrentarse al monstruo que habita sus recuerdos y encontrar una forma de despedirse de lo que todavía la persigue."
+    }
+   ],
+   "poster": "/assets/bhff-2026/quazar.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Que El Cielo Nos Perdone",
+   "tmdb_id": 1565878,
+   "titulo_original": "Que el cielo nos perdone",
+   "poster_path": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+   "synopsis_es": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "que-el-cielo-nos-perdone",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Que El Cielo Nos Perdone",
+   "_director": "Andrés Buitrago",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Que El Cielo Nos Perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/fantasmagoria-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "ficma-2026",
+     "titulo": "Que el cielo nos perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/ficma/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Que el cielo nos perdone",
+     "poster": "https://image.tmdb.org/t/p/w500/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Que el cielo nos perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951. En plena Violencia, dos chulavitas, sicarios al servicio del Gobierno, siguen a un sacerdote durante la noche, convencidos de que los conducirá hasta una cabaña donde se esconden sus víctimas. Al internarse en el bosque, descubrirán un horror mucho más oscuro que cualquiera de sus propios actos."
+    }
+   ],
+   "poster": "/assets/bhff-2026/que-el-cielo-nos-perdone.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Replay",
+   "tmdb_id": 1677190,
+   "titulo_original": "Replay",
+   "poster_path": "/W9xvtCLFRZtbklQGnhpNJCwuL.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "replay-2026",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Replay",
+   "_director": "Simón Matallana Nossa",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/replay.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Siempre hay un monstruo",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Siempre Hay un Monstruo",
+     "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
+     "posterSource": "oficial"
+    }
+   ],
+   "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
+   "_verificado": "ya publicada en fantasmagoria-2026: se reusa su afiche"
+  },
+  {
+   "titulo": "Sierra: El Álbum Mortuorio",
+   "tmdb_id": 1789536,
+   "titulo_original": "Sierra: El Álbum Mortuorio",
+   "poster_path": "/qmlvRr0FpcmQCbCjRGBYrK7tgUY.jpg",
+   "synopsis_es": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "sierra-el-album-mortuorio",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Sierra: El Álbum Mortuorio",
+   "_director": "Carlos Ortiz Alarcón",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Sierra: El álbum mortuorio",
+     "tmdb_id": 1789536,
+     "poster": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sierra-el-album-mortuorio",
+     "sinopsis": "La desaparición de Natalia rompe el silencio de Pueblo Blanco. Su búsqueda conduce a las autoridades hasta un bar clandestino, dos hermanas sometidas por su tío y un hombre herido hallado en el bosque. Pronto, la violencia, el fanatismo y una secta ancestral convertirán a todo el pueblo en un territorio de caza."
+    }
+   ],
+   "poster": "/assets/bhff-2026/sierra-el-album-mortuorio.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Sigilo",
+   "tmdb_id": 1387484,
+   "titulo_original": "Sigilo",
+   "poster_path": "/vzUstz2jZR67Ni6hHste2oExZxt.jpg",
+   "synopsis_es": "Emilia y su hija Magui acaban de mudarse a una casa sin luz en las sierras de Córdoba. Emilia siente que no están solas, y ayudada por la Señora de la despensa hace un conjuro mágico con la intención de alejar al fantasma.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "sigilo-1",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Gabriela Vidal",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/sigilo.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Tarde o Temprano",
+   "tmdb_id": 1650805,
+   "titulo_original": "Tarde o Temprano",
+   "poster_path": "/63WMyD1Fatoy40bSXEoso1MTwuG.jpg",
+   "synopsis_es": "En una casa a las afueras de la ciudad, una reunión entre viejos amigos de colegio promete una noche de nostalgia. Pero cuando secretos enterrados emergen y un invitado aparece muerto, la velada se convierte en una batalla por sobrevivir. Aislados del mundo exterior, todos se vuelven sospechosos en este emocionante thriller de suspenso. Cada revelación lleva a giros inesperados mientras luchan por descubrir al asesino entre ellos. ¿Quién es el culpable y cuál es su motivo? Una noche que comenzó con recuerdos terminará con la verdad más oscura.",
+   "synopsis_en": "In a house on the outskirts of the city, a gathering of old school friends promises a night of nostalgia. But when buried secrets begin to surface and one of the guests turns up dead, the evening quickly becomes a fight for survival. Isolated from the outside world, everyone becomes a suspect in this gripping suspense thriller. Each revelation brings unexpected twists as they struggle to uncover the killer among them. Who is responsible, and what is their motive? A night that began with memories will end with the darkest truth.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 74,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "tarde-o-temprano",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Tarde o Temprano",
+   "_director": "Juan Pablo Chajín",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/tarde-o-temprano.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Ubicua",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Ubicua",
+     "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
+     "posterSource": "oficial"
+    }
+   ],
+   "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
+   "_verificado": "ya publicada en fantasmagoria-2026: se reusa su afiche"
+  },
+  {
+   "titulo": "Yatsi y el Espíritu del Río",
+   "tmdb_id": 1321232,
+   "titulo_original": "Yatsi y el Espíritu del Río",
+   "poster_path": "/v0mqYiWKm42PoHkLsk2nKamX3lJ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a dystopian future where everything is deforested and polluted, there is a village where Yatsi lives, a girl who survives with her grandfather in the middle of the Amazon. One day something breaks in him and Yatsi will have to go in search of a mysterious fruit that could save him. She will journey through a toxic river, but on the way, she will meet river beings who pursue her. Yatsi will have to rely on the symbols of her dreams to reach her destination.",
+   "genero": "Animación",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Peru",
+   "title_en": "Yatsi and the Spirit of the River",
+   "lbSlug": "yatsi-and-the-spirit-of-the-river",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Yatsi y el Espíritu del Río",
+   "_director": "Valeria Salinas Yábar, Rous Condori Arango",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/yatsi-y-el-espiritu-del-rio.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Anax",
+   "poster": "/assets/bhff-2026/anax.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-15.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  {
+   "titulo": "Búhos",
+   "poster": "/assets/bhff-2026/buhos.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-32.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  {
+   "titulo": "Eco",
+   "poster": "/assets/bhff-2026/eco.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-25.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  {
+   "titulo": "El Diente Negro",
+   "poster": "/assets/bhff-2026/el-diente-negro.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-14.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  {
+   "titulo": "El Festín de las Moscas",
+   "poster": "/assets/bhff-2026/el-festin-de-las-moscas.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-27.webp, recortado por dentro del marco (674×1048, marco 10 px)"
+  },
+  {
+   "titulo": "El Laberinto del Cuerpo",
+   "poster": "/assets/bhff-2026/el-laberinto-del-cuerpo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-46.webp, recortado por dentro del marco (782×1025, marco 14 px)"
+  },
+  {
+   "titulo": "Enigma",
+   "poster": "/assets/bhff-2026/enigma.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-44.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  {
+   "titulo": "Gabriel",
+   "poster": "/assets/bhff-2026/gabriel.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-51.webp, recortado por dentro del marco (714×1076, marco 15 px)"
+  },
+  {
+   "titulo": "Happy",
+   "poster": "/assets/bhff-2026/happy.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-18.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  {
+   "titulo": "Hasta que Amanezca",
+   "poster": "/assets/bhff-2026/hasta-que-amanezca.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-30.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  {
+   "titulo": "La Noche De Las Bestias",
+   "poster": "/assets/bhff-2026/la-noche-de-las-bestias.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-45.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  {
+   "titulo": "Los Lobo",
+   "poster": "/assets/bhff-2026/los-lobo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-37.webp, recortado por dentro del marco (698×1103, marco 16 px)"
+  },
+  {
+   "titulo": "Nocturna",
+   "poster": "/assets/bhff-2026/nocturna.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-13.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  {
+   "titulo": "Parásitos",
+   "poster": "/assets/bhff-2026/parasitos.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-29.webp, recortado por dentro del marco (698×1103, marco 16 px)"
+  },
+  {
+   "titulo": "Prototipo",
+   "poster": "/assets/bhff-2026/prototipo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-50.webp, recortado por dentro del marco (714×1076, marco 15 px)"
+  },
+  {
+   "titulo": "Ruth",
+   "poster": "/assets/bhff-2026/ruth.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-39.webp, recortado por dentro del marco (714×1076, marco 15 px)"
+  },
+  {
+   "titulo": "Vientre",
+   "poster": "/assets/bhff-2026/vientre.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-48.webp, recortado por dentro del marco (780×1106, marco 15 px)"
+  }
+ ],
+ "verificadas": {
+  "Año de Casados": {
+   "tmdb_id": 1496765,
+   "titulo_original": "Año de casados",
+   "poster_path": "/kqk0reaDgCIzgDA6JQXy2091oCs.jpg",
+   "synopsis_es": "Es 1991, Ana María y Juan Manuel, una pareja de recién casados, reciben una criatura como regalo de bodas. ¿Lograrán cuidarla durante un año para preservar su matrimonio?.",
+   "synopsis_en": "It's 1991. Ana and Juan, a newlywed couple, receive a creature as a wedding gift. Amid the oppressive atmosphere of Juan's family, will they be able to care for it for a year to preserve their marriage?",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Mexico",
+   "title_en": "A Year of Marriage",
+   "lbSlug": "a-year-of-marriage",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Año de Casados",
+   "_director": "Pablo Camargo López",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/ano-de-casados.jpg",
+   "posterSource": "tmdb"
+  },
+  "Chaika": {
+   "tmdb_id": 1689999,
+   "titulo_original": "Chaika",
+   "poster_path": "/fhvA2plccJRbTQgL6HRAAUPhPic.jpg",
+   "synopsis_es": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "lbSlug": "chaika-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Chaika",
+   "_director": "Ingrid Bonilla Rodríguez",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "CHAIKA",
+     "tmdb_id": 1689999,
+     "poster": "/assets/cineautopsia/chaika.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, en la que se le invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero descubre un territorio asolado por una silenciosa crisis agrícola y ambiental; una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se alcanza a discernir: un sistema exhausto que intenta sostener un ideal ya difuso. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se confunden, Valentina busca descubrir si aún es posible alzar el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/fantasmagoria-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, llega a una Cuba ucrónica y nebulosa tras recibir, con treinta años de retraso, una invitación para una expedición agrícola a Marte. Entre paisajes difusos y promesas del pasado, busca las ruinas de un futuro que nunca llegó."
+    },
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/fantasofest/corto-chaika.jpg",
+     "posterSource": "editorial",
+     "lbSlug": "chaika-2026"
+    },
+    {
+     "festival": "narrarelfuturo-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/narrarelfuturo-2026/chaika.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso que la invita a unirse a una expedición agrícola a Marte. Viaja a la isla esperando encontrar una utopía científica y social, pero se topa con un territorio devastado por una silenciosa crisis agrícola y medioambiental: una Cuba ucrónica y nebulosa donde las promesas del pasado perduran como sombras. Los paisajes tiemblan, las formas se difuminan y la política apenas se percibe: es un sistema agotado que intenta sostener un ideal ya desdibujado. Los paisajes, trémulos y borrosos, se resisten a ser enfocados, como si la propia isla dudara de su existencia. En este territorio nebuloso, donde lo real y lo onírico se funden, Valentina busca averiguar si aún es posible emprender el vuelo, mientras la nostalgia por el Caribe se mezcla con el eco de un futuro que nunca llegó."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "Chaika",
+     "tmdb_id": 1689999,
+     "poster": "/assets/popayan-2026/chaika.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "chaika-2025",
+     "sinopsis": "Valentina, una cosmonauta rusa de 76 años, recibe una carta enviada desde Cuba con treinta años de retraso, invitándola a una expedición agrícola a Marte. Viaja a la isla esperando una utopía científico–social, pero encuentra un territorio golpeado por una silenciosa crisis agrícola y ambiental, una Cuba ucrónica y nebulosa donde las promesas del pasado persisten como sombras. Los paisajes tiemblan, las formas se desdibujan y la política apenas se intuye: un sistema agotado que intenta sostener un ideal ya difuso."
+    }
+   ],
+   "poster": "/assets/bhff-2026/chaika.jpg",
+   "posterSource": "tmdb"
+  },
+  "Donde Duermen los Sueños": {
+   "tmdb_id": 1168428,
+   "titulo_original": "Donde Duermen los Sueños",
+   "poster_path": "/1g9XnA5Ro0n8ct8wVdB5K8U0F83.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A man plunged into grief connects through his dreams with the love he lost in a car accident.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 75,
+   "pais_tmdb": "Peru",
+   "title_en": "Where Dreams Sleep",
+   "lbSlug": "where-dreams-sleep",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Donde Duermen los Sueños",
+   "_director": "Daniel Riglos",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/donde-duermen-los-suenos.jpg",
+   "posterSource": "tmdb"
+  },
+  "El Susurro": {
+   "tmdb_id": 1534530,
+   "titulo_original": "El susurro",
+   "poster_path": "/x1kKY4OvlDGxTvBn5GDyTVCYv6.jpg",
+   "synopsis_es": "Lucía y Adrián huyen de su padre violento a una mansión. Descubren una red de snuff y una maldición familiar.",
+   "synopsis_en": "Fleeing from their violent father, siblings Lucía and Adrián take refuge in a remote mansion. With the help of a hidden micro-camera on a cat, Lucía uncovers a terrifying secret: their neighbors are part of a criminal network that kidnaps teenage girls to make snuff films, and they intend to get rid of the siblings. As Lucía fights to protect her brother, she must face a dark family curse that follows them into their newfound sanctuary.",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 89,
+   "pais_tmdb": "Argentina, Uruguay",
+   "title_en": "The Whisper",
+   "lbSlug": "the-whisper-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El Susurro",
+   "_director": "Gustavo Hernández",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "fantasofest-2026",
+     "titulo": "El Susurro",
+     "poster": "/assets/fantasofest/el-susurro.jpg",
+     "posterSource": "custom",
+     "lbSlug": "the-whisper-2025",
+     "sinopsis": "Lucía y Adrián, dos hermanos que huyen de la oscura herencia de su padre vampiro, llegan a una casona aislada en el bosque, buscando refugio del pasado. Su intento de olvidar se interrumpe cuando un gato les trae un dedo humano, lo que revela un secreto aterrador: sus vecinos forman parte de una red criminal que secuestra adolescentes para producir películas snuff, y planean deshacerse de ellos. Mientras Lucía lucha por proteger a su hermano, deberá enfrentar una oscura maldición familiar que los persigue en su aparente refugio."
+    }
+   ],
+   "poster": "/assets/bhff-2026/el-susurro.jpg",
+   "posterSource": "tmdb"
+  },
+  "Esquirlas de Caracol": {
+   "tmdb_id": 1718595,
+   "titulo_original": "Esquirlas de Caracol",
+   "poster_path": "/uqIZXGEkQ3QwnrfTYGEeUAtX8Lb.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "esquirlas-de-caracol",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Manuel Alejandro Sánchez",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/esquirlas-de-caracol.jpg",
+   "posterSource": "tmdb"
+  },
+  "Hiperrealidad": {
+   "tmdb_id": 1568478,
+   "titulo_original": "Hiperrealidad",
+   "poster_path": "/2ZouwDnXbrezZTrxxRQcvTAZinm.jpg",
+   "synopsis_es": "En la antesala de su concierto, Santiago, un joven director de orquesta, recibe una noticia trágica que lo arrastra a un viaje de culpa, distorsión y terror.  La realidad se quiebra: bucles temporales, un monstruo que acecha y la posible extinción de la humanidad envuelven su mundo.",
+   "synopsis_en": "Just before his concert, Santiago, a young conductor, receives tragic news that sends him on a journey of guilt, distortion, and terror. Reality shatters: time loops, a lurking monster, and the possible extinction of humanity engulf his world.",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 81,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "hiperrealidad",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Hiperrealidad",
+   "_director": "Diego G. Medina",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/hiperrealidad.jpg",
+   "posterSource": "tmdb"
+  },
+  "Interior 8": {
+   "tmdb_id": 1713410,
+   "titulo_original": "Interior 8",
+   "poster_path": "/3nuMIb1grsdy4JoiBHkWWf5m0eO.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Fernanda is forced to return to the apartment where a family tragedy occurred. Upon arriving at Unit 8, supernatural events begin to unfold.",
+   "genero": "Fantasía",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 15,
+   "pais_tmdb": "",
+   "title_en": "Unit 8",
+   "lbSlug": "unit-8",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Interior 8",
+   "_director": "Lorena Toscano",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/interior-8.jpg",
+   "posterSource": "tmdb"
+  },
+  "Iris de Cristal": {
+   "tmdb_id": 1368500,
+   "titulo_original": "Iris de Cristal",
+   "poster_path": "/jfD54w8TFb2IAklC4mMQv2OH4Su.jpg",
+   "synopsis_es": "Iris es una niña de 11 años que vive con su abuela y su gata Cris- tal. Una noche, mientras la abuela y la niña duermen, la Muerte llega inesperadamente para llevarse el alma de la abuela, pero por error extrae el alma de Iris. La gata Cristal, al presenciar lo ocurrido, intenta detener a la Muerte, quien escapa al más allá a través de un espejo, sin lograr atraparla.",
+   "synopsis_en": "",
+   "genero": "Animación",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "Crystal Iris",
+   "lbSlug": "crystal-iris",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Iris de Cristal",
+   "_director": "Diego Gaviria Nieto",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Iris de Cristal",
+     "tmdb_id": 1368500,
+     "poster": "/assets/fantasmagoria-2026/iris-de-cristal.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "crystal-iris",
+     "sinopsis": "Narrafilms: Proyección con autodescripción – Personas con discapacidad visual."
+    }
+   ],
+   "poster": "/assets/bhff-2026/iris-de-cristal.jpg",
+   "posterSource": "tmdb"
+  },
+  "La Habitación del Macho Cabrío": {
+   "tmdb_id": 1554728,
+   "titulo_original": "La Habitación del Macho Cabrío",
+   "poster_path": "/xwgOpXWOcYis7A7xx3SyrgTGwyw.jpg",
+   "synopsis_es": "En una habitación apartada del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones.",
+   "synopsis_en": "In a room isolated from the real world, Juan, a 10-year-old boy, lives with his grandparents. His grandfather has a strange disease that causes him to expel large amounts of matter, and because of this, every night they are visited by apparitions that feed on his rotten flesh. The grandmother tries to hide what is happening from the boy, but one night Juan decides to sneak out and approach the apparitions.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Colombia",
+   "title_en": "The Devil Room",
+   "lbSlug": "the-devil-room",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La Habitación del Macho Cabrío",
+   "_director": "Duban Pinzón",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "La Habitación del Macho Cabrío",
+     "tmdb_id": 1554728,
+     "poster": "/assets/fantasmagoria-2026/la-habitacion-del-macho-cabrio.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-devil-room",
+     "sinopsis": "En una habitación apartada del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones."
+    },
+    {
+     "festival": "popayan-2026",
+     "titulo": "La habitación del macho cabrío",
+     "tmdb_id": 1554728,
+     "poster": "/assets/popayan-2026/la-habitacion-del-macho-cabrio.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-devil-room",
+     "sinopsis": "En una habitación apartada del mundo real, vive Juan un niño de 10 años junto con sus abuelos, su abuelo tiene una extraña enfermedad la cual hace que expulse grandes cantidades de materia, gracias a esto todas las noches los visitan apariciones que se alimentan de su carne podrida. La abuela trata de ocultar lo que pasa del niño, pero Juan decide una noche escabullirse y acercarse a las apariciones."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en fantasmagoria-2026",
+   "poster": "/assets/bhff-2026/la-habitacion-del-macho-cabrio.jpg",
+   "posterSource": "tmdb"
+  },
+  "Leonel": {
+   "tmdb_id": 1746614,
+   "titulo_original": "LEONEL",
+   "poster_path": "/acS4mEAt7qAwGoez91prbpdpQJ5.jpg",
+   "synopsis_es": "Invitados: Equipo de producción.",
+   "synopsis_en": "Leonel wakes up with no memory in an isolated farmhouse. Outside, something is watching him. As he tries to discover who he is and how he got there, strange events begin to reveal fragments of a past he would rather forget. Soon, the answers become more disturbing than the darkness surrounding him.",
+   "genero": "Suspense",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 5,
+   "pais_tmdb": "Colombia",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Leonel",
+   "_director": "Simón Ceballos Escobar",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "itagui-2026",
+     "titulo": "Leonel",
+     "tmdb_id": 1746614,
+     "poster": "/assets/itagui-2026/leonel.jpg",
+     "posterSource": "tmdb",
+     "sinopsis": "Invitados: Equipo de producción."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en itagui-2026",
+   "poster": "/assets/bhff-2026/leonel.jpg",
+   "posterSource": "tmdb"
+  },
+  "Moviedreams": {
+   "tmdb_id": 1776749,
+   "titulo_original": "MOVIEDREAMS",
+   "poster_path": "/csMBQnPRqK0vsAP4lifO9Rt2Ikv.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Ciencia ficción",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 112,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "moviedreams",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Moviedreams",
+   "_director": "Horacio Maldonado, Axel Maldonado",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/moviedreams.jpg",
+   "posterSource": "tmdb"
+  },
+  "Muertos que no son muertos": {
+   "tmdb_id": 1506756,
+   "titulo_original": "Muertos Que No Son Muertos",
+   "poster_path": "/uvJNAQPDcIIcw10zjZw8BR6OytU.jpg",
+   "synopsis_es": "Durante la grabación de un supuesto exorcismo, el presentador de Muertos Que No Son Muertos, enfrenta su peor miedo: Un hogar campesino donde no pasa absolutamente nada.",
+   "synopsis_en": "While filming a so-called exorcism, the host of the TV show \"Muertos Que No Son Muertos\" faces his worst fear: a rural house where absolutely nothing paranormal happens.",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 10,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "muertos-que-no-son-muertos",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Muertos que no son muertos",
+   "_director": "Nicolás O. Segura",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Muertos que no son muertos",
+     "poster": "https://image.tmdb.org/t/p/w500/uvJNAQPDcIIcw10zjZw8BR6OytU.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "muertos-que-no-son-muertos",
+     "sinopsis": "Durante la grabación de un supuesto exorcismo, el presentador de Muertos Que No Son Muertos, enfrenta su peor miedo: Un hogar campesino donde no pasa absolutamente nada."
+    }
+   ],
+   "poster": "/assets/bhff-2026/muertos-que-no-son-muertos.jpg",
+   "posterSource": "tmdb"
+  },
+  "Necrosectos": {
+   "tmdb_id": 1580595,
+   "titulo_original": "Necrosectos",
+   "poster_path": "/nT8xNJF6gdLYWagftLk9KNrAi8y.jpg",
+   "synopsis_es": "Insectos astutos invaden una casa y perturban la vida de sus habitantes.",
+   "synopsis_en": "Cunning insects invade a house and disrupt the lives of its inhabitants.",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "Spain",
+   "lbSlug": "necrosectos",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Necrosectos",
+   "_director": "Javier Lozano",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/necrosectos.jpg",
+   "posterSource": "tmdb"
+  },
+  "No Es El Fin Del Mundo": {
+   "tmdb_id": 1786249,
+   "titulo_original": "No es el fin del mundo",
+   "poster_path": "/uXSPdeZFuzGHDA3bU9HOz9dTcZC.jpg",
+   "synopsis_es": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "",
+   "lbSlug": "no-es-el-fin-del-mundo",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "No Es El Fin Del Mundo",
+   "_director": "Sebastián Flórez",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "No es el Fin del Mundo",
+     "tmdb_id": 1786249,
+     "poster": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "no-es-el-fin-del-mundo",
+     "sinopsis": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "No es el Fin del Mundo",
+     "tmdb_id": 1786249,
+     "poster": "/assets/villadelcine-2026/no-es-el-fin-del-mundo.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "no-es-el-fin-del-mundo",
+     "sinopsis": "Tras la devastación de Bogotá, Carlos se refugia con su padre ciego y exmilitar en una casa de campo. Cuando su hermana los abandona, debe protegerlo solo y esconderle una verdad imposible: afuera comenzó un apocalipsis zombi. Sobrevivir será tan difícil como enfrentar la distancia que siempre ha existido entre ambos."
+    }
+   ],
+   "poster": "/assets/bhff-2026/no-es-el-fin-del-mundo.jpg",
+   "posterSource": "tmdb"
+  },
+  "Pactum": {
+   "tmdb_id": 1647552,
+   "titulo_original": "Pactum",
+   "poster_path": "/tDkrnDE0tpahcFjWjaybHWItL09.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Six high-society women gather in a mansion bound by a secret pact, a pact one of them has broken and whose consequences will be disastrous. Who is the traitor?",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "pactum",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Pablo Otero",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/pactum.jpg",
+   "posterSource": "tmdb"
+  },
+  "Parapeto": {
+   "tmdb_id": 1662539,
+   "titulo_original": "Parapeto",
+   "poster_path": null,
+   "synopsis_es": "La vida de Pol se desmorona al descubrir una traición personal. A partir de ese momento, sus metas y creencias se ven puestas a prueba, enfrentándose a un entorno peligroso y conspirativo.",
+   "synopsis_en": "",
+   "genero": "Comedia",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "parapeto",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Parapeto",
+   "_director": "Juan Manuel Buenaventura",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/parapeto.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: IG @bogotahorrorfest p/DcxA28kjgVo, lámina 2.jpg: el afiche, recortado por dentro del marco (714×993, marco 14 px)"
+  },
+  "Paseo Nocturno": {
+   "tmdb_id": 1744980,
+   "titulo_original": "Paseo Nocturno",
+   "poster_path": "/mzVZb4Yxm6sAHVgKvWTq9v24Hlk.jpg",
+   "synopsis_es": "Laura no puede volver a dormir después de tener una pesadilla y saca a su perro de paseo por el parque.",
+   "synopsis_en": "Laura cannot sleep after a nightmare, so she goes for a walk with her dog.",
+   "genero": "Terror",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "title_en": "Night Walk",
+   "lbSlug": "night-walk-1",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Paseo Nocturno",
+   "_director": "Víctor Martín León",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/paseo-nocturno.jpg",
+   "posterSource": "tmdb"
+  },
+  "Quazar": {
+   "tmdb_id": 1786245,
+   "titulo_original": "Quazar",
+   "poster_path": "/inGdoVO6vMggIKmo8gX4dqHaM5p.jpg",
+   "synopsis_es": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
+   "synopsis_en": "",
+   "genero": "Ciencia ficción",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "",
+   "lbSlug": "quazar",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Quazar",
+   "_director": "Alejandro Vargas",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Quazar",
+     "tmdb_id": 1786245,
+     "poster": "/assets/fantasmagoria-2026/quazar.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "quazar",
+     "sinopsis": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Quazar",
+     "tmdb_id": 1786245,
+     "poster": "/assets/villadelcine-2026/quazar.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "quazar",
+     "sinopsis": "Tras una ruptura, Kim acude a terapia para entender por qué Ana, su expareja, la visita cada noche convertida en una criatura extraterrestre. Mientras reconstruye la transformación de aquella relación, deberá enfrentarse al monstruo que habita sus recuerdos y encontrar una forma de despedirse de lo que todavía la persigue."
+    }
+   ],
+   "poster": "/assets/bhff-2026/quazar.jpg",
+   "posterSource": "tmdb"
+  },
+  "Que El Cielo Nos Perdone": {
+   "tmdb_id": 1565878,
+   "titulo_original": "Que el cielo nos perdone",
+   "poster_path": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+   "synopsis_es": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "que-el-cielo-nos-perdone",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Que El Cielo Nos Perdone",
+   "_director": "Andrés Buitrago",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Que El Cielo Nos Perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/fantasmagoria-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "ficma-2026",
+     "titulo": "Que el cielo nos perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/ficma/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Que el cielo nos perdone",
+     "poster": "https://image.tmdb.org/t/p/w500/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Que el cielo nos perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951. En plena Violencia, dos chulavitas, sicarios al servicio del Gobierno, siguen a un sacerdote durante la noche, convencidos de que los conducirá hasta una cabaña donde se esconden sus víctimas. Al internarse en el bosque, descubrirán un horror mucho más oscuro que cualquiera de sus propios actos."
+    }
+   ],
+   "poster": "/assets/bhff-2026/que-el-cielo-nos-perdone.jpg",
+   "posterSource": "tmdb"
+  },
+  "Replay": {
+   "tmdb_id": 1677190,
+   "titulo_original": "Replay",
+   "poster_path": "/W9xvtCLFRZtbklQGnhpNJCwuL.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Set in a distant galaxy, a strange humanoid creature called Hunter X must fight against a dozen robot lizards to retrieve a peculiar disk-shaped device.",
+   "genero": "Animación",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "replay-2026",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Replay",
+   "_director": "Simón Matallana Nossa",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/replay.jpg",
+   "posterSource": "tmdb"
+  },
+  "Sierra: El Álbum Mortuorio": {
+   "tmdb_id": 1789536,
+   "titulo_original": "Sierra: El Álbum Mortuorio",
+   "poster_path": "/qmlvRr0FpcmQCbCjRGBYrK7tgUY.jpg",
+   "synopsis_es": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "sierra-el-album-mortuorio",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Sierra: El Álbum Mortuorio",
+   "_director": "Carlos Ortiz Alarcón",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Sierra: El álbum mortuorio",
+     "tmdb_id": 1789536,
+     "poster": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sierra-el-album-mortuorio",
+     "sinopsis": "La desaparición de Natalia rompe el silencio de Pueblo Blanco. Su búsqueda conduce a las autoridades hasta un bar clandestino, dos hermanas sometidas por su tío y un hombre herido hallado en el bosque. Pronto, la violencia, el fanatismo y una secta ancestral convertirán a todo el pueblo en un territorio de caza."
+    }
+   ],
+   "poster": "/assets/bhff-2026/sierra-el-album-mortuorio.jpg",
+   "posterSource": "tmdb"
+  },
+  "Sigilo": {
+   "tmdb_id": 1387484,
+   "titulo_original": "Sigilo",
+   "poster_path": "/vzUstz2jZR67Ni6hHste2oExZxt.jpg",
+   "synopsis_es": "Emilia y su hija Magui acaban de mudarse a una casa sin luz en las sierras de Córdoba. Emilia siente que no están solas, y ayudada por la Señora de la despensa hace un conjuro mágico con la intención de alejar al fantasma.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "sigilo-1",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Gabriela Vidal",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/sigilo.jpg",
+   "posterSource": "tmdb"
+  },
+  "Tarde o Temprano": {
+   "tmdb_id": 1650805,
+   "titulo_original": "Tarde o Temprano",
+   "poster_path": "/63WMyD1Fatoy40bSXEoso1MTwuG.jpg",
+   "synopsis_es": "En una casa a las afueras de la ciudad, una reunión entre viejos amigos de colegio promete una noche de nostalgia. Pero cuando secretos enterrados emergen y un invitado aparece muerto, la velada se convierte en una batalla por sobrevivir. Aislados del mundo exterior, todos se vuelven sospechosos en este emocionante thriller de suspenso. Cada revelación lleva a giros inesperados mientras luchan por descubrir al asesino entre ellos. ¿Quién es el culpable y cuál es su motivo? Una noche que comenzó con recuerdos terminará con la verdad más oscura.",
+   "synopsis_en": "In a house on the outskirts of the city, a gathering of old school friends promises a night of nostalgia. But when buried secrets begin to surface and one of the guests turns up dead, the evening quickly becomes a fight for survival. Isolated from the outside world, everyone becomes a suspect in this gripping suspense thriller. Each revelation brings unexpected twists as they struggle to uncover the killer among them. Who is responsible, and what is their motive? A night that began with memories will end with the darkest truth.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 74,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "tarde-o-temprano",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Tarde o Temprano",
+   "_director": "Juan Pablo Chajín",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/tarde-o-temprano.jpg",
+   "posterSource": "tmdb"
+  },
+  "Yatsi y el Espíritu del Río": {
+   "tmdb_id": 1321232,
+   "titulo_original": "Yatsi y el Espíritu del Río",
+   "poster_path": "/v0mqYiWKm42PoHkLsk2nKamX3lJ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In a dystopian future where everything is deforested and polluted, there is a village where Yatsi lives, a girl who survives with her grandfather in the middle of the Amazon. One day something breaks in him and Yatsi will have to go in search of a mysterious fruit that could save him. She will journey through a toxic river, but on the way, she will meet river beings who pursue her. Yatsi will have to rely on the symbols of her dreams to reach her destination.",
+   "genero": "Animación",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "Peru",
+   "title_en": "Yatsi and the Spirit of the River",
+   "lbSlug": "yatsi-and-the-spirit-of-the-river",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Yatsi y el Espíritu del Río",
+   "_director": "Valeria Salinas Yábar, Rous Condori Arango",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/bhff-2026/yatsi-y-el-espiritu-del-rio.jpg",
+   "posterSource": "tmdb"
+  }
+ },
+ "sin_ficha": [
+  "Algo No Está Bien",
+  "Anax",
+  "Bajo El Mismo Techo",
+  "Búhos",
+  "Cerdo que Sobrevivió a la Fiebre Aftosa",
+  "Cerdo que Sobrevivió a la Fiebre Aftosa + Yatsi y el Espíritu del Río",
+  "Dentro del Santiago Horror: Horror sin Fronteras",
+  "Eco",
+  "El Diente Negro",
+  "El Festín de las Moscas",
+  "El Laberinto del Cuerpo",
+  "El Ocaso De Los Dioses",
+  "El Susurro + Esquirlas de Caracol",
+  "El Teatro: Monólogo de Horror",
+  "Enigma",
+  "Gabriel",
+  "Happy",
+  "Hasta que Amanezca",
+  "Hay Algo Esperando",
+  "Hush",
+  "La Demonatrix",
+  "La Demonatrix + Gabriel",
+  "La Muerte No Llega Sola",
+  "La Noche De Las Bestias",
+  "Los Lobo",
+  "MEAT the Movie",
+  "MEAT the Movie + El Teatro: Monólogo de Horror",
+  "Mamá, la Casa No Es Segura",
+  "Moviedreams + Chaika",
+  "Niños Bien - Amanecer",
+  "Nocturna",
+  "Parásitos",
+  "Prototipo",
+  "Ruth",
+  "Siempre hay un monstruo",
+  "Tarde o Temprano + Siempre hay un monstruo",
+  "The Callback",
+  "Ubicua",
+  "Vientre",
+  "Work in Progress"
+ ],
+ "_sin_ficha_sondeo": {
+  "Algo No Está Bien": {
+   "director": "",
+   "fecha": "2026-10-07"
+  },
+  "Anax": {
+   "director": "LSDavid, Miguel Solís",
+   "fecha": "2026-10-07"
+  },
+  "Bajo El Mismo Techo": {
+   "director": "Sophia Cadavid",
+   "fecha": "2026-10-07"
+  },
+  "Búhos": {
+   "director": "Luis Enrique Vanegas",
+   "fecha": "2026-10-07"
+  },
+  "Cerdo que Sobrevivió a la Fiebre Aftosa": {
+   "director": "Hur Bum-Wook",
+   "fecha": "2026-10-07"
+  },
+  "Cerdo que Sobrevivió a la Fiebre Aftosa + Yatsi y el Espíritu del Río": {
+   "director": "",
+   "fecha": "2026-10-07"
+  },
+  "Dentro del Santiago Horror: Horror sin Fronteras": {
+   "director": "",
+   "fecha": "2026-10-07"
+  },
+  "Eco": {
+   "director": "Valeria Lopera Salas",
+   "fecha": "2026-10-07"
+  },
+  "El Diente Negro": {
+   "director": "Anita Serrano",
+   "fecha": "2026-10-07"
+  },
+  "El Festín de las Moscas": {
+   "director": "Katerine Franco Garzón",
+   "fecha": "2026-10-07"
+  },
+  "El Laberinto del Cuerpo": {
+   "director": "Esteban J. Corzo",
+   "fecha": "2026-10-07"
+  },
+  "El Ocaso De Los Dioses": {
+   "director": "Juan Pablo Rendón",
+   "fecha": "2026-10-07"
+  },
+  "El Susurro + Esquirlas de Caracol": {
+   "director": "",
+   "fecha": "2026-10-07"
+  },
+  "El Teatro: Monólogo de Horror": {
+   "director": "",
+   "fecha": "2026-10-07"
+  },
+  "Enigma": {
+   "director": "Andrés Pulido",
+   "fecha": "2026-10-07"
+  },
+  "Gabriel": {
+   "director": "Edwin Daniel Díaz",
+   "fecha": "2026-10-07"
+  },
+  "Happy": {
+   "director": "Víctor Basallote",
+   "fecha": "2026-10-07"
+  },
+  "Hasta que Amanezca": {
+   "director": "Sebastián Rosas Santamaría",
+   "fecha": "2026-10-07"
+  },
+  "Hay Algo Esperando": {
+   "director": "",
+   "fecha": "2026-10-07"
+  },
+  "Hush": {
+   "director": "Santiago Franco",
+   "fecha": "2026-10-07"
+  },
+  "La Demonatrix": {
+   "director": "Jeff Ferrell, Aurelio Voltair",
+   "fecha": "2026-10-07"
+  },
+  "La Demonatrix + Gabriel": {
+   "director": "",
+   "fecha": "2026-10-07"
+  },
+  "La Muerte No Llega Sola": {
+   "director": "",
+   "fecha": "2026-10-07"
+  },
+  "La Noche De Las Bestias": {
+   "director": "Eduart Zapata",
+   "fecha": "2026-10-07"
+  },
+  "Los Lobo": {
+   "director": "Saeed García Pérez",
+   "fecha": "2026-10-07"
+  },
+  "MEAT the Movie": {
+   "director": "Roger Conners",
+   "fecha": "2026-10-07"
+  },
+  "MEAT the Movie + El Teatro: Monólogo de Horror": {
+   "director": "",
+   "fecha": "2026-10-07"
+  },
+  "Mamá, la Casa No Es Segura": {
+   "director": "",
+   "fecha": "2026-10-07"
+  },
+  "Moviedreams + Chaika": {
+   "director": "",
+   "fecha": "2026-10-07"
+  },
+  "Niños Bien - Amanecer": {
+   "director": "Daniel Vargas",
+   "fecha": "2026-10-07"
+  },
+  "Nocturna": {
+   "director": "Pablo Olmos Arrayales",
+   "fecha": "2026-10-07"
+  },
+  "Parásitos": {
+   "director": "Samuel Andrés Ruiz Pico",
+   "fecha": "2026-10-07"
+  },
+  "Prototipo": {
+   "director": "Jeff Ruiz Rave",
+   "fecha": "2026-10-07"
+  },
+  "Ruth": {
+   "director": "Santiago Correa, Raquel Zapata, Marvin Cardona",
+   "fecha": "2026-10-07"
+  },
+  "Siempre hay un monstruo": {
+   "director": "Gastón Haag",
+   "fecha": "2026-10-07"
+  },
+  "Tarde o Temprano + Siempre hay un monstruo": {
+   "director": "",
+   "fecha": "2026-10-07"
+  },
+  "The Callback": {
+   "director": "Alvaro Pruneda",
+   "fecha": "2026-10-07"
+  },
+  "Ubicua": {
+   "director": "Juan González Henao",
+   "fecha": "2026-10-07"
+  },
+  "Vientre": {
+   "director": "Pablo Sánchez Mejía, Moisés Cataño Rivillas",
+   "fecha": "2026-10-07"
+  },
+  "Work in Progress": {
+   "director": "Diego Mezarina",
+   "fecha": "2026-10-07"
+  }
+ }
+}

@@ -1,0 +1,117 @@
+{
+ "_nota": "8° Bogotá Horror Film Festival (22–31 oct 2026). Fuentes: bogotahorrorfilmfest.com — Programación (arreglo PROGRAMACION del HTML, que también genera su PDF) y Selección 2026 (39 láminas); IG @bogotahorrorfest p/DdcszK2Dn7g (franjas nacionales, sin sesión); prensa (Canal Trece) para direcciones y acceso. Radar #1030 (lista ancla).",
+ "radar": 1030,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py bhff-2026",
+   "que": "el volcado del radar #1030"
+  },
+  {
+   "cmd": "python3 pipeline/bhff-2026-catalogo.py",
+   "que": "las 39 láminas de la Selección → catálogo, confirmado por OCR"
+  },
+  {
+   "cmd": "python3 pipeline/bhff-2026-crudo.py",
+   "que": "la parrilla + los cortos de cada franja (contrastados contra el IG) → crudo"
+  },
+  {
+   "cmd": "python3 pipeline/bhff-2026-afiches.py",
+   "que": "el afiche original de cada corto, recortado por dentro del marco de su lámina → -afiches.json"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py bhff-2026 --posters",
+   "que": "la cascada de TMDB y lo ya publicado"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py bhff-2026 --centro 4.6097,-74.0817 --ciudad \"Bogotá\"",
+   "que": "pines: los manuales se respetan"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py bhff-2026",
+   "que": "el build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py bhff-2026 --aplicar --desde festivals/staging/bhff-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/bhff-2026-verificar.py",
+   "que": "el build contra la parrilla evaluada por Node, en los dos sentidos, y cada sede con pin"
+  }
+ ],
+ "festival": {
+  "radar": 1030,
+  "crudo": "festivals/staging/bhff-2026-crudo.json",
+  "enriquecido": "festivals/staging/bhff-2026-enriquecido.json",
+  "geo": "festivals/staging/bhff-2026-venues-geo.json",
+  "_por_que_secciones": "«Franja Nacional» y «Franja Internacional» son el rótulo de la parrilla, tal cual. «Inauguración» y «Clausura», el tipo de función del festival. «Proyecciones» es la etiqueta «Proyección» del festival para el resto (la parrilla no les da sección). Franja Nacional = Competencia (la clausura proyecta el «Corto Nacional Ganador»). Emoji, inglés y arquetipo: propuesta, a confirmar con Juan.",
+  "secciones": {
+   "Inauguración": {
+    "emoji": "🎉",
+    "en": "Opening Night",
+    "archetype": "Apertura / Gala"
+   },
+   "Proyecciones": {
+    "emoji": "📽️",
+    "en": "Screenings",
+    "archetype": "Especiales / Eventos"
+   },
+   "Franja Nacional": {
+    "emoji": "🇨🇴",
+    "en": "National Shorts",
+    "archetype": "Competencia"
+   },
+   "Franja Internacional": {
+    "emoji": "🌍",
+    "en": "International Shorts",
+    "archetype": "Cortos / Programas"
+   },
+   "Clausura": {
+    "emoji": "🌙",
+    "en": "Closing Night",
+    "archetype": "Clausura"
+   }
+  },
+  "sedes": {
+   "Cinemateca de Bogotá": [
+    "Cinemateca de Bogotá - Bogotá",
+    ""
+   ],
+   "Centro Felicidad Chapinero": [
+    "Centro Felicidad Chapinero - Bogotá",
+    ""
+   ],
+   "Casa 32": [
+    "Casa 32 - Bogotá",
+    ""
+   ],
+   "Co.Laboratorio": [
+    "Co.Laboratorio - Bogotá",
+    ""
+   ]
+  },
+  "_por_que_sedes": "Tabla canónica en el crudo (SEDES): la sala de la parrilla → (sede, sala). «CEFE Chapinero» = Centro Felicidad Chapinero. «Cinematecas locales» (3 funciones) queda fuera: son dos (El Tunal y Fontanar del Río) y el festival no dice cuál; preguntado. Pines: los 4 a mano, con dos fuentes.",
+  "name": "Bogotá Horror",
+  "displayName": "Bogotá Horror",
+  "fullName": "Bogotá Horror Film Festival 8",
+  "shortName": "BHFF",
+  "tagline": "Festival de Cine de Horror",
+  "city": "Bogotá",
+  "country": "CO",
+  "dates": "22–31 OCT",
+  "dates_en": "OCT 22–31",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "bhff2026_",
+  "festivalStartStr": "2026-10-22T00:00:00",
+  "festivalEndStr": "2026-10-31T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "octubre",
+  "dias_vacios": [
+   "2026-10-26"
+  ],
+  "_fuentes_versionadas": {
+   "festivals/staging/bhff-2026-radar.json": "el volcado del radar #1030, que escribe y relee pipeline/radar.py"
+  }
+ }
+}

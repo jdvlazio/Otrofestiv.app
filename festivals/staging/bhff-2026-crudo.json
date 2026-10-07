@@ -1,0 +1,658 @@
+{
+ "_provenance": {
+  "fuente": "bogotahorrorfilmfest.com/programacion/ (arreglo PROGRAMACION del HTML) + IG p/DdcszK2Dn7g (franjas nacionales)",
+  "capturado": "2026-10-07",
+  "url": "https://bogotahorrorfilmfest.com/programacion/",
+  "metodo": "la parrilla del sitio; los cortos de cada franja, del carrusel"
+ },
+ "_fuera": [
+  "2026-10-23 El Ritual de Huasao: son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival no dice cuál es cada función; preguntado",
+  "2026-10-24 Franja Nacional · El Miedo Llega a Todas Partes: son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival no dice cuál es cada función; preguntado",
+  "2026-10-25 Nico: son dos (El Tunal y Fontanar del Río, según Canal Trece) y el festival no dice cuál es cada función; preguntado",
+  "«Arte FX» (22 oct 17:00) y «Maquillaje con las Garras» (24 oct 15:00), Lab 1: sin duración publicada; preguntado",
+  "«VFX para no técnicos» y «De la idea al guion»: los dos 23 oct 17:00 en Lab 1 (choque; preguntado)",
+  "Taller de Yei Cardozo y Encuentro de Realizadores de Género: sin fecha publicada"
+ ],
+ "funciones": [
+  {
+   "dia": "2026-10-22",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "sala": "Sala Capital",
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Parapeto",
+   "director": "Juan Manuel Buenaventura",
+   "anio": 2026,
+   "pais": "Colombia",
+   "duracion_min": 124,
+   "seccion": "Inauguración",
+   "premiere": "Inauguración"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sede": "Casa 32",
+   "acceso": "Entrada libre hasta completar aforo",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "titulo": "Sigilo",
+   "director": "Gabriela Vidal",
+   "anio": 2025,
+   "pais": "Argentina",
+   "duracion_min": 70,
+   "seccion": "Proyecciones"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "sala": "Sala 3",
+   "titulo": "Hiperrealidad",
+   "director": "Diego G. Medina",
+   "anio": 2025,
+   "pais": "Argentina",
+   "duracion_min": 81,
+   "seccion": "Proyecciones"
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "sala": "Sala Capital",
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Sierra: El Álbum Mortuorio",
+   "director": "Carlos Ortiz Alarcón",
+   "anio": 2026,
+   "pais": "Colombia",
+   "duracion_min": 88,
+   "seccion": "Proyecciones"
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "18:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "sala": "Sala 3",
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Moviedreams + Chaika",
+   "duracion_min": 122,
+   "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "Moviedreams",
+     "director": "Horacio Maldonado, Axel Maldonado",
+     "anio": 2026,
+     "pais": "Argentina",
+     "duracion_min": 107
+    },
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Bonilla Rodríguez",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 15
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-27",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "sala": "Sala 3",
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Cerdo que Sobrevivió a la Fiebre Aftosa + Yatsi y el Espíritu del Río",
+   "duracion_min": 114,
+   "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "Cerdo que Sobrevivió a la Fiebre Aftosa",
+     "director": "Hur Bum-Wook",
+     "anio": 2024,
+     "pais": "Corea del Sur",
+     "duracion_min": 105
+    },
+    {
+     "titulo": "Yatsi y el Espíritu del Río",
+     "director": "Valeria Salinas Yábar, Rous Condori Arango",
+     "anio": 2025,
+     "pais": "Perú",
+     "duracion_min": 9,
+     "_director_fuente": "la lámina 22 de la Selección y el sitio de la directora (cargocollective.com/rous) dicen «Rous»; la parrilla, «Roux»"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-27",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26",
+    "franja": "https://www.instagram.com/p/DdcszK2Dn7g/"
+   },
+   "sala": "Sala 3",
+   "titulo": "La Muerte No Llega Sola",
+   "seccion": "Franja Nacional",
+   "obras": [
+    {
+     "titulo": "El Ocaso De Los Dioses",
+     "director": "Juan Pablo Rendón",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Iris de Cristal",
+     "director": "Diego Gaviria Nieto",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Replay",
+     "director": "Simón Matallana Nossa",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Muertos que no son muertos",
+     "director": "Nicolás O. Segura",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Enigma",
+     "director": "Andrés Pulido",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 6
+    },
+    {
+     "titulo": "Eco",
+     "director": "Valeria Lopera Salas",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "La Noche De Las Bestias",
+     "director": "Eduart Zapata",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 23
+    },
+    {
+     "titulo": "El Laberinto del Cuerpo",
+     "director": "Esteban J. Corzo",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 10
+    }
+   ],
+   "duracion_min": 95
+  },
+  {
+   "dia": "2026-10-28",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "sala": "Sala 3",
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Work in Progress",
+   "director": "Diego Mezarina",
+   "anio": 2026,
+   "pais": "Perú",
+   "duracion_min": 119,
+   "seccion": "Proyecciones"
+  },
+  {
+   "dia": "2026-10-28",
+   "hora": "16:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "sala": "Sala 3",
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Dentro del Santiago Horror: Horror sin Fronteras",
+   "seccion": "Franja Internacional",
+   "obras": [
+    {
+     "titulo": "Paseo Nocturno",
+     "director": "Víctor Martín León",
+     "anio": 2026,
+     "pais": "España",
+     "duracion_min": 9
+    },
+    {
+     "titulo": "Niños Bien - Amanecer",
+     "director": "Daniel Vargas",
+     "anio": 2025,
+     "pais": "Chile",
+     "duracion_min": 4
+    },
+    {
+     "titulo": "Necrosectos",
+     "director": "Javier Lozano",
+     "anio": 2025,
+     "pais": "España",
+     "duracion_min": 10
+    },
+    {
+     "titulo": "The Callback",
+     "director": "Alvaro Pruneda",
+     "anio": 2025,
+     "pais": "Chile",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Pactum",
+     "director": "Pablo Otero",
+     "anio": 2026,
+     "pais": "España",
+     "duracion_min": 10
+    }
+   ],
+   "duracion_min": 70
+  },
+  {
+   "dia": "2026-10-29",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "sala": "Sala 3",
+   "titulo": "El Susurro + Esquirlas de Caracol",
+   "duracion_min": 100,
+   "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "El Susurro",
+     "director": "Gustavo Hernández",
+     "anio": 2025,
+     "pais": "Uruguay, Argentina",
+     "duracion_min": 89
+    },
+    {
+     "titulo": "Esquirlas de Caracol",
+     "director": "Manuel Alejandro Sánchez",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 11
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-29",
+   "hora": "17:30",
+   "sede": "Centro Felicidad Chapinero",
+   "acceso": "Entrada libre hasta completar aforo",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Donde Duermen los Sueños",
+   "director": "Daniel Riglos",
+   "anio": 2026,
+   "pais": "Perú",
+   "duracion_min": 78,
+   "seccion": "Proyecciones"
+  },
+  {
+   "dia": "2026-10-29",
+   "hora": "18:00",
+   "sede": "Co.Laboratorio",
+   "acceso": "Entrada libre hasta completar aforo",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "La Demonatrix + Gabriel",
+   "duracion_min": 90,
+   "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "La Demonatrix",
+     "director": "Jeff Ferrell, Aurelio Voltair",
+     "anio": 2025,
+     "pais": "Estados Unidos",
+     "duracion_min": 90
+    },
+    {
+     "titulo": "Gabriel",
+     "director": "Edwin Daniel Díaz",
+     "pais": "Colombia"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-29",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26",
+    "franja": "https://www.instagram.com/p/DdcszK2Dn7g/"
+   },
+   "sala": "Sala 3",
+   "titulo": "Algo No Está Bien",
+   "seccion": "Franja Nacional",
+   "obras": [
+    {
+     "titulo": "Vientre",
+     "director": "Pablo Sánchez Mejía, Moisés Cataño Rivillas",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Leonel",
+     "director": "Simón Ceballos Escobar",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 5
+    },
+    {
+     "titulo": "Prototipo",
+     "director": "Jeff Ruiz Rave",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "Que El Cielo Nos Perdone",
+     "director": "Andrés Buitrago",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "El Festín de las Moscas",
+     "director": "Katerine Franco Garzón",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 4
+    },
+    {
+     "titulo": "Hush",
+     "director": "Santiago Franco",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "Hasta que Amanezca",
+     "director": "Sebastián Rosas Santamaría",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 5
+    },
+    {
+     "titulo": "Quazar",
+     "director": "Alejandro Vargas",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 20
+    }
+   ],
+   "duracion_min": 95
+  },
+  {
+   "dia": "2026-10-30",
+   "hora": "17:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "sala": "Sala 3",
+   "titulo": "Hay Algo Esperando",
+   "seccion": "Franja Internacional",
+   "obras": [
+    {
+     "titulo": "Nocturna",
+     "director": "Pablo Olmos Arrayales",
+     "anio": 2025,
+     "pais": "México",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Happy",
+     "director": "Víctor Basallote",
+     "anio": 2026,
+     "pais": "España",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Año de Casados",
+     "director": "Pablo Camargo López",
+     "anio": 2025,
+     "pais": "México",
+     "duracion_min": 19
+    },
+    {
+     "titulo": "Anax",
+     "director": "LSDavid, Miguel Solís",
+     "anio": 2026,
+     "pais": "España",
+     "duracion_min": 14
+    },
+    {
+     "titulo": "El Diente Negro",
+     "director": "Anita Serrano",
+     "anio": 2026,
+     "pais": "Argentina",
+     "duracion_min": 24
+    },
+    {
+     "titulo": "Interior 8",
+     "director": "Lorena Toscano",
+     "anio": 2025,
+     "pais": "México",
+     "duracion_min": 17
+    }
+   ],
+   "duracion_min": 100
+  },
+  {
+   "dia": "2026-10-30",
+   "hora": "18:00",
+   "sede": "Casa 32",
+   "acceso": "Entrada libre hasta completar aforo",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "titulo": "MEAT the Movie + El Teatro: Monólogo de Horror",
+   "duracion_min": 134,
+   "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "MEAT the Movie",
+     "director": "Roger Conners",
+     "anio": 2025,
+     "pais": "Estados Unidos",
+     "duracion_min": 134
+    },
+    {
+     "titulo": "El Teatro: Monólogo de Horror"
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-30",
+   "hora": "19:30",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "sala": "Sala 3",
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Tarde o Temprano + Siempre hay un monstruo",
+   "duracion_min": 91,
+   "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "Tarde o Temprano",
+     "director": "Juan Pablo Chajín",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 74
+    },
+    {
+     "titulo": "Siempre hay un monstruo",
+     "director": "Gastón Haag",
+     "anio": 2026,
+     "pais": "España",
+     "duracion_min": 17
+    }
+   ]
+  },
+  {
+   "dia": "2026-10-31",
+   "hora": "16:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26",
+    "franja": "https://www.instagram.com/p/DdcszK2Dn7g/"
+   },
+   "sala": "Sala 3",
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Mamá, la Casa No Es Segura",
+   "seccion": "Franja Nacional",
+   "obras": [
+    {
+     "titulo": "Ruth",
+     "director": "Santiago Correa, Raquel Zapata, Marvin Cardona",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 6,
+     "_director_fuente": "el afiche (lámina 39 de la Selección): «un film de Santiago Correa, Raquel Zapata, Marvin Cardona»; la parrilla y el IG dan solo a Marvin Cardona y la lámina solo a Santiago Correa"
+    },
+    {
+     "titulo": "No Es El Fin Del Mundo",
+     "director": "Sebastián Flórez",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 17
+    },
+    {
+     "titulo": "Búhos",
+     "director": "Luis Enrique Vanegas",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Los Lobo",
+     "director": "Saeed García Pérez",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 20
+    },
+    {
+     "titulo": "La Habitación del Macho Cabrío",
+     "director": "Duban Pinzón",
+     "anio": 2025,
+     "pais": "Colombia",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Parásitos",
+     "director": "Samuel Andrés Ruiz Pico",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 12
+    },
+    {
+     "titulo": "Bajo El Mismo Techo",
+     "director": "Sophia Cadavid",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 13
+    },
+    {
+     "titulo": "Ubicua",
+     "director": "Juan González Henao",
+     "anio": 2026,
+     "pais": "Colombia",
+     "duracion_min": 12
+    }
+   ],
+   "duracion_min": 105
+  },
+  {
+   "dia": "2026-10-31",
+   "hora": "19:00",
+   "sede": "Cinemateca de Bogotá",
+   "acceso": "Con boleta: $7.000",
+   "_src": {
+    "url": "https://bogotahorrorfilmfest.com/programacion/",
+    "date": "2026-09-26"
+   },
+   "sala": "Sala Capital",
+   "titulo": "Clausura + Proyección Corto Nacional Ganador",
+   "tipo": "evento",
+   "event_kind": "clausura",
+   "seccion": "Clausura",
+   "sinopsis": "Cierre del festival · Entrega de premios.",
+   "duracion_min": 120
+  }
+ ]
+}

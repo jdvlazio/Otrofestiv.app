@@ -1,0 +1,34 @@
+{
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-10-07"
+ },
+ "Cinemateca de Bogotá": {
+  "_prec": "manual",
+  "_nota": "Heredada de BIFF 2026 y Narrar el Futuro 2026 (coincide al decimal con Google Maps, cineautopsia, ficdeh y qaff). Salas Sala Capital y Sala 3, de la parrilla del festival.",
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "address": "Cra. 3 #19-10"
+ },
+ "Centro Felicidad Chapinero": {
+  "_prec": "manual",
+  "_nota": "«CEFE Chapinero» en la parrilla = Centro Felicidad Chapinero. Heredada de BIFF 2026 (Cl. 82 #10-69, idéntica al PDF de BIFF).",
+  "lat": 4.6653416,
+  "lng": -74.0528448,
+  "address": "Cl. 82 #10-69"
+ },
+ "Casa 32": {
+  "_prec": "manual",
+  "_nota": "Dirección de la prensa del festival (Canal Trece): Av. Calle 32 #17-61, Teusaquillo; es la dirección de la casa (Hostel Casa 32 DC en Yandex, TripAdvisor, Kayak). Google Maps 4.6203473,-74.0734075 · OSM/Nominatim (tramo de la Av. Calle 32) 4.6209093,-74.0722020 · ~130 m; reverse OSM del pin de Google = Avenida Calle 32, Armenia, Teusaquillo.",
+  "lat": 4.6203473,
+  "lng": -74.0734075,
+  "address": "Av. Calle 32 #17-61, Teusaquillo"
+ },
+ "Co.Laboratorio": {
+  "_prec": "manual",
+  "_nota": "Dirección del propio festival (IG p/DdcszK2Dn7g: «Colaboratorio · Carrera 17 #32A-34») y de la prensa (Canal Trece). Google Maps 4.6215012,-74.0724229; no está en OSM como lugar; reverse OSM del pin de Google = Avenida Carrera 17, Teusaquillo — concuerda con la dirección (Cra. 17 entre Cl. 32 y 33, a una cuadra de Casa 32).",
+  "lat": 4.6215012,
+  "lng": -74.0724229,
+  "address": "Cra. 17 #32A-34, Teusaquillo"
+ }
+}

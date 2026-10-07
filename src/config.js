@@ -1214,6 +1214,21 @@ export const FESTIVAL_CONFIG={
     prioLimit:5,eventPosterLabel:['EVENTO',''],
     films:null,posters:null,lbSlugs:{}
   },
+  'bhff2026': {
+    name:'Bogotá Horror',displayName:'Bogotá Horror',fullName:'Bogotá Horror Film Festival 8',shortName:'BHFF',
+    tagline:'Festival de Cine de Horror',
+    city:'Bogotá',country:'CO',
+    dates:'22–31 OCT',dates_en:'OCT 22–31',year:2026,timezoneOffset:'-05:00',
+    storageKey:'bhff2026_',festivalStartStr:'2026-10-22T00:00:00',festivalEndStr:'2026-10-31T23:59:00',
+    festivalDates:{'2026-10-22':'2026-10-22','2026-10-23':'2026-10-23','2026-10-24':'2026-10-24','2026-10-25':'2026-10-25','2026-10-26':'2026-10-26','2026-10-27':'2026-10-27','2026-10-28':'2026-10-28','2026-10-29':'2026-10-29','2026-10-30':'2026-10-30','2026-10-31':'2026-10-31'},
+    days:[{k:'2026-10-22',d:22,lbl:'JUE'},{k:'2026-10-23',d:23,lbl:'VIE'},{k:'2026-10-24',d:24,lbl:'SÁB'},{k:'2026-10-25',d:25,lbl:'DOM'},{k:'2026-10-26',d:26,lbl:'LUN'},{k:'2026-10-27',d:27,lbl:'MAR'},{k:'2026-10-28',d:28,lbl:'MIÉ'},{k:'2026-10-29',d:29,lbl:'JUE'},{k:'2026-10-30',d:30,lbl:'VIE'},{k:'2026-10-31',d:31,lbl:'SÁB'}],
+    dayKeys:['2026-10-22','2026-10-23','2026-10-24','2026-10-25','2026-10-26','2026-10-27','2026-10-28','2026-10-29','2026-10-30','2026-10-31'],
+    dayShort:{'2026-10-22':'JUE 22','2026-10-23':'VIE 23','2026-10-24':'SÁB 24','2026-10-25':'DOM 25','2026-10-26':'LUN 26','2026-10-27':'MAR 27','2026-10-28':'MIÉ 28','2026-10-29':'JUE 29','2026-10-30':'VIE 30','2026-10-31':'SÁB 31'},
+    dayShort_en:{'2026-10-22':'THU 22','2026-10-23':'FRI 23','2026-10-24':'SAT 24','2026-10-25':'SUN 25','2026-10-26':'MON 26','2026-10-27':'TUE 27','2026-10-28':'WED 28','2026-10-29':'THU 29','2026-10-30':'FRI 30','2026-10-31':'SAT 31'},
+    dayLong:{'2026-10-22':'Jueves 22 de octubre','2026-10-23':'Viernes 23 de octubre','2026-10-24':'Sábado 24 de octubre','2026-10-25':'Domingo 25 de octubre','2026-10-26':'Lunes 26 de octubre','2026-10-27':'Martes 27 de octubre','2026-10-28':'Miércoles 28 de octubre','2026-10-29':'Jueves 29 de octubre','2026-10-30':'Viernes 30 de octubre','2026-10-31':'Sábado 31 de octubre'},
+    prioLimit:5,eventPosterLabel:['EVENTO',''],
+    films:null,posters:null,lbSlugs:{}
+  },
   'fantasmagoria2026': {
     name:'Fantasmagoría',displayName:'Fantasmagoría',fullName:'Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín',shortName:'FANTASMAGORÍA',
     city:'Medellín',country:'CO',
@@ -1319,6 +1334,10 @@ export const SECTION_ARCHETYPES = {
   '📽️ Proyecciones': 'Especiales / Eventos',   // FICCALI 18
   '🎓 Académico': 'Charlas / Industria',   // FICCALI 18
   '🤝 Conexiones': 'Charlas / Industria',   // FICCALI 18
+  '🎉 Inauguración': 'Apertura / Gala',   // Bogotá Horror 8
+  '🇨🇴 Franja Nacional': 'Competencia',   // Bogotá Horror 8
+  '🌍 Franja Internacional': 'Cortos / Programas',   // Bogotá Horror 8
+  '🌙 Clausura': 'Clausura',   // Bogotá Horror 8
   '🎙️ Comunicaciones': 'Charlas / Industria',
   // ── Festival de Cine de Jardín 11 · Jardín, Antioquia ──────────────────
   '🎬 Muestra Central': 'Muestra / País',
