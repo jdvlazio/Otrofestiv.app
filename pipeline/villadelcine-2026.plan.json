@@ -127,6 +127,11 @@
     "emoji": "🎙️",
     "en": "Communications",
     "archetype": "Charlas / Industria"
+   },
+   "Exhibición Patrimonial": {
+    "emoji": "🎞️",
+    "en": "Heritage Screening",
+    "archetype": "Retrospectiva / Tributo"
    }
   },
   "sedes": {
@@ -153,6 +158,26 @@
    "Museo Casa Antonio Nariño Salón principal 2do piso": [
     "Museo Casa Antonio Nariño - Villa de Leyva",
     "Salón principal · 2do piso"
+   ],
+   "San Pedro Campestre": [
+    "Casa San Pedro Campestre - Villa de Leyva",
+    ""
+   ],
+   "Hotel Mesón de los Virreyes: Auditorio": [
+    "Hotel Mesón de los Virreyes - Villa de Leyva",
+    "Auditorio"
+   ],
+   "Hotel Mesón de los Virreyes: Biblioteca": [
+    "Hotel Mesón de los Virreyes - Villa de Leyva",
+    "Biblioteca"
+   ],
+   "Casa Museo Antonio Nariño": [
+    "Museo Casa Antonio Nariño - Villa de Leyva",
+    ""
+   ],
+   "Hotel Plaza Mayor": [
+    "Hotel Plaza Mayor - Villa de Leyva",
+    ""
    ]
   },
   "acceso_por_defecto": {
@@ -164,16 +189,16 @@
   "fullName": "Festival Villa del Cine — Villa de Leyva",
   "city": "Villa de Leyva",
   "country": "CO",
-  "dates": "23–26 SEP",
-  "dates_en": "SEP 23–26",
+  "dates": "14–17 OCT",
+  "dates_en": "OCT 14–17",
   "year": 2026,
   "timezoneOffset": "-05:00",
   "storageKey": "villadelcine2026_",
-  "festivalStartStr": "2026-09-23T00:00:00",
-  "festivalEndStr": "2026-09-26T23:59:00",
+  "festivalStartStr": "2026-10-14T00:00:00",
+  "festivalEndStr": "2026-10-17T23:59:00",
   "sharedSlotIsOneScreening": false,
   "ticketing_model": "mixed",
-  "mes_es": "septiembre",
+  "mes_es": "octubre",
   "dias_vacios": [],
   "crudo": "festivals/staging/villadelcine-2026-crudo.json",
   "geo": "festivals/staging/villadelcine-2026-venues-geo.json",

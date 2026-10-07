@@ -1,260 +1,289 @@
 {
  "_provenance": {
   "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF de 67 páginas) — botón PROGRAMACIÓN de villadelcine.com, subido el 18 sep 2026",
-  "capturado": "2026-09-21",
+  "capturado": "2026-10-06",
   "que_aporta": "la parrilla de los 4 días (día, hora de inicio y sede de cada bloque), la ficha de cada obra agrupada por programa, y la Ruta Académica",
-  "url": "https://villadelcine.com/wp-content/uploads/2026/09/Programacion-caminos-del-tiempo-2026_compressed.pdf",
+  "url": "https://villadelcine.com/wp-content/uploads/2026/10/Programacion-caminos-del-tiempo-2026.pdf",
   "metodo": "el PDF trae capa de texto; se lee con pdftotext -bbox-layout porque en la retícula la columna es la SEDE y la fila la HORA: sin las cajas no se distingue el 1er piso del 2do en la misma sede. La hora de FIN no se deduce del alto del texto (va centrado en la celda): la duración sale de la ficha de cada obra"
  },
  "bloques": [
   {
-   "sede": "Casa San Pedro Campestre",
+   "sede": "San Pedro Campestre",
    "hora": "17:00",
-   "hasta": "17:45",
-   "duracion_min": 45,
+   "hasta": "17:30",
+   "duracion_min": 30,
    "lineas": [
-    "Ceremonia UNQUY de apertura y",
-    "ritual con Cine Concierto CAMINOS",
-    "SONOROS León Quintero"
+    "Ceremonia",
+    "UNQUY",
+    "Apertura"
    ],
    "caja": [
-    88.3,
-    141.0,
-    166.0,
-    163.1
+    93.1,
+    136.2,
+    216.8,
+    156.4
    ],
-   "dia": "2026-09-23",
-   "pagina": 2
+   "dia": "2026-10-14",
+   "pagina": 3
   },
   {
-   "sede": "Casa San Pedro Campestre",
+   "sede": "San Pedro Campestre",
+   "hora": "17:30",
+   "hasta": "17:45",
+   "duracion_min": 15,
+   "lineas": [
+    "Cine Concierto CAMINOS SONOROS",
+    "León Quintero"
+   ],
+   "caja": [
+    93.1,
+    159.8,
+    216.8,
+    169.8
+   ],
+   "dia": "2026-10-14",
+   "pagina": 3
+  },
+  {
+   "sede": "San Pedro Campestre",
    "hora": "17:45",
    "hasta": "18:15",
    "duracion_min": 30,
    "lineas": [
-    "AMOR A PRIMERA VISTA, Dir, Andrés",
-    "Quintero Campos Cortometraje",
-    "Territorios: BOYACÁ EN LOS CAMPOS",
-    "Selección Oficial No Competitiva"
+    "AMOR A PRIMERA VISTA,",
+    "Dir. Andrés Quintero Campos",
+    "Cortometraje",
+    "Territorios: BOYACÁ EN LOS CAMPOS"
    ],
    "caja": [
-    87.8,
-    168.4,
-    165.5,
-    191.4
+    93.1,
+    172.7,
+    217.8,
+    204.4
    ],
-   "dia": "2026-09-23",
-   "pagina": 2
+   "dia": "2026-10-14",
+   "pagina": 3
   },
   {
-   "sede": "Casa San Pedro Campestre",
+   "sede": "San Pedro Campestre",
    "hora": "18:15",
    "hasta": "18:30",
    "duracion_min": 15,
    "lineas": [
-    "MUCHO GUSTO,",
-    "Dir. Cintia Obando",
-    "Narrativas Divergentes:",
-    "PORTALES",
-    "Selección Oficial en",
-    "Competencia"
+    "MUCHO GUSTO, Dir. Cintia Obando",
+    "Video Musical",
+    "Narrativas Divergentes: PORTALES"
    ],
    "caja": [
-    87.8,
-    195.3,
-    166.0,
-    239.9
+    92.6,
+    207.7,
+    216.8,
+    233.2
    ],
-   "dia": "2026-09-23",
-   "pagina": 2
-  },
-  {
-   "sede": "Casa San Pedro Campestre",
-   "hora": "18:30",
-   "hasta": "20:30",
-   "duracion_min": 120,
-   "lineas": [
-    "ARENAS,",
-    "Dir. John Bolívar Acosta",
-    "Ópera Prima Nacional",
-    "Nuevas Miradas:",
-    "RESISTENCIAS",
-    "Selección Oficial en",
-    "Competencia"
-   ],
-   "caja": [
-    87.8,
-    251.4,
-    166.0,
-    371.3
-   ],
-   "dia": "2026-09-23",
-   "pagina": 2
-  },
-  {
-   "sede": "Casa San Pedro Campestre",
-   "hora": "09:00",
-   "hasta": "13:00",
-   "duracion_min": 240,
-   "lineas": [
-    "Programación Infantil:",
-    "X-PLORA CINE",
-    "Selección Oficial No",
-    "Competitiva"
-   ],
-   "caja": [
-    89.2,
-    130.0,
-    166.5,
-    343.0
-   ],
-   "dia": "2026-09-24",
+   "dia": "2026-10-14",
    "pagina": 3
   },
   {
-   "sede": "Biblioteca del Hotel Mesón de los Virreyes",
+   "sede": "San Pedro Campestre",
+   "hora": "18:30",
+   "hasta": "21:00",
+   "duracion_min": 150,
+   "lineas": [
+    "ARENAS,",
+    "Dir. John Bolívar Acosta",
+    "Largometraje",
+    "Nuevas Miradas: RESISTENCIAS"
+   ],
+   "caja": [
+    92.1,
+    235.6,
+    217.8,
+    356.4
+   ],
+   "dia": "2026-10-14",
+   "pagina": 3
+  },
+  {
+   "sede": "San Pedro Campestre",
+   "hora": "09:00",
+   "hasta": "09:45",
+   "duracion_min": 45,
+   "lineas": [
+    "Programación Infantil:",
+    "X-PLORA CINE",
+    "Selección Ofiicial No Competitiva"
+   ],
+   "caja": [
+    95.5,
+    126.7,
+    179.9,
+    161.7
+   ],
+   "dia": "2026-10-15",
+   "pagina": 4
+  },
+  {
+   "sede": "Hotel Mesón de los Virreyes: Biblioteca",
    "hora": "09:15",
    "hasta": "12:30",
    "duracion_min": 195,
    "lineas": [
     "Comunicaciones:",
     "ENTRE - VISTAS",
-    "Entrevistas a",
-    "Seleccionados"
+    "Entrevistas a Seleccionados"
    ],
    "caja": [
-    475.9,
-    142.0,
-    550.7,
-    315.2
+    474.9,
+    141.5,
+    565.1,
+    311.8
    ],
-   "dia": "2026-09-24",
-   "pagina": 3
+   "dia": "2026-10-15",
+   "pagina": 4
   },
   {
-   "sede": "Galería Pérez Rojas",
-   "hora": "09:15",
-   "hasta": "10:15",
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
+   "hora": "09:30",
+   "hasta": "10:30",
    "duracion_min": 60,
    "lineas": [
-    "#Hija",
-    "Ruta Académica",
-    "CineCamino",
-    "CLUB DE PITCH"
+    "Ruta Académica:",
+    "CINECAMINO",
+    "CLUB DE PITCH",
+    "Encuentro Work In Progress"
    ],
    "caja": [
-    173.7,
-    141.0,
-    245.6,
-    190.0
+    377.1,
+    153.0,
+    469.7,
+    202.9
    ],
-   "dia": "2026-09-24",
-   "pagina": 3
+   "dia": "2026-10-15",
+   "pagina": 4
   },
   {
-   "sede": "Museo Casa Antonio Nariño Salón principal 2do piso",
+   "sede": "San Pedro Campestre",
+   "hora": "09:45",
+   "hasta": "10:30",
+   "duracion_min": 45,
+   "lineas": [
+    "Estudiantes IE Nueva Generación",
+    "Sáchica, Boyacá",
+    "Cortometraje + Q&A",
+    "EL FÓSIL MÁGICO,"
+   ],
+   "caja": [
+    95.5,
+    166.0,
+    180.9,
+    203.4
+   ],
+   "dia": "2026-10-15",
+   "pagina": 4
+  },
+  {
+   "sede": "Casa Museo Antonio Nariño",
    "hora": "10:00",
    "hasta": "12:00",
    "duracion_min": 120,
    "lineas": [
-    "Ruta Académica",
-    "CineCamino",
-    "CLAQUETAZO - Inicio",
-    "Laboratorio de",
-    "Creación"
+    "Ruta Académica:",
+    "CINECAMINO",
+    "CLAQUETAZO",
+    "Laboratorio de Creación"
    ],
    "caja": [
-    389.5,
-    181.8,
-    467.3,
-    288.3
+    276.8,
+    180.9,
+    370.4,
+    285.9
    ],
-   "dia": "2026-09-24",
-   "pagina": 3
+   "dia": "2026-10-15",
+   "pagina": 4
   },
   {
-   "sede": "Auditorio del Hotel Mesón de los Virreyes",
+   "sede": "San Pedro Campestre",
    "hora": "10:30",
    "hasta": "12:30",
    "duracion_min": 120,
    "lineas": [
-    "Muestra Especial:",
-    "Festival de Cine",
-    "EUREKA",
-    "Q&A"
+    "FARMEANDO EL TUNJO",
+    "Taller de Creación",
+    "cinematográfica con",
+    "Inteligencia Artificial",
+    "Programación Infantil:",
+    "X-PLORA CINE"
    ],
    "caja": [
-    253.3,
-    209.6,
-    313.8,
-    316.1
+    94.5,
+    206.8,
+    179.9,
+    314.2
    ],
-   "dia": "2026-09-24",
-   "pagina": 3
-  },
-  {
-   "sede": "Galería Pérez Rojas",
-   "hora": "10:45",
-   "hasta": "11:45",
-   "duracion_min": 60,
-   "lineas": [
-    "Territorios: BOYACÁ",
-    "EN LOS CAMPOS",
-    "Selección Oficial No",
-    "Competitiva"
-   ],
-   "caja": [
-    174.1,
-    223.1,
-    245.1,
-    273.9
-   ],
-   "dia": "2026-09-24",
-   "pagina": 3
-  },
-  {
-   "sede": "Auditorio del Hotel Mesón de los Virreyes",
-   "hora": "14:00",
-   "hasta": "17:15",
-   "duracion_min": 195,
-   "lineas": [
-    "Nuevas Miradas:",
-    "ECLIPSES",
-    "Cortometraje",
-    "Nacional - Ópera",
-    "Prima Nacional -",
-    "Cortometraje",
-    "Internacional",
-    "2:52:48"
-   ],
-   "caja": [
-    253.3,
-    118.0,
-    314.2,
-    288.3
-   ],
-   "dia": "2026-09-24",
+   "dia": "2026-10-15",
    "pagina": 4
   },
   {
-   "sede": "Biblioteca del Hotel Mesón de los Virreyes",
-   "hora": "14:00",
-   "hasta": "16:00",
+   "sede": "Galería Pérez Rojas",
+   "hora": "11:00",
+   "hasta": "13:00",
    "duracion_min": 120,
    "lineas": [
-    "Narrativas",
-    "Divergentes: SEÑALES",
-    "Realidad Virtual -",
-    "Selección Oficial",
-    "Competitiva"
+    "Lenguajes Emergentes:",
+    "ECOS",
+    "YoungFilm",
+    "Cortometraje Apacionado",
+    "Nacional",
+    "Cortometraje Apasionado",
+    "Internacional",
+    "Cortometraje Escolar"
    ],
    "caja": [
-    475.9,
-    117.5,
-    551.7,
-    219.2
+    187.1,
+    238.0,
+    270.6,
+    343.5
    ],
-   "dia": "2026-09-24",
+   "dia": "2026-10-15",
+   "pagina": 4
+  },
+  {
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
+   "hora": "11:30",
+   "hasta": "13:00",
+   "duracion_min": 90,
+   "lineas": [
+    "Exhibición Especial:",
+    "NUEVA OLA ROLA",
+    "Festival de Cine EUREKA",
+    "Muestra + Q&A"
+   ],
+   "caja": [
+    376.1,
+    264.8,
+    468.7,
+    343.5
+   ],
+   "dia": "2026-10-15",
+   "pagina": 4
+  },
+  {
+   "sede": "San Pedro Campestre",
+   "hora": "12:30",
+   "hasta": "13:00",
+   "duracion_min": 30,
+   "lineas": [
+    "Programación Infantil:",
+    "X-PLORA CINE",
+    "Selección Ofiicial No Competitiva"
+   ],
+   "caja": [
+    95.0,
+    318.1,
+    179.9,
+    344.5
+   ],
+   "dia": "2026-10-15",
    "pagina": 4
   },
   {
@@ -263,18 +292,81 @@
    "hasta": "15:00",
    "duracion_min": 60,
    "lineas": [
-    "Territorios: VOCES",
+    "Territorios:",
+    "VOCES",
     "Selección Oficial No",
     "Competitiva"
    ],
    "caja": [
-    173.7,
-    118.5,
-    244.7,
-    164.1
+    189.0,
+    116.6,
+    269.6,
+    161.2
    ],
-   "dia": "2026-09-24",
-   "pagina": 4
+   "dia": "2026-10-15",
+   "pagina": 5
+  },
+  {
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
+   "hora": "14:00",
+   "hasta": "17:15",
+   "duracion_min": 195,
+   "lineas": [
+    "Nuevas Miradas:",
+    "ECLIPSES",
+    "Cortometraje Nacional",
+    "Ópera Prima Nacional",
+    "Cortometraje Internacional"
+   ],
+   "caja": [
+    378.5,
+    116.6,
+    466.3,
+    283.0
+   ],
+   "dia": "2026-10-15",
+   "pagina": 5
+  },
+  {
+   "sede": "Hotel Mesón de los Virreyes: Biblioteca",
+   "hora": "14:00",
+   "hasta": "16:00",
+   "duracion_min": 120,
+   "lineas": [
+    "Narrativas Divergentes:",
+    "SEÑALES",
+    "Realidad Virtual",
+    "Selección Oficial en",
+    "Competencia"
+   ],
+   "caja": [
+    475.4,
+    114.7,
+    565.1,
+    215.9
+   ],
+   "dia": "2026-10-15",
+   "pagina": 5
+  },
+  {
+   "sede": "Casa Museo Antonio Nariño",
+   "hora": "15:00",
+   "hasta": "17:00",
+   "duracion_min": 120,
+   "lineas": [
+    "Ruta Académica:",
+    "CINECAMINO",
+    "CLAQUETAZO",
+    "Laboratorio de Creación"
+   ],
+   "caja": [
+    281.1,
+    168.4,
+    367.0,
+    271.1
+   ],
+   "dia": "2026-10-15",
+   "pagina": 5
   },
   {
    "sede": "Galería Pérez Rojas",
@@ -282,40 +374,19 @@
    "hasta": "17:00",
    "duracion_min": 120,
    "lineas": [
-    "Ruta Académica",
-    "CineCamino",
-    "IGUAQUE",
-    "Estación"
+    "Ruta Académica:",
+    "CINECAMINO",
+    "Estación",
+    "IGUAQUE"
    ],
    "caja": [
-    173.2,
-    168.9,
-    245.6,
-    275.4
+    188.1,
+    166.0,
+    271.1,
+    272.0
    ],
-   "dia": "2026-09-24",
-   "pagina": 4
-  },
-  {
-   "sede": "Museo Casa Antonio Nariño Salón principal 2do piso",
-   "hora": "15:00",
-   "hasta": "17:00",
-   "duracion_min": 120,
-   "lineas": [
-    "Ruta Académica",
-    "CineCamino",
-    "CLAQUETAZO",
-    "Laboratorio de",
-    "Creación"
-   ],
-   "caja": [
-    389.5,
-    168.9,
-    466.3,
-    275.4
-   ],
-   "dia": "2026-09-24",
-   "pagina": 4
+   "dia": "2026-10-15",
+   "pagina": 5
   },
   {
    "sede": "Galería Pérez Rojas",
@@ -323,66 +394,39 @@
    "hasta": "18:45",
    "duracion_min": 105,
    "lineas": [
-    "Industria: GÉNESIS",
+    "Industria:",
+    "GÉNESIS",
     "Work In Progress"
    ],
    "caja": [
-    173.2,
-    283.5,
-    245.1,
-    370.8
+    188.5,
+    277.3,
+    270.1,
+    365.6
    ],
-   "dia": "2026-09-24",
-   "pagina": 4
+   "dia": "2026-10-15",
+   "pagina": 5
   },
   {
-   "sede": "Auditorio del Hotel Mesón de los Virreyes",
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
    "hora": "17:15",
-   "hasta": "18:45",
-   "duracion_min": 90,
+   "hasta": "19:15",
+   "duracion_min": 120,
    "lineas": [
-    "Lenguajes Emergentes:",
-    "ECOS",
-    "YoungFilm -",
-    "Cortometraje",
-    "Apasionado Nacional -",
-    "International",
-    "Universities -",
-    "Cortometraje Escolar"
+    "Exhibición Especial:",
+    "LLUEVE SOBRE BABEL,",
+    "Dir. Gala Del Sol",
+    "Rumbo a Los Macondo"
    ],
    "caja": [
-    253.3,
-    296.0,
-    314.2,
-    356.0
+    379.0,
+    292.2,
+    466.3,
+    365.6
    ],
-   "dia": "2026-09-24",
-   "pagina": 4
-  },
-  {
-   "sede": "Auditorio del Hotel Mesón de los Virreyes",
-   "hora": "18:45",
-   "hasta": "22:00",
-   "duracion_min": 195,
-   "lineas": [
-    "Nuevas Miradas:",
-    "TRÁNSITOS",
-    "Cortometraje",
-    "Nacional - Ópera",
-    "Prima Nacional -",
-    "Cortometraje",
-    "Internacional",
-    "3:05:11"
-   ],
-   "caja": [
-    261.0,
-    123.3,
-    322.4,
-    282.6
-   ],
-   "dia": "2026-09-24",
+   "dia": "2026-10-15",
    "pagina": 5,
-   "_empieza_antes": "la página 4 dibuja su arranque a las 18:45, sin rótulo"
+   "_termina_despues": "la página 6 dibuja su final hasta las 19:15, sin rótulo"
   },
   {
    "sede": "Galería Pérez Rojas",
@@ -392,45 +436,62 @@
    "lineas": [
     "Nuevas Miradas:",
     "UMBRALES",
-    "Cortometraje",
-    "Nacional - Ópera",
-    "Prima Nacional -",
-    "Cortometraje",
-    "Internacional",
-    "2:40:26"
+    "Cortometraje Nacional",
+    "Ópera Prima Nacional",
+    "Cortometraje Internacional"
    ],
    "caja": [
-    181.3,
-    123.3,
-    254.3,
-    283.5
+    186.6,
+    149.2,
+    272.0,
+    305.6
    ],
-   "dia": "2026-09-24",
-   "pagina": 5
-  },
-  {
-   "sede": "Casa San Pedro Campestre",
-   "hora": "09:00",
-   "hasta": "13:00",
-   "duracion_min": 240,
-   "lineas": [
-    "Programación Infantil:",
-    "X-PLORA CINE",
-    "Selección Oficial No",
-    "Competitiva",
-    "IA"
-   ],
-   "caja": [
-    89.2,
-    130.0,
-    166.5,
-    343.0
-   ],
-   "dia": "2026-09-25",
+   "dia": "2026-10-15",
    "pagina": 6
   },
   {
-   "sede": "Biblioteca del Hotel Mesón de los Virreyes",
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
+   "hora": "19:15",
+   "hasta": "22:00",
+   "duracion_min": 165,
+   "lineas": [
+    "Nuevas Miradas:",
+    "TRÁNSITOS",
+    "Cortometraje Nacional",
+    "Ópera Prima Nacional",
+    "Cortometraje Internacional"
+   ],
+   "caja": [
+    376.1,
+    162.6,
+    467.3,
+    305.6
+   ],
+   "dia": "2026-10-15",
+   "pagina": 6
+  },
+  {
+   "sede": "San Pedro Campestre",
+   "hora": "09:00",
+   "hasta": "09:45",
+   "duracion_min": 45,
+   "lineas": [
+    "Programación Infantil:",
+    "X-PLORA CINE",
+    "Selección Ofiicial No",
+    "Competitiva"
+   ],
+   "caja": [
+    77.7,
+    128.1,
+    155.4,
+    163.6
+   ],
+   "dia": "2026-10-16",
+   "pagina": 7
+  },
+  {
+   "sede": "Hotel Mesón de los Virreyes: Biblioteca",
    "hora": "09:15",
    "hasta": "12:30",
    "duracion_min": 195,
@@ -441,13 +502,54 @@
     "Seleccionados"
    ],
    "caja": [
-    475.9,
+    502.8,
     142.0,
-    550.7,
-    315.2
+    581.4,
+    314.7
    ],
-   "dia": "2026-09-25",
-   "pagina": 6
+   "dia": "2026-10-16",
+   "pagina": 7
+  },
+  {
+   "sede": "San Pedro Campestre",
+   "hora": "09:45",
+   "hasta": "11:45",
+   "duracion_min": 120,
+   "lineas": [
+    "Programación Infantil:",
+    "X-PLORA CINE",
+    "CIANOTIPIA",
+    "Taller de Experimentación",
+    "y Fotografía Analógica"
+   ],
+   "caja": [
+    78.2,
+    168.4,
+    155.9,
+    274.4
+   ],
+   "dia": "2026-10-16",
+   "pagina": 7
+  },
+  {
+   "sede": "Casa Museo Antonio Nariño",
+   "hora": "10:00",
+   "hasta": "12:00",
+   "duracion_min": 120,
+   "lineas": [
+    "Ruta Académica:",
+    "CINECAMINO",
+    "CLAQUETAZO",
+    "Laboratorio de Creación"
+   ],
+   "caja": [
+    324.3,
+    182.3,
+    409.7,
+    287.8
+   ],
+   "dia": "2026-10-16",
+   "pagina": 7
   },
   {
    "sede": "Galería Pérez Rojas",
@@ -458,89 +560,67 @@
     "Narrativas",
     "Divergentes:",
     "PORTALES",
-    "Video Musical -",
+    "Video Musical",
     "Cortometraje con",
-    "Celular -",
+    "Celular",
     "Cortometraje Vertical",
-    "- Cortometraje IA"
+    "Cortometraje IA"
    ],
    "caja": [
-    173.7,
-    183.3,
-    247.5,
-    273.5
+    162.2,
+    183.7,
+    234.6,
+    272.5
    ],
-   "dia": "2026-09-25",
-   "pagina": 6
+   "dia": "2026-10-16",
+   "pagina": 7
   },
   {
-   "sede": "Museo Casa Antonio Nariño Salón principal 1er piso",
+   "sede": "Hotel Plaza Mayor",
    "hora": "10:00",
    "hasta": "13:00",
    "duracion_min": 180,
    "lineas": [
-    "Ruta Académica",
-    "CineCamino",
     "DEL COLLAGE AL",
     "PÓSTER",
-    "Creación de",
+    "Taller de Creación de",
     "Afiches Para Cine",
-    "Taller",
-    "EUREKA"
+    "Ruta Académica::",
+    "CINECAMINO",
+    "Festival de Cine EUREKA"
    ],
    "caja": [
-    319.0,
-    182.3,
-    383.3,
-    344.0
+    239.9,
+    182.8,
+    319.5,
+    343.5
    ],
-   "dia": "2026-09-25",
-   "pagina": 6
+   "dia": "2026-10-16",
+   "pagina": 7
   },
   {
-   "sede": "Museo Casa Antonio Nariño Salón principal 2do piso",
-   "hora": "10:00",
-   "hasta": "12:00",
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
+   "hora": "10:30",
+   "hasta": "12:30",
    "duracion_min": 120,
    "lineas": [
     "Ruta Académica",
-    "CineCamino",
-    "CLAQUETAZO",
-    "Laboratorio de",
-    "Creación"
+    "CINECAMINO",
+    "RESTAURANDO EL",
+    "Conservación y",
+    "Recuperación del",
+    "Patrimonio Fílmico",
+    "Fundación Patrimonio",
+    "Fílmico Colombiano"
    ],
    "caja": [
-    389.5,
-    181.8,
-    467.3,
-    288.3
+    414.5,
+    208.7,
+    496.5,
+    316.1
    ],
-   "dia": "2026-09-25",
-   "pagina": 6
-  },
-  {
-   "sede": "Auditorio del Hotel Mesón de los Virreyes",
-   "hora": "10:30",
-   "hasta": "12:45",
-   "duracion_min": 135,
-   "lineas": [
-    "Ruta Académica",
-    "CineCamino",
-    "RESTAURACIÓN",
-    "peliculas la paga",
-    "y Aquileo",
-    "Venganza del",
-    "Director Ciro",
-    "Durán"
-   ],
-   "caja": [
-    251.4,
-    210.1,
-    315.2,
-    328.6
-   ],
-   "dia": "2026-09-25",
-   "pagina": 6
+   "dia": "2026-10-16",
+   "pagina": 7
   },
   {
    "sede": "Galería Pérez Rojas",
@@ -548,179 +628,235 @@
    "hasta": "13:00",
    "duracion_min": 75,
    "lineas": [
-    "Territorios: PLANETA",
+    "Territorios:",
+    "PLANETA",
     "Selección Oficial No",
     "Competitiva"
    ],
    "caja": [
-    173.2,
+    162.6,
     280.6,
-    247.1,
-    354.0
+    234.6,
+    342.5
    ],
-   "dia": "2026-09-25",
-   "pagina": 6
+   "dia": "2026-10-16",
+   "pagina": 7
   },
   {
-   "sede": "Auditorio del Hotel Mesón de los Virreyes",
+   "sede": "San Pedro Campestre",
+   "hora": "11:45",
+   "hasta": "13:00",
+   "duracion_min": 75,
+   "lineas": [
+    "Programación Infantil:",
+    "X-PLORA CINE",
+    "Selección Ofiicial No",
+    "Competitiva"
+   ],
+   "caja": [
+    77.2,
+    279.2,
+    155.0,
+    343.0
+   ],
+   "dia": "2026-10-16",
+   "pagina": 7
+  },
+  {
+   "sede": "Galería Pérez Rojas",
+   "hora": "14:00",
+   "hasta": "15:00",
+   "duracion_min": 60,
+   "lineas": [
+    "Territorios:",
+    "BOYACÁ",
+    "EN LOS",
+    "CAMPOS",
+    "Selección Oficial No",
+    "Competitiva"
+   ],
+   "caja": [
+    163.6,
+    108.9,
+    232.7,
+    154.5
+   ],
+   "dia": "2026-10-16",
+   "pagina": 8
+  },
+  {
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
    "hora": "14:00",
    "hasta": "17:00",
    "duracion_min": 180,
    "lineas": [
     "Nuevas Miradas:",
     "METAMORFOSIS",
-    "Cortometraje",
-    "Nacional - Ópera",
-    "Prima",
-    "Internacional -",
-    "Cortometraje",
-    "Internacional",
-    "2:40:26"
+    "Cortometraje Nacional",
+    "Ópera Prima Internacional",
+    "Cortometraje Internacional"
    ],
    "caja": [
-    253.3,
-    118.0,
-    314.2,
-    275.4
+    406.8,
+    109.4,
+    485.0,
+    260.0
    ],
-   "dia": "2026-09-25",
-   "pagina": 7
+   "dia": "2026-10-16",
+   "pagina": 8
   },
   {
-   "sede": "Biblioteca del Hotel Mesón de los Virreyes",
+   "sede": "Hotel Mesón de los Virreyes: Biblioteca",
    "hora": "14:00",
    "hasta": "16:00",
    "duracion_min": 120,
    "lineas": [
-    "Narrativas",
-    "Divergentes: SEÑALES",
-    "Realidad Virtual -",
+    "Narrativas Divergentes:",
+    "SEÑALES",
+    "Realidad Virtual",
     "Selección Oficial",
     "Competitiva"
    ],
    "caja": [
-    475.9,
-    117.5,
-    551.7,
-    219.2
+    491.7,
+    110.3,
+    564.7,
+    207.2
    ],
-   "dia": "2026-09-25",
-   "pagina": 7
+   "dia": "2026-10-16",
+   "pagina": 8
+  },
+  {
+   "sede": "Hotel Plaza Mayor",
+   "hora": "14:15",
+   "hasta": "16:00",
+   "duracion_min": 105,
+   "lineas": [
+    "TRAZOS",
+    "Charla con",
+    "Realizadores",
+    "Ruta Académica",
+    "CINECAMINO"
+   ],
+   "caja": [
+    240.8,
+    120.9,
+    314.7,
+    208.7
+   ],
+   "dia": "2026-10-16",
+   "pagina": 8
+  },
+  {
+   "sede": "Casa Museo Antonio Nariño",
+   "hora": "15:00",
+   "hasta": "17:00",
+   "duracion_min": 120,
+   "lineas": [
+    "Ruta Académica",
+    "CINECAMINO",
+    "CLAQUETAZO",
+    "Laboratorio de Creación"
+   ],
+   "caja": [
+    320.9,
+    161.7,
+    401.1,
+    260.5
+   ],
+   "dia": "2026-10-16",
+   "pagina": 8
   },
   {
    "sede": "Galería Pérez Rojas",
    "hora": "15:00",
-   "hasta": "17:00",
-   "duracion_min": 120,
-   "lineas": [
-    "Ruta Académica",
-    "CineCamino",
-    "IGUAQUE",
-    "Estación"
-   ],
-   "caja": [
-    173.2,
-    168.9,
-    245.6,
-    275.9
-   ],
-   "dia": "2026-09-25",
-   "pagina": 7
-  },
-  {
-   "sede": "Museo Casa Antonio Nariño Salón principal 1er piso",
-   "hora": "15:00",
    "hasta": "16:30",
    "duracion_min": 90,
    "lineas": [
-    "Ruta Académica",
-    "CineCamino",
-    "GENTE QUE",
-    "HACE CINE",
-    "Charla"
+    "Ruta Académica:",
+    "CINECAMINO",
+    "Estación",
+    "IGUAQUE"
    ],
    "caja": [
-    320.5,
-    168.9,
-    383.3,
-    247.1
+    164.6,
+    161.7,
+    234.1,
+    233.6
    ],
-   "dia": "2026-09-25",
-   "pagina": 7
+   "dia": "2026-10-16",
+   "pagina": 8
   },
   {
-   "sede": "Museo Casa Antonio Nariño Salón principal 2do piso",
-   "hora": "15:00",
-   "hasta": "17:00",
-   "duracion_min": 120,
+   "sede": "Hotel Plaza Mayor",
+   "hora": "16:00",
+   "hasta": "17:30",
+   "duracion_min": 90,
    "lineas": [
-    "Ruta Académica",
-    "CineCamino",
-    "CLAQUETAZO",
-    "Laboratorio de",
-    "Creación"
+    "HÉROES DE LA",
+    "MONTAÑA",
+    "Reconocimiento",
+    "El Territorio Que",
+    "Somos"
    ],
    "caja": [
-    389.5,
-    168.9,
-    466.3,
-    275.4
+    240.8,
+    215.4,
+    314.7,
+    286.9
    ],
-   "dia": "2026-09-25",
-   "pagina": 7
+   "dia": "2026-10-16",
+   "pagina": 8
   },
   {
-   "sede": "Auditorio del Hotel Mesón de los Virreyes",
+   "sede": "Galería Pérez Rojas",
+   "hora": "16:30",
+   "hasta": "19:30",
+   "duracion_min": 180,
+   "lineas": [
+    "Nuevas Miradas:",
+    "ENCRUCIJADAS",
+    "Ópera Prima",
+    "Internacional",
+    "Ópera Prima Nacional"
+   ],
+   "caja": [
+    164.1,
+    240.8,
+    234.1,
+    366.0
+   ],
+   "dia": "2026-10-16",
+   "pagina": 8,
+   "_termina_despues": "la página 9 dibuja su final hasta las 19:30, sin rótulo"
+  },
+  {
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
    "hora": "17:00",
    "hasta": "18:45",
    "duracion_min": 105,
    "lineas": [
     "Lenguajes Emergentes:",
     "DESTELLOS",
-    "YoungFilm -",
-    "Cortometraje",
-    "Apasionado Nacional -",
-    "Cortometraje -",
+    "YoungFilm",
+    "Cortometraje Apasionado",
+    "Nacional Cortometraje",
+    "Apasionado Internacional",
     "Cortometraje Escolar"
    ],
    "caja": [
-    253.8,
-    283.0,
-    314.2,
-    356.0
+    407.3,
+    266.7,
+    484.5,
+    354.5
    ],
-   "dia": "2026-09-25",
-   "pagina": 7
+   "dia": "2026-10-16",
+   "pagina": 8
   },
   {
-   "sede": "Galería Pérez Rojas",
-   "hora": "17:00",
-   "hasta": "20:00",
-   "duracion_min": 180,
-   "lineas": [
-    "Nuevas Miradas:",
-    "Cortometraje",
-    "RESURGENCIAS",
-    "Nacional - Ópera",
-    "Prima Internacional",
-    "2:16:00",
-    "Nacional - Ópera Prima",
-    "Internacional 2:16:00"
-   ],
-   "caja": [
-    173.2,
-    282.1,
-    245.1,
-    377.1
-   ],
-   "dia": "2026-09-25",
-   "pagina": 7,
-   "_partido": "dibujado en las páginas 7 y 8"
-  },
-  {
-   "sede": "Auditorio del Hotel Mesón de los Virreyes",
-   "hora": "18:45",
-   "hasta": "20:00",
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
+   "hora": "19:00",
+   "hasta": "20:15",
    "duracion_min": 75,
    "lineas": [
     "Territorios:",
@@ -729,636 +865,536 @@
     "Competitiva"
    ],
    "caja": [
-    260.5,
-    123.8,
-    321.9,
-    172.7
+    408.3,
+    142.5,
+    484.5,
+    210.1
    ],
-   "dia": "2026-09-25",
-   "pagina": 8,
-   "_empieza_antes": "la página 7 dibuja su arranque a las 18:45, sin rótulo"
-  },
-  {
-   "sede": "Auditorio del Hotel Mesón de los Virreyes",
-   "hora": "20:00",
-   "hasta": "21:30",
-   "duracion_min": 90,
-   "lineas": [
-    "Narrativas Divergentes:",
-    "RETORNOS",
-    "Video Musical -",
-    "Cortometraje con",
-    "Celular - Cortometraje",
-    "Vertical - Cortometraje",
-    "IA"
-   ],
-   "caja": [
-    261.5,
-    177.5,
-    321.9,
-    255.2
-   ],
-   "dia": "2026-09-25",
-   "pagina": 8
+   "dia": "2026-10-16",
+   "pagina": 9
   },
   {
    "sede": "Galería Pérez Rojas",
-   "hora": "20:00",
+   "hora": "19:30",
    "hasta": "22:00",
-   "duracion_min": 120,
+   "duracion_min": 150,
    "lineas": [
-    "Muestra Especial-",
-    "Rumbo a los Macondo-",
-    "Llueve Sobre Babel,",
-    "Gala del Sol 1:51:00"
+    "Nuevas Miradas:",
+    "RESURGENCIAS",
+    "Cortometraje Nacional",
+    "Ópera Prima",
+    "Internacional"
    ],
    "caja": [
-    181.3,
-    178.5,
-    252.8,
-    283.5
+    164.1,
+    174.6,
+    234.1,
+    306.6
    ],
-   "dia": "2026-09-25",
-   "pagina": 8
+   "dia": "2026-10-16",
+   "pagina": 9
   },
   {
-   "sede": "Biblioteca del Hotel Mesón de los Virreyes",
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
+   "hora": "20:15",
+   "hasta": "21:45",
+   "duracion_min": 90,
+   "lineas": [
+    "Narrativas",
+    "Divergentes:",
+    "RETORNOS",
+    "Video Musical",
+    "Cortometraje con Celular",
+    "Cortometraje Vertical",
+    "Cortometraje IA"
+   ],
+   "caja": [
+    407.3,
+    214.4,
+    485.5,
+    293.6
+   ],
+   "dia": "2026-10-16",
+   "pagina": 9
+  },
+  {
+   "sede": "Hotel Mesón de los Virreyes: Biblioteca",
    "hora": "09:15",
    "hasta": "12:30",
    "duracion_min": 195,
    "lineas": [
     "Comunicaciones:",
     "ENTRE - VISTAS",
-    "Entrevistas a",
-    "Seleccionados"
+    "Entrevistas a Seleccionados"
    ],
    "caja": [
-    391.5,
-    132.4,
-    478.8,
-    302.2
+    474.9,
+    141.5,
+    565.1,
+    311.8
    ],
-   "dia": "2026-09-26",
-   "pagina": 9
+   "dia": "2026-10-17",
+   "pagina": 10
   },
   {
-   "sede": "Museo Casa Antonio Nariño Salón principal 1er piso",
-   "hora": "09:30",
-   "hasta": "11:30",
-   "duracion_min": 120,
-   "lineas": [
-    "Ruta Académica",
-    "CineCamino",
-    "TRANSFORMACI",
-    "ONES DEL",
-    "TIEMPO - ENACC",
-    "Taller de",
-    "Maquillaje"
-   ],
-   "caja": [
-    234.1,
-    146.3,
-    297.9,
-    248.5
-   ],
-   "dia": "2026-09-26",
-   "pagina": 9
-  },
-  {
-   "sede": "Auditorio del Hotel Mesón de los Virreyes",
-   "hora": "10:00",
-   "hasta": "11:45",
-   "duracion_min": 105,
-   "lineas": [
-    "Ruta Académica",
-    "CineCamino",
-    "DIRIGIR EL",
-    "TIEMPO - DASC",
-    "Masterclass"
-   ],
-   "caja": [
-    168.4,
-    170.3,
-    229.3,
-    261.9
-   ],
-   "dia": "2026-09-26",
-   "pagina": 9
-  },
-  {
-   "sede": "Galería Pérez Rojas",
-   "hora": "10:00",
-   "hasta": "13:00",
-   "duracion_min": 180,
-   "lineas": [
-    "Nuevas Miradas G:",
-    "ENCRUCIJADAS",
-    "Ópera Prima",
-    "Internacional - Ópera",
-    "Prima Nacional",
-    "3:11:00"
-   ],
-   "caja": [
-    88.8,
-    170.3,
-    160.2,
-    330.1
-   ],
-   "dia": "2026-09-26",
-   "pagina": 9
-  },
-  {
-   "sede": "Museo Casa Antonio Nariño Salón principal 2do piso",
+   "sede": "Casa Museo Antonio Nariño",
    "hora": "10:00",
    "hasta": "12:00",
    "duracion_min": 120,
    "lineas": [
-    "Ruta Académica",
-    "CineCamino",
-    "CLAQUETAZO - Cierre",
-    "Laboratorio de",
-    "Creación"
+    "Ruta Académica:",
+    "CINECAMINO",
+    "CAMINAR ROSTROS",
+    "Masterclass de Maquillaje",
+    "ENACC"
    ],
    "caja": [
-    303.2,
-    169.3,
-    380.0,
-    274.9
+    278.7,
+    183.3,
+    370.4,
+    285.9
    ],
-   "dia": "2026-09-26",
-   "pagina": 9
-  },
-  {
-   "sede": "Museo Casa Antonio Nariño Salón principal 1er piso",
-   "hora": "11:30",
-   "hasta": "13:00",
-   "duracion_min": 90,
-   "lineas": [
-    "Ruta Académica",
-    "CineCamino",
-    "TRAZOS",
-    "Charla con",
-    "Realizadores"
-   ],
-   "caja": [
-    234.6,
-    254.3,
-    298.4,
-    331.5
-   ],
-   "dia": "2026-09-26",
-   "pagina": 9
-  },
-  {
-   "sede": "Auditorio del Hotel Mesón de los Virreyes",
-   "hora": "11:45",
-   "hasta": "12:45",
-   "duracion_min": 60,
-   "lineas": [
-    "Territorios:",
-    "RAÍCES",
-    "Selección Oficial",
-    "No Competitiva"
-   ],
-   "caja": [
-    168.9,
-    269.1,
-    228.8,
-    316.6
-   ],
-   "dia": "2026-09-26",
-   "pagina": 9
-  },
-  {
-   "sede": "Auditorio del Hotel Mesón de los Virreyes",
-   "hora": "14:00",
-   "hasta": "17:00",
-   "duracion_min": 180,
-   "lineas": [
-    "Nuevas Miradas:",
-    "RESISTENCIAS",
-    "Ópera Prima",
-    "Internacional",
-    "3:08:00"
-   ],
-   "caja": [
-    159.3,
-    104.1,
-    220.7,
-    261.5
-   ],
-   "dia": "2026-09-26",
+   "dia": "2026-10-17",
    "pagina": 10
   },
   {
-   "sede": "Biblioteca del Hotel Mesón de los Virreyes",
-   "hora": "14:00",
-   "hasta": "15:45",
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
+   "hora": "10:00",
+   "hasta": "11:45",
    "duracion_min": 105,
    "lineas": [
-    "Narrativas Divergentes:",
-    "SEÑALES",
-    "Realidad Virtual -",
-    "Selección Oficial",
+    "Ruta Académica:",
+    "CINECAMINO",
+    "DIRIGIR EL TIEMPO",
+    "Masterclass de Dirección",
+    "DASC"
+   ],
+   "caja": [
+    377.6,
+    184.2,
+    466.8,
+    270.6
+   ],
+   "dia": "2026-10-17",
+   "pagina": 10
+  },
+  {
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
+   "hora": "11:45",
+   "hasta": "13:00",
+   "duracion_min": 75,
+   "lineas": [
+    "Territorios:",
+    "RAÍCES",
+    "Selección Oficial No",
     "Competitiva"
    ],
    "caja": [
-    380.4,
-    103.1,
-    470.1,
-    191.4
+    376.6,
+    279.7,
+    467.3,
+    353.6
    ],
-   "dia": "2026-09-26",
+   "dia": "2026-10-17",
    "pagina": 10
   },
   {
    "sede": "Galería Pérez Rojas",
    "hora": "14:00",
-   "hasta": "15:45",
-   "duracion_min": 105,
+   "hasta": "15:00",
+   "duracion_min": 60,
    "lineas": [
-    "Ruta Académica",
-    "CineCamino",
-    "IGUAQUE",
-    "Estación"
+    "Ruta Académica:",
+    "CINECAMINO",
+    "Estación",
+    "IGUAQUE"
    ],
    "caja": [
-    77.7,
-    102.7,
-    152.6,
-    191.9
+    191.9,
+    108.4,
+    273.0,
+    171.7
    ],
-   "dia": "2026-09-26",
-   "pagina": 10
+   "dia": "2026-10-17",
+   "pagina": 11
   },
   {
-   "sede": "Casa San Pedro Campestre",
-   "hora": "15:45",
-   "hasta": "16:15",
-   "duracion_min": 30,
-   "lineas": [
-    "EL FÓSIL MÁGICO. . Selección No",
-    "Competitiva"
-   ],
-   "caja": [
-    475.4,
-    197.7,
-    573.3,
-    220.7
-   ],
-   "dia": "2026-09-26",
-   "pagina": 10
-  },
-  {
-   "sede": "Casa San Pedro Campestre",
-   "hora": "16:15",
-   "hasta": "16:30",
-   "duracion_min": 15,
-   "lineas": [
-    "Ruta academica CLAQUETAZO"
-   ],
-   "caja": [
-    475.4,
-    222.6,
-    574.7,
-    237.5
-   ],
-   "dia": "2026-09-26",
-   "pagina": 10
-  },
-  {
-   "sede": "Casa San Pedro Campestre",
-   "hora": "16:30",
+   "sede": "Hotel Mesón de los Virreyes: Auditorio",
+   "hora": "14:00",
    "hasta": "16:45",
+   "duracion_min": 165,
+   "lineas": [
+    "Nuevas Miradas:",
+    "RESISTENCIAS",
+    "Ópera Prima Internacional"
+   ],
+   "caja": [
+    376.1,
+    108.4,
+    469.7,
+    293.1
+   ],
+   "dia": "2026-10-17",
+   "pagina": 11
+  },
+  {
+   "sede": "San Pedro Campestre",
+   "hora": "15:15",
+   "hasta": "15:30",
    "duracion_min": 15,
    "lineas": [
-    "Reconocimiento - Mabel Teresa Velosa"
+    "Reconocimieno: CAMINOS DEL",
+    "MABEL VELOSA"
    ],
    "caja": [
-    475.9,
-    238.9,
-    572.3,
-    249.0
+    95.5,
+    174.6,
+    185.7,
+    198.1
    ],
-   "dia": "2026-09-26",
-   "pagina": 10
+   "dia": "2026-10-17",
+   "pagina": 11
   },
   {
-   "sede": "Casa San Pedro Campestre",
-   "hora": "16:45",
-   "hasta": "18:00",
-   "duracion_min": 75,
-   "lineas": [
-    "Muestra Especial: AQUILEO",
-    "VENGANZA, Ciro Durán",
-    "Fundación Patrimonio Fílmico",
-    "Colombiano 1:10:00"
-   ],
-   "caja": [
-    475.9,
-    254.7,
-    572.8,
-    318.1
-   ],
-   "dia": "2026-09-26",
-   "pagina": 10
-  },
-  {
-   "sede": "Casa San Pedro Campestre",
-   "hora": "18:00",
-   "hasta": "18:15",
+   "sede": "San Pedro Campestre",
+   "hora": "15:30",
+   "hasta": "15:45",
    "duracion_min": 15,
    "lineas": [
-    "Tributo Aquileo Venganza- Joyce",
-    "Ventura"
+    "Ruta Académica: Presentación",
+    "CLAQUETAZO"
    ],
    "caja": [
-    475.9,
-    321.4,
-    572.3,
-    342.1
+    93.5,
+    200.5,
+    185.7,
+    227.9
    ],
-   "dia": "2026-09-26",
-   "pagina": 10
+   "dia": "2026-10-17",
+   "pagina": 11
   },
   {
-   "sede": "Casa San Pedro Campestre",
-   "hora": "18:15",
-   "hasta": "20:15",
+   "sede": "San Pedro Campestre",
+   "hora": "15:45",
+   "hasta": "16:45",
+   "duracion_min": 60,
+   "lineas": [
+    "Exhibición Patrimonial:",
+    "AQUILEO VENGANZA,",
+    "Dir. Ciro Durán",
+    "FUNDACIÓN PATRIMONIO",
+    "FÍLMICO COLOMBIANO"
+   ],
+   "caja": [
+    94.0,
+    230.8,
+    186.1,
+    293.6
+   ],
+   "dia": "2026-10-17",
+   "pagina": 11
+  },
+  {
+   "sede": "San Pedro Campestre",
+   "hora": "17:00",
+   "hasta": "17:15",
+   "duracion_min": 15,
+   "lineas": [
+    "Tributo: AQUILEO VENGANZA",
+    "CIRO DURÁN & JOYCE VENTURA"
+   ],
+   "caja": [
+    95.5,
+    298.4,
+    185.7,
+    320.5
+   ],
+   "dia": "2026-10-17",
+   "pagina": 11
+  },
+  {
+   "sede": "San Pedro Campestre",
+   "hora": "17:15",
+   "hasta": "19:15",
    "duracion_min": 120,
    "lineas": [
     "Ceremonia",
-    "TAMSA Premiación y Clausura",
-    "Ceremonia TAMSA Premiación y",
-    "Clausura"
+    "TAMSA",
+    "Premiación y Clausura"
    ],
    "caja": [
-    475.9,
-    347.3,
-    572.3,
-    382.4
+    95.5,
+    326.2,
+    185.7,
+    367.0
    ],
-   "dia": "2026-09-26",
-   "pagina": 10,
-   "_partido": "dibujado en las páginas 10 y 11"
+   "dia": "2026-10-17",
+   "pagina": 11,
+   "_partido": "dibujado en las páginas 11 y 12"
   },
   {
-   "sede": "Casa San Pedro Campestre",
-   "hora": "20:15",
-   "hasta": "22:00",
+   "sede": "San Pedro Campestre",
+   "hora": "19:15",
+   "hasta": "21:00",
    "duracion_min": 105,
    "lineas": [
-    "Muestra Especial- Rumbo a los",
-    "Macondo- Un Poeta, Simón Mesa",
-    "Soto 2:03:00"
+    "Exhibición Especial:",
+    "UN POETA,",
+    "Dir, Simón Mesa Soto",
+    "Rumbo a Los Macondo"
    ],
    "caja": [
-    486.0,
-    183.7,
-    581.4,
-    288.8
+    93.5,
+    217.3,
+    180.9,
+    321.4
    ],
-   "dia": "2026-09-26",
-   "pagina": 11
+   "dia": "2026-10-17",
+   "pagina": 12
   }
  ],
  "fichas": [
   {
-   "pagina": 12,
-   "cabecera": "RUMBO A LOS MACONDO",
-   "texto": "UN POETA\nDIR. SIMON MESA SOTO\n120 minutos | Ficción / Drama,\nLa obsesión de Óscar Restrepo por la poesía no le trajo ninguna\ngloria. Envejecido y errático, ha sucumbido al cliché del poeta en la\npenumbra. Conocer a Yurlady, una humilde adolescente, y ayudarla a\ncultivar su talento trae algo de luz a sus días, pero arrastrarla al\nmundo de los poetas, tal vez no sea el camino."
-  },
-  {
    "pagina": 13,
-   "cabecera": "RUMBO A LOS MACONDO",
-   "texto": "LLUEVE SOBRE BABEL\nDIR. GALA DEL SOL\n113 minutos | Ficción / Drama / Comedia / Fantasia\nEl limbo nunca fue tan seductor como en Llueve sobre Babel. Escrita\ny dirigida por Gala del Sol, esta reinterpretación del Inferno de Dante\ntoma la forma de un drama coral. La acción se centra en Babel, un\nbar donde distintos personajes se cruzan con La Flaca, la mismísima\nencarnación de la Muerte, con quien las almas pueden apostar años\nde vida en un intento por burlar su destino."
+   "cabecera": "12 FESTIVAL VILLA DEL CINE",
+   "texto": "EVENTOS\nEMBLEMÁTICOS\nEl tiempo adquiere sentido en aquello que elegimos conservar. En estos encuentros, el camino\nreconoce su origen, honra aquello que lo ha sostenido y convierte lo recorrido en una huella para\nquienes vendrán.\nEXHIBICIONES\nHOMENAJES\nCEREMONIAS\nESPECIALES\nEstos eventos marcan sus umbrales,\nEstos encuentros reconocen las\nUn recorrido por distintos momentos\nconectan el presente con la memoria\nhuellas\nque\npermanecen,\nse\ny territorios del cine colombiano,\ny\nconvierten\nla\nexperiencia\ntransmiten y continúan dando sentido\ndonde obras reconocidas, nuevas\ncompartida en celebración, cada\na lo que somos, recordándonos que\nmiradas y películas restauradas\nencuentro da sentido al recorrido y\nel presente también se construye con\nencuentran un espacio común.\ndeja una huella en quienes lo habitan.\naquello que elegimos mantener."
   },
   {
    "pagina": 14,
-   "cabecera": "EXHIBICIÓN ESPECIAL",
-   "texto": "AQUILEO VENGANZA\nTRIBUTO A CIRO DURÁN\nFilmada en Villa de Leyva y sus alrededores en 1968, Aquileo\nVenganza se presenta por primera vez en el lugar donde nació. Este\ntributo al legado de Ciro Durán y a la labor de Joyce Ventura\nconvierte la proyección en un reencuentro: más de medio siglo\ndespués, Villa de Leyva recupera una parte de su propia historia\ncinematográfica."
+   "cabecera": "EVENTOS EMBLEMÁTICOS CEREMONIAS",
+   "texto": "UNQUY\nCEREMONIA DE APERTURA\n/unkɨ/ · muisca\nPrincipio de los tiempos.\nTodo camino nace en un instante que pone el tiempo en movimiento. Esta\nceremonia señala ese origen: un ritual de apertura donde el territorio, la\nmemoria ancestral y el cine se encuentran para dar comienzo a la duodécima\nedición del festival.\nTAMSA\nCEREMONIA DE CLAUSURA\n/tamsa/ · muisca\nOfrenda.\nTodo camino entrega algo cuando completa su ciclo. Esta ceremonia reúne lo\nvivido durante esta edición y convierte el reconocimiento en ofrenda: una\nforma de celebrar el recorrido, cerrar el ciclo y conservar su huella en el\ntiempo."
   },
   {
    "pagina": 15,
-   "cabecera": "EVENTOS ESPECIALES",
-   "texto": "FUNDACIÓN PATRIMONIO FILMICO\nPOR SUS 40 AÑOS\nLa Fundación Patrimonio Fílmico Colombiano hace posible que\nnuestro cine atraviese el tiempo. Este reconocimiento celebra sus 40\naños de labor preservando la memoria audiovisual del país, para que\nlas imágenes del pasado sigan encontrando nuevas miradas y\ntrazando caminos hacia el futuro.\nMABEL VELOSA\nCAMINOS DEL TIEMPO\nHay personas que no solo recorren un camino: ayudan a que exista.\nEste reconocimiento celebra una labor fundamental que ha\nacompañado al festival desde sus primeros pasos. Edición tras\nedición, Mabel Velosa ha convertido su vocación de cuidado en una\nforma de sostener y compartir el cine en Boyacá, dejando una huella\nque continúa creciendo junto al festival."
+   "cabecera": "EVENTOS EMBLEMÁTICOS HOMENAJES",
+   "texto": "RESTAURACIÓN\nAQUILEO VENGANZA\nTRIBUTO | Ciro Durán y Joyce Ventura\nEste tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la\nproyección en un reencuentro: más de medio siglo después, Villa de Leyva\nrecupera una parte de su propia historia cinematográfica.\nEXPOSICIÓN FOTOGRÁFICA | Memorias de Aquileo Venganza\nUn recorrido fotográfico que podrá ser disfrutado durante todo el festival: la\nhistoria y restauración de Aquileo Venganza, clásico de Ciro Durán filmado en\nVilla de Leyva, desde sus negativos originales hasta su regreso a la pantalla en\nuna nueva versión 4K."
   },
   {
    "pagina": 16,
-   "cabecera": "NARRATIVAS DIVERGENTES PORTALES",
-   "texto": "CELULAR\nLA ÚLTIMA HISTORIA\nDir. Eberto Manotas y Mauro Andrade\n0:07:00\nUn escritor busca inspiración para su nueva obra y termina enfrentándose a los\nfantasmas de su propio pasado. Entre la realidad y la ficción, descubrirá que algunas\nhistorias no se escriben… se viven\nVERTICAL\nBEHIND THE DOOR\nDir. Leonardo Valenti\n0:04:00 | Francia | Ficción y Horror\nLeo, que llega tarde para tomar su tren, queda atrapado en la habitación de su hotel cuando\nuna voz misteriosa afirma estar escondida en el baño. La frenética llamada que hace a su\nesposa se convierte rápidamente en una pesadilla surrealista de celos y malentendidos.\nAmbientada entre París y Bretaña, *Derrière la Porte* combina magistralmente el suspense\nsobrenatural y la comedia doméstica tras una única puerta entreabierta.\nIA\nPROMPT ZERO\nDir. Tomás Etter Gómez\n0:02:58 | Colombia | Ficción\nUn hombre que crea mundos con inteligencia artificial ve cómo una de sus\ncreaciones regresa para terminar la historia."
+   "cabecera": "EVENTOS EMBLEMÁTICOS HOMENAJES",
+   "texto": "RECONOCIMIENTO\nPATRIMONIO FÍLMICO COLOMBIANO\n40 Años\nLa Fundación Patrimonio Fílmico Colombiano hace posible que nuestro cine atraviese el tiempo.\nEste reconocimiento celebra sus 40 años de labor preservando la memoria audiovisual del país,\npara que las imágenes del pasado sigan encontrando nuevas miradas y trazando caminos hacia\nel futuro.\nRECONOCIMIENTO\nHÉROES DE LA MONTAÑA\nEl Territorio Que Somos\nCuando el fuego alcanzó las montañas, Villa de Leyva y los municipios aledaños respondieron\ncon sus propias manos como un solo pueblo. Este reconocimiento, recibido por un integrante\nde la comunidad en nombre de de los Héroes de la Montaña, honra la valentía de quienes\nprotegieron la tierra. Con palabras de pedagogía por un miembro de Bomberos Villa de Leyva.\nRECONOCIMIENTO\nMABEL VELOSA\nCaminos Del Tiempo\nHay personas que no solo recorren un camino: ayudan a que exista. Este reconocimiento\ncelebra la vocación de cuidado con la que Mabel Velosa ha sostenido y compartido el cine\nen Boyacá, dejando una huella que continúa creciendo junto al festival."
   },
   {
    "pagina": 17,
-   "cabecera": "NARRATIVAS DIVERGENTES PORTALES",
-   "texto": "VERTICAL\nNAHUALES\nDir. Alejandro Cervantes\n0:04:00 | México | Ficción y Horror / Triller\nEn un pueblo aparentemente tranquilo, una noche de violencia desata el horror en una cantina,\ndonde una joven lucha por sobrevivir al ataque de una criatura ancestral. Mientras se propagan\nlos rumores sobre un monstruo, un viejo agricultor niega obstinadamente la existencia de los\nnahuales.\nVERTICAL\n4 MINUTES\nDir. Rogerio Troiani\n0:06:00 | Brasi | Ficción y Drama\nCuatro amigos se ven arrastrados hacia un destino misterioso y explosivo.\nIA\nLENS\nDir. Eduardo Rodriguez\n0:22:42| USA | Ficción y Drama\nCuando Alex, de nueve años, descubre LENS —un misterioso prototipo capaz de mostrar realidades\nalternativas—, su familia se convierte en el objetivo de despiadados agentes de operaciones\nespeciales. Mientras huyen a través de desolados campos de maíz, Alex, su hermano Jim y su\nmadre deben arriesgarlo todo para proteger a su nuevo amigo y liberar su verdadero potencial."
+   "cabecera": "EVENTOS EMBLEMÁTICOS EXIBICIÓN PATRIMONIAL",
+   "texto": "AQUILEO VENGANZA\nDIR. CIRO DURÁN\n1:10:00 | Colombia | Ficción / Drama / Wéstern\nFilmada en Villa de Leyva y sus alrededores en 1967, esta\nrenombrada película se presenta por primera vez en el lugar donde\nnació.\nA principios del siglo XX, tras la “Guerra de los Mil Días”, el país quedó\ndevastado. Hombres armados al servicio de los terratenientes atacan\na pequeños propietarios para apropiarse de sus tierras. Aquileo es el\núnico que sobrevive, y promete vengarse de los asesinos."
   },
   {
    "pagina": 18,
-   "cabecera": "NARRATIVAS DIVERGENTES PORTALES",
-   "texto": "CELULAR\nPROS AND CONS OF DAYDREAMING\nProductora Lorena López\n0:04:52\nLa tendencia a soñar despierto de un niño imaginativo interfiere con sus tareas escolares, lo que\nlleva a sus estrictos padres a retirarle todos sus juguetes y distracciones. Aunque su rendimiento\nacadémico mejora, su chispa creativa se apaga, hasta que un cachorro cariñoso que conoce\nreaviva su sentido del asombro y la compañía.\nIA\nTHEY CALL IT SAUSAGE\nDir. Timm Osterhold\n0:03:00 | Animación | Alemania\nEn una tranquila granja, la vaca Philly sospecha el oscuro destino de un camión de ganado que\nsupuestamente parte de \"vacaciones\". Su compañero, el pragmático toro Rufus, descarta esta\nescalofriante teoría catalogándola como otra conspiración absurda. Cargado de humor negro, el\ncortometraje satírico They Call It Sausage expone esta angustia existencial.\nVIDEO MUSICAL\nAGUAPANELA\nDir. Juan José Narváez\n0:03:14 | Colombia | Video Musical\nEn un universo que fusiona la mitología colombiana y la griega, Miguel es perseguido implacablemente por\nun Cupido alado. Fortalecido por un cáliz celestial de aguapanela, obsequio de dos deidades musicales,\nemprende una misión de venganza contra el amor mismo. Sin embargo, justo cuando cree haber triunfado,\nuna última flecha lo alcanza, demostrando que, a fin de cuentas, el amor es ineludible."
+   "cabecera": "EVENTOS EMBLEMÁTICOS EXIBICIONES ESPECIALES",
+   "texto": "RUMBO A LOS MACONDO\nUN POETA\nDIR. SIMÓN MESA SOTO\n2:00:00 | Colombia | Comedia / Drama\nLa obsesión de Óscar Restrepo por la poesía no le trajo ninguna gloria. Envejecido y errático, ha\nsucumbido al cliché del poeta en la penumbra. Conocer a Yurlady, una humilde adolescente;\nayudarla a cultivar su talento trae algo de luz a sus días, pero arrastrarla al mundo de los poetas\ntal vez no sea el camino.\nRUMBO A LOS MACONDO\nLLUEVE SOBRE BABEL\nDIR. GALA DEL SOL\n1:53:00 | Colombia | Fantasía / Drama / Comedia\nEsta reinterpretación del Inferno de Dante toma la forma de un drama coral. La acción se centra\nen Babel, un bar donde distintos personajes se cruzan con La Flaca, la mismísima encarnación\nde la Muerte, con quien las almas pueden apostar años de vida en un intento por burlar su\ndestino.\nFESTIVAL DE CINE EUREKA\nNUEVA OLA ROLA\nMUESTRA + Q&A\n0:53:00 | Colombia | Cortometrajes Juveniles Bogotanos\nEs indiscutible que el cine de la ciudad de Bogotá es imprescindible en la escena\ncinematográfica del país. La cultura bogotana respira a través de películas centradas en la\ncreatividad narrativa en formatos como la animación y diferentes medios de narración, siendo\nsatíricas dentro de la estética amplia de la ciudad de Bogotá, destacando cómo una nueva\ngeneración se apropia de su cine y lo evoluciona."
   },
   {
    "pagina": 19,
-   "cabecera": "NARRATIVAS DIVERGENTES PORTALES",
-   "texto": "VIDEO MUSICAL\nMUCHO GUSTO\nDir. Cintia Obando\n0:04:34\n\"El nuevo álbum de Magallanes sabe la importancia de hacer del mundo un lugar más hermoso,\ny esa es la raíz para imaginar un video de colores, texturas, baile, animales, naturaleza, fuego,\nvuelo y magia, un video que haga el mundo un poquito más hermoso.\n1018 dibujos hechos a mano con lápices de colores, crayolas, pasteles, pintura, marcadores y\ndiferentes papeles le dan vida a Mucho Gusto, con el deseo de que quien lo vea vea algo más\nhumano, más táctil y más real, aunque sea a través de una pantalla\""
+   "cabecera": "12 FESTIVAL VILLA DEL CINE",
+   "texto": "NUEVAS\nMIRADAS\nÓpera Prima Nacional | Ópera Prima Internacional | Cortometraje Nacional | Cortometraje Internacional\nLos primeros trazos de una trayectoria condensan búsquedas capaces de transformar nuestra forma de\nobservar. Con obras nacionales e internacionales, esta sección descubre sensibilidades autorales que\ninterrogan su tiempo y trazan caminos propios para comprenderlo.\nECLIPSES\nTRÁNSITOS\nUMBRALES\nMETAMORFOSIS\nEntre lo que no puede verse, aquello\nCuando una forma de vida deja\nLa verdad queda parcialmente\nEntre el desarraigo, el cuidado y\nque devuelve el espejo y lo que\nde contenernos, la identidad\noculta: la fe, la sospecha y el\nla\nmemoria\nancestral,\nlos\npermanece en espera: un recorrido\nmuda: cruza fronteras, rompe el\ncuidado\nproyectan\ndistintas\nvínculos cambian con cada\npor los límites de la estabilidad,\nreflejo ajeno y se desprende de\nsombras sobre cada decisión.\nencuentro, despedida y regreso.\natravesado por la incertidumbre de\naquello que creía definido.\ncomenzar de nuevo.\nENCRUCIJADAS\nRESURGENCIAS\nRESISTENCIAS\nCuando los caminos se separan,\nLo que el tiempo desplaza no\nDonde el pasado insiste en dictar el\nla imagen tampoco permanece\nsiempre desaparece: una memoria\nrumbo, el ritmo que ocupa el\nal margen: lo que revela y\nheredada y una tradición rescatada\nespacio y las voces que rompen el\naquello que deja fuera obligan a\nvuelven para cobrar un sentido\nsilencio abren caminos distintos para\nelegir desde dónde mirar.\ndistinto al de ayer.\nquienes vienen detrás."
   },
   {
    "pagina": 20,
-   "cabecera": "PROGRAMACIÓN INFANTIL X-PLORA CINE",
-   "texto": "INFANTIL\nTIERRAS DE LOBEIRAS\nDir. Carla Barrionuevo, Waira Conrady Vega, Lucia Xuric Lopez Farias,\nValentina Spinelli\n0:04:53\nJosé y varios agricultores comienzan a cultivar los pastizales habitados por Gualicho, un aguará\nguazú protector de su territorio. La forzada convivencia provoca un grave conflicto que termina\ndespertando una antigua leyenda local.\nINFANTIL\nA SWEET MIRACLE\nDir. María José Chaparro\n0:07:07\nFrancis, un niño optimista de origen rural, desea recuperar la alegría y la unión de su familia. La\nllegada de un inesperado “milagro dulce” parece traer la esperanza que tanto buscaba, pero pronto\nle enseñará que las soluciones mágicas no siempre son lo que parecen.\nINFANTIL\nJUST ANOTHER BIRD\nDir. Julián Gómez Reyes\n0:16:30\nDespués de sufrir un accidente en la ciudad, Raquelita, una paloma nativa colombiana, encuentra\nrefugio en la ventana de Tomás. Mientras el niño la acompaña en su recuperación, Raquelita\nemprende un viaje poético por la ciudad y descubre personajes, pequeños detalles y formas de vida\nque suelen pasar inadvertidas."
+   "cabecera": "NUEVAS MIRADAS RESISTENCIAS MIÉRCOLES",
+   "texto": "Octubre\n6:30p.m - 8:45p.m\nARENAS\nDIR. JOHN BOLÍVAR\nÓPERA PRIMA NACIONAL\nSelección Oficial en Competencia\n1:42:00 | Colombia | Drama Biográfico / Documental\nDesde sus orígenes campesinos hasta convertirse en uno de\nlos grandes escultores monumentales de Colombia, Rodrigo\nArenas Betancourt hizo de la materia una forma de resistencia.\nA través de sus obras, sus exilios y los episodios que marcaron\nsu vida, Arenas reconstruye al hombre que inscribió la historia\ndel país en plazas y monumentos."
   },
   {
    "pagina": 21,
-   "cabecera": "PROGRAMACIÓN INFANTIL X-PLORA CINE",
-   "texto": "CIANOTIPIA\nTallerista: Isabella Bobadilla Monsalve\nLaboratorio de experimentación y fotografía analógica\nUna pausa reflexiva sobre el tiempo y la materia donde la técnica fotográfica\nhistórica dialoga directamente con el entorno botánico. A partir de la\nobservación minuciosa, la composición manual y el juego con las siluetas de\nla vegetación local, el espacio aborda el proceso de insolación como un acto\ndonde la luz solar transforma la superficie y fija lo invisible. Conducido por la\nfotógrafa y realizadora Isabella Bobadilla Monsalve —directora del\ncortometraje en stop motion Ficus y pedagoga en procesos de imagen,\nmemoria y gráfica manual—, el taller propone un encuentro tangible con la\nalquimia visual, articulando el paisaje, la textura y el registro lumínico al aire\nlibre."
+   "cabecera": "NUEVAS MIRADAS ECLIPSES JUEVES",
+   "texto": "Octubre\n2:00p.m - 5:15p.m\nCORTOMETRAJE NACIONAL\nQUE EL CIELO NOS PERDONE\nDir. Andrés Buitrago\n0:16:48 | Colombia | Drama / Terror\nColombia, 1951. En plena Violencia, dos chulavitas, sicarios al servicio del Gobierno, siguen a un sacerdote\ndurante la noche, convencidos de que los conducirá hasta una cabaña donde se esconden sus víctimas.\nAl internarse en el bosque, descubrirán un horror mucho más oscuro que cualquiera de sus propios actos.\nÓPERA PRIMA NACIONAL\nSIERRA: EL ÁLBUM MORTUORIO\nDir. Carlos Ortíz\n1:28:00 | Colombia | Thriller Psicológico\nLa desaparición de Natalia rompe el silencio de Pueblo Blanco. Su búsqueda conduce a las autoridades hasta\nun bar clandestino, dos hermanas sometidas por su tío y un hombre herido hallado en el bosque. Pronto, la\nviolencia, el fanatismo y una secta ancestral convertirán a todo el pueblo en un territorio de caza.\nCORTOMETRAJE INTERNACIONAL\nLE JEUNE SOFIANE\n(El Joven Sofiane)\nDir. Fabien Ara\n0:28:00 | Francia | Drama\nTras la muerte de Sofiane en un accidente, el informe responsabiliza al joven y atribuye lo ocurrido al alcohol.\nSin embargo, su madre descubre una inconsistencia decisiva: la sangre analizada no coincide con el grupo\nsanguíneo de su hijo.\nCORTOMETRAJE INTERNACIONAL\nUNA TORRETA EN LLAMAS\nDir. Humberto Flores\n0:22:12 | México | Drama / Thriller\nTras un violento enfrentamiento, Yolanda y su nieta Alejandra encuentran a un soldado herido cerca de su\nrancho en las montañas. Mientras la abuela debate entre la cautela y la compasión, la joven se acerca al\ndesconocido para confirmar una sospecha que podría ponerlas a ambas en peligro."
   },
   {
    "pagina": 22,
-   "cabecera": "PROGRAMACIÓN INFANTIL X-PLORA CINE",
-   "texto": "INTELIGENCIA ARTIFICIAL\nJimena Guerrero, Vanessa Vega y PiPo Aranguren\nFARMEANDO\nEL\nTUNJO:\nCREACIÓN\nCINEMATOGRÁFICA\nCON\nINTELIGENCIA ARTIFICIAL\nLa tradición oral y la tecnología generativa convergen en un laboratorio\npráctico donde el folclore cobra movimiento en pantalla. A partir del análisis\ncorporal, el ritmo y la observación directa de \"El Tunjo\", los participantes\ndeconstruyen la gestualidad para transformarla en lenguaje técnico de\nprogramación visual. Mediante metodologías de síntesis narrativa y prompt\nengineering sobre el motor de generación Omni Flash, el taller aborda la\ncaptura fotográfica, la dirección de arte y la animación generativa con el\npropósito de concebir microrrelatos de diez segundos donde la figura mítica\ndespierta, baila y dialoga con los nuevos códigos de la narrativa digital\ncontemporánea. Un espacio intensivo de exploración formal, criterio visual y\nexperimentación cinematográfica al aire libre."
+   "cabecera": "NUEVAS MIRADAS TRÁNSITOS JUEVES",
+   "texto": "Octubre\n7:15p.m - 10:00p.m\nCORTOMETRAJE INTERNACIONAL\nALIVIOS\nDir. Juan M. González\n0:19:00 | México | Drama\nCarlos atraviesa una crisis que parece no tener salida mientras cuida de Rosa, su madre, cuyo\ndolor solo disminuye en las aguas cálidas de la hidroterapia. Una noche, ella le propone un\nsacrificio extremo que los obliga a reconsiderar el amor, la dependencia y la posibilidad de\nencontrar juntos otra forma de alivio.\nÓPERA PRIMA NACIONAL\nVOLAR\nDir. Jeiver Pinto\n1:19:00 | Colombia | Drama\nTras la desaparición de Claudia, Alirio, un niño habitante de calle, se niega a quedar nuevamente\nsolo. Por eso se lleva a Alicia, una anciana olvidada en un parque. Lo que comienza como un\nrapto transforma dos vidas invisibles: juntos construyen el afecto y el hogar que la ciudad les\nhabía negado.\nCORTOMETRAJE NACIONAL\nTUKTU, PADRE MAÍZ\nDir. Mauricio Prieto\n0:13:40 | Colombia | Fantasía / Aventura\nObligado a huir de la guerra, Juan, un niño indígena campesino, atraviesa las montañas guiado\npor la memoria de sus ancestros. En medio del peligro, despierta una fuerza que lo transforma\nen Tuktu, un poderoso taita llamado a proteger la tierra y regresar para sembrar la paz donde\nantes creció la violencia."
   },
   {
    "pagina": 23,
-   "cabecera": "NUEVAS MIRADAS TRÁNSITO",
-   "texto": "CORTOMETRAJE INTERNACIONAL\nALIVIOS\nDir. Juan Manuel Gonzalez Fernandez\n0:17:40 | México | Ficción\nCarlos se acerca a la mediana edad atrapado en una crisis personal que se ha prolongado\ndemasiado. Rosa, su madre, padece un dolor incapacitante que solo se alivia con las aguas\ncálidas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio supremo para que ambos\npuedan transitar hacia un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que\ntodos anhelamos.\nÓPERA PRIMA NACIONAL\nVOLAR\nDir. Jeiver Pinto Vargas\n2:19:11 | Colombia | Abandono y construcción de vinculos afectivos\nAlicia, una mujer de 75 años, es abandonada\nLo que comienza como un rapto se transforma en un vínculo inesperado.\nCuando Alicia muere, Alirio se niega a aceptar su partida y continúa viviendo junto a su cuerpo.\nFinalmente, la lleva a una montaña cercana al basurero y, al ver cómo los gallinazos.\nCORTOMETRAJE NACIONAL\nTUKTU, PADRE MAÍZ\nDir. Mauricio Prieto Muriel\n0:14:00 | Colombia | Ficción y Cultura | Poder ancestral\nEn las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a\nhuir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus\nancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza\nextraordinaria destinado a volver para sembrar la paz en la tierra."
+   "cabecera": "NUEVAS MIRADAS UMBRALES JUEVES",
+   "texto": "Octubre\n7:00p.m - 10:00p.m\nCORTOMETRAJE NACIONAL\nNO ES EL FIN DEL MUNDO\nDir. Sebastián Flórez\n0:17:00 | Colombia | Terror / Drama\nTras la devastación de Bogotá, Carlos se refugia con su padre ciego y exmilitar en una casa de\ncampo. Cuando su hermana los abandona, debe protegerlo solo y esconderle una verdad\nimposible: afuera comenzó un apocalipsis zombi. Sobrevivir será tan difícil como enfrentar la\ndistancia que siempre ha existido entre ambos.\nÓPERA PRIMA NACIONAL\nENEMIGO EN EL ESPEJO\nDir. Julián C. Sánchez\n1:46:00 | Colombia | Drama\nTras el final de su relación y la ruptura de su banda, Camilo teme quedarse solo. La llegada de\nSol parece ofrecerle refugio, pero también lo acerca a un culto religioso cuyas contradicciones\npronto lo inquietan. Para recuperar la paz, deberá apartarse del grupo y enfrentar al verdadero\nenemigo: su propio reflejo.\nCORTOMETRAJE INTERNACIONAL\nON HOLD\n(En Espera)\nDir. Krishna Kumar Shukla\n0:16:00 | India | Drama\nEl día en que pierde su empleo, Umesh queda atrapado en el ruido de Mumbai y en una\nsucesión de llamadas sobre deudas, relaciones rotas y un futuro incierto. Mientras la ciudad\navanza sin detenerse, él intenta conservar la dignidad antes de llegar al límite."
   },
   {
    "pagina": 24,
-   "cabecera": "NUEVAS MIRADAS TRÁNSITO",
-   "texto": "CORTOMETRAJE INTERNACIONAL\nTORMENTA EN LLAMAS\nDir. Humberto Flores\n0:22:00 | México | Ficción y Drama\nTras un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una anciana\nagricultora, y su nieta Alejandra. Después de esconderlo en su rancho, Yolanda debe decidir si\nayudarlo —poniendo en riesgo sus propias vidas—, mientras Alejandra sigue la pista de sus\npropias sospechas."
+   "cabecera": "NUEVAS MIRADAS 16 TARDE METAMORFOSIS VIERNES",
+   "texto": "Octubre\n2:00p.m - 5:00p.m\nCORTOMETRAJE NACIONAL\nLA INDEPENDENCIA\nDir. John Agudelo\n0:19:00 | Colombia | Drama\nTras años de sacrificarse por una familia que da por sentado su cuidado, Cecilia, de 52 años, llega\nal límite. Cansada de la irresponsabilidad de su hijo y de vivir para los demás, decide romper con\ntodo y recuperar una vida que también le pertenece.\nÓPERA PRIMA INTERNACIONAL\nCOS DE VIDRE\n(Cuerpo de Cristal)\nDir. Marc Comabella\n1:45:00 | España | Coming-of-age\nBrillante y exigente consigo misma, una adolescente intenta responder a las expectativas de su\nfamilia y a la imagen perfecta que imponen las redes sociales. Junto a su mejor amiga, entra en\nuna espiral que amenaza su salud y su identidad, obligándola a descubrir cuánto puede resistir\nun cuerpo de cristal.\nCORTOMETRAJE INTERNACIONAL\nAUTOKAR\nDir. Sylwia Szkiłądź\n0:16:00 | India | Animación\nEl día en que pierde su empleo, Umesh queda atrapado en el ruido de Mumbai y en una\nsucesión de llamadas sobre deudas, relaciones rotas y un futuro incierto. Mientras la ciudad\navanza sin detenerse, él intenta conservar la dignidad antes de llegar al límite."
   },
   {
    "pagina": 25,
-   "cabecera": "NARRATIVAS DIVERGENTES RETORNOS",
-   "texto": "IA\nCATATUMBO: HOUSE OF THUNDER, MEMORY, AND DIGNITY\nDir. Jhonattan Sarmiento\n0:07:30 | Colombia | Ficción y Ciencia ficción\nEl Catatumbo es una subregión de Norte de Santander, situada en la frontera con Venezuela. Sus\nselvas, montañas y ríos albergan el singular Relámpago del Catatumbo, que ilumina el cielo cada\nnoche. La violencia se intensificó a finales de la década de 1970, cuando grupos guerrilleros como el\nELN, el EPL y las FARC incrementaron sus acciones armadas mediante asesinatos, secuestros y\ntomas de poblaciones.\nCELULAR\nNO SE FÍA, NI AUNQUE LLOREN\nDir. Natalia Hernández Sánchez\n0:07:00\nTras la muerte de su abuela, Mateo intenta asumir el legado familiar siguiendo unas absurdas reglas\nque escribió durante su niñez. Lo que inicia como una peculiar historia criminal pronto se convierte\nen una tierna comedia sobre el duelo, la familia y los inesperados legados de quienes ya partieron.\nIA\n落⼦無悔 (LÀOZǏ WÚ HUǏ)\nLIFE IS A CHESSBOARD; EVERY MOVE IS FINAL -\nDir. Wang zhi-zhong\n0:04:05 | Taiwán | Ficción y Ciencia Ficción\nEn un vasto mundo de fantasía oriental, un cultivador solitario sostiene un objeto ornamental que\ndespierta recuerdos conmovedores de su hermano, un amigo íntimo y la mujer a quien amaba.\nMientras el recuerdo y la realidad se entretejen, el tiempo se fragmenta durante una partida de Go\nevocada, dejándolo contemplar el cielo y abrazar en silencio cada emoción que transcurre."
+   "cabecera": "NUEVAS MIRADAS 16 TARDE ENCRUCIJADAS VIERNES",
+   "texto": "Octubre\n4:30p.m - 7:30p.m\nÓPERA PRIMA INTERNACIONAL\nESTEPA\nDir. Mario Benito\n1:26:00 | Argentina | Drama / Suspenso\nEn su cumpleaños, el joven policía Francisco Revenga es enviado a cubrir una guardia en la\nestepa patagónica. Durante el trayecto, se detiene en un parador donde unas imágenes\ncomprometedoras quedan grabadas en su celular. Al descubrir que revelan una red de trata,\ndeberá decidir hasta dónde llega su deber.\nÓPERA PRIMA NACIONAL\nKMKZ: SALVAJE, LIBRE Y VALIENTE\nDir. Andrés Hernández\n1:28:00 | Colombia | Docu-ficción\nKamila recorre Bogotá en bicicleta y registra con su celular aquello que la ciudad prefiere\nignorar. Junto a Ruco, Alexa y Leonor encuentra refugio entre vidas atravesadas por la violencia\ny el abandono. Cuando Leonor desaparece, sus imágenes se convierten en archivo, memoria y\nuna forma urgente de resistencia."
   },
   {
    "pagina": 26,
-   "cabecera": "NARRATIVAS DIVERGENTES RETORNOS",
-   "texto": "VERTICAL\nÁNIMA DE MAREA\nDir. Laury T. Herrera\n0:03:00 | Colombia | Ficción\nEn el Día de los Muertos, José, un pescador de La Boquilla, decide salir al mar sin\nhacer caso a la advertencia de su esposa. A partir de ese momento, comienzan a\nocurrir sucesos extraños que lo arrastran a una experiencia terrorífica.\nCELULAR\nMALEZA\nDir. Nicolle Estrada Diaz y Marcela Palacio Montoya\n0:11:00 | Colombia | Ficción y Ciencia ficción\nGuiada por el espíritu de su gato fallecido, una sanadora y partera solitaria, dedicada a\npreservar la vida, sufre una profunda conmoción interior cuando una joven\ndesesperada llega a su puerta. Durante una noche de cruda confrontación y dolor,\nAlba comprende que ayudar a alguien significa caminar a su lado, no tomar\ndecisiones por esa persona.\nVIDEO MUSICAL\nDESPUÉS DE TANTO AMOR\nDir. Mercedes Oviedo\n0:03:53 | Colombia | Video Musical\nTras una dolorosa ruptura, una mujer atraviesa un duelo íntimo dentro de un universo\nsimbólico de colores y memoria. En escenarios minimalistas, performa su dolor y\nreconstruye la figura ausente, emprendiendo un viaje sensorial que culmina al lograr\nhabitar su pérdida desde un nuevo lugar."
+   "cabecera": "NUEVAS MIRADAS 16 NOCHE RESURGENCIAS VIERNES",
+   "texto": "Octubre\n7:30p.m - 10:00p.m\nCORTOMETRAJE NACIONAL\nSUKUA\nDir. Omar E. Ospina\n0:17:00 | Colombia | Drama\nPirimín, un niño kogui, recibe una pistola de agua y descubre en ella la promesa de un juego.\nPero esa noche escucha a su padre recordar las armas que obligaron a su comunidad a\nabandonar el territorio. Desde entonces, el juguete adquiere otro peso y Pirimín deberá decidir\nqué hacer con él.\nÓPERA PRIMA INTERNACIONAL\nO CRAVISTA\n(El Clavecinista)\nDir. Luis E. Ozório\n1:44:00 | Brasil | Documental biográfico\nCerca de cumplir cien años, el maestro y clavecinista Roberto De Regina revisita la vida que\ndedicó a recuperar la música antigua en Brasil. Entre recuerdos, creaciones y resistencias\nculturales, emerge el retrato de un artista que desafió prejuicios y transformó para siempre la\ntradición musical de su país."
   },
   {
    "pagina": 27,
-   "cabecera": "NARRATIVAS DIVERGENTES RETORNOS",
-   "texto": "VERTICAL\nSHORTS\nDir. Daniel Baena Pacheco\n0:04:00 | Colombia | Ficción y Drama\nTras un caótico episodio de acoso callejero mientras regresaba a casa, Samir, de 17 años, lucha\ncontra sentimientos abrumadores de vergüenza y culpa. A medida que el recuerdo transforma\nsilenciosamente su rutina diaria, un simple par de pantalones cortos se convierte en un\ndoloroso recordatorio de una experiencia que no logra dejar atrás.\nVIDEO MUSICAL\nA PESAR DE MÍ\nDir. Thomás Mejía Lozano\n0:03:15 | Colombia | Video Musical\nA través de pantallas divididas, dos antiguos amantes enfrentan bloqueos creativos debido al\npeso de sus heridas no sanadas. Al enfrentarse a los recuerdos del otro, deciden dejar de huir\nde su pasado, comprendiendo que para volver a fluir y seguir adelante no deben olvidar, sino\nabrazar lo vivido.\nCELULAR\nA BODY WITHOUT A HORSE?\nDir. Lara Fuke\n0:08:31 | Colombia\nEn un intento por identificarse, un cuerpo sin caballo se desplaza a través de sus ausencias y\nvacíos."
+   "cabecera": "NUEVAS MIRADAS RESISTENCIAS SÁBADO",
+   "texto": "Octubre\n2:00p.m - 5:00p.m\nÓPERA PRIMA INTERNACIONAL\nCOMPARSA\nDir. Vickie Curtis y Doug Anderson\n1:19:00 | Guatemala y Estados Unidos | Documental\nEn Ciudad Peronia, Guatemala, las hermanas Lesli y Lupe convierten el arte en una forma de\ncuidado y resistencia. Tras la muerte de 41 niñas en un hogar estatal, reúnen a jóvenes de su\ncomunidad en una comparsa de títeres, fuego y tambores para reclamar las calles y enfrentar la\nviolencia contra las mujeres.\nÓPERA PRIMA INTERNACIONAL\nLANGUAGE OF THE WIND\n(El Lenguaje del Viento)\nDir. Shimataver Igbawua\n1:23:00 | Nigeria | Drama\nTras casarse con Ardo, Shatu vislumbra la posibilidad de abandonar las llanuras y conocer la\nciudad que siempre ha imaginado. Mientras conducen el ganado, una vaca se detiene y el\nsilencio entre ambos se rompe, obligándolos a enfrentar sus deseos, sus tradiciones y el rumbo\nque elegirán."
   },
   {
    "pagina": 28,
-   "cabecera": "NARRATIVAS DIVERGENTES RETORNOS",
-   "texto": "VIDEO MUSICAL\nBENDITOS LOS VIEJOS\nDir. Camilo Duque Zuluaga y Santiago Rubio\n0:04:02 | Colombia | Video Musical\nEn una maloka, una mujer atraviesa un ritual de gestación y nacimiento que conecta\nsu cuerpo con la tierra, los ancestros y la memoria colectiva. Una celebración poética\nde la vida y de los ciclos naturales que nos unen a las generaciones que nos\nprecedieron."
+   "cabecera": "12 FESTIVAL VILLA DEL CINE",
+   "texto": "INDUSTRIA\nGÉNESIS\nWork in Progress\nAntes de encontrar su forma definitiva, una película se construye, encuentra una voz y se\ntransforma al pasar por otras miradas.\nEn este pitch a expertos los proyectos Work in Progress de la Selección Oficial en Competencia\ncomparten el camino recorrido y hacen visible lo que aún pueden trazar."
   },
   {
    "pagina": 29,
-   "cabecera": "TERRITORIOS VOCES",
-   "texto": "VOCES\nDRUNK HEARING THE RAIN DROPS FALL\nDir. Santiago Gómez Ramírez\n0:21:25\nUna pareja de ancianos, agobiada mientras la tierra —que debía sustentar su retiro— los mata\nlentamente debido a los abusos del Estado. Múltiples actos de violencia han convertido este\nterritorio en un purgatorio que refleja la resignación de la vejez, el desarraigo y la resistencia\nterritorial.\nVOCES\nCOLLECTIVE MEMORY\nDir. Cristina Colmenares\n0:14:59\nEn 1983, durante los días más oscuros del conflicto armado en el Perú contra Sendero Luminoso,\nsoldados encapuchados irrumpieron en la casa de Adelina y se llevaron a su esposo. Ella nunca\nvolvería a verlo. Tras enfrentarse al silencio y al menosprecio de la policía y el ejército, Adelina\nune fuerzas con otras muchas mujeres que han perdido a sus esposos e hijos a manos de\nsoldados que debían protegerlas.\nVOCES\nCON LA MANO ARRIBA\nDir. Miguel Angel Ordoñez\n0:10:56\nEn su lucha por lograr reconocimiento en el Carnaval de Barranquilla, el grupo independiente de\ntíteres \"Con la Mano Arriba\" se enfrenta a un apoyo institucional limitado. El documental retrata\nun desfile decisivo en el que un fallo repentino en el sonido sume al colectivo en un caos\nabsoluto."
+   "cabecera": "INDUSTRIA GÉNESIS JUEVES",
+   "texto": "Octubre\n5:00p.m - 7:00p.m\nWORK IN PROGRESS\nEXTINCIÓN\nDir. Frank Benítez\nColombia | Ciencia Ficción\nEn una comunidad selvática amenazada por un proyecto minero, Jenawen, una joven indígena\nalejada de sus raíces, atraviesa un portal hacia un futuro convertido en desierto. Allí deberá\nsalvar a los últimos sobrevivientes de una catástrofe ambiental y reencontrarse con el territorio\nque dejó atrás.\nWORK IN PROGRESS\nEL ÚLTIMO CAMPEÓN\nDir. Daniel J. Parra\nColombia | Documental\nTras 75 años de espera, Atlético Bucaramanga conquista su primera estrella. A través de hinchas\nde distintas generaciones, barristas y líderes comunitarios, el documental retrata cómo el fútbol\ntransformó heridas, recuperó esperanzas y unió a toda una ciudad alrededor de una celebración\nlargamente soñada.\nWORK IN PROGRESS\nEL CINE DENTRO DEL CINE\nDir. Diana Kuéllar y Manuel Silva\nColombia | Documental\nTres películas que estuvieron a punto de desaparecer conducen a Diana Kuéllar y Manuel Silva\npor Barcelona, Milán, Santiago de Chile y Cali. Entre archivos, videocartas y protagonistas de su\nrecuperación, el viaje indaga qué pierde una sociedad cuando una película desaparece y cómo\nel cine transforma la memoria al volver a la luz."
   },
   {
    "pagina": 30,
-   "cabecera": "INDUSTRIA GÉNESIS",
-   "texto": "WIP\nEXTINCTION\nDir. Frank Benítez\n0:05:00 | Colombia | Ficción y Drama\nEn el seno de una comunidad selvática amenazada por un proyecto minero, Jenawen —una joven\nindígena que se ha distanciado de sus raíces— atravesará un portal hacia el futuro para salvar a los\núnicos supervivientes de una catástrofe medioambiental que arrasó con la mayoría de los recursos\nnaturales y convirtió la tierra en un desierto peligroso.\nWIP\nTHE LAST CHAMPION\nDir. Daniel Jesús Parra Jaimes\n0:05:00 | Colombia | Documental\n*The Last Champion* (Mejor documental, VALEIFF 2025) rinde homenaje a una comunidad que\nesperó 75 años para ver al Atlético Bucaramanga ganar su primer campeonato de fútbol. A través\nde los conmovedores relatos de diversos aficionados —desde un seguidor de toda la vida de 90\naños hasta antiguos ultras—, la película captura el espíritu incansable de una ciudad que encontró\nen el fútbol una razón profunda para soñar y unirse.\nWIP\nEL CINE DENTRO DEL CINE DENTRO DEL CINE\nDir. Diana Kuéllar y Manuel Silva\n0:05:00 | Colombia | Documental\nDiana y Manuel rastrean tres películas históricas casi borradas por la censura en España, Chile y\nColombia. Mediante videocartas, este documental explora la memoria política y el impacto de\nperder y recuperar estas obras."
+   "cabecera": "INDUSTRIA GÉNESIS JUEVES",
+   "texto": "Octubre\n5:00p.m - 7:00p.m\nWORK IN PROGRESS\nCUBA 2001: IMÁGENES DEL FUTURO\nDir. Felipe Moreno\nColombia | Documental\nEn Ciudad Peronia, Guatemala, las hermanas Lesli y Lupe convierten el arte en una forma de\ncuidado y resistencia. Tras la muerte de 41 niñas en un hogar estatal, reúnen a jóvenes de su\ncomunidad en una comparsa de títeres, fuego y tambores para reclamar las calles y enfrentar la\nviolencia contra las mujeres.\nWORK IN PROGRESS\nMI TESORO\nDir. Dayana González y Brian Congolez\nColombia | Comedia / Drama\nObligada a ingresar a un hogar geriátrico, Gloria, una prestigiosa dermatóloga de 76 años,\nconoce a María Lucía, quien vive con alzhéimer y busca sentirse útil. Allí también descubre que\nRaquel dirige un inesperado “cartel” de ancianos dedicado al intercambio clandestino de dulces,\nmedicamentos y pequeños tesoros."
   },
   {
    "pagina": 31,
-   "cabecera": "INDUSTRIA GÉNESIS",
-   "texto": "WIP\nCUBA 2001. IMÁGENES DEL FUTURO I\nDir. Riqui Moreno Bolívar\n0:05:00 | Colombia | Documental\nManifiesto de archivos audiovisuales que acomoda con zapeo historias de cámaras y sus viajes\nmientras graban fiestas familiares y de cine. El viaje más largo es en Cuba. Salen muchas\npersonas, van dos en el viaje que graban para un programa de televisión.\nWIP\nMI TESORO\nDir. Dayana Gonzalez y Brian Congolez.\n0:05:00 | Colombia | Ficción\nGloria (76) una prestigiosa dermatóloga, llega a un hogar geriátrico en contra de su voluntad. Allí\nconoce a María Lucía (74), una dulce anciana con problemas de alzheimer que intenta ayudar y\nsentirse útil. En la cotidianidad del asilo, Raquel (79) se revela como la líder de una especie de\n“cartel” entre los viejitos que intercambian dulces, medicamentos, entre otros."
+   "cabecera": "12 FESTIVAL VILLA DEL CINE",
+   "texto": "LENGUAJES\nEMERGENTES\nCortometraje Apasionado Nacional | Cortometraje Apasionado Internacional | Cortometraje Escolar | Youngfilm\nEl cine encuentra distintos puntos de partida. Nacidas del impulso de crear, estas obras toman la imagen\ncomo una primera inscripción: lenguajes que encuentran su forma mientras avanzan y construyen, desde el\npresente, el cine que vendrá.\nECOS\nDESTELLOS\nDesde lenguajes que comienzan a\nCuando lo previsto deja de funcionar,\nabrirse camino, lo vivido se propaga\nla imaginación altera las formas y la\nentre cuerpos, hogares y memorias:\nluz transforma los lugares, revelando\nel pasado cambia de voz, pero no\ncaminos que antes no podían verse.\ndeja de resonar."
   },
   {
    "pagina": 32,
-   "cabecera": "NUEVAS MIRADAS ECLIPSES",
-   "texto": "ÓPERA PRIMA NACIONAL\nSIERRA: EL ÁLBUM MORTUORIO\nDir. Carlos Ortiz Alarcón 1:30:00 | Colombia\nLa desaparición de Natalia en Pueblo Blanco lleva a la policía a descubrir un sórdido bar\nclandestino. Cuando dos hermanas explotadas en el lugar deciden ayudar a un extraño en el\nbosque, desatan una sangrienta ola de rituales a manos de una oscura secta que terminará\nconsumiendo a todo el pueblo.\nCORTOMETRAJE NACIONAL\nQUE EL CIELO NOS PERDONE\nDir. Andres Buitrago\n0:16:48 | Colombia | Ficción, drama y terror\nColombia, 1951: Un par de chulavitas –asesinos pagados por el gobierno– acechan a un\nsacerdote en la noche, esperando que los conduzca a la cabaña en el bosque en donde se\nesconden sus víctimas. Pero el horror que encuentran allí es mil veces peor que el dolor que\npensaban infligir.\nCORTOMETRAJE INTERNACIONAL\nLE JEUNE SOFIANE\nDir. Fabien Ara\n0:29:00 | Francia | Ficción | Investigativo\nEl 1 de julio de 2005, Zoléra recibe una llamada en plena noche: su hijo Sofiane ha sufrido un\naccidente en escúter. Los médicos le informan que chocó contra una ambulancia y no\nsobrevivió. El grupo sanguíneo de Sofiane, A-, sugiere intoxicación; el joven delincuente provocó\nel accidente y los bomberos no tienen la culpa. Sin embargo, persiste una duda: el grupo\nsanguíneo de Sofiane era, en realidad, «A+»."
+   "cabecera": "LENGUAJES EMERGENTES ECOS JUEVES",
+   "texto": "Octubre\n11:00a.m - 1:00p.m\nCORTOMETRAJE ESCOLAR\nSUA Y SIE: GUARDIANES DE LA VIDA\nDir. Johanna Cortés\n0:04:00 | Colombia | Fábula\nEn el páramo de Mata de Mora, dos niños encarnan a Sua, el Sol, y Sie, el Agua. Hablando en\nmuisca y español, estas fuerzas sagradas dialogan sobre el equilibrio de la vida e invitan a\nproteger el territorio, la memoria ancestral y las fuentes que sostienen a su comunidad.\nYOUNGFILM\nFAR\n(Lejos)\nDir. We Are Central Asia Collective\n0:01:48 | Uzbekistán | Animación\nEn los bosques metálicos del valle de Ferganá, la materia se fragmenta y recompone. Sin\ndiálogos, esta animación táctil observa las huellas de la intervención humana y la oscuridad que\nla civilización levanta a su alrededor.\nCORTOMETRAJE REALIDAD VIRTUAL\n1 PASEO POR LA CIUDAD\nDir. Sara Coello y Alejandro Acuña\n0:08:30 | México | Animación\nEn las calles de Ciudad de México, Ema y Lautaro quedan atrapados entre el crimen, los\nrecortes de papel y la desaparición del territorio que habitan. Mediante acción en vivo y stop\nmotion en collage, buscan imaginar un camino posible para escapar, florecer después del salto\ny recuperar el olvidado oficio de volar."
   },
   {
    "pagina": 33,
-   "cabecera": "LENGUAJES EMERGENTES ECOS",
-   "texto": "ESCOLAR\nSUA Y SIE: GUARDIANES DE LA VIDA\nDir. Johanna Emilce Cortés Daza\n0:04:00 | Colombia | Ficción\nEn Sua y Sie: Guardianes de la Vida, dos niños del páramo boyacense encarnan al Sol y al Agua\nen un diálogo hablado en muisca y español. Este cortometraje escolar es un poderoso llamado\ninfantil para proteger la naturaleza, el territorio y la memoria ancestral.\nYOUNGFILM\nFAR\nDir. We are central asia collective\n0:01:48 | Usbekistán\nUn estudio táctil de un minuto sobre la deconstrucción, los bosques metálicos del valle de\nFerganá y la oscuridad que la civilización humana crea a su alrededor.\nAPASIONADO NACIONAL\n1 PASEO POR LA CIUDAD\nDir. Sara Coello Coello y Alejandro Acuña Sevilla\n0:08:00 | Colombia | Experimental\nEn este cortometraje híbrido de stop motion y collage, Ema y Lautaro buscan sobrevivir al crimen\ny la destrucción en la Ciudad de México. Entre recortes de papel, la pareja intentará imaginar un\nnuevo camino para volar y florecer tras ver arder su hogar."
+   "cabecera": "LENGUAJES EMERGENTES ECOS JUEVES",
+   "texto": "Octubre\n11:00a.m - 1:00p.m\nCORTOMETRAJE ESCOLAR\nMANOS ROJAS\nDir. Julián C. Monroy\n0:05:10 | Colombia | Drama\nEn medio del conflicto armado colombiano, una comunidad ve cómo el miedo y los secuestros\nalteran su vida cotidiana. Mientras las familias atraviesan ausencias, separaciones y decisiones\ndolorosas, surge una pregunta urgente: ¿cómo conservar la esperanza? Una historia sobre las\nhuellas de la guerra y la posibilidad de construir paz desde la memoria.\nCORTOMETRAJE APASIONADO NACIONAL\nDUELO\nDir. Nicolás Patiño y Andrés Cely\n0:15:30 | Colombia | Drama\nTras la muerte de su esposa, Ángel enfrenta el duelo en la soledad de su casa rural. Una gotera\ninvade progresivamente el espacio hasta convertirse en la forma tangible de su ausencia,\nempujándolo a decisiones irracionales mientras intenta aprender a habitar una vida que ya no\nreconoce.\nCORTOMETRAJE APASIONADO INTERNACIONAL\nI DON’T KNOW WHAT TO DO\n(No Sé Qué Hacer)\nDir. Akshita Tyagi, Leyla Belarbi y Lia Macruz\n0:04:30 | Brasil, India, Italia y España | Suspenso / Drama\nLizzie pasa la tarde jugando con una lagartija que encuentra en su jardín, hasta que un\naccidente cambia el encuentro. Ante una pérdida que aún no sabe comprender, la niña prepara\nuna despedida sencilla y conmovedora: un pequeño entierro y una flor para honrar la fragilidad\nde la vida."
   },
   {
    "pagina": 34,
-   "cabecera": "LENGUAJES EMERGENTES ECOS",
-   "texto": "ESCOLAR\nMANOS ROJAS\nDir. Julian Camilo Monroy\n0:05:10 | Colombia | Ficción\nAtrapada en el conflicto armado, una comunidad enfrenta secuestros y dolorosas pérdidas que\ntransforman su cotidianidad. Este cortometraje expone las profundas heridas de la guerra,\nresaltando la inquebrantable esperanza de quienes siguen luchando por la reconciliación y la\npaz.\nAPASIONADO NACIONAL\nGRIEF\nDir. Nicolas Patiño Hortua y Andrés Santiago Cely Orjuela\n0:15:00 | Colombia | Ficción y Drama\nTras la muerte de su esposa, Ángel afronta un duelo solitario en su hogar rural. Una filtración\ncobra fuerza hasta convertirse en una presencia abrumadora que transforma su entorno y lo\nempuja a tomar decisiones irracionales mientras intenta asimilar su pérdida.\nINTERNATIONAL UNIVERSITIES\nI DON'T KNOW WHAT TO DO\nDir. Akshita Tyagi, Leyla Belarbi, Lia Macruz\n0:04:00 | Brasil, India, Italia, España\nPelícula sobre una niña llamada Lizzie que pasa una tarde jugando con un lagarto que encontró\nen su jardín. Ocurre un accidente y el lagarto resulta herido. Llena de tristeza, Lizzie entierra al\nlagarto con delicadeza y coloca una flor sobre su tumba, poniendo de relieve su ternura y la\nnaturaleza efímera de la vida."
+   "cabecera": "LENGUAJES EMERGENTES ECOS JUEVES",
+   "texto": "Octubre\n11:00a.m - 1:00p.m\nCORTOMETRAJE APASIONADO NACIONAL\nFRAGMENTOS PERDIDOS DE UNA CONVULSIÓN\nDir. Michael Martinez\n0:11:37 | Colombia | Documental / Experimental\nReem intenta reconstruir el recuerdo perdido durante su primera convulsión. Entre archivos,\nimágenes fragmentadas y preguntas sin respuesta, la memoria de la infancia acompaña un\nrecorrido íntimo por la experiencia de vivir con epilepsia, donde recordar se convierte en una\nforma de resistir aquello que el cuerpo borra.\nCORTOMETRAJE APASIONADO INTERNACIONAL\nMEMORIAS DEL ALBA\nDir. Aldair Acosta\n0:07:38 | México | Drama / Animación\nTras la muerte de su esposa, Ángel enfrenta el duelo en la soledad de su casa rural. Una gotera\ninvade progresivamente el espacio hasta convertirse en la forma tangible de su ausencia,\nempujándolo a decisiones irracionales mientras intenta aprender a habitar una vida que ya no\nreconoce.\nCORTOMETRAJE APASIONADO INTERNACIONAL\nBEYOND THE END\n(Más Allá del Final)\nDir. Sara Sangiorgio\n0:07:28 | Francia | Animación / Experimental\nLo que nos repugna también puede fascinarnos. A través de imágenes animadas, esta obra se\naproxima a la muerte desde la curiosidad y cuestiona el temor que la rodea. Un recorrido\nsensible por el límite entre atracción y rechazo, donde vida y muerte aparecen como partes\ninseparables de un mismo ciclo."
   },
   {
    "pagina": 35,
-   "cabecera": "LENGUAJES EMERGENTES ECOS",
-   "texto": "APASIONADO NACIONAL\nLOST FRAGMENTS OF A SEIZURE\nDir. Michael Martínez\n0:11:00 | Colombia | Animación y Experimental\nA través de un montaje de material de archivo, Reem busca los recuerdos perdidos durante su\nprimera crisis epiléptica. Esta película poética explora la frágil experiencia de las convulsiones,\nconvirtiendo el acto de recordar en una poderosa resistencia contra el olvido.\nINTERNATIONAL UNIVERSITIES\nMEMORIAS DEL ALBA\nDir. Aldair Acosta Moctezuma\n0:07:00 | México | Ficción y Drama\nTatao crece junto a su abuela Alba, unidos por una rutina que da forma a su vida cotidiana.\nCuando la memoria empieza a desvanecerse, su relación se transforma, revelando cómo el amor\nperdura incluso a medida que los recuerdos desaparecen lentamente.\nINTERNATIONAL UNIVERSITIES\nBEYOND THE END\nDir. Sara Sangiorgio\n0:07:00 | Francia\nA menudo, aquello que nos repugna es también lo que nos atrae, y a veces esta fascinación\npuede llevarnos a reflexionar sobre temas que, en el fondo, nos dan miedo... como la muerte. Sin\nembargo, la muerte forma parte de nosotros tanto como la vida; ambas coexisten de manera\nnatural. Quizás por eso no deberíamos temerle tanto."
+   "cabecera": "LENGUAJES EMERGENTES 16 TARDE DESTELLOS VIERNES",
+   "texto": "Octubre\n5:00p.m - 6:45p.m\nYOUNGFILM\nWITCH AND FROG\n(Bruja y Rana)\nDir. Anastasia Provotorova\n0:02:12 | Rusia | Comedia / Fantasía\nReem intenta reconstruir el recuerdo perdido durante su primera convulsión. Entre archivos, imágenes\nfragmentadas y preguntas sin respuesta, la memoria de la infancia acompaña un recorrido íntimo por la experiencia\nde vivir con epilepsia, donde recordar se convierte en una forma de resistir aquello que el cuerpo borra.\nYOUNGFILM\nLA SILLA\nDir. Clara García y Mariano Reinaldos\n0:05:34 | España | Comedia / Drama\nEn un instituto, dos jóvenes sufren discriminación de formas distintas: uno por desplazarse en silla de ruedas\ny otro por no encajar en las expectativas de quienes lo rodean. Un encuentro inesperado les permite ponerse\nen el lugar del otro y descubrir que la empatía puede transformar la forma de mirar y actuar.\nCORTOMETRAJE ESCOLAR\nEN MEDIO\nDir. Carlos A. Paniagua\n0:10:27 | Colombia | Drama / Comedia\nUn estudiante nuevo llega a una escuela dividida por gustos musicales y termina atrapado entre dos grupos\nrivales. Mientras intenta encontrar su lugar, descubre que las etiquetas suenan más fuerte que las diferencias\ny que, a veces, basta escuchar al otro para cambiar el ritmo de toda una comunidad.\nCORTOMETRAJE APASIONADO NACIONAL\nLA SOMBRILLA DE MAMÁ\nDir. Mateo Forero\n0:19:38 | Colombia | Drama\nEn la Colombia de los años cincuenta, Luz pierde la sombrilla que tomó prestada de su madre. La furia de\nWaldina convierte el hogar en un lugar de miedo, pero, al descubrir el dolor oculto tras su rabia, la niña\nencuentra un gesto silencioso capaz de acercarlas y comenzar a sanar."
   },
   {
    "pagina": 36,
-   "cabecera": "NARRATIVAS DIVERGENTES SEÑALES",
-   "texto": "VR\nFLOPPY THE ROBOT - EL ÚLTIMO CONTACTO\nDir. Jacobo Rendon\n0:20:00 | Colombia | VR\nEn un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren\ninvita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots\ncapaces de ayudar, proteger y acompañar a las personas.\nVR\nHUMAN\nDir. Debora Bergamini\n0:15:00 | Brasil | VR\n¿Pueden la tecnología moderna y las experiencias virtuales reconectarnos profundamente con\nnuestra propia especie y con el planeta? HUMAN explora esta profunda cuestión a través de una\nexperiencia inmersiva de XR con seguimiento manual, diseñada para Oculus Quest 3. Los\nparticipantes se embarcan en un viaje espacial virtual para interactuar con las sondas Voyager y\nsu icónico Disco de Oro.\nVR\nPROTECTING OUR TERRITORY 360\nDir. Christopher Boulton\n0:07:00 | Colombia | VR\nCombina un video en 360 grados —que sitúa al espectador en el papel de «Cachufina», una\ncompañera de clase imaginaria— con un registro del «detrás de cámaras» que muestra cómo los\nestudiantes peruanos utilizaron una cámara de acción y teléfonos móviles para cocrear una\nexperiencia inmersiva sobre sus vidas y el mundo natural."
+   "cabecera": "LENGUAJES EMERGENTES 16 TARDE DESTELLOS VIERNES",
+   "texto": "Octubre\n5:00p.m - 6:45p.m\nCORTOMETRAJE APASIONADO INTERNACIONAL\nTV ENTREABERTA\nDir. Mateus Compart\n0:08:34 | Brasil | Animación / Sátira\nUna mujer es absorbida por su televisor y cae bajo el control de un extravagante presentador\nestadounidense. Arrastrada entre talk shows, programas infantiles, anuncios y series, atraviesa un\nespectáculo cada vez más absurdo mientras su identidad comienza a diluirse dentro de la maquinaria\ntelevisiva que pretende convertirla en parte de su programación.\nCORTOMETRAJE APASIONADO NACIONAL\nVÍA CRUCIS\nDir. Juan L. Neira\n0:03:32 | Colombia | Animación / Fantasía\nEl deseo nace en el cuerpo, pero también carga con las prohibiciones que lo vigilan. A través de una\nanimación simbólica, el cortometraje recorre los placeres carnales que aprendemos a condenar y convierte\nla culpa en un vía crucis interior, donde impulso, represión y juicio se enfrentan dentro de una misma\nconciencia.\nCORTOMETRAJE APASIONADO INTERNACIONAL\nFINAL ACT\n(Acto Final)\nDir. Babi Astolfi y Lisa Soares\n0:13:00 | Brasil | Misterio / Animación\nTras presenciar la muerte de una célebre actriz, Mateus, un practicante de periodismo, obtiene la oportunidad\nde investigar junto a Miriam Matos, la reportera que más admira. Tres sospechosos y tres versiones los\nconducirán por un misterio animado donde descubrir al culpable exige mirar más allá de cada actuación.\nCORTOMETRAJE APASIONADO INTERNACIONAL\nLA PRESENCIA DEL BLANCO\nDir. Néstor J. Serpa\n0:09:01 | Colombia | Terror / Misterio\nDespués del anochecer, cuatro niños deciden comprobar la leyenda de una niña vestida de blanco que\nronda su escuela rural. Lo que empieza como un juego cambia cuando un ruido surge del salón oscuro y la\npresencia parece señalarlos. Permanecer allí podría revelarles la verdad, pero también convertirlos en parte\nde ella."
   },
   {
    "pagina": 37,
-   "cabecera": "NUEVAS MIRADAS UMBRALES",
-   "texto": "CORTOMETRAJE NACIONAL\nNO ES EL FIN DEL MUNDO\nDir. Santiago Medina\n0:17:05 | Colombia | Ficción\nOcultarle el fin del mundo a un padre ciego y exmilitar puede ser más difícil que sobrevivir a la\nintemperie. Tras escapar de una devastada Bogotá y ser abandonados por su hermana mayor,\nCarlos debe afrontar su difícil relación recurriendo a trucos para esconderle el apocalipsis zombi.\nÓPERA PRIMA NACIONAL\nENEMIGO EN EL ESPEJO\nDir. Julián Camilo Sánchez\n1:46:32 | Colombia | Viaje Personal\nCamilo, a young guitarist grieving his last relationship and broken band, faces his greatest fear of\nbeing alone. He finds apparent relief when he meets Sol and joins her religious cult. However, the\ngroup's contradictions eventually make him realize that to find inner peace, he must distance\nhimself from everyone—even Sol—to find the strength he needs within himself.\nCORTOMETRAJE INTERNACIONAL\nON HOLD\nDir. Krishna Kumar Shukla\n0:16:00 | India | Ficción y Experimental | Viaje Personal\n*On Hold* sigue a Umesh Shukla, un vendedor de 40 años, durante el mismo día en que pierde su\nempleo. Atrapado en el caos implacable de Bombay, se ve llevado al límite por llamadas\ntelefónicas que revelan deudas crecientes y relaciones tensas. Dividido entre la dignidad y la\ndesesperación, lucha por sobrevivir al ritmo incansable de la ciudad sin derrumbarse."
+   "cabecera": "LENGUAJES EMERGENTES 16 TARDE DESTELLOS VIERNES",
+   "texto": "Octubre\n5:00p.m - 6:45p.m\nYOUNGFILM\nTIRO LIBRE\nDir. Inti D. Guerra\n0:05:03 | México | Cinedanza / Drama\nEntre paisajes naturales, habitaciones cerradas y espacios abstractos, Tori, un joven de catorce\naños, convierte el movimiento en una forma de explorar sus miedos y recuerdos. Guiado por\nuna voz poética, emprende un viaje de autodescubrimiento que lo enfrenta a la incertidumbre\nde arriesgarse y dar el siguiente paso.\nCORTOMETRAJE ESCOLAR\nSOLO\nDir. Agustina Lecaros\n0:06:03 | Colombia | Drama / Experimental\nCansado de una rutina que parece no conducirlo a ningún lugar, un joven decide ascender solo\na Monserrate. El esfuerzo físico, la música y el paisaje transforman el recorrido en una prueba\ninterior, donde cada paso despierta emociones distintas y le revela que romper la monotonía\ntambién depende de atreverse a comenzar.\nYOUNGFILM\nSUN COFFEE\n(Café de Sol)\nDir. Zoé Filloux y Estudiantes del MicroLycée Périer\n0:19:08 | Francia | Docuficción\nUn café frío y un corte de electricidad convierten una necesidad cotidiana en una investigación\ninesperada. Un grupo de estudiantes sale del aula para conocer científicos, explorar la energía\nfotovoltaica y descubrir cómo la luz del sol puede ofrecer respuestas concretas a los desafíos\nenergéticos de su entorno."
   },
   {
    "pagina": 38,
-   "cabecera": "TERRITORIOS BOYACÁ EN LOS CAMPOS",
-   "texto": "AMOR A PRIMERA VISTA\nDIR. ANDRÉS QUINTERO\nLeseph ha dedicado toda su vida al piano, convirtiendo la música en\nsu único y verdadero amor, mientras deja de lado los vínculos\nafectivos y su vida social. Desde niño rechaza el cariño de Luna, su\namiga de infancia, y en la adultez mantiene la misma distancia frente\nal amor de pareja. Sin embargo, al conocer a Ariadna, una mujer que\nle recuerda profundamente a Luna, comienza a descubrir un\nsentimiento que siempre había evitado. Entre la música, el amor y la\nnaturaleza, su relación atraviesa momentos de conflicto que se\nintensifican cuando Leseph queda ciego y el piano comienza a\nalejarse de su vida. Acompañado incondicionalmente por Ariadna y\nguiado por los recuerdos de su infancia, Leseph emprende un viaje\nhacia su niño interior, cuestionando las decisiones que tomó y\nbuscando una nueva oportunidad para transformar su vida."
+   "cabecera": "12 FESTIVAL VILLA DEL CINE",
+   "texto": "NARRATIVAS\nDIVERGENTES\nCortometraje IA | Cortometraje Vertical | Cortometraje con Celular | Video Musical | Realidad Virtual\nEl recorrido de la imagen se bifurca cuando cambian el marco, la tecnología y la relación con\nquien la observa. En estas obras, el soporte se vuelve parte del relato y el cine se desvía de sus\nformas habituales para descubrir otros territorios donde existir.\nRETORNOS\nPORTALES\nSEÑALES\nUna puerta entreabierta, un lente que\nEn imágenes que cambian de forma,\nUna experiencia inmersiva donde la\nmultiplica lo real y una imaginación\nel tiempo se pliega sobre sí mismo: lo\nimagen se vuelve habitable: entre\nque desborda la pantalla, conducen\nvivido y lo imaginado regresan para\nmáquinas, estrellas y paisajes, el\nhacia mundos, tiempos y verdades\nalterar el camino que parecía\ncuerpo recibe mensajes que\nque escapan de la mirada cotidiana.\nhaberlos dejado atrás.\natraviesan las formas y su distancia."
   },
   {
    "pagina": 39,
-   "cabecera": "TERRITORIOS BOYACÁ EN LOS CAMPOS",
-   "texto": "BOYACÁ EN LOS CAMPOS\nQUIMERA\nDir. Santiago Rincón\n0:10:13\nJames, de 12 años, vive en una granja hasta que la policía arresta al hombre que creía su padre.\nEn un centro infantil, su terapeuta le revela una dura verdad: fue secuestrado a los cinco años.\nEste trauma le generó un trastorno que lo obliga a imitar el comportamiento ajeno. Ahora, deberá\nenfrentar un complejo proceso de sanación.\nBOYACÁ EN LOS CAMPOS\nDIABLO BALLENA\nDir. Camilo Alfredo Barón Riveros\n0:15:00\nCarmen, una campesina de sesenta años, rescata a un hombre que flota junto a una guitarra en\nla laguna de Tota. Intenta descubrir su identidad, pero él se niega a hablar. Una canción, al\nparecer de la \"Diablo Ballena\", la última ballena de agua dulce, rompe el silencio. Entre el mito y\nla realidad, se enfrentan al pasado para encontrar su propia redención.\nBOYACÁ EN LOS CAMPOS\nSABOR A MI (ACÚSTICO / BOLERO JAZZ)\nDir. Franco Zornosa\n0:03:51\nEn la calidez de un hogar, una pareja comparte un refugio íntimo entre silencios elocuentes y\ncopas de vino. En este ambiente, Tatiana Jáuregui y el artista peruano Husil reinterpretan el\nclásico bolero Sabor a Mí en un formato acústico. La sala se transforma en un escenario donde la\nmúsica y el amor dialogan con total naturalidad."
+   "cabecera": "NARRATIVAS DIVERGENTES PORTALES MIÉRCOLES",
+   "texto": "Octubre\n6:15p.m - 6:30p.m\nMUCHO GUSTO\nDIR. CINTIA OBANDO\nVIDEO MUSICAL\nSelección Oficial en Competencia\n0:04:34 | Colombia | Animación\nMil dieciocho dibujos hechos a mano con lápices, crayolas,\npasteles, pinturas, marcadores y papeles dan vida al universo\nde Mucho Gusto. Entre colores, texturas, baile, animales,\nnaturaleza, fuego y magia, el videoclip de Magallanes busca\ndevolver a la pantalla una experiencia más humana, táctil y\ncercana."
   },
   {
    "pagina": 40,
-   "cabecera": "TERRITORIOS PLANETA",
-   "texto": "PLANETA\nMONTE CURANDERO\nDir. Andrés Felipe Velasco\n0:08:49\nLa medicina de la montaña es el aliento vital donde nace el agua y la vida brota en abundancia.\nLas abuelas custodian esta sabiduría ancestral, transmitiendo los secretos curativos de las\nplantas a través de los diseños plasmados en sus tejidos. Con una conexión noble y profunda.\nPLANETA\nAGUAS GRANDES\nDir. Presley Mendoza\n0:01:39\nEn las Cataratas del Iguazú, una voz ancestral contempla el paso del tiempo, las fronteras, las\nculturas y la memoria. Mientras los seres humanos cambian nombres, ciudades y valores, el agua\ncontinúa cayendo. Aguas Grandes es un poema audiovisual sobre aquello que permanece y\nnuestra inevitable pertenencia al paisaje."
+   "cabecera": "NARRATIVAS DIVERGENTES 16 MAÑANA PORTALES VIERNES",
+   "texto": "Octubre\n10:00a.m - 11:45a.m\nCORTOMETRAJE CON CELULAR\nPROS Y CONTRAS DE SOÑAR DESPIERTO\nDir. Lorena López\n0:04:52 | Colombia | Animación y Fantasía\nUn niño capaz de convertir cualquier momento en una aventura vive perdido entre fantasías,\naunque sus notas paguen el precio. Decididos a disciplinarlo, sus padres vacían su habitación de\njuguetes y música. El plan funciona, pero también apaga algo esencial en él, hasta que un\ninesperado cachorro vuelve a encender su imaginación.\nCORTOMETRAJE IA\nTHEY CALL IT SAUSAGE\n(Lo llaman salchicha)\nDir. Timm Osterhold\n0:03:00 | Alemania | Animación y Sátira\nEn una granja, Philly sospecha que los camiones que prometen “vacaciones” al ganado\nesconden un destino mucho más oscuro. Rufus cree que se trata de otra de sus teorías\nabsurdas, pero, mientras el vehículo se aleja, la duda resulta cada vez más difícil de ignorar.\nVIDEO MUSICAL\nAGUAPANELA\nDir. Juan José Narváez\n0:03:14 | Colombia | Fantasía y Comedia\nEn un barrio colombiano donde los dioses griegos toman aguapanela, Miguel huye de un\nCupido decidido a flecharlo. Con la ayuda de dos deidades musicales y un cáliz cargado de\nenergía celestial, emprende una divertida venganza contra el amor. Sin embargo, ni siquiera un\nhéroe mitológico puede escapar para siempre de sus flechas."
   },
   {
    "pagina": 41,
-   "cabecera": "NUEVAS MIRADAS RESURGENCIAS",
-   "texto": "CORTOMETRAJE NACIONAL\nSUKUA\nDir. Omar Ospina Giraldo\n0:17:00 | Colombia | Ficción y Drama | Desplazamiento Forzado\nPirimín, un niño kogui, recibe de regalo una pistola de agua. Esa noche, escucha a su padre\nmanifestar su inconformidad , cuando unas armas similares los obligaron a abandonar sus\nasentamientos. Ahora Pirimín no sabe que hacer con el juguete.\nÓPERA PRIMA INTERNACIONAL\nO CRAVISTA\nDir. Luiz Eduardo Ozóri\n1:44:00 | Brasil | Documental | Viaje Personal y Cultura Artística\nA punto de cumplir cien años, el clavecinista y director de orquesta Roberto De Regina\nrememora su trayectoria pionera en la reintroducción de la música clásica antigua en Brasil. A\ntravés de recuerdos personales y logros artísticos, reflexiona sobre el legado que construyó\nmientras se enfrentaba a prejuicios y resistencias culturales. Un retrato conmovedor sobre el\narte, el tiempo y la valentía de romper barreras y transformar tradiciones."
+   "cabecera": "NARRATIVAS DIVERGENTES 16 MAÑANA PORTALES VIERNES",
+   "texto": "Octubre\n10:00a.m - 11:45a.m\nCORTOMETRAJE CON CELULAR\nLA ÚLTIMA HISTORIA\nDir. Eberto Manotas y Mauro Andrade\n0:07:00 | Colombia | Drama y Ciencia Ficción\nPipe, un escritor anciano que enfrenta el Alzheimer, intenta terminar la que podría ser su última\nobra. Mientras escribe, sus recuerdos se confunden con historias ajenas hasta llevarlo de\nregreso a su infancia, cuando, sin zapatos y con un balón de trapo, soñaba con vestir la camiseta\nde la Selección Colombia.\nCORTOMETRAJE VERTICAL\nBEHIND THE DOOR\n(Detrás de la puerta)\nDir. Leonardo Valenti\n0:04:00 | Francia | Suspenso y Terror\nLeo despierta atrapado en una habitación de hotel a punto de perder su tren. Cuando una voz\nasegura estar dentro del baño, busca ayuda de su esposa, pero un extraño malentendido\nconvierte el miedo en celos y abre la puerta a una pesadilla.\nCORTOMETRAJE IA\nPROMPT ZERO\nDir. Tomás Etter Gómez\n0:02:58 | Colombia | Ciencia Ficción y Suspenso\nUn hombre utiliza inteligencia artificial para crear mundos e historias. Convencido de controlar\ncada imagen, descubre que una de sus creaciones ha adquirido voluntad propia y ha cruzado la\nfrontera que las separa. Ahora, aquello que nació de sus instrucciones regresa para terminar el\nrelato y decidir quién ocupa realmente el lugar del autor."
   },
   {
    "pagina": 42,
-   "cabecera": "NUEVAS MIRADAS METAMORFOSIS",
-   "texto": "CORTOMETRAJE NACIONAL\nINDEPENDENCE\nDir. John Agudelo\n0:19:00 | Colombia | Ficción\nCecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de\nsoportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su\nindependencia.\nÓPERA PRIMA INTERNACIONAL\nCOS DE VIDRE\nDir. Marc Comabella Navarro\n1:45:30 | España | Ficción y Drama | Viaje Personal\nUna adolescente brillante, atrapada entre la presión familiar y las redes sociales, se ve arrastrada\n—junto a su mejor amiga— a una espiral de autoexigencia que pone en riesgo su salud, su\nidentidad y su vida.\nCORTOMETRAJE INTERNACIONAL\nAUTOKAR\nDir. Sylwia SZKIŁĄDŹ\n0:17:00 | Francia | Animación | Viaje Personal e Inmigrantes\nEn la década de 1990, Agata, de ocho años, deja Polonia para trasladarse a Bélgica. Su\nperspectiva transforma la realidad migratoria en una experiencia iniciática."
+   "cabecera": "NARRATIVAS DIVERGENTES 16 MAÑANA PORTALES VIERNES",
+   "texto": "Octubre\n10:00a.m - 11:45a.m\nCORTOMETRAJE VERTICAL\nNAHUALES\nDir. Alejandro Cervantes\n0:04:00 | México | Suspenso y Fantasía\nUna noche de violencia convierte la cantina de un pueblo aparentemente tranquilo en\nescenario de una pesadilla. Mientras una joven lucha por sobrevivir al ataque de una criatura\nancestral, los rumores sobre un monstruo recorren la comunidad. Sin embargo, un viejo\ncampesino insiste en negar aquello que todos comienzan a temer.\nCORTOMETRAJE VERTICAL\n4 MINUTES\nDir. Rogerio Troiani\n0:06:14 | Brasil | Ficción y Drama\nCuatro amigos son arrastrados hacia un destino misterioso y explosivo que cambia por\ncompleto el curso de sus vidas. Mientras intentan comprender qué los condujo hasta allí, el\ntiempo avanza y la tensión aumenta. En apenas cuatro minutos, deberán enfrentar juntos una\nsituación para la que ninguno estaba preparado.\nCORTOMETRAJE IA\nLENS\nDir. Eduardo Rodríguez\n0:22:42 | Venezuela y Estados Unidos | Ciencia Ficción y Drama\nA sus nueve años, Alex descubre LENS, un misterioso prototipo capaz de revelar realidades\nalternativas. Cuando despiadados agentes de operaciones especiales comienzan a perseguir a\nsu familia, ella, su hermano Jim y su madre huyen a través de campos desolados, decididos a\nproteger a su nuevo amigo y descubrir su verdadero potencial."
   },
   {
    "pagina": 43,
-   "cabecera": "LENGUAJES EMERGENTES DESTELLOS",
-   "texto": "YOUNGFILM\nWITCH AND FROG\nDir. Anastasia Provotorova\n0:02:12 | Rusia | Animación\nUna joven aspirante a bruja quiere aprender magia, así que decide estudiar con una hechicera\nexperimentada. Se presenta en su casa, pero las cosas no salen exactamente según lo planeado.\nYOUNGFILM\nLA SILLA\nDir. Clara García\n0:05:34 | España | Discapacidades\nEmpatía: Capacidad de identificarse con alguien y compartir sus sentimientos.\nESCOLAR\nIN BETWEEN\nDir. Carlos Andrés Paniagua\n0:10:27 | Colombia | Ficción\nUn nuevo estudiante llega a una escuela dividida por gustos musicales y se encuentra atrapado\nentre dos grupos rivales. Mientras busca su lugar, descubre que, más allá de los prejuicios y las\netiquetas, siempre hay espacio para la empatía, el diálogo y la comprensión."
+   "cabecera": "NARRATIVAS DIVERGENTES 16 NOCHE RETORNOS VIERNES",
+   "texto": "Octubre\n8:15p.m - 9:45p.m\nVIDEO MUSICAL\nBENDITOS LOS VIEJOS\nDir. Camilo Duque y Santiago Rubio\n0:04:02 | Colombia | Experimental\nEn el corazón de una maloca, una mujer atraviesa un ritual de gestación acompañado por el fuego, la danza y\nfiguras de barro trazadas sobre su cuerpo. Mientras la naturaleza anuncia el nacimiento de una nueva vida, el\nparto se transforma en una celebración de la memoria ancestral, la gratitud y los ciclos que conectan el\ncuerpo, la tierra y las generaciones.\nCORTOMETRAJE IA\nCATATUMBO: CASA DEL TRUENO, MEMORIA Y DIGNIDAD\nDir. Jhonattan Sarmiento\n0:07:31 | Colombia | Animación y Ciencia Ficción\nCada noche, los relámpagos iluminan el Catatumbo, una tierra donde la belleza natural convive con las\nmarcas del conflicto. Entre guerrillas, desplazamientos y cultivos convertidos en sustento y estigma, esta\nanimación recorre la memoria de una región que, bajo un cielo que nunca se apaga, continúa defendiendo su\ndignidad y su esperanza.\nCORTOMETRAJE CON CELULAR\nNO SE FÍA, NI AUNQUE LLOREN\nDir. Natalia Hernández\n0:07:00 | Colombia | Drama y Comedia\nTras despedirse de su abuela Rosa, Mateo decide prepararse para asumir el legado familiar. Su única guía es\nuna lista de reglas escrita durante la infancia, que lo conduce por misiones tan absurdas como solemnes.\nEntre planes criminales y recuerdos, descubrirá que algunos legados no se reciben: se comprenden.\nCORTOMETRAJE VERTICAL\nÁNIMA DE MAREA\nDir. Laury T. Herrera\n0:03:35 | Colombia | Fantasía y Terror\nDurante el Día de los Muertos, José ignora la advertencia de su esposa y sale a pescar en las aguas de La\nBoquilla. Cuando el mar comienza a devolverle señales imposibles, una presencia sobrenatural lo enfrenta a\nsu mayor temor. En ese territorio, algunas tradiciones no son supersticiones: son reglas de supervivencia."
   },
   {
    "pagina": 44,
-   "cabecera": "LENGUAJES EMERGENTES DESTELLOS",
-   "texto": "APASIONADO NACIONAL\nLA SOMBRILLA DE MAMÁ\nDir. Mateo Forero\n0:19:00 | Colombia | Ficción y Drama Psicológico\nEn la Colombia de los años 50, la pérdida de una sombrilla desata la furia de Waldina sobre su\nhija Luz. Al comprender el profundo dolor oculto tras esa rabia, ambas logran una silenciosa\nreconciliación, descubriendo que se necesitan mutuamente para sobrevivir y sanar.\nINTERNATIONAL UNIVERSITIES\nTV ENTREABERTA\nDir. Mateus Compart\n0:08:00 | Brasil | Discapacidades\nUna mujer es abducida al interior de su televisor, donde es atormentada por una especie de\npresentador estadounidense al estilo de los dibujos animados. A medida que atraviesa diversos\ngéneros, el personaje va siendo asimilado gradualmente por este sistema televisivo.\nAPASIONADO NACIONAL\nVIA CRUSIS\nDir. Juan Lucas Neira\n0:03:00 | Colombia | Animación\nPlaceres carnales condenados dentro de nosotras."
+   "cabecera": "NARRATIVAS DIVERGENTES 16 NOCHE RETORNOS VIERNES",
+   "texto": "Octubre\n8:15p.m - 9:45p.m\nCORTOMETRAJE CON CELULAR\nMALEZA\nDir. Nicolle Estrada y Marcela Palacio\n0:11:00 | Colombia | Drama y Fantasía\nAlba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de\nsu gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y\nsilencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio\ncamino.\nVIDEO MUSICAL\nDESPUÉS DE TANTO AMOR\nDir. Mercedes Oviedo\n0:03:53 | Colombia | Drama y Experimental\nDespués de una ruptura, una mujer convierte el duelo en un ritual hecho de colores, palabras y objetos. Entre\nespinas que brotan del pecho, una casa rota y la silueta del amor ausente, atraviesa el dolor hasta encontrar\nuna nueva forma de habitar aquello que permanece después de tanto amor.\nCORTOMETRAJE VERTICAL\nSHORTS\nDir. Daniel Baena\n0:04:52 | Colombia | Drama\nDe regreso a casa, Samir, de 17 años, vive un episodio de acoso callejero que transforma su relación con el\ncuerpo y la vergüenza. Mientras intenta retomar su rutina, una simple pantaloneta se convierte en el recuerdo\npersistente de aquello que no logra nombrar ni dejar atrás.\nCORTOMETRAJE CON CELULAR\nTOMA 10\nDir. Ángel Campaña y Juan D. Arias\n0:07:00 | Colombia | Drama\nUna directora lucha por convencer a la estrella de su serie de aceptar la muerte de su personaje, pero para\nlograrlo deberá enfrentarlo al miedo que se esconde detrás de su ego, y acompañarlo a atreverse a\ndescubrir qué tipo de actor quiere ser."
   },
   {
    "pagina": 45,
-   "cabecera": "LENGUAJES EMERGENTES DESTELLOS",
-   "texto": "INTFINAL ACT\nDir. Babi Astrolfi y Lisa Soares\n0:11:00 | Brasil\nTras presenciar la muerte de una famosa actriz, Mateus Santos, un pasante de periodismo, tiene\nla oportunidad única de investigar el caso junto a su ídolo, la reconocida periodista Miriam Matos.\nJuntos interrogan a tres sospechosos en busca de la verdad sobre el motivo del asesino.\nESCOLAR\nLA PRESENCIA DE BLANCO\nDir. Nestor Javier Serpa Perez\n0:09:00 | Argentina | Ficción\nEn una escuela rural, cuatro niños enfrentan la leyenda de \"La Presencia de Blanco\". Lo que\nempieza como un juego se transforma en pesadilla cuando, al decidir no huir, descubren una\naterradora verdad que los aguarda en la oscuridad.\nYOUNGFILM\nTIRO LIBRE\nDir. Inti Deus Guerra Miranda\n0:05:03 | México\nTiro Libre es una cinedanza de atmósfera onírica que retrata el viaje de introspección y\nautodescubrimiento de Tori, de 14 años. A través de una narrativa poética y coreografías que\ntransitan entre la naturaleza y un universo abstracto, el joven explora sus miedos, sus recuerdos\ny la incertidumbre de tomar riesgos en la vida."
+   "cabecera": "NARRATIVAS DIVERGENTES 16 NOCHE RETORNOS VIERNES",
+   "texto": "Octubre\n8:15p.m - 9:45p.m\nVIDEO MUSICAL\nA PESAR DE MÍ\nDir. Thomás Mejía\n0:03:15 | Colombia | Drama y Romance\nEn pantallas divididas, dos antiguos amantes intentan componer mientras los recuerdos\ninterrumpen cada palabra. Separados, pero atrapados en el mismo bloqueo, descubren que\nseguir adelante no siempre exige olvidar. A veces, para recuperar la voz, es necesario aceptar\naquello que el otro dejó viviendo dentro de nosotros.\nCORTOMETRAJE CON CELULAR\nA BODY WITHOUT A HORSE?\n(¿Un cuerpo sin un caballo?)\nDir. Lara Fuke\n0:08:31 | Bélgica, Brasil, Finlandia y Portugal | Experimental y Animación\nUn cuerpo intenta reconocerse a través de aquello que le falta. Mientras mide sus contornos, se\nfragmenta y vuelve a componerse, la ausencia de un caballo abre una pregunta sobre el deseo,\nla memoria y la identidad.\nCORTOMETRAJE IA\n落⼦無悔 (LÀOZǏ WÚ HUǏ)\nLIFE IS A CHESSBOARD; EVERY MOVE IS FINAL —\n(La vida es un tablero; cada movimiento es definitivo)\nDir. Wang Zhi-zhong\n0:04:50 | Taiwán | Fantasía y Drama\nAl borde de un acantilado, un cultivador contempla un objeto que despierta recuerdos de\nquienes marcaron su vida. Cuando una piedra cae sobre un antiguo tablero de Go, memoria y\npresente se fracturan, obligándolo a aceptar que algunas decisiones no admiten regreso."
   },
   {
    "pagina": 46,
-   "cabecera": "LENGUAJES EMERGENTES DESTELLOS",
-   "texto": "ESCOLAR\nSOLO\nDir. Agustina Lecaros Chavez\n0:06:03 | Colombia | Experimental\nUn joven cansado de su vida cotidiana y monótona decide emprender un recorrido que va a\nponer a prueba sus capacidades tanto físicas como mentales.\nYOUNGFILM\nSUN COFFE\nDir. Zoe Filloux\n0:19:08 | Francia | Ficción\nUn café para recalentar, pero sin más electricidad: un problema que llevará a estudiantes de\nsecundaria por distintos encuentros y conversaciones en torno a la energía fotovoltaica."
+   "cabecera": "NARRATIVAS DIVERGENTES SEÑALES JUEVES, VIERNES",
+   "texto": "2:00p.m - 4:00p.m\nCORTOMETRAJE REALIDAD VIRTUAL\nFLOPPY THE ROBOT: EL ÚLTIMO CONTACTO\nDir. Jacobo Rendón\n0:20:00 | Colombia | Ciencia Ficción y Aventura\nEn un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren\ninvita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots\ncapaces de ayudar, proteger y acompañar a las personas.\nCORTOMETRAJE REALIDAD VIRTUAL\nHUMAN\n(Humano)\nDir. Débora Bergamini\n0:15:00 | Brasil | Ciencia Ficción\nA bordo de una experiencia inmersiva, el participante sigue el viaje de las sondas Voyager I y II y\nexplora el contenido de su Disco de Oro. Entre sonidos, imágenes y memorias de la Tierra, el\nespacio se convierte en un espejo de aquello que nos hace humanos.\nCORTOMETRAJE REALIDAD VIRTUAL\nPROTECTING OUR TERRITORY 360°\n(Protegiendo nuestro territorio 360°)\nDir. Christopher Boulton\n0:20:00 | Perú y Estados Unidos | Documental\nEl espectador se convierte en Cachufina, la compañera imaginaria de un grupo de estudiantes\nperuanos que transforma su entorno en una experiencia inmersiva. Creada con celulares y una\ncámara 360°, la obra invita a mirar y cuidar el territorio desde sus propias perspectivas."
   },
   {
    "pagina": 47,
-   "cabecera": "TERRITORIOS PODEROSAS",
-   "texto": "PODEROSAS\nQUAZAR\nDir. Alejandro Vargas\nKim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida.\nDurante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de\nmonstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un\nextraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra\nconfrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.\nPODEROSAS\nMOMENTOS EN MOVIMIENTO. PRIMEROS PASOS DEL BALLET EN COLOMBIA.\nDir. Marybel Acevedo\n0:19:00\nHistoria de los primeros pasos del ballet y la danza en Colombia, recopilada por Marybel\nAcevedo a partir del archivo personal de Beatriz Kopp. Documentos como fotografías, cartas,\nrevistas y scrapbooks dieron origen al primer Fondo de Danza Beatriz Kopp y Karen Balg,\nconservado en la Facultad de Artes ASAB de la Universidad Distrital.\nPODEROSAS\nLA MONA\nDir. Diana C. Patiño\n0:18:18\nEntre el polvo y el calor se encuentra La Hondura, un pueblo olvidado, donde la tensión se siente\ncomo electricidad en el aire. Allí, La Mona, una paramilitar, impone el orden. Sin embargo, no\npuede dominar la naturaleza de su cuerpo y la menstruación la doblega hasta el punto de\npostrarla en la cama."
+   "cabecera": "12 FESTIVAL VILLA DEL CINE",
+   "texto": "TERRITORIOS\nSelección Oficial No Competitiva\nLo humano también tiene una geografía. El cuerpo, los afectos, las ideas, las comunidades y los lugares que\nhabitamos dibujan el mapa de lo que somos. Estas obras recorren sus relieves íntimos y colectivos para\nobservar cómo aquello que habitamos también termina por construirnos.\nBOYACÁ EN\nVOCES\nPLANETA\nLOS CAMPOS\nCuando el poder deja ciertas vidas fuera\nAntes de nosotros, el agua ya había trazado\nCuando una forma de vida deja de\ndel relato, el arte, la tierra y la memoria\ncaminos en la tierra. Estos atraviesan una\ncontenernos, la identidad muda: cruza\ncolectiva\ntoman\nla\npalabra\npara\nmemoria que sana y nos enseña que\nfronteras, rompe el reflejo ajeno y se\ndevolverlas al curso de la historia.\ntambién pertenecemos al paisaje.\ndesprende de aquello que creía definido.\nPODEROSAS\nRAÍCES\nEntre el canto que guarda la memoria, el\nLo heredado no permanece inmóvil: habla\nmovimiento que prolonga un legado y el\nen una lengua, resuena dentro de una\ncuerpo que pone en duda la autoridad,\ncaverna, cabalga en una celebración y\nestas mujeres revelan que el poder\nvuelve a moverse en los cuerpos que lo\ntambién cambia de forma con el tiempo.\nmantienen vivo."
   },
   {
    "pagina": 48,
-   "cabecera": "NUEVAS MIRADAS ENCRUCIJADAS",
-   "texto": "ÓPERA PRIMA INTERNACIONAL\nSTEPPE\nDir. Mariano Benito\n1:26:00 | Argentina | Ficción\nEl joven agente de policía Francisco Revenga es enviado a cubrir un puesto de guardia en plena\nestepa. De camino, se detiene en un parador para comprar comida; allí graban con sus teléfonos\nmóviles unas imágenes comprometedoras que pondrán a Francisco ante un dilema moral.\nÓPERA PRIMA NACIONAL\nKMKZ: WILD, FREE AND BRAVE\nDir. Andrés Hernández\n1:30:00 | Colombia | Juventud, Resistencia e Identidad Frente a la Violencia Urbana\nCombinando ficción y documental, KMKZ sigue a Kamila, una joven que graba con su teléfono\nmóvil las hostiles calles de Bogotá. Cuando su amiga Leonor desaparece, las grabaciones crudas\ny en formato vertical de Kamila se transforman en un archivo desafiante de memoria y\nresistencia. En última instancia, esta película visceral actúa como un manifiesto político que\ndesafía al cine latinoamericano a confrontar las duras realidades de la juventud marginada."
+   "cabecera": "TERRITORIOS MIÉRCOLES BOYACÁ EN LOS CAMPOS",
+   "texto": "Octubre\n5:45p.m - 6:15p.m\nAMOR A PRIMERA VISTA\nDIR. ANDRÉS QUINTERO\nCORTOMETRAJE\nSelección Oficial No Competitiva\n0:19:08 | Colombia | Drama / Romance\nLeseph ha dedicado su vida al piano, dejando el amor en\nsegundo plano. Cuando conoce a Ariadna, la música se\nconvierte en el lenguaje de una relación atravesada por la\nentrega, la pérdida y las decisiones no tomadas. Con el paso\ndel tiempo, deberá reconocer cuál de sus grandes amores\npermanece realmente a su lado."
   },
   {
    "pagina": 49,
-   "cabecera": "TERRITORIOS RAÍCES",
-   "texto": "KOREBAJU PAI REKOCHO\nDir. William Javier Gutiérrez Vargas\n0:20:00\nEstiverson, un joven indígena coreguaje que regresa a su territorio para trabajar como etnoeducador. A través\nde la lengua coreguaje, el río y la educación comunitaria, el cortometraje propone una experiencia sensorial\nde la continuidad de un pueblo.\nRAÍCES\nCUADRILEROS ORGULLO Y LEGADO\nDir. Fabián Enrique Moreno Correa\n0:25:58\nLos Juegos de Cuadrillas de San Martín, Meta, son una tradición ecuestre que se celebra desde 1735 y forma parte del\npatrimonio cultural de Colombia. Generaciones de familias mantienen viva esta expresión folclórica que representa la\ndiversidad y la historia de la región.\nRAÍCES\nTHE GUANENTÁ SYMPHONY\nDir. Victor Jaramillo\n0:21:54\nDocumental que explora el legado musical de la cultura guane a través de una expedición por el Cañón del\nChicamocha. El maestro Giovanni Laguado reconstruye instrumentos precolombinos y crea una sinfonía\nancestral que honra la memoria del pueblo guane y rescata parte de la identidad cultural de Santander.\nRAÍCES\nSHELTERING GESTURES\nDir. Adrián Villa-Dávila y Andrés Prado\n0:10:53\nVideodanza que rescata la tradicional Danza de las Tabliteras, revivida por jóvenes bailarines que\naprendieron sus movimientos y ritmos de los últimos ancianos que aún conservaban esta tradición de San\nAntonio, Bolívar."
+   "cabecera": "TERRITORIOS VOCES JUEVES",
+   "texto": "Octubre\n2:00p.m - 3:00p.m\nVOCES\nBORRACHOS MIENTRAS ESCUCHAMOS LAS GOTAS CAER\nDir. Santiago Gómez\n0:21:25 | Colombia | Documental Híbrido / Drama\nEn la vejez, una pareja contempla cómo la tierra destinada a sostener su retiro se convierte en\nuna condena. Marcado por el abuso estatal y distintas formas de violencia, el territorio los\ndesangra económica y emocionalmente. Un retrato íntimo sobre el desarraigo, la resistencia y la\nobstinación de permanecer donde todo parece expulsarlos.\nVOCES\nMEMORIA COLECTIVA\nDir. Cristina Colmenares\n0:15:00 | Colombia y Perú | Animación / Drama\nEn 1983, soldados encapuchados irrumpen en la casa de Adelina y se llevan a su esposo, quien\njamás regresa. Ante el silencio de las autoridades, ella se une a otras mujeres marcadas por la\nmisma ausencia. Juntas convierten el dolor en memoria y la memoria en una exigencia de\njusticia.\nVOCES\nCON LA MANO ARRIBA\nDir. Miguel A. Ordóñez\n0:10:56 | Colombia | Documental\nDesde 2023, la compañía independiente de títeres Con la Mano Arriba busca abrirse un lugar en\nel Carnaval de Barranquilla. Durante un desfile, una falla de sonido pone a prueba al colectivo.\nEntre caos, humor y precariedad, sus integrantes deciden sostener la función y defender con\ncreatividad su derecho a formar parte de la fiesta."
   },
   {
    "pagina": 50,
-   "cabecera": "NUEVAS MIRADAS RESISTENCIAS",
-   "texto": "ÓPERA PRIMA INTERNACIONAL\nCOMPARSA\nDir. Vickie Curtis y Doug Anderson\n1:19:00 | Guatemala / USA | Documental | Cultura\nEn Guatemala, las hermanas Lesli y Lupe movilizan a su comunidad a través del arte tras la\ntrágica muerte de 41 niñas en un centro de acogida estatal. Al organizar una vibrante comparsa\ncallejera, protestan con valentía contra la violencia sistémica hacia las mujeres y reivindican los\nespacios públicos. Filmada a lo largo de 15 años, *Comparsa* es un retrato conmovedor de la\nsororidad, la resiliencia y el poder sanador del arte.\nÓPERA PRIMA INTERNACIONAL\nLANGUAGE OF THE WIND\nDir. Shimataver Igbawua\n1:23:00 | Nigeria | Ficción | Relaciones y Perspectivas\nTras su boda con su tradicional primo Ardo (17), Shatu (16) descubre una oportunidad para\nescapar hacia su soñada vida en la ciudad. Durante un tenso arreo de ganado, las diferencias\nentre ambos finalmente estallan, obligando a la joven pareja a enfrentar dolorosas verdades y\ntomar una decisión definitiva al caer la noche."
+   "cabecera": "TERRITORIOS 16 MAÑANA PLANETA VIERNES",
+   "texto": "Octubre\n11:45a.m - 1:00p.m\nPLANETA\nMONTE CURANDERO\nDir. Andrés F. Velasco\n0:08:49 | Colombia | Documental\nEn las montañas del Putumayo, las abuelas guardan el conocimiento medicinal de las plantas y\nlo transmiten de generación en generación. Sus tejidos convierten la relación con el agua, la\nchagra y el monte en símbolos vivos. Un acercamiento sensible a una naturaleza que conserva\nuna memoria más antigua y extensa que la nuestra.\nPLANETA\nAGUAS GRANDES\nDir. Presly Mendoza\n0:01:39 | Colombia | Experimental / Poético\nEn las Cataratas del Iguazú, el agua observa el paso de las personas, las culturas y las fronteras.\nMientras los nombres y los valores cambian, ella continúa cayendo y guardando memoria. Un\npoema audiovisual que invierte nuestra mirada sobre el paisaje para recordarnos que nunca\nhemos estado fuera de él."
+  },
+  {
+   "pagina": 51,
+   "cabecera": "TERRITORIOS 16 TARDE BOYACÁ EN LOS CAMPOS VIERNES",
+   "texto": "Octubre\n2:00p.m - 3:00p.m\nBOYACÁ EN LOS CAMPOS\nQUIMERA\nDir. Santiago Rincón\n0:10:13 | Colombia | Thriller Psicológico / Drama\nJames, de doce años, vive con Francisco en una granja hasta que la policía irrumpe y revela que\nel hombre que llama padre lo secuestró años atrás. Trasladado a un centro terapéutico, el niño\ndeberá reconstruir su identidad y aprender a reconocerse detrás de los comportamientos que\nimita para sobrevivir.\nBOYACÁ EN LOS CAMPOS\nDIABLO BALLENA\nDir. Camilo Barón\n0:15:00 | Colombia | Realismo Mágico / Drama\nCarmen, una campesina de sesenta años, rescata de la laguna de Tota a un desconocido que\nflota junto a un requinto. Él se niega a revelar su identidad, pero el canto de la mítica Diablo\nBallena rompe el silencio y conduce a ambos hacia un pasado que aún busca redención.\nBOYACÁ EN LOS CAMPOS\nSABOR A MÍ (ACÚSTICO / BOLERO JAZZ)\nDir. Franco Zornosa\n0:03:51 | Colombia | Romance / Musical\nEn la casa del poeta Jota Mario Arbeláez, una pareja se refugia del mundo mientras Tatiana\nJáuregui y el artista peruano Husil reinterpretan Sabor a mí. Entre vino, miradas y silencios, el\npiano y la voz convierten un instante cotidiano en una experiencia íntima donde la música y el\nafecto suspenden el tiempo."
+  },
+  {
+   "pagina": 52,
+   "cabecera": "TERRITORIOS 16 TARDE PODEROSAS VIERNES",
+   "texto": "Octubre\n6:45p.m - 8:15p.m\nPODEROSAS\nLA MONA\nDir. Laura Gutiérrez\n0:18:18 | Colombia | Thriller / Drama\nEn La Hondura, un caserío abrasado por el polvo y el calor, La Mona impone el orden como\nintegrante de un grupo paramilitar. Cuando la menstruación la obliga a detenerse, el cuerpo que\nintenta someter revela sus deseos, contradicciones y silencios, resquebrajando la autoridad con\nla que ha aprendido a sobrevivir.\nPODEROSAS\nMOMENTOS EN MOVIMIENTO: PRIMEROS PASOS DEL BALLET EN COLOMBIA\nDir. Marybel Acevedo\n0:19:00 | Colombia | Documental / Archivo\nA través de archivos y testimonios de quienes abrieron camino, este documental reconstruye el\nnacimiento y la consolidación del ballet en Colombia. Las primeras academias, maestras y\nbailarinas revelan una historia de disciplina, migraciones y perseverancia, rescatando del olvido\na las mujeres que transformaron el movimiento en memoria y profesión.\nPODEROSAS\nQUAZAR\nDir. Alejandro Vargas\n0:19:58 | Colombia | Fantasía / Drama\nTras una ruptura, Kim acude a terapia para entender por qué Ana, su expareja, la visita cada\nnoche convertida en una criatura extraterrestre. Mientras reconstruye la transformación de\naquella relación, deberá enfrentarse al monstruo que habita sus recuerdos y encontrar una\nforma de despedirse de lo que todavía la persigue."
+  },
+  {
+   "pagina": 53,
+   "cabecera": "TERRITORIOS RAÍCES SÁBADO",
+   "texto": "Octubre\n11:45a.m - 1:00p.m\nRAÍCES\nKOREBAJU PAI REKOCHO\nDir. William J. Gutiérrez\n0:20:00 | Colombia | Documental\nEstiverson, un joven indígena korebaju, regresa a su territorio para trabajar como etnoeducador. Entre la lengua\nde su pueblo, el cauce del río y el aprendizaje comunitario, su recorrido revela cómo una cultura permanece viva\ncuando el conocimiento encuentra nuevas generaciones dispuestas a escucharlo, nombrarlo y transmitirlo.\nRAÍCES\nCUADRILLEROS, ORGULLO Y LEGADO\nDir. Fabián E. Moreno\n1:25:58 | Colombia | Documental\nDesde 1735, los Juegos de Cuadrillas transforman a San Martín, Meta, en escenario de una tradición ecuestre donde\nconvergen memorias indígenas, españolas y africanas. A través de las familias que heredan sus colores y destrezas,\nel documental descubre el orgullo de quienes convierten cada encuentro en una promesa de continuidad.\nRAÍCES\nLA SINFONÍA GUANENTÁ\nDir. Victor Jarmillo\n0:21:54 | Colombia | Documental\nEn una expedición por el Cañón del Chicamocha, el maestro Giovanni Laguado reconstruye instrumentos\nprecolombinos para devolverle sonido a la memoria guane. Entre paisaje, arqueología y música, una sinfonía\nancestral emerge como puente hacia la identidad cultural de Santander y los saberes que aún resuenan en\nsu territorio.\nRAÍCES\nGESTOS DE REFUGIO\nDir. Adrián Villa-Dávila y Andrés Prado\n0:10:53 | Colombia | Videodanza\nJóvenes bailarines recuperan la Danza de las Tabliteras a partir de los movimientos y ritmos transmitidos por\nlos últimos mayores que conservaban esta tradición de San Antonio, Bolívar. En cada gesto, el cuerpo se\nvuelve refugio de una memoria colectiva que encuentra nuevas formas de permanecer."
+  },
+  {
+   "pagina": 54,
+   "cabecera": "12 FESTIVAL VILLA DEL CINE",
+   "texto": "PROGRAMACIÓN INFANTIL\nX-PLORA CINE\nSelección Oficial No Competitiva\nGuardianes de la tierra, milagros inesperados y aves viajeras abren un camino para explorar el cine\ncon todos los sentidos. Incluso más allá de la pantalla, en experiencias formativas que transforman la\nluz y expanden las formas. Esta franja nos invita a contemplar el mundo como si fuera la primera vez."
+  },
+  {
+   "pagina": 55,
+   "cabecera": "X-PLORA CINE FORMACIÓN",
+   "texto": "15 MAÑANA\nFARMEANDO EL TUNJO\nJUEVES\nTALLER DE CREACIÓN CINEMATOGRÁFICA CON INTELIGENCIA ARTIFICIAL\nJimena Guerrero, Vanessa Vega y PiPo Aranguren\n10:30a.m - 12:30a.m\nTalleristas\nUn laboratorio práctico en el que la tradición oral y la tecnología generativa se encuentran para\ndar nueva vida a *El Tunjo*. A través de la observación corporal, la fotografía, la dirección de arte\ny el *prompt engineering* en Omni Flash, los participantes crearán microrrelatos animados de\ndiez segundos en los que esta figura mítica despierta, baila y explora los lenguajes de la\nnarrativa digital.\n15 MAÑANA\nCOMIENZOS | EL FÓSIL MÁGICO: Cortometraje\nJUEVES\nEXHIBICIÓN + Q&A\n9:45a.m - 10:30a.m\nEstudiantes IE Nueva Generación - Sáchicha\nRealizadores\nEn las montañas de Sáchica, Boyacá; un grupo de niños descubre un misterioso fósil y\nemprende una aventura para encontrar la pieza que le falta. Al unir sus dos mitades, serán\ntransportados a un mundo mágico donde un gigantesco pliosaurio los guiará hacia los secretos\nque permanecen escondidos bajo su tierra.\n16 MAÑANA\nCIANOTIPIA\nVIERNES\nTALLER DE EXPERIMENTACIÓN Y FOTOGRAFÍA ANALÓGICA\nIsabella Bobadilla Monsalve\n9:45a.m - 11:45a.m\nTallerista\nUna pausa reflexiva entre el tiempo, la materia y la luz. A partir de la vegetación local, la\nobservación y la composición manual, los participantes explorarán una técnica fotográfica\nhistórica en la que el sol transforma la superficie y revela siluetas. Un taller al aire libre para\nexperimentar con el paisaje, la textura y la alquimia visual de la imagen."
+  },
+  {
+   "pagina": 56,
+   "cabecera": "X-PLORA CINE EXHIBICIÓN JUEVES, VIERNES",
+   "texto": "9:00a.m - 1:00p.m\nINFANTIL\nTIERRAS DE LOBEIRAS\nDir. Carla Barrionuevo\n0:04:53 | Argentina | Fábula y Animación\nJosé y un grupo de agricultores llegan a los pastizales donde vive Gualicho, un aguará guazú\ndecidido a proteger su hogar. El enfrentamiento entre ambos despierta una antigua leyenda y\ntransforma al hijo de José en un lobizón. Una fábula sobre la naturaleza, el respeto y el alcance\nde nuestros actos.\nINFANTIL\nUN DULCE MILAGRO\nDir. María José Chaparro\n0:07:07 | Colombia | Fantasía y Animación\nFrancis, un niño optimista del campo, sueña con devolver la alegría a su hogar. Cuando aparece\nun inesperado milagro dulce, cree haber encontrado la respuesta a los problemas de su familia.\nSin embargo, pronto descubrirá que incluso los deseos más hermosos pueden traer sorpresas\ndifíciles de imaginar.\nINFANTIL\nSOLO UN AVE MÁS\nDir. Julián Gómez\n0:16:30 | Colombia | Aventura y Animación\nTras sufrir un accidente en la ciudad, Raquelita, una paloma colombiana, encuentra refugio en\nla ventana de Tomás. Mientras se recupera junto al niño, emprende un viaje por calles y tejados\nque le revela personajes, detalles invisibles y nuevas formas de vida, hasta descubrir su propio\nlugar en el mundo."
   }
  ],
  "academica": [
   {
-   "pagina": 51,
-   "texto": "RUTA ACADÉMICA - CineCamino\nMasterclass\nTalleres\nClaquetazo\nCharlas\nNOTA\nCada actividad tendrá un código\nQR para diligenciar asistencia, si\ncumple con asistencia cada uno de\nEstación igüaque\nlos días tendrá una certificación de\nla Ruta Académica CineCamino"
-  },
-  {
-   "pagina": 52,
-   "texto": "RUTA ACADÉMICA - CineCamino\nESTACIÓN IGÜAQUE\n¿Tienes un proyecto en desarrollo y quieres\nrecibir\nretroalimentación de expertos de diferentes áreas?\nEspacio de escucha, intercambio y conocimiento para conversar\nsobre tu proyecto mientras compartes un café."
-  },
-  {
-   "pagina": 53,
-   "texto": "RUTA ACADÉMICA - CineCamino\nCLUB DE PITCH\nENCUENTRO WORK IN PROGRESS\nDir. Carla Low\nDuración 90 min.\nUn espacio de encuentro y preparación para los proyectos seleccionados en Work in\nProgress, pensado para compartir herramientas, consejos y estrategias que les\nayuden a fortalecer su pitch antes de presentarlo ante los jurados. Una sesión abierta\npara quienes quieran acompañar este momento, conocer de cerca el proceso y\ndescubrir claves para comunicar una historia, un proyecto y su potencial de manera\nclara, atractiva y efectiva."
-  },
-  {
-   "pagina": 54,
-   "texto": "RUTA ACADÉMICA - CineCamino\nCLAQUETAZO\n1 Directora + 5 realizadores Boyacenses\nExperiencia formativa y creativa en alianza con DASC (Directores Audiovisuales\nSociedad Colombiana de Gestión), en la que uno de sus directores acompañará a un\nequipo de cinco participantes en la creación y realización de un filminuto. Un espacio\npráctico para compartir conocimientos y fortalecer la formación del sector audiovisual\nde Boyacá."
-  },
-  {
-   "pagina": 55,
-   "texto": "RUTA ACADÉMICA - CineCamino\nTALLER EUREKA\nDir. Luna Martínez Rodríguez\nDEL COLLAGE AL PÓSTER\nUn taller para acercarse a la creación de imágenes para cine desde un lugar\nexperimental, creativo y accesible. A través del póster, exploraremos cómo una\npelícula puede convertirse en una imagen: cómo traducir su atmósfera, sus\npersonajes, conflictos, símbolos y emociones en una pieza visual que también cuenta\nuna historia."
-  },
-  {
-   "pagina": 56,
-   "texto": "RUTA ACADÉMICA - CineCamino\nUNIVERSOS EXPANDIDOS\nCON EL PODCAST\nMauricio Romero - Periodista y docente especializado en cine y audiovisual\nCHARLA GENTE QUE HACE CINE:\nUna conversación para descubrir cómo el podcast puede convertirse en una nueva\nventana para el cine: un espacio para ampliar historias, explorar personajes y crear\nnuevas formas de conectar con las audiencias. Un encuentro con quienes hacen cine\npara conversar sobre las posibilidades narrativas de este formato y los universos que\npueden surgir cuando una película encuentra nuevas voces más allá de la pantalla"
-  },
-  {
    "pagina": 57,
-   "texto": "RUTA ACADÉMICA - CineCamino\nMAQUILLAJE:\nTRANSFORMACIONES DEL TIEMPO\nDir. Lili Bonil - Tallerista ENACC\nMaestra de maquillaje\nUn encuentro para descubrir el mundo del maquillaje en el cine colombiano:\nsus secretos, sus posibilidades y la manera en que transforma rostros para\ncontar historias. Durante dos horas conoceremos este fascinante oficio y\ncerraremos con una demostración en vivo, donde veremos cómo una gran\nartista convierte el maquillaje en una verdadera obra de arte."
+   "texto": "12\ncaminos\nFESTIVAL\ndel\nVILLA\ntiempo\nDEL CINE\nRUTA ACADÉMICA\nCINECAMINO\nCaminar el cine también es recorrer sus oficios. En esta ruta de formación, creación e intercambio, la\nexperiencia cambia de manos, las preguntas abren caminos y las ideas encuentran herramientas para\nllegar a la pantalla.\nCOMPLETA LA RUTA:\nParticipa en al menos una actividad cada día\ndurante el festival y registra tu asistencia\ncon el código QR de cada sala. Al completar\nel recorrido, recibirás la Certificación de la\nRuta Académica CineCamino."
   },
   {
    "pagina": 58,
-   "texto": "RUTA ACADÉMICA - CineCamino\nDIRIGIR EL TIEMPO\nMonica Cifuentes Toro - DASC\nDirectora de cine\nUna conversación cercana con una directora sobre el oficio de hacer cine: las\ndecisiones, los desafíos y las intuiciones que acompañan el proceso de llevar una\nhistoria a la pantalla. Un encuentro para hablar de dirección, creación y de ese\nparticular ejercicio de darle ritmo, sentido y tiempo a una película."
+   "texto": "RUTA ACADÉMICA\ncaminos\nCINECAMINO\ndel\ntiempo\n16, JUEVES,\nESTACIÓN\n15, 17 VIERNES,\nIGUAQUE\nS[ABADO\nTARDE\n¿Hasta dónde podría llegar tu proyecto con las miradas adecuadas?\nComparte tu obra en cualquier etapa con expertos de diferentes áreas de la\nindustria. Una oportunidad para conversar alrededor de un café, recibir\nretroalimentación especializada y descubrir nuevas posibilidades para llevarla\na su siguiente etapa.\nCLAQUETAZO\n15, 16,\nJUEVES,\nVIERNES,\n17\nSÁBADO\nLABORATORIO DE CREACIÓN\nMAÑANA\n/ TARDE\n1 Directora, 5 Realizadores Boyacenses\nUn minuto puede contener un camino entero. En solo tres días, cinco\nrealizadores llevarán un guion hasta la pantalla, recorriendo la preproducción,\nel rodaje y la posproducción en una carrera creativa contra el tiempo."
   },
   {
    "pagina": 59,
-   "texto": "RUTA ACADÉMICA - CineCamino\nTRAZOS\n3 realizadores + moderador(a)\nCHARLA REALIZADORES\nUn encuentro con las y los realizadores de los cortometrajes seleccionados para\nconversar sobre las historias que los llevaron a crear sus películas. Una charla para\nconocer sus procesos, búsquedas y desafíos, y descubrir las distintas miradas que\nhoy están explorando el lenguaje del cortometraje."
+   "texto": "CINECAMINO\ncaminos\nTALLERES\ndel\ntiempo\n15 MAÑANA\nCLUB DE PITCH\nJUEVES\nENCUENTRO WORK IN PROGRESS\n9:30a.m - 10:30a.m\nCarla Low\nTallerista\nUna obra en proceso habita entre lo que ya es y aquello que puede llegar a\nser. Este espacio acompaña a los realizadores de Work in Progress de la\nSelección Oficial en Competencia a encontrar el corazón de sus películas y\nconvertirlo en un pitch capaz de impulsarlas hacia su siguiente etapa.\nDEL COLLAGE AL PÓSTER 16 VIERNES\nMAÑANA\nCREACIÓN DE POSTERS PARA CINE\n10:00a.m - 1:00p.m\nLuna Martínez Rodríguez | EUREKA\nTallerista\nEntre fragmentos, una película comienza a existir antes de llegar a la pantalla.\nEl collage reúne atmósferas, símbolos y emociones para convertir el póster en\nla primera huella de su universo: una imagen capaz de abrir distintos caminos\nhacia la historia que imaginamos."
   },
   {
    "pagina": 60,
-   "texto": "RUTA ACADÉMICA - CineCamino\nPROCESO DE RESTAURACIÓN DE LAS\nPELÍCULAS LA PAGA Y AQUILEO VENGANZA\nDEL DIRECTOR CIRO DURÁN.\nJorge Mario Vera\nDirector de fotografía y restaurador fílmico. Subdirector Técnico, FPFC.\nCHARLA\nUna charla sobre restauración. La paga tuvo su reestreno, en la versión restaurada\ndurante Cannes Classics 2025 y Aquileo venganza tendrá el estreno de la versión\nrestaurada durante el festival Villa del cine 2026."
+   "texto": "CINECAMINO\ncaminos\nCHARLAS\ndel\ntiempo\nRESTAURANDO EL TIEMPO 16 VIERNES\nMAÑANA\nCONSERVACIÓN Y RECUPERACIÓN DEL\n10:30a.m - 12:30m\nPATRIMONIO FÍLMICO\nJorge Mario Vera\nDirector de fotografía y restaurador fílmico. Subdirector Técnico, FPFC.\nA partir de La Paga (Dir. Ciro Durán), cuya versión restaurada se reestrenó en Cannes\nClassics 2025, y Aquileo Venganza, (Dir. Ciro Durán), que estrenará su restauración en\nel Festival Villa del Cine 2026, recorreremos los procesos que permiten recuperar,\nconservar y reencontrarnos con nuestra memoria cinematográfica.\n16 TARDE\nTRAZOS\nVIERNES\n2:15p.m - 4:00p.m\nREALIZADORES\nCarla Low\nModeradora\nTres realizadores de los cortometrajes seleccionados conversan sobre las\nhistorias que dieron origen a sus películas, los caminos recorridos durante su\ncreación y las decisiones que definieron sus miradas. Un encuentro moderado\npara acercarse a los procesos, búsquedas y desafíos detrás del cortometraje."
+  },
+  {
+   "pagina": 61,
+   "texto": "CINECAMINO\ncaminos\nMASTERCLASSES\ndel\ntiempo\n17 MAÑANA\nCAMINAR ROSTROS\nSÁBADO\nMAQUILLAJE Y CONSTRUCCIÓN\n10:00a.m - 12:00m\nLili Bonil | ENACC\nMaestra de Maquillaje\nUna clase magistral sobre el maquillaje como herramienta esencial para la\nconstrucción de personajes en el cine colombiano; recorriendo los secretos y\nrecursos de este oficio que cerrará con una demostración en vivo, donde la\ntécnica se convierte en una forma de narrar.\n17 TARDE\nDIRIGIR EL TIEMPO\nSÁBADO\nDIRECCIÓN Y LENGUAJE\n10:00a.m - 11:45a.m\nMónica Cifuentes Toro | DASC\nDirectora de Cine\nUna clase magistral sobre el oficio de dirigir y las decisiones que acompañan el\ncamino entre una historia escrita y su llegada a la pantalla. Un recorrido por los\ndesafíos, intuiciones y herramientas con las que la dirección articula las distintas\náreas de una película y convierte una intención en ritmo, puesta en escena y sentido."
   }
  ]
 }

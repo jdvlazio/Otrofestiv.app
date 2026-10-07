@@ -95,16 +95,38 @@ OCR_CIEGO = {
 }
 
 
+# LO QUE EL OCR VE EN ESTAS PÁGINAS Y NO ES UNA FICHA PUBLICADA, mirado en la
+# página (PDF del 6 oct). (página, comienzo normalizado) → por qué.
+VISTO_FUERA = {
+    (14, 'unkt'): 'la transcripción fonética «/unkɨ/ · muisca» bajo UNQUY: adorno del nombre',
+    (15, 'exposicion fotografica'): 'la EXPOSICIÓN «Memorias de Aquileo Venganza», «durante todo '
+        'el festival»: no tiene casilla en la retícula, ni sede ni hora. No se publica; '
+        'queda en las preguntas al festival',
+    (15, 'un recorrido fotografico'): 'ídem, su párrafo',
+    (15, 'historia y restauracion'): 'ídem', (15, 'villa de leyva desde sus'): 'ídem',
+    (15, 'una nueva version 4k'): 'ídem',
+    (55, 'estudiantes'): 'el crédito de EL FÓSIL MÁGICO, que es OBRA y lo lee -obras-pdf.py',
+    (58, '16 vier'): 'el día de la ficha («16, VIERNES»), en la columna de fechas',
+}
+
+
 def lee_mupdf(pagina):
     """LECTURA B. Misma idea que el extractor —cuerpo por altura de caja,
     orden por (y, x), párrafos por el salto— con otra librería."""
     import fitz
     d = fitz.open(PDF)
-    ls = []
+    ls, vistas = [], set()
     for b in d[pagina - 1].get_text('dict')['blocks']:
         for l in b.get('lines', []):
-            t = ' '.join(s['text'] for s in l['spans']).strip()
-            if t:
+            # los tramos van PEGADOS: cada uno trae sus propios espacios, y
+            # unirlos con ' ' metía uno de más en cada cambio de cursiva
+            t = re.sub(r'\s+', ' ', ''.join(s['text'] for s in l['spans'])).strip()
+            # EL PDF DEL 6 OCT DIBUJA EL CUERPO DOS VECES, con la misma caja y
+            # el mismo texto (relleno + trazo). Poppler lo funde; MuPDF lo
+            # devuelve dos veces y la frase salía repetida a mitad de camino.
+            clave = (tuple(round(v, 1) for v in l['bbox']), t)
+            if t and clave not in vistas:
+                vistas.add(clave)
                 x0, y0, _, y1 = l['bbox']
                 ls.append((y0, x0, y1 - y0, t))
     d.close()
@@ -114,7 +136,11 @@ def lee_mupdf(pagina):
 def main():
     if not os.path.exists(SIDECAR):
         sys.exit(f'✗ falta {SIDECAR}: correr antes el extractor')
-    pub = {f['pagina']: f for f in json.load(open(SIDECAR, encoding='utf-8'))['actividades']}
+    # PDF del 6 oct: hasta dos fichas por página
+    fichas = json.load(open(SIDECAR, encoding='utf-8'))['actividades']
+    pub = {}
+    for f in fichas:
+        pub.setdefault(f['pagina'], []).append(f)
     pags = sorted(pub)
 
     rutas = [OCRC.render(p) for p in pags]
@@ -124,18 +150,19 @@ def main():
     fallos, avisos, iguales = [], [], 0
     print(f'{len(pags)} fichas · tres lecturas: poppler, MuPDF y Vision sobre '
           f'los píxeles\n')
-    for p in pags:
-        a = pub[p]
+    for p, a in [(p, a) for p in pags for a in pub[p]]:
         # ── B · MuPDF, mismo algoritmo, otra librería ────────────────────────
         ls = lee_mupdf(p)
         cuerpo = [(y, x, h, t) for y, x, h, t in ls if h < EXTRACTOR.CUERPO]
         ps = EXTRACTOR.parrafos(cuerpo)
-        ancla = dict(EXTRACTOR.PAGINAS[p])[a['titulo']]
+        e = next(e for e in EXTRACTOR.PAGINAS[p] if e[0] == a['titulo'])
+        ancla, extra = e[1], (e[2] if len(e) > 2 else 0)
         if ancla is None:
             sin_b = ' '.join(ps)
         else:
-            i = next((k for k, x in enumerate(ps) if x.startswith(ancla)), None)
-            sin_b = ps[i] if i is not None else ''
+            i = next((k for k, x in enumerate(ps) if ancla in x), None)
+            sin_b = (' '.join([ancla + ps[i].split(ancla, 1)[1]] + ps[i + 1:i + 1 + extra])
+                     if i is not None else '')
         if not sin_b:
             fallos.append(f'p{p} «{a["titulo"]}»: MuPDF no encuentra la sinopsis')
         elif ' '.join(sin_b.split()) != ' '.join(a['sinopsis'].split()):
@@ -179,8 +206,11 @@ def main():
               f'píxeles {cobertura:.0%} ({como})')
 
         # ── cobertura inversa: ¿se ve algo que no leímos? ───────────────────
-        nuestro = norm(' '.join([a['titulo'], a.get('_titulo_pdf', ''),
-                                 a.get('credito', ''), a['sinopsis']]))
+        if a is not pub[p][-1]:
+            continue                      # la inversa, una vez por página
+        nuestro = norm(' '.join(' '.join([x['titulo'], x.get('_titulo_pdf', ''),
+                                          x.get('credito', ''), x['sinopsis']])
+                                for x in pub[p]))
         for l in lineas_ocr:
             nl = norm(l)
             if not nl or len(nl) < 8 or CHROME.match(nl):
@@ -189,13 +219,15 @@ def main():
                 continue
             if OCRC.LOGOS.match(nl):
                 continue          # marcas de aliados impresas como imagen
+            if any(p == p0 and nl.startswith(k0) for (p0, k0) in VISTO_FUERA):
+                continue
             mejor = difflib.SequenceMatcher(None, nl, nuestro, autojunk=False) \
                 .find_longest_match(0, len(nl), 0, len(nuestro))
             if mejor.size / len(nl) < 0.75:
                 avisos.append(f'p{p}: el OCR ve «{l[:70]}» y no está en lo que '
                               f'extrajimos')
 
-    print(f'\npoppler == MuPDF en {iguales}/{len(pags)} fichas')
+    print(f'\npoppler == MuPDF en {iguales}/{len(fichas)} fichas')
     for x in avisos:
         print('   ⚠', x)
     if fallos:

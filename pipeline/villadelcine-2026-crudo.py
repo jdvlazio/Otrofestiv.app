@@ -61,17 +61,25 @@ PLAN = f'{REPO}/pipeline/villadelcine-2026.plan.json'
 # ([event-kind-conocido] los vigila), no inventados.
 ACTIVIDAD = [
     (r'dirigir el tiempo', 'taller', 'Ruta Académica', 'masterclass'),
-    (r'gente que hace cine|trazos|restauraci[oó]n', 'charla', 'Ruta Académica', 'charla'),
+    (r'gente que hace cine|trazos|restauraci[oó]n|restaurando el', 'charla', 'Ruta Académica', 'charla'),
+    # PDF del 6 oct: la retícula lo llama «Masterclass de Maquillaje»
+    (r'caminar rostros', 'taller', 'Ruta Académica', 'masterclass'),
+    # y el Cine Concierto, que en septiembre compartía casilla con la apertura,
+    # ahora tiene la suya (17:30–17:45)
+    (r'cine concierto', 'evento', 'Eventos Especiales', 'cineconcierto'),
     (r'club de pitch|estaci[oó]n ig', 'taller', 'Ruta Académica', 'encuentro'),
     (r'ruta acad[eé]mica|claquetazo|del collage|transformaci',
      'taller', 'Ruta Académica', 'taller'),
+    # PDF del 6 oct: los dos talleres de X-PLORA CINE ya tienen su casilla
+    (r'farmeando|cianotipia', 'taller', 'Programación Infantil', 'taller'),
     (r'comunicaciones|entre\s*vistas', 'charla', 'Comunicaciones', 'charla'),
     (r'ceremonia unquy|apertura', 'evento', 'Eventos Especiales', 'apertura'),
     # 'clausura' y no 'awards': el rótulo 'awards' es el de los Award Screenings
     # de TIFF —reproyecciones de las premiadas— y en la vista en español salía
     # «AWARDS SCREENINGS». Necesita el PR de app que añade el vocabulario.
     (r'tamsa|premiaci[oó]n|clausura', 'evento', 'Eventos Especiales', 'clausura'),
-    (r'reconocimiento|tributo', 'evento', 'Eventos Especiales', 'encuentro'),
+    # «Reconocimieno»: así, sin la t, lo imprime la casilla de Mabel Velosa
+    (r'reconocimi|tributo', 'evento', 'Eventos Especiales', 'encuentro'),
     (r'muestra especial: *festival de cine|eureka', 'evento', 'Eventos Especiales',
      'experiencia'),
 ]
@@ -103,23 +111,43 @@ NOMBRE_ACTIVIDAD = [
     ('dirigir el tiempo',    'Dirigir el tiempo'),
     ('transformaci',         'Maquillaje: transformaciones del tiempo'),
     ('trazos',               'Trazos — Charla con realizadores'),
+    # «RESTAURANDO EL TIEMPO» en el PDF del 6 oct: la misma charla (Jorge Mario
+    # Vera, La paga y Aquileo Venganza). Conserva el nombre publicado: la
+    # watchlist guarda por título y renombrar huérfana lo que la gente guardó.
+    ('restaurando el',       'Proceso de restauración de La paga y Aquileo Venganza'),
     ('restauraci',           'Proceso de restauración de La paga y Aquileo Venganza'),
+    # «CAMINAR ROSTROS», la misma de septiembre (Lili Bonil, ENACC): ídem
+    ('caminar rostros',      'Maquillaje: transformaciones del tiempo'),
     ('podcast',              'Universos expandidos con el podcast'),
     ('claquetazo - inicio',  'Claquetazo — Laboratorio de creación (inicio)'),
     ('claquetazo - cierre',  'Claquetazo — Laboratorio de creación (cierre)'),
     ('claquetazo',           'Claquetazo — Laboratorio de creación'),
     ('entre vistas',         'Entre-Vistas — Entrevistas a seleccionados'),
     ('eureka',               'Muestra especial: Festival de Cine Eureka'),
-    ('ceremonia unquy',      'Ceremonia UNQUY de apertura y Cine Concierto Caminos Sonoros'),
+    # el 6 oct la apertura y el Cine Concierto se separan en dos casillas
+    ('ceremonia unquy',      'Ceremonia UNQUY de apertura'),
+    ('cine concierto',       'Cine Concierto Caminos Sonoros — León Quintero'),
     ('tamsa',                'Ceremonia TAMSA — Premiación y clausura'),
     ('tributo aquileo',      'Tributo a Aquileo Venganza — Joyce Ventura'),
-    ('reconocimiento',       'Reconocimiento a Mabel Teresa Velosa'),
+    ('heroes de la montana', 'Reconocimiento a los Héroes de la Montaña'),
+    ('reconocimi',           'Reconocimiento a Mabel Teresa Velosa'),
+    ('farmeando',            'Farmeando el Tunjo — Taller de creación con inteligencia artificial'),
+    ('cianotipia',           'Cianotipia — Taller de fotografía analógica'),
 ]
 
 # La caja de los nombres de PROGRAMA, que el PDF imprime en mayúscula.
+# LA SECCIÓN DE LAS OBRAS QUE SU FICHA NO TRAE. El PDF del 6 oct las pone
+# bajo «EVENTOS EMBLEMÁTICOS», que no es sección; la casilla sí la dice.
+SECCION_DE_OBRA = {
+    'un poeta': 'Rumbo a los Macondo',            # «Exhibición Especial: … Rumbo a Los Macondo»
+    'llueve sobre babel': 'Rumbo a los Macondo',
+    'aquileo venganza': 'Exhibición Patrimonial', # «Exhibición Patrimonial: AQUILEO VENGANZA»
+}
+
 CAJA_PROGRAMA = {
     'BOYACÁ EN LOS CAMPOS': 'Boyacá en los campos',
     'X-PLORA CINE': 'X-Plora Cine',
+    'X-PLORA CINE EXHIBICIÓN': 'X-Plora Cine',   # la cabecera del 6 oct suma el formato
 }
 
 SIN_SECCION = {}
@@ -197,6 +225,20 @@ DURACION_PUBLICADA = {
 }
 
 FICHA_EXTERNA = {
+    # LOS DOS AFICHES QUE EL FESTIVAL YA NO LISTA (6 oct). Se publicaban en
+    # producción desde septiembre, bajados de su propia web; el PDF nuevo
+    # renombra las obras y su web ya no las enlaza. El archivo es el mismo.
+    'cuadrilleros orgullo y legado': {
+        'poster': '/assets/villadelcine-2026/cuadrileros-orgullo-y-legado.jpg',
+        'posterSource': 'oficial',
+        '_fuente': 'web del festival, sep 2026: uploads/2026/09/'
+                   'Cuadrilleros-POSTER-fabian-enrique-moreno-correa-scaled.webp',
+    },
+    'la sinfonia guanenta': {
+        'poster': '/assets/villadelcine-2026/the-guanenta-symphony.jpg',
+        'posterSource': 'oficial',
+        '_fuente': 'web del festival, sep 2026: uploads/2026/09/1e8988526f-poster.webp',
+    },
     'aquileo venganza': {
         'anio': 1968,
         'duracion_obra': 70,
@@ -244,9 +286,37 @@ FICHA_EXTERNA = {
     },
 }
 
-NO_PUBLICAR = {
-    'el fosil magico': 'solo está en la retícula: sin ficha, sin sección y sin país '
-                       'en ninguna de las cuatro fuentes. Preguntado al festival.',
+# «El fósil mágico» salió de acá el 6 oct: el PDF nuevo le da ficha (p55).
+NO_PUBLICAR = {}
+
+# LOS CINCO WORK IN PROGRESS DE GÉNESIS. El PDF de septiembre imprimía
+# «0:05:00» en cada ficha; el del 6 oct quitó el metraje. Sin declararlo, el
+# crudo tomaba la duración de la web, que es la del LARGO terminado (77 y 123
+# min) y no la del avance que se muestra: el bloque pasaba de 105 a 202 min.
+DURACION_DE_OTRA_FUENTE = {k: (5, 'PDF de programación de septiembre (p30–31), '
+                                  '«0:05:00» en la ficha; el del 6 oct no trae metraje')
+                           for k in ('extincion', 'el ultimo campeon', 'el cine dentro del cine',
+                                     'cuba 2001 imagenes del futuro', 'mi tesoro')}
+# «VOLAR»: el PDF del 6 oct dice 1:19:00; el de septiembre y la ficha de la
+# web, 2:19 (2:19:11). Dos fuentes contra una —el criterio de Juan con «Un
+# poeta»— y la casilla de TRÁNSITOS (165 min, con Alivios 19 y Tuktu 14) cuadra
+# con 139 y no con 79. Parece un dígito caído; preguntado al festival.
+DURACION_DE_OTRA_FUENTE['volar'] = (139, 'PDF de septiembre y ficha de la web '
+                                    '(2:19:11); el PDF del 6 oct imprime 1:19:00')
+# «PROTECTING OUR TERRITORY 360°»: 20 min en el PDF del 6 oct; 7 en el de
+# septiembre y 7:52 en la web. Dos contra una: 8 (la web, la más precisa).
+DURACION_DE_OTRA_FUENTE['protecting our territory 360'] = (8, 'ficha de la web '
+                                    '(07:52) y PDF de septiembre (7); el del 6 oct imprime 20')
+
+# EL FESTIVAL PEGÓ LA SINOPSIS DE «COMPARSA» EN «CUBA 2001», en el PDF del 6
+# oct y en su web. Se publica la que su PDF de septiembre traía para la obra
+# (la obra de archivo sobre cámaras caseras y el viaje a Cuba). Preguntado.
+SINOPSIS_DE_OTRA_FUENTE = {
+    'cuba 2001 imagenes del futuro': (
+        'Manifiesto de archivos audiovisuales que acomoda con zapeo historias de '
+        'cámaras y sus viajes mientras graban fiestas familiares y de cine. El '
+        'viaje más largo es en Cuba. Salen muchas personas, van dos',
+        'PDF de programación de septiembre, p31'),
 }
 
 
@@ -286,9 +356,18 @@ def main():
     porweb = {}
     for o in web:
         porweb[norm(o['titulo'])] = o
+        # desde el 6 oct la web escribe «FAR (LEJOS)»: el original es la llave
+        porweb.setdefault(norm(re.sub(r'\s*\([^)]*\)?\s*$', '', o['titulo'])), o)
     ALIAS = {'tormenta en llamas': 'a burning turret', 'enemigo en el espejo': 'enemy in the mirror',
              'con la mano arriba': 'with the hand up', 'sun coffe': 'sun coffee',
-             'lens': 'lens ai short film'}
+             'lens': 'lens ai short film',
+             # PDF del 6 oct: el festival escribe en español (o corrige) lo que
+             # su web y sus reels siguen titulando como en septiembre
+             'catatumbo casa del trueno memoria y dignidad': 'catatumbo house of thunder memory and dignity',
+             'la presencia del blanco': 'la presencia de blanco',
+             'la sinfonia guanenta': 'the guanenta symphony',
+             'gestos de refugio': 'sheltering gestures',
+             'duelo': 'grief'}
 
     def de_web(t):
         k = norm(t)
@@ -321,9 +400,10 @@ def main():
         saltaba `encuadrar-posters.py`, que solo recorta archivos locales. Con
         el mismo paso, FICMA publica 67 pósters locales y ningún remoto: acá
         se bajaban y no se usaban."""
-        f = f'{REPO}/assets/villadelcine-2026/{slug(t)}.jpg'
-        if os.path.exists(f) and os.path.getsize(f) > 5000:
-            return f'/assets/villadelcine-2026/{slug(t)}.jpg'
+        for s_ in (slug(t), slug(ALIAS.get(norm(t), '') or t)):
+            f = f'{REPO}/assets/villadelcine-2026/{s_}.jpg'
+            if os.path.exists(f) and os.path.getsize(f) > 5000:
+                return f'/assets/villadelcine-2026/{s_}.jpg'
         return ''
 
     def de_pos(t):
@@ -431,8 +511,11 @@ def main():
             **({'director': caja(o.get('director') or w.get('director'),
                                  i.get('director'))}
                if (o.get('director') or w.get('director')) else {}),
-            'duracion_min': o.get('duracion_min') or w.get('duracion_min')
+            'duracion_min': (DURACION_DE_OTRA_FUENTE.get(k) or (None,))[0]
+                            or o.get('duracion_min') or w.get('duracion_min')
                             or t.get('duracion_tmdb'),
+            **({'_duracion_fuente': DURACION_DE_OTRA_FUENTE[k][1]}
+               if k in DURACION_DE_OTRA_FUENTE else {}),
             'pais': (o.get('pais') or w.get('pais') or t.get('pais_tmdb')
                      or (PAIS_EXTERNO.get(k) or ('', ''))[0]
                      or (PAIS_POR_CATEGORIA if i.get('categoria') in NACIONAL
@@ -453,7 +536,10 @@ def main():
                        or ('Videoclip' if i.get('categoria') == 'Mejor Videoclip'
                            else '')),
             'anio': o.get('anio') or w.get('anio') or t.get('anio_tmdb'),
-            'sinopsis': o.get('sinopsis') or t.get('synopsis_es') or '',
+            'sinopsis': (SINOPSIS_DE_OTRA_FUENTE.get(k) or (None,))[0]
+                        or o.get('sinopsis') or t.get('synopsis_es') or '',
+            **({'_sinopsis_fuente': SINOPSIS_DE_OTRA_FUENTE[k][1]}
+               if k in SINOPSIS_DE_OTRA_FUENTE else {}),
             'sinopsis_en': w.get('sinopsis_en') or t.get('synopsis_en') or '',
             **({'categoria': i['categoria']} if i.get('categoria') else {}),
             **({'tmdb_id': t['tmdb_id']} if t.get('tmdb_id') else {}),
@@ -491,14 +577,19 @@ def main():
         if str(o.get('rol_credito', '')).startswith('tallerista'):
             talleres.append(o['titulo'])
             continue
+        # POR NOMBRE Y DÍA: el PDF del 6 oct tiene dos «RESISTENCIAS», la del
+        # miércoles (ARENAS) y la del sábado; por nombre solo, ARENAS caía
+        # dentro del programa del sábado y lo estiraba a 264 min
         k = norm(o['programa']) or norm(o['seccion'])
-        porprog.setdefault(k, []).append(o)
+        # «X-PLORA CINE / EXHIBICIÓN»: la cabecera de la ficha suma el formato
+        k = re.sub(r' (exhibicion|formacion)$', '', k)
+        porprog.setdefault((k, o.get('dia_ficha') or ''), []).append(o)
 
     funciones, avisos = [], []
     for t_ in talleres:
         avisos.append(f'«{t_[:40]}» NO entra como obra: su ficha la acredita a un '
-                      f'TALLERISTA y la describe como taller. Falta su hora dentro '
-                      f'del bloque de Programación Infantil — preguntado al festival')
+                      f'TALLERISTA y la describe como taller. Desde el PDF del 6 oct '
+                      f'tiene casilla propia y se publica como actividad')
     for b in sorted(par['bloques'], key=lambda b: (b['dia'], b['hora'], b['sede'])):
         texto = ' '.join(b['lineas'])
         sede_cruda = b['sede']
@@ -537,9 +628,16 @@ def main():
                        if len(norm(o['titulo'])) > 6 and norm(o['titulo']) in norm(texto)]
             obras = sueltas[:1]
         if not obras and not solo_web:
+            _d = b['dia'][-2:]
             clave = next((k for k in porprog
-                          if k and len(k) > 3 and k in norm(texto)), '')
+                          if k[0] and len(k[0]) > 3 and k[0] in norm(texto)
+                          and (not k[1] or _d in k[1].split(','))), '')
             obras = porprog.get(clave, []) if clave else []
+            # UN TALLER EN LA CASILLA DE UN PROGRAMA no proyecta el programa: la
+            # de FARMEANDO dice «Programación Infantil: X-PLORA CINE» y se
+            # llevaba las tres obras de la exhibición
+            if tipo and obras:
+                obras, clave = [], ''
 
         titulo = (solo_web['titulo'] if solo_web
                   else obras[0]['titulo'] if len(obras) == 1 and not clave
@@ -553,6 +651,14 @@ def main():
                     titulo = nombre
                     break
         seccion = (obras[0]['seccion'] if obras else sec_act) or sec_act
+        if not tipo and obras and len(obras) == 1 and norm(obras[0]['titulo']) in SECCION_DE_OBRA:
+            seccion = SECCION_DE_OBRA[norm(obras[0]['titulo'])]
+        # LA SECCIÓN QUE LA FICHA NO TRAE la dice la casilla («Programación
+        # Infantil: X-PLORA CINE»)
+        if not seccion:
+            ms = re.search(r'(Nuevas Miradas|Territorios|Narrativas Divergentes|'
+                           r'Lenguajes Emergentes|Programación Infantil|Industria)', texto)
+            seccion = ms.group(1) if ms else seccion
         if solo_web:
             # la sección la dice la propia celda («Nuevas Miradas: RESISTENCIAS»)
             ms = re.search(r'(Nuevas Miradas|Territorios|Narrativas Divergentes|'

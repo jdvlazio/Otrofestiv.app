@@ -29,6 +29,12 @@
   "lng": -73.5248406,
   "_match": "Google Maps: «Casa Museo Antonio Nariño» (punto del lugar, no el centro del mapa)"
  },
+ "Hotel Plaza Mayor - Villa de Leyva": {
+  "lat": 5.634093,
+  "lng": -73.524086,
+  "_prec": "manual",
+  "_nota": "Google Maps: «Hotel Plaza Mayor Villa de Leyva», Cra. 10 #12-31 (5.634093, -73.524086); Nominatim da el mismo hotel a 4 m (nodo tourism=hotel, Carrera 10). Sede nueva del PDF del 6 oct 2026."
+ },
  "_provenance": {
   "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
   "capturado": "2026-09-21"

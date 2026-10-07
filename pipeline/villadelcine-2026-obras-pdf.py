@@ -56,7 +56,38 @@ FORMATOS = {
     'CORTOMETRAJE INTERNACIONAL', 'ÓPERA PRIMA NACIONAL', 'OPERA PRIMA NACIONAL',
     'ÓPERA PRIMA INTERNACIONAL', 'PODEROSAS', 'VOCES', 'PLANETA', 'RAÍCES',
     'KOREBAJU', 'BOYACÁ EN LOS CAMPOS', 'INT', 'DISCAPACIDADES',
+    'WORK IN PROGRESS', 'RUMBO A LOS MACONDO',
 }
+
+
+def es_formato(l):
+    """La línea de formato encima del título. El PDF del 6 oct los escribe
+    largos («CORTOMETRAJE APASIONADO INTERNACIONAL», «CORTOMETRAJE CON
+    CELULAR», «CORTOMETRAJE REALIDAD VIRTUAL»): todos empiezan igual."""
+    u = l.strip().upper()
+    return u in FORMATOS or (u.startswith('CORTOMETRAJE') and u == l.strip())
+
+
+def cabecera(ls, i):
+    """Las líneas de título encima del «Dir.» de la línea i, de arriba abajo.
+
+    LA PLANTILLA DEL 6 OCT para obras extranjeras: título original, debajo su
+    traducción entre paréntesis y, si el original no va en alfabeto latino,
+    una línea más («落⼦無悔 (LÀOZǏ WÚ HUǏ)»). Tomando solo la línea de
+    encima del crédito se publicaba «(El Joven Sofiane)» como título, y el
+    formato y el título de la ficha siguiente se pegaban al final de la
+    sinopsis anterior."""
+    out, k = [], i - 1
+    while k >= 0 and not es_formato(ls[k]) and not RE_DIR.match(ls[k]):
+        l = ls[k].strip()
+        latino = re.sub(r'[^A-Za-zÁÉÍÓÚÑáéíóúñÜüÀ-ÿ]', '', l)
+        if out and not (l.startswith('(') or not re.search(r'[a-zá-úñ]', latino)):
+            break
+        out.insert(0, l)
+        k -= 1
+        if len(out) == 3:
+            break
+    return out
 # EL PAÍS ES UNA LISTA, NO UNA HEURÍSTICA. El comodín «varias palabras
 # separadas por coma o barra» se tragaba los géneros: «Ficción / Drama /
 # Comedia / Fantasia» entraba como país y la app lo iba a pintar con un globo
@@ -69,7 +100,8 @@ PAISES = ['colombia', 'méxico', 'mexico', 'brasil', 'brasi', 'argentina', 'chil
           'suecia', 'noruega', 'dinamarca', 'polonia', 'rusia', 'ucrania', 'grecia',
           'turquía', 'usbekistán', 'uzbekistán', 'uzbekistan', 'india', 'china',
           'japón', 'taiwán', 'taiwan', 'corea', 'irán', 'israel', 'nigeria',
-          'sudáfrica', 'australia', 'canadá', 'usa', 'estados unidos', 'spain']
+          'sudáfrica', 'australia', 'canadá', 'usa', 'estados unidos', 'spain',
+          'finlandia']
 # Como el festival las escribe → como se escriben. Solo ortografía: no se
 # cambia el país, se corrige la letra.
 ERRATA_PAIS = {'brasi': 'Brasil', 'usbekistán': 'Uzbekistán', 'mexico': 'México',
@@ -96,22 +128,66 @@ def limpia_pais(t):
 # imprime dirección. Se declaran con lo que dice su página —no se fuerzan por
 # el parser ni se dejan caer— y salen marcadas como actividad.
 IRREGULARES = [
-    {'pagina': 14, 'titulo': 'AQUILEO VENGANZA', 'credito': 'Ciro Durán',
-     'rol': 'tributo', 'nota': 'TRIBUTO A CIRO DURÁN. Filmada en Villa de Leyva en '
-            '1968; se proyecta por primera vez donde nació'},
-    {'pagina': 15, 'titulo': 'FUNDACIÓN PATRIMONIO FILMICO', 'credito': '',
+    # PDF del 6 oct (14–17 oct): las páginas se corrieron y aparecieron dos más.
+    # «Aquileo Venganza» tiene ahora su ficha CON dirección (p17, la exhibición)
+    # y aparte el TRIBUTO (p15), que es una actividad.
+    {'pagina': 15, 'titulo': 'AQUILEO VENGANZA', 'credito': 'Ciro Durán y Joyce Ventura',
+     'rol': 'tributo', 'nota': 'TRIBUTO al legado de Ciro Durán y a la labor de Joyce '
+            'Ventura; con la exposición fotográfica «Memorias de Aquileo Venganza»'},
+    {'pagina': 16, 'titulo': 'PATRIMONIO FÍLMICO COLOMBIANO', 'credito': '',
      'rol': 'reconocimiento', 'nota': 'POR SUS 40 AÑOS'},
-    {'pagina': 15, 'titulo': 'MABEL VELOSA', 'credito': '',
+    {'pagina': 16, 'titulo': 'HÉROES DE LA MONTAÑA', 'credito': '',
+     'rol': 'reconocimiento', 'nota': 'EL TERRITORIO QUE SOMOS'},
+    {'pagina': 16, 'titulo': 'MABEL VELOSA', 'credito': '',
      'rol': 'reconocimiento', 'nota': 'CAMINOS DEL TIEMPO'},
-    {'pagina': 21, 'titulo': 'CIANOTIPIA', 'credito': 'Isabella Bobadilla Monsalve',
+    {'pagina': 55, 'titulo': 'CIANOTIPIA', 'credito': 'Isabella Bobadilla Monsalve',
      'rol': 'tallerista',
-     'nota': 'Laboratorio de experimentación y fotografía analógica'},
-    {'pagina': 22, 'titulo': 'FARMEANDO EL TUNJO: CREACIÓN CINEMATOGRÁFICA CON '
-                             'INTELIGENCIA ARTIFICIAL',
+     'nota': 'Taller de experimentación y fotografía analógica'},
+    {'pagina': 55, 'titulo': 'FARMEANDO EL TUNJO: CREACIÓN CINEMATOGRÁFICA CON '
+                             'INTELIGENCIA ARTIFICIAL', 'linea': 'FARMEANDO EL TUNJO',
      'credito': 'Jimena Guerrero, Vanessa Vega y PiPo Aranguren',
-     'rol': 'talleristas', 'nota': 'el título va DEBAJO del crédito y partido en '
-            'nueve líneas por la caja de texto de Canva'},
+     'rol': 'talleristas', 'nota': 'taller de creación cinematográfica con inteligencia artificial'},
+    # EL FÓSIL MÁGICO YA TIENE FICHA (6 oct). En septiembre estaba solo en la
+    # retícula y Juan lo dejó fuera por eso; ahora la p55 trae crédito, formato
+    # y sinopsis. Es una OBRA (no lleva `es_actividad`): un cortometraje de
+    # estudiantes con Q&A. El crédito se escribe como en la RETÍCULA
+    # («Sáchica, Boyacá»): la ficha dice «Sáchicha», y su propia sinopsis
+    # escribe «Sáchica».
+    {'pagina': 55, 'titulo': 'EL FÓSIL MÁGICO', 'linea': 'COMIENZOS | EL FÓSIL MÁGICO: Cortometraje',
+     'credito': 'Estudiantes IE Nueva Generación (Sáchica, Boyacá)', 'rol': 'realizadores',
+     'nota': 'COMIENZOS · EXHIBICIÓN + Q&A; la ficha escribe «Sáchicha»',
+     'obra': {'seccion': 'Programación Infantil', 'programa': 'COMIENZOS', 'formato': 'Cortometraje'}},
 ]
+
+
+def tramo(ls, irr, pagina):
+    """El párrafo de UNA ficha irregular: desde su título hasta la siguiente.
+
+    En las páginas con dos o tres (p16, p55) tomar todas las líneas largas
+    de la página le pegaba a Cianotipia la sinopsis de Farmeando."""
+    propios = [x.get('linea', x['titulo']).upper() for x in IRREGULARES if x['pagina'] == pagina]
+    cab = irr.get('linea', irr['titulo']).upper()
+    i = next((k for k, l in enumerate(ls) if l.upper() == cab), None)
+    if i is None:
+        sys.exit(f'✗ p{pagina}: no aparece el título «{cab}» de la ficha irregular')
+    out = []
+    for l in ls[i + 1:]:
+        if l.upper() in propios:
+            break
+        if not out:
+            if len(l) > 60:
+                out.append(l)
+        elif re.search(r'[a-zá-ú]', l) and '|' not in l:
+            out.append(l)
+        else:
+            break
+    if not out:
+        sys.exit(f'✗ p{pagina} «{cab}»: la ficha irregular no tiene párrafo')
+    return ' '.join(out)
+# LA MUESTRA QUE NO TIENE «Dir.» PERO SÍ METRAJE (PDF del 6 oct, p18): «NUEVA
+# OLA ROLA», del Festival de Cine Eureka, «MUESTRA + Q&A», 53 min. Su línea de
+# metadatos se lee igual que la de una obra.
+SIN_DIRECCION = {'NUEVA OLA ROLA': ('Festival de Cine Eureka', 'muestra')}
 
 
 # Palabras que NO se capitalizan dentro de un título en español, y siglas que
@@ -202,6 +278,12 @@ def parte_cabecera(cab):
             'EVENTOS ESPECIALES', 'TERRITORIOS', 'INDUSTRIA', 'RUTA ACADÉMICA',
             'COMUNICACIONES']
     c = re.sub(r'\s+', ' ', cab).strip()
+    # EL PDF DEL 6 OCT pega a la cabecera el día y la franja de la función
+    # («16 TARDE LENGUAJES EMERGENTES VIERNES DESTELLOS», «15 y 16 SEÑALES
+    # JUEVES, VIERNES»): se quitan, que el programa es el nombre de la retícula
+    c = re.sub(r'\b(\d{1,2}|y|MAÑANA|TARDE|NOCHE|LUNES|MARTES|MIÉRCOLES|JUEVES|VIERNES|'
+               r'SÁBADO|DOMINGO)\b,?', ' ', c)
+    c = re.sub(r'\s+', ' ', c).strip(' ,')
     for s in SECC:
         if c.upper().startswith(s):
             return s.title().replace('Rumbo A Los Macondo', 'Rumbo a los Macondo'), \
@@ -217,12 +299,21 @@ def main():
     if os.path.exists(web_p):
         for o in json.load(open(web_p, encoding='utf-8'))['obras']:
             natural[re.sub(r'[^a-z0-9]+', '', _sinacento(o['titulo']))] = o['titulo']
+            # desde el 6 oct la web escribe «FAR (LEJOS)», «Final Act (Acto
+            # Final)»: el original, sin la traducción, es la otra llave
+            _orig = re.sub(r'\s*\([^)]*\)?\s*$', '', o['titulo']).strip()
+            if _orig and _orig != o['titulo']:
+                natural.setdefault(re.sub(r'[^a-z0-9]+', '', _sinacento(_orig)), _orig)
     obras, sin_dir = [], []
 
+    SEM = {'MIÉRCOLES': '14', 'JUEVES': '15', 'VIERNES': '16', 'SÁBADO': '17'}
     for f in d['fichas']:
         seccion, programa = parte_cabecera(f['cabecera'])
+        # el DÍA que la cabecera de la ficha imprime («15 y 16 … JUEVES, VIERNES»)
+        dia_ficha = ','.join(sorted({SEM[w] for w in SEM if w in f['cabecera'].upper()}))
         ls = [x.strip() for x in f['texto'].split('\n') if x.strip()]
         idx = [i for i, l in enumerate(ls) if RE_DIR.match(l)]
+        cabs = [cabecera(ls, i) for i in idx]
         for n, i in enumerate(idx):
             _m = RE_DIR.match(ls[i])
             rol, director = _m.group(1), _m.group(2).strip()
@@ -238,18 +329,39 @@ def main():
             cola = ''
             if _meta:
                 director, cola = director[:_meta.start()].strip(), _meta.group(1)
-            crudo_t = ls[i - 1].strip() if i else ''
+            cab = cabs[n]
+            traduccion = next((c[1:-1].strip() for c in cab
+                               if c.startswith('(') and c.endswith(')')), '')
+            # el título es la primera línea en alfabeto latino; la otra, si la
+            # hay, se guarda aparte (en el texto del PDF el orden varía)
+            _lat = lambda c: len(re.findall(r'[A-Za-zÀ-ÿ]', c)) > len(c) / 2
+            noparen = [c for c in cab if not (c.startswith('(') and c.endswith(')'))]
+            # la MÁS CERCANA al crédito: encima puede quedar un rótulo
+            principal = next((c for c in reversed(noparen) if _lat(c)), noparen[-1] if noparen else '')
+            otras = [c for c in noparen if c != principal and not _lat(c)]
+            crudo_t = re.sub(r'\s*—$', '', principal)
             titulo = a_titulo(crudo_t, natural.get(
                 re.sub(r'[^a-z0-9]+', '', _sinacento(crudo_t))))
             formato = ''
-            if i >= 2 and ls[i - 2].strip().upper() in FORMATOS:
-                formato = ls[i - 2].strip()
-            # hacia abajo: metadatos (si los hay) y sinopsis hasta la ficha siguiente
-            fin = idx[n + 1] - 1 if n + 1 < len(idx) else len(ls)
-            if n + 1 < len(idx) and idx[n + 1] >= 2 and \
-                    ls[idx[n + 1] - 2].strip().upper() in FORMATOS:
-                fin = idx[n + 1] - 2
+            arriba = i - len(cab) - 1
+            if arriba >= 0 and es_formato(ls[arriba]):
+                formato = ls[arriba].strip()
+            # hacia abajo: metadatos (si los hay) y sinopsis hasta la cabecera
+            # de la ficha siguiente (y su formato, si lo trae)
+            fin = len(ls)
+            if n + 1 < len(idx):
+                fin = idx[n + 1] - len(cabs[n + 1])
+                if fin - 1 > i and es_formato(ls[fin - 1]):
+                    fin -= 1
             cuerpo = ls[i + 1:fin]
+            # LA PLANTILLA DEL 6 OCT: entre «DIR.» y los metadatos van el FORMATO
+            # («ÓPERA PRIMA NACIONAL») y «Selección Oficial en Competencia»
+            while cuerpo and (cuerpo[0].strip().upper() in FORMATOS or
+                              cuerpo[0].strip().upper() in ('CORTOMETRAJE',) or
+                              cuerpo[0].startswith('Selección Oficial')):
+                if not formato and cuerpo[0].strip().upper() in FORMATOS:
+                    formato = cuerpo[0].strip()
+                cuerpo = cuerpo[1:]
             # lo que venía pegado al crédito se lee como si fuera su renglón
             if cola:
                 cuerpo = [cola] + cuerpo
@@ -274,8 +386,17 @@ def main():
                     dur_min = int(solo.group(1)) * 60 + int(solo.group(2)) + \
                               (1 if int(solo.group(3)) >= 30 else 0)
                     cuerpo = cuerpo[1:]
+                # LOS WORK IN PROGRESS DEL 6 OCT: «Colombia | Ciencia Ficción», sin
+                # metraje (el PDF de septiembre ponía 0:05:00). Sin este caso la
+                # línea se iba al comienzo de la sinopsis de las cinco de GÉNESIS.
+                elif ' | ' in cuerpo[0] and es_pais(cuerpo[0].split('|')[0].strip()):
+                    partes = [x.strip() for x in cuerpo[0].split('|') if x.strip()]
+                    pais, genero = limpia_pais(partes[0]), ' | '.join(partes[1:])
+                    cuerpo = cuerpo[1:]
             obras.append({
                 'titulo': titulo, 'director': director,
+                **({'_titulo_traducido': traduccion} if traduccion else {}),
+                **({'_titulo_otro_alfabeto': otras[0]} if otras else {}),
                 # QUIÉN ES ESA PERSONA, con la palabra del impreso. El PDF la
                 # acredita como «Productora» y la ficha de la obra en la propia
                 # web del festival la lista bajo «Director»: son dos fuentes del
@@ -286,27 +407,44 @@ def main():
                     '_nota': f'el PDF la acredita «{rol} {director}»; la ficha de '
                              'la obra en villadelcine.com la lista como Director'}
                    if rol.lower().startswith('productor') else {}),
-                'seccion': seccion, 'programa': programa,
+                'seccion': seccion, 'programa': programa, 'dia_ficha': dia_ficha,
                 **({'formato': formato} if formato else {}),
                 'duracion_min': dur_min, 'pais': pais, 'genero': genero,
-                'sinopsis': ' '.join(cuerpo).strip(),
+                # el rótulo de la ficha SIGUIENTE («WORK IN PROGRESS», en
+                # GÉNESIS) va en mayúscula entre dos fichas y se quedaba pegado
+                'sinopsis': re.sub(r'\s+WORK IN PROGRESS$', '', ' '.join(cuerpo).strip()),
                 'pagina': f['pagina'],
                 '_src': {'url': 'https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) '
-                                f'p{f["pagina"]}', 'date': '2026-09-19'},
+                                f'p{f["pagina"]}', 'date': '2026-10-06'},
             })
         for irr in [x for x in IRREGULARES if x['pagina'] == f['pagina']]:
-            cuerpo = [l for l in ls if len(l) > 60]
             obras.append({
                 'titulo': a_titulo(irr['titulo']), 'director': irr['credito'],
                 'seccion': seccion, 'programa': programa,
                 'rol_credito': irr['rol'], '_nota': irr['nota'],
-                'es_actividad': True,
+                **({'es_actividad': True} if 'obra' not in irr else irr['obra']),
                 'duracion_min': None, 'pais': '', 'genero': '',
-                'sinopsis': ' '.join(cuerpo).strip(),
+                'sinopsis': tramo(ls, irr, f['pagina']),
                 'pagina': f['pagina'],
                 '_src': {'url': 'https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) '
-                                f'p{f["pagina"]}', 'date': '2026-09-19'},
+                                f'p{f["pagina"]}', 'date': '2026-10-06'},
             })
+        for k, (cred, rol) in SIN_DIRECCION.items():
+            if k in ls:
+                j0 = ls.index(k)
+                meta = next((x for x in ls[j0:j0 + 4] if RE_META.match(x) and RE_META.match(x).group(1)), '')
+                m = RE_META.match(meta)
+                dur = (int(m.group(1)) * 60 + int(m.group(2)) + (1 if int(m.group(3)) >= 30 else 0)) if m else None
+                resto = [x.strip() for x in (m.group(5) if m else '').split('|') if x.strip()]
+                fin2 = next((n2 for n2 in range(ls.index(meta) + 1, len(ls)) if ls[n2].isupper()), len(ls)) if meta else j0 + 1
+                obras.append({'titulo': a_titulo(k), 'director': cred, 'rol_credito': rol,
+                              '_nota': 'sin «Dir.»: la presenta el ' + cred, 'seccion': seccion, 'programa': programa,
+                              'duracion_min': dur, 'pais': limpia_pais(resto[0]) if resto and es_pais(resto[0]) else '',
+                              'genero': resto[1] if len(resto) > 1 else '',
+                              'sinopsis': ' '.join(ls[ls.index(meta) + 1:fin2]).strip() if meta else '',
+                              'pagina': f['pagina'],
+                              '_src': {'url': 'https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) '
+                                              f'p{f["pagina"]}', 'date': '2026-10-06'}})
         if not idx and not any(x['pagina'] == f['pagina'] for x in IRREGULARES):
             sin_dir.append({'pagina': f['pagina'], 'cabecera': f['cabecera'],
                             'texto': f['texto'][:180]})
@@ -315,8 +453,8 @@ def main():
         'PROGRAMACIÓN «Caminos del tiempo» 2026, páginas 12–50: una ficha por obra',
         que_aporta='título, dirección, duración, país, género y la SINOPSIS EN '
                    'ESPAÑOL, además del programa al que pertenece cada obra',
-        url='https://villadelcine.com/wp-content/uploads/2026/09/'
-            'Programacion-caminos-del-tiempo-2026_compressed.pdf',
+        url='https://villadelcine.com/wp-content/uploads/2026/10/'
+            'Programacion-caminos-del-tiempo-2026.pdf',
         metodo='cada ficha se corta por su línea de dirección, que es la única '
                'constante: el título va en mayúsculas o no según la página, y hay '
                'páginas con dos y tres obras'),
