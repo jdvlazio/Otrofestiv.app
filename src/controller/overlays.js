@@ -94,20 +94,6 @@ function seccionOpen(){
     +'<span>'+t('filter_todo_programa')+'</span>'
     +'</div>';
 
-  // Gratis y Con Q&A arriba, antes de las secciones (opción B, Juan 7 oct).
-  // Gratis solo en un festival MIXTO —con todo gratis no separaría nada— y
-  // cada uno solo si el festival tiene alguna; con 0 en este día se atenúa.
-  const _reales=FILMS.filter(f=>!f.info&&f.day&&f.time);
-  const _hayLibre=_reales.some(f=>f.is_free===true), _hayPaga=_reales.some(f=>f.is_free!==true);
-  const _filtros=[];
-  if(_hayLibre&&_hayPaga) _filtros.push(SEC_GRATIS);
-  if(_reales.some(f=>f.has_qa)) _filtros.push(SEC_QA);
-  _filtros.forEach(k=>{
-    const n=_filasQueVeras(films.filter(f=>secMatches(f,k)));
-    html+=_opt(k,n,activeSec===k).replace('class="lugar-opt','class="lugar-opt'+(n?'':' vacia'));
-  });
-  if(_filtros.length) html+='<div class="sec-drop-sep"></div>';
-
   const hasCategories=Object.keys(secCatMap).length>0;
   const orderedSecs=Object.keys(secMap).sort((a,b)=>{
     const ia=SECTION_ORDER_LIST.indexOf(a),ib=SECTION_ORDER_LIST.indexOf(b);
@@ -127,6 +113,21 @@ function seccionOpen(){
   } else {
     orderedSecs.forEach(s=>{ html+=_opt(s,secMap[s],activeSec===s); });
   }
+
+  // Gratis y Con Q&A AL FINAL, después de las secciones (opción B, Juan 7 oct):
+  // «pesan más las secciones del festival que este tipo de filtro específico».
+  // Gratis solo en un festival MIXTO —con todo gratis no separaría nada— y
+  // cada uno solo si el festival tiene alguna; con 0 en este día se atenúa.
+  const _reales=FILMS.filter(f=>!f.info&&f.day&&f.time);
+  const _hayLibre=_reales.some(f=>f.is_free===true), _hayPaga=_reales.some(f=>f.is_free!==true);
+  const _filtros=[];
+  if(_hayLibre&&_hayPaga) _filtros.push(SEC_GRATIS);
+  if(_reales.some(f=>f.has_qa)) _filtros.push(SEC_QA);
+  if(_filtros.length) html+='<div class="sec-drop-sep"></div>';
+  _filtros.forEach(k=>{
+    const n=_filasQueVeras(films.filter(f=>secMatches(f,k)));
+    html+=_opt(k,n,activeSec===k).replace('class="lugar-opt','class="lugar-opt'+(n?'':' vacia'));
+  });
 
   drop.innerHTML=html;
   drop.addEventListener('click',e=>{

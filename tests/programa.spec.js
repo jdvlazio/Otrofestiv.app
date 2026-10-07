@@ -3754,10 +3754,11 @@ test('P-GQ — Gratis y Con Q&A filtran por función y solo aparecen donde separ
       .filter(e => e.getBoundingClientRect().height > 0).map(e => e.dataset.title);
     const tit = [...new Set(vis)];
     const esperadas = FILMS.filter(f => f.day === activeDay && f.has_qa).length;
-    return { opts: opts.slice(0, 3), cntQa, esperadas, n: tit.length,
+    return { opts: opts.slice(0, 3), fin: opts.slice(-2), cntQa, esperadas, n: tit.length,
       todasQa: tit.every(t => FILMS.some(f => f.title === t && f.day === activeDay && f.has_qa)) };
   });
-  expect(r.opts, 'arriba: Todo, Gratis y Con Q&A').toEqual(['all', '__gratis', '__qa']);
+  expect(r.opts[0], 'arriba sigue «Todo el programa»').toBe('all');
+  expect(r.fin, 'al final, después de las secciones del festival: Gratis y Con Q&A').toEqual(['__gratis', '__qa']);
   expect(r.cntQa, 'el conteo es el de funciones con Q&A del día').toBe(r.esperadas);
   expect(r.todasQa, 'la lista filtrada solo trae funciones con Q&A').toBe(true);
   expect(r.n, 'y las trae todas').toBe(r.esperadas);
