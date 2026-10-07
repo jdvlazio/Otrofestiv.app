@@ -69,22 +69,30 @@ CUERPO = 20.0            # alto de caja: el texto de 9 pt mide 12,4; los
 # lector de fichas de obra las mezclaba y las dos salían con el mismo párrafo
 # revuelto — se ve en `-obras-pdf.json`.
 PAGINAS = {
-    15: [('Reconocimiento a Mabel Teresa Velosa', 'Hay personas que no solo')],
-    52: [('Estación Igüaque', None)],
-    53: [('Club de Pitch — Encuentro Work in Progress', 'Un espacio de encuentro')],
-    54: [('Claquetazo — Laboratorio de creación', 'Experiencia formativa')],
-    55: [('Taller Eureka — Del collage al póster', 'Un taller para acercarse')],
-    56: [('Gente que hace cine', 'Una conversación para descubrir')],
-    57: [('Maquillaje: transformaciones del tiempo', 'Un encuentro para descubrir')],
-    58: [('Dirigir el tiempo', 'Una conversación cercana')],
-    59: [('Trazos — Charla con realizadores', 'Un encuentro con las y los')],
-    60: [('Proceso de restauración de La paga y Aquileo Venganza', 'Una charla sobre restauración')],
+    # PDF del 6 oct: dos fichas por página, cada una con su ancla. Un tercer
+    # valor suma párrafos de continuación (en Estación Igüaque la pregunta de
+    # apertura y el cuerpo van en párrafos distintos).
+    14: [('Ceremonia UNQUY de apertura', 'Todo camino nace'),
+         ('Ceremonia TAMSA — Premiación y clausura', 'Todo camino entrega')],
+    15: [('Tributo a Aquileo Venganza — Joyce Ventura', 'Este tributo al legado')],
+    16: [('Reconocimiento a los Héroes de la Montaña', 'Cuando el fuego'),
+         ('Reconocimiento a Mabel Teresa Velosa', 'Hay personas que no solo')],
+    55: [('Farmeando el Tunjo — Taller de creación con inteligencia artificial', 'Un laboratorio práctico'),
+         ('Cianotipia — Taller de fotografía analógica', 'Una pausa reflexiva')],
+    58: [('Estación Igüaque', '¿Hasta dónde', 1),
+         ('Claquetazo — Laboratorio de creación', 'Un minuto puede')],
+    59: [('Club de Pitch — Encuentro Work in Progress', 'Una obra en proceso'),
+         ('Taller Eureka — Del collage al póster', 'Entre fragmentos')],
+    60: [('Proceso de restauración de La paga y Aquileo Venganza', 'A partir de La Paga'),
+         ('Trazos — Charla con realizadores', 'Tres realizadores')],
+    61: [('Maquillaje: transformaciones del tiempo', 'Una clase magistral sobre el maquillaje'),
+         ('Dirigir el tiempo', 'Una clase magistral sobre el oficio')],
 }
 
 # La página 51 no es una ficha: es el índice de la Ruta Académica, y trae una
 # NOTA que no está en ninguna otra parte del PDF. Se guarda como dato del
 # festival, no de una actividad.
-NOTA_RUTA = 51
+NOTA_RUTA = 57
 
 RE_DUR = re.compile(r'Duraci[óo]n\s+(\d{1,3})\s*min', re.I)
 
@@ -129,7 +137,7 @@ def parrafos(ls):
     return ps
 
 
-def ficha(pagina, titulo, ancla):
+def ficha(pagina, titulo, ancla, extra=0):
     ls = lineas(pagina)
     if not ls:
         sys.exit(f'✗ p{pagina}: sin texto. ¿Cambió el PDF?')
@@ -141,15 +149,16 @@ def ficha(pagina, titulo, ancla):
     if ancla is None:
         credito, sinopsis = '', ' '.join(ps)
     else:
-        i = next((k for k, x in enumerate(ps) if x.startswith(ancla)), None)
+        # el ancla puede ir A MITAD de un párrafo: en la p55 la cabecera de la
+        # ficha y su cuerpo salen en un solo bloque
+        i = next((k for k, x in enumerate(ps) if ancla in x), None)
         if i is None:
-            sys.exit(f'✗ p{pagina} «{titulo}»: no aparece el párrafo que empieza '
-                     f'por «{ancla}». Párrafos leídos: '
+            sys.exit(f'✗ p{pagina} «{titulo}»: no aparece el párrafo con '
+                     f'«{ancla}». Párrafos leídos: '
                      + ' | '.join(x[:40] for x in ps))
-        ps, resto = ps[:i + 1], ps[i + 1:]
-        if resto and pagina not in (15,):
-            sys.exit(f'✗ p{pagina} «{titulo}»: sobra texto después de la '
-                     f'sinopsis — «{resto[0][:60]}». Mirar la página.')
+        cabeza, cuerpo_i = ps[i].split(ancla, 1)
+        ps = ps[:i] + ([cabeza.strip()] if cabeza.strip() else []) + \
+            [' '.join([ancla + cuerpo_i] + ps[i + 1:i + 1 + extra])]
         # EL CRÉDITO VA VERBATIM, sin limpiar. En estas páginas comparte cuerpo
         # con el subtítulo de la pieza («Dir. Luna Martínez Rodríguez» + «DEL
         # COLLAGE AL PÓSTER»), y separarlos a ojo cuesta más de lo que vale:
@@ -162,7 +171,7 @@ def ficha(pagina, titulo, ancla):
                                                     if 'RUTA ACAD' not in g.upper()),
          'sinopsis': sinopsis, 'pagina': pagina,
          '_src': {'url': 'https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) '
-                         f'p{pagina}', 'date': '2026-09-21'}}
+                         f'p{pagina}', 'date': '2026-10-06'}}
     if credito:
         d['credito'] = credito
         m = RE_DUR.search(credito)
@@ -177,22 +186,23 @@ def ficha(pagina, titulo, ancla):
 def main():
     if not os.path.exists(PDF):
         sys.exit(f'✗ falta el PDF en {PDF} — está en fuentes/, que va gitignored')
-    fichas = [ficha(p, t, a) for p, es in sorted(PAGINAS.items())
-              for t, a in es]
+    fichas = [ficha(p, *e) for p, es in sorted(PAGINAS.items()) for e in es]
 
-    nota = ' '.join(parrafos([(y, x, h, t) for y, x, h, t in lineas(NOTA_RUTA)
-                              if h < CUERPO])).strip()
+    # sin el adorno de la portadilla («caminos FESTIVAL del VILLA tiempo DEL CINE»)
+    nota = ' '.join(x for x in parrafos([(y, x, h, t) for y, x, h, t in lineas(NOTA_RUTA)
+                                         if h < CUERPO])
+                    if not ('caminos' in x and 'tiempo' in x and len(x) < 50)).strip()
     if 'certificaci' not in norm(nota):
         sys.exit(f'✗ p{NOTA_RUTA}: no se encuentra la nota de la Ruta Académica. '
                  f'Leído: «{nota[:120]}»')
 
     json.dump({'_provenance': provenance(
-        'PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF), páginas 51–60: la ficha '
+        'PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF del 6 oct), páginas 14–16, 55 y 58–61: la ficha '
         'de cada actividad de la Ruta Académica',
         que_aporta=f'el crédito y la descripción de {len(fichas)} actividades, '
                    f'que el festival publica y nosotros no leíamos',
-        url='https://villadelcine.com/wp-content/uploads/2026/09/'
-            'Programacion-caminos-del-tiempo-2026_compressed.pdf',
+        url='https://villadelcine.com/wp-content/uploads/2026/10/'
+            'Programacion-caminos-del-tiempo-2026.pdf',
         metodo='por tamaño de fuente (32 pt el nombre, 9 pt el cuerpo) y en '
                'orden de lectura (y, x): la primera frase de Estación Igüaque '
                'viene partida en ocho cajas y el flujo de texto la desordena'),

@@ -1,122 +1,177 @@
 {
  "_provenance": {
-  "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF), páginas 51–60: la ficha de cada actividad de la Ruta Académica",
-  "capturado": "2026-09-21",
-  "que_aporta": "el crédito y la descripción de 10 actividades, que el festival publica y nosotros no leíamos",
-  "url": "https://villadelcine.com/wp-content/uploads/2026/09/Programacion-caminos-del-tiempo-2026_compressed.pdf",
+  "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF del 6 oct), páginas 14–16, 55 y 58–61: la ficha de cada actividad de la Ruta Académica",
+  "capturado": "2026-10-07",
+  "que_aporta": "el crédito y la descripción de 15 actividades, que el festival publica y nosotros no leíamos",
+  "url": "https://villadelcine.com/wp-content/uploads/2026/10/Programacion-caminos-del-tiempo-2026.pdf",
   "metodo": "por tamaño de fuente (32 pt el nombre, 9 pt el cuerpo) y en orden de lectura (y, x): la primera frase de Estación Igüaque viene partida en ocho cajas y el flujo de texto la desordena"
  },
  "actividades": [
   {
-   "titulo": "Reconocimiento a Mabel Teresa Velosa",
-   "_titulo_pdf": "EVENTOS ESPECIALES / FUNDACIÓN PATRIMONIO FILMICO / MABEL VELOSA",
-   "sinopsis": "Hay personas que no solo recorren un camino: ayudan a que exista. Este reconocimiento celebra una labor fundamental que ha acompañado al festival desde sus primeros pasos. Edición tras edición, Mabel Velosa ha convertido su vocación de cuidado en una forma de sostener y compartir el cine en Boyacá, dejando una huella que continúa creciendo junto al festival.",
+   "titulo": "Ceremonia UNQUY de apertura",
+   "_titulo_pdf": "EVENTOS EMBLEMÁTICOS / CEREMONIAS / UNQUY / TAMSA",
+   "sinopsis": "Todo camino nace en un instante que pone el tiempo en movimiento. Esta ceremonia señala ese origen: un ritual de apertura donde el territorio, la memoria ancestral y el cine se encuentran para dar comienzo a la duodécima edición del festival.",
+   "pagina": 14,
+   "_src": {
+    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p14",
+    "date": "2026-10-06"
+   },
+   "credito": "caminos del tiempo · CEREMONIA DE APERTURA · /unkɨ/ · muisca Principio de los tiempos."
+  },
+  {
+   "titulo": "Ceremonia TAMSA — Premiación y clausura",
+   "_titulo_pdf": "EVENTOS EMBLEMÁTICOS / CEREMONIAS / UNQUY / TAMSA",
+   "sinopsis": "Todo camino entrega algo cuando completa su ciclo. Esta ceremonia reúne lo vivido durante esta edición y convierte el reconocimiento en ofrenda: una forma de celebrar el recorrido, cerrar el ciclo y conservar su huella en el tiempo.",
+   "pagina": 14,
+   "_src": {
+    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p14",
+    "date": "2026-10-06"
+   },
+   "credito": "caminos del tiempo · CEREMONIA DE APERTURA · /unkɨ/ · muisca Principio de los tiempos. · Todo camino nace en un instante que pone el tiempo en movimiento. Esta ceremonia señala ese origen: un ritual de apertura donde el territorio, la memoria ancestral y el cine se encuentran para dar comienzo a la duodécima edición del festival. · CEREMONIA DE CLAUSURA · /tamsa/ · muisca Ofrenda."
+  },
+  {
+   "titulo": "Tributo a Aquileo Venganza — Joyce Ventura",
+   "_titulo_pdf": "EVENTOS EMBLEMÁTICOS / HOMENAJES / RESTAURACIÓN / AQUILEO VENGANZA",
+   "sinopsis": "Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia cinematográfica.",
    "pagina": 15,
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p15",
-    "date": "2026-09-21"
+    "date": "2026-10-06"
    },
-   "credito": "caminos del tiempo · POR SUS 40 AÑOS · La Fundación Patrimonio Fílmico Colombiano hace posible que nuestro cine atraviese el tiempo. Este reconocimiento celebra sus 40 años de labor preservando la memoria audiovisual del país, para que las imágenes del pasado sigan encontrando nuevas miradas y trazando caminos hacia el futuro. · CAMINOS DEL TIEMPO"
+   "credito": "caminos del tiempo · TRIBUTO | Ciro Durán y Joyce Ventura"
   },
   {
-   "titulo": "Estación Igüaque",
-   "_titulo_pdf": "ESTACIÓN IGÜAQUE",
-   "sinopsis": "¿Tienes un proyecto en desarrollo y quieres recibir retroalimentación de expertos de diferentes áreas? Espacio de escucha, intercambio y conocimiento para conversar sobre tu proyecto mientras compartes un café.",
-   "pagina": 52,
+   "titulo": "Reconocimiento a los Héroes de la Montaña",
+   "_titulo_pdf": "EVENTOS EMBLEMÁTICOS / HOMENAJES",
+   "sinopsis": "Cuando el fuego alcanzó las montañas, Villa de Leyva y los municipios aledaños respondieron con sus propias manos como un solo pueblo. Este reconocimiento, recibido por un integrante de la comunidad en nombre de de los Héroes de la Montaña, honra la valentía de quienes protegieron la tierra. Con palabras de pedagogía por un miembro de Bomberos Villa de Leyva.",
+   "pagina": 16,
    "_src": {
-    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p52",
-    "date": "2026-09-21"
-   }
-  },
-  {
-   "titulo": "Club de Pitch — Encuentro Work in Progress",
-   "_titulo_pdf": "CLUB DE PITCH / ENCUENTRO WORK IN PROGRESS",
-   "sinopsis": "Un espacio de encuentro y preparación para los proyectos seleccionados en Work in Progress, pensado para compartir herramientas, consejos y estrategias que les ayuden a fortalecer su pitch antes de presentarlo ante los jurados. Una sesión abierta para quienes quieran acompañar este momento, conocer de cerca el proceso y descubrir claves para comunicar una historia, un proyecto y su potencial de manera clara, atractiva y efectiva.",
-   "pagina": 53,
-   "_src": {
-    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p53",
-    "date": "2026-09-21"
+    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p16",
+    "date": "2026-10-06"
    },
-   "credito": "Dir. Carla Low Duración 90 min.",
-   "duracion_ficha_min": 90
+   "credito": "caminos del tiempo · RECONOCIMIENTO PATRIMONIO FÍLMICO COLOMBIANO 40 Años · La Fundación Patrimonio Fílmico Colombiano hace posible que nuestro cine atraviese el tiempo. Este reconocimiento celebra sus 40 años de labor preservando la memoria audiovisual del país, para que las imágenes del pasado sigan encontrando nuevas miradas y trazando caminos hacia el futuro. · RECONOCIMIENTO HÉROES DE LA MONTAÑA El Territorio Que Somos"
   },
   {
-   "titulo": "Claquetazo — Laboratorio de creación",
-   "_titulo_pdf": "CLAQUETAZO",
-   "sinopsis": "Experiencia formativa y creativa en alianza con DASC (Directores Audiovisuales Sociedad Colombiana de Gestión), en la que uno de sus directores acompañará a un equipo de cinco participantes en la creación y realización de un filminuto. Un espacio práctico para compartir conocimientos y fortalecer la formación del sector audiovisual de Boyacá.",
-   "pagina": 54,
+   "titulo": "Reconocimiento a Mabel Teresa Velosa",
+   "_titulo_pdf": "EVENTOS EMBLEMÁTICOS / HOMENAJES",
+   "sinopsis": "Hay personas que no solo recorren un camino: ayudan a que exista. Este reconocimiento celebra la vocación de cuidado con la que Mabel Velosa ha sostenido y compartido el cine en Boyacá, dejando una huella que continúa creciendo junto al festival.",
+   "pagina": 16,
    "_src": {
-    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p54",
-    "date": "2026-09-21"
+    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p16",
+    "date": "2026-10-06"
    },
-   "credito": "1 Directora + 5 realizadores Boyacenses"
+   "credito": "caminos del tiempo · RECONOCIMIENTO PATRIMONIO FÍLMICO COLOMBIANO 40 Años · La Fundación Patrimonio Fílmico Colombiano hace posible que nuestro cine atraviese el tiempo. Este reconocimiento celebra sus 40 años de labor preservando la memoria audiovisual del país, para que las imágenes del pasado sigan encontrando nuevas miradas y trazando caminos hacia el futuro. · RECONOCIMIENTO HÉROES DE LA MONTAÑA El Territorio Que Somos · Cuando el fuego alcanzó las montañas, Villa de Leyva y los municipios aledaños respondieron con sus propias manos como un solo pueblo. Este reconocimiento, recibido por un integrante de la comunidad en nombre de de los Héroes de la Montaña, honra la valentía de quienes protegieron la tierra. Con palabras de pedagogía por un miembro de Bomberos Villa de Leyva. · RECONOCIMIENTO MABEL VELOSA Caminos Del Tiempo"
   },
   {
-   "titulo": "Taller Eureka — Del collage al póster",
-   "_titulo_pdf": "TALLER EUREKA",
-   "sinopsis": "Un taller para acercarse a la creación de imágenes para cine desde un lugar experimental, creativo y accesible. A través del póster, exploraremos cómo una película puede convertirse en una imagen: cómo traducir su atmósfera, sus personajes, conflictos, símbolos y emociones en una pieza visual que también cuenta una historia.",
+   "titulo": "Farmeando el Tunjo — Taller de creación con inteligencia artificial",
+   "_titulo_pdf": "X-PLORA CINE / FORMACIÓN / 15 MAÑANA / 15 MAÑANA / 16 MAÑANA",
+   "sinopsis": "Un laboratorio práctico en el que la tradición oral y la tecnología generativa se encuentran para dar nueva vida a *El Tunjo*. A través de la observación corporal, la fotografía, la dirección de arte y el *prompt engineering* en Omni Flash, los participantes crearán microrrelatos animados de diez segundos en los que esta figura mítica despierta, baila y explora los lenguajes de la narrativa digital.",
    "pagina": 55,
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p55",
-    "date": "2026-09-21"
+    "date": "2026-10-06"
    },
-   "credito": "Dir. Luna Martínez Rodríguez DEL COLLAGE AL PÓSTER"
+   "credito": "caminos del tiempo · FARMEANDO EL TUNJO JUEVES TALLER DE CREACIÓN CINEMATOGRÁFICA CON INTELIGENCIA ARTIFICIAL Jimena Guerrero, Vanessa Vega y PiPo Aranguren 10:30a.m - 12:30a.m Talleristas"
   },
   {
-   "titulo": "Gente que hace cine",
-   "_titulo_pdf": "UNIVERSOS EXPANDIDOS / CON EL PODCAST",
-   "sinopsis": "Una conversación para descubrir cómo el podcast puede convertirse en una nueva ventana para el cine: un espacio para ampliar historias, explorar personajes y crear nuevas formas de conectar con las audiencias. Un encuentro con quienes hacen cine para conversar sobre las posibilidades narrativas de este formato y los universos que pueden surgir cuando una película encuentra nuevas voces más allá de la pantalla",
-   "pagina": 56,
+   "titulo": "Cianotipia — Taller de fotografía analógica",
+   "_titulo_pdf": "X-PLORA CINE / FORMACIÓN / 15 MAÑANA / 15 MAÑANA / 16 MAÑANA",
+   "sinopsis": "Una pausa reflexiva entre el tiempo, la materia y la luz. A partir de la vegetación local, la observación y la composición manual, los participantes explorarán una técnica fotográfica histórica en la que el sol transforma la superficie y revela siluetas. Un taller al aire libre para experimentar con el paisaje, la textura y la alquimia visual de la imagen.",
+   "pagina": 55,
    "_src": {
-    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p56",
-    "date": "2026-09-21"
+    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p55",
+    "date": "2026-10-06"
    },
-   "credito": "Mauricio Romero - Periodista y docente especializado en cine y audiovisual · CHARLA GENTE QUE HACE CINE:"
+   "credito": "caminos del tiempo · FARMEANDO EL TUNJO JUEVES TALLER DE CREACIÓN CINEMATOGRÁFICA CON INTELIGENCIA ARTIFICIAL Jimena Guerrero, Vanessa Vega y PiPo Aranguren 10:30a.m - 12:30a.m Talleristas Un laboratorio práctico en el que la tradición oral y la tecnología generativa se encuentran para dar nueva vida a *El Tunjo*. A través de la observación corporal, la fotografía, la dirección de arte y el *prompt engineering* en Omni Flash, los participantes crearán microrrelatos animados de diez segundos en los que esta figura mítica despierta, baila y explora los lenguajes de la narrativa digital. · COMIENZOS | EL FÓSIL MÁGICO: Cortometraje JUEVES EXHIBICIÓN + Q&amp;A 9:45a.m - 10:30a.m Estudiantes IE Nueva Generación - Sáchicha Realizadores En las montañas de Sáchica, Boyacá; un grupo de niños descubre un misterioso fósil y emprende una aventura para encontrar la pieza que le falta. Al unir sus dos mitades, serán transportados a un mundo mágico donde un gigantesco pliosaurio los guiará hacia los secretos que permanecen escondidos bajo su tierra. · CIANOTIPIA VIERNES TALLER DE EXPERIMENTACIÓN Y FOTOGRAFÍA ANALÓGICA Isabella Bobadilla Monsalve 9:45a.m - 11:45a.m Tallerista"
   },
   {
-   "titulo": "Maquillaje: transformaciones del tiempo",
-   "_titulo_pdf": "MAQUILLAJE: / TRANSFORMACIONES DEL TIEMPO",
-   "sinopsis": "Un encuentro para descubrir el mundo del maquillaje en el cine colombiano: sus secretos, sus posibilidades y la manera en que transforma rostros para contar historias. Durante dos horas conoceremos este fascinante oficio y cerraremos con una demostración en vivo, donde veremos cómo una gran artista convierte el maquillaje en una verdadera obra de arte.",
-   "pagina": 57,
-   "_src": {
-    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p57",
-    "date": "2026-09-21"
-   },
-   "credito": "Dir. Lili Bonil - Tallerista ENACC Maestra de maquillaje"
-  },
-  {
-   "titulo": "Dirigir el tiempo",
-   "_titulo_pdf": "DIRIGIR EL TIEMPO",
-   "sinopsis": "Una conversación cercana con una directora sobre el oficio de hacer cine: las decisiones, los desafíos y las intuiciones que acompañan el proceso de llevar una historia a la pantalla. Un encuentro para hablar de dirección, creación y de ese particular ejercicio de darle ritmo, sentido y tiempo a una película.",
+   "titulo": "Estación Igüaque",
+   "_titulo_pdf": "CINECAMINO / 16, JUEVES, / 15, 17 VIERNES, / IGUAQUE / CLAQUETAZO / 15, 16, / 17",
+   "sinopsis": "¿Hasta dónde podría llegar tu proyecto con las miradas adecuadas? Comparte tu obra en cualquier etapa con expertos de diferentes áreas de la industria. Una oportunidad para conversar alrededor de un café, recibir retroalimentación especializada y descubrir nuevas posibilidades para llevarla a su siguiente etapa.",
    "pagina": 58,
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p58",
-    "date": "2026-09-21"
+    "date": "2026-10-06"
    },
-   "credito": "Monica Cifuentes Toro - DASC Directora de cine"
+   "credito": "caminos del tiempo · ESTACIÓN · S[ABADO TARDE"
   },
   {
-   "titulo": "Trazos — Charla con realizadores",
-   "_titulo_pdf": "TRAZOS",
-   "sinopsis": "Un encuentro con las y los realizadores de los cortometrajes seleccionados para conversar sobre las historias que los llevaron a crear sus películas. Una charla para conocer sus procesos, búsquedas y desafíos, y descubrir las distintas miradas que hoy están explorando el lenguaje del cortometraje.",
+   "titulo": "Claquetazo — Laboratorio de creación",
+   "_titulo_pdf": "CINECAMINO / 16, JUEVES, / 15, 17 VIERNES, / IGUAQUE / CLAQUETAZO / 15, 16, / 17",
+   "sinopsis": "Un minuto puede contener un camino entero. En solo tres días, cinco realizadores llevarán un guion hasta la pantalla, recorriendo la preproducción, el rodaje y la posproducción en una carrera creativa contra el tiempo.",
+   "pagina": 58,
+   "_src": {
+    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p58",
+    "date": "2026-10-06"
+   },
+   "credito": "caminos del tiempo · ESTACIÓN · S[ABADO TARDE ¿Hasta dónde podría llegar tu proyecto con las miradas adecuadas? · Comparte tu obra en cualquier etapa con expertos de diferentes áreas de la industria. Una oportunidad para conversar alrededor de un café, recibir retroalimentación especializada y descubrir nuevas posibilidades para llevarla a su siguiente etapa. · JUEVES, VIERNES, SÁBADO LABORATORIO DE CREACIÓN MAÑANA / TARDE 1 Directora, 5 Realizadores Boyacenses"
+  },
+  {
+   "titulo": "Club de Pitch — Encuentro Work in Progress",
+   "_titulo_pdf": "CINECAMINO / TALLERES / 15 MAÑANA / CLUB DE PITCH / DEL COLLAGE AL PÓSTER 16 VIERNES",
+   "sinopsis": "Una obra en proceso habita entre lo que ya es y aquello que puede llegar a ser. Este espacio acompaña a los realizadores de Work in Progress de la Selección Oficial en Competencia a encontrar el corazón de sus películas y convertirlo en un pitch capaz de impulsarlas hacia su siguiente etapa.",
    "pagina": 59,
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p59",
-    "date": "2026-09-21"
+    "date": "2026-10-06"
    },
-   "credito": "3 realizadores + moderador(a) CHARLA REALIZADORES"
+   "credito": "caminos del tiempo · JUEVES · ENCUENTRO WORK IN PROGRESS 9:30a.m - 10:30a.m · Carla Low Tallerista"
+  },
+  {
+   "titulo": "Taller Eureka — Del collage al póster",
+   "_titulo_pdf": "CINECAMINO / TALLERES / 15 MAÑANA / CLUB DE PITCH / DEL COLLAGE AL PÓSTER 16 VIERNES",
+   "sinopsis": "Entre fragmentos, una película comienza a existir antes de llegar a la pantalla. El collage reúne atmósferas, símbolos y emociones para convertir el póster en la primera huella de su universo: una imagen capaz de abrir distintos caminos hacia la historia que imaginamos.",
+   "pagina": 59,
+   "_src": {
+    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p59",
+    "date": "2026-10-06"
+   },
+   "credito": "caminos del tiempo · JUEVES · ENCUENTRO WORK IN PROGRESS 9:30a.m - 10:30a.m · Carla Low Tallerista · Una obra en proceso habita entre lo que ya es y aquello que puede llegar a ser. Este espacio acompaña a los realizadores de Work in Progress de la Selección Oficial en Competencia a encontrar el corazón de sus películas y convertirlo en un pitch capaz de impulsarlas hacia su siguiente etapa. · MAÑANA CREACIÓN DE POSTERS PARA CINE 10:00a.m - 1:00p.m · Luna Martínez Rodríguez | EUREKA Tallerista"
   },
   {
    "titulo": "Proceso de restauración de La paga y Aquileo Venganza",
-   "_titulo_pdf": "PROCESO DE RESTAURACIÓN DE LAS / PELÍCULAS LA PAGA Y AQUILEO VENGANZA / DEL DIRECTOR CIRO DURÁN.",
-   "sinopsis": "Una charla sobre restauración. La paga tuvo su reestreno, en la versión restaurada durante Cannes Classics 2025 y Aquileo venganza tendrá el estreno de la versión restaurada durante el festival Villa del cine 2026.",
+   "_titulo_pdf": "CINECAMINO / CHARLAS / RESTAURANDO EL TIEMPO 16 VIERNES / 16 TARDE / TRAZOS",
+   "sinopsis": "A partir de La Paga (Dir. Ciro Durán), cuya versión restaurada se reestrenó en Cannes Classics 2025, y Aquileo Venganza, (Dir. Ciro Durán), que estrenará su restauración en el Festival Villa del Cine 2026, recorreremos los procesos que permiten recuperar, conservar y reencontrarnos con nuestra memoria cinematográfica.",
    "pagina": 60,
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p60",
-    "date": "2026-09-21"
+    "date": "2026-10-06"
    },
-   "credito": "Jorge Mario Vera Director de fotografía y restaurador fílmico. Subdirector Técnico, FPFC. CHARLA"
+   "credito": "caminos del tiempo · MAÑANA CONSERVACIÓN Y RECUPERACIÓN DEL 10:30a.m - 12:30m PATRIMONIO FÍLMICO Jorge Mario Vera Director de fotografía y restaurador fílmico. Subdirector Técnico, FPFC."
+  },
+  {
+   "titulo": "Trazos — Charla con realizadores",
+   "_titulo_pdf": "CINECAMINO / CHARLAS / RESTAURANDO EL TIEMPO 16 VIERNES / 16 TARDE / TRAZOS",
+   "sinopsis": "Tres realizadores de los cortometrajes seleccionados conversan sobre las historias que dieron origen a sus películas, los caminos recorridos durante su creación y las decisiones que definieron sus miradas. Un encuentro moderado para acercarse a los procesos, búsquedas y desafíos detrás del cortometraje.",
+   "pagina": 60,
+   "_src": {
+    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p60",
+    "date": "2026-10-06"
+   },
+   "credito": "caminos del tiempo · MAÑANA CONSERVACIÓN Y RECUPERACIÓN DEL 10:30a.m - 12:30m PATRIMONIO FÍLMICO Jorge Mario Vera Director de fotografía y restaurador fílmico. Subdirector Técnico, FPFC. · A partir de La Paga (Dir. Ciro Durán), cuya versión restaurada se reestrenó en Cannes Classics 2025, y Aquileo Venganza, (Dir. Ciro Durán), que estrenará su restauración en el Festival Villa del Cine 2026, recorreremos los procesos que permiten recuperar, conservar y reencontrarnos con nuestra memoria cinematográfica. · VIERNES · 2:15p.m - 4:00p.m REALIZADORES · Carla Low Moderadora"
+  },
+  {
+   "titulo": "Maquillaje: transformaciones del tiempo",
+   "_titulo_pdf": "CINECAMINO / MASTERCLASSES / 17 MAÑANA / CAMINAR ROSTROS / 17 TARDE / DIRIGIR EL TIEMPO",
+   "sinopsis": "Una clase magistral sobre el maquillaje como herramienta esencial para la construcción de personajes en el cine colombiano; recorriendo los secretos y recursos de este oficio que cerrará con una demostración en vivo, donde la técnica se convierte en una forma de narrar.",
+   "pagina": 61,
+   "_src": {
+    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p61",
+    "date": "2026-10-06"
+   },
+   "credito": "caminos del tiempo · SÁBADO · MAQUILLAJE Y CONSTRUCCIÓN 10:00a.m - 12:00m · Lili Bonil | ENACC Maestra de Maquillaje"
+  },
+  {
+   "titulo": "Dirigir el tiempo",
+   "_titulo_pdf": "CINECAMINO / MASTERCLASSES / 17 MAÑANA / CAMINAR ROSTROS / 17 TARDE / DIRIGIR EL TIEMPO",
+   "sinopsis": "Una clase magistral sobre el oficio de dirigir y las decisiones que acompañan el camino entre una historia escrita y su llegada a la pantalla. Un recorrido por los desafíos, intuiciones y herramientas con las que la dirección articula las distintas áreas de una película y convierte una intención en ritmo, puesta en escena y sentido.",
+   "pagina": 61,
+   "_src": {
+    "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p61",
+    "date": "2026-10-06"
+   },
+   "credito": "caminos del tiempo · SÁBADO · MAQUILLAJE Y CONSTRUCCIÓN 10:00a.m - 12:00m · Lili Bonil | ENACC Maestra de Maquillaje · Una clase magistral sobre el maquillaje como herramienta esencial para la construcción de personajes en el cine colombiano; recorriendo los secretos y recursos de este oficio que cerrará con una demostración en vivo, donde la técnica se convierte en una forma de narrar. · SÁBADO · DIRECCIÓN Y LENGUAJE 10:00a.m - 11:45a.m · Mónica Cifuentes Toro | DASC Directora de Cine"
   }
  ],
- "nota_ruta_academica": "NOTA Cada actividad tendrá un código QR para diligenciar asistencia, si cumple con asistencia cada uno de los días tendrá una certificación de la Ruta Académica CineCamino"
+ "nota_ruta_academica": "Caminar el cine también es recorrer sus oficios. En esta ruta de formación, creación e intercambio, la experiencia cambia de manos, las preguntas abren caminos y las ideas encuentran herramientas para llegar a la pantalla. COMPLETA LA RUTA: Participa en al menos una actividad cada día durante el festival y registra tu asistencia con el código QR de cada sala. Al completar el recorrido, recibirás la Certificación de la Ruta Académica CineCamino."
 }

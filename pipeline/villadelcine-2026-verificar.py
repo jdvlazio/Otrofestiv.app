@@ -36,7 +36,7 @@ from lib import norm
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAR = f'{REPO}/festivals/staging/villadelcine-2026-parrilla.json'
-PAGS_RETICULA = list(range(2, 12))
+PAGS_RETICULA = list(range(3, 13))   # PDF del 6 oct
 
 # TEXTO QUE ESTÁ EN EL PDF Y NO SE VE EN LA PÁGINA. Sobras de Canva: quedaron
 # en la capa de texto de una versión anterior y no las pinta nada. No son
@@ -179,6 +179,10 @@ def main():
             k = norm(o['programa']) or norm(o['seccion'])
             if not k:
                 continue
+            # DOS PROGRAMAS CON EL MISMO NOMBRE (PDF del 6 oct): RESISTENCIAS va
+            # el miércoles 14 (Arenas) y el sábado 17; se separan por el día de
+            # su ficha
+            k = (k, o.get('dia_ficha', ''))
             e = por_prog.setdefault(k, {'min': 0, 'n': 0, 'sin': 0,
                                         'nombre': f"{o['seccion']} {o['programa']}".strip()})
             e['n'] += 1
@@ -187,7 +191,8 @@ def main():
             else:
                 e['sin'] += 1
         for k, e in sorted(por_prog.items()):
-            cand = [b for b in bs if k in norm(' '.join(b['lineas']))]
+            cand = [b for b in bs if k[0] in norm(' '.join(b['lineas']))
+                    and (not k[1] or b['dia'][-2:] in k[1].split(','))]
             if not cand or e['nombre'] in PROGRAMA_SUELTO:
                 continue
             tope = max(b['duracion_min'] for b in cand)

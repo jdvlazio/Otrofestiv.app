@@ -53,7 +53,7 @@ PARECIDO = 0.82
 # puntos no casa nunca, y las 130 horas de la columna izquierda salían como
 # contenido sin leer.
 ADORNO = re.compile(
-    r'^(12|festival|villa|del cine|caminos|del|tiempo|del tiempo|septiembre|lugar|hora|'
+    r'^(12|festival|villa|del cine|caminos|del|tiempo|del tiempo|septiembre|octubre|15 y 16|lugar|hora|'
     r'manana|tarde|noche|tarde noche|lunes|martes|miercoles|jueves|viernes|sabado|'
     r'domingo|[0-9o]{1,2} \d{2}( [ap0o])?( m)?|\d{1,2}|\d{1,2} [a-z]+)$')
 
@@ -62,13 +62,43 @@ ADORNO = re.compile(
 # Páginas que no son programación y por eso no extraemos: portada, créditos,
 # patrocinadores, mapa y contraportada. El OCR las lee enteras —y en ellas ve,
 # además, el texto DENTRO de los logotipos, que la capa de texto no trae—.
-PAGS_SIN_PROGRAMA = {1, 61, 62, 63, 64, 65, 66, 67}
+PAGS_SIN_PROGRAMA = {1, 2, 62, 63, 64, 65, 66, 67, 68}   # PDF del 6 oct
 # TEXTO DE LOGOTIPO en páginas que sí son de contenido. Son marcas de aliados
 # impresas como imagen al pie de la ficha: el OCR las ve y ningún motor de
 # texto las trae. Se listan una por una; lo que no esté acá se mira.
 LOGOS = re.compile(
     r'^(xiv premios|fundacion|fundacio n|patrimonio|filmico|colombiano|darte|dasc|'
-    r'da sc|cultera|arte|euroka|escuela|nacional|m de cine|de cine)$')
+    r'da sc|cultera|arte|euroka|escuela|nacional|m de cine|de cine|'
+    # PDF del 6 oct: los logos de las fichas de homenajes (p15–16) y de las masterclasses (p61)
+    r'das ribeisuales|pectores|cultura|n de cine|directores|audiovisuales|'
+    r'ociedad colombiana de gestion)$')
+
+# LO QUE EL OCR LEE Y ES RUIDO, mirado lámina por lámina el 6 oct (PDF nuevo):
+# (página, comienzo normalizado) → por qué.
+VISTO_ENTENDIDO = {
+    (4, 'muestra osa'): 'el OCR de «Muestra + Q&A» (Nueva Ola Rola), que sí extrajimos',
+    (10, 'fnaco'): 'el OCR de «ENACC» (Caminar Rostros, Casa Museo), en letra de logo',
+    (22, '1 5 deves'): 'texto dentro de la foto de VOLAR, no de la ficha',
+    (49, 'no puedo'): 'la camiseta del muñeco en la foto de CON LA MANO ARRIBA',
+    (50, 'dio 4o'): 'el OCR junta dos renglones apretados de MONTE CURANDERO; extraídos bien',
+    (50, 'dio pre'): 'ídem, AGUAS GRANDES: «Dir. Presly Mendoza / 0:01:39 | Colombia…»',
+    (57, 'masterclassos'): 'palabra pintada sobre la piedra de la portadilla de CINECAMINO',
+    (57, 'talleres'): 'ídem', (57, 'claquetazo'): 'ídem', (57, 'charlas'): 'ídem',
+    (57, 'estacion'): 'ídem', (57, 'iguaque'): 'ídem',
+    (58, 'ianan'): 'el OCR de «SÁBADO MAÑANA / TARDE» en letra chica',
+    (58, 'tadni'): 'ídem',
+}
+# LO QUE EXTRAJIMOS Y EL OCR NO ALCANZA A LEER, mirado en la página: está impreso
+EXTRAIDO_ENTENDIDO = {
+    (3, 'leon quintero'): 'impreso en letra de 4 pt bajo «Cine Concierto CAMINOS SONOROS»',
+    (4, 'muestra q a'): 'impreso; el OCR lo lee «Muestra + OSA»',
+    (10, 'enacc'): 'impreso en letra de logo; el OCR lo lee «FNACO»',
+    (30, 'medicamentos y pequenos tesoros'): 'última línea de la ficha de MI TESORO, impresa',
+    (50, 'dir andres f velasco'): 'impreso; el OCR junta los dos renglones (ver arriba)',
+    (50, '0 08 49 colombia documental'): 'ídem', (50, 'dir presly mendoza'): 'ídem',
+    (50, '0 01 39 colombia experimental poetico'): 'ídem',
+    (53, 'dir victor jarmillo'): 'impreso (LA SINFONÍA GUANENTÁ); el OCR no lo devuelve',
+}
 
 FANTASMAS = {
     'hija': 'el «#Hija» de la página del jueves mañana: sobra de una versión '
@@ -123,7 +153,7 @@ def parece(a, bs):
 
 def main():
     d = json.load(open(PAR, encoding='utf-8'))
-    pags = list(range(1, 68)) if '--todo' in sys.argv else list(range(2, 12))
+    pags = list(range(1, 69)) if '--todo' in sys.argv else list(range(3, 13))
 
     # lo nuestro, por página
     # DOS LISTAS, PORQUE SON DOS PREGUNTAS. `lineas` es lo que de verdad
@@ -186,7 +216,8 @@ def main():
                 continue
             r, cual = parece(t, ve)
             if r < PARECIDO:
-                if norm(t) in FANTASMAS:
+                if norm(t) in FANTASMAS or any(pg == p0 and norm(t).startswith(k0)
+                                               for (p0, k0) in EXTRAIDO_ENTENDIDO for pg in pgs):
                     continue
                 invisibles.append(f'{etiqueta}: extrajimos «{t[:46]}» y el OCR no lo ve '
                                   f'(lo más parecido: «{cual[:32]}», {r:.0%})')
@@ -200,6 +231,8 @@ def main():
             nt = norm(t)
             if not nt or ADORNO.match(nt) or len(nt) < 4 or nt in sedes \
                     or pag in PAGS_SIN_PROGRAMA or LOGOS.match(nt):
+                continue
+            if any(pag == p0 and nt.startswith(k0) for (p0, k0) in VISTO_ENTENDIDO):
                 continue
             r, _ = parece(t, indice.get(pag, []))
             if r < PARECIDO:

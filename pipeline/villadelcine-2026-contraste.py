@@ -38,7 +38,7 @@ from lib import norm
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PDF = f'{REPO}/fuentes/villadelcine-2026/programacion-2026.pdf'
 PAR = f'{REPO}/festivals/staging/villadelcine-2026-parrilla.json'
-PAGS = list(range(2, 12))
+PAGS = list(range(3, 13))   # la retícula del PDF del 6 oct
 
 try:
     import pymupdf
@@ -54,9 +54,22 @@ RE_HORA = re.compile(r'^(\d{1,2}):(\d{2})\s*([ap0o])?\.?\s*m\.?$', re.I)
 # número, que es lo único estable, y a que vive en la banda de cielo.
 RE_DIA = re.compile(r'^(\d{1,2})(\s+[A-ZÁÉÍÓÚ/ ]+)?$')
 Y_CIELO = 65          # por encima de esto va la cabecera de marca, no la tabla
-MARCA = re.compile(r'^(12|FESTIVAL|VILLA|DEL CINE|Septiembre|Lugar|Hora|caminos|del|'
+MARCA = re.compile(r'^(12|FESTIVAL|VILLA|DEL CINE|Septiembre|Octubre|#Hija|Lugar|Hora|caminos|del|'
                    r'tiempo|MAÑANA|TARDE|NOCHE|TARDE/NOCHE|LUNES|MARTES|MIÉRCOLES|'
                    r'JUEVES|VIERNES|SÁBADO|DOMINGO)$', re.I)
+
+
+# DIFERENCIAS MIRADAS EN LA IMAGEN DE LA PÁGINA (PDF del 6 oct) en las que
+# la lectura de MuPDF es la equivocada. (día, hora, sede) → qué se vio.
+VISTO_EN_LA_PAGINA = {
+    ('2026-10-14', '17:00', 'San Pedro Campestre'):
+        'p3: UNQUY (17:00–17:30) y el Cine Concierto (17:30–17:45) son DOS '
+        'rectángulos; se tocan y la fusión de rellenos de MuPDF los junta',
+    ('2026-10-17', '15:15', 'San Pedro Campestre'):
+        'p11: la casilla de Mabel Velosa ocupa un renglón (15:15–15:30) y el '
+        'Claquetazo arranca a las 15:30; MuPDF redondea su borde inferior al '
+        'renglón de arranque',
+}
 
 
 def hora_reticula(t, ap_previo=''):
@@ -74,12 +87,15 @@ def hora_reticula(t, ap_previo=''):
 
 def lineas_mupdf(page):
     """[(x0, y0, x1, y1, texto)] — una entrada por línea, como las ve MuPDF."""
-    out = []
+    out, vistas = [], set()
     for b in page.get_text('dict')['blocks']:
         for l in b.get('lines', []):
             t = ''.join(s['text'] for s in l['spans']).strip()
             t = re.sub(r'\s+', ' ', t)
-            if t:
+            # el PDF del 6 oct dibuja parte del texto dos veces en la misma caja
+            k = (tuple(round(v, 1) for v in l['bbox']), t)
+            if t and k not in vistas:
+                vistas.add(k)
                 x0, y0, x1, y1 = l['bbox']
                 out.append((x0, y0, x1, y1, t))
     return out
@@ -142,7 +158,7 @@ def main():
             dif.append(f'p{pag}: MuPDF no encontró ninguna fila de hora')
             continue
         horas.sort()
-        dia = next((f'2026-09-{int(RE_DIA.match(t).group(1)):02d}'
+        dia = next((f'2026-10-{int(RE_DIA.match(t).group(1)):02d}'
                     for x0, y0, x1, y1, t in ls
                     if y1 < Y_CIELO and x0 > 440 and RE_DIA.match(t)), '')
         # columnas: la cabecera, arriba de la primera hora
@@ -185,6 +201,8 @@ def main():
 
     for k in sorted(set(mios) | set(otros)):
         a, b = mios.get(k), otros.get(k)
+        if (k[0], k[2], k[1]) in VISTO_EN_LA_PAGINA:
+            continue
         if not b:
             # un bloque que unimos entre páginas no tiene pareja exacta: MuPDF
             # ve los dos trozos por separado, que es lo que el PDF dibuja.
@@ -204,13 +222,23 @@ def main():
             dif.append(f'solo en MuPDF:     {k[0][-2:]} {k[2]} {k[1][:26]} '
                        f'«{" ".join(b["lineas"])[:34]}»')
         else:
-            if a['hasta'] != b['hasta'] and not a.get('_partido') \
+            # `_termina_despues`: el bloque llega al pie de la página y la
+            # siguiente dibuja su final sin rótulo (PDF del 6 oct). MuPDF ve
+            # solo el trozo de esta página: su fin tiene que ser ANTERIOR al
+            # nuestro, nunca posterior.
+            if a.get('_termina_despues') and b['hasta'] <= a['hasta']:
+                pass
+            elif a['hasta'] != b['hasta'] and not a.get('_partido') \
                     and not a.get('_empieza_antes'):
                 dif.append(f'hora de fin distinta: {k[0][-2:]} {k[2]} {k[1][:22]} — '
                            f'nuestra {a["hasta"]}, MuPDF {b["hasta"]}')
             if a.get('_partido') or a.get('_empieza_antes'):
                 continue
-            if norm(' '.join(a['lineas'])) != norm(' '.join(b['lineas'])):
+            # LAS MISMAS PALABRAS, en cualquier orden de renglón: MuPDF apila
+            # la franja («Ruta Académica / CINECAMINO») arriba o abajo según
+            # la caja, y poppler la deja donde la dibuja el PDF
+            if sorted(norm(' '.join(a['lineas'])).split()) != \
+                    sorted(norm(' '.join(b['lineas'])).split()):
                 dif.append(f'texto distinto: {k[0][-2:]} {k[2]} {k[1][:20]}\n'
                            f'       nuestra: {" / ".join(a["lineas"])[:70]}\n'
                            f'       MuPDF  : {" / ".join(b["lineas"])[:70]}')

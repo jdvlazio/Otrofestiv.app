@@ -745,30 +745,16 @@ export const FESTIVAL_CONFIG={
     // deliberado (el título va en inglés y el subtítulo es su nombre en
     // español). Decisión de Juan, 19 sep.
     city:'Villa de Leyva',country:'CO',
-    dates:'23–26 SEP',dates_en:'SEP 23–26',year:2026,timezoneOffset:'-05:00',
-    // APLAZADO. El festival publicó su comunicado oficial el 21 sep 2026, dos
-    // días antes de abrir, por el incendio del Cerro San Marcos: «el Festival
-    // cambia su fecha de realización» y «pronto estaremos anunciando una nueva
-    // fecha». Las 52 funciones y las 90 obras se quedan tal cual —los datos son
-    // buenos, lo que cambió es CUÁNDO—: el estado las saca de «en curso», quita
-    // el punto verde y la preselección, y pinta la banda con las palabras del
-    // propio festival. Las fechas del encabezado pasan a «FECHAS POR ANUNCIAR».
-    //
-    // Reversión, cuando anuncien: fechas nuevas en `dates`/`dates_en`/`year` y
-    // en `festivalDates` + `days` del JSON, y BORRAR este bloque. Mientras el
-    // bloque exista, las fechas viejas no se muestran.
-    //
-    // `note_en` es traducción nuestra, aprobada por Juan el 21 sep 2026. No se
-    // traduce «lamentables sucesos» por su causa concreta —el incendio—: el
-    // festival eligió no nombrarla y la banda dice lo que dice el festival.
-    status:{
-      kind:'postponed',
-      since:'2026-09-21',
-      note:'Debido a los lamentables sucesos, y atendiendo las recomendaciones emitidas por las autoridades, el Festival cambia su fecha de realización. Próximamente estaremos anunciando nuevas fechas.',
-      note_en:'Due to the unfortunate events, and following the recommendations issued by the authorities, the Festival is changing its dates. New dates will be announced soon.',
-      url:'https://www.instagram.com/p/Ddj0BETpRxF/',
-    },
-    keyArt:'/assets/keyart/villadelcine2026-v3.jpg',
+    dates:'14–17 OCT',dates_en:'OCT 14–17',year:2026,timezoneOffset:'-05:00',
+    // REPROGRAMADO. Lo aplazó el comunicado del 21 sep (incendio del Cerro San
+    // Marcos) y el 6 oct publicó su PDF de programación con las fechas nuevas,
+    // 14–17 de octubre: se borra el bloque `status` de aplazado, como decía su
+    // propia nota de reversión.
+    keyArt:'/assets/keyart/villadelcine2026-v4.jpg',
+    // v4 (6 oct): el afiche con las fechas nuevas, «14-17 Octubre 2026», del
+    // post fijado del festival (p/DduTp5fzUvJ, leído por el embed sin sesión).
+    // El post lo monta sobre un fondo de estrellas: se tomó el afiche por sus
+    // bordes (2645×3780, a 4,7% de 2:3) y se estiró con compose-keyart.
     // EL AFICHE OFICIAL, EN VERTICAL (v3, 19 sep). La v2 salía de la página 1
     // del PDF de programación, que es APAISADA (609×394 pt, ratio 1,55):
     // estirarla a 2:3 la comprimía un 57% y dejaba la piedra deformada, sin
@@ -783,7 +769,7 @@ export const FESTIVAL_CONFIG={
     // funciones en 4 sedes, y 22 de ellas son programas de cortos con nombre
     // propio («Nuevas Miradas: UMBRALES»), que es como el festival los agrupa.
     storageKey:'villadelcine2026_',
-    festivalStartStr:'2026-09-23T00:00:00',festivalEndStr:'2026-09-26T23:59:00',
+    festivalStartStr:'2026-10-14T00:00:00',festivalEndStr:'2026-10-17T23:59:00',
     prioLimit:4,ticketing_model:'mixed',
   },
   'ficma2026': {
@@ -1297,6 +1283,7 @@ export const SECTION_ARCHETYPES = {
   '🎓 Ruta Académica': 'Charlas / Industria',
   '🏆 Rumbo a los Macondo': 'Especiales / Eventos',
   '🎞️ Exhibición Especial': 'Retrospectiva / Tributo',
+  '🎞️ Exhibición Patrimonial': 'Retrospectiva / Tributo',   // Villa del Cine, PDF del 6 oct (Aquileo Venganza)
   '🎙️ Comunicaciones': 'Charlas / Industria',
   // ── Festival de Cine de Jardín 11 · Jardín, Antioquia ──────────────────
   '🎬 Muestra Central': 'Muestra / País',

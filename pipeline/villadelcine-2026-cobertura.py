@@ -33,20 +33,21 @@ from lib import norm
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAR = f'{REPO}/festivals/staging/villadelcine-2026-parrilla.json'
 WEB = f'{REPO}/festivals/staging/villadelcine-2026-obras-web.json'
-PAGINAS = 67
+PAGINAS = 68   # PDF del 6 oct
 
 # CROMO DE LA PLANTILLA. Está en casi todas las páginas y no es programación.
 # Cada patrón dice qué es; no se amplía para callar un aviso sin mirarlo.
 ADORNO = [
     (r'^12$|^FESTIVAL$|^VILLA$|^DEL CINE$', 'el logotipo, partido en líneas'),
     (r'^caminos$|^del$|^tiempo$|^del tiempo$', 'el lema de la edición'),
-    (r'^Septiembre$|^\d{1,2}\s+(MIÉRCOLES|JUEVES|VIERNES|SÁBADO|MAÑANA|TARDE|NOCHE|TARDE/NOCHE)$',
+    (r'^Septiembre$|^Octubre$|^/$|^\d{1,2}\s+(MIÉRCOLES|JUEVES|VIERNES|SÁBADO|MAÑANA|TARDE|NOCHE|TARDE/NOCHE)$',
      'la fecha de la cabecera de la retícula'),
     (r'^(MIÉRCOLES|JUEVES|VIERNES|SÁBADO)$|^(MAÑANA|TARDE|NOCHE|TARDE/NOCHE)$',
      'la franja del día'),
     (r'^Lugar$|^Hora$', 'los rótulos de los ejes de la tabla'),
     (r'^\d{1,2}:\d{2}\s*.?\.?m\.?$', 'las horas de la columna izquierda'),
-    (r'^23 - 26 Septiembre 2026$', 'las fechas de la portada'),
+    (r'^23 - 26 Septiembre 2026$|^del 14 - 17 Octubre 2026$|^14 - 17 Octubre 2026$', 'las fechas de la portada'),
+    (r'^#Hija$', 'texto fantasma de una versión anterior en Canva: en la capa de texto, sin pintar'),
     (r'^(Patrocinadores|Aliados Estratégicos|Aliados de la Villa|'
      r'Medios de Comunicación|Restaurantes|Hospedajes|MAPA VILLA DEL CINE|'
      r'NUESTRO CREW|CRÉDITOS)$', 'los títulos de las páginas de cierre'),
@@ -54,7 +55,7 @@ ADORNO = [
 # Las páginas que son enteramente cromo: portada, patrocinadores, créditos,
 # mapa y contraportada. Se declaran por número, y el paso comprueba que de
 # verdad no traigan nada que parezca programación.
-PAGS_SIN_PROGRAMA = {1, 61, 62, 63, 64, 65, 66, 67}
+PAGS_SIN_PROGRAMA = {1, 2, 62, 63, 64, 65, 66, 67, 68}   # PDF del 6 oct
 # En esas páginas todo es texto libre (nombres del equipo, marcas). Lo que se
 # vigila es que no aparezca una HORA o una FECHA, que sería programación
 # escondida entre los créditos.
@@ -77,7 +78,7 @@ ALIAS = {
 }
 
 RE_PROGRAMA = re.compile(r'\d{1,2}:\d{2}\s*[ap]\.?\s*m|'
-                         r'\b(2[3-6])\s+de\s+septiembre\b', re.I)
+                         r'\b(2[3-6])\s+de\s+septiembre\b|\b(1[4-7])\s+de\s+octubre\b', re.I)
 
 
 def es_adorno(t):

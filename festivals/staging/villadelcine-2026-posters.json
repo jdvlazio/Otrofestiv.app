@@ -1,12 +1,215 @@
 {
  "_provenance": {
   "fuente": "villadelcine.com — el afiche que el festival publica en la página de cada obra",
-  "capturado": "2026-09-21",
+  "capturado": "2026-10-07",
   "que_aporta": "el póster de las obras que no tienen ficha en TMDB, que en un festival de cortos son casi todas",
   "url": "https://villadelcine.com/festival-2024-2/",
   "metodo": "write-once: lo ya bajado no se vuelve a pedir, porque después pasa por encuadrar-posters.py y re-bajarlo desharía el encuadre"
  },
  "posters": {
+  "ARENAS": {
+   "poster": "/assets/villadelcine-2026/arenas.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/BA1C8821-94B2-45D4-95AD-D2A547F0DC5B-Gustavo-Nieto-Roa-scaled.webp",
+   "_medida_original": "2560x1920",
+   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
+  },
+  "VOLAR": {
+   "poster": "/assets/villadelcine-2026/volar.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Poster_Volar_-Jeiver-Pinto-scaled.webp",
+   "_medida_original": "1781x2560",
+   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
+  },
+  "Enemigo en el espejo": {
+   "poster": "/assets/villadelcine-2026/enemigo-en-el-espejo.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/ENEMY_IN_THE_MIRROR_l_Stills_l_8.webp",
+   "_medida_original": "1920x1013"
+  },
+  "On Hold": {
+   "poster": "/assets/villadelcine-2026/on-hold.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/63a32964ad-poster.webp",
+   "_medida_original": "599x800",
+   "_categoria": "MEJOR CORTOMETRAJE INTERNACIONAL"
+  },
+  "Cos de vidre": {
+   "poster": "/assets/villadelcine-2026/cos-de-vidre.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/23fca00f1e-poster.webp",
+   "_medida_original": "566x800",
+   "_categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
+  },
+  "KMKZ: SALVAJE, LIBRE Y VALIENTE": {
+   "poster": "/assets/villadelcine-2026/kmkz-salvaje-libre-y-valiente.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/DSC02241.webp",
+   "_medida_original": "1377x1080"
+  },
+  "Language Of The Wind": {
+   "poster": "/assets/villadelcine-2026/language-of-the-wind.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/52ba89df14-poster.webp",
+   "_medida_original": "580x800",
+   "_categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
+  },
+  "Extinción": {
+   "poster": "/assets/villadelcine-2026/extincion.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/e63ebfc341-poster.webp",
+   "_medida_original": "560x800"
+  },
+  "El Último Campeón": {
+   "poster": "/assets/villadelcine-2026/el-ultimo-campeon.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Pelcula_El_ltimo_Campen_FICCI.mp4_snapshot_00.29.55.webp",
+   "_medida_original": "1920x1080"
+  },
+  "EL CINE DENTRO DEL CINE": {
+   "poster": "/assets/villadelcine-2026/el-cine-dentro-del-cine.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/33-poster_El-cine-dentro-del-cine-dentro-del-cine-scaled.webp",
+   "_medida_original": "1656x2560",
+   "_categoria": "MEJOR WORK-IN-PROGRESS"
+  },
+  "CUBA 2001: IMÁGENES DEL FUTURO": {
+   "poster": "/assets/villadelcine-2026/cuba-2001-imagenes-del-futuro.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Still-1-Cuba-2001-El-Espejo.webp",
+   "_medida_original": "1163x395",
+   "_categoria": "MEJOR WORK-IN-PROGRESS"
+  },
+  "Mi tesoro": {
+   "poster": "/assets/villadelcine-2026/mi-tesoro.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/AFICHE-MI-TESORO-V1-Brian-Congolez.webp",
+   "_medida_original": "1023x1537",
+   "_categoria": "MEJOR WORK-IN-PROGRESS"
+  },
+  "SUA Y SIE: Guardianes de la vida": {
+   "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-SUA-Y-SIE-Juan-Pablo-Gonzalez.webp",
+   "_medida_original": "1131x1600",
+   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+  },
+  "FAR": {
+   "poster": "/assets/villadelcine-2026/far.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/0f6428b97f-poster.webp",
+   "_medida_original": "571x800",
+   "_categoria": "YOUNGFILM"
+  },
+  "1 Paseo por la Ciudad": {
+   "poster": "/assets/villadelcine-2026/1-paseo-por-la-ciudad.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-1-PASEO-POR-LA-CIUDAS-Sara-Coello.webp",
+   "_medida_original": "1080x1350",
+   "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
+  },
+  "Manos Rojas": {
+   "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-07-31-at-5.43.44-PM-Martha.webp",
+   "_medida_original": "1055x1491",
+   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+  },
+  "FRAGMENTOS PERDIDOS DE UNA CONVULSIÓN": {
+   "poster": "/assets/villadelcine-2026/fragmentos-perdidos-de-una-convulsion.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/19bb4fb8-4a6b-4efe-aece-6cc727e3b4de.webp",
+   "_medida_original": "1280x689"
+  },
+  "Memorias del Alba": {
+   "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/614e42ad7c-poster.webp",
+   "_medida_original": "533x800",
+   "_categoria": "international universities"
+  },
+  "Beyond the end": {
+   "poster": "/assets/villadelcine-2026/beyond-the-end.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/b2e9300e98-poster.webp",
+   "_medida_original": "564x800",
+   "_categoria": "international universities"
+  },
+  "La silla": {
+   "poster": "/assets/villadelcine-2026/la-silla.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/20-poster_La-silla.webp",
+   "_medida_original": "1500x2121",
+   "_categoria": "YOUNGFILM"
+  },
+  "EN MEDIO": {
+   "poster": "/assets/villadelcine-2026/en-medio.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/still_2.webp",
+   "_medida_original": "1672x941"
+  },
+  "La Sombrilla de Mamá": {
+   "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/58-poster_La-Sombrilla-de-Mama-scaled.webp",
+   "_medida_original": "1810x2560",
+   "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
+  },
+  "Final Act": {
+   "poster": "/assets/villadelcine-2026/final-act.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/26577cb0d3-poster.webp",
+   "_medida_original": "533x800",
+   "_categoria": "international universities"
+  },
+  "Tiro Libre": {
+   "poster": "/assets/villadelcine-2026/tiro-libre.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/dd51e11a39-poster.webp",
+   "_medida_original": "385x800",
+   "_categoria": "YOUNGFILM"
+  },
+  "SOLO": {
+   "poster": "/assets/villadelcine-2026/solo.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/1789156451693.webp",
+   "_medida_original": "847x1264",
+   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+  },
+  "SUN COFFEE": {
+   "poster": "/assets/villadelcine-2026/sun-coffee.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/de150a0902-poster.webp",
+   "_medida_original": "800x450",
+   "_categoria": "YOUNGFILM"
+  },
+  "Mucho Gusto": {
+   "poster": "/assets/villadelcine-2026/mucho-gusto.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-07-31-a-las-9.08.43-Cintia-Obando-scaled.webp",
+   "_medida_original": "2560x1427",
+   "_categoria": "MEJOR VIDEOCLIP NACIONAL"
+  },
+  "PROS Y CONTRAS DE SOÑAR DESPIERTO": {
+   "poster": "/assets/villadelcine-2026/pros-y-contras-de-sonar-despierto.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/imagen_2025-10-20_211005952.webp",
+   "_medida_original": "1599x899"
+  },
+  "They Call It Sausage": {
+   "poster": "/assets/villadelcine-2026/they-call-it-sausage.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/e24022a5-d7f9-4ce4-8e68-0ac26325f4c8.webp",
+   "_medida_original": "499x720",
+   "_categoria": "MEJOR CORTOMETRAJE CON IA"
+  },
+  "Aguapanela": {
+   "poster": "/assets/villadelcine-2026/aguapanela.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/ec75b94b25-poster.webp",
+   "_medida_original": "639x800",
+   "_categoria": "MEJOR VIDEOCLIP NACIONAL"
+  },
   "La última historia": {
    "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
    "posterSource": "oficial",
@@ -42,68 +245,12 @@
    "_medida_original": "565x800",
    "_categoria": "MEJOR CORTOMETRAJE VERTICAL"
   },
-  "Pros and Cons of Daydreaming": {
-   "poster": "/assets/villadelcine-2026/pros-and-cons-of-daydreaming.jpg",
+  "Benditos los Viejos": {
+   "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
    "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/6bbcb6b2ba-poster.webp",
-   "_medida_original": "533x800",
-   "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
-  },
-  "They Call It Sausage": {
-   "poster": "/assets/villadelcine-2026/they-call-it-sausage.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/e24022a5-d7f9-4ce4-8e68-0ac26325f4c8.webp",
-   "_medida_original": "499x720",
-   "_categoria": "MEJOR CORTOMETRAJE CON IA"
-  },
-  "Aguapanela": {
-   "poster": "/assets/villadelcine-2026/aguapanela.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/ec75b94b25-poster.webp",
-   "_medida_original": "639x800",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/4391a7540b-poster.webp",
+   "_medida_original": "600x800",
    "_categoria": "MEJOR VIDEOCLIP NACIONAL"
-  },
-  "Mucho Gusto": {
-   "poster": "/assets/villadelcine-2026/mucho-gusto.jpg",
-   "posterSource": "editorial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-07-31-a-las-9.08.43-Cintia-Obando-scaled.webp",
-   "_medida_original": "2560x1427",
-   "_categoria": "MEJOR VIDEOCLIP NACIONAL"
-  },
-  "Tierras de Lobeiras": {
-   "poster": "/assets/villadelcine-2026/tierras-de-lobeiras.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Tierras-de-Lobeira_Poster-Carla-Barrionuevo-scaled.webp",
-   "_medida_original": "1707x2560",
-   "_categoria": "INFANTIL"
-  },
-  "A Sweet Miracle": {
-   "poster": "/assets/villadelcine-2026/a-sweet-miracle.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/89e84085e5-poster.webp",
-   "_medida_original": "711x800",
-   "_categoria": "INFANTIL"
-  },
-  "Just Another Bird": {
-   "poster": "/assets/villadelcine-2026/just-another-bird.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/89cf7cd303-poster.webp",
-   "_medida_original": "541x800",
-   "_categoria": "INFANTIL"
-  },
-  "VOLAR": {
-   "poster": "/assets/villadelcine-2026/volar.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Poster_Volar_-Jeiver-Pinto-scaled.webp",
-   "_medida_original": "1781x2560",
-   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
-  },
-  "Catatumbo: House of Thunder, Memory, and Dignity": {
-   "poster": "/assets/villadelcine-2026/catatumbo-house-of-thunder-memory-and-dignity.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/dff4e1370e-poster.webp",
-   "_medida_original": "560x800",
-   "_categoria": "MEJOR CORTOMETRAJE CON IA"
   },
   "No se fía, ni aunque lloren": {
    "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
@@ -111,13 +258,6 @@
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-OFICIAL-VERTICAL-NO-SE-FIA-NI-AUNQUE-LLOREN-Dumah-Films.webp",
    "_medida_original": "720x1080",
    "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
-  },
-  "Life is a Chessboard; Every Move is Final": {
-   "poster": "/assets/villadelcine-2026/life-is-a-chessboard-every-move-is-final.jpg",
-   "posterSource": "editorial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/2b011f8c-8ea4-4054-896d-12e6e61acb97.webp",
-   "_medida_original": "2048x868",
-   "_categoria": "MEJOR CORTOMETRAJE CON IA"
   },
   "Ánima de Marea": {
    "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
@@ -147,6 +287,13 @@
    "_medida_original": "640x800",
    "_categoria": "MEJOR CORTOMETRAJE VERTICAL"
   },
+  "TOMA 10": {
+   "poster": "/assets/villadelcine-2026/toma-10.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/10/Toma-10-Poster-Vertical.webp",
+   "_medida_original": "720x1080",
+   "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
+  },
   "A pesar de mí": {
    "poster": "/assets/villadelcine-2026/a-pesar-de-mi.jpg",
    "posterSource": "oficial",
@@ -154,138 +301,12 @@
    "_medida_original": "640x800",
    "_categoria": "MEJOR VIDEOCLIP NACIONAL"
   },
-  "Benditos los Viejos": {
-   "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/4391a7540b-poster.webp",
-   "_medida_original": "600x800",
-   "_categoria": "MEJOR VIDEOCLIP NACIONAL"
-  },
-  "Drunk hearing the rain drops fall": {
-   "poster": "/assets/villadelcine-2026/drunk-hearing-the-rain-drops-fall.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/31061f48c3-poster.webp",
-   "_medida_original": "560x800",
-   "_categoria": "VOCES"
-  },
-  "Collective Memory": {
-   "poster": "/assets/villadelcine-2026/collective-memory.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/eb78e09665-poster.webp",
-   "_medida_original": "542x800",
-   "_categoria": "VOCES"
-  },
-  "Extinction": {
-   "poster": "/assets/villadelcine-2026/extinction.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/e63ebfc341-poster.webp",
-   "_medida_original": "560x800",
-   "_categoria": "MEJOR WORK-IN-PROGRESS"
-  },
-  "The Last Champion": {
-   "poster": "/assets/villadelcine-2026/the-last-champion.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/0870444ae6-poster.webp",
-   "_medida_original": "533x800",
-   "_categoria": "MEJOR WORK-IN-PROGRESS"
-  },
-  "El cine dentro del cine dentro del cine": {
-   "poster": "/assets/villadelcine-2026/el-cine-dentro-del-cine-dentro-del-cine.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/33-poster_El-cine-dentro-del-cine-dentro-del-cine-scaled.webp",
-   "_medida_original": "1656x2560",
-   "_categoria": "MEJOR WORK-IN-PROGRESS"
-  },
-  "Cuba 2001. Imágenes del futuro I": {
-   "poster": "/assets/villadelcine-2026/cuba-2001-imagenes-del-futuro-i.jpg",
+  "Life is a Chessboard; Every Move is Final": {
+   "poster": "/assets/villadelcine-2026/life-is-a-chessboard-every-move-is-final.jpg",
    "posterSource": "editorial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Still-1-Cuba-2001-El-Espejo.webp",
-   "_medida_original": "1163x395",
-   "_categoria": "MEJOR WORK-IN-PROGRESS"
-  },
-  "Mi tesoro": {
-   "poster": "/assets/villadelcine-2026/mi-tesoro.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/AFICHE-MI-TESORO-V1-Brian-Congolez.webp",
-   "_medida_original": "1023x1537",
-   "_categoria": "MEJOR WORK-IN-PROGRESS"
-  },
-  "Sierra: El álbum mortuorio": {
-   "poster": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/b7f47615c4-poster.webp",
-   "_medida_original": "518x800",
-   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
-  },
-  "Que el cielo nos perdone": {
-   "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/0342a8d928-poster.webp",
-   "_medida_original": "560x800",
-   "_categoria": "MEJOR CORTOMETRAJE NACIONAL"
-  },
-  "Le jeune Sofiane": {
-   "poster": "/assets/villadelcine-2026/le-jeune-sofiane.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/3-poster_Le-Jeune-Sofiane-scaled.webp",
-   "_medida_original": "1707x2560",
-   "_categoria": "MEJOR CORTOMETRAJE INTERNACIONAL"
-  },
-  "SUA Y SIE: Guardianes de la vida": {
-   "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-SUA-Y-SIE-Juan-Pablo-Gonzalez.webp",
-   "_medida_original": "1131x1600",
-   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
-  },
-  "FAR": {
-   "poster": "/assets/villadelcine-2026/far.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/0f6428b97f-poster.webp",
-   "_medida_original": "571x800",
-   "_categoria": "YOUNGFILM"
-  },
-  "1 Paseo por la Ciudad": {
-   "poster": "/assets/villadelcine-2026/1-paseo-por-la-ciudad.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/POSTER-1-PASEO-POR-LA-CIUDAS-Sara-Coello.webp",
-   "_medida_original": "1080x1350",
-   "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
-  },
-  "Manos Rojas": {
-   "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-07-31-at-5.43.44-PM-Martha.webp",
-   "_medida_original": "1055x1491",
-   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
-  },
-  "Grief": {
-   "poster": "/assets/villadelcine-2026/grief.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/969470b53f-poster.webp",
-   "_medida_original": "518x800",
-   "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
-  },
-  "Lost Fragments of a Seizure": {
-   "poster": "/assets/villadelcine-2026/lost-fragments-of-a-seizure.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/74d0ff80-7abc-4fba-b418-c194c42d8847.webp",
-   "_medida_original": "539x720",
-   "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
-  },
-  "Memorias del Alba": {
-   "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/614e42ad7c-poster.webp",
-   "_medida_original": "533x800",
-   "_categoria": "international universities"
-  },
-  "Beyond the end": {
-   "poster": "/assets/villadelcine-2026/beyond-the-end.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/b2e9300e98-poster.webp",
-   "_medida_original": "564x800",
-   "_categoria": "international universities"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/2b011f8c-8ea4-4054-896d-12e6e61acb97.webp",
+   "_medida_original": "2048x868",
+   "_categoria": "MEJOR CORTOMETRAJE CON IA"
   },
   "Floppy the robot - El último contacto.": {
    "poster": "/assets/villadelcine-2026/floppy-the-robot-el-ultimo-contacto.jpg",
@@ -308,46 +329,11 @@
    "_medida_original": "400x800",
    "_categoria": "MEJOR PROYECTO VR​"
   },
-  "No es el Fin del Mundo": {
-   "poster": "/assets/villadelcine-2026/no-es-el-fin-del-mundo.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/562af6f0ca-poster.webp",
-   "_medida_original": "517x800",
-   "_categoria": "MEJOR CORTOMETRAJE NACIONAL"
-  },
-  "On Hold": {
-   "poster": "/assets/villadelcine-2026/on-hold.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/63a32964ad-poster.webp",
-   "_medida_original": "599x800",
-   "_categoria": "MEJOR CORTOMETRAJE INTERNACIONAL"
-  },
   "Amor a primera vista": {
    "poster": "/assets/villadelcine-2026/amor-a-primera-vista.jpg",
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/APVU-POSTER_FINAL-Andres-Quintero-scaled.webp",
    "_medida_original": "1792x2560",
-   "_categoria": "BOYACÁ EN LOS CAMPOS"
-  },
-  "Quimera": {
-   "poster": "/assets/villadelcine-2026/quimera.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/poster-quimera-Santiago-Rincon-Duran.webp",
-   "_medida_original": "1587x2245",
-   "_categoria": "BOYACÁ EN LOS CAMPOS"
-  },
-  "DIABLO BALLENA": {
-   "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/4f10d9c7c0-poster.webp",
-   "_medida_original": "566x800",
-   "_categoria": "BOYACÁ EN LOS CAMPOS"
-  },
-  "Sabor a mí (acústico / bolero jazz)": {
-   "poster": "/assets/villadelcine-2026/sabor-a-mi-acustico-bolero-jazz.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Sabor-A-mi.-Portada-Tatiana-Jauregui.webp",
-   "_medida_original": "1039x1053",
    "_categoria": "BOYACÁ EN LOS CAMPOS"
   },
   "Monte curandero": {
@@ -364,82 +350,33 @@
    "_medida_original": "900x1600",
    "_categoria": "PLANETA"
   },
-  "INDEPENDENCE": {
-   "poster": "/assets/villadelcine-2026/independence.jpg",
+  "Quimera": {
+   "poster": "/assets/villadelcine-2026/quimera.jpg",
    "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/59ef83a3ed-poster.webp",
-   "_medida_original": "534x800",
-   "_categoria": "MEJOR CORTOMETRAJE NACIONAL"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/poster-quimera-Santiago-Rincon-Duran.webp",
+   "_medida_original": "1587x2245",
+   "_categoria": "BOYACÁ EN LOS CAMPOS"
   },
-  "Cos de vidre": {
-   "poster": "/assets/villadelcine-2026/cos-de-vidre.jpg",
+  "DIABLO BALLENA": {
+   "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
    "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/23fca00f1e-poster.webp",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/4f10d9c7c0-poster.webp",
    "_medida_original": "566x800",
-   "_categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
+   "_categoria": "BOYACÁ EN LOS CAMPOS"
   },
-  "La silla": {
-   "poster": "/assets/villadelcine-2026/la-silla.jpg",
+  "SABOR A MÍ (ACÚSTICO / BOLERO JAZZ)": {
+   "poster": "/assets/villadelcine-2026/sabor-a-mi-acustico-bolero-jazz.jpg",
    "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/20-poster_La-silla.webp",
-   "_medida_original": "1500x2121",
-   "_categoria": "YOUNGFILM"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Sabor-A-mi.-Portada-Tatiana-Jauregui.webp",
+   "_medida_original": "1039x1053",
+   "_categoria": "BOYACÁ EN LOS CAMPOS"
   },
-  "IN BETWEEN": {
-   "poster": "/assets/villadelcine-2026/in-between.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/565b0832ae-poster.webp",
-   "_medida_original": "533x800",
-   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
-  },
-  "La Sombrilla de Mamá": {
-   "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/58-poster_La-Sombrilla-de-Mama-scaled.webp",
-   "_medida_original": "1810x2560",
-   "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
-  },
-  "Final Act": {
-   "poster": "/assets/villadelcine-2026/final-act.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/26577cb0d3-poster.webp",
-   "_medida_original": "533x800",
-   "_categoria": "international universities"
-  },
-  "Tiro Libre": {
-   "poster": "/assets/villadelcine-2026/tiro-libre.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/dd51e11a39-poster.webp",
-   "_medida_original": "385x800",
-   "_categoria": "YOUNGFILM"
-  },
-  "SOLO": {
-   "poster": "/assets/villadelcine-2026/solo.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/1789156451693.webp",
-   "_medida_original": "847x1264",
-   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
-  },
-  "Momentos en movimiento. Primeros pasos del ballet en Colombia": {
+  "MOMENTOS EN MOVIMIENTO: PRIMEROS PASOS DEL BALLET EN COLOMBIA": {
    "poster": "/assets/villadelcine-2026/momentos-en-movimiento-primeros-pasos-del-ballet-en-colombia.jpg",
    "posterSource": "oficial",
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/42-poster_Momentos-en-Movimiento.-Primeros-pasos-del-ballet-en-Colombia.webp",
    "_medida_original": "595x842",
    "_categoria": "PODEROSAS"
-  },
-  "STEPPE": {
-   "poster": "/assets/villadelcine-2026/steppe.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/91914908e7-poster.webp",
-   "_medida_original": "588x800",
-   "_categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
-  },
-  "KMKZ: Wild, free and brave.": {
-   "poster": "/assets/villadelcine-2026/kmkz-wild-free-and-brave.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/bc9326c351-poster.webp",
-   "_medida_original": "560x800",
-   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
   },
   "Korebaju Pai Rekocho": {
    "poster": "/assets/villadelcine-2026/korebaju-pai-rekocho.jpg",
@@ -448,32 +385,63 @@
    "_medida_original": "566x800",
    "_categoria": "RAÍCES"
   },
-  "Cuadrileros, orgullo y legado": {
-   "poster": "/assets/villadelcine-2026/cuadrileros-orgullo-y-legado.jpg",
+  "Tierras de Lobeiras": {
+   "poster": "/assets/villadelcine-2026/tierras-de-lobeiras.jpg",
    "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Cuadrilleros-POSTER-fabian-enrique-moreno-correa-scaled.webp",
-   "_medida_original": "1354x2560",
-   "_categoria": "RAÍCES"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Tierras-de-Lobeira_Poster-Carla-Barrionuevo-scaled.webp",
+   "_medida_original": "1707x2560",
+   "_categoria": "INFANTIL"
   },
-  "The Guanentá Symphony": {
-   "poster": "/assets/villadelcine-2026/the-guanenta-symphony.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/1e8988526f-poster.webp",
-   "_medida_original": "540x800",
-   "_categoria": "RAÍCES"
+  "Un dulce milagro": {
+   "poster": "/assets/villadelcine-2026/un-dulce-milagro.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/style_frame_francis_y_aguita.webp",
+   "_medida_original": "1920x1080"
   },
-  "Language Of The Wind": {
-   "poster": "/assets/villadelcine-2026/language-of-the-wind.jpg",
+  "SOLO UN AVE MÁS": {
+   "poster": "/assets/villadelcine-2026/solo-un-ave-mas.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/juntos.webp",
+   "_medida_original": "1920x1080"
+  },
+  "Grief": {
+   "poster": "/assets/villadelcine-2026/grief.jpg",
    "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/52ba89df14-poster.webp",
-   "_medida_original": "580x800",
-   "_categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/969470b53f-poster.webp",
+   "_medida_original": "518x800",
+   "_categoria": "MEJOR CORTOMETRAJE APASIONADO"
+  },
+  "FAR (LEJOS)": {
+   "poster": "/assets/villadelcine-2026/far-lejos.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/3.webp",
+   "_medida_original": "1920x1080"
   },
   "Cine Concierto Villa del Cine 2021": {
    "poster": "/assets/villadelcine-2026/cine-concierto-villa-del-cine-2021.jpg",
    "posterSource": "editorial",
    "_url": "https://villadelcine.com/wp-content/uploads/2023/09/STILL-VCINE4-Andres-Quintero.png",
    "_medida_original": "2880x1618"
+  },
+  "HUMAN (Humano)": {
+   "poster": "/assets/villadelcine-2026/human-humano.jpg",
+   "posterSource": "editorial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Human_Steel_Voyager_Saturno.webp",
+   "_medida_original": "1920x1080"
+  },
+  "LA PRESENCIA DE BLANCO": {
+   "poster": "/assets/villadelcine-2026/la-presencia-de-blanco.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/Poster-La-Presencia-de-Blanco-NESTOR-JAVIER-SERPA-PEREZ.webp",
+   "_medida_original": "1587x2245",
+   "_categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+  },
+  "Catatumbo: House of Thunder, Memory, and Dignity": {
+   "poster": "/assets/villadelcine-2026/catatumbo-house-of-thunder-memory-and-dignity.jpg",
+   "posterSource": "oficial",
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/dff4e1370e-poster.webp",
+   "_medida_original": "560x800",
+   "_categoria": "MEJOR CORTOMETRAJE CON IA"
   },
   "MI TESORO": {
    "poster": "/assets/villadelcine-2026/mi-tesoro.jpg",
@@ -482,13 +450,6 @@
    "_medida_original": "1023x1537",
    "_categoria": "MEJOR WORK-IN-PROGRESS"
   },
-  "A Burning Turret": {
-   "poster": "/assets/villadelcine-2026/a-burning-turret.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/9d0bc2fceb-poster.webp",
-   "_medida_original": "533x800",
-   "_categoria": "MEJOR CORTOMETRAJE INTERNACIONAL"
-  },
   "LENS - AI Short Film": {
    "poster": "/assets/villadelcine-2026/lens-ai-short-film.jpg",
    "posterSource": "oficial",
@@ -496,40 +457,44 @@
    "_medida_original": "447x800",
    "_categoria": "MEJOR CORTOMETRAJE CON IA"
   },
-  "SUN COFFEE": {
-   "poster": "/assets/villadelcine-2026/sun-coffee.jpg",
+  "SUN COFFEE (Café de Sol)": {
+   "poster": "/assets/villadelcine-2026/sun-coffee-cafe-de-sol.jpg",
    "posterSource": "editorial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/de150a0902-poster.webp",
-   "_medida_original": "800x450",
-   "_categoria": "YOUNGFILM"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/SUN_COFFEE_V2.00_06_25_23.Still005.webp",
+   "_medida_original": "1920x1080"
   },
-  "With the Hand Up": {
-   "poster": "/assets/villadelcine-2026/with-the-hand-up.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/e3e07d7bcb-poster.webp",
-   "_medida_original": "533x800",
-   "_categoria": "VOCES"
-  },
-  "Enemy in the Mirror": {
-   "poster": "/assets/villadelcine-2026/enemy-in-the-mirror.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/07f09ca377-poster.webp",
-   "_medida_original": "560x800",
-   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
-  },
-  "ARENAS": {
-   "poster": "/assets/villadelcine-2026/arenas.jpg",
+  "Final Act (Acto Final)": {
+   "poster": "/assets/villadelcine-2026/final-act-acto-final.jpg",
    "posterSource": "editorial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/BA1C8821-94B2-45D4-95AD-D2A547F0DC5B-Gustavo-Nieto-Roa-scaled.webp",
-   "_medida_original": "2560x1920",
-   "_categoria": "MEJOR ÓPERA PRIMA NACIONAL"
+   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/AtoFinal_still31.webp",
+   "_medida_original": "1920x1080"
   }
  },
  "_cobertura": {
-  "obras": 130,
+  "obras": 136,
   "fuente": "https://villadelcine.com/festival-2024-2/",
-  "tarjetas_en_la_fuente": 86,
+  "tarjetas_en_la_fuente": 87,
   "destino": {
+   "TRIBUTO A AQUILEO VENGANZA": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
+   "PATRIMONIO FÍLMICO COLOMBIANO": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
+   "HÉROES DE LA MONTAÑA": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
+   "Mabel Velosa": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
+   "Aquileo Venganza": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
    "Un poeta": {
     "estado": "sin_tarjeta",
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
@@ -538,17 +503,228 @@
     "estado": "sin_tarjeta",
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
    },
-   "Aquileo Venganza": {
+   "NUEVA OLA ROLA": {
     "estado": "sin_tarjeta",
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
    },
-   "Fundación Patrimonio Fílmico": {
+   "ARENAS": {
+    "estado": "usada",
+    "medida": "2560x1920",
+    "categoria": "MEJOR ÓPERA PRIMA NACIONAL"
+   },
+   "Que el cielo nos perdone": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "Sierra: El álbum mortuorio": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "Le jeune Sofiane": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "Una torreta en llamas": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "Alivios": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "VOLAR": {
+    "estado": "usada",
+    "medida": "1781x2560",
+    "categoria": "MEJOR ÓPERA PRIMA NACIONAL"
+   },
+   "Tuktu, Padre Maíz": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "No es el Fin del Mundo": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "Enemigo en el espejo": {
+    "estado": "usada",
+    "medida": "1920x1013"
+   },
+   "On Hold": {
+    "estado": "usada",
+    "medida": "599x800",
+    "categoria": "MEJOR CORTOMETRAJE INTERNACIONAL"
+   },
+   "LA INDEPENDENCIA": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "Cos de vidre": {
+    "estado": "usada",
+    "medida": "566x800",
+    "categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
+   },
+   "Autokar": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "ESTEPA": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "KMKZ: SALVAJE, LIBRE Y VALIENTE": {
+    "estado": "usada",
+    "medida": "1377x1080"
+   },
+   "Sukua": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "O Cravista": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "Comparsa": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "Language Of The Wind": {
+    "estado": "usada",
+    "medida": "580x800",
+    "categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
+   },
+   "Extinción": {
+    "estado": "usada",
+    "medida": "560x800"
+   },
+   "El Último Campeón": {
+    "estado": "usada",
+    "medida": "1920x1080"
+   },
+   "EL CINE DENTRO DEL CINE": {
+    "estado": "usada",
+    "medida": "1656x2560",
+    "categoria": "MEJOR WORK-IN-PROGRESS"
+   },
+   "CUBA 2001: IMÁGENES DEL FUTURO": {
+    "estado": "usada",
+    "medida": "1163x395",
+    "categoria": "MEJOR WORK-IN-PROGRESS"
+   },
+   "Mi tesoro": {
+    "estado": "usada",
+    "medida": "1023x1537",
+    "categoria": "MEJOR WORK-IN-PROGRESS"
+   },
+   "SUA Y SIE: Guardianes de la vida": {
+    "estado": "usada",
+    "medida": "1131x1600",
+    "categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+   },
+   "FAR": {
+    "estado": "usada",
+    "medida": "571x800",
+    "categoria": "YOUNGFILM"
+   },
+   "1 Paseo por la Ciudad": {
+    "estado": "usada",
+    "medida": "1080x1350",
+    "categoria": "MEJOR CORTOMETRAJE APASIONADO"
+   },
+   "Manos Rojas": {
+    "estado": "usada",
+    "medida": "1055x1491",
+    "categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+   },
+   "DUELO": {
     "estado": "sin_tarjeta",
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
    },
-   "Mabel Velosa": {
+   "I don't know what to do": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "FRAGMENTOS PERDIDOS DE UNA CONVULSIÓN": {
+    "estado": "usada",
+    "medida": "1280x689"
+   },
+   "Memorias del Alba": {
+    "estado": "usada",
+    "medida": "533x800",
+    "categoria": "international universities"
+   },
+   "Beyond the end": {
+    "estado": "usada",
+    "medida": "564x800",
+    "categoria": "international universities"
+   },
+   "Witch and frog": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "La silla": {
+    "estado": "usada",
+    "medida": "1500x2121",
+    "categoria": "YOUNGFILM"
+   },
+   "EN MEDIO": {
+    "estado": "usada",
+    "medida": "1672x941"
+   },
+   "La Sombrilla de Mamá": {
+    "estado": "usada",
+    "medida": "1810x2560",
+    "categoria": "MEJOR CORTOMETRAJE APASIONADO"
+   },
+   "TV Entreaberta": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "Via Crucis": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
+   },
+   "Final Act": {
+    "estado": "usada",
+    "medida": "533x800",
+    "categoria": "international universities"
+   },
+   "LA PRESENCIA DEL BLANCO": {
     "estado": "sin_tarjeta",
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
+   "Tiro Libre": {
+    "estado": "usada",
+    "medida": "385x800",
+    "categoria": "YOUNGFILM"
+   },
+   "SOLO": {
+    "estado": "usada",
+    "medida": "847x1264",
+    "categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+   },
+   "SUN COFFEE": {
+    "estado": "usada",
+    "medida": "800x450",
+    "categoria": "YOUNGFILM"
+   },
+   "Mucho Gusto": {
+    "estado": "usada",
+    "medida": "2560x1427",
+    "categoria": "MEJOR VIDEOCLIP NACIONAL"
+   },
+   "PROS Y CONTRAS DE SOÑAR DESPIERTO": {
+    "estado": "usada",
+    "medida": "1599x899"
+   },
+   "They Call It Sausage": {
+    "estado": "usada",
+    "medida": "499x720",
+    "categoria": "MEJOR CORTOMETRAJE CON IA"
+   },
+   "Aguapanela": {
+    "estado": "usada",
+    "medida": "639x800",
+    "categoria": "MEJOR VIDEOCLIP NACIONAL"
    },
    "La última historia": {
     "estado": "usada",
@@ -579,80 +755,19 @@
     "estado": "sin_tarjeta",
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
    },
-   "Pros and Cons of Daydreaming": {
+   "Benditos los Viejos": {
     "estado": "usada",
-    "medida": "533x800",
-    "categoria": "MEJOR CORTOMETRAJE CON CELULAR"
-   },
-   "They Call It Sausage": {
-    "estado": "usada",
-    "medida": "499x720",
-    "categoria": "MEJOR CORTOMETRAJE CON IA"
-   },
-   "Aguapanela": {
-    "estado": "usada",
-    "medida": "639x800",
+    "medida": "600x800",
     "categoria": "MEJOR VIDEOCLIP NACIONAL"
    },
-   "Mucho Gusto": {
-    "estado": "usada",
-    "medida": "2560x1427",
-    "categoria": "MEJOR VIDEOCLIP NACIONAL"
-   },
-   "Tierras de Lobeiras": {
-    "estado": "usada",
-    "medida": "1707x2560",
-    "categoria": "INFANTIL"
-   },
-   "A Sweet Miracle": {
-    "estado": "usada",
-    "medida": "711x800",
-    "categoria": "INFANTIL"
-   },
-   "Just Another Bird": {
-    "estado": "usada",
-    "medida": "541x800",
-    "categoria": "INFANTIL"
-   },
-   "Cianotipia": {
+   "CATATUMBO: CASA DEL TRUENO, MEMORIA Y DIGNIDAD": {
     "estado": "sin_tarjeta",
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
-   },
-   "Farmeando el Tunjo: creación cinematográfica con inteligencia artificial": {
-    "estado": "sin_tarjeta",
-    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
-   },
-   "Alivios": {
-    "estado": "tmdb",
-    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
-   },
-   "VOLAR": {
-    "estado": "usada",
-    "medida": "1781x2560",
-    "categoria": "MEJOR ÓPERA PRIMA NACIONAL"
-   },
-   "Tuktu, Padre Maíz": {
-    "estado": "tmdb",
-    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
-   },
-   "TORMENTA EN LLAMAS": {
-    "estado": "sin_tarjeta",
-    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
-   },
-   "Catatumbo: House of Thunder, Memory, and Dignity": {
-    "estado": "usada",
-    "medida": "560x800",
-    "categoria": "MEJOR CORTOMETRAJE CON IA"
    },
    "No se fía, ni aunque lloren": {
     "estado": "usada",
     "medida": "720x1080",
     "categoria": "MEJOR CORTOMETRAJE CON CELULAR"
-   },
-   "Life is a Chessboard; Every Move is Final": {
-    "estado": "usada",
-    "medida": "2048x868",
-    "categoria": "MEJOR CORTOMETRAJE CON IA"
    },
    "Ánima de Marea": {
     "estado": "usada",
@@ -674,6 +789,11 @@
     "medida": "640x800",
     "categoria": "MEJOR CORTOMETRAJE VERTICAL"
    },
+   "TOMA 10": {
+    "estado": "usada",
+    "medida": "720x1080",
+    "categoria": "MEJOR CORTOMETRAJE CON CELULAR"
+   },
    "A pesar de mí": {
     "estado": "usada",
     "medida": "640x800",
@@ -683,108 +803,10 @@
     "estado": "tmdb",
     "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
-   "Benditos los Viejos": {
+   "Life is a Chessboard; Every Move is Final": {
     "estado": "usada",
-    "medida": "600x800",
-    "categoria": "MEJOR VIDEOCLIP NACIONAL"
-   },
-   "Drunk hearing the rain drops fall": {
-    "estado": "usada",
-    "medida": "560x800",
-    "categoria": "VOCES"
-   },
-   "Collective Memory": {
-    "estado": "usada",
-    "medida": "542x800",
-    "categoria": "VOCES"
-   },
-   "Con la mano arriba": {
-    "estado": "sin_tarjeta",
-    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
-   },
-   "Extinction": {
-    "estado": "usada",
-    "medida": "560x800",
-    "categoria": "MEJOR WORK-IN-PROGRESS"
-   },
-   "The Last Champion": {
-    "estado": "usada",
-    "medida": "533x800",
-    "categoria": "MEJOR WORK-IN-PROGRESS"
-   },
-   "El cine dentro del cine dentro del cine": {
-    "estado": "usada",
-    "medida": "1656x2560",
-    "categoria": "MEJOR WORK-IN-PROGRESS"
-   },
-   "Cuba 2001. Imágenes del futuro I": {
-    "estado": "usada",
-    "medida": "1163x395",
-    "categoria": "MEJOR WORK-IN-PROGRESS"
-   },
-   "Mi tesoro": {
-    "estado": "usada",
-    "medida": "1023x1537",
-    "categoria": "MEJOR WORK-IN-PROGRESS"
-   },
-   "Sierra: El álbum mortuorio": {
-    "estado": "usada",
-    "medida": "518x800",
-    "categoria": "MEJOR ÓPERA PRIMA NACIONAL"
-   },
-   "Que el cielo nos perdone": {
-    "estado": "usada",
-    "medida": "560x800",
-    "categoria": "MEJOR CORTOMETRAJE NACIONAL"
-   },
-   "Le jeune Sofiane": {
-    "estado": "usada",
-    "medida": "1707x2560",
-    "categoria": "MEJOR CORTOMETRAJE INTERNACIONAL"
-   },
-   "SUA Y SIE: Guardianes de la vida": {
-    "estado": "usada",
-    "medida": "1131x1600",
-    "categoria": "MEJOR CORTOMETRAJE ESCOLAR"
-   },
-   "FAR": {
-    "estado": "usada",
-    "medida": "571x800",
-    "categoria": "YOUNGFILM"
-   },
-   "1 Paseo por la Ciudad": {
-    "estado": "usada",
-    "medida": "1080x1350",
-    "categoria": "MEJOR CORTOMETRAJE APASIONADO"
-   },
-   "Manos Rojas": {
-    "estado": "usada",
-    "medida": "1055x1491",
-    "categoria": "MEJOR CORTOMETRAJE ESCOLAR"
-   },
-   "Grief": {
-    "estado": "usada",
-    "medida": "518x800",
-    "categoria": "MEJOR CORTOMETRAJE APASIONADO"
-   },
-   "I don't know what to do": {
-    "estado": "tmdb",
-    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
-   },
-   "Lost Fragments of a Seizure": {
-    "estado": "usada",
-    "medida": "539x720",
-    "categoria": "MEJOR CORTOMETRAJE APASIONADO"
-   },
-   "Memorias del Alba": {
-    "estado": "usada",
-    "medida": "533x800",
-    "categoria": "international universities"
-   },
-   "Beyond the end": {
-    "estado": "usada",
-    "medida": "564x800",
-    "categoria": "international universities"
+    "medida": "2048x868",
+    "categoria": "MEJOR CORTOMETRAJE CON IA"
    },
    "Floppy the robot - El último contacto.": {
     "estado": "usada",
@@ -801,39 +823,22 @@
     "medida": "400x800",
     "categoria": "MEJOR PROYECTO VR​"
    },
-   "No es el Fin del Mundo": {
-    "estado": "usada",
-    "medida": "517x800",
-    "categoria": "MEJOR CORTOMETRAJE NACIONAL"
-   },
-   "ENEMIGO EN EL ESPEJO": {
-    "estado": "sin_tarjeta",
-    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
-   },
-   "On Hold": {
-    "estado": "usada",
-    "medida": "599x800",
-    "categoria": "MEJOR CORTOMETRAJE INTERNACIONAL"
-   },
    "Amor a primera vista": {
     "estado": "usada",
     "medida": "1792x2560",
     "categoria": "BOYACÁ EN LOS CAMPOS"
    },
-   "Quimera": {
-    "estado": "usada",
-    "medida": "1587x2245",
-    "categoria": "BOYACÁ EN LOS CAMPOS"
+   "Borrachos mientras escuchamos las gotas caer": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
-   "DIABLO BALLENA": {
-    "estado": "usada",
-    "medida": "566x800",
-    "categoria": "BOYACÁ EN LOS CAMPOS"
+   "Memoria colectiva": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
-   "Sabor a mí (acústico / bolero jazz)": {
-    "estado": "usada",
-    "medida": "1039x1053",
-    "categoria": "BOYACÁ EN LOS CAMPOS"
+   "Con la mano arriba": {
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "Monte curandero": {
     "estado": "usada",
@@ -845,167 +850,120 @@
     "medida": "900x1600",
     "categoria": "PLANETA"
    },
-   "Sukua": {
-    "estado": "tmdb",
-    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
-   },
-   "O Cravista": {
-    "estado": "tmdb",
-    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
-   },
-   "INDEPENDENCE": {
+   "Quimera": {
     "estado": "usada",
-    "medida": "534x800",
-    "categoria": "MEJOR CORTOMETRAJE NACIONAL"
+    "medida": "1587x2245",
+    "categoria": "BOYACÁ EN LOS CAMPOS"
    },
-   "Cos de vidre": {
+   "DIABLO BALLENA": {
     "estado": "usada",
     "medida": "566x800",
-    "categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
+    "categoria": "BOYACÁ EN LOS CAMPOS"
    },
-   "Autokar": {
-    "estado": "tmdb",
-    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
-   },
-   "Witch and frog": {
-    "estado": "tmdb",
-    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
-   },
-   "La silla": {
+   "SABOR A MÍ (ACÚSTICO / BOLERO JAZZ)": {
     "estado": "usada",
-    "medida": "1500x2121",
-    "categoria": "YOUNGFILM"
-   },
-   "IN BETWEEN": {
-    "estado": "usada",
-    "medida": "533x800",
-    "categoria": "MEJOR CORTOMETRAJE ESCOLAR"
-   },
-   "La Sombrilla de Mamá": {
-    "estado": "usada",
-    "medida": "1810x2560",
-    "categoria": "MEJOR CORTOMETRAJE APASIONADO"
-   },
-   "TV Entreaberta": {
-    "estado": "tmdb",
-    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
-   },
-   "Via Crusis": {
-    "estado": "tmdb",
-    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
-   },
-   "Final Act": {
-    "estado": "usada",
-    "medida": "533x800",
-    "categoria": "international universities"
-   },
-   "LA PRESENCIA DE BLANCO": {
-    "estado": "tmdb",
-    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
-   },
-   "Tiro Libre": {
-    "estado": "usada",
-    "medida": "385x800",
-    "categoria": "YOUNGFILM"
-   },
-   "SOLO": {
-    "estado": "usada",
-    "medida": "847x1264",
-    "categoria": "MEJOR CORTOMETRAJE ESCOLAR"
-   },
-   "SUN COFFE": {
-    "estado": "sin_tarjeta",
-    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
-   },
-   "QUAZAR": {
-    "estado": "sin_tarjeta",
-    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
-   },
-   "Momentos en movimiento. Primeros pasos del ballet en Colombia": {
-    "estado": "usada",
-    "medida": "595x842",
-    "categoria": "PODEROSAS"
+    "medida": "1039x1053",
+    "categoria": "BOYACÁ EN LOS CAMPOS"
    },
    "LA MONA": {
     "estado": "sin_tarjeta",
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
    },
-   "STEPPE": {
+   "MOMENTOS EN MOVIMIENTO: PRIMEROS PASOS DEL BALLET EN COLOMBIA": {
     "estado": "usada",
-    "medida": "588x800",
-    "categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
+    "medida": "595x842",
+    "categoria": "PODEROSAS"
    },
-   "KMKZ: Wild, free and brave.": {
-    "estado": "usada",
-    "medida": "560x800",
-    "categoria": "MEJOR ÓPERA PRIMA NACIONAL"
+   "QUAZAR": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
    },
    "Korebaju Pai Rekocho": {
     "estado": "usada",
     "medida": "566x800",
     "categoria": "RAÍCES"
    },
-   "Cuadrileros, orgullo y legado": {
+   "CUADRILLEROS, ORGULLO Y LEGADO": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
+   "LA SINFONÍA GUANENTÁ": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
+   "GESTOS DE REFUGIO": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
+   "Cianotipia": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
+   "Farmeando el Tunjo: creación cinematográfica con inteligencia artificial": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
+   "EL FÓSIL MÁGICO": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
+   "Tierras de Lobeiras": {
     "estado": "usada",
-    "medida": "1354x2560",
-    "categoria": "RAÍCES"
+    "medida": "1707x2560",
+    "categoria": "INFANTIL"
    },
-   "The Guanentá Symphony": {
+   "Un dulce milagro": {
     "estado": "usada",
-    "medida": "540x800",
-    "categoria": "RAÍCES"
+    "medida": "1920x1080"
    },
-   "SHELTERING GESTURES": {
-    "estado": "tmdb",
-    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
-   },
-   "Comparsa": {
-    "estado": "tmdb",
-    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
-   },
-   "Language Of The Wind": {
+   "SOLO UN AVE MÁS": {
     "estado": "usada",
-    "medida": "580x800",
-    "categoria": "MEJOR OPERA PRIMA INTERNACIONAL"
+    "medida": "1920x1080"
+   },
+   "Grief": {
+    "estado": "usada",
+    "medida": "518x800",
+    "categoria": "MEJOR CORTOMETRAJE APASIONADO"
+   },
+   "FAR (LEJOS)": {
+    "estado": "usada",
+    "medida": "1920x1080"
    },
    "Cine Concierto Villa del Cine 2021": {
     "estado": "usada",
     "medida": "2880x1618"
+   },
+   "HUMAN (Humano)": {
+    "estado": "usada",
+    "medida": "1920x1080"
+   },
+   "LA PRESENCIA DE BLANCO": {
+    "estado": "usada",
+    "medida": "1587x2245",
+    "categoria": "MEJOR CORTOMETRAJE ESCOLAR"
+   },
+   "Catatumbo: House of Thunder, Memory, and Dignity": {
+    "estado": "usada",
+    "medida": "560x800",
+    "categoria": "MEJOR CORTOMETRAJE CON IA"
    },
    "MI TESORO": {
     "estado": "usada",
     "medida": "1023x1537",
     "categoria": "MEJOR WORK-IN-PROGRESS"
    },
-   "A Burning Turret": {
-    "estado": "usada",
-    "medida": "533x800",
-    "categoria": "MEJOR CORTOMETRAJE INTERNACIONAL"
-   },
    "LENS - AI Short Film": {
     "estado": "usada",
     "medida": "447x800",
     "categoria": "MEJOR CORTOMETRAJE CON IA"
    },
-   "SUN COFFEE": {
+   "SUN COFFEE (Café de Sol)": {
     "estado": "usada",
-    "medida": "800x450",
-    "categoria": "YOUNGFILM"
+    "medida": "1920x1080"
    },
-   "With the Hand Up": {
+   "Final Act (Acto Final)": {
     "estado": "usada",
-    "medida": "533x800",
-    "categoria": "VOCES"
-   },
-   "Enemy in the Mirror": {
-    "estado": "usada",
-    "medida": "560x800",
-    "categoria": "MEJOR ÓPERA PRIMA NACIONAL"
-   },
-   "ARENAS": {
-    "estado": "usada",
-    "medida": "2560x1920",
-    "categoria": "MEJOR ÓPERA PRIMA NACIONAL"
+    "medida": "1920x1080"
    }
   }
  },

@@ -103,7 +103,14 @@ def main():
     direcciones = {}
     if os.path.exists(plan_p):
         plan = json.load(open(plan_p, encoding='utf-8'))
-        for s in (plan.get('festival', {}).get('sedes') or {}):
+        _sp = plan.get('festival', {}).get('sedes') or {}
+        for s in _sp:
+            # la grafía cruda del impreso NO es una sede nueva cuando su sede
+            # canónica (`sedes` como mapa crudo → [sede, sala]) ya tiene pin:
+            # en Villa del Cine entraba «sin verificar» en cada corrida
+            v = _sp[s] if isinstance(_sp, dict) else None
+            if isinstance(v, list) and v and v[0] in geo:
+                continue
             sedes.setdefault(s, {'n': 0, 'ciudad': ''})
         direcciones = plan.get('festival', {}).get('direcciones') or {}
 

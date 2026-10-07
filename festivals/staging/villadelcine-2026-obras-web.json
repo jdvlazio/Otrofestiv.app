@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "villadelcine.com — la página de cada obra bajo /festival-2024-2/",
-  "capturado": "2026-09-21",
+  "capturado": "2026-10-07",
   "que_aporta": "sinopsis en inglés, afiche, Instagram del realizador, y la duración y el país con que CONTRASTAR el PDF de programación",
   "url": "https://villadelcine.com/wp-sitemap-posts-page-1.xml",
   "metodo": "las páginas se listan en el sitemap de WordPress y se cachean en fuentes/: son 82 peticiones al sitio de un festival chico en su semana de apertura y no se repiten en cada corrida"
@@ -9,14 +9,14 @@
  "obras": [
   {
    "slug": "extinction",
-   "titulo": "Extinction",
+   "titulo": "Extinción",
    "director": "Frank Benitez",
    "_credito_superior": "Gustavo Espíndola",
    "pais": "",
    "anio": null,
    "duracion_texto": "01:50",
    "duracion_min": 2,
-   "sinopsis_en": "In the midst of a jungle community threatened by a mining project, Jenawen, a young indigenous woman who has distanced herself from her roots, will cross a portal into the future to save the only survivors of an environmental catastrophe that destroyed most of the natural resources and turned the land into a dangerous desert",
+   "sinopsis": "En una comunidad selvática amenazada por un proyecto minero, Jenawen, una joven indígena alejada de sus raíces, atraviesa un portal hacia un futuro convertido en desierto. Allí deberá salvar a los últimos sobrevivientes de una catástrofe ambiental y reencontrarse con el territorio que dejó atrás.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/e63ebfc341-poster.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/e63ebfc341-poster.webp"
@@ -35,7 +35,7 @@
    "anio": 2026,
    "duracion_texto": "04:02",
    "duracion_min": 4,
-   "sinopsis_en": "The music video for Benditos los Viejos presents a symbolic narrative about the birth of life as an act of gratitude toward ancestors and collective memory. The story takes place in a maloka, where a woman undergoes a ritual process representing the spiritual and physical gestation of a new existence. Accompanied by fire, dance, and the intervention of clay drawings on her abdomen, the protagonist experiences an intimate transition that connects her body with the earth and with ancestral wisdom. The climax of the video transforms the moment of childbirth into a visual metaphor of life emerging from nature: aerial images of mountains, waterfalls, and flowing rivers evoke the vital current that runs through territories and generations. In this way, the video proposes a poetic narrative in which birth symbolizes not only the arrival of a new being, but also the continuity of memory, gratitude toward those who came before, and the profound connection between the human body and the natural cycles of the Earth.",
+   "sinopsis": "En el corazón de una maloca, una mujer atraviesa un ritual de gestación acompañado por el fuego, la danza y figuras de barro trazadas sobre su cuerpo. Mientras la naturaleza anuncia el nacimiento de una nueva vida, el parto se transforma en una celebración de la memoria ancestral, la gratitud y los ciclos que conectan el cuerpo, la tierra y las generaciones.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/BLV_COLOR_3_01_00_35_23.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/c228f141dd-headshot.webp"
@@ -47,12 +47,13 @@
   },
   {
    "slug": "via-crusis",
-   "titulo": "Via Crusis",
+   "titulo": "Via Crucis",
    "director": "Juan Lucas Neira",
    "pais": "",
    "anio": 2026,
    "duracion_texto": "03:32",
    "duracion_min": 4,
+   "sinopsis": "El deseo nace en el cuerpo, pero también carga con las prohibiciones que lo vigilan. A través de una animación simbólica, el cortometraje recorre los placeres carnales que aprendemos a condenar y convierte la culpa en un vía crucis interior, donde impulso, represión y juicio se enfrentan dentro de una misma conciencia.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/fotograma0023.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/8bb1da4159-headshot.webp"
@@ -71,7 +72,7 @@
    "anio": null,
    "duracion_texto": "3:15",
    "duracion_min": 3,
-   "sinopsis": "En un juego visual de pantallas divididas, dos antiguos amantes enfrentan bloqueos creativos al componer. Aunque sus procesos creativos son distintos, el peso de sus conflictos no resueltos y sus heridas no sanadas les impide fluir en la escritura y en la vida. Cuando se agota su bebida de preferencia y solo queda aquello que les recuerda al otro, se permiten rememorar y aceptar. En vez de huir del pasado, deciden abrazarlo e incorporar ese pedacito del otro que quedó guardado. Entienden que no es olvidar, sino abrazar el recuerdo para seguir adelante.",
+   "sinopsis": "En pantallas divididas, dos antiguos amantes intentan componer mientras los recuerdos interrumpen cada palabra. Separados, pero atrapados en el mismo bloqueo, descubren que seguir adelante no siempre exige olvidar. A veces, para recuperar la voz, es necesario aceptar aquello que el otro dejó viviendo dentro de nosotros.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Untitled_1.1.4.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/0d162d81c6-headshot-200x300.webp"
@@ -90,7 +91,7 @@
    "anio": null,
    "duracion_texto": "01:44:00",
    "duracion_min": 104,
-   "sinopsis_en": "Nearing his 100th birthday, harpsichordist and conductor Roberto De Regina revisits his pioneering journey in reintroducing early classical music to Brazil. Through personal memories and artistic achievements, he reflects on the legacy he built while facing prejudice and cultural resistance. A poignant portrait of art, time, and the courage to break barriers and transform traditions.",
+   "sinopsis": "Cerca de cumplir cien años, el maestro y clavecinista Roberto De Regina revisita la vida que dedicó a recuperar la música antigua en Brasil. Entre recuerdos, creaciones y resistencias culturales, emerge el retrato de un artista que desafió prejuicios y transformó para siempre la tradición musical de su país.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/3a2c610e95-poster.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/f29ca471c5-headshot.webp"
@@ -110,7 +111,7 @@
    "anio": 2026,
    "duracion_texto": "15:30",
    "duracion_min": 16,
-   "sinopsis_en": "After the death of his wife, Angel faces a lonely grief in his rural home. A leak grows as an overwhelming presence, transforming his space and pushing him to irrational decisions as he tries to come to terms with his loss.",
+   "sinopsis": "Tras la muerte de su esposa, Ángel enfrenta el duelo en la soledad de su casa rural. Una gotera invade progresivamente el espacio hasta convertirse en la forma tangible de su ausencia, empujándolo a decisiones irracionales mientras intenta aprender a habitar una vida que ya no reconoce.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/LAVADERO.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/Directo1.webp"
@@ -122,13 +123,13 @@
   },
   {
    "slug": "far",
-   "titulo": "FAR",
+   "titulo": "FAR (LEJOS)",
    "director": "WE ARE CENTRAL ASIA Collective",
    "pais": "Uzbekistan",
    "anio": 2026,
    "duracion_texto": "1:47",
    "duracion_min": 2,
-   "sinopsis_en": "A one-minute tactile study of deconstruction, metallic forests of Fergana Valley, and the darkness human civilization creates around itself.",
+   "sinopsis": "En los bosques metálicos del valle de Ferganá, la materia se fragmenta y recompone. Sin diálogos, esta animación táctil observa las huellas de la intervención humana y la oscuridad que la civilización levanta a su alrededor.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/3.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/1-1.webp"
@@ -140,14 +141,14 @@
   },
   {
    "slug": "the-last-champion",
-   "titulo": "The Last Champion",
+   "titulo": "El Último Campeón",
    "director": "Jane Andrea Chavez García",
    "_director_sin_rotulo": true,
    "pais": "",
    "anio": null,
    "duracion_texto": "01:17:12",
    "duracion_min": 77,
-   "sinopsis_en": "“The Last Champion” (Winner of Best Documentary Feature at the 2025 Valencia Indie Film Festival-VALEIFF).is an emotional celebration of the passion, faith, and resilience of a community that waited 75 years to see Atlético Bucaramanga win its first star in Colombian professional football. Through the stories of its fans: from “Monchito,” a 60-year-old father who promises to tattoo the team’s crest on his body, a 90-year-old grandmother who has cheered for the club her entire life, a teacher who fights to keep children away from crime, ultras who leave behind violence and addiction to find new inspiration in the team, to a community that vibrates to the rhythm of the “Cumbia de los Trapos,” an unofficial anthem that unites hearts and accompanies the euphoria of every victory, this film captures the tireless spirit of a city that found in football a reason to dream and bond. Amongst defeats, ties, and an epic final decided by penalties, the transformative power of sport emerges. Beyond the victory, this intimate story is a tribute to unity, transformation, and dreams that define us as a society.",
+   "sinopsis": "Tras 75 años de espera, Atlético Bucaramanga conquista su primera estrella. A través de hinchas de distintas generaciones, barristas y líderes comunitarios, el documental retrata cómo el fútbol transformó heridas, recuperó esperanzas y unió a toda una ciudad alrededor de una celebración largamente soñada.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Pelcula_El_ltimo_Campen_FICCI.mp4_snapshot_00.29.55.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/212b07aa6d-headshot.webp"
@@ -159,14 +160,14 @@
   },
   {
    "slug": "in-between",
-   "titulo": "IN BETWEEN",
+   "titulo": "EN MEDIO",
    "director": "Carlos Andrés Paniagua",
    "_credito_superior": "Colegio Madrid Campestre",
    "pais": "",
    "anio": 2026,
    "duracion_texto": "10:27",
    "duracion_min": 10,
-   "sinopsis": "Un nuevo estudiante llega a una escuela dividida por gustos musicales y se encuentra atrapado entre dos grupos rivales. Mientras busca su lugar, descubre que, más allá de los prejuicios y las etiquetas, siempre hay espacio para la empatía, el diálogo y la comprensión.",
+   "sinopsis": "Un estudiante nuevo llega a una escuela dividida por gustos musicales y termina atrapado entre dos grupos rivales. Mientras intenta encontrar su lugar, descubre que las etiquetas suenan más fuerte que las diferencias y que, a veces, basta escuchar al otro para cambiar el ritmo de toda una comunidad.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/still_2.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/Director.webp"
@@ -186,6 +187,7 @@
    "anio": 2025,
    "duracion_texto": "4:34",
    "duracion_min": 5,
+   "_sinopsis_otro_idioma": "pasteles, pinturas, marcadores y papeles dan vida al universo",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-07-31-a-las-9.11.37-Cintia-Obando-scaled.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/Cintia-Obando-Cintia-Obando.webp"
@@ -205,7 +207,7 @@
    "anio": null,
    "duracion_texto": "01:30:00",
    "duracion_min": 90,
-   "sinopsis": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad… alguna vez también pidió ayuda.",
+   "sinopsis": "La desaparición de Natalia rompe el silencio de Pueblo Blanco. Su búsqueda conduce a las autoridades hasta un bar clandestino, dos hermanas sometidas por su tío y un hombre herido hallado en el bosque. Pronto, la violencia, el fanatismo y una secta ancestral convertirán a todo el pueblo en un territorio de caza.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/WhatsApp_Image_2025-04-28_at_9.24.39_PM.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/f79261a457-headshot.webp"
@@ -217,14 +219,14 @@
   },
   {
    "slug": "a-sweet-miracle",
-   "titulo": "A Sweet Miracle",
+   "titulo": "Un dulce milagro",
    "director": "María José Chaparro",
    "_credito_superior": "Sergio Andrés Rodríguez",
    "pais": "Colombia",
    "anio": null,
    "duracion_texto": "7:07",
    "duracion_min": 7,
-   "sinopsis_en": "Francis, an optimistic boy from a rural background, tries to restore unity and happiness to his home despite his parents’ lack of motivation and conflicts. Everything changes with the arrival of a “sweet miracle,” which seems like a ray of hope but ends up turning into something much worse",
+   "sinopsis": "Francis, un niño optimista del campo, sueña con devolver la alegría a su hogar. Cuando aparece un inesperado",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/style_frame_francis_y_aguita.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/11819f5e22-headshot.webp"
@@ -237,7 +239,7 @@
   },
   {
    "slug": "collective-memory",
-   "titulo": "Collective Memory",
+   "titulo": "Memoria colectiva",
    "director": "Cristina ColmenaresProducer Manuel-Antonio MonteagudoProducer",
    "_director_sin_rotulo": true,
    "pais": "Peru",
@@ -264,7 +266,7 @@
    "anio": 2025,
    "duracion_texto": "08:30",
    "duracion_min": 9,
-   "sinopsis": "Ema y Lautaro son una pareja atrapada entre crimen y recortes de papel en las calles de la Ciudad de México, donde vivirán la extinción del territorio e intentarán imaginar 1 camino posible donde se pueda ejercer el oficio de volar. Este cortometraje híbrido de stopmotion en collage explora los síntomas de ver arder a través de la ventana el lugar donde uno nace, esperando florecer después del salto.",
+   "sinopsis": "En las calles de Ciudad de México, Ema y Lautaro quedan atrapados entre el crimen, los recortes de papel y la desaparición del territorio que habitan. Mediante acción en vivo y stop motion en collage, buscan imaginar un camino posible para escapar, florecer después del salto y recuperar el olvidado oficio de volar.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Still4-Sara-Coello.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/Ale-y-Sara-Sara-Coello.webp"
@@ -284,7 +286,7 @@
    "anio": 2026,
    "duracion_texto": "03:35",
    "duracion_min": 4,
-   "sinopsis": "En el Día de los Muertos, José, un pescador de La Boquilla, decide salir al mar sin hacer caso a la advertencia de su esposa. A partir de ese momento, comienzan a ocurrir sucesos extraños que lo arrastran a una experiencia terrorífica. Un ser del más allá, lo obliga a enfrentar su miedo más profundo: quedarse solo y perderlo todo. Lo que vive no es casualidad, es consecuencia de haber ignorado una regla que en su territorio no se rompe: al mar se le respeta.",
+   "sinopsis": "Durante el Día de los Muertos, José ignora la advertencia de su esposa y sale a pescar en las aguas de La Boquilla. Cuando el mar comienza a devolverle señales imposibles, una presencia sobrenatural lo enfrenta a su mayor temor. En ese territorio, algunas tradiciones no son supersticiones: son reglas de supervivencia.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/05-ANIMA-DE-MAREA-Laury-T.-Herrera.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/IMG_3596-Laury-T.-Herrera-scaled-e1789067994446.webp"
@@ -302,7 +304,7 @@
    "anio": 2026,
    "duracion_texto": "5:03",
    "duracion_min": 5,
-   "sinopsis": "“Tiro Libre” es una Cinedanza de atmósfera onírica que retrata el viaje de introspección y autodescubrimiento de Tori, un joven de 14 años. A través de una narrativa poética en voz en off y una coreografía que transita entre la naturaleza, habitaciones cerradas y un universo abstracto, Tori explora sus miedos, sus recuerdos y la incertidumbre de tomar riesgos en la vida.",
+   "sinopsis": "Entre paisajes naturales, habitaciones cerradas y espacios abstractos, Tori, un joven de catorce años, convierte el movimiento en una forma de explorar sus miedos y recuerdos. Guiado por una voz poética, emprende un viaje de autodescubrimiento que lo enfrenta a la incertidumbre de arriesgarse y dar el siguiente paso.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Tiro_Libre_3.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/7198e578af-headshot.webp"
@@ -321,7 +323,7 @@
    "anio": 2026,
    "duracion_texto": "04:52",
    "duracion_min": 5,
-   "sinopsis_en": "After a chaotic episode of street harassment on his way home, 17-year-old Samir struggles with overwhelming feelings of shame and self-blame. As the memory quietly reshapes his daily routine, a simple pair of shorts becomes a painful reminder of an experience he cannot leave behind.",
+   "sinopsis": "De regreso a casa, Samir, de 17 años, vive un episodio de acoso callejero que transforma su relación con el cuerpo y la vergüenza. Mientras intenta retomar su rutina, una simple pantaloneta se convierte en el recuerdo persistente de aquello que no logra nombrar ni dejar atrás.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/IMG_9421.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/0e9ddf4912-headshot.webp"
@@ -339,7 +341,7 @@
    "anio": null,
    "duracion_texto": "08:34",
    "duracion_min": 9,
-   "sinopsis_en": "A woman is abducted to the insides of her TV, where she is tormented by some sort of cartoony American host. Going through numerous genres, the character is gradually being assimilated to this television system.",
+   "sinopsis": "Una mujer es absorbida por su televisor y cae bajo el control de un extravagante presentador estadounidense. Arrastrada entre talk shows, programas infantiles, anuncios y series, atraviesa un espectáculo cada vez más absurdo mientras su identidad comienza a diluirse dentro de la maquinaria televisiva que pretende convertirla en parte de su programación.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/FRAME_14.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/e81c983a0f-headshot.webp"
@@ -369,7 +371,7 @@
   },
   {
    "slug": "i-dont-know-what-to-do",
-   "titulo": "I don't know what to do",
+   "titulo": "I don't know what to do (No Sé Qué Hacer)",
    "director": "Akshita Tyagi is a Stop Motion artist born in India, now based in Barcelona. While earning a bachelor’s degree in Animation Filmmaking, she specialized in Stop Motion from Whistling Woods International, Mumbai. Following graduation, she started working for social media/TV adverts for international brands as an Art Director and Stop Motion Artist. Following through her passion, she decided to pursue a masters in stop-motion from BAU College of Art & Design, Barcelona. She co-directed “I don’t know what to do” and took most of the charge of puppet-making, set building, animation, production and post-production.",
    "_credito_superior": "Akshita Tyagi, Leyla Belarbi, Lia Macruz",
    "_duracion_arriba": "4:30",
@@ -377,7 +379,7 @@
    "anio": null,
    "duracion_texto": "04:30",
    "duracion_min": 5,
-   "sinopsis_en": "“I Don’t Know What to Do” is a film about a young girl named Lizzie who spends an afternoon playing with a lizard she found in her garden. An accident occurs, and the lizard is hurt. Filled with sadness, Lizzie gently buries the lizard and places a flower on its grave, highlighting her tenderness and the fleeting nature of life.",
+   "sinopsis": "Lizzie pasa la tarde jugando con una lagartija que encuentra en su jardín, hasta que un accidente cambia el encuentro. Ante una pérdida que aún no sabe comprender, la niña prepara una despedida sencilla y conmovedora: un pequeño entierro y una flor para honrar la fragilidad de la vida.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/01.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/21d57ce886-headshot.webp"
@@ -397,7 +399,7 @@
    "anio": null,
    "duracion_texto": "10:13",
    "duracion_min": 10,
-   "sinopsis": "James, es un niño de 12 años que vive en una pequeña granja cerca de un pequeño pueblo a las afueras de Bogotá. Junto a su padre Francisco, siguen una vida rutinaria centrada en los cuidados de la granja y los animales que tienen. Un día, mientras escuchaban un partido de fútbol en la radio, la policía entra en la casa derribando la puerta, luego de forcejear con Francisco, lo arrestan y llevan a James fuera de la granja. James es llevado a un centro de terapia infantil donde habla constantemente con Sandra, una terapeuta, ella le explica que Francisco no era su padre y que James fue raptado y criado por él desde que tenía 5 años. Durante sus días en el centro de terapia, debe someterse a una serie de actividades y ejercicios, debido a que James desarrolló un problema en su personalidad provocando que copie el comportamiento de los demás. Sandra, quien es la encargada de tratar a James, le repite constantemente que debe ser él mismo.",
+   "sinopsis": "James, de doce años, vive con Francisco en una granja hasta que la policía irrumpe y revela que el hombre que llama padre lo secuestró años atrás. Trasladado a un centro terapéutico, el niño",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/6-Santiago-Rincon-Duran.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/IMG-20240424-WA0186-Santiago-Rincon-Duran.webp"
@@ -410,14 +412,14 @@
   },
   {
    "slug": "steppe",
-   "titulo": "STEPPE",
+   "titulo": "ESTEPA",
    "director": "MARIANO BENITO",
    "_director_sin_rotulo": true,
    "pais": "Argentina",
    "anio": null,
    "duracion_texto": "01:26:00",
    "duracion_min": 86,
-   "sinopsis_en": "The young police officer Francisco Revenga is sent to cover a guard in the middle of the steppe. On the way he stops at a parador to buy food; There they record compromising images on their cell phones that will put Francisco in a moral dilemma.",
+   "sinopsis": "En su cumpleaños, el joven policía Francisco Revenga es enviado a cubrir una guardia en la estepa patagónica. Durante el trayecto, se detiene en un parador donde unas imágenes comprometedoras quedan grabadas en su celular. Al descubrir que revelan una red de trata, deberá decidir hasta dónde llega su deber.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/DSC05012.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/52988072c4-headshot.webp"
@@ -427,14 +429,14 @@
   },
   {
    "slug": "humana",
-   "titulo": "HUMAN",
+   "titulo": "HUMAN (Humano)",
    "director": "Debora Bergamini",
    "_credito_superior": "BR8 Cultural",
    "pais": "",
    "anio": 2025,
    "duracion_texto": "15:00",
    "duracion_min": 15,
-   "sinopsis_en": "Can modern technology humanize us? Can a virtual experience connect us more deeply with our own species and our planet? These questions guided the research and production of this work. HUMAN is an XR hand-tracking experience designed for the OCULUS QUEST 3, offering an innovative interaction with the history of the Voyager I and II probes and their iconic Golden Record. HUMAN is a XR hand-tracking experience designed for the OCULUS QUEST 3, offering an innovative interaction with the history of the Voyager I and II probes and their iconic Golden Record.",
+   "sinopsis": "A bordo de una experiencia inmersiva, el participante sigue el viaje de las sondas Voyager I y II y explora el contenido de su Disco de Oro. Entre sonidos, imágenes y memorias de la Tierra, el espacio se convierte en un espejo de aquello que nos hace humanos.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Human_Steel_Voyager_Saturno.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/609757db32-headshot.webp"
@@ -453,7 +455,7 @@
    "anio": 2026,
    "duracion_texto": "03:16",
    "duracion_min": 3,
-   "sinopsis_en": "In a universe blending Colombia and Greek mythology, Miguel is attacked by a Cupid in sandals and fabric wings who tries to shoot him with an arrow. During this chase, Miguel receives a chalice of aguapanela from David and Manuel, musical deities. Charged with celestial energy, he embarks on his revenge against love. But just when he thinks he has won, one last arrow strikes him… no matter how fast you run, you can’t escape love",
+   "sinopsis": "En un barrio colombiano donde los dioses griegos toman aguapanela, Miguel huye de un Cupido decidido a flecharlo. Con la ayuda de dos deidades musicales y un cáliz cargado de energía celestial, emprende una divertida venganza contra el amor. Sin embargo, ni siquiera un héroe mitológico puede escapar para siempre de sus flechas.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Still_13.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/d21d1de233-headshot.webp"
@@ -471,7 +473,7 @@
    "anio": 2024,
    "duracion_texto": "5:34",
    "duracion_min": 6,
-   "sinopsis": "Empatía: Capacidad de identificarse con alguien y compartir sus sentimientos.",
+   "sinopsis": "En un instituto, dos jóvenes sufren discriminación de formas distintas: uno por desplazarse en silla de ruedas y otro por no encajar en las expectativas de quienes lo rodean. Un encuentro inesperado les permite ponerse en el lugar del otro y descubrir que la empatía puede transformar la forma de mirar y actuar.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/20-frame3_La-silla.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/director_med_318673.webp"
@@ -490,7 +492,7 @@
    "anio": 2025,
    "duracion_texto": "09:01",
    "duracion_min": 9,
-   "sinopsis": "En un pueblo olvidado, la leyenda cobra vida después del anochecer. Cuatro niños se enfrentan al misterio de “La Presencia de Blanco”, un fantasma que merodea la escuela rural. Lo que comienza como un juego se convierte en una pesadilla cuando un ruido en el salón oscuro les revela una verdad aterradora. Ellos no corrieron. Se quedaron. Y ese fue su error. ¿Qué quiere la niña? ¿Por qué los señala? La respuesta espera en la oscuridad, justo en la esquina.",
+   "sinopsis": "Después del anochecer, cuatro niños deciden comprobar la leyenda de una niña vestida de blanco que ronda su escuela rural. Lo que empieza como un juego cambia cuando un ruido surge del salón oscuro y la presencia parece señalarlos. Permanecer allí podría revelarles la verdad, pero también convertirlos en parte de ella.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/FOTOGRAFIA-3-NESTOR-JAVIER-SERPA-PEREZ.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/FOTOGRAFIA-DIRECTOR-CORTOMETRAJE-NESTOR-SERPA-NESTOR-JAVIER-SERPA-PEREZ-scaled.webp"
@@ -509,7 +511,7 @@
    "anio": null,
    "duracion_texto": "01:10:30",
    "duracion_min": 71,
-   "sinopsis": "Manifiesto de archivos audiovisuales que acomoda con zapeo historias de cámaras y sus viajes mientras graban fiestas familiares y de cine. El viaje más largo es en Cuba. Salen muchas personas, van dos en el viaje que graban para un programa de televisión. Se mezclan lugares, experimentos visuales, fragmentos de películas y protagonistas del cine.",
+   "sinopsis": "En Ciudad Peronia, Guatemala, las hermanas Lesli y Lupe convierten el arte en una forma de cuidado y resistencia. Tras la muerte de 41 niñas en un hogar estatal, reúnen a jóvenes de su comunidad en una comparsa de títeres, fuego y tambores para reclamar las calles y enfrentar la violencia contra las mujeres.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Still-5-Cuba-2001-El-Espejo.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/FotoDirector-El-Espejo.webp"
@@ -527,7 +529,7 @@
    "anio": null,
    "duracion_texto": "04:00",
    "duracion_min": 4,
-   "sinopsis_en": "In a seemingly quiet town, a night of violence unleashes horror in a cantina, where a young woman fights to survive an attack by an ancient creature. As rumors spread about a monster, an old farmer stubbornly denies the existence of Nahuales.",
+   "sinopsis": "Una noche de violencia convierte la cantina de un pueblo aparentemente tranquilo en escenario de una pesadilla. Mientras una joven lucha por sobrevivir al ataque de una criatura ancestral, los rumores sobre un monstruo recorren la comunidad. Sin embargo, un viejo campesino insiste en negar aquello que todos comienzan a temer.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/20-e1789068209523.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/27235bd7e0-headshot.webp"
@@ -545,7 +547,7 @@
    "anio": 2026,
    "duracion_texto": "07:31",
    "duracion_min": 8,
-   "sinopsis_en": "Catatumbo is a subregion of Norte de Santander, on the border with Venezuela. Its jungles, mountains, and rivers shelter the unique Catatumbo Lightning, which lights the skies every night. Violence escalated in the late 1970s, when guerrilla groups like the ELN, EPL, and FARC increased armed actions with killings, kidnappings, and town takeovers.",
+   "sinopsis": "Cada noche, los relámpagos iluminan el Catatumbo, una tierra donde la belleza natural convive con las marcas del conflicto. Entre guerrillas, desplazamientos y cultivos convertidos en sustento y estigma, esta animación recorre la memoria de una región que, bajo un cielo que nunca se apaga, continúa defendiendo su dignidad y su esperanza.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/IMG_6721.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/786ae1c60b-headshot.webp"
@@ -565,7 +567,7 @@
    "anio": 2025,
    "duracion_texto": "19:38",
    "duracion_min": 20,
-   "sinopsis": "En la Colombia de los años 50, Luz, pide prestada la sombrilla de su madre para ir a comprar jabón. La furia de Waldina se desata sobre su hija tras la pérdida, transformando su hogar en una prisión de miedo. Acorralada y resignada, Luz deja de ver solo la rabia en su madre y logra comprender el profundo dolor que la origina. Mientras Waldina se derrumba sola, Luz regresa la sombrilla y ambas comprenden que en realidad lo que necesitan es reconciliarse en un acto silente. Lo único que tienen para sobrevivir es la otra.",
+   "sinopsis": "En la Colombia de los años cincuenta, Luz pierde la sombrilla que tomó prestada de su madre. La furia de Waldina convierte el hogar en un lugar de miedo, pero, al descubrir el dolor oculto tras su rabia, la niña encuentra un gesto silencioso capaz de acercarlas y comenzar a sanar.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/58-frame1_La-Sombrilla-de-Mama.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/director_med_343791.webp"
@@ -575,13 +577,13 @@
   },
   {
    "slug": "kmkz-wild-free-and-brave",
-   "titulo": "KMKZ: Wild, free and brave.",
+   "titulo": "KMKZ: SALVAJE, LIBRE Y VALIENTE",
    "director": "Andrés Hernández",
    "pais": "",
    "anio": null,
    "duracion_texto": "1:30:00",
    "duracion_min": 90,
-   "sinopsis_en": "At the crossroads of fiction and documentary, KMKZ: Wild, Free, and Brave tells the story of Kamila, a young woman who films the hostile streets of Bogotá with her cellphone. Kamila finds refuge in Ruco and Alexa, urban guardians who defy the city’s everyday violence. Through a bond with Leonor, a woman marked by time, Kamila discovers a mirror of her own fragility and strength.When Leonor disappears, Kamila is drawn into a journey that is both deeply personal and collective, where the image becomes archive, memory, and resistance. Shot in both horizontal and vertical formats, KMKZ is a manifesto film—a political and aesthetic statement that challenges the imposed frameworks of Latin American cinema. The use of vertical video is not a technical choice, but an act of defiance: a reflection of a youth that doesn’t fit in, that films with whatever tools they have, and demands to be heard in a world that turns its back on them.",
+   "sinopsis": "Kamila recorre Bogotá en bicicleta y registra con su celular aquello que la ciudad prefiere ignorar. Junto a Ruco, Alexa y Leonor encuentra refugio entre vidas atravesadas por la violencia y el abandono. Cuando Leonor desaparece, sus imágenes se convierten en archivo, memoria y una forma urgente de resistencia.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/DSC02241.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/efd248aa05-headshot.webp"
@@ -600,7 +602,7 @@
    "anio": 2026,
    "duracion_texto": "02:38",
    "duracion_min": 3,
-   "sinopsis": "Un hombre que crea mundos con inteligencia artificial ve cómo una de sus creaciones regresa para terminar la historia.",
+   "sinopsis": "Un hombre utiliza inteligencia artificial para crear mundos e historias. Convencido de controlar cada imagen, descubre que una de sus creaciones ha adquirido voluntad propia y ha cruzado la",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/prompt-zero-0-Tomas-Etter-Gomez-scaled.webp"
    ],
@@ -615,7 +617,7 @@
    "anio": null,
    "duracion_texto": "17:27",
    "duracion_min": 17,
-   "sinopsis_en": "In the 1990s, 8-year-old Agata leaves Poland for Belgium. Her perspective transforms the migratory reality into an initiatory experience.",
+   "sinopsis": "El día en que pierde su empleo, Umesh queda atrapado en el ruido de Mumbai y en una sucesión de llamadas sobre deudas, relaciones rotas y un futuro incierto. Mientras la ciudad avanza sin detenerse, él intenta conservar la dignidad antes de llegar al límite.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/AUTOKAR_de_Sylwia_Szkiladz_06.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/242828ec3d-headshot.webp"
@@ -627,13 +629,13 @@
   },
   {
    "slug": "witch-and-frog",
-   "titulo": "Witch and frog",
+   "titulo": "Witch and frog (Bruja y Rana)",
    "director": "Anastasia Provotorova",
    "pais": "Russian Federation",
    "anio": 2025,
    "duracion_texto": "2:12",
    "duracion_min": 2,
-   "sinopsis_en": "A young witch wannabe wants to learn some magic, so she decides to study with an experienced sorceress. She shows up at her place — but things don’t exactly go as planned.",
+   "sinopsis": "Reem intenta reconstruir el recuerdo perdido durante su primera convulsión. Entre archivos, imágenes fragmentadas y preguntas sin respuesta, la memoria de la infancia acompaña un recorrido íntimo por la experiencia de vivir con epilepsia, donde recordar se convierte en una forma de resistir aquello que el cuerpo borra.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/witch_and_frog.still3_.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/b392cf9d70-headshot.webp"
@@ -652,7 +654,7 @@
    "anio": null,
    "duracion_texto": "02:02:37",
    "duracion_min": 123,
-   "sinopsis": "Gloria (76) una prestigiosa dermatóloga, llega a un hogar geriátrico en contra de su voluntad. Allí conoce a María Lucía (74), una dulce anciana con problemas de alzheimer que intenta ayudar y sentirse útil. En la cotidianidad del asilo, Raquel (79) se revela como la líder de una especie de “cartel” entre los viejitos que intercambian dulces, medicamentos, entre otros. Gloria no compagina con Raquel, pero esta última, consigue los pequeños lujos que Gloria solicita para ganar su confianza. Las tres comparten su deseo de no estar internas, de ser libres, se sienten inútiles y olvidadas aunque aún guardan parte de su dignidad.",
+   "sinopsis": "Obligada a ingresar a un hogar geriátrico, Gloria, una prestigiosa dermatóloga de 76 años, conoce a María Lucía, quien vive con alzhéimer y busca sentirse útil. Allí también descubre que Raquel dirige un inesperado “cartel” de ancianos dedicado al intercambio clandestino de dulces, medicamentos y pequeños tesoros.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/STILL-MI-TESORO-4-Brian-Congolez.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/Brian-Cannes-Brian-Congolez-scaled.webp"
@@ -670,7 +672,7 @@
    "anio": null,
    "duracion_texto": "17:40",
    "duracion_min": 18,
-   "sinopsis_en": "Carlos is approaching midlife trapped in a personal crisis that has lingered too long. Rosa, his mother, suffers from disabling pain that is only mitigated by the warm waters of hydrotherapy. One night, she offers to make the ultimate sacrifice so that they can both transit to a better place. A short film about love, hope and relief we all long for.",
+   "sinopsis": "Carlos atraviesa una crisis que parece no tener salida mientras cuida de Rosa, su madre, cuyo dolor solo disminuye en las aguas cálidas de la hidroterapia. Una noche, ella le propone un sacrificio extremo que los obliga a reconsiderar el amor, la dependencia y la posibilidad de encontrar juntos otra forma de alivio.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/d0aa7c0f-bb94-46ea-a12c-ef1c75905239.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/0fa8d789-c11f-4782-98ca-b9300039e133.webp"
@@ -682,14 +684,14 @@
   },
   {
    "slug": "they-call-it-sausage",
-   "titulo": "They Call It Sausage",
+   "titulo": "They Call It Sausage (Lo llaman salchicha)",
    "director": "Timm Osterhold",
    "_duracion_arriba": "03:00",
    "pais": "Alemania",
    "anio": 2026,
    "duracion_texto": "3:00",
    "duracion_min": 3,
-   "sinopsis": "En una granja tranquila, la vaca perspicaz Philly y el toro pragmático Rufus observan cómo otro camión lleno de ganado se aleja, supuestamente hacia unas “vacaciones”. Pero Philly alberga una sospecha escalofriante. Rufus, harto de las anteriores afirmaciones descabelladas de Philly, descarta su teoría como otra conspiración absurda. Mientras el camión desaparece por el camino, la inquietud de Philly persiste, dejando al público con una pregunta: ¿Es ella una paranoica marginada o la única valiente suficiente para cuestionar la verdad? Con un humor negro y reflexivo, este cortometraje satírico y cargado de angustia existencial, “They Call It Sausage”, invita a los espectadores a reflexionar sobre la ignorancia, la negación y las incómodas verdades que se esconden a plena vista.",
+   "sinopsis": "En una granja, Philly sospecha que los camiones que prometen “vacaciones” al ganado esconden un destino mucho más oscuro. Rufus cree que se trata de otra de sus teorías absurdas, pero, mientras el vehículo se aleja, la duda resulta cada vez más difícil de ignorar.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/3e8998d2-e7eb-44fc-98d6-2d692f32f202.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/fa-blog-maskottchen-header.webp"
@@ -709,7 +711,7 @@
    "anio": 2026,
    "duracion_texto": "5:10",
    "duracion_min": 5,
-   "sinopsis": "En medio del conflicto armado, una comunidad ve cómo la violencia transforma su vida cotidiana. Los secuestros, el miedo y la incertidumbre obligan a las familias a enfrentar pérdidas, separaciones y decisiones difíciles. A través de esta historia, el cortometraje muestra las profundas huellas que deja la guerra y resalta la esperanza de quienes, pese al dolor, siguen luchando por la paz y la reconciliación.",
+   "sinopsis": "En medio del conflicto armado colombiano, una comunidad ve cómo el miedo y los secuestros alteran su vida cotidiana. Mientras las familias atraviesan ausencias, separaciones y decisiones dolorosas, surge una pregunta urgente: ¿cómo conservar la esperanza? Una historia sobre las huellas de la guerra y la posibilidad de construir paz desde la memoria.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-07-31-at-5.43.45-PM-1-Martha.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/director-10-Martha.webp"
@@ -728,7 +730,7 @@
    "anio": 2026,
    "duracion_texto": "6:03",
    "duracion_min": 6,
-   "sinopsis": "Un joven cansado de su vida cotidiana y monótona decide emprender un recorrido que va a poner a prueba sus capacidades tanto físicas como mentales.",
+   "sinopsis": "Cansado de una rutina que parece no conducirlo a ningún lugar, un joven decide ascender solo a Monserrate. El esfuerzo físico, la música y el paisaje transforman el recorrido en una prueba interior, donde cada paso despierta emociones distintas y le revela que romper la monotonía también depende de atreverse a comenzar.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Fotograma-2-AGUSTINA-LECAROS-CHAVEZ.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/Foto-AGUSTINA-LECAROS-CHAVEZ-scaled-e1789145235345.webp"
@@ -748,7 +750,7 @@
    "anio": null,
    "duracion_texto": "16:10",
    "duracion_min": 16,
-   "sinopsis_en": "On Hold follows Umesh Shukla, a 40-year-old salesman, on the very day he is fired from his job. Thrown into sudden uncertainty, he finds himself caught in the relentless chaos of Mumbai—crowded local trains, the metro, traffic, and constant city noise. Surrounded by this relentless noise and a series of back-to-back phone calls about mounting debt, strained relationships, and an uncertain future, he is pushed to his limits. As the day unfolds, each call reveals a new layer of his reality, deepening the pressure around him.",
+   "sinopsis": "El día en que pierde su empleo, Umesh queda atrapado en el ruido de Mumbai y en una sucesión de llamadas sobre deudas, relaciones rotas y un futuro incierto. Mientras la ciudad avanza sin detenerse, él intenta conservar la dignidad antes de llegar al límite.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Screenshot_2026-04-28_024337.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/348dd5b937-headshot.webp"
@@ -767,7 +769,7 @@
    "anio": null,
    "duracion_texto": "1:19:00",
    "duracion_min": 79,
-   "sinopsis_en": "Comparsa fully immerses audiences in the intense world of Ciudad Peronia, Guatemala, where sisters Lesli and Lupe use art and performance to rally local youth and heal deep wounds. After 41 girls are killed in a State-run “Safe Home” and the government refuses to act, the sisters respond with a community comparsa—an exuberant street performance featuring towering puppets, fire-breathing stilt walkers, and thundering drums. With brave vulnerability, they expose a power structure that permits and commits violence against women, and they open up about surviving violence in their own home. Their youth movement takes to the streets, confronting corruption and reclaiming public space for women and girls. Rooting their efforts in joy and community care, they find healing for themselves along the way. Comparsa is built on a 15-year relationship between the subjects and the film team to offer a stirring portrait of sisterhood, peacebuilding, and the transformational power of art.",
+   "sinopsis": "En Ciudad Peronia, Guatemala, las hermanas Lesli y Lupe convierten el arte en una forma de cuidado y resistencia. Tras la muerte de 41 niñas en un hogar estatal, reúnen a jóvenes de su comunidad en una comparsa de títeres, fuego y tambores para reclamar las calles y enfrentar la violencia contra las mujeres.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/B042C168_Girls_light_candles.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/089be1a038-headshot.webp"
@@ -786,7 +788,7 @@
    "anio": 2025,
    "duracion_texto": "4 minutos",
    "duracion_min": null,
-   "sinopsis": "Sua y Sie: Guardianes de la Vida es un cortometraje realizado con niños y para niños, que nace en el páramo de la vereda Mata de Mora, en el municipio de Saboyá, Boyacá, Colombia, a más de 3.200 metros de altura. A través de la lengua muisca y el español, dos niños encarnan a Sua (el Sol) y Sie (el Agua), fuerzas sagradas de la cosmovisión ancestral que dialogan sobre el cuidado de la naturaleza y el equilibrio de la vida. En medio del paisaje páramo, su encuentro se convierte en un llamado a proteger el territorio, el agua y la memoria de los pueblos originarios. El cortometraje hace parte del proceso formativo del Centro de Interés Audiovisual El Frailejón de la Institución Educativa San Marcos, una propuesta pedagógica que utiliza el cine comunitario como herramienta de aprendizaje, expresión cultural y conciencia ambiental desde la mirada de las infancias.",
+   "sinopsis": "En el páramo de Mata de Mora, dos niños encarnan a Sua, el Sol, y Sie, el Agua. Hablando en muisca y español, estas fuerzas sagradas dialogan sobre el equilibrio de la vida e invitan a proteger el territorio, la memoria ancestral y las fuentes que sostienen a su comunidad.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Imagen2-Juan-Pablo-Gonzalez.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/Imagen5-Juan-Pablo-Gonzalez.webp"
@@ -796,13 +798,13 @@
   },
   {
    "slug": "life-is-a-chessboard",
-   "titulo": "Life is a Chessboard; Every Move is Final",
+   "titulo": "Life is a Chessboard; Every Move is Final (La vida es un tablero; cada movimiento es definitivo",
    "director": "Wang zhi-zhong",
    "pais": "Taiwan",
    "anio": 2026,
    "duracion_texto": "4:50",
    "duracion_min": 5,
-   "sinopsis_en": "No Regrets in the Fall A lone cultivator sits at the edge of a cliff, surrounded by rolling hills of wildflowers and mountains. The camera wanders through this vast eastern fantasy world before returning to the ornament held in his hands. The ornament unlocks memory — an elder brother’s silhouette moving through a bustling ancient street, a close friend gazing quietly from a pavilion railing, a beloved woman placing the ornament into his palm, and a game of Go beneath an ancient tree. Memory and reality interweave until time shatters at the moment a stone is placed on the board. He looks up at the sky, letting every emotion pass through him. Then he rises, closes his hand around the ornament, and reaches for the dragon. Together they break through the mountain mist — and for the first time, the world beyond the mountains is revealed: a vast, living, human world stretching to the sea. No regrets after the move. Not because there is nothing to regret — but because even in regret, you place the stone anyway. Technical Disclosure: This short film is driven by an original concept, with world-building, script, and storyboards entirely designed by the director. Visuals and music were created using Generative AI tools (base images via Nanobanana pro, video and raw SFX via Kling AI, and music via Suno). All audio fine-tuning, final video editing, and narrative pacing were manually executed by the director in Premiere Pro to fulfill a highly specific creative vision.",
+   "sinopsis": "Al borde de un acantilado, un cultivador contempla un objeto que despierta recuerdos de quienes marcaron su vida. Cuando una piedra cae sobre un antiguo tablero de Go, memoria y presente se fracturan, obligándolo a aceptar que algunas decisiones no admiten regreso.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/03a761e3-3b0c-4e62-9018-7e49ae613a45.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/profile-picture-.webp"
@@ -814,14 +816,14 @@
   },
   {
    "slug": "a-burning-turret",
-   "titulo": "A Burning Turret",
+   "titulo": "Una torreta en llamas",
    "director": "Humberto Flores",
    "_director_sin_rotulo": true,
    "pais": "Mexico",
    "anio": null,
    "duracion_texto": "22:12",
    "duracion_min": 22,
-   "sinopsis_en": "After a violent confrontation, a wounded soldier is rescued by Yolanda, an elderly farmer, and her granddaughter Alejandra. After hiding him in their ranch, Yolanda must decide whether she should help him, risking their own lives, while Alejandra pursues her own suspicions.",
+   "sinopsis": "Tras un violento enfrentamiento, Yolanda y su nieta Alejandra encuentran a un soldado herido cerca de su rancho en las montañas. Mientras la abuela debate entre la cautela y la compasión, la joven se acerca al desconocido para confirmar una sospecha que podría ponerlas a ambas en peligro.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/1-utel_stills-exc-crop-web_29.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/d2cab35373-headshot.webp"
@@ -839,7 +841,7 @@
    "anio": 2026,
    "duracion_texto": "22:42",
    "duracion_min": 23,
-   "sinopsis_en": "When nine-year-old Alex discovers LENS—a mysterious prototype capable of showing alternative realities—her family becomes the target of ruthless special ops agents. Fleeing across desolate cornfields, Alex, her brother Jim, and their mother must risk everything to protect their new friend and unlock its true potential.",
+   "sinopsis": "A sus nueve años, Alex descubre LENS, un misterioso prototipo capaz de revelar realidades alternativas. Cuando despiadados agentes de operaciones especiales comienzan a perseguir a su familia, ella, su hermano Jim y su madre huyen a través de campos desolados, decididos a proteger a su nuevo amigo y descubrir su verdadero potencial.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Zombies.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/0ccc31aa04-headshot.webp"
@@ -852,7 +854,7 @@
   },
   {
    "slug": "la-ultima-historia",
-   "titulo": "La Ultima Historia",
+   "titulo": "La Última Historia",
    "director": "Eberto Manotas y Mauro Andrade",
    "_credito_superior": "Eberto Manotas",
    "_duracion_arriba": "7:00",
@@ -860,7 +862,7 @@
    "anio": 2025,
    "duracion_texto": "7 minutos",
    "duracion_min": null,
-   "sinopsis": "Un escritor busca inspiración para su nueva obra y termina enfrentándose a los fantasmas de su propio pasado. Entre la realidad y la ficción, descubrirá que algunas historias no se escriben… se viven",
+   "sinopsis": "Pipe, un escritor anciano que enfrenta el Alzheimer, intenta terminar la que podría ser su última obra. Mientras escribe, sus recuerdos se confunden con historias ajenas hasta llevarlo de regreso a su infancia, cuando, sin zapatos y con un balón de trapo, soñaba con vestir la camiseta de la Selección Colombia.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/fotograma-3-45-1280-x-720-px-Eberto-Manotas-ochoa.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/mauro-director-45-1-Eberto-Manotas-ochoa.webp"
@@ -879,7 +881,7 @@
    "anio": null,
    "duracion_texto": "01:45:00",
    "duracion_min": 105,
-   "sinopsis_en": "A brilliant teenager, caught between family pressure and social media, is drawn—together with her best friend—into a spiral of self-demand that puts her health, her identity, and her life at risk.",
+   "sinopsis": "Brillante y exigente consigo misma, una adolescente intenta responder a las expectativas de su familia y a la imagen perfecta que imponen las redes sociales. Junto a su mejor amiga, entra en una espiral que amenaza su salud y su identidad, obligándola a descubrir cuánto puede resistir un cuerpo de cristal.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/IMG-20260305-WA0100.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/5a22960b33-headshot.webp"
@@ -891,14 +893,14 @@
   },
   {
    "slug": "le-jeune-sofiane",
-   "titulo": "Le Jeune Sofiane",
+   "titulo": "Le Jeune Sofiane (El Joven Sofiane)",
    "director": "Natacha Delmon Casanova",
    "_director_sin_rotulo": true,
    "pais": "Francia",
    "anio": null,
    "duracion_texto": "28:40",
    "duracion_min": 29,
-   "_sinopsis_otro_idioma": "Le 1er juillet 2005, Zoléra reçoit un appel dans la nuit, son fils Sofiane a eu un accident de scooter. Les médecins lui annoncent qu’il a percuté une ambulance et qu’il n’a pas survécu. Le groupe sanguin « A- » de Sofiane indique un état d’ébriété, le jeune délinquant a provoqué l’accident, les pompiers ne sont pas mis en faute. Un doute subsiste : le groupe sanguin de Sofiane était « A+ ».",
+   "sinopsis": "Tras la muerte de Sofiane en un accidente, el informe responsabiliza al joven y atribuye lo ocurrido al alcohol. Sin embargo, su madre descubre una inconsistencia decisiva: la sangre analizada no coincide con el grupo sanguíneo de su hijo.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/3-banner_Le-Jeune-Sofiane.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/director_med_296046.webp"
@@ -918,7 +920,7 @@
    "anio": 2026,
    "duracion_texto": "8:31",
    "duracion_min": 9,
-   "sinopsis_en": "Moved by a curiosity on what the body can do and searching for a playful making process, this film emerges from experimentations on the possibilities of the human body in graphic media. I wanted to shorten the distance between filmmaker and audience, so I used paper cutouts and the phone as a common and cheap shooting tool. With a narration that plays with language, the film touches on themes like the body’s possibilities, its absences and presences, humorously and deep at the same time, transitioning across different media. Working with minimal equipment pushed me to embrace improvisation, and I hope this sense of spontaneity remains visible for the audience to enjoy the sense of play and curiosity that shaped the film.",
+   "sinopsis": "Un cuerpo intenta reconocerse a través de aquello que le falta. Mientras mide sus contornos, se fragmenta y vuelve a componerse, la ausencia de un caballo abre una pregunta sobre el deseo, la memoria y la identidad.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/STILLS_0006_Preto-e-Branco_1_copiar_6.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/b770bc6b12-headshot.webp"
@@ -938,7 +940,7 @@
    "anio": null,
    "duracion_texto": "2:19:11",
    "duracion_min": 139,
-   "sinopsis": "Alicia, una mujer de 75 años perteneciente a una familia de clase alta, pasa sus días abandonada en una silla de ruedas en un parque de la ciudad. Cada mañana una cuidadora la deja allí y solo regresa al caer la tarde, mientras Alicia observa en silencio a las palomas y a los desconocidos que cruzan frente a ella, convertida en un mueble más del paisaje urbano. Alirio, un niño de 13 años que sobrevive como reciclador, la ve todos los días durante su recorrido. Vive en unos tubos junto a Claudia, una niña de 12 años que enfrenta la dureza de la calle refugiándose en el consumo de pegante. En medio de sus alucinaciones, Claudia se enamora de Alirio, pero él solo siente curiosidad y compasión por la anciana. Claudia muere, es llevada al basurero donde Alirio busca entre la basura. Destrozado por la pérdida y convencido de que Alicia también ha sido olvidada por el mundo, Alirio decide llevársela consigo. Primero la esconde en su cambuche y, cuando la salud de la mujer empeora y la policía inicia su búsqueda, ambos terminan refugiándose en un cuarto de un sector marginal de la ciudad, rodeados de habitantes de calle, prostitutas y delincuentes. Lo que comienza como un rapto termina convirtiéndose en el vínculo más importante de sus vidas. Alicia vuelve a sentirse querida y útil; Alirio encuentra por primera vez el afecto de una madre. Ella le enseña a leer y escribir, mientras él consigue trabajo en un centro de reciclaje para cuidar de ambos. Poco a poco construyen el hogar que ninguno tuvo. Una mañana, Alirio encuentra a Alicia muerta. Incapaz de aceptar la pérdida, continúa viviendo junto a su cuerpo como si ella siguiera allí: comparte las comidas, le lee libros y conversa con ella. Cuando el olor del cadáver hace imposible permanecer en el lugar, el niño lleva a Alicia hasta una montaña cercana a un basurero. Allí, mientras los gallinazos elevan hacia el cielo los últimos restos de su cuerpo, Alirio comprende que el verdadero amor también consiste en dejar partir.",
+   "sinopsis": "Tras la desaparición de Claudia, Alirio, un niño habitante de calle, se niega a quedar nuevamente solo. Por eso se lleva a Alicia, una anciana olvidada en un parque. Lo que comienza como un rapto transforma dos vidas invisibles: juntos construyen el afecto y el hogar que la ciudad les había negado.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/VOLAR-3-Jeiver-Pinto-scaled.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/PHOTO-2026-05-20-13-13-51-Jeiver-Pinto.webp"
@@ -950,13 +952,13 @@
   },
   {
    "slug": "pros-and-cons-of-daydreaming",
-   "titulo": "Pros and Cons of Daydreaming",
+   "titulo": "PROS Y CONTRAS DE SOÑAR DESPIERTO",
    "director": "Lorena López",
    "pais": "Colombia",
    "anio": 2025,
    "duracion_texto": "4:52",
    "duracion_min": 5,
-   "sinopsis_en": "The story follows an imaginative boy whose constant daydreaming hinders his performance in school and daily activities. His strict parents, seeking discipline, remove all distractions from his room, including his toys and guitar, hoping to encourage reflection. Though his academic results improve, his creative spark fades until a gentle puppy he meets on his way to school rekindles his sense of wonder and companionship.",
+   "sinopsis": "Un niño capaz de convertir cualquier momento en una aventura vive perdido entre fantasías, aunque sus notas paguen el precio. Decididos a disciplinarlo, sus padres vacían su habitación de juguetes y música. El plan funciona, pero también apaga algo esencial en él, hasta que un inesperado cachorro vuelve a encender su imaginación.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/imagen_2025-10-20_211005952.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/582d3ec9d0-headshot.webp"
@@ -968,14 +970,14 @@
   },
   {
    "slug": "sun-coffee",
-   "titulo": "SUN COFFEE",
+   "titulo": "SUN COFFEE (Café de Sol)",
    "director": "Zoé Filloux",
    "_duracion_arriba": "19:08",
    "pais": "Francia",
    "anio": 2024,
    "duracion_texto": "19:04",
    "duracion_min": 19,
-   "sinopsis_en": "A coffee to reheat, but no more electricity: a problem that will lead high school students to various meetings and discussions around photovoltaic energy…",
+   "sinopsis": "Un café frío y un corte de electricidad convierten una necesidad cotidiana en una investigación inesperada. Un grupo de estudiantes sale del aula para conocer científicos, explorar la energía fotovoltaica y descubrir cómo la luz del sol puede ofrecer respuestas concretas a los desafíos energéticos de su entorno.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/SUN_COFFEE_V2.00_06_25_23.Still005.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/5f772d28d0-headshot.webp"
@@ -995,7 +997,7 @@
    "anio": null,
    "duracion_texto": "15:00",
    "duracion_min": 15,
-   "sinopsis": "Carmen, una campesina de sesenta años, rescata a un hombre que flota junto a una guitarra en la laguna de Tota. Intenta descubrir su identidad, pero él se niega a hablar. Una canción, al parecer de la “Diablo Ballena”, la última ballena de agua dulce, rompe el silencio. Entre el mito y la realidad, se enfrentan al pasado para encontrar su propia redención.",
+   "sinopsis": "Carmen, una campesina de sesenta años, rescata de la laguna de Tota a un desconocido que flota junto a un requinto. Él se niega a revelar su identidad, pero el canto de la mítica Diablo Ballena rompe el silencio y conduce a ambos hacia un pasado que aún busca redención.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Timeline_1_02_28_18_19.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/68c5abf0e9-headshot.webp"
@@ -1014,7 +1016,7 @@
    "anio": 2026,
    "duracion_texto": "04:52",
    "duracion_min": 5,
-   "sinopsis_en": "Trapped inside a hotel room called the White Room, Leo is running late for his train when a simple problem becomes something far more disturbing. A strange girl’s voice from reception claims she is already inside his room, hidden in the bathroom. As panic rises, Leo calls his wife for help, only to be caught in a surreal misunderstanding that turns fear into jealousy, and jealousy into nightmare. Moving between Paris and Brittany, DERRIÈRE LA PORTE is a family-made supernatural short where domestic comedy, eerie suspense, and a creeping sense of unreality collide behind a half-open door.",
+   "sinopsis": "Leo despierta atrapado en una habitación de hotel a punto de perder su tren. Cuando una voz asegura estar dentro del baño, busca ayuda de su esposa, pero un extraño malentendido convierte el miedo en celos y abre la puerta a una pesadilla.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/IMG_3671.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/20966e47af-headshot.webp"
@@ -1030,7 +1032,7 @@
    "anio": 2024,
    "duracion_texto": "06:14",
    "duracion_min": 6,
-   "sinopsis_en": "Four friends are thrust into a mysterious and explosive destiny.",
+   "sinopsis": "Cuatro amigos son arrastrados hacia un destino misterioso y explosivo que cambia por completo el curso de sus vidas. Mientras intentan comprender qué los condujo hasta allí, el tiempo avanza y la tensión aumenta. En apenas cuatro minutos, deberán enfrentar juntos una situación para la que ninguno estaba preparado.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/5a322f0dc3-poster.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/5a322f0dc3-poster.webp"
@@ -1042,14 +1044,14 @@
   },
   {
    "slug": "language-of-the-wind",
-   "titulo": "Language Of The Wind",
+   "titulo": "Language Of The Wind (El Lenguaje del Viento)",
    "director": "Shimataver Igbawua",
    "_director_sin_rotulo": true,
    "pais": "Nigeria",
    "anio": null,
    "duracion_texto": "01:23:37",
    "duracion_min": 84,
-   "sinopsis": "Shatu (16) ha pasado toda su vida cuidando ganado bajo un cielo inmenso, soñando en secreto con una vida en la ciudad. Al día siguiente de su boda con su primo Ardo (17), un orgulloso defensor de las tradiciones de su pueblo, descubre una posible vía de escape. Ardo interpreta ese anhelo como una traición. Mientras conducen el ganado hacia los pastizales, el silencio entre ambos se vuelve cada vez más pesado. Cuando una obstinada vaca preñada se niega a avanzar, la tensión que los une finalmente estalla. Acusaciones y confesiones sacan a la luz verdades que llevaban demasiado tiempo sin decirse. Al caer la noche, deberán tomar una decisión, una que resonará mucho más allá de las llanuras.",
+   "sinopsis": "Tras casarse con Ardo, Shatu vislumbra la posibilidad de abandonar las llanuras y conocer la ciudad que siempre ha imaginado. Mientras conducen el ganado, una vaca se detiene y el silencio entre ambos se rompe, obligándolos a enfrentar sus deseos, sus tradiciones y el rumbo que elegirán.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/IMG_2245.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/73dd84c395-headshot.webp"
@@ -1061,14 +1063,14 @@
   },
   {
    "slug": "independence",
-   "titulo": "INDEPENDENCE",
+   "titulo": "LA INDEPENDENCIA",
    "director": "John Agudelo",
    "_credito_superior": "lalunarfilm",
    "pais": "",
    "anio": null,
    "duracion_texto": "19:45",
    "duracion_min": 20,
-   "sinopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son’s irresponsibility and her family’s ingratitude, finally seeking her independence.",
+   "sinopsis": "Tras años de sacrificarse por una familia que da por sentado su cuidado, Cecilia, de 52 años, llega al límite. Cansada de la irresponsabilidad de su hijo y de vivir para los demás, decide romper con todo y recuperar una vida que también le pertenece.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Timeline_4_01_16_57_01.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/9b0db068af-headshot.webp"
@@ -1081,14 +1083,14 @@
   },
   {
    "slug": "final-act",
-   "titulo": "Final Act",
+   "titulo": "Final Act (Acto Final)",
    "director": "Babi Astolfi, Lisa Soares",
    "_credito_superior": "Fefe Urresti",
    "pais": "Brazil",
    "anio": null,
    "duracion_texto": "13:00",
    "duracion_min": 13,
-   "sinopsis_en": "After witnessing the death of a famous actress, Mateus Santos, a journalism intern, has the unique chance to investigate the case alongside his idol, the renowned journalist Miriam Matos. Together, they interrogate three suspects in pursuit of the truth behind the killer’s motive.",
+   "sinopsis": "Tras presenciar la muerte de una célebre actriz, Mateus, un practicante de periodismo, obtiene la oportunidad de investigar junto a Miriam Matos, la reportera que más admira. Tres sospechosos y tres versiones los conducirán por un misterio animado donde descubrir al culpable exige mirar más allá de cada actuación.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/AtoFinal_still31.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/53b0b1ee60-headshot.webp"
@@ -1108,7 +1110,7 @@
    "anio": 2025,
    "duracion_texto": "07:00",
    "duracion_min": 7,
-   "sinopsis": "Tras la muerte de su amada abuela Rosa, Mateo decide prepararse para asumir el legado familiar. Guiado únicamente con una serie de reglas que escribió cuando era niño, se embarca en una cadena de absurdas misiones que afronta con total seriedad. Lo que comienza como una peculiar historia de crimen pronto se transforma en un viaje de descubrimiento sobre la familia, el amor y la manera en que quienes se han ido siguen dejando huella en nuestras vidas. Una comedia tierna sobre crecer, despedirse y descubrir que los legados más valiosos suelen ser los más inesperados.",
+   "sinopsis": "Tras despedirse de su abuela Rosa, Mateo decide prepararse para asumir el legado familiar. Su única guía es una lista de reglas escrita durante la infancia, que lo conduce por misiones tan absurdas como solemnes. Entre planes criminales y recuerdos, descubrirá que algunos legados no se reciben: se comprenden.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/2-Dumah-Films.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/FOTO_NH-Dumah-Films.webp"
@@ -1120,14 +1122,14 @@
   },
   {
    "slug": "drunk-hearing-the-rain-drops-fall",
-   "titulo": "Drunk hearing the rain drops fall",
+   "titulo": "Borrachos mientras escuchamos las gotas caer",
    "director": "Graduate of the University of Medellín and the National Film School, with a thesis awarded honors. Co-founder and producer at Chicha Films, where he works integrally as director, creative producer, and cinematographer, seeking to strengthen a political and authorial vision.",
    "_credito_superior": "Chicharron & Changua Films",
    "pais": "Colombia",
    "anio": null,
    "duracion_texto": "21:25",
    "duracion_min": 21,
-   "sinopsis_en": "An elderly couple, burdened as the land that was meant to provide their retirement now slowly kills them due to state abuse. Multiple violences have turned this land into a purgatory, reflecting the resignation of old age, uprooting, and territorial resistance.",
+   "sinopsis": "En la vejez, una pareja contempla cómo la tierra destinada a sostener su retiro se convierte en una condena. Marcado por el abuso estatal y distintas formas de violencia, el territorio los desangra económica y emocionalmente. Un retrato íntimo sobre el desarraigo, la resistencia y la obstinación de permanecer donde todo parece expulsarlos.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Still_2025-08-20_202346_1.23.1.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/470bd09403-headshot.webp"
@@ -1140,13 +1142,13 @@
   },
   {
    "slug": "with-the-hand-up",
-   "titulo": "With the Hand Up",
+   "titulo": "Con La Mano Arriba",
    "director": "Miguel Angel Ordoñez",
    "pais": "Colombia",
    "anio": null,
    "duracion_texto": "10:56",
    "duracion_min": 11,
-   "sinopsis_en": "Since 2023, the independent puppet troupe “Con la Mano Arriba” has struggled to find its place within the hierarchy of the Barranquilla Carnival. Led by director Eduardo Lora Cueto, the group faces systemic challenges and limited institutional support. The documentary focuses on a critical turning point during a parade at Carrera 44, where a technical sound failure left the collective exposed to chaos and uncertainty. Through intimate interviews and observational footage, the film explores how the group processes vulnerability with humor and a conscious decision to persist. It is a story about the resilience and artistic passion required to keep a puppet’s head held high against all odds.",
+   "sinopsis": "Desde 2023, la compañía independiente de títeres Con la Mano Arriba busca abrirse un lugar en el Carnaval de Barranquilla. Durante un desfile, una falla de sonido pone a prueba al colectivo. Entre caos, humor y precariedad, sus integrantes deciden sostener la función y defender con creatividad su derecho a formar parte de la fiesta.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Documental_Con_la_mano_arriba__00_06_35_02.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/cb872875e7-headshot.webp"
@@ -1165,7 +1167,7 @@
    "anio": null,
    "duracion_texto": "7:38",
    "duracion_min": 8,
-   "sinopsis_en": "Tatao grows up alongside his grandmother Alba, held together by a routine that shapes their everyday life. When memory begins to fade, their relationship transforms, revealing how love endures even as memories slowly disappear.",
+   "sinopsis": "Tras la muerte de su esposa, Ángel enfrenta el duelo en la soledad de su casa rural. Una gotera invade progresivamente el espacio hasta convertirse en la forma tangible de su ausencia, empujándolo a decisiones irracionales mientras intenta aprender a habitar una vida que ya no reconoce.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Still_04_-_Memorias_del_Alba.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/b4f03d8cb6-headshot.webp"
@@ -1177,13 +1179,13 @@
   },
   {
    "slug": "protecting-our-territory-369",
-   "titulo": "Protecting Our Territory 360",
+   "titulo": "Protecting Our Territory 360 (Protegiendo nuestro territorio 360°)",
    "director": "Christopher Boulton",
    "pais": "",
    "anio": 2026,
    "duracion_texto": "07:52",
    "duracion_min": 8,
-   "sinopsis_en": "Protecting Our Territory 360” combines a 360 video that positions the viewer as the imaginary classmate “Cachufina” with behind-the-scenes documentation of how the Peruvian students used an action camera and mobile phones to co-create an immersive experience of their lives and the natural world. Bishu Cine is a non-profit cultural association that uses film, audiovisual media, the arts, and new information and communication technologies as tools for social change. Together with the Great Ingenious Readers Club of Carabayllo (located on the outskirts of Lima, Peru), Bishu Cine created the participatory exhibition “Protecting Our Territory and Environment,” which gave twenty young people their first virtual reality experience. Bishu Cine began by adapting the interests of the club’s members to a story based on everyday spaces, such as their soccer field and the nearby Bed of Clouds in the Spring Hills, and then helped them film scenes with a specialized camera to capture 360-degree landscapes and transcoded the footage so they could explore them with virtual reality headsets. The experience strengthened the young people’s collective sense of belonging and care for their surroundings and emphasized the importance of preserving environmental memories through their own perspectives.",
+   "sinopsis": "El espectador se convierte en Cachufina, la compañera imaginaria de un grupo de estudiantes peruanos que transforma su entorno en una experiencia inmersiva. Creada con celulares y una cámara 360°, la obra invita a mirar y cuidar el territorio desde sus propias perspectivas.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Protecting_Still_3.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/d307705c96-headshot.webp"
@@ -1201,7 +1203,7 @@
    "anio": 2025,
    "duracion_texto": "3:53",
    "duracion_min": 4,
-   "sinopsis": "Tras una ruptura amorosa, una mujer atraviesa un duelo íntimo en un universo simbólico construido por colores y memoria. En escenarios minimalistas, performa su dolor: llora, escribe, grita, se arranca espinas del pecho y reconstruye con ropa la figura ausente del otro. La maqueta de una casa rota y un poema interminable la acompañan en este viaje sensorial entre el deseo y la pérdida. Al final, bajo un cielo ilusorio, se recuesta sobre sus palabras, habitando su dolor desde otro lugar.",
+   "sinopsis": "Después de una ruptura, una mujer convierte el duelo en un ritual hecho de colores, palabras y objetos. Entre espinas que brotan del pecho, una casa rota y la silueta del amor ausente, atraviesa el dolor hasta encontrar una nueva forma de habitar aquello que permanece después de tanto amor.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/DDTA_1.1.20-mercedes.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/foto-mercedes-scaled.webp"
@@ -1213,13 +1215,13 @@
   },
   {
    "slug": "lost-fragments-of-a-seizure",
-   "titulo": "Lost Fragments of a Seizure",
+   "titulo": "FRAGMENTOS PERDIDOS DE UNA CONVULSIÓN",
    "director": "Martinez Michael",
    "pais": "",
    "anio": 2025,
    "duracion_texto": "11:37",
    "duracion_min": 12,
-   "sinopsis_en": "A series of questions and statements unfolds around the experience and revelation of living with epilepsy. Through a collage of archival footage and fragmented images, Reem searches for the memory she lost during her first seizure. The film weaves together fragments that evoke the poetic and fragile symbols surrounding a convulsion, the before, the in-between and the after. Childhood and memory accompany this journey, where the act of remembering becomes a way of resisting oblivion and confronting the fleeting nature of a seizure.",
+   "sinopsis": "Reem intenta reconstruir el recuerdo perdido durante su primera convulsión. Entre archivos, imágenes fragmentadas y preguntas sin respuesta, la memoria de la infancia acompaña un recorrido íntimo por la experiencia de vivir con epilepsia, donde recordar se convierte en una forma de resistir aquello que el cuerpo borra.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/19bb4fb8-4a6b-4efe-aece-6cc727e3b4de.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/dsfsdf.webp"
@@ -1238,7 +1240,7 @@
    "anio": null,
    "duracion_texto": "17:05",
    "duracion_min": 17,
-   "sinopsis": "Ocultarle el fin del mundo a un padre ciego, exmilitar, puede ser más difícil que sobrevivir a la intemperie. Carlos escapa de la devastación de Bogotá a la casa de campo de su padre, donde también se refugia su hermana mayor. Sin embargo, ella, exhausta, los abandona. Ahora Carlos debe afrontar la difícil relación con su padre, recurriendo a trucos para ocultarle que hay un apocalipsis zombi afuera.",
+   "sinopsis": "Tras la devastación de Bogotá, Carlos se refugia con su padre ciego y exmilitar en una casa de campo. Cuando su hermana los abandona, debe protegerlo solo y esconderle una verdad imposible: afuera comenzó un apocalipsis zombi. Sobrevivir será tan difícil como enfrentar la distancia que siempre ha existido entre ambos.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/59ff7a74-a341-46c0-ac04-9c7a425e8bc0_2.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/a6a45a019d-headshot.webp"
@@ -1258,7 +1260,7 @@
    "anio": null,
    "duracion_texto": "3:51",
    "duracion_min": 4,
-   "sinopsis": "En la calidez de un hogar, una pareja se refugia del mundo para compartir un momento donde el tiempo parece detenerse. Entre copas de vino, miradas cómplices y silencios elocuentes, el piano y la voz de Tatiana Jáuregui se encuentran con la sensibilidad musical del artista peruano Husil para reinterpretar el clásico bolero “Sabor a Mí” en un formato íntimo y acústico. La sala de la casa se convierte en un escenario donde la música y el amor dialogan de manera natural. Cada acorde, cada gesto y cada mirada construyen una atmósfera de cercanía y deseo contenido, evocando la belleza de los pequeños instantes que dan sentido a una historia compartida.",
+   "sinopsis": "En la casa del poeta Jota Mario Arbeláez, una pareja se refugia del mundo mientras Tatiana Jáuregui y el artista peruano Husil reinterpretan Sabor a mí. Entre vino, miradas y silencios, el piano y la voz convierten un instante cotidiano en una experiencia íntima donde la música y el afecto suspenden el tiempo.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/TATIANA-JAUREGUI-HUSIL-SABOR-A-MI-Tatiana-Jauregui.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/FOTO-FRANCO-ZORNOSA-Tatiana-Jauregui.webp"
@@ -1271,14 +1273,14 @@
   },
   {
    "slug": "just-another-bird",
-   "titulo": "Just Another Bird",
+   "titulo": "SOLO UN AVE MÁS",
    "director": "Julián Gómez Reyes",
    "_credito_superior": "Leidy GuzmánProducer Julián Gómez Reyes",
    "pais": "Colombia",
    "anio": null,
    "duracion_texto": "16:30",
    "duracion_min": 17,
-   "sinopsis_en": "Raquelita, a native Colombian dove injured after an accident in the city, finds refuge at Tomás’s window, where the boy accompanies her as she heals. From that encounter, Raquelita begins a poetic journey through the city, discovering characters, lives, details invisible to others, and her place in the world.",
+   "sinopsis": "Tras sufrir un accidente en la ciudad, Raquelita, una paloma colombiana, encuentra refugio en la ventana de Tomás. Mientras se recupera junto al niño, emprende un viaje por calles y tejados que le revela personajes, detalles invisibles y nuevas formas de vida, hasta descubrir su propio lugar en el mundo.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/juntos.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/3c3d36af40-headshot.webp"
@@ -1298,7 +1300,7 @@
    "anio": null,
    "duracion_texto": "01:14:00",
    "duracion_min": 74,
-   "sinopsis": "Tres historias, varias películas que estuvieron a punto de desaparecer: el cine clandestino que se hacía en España en los últimos años del franquismo; Queridos compañeros, la película truncada por el golpe de estado en Chile, y Garras de oro, un clásico colombiano que incomodó al poder. Diana y Manuel emprenden un viaje tras las huellas de las películas y de los protagonistas de su recuperación. En su recorrido por Barcelona, Milán, Santiago de Chile y Cali, las ciudades se revelan como archivos que sugieren otras vidas para las películas. En su viaje, con el intercambio de videocartas e imágenes los investigadores reflexionan sobre las relaciones entre el cine, la política y la memoria, mientras preguntan qué se pierde cuándo una película desaparece y qué se transforma cuando vuelve a la luz. El Cine dentro del cine entrelaza memoria política e historia con un sutil sentido del humor que antes que dar respuestas abre preguntas sobre el lugar del cine hoy.",
+   "sinopsis": "Tres películas que estuvieron a punto de desaparecer conducen a Diana Kuéllar y Manuel Silva por Barcelona, Milán, Santiago de Chile y Cali. Entre archivos, videocartas y protagonistas de su recuperación, el viaje indaga qué pierde una sociedad cuando una película desaparece y cómo el cine transforma la memoria al volver a la luz.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/33-frame2_El-cine-dentro-del-cine-dentro-del-cine.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/director_med_359697.webp"
@@ -1310,14 +1312,14 @@
   },
   {
    "slug": "enemy-in-the-mirror",
-   "titulo": "Enemy in the Mirror",
+   "titulo": "Enemigo en el espejo",
    "director": "Juan Sebastián Caballero",
    "_director_sin_rotulo": true,
    "pais": "",
    "anio": null,
    "duracion_texto": "01:46:32",
    "duracion_min": 107,
-   "sinopsis_en": "Camilo, a young guitarist who is grieving the end of his last relationship and the break-up of his band, faces his greatest fear, being alone. When he meets Sol, a charming woman, he finds apparent relief in a religious cult of which she is a member. Gradually, he becomes more involved in the group, but the contradictions of the cult make him realise that, to find inner peace, he must distance himself from everyone, even Sol, finding in his own reflection the strength he was looking for.",
+   "sinopsis": "Tras el final de su relación y la ruptura de su banda, Camilo teme quedarse solo. La llegada de Sol parece ofrecerle refugio, pero también lo acerca a un culto religioso cuyas contradicciones pronto lo inquietan. Para recuperar la paz, deberá apartarse del grupo y enfrentar al verdadero enemigo: su propio reflejo.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/ENEMY_IN_THE_MIRROR_l_Stills_l_8.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/9cccfe24b8-headshot.webp"
@@ -1336,7 +1338,7 @@
    "anio": null,
    "duracion_texto": "17:00",
    "duracion_min": 17,
-   "sinopsis": "Pirimín, un niño kogui, recibe de regalo una pistola de agua. Esa noche, escucha a su padre manifestar su inconformidad , cuando unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe que hacer con el juguete.",
+   "sinopsis": "Pirimín, un niño kogui, recibe una pistola de agua y descubre en ella la promesa de un juego. Pero esa noche escucha a su padre recordar las armas que obligaron a su comunidad a abandonar el territorio. Desde entonces, el juguete adquiere otro peso y Pirimín deberá decidir qué hacer con él.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/10-frame2_Sukua.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/director_med_285944.webp"
@@ -1355,7 +1357,7 @@
    "anio": null,
    "duracion_texto": "01:42:00",
    "duracion_min": 102,
-   "sinopsis": "La vida desde que nace hasta que muere del escultor RODRIGO ARENAS BETANCOURT",
+   "sinopsis": "Desde sus orígenes campesinos hasta convertirse en uno de los grandes escultores monumentales de Colombia, Rodrigo Arenas Betancourt hizo de la materia una forma de resistencia. A través de sus obras, sus exilios y los episodios que marcaron su vida,",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/D6288277-F62F-490E-8F54-2726ED246770-Gustavo-Nieto-Roa-scaled.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/79855EB3-D4F9-4543-9147-CB16AB450D9E-Gustavo-Nieto-Roa-scaled.webp"
@@ -1374,7 +1376,7 @@
    "anio": null,
    "duracion_texto": "16:48",
    "duracion_min": 17,
-   "sinopsis": ", el período de brutal guerra política entre liberales y conservadores",
+   "sinopsis": "Colombia, 1951. En plena Violencia, dos chulavitas, sicarios al servicio del Gobierno, siguen a un sacerdote durante la noche, convencidos de que los conducirá hasta una cabaña donde se esconden sus víctimas. Al internarse en el bosque, descubrirán un horror mucho más oscuro que cualquiera de sus propios actos.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Still_04.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-14-at-1.31.45-PM.webp"
@@ -1393,7 +1395,7 @@
    "anio": 2025,
    "duracion_texto": "20:00",
    "duracion_min": 20,
-   "sinopsis": "En un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren invita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots capaces de ayudar, proteger y acompañar a las personas. Durante este recorrido inmersivo en realidad virtual, el público descubre robots domésticos, militares, cuidadores, constructores y exploradores, además de sorprendentes vehículos voladores y de búsqueda. Entre ellos se encuentran CLU y RAM, dos robots que más adelante tendrán un papel fundamental en la historia de Floppy.",
+   "sinopsis": "En un futuro cercano, la tecnología robótica forma parte de la vida cotidiana. El ingeniero Ren invita al visitante a explorar Productrónica, una extraordinaria fábrica dedicada a crear robots capaces de ayudar, proteger y acompañar a las personas.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/portada3-Jacobo-Rendon.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/JackoPic-Jacobo-Rendon.webp"
@@ -1413,7 +1415,7 @@
    "anio": null,
    "duracion_texto": "4:53",
    "duracion_min": 5,
-   "sinopsis": "José, junto a su grupo de agricultores, comienza a labrar la tierra en los pastizales donde vive Gualicho, un aguará guazú. Al sentir que su tierra ha sido invadida, Gualicho arruina sus cultivos, lo que desata un largo conflicto. La situación empeora y cuando, finalmente brota un cultivo, Gualicho enfurece y entra a la casa de José. El aguará guazú destruye todo su interior y ataca a uno de los hijos de José.",
+   "sinopsis": "José y un grupo de agricultores llegan a los pastizales donde vive Gualicho, un aguará guazú decidido a proteger su hogar. El enfrentamiento entre ambos despierta una antigua leyenda y transforma al hijo de José en un lobizón. Una fábula sobre la naturaleza, el respeto y el alcance de nuestros actos.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Tierras-de-Lobeira_EXPORT-FINAL_CON-SONIDO_01579-Carla-Barrionuevo.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/directoras-Carla-Barrionuevo.webp"
@@ -1433,7 +1435,7 @@
    "anio": null,
    "duracion_texto": "14:00",
    "duracion_min": 14,
-   "sinopsis": "En las montañas de Colombia, Juan, un niño indígena campesino de 13 años, se ve obligado a huir del monstruo de la guerra. En su escape, entre el silbido de las balas y la guía de sus ancestros, despierta un poder ancestral que lo transforma en Tuktu: un Taita de fuerza extraordinaria destinado a volver para sembrar la paz en la tierra.",
+   "sinopsis": "Obligado a huir de la guerra, Juan, un niño indígena campesino, atraviesa las montañas guiado por la memoria de sus ancestros. En medio del peligro, despierta una fuerza que lo transforma en Tuktu, un poderoso taita llamado a proteger la tierra y regresar para sembrar la paz donde antes creció la violencia.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/43-frame1_Tuktu-Padre-Maiz.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/director_med_338586.webp"
@@ -1451,7 +1453,7 @@
    "anio": 2026,
    "duracion_texto": "11:00",
    "duracion_min": 11,
-   "sinopsis_en": "Guided by the spirit of her deceased cat, a reclusive healer and midwife devoted to preserving life suffers a profound inner rupture when a desperate young woman arrives at her door. During a night of raw confrontation and pain, Alba comes to realize that helping someone means walking beside them—not making their choices for them.",
+   "sinopsis": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/06-e1789141051417.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/01-1.webp"
@@ -1469,7 +1471,7 @@
    "anio": null,
    "duracion_texto": "07:28",
    "duracion_min": 7,
-   "sinopsis_en": "Often, what disgusts us is also what attracts us and sometimes this fascination can lead us to reflect on subjects we’re mostly afraid of… like death. However death is part of us just like life, they coexist in a natural sense. Perhaps, this is why we should not be so afraid of it.",
+   "sinopsis": "Lo que nos repugna también puede fascinarnos. A través de imágenes animadas, esta obra se aproxima a la muerte desde la curiosidad y cuestiona el temor que la rodea. Un recorrido sensible por el límite entre atracción y rechazo, donde vida y muerte aparecen como partes inseparables de un mismo ciclo.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/4.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/bb7255efcd-headshot.webp"
@@ -1488,7 +1490,7 @@
    "anio": null,
    "duracion_texto": "20:00",
    "duracion_min": 20,
-   "sinopsis": "Leseph es un niño consagrado al estudio del piano que lo interpreta como muy pocos chiquillos lo hacen. Estudia todo el tiempo y su pasión por el instrumento no lo deja distraerse con nada diferente a la música. Luna su amiga, quien lo admira con ternura profunda, añora estar más tiempo con Leseph, pero él desprecia cruelmente su admiración, pues no quiere dejar de tocar piano para ir a jugar con ella. Toda la vida estuvo sentado al instrumento, dejando de lado su vida social y en especial el amor de pareja, que lo pudo haber entretenido, alejándolo de su verdadero amor: el piano. En su madurez sigue rechazando el insistente llamado de muchas mujeres que ven en él a alguien excepcional; pero en un concierto que finaliza con su obra preferida de Franz Liszt “Sueño de amor” (obra que el compositor hizo en honor al amor incondicional maduro), conoce a Ariadna quién con tan solo una mirada y recordándole a Luna, su amiga de infancia, le muestra un camino infinito hacia el sentimiento que nunca había querido dar paso. Toda su relación sentimental la basa en su desbordado amor por la música. El amor por la pareja, por el piano y por la naturaleza lo llevan a choques de bipolaridad que van degradando su relación amatoria, pero Ariadna incondicional y amorosa no deja de servirle siempre.",
+   "sinopsis": "Leseph ha dedicado su vida al piano, dejando el amor en segundo plano. Cuando conoce a Ariadna, la música se convierte en el lenguaje de una relación atravesada por la entrega, la pérdida y las decisiones no tomadas. Con el paso del tiempo, deberá reconocer cuál de sus grandes amores permanece realmente a su lado.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/FOTO6-APV-Andres-Quintero-scaled.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/FOTO-ANDRES-QUINTERO-Andres-Quintero.webp"
@@ -1507,7 +1509,7 @@
    "anio": null,
    "duracion_texto": "08:49",
    "duracion_min": 9,
-   "sinopsis": "La medicina de la montaña es el soplo que da origen a la vida, ahí nace y se conserva el agua, ahí la vida brota en abundancia. Las abuelas con su sabiduría han aprendido esto y han enseñado el secreto de las plantas de generación en generación, han desarrollado un lenguaje para trasmitir este conocimiento por medio de diseños que quedan plasmados en los tejidos, y su relación con la naturaleza es noble y poderosa. Ellas saben que el monte es curandero porque en la naturaleza está contenida una memoria mucho más amplia que la nuestra.",
+   "sinopsis": "En las montañas del Putumayo, las abuelas guardan el conocimiento medicinal de las plantas y lo transmiten de generación en generación. Sus tejidos convierten la relación con el agua, la chagra y el monte en símbolos vivos. Un acercamiento sensible a una naturaleza que conserva una memoria más antigua y extensa que la nuestra.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/Carmela-Agreda-Andres-Felipe-Velasco-scaled.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/Laguna-paramo-Andres-Felipe-Velasco-scaled.webp"
@@ -1525,7 +1527,7 @@
    "anio": null,
    "duracion_texto": "1:39:00",
    "duracion_min": 99,
-   "sinopsis": "En las Cataratas del Iguazú, una voz ancestral contempla el paso del tiempo, las fronteras, las culturas y la memoria. Mientras los seres humanos cambian nombres, ciudades y valores, el agua continúa cayendo. Aguas Grandes es un poema audiovisual sobre aquello que permanece y nuestra inevitable pertenencia al paisaje.",
+   "sinopsis": "En las Cataratas del Iguazú, el agua observa el paso de las personas, las culturas y las fronteras. Mientras los nombres y los valores cambian, ella continúa cayendo y guardando memoria. Un poema audiovisual que invierte nuestra mirada sobre el paisaje para recordarnos que nunca hemos estado fuera de él.",
    "afiches": [
     "https://villadelcine.com/wp-content/uploads/2026/09/AGUAS_GRANDES_STILL_09_VERTICAL_9x16-1.webp",
     "https://villadelcine.com/wp-content/uploads/2026/09/AGUAS_GRANDES_DIRECTOR_PRESLY_MENDOZA_01_COLOR.webp"
@@ -1535,6 +1537,27 @@
     "https://www.instagram.com/what_liba_felt?utm_source=ig_web_button_share_sheet&#038;igsh=ZDNlZDc0MzIxNw=="
    ],
    "_src": "https://villadelcine.com/festival-2024-2/aguas-grandes/"
+  },
+  {
+   "slug": "toma-10",
+   "titulo": "TOMA 10",
+   "director": "ÁNGEL CAMPAÑA",
+   "_credito_superior": "Dir. Ángel Campaña y Juan D. Arias",
+   "_duracion_arriba": "0:07:00",
+   "pais": "Colombia",
+   "anio": null,
+   "duracion_texto": "07:00",
+   "duracion_min": 7,
+   "sinopsis": "Una directora lucha por convencer a la estrella de su serie de aceptar la muerte de su personaje, pero para lograrlo deberá enfrentarlo al miedo que se esconde detrás de su ego, y acompañarlo a atreverse a descubrir qué tipo de actor quiere ser.",
+   "afiches": [
+    "https://villadelcine.com/wp-content/uploads/2026/10/Toma-10-Still-1.webp",
+    "https://villadelcine.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-01-at-1.58.56-PM-768x1024.webp",
+    "https://villadelcine.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-01-at-1.58.56-PM-1-954x1024.webp"
+   ],
+   "instagram": [
+    "https://www.instagram.com/allegrista/"
+   ],
+   "_src": "https://villadelcine.com/festival-2024-2/toma-10/"
   }
  ]
 }

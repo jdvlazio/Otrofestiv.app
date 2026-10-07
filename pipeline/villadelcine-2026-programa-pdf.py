@@ -52,13 +52,16 @@ from lib import provenance
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ST = f'{REPO}/festivals/staging'
 PDF = f'{REPO}/fuentes/villadelcine-2026/programacion-2026.pdf'
-URL = ('https://villadelcine.com/wp-content/uploads/2026/09/'
-       'Programacion-caminos-del-tiempo-2026_compressed.pdf')
+URL = ('https://villadelcine.com/wp-content/uploads/2026/10/'
+       'Programacion-caminos-del-tiempo-2026.pdf')
 OUT = f'{ST}/villadelcine-2026-parrilla.json'
 
-PAGS_RETICULA = (2, 11)
-PAGS_FICHAS = (12, 50)
-PAGS_ACADEMICA = (51, 60)
+# EL PDF DEL 6 OCT (fechas nuevas, 14–17 oct, tras el aplazamiento por el incendio):
+# 68 páginas y todo corrido una página — p2 es una portadilla nueva. Además trae
+# Eventos Emblemáticos (p13–18), Territorios (p47–53) y X-plora Cine (p54–56).
+PAGS_RETICULA = (3, 12)
+PAGS_FICHAS = (13, 56)
+PAGS_ACADEMICA = (57, 61)
 ANCHO_PT = 609.75          # el ancho de página del PDF, para pasar píxeles a puntos
 DPI = 150
 
@@ -66,11 +69,18 @@ RE_HORA = re.compile(r'^(\d{1,2}):(\d{2})\s*([ap])\.?m\.?$|^(\d{1,2}):(\d{2})\s*
 RE_HORA_ROTA = re.compile(r'^(\d{1,2}):(\d{2})\s*.?\.?m\.?$')
 # El número del día viaja pegado a lo que toque: «23 MIÉRCOLES» en una página
 # y «24 MAÑANA» en la siguiente. Se ancla al número, no a la palabra.
+# LA EDICIÓN APLAZADA: del 23–26 de septiembre al 14–17 de OCTUBRE (PDF del 6 oct)
+MES = '10'
+# TEXTO QUE NADIE VE: sobra de una versión anterior en Canva, en la capa de texto
+# y sin pintar. En el PDF del 6 oct cae sobre «Territorios: BOYACÁ EN LOS
+# CAMPOS» y sobre la cola muda de ENCRUCIJADAS (viernes, Galería Pérez Rojas).
+FANTASMA = {'#Hija'}
+DIA_DE_SEMANA = {'MIÉRCOLES': '14', 'JUEVES': '15', 'VIERNES': '16', 'SÁBADO': '17'}
 RE_DIA = re.compile(r'^(\d{1,2})\s+(MIÉRCOLES|JUEVES|VIERNES|SÁBADO|DOMINGO|LUNES|MARTES'
                     r'|MAÑANA|TARDE|NOCHE|TARDE/NOCHE)$')
 # Lo que nunca es contenido de una celda: la marca del festival y los rótulos
 # de la propia tabla.
-MARCA = re.compile(r'^(12|FESTIVAL|VILLA|DEL CINE|Septiembre|Lugar|Hora|caminos|del|tiempo|'
+MARCA = re.compile(r'^(12|FESTIVAL|VILLA|DEL CINE|Septiembre|Octubre|Lugar|Hora|caminos|del|tiempo|'
                    r'MAÑANA|TARDE|NOCHE|TARDE/NOCHE|LUNES|MARTES|MIÉRCOLES|JUEVES|VIERNES|'
                    r'SÁBADO|DOMINGO)$', re.I)
 
@@ -303,7 +313,7 @@ def bloques(ls, cols, horas, cajas):
         # de la línea caiga dentro, con un margen de media fila.
         dentro = [ls[i][5] for i, c in reparto.items() if c == (x0, y0, x1, y1)
                   and not MARCA.match(ls[i][5]) and not hora_reticula(ls[i][5])
-                  and not RE_DIA.match(ls[i][5])]
+                  and not RE_DIA.match(ls[i][5]) and ls[i][5] not in FANTASMA]
         if not dentro:
             # UNA CELDA PUEDE NO TENER TEXTO Y AUN ASÍ SER PROGRAMACIÓN. Al pie
             # del viernes tarde hay un trozo rosa mudo: es el arranque de
@@ -319,7 +329,7 @@ def bloques(ls, cols, horas, cajas):
         if fin == ini:
             # una franja de una sola fila —el reconocimiento a Mabel Teresa
             # Velosa— cae entera dentro de un rótulo: dura hasta el siguiente.
-            siguientes = [h for _, h in centros if h > ini]
+            siguientes = [h for _, h in lineas_fila if h > ini]
             fin = min(siguientes) if siguientes else ini
         regs.append({'sede': sede, 'hora': ini, 'hasta': fin,
                      'duracion_min': _mins(fin) - _mins(ini),
@@ -343,7 +353,14 @@ def parrilla():
         for _, _, _, _, _, t in pl:
             m = RE_DIA.match(t)
             if m:
-                dia = f'2026-09-{int(m.group(1)):02d}'
+                dia = f'2026-{MES}-{int(m.group(1)):02d}'
+        # EL NÚMERO QUE NO LLEGA A LA CAPA DE TEXTO (PDF del 6 oct): en la
+        # página del miércoles, «14 TARDE» cae fuera de la caja de la página y
+        # solo queda «MIÉRCOLES». En esta edición cada día de la semana es uno
+        # solo, así que el nombre basta.
+        if not dia:
+            sem = next((DIA_DE_SEMANA[t] for *_, t in pl if t in DIA_DE_SEMANA), '')
+            dia = f'2026-{MES}-{sem}' if sem else ''
         if not dia:
             fuera.append(pag)
             continue
@@ -374,6 +391,20 @@ def _pegar_colgajos(bs):
         cont = [b for b in resto if b['dia'] == c['dia'] and b['sede'] == c['sede']
                 and b['pagina'] == c['pagina'] + 1
                 and _mins(b['hora']) - _mins(c['hasta']) <= 15]
+        # LA COLA, AL REVÉS (PDF del 6 oct): el trozo mudo está ARRIBA de una
+        # página y es el final del bloque que la anterior dejó en el pie —
+        # ENCRUCIJADAS, viernes en la Galería Pérez Rojas: la tarde la dibuja
+        # hasta las 6:45 y la noche, muda, de 7:00 a 7:15—. Se le alarga el fin.
+        previo = [b for b in resto if b['dia'] == c['dia'] and b['sede'] == c['sede']
+                  and b['pagina'] == c['pagina'] - 1
+                  and 0 <= _mins(c['hora']) - _mins(b['hasta']) <= 15]
+        if not cont and previo:
+            b = max(previo, key=lambda b: b['hasta'])
+            b['_termina_despues'] = (f"la página {c['pagina']} dibuja su final hasta las "
+                                     f"{c['hasta']}, sin rótulo")
+            b['hasta'] = max(b['hasta'], c['hasta'])
+            b['duracion_min'] = _mins(b['hasta']) - _mins(b['hora'])
+            continue
         if cont:
             b = min(cont, key=lambda b: b['hora'])
             b['_empieza_antes'] = (f"la página {c['pagina']} dibuja su arranque a las "

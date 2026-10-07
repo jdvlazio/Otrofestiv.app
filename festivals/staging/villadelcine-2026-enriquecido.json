@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-21"
+  "capturado": "2026-10-07"
  },
  "obras": [
   {
@@ -15,29 +15,57 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 19,
    "pais_tmdb": "Mexico, Venezuela",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Alivios",
    "title_en": "Reliefs",
    "lbSlug": "reliefs-2025",
-   "_director": "Juan Manuel Gonzalez Fernandez",
-   "_sondeado": "2026-09-20"
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Alivios",
+   "_director": "Juan M. González",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/alivios.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Aquileo Venganza",
    "tmdb_id": 763505,
    "titulo_original": "Aquileo Venganza",
    "poster_path": "/mXCGGdMME08txqo5PkYNuW95lUk.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia",
    "synopsis_en": "In the begining of 20th century, after the \"thousand days war\", the country was devastated. Gunmen to the service of land lords attack small land owners to get their lands. Aquileo is the only one who survives, and promises to take revenge on the killers.",
    "genero": "Western",
    "anio_tmdb": 1968,
    "duracion_tmdb": 70,
    "pais_tmdb": "Colombia, Venezuela",
+   "lbSlug": "aquileo-venganza",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Aquileo Venganza",
-   "lbSlug": "aquileo-venganza",
    "_director": "Ciro Durán",
-   "_sondeado": "2026-09-20"
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Aquileo Venganza",
+     "tmdb_id": 763505,
+     "poster": "/assets/filcmar-2026/aquileo-venganza.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "aquileo-venganza",
+     "sinopsis": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia"
+    }
+   ],
+   "_sinopsis_de": "ya publicada en filcmar-2026",
+   "poster": "/assets/villadelcine-2026/aquileo-venganza.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Arenas",
+   "_ya_publicada": [
+    {
+     "festival": "itagui-2026",
+     "titulo": "ARENAS: la vida y obra del Escultor Rodrigo Arenas Betancour",
+     "sinopsis": "Invitados: Gustavo Nieto Roa (productor), Claudia Parra (productora), John Bolívar (Director), equipo de producción y familiares del maestro Rodrigo Arenas Betancourt."
+    }
+   ],
+   "_verificado": "ya publicada en itagui-2026: se reusa su sinopsis",
+   "sinopsis": "Invitados: Gustavo Nieto Roa (productor), Claudia Parra (productora), John Bolívar (Director), equipo de producción y familiares del maestro Rodrigo Arenas Betancourt."
   },
   {
    "titulo": "Autokar",
@@ -50,11 +78,65 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 18,
    "pais_tmdb": "Belgium, France",
+   "lbSlug": "autokar",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Autokar",
-   "lbSlug": "autokar",
-   "_director": "Sylwia SZKIŁĄDŹ",
-   "_sondeado": "2026-09-20"
+   "_director": "Sylwia Szkiłądź",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/autokar.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Borrachos mientras escuchamos las gotas caer",
+   "tmdb_id": 1743109,
+   "titulo_original": "Borrachos mientras escuchamos las gotas caer",
+   "poster_path": "/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
+   "synopsis_es": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 22,
+   "pais_tmdb": "",
+   "lbSlug": "borrachos-mientras-escuchamos-las-gotas-caer",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Borrachos mientras escuchamos las gotas caer",
+   "_director": "Santiago Gómez",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "biff-2026",
+     "titulo": "Borrachos Mientras Escuchamos las Gotas Caer",
+     "tmdb_id": 1743109,
+     "poster": "/assets/biff-2026/borrachos-mientras-escuchamos-las-gotas-caer.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "borrachos-mientras-escuchamos-las-gotas-caer",
+     "sinopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC)."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Borrachos mientras escuchamos las gotas caer",
+     "tmdb_id": 1743109,
+     "poster": "https://image.tmdb.org/t/p/w500/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
+     "sinopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC)."
+    }
+   ],
+   "poster": "/assets/villadelcine-2026/borrachos-mientras-escuchamos-las-gotas-caer.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Catatumbo: casa del trueno, memoria y dignidad",
+   "_ya_publicada": [
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Catatumbo: Casa del trueno, memoria y dignidad",
+     "poster": "/assets/siembrafest/catatumbo-casa-del-trueno-memoria-y-dignidad.jpg",
+     "posterSource": "oficial"
+    }
+   ],
+   "poster": "/assets/siembrafest/catatumbo-casa-del-trueno-memoria-y-dignidad.jpg",
+   "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche"
   },
   {
    "titulo": "Comparsa",
@@ -71,7 +153,9 @@
    "_busqueda": "Comparsa",
    "lbSlug": "comparsa-2025",
    "_director": "Vickie Curtis y Doug Anderson",
-   "_sondeado": "2026-09-20"
+   "_sondeado": "2026-09-20",
+   "poster": "/assets/villadelcine-2026/comparsa.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Con la mano arriba",
@@ -84,11 +168,51 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
+   "lbSlug": "con-la-mano-arriba",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Con la mano arriba",
-   "lbSlug": "con-la-mano-arriba",
-   "_director": "Miguel Angel Ordoñez",
-   "_sondeado": "2026-09-20"
+   "_director": "Miguel A. Ordóñez",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/con-la-mano-arriba.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Estepa",
+   "tmdb_id": 1249468,
+   "titulo_original": "Estepa",
+   "poster_path": "/gxij511teoxQITyvd4TnhndZhCJ.jpg",
+   "synopsis_es": "En el día de su cumpleaños, el joven policía Francisco Revenga es enviado a cubrir una guardia en el medio de la estepa patagónica. En el trayecto se detiene en busca de provisiones en el Mustang, una mezcla de almacén y prostíbulo. Allí, graban en su celular imágenes comprometedoras ligadas a la trata de personas. Durante las horas siguientes, Francisco descubrirá el video que lo obligará a tomar una decisión trascendental en su vida.",
+   "synopsis_en": "On his birthday, young police officer Francisco Revenga is sent on duty in the middle of the Patagonian steppe. During the journey, he stops for supplies at the Mustang, a combination general store and brothel. There, compromising images related to human trafficking are recorded on his cell phone. Over the next few hours, Francisco will discover the video, which will force him to make a life-altering decision.",
+   "genero": "Crimen",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 86,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "estepa",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Estepa",
+   "_director": "Mario Benito",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/estepa.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Gestos de refugio",
+   "tmdb_id": 1713804,
+   "titulo_original": "Refugiar el gesto",
+   "poster_path": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "title_en": "Sheltering Gestures",
+   "lbSlug": "sheltering-gestures",
+   "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct la titula en español («Gestos de refugio»); en septiembre era «Sheltering Gestures», mismos directores Adrián Villa-Dávila y Andrés Prado y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
+   "_director": "Adrián Villa-Dávila y Andrés Prado",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/villadelcine-2026/gestos-de-refugio.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "I don't know what to do",
@@ -101,11 +225,30 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 5,
    "pais_tmdb": "Spain",
+   "lbSlug": "i-dont-know-what-to-do",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "I don't know what to do",
-   "lbSlug": "i-dont-know-what-to-do",
-   "_director": "Akshita Tyagi, Leyla Belarbi, Lia Macruz",
-   "_sondeado": "2026-09-20"
+   "_director": "Akshita Tyagi, Leyla Belarbi y Lia Macruz",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/i-don-t-know-what-to-do.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "KMKZ: salvaje, libre y valiente",
+   "tmdb_id": 1570393,
+   "titulo_original": "KMKZ: Salvaje, Libre y valiente",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Camila, a lonely communications student, is rescued from a street robbery by Ruco and Alexa, two young anarchists and street vendors who use violence to punish thieves in the neighborhood. Through her growing friendship with Ruco and Alexa, Camila meets Leonor, with whom she forms a deep mother-daughter bond. When Leonor mysteriously disappears, Camila embarks on a quest to discover the truth.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 88,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "kmkz-salvaje-libre-y-valiente",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "KMKZ: salvaje, libre y valiente",
+   "_director": "Andrés Hernández",
+   "_sondeado": "2026-10-07"
   },
   {
    "titulo": "La Mona",
@@ -123,10 +266,58 @@
    "title_en": "Heat Wave",
    "lbSlug": "heat-wave-2025",
    "_director": "Laura Gutiérrez Ardila",
-   "_sondeado": "2026-09-21"
+   "_sondeado": "2026-09-21",
+   "poster": "/assets/siembrafest/la-mona.jpg",
+   "_afiche": "ya publicada en popayan-2026: se reusa su afiche"
   },
   {
-   "titulo": "La Presencia de Blanco",
+   "titulo": "La independencia",
+   "tmdb_id": 1595081,
+   "titulo_original": "La independencia",
+   "poster_path": null,
+   "synopsis_es": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+   "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Colombia",
+   "title_en": "Independence",
+   "lbSlug": "independence-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La independencia",
+   "_director": "John Agudelo",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La independencia",
+     "poster": "/assets/ficdeh/la-independencia.jpg",
+     "posterSource": "custom",
+     "lbSlug": "independence-2025",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
+    },
+    {
+     "festival": "leviza-2026",
+     "titulo": "La Independencia",
+     "poster": "/assets/leviza/LaIndependencia.webp",
+     "posterSource": "custom",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La independencia",
+     "poster": "/assets/ficdeh/la-independencia.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "independence-2025",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en ficdeh-2026",
+   "poster": "/assets/ficdeh/la-independencia.jpg",
+   "_afiche": "ya publicada en ficdeh-2026: se reusa su afiche"
+  },
+  {
+   "titulo": "La presencia del blanco",
    "tmdb_id": 1753870,
    "titulo_original": "La presencia de blanco",
    "poster_path": "/FY7g3jBG8FBa1wACimnMJshGWl.jpg",
@@ -136,11 +327,30 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 9,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La Presencia de Blanco",
    "lbSlug": "la-presencia-de-blanco",
-   "_director": "Nestor Javier Serpa Perez",
-   "_sondeado": "2026-09-21"
+   "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct escribe «del Blanco» (antes «de Blanco») y abrevia al director (Néstor J. Serpa) y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
+   "_director": "Néstor J. Serpa",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/villadelcine-2026/la-presencia-del-blanco.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Le jeune Sofiane",
+   "tmdb_id": 1745500,
+   "titulo_original": "Le jeune Sofiane",
+   "poster_path": "/vGtbeI3rWf3PmlALufKZQdugi82.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After the sudden death of her son, a grieving mother begins to question the circumstances surrounding the tragedy.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "le-jeune-sofiane",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Fabien Ara",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/le-jeune-sofiane.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Llueve sobre Babel",
@@ -158,7 +368,78 @@
    "title_en": "Rains Over Babel",
    "lbSlug": "rains-over-babel",
    "_director": "Gala del Sol",
-   "_sondeado": "2026-09-21"
+   "_sondeado": "2026-09-21",
+   "poster": "/assets/villadelcine-2026/llueve-sobre-babel.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Maleza",
+   "_ya_publicada": [
+    {
+     "festival": "girardota-2026",
+     "titulo": "Maleza",
+     "poster": "/assets/villadelcine-2026/maleza.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "Guiada por el espíritu de su gato fallecido, una sanadora y partera solitaria, dedicada a preservar la vida, sufre una profunda conmoción interior cuando una joven desesperada llega a su puerta. Durante una noche de cruda confrontación y dolor, Alba comprende que ayudar a alguien significa caminar a su lado, no tomar decisiones por esa persona."
+    }
+   ],
+   "_verificado": "ya publicada en girardota-2026: se reusa su sinopsis",
+   "sinopsis": "Guiada por el espíritu de su gato fallecido, una sanadora y partera solitaria, dedicada a preservar la vida, sufre una profunda conmoción interior cuando una joven desesperada llega a su puerta. Durante una noche de cruda confrontación y dolor, Alba comprende que ayudar a alguien significa caminar a su lado, no tomar decisiones por esa persona."
+  },
+  {
+   "titulo": "Memoria colectiva",
+   "tmdb_id": 1520364,
+   "titulo_original": "Memoria Colectiva",
+   "poster_path": "/m7AYGrMWkbSoAGptuSs9fErArAZ.jpg",
+   "synopsis_es": "En 1983, durante los días más oscuros del Conflicto Armado en el Perú, soldados enmascarados entraron a la casa de Adelina y se llevaron a su marido por la fuerza. Ella nunca lo volvería a ver. Después de toparse con el silencio y el desprecio de la policía y el ejército, Adelina une fuerzas con las muchas otras mujeres que perdieron a sus maridos e hijos a manos de soldados que se suponía debían protegerlas. Juntos, se unirán para encontrarlos y exigir justicia.",
+   "synopsis_en": "In 1983, during the darkest days of Peru’s Armed Conflict with the Shining Path, masked soldiers entered Adelina’s home and took her husband away. She would never see him again. After facing silence and contempt from the Police and Army, Adelina joins forces with the many other women who have lost their husbands and children to soldiers who were supposed to protect them. Together, they will unite to demand justice.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Peru, France",
+   "lbSlug": "memoria-colectiva",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Memoria colectiva",
+   "_director": "Cristina Colmenares",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Memoria Colectiva"
+    }
+   ],
+   "poster": "/assets/villadelcine-2026/memoria-colectiva.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "No es el Fin del Mundo",
+   "tmdb_id": 1786249,
+   "titulo_original": "No es el fin del mundo",
+   "poster_path": "/uXSPdeZFuzGHDA3bU9HOz9dTcZC.jpg",
+   "synopsis_es": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "",
+   "lbSlug": "no-es-el-fin-del-mundo",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "No es el Fin del Mundo",
+   "_director": "Sebastián Flórez",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "No es el Fin del Mundo",
+     "tmdb_id": 1786249,
+     "poster": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "no-es-el-fin-del-mundo",
+     "sinopsis": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi."
+    }
+   ],
+   "poster": "/assets/villadelcine-2026/no-es-el-fin-del-mundo.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "O Cravista",
@@ -171,46 +452,141 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 104,
    "pais_tmdb": "Brazil",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "O Cravista",
    "title_en": "The Harpsichordist",
    "lbSlug": "the-harpsichordist",
-   "_director": "Luiz Eduardo Ozóri",
-   "_sondeado": "2026-09-20"
+   "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct escribe al director «Luis E. Ozório» (antes «Luiz Eduardo Ozóri») y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
+   "_director": "Luis E. Ozório",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/villadelcine-2026/o-cravista.jpg",
+   "posterSource": "tmdb"
   },
   {
-   "titulo": "Sheltering Gestures",
-   "tmdb_id": 1713804,
-   "titulo_original": "Refugiar el gesto",
-   "poster_path": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 11,
-   "pais_tmdb": "Colombia",
+   "titulo": "Quazar",
+   "tmdb_id": 1786245,
+   "titulo_original": "Quazar",
+   "poster_path": "/inGdoVO6vMggIKmo8gX4dqHaM5p.jpg",
+   "synopsis_es": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
+   "synopsis_en": "",
+   "genero": "Ciencia ficción",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "",
+   "lbSlug": "quazar",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Sheltering Gestures",
-   "lbSlug": "sheltering-gestures",
-   "_director": "Adrián Villa-Dávila y Andrés Prado",
-   "_sondeado": "2026-09-21"
+   "_busqueda": "Quazar",
+   "_director": "William Alejandro Vargas Daza",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Quazar",
+     "tmdb_id": 1786245,
+     "poster": "/assets/fantasmagoria-2026/quazar.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "quazar",
+     "sinopsis": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial."
+    }
+   ],
+   "poster": "/assets/villadelcine-2026/quazar.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Que el cielo nos perdone",
+   "tmdb_id": 1565878,
+   "titulo_original": "Que el cielo nos perdone",
+   "poster_path": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+   "synopsis_es": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "que-el-cielo-nos-perdone",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Andrés Buitrago",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Que El Cielo Nos Perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/fantasmagoria-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "ficma-2026",
+     "titulo": "Que el cielo nos perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/ficma/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Que el cielo nos perdone",
+     "poster": "https://image.tmdb.org/t/p/w500/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    }
+   ],
+   "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Sierra: El álbum mortuorio",
+   "tmdb_id": 1789536,
+   "titulo_original": "Sierra: El Álbum Mortuorio",
+   "poster_path": "/qmlvRr0FpcmQCbCjRGBYrK7tgUY.jpg",
+   "synopsis_es": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "sierra-el-album-mortuorio",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Carlos Ortíz",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Sukua",
    "tmdb_id": 1456197,
    "titulo_original": "Sukua",
    "poster_path": "/c9L2gGEmdYtV5EDEX6Cvo3Nf3p4.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Pirimín, un niño kogui, recibe una pistola de agua como regalo. Esa noche, escucha a su padre manifestar su inconformidad, al recordar que unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe qué hacer con el juguete.",
    "synopsis_en": "When a Kogui child is given a water pistol as a toy, he begins to explore the familiar spaces of his territory with a new look. Sukua fluidly travels through the exterior and interior of his home and some remnants of the community that are manifested around the child's playful sweetness. The strangeness of the toy adds, at the same time, childish tenderness and noisy tension by its contrast with the environment and by the suggested violence that morally affects the father.",
    "genero": "",
    "anio_tmdb": 2025,
    "duracion_tmdb": 16,
    "pais_tmdb": "Colombia",
+   "lbSlug": "sukua",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Sukua",
-   "lbSlug": "sukua",
-   "_director": "Omar Ospina Giraldo",
-   "_sondeado": "2026-09-20"
+   "_director": "Omar E. Ospina",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Sukua",
+     "poster": "/assets/ficdeh/sukua.jpg",
+     "posterSource": "custom",
+     "lbSlug": "sukua",
+     "sinopsis": "Pirimín, un niño kogui, recibe una pistola de agua como regalo. Esa noche, escucha a su padre manifestar su inconformidad, al recordar que unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe qué hacer con el juguete."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Sukua"
+    }
+   ],
+   "_sinopsis_de": "ya publicada en ficdeh-2026",
+   "poster": "/assets/villadelcine-2026/sukua.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "TV Entreaberta",
@@ -227,7 +603,9 @@
    "_busqueda": "TV Entreaberta",
    "lbSlug": "tv-entreaberta",
    "_director": "Mateus Compart",
-   "_sondeado": "2026-09-20"
+   "_sondeado": "2026-09-20",
+   "poster": "/assets/villadelcine-2026/tv-entreaberta.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Tuktu, Padre Maíz",
@@ -240,12 +618,13 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 13,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Tuktu, Padre Maíz",
    "title_en": "Tuktu, Father Maize",
    "lbSlug": "tuktu-father-maize",
-   "_director": "Mauricio Prieto Muriel",
-   "_sondeado": "2026-09-20"
+   "_verificado": "declarada a mano: misma declaración que en Popayán: TMDB escribe «Mauricio Pietro Muriel» (sic) y el PDF «Mauricio Prieto»; el nombre de pila solo no alcanza para el candado estricto. Título idéntico y 2025.",
+   "_director": "Mauricio Prieto",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Un poeta",
@@ -263,10 +642,43 @@
    "title_en": "A Poet",
    "lbSlug": "a-poet",
    "_director": "Simón Mesa Soto",
-   "_sondeado": "2026-09-21"
+   "_sondeado": "2026-09-21",
+   "poster": "/assets/villadelcine-2026/un-poeta.jpg",
+   "posterSource": "tmdb"
   },
   {
-   "titulo": "Via Crusis",
+   "titulo": "Una torreta en llamas",
+   "tmdb_id": 1363835,
+   "titulo_original": "Una torreta en llamas",
+   "poster_path": "/3cNwWjjxumwywtnTtddn8zZknYP.jpg",
+   "synopsis_es": "Después de un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una campesina que vive en las montañas con su nieta Alejandra. Mientras Yolanda decide si debe ayudarlo, arriesgando sus vidas, Alejandra intentará acercarse a él para confirmar sus propias sospechas.",
+   "synopsis_en": "After a violent confrontation, a wounded soldier is rescued by Yolanda, an elderly farmer, and her granddaughter Alejandra. The two live on a ranch in the middle of the mountains, where they hide the young man. While Yolanda decides whether they should help him, putting their own lives at risk, Alejandra will try to confirm her own suspicions.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 22,
+   "pais_tmdb": "Mexico",
+   "title_en": "A Burning Turret",
+   "lbSlug": "a-burning-turret",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una torreta en llamas",
+   "_director": "Humberto Flores",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Una torreta en llamas",
+     "poster": "/assets/ficdeh/the-steak-el-bistec.jpg",
+     "posterSource": "custom",
+     "lbSlug": "a-burning-turret",
+     "sinopsis": "Después de un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una campesina que vive en las montañas con su nieta Alejandra. Mientras Yolanda decide si debe ayudarlo, arriesgando sus vidas, Alejandra intentará acercarse a él para confirmar sus propias sospechas."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en ficdeh-2026",
+   "poster": "/assets/villadelcine-2026/una-torreta-en-llamas.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Via Crucis",
    "tmdb_id": 1697484,
    "titulo_original": "Via Crusis",
    "poster_path": "/oah91XZPUpKP0XhJ8NMa5p85pAC.jpg",
@@ -276,11 +688,12 @@
    "anio_tmdb": 0,
    "duracion_tmdb": 3,
    "pais_tmdb": "",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Via Crusis",
    "lbSlug": "via-crusis",
-   "_director": "Juan Lucas Neira",
-   "_sondeado": "2026-09-20"
+   "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct corrige «Via Crusis» a «Via Crucis» y abrevia al director (Juan L. Neira) y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
+   "_director": "Juan L. Neira",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/villadelcine-2026/via-crucis.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Witch and frog",
@@ -297,7 +710,9 @@
    "_busqueda": "Witch and frog",
    "lbSlug": "witch-and-frog",
    "_director": "Anastasia Provotorova",
-   "_sondeado": "2026-09-20"
+   "_sondeado": "2026-09-20",
+   "poster": "/assets/villadelcine-2026/witch-and-frog.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "a body without a horse?",
@@ -314,7 +729,9 @@
    "_busqueda": "a body without a horse?",
    "lbSlug": "a-body-without-a-horse",
    "_director": "Lara Fuke",
-   "_sondeado": "2026-09-20"
+   "_sondeado": "2026-09-20",
+   "poster": "/assets/villadelcine-2026/a-body-without-a-horse.jpg",
+   "posterSource": "tmdb"
   }
  ],
  "verificadas": {
@@ -328,28 +745,44 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 19,
    "pais_tmdb": "Mexico, Venezuela",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Alivios",
    "title_en": "Reliefs",
    "lbSlug": "reliefs-2025",
-   "_director": "Juan Manuel Gonzalez Fernandez",
-   "_sondeado": "2026-09-20"
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Alivios",
+   "_director": "Juan M. González",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/alivios.jpg",
+   "posterSource": "tmdb"
   },
   "Aquileo Venganza": {
    "tmdb_id": 763505,
    "titulo_original": "Aquileo Venganza",
    "poster_path": "/mXCGGdMME08txqo5PkYNuW95lUk.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia",
    "synopsis_en": "In the begining of 20th century, after the \"thousand days war\", the country was devastated. Gunmen to the service of land lords attack small land owners to get their lands. Aquileo is the only one who survives, and promises to take revenge on the killers.",
    "genero": "Western",
    "anio_tmdb": 1968,
    "duracion_tmdb": 70,
    "pais_tmdb": "Colombia, Venezuela",
+   "lbSlug": "aquileo-venganza",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Aquileo Venganza",
-   "lbSlug": "aquileo-venganza",
    "_director": "Ciro Durán",
-   "_sondeado": "2026-09-20"
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Aquileo Venganza",
+     "tmdb_id": 763505,
+     "poster": "/assets/filcmar-2026/aquileo-venganza.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "aquileo-venganza",
+     "sinopsis": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia"
+    }
+   ],
+   "_sinopsis_de": "ya publicada en filcmar-2026",
+   "poster": "/assets/villadelcine-2026/aquileo-venganza.jpg",
+   "posterSource": "tmdb"
   },
   "Autokar": {
    "tmdb_id": 1405315,
@@ -361,11 +794,51 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 18,
    "pais_tmdb": "Belgium, France",
+   "lbSlug": "autokar",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Autokar",
-   "lbSlug": "autokar",
-   "_director": "Sylwia SZKIŁĄDŹ",
-   "_sondeado": "2026-09-20"
+   "_director": "Sylwia Szkiłądź",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/autokar.jpg",
+   "posterSource": "tmdb"
+  },
+  "Borrachos mientras escuchamos las gotas caer": {
+   "tmdb_id": 1743109,
+   "titulo_original": "Borrachos mientras escuchamos las gotas caer",
+   "poster_path": "/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
+   "synopsis_es": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC).",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 22,
+   "pais_tmdb": "",
+   "lbSlug": "borrachos-mientras-escuchamos-las-gotas-caer",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Borrachos mientras escuchamos las gotas caer",
+   "_director": "Santiago Gómez",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "biff-2026",
+     "titulo": "Borrachos Mientras Escuchamos las Gotas Caer",
+     "tmdb_id": 1743109,
+     "poster": "/assets/biff-2026/borrachos-mientras-escuchamos-las-gotas-caer.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "borrachos-mientras-escuchamos-las-gotas-caer",
+     "sinopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC)."
+    },
+    {
+     "festival": "cinemancia-2026",
+     "titulo": "Borrachos mientras escuchamos las gotas caer",
+     "tmdb_id": 1743109,
+     "poster": "https://image.tmdb.org/t/p/w500/3R73xUlBIBGXY5q8i9HZYLEidLy.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "borrachos-escuchando-las-gotas-de-lluvia",
+     "sinopsis": "Retrata la historia de León Ramírez e Isabel Velásquez, dos ancianos de casi 90 años que atienden una tienda de barrio para sobrevivir. El cortometraje aborda de forma íntima y crítica temas como la resignación de la vejez, el abandono a la tercera edad, el desarraigo territorial y los impactos colaterales del conflicto armado en Colombia (abusos del Estado, ELN y AUC)."
+    }
+   ],
+   "poster": "/assets/villadelcine-2026/borrachos-mientras-escuchamos-las-gotas-caer.jpg",
+   "posterSource": "tmdb"
   },
   "Comparsa": {
    "tmdb_id": 1480404,
@@ -381,7 +854,9 @@
    "_busqueda": "Comparsa",
    "lbSlug": "comparsa-2025",
    "_director": "Vickie Curtis y Doug Anderson",
-   "_sondeado": "2026-09-20"
+   "_sondeado": "2026-09-20",
+   "poster": "/assets/villadelcine-2026/comparsa.jpg",
+   "posterSource": "tmdb"
   },
   "Con la mano arriba": {
    "tmdb_id": 1745797,
@@ -393,11 +868,49 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 11,
    "pais_tmdb": "Colombia",
+   "lbSlug": "con-la-mano-arriba",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Con la mano arriba",
-   "lbSlug": "con-la-mano-arriba",
-   "_director": "Miguel Angel Ordoñez",
-   "_sondeado": "2026-09-20"
+   "_director": "Miguel A. Ordóñez",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/con-la-mano-arriba.jpg",
+   "posterSource": "tmdb"
+  },
+  "Estepa": {
+   "tmdb_id": 1249468,
+   "titulo_original": "Estepa",
+   "poster_path": "/gxij511teoxQITyvd4TnhndZhCJ.jpg",
+   "synopsis_es": "En el día de su cumpleaños, el joven policía Francisco Revenga es enviado a cubrir una guardia en el medio de la estepa patagónica. En el trayecto se detiene en busca de provisiones en el Mustang, una mezcla de almacén y prostíbulo. Allí, graban en su celular imágenes comprometedoras ligadas a la trata de personas. Durante las horas siguientes, Francisco descubrirá el video que lo obligará a tomar una decisión trascendental en su vida.",
+   "synopsis_en": "On his birthday, young police officer Francisco Revenga is sent on duty in the middle of the Patagonian steppe. During the journey, he stops for supplies at the Mustang, a combination general store and brothel. There, compromising images related to human trafficking are recorded on his cell phone. Over the next few hours, Francisco will discover the video, which will force him to make a life-altering decision.",
+   "genero": "Crimen",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 86,
+   "pais_tmdb": "Argentina",
+   "lbSlug": "estepa",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Estepa",
+   "_director": "Mario Benito",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/estepa.jpg",
+   "posterSource": "tmdb"
+  },
+  "Gestos de refugio": {
+   "tmdb_id": 1713804,
+   "titulo_original": "Refugiar el gesto",
+   "poster_path": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "title_en": "Sheltering Gestures",
+   "lbSlug": "sheltering-gestures",
+   "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct la titula en español («Gestos de refugio»); en septiembre era «Sheltering Gestures», mismos directores Adrián Villa-Dávila y Andrés Prado y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
+   "_director": "Adrián Villa-Dávila y Andrés Prado",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/villadelcine-2026/gestos-de-refugio.jpg",
+   "posterSource": "tmdb"
   },
   "I don't know what to do": {
    "tmdb_id": 1560415,
@@ -409,11 +922,29 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 5,
    "pais_tmdb": "Spain",
+   "lbSlug": "i-dont-know-what-to-do",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "I don't know what to do",
-   "lbSlug": "i-dont-know-what-to-do",
-   "_director": "Akshita Tyagi, Leyla Belarbi, Lia Macruz",
-   "_sondeado": "2026-09-20"
+   "_director": "Akshita Tyagi, Leyla Belarbi y Lia Macruz",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/i-don-t-know-what-to-do.jpg",
+   "posterSource": "tmdb"
+  },
+  "KMKZ: salvaje, libre y valiente": {
+   "tmdb_id": 1570393,
+   "titulo_original": "KMKZ: Salvaje, Libre y valiente",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "Camila, a lonely communications student, is rescued from a street robbery by Ruco and Alexa, two young anarchists and street vendors who use violence to punish thieves in the neighborhood. Through her growing friendship with Ruco and Alexa, Camila meets Leonor, with whom she forms a deep mother-daughter bond. When Leonor mysteriously disappears, Camila embarks on a quest to discover the truth.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 88,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "kmkz-salvaje-libre-y-valiente",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "KMKZ: salvaje, libre y valiente",
+   "_director": "Andrés Hernández",
+   "_sondeado": "2026-10-07"
   },
   "La Mona": {
    "tmdb_id": 1444298,
@@ -430,9 +961,56 @@
    "title_en": "Heat Wave",
    "lbSlug": "heat-wave-2025",
    "_director": "Laura Gutiérrez Ardila",
-   "_sondeado": "2026-09-21"
+   "_sondeado": "2026-09-21",
+   "poster": "/assets/siembrafest/la-mona.jpg",
+   "_afiche": "ya publicada en popayan-2026: se reusa su afiche"
   },
-  "La Presencia de Blanco": {
+  "La independencia": {
+   "tmdb_id": 1595081,
+   "titulo_original": "La independencia",
+   "poster_path": null,
+   "synopsis_es": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia.",
+   "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 19,
+   "pais_tmdb": "Colombia",
+   "title_en": "Independence",
+   "lbSlug": "independence-2025",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "La independencia",
+   "_director": "John Agudelo",
+   "_sondeado": "2026-10-07",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "La independencia",
+     "poster": "/assets/ficdeh/la-independencia.jpg",
+     "posterSource": "custom",
+     "lbSlug": "independence-2025",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
+    },
+    {
+     "festival": "leviza-2026",
+     "titulo": "La Independencia",
+     "poster": "/assets/leviza/LaIndependencia.webp",
+     "posterSource": "custom",
+     "lbSlug": "⚠️ LB PENDIENTE"
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "La independencia",
+     "poster": "/assets/ficdeh/la-independencia.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "independence-2025",
+     "sinopsis": "Cecilia, una mujer abnegada de 52 años, decide romper con su vida de sacrificios tras años de soportar la irresponsabilidad de su hijo y la ingratitud de su familia, buscando finalmente su independencia."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en ficdeh-2026",
+   "poster": "/assets/ficdeh/la-independencia.jpg",
+   "_afiche": "ya publicada en ficdeh-2026: se reusa su afiche"
+  },
+  "La presencia del blanco": {
    "tmdb_id": 1753870,
    "titulo_original": "La presencia de blanco",
    "poster_path": "/FY7g3jBG8FBa1wACimnMJshGWl.jpg",
@@ -442,11 +1020,29 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 9,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "La Presencia de Blanco",
    "lbSlug": "la-presencia-de-blanco",
-   "_director": "Nestor Javier Serpa Perez",
-   "_sondeado": "2026-09-21"
+   "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct escribe «del Blanco» (antes «de Blanco») y abrevia al director (Néstor J. Serpa) y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
+   "_director": "Néstor J. Serpa",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/villadelcine-2026/la-presencia-del-blanco.jpg",
+   "posterSource": "tmdb"
+  },
+  "Le jeune Sofiane": {
+   "tmdb_id": 1745500,
+   "titulo_original": "Le jeune Sofiane",
+   "poster_path": "/vGtbeI3rWf3PmlALufKZQdugi82.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "After the sudden death of her son, a grieving mother begins to question the circumstances surrounding the tragedy.",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "le-jeune-sofiane",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Fabien Ara",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/le-jeune-sofiane.jpg",
+   "posterSource": "tmdb"
   },
   "Llueve sobre Babel": {
    "tmdb_id": 1388977,
@@ -463,7 +1059,62 @@
    "title_en": "Rains Over Babel",
    "lbSlug": "rains-over-babel",
    "_director": "Gala del Sol",
-   "_sondeado": "2026-09-21"
+   "_sondeado": "2026-09-21",
+   "poster": "/assets/villadelcine-2026/llueve-sobre-babel.jpg",
+   "posterSource": "tmdb"
+  },
+  "Memoria colectiva": {
+   "tmdb_id": 1520364,
+   "titulo_original": "Memoria Colectiva",
+   "poster_path": "/m7AYGrMWkbSoAGptuSs9fErArAZ.jpg",
+   "synopsis_es": "En 1983, durante los días más oscuros del Conflicto Armado en el Perú, soldados enmascarados entraron a la casa de Adelina y se llevaron a su marido por la fuerza. Ella nunca lo volvería a ver. Después de toparse con el silencio y el desprecio de la policía y el ejército, Adelina une fuerzas con las muchas otras mujeres que perdieron a sus maridos e hijos a manos de soldados que se suponía debían protegerlas. Juntos, se unirán para encontrarlos y exigir justicia.",
+   "synopsis_en": "In 1983, during the darkest days of Peru’s Armed Conflict with the Shining Path, masked soldiers entered Adelina’s home and took her husband away. She would never see him again. After facing silence and contempt from the Police and Army, Adelina joins forces with the many other women who have lost their husbands and children to soldiers who were supposed to protect them. Together, they will unite to demand justice.",
+   "genero": "Animación",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 12,
+   "pais_tmdb": "Peru, France",
+   "lbSlug": "memoria-colectiva",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Memoria colectiva",
+   "_director": "Cristina Colmenares",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Memoria Colectiva"
+    }
+   ],
+   "poster": "/assets/villadelcine-2026/memoria-colectiva.jpg",
+   "posterSource": "tmdb"
+  },
+  "No es el Fin del Mundo": {
+   "tmdb_id": 1786249,
+   "titulo_original": "No es el fin del mundo",
+   "poster_path": "/uXSPdeZFuzGHDA3bU9HOz9dTcZC.jpg",
+   "synopsis_es": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "",
+   "lbSlug": "no-es-el-fin-del-mundo",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "No es el Fin del Mundo",
+   "_director": "Sebastián Flórez",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "No es el Fin del Mundo",
+     "tmdb_id": 1786249,
+     "poster": "/assets/fantasmagoria-2026/no-es-el-fin-del-mundo.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "no-es-el-fin-del-mundo",
+     "sinopsis": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi."
+    }
+   ],
+   "poster": "/assets/villadelcine-2026/no-es-el-fin-del-mundo.jpg",
+   "posterSource": "tmdb"
   },
   "O Cravista": {
    "tmdb_id": 1621972,
@@ -475,44 +1126,137 @@
    "anio_tmdb": 2026,
    "duracion_tmdb": 104,
    "pais_tmdb": "Brazil",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "O Cravista",
    "title_en": "The Harpsichordist",
    "lbSlug": "the-harpsichordist",
-   "_director": "Luiz Eduardo Ozóri",
-   "_sondeado": "2026-09-20"
+   "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct escribe al director «Luis E. Ozório» (antes «Luiz Eduardo Ozóri») y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
+   "_director": "Luis E. Ozório",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/villadelcine-2026/o-cravista.jpg",
+   "posterSource": "tmdb"
   },
-  "Sheltering Gestures": {
-   "tmdb_id": 1713804,
-   "titulo_original": "Refugiar el gesto",
-   "poster_path": "/bHXUP6sTxTX46cmGdVLDh9eLxqB.jpg",
-   "synopsis_es": "",
-   "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 11,
-   "pais_tmdb": "Colombia",
+  "Quazar": {
+   "tmdb_id": 1786245,
+   "titulo_original": "Quazar",
+   "poster_path": "/inGdoVO6vMggIKmo8gX4dqHaM5p.jpg",
+   "synopsis_es": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial.",
+   "synopsis_en": "",
+   "genero": "Ciencia ficción",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 20,
+   "pais_tmdb": "",
+   "lbSlug": "quazar",
    "_verificado": "director✓ + año/duración",
-   "_busqueda": "Sheltering Gestures",
-   "lbSlug": "sheltering-gestures",
-   "_director": "Adrián Villa-Dávila y Andrés Prado",
-   "_sondeado": "2026-09-21"
+   "_busqueda": "Quazar",
+   "_director": "William Alejandro Vargas Daza",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Quazar",
+     "tmdb_id": 1786245,
+     "poster": "/assets/fantasmagoria-2026/quazar.jpg",
+     "posterSource": "oficial",
+     "lbSlug": "quazar",
+     "sinopsis": "Kim (27) es una joven bogotana que acude a terapia psicológica para superar una relación fallida. Durante la terapia cuenta como es visitada en las noches por Ana (29), su ex, en forma de monstruo. Kim narra como Ana empezó a comportarse diferente hasta convertirse en “un extraterrestre”. Finalmente, Kim entiende que ese monstruo es su recuerdo de Ana y logra confrontarlo. Primero a través de la violencia y luego pidiéndole que se vaya en su nave espacial."
+    }
+   ],
+   "poster": "/assets/villadelcine-2026/quazar.jpg",
+   "posterSource": "tmdb"
+  },
+  "Que el cielo nos perdone": {
+   "tmdb_id": 1565878,
+   "titulo_original": "Que el cielo nos perdone",
+   "poster_path": "/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+   "synopsis_es": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "que-el-cielo-nos-perdone",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Andrés Buitrago",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Que El Cielo Nos Perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/fantasmagoria-2026/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas –asesinos a sueldo pagados por el gobierno– acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "ficma-2026",
+     "titulo": "Que el cielo nos perdone",
+     "tmdb_id": 1565878,
+     "poster": "/assets/ficma/que-el-cielo-nos-perdone.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    },
+    {
+     "festival": "siembrafest-2026",
+     "titulo": "Que el cielo nos perdone",
+     "poster": "https://image.tmdb.org/t/p/w500/fyvT3ZlgNJO5lswCC8XdXkXFVnB.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "que-el-cielo-nos-perdone",
+     "sinopsis": "Colombia, 1951: En medio de La Violencia, el período de brutal guerra política entre liberales y conservadores, un par de chulavitas —asesinos a sueldo pagados por el gobierno— acechan a un sacerdote en la oscuridad de la noche, esperando que los conduzca a la cabaña en el bosque en donde se esconden sus próximas víctimas. Pero el horror que encontrarán allí es mil veces peor que el dolor que pensaban infligir."
+    }
+   ],
+   "poster": "/assets/villadelcine-2026/que-el-cielo-nos-perdone.jpg",
+   "posterSource": "tmdb"
+  },
+  "Sierra: El álbum mortuorio": {
+   "tmdb_id": 1789536,
+   "titulo_original": "Sierra: El Álbum Mortuorio",
+   "poster_path": "/qmlvRr0FpcmQCbCjRGBYrK7tgUY.jpg",
+   "synopsis_es": "La desaparición de Natalia, una joven de 19 años, sacude a Pueblo Blanco. Las autoridades, en su búsqueda, llegan a un bar clandestino donde dos hermanas sobreviven bajo el abuso de su tío y de una clientela perversa. Cuando deciden ayudar a un hombre extraño hallado en el bosque, desatan una cadena de violencia y rituales donde el comisario, su compañero y los propios habitantes se convierten en presas de la muerte y de una oscura secta. En medio del horror, queda una verdad latente: lo que habita en la oscuridad... alguna vez también pidió ayuda.",
+   "synopsis_en": "",
+   "genero": "Terror",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "sierra-el-album-mortuorio",
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Carlos Ortíz",
+   "_sondeado": "2026-10-06",
+   "poster": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg",
+   "posterSource": "tmdb"
   },
   "Sukua": {
    "tmdb_id": 1456197,
    "titulo_original": "Sukua",
    "poster_path": "/c9L2gGEmdYtV5EDEX6Cvo3Nf3p4.jpg",
-   "synopsis_es": "",
+   "synopsis_es": "Pirimín, un niño kogui, recibe una pistola de agua como regalo. Esa noche, escucha a su padre manifestar su inconformidad, al recordar que unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe qué hacer con el juguete.",
    "synopsis_en": "When a Kogui child is given a water pistol as a toy, he begins to explore the familiar spaces of his territory with a new look. Sukua fluidly travels through the exterior and interior of his home and some remnants of the community that are manifested around the child's playful sweetness. The strangeness of the toy adds, at the same time, childish tenderness and noisy tension by its contrast with the environment and by the suggested violence that morally affects the father.",
    "genero": "",
    "anio_tmdb": 2025,
    "duracion_tmdb": 16,
    "pais_tmdb": "Colombia",
+   "lbSlug": "sukua",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Sukua",
-   "lbSlug": "sukua",
-   "_director": "Omar Ospina Giraldo",
-   "_sondeado": "2026-09-20"
+   "_director": "Omar E. Ospina",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Sukua",
+     "poster": "/assets/ficdeh/sukua.jpg",
+     "posterSource": "custom",
+     "lbSlug": "sukua",
+     "sinopsis": "Pirimín, un niño kogui, recibe una pistola de agua como regalo. Esa noche, escucha a su padre manifestar su inconformidad, al recordar que unas armas similares los obligaron a abandonar sus asentamientos. Ahora Pirimín no sabe qué hacer con el juguete."
+    },
+    {
+     "festival": "ficmontanas-2026",
+     "titulo": "Sukua"
+    }
+   ],
+   "_sinopsis_de": "ya publicada en ficdeh-2026",
+   "poster": "/assets/villadelcine-2026/sukua.jpg",
+   "posterSource": "tmdb"
   },
   "TV Entreaberta": {
    "tmdb_id": 1661195,
@@ -528,7 +1272,9 @@
    "_busqueda": "TV Entreaberta",
    "lbSlug": "tv-entreaberta",
    "_director": "Mateus Compart",
-   "_sondeado": "2026-09-20"
+   "_sondeado": "2026-09-20",
+   "poster": "/assets/villadelcine-2026/tv-entreaberta.jpg",
+   "posterSource": "tmdb"
   },
   "Tuktu, Padre Maíz": {
    "tmdb_id": 1592955,
@@ -540,12 +1286,13 @@
    "anio_tmdb": 2025,
    "duracion_tmdb": 13,
    "pais_tmdb": "Colombia",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Tuktu, Padre Maíz",
    "title_en": "Tuktu, Father Maize",
    "lbSlug": "tuktu-father-maize",
-   "_director": "Mauricio Prieto Muriel",
-   "_sondeado": "2026-09-20"
+   "_verificado": "declarada a mano: misma declaración que en Popayán: TMDB escribe «Mauricio Pietro Muriel» (sic) y el PDF «Mauricio Prieto»; el nombre de pila solo no alcanza para el candado estricto. Título idéntico y 2025.",
+   "_director": "Mauricio Prieto",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
+   "posterSource": "tmdb"
   },
   "Un poeta": {
    "tmdb_id": 1465563,
@@ -562,9 +1309,41 @@
    "title_en": "A Poet",
    "lbSlug": "a-poet",
    "_director": "Simón Mesa Soto",
-   "_sondeado": "2026-09-21"
+   "_sondeado": "2026-09-21",
+   "poster": "/assets/villadelcine-2026/un-poeta.jpg",
+   "posterSource": "tmdb"
   },
-  "Via Crusis": {
+  "Una torreta en llamas": {
+   "tmdb_id": 1363835,
+   "titulo_original": "Una torreta en llamas",
+   "poster_path": "/3cNwWjjxumwywtnTtddn8zZknYP.jpg",
+   "synopsis_es": "Después de un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una campesina que vive en las montañas con su nieta Alejandra. Mientras Yolanda decide si debe ayudarlo, arriesgando sus vidas, Alejandra intentará acercarse a él para confirmar sus propias sospechas.",
+   "synopsis_en": "After a violent confrontation, a wounded soldier is rescued by Yolanda, an elderly farmer, and her granddaughter Alejandra. The two live on a ranch in the middle of the mountains, where they hide the young man. While Yolanda decides whether they should help him, putting their own lives at risk, Alejandra will try to confirm her own suspicions.",
+   "genero": "Drama",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 22,
+   "pais_tmdb": "Mexico",
+   "title_en": "A Burning Turret",
+   "lbSlug": "a-burning-turret",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Una torreta en llamas",
+   "_director": "Humberto Flores",
+   "_sondeado": "2026-10-06",
+   "_ya_publicada": [
+    {
+     "festival": "ficdeh-2026",
+     "titulo": "Una torreta en llamas",
+     "poster": "/assets/ficdeh/the-steak-el-bistec.jpg",
+     "posterSource": "custom",
+     "lbSlug": "a-burning-turret",
+     "sinopsis": "Después de un violento enfrentamiento, un soldado herido es rescatado por Yolanda, una campesina que vive en las montañas con su nieta Alejandra. Mientras Yolanda decide si debe ayudarlo, arriesgando sus vidas, Alejandra intentará acercarse a él para confirmar sus propias sospechas."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en ficdeh-2026",
+   "poster": "/assets/villadelcine-2026/una-torreta-en-llamas.jpg",
+   "posterSource": "tmdb"
+  },
+  "Via Crucis": {
    "tmdb_id": 1697484,
    "titulo_original": "Via Crusis",
    "poster_path": "/oah91XZPUpKP0XhJ8NMa5p85pAC.jpg",
@@ -574,11 +1353,12 @@
    "anio_tmdb": 0,
    "duracion_tmdb": 3,
    "pais_tmdb": "",
-   "_verificado": "director✓ + año/duración",
-   "_busqueda": "Via Crusis",
    "lbSlug": "via-crusis",
-   "_director": "Juan Lucas Neira",
-   "_sondeado": "2026-09-20"
+   "_verificado": "declarada a mano: verificada el 19–21 sep por el candado (director ✓ + año/duración) con el título de septiembre; el PDF del 6 oct corrige «Via Crusis» a «Via Crucis» y abrevia al director (Juan L. Neira) y por eso ya no casa sola. Es la misma obra: mismo director y misma sección.",
+   "_director": "Juan L. Neira",
+   "_sondeado": "2026-10-07",
+   "poster": "/assets/villadelcine-2026/via-crucis.jpg",
+   "posterSource": "tmdb"
   },
   "Witch and frog": {
    "tmdb_id": 1772239,
@@ -594,7 +1374,9 @@
    "_busqueda": "Witch and frog",
    "lbSlug": "witch-and-frog",
    "_director": "Anastasia Provotorova",
-   "_sondeado": "2026-09-20"
+   "_sondeado": "2026-09-20",
+   "poster": "/assets/villadelcine-2026/witch-and-frog.jpg",
+   "posterSource": "tmdb"
   },
   "a body without a horse?": {
    "tmdb_id": 1659047,
@@ -610,13 +1392,14 @@
    "_busqueda": "a body without a horse?",
    "lbSlug": "a-body-without-a-horse",
    "_director": "Lara Fuke",
-   "_sondeado": "2026-09-20"
+   "_sondeado": "2026-09-20",
+   "poster": "/assets/villadelcine-2026/a-body-without-a-horse.jpg",
+   "posterSource": "tmdb"
   }
  },
  "sin_ficha": [
   "1 Paseo por la Ciudad",
   "4 minutes",
-  "A Sweet Miracle",
   "A pesar de mí",
   "Aguapanela",
   "Aguas Grandes",
@@ -626,60 +1409,54 @@
   "Benditos los Viejos",
   "Beyond the end",
   "Boyacá en los campos",
-  "Catatumbo: House of Thunder, Memory, and Dignity",
-  "Collective Memory",
+  "Catatumbo: casa del trueno, memoria y dignidad",
   "Cos de vidre",
-  "Cuadrileros, orgullo y legado",
-  "Cuba 2001. Imágenes del futuro I",
+  "Cuadrilleros, orgullo y legado",
+  "Cuba 2001: imágenes del futuro",
   "Después de tanto amor",
   "Destellos",
   "Diablo Ballena",
-  "Drunk hearing the rain drops fall",
+  "Duelo",
   "Eclipses",
   "Ecos",
-  "El cine dentro del cine dentro del cine",
+  "El cine dentro del cine",
+  "El fósil mágico",
+  "El último campeón",
+  "En medio",
   "Encrucijadas",
   "Enemigo en el espejo",
-  "Extinction",
+  "Extinción",
   "FAR",
   "Final Act",
   "Floppy the robot - El último contacto.",
-  "Grief",
+  "Fragmentos perdidos de una convulsión",
   "Génesis",
   "HUMAN",
-  "In Between",
-  "Independence",
-  "Just Another Bird",
-  "KMKZ: Wild, free and brave.",
   "Korebaju Pai Rekocho",
   "LENS",
   "La Sombrilla de Mamá",
   "La silla",
+  "La sinfonía Guanentá",
   "La última historia",
   "Language Of The Wind",
-  "Le jeune Sofiane",
   "Life is a Chessboard; Every Move is Final",
-  "Lost Fragments of a Seizure",
   "Maleza",
   "Manos Rojas",
   "Memorias del Alba",
   "Metamorfosis",
   "Mi tesoro",
-  "Momentos en movimiento. Primeros pasos del ballet en Colombia",
+  "Momentos en movimiento: primeros pasos del ballet en Colombia",
   "Monte curandero",
   "Mucho Gusto",
   "Nahuales",
-  "No es el Fin del Mundo",
   "No se fía, ni aunque lloren",
   "On Hold",
   "Planeta",
   "Poderosas",
   "Portales",
   "Prompt Zero",
-  "Pros and Cons of Daydreaming",
+  "Pros y contras de soñar despierto",
   "Protecting Our Territory 360",
-  "Quazar",
-  "Que el cielo nos perdone",
   "Quimera",
   "Raíces",
   "Resistencias",
@@ -690,17 +1467,15 @@
   "Sabor a mí (acústico / bolero jazz)",
   "Señales",
   "Shorts",
-  "Sierra: El álbum mortuorio",
-  "Steppe",
+  "Solo un ave más",
   "Sun Coffee",
-  "The Guanentá Symphony",
-  "The Last Champion",
   "They Call It Sausage",
   "Tierras de Lobeiras",
   "Tiro Libre",
-  "Tormenta en Llamas",
-  "Tránsito",
+  "Toma 10",
+  "Tránsitos",
   "Umbrales",
+  "Un dulce milagro",
   "VOLAR",
   "Voces",
   "X-Plora Cine",
@@ -708,368 +1483,332 @@
  ],
  "_sin_ficha_sondeo": {
   "1 Paseo por la Ciudad": {
-   "director": "Sara Coello Coello y Alejandro Acuña Sevilla",
-   "fecha": "2026-09-20"
+   "director": "Sara Coello y Alejandro Acuña",
+   "fecha": "2026-10-06"
   },
   "4 minutes": {
    "director": "Rogerio Troiani",
-   "fecha": "2026-09-20"
-  },
-  "A Sweet Miracle": {
-   "director": "María José Chaparro",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "A pesar de mí": {
-   "director": "Thomás Mejía Lozano",
-   "fecha": "2026-09-20"
+   "director": "Thomás Mejía",
+   "fecha": "2026-10-06"
   },
   "Aguapanela": {
    "director": "Juan José Narváez",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "Aguas Grandes": {
-   "director": "Presley Mendoza",
-   "fecha": "2026-09-20"
+   "director": "Presly Mendoza",
+   "fecha": "2026-10-06"
   },
   "Amor a primera vista": {
    "director": "Andrés Quintero",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Arenas": {
    "director": "John Bolívar",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Behind the Door": {
    "director": "Leonardo Valenti",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "Benditos los Viejos": {
-   "director": "Camilo Duque Zuluaga y Santiago Rubio",
-   "fecha": "2026-09-20"
+   "director": "Camilo Duque y Santiago Rubio",
+   "fecha": "2026-10-06"
   },
   "Beyond the end": {
    "director": "Sara Sangiorgio",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "Boyacá en los campos": {
    "director": "",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
-  "Catatumbo: House of Thunder, Memory, and Dignity": {
+  "Catatumbo: casa del trueno, memoria y dignidad": {
    "director": "Jhonattan Sarmiento",
-   "fecha": "2026-09-20"
-  },
-  "Collective Memory": {
-   "director": "Cristina Colmenares",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-07"
   },
   "Cos de vidre": {
-   "director": "Marc Comabella Navarro",
-   "fecha": "2026-09-20"
+   "director": "Marc Comabella",
+   "fecha": "2026-10-06"
   },
-  "Cuadrileros, orgullo y legado": {
-   "director": "Fabián Enrique Moreno Correa",
-   "fecha": "2026-09-20"
+  "Cuadrilleros, orgullo y legado": {
+   "director": "Fabián E. Moreno",
+   "fecha": "2026-10-07"
   },
-  "Cuba 2001. Imágenes del futuro I": {
-   "director": "Riqui Moreno Bolívar",
-   "fecha": "2026-09-20"
+  "Cuba 2001: imágenes del futuro": {
+   "director": "Felipe Moreno",
+   "fecha": "2026-10-07"
   },
   "Después de tanto amor": {
    "director": "Mercedes Oviedo",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "Destellos": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Diablo Ballena": {
-   "director": "Camilo Alfredo Barón Riveros",
-   "fecha": "2026-09-21"
+   "director": "Camilo Barón",
+   "fecha": "2026-10-06"
   },
-  "Drunk hearing the rain drops fall": {
-   "director": "Santiago Gómez Ramírez",
-   "fecha": "2026-09-20"
+  "Duelo": {
+   "director": "Nicolás Patiño y Andrés Cely",
+   "fecha": "2026-10-07"
   },
   "Eclipses": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Ecos": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
-  "El cine dentro del cine dentro del cine": {
+  "El cine dentro del cine": {
    "director": "Diana Kuéllar y Manuel Silva",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-07"
+  },
+  "El fósil mágico": {
+   "director": "Estudiantes IE Nueva Generación (Sáchica, Boyacá)",
+   "fecha": "2026-10-07"
+  },
+  "El último campeón": {
+   "director": "Daniel J. Parra",
+   "fecha": "2026-10-07"
+  },
+  "En medio": {
+   "director": "Carlos A. Paniagua",
+   "fecha": "2026-10-07"
   },
   "Encrucijadas": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Enemigo en el espejo": {
-   "director": "Julián Camilo Sánchez",
-   "fecha": "2026-09-21"
+   "director": "Julián C. Sánchez",
+   "fecha": "2026-10-06"
   },
-  "Extinction": {
+  "Extinción": {
    "director": "Frank Benítez",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "FAR": {
-   "director": "We are central asia collective",
-   "fecha": "2026-09-20"
+   "director": "We Are Central Asia Collective",
+   "fecha": "2026-10-06"
   },
   "Final Act": {
-   "director": "Babi Astrolfi y Lisa Soares",
-   "fecha": "2026-09-20"
+   "director": "Babi Astolfi y Lisa Soares",
+   "fecha": "2026-10-06"
   },
   "Floppy the robot - El último contacto.": {
-   "director": "Jacobo Rendon",
-   "fecha": "2026-09-20"
+   "director": "Jacobo Rendón",
+   "fecha": "2026-10-06"
   },
-  "Grief": {
-   "director": "Nicolas Patiño Hortua y Andrés Santiago Cely Orjuela",
-   "fecha": "2026-09-20"
+  "Fragmentos perdidos de una convulsión": {
+   "director": "Michael Martinez",
+   "fecha": "2026-10-07"
   },
   "Génesis": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "HUMAN": {
-   "director": "Debora Bergamini",
-   "fecha": "2026-09-20"
-  },
-  "In Between": {
-   "director": "Carlos Andrés Paniagua",
-   "fecha": "2026-09-21"
-  },
-  "Independence": {
-   "director": "John Agudelo",
-   "fecha": "2026-09-21"
-  },
-  "Just Another Bird": {
-   "director": "Julián Gómez Reyes",
-   "fecha": "2026-09-20"
-  },
-  "KMKZ: Wild, free and brave.": {
-   "director": "Andrés Hernández",
-   "fecha": "2026-09-20"
+   "director": "Débora Bergamini",
+   "fecha": "2026-10-06"
   },
   "Korebaju Pai Rekocho": {
-   "director": "William Javier Gutiérrez Vargas",
-   "fecha": "2026-09-20"
+   "director": "William J. Gutiérrez",
+   "fecha": "2026-10-06"
   },
   "LENS": {
-   "director": "Eduardo Rodriguez",
-   "fecha": "2026-09-20"
+   "director": "Eduardo Rodríguez",
+   "fecha": "2026-10-06"
   },
   "La Sombrilla de Mamá": {
    "director": "Mateo Forero",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "La silla": {
-   "director": "Clara García",
-   "fecha": "2026-09-20"
+   "director": "Clara García y Mariano Reinaldos",
+   "fecha": "2026-10-06"
+  },
+  "La sinfonía Guanentá": {
+   "director": "Victor Jarmillo",
+   "fecha": "2026-10-07"
   },
   "La última historia": {
    "director": "Eberto Manotas y Mauro Andrade",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "Language Of The Wind": {
    "director": "Shimataver Igbawua",
-   "fecha": "2026-09-20"
-  },
-  "Le jeune Sofiane": {
-   "director": "Fabien Ara",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "Life is a Chessboard; Every Move is Final": {
-   "director": "Wang zhi-zhong",
-   "fecha": "2026-09-20"
-  },
-  "Lost Fragments of a Seizure": {
-   "director": "Michael Martínez",
-   "fecha": "2026-09-20"
+   "director": "Wang Zhi-zhong",
+   "fecha": "2026-10-06"
   },
   "Maleza": {
-   "director": "Nicolle Estrada Diaz y Marcela Palacio Montoya",
-   "fecha": "2026-09-20"
+   "director": "Nicolle Estrada y Marcela Palacio",
+   "fecha": "2026-10-06"
   },
   "Manos Rojas": {
-   "director": "Julian Camilo Monroy",
-   "fecha": "2026-09-20"
+   "director": "Julián C. Monroy",
+   "fecha": "2026-10-06"
   },
   "Memorias del Alba": {
-   "director": "Aldair Acosta Moctezuma",
-   "fecha": "2026-09-20"
+   "director": "Aldair Acosta",
+   "fecha": "2026-10-06"
   },
   "Metamorfosis": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Mi tesoro": {
-   "director": "Dayana Gonzalez y Brian Congolez.",
-   "fecha": "2026-09-20"
+   "director": "Dayana González y Brian Congolez",
+   "fecha": "2026-10-06"
   },
-  "Momentos en movimiento. Primeros pasos del ballet en Colombia": {
+  "Momentos en movimiento: primeros pasos del ballet en Colombia": {
    "director": "Marybel Acevedo",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-07"
   },
   "Monte curandero": {
-   "director": "Andrés Felipe Velasco",
-   "fecha": "2026-09-20"
+   "director": "Andrés F. Velasco",
+   "fecha": "2026-10-06"
   },
   "Mucho Gusto": {
    "director": "Cintia Obando",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "Nahuales": {
    "director": "Alejandro Cervantes",
-   "fecha": "2026-09-21"
-  },
-  "No es el Fin del Mundo": {
-   "director": "Santiago Medina",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "No se fía, ni aunque lloren": {
-   "director": "Natalia Hernández Sánchez",
-   "fecha": "2026-09-20"
+   "director": "Natalia Hernández",
+   "fecha": "2026-10-06"
   },
   "On Hold": {
    "director": "Krishna Kumar Shukla",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "Planeta": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Poderosas": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Portales": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Prompt Zero": {
    "director": "Tomás Etter Gómez",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
-  "Pros and Cons of Daydreaming": {
+  "Pros y contras de soñar despierto": {
    "director": "Lorena López",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-07"
   },
   "Protecting Our Territory 360": {
    "director": "Christopher Boulton",
-   "fecha": "2026-09-20"
-  },
-  "Quazar": {
-   "director": "William Alejandro Vargas Daza",
-   "fecha": "2026-09-21"
-  },
-  "Que el cielo nos perdone": {
-   "director": "Andres Buitrago",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "Quimera": {
    "director": "Santiago Rincón",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "Raíces": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Resistencias": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Resurgencias": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Retornos": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "SOLO": {
-   "director": "Agustina Lecaros Chavez",
-   "fecha": "2026-09-20"
+   "director": "Agustina Lecaros",
+   "fecha": "2026-10-06"
   },
   "SUA Y SIE: Guardianes de la vida": {
-   "director": "Johanna Emilce Cortés Daza",
-   "fecha": "2026-09-20"
+   "director": "Johanna Cortés",
+   "fecha": "2026-10-06"
   },
   "Sabor a mí (acústico / bolero jazz)": {
    "director": "Franco Zornosa",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-07"
   },
   "Señales": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Shorts": {
-   "director": "Daniel Baena Pacheco",
-   "fecha": "2026-09-20"
+   "director": "Daniel Baena",
+   "fecha": "2026-10-06"
   },
-  "Sierra: El álbum mortuorio": {
-   "director": "Carlos Ortíz Alarcón",
-   "fecha": "2026-09-21"
-  },
-  "Steppe": {
-   "director": "Mariano Benito",
-   "fecha": "2026-09-21"
+  "Solo un ave más": {
+   "director": "Julián Gómez",
+   "fecha": "2026-10-07"
   },
   "Sun Coffee": {
-   "director": "Zoe Filloux",
-   "fecha": "2026-09-21"
-  },
-  "The Guanentá Symphony": {
-   "director": "Victor Jaramillo",
-   "fecha": "2026-09-20"
-  },
-  "The Last Champion": {
-   "director": "Daniel Jesús Parra Jaimes",
-   "fecha": "2026-09-20"
+   "director": "Zoé Filloux y Estudiantes del MicroLycée Périer",
+   "fecha": "2026-10-06"
   },
   "They Call It Sausage": {
    "director": "Timm Osterhold",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "Tierras de Lobeiras": {
-   "director": "Carla Barrionuevo, Waira Conrady Vega, Lucia Xuric Lopez Farias,",
-   "fecha": "2026-09-20"
+   "director": "Carla Barrionuevo",
+   "fecha": "2026-10-06"
   },
   "Tiro Libre": {
-   "director": "Inti Deus Guerra Miranda",
-   "fecha": "2026-09-20"
+   "director": "Inti D. Guerra",
+   "fecha": "2026-10-06"
   },
-  "Tormenta en Llamas": {
-   "director": "Humberto Flores",
-   "fecha": "2026-09-21"
+  "Toma 10": {
+   "director": "Ángel Campaña y Juan D. Arias",
+   "fecha": "2026-10-07"
   },
-  "Tránsito": {
+  "Tránsitos": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "Umbrales": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
+  },
+  "Un dulce milagro": {
+   "director": "María José Chaparro",
+   "fecha": "2026-10-06"
   },
   "VOLAR": {
-   "director": "Jeiver Pinto Vargas",
-   "fecha": "2026-09-20"
+   "director": "Jeiver Pinto",
+   "fecha": "2026-10-06"
   },
   "Voces": {
    "director": "",
-   "fecha": "2026-09-21"
+   "fecha": "2026-10-06"
   },
   "X-Plora Cine": {
    "director": "",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   },
   "Ánima de Marea": {
    "director": "Laury T. Herrera",
-   "fecha": "2026-09-20"
+   "fecha": "2026-10-06"
   }
  }
 }

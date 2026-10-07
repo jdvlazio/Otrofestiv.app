@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "TMDB (api.themoviedb.org) + Letterboxd por el redirect /tmdb/<id>",
-  "capturado": "2026-09-21",
+  "capturado": "2026-10-07",
   "que_aporta": "año, duración, país, género, sinopsis, póster y lbSlug de los cortos de la Selección Oficial que TMDB tiene",
   "candado": "lib.ficha_tmdb — director ✓ SIEMPRE; en un festival de cortos el título solo no distingue nada («Solo», «Human», «Far»)",
-  "alcance": "19 de 68 cortos con ficha; los demás no están en TMDB y su dato hay que pedírselo al festival"
+  "alcance": "21 de 68 cortos con ficha; los demás no están en TMDB y su dato hay que pedírselo al festival"
  },
  "fichas": {
   "Witch and Frog": {
@@ -149,6 +149,19 @@
    "posterSource": "tmdb",
    "lbSlug": "que-el-cielo-nos-perdone"
   },
+  "No es el Fin del Mundo": {
+   "tmdb_id": 1786249,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Sebastián Florez",
+   "_sondeado": "2026-10-06",
+   "anio": 2025,
+   "duracion_min": 17,
+   "genero": "Terror",
+   "sinopsis": "Ocultar el fin del mundo a un padre ex militar y ciego puede ser más difícil que sobrevivir a la intemperie. Carlos huye de la devastación de Bogotá hacia la casa rural de su padre, donde también se refugia su hermana mayor. Sin embargo, agotada, ella los abandona. Ahora Carlos debe enfrentarse a la compleja relación con su padre, recurriendo a todo tipo de artimañas para ocultarle que afuera se desata un apocalipsis zombi.",
+   "poster": "/assets/villadelcine-2026/no-es-el-fin-del-mundo.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "no-es-el-fin-del-mundo"
+  },
   "La Independencia": {
    "tmdb_id": 1595081,
    "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
@@ -221,6 +234,17 @@
    "posterSource": "tmdb",
    "lbSlug": "reliefs-2025"
   },
+  "Sierra: El álbum mortuorio": {
+   "tmdb_id": 1789536,
+   "_verificado": "director ✓ + título idéntico; no hay año ni duración EN COMÚN con qué contrastar",
+   "_director": "Carlos Ortiz Alarcón",
+   "_sondeado": "2026-10-06",
+   "anio": 2026,
+   "genero": "Terror",
+   "poster": "/assets/villadelcine-2026/sierra-el-album-mortuorio.jpg",
+   "posterSource": "tmdb",
+   "lbSlug": "sierra-el-album-mortuorio"
+  },
   "KMKZ: Salvaje, Libre y Valiente": {
    "tmdb_id": 1570393,
    "_verificado": "director ✓ + título idéntico; no hay año ni duración en ambos lados con qué contrastar",
@@ -288,295 +312,283 @@
    "titulo": "Tiro Libre",
    "director": "Inti Deus",
    "categoria": "Mejor Cortometraje YoungFilm",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Sun Coffee",
    "director": "Zoé Filloux",
    "categoria": "Mejor Cortometraje YoungFilm",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "La Silla",
    "director": "Clara García",
    "categoria": "Mejor Cortometraje YoungFilm",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Far",
    "director": "We Are Central Asia Collective",
    "categoria": "Mejor Cortometraje YoungFilm",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Sua y Sie: Guardianes de la vida",
    "director": "Johanna Cortés",
    "categoria": "Mejor Cortometraje Escolar",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Solo",
    "director": "Agustina Lecaros",
    "categoria": "Mejor Cortometraje Escolar",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Manos Rojas",
    "director": "Julián Monroy",
    "categoria": "Mejor Cortometraje Escolar",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "In Between",
    "director": "Carlos Andrés Paniagua",
    "categoria": "Mejor Cortometraje Escolar",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Prompt Zero",
    "director": "Tomás Etter Gómez",
    "categoria": "Mejor Cortometraje IA",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Catatumbo: House of Thunder, Memory, and Dignity",
    "director": "Jhonattan Sarmiento",
    "categoria": "Mejor Cortometraje IA",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Lens",
    "director": "Eduardo Rodriguez",
    "categoria": "Mejor Cortometraje IA",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "They Call It Sausage",
    "director": "Timm Osterhold",
    "categoria": "Mejor Cortometraje IA",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Life is a Chessboard; Every Move is Final",
    "director": "Wang Zhi-Zhong",
    "categoria": "Mejor Cortometraje IA",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "No se fía, ni aunque lloren",
    "director": "Natalia Hernández Sánchez",
    "categoria": "Mejor Cortometraje con Celular",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "La Última Historia",
    "director": "Eberto Manotas y Mauro Andrade",
    "categoria": "Mejor Cortometraje con Celular",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Maleza",
    "director": "Nicolle Estrada Díaz y Marcela Palacio Montoya",
    "categoria": "Mejor Cortometraje con Celular",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Ventajas y desventaja de soñar despierto",
    "director": "Lorena López",
    "categoria": "Mejor Cortometraje con Celular",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Ánima de Marea",
    "director": "Laury T. Herrera",
    "categoria": "Mejor Cortometraje Vertical",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Nahuales",
    "director": "Alejandro Cervantes",
    "categoria": "Mejor Cortometraje Vertical",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "4 Minutes",
    "director": "Rogerio Troiani",
    "categoria": "Mejor Cortometraje Vertical",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Shorts",
    "director": "Daniel Baena Pacheco",
    "categoria": "Mejor Cortometraje Vertical",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Floppy the Robot – El último contacto",
    "director": "Jacobo Rendón",
    "categoria": "Mejor VR",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Human",
    "director": "Debora Bergamini",
    "categoria": "Mejor VR",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Protecting Our Territory",
    "director": "Christopher Boulton",
    "categoria": "Mejor VR",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Después de tanto amor",
    "director": "Mercedes Oviedo",
    "categoria": "Mejor Videoclip",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Mucho gusto",
    "director": "Cintia Obando",
    "categoria": "Mejor Videoclip",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "A pesar de mí",
    "director": "Thomas Mejía Lozano",
    "categoria": "Mejor Videoclip",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Benditos los viejos",
    "director": "Camilo Duque Zuluaga y Santiago Rubio López",
    "categoria": "Mejor Videoclip",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Aguapanela",
    "director": "Juan José Narváez",
    "categoria": "Mejor Videoclip",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "1 paseo por la ciudad",
    "director": "Sara Coello Coello y Alejandro Acuña Sevilla",
    "categoria": "Mejor Cortometraje Apasionado",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "La Sombrilla de Mamá",
    "director": "Mateo Forero",
    "categoria": "Mejor Cortometraje Apasionado",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Grief",
    "director": "Nicolas Patiño Hortua y Andrés Santiago Cely Orjuela",
    "categoria": "Mejor Cortometraje Apasionado",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Lost Fragments of a Seizure",
    "director": "Michael Martinez",
    "categoria": "Mejor Cortometraje Apasionado",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Beyond the End",
    "director": "Sara Sangiorgio",
    "categoria": "International Universities",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Final Act",
    "director": "Babi Astolfi y Lisa Soares",
    "categoria": "International Universities",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Memorias del Alba",
    "director": "Aldair Acosta",
    "categoria": "International Universities",
-   "_sondeado": "2026-09-19"
-  },
-  {
-   "titulo": "No es el Fin del Mundo",
-   "director": "Sebastián Florez",
-   "categoria": "Cortometraje Nacional",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "On Hold",
    "director": "Krishna Kumar Shukla",
    "categoria": "Mejor Corto Internacional",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "El último campeón",
    "director": "Daniel Jesús Parra Jaimes",
    "categoria": "Mejor Work in Progress",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Mi Tesoro",
    "director": "Dayana Gonzalez y Brian Congolez",
    "categoria": "Mejor Work in Progress",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Extinction",
    "director": "Frank Benitez",
    "categoria": "Mejor Work in Progress",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "El cine dentro del cine dentro del cine",
    "director": "Diana Kuéllar y Manuel Silva",
    "categoria": "Mejor Work in Progress",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Cuba 2001. Imágenes del futuro I",
    "director": "Felipe Moreno Salazar",
    "categoria": "Mejor Work in Progress",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Volar",
    "director": "Jeiver Pinto Vargas",
    "categoria": "Mejor Ópera Prima Nacional",
-   "_sondeado": "2026-09-19"
-  },
-  {
-   "titulo": "Sierra: El álbum mortuorio",
-   "director": "Carlos Ortiz Alarcón",
-   "categoria": "Mejor Ópera Prima Nacional",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Arenas",
    "director": "John Bolívar",
    "categoria": "Mejor Ópera Prima Nacional",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Estepa el lugar menos esperado",
    "director": "Mariano Benito",
    "categoria": "Mejor Ópera Prima Internacional",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Language Of The Wind",
    "director": "Shimataver Igbawua",
    "categoria": "Mejor Ópera Prima Internacional",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   },
   {
    "titulo": "Cos de vidre",
    "director": "Marc Comabella",
    "categoria": "Mejor Ópera Prima Internacional",
-   "_sondeado": "2026-09-19"
+   "_sondeado": "2026-10-06"
   }
  ],
  "en_duda": {
