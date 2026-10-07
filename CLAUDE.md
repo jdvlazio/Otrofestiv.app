@@ -105,7 +105,7 @@ deliberada existe la etiqueta `frontera-ok`.
 | `popayan2026` | Cine Corto Popayán | Popayán | 5–11 OCT | **Próximo / activo** |
 | `mamut2026` | Mamut | Medellín | 5–11 OCT | **Próximo / activo** |
 | `filcmar2026` | FILCMAR | Marinilla | 9–13 OCT | **Próximo / activo** |
-| `fantasmagoria2026` | Fantasmagoría | Medellín | 15–25 OCT | **Próximo / activo** |
+| `fantasmagoria2026` | Fantasmagoría | Medellín | 14–25 OCT | **Próximo / activo** |
 | `narrarelfuturo2026` | #NarrarElFuturo | Bogotá | 15–20 SEP | Recién terminado |
 
 ### Features activas (desde `.specify/features/`)

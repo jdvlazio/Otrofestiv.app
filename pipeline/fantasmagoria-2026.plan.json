@@ -19,6 +19,10 @@
    "que": "la parrilla de la web → crudo (83 presenciales), cruzada con el catálogo"
   },
   {
+   "cmd": "python3 pipeline/fantasmagoria-2026-base.py",
+   "que": "la cartelera oficial (su base, v2 del 6 oct) manda sobre la noticia: día, hora, sede y lo nuevo"
+  },
+  {
    "cmd": "python3 pipeline/enriquecer.py fantasmagoria-2026 --posters",
    "que": "la cascada de TMDB y lo ya publicado"
   },
@@ -140,6 +144,18 @@
    ],
    "Twitch · Sociedad Fantasmagoría": [
     "Twitch · Sociedad Fantasmagoría - Medellín",
+    ""
+   ],
+   "Biblioteca Comfenalco Castilla": [
+    "Biblioteca Comfenalco Castilla - Medellín",
+    ""
+   ],
+   "Casa Libre": [
+    "Casa Libre - Medellín",
+    ""
+   ],
+   "Instituto Cultural Alexander von Humboldt": [
+    "Instituto Cultural Alexander von Humboldt - Medellín",
     ""
    ]
   },
@@ -299,6 +315,11 @@
     "emoji": "🇨🇴",
     "en": "Colombian Shorts Selection",
     "archetype": "Competencia"
+   },
+   "Archivo Fantasmagoría": {
+    "emoji": "🗃️",
+    "en": "Fantasmagoría Archive",
+    "archetype": "Retrospectiva / Tributo"
    }
   },
   "name": "Fantasmagoría",
@@ -308,15 +329,18 @@
   "tagline": "Festival de cine fantástico y de terror",
   "city": "Medellín",
   "country": "CO",
-  "dates": "15–25 OCT",
-  "dates_en": "OCT 15–25",
+  "dates": "14–25 OCT",
+  "dates_en": "OCT 14–25",
   "year": 2026,
   "timezoneOffset": "-05:00",
   "storageKey": "fantasmagoria2026_",
-  "festivalStartStr": "2026-10-15T00:00:00",
+  "festivalStartStr": "2026-10-14T00:00:00",
   "festivalEndStr": "2026-10-25T23:59:00",
   "sharedSlotIsOneScreening": false,
   "mes_es": "octubre",
-  "dias_vacios": []
+  "dias_vacios": [],
+  "radar_salas_ok": {
+   "Sala X": "la noticia del 28 sep ponía en «Sala X» del Colombo varias funciones; la base del festival (v2, 6 oct) las pasó a «Sala por confirmar», y se publican sin sala"
+  }
  }
 }
