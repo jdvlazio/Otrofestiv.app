@@ -209,3 +209,35 @@ test('S10 — el buscador encuentra una obra por su título alterno', async ({ p
   expect(ajena.join(' | '), 'una consulta que no casa con nada no la devuelve')
     .not.toContain('Dry Leaf');
 });
+
+// S11 — buscador ampliado (7 oct 2026, aprobado por Juan): además de obras
+// encuentra Personas (también la dirección de cada corto: en Popayán los 116
+// créditos viven ahí y ninguno en el programa), Lugares y días en «Filtrar».
+// Cada grupo lleva a algo: persona → sus obras; lugar y día → el filtro.
+test('S11 — personas, lugares y días aparecen como grupos y llevan a algo', async ({ page }) => {
+  await enterFestival(page, 'popayan2026', '2026-10-06T10:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const corto = FILMS.flatMap(f => (f.film_list || []).map(x => ({ ...x, prog: f.title }))).find(x => x.director && !/,| y /.test(x.director));
+    const venue = FILMS.find(f => f.venue).venue;
+    searchOpen(); await w(300);
+    const inp = document.getElementById('search-input');
+    const buscar = async q => { inp.value = q; searchQuery(); await w(150);
+      return [...document.querySelectorAll('.search-section-hdr')].map(h => h.textContent.trim()); };
+    const hdrPersona = await buscar(corto.director);
+    const fila = [...document.querySelectorAll('[data-action="searchPersona"]')].find(e => e.dataset.name === corto.director);
+    fila && fila.click(); await w(200);
+    const obrasDePersona = [...document.querySelectorAll('.search-item-title')].map(e => e.textContent.trim());
+    const hdrLugar = await buscar(venue.split(' - ')[0].split(' ')[0]);
+    const hdrDia = await buscar('martes');
+    const dia = document.querySelector('[data-action="searchDay"]');
+    const diaKey = dia && dia.dataset.day;
+    dia && dia.click(); await w(400);
+    return { corto: corto.title, hdrPersona, obrasDePersona, hdrLugar, hdrDia, diaKey, activeDay };
+  });
+  expect(r.hdrPersona, 'la dirección de un corto aparece en Personas').toContain('Personas');
+  expect(r.obrasDePersona, 'tocar la persona muestra sus obras').toContain(r.corto);
+  expect(r.hdrLugar, 'la sede aparece en Lugares').toContain('Lugares');
+  expect(r.hdrDia, 'el día escrito aparece en Filtrar').toContain('Filtrar');
+  expect(r.activeDay, 'tocar el día aplica el filtro de día').toBe(r.diaKey);
+});

@@ -442,18 +442,24 @@ test('T59 — la fila dice «Sesión 1 de N» y el modal avisa que se van todas'
   expect(modal, 'el modal dice la consecuencia real').toMatch(/3 sesiones/);
   expect(modal, 'y ya no promete Sugerencias, donde el taller no aparece').not.toMatch(/Sugerencias/);
 
-  // control: una película normal conserva el copy de siempre
-  await page.evaluate(() => { const b = [...document.querySelectorAll('button')].find(x => /cancelar/i.test(x.textContent)); if (b) b.click(); });
+  // control: una obra suelta ya no pregunta (7 oct 2026, Juan): sale con un
+  // toque y el aviso ofrece «Deshacer». El modal queda solo para el bloque.
+  // Se quita el modal del taller a mano: «Cancelar» por texto encontraba el del
+  // buscador, y el modal abierto contaminaba la medición siguiente.
+  await page.evaluate(() => { const m = document.getElementById('conflict-modal'); if (m) m.remove(); });
   await page.waitForTimeout(400);
   const normal = await page.evaluate(() => {
     const f = FILMS.find(x => !x.info && x.day && x.time && !x.is_recurring);
     state.set('savedAgenda', { schedule: [{ _title: f.title, title: f.title, day: f.day, time: f.time,
       venue: f.venue, duration: f.duration, day_order: f.day_order }] });
     removeFromAgenda(f.title);
-    const c = document.querySelector('.cm-subject');
-    return c ? c.parentElement.textContent : '';
+    const t = document.getElementById('prio-toast');
+    return { modal: !!document.querySelector('.cm-subject'), toast: t ? t.textContent : '',
+      sigue: !!(savedAgenda && savedAgenda.schedule.some(s => s._title === f.title)) };
   });
-  expect(normal, 'lo que no es bloque no cambia').toMatch(/Sugerencias/);
+  expect(normal.modal, 'una obra suelta sale sin modal').toBe(false);
+  expect(normal.sigue, 'y sale de verdad').toBe(false);
+  expect(normal.toast, 'el aviso ofrece deshacer').toMatch(/Deshacer/);
 });
 
 // T61 — el panel de alternativas respeta la ciudad y las cancelaciones
@@ -1185,11 +1191,9 @@ test('T138 — al volver a poner lo que sacaste, el aviso del hueco desaparece',
     await w(1500);
     const aviso = () => !!document.querySelector('.cta-ctx-b');
     const antes = aviso();
-    // Sacar por el camino real: el modal pide confirmar.
+    // Sacar por el camino real: un toque (sin modal desde el 7 oct 2026).
     removeFromAgenda(hoy[0].title);
     await w(600);
-    const conf = [...document.querySelectorAll('button')].find(b => /Sacar/i.test(b.innerText));
-    if (conf) conf.click();
     await w(1400);
     const conHueco = aviso();
     // Volver a ponerla por el chokepoint, donde terminan TODOS los caminos que
@@ -1547,6 +1551,31 @@ test('T150 — con la app en cero, el vacío lleva al Programa de un toque', asy
 // `column-reverse` lo dejarían pasar mientras la pantalla dice otra cosa. Acá
 // se afirma sobre lo que el pulgar encuentra.
 test('T151 — en los dos modales el escape es el botón de abajo', async ({ page }) => {
+  const leer = () => page.evaluate(() => {
+    const m = document.getElementById('conflict-modal');
+    if (!m) return null;
+    const btns = [...m.querySelectorAll('.conflict-modal-btn')].map(b => ({
+      rol: [...b.classList].find(c => c !== 'conflict-modal-btn') || '?',
+      top: Math.round(b.getBoundingClientRect().top)
+    })).sort((a, b) => a.top - b.top);
+    return { titulo: (m.querySelector('.conflict-modal-hdr') || {}).innerText, btns };
+  });
+  // «Sacar de Mi Plan» pregunta solo por un TALLER (se van todas sus sesiones);
+  // una obra suelta sale con Deshacer, sin modal (7 oct 2026). Se mide con el
+  // taller de Leviza, el mismo de T59.
+  await enterFestival(page, 'leviza2026', '2026-05-13T09:00:00-05:00');
+  await page.evaluate(() => openPelSheet('Taller de Guion'));
+  await page.waitForTimeout(1000);
+  await page.evaluate(() => { const b = document.querySelector('#pel-sheet .blk-add'); if (b) b.click(); });
+  await page.waitForTimeout(1200);
+  await page.evaluate(() => { try { closePelSheet(); } catch (e) {} switchMainNav('mnav-miplan'); showAgView(); });
+  await page.waitForTimeout(1500);
+  await page.evaluate(() => removeFromAgenda('Taller de Guion'));
+  await page.waitForTimeout(900);
+  const quitar = await leer();
+  expect(quitar, 'el modal de sacar del Plan abre').not.toBeNull();
+  await page.evaluate(() => { const m = document.getElementById('conflict-modal'); if (m) m.remove(); });
+
   await enterFestival(page, 'cinemancia2026', '2026-09-04T10:00:00-05:00');
   await page.evaluate(() => {
     const b = document.createElement('button');
@@ -1561,37 +1590,15 @@ test('T151 — en los dos modales el escape es el botón de abajo', async ({ pag
   await goToPlanear(page);
   await esperarCalculo(page);
   await page.waitForTimeout(900);
-  const leer = () => page.evaluate(() => {
-    const m = document.getElementById('conflict-modal');
-    if (!m) return null;
-    const btns = [...m.querySelectorAll('.conflict-modal-btn')].map(b => ({
-      rol: [...b.classList].find(c => c !== 'conflict-modal-btn') || '?',
-      top: Math.round(b.getBoundingClientRect().top)
-    })).sort((a, b) => a.top - b.top);
-    return { titulo: (m.querySelector('.conflict-modal-hdr') || {}).innerText, btns };
-  });
-  const r = await page.evaluate(async () => {
-    const w = ms => new Promise(r => setTimeout(r, ms));
-    const disparar = (attrs) => {
-      const b = document.createElement('button');
-      Object.entries(attrs).forEach(([k, v]) => b.setAttribute(k, v));
-      document.body.appendChild(b); b.click(); b.remove();
-    };
-    document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]').click();
-    await w(1400);
-    disparar({ 'data-action': 'closePlanConfirm' }); await w(800);
-    switchMainNav('mnav-miplan'); showAgView(); await w(1500);
-    const t0 = (savedAgenda && savedAgenda.schedule[0] || {})._title;
-    disparar({ 'data-action': 'removeFromAgenda', 'data-title': t0 || '' });
-    await w(900);
-    return { ok: !!document.getElementById('conflict-modal') };
-  });
-  expect(r.ok, 'el modal de conflicto se abrió: es uno de los dos que se comparan').toBe(true);
-  const quitar = await leer();
-  expect(quitar, 'el modal de sacar del Plan abre').not.toBeNull();
 
   await page.evaluate(async () => {
     const w = ms => new Promise(r => setTimeout(r, ms));
+    // Mismo estado que antes del 7 oct: el escenario guardado como Plan.
+    document.querySelector('.ag-save-btn[data-action="saveCurrentScenario"]').click();
+    await w(1400);
+    { const b = document.createElement('button'); b.setAttribute('data-action', 'closePlanConfirm');
+      document.body.appendChild(b); b.click(); b.remove(); }
+    await w(800);
     const m = document.getElementById('conflict-modal'); if (m) m.remove();
     switchMainNav('mnav-planner'); showAgView(); await w(1600);
     const sc = cachedResult && cachedResult.scenarios && cachedResult.scenarios[0];
