@@ -1613,8 +1613,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "18 min",
-     "poster": "/assets/siembrafest/hdlt.jpg",
-     "synopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices.",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
+     "synopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
      "posterSource": "oficial",
      "synopsis_lang": "es"
     },
@@ -3812,7 +3812,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-07T07:21:43",
+  "fecha": "2026-10-07T15:21:05",
   "plan_sha": "350f430dbbaed332",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"

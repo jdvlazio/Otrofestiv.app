@@ -219,6 +219,60 @@ def a_poster(origen, destino, lamina=False, ancho=500, lado=0.06):
     im.save(destino, 'JPEG', quality=86, optimize=True)
 
 
+def afiche_tmdb(e, fid, base, key):
+    """El afiche de TMDB de la obra en assets/<fid>/ → su ruta, o None.
+
+    EL AFICHE DE TMDB TAMBIÉN PUEDE NO SERLO (7 oct 2026): el de «La libertad
+    doble» en español es un rectángulo verde con el título, y las otras tres
+    imágenes de la ficha son afiches. Si el archivo —nuevo o ya bajado— no pasa
+    pipeline/afiche_criterio.py, se prueban las demás imágenes de la ficha.
+
+    El reemplazo va a un NOMBRE NUEVO (`<slug>-v2.jpg`, -v3…): el service worker
+    guarda /assets/ como inmutable, y pisar el archivo dejaría a quien ya lo vio
+    con el rectángulo para siempre (la misma regla que los keyArt)."""
+    from afiche_criterio import veredicto
+    import glob as _glob
+    versiones = sorted(_glob.glob(f'{REPO}/assets/{fid}/{base}-v*.jpg'),
+                       key=lambda x: int(re.search(r'-v(\d+)\.jpg$', x).group(1)))
+    dest = versiones[-1] if versiones else f'{REPO}/assets/{fid}/{base}.jpg'
+
+    def bajar(pp, a):
+        subprocess.run(['curl', '-sL', '--max-time', '30', '-o', a, f'https://image.tmdb.org/t/p/w780{pp}'])
+        return os.path.exists(a) and os.path.getsize(a) > 5000
+
+    if not (os.path.exists(dest) and os.path.getsize(dest) > 5000) and not bajar(e['poster_path'], dest):
+        return None
+    m = veredicto(dest)
+    if not m:
+        return dest
+    e['_afiche_rechazado'] = f'TMDB {e["poster_path"]}: {m}'
+    alt = [i['file_path'] for i in (tmdb_get(f"/movie/{e['tmdb_id']}/images", key,
+                                             include_image_language='es,null,en') or {}).get('posters', [])
+           if i['file_path'] != e['poster_path']]
+    n = int(re.search(r'-v(\d+)\.jpg$', dest).group(1)) + 1 if re.search(r'-v\d+\.jpg$', dest) else 2
+    os.remove(dest)
+    nuevo = f'{REPO}/assets/{fid}/{base}-v{n}.jpg'
+    for pp in alt:
+        if bajar(pp, nuevo) and not veredicto(nuevo):
+            e['poster_path'] = pp
+            return nuevo
+        if os.path.exists(nuevo):
+            os.remove(nuevo)
+    # ninguna pasa: sin afiche (el ensamblador convertiría el `poster_path` en
+    # la URL del rectángulo)
+    e['poster_path'] = None
+    return None
+
+
+def afiche_ajeno_vale(ruta_web):
+    """Un afiche de OTRO festival nuestro ¿es un afiche? (pipeline/afiche_criterio.py):
+    ni tarjeta de solo texto ni la tarjeta de sección que ese festival diseñó."""
+    from afiche_criterio import veredicto
+    from ocr import leer
+    r = REPO + ruta_web
+    return veredicto(r, ' '.join(leer([r]).get(r, [])), ajena=True) is None
+
+
 def reuso_publicada(pub, fid=None):
     """Sin ficha, pero ya la publicamos con afiche: se reusa el afiche y la
     sinopsis que mostramos entonces —ya pasaron por un montaje—. «Belleza letal»
@@ -232,9 +286,13 @@ def reuso_publicada(pub, fid=None):
     # este (Girardota tomó el de «La Rebelión de un Fantasma» de Popayán) lo
     # devolvía como «ya publicado» y pisaba la procedencia de la lámina
     # declarada (custom → oficial, 30 sep); lo propio lo pone lo declarado
+    # …y que sea UN AFICHE (afiche_criterio.py, 7 oct): nueve tarjetas de sección
+    # de SiembraFest, marcadas `oficial`, se publicaron como afiche en otros cuatro
+    # festivales; la etiqueta no lo dice, la imagen sí
     x = next((x for x in pub if x.get('poster') and x.get('posterSource') != 'editorial' and not (
         str(x['poster']).startswith('/assets/') and not os.path.exists(REPO + x['poster']))
-        and not (fid and str(x['poster']).startswith(f'/assets/{fid}/'))), None)
+        and not (fid and str(x['poster']).startswith(f'/assets/{fid}/'))
+        and not (str(x['poster']).startswith('/assets/') and not afiche_ajeno_vale(x['poster']))), None)
     # la SINOPSIS se reusa de donde esté, aunque el afiche de ese festival fuera
     # un fotograma: son dos datos distintos (Girardota perdía 2 sinopsis)
     s = next((y for y in pub if y.get('sinopsis')), None)
@@ -472,6 +530,12 @@ def main():
             origen = f'{REPO}/{d.get("lamina") or d["archivo"]}'
             if not os.path.exists(dest):
                 a_poster(origen, dest, lamina=bool(d.get('lamina')))
+                from afiche_criterio import veredicto
+                _m = veredicto(dest)
+                if _m:
+                    os.remove(dest)
+                    print(f'   afiche declarado RECHAZADO · {t}: {_m}')
+                    continue
             e = {**e, 'poster': f'/assets/{fid}/{slug(t)}.jpg',
                  'posterSource': 'custom' if d.get('lamina') else 'oficial',
                  '_afiche': f'declarado: {d["fuente"]}'}
@@ -501,11 +565,8 @@ def main():
         for t, e in ok.items():
             if not e.get('poster_path'):
                 continue
-            dest = f'{REPO}/assets/{fid}/{slug(t)}.jpg'
-            if not (os.path.exists(dest) and os.path.getsize(dest) > 5000):
-                subprocess.run(['curl', '-sL', '--max-time', '30', '-o', dest,
-                                f'https://image.tmdb.org/t/p/w780{e["poster_path"]}'])
-            if os.path.exists(dest) and os.path.getsize(dest) > 5000:
+            dest = afiche_tmdb(e, fid, slug(t), key)
+            if dest:
                 n += 1
                 # LA RUTA LOCAL, ESCRITA (23 sep 2026). Este paso bajaba el
                 # archivo y no se lo decía a nadie: el sidecar guardaba el
@@ -514,7 +575,7 @@ def main():
                 # Itagüí salió con 17 afiches en disco y 0% de cobertura, y el
                 # gate de pósters lo paró. El ensamblador ya sabe leer rutas
                 # /assets/; solo que nadie se las escribía.
-                e['poster'] = f'/assets/{fid}/{slug(t)}.jpg'
+                e['poster'] = dest[len(REPO):]
                 e['posterSource'] = 'tmdb'
         print(f'pósters en assets/{fid}/: {n}')
 

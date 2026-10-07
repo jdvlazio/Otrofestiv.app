@@ -5896,6 +5896,59 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar afiche-origen-apaisado: {_e}')
 
+# ── [afiche-es-afiche] lo que se publica como afiche ES un afiche ────────────
+# Auditoría del 7 oct 2026: 10 imágenes en producción que no eran afiches, y
+# ningún guardián las vio —todos miran medidas, bandas o etiquetas, y las
+# etiquetas mienten (`oficial` en una tarjeta de SiembraFest, `tmdb` en un
+# rectángulo verde)—. El criterio es UNO, pipeline/afiche_criterio.py:
+#   (a) tarjeta de solo texto: se mide aquí mismo, sobre cada archivo publicado;
+#   (b) tarjeta de sección de otro festival: exige OCR (macOS), así que se lee
+#       el veredicto versionado en assets/AFICHES-AJENOS.json, con su huella:
+#       un afiche ajeno sin veredicto, con la huella vencida o rechazado, falla.
+check = 'afiche-es-afiche'
+try:
+    import json as _jae, glob as _gae, hashlib as _hae, sys as _sae, os as _osae
+    _sae.path.insert(0, 'pipeline')
+    from afiche_criterio import contenido_vertical as _cv, UMBRAL_CONTENIDO as _UC
+    _reg = (_jae.load(open('assets/AFICHES-AJENOS.json', encoding='utf-8')).get('afiches') or {}) \
+        if _osae.path.exists('assets/AFICHES-AJENOS.json') else {}
+    _texto, _ajenos, _vistos, _cv_memo = [], [], 0, {}
+    for _f in sorted(_gae.glob('festivals/*.json')):
+        _fid = _f.split('/')[-1][:-5]
+        try:
+            _films = _jae.load(open(_f, encoding='utf-8')).get('films') or []
+        except Exception:
+            continue
+        for _x in _films:
+            for _o in (_x.get('film_list') or [_x]):
+                _p = str(_o.get('poster') or '')
+                if not _p.startswith('/assets/') or not _osae.path.exists('.' + _p):
+                    continue
+                if _p not in _cv_memo:
+                    _vistos += 1
+                    _cv_memo[_p] = _cv('.' + _p)
+                if _cv_memo[_p] < _UC:
+                    _texto.append(f'{_fid}/«{(_o.get("title") or "?")[:30]}» ({_cv_memo[_p]:.0%})')
+                _carp = _p.split('/')[2]
+                if _fid == _carp or _fid.startswith(_carp) or _carp.startswith(_fid):
+                    continue
+                _v = _reg.get(_p)
+                if not _v:
+                    _ajenos.append(f'{_fid}: {_p} sin veredicto (correr scripts/afiches-ajenos.py)')
+                elif _v.get('sha1') != _hae.sha1(open('.' + _p, 'rb').read()).hexdigest():
+                    _ajenos.append(f'{_fid}: {_p} cambió desde su veredicto')
+                elif _v.get('veredicto') != 'afiche':
+                    _ajenos.append(f'{_fid}: {_p} — {_v.get("veredicto")}')
+    _malos = sorted(set(_texto)) + sorted(set(_ajenos))
+    if _malos:
+        fail(check, 'imagen publicada como afiche que no lo es: ' + ' · '.join(_malos[:6])
+             + (f' (+{len(_malos) - 6})' if len(_malos) > 6 else ''))
+    else:
+        ok(check, f'{_vistos} afiches locales medidos, ninguno tarjeta de texto; '
+                  f'{len(_reg)} ajenos con veredicto vigente')
+except Exception as _e:
+    warn(check, f'no se pudo verificar afiche-es-afiche: {_e}')
+
 # ── [afiche-cobertura] una obra sin afiche lleva el porqué ESCRITO ───────────
 # COBERTURA INVERSA, la doctrina que ya teníamos escrita y no habíamos aplicado
 # a los afiches: verificar lo transcrito no verifica lo DESCARTADO. El 21 sep

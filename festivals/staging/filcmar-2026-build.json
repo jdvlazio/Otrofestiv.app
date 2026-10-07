@@ -520,7 +520,7 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "13 min",
-     "poster": "/assets/siembrafest/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
+     "poster": "/assets/filcmar-2026/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
      "posterSource": "oficial"
     },
     {
@@ -707,7 +707,7 @@
      "duration": "18 min",
      "synopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
      "synopsis_lang": "es",
-     "poster": "/assets/siembrafest/hdlt.jpg",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
      "posterSource": "oficial"
     },
     {
@@ -925,7 +925,7 @@
      "duration": "8 min",
      "synopsis": "En una ciudad bulliciosa, un robot mecánico lleva una vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot emprende un viaje, solo para darse cuenta poco a poco de que lo que ocultaba el cristal tal vez no sea tan temible después de todo.",
      "synopsis_lang": "es",
-     "poster": "/assets/siembrafest/la-pecera.jpg",
+     "poster": "/assets/filcmar-2026/la-pecera.jpg",
      "posterSource": "oficial"
     },
     {
@@ -1429,7 +1429,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-07T06:41:16",
+  "fecha": "2026-10-07T15:14:40",
   "plan_sha": "8ac3aea2bc687b38",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"
