@@ -157,6 +157,33 @@ CAJA_TITULO = {
     'la independencia': 'La independencia',
 }
 
+# EL PÓSTER QUE YA ESTABA PUBLICADO MANDA (7 oct). El PDF del 6 oct renombra
+# estas obras y el paso de pósters, buscando por el título nuevo, bajaba de la
+# web del festival lo que encontraba: en ocho casos un STILL 16:9 en lugar del
+# afiche oficial que producción mostraba desde septiembre. Llave = norm del
+# título nuevo; valor = el archivo y la fuente con que se publicó.
+POSTER_PUBLICADO = {
+    'borrachos mientras escuchamos las gotas caer': ('/assets/villadelcine-2026/drunk-hearing-the-rain-drops-fall.jpg', 'oficial'),
+    'cuba 2001 imagenes del futuro': ('/assets/villadelcine-2026/cuba-2001-imagenes-del-futuro-i.jpg', 'editorial'),
+    'el cine dentro del cine': ('/assets/villadelcine-2026/el-cine-dentro-del-cine-dentro-del-cine.jpg', 'oficial'),
+    'el ultimo campeon': ('/assets/villadelcine-2026/the-last-champion.jpg', 'oficial'),
+    'en medio': ('/assets/villadelcine-2026/in-between.jpg', 'oficial'),
+    'enemigo en el espejo': ('/assets/villadelcine-2026/enemy-in-the-mirror.jpg', 'oficial'),
+    'estepa': ('/assets/villadelcine-2026/steppe.jpg', 'oficial'),
+    'extincion': ('/assets/villadelcine-2026/extinction.jpg', 'oficial'),
+    'fragmentos perdidos de una convulsion': ('/assets/villadelcine-2026/lost-fragments-of-a-seizure.jpg', 'oficial'),
+    'gestos de refugio': ('/assets/villadelcine-2026/sheltering-gestures.jpg', 'tmdb'),
+    'kmkz salvaje libre y valiente': ('/assets/villadelcine-2026/kmkz-wild-free-and-brave.jpg', 'oficial'),
+    'la independencia': ('/assets/villadelcine-2026/independence.jpg', 'oficial'),
+    'la presencia del blanco': ('/assets/villadelcine-2026/la-presencia-de-blanco.jpg', 'tmdb'),
+    'memoria colectiva': ('/assets/villadelcine-2026/collective-memory.jpg', 'oficial'),
+    'pros y contras de sonar despierto': ('/assets/villadelcine-2026/pros-and-cons-of-daydreaming.jpg', 'oficial'),
+    'solo un ave mas': ('/assets/villadelcine-2026/just-another-bird.jpg', 'oficial'),
+    'un dulce milagro': ('/assets/villadelcine-2026/a-sweet-miracle.jpg', 'oficial'),
+    'una torreta en llamas': ('/assets/villadelcine-2026/a-burning-turret.jpg', 'oficial'),
+    'via crucis': ('/assets/villadelcine-2026/via-crusis.jpg', 'tmdb'),
+}
+
 # La caja de los nombres de PROGRAMA, que el PDF imprime en mayúscula.
 # LA SECCIÓN DE LAS OBRAS QUE SU FICHA NO TRAE. El PDF del 6 oct las pone
 # bajo «EVENTOS EMBLEMÁTICOS», que no es sección; la casilla sí la dice.
@@ -525,6 +552,8 @@ def main():
         pf = de_pos(o['titulo'])
         pl = de_tmdb_local(o['titulo']) if t.get('poster_path') else ''
         fx = FICHA_EXTERNA.get(k, {})
+        if k in POSTER_PUBLICADO:
+            fx = {**fx, 'poster': POSTER_PUBLICADO[k][0], 'posterSource': POSTER_PUBLICADO[k][1]}
         # OJO: acá NO va `titulo`. Ponerlo fue un error de diez minutos: esta
         # ficha se mezcla con `reg` en las ramas de abajo, y `reg['titulo']` de
         # una ACTIVIDAD es su nombre propio («Tributo a Aquileo Venganza —
