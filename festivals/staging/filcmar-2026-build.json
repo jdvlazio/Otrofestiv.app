@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @filcmar — el carrusel de programación (16 láminas)",
-  "capturado": "2026-10-06",
+  "capturado": "2026-10-07",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina, tal cual; la sala va aparte (Foso, Hall, Capilla).",
@@ -270,7 +270,7 @@
    "day_order": 0,
    "venue": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
    "has_qa": false,
-   "synopsis": "Venganza se presenta por primera vez en el lugar donde nació. Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia",
+   "synopsis": "Comienzos del siglo veinte, años siguientes a la Guerra de los Mil Días que devastó los campos colombianos. Bandoleros al servicio de los grandes terratenientes atacan a los pequeños propietarios para quedarse con sus tierras. La familia Bernal es víctima de una de estas bandas, comandadas por el alcalde del pueblo. Aquileo es el único sobreviviente y jura vengarse. A ello se dedican él y la película.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/aquileo-venganza.jpg",
    "posterSource": "tmdb",
@@ -299,6 +299,10 @@
    "day_order": 0,
    "venue": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
    "has_qa": false,
+   "synopsis": "En la víspera de Navidad, Dejair, un ex luchador de la resistencia contra la dictadura militar, se reúne con su familia en el patio trasero. Un regalo de pistola de agua lleva a Dejair a denunciar lo absurdo de darle un arma a un niño.",
+   "synopsis_lang": "es",
+   "poster": "/assets/filcmar-2026/el-pesebre.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
@@ -344,6 +348,8 @@
    "day_order": 1,
    "venue": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
    "has_qa": false,
+   "synopsis": "A través de materiales de archivo, un cineasta reconstruye la figura de su padre, un marinero comerciante ausente, y cuestiona cómo existe ese vínculo dentro de su propia memoria.",
+   "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/lo-que-queda-del-mar.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -372,7 +378,7 @@
    "day_order": 1,
    "venue": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
    "has_qa": false,
-   "synopsis": "Este coming of age que transita entre fábula y crónica, sigue a Laura, adolescente de 13 años que se muda a una zona rural de Costa Rica.",
+   "synopsis": "Laura, una joven introvertida de trece años, llega a un pueblo rodeado de plantaciones de palma y de un imponente bosque. Mientras se ajusta a la nueva configuración de su familia, Laura empieza a entrever un mundo oculto en donde circula la historia de una bestia que habita en el bosque y se alimenta de mujeres. Al principio, lo descarta como una fantasía infantil, pero cuando conoce a la magnética Daniela, su amistad la lleva en un viaje que revela la verdadera naturaleza de la bestia.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/si-no-ardemos-como-iluminar-la-noche.jpg",
    "posterSource": "tmdb",
@@ -472,7 +478,11 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "1 min"
+     "duration": "1 min",
+     "synopsis": "Convencido de que a Flor solo le interesan los rockeros tatuados, Raúl intenta reinventarse para conquistarla. Con la ayuda de su vecina, quien le hace un tatuaje de henna, y de su abuelo (también llamado Raúl), que le enseña a tocar la guitarra, emprende un dulce y torpe intento por llamar su atención.",
+     "synopsis_lang": "es",
+     "poster": "/assets/filcmar-2026/the-raules.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Desarraigo",
@@ -481,13 +491,13 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "15 min",
+     "synopsis": "Tras la muerte de su esposa, Ángel se enfrenta a un duelo solitario en su hogar rural. Una gotera se convierte en una presencia abrumadora, transformando su espacio y empujándolo a tomar decisiones irracionales mientras intenta asimilar su pérdida.",
+     "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/desarraigo.jpg",
      "posterSource": "tmdb",
      "lbSlug": "desarraigo-2026",
      "tmdb_id": 1510204,
-     "synopsis": "Tras la muerte de su esposa, Ángel enfrenta un duelo solitario en su hogar rural. Una gotera crece como una presencia abrumadora, transformando su espacio y empujándolo a decisiones irracionales mientras intenta reconciliarse con su pérdida.",
-     "genre": "Drama",
-     "synopsis_lang": "es"
+     "genre": "Drama"
     },
     {
      "title": "Para no volver",
@@ -496,12 +506,12 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "10 min",
+     "synopsis": "Cuando Karina descubre que está embarazada del bebé de Charlie, ella y su mejor amiga Eli emprenden un viaje para encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y sus propios sentimientos cambiantes.",
+     "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/para-no-volver.jpg",
      "posterSource": "tmdb",
      "lbSlug": "para-no-volver",
-     "tmdb_id": 1743118,
-     "synopsis": "Cuando Karina se entera de que está embarazada del bebé de Charlie, ella y su mejor amiga Eli se disponen a encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y su vínculo cambiante. Al amanecer, el mar las abraza, y vuelven a jugar como niñas.",
-     "synopsis_lang": "es"
+     "tmdb_id": 1743118
     },
     {
      "title": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
@@ -520,6 +530,8 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "13 min",
+     "synopsis": "Entre la niebla y las paredes agrietadas, un maestro transcurre su último día en una escuela rural que pronto cerrará sus puertas por falta de alumnos. En silenciosa soledad, se despide de un lugar que ha sido su oficio y su refugio durante años.",
+     "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/agachar-el-rostro.jpg",
      "posterSource": "tmdb",
      "lbSlug": "lowering-the-gaze",
@@ -546,7 +558,7 @@
    "day_order": 1,
    "venue": "Teatro Municipal Simona Duque - Marinilla",
    "has_qa": false,
-   "synopsis": "La historia nos sitúa a comienzos de los años 80, en el desierto chileno, Lidia, una niña de once años, crece en el seno de una amorosa familia queer marginada en un polvoriento y hostil pueblo minero. Son culpados por una misteriosa enfermedad que comienza a propagarse, se dice que se transmite con una sola mirada, cuando un hombre se enamora de otro. En este western moderno, Lidia emprende una búsqueda de venganza, enfrentándose a la violencia, el miedo y el odio, donde la familia es su único refugio y el amor podría ser el verdadero peligro.",
+   "synopsis": "1982. Una enfermedad desconocida comienza a propagarse en un pueblo minero del desierto chileno. Se acusa a homosexuales de transmitirla a través de sus miradas. Lidia, 11 años, única niña de la comunidad, parte en busca de la verdad.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/la-misteriosa-mirada-del-flamenco.jpg",
    "posterSource": "tmdb",
@@ -578,6 +590,8 @@
    "has_qa": false,
    "synopsis": "A partir del relato de una madre y una abuela sobre el asesinato de un travesti, lx directorx estructura este corto documental que explora el ensueño —ese territorio entre la memoria y la imaginación— de un recuerdo de infancia. Con archivos de la comunidad trans en Ecuador durante los 90 y found footage se teje un microrrelato sobre la memoria, la muerte y la ausencia. Una tentativa por escapar del olvido y volverse eterna a través del cine.",
    "synopsis_lang": "es",
+   "poster": "/assets/filcmar-2026/pude-ver-un-fantasma-desde-mi-ventana.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
@@ -604,7 +618,7 @@
    "venue": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "Nieves lleva una piscina junto a su hijo Martín. Un verano, un motociclista se enamora de ella. Lo suyo no parece funcionar, hasta que un equipo de rodaje llega a la piscina buscando locaciones y la directora decide poner al motociclista y a Natacha en su película.",
+   "synopsis": "Nieves administra un balneario junto a su hijo. Un verano, un motociclista se enamora de ella, pero el romance parece condenado al fracaso. Todo cambia con la llegada de una cineasta que decide incluirlos a ambos en su nueva película. Cuando se conviertan en actores, comenzarán a desdibujarse los límites entre la ficción y sus sentimientos.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/la-corazonada.jpg",
    "posterSource": "tmdb",
@@ -634,6 +648,10 @@
    "venue": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
    "has_qa": true,
    "qa_type": "team",
+   "synopsis": "Murilo es un testigo. A donde quiera que vaya, suceden cosas extrañas. Sus experiencias de vida sacuden los misterios entre el cielo y la tierra. Después de todo, el cine lo permite todo.",
+   "synopsis_lang": "es",
+   "poster": "/assets/filcmar-2026/testimonio.jpg",
+   "posterSource": "oficial",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
@@ -670,15 +688,15 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "13 min",
+     "synopsis": "Con un detector de metales en la mano, El cazador deambula por el bosque y por la ciudad en busca de tesoros. Esa es su forma de vida, ese es su destino: la llamada del Señor Oro. Sea como sea, por el camino lo encuentra todo; su casa es como un museo o una tienda de objetos rescatados del anonimato.",
+     "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/el-cazador.jpg",
      "posterSource": "tmdb",
      "lbSlug": "the-hunter-2026-1",
      "tmdb_id": 1668874,
-     "synopsis": "En un paisaje ondulante, la tierra es escrita y reescrita por El Cazador. La relación entre él y el territorio revelan la esencia de una geografía. Su obsesión por el oro lo lleva a una búsqueda incesante de tesoros. El poder está en el significado que otorga a lo que encuentra. En las profundidades de la tierra y de sí mismo, descubre la verdad que le permite perpetuar su búsqueda.",
      "synopsis_en": "Metal detector in hand, the Hunter roams through forest and city in search of treasure. It is his way of life, his calling: the summons of Lord Gold.",
      "title_en": "The Hunter",
-     "genre": "Drama",
-     "synopsis_lang": "es"
+     "genre": "Drama"
     },
     {
      "title": "HDLT",
@@ -687,10 +705,10 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "18 min",
+     "synopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
+     "synopsis_lang": "es",
      "poster": "/assets/siembrafest/hdlt.jpg",
-     "synopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices.",
-     "posterSource": "oficial",
-     "synopsis_lang": "es"
+     "posterSource": "oficial"
     },
     {
      "title": "Show de Ziggy: La maldición del mariachi bondage",
@@ -699,6 +717,8 @@
      "flags": "🇲🇽",
      "year": 2026,
      "duration": "10 min",
+     "synopsis": "Ziggy, una influyente en ascenso, está tratando de aumentar su número de seguidores en las redes sociales al despertar la maldición de una vieja canción. Ahora, un mariachi sombrío que hace bailar a la gente hasta que muere está persiguiendo a Ziggy hasta que cumple su sueño de hacerlo viral.",
+     "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/show-de-ziggy-la-maldicion-del-mariachi-bondage.jpg",
      "posterSource": "tmdb",
      "lbSlug": "ziggys-show-the-curse-of-mariachi-bondage",
@@ -714,6 +734,8 @@
      "flags": "🇨🇱",
      "year": 2025,
      "duration": "20 min",
+     "synopsis": "Una utopía retorcida se despliega, mientras querubines cantores se derriten al sonido de la descomposición. Creada por una máquina sintiente del futuro, esta revela su propia versión del paraíso.",
+     "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/merrimundi.jpg",
      "posterSource": "tmdb",
      "lbSlug": "merrimundi",
@@ -728,6 +750,8 @@
      "flags": "🇨🇱",
      "year": 2026,
      "duration": "10 min",
+     "synopsis": "Durante un fuerte derretimiento de nieve en los Andes, Petra, de 71 años, descubre el cuerpo preservado de un alpinista del siglo pasado. Inicialmente vacilante, ella lo llevó a su chalet de madera, lo que provocó una historia romántica inesperada.",
+     "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/petra-y-el-sol.jpg",
      "posterSource": "tmdb",
      "lbSlug": "petra-and-the-sun",
@@ -770,14 +794,14 @@
    "year": 2025,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "85 min",
+   "duration": "81 min",
    "genre": "Animación",
    "day": "2026-10-11",
    "time": "11:00",
    "day_order": 2,
    "venue": "Parque Principal de Marinilla - Marinilla",
    "has_qa": false,
-   "synopsis": "Tras los muros que protegen la aldea se extiende una selva mágica y misteriosa, habitada por criaturas consideradas peligrosas. Durante años, los habitantes se han formado como guerreros desde jóvenes.",
+   "synopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, una niña de trece años, se enfrentará a su peor pesadilla cuando Martín, su hermano pequeño, sea atrapado por uno de ellos. Con la ayuda de Iolo, una anciana mágica, y una divertida osa hormiguera como compañera de viajes, Cleo se adentrará en lo profundo de la selva para atrapar a Mukira, el monstruo que se llevó a Martín.Cleo pronto aprenderá que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo, ¿te atreves a descubrirlo? Adéntrate en la selva y en esta increíble aventura musical y verás que la amistad es capaz de florecer en los lugares más inesperados.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/mu-ki-ra.jpg",
    "posterSource": "tmdb",
@@ -876,7 +900,11 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "9 min"
+     "duration": "9 min",
+     "synopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+     "synopsis_lang": "es",
+     "poster": "/assets/filcmar-2026/el-espejo-de-la-vida.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "La danza del caos",
@@ -884,13 +912,19 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "6 min"
+     "duration": "6 min",
+     "synopsis": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
+     "synopsis_lang": "es",
+     "poster": "/assets/filcmar-2026/la-danza-del-caos.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "La pecera",
      "director": "Angela Tatiana Fonseca Galvez",
      "year": 2025,
      "duration": "8 min",
+     "synopsis": "En una ciudad bulliciosa, un robot mecánico lleva una vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot emprende un viaje, solo para darse cuenta poco a poco de que lo que ocultaba el cristal tal vez no sea tan temible después de todo.",
+     "synopsis_lang": "es",
      "poster": "/assets/siembrafest/la-pecera.jpg",
      "posterSource": "oficial"
     },
@@ -900,7 +934,11 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "2 min"
+     "duration": "2 min",
+     "synopsis": "Este cortometraje surgió como un intento de plasmar los sonidos que escuchaba por la noche. Mediante animación manual, escaneo y stop motion, el film pretende evocar la anticipación de algo que podría ocurrir durante la noche.",
+     "synopsis_lang": "es",
+     "poster": "/assets/filcmar-2026/reverb.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Chicha la chicharra",
@@ -909,14 +947,14 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "10 min",
+     "synopsis": "Chicha es una pequeña cigarra que ha pasado décadas esperando emerger de la tierra. Sin embargo, cuando por fin llega el día, se decepciona profundamente al descubrir que el bosque que tanto anhelaba ha sido reemplazado por una ciudad. Por suerte, Chicha encuentra un pequeño árbol de aguacate y decide cuidarlo, con la esperanza de que se convierta en un nuevo bosque. Lo que Chicha ignora es que, tras emerger de la tierra, las cigarras solo viven unas pocas semanas, y ese tiempo no le alcanzará para presenciar el crecimiento del árbol.",
+     "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/chicha-la-chicharra.jpg",
      "posterSource": "tmdb",
      "lbSlug": "chicha-la-chicharra",
      "tmdb_id": 1483504,
-     "synopsis": "Una chicharra llamada Chicha emerge de la tierra para su metamorfosis, y descubre que el árbol de aguacate donde nació ha sido talado; decidida a crear un bosque, deposita sus esperanzas en un retoño de aguacate, pero pronto debe enfrentar la realidad de su corta vida y aprender a aceptar el presente.",
      "synopsis_en": "Chicha emerges from the soil for her metamorphosis, only to find the avocado tree where she was born gone. Determined to create a forest, she waits for a new tree to grow, unaware her life will be too short to see it flourish.",
-     "genre": "Animación",
-     "synopsis_lang": "es"
+     "genre": "Animación"
     }
    ]
   },
@@ -935,7 +973,7 @@
    "day_order": 2,
    "venue": "Parque Principal de Marinilla - Marinilla",
    "has_qa": false,
-   "synopsis": "Chena, 26 años, recorre cada año cientos de kilómetros para trabajar como jornalera en los cultivos colombianos. Lleva ocho años sin ahorrar ni alcanzar independencia. Su cuerpo y su voluntad son todo lo que tiene.",
+   "synopsis": "Chena es una madre soltera de 26 años que cada año se une a la diáspora de campesinos que recorren cientos de kilómetros lejos de sus hogares para trabajar como jornaleros o recolectores de café en Colombia. A pesar del durísimo trabajo, prefiere este tipo de vida nómada porque le da la posibilidad de elegir dónde y cuándo trabajar. Sobrevivir dependerá de su capacidad para realizar tareas físicamente exigentes, de su temple para enfrentarse a un mundo de hombres y de la fortaleza de su propio cuerpo, que empieza a debilitarse debido al esfuerzo diario que debe soportar. En su equipaje carga un diario donde escribe reflexiones sobre su pasado y la vida que lleva como andariega. Después de ocho años trabajando en los cultivos, no ha podido ahorrar dinero ni adquirir independencia económica. Por ahora solo espera volver a casa a finales de año, justo a tiempo para celebrar el cumpleaños de su hijo Totoi.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/andariega.jpg",
    "posterSource": "tmdb",
@@ -965,6 +1003,8 @@
    "day_order": 2,
    "venue": "Parque Principal de Marinilla - Marinilla",
    "has_qa": false,
+   "synopsis": "Al empezar el día, una mujer se dispone a cumplir con su rutina, hasta que decide llevar a sus hijos al cementerio para que vean zombies. Al volver a su casa, esa interrupción en su día le dejará una extraña y mágica sensación.",
+   "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/el-dia-interrumpido.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -986,7 +1026,7 @@
    "year": 2025,
    "country": "Colombia",
    "flags": "🇨🇴",
-   "duration": "115 min",
+   "duration": "118 min",
    "genre": "Western",
    "day": "2026-10-11",
    "time": "19:00",
@@ -994,6 +1034,8 @@
    "venue": "Parque Principal de Marinilla - Marinilla",
    "has_qa": true,
    "qa_type": "team",
+   "synopsis": "Después de mil días de una guerra civil en Colombia en 1902, el soldado revolucionario Alfredo Duarte Amado recibe un telegrama con la noticia del embarazo de la esposa de su hermano. Enterándose que la guerra ya ha acabado, convence a un fotógrafo aficionado en las entrañas del cañón del Chicamocha, para que se acompañen en busca de su hermano perdido en la guerra, sabiendo que el fotógrafo también busca al hombre que mató a su papá. Trailer",
+   "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/adios-al-amigo.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -1152,7 +1194,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "14 min"
+     "duration": "14 min",
+     "poster": "/assets/filcmar-2026/hush.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Sol de niebla",
@@ -1160,7 +1204,11 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
-     "duration": "6 min"
+     "duration": "6 min",
+     "synopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
+     "synopsis_lang": "es",
+     "poster": "/assets/filcmar-2026/sol-de-niebla.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Pudor ante el asalto de los ojos furtivos",
@@ -1169,15 +1217,15 @@
      "flags": "🇨🇴",
      "year": 2025,
      "duration": "9 min",
+     "synopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público.",
+     "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
      "posterSource": "tmdb",
      "lbSlug": "shame-in-the-face-of-furtive-eyes",
      "tmdb_id": 1592968,
-     "synopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público.",
      "synopsis_en": "The city as a stage of desire, where the male gaze provokes surveillance and scrutiny of the female body. This power relationship turns the body into a field of contestation in public space.",
      "title_en": "Shame in the Face of Furtive Eyes",
-     "genre": "Animación",
-     "synopsis_lang": "es"
+     "genre": "Animación"
     },
     {
      "title": "El ocaso de los dioses",
@@ -1185,7 +1233,11 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2025,
-     "duration": "19 min"
+     "duration": "19 min",
+     "synopsis": "Aurora, una joven que forma parte de una secta religiosa junto a su madre, duda de la veracidad de las palabras de Bernabé, el líder, y busca la manera de hacerles comprender a ella y al resto de la comunidad que la verdad no está ahí. Todo se vuelve caótico cuando Aurora comienza a tener vínculos con el ídolo sagrado y su objetivo cambia drásticamente, alterando la normalidad de la comunidad.",
+     "synopsis_lang": "es",
+     "poster": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg",
+     "posterSource": "oficial"
     },
     {
      "title": "Somnolítico",
@@ -1194,14 +1246,14 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "11 min",
+     "synopsis": "Un ser extraño se pierde en el caos del sistema de transporte, moviéndose de un lugar a otro sin encontrar salida. Los caminos están saturados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, sin rostro, se mueven automáticamente, creando un laberinto donde las rutas parecen interminables. La gente adormecida se funde con el entorno, y mientras el autobús continúa su camino, el ser finalmente se encuentra a sí mismo.",
+     "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/somnolitico.jpg",
      "posterSource": "tmdb",
      "lbSlug": "somnolytic",
      "tmdb_id": 1590709,
-     "synopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
      "synopsis_en": "A strange being loses its way in the chaos of the transportation system without finding an exit. The pathways are overwhelmed by accelerated flows that come and go like human waterfalls. The passersby, faceless, move automatically, creating a maze in which the routes seem endless. Sleepy and exhausted people merge with the surroundings, and as the bus continues on its way, the being finally manages to discover itself.",
-     "title_en": "Somnolytic",
-     "synopsis_lang": "es"
+     "title_en": "Somnolytic"
     }
    ]
   },
@@ -1220,6 +1272,8 @@
    "venue": "Teatro Municipal Simona Duque - Marinilla",
    "has_qa": true,
    "qa_type": "team",
+   "synopsis": "Paz sale de la casa que comparte con su pareja y corre a la casa de Lula, su mejor amiga. Ella sugiere quedarse despierta toda la noche para escapar de su mayor miedo: su propia ansiedad. Así es como comienza una noche, llena de karaoke, películas de la mafia, limpieza profunda del apartamento, peleas, llantos, risas",
+   "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/casi-30.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -1249,7 +1303,7 @@
    "venue": "Teatro Municipal Simona Duque - Marinilla",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "Un joven, Andrés, llega a la ciudad bonaerense de Alberti en busca de su abuelo en el momento que se desarrolla una particular situación en torno a la barihuí. Allí conoce a diferentes personajes, entre ellos a Cosme, y deben sortear obstáculos de diversa índole.",
+   "synopsis": "Andrés llega a Alberti buscando a su abuelo desaparecido. En la ciudad bonaerense se desarrolla una extraña situación relacionada con la barihuí que afecta a toda la comunidad. El joven conoce a Cosme y otros habitantes locales mientras intenta encontrar respuestas sobre el paradero de su familiar. Diversos obstáculos comienzan a interponerse en su búsqueda.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/el-vuelo-del-moscardon.jpg",
    "posterSource": "tmdb",
@@ -1297,7 +1351,7 @@
    "day_order": 3,
    "venue": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
    "has_qa": false,
-   "synopsis": "A escondidas de su marido, en casa de su amiga Tere, que vive con su hija, la compositora musical Rosa concede su primera entrevista televisada. Según la conversación trata de avanzar, interrumpida por cortes de luz, ruidos externos e invitados insospechados, la relación entre estas tres mujeres revela la fuerza de la amistad y la fragilidad del prestigio.",
+   "synopsis": "Rosa, compositora de música contemporánea, da su primera entrevista televisiva en la casa de su colega Tere para ocultárselo a su marido. La charla se ve interrumpida por cortes de luz y un perro que no para de ladrar.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/lo-demas-es-ruido.jpg",
    "posterSource": "tmdb",
@@ -1327,7 +1381,7 @@
    "day_order": 3,
    "venue": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
    "has_qa": false,
-   "synopsis": "Mientras lidia con un ser extraño que vive en su interior, una mujer busca reconciliarse con su hermana por un incidente de su adolescencia.",
+   "synopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/una-vez-en-un-cuerpo.jpg",
    "posterSource": "tmdb",
@@ -1356,7 +1410,7 @@
    "day_order": 4,
    "venue": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
    "has_qa": false,
-   "synopsis": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado.",
+   "synopsis": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Su hijo está enfermo, su esposa está embarazada y él reproduce la violencia que lo rodea. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado. En la cárcel, en un arrebato de furia, se rebela contra el jefe político del pueblo de la única manera que puede.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/la-paga.jpg",
    "posterSource": "tmdb",
@@ -1375,9 +1429,9 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-06T11:43:58",
-  "plan_sha": "627de20e2eb8374c",
-  "paso": 7,
+  "fecha": "2026-10-07T06:41:16",
+  "plan_sha": "8ac3aea2bc687b38",
+  "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"
  }
 }

@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-06"
+  "capturado": "2026-10-07"
  },
  "obras": [
   {
@@ -595,7 +595,10 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Pude ver un fantasma desde mi ventana",
    "_director": "Mayro Romero",
-   "_sondeado": "2026-10-01"
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/pude-ver-un-fantasma-desde-mi-ventana.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=17vd1k8bYrzomUG-MkZThzxzT8IqVAo4Y"
   },
   {
    "titulo": "Pudor ante el asalto de los ojos furtivos",
@@ -790,6 +793,60 @@
    "_sinopsis_de": "ya publicada en aff-2026",
    "poster": "/assets/filcmar-2026/una-vez-en-un-cuerpo.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El espejo de la vida",
+   "poster": "/assets/filcmar-2026/el-espejo-de-la-vida.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1t529HfEIBNyF4nvuat1sX8q7dLw-bHi1"
+  },
+  {
+   "titulo": "El ocaso de los dioses",
+   "poster": "/assets/filcmar-2026/el-ocaso-de-los-dioses.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1IwlfB0pCs8UtybSCmY70JTwWjqAsR0Jg"
+  },
+  {
+   "titulo": "El pesebre",
+   "poster": "/assets/filcmar-2026/el-pesebre.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1MD1PnZHKUlpAFQKg3jDdAoOvYOSmaGLk"
+  },
+  {
+   "titulo": "HUSH",
+   "poster": "/assets/filcmar-2026/hush.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1t7-tqrkWh3ru-pVLRzAyd1IsKJS46yrN"
+  },
+  {
+   "titulo": "La danza del caos",
+   "poster": "/assets/filcmar-2026/la-danza-del-caos.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1_us7KFFNT8BGH89I-cOK2YeZ4RvL969W"
+  },
+  {
+   "titulo": "Reverb",
+   "poster": "/assets/filcmar-2026/reverb.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1EUX4zVS8PjYQyd7liTH1zis67mZD10lO"
+  },
+  {
+   "titulo": "Sol de niebla",
+   "poster": "/assets/filcmar-2026/sol-de-niebla.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1oXfWkfyzUABbwTtEZV0_Bmd5DTDtIMS4"
+  },
+  {
+   "titulo": "Testimonio",
+   "poster": "/assets/filcmar-2026/testimonio.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1a04Hgq9_x1PfEEBr0gajCF4dwLuZXkzE"
+  },
+  {
+   "titulo": "The Raules",
+   "poster": "/assets/filcmar-2026/the-raules.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1eHzpvygaIvl-IRbFX60pUXE57SMiwbUQ"
   }
  ],
  "verificadas": {
@@ -1310,7 +1367,10 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Pude ver un fantasma desde mi ventana",
    "_director": "Mayro Romero",
-   "_sondeado": "2026-10-01"
+   "_sondeado": "2026-10-01",
+   "poster": "/assets/filcmar-2026/pude-ver-un-fantasma-desde-mi-ventana.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=17vd1k8bYrzomUG-MkZThzxzT8IqVAo4Y"
   },
   "Pudor ante el asalto de los ojos furtivos": {
    "tmdb_id": 1592968,
@@ -1605,5 +1665,13 @@
    "director": "Hugo Chamorro",
    "fecha": "2026-10-01"
   }
- }
+ },
+ "_fuentes": [
+  {
+   "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
+   "capturado": "2026-10-07",
+   "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
+   "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
+  }
+ ]
 }

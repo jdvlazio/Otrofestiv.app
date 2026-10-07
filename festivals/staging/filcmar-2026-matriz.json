@@ -1,0 +1,613 @@
+{
+ "_provenance": {
+  "fuente": "Matriz información curaduría — hoja de Google que mandó el equipo de FILCMAR",
+  "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview",
+  "capturado": "2026-10-06",
+  "metodo": "CSV por pestaña + enlaces de la vista HTML; afiches bajados de su Drive",
+  "uso": "el crudo completa con esto lo que falta; no pisa lo publicado"
+ },
+ "obras": {
+  "the raules": {
+   "titulo_matriz": "The Raules",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Convencido de que a Flor solo le interesan los rockeros tatuados, Raúl intenta reinventarse para conquistarla. Con la ayuda de su vecina, quien le hace un tatuaje de henna, y de su abuelo (también llamado Raúl), que le enseña a tocar la guitarra, emprende un dulce y torpe intento por llamar su atención.",
+   "anio": 2025,
+   "duracion_min": 1,
+   "credito": "DIRECCIÓN: Hugo Chamorro\nPRODUCCIÓN: Manuela Betancur\nMONTAJE: Hugo Chamorro\nINTERPRETACIÓN: Juan Diego Muriel, Luis Javier Arias, Valentina Sierra\nMÚSICA:",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/the-raules.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1eHzpvygaIvl-IRbFX60pUXE57SMiwbUQ"
+   }
+  },
+  "desarraigo": {
+   "titulo_matriz": "Desarraigo",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Tras la muerte de su esposa, Ángel se enfrenta a un duelo solitario en su hogar rural. Una gotera se convierte en una presencia abrumadora, transformando su espacio y empujándolo a tomar decisiones irracionales mientras intenta asimilar su pérdida.",
+   "anio": 2026,
+   "duracion_min": 15,
+   "credito": "DIRECCIÓN: Nicolas Patiño Hortua, Andrés Santiago Cely Orjuela\nPRODUCCIÓN: Juan Fernando Vargas\nMONTAJE: Nicolas Patiño Hortua, Andrés Santiago Cely Orjuela\nINTERPRETACIÓN: Juan de Dios Peña, Manuela Salazar Betancur\nMÚSICA:",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/desarraigo.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=17EHr8PsiFCu5LxklTAmvYsLvbuEuiG2H"
+   }
+  },
+  "para no volver": {
+   "titulo_matriz": "Para no volver",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Cuando Karina descubre que está embarazada del bebé de Charlie, ella y su mejor amiga Eli emprenden un viaje para encontrarlo por las calles nocturnas de Santa Marta. En el camino, se enfrentan al deseo, la maternidad y sus propios sentimientos cambiantes.",
+   "anio": 2026,
+   "duracion_min": 10,
+   "credito": "DIRECCIÓN: Tania Galvis\nPRODUCCIÓN: Hery Carvajal\nMONTAJE: Bayany S. Giorgi\nINTERPRETACIÓN: Iris Brochero, Daniela Vargas\nMÚSICA: Daniel Palomo",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/para-no-volver.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=12W3uIPtcAEGpIpP2wKCxDeRSDlZPYROq"
+   }
+  },
+  "miguel angel federico y el carro que paso encima de las gafas": {
+   "titulo_matriz": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "anio": 2025,
+   "duracion_min": 13,
+   "credito": "DIRECCIÓN: Juan David Rodriguez\nPRODUCCIÓN: Mar Barrera, Juan David Rodriguez\nMONTAJE:\nINTERPRETACIÓN: Cristian Rojas, Neia Poveda \nMÚSICA:",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1kjnbHGPSC1bjCYWSaSmul6dXPen-TPMu"
+   }
+  },
+  "agachar el rostro": {
+   "titulo_matriz": "Agachar el rostro",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Entre la niebla y las paredes agrietadas, un maestro transcurre su último día en una escuela rural que pronto cerrará sus puertas por falta de alumnos. En silenciosa soledad, se despide de un lugar que ha sido su oficio y su refugio durante años.",
+   "anio": 2025,
+   "duracion_min": 13,
+   "credito": "DIRECCIÓN: Camilo Medina Noy\nPRODUCCIÓN: Camilo Medina Noy, Ana Paula Riaño\nMONTAJE: Jose Miguel Huertas\nINTERPRETACIÓN: Edgar Durán Jr. , Alexander Pino, Dylan Amaya, Mateo Rodriguez, Mariana Rodriguez \nMÚSICA: Mediterraneo Parrandero, Fabio Noel Sanchez, Wilton Velasquez",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/agachar-el-rostro.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=129hkws6l4AhQaTYB3ny16NF7VD6B3Gbg"
+   }
+  },
+  "el espejo de la vida": {
+   "titulo_matriz": "El espejo de la vida",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+   "anio": 2025,
+   "duracion_min": 9,
+   "credito": "DIRECCIÓN:Simón Sánchez Plazas\nPRODUCCIÓN: Simón Sánchez Plazas, Avril Vásquez Ariza, Santiago Cruz Velásquez\nMONTAJE:\nINTERPRETACIÓN de voz: Simón Sánchez Plazas, Avril Vásquez Ariza\nMÚSICA: Daniel Zea Medina",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/el-espejo-de-la-vida.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1t529HfEIBNyF4nvuat1sX8q7dLw-bHi1"
+   }
+  },
+  "la danza del caos": {
+   "titulo_matriz": "La danza del caos",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
+   "anio": 2025,
+   "duracion_min": 6,
+   "credito": "DIRECCIÓN: Valeria Preciado Romaña\nPRODUCCIÓN: Valeria Preciado Romaña\nMONTAJE: Valeria Preciado Romaña\nINTERPRETACIÓN:\nMÚSICA:",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/la-danza-del-caos.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1_us7KFFNT8BGH89I-cOK2YeZ4RvL969W"
+   }
+  },
+  "la pecera": {
+   "titulo_matriz": "La pecera",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "En una ciudad bulliciosa, un robot mecánico lleva una vida rutinaria, hasta que el casco de cristal que protege su cabeza se rompe. Obligado a encontrar un reemplazo, el robot emprende un viaje, solo para darse cuenta poco a poco de que lo que ocultaba el cristal tal vez no sea tan temible después de todo.",
+   "anio": 2025,
+   "duracion_min": 8,
+   "credito": "DIRECCIÓN: Angela Tatiana Fonseca Galvez\nPRODUCCIÓN: Angela Tatiana Fonseca Galvez\nMONTAJE:\nINTERPRETACIÓN: Juliana Rosero Hoyos (voz), Francisco Fonseca Galvez (voz)\nMÚSICA:",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/la-pecera.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=16q3KzbbeuMm3MPfmaBf9Aib_3yLUBFIX"
+   }
+  },
+  "reverb": {
+   "titulo_matriz": "Reverb",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Este cortometraje surgió como un intento de plasmar los sonidos que escuchaba por la noche. Mediante animación manual, escaneo y stop motion, el film pretende evocar la anticipación de algo que podría ocurrir durante la noche.",
+   "anio": 2025,
+   "duracion_min": 2,
+   "credito": "DIRECCIÓN: María Elizabeth López\nPRODUCCIÓN:\nMONTAJE:\nINTERPRETACIÓN:\nMÚSICA:",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/reverb.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1EUX4zVS8PjYQyd7liTH1zis67mZD10lO"
+   }
+  },
+  "chicha la chicharra": {
+   "titulo_matriz": "Chicha la chicharra",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Chicha es una pequeña cigarra que ha pasado décadas esperando emerger de la tierra. Sin embargo, cuando por fin llega el día, se decepciona profundamente al descubrir que el bosque que tanto anhelaba ha sido reemplazado por una ciudad. Por suerte, Chicha encuentra un pequeño árbol de aguacate y decide cuidarlo, con la esperanza de que se convierta en un nuevo bosque. Lo que Chicha ignora es que, tras emerger de la tierra, las cigarras solo viven unas pocas semanas, y ese tiempo no le alcanzará para presenciar el crecimiento del árbol.",
+   "anio": 2025,
+   "duracion_min": 10,
+   "credito": "DIRECCIÓN: Sofia Alejandra Uzcátegui\nPRODUCCIÓN: Maria Paula Rodríguez Santos, Camila Idrovo, \nMONTAJE: Sofia Alejandra Uzcátegui, Laura Natalia Rangel, Maria Paula Rangel\nINTERPRETACIÓN: \nMÚSICA: Sebastián Uscátegui",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/chicha-la-chicharra.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1QpgX945CNYXDBnklw-DfeP4lULT6aCjD"
+   }
+  },
+  "hush": {
+   "titulo_matriz": "HUSH",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "anio": 2025,
+   "duracion_min": 14,
+   "credito": "DIRECCIÓN: Santiago Franco\nPRODUCCIÓN: Santiago Franco\nMONTAJE: Santiago Franco\nINTERPRETACIÓN:\nMÚSICA:",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/hush.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1t7-tqrkWh3ru-pVLRzAyd1IsKJS46yrN"
+   }
+  },
+  "sol de niebla": {
+   "titulo_matriz": "Sol de Niebla",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
+   "anio": 2026,
+   "duracion_min": 6,
+   "credito": "DIRECCIÓN: Maria José Ibarra, Florentino Vargas\nPRODUCCIÓN:\nMONTAJE:\nINTERPRETACIÓN:\nMÚSICA: Dione",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/sol-de-niebla.webp",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1oXfWkfyzUABbwTtEZV0_Bmd5DTDtIMS4"
+   }
+  },
+  "pudor ante el asalto de los ojos furtivos": {
+   "titulo_matriz": "Pudor ante el asalto de los ojos furtivos",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "La ciudad como un escenario de deseo, donde la mirada masculina suscita vigilancia y escrutinio ante el cuerpo femenino. Esta relación de poder convierte al cuerpo en un campo de disputa en el espacio público.",
+   "anio": 2025,
+   "duracion_min": 9,
+   "credito": "DIRECCIÓN: Laura María Rodríguez\nPRODUCCIÓN: Laura María Rodríguez\nMONTAJE:\nINTERPRETACIÓN:\nMÚSICA:",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1HiW4sSMkuDW4cxIQpprvSs8RwccKtSpb"
+   }
+  },
+  "el ocaso de los dioses": {
+   "titulo_matriz": "El ocaso de los dioses",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Aurora, una joven que forma parte de una secta religiosa junto a su madre, duda de la veracidad de las palabras de Bernabé, el líder, y busca la manera de hacerles comprender a ella y al resto de la comunidad que la verdad no está ahí. Todo se vuelve caótico cuando Aurora comienza a tener vínculos con el ídolo sagrado y su objetivo cambia drásticamente, alterando la normalidad de la comunidad.",
+   "anio": 2025,
+   "duracion_min": 19,
+   "credito": "DIRECCIÓN: Juan Pablo Rendón\nPRODUCCIÓN: Juan Pablo Rendón, Sarai Marulanda,  Manuela Jimenez\nMONTAJE: Sebastian Alvarez\nINTERPRETACIÓN: Victoria Mancera, Alexander Sánchez, Doris Jimenez, Santiago Castrillón\nMÚSICA:",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/el-ocaso-de-los-dioses.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1IwlfB0pCs8UtybSCmY70JTwWjqAsR0Jg"
+   }
+  },
+  "somnolitico": {
+   "titulo_matriz": "Somnolítico",
+   "pestana": "Universitaria",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=0",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Un ser extraño se pierde en el caos del sistema de transporte, moviéndose de un lugar a otro sin encontrar salida. Los caminos están saturados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, sin rostro, se mueven automáticamente, creando un laberinto donde las rutas parecen interminables. La gente adormecida se funde con el entorno, y mientras el autobús continúa su camino, el ser finalmente se encuentra a sí mismo.",
+   "anio": 2026,
+   "duracion_min": 11,
+   "credito": "DIRECCIÓN: Abril Natalia Velásquez\nPRODUCCIÓN: Felipe Arango, \nMONTAJE: Abril Natalia Velásquez\nINTERPRETACIÓN:\nMÚSICA:",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/somnolitico.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=19sqTcp8y-ULrh_tl60VMLci6SWniF_iJ"
+   }
+  },
+  "lo demas es ruido": {
+   "titulo_matriz": "Lo demás es ruido",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Rosa, compositora de música contemporánea, da su primera entrevista televisiva en la casa de su colega Tere para ocultárselo a su marido. La charla se ve interrumpida por cortes de luz y un perro que no para de ladrar.",
+   "anio": 2026,
+   "duracion_min": 70,
+   "credito": "DIRECCIÓN: Nicolás Pereda\nPRODUCCIÓN: Catalina Pereda\nINTERPRETACIÓN: Teresita Sánchez, Rosa Estela Juárez Vargas, Luisa Pardo, Lázaro G. Rodríguez, Francisco Barreiro, José Rodríguez López",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/lo-demas-es-ruido.png",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1vXF2y3m4TDvsWp5j9CM3ElW4YshwYdu6"
+   }
+  },
+  "la corazonada": {
+   "titulo_matriz": "La corazonada",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Nieves administra un balneario junto a su hijo. Un verano, un motociclista se enamora de ella, pero el romance parece condenado al fracaso. Todo cambia con la llegada de una cineasta que decide incluirlos a ambos en su nueva película. Cuando se conviertan en actores, comenzarán a desdibujarse los límites entre la ficción y sus sentimientos.",
+   "anio": 2025,
+   "duracion_min": 78,
+   "credito": "DIRECCIÓN: Diego Soto\nPRODUCCIÓN: Fernando Fuentes, Las Noches cine\nINTERPRETACIÓN: \nNatacha García\nGermán Insunza\nMartín Insunza\nIsidora Gálvez Alfageme\nFelipe González\nAlexis Donoso",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/la-corazonada.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1sapIRWB6Ye_Ahcb-lgixVE5brlTeWF4m"
+   }
+  },
+  "el vuelo del moscardon": {
+   "titulo_matriz": "El vuelo del moscardón",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Andrés llega a Alberti buscando a su abuelo desaparecido. En la ciudad bonaerense se desarrolla una extraña situación relacionada con la barihuí que afecta a toda la comunidad. El joven conoce a Cosme y otros habitantes locales mientras intenta encontrar respuestas sobre el paradero de su familiar. Diversos obstáculos comienzan a interponerse en su búsqueda.",
+   "anio": 2025,
+   "duracion_min": 105,
+   "credito": "DIRECCIÓN:   Emanuel Di Cunto, Rodrigo Medrano y Pablo Bochard\nPRODUCCIÓN: \nINTERPRETACIÓN: Juan Luca Guardiani, Enrique Giaroli, Mauricio Sena",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/el-vuelo-del-moscardon.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1FEe3DHG-TfGWXuOUubaDhO_u7nXsBcFB"
+   }
+  },
+  "el diablo fuma y guarda las cabezas de los cerillos quemados en la misma caja": {
+   "titulo_matriz": "El diablo fuma (y guarda las cabezas de los cerillos quemados en la misma caja)",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Cinco hermanos abandonados por sus padres, comparten sus miedos con los de su abuela y habitan las fronteras entre lo real y lo imaginario para intentar permanecer juntos.",
+   "anio": 2025,
+   "duracion_min": 97,
+   "credito": "DIRECCIÓN:  Ernesto Martínez Bucio \nPRODUCCIÓN:  Carlos Hernández Vázquez, Gabriela Gavica, Alejandro Durán\nINTERPRETACIÓN: Carmen Ramos, Rafael nieto, Regina Alejandra, Laura Uribe, Bernardo Gamboa,"
+  },
+  "testimonio": {
+   "titulo_matriz": "Testimonio",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Murilo es un testigo. A donde quiera que vaya, suceden cosas extrañas. Sus experiencias de vida sacuden los misterios entre el cielo y la tierra. Después de todo, el cine lo permite todo.",
+   "anio": 2026,
+   "duracion_min": 14,
+   "credito": "DIRECCIÓN:  Leonardo Amaral, Roberto Cotta\n\nPRODUCCIÓN:  Julia Alves, Rebeca Francoff\nINTERPRETACIÓN: Murilo Ribeiro",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/testimonio.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1a04Hgq9_x1PfEEBr0gajCF4dwLuZXkzE"
+   }
+  },
+  "andariega": {
+   "titulo_matriz": "Andariega",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Chena es una madre soltera de 26 años que cada año se une a la diáspora de campesinos que recorren cientos de kilómetros lejos de sus hogares para trabajar como jornaleros o recolectores de café en Colombia. A pesar del durísimo trabajo, prefiere este tipo de vida nómada porque le da la posibilidad de elegir dónde y cuándo trabajar. Sobrevivir dependerá de su capacidad para realizar tareas físicamente exigentes, de su temple para enfrentarse a un mundo de hombres y de la fortaleza de su propio cuerpo, que empieza a debilitarse debido al esfuerzo diario que debe soportar. En su equipaje carga un diario donde escribe reflexiones sobre su pasado y la vida que lleva como andariega. Después de ocho años trabajando en los cultivos, no ha podido ahorrar dinero ni adquirir independencia económica. Por ahora solo espera volver a casa a finales de año, justo a tiempo para celebrar el cumpleaños de su hijo Totoi.",
+   "anio": 2025,
+   "duracion_min": 94,
+   "credito": "DIRECCIÓN:  Raul Soto\nPRODUCCIÓN:  Yira Plaza O´Brian\nINTERPRETACIÓN: Maria yesenia Herrera Benítez \"chena\"",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/andariega.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1QKa0gHj8qtQlJVAvCLmwYf9g_3se_BZJ"
+   }
+  },
+  "una vez un cuerpo": {
+   "titulo_matriz": "Una vez un cuerpo",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Mientras lidia con un ser extraño que habita en su interior, una mujer busca reconciliarse con su hermana tras un incidente de su adolescencia. Al explorar las experiencias que comparten a través de sus cuerpos, logra confrontar la naturaleza de lo que la habita.",
+   "anio": 2025,
+   "duracion_min": 10,
+   "credito": "DIRECCIÓN:  Maria Cristina Pérez\n\nPRODUCCIÓN:  Pez Dorado Animaciones, Mauricio Cuervo Rincón, Katherine Cabrera Garzón\nINTERPRETACIÓN: Sara isabella Martinez",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/una-vez-un-cuerpo.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1qPrOLwZrex5a_Pg6sHnlI0XGlVxdENDj"
+   }
+  },
+  "pude ver un fantasma desde mi ventana": {
+   "titulo_matriz": "Pude ver un fantasma desde mi ventana",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "A partir del relato de una madre y una abuela sobre el asesinato de un travesti, lx directorx estructura este corto documental que explora el ensueño —ese territorio entre la memoria y la imaginación— de un recuerdo de infancia. Con archivos de la comunidad trans en Ecuador durante los 90 y found footage se teje un microrrelato sobre la memoria, la muerte y la ausencia. Una tentativa por escapar del olvido y volverse eterna a través del cine.",
+   "anio": 2025,
+   "duracion_min": 9,
+   "credito": "DIRECCIÓN, PRODUCCIÓN:   Mayro Romero",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/pude-ver-un-fantasma-desde-mi-ventana.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=17vd1k8bYrzomUG-MkZThzxzT8IqVAo4Y"
+   }
+  },
+  "casi 30": {
+   "titulo_matriz": "Casi 30",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Paz sale de la casa que comparte con su pareja y corre a la casa de Lula, su mejor amiga. Ella sugiere quedarse despierta toda la noche para escapar de su mayor miedo: su propia ansiedad. Así es como comienza una noche, llena de karaoke, películas de la mafia, limpieza profunda del apartamento, peleas, llantos, risas",
+   "anio": 2026,
+   "duracion_min": 14,
+   "credito": "DIRECCIÓN:  Mila Aquilia, Bianca Oliveti\n\nPRODUCCIÓN:  Aldana D'Urso, Micaela Ibarguren \nINTERPRETACIÓN: Gisela Chicolino",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/casi-30.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1zfxtvcUNgFQBhT5ADhrC6NLbqsRFZr2p"
+   }
+  },
+  "presepio": {
+   "titulo_matriz": "Presépio",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "En la víspera de Navidad, Dejair, un ex luchador de la resistencia contra la dictadura militar, se reúne con su familia en el patio trasero. Un regalo de pistola de agua lleva a Dejair a denunciar lo absurdo de darle un arma a un niño.",
+   "anio": 2025,
+   "duracion_min": 18,
+   "credito": "DIRECCIÓN:  Felipe Bibian\nPRODUCCIÓN:   Milla Monteiro, Patricia Tudesco\nINTERPRETACIÓN: Wislon Rabello, Luciano Vidigal, Kikha Danttas, Marília Nunes",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/presepio.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1MD1PnZHKUlpAFQKg3jDdAoOvYOSmaGLk"
+   }
+  },
+  "lo que queda del mar": {
+   "titulo_matriz": "Lo que queda del mar",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "A través de materiales de archivo, un cineasta reconstruye la figura de su padre, un marinero comerciante ausente, y cuestiona cómo existe ese vínculo dentro de su propia memoria.",
+   "anio": 2026,
+   "duracion_min": 5,
+   "credito": "DIRECCIÓN:  Camila Adaro Liloff\nPRODUCCIÓN:  Eugenia Spago",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/lo-que-queda-del-mar.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1KMuT3ABXaqNKQO2UN-kBZibLLRqhWYti"
+   }
+  },
+  "el dia interrumpido": {
+   "titulo_matriz": "El día interrumpido",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Al empezar el día, una mujer se dispone a cumplir con su rutina, hasta que decide llevar a sus hijos al cementerio para que vean zombies. Al volver a su casa, esa interrupción en su día le dejará una extraña y mágica sensación.",
+   "anio": 2025,
+   "duracion_min": 13,
+   "credito": "DIRECCIÓN:  María Villar\nPRODUCCIÓN:  Jerónimo Prieto, Atalante, Maleza Cine\nINTERPRETACIÓN: Maria Villar, Emilia Madorno, Antonio Ajaka, Delfina Castagnino",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/el-dia-interrumpido.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1edc4ecBvZCWinAJWc8vZ-qMTUcNHXNmP"
+   }
+  },
+  "el cazador": {
+   "titulo_matriz": "El cazador",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Con un detector de metales en la mano, El cazador deambula por el bosque y por la ciudad en busca de tesoros. Esa es su forma de vida, ese es su destino: la llamada del Señor Oro. Sea como sea, por el camino lo encuentra todo; su casa es como un museo o una tienda de objetos rescatados del anonimato.",
+   "anio": 2026,
+   "duracion_min": 13,
+   "credito": "DIRECCIÓN:  Luciana Riso Soto, Manuel Villa\nPRODUCCIÓN:  Pablo Álvarez-Mesa, Natalia Guarín, Luciana Riso\nINTERPRETACIÓN: Edinson Monsalve",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/el-cazador.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1bzwIXJzkPOD8-UExdKcMSNq6naSi9U9V"
+   }
+  },
+  "hdlt": {
+   "titulo_matriz": "HDLT",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia.",
+   "anio": 2026,
+   "duracion_min": 18,
+   "credito": "DIRECCIÓN:  \nPRODUCCIÓN:  Artefactum Suba",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/hdlt.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1YHboac8QvRexThT7ZD0052JMRD_RsTF2"
+   }
+  },
+  "merrimundi": {
+   "titulo_matriz": "Merrimundi",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Una utopía retorcida se despliega, mientras querubines cantores se derriten al sonido de la descomposición. Creada por una máquina sintiente del futuro, esta revela su propia versión del paraíso.",
+   "anio": 2025,
+   "duracion_min": 20,
+   "credito": "DIRECCIÓN: Niles Atallah\nPRODUCCIÓN: Lucas Engel, Juan Cifuentes Mera, Diluvio, Fósfora, Pista B",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/merrimundi.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1cIGmp5wHVMrlEnE_aGh1RKxiaSn_KTYJ"
+   }
+  },
+  "petra y el sol": {
+   "titulo_matriz": "Petra y el sol",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Durante un fuerte derretimiento de nieve en los Andes, Petra, de 71 años, descubre el cuerpo preservado de un alpinista del siglo pasado. Inicialmente vacilante, ella lo llevó a su chalet de madera, lo que provocó una historia romántica inesperada.",
+   "anio": 2026,
+   "duracion_min": 10,
+   "credito": "DIRECCIÓN:  Malu Furche, Stefania Malacchini\nPRODUCCIÓN:  Antonia Piña, Malu Furche, Stefania Malacchini\nINTERPRETACIÓN: Fernando Solís Lara, Pablo Arias",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/petra-y-el-sol.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1rqL1JWkyjYj4jzvyw2lC7hbRuAjEdncJ"
+   }
+  },
+  "el show de ziggy la maldicion del mariachi bondage": {
+   "titulo_matriz": "El Show de Ziggy: la maldición del Mariachi Bondage",
+   "pestana": "Latinoamericana",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=1846105446",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Ziggy, una influyente en ascenso, está tratando de aumentar su número de seguidores en las redes sociales al despertar la maldición de una vieja canción. Ahora, un mariachi sombrío que hace bailar a la gente hasta que muere está persiguiendo a Ziggy hasta que cumple su sueño de hacerlo viral.",
+   "anio": 2026,
+   "duracion_min": 10,
+   "credito": "DIRECCIÓN:  Giorgio Ross\nPRODUCCIÓN:  Leonardo Suárez de la Luz, Luna Azul Arellano\nINTERPRETACIÓN: Elena Garza, Iván Molo, Víctor Bonilla, Andrés Musich",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/el-show-de-ziggy-la-maldicion-del-mariachi-bondage.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1jqhEOlLpmWQVVzqLlCUxZ4H8dhP4VEKe"
+   }
+  },
+  "mu ki ra": {
+   "titulo_matriz": "MU  KI RA",
+   "pestana": "Cinescuela",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=481110431",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, una niña de trece años, se enfrentará a su peor pesadilla cuando Martín, su hermano pequeño, sea atrapado por uno de ellos. Con la ayuda de Iolo, una anciana mágica, y una divertida osa hormiguera como compañera de viajes, Cleo se adentrará en lo profundo de la selva para atrapar a Mukira, el monstruo que se llevó a Martín.Cleo pronto aprenderá que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo, ¿te atreves a descubrirlo? Adéntrate en la selva y en esta increíble aventura musical y verás que la amistad es capaz de florecer en los lugares más inesperados.",
+   "anio": 2026,
+   "duracion_min": 81,
+   "credito": "DIRECCIÓN:  Estefanía Piñeres\nPRODUCCIÓN: Letrario, Alejandro Zapata, Ábano Producións, Chelo Loureiro\nINTERPRETACIÓN: María Fernanda Marín, Isa Mosquera, Carlos Jean, Witsey Mena, Ricardo Scioville",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/mu-ki-ra.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=13z9sYAkdUKgmzFQBToUxypgCw7IlayVT"
+   }
+  },
+  "si no ardemos como iluminar la noche": {
+   "titulo_matriz": "Si no ardemos cómo iluminar la noche",
+   "pestana": "Cinescuela",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=481110431",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Laura, una joven introvertida de trece años, llega a un pueblo rodeado de plantaciones de palma y de un imponente bosque. Mientras se ajusta a la nueva configuración de su familia, Laura empieza a entrever un mundo oculto en donde circula la historia de una bestia que habita en el bosque y se alimenta de mujeres. Al principio, lo descarta como una fantasía infantil, pero cuando conoce a la magnética Daniela, su amistad la lleva en un viaje que revela la verdadera naturaleza de la bestia.",
+   "anio": 2026,
+   "duracion_min": 95,
+   "credito": "DIRECCIÓN:  Kim Torres\nPRODUCCIÓN:  Alejandra Vargas Carballo\nINTERPRETACIÓN: Lara Yuja Mora, Keylin Delgado Arguedas, Valentina Chaves Jimenez",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/si-no-ardemos-como-iluminar-la-noche.png",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1APjcMAVGCimd9gG84ndf5Bc8UYMVTL-i"
+   }
+  },
+  "adios al amigo": {
+   "titulo_matriz": "Adiós al Amigo",
+   "pestana": "Viejos secretos del nuevo Oeste",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=47146740",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Después de mil días de una guerra civil en Colombia en 1902, el soldado revolucionario Alfredo Duarte Amado recibe un telegrama con la noticia del embarazo de la esposa de su hermano. Enterándose que la guerra ya ha acabado, convence a un fotógrafo aficionado en las entrañas del cañón del Chicamocha, para que se acompañen en busca de su hermano perdido en la guerra, sabiendo que el fotógrafo también busca al hombre que mató a su papá. Trailer",
+   "anio": 2025,
+   "duracion_min": 118,
+   "credito": "DIRECCIÓN:  Iván Gaona\nPRODUCCIÓN:  \nMónica Juanita Hernández Duquino, La Contrabanda\nINTERPRETACIÓN: Willington Gordillo Duarte Benito Pardo, Cristian Hernández Castillo, Marina Olarte, Alfonso López, Yohanini Suárez",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/adios-al-amigo.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1vLClYGSN48dt46HYbEosHRh_Gy0wb8su"
+   }
+  },
+  "la misteriosa mirada del flamenco": {
+   "titulo_matriz": "La misteriosa mirada del flamenco",
+   "pestana": "Viejos secretos del nuevo Oeste",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=47146740",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "1982. Una enfermedad desconocida comienza a propagarse en un pueblo minero del desierto chileno. Se acusa a homosexuales de transmitirla a través de sus miradas. Lidia, 11 años, única niña de la comunidad, parte en busca de la verdad.",
+   "anio": 2025,
+   "duracion_min": 110,
+   "credito": "DIRECCIÓN: Diego Céspedes\nPRODUCCIÓN:  Giancarlo Nasi\nINTERPRETACIÓN: Tamara Cortés, Matías Catalán, Paula Dinamarca, Pedro Muñoz como Giovanni",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/la-misteriosa-mirada-del-flamenco.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1NGFhpbdzOBEtQTPNmsLnc8ilkWwoVcGp"
+   }
+  },
+  "aquileo venganza": {
+   "titulo_matriz": "Aquileo Venganza",
+   "pestana": "Viejos secretos del nuevo Oeste",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=47146740",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "Comienzos del siglo veinte, años siguientes a la Guerra de los Mil Días que devastó los campos colombianos. Bandoleros al servicio de los grandes terratenientes atacan a los pequeños propietarios para quedarse con sus tierras. La familia Bernal es víctima de una de estas bandas, comandadas por el alcalde del pueblo. Aquileo es el único sobreviviente y jura vengarse. A ello se dedican él y la película.",
+   "anio": 1968,
+   "duracion_min": 70,
+   "credito": "DIRECCIÓN: Ciro Durán\nPRODUCCIÓN:  Proa Films , Tiuna Films , Mario Flórez\nINTERPRETACIÓN: carlos muñoz, camilo medina, rey vásquez, orlando galas, bertha matijasevich",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/aquileo-venganza.png",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=16DV-lIO9vOSPQJVWlvymLjKHyPlhx6DL"
+   }
+  },
+  "la paga": {
+   "titulo_matriz": "La paga",
+   "pestana": "Viejos secretos del nuevo Oeste",
+   "_src": {
+    "url": "https://docs.google.com/spreadsheets/d/1NVyy-_n4dtptNdhtSNfrcw3UQ59ZDKXAv8hSvKc-evk/htmlview#gid=47146740",
+    "date": "2026-10-06"
+   },
+   "sinopsis": "En los Andes colombo-venezolanos, un campesino trabaja la tierra en condiciones de explotación para asegurar la supervivencia de su familia. Su hijo está enfermo, su esposa está embarazada y él reproduce la violencia que lo rodea. Sin dinero para tratamiento médico, una noche se emborracha y es arrestado. En la cárcel, en un arrebato de furia, se rebela contra el jefe político del pueblo de la única manera que puede.",
+   "anio": 1962,
+   "duracion_min": 62,
+   "credito": "DIRECCIÓN: Curo Durán\nPRODUCCIÓN:  Marina Gil, Marcos Hernández\nINTERPRETACIÓN: Alberto Álvarez, María Escalona, Rafael Briceño, Paco De La Riera, Eduardo Frank, Herman Lejter",
+   "afiche": {
+    "archivo": "fuentes/filcmar-2026/matriz/posters/la-paga.jpg",
+    "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1n5EMwgowv0hI0fZ5Cv-k0q-eQ7RbNrw0"
+   }
+  }
+ }
+}

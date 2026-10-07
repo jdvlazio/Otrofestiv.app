@@ -11,6 +11,10 @@
    "que": "los carruseles de Selección Oficial → catálogo (las tres competencias)"
   },
   {
+   "cmd": "python3 pipeline/filcmar-2026-matriz.py",
+   "que": "la matriz de curaduría del festival (6 oct): sinopsis y los afiches que faltaban"
+  },
+  {
    "cmd": "python3 pipeline/filcmar-2026-crudo.py",
    "que": "la lectura a ojo de las 16 láminas → crudo, confirmada por la OCR en los dos sentidos"
   },

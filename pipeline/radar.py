@@ -123,6 +123,11 @@ def main():
         # 704-M16»): cuenta como presente si una contiene a la otra
         if any(norm(s) in x or x in norm(s) for x in nuestras_salas if x):
             continue
+        # el nombre corto de una SEDE nuestra: la prensa escribe «Teatro Simona
+        # Duque» por «Teatro Municipal Simona Duque» (FILCMAR, oct 2026). Cuenta
+        # si todas sus palabras están en una sede del crudo.
+        if any(set(norm(s).split()) <= set(x.split()) for x in sedes if x):
+            continue
         cerca = norm(texto[max(0, m.start() - 140):m.end() + 140])
         if not any(sede in cerca for sede in sedes if sede):
             continue

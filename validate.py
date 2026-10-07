@@ -4876,6 +4876,7 @@ try:
         '_sinopsis_src':         'procedencia de la sinopsis',
         '_pais_fuente':          'procedencia del país',
         '_duracion_fuente':      'procedencia de la duración',
+        '_sinopsis_fuente':      'procedencia de la sinopsis',
         '_duracion_dibujada':    'la duración que el impreso DIBUJA, para contrastarla',
         '_obras_sin_duracion':   'informe de cobertura',
         '_sin_ficha_en_el_pdf':  'bandera del informe de cobertura',
