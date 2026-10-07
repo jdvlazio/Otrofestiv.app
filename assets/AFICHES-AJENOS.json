@@ -1,0 +1,80 @@
+{
+ "_provenance": {
+  "genera": "scripts/afiches-ajenos.py",
+  "criterio": "pipeline/afiche_criterio.py",
+  "regla": "un afiche ajeno se publica solo con veredicto «afiche» y huella vigente"
+ },
+ "afiches": {
+  "/assets/biff-2026/la-bola-negra.jpg": {
+   "sha1": "3077821d062de8c452f69864f004c1d74b079abf",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026"
+   ]
+  },
+  "/assets/biff-2026/la-libertad-doble-v2.jpg": {
+   "sha1": "916895bffc8e4b4b03c676a7ae16ce9342d51740",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026"
+   ]
+  },
+  "/assets/ficdeh/la-independencia.jpg": {
+   "sha1": "6a8bbb76f2544323cf8d07ee27a2c9870386dfd5",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/ficdeh/semillas.jpg": {
+   "sha1": "996e3e1f13af282d30423b1cc4ae0b7fad65e327",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficma-2026"
+   ]
+  },
+  "/assets/ficmontanas/el-huaquero.jpg": {
+   "sha1": "8d1dc5636811bc3deffa929ff059b3e2f8a12dc6",
+   "veredicto": "afiche",
+   "usado_en": [
+    "siembrafest-2026"
+   ]
+  },
+  "/assets/filcmar-2026/hdlt.jpg": {
+   "sha1": "2508554fefc853d486e9908df659ca533cbdb955",
+   "veredicto": "afiche",
+   "usado_en": [
+    "fantasmagoria-2026",
+    "popayan-2026"
+   ]
+  },
+  "/assets/popayan-2026/la-rebelion-de-un-fantasma.jpg": {
+   "sha1": "2a8c841c56d497c3e28928be173c678e8292db4d",
+   "veredicto": "afiche",
+   "usado_en": [
+    "girardota-2026"
+   ]
+  },
+  "/assets/villadelcine-2026/alivios.jpg": {
+   "sha1": "dd646c491e95d5330742213f598c8d67b2298336",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficcali-2026"
+   ]
+  },
+  "/assets/villadelcine-2026/la-mona.jpg": {
+   "sha1": "da74bd576bbdaf21048e41691c1f2cb097048cde",
+   "veredicto": "afiche",
+   "usado_en": [
+    "popayan-2026"
+   ]
+  },
+  "/assets/villadelcine-2026/maleza.jpg": {
+   "sha1": "d49a7c3d8fd800d00e5449cc0db744cbff6816e6",
+   "veredicto": "afiche",
+   "usado_en": [
+    "girardota-2026"
+   ]
+  }
+ }
+}

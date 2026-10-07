@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-09-30"
+  "capturado": "2026-10-07"
  },
  "obras": [
   {
@@ -100,9 +100,7 @@
      "poster": "/assets/siembrafest/carola.jpg",
      "sinopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre."
     }
-   ],
-   "poster": "/assets/siembrafest/carola.jpg",
-   "_afiche": "ya publicada en siembrafest-2026: se reusa su afiche"
+   ]
   },
   {
    "titulo": "Deus Ex Necro Machina",
@@ -197,8 +195,7 @@
      "posterSource": "oficial"
     }
    ],
-   "poster": "/assets/siembrafest/elementales.jpg",
-   "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche",
+   "_verificado": "ya publicada en jardin-2026: se reusa su sinopsis",
    "sinopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES."
   },
   {
@@ -238,7 +235,7 @@
    "lbSlug": "sinister-funeral",
    "_verificado": "declarada a mano: TMDB (127593) casa por dirección y año, pero solo tiene sinopsis en inglés: en español la obra salía sin una línea. La sinopsis es la del catálogo oficial de cine colombiano de Proimágenes (ficha 102, Jairo Pinilla, 1977), tal cual. Las láminas del festival no traen sinopsis.",
    "_director": "Jairo Pinilla",
-   "_sondeado": "2026-09-30",
+   "_sondeado": "2026-10-07",
    "poster": "/assets/girardota-2026/funeral-siniestro.jpg",
    "posterSource": "tmdb"
   },
@@ -382,12 +379,12 @@
      "titulo": "Maleza",
      "poster": "/assets/villadelcine-2026/maleza.jpg",
      "posterSource": "oficial",
-     "sinopsis": "Guiada por el espíritu de su gato fallecido, una sanadora y partera solitaria, dedicada a preservar la vida, sufre una profunda conmoción interior cuando una joven desesperada llega a su puerta. Durante una noche de cruda confrontación y dolor, Alba comprende que ayudar a alguien significa caminar a su lado, no tomar decisiones por esa persona."
+     "sinopsis": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino."
     }
    ],
    "poster": "/assets/villadelcine-2026/maleza.jpg",
    "_verificado": "ya publicada en villadelcine-2026: se reusa su afiche",
-   "sinopsis": "Guiada por el espíritu de su gato fallecido, una sanadora y partera solitaria, dedicada a preservar la vida, sufre una profunda conmoción interior cuando una joven desesperada llega a su puerta. Durante una noche de cruda confrontación y dolor, Alba comprende que ayudar a alguien significa caminar a su lado, no tomar decisiones por esa persona."
+   "sinopsis": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino."
   },
   {
    "titulo": "Maricones",
@@ -674,9 +671,7 @@
      "poster": "/assets/siembrafest/carola.jpg",
      "sinopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre."
     }
-   ],
-   "poster": "/assets/siembrafest/carola.jpg",
-   "_afiche": "ya publicada en siembrafest-2026: se reusa su afiche"
+   ]
   },
   "El Páramo": {
    "tmdb_id": 83705,
@@ -748,7 +743,7 @@
    "lbSlug": "sinister-funeral",
    "_verificado": "declarada a mano: TMDB (127593) casa por dirección y año, pero solo tiene sinopsis en inglés: en español la obra salía sin una línea. La sinopsis es la del catálogo oficial de cine colombiano de Proimágenes (ficha 102, Jairo Pinilla, 1977), tal cual. Las láminas del festival no traen sinopsis.",
    "_director": "Jairo Pinilla",
-   "_sondeado": "2026-09-30",
+   "_sondeado": "2026-10-07",
    "poster": "/assets/girardota-2026/funeral-siniestro.jpg",
    "posterSource": "tmdb"
   },
@@ -1017,89 +1012,89 @@
  "_sin_ficha_sondeo": {
   "Armonía de la Entropía": {
    "director": "Alexander Ladino Giraldo",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "Bajo el Último Aliento": {
    "director": "Pedro Valencia",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "Competencia oficial de cortometrajes": {
    "director": "",
-   "fecha": "2026-09-27"
+   "fecha": "2026-10-07"
   },
   "De lo Oculto": {
    "director": "Daniel Rúa",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "Deus Ex Necro Machina": {
    "director": "Mateo Montoya Correa",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "Elementales": {
    "director": "Camilo Botero Jaramillo",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "En Todo y en Nada": {
    "director": "Raquel Zapata Ospina",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "Hambre": {
    "director": "Manuela Bedoya Carvajal",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "Hábitat Venus": {
    "director": "Sofía Rueda Férez",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "Idilio": {
    "director": "Andrés Felipe Giraldo Guisao",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "La Rata": {
    "director": "Santiago Londoño Vélez",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "La Rebelión de un Fantasma": {
    "director": "Flora Rodríguez",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "Maldito Sentimiento": {
    "director": "Leidy Vanegas Bolemos",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "Maleza": {
    "director": "Nicolle Estrada Díaz",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "Mantener la Democracia Maestro": {
    "director": "Jhon Fredy Machado Tuberquia",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "Muestra de cortometrajes: Fantasía tropical": {
    "director": "",
-   "fecha": "2026-09-27"
+   "fecha": "2026-10-07"
   },
   "Muestra de cortos Girardotanos": {
    "director": "",
-   "fecha": "2026-09-27"
+   "fecha": "2026-10-07"
   },
   "PARE": {
    "director": "Santiago Salazar Quintana",
-   "fecha": "2026-09-29"
+   "fecha": "2026-10-07"
   },
   "Selección de Cortometrajes fantásticos para toda la familia": {
    "director": "",
-   "fecha": "2026-09-27"
+   "fecha": "2026-10-07"
   },
   "Silencio en la Laguna": {
    "director": "Álvaro Jiménez Garzón, Julián Montenegro",
-   "fecha": "2026-09-30"
+   "fecha": "2026-10-07"
   }
  },
  "_fuentes": [
   {
    "fuente": "proimagenescolombia.com — la base oficial del cine colombiano",
-   "capturado": "2026-09-30",
+   "capturado": "2026-10-07",
    "que_aporta": "país, año, duración, género, sinopsis y afiche de las obras que TMDB no registra",
    "metodo": "búsqueda por título en los catálogos de largos y cortos, y el MISMO candado del director que TMDB: el buscador es laxo y también mira dentro de la sinopsis"
   }

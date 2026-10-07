@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "PDF oficial del BIFF 12 + agenda de la Cinemateca de Bogotá + biff.co",
-  "capturado": "2026-10-06",
+  "capturado": "2026-10-07",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la sede como la presenta el PDF (págs. 28–31); la sala va aparte, desde las fichas.",
@@ -540,7 +540,7 @@
    "has_qa": false,
    "synopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
    "synopsis_lang": "es",
-   "poster": "/assets/biff-2026/la-libertad-doble.jpg",
+   "poster": "/assets/biff-2026/la-libertad-doble-v2.jpg",
    "posterSource": "tmdb",
    "_src": {
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
@@ -1263,7 +1263,7 @@
    "has_qa": false,
    "synopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
    "synopsis_lang": "es",
-   "poster": "/assets/biff-2026/la-libertad-doble.jpg",
+   "poster": "/assets/biff-2026/la-libertad-doble-v2.jpg",
    "posterSource": "tmdb",
    "_src": {
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
@@ -4983,7 +4983,7 @@
    "has_qa": false,
    "synopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
    "synopsis_lang": "es",
-   "poster": "/assets/biff-2026/la-libertad-doble.jpg",
+   "poster": "/assets/biff-2026/la-libertad-doble-v2.jpg",
    "posterSource": "tmdb",
    "_src": {
     "url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
@@ -5830,7 +5830,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-06T10:04:26",
+  "fecha": "2026-10-07T15:20:07",
   "plan_sha": "1aaa37e1829a6d31",
   "paso": 9,
   "cmd": "python3 pipeline/ensamblar.py biff-2026"
