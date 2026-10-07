@@ -10,7 +10,7 @@ import { FESTIVAL_CONFIG } from '../config.js';
 import { _festDate, simNow } from '../domain/time.js';
 import { syncScheduleWithCatalog, verifyPlan } from '../domain/schedule.js';
 import { report } from '../telemetry.js';
-import { FESTIVAL_STATE, deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge } from '../state/festival-context.js';
+import { FESTIVAL_STATE, deriveHydrate, deriveCloudSave, deriveCloudApply, deriveCloudMerge, migrarTitulosAnteriores } from '../state/festival-context.js';
 import { closeAuthSheet, _esRevisionActiva } from '../view/sheets.js';
 import { showToast } from '../view/feedback.js';
 import { state } from '../state/state.js';
@@ -254,6 +254,8 @@ export function _applyCloudRow(data, opts){
   // no-vacíos, con merge para ratings/availability). Mismo comportamiento previo.
   const _u=deriveCloudApply(data, whole);
   if(Object.keys(_u).length) state.batchUpdate(_u);
+  // La nube puede traer lo guardado bajo un título que el festival ya cambió.
+  if(FILMS&&FILMS.length) migrarTitulosAnteriores(FILMS);
   // El plan que llega de la nube es una copia congelada de OTRO momento (u otro
   // dispositivo con catálogo viejo). Se re-deriva contra el catálogo vivo — la
   // misma normalización del loader; ver syncScheduleWithCatalog. Solo si FILMS

@@ -24,7 +24,7 @@ import { dayFullyPassed, simTodayStr } from '../domain/time.js';
 import { _djb2, explodeScreenings, normTitle, sealSharedSlots, validateFilm } from '../domain/film.js';
 import { syncScheduleWithCatalog } from '../domain/schedule.js';
 import { state } from '../state/state.js';
-import { deriveClear } from '../state/festival-context.js';
+import { deriveClear, migrarTitulosAnteriores } from '../state/festival-context.js';
 import { storage } from '../storage/storage.js';
 import { t } from '../i18n/i18n.js';
 import { _autoResolveFestivalPosters, _renderFestivalSelector, renderEndedBanner, renderPostponedBanner } from './festival.js';
@@ -307,6 +307,9 @@ export function publicarCatalogo(id, cfg){
   _restaurarPrensa(cfg);   // la preferencia de ESTE festival, antes de publicar
   const _visibles = _filtrarPorAudiencia(_newFilms);
   const _validTitles = new Set(_visibles.map(f=>f.title));
+  // Títulos anteriores ANTES del filtro de abajo: sin esto, lo guardado bajo el
+  // título viejo de una obra renombrada se borra acá mismo (domain/titulos.js).
+  migrarTitulosAnteriores(_newFilms);
   state.batchUpdate({
     _activeFestId: id,
     FILMS: _visibles,
