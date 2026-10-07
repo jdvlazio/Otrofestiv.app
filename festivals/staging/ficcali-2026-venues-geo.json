@@ -1,0 +1,219 @@
+{
+ "Cinemateca La Tertulia": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4502809,-76.5453033 · OSM/Nominatim 3.4501941,-76.5453782 · distancia 13 m. Google: «Museo La Tertulia», Oeste, Cra. 1 #5-105. OSM: tourism=museum «Museo La Tertulia», El Peñón, Comuna 3. Dirección oficial FICCALI 2025 (ficcali.com/sedes-del-festival, vía Wayback): «Carrera 1 oeste #5-105».",
+  "lat": 3.4502809,
+  "lng": -76.5453033,
+  "address": "Carrera 1 Oeste #5-105, El Peñón"
+ },
+ "Casa Yurtas": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.443104,-76.487205 · OSM/Nominatim 3.4436695,-76.4882143 · distancia 128 m. Dirección dada por los organizadores del espacio: «Casa Yurtas•Distrito de Aguablanca, Cra 22 #72b-64, Ulpiano Lloreda» (Planify / Enbiciarte Cali / @comoseria.pr, taller de yurta del dom 4 oct 2026; Casagrafo y Misión Yurtas Valle la llaman «Casa Yurtas · Oriente de Cali, Carrera 22 # 72B-64 — Ulpiano Lloreda»). Google geocodifica la dirección en 3.443104,-76.487205 (lo rotula Lleras Restrepo, barrio contiguo); OSM: tramo de «Carrera 22, Ulpiano Lloreda, Comuna 13» (centro de la calle, no el predio); reverse OSM del pin de Google = Carrera 22, Ulpiano Lloreda, Comuna 13. «Yurtas Ulpiano Lloreda» y «Casa Yurtas» son el MISMO lugar: mismo día (dom 4 oct), el taller a la tarde y la proyección a las 7 p. m., y la casa queda en Ulpiano Lloreda.",
+  "lat": 3.443104,
+  "lng": -76.487205,
+  "address": "Carrera 22 #72B-64, Ulpiano Lloreda"
+ },
+ "En línea": {
+  "_prec": "manual",
+  "_nota": "Taller online (Foro local de proyectos): transmisión en línea, sin pin."
+ },
+ "Madame Blue": {
+  "_prec": "manual",
+  "_nota": "Google Maps «Fundación Madame Blue» 3.4597979,-76.5340988, Av. 9 Nte. #15N-39, Granada. Web oficial fundacionmadameblue.com: «Sala Madame Blue … Barrio Granada, Cali»; directorio (findglocal): «Calle 15A Norte 9-17, Granada» (la misma esquina Av. 9N con Cl. 15AN). Reverse OSM del pin de Google = Calle 15A Norte, Granada, Comuna 2 — concuerda con la segunda dirección. No está en OSM como lugar, así que no hay distancia OSM; las dos direcciones caen en la misma esquina.",
+  "lat": 3.4597979,
+  "lng": -76.5340988,
+  "address": "Avenida 9 Norte #15N-39, Granada"
+ },
+ "Ciudad Pacífica": {
+  "_prec": "aproximado",
+  "_nota": "Google Maps 3.3452691,-76.5210844 · OSM/Nominatim 3.3424776,-76.5232366 · distancia 392 m. «Ciudad Pacífica» es un desarrollo de vivienda (urbanización), no un lugar puntual. Google: ficha «Ciudad Pacífica — Desarrollo inmobiliario», Cra. 122 #5-4 (sala de ventas). OSM: límite administrativo «Ciudad Pacífica, El Hormiguero» (centroide); reverse OSM del pin de Google cae dentro de Ciudad Pacífica. Pin = punto de referencia de la urbanización, no el sitio exacto de la proyección.",
+  "lat": 3.3452691,
+  "lng": -76.5210844,
+  "address": "Ciudad Pacífica, El Hormiguero (sur de Cali)",
+  "_pregunta": "¿En qué punto exacto de Ciudad Pacífica fue la función de Gremlins del 9 de octubre (parque, salón comunal, cancha)?"
+ },
+ "Sendero del Bosque": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.440236,-76.508267 · OSM/Nominatim 3.4400531,-76.5057022 · distancia 285 m. Identificación: en la edición 2025 FICCALI listó como sede de Cine sin límites «Sendero del Bosque, Carrera 18 # 33 F80. Barrio Santa fe» (ficcali.com/sedes-del-festival vía Wayback, may 2026) y el barrio Santa Fe está en la Comuna 8. Google geocodifica Cra. 18 #33F-80 (Comuna 8) en el pin; OSM: límite del barrio «Santa Fé, Comuna 8» (centroide, a 285 m); reverse OSM del pin = Calle 33H, Santa Fé, Comuna 8. La discrepancia >150 m es porque OSM solo da el centro del barrio; manda la dirección oficial.",
+  "lat": 3.440236,
+  "lng": -76.508267,
+  "address": "Carrera 18 #33F-80, Santa Fe (Comuna 8)",
+  "_pregunta": "¿«Sendero Comuna 8» es el Sendero del Bosque (Cra. 18 #33F-80, Santa Fe), la misma sede de Cine sin límites de 2025?"
+ },
+ "Alto Meléndez": {
+  "_prec": "aproximado",
+  "_nota": "«Altos de Meléndez» no aparece como lugar en Google Maps (solo «Meléndez», barrio, 3.3793159,-76.5452105). El sector reconocido es «Alto Meléndez», Comuna 18 (Alcaldía de Cali, reubicaciones/titulación en Alto Meléndez). OSM: «Sede Comunal JAC Sector Alto Meléndez», Cra. 94D #2-23, El Jordán, 3.3738372,-76.5518993; y «zona verde parque Alto Meléndez» 3.3711028,-76.5507879 (a ~320 m). Google «Caseta Comunal Meléndez» (Cl. 4B #95-1, Horizonte, 3.3738135,-76.5457978) queda a ~670 m, en Meléndez bajo, no en el alto. Pin = sede comunal del sector Alto Meléndez (candidato más probable para una función nocturna de Cine sin límites).",
+  "lat": 3.3738372,
+  "lng": -76.5518993,
+  "address": "Sede comunal JAC Alto Meléndez, Carrera 94D #2-23, Comuna 18",
+  "_pregunta": "¿Dónde fue exactamente la función de Monsters Inc. del 11 de octubre en Altos de Meléndez (sede comunal JAC, parque, cancha)?"
+ },
+ "Biblioteca Pública La Paz": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.5202094,-76.5698722 · OSM/Nominatim 3.5200925,-76.5684843 · distancia 155 m. Google: «Biblioteca pública La Paz». OSM: place=village «La Paz» (centro del corregimiento; no tiene la biblioteca mapeada). Dirección oficial FICCALI 2025: «Biblioteca La Paz — Corregimiento La Paz, junto a la Caseta Comunal». Es el corregimiento rural del norte, no el barrio La Paz de la Comuna 2. 155 m de diferencia = centro del poblado vs. la biblioteca; manda Google, que marca el edificio.",
+  "lat": 3.5202094,
+  "lng": -76.5698722,
+  "address": "Corregimiento La Paz, junto a la Caseta Comunal"
+ },
+ "Biblioteca Pública San Luis I": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.481656,-76.4877616 · OSM/Nominatim 3.4806841,-76.4871383 · distancia 128 m. Google: «Biblioteca Pública Municipal San Luis I», Cl. 71 #1A-10 (la ficha dice «Palmira» por error, pero el pin está en Cali). OSM: barrio «San Luis, Comuna 6» (centroide, 128 m) — la biblioteca no está mapeada; reverse OSM del pin de Google = Calle 71, San Luis, Comuna 6. Dirección oficial (Alcaldía/Red de Bibliotecas): «Calle 71 # 1A-10, Barrio San Luis I, comuna 6».",
+  "lat": 3.481656,
+  "lng": -76.4877616,
+  "address": "Calle 71 #1A-10, San Luis I (Comuna 6)"
+ },
+ "Teatrino Proyecto Oriente": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.450566,-76.510646 · OSM/Nominatim 3.4508482,-76.5068073 · distancia 427 m. Lugar DISTINTO del «TEATRINO» (Teatro Municipal). Google: «PROYECTO ORIENTE», Cl. 34 #10-115, Comuna 8. El País (‘Teatrino Proyecto Oriente: el epicentro cultural que transforma el nororiente de Cali’): «Calle 34 N.° 10–115, Piso 2», barrio El Troncal, sala independiente de 56 butacas. OSM: barrio «El Troncal, Comuna 8» (centroide, 428 m) — el teatrino no está mapeado; reverse OSM del pin de Google = Calle 34, El Troncal. La discrepancia es solo porque OSM da el centro del barrio; manda la dirección oficial, que coincide con Google.",
+  "lat": 3.450566,
+  "lng": -76.510646,
+  "address": "Calle 34 #10-115, piso 2, El Troncal (Comuna 8)"
+ },
+ "Calimateca": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4866219,-76.5036238 · OSM/Nominatim 3.4861665,-76.503547 · distancia 51 m. Calimateca = cineclub al aire libre de Cultura Ambiental Caleña. Sus publicaciones: «Ciclo Calimateca … Lugar: Bosque urbano, Carrera 9 Norte #67 – 03, Barrio Calima – Cali» (también «Carrera 9 Norte #68 - 03») y «junto al Río Cali»; Banrep Cultural cita «el cineclub Calimateca». Google: «Bosque Urbano El Sendero Calima», Cra. 9 Nte. #67-12, Calima. OSM: leisure=park «Bosque Urbano Sendero Calima, Comuna 4». La ficha de Google «Cultura Ambiental Caleña» (Cl 69 N, 3.4874046,-76.5029997) está a ~150 m, en el mismo bosque.",
+  "lat": 3.4866219,
+  "lng": -76.5036238,
+  "address": "Bosque Urbano El Sendero Calima, Carrera 9 Norte #67-03, Calima (Comuna 4)"
+ },
+ "Espectra": {
+  "_prec": "manual",
+  "_nota": "Google: «Espectra» 3.4483475,-76.5400415, Cl. 2 #4-66, Comuna 3. Dirección oficial FICCALI 2025: «Centro Cultural Espectra — Calle 2 #4-66». No está en OSM como lugar; reverse OSM del pin de Google = Calle 2, San Antonio, Comuna 3 (concuerda con la dirección).",
+  "lat": 3.4483475,
+  "lng": -76.5400415,
+  "address": "Calle 2 #4-66, San Antonio"
+ },
+ "Universidad Autónoma de Occidente": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.3536526,-76.5229863 · OSM/Nominatim 3.3537033,-76.5218673 · distancia 124 m. Sala tomada de la línea de meta: «(Aulas 4 Torreón 1A- UAO)». Google: «Universidad Autónoma De Occidente» (pin del campus). OSM: amenity=university «Universidad Autónoma de Occidente», Bochalema. El Torreón no aparece por separado en ninguno de los dos mapas; pin = campus.",
+  "lat": 3.3536526,
+  "lng": -76.5229863,
+  "address": "Calle 25 #115-85, km 2 vía Cali–Jamundí"
+ },
+ "Teatro al Aire Libre Los Cristales": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4447028,-76.5464776 · OSM/Nominatim 3.4447642,-76.5465217 · distancia 8 m. Google: «Teatro al aire libre Los Cristales», Cra. 14. OSM: amenity=arts_centre «Teatro al Aire Libre Los Cristales», Comuna 3. Dirección oficial FICCALI 2025: «Carrera 14A oeste # 6-00».",
+  "lat": 3.4447028,
+  "lng": -76.5464776,
+  "address": "Carrera 14A Oeste #6-00"
+ },
+ "Curador": {
+  "_prec": "manual",
+  "_nota": "Google: «Curador Club Social» 3.4533284,-76.5325066, Cl. 12 #1-18, San Pedro. No está en OSM como lugar; reverse OSM del pin = Bulevar de la Avenida Colombia, San Pedro, Comuna 3 (la Cl. 12 #1-18 da al bulevar del río: concuerda). Prensa de oct 2026 (Sucursal Fest) confirma que Curador Club Social está activo como espacio cultural en Cali.",
+  "lat": 3.4533284,
+  "lng": -76.5325066,
+  "address": "Calle 12 #1-18, San Pedro"
+ },
+ "Yawa": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4292722,-76.5438465 · OSM/Nominatim 3.4291557,-76.5438971 · distancia 14 m. Google: «YAWA Centro de Ciencia, Arte y Tecnología de Cali» (antiguo Planetario). OSM: tourism=museum «YAWA - Centro de Ciencia, Arte y Tecnología de Cali», Cra. 37A #5-27. Dirección oficial FICCALI 2025: «Carrera 37a #5- 27». Sala «Domo» por las actividades (Domo Live, Domo Hub, Domo lleno); la Muestra VR puede ser en otra sala del mismo centro.",
+  "lat": 3.4292722,
+  "lng": -76.5438465,
+  "address": "Carrera 37A #5-27, Nuevo San Fernando"
+ },
+ "Plazoleta La Maceta": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4470002,-76.5405434 · OSM/Nominatim 3.4469987,-76.5406452 · distancia 11 m. Google: «Monumento A La Maceta». OSM: tourism=artwork «Maceta, Monumento a los Padrinos y Ahijados», Calle 1, Acueducto San Antonio, Comuna 3. Dirección oficial FICCALI 2025: «Plazoleta El Higuerón, La Maceta – Colina San Antonio, Calle 1 #6-90».",
+  "lat": 3.4470002,
+  "lng": -76.5405434,
+  "address": "Calle 1 #6-90, Colina de San Antonio"
+ },
+ "Centro Cultural Brisas de Mayo": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4158709,-76.562465 · OSM/Nominatim 3.4158573,-76.5629267 · distancia 51 m. DESEMPATE: la ficha de Google llamada «Centro Cultural Brisas De Mayo» (Diagonal 38 Oeste #54E-35, 3.4169915,-76.5677396) está a ~550 m del OSM y su reverse cae FUERA del barrio (junto a un grupo de carabineros, Calle 16E Oeste) → descartada. Dirección oficial (Alcaldía, ‘Biblioteca Pública Centro Cultural Comuna 20’): «Carrera 54 Oeste # 10-28, Barrio Brisas de Mayo, comuna 20». OSM: amenity=community_centre «Centro Cultural y Centro de Desarrollo Comunitario», Carrera 54A, Brisas de Mayo, Comuna 20; Google: «Biblioteca Pública Municipal», Cl. 10 O — el mismo edificio, a 50 m. Pin = OSM.",
+  "lat": 3.4158573,
+  "lng": -76.5629267,
+  "address": "Carrera 54 Oeste #10-28, Brisas de Mayo (Comuna 20)"
+ },
+ "Centro Cultural Comfandi": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4482429,-76.5343592 · OSM/Nominatim 3.4490243,-76.5343998 · distancia 87 m. Identificación: Comfandi tiene muchas sedes en Cali, pero la que usa FICCALI es su Centro Cultural (prensa 2024–2025: ‘Centros Culturales de Colombo Americano, Banco de la República y Comfandi’ entre las sedes; El País/Occidente 2025: «Centro Cultural Comfandi… Calle 8 #6-23»). Las actividades 2026 (talleres de 10 cupos, paneles, funciones de cine) encajan con ese centro. Google: «Centro Cultural Comfandi Nelson Garcés Vernaza». OSM: building «Centro Cultural Comfandi», Calle 8, La Merced, Comuna 3.",
+  "lat": 3.4482429,
+  "lng": -76.5343592,
+  "address": "Calle 8 #6-23, centro (San Pedro/La Merced)",
+  "_pregunta": "¿Las actividades de «COMFANDI» de 2026 son en el Centro Cultural Comfandi (Calle 8 #6-23), como en 2025? ¿En qué sala (auditorio)?"
+ },
+ "Tecnocentro Cultural Somos Pacífico": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4100014,-76.4710246 · OSM/Nominatim 3.4100749,-76.4711112 · distancia 13 m. Google: «Tecnocentro Cultural Somos Pacífico», Cra. 28b #121B-55. OSM: «Tecnocentro Cultural Somos Pacífico», Calle 122A, Potrero Grande, Comuna 21. Dirección oficial FICCALI 2025: «Carrera 28b #121b – 55, Manuela Beltrán». Es el único «Tecnocentro» en la lista de sedes del festival.",
+  "lat": 3.4100014,
+  "lng": -76.4710246,
+  "address": "Carrera 28B #121B-55, Manuela Beltrán (Potrero Grande)"
+ },
+ "Teatro La Unión": {
+  "_prec": "manual",
+  "_nota": "Dos espacios vecinos; pin en el teatro (la función). Google: «Teatro Comunitario del Barrio La Unión» 3.4124011,-76.5124279; Google: «Biblioteca Pública La Unión», Cra. 41f #39-118, 3.4127783,-76.5113555 — a 126 m del teatro. Dirección oficial FICCALI 2025: «Teatro La Unión Comuna 16 — Cra. 41h #38-80, Barrio Unión de Vivienda Popular». OSM no tiene el teatro mapeado; reverse OSM del pin = Calle 39, Unión de Vivienda Popular, Comuna 16 (concuerda); OSM barrio UVP centroide 3.4104516,-76.5098512.",
+  "lat": 3.4124011,
+  "lng": -76.5124279,
+  "address": "Carrera 41H #38-80, Unión de Vivienda Popular (Comuna 16)"
+ },
+ "Café Macondo": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4478189,-76.5387144 · OSM/Nominatim 3.4477356,-76.5387112 · distancia 9 m. Google: «Café Macondo», Cra. 6 #3-03, Comuna 3. OSM: amenity=cafe «Macondo Postres y Café», Carrera 6 #3-03, San Antonio.",
+  "lat": 3.4478189,
+  "lng": -76.5387144,
+  "address": "Carrera 6 #3-03, San Antonio"
+ },
+ "BlackGround": {
+  "_prec": "manual",
+  "_nota": "Google: «BlackGround Lab» 3.4359135,-76.5432882, Cl. 3 #26-112, Miraflores. Cámara de Comercio de Cali y su Facebook: «BlackGround Laboratorio Cultural», productora/espacio afrocentrado; TripAdvisor: «Cl. 3 #26-112, Miraflores… casa naranja/azul». No está en OSM como lugar; reverse OSM del pin = Calle 3, (Viejo) San Fernando/Miraflores, Comuna 19 (concuerda).",
+  "lat": 3.4359135,
+  "lng": -76.5432882,
+  "address": "Calle 3 #26-112, Miraflores"
+ },
+ "Teatro Municipal Enrique Buenaventura": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4494433,-76.5359075 · OSM/Nominatim 3.4491756,-76.5358233 · distancia 31 m. Confirmado por la Alcaldía (intranet.cali.gov.co, 4 oct 2026, ‘El Teatrino se convierte en punto de encuentro…’) y El País/Occidente: el Teatrino del Teatro Municipal Enrique Buenaventura acoge FICCALI del 21 al 24 de octubre — las mismas fechas de las tarjetas «TEATRINO». Google: «Teatro Municipal Enrique Buenaventura», Cra. 5 #6-64. OSM: amenity=theatre, Carrera 5 #6-64, La Merced. Distinto del «Teatrino Proyecto Oriente».",
+  "lat": 3.4494433,
+  "lng": -76.5359075,
+  "address": "Carrera 5 #6-64, centro"
+ },
+ "CineQuanon": {
+  "_prec": "manual",
+  "_nota": "Google: «CineQuanon Cali - cineforo al Aire Libre» 3.4558323,-76.5231237, Cra. 5 #22-59. Dirección oficial FICCALI 2025: «Cine Club CineQuanon — Carrera 5 # 22-53» (misma cuadra). No está en OSM como lugar; reverse OSM del pin = Carrera 5, San Nicolás, Comuna 3 (concuerda).",
+  "lat": 3.4558323,
+  "lng": -76.5231237,
+  "address": "Carrera 5 #22-59, Comuna 3"
+ },
+ "Casa Ethel": {
+  "_prec": "manual",
+  "_nota": "CCMI = Centro de Creación Musical Interdisciplinaria de Cali (la propia web de FICCALI, ficha ‘Ópticos Sonoros’: «El Colectivo Creativo del CCMI – Centro de Creación Musical Interdisciplinaria»; su Instagram @centrodecreacion.musical). Google: «Casa Ethel - Centro de Creación Musical Interdisciplinaria» 3.4389718,-76.5455675, Cra. 25 #4-53, Miraflores. No está en OSM como lugar; reverse OSM del pin = Carrera 25, (Viejo) San Fernando/Miraflores, Comuna 19 (concuerda).",
+  "lat": 3.4389718,
+  "lng": -76.5455675,
+  "address": "Carrera 25 #4-53, Miraflores",
+  "_pregunta": "¿El cineconcierto Metrópolis (mié 21 oct, 8 p. m.) es en la sede del CCMI, Casa Ethel (Cra. 25 #4-53, Miraflores)?"
+ },
+ "SENA Salomia": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4678756,-76.4998164 · OSM/Nominatim 3.4671298,-76.499867 · distancia 83 m. Google: «Sena Salomia». OSM: amenity=college «Servicio Nacional de Aprendizaje – SENA. Complejo Salomia», Calle 52, El Sena, Comuna 5.",
+  "lat": 3.4678756,
+  "lng": -76.4998164,
+  "address": "Carrera 2 #52-396 / Calle 52, El Sena (Comuna 5)"
+ },
+ "Cine Colombia Unicentro": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.3728466,-76.5388725 · OSM/Nominatim 3.3729697,-76.5389163 · distancia 15 m. Google: «Cine Colombia - Unicentro Cali», Cra. 100. OSM: amenity=cinema «Multiplex Unicentro», Avenida Carrera 100, Comuna 17.",
+  "lat": 3.3728466,
+  "lng": -76.5388725,
+  "address": "Centro Comercial Unicentro, Carrera 100 #5-169"
+ },
+ "Hotel Obelisco": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4506674,-76.5442123 · OSM/Nominatim 3.4506906,-76.5441629 · distancia 6 m. Google: «Hotel Obelisco Cali», Av. Colombia #4 Oeste-49. OSM: tourism=hotel «Obelisco», El Peñón, Comuna 3. Punto de partida del City Tour.",
+  "lat": 3.4506674,
+  "lng": -76.5442123,
+  "address": "Avenida Colombia #4 Oeste-49"
+ },
+ "Bulevar del Río": {
+  "_prec": "manual",
+  "_nota": "Google Maps 3.4526661,-76.5347844 · OSM/Nominatim 3.4528182,-76.53457 · distancia 29 m. Google: «Bulevar del Río Cali». OSM: highway=pedestrian «Bulevar de la Avenida Colombia», San Pedro. Los lanzamientos son «en alianza con CaliLee» (Feria del Libro, montada sobre el Bulevar); el espacio varía por actividad: dos tarjetas dicen «Lugar: Auditorio Celsia» y «Lugar: Carpa de la Red de Bibliotecas Públicas de Cali» — por eso sala queda vacía.",
+  "lat": 3.4526661,
+  "lng": -76.5347844,
+  "address": "Bulevar de la Avenida Colombia, centro",
+  "_pregunta": "Para los lanzamientos de libros en el Bulevar del Río: ¿en qué carpa/auditorio de CaliLee es cada uno (las tarjetas solo lo dicen en dos)?"
+ },
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-10-07"
+ }
+}

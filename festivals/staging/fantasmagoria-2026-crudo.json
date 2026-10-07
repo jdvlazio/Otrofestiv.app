@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "festivalfantasmagoriamedellin.com, noticia de programación (wp-json post 6481)",
-  "capturado": "2026-10-01",
+  "capturado": "2026-10-07",
   "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
   "metodo": "bloques por hora, ficha entre paréntesis, sede y acceso tras «/»"
  },
@@ -10,13 +10,53 @@
  ],
  "funciones": [
   {
+   "titulo": "Taller Fantasmagoritos con la Corporación Trama",
+   "seccion": "Muestra Fantasmagoritos",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-10-14",
+   "hora": "13:00",
+   "sede": "Biblioteca Comfenalco Castilla",
+   "acceso": "Ingreso únicamente con invitación",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-14-13-00-taller-fantasmagoritos-con-la-corporacion-trama"
+   },
+   "duracion_min": 60
+  },
+  {
+   "titulo": "Charla virtual: María, Rosa y Sina. Las murallas de la desigualdad en Shingeki no Kyojin",
+   "seccion": "Fantasmagoría Académica",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "invitados": "Por Isabel Arboleyda Jiménez.",
+   "dia": "2026-10-14",
+   "hora": "21:00",
+   "sede": "Twitch · Sociedad Fantasmagoría",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-14-21-00-charla-virtual-maria-rosa-y-sina-las-murallas-de-la-desigualdad-en-shingeki-no-kyojin"
+   },
+   "online": true,
+   "stream_url": "https://www.twitch.tv/sociedadfantasmagoria",
+   "stream_platform": "Twitch",
+   "duracion_min": 60
+  },
+  {
    "dia": "2026-10-15",
    "hora": "19:00",
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre con boleta (en orden de llegada hasta completar aforo)",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-15-19-00-decorado"
    },
    "titulo": "Decorado",
    "director": "Alberto Vázquez",
@@ -27,7 +67,25 @@
    "seccion": "Evento Inaugural",
    "invitados": "Entrada Libre con Boleta (en orden de llegada hasta completar aforo)",
    "premiere": "Inauguración",
-   "sinopsis": "Arnold es un ratón de mediana edad atrapado en una crisis existencial. Su matrimonio se desmorona, su vida le parece absurda y empieza a sospechar que todo a su alrededor es una gran farsa. Cuando su mejor amigo muere en circunstancias sospechosas, Arnold se convence de que algo no encaja. Lo que comienza como una paranoia cotidiana se convierte en una huida desesperada hacia algo que se parezca, aunque sea un poco, a la libertad."
+   "sinopsis": "Arnold es un ratón de mediana edad atrapado en una crisis existencial. Su matrimonio se desmorona, su vida le parece absurda y empieza a sospechar que todo a su alrededor es una gran farsa. Cuando su mejor amigo muere en circunstancias sospechosas, Arnold se convence de que algo no encaja. Lo que comienza como una paranoia cotidiana se convierte en una huida desesperada hacia algo que se parezca, aunque sea un poco, a la libertad.",
+   "sala": "Sala 1"
+  },
+  {
+   "titulo": "Taller Fantasmagoritos con la Corporación Trama",
+   "seccion": "Muestra Fantasmagoritos",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "dia": "2026-10-16",
+   "hora": "13:00",
+   "sede": "Biblioteca Comfenalco Castilla",
+   "acceso": "Ingreso únicamente con invitación",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-13-00-taller-fantasmagoritos-con-la-corporacion-trama"
+   },
+   "duracion_min": 60
   },
   {
    "dia": "2026-10-16",
@@ -35,8 +93,10 @@
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-16-00-saluda-al-diablo-de-mi-parte"
    },
    "titulo": "Saluda al Diablo de Mi Parte",
    "director": "Juan Felipe Orozco",
@@ -53,9 +113,10 @@
    "sede": "Museo de Arte Moderno de Medellín - MAMM",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28",
-    "hora_impresa": "18:30"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-16-30-coracao-das-trevas"
    },
    "titulo": "Coração das Trevas (Heart of Darkness)",
    "director": "Rogério Nunes",
@@ -73,10 +134,11 @@
    "sede": "Comfama San Ignacio",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-17-00-hammer-heroes-legends-and-monsters"
    },
-   "sala": "La Capilla",
    "titulo": "Hammer: Heroes, Legends and Monsters",
    "director": "Benjamin Field",
    "pais": "Inglaterra",
@@ -84,7 +146,8 @@
    "duracion_min": 90,
    "seccion": "Selección Oficial Largometrajes Documentales",
    "sinopsis": "Repaso por la increíble historia de Hammer Films, el histórico estudio que revitalizó leyendas del terror como Drácula y Frankenstein y lanzó al estrellato a Christopher Lee.",
-   "premiere": "Estreno latinoamericano"
+   "premiere": "Estreno latinoamericano",
+   "sala": "La Capilla"
   },
   {
    "dia": "2026-10-16",
@@ -92,8 +155,10 @@
    "sede": "Estación Metrocable Andalucía",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-17-00-mu-ki-ra"
    },
    "titulo": "Mu-Ki-Ra",
    "director": "Estefania Piñeres",
@@ -109,8 +174,10 @@
    "sede": "Draco Hobby",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-18-00-one-piece-y-pokemon-tcg"
    },
    "titulo": "Torneos TCG: One Piece y Pokemón TCG",
    "seccion": "Actividades",
@@ -124,8 +191,10 @@
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-18-30-shichinin-no-samurai"
    },
    "titulo": "Schichinin No Samurai (Seven Samurai)",
    "director": "Akira Kurosawa",
@@ -134,7 +203,8 @@
    "duracion_min": 207,
    "genero": "Acción",
    "seccion": "Selección Asedio: Las murallas del miedo",
-   "sinopsis": "Japón, Siglo XVI. Una aldea de campesinos indefensos es repetidamente atacada y saqueada por una banda de forajidos. Aconsejados por el anciano de la aldea, unos aldeanos acuden a la ciudad con el objetivo de contratar a un grupo de samuráis para protegerlos. A pesar de que el único salario es comida y techo, varios samuráis se van incorporando uno a uno al singular grupo que finalmente se dirige a la aldea."
+   "sinopsis": "Japón, Siglo XVI. Una aldea de campesinos indefensos es repetidamente atacada y saqueada por una banda de forajidos. Aconsejados por el anciano de la aldea, unos aldeanos acuden a la ciudad con el objetivo de contratar a un grupo de samuráis para protegerlos. A pesar de que el único salario es comida y techo, varios samuráis se van incorporando uno a uno al singular grupo que finalmente se dirige a la aldea.",
+   "sala": "Sala 2"
   },
   {
    "dia": "2026-10-16",
@@ -142,15 +212,19 @@
    "sede": "La Pascasia",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-18-30-gente-que-hace-cine-colombia-es-fantastica"
    },
    "titulo": "Grabación en vivo del podcast Gente que hace cine \"Colombia es Fantástica\"",
    "seccion": "Colombia es Fantástica",
    "tipo": "evento",
    "event_kind": "encuentro",
    "sinopsis": "una mirada al cine y televisión de género hecho en Colombia. Conversan Mauricio Romero y Cristian Jaramillo.",
-   "duracion_min": 60
+   "duracion_min": 60,
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "dia": "2026-10-16",
@@ -158,10 +232,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-18-40-el-despertar"
    },
-   "sala": "Sala 3",
    "titulo": "El Despertar",
    "director": "Jaime Osorio Marquez, Federico Durán y José Luis Rugeles",
    "pais": "Colombia",
@@ -170,7 +245,8 @@
    "genero": "Terror",
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "sinopsis": "En lo más profundo de la selva amazónica, una unidad militar de élite es enviada a eliminar un objetivo estratégico, sin embargo, la operación se convierte en una pesadilla cuando se enfrentan a un enemigo para el que no estaban preparados. Mobuya, el espíritu protector de un territorio sagrado que no se puede cruzar, se cierra sobre el comando, desatando un terror milenario y sobrenatural. En el mismo infierno, separados por siglos, otra expedición de conquistadores españoles es consumida por la misma fuerza implacable. Al combatir la desconocida fuerza de Mobuya, ambas incursiones sólo podrán luchar por sus vidas.",
-   "premiere": "Estreno colombiano"
+   "premiere": "Estreno colombiano",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-16",
@@ -178,10 +254,11 @@
    "sede": "Comfama San Ignacio",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-19-00-motherwitch"
    },
-   "sala": "La Capilla",
    "titulo": "Motherwitch",
    "director": "Minos Papas",
    "pais": "Chipre, Macedonia y Estados Unidos",
@@ -190,7 +267,8 @@
    "genero": "Terror",
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "sinopsis": "Chipre, 1882: Eleni, una pintora marginada, intenta resucitar a sus hijos muertos, pero en su lugar desata criaturas míticas sobre su pueblo. Sólo si se convierte en una buena madre para un niño con talento, pero maltratado, podrá revertir la maldición.",
-   "premiere": "Estreno suramericano"
+   "premiere": "Estreno suramericano",
+   "sala": "La Capilla"
   },
   {
    "dia": "2026-10-16",
@@ -198,8 +276,10 @@
    "sede": "Nueva Villa de Aburrá",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-20-00-seleccion-oficial-de-cortometrajes-de-animacion"
    },
    "titulo": "Selección Oficial de Cortometrajes de Animación + Cortometrajes de Macondo",
    "seccion": "Selección de Cortometrajes Animados",
@@ -276,10 +356,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-21-00-familia-teme-enfrentar-una-nueva-noche-de-terror"
    },
-   "sala": "Sala 3",
    "has_qa": true,
    "qa_type": "team",
    "titulo": "Familia Teme Enfrentar Una Nueva Noche de Terror",
@@ -291,21 +372,25 @@
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "invitados": "Q&A.",
    "sinopsis": "Cada noche, una familia de cuatro enfrenta el terror de habitar una casa embrujada. Solo que la casa no es una casa, sino un estudio de televisión. Una caja negra. Un escenario configurado por unos pocos muebles, donde en lugar de paredes reina la oscuridad. Una casa embrujada en la que lo siniestro surge del propio dispositivo televisivo, con sus efectos analógicos y el equipo técnico oculto detrás del decorado cual espectros atrapados en un limbo de rayos catódicos.",
-   "premiere": "Estreno colombiano"
+   "premiere": "Estreno colombiano",
+   "sala": "Sala 3"
   },
   {
+   "titulo": "Almas en pena: fiesta de disfraces, baile de ánimas y sustos que dan gusto",
+   "seccion": "Actividades",
+   "tipo": "evento",
+   "event_kind": "fiesta",
+   "invitados": "DJs: TIZ y Mr. Snoopy. Música: alterno oscuro, pop psicodélico, perreo hasta el inframundo, cumbia rebajada de vereda, salsa diabólica y guasca machetera.",
    "dia": "2026-10-16",
    "hora": "22:00",
    "sede": "Silencio",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-16-22-00-fiesta-gotico-tropical"
    },
-   "titulo": "Fiesta Gótico Tropical",
-   "seccion": "Actividades",
-   "tipo": "evento",
-   "event_kind": "fiesta",
    "duracion_min": 60
   },
   {
@@ -314,8 +399,10 @@
    "sede": "Centro de Desarrollo Cultural de Moravia",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-17-15-00-cortometrajes-infantiles"
    },
    "titulo": "Muestra Fantasmagoritos: Cortometrajes infantiles",
    "seccion": "Muestra Fantasmagoritos",
@@ -327,8 +414,10 @@
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-17-16-00-iris-de-cristal"
    },
    "titulo": "Iris de Cristal",
    "seccion": "Muestra especial",
@@ -341,8 +430,10 @@
    "sede": "Museo de Arte Moderno de Medellín - MAMM",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-17-16-30-black-moon"
    },
    "titulo": "Black Moon",
    "director": "Louis Malle",
@@ -359,10 +450,11 @@
    "sede": "Comfama San Ignacio",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-17-18-30-siu-lam-juk-kau"
    },
-   "sala": "La Capilla",
    "titulo": "Siu Lam Juk Kau -Shaolin Soccer",
    "director": "Stephen Chow",
    "pais": "Hong Kong, China",
@@ -370,7 +462,8 @@
    "duracion_min": 113,
    "genero": "Comedia",
    "seccion": "Muestra Asiática El Oriente Es Rojo",
-   "sinopsis": "Sing es un discipulo del Shaolin cuya ambición es popularizar el kung fu en la sociedad moderna. Un día se encontrará con Fung, antiguo futbolista fracasado. Ambos tendrán la idea de formar un equipo que mezcle fútbol con artes marciales."
+   "sinopsis": "Sing es un discipulo del Shaolin cuya ambición es popularizar el kung fu en la sociedad moderna. Un día se encontrará con Fung, antiguo futbolista fracasado. Ambos tendrán la idea de formar un equipo que mezcle fútbol con artes marciales.",
+   "sala": "La Capilla"
   },
   {
    "dia": "2026-10-17",
@@ -378,8 +471,10 @@
    "sede": "Parque de los Deseos",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-17-18-30-al-final-del-espectro"
    },
    "titulo": "Al Final del Espectro",
    "director": "Juan Felipe Orozco",
@@ -396,10 +491,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-17-18-40-familia-teme-enfrentar-una-nueva-noche-de-terror"
    },
-   "sala": "Sala 3",
    "has_qa": true,
    "qa_type": "team",
    "titulo": "Familia Teme Enfrentar Una Nueva Noche de Terror",
@@ -411,7 +507,8 @@
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "invitados": "Q&A.",
    "sinopsis": "Cada noche, una familia de cuatro enfrenta el terror de habitar una casa embrujada. Solo que la casa no es una casa, sino un estudio de televisión. Una caja negra. Un escenario configurado por unos pocos muebles, donde en lugar de paredes reina la oscuridad. Una casa embrujada en la que lo siniestro surge del propio dispositivo televisivo, con sus efectos analógicos y el equipo técnico oculto detrás del decorado cual espectros atrapados en un limbo de rayos catódicos.",
-   "premiere": "Estreno colombiano"
+   "premiere": "Estreno colombiano",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-17",
@@ -419,16 +516,23 @@
    "sede": "Planetario de Medellín",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-17-19-00-critters"
    },
-   "sala": "Auditorio",
-   "titulo": "Expediente Fantasmagoría – Contacto",
-   "seccion": "Expediente Fantasmagoría",
-   "tipo": "evento",
-   "event_kind": "evento",
-   "sinopsis": "The X Files y Lectura de La Verdad Está Ahí Afuera: Antología de Cuentos.",
-   "duracion_min": 60
+   "titulo": "Critters",
+   "director": "Stephen Herek",
+   "pais": "Estados Unidos",
+   "anio": 1986,
+   "duracion_min": 86,
+   "genero": "Terror",
+   "seccion": "Aniversario 40 años",
+   "invitados": "Conversatorio sobre vida extraterrestre con Malory Agudelo y Cristian Jaramillo.",
+   "sinopsis": "Ocho alienígenas hambrientos llegan a la Tierra buscando alimento. En su camino se encuentran con la familia Brown que, sin saberlo, se convierte en el plato principal de su menú. Sin embargo, los Brown contarán con la ayuda inesperada de una pareja de cazadores intergalácticos… Inspirada en «Gremlins», filme de bichos peligrosos que gozó de considerable apoyo entre los fanáticos del género, conociendo hasta 3 secuelas.",
+   "has_qa": true,
+   "qa_type": "team",
+   "sala": "Auditorio"
   },
   {
    "dia": "2026-10-17",
@@ -436,10 +540,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-17-21-00-huo-zhe-yan"
    },
-   "sala": "Sala 3",
    "titulo": "Huo zhe yan (The Furious)",
    "director": "Kenji Tanigaki",
    "pais": "Hong Kong",
@@ -448,7 +553,8 @@
    "genero": "Acción",
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "sinopsis": "Rainy, hija del experto en artes marciales Wang Wei, es secuestrada por una red de tráfico de menores. En un frenético intento de recuperarla, el padre se lanza a la guerra, enfrentándose a numerosos obstáculos mientras lucha contra criminales y policías corruptos. En el camino conoce a Navin, un periodista en busca de su esposa desaparecida. Ambos despliegan sus habilidades de combate mientras aprenden las virtudes de la confianza mutua.",
-   "premiere": "Estreno colombiano"
+   "premiere": "Estreno colombiano",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-17",
@@ -456,8 +562,10 @@
    "sede": "Librería Antimateria",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-17-22-00-lectura-de-cuentos-de-terror"
    },
    "titulo": "Noche de Librerías: Lectura de Cuentos de Terror",
    "seccion": "Noche de Librerías",
@@ -471,8 +579,10 @@
    "sede": "Centro de Desarrollo Cultural de Moravia",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-18-15-00-la-sinfonia-de-los-bichos-raros"
    },
    "titulo": "La Sinfonía de los Bichos Raros",
    "director": "Julián Camilo Duque",
@@ -487,8 +597,10 @@
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-18-16-00-historia-de-lo-oculto"
    },
    "has_qa": true,
    "qa_type": "team",
@@ -508,8 +620,10 @@
    "sede": "Museo de Arte Moderno de Medellín - MAMM",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-18-16-00-rio-bravo"
    },
    "titulo": "Rio Bravo",
    "director": "Howard Hawks",
@@ -526,10 +640,11 @@
    "sede": "Comfama San Ignacio",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-18-17-00-coracao-das-trevas"
    },
-   "sala": "La Capilla",
    "titulo": "Coração das Trevas (Heart of Darkness)",
    "director": "Rogério Nunes",
    "pais": "Brasil",
@@ -538,7 +653,8 @@
    "genero": "Animación",
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "sinopsis": "Adaptación libre de la novela homónima de Joseph Conrad, cuenta la misión de un agente de policía de Río de Janeiro, Marlon, en busca del Capitán Kurtz, desaparecido en las afueras de la ciudad en misteriosas circunstancias.",
-   "premiere": "Estreno colombiano"
+   "premiere": "Estreno colombiano",
+   "sala": "La Capilla"
   },
   {
    "dia": "2026-10-18",
@@ -546,10 +662,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-18-18-40-hablando-con-extranos"
    },
-   "sala": "Sala 3",
    "titulo": "Hablando con Extraños",
    "director": "Adrián García Bogliano",
    "pais": "México",
@@ -558,27 +675,8 @@
    "genero": "Terror",
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "sinopsis": "Una mujer con problemas mentales se enfrenta a una entidad siniestra que adopta la forma de su hijo fallecido.",
-   "premiere": "Estreno colombiano"
-  },
-  {
-   "dia": "2026-10-18",
-   "hora": "19:00",
-   "sede": "Planetario de Medellín",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
-   },
-   "sala": "Auditorio",
-   "titulo": "Critters",
-   "director": "Stephen Herek",
-   "pais": "Estados Unidos",
-   "anio": 1986,
-   "duracion_min": 86,
-   "genero": "Terror",
-   "seccion": "Aniversario 40 años",
-   "invitados": "Conversatorio sobre vida extraterrestre con Malory Agudelo y Cristian Jaramillo.",
-   "sinopsis": "Ocho alienígenas hambrientos llegan a la Tierra buscando alimento. En su camino se encuentran con la familia Brown que, sin saberlo, se convierte en el plato principal de su menú. Sin embargo, los Brown contarán con la ayuda inesperada de una pareja de cazadores intergalácticos… Inspirada en «Gremlins», filme de bichos peligrosos que gozó de considerable apoyo entre los fanáticos del género, conociendo hasta 3 secuelas."
+   "premiere": "Estreno colombiano",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-18",
@@ -586,8 +684,10 @@
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-18-19-00-seleccion-oficial-de-cortometrajes-colombianos"
    },
    "titulo": "Selección Oficial de Cortometrajes Colombianos",
    "seccion": "Selección de Cortometrajes Colombianos",
@@ -643,7 +743,27 @@
      "duracion_min": 8
     }
    ],
-   "duracion_min": 88
+   "duracion_min": 88,
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "titulo": "The X Files y Lectura de La Verdad Está Ahí Afuera: Antología de Cuentos",
+   "seccion": "Expediente Fantasmagoría",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "dia": "2026-10-18",
+   "hora": "19:00",
+   "sede": "Planetario de Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-18-19-00-the-x-files-y-lectura-de-la-verdad-esta-ahi-afuera-antologia-de-cuentos"
+   },
+   "duracion_min": 60,
+   "sala": "Auditorio"
   },
   {
    "dia": "2026-10-18",
@@ -651,10 +771,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-18-21-00-assault-on-precinct-13"
    },
-   "sala": "Sala 3",
    "titulo": "Assault on Precinct 13",
    "director": "John Carpenter",
    "pais": "Estados Unidos",
@@ -662,7 +783,8 @@
    "duracion_min": 91,
    "genero": "Thriller",
    "seccion": "Selección Asedio: Las murallas del miedo",
-   "sinopsis": "Un policía de Los Angeles recibe su primer destino en una comisaría que está siendo trasladada a un nuevo edificio. Nada parece que vaya a turbiar la paz del lugar, hasta la llegada de un furgón que custodia a un famoso criminal, que ha de pasar la noche en la comisaría."
+   "sinopsis": "Un policía de Los Angeles recibe su primer destino en una comisaría que está siendo trasladada a un nuevo edificio. Nada parece que vaya a turbiar la paz del lugar, hasta la llegada de un furgón que custodia a un famoso criminal, que ha de pasar la noche en la comisaría.",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-19",
@@ -670,8 +792,10 @@
    "sede": "Paraninfo Universidad de Antioquia",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-19-15-00-seleccion-oficial-de-cortometrajes-latinoamericanos"
    },
    "titulo": "Selección oficial de cortometrajes latinoamericanos",
    "seccion": "Selección Latinoamericana de Cortometrajes",
@@ -727,8 +851,10 @@
    "sede": "Comfama Otraparte",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-19-18-30-black-zombie"
    },
    "titulo": "Black Zombie",
    "director": "Maya Annik Bedward",
@@ -745,8 +871,10 @@
    "sede": "Twitch · Sociedad Fantasmagoría",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-19-19-00-entrevista-a-luigi-cozzi-con-jose-andres-gomez"
    },
    "online": true,
    "stream_url": "https://www.twitch.tv/sociedadfantasmagoria",
@@ -763,8 +891,10 @@
    "sede": "Twitch · Sociedad Fantasmagoría",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-19-20-30-charla-virtual-una-psicologia-de-los-asedios-explicada-con-pelis-de-zombies-con-pedro-alejandro-gonzalez"
    },
    "online": true,
    "stream_url": "https://www.twitch.tv/sociedadfantasmagoria",
@@ -781,10 +911,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-19-21-00-la-frecuencia-kirlian"
    },
-   "sala": "Sala 3",
    "has_qa": true,
    "qa_type": "team",
    "titulo": "La Frecuencia Kirlian",
@@ -795,7 +926,8 @@
    "genero": "Animación",
    "seccion": "Retrospectiva Cristian Ponce",
    "invitados": "Q&A.",
-   "sinopsis": "Una emisora de radio nocturna, un presentador cadavérico y cinco invitados con cinco historias insólitas de terror y ciencia ficción son el centro de la adaptación cinematográfica de la serie animada de culto La frecuencia Kirlian. ¿Qué le ocurrió realmente aquella noche a la emisora de radio, a la ciudad y a sus habitantes? Y lo más importante… ¿Por qué?"
+   "sinopsis": "Una emisora de radio nocturna, un presentador cadavérico y cinco invitados con cinco historias insólitas de terror y ciencia ficción son el centro de la adaptación cinematográfica de la serie animada de culto La frecuencia Kirlian. ¿Qué le ocurrió realmente aquella noche a la emisora de radio, a la ciudad y a sus habitantes? Y lo más importante… ¿Por qué?",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-20",
@@ -803,16 +935,20 @@
    "sede": "Universidad Católica Luis Amigó",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-20-14-00-conversatorio-con-cristian-ponce-el-terror-analogico-entre-la-estetica-y-el-medio-al-vhs-y-a-los-programas-de-television-con-cristian-jaramillo"
    },
-   "sala": "Auditorio Santa Rita",
    "titulo": "Conversatorio con Cristian Ponce",
    "seccion": "Retrospectiva Cristian Ponce",
    "tipo": "evento",
    "event_kind": "conversatorio",
    "sinopsis": "El terror análogico, entre la estética y el medio al VHS y a los programas de televisión con Cristian Jaramillo.",
-   "duracion_min": 60
+   "duracion_min": 60,
+   "has_qa": true,
+   "qa_type": "team",
+   "sala": "Auditorio Santa Rita"
   },
   {
    "dia": "2026-10-20",
@@ -820,8 +956,10 @@
    "sede": "Paraninfo Universidad de Antioquia",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-20-15-00-horror-and-love"
    },
    "titulo": "Horror and Love",
    "director": "Joaquín Oristrell",
@@ -838,8 +976,10 @@
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-20-17-00-al-final-del-espectro"
    },
    "titulo": "Al Final del Espectro",
    "director": "Juan Felipe Orozco",
@@ -851,15 +991,36 @@
    "sinopsis": "Tras una fuerte experiencia traumática por la que empieza a ser víctima de una fuerte agorafobia, Vega se ve obligada a pasar un tiempo alejada de su trabajo y, por recomendación de su Padre, decide mudarse a un nuevo apartamento, en donde prácticamente comienza a vivir como una ermitaña; su vida cambia radicalmente, ve cosas que no se pueden explicar y escucha voces que no puede ignorar. A medida que unas horribles visiones se intensifican, Vega empieza a comprender un oscuro rompecabezas, y a conocer el poder maligno de lo sobrenatural."
   },
   {
+   "titulo": "Conversatorio con Alberto Romo y Andrés Buitrago",
+   "seccion": "Colombia es Fantástica",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
    "dia": "2026-10-20",
-   "hora": "18:30",
+   "hora": "17:30",
    "sede": "Universidad Nacional",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-20-17-30-conversatorio-con-alberto-romo-y-andres-buitrago"
    },
-   "sala": "Plazoleta de la Luz",
+   "has_qa": true,
+   "qa_type": "team",
+   "duracion_min": 30,
+   "sala": "Plazoleta de la Luz"
+  },
+  {
+   "dia": "2026-10-20",
+   "hora": "18:00",
+   "sede": "Universidad Nacional",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-20-18-30-pura-sangre"
+   },
    "titulo": "Pura Sangre",
    "director": "Luis Ospina",
    "pais": "Colombia",
@@ -868,7 +1029,8 @@
    "genero": "Terror",
    "seccion": "Colombia es Fantástica",
    "invitados": "Conversatorio con Alberto Romo y Andrés Buitrago.",
-   "sinopsis": "Roberto Hurtado padece una rara enfermedad que exige transfusiones masivas de sangre de niños o adolescentes. Él chantajea a tres empleados para que le consigan sangre y éstos recurren a métodos inescrupulosos para conseguirla. En incursiones nocturnas atrapan a sus víctimas y los someten a sus perversiones sexuales antes de asesinarlos. La extraña desaparición de niños y la recurrente aparición de sus cadáveres desnudos en lugares despoblados aterrorizan la ciudad."
+   "sinopsis": "Roberto Hurtado padece una rara enfermedad que exige transfusiones masivas de sangre de niños o adolescentes. Él chantajea a tres empleados para que le consigan sangre y éstos recurren a métodos inescrupulosos para conseguirla. En incursiones nocturnas atrapan a sus víctimas y los someten a sus perversiones sexuales antes de asesinarlos. La extraña desaparición de niños y la recurrente aparición de sus cadáveres desnudos en lugares despoblados aterrorizan la ciudad.",
+   "sala": "Plazoleta de la Luz"
   },
   {
    "dia": "2026-10-20",
@@ -876,8 +1038,10 @@
    "sede": "Comfama Otraparte",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-20-18-30-the-last-unicorn"
    },
    "titulo": "The Last Unicorn",
    "director": "Jules Bass y Arthur Rankin Jr",
@@ -894,10 +1058,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-20-18-40-ghost-in-the-cell"
    },
-   "sala": "Sala 3",
    "titulo": "Ghost in the Cell",
    "director": "Joko Anwar",
    "pais": "Indonesia y Corea del Sur",
@@ -906,7 +1071,8 @@
    "genero": "Terror",
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "sinopsis": "En una conocida prisión, una fuerza invisible comienza a matar brutalmente a los reclusos, obligando a las bandas enemigas y a los guardias corruptos a trabajar juntos mientras intentan sobrevivir al creciente derramamiento de sangre.",
-   "premiere": "Estreno suramericano"
+   "premiere": "Estreno suramericano",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-20",
@@ -914,16 +1080,20 @@
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-20-19-30-cuadecuc-vampir"
    },
-   "sala": "Sala 2",
    "titulo": "Cuadecuc, Vampir",
    "director": "Pere Portabella",
    "pais": "España",
    "duracion_min": 70,
    "genero": "Documental",
-   "seccion": "Muestra Catalana"
+   "seccion": "Muestra Catalana",
+   "has_qa": true,
+   "qa_type": "team",
+   "sala": "Sala 2"
   },
   {
    "dia": "2026-10-20",
@@ -931,10 +1101,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-20-21-00-green-room"
    },
-   "sala": "Sala 3",
    "titulo": "Green Room",
    "director": "Jeremy Saulnier",
    "pais": "Estados Unidos",
@@ -942,21 +1113,40 @@
    "duracion_min": 94,
    "genero": "Thiller",
    "seccion": "Selección Asedio: Las murallas del miedo",
-   "sinopsis": "Tras presenciar un asesinato en un bar, los miembros de una banda de música punk son encerrados en una habitación del local por los autores del homicidio: una pandilla aterradora de neonazis que reivindican la supremacía blanca. Su líder es el dueño del bar, un tipo que no quiere dejar testigos de lo sucedido."
+   "sinopsis": "Tras presenciar un asesinato en un bar, los miembros de una banda de música punk son encerrados en una habitación del local por los autores del homicidio: una pandilla aterradora de neonazis que reivindican la supremacía blanca. Su líder es el dueño del bar, un tipo que no quiere dejar testigos de lo sucedido.",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-21",
    "hora": "10:00",
    "sede": "Parque Biblioteca Belén",
-   "acceso": "Entrada libre",
+   "acceso": "desconocido",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-10-00-taller-de-animacion-con-oscar-triana"
    },
    "titulo": "Taller animación análoga con Óscar Triana",
    "seccion": "Fantasmagoría Académica",
    "tipo": "evento",
    "event_kind": "taller",
+   "duracion_min": 60,
+   "sala": "Auditorio"
+  },
+  {
+   "titulo": "Cortometrajes y Taller Fantasmagoritos con la Corporación Trama",
+   "seccion": "Muestra Fantasmagoritos",
+   "dia": "2026-10-21",
+   "hora": "13:00",
+   "sede": "Biblioteca Comfenalco Castilla",
+   "acceso": "Ingreso únicamente con invitación",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-13-00-cortometrajes-y-taller-fantasmagoritos-con-la-corporacion-trama"
+   },
    "duracion_min": 60
   },
   {
@@ -965,15 +1155,17 @@
    "sede": "Parque Biblioteca Belén",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-13-00-charla-el-camino-de-la-produccion-y-la-animacion-con-alejandra-morales"
    },
-   "sala": "Auditorio",
    "titulo": "Charla: El camino de la producción y la animación con Alejandra Morales",
    "seccion": "Fantasmagoría Académica",
    "tipo": "evento",
    "event_kind": "charla",
-   "duracion_min": 60
+   "duracion_min": 60,
+   "sala": "Auditorio"
   },
   {
    "dia": "2026-10-21",
@@ -981,14 +1173,18 @@
    "sede": "Cámara de Comercio de Medellín",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-14-00-fantascatedra-muestra-cortometrajes-universitarios-de-medellin"
    },
-   "sala": "Auditorio",
    "titulo": "Fantascátedra – Muestra Cortometrajes universitarios de Medellín",
    "seccion": "Jornada Fantasmeet",
    "sinopsis": "Muestra Cortometrajes universitarios de Medellín + Conversatorio con los directores y Alberto Romo.",
-   "duracion_min": 90
+   "duracion_min": 90,
+   "has_qa": true,
+   "qa_type": "team",
+   "sala": "Auditorio"
   },
   {
    "dia": "2026-10-21",
@@ -996,25 +1192,31 @@
    "sede": "Cámara de Comercio de Medellín",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-18-00-conversatorio-de-cinema-zombie-a-zinema-zombie-con-jose-andres-gomez-andres-buitrago-y-pablo-marin"
    },
-   "sala": "Auditorio",
-   "titulo": "Presentaciones de productoras/colectivos y Made in Medellín",
+   "titulo": "De Cinema Zombie a Zinema Zombie",
    "seccion": "Jornada Fantasmeet",
    "tipo": "evento",
-   "event_kind": "encuentro",
-   "sinopsis": "Presentaciones de productoras/colectivos y Made in Medellín (Cortometrajes hechos en Medellín).",
-   "duracion_min": 90
+   "event_kind": "conversatorio",
+   "sinopsis": "De Cinema Zombie a Zinema Zombie con Jose Andrés Gómez, Andrés Buitrago y Pablo Marín.",
+   "duracion_min": 60,
+   "has_qa": true,
+   "qa_type": "team",
+   "sala": "Auditorio"
   },
   {
    "dia": "2026-10-21",
    "hora": "17:00",
-   "sede": "La Grieta",
+   "sede": "Casa Libre",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-17-00-de-las-trincheras-del-somme-a-la-caida-de-gondolin-por-camilo-lopez"
    },
    "titulo": "Charla: De las Trincheras del Somme a la caída de Gondolin por Camilo López",
    "seccion": "Fantasmagoría Académica",
@@ -1025,33 +1227,14 @@
   {
    "dia": "2026-10-21",
    "hora": "17:00",
-   "sede": "Comfama San Ignacio",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
-   },
-   "sala": "La Capilla",
-   "titulo": "Theatre of Horrors: The Sordid Story of Paris' Grand Guignol",
-   "director": "David Gregory",
-   "pais": "Francia",
-   "anio": 2025,
-   "duracion_min": 90,
-   "genero": "Documental",
-   "seccion": "Selección Oficial Largometrajes Documentales",
-   "sinopsis": "En 1897, Oscar Méténier inventó el Grand-Guignol. Representaciones vívidas de la muerte, melodramas sangrientos, gritos de las víctimas y del público: la historia del teatro parisino de los horrores que revolucionó la representación de la muerte en el arte.",
-   "premiere": "Estreno suramericano"
-  },
-  {
-   "dia": "2026-10-21",
-   "hora": "17:00",
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-17-00-ana-rosa"
    },
-   "sala": "Sala X",
    "titulo": "Ana Rosa",
    "director": "Catalina Villar",
    "pais": "Francia, Colombia",
@@ -1060,16 +1243,61 @@
    "genero": "Documental",
    "seccion": "Colombia es Fantástica",
    "invitados": "Conversatorio con Alejandra Rocas y Ángela Tobón.",
-   "sinopsis": "Al desocupar la casa de sus padres, Catalina Villar encuentra en el fondo de un cajón una antigua tarjeta de identidad con la foto de Ana Rosa, la abuela paterna de quien lo único que sabe es que fue sometida a una lobotomía a finales de los años 50. La pregunta por el porqué de tal intervención recorre esta película y conduce a descomponer un relato familiar marcado por el silencio. Entrevistas a prestigiosos psiquiatras, visitas familiares y archivos de diversos orígenes ponen en evidencia un memorial de coincidencias y siniestros que trascienden la tragedia privada y revelan una historia colectiva, una historia de control sobre los cuerpos de las mujeres."
+   "sinopsis": "Al desocupar la casa de sus padres, Catalina Villar encuentra en el fondo de un cajón una antigua tarjeta de identidad con la foto de Ana Rosa, la abuela paterna de quien lo único que sabe es que fue sometida a una lobotomía a finales de los años 50. La pregunta por el porqué de tal intervención recorre esta película y conduce a descomponer un relato familiar marcado por el silencio. Entrevistas a prestigiosos psiquiatras, visitas familiares y archivos de diversos orígenes ponen en evidencia un memorial de coincidencias y siniestros que trascienden la tragedia privada y revelan una historia colectiva, una historia de control sobre los cuerpos de las mujeres.",
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "17:00",
+   "sede": "Comfama San Ignacio",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-17-00-theatre-of-horrors-the-sordid-story-of-paris-grand-guignol"
+   },
+   "titulo": "Theatre of Horrors: The Sordid Story of Paris' Grand Guignol",
+   "director": "David Gregory",
+   "pais": "Francia",
+   "anio": 2025,
+   "duracion_min": 90,
+   "genero": "Documental",
+   "seccion": "Selección Oficial Largometrajes Documentales",
+   "sinopsis": "En 1897, Oscar Méténier inventó el Grand-Guignol. Representaciones vívidas de la muerte, melodramas sangrientos, gritos de las víctimas y del público: la historia del teatro parisino de los horrores que revolucionó la representación de la muerte en el arte.",
+   "premiere": "Estreno suramericano",
+   "sala": "La Capilla"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "17:00",
+   "sede": "Cámara de Comercio de Medellín",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-15-30-presentaciones-de-productoras-colectivos-y-made-in-medellin-cortometrajes-hechos-en-medellin"
+   },
+   "titulo": "Presentaciones de productoras/colectivos y Made in Medellín",
+   "seccion": "Jornada Fantasmeet",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "sinopsis": "Presentaciones de productoras/colectivos y Made in Medellín (Cortometrajes hechos en Medellín).",
+   "duracion_min": 90,
+   "sala": "Auditorio"
   },
   {
    "dia": "2026-10-21",
    "hora": "18:00",
-   "sede": "La Grieta",
-   "acceso": "Con costo: 15.000 $ (materiales incluidos)",
+   "sede": "Casa Libre",
+   "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-18-00-taller-parche-de-collage-construccion-de-fortalezas"
    },
    "titulo": "Taller: Parche de collage – Construcción de fortalezas",
    "seccion": "Fantasmagoría Académica",
@@ -1079,31 +1307,15 @@
   },
   {
    "dia": "2026-10-21",
-   "hora": "18:00",
-   "sede": "Cámara de Comercio de Medellín",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
-   },
-   "sala": "Auditorio",
-   "titulo": "De Cinema Zombie a Zinema Zombie",
-   "seccion": "Jornada Fantasmeet",
-   "tipo": "evento",
-   "event_kind": "conversatorio",
-   "sinopsis": "De Cinema Zombie a Zinema Zombie con Jose Andrés Gómez, Andrés Buitrago y Pablo Marín.",
-   "duracion_min": 60
-  },
-  {
-   "dia": "2026-10-21",
    "hora": "18:40",
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-18-40-el-despertar"
    },
-   "sala": "Sala 3",
    "titulo": "El Despertar",
    "director": "Jaime Osorio Marquez, Federico Durán y José Luis Rugeles",
    "pais": "Colombia",
@@ -1112,7 +1324,8 @@
    "genero": "Terror",
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "sinopsis": "En lo más profundo de la selva amazónica, una unidad militar de élite es enviada a eliminar un objetivo estratégico, sin embargo, la operación se convierte en una pesadilla cuando se enfrentan a un enemigo para el que no estaban preparados. Mobuya, el espíritu protector de un territorio sagrado que no se puede cruzar, se cierra sobre el comando, desatando un terror milenario y sobrenatural. En el mismo infierno, separados por siglos, otra expedición de conquistadores españoles es consumida por la misma fuerza implacable. Al combatir la desconocida fuerza de Mobuya, ambas incursiones sólo podrán luchar por sus vidas.",
-   "premiere": "Estreno colombiano"
+   "premiere": "Estreno colombiano",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-21",
@@ -1120,10 +1333,11 @@
    "sede": "Comfama San Ignacio",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-19-00-la-mancha"
    },
-   "sala": "La Capilla",
    "titulo": "La Mancha",
    "director": "Adrián García Bogliano y Ramiro García Bogliano",
    "pais": "Argentina, México",
@@ -1131,7 +1345,8 @@
    "duracion_min": 74,
    "genero": "Terror",
    "seccion": "Sangre Latina",
-   "sinopsis": "En un parque de diversiones, un grupo de niños y adolescentes quedan atrapados en una maldición que los conecta con un mundo paralelo."
+   "sinopsis": "En un parque de diversiones, un grupo de niños y adolescentes quedan atrapados en una maldición que los conecta con un mundo paralelo.",
+   "sala": "La Capilla"
   },
   {
    "dia": "2026-10-21",
@@ -1139,10 +1354,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-21-21-00-cuckoo"
    },
-   "sala": "Sala 3",
    "has_qa": true,
    "qa_type": "team",
    "titulo": "Cuckoo",
@@ -1153,7 +1369,8 @@
    "genero": "Terror",
    "seccion": "Retrospectiva Tilman Singer",
    "invitados": "Q&A.",
-   "sinopsis": "Gretchen viaja a los Alpes alemanes con su padre y su madrastra. En el pueblo en el que se alojan, se topa con oscuros secretos. Escucha ruidos extraños y tiene visiones aterradoras de una mujer que la persigue. Gretchen se ve arrastrada a una conspiración que implica extraños experimentos del propietario del balneario que se remontan a generaciones."
+   "sinopsis": "Gretchen viaja a los Alpes alemanes con su padre y su madrastra. En el pueblo en el que se alojan, se topa con oscuros secretos. Escucha ruidos extraños y tiene visiones aterradoras de una mujer que la persigue. Gretchen se ve arrastrada a una conspiración que implica extraños experimentos del propietario del balneario que se remontan a generaciones.",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-22",
@@ -1161,14 +1378,78 @@
    "sede": "Universidad Católica Luis Amigó",
    "acceso": "Ingreso únicamente con invitación",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-22-10-00-taller-con-oscar-triana"
    },
-   "sala": "Sala de tecnología",
    "titulo": "Taller: Animación digital con Óscar Triana",
    "seccion": "Fantasmagoría Académica",
    "tipo": "evento",
    "event_kind": "taller",
+   "duracion_min": 60,
+   "sala": "Sala de tecnología"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "17:00",
+   "sede": "Comfama San Ignacio",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-22-17-00-blood-on-melies-moon"
+   },
+   "titulo": "Blood on Méliès' Moon",
+   "director": "Luigi Cozzi",
+   "pais": "Italia",
+   "anio": 2016,
+   "duracion_min": 125,
+   "genero": "Fantasía",
+   "seccion": "Homenaje a Luigi Cozzi",
+   "sinopsis": "Francia, 1890. El inventor Louis Le Prince, después de patentar una máquina para fotografiar imágenes en movimiento y proyectarlas, desaparece en extrañas circunstancias, sin que se vuelva a saber nada ni de él ni de su invento. Cinco años más tarde, los hermanos Lumière patentan una máquina muy similar a la de Le Prince llamada “Cinematógrafo”. Desde ese momento, 1895 es universalmente considerada la fecha oficial del nacimiento del cine. Sin embargo, sigue siendo un misterio qué pasó con Louis Le Prince y su invención. Este misterio seguía sin resolverse hasta que, de repente, en la Roma de 2016 se abre “La puerta a los mundos” y, con él, un universo paralelo donde se encuentra la respuesta a este enigma.",
+   "sala": "La Capilla"
+  },
+  {
+   "titulo": "Kondor, El Mago + El Cigarro Mortal de Jairo Pinilla",
+   "seccion": "Archivo Fantasmagoría",
+   "director": "Jairo Pinilla",
+   "pais": "Colombia",
+   "invitados": "Charla: Recuperación y divulgación del archivo fílmico de Jairo Pinilla y su relación con Medellín, por Alberto Romo.",
+   "dia": "2026-10-22",
+   "hora": "17:00",
+   "sede": "Comfama San Ignacio",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-22-17-00-kondor-el-mago-el-cigarro-mortal-de-jairo-pinilla"
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "sala": "Mediateca",
+   "duracion_min": 60
+  },
+  {
+   "titulo": "Fremde Welten: los extraños universos de Tilman Singer",
+   "seccion": "Retrospectiva Tilman Singer",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "invitados": "Conversatorio con Tilman Singer y Sebastián Tobón.",
+   "dia": "2026-10-22",
+   "hora": "17:00",
+   "sede": "Instituto Cultural Alexander von Humboldt",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-22-17-00-fremde-welten-los-extranos-universos-de-tilman-singer"
+   },
+   "has_qa": true,
+   "qa_type": "team",
    "duracion_min": 60
   },
   {
@@ -1177,10 +1458,11 @@
    "sede": "Universidad Nacional",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-22-17-00-seleccion-oficial-de-cortometrajes-latinoamericanos"
    },
-   "sala": "Auditorio Gerardo Molina",
    "titulo": "Selección Oficial de Cortometrajes Latinoamericanos",
    "seccion": "Selección Latinoamericana de Cortometrajes",
    "obras": [
@@ -1227,43 +1509,8 @@
      "duracion_min": 15
     }
    ],
-   "duracion_min": 88
-  },
-  {
-   "dia": "2026-10-22",
-   "hora": "17:00",
-   "sede": "Comfama San Ignacio",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
-   },
-   "sala": "La Capilla",
-   "titulo": "Blood on Méliès' Moon",
-   "director": "Luigi Cozzi",
-   "pais": "Italia",
-   "anio": 2016,
-   "duracion_min": 125,
-   "genero": "Fantasía",
-   "seccion": "Homenaje a Luigi Cozzi",
-   "sinopsis": "Francia, 1890. El inventor Louis Le Prince, después de patentar una máquina para fotografiar imágenes en movimiento y proyectarlas, desaparece en extrañas circunstancias, sin que se vuelva a saber nada ni de él ni de su invento. Cinco años más tarde, los hermanos Lumière patentan una máquina muy similar a la de Le Prince llamada “Cinematógrafo”. Desde ese momento, 1895 es universalmente considerada la fecha oficial del nacimiento del cine. Sin embargo, sigue siendo un misterio qué pasó con Louis Le Prince y su invención. Este misterio seguía sin resolverse hasta que, de repente, en la Roma de 2016 se abre “La puerta a los mundos” y, con él, un universo paralelo donde se encuentra la respuesta a este enigma."
-  },
-  {
-   "dia": "2026-10-22",
-   "hora": "18:00",
-   "sede": "Universidad Nacional",
-   "acceso": "Entrada libre",
-   "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
-   },
-   "sala": "Plaza de la Biblioteca",
-   "titulo": "Club de la Medianoche: Club de lectura",
-   "seccion": "Club de la Medianoche",
-   "tipo": "evento",
-   "event_kind": "evento",
-   "sinopsis": "Club de lectura – Sesión presencial.",
-   "duracion_min": 60
+   "duracion_min": 88,
+   "sala": "Auditorio Gerardo Molina"
   },
   {
    "dia": "2026-10-22",
@@ -1271,10 +1518,11 @@
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-22-18-00-seleccion-oficial-de-cortometrajes"
    },
-   "sala": "Sala 2",
    "has_qa": true,
    "qa_type": "team",
    "titulo": "Función Grindhouse: Selección Oficial de Cortometrajes",
@@ -1338,7 +1586,8 @@
      "duracion_min": 16
     }
    ],
-   "duracion_min": 109
+   "duracion_min": 109,
+   "sala": "Sala 2"
   },
   {
    "dia": "2026-10-22",
@@ -1346,8 +1595,10 @@
    "sede": "La Comarca",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-22-18-00-juegos-de-mesa"
    },
    "titulo": "Jornada Juegos de Mesa Fantastable",
    "seccion": "Jornada Juegos de Mesa Fantastable",
@@ -1358,14 +1609,34 @@
   },
   {
    "dia": "2026-10-22",
+   "hora": "18:00",
+   "sede": "Universidad Nacional",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-22-18-00-club-de-lectura-sesion-presencial"
+   },
+   "titulo": "Club de la Medianoche: Club de lectura",
+   "seccion": "Club de la Medianoche",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "sinopsis": "Club de lectura – Sesión presencial.",
+   "duracion_min": 60,
+   "sala": "Jardín Bloque 41"
+  },
+  {
+   "dia": "2026-10-22",
    "hora": "18:40",
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-22-18-40-you-are-the-film"
    },
-   "sala": "Sala 3",
    "titulo": "You Are The Film",
    "director": "Makoto Ueda",
    "pais": "Japón",
@@ -1375,7 +1646,8 @@
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "invitados": "Hoodsteps (cortometraje).",
    "sinopsis": "La historia transcurre en tiempo real en un pequeño cine independiente de Shimokitazawa, Tokio. Todo comienza cuando las vidas cotidianas de Madoka, una dramaturga, y Kazuma, un músico, empiezan a transmitirse en vivo y en directo en la pantalla de la sala de cine sin explicación alguna. Mientras ellos caminan por los locales cercanos del barrio, el público del cine observa cada uno de sus movimientos en tiempo real. La situación se sale de control cuando las interacciones de los espectadores y los eventos del exterior empiezan a cruzarse, borrando por completo el límite entre la realidad y la ficción cinematográfica.",
-   "premiere": "Estreno latinoamericano"
+   "premiere": "Estreno latinoamericano",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-22",
@@ -1383,8 +1655,10 @@
    "sede": "Museo de Arte Moderno de Medellín - MAMM",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-22-19-00-carrie"
    },
    "titulo": "Carrie",
    "director": "Brian De Palma",
@@ -1401,10 +1675,11 @@
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-22-20-10-demoni"
    },
-   "sala": "Sala 2",
    "titulo": "Dèmoni",
    "director": "Lamberto Bava",
    "pais": "Italia",
@@ -1412,7 +1687,8 @@
    "duracion_min": 88,
    "genero": "Terror",
    "seccion": "Selección Asedio: Las murallas del miedo",
-   "sinopsis": "Dos jóvenes deciden ir al preestreno de una misteriosa película y viven una auténtica pesadilla al quedarse atrapados en el cine con los demás espectadores."
+   "sinopsis": "Dos jóvenes deciden ir al preestreno de una misteriosa película y viven una auténtica pesadilla al quedarse atrapados en el cine con los demás espectadores.",
+   "sala": "Sala 2"
   },
   {
    "dia": "2026-10-22",
@@ -1420,10 +1696,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-22-21-00-hablando-con-extranos"
    },
-   "sala": "Sala 3",
    "titulo": "Hablando con Extraños",
    "director": "Adrián García Bogliano",
    "pais": "México",
@@ -1432,22 +1709,45 @@
    "genero": "Terror",
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "sinopsis": "Una mujer con problemas mentales se enfrenta a una entidad siniestra que adopta la forma de su hijo fallecido.",
-   "premiere": "Estreno colombiano"
+   "premiere": "Estreno colombiano",
+   "sala": "Sala 3"
+  },
+  {
+   "titulo": "Cortometrajes en competencia: deliberación del Jurado Infantil",
+   "seccion": "Muestra Fantasmagoritos",
+   "dia": "2026-10-23",
+   "hora": "13:00",
+   "sede": "Biblioteca Comfenalco Castilla",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-23-13-00-cortometrajes-en-competencia-deliberacion-del-jurado-infantil"
+   },
+   "duracion_min": 60
   },
   {
    "dia": "2026-10-23",
    "hora": "16:00",
-   "sede": "Librería Antimateria",
+   "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-23-16-00-motherwitch"
    },
-   "titulo": "Asedios y otras tácticas militares en la saga \"Dune\" de Frank Herbert por Alejandro Vesga",
-   "seccion": "Fantasmagoría Académica",
-   "tipo": "evento",
-   "event_kind": "charla",
-   "duracion_min": 90
+   "titulo": "Motherwitch",
+   "director": "Minos Papas",
+   "pais": "Chipre, Macedonia y Estados Unidos",
+   "anio": 2026,
+   "duracion_min": 104,
+   "genero": "Terror",
+   "seccion": "Selección Oficial Largometrajes de Ficción",
+   "sinopsis": "Chipre, 1882: Eleni, una pintora marginada, intenta resucitar a sus hijos muertos, pero en su lugar desata criaturas míticas sobre su pueblo. Sólo si se convierte en una buena madre para un niño con talento, pero maltratado, podrá revertir la maldición.",
+   "premiere": "Estreno suramericano",
+   "sala": "Sala 1"
   },
   {
    "dia": "2026-10-23",
@@ -1455,8 +1755,10 @@
    "sede": "Museo de Arte Moderno de Medellín - MAMM",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-23-16-00-you-are-the-film"
    },
    "titulo": "You Are The Film",
    "director": "Makoto Ueda",
@@ -1471,45 +1773,47 @@
   },
   {
    "dia": "2026-10-23",
-   "hora": "16:00",
-   "sede": "Centro Colombo Americano",
-   "acceso": "desconocido",
-   "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
-   },
-   "titulo": "Motherwitch",
-   "director": "Minos Papas",
-   "pais": "Chipre, Macedonia y Estados Unidos",
-   "anio": 2026,
-   "duracion_min": 104,
-   "genero": "Terror",
-   "seccion": "Selección Oficial Largometrajes de Ficción",
-   "sinopsis": "Chipre, 1882: Eleni, una pintora marginada, intenta resucitar a sus hijos muertos, pero en su lugar desata criaturas míticas sobre su pueblo. Sólo si se convierte en una buena madre para un niño con talento, pero maltratado, podrá revertir la maldición.",
-   "premiere": "Estreno suramericano"
-  },
-  {
-   "dia": "2026-10-23",
    "hora": "17:00",
    "sede": "Comfama San Ignacio",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-23-17-00-cortometrajes-c-trencada"
    },
-   "sala": "Mediateca",
    "titulo": "Muestra Catalana: Cortometrajes C-Trencada",
    "seccion": "Muestra Catalana",
-   "duracion_min": 60
+   "duracion_min": 60,
+   "sala": "Mediateca"
   },
   {
    "dia": "2026-10-23",
-   "hora": "17:30",
+   "hora": "17:00",
    "sede": "Librería Antimateria",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-23-16-00-asedios-y-otras-tacticas-militares-en-la-saga-dune-de-frank-herbert-por-alejandro-vesga"
+   },
+   "titulo": "Asedios y otras tácticas militares en la saga \"Dune\" de Frank Herbert por Alejandro Vesga",
+   "seccion": "Fantasmagoría Académica",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "duracion_min": 90
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:30",
+   "sede": "Librería Antimateria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-23-17-30-seleccion-oficial-de-cortometrajes-de-animacion"
    },
    "titulo": "Selección Oficial de Cortometrajes de Animación",
    "seccion": "Selección de Cortometrajes Animados",
@@ -1586,10 +1890,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-23-18-40-mag-mag"
    },
-   "sala": "Sala 3",
    "titulo": "Mag Mag",
    "director": "Yuriyan Retriever",
    "pais": "Japón",
@@ -1597,7 +1902,8 @@
    "duracion_min": 112,
    "genero": "Terror",
    "seccion": "Muestra Asiática El Oriente Es Rojo",
-   "sinopsis": "Después de que el fantasma Mag Mag mata a su ser querido, la protagonista, Sanae, jura vengarse. Sin embargo, pronto descubre la verdadera identidad de la persona de la que realmente debe buscar venganza."
+   "sinopsis": "Después de que el fantasma Mag Mag mata a su ser querido, la protagonista, Sanae, jura vengarse. Sin embargo, pronto descubre la verdadera identidad de la persona de la que realmente debe buscar venganza.",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-23",
@@ -1605,10 +1911,11 @@
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-23-19-00-manual-para-invocar-fantasmas"
    },
-   "sala": "Sala X",
    "has_qa": true,
    "qa_type": "team",
    "titulo": "Manual Para Invocar Fantasmas",
@@ -1627,10 +1934,11 @@
    "sede": "Planetario de Medellín",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-23-19-00-vida"
    },
-   "sala": "Auditorio",
    "titulo": "Vida",
    "director": "Carlos Amézquita",
    "pais": "Colombia",
@@ -1639,7 +1947,8 @@
    "genero": "Ciencia ficción",
    "seccion": "Colombia es Fantástica",
    "invitados": "Charla Futuros Improbables: La Ciencia Ficción en el Cine Colombiano por Harveth Gil.",
-   "sinopsis": "Augusto, un joven científico y su hermana Andrómaca, viajan a través del espacio en búsqueda de vida en otros mundos. Luego de encontrar un planeta que alberga la evidencia de que alguna vez pudo haber sido un paraíso, deciden viajar en el tiempo al pasado para iniciar de nuevo allí."
+   "sinopsis": "Augusto, un joven científico y su hermana Andrómaca, viajan a través del espacio en búsqueda de vida en otros mundos. Luego de encontrar un planeta que alberga la evidencia de que alguna vez pudo haber sido un paraíso, deciden viajar en el tiempo al pasado para iniciar de nuevo allí.",
+   "sala": "Auditorio"
   },
   {
    "dia": "2026-10-23",
@@ -1647,8 +1956,10 @@
    "sede": "La Pascasia",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-23-19-30-charla-musicalizada-sinners-el-asedio-de-los-condenados-por-mario-fernando-castano"
    },
    "titulo": "Charla musicalizada en vivo – Sinners: el Asedio de los Condenados por Mario Fernando Castaño",
    "seccion": "Fantasmagoría Académica",
@@ -1662,10 +1973,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-23-21-00-ghost-in-the-cell"
    },
-   "sala": "Sala 3",
    "titulo": "Ghost in the Cell",
    "director": "Joko Anwar",
    "pais": "Indonesia y Corea del Sur",
@@ -1674,7 +1986,8 @@
    "genero": "Terror",
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "sinopsis": "En una conocida prisión, una fuerza invisible comienza a matar brutalmente a los reclusos, obligando a las bandas enemigas y a los guardias corruptos a trabajar juntos mientras intentan sobrevivir al creciente derramamiento de sangre.",
-   "premiere": "Estreno suramericano"
+   "premiere": "Estreno suramericano",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-23",
@@ -1682,8 +1995,10 @@
    "sede": "La Pascasia",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-23-21-30-brujas-espectros-y-otros-fantasmas"
    },
    "titulo": "Fiesta Fantasmagoría: Brujas, Espectros y Otros Fantasmas",
    "seccion": "Actividades",
@@ -1693,13 +2008,32 @@
    "duracion_min": 60
   },
   {
+   "titulo": "Presentación de Libros Ediciones Sociedad Fantasmagoría: Colombia es fantástica y Las Murallas del Miedo, con sus autores",
+   "seccion": "Fantasmagoría Académica",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "dia": "2026-10-24",
+   "hora": "15:00",
+   "sede": "Librería Antimateria",
+   "acceso": "Entrada libre",
+   "_src": {
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-25-15-00-presentacion-de-libros-ediciones-sociedad-fantasmagoria-colombia-es-fantastica-y-las-murallas-del-miedo"
+   },
+   "duracion_min": 60
+  },
+  {
    "dia": "2026-10-24",
    "hora": "16:30",
    "sede": "Museo de Arte Moderno de Medellín - MAMM",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-24-16-30-il-deserto-rosso"
    },
    "titulo": "Il Deserto Rosso",
    "director": "Michelangelo Antonioni",
@@ -1716,10 +2050,11 @@
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-24-17-00-luz"
    },
-   "sala": "Sala 1",
    "has_qa": true,
    "qa_type": "team",
    "titulo": "Luz",
@@ -1730,7 +2065,8 @@
    "genero": "Terror",
    "seccion": "Retrospectiva Tilman Singer",
    "invitados": "Conversatorio con Tilman Singer y Jose Andrés Gómez.",
-   "sinopsis": "La joven taxista Luz llega abatida a una comisaría de policía. Al parecer una entidad demoníaca insaciable la persigue y no descansará hasta poseerla… La ópera prima de Tilman Singer es un thriller en el que lo absurdo y lo sobrenatural convergen hasta crear un nocturno juego sensorial."
+   "sinopsis": "La joven taxista Luz llega abatida a una comisaría de policía. Al parecer una entidad demoníaca insaciable la persigue y no descansará hasta poseerla… La ópera prima de Tilman Singer es un thriller en el que lo absurdo y lo sobrenatural convergen hasta crear un nocturno juego sensorial.",
+   "sala": "Sala 1"
   },
   {
    "dia": "2026-10-24",
@@ -1738,10 +2074,11 @@
    "sede": "Comfama San Ignacio",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-24-18-30-seleccion-oficial-de-cortometrajes"
    },
-   "sala": "La Capilla",
    "has_qa": true,
    "qa_type": "team",
    "titulo": "Selección Oficial de Cortometrajes",
@@ -1805,7 +2142,8 @@
      "duracion_min": 16
     }
    ],
-   "duracion_min": 109
+   "duracion_min": 109,
+   "sala": "La Capilla"
   },
   {
    "dia": "2026-10-24",
@@ -1813,10 +2151,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-24-18-40-dong-bei-jing-cha-gu-shi-3"
    },
-   "sala": "Sala 3",
    "titulo": "Dong Bei Jing Cha Gu Shi 3 – Fight Against Evil 3",
    "director": "Bingjia Yang",
    "pais": "China",
@@ -1824,7 +2163,8 @@
    "duracion_min": 100,
    "genero": "Acción",
    "seccion": "Muestra de acción A Quemarropa",
-   "sinopsis": "Li Hongqi llegó de las calles del noreste de China a una isla tropical con la intención de preparar su boda, pero en lugar de ello se embarcó en un viaje para atrapar de nuevo a los delincuentes."
+   "sinopsis": "Li Hongqi llegó de las calles del noreste de China a una isla tropical con la intención de preparar su boda, pero en lugar de ello se embarcó en un viaje para atrapar de nuevo a los delincuentes.",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-24",
@@ -1832,14 +2172,16 @@
    "sede": "Planetario de Medellín",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-24-19-00-cortometrajes-colombianos-que-miran-al-cielo"
    },
-   "sala": "Auditorio",
    "titulo": "Cortometrajes colombianos que miran al cielo",
    "seccion": "Colombia es Fantástica",
    "sinopsis": "Cortometrajes colombianos que miran al cielo + Observación del cielo con telescopio.",
-   "duracion_min": 60
+   "duracion_min": 60,
+   "sala": "Auditorio"
   },
   {
    "dia": "2026-10-24",
@@ -1847,10 +2189,11 @@
    "sede": "Centro Colombo Americano",
    "acceso": "Entrada libre",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-24-19-30-the-craft"
    },
-   "sala": "Sala X",
    "titulo": "The Craft",
    "director": "Andrew Fleming",
    "pais": "Estados Unidos",
@@ -1859,7 +2202,9 @@
    "genero": "Terror",
    "seccion": "Aniversario 30 años",
    "invitados": "Conversatorio con Lina Parra, Ximena Escobar (Bruja Riso) y Liza Arboleda.",
-   "sinopsis": "Sara acaba de llegar a Los Ángeles y, aunque al principio se siente aislada entre sus nuevos compañeros de instituto, pronto entabla amistad con tres chicas con las que no sólo comparte la pasión por las ciencias ocultas, sino también poderes especiales."
+   "sinopsis": "Sara acaba de llegar a Los Ángeles y, aunque al principio se siente aislada entre sus nuevos compañeros de instituto, pronto entabla amistad con tres chicas con las que no sólo comparte la pasión por las ciencias ocultas, sino también poderes especiales.",
+   "has_qa": true,
+   "qa_type": "team"
   },
   {
    "dia": "2026-10-24",
@@ -1867,10 +2212,11 @@
    "sede": "Cineprox Las Américas",
    "acceso": "Con boleta",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-24-21-00-huo-zhe-yan"
    },
-   "sala": "Sala 3",
    "has_qa": true,
    "qa_type": "team",
    "titulo": "Huo zhe yan (The Furious)",
@@ -1881,7 +2227,8 @@
    "genero": "Acción",
    "seccion": "Selección Oficial Largometrajes de Ficción",
    "sinopsis": "Rainy, hija del experto en artes marciales Wang Wei, es secuestrada por una red de tráfico de menores. En un frenético intento de recuperarla, el padre se lanza a la guerra, enfrentándose a numerosos obstáculos mientras lucha contra criminales y policías corruptos. En el camino conoce a Navin, un periodista en busca de su esposa desaparecida. Ambos despliegan sus habilidades de combate mientras aprenden las virtudes de la confianza mutua.",
-   "premiere": "Estreno colombiano"
+   "premiere": "Estreno colombiano",
+   "sala": "Sala 3"
   },
   {
    "dia": "2026-10-25",
@@ -1889,8 +2236,10 @@
    "sede": "Comfama San Ignacio",
    "acceso": "Entrada libre con boleta (en orden de llegada hasta completar aforo)",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-25-17-00-premiacion-y-presentacion-musical"
    },
    "titulo": "Evento de Clausura: Premiación y Presentación musical",
    "seccion": "Evento de Clausura",
@@ -1904,8 +2253,10 @@
    "sede": "Comfama San Ignacio",
    "acceso": "Entrada libre con boleta (en orden de llegada hasta completar aforo)",
    "_src": {
-    "url": "https://festivalfantasmagoriamedellin.com/noticias/ya-puedes-empezar-a-programarte-para-fantasmagoria-2026/",
-    "date": "2026-09-28"
+    "url": "https://www.cartelerafantasmagoria.fan/",
+    "date": "2026-10-06",
+    "base_version": 2,
+    "id": "2026-10-25-19-00-ikatan-darah"
    },
    "titulo": "Ikatan Darah",
    "director": "Sidharta Tata",
@@ -1917,5 +2268,13 @@
    "premiere": "Clausura",
    "sinopsis": "Una ex atleta de artes marciales debe enfrentarse a una red de usureros para salvar a su hermano menor, atrapado en una deuda de juego online y que pone en peligro la seguridad de su familia."
   }
- ]
+ ],
+ "_base": {
+  "url": "https://www.cartelerafantasmagoria.fan/",
+  "version": 2,
+  "creada": "2026-10-06T23:59:26.792836+00:00",
+  "nuevas": [],
+  "movidas": [],
+  "fuera_de_la_base": []
+ }
 }

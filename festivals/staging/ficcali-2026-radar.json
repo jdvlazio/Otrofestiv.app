@@ -1,0 +1,14 @@
+{
+ "_provenance": {
+  "fuente": "issue de radar #1024 — https://github.com/jdvlazio/Otrofestiv.app/issues/1024",
+  "capturado": "2026-10-07",
+  "titulo": "RADAR: FICCALI 18 — Festival Internacional de Cine de Cali, 3–27 OCT 2026",
+  "estado": "OPEN",
+  "comentarios": 0
+ },
+ "issue": 1024,
+ "titulo": "RADAR: FICCALI 18 — Festival Internacional de Cine de Cali, 3–27 OCT 2026",
+ "estado": "OPEN",
+ "cuerpo": "Fuente: web oficial https://ficcali.com/ · detectado 7 oct 2026 (no estaba en el radar; lo trajo Juan).\n\n**Estado 7 oct 2026**\n- Edición XVIII, lema «Cine para encontrarnos». Lanzamiento el sáb 3 oct en la Cinemateca La Tertulia (90minutos.co).\n- **Programación publicada** en https://ficcali.com/programacion-ficcali-2026/ (página WP 14870, modificada el 6 oct 22:28 UTC). Son 118 entradas del 3 al 27 oct; el grueso va del 20 al 25.\n  - 60 proyecciones · 27 académico · 14 Conexiones · 13 Cine sin límites (barrios).\n- **31 sedes**, entre ellas Cinemateca La Tertulia (28), Cine Colombia Unicentro (16), Comfandi (11), Teatrino (9), Madame Blue (8), Boulevard del Río (6) y Espectra (5), más bibliotecas y salas de barrio.\n- **Selección**: https://ficcali.com/seleccion-de-peliculas-2026/ (página 12862, modificada el 6 oct). El tipo `pelicula` de la API REST trae 87 fichas fechadas en 2026.\n- La API REST expone `programacion-ficcali`, `pelicula`, `eventos` (36) y `directores`, pero los campos ACF vienen vacíos: el detalle está en el HTML.\n\nFuentes guardadas en `fuentes/ficcali-2026/`.",
+ "comentarios": []
+}

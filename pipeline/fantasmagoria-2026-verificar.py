@@ -31,6 +31,12 @@ CONTRADICCIONES = {
     ('Schichinin No Samurai (Seven Samurai)', '2026-10-16', '18:30'): 'la parrilla dice «Entrada Libre»; la página de largos, «Entrada con boleta». Se publica la parrilla; preguntado',
     ('Hoodsteps', '2026-10-22', '18:40'): 'no es contradicción: el corto que acompaña a You Are The Film («+ Hoodsteps»); la página de largos lo lista aparte',
     ('Hoodsteps', '2026-10-23', '16:00'): 'ídem',
+    # LA BASE DE SU CARTELERA (v2, 6 oct) contra la página de largos (28 sep): la
+    # base es la más reciente y la que el equipo edita, y manda (7 oct). Preguntado.
+    ('Critters', '2026-10-18', '19:00'): 'la página de largos dice dom 18, 7:00 p. m.; la base v2, sáb 17 a las 19:00 (el 18 queda la de X-Files). Se publica la base',
+    ('Critters', '2026-10-17', '19:00'): 'ver la del domingo 18',
+    ('Pura Sangre', '2026-10-20', '18:30'): 'la página de largos dice 6:30 p. m.; la base v2, 18:00. Se publica la base',
+    ('Pura Sangre', '2026-10-20', '18:00'): 'ver la de las 18:30',
 }
 
 
