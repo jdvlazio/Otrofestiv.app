@@ -111,7 +111,8 @@
    "2026-10-26"
   ],
   "_fuentes_versionadas": {
-   "festivals/staging/bhff-2026-radar.json": "el volcado del radar #1030, que escribe y relee pipeline/radar.py"
+   "festivals/staging/bhff-2026-radar.json": "el volcado del radar #1030, que escribe y relee pipeline/radar.py",
+   "festivals/staging/bhff-2026-sinopsis.json": "sinopsis oficiales declaradas (literal, con URL, verificadas frase por frase); las lee pipeline/enriquecer.py donde no hay ninguna; `idioma: en` va a synopsis_en"
   }
  }
 }

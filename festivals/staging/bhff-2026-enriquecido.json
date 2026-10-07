@@ -34,8 +34,10 @@
      "posterSource": "oficial"
     }
    ],
-   "poster": "/assets/siembrafest/bajo-el-mismo-techo.jpg",
-   "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche"
+   "poster": "/assets/bhff-2026/bajo-el-mismo-techo.jpg",
+   "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche",
+   "posterSource": "oficial",
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-31.webp, recortado por dentro del marco (700×1105, marco 15 px)"
   },
   {
    "titulo": "Chaika",
@@ -119,7 +121,9 @@
    "_director": "Daniel Riglos",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/donde-duermen-los-suenos.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Luego de un accidente de tránsito, un hombre cae en un coma, quedando inmerso en un mundo onírico en donde la mujer que ama, y que perdió en el accidente, sigue con vida. A partir de entonces, empieza un viaje entre los sueños y la realidad, en el que el hombre debe decidir si quedarse con la mujer que ama, o dejarla ir y seguir con su vida.",
+   "_sinopsis": "https://festivaldelima.com/2026/pelicula/donde-duermen-los-suenos/"
   },
   {
    "titulo": "El Ocaso De Los Dioses",
@@ -370,7 +374,9 @@
    "_director": "Horacio Maldonado, Axel Maldonado",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/moviedreams.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "En un futuro cercano, la corporación LucidVisions lanza MOVIEDREAMS, una plataforma que induce sueños interactivos hiperrealistas. Diego, su creador, empieza a notar fallos y anomalías que revelan usos alternativos del sistema. A medida que profundiza, descubre una conspiración liderada por el CEO, Martín Lynch, quien negocia con agencias internacionales el uso del sistema como arma psicológica y de inteligencia masiva. Sofía y Diego buscarán una solución para enfrentarse a Martín y a la propia IA que ha desarrollado conciencia.",
+   "_sinopsis": "https://www.moviedreams.com.ar/pelicula"
   },
   {
    "titulo": "Muertos que no son muertos",
@@ -722,7 +728,9 @@
     }
    ],
    "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
-   "_verificado": "ya publicada en fantasmagoria-2026: se reusa su afiche"
+   "_verificado": "ya publicada en fantasmagoria-2026: se reusa su afiche",
+   "sinopsis": "Un hombre comienza a notar un patrón: en cada lugar que descubre con ayuda de una web de mapas, la misma presencia ya está allí, esperándolo.",
+   "_sinopsis": "https://www.semana.com/cultura/arte/articulo/agendese-en-bogota-porque-este-junio-es-muy-cultural/202613/"
   },
   {
    "titulo": "Yatsi y el Espíritu del Río",
@@ -742,13 +750,17 @@
    "_director": "Valeria Salinas Yábar, Rous Condori Arango",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/yatsi-y-el-espiritu-del-rio.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "En un futuro distópico donde todo está deforestado y contaminado, existe un pueblo donde vive Yatsi, una niña que junto a su abuelo sobreviven en medio de la Amazonía. Un día algo se quiebra en su abuelo y Yatsi tendrá que ir en búsqueda de un fruto misterioso que podría salvarlo. Ella hará un viaje a través de un río tóxico, pero en el camino se encontrará con seres fluviales que la persiguen. Yatsi tendrá que confiar en los símbolos de sus sueños para poder llegar a su destino.",
+   "_sinopsis": "https://festivaldelima.com/2024/pelicula/yatsi-y-el-espiritu-del-rio/"
   },
   {
    "titulo": "Anax",
    "poster": "/assets/bhff-2026/anax.jpg",
    "posterSource": "oficial",
-   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-15.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-15.webp, recortado por dentro del marco (764×1078, marco 11 px)",
+   "synopsis_en": "Iván arrives at an underground party in a forest on Midsummer's Eve, seeking to lose himself in the music, the fire, and Clara, the girl he's obsessed with. But after trying a strange substance, the celebration turns into a nightmare.",
+   "_sinopsis": "https://screamfestla.com/2026/film/anax"
   },
   {
    "titulo": "Búhos",
@@ -790,7 +802,9 @@
    "titulo": "Gabriel",
    "poster": "/assets/bhff-2026/gabriel.jpg",
    "posterSource": "oficial",
-   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-51.webp, recortado por dentro del marco (714×1076, marco 15 px)"
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-51.webp, recortado por dentro del marco (714×1076, marco 15 px)",
+   "sinopsis": "Helena, una joven atormentada por inquietantes visiones, se encuentra en una antigua habitación infantil donde es inundada por recuerdos aterradores. A través de las visiones, es testigo del sufrimiento de un niño llamado Gabriel, quien fue maltratado y asesinado por su padre violento y borracho. Elena descubre un diario que parece contar la trágica historia de Gabriel.",
+   "_sinopsis": "https://lavillaproducciones.com/gabriel"
   },
   {
    "titulo": "Happy",
@@ -820,7 +834,9 @@
    "titulo": "Nocturna",
    "poster": "/assets/bhff-2026/nocturna.jpg",
    "posterSource": "oficial",
-   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-13.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+   "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-13.webp, recortado por dentro del marco (764×1078, marco 11 px)",
+   "sinopsis": "Max regresa a casa después de un largo día de trabajo. Una mujer ebria se sube al mismo vagón de metro en el que viaja él. Su actuar errante llama la atención de otro pasajero que no tiene buenas intenciones. Max será testigo de lo que pasa en el Metro por las noches.",
+   "_sinopsis": "https://www.feratumfilmfest.com/nocturna/"
   },
   {
    "titulo": "Parásitos",
@@ -845,6 +861,26 @@
    "poster": "/assets/bhff-2026/vientre.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-48.webp, recortado por dentro del marco (780×1106, marco 15 px)"
+  },
+  {
+   "titulo": "Cerdo que Sobrevivió a la Fiebre Aftosa",
+   "sinopsis": "República de Corea, 2010. Durante la epidemia de la enfermedad de manos, pies y boca que ha condenado a miles de animales a ser sacrificados de forma brutal, un cerdo logra escapar y sobrevivir con un sueño: convertirse en humano. En otra parte del país, un soldado humillado por sus superiores mata a un oficial y se da a la fuga con una idea en la cabeza: el deseo de transformarse en un animal.",
+   "_sinopsis": "https://sitgesfilmfestival.com/es/film/2024/pig-survived-foot-and-mouth-disease"
+  },
+  {
+   "titulo": "La Demonatrix",
+   "synopsis_en": "It tells the story of Lita (Hannah Fierman), a dominatrix who falls on hard times and takes up a side gig as a phony spiritual medium. One night during a séance, an actual incubus demon (Nivek Ogre) is accidentally summoned and attaches itself to her. Lita seeks the help of Father Veto (Aurelio Voltaire), the priest who presides over the church across the street from her dungeon, and together they join forces to try and send the demon back to Hell!",
+   "_sinopsis": "https://www.cine-excess.co.uk/the-demonatrix-aurelio-voltaire-jeff-ferrell-usa-2025.html"
+  },
+  {
+   "titulo": "MEAT the Movie",
+   "synopsis_en": "After a night of drugs and debauchery results in the fatal overdose of an underage gay man, an innocent bystander is left to take the blame. Upon his release from prison, the guilty party becomes the focus of an eccentric killer’s revenge.",
+   "_sinopsis": "https://pqff.au/wp-content/uploads/2026/02/PQFF-Program-2026_Master_Perth_LR_Spreads.pdf"
+  },
+  {
+   "titulo": "The Callback",
+   "sinopsis": "Ingrid es una actriz de 37 años. Pierde todas sus solicitudes de trabajo ante Josefina, una actriz más joven y talentosa. ¿Cómo puede salir de este problema?",
+   "_sinopsis": "https://cinechile.cl/pelicula/the-callback/"
   }
  ],
  "verificadas": {
@@ -947,7 +983,9 @@
    "_director": "Daniel Riglos",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/donde-duermen-los-suenos.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "Luego de un accidente de tránsito, un hombre cae en un coma, quedando inmerso en un mundo onírico en donde la mujer que ama, y que perdió en el accidente, sigue con vida. A partir de entonces, empieza un viaje entre los sueños y la realidad, en el que el hombre debe decidir si quedarse con la mujer que ama, o dejarla ir y seguir con su vida.",
+   "_sinopsis": "https://festivaldelima.com/2026/pelicula/donde-duermen-los-suenos/"
   },
   "El Susurro": {
    "tmdb_id": 1534530,
@@ -1146,7 +1184,9 @@
    "_director": "Horacio Maldonado, Axel Maldonado",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/moviedreams.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "En un futuro cercano, la corporación LucidVisions lanza MOVIEDREAMS, una plataforma que induce sueños interactivos hiperrealistas. Diego, su creador, empieza a notar fallos y anomalías que revelan usos alternativos del sistema. A medida que profundiza, descubre una conspiración liderada por el CEO, Martín Lynch, quien negocia con agencias internacionales el uso del sistema como arma psicológica y de inteligencia masiva. Sofía y Diego buscarán una solución para enfrentarse a Martín y a la propia IA que ha desarrollado conciencia.",
+   "_sinopsis": "https://www.moviedreams.com.ar/pelicula"
   },
   "Muertos que no son muertos": {
    "tmdb_id": 1506756,
@@ -1479,7 +1519,9 @@
    "_director": "Valeria Salinas Yábar, Rous Condori Arango",
    "_sondeado": "2026-10-07",
    "poster": "/assets/bhff-2026/yatsi-y-el-espiritu-del-rio.jpg",
-   "posterSource": "tmdb"
+   "posterSource": "tmdb",
+   "sinopsis": "En un futuro distópico donde todo está deforestado y contaminado, existe un pueblo donde vive Yatsi, una niña que junto a su abuelo sobreviven en medio de la Amazonía. Un día algo se quiebra en su abuelo y Yatsi tendrá que ir en búsqueda de un fruto misterioso que podría salvarlo. Ella hará un viaje a través de un río tóxico, pero en el camino se encontrará con seres fluviales que la persiguen. Yatsi tendrá que confiar en los símbolos de sus sueños para poder llegar a su destino.",
+   "_sinopsis": "https://festivaldelima.com/2024/pelicula/yatsi-y-el-espiritu-del-rio/"
   }
  },
  "sin_ficha": [

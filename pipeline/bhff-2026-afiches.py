@@ -39,6 +39,9 @@ BLANCO = 225
 # los largos no están en la Selección del sitio: su lámina (mismo formato) es la del
 # carrusel «Selección oficial — Largometraje nacional» de IG (p/DcxA28kjgVo, sin sesión)
 LAMINAS_IG = {'Parapeto': 'fuentes/ig/DcxA28kjgVo/2.jpg'}
+# el afiche de la lámina MANDA sobre el heredado de otro festival nuestro, que en
+# estas obras no es el afiche original (mirado en la hoja de contacto, 7 oct)
+MANDA = {'Bajo El Mismo Techo': 'SiembraFest publicó su tarjeta de sección («Cinema Patatús», laurel Siembra Fest), no el afiche'}
 
 
 def plano(s):
@@ -132,8 +135,10 @@ def main():
         afiches[t] = {'archivo': os.path.relpath(dest, REPO),
                       'fuente': (f'IG @bogotahorrorfest p/DcxA28kjgVo, lámina {f}: el afiche, ' if t in LAMINAS_IG else
                                  f'bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina {f}, ')
-                                + 
-                                f'recortado por dentro del marco ({que})'}
+                                + f'recortado por dentro del marco ({que})'}
+        if t in MANDA:
+            afiches[t]['manda'] = True
+            afiches[t]['_por_que_manda'] = MANDA[t]
     io.open(DESTINO, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': {'fuente': 'bogotahorrorfilmfest.com, Selección 2026 (láminas de festivalData)',
                         'capturado': '2026-10-07', 'regla': 'solo donde TMDB y lo ya publicado no tienen afiche',

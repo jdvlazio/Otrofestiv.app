@@ -27,7 +27,8 @@
   "2026-10-26"
  ],
  "_fuentes_versionadas": {
-  "festivals/staging/bhff-2026-radar.json": "el volcado del radar #1030, que escribe y relee pipeline/radar.py"
+  "festivals/staging/bhff-2026-radar.json": "el volcado del radar #1030, que escribe y relee pipeline/radar.py",
+  "festivals/staging/bhff-2026-sinopsis.json": "sinopsis oficiales declaradas (literal, con URL, verificadas frase por frase); las lee pipeline/enriquecer.py donde no hay ninguna; `idioma: en` va a synopsis_en"
  },
  "prioLimit": 5,
  "dias": [
@@ -362,7 +363,9 @@
      "posterSource": "tmdb",
      "lbSlug": "moviedreams",
      "tmdb_id": 1776749,
-     "genre": "Ciencia ficción"
+     "synopsis": "En un futuro cercano, la corporación LucidVisions lanza MOVIEDREAMS, una plataforma que induce sueños interactivos hiperrealistas. Diego, su creador, empieza a notar fallos y anomalías que revelan usos alternativos del sistema. A medida que profundiza, descubre una conspiración liderada por el CEO, Martín Lynch, quien negocia con agencias internacionales el uso del sistema como arma psicológica y de inteligencia masiva. Sofía y Diego buscarán una solución para enfrentarse a Martín y a la propia IA que ha desarrollado conciencia.",
+     "genre": "Ciencia ficción",
+     "synopsis_lang": "es"
     },
     {
      "title": "Chaika",
@@ -406,7 +409,9 @@
      "country": "Corea del Sur",
      "flags": "🇰🇷",
      "year": 2024,
-     "duration": "105 min"
+     "duration": "105 min",
+     "synopsis": "República de Corea, 2010. Durante la epidemia de la enfermedad de manos, pies y boca que ha condenado a miles de animales a ser sacrificados de forma brutal, un cerdo logra escapar y sobrevivir con un sueño: convertirse en humano. En otra parte del país, un soldado humillado por sus superiores mata a un oficial y se da a la fuga con una idea en la cabeza: el deseo de transformarse en un animal.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Yatsi y el Espíritu del Río",
@@ -419,9 +424,11 @@
      "posterSource": "tmdb",
      "lbSlug": "yatsi-and-the-spirit-of-the-river",
      "tmdb_id": 1321232,
+     "synopsis": "En un futuro distópico donde todo está deforestado y contaminado, existe un pueblo donde vive Yatsi, una niña que junto a su abuelo sobreviven en medio de la Amazonía. Un día algo se quiebra en su abuelo y Yatsi tendrá que ir en búsqueda de un fruto misterioso que podría salvarlo. Ella hará un viaje a través de un río tóxico, pero en el camino se encontrará con seres fluviales que la persiguen. Yatsi tendrá que confiar en los símbolos de sus sueños para poder llegar a su destino.",
      "synopsis_en": "In a dystopian future where everything is deforested and polluted, there is a village where Yatsi lives, a girl who survives with her grandfather in the middle of the Amazon. One day something breaks in him and Yatsi will have to go in search of a mysterious fruit that could save him. She will journey through a toxic river, but on the way, she will meet river beings who pursue her. Yatsi will have to rely on the symbols of her dreams to reach her destination.",
      "title_en": "Yatsi and the Spirit of the River",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -633,7 +640,9 @@
      "country": "Chile",
      "flags": "🇨🇱",
      "year": 2025,
-     "duration": "7 min"
+     "duration": "7 min",
+     "synopsis": "Ingrid es una actriz de 37 años. Pierde todas sus solicitudes de trabajo ante Josefina, una actriz más joven y talentosa. ¿Cómo puede salir de este problema?",
+     "synopsis_lang": "es"
     },
     {
      "title": "Pactum",
@@ -720,6 +729,8 @@
    "venue": "Centro Felicidad Chapinero - Bogotá",
    "has_qa": true,
    "qa_type": "team",
+   "synopsis": "Luego de un accidente de tránsito, un hombre cae en un coma, quedando inmerso en un mundo onírico en donde la mujer que ama, y que perdió en el accidente, sigue con vida. A partir de entonces, empieza un viaje entre los sueños y la realidad, en el que el hombre debe decidir si quedarse con la mujer que ama, o dejarla ir y seguir con su vida.",
+   "synopsis_lang": "es",
    "poster": "/assets/bhff-2026/donde-duermen-los-suenos.jpg",
    "posterSource": "tmdb",
    "_src": {
@@ -758,7 +769,8 @@
      "country": "Estados Unidos",
      "flags": "🇺🇸",
      "year": 2025,
-     "duration": "90 min"
+     "duration": "90 min",
+     "synopsis_en": "It tells the story of Lita (Hannah Fierman), a dominatrix who falls on hard times and takes up a side gig as a phony spiritual medium. One night during a séance, an actual incubus demon (Nivek Ogre) is accidentally summoned and attaches itself to her. Lita seeks the help of Father Veto (Aurelio Voltaire), the priest who presides over the church across the street from her dungeon, and together they join forces to try and send the demon back to Hell!"
     },
     {
      "title": "Gabriel",
@@ -766,7 +778,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "poster": "/assets/bhff-2026/gabriel.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis": "Helena, una joven atormentada por inquietantes visiones, se encuentra en una antigua habitación infantil donde es inundada por recuerdos aterradores. A través de las visiones, es testigo del sufrimiento de un niño llamado Gabriel, quien fue maltratado y asesinado por su padre violento y borracho. Elena descubre un diario que parece contar la trágica historia de Gabriel.",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -875,7 +889,7 @@
      "director": "Alejandro Vargas",
      "country": "Colombia",
      "flags": "🇨🇴",
-     "year": 2026,
+     "year": 2023,
      "duration": "20 min",
      "poster": "/assets/bhff-2026/quazar.jpg",
      "posterSource": "tmdb",
@@ -914,7 +928,9 @@
      "year": 2025,
      "duration": "15 min",
      "poster": "/assets/bhff-2026/nocturna.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis": "Max regresa a casa después de un largo día de trabajo. Una mujer ebria se sube al mismo vagón de metro en el que viaja él. Su actuar errante llama la atención de otro pasajero que no tiene buenas intenciones. Max será testigo de lo que pasa en el Metro por las noches.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Happy",
@@ -951,7 +967,8 @@
      "year": 2026,
      "duration": "14 min",
      "poster": "/assets/bhff-2026/anax.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis_en": "Iván arrives at an underground party in a forest on Midsummer's Eve, seeking to lose himself in the music, the fire, and Clara, the girl he's obsessed with. But after trying a strange substance, the celebration turns into a nightmare."
     },
     {
      "title": "El Diente Negro",
@@ -1005,7 +1022,8 @@
      "country": "Estados Unidos",
      "flags": "🇺🇸",
      "year": 2025,
-     "duration": "134 min"
+     "duration": "134 min",
+     "synopsis_en": "After a night of drugs and debauchery results in the fatal overdose of an underage gay man, an innocent bystander is left to take the blame. Upon his release from prison, the guilty party becomes the focus of an eccentric killer’s revenge."
     },
     {
      "title": "El Teatro: Monólogo de Horror"
@@ -1160,7 +1178,7 @@
      "flags": "🇨🇴",
      "year": 2026,
      "duration": "13 min",
-     "poster": "/assets/siembrafest/bajo-el-mismo-techo.jpg",
+     "poster": "/assets/bhff-2026/bajo-el-mismo-techo.jpg",
      "posterSource": "oficial"
     },
     {
@@ -1171,7 +1189,9 @@
      "year": 2026,
      "duration": "12 min",
      "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
-     "posterSource": "oficial"
+     "synopsis": "Un hombre comienza a notar un patrón: en cada lugar que descubre con ayuda de una web de mapas, la misma presencia ya está allí, esperándolo.",
+     "posterSource": "oficial",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -1200,8 +1220,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-07T11:57:10",
-  "plan_sha": "89b7414487530f84",
+  "fecha": "2026-10-07T12:43:06",
+  "plan_sha": "2ffdc359c921f8c4",
   "paso": 7,
   "cmd": "python3 pipeline/ensamblar.py bhff-2026"
  }

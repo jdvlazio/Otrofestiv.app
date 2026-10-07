@@ -61,6 +61,12 @@ DIRECTOR = {
                                     'dicen «Rous»; la parrilla, «Roux»'),
 }
 
+# EL AÑO que la parrilla da distinto de todas las demás fuentes
+ANIO = {
+    'Quazar': (2023, 'TMDB 1786245 (estreno 2023), Fantasmagoría 2026 y Villa del Cine 2026 dicen 2023; '
+                     'solo la parrilla de BHFF dice 2026'),
+}
+
 
 def directores(s):
     """«A y B», «A / B», «A & B» → «A, B»."""
@@ -200,6 +206,8 @@ def main():
                         o['titulo'] = (O.get(plano(o['titulo'])) or {}).get('titulo', o['titulo'])
                     if o['titulo'] in DIRECTOR:
                         o['director'], o['_director_fuente'] = DIRECTOR[o['titulo']]
+                    if o['titulo'] in ANIO:
+                        o['anio'], o['_anio_fuente'] = ANIO[o['titulo']]
                 ig = F.get(plano(nombre))
                 if t.startswith('Franja Nacional'):
                     # el IG no da los minutos de todos: ahí se compara solo el título

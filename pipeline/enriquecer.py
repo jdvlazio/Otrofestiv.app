@@ -464,8 +464,14 @@ def main():
             # anterior, o el de otro festival nuestro que a su vez apunta aquí
             # (La Rebelión de un Fantasma, en Girardota y en Popayán), no cuenta
             # si el archivo no está en disco
+            # …salvo que lo declarado diga `manda`: lo heredado de OTRO festival
+            # nuestro puede ser una tarjeta de ese festival marcada «oficial»
+            # (Bajo el mismo techo en SiembraFest, 7 oct) y el afiche original
+            # está en la lámina de este. TMDB sigue mandando siempre.
+            _heredado = _p.startswith('/assets/') and not _p.startswith(f'/assets/{fid}/')
             if e.get('poster_path') or (_p and not (_p.startswith('/assets/')
-                                                     and not os.path.exists(REPO + _p))):
+                                                     and not os.path.exists(REPO + _p))
+                                        and not (d.get('manda') and _heredado)):
                 continue
             os.makedirs(f'{REPO}/assets/{fid}', exist_ok=True)
             dest = f'{REPO}/assets/{fid}/{slug(t)}.jpg'
@@ -489,6 +495,14 @@ def main():
             if t not in obras:
                 sys.exit(f'sinopsis declarada para un título que no está en el programa: {t}')
             e = ok.get(t) or {}
+            # `idioma: en`: la única sinopsis que existe está en inglés; va a
+            # synopsis_en tal cual (no se traduce) y solo si no hay ninguna
+            if d.get('idioma') == 'en':
+                if e.get('sinopsis') or e.get('synopsis_es') or e.get('synopsis_en'):
+                    continue
+                ok[t] = {**e, 'synopsis_en': d['texto'], '_sinopsis': d['fuente']}
+                n_s += 1
+                continue
             if e.get('sinopsis') or e.get('synopsis_es'):
                 continue
             ok[t] = {**e, 'sinopsis': d['texto'], '_sinopsis': d['fuente']}
