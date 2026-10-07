@@ -145,6 +145,9 @@ def publicar(fid, forzar=False):
     out['sections'] = {k: limpio(v) for k, v in (b.get('sections') or {}).items()}
     out['venues'] = {k: limpio(v) for k, v in (b.get('venues') or {}).items()}
     out['films'] = [lib.normaliza(limpio(f), rep) for f in b['films']]
+    # sinopsis de obra / descripción de programa o actividad (lib.separar_descripcion)
+    for f in out['films']:
+        lib.separar_descripcion(f)
     for f in out['films']:
         for it in (f.get('film_list') or []):
             if isinstance(it, dict):
@@ -175,6 +178,10 @@ def publicar(fid, forzar=False):
     # ── ¿esta publicación PIERDE datos? ─────────────────────────────────────
     if os.path.exists(out_p):
         viejo = json.load(open(out_p, encoding='utf-8'))
+        # lo publicado ANTES de la separación cuenta sus descripciones como
+        # `synopsis`: se le aplica la misma regla, o la migración parecería pérdida
+        for f in (viejo.get('films') or []):
+            lib.separar_descripcion(f)
         _alt, _baj, _mov = diff_contra_produccion(viejo, out)
         if _alt or _baj or _mov:
             print(f'· cambios contra lo publicado: +{len(_alt)} obra(s), '

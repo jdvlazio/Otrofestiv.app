@@ -1547,6 +1547,18 @@ export function locSynopsis(f){
   return f.synopsis || '';
 }
 
+// locDescription(f) — HELPER ÚNICO del texto de un PROGRAMA o una ACTIVIDAD
+// (Juan, 7 oct 2026: «sinopsis es solo para películas, descripción para
+// programas o actividades»; la regla del dato es pipeline/lib.separar_descripcion).
+// Mismo fallback que locSynopsis. Si el JSON todavía es el viejo (caché de antes
+// de la migración), cae a la sinopsis: una versión de transición, no un camino.
+export function locDescription(f){
+  if(!f) return '';
+  if(_lang==='en' && f.description_en) return f.description_en;
+  if(_lang==='es' && f.description_es) return f.description_es;
+  return f.description || locSynopsis(f);
+}
+
 export function _applyI18nDOM(){
   // Mecanismo ÚNICO y genérico: TODA string estática del HTML se marca con un
   // atributo data-i18n* y se traduce acá recorriendo el DOM. Cero listas de IDs

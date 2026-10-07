@@ -750,6 +750,36 @@ def cargar_crudo(path):
 _CONTRATO = None
 
 
+# SINOPSIS ES DE UNA OBRA; DESCRIPCIÓN, DE UN PROGRAMA O UNA ACTIVIDAD (Juan,
+# 7 oct 2026). Hasta hoy los dos vivían en `synopsis`, y todo lo que mira
+# sinopsis —guardianes, auditorías, la cascada de TMDB— acusaba «falta
+# sinopsis» en talleres, conversatorios y programas de cortos: falsos positivos
+# que tapaban los de verdad. Esta es la ÚNICA regla de cuál es cuál; la usan el
+# ensamblador, el publicador (a los dos lados de su comparación) y la migración.
+DESCRIPCION_DE = {'synopsis': 'description', 'synopsis_en': 'description_en',
+                  'synopsis_es': 'description_es', 'synopsis_lang': 'description_lang'}
+
+
+def lleva_descripcion(f):
+    """¿El texto de esta función describe un programa o una actividad (y no una obra)?"""
+    return f.get('type') == 'event' or bool(f.get('event_kind')) or bool(f.get('film_list'))
+
+
+def separar_descripcion(f):
+    """En un programa o una actividad, mueve synopsis* → description*. Idempotente;
+    no toca las obras de su film_list (esas sí tienen sinopsis). → campos movidos."""
+    if not lleva_descripcion(f):
+        return 0
+    n = 0
+    for a, b in DESCRIPCION_DE.items():
+        if a in f:
+            v = f.pop(a)
+            if v not in (None, '') and f.get(b) in (None, ''):
+                f[b] = v
+                n += 1
+    return n
+
+
 def contrato():
     global _CONTRATO
     if _CONTRATO is None:

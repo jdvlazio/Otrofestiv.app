@@ -1922,7 +1922,8 @@ test('T91 — la ficha: alto según su contenido y los CTAs siempre a la vista',
   await page.evaluate(() => document.querySelector('[data-action="citySheetAll"]')?.click());
   await page.waitForTimeout(400);
   const r = await page.evaluate(async () => {
-    const largo = f => (f.synopsis || '').length + (f.film_list?.length || 0) * 200;
+    // el texto de la ficha: sinopsis de obra o descripción de programa/actividad (7 oct)
+    const largo = f => (f.synopsis || f.description || '').length + (f.film_list?.length || 0) * 200;
     const orden = [...FILMS].sort((a, b) => largo(b) - largo(a));
     const casos = [orden[orden.length - 1], orden[0]]; // la más corta y la más larga
     const out = [];
