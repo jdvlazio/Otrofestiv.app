@@ -116,7 +116,7 @@ import {
 
 // ── Step 7d-2: controller/overlays.js — seccion/search/lugar dropdowns. ──────
 import {
-  seccionClose, seccionToggle, searchOpen, searchClose, searchPositionOverlay, searchQuery, lugarOpen, lugarToggle,
+  seccionClose, seccionToggle, searchOpen, searchClose, searchPositionOverlay, searchQuery, searchPersona, lugarOpen, lugarToggle,
 } from './controller/overlays.js';
 
 // ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
@@ -248,6 +248,9 @@ const ACTION_REGISTRY = {
   openCombinedFilmSheet: (el)    => _openCombinedFilmSheet(JSON.parse(el.dataset.film)),
   searchOpenFilm:        (el)    => _searchOpenFilm(el.dataset.title),
   searchOpenCorto:       (el)    => _searchOpenCorto(el.dataset.title, el.dataset.country, el.dataset.dur, el.dataset.section, el.dataset.flags),
+  searchPersona:         (el)    => searchPersona(el.dataset.name),
+  searchVenue:           (el)    => { searchClose(); filterByVenue(el.dataset.venue); },
+  searchDay:             (el)    => { searchClose(); filterByDay(el.dataset.day); },
 
   // ── C: Navigation (12) ──
   switchMainNav:       (el)    => switchMainNav(el.dataset.nav),
@@ -499,7 +502,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202610070728';
+const BUILD_VERSION='202610070850';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';

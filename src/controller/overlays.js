@@ -6,7 +6,7 @@
 
 import { FILM_CATEGORY_LABEL, FILM_CATEGORY_ORDER, SECTION_ORDER_LIST } from '../config.js';
 import { ICONS, _secLabelFull, parseProgramTitle } from '../view/components.js';
-import { emptyState, getFilmPoster, vcfg, venueMatches, isCitySel, festivalCities, SEDE_SEP } from '../view/helpers.js';
+import { emptyState, getFilmPoster, vcfg, venueMatches, isCitySel, festivalCities, SEDE_SEP, dayLabelLong } from '../view/helpers.js';
 import { storage } from '../storage/storage.js';
 import { _renderProgramaContent, lugarClose, lugarOutside, render } from '../view/programa.js';
 import { t } from '../i18n/i18n.js';
@@ -216,6 +216,72 @@ export function searchPositionOverlay(){
   }
 }
 
+
+// ── Buscador ampliado (7 oct 2026, aprobado por Juan) ────────────────────────
+// Además de obras, el buscador encuentra PERSONAS (dirección), LUGARES (sedes) y
+// DÍAS, cada grupo con su conteo. Obra → abre la ficha; persona → muestra sus
+// obras; lugar y día → aplican el filtro que ya existe en Programa. El índice se
+// arma una vez por catálogo (FILMS cambia de identidad al cargar un festival).
+const _fold=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
+let _sIdx=null, _sIdxFilms=null;
+function _searchIndex(){
+  if(_sIdx&&_sIdxFilms===FILMS) return _sIdx;
+  const personas={}, lugares={}, dias={};
+  const vistas=new Set();
+  FILMS.forEach(f=>{
+    // Personas: una vez por obra (no por función). «A, B y C» → tres personas.
+    // Los cortos de un programa cuentan con su propia dirección: en Popayán los
+    // 116 créditos están ahí y ninguno en el programa.
+    const _dirs=d=>String(d||'').split(/\s*(?:,|;|\sy\s|\s&\s|\sand\s)\s*/).map(x=>x.trim()).filter(x=>x.length>2);
+    const _suma=(n,k,item)=>{ (personas[n]=personas[n]||new Map()).set(k,item); };
+    if(!vistas.has(f.title)){
+      vistas.add(f.title);
+      _dirs(f.director).forEach(n=>_suma(n,f.title,f));
+      (f.is_cortos&&f.film_list||[]).forEach(item=>_dirs(item.director).forEach(n=>_suma(n,'c:'+item.title,
+        {_isCortoItem:true,_prog:f,title:item.title,country:item.country,duration:item.duration,
+         flags:item.flags||countryToFlags(item.country||''),section:f.section,is_cortos:false})));
+    }
+    const filas=f.screenings&&f.screenings.length?f.screenings:[f];
+    filas.forEach(s=>{
+      const v=s.venue||f.venue;
+      if(v){
+        const c=vcfg(v), short=c.short||v, city=c.city||'';
+        const k=city+SEDE_SEP+short;
+        (lugares[k]=lugares[k]||{key:'sede:'+k,label:short,city,n:0}).n++;
+      }
+      const d=s.day||f.day;
+      if(d) dias[d]=(dias[d]||0)+1;
+    });
+  });
+  _sIdx={
+    personas:Object.entries(personas).map(([name,m])=>({name,fold:_fold(name),n:m.size,obras:[...m.values()]})),
+    lugares:Object.values(lugares).map(l=>({...l,fold:_fold(l.label)})),
+    dias:Object.entries(dias).map(([key,n])=>{const lbl=dayLabelLong(key);return{key,label:lbl,fold:_fold(lbl)+' '+_fold(key),n};}),
+  };
+  _sIdxFilms=FILMS;
+  return _sIdx;
+}
+const _cnt=(n,uno,varios)=>n===1?t(uno):t(varios,{n});
+export function _searchGroups(q){
+  const qf=_fold(q);
+  if(qf.length<2) return {personas:[],lugares:[],dias:[]};
+  const idx=_searchIndex();
+  // Palabra que EMPIEZA con lo escrito: «mar» halla «Marta» y «martes», no «Omar».
+  const hit=fold=>fold.split(/[\s·\-–—]+/).some(w=>w.startsWith(qf))||fold.startsWith(qf);
+  return {
+    personas:idx.personas.filter(p=>hit(p.fold)).sort((a,b)=>b.n-a.n).slice(0,3),
+    lugares:idx.lugares.filter(l=>hit(l.fold)).sort((a,b)=>b.n-a.n).slice(0,3),
+    dias:idx.dias.filter(d=>hit(d.fold)).slice(0,3),
+  };
+}
+let _personaSel=null;
+export function searchPersona(name){
+  _personaSel=name;
+  const inp=document.getElementById('search-input');
+  if(inp) inp.value=name;
+  searchQuery();
+}
+
 export function _searchAll(q){
   // Motor único: fuzzyMatch scoring en títulos + cortos individuales.
   // Reemplaza los tres motores paralelos anteriores.
@@ -269,20 +335,29 @@ export function searchQuery(){
   const results = document.getElementById('search-results');
   if(!inp || !results) return;
   const q = inp.value.trim();
+  if(_personaSel&&q!==_personaSel) _personaSel=null;
 
   if(!q){ results.innerHTML = ''; return; }
 
-  const matches = _searchAll(q);
+  // Persona elegida → sus obras, y nada más (ya se sabe a quién busca).
+  const _pf=_personaSel?_fold(_personaSel):null;
+  const matches = _pf
+    ? ((_searchIndex().personas.find(p=>p.fold===_pf)||{}).obras||[])
+    : _searchAll(q);
+  const g = _pf ? {personas:[],lugares:[],dias:[]} : _searchGroups(q);
+  // Con grupos debajo, 5 obras: con 10 los grupos quedaban fuera de la pantalla.
+  if(!_pf&&(g.personas.length||g.lugares.length||g.dias.length)) matches.length=Math.min(matches.length,5);
 
-  if(!matches.length){
-    results.innerHTML = `<div class="search-empty">${emptyState(ICONS.search,t('search_sin_res_para')+' \u201c'+q+'\u201d')}</div>`;
+  if(!matches.length&&!g.personas.length&&!g.lugares.length&&!g.dias.length){
+    results.innerHTML = `<div class="search-empty">${emptyState(ICONS.search,t('search_sin_res_para')+' “'+q+'”')}</div>`;
     return;
   }
 
+  const _q=s=>String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
   const hasCortos=matches.some(f=>f._isCortoItem);
   const hasFilms=matches.some(f=>!f._isCortoItem);
   const hdr=hasFilms&&hasCortos?t('search_resultados')||'Resultados':hasCortos?t('label_cortos')||'Cortometrajes':t('planear_peliculas');
-  results.innerHTML = `<div class="search-section-hdr">${hdr}</div>`
+  const obras = !matches.length ? '' : `<div class="search-section-hdr">${hdr}</div>`
     + matches.map(f=>{
       const{displayTitle,progSuffix}=parseProgramTitle(f.title);
       const poster=getFilmPoster(f)||'';
@@ -290,7 +365,6 @@ export function searchQuery(){
       const meta=f._isCortoItem
         ?t('label_cortometraje')+(f._prog?' · '+parseProgramTitle(f._prog.title).displayTitle:'')
         :(_dur?_dur.replace(/\s*min\s*$/i,'')+' min':'')+(f.section?' · '+f.section.replace(/^[^ ]+ /,''):'');
-      const _q=s=>String(s).replace(/"/g,'&quot;');
       const _siAttrs=f._isCortoItem
         ?`data-action="searchOpenCorto" data-title="${_q(f.title)}" data-country="${_q(f.country||'')}" data-dur="${_q(_dur)}" data-section="${_q(f.section||'')}" data-flags="${_q(f.flags||'🌍')}"`
         :`data-action="searchOpenFilm" data-title="${_q(f.title)}"`;
@@ -306,6 +380,17 @@ export function searchQuery(){
         +'<div class="search-item-arrow">›</div>'
         +'</div>';
     }).join('');
+  // Grupos sin póster: el ícono ocupa su lugar, mismo renglón que una obra.
+  const _row=(attrs,icon,label,meta)=>'<div class="search-item" '+attrs+'>'
+    +'<div class="search-item-icon">'+icon+'</div>'
+    +'<div class="search-item-info"><div class="search-item-title">'+_q(label)+'</div>'
+    +'<div class="search-item-meta">'+meta+'</div></div>'
+    +'<div class="search-item-arrow">›</div></div>';
+  const _grp=(key,items)=>items.length?`<div class="search-section-hdr">${t(key)}</div>`+items.join(''):'';
+  results.innerHTML = obras
+    + _grp('search_grp_personas', g.personas.map(p=>_row(`data-action="searchPersona" data-name="${_q(p.name)}"`,ICONS.user,p.name,_cnt(p.n,'search_1_obra','search_n_obras'))))
+    + _grp('search_grp_lugares', g.lugares.map(l=>_row(`data-action="searchVenue" data-venue="${_q(l.key)}"`,ICONS.pin,l.label,(l.city&&festivalCities(FILMS).length>1?_q(l.city)+' · ':'')+_cnt(l.n,'search_1_funcion','search_n_funciones'))))
+    + _grp('search_grp_filtrar', g.dias.map(d=>_row(`data-action="searchDay" data-day="${_q(d.key)}"`,ICONS.calendar,d.label,_cnt(d.n,'search_1_funcion','search_n_funciones'))));
 }
 
 export function lugarOpen(){
