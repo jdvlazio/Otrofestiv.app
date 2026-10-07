@@ -69,6 +69,28 @@ ceguera).
 > ⚠ El dominio viejo `proimagenes.com.co` **no resuelve**. Si alguien lo ve escrito en
 > notas antiguas, es la razón por la que un fetch «no anda».
 
+## La lista ancla — la red que no puede fallar
+
+**Proimágenes no basta.** El 7 oct 2026 se nos escapó FICCALI —el festival de
+Cali, 18 ediciones— porque no figura en el calendario de Proimágenes, que era la
+ÚNICA fuente de descubrimiento del radar. La lista ancla, armada ese día,
+encontró otros siete en el mismo punto ciego: Ojo al Sancocho, Cine a la Calle
+(FICICA), MIDBO, Bogotá Horror Film Festival, FICFUSA, Medellín Horror Fest y
+Santa Fe de Antioquia.
+
+`pipeline/radar-ancla.json` es la lista de los festivales que no pueden faltar,
+con mes habitual, web, Instagram, estado y fuentes por entrada. El radar la
+recorre en cada pasada:
+
+1. todo festival de la lista que esté a ≤90 días de su mes habitual y no tenga
+   issue de radar → se abre el issue;
+2. todo festival que publicamos entra a la lista para el año siguiente;
+3. lo que se descubre por otras fuentes (Proimágenes, convocatorias públicas,
+   FilmFreeway/Festhome, prensa) y vuelve cada año, se suma a la lista.
+
+Proimágenes sigue siendo la fuente para los medianos y pequeños; la lista ancla
+es la garantía para los que importan.
+
 ## El radar registra, no pasa datos
 
 Regla de rol (Juan, 23 ago 2026). El hallazgo va al issue y ahí termina el
