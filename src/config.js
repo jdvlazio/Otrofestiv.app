@@ -1216,6 +1216,10 @@ export const FESTIVAL_CONFIG={
   },
   'bhff2026': {
     name:'Bogotá Horror',displayName:'Bogotá Horror',fullName:'Bogotá Horror Film Festival 8',shortName:'BHFF',
+    // LA IMAGEN DE LA 8ª EDICIÓN en vertical (la lápida de la convocatoria, sin
+    // texto): 582×775 (3:4), de la nota de prensa en mochilawild.com, estirada a
+    // 2:3. El festival no publica un afiche vertical propio. Aprobada por Juan (7 oct).
+    keyArt:'/assets/keyart/bhff2026-v1.jpg',
     tagline:'Festival de Cine de Horror',
     city:'Bogotá',country:'CO',
     dates:'22–31 OCT',dates_en:'OCT 22–31',year:2026,timezoneOffset:'-05:00',
