@@ -131,7 +131,10 @@ IRREGULARES = [
     # PDF del 6 oct (14–17 oct): las páginas se corrieron y aparecieron dos más.
     # «Aquileo Venganza» tiene ahora su ficha CON dirección (p17, la exhibición)
     # y aparte el TRIBUTO (p15), que es una actividad.
-    {'pagina': 15, 'titulo': 'AQUILEO VENGANZA', 'credito': 'Ciro Durán y Joyce Ventura',
+    # el título va con «TRIBUTO»: con «AQUILEO VENGANZA» a secas colisionaba con
+    # la ficha de la película (p17) y el crudo le daba a la obra el texto del tributo
+    {'pagina': 15, 'titulo': 'TRIBUTO A AQUILEO VENGANZA', 'linea': 'AQUILEO VENGANZA',
+     'credito': 'Ciro Durán y Joyce Ventura',
      'rol': 'tributo', 'nota': 'TRIBUTO al legado de Ciro Durán y a la labor de Joyce '
             'Ventura; con la exposición fotográfica «Memorias de Aquileo Venganza»'},
     {'pagina': 16, 'titulo': 'PATRIMONIO FÍLMICO COLOMBIANO', 'credito': '',

@@ -366,7 +366,29 @@ SINOPSIS_DE_OTRA_FUENTE = {
         'cámaras y sus viajes mientras graban fiestas familiares y de cine. El '
         'viaje más largo es en Cuba. Salen muchas personas, van dos',
         'PDF de programación de septiembre, p31'),
+    # TRES MÁS DEL MISMO ERROR en el PDF del 6 oct (y en su web): la ficha
+    # trae la sinopsis de la obra de al lado. Lo cazó [sinopsis-duplicada].
+    # Se publica la del PDF de septiembre, que es la de cada obra.
+    'autokar': (
+        'En la década de 1990, Agata, de ocho años, deja Polonia para trasladarse '
+        'a Bélgica. Su perspectiva transforma la realidad migratoria en una '
+        'experiencia iniciática.',
+        'PDF de septiembre, p42 (el del 6 oct le pega la de «On Hold»)'),
+    'memorias del alba': (
+        'Tatao crece junto a su abuela Alba, unidos por una rutina que da forma a '
+        'su vida cotidiana. Cuando la memoria empieza a desvanecerse, su relación '
+        'se transforma, revelando cómo el amor perdura incluso a medida que los '
+        'recuerdos desaparecen lentamente.',
+        'PDF de septiembre, p35 (el del 6 oct le pega la de «Duelo»)'),
+    'witch and frog': (
+        'Una joven aspirante a bruja quiere aprender magia, así que decide estudiar '
+        'con una hechicera experimentada. Se presenta en su casa, pero las cosas no '
+        'salen exactamente según lo planeado.',
+        'PDF de septiembre, p43 (el del 6 oct le pega la de «Fragmentos perdidos»)'),
 }
+# Y EL PAÍS DE «AUTOKAR», que el PDF del 6 oct copia también de «On Hold»
+# (India). Septiembre y producción: Francia.
+PAIS_DE_OTRA_FUENTE = {'autokar': ('Francia', 'PDF de septiembre, p42; el del 6 oct copia el de «On Hold»')}
 
 
 def mins(h):
@@ -569,7 +591,7 @@ def main():
                             or t.get('duracion_tmdb'),
             **({'_duracion_fuente': DURACION_DE_OTRA_FUENTE[k][1]}
                if k in DURACION_DE_OTRA_FUENTE else {}),
-            'pais': (o.get('pais') or w.get('pais') or t.get('pais_tmdb')
+            'pais': ((PAIS_DE_OTRA_FUENTE.get(k) or ('',))[0] or o.get('pais') or w.get('pais') or t.get('pais_tmdb')
                      or (PAIS_EXTERNO.get(k) or ('', ''))[0]
                      or (PAIS_POR_CATEGORIA if i.get('categoria') in NACIONAL
                          else '')),
@@ -677,8 +699,11 @@ def main():
         # una obra nombrada dentro de la celda, aunque no lleve «Dir.»: así se
         # anuncian los dos largos de Rumbo a los Macondo, con su metraje al lado.
         if not obras and not solo_web:
-            sueltas = [o for o in pdf
-                       if len(norm(o['titulo'])) > 6 and norm(o['titulo']) in norm(texto)]
+            # una ficha de ACTIVIDAD (reconocimiento, tributo) no es una obra que
+            # se proyecte: la casilla de la exhibición de Aquileo nombra a la
+            # Fundación Patrimonio Fílmico y se la llevaba como si fuera la película
+            sueltas = [o for o in pdf if not o.get('es_actividad')
+                       and len(norm(o['titulo'])) > 6 and norm(o['titulo']) in norm(texto)]
             obras = sueltas[:1]
         if not obras and not solo_web:
             _d = b['dia'][-2:]

@@ -471,11 +471,11 @@
   }
  },
  "_cobertura": {
-  "obras": 135,
+  "obras": 136,
   "fuente": "https://villadelcine.com/festival-2024-2/",
   "tarjetas_en_la_fuente": 87,
   "destino": {
-   "Aquileo Venganza": {
+   "TRIBUTO A AQUILEO VENGANZA": {
     "estado": "sin_tarjeta",
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
    },
@@ -488,6 +488,10 @@
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
    },
    "Mabel Velosa": {
+    "estado": "sin_tarjeta",
+    "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
+   },
+   "Aquileo Venganza": {
     "estado": "sin_tarjeta",
     "_por_que": "no tiene tarjeta en la página de Selección Oficial ni galería en su ficha: no hay imagen que bajar en ninguna fuente"
    },

@@ -1283,6 +1283,7 @@ export const SECTION_ARCHETYPES = {
   '🎓 Ruta Académica': 'Charlas / Industria',
   '🏆 Rumbo a los Macondo': 'Especiales / Eventos',
   '🎞️ Exhibición Especial': 'Retrospectiva / Tributo',
+  '🎞️ Exhibición Patrimonial': 'Retrospectiva / Tributo',   // Villa del Cine, PDF del 6 oct (Aquileo Venganza)
   '🎙️ Comunicaciones': 'Charlas / Industria',
   // ── Festival de Cine de Jardín 11 · Jardín, Antioquia ──────────────────
   '🎬 Muestra Central': 'Muestra / País',
