@@ -1,0 +1,2144 @@
+{
+ "_provenance": {
+  "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
+  "capturado": "2026-10-07",
+  "url": "https://ficcali.com/programacion-ficcali-2026/",
+  "metodo": "tarjeta por función; obra por la ficha del catálogo"
+ },
+ "_acceso": {
+  "estado": "desconocido",
+  "revisado": "2026-10-07",
+  "fuentes": [
+   "ficcali.com/programacion-ficcali-2026/ (las 118 tarjetas)",
+   "la nota oficial del lanzamiento (ficcali.com, 3 oct)"
+  ],
+  "_por_que": "Las tarjetas no dicen cómo se entra; la única afirmación del festival es la del lanzamiento («entrada libre y gratuita hasta completar aforo», fuera del 16–25). Las actividades que piden inscripción o tienen cupo lo dicen en su tarjeta y lo llevan."
+ },
+ "_fuera": [
+  "2026-10-03 Para vivir: fuera del 16–25 oficial",
+  "2026-10-04 TALLER DE CINE (s.f): fuera del 16–25 oficial",
+  "2026-10-04 Una canción para mi tierra: fuera del 16–25 oficial",
+  "2026-10-05 FORO LOCAL DE PROYECTOS | TALLER ONLINE: fuera del 16–25 oficial",
+  "2026-10-06 Runa Simi: fuera del 16–25 oficial",
+  "2026-10-07 CHARLAS ALAPAR, Laura Mora (Colombia): fuera del 16–25 oficial",
+  "2026-10-09 Gremlins: fuera del 16–25 oficial",
+  "2026-10-10 FORO LOCAL DE PROYECTOS. TALLER ONLINE | Taller de proyecto : fuera del 16–25 oficial",
+  "2026-10-10 Amelie y los secretos de lluvia: fuera del 16–25 oficial",
+  "2026-10-11 Monster INC (alianza Muestra de Cine Fantástico): fuera del 16–25 oficial",
+  "2026-10-13 KIKI: fuera del 16–25 oficial",
+  "2026-10-13 La fabulosa máquina del tiempo: fuera del 16–25 oficial",
+  "2026-10-14 ARCO: fuera del 16–25 oficial",
+  "2026-10-14 CHARLAS ALAPAR, Pablo Solarz. (Argentina): fuera del 16–25 oficial",
+  "2026-10-14 Democracia en Blanco y Negro: fuera del 16–25 oficial",
+  "2026-10-15 Cortometrajes FINCALI: fuera del 16–25 oficial",
+  "2026-10-15 Ninxs: fuera del 16–25 oficial",
+  "2026-10-27 Una canción para mi tierra: fuera del 16–25 oficial"
+ ],
+ "funciones": [
+  {
+   "dia": "2026-10-16",
+   "hora": "09:00",
+   "sede": "Universidad Autónoma de Occidente",
+   "sala": "Aulas 4, Torreón 1A",
+   "sede_cruda": "Universidad Autónoma de Occidente",
+   "acceso": "Inscripción previa · Cupo: 35",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14518
+   },
+   "duracion_min": 180,
+   "titulo": "Encuentro local estudiantes de cine 2026: Bailar con el caos",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Académico",
+   "sinopsis": "Sebastián Muñoz Duque y Juliana Santana Oviedo."
+  },
+  {
+   "dia": "2026-10-16",
+   "hora": "19:30",
+   "sede": "Teatro al Aire Libre Los Cristales",
+   "sede_cruda": "TEATRO LOS CRISTALES",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 13924
+   },
+   "titulo": "Mu-ki-ra",
+   "director": "Estefanía Piñeres",
+   "pais": "Colombia, España",
+   "anio": 2026,
+   "duracion_min": 82,
+   "genero": "Animación",
+   "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, de trece años, afronta su peor pesadilla cuando Martín, su hermano, es atrapado por uno de ellos. Con ayuda de Iolo, una anciana mágica, y una osa hormiguera, Cleo se adentra en la selva para atrapar a Mukira, quien se llevó a Martín, y celebrar un ritual para recuperar al niño; pronto aprende que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo. Es una valiente apuesta de la animación colombiana que, con gran imaginación, propone una forma de entender cómo afrontar nuestros miedos y violencias, y hallar maneras de superar las dinámicas que nos hacen enfrentar a quienes no tienen que ser nuestros enemigos.",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "titulo_es": "MUKIRA",
+   "duracion_obra": 82
+  },
+  {
+   "dia": "2026-10-17",
+   "hora": "09:00",
+   "sede": "Universidad Autónoma de Occidente",
+   "sala": "Aulas 4, Torreón 1A",
+   "sede_cruda": "Universidad Autónoma de Occidente",
+   "acceso": "Inscripción previa · Cupo: 35 personas",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14519
+   },
+   "duracion_min": 180,
+   "titulo": "Encuentro local estudiantes de cine 2026: Bailar con el caos",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Académico",
+   "sinopsis": "Sebastián Muñoz Duque y Juliana Santana Oviedo."
+  },
+  {
+   "dia": "2026-10-17",
+   "hora": "15:00",
+   "sede": "Curador",
+   "sede_cruda": "CURADOR",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14612
+   },
+   "duracion_min": 240,
+   "titulo": "III Encuentro sectorial local: Invita el Consejo Distrital de Cine y Audiovisuales",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Conexiones",
+   "invitados": "Invitados: Maderley Ceballos, Alina Lheap, Ramiro Arbeláez"
+  },
+  {
+   "dia": "2026-10-17",
+   "hora": "15:00",
+   "sede": "Yawa",
+   "sala": "Domo",
+   "sede_cruda": "YAWA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14841
+   },
+   "duracion_min": 240,
+   "titulo": "Muestra VR",
+   "tipo": "evento",
+   "event_kind": "experiencia",
+   "seccion": "Proyecciones"
+  },
+  {
+   "dia": "2026-10-17",
+   "hora": "15:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 13925
+   },
+   "titulo": "An Incomplete Calendar",
+   "director": "Sanaz Sohrabi",
+   "pais": "Canadá, Irán, Turquía, Venezuela",
+   "anio": 2026,
+   "duracion_min": 77,
+   "sinopsis": "Un disco de vinilo de 1980 es el punto de partida. Rhymes and Songs for OPEC es una grabación especial del coro de la Universidad Central de Venezuela, para conmemorar el vigésimo aniversario de la Organización de Países Exportadores de Petróleo. Mediante una superposición de canciones y material inédito o poco visto, se replantea el petróleo como una herramienta política al servicio de las luchas de liberación en Palestina y del fortalecimiento de la solidaridad panárabe entre 1960 y 1970. Se propone una revisión aguda de la geopolítica de los últimos cincuenta años, desde representaciones como la música, las estampillas y el arte; señala cómo las alianzas de los países petroleros buscan formas de contrarrestar el poder.",
+   "seccion": "Competencia Largometrajes Internacionales",
+   "titulo_es": "Un Calendario incompleto",
+   "duracion_obra": 77
+  },
+  {
+   "dia": "2026-10-17",
+   "hora": "18:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 13929
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Luis Tercero",
+   "director": "Iván David Gaona",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 115,
+   "genero": "Drama",
+   "sinopsis": "Luis se jubila después de cuarenta años de trabajo como profesor de historia. Presionado por su familia, busca qué hacer mientras su esposa, Amelia, se entrega a la pintura y al ejercicio grupal con nuevos amigos. Desde Bogotá llega su hijo Alejandro, quien desarrolla un proyecto musical al que invita a su padre, que toca muy bien el acordeón. Sin embargo, Luis da con un grupo de músicos de su edad con quienes concuerda mucho más y con los que disfruta el hallazgo de un muy buen público en casas geriátricas. Padre e hijo chocan, sin imaginar que la música los une al igual que el vacío sin rumbo de sus generaciones.",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "duracion_obra": 115
+  },
+  {
+   "dia": "2026-10-17",
+   "hora": "19:00",
+   "sede": "Plazoleta La Maceta",
+   "sede_cruda": "Plazoleta la Maceta",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14493
+   },
+   "titulo": "Canción para mi tierra",
+   "seccion": "Cine Sin Límites",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-17",
+   "hora": "19:00",
+   "sede": "Curador",
+   "sede_cruda": "CURADOR",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14614
+   },
+   "titulo": "DJ y coctel",
+   "tipo": "evento",
+   "event_kind": "fiesta",
+   "seccion": "Conexiones",
+   "invitados": "Consejo Distrital de Cinematografía y Audiovisuales/ Espacio de Encuentro sectorial",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-17",
+   "hora": "19:00",
+   "sede": "Yawa",
+   "sala": "Domo",
+   "sede_cruda": "YAWA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 13931
+   },
+   "titulo": "Domo Live Camoflux: Incendio Igapó",
+   "tipo": "evento",
+   "event_kind": "experiencia",
+   "seccion": "Proyecciones",
+   "invitados": "Cali | Concierto audiovisual inmersivo",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-17",
+   "hora": "21:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 13930
+   },
+   "titulo": "Princesa burro",
+   "director": "Joaquín Cociña y Cristóbal León",
+   "pais": "Chile, Francia, Países Bajos, Uruguay, Alemania",
+   "anio": 2026,
+   "duracion_min": 90,
+   "genero": "Fantasía",
+   "sinopsis": "En un reino de cuento de hadas, donde el amor está prohibido, la princesa Diana desafía el decreto del rey al enamorarse de Lalo. Cuando él es desterrado, un brazalete mágico la transporta entre mundos y espacios-tiempo paralelos para recuperar sus sueños y su amor perdido. Con la premisa del cuento «Piel de asno», Cristóbal León y Joaquín Cociña continúan el desarrollo de su mundo fantástico y terrorífico de gran creatividad audiovisual. Mezclan técnicas y usan maquetas y trucos mecánicos para adentrarse en nuestros miedos y lo hacen atravesando todo tipo de planos de realidad mediante el juego con los códigos de distintos géneros cinematográficos.",
+   "seccion": "Competencia Largometrajes Internacionales",
+   "duracion_obra": 90
+  },
+  {
+   "dia": "2026-10-18",
+   "hora": "16:00",
+   "sede": "Madame Blue",
+   "sede_cruda": "MADAME BLUE",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 13934
+   },
+   "titulo": "Ellas, gardiennes de l'Amazonie",
+   "director": "Estelle Lalisse, Jade Fort",
+   "pais": "Colombia, Perú, Ecuador",
+   "anio": 2022,
+   "duracion_min": 39,
+   "genero": "Documental",
+   "sinopsis": "Jade y Estelle, dos jóvenes francesas de veintidós años, emprendieron un viaje de tres meses por la Amazonía para conocer a mujeres indígenas de Colombia, Ecuador y Perú, y profundizar en la comprensión del ecofeminismo en los territorios. Gracias a las historias de vida de tres lideresas, el documental explora un movimiento que establece una estrecha relación entre la defensa de la naturaleza y la lucha por los derechos de las mujeres.",
+   "seccion": "Cine Sin Límites",
+   "titulo_es": "Ellas Guardianas de la Amazonia",
+   "duracion_obra": 39
+  },
+  {
+   "dia": "2026-10-18",
+   "hora": "18:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 13932
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Siempre soy tu animal materno",
+   "director": "Valentina Maurel",
+   "pais": "Bélgica, Francia, México",
+   "anio": 2026,
+   "duracion_min": 108,
+   "genero": "Drama",
+   "sinopsis": "Después de años en Europa, Elsa regresa a Costa Rica. Su hermana vive sola en la casa familiar, cada vez más distante y recluida, como si se deslizara hacia un mundo propio. Sus padres están absortos en sus vidas: él va a la deriva en aventuras amorosas y ella está inmersa en la reedición de sus poemas eróticos de juventud. Ninguno comprende la urgencia de la situación. El regreso de Elsa arrastra a las mujeres a una confrontación con aquello que, pese a todo, aún las une. Una cámara vivaz, atenta y fluida muestra tres formas de asumir la vida y la capacidad de compartir dudas y emociones, de apoyarse y cuestionarse, de enfrentar la realidad juntas, cada una a su manera.",
+   "seccion": "Competencia Largometrajes Internacionales",
+   "duracion_obra": 108
+  },
+  {
+   "dia": "2026-10-18",
+   "hora": "18:30",
+   "sede": "Centro Cultural Brisas de Mayo",
+   "sede_cruda": "Centro Cultural Brisas de Mayo",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14494
+   },
+   "titulo": "Mu-ki-ra",
+   "director": "Estefanía Piñeres",
+   "pais": "Colombia, España",
+   "anio": 2026,
+   "duracion_min": 82,
+   "genero": "Animación",
+   "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, de trece años, afronta su peor pesadilla cuando Martín, su hermano, es atrapado por uno de ellos. Con ayuda de Iolo, una anciana mágica, y una osa hormiguera, Cleo se adentra en la selva para atrapar a Mukira, quien se llevó a Martín, y celebrar un ritual para recuperar al niño; pronto aprende que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo. Es una valiente apuesta de la animación colombiana que, con gran imaginación, propone una forma de entender cómo afrontar nuestros miedos y violencias, y hallar maneras de superar las dinámicas que nos hacen enfrentar a quienes no tienen que ser nuestros enemigos.",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "titulo_es": "Mukira",
+   "duracion_obra": 82
+  },
+  {
+   "dia": "2026-10-18",
+   "hora": "21:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 13933
+   },
+   "titulo": "Seis meses en el edificio rosa con azul",
+   "director": "Bruno Santamaría",
+   "pais": "México, Brasil, Dinamarca",
+   "anio": 2026,
+   "duracion_min": 105,
+   "genero": "Drama",
+   "sinopsis": "Ciudad de México, principio de los años noventa. El día que Bruno cumple once años, se enamora de su mejor amigo, Vladimir. Esa noche, su padre recibe un diagnóstico de VIH positivo que transforma la vida familiar. Como en las canciones de salsa, la familia intenta cantar y bailar para espantar el dolor. Treinta años después, Bruno filma y revisa la memoria de aquello que no logró comprender del todo cuando era niño. Mediante una serie de cruces muy delicados entre el documental y la ficción, el director nos vincula con la profunda lucha de él y toda su familia contra todos los estigmas y prejuicios sociales ligados al sida y la homosexualidad.",
+   "seccion": "Competencia Largometrajes Internacionales",
+   "titulo_es": "Seis meses en el edificio rosa",
+   "duracion_obra": 105
+  },
+  {
+   "dia": "2026-10-19",
+   "hora": "09:00",
+   "sede": "Centro Cultural Comfandi",
+   "sede_cruda": "COMFANDI",
+   "acceso": "Inscripción previa · Cupo: 10",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14521
+   },
+   "duracion_min": 180,
+   "titulo": "Desarmar la mirada. Taller de crítica para pensar el cine",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Académico",
+   "sinopsis": "Elisa McCausland y Diego Salgado."
+  },
+  {
+   "dia": "2026-10-19",
+   "hora": "15:00",
+   "sede": "Tecnocentro Cultural Somos Pacífico",
+   "sede_cruda": "Tecnocentro",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14495
+   },
+   "titulo": "Cortos infantiles FICCALI / Mi vecino Totoro",
+   "seccion": "Cine Sin Límites",
+   "obras": [
+    {
+     "titulo": "Mi vecino Totoro",
+     "director": "Hayao Miyazaki",
+     "pais": "Japón",
+     "anio": 1988,
+     "duracion_min": 86,
+     "genero": "Animación",
+     "sinopsis": "En los años cincuenta, una familia japonesa se traslada al campo. Las dos hijas, Satsuki y Mei, entablan amistad con Totoro, un espíritu del bosque. El padre es un profesor universitario que estimula la imaginación de sus hijas relatándoles fábulas e historias mágicas sobre duendes, fantasmas y espíritus protectores de los hogares, mientras la madre se encuentra enferma en el hospital."
+    },
+    {
+     "titulo": "Boato",
+     "director": "Alexandra Julio",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 7,
+     "genero": "Animación",
+     "sinopsis": "Carmen vive con su abuela Clara en La Pópala y siente curiosidad por el objeto que su abuela observa en secreto cada noche. Una noche decide abrir la caja y libera una esfera de luz, sin saber que esta acción atraerá fuerzas oscuras que alguna vez aterrorizaron al pueblo."
+    },
+    {
+     "titulo": "El viaje",
+     "director": "Ana Sofía Franco",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 8,
+     "genero": "Animación",
+     "sinopsis": "El océano, el sonido de una caracola y la música del Pacífico tejen un hilo invisible entre las vidas de una niña y una pequeña ballena yubarta. Tras un mágico encuentro, ambas crecen, se aventuran por nuevos caminos y regresan a su hogar. Su mundo se transforma, pero el hilo que las conecta permanece intacto."
+    },
+    {
+     "titulo": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga",
+     "pais": "Colombia",
+     "anio": 2024,
+     "duracion_min": 15,
+     "genero": "Aventura",
+     "sinopsis": "Pablo necesita rescatar a su amiga Pascualina, una gallina ponedora que termina secuestrada por el tendero del pueblo, después de que el niño quebrara la cubeta de huevos que llevaba para pagarle una deuda de su familia."
+    }
+   ],
+   "duracion_min": 116
+  },
+  {
+   "dia": "2026-10-20",
+   "hora": "09:00",
+   "sede": "Centro Cultural Comfandi",
+   "sede_cruda": "COMFANDI",
+   "acceso": "Inscripción previa · Cupo: 10 personas",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14525
+   },
+   "duracion_min": 180,
+   "titulo": "Desarmar la mirada. Taller de crítica para pensar el cine",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Académico",
+   "sinopsis": "Elisa McCausland y Diego Salgado."
+  },
+  {
+   "dia": "2026-10-20",
+   "hora": "09:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14524
+   },
+   "duracion_min": 180,
+   "titulo": "XV Encuentro de investigación en cine: Pantallas que piensan",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Académico",
+   "sinopsis": "Seminario con charlas, ponencias y conferencias performáticas."
+  },
+  {
+   "dia": "2026-10-20",
+   "hora": "15:30",
+   "sede": "Teatro La Unión",
+   "sede_cruda": "Teatro La Unión Comuna 16 + Biblioteca la Unión",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14496
+   },
+   "titulo": "Largo Arco + Corto Akababuru",
+   "seccion": "Cine Sin Límites",
+   "obras": [
+    {
+     "titulo": "Arco",
+     "director": "Ugo Bienvenu",
+     "pais": "Francia, Estados Unidos, Reino Unido",
+     "anio": 2025,
+     "duracion_min": 95,
+     "genero": "Animación",
+     "sinopsis": "En 2075, Iris, una niña de diez años, ve caer del cielo a un niño misterioso con un traje arcoíris. Es Arco. Iris lo acoge y lo ayuda a regresar a casa por cualquier medio posible."
+    },
+    {
+     "titulo": "Akababuru: Expresión de Asombro",
+     "director": "Irati Dojura Landa Yagarí",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 13,
+     "genero": "Fantasía",
+     "sinopsis": "Kari es una niña emberá que teme reír. Un día conoce a Kera, una joven mestiza, quien decide contarle el mito de Kiraparamia, una mujer que, según los ancianos, fue castigada por los dioses por reírse de su esposo. Kera reinterpreta el mito y le dice que, en realidad, la risa de Kiraparamia la liberó. Esta historia inspira profundamente a la pequeña Kari, quien decide confrontar a los niños que la oprimen a ella y a sus amigas mediante la risa. Akababuru busca darle un giro a la interpretación patriarcal de un personaje mitológico emberá a través de la infancia y la hermandad. Enlace para comprar entrada para la función en el Teatro San Fernando Enlace para comprar entrada para la función en la Cinemateca La Tertulia"
+    }
+   ],
+   "duracion_min": 108
+  },
+  {
+   "dia": "2026-10-20",
+   "hora": "18:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 13995
+   },
+   "titulo": "Competencia corto nacional – Prog. 1",
+   "seccion": "Proyecciones",
+   "duracion_min": 90,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-20",
+   "hora": "19:00",
+   "sede": "Yawa",
+   "sala": "Domo",
+   "sede_cruda": "YAWA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14447
+   },
+   "titulo": "Domo Hub – Muestra local universitaria de cortometrajes inmersivos",
+   "tipo": "evento",
+   "event_kind": "experiencia",
+   "seccion": "Proyecciones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-20",
+   "hora": "21:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 13997
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "I Built a Rocket Imagining your Arrival",
+   "director": "Janaína Marques",
+   "pais": "Brasil",
+   "anio": 2026,
+   "duracion_min": 92,
+   "genero": "Drama",
+   "sinopsis": "Envuelta por el zumbido hipnótico de una máquina de resonancia magnética, a Rosa se le pide que recuerde un momento feliz de su vida. Revisa el pasado y reconstruye un acontecimiento que nunca ocurrió: un viaje con su madre, Dalva, una mujer de espíritu libre e irreverente que fue detenida por asesinar a un hombre que estaba a punto de cometer un feminicidio. Tras crecer sin su madre, Rosa carga con la culpa y el miedo derivados del episodio. Ahora, suspendida entre la vida y un recuerdo inventado, imagina un reencuentro que se transforma en un intento de sanación y reconciliación. La acompañamos en una película de carretera llena de saber hacer cinematográfico, que transmite plásticamente inquietudes y formas de experimentarlas.",
+   "seccion": "Competencia Largometrajes Internacionales",
+   "titulo_es": "Construí un cohete imaginando tu llegada",
+   "duracion_obra": 92
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "09:00",
+   "sede": "Café Macondo",
+   "sede_cruda": "Café Macondo",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14615
+   },
+   "duracion_min": 90,
+   "titulo": "Parche con… Andrés Porras y Carlos Moreno",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Conexiones",
+   "invitados": "La relación entre la dirección y le montaje."
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "09:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14575
+   },
+   "duracion_min": 180,
+   "titulo": "XV Encuentro de investigación en cine. Pantallas que piensan. Indagar en formas de investigación creativa",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Académico"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "10:30",
+   "sede": "Café Macondo",
+   "sede_cruda": "Café Macondo",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14616
+   },
+   "duracion_min": 90,
+   "titulo": "Parche con… Marleyda Soto – Experiencia de actuación en 100 años de soledad.",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Conexiones"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "14:30",
+   "sede": "Café Macondo",
+   "sede_cruda": "Café Macondo",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14617
+   },
+   "duracion_min": 180,
+   "titulo": "IV Encuentro de circulación – Estrategias colaborativas de programación",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Conexiones",
+   "sinopsis": "Laura Alhach y Luis Raguá."
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sede": "BlackGround",
+   "sede_cruda": "BLACK GROUND",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14005
+   },
+   "titulo": "Boca Vieja",
+   "director": "Yovegami Ascona",
+   "pais": "México",
+   "anio": 2025,
+   "duracion_min": 85,
+   "sinopsis": "«Boca Vieja es el lugar de mi raíz materna, un pueblo de pescadores y campesinos del sur de México, quienes disfrutan de la tierra y del mar. Sin embargo, con la llegada de las lluvias, los habitantes deben retirarse para dejar que la naturaleza tome su lugar. Este ciclo es constante, mientras la comunidad resiste la amenaza latente del despojo de su territorio».",
+   "seccion": "Vanguardias Afro e Indígenas",
+   "duracion_obra": 85
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 13999
+   },
+   "titulo": "Competencia corto nacional – Prog. 2",
+   "seccion": "Proyecciones",
+   "duracion_min": 90,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sede": "Centro Cultural Comfandi",
+   "sede_cruda": "COMFANDI",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14001
+   },
+   "titulo": "La fabulosa máquina del tiempo",
+   "seccion": "Proyecciones",
+   "pais": "Brasil",
+   "duracion_min": 70
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "18:00",
+   "sede": "Teatro Municipal Enrique Buenaventura",
+   "sala": "Teatrino",
+   "sede_cruda": "TEATRINO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14003
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "La libertad doble",
+   "seccion": "Proyecciones",
+   "pais": "Argentina",
+   "duracion_min": 100
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "19:00",
+   "sede": "Madame Blue",
+   "sede_cruda": "MADAME BLUE",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14576
+   },
+   "duracion_min": 60,
+   "titulo": "CHARLAS ALAPAR, Pablo Solarz. (Argentina).",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "seccion": "Académico"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "19:00",
+   "sede": "Yawa",
+   "sala": "Domo",
+   "sede_cruda": "YAWA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14448
+   },
+   "titulo": "Domo lleno idartes: Beca videoarte",
+   "tipo": "evento",
+   "event_kind": "experiencia",
+   "seccion": "Proyecciones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "19:00",
+   "sede": "CineQuanon",
+   "sede_cruda": "Cine Quanon",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14497
+   },
+   "titulo": "Luis Tercero",
+   "director": "Iván David Gaona",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 115,
+   "genero": "Drama",
+   "sinopsis": "Luis se jubila después de cuarenta años de trabajo como profesor de historia. Presionado por su familia, busca qué hacer mientras su esposa, Amelia, se entrega a la pintura y al ejercicio grupal con nuevos amigos. Desde Bogotá llega su hijo Alejandro, quien desarrolla un proyecto musical al que invita a su padre, que toca muy bien el acordeón. Sin embargo, Luis da con un grupo de músicos de su edad con quienes concuerda mucho más y con los que disfruta el hallazgo de un muy buen público en casas geriátricas. Padre e hijo chocan, sin imaginar que la música los une al igual que el vacío sin rumbo de sus generaciones.",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "duracion_obra": 115
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "20:00",
+   "sede": "Casa Ethel",
+   "sede_cruda": "CCMI",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14006
+   },
+   "titulo": "Cineconcierto: Metrópolis",
+   "tipo": "evento",
+   "event_kind": "cineconcierto",
+   "seccion": "Proyecciones",
+   "invitados": "Alemania | 120 min",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "20:30",
+   "sede": "Teatro Municipal Enrique Buenaventura",
+   "sala": "Teatrino",
+   "sede_cruda": "TEATRINO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14004
+   },
+   "titulo": "Cali, ciudad abierta (cortos)",
+   "seccion": "Cali Ciudad Abierta",
+   "obras": [
+    {
+     "titulo": "Afilando memoria",
+     "director": "Eugenio Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 7,
+     "genero": "Experimental",
+     "sinopsis": "Afilando memoria es un ritual lleno de piel, sudor y danza. Cuerpos que encarnan a los que ya no están. Cuerpos que fueron barco, semilla, raíz, diáspora, saber expropiado, territorio tatuado y ombligo sembrado. Cuerpos que cantan: ¡Soy Congo, Mandinga, Arará, Lucumí, soy Campáz, Cetré, Ocoró, Cundumí! Afilando memoria es machete territorio, machete ancestral, machete resistencia, machete libertad."
+    },
+    {
+     "titulo": "Después de las seis",
+     "director": "Diana Kuéllar",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 24,
+     "sinopsis": "Cali ciudad creativa En el cuarto piso de un edificio de la Universidad del Valle, conocido como el 383, se ocultan historias de revoluciones, exilios y muertes silenciadas durante cinco décadas. Se dice que una mujer espera allí desde hace muchos años. No se sabe exactamente qué. Algunos aseguran haberla visto después de las seis; casi todos se marchan antes. Maite investiga la memoria del edificio entre cintas, fotografías y voces que regresan desde otras épocas. Los archivos dejan de parecer inertes. Algo insiste en ellos. Un rostro reaparece. Un hombre atraviesa los pasillos, como Asterión que espera a su redentor."
+    },
+    {
+     "titulo": "El mundo de Humberto",
+     "director": "Paula Ortiz",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 14,
+     "sinopsis": "Cali ciudad creativa En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía."
+    },
+    {
+     "titulo": "Muchas, muchas gracias",
+     "director": "Oiyi Kan",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 20,
+     "genero": "Documental",
+     "sinopsis": "Cali ciudad creativa Entre China y Colombia, una abuela y su nieto heredan historias de hambre, abundancia y migración, al intentar descubrir dónde pertenece una familia entre dos mundos."
+    }
+   ],
+   "duracion_min": 65
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "20:30",
+   "sede": "Centro Cultural Comfandi",
+   "sede_cruda": "COMFANDI",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14002
+   },
+   "titulo": "Guapi: ritmo y balsada",
+   "seccion": "Proyecciones",
+   "pais": "Colombia",
+   "duracion_min": 30
+  },
+  {
+   "dia": "2026-10-21",
+   "hora": "21:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14000
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Relicto",
+   "director": "Guillermo Quintero",
+   "pais": "Colombia, Francia",
+   "anio": 2026,
+   "duracion_min": 97,
+   "sinopsis": "En algún lugar del norte de la Amazonía colombiana está el viejo Sixto Muñoz, el «último indio tinigua». Según cuentan en la región donde ha vivido durante las últimas décadas, a sus ciento cinco años ha decidido dejar su casa junto a la laguna para emprender su «último viaje» hacia la selva. En un recorrido por el río Guayabero, desde La Macarena hasta el Guaviare, el director sigue su rastro con la esperanza de encontrarlo antes de su muerte. El viaje y todas las entrevistas brindan una imagen compleja y contradictoria del personaje, una hermosa crónica de los múltiples modos de mestizaje en esos territorios y de las variadas economías y formas de intercambio y solidaridad que estructuran la vida allí.",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "duracion_obra": 97
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "09:00",
+   "sede": "SENA Salomia",
+   "sede_cruda": "SENA Salomia",
+   "acceso": "Inscripción previa",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14591
+   },
+   "duracion_min": 180,
+   "titulo": "Taller de doblaje en el cine",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Académico",
+   "sinopsis": "Roberto Garcés.",
+   "invitados": "En alianza con Takeshima. Inscripción previa."
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "15:00",
+   "sede": "Teatro Municipal Enrique Buenaventura",
+   "sala": "Teatrino",
+   "sede_cruda": "TEATRINO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14017
+   },
+   "titulo": "Telepacífico – Comisión Nacional de Comunicación de los Pueblos Indígenas",
+   "seccion": "Proyecciones",
+   "duracion_min": 90,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "15:30",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14586
+   },
+   "duracion_min": 120,
+   "titulo": "MÁSTER CLASS: Claire Simon (Francia)",
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "seccion": "Académico",
+   "sinopsis": "EL CINE DE LA ESCUCHA.",
+   "invitados": "En diálogo con: Marlon Varela. Con apoyo de la Embajada de Francia en Colombia y la Muestra Internacional Documental de Bogotá MIDBO."
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14009
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Écrire la vie: Annie Ernaux racontée par des lycéennes et des lycéens",
+   "director": "Claire Simon",
+   "pais": "Francia",
+   "anio": 2025,
+   "duracion_min": 90,
+   "sinopsis": "Con una mirada atenta, la cineasta Claire Simon enfrenta estudiantes y profesores de bachillerato a los libros de Annie Ernaux, primera mujer francesa en recibir el Premio Nobel de Literatura.",
+   "seccion": "Foco Claire Simon",
+   "titulo_es": "Escribir la vida",
+   "duracion_obra": 90
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sede": "Centro Cultural Comfandi",
+   "sede_cruda": "COMFANDI",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14589
+   },
+   "duracion_min": 60,
+   "titulo": "Panel de inclusión y cine accesible – Contraplano",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "seccion": "Académico",
+   "sinopsis": "Natalia Campo Castro."
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14011
+   },
+   "titulo": "Princesa burro",
+   "director": "Joaquín Cociña y Cristóbal León",
+   "pais": "Chile, Francia, Países Bajos, Uruguay, Alemania",
+   "anio": 2026,
+   "duracion_min": 90,
+   "genero": "Fantasía",
+   "sinopsis": "En un reino de cuento de hadas, donde el amor está prohibido, la princesa Diana desafía el decreto del rey al enamorarse de Lalo. Cuando él es desterrado, un brazalete mágico la transporta entre mundos y espacios-tiempo paralelos para recuperar sus sueños y su amor perdido. Con la premisa del cuento «Piel de asno», Cristóbal León y Joaquín Cociña continúan el desarrollo de su mundo fantástico y terrorífico de gran creatividad audiovisual. Mezclan técnicas y usan maquetas y trucos mecánicos para adentrarse en nuestros miedos y lo hacen atravesando todo tipo de planos de realidad mediante el juego con los códigos de distintos géneros cinematográficos.",
+   "seccion": "Competencia Largometrajes Internacionales",
+   "duracion_obra": 90
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sede": "Teatro Municipal Enrique Buenaventura",
+   "sala": "Teatrino",
+   "sede_cruda": "TEATRINO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14018
+   },
+   "titulo": "Runa Simi",
+   "seccion": "Proyecciones",
+   "pais": "Perú",
+   "duracion_min": 85
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:00",
+   "sede": "BlackGround",
+   "sede_cruda": "BLACK GROUND",
+   "acceso": "Inscripción previa · Cupo: 30",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14590
+   },
+   "duracion_min": 180,
+   "titulo": "Taller Vanguardias: Interrupción sónica",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Académico",
+   "sinopsis": "Beatriz Balanta.",
+   "invitados": "Cupo: 30 | Inscripción previa. Link de inscripción aquí"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "18:30",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14013
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Iluminada",
+   "director": "Nicolás Rincón",
+   "pais": "Bélgica",
+   "anio": 2026,
+   "duracion_min": 121,
+   "genero": "Drama",
+   "sinopsis": "Iluminada tiene visiones que trata de entender escribiendo diarios íntimos. Sus textos son poesía que nadie más escucha. Su vida en los barrios periféricos de Bogotá, plagados de dificultades, no le da tiempo ni espacio, hasta que conoce a Juan, un muchacho que parece abrirle otro mundo. No obstante, su relación con alguien extraño no es del agrado de quienes controlan el barrio. A partir de un trabajo muy cercano con sus actrices, Nicolás Rincón compone con ellas personajes que ahondan en sus mundos, llenos de sabiduría y poesía. Si bien las formas en las que se encarnan las violencias no dan un respiro, la fuerza de las mujeres (actrices y personajes) consiguen transmitirnos energía vital y esperanza.",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "duracion_obra": 121
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "19:00",
+   "sede": "Yawa",
+   "sala": "Domo",
+   "sede_cruda": "YAWA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14919
+   },
+   "duracion_min": 60,
+   "titulo": "Domo internacional DESORIENTACIONES",
+   "tipo": "evento",
+   "event_kind": "experiencia",
+   "seccion": "Académico"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "19:00",
+   "sede": "Espectra",
+   "sede_cruda": "ESPECTRA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14020
+   },
+   "titulo": "Nuestro cuerpo es una estrella que se expande",
+   "director": "Semillites Hernández, Tania Hernández",
+   "pais": "México",
+   "anio": 2025,
+   "duracion_min": 84,
+   "sinopsis": "Semillites y Tania, dos hermanos queer unidos por una poderosa amistad, recorren el terreno pardo de sus propios cuerpos: tierras que alguna vez rechazaron. Atraviesan paisajes de piel, sueños y vísceras, y se adentran en lugares que laten con la memoria de sus antepasados. En el camino, se encuentran con una constelación de flores, saltamontes y fósiles. Por medio del collage, la animación, el manifiesto, la danza y la intimidad, la película transita entre las escalas del cuerpo y del territorio, para imaginar la identidad más allá de las narrativas coloniales de México",
+   "seccion": "Zoom",
+   "duracion_obra": 84
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "20:00",
+   "sede": "Centro Cultural Comfandi",
+   "sede_cruda": "COMFANDI",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14016
+   },
+   "titulo": "Rodilla Negra + El Coloso",
+   "seccion": "Proyecciones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "20:00",
+   "sede": "Curador",
+   "sede_cruda": "CURADOR",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14021
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Salseando ando + Convergencias",
+   "seccion": "Proyecciones",
+   "pais": "Colombia",
+   "duracion_min": 100
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "20:00",
+   "sede": "Teatro Municipal Enrique Buenaventura",
+   "sala": "Teatrino",
+   "sede_cruda": "TEATRINO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14019
+   },
+   "titulo": "Trópico interior: Todos los colores de la oscuridad",
+   "seccion": "Proyecciones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "20:30",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14012
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "I Built a Rocket Imagining your Arrival",
+   "director": "Janaína Marques",
+   "pais": "Brasil",
+   "anio": 2026,
+   "duracion_min": 92,
+   "genero": "Drama",
+   "sinopsis": "Envuelta por el zumbido hipnótico de una máquina de resonancia magnética, a Rosa se le pide que recuerde un momento feliz de su vida. Revisa el pasado y reconstruye un acontecimiento que nunca ocurrió: un viaje con su madre, Dalva, una mujer de espíritu libre e irreverente que fue detenida por asesinar a un hombre que estaba a punto de cometer un feminicidio. Tras crecer sin su madre, Rosa carga con la culpa y el miedo derivados del episodio. Ahora, suspendida entre la vida y un recuerdo inventado, imagina un reencuentro que se transforma en un intento de sanación y reconciliación. La acompañamos en una película de carretera llena de saber hacer cinematográfico, que transmite plásticamente inquietudes y formas de experimentarlas.",
+   "seccion": "Competencia Largometrajes Internacionales",
+   "titulo_es": "Construí un cohete imaginando tu llegada",
+   "duracion_obra": 92
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "21:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14010
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Las pesadillas del siervo",
+   "director": "Manuel Villa",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 90,
+   "sinopsis": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "duracion_obra": 76
+  },
+  {
+   "dia": "2026-10-22",
+   "hora": "21:00",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14014
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Relicto",
+   "director": "Guillermo Quintero",
+   "pais": "Colombia, Francia",
+   "anio": 2026,
+   "duracion_min": 97,
+   "sinopsis": "En algún lugar del norte de la Amazonía colombiana está el viejo Sixto Muñoz, el «último indio tinigua». Según cuentan en la región donde ha vivido durante las últimas décadas, a sus ciento cinco años ha decidido dejar su casa junto a la laguna para emprender su «último viaje» hacia la selva. En un recorrido por el río Guayabero, desde La Macarena hasta el Guaviare, el director sigue su rastro con la esperanza de encontrarlo antes de su muerte. El viaje y todas las entrevistas brindan una imagen compleja y contradictoria del personaje, una hermosa crónica de los múltiples modos de mestizaje en esos territorios y de las variadas economías y formas de intercambio y solidaridad que estructuran la vida allí.",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "duracion_obra": 97
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "09:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14592
+   },
+   "duracion_min": 180,
+   "titulo": "Master class de SAPCINE",
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "seccion": "Académico"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "09:00",
+   "sede": "Centro Cultural Comfandi",
+   "sede_cruda": "COMFANDI",
+   "acceso": "Inscripción previa · Cupo: 10 personas",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14594
+   },
+   "duracion_min": 180,
+   "titulo": "Desarmar la mirada. Taller de crítica para pensar el cine",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Académico",
+   "sinopsis": "Elisa McCausland y Diego Salgado."
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "10:00",
+   "sede": "Hotel Obelisco",
+   "sede_cruda": "Hotel Obelisco",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14622
+   },
+   "duracion_min": 120,
+   "titulo": "City Tour",
+   "tipo": "evento",
+   "event_kind": "experiencia",
+   "seccion": "Conexiones"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "10:00",
+   "sede": "Centro Cultural Comfandi",
+   "sede_cruda": "COMFANDI",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14595
+   },
+   "duracion_min": 60,
+   "titulo": "PANEL: Dirección propia. La realización en comunidades étnicas",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "seccion": "Académico",
+   "sinopsis": "Viviane Ferreira (Brasil), Yovegami Ascona Mora (México) y Eduardo Rencurrell (Cuba, Colombia).",
+   "invitados": "Modera: Adriana Jacanamejoy (Colombia)."
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "11:00",
+   "sede": "Centro Cultural Comfandi",
+   "sede_cruda": "COMFANDI",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14596
+   },
+   "duracion_min": 60,
+   "titulo": "PANEL: Plataformas alternativas, archivo y soberanía audiovisual",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "seccion": "Académico",
+   "sinopsis": "David Hernández Palmar (Mirada Nativa), Frida Muenala (Mullu TV) y Lorena Tavera (Pantalla Verde).",
+   "invitados": "Modera: Gerylee Polanco"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "15:00",
+   "sede": "Bulevar del Río",
+   "sede_cruda": "Boulevard del Rio",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14605
+   },
+   "duracion_min": 45,
+   "titulo": "Agujero",
+   "tipo": "evento",
+   "event_kind": "lanzamiento de libro",
+   "seccion": "Académico",
+   "sinopsis": "Novela gráfica / Cómics: ‘Agujero’. Autor: Julio César Rodríguez, El Cerra’O Comics."
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "15:00",
+   "sede": "Teatro Municipal Enrique Buenaventura",
+   "sala": "Teatrino",
+   "sede_cruda": "TEATRINO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14033
+   },
+   "titulo": "Vanguardias- Prog 1",
+   "seccion": "Conexiones",
+   "duracion_min": 90,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "15:30",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14593
+   },
+   "duracion_min": 120,
+   "titulo": "MÁSTER CLASS. Los lugares del tiempo.",
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "seccion": "Académico",
+   "invitados": "Conversación entre José Luis Guerín y Sergio Wolf (España)"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "16:00",
+   "sede": "Bulevar del Río",
+   "sede_cruda": "Boulevard del Rio",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14606
+   },
+   "duracion_min": 60,
+   "titulo": "El trabajo de la polilla en la llama",
+   "tipo": "evento",
+   "event_kind": "lanzamiento de libro",
+   "seccion": "Académico",
+   "sinopsis": "‘El trabajo de la polilla en la llama’. Bitácora de trabajo para una pieza audiovisual’. Autora: Mónica Bravo."
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "16:00",
+   "sede": "Madame Blue",
+   "sede_cruda": "MADAME BLUE",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14609
+   },
+   "duracion_min": 60,
+   "titulo": "PANEL PREMIOS MACONDO: Nominados cortometrajes de Animación",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "seccion": "Académico"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "16:30",
+   "sede": "Bulevar del Río",
+   "sede_cruda": "Boulevard del Rio",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14607
+   },
+   "duracion_min": 45,
+   "titulo": "Viñetaira. Historia universal de las autoras del cómic",
+   "tipo": "evento",
+   "event_kind": "lanzamiento de libro",
+   "seccion": "Académico",
+   "sinopsis": "‘Viñetaira. Historia Universal de las autoras del cómic’. Autores: Elisa McCausland y Diego Salgado. Editorial Cátedra."
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "17:00",
+   "sede": "Madame Blue",
+   "sede_cruda": "MADAME BLUE",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14610
+   },
+   "duracion_min": 60,
+   "titulo": "PANEL PREMIOS MACONDO: Nominados Producción sostenible",
+   "tipo": "evento",
+   "event_kind": "charla",
+   "seccion": "Académico"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "17:00",
+   "sede": "Espectra",
+   "sede_cruda": "ESPECTRA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14618
+   },
+   "titulo": "Parche Match – Encuentro de conexiones",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Conexiones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "17:30",
+   "sede": "Bulevar del Río",
+   "sede_cruda": "Boulevard del Rio",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14608
+   },
+   "duracion_min": 45,
+   "titulo": "Creatividad y escritura",
+   "tipo": "evento",
+   "event_kind": "lanzamiento de libro",
+   "seccion": "Académico",
+   "sinopsis": "Creatividad y escritura. Autor: Dago García. Editorial PRH-Aguilar."
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sede": "Centro Cultural Comfandi",
+   "sede_cruda": "COMFANDI",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14604
+   },
+   "titulo": "Anima Vé! Retrospectiva de Maria Cristina Pérez Q&A",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Académico",
+   "duracion_min": 90,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14025
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "En construcción",
+   "seccion": "Proyecciones",
+   "pais": "España",
+   "duracion_min": 124
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:00",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14029
+   },
+   "titulo": "Luis Tercero",
+   "director": "Iván David Gaona",
+   "pais": "Colombia",
+   "anio": 2026,
+   "duracion_min": 115,
+   "genero": "Drama",
+   "sinopsis": "Luis se jubila después de cuarenta años de trabajo como profesor de historia. Presionado por su familia, busca qué hacer mientras su esposa, Amelia, se entrega a la pintura y al ejercicio grupal con nuevos amigos. Desde Bogotá llega su hijo Alejandro, quien desarrolla un proyecto musical al que invita a su padre, que toca muy bien el acordeón. Sin embargo, Luis da con un grupo de músicos de su edad con quienes concuerda mucho más y con los que disfruta el hallazgo de un muy buen público en casas geriátricas. Padre e hijo chocan, sin imaginar que la música los une al igual que el vacío sin rumbo de sus generaciones.",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "duracion_obra": 115
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "18:30",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14027
+   },
+   "titulo": "An Incomplete Calendar",
+   "director": "Sanaz Sohrabi",
+   "pais": "Canadá, Irán, Turquía, Venezuela",
+   "anio": 2026,
+   "duracion_min": 90,
+   "sinopsis": "Un disco de vinilo de 1980 es el punto de partida. Rhymes and Songs for OPEC es una grabación especial del coro de la Universidad Central de Venezuela, para conmemorar el vigésimo aniversario de la Organización de Países Exportadores de Petróleo. Mediante una superposición de canciones y material inédito o poco visto, se replantea el petróleo como una herramienta política al servicio de las luchas de liberación en Palestina y del fortalecimiento de la solidaridad panárabe entre 1960 y 1970. Se propone una revisión aguda de la geopolítica de los últimos cincuenta años, desde representaciones como la música, las estampillas y el arte; señala cómo las alianzas de los países petroleros buscan formas de contrarrestar el poder.",
+   "seccion": "Competencia Largometrajes Internacionales",
+   "titulo_es": "Un calendario incompleto",
+   "duracion_obra": 77
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "19:00",
+   "sede": "Teatro Municipal Enrique Buenaventura",
+   "sala": "Teatrino",
+   "sede_cruda": "TEATRINO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14034
+   },
+   "titulo": "Vanguardias – Prog 2",
+   "seccion": "Conexiones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "20:00",
+   "sede": "Centro Cultural Comfandi",
+   "sede_cruda": "COMFANDI",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14032
+   },
+   "titulo": "Plano sonoro: muestra de videoclips",
+   "seccion": "Plano Sonoro",
+   "obras": [
+    {
+     "titulo": "Aguapanela",
+     "pais": "Colombia",
+     "sinopsis": "En un universo mezclado entre Colombia y la mitología griega, Miguel es atacado por un cupido en sandalias y alas de tela que intenta flecharlo. En esta persecución, Miguel recibe un cáliz de aguapanela de manos de David y Manuel, deidades musicales. Cargado de energía celestial, emprende su venganza contra el amor. Pero justo cuando cree haber vencido, una última flecha lo alcanza… por más que uno corra, del amor no se escapa."
+    },
+    {
+     "titulo": "De nuevo al final",
+     "director": "Edward Gómez",
+     "pais": "Colombia",
+     "anio": 2026,
+     "duracion_min": 12,
+     "sinopsis": "En un universo donde el capitalismo es la religión de la sociedad, Últimos Nietos no son indiferentes a esto, al igual que todo el mundo. Este trío de músicos tiene la necesidad de conseguir otro trabajo para poder sacar adelante su proyecto musical; por eso, paralelo a la música, estos treintañeros se dedican a cavar tumbas a sueldo en la tierra del jolgorio, la noche y la salsa."
+    },
+    {
+     "titulo": "Después de tanto amor",
+     "director": "Mercedes Oviedo",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 4,
+     "sinopsis": "Tras una ruptura amorosa, una mujer transita el duelo y reconstruye su mundo interior entre recuerdos, dolor, deseo y esperanza."
+    },
+    {
+     "titulo": "Infinita canción: el secreto",
+     "director": "Juanita y Camila",
+     "pais": "Colombia",
+     "sinopsis": "Video oficial del álbum visual El principio, de Margarita Siempre Viva."
+    },
+    {
+     "titulo": "Killah",
+     "pais": "Colombia",
+     "sinopsis": "Con una fusión de realismo mágico con paisajes urbanos, Killah sigue a Tabi mientras atraviesa un umbral entre la vulnerabilidad y la resistencia. Los rituales, las sombras y las presencias espectrales se convierten en metáforas de una experiencia colectiva, al tiempo que las calles pasan de ser lugares de amenaza a espacios recuperados mediante el coraje, la solidaridad y la imaginación."
+    },
+    {
+     "titulo": "La María",
+     "pais": "Colombia",
+     "sinopsis": "La María es un ritual audiovisual que habla del cuerpo y de la memoria de la mujer afrodescendiente. Guiada por un arrullo, con la música de Diego Cáceres y la voz profunda de la maestra Nidia Góngora, seguimos la historia de una mujer cuyo cuerpo es invadido por una fuerza que irrumpe sin aviso, la marca y la despoja. Acompañada por otras mujeres y por su herencia, su cuerpo deja de ser un lugar de dolor para convertirse en un espacio de resistencia, sanación y libertad. La María celebra a la mujer, su identidad afro y la capacidad de levantarse y renacer."
+    },
+    {
+     "titulo": "No me devoro-PC6. La gula",
+     "director": "Álvaro Varón",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 4,
+     "sinopsis": "En torno a una mesa, en medio de arquitectura colonial, seis comensales participan de un banquete tan suntuoso como perturbador. Mientras devoran compulsivamente los alimentos, la cantante permanece en contemplación: toca, huele y acaricia aquello que los demás consumen con ansiedad. Frente al impulso de poseer y consumir, ella propone otra manera de relacionarse con el deseo: lenta, consciente y sensorial."
+    },
+    {
+     "titulo": "Pajariscopio",
+     "pais": "Colombia",
+     "sinopsis": "Una historia de amor surge en Bogotá entre una mujer-pájaro y un soñador tímido. Tras herirla sin querer en el bosque, la lleva a casa para curarla. En medio de este encuentro nace un amor surreal. Pajariscopio es una comedia romántica cantada con bossa nova e indie pop."
+    },
+    {
+     "titulo": "Reloj",
+     "pais": "Colombia, Estados Unidos",
+     "sinopsis": "En las playas de Coney Island, un alienígena busca con un detector de metales una cámara que guarda los recuerdos de la vida que dejó atrás al migrar, en un intento ingenuo por recuperar aquello que perdió."
+    },
+    {
+     "titulo": "Sentenciados",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Árbol en pie",
+     "director": "Red Comunitaria Trans:",
+     "pais": "Colombia",
+     "sinopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano."
+    }
+   ],
+   "duracion_min": 20
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "20:30",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14030
+   },
+   "titulo": "Las pesadillas del siervo",
+   "director": "Manuel Villa",
+   "pais": "Colombia",
+   "anio": 2025,
+   "duracion_min": 90,
+   "sinopsis": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "duracion_obra": 76
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "21:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14026
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Iluminada",
+   "director": "Nicolás Rincón",
+   "pais": "Bélgica",
+   "anio": 2026,
+   "duracion_min": 121,
+   "genero": "Drama",
+   "sinopsis": "Iluminada tiene visiones que trata de entender escribiendo diarios íntimos. Sus textos son poesía que nadie más escucha. Su vida en los barrios periféricos de Bogotá, plagados de dificultades, no le da tiempo ni espacio, hasta que conoce a Juan, un muchacho que parece abrirle otro mundo. No obstante, su relación con alguien extraño no es del agrado de quienes controlan el barrio. A partir de un trabajo muy cercano con sus actrices, Nicolás Rincón compone con ellas personajes que ahondan en sus mundos, llenos de sabiduría y poesía. Si bien las formas en las que se encarnan las violencias no dan un respiro, la fuerza de las mujeres (actrices y personajes) consiguen transmitirnos energía vital y esperanza.",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "duracion_obra": 121
+  },
+  {
+   "dia": "2026-10-23",
+   "hora": "21:00",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14028
+   },
+   "titulo": "Siempre soy tu animal materno",
+   "director": "Valentina Maurel",
+   "pais": "Bélgica, Francia, México",
+   "anio": 2026,
+   "duracion_min": 108,
+   "genero": "Drama",
+   "sinopsis": "Después de años en Europa, Elsa regresa a Costa Rica. Su hermana vive sola en la casa familiar, cada vez más distante y recluida, como si se deslizara hacia un mundo propio. Sus padres están absortos en sus vidas: él va a la deriva en aventuras amorosas y ella está inmersa en la reedición de sus poemas eróticos de juventud. Ninguno comprende la urgencia de la situación. El regreso de Elsa arrastra a las mujeres a una confrontación con aquello que, pese a todo, aún las une. Una cámara vivaz, atenta y fluida muestra tres formas de asumir la vida y la capacidad de compartir dudas y emociones, de apoyarse y cuestionarse, de enfrentar la realidad juntas, cada una a su manera.",
+   "seccion": "Competencia Largometrajes Internacionales",
+   "duracion_obra": 108
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "09:00",
+   "sede": "Espectra",
+   "sede_cruda": "ESPECTRA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14620
+   },
+   "duracion_min": 90,
+   "titulo": "Un Parche con… Frida Muenala – Realización indígena",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Conexiones"
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "10:00",
+   "sede": "Madame Blue",
+   "sede_cruda": "MADAME BLUE",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14619
+   },
+   "duracion_min": 120,
+   "titulo": "Foro local de proyectos. Presentación de dosiers y pitch taller de fortalecimiento empresarial – Presencial",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Conexiones"
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "10:30",
+   "sede": "Espectra",
+   "sede_cruda": "ESPECTRA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14621
+   },
+   "duracion_min": 90,
+   "titulo": "Un Parche con… Marina Arango – Archivos étnicos",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Conexiones"
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "11:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14035
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Mu-ki-ra",
+   "director": "Estefanía Piñeres",
+   "pais": "Colombia, España",
+   "anio": 2026,
+   "duracion_min": 90,
+   "genero": "Animación",
+   "sinopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, de trece años, afronta su peor pesadilla cuando Martín, su hermano, es atrapado por uno de ellos. Con ayuda de Iolo, una anciana mágica, y una osa hormiguera, Cleo se adentra en la selva para atrapar a Mukira, quien se llevó a Martín, y celebrar un ritual para recuperar al niño; pronto aprende que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo. Es una valiente apuesta de la animación colombiana que, con gran imaginación, propone una forma de entender cómo afrontar nuestros miedos y violencias, y hallar maneras de superar las dinámicas que nos hacen enfrentar a quienes no tienen que ser nuestros enemigos.",
+   "seccion": "Competencia Largometrajes Nacionales",
+   "titulo_es": "Mukira",
+   "duracion_obra": 82
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "13:30",
+   "sede": "Bulevar del Río",
+   "sala": "Auditorio Celsia",
+   "sede_cruda": "Boulevard del Rio",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14624
+   },
+   "duracion_min": 45,
+   "titulo": "El juego de la vida",
+   "tipo": "evento",
+   "event_kind": "lanzamiento de libro",
+   "seccion": "Académico",
+   "sinopsis": "El juego de la vida. Autor: Andrés Ruiz."
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "14:30",
+   "sede": "Madame Blue",
+   "sede_cruda": "MADAME BLUE",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14611
+   },
+   "duracion_min": 120,
+   "titulo": "MÁSTER CLASS: Lo esencial, lo vital y lo persuasivo. Julian Sanchez, Productor de Mukira. En alianza con Animá Vé.",
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "seccion": "Académico"
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "15:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14036
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Notre corps",
+   "director": "Claire Simon",
+   "pais": "Francia",
+   "anio": 2023,
+   "duracion_min": 168,
+   "sinopsis": "En un hospital público de París, Claire Simon explora lo que significa habitar cuerpos de mujer, mediante la filmación de su diversidad, singularidad y belleza en todas las etapas de la vida. Se relatan historias únicas de deseos, miedos y luchas, incluida la de la propia cineasta.",
+   "seccion": "Foco Claire Simon",
+   "titulo_es": "Nuestro cuerpo",
+   "duracion_obra": 168
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "15:00",
+   "sede": "Teatro Municipal Enrique Buenaventura",
+   "sala": "Teatrino",
+   "sede_cruda": "TEATRINO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14042
+   },
+   "titulo": "We Cam Fest 3",
+   "seccion": "Muestras de Muestras",
+   "obras": [
+    {
+     "titulo": "Alivios",
+     "pais": "México, Venezuela",
+     "anio": 2025,
+     "duracion_min": 18,
+     "sinopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos Director y guionista Juan Manuel González"
+    },
+    {
+     "titulo": "El bitcoin de oro",
+     "pais": "España",
+     "anio": 2026,
+     "duracion_min": 18,
+     "sinopsis": "Cuando Asofem está a punto de cerrar por una grave crisis económica, un grupo de usuarios y su monitor deciden embarcarse en una disparatada misión para salvar el centro al que consideran su hogar. Director y guionista Bernardo Hernández"
+    },
+    {
+     "titulo": "El maestro de la piqueria",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 8,
+     "genero": "Documental",
+     "sinopsis": "La piqueria, género musical autóctono del Caribe, ha representado durante décadas las raíces culturales de diversas generaciones. En La Guajira, Alcides Manjarrez es uno de los últimos maestros de este arte. Invidente de nacimiento, desde su infancia ha cimentado esta tradición. En la actualidad, además de ser referente en el folclor, impulsa la recuperación de esta tradición entre las nuevas generaciones. Director y guionista Yinet Molero"
+    },
+    {
+     "titulo": "Khazana",
+     "pais": "Pakistán",
+     "anio": 2025,
+     "duracion_min": 9,
+     "sinopsis": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre. Director y guionista Basir Ahmed"
+    },
+    {
+     "titulo": "La fuga",
+     "pais": "Colombia",
+     "anio": 2025,
+     "duracion_min": 20,
+     "sinopsis": "Fermín (ochenta y siete) fue pescador. Está recluido en el asilo de un pueblo y, aunque tiene movilidad reducida, debe huir para cumplirle una promesa al río. Con ayuda de Martina (siete), la hija de la cocinera, diseña un plan para fugarse. El hospicio es caótico y está en serios problemas financieros. Ante la fuga inminente, Martina decide acompañarlo. La pareja de prófugos aborda un camión que la lleva hacia el río, mientras desciende por la cordillera. A través de la ventana del copiloto, Fermín ve personas que desempeñan oficios y saberes extintos y olvidados. Director y guionista Óscar Gilberto Vesga"
+    },
+    {
+     "titulo": "Ona",
+     "pais": "España",
+     "anio": 2026,
+     "duracion_min": 4,
+     "sinopsis": "Para Ona, la vida se ha convertido en una sucesión de malentendidos y conversaciones inconclusas. Arrastrada por un cansancio infinito, vaga por las calles de la ciudad, esforzándose constantemente por adaptarse a un ritmo que no le pertenece. En sus pensamientos percibimos su silenciosa lucha contra un mundo que ignora sus necesidades y malinterpreta su silencio. Lo que Ona reclama parece básico: sentirse presente, ser escuchada, ser mirada a los ojos, aunque sea por un instante. Y, sin embargo, nadie la ha conocido ni ha querido verla de verdad. Director y guionista Matilde Gimeno"
+    },
+    {
+     "titulo": "Quinto primera",
+     "pais": "España",
+     "anio": 2026,
+     "duracion_min": 18,
+     "sinopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente. Director y guionista Fran Menchón"
+    },
+    {
+     "titulo": "Vértigo",
+     "pais": "España",
+     "anio": 2025,
+     "duracion_min": 4,
+     "sinopsis": "Vértigo es el relato íntimo de una madre enfrentada al miedo más profundo: la enfermedad de su hijo. Desde una camilla de ecografía, la palabra «vertical» vuelve a sacudir su mundo varias décadas después. Lo que comenzó como una vivencia infantil llena de presión y miedo resurge en una consulta médica, ante un diagnóstico aparentemente fatídico. El vértigo se convierte en una metáfora del temor, de la incertidumbre y del amor incondicional. Entre recuerdos, voces externas y su propio diálogo interior, la protagonista se sumerge en una espiral de culpa, incertidumbre y amor. Director y guionista Jimmy Llamas"
+    },
+    {
+     "titulo": "¿Dónde está Richard?",
+     "pais": "España",
+     "anio": 2025,
+     "duracion_min": 6,
+     "sinopsis": "Catherine es una periodista sorda que está perdida en el barrio madrileño de Carabanchel. No va a llegar a tiempo a entrevistar a un importante actor estadounidense. Desesperada, le pide ayuda a la Lore, una vecina del barrio que pasaba por allí. Juntas trazan un plan para poder encontrarse con este conocido personaje. Director y guionista Juan Carlos Álvarez"
+    }
+   ],
+   "duracion_min": 105
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "17:00",
+   "sede": "Teatro Municipal Enrique Buenaventura",
+   "sala": "Teatrino",
+   "sede_cruda": "TEATRINO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14043
+   },
+   "titulo": "Anima Vé! – Anibia",
+   "seccion": "Proyecciones",
+   "duracion_min": 60,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "17:00",
+   "sede": "Bulevar del Río",
+   "sala": "Carpa de la Red de Bibliotecas Públicas de Cali",
+   "sede_cruda": "Boulevard del Rio",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14625
+   },
+   "duracion_min": 60,
+   "titulo": "Una mirada general del proceso del Circuito Cineclubes Cali, CCINEC, 2026",
+   "tipo": "evento",
+   "event_kind": "lanzamiento de libro",
+   "seccion": "Académico",
+   "sinopsis": "Una mirada general del proceso del Circuito Cineclubes Cali, CCINEC, 2026, Autores: Maria Eudoxia Arango y Leandro Pérez."
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "18:00",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14040
+   },
+   "titulo": "Minotauro",
+   "seccion": "Proyecciones",
+   "pais": "Rusia",
+   "duracion_min": 135
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "18:30",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14038
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "El Coloso",
+   "seccion": "Proyecciones",
+   "pais": "Colombia",
+   "duracion_min": 70
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "19:30",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14037
+   },
+   "has_qa": true,
+   "qa_type": "team",
+   "titulo": "Historias del buen Valle",
+   "seccion": "Proyecciones",
+   "pais": "España",
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "20:30",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14041
+   },
+   "titulo": "La bola negra",
+   "seccion": "Proyecciones",
+   "pais": "España",
+   "duracion_min": 155
+  },
+  {
+   "dia": "2026-10-24",
+   "hora": "21:00",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14039
+   },
+   "titulo": "Para vivir, el implacable tiempo de Pablo Milanés",
+   "director": "Fabien Pisani",
+   "pais": "México, España, Cuba, Estados Unidos",
+   "anio": 2025,
+   "duracion_min": 106,
+   "genero": "Música",
+   "sinopsis": "Fabien Pisani, hijo adoptivo de Pablo Milanés, acompaña al músico durante sus últimos años. En las conversaciones, recorren su trayectoria como artista político. Con entrevistas a otros músicos —Serrat, Harry Belafonte y Fito Páez— y a las mujeres más importantes de su vida, muestra un retrato del cantautor y del lugar del amor en su música. La película es un panorama de su época: revisar la historia de América Latina junto a la vida de Milanés es adentrarse en las luchas por una sociedad justa. Al hacer con él su último viaje a Cuba, observamos el difícil momento de la isla y su proyecto político, mientras atestiguamos los distanciamientos entre Milanés y sus colegas en el sueño de la Revolución.",
+   "seccion": "¡Que viva la música!",
+   "titulo_es": "Para vivir",
+   "duracion_obra": 106
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "15:00",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14452
+   },
+   "titulo": "Animá Vé – Retrospectiva",
+   "seccion": "Proyecciones",
+   "duracion_min": 90,
+   "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "17:00",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14047
+   },
+   "titulo": "Todo comenzó por el fin",
+   "director": "Luis Ospina",
+   "pais": "Colombia",
+   "anio": 2015,
+   "duracion_min": 208,
+   "genero": "Documental",
+   "sinopsis": "Cali ciudad creativa Todo comenzó por el fin es el autorretrato del Grupo de Cali, también conocido como Caliwood, un conjunto de cinéfilos que, en medio de la rumba y del caos histórico de los años setenta y ochenta del siglo XX, logró producir un corpus cinematográfico que ya forma parte fundamental de la historia del cine colombiano. A su vez, es la historia clínica del propio realizador, quien se enfermó gravemente durante la producción del filme. Es la historia de un sobreviviente.",
+   "seccion": "Cali Ciudad Abierta",
+   "duracion_obra": 208
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "17:30",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14451
+   },
+   "titulo": "Érase una vez en Harlem",
+   "seccion": "Proyecciones",
+   "pais": "USA",
+   "duracion_min": 100
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "18:00",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14048
+   },
+   "titulo": "Álbum de familia",
+   "director": "Joel Calero",
+   "pais": "Perú, Colombia",
+   "anio": 2024,
+   "duracion_min": 94,
+   "genero": "Drama",
+   "sinopsis": "Alex, que está a punto de convertirse en papá por primera vez, descubre unas antiguas fotografías familiares que sugieren la participación de su padre en hechos intrigantes vinculados a la historia de su país. Este hallazgo lo obligará a confrontar sus lealtades familiares y a preguntarse hasta qué punto es posible construir un futuro y su propia paternidad sin enfrentar las sombras del pasado.",
+   "seccion": "Cali Ciudad Abierta",
+   "duracion_obra": 94
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "20:30",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14049
+   },
+   "titulo": "Historias del buen Valle",
+   "seccion": "Proyecciones",
+   "pais": "España",
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "20:30",
+   "sede": "Cinemateca La Tertulia",
+   "sede_cruda": "CINEMATECA LA TERTULIA",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14046
+   },
+   "titulo": "La bola negra",
+   "seccion": "Proyecciones",
+   "pais": "España",
+   "duracion_min": 155
+  },
+  {
+   "dia": "2026-10-25",
+   "hora": "21:00",
+   "sede": "Cine Colombia Unicentro",
+   "sede_cruda": "CINE COLOMBIA UNICENTRO",
+   "acceso": "desconocido",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14450
+   },
+   "titulo": "La mansión de Araucaima",
+   "director": "Carlos Mayolo",
+   "pais": "Colombia",
+   "anio": 1986,
+   "duracion_min": 86,
+   "genero": "Drama",
+   "sinopsis": "Cali ciudad creativa En una vieja y misteriosa casona tropical cohabitan el supuesto dueño, un fraile, un piloto convaleciente, el sirviente haitiano, el guardián mercenario y la Machiche, hembra madura y dominante. Allí llega una joven modelo para desatar todo tipo de pasiones.",
+   "seccion": "Cali Ciudad Abierta",
+   "duracion_obra": 86
+  }
+ ]
+}

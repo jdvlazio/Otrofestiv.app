@@ -1,0 +1,273 @@
+{
+ "_nota": "FICCALI 18 (Cali, 16–25 oct 2026). Fuente: ficcali.com — Programación (WP 14870) y Selección 2026 (11 subpáginas de la 12862). Decisiones de Juan, 7 oct: títulos ORIGINALES (los de la ficha), todas las actividades con su acceso, y solo el festival oficial 16–25 (lo del 3 al 15 y el 27 queda fuera).",
+ "radar": 1024,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py ficcali-2026",
+   "que": "el volcado del radar #1024"
+  },
+  {
+   "cmd": "python3 pipeline/ficcali-2026-catalogo.py",
+   "que": "las fichas de la Selección 2026 → catálogo"
+  },
+  {
+   "cmd": "python3 pipeline/ficcali-2026-afiches.py",
+   "que": "los afiches oficiales de la biblioteca de medios → -afiches.json"
+  },
+  {
+   "cmd": "python3 pipeline/ficcali-2026-programacion.py",
+   "que": "las tarjetas de la Programación → sidecar"
+  },
+  {
+   "cmd": "python3 pipeline/ficcali-2026-crudo.py",
+   "que": "programación + catálogo → crudo (16–25 oct)"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py ficcali-2026 --posters",
+   "que": "la cascada de TMDB y lo ya publicado"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py ficcali-2026 --centro 3.4516,-76.5320 --ciudad \"Cali, Valle del Cauca\"",
+   "que": "pines: los manuales se respetan"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py ficcali-2026",
+   "que": "el build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py ficcali-2026 --aplicar --desde festivals/staging/ficcali-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/ficcali-2026-verificar.py",
+   "que": "el build contra las tarjetas de la programación, en los dos sentidos, y cada sede con pin"
+  }
+ ],
+ "festival": {
+  "radar": 1024,
+  "crudo": "festivals/staging/ficcali-2026-crudo.json",
+  "enriquecido": "festivals/staging/ficcali-2026-enriquecido.json",
+  "geo": "festivals/staging/ficcali-2026-venues-geo.json",
+  "_por_que_secciones": "Nombres del menú de ficcali.com, tal cual (ZOOM en caja de título: es su categoría «Zoom»). «Proyecciones», «Académico» y «Conexiones» son la categoría que el festival le pone a la tarjeta cuando la obra no tiene ficha o es una actividad. Emoji, inglés y arquetipo: propuesta, a confirmar con Juan.",
+  "secciones": {
+   "Competencia Largometrajes Nacionales": {
+    "emoji": "🇨🇴",
+    "en": "National Feature Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Largometrajes Internacionales": {
+    "emoji": "🌍",
+    "en": "International Feature Competition",
+    "archetype": "Competencia"
+   },
+   "Competencia Cortometraje Nacional": {
+    "emoji": "🎬",
+    "en": "National Short Film Competition",
+    "archetype": "Competencia"
+   },
+   "Cali Ciudad Abierta": {
+    "emoji": "🏙️",
+    "en": "Cali, Open City",
+    "archetype": "Muestra / País"
+   },
+   "Vanguardias Afro e Indígenas": {
+    "emoji": "🪶",
+    "en": "Afro and Indigenous Vanguards",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Plano Sonoro": {
+    "emoji": "🎵",
+    "en": "Sound Frame",
+    "archetype": "Cortos / Programas"
+   },
+   "Cine Sin Límites": {
+    "emoji": "🏘️",
+    "en": "Cinema Without Limits",
+    "archetype": "Especiales / Eventos"
+   },
+   "Muestras de Muestras": {
+    "emoji": "🎞️",
+    "en": "Showcase of Showcases",
+    "archetype": "Cortos / Programas"
+   },
+   "Muestra Infantil": {
+    "emoji": "🧒",
+    "en": "Children's Showcase",
+    "archetype": "Especiales / Eventos"
+   },
+   "Zoom": {
+    "emoji": "🔍",
+    "en": "Zoom",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Foco Claire Simon": {
+    "emoji": "🔦",
+    "en": "Claire Simon Focus",
+    "archetype": "Retrospectiva / Tributo"
+   },
+   "¡Que viva la música!": {
+    "emoji": "🎶",
+    "en": "Long Live Music!",
+    "archetype": "Especiales / Eventos"
+   },
+   "Proyecciones": {
+    "emoji": "📽️",
+    "en": "Screenings",
+    "archetype": "Especiales / Eventos"
+   },
+   "Académico": {
+    "emoji": "🎓",
+    "en": "Academic",
+    "archetype": "Charlas / Industria"
+   },
+   "Conexiones": {
+    "emoji": "🤝",
+    "en": "Connections",
+    "archetype": "Charlas / Industria"
+   }
+  },
+  "sedes": {
+   "Cinemateca La Tertulia": [
+    "Cinemateca La Tertulia - Cali",
+    ""
+   ],
+   "Casa Yurtas": [
+    "Casa Yurtas - Cali",
+    ""
+   ],
+   "En línea": [
+    "En línea - Cali",
+    ""
+   ],
+   "Madame Blue": [
+    "Madame Blue - Cali",
+    ""
+   ],
+   "Ciudad Pacífica": [
+    "Ciudad Pacífica - Cali",
+    ""
+   ],
+   "Sendero del Bosque": [
+    "Sendero del Bosque - Cali",
+    ""
+   ],
+   "Alto Meléndez": [
+    "Alto Meléndez - Cali",
+    ""
+   ],
+   "Biblioteca Pública La Paz": [
+    "Biblioteca Pública La Paz - Cali",
+    ""
+   ],
+   "Biblioteca Pública San Luis I": [
+    "Biblioteca Pública San Luis I - Cali",
+    ""
+   ],
+   "Teatrino Proyecto Oriente": [
+    "Teatrino Proyecto Oriente - Cali",
+    ""
+   ],
+   "Calimateca": [
+    "Calimateca - Cali",
+    ""
+   ],
+   "Espectra": [
+    "Espectra - Cali",
+    ""
+   ],
+   "Universidad Autónoma de Occidente": [
+    "Universidad Autónoma de Occidente - Cali",
+    ""
+   ],
+   "Teatro al Aire Libre Los Cristales": [
+    "Teatro al Aire Libre Los Cristales - Cali",
+    ""
+   ],
+   "Curador": [
+    "Curador - Cali",
+    ""
+   ],
+   "Yawa": [
+    "Yawa - Cali",
+    ""
+   ],
+   "Plazoleta La Maceta": [
+    "Plazoleta La Maceta - Cali",
+    ""
+   ],
+   "Centro Cultural Brisas de Mayo": [
+    "Centro Cultural Brisas de Mayo - Cali",
+    ""
+   ],
+   "Centro Cultural Comfandi": [
+    "Centro Cultural Comfandi - Cali",
+    ""
+   ],
+   "Tecnocentro Cultural Somos Pacífico": [
+    "Tecnocentro Cultural Somos Pacífico - Cali",
+    ""
+   ],
+   "Teatro La Unión": [
+    "Teatro La Unión - Cali",
+    ""
+   ],
+   "Café Macondo": [
+    "Café Macondo - Cali",
+    ""
+   ],
+   "BlackGround": [
+    "BlackGround - Cali",
+    ""
+   ],
+   "Teatro Municipal Enrique Buenaventura": [
+    "Teatro Municipal Enrique Buenaventura - Cali",
+    ""
+   ],
+   "CineQuanon": [
+    "CineQuanon - Cali",
+    ""
+   ],
+   "Casa Ethel": [
+    "Casa Ethel - Cali",
+    ""
+   ],
+   "SENA Salomia": [
+    "SENA Salomia - Cali",
+    ""
+   ],
+   "Cine Colombia Unicentro": [
+    "Cine Colombia Unicentro - Cali",
+    ""
+   ],
+   "Hotel Obelisco": [
+    "Hotel Obelisco - Cali",
+    ""
+   ],
+   "Bulevar del Río": [
+    "Bulevar del Río - Cali",
+    ""
+   ]
+  },
+  "name": "FICCALI",
+  "displayName": "FICCALI",
+  "fullName": "FICCALI 18 — Festival Internacional de Cine de Cali",
+  "shortName": "FICCALI",
+  "tagline": "Festival Internacional de Cine de Cali",
+  "city": "Cali",
+  "country": "CO",
+  "dates": "16–25 OCT",
+  "dates_en": "OCT 16–25",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "ficcali2026_",
+  "festivalStartStr": "2026-10-16T00:00:00",
+  "festivalEndStr": "2026-10-25T23:00:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "octubre",
+  "dias_vacios": [],
+  "_por_que_sedes": "Tabla canónica: el nombre de la tarjeta → (sede, sala), en el crudo (SEDES). Pines: 28 a mano con dos fuentes, 2 aproximados (Ciudad Pacífica, Alto Meléndez) y la transmisión en línea sin pin. Preguntas al festival en el _pregunta de cada sede del -venues-geo.",
+  "_fuentes_versionadas": {
+   "festivals/staging/ficcali-2026-radar.json": "el volcado del radar #1024, que escribe y relee pipeline/radar.py"
+  }
+ }
+}
