@@ -1,0 +1,158 @@
+{
+ "_provenance": {
+  "fuente": "matriz de curaduría que mandó FILCMAR (6 oct); afiches de su Drive, mirados uno por uno en hoja de contacto",
+  "capturado": "2026-10-06",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche (enriquecer.py)",
+  "genera": "pipeline/filcmar-2026-crudo.py"
+ },
+ "afiches": {
+  "Adiós al amigo": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/adios-al-amigo.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1vLClYGSN48dt46HYbEosHRh_Gy0wb8su"
+  },
+  "Agachar el rostro": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/agachar-el-rostro.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=129hkws6l4AhQaTYB3ny16NF7VD6B3Gbg"
+  },
+  "Andariega": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/andariega.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1QKa0gHj8qtQlJVAvCLmwYf9g_3se_BZJ"
+  },
+  "Aquileo Venganza": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/aquileo-venganza.png",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=16DV-lIO9vOSPQJVWlvymLjKHyPlhx6DL"
+  },
+  "Casi 30": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/casi-30.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1zfxtvcUNgFQBhT5ADhrC6NLbqsRFZr2p"
+  },
+  "Chicha la chicharra": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/chicha-la-chicharra.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1QpgX945CNYXDBnklw-DfeP4lULT6aCjD"
+  },
+  "Desarraigo": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/desarraigo.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=17EHr8PsiFCu5LxklTAmvYsLvbuEuiG2H"
+  },
+  "El cazador": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/el-cazador.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1bzwIXJzkPOD8-UExdKcMSNq6naSi9U9V"
+  },
+  "El día interrumpido": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/el-dia-interrumpido.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1edc4ecBvZCWinAJWc8vZ-qMTUcNHXNmP"
+  },
+  "El espejo de la vida": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/el-espejo-de-la-vida.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1t529HfEIBNyF4nvuat1sX8q7dLw-bHi1"
+  },
+  "El ocaso de los dioses": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/el-ocaso-de-los-dioses.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1IwlfB0pCs8UtybSCmY70JTwWjqAsR0Jg"
+  },
+  "El pesebre": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/presepio.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1MD1PnZHKUlpAFQKg3jDdAoOvYOSmaGLk"
+  },
+  "El vuelo del moscardón": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/el-vuelo-del-moscardon.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1FEe3DHG-TfGWXuOUubaDhO_u7nXsBcFB"
+  },
+  "HDLT": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/hdlt.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1YHboac8QvRexThT7ZD0052JMRD_RsTF2"
+  },
+  "HUSH": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/hush.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1t7-tqrkWh3ru-pVLRzAyd1IsKJS46yrN"
+  },
+  "La corazonada": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/la-corazonada.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1sapIRWB6Ye_Ahcb-lgixVE5brlTeWF4m"
+  },
+  "La danza del caos": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/la-danza-del-caos.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1_us7KFFNT8BGH89I-cOK2YeZ4RvL969W"
+  },
+  "La misteriosa mirada del flamenco": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/la-misteriosa-mirada-del-flamenco.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1NGFhpbdzOBEtQTPNmsLnc8ilkWwoVcGp"
+  },
+  "La paga": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/la-paga.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1n5EMwgowv0hI0fZ5Cv-k0q-eQ7RbNrw0"
+  },
+  "La pecera": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/la-pecera.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=16q3KzbbeuMm3MPfmaBf9Aib_3yLUBFIX"
+  },
+  "Lo demás es ruido": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/lo-demas-es-ruido.png",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1vXF2y3m4TDvsWp5j9CM3ElW4YshwYdu6"
+  },
+  "Lo que queda del mar": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/lo-que-queda-del-mar.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1KMuT3ABXaqNKQO2UN-kBZibLLRqhWYti"
+  },
+  "Merrimundi": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/merrimundi.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1cIGmp5wHVMrlEnE_aGh1RKxiaSn_KTYJ"
+  },
+  "Miguel Ángel, Federico, y el carro que pasó encima de las gafas": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1kjnbHGPSC1bjCYWSaSmul6dXPen-TPMu"
+  },
+  "Mu-Ki-Ra": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/mu-ki-ra.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=13z9sYAkdUKgmzFQBToUxypgCw7IlayVT"
+  },
+  "Para no volver": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/para-no-volver.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=12W3uIPtcAEGpIpP2wKCxDeRSDlZPYROq"
+  },
+  "Petra y el sol": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/petra-y-el-sol.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1rqL1JWkyjYj4jzvyw2lC7hbRuAjEdncJ"
+  },
+  "Pude ver un fantasma desde mi ventana": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/pude-ver-un-fantasma-desde-mi-ventana.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=17vd1k8bYrzomUG-MkZThzxzT8IqVAo4Y"
+  },
+  "Pudor ante el asalto de los ojos furtivos": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1HiW4sSMkuDW4cxIQpprvSs8RwccKtSpb"
+  },
+  "Reverb": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/reverb.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1EUX4zVS8PjYQyd7liTH1zis67mZD10lO"
+  },
+  "Show de Ziggy: La maldición del mariachi bondage": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/el-show-de-ziggy-la-maldicion-del-mariachi-bondage.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1jqhEOlLpmWQVVzqLlCUxZ4H8dhP4VEKe"
+  },
+  "Si no ardemos, cómo iluminar la noche": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/si-no-ardemos-como-iluminar-la-noche.png",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1APjcMAVGCimd9gG84ndf5Bc8UYMVTL-i"
+  },
+  "Sol de niebla": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/sol-de-niebla.webp",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1oXfWkfyzUABbwTtEZV0_Bmd5DTDtIMS4"
+  },
+  "Somnolítico": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/somnolitico.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=19sqTcp8y-ULrh_tl60VMLci6SWniF_iJ"
+  },
+  "Testimonio": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/testimonio.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1a04Hgq9_x1PfEEBr0gajCF4dwLuZXkzE"
+  },
+  "The Raules": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/the-raules.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1eHzpvygaIvl-IRbFX60pUXE57SMiwbUQ"
+  },
+  "Una vez en un cuerpo": {
+   "archivo": "fuentes/filcmar-2026/matriz/posters/una-vez-un-cuerpo.jpg",
+   "fuente": "matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1qPrOLwZrex5a_Pg6sHnlI0XGlVxdENDj"
+  }
+ }
+}

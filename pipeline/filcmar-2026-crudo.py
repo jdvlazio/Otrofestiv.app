@@ -42,6 +42,36 @@ POST = 'Dd-Wc29Dhkd'
 OJOS = f'{REPO}/fuentes/filcmar-2026-ojos-programa.json'
 OCR = f'{REPO}/fuentes/filcmar-2026-ocr-programa.json'
 CATALOGO = f'{REPO}/festivals/staging/filcmar-2026-seleccion-oficial.json'
+# LA MATRIZ DE CURADURÍA QUE MANDÓ EL FESTIVAL (6 oct): sinopsis de 36 obras y
+# los afiches que faltaban. La escribe filcmar-2026-matriz.py.
+MATRIZ = f'{REPO}/festivals/staging/filcmar-2026-matriz.json'
+_mz = json.load(io.open(MATRIZ, encoding='utf-8'))['obras'] if os.path.exists(MATRIZ) else {}
+# la hoja escribe distinto estas: título en el crudo → llave de la hoja
+MATRIZ_ALIAS = {'una vez en un cuerpo': 'una vez un cuerpo', 'el pesebre': 'presepio',
+                'show de ziggy la maldicion del mariachi bondage':
+                    'el show de ziggy la maldicion del mariachi bondage',
+                'mu ki ra': 'mu ki ra'}
+# DURACIÓN: dos fuentes contra una (regla de Juan). Adiós al amigo: lámina
+# 115, matriz y TMDB 118. MU KI RA: lámina 85, matriz 81, TMDB 82 — manda la
+# cifra de la curaduría del festival, que TMDB confirma a un minuto.
+DURACION_MATRIZ = {'adios al amigo': 118, 'mu ki ra': 81}
+
+
+AFICHES = {}   # título publicado → afiche de la matriz; se vuelca a -afiches.json
+
+
+def de_matriz(r):
+    """Sinopsis (la del festival manda) y el afiche que faltaba."""
+    k = plano(r['titulo'])
+    m = _mz.get(MATRIZ_ALIAS.get(k, k)) or {}
+    if m.get('sinopsis'):
+        r['sinopsis'] = m['sinopsis']
+        r['_sinopsis_fuente'] = 'matriz de curaduría del festival (6 oct)'
+    if m.get('afiche'):
+        AFICHES[r['titulo']] = m['afiche']
+    if k in DURACION_MATRIZ:
+        r['duracion_min'] = DURACION_MATRIZ[k]
+    return r
 OUT = f'{REPO}/festivals/staging/filcmar-2026-crudo.json'
 DURACION_POR_DEFECTO = 90
 
@@ -235,8 +265,10 @@ def obra(o, cat):
         # el catálogo trae el crédito completo («Di Cunto, Medrano y Bochard»)
         r.update({k: c[k] for k in ('director', 'pais', 'anio', 'duracion_min') if c.get(k)})
     if t in TITULO_EN_CATALOGO:
-        r['titulo_original'] = TITULO_EN_CATALOGO[t]
-    return {k: v for k, v in r.items() if v}
+        # la lámina del catálogo escribe «Persépio»; la matriz del festival y
+        # el afiche, «Presépio», que es la palabra portuguesa
+        r['titulo_original'] = {'Persépio': 'Presépio'}.get(TITULO_EN_CATALOGO[t], TITULO_EN_CATALOGO[t])
+    return de_matriz({k: v for k, v in r.items() if v})
 
 
 def corto(t, cat):
@@ -247,7 +279,7 @@ def corto(t, cat):
         r['pais'] = 'Colombia'
     if not r.get('director') and c['titulo'] in DIRECTOR_DECLARADO:
         r['director'] = DIRECTOR_DECLARADO[c['titulo']]
-    return r
+    return de_matriz(r)
 
 
 def duracion_sin_dato(funciones):
@@ -339,6 +371,14 @@ def main():
             funciones.append(reg)
 
     duracion_sin_dato(funciones)
+    # LA TABLA DE AFICHES SE GENERA, no se escribe a mano: título final → archivo
+    io.open(f'{REPO}/festivals/staging/{FID}-afiches.json', 'w', encoding='utf-8').write(json.dumps({
+        '_provenance': {'fuente': 'matriz de curaduría que mandó FILCMAR (6 oct); afiches de su Drive, '
+                                  'mirados uno por uno en hoja de contacto',
+                        'capturado': '2026-10-06',
+                        'regla': 'solo donde TMDB y lo ya publicado no tienen afiche (enriquecer.py)',
+                        'genera': 'pipeline/filcmar-2026-crudo.py'},
+        'afiches': dict(sorted(AFICHES.items()))}, ensure_ascii=False, indent=1) + '\n')
     funciones.sort(key=lambda f: (f['dia'], f['hora'], f['sede'], f['titulo']))
     io.open(OUT, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance(
