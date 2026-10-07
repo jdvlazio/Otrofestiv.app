@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festicinepopayan.com, página de programación 2026 (wp-json, id 12543)",
-  "capturado": "2026-10-06",
+  "capturado": "2026-10-07",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime la parrilla; el Auditorio Maya es la sala de la Facultad de Artes de Unicauca.",
@@ -1091,7 +1091,7 @@
      "duration": "18 min",
      "synopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices.",
      "synopsis_lang": "es",
-     "poster": "/assets/siembrafest/hdlt.jpg",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
      "posterSource": "oficial",
      "country": "Colombia",
      "flags": "🇨🇴"
@@ -1627,7 +1627,7 @@
      "director": "Laura Gutiérrez Ardila",
      "year": 2025,
      "duration": "18 min",
-     "poster": "/assets/siembrafest/la-mona.jpg",
+     "poster": "/assets/villadelcine-2026/la-mona.jpg",
      "lbSlug": "heat-wave-2025",
      "tmdb_id": 1444298,
      "synopsis_en": "In the damp and dusty village of La Hondura, La Mona is ready to sacrifice everything to maintain her authority even if loneliness is the price she must pay. Her body, however, refuses to toe the line.",
@@ -1644,8 +1644,6 @@
      "duration": "16 min",
      "synopsis": "En las orillas del río Magdalena, Esther guía a los espíritus de desaparecidos, víctimas de la violencia, mientras buscan reconstruir sus historias interrumpidas y encontrar su lugar entre la vida y la muerte.",
      "synopsis_lang": "es",
-     "poster": "/assets/siembrafest/las-piedras-del-rio.jpg",
-     "posterSource": "oficial",
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -2366,7 +2364,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-06T07:19:24",
+  "fecha": "2026-10-07T15:21:30",
   "plan_sha": "af098517d0317e3e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"

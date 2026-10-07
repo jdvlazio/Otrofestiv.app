@@ -4,17 +4,15 @@
   "capturado": "2026-09-29",
   "metodo": "el mapa lámina→obra es el de fuentes/girardota-2026-competencia-ojos.json, leído a ojo y confirmado por OCR en girardota-2026-crudo.py",
   "descartados": {
-   "La Rebelión de un Fantasma": "la lámina acredita a Andrés Muñoz, que es el productor; publicamos a Flora Rodríguez (web de Popayán). El afiche contradiría la ficha. Decisión de Juan, 29 sep."
+   "La Rebelión de un Fantasma": "la lámina acredita a Andrés Muñoz, que es el productor; publicamos a Flora Rodríguez (web de Popayán). El afiche contradiría la ficha. Decisión de Juan, 29 sep.",
+   "Carola": "la lámina es la tarjeta de la Selección Oficial de Girardota (un fotograma enmarcado), no el afiche de la obra; sin afiche hasta tener el original. Decisión de Juan, 7 oct.",
+   "Elementales": "la lámina es la tarjeta de la Selección Oficial de Girardota (un fotograma enmarcado), no el afiche de la obra; sin afiche hasta tener el original. Decisión de Juan, 7 oct."
   }
  },
  "afiches": {
   "Los Años del Conejo": {
    "lamina": "fuentes/ig/Dd2hcuiHGOC/03.jpg",
    "fuente": "https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 3, Documental)"
-  },
-  "Elementales": {
-   "lamina": "fuentes/ig/Dd2hcuiHGOC/04.jpg",
-   "fuente": "https://www.instagram.com/p/Dd2hcuiHGOC/ (lámina 4, Documental)"
   },
   "Mantener la Democracia Maestro": {
    "lamina": "fuentes/ig/Dd2hcuiHGOC/05.jpg",
@@ -43,10 +41,6 @@
   "Maleza": {
    "lamina": "fuentes/ig/Dd2i8ZAHNDz/05.jpg",
    "fuente": "https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 5, Ficción)"
-  },
-  "Carola": {
-   "lamina": "fuentes/ig/Dd2i8ZAHNDz/06.jpg",
-   "fuente": "https://www.instagram.com/p/Dd2i8ZAHNDz/ (lámina 6, Ficción)"
   },
   "Refracción": {
    "lamina": "fuentes/ig/Dd2i8ZAHNDz/07.jpg",

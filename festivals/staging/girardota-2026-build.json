@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @girardotaescultura — el carrusel de programación (5 láminas)",
-  "capturado": "2026-09-30",
+  "capturado": "2026-10-07",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "Los nueve lugares con el nombre que imprime la lámina, tal cual. Ninguna lámina da dirección.",
@@ -862,9 +862,7 @@
     {
      "title": "Elementales",
      "director": "Camilo Botero Jaramillo",
-     "poster": "/assets/siembrafest/elementales.jpg",
      "synopsis": "ELEMENTALES, rodado en 16mm entre 1954 y 1961, despierta en el espectador aquellas memorias primitivas y emotivas de la infancia, en las que acciones o momentos que podrían ser vistos como cotidianos, se revelan como marcas poderosas de aquello que constituye la primera vez que vimos, sentimos o aprendimos algo. Momentos, acciones, descubrimientos ELEMENTALES.",
-     "posterSource": "oficial",
      "synopsis_lang": "es"
     },
     {
@@ -926,17 +924,15 @@
      "title": "Maleza",
      "director": "Nicolle Estrada Díaz",
      "poster": "/assets/villadelcine-2026/maleza.jpg",
-     "synopsis": "Guiada por el espíritu de su gato fallecido, una sanadora y partera solitaria, dedicada a preservar la vida, sufre una profunda conmoción interior cuando una joven desesperada llega a su puerta. Durante una noche de cruda confrontación y dolor, Alba comprende que ayudar a alguien significa caminar a su lado, no tomar decisiones por esa persona.",
+     "synopsis": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino.",
      "posterSource": "oficial",
      "synopsis_lang": "es"
     },
     {
      "title": "Carola",
      "director": "Violeta Barrios",
-     "poster": "/assets/siembrafest/carola.jpg",
      "tmdb_id": 1497688,
      "synopsis": "Octavio, un anciano solitario y azotado por su pasado, recibe un extraño mensaje de su única compañía: su mula Carola. Para morir en paz, debe reconciliarse con Julián, su hijo a quien no ve desde hace años. Juntos emprenden un viaje marcado por el rencor, el silencio y la posibilidad de sanar lo que parecía roto para siempre.",
-     "posterSource": "oficial",
      "synopsis_lang": "es",
      "duration": "11 min"
     },
@@ -1169,7 +1165,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-09-30T16:04:42",
+  "fecha": "2026-10-07T16:19:39",
   "plan_sha": "89d6e69df8fcc84e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py girardota-2026"

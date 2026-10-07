@@ -624,6 +624,30 @@ apaisado y el `posterSource` NO es `editorial`, está deformado. Aritmética.
 Se salta la obra cuyo sidecar no registre la medida, y dice cuántas examinó:
 un sidecar que deje de escribirla se nota en el número, no en el silencio.
 
+**`[afiche-es-afiche]` — lo que se publica como afiche ES un afiche.**
+
+Auditoría del 7 oct 2026: 10 imágenes en producción que no eran afiches. Nueve
+tarjetas de sección de SiembraFest («Sección | Programa I · Muertos de risa»,
+marcadas `oficial`) heredadas por FILCMAR, Fantasmagoría, Girardota y Popayán,
+y un rectángulo verde con el título que TMDB tenía como afiche en español de
+«La libertad doble». Ninguna etiqueta las delataba: decide la IMAGEN, con un
+criterio único (`pipeline/afiche_criterio.py`) calibrado contra los 973
+afiches locales publicados:
+
+- **tarjeta de solo texto** — menos del 12% de las filas con contenido (el
+  rectángulo da 6%; el afiche real más vacío del corpus, 18%). Se mide en CI;
+- **tarjeta de sección de otro festival** — la OCR lee «Sección | Programa».
+  Solo pesa cuando la imagen es AJENA: en su festival es su lámina. La OCR es
+  de macOS, así que el veredicto se versiona con la huella del archivo en
+  `assets/AFICHES-AJENOS.json` (`scripts/afiches-ajenos.py`), y el guardián
+  exige veredicto «afiche» y huella vigente para todo afiche heredado.
+
+El enriquecido aplica el mismo criterio al elegir: un afiche de TMDB que no
+pasa se reemplaza por otra imagen de la ficha, en un archivo NUEVO (`-v2`),
+porque el service worker guarda /assets/ como inmutable; un ajeno que no pasa
+no se hereda; lo que no cumple queda sin afiche. Regla de Juan: «usemos los
+que cumplan un criterio serio».
+
 **Decimoctavo: `[afiche-cobertura]` — una obra sin afiche lleva el porqué
 escrito.**
 

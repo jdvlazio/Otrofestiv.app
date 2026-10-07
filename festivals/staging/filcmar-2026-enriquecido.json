@@ -309,9 +309,11 @@
      "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
     }
    ],
-   "poster": "/assets/siembrafest/hdlt.jpg",
-   "_verificado": "ya publicada en fantasmagoria-2026: se reusa su afiche",
-   "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+   "_verificado": "ya publicada en fantasmagoria-2026: se reusa su sinopsis",
+   "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices.",
+   "poster": "/assets/filcmar-2026/hdlt.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1YHboac8QvRexThT7ZD0052JMRD_RsTF2"
   },
   {
    "titulo": "La corazonada",
@@ -405,19 +407,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "La pecera",
-   "_ya_publicada": [
-    {
-     "festival": "siembrafest-2026",
-     "titulo": "La pecera",
-     "poster": "/assets/siembrafest/la-pecera.jpg",
-     "posterSource": "oficial"
-    }
-   ],
-   "poster": "/assets/siembrafest/la-pecera.jpg",
-   "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche"
-  },
-  {
    "titulo": "Lo demás es ruido",
    "tmdb_id": 1616861,
    "titulo_original": "Lo demás es ruido",
@@ -475,19 +464,6 @@
    "_sondeado": "2026-10-01",
    "poster": "/assets/filcmar-2026/merrimundi.jpg",
    "posterSource": "tmdb"
-  },
-  {
-   "titulo": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
-   "_ya_publicada": [
-    {
-     "festival": "siembrafest-2026",
-     "titulo": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
-     "poster": "/assets/siembrafest/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
-     "posterSource": "oficial"
-    }
-   ],
-   "poster": "/assets/siembrafest/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
-   "_verificado": "ya publicada en siembrafest-2026: se reusa su afiche"
   },
   {
    "titulo": "Mu-Ki-Ra",
@@ -823,6 +799,18 @@
    "poster": "/assets/filcmar-2026/la-danza-del-caos.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1_us7KFFNT8BGH89I-cOK2YeZ4RvL969W"
+  },
+  {
+   "titulo": "La pecera",
+   "poster": "/assets/filcmar-2026/la-pecera.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=16q3KzbbeuMm3MPfmaBf9Aib_3yLUBFIX"
+  },
+  {
+   "titulo": "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
+   "poster": "/assets/filcmar-2026/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1kjnbHGPSC1bjCYWSaSmul6dXPen-TPMu"
   },
   {
    "titulo": "Reverb",
