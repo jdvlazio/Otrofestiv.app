@@ -119,6 +119,10 @@ def main():
         s = m.group(1).strip()
         if norm(s) in IGNORA:
             continue
+        # LA SALA QUE EL FESTIVAL RETIRÓ, declarada en el plan con su porqué
+        # (`festival.radar_salas_ok`): el radar la leyó antes de que cambiara
+        if norm(s) in {norm(k) for k in ((P.get('festival') or {}).get('radar_salas_ok') or {})}:
+            continue
         # la captura puede quedarse corta («Aula Magistral» por «Aula Magistral
         # 704-M16»): cuenta como presente si una contiene a la otra
         if any(norm(s) in x or x in norm(s) for x in nuestras_salas if x):

@@ -1199,20 +1199,22 @@ export const FESTIVAL_CONFIG={
   'fantasmagoria2026': {
     name:'Fantasmagoría',displayName:'Fantasmagoría',fullName:'Fantasmagoría 8 — Festival Internacional de Cine Fantástico y de Terror de Medellín',shortName:'FANTASMAGORÍA',
     city:'Medellín',country:'CO',
-    dates:'15–25 OCT',dates_en:'OCT 15–25',year:2026,timezoneOffset:'-05:00',
+    // 14–25 OCT: así lo dice su cartelera oficial (cartelerafantasmagoria.fan,
+    // «del 14 al 25 de octubre») y su base v2 abre el 14 con dos actividades
+    dates:'14–25 OCT',dates_en:'OCT 14–25',year:2026,timezoneOffset:'-05:00',
     // EL PÓSTER OFICIAL de la 8.ª edición (@mfantasmagoria p/DayyyJGFK86, lámina 1,
     // obra de Bastián Velásquez). 4:5 estirado a 2:3.
     keyArt:'/assets/keyart/fantasmagoria2026-v1.jpg',
     tagline:'Festival de Cine Fantástico y de Terror',
     // boleta en Colombo Americano, CineProx y MAMM (cobro especial); lo demás, libre
     ticketing_model:'mixed',
-    storageKey:'fantasmagoria2026_',festivalStartStr:'2026-10-15T00:00:00',festivalEndStr:'2026-10-25T23:59:00',
-    festivalDates:{'2026-10-15':'2026-10-15','2026-10-16':'2026-10-16','2026-10-17':'2026-10-17','2026-10-18':'2026-10-18','2026-10-19':'2026-10-19','2026-10-20':'2026-10-20','2026-10-21':'2026-10-21','2026-10-22':'2026-10-22','2026-10-23':'2026-10-23','2026-10-24':'2026-10-24','2026-10-25':'2026-10-25'},
-    days:[{k:'2026-10-15',d:15,lbl:'JUE'},{k:'2026-10-16',d:16,lbl:'VIE'},{k:'2026-10-17',d:17,lbl:'SÁB'},{k:'2026-10-18',d:18,lbl:'DOM'},{k:'2026-10-19',d:19,lbl:'LUN'},{k:'2026-10-20',d:20,lbl:'MAR'},{k:'2026-10-21',d:21,lbl:'MIÉ'},{k:'2026-10-22',d:22,lbl:'JUE'},{k:'2026-10-23',d:23,lbl:'VIE'},{k:'2026-10-24',d:24,lbl:'SÁB'},{k:'2026-10-25',d:25,lbl:'DOM'}],
-    dayKeys:['2026-10-15','2026-10-16','2026-10-17','2026-10-18','2026-10-19','2026-10-20','2026-10-21','2026-10-22','2026-10-23','2026-10-24','2026-10-25'],
-    dayShort:{'2026-10-15':'JUE 15','2026-10-16':'VIE 16','2026-10-17':'SÁB 17','2026-10-18':'DOM 18','2026-10-19':'LUN 19','2026-10-20':'MAR 20','2026-10-21':'MIÉ 21','2026-10-22':'JUE 22','2026-10-23':'VIE 23','2026-10-24':'SÁB 24','2026-10-25':'DOM 25'},
-    dayShort_en:{'2026-10-15':'THU 15','2026-10-16':'FRI 16','2026-10-17':'SAT 17','2026-10-18':'SUN 18','2026-10-19':'MON 19','2026-10-20':'TUE 20','2026-10-21':'WED 21','2026-10-22':'THU 22','2026-10-23':'FRI 23','2026-10-24':'SAT 24','2026-10-25':'SUN 25'},
-    dayLong:{'2026-10-15':'Jueves 15 de octubre','2026-10-16':'Viernes 16 de octubre','2026-10-17':'Sábado 17 de octubre','2026-10-18':'Domingo 18 de octubre','2026-10-19':'Lunes 19 de octubre','2026-10-20':'Martes 20 de octubre','2026-10-21':'Miércoles 21 de octubre','2026-10-22':'Jueves 22 de octubre','2026-10-23':'Viernes 23 de octubre','2026-10-24':'Sábado 24 de octubre','2026-10-25':'Domingo 25 de octubre'},
+    storageKey:'fantasmagoria2026_',festivalStartStr:'2026-10-14T00:00:00',festivalEndStr:'2026-10-25T23:59:00',
+    festivalDates:{'2026-10-14':'2026-10-14','2026-10-15':'2026-10-15','2026-10-16':'2026-10-16','2026-10-17':'2026-10-17','2026-10-18':'2026-10-18','2026-10-19':'2026-10-19','2026-10-20':'2026-10-20','2026-10-21':'2026-10-21','2026-10-22':'2026-10-22','2026-10-23':'2026-10-23','2026-10-24':'2026-10-24','2026-10-25':'2026-10-25'},
+    days:[{k:'2026-10-14',d:14,lbl:'MIÉ'},{k:'2026-10-15',d:15,lbl:'JUE'},{k:'2026-10-16',d:16,lbl:'VIE'},{k:'2026-10-17',d:17,lbl:'SÁB'},{k:'2026-10-18',d:18,lbl:'DOM'},{k:'2026-10-19',d:19,lbl:'LUN'},{k:'2026-10-20',d:20,lbl:'MAR'},{k:'2026-10-21',d:21,lbl:'MIÉ'},{k:'2026-10-22',d:22,lbl:'JUE'},{k:'2026-10-23',d:23,lbl:'VIE'},{k:'2026-10-24',d:24,lbl:'SÁB'},{k:'2026-10-25',d:25,lbl:'DOM'}],
+    dayKeys:['2026-10-14','2026-10-15','2026-10-16','2026-10-17','2026-10-18','2026-10-19','2026-10-20','2026-10-21','2026-10-22','2026-10-23','2026-10-24','2026-10-25'],
+    dayShort:{'2026-10-14':'MIÉ 14','2026-10-15':'JUE 15','2026-10-16':'VIE 16','2026-10-17':'SÁB 17','2026-10-18':'DOM 18','2026-10-19':'LUN 19','2026-10-20':'MAR 20','2026-10-21':'MIÉ 21','2026-10-22':'JUE 22','2026-10-23':'VIE 23','2026-10-24':'SÁB 24','2026-10-25':'DOM 25'},
+    dayShort_en:{'2026-10-14':'WED 14','2026-10-15':'THU 15','2026-10-16':'FRI 16','2026-10-17':'SAT 17','2026-10-18':'SUN 18','2026-10-19':'MON 19','2026-10-20':'TUE 20','2026-10-21':'WED 21','2026-10-22':'THU 22','2026-10-23':'FRI 23','2026-10-24':'SAT 24','2026-10-25':'SUN 25'},
+    dayLong:{'2026-10-14':'Miércoles 14 de octubre','2026-10-15':'Jueves 15 de octubre','2026-10-16':'Viernes 16 de octubre','2026-10-17':'Sábado 17 de octubre','2026-10-18':'Domingo 18 de octubre','2026-10-19':'Lunes 19 de octubre','2026-10-20':'Martes 20 de octubre','2026-10-21':'Miércoles 21 de octubre','2026-10-22':'Jueves 22 de octubre','2026-10-23':'Viernes 23 de octubre','2026-10-24':'Sábado 24 de octubre','2026-10-25':'Domingo 25 de octubre'},
     prioLimit:5,
     films:null,posters:null,lbSlugs:{}
   },
@@ -1341,6 +1343,7 @@ export const SECTION_ARCHETYPES = {
   '🦯 Muestra especial': 'Especiales / Eventos',   // autodescripción para personas con discapacidad visual
   '📚 Noche de Librerías': 'Especiales / Eventos',
   '📼 Retrospectiva Cristian Ponce': 'Retrospectiva / Tributo',
+  '🗃️ Archivo Fantasmagoría': 'Retrospectiva / Tributo',   // Fantasmagoría, base v2 (Jairo Pinilla)
   '🔦 Retrospectiva Tilman Singer': 'Retrospectiva / Tributo',
   '🌶️ Sangre Latina': 'Perspectivas / Miradas',
   '🏰 Selección Asedio: Las murallas del miedo': 'Perspectivas / Miradas',

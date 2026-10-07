@@ -1,8 +1,4 @@
 {
- "_provenance": {
-  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
-  "capturado": "2026-09-30"
- },
  "Centro Colombo Americano": {
   "lat": 6.2499694,
   "lng": -75.5626063,
@@ -154,5 +150,30 @@
   "lng": null,
   "_prec": "manual",
   "_nota": "SEDE DE TRANSMISIÓN, sin pin a propósito ([sede-con-pin]): las charlas en línea se ven desde donde sea y el plan no les suma traslado. Canal: https://www.twitch.tv/sociedadfantasmagoria"
+ },
+ "Biblioteca Comfenalco Castilla": {
+  "lat": 6.2898424,
+  "lng": -75.5702767,
+  "address": "Cra. 65 #95-57, Castilla",
+  "_prec": "manual",
+  "_nota": "Google Maps «Bibliotecas Publicas Castilla Comfenalco» y OSM «Biblioteca Pública Comfenalco Castilla» en el mismo punto (3 m). Sede nueva de la base v2 (6 oct)."
+ },
+ "Casa Libre": {
+  "lat": 6.2429133,
+  "lng": -75.5951382,
+  "address": "Cra. 78A #38-74, Laureles",
+  "_prec": "manual",
+  "_nota": "Google Maps «Casa libre - Librerías y café»; OSM no tiene el local, sí la Carrera 78A en Laureles. La base del festival: «Librerías y café (Laureles)»."
+ },
+ "Instituto Cultural Alexander von Humboldt": {
+  "lat": 6.2281458,
+  "lng": -75.6022406,
+  "address": "Calle 27 # 81-17, Belén",
+  "_prec": "manual",
+  "_nota": "Dirección de su web (avhmedellin.co/contacto) y pin de Google Maps; Nominatim da la Calle 27 en La Palma a 95 m. OSM tiene el local en una dirección vieja de Laureles (Calle 48B #79-32): descartada."
+ },
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-10-07"
  }
 }
