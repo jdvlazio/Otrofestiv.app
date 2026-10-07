@@ -154,8 +154,15 @@ export function _secLabel(sec){
 // Igual que _secLabel pero PRESERVANDO el emoji líder (para listas que hoy
 // muestran `f.section` crudo, p.ej. plist-sec / dropdown de filtro). En ES
 // reproduce el string original; en EN devuelve "<emoji> <label EN>".
+// Filtros de función que viven en el desplegable de Sección (7 oct 2026, Juan,
+// opción B): no son secciones del festival sino una propiedad de la función.
+// Claves con doble guion bajo: ninguna sección real empieza así.
+export const SEC_GRATIS='__gratis', SEC_QA='__qa';
+export const SEC_FILTRO_EMOJI={[SEC_GRATIS]:'🎟️',[SEC_QA]:'🎤'};
 export function _secLabelFull(sec){
   if(!sec) return '';
+  if(sec===SEC_GRATIS) return '🎟️ '+t('filter_gratis');
+  if(sec===SEC_QA) return '🎤 '+t('filter_con_qa');
   const first=sec.split(' ')[0];
   const isEmoji=/^\p{Emoji}/u.test(first)&&!/^[A-Za-z0-9.]/u.test(first);
   const label=_secLabel(sec);

@@ -549,6 +549,16 @@ export const SEDE_SEP='\u001F';
 // edificio (Cinemateca Sala 2/3/Capital → «Cinemateca de Bogotá»; las 5 de Plaza
 // Bocagrande). Ahí agrupar es lo correcto: quien elige el edificio quiere todas
 // sus salas. La ciudad separa; el short agrupa.
+// secMatches — DUEÑO ÚNICO del predicado del filtro de Sección. Además de la
+// sección del festival acepta los dos filtros de función (Gratis, Con Q&A), que
+// se eligen en el mismo desplegable y son excluyentes con una sección.
+export function secMatches(f, sel){
+  if(!sel||sel==='all') return true;
+  if(sel==='__gratis') return f.is_free===true;
+  if(sel==='__qa') return !!f.has_qa;
+  return f.section===sel;
+}
+
 export function venueMatches(v, sel){
   if(sel==='all') return true;
   if(sel&&sel.startsWith('city:')) return (vcfg(v).city||'')===sel.slice(5);

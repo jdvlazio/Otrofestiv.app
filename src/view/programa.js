@@ -12,7 +12,7 @@
 
 import { NOTICES, PALMARES, SECTION_ORDER_LIST, _DEFAULT_FEST_ID } from '../config.js';
 import { ICONS, _buildPosterV16, _secLabel, _secLabelFull, _sectionColor, escXML, makeProgramPoster, parseProgramTitle } from './components.js';
-import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, venueCity, programParts, isCitySel, venueSelLabel,
+import { _dayChips, _getItemPoster, _metaBadges, _plistPosterHtml, _programaStack, dayLabel, durFmt, emptyState, getFilmPoster, isNowShowing, isQaOnlyNow, posterParts, sala, vcfg, venueMatches, secMatches, venueCity, programParts, isCitySel, venueSelLabel,
  abiertaLabel } from './helpers.js';
 import { festivalEnded, toMin } from '../domain/time.js';
 import { screeningPassed } from '../domain/film.js';
@@ -164,7 +164,7 @@ function renderProgramaListHTML(state){
   const {FILMS, watchlist} = state.snapshot();
   let films=FILMS.filter(f=>f.day===activeDay);
   if(activeVenue!=='all') films=films.filter(f=>venueMatches(f.venue,activeVenue));
-  if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
+  if(activeSec!=='all') films=films.filter(f=>secMatches(f,activeSec));
   films.sort((a,b)=>{
     const td=toMin(a.time)-toMin(b.time);
     if(td!==0) return td;
@@ -329,7 +329,8 @@ function _renderExploreLista(){
 function _filtrarEntradas(titleMap){
   let entries=Object.values(titleMap);
   if(activeSec!=='all'){
-    entries=entries.filter(e=>e.film.section===activeSec);
+    // Gratis y Q&A son de la FUNCIÓN: la obra entra si alguna de las suyas cumple.
+    entries=entries.filter(e=>(e.screenings&&e.screenings.length?e.screenings:[e.film]).some(sc=>secMatches({...e.film,...sc},activeSec)));
   }
   if(activeVenue!=='all'){
     entries=entries.filter(e=>e.screenings.some(s=>{
@@ -550,7 +551,7 @@ export function render(){
   lugarClose(); // refresh label if open
   let films=FILMS.filter(f=>f.day===activeDay);
   if(activeVenue!=='all') films=films.filter(f=>venueMatches(f.venue,activeVenue));
-  if(activeSec!=='all') films=films.filter(f=>f.section===activeSec);
+  if(activeSec!=='all') films=films.filter(f=>secMatches(f,activeSec));
   films.sort((a,b)=>toMin(a.time)-toMin(b.time));
   const cntEl=document.getElementById('cnt');
   cntEl.innerHTML=''; // count eliminado — redundante con lugar-btn y chips

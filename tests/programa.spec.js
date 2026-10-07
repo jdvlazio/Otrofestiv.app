@@ -3737,3 +3737,37 @@ test('T201 — Cómo llegar abre el mapa de cada plataforma', async ({ page }) =
   const ios = await abrir('Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148');
   expect(ios, 'iPhone → Apple Maps').toContain('maps.apple.com');
 });
+
+// P-GQ — Gratis y Con Q&A en el desplegable de Sección (7 oct 2026, Juan, opción B).
+// BIFF es mixto (17 gratis de 158) y tiene Q&A: las dos opciones aparecen arriba,
+// con el conteo del día, y filtran por la FUNCIÓN. Villa del Cine es todo gratis
+// y sin Q&A: ninguna de las dos aparece — no separarían nada.
+test('P-GQ — Gratis y Con Q&A filtran por función y solo aparecen donde separan algo', async ({ page }) => {
+  await enterFestival(page, 'biff2026', '2026-10-09T10:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    document.getElementById('seccion-btn').click(); await w(500);
+    const opts = [...document.querySelectorAll('#seccion-drop .lugar-opt')].map(e => e.dataset.s);
+    const cntQa = +document.querySelector('#seccion-drop .lugar-opt[data-s="__qa"] .lugar-cnt').textContent;
+    document.querySelector('#seccion-drop .lugar-opt[data-s="__qa"]').click(); await w(1200);
+    const vis = [...document.querySelectorAll('#programa-content [data-title], [data-title]')]
+      .filter(e => e.getBoundingClientRect().height > 0).map(e => e.dataset.title);
+    const tit = [...new Set(vis)];
+    const esperadas = FILMS.filter(f => f.day === activeDay && f.has_qa).length;
+    return { opts: opts.slice(0, 3), cntQa, esperadas, n: tit.length,
+      todasQa: tit.every(t => FILMS.some(f => f.title === t && f.day === activeDay && f.has_qa)) };
+  });
+  expect(r.opts, 'arriba: Todo, Gratis y Con Q&A').toEqual(['all', '__gratis', '__qa']);
+  expect(r.cntQa, 'el conteo es el de funciones con Q&A del día').toBe(r.esperadas);
+  expect(r.todasQa, 'la lista filtrada solo trae funciones con Q&A').toBe(true);
+  expect(r.n, 'y las trae todas').toBe(r.esperadas);
+
+  await enterFestival(page, 'villadelcine2026', '2026-10-14T10:00:00-05:00');
+  const v = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    document.getElementById('seccion-btn').click(); await w(500);
+    return [...document.querySelectorAll('#seccion-drop .lugar-opt')].map(e => e.dataset.s)
+      .filter(s => s === '__gratis' || s === '__qa');
+  });
+  expect(v, 'todo gratis y sin Q&A: no aparece ninguna de las dos').toEqual([]);
+});

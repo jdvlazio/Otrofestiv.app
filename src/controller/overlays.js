@@ -5,8 +5,8 @@
 // globalThis bridge. Roster/viewstate vía bridge.
 
 import { FILM_CATEGORY_LABEL, FILM_CATEGORY_ORDER, SECTION_ORDER_LIST } from '../config.js';
-import { ICONS, _secLabelFull, parseProgramTitle } from '../view/components.js';
-import { emptyState, getFilmPoster, vcfg, venueMatches, isCitySel, festivalCities, SEDE_SEP } from '../view/helpers.js';
+import { ICONS, _secLabelFull, parseProgramTitle, SEC_GRATIS, SEC_QA, SEC_FILTRO_EMOJI } from '../view/components.js';
+import { emptyState, getFilmPoster, vcfg, venueMatches, isCitySel, festivalCities, SEDE_SEP, secMatches } from '../view/helpers.js';
 import { storage } from '../storage/storage.js';
 import { _renderProgramaContent, lugarClose, lugarOutside, render } from '../view/programa.js';
 import { t } from '../i18n/i18n.js';
@@ -94,6 +94,20 @@ function seccionOpen(){
     +'<span>'+t('filter_todo_programa')+'</span>'
     +'</div>';
 
+  // Gratis y Con Q&A arriba, antes de las secciones (opción B, Juan 7 oct).
+  // Gratis solo en un festival MIXTO —con todo gratis no separaría nada— y
+  // cada uno solo si el festival tiene alguna; con 0 en este día se atenúa.
+  const _reales=FILMS.filter(f=>!f.info&&f.day&&f.time);
+  const _hayLibre=_reales.some(f=>f.is_free===true), _hayPaga=_reales.some(f=>f.is_free!==true);
+  const _filtros=[];
+  if(_hayLibre&&_hayPaga) _filtros.push(SEC_GRATIS);
+  if(_reales.some(f=>f.has_qa)) _filtros.push(SEC_QA);
+  _filtros.forEach(k=>{
+    const n=_filasQueVeras(films.filter(f=>secMatches(f,k)));
+    html+=_opt(k,n,activeSec===k).replace('class="lugar-opt','class="lugar-opt'+(n?'':' vacia'));
+  });
+  if(_filtros.length) html+='<div class="sec-drop-sep"></div>';
+
   const hasCategories=Object.keys(secCatMap).length>0;
   const orderedSecs=Object.keys(secMap).sort((a,b)=>{
     const ia=SECTION_ORDER_LIST.indexOf(a),ib=SECTION_ORDER_LIST.indexOf(b);
@@ -160,6 +174,7 @@ function _seccionLabel(sec){
   // Botón mode bar: solo el emoji que ya viene en el nombre de sección
   // Las secciones tienen formato "🏆 Nombre" en todos los festivales
   if(!sec||sec==='all') return t('label_seccion');
+  if(SEC_FILTRO_EMOJI[sec]) return SEC_FILTRO_EMOJI[sec];
   return sec.match(/^\S+/)?.[0] || sec.slice(0,4);
 }
 
