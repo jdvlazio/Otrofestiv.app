@@ -329,7 +329,17 @@ function _dropFromPlan(title){
   _ctaRemovedVisible=true;
   if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
   _ctaRemovedTimer=setTimeout(()=>{_ctaRemovedVisible=false;renderAgenda();},6000);
-  renderAgenda();showToast(t('toast_fuera_plan'),'info');
+  renderAgenda();
+  // Deshacer en vez de «¿seguro?» (7 oct 2026, Juan): quitar es un toque y el aviso
+  // da 6 s de vuelta atrás. Se repone el Plan TAL CUAL estaba (snapshot inmutable)
+  // y se olvida el recuerdo de sugerencia que el quitar acaba de dejar.
+  showActionToast(t('toast_fuera_plan'),t('cta_deshacer'),()=>{
+    commitPlan(()=>savedAgenda);
+    state.update('lastRemovedSlots', arr => arr.filter(r=>r._title!==title));
+    saveLastSlot();saveSavedAgenda();
+    _ctaRemovedVisible=false;if(_ctaRemovedTimer) clearTimeout(_ctaRemovedTimer);
+    renderAgenda();
+  },6000);
 }
 
 export function removeFromAgenda(title){
@@ -342,6 +352,9 @@ export function removeFromAgenda(title){
   // para un taller: se quitaron de ahí justamente para que el bloque no se rompa.
   const _rec=(FILMS||[]).filter(f=>f.title===title&&f.is_recurring&&f.day&&f.time).length;
   const _cuerpo=_rec>1?t('bloque_quitar_aviso',{n:_rec}):t('plan_restaurar_suger');
+  // Solo pregunta cuando quitar hace MÁS de lo que parece: un taller sale con
+  // todas sus sesiones. Lo demás se quita directo, con Deshacer en el aviso.
+  if(_rec<=1){ _dropFromPlan(title); return; }
   showActionModal(t('plan_quitar_plan'),`<div class="cm-subject">${_s}</div><div>${_cuerpo}</div>`,t('misc_sacar'),()=>_dropFromPlan(title));
 }
 

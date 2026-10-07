@@ -116,7 +116,7 @@ import {
 
 // ── Step 7d-2: controller/overlays.js — seccion/search/lugar dropdowns. ──────
 import {
-  seccionClose, seccionToggle, searchOpen, searchClose, searchPositionOverlay, searchQuery, lugarOpen, lugarToggle,
+  seccionClose, seccionToggle, searchOpen, searchClose, searchPositionOverlay, searchQuery, searchPersona, lugarOpen, lugarToggle,
 } from './controller/overlays.js';
 
 // ── Step 7d-3: controller/handlers.js — mutators+filters+composites. ─────────
@@ -248,6 +248,9 @@ const ACTION_REGISTRY = {
   openCombinedFilmSheet: (el)    => _openCombinedFilmSheet(JSON.parse(el.dataset.film)),
   searchOpenFilm:        (el)    => _searchOpenFilm(el.dataset.title),
   searchOpenCorto:       (el)    => _searchOpenCorto(el.dataset.title, el.dataset.country, el.dataset.dur, el.dataset.section, el.dataset.flags),
+  searchPersona:         (el)    => searchPersona(el.dataset.name),
+  searchVenue:           (el)    => { searchClose(); filterByVenue(el.dataset.venue); },
+  searchDay:             (el)    => { searchClose(); filterByDay(el.dataset.day); },
 
   // ── C: Navigation (12) ──
   switchMainNav:       (el)    => switchMainNav(el.dataset.nav),

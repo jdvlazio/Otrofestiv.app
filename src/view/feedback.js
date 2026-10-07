@@ -27,6 +27,7 @@ export function _toastArriba(t){
 export function showToast(msg,type='info',duration=2800){
   let t=document.getElementById('prio-toast');
   if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
+  t.setAttribute('role','status');t.setAttribute('aria-live','polite');
   t.className='prio-toast '+type;_toastArriba(t);t.innerHTML=msg;t.style.opacity='1';t.style.pointerEvents='none';
   clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';},duration);
 }

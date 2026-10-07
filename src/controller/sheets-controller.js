@@ -1561,7 +1561,7 @@ export function showActionToast(msg,actionLabel,actionFn,duration=4000){
   _toastActionFn=actionFn;
   let t=document.getElementById('prio-toast');
   if(!t){t=document.createElement('div');t.id='prio-toast';document.body.appendChild(t);}
-  t.className='prio-toast action';_toastArriba(t);
+  t.className='prio-toast action';t.setAttribute('role','status');t.setAttribute('aria-live','polite');_toastArriba(t);
   t.innerHTML=`<span>${msg}</span><button class="toast-action-btn" data-action="dismissToastAction">${actionLabel}</button>`;
   t.style.opacity='1';t.style.pointerEvents='all';
   clearTimeout(t._to);t._to=setTimeout(()=>{t.style.opacity='0';t.style.pointerEvents='none';},duration);
