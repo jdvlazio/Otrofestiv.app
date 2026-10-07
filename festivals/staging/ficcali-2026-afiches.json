@@ -1,0 +1,306 @@
+{
+ "_provenance": {
+  "fuente": "ficcali.com, biblioteca de medios (API REST `media`, «poster-<obra>»)",
+  "capturado": "2026-10-07",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche",
+  "genera": "pipeline/ficcali-2026-afiches.py"
+ },
+ "afiches": {
+  "Afilando memoria": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-afilando-memoria.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-afilando-memoria-scaled.webp (1810×2560)"
+  },
+  "Agua fría": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-agua-fria.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-agua-fria-scaled.webp (1792×2560)"
+  },
+  "Aguapanela": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-aguapanela.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-aguapanela.jpg (639×800)"
+  },
+  "Ahumadora": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-ahumadora.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-ahumadora.jpg (855×1199)"
+  },
+  "Alivios": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-alivios.png",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-alivios.png (563×773)"
+  },
+  "Amélie y los secretos de la lluvia": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-amelie.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-amelie-scaled.webp (1792×2560)"
+  },
+  "An Incomplete Calendar": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-an-incomplete-calendar.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-an-incomplete-calendar.webp (1500×2150)"
+  },
+  "Arco": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-arco.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-arco-scaled.webp (1728×2560)"
+  },
+  "Azotea": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-azote.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-azote.webp (1024×1536)"
+  },
+  "Bertha": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-bertha.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-bertha.jpg (1190×1684)"
+  },
+  "Boato": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-boato.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-boato.webp (1030×1527)"
+  },
+  "Boca Vieja": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-boca-vieja.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-boca-vieja.webp (1625×2301)"
+  },
+  "Chaika": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-chaika.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-chaika-scaled.webp (1792×2560)"
+  },
+  "De nuevo al final": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-de-nuevo-al-final.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-de-nuevo-al-final.jpg (1120×1600)"
+  },
+  "Desde la otra orilla": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-desde-la-otra-orilla.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-desde-la-otra-orilla.webp (1122×1402)"
+  },
+  "Después de las seis": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-despues-de-las-seis.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-despues-de-las-seis.webp (992×1488)"
+  },
+  "Después de tanto amor": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-despues-de-tanto-amor.jpeg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-despues-de-tanto-amor.jpeg (904×1280)"
+  },
+  "El bitcoin de oro": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-el-bitcoin-de-oro.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-el-bitcoin-de-oro-scaled.webp (1704×2560)"
+  },
+  "El maestro de la piqueria": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-el-maestro-de-la-piqueria.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-el-maestro-de-la-piqueria.jpg (592×842)"
+  },
+  "El mundo de Humberto": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-el-mundo-de-humberto.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-el-mundo-de-humberto.webp (1170×1727)"
+  },
+  "El viaje": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-el-viaje.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-el-viaje-scaled.jpg (1725×2560)"
+  },
+  "Ellas, gardiennes de l’Amazonie": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-ellas.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-ellas.jpg (842×1191)"
+  },
+  "Filme Pin": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-filme-pin.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-filme-pin.jpg (1417×1984)"
+  },
+  "Flamencoterapia": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-flomencoterapia.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-flomencoterapia.jpg (832×1286)"
+  },
+  "Futuros luminosos": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-futuros-luminosos.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-futuros-luminosos.webp (1444×1985)"
+  },
+  "Gremlins": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-gremlins.jpeg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-gremlins.jpeg (465×659)"
+  },
+  "Gris": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-gris.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-gris.webp (840×1200)"
+  },
+  "Héroes del silencio": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-heroes-del-silencio.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-heroes-del-silencio-scaled.webp (1776×2560)"
+  },
+  "I Built a Rocket Imagining your Arrival": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-i-built-a-rocket-imagining-your-arrival.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-i-built-a-rocket-imagining-your-arrival-scaled.webp (1814×2560)"
+  },
+  "Iluminada": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-iluminada.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-iluminada-scaled.webp (1805×2560)"
+  },
+  "Iyeba pôrã": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-iyeba-pora.jpeg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-iyeba-pora.jpeg (1066×1599)"
+  },
+  "Jiru luiai": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-jiru-iuiai.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-jiru-iuiai-scaled.webp (2048×2560)"
+  },
+  "Khazana": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-khazana.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-khazana.jpg (1075×1536)"
+  },
+  "Kiki: entregas a domicilio": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-kiki-entregas-a-domicilio-2.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-kiki-entregas-a-domicilio.webp (992×1417)"
+  },
+  "Killah": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-killah.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-killah.webp (1024×1536)"
+  },
+  "Kuagro": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-kuagro.jpeg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-kuagro.jpeg (1131×1600)"
+  },
+  "La María": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-la-maria.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-la-maria-scaled.webp (1707×2560)"
+  },
+  "La fuga": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-la-fuga.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-la-fuga.jpg (1081×1921)"
+  },
+  "La gran hazaña": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-la-gran-hazana.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-la-gran-hazana.webp (840×1200)"
+  },
+  "La línea del mar": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-linea-del-mar.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-linea-del-mar-scaled.webp (1728×2560)"
+  },
+  "La mansión de Araucaima": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-la-mansion-de-araucaima.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-la-mansion-de-araucaima.jpg (1000×1429)"
+  },
+  "La tinaja": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-la-tinaja.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-la-tinaja-scaled.webp (1924×2560)"
+  },
+  "Las pesadillas del siervo": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-las-pesadillas-del-siervo.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-las-pesadillas-del-siervo-scaled.webp (1707×2560)"
+  },
+  "Luis Tercero": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-luis-tercero.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-luis-tercero.jpg (595×842)"
+  },
+  "Mi vecino Totoro": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-mi-vecino-totoro.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-mi-vecino-totoro-scaled.webp (1792×2560)"
+  },
+  "Monsters, Inc.": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-monsters-inc.jpeg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-monsters-inc.jpeg (365×547)"
+  },
+  "Mu-ki-ra": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-mukira.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-mukira.webp (1500×2150)"
+  },
+  "Muchas, muchas gracias": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-muchas-muchas-gracias.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-muchas-muchas-gracias.jpg (1080×1543)"
+  },
+  "Muiyukuna: Relatos de la chagra viva": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-muiyukuna.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-muiyukuna.webp (1587×2245)"
+  },
+  "Namtrik, fogones lingüísticos": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-namtrik.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-namtrik.jpg (780×1120)"
+  },
+  "Niñxs": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-ninxs.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-ninxs-scaled.webp (1800×2560)"
+  },
+  "No me devoro-PC6. La gula": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-no-me-devoro-pc6-la-gula.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-no-me-devoro-pc6-la-gula.webp (1587×2245)"
+  },
+  "Notre corps": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-notre-corps.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-notre-corps.jpg (1500×2122)"
+  },
+  "Nuestro cuerpo es una estrella que se expande": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-nuestro-cuerpo-es-una-estrella-que-se-expande.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-nuestro-cuerpo-es-una-estrella-que-se-expande-scaled.webp (1792×2560)"
+  },
+  "Ona": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-ona.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-ona-scaled.webp (1706×2560)"
+  },
+  "Pajariscopio": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-pajariscopio.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-pajariscopio.webp (1414×2000)"
+  },
+  "Primer amor": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-primer-amor.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-primer-amor-scaled.webp (1931×2560)"
+  },
+  "Princesa burro": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-donkey-princess.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-donkey-princess-scaled.jpg (1792×2560)"
+  },
+  "Pueblo Viejo, guardianes de la montaña": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-pueblo-viejo.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-pueblo-viejo-scaled.webp (1792×2560)"
+  },
+  "Quinto primera": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-quinto-primera.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-quinto-primera.jpg (1587×2245)"
+  },
+  "Refracción": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-refraccion.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-refraccion-scaled.webp (1728×2560)"
+  },
+  "Relicto": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-relicto.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-relicto.webp (1080×1440)"
+  },
+  "Reloj": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-reloj.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-reloj.webp (1587×2245)"
+  },
+  "Seis meses en el edificio rosa con azul": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-seis-meses-en-el-edificio-rosa-con-azul.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-seis-meses-en-el-edificio-rosa-con-azul.jpg (1000×1412)"
+  },
+  "Siempre soy tu animal materno": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-forever-your-maternal-animal.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-forever-your-maternal-animal-scaled.webp (1792×2560)"
+  },
+  "Todo comenzó por el fin": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-todo-comenzo-por-el-fin.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-todo-comenzo-por-el-fin.jpg (1080×1543)"
+  },
+  "Tuktu, Padre Maíz": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-tuktu.jpeg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-tuktu.jpeg (1149×1600)"
+  },
+  "Vértigo": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-vertigo.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-vertigo.jpg (1810×2560)"
+  },
+  "Y el río lloró": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-y-el-lloro.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-y-el-lloro-scaled.webp (1862×2560)"
+  },
+  "Ya se ven los tigres en la lluvia": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-ya-se-ven-los-tigres-en-la-lluvia.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-ya-se-ven-los-tigres-en-la-lluvia-scaled.webp (1829×2560)"
+  },
+  "¿Dónde está Richard?": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-donde-esta-richard.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-donde-esta-richard.jpg (595×842)"
+  },
+  "Álbum de familia": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-album-de-familia.webp",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-album-de-familia-scaled.webp (1792×2560)"
+  },
+  "Árbol en pie": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-arbol-en-pie.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-arbol-en-pie.jpg (600×800)"
+  },
+  "Écrire la vie: Annie Ernaux racontée par des lycéennes et des lycéens": {
+   "archivo": "fuentes/ficcali-2026/afiches/poster-ecrire-la-vie.jpg",
+   "fuente": "ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-ecrire-la-vie.jpg (1000×1250)"
+  }
+ }
+}
