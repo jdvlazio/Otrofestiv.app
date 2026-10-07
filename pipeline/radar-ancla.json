@@ -1,0 +1,908 @@
+{
+ "_que_es": "LISTA ANCLA del radar: los festivales de cine de Colombia que no pueden faltar. Nace el 7 oct 2026 porque el radar descubría solo con el calendario de Proimágenes y se le escapó FICCALI (no está ahí), igual que Ojo al Sancocho, Cine a la Calle, MIDBO y el Bogotá Horror Film Festival.",
+ "_como_se_usa": "Cada festival se revisa ~90 días antes de su mes habitual: si no tiene issue de radar, se abre. Todo festival que publicamos entra aquí para el año siguiente. Datos verificados en la web oficial o prensa; las fuentes van por entrada.",
+ "_revisada": "2026-10-07",
+ "festivales": [
+  {
+   "id": "ficci",
+   "nombre": "Festival Internacional de Cine de Cartagena de Indias",
+   "sigla": "FICCI",
+   "ciudad": "Cartagena",
+   "mes_habitual": "abril",
+   "fechas_2026": "14–19 ABR 2026 (65); 66ª anunciada 6–11 ABR 2027",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://ficcifestival.com/",
+   "instagram": "@ficcifestival",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://ficcifestival.com/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=5",
+    "https://www.eltiempo.com/cultura/cine-y-tv/el-festival-de-cine-de-cartagena-anuncio-las-fechas-de-su-edicion-66-en-2027-sera-del-6-al-11-de-abril-3564683"
+   ],
+   "notas": "En la app como ficci65 (archivado). FICCI 66: 6–11 ABR 2027, convocatoria abierta."
+  },
+  {
+   "id": "biff",
+   "nombre": "Bogota International Film Festival",
+   "sigla": "BIFF",
+   "ciudad": "Bogotá",
+   "mes_habitual": "octubre",
+   "fechas_2026": "8–14 OCT 2026 (12ª)",
+   "estado": "anunciado 2026 (8–14 OCT)",
+   "programacion_url": "https://biff.co/documentos/Programacion_BIFF_12_DIGITAL.pdf",
+   "web": "https://biff.co/",
+   "instagram": "@biffcol",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://biff.co/",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/985"
+   ],
+   "notas": "Publicado (biff2026). Issue #985 abierto."
+  },
+  {
+   "id": "ficcali",
+   "nombre": "Festival Internacional de Cine de Cali",
+   "sigla": "FICCALI",
+   "ciudad": "Cali",
+   "mes_habitual": "octubre",
+   "fechas_2026": "Lanzamiento 3 OCT; núcleo 16–25 OCT; funciones listadas hasta 27 OCT 2026 (18ª)",
+   "estado": "anunciado 2026 (3–27 OCT, núcleo 16–25 OCT)",
+   "programacion_url": "https://ficcali.com/programacion-ficcali-2026/",
+   "web": "https://ficcali.com/",
+   "instagram": "@festivaldecinecali",
+   "en_otrofestiv": "publicado (issue #1024)",
+   "fuentes": [
+    "https://ficcali.com/",
+    "https://ficcali.com/programacion-ficcali-2026/",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/1024",
+    "https://90minutos.co/cali/el-ficcali-proyeccion-en-la-tertulia-01-10-2026/"
+   ],
+   "notas": "No figura en el calendario de Proimágenes 2026 (el hueco que motivó esta lista). Montado en la rama data/ficcali-2026, aún NO en main. Prensa da 16–25 o 16–28 OCT; la web lista funciones del 3 al 27 OCT."
+  },
+  {
+   "id": "bogoshorts",
+   "nombre": "BOGOSHORTS — Bogotá Short Film Festival",
+   "sigla": "BOGOSHORTS",
+   "ciudad": "Bogotá",
+   "mes_habitual": "diciembre",
+   "fechas_2026": "1–8 DIC 2026 (24ª)",
+   "estado": "anunciado 2026 (1–8 DIC)",
+   "programacion_url": null,
+   "web": "https://festival.bogoshorts.com/",
+   "instagram": "@bogoshorts",
+   "en_otrofestiv": "issue #575",
+   "fuentes": [
+    "https://festival.bogoshorts.com/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/575"
+   ],
+   "notas": "Programación aún no publicada; «Noche de la Revelación» (anuncio de selección) el 23 OCT."
+  },
+  {
+   "id": "eurocine",
+   "nombre": "Festival de Cine Europeo en Colombia",
+   "sigla": "EUROCINE",
+   "ciudad": "Bogotá + ciudades (Medellín, Cali, etc.)",
+   "mes_habitual": "mayo",
+   "fechas_2026": "no verificadas",
+   "estado": "sin anuncio 2026 verificado",
+   "programacion_url": null,
+   "web": "https://www.festivaleurocine.com/",
+   "instagram": null,
+   "en_otrofestiv": "no",
+   "fuentes": [
+    "https://www.festivaleurocine.com/",
+    "https://bogota.gov.co/que-hacer/cultura/festival-de-cine-europeo-en-colombia-celebra-sus-30-anos"
+   ],
+   "notas": "30ª edición fue en mayo (Suecia invitada). No aparece en Proimágenes 2026 y la web bloquea lectura automática (Cloudflare 403): no pude confirmar si hubo edición 2026 ni el Instagram. Revisar a mano."
+  },
+  {
+   "id": "indiebo",
+   "nombre": "Festival de Cine Independiente de Bogotá",
+   "sigla": "IndieBo",
+   "ciudad": "Bogotá",
+   "mes_habitual": "julio",
+   "fechas_2026": "—",
+   "estado": "sin anuncio 2026 (probablemente inactivo)",
+   "programacion_url": null,
+   "web": null,
+   "instagram": null,
+   "en_otrofestiv": "no",
+   "fuentes": [
+    "https://www.indiebo.com.co/",
+    "https://en.wikipedia.org/wiki/IndieBo"
+   ],
+   "notas": "El dominio indiebo.com.co redirige a un sitio ajeno (avcf.nl); la prensa más reciente es de 2021. Tratar como inactivo salvo evidencia nueva."
+  },
+  {
+   "id": "midbo",
+   "nombre": "Muestra Internacional Documental de Bogotá",
+   "sigla": "MIDBO",
+   "ciudad": "Bogotá",
+   "mes_habitual": "octubre–noviembre",
+   "fechas_2026": "28 OCT–4 NOV 2026 (28ª)",
+   "estado": "anunciado 2026 (28 OCT–4 NOV)",
+   "programacion_url": null,
+   "web": "https://www.midbo.co/",
+   "instagram": "@midbo_co",
+   "en_otrofestiv": "issue #1031",
+   "fuentes": [
+    "https://www.midbo.co/",
+    "https://filmfreeway.com/Midbo",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=6"
+   ],
+   "notas": "Fechas de la convocatoria FilmFreeway. 2025 fue 29 OCT–7 NOV. La web enlaza @midbo_co (también existe @midbo_doc). Programación aún no publicada en texto."
+  },
+  {
+   "id": "cinealacalle",
+   "nombre": "Festival Internacional de Cortometrajes Cine a la Calle",
+   "sigla": "FICICA",
+   "ciudad": "Barranquilla",
+   "mes_habitual": "octubre (antes mayo)",
+   "fechas_2026": "20–24 OCT 2026",
+   "estado": "anunciado 2026 (20–24 OCT)",
+   "programacion_url": null,
+   "web": "https://ficica.cinealacalle.org/",
+   "instagram": "@cinealacalle",
+   "en_otrofestiv": "issue #1029",
+   "fuentes": [
+    "https://ficica.cinealacalle.org/",
+    "https://filmfreeway.com/FestivalInternacionaldeCortometrajesCinealaCalle-FICICA"
+   ],
+   "notas": "Programación: enlace 'muy pronto' a 7 OCT. No está en Proimágenes 2026. Handle leído por resumen de la web, no por grep del HTML: confirmar."
+  },
+  {
+   "id": "santafe",
+   "nombre": "Festival de Cine de Santa Fe de Antioquia",
+   "sigla": "FESTICINE ANTIOQUIA",
+   "ciudad": "Santa Fe de Antioquia",
+   "mes_habitual": "diciembre",
+   "fechas_2026": "4–8 DIC 2026 (27ª)",
+   "estado": "anunciado 2026 (4–8 DIC)",
+   "programacion_url": null,
+   "web": "https://festicineantioquia.org/",
+   "instagram": "@festicineantioquia",
+   "en_otrofestiv": "issue #1034",
+   "fuentes": [
+    "https://festicineantioquia.org/",
+    "https://filmmakers.festhome.com/en/festival/festicineantioquia",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=5"
+   ],
+   "notas": "Fechas 2026 de la convocatoria Festhome; la web aún muestra la 26ª (5–8 DIC 2025)."
+  },
+  {
+   "id": "cinefrances",
+   "nombre": "Festival de Cine Francés en Colombia",
+   "sigla": "—",
+   "ciudad": "Bogotá + 18 ciudades",
+   "mes_habitual": "septiembre–octubre",
+   "fechas_2026": "23 SEP–7 OCT 2026 (25ª)",
+   "estado": "termina 7 OCT 2026 (último día)",
+   "programacion_url": "https://cinefrancesencolombia.com/",
+   "web": "https://cinefrancesencolombia.com/",
+   "instagram": "@cinefrancescol",
+   "en_otrofestiv": "no",
+   "fuentes": [
+    "https://cinefrancesencolombia.com/",
+    "https://www.publimetro.co/cultura/2026/09/18/festival-de-cine-frances-celebra-25-anos-en-colombia-con-mas-de-40-peliculas-y-una-programacion-especial/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=8"
+   ],
+   "notas": "Programación por ciudad en la web (ej. /programacion-cines-pereira/)."
+  },
+  {
+   "id": "bogocine",
+   "nombre": "Festival de Cine de Bogotá",
+   "sigla": "BOGOCINE",
+   "ciudad": "Bogotá",
+   "mes_habitual": "septiembre (2025 fue noviembre)",
+   "fechas_2026": "17–23 SEP 2026 (43ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://www.bogocine.co/",
+   "instagram": "@bogocine_",
+   "en_otrofestiv": "no",
+   "fuentes": [
+    "https://www.bogocine.co/edicion-43/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=6"
+   ],
+   "notas": "Es el «Bogotá Film Festival» histórico (BOFF/Bogocine). No apareció en Proimágenes 2026."
+  },
+  {
+   "id": "villadelcine",
+   "nombre": "Festival Villa del Cine",
+   "sigla": "—",
+   "ciudad": "Villa de Leyva",
+   "mes_habitual": "septiembre (2026 aplazado a octubre)",
+   "fechas_2026": "14–17 OCT 2026 (12ª)",
+   "estado": "anunciado 2026 (14–17 OCT)",
+   "programacion_url": "https://villadelcine.com/",
+   "web": "https://villadelcine.com/",
+   "instagram": "@festivalvilladelcine",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://villadelcine.com/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/570"
+   ],
+   "notas": "Aplazado desde 23–26 SEP por incendios. Distinto del Festival Internacional de Cine de Villa de Leyva (ver ficvl)."
+  },
+  {
+   "id": "ficvl",
+   "nombre": "Festival Internacional de Cine (Independiente) de Villa de Leyva",
+   "sigla": "—",
+   "ciudad": "Villa de Leyva",
+   "mes_habitual": "noviembre",
+   "fechas_2026": "no anunciadas",
+   "estado": "sin anuncio 2026",
+   "programacion_url": null,
+   "web": "https://www.villadeleyvaiff.com/",
+   "instagram": null,
+   "en_otrofestiv": "no",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=6",
+    "https://www.semana.com/cultura/articulo/festival-internacional-de-cine-de-villa-de-leyva-todos-los-detalles-de-una-edicion-2025-animalistica/202553/"
+   ],
+   "notas": "19ª edición fue 14–17 NOV 2025. Vigilar noviembre 2026."
+  },
+  {
+   "id": "ficma",
+   "nombre": "Feria Internacional de Cine de Manizales",
+   "sigla": "FICMA",
+   "ciudad": "Manizales",
+   "mes_habitual": "agosto (2026 reprogramado)",
+   "fechas_2026": "19–26 SEP 2026 (17ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": null,
+   "instagram": "@cinemanizales_ficma",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=2",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/578"
+   ],
+   "notas": "Reprogramado tras el sismo (iba 10–17 AGO)."
+  },
+  {
+   "id": "jardin",
+   "nombre": "Festival de Cine de Jardín",
+   "sigla": "—",
+   "ciudad": "Jardín (Antioquia)",
+   "mes_habitual": "septiembre",
+   "fechas_2026": "24–27 SEP 2026 (11ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://festicinejardin.com/",
+   "instagram": "@festicinejardin",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://festicinejardin.com/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "cinemancia",
+   "nombre": "Cinemancia — Festival Metropolitano de Cine",
+   "sigla": "—",
+   "ciudad": "Valle de Aburrá",
+   "mes_habitual": "septiembre",
+   "fechas_2026": "3–12 SEP 2026 (6ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://cinemanciafestival.com/",
+   "instagram": "@cinemanciafestival",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://cinemanciafestival.com/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=2"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "mamut",
+   "nombre": "Mamut — Festival de Memoria Audiovisual",
+   "sigla": "MAMUT",
+   "ciudad": "Medellín",
+   "mes_habitual": "octubre",
+   "fechas_2026": "5–11 OCT 2026 (11ª)",
+   "estado": "en curso (5–11 OCT)",
+   "programacion_url": null,
+   "web": "https://mamutfestival.co",
+   "instagram": "@mamut_festival",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://mamutfestival.co",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/964"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "fantasmagoria",
+   "nombre": "Fantasmagoría — Festival Internacional de Cine Fantástico y de Terror de Medellín",
+   "sigla": "—",
+   "ciudad": "Medellín",
+   "mes_habitual": "octubre–noviembre",
+   "fechas_2026": "14/15–25 OCT 2026 (8ª)",
+   "estado": "anunciado 2026 (15–25 OCT)",
+   "programacion_url": null,
+   "web": "https://festivalfantasmagoriamedellin.com/",
+   "instagram": "@mfantasmagoria",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://festivalfantasmagoriamedellin.com/",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/963"
+   ],
+   "notas": "En la app desde 14 OCT; issue dice 15–25 OCT."
+  },
+  {
+   "id": "fantasofest",
+   "nombre": "FantasoFest — Muestra Iberoamericana de Cine Fantástico",
+   "sigla": "FANTASO",
+   "ciudad": "Bogotá",
+   "mes_habitual": "julio",
+   "fechas_2026": "13–19 JUL 2026 (5ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://fantasolab.com/",
+   "instagram": null,
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=3",
+    "https://www.elheraldo.co/sociedad/2026/07/09/fantasofest-2026-bogota-se-prepara-para-una-semana-de-cine-fantastico-iberoamericano/"
+   ],
+   "notas": "Organiza FantasoLab; la web no enlaza Instagram en HTML."
+  },
+  {
+   "id": "ojoalsancocho",
+   "nombre": "Festival Internacional de Cine y Video Alternativo y Comunitario Ojo al Sancocho",
+   "sigla": "—",
+   "ciudad": "Bogotá (Ciudad Bolívar)",
+   "mes_habitual": "octubre",
+   "fechas_2026": "3–10 OCT 2026 (19ª)",
+   "estado": "en curso (3–10 OCT)",
+   "programacion_url": "https://www.ojoalsancocho.org/programacion-oficial/",
+   "web": "https://www.ojoalsancocho.org/",
+   "instagram": "@ojoalsancocho",
+   "en_otrofestiv": "issue #1027",
+   "fuentes": [
+    "https://www.ojoalsancocho.org/",
+    "https://www.ojoalsancocho.org/2026/10/"
+   ],
+   "notas": "Fechas del banner de la web; post «PROGRAMACIÓN OFICIAL» del 2 OCT 2026 (la grilla parece ser imagen, el texto no trae horarios). 2025 fue 4–11 OCT. Número de edición inferido (18ª en 2025)."
+  },
+  {
+   "id": "festiver",
+   "nombre": "Festiver — Festival de Cine Verde de Barichara",
+   "sigla": "FESTIVER",
+   "ciudad": "Barichara",
+   "mes_habitual": "septiembre",
+   "fechas_2026": "24–27 SEP 2026 (16ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://festiver.org/",
+   "instagram": "@festivercol",
+   "en_otrofestiv": "issue #571",
+   "fuentes": [
+    "https://festiver.org/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/571"
+   ],
+   "notas": "Issue cerrado; no se montó."
+  },
+  {
+   "id": "ficdeh",
+   "nombre": "Festival Internacional de Cine por los Derechos Humanos",
+   "sigla": "FICDEH",
+   "ciudad": "10–11 ciudades (Bogotá, Medellín, Cali…)",
+   "mes_habitual": "agosto–septiembre",
+   "fechas_2026": "12–19 AGO 2026 (13ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://www.ficdeh.com/",
+   "instagram": "@ficdeh",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://www.ficdeh.com/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=3"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "calibelula",
+   "nombre": "Calibélula — Festival Internacional de Cine Infantil y Juvenil",
+   "sigla": "—",
+   "ciudad": "Cali",
+   "mes_habitual": "septiembre–octubre",
+   "fechas_2026": "28 SEP–2 OCT 2026 (10ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "http://ficijcalibelula.com/inicio",
+   "instagram": "@festivaldecine_calibelula",
+   "en_otrofestiv": "issue #572",
+   "fuentes": [
+    "http://ficijcalibelula.com/inicio",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/572"
+   ],
+   "notas": "Descartado por Juan para 2026 (solo ~12 funciones públicas)."
+  },
+  {
+   "id": "popayan",
+   "nombre": "Festival de Cine Corto de Popayán",
+   "sigla": "CINECORTO",
+   "ciudad": "Popayán",
+   "mes_habitual": "octubre",
+   "fechas_2026": "5–9/11 OCT 2026 (17ª)",
+   "estado": "en curso",
+   "programacion_url": null,
+   "web": "http://www.festicinepopayan.com",
+   "instagram": "@cinecortofest",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "http://www.festicinepopayan.com",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/573"
+   ],
+   "notas": "Proimágenes dice 5–9 OCT; la app tiene 5–11 OCT."
+  },
+  {
+   "id": "equinoxio",
+   "nombre": "Festival Universitario de Cine y Audiovisuales Equinoxio",
+   "sigla": "—",
+   "ciudad": "Bogotá",
+   "mes_habitual": "septiembre",
+   "fechas_2026": "18–26 SEP 2026 (28ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": null,
+   "instagram": null,
+   "en_otrofestiv": "no",
+   "fuentes": [
+    "https://filmmakers.festhome.com/en/festival/festival-universitario-de-cine-y-audiovisuales-el-equinoxio"
+   ],
+   "notas": "Festival universitario de cortos. Fechas solo de Festhome; sin web propia localizada (festivalequinoxio.com no resuelve). Relevancia media."
+  },
+  {
+   "id": "cinestesia",
+   "nombre": "Cinestesia Fest — Festival Internacional de Cortos Universitarios",
+   "sigla": "—",
+   "ciudad": "Bogotá y Cartagena",
+   "mes_habitual": "septiembre–octubre",
+   "fechas_2026": "12 SEP–30 OCT 2026 (10ª, según Festhome)",
+   "estado": "sin fechas de exhibición verificadas",
+   "programacion_url": null,
+   "web": "https://www.cinestesiafest.com",
+   "instagram": null,
+   "en_otrofestiv": "no",
+   "fuentes": [
+    "https://filmmakers.festhome.com/en/festival/cinestesia-fest",
+    "https://filmfreeway.com/CINESTESIAFEST"
+   ],
+   "notas": "De la Fundación Universitaria Los Libertadores. El rango de Festhome parece ventana del evento, no días de funciones. Relevancia baja."
+  },
+  {
+   "id": "ficmontanas",
+   "nombre": "Festival Internacional de Cine en las Montañas",
+   "sigla": "FICMONTAÑAS",
+   "ciudad": "Salento y Filandia (Quindío)",
+   "mes_habitual": "julio",
+   "fechas_2026": "1–5 JUL 2026 (12ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://cineenlasmontanas.com/",
+   "instagram": "@ficmontanas",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://cineenlasmontanas.com/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=4"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "qaff",
+   "nombre": "Quibdó África Film Festival",
+   "sigla": "QAFF",
+   "ciudad": "Quibdó",
+   "mes_habitual": "septiembre",
+   "fechas_2026": "14–18 SEP 2026 (8ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://www.quibdoafricafilmfestival.com/es",
+   "instagram": "@quibdoafricafilmfestival",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://www.quibdoafricafilmfestival.com/es",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=2"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "siembrafest",
+   "nombre": "SiembraFest — Festival de Cine Colombiano al Campo",
+   "sigla": "SIEMBRAFEST",
+   "ciudad": "Villeta / Sasaima / Supatá / Anolaima",
+   "mes_habitual": "septiembre",
+   "fechas_2026": "9–18 SEP 2026 (11ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://siembrafest.com",
+   "instagram": "@siembrafest",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=2",
+    "https://siembrafest.com"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "bhff",
+   "nombre": "Bogotá Horror Film Festival",
+   "sigla": "BHFF",
+   "ciudad": "Bogotá",
+   "mes_habitual": "octubre",
+   "fechas_2026": "22–31 OCT 2026 (8ª)",
+   "estado": "anunciado 2026 (22–31 OCT)",
+   "programacion_url": "https://bogotahorrorfilmfest.com/programacion/",
+   "web": "https://bogotahorrorfilmfest.com/",
+   "instagram": "@bogotahorrorfest",
+   "en_otrofestiv": "issue #1030",
+   "fuentes": [
+    "https://bogotahorrorfilmfest.com/programacion/",
+    "https://www.publimetro.co/cultura/2026/09/17/cine-de-horror-suspenso-y-fantasia-oscura-llegan-a-bogota-en-octubre/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=7"
+   ],
+   "notas": "Programación 2026 publicada (página + PDF descargable); sede principal Cinemateca de Bogotá. Estuvo en Proimágenes 2025, no en 2026."
+  },
+  {
+   "id": "sapcine",
+   "nombre": "SAPCINE — Salón de Productores y Proyectos Cinematográficos",
+   "sigla": "SAPCINE",
+   "ciudad": "Cali",
+   "mes_habitual": "octubre–noviembre",
+   "fechas_2026": "22–31 OCT 2026 (11ª)",
+   "estado": "anunciado 2026 (22–31 OCT)",
+   "programacion_url": null,
+   "web": "https://www.sapcine.com/",
+   "instagram": "@sapcinecol",
+   "en_otrofestiv": "issue #574",
+   "fuentes": [
+    "https://www.sapcine.com/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/574"
+   ],
+   "notas": "Salón de industria/proyectos más que festival de público; verificar si hay funciones abiertas."
+  },
+  {
+   "id": "ficuc",
+   "nombre": "Festival Internacional de Cine de la Universidad Central",
+   "sigla": "FICUC",
+   "ciudad": "Bogotá",
+   "mes_habitual": "octubre",
+   "fechas_2026": "16–22 OCT 2026 (según Festhome, sin confirmar)",
+   "estado": "anunciado 2026 (sin confirmar)",
+   "programacion_url": null,
+   "web": "https://ficucfest.github.io/FICUCFEST/",
+   "instagram": "@ficuc__",
+   "en_otrofestiv": "no",
+   "fuentes": [
+    "https://festhome.com/es/blog-article/29185",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=7"
+   ],
+   "notas": "Universitario. 2025 fue 22–28 OCT. Relevancia baja-media."
+  },
+  {
+   "id": "ficfusa",
+   "nombre": "Festival Internacional de Cine de Fusagasugá",
+   "sigla": "FICFUSA",
+   "ciudad": "Fusagasugá",
+   "mes_habitual": "noviembre",
+   "fechas_2026": "11–16 NOV 2026 (13ª)",
+   "estado": "anunciado 2026 (11–16 NOV)",
+   "programacion_url": "https://ficfusa.com/programacion/",
+   "web": "https://ficfusa.com/",
+   "instagram": "@ficfusa_festival",
+   "en_otrofestiv": "issue #1032",
+   "fuentes": [
+    "https://ficfusa.com/",
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=6"
+   ],
+   "notas": "La página /programacion/ existe; no verifiqué que ya tenga la de 2026."
+  },
+  {
+   "id": "cinecortomedellin",
+   "nombre": "Festival de Cine Corto de Medellín",
+   "sigla": "—",
+   "ciudad": "Medellín (Comuna 13)",
+   "mes_habitual": "octubre",
+   "fechas_2026": "8–10 OCT 2026 (5ª)",
+   "estado": "anunciado 2026 (8–10 OCT)",
+   "programacion_url": "https://cinecortomedellin.com/",
+   "web": "https://cinecortomedellin.com/",
+   "instagram": "@festivalcinecorto",
+   "en_otrofestiv": "issue #1028",
+   "fuentes": [
+    "https://cinecortomedellin.com/"
+   ],
+   "notas": "Pequeño: 3 sesiones en Parque Biblioteca Presbítero. Relevancia baja."
+  },
+  {
+   "id": "medellinhorrorfest",
+   "nombre": "Medellín Horror Fest",
+   "sigla": "—",
+   "ciudad": "Medellín",
+   "mes_habitual": "noviembre",
+   "fechas_2026": "27–29/30 NOV 2026 (6ª)",
+   "estado": "anunciado 2026 (fines de NOV)",
+   "programacion_url": null,
+   "web": null,
+   "instagram": null,
+   "en_otrofestiv": "issue #1033",
+   "fuentes": [
+    "https://filmfreeway.com/MedellinHorrorFest",
+    "https://festhome.com/en/blog-article/34339"
+   ],
+   "notas": "Solo fuentes de convocatoria; sin web/IG verificados. Relevancia baja."
+  },
+  {
+   "id": "maldeojo",
+   "nombre": "Mal de Ojo — Festival Internacional de Cine y del Caribe en Barranquilla",
+   "sigla": "—",
+   "ciudad": "Barranquilla",
+   "mes_habitual": "diciembre",
+   "fechas_2026": "no anunciadas",
+   "estado": "sin anuncio 2026",
+   "programacion_url": null,
+   "web": null,
+   "instagram": null,
+   "en_otrofestiv": "no",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=6",
+    "https://www.elheraldo.co/cultura/cine/2025/12/02/barranquilla-abre-el-telon-este-martes-del-segundo-mal-de-ojo-festival-internacional-de-cine-2025/"
+   ],
+   "notas": "2ª edición fue 2–10 DIC 2025."
+  },
+  {
+   "id": "sierranevada",
+   "nombre": "Festival de Cine Sierra Nevada",
+   "sigla": "FECSINE",
+   "ciudad": "Santa Marta (Minca y otros)",
+   "mes_habitual": "diciembre",
+   "fechas_2026": "no anunciadas",
+   "estado": "sin anuncio 2026",
+   "programacion_url": null,
+   "web": "https://festivaldecinesierranevada.com/",
+   "instagram": null,
+   "en_otrofestiv": "no",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=5",
+    "https://festivaldecinesierranevada.com/"
+   ],
+   "notas": "3ª edición fue 11–15 DIC 2025."
+  },
+  {
+   "id": "cineenfemenino",
+   "nombre": "Cine en Femenino Festival",
+   "sigla": "—",
+   "ciudad": "Bogotá",
+   "mes_habitual": "noviembre",
+   "fechas_2026": "no anunciadas",
+   "estado": "sin anuncio 2026",
+   "programacion_url": null,
+   "web": null,
+   "instagram": null,
+   "en_otrofestiv": "no",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=6"
+   ],
+   "notas": "16ª edición fue 13–20 NOV 2025 (Proimágenes)."
+  },
+  {
+   "id": "sanfici",
+   "nombre": "Santander Festival Internacional de Cine Independiente",
+   "sigla": "SANFICI",
+   "ciudad": "Bucaramanga",
+   "mes_habitual": "febrero",
+   "fechas_2026": "23–27 FEB 2026 (10ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://www.sanfici.com/",
+   "instagram": null,
+   "en_otrofestiv": "no",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=5",
+    "https://www.sanfici.com/"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "aff",
+   "nombre": "Alternativa Film Festival",
+   "sigla": "AFF",
+   "ciudad": "Medellín",
+   "mes_habitual": "abril",
+   "fechas_2026": "21 ABR–3 MAY 2026 (3ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://alternativa.film/festival/",
+   "instagram": "@alternativa.film.latam",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=5",
+    "https://alternativa.film/festival/"
+   ],
+   "notas": "Handle de IG tomado de prensa, no de la web."
+  },
+  {
+   "id": "leviza",
+   "nombre": "LEVIZA — Festival de Cine y Audiovisuales de Zapatoca",
+   "sigla": "LEVIZA",
+   "ciudad": "Zapatoca",
+   "mes_habitual": "mayo",
+   "fechas_2026": "14–17 MAY 2026 (3ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": null,
+   "instagram": null,
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=4"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "tercertiempo",
+   "nombre": "Tercer Tiempo Fest — Festival Mundial de Cine de Fútbol y Deportes",
+   "sigla": "TTF",
+   "ciudad": "Bogotá",
+   "mes_habitual": "julio",
+   "fechas_2026": "13–19 JUL 2026",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": null,
+   "instagram": null,
+   "en_otrofestiv": "publicado",
+   "fuentes": [],
+   "notas": "Datos de la app (config)."
+  },
+  {
+   "id": "cineautopsia",
+   "nombre": "CineAutopsia — Festival de Cine Experimental de Bogotá",
+   "sigla": "—",
+   "ciudad": "Bogotá",
+   "mes_habitual": "agosto",
+   "fechas_2026": "21–29 AGO 2026 (12ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://bogotaexperimental.com/",
+   "instagram": "@bogotaexperimental",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=3",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/565"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "narrarelfuturo",
+   "nombre": "#NarrarElFuturo — Festival de Cine y Nuevos Medios",
+   "sigla": "NEF",
+   "ciudad": "Bogotá",
+   "mes_habitual": "septiembre",
+   "fechas_2026": "15–20 SEP 2026 (13ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://narrarelfuturo.com/",
+   "instagram": "@narrarelfuturo",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=2"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "vartex",
+   "nombre": "Vartex — Muestra de Video y Experimental de Medellín",
+   "sigla": "VARTEX",
+   "ciudad": "Medellín",
+   "mes_habitual": "agosto",
+   "fechas_2026": "19–22 AGO 2026 (14ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://vartexmedellin.co",
+   "instagram": null,
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/690"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "itagui",
+   "nombre": "Festival Internacional de Cine Ciudad de Itagüí (Festicine Itagüí)",
+   "sigla": "—",
+   "ciudad": "Itagüí",
+   "mes_habitual": "septiembre",
+   "fechas_2026": "23–27 SEP 2026 (9ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": null,
+   "instagram": null,
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/946"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "girardota",
+   "nombre": "Festival Audiovisual de Girardota (Festigirardota)",
+   "sigla": "—",
+   "ciudad": "Girardota",
+   "mes_habitual": "septiembre–octubre",
+   "fechas_2026": "30 SEP–4 OCT 2026 (9ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": null,
+   "instagram": null,
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/968"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "filcmar",
+   "nombre": "FILCMAR — Festival de Cine de Marinilla",
+   "sigla": "FILCMAR",
+   "ciudad": "Marinilla",
+   "mes_habitual": "octubre",
+   "fechas_2026": "9–13 OCT 2026 (8ª)",
+   "estado": "anunciado 2026 (9–13 OCT)",
+   "programacion_url": null,
+   "web": "https://linktr.ee/filcmar",
+   "instagram": "@filcmar",
+   "en_otrofestiv": "publicado",
+   "fuentes": [
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/903"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "cicla",
+   "nombre": "CICLA — Cita con el Cine Latinoamericano (Cinemateca de Bogotá)",
+   "sigla": "CICLA",
+   "ciudad": "Bogotá",
+   "mes_habitual": "septiembre",
+   "fechas_2026": "3–13 SEP 2026 (14ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://www.idartes.gov.co/es/agenda/ciclo/14a-edicion-de-cicla-cita-con-el-cine-latinoamericano",
+   "instagram": "@cinematecabta",
+   "en_otrofestiv": "issue #870",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=3",
+    "https://github.com/jdvlazio/Otrofestiv.app/issues/870"
+   ],
+   "notas": ""
+  },
+  {
+   "id": "salvaje",
+   "nombre": "Festival Salvaje",
+   "sigla": "—",
+   "ciudad": "Bogotá",
+   "mes_habitual": "agosto",
+   "fechas_2026": "26–30 AGO 2026 (5ª)",
+   "estado": "pasó 2026",
+   "programacion_url": null,
+   "web": "https://festivalsalvaje.com/",
+   "instagram": "@festival.salvaje",
+   "en_otrofestiv": "issue #782",
+   "fuentes": [
+    "https://www.proimagenescolombia.com/secciones/eventos/eventos.php?tipo=1&pagina=3"
+   ],
+   "notas": ""
+  }
+ ]
+}
