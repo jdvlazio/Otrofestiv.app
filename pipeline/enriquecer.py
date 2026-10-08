@@ -553,6 +553,14 @@ def main():
             if t not in obras:
                 sys.exit(f'sinopsis declarada para un título que no está en el programa: {t}')
             e = ok.get(t) or {}
+            # `idioma: en`: la única sinopsis que existe está en inglés; va a
+            # synopsis_en tal cual (no se traduce) y solo si no hay ninguna
+            if d.get('idioma') == 'en':
+                if e.get('sinopsis') or e.get('synopsis_es') or e.get('synopsis_en'):
+                    continue
+                ok[t] = {**e, 'synopsis_en': d['texto'], '_sinopsis': d['fuente']}
+                n_s += 1
+                continue
             if e.get('sinopsis') or e.get('synopsis_es'):
                 continue
             ok[t] = {**e, 'sinopsis': d['texto'], '_sinopsis': d['fuente']}
