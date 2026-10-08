@@ -435,14 +435,14 @@
    "sala": "Aulas 4, Torreón 1A",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "Sebastián Muñoz Duque y Juliana Santana Oviedo.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14518
    },
-   "requires_registration": true
+   "requires_registration": true,
+   "description": "Sebastián Muñoz Duque y Juliana Santana Oviedo.",
+   "description_lang": "es"
   },
   {
    "title": "Mu-ki-ra",
@@ -484,14 +484,14 @@
    "sala": "Aulas 4, Torreón 1A",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "Sebastián Muñoz Duque y Juliana Santana Oviedo.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14519
    },
-   "requires_registration": true
+   "requires_registration": true,
+   "description": "Sebastián Muñoz Duque y Juliana Santana Oviedo.",
+   "description_lang": "es"
   },
   {
    "title": "III Encuentro sectorial local: Invita el Consejo Distrital de Cine y Audiovisuales",
@@ -504,13 +504,13 @@
    "venue": "Curador - Cali",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "Invitados: Maderley Ceballos, Alina Lheap, Ramiro Arbeláez",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14612
-   }
+   },
+   "description": "Invitados: Maderley Ceballos, Alina Lheap, Ramiro Arbeláez",
+   "description_lang": "es"
   },
   {
    "title": "Muestra VR",
@@ -613,13 +613,13 @@
    "venue": "Curador - Cali",
    "event_kind": "fiesta",
    "has_qa": false,
-   "synopsis": "Consejo Distrital de Cinematografía y Audiovisuales/ Espacio de Encuentro sectorial",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14614
-   }
+   },
+   "description": "Consejo Distrital de Cinematografía y Audiovisuales/ Espacio de Encuentro sectorial",
+   "description_lang": "es"
   },
   {
    "title": "Domo Live Camoflux: Incendio Igapó",
@@ -633,13 +633,13 @@
    "sala": "Domo",
    "event_kind": "experiencia",
    "has_qa": false,
-   "synopsis": "Cali | Concierto audiovisual inmersivo",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 13931
-   }
+   },
+   "description": "Cali | Concierto audiovisual inmersivo",
+   "description_lang": "es"
   },
   {
    "title": "Princesa burro",
@@ -793,14 +793,14 @@
    "venue": "Centro Cultural Comfandi - Cali",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Elisa McCausland y Diego Salgado.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14521
    },
-   "requires_registration": true
+   "requires_registration": true,
+   "description": "Elisa McCausland y Diego Salgado.",
+   "description_lang": "es"
   },
   {
    "title": "Cortos infantiles FICCALI / Mi vecino Totoro",
@@ -894,14 +894,14 @@
    "venue": "Centro Cultural Comfandi - Cali",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Elisa McCausland y Diego Salgado.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14525
    },
-   "requires_registration": true
+   "requires_registration": true,
+   "description": "Elisa McCausland y Diego Salgado.",
+   "description_lang": "es"
   },
   {
    "title": "XV Encuentro de investigación en cine: Pantallas que piensan",
@@ -914,13 +914,13 @@
    "venue": "Cinemateca La Tertulia - Cali",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "Seminario con charlas, ponencias y conferencias performáticas.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14524
-   }
+   },
+   "description": "Seminario con charlas, ponencias y conferencias performáticas.",
+   "description_lang": "es"
   },
   {
    "title": "Largo Arco + Corto Akababuru",
@@ -1049,13 +1049,13 @@
    "venue": "Café Macondo - Cali",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "La relación entre la dirección y le montaje.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14615
-   }
+   },
+   "description": "La relación entre la dirección y le montaje.",
+   "description_lang": "es"
   },
   {
    "title": "XV Encuentro de investigación en cine. Pantallas que piensan. Indagar en formas de investigación creativa",
@@ -1102,13 +1102,13 @@
    "venue": "Café Macondo - Cali",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "Laura Alhach y Luis Raguá.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14617
-   }
+   },
+   "description": "Laura Alhach y Luis Raguá.",
+   "description_lang": "es"
   },
   {
    "title": "Boca Vieja",
@@ -1268,13 +1268,13 @@
    "venue": "Casa Ethel - Cali",
    "event_kind": "cineconcierto",
    "has_qa": false,
-   "synopsis": "Alemania | 120 min",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14006
-   }
+   },
+   "description": "Alemania | 120 min",
+   "description_lang": "es"
   },
   {
    "title": "Cali, ciudad abierta (cortos)",
@@ -1410,14 +1410,14 @@
    "venue": "SENA Salomia - Cali",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Roberto Garcés. En alianza con Takeshima. Inscripción previa.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14591
    },
-   "requires_registration": true
+   "requires_registration": true,
+   "description": "Roberto Garcés. En alianza con Takeshima. Inscripción previa.",
+   "description_lang": "es"
   },
   {
    "title": "Telepacífico – Comisión Nacional de Comunicación de los Pueblos Indígenas",
@@ -1447,13 +1447,13 @@
    "venue": "Cinemateca La Tertulia - Cali",
    "event_kind": "masterclass",
    "has_qa": false,
-   "synopsis": "EL CINE DE LA ESCUCHA. En diálogo con: Marlon Varela. Con apoyo de la Embajada de Francia en Colombia y la Muestra Internacional Documental de Bogotá MIDBO.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14586
-   }
+   },
+   "description": "EL CINE DE LA ESCUCHA. En diálogo con: Marlon Varela. Con apoyo de la Embajada de Francia en Colombia y la Muestra Internacional Documental de Bogotá MIDBO.",
+   "description_lang": "es"
   },
   {
    "title": "Écrire la vie: Annie Ernaux racontée par des lycéennes et des lycéens",
@@ -1496,13 +1496,13 @@
    "venue": "Centro Cultural Comfandi - Cali",
    "event_kind": "charla",
    "has_qa": false,
-   "synopsis": "Natalia Campo Castro.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14589
-   }
+   },
+   "description": "Natalia Campo Castro.",
+   "description_lang": "es"
   },
   {
    "title": "Princesa burro",
@@ -1567,14 +1567,14 @@
    "venue": "BlackGround - Cali",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Beatriz Balanta. Cupo: 30 | Inscripción previa. Link de inscripción aquí",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14590
    },
-   "requires_registration": true
+   "requires_registration": true,
+   "description": "Beatriz Balanta. Cupo: 30 | Inscripción previa. Link de inscripción aquí",
+   "description_lang": "es"
   },
   {
    "title": "Iluminada",
@@ -1815,14 +1815,14 @@
    "venue": "Centro Cultural Comfandi - Cali",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Elisa McCausland y Diego Salgado.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14594
    },
-   "requires_registration": true
+   "requires_registration": true,
+   "description": "Elisa McCausland y Diego Salgado.",
+   "description_lang": "es"
   },
   {
    "title": "City Tour",
@@ -1852,13 +1852,13 @@
    "venue": "Centro Cultural Comfandi - Cali",
    "event_kind": "charla",
    "has_qa": false,
-   "synopsis": "Viviane Ferreira (Brasil), Yovegami Ascona Mora (México) y Eduardo Rencurrell (Cuba, Colombia). Modera: Adriana Jacanamejoy (Colombia).",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14595
-   }
+   },
+   "description": "Viviane Ferreira (Brasil), Yovegami Ascona Mora (México) y Eduardo Rencurrell (Cuba, Colombia). Modera: Adriana Jacanamejoy (Colombia).",
+   "description_lang": "es"
   },
   {
    "title": "PANEL: Plataformas alternativas, archivo y soberanía audiovisual",
@@ -1871,13 +1871,13 @@
    "venue": "Centro Cultural Comfandi - Cali",
    "event_kind": "charla",
    "has_qa": false,
-   "synopsis": "David Hernández Palmar (Mirada Nativa), Frida Muenala (Mullu TV) y Lorena Tavera (Pantalla Verde). Modera: Gerylee Polanco",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14596
-   }
+   },
+   "description": "David Hernández Palmar (Mirada Nativa), Frida Muenala (Mullu TV) y Lorena Tavera (Pantalla Verde). Modera: Gerylee Polanco",
+   "description_lang": "es"
   },
   {
    "title": "Agujero",
@@ -1890,13 +1890,13 @@
    "venue": "Bulevar del Río - Cali",
    "event_kind": "lanzamiento de libro",
    "has_qa": false,
-   "synopsis": "Novela gráfica / Cómics: ‘Agujero’. Autor: Julio César Rodríguez, El Cerra’O Comics.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14605
-   }
+   },
+   "description": "Novela gráfica / Cómics: ‘Agujero’. Autor: Julio César Rodríguez, El Cerra’O Comics.",
+   "description_lang": "es"
   },
   {
    "title": "Vanguardias- Prog 1",
@@ -1926,13 +1926,13 @@
    "venue": "Cinemateca La Tertulia - Cali",
    "event_kind": "masterclass",
    "has_qa": false,
-   "synopsis": "Conversación entre José Luis Guerín y Sergio Wolf (España)",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14593
-   }
+   },
+   "description": "Conversación entre José Luis Guerín y Sergio Wolf (España)",
+   "description_lang": "es"
   },
   {
    "title": "El trabajo de la polilla en la llama",
@@ -1945,13 +1945,13 @@
    "venue": "Bulevar del Río - Cali",
    "event_kind": "lanzamiento de libro",
    "has_qa": false,
-   "synopsis": "‘El trabajo de la polilla en la llama’. Bitácora de trabajo para una pieza audiovisual’. Autora: Mónica Bravo.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14606
-   }
+   },
+   "description": "‘El trabajo de la polilla en la llama’. Bitácora de trabajo para una pieza audiovisual’. Autora: Mónica Bravo.",
+   "description_lang": "es"
   },
   {
    "title": "PANEL PREMIOS MACONDO: Nominados cortometrajes de Animación",
@@ -1981,13 +1981,13 @@
    "venue": "Bulevar del Río - Cali",
    "event_kind": "lanzamiento de libro",
    "has_qa": false,
-   "synopsis": "‘Viñetaira. Historia Universal de las autoras del cómic’. Autores: Elisa McCausland y Diego Salgado. Editorial Cátedra.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14607
-   }
+   },
+   "description": "‘Viñetaira. Historia Universal de las autoras del cómic’. Autores: Elisa McCausland y Diego Salgado. Editorial Cátedra.",
+   "description_lang": "es"
   },
   {
    "title": "PANEL PREMIOS MACONDO: Nominados Producción sostenible",
@@ -2034,13 +2034,13 @@
    "venue": "Bulevar del Río - Cali",
    "event_kind": "lanzamiento de libro",
    "has_qa": false,
-   "synopsis": "Creatividad y escritura. Autor: Dago García. Editorial PRH-Aguilar.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14608
-   }
+   },
+   "description": "Creatividad y escritura. Autor: Dago García. Editorial PRH-Aguilar.",
+   "description_lang": "es"
   },
   {
    "title": "Anima Vé! Retrospectiva de Maria Cristina Pérez Q&A",
@@ -2449,13 +2449,13 @@
    "sala": "Auditorio Celsia",
    "event_kind": "lanzamiento de libro",
    "has_qa": false,
-   "synopsis": "El juego de la vida. Autor: Andrés Ruiz.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14624
-   }
+   },
+   "description": "El juego de la vida. Autor: Andrés Ruiz.",
+   "description_lang": "es"
   },
   {
    "title": "MÁSTER CLASS: Lo esencial, lo vital y lo persuasivo. Julian Sanchez, Productor de Mukira. En alianza con Animá Vé.",
@@ -2655,13 +2655,13 @@
    "sala": "Carpa de la Red de Bibliotecas Públicas de Cali",
    "event_kind": "lanzamiento de libro",
    "has_qa": false,
-   "synopsis": "Una mirada general del proceso del Circuito Cineclubes Cali, CCINEC, 2026, Autores: Maria Eudoxia Arango y Leandro Pérez.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14625
-   }
+   },
+   "description": "Una mirada general del proceso del Circuito Cineclubes Cali, CCINEC, 2026, Autores: Maria Eudoxia Arango y Leandro Pérez.",
+   "description_lang": "es"
   },
   {
    "title": "Minotauro",

@@ -315,10 +315,14 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `duration` | string | `^\d+ min$` | 29 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
 | `language` | string | — | 9 fest |  |
 | `genre` | string | — | 25 fest |  |
-| `synopsis` | string | — | 29 fest | SIEMPRE en español. La traducción no es opcional. |
+| `synopsis` | string | — | 28 fest | SIEMPRE en español. La traducción no es opcional. |
 | `synopsis_en` | string | — | 26 fest |  |
 | `synopsis_es` | string | — | 2 fest |  |
-| `synopsis_lang` | string | `es` · `en` · `pt` | 29 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
+| `synopsis_lang` | string | `es` · `en` · `pt` | 28 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
+| `description` | string | — | 25 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
+| `description_en` | string | — | 5 fest |  |
+| `description_es` | string | — | 1 fest |  |
+| `description_lang` | string | `es` · `en` · `pt` | 25 fest |  |
 | `rating` | string | — | 5 fest |  |
 | `premiere` | string | — | 10 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
 | `type` | string | `film` · `event` · `short` | 26 fest |  |

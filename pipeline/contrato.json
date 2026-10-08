@@ -95,7 +95,10 @@
   "title_en": {
    "tipo": "string"
   },
-  "title_es": {"tipo": "string", "nota": "Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial."},
+  "title_es": {
+   "tipo": "string",
+   "nota": "Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial."
+  },
   "director": {
    "tipo": "string"
   },
@@ -141,6 +144,24 @@
    ],
    "lector": "guardianes",
    "nota": "No lo lee la vista: lo consumen los guardianes ([paridad-derivados])."
+  },
+  "description": {
+   "tipo": "string",
+   "nota": "Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla."
+  },
+  "description_en": {
+   "tipo": "string"
+  },
+  "description_es": {
+   "tipo": "string"
+  },
+  "description_lang": {
+   "tipo": "string",
+   "enum": [
+    "es",
+    "en",
+    "pt"
+   ]
   },
   "rating": {
    "tipo": "string"

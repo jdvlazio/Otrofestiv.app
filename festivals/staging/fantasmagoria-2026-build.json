@@ -583,8 +583,6 @@
    "venue": "Twitch · Sociedad Fantasmagoría - Medellín",
    "event_kind": "charla",
    "has_qa": false,
-   "synopsis": "Por Isabel Arboleyda Jiménez.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
@@ -594,7 +592,9 @@
    "online": true,
    "stream_url": "https://www.twitch.tv/sociedadfantasmagoria",
    "stream_platform": "Twitch",
-   "is_free": true
+   "is_free": true,
+   "description": "Por Isabel Arboleyda Jiménez.",
+   "description_lang": "es"
   },
   {
    "title": "Decorado",
@@ -834,15 +834,15 @@
    "event_kind": "encuentro",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "Una mirada al cine y televisión de género hecho en Colombia. Conversan Mauricio Romero y Cristian Jaramillo.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
     "base_version": 2,
     "id": "2026-10-16-18-30-gente-que-hace-cine-colombia-es-fantastica"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Una mirada al cine y televisión de género hecho en Colombia. Conversan Mauricio Romero y Cristian Jaramillo.",
+   "description_lang": "es"
   },
   {
    "title": "El Despertar",
@@ -1110,15 +1110,15 @@
    "venue": "Silencio - Medellín",
    "event_kind": "fiesta",
    "has_qa": false,
-   "synopsis": "DJs: TIZ y Mr. Snoopy. Música: alterno oscuro, pop psicodélico, perreo hasta el inframundo, cumbia rebajada de vereda, salsa diabólica y guasca machetera.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
     "base_version": 2,
     "id": "2026-10-16-22-00-fiesta-gotico-tropical"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "DJs: TIZ y Mr. Snoopy. Música: alterno oscuro, pop psicodélico, perreo hasta el inframundo, cumbia rebajada de vereda, salsa diabólica y guasca machetera.",
+   "description_lang": "es"
   },
   {
    "title": "Muestra Fantasmagoritos: Cortometrajes infantiles",
@@ -1542,8 +1542,6 @@
    "venue": "Centro Colombo Americano - Medellín",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "Conversatorio.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
@@ -1643,7 +1641,9 @@
      "genre": "Animación",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "description": "Conversatorio.",
+   "description_lang": "es"
   },
   {
    "title": "The X Files y Lectura de La Verdad Está Ahí Afuera: Antología de Cuentos",
@@ -1911,15 +1911,15 @@
    "event_kind": "conversatorio",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "El terror análogico, entre la estética y el medio al VHS y a los programas de televisión con Cristian Jaramillo.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
     "base_version": 2,
     "id": "2026-10-20-14-00-conversatorio-con-cristian-ponce-el-terror-analogico-entre-la-estetica-y-el-medio-al-vhs-y-a-los-programas-de-television-con-cristian-jaramillo"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "El terror análogico, entre la estética y el medio al VHS y a los programas de televisión con Cristian Jaramillo.",
+   "description_lang": "es"
   },
   {
    "title": "Horror and Love",
@@ -2252,15 +2252,15 @@
    "event_kind": "conversatorio",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "De Cinema Zombie a Zinema Zombie con Jose Andrés Gómez, Andrés Buitrago y Pablo Marín.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
     "base_version": 2,
     "id": "2026-10-21-18-00-conversatorio-de-cinema-zombie-a-zinema-zombie-con-jose-andres-gomez-andres-buitrago-y-pablo-marin"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "De Cinema Zombie a Zinema Zombie con Jose Andrés Gómez, Andrés Buitrago y Pablo Marín.",
+   "description_lang": "es"
   },
   {
    "title": "Charla: De las Trincheras del Somme a la caída de Gondolin por Camilo López",
@@ -2356,15 +2356,15 @@
    "sala": "Auditorio",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "Presentaciones de productoras/colectivos y Made in Medellín (Cortometrajes hechos en Medellín).",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
     "base_version": 2,
     "id": "2026-10-21-15-30-presentaciones-de-productoras-colectivos-y-made-in-medellin-cortometrajes-hechos-en-medellin"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Presentaciones de productoras/colectivos y Made in Medellín (Cortometrajes hechos en Medellín).",
+   "description_lang": "es"
   },
   {
    "title": "Taller: Parche de collage – Construcción de fortalezas",
@@ -2568,15 +2568,15 @@
    "event_kind": "evento",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "Conversatorio con Tilman Singer y Sebastián Tobón.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
     "base_version": 2,
     "id": "2026-10-22-17-00-fremde-welten-los-extranos-universos-de-tilman-singer"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Conversatorio con Tilman Singer y Sebastián Tobón.",
+   "description_lang": "es"
   },
   {
    "title": "Selección Oficial de Cortometrajes Latinoamericanos",
@@ -2689,8 +2689,6 @@
    "sala": "Sala 2",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "Selección Oficial de Cortometrajes + Q&A con Andrés Buitrago.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
@@ -2812,7 +2810,9 @@
      "genre": "Terror",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "description": "Selección Oficial de Cortometrajes + Q&A con Andrés Buitrago.",
+   "description_lang": "es"
   },
   {
    "title": "Jornada Juegos de Mesa Fantastable",
@@ -2825,15 +2825,15 @@
    "venue": "La Comarca - Medellín",
    "event_kind": "evento",
    "has_qa": false,
-   "synopsis": "Juegos de Mesa + Partida Blood on the Clock Tower.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
     "base_version": 2,
     "id": "2026-10-22-18-00-juegos-de-mesa"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Juegos de Mesa + Partida Blood on the Clock Tower.",
+   "description_lang": "es"
   },
   {
    "title": "Club de la Medianoche: Club de lectura",
@@ -2847,15 +2847,15 @@
    "sala": "Jardín Bloque 41",
    "event_kind": "evento",
    "has_qa": false,
-   "synopsis": "Club de lectura – Sesión presencial.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
     "base_version": 2,
     "id": "2026-10-22-18-00-club-de-lectura-sesion-presencial"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Club de lectura – Sesión presencial.",
+   "description_lang": "es"
   },
   {
    "title": "You Are The Film",
@@ -3409,15 +3409,15 @@
    "venue": "La Pascasia - Medellín",
    "event_kind": "fiesta",
    "has_qa": false,
-   "synopsis": "Música: Zensorias a.k.a: Helløise – Dynmk y Morfina Visuales: Aleja Rocas de Arrebato.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
     "base_version": 2,
     "id": "2026-10-23-21-30-brujas-espectros-y-otros-fantasmas"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Música: Zensorias a.k.a: Helløise – Dynmk y Morfina Visuales: Aleja Rocas de Arrebato.",
+   "description_lang": "es"
   },
   {
    "title": "Presentación de Libros Ediciones Sociedad Fantasmagoría: Colombia es fantástica y Las Murallas del Miedo, con sus autores",
@@ -3514,8 +3514,6 @@
    "sala": "La Capilla",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "Selección Oficial de Cortometrajes + Q&A con Andrés Buitrago .",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.cartelerafantasmagoria.fan/",
     "date": "2026-10-06",
@@ -3637,7 +3635,9 @@
      "genre": "Terror",
      "synopsis_lang": "es"
     }
-   ]
+   ],
+   "description": "Selección Oficial de Cortometrajes + Q&A con Andrés Buitrago .",
+   "description_lang": "es"
   },
   {
    "title": "Dong Bei Jing Cha Gu Shi 3 – Fight Against Evil 3",

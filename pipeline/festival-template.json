@@ -284,7 +284,9 @@
      "lbSlug": "",
      "tmdb_id": 12345
     }
-   ]
+   ],
+   "description": "Descripción del programa (opcional): de qué va la selección, no la sinopsis de una obra.",
+   "description_lang": "es"
   },
   {
    "_tipo": "Tipo 4 — Evento / taller / charla (sin poster propio ni Letterboxd → marco editorial o poster generativo).",
@@ -292,9 +294,11 @@
    "type": "event",
    "duration": "120 min",
    "section": "📋 Actividades",
-   "synopsis": "Descripción del evento en español.",
-   "synopsis_en": "",
-   "_synopsis_en_evento_nota": "Las actividades también se traducen (UX Writer) — FINCA las necesitó todas.",
+   "description": "Descripción del evento en español.",
+   "description_lang": "es",
+   "_description_nota": "Un evento o un programa lleva DESCRIPCIÓN, no sinopsis: la sinopsis es solo de una obra (Juan, 7 oct 2026; regla en pipeline/lib.separar_descripcion).",
+   "description_en": "",
+   "_description_en_nota": "Las actividades también se traducen (UX Writer) — FINCA las necesitó todas.",
    "has_qa": false,
    "requires_registration": true,
    "is_free": true,

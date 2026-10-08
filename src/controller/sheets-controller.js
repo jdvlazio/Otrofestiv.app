@@ -35,7 +35,7 @@ import { sameEntry, screensConflict, screensConflictReason, plannableScreens, sa
 // que un hilo principal bloqueado no puede detener.
 import { state } from '../state/state.js';
 
-import { t, locSynopsis } from '../i18n/i18n.js';
+import { t, locSynopsis, locDescription } from '../i18n/i18n.js';
 
 // ── UI-state module-local + consts privados ──────────────────────────────────
 const LB_SVG=`<svg class="block-shrink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="13" height="13"><rect width="64" height="64" rx="9" fill="#2C3440"/><circle cx="21" cy="32" r="12" fill="#00B020" opacity=".9"/><circle cx="32" cy="32" r="12" fill="#3CBEDB" opacity=".85"/><circle cx="43" cy="32" r="12" fill="#FF8000" opacity=".9"/></svg>`;
@@ -390,8 +390,14 @@ export function openPelSheet(title){
       if(!_rurl||festivalEnded()) return '';
       return `<a class="pel-sheet-ticket-link" href="${_rurl}" target="_blank" rel="noopener">${ICONS.clipboardList} ${t('inscripcion_link')}</a>`;
     })()}
-    ${f.synopsis?`    <div class="sec-hdr sm">${ICONS.text} <span>${f.type==='event'?t('label_descripcion'):t('label_sinopsis')}</span></div>
-    <div class="pel-sheet-synopsis">${locSynopsis(f).replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`:''}
+    ${(()=>{
+      // Programa o actividad → DESCRIPCIÓN; obra → SINOPSIS (lib.separar_descripcion).
+      const _esDesc=f.type==='event'||!!f.event_kind||!!(f.film_list&&f.film_list.length);
+      const _txt=_esDesc?locDescription(f):locSynopsis(f);
+      if(!_txt) return '';
+      return `    <div class="sec-hdr sm">${ICONS.text} <span>${_esDesc?t('label_descripcion'):t('label_sinopsis')}</span></div>
+    <div class="pel-sheet-synopsis">${_txt.replace(/^⚠️\s*INGLÉS\s*[—-]\s*/,'')}</div>`;
+    })()}
     ${cortosHtml}
         ${pelFootHTML(f)}
   `;
