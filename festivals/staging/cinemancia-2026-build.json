@@ -398,10 +398,10 @@
    "event_kind": "debate",
    "has_qa": true,
    "qa_type": "guests",
-   "synopsis": "A partir de la experiencia al filmar Todos los planos del mundo, se toma como ejemplo para pensar el cine nacional, sus tradiciones y su futuro.",
-   "synopsis_lang": "es",
    "_src": "hoja oficial del festival (conversatorios y charlas)",
-   "is_free": true
+   "is_free": true,
+   "description": "A partir de la experiencia al filmar Todos los planos del mundo, se toma como ejemplo para pensar el cine nacional, sus tradiciones y su futuro.",
+   "description_lang": "es"
   },
   {
    "title": "Retrospectiva Sergio Navarro Programa 1",
@@ -2074,10 +2074,10 @@
    "event_kind": "charla",
    "has_qa": true,
    "qa_type": "guests",
-   "synopsis": "Proyección de la película The Children’s Hour y diálogo sobre cinematografías nacionales, la conformación del canon y la crítica como herramienta que configura nuevas miradas en el legado cinematográfico.",
-   "synopsis_lang": "es",
    "_src": "hoja oficial del festival (conversatorios y charlas)",
-   "is_free": true
+   "is_free": true,
+   "description": "Proyección de la película The Children’s Hour y diálogo sobre cinematografías nacionales, la conformación del canon y la crítica como herramienta que configura nuevas miradas en el legado cinematográfico.",
+   "description_lang": "es"
   },
   {
    "title": "Une vie manifeste",
@@ -3107,10 +3107,10 @@
    "event_kind": "encuentro",
    "has_qa": true,
    "qa_type": "guests",
-   "synopsis": "Ponencias seleccionadas",
-   "synopsis_lang": "es",
    "_src": "hoja oficial del festival (conversatorios y charlas)",
-   "is_free": true
+   "is_free": true,
+   "description": "Ponencias seleccionadas",
+   "description_lang": "es"
   },
   {
    "title": "Retrospectiva Sergio Navarro Programa 2",

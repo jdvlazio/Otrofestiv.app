@@ -217,8 +217,6 @@
    "venue": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
    "has_qa": true,
    "qa_type": "team",
-   "synopsis": "Proyección musicalizada en vivo por la Corporación Licania. Cortometrajes en 8mm del Grupo experimental cine Caldas.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
@@ -252,7 +250,9 @@
      "year": 1983,
      "duration": "18 min"
     }
-   ]
+   ],
+   "description": "Proyección musicalizada en vivo por la Corporación Licania. Cortometrajes en 8mm del Grupo experimental cine Caldas.",
+   "description_lang": "es"
   },
   {
    "title": "Aquileo Venganza",
@@ -323,8 +323,6 @@
    "event_kind": "taller",
    "is_recurring": true,
    "has_qa": false,
-   "synopsis": "Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. Lo guía Juan C. López, editor y postproductor. En este taller exploraremos cómo la narrativa pasa del papel y se reescribe activamente durante la etapa de edición. Cupos limitados.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
@@ -332,7 +330,9 @@
    },
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScPop2bHx6C7Mf7yzrjH7Q1lRP9EG_DXEmzve4oJzRQ_lEsOA/viewform",
    "is_free": true,
-   "requires_registration": true
+   "requires_registration": true,
+   "description": "Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. Lo guía Juan C. López, editor y postproductor. En este taller exploraremos cómo la narrativa pasa del papel y se reescribe activamente durante la etapa de edición. Cupos limitados.",
+   "description_lang": "es"
   },
   {
    "title": "Lo que queda del mar",
@@ -423,14 +423,14 @@
    "venue": "Teatro Municipal Simona Duque - Marinilla",
    "event_kind": "charla",
    "has_qa": false,
-   "synopsis": "Oriente como destino audiovisual. Comisión Fílmica de Antioquia.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
     "lamina": 4
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Oriente como destino audiovisual. Comisión Fílmica de Antioquia.",
+   "description_lang": "es"
   },
   {
    "title": "Conversatorio: Secretos de chifonier",
@@ -443,14 +443,14 @@
    "venue": "Galería San José - CBA Marinilla - Marinilla",
    "event_kind": "conversatorio",
    "has_qa": false,
-   "synopsis": "Invitados: Louie Cuervo - Anamaria Jaramillo Ceballos.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
     "lamina": 5
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Invitados: Louie Cuervo - Anamaria Jaramillo Ceballos.",
+   "description_lang": "es"
   },
   {
    "title": "6.º Competencia Universitaria — Programa 1",
@@ -775,8 +775,6 @@
    "event_kind": "taller",
    "is_recurring": true,
    "has_qa": false,
-   "synopsis": "Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. Lo guía Juan C. López, editor y postproductor. En este taller exploraremos cómo la narrativa pasa del papel y se reescribe activamente durante la etapa de edición. Cupos limitados.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
@@ -784,7 +782,9 @@
    },
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScPop2bHx6C7Mf7yzrjH7Q1lRP9EG_DXEmzve4oJzRQ_lEsOA/viewform",
    "is_free": true,
-   "requires_registration": true
+   "requires_registration": true,
+   "description": "Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. Lo guía Juan C. López, editor y postproductor. En este taller exploraremos cómo la narrativa pasa del papel y se reescribe activamente durante la etapa de edición. Cupos limitados.",
+   "description_lang": "es"
   },
   {
    "title": "Mu-Ki-Ra",
@@ -845,14 +845,14 @@
    "venue": "Parque Principal de Marinilla - Marinilla",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Un taller abierto a niños, jóvenes y adultos para acercarnos de forma práctica y divertida al principio didáctico y fascinante de la imagen en movimiento. La comunidad construirá sus propios juguetes ópticos y los pondrá a prueba para explorar cómo nace la ilusión que le da vida al cine. Lo guían Carolina del Castillo y Marcela Restrepo (Corporación Trama). Sin inscripción previa.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
     "lamina": 8
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Un taller abierto a niños, jóvenes y adultos para acercarnos de forma práctica y divertida al principio didáctico y fascinante de la imagen en movimiento. La comunidad construirá sus propios juguetes ópticos y los pondrá a prueba para explorar cómo nace la ilusión que le da vida al cine. Lo guían Carolina del Castillo y Marcela Restrepo (Corporación Trama). Sin inscripción previa.",
+   "description_lang": "es"
   },
   {
    "title": "Tintico Charlado: Mercado MORA — El cine ¿es medio o es fin?",
@@ -865,14 +865,14 @@
    "venue": "Teatro Municipal Simona Duque - Marinilla",
    "event_kind": "charla",
    "has_qa": false,
-   "synopsis": "El cine ¿es medio o es fin? Luis Miguel Rivas y Edson Velandia.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
     "lamina": 8
    },
-   "is_free": true
+   "is_free": true,
+   "description": "El cine ¿es medio o es fin? Luis Miguel Rivas y Edson Velandia.",
+   "description_lang": "es"
   },
   {
    "title": "6.º Competencia Universitaria — Programa 2",
@@ -1078,14 +1078,14 @@
    "venue": "Parque Principal de Marinilla - Marinilla",
    "event_kind": "experiencia",
    "has_qa": false,
-   "synopsis": "Sin inscripción previa, para toda la familia.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
     "lamina": 10
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Sin inscripción previa, para toda la familia.",
+   "description_lang": "es"
   },
   {
    "title": "Taller Escritura y Reescritura",
@@ -1100,8 +1100,6 @@
    "event_kind": "taller",
    "is_recurring": true,
    "has_qa": false,
-   "synopsis": "Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. Lo guía Juan C. López, editor y postproductor. En este taller exploraremos cómo la narrativa pasa del papel y se reescribe activamente durante la etapa de edición. Cupos limitados.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
@@ -1109,7 +1107,9 @@
    },
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScPop2bHx6C7Mf7yzrjH7Q1lRP9EG_DXEmzve4oJzRQ_lEsOA/viewform",
    "is_free": true,
-   "requires_registration": true
+   "requires_registration": true,
+   "description": "Del guion al montaje: taller de escritura y reescritura, en alianza con Centro Ático. Lo guía Juan C. López, editor y postproductor. En este taller exploraremos cómo la narrativa pasa del papel y se reescribe activamente durante la etapa de edición. Cupos limitados.",
+   "description_lang": "es"
   },
   {
    "title": "Mercado MORA — Pitch público Películas en Camino MORA",
@@ -1159,14 +1159,14 @@
    "venue": "Teatro Municipal Simona Duque - Marinilla",
    "event_kind": "charla",
    "has_qa": false,
-   "synopsis": "Antioquia Film Friendly. Comisión Fílmica de Antioquia.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
     "lamina": 11
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Antioquia Film Friendly. Comisión Fílmica de Antioquia.",
+   "description_lang": "es"
   },
   {
    "title": "6.º Competencia Universitaria — Programa 3",
@@ -1327,14 +1327,14 @@
    "venue": "Teatro Regional Valerio Antonio Jiménez - Marinilla",
    "event_kind": "acto",
    "has_qa": false,
-   "synopsis": "Premiación MORA y Competencias.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
     "lamina": 13
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Premiación MORA y Competencias.",
+   "description_lang": "es"
   },
   {
    "title": "Lo demás es ruido",

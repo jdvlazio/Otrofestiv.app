@@ -358,12 +358,12 @@
    "venue": "Auditorio Cultural Diego Echavarría Misas - Itagüí",
    "event_kind": "conversatorio",
    "has_qa": false,
-   "synopsis": "Lanzamiento del libro Lactar, del escritor, director y productor de cine Harold Trompetero. Invitados: Rafael Aguirre (escritor), Heidy Carrasco (actriz) y Harold Trompetero (escritor y director de cine).",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
     "date": "2026-09-22"
-   }
+   },
+   "description": "Lanzamiento del libro Lactar, del escritor, director y productor de cine Harold Trompetero. Invitados: Rafael Aguirre (escritor), Heidy Carrasco (actriz) y Harold Trompetero (escritor y director de cine).",
+   "description_lang": "es"
   },
   {
    "title": "Concierto de inauguración",
@@ -376,13 +376,13 @@
    "venue": "Teatro Caribe - Itagüí",
    "event_kind": "apertura",
    "has_qa": false,
-   "synopsis": "Entrada libre con boletería entregada media hora antes del evento en las taquillas del teatro. Invitados: Coro Polifónico Ciudad de Itagüí.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
     "date": "2026-09-22"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Entrada libre con boletería entregada media hora antes del evento en las taquillas del teatro. Invitados: Coro Polifónico Ciudad de Itagüí.",
+   "description_lang": "es"
   },
   {
    "title": "The Nation",
@@ -833,12 +833,12 @@
    "venue": "Royal Films Plaza Arrayanes - Itagüí",
    "event_kind": "torneo",
    "has_qa": false,
-   "synopsis": "En las modalidades tradicional (principiante y avanzado) y Commander (avanzado, hasta brackets 3).",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/DdmhX7gFIZa/",
     "date": "2026-09-22"
-   }
+   },
+   "description": "En las modalidades tradicional (principiante y avanzado) y Commander (avanzado, hasta brackets 3).",
+   "description_lang": "es"
   },
   {
    "title": "Función especial de cine",

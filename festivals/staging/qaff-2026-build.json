@@ -318,12 +318,12 @@
    "venue": "Alianza Francesa - Bogotá",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Florent Mahoukou · Gwladys Gambie · Catalina Mosquera · Shamyr Caicedo Rivas · Santiago Trujillo",
-   "synopsis_lang": "es",
    "poster": "/assets/qaff/noir-estetico-la-estetica-de-la-oscuridad.jpg",
    "posterSource": "custom",
    "_src": "PDF oficial del programa, p15",
-   "is_free": true
+   "is_free": true,
+   "description": "Florent Mahoukou · Gwladys Gambie · Catalina Mosquera · Shamyr Caicedo Rivas · Santiago Trujillo",
+   "description_lang": "es"
   },
   {
    "title": "Caída Libre + Kanekalon + Bertha + Hacker Leonilia + Viche + Tia Ciata",
@@ -447,12 +447,12 @@
    "sala": "Auditorio Centro Ático",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Modera María José López · Emma Van Lare · Ana Beatriz Silva · Mariana Campos · Wilson Borja",
-   "synopsis_lang": "es",
    "poster": "/assets/qaff/noir-memoria-matriarcado-negro-y-territorio-sonoro.jpg",
    "posterSource": "custom",
    "_src": "PDF oficial del programa, p32",
-   "is_free": true
+   "is_free": true,
+   "description": "Modera María José López · Emma Van Lare · Ana Beatriz Silva · Mariana Campos · Wilson Borja",
+   "description_lang": "es"
   },
   {
    "title": "Los Chicos del Banjo",
@@ -545,12 +545,12 @@
    "sala": "Auditorio (ML-C)",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Moderan Melissa Riquet, Sofía Espinosa y María José Durán · Juan Manuel Amaya · Douna Tongrongru · Petra Ventana · Maguemati Wabgou",
-   "synopsis_lang": "es",
    "poster": "/assets/qaff/noir-identidad-territorios-rotos-cuerpos-que-resisten.jpg",
    "posterSource": "custom",
    "_src": "PDF oficial del programa, p47",
-   "is_free": true
+   "is_free": true,
+   "description": "Moderan Melissa Riquet, Sofía Espinosa y María José Durán · Juan Manuel Amaya · Douna Tongrongru · Petra Ventana · Maguemati Wabgou",
+   "description_lang": "es"
   },
   {
    "title": "Café ? + Happy Meal + Gloria + The One Who Cries",
@@ -747,12 +747,12 @@
    "sala": "Auditorio Teresa Cuervo Borda",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Modera Indhira Serrano · César Palacios Chaverra · Patricia Mena · Nicolás Vizcaíno Sánchez · Alejandra Mina",
-   "synopsis_lang": "es",
    "poster": "/assets/qaff/noir-identidad-ser-negro-no-es-un-genero.jpg",
    "posterSource": "custom",
    "_src": "PDF oficial del programa, p58",
-   "is_free": true
+   "is_free": true,
+   "description": "Modera Indhira Serrano · César Palacios Chaverra · Patricia Mena · Nicolás Vizcaíno Sánchez · Alejandra Mina",
+   "description_lang": "es"
   },
   {
    "title": "La Tinaja + The Last Dance + Waterfront Memories + When the World Broke Open",
@@ -845,12 +845,12 @@
    "sala": "Estudio 4 - Edificio Gerardo Arango, S.J. – Facultad de Artes",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Modera Andrea V. Naranjo · Marcio Brito Neto · Yenni Córdoba · Marino Aguado · Marton Olympio",
-   "synopsis_lang": "es",
    "poster": "/assets/qaff/noir-industria-redes-sur-sur-circulacion-y-mercados-sur-sur.jpg",
    "posterSource": "custom",
    "_src": "PDF oficial del programa, p36",
-   "is_free": true
+   "is_free": true,
+   "description": "Modera Andrea V. Naranjo · Marcio Brito Neto · Yenni Córdoba · Marino Aguado · Marton Olympio",
+   "description_lang": "es"
   },
   {
    "title": "Caída Libre + Refugiar el Gesto + Kanekalon + Bertha + Hacker Leonilia + Tia Ciata",
@@ -1220,12 +1220,12 @@
    "sala": "Sala 901 - Edificio Jorge Hoyos Vásquez, S.J.",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Modera Yenni Córdoba · Nina Caicedo · Julián Díaz · Juliana Carabalí · Frida Muenala",
-   "synopsis_lang": "es",
    "poster": "/assets/qaff/noir-despues-de-la-tormenta-cuerpo-tierra-y-renacer.jpg",
    "posterSource": "custom",
    "_src": "PDF oficial del programa, p38",
-   "is_free": true
+   "is_free": true,
+   "description": "Modera Yenni Córdoba · Nina Caicedo · Julián Díaz · Juliana Carabalí · Frida Muenala",
+   "description_lang": "es"
   },
   {
    "title": "The Black Bart of Taco King #17 + Stormy Days + Amelia + Mi Viche Todo el Día",
@@ -1383,12 +1383,12 @@
    "venue": "Alianza Francesa - Bogotá",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Modera Ángel Perea Escobar · Essehomo Pino Valoyes · Alain Nkosi Nkonda · Zanu · Lucas Silva",
-   "synopsis_lang": "es",
    "poster": "/assets/qaff/noir-industria-circulacion-y-mercados-sur-sur.jpg",
    "posterSource": "custom",
    "_src": "PDF oficial del programa, p22",
-   "is_free": true
+   "is_free": true,
+   "description": "Modera Ángel Perea Escobar · Essehomo Pino Valoyes · Alain Nkosi Nkonda · Zanu · Lucas Silva",
+   "description_lang": "es"
   },
   {
    "title": "Vernissage — Ma chérie, coiffure?, de Phalonne Pierre Louis",
@@ -1401,12 +1401,12 @@
    "venue": "Alianza Francesa - Bogotá",
    "event_kind": "vernissage",
    "has_qa": false,
-   "synopsis": "Exposición de Phalonne Pierre Louis. Entrada libre.",
-   "synopsis_lang": "es",
    "poster": "/assets/qaff/vernissage-ma-cherie-coiffure-de-phalonne-pierre-louis.jpg",
    "posterSource": "custom",
    "_src": "PDF oficial del programa, p(19, 24)",
-   "is_free": true
+   "is_free": true,
+   "description": "Exposición de Phalonne Pierre Louis. Entrada libre.",
+   "description_lang": "es"
   },
   {
    "title": "Viva Yurumangui",
@@ -1496,12 +1496,12 @@
    "sala": "Auditorio Teresa Cuervo Borda",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Modera Catherine Dunga · Gwladys Gambie · Ángela Carabalí · Carlos Correa Angulo · Mercedes Angola",
-   "synopsis_lang": "es",
    "poster": "/assets/qaff/noir-historico-las-sombras-del-archivo.jpg",
    "posterSource": "custom",
    "_src": "PDF oficial del programa, p62",
-   "is_free": true
+   "is_free": true,
+   "description": "Modera Catherine Dunga · Gwladys Gambie · Ángela Carabalí · Carlos Correa Angulo · Mercedes Angola",
+   "description_lang": "es"
   },
   {
    "title": "La Obra de Dios",
@@ -1624,12 +1624,12 @@
    "sala": "Sala 903 - Edificio Jorge Hoyos Vásquez, S.J.",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Modera Ana Camila Jaramillo · Miguel Ángel Abadía · Ricardo Malagón",
-   "synopsis_lang": "es",
    "poster": "/assets/qaff/noir-fogon-cocina-territorio-y-memoria.jpg",
    "posterSource": "custom",
    "_src": "PDF oficial del programa, p43",
-   "is_free": true
+   "is_free": true,
+   "description": "Modera Ana Camila Jaramillo · Miguel Ángel Abadía · Ricardo Malagón",
+   "description_lang": "es"
   },
   {
    "title": "Orango",
@@ -1670,12 +1670,12 @@
    "sala": "Salón (ML513)",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Moderan Melissa Riquet, Sofía Espinosa y María José Durán · Catalina Mosquera · Frida Muenala · Nina Caicedo",
-   "synopsis_lang": "es",
    "poster": "/assets/qaff/noir-y-genero-mujeres-en-el-cine.jpg",
    "posterSource": "custom",
    "_src": "PDF oficial del programa, p54",
-   "is_free": true
+   "is_free": true,
+   "description": "Moderan Melissa Riquet, Sofía Espinosa y María José Durán · Catalina Mosquera · Frida Muenala · Nina Caicedo",
+   "description_lang": "es"
   },
   {
    "title": "Los Viajeros",
@@ -1771,8 +1771,6 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "has_qa": true,
-   "synopsis": "Seis miradas breves que encuentran lo extraordinario en lo cotidiano, un domingo cualquiera, una taza de café, un encuentro casual y revelan las tensiones raciales, familiares y sociales que atraviesan la vida diaria en cuatro continentes.",
-   "synopsis_lang": "es",
    "_src": "parrilla impresa en el PDF oficial del programa, p82",
    "is_free": true,
    "is_cortos": true,
@@ -1873,7 +1871,9 @@
      "tmdb_id": 1742385,
      "synopsis": "Ouzin, Baba y Sémou, amigos de toda la vida y jubilados, nunca fallan a su cita diaria para tomar café. Pero cada año, en abril, Sémou se siente atormentado por la pérdida de su primer amor. Una tarde, cuando Ouzin y Baba se preocupan por su amigo, Sémou no aparece para el café."
     }
-   ]
+   ],
+   "description": "Seis miradas breves que encuentran lo extraordinario en lo cotidiano, un domingo cualquiera, una taza de café, un encuentro casual y revelan las tensiones raciales, familiares y sociales que atraviesan la vida diaria en cuatro continentes.",
+   "description_lang": "es"
   },
   {
    "title": "Día del Padre",
@@ -1915,8 +1915,6 @@
    "venue": "Cinemateca de Bogotá - Bogotá",
    "sala": "Sala 3",
    "has_qa": false,
-   "synopsis": "Cuatro documentales que rescatan saberes, historias y luchas silenciadas, para reafirmar que la memoria es, en sí misma, un acto de resistencia.",
-   "synopsis_lang": "es",
    "_src": "parrilla impresa en el PDF oficial del programa, p84",
    "is_free": true,
    "is_cortos": true,
@@ -1987,7 +1985,9 @@
      "tmdb_id": 1742412,
      "synopsis": "Dos mujeres. Dos continentes. Una misma lucha. Desde Guadalupe hasta Estados Unidos, Sisters in Destiny explora los caminos entrelazados de Gerty Archimède, pionera del feminismo y la lucha anticolonial, y Angela Davis, símbolo global de los derechos civiles y la resistencia. A través de sus activismos, sus voces y su encuentro histórico, la película descubre una poderosa historia de hermandad negra, resiliencia y legado — un capítulo olvidado que aún resuena hoy."
     }
-   ]
+   ],
+   "description": "Cuatro documentales que rescatan saberes, historias y luchas silenciadas, para reafirmar que la memoria es, en sí misma, un acto de resistencia.",
+   "description_lang": "es"
   },
   {
    "title": "El Coach de los Locos",
@@ -2122,12 +2122,12 @@
    "sala": "Facultad de Artes",
    "event_kind": "dialogo",
    "has_qa": false,
-   "synopsis": "Modera Iván Jiménez · Wilson Borja · Francisco Caldas Vela · Rafael Antonio Díaz",
-   "synopsis_lang": "es",
    "poster": "/assets/qaff/noir-estetico-la-imagen-entre-el-lienzo-el-archivo-y-la-pant.jpg",
    "posterSource": "custom",
    "_src": "PDF oficial del programa, p67",
-   "is_free": true
+   "is_free": true,
+   "description": "Modera Iván Jiménez · Wilson Borja · Francisco Caldas Vela · Rafael Antonio Díaz",
+   "description_lang": "es"
   }
  ],
  "_corrido": {

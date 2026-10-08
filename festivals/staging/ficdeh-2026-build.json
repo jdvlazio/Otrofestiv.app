@@ -2725,8 +2725,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "A partir de la proyección de la película XIE. Defensa de la vida, las invitadas conversarán sobre su experiencia de liderazgo en defensa del agua y la vida en La Calera.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-13",
    "time": "17:00",
@@ -2743,7 +2741,9 @@
     "programacion_oficial": "Las guardianas del agua"
    },
    "_poster_descartado": "genérico de sección (compartido por varias actividades)",
-   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900363"
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900363",
+   "description": "A partir de la proyección de la película XIE. Defensa de la vida, las invitadas conversarán sobre su experiencia de liderazgo en defensa del agua y la vida en La Calera.",
+   "description_lang": "es"
   },
   {
    "title": "Aminetu",
@@ -2845,8 +2845,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "Organizaciones de mujeres conversan sobre el incremento de estas violencias en la ciudad.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-13",
    "time": "18:00",
@@ -2861,7 +2859,9 @@
    "_src": {
     "programacion_oficial": "Violencias de género en Barranquilla"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "Organizaciones de mujeres conversan sobre el incremento de estas violencias en la ciudad.",
+   "description_lang": "es"
   },
   {
    "title": "La Cerrillana",
@@ -3626,8 +3626,6 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "180 min",
-   "synopsis": "En alianza con el SENA, este taller ofrece una introducción a los fundamentos de la producción audiovisual y la animación 2D, brindando a los participantes herramientas básicas par",
-   "synopsis_lang": "es",
    "poster": "/assets/ficdeh/formacion-produccion-y-animacion-2d.jpg",
    "posterSource": "custom",
    "event_kind": "taller",
@@ -3643,15 +3641,15 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Producción y Animación 2D"
-   }
+   },
+   "description": "En alianza con el SENA, este taller ofrece una introducción a los fundamentos de la producción audiovisual y la animación 2D, brindando a los participantes herramientas básicas par",
+   "description_lang": "es"
   },
   {
    "title": "De los deepfakes y otras violencias digitales",
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "¿Qué se está haciendo en Colombia para erradicar estas violencias contra las mujeres? Expertas conversan sobre el tema.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-14",
    "time": "10:00",
@@ -3667,15 +3665,15 @@
    "_src": {
     "programacion_oficial": "De los deepfakes y otras violencias digitales"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "¿Qué se está haciendo en Colombia para erradicar estas violencias contra las mujeres? Expertas conversan sobre el tema.",
+   "description_lang": "es"
   },
   {
    "title": "Una ciudad ¿para quién?",
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "Un diálogo en torno al derecho a la ciudad en Cartagena",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-14",
    "time": "10:00",
@@ -3690,7 +3688,9 @@
    "_src": {
     "programacion_oficial": "Una ciudad ¿para quién?"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "Un diálogo en torno al derecho a la ciudad en Cartagena",
+   "description_lang": "es"
   },
   {
    "title": "Honorablé",
@@ -4524,8 +4524,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "El regreso de la delgadez extrema y su viralización digital representa un riesgo para niños, niñas y jóvenes. En este espacio, activistas reflexionan sobre el cuerpo, la violencia estética, las redes sociales y la salud mental.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-14",
    "time": "16:00",
@@ -4541,7 +4539,9 @@
    "_src": {
     "programacion_oficial": "Hackeando los mandatos de la delgadez"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "El regreso de la delgadez extrema y su viralización digital representa un riesgo para niños, niñas y jóvenes. En este espacio, activistas reflexionan sobre el cuerpo, la violencia estética, las redes sociales y la salud mental.",
+   "description_lang": "es"
   },
   {
    "title": "Hija del volcán",
@@ -4580,8 +4580,6 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "90 min",
-   "synopsis": "A través del uso de pinturas y actividades creativas, se abordarán conceptos básicos de storytelling y composición visual de forma práctica y sin tecnicismos.",
-   "synopsis_lang": "es",
    "poster": "/assets/ficdeh/formacion-pintando-realidades.jpg",
    "posterSource": "custom",
    "event_kind": "taller",
@@ -4597,7 +4595,9 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Pintando realidades"
-   }
+   },
+   "description": "A través del uso de pinturas y actividades creativas, se abordarán conceptos básicos de storytelling y composición visual de forma práctica y sin tecnicismos.",
+   "description_lang": "es"
   },
   {
    "title": "Bojayá, la verdad desde adentro",
@@ -5142,8 +5142,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "Un espacio de diálogo sobre las nuevas formas de participación y activismo politico en las plataformas digitales.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-14",
    "time": "18:00",
@@ -5158,7 +5156,9 @@
    "_src": {
     "programacion_oficial": "Mujeres, juventudes y activismo político en la era digital"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "Un espacio de diálogo sobre las nuevas formas de participación y activismo politico en las plataformas digitales.",
+   "description_lang": "es"
   },
   {
    "title": "Herencia: Los cantos de la tierra",
@@ -5737,8 +5737,6 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "180 min",
-   "synopsis": "El barrismo es mucho más que acompañar a un equipo. La pasión por el fútbol puede convertirse en una fuerza para construir comunidad, promover el liderazgo, fortalecer la convivenc",
-   "synopsis_lang": "es",
    "poster": "/assets/ficdeh/formacion-barrismo-social.jpg",
    "posterSource": "custom",
    "event_kind": "taller",
@@ -5756,15 +5754,15 @@
    "_src": {
     "programacion_oficial": "Barrismo social: Construyendo comunidad desde el aguante"
    },
-   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfLmzL1WNXvEq-FvZgzubVfcuQEvrjRf6HZ5zSC0mbRdwIS-A/viewform"
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfLmzL1WNXvEq-FvZgzubVfcuQEvrjRf6HZ5zSC0mbRdwIS-A/viewform",
+   "description": "El barrismo es mucho más que acompañar a un equipo. La pasión por el fútbol puede convertirse en una fuerza para construir comunidad, promover el liderazgo, fortalecer la convivenc",
+   "description_lang": "es"
   },
   {
    "title": "Actuación para cine",
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "180 min",
-   "synopsis": "Aproximación práctica a la actuación para cine mediante ejercicios orientados al desarrollo de herramientas actorales que permitan abordar la escena desde la corporalidad, las acci",
-   "synopsis_lang": "es",
    "poster": "/assets/ficdeh/formacion-actuacion-para-cine.jpg",
    "posterSource": "custom",
    "event_kind": "taller",
@@ -5780,7 +5778,9 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Actuación para cine"
-   }
+   },
+   "description": "Aproximación práctica a la actuación para cine mediante ejercicios orientados al desarrollo de herramientas actorales que permitan abordar la escena desde la corporalidad, las acci",
+   "description_lang": "es"
   },
   {
    "title": "Hija del volcán",
@@ -6860,8 +6860,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "Cuidado y protección de áreas naturales en riesgo. Entrada con previa inscripción: https://forms.gle/q8LxC7KnkowLT7ov8PanelistasEmmerich WeissenbergerDirector de la Fundación Las Mercedes. Fundador del Colectivo ArtEmbassy.Nora RuzsicsArtista. Cineasta. Miembro del Colectivo ArtEmbassy.Gunzareiman V",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-15",
    "time": "14:00",
@@ -6877,7 +6875,9 @@
     "programacion_oficial": "Desde el centro de la tierra"
    },
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSc-dyfD_Z1R2PZIr5hpBn4nLNGr6kb80JoFxks3rOPpDpYJ2w/viewform",
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "Cuidado y protección de áreas naturales en riesgo. Entrada con previa inscripción: https://forms.gle/q8LxC7KnkowLT7ov8PanelistasEmmerich WeissenbergerDirector de la Fundación Las Mercedes. Fundador del Colectivo ArtEmbassy.Nora RuzsicsArtista. Cineasta. Miembro del Colectivo ArtEmbassy.Gunzareiman V",
+   "description_lang": "es"
   },
   {
    "title": "Indiamenta",
@@ -7325,8 +7325,6 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "180 min",
-   "synopsis": "Este taller brindará herramientas para la identificación y denuncia de las violencias de género en los medios de comunicación.",
-   "synopsis_lang": "es",
    "poster": "/assets/ficdeh/formacion-visibilizar-lo-invisible.jpg",
    "posterSource": "custom",
    "event_kind": "taller",
@@ -7344,7 +7342,9 @@
    "_src": {
     "programacion_oficial": "Visibilizar lo Invisible: Taller de Herramientas frente a las Violencias de Género"
    },
-   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSeUvZCv77WwHBMSWeI_Vm47n901vyDWTAnui_1FINYxGmaShQ/viewform"
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSeUvZCv77WwHBMSWeI_Vm47n901vyDWTAnui_1FINYxGmaShQ/viewform",
+   "description": "Este taller brindará herramientas para la identificación y denuncia de las violencias de género en los medios de comunicación.",
+   "description_lang": "es"
   },
   {
    "title": "Indiamenta",
@@ -7414,8 +7414,6 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "180 min",
-   "synopsis": "Espacio de encuentro, diálogo e inspiración que reúne a mujeres que hacen parte de la industria audiovisual del Eje Cafetero. Compartirán sus experiencias y conversarán sobre las o",
-   "synopsis_lang": "es",
    "poster": "/assets/ficdeh/formacion-mujeres-en-el-audiovisual.jpg",
    "posterSource": "custom",
    "event_kind": "taller",
@@ -7431,15 +7429,15 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Conversatorio Mujeres en el Audiovisual"
-   }
+   },
+   "description": "Espacio de encuentro, diálogo e inspiración que reúne a mujeres que hacen parte de la industria audiovisual del Eje Cafetero. Compartirán sus experiencias y conversarán sobre las o",
+   "description_lang": "es"
   },
   {
    "title": "Resistencias indígenas en Ibagué",
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "¿Qué procesos de resistencia lideran las y los indígenas de la ciudad? En este espacio lxs invitadxs reflexionan sobre el tema.PanelistasModeradoreIván Reina OrtizRealizadore de Cine y TV. Magíster en Administración. Productore local de FICDEH en Ibagué.Katerin Yelitza Rodríguez MontealegreEstudiant",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-15",
    "time": "16:30",
@@ -7454,7 +7452,9 @@
    "_src": {
     "programacion_oficial": "Resistencias indígenas en Ibagué"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "¿Qué procesos de resistencia lideran las y los indígenas de la ciudad? En este espacio lxs invitadxs reflexionan sobre el tema.PanelistasModeradoreIván Reina OrtizRealizadore de Cine y TV. Magíster en Administración. Productore local de FICDEH en Ibagué.Katerin Yelitza Rodríguez MontealegreEstudiant",
+   "description_lang": "es"
   },
   {
    "title": "El juego de la vida",
@@ -7493,8 +7493,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "Una jornada cultural para conmemorar los diez años de la firma de los Acuerdos de Paz en Colombia. Incluye la proyección de los cortometrajes \"La luz que nos queda\" (dir. Gloria Isabel Gómez Ceballos) y \"Lo que sentimos\" (dir. Fondo Multidonante de las Naciones Unidas para la Paz en Colombia), la ch",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-15",
    "time": "17:00",
@@ -7509,7 +7507,9 @@
    "_src": {
     "programacion_oficial": "El Arte de la Paz"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "Una jornada cultural para conmemorar los diez años de la firma de los Acuerdos de Paz en Colombia. Incluye la proyección de los cortometrajes \"La luz que nos queda\" (dir. Gloria Isabel Gómez Ceballos) y \"Lo que sentimos\" (dir. Fondo Multidonante de las Naciones Unidas para la Paz en Colombia), la ch",
+   "description_lang": "es"
   },
   {
    "title": "La luz que nos queda",
@@ -7765,8 +7765,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "Una reflexión sobre el papel de las mujeres buscadoras a partir del documental \"Soñé su nombre\"",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-15",
    "time": "18:00",
@@ -7781,7 +7779,9 @@
    "_src": {
     "programacion_oficial": "Ni un minuto de silencio, toda una vida de búsqueda"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "Una reflexión sobre el papel de las mujeres buscadoras a partir del documental \"Soñé su nombre\"",
+   "description_lang": "es"
   },
   {
    "title": "Aquí no entra luz",
@@ -8577,8 +8577,6 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "180 min",
-   "synopsis": "Aprenderás los conceptos clave sobre el manejo de semillas, preparación de la tierra y uso de abonos para propagar y mantener plántulas sanas.",
-   "synopsis_lang": "es",
    "poster": "/assets/ficdeh/los-frutos-que-dan-vida.jpg",
    "posterSource": "custom",
    "event_kind": "taller",
@@ -8596,7 +8594,9 @@
     "programacion_oficial": "Los frutos que dan vida: Siembra autosostenible casera"
    },
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdyNHv8o_hwEoc4_9rL8sQ3x55Eq_sNAnr_qUf4yRsPf-zIpw/viewform",
-   "is_recurring": true
+   "is_recurring": true,
+   "description": "Aprenderás los conceptos clave sobre el manejo de semillas, preparación de la tierra y uso de abonos para propagar y mantener plántulas sanas.",
+   "description_lang": "es"
   },
   {
    "title": "Héroes del silencio",
@@ -8988,8 +8988,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "Las periodistas de este proyecto toman los micrófonos y comparten cómo ha sido narrar el conflicto y la paz en Colombia.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-16",
    "time": "15:30",
@@ -9005,7 +9003,9 @@
    "_src": {
     "programacion_oficial": "Colombia +20: una década de periodismo para la paz"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "Las periodistas de este proyecto toman los micrófonos y comparten cómo ha sido narrar el conflicto y la paz en Colombia.",
+   "description_lang": "es"
   },
   {
    "title": "El juego de la vida",
@@ -9940,8 +9940,6 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "180 min",
-   "synopsis": "Aprenderás los conceptos clave sobre el manejo de semillas, preparación de la tierra y uso de abonos para propagar y mantener plántulas sanas.",
-   "synopsis_lang": "es",
    "poster": "/assets/ficdeh/los-frutos-que-dan-vida.jpg",
    "posterSource": "custom",
    "event_kind": "taller",
@@ -9959,7 +9957,9 @@
     "programacion_oficial": "Los frutos que dan vida: Siembra autosostenible casera"
    },
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSdyNHv8o_hwEoc4_9rL8sQ3x55Eq_sNAnr_qUf4yRsPf-zIpw/viewform",
-   "is_recurring": true
+   "is_recurring": true,
+   "description": "Aprenderás los conceptos clave sobre el manejo de semillas, preparación de la tierra y uso de abonos para propagar y mantener plántulas sanas.",
+   "description_lang": "es"
   },
   {
    "title": "Madres de nacimiento",
@@ -10634,8 +10634,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "A partir de la proyección de los cortos La Cerillana y Los pliegues de la falda activistas conversan sobre estas experiencia de vida.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-17",
    "time": "16:00",
@@ -10652,7 +10650,9 @@
     "programacion_oficial": "¡Existimos! Infancias trans en Colombia"
    },
    "_poster_descartado": "genérico de sección (compartido por varias actividades)",
-   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900388"
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900388",
+   "description": "A partir de la proyección de los cortos La Cerillana y Los pliegues de la falda activistas conversan sobre estas experiencia de vida.",
+   "description_lang": "es"
   },
   {
    "title": "Cuando la palabra se hace búsqueda",
@@ -11043,8 +11043,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "Condiciones laborales, creativas y éticas que atraviesan la industria.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-17",
    "time": "17:30",
@@ -11060,7 +11058,9 @@
    "_src": {
     "programacion_oficial": "Tercera charla Derechos audiovisuales"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "Condiciones laborales, creativas y éticas que atraviesan la industria.",
+   "description_lang": "es"
   },
   {
    "title": "Por una gota de leche",
@@ -11413,8 +11413,6 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "180 min",
-   "synopsis": "Herramientas prácticas para identificar fuentes confiables, verificar información, evitar la desinformación y construir narrativas que generen diálogo e impacto sin perder el compr",
-   "synopsis_lang": "es",
    "poster": "/assets/ficdeh/formacion-crear-para-resistir.jpg",
    "posterSource": "custom",
    "event_kind": "taller",
@@ -11432,7 +11430,9 @@
    "_src": {
     "programacion_oficial": "Crear para resistir: la creación de contenido como un acto de responsabilidad"
    },
-   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSeKw3Cl-a9XRiOjncH_5MsZh3H9BYndxW69S3Avt1yE1lRVTQ/viewform"
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSeKw3Cl-a9XRiOjncH_5MsZh3H9BYndxW69S3Avt1yE1lRVTQ/viewform",
+   "description": "Herramientas prácticas para identificar fuentes confiables, verificar información, evitar la desinformación y construir narrativas que generen diálogo e impacto sin perder el compr",
+   "description_lang": "es"
   },
   {
    "title": "Héroes del silencio",
@@ -11469,8 +11469,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "Diálogo sobre las transformaciones que la inteligencia artificial está generando en los procesos creativos y artísticos del país.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-18",
    "time": "10:00",
@@ -11486,7 +11484,9 @@
    "_src": {
     "programacion_oficial": "El arte de moldear la IA"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "Diálogo sobre las transformaciones que la inteligencia artificial está generando en los procesos creativos y artísticos del país.",
+   "description_lang": "es"
   },
   {
    "title": "Amalgama",
@@ -12530,8 +12530,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "Una invitación a reflexionar sobre la importancia del río Otún como fuente de vida y patrimonio natural.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-18",
    "time": "16:00",
@@ -12547,15 +12545,15 @@
    "_src": {
     "programacion_oficial": "De Poleka Kasue al Río Otún: ¿Quién cuida el agua del río más importante de la región?"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "Una invitación a reflexionar sobre la importancia del río Otún como fuente de vida y patrimonio natural.",
+   "description_lang": "es"
   },
   {
    "title": "Hablemos de salud mental",
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "Un espacio de reflexión en torno a la salud mental de los jóvenes chocoanos.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-18",
    "time": "16:00",
@@ -12570,7 +12568,9 @@
    "_src": {
     "programacion_oficial": "Hablemos de salud mental"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "Un espacio de reflexión en torno a la salud mental de los jóvenes chocoanos.",
+   "description_lang": "es"
   },
   {
    "title": "Akababuru: Expresión de asombro",
@@ -12703,8 +12703,6 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "120 min",
-   "synopsis": "Descúbrelo a través de los rushes inéditos de Juan Guillermo Garcés y el making of de las películas de Víctor Gaviria en los años noventa.",
-   "synopsis_lang": "es",
    "poster": "/assets/ficdeh/como-filmar-un-pais-en-guerra.jpg",
    "posterSource": "custom",
    "event_kind": "masterclass",
@@ -12722,7 +12720,9 @@
    "_src": {
     "programacion_oficial": "¿Cómo filmar un país en guerra?"
    },
-   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfaVwhN0vUftmGRrC4EeSufi6iF0GcC625c2x2JGoUyJnpdfw/viewform"
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfaVwhN0vUftmGRrC4EeSufi6iF0GcC625c2x2JGoUyJnpdfw/viewform",
+   "description": "Descúbrelo a través de los rushes inéditos de Juan Guillermo Garcés y el making of de las películas de Víctor Gaviria en los años noventa.",
+   "description_lang": "es"
   },
   {
    "title": "Cuando la palabra se hace búsqueda",
@@ -13322,8 +13322,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "¿Cuáles han sido los alcances e implicaciones de la Ley 1448 de 2011? Líderes y lideresas reflexionan sobre esto.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-19",
    "time": "09:00",
@@ -13338,7 +13336,9 @@
    "_src": {
     "programacion_oficial": "Reconocer, atender y reparar: 15 años de la Ley de Víctimas"
    },
-   "_poster_descartado": "genérico de sección (compartido por varias actividades)"
+   "_poster_descartado": "genérico de sección (compartido por varias actividades)",
+   "description": "¿Cuáles han sido los alcances e implicaciones de la Ley 1448 de 2011? Líderes y lideresas reflexionan sobre esto.",
+   "description_lang": "es"
   },
   {
    "title": "Sapos por todos lados",
@@ -13440,8 +13440,6 @@
    "type": "event",
    "section": "🛠️ Formación",
    "duration": "180 min",
-   "synopsis": "La Comisión Fílmica de Bogotá presenta la guía de cuidado y prevención de violencias en el entorno laboral audiovisual.",
-   "synopsis_lang": "es",
    "poster": "/assets/ficdeh/formacion-gritemos-corte.jpg",
    "posterSource": "custom",
    "event_kind": "taller",
@@ -13457,7 +13455,9 @@
    "_ingreso": "",
    "_src": {
     "programacion_oficial": "Gritemos ¡Corte!"
-   }
+   },
+   "description": "La Comisión Fílmica de Bogotá presenta la guía de cuidado y prevención de violencias en el entorno laboral audiovisual.",
+   "description_lang": "es"
   },
   {
    "title": "Cuando la palabra se hace búsqueda",
@@ -13942,8 +13942,6 @@
    "type": "event",
    "section": "💬 Charlas que Unen",
    "duration": "180 min",
-   "synopsis": "A partir de la proyección del cortometraje Halima, Juliana Domicó conversa sobre su lucha por la erradicación de esta práctica en el país.",
-   "synopsis_lang": "es",
    "event_kind": "charla",
    "day": "2026-08-19",
    "time": "15:30",
@@ -13960,7 +13958,9 @@
     "programacion_oficial": "¡No más mutilación genital femenina en Colombia!"
    },
    "_poster_descartado": "genérico de sección (compartido por varias actividades)",
-   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900392"
+   "ticket_url": "https://cinemateca.checkout.tuboleta.com/selection/event/date?productId=10230522900392",
+   "description": "A partir de la proyección del cortometraje Halima, Juliana Domicó conversa sobre su lucha por la erradicación de esta práctica en el país.",
+   "description_lang": "es"
   },
   {
    "title": "Bojayá, la verdad desde adentro",

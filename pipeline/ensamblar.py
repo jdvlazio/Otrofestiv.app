@@ -479,6 +479,8 @@ def ensamblar(fid, escribir=True):
             for _k in ('synopsis', 'synopsis_en'):
                 if _o.get(_k):
                     _o[_k] = mayuscula_inicial(_o[_k])
+        # programa o actividad: su texto es DESCRIPCIÓN, no sinopsis (lib)
+        lib.separar_descripcion(_f)
     out['films'] = films
 
     print(f'  {fid}: {len(films)} funciones · {len(venues)} sedes · {len(secciones)} secciones '

@@ -537,13 +537,13 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/talleresficma17/ (2026-09-19)",
-   "synopsis": "Un taller intensivo de alto impacto visual diseñado para desmitificar la complejidad del plano secuencia y la cámara en movimiento. Conectando el lenguaje del cine de autor con la narrativa pop, los cómics y los videojuegos, los participantes aprenderán a planificar y ejecutar tomas continuas sin cortar la cámara. La experiencia combina un bloque conceptual ágil con una demostración técnica en vivo (Show & Tell) y un reto práctico donde los 30 asistentes se dividen en células de rodaje simultáneas,asumiendo roles reales de un equipo de filmación (Director, Operador, Foquista, Spotter, Actores) para producir micro-historias en vivo utilizando tecnología de estabilización (Ronin) y rig de cuerpo (Snorricam).",
-   "synopsis_lang": "es",
    "type": "event",
    "event_kind": "taller",
    "requires_registration": true,
    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScQwx4mCGbX-JGI9Y6Tranmsa1C-yet1ZDFwF8MjxcoPBUraQ/viewform",
-   "_cupos": 30
+   "_cupos": 30,
+   "description": "Un taller intensivo de alto impacto visual diseñado para desmitificar la complejidad del plano secuencia y la cámara en movimiento. Conectando el lenguaje del cine de autor con la narrativa pop, los cómics y los videojuegos, los participantes aprenderán a planificar y ejecutar tomas continuas sin cortar la cámara. La experiencia combina un bloque conceptual ágil con una demostración técnica en vivo (Show & Tell) y un reto práctico donde los 30 asistentes se dividen en células de rodaje simultáneas,asumiendo roles reales de un equipo de filmación (Director, Operador, Foquista, Spotter, Actores) para producir micro-historias en vivo utilizando tecnología de estabilización (Ronin) y rig de cuerpo (Snorricam).",
+   "description_lang": "es"
   },
   {
    "title": "Ayuno y cenizas",
@@ -713,12 +713,12 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/talleresficma17/ (2026-09-19)",
-   "synopsis": "Lo único que necesitas es decir sí, sí lo voy a hacer; lo demás es práctica, disciplina y diversión. En este taller aprenderás lo esencial para pescar una idea, convertirla en guión cinematográfico, organizarla y filmarla. Porque los sueños se cumplen también en 1 minuto.",
-   "synopsis_lang": "es",
    "type": "event",
    "event_kind": "taller",
    "requires_registration": true,
-   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScQwx4mCGbX-JGI9Y6Tranmsa1C-yet1ZDFwF8MjxcoPBUraQ/viewform"
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLScQwx4mCGbX-JGI9Y6Tranmsa1C-yet1ZDFwF8MjxcoPBUraQ/viewform",
+   "description": "Lo único que necesitas es decir sí, sí lo voy a hacer; lo demás es práctica, disciplina y diversión. En este taller aprenderás lo esencial para pescar una idea, convertirla en guión cinematográfico, organizarla y filmarla. Porque los sueños se cumplen también en 1 minuto.",
+   "description_lang": "es"
   },
   {
    "title": "Juanpis González: El presidente de la gente",
@@ -1012,10 +1012,10 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/talleresficma17/ (2026-09-19)",
-   "synopsis": "¿Por qué conservamos objetos sin valor económico y sin funcionalidad práctica? ¿Cómo se constituyen nuestros pequeños museos domésticos? Esta conversación explora la pasión por habitar entornos materiales que estimulen la memoria.",
-   "synopsis_lang": "es",
    "type": "event",
-   "event_kind": "ponencia"
+   "event_kind": "ponencia",
+   "description": "¿Por qué conservamos objetos sin valor económico y sin funcionalidad práctica? ¿Cómo se constituyen nuestros pequeños museos domésticos? Esta conversación explora la pasión por habitar entornos materiales que estimulen la memoria.",
+   "description_lang": "es"
   },
   {
    "title": "La Luz por Primera Vez",
@@ -1256,10 +1256,10 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/talleresficma17/ (2026-09-19)",
-   "synopsis": "Historia Numismática con enfoque en Colombia. Trayectoria y crecimiento del coleccionismo en el país.",
-   "synopsis_lang": "es",
    "type": "event",
-   "event_kind": "ponencia"
+   "event_kind": "ponencia",
+   "description": "Historia Numismática con enfoque en Colombia. Trayectoria y crecimiento del coleccionismo en el país.",
+   "description_lang": "es"
   },
   {
    "title": "Dicen que tú y yo estamos locos",
@@ -1326,12 +1326,12 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/talleresficma17/ (2026-09-19)",
-   "synopsis": "Masterclass dirigida a realizadores audiovisuales, guionistas, directores de fotografía y profesionales del cine y el audiovisual. También a cineclubistas, críticos de cine, comunicadores sociales y todos aquellos espectadores interesados en conocer y apreciar los fundamentos del lenguaje cinematográfico.",
-   "synopsis_lang": "es",
    "type": "event",
    "event_kind": "taller",
    "requires_registration": true,
-   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSd07hqBATf6G3_k06cDOulhXe3cSSgveOjwPj0iEuHDCfQVEg/viewform"
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSd07hqBATf6G3_k06cDOulhXe3cSSgveOjwPj0iEuHDCfQVEg/viewform",
+   "description": "Masterclass dirigida a realizadores audiovisuales, guionistas, directores de fotografía y profesionales del cine y el audiovisual. También a cineclubistas, críticos de cine, comunicadores sociales y todos aquellos espectadores interesados en conocer y apreciar los fundamentos del lenguaje cinematográfico.",
+   "description_lang": "es"
   },
   {
    "title": "Cortos Colombia de película",
@@ -1515,10 +1515,10 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/talleresficma17/ (2026-09-19)",
-   "synopsis": "¿Qué tienen en común un disco de vinilo, una moneda y un objeto de diseño? Más allá de su valor material, todos son testigos de una época, portadores de memoria y piezas fundamentales para comprender nuestra historia. En este panel, representantes del Proyecto Kinder, Codiscos y la Sociedad Colombiana de Numismática compartirán sus experiencias alrededor del coleccionismo como una práctica de conservación, investigación y divulgación del patrimonio cultural. Un diálogo que permitirá descubrir cómo diferentes disciplinas construyen memoria a partir de aquello que deciden preservar, demostrando que coleccionar es también una forma de contar quiénes somos.",
-   "synopsis_lang": "es",
    "type": "event",
-   "event_kind": "ponencia"
+   "event_kind": "ponencia",
+   "description": "¿Qué tienen en común un disco de vinilo, una moneda y un objeto de diseño? Más allá de su valor material, todos son testigos de una época, portadores de memoria y piezas fundamentales para comprender nuestra historia. En este panel, representantes del Proyecto Kinder, Codiscos y la Sociedad Colombiana de Numismática compartirán sus experiencias alrededor del coleccionismo como una práctica de conservación, investigación y divulgación del patrimonio cultural. Un diálogo que permitirá descubrir cómo diferentes disciplinas construyen memoria a partir de aquello que deciden preservar, demostrando que coleccionar es también una forma de contar quiénes somos.",
+   "description_lang": "es"
   },
   {
    "title": "Nina y los cuentos del Erizo",
@@ -1758,10 +1758,10 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/talleresficma17/ (2026-09-19)",
-   "synopsis": "¿Qué significa coleccionar en la actualidad? Más allá de reunir objetos, el coleccionismo es una forma de preservar historias, construir identidad y generar nuevas lecturas sobre el patrimonio. En esta conversación, la directora del Museo de la Universidad de Caldas y la artista plástica y autora de Museo voraz compartirán sus perspectivas sobre el papel de los museos, las colecciones y las prácticas artísticas como espacios vivos de memoria. Un encuentro para reflexionar sobre cómo el arte, la curaduría y el coleccionismo contribuyen a preservar el pasado y dialogar con el presente.",
-   "synopsis_lang": "es",
    "type": "event",
-   "event_kind": "ponencia"
+   "event_kind": "ponencia",
+   "description": "¿Qué significa coleccionar en la actualidad? Más allá de reunir objetos, el coleccionismo es una forma de preservar historias, construir identidad y generar nuevas lecturas sobre el patrimonio. En esta conversación, la directora del Museo de la Universidad de Caldas y la artista plástica y autora de Museo voraz compartirán sus perspectivas sobre el papel de los museos, las colecciones y las prácticas artísticas como espacios vivos de memoria. Un encuentro para reflexionar sobre cómo el arte, la curaduría y el coleccionismo contribuyen a preservar el pasado y dialogar con el presente.",
+   "description_lang": "es"
   },
   {
    "title": "Dossier 137",
@@ -1851,13 +1851,13 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/talleresficma17/ (2026-09-19)",
-   "synopsis": "Aprende a transformar fotos y vectores estáticos en videos dinámicos en este taller intensivo de 4 horas. Diseñado de 0 a 100 para principiantes, descubrirás cómo reimaginar tus imágenes con el poder estilístico de Gemini, darles movimiento cinemático con Google Flow y darles el acabado perfecto en CapCut mediante la separación por capas, animación con keyframes y diseño de sonido listo para destacar en Reels por ejemplo o cualquier proyecto audiovisual que tengas en mente. ¡Lleva tus piezas gráficas al siguiente nivel visual sin necesidad de saber dibujar!",
-   "synopsis_lang": "es",
    "type": "event",
    "event_kind": "taller",
    "requires_registration": true,
    "registration_url": "https://forms.gle/ffot3bKxNdFWQkwt9",
-   "_cupos": 30
+   "_cupos": 30,
+   "description": "Aprende a transformar fotos y vectores estáticos en videos dinámicos en este taller intensivo de 4 horas. Diseñado de 0 a 100 para principiantes, descubrirás cómo reimaginar tus imágenes con el poder estilístico de Gemini, darles movimiento cinemático con Google Flow y darles el acabado perfecto en CapCut mediante la separación por capas, animación con keyframes y diseño de sonido listo para destacar en Reels por ejemplo o cualquier proyecto audiovisual que tengas en mente. ¡Lleva tus piezas gráficas al siguiente nivel visual sin necesidad de saber dibujar!",
+   "description_lang": "es"
   },
   {
    "title": "Microcosmos: Le peuple de l'herbe",
@@ -1975,10 +1975,10 @@
    "is_free": true,
    "_src": "https://laficma.com/ (PROGRAMACIÓN FICMA 17.pdf) (2026-09-19)",
    "sala": "Óculo",
-   "synopsis": "Una noche de música sinfónica con la Orquesta Sinfónica de Caldas bajo la dirección de Leonardo Marulanda. En el programa: «Capricho español», Op. 34 de Nikolái Rimski-Kórsakov; «Vals triste» de Jean Sibelius; «Petite Suite» de Claude Debussy; y la «Danza ritual del fuego» de Manuel de Falla.",
-   "synopsis_lang": "es",
    "type": "event",
-   "event_kind": "experiencia"
+   "event_kind": "experiencia",
+   "description": "Una noche de música sinfónica con la Orquesta Sinfónica de Caldas bajo la dirección de Leonardo Marulanda. En el programa: «Capricho español», Op. 34 de Nikolái Rimski-Kórsakov; «Vals triste» de Jean Sibelius; «Petite Suite» de Claude Debussy; y la «Danza ritual del fuego» de Manuel de Falla.",
+   "description_lang": "es"
   },
   {
    "title": "Llueve sobre Babel",
@@ -2046,10 +2046,10 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/talleresficma17/ (2026-09-19)",
-   "synopsis": "La protección de una obra comienza mucho antes de su estreno. Esta charla ofrecerá una mirada integral sobre la propiedad intelectual en el sector audiovisual, abordando los derechos de autor, la titularidad de las obras, la gestión de licencias, la negociación de contratos y los retos legales que enfrentan las producciones en un entorno de constante transformación. Una conversación dirigida a productores, directores, guionistas, estudiantes y creadores interesados en fortalecer sus proyectos desde una perspectiva jurídica y estratégica.",
-   "synopsis_lang": "es",
    "type": "event",
-   "event_kind": "ponencia"
+   "event_kind": "ponencia",
+   "description": "La protección de una obra comienza mucho antes de su estreno. Esta charla ofrecerá una mirada integral sobre la propiedad intelectual en el sector audiovisual, abordando los derechos de autor, la titularidad de las obras, la gestión de licencias, la negociación de contratos y los retos legales que enfrentan las producciones en un entorno de constante transformación. Una conversación dirigida a productores, directores, guionistas, estudiantes y creadores interesados en fortalecer sus proyectos desde una perspectiva jurídica y estratégica.",
+   "description_lang": "es"
   },
   {
    "title": "Bien inmueble",
@@ -2134,13 +2134,13 @@
    "has_qa": false,
    "is_free": true,
    "_src": "https://laficma.com/talleresficma17/ (2026-09-19)",
-   "synopsis": "Desde el enfoque de la FICMA 17 que reflexiona sobre el valor de coleccionar como una forma de preservar la memoria, este taller propone detenerse en aquello que nunca debería guardarse en silencio. A través de herramientas de acompañamiento psicosocial y ejercicios de expresión, las participantes podrán reconocer sus experiencias, resignificar sus historias y construir un espacio seguro donde la memoria deje de ser una carga individual para convertirse en una experiencia colectiva de escucha, cuidado y transformación.",
-   "synopsis_lang": "es",
    "type": "event",
    "event_kind": "taller",
    "requires_registration": true,
    "registration_url": "https://forms.gle/ouUyFzHZRfWjPxBN8",
-   "_cupos": 20
+   "_cupos": 20,
+   "description": "Desde el enfoque de la FICMA 17 que reflexiona sobre el valor de coleccionar como una forma de preservar la memoria, este taller propone detenerse en aquello que nunca debería guardarse en silencio. A través de herramientas de acompañamiento psicosocial y ejercicios de expresión, las participantes podrán reconocer sus experiencias, resignificar sus historias y construir un espacio seguro donde la memoria deje de ser una carga individual para convertirse en una experiencia colectiva de escucha, cuidado y transformación.",
+   "description_lang": "es"
   },
   {
    "title": "The General",

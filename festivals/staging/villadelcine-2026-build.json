@@ -200,13 +200,13 @@
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "event_kind": "apertura",
    "has_qa": false,
-   "synopsis": "Todo camino nace en un instante que pone el tiempo en movimiento. Esta ceremonia señala ese origen: un ritual de apertura donde el territorio, la memoria ancestral y el cine se encuentran para dar comienzo a la duodécima edición del festival.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p3",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Todo camino nace en un instante que pone el tiempo en movimiento. Esta ceremonia señala ese origen: un ritual de apertura donde el territorio, la memoria ancestral y el cine se encuentran para dar comienzo a la duodécima edición del festival.",
+   "description_lang": "es"
   },
   {
    "title": "Cine Concierto Caminos Sonoros — León Quintero",
@@ -385,13 +385,13 @@
    "sala": "Auditorio",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "Una obra en proceso habita entre lo que ya es y aquello que puede llegar a ser. Este espacio acompaña a los realizadores de Work in Progress de la Selección Oficial en Competencia a encontrar el corazón de sus películas y convertirlo en un pitch capaz de impulsarlas hacia su siguiente etapa.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p4",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Una obra en proceso habita entre lo que ya es y aquello que puede llegar a ser. Este espacio acompaña a los realizadores de Work in Progress de la Selección Oficial en Competencia a encontrar el corazón de sus películas y convertirlo en un pitch capaz de impulsarlas hacia su siguiente etapa.",
+   "description_lang": "es"
   },
   {
    "title": "El fósil mágico",
@@ -423,13 +423,13 @@
    "venue": "Museo Casa Antonio Nariño - Villa de Leyva",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Un minuto puede contener un camino entero. En solo tres días, cinco realizadores llevarán un guion hasta la pantalla, recorriendo la preproducción, el rodaje y la posproducción en una carrera creativa contra el tiempo.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p4",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Un minuto puede contener un camino entero. En solo tres días, cinco realizadores llevarán un guion hasta la pantalla, recorriendo la preproducción, el rodaje y la posproducción en una carrera creativa contra el tiempo.",
+   "description_lang": "es"
   },
   {
    "title": "Farmeando el Tunjo — Taller de creación con inteligencia artificial",
@@ -442,13 +442,13 @@
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Un laboratorio práctico en el que la tradición oral y la tecnología generativa se encuentran para dar nueva vida a *El Tunjo*. A través de la observación corporal, la fotografía, la dirección de arte y el *prompt engineering* en Omni Flash, los participantes crearán microrrelatos animados de diez segundos en los que esta figura mítica despierta, baila y explora los lenguajes de la narrativa digital.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p4",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Un laboratorio práctico en el que la tradición oral y la tecnología generativa se encuentran para dar nueva vida a *El Tunjo*. A través de la observación corporal, la fotografía, la dirección de arte y el *prompt engineering* en Omni Flash, los participantes crearán microrrelatos animados de diez segundos en los que esta figura mítica despierta, baila y explora los lenguajes de la narrativa digital.",
+   "description_lang": "es"
   },
   {
    "title": "Ecos",
@@ -887,13 +887,13 @@
    "venue": "Museo Casa Antonio Nariño - Villa de Leyva",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Un minuto puede contener un camino entero. En solo tres días, cinco realizadores llevarán un guion hasta la pantalla, recorriendo la preproducción, el rodaje y la posproducción en una carrera creativa contra el tiempo.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p5",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Un minuto puede contener un camino entero. En solo tres días, cinco realizadores llevarán un guion hasta la pantalla, recorriendo la preproducción, el rodaje y la posproducción en una carrera creativa contra el tiempo.",
+   "description_lang": "es"
   },
   {
    "title": "Estación Igüaque",
@@ -906,13 +906,13 @@
    "venue": "Galería Pérez Rojas - Villa de Leyva",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "¿Hasta dónde podría llegar tu proyecto con las miradas adecuadas? Comparte tu obra en cualquier etapa con expertos de diferentes áreas de la industria. Una oportunidad para conversar alrededor de un café, recibir retroalimentación especializada y descubrir nuevas posibilidades para llevarla a su siguiente etapa.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p5",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "¿Hasta dónde podría llegar tu proyecto con las miradas adecuadas? Comparte tu obra en cualquier etapa con expertos de diferentes áreas de la industria. Una oportunidad para conversar alrededor de un café, recibir retroalimentación especializada y descubrir nuevas posibilidades para llevarla a su siguiente etapa.",
+   "description_lang": "es"
   },
   {
    "title": "Génesis",
@@ -1239,13 +1239,13 @@
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Una pausa reflexiva entre el tiempo, la materia y la luz. A partir de la vegetación local, la observación y la composición manual, los participantes explorarán una técnica fotográfica histórica en la que el sol transforma la superficie y revela siluetas. Un taller al aire libre para experimentar con el paisaje, la textura y la alquimia visual de la imagen.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p7",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Una pausa reflexiva entre el tiempo, la materia y la luz. A partir de la vegetación local, la observación y la composición manual, los participantes explorarán una técnica fotográfica histórica en la que el sol transforma la superficie y revela siluetas. Un taller al aire libre para experimentar con el paisaje, la textura y la alquimia visual de la imagen.",
+   "description_lang": "es"
   },
   {
    "title": "Claquetazo — Laboratorio de creación",
@@ -1258,13 +1258,13 @@
    "venue": "Museo Casa Antonio Nariño - Villa de Leyva",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Un minuto puede contener un camino entero. En solo tres días, cinco realizadores llevarán un guion hasta la pantalla, recorriendo la preproducción, el rodaje y la posproducción en una carrera creativa contra el tiempo.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p7",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Un minuto puede contener un camino entero. En solo tres días, cinco realizadores llevarán un guion hasta la pantalla, recorriendo la preproducción, el rodaje y la posproducción en una carrera creativa contra el tiempo.",
+   "description_lang": "es"
   },
   {
    "title": "Portales",
@@ -1414,13 +1414,13 @@
    "venue": "Hotel Plaza Mayor - Villa de Leyva",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Entre fragmentos, una película comienza a existir antes de llegar a la pantalla. El collage reúne atmósferas, símbolos y emociones para convertir el póster en la primera huella de su universo: una imagen capaz de abrir distintos caminos hacia la historia que imaginamos.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p7",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Entre fragmentos, una película comienza a existir antes de llegar a la pantalla. El collage reúne atmósferas, símbolos y emociones para convertir el póster en la primera huella de su universo: una imagen capaz de abrir distintos caminos hacia la historia que imaginamos.",
+   "description_lang": "es"
   },
   {
    "title": "Proceso de restauración de La paga y Aquileo Venganza",
@@ -1434,13 +1434,13 @@
    "sala": "Auditorio",
    "event_kind": "charla",
    "has_qa": false,
-   "synopsis": "A partir de La Paga (Dir. Ciro Durán), cuya versión restaurada se reestrenó en Cannes Classics 2025, y Aquileo Venganza, (Dir. Ciro Durán), que estrenará su restauración en el Festival Villa del Cine 2026, recorreremos los procesos que permiten recuperar, conservar y reencontrarnos con nuestra memoria cinematográfica.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p7",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "A partir de La Paga (Dir. Ciro Durán), cuya versión restaurada se reestrenó en Cannes Classics 2025, y Aquileo Venganza, (Dir. Ciro Durán), que estrenará su restauración en el Festival Villa del Cine 2026, recorreremos los procesos que permiten recuperar, conservar y reencontrarnos con nuestra memoria cinematográfica.",
+   "description_lang": "es"
   },
   {
    "title": "Planeta",
@@ -1740,13 +1740,13 @@
    "venue": "Hotel Plaza Mayor - Villa de Leyva",
    "event_kind": "charla",
    "has_qa": false,
-   "synopsis": "Tres realizadores de los cortometrajes seleccionados conversan sobre las historias que dieron origen a sus películas, los caminos recorridos durante su creación y las decisiones que definieron sus miradas. Un encuentro moderado para acercarse a los procesos, búsquedas y desafíos detrás del cortometraje.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p8",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Tres realizadores de los cortometrajes seleccionados conversan sobre las historias que dieron origen a sus películas, los caminos recorridos durante su creación y las decisiones que definieron sus miradas. Un encuentro moderado para acercarse a los procesos, búsquedas y desafíos detrás del cortometraje.",
+   "description_lang": "es"
   },
   {
    "title": "Claquetazo — Laboratorio de creación",
@@ -1759,13 +1759,13 @@
    "venue": "Museo Casa Antonio Nariño - Villa de Leyva",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Un minuto puede contener un camino entero. En solo tres días, cinco realizadores llevarán un guion hasta la pantalla, recorriendo la preproducción, el rodaje y la posproducción en una carrera creativa contra el tiempo.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p8",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Un minuto puede contener un camino entero. En solo tres días, cinco realizadores llevarán un guion hasta la pantalla, recorriendo la preproducción, el rodaje y la posproducción en una carrera creativa contra el tiempo.",
+   "description_lang": "es"
   },
   {
    "title": "Estación Igüaque",
@@ -1778,13 +1778,13 @@
    "venue": "Galería Pérez Rojas - Villa de Leyva",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "¿Hasta dónde podría llegar tu proyecto con las miradas adecuadas? Comparte tu obra en cualquier etapa con expertos de diferentes áreas de la industria. Una oportunidad para conversar alrededor de un café, recibir retroalimentación especializada y descubrir nuevas posibilidades para llevarla a su siguiente etapa.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p8",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "¿Hasta dónde podría llegar tu proyecto con las miradas adecuadas? Comparte tu obra en cualquier etapa con expertos de diferentes áreas de la industria. Una oportunidad para conversar alrededor de un café, recibir retroalimentación especializada y descubrir nuevas posibilidades para llevarla a su siguiente etapa.",
+   "description_lang": "es"
   },
   {
    "title": "Reconocimiento a los Héroes de la Montaña",
@@ -1797,13 +1797,13 @@
    "venue": "Hotel Plaza Mayor - Villa de Leyva",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "Cuando el fuego alcanzó las montañas, Villa de Leyva y los municipios aledaños respondieron con sus propias manos como un solo pueblo. Este reconocimiento, recibido por un integrante de la comunidad en nombre de de los Héroes de la Montaña, honra la valentía de quienes protegieron la tierra. Con palabras de pedagogía por un miembro de Bomberos Villa de Leyva.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p8",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Cuando el fuego alcanzó las montañas, Villa de Leyva y los municipios aledaños respondieron con sus propias manos como un solo pueblo. Este reconocimiento, recibido por un integrante de la comunidad en nombre de de los Héroes de la Montaña, honra la valentía de quienes protegieron la tierra. Con palabras de pedagogía por un miembro de Bomberos Villa de Leyva.",
+   "description_lang": "es"
   },
   {
    "title": "Encrucijadas",
@@ -2348,13 +2348,13 @@
    "venue": "Museo Casa Antonio Nariño - Villa de Leyva",
    "event_kind": "masterclass",
    "has_qa": false,
-   "synopsis": "Una clase magistral sobre el maquillaje como herramienta esencial para la construcción de personajes en el cine colombiano; recorriendo los secretos y recursos de este oficio que cerrará con una demostración en vivo, donde la técnica se convierte en una forma de narrar.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p10",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Una clase magistral sobre el maquillaje como herramienta esencial para la construcción de personajes en el cine colombiano; recorriendo los secretos y recursos de este oficio que cerrará con una demostración en vivo, donde la técnica se convierte en una forma de narrar.",
+   "description_lang": "es"
   },
   {
    "title": "Dirigir el tiempo",
@@ -2368,13 +2368,13 @@
    "sala": "Auditorio",
    "event_kind": "masterclass",
    "has_qa": false,
-   "synopsis": "Una clase magistral sobre el oficio de dirigir y las decisiones que acompañan el camino entre una historia escrita y su llegada a la pantalla. Un recorrido por los desafíos, intuiciones y herramientas con las que la dirección articula las distintas áreas de una película y convierte una intención en ritmo, puesta en escena y sentido.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p10",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Una clase magistral sobre el oficio de dirigir y las decisiones que acompañan el camino entre una historia escrita y su llegada a la pantalla. Un recorrido por los desafíos, intuiciones y herramientas con las que la dirección articula las distintas áreas de una película y convierte una intención en ritmo, puesta en escena y sentido.",
+   "description_lang": "es"
   },
   {
    "title": "Raíces",
@@ -2461,13 +2461,13 @@
    "venue": "Galería Pérez Rojas - Villa de Leyva",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "¿Hasta dónde podría llegar tu proyecto con las miradas adecuadas? Comparte tu obra en cualquier etapa con expertos de diferentes áreas de la industria. Una oportunidad para conversar alrededor de un café, recibir retroalimentación especializada y descubrir nuevas posibilidades para llevarla a su siguiente etapa.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p11",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "¿Hasta dónde podría llegar tu proyecto con las miradas adecuadas? Comparte tu obra en cualquier etapa con expertos de diferentes áreas de la industria. Una oportunidad para conversar alrededor de un café, recibir retroalimentación especializada y descubrir nuevas posibilidades para llevarla a su siguiente etapa.",
+   "description_lang": "es"
   },
   {
    "title": "Resistencias",
@@ -2530,13 +2530,13 @@
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "Hay personas que no solo recorren un camino: ayudan a que exista. Este reconocimiento celebra la vocación de cuidado con la que Mabel Velosa ha sostenido y compartido el cine en Boyacá, dejando una huella que continúa creciendo junto al festival.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p11",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Hay personas que no solo recorren un camino: ayudan a que exista. Este reconocimiento celebra la vocación de cuidado con la que Mabel Velosa ha sostenido y compartido el cine en Boyacá, dejando una huella que continúa creciendo junto al festival.",
+   "description_lang": "es"
   },
   {
    "title": "Claquetazo — Laboratorio de creación",
@@ -2549,13 +2549,13 @@
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "event_kind": "taller",
    "has_qa": false,
-   "synopsis": "Un minuto puede contener un camino entero. En solo tres días, cinco realizadores llevarán un guion hasta la pantalla, recorriendo la preproducción, el rodaje y la posproducción en una carrera creativa contra el tiempo.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p11",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Un minuto puede contener un camino entero. En solo tres días, cinco realizadores llevarán un guion hasta la pantalla, recorriendo la preproducción, el rodaje y la posproducción en una carrera creativa contra el tiempo.",
+   "description_lang": "es"
   },
   {
    "title": "Aquileo Venganza",
@@ -2596,13 +2596,13 @@
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "event_kind": "encuentro",
    "has_qa": false,
-   "synopsis": "Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia cinematográfica.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p11",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Este tributo al legado de Ciro Durán y a la labor de Joyce Ventura convierte la proyección en un reencuentro: más de medio siglo después, Villa de Leyva recupera una parte de su propia historia cinematográfica.",
+   "description_lang": "es"
   },
   {
    "title": "Ceremonia TAMSA — Premiación y clausura",
@@ -2615,13 +2615,13 @@
    "venue": "Casa San Pedro Campestre - Villa de Leyva",
    "event_kind": "clausura",
    "has_qa": false,
-   "synopsis": "Todo camino entrega algo cuando completa su ciclo. Esta ceremonia reúne lo vivido durante esta edición y convierte el reconocimiento en ofrenda: una forma de celebrar el recorrido, cerrar el ciclo y conservar su huella en el tiempo.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p11",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Todo camino entrega algo cuando completa su ciclo. Esta ceremonia reúne lo vivido durante esta edición y convierte el reconocimiento en ofrenda: una forma de celebrar el recorrido, cerrar el ciclo y conservar su huella en el tiempo.",
+   "description_lang": "es"
   },
   {
    "title": "Un poeta",

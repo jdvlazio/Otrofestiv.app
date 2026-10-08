@@ -765,13 +765,13 @@
    "venue": "Teatro Bolívar - Popayán",
    "event_kind": "conversatorio",
    "has_qa": false,
-   "synopsis": "Con el Apoyo de Origen Lab",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
     "date": "2026-10-06"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Con el Apoyo de Origen Lab",
+   "description_lang": "es"
   },
   {
    "title": "Selección Oficial Afro",
@@ -1436,13 +1436,13 @@
    "sala": "Pantalla gigante",
    "event_kind": "evento",
    "has_qa": false,
-   "synopsis": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
     "date": "2026-10-06"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
+   "description_lang": "es"
   },
   {
    "title": "Proyección Cine Corto Familiar · Parte 2",
@@ -1911,13 +1911,13 @@
    "sala": "Pantalla gigante",
    "event_kind": "evento",
    "has_qa": false,
-   "synopsis": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
     "date": "2026-10-06"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
+   "description_lang": "es"
   },
   {
    "title": "Proyección Cine Corto Familiar · Parte 4",
@@ -2006,13 +2006,13 @@
    "sala": "Pantalla gigante",
    "event_kind": "evento",
    "has_qa": false,
-   "synopsis": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
     "date": "2026-10-06"
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
+   "description_lang": "es"
   },
   {
    "title": "Proyección Cine Corto Familiar · Parte 5",
