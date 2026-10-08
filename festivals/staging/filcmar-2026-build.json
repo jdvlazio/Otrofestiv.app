@@ -243,7 +243,9 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 1981,
-     "duration": "20 min"
+     "duration": "20 min",
+     "synopsis": "Basada en el personaje Cierraojos de Hans Christian Andersen, es el sueño, pero también la muerte quien cierra los ojos en nuestras vidas, narración con ecos de cuento infantil y dimensión surrealista.",
+     "synopsis_lang": "es"
     },
     {
      "title": "El tajamar y la astromelia",
@@ -1453,8 +1455,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-08T08:33:49",
-  "plan_sha": "e1464d95bd2629ee",
+  "fecha": "2026-10-08T10:33:27",
+  "plan_sha": "23096bf87098b953",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"
  }
