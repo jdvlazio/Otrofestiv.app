@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-07"
+  "capturado": "2026-10-08"
  },
  "obras": [
   {
@@ -58,7 +58,7 @@
    "lbSlug": "abuelita-caza-vampiros",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Mariana Betancourt Chaves, 2026, 2 min, Colombia, Animación, sinopsis del festival y su afiche oficial. Letterboxd: abuelita-caza-vampiros. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Mariana Betancourt Chaves",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/popayan-2026/abuelita-caza-vampiros.jpg",
    "posterSource": "tmdb"
   },
@@ -110,7 +110,7 @@
    "lbSlug": "love-in-times-of-whatever-the-present-is",
    "_verificado": "declarada a mano: TMDB escribe a la directora «Valentina Qaszxulxkef» y la parrilla «Qaszulxkef»: una letra, y el candado no casa. Mismo título, animación, Medellín (búsqueda de afiches, 29 sep).",
    "_director": "Valentina Qaszulxkef",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg",
    "posterSource": "tmdb"
   },
@@ -354,9 +354,28 @@
    "lbSlug": "crudo-2023",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Álvaro Ruiz Velasco, 2023, 7 min, Colombia, Drama (Juan: el festival dice «Ficción», que no es género de TMDB; la sinopsis da Drama), sinopsis del festival y su afiche oficial. Las otras «Crudo» de TMDB son de otra dirección y otro año. Letterboxd: crudo-1. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Álvaro Ruiz Velasco",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/popayan-2026/crudo.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El patio de la infancia",
+   "tmdb_id": 1791680,
+   "titulo_original": "El patio de la infancia",
+   "poster_path": null,
+   "synopsis_es": "Una mujer reflexiona sobre el significado de la infancia a partir de los archivos de una película incompleta que recibe. Los personajes son unas muñecas de cerámica únicas que cobran vida a su paso. ¿Es la infancia una ficción colectiva?",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "",
+   "lbSlug": "el-patio-de-la-infancia",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Cecilia Traslaviña (2214637, Bogotá, directora y animadora), 2025, 14 min, CO; sinopsis del festival y afiche original de la fuente del afiche declarada en popayan-2026-afiches.json, recortado 1% para la proporción de TMDB.",
+   "_director": "Cecilia Traslaviña",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/popayan-2026/el-patio-de-la-infancia.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://cinecorto.co/el-patio-de-la-infancia/"
   },
   {
    "titulo": "Emechiche, El renacer de los cabeciblancos",
@@ -484,9 +503,9 @@
     {
      "festival": "fantasmagoria-2026",
      "titulo": "HDLT",
-     "poster": "/assets/siembrafest/hdlt.jpg",
+     "poster": "/assets/filcmar-2026/hdlt.jpg",
      "posterSource": "oficial",
-     "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+     "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
     },
     {
      "festival": "filcmar-2026",
@@ -503,8 +522,8 @@
     }
    ],
    "poster": "/assets/filcmar-2026/hdlt.jpg",
-   "_verificado": "ya publicada en filcmar-2026: se reusa su afiche",
-   "sinopsis": "Tras el ataque que sufrió, Luz trata de entender lo que le pasó: el Hijo de la Tierra llegó a destruir la humanidad robándole sus recuerdos más tristes y más felices."
+   "_verificado": "ya publicada en fantasmagoria-2026: se reusa su afiche",
+   "sinopsis": "Después del ataque que sufrió, Luz trata de entender lo que le sucedió: el Hijo de la Tierra vino a destruir a la humanidad robando sus recuerdos más tristes y felices. Pero desembarcó en Suba, el distrito más lejano de Bogotá, donde una extraña adicción cambiará el curso de la historia."
   },
   {
    "titulo": "La Europa",
@@ -596,7 +615,7 @@
    "lbSlug": "la-volqueta",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Wiston Fernández Madriñan, 2024, 15 min, Colombia, Drama (por la sinopsis), sinopsis del festival; el afiche oficial (600x800) recortado por los costados a 2:3 para que TMDB lo acepte. Letterboxd: la-volqueta. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Wiston Fernández Madriñan",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/popayan-2026/la-volqueta.jpg",
    "posterSource": "tmdb"
   },
@@ -1313,7 +1332,7 @@
    "lbSlug": "tuktu-father-maize",
    "_verificado": "declarada a mano: TMDB escribe al director «Mauricio Pietro Muriel» (sic); la web del festival, cinecorto.co y FICDEH, donde ya la publicamos, dicen Mauricio Prieto. Con el candado estricto del 28 sep un nombre de pila no alcanza, y por eso no casa sola. Todo lo demás coincide: título idéntico, 2025 en los dos lados y 13 min en TMDB contra 14 en cinecorto.co.",
    "_director": "Mauricio Prieto",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/popayan-2026/tuktu-padre-maiz.jpg",
    "posterSource": "tmdb"
   },
@@ -1391,7 +1410,7 @@
    "lbSlug": "yakuwasi-la-casa-del-agua",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Faisal Tisnés, 2025, 15 min, Colombia, Documental, sinopsis del festival y su afiche oficial. Letterboxd: yakuwasi-la-casa-del-agua. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Faisal Tisnés",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/popayan-2026/yakuwasi-la-casa-del-agua.jpg",
    "posterSource": "tmdb"
   },
@@ -1445,12 +1464,6 @@
    "_afiche": "declarado: https://rtvcplay.co/cortometrajes-documentales/negret-genesis-de-una-metamorfosis",
    "sinopsis": "La intensa y profunda relación entre Popayán y el escultor Edgar Negret Dueñas: desde el origen de su familia, la influencia del arte religioso, la arquitectura y la poesía, hasta el ambiente intelectual de 1944 a 1948, fundamental en la formación del artista más representativo de la ciudad.",
    "_sinopsis": "https://rtvcplay.co/cortometrajes-documentales/negret-genesis-de-una-metamorfosis"
-  },
-  {
-   "titulo": "El patio de la infancia",
-   "poster": "/assets/popayan-2026/el-patio-de-la-infancia.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: https://cinecorto.co/el-patio-de-la-infancia/"
   },
   {
    "titulo": "Yo soy yo",
@@ -1565,7 +1578,7 @@
    "lbSlug": "abuelita-caza-vampiros",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Mariana Betancourt Chaves, 2026, 2 min, Colombia, Animación, sinopsis del festival y su afiche oficial. Letterboxd: abuelita-caza-vampiros. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Mariana Betancourt Chaves",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/popayan-2026/abuelita-caza-vampiros.jpg",
    "posterSource": "tmdb"
   },
@@ -1615,7 +1628,7 @@
    "lbSlug": "love-in-times-of-whatever-the-present-is",
    "_verificado": "declarada a mano: TMDB escribe a la directora «Valentina Qaszxulxkef» y la parrilla «Qaszulxkef»: una letra, y el candado no casa. Mismo título, animación, Medellín (búsqueda de afiches, 29 sep).",
    "_director": "Valentina Qaszulxkef",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/popayan-2026/amor-en-los-tiempos-de-como-sea-que-se-llame-el-presente.jpg",
    "posterSource": "tmdb"
   },
@@ -1849,9 +1862,27 @@
    "lbSlug": "crudo-2023",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Álvaro Ruiz Velasco, 2023, 7 min, Colombia, Drama (Juan: el festival dice «Ficción», que no es género de TMDB; la sinopsis da Drama), sinopsis del festival y su afiche oficial. Las otras «Crudo» de TMDB son de otra dirección y otro año. Letterboxd: crudo-1. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Álvaro Ruiz Velasco",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/popayan-2026/crudo.jpg",
    "posterSource": "tmdb"
+  },
+  "El patio de la infancia": {
+   "tmdb_id": 1791680,
+   "titulo_original": "El patio de la infancia",
+   "poster_path": null,
+   "synopsis_es": "Una mujer reflexiona sobre el significado de la infancia a partir de los archivos de una película incompleta que recibe. Los personajes son unas muñecas de cerámica únicas que cobran vida a su paso. ¿Es la infancia una ficción colectiva?",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "",
+   "lbSlug": "el-patio-de-la-infancia",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Cecilia Traslaviña (2214637, Bogotá, directora y animadora), 2025, 14 min, CO; sinopsis del festival y afiche original de la fuente del afiche declarada en popayan-2026-afiches.json, recortado 1% para la proporción de TMDB.",
+   "_director": "Cecilia Traslaviña",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/popayan-2026/el-patio-de-la-infancia.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: https://cinecorto.co/el-patio-de-la-infancia/"
   },
   "Emechiche, El renacer de los cabeciblancos": {
    "tmdb_id": 1592964,
@@ -2056,7 +2087,7 @@
    "lbSlug": "la-volqueta",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Wiston Fernández Madriñan, 2024, 15 min, Colombia, Drama (por la sinopsis), sinopsis del festival; el afiche oficial (600x800) recortado por los costados a 2:3 para que TMDB lo acepte. Letterboxd: la-volqueta. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Wiston Fernández Madriñan",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/popayan-2026/la-volqueta.jpg",
    "posterSource": "tmdb"
   },
@@ -2720,7 +2751,7 @@
    "lbSlug": "tuktu-father-maize",
    "_verificado": "declarada a mano: TMDB escribe al director «Mauricio Pietro Muriel» (sic); la web del festival, cinecorto.co y FICDEH, donde ya la publicamos, dicen Mauricio Prieto. Con el candado estricto del 28 sep un nombre de pila no alcanza, y por eso no casa sola. Todo lo demás coincide: título idéntico, 2025 en los dos lados y 13 min en TMDB contra 14 en cinecorto.co.",
    "_director": "Mauricio Prieto",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/popayan-2026/tuktu-padre-maiz.jpg",
    "posterSource": "tmdb"
   },
@@ -2795,7 +2826,7 @@
    "lbSlug": "yakuwasi-la-casa-del-agua",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Faisal Tisnés, 2025, 15 min, Colombia, Documental, sinopsis del festival y su afiche oficial. Letterboxd: yakuwasi-la-casa-del-agua. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB.",
    "_director": "Faisal Tisnés",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/popayan-2026/yakuwasi-la-casa-del-agua.jpg",
    "posterSource": "tmdb"
   },
@@ -2850,7 +2881,6 @@
   "Dientes de yuca",
   "El Segundo",
   "El odio del padre",
-  "El patio de la infancia",
   "El sincretismo del agua",
   "HDLT Hijo de la Tierra",
   "Hacia la raíz",
@@ -2919,10 +2949,6 @@
   },
   "El odio del padre": {
    "director": "Rodrigo Mora Yepes",
-   "fecha": "2026-10-06"
-  },
-  "El patio de la infancia": {
-   "director": "Cecilia Traslaviña",
    "fecha": "2026-10-06"
   },
   "El sincretismo del agua": {

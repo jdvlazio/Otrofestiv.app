@@ -650,6 +650,7 @@
    "country": "Brasil",
    "flags": "🇧🇷",
    "duration": "14 min",
+   "genre": "Documental",
    "day": "2026-10-10",
    "time": "19:00",
    "day_order": 1,
@@ -659,13 +660,15 @@
    "synopsis": "Murilo es un testigo. A donde quiera que vaya, suceden cosas extrañas. Sus experiencias de vida sacuden los misterios entre el cielo y la tierra. Después de todo, el cine lo permite todo.",
    "synopsis_lang": "es",
    "poster": "/assets/filcmar-2026/testimonio.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
     "date": "2026-10-01",
     "lamina": 6
    },
-   "is_free": true
+   "is_free": true,
+   "lbSlug": "testemunho",
+   "tmdb_id": 1519246
   },
   {
    "title": "Competencia Espíritu del Trasnoche",
@@ -912,7 +915,9 @@
      "synopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/el-espejo-de-la-vida.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "el-espejo-de-la-vida",
+     "tmdb_id": 1791654
     },
     {
      "title": "La danza del caos",
@@ -924,7 +929,9 @@
      "synopsis": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/la-danza-del-caos.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "la-danza-del-caos",
+     "tmdb_id": 1791655
     },
     {
      "title": "La pecera",
@@ -1446,7 +1453,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-08T06:28:37",
+  "fecha": "2026-10-08T08:33:49",
   "plan_sha": "e1464d95bd2629ee",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"

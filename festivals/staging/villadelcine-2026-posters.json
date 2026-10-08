@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "villadelcine.com — el afiche que el festival publica en la página de cada obra",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-08",
   "que_aporta": "el póster de las obras que no tienen ficha en TMDB, que en un festival de cortos son casi todas",
   "url": "https://villadelcine.com/festival-2024-2/",
   "metodo": "write-once: lo ya bajado no se vuelve a pedir, porque después pasa por encuadrar-posters.py y re-bajarlo desharía el encuadre"
@@ -217,13 +217,6 @@
    "_medida_original": "720x1080",
    "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
   },
-  "Behind the Door": {
-   "poster": "/assets/villadelcine-2026/behind-the-door.jpg",
-   "posterSource": "oficial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/bfc90d968b-poster.webp",
-   "_medida_original": "533x800",
-   "_categoria": "MEJOR CORTOMETRAJE VERTICAL"
-  },
   "Prompt Zero": {
    "poster": "/assets/villadelcine-2026/prompt-zero.jpg",
    "posterSource": "oficial",
@@ -272,13 +265,6 @@
    "_url": "https://villadelcine.com/wp-content/uploads/2026/09/575262d42d-poster.webp",
    "_medida_original": "597x800",
    "_categoria": "MEJOR CORTOMETRAJE CON CELULAR"
-  },
-  "Después de tanto amor": {
-   "poster": "/assets/villadelcine-2026/despues-de-tanto-amor.jpg",
-   "posterSource": "editorial",
-   "_url": "https://villadelcine.com/wp-content/uploads/2026/09/DDTA_1.1.8-mercedes.webp",
-   "_medida_original": "1920x1080",
-   "_categoria": "MEJOR VIDEOCLIP NACIONAL"
   },
   "Shorts": {
    "poster": "/assets/villadelcine-2026/shorts.jpg",
@@ -732,9 +718,8 @@
     "categoria": "MEJOR CORTOMETRAJE CON CELULAR"
    },
    "Behind the Door": {
-    "estado": "usada",
-    "medida": "533x800",
-    "categoria": "MEJOR CORTOMETRAJE VERTICAL"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "Prompt Zero": {
     "estado": "usada",
@@ -780,9 +765,8 @@
     "categoria": "MEJOR CORTOMETRAJE CON CELULAR"
    },
    "Después de tanto amor": {
-    "estado": "usada",
-    "medida": "1920x1080",
-    "categoria": "MEJOR VIDEOCLIP NACIONAL"
+    "estado": "tmdb",
+    "_por_que": "tiene ficha verificada en TMDB y su afiche manda: es el original"
    },
    "Shorts": {
     "estado": "usada",
