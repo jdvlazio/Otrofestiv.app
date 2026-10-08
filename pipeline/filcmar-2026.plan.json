@@ -139,6 +139,7 @@
   "festivals/staging/filcmar-2026-seleccion-oficial.json": "el catálogo de la Selección Oficial (pre-onboarding)",
   "festivals/staging/filcmar-2026-seleccion-oficial-enriquecido.json": "sus fichas (pre-onboarding)",
   "festivals/staging/filcmar-2026-venues-geo.json": "los pines a mano (Google Maps)",
-  "festivals/staging/filcmar-2026-radar.json": "el volcado del radar #903, que escribe y relee pipeline/radar.py"
+  "festivals/staging/filcmar-2026-radar.json": "el volcado del radar #903, que escribe y relee pipeline/radar.py",
+  "festivals/staging/filcmar-2026-sinopsis.json": "la sinopsis declarada de «Cierra ojos» (YouTube de su director), que lee enriquecer.py"
  }
 }
