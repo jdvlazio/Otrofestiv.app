@@ -64,7 +64,10 @@ FONDO_ES_ARTE = {'funeral-siniestro.jpg',
                  # ↑7 ↓5 (Mamut, 28 sep 2026)
                  'manual-para-invocar-fantasmas.jpg',
                  # Fantasmagoría 8 (29 sep): el negro de los dos afiches es diseño
-                 'familia-teme-enfrentar-una-nueva-noche-de-terror.jpg', 'horror-and-love.jpg'}
+                 'familia-teme-enfrentar-una-nueva-noche-de-terror.jpg', 'horror-and-love.jpg',
+                 # Bogotá Horror 8 (7 oct): el negro de «Sigilo» y «El susurro» y el
+                 # fondo oscuro de «Esquirlas de caracol» llegan al borde; no hay marco
+                 'sigilo.jpg', 'el-susurro.jpg', 'esquirlas-de-caracol.jpg'}
 
 
 def rejilla(path):
