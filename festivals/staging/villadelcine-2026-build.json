@@ -206,7 +206,10 @@
    },
    "is_free": true,
    "description": "Todo camino nace en un instante que pone el tiempo en movimiento. Esta ceremonia señala ese origen: un ritual de apertura donde el territorio, la memoria ancestral y el cine se encuentran para dar comienzo a la duodécima edición del festival.",
-   "description_lang": "es"
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "Ceremonia UNQUY de apertura y Cine Concierto Caminos Sonoros"
+   ]
   },
   {
    "title": "Cine Concierto Caminos Sonoros — León Quintero",
@@ -223,10 +226,13 @@
     "url": "https://villadelcine.com/ (PROGRAMACIÓN 2026.pdf) p3",
     "date": "2026-09-19"
    },
-   "is_free": true
+   "is_free": true,
+   "titulos_anteriores": [
+    "Ceremonia UNQUY de apertura y Cine Concierto Caminos Sonoros"
+   ]
   },
   {
-   "title": "Amor a primera vista",
+   "title": "Un amor a primera vista",
    "type": "film",
    "section": "🗺️ Territorios",
    "director": "Andrés Quintero",
@@ -249,7 +255,10 @@
    },
    "is_free": true,
    "lbSlug": "amor-a-primera-vista",
-   "tmdb_id": 1791658
+   "tmdb_id": 1791658,
+   "titulos_anteriores": [
+    "Amor a primera vista"
+   ]
   },
   {
    "title": "Mucho Gusto",
@@ -341,7 +350,10 @@
      "posterSource": "oficial",
      "synopsis": "Francis, un niño optimista del campo, sueña con devolver la alegría a su hogar. Cuando aparece un inesperado milagro dulce, cree haber encontrado la respuesta a los problemas de su familia. Sin embargo, pronto descubrirá que incluso los deseos más hermosos pueden traer sorpresas difíciles de imaginar.",
      "genre": "Fantasía y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "A Sweet Miracle"
+     ]
     },
     {
      "title": "Solo un ave más",
@@ -353,7 +365,10 @@
      "posterSource": "oficial",
      "synopsis": "Tras sufrir un accidente en la ciudad, Raquelita, una paloma colombiana, encuentra refugio en la ventana de Tomás. Mientras se recupera junto al niño, emprende un viaje por calles y tejados que le revela personajes, detalles invisibles y nuevas formas de vida, hasta descubrir su propio lugar en el mundo.",
      "genre": "Aventura y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Just Another Bird"
+     ]
     }
    ]
   },
@@ -538,7 +553,10 @@
      "posterSource": "oficial",
      "synopsis": "Tras la muerte de su esposa, Ángel enfrenta el duelo en la soledad de su casa rural. Una gotera invade progresivamente el espacio hasta convertirse en la forma tangible de su ausencia, empujándolo a decisiones irracionales mientras intenta aprender a habitar una vida que ya no reconoce.",
      "genre": "Drama",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Grief"
+     ]
     },
     {
      "title": "I don't know what to do",
@@ -567,7 +585,10 @@
      "posterSource": "oficial",
      "synopsis": "Reem intenta reconstruir el recuerdo perdido durante su primera convulsión. Entre archivos, imágenes fragmentadas y preguntas sin respuesta, la memoria de la infancia acompaña un recorrido íntimo por la experiencia de vivir con epilepsia, donde recordar se convierte en una forma de resistir aquello que el cuerpo borra.",
      "genre": "Documental / Experimental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Lost Fragments of a Seizure"
+     ]
     },
     {
      "title": "Memorias del Alba",
@@ -656,7 +677,10 @@
      "posterSource": "oficial",
      "synopsis": "Francis, un niño optimista del campo, sueña con devolver la alegría a su hogar. Cuando aparece un inesperado milagro dulce, cree haber encontrado la respuesta a los problemas de su familia. Sin embargo, pronto descubrirá que incluso los deseos más hermosos pueden traer sorpresas difíciles de imaginar.",
      "genre": "Fantasía y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "A Sweet Miracle"
+     ]
     },
     {
      "title": "Solo un ave más",
@@ -668,7 +692,10 @@
      "posterSource": "oficial",
      "synopsis": "Tras sufrir un accidente en la ciudad, Raquelita, una paloma colombiana, encuentra refugio en la ventana de Tomás. Mientras se recupera junto al niño, emprende un viaje por calles y tejados que le revela personajes, detalles invisibles y nuevas formas de vida, hasta descubrir su propio lugar en el mundo.",
      "genre": "Aventura y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Just Another Bird"
+     ]
     }
    ]
   },
@@ -703,7 +730,10 @@
      "tmdb_id": 1743109,
      "synopsis": "En la vejez, una pareja contempla cómo la tierra destinada a sostener su retiro se convierte en una condena. Marcado por el abuso estatal y distintas formas de violencia, el territorio los desangra económica y emocionalmente. Un retrato íntimo sobre el desarraigo, la resistencia y la obstinación de permanecer donde todo parece expulsarlos.",
      "genre": "Documental Híbrido / Drama",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Drunk hearing the rain drops fall"
+     ]
     },
     {
      "title": "Memoria colectiva",
@@ -719,7 +749,10 @@
      "synopsis": "En 1983, soldados encapuchados irrumpen en la casa de Adelina y se llevan a su esposo, quien jamás regresa. Ante el silencio de las autoridades, ella se une a otras mujeres marcadas por la misma ausencia. Juntas convierten el dolor en memoria y la memoria en una exigencia de justicia.",
      "synopsis_en": "In 1983, during the darkest days of Peru’s Armed Conflict with the Shining Path, masked soldiers entered Adelina’s home and took her husband away. She would never see him again. After facing silence and contempt from the Police and Army, Adelina joins forces with the many other women who have lost their husbands and children to soldiers who were supposed to protect them. Together, they will unite to demand justice.",
      "genre": "Animación / Drama",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Collective Memory"
+     ]
     },
     {
      "title": "Con la mano arriba",
@@ -819,7 +852,10 @@
      "synopsis_en": "After a violent confrontation, a wounded soldier is rescued by Yolanda, an elderly farmer, and her granddaughter Alejandra. The two live on a ranch in the middle of the mountains, where they hide the young man. While Yolanda decides whether they should help him, putting their own lives at risk, Alejandra will try to confirm her own suspicions.",
      "genre": "Drama / Thriller",
      "synopsis_lang": "es",
-     "title_en": "A Burning Turret"
+     "title_en": "A Burning Turret",
+     "titulos_anteriores": [
+      "Tormenta en Llamas"
+     ]
     }
    ]
   },
@@ -951,7 +987,10 @@
      "posterSource": "oficial",
      "synopsis": "En una comunidad selvática amenazada por un proyecto minero, Jenawen, una joven indígena alejada de sus raíces, atraviesa un portal hacia un futuro convertido en desierto. Allí deberá salvar a los últimos sobrevivientes de una catástrofe ambiental y reencontrarse con el territorio que dejó atrás.",
      "genre": "Ciencia Ficción",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Extinction"
+     ]
     },
     {
      "title": "El último campeón",
@@ -963,7 +1002,10 @@
      "posterSource": "oficial",
      "synopsis": "Tras 75 años de espera, Atlético Bucaramanga conquista su primera estrella. A través de hinchas de distintas generaciones, barristas y líderes comunitarios, el documental retrata cómo el fútbol transformó heridas, recuperó esperanzas y unió a toda una ciudad alrededor de una celebración largamente soñada.",
      "genre": "Documental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "The Last Champion"
+     ]
     },
     {
      "title": "El cine dentro del cine",
@@ -975,7 +1017,10 @@
      "posterSource": "oficial",
      "synopsis": "Tres películas que estuvieron a punto de desaparecer conducen a Diana Kuéllar y Manuel Silva por Barcelona, Milán, Santiago de Chile y Cali. Entre archivos, videocartas y protagonistas de su recuperación, el viaje indaga qué pierde una sociedad cuando una película desaparece y cómo el cine transforma la memoria al volver a la luz.",
      "genre": "Documental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "El cine dentro del cine dentro del cine"
+     ]
     },
     {
      "title": "Cuba 2001: imágenes del futuro",
@@ -987,7 +1032,10 @@
      "posterSource": "editorial",
      "synopsis": "Manifiesto de archivos audiovisuales que acomoda con zapeo historias de cámaras y sus viajes mientras graban fiestas familiares y de cine. El viaje más largo es en Cuba. Salen muchas personas, van dos",
      "genre": "Documental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Cuba 2001. Imágenes del futuro I"
+     ]
     },
     {
      "title": "Mi tesoro",
@@ -1161,6 +1209,9 @@
      "synopsis_lang": "es",
      "title_en": "Tuktu, Father Maize"
     }
+   ],
+   "titulos_anteriores": [
+    "Tránsito"
    ]
   },
   {
@@ -1204,7 +1255,10 @@
      "posterSource": "oficial",
      "synopsis": "Francis, un niño optimista del campo, sueña con devolver la alegría a su hogar. Cuando aparece un inesperado milagro dulce, cree haber encontrado la respuesta a los problemas de su familia. Sin embargo, pronto descubrirá que incluso los deseos más hermosos pueden traer sorpresas difíciles de imaginar.",
      "genre": "Fantasía y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "A Sweet Miracle"
+     ]
     },
     {
      "title": "Solo un ave más",
@@ -1216,7 +1270,10 @@
      "posterSource": "oficial",
      "synopsis": "Tras sufrir un accidente en la ciudad, Raquelita, una paloma colombiana, encuentra refugio en la ventana de Tomás. Mientras se recupera junto al niño, emprende un viaje por calles y tejados que le revela personajes, detalles invisibles y nuevas formas de vida, hasta descubrir su propio lugar en el mundo.",
      "genre": "Aventura y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Just Another Bird"
+     ]
     }
    ]
   },
@@ -1306,7 +1363,10 @@
      "posterSource": "oficial",
      "synopsis": "Un niño capaz de convertir cualquier momento en una aventura vive perdido entre fantasías, aunque sus notas paguen el precio. Decididos a disciplinarlo, sus padres vacían su habitación de juguetes y música. El plan funciona, pero también apaga algo esencial en él, hasta que un inesperado cachorro vuelve a encender su imaginación.",
      "genre": "Animación y Fantasía",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Pros and Cons of Daydreaming"
+     ]
     },
     {
      "title": "They Call It Sausage",
@@ -1544,7 +1604,10 @@
      "posterSource": "oficial",
      "synopsis": "Francis, un niño optimista del campo, sueña con devolver la alegría a su hogar. Cuando aparece un inesperado milagro dulce, cree haber encontrado la respuesta a los problemas de su familia. Sin embargo, pronto descubrirá que incluso los deseos más hermosos pueden traer sorpresas difíciles de imaginar.",
      "genre": "Fantasía y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "A Sweet Miracle"
+     ]
     },
     {
      "title": "Solo un ave más",
@@ -1556,7 +1619,10 @@
      "posterSource": "oficial",
      "synopsis": "Tras sufrir un accidente en la ciudad, Raquelita, una paloma colombiana, encuentra refugio en la ventana de Tomás. Mientras se recupera junto al niño, emprende un viaje por calles y tejados que le revela personajes, detalles invisibles y nuevas formas de vida, hasta descubrir su propio lugar en el mundo.",
      "genre": "Aventura y Animación",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Just Another Bird"
+     ]
     }
    ]
   },
@@ -1656,7 +1722,10 @@
      "synopsis_en": "Cecilia, a selfless 52-year-old woman, decides to break with her life of sacrifices after years of enduring her son s irresponsibility and her family s ingratitude, finally seeking her independence.",
      "genre": "Drama",
      "synopsis_lang": "es",
-     "title_en": "Independence"
+     "title_en": "Independence",
+     "titulos_anteriores": [
+      "Independence"
+     ]
     },
     {
      "title": "Cos de vidre",
@@ -1858,7 +1927,10 @@
      "synopsis": "En su cumpleaños, el joven policía Francisco Revenga es enviado a cubrir una guardia en la estepa patagónica. Durante el trayecto, se detiene en un parador donde unas imágenes comprometedoras quedan grabadas en su celular. Al descubrir que revelan una red de trata, deberá decidir hasta dónde llega su deber.",
      "synopsis_en": "On his birthday, young police officer Francisco Revenga is sent on duty in the middle of the Patagonian steppe. During the journey, he stops for supplies at the Mustang, a combination general store and brothel. There, compromising images related to human trafficking are recorded on his cell phone. Over the next few hours, Francisco will discover the video, which will force him to make a life-altering decision.",
      "genre": "Drama / Suspenso",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Steppe"
+     ]
     },
     {
      "title": "KMKZ: salvaje, libre y valiente",
@@ -1874,7 +1946,10 @@
      "synopsis": "Kamila recorre Bogotá en bicicleta y registra con su celular aquello que la ciudad prefiere ignorar. Junto a Ruco, Alexa y Leonor encuentra refugio entre vidas atravesadas por la violencia y el abandono. Cuando Leonor desaparece, sus imágenes se convierten en archivo, memoria y una forma urgente de resistencia.",
      "synopsis_en": "Camila, a lonely communications student, is rescued from a street robbery by Ruco and Alexa, two young anarchists and street vendors who use violence to punish thieves in the neighborhood. Through her growing friendship with Ruco and Alexa, Camila meets Leonor, with whom she forms a deep mother-daughter bond. When Leonor mysteriously disappears, Camila embarks on a quest to discover the truth.",
      "genre": "Docu-ficción",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "KMKZ: Wild, free and brave."
+     ]
     }
    ]
   },
@@ -1939,7 +2014,10 @@
      "posterSource": "oficial",
      "synopsis": "Un estudiante nuevo llega a una escuela dividida por gustos musicales y termina atrapado entre dos grupos rivales. Mientras intenta encontrar su lugar, descubre que las etiquetas suenan más fuerte que las diferencias y que, a veces, basta escuchar al otro para cambiar el ritmo de toda una comunidad.",
      "genre": "Drama / Comedia",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "In Between"
+     ]
     },
     {
      "title": "La Sombrilla de Mamá",
@@ -1986,7 +2064,10 @@
      "synopsis": "El deseo nace en el cuerpo, pero también carga con las prohibiciones que lo vigilan. A través de una animación simbólica, el cortometraje recorre los placeres carnales que aprendemos a condenar y convierte la culpa en un vía crucis interior, donde impulso, represión y juicio se enfrentan dentro de una misma conciencia.",
      "synopsis_en": "Veal desires that are condemned deep within us.",
      "genre": "Animación / Fantasía",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Via Crusis"
+     ]
     },
     {
      "title": "Final Act",
@@ -2014,7 +2095,10 @@
      "synopsis": "Después del anochecer, cuatro niños deciden comprobar la leyenda de una niña vestida de blanco que ronda su escuela rural. Lo que empieza como un juego cambia cuando un ruido surge del salón oscuro y la presencia parece señalarlos. Permanecer allí podría revelarles la verdad, pero también convertirlos en parte de ella.",
      "synopsis_en": "In a forgotten town, legend comes to life after dark. Four children face the mystery of “The White Presence,” a ghost that haunts the rural school.",
      "genre": "Terror / Misterio",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "La Presencia de Blanco"
+     ]
     },
     {
      "title": "Tiro Libre",
@@ -2108,7 +2192,10 @@
      "tmdb_id": 1791674,
      "synopsis": "A través de archivos y testimonios de quienes abrieron camino, este documental reconstruye el nacimiento y la consolidación del ballet en Colombia. Las primeras academias, maestras y bailarinas revelan una historia de disciplina, migraciones y perseverancia, rescatando del olvido a las mujeres que transformaron el movimiento en memoria y profesión.",
      "genre": "Documental / Archivo",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Momentos en movimiento. Primeros pasos del ballet en Colombia"
+     ]
     },
     {
      "title": "Quazar",
@@ -2227,7 +2314,10 @@
      "posterSource": "oficial",
      "synopsis": "Cada noche, los relámpagos iluminan el Catatumbo, una tierra donde la belleza natural convive con las marcas del conflicto. Entre guerrillas, desplazamientos y cultivos convertidos en sustento y estigma, esta animación recorre la memoria de una región que, bajo un cielo que nunca se apaga, continúa defendiendo su dignidad y su esperanza.",
      "genre": "Animación y Ciencia Ficción",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Catatumbo: House of Thunder, Memory, and Dignity"
+     ]
     },
     {
      "title": "No se fía, ni aunque lloren",
@@ -2454,7 +2544,10 @@
      "posterSource": "oficial",
      "synopsis": "Desde 1735, los Juegos de Cuadrillas transforman a San Martín, Meta, en escenario de una tradición ecuestre donde convergen memorias indígenas, españolas y africanas. A través de las familias que heredan sus colores y destrezas, el documental descubre el orgullo de quienes convierten cada encuentro en una promesa de continuidad.",
      "genre": "Documental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "Cuadrileros, orgullo y legado"
+     ]
     },
     {
      "title": "La sinfonía Guanentá",
@@ -2466,7 +2559,10 @@
      "posterSource": "oficial",
      "synopsis": "En una expedición por el Cañón del Chicamocha, el maestro Giovanni Laguado reconstruye instrumentos precolombinos para devolverle sonido a la memoria guane. Entre paisaje, arqueología y música, una sinfonía ancestral emerge como puente hacia la identidad cultural de Santander y los saberes que aún resuenan en su territorio.",
      "genre": "Documental",
-     "synopsis_lang": "es"
+     "synopsis_lang": "es",
+     "titulos_anteriores": [
+      "The Guanentá Symphony"
+     ]
     },
     {
      "title": "Gestos de refugio",
@@ -2482,7 +2578,10 @@
      "synopsis_en": "A group of young dancers witnessed the gradual disappearance of the traditional Danza de las Tabliteras. Determined to bring it back to life, they learned its rhythms and choreography from the four remaining elders who still carried the dance in their bodies. Once again, these gestures echo the movements that decades ago filled the community of San Antonio, Bolívar, with pride, vitality, and collective spirit.",
      "genre": "Videodanza",
      "synopsis_lang": "es",
-     "title_en": "Sheltering Gestures"
+     "title_en": "Sheltering Gestures",
+     "titulos_anteriores": [
+      "Sheltering Gestures"
+     ]
     }
    ]
   },
@@ -2691,7 +2790,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-08T08:36:31",
+  "fecha": "2026-10-08T09:31:02",
   "plan_sha": "59bf137b7d874efe",
   "paso": 16,
   "cmd": "python3 pipeline/ensamblar.py villadelcine-2026"
