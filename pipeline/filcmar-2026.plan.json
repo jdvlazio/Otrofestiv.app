@@ -130,7 +130,10 @@
   "sharedSlotIsOneScreening": true,
   "_por_que_slot": "Los bloques sin nombre juntan un corto y un largo (o dos obras de la Competencia Latinoamericana) bajo una sola hora y sede; la ceremonia de premiación del lunes lleva dentro dos obras de la competencia.",
   "mes_es": "octubre",
-  "dias_vacios": []
+  "dias_vacios": [],
+  "_fuentes_versionadas": {
+   "festivals/staging/filcmar-2026-correcciones.json": "fichas de TMDB declaradas a mano (creadas por nosotros o verificadas), cada una con su porqué; las lee pipeline/enriquecer.py"
+  }
  },
  "_fuentes_versionadas": {
   "festivals/staging/filcmar-2026-seleccion-oficial.json": "el catálogo de la Selección Oficial (pre-onboarding)",
