@@ -214,6 +214,10 @@
    "tipo": "boolean",
    "nota": "Afecta conflictos vía durationForTravel."
   },
+  "titulos_anteriores": {
+   "tipo": "array",
+   "nota": "Títulos con que el festival publicó ANTES esta obra. Lo llena Onboarding cuando un festival renombra (p. ej. «Tránsito» → «Tránsitos»). La app mueve en silencio lo que el usuario guardó bajo el viejo (Interés, Plan, vista, prioridad, calificación, retrasos) — domain/titulos.js. Obra partida en dos: el viejo va en las dos y gana la primera del catálogo. Nunca un título que siga vigente."
+  },
   "qa_type": {
    "tipo": "string",
    "enum": [
