@@ -49,7 +49,9 @@ CAMPO = re.compile(r'^(Género|Duración|País|Año|Idioma):\s*(.*)$')
 # es uno de ellos es sinopsis — también una línea corta: la sinopsis suele
 # empezar con el título en cursiva, partido en su propio renglón.
 _CAT = f'{DIR}/categorias.json'
-ROTULOS = {'competencia'} | ({v[0].strip().lower() for v in json.load(io.open(_CAT, encoding='utf-8')).values()}
+# «Cali ciudad creativa» es el rótulo de las fichas de Cali Ciudad Abierta y no
+# está en categorias.json: se colaba como comienzo de 5 sinopsis (8 oct)
+ROTULOS = {'competencia', 'cali ciudad creativa'} | ({v[0].strip().lower() for v in json.load(io.open(_CAT, encoding='utf-8')).values()}
                             if os.path.exists(_CAT) else set())
 
 

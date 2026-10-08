@@ -1,0 +1,144 @@
+{
+ "_provenance": {
+  "fuente": "fuentes/villadelcine-2026/titulos-anteriores.json (renombres del PDF del 6 oct, PR #1021) + el título del afiche de «Un amor a primera vista»",
+  "capturado": "2026-10-08",
+  "metodo": "cada renombre con su porqué; lo lee ensamblar.py"
+ },
+ "renombres": [
+  {
+   "antes": "A Sweet Miracle",
+   "ahora": "Un dulce milagro",
+   "por_que": "el festival la titula en español"
+  },
+  {
+   "antes": "Catatumbo: House of Thunder, Memory, and Dignity",
+   "ahora": "Catatumbo: casa del trueno, memoria y dignidad",
+   "por_que": "título en español (obra colombiana)"
+  },
+  {
+   "antes": "Ceremonia UNQUY de apertura y Cine Concierto Caminos Sonoros",
+   "ahora": "Ceremonia UNQUY de apertura",
+   "por_que": "la apertura se partió en dos casillas; el Cine Concierto es actividad aparte"
+  },
+  {
+   "antes": "Collective Memory",
+   "ahora": "Memoria colectiva",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "Cuadrileros, orgullo y legado",
+   "ahora": "Cuadrilleros, orgullo y legado",
+   "por_que": "errata corregida"
+  },
+  {
+   "antes": "Cuba 2001. Imágenes del futuro I",
+   "ahora": "Cuba 2001: imágenes del futuro",
+   "por_que": "título corregido por el festival"
+  },
+  {
+   "antes": "Drunk hearing the rain drops fall",
+   "ahora": "Borrachos mientras escuchamos las gotas caer",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "El cine dentro del cine dentro del cine",
+   "ahora": "El cine dentro del cine",
+   "por_que": "título corregido por el festival"
+  },
+  {
+   "antes": "Extinction",
+   "ahora": "Extinción",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "Grief",
+   "ahora": "Duelo",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "In Between",
+   "ahora": "En medio",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "Independence",
+   "ahora": "La independencia",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "Just Another Bird",
+   "ahora": "Solo un ave más",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "KMKZ: Wild, free and brave.",
+   "ahora": "KMKZ: salvaje, libre y valiente",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "La Presencia de Blanco",
+   "ahora": "La presencia del blanco",
+   "por_que": "título corregido por el festival"
+  },
+  {
+   "antes": "Lost Fragments of a Seizure",
+   "ahora": "Fragmentos perdidos de una convulsión",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "Momentos en movimiento. Primeros pasos del ballet en Colombia",
+   "ahora": "Momentos en movimiento: primeros pasos del ballet en Colombia",
+   "por_que": "puntuación corregida"
+  },
+  {
+   "antes": "Pros and Cons of Daydreaming",
+   "ahora": "Pros y contras de soñar despierto",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "Sheltering Gestures",
+   "ahora": "Gestos de refugio",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "Steppe",
+   "ahora": "Estepa",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "The Guanentá Symphony",
+   "ahora": "La sinfonía Guanentá",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "The Last Champion",
+   "ahora": "El último campeón",
+   "por_que": "título en español"
+  },
+  {
+   "antes": "Tormenta en Llamas",
+   "ahora": "Una torreta en llamas",
+   "por_que": "título corregido («A Burning Turret»)"
+  },
+  {
+   "antes": "Tránsito",
+   "ahora": "Tránsitos",
+   "por_que": "el programa de cortos cambió de nombre"
+  },
+  {
+   "antes": "Via Crusis",
+   "ahora": "Via Crucis",
+   "por_que": "errata corregida"
+  },
+  {
+   "antes": "Ceremonia UNQUY de apertura y Cine Concierto Caminos Sonoros",
+   "ahora": "Cine Concierto Caminos Sonoros — León Quintero",
+   "por_que": "la apertura se partió en dos casillas (PDF del 6 oct): el viejo va en las dos"
+  },
+  {
+   "antes": "Amor a primera vista",
+   "ahora": "Un amor a primera vista",
+   "por_que": "el afiche oficial la titula «Un amor a primera vista»; Juan aprueba el título del afiche (8 oct)"
+  }
+ ]
+}

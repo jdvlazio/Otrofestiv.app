@@ -25,22 +25,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Amor a primera vista",
-   "tmdb_id": 1791658,
-   "titulo_original": "Amor a primera vista",
-   "poster_path": null,
-   "synopsis_es": "Leseph ha dedicado su vida al piano, dejando el amor en segundo plano. Cuando conoce a Ariadna, la música se convierte en el lenguaje de una relación atravesada por la entrega, la pérdida y las decisiones no tomadas. Con el paso del tiempo, deberá reconocer cuál de sus grandes amores permanece realmente a su lado.",
-   "synopsis_en": "",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "",
-   "lbSlug": "amor-a-primera-vista",
-   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; sondas por título y por director): Andrés Quintero Campos, 30 min, Colombia; sinopsis y afiche original de villadelcine.com. OJO: el afiche dice «Un amor a primera vista»; el festival la publica sin «Un».",
-   "_director": "Andrés Quintero",
-   "_sondeado": "2026-10-08"
-  },
-  {
    "titulo": "Aquileo Venganza",
    "tmdb_id": 763505,
    "titulo_original": "Aquileo Venganza",
@@ -871,6 +855,22 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Un amor a primera vista",
+   "tmdb_id": 1791658,
+   "titulo_original": "Amor a primera vista",
+   "poster_path": null,
+   "synopsis_es": "Leseph ha dedicado su vida al piano, dejando el amor en segundo plano. Cuando conoce a Ariadna, la música se convierte en el lenguaje de una relación atravesada por la entrega, la pérdida y las decisiones no tomadas. Con el paso del tiempo, deberá reconocer cuál de sus grandes amores permanece realmente a su lado.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "amor-a-primera-vista",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; sondas por título y por director): Andrés Quintero Campos, 30 min, Colombia; sinopsis y afiche original de villadelcine.com. Título del afiche (el festival la publica sin «Un»); el viejo va en titulos-anteriores.",
+   "_director": "Andrés Quintero",
+   "_sondeado": "2026-10-08"
+  },
+  {
    "titulo": "Un poeta",
    "tmdb_id": 1465563,
    "titulo_original": "Un poeta",
@@ -1029,21 +1029,6 @@
    "_sondeado": "2026-10-06",
    "poster": "/assets/villadelcine-2026/alivios.jpg",
    "posterSource": "tmdb"
-  },
-  "Amor a primera vista": {
-   "tmdb_id": 1791658,
-   "titulo_original": "Amor a primera vista",
-   "poster_path": null,
-   "synopsis_es": "Leseph ha dedicado su vida al piano, dejando el amor en segundo plano. Cuando conoce a Ariadna, la música se convierte en el lenguaje de una relación atravesada por la entrega, la pérdida y las decisiones no tomadas. Con el paso del tiempo, deberá reconocer cuál de sus grandes amores permanece realmente a su lado.",
-   "synopsis_en": "",
-   "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
-   "pais_tmdb": "",
-   "lbSlug": "amor-a-primera-vista",
-   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; sondas por título y por director): Andrés Quintero Campos, 30 min, Colombia; sinopsis y afiche original de villadelcine.com. OJO: el afiche dice «Un amor a primera vista»; el festival la publica sin «Un».",
-   "_director": "Andrés Quintero",
-   "_sondeado": "2026-10-08"
   },
   "Aquileo Venganza": {
    "tmdb_id": 763505,
@@ -1809,6 +1794,21 @@
    "_sondeado": "2026-10-08",
    "poster": "/assets/villadelcine-2026/tuktu-padre-maiz.jpg",
    "posterSource": "tmdb"
+  },
+  "Un amor a primera vista": {
+   "tmdb_id": 1791658,
+   "titulo_original": "Amor a primera vista",
+   "poster_path": null,
+   "synopsis_es": "Leseph ha dedicado su vida al piano, dejando el amor en segundo plano. Cuando conoce a Ariadna, la música se convierte en el lenguaje de una relación atravesada por la entrega, la pérdida y las decisiones no tomadas. Con el paso del tiempo, deberá reconocer cuál de sus grandes amores permanece realmente a su lado.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "amor-a-primera-vista",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; sondas por título y por director): Andrés Quintero Campos, 30 min, Colombia; sinopsis y afiche original de villadelcine.com. Título del afiche (el festival la publica sin «Un»); el viejo va en titulos-anteriores.",
+   "_director": "Andrés Quintero",
+   "_sondeado": "2026-10-08"
   },
   "Un poeta": {
    "tmdb_id": 1465563,

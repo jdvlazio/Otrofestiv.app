@@ -546,6 +546,12 @@ def main():
                       'una e de menos. Ninguna otra superficie del festival lo '
                       'escribe, así que no hay contra qué contrastarlo: se '
                       'corrige la errata evidente y queda declarado.'),
+        'Amor a primera vista': ('Un amor a primera vista',
+                                 'el afiche oficial (villadelcine.com) la titula '
+                                 '«Un amor a primera vista»; la web y el PDF dicen '
+                                 '«Amor a primera vista». Juan elige el del afiche '
+                                 '(8 oct); su ficha de TMDB (1791658) también. El '
+                                 'título viejo va en titulos-anteriores.'),
     }
 
     def corrige(t):

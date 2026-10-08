@@ -199,6 +199,33 @@ def mayuscula_inicial(s):
     return s
 
 
+def _titulos_anteriores(fid, films):
+    """`titulos_anteriores` desde festivals/staging/<id>-titulos-anteriores.json.
+
+    Cuando una obra cambia de título, lo que el usuario guardó queda bajo el
+    viejo; la app lo mueve si la obra declara cómo se llamaba (domain/titulos.js).
+    El sidecar es {"renombres": [{"antes", "ahora", "por_que"}]}. Se ABORTA si el
+    título nuevo no existe en el build (el renombre apuntaría a nada) o si el
+    viejo sigue vigente (la app no lo migra, y con razón). Una obra partida en
+    dos lleva el viejo en las dos: dos entradas con el mismo «antes»."""
+    p = f'{REPO}/festivals/staging/{fid}-titulos-anteriores.json'
+    if not os.path.exists(p):
+        return
+    renombres = json.load(open(p, encoding='utf-8')).get('renombres') or []
+    obras = [o for f in films for o in [f] + (f.get('film_list') or [])]
+    vigentes = {o.get('title') for o in obras}
+    malos = [f"«{r['antes']}» → «{r['ahora']}»: " + ('el nuevo no está en el build' if r['ahora'] not in vigentes
+                                                    else 'el viejo sigue vigente')
+             for r in renombres if r['ahora'] not in vigentes or r['antes'] in vigentes]
+    if malos:
+        sys.exit(f'✗ {os.path.basename(p)}:\n  · ' + '\n  · '.join(malos))
+    for o in obras:
+        viejos = [r['antes'] for r in renombres if r['ahora'] == o.get('title')]
+        if viejos:
+            o['titulos_anteriores'] = sorted(set(viejos))
+    print(f'  títulos anteriores: {len(renombres)} renombres declarados')
+
+
 def ensamblar(fid, escribir=True):
     plan = _plan(fid)
     cfg = plan['festival']
@@ -481,6 +508,7 @@ def ensamblar(fid, escribir=True):
                     _o[_k] = mayuscula_inicial(_o[_k])
         # programa o actividad: su texto es DESCRIPCIÓN, no sinopsis (lib)
         lib.separar_descripcion(_f)
+    _titulos_anteriores(fid, films)
     out['films'] = films
 
     print(f'  {fid}: {len(films)} funciones · {len(venues)} sedes · {len(secciones)} secciones '
