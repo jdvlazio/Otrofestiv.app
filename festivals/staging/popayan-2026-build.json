@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festicinepopayan.com, página de programación 2026 (wp-json, id 12543)",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-08",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime la parrilla; el Auditorio Maya es la sala de la Facultad de Artes de Unicauca.",
@@ -559,6 +559,8 @@
      "synopsis_lang": "es",
      "poster": "/assets/popayan-2026/el-patio-de-la-infancia.jpg",
      "posterSource": "oficial",
+     "lbSlug": "el-patio-de-la-infancia",
+     "tmdb_id": 1791680,
      "country": "Colombia",
      "flags": "🇨🇴"
     },
@@ -2364,7 +2366,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-07T15:21:30",
+  "fecha": "2026-10-08T08:34:22",
   "plan_sha": "af098517d0317e3e",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"

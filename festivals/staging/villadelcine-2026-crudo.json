@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "PROGRAMACIÓN «Caminos del tiempo» 2026 (PDF) + las fichas de obra de villadelcine.com",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-08",
   "que_aporta": "las funciones del festival con día, hora, sede, sala, sección y la lista de obras de cada programa de cortos",
   "url": "https://villadelcine.com/wp-content/uploads/2026/09/Programacion-caminos-del-tiempo-2026_compressed.pdf",
   "metodo": "la duración publicada es la REAL: cuando las obras suman más que la casilla dibujada, manda la suma (regla de Juan, 19 sep 2026)"
@@ -65,8 +65,10 @@
    "pais": "Colombia",
    "genero": "Drama / Romance",
    "sinopsis": "Leseph ha dedicado su vida al piano, dejando el amor en segundo plano. Cuando conoce a Ariadna, la música se convierte en el lenguaje de una relación atravesada por la entrega, la pérdida y las decisiones no tomadas. Con el paso del tiempo, deberá reconocer cuál de sus grandes amores permanece realmente a su lado.",
+   "tmdb_id": 1791658,
    "poster": "/assets/villadelcine-2026/amor-a-primera-vista.jpg",
-   "posterSource": "oficial"
+   "posterSource": "oficial",
+   "lbSlug": "amor-a-primera-vista"
   },
   {
    "titulo": "Mucho Gusto",
@@ -298,8 +300,10 @@
      "anio": 2025,
      "sinopsis": "En el páramo de Mata de Mora, dos niños encarnan a Sua, el Sol, y Sie, el Agua. Hablando en muisca y español, estas fuerzas sagradas dialogan sobre el equilibrio de la vida e invitan a proteger el territorio, la memoria ancestral y las fuentes que sostienen a su comunidad.",
      "categoria": "Mejor Cortometraje Escolar",
+     "tmdb_id": 1791659,
      "poster": "/assets/villadelcine-2026/sua-y-sie-guardianes-de-la-vida.jpg",
      "posterSource": "oficial",
+     "lbSlug": "sua-y-sie-guardianes-de-la-vida",
      "formato": "CORTOMETRAJE ESCOLAR"
     },
     {
@@ -337,8 +341,10 @@
      "anio": 2026,
      "sinopsis": "En medio del conflicto armado colombiano, una comunidad ve cómo el miedo y los secuestros alteran su vida cotidiana. Mientras las familias atraviesan ausencias, separaciones y decisiones dolorosas, surge una pregunta urgente: ¿cómo conservar la esperanza? Una historia sobre las huellas de la guerra y la posibilidad de construir paz desde la memoria.",
      "categoria": "Mejor Cortometraje Escolar",
+     "tmdb_id": 1791661,
      "poster": "/assets/villadelcine-2026/manos-rojas.jpg",
      "posterSource": "oficial",
+     "lbSlug": "manos-rojas",
      "formato": "CORTOMETRAJE ESCOLAR"
     },
     {
@@ -390,8 +396,10 @@
      "sinopsis": "Tatao crece junto a su abuela Alba, unidos por una rutina que da forma a su vida cotidiana. Cuando la memoria empieza a desvanecerse, su relación se transforma, revelando cómo el amor perdura incluso a medida que los recuerdos desaparecen lentamente.",
      "_sinopsis_fuente": "PDF de septiembre, p35 (el del 6 oct le pega la de «Duelo»)",
      "categoria": "International Universities",
+     "tmdb_id": 1791663,
      "poster": "/assets/villadelcine-2026/memorias-del-alba.jpg",
      "posterSource": "oficial",
+     "lbSlug": "memorias-del-alba",
      "formato": "CORTOMETRAJE APASIONADO INTERNACIONAL"
     },
     {
@@ -928,8 +936,10 @@
      "genero": "Drama",
      "sinopsis": "Tras la desaparición de Claudia, Alirio, un niño habitante de calle, se niega a quedar nuevamente solo. Por eso se lleva a Alicia, una anciana olvidada en un parque. Lo que comienza como un rapto transforma dos vidas invisibles: juntos construyen el afecto y el hogar que la ciudad les había negado.",
      "categoria": "Mejor Ópera Prima Nacional",
+     "tmdb_id": 1791664,
      "poster": "/assets/villadelcine-2026/volar.jpg",
      "posterSource": "oficial",
+     "lbSlug": "volar-1",
      "formato": "ÓPERA PRIMA NACIONAL"
     },
     {
@@ -1126,8 +1136,10 @@
      "anio": 2025,
      "sinopsis": "Pipe, un escritor anciano que enfrenta el Alzheimer, intenta terminar la que podría ser su última obra. Mientras escribe, sus recuerdos se confunden con historias ajenas hasta llevarlo de regreso a su infancia, cuando, sin zapatos y con un balón de trapo, soñaba con vestir la camiseta de la Selección Colombia.",
      "categoria": "Mejor Cortometraje con Celular",
+     "tmdb_id": 1791665,
      "poster": "/assets/villadelcine-2026/la-ultima-historia.jpg",
      "posterSource": "oficial",
+     "lbSlug": "la-ultima-historia",
      "formato": "CORTOMETRAJE CON CELULAR"
     },
     {
@@ -1139,8 +1151,10 @@
      "anio": 2026,
      "sinopsis": "Leo despierta atrapado en una habitación de hotel a punto de perder su tren. Cuando una voz asegura estar dentro del baño, busca ayuda de su esposa, pero un extraño malentendido convierte el miedo en celos y abre la puerta a una pesadilla.",
      "categoria": "Mejor Cortometraje Vertical",
+     "tmdb_id": 1696442,
      "poster": "/assets/villadelcine-2026/behind-the-door.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
+     "lbSlug": "derriere-la-porte-2026",
      "formato": "CORTOMETRAJE VERTICAL"
     },
     {
@@ -1264,8 +1278,10 @@
      "pais": "Colombia",
      "genero": "Documental",
      "sinopsis": "En las montañas del Putumayo, las abuelas guardan el conocimiento medicinal de las plantas y lo transmiten de generación en generación. Sus tejidos convierten la relación con el agua, la chagra y el monte en símbolos vivos. Un acercamiento sensible a una naturaleza que conserva una memoria más antigua y extensa que la nuestra.",
+     "tmdb_id": 1791666,
      "poster": "/assets/villadelcine-2026/monte-curandero.jpg",
      "posterSource": "oficial",
+     "lbSlug": "monte-curandero",
      "formato": "PLANETA"
     },
     {
@@ -1355,8 +1371,10 @@
      "pais": "Colombia",
      "genero": "Thriller Psicológico / Drama",
      "sinopsis": "James, de doce años, vive con Francisco en una granja hasta que la policía irrumpe y revela que el hombre que llama padre lo secuestró años atrás. Trasladado a un centro terapéutico, el niño deberá reconstruir su identidad y aprender a reconocerse detrás de los comportamientos que imita para sobrevivir.",
+     "tmdb_id": 1791667,
      "poster": "/assets/villadelcine-2026/quimera.jpg",
      "posterSource": "oficial",
+     "lbSlug": "quimera-4",
      "formato": "BOYACÁ EN LOS CAMPOS"
     },
     {
@@ -1366,8 +1384,10 @@
      "pais": "Colombia",
      "genero": "Realismo Mágico / Drama",
      "sinopsis": "Carmen, una campesina de sesenta años, rescata de la laguna de Tota a un desconocido que flota junto a un requinto. Él se niega a revelar su identidad, pero el canto de la mítica Diablo Ballena rompe el silencio y conduce a ambos hacia un pasado que aún busca redención.",
+     "tmdb_id": 1791668,
      "poster": "/assets/villadelcine-2026/diablo-ballena.jpg",
      "posterSource": "oficial",
+     "lbSlug": "diablo-ballena",
      "formato": "BOYACÁ EN LOS CAMPOS"
     },
     {
@@ -1684,8 +1704,10 @@
      "anio": 2024,
      "sinopsis": "En un instituto, dos jóvenes sufren discriminación de formas distintas: uno por desplazarse en silla de ruedas y otro por no encajar en las expectativas de quienes lo rodean. Un encuentro inesperado les permite ponerse en el lugar del otro y descubrir que la empatía puede transformar la forma de mirar y actuar.",
      "categoria": "Mejor Cortometraje YoungFilm",
+     "tmdb_id": 1791669,
      "poster": "/assets/villadelcine-2026/la-silla.jpg",
      "posterSource": "oficial",
+     "lbSlug": "la-silla-3",
      "formato": "YOUNGFILM"
     },
     {
@@ -1709,8 +1731,10 @@
      "anio": 2025,
      "sinopsis": "En la Colombia de los años cincuenta, Luz pierde la sombrilla que tomó prestada de su madre. La furia de Waldina convierte el hogar en un lugar de miedo, pero, al descubrir el dolor oculto tras su rabia, la niña encuentra un gesto silencioso capaz de acercarlas y comenzar a sanar.",
      "categoria": "Mejor Cortometraje Apasionado",
+     "tmdb_id": 1791672,
      "poster": "/assets/villadelcine-2026/la-sombrilla-de-mama.jpg",
      "posterSource": "oficial",
+     "lbSlug": "la-sombrilla-de-mama",
      "formato": "CORTOMETRAJE APASIONADO NACIONAL"
     },
     {
@@ -1794,8 +1818,10 @@
      "anio": 2026,
      "sinopsis": "Cansado de una rutina que parece no conducirlo a ningún lugar, un joven decide ascender solo a Monserrate. El esfuerzo físico, la música y el paisaje transforman el recorrido en una prueba interior, donde cada paso despierta emociones distintas y le revela que romper la monotonía también depende de atreverse a comenzar.",
      "categoria": "Mejor Cortometraje Escolar",
+     "tmdb_id": 1791673,
      "poster": "/assets/villadelcine-2026/solo.jpg",
      "posterSource": "oficial",
+     "lbSlug": "solo-3",
      "formato": "CORTOMETRAJE ESCOLAR"
     },
     {
@@ -1853,8 +1879,10 @@
      "pais": "Colombia",
      "genero": "Documental / Archivo",
      "sinopsis": "A través de archivos y testimonios de quienes abrieron camino, este documental reconstruye el nacimiento y la consolidación del ballet en Colombia. Las primeras academias, maestras y bailarinas revelan una historia de disciplina, migraciones y perseverancia, rescatando del olvido a las mujeres que transformaron el movimiento en memoria y profesión.",
+     "tmdb_id": 1791674,
      "poster": "/assets/villadelcine-2026/momentos-en-movimiento-primeros-pasos-del-ballet-en-colombia.jpg",
      "posterSource": "oficial",
+     "lbSlug": "momentos-en-movimiento-primeros-pasos-del",
      "formato": "PODEROSAS"
     },
     {
@@ -1949,8 +1977,10 @@
      "anio": 2026,
      "sinopsis": "En el corazón de una maloca, una mujer atraviesa un ritual de gestación acompañado por el fuego, la danza y figuras de barro trazadas sobre su cuerpo. Mientras la naturaleza anuncia el nacimiento de una nueva vida, el parto se transforma en una celebración de la memoria ancestral, la gratitud y los ciclos que conectan el cuerpo, la tierra y las generaciones.",
      "categoria": "Mejor Videoclip",
+     "tmdb_id": 1791675,
      "poster": "/assets/villadelcine-2026/benditos-los-viejos.jpg",
      "posterSource": "oficial",
+     "lbSlug": "benditos-los-viejos",
      "formato": "VIDEO MUSICAL"
     },
     {
@@ -1974,8 +2004,10 @@
      "anio": 2025,
      "sinopsis": "Tras despedirse de su abuela Rosa, Mateo decide prepararse para asumir el legado familiar. Su única guía es una lista de reglas escrita durante la infancia, que lo conduce por misiones tan absurdas como solemnes. Entre planes criminales y recuerdos, descubrirá que algunos legados no se reciben: se comprenden.",
      "categoria": "Mejor Cortometraje con Celular",
+     "tmdb_id": 1791676,
      "poster": "/assets/villadelcine-2026/no-se-fia-ni-aunque-lloren.jpg",
      "posterSource": "oficial",
+     "lbSlug": "no-se-fia-ni-aunque-lloren",
      "formato": "CORTOMETRAJE CON CELULAR"
     },
     {
@@ -1987,8 +2019,10 @@
      "anio": 2026,
      "sinopsis": "Durante el Día de los Muertos, José ignora la advertencia de su esposa y sale a pescar en las aguas de La Boquilla. Cuando el mar comienza a devolverle señales imposibles, una presencia sobrenatural lo enfrenta a su mayor temor. En ese territorio, algunas tradiciones no son supersticiones: son reglas de supervivencia.",
      "categoria": "Mejor Cortometraje Vertical",
+     "tmdb_id": 1791677,
      "poster": "/assets/villadelcine-2026/anima-de-marea.jpg",
      "posterSource": "oficial",
+     "lbSlug": "anima-de-marea",
      "formato": "CORTOMETRAJE VERTICAL"
     },
     {
@@ -2000,8 +2034,10 @@
      "anio": 2026,
      "sinopsis": "Alba, una sanadora y partera solitaria, ha dedicado su existencia a preservar la vida. Guiada por el espíritu de su gato, recibe una noche a una joven desesperada cuya petición sacude sus convicciones. Entre dolor y silencios, deberá comprender que acompañar también significa permitir que cada quien elija su propio camino.",
      "categoria": "Mejor Cortometraje con Celular",
+     "tmdb_id": 1791678,
      "poster": "/assets/villadelcine-2026/maleza.jpg",
      "posterSource": "oficial",
+     "lbSlug": "maleza-2026",
      "formato": "CORTOMETRAJE CON CELULAR"
     },
     {
@@ -2013,8 +2049,6 @@
      "anio": 2025,
      "sinopsis": "Después de una ruptura, una mujer convierte el duelo en un ritual hecho de colores, palabras y objetos. Entre espinas que brotan del pecho, una casa rota y la silueta del amor ausente, atraviesa el dolor hasta encontrar una nueva forma de habitar aquello que permanece después de tanto amor.",
      "categoria": "Mejor Videoclip",
-     "poster": "/assets/villadelcine-2026/despues-de-tanto-amor.jpg",
-     "posterSource": "editorial",
      "formato": "VIDEO MUSICAL"
     },
     {

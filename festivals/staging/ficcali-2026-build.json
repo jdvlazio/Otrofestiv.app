@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-08",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -849,7 +849,9 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/boato.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "boato",
+     "tmdb_id": 1791681
     },
     {
      "title": "El viaje",
@@ -862,7 +864,9 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/el-viaje.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "el-viaje-2026",
+     "tmdb_id": 1791683
     },
     {
      "title": "La gran hazaña",
@@ -1307,7 +1311,9 @@
      "genre": "Experimental",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "afilando-memoria",
+     "tmdb_id": 1791685
     },
     {
      "title": "Después de las seis",
@@ -1319,7 +1325,9 @@
      "synopsis": "Cali ciudad creativa En el cuarto piso de un edificio de la Universidad del Valle, conocido como el 383, se ocultan historias de revoluciones, exilios y muertes silenciadas durante cinco décadas. Se dice que una mujer espera allí desde hace muchos años. No se sabe exactamente qué. Algunos aseguran haberla visto después de las seis; casi todos se marchan antes. Maite investiga la memoria del edificio entre cintas, fotografías y voces que regresan desde otras épocas. Los archivos dejan de parecer inertes. Algo insiste en ellos. Un rostro reaparece. Un hombre atraviesa los pasillos, como Asterión que espera a su redentor.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "despues-de-las-seis",
+     "tmdb_id": 1791686
     },
     {
      "title": "El mundo de Humberto",
@@ -1331,7 +1339,9 @@
      "synopsis": "Cali ciudad creativa En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "lbSlug": "el-mundo-de-humberto",
+     "tmdb_id": 1791688
     },
     {
      "title": "Muchas, muchas gracias",
@@ -1756,7 +1766,9 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14010
-   }
+   },
+   "lbSlug": "las-pesadillas-del-siervo",
+   "tmdb_id": 1791689
   },
   {
    "title": "Relicto",
@@ -2297,7 +2309,9 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14030
-   }
+   },
+   "lbSlug": "las-pesadillas-del-siervo",
+   "tmdb_id": 1791689
   },
   {
    "title": "Iluminada",
@@ -2945,7 +2959,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-07T15:20:40",
+  "fecha": "2026-10-08T08:34:05",
   "plan_sha": "c414b0bb182ad3b4",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficcali-2026"

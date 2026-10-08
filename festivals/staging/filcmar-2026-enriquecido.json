@@ -267,6 +267,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "El espejo de la vida",
+   "tmdb_id": 1791654,
+   "titulo_original": "El espejo de la vida",
+   "poster_path": null,
+   "synopsis_es": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "el-espejo-de-la-vida",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; tres sondas): Simón Sánchez Plazas, 2025, 9 min, Colombia; sinopsis y afiche de la matriz de FILCMAR (afiche recortado 2,6 % arriba para la proporción de TMDB, aprobado por Juan).",
+   "_director": "Simón Sánchez Plazas",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/filcmar-2026/el-espejo-de-la-vida.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1t529HfEIBNyF4nvuat1sX8q7dLw-bHi1"
+  },
+  {
    "titulo": "El ocaso de los dioses",
    "tmdb_id": 1526356,
    "titulo_original": "El Ocaso de los Dioses",
@@ -384,6 +403,25 @@
    "_sinopsis_de": "ya publicada en cinemancia-2026",
    "poster": "/assets/filcmar-2026/la-corazonada.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "La danza del caos",
+   "tmdb_id": 1791655,
+   "titulo_original": "La danza del caos",
+   "poster_path": null,
+   "synopsis_es": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "",
+   "lbSlug": "la-danza-del-caos",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; tres sondas): Valeria Preciado Romaña, 2025, 6 min, Colombia; sinopsis y afiche de la matriz de FILCMAR (afiche recortado 6 % a los lados para la proporción de TMDB, aprobado por Juan).",
+   "_director": "Valeria Preciado Romaña",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/filcmar-2026/la-danza-del-caos.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1_us7KFFNT8BGH89I-cOK2YeZ4RvL969W"
   },
   {
    "titulo": "La misteriosa mirada del flamenco",
@@ -799,6 +837,24 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Testimonio",
+   "tmdb_id": 1519246,
+   "titulo_original": "Testemunho",
+   "poster_path": "/sVD2hUTGKdG5myVVbDhqPzqdrZh.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "testemunho",
+   "_verificado": "declarada a mano: Existía en TMDB como «Testemunho» (Leonardo Amaral y Roberto Cotta, Brasil, 2025): mismos directores que FILCMAR, que la publica traducida. TMDB tiene un duplicado sin fecha (1563990); se elige la ficha con fecha.",
+   "_director": "Leonardo Amaral, Roberto Cotta",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/filcmar-2026/testimonio.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Una vez en un cuerpo",
    "tmdb_id": 1522316,
    "titulo_original": "Una vez en un cuerpo",
@@ -847,22 +903,10 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "El espejo de la vida",
-   "poster": "/assets/filcmar-2026/el-espejo-de-la-vida.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1t529HfEIBNyF4nvuat1sX8q7dLw-bHi1"
-  },
-  {
    "titulo": "HUSH",
    "poster": "/assets/filcmar-2026/hush.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1t7-tqrkWh3ru-pVLRzAyd1IsKJS46yrN"
-  },
-  {
-   "titulo": "La danza del caos",
-   "poster": "/assets/filcmar-2026/la-danza-del-caos.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1_us7KFFNT8BGH89I-cOK2YeZ4RvL969W"
   },
   {
    "titulo": "La pecera",
@@ -875,12 +919,6 @@
    "poster": "/assets/filcmar-2026/miguel-angel-federico-y-el-carro-que-paso-encima-de-las-gafa.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1kjnbHGPSC1bjCYWSaSmul6dXPen-TPMu"
-  },
-  {
-   "titulo": "Testimonio",
-   "poster": "/assets/filcmar-2026/testimonio.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1a04Hgq9_x1PfEEBr0gajCF4dwLuZXkzE"
   },
   {
    "titulo": "The Raules",
@@ -1143,6 +1181,24 @@
    "poster": "/assets/filcmar-2026/el-dia-interrumpido.jpg",
    "posterSource": "tmdb"
   },
+  "El espejo de la vida": {
+   "tmdb_id": 1791654,
+   "titulo_original": "El espejo de la vida",
+   "poster_path": null,
+   "synopsis_es": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "",
+   "lbSlug": "el-espejo-de-la-vida",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; tres sondas): Simón Sánchez Plazas, 2025, 9 min, Colombia; sinopsis y afiche de la matriz de FILCMAR (afiche recortado 2,6 % arriba para la proporción de TMDB, aprobado por Juan).",
+   "_director": "Simón Sánchez Plazas",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/filcmar-2026/el-espejo-de-la-vida.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1t529HfEIBNyF4nvuat1sX8q7dLw-bHi1"
+  },
   "El ocaso de los dioses": {
    "tmdb_id": 1526356,
    "titulo_original": "El Ocaso de los Dioses",
@@ -1227,6 +1283,24 @@
    "_sinopsis_de": "ya publicada en cinemancia-2026",
    "poster": "/assets/filcmar-2026/la-corazonada.jpg",
    "posterSource": "tmdb"
+  },
+  "La danza del caos": {
+   "tmdb_id": 1791655,
+   "titulo_original": "La danza del caos",
+   "poster_path": null,
+   "synopsis_es": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 6,
+   "pais_tmdb": "",
+   "lbSlug": "la-danza-del-caos",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía; tres sondas): Valeria Preciado Romaña, 2025, 6 min, Colombia; sinopsis y afiche de la matriz de FILCMAR (afiche recortado 6 % a los lados para la proporción de TMDB, aprobado por Juan).",
+   "_director": "Valeria Preciado Romaña",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/filcmar-2026/la-danza-del-caos.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: matriz de curaduría de FILCMAR (6 oct), Drive: https://drive.google.com/open?id=1_us7KFFNT8BGH89I-cOK2YeZ4RvL969W"
   },
   "La misteriosa mirada del flamenco": {
    "tmdb_id": 896096,
@@ -1626,6 +1700,23 @@
    "poster": "/assets/filcmar-2026/somnolitico.jpg",
    "posterSource": "tmdb"
   },
+  "Testimonio": {
+   "tmdb_id": 1519246,
+   "titulo_original": "Testemunho",
+   "poster_path": "/sVD2hUTGKdG5myVVbDhqPzqdrZh.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Brazil",
+   "lbSlug": "testemunho",
+   "_verificado": "declarada a mano: Existía en TMDB como «Testemunho» (Leonardo Amaral y Roberto Cotta, Brasil, 2025): mismos directores que FILCMAR, que la publica traducida. TMDB tiene un duplicado sin fecha (1563990); se elige la ficha con fecha.",
+   "_director": "Leonardo Amaral, Roberto Cotta",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/filcmar-2026/testimonio.jpg",
+   "posterSource": "tmdb"
+  },
   "Una vez en un cuerpo": {
    "tmdb_id": 1522316,
    "titulo_original": "Una vez en un cuerpo",
@@ -1682,14 +1773,11 @@
   "Competencia Espíritu del Trasnoche",
   "Cortoconcierto inaugural Antioquia Super Ochera",
   "El cargador de hombres",
-  "El espejo de la vida",
   "El tajamar y la astromelia",
   "HDLT",
   "HUSH",
-  "La danza del caos",
   "La pecera",
   "Miguel Ángel, Federico, y el carro que pasó encima de las gafas",
-  "Testimonio",
   "The Raules"
  ],
  "_sin_ficha_sondeo": {
@@ -1721,10 +1809,6 @@
    "director": "Gustavo Mejía",
    "fecha": "2026-10-08"
   },
-  "El espejo de la vida": {
-   "director": "Simón Sánchez Plazas",
-   "fecha": "2026-10-08"
-  },
   "El tajamar y la astromelia": {
    "director": "Héctor Gallego",
    "fecha": "2026-10-08"
@@ -1737,20 +1821,12 @@
    "director": "Santiago Franco",
    "fecha": "2026-10-08"
   },
-  "La danza del caos": {
-   "director": "Valeria Preciado Romaña",
-   "fecha": "2026-10-08"
-  },
   "La pecera": {
    "director": "Angela Tatiana Fonseca Galvez",
    "fecha": "2026-10-08"
   },
   "Miguel Ángel, Federico, y el carro que pasó encima de las gafas": {
    "director": "Juan David Rodriguez",
-   "fecha": "2026-10-08"
-  },
-  "Testimonio": {
-   "director": "Leonardo Amaral, Roberto Cotta",
    "fecha": "2026-10-08"
   },
   "The Raules": {

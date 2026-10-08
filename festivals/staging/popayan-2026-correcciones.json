@@ -38,6 +38,11 @@
    "genero": "Drama",
    "_fuente": "https://www.themoviedb.org/movie/1786242",
    "_por_que": "Ficha CREADA por nosotros el 1 oct 2026 (no existía en TMDB ni en Letterboxd; tres sondas: título, filmografía del director, Letterboxd): Wiston Fernández Madriñan, 2024, 15 min, Colombia, Drama (por la sinopsis), sinopsis del festival; el afiche oficial (600x800) recortado por los costados a 2:3 para que TMDB lo acepte. Letterboxd: la-volqueta. El género se declara aquí porque la API de TMDB tardaba en servir la ficha recién editada; es el mismo que cargamos en TMDB."
+  },
+  "El patio de la infancia": {
+   "tmdb": 1791680,
+   "_fuente": "https://www.themoviedb.org/movie/1791680",
+   "_por_que": "Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Cecilia Traslaviña (2214637, Bogotá, directora y animadora), 2025, 14 min, CO; sinopsis del festival y afiche original de la fuente del afiche declarada en popayan-2026-afiches.json, recortado 1% para la proporción de TMDB."
   }
  }
 }

@@ -1,9 +1,28 @@
 {
  "_provenance": {
   "fuente": "TMDB + letterboxd.com/tmdb/<id>, emparejado con ficha_verifica() (director + año ±1 o duración ±3 min). Lo que no verifica no entra.",
-  "capturado": "2026-10-07"
+  "capturado": "2026-10-08"
  },
  "obras": [
+  {
+   "titulo": "Afilando memoria",
+   "tmdb_id": 1791685,
+   "titulo_original": "Afilando memoria",
+   "poster_path": null,
+   "synopsis_es": "Afilando memoria es un ritual lleno de piel, sudor y danza. Cuerpos que encarnan a los que ya no están. Cuerpos que fueron barco, semilla, raíz, diáspora, saber expropiado, territorio tatuado y ombligo sembrado. Cuerpos que cantan: ¡Soy Congo, Mandinga, Arará, Lucumí, soy Campáz, Cetré, Ocoró, Cundumí! Afilando memoria es machete territorio, machete ancestral, machete resistencia, machete libertad.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "",
+   "lbSlug": "afilando-memoria",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Eugenio Gómez, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
+   "_director": "Eugenio Gómez",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-afilando-memoria-scaled.webp (1810×2560)"
+  },
   {
    "titulo": "Akababuru: Expresión de Asombro",
    "tmdb_id": 1418533,
@@ -122,6 +141,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Boato",
+   "tmdb_id": 1791681,
+   "titulo_original": "Boato",
+   "poster_path": null,
+   "synopsis_es": "Carmen vive con su abuela Clara en La Pópala y siente curiosidad por el objeto que su abuela observa en secreto cada noche. Una noche decide abrir la caja y libera una esfera de luz, sin saber que esta acción atraerá fuerzas oscuras que alguna vez aterrorizaron al pueblo.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "boato",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Alexandra Julio, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
+   "_director": "Alexandra Julio",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/boato.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-boato.webp (1030×1527)"
+  },
+  {
    "titulo": "Boca Vieja",
    "tmdb_id": 1357891,
    "titulo_original": "Boca Vieja",
@@ -141,6 +179,25 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Después de las seis",
+   "tmdb_id": 1791686,
+   "titulo_original": "Después de las seis",
+   "poster_path": null,
+   "synopsis_es": "En el cuarto piso de un edificio de la Universidad del Valle, conocido como el 383, se ocultan historias de revoluciones, exilios y muertes silenciadas durante cinco décadas. Se dice que una mujer espera allí desde hace muchos años. No se sabe exactamente qué. Algunos aseguran haberla visto después de las seis; casi todos se marchan antes. Maite investiga la memoria del edificio entre cintas, fotografías y voces que regresan desde otras épocas. Los archivos dejan de parecer inertes. Algo insiste en ellos. Un rostro reaparece. Un hombre atraviesa los pasillos, como Asterión que espera a su redentor.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "",
+   "lbSlug": "despues-de-las-seis",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Diana Kuellar (1740740, directora de Marímbula), 2026, 24 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
+   "_director": "Diana Kuéllar",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-despues-de-las-seis.webp (992×1488)"
+  },
+  {
    "titulo": "Después de tanto amor",
    "_ya_publicada": [
     {
@@ -156,6 +213,44 @@
    "poster": "/assets/ficcali-2026/despues-de-tanto-amor.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-despues-de-tanto-amor.jpeg (904×1280)"
+  },
+  {
+   "titulo": "El mundo de Humberto",
+   "tmdb_id": 1791688,
+   "titulo_original": "El mundo de Humberto",
+   "poster_path": null,
+   "synopsis_es": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "el-mundo-de-humberto",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Paula Ortiz, 2025, 14 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
+   "_director": "Paula Ortiz",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-el-mundo-de-humberto.webp (1170×1727)"
+  },
+  {
+   "titulo": "El viaje",
+   "tmdb_id": 1791683,
+   "titulo_original": "El viaje",
+   "poster_path": null,
+   "synopsis_es": "El océano, el sonido de una caracola y la música del Pacífico tejen un hilo invisible entre las vidas de una niña y una pequeña ballena yubarta. Tras un mágico encuentro, ambas crecen, se aventuran por nuevos caminos y regresan a su hogar. Su mundo se transforma, pero el hilo que las conecta permanece intacto.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "el-viaje-2026",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Ana Sofía Franco, 2026, 8 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
+   "_director": "Ana Sofía Franco",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/el-viaje.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-el-viaje-scaled.jpg (1725×2560)"
   },
   {
    "titulo": "Historias del buen Valle",
@@ -347,6 +442,25 @@
    ],
    "poster": "/assets/ficcali-2026/la-mansion-de-araucaima.jpg",
    "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Las pesadillas del siervo",
+   "tmdb_id": 1791689,
+   "titulo_original": "Las pesadillas del siervo",
+   "poster_path": null,
+   "synopsis_es": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "",
+   "lbSlug": "las-pesadillas-del-siervo",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Manuel Villa (1711036, director de No amanece igual para todos), 2025, 90 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
+   "_director": "Manuel Villa",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-las-pesadillas-del-siervo-scaled.webp (1707×2560)"
   },
   {
    "titulo": "Luis Tercero",
@@ -710,12 +824,6 @@
    "posterSource": "tmdb"
   },
   {
-   "titulo": "Afilando memoria",
-   "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-afilando-memoria-scaled.webp (1810×2560)"
-  },
-  {
    "titulo": "Agua fría",
    "poster": "/assets/ficcali-2026/agua-fria.jpg",
    "posterSource": "oficial",
@@ -752,12 +860,6 @@
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-bertha.jpg (1190×1684)"
   },
   {
-   "titulo": "Boato",
-   "poster": "/assets/ficcali-2026/boato.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-boato.webp (1030×1527)"
-  },
-  {
    "titulo": "Chaika",
    "poster": "/assets/ficcali-2026/chaika.jpg",
    "posterSource": "oficial",
@@ -776,12 +878,6 @@
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-desde-la-otra-orilla.webp (1122×1402)"
   },
   {
-   "titulo": "Después de las seis",
-   "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-despues-de-las-seis.webp (992×1488)"
-  },
-  {
    "titulo": "El bitcoin de oro",
    "poster": "/assets/ficcali-2026/el-bitcoin-de-oro.jpg",
    "posterSource": "oficial",
@@ -792,18 +888,6 @@
    "poster": "/assets/ficcali-2026/el-maestro-de-la-piqueria.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-el-maestro-de-la-piqueria.jpg (592×842)"
-  },
-  {
-   "titulo": "El mundo de Humberto",
-   "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-el-mundo-de-humberto.webp (1170×1727)"
-  },
-  {
-   "titulo": "El viaje",
-   "poster": "/assets/ficcali-2026/el-viaje.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-el-viaje-scaled.jpg (1725×2560)"
   },
   {
    "titulo": "Ellas, gardiennes de l’Amazonie",
@@ -906,12 +990,6 @@
    "poster": "/assets/ficcali-2026/la-tinaja.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-la-tinaja-scaled.webp (1924×2560)"
-  },
-  {
-   "titulo": "Las pesadillas del siervo",
-   "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-las-pesadillas-del-siervo-scaled.webp (1707×2560)"
   },
   {
    "titulo": "Monsters, Inc.",
@@ -1023,6 +1101,24 @@
   }
  ],
  "verificadas": {
+  "Afilando memoria": {
+   "tmdb_id": 1791685,
+   "titulo_original": "Afilando memoria",
+   "poster_path": null,
+   "synopsis_es": "Afilando memoria es un ritual lleno de piel, sudor y danza. Cuerpos que encarnan a los que ya no están. Cuerpos que fueron barco, semilla, raíz, diáspora, saber expropiado, territorio tatuado y ombligo sembrado. Cuerpos que cantan: ¡Soy Congo, Mandinga, Arará, Lucumí, soy Campáz, Cetré, Ocoró, Cundumí! Afilando memoria es machete territorio, machete ancestral, machete resistencia, machete libertad.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 7,
+   "pais_tmdb": "",
+   "lbSlug": "afilando-memoria",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Eugenio Gómez, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
+   "_director": "Eugenio Gómez",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-afilando-memoria-scaled.webp (1810×2560)"
+  },
   "Akababuru: Expresión de Asombro": {
    "tmdb_id": 1418533,
    "titulo_original": "Akababuru: Expresión de asombro",
@@ -1120,6 +1216,24 @@
    "poster": "/assets/ficcali-2026/arco.jpg",
    "posterSource": "tmdb"
   },
+  "Boato": {
+   "tmdb_id": 1791681,
+   "titulo_original": "Boato",
+   "poster_path": null,
+   "synopsis_es": "Carmen vive con su abuela Clara en La Pópala y siente curiosidad por el objeto que su abuela observa en secreto cada noche. Una noche decide abrir la caja y libera una esfera de luz, sin saber que esta acción atraerá fuerzas oscuras que alguna vez aterrorizaron al pueblo.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "boato",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Alexandra Julio, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
+   "_director": "Alexandra Julio",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/boato.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-boato.webp (1030×1527)"
+  },
   "Boca Vieja": {
    "tmdb_id": 1357891,
    "titulo_original": "Boca Vieja",
@@ -1137,6 +1251,60 @@
    "_sondeado": "2026-10-07",
    "poster": "/assets/ficcali-2026/boca-vieja.jpg",
    "posterSource": "tmdb"
+  },
+  "Después de las seis": {
+   "tmdb_id": 1791686,
+   "titulo_original": "Después de las seis",
+   "poster_path": null,
+   "synopsis_es": "En el cuarto piso de un edificio de la Universidad del Valle, conocido como el 383, se ocultan historias de revoluciones, exilios y muertes silenciadas durante cinco décadas. Se dice que una mujer espera allí desde hace muchos años. No se sabe exactamente qué. Algunos aseguran haberla visto después de las seis; casi todos se marchan antes. Maite investiga la memoria del edificio entre cintas, fotografías y voces que regresan desde otras épocas. Los archivos dejan de parecer inertes. Algo insiste en ellos. Un rostro reaparece. Un hombre atraviesa los pasillos, como Asterión que espera a su redentor.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 24,
+   "pais_tmdb": "",
+   "lbSlug": "despues-de-las-seis",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Diana Kuellar (1740740, directora de Marímbula), 2026, 24 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
+   "_director": "Diana Kuéllar",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-despues-de-las-seis.webp (992×1488)"
+  },
+  "El mundo de Humberto": {
+   "tmdb_id": 1791688,
+   "titulo_original": "El mundo de Humberto",
+   "poster_path": null,
+   "synopsis_es": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "",
+   "lbSlug": "el-mundo-de-humberto",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Paula Ortiz, 2025, 14 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
+   "_director": "Paula Ortiz",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-el-mundo-de-humberto.webp (1170×1727)"
+  },
+  "El viaje": {
+   "tmdb_id": 1791683,
+   "titulo_original": "El viaje",
+   "poster_path": null,
+   "synopsis_es": "El océano, el sonido de una caracola y la música del Pacífico tejen un hilo invisible entre las vidas de una niña y una pequeña ballena yubarta. Tras un mágico encuentro, ambas crecen, se aventuran por nuevos caminos y regresan a su hogar. Su mundo se transforma, pero el hilo que las conecta permanece intacto.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 8,
+   "pais_tmdb": "",
+   "lbSlug": "el-viaje-2026",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Ana Sofía Franco, 2026, 8 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
+   "_director": "Ana Sofía Franco",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/el-viaje.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-el-viaje-scaled.jpg (1725×2560)"
   },
   "I Built a Rocket Imagining your Arrival": {
    "tmdb_id": 1616523,
@@ -1266,6 +1434,24 @@
    ],
    "poster": "/assets/ficcali-2026/la-mansion-de-araucaima.jpg",
    "posterSource": "tmdb"
+  },
+  "Las pesadillas del siervo": {
+   "tmdb_id": 1791689,
+   "titulo_original": "Las pesadillas del siervo",
+   "poster_path": null,
+   "synopsis_es": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo.",
+   "synopsis_en": "",
+   "genero": "",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 90,
+   "pais_tmdb": "",
+   "lbSlug": "las-pesadillas-del-siervo",
+   "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Manuel Villa (1711036, director de No amanece igual para todos), 2025, 90 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
+   "_director": "Manuel Villa",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
+   "posterSource": "oficial",
+   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-las-pesadillas-del-siervo-scaled.webp (1707×2560)"
   },
   "Luis Tercero": {
    "tmdb_id": 1774071,
@@ -1745,25 +1931,20 @@
   }
  },
  "sin_ficha": [
-  "Afilando memoria",
   "Aguapanela",
   "Alivios",
   "Anima Vé! – Anibia",
   "Animá Vé – Retrospectiva",
-  "Boato",
   "Cali, ciudad abierta (cortos)",
   "Canción para mi tierra",
   "Competencia corto nacional – Prog. 1",
   "Competencia corto nacional – Prog. 2",
   "Cortos infantiles FICCALI / Mi vecino Totoro",
   "De nuevo al final",
-  "Después de las seis",
   "Después de tanto amor",
   "El Coloso",
   "El bitcoin de oro",
   "El maestro de la piqueria",
-  "El mundo de Humberto",
-  "El viaje",
   "Ellas, gardiennes de l'Amazonie",
   "En construcción",
   "Guapi: ritmo y balsada",
@@ -1777,7 +1958,6 @@
   "La fuga",
   "La libertad doble",
   "Largo Arco + Corto Akababuru",
-  "Las pesadillas del siervo",
   "Minotauro",
   "No me devoro-PC6. La gula",
   "Ona",
@@ -1800,10 +1980,6 @@
   "Érase una vez en Harlem"
  ],
  "_sin_ficha_sondeo": {
-  "Afilando memoria": {
-   "director": "Eugenio Gómez",
-   "fecha": "2026-10-07"
-  },
   "Aguapanela": {
    "director": "",
    "fecha": "2026-10-07"
@@ -1818,10 +1994,6 @@
   },
   "Animá Vé – Retrospectiva": {
    "director": "",
-   "fecha": "2026-10-07"
-  },
-  "Boato": {
-   "director": "Alexandra Julio",
    "fecha": "2026-10-07"
   },
   "Cali, ciudad abierta (cortos)": {
@@ -1848,10 +2020,6 @@
    "director": "Edward Gómez",
    "fecha": "2026-10-07"
   },
-  "Después de las seis": {
-   "director": "Diana Kuéllar",
-   "fecha": "2026-10-07"
-  },
   "Después de tanto amor": {
    "director": "Mercedes Oviedo",
    "fecha": "2026-10-07"
@@ -1866,14 +2034,6 @@
   },
   "El maestro de la piqueria": {
    "director": "",
-   "fecha": "2026-10-07"
-  },
-  "El mundo de Humberto": {
-   "director": "Paula Ortiz",
-   "fecha": "2026-10-07"
-  },
-  "El viaje": {
-   "director": "Ana Sofía Franco",
    "fecha": "2026-10-07"
   },
   "Ellas, gardiennes de l'Amazonie": {
@@ -1926,10 +2086,6 @@
   },
   "Largo Arco + Corto Akababuru": {
    "director": "",
-   "fecha": "2026-10-07"
-  },
-  "Las pesadillas del siervo": {
-   "director": "Manuel Villa",
    "fecha": "2026-10-07"
   },
   "Minotauro": {
