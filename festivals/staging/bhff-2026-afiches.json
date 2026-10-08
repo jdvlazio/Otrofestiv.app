@@ -1,0 +1,166 @@
+{
+ "_provenance": {
+  "fuente": "bogotahorrorfilmfest.com, Selección 2026 (láminas de festivalData)",
+  "capturado": "2026-10-07",
+  "regla": "solo donde TMDB y lo ya publicado no tienen afiche",
+  "genera": "pipeline/bhff-2026-afiches.py"
+ },
+ "afiches": {
+  "Anax": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-15.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-15.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  "Año de Casados": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-10.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-10.webp, recortado por dentro del marco (688×1114, marco 11 px)"
+  },
+  "Bajo El Mismo Techo": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-31.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-31.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  "Búhos": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-32.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-32.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  "Chaika": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-41.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-41.webp, recortado por dentro del marco (716×1049, marco 29 px)"
+  },
+  "Eco": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-25.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-25.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  "El Diente Negro": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-14.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-14.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  "El Festín de las Moscas": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-27.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-27.webp, recortado por dentro del marco (674×1048, marco 10 px)"
+  },
+  "El Laberinto del Cuerpo": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-46.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-46.webp, recortado por dentro del marco (782×1025, marco 14 px)"
+  },
+  "El Ocaso De Los Dioses": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-42.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-42.webp, recortado por dentro del marco (698×1103, marco 16 px)"
+  },
+  "Enigma": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-44.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-44.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  "Esquirlas de Caracol": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-47.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-47.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  "Gabriel": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-51.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-51.webp, recortado por dentro del marco (714×1076, marco 15 px)"
+  },
+  "Happy": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-18.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-18.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  "Hasta que Amanezca": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-30.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-30.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  "Hush": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-36.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-36.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  "Interior 8": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-21.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-21.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  "Iris de Cristal": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-23.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-23.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  "La Habitación del Macho Cabrío": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-24.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-24.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  "La Noche De Las Bestias": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-45.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-45.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  "Leonel": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-49.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-49.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  "Los Lobo": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-37.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-37.webp, recortado por dentro del marco (698×1103, marco 16 px)"
+  },
+  "Muertos que no son muertos": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-43.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-43.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  "Necrosectos": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-12.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-12.webp, recortado por dentro del marco (688×1114, marco 11 px)"
+  },
+  "No Es El Fin Del Mundo": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-38.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-38.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  "Nocturna": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-13.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-13.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  "Pactum": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-16.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-16.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  "Parapeto": {
+   "archivo": "fuentes/bhff-2026/afiches/ig-DcxA28kjgVo-2.jpg",
+   "fuente": "IG @bogotahorrorfest p/DcxA28kjgVo, lámina 2.jpg: el afiche, recortado por dentro del marco (714×993, marco 14 px)"
+  },
+  "Parásitos": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-29.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-29.webp, recortado por dentro del marco (698×1103, marco 16 px)"
+  },
+  "Paseo Nocturno": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-19.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-19.webp, recortado por dentro del marco (630×950, marco 18 px)"
+  },
+  "Prototipo": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-50.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-50.webp, recortado por dentro del marco (714×1076, marco 15 px)"
+  },
+  "Quazar": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-33.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-33.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  "Que El Cielo Nos Perdone": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-63.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-63.webp, recortado por dentro del marco (762×1103, marco 17 px)"
+  },
+  "Replay": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-26.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-26.webp, recortado por dentro del marco (676×1050, marco 9 px)"
+  },
+  "Ruth": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-39.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-39.webp, recortado por dentro del marco (714×1076, marco 15 px)"
+  },
+  "Siempre hay un monstruo": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-17.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-17.webp, recortado por dentro del marco (764×1078, marco 11 px)"
+  },
+  "Ubicua": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-35.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-35.webp, recortado por dentro del marco (700×1105, marco 15 px)"
+  },
+  "Vientre": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-48.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-48.webp, recortado por dentro del marco (780×1106, marco 15 px)"
+  },
+  "Yatsi y el Espíritu del Río": {
+   "archivo": "fuentes/bhff-2026/afiches/SELECCIONADOS-BHFF-2026-22.jpg",
+   "fuente": "bogotahorrorfilmfest.com, Selección 2026: el afiche de la lámina SELECCIONADOS-BHFF-2026-22.webp, recortado por dentro del marco (766×1001, marco 11 px)"
+  }
+ }
+}

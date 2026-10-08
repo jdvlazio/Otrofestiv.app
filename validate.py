@@ -6270,7 +6270,11 @@ try:
                    'la página de la edición tampoco la trae',
                    ('ficpa-2026', 'Carlitos'):
                    'TMDB 1193058 (Karol Tamayo): sin overview en es-ES ni en-US; la única traducción '
-                   '(«es») dice «Cortometraje seleccionado en MIDBO 2023», que no es sinopsis (10 oct 2026)'}
+                   '(«es») dice «Cortometraje seleccionado en MIDBO 2023», que no es sinopsis (10 oct 2026)',
+                   ('bhff-2026', 'Moviedreams'):
+                   'TMDB 1776749: overview vacío en es-ES, es-MX y en-US (7 oct); la parrilla no trae sinopsis',
+                   ('bhff-2026', 'Esquirlas de Caracol'):
+                   'TMDB 1718595: overview vacío en es-ES, es-MX y en-US (7 oct); la parrilla no trae sinopsis'}
     _malos = []
     for _f in sorted(_g.glob('festivals/*.json')):
         _fid = _os.path.basename(_f)[:-5]
