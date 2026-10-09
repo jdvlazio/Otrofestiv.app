@@ -9,7 +9,7 @@
 //   node scripts/capturas-festival.js ficcali2026
 //   node scripts/capturas-festival.js ficcali2026 2026-10-17T12:00:00-05:00
 //
-// Deja fuentes/capturas/<festId>/{programa,ficha,miplan}.png (fuentes/ no se versiona).
+// Deja fuentes/capturas/<festId>/{programa,ficha,intereses,miplan}.png (fuentes/ no se versiona).
 const { chromium } = require('@playwright/test');
 const { spawn } = require('child_process');
 const fs = require('fs'), path = require('path');
@@ -41,6 +41,7 @@ fs.mkdirSync(out, { recursive: true });
       selectSplashFest(cfg.name, `${cfg.city} · ${cfg.dates} ${cfg.year || ''}`.trim(), id);
     }, festId);
     await page.waitForTimeout(300);
+    await page.evaluate(() => { if (typeof setLang === 'function') setLang('es'); });
     await page.locator('.splash-enter-btn').click();
     await page.waitForFunction(() => Array.isArray(FILMS) && FILMS.length > 0, { timeout: 15000 });
     await page.waitForTimeout(1200);
@@ -62,8 +63,11 @@ fs.mkdirSync(out, { recursive: true });
         const ev = (FILMS || []).find(x => x.type === 'event' || x.event_kind);
         if (ev) watchlist.add(ev.title);
         if (typeof saveState === 'function') saveState('wl', 'watched');
-        switchMainNav('mnav-miplan'); showAgView();
+        switchMainNav('mnav-seleccion'); showAgView();
       }, title);
+      await page.waitForTimeout(1000);
+      await page.screenshot({ path: path.join(out, 'intereses.png') });
+      await page.evaluate(() => { switchMainNav('mnav-miplan'); showAgView(); });
       await page.waitForTimeout(1000);
       await page.screenshot({ path: path.join(out, 'miplan.png') });
     }

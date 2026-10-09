@@ -680,7 +680,7 @@ Juan vio en la app:**
   duración, país, sinopsis, género) que la fuente dejó de dar, y lo anota en
   `_conservado`. Lo que la fuente sí dice, manda.
 - **Y antes de publicar se MIRA la app:** `node scripts/capturas-festival.js
-  <id>` deja en `fuentes/capturas/<id>/` el Programa, una ficha y Mi Plan a
+  <id>` deja en `fuentes/capturas/<id>/` el Programa, una ficha, Intereses y Mi Plan a
   390×844; las capturas van a Juan junto con la hoja de contacto. MAPISTAS se
   veía en la pantalla, no en el dato.
 
