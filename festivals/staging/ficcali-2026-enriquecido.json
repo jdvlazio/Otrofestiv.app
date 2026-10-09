@@ -8,11 +8,11 @@
    "titulo": "Afilando memoria",
    "tmdb_id": 1791685,
    "titulo_original": "Afilando memoria",
-   "poster_path": null,
+   "poster_path": "/ut462rIVpdZIq0TjIKJCM78aAJj.jpg",
    "synopsis_es": "Afilando memoria es un ritual lleno de piel, sudor y danza. Cuerpos que encarnan a los que ya no están. Cuerpos que fueron barco, semilla, raíz, diáspora, saber expropiado, territorio tatuado y ombligo sembrado. Cuerpos que cantan: ¡Soy Congo, Mandinga, Arará, Lucumí, soy Campáz, Cetré, Ocoró, Cundumí! Afilando memoria es machete territorio, machete ancestral, machete resistencia, machete libertad.",
    "synopsis_en": "",
    "genero": "",
-   "anio_tmdb": 0,
+   "anio_tmdb": 2026,
    "duracion_tmdb": 7,
    "pais_tmdb": "",
    "lbSlug": "afilando-memoria",
@@ -20,8 +20,22 @@
    "_director": "Eugenio Gómez",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-afilando-memoria-scaled.webp (1810×2560)"
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Aguapanela",
+   "_ya_publicada": [
+    {
+     "festival": "villadelcine-2026",
+     "titulo": "Aguapanela",
+     "poster": "/assets/villadelcine-2026/aguapanela.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "En un barrio colombiano donde los dioses griegos toman aguapanela, Miguel huye de un Cupido decidido a flecharlo. Con la ayuda de dos deidades musicales y un cáliz cargado de energía celestial, emprende una divertida venganza contra el amor. Sin embargo, ni siquiera un héroe mitológico puede escapar para siempre de sus flechas."
+    }
+   ],
+   "poster": "/assets/villadelcine-2026/aguapanela.jpg",
+   "_verificado": "ya publicada en villadelcine-2026: se reusa su afiche",
+   "sinopsis": "En un barrio colombiano donde los dioses griegos toman aguapanela, Miguel huye de un Cupido decidido a flecharlo. Con la ayuda de dos deidades musicales y un cáliz cargado de energía celestial, emprende una divertida venganza contra el amor. Sin embargo, ni siquiera un héroe mitológico puede escapar para siempre de sus flechas."
   },
   {
    "titulo": "Akababuru: Expresión de Asombro",
@@ -144,20 +158,19 @@
    "titulo": "Boato",
    "tmdb_id": 1791681,
    "titulo_original": "Boato",
-   "poster_path": null,
+   "poster_path": "/ma5hz53yZFINaNGcQpFC6WP6Rvt.jpg",
    "synopsis_es": "Carmen vive con su abuela Clara en La Pópala y siente curiosidad por el objeto que su abuela observa en secreto cada noche. Una noche decide abrir la caja y libera una esfera de luz, sin saber que esta acción atraerá fuerzas oscuras que alguna vez aterrorizaron al pueblo.",
    "synopsis_en": "",
    "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
    "pais_tmdb": "",
    "lbSlug": "boato",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Alexandra Julio, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Alexandra Julio",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/boato.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-boato.webp (1030×1527)"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Boca Vieja",
@@ -182,7 +195,7 @@
    "titulo": "Después de las seis",
    "tmdb_id": 1791686,
    "titulo_original": "Después de las seis",
-   "poster_path": null,
+   "poster_path": "/xkhkrGYXQYpP4C3T1vox2gqDOMi.jpg",
    "synopsis_es": "En el cuarto piso de un edificio de la Universidad del Valle, conocido como el 383, se ocultan historias de revoluciones, exilios y muertes silenciadas durante cinco décadas. Se dice que una mujer espera allí desde hace muchos años. No se sabe exactamente qué. Algunos aseguran haberla visto después de las seis; casi todos se marchan antes. Maite investiga la memoria del edificio entre cintas, fotografías y voces que regresan desde otras épocas. Los archivos dejan de parecer inertes. Algo insiste en ellos. Un rostro reaparece. Un hombre atraviesa los pasillos, como Asterión que espera a su redentor.",
    "synopsis_en": "",
    "genero": "",
@@ -194,8 +207,7 @@
    "_director": "Diana Kuéllar",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-despues-de-las-seis.webp (992×1488)"
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Después de tanto amor",
@@ -215,29 +227,66 @@
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-despues-de-tanto-amor.jpeg (904×1280)"
   },
   {
+   "titulo": "El Coloso",
+   "tmdb_id": 1566489,
+   "titulo_original": "El coloso",
+   "poster_path": "/enrU3eKIa9buWQImqi0aR22CR5y.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "“El Coloso” tells the story of the life and legacy of Freddy Rincón, a giant of Colombian soccer who conquered Brazil with his strength and talent, filled stadiums in Spain, and gave his country one of its most unforgettable goals against Germany. From his roots in Buenaventura to becoming a symbol of national pride, Rincón transcended the soccer field to inspire an entire generation. More than just a soccer player, he was a beacon of hope, whose greatness lives on in the memory of Colombians.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 66,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "el-coloso",
+   "_verificado": "declarada a mano: Proyección especial fuera de la Selección: la tarjeta solo dice Colombia, 70 min. TMDB: «El coloso», José Varón, Colombia, 2025, 66 min (la otra ficha homónima, 1612550, es un corto peruano de 17 min). Verificado a mano el 8 oct.",
+   "_director": "José Varón",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/el-coloso.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "El mundo de Humberto",
    "tmdb_id": 1791688,
    "titulo_original": "El mundo de Humberto",
-   "poster_path": null,
+   "poster_path": "/5LT4v4mj28KFFh3xAXH2y6DIQyo.jpg",
    "synopsis_es": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
    "synopsis_en": "",
    "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
    "pais_tmdb": "",
    "lbSlug": "el-mundo-de-humberto",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Paula Ortiz, 2025, 14 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Paula Ortiz",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-el-mundo-de-humberto.webp (1170×1727)"
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "El ocaso de las criaturas",
+   "tmdb_id": 1216479,
+   "titulo_original": "El ocaso de las criaturas",
+   "poster_path": "/cMOlOGbBtxw00j6wY2Ljipm7QI4.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A melancholy young woman wanders the lonely streets of downtown in search of food. While her mind is connected to a parallel dimension where she dreams aloud letters to her sister. Her curiosity and the possibility of seeing a sunset again jeopardize her return home.",
+   "genero": "Animación",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Colombia",
+   "title_en": "Creatures under the sun",
+   "lbSlug": "creatures-under-the-sun",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El ocaso de las criaturas",
+   "_director": "Jenny David Piedrahita",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/el-ocaso-de-las-criaturas.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "El viaje",
    "tmdb_id": 1791683,
    "titulo_original": "El viaje",
-   "poster_path": null,
+   "poster_path": "/loA5pNDjZJDyHVy5BOGbtNLEZ8T.jpg",
    "synopsis_es": "El océano, el sonido de una caracola y la música del Pacífico tejen un hilo invisible entre las vidas de una niña y una pequeña ballena yubarta. Tras un mágico encuentro, ambas crecen, se aventuran por nuevos caminos y regresan a su hogar. Su mundo se transforma, pero el hilo que las conecta permanece intacto.",
    "synopsis_en": "",
    "genero": "",
@@ -249,8 +298,46 @@
    "_director": "Ana Sofía Franco",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/el-viaje.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-el-viaje-scaled.jpg (1725×2560)"
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "En construcción",
+   "tmdb_id": 148353,
+   "titulo_original": "En construcción",
+   "poster_path": "/wY3wZp5JbLGWZT0XP7WO86awOOA.jpg",
+   "synopsis_es": "En un emblemático barrio popular de Barcelona, amenazado por un plan de reforma, se emprende la construcción de un bloque de viviendas. Queríamos conocer la intimidad de una construcción, así que nos metimos ahí, cuando ese espacio era todavía un solar donde los chavales jugaban a fútbol. Sobre este terreno buscamos la forma de convivir, conocer y rodar -así, por este orden- que nos permitiera abordar tanto el anecdotario de la propia obra como el que ésta generaba a su alrededor; en esa cotidianidad quebrada por el estruendo de los derribos, entre sus vecinos, en el barrio (de hecho la imagen del barrio se concretó en la del puñado de rostros que a nuestros ojos lo representaban). En este proceso, pronto advertimos que la mutación del paisaje urbano implicaba también una mutación en el paisaje humano, y que en este movimiento se podrían reconocer ciertos ecos del mundo. Sobre estos cimientos construimos una película.",
+   "synopsis_en": "An author spends a year and a half filming what happens as a new apartment building is built in a neighborhood of Barcelona.",
+   "genero": "Documental",
+   "anio_tmdb": 2001,
+   "duracion_tmdb": 125,
+   "pais_tmdb": "Spain, France",
+   "title_en": "Work in Progress",
+   "lbSlug": "work-in-progress",
+   "_verificado": "declarada a mano: Proyección especial: la tarjeta dice España, 124 min. TMDB: José Luis Guerín, 2001, 125 min, España. Verificado a mano el 8 oct.",
+   "_director": "José Luis Guerín",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/en-construccion.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Estirpe",
+   "tmdb_id": 1327925,
+   "titulo_original": "ESTIRPE",
+   "poster_path": "/kz3Of7PY7Y9jKDWrYk2rAG8eiPd.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Among the living and the dead, there is a shared memory",
+   "genero": "",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "title_en": "LINEAGE",
+   "lbSlug": "lineage-2024",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Estirpe",
+   "_director": "Ana María Ferro",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/estirpe.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "Historias del buen Valle",
@@ -342,6 +429,25 @@
    "poster": "/assets/biff-2026/la-bola-negra.jpg",
    "_verificado": "ya publicada en biff-2026: se reusa su afiche",
    "sinopsis": "LA BOLA NEGRA narra las vidas de tres hombres en tres épocas distintas —1932, 1937 y 2017— cuyas historias se entrelazan a través del deseo, el dolor y la herencia. Inspirada en una de las últimas obras inacabadas de Federico GARCÍA LORCA."
+  },
+  {
+   "titulo": "La fabulosa máquina del tiempo",
+   "tmdb_id": 1599779,
+   "titulo_original": "A Fabulosa Máquina do Tempo",
+   "poster_path": "/lxMSgrmj8zlI83njLRRkHiOTpXx.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "What if it were possible to travel back in time to dream of other futures? In the hinterlands of Brazil, young girls navigate the delicate transition from childhood to adolescence while grappling with social media, religion, their dreams, and the stories of the women who came before them. By inventing a time machine, they revisit the pasts of their mothers and grandmothers and imagine a future in which they can be free, fulfilled, and in control of their own choices.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 73,
+   "pais_tmdb": "Brazil",
+   "title_en": "The Fabulous Time Machine",
+   "lbSlug": "the-fabulous-time-machine",
+   "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Brasil, 70 min. TMDB: «A Fabulosa Máquina do Tempo», Eliza Capai, 2026, 73 min, Brasil. Verificado a mano el 8 oct.",
+   "_director": "Eliza Capai",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg",
+   "posterSource": "tmdb"
   },
   {
    "titulo": "La gran hazaña",
@@ -447,7 +553,7 @@
    "titulo": "Las pesadillas del siervo",
    "tmdb_id": 1791689,
    "titulo_original": "Las pesadillas del siervo",
-   "poster_path": null,
+   "poster_path": "/kJOypmaBdirRsCsr9iwAT6X4H71.jpg",
    "synopsis_es": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo.",
    "synopsis_en": "",
    "genero": "",
@@ -459,8 +565,25 @@
    "_director": "Manuel Villa",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-las-pesadillas-del-siervo-scaled.webp (1707×2560)"
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Liebres",
+   "tmdb_id": 1392101,
+   "titulo_original": "Liebres",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "The short film follows Valentina and Pilar, two young teenagers from different socio-cultural contexts who will experience a violent event that will change them forever, breaking the barriers that distance them and making them live in the same wounded body.",
+   "genero": "",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "Hare",
+   "lbSlug": "hare",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Liebres",
+   "_director": "Laura Carvajal",
+   "_sondeado": "2026-10-08"
   },
   {
    "titulo": "Luis Tercero",
@@ -493,6 +616,26 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Mi Demonio",
+   "tmdb_id": 1463453,
+   "titulo_original": "Mi demonio",
+   "poster_path": "/dWzx69Xpn57Q6Nl6EKqeunG2oPZ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Through an extraordinary 17-minute sequence shot, we accompany a young and dysfunctional couple who are about to have their first child. On the way to the hospital, labor pains mix with mutual complaints, and calls from relatives add reckless comments to a more than desperate situation.",
+   "genero": "Drama",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia",
+   "title_en": "My Demon",
+   "lbSlug": "my-demon-2024",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mi Demonio",
+   "_director": "Rossana Montoya",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/mi-demonio.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "Mi vecino Totoro",
    "tmdb_id": 8392,
    "titulo_original": "となりのトトロ",
@@ -510,6 +653,25 @@
    "_director": "Hayao Miyazaki",
    "_sondeado": "2026-10-07",
    "poster": "/assets/ficcali-2026/mi-vecino-totoro.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Minotauro",
+   "tmdb_id": 848700,
+   "titulo_original": "Minotaure",
+   "poster_path": "/7XH2vaVsishBS0GuCgO3bOXfCaB.jpg",
+   "synopsis_es": "Es la contemplación del director sobre la naturaleza de las relaciones humanas, el estado del hombre moderno y la fragilidad de la vida humana.",
+   "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 135,
+   "pais_tmdb": "France, Latvia, Germany, United States of America, Switzerland",
+   "title_en": "Minotaur",
+   "lbSlug": "minotaur-2026",
+   "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Rusia, 135 min. TMDB: «Minotaur», Andrey Zvyagintsev, 2026, 135 min exactos (origen FR por la coproducción; el director es ruso). Verificado a mano el 8 oct.",
+   "_director": "Andrey Zvyagintsev",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/minotauro.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -615,8 +777,39 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Nuestro cuerpo es una estrella que se expande",
    "_director": "Semillites Hernández, Tania Hernández",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/nuestro-cuerpo-es-una-estrella-que-se-expande.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Once Upon a Time in Harlem",
+   "tmdb_id": 1596300,
+   "titulo_original": "Once Upon a Time in Harlem",
+   "poster_path": "/9eukk5gby8NZCwraiC7mloZmasP.jpg",
+   "synopsis_es": "Concebida en 1972 por el legendario cineasta William Greaves y terminada cincuenta años después por su hijo David, Once Upon a Time in Harlem es una obra imprescindible de archivo vivo, que documenta una animada reunión de figuras del Renacimiento de Harlem durante un cóctel en casa de Duke Ellington.",
+   "synopsis_en": "A decade after his death, genre-defying filmmaker William Greaves has one last trick up his sleeve with what he considered the most important event he captured on film: a 1972 party he engineered with the living luminaries of the Harlem Renaissance.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 100,
+   "pais_tmdb": "United States of America",
+   "lbSlug": "once-upon-a-time-in-harlem",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Once Upon a Time in Harlem",
+   "_director": "David Greaves, William Greaves",
+   "_sondeado": "2026-10-08",
+   "_ya_publicada": [
+    {
+     "festival": "tiff-2026",
+     "titulo": "Once Upon a Time in Harlem",
+     "tmdb_id": 1596300,
+     "poster": "https://image.tmdb.org/t/p/w500/qHYA58sAbkHCGAztm5EZgSozQSZ.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-upon-a-time-in-harlem",
+     "sinopsis": "Concebida en 1972 por el legendario cineasta William Greaves y terminada cincuenta años después por su hijo David, Once Upon a Time in Harlem es una obra imprescindible de archivo vivo, que documenta una animada reunión de figuras del Renacimiento de Harlem durante un cóctel en casa de Duke Ellington."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en tiff-2026",
+   "poster": "/assets/ficcali-2026/once-upon-a-time-in-harlem.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -635,7 +828,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Para vivir, el implacable tiempo de Pablo Milanés",
    "_director": "Fabien Pisani",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/para-vivir-el-implacable-tiempo-de-pablo-milanes.jpg",
    "posterSource": "tmdb"
   },
@@ -654,8 +847,8 @@
    "lbSlug": "donkey-princess",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Princesa burro",
-   "_director": "Joaquín Cociña y Cristóbal León",
-   "_sondeado": "2026-10-07",
+   "_director": "Joaquín Cociña, Cristóbal León",
+   "_sondeado": "2026-10-08",
    "_ya_publicada": [
     {
      "festival": "biff-2026",
@@ -688,6 +881,24 @@
    "_director": "Guillermo Quintero",
    "_sondeado": "2026-10-07",
    "poster": "/assets/ficcali-2026/relicto.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Rodilla Negra",
+   "tmdb_id": 947607,
+   "titulo_original": "Rodilla negra",
+   "poster_path": "/uA6CmmM7hGEwj5lkVqZzs7WIaXm.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In this short film, the title of which translates as \"Black Knee\", a team of football players (played by members of the Barrios Unidos Cali team) encounter a pair of skinnydipping hippies out in the fields and steal their transistor radio.  This seems to trigger something in their most legendary player, Jonny Mosquera: a terrible syndrome that makes him literally fall to his knees.  Like La hamaca, Agarrando pueblo, Carne de tu Carne and other films made by Mayolo, this film blends deeply unsettling imagery and lowkey genre filmmaking into an equally unsettling and exhilarating realism.",
+   "genero": "",
+   "anio_tmdb": 1975,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "rodilla-negra",
+   "_verificado": "declarada a mano: Proyección especial junto a El Coloso: la tarjeta solo dice Colombia. Es «Rodilla negra» de Carlos Mayolo (Cali, 1975, 14 min), el único título así en TMDB; cuadra con un festival caleño. Verificado a mano el 8 oct.",
+   "_director": "Carlos Mayolo",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/rodilla-negra.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -764,6 +975,60 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Sirenas en la niebla",
+   "tmdb_id": 1117116,
+   "titulo_original": "Sirenas en la Niebla",
+   "poster_path": "/6f1RhvLNmsxvmwOM7qhxAJMebMv.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Mermaids in the Mist",
+   "lbSlug": "mermaids-in-the-mist",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Sirenas en la niebla",
+   "_director": "Daniela Narváez",
+   "_sondeado": "2026-10-08",
+   "_ya_publicada": [
+    {
+     "festival": "girardota-2026",
+     "titulo": "Sirenas en la Niebla",
+     "tmdb_id": 1117116,
+     "poster": "/assets/girardota-2026/sirenas-en-la-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mermaids-in-the-mist"
+    }
+   ],
+   "poster": "/assets/ficcali-2026/sirenas-en-la-niebla.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "Somnolítico",
+   "_ya_publicada": [
+    {
+     "festival": "cineautopsia-2026",
+     "titulo": "Somnolítico",
+     "poster": "/assets/cineautopsia/somnolitico.jpg",
+     "posterSource": "oficial",
+     "sinopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo."
+    },
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Somnolítico",
+     "tmdb_id": 1590709,
+     "poster": "/assets/filcmar-2026/somnolitico.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "somnolytic",
+     "sinopsis": "Un ser extraño se pierde en el caos del sistema de transporte, moviéndose de un lugar a otro sin encontrar salida. Los caminos están saturados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, sin rostro, se mueven automáticamente, creando un laberinto donde las rutas parecen interminables. La gente adormecida se funde con el entorno, y mientras el autobús continúa su camino, el ser finalmente se encuentra a sí mismo."
+    }
+   ],
+   "poster": "/assets/cineautopsia/somnolitico.jpg",
+   "_verificado": "ya publicada en cineautopsia-2026: se reusa su afiche",
+   "sinopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo."
+  },
+  {
    "titulo": "Todo comenzó por el fin",
    "tmdb_id": 358918,
    "titulo_original": "Todo comenzó por el fin",
@@ -781,6 +1046,25 @@
    "_director": "Luis Ospina",
    "_sondeado": "2026-10-07",
    "poster": "/assets/ficcali-2026/todo-comenzo-por-el-fin.jpg",
+   "posterSource": "tmdb"
+  },
+  {
+   "titulo": "¿Por qué se esconde Drácula?",
+   "tmdb_id": 1033710,
+   "titulo_original": "¿Por qué se esconde Drácula?",
+   "poster_path": "/hOYy8pWdunyYVZj0LfkdeJDx2IS.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Lolita, a secretary from an estate company, must bring the contract of the sale of a new house to a very peculiar and thirsty customer.",
+   "genero": "Terror",
+   "anio_tmdb": 1980,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "por-que-se-esconde-dracula",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "¿Por qué se esconde Drácula?",
+   "_director": "Camila Loboguerrero",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/por-que-se-esconde-dracula.jpg",
    "posterSource": "tmdb"
   },
   {
@@ -828,12 +1112,6 @@
    "poster": "/assets/ficcali-2026/agua-fria.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-agua-fria-scaled.webp (1792×2560)"
-  },
-  {
-   "titulo": "Aguapanela",
-   "poster": "/assets/ficcali-2026/aguapanela.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-aguapanela.jpg (639×800)"
   },
   {
    "titulo": "Ahumadora",
@@ -1022,12 +1300,6 @@
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-no-me-devoro-pc6-la-gula.webp (1587×2245)"
   },
   {
-   "titulo": "Ona",
-   "poster": "/assets/ficcali-2026/ona.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-ona-scaled.webp (1706×2560)"
-  },
-  {
    "titulo": "Pajariscopio",
    "poster": "/assets/ficcali-2026/pajariscopio.jpg",
    "posterSource": "oficial",
@@ -1070,12 +1342,6 @@
    "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-tuktu.jpeg (1149×1600)"
   },
   {
-   "titulo": "Vértigo",
-   "poster": "/assets/ficcali-2026/vertigo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-vertigo.jpg (1810×2560)"
-  },
-  {
    "titulo": "Y el río lloró",
    "poster": "/assets/ficcali-2026/y-el-rio-lloro.jpg",
    "posterSource": "oficial",
@@ -1104,11 +1370,11 @@
   "Afilando memoria": {
    "tmdb_id": 1791685,
    "titulo_original": "Afilando memoria",
-   "poster_path": null,
+   "poster_path": "/ut462rIVpdZIq0TjIKJCM78aAJj.jpg",
    "synopsis_es": "Afilando memoria es un ritual lleno de piel, sudor y danza. Cuerpos que encarnan a los que ya no están. Cuerpos que fueron barco, semilla, raíz, diáspora, saber expropiado, territorio tatuado y ombligo sembrado. Cuerpos que cantan: ¡Soy Congo, Mandinga, Arará, Lucumí, soy Campáz, Cetré, Ocoró, Cundumí! Afilando memoria es machete territorio, machete ancestral, machete resistencia, machete libertad.",
    "synopsis_en": "",
    "genero": "",
-   "anio_tmdb": 0,
+   "anio_tmdb": 2026,
    "duracion_tmdb": 7,
    "pais_tmdb": "",
    "lbSlug": "afilando-memoria",
@@ -1116,8 +1382,7 @@
    "_director": "Eugenio Gómez",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-afilando-memoria-scaled.webp (1810×2560)"
+   "posterSource": "tmdb"
   },
   "Akababuru: Expresión de Asombro": {
    "tmdb_id": 1418533,
@@ -1219,20 +1484,19 @@
   "Boato": {
    "tmdb_id": 1791681,
    "titulo_original": "Boato",
-   "poster_path": null,
+   "poster_path": "/ma5hz53yZFINaNGcQpFC6WP6Rvt.jpg",
    "synopsis_es": "Carmen vive con su abuela Clara en La Pópala y siente curiosidad por el objeto que su abuela observa en secreto cada noche. Una noche decide abrir la caja y libera una esfera de luz, sin saber que esta acción atraerá fuerzas oscuras que alguna vez aterrorizaron al pueblo.",
    "synopsis_en": "",
    "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 7,
    "pais_tmdb": "",
    "lbSlug": "boato",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Alexandra Julio, 2026, 7 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Alexandra Julio",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/boato.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-boato.webp (1030×1527)"
+   "posterSource": "tmdb"
   },
   "Boca Vieja": {
    "tmdb_id": 1357891,
@@ -1255,7 +1519,7 @@
   "Después de las seis": {
    "tmdb_id": 1791686,
    "titulo_original": "Después de las seis",
-   "poster_path": null,
+   "poster_path": "/xkhkrGYXQYpP4C3T1vox2gqDOMi.jpg",
    "synopsis_es": "En el cuarto piso de un edificio de la Universidad del Valle, conocido como el 383, se ocultan historias de revoluciones, exilios y muertes silenciadas durante cinco décadas. Se dice que una mujer espera allí desde hace muchos años. No se sabe exactamente qué. Algunos aseguran haberla visto después de las seis; casi todos se marchan antes. Maite investiga la memoria del edificio entre cintas, fotografías y voces que regresan desde otras épocas. Los archivos dejan de parecer inertes. Algo insiste en ellos. Un rostro reaparece. Un hombre atraviesa los pasillos, como Asterión que espera a su redentor.",
    "synopsis_en": "",
    "genero": "",
@@ -1267,31 +1531,65 @@
    "_director": "Diana Kuéllar",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-despues-de-las-seis.webp (992×1488)"
+   "posterSource": "tmdb"
+  },
+  "El Coloso": {
+   "tmdb_id": 1566489,
+   "titulo_original": "El coloso",
+   "poster_path": "/enrU3eKIa9buWQImqi0aR22CR5y.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "“El Coloso” tells the story of the life and legacy of Freddy Rincón, a giant of Colombian soccer who conquered Brazil with his strength and talent, filled stadiums in Spain, and gave his country one of its most unforgettable goals against Germany. From his roots in Buenaventura to becoming a symbol of national pride, Rincón transcended the soccer field to inspire an entire generation. More than just a soccer player, he was a beacon of hope, whose greatness lives on in the memory of Colombians.",
+   "genero": "Documental",
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 66,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "el-coloso",
+   "_verificado": "declarada a mano: Proyección especial fuera de la Selección: la tarjeta solo dice Colombia, 70 min. TMDB: «El coloso», José Varón, Colombia, 2025, 66 min (la otra ficha homónima, 1612550, es un corto peruano de 17 min). Verificado a mano el 8 oct.",
+   "_director": "José Varón",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/el-coloso.jpg",
+   "posterSource": "tmdb"
   },
   "El mundo de Humberto": {
    "tmdb_id": 1791688,
    "titulo_original": "El mundo de Humberto",
-   "poster_path": null,
+   "poster_path": "/5LT4v4mj28KFFh3xAXH2y6DIQyo.jpg",
    "synopsis_es": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
    "synopsis_en": "",
    "genero": "",
-   "anio_tmdb": 0,
-   "duracion_tmdb": 0,
+   "anio_tmdb": 2025,
+   "duracion_tmdb": 14,
    "pais_tmdb": "",
    "lbSlug": "el-mundo-de-humberto",
    "_verificado": "declarada a mano: Ficha CREADA por nosotros el 8 oct 2026 (no existía en TMDB ni en Letterboxd; sondas por título y por director): Paula Ortiz, 2025, 14 min, CO; sinopsis del festival y afiche original de ficcali.com (biblioteca de medios).",
    "_director": "Paula Ortiz",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-el-mundo-de-humberto.webp (1170×1727)"
+   "posterSource": "tmdb"
+  },
+  "El ocaso de las criaturas": {
+   "tmdb_id": 1216479,
+   "titulo_original": "El ocaso de las criaturas",
+   "poster_path": "/cMOlOGbBtxw00j6wY2Ljipm7QI4.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "A melancholy young woman wanders the lonely streets of downtown in search of food. While her mind is connected to a parallel dimension where she dreams aloud letters to her sister. Her curiosity and the possibility of seeing a sunset again jeopardize her return home.",
+   "genero": "Animación",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 9,
+   "pais_tmdb": "Colombia",
+   "title_en": "Creatures under the sun",
+   "lbSlug": "creatures-under-the-sun",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "El ocaso de las criaturas",
+   "_director": "Jenny David Piedrahita",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/el-ocaso-de-las-criaturas.jpg",
+   "posterSource": "tmdb"
   },
   "El viaje": {
    "tmdb_id": 1791683,
    "titulo_original": "El viaje",
-   "poster_path": null,
+   "poster_path": "/loA5pNDjZJDyHVy5BOGbtNLEZ8T.jpg",
    "synopsis_es": "El océano, el sonido de una caracola y la música del Pacífico tejen un hilo invisible entre las vidas de una niña y una pequeña ballena yubarta. Tras un mágico encuentro, ambas crecen, se aventuran por nuevos caminos y regresan a su hogar. Su mundo se transforma, pero el hilo que las conecta permanece intacto.",
    "synopsis_en": "",
    "genero": "",
@@ -1303,8 +1601,44 @@
    "_director": "Ana Sofía Franco",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/el-viaje.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/10/poster-el-viaje-scaled.jpg (1725×2560)"
+   "posterSource": "tmdb"
+  },
+  "En construcción": {
+   "tmdb_id": 148353,
+   "titulo_original": "En construcción",
+   "poster_path": "/wY3wZp5JbLGWZT0XP7WO86awOOA.jpg",
+   "synopsis_es": "En un emblemático barrio popular de Barcelona, amenazado por un plan de reforma, se emprende la construcción de un bloque de viviendas. Queríamos conocer la intimidad de una construcción, así que nos metimos ahí, cuando ese espacio era todavía un solar donde los chavales jugaban a fútbol. Sobre este terreno buscamos la forma de convivir, conocer y rodar -así, por este orden- que nos permitiera abordar tanto el anecdotario de la propia obra como el que ésta generaba a su alrededor; en esa cotidianidad quebrada por el estruendo de los derribos, entre sus vecinos, en el barrio (de hecho la imagen del barrio se concretó en la del puñado de rostros que a nuestros ojos lo representaban). En este proceso, pronto advertimos que la mutación del paisaje urbano implicaba también una mutación en el paisaje humano, y que en este movimiento se podrían reconocer ciertos ecos del mundo. Sobre estos cimientos construimos una película.",
+   "synopsis_en": "An author spends a year and a half filming what happens as a new apartment building is built in a neighborhood of Barcelona.",
+   "genero": "Documental",
+   "anio_tmdb": 2001,
+   "duracion_tmdb": 125,
+   "pais_tmdb": "Spain, France",
+   "title_en": "Work in Progress",
+   "lbSlug": "work-in-progress",
+   "_verificado": "declarada a mano: Proyección especial: la tarjeta dice España, 124 min. TMDB: José Luis Guerín, 2001, 125 min, España. Verificado a mano el 8 oct.",
+   "_director": "José Luis Guerín",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/en-construccion.jpg",
+   "posterSource": "tmdb"
+  },
+  "Estirpe": {
+   "tmdb_id": 1327925,
+   "titulo_original": "ESTIRPE",
+   "poster_path": "/kz3Of7PY7Y9jKDWrYk2rAG8eiPd.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Among the living and the dead, there is a shared memory",
+   "genero": "",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 16,
+   "pais_tmdb": "",
+   "title_en": "LINEAGE",
+   "lbSlug": "lineage-2024",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Estirpe",
+   "_director": "Ana María Ferro",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/estirpe.jpg",
+   "posterSource": "tmdb"
   },
   "I Built a Rocket Imagining your Arrival": {
    "tmdb_id": 1616523,
@@ -1352,6 +1686,24 @@
    ],
    "_sinopsis_de": "ya publicada en biff-2026",
    "poster": "/assets/ficcali-2026/iluminada.jpg",
+   "posterSource": "tmdb"
+  },
+  "La fabulosa máquina del tiempo": {
+   "tmdb_id": 1599779,
+   "titulo_original": "A Fabulosa Máquina do Tempo",
+   "poster_path": "/lxMSgrmj8zlI83njLRRkHiOTpXx.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "What if it were possible to travel back in time to dream of other futures? In the hinterlands of Brazil, young girls navigate the delicate transition from childhood to adolescence while grappling with social media, religion, their dreams, and the stories of the women who came before them. By inventing a time machine, they revisit the pasts of their mothers and grandmothers and imagine a future in which they can be free, fulfilled, and in control of their own choices.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 73,
+   "pais_tmdb": "Brazil",
+   "title_en": "The Fabulous Time Machine",
+   "lbSlug": "the-fabulous-time-machine",
+   "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Brasil, 70 min. TMDB: «A Fabulosa Máquina do Tempo», Eliza Capai, 2026, 73 min, Brasil. Verificado a mano el 8 oct.",
+   "_director": "Eliza Capai",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg",
    "posterSource": "tmdb"
   },
   "La gran hazaña": {
@@ -1438,7 +1790,7 @@
   "Las pesadillas del siervo": {
    "tmdb_id": 1791689,
    "titulo_original": "Las pesadillas del siervo",
-   "poster_path": null,
+   "poster_path": "/kJOypmaBdirRsCsr9iwAT6X4H71.jpg",
    "synopsis_es": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo.",
    "synopsis_en": "",
    "genero": "",
@@ -1450,8 +1802,24 @@
    "_director": "Manuel Villa",
    "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
-   "posterSource": "oficial",
-   "_afiche": "declarado: ficcali.com, biblioteca de medios: https://ficcali.com/wp-content/uploads/2026/09/poster-las-pesadillas-del-siervo-scaled.webp (1707×2560)"
+   "posterSource": "tmdb"
+  },
+  "Liebres": {
+   "tmdb_id": 1392101,
+   "titulo_original": "Liebres",
+   "poster_path": null,
+   "synopsis_es": "",
+   "synopsis_en": "The short film follows Valentina and Pilar, two young teenagers from different socio-cultural contexts who will experience a violent event that will change them forever, breaking the barriers that distance them and making them live in the same wounded body.",
+   "genero": "",
+   "anio_tmdb": 2023,
+   "duracion_tmdb": 13,
+   "pais_tmdb": "Colombia",
+   "title_en": "Hare",
+   "lbSlug": "hare",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Liebres",
+   "_director": "Laura Carvajal",
+   "_sondeado": "2026-10-08"
   },
   "Luis Tercero": {
    "tmdb_id": 1774071,
@@ -1482,6 +1850,25 @@
    "poster": "/assets/ficcali-2026/luis-tercero.jpg",
    "posterSource": "tmdb"
   },
+  "Mi Demonio": {
+   "tmdb_id": 1463453,
+   "titulo_original": "Mi demonio",
+   "poster_path": "/dWzx69Xpn57Q6Nl6EKqeunG2oPZ.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Through an extraordinary 17-minute sequence shot, we accompany a young and dysfunctional couple who are about to have their first child. On the way to the hospital, labor pains mix with mutual complaints, and calls from relatives add reckless comments to a more than desperate situation.",
+   "genero": "Drama",
+   "anio_tmdb": 2024,
+   "duracion_tmdb": 17,
+   "pais_tmdb": "Colombia",
+   "title_en": "My Demon",
+   "lbSlug": "my-demon-2024",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Mi Demonio",
+   "_director": "Rossana Montoya",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/mi-demonio.jpg",
+   "posterSource": "tmdb"
+  },
   "Mi vecino Totoro": {
    "tmdb_id": 8392,
    "titulo_original": "となりのトトロ",
@@ -1499,6 +1886,24 @@
    "_director": "Hayao Miyazaki",
    "_sondeado": "2026-10-07",
    "poster": "/assets/ficcali-2026/mi-vecino-totoro.jpg",
+   "posterSource": "tmdb"
+  },
+  "Minotauro": {
+   "tmdb_id": 848700,
+   "titulo_original": "Minotaure",
+   "poster_path": "/7XH2vaVsishBS0GuCgO3bOXfCaB.jpg",
+   "synopsis_es": "Es la contemplación del director sobre la naturaleza de las relaciones humanas, el estado del hombre moderno y la fragilidad de la vida humana.",
+   "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
+   "genero": "Drama",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 135,
+   "pais_tmdb": "France, Latvia, Germany, United States of America, Switzerland",
+   "title_en": "Minotaur",
+   "lbSlug": "minotaur-2026",
+   "_verificado": "declarada a mano: Proyección especial: la tarjeta dice Rusia, 135 min. TMDB: «Minotaur», Andrey Zvyagintsev, 2026, 135 min exactos (origen FR por la coproducción; el director es ruso). Verificado a mano el 8 oct.",
+   "_director": "Andrey Zvyagintsev",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/minotauro.jpg",
    "posterSource": "tmdb"
   },
   "Mu-ki-ra": {
@@ -1600,8 +2005,38 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Nuestro cuerpo es una estrella que se expande",
    "_director": "Semillites Hernández, Tania Hernández",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/nuestro-cuerpo-es-una-estrella-que-se-expande.jpg",
+   "posterSource": "tmdb"
+  },
+  "Once Upon a Time in Harlem": {
+   "tmdb_id": 1596300,
+   "titulo_original": "Once Upon a Time in Harlem",
+   "poster_path": "/9eukk5gby8NZCwraiC7mloZmasP.jpg",
+   "synopsis_es": "Concebida en 1972 por el legendario cineasta William Greaves y terminada cincuenta años después por su hijo David, Once Upon a Time in Harlem es una obra imprescindible de archivo vivo, que documenta una animada reunión de figuras del Renacimiento de Harlem durante un cóctel en casa de Duke Ellington.",
+   "synopsis_en": "A decade after his death, genre-defying filmmaker William Greaves has one last trick up his sleeve with what he considered the most important event he captured on film: a 1972 party he engineered with the living luminaries of the Harlem Renaissance.",
+   "genero": "Documental",
+   "anio_tmdb": 2026,
+   "duracion_tmdb": 100,
+   "pais_tmdb": "United States of America",
+   "lbSlug": "once-upon-a-time-in-harlem",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Once Upon a Time in Harlem",
+   "_director": "David Greaves, William Greaves",
+   "_sondeado": "2026-10-08",
+   "_ya_publicada": [
+    {
+     "festival": "tiff-2026",
+     "titulo": "Once Upon a Time in Harlem",
+     "tmdb_id": 1596300,
+     "poster": "https://image.tmdb.org/t/p/w500/qHYA58sAbkHCGAztm5EZgSozQSZ.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "once-upon-a-time-in-harlem",
+     "sinopsis": "Concebida en 1972 por el legendario cineasta William Greaves y terminada cincuenta años después por su hijo David, Once Upon a Time in Harlem es una obra imprescindible de archivo vivo, que documenta una animada reunión de figuras del Renacimiento de Harlem durante un cóctel en casa de Duke Ellington."
+    }
+   ],
+   "_sinopsis_de": "ya publicada en tiff-2026",
+   "poster": "/assets/ficcali-2026/once-upon-a-time-in-harlem.jpg",
    "posterSource": "tmdb"
   },
   "Para vivir, el implacable tiempo de Pablo Milanés": {
@@ -1619,7 +2054,7 @@
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Para vivir, el implacable tiempo de Pablo Milanés",
    "_director": "Fabien Pisani",
-   "_sondeado": "2026-10-07",
+   "_sondeado": "2026-10-08",
    "poster": "/assets/ficcali-2026/para-vivir-el-implacable-tiempo-de-pablo-milanes.jpg",
    "posterSource": "tmdb"
   },
@@ -1637,8 +2072,8 @@
    "lbSlug": "donkey-princess",
    "_verificado": "director✓ + año/duración",
    "_busqueda": "Princesa burro",
-   "_director": "Joaquín Cociña y Cristóbal León",
-   "_sondeado": "2026-10-07",
+   "_director": "Joaquín Cociña, Cristóbal León",
+   "_sondeado": "2026-10-08",
    "_ya_publicada": [
     {
      "festival": "biff-2026",
@@ -1670,6 +2105,23 @@
    "_director": "Guillermo Quintero",
    "_sondeado": "2026-10-07",
    "poster": "/assets/ficcali-2026/relicto.jpg",
+   "posterSource": "tmdb"
+  },
+  "Rodilla Negra": {
+   "tmdb_id": 947607,
+   "titulo_original": "Rodilla negra",
+   "poster_path": "/uA6CmmM7hGEwj5lkVqZzs7WIaXm.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "In this short film, the title of which translates as \"Black Knee\", a team of football players (played by members of the Barrios Unidos Cali team) encounter a pair of skinnydipping hippies out in the fields and steal their transistor radio.  This seems to trigger something in their most legendary player, Jonny Mosquera: a terrible syndrome that makes him literally fall to his knees.  Like La hamaca, Agarrando pueblo, Carne de tu Carne and other films made by Mayolo, this film blends deeply unsettling imagery and lowkey genre filmmaking into an equally unsettling and exhilarating realism.",
+   "genero": "",
+   "anio_tmdb": 1975,
+   "duracion_tmdb": 14,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "rodilla-negra",
+   "_verificado": "declarada a mano: Proyección especial junto a El Coloso: la tarjeta solo dice Colombia. Es «Rodilla negra» de Carlos Mayolo (Cali, 1975, 14 min), el único título así en TMDB; cuadra con un festival caleño. Verificado a mano el 8 oct.",
+   "_director": "Carlos Mayolo",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/rodilla-negra.jpg",
    "posterSource": "tmdb"
   },
   "Seis meses en el edificio rosa con azul": {
@@ -1722,6 +2174,35 @@
    "poster": "/assets/ficcali-2026/siempre-soy-tu-animal-materno.jpg",
    "posterSource": "tmdb"
   },
+  "Sirenas en la niebla": {
+   "tmdb_id": 1117116,
+   "titulo_original": "Sirenas en la Niebla",
+   "poster_path": "/6f1RhvLNmsxvmwOM7qhxAJMebMv.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
+   "genero": "Drama",
+   "anio_tmdb": 0,
+   "duracion_tmdb": 18,
+   "pais_tmdb": "Colombia",
+   "title_en": "Mermaids in the Mist",
+   "lbSlug": "mermaids-in-the-mist",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "Sirenas en la niebla",
+   "_director": "Daniela Narváez",
+   "_sondeado": "2026-10-08",
+   "_ya_publicada": [
+    {
+     "festival": "girardota-2026",
+     "titulo": "Sirenas en la Niebla",
+     "tmdb_id": 1117116,
+     "poster": "/assets/girardota-2026/sirenas-en-la-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mermaids-in-the-mist"
+    }
+   ],
+   "poster": "/assets/ficcali-2026/sirenas-en-la-niebla.jpg",
+   "posterSource": "tmdb"
+  },
   "Todo comenzó por el fin": {
    "tmdb_id": 358918,
    "titulo_original": "Todo comenzó por el fin",
@@ -1739,6 +2220,24 @@
    "_director": "Luis Ospina",
    "_sondeado": "2026-10-07",
    "poster": "/assets/ficcali-2026/todo-comenzo-por-el-fin.jpg",
+   "posterSource": "tmdb"
+  },
+  "¿Por qué se esconde Drácula?": {
+   "tmdb_id": 1033710,
+   "titulo_original": "¿Por qué se esconde Drácula?",
+   "poster_path": "/hOYy8pWdunyYVZj0LfkdeJDx2IS.jpg",
+   "synopsis_es": "",
+   "synopsis_en": "Lolita, a secretary from an estate company, must bring the contract of the sale of a new house to a very peculiar and thirsty customer.",
+   "genero": "Terror",
+   "anio_tmdb": 1980,
+   "duracion_tmdb": 11,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "por-que-se-esconde-dracula",
+   "_verificado": "director✓ + año/duración",
+   "_busqueda": "¿Por qué se esconde Drácula?",
+   "_director": "Camila Loboguerrero",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/ficcali-2026/por-que-se-esconde-dracula.jpg",
    "posterSource": "tmdb"
   },
   "Álbum de familia": {
@@ -1933,20 +2432,26 @@
  "sin_ficha": [
   "Aguapanela",
   "Alivios",
-  "Anima Vé! – Anibia",
-  "Animá Vé – Retrospectiva",
-  "Cali, ciudad abierta (cortos)",
+  "Animá Ve – Anibia",
+  "Animá Ve – Mujeres en la animación",
+  "Animá Ve – Retrospectiva de Maria Cristina Pérez",
+  "Arco + Corto Akababuru",
+  "Bankolombia",
+  "Cali, ciudad abierta – Prog. Cortos",
   "Canción para mi tierra",
+  "Caída libre",
   "Competencia corto nacional – Prog. 1",
   "Competencia corto nacional – Prog. 2",
+  "Convergencias",
+  "Conversatorio \"Territorios y Voces Indígenas\" Presentan Concip y Telepacífico",
+  "Corte Eléctrico",
   "Cortos infantiles FICCALI / Mi vecino Totoro",
   "De nuevo al final",
   "Después de tanto amor",
-  "El Coloso",
   "El bitcoin de oro",
   "El maestro de la piqueria",
   "Ellas, gardiennes de l'Amazonie",
-  "En construcción",
+  "Fabricia",
   "Guapi: ritmo y balsada",
   "Historias del buen Valle",
   "Infinita canción: el secreto",
@@ -1954,55 +2459,73 @@
   "Killah",
   "La María",
   "La bola negra",
-  "La fabulosa máquina del tiempo",
   "La fuga",
   "La libertad doble",
-  "Largo Arco + Corto Akababuru",
-  "Minotauro",
+  "Nancy Resabiada",
   "No me devoro-PC6. La gula",
-  "Ona",
   "Pajariscopio",
   "Plano sonoro: muestra de videoclips",
+  "Pájaro Cubo",
+  "Quimera",
   "Quinto primera",
   "Reloj",
   "Rodilla Negra + El Coloso",
   "Runa Simi",
+  "Salseando ando",
   "Salseando ando + Convergencias",
+  "Sense of Reality",
   "Sentenciados",
-  "Telepacífico – Comisión Nacional de Comunicación de los Pueblos Indígenas",
+  "Somnolítico",
+  "Susurros del mar",
+  "Tapir Memories",
   "Trópico interior: Todos los colores de la oscuridad",
-  "Vanguardias – Prog 2",
-  "Vanguardias- Prog 1",
-  "Vértigo",
+  "Una porción por envase",
+  "Vanguardias Afro e Indígena – Prog 1",
+  "Vanguardias Afro e Indígena – Prog 2",
   "We Cam Fest 3",
   "¿Dónde está Richard?",
-  "Árbol en pie",
-  "Érase una vez en Harlem"
+  "Árbol en pie"
  ],
  "_sin_ficha_sondeo": {
   "Aguapanela": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "director": "Juan José Narváez",
+   "fecha": "2026-10-08"
   },
   "Alivios": {
    "director": "",
    "fecha": "2026-10-07"
   },
-  "Anima Vé! – Anibia": {
+  "Animá Ve – Anibia": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-08"
   },
-  "Animá Vé – Retrospectiva": {
+  "Animá Ve – Mujeres en la animación": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-08"
   },
-  "Cali, ciudad abierta (cortos)": {
+  "Animá Ve – Retrospectiva de Maria Cristina Pérez": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-08"
+  },
+  "Arco + Corto Akababuru": {
+   "director": "",
+   "fecha": "2026-10-08"
+  },
+  "Bankolombia": {
+   "director": "Iván Darío Vernaza",
+   "fecha": "2026-10-08"
+  },
+  "Cali, ciudad abierta – Prog. Cortos": {
+   "director": "",
+   "fecha": "2026-10-08"
   },
   "Canción para mi tierra": {
    "director": "",
    "fecha": "2026-10-07"
+  },
+  "Caída libre": {
+   "director": "",
+   "fecha": "2026-10-08"
   },
   "Competencia corto nacional – Prog. 1": {
    "director": "",
@@ -2011,6 +2534,18 @@
   "Competencia corto nacional – Prog. 2": {
    "director": "",
    "fecha": "2026-10-07"
+  },
+  "Convergencias": {
+   "director": "Jorge Navas",
+   "fecha": "2026-10-08"
+  },
+  "Conversatorio \"Territorios y Voces Indígenas\" Presentan Concip y Telepacífico": {
+   "director": "",
+   "fecha": "2026-10-08"
+  },
+  "Corte Eléctrico": {
+   "director": "",
+   "fecha": "2026-10-08"
   },
   "Cortos infantiles FICCALI / Mi vecino Totoro": {
    "director": "",
@@ -2022,10 +2557,6 @@
   },
   "Después de tanto amor": {
    "director": "Mercedes Oviedo",
-   "fecha": "2026-10-07"
-  },
-  "El Coloso": {
-   "director": "",
    "fecha": "2026-10-07"
   },
   "El bitcoin de oro": {
@@ -2040,9 +2571,9 @@
    "director": "Estelle Lalisse, Jade Fort",
    "fecha": "2026-10-07"
   },
-  "En construcción": {
+  "Fabricia": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-08"
   },
   "Guapi: ritmo y balsada": {
    "director": "",
@@ -2053,26 +2584,22 @@
    "fecha": "2026-10-07"
   },
   "Infinita canción: el secreto": {
-   "director": "Juanita y Camila",
-   "fecha": "2026-10-07"
+   "director": "Juanita Zapata, Camila Caballero",
+   "fecha": "2026-10-08"
   },
   "Khazana": {
    "director": "",
    "fecha": "2026-10-07"
   },
   "Killah": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "director": "Manuelita Rosero",
+   "fecha": "2026-10-08"
   },
   "La María": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "director": "Santiago Díaz-Vence, Luis Celedón",
+   "fecha": "2026-10-08"
   },
   "La bola negra": {
-   "director": "",
-   "fecha": "2026-10-07"
-  },
-  "La fabulosa máquina del tiempo": {
    "director": "",
    "fecha": "2026-10-07"
   },
@@ -2084,37 +2611,37 @@
    "director": "",
    "fecha": "2026-10-07"
   },
-  "Largo Arco + Corto Akababuru": {
-   "director": "",
-   "fecha": "2026-10-07"
-  },
-  "Minotauro": {
-   "director": "",
-   "fecha": "2026-10-07"
+  "Nancy Resabiada": {
+   "director": "Valeria Martí, El Kalvo",
+   "fecha": "2026-10-08"
   },
   "No me devoro-PC6. La gula": {
    "director": "Álvaro Varón",
    "fecha": "2026-10-07"
   },
-  "Ona": {
-   "director": "",
-   "fecha": "2026-10-07"
-  },
   "Pajariscopio": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "director": "Laia Alba, Diego Martínez",
+   "fecha": "2026-10-08"
   },
   "Plano sonoro: muestra de videoclips": {
    "director": "",
    "fecha": "2026-10-07"
+  },
+  "Pájaro Cubo": {
+   "director": "",
+   "fecha": "2026-10-08"
+  },
+  "Quimera": {
+   "director": "",
+   "fecha": "2026-10-08"
   },
   "Quinto primera": {
    "director": "",
    "fecha": "2026-10-07"
   },
   "Reloj": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "director": "Juan José Narváez",
+   "fecha": "2026-10-08"
   },
   "Rodilla Negra + El Coloso": {
    "director": "",
@@ -2124,33 +2651,49 @@
    "director": "",
    "fecha": "2026-10-07"
   },
+  "Salseando ando": {
+   "director": "Álvaro Varón",
+   "fecha": "2026-10-08"
+  },
   "Salseando ando + Convergencias": {
    "director": "",
    "fecha": "2026-10-07"
   },
-  "Sentenciados": {
-   "director": "",
-   "fecha": "2026-10-07"
+  "Sense of Reality": {
+   "director": "Miguel Silva, Braynft, Trippincats NFT",
+   "fecha": "2026-10-08"
   },
-  "Telepacífico – Comisión Nacional de Comunicación de los Pueblos Indígenas": {
+  "Sentenciados": {
+   "director": "Ana María González",
+   "fecha": "2026-10-08"
+  },
+  "Somnolítico": {
+   "director": "Abril Natalia Velázquez",
+   "fecha": "2026-10-08"
+  },
+  "Susurros del mar": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-08"
+  },
+  "Tapir Memories": {
+   "director": "",
+   "fecha": "2026-10-08"
   },
   "Trópico interior: Todos los colores de la oscuridad": {
    "director": "",
    "fecha": "2026-10-07"
   },
-  "Vanguardias – Prog 2": {
+  "Una porción por envase": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-08"
   },
-  "Vanguardias- Prog 1": {
+  "Vanguardias Afro e Indígena – Prog 1": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-08"
   },
-  "Vértigo": {
+  "Vanguardias Afro e Indígena – Prog 2": {
    "director": "",
-   "fecha": "2026-10-07"
+   "fecha": "2026-10-08"
   },
   "We Cam Fest 3": {
    "director": "",
@@ -2161,12 +2704,8 @@
    "fecha": "2026-10-07"
   },
   "Árbol en pie": {
-   "director": "Red Comunitaria Trans:",
-   "fecha": "2026-10-07"
-  },
-  "Érase una vez en Harlem": {
-   "director": "",
-   "fecha": "2026-10-07"
+   "director": "Red Comunitaria Trans, Rodrigo Torrijos, Mapa López",
+   "fecha": "2026-10-08"
   }
  }
 }

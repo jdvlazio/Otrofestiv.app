@@ -51,7 +51,7 @@ CAMPO = re.compile(r'^(Género|Duración|País|Año|Idioma):\s*(.*)$')
 _CAT = f'{DIR}/categorias.json'
 # «Cali ciudad creativa» es el rótulo de las fichas de Cali Ciudad Abierta y no
 # está en categorias.json: se colaba como comienzo de 5 sinopsis (8 oct)
-ROTULOS = {'competencia', 'cali ciudad creativa'} | ({v[0].strip().lower() for v in json.load(io.open(_CAT, encoding='utf-8')).values()}
+ROTULOS = {'competencia', 'cali ciudad creativa', 'muestra infantil'} | ({v[0].strip().lower() for v in json.load(io.open(_CAT, encoding='utf-8')).values()}
                             if os.path.exists(_CAT) else set())
 
 
@@ -109,6 +109,9 @@ def ficha(L):
         pais = ''
     d['País'] = pais
     dur = re.match(r'(\d+)', d.get('Duración', ''))
+    # «Duración: 1989» (Kiki, 8 oct): el año en la casilla de la duración
+    if dur and int(dur.group(1)) > 600:
+        dur = None
     anio = re.search(r'(19|20)\d{2}', d.get('Año', ''))
     return {'titulo': titulo, 'director': director,
             'pais': d.get('País') or None, 'anio': int(anio.group()) if anio else None,
@@ -141,6 +144,23 @@ def main():
                 o['secciones'].append(sec)
     if fallos:
         sys.exit('✗ fichas que no se leen:\n  · ' + '\n  · '.join(fallos))
+    # LO QUE LA FICHA YA NO DICE NO SE BORRA (8 oct): la edición del sitio del 8 oct
+    # quitó año, duración, dirección o sinopsis de varias fichas (Para vivir,
+    # Niñxs, Mi vecino Totoro…). Que la página calle no hace falso el dato que
+    # publicó antes: se conserva el de la captura anterior y queda anotado.
+    previo = {}
+    if os.path.exists(DESTINO):
+        previo = {o['url'].rstrip('/'): o for o in json.load(io.open(DESTINO, encoding='utf-8'))['obras'] if o.get('url')}
+    for o in obras.values():
+        v = previo.get(o['url'].rstrip('/'))
+        if not v:
+            continue
+        kept = [k for k in ('director', 'anio', 'duracion_min', 'sinopsis', 'pais')
+                if not o.get(k) and v.get(k)]
+        for k in kept:
+            o[k] = v[k]
+        if kept or v.get('_conservado'):
+            o['_conservado'] = sorted(set(kept) | set(v.get('_conservado') or []))
     sin = [o['titulo'] for o in obras.values() if not o.get('sinopsis')]
     io.open(DESTINO, 'w', encoding='utf-8').write(json.dumps({
         '_provenance': provenance('ficcali.com, Selección de películas 2026 (11 subpáginas de la página 12862)',
