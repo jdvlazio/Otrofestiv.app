@@ -92,6 +92,8 @@ def main():
     cats = json.load(io.open(f'{DIR}/categorias.json', encoding='utf-8'))
 
     por_tarjeta = {f['_src']['tarjeta']: f for f in crudo['funciones']}
+    # las que el crudo declara FUERA por su id (hoy: sede nueva sin pin, 8 oct)
+    declaradas = {int(n) for n in re.findall(r'tarjeta (\d+) ·', ' '.join(crudo.get('_fuera') or []))}
     fallos, vistas = [], set()
     for r in rest:
         tag = next((t for t in r.get('class_list', []) if re.fullmatch(r'tag-\d{2}-\d{2}-\d{4}', t)), None)
@@ -108,6 +110,8 @@ def main():
                 fallos.append(f'tarjeta {r["id"]} «{html.unescape(r["title"]["rendered"])[:40]}»: sin hora en la página y publicada')
             continue
         f = por_tarjeta.get(r['id'])
+        if not f and r['id'] in declaradas:
+            continue
         if not f:
             fallos.append(f'en la API y NO en el crudo: {dia} {h} «{html.unescape(r["title"]["rendered"])[:50]}»')
             continue

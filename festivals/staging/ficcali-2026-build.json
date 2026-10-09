@@ -21,12 +21,13 @@
  "storageKey": "ficcali2026_",
  "festivalStartStr": "2026-10-16T00:00:00",
  "festivalEndStr": "2026-10-25T23:00:00",
- "sharedSlotIsOneScreening": false,
+ "sharedSlotIsOneScreening": true,
  "dias_vacios": [],
  "_por_que_sedes": "Tabla canónica: el nombre de la tarjeta → (sede, sala), en el crudo (SEDES). Pines: 28 a mano con dos fuentes, 2 aproximados (Ciudad Pacífica, Alto Meléndez) y la transmisión en línea sin pin. Preguntas al festival en el _pregunta de cada sede del -venues-geo.",
  "_fuentes_versionadas": {
   "festivals/staging/ficcali-2026-radar.json": "el volcado del radar #1024, que escribe y relee pipeline/radar.py"
  },
+ "_por_que_slot_compartido": "8 oct: la edición de la programación pone «Guapi: ritmo y balsada» (30 min) y «La fabulosa máquina del tiempo» (70 min) a las 6:00 p. m. del 21 en Comfandi — la misma franja; se publica como UNA función (anclaje). Es el único slot compartido de Ficcali. Preguntado al festival.",
  "prioLimit": 5,
  "dias": [
   "2026-10-16",
@@ -402,15 +403,6 @@
    "lng": -76.5400415,
    "address": "Calle 2 #4-66, San Antonio"
   },
-  "Hotel Obelisco - Cali": {
-   "short": "Hotel Obelisco",
-   "city": "Cali",
-   "_prec": "manual",
-   "_nota": "Google Maps 3.4506674,-76.5442123 · OSM/Nominatim 3.4506906,-76.5441629 · distancia 6 m. Google: «Hotel Obelisco Cali», Av. Colombia #4 Oeste-49. OSM: tourism=hotel «Obelisco», El Peñón, Comuna 3. Punto de partida del City Tour.",
-   "lat": 3.4506674,
-   "lng": -76.5442123,
-   "address": "Avenida Colombia #4 Oeste-49"
-  },
   "Bulevar del Río - Cali": {
    "short": "Bulevar del Río",
    "city": "Cali",
@@ -441,7 +433,7 @@
     "tarjeta": 14518
    },
    "requires_registration": true,
-   "description": "Sebastián Muñoz Duque y Juliana Santana Oviedo.",
+   "description": "En alianza con Cortos Cali | Coordinan: Sebastián Muñoz Duque y Juliana Santana Oviedo. Inscripción previa (por invitación).",
    "description_lang": "es"
   },
   {
@@ -455,7 +447,7 @@
    "duration": "82 min",
    "genre": "Animación",
    "day": "2026-10-16",
-   "time": "19:30",
+   "time": "18:00",
    "day_order": 0,
    "venue": "Teatro al Aire Libre Los Cristales - Cali",
    "has_qa": false,
@@ -473,33 +465,12 @@
    "synopsis_en": "When her brother is kidnapped by Mu-Ki-Ra, Cleo ventures into a monster-plagued jungle with unlikely allies."
   },
   {
-   "title": "Encuentro local estudiantes de cine 2026: Bailar con el caos",
-   "type": "event",
-   "section": "🎓 Académico",
-   "duration": "180 min",
-   "day": "2026-10-17",
-   "time": "09:00",
-   "day_order": 1,
-   "venue": "Universidad Autónoma de Occidente - Cali",
-   "sala": "Aulas 4, Torreón 1A",
-   "event_kind": "encuentro",
-   "has_qa": false,
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14519
-   },
-   "requires_registration": true,
-   "description": "Sebastián Muñoz Duque y Juliana Santana Oviedo.",
-   "description_lang": "es"
-  },
-  {
-   "title": "III Encuentro sectorial local: Invita el Consejo Distrital de Cine y Audiovisuales",
+   "title": "III Encuentro sectorial local",
    "type": "event",
    "section": "🤝 Conexiones",
-   "duration": "240 min",
+   "duration": "270 min",
    "day": "2026-10-17",
-   "time": "15:00",
+   "time": "14:30",
    "day_order": 1,
    "venue": "Curador - Cali",
    "event_kind": "encuentro",
@@ -509,8 +480,11 @@
     "date": "2026-10-06",
     "tarjeta": 14612
    },
-   "description": "Invitados: Maderley Ceballos, Alina Lheap, Ramiro Arbeláez",
-   "description_lang": "es"
+   "description": "Invitado: Maderley Ceballos",
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "III Encuentro sectorial local: Invita el Consejo Distrital de Cine y Audiovisuales"
+   ]
   },
   {
    "title": "Muestra VR",
@@ -572,8 +546,7 @@
    "time": "18:00",
    "day_order": 1,
    "venue": "Cinemateca La Tertulia - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "Luis se jubila después de cuarenta años de trabajo como profesor de historia. Presionado por su familia, busca qué hacer mientras su esposa, Amelia, se entrega a la pintura y al ejercicio grupal con nuevos amigos. Desde Bogotá llega su hijo Alejandro, quien desarrolla un proyecto musical al que invita a su padre, que toca muy bien el acordeón. Sin embargo, Luis da con un grupo de músicos de su edad con quienes concuerda mucho más y con los que disfruta el hallazgo de un muy buen público en casas geriátricas. Padre e hijo chocan, sin imaginar que la música los une al igual que el vacío sin rumbo de sus generaciones.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/luis-tercero.jpg",
@@ -603,25 +576,6 @@
    }
   },
   {
-   "title": "DJ y coctel",
-   "type": "event",
-   "section": "🤝 Conexiones",
-   "duration": "60 min",
-   "day": "2026-10-17",
-   "time": "19:00",
-   "day_order": 1,
-   "venue": "Curador - Cali",
-   "event_kind": "fiesta",
-   "has_qa": false,
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14614
-   },
-   "description": "Consejo Distrital de Cinematografía y Audiovisuales/ Espacio de Encuentro sectorial",
-   "description_lang": "es"
-  },
-  {
    "title": "Domo Live Camoflux: Incendio Igapó",
    "type": "event",
    "section": "📽️ Proyecciones",
@@ -638,14 +592,14 @@
     "date": "2026-10-06",
     "tarjeta": 13931
    },
-   "description": "Cali | Concierto audiovisual inmersivo",
+   "description": "Concierto audiovisual inmersivo",
    "description_lang": "es"
   },
   {
    "title": "Princesa burro",
    "type": "film",
    "section": "🌍 Competencia Largometrajes Internacionales",
-   "director": "Joaquín Cociña y Cristóbal León",
+   "director": "Joaquín Cociña, Cristóbal León",
    "year": 2026,
    "country": "Chile, Francia, Países Bajos, Uruguay, Alemania",
    "flags": "🇨🇱🇫🇷🇳🇱🇺🇾🇩🇪",
@@ -709,8 +663,7 @@
    "time": "18:00",
    "day_order": 2,
    "venue": "Cinemateca La Tertulia - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "Después de años en Europa, Elsa regresa a Costa Rica. Su hermana vive sola en la casa familiar, cada vez más distante y recluida, como si se deslizara hacia un mundo propio. Sus padres están absortos en sus vidas: él va a la deriva en aventuras amorosas y ella está inmersa en la reedición de sus poemas eróticos de juventud. Ninguno comprende la urgencia de la situación. El regreso de Elsa arrastra a las mujeres a una confrontación con aquello que, pese a todo, aún las une. Una cámara vivaz, atenta y fluida muestra tres formas de asumir la vida y la capacidad de compartir dudas y emociones, de apoyarse y cuestionarse, de enfrentar la realidad juntas, cada una a su manera.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/siempre-soy-tu-animal-materno.jpg",
@@ -849,7 +802,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/boato.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "boato",
      "tmdb_id": 1791681
     },
@@ -864,7 +817,7 @@
      "genre": "Animación",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/el-viaje.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-viaje-2026",
      "tmdb_id": 1791683
     },
@@ -927,7 +880,7 @@
    "description_lang": "es"
   },
   {
-   "title": "Largo Arco + Corto Akababuru",
+   "title": "Arco + Corto Akababuru",
    "type": "film",
    "section": "🏘️ Cine Sin Límites",
    "country": "Francia, Estados Unidos, Reino Unido, Colombia",
@@ -977,6 +930,9 @@
      "tmdb_id": 1418533,
      "synopsis_en": "Kari, an Indigenous girl, is afraid to laugh. But a new interpretation of the old legend of Kiraparamia helps her to set herself free."
     }
+   ],
+   "titulos_anteriores": [
+    "Largo Arco + Corto Akababuru"
    ]
   },
   {
@@ -1027,8 +983,7 @@
    "time": "21:00",
    "day_order": 4,
    "venue": "Cinemateca La Tertulia - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "Envuelta por el zumbido hipnótico de una máquina de resonancia magnética, a Rosa se le pide que recuerde un momento feliz de su vida. Revisa el pasado y reconstruye un acontecimiento que nunca ocurrió: un viaje con su madre, Dalva, una mujer de espíritu libre e irreverente que fue detenida por asesinar a un hombre que estaba a punto de cometer un feminicidio. Tras crecer sin su madre, Rosa carga con la culpa y el miedo derivados del episodio. Ahora, suspendida entre la vida y un recuerdo inventado, imagina un reencuentro que se transforma en un intento de sanación y reconciliación. La acompañamos en una película de carretera llena de saber hacer cinematográfico, que transmite plásticamente inquietudes y formas de experimentarlas.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/i-built-a-rocket-imagining-your-arrival.jpg",
@@ -1079,7 +1034,7 @@
    }
   },
   {
-   "title": "Parche con… Marleyda Soto – Experiencia de actuación en 100 años de soledad.",
+   "title": "Parche con… Marleyda Soto",
    "type": "event",
    "section": "🤝 Conexiones",
    "duration": "90 min",
@@ -1093,26 +1048,12 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14616
-   }
-  },
-  {
-   "title": "IV Encuentro de circulación – Estrategias colaborativas de programación",
-   "type": "event",
-   "section": "🤝 Conexiones",
-   "duration": "180 min",
-   "day": "2026-10-21",
-   "time": "14:30",
-   "day_order": 5,
-   "venue": "Café Macondo - Cali",
-   "event_kind": "encuentro",
-   "has_qa": false,
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14617
    },
-   "description": "Laura Alhach y Luis Raguá.",
-   "description_lang": "es"
+   "description": "Experiencia de actuación en Cien años de soledad.",
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "Parche con… Marleyda Soto – Experiencia de actuación en 100 años de soledad."
+   ]
   },
   {
    "title": "Boca Vieja",
@@ -1158,6 +1099,24 @@
    }
   },
   {
+   "title": "Guapi: ritmo y balsada",
+   "type": "film",
+   "section": "📽️ Proyecciones",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "30 min",
+   "day": "2026-10-21",
+   "time": "18:00",
+   "day_order": 5,
+   "venue": "Centro Cultural Comfandi - Cali",
+   "has_qa": false,
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14002
+   }
+  },
+  {
    "title": "La fabulosa máquina del tiempo",
    "type": "film",
    "section": "📽️ Proyecciones",
@@ -1187,8 +1146,7 @@
    "day_order": 5,
    "venue": "Teatro Municipal Enrique Buenaventura - Cali",
    "sala": "Teatrino",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "Misael trabaja solo con su hacha, talando árboles en el bosque. Una responsabilidad inesperada trastoca su vida, y la lógica de sus días se desvanece en una naturaleza donde la razón humana carece de sentido.",
    "synopsis_lang": "es",
    "poster": "/assets/biff-2026/la-libertad-doble-v2.jpg",
@@ -1200,7 +1158,7 @@
    }
   },
   {
-   "title": "CHARLAS ALAPAR, Pablo Solarz. (Argentina).",
+   "title": "CHARLAS ALAPAR: Pablo Solarz. (Argentina)",
    "type": "event",
    "section": "🎓 Académico",
    "duration": "60 min",
@@ -1214,7 +1172,10 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14576
-   }
+   },
+   "titulos_anteriores": [
+    "CHARLAS ALAPAR, Pablo Solarz. (Argentina)."
+   ]
   },
   {
    "title": "Domo lleno idartes: Beca videoarte",
@@ -1270,7 +1231,7 @@
    "time": "20:00",
    "day_order": 5,
    "venue": "Casa Ethel - Cali",
-   "event_kind": "cineconcierto",
+   "event_kind": "evento",
    "has_qa": false,
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -1281,7 +1242,7 @@
    "description_lang": "es"
   },
   {
-   "title": "Cali, ciudad abierta (cortos)",
+   "title": "Cali, ciudad abierta – Prog. Cortos",
    "type": "film",
    "section": "🏙️ Cali Ciudad Abierta",
    "country": "Colombia",
@@ -1311,7 +1272,7 @@
      "genre": "Experimental",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/afilando-memoria.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "afilando-memoria",
      "tmdb_id": 1791685
     },
@@ -1325,7 +1286,7 @@
      "synopsis": "En el cuarto piso de un edificio de la Universidad del Valle, conocido como el 383, se ocultan historias de revoluciones, exilios y muertes silenciadas durante cinco décadas. Se dice que una mujer espera allí desde hace muchos años. No se sabe exactamente qué. Algunos aseguran haberla visto después de las seis; casi todos se marchan antes. Maite investiga la memoria del edificio entre cintas, fotografías y voces que regresan desde otras épocas. Los archivos dejan de parecer inertes. Algo insiste en ellos. Un rostro reaparece. Un hombre atraviesa los pasillos, como Asterión que espera a su redentor.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/despues-de-las-seis.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "despues-de-las-seis",
      "tmdb_id": 1791686
     },
@@ -1339,7 +1300,7 @@
      "synopsis": "En el corazón de Cali está Kiss Me, la caverna del amor, un edificio de arquitectura ecléctica diseñado por Humberto Villegas, creador de sus 190 habitaciones temáticas, en las que confluyen el sexo, el arte y la política. El mundo de Humberto es una inmersión en este espacio insólito, sensual y poético, que Humberto transforma continuamente con la complicidad de Neneco, artista autodidacta que esculpe, pinta y moldea, para darles forma tangible a sus visiones, mientras el motel continúa operando como escenario de deseo y fantasía.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/el-mundo-de-humberto.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-mundo-de-humberto",
      "tmdb_id": 1791688
     },
@@ -1360,25 +1321,10 @@
      "synopsis_en": "Across the Pacific drift five continents; there lie two lands that start with C: China and Colombia. In one I was born, in the other my grandmother. Her people, that run away of her lands to live without smiles; mine, once enslaved, sang to die smiling. Both of us learned to accept what belongs to neither here nor there—she, for crossing coasts for a husband who died; I, for being her grandson, bearing my grandfather’s name.",
      "title_en": "Thanks so, so much"
     }
+   ],
+   "titulos_anteriores": [
+    "Cali, ciudad abierta (cortos)"
    ]
-  },
-  {
-   "title": "Guapi: ritmo y balsada",
-   "type": "film",
-   "section": "📽️ Proyecciones",
-   "country": "Colombia",
-   "flags": "🇨🇴",
-   "duration": "30 min",
-   "day": "2026-10-21",
-   "time": "20:30",
-   "day_order": 5,
-   "venue": "Centro Cultural Comfandi - Cali",
-   "has_qa": false,
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14002
-   }
   },
   {
    "title": "Relicto",
@@ -1394,8 +1340,7 @@
    "time": "21:00",
    "day_order": 5,
    "venue": "Cinemateca La Tertulia - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "En algún lugar del norte de la Amazonía colombiana está el viejo Sixto Muñoz, el «último indio tinigua». Según cuentan en la región donde ha vivido durante las últimas décadas, a sus ciento cinco años ha decidido dejar su casa junto a la laguna para emprender su «último viaje» hacia la selva. En un recorrido por el río Guayabero, desde La Macarena hasta el Guaviare, el director sigue su rastro con la esperanza de encontrarlo antes de su muerte. El viaje y todas las entrevistas brindan una imagen compleja y contradictoria del personaje, una hermosa crónica de los múltiples modos de mestizaje en esos territorios y de las variadas economías y formas de intercambio y solidaridad que estructuran la vida allí.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/relicto.jpg",
@@ -1426,11 +1371,11 @@
     "tarjeta": 14591
    },
    "requires_registration": true,
-   "description": "Roberto Garcés. En alianza con Takeshima. Inscripción previa.",
+   "description": "Con Roberto Garcés. En alianza con Takeshima. Auditorio Central didáctica (Inscripción previa). Link de inscripción aquí.",
    "description_lang": "es"
   },
   {
-   "title": "Telepacífico – Comisión Nacional de Comunicación de los Pueblos Indígenas",
+   "title": "Conversatorio \"Territorios y Voces Indígenas\" Presentan Concip y Telepacífico",
    "type": "film",
    "section": "📽️ Proyecciones",
    "duration": "90 min",
@@ -1444,7 +1389,10 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14017
-   }
+   },
+   "titulos_anteriores": [
+    "Telepacífico – Comisión Nacional de Comunicación de los Pueblos Indígenas"
+   ]
   },
   {
    "title": "MÁSTER CLASS: Claire Simon (Francia)",
@@ -1479,8 +1427,7 @@
    "time": "18:00",
    "day_order": 6,
    "venue": "Cinemateca La Tertulia - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "Con una mirada atenta, la cineasta Claire Simon enfrenta estudiantes y profesores de bachillerato a los libros de Annie Ernaux, primera mujer francesa en recibir el Premio Nobel de Literatura.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/ecrire-la-vie-annie-ernaux-racontee-par-des-lyceennes-et-des.jpg",
@@ -1518,7 +1465,7 @@
    "title": "Princesa burro",
    "type": "film",
    "section": "🌍 Competencia Largometrajes Internacionales",
-   "director": "Joaquín Cociña y Cristóbal León",
+   "director": "Joaquín Cociña, Cristóbal León",
    "year": 2026,
    "country": "Chile, Francia, Países Bajos, Uruguay, Alemania",
    "flags": "🇨🇱🇫🇷🇳🇱🇺🇾🇩🇪",
@@ -1567,7 +1514,7 @@
    }
   },
   {
-   "title": "Taller Vanguardias: Interrupción sónica",
+   "title": "Taller Interrupción sónica: Escuchar el archivo, perturbar la imagen",
    "type": "event",
    "section": "🎓 Académico",
    "duration": "180 min",
@@ -1583,8 +1530,11 @@
     "tarjeta": 14590
    },
    "requires_registration": true,
-   "description": "Beatriz Balanta. Cupo: 30 | Inscripción previa. Link de inscripción aquí",
-   "description_lang": "es"
+   "description": "Con Beatriz Balanta. Cupo: 30 | Inscripción previa. Link de inscripción aquí",
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "Taller Vanguardias: Interrupción sónica"
+   ]
   },
   {
    "title": "Iluminada",
@@ -1600,8 +1550,7 @@
    "time": "18:30",
    "day_order": 6,
    "venue": "Cine Colombia Unicentro - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "Iluminada tiene visiones que trata de entender escribiendo diarios íntimos. Sus textos son poesía que nadie más escucha. Su vida en los barrios periféricos de Bogotá, plagados de dificultades, no le da tiempo ni espacio, hasta que conoce a Juan, un muchacho que parece abrirle otro mundo. No obstante, su relación con alguien extraño no es del agrado de quienes controlan el barrio. A partir de un trabajo muy cercano con sus actrices, Nicolás Rincón compone con ellas personajes que ahondan en sus mundos, llenos de sabiduría y poesía. Si bien las formas en las que se encarnan las violencias no dan un respiro, la fuerza de las mujeres (actrices y personajes) consiguen transmitirnos energía vital y esperanza.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/iluminada.jpg",
@@ -1618,7 +1567,7 @@
   {
    "title": "Domo internacional DESORIENTACIONES",
    "type": "event",
-   "section": "🎓 Académico",
+   "section": "📽️ Proyecciones",
    "duration": "60 min",
    "day": "2026-10-22",
    "time": "19:00",
@@ -1631,7 +1580,9 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14919
-   }
+   },
+   "description": "Curaduría de Jorge Bandera (Domo Yawa)",
+   "description_lang": "es"
   },
   {
    "title": "Nuestro cuerpo es una estrella que se expande",
@@ -1689,8 +1640,7 @@
    "time": "20:00",
    "day_order": 6,
    "venue": "Curador - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
@@ -1728,8 +1678,7 @@
    "time": "20:30",
    "day_order": 6,
    "venue": "Cine Colombia Unicentro - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "Envuelta por el zumbido hipnótico de una máquina de resonancia magnética, a Rosa se le pide que recuerde un momento feliz de su vida. Revisa el pasado y reconstruye un acontecimiento que nunca ocurrió: un viaje con su madre, Dalva, una mujer de espíritu libre e irreverente que fue detenida por asesinar a un hombre que estaba a punto de cometer un feminicidio. Tras crecer sin su madre, Rosa carga con la culpa y el miedo derivados del episodio. Ahora, suspendida entre la vida y un recuerdo inventado, imagina un reencuentro que se transforma en un intento de sanación y reconciliación. La acompañamos en una película de carretera llena de saber hacer cinematográfico, que transmite plásticamente inquietudes y formas de experimentarlas.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/i-built-a-rocket-imagining-your-arrival.jpg",
@@ -1756,12 +1705,11 @@
    "time": "21:00",
    "day_order": 6,
    "venue": "Cinemateca La Tertulia - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
@@ -1784,8 +1732,7 @@
    "time": "21:00",
    "day_order": 6,
    "venue": "Cine Colombia Unicentro - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "En algún lugar del norte de la Amazonía colombiana está el viejo Sixto Muñoz, el «último indio tinigua». Según cuentan en la región donde ha vivido durante las últimas décadas, a sus ciento cinco años ha decidido dejar su casa junto a la laguna para emprender su «último viaje» hacia la selva. En un recorrido por el río Guayabero, desde La Macarena hasta el Guaviare, el director sigue su rastro con la esperanza de encontrarlo antes de su muerte. El viaje y todas las entrevistas brindan una imagen compleja y contradictoria del personaje, una hermosa crónica de los múltiples modos de mestizaje en esos territorios y de las variadas economías y formas de intercambio y solidaridad que estructuran la vida allí.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/relicto.jpg",
@@ -1814,7 +1761,9 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14592
-   }
+   },
+   "description": "“Cine para todos: historias que trascienden los sentidos”.",
+   "description_lang": "es"
   },
   {
    "title": "Desarmar la mirada. Taller de crítica para pensar el cine",
@@ -1835,23 +1784,6 @@
    "requires_registration": true,
    "description": "Elisa McCausland y Diego Salgado.",
    "description_lang": "es"
-  },
-  {
-   "title": "City Tour",
-   "type": "event",
-   "section": "🤝 Conexiones",
-   "duration": "120 min",
-   "day": "2026-10-23",
-   "time": "10:00",
-   "day_order": 7,
-   "venue": "Hotel Obelisco - Cali",
-   "event_kind": "experiencia",
-   "has_qa": false,
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14622
-   }
   },
   {
    "title": "PANEL: Dirección propia. La realización en comunidades étnicas",
@@ -1888,7 +1820,7 @@
     "date": "2026-10-06",
     "tarjeta": 14596
    },
-   "description": "David Hernández Palmar (Mirada Nativa), Frida Muenala (Mullu TV) y Lorena Tavera (Pantalla Verde). Modera: Gerylee Polanco",
+   "description": "Con David Hernández Palmar (Mirada Nativa), Frida Muenala (Mullu TV) y Lorena Tavera (Pantalla Verde). Modera: Gerylee Polanco",
    "description_lang": "es"
   },
   {
@@ -1907,13 +1839,13 @@
     "date": "2026-10-06",
     "tarjeta": 14605
    },
-   "description": "Novela gráfica / Cómics: ‘Agujero’. Autor: Julio César Rodríguez, El Cerra’O Comics.",
+   "description": "Autor: Julio César Rodríguez. El Cerra’O",
    "description_lang": "es"
   },
   {
-   "title": "Vanguardias- Prog 1",
+   "title": "Vanguardias Afro e Indígena – Prog 1",
    "type": "film",
-   "section": "🤝 Conexiones",
+   "section": "📽️ Proyecciones",
    "duration": "90 min",
    "day": "2026-10-23",
    "time": "15:00",
@@ -1925,7 +1857,10 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14033
-   }
+   },
+   "titulos_anteriores": [
+    "Vanguardias- Prog 1"
+   ]
   },
   {
    "title": "MÁSTER CLASS. Los lugares del tiempo.",
@@ -1947,26 +1882,7 @@
    "description_lang": "es"
   },
   {
-   "title": "El trabajo de la polilla en la llama",
-   "type": "event",
-   "section": "🎓 Académico",
-   "duration": "60 min",
-   "day": "2026-10-23",
-   "time": "16:00",
-   "day_order": 7,
-   "venue": "Bulevar del Río - Cali",
-   "event_kind": "lanzamiento de libro",
-   "has_qa": false,
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14606
-   },
-   "description": "‘El trabajo de la polilla en la llama’. Bitácora de trabajo para una pieza audiovisual’. Autora: Mónica Bravo.",
-   "description_lang": "es"
-  },
-  {
-   "title": "PANEL PREMIOS MACONDO: Nominados cortometrajes de Animación",
+   "title": "PANEL: El cortometraje animado y la libertad creativa.",
    "type": "event",
    "section": "🎓 Académico",
    "duration": "60 min",
@@ -1980,7 +1896,29 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14609
-   }
+   },
+   "titulos_anteriores": [
+    "PANEL PREMIOS MACONDO: Nominados cortometrajes de Animación"
+   ]
+  },
+  {
+   "title": "El trabajo de la polilla en la llama",
+   "type": "event",
+   "section": "🎓 Académico",
+   "duration": "60 min",
+   "day": "2026-10-23",
+   "time": "16:00",
+   "day_order": 7,
+   "venue": "Bulevar del Río - Cali",
+   "event_kind": "evento",
+   "has_qa": false,
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14606
+   },
+   "description": "Autora: Mónica Bravo,  Sello editorial Javeriano. Carpa universidades.",
+   "description_lang": "es"
   },
   {
    "title": "Viñetaira. Historia universal de las autoras del cómic",
@@ -1998,11 +1936,11 @@
     "date": "2026-10-06",
     "tarjeta": 14607
    },
-   "description": "‘Viñetaira. Historia Universal de las autoras del cómic’. Autores: Elisa McCausland y Diego Salgado. Editorial Cátedra.",
+   "description": "‘Viñetaira. Historia Universal de las autoras del cómic’. Autores: Elisa McCausland y Diego Salgado (España). Editorial: Cátedra. Auditorio Celsia.",
    "description_lang": "es"
   },
   {
-   "title": "PANEL PREMIOS MACONDO: Nominados Producción sostenible",
+   "title": "PANEL Sostener, producir, cuidar desde el cine.",
    "type": "event",
    "section": "🎓 Académico",
    "duration": "60 min",
@@ -2016,13 +1954,16 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14610
-   }
+   },
+   "titulos_anteriores": [
+    "PANEL PREMIOS MACONDO: Nominados Producción sostenible"
+   ]
   },
   {
-   "title": "Parche Match – Encuentro de conexiones",
+   "title": "TARDEO: ENCUENTRO DE CONEXIONES",
    "type": "event",
    "section": "🤝 Conexiones",
-   "duration": "60 min",
+   "duration": "120 min",
    "day": "2026-10-23",
    "time": "17:00",
    "day_order": 7,
@@ -2033,7 +1974,10 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14618
-   }
+   },
+   "titulos_anteriores": [
+    "Parche Match – Encuentro de conexiones"
+   ]
   },
   {
    "title": "Creatividad y escritura",
@@ -2051,25 +1995,27 @@
     "date": "2026-10-06",
     "tarjeta": 14608
    },
-   "description": "Creatividad y escritura. Autor: Dago García. Editorial PRH-Aguilar.",
+   "description": "Creatividad y escritura. Autor: Dago García. Editorial Penguin Random House/Aguilar. Auditorio Celsia.",
    "description_lang": "es"
   },
   {
-   "title": "Anima Vé! Retrospectiva de Maria Cristina Pérez Q&A",
-   "type": "event",
-   "section": "🎓 Académico",
+   "title": "Animá Ve – Retrospectiva de Maria Cristina Pérez",
+   "type": "film",
+   "section": "📽️ Proyecciones",
    "duration": "90 min",
    "day": "2026-10-23",
    "time": "18:00",
    "day_order": 7,
    "venue": "Centro Cultural Comfandi - Cali",
-   "event_kind": "evento",
    "has_qa": false,
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14604
-   }
+   },
+   "titulos_anteriores": [
+    "Anima Vé! Retrospectiva de Maria Cristina Pérez Q&A"
+   ]
   },
   {
    "title": "En construcción",
@@ -2082,8 +2028,7 @@
    "time": "18:00",
    "day_order": 7,
    "venue": "Cinemateca La Tertulia - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
@@ -2146,9 +2091,9 @@
    "synopsis_en": "A forgotten musical record connects Caracas to Tehran, revealing untold stories of oil, not as a commodity, but as a political leverage for the liberation struggles in Palestine and building Pan-Arab solidarity between 1960-1970."
   },
   {
-   "title": "Vanguardias – Prog 2",
+   "title": "Vanguardias Afro e Indígena – Prog 2",
    "type": "film",
-   "section": "🤝 Conexiones",
+   "section": "📽️ Proyecciones",
    "duration": "60 min",
    "day": "2026-10-23",
    "time": "19:00",
@@ -2160,7 +2105,10 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14034
-   }
+   },
+   "titulos_anteriores": [
+    "Vanguardias – Prog 2"
+   ]
   },
   {
    "title": "Plano sonoro: muestra de videoclips",
@@ -2168,7 +2116,7 @@
    "section": "🎵 Plano Sonoro",
    "country": "Colombia, Estados Unidos",
    "flags": "🇨🇴🇺🇸",
-   "duration": "20 min",
+   "duration": "63 min",
    "day": "2026-10-23",
    "time": "20:00",
    "day_order": 7,
@@ -2183,12 +2131,25 @@
    "film_list": [
     {
      "title": "Aguapanela",
+     "director": "Juan José Narváez",
      "country": "Colombia",
      "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "3 min",
      "synopsis": "En un universo mezclado entre Colombia y la mitología griega, Miguel es atacado por un cupido en sandalias y alas de tela que intenta flecharlo. En esta persecución, Miguel recibe un cáliz de aguapanela de manos de David y Manuel, deidades musicales. Cargado de energía celestial, emprende su venganza contra el amor. Pero justo cuando cree haber vencido, una última flecha lo alcanza… por más que uno corra, del amor no se escapa.",
      "synopsis_lang": "es",
-     "poster": "/assets/ficcali-2026/aguapanela.jpg",
+     "poster": "/assets/villadelcine-2026/aguapanela.jpg",
      "posterSource": "oficial"
+    },
+    {
+     "title": "Bankolombia",
+     "director": "Iván Darío Vernaza",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "3 min",
+     "synopsis": "En el barrio Los Alcázares, de Cali, Dawer x Damper exploran la cotidianidad mediante planos surrealistas. Hablan de ladrillos como soporte, casas por terminar, vidas en construcción, esfuerzo propio y un territorio íntimo que busca ser habitado.",
+     "synopsis_lang": "es"
     },
     {
      "title": "De nuevo al final",
@@ -2216,16 +2177,21 @@
     },
     {
      "title": "Infinita canción: el secreto",
-     "director": "Juanita y Camila",
+     "director": "Juanita Zapata, Camila Caballero",
      "country": "Colombia",
      "flags": "🇨🇴",
+     "year": 2024,
+     "duration": "4 min",
      "synopsis": "Video oficial del álbum visual El principio, de Margarita Siempre Viva.",
      "synopsis_lang": "es"
     },
     {
      "title": "Killah",
+     "director": "Manuelita Rosero",
      "country": "Colombia",
      "flags": "🇨🇴",
+     "year": 2024,
+     "duration": "4 min",
      "synopsis": "Con una fusión de realismo mágico con paisajes urbanos, Killah sigue a Tabi mientras atraviesa un umbral entre la vulnerabilidad y la resistencia. Los rituales, las sombras y las presencias espectrales se convierten en metáforas de una experiencia colectiva, al tiempo que las calles pasan de ser lugares de amenaza a espacios recuperados mediante el coraje, la solidaridad y la imaginación.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/killah.jpg",
@@ -2233,12 +2199,25 @@
     },
     {
      "title": "La María",
+     "director": "Santiago Díaz-Vence, Luis Celedón",
      "country": "Colombia",
      "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "4 min",
      "synopsis": "La María es un ritual audiovisual que habla del cuerpo y de la memoria de la mujer afrodescendiente. Guiada por un arrullo, con la música de Diego Cáceres y la voz profunda de la maestra Nidia Góngora, seguimos la historia de una mujer cuyo cuerpo es invadido por una fuerza que irrumpe sin aviso, la marca y la despoja. Acompañada por otras mujeres y por su herencia, su cuerpo deja de ser un lugar de dolor para convertirse en un espacio de resistencia, sanación y libertad. La María celebra a la mujer, su identidad afro y la capacidad de levantarse y renacer.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/la-maria.jpg",
      "posterSource": "oficial"
+    },
+    {
+     "title": "Nancy Resabiada",
+     "director": "Valeria Martí, El Kalvo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "5 min",
+     "synopsis": "En un barrio cualquiera, en una esquina cualquiera, hay una tienda. Nancy descubre una infidelidad justo cuando dos ladrones irrumpen. Carmenza resolverá cuentas pendientes. El Kalvo, como buen chismoso, les cuenta la historia de Nancy a todos los vecinos del sector. Los mariachis lo acompañan mientras va narrando esta cruda historia que nos revela la venganza de una mujer detrás de la vitrina.",
+     "synopsis_lang": "es"
     },
     {
      "title": "No me devoro-PC6. La gula",
@@ -2254,8 +2233,11 @@
     },
     {
      "title": "Pajariscopio",
+     "director": "Laia Alba, Diego Martínez",
      "country": "Colombia",
      "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "4 min",
      "synopsis": "Una historia de amor surge en Bogotá entre una mujer-pájaro y un soñador tímido. Tras herirla sin querer en el bosque, la lleva a casa para curarla. En medio de este encuentro nace un amor surreal. Pajariscopio es una comedia romántica cantada con bossa nova e indie pop.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/pajariscopio.jpg",
@@ -2263,23 +2245,43 @@
     },
     {
      "title": "Reloj",
+     "director": "Juan José Narváez",
      "country": "Colombia, Estados Unidos",
      "flags": "🇨🇴🇺🇸",
+     "year": 2026,
+     "duration": "3 min",
      "synopsis": "En las playas de Coney Island, un alienígena busca con un detector de metales una cámara que guarda los recuerdos de la vida que dejó atrás al migrar, en un intento ingenuo por recuperar aquello que perdió.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/reloj.jpg",
      "posterSource": "oficial"
     },
     {
-     "title": "Sentenciados",
+     "title": "Sense of Reality",
+     "director": "Miguel Silva, Braynft, Trippincats NFT",
      "country": "Colombia",
-     "flags": "🇨🇴"
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "5 min",
+     "synopsis": "Sense of Reality es el segundo álbum conceptual y proyecto audiovisual de Love My Robot, la plataforma artística comandada por Carolina Castilla. Mediante una narrativa de club futurista y música electrónica conceptual, la obra funciona como una interfaz emocional para explorar cómo la inteligencia artificial, la automatización, la computación cuántica y los entornos sintéticos transforman nuestra identidad y nuestras relaciones humanas.",
+     "synopsis_lang": "es"
+    },
+    {
+     "title": "Sentenciados",
+     "director": "Ana María González",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "2 min",
+     "synopsis": "Sentenciados es un videoclip filmado en cine Super-8 para Rito. Es un grito por la no militarización y el uso de seres humanos y animales como carne cañón.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Árbol en pie",
-     "director": "Red Comunitaria Trans:",
+     "director": "Red Comunitaria Trans, Rodrigo Torrijos, Mapa López",
      "country": "Colombia",
      "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "6 min",
      "synopsis": "La Ceroxylon quindiuense, palma de cera del Quindío, es el árbol nacional de Colombia. Encarna una paradoja perfecta para un país marcado por el machismo, la misoginia y la transfobia, pues es una planta capaz de cambiar de sexo. Es una «palma trans» y la inspiración para que Magdalena Morales, líder trans afrocolombiana, se una a la Red Comunitaria Trans y siembre una semilla de luz rebelde en el horizonte de la música tradicional del Caribe colombiano.",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/arbol-en-pie.jpg",
@@ -2304,7 +2306,7 @@
    "synopsis": "En Colombia, el obispo Miguel Ángel Builes impuso sus doctrinas ultraconservadoras, basadas en represión y miedo. Su ideología permeó el pensamiento de un país y creó el caldo de cultivo para el nacimiento de uno de los primeros grupos paramilitares de Colombia, Los doce apóstoles, en esa región, durante los años noventa del siglo XX. Su jefe supremo era un cura admirador de las ideas del obispo. «Por medio de archivos familiares, represento algunos de sus desvelos. El hilo de la película son las pesadillas de Builes, que él registraba en su “Diario espiritual”. Propongo un viaje, un acto de provocación a un obispo muerto, una pequeña victoria ante el pensamiento conservador y los miles de puritanos en el mundo que aún son soldados de esa ideología».",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/las-pesadillas-del-siervo.jpg",
-   "posterSource": "oficial",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
@@ -2327,8 +2329,7 @@
    "time": "21:00",
    "day_order": 7,
    "venue": "Cinemateca La Tertulia - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "Iluminada tiene visiones que trata de entender escribiendo diarios íntimos. Sus textos son poesía que nadie más escucha. Su vida en los barrios periféricos de Bogotá, plagados de dificultades, no le da tiempo ni espacio, hasta que conoce a Juan, un muchacho que parece abrirle otro mundo. No obstante, su relación con alguien extraño no es del agrado de quienes controlan el barrio. A partir de un trabajo muy cercano con sus actrices, Nicolás Rincón compone con ellas personajes que ahondan en sus mundos, llenos de sabiduría y poesía. Si bien las formas en las que se encarnan las violencias no dan un respiro, la fuerza de las mujeres (actrices y personajes) consiguen transmitirnos energía vital y esperanza.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/iluminada.jpg",
@@ -2372,7 +2373,7 @@
    "title_en": "Forever Your Maternal Animal"
   },
   {
-   "title": "Un Parche con… Frida Muenala – Realización indígena",
+   "title": "Un Parche con… Frida Muenala",
    "type": "event",
    "section": "🤝 Conexiones",
    "duration": "90 min",
@@ -2386,10 +2387,15 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14620
-   }
+   },
+   "description": "Realización indígena",
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "Un Parche con… Frida Muenala – Realización indígena"
+   ]
   },
   {
-   "title": "Foro local de proyectos. Presentación de dosiers y pitch taller de fortalecimiento empresarial – Presencial",
+   "title": "Foro local de proyectos",
    "type": "event",
    "section": "🤝 Conexiones",
    "duration": "120 min",
@@ -2397,16 +2403,21 @@
    "time": "10:00",
    "day_order": 8,
    "venue": "Madame Blue - Cali",
-   "event_kind": "taller",
+   "event_kind": "encuentro",
    "has_qa": false,
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14619
-   }
+   },
+   "description": "Presentación de dosiers y pitch taller de fortalecimiento empresarial - Presencial",
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "Foro local de proyectos. Presentación de dosiers y pitch taller de fortalecimiento empresarial – Presencial"
+   ]
   },
   {
-   "title": "Un Parche con… Marina Arango – Archivos étnicos",
+   "title": "Un Parche con… Marina Arango",
    "type": "event",
    "section": "🤝 Conexiones",
    "duration": "90 min",
@@ -2420,7 +2431,12 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14621
-   }
+   },
+   "description": "Archivos étnicos",
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "Un Parche con… Marina Arango – Archivos étnicos"
+   ]
   },
   {
    "title": "Mu-ki-ra",
@@ -2436,8 +2452,7 @@
    "time": "11:00",
    "day_order": 8,
    "venue": "Cinemateca La Tertulia - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "En una tierra acechada por monstruos hechos de vegetación, Cleo, de trece años, afronta su peor pesadilla cuando Martín, su hermano, es atrapado por uno de ellos. Con ayuda de Iolo, una anciana mágica, y una osa hormiguera, Cleo se adentra en la selva para atrapar a Mukira, quien se llevó a Martín, y celebrar un ritual para recuperar al niño; pronto aprende que los monstruos ocultan un sorprendente secreto bajo su enorme capa de pelo. Es una valiente apuesta de la animación colombiana que, con gran imaginación, propone una forma de entender cómo afrontar nuestros miedos y violencias, y hallar maneras de superar las dinámicas que nos hacen enfrentar a quienes no tienen que ser nuestros enemigos.",
    "synopsis_lang": "es",
    "poster": "/assets/ficcali-2026/mu-ki-ra.jpg",
@@ -2468,11 +2483,11 @@
     "date": "2026-10-06",
     "tarjeta": 14624
    },
-   "description": "El juego de la vida. Autor: Andrés Ruiz.",
+   "description": "El juego de la vida.",
    "description_lang": "es"
   },
   {
-   "title": "MÁSTER CLASS: Lo esencial, lo vital y lo persuasivo. Julian Sanchez, Productor de Mukira. En alianza con Animá Vé.",
+   "title": "MÁSTER CLASS: Lo esencial, lo vital y lo persuasivo. Julián Sánchez, Productor de Mukira",
    "type": "event",
    "section": "🎓 Académico",
    "duration": "120 min",
@@ -2486,37 +2501,12 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14611
-   }
-  },
-  {
-   "title": "Notre corps",
-   "type": "film",
-   "section": "🔦 Foco Claire Simon",
-   "director": "Claire Simon",
-   "year": 2023,
-   "country": "Francia",
-   "flags": "🇫🇷",
-   "duration": "168 min",
-   "genre": "Documental",
-   "day": "2026-10-24",
-   "time": "15:00",
-   "day_order": 8,
-   "venue": "Cinemateca La Tertulia - Cali",
-   "has_qa": true,
-   "qa_type": "team",
-   "synopsis": "En un hospital público de París, Claire Simon explora lo que significa habitar cuerpos de mujer, mediante la filmación de su diversidad, singularidad y belleza en todas las etapas de la vida. Se relatan historias únicas de deseos, miedos y luchas, incluida la de la propia cineasta.",
-   "synopsis_lang": "es",
-   "poster": "/assets/ficcali-2026/notre-corps.jpg",
-   "posterSource": "tmdb",
-   "_src": {
-    "url": "https://ficcali.com/programacion-ficcali-2026/",
-    "date": "2026-10-06",
-    "tarjeta": 14036
    },
-   "lbSlug": "our-body-2023",
-   "tmdb_id": 1000495,
-   "synopsis_en": "In a Parisian public hospital, Claire Simon questions what it means to live in women’s bodies, filming their diversity, singularity and their beauty in all stages throughout life. Unique stories of desires, fears and struggles unfold, including the one of the filmmaker herself.",
-   "title_en": "Our Body"
+   "description": "En alianza con Animá Ve",
+   "description_lang": "es",
+   "titulos_anteriores": [
+    "MÁSTER CLASS: Lo esencial, lo vital y lo persuasivo. Julian Sanchez, Productor de Mukira. En alianza con Animá Vé."
+   ]
   },
   {
    "title": "We Cam Fest 3",
@@ -2524,7 +2514,7 @@
    "section": "🎞️ Muestras de Muestras",
    "country": "México, Venezuela, España, Colombia, Pakistán",
    "flags": "🇲🇽🇻🇪🇪🇸🇨🇴🇵🇰",
-   "duration": "105 min",
+   "duration": "107 min",
    "day": "2026-10-24",
    "time": "15:00",
    "day_order": 8,
@@ -2544,7 +2534,7 @@
      "flags": "🇲🇽🇻🇪",
      "year": 2025,
      "duration": "18 min",
-     "synopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos Director y guionista Juan Manuel González",
+     "synopsis": "Carlos se acerca a la mediana edad, atrapado en una crisis personal que se ha prolongado demasiado. Rosa, su madre, sufre un dolor incapacitante que solo se mitiga con las cálidas aguas de la hidroterapia. Una noche, ella se ofrece a hacer el sacrificio máximo para que ambos puedan transitar a un lugar mejor. Un cortometraje sobre el amor, la esperanza y el alivio que todos anhelamos. Director y guionista Juan Manuel González",
      "synopsis_lang": "es",
      "poster": "/assets/villadelcine-2026/alivios.jpg",
      "posterSource": "oficial"
@@ -2577,7 +2567,7 @@
      "country": "Pakistán",
      "flags": "🇵🇰",
      "year": 2025,
-     "duration": "9 min",
+     "duration": "19 min",
      "synopsis": "Un recolector de basura sordo, en Karachi, se topa con un descubrimiento impactante en un vertedero. Esto lo lleva a un enfrentamiento peligroso con un despiadado gánster, solo para descubrir un tesoro que cambiará su vida para siempre. Director y guionista Basir Ahmed",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/khazana.jpg",
@@ -2595,17 +2585,6 @@
      "posterSource": "oficial"
     },
     {
-     "title": "Ona",
-     "country": "España",
-     "flags": "🇪🇸",
-     "year": 2026,
-     "duration": "4 min",
-     "synopsis": "Para Ona, la vida se ha convertido en una sucesión de malentendidos y conversaciones inconclusas. Arrastrada por un cansancio infinito, vaga por las calles de la ciudad, esforzándose constantemente por adaptarse a un ritmo que no le pertenece. En sus pensamientos percibimos su silenciosa lucha contra un mundo que ignora sus necesidades y malinterpreta su silencio. Lo que Ona reclama parece básico: sentirse presente, ser escuchada, ser mirada a los ojos, aunque sea por un instante. Y, sin embargo, nadie la ha conocido ni ha querido verla de verdad. Director y guionista Matilde Gimeno",
-     "synopsis_lang": "es",
-     "poster": "/assets/ficcali-2026/ona.jpg",
-     "posterSource": "oficial"
-    },
-    {
      "title": "Quinto primera",
      "country": "España",
      "flags": "🇪🇸",
@@ -2614,17 +2593,6 @@
      "synopsis": "Rafael vive encerrado en su mundo, su piso en L’Hospitalet de Llobregat. Cuando su mujer murió, hace varios años, él perdió las ganas de vivir y su espíritu guerrero. Llegó a L’Hospitalet en los años cincuenta, en la primera gran ola de inmigración. Fue un luchador por la democracia, la igualdad, la solidaridad y la justicia durante las décadas del setenta y ochenta, pero ahora, solitario, amargado y xenófobo, reniega del mundo y, en su soledad, les cobra su miseria a todos y, en especial, a los nuevos inmigrantes. Tampoco ayuda su alzhéimer, cada vez más presente. Director y guionista Fran Menchón",
      "synopsis_lang": "es",
      "poster": "/assets/ficcali-2026/quinto-primera.jpg",
-     "posterSource": "oficial"
-    },
-    {
-     "title": "Vértigo",
-     "country": "España",
-     "flags": "🇪🇸",
-     "year": 2025,
-     "duration": "4 min",
-     "synopsis": "Vértigo es el relato íntimo de una madre enfrentada al miedo más profundo: la enfermedad de su hijo. Desde una camilla de ecografía, la palabra «vertical» vuelve a sacudir su mundo varias décadas después. Lo que comenzó como una vivencia infantil llena de presión y miedo resurge en una consulta médica, ante un diagnóstico aparentemente fatídico. El vértigo se convierte en una metáfora del temor, de la incertidumbre y del amor incondicional. Entre recuerdos, voces externas y su propio diálogo interior, la protagonista se sumerge en una espiral de culpa, incertidumbre y amor. Director y guionista Jimmy Llamas",
-     "synopsis_lang": "es",
-     "poster": "/assets/ficcali-2026/vertigo.jpg",
      "posterSource": "oficial"
     },
     {
@@ -2641,7 +2609,36 @@
    ]
   },
   {
-   "title": "Anima Vé! – Anibia",
+   "title": "Notre corps",
+   "type": "film",
+   "section": "🔦 Foco Claire Simon",
+   "director": "Claire Simon",
+   "year": 2023,
+   "country": "Francia",
+   "flags": "🇫🇷",
+   "duration": "168 min",
+   "genre": "Documental",
+   "day": "2026-10-24",
+   "time": "15:00",
+   "day_order": 8,
+   "venue": "Cinemateca La Tertulia - Cali",
+   "has_qa": false,
+   "synopsis": "En un hospital público de París, Claire Simon explora lo que significa habitar cuerpos de mujer, mediante la filmación de su diversidad, singularidad y belleza en todas las etapas de la vida. Se relatan historias únicas de deseos, miedos y luchas, incluida la de la propia cineasta.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficcali-2026/notre-corps.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://ficcali.com/programacion-ficcali-2026/",
+    "date": "2026-10-06",
+    "tarjeta": 14036
+   },
+   "lbSlug": "our-body-2023",
+   "tmdb_id": 1000495,
+   "synopsis_en": "In a Parisian public hospital, Claire Simon questions what it means to live in women’s bodies, filming their diversity, singularity and their beauty in all stages throughout life. Unique stories of desires, fears and struggles unfold, including the one of the filmmaker herself.",
+   "title_en": "Our Body"
+  },
+  {
+   "title": "Animá Ve – Anibia",
    "type": "film",
    "section": "📽️ Proyecciones",
    "duration": "60 min",
@@ -2655,7 +2652,10 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14043
-   }
+   },
+   "titulos_anteriores": [
+    "Anima Vé! – Anibia"
+   ]
   },
   {
    "title": "Una mirada general del proceso del Circuito Cineclubes Cali, CCINEC, 2026",
@@ -2674,7 +2674,7 @@
     "date": "2026-10-06",
     "tarjeta": 14625
    },
-   "description": "Una mirada general del proceso del Circuito Cineclubes Cali, CCINEC, 2026, Autores: Maria Eudoxia Arango y Leandro Pérez.",
+   "description": "Una mirada general del proceso del Circuito Cineclubes Cali.",
    "description_lang": "es"
   },
   {
@@ -2706,8 +2706,7 @@
    "time": "18:30",
    "day_order": 8,
    "venue": "Cine Colombia Unicentro - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
@@ -2725,8 +2724,7 @@
    "time": "19:30",
    "day_order": 8,
    "venue": "Cinemateca La Tertulia - Cali",
-   "has_qa": true,
-   "qa_type": "team",
+   "has_qa": false,
    "synopsis": "De nuevo, José Luis Guerín ofrece una lección de cine documental, como lo reconoció el jurado del Festival de Cine de San Sebastián, que le otorgó su Premio Especial.",
    "synopsis_lang": "es",
    "poster": "https://image.tmdb.org/t/p/w500/tRuNQ4ncAUrhfClwL8GJYUE9HYJ.jpg",
@@ -2789,7 +2787,7 @@
    "title_en": "PARA VIVIR: The Implacable Times of Pablo Milanés"
   },
   {
-   "title": "Animá Vé – Retrospectiva",
+   "title": "Animá Ve – Mujeres en la animación",
    "type": "film",
    "section": "📽️ Proyecciones",
    "duration": "90 min",
@@ -2802,7 +2800,10 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14452
-   }
+   },
+   "titulos_anteriores": [
+    "Animá Vé – Retrospectiva"
+   ]
   },
   {
    "title": "Todo comenzó por el fin",
@@ -2959,8 +2960,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-08T09:31:10",
-  "plan_sha": "c414b0bb182ad3b4",
+  "fecha": "2026-10-08T21:41:30",
+  "plan_sha": "54b63bd268851ff8",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficcali-2026"
  }

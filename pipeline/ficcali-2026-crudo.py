@@ -92,8 +92,16 @@ SECCION = {
 # desempató los nombres: «TEATRINO» es el del Teatro Municipal Enrique
 # Buenaventura, «CCMI» es Casa Ethel, «Casa Yurtas» y «Yurtas Ulpiano Lloreda»
 # son el mismo lugar. Pines y preguntas en -venues-geo.json.
+# LA EDICIÓN DEL 8 OCT reescribe cinco sedes: cuatro son las mismas con otro
+# nombre; «Idea Lab» es nueva y no tiene dirección en ninguna fuente, así que su
+# tarjeta queda FUERA hasta que el festival la confirme (regla: ninguna sede sin pin).
+SEDE_SIN_PIN = {'Idea Lab': 'sede nueva (8 oct) sin dirección pública; preguntado al festival'}
 SEDES = {
     'CINEMATECA LA TERTULIA': ('Cinemateca La Tertulia', ''),
+    'CINEMATECA MUSEO LA TERTULIA': ('Cinemateca La Tertulia', ''),
+    'SALA MADAME BLUE': ('Madame Blue', ''),
+    'CURADOR CLUB SOCIAL': ('Curador', ''),
+    'Bulevar del Río': ('Bulevar del Río', ''),
     'Yurtas Ulpiano Lloreda': ('Casa Yurtas', ''),
     'Casa Yurtas': ('Casa Yurtas', ''),
     'Online': ('En línea', ''),
@@ -245,6 +253,9 @@ def main():
             continue
         if not x.get('hora'):
             fuera.append(f'{x["dia"]} {x["titulo"]}: sin hora en la tarjeta')
+            continue
+        if x['sede'] in SEDE_SIN_PIN:
+            fuera.append(f'tarjeta {x["id"]} · {x["dia"]} {x["titulo"][:60]}: {SEDE_SIN_PIN[x["sede"]]}')
             continue
         partes = [p.strip() for p in x['titulo'].split('|')]
         nombre, detalle = partes[0], ' | '.join(partes[1:]) or None
