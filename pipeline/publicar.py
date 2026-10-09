@@ -27,6 +27,16 @@ DOS TRABAJOS, Y EL SEGUNDO ES EL QUE DUELE.
     que tenían comando y cada uno produjo el defecto que el comando evita; con
     esto, ese camino no llega a festivals/. --forzar sigue siendo el escape.
 
+4 · NINGUNA OBRA SIN AFICHE EN SILENCIO (8 oct 2026). Ficcali salió con 23 obras
+    sin afiche —El Coloso, Minotauro, En construcción, todas en TMDB— porque la
+    lista `sin_ficha` del enriquecido existía y nadie la miró; lo vio Juan en la
+    app. La doctrina de [afiche-cobertura] («no se prohíbe publicar sin afiche:
+    se prohíbe hacerlo en silencio») era opcional, festival por festival, y por
+    eso no alcanzó. Desde hoy la exige el publicador: toda obra publicada sin
+    `poster` tiene que estar cubierta por un porqué escrito, en `sin_afiche` de
+    `-correcciones.json` (por título de obra o de su programa) o en la
+    `_cobertura.destino` de un sidecar. Lo que nadie miró no se publica.
+
     python3 pipeline/publicar.py <id>
     python3 pipeline/publicar.py <id> --forzar   # sí, quiero perder esos datos / publicar sin sello
 """
@@ -120,6 +130,47 @@ def _cobertura(films):
     return c
 
 
+def _n_cob(s):
+    import unicodedata
+    s = unicodedata.normalize('NFD', str(s or '')).lower()
+    return ''.join(c for c in s if c.isalnum())
+
+
+def _sin_afiche_mudas(fid, films):
+    """Las obras publicadas sin `poster` que ninguna declaración cubre.
+
+    Cubre: `sin_afiche` de -correcciones.json ({título o título del programa:
+    {"_por_que"}}) y `_cobertura.destino` de cualquier sidecar del festival
+    (lo que ya vigila [afiche-cobertura]). Los eventos no llevan afiche de obra."""
+    import glob
+    cubre = {}
+    cp = f'{REPO}/festivals/staging/{fid}-correcciones.json'
+    if os.path.exists(cp):
+        for k, v in (json.load(open(cp, encoding='utf-8')).get('sin_afiche') or {}).items():
+            cubre[_n_cob(k)] = v if isinstance(v, dict) else {'_por_que': v}
+    for sp in glob.glob(f'{REPO}/festivals/staging/{fid}-*.json'):
+        try:
+            cob = (json.load(open(sp, encoding='utf-8')) or {}).get('_cobertura') or {}
+        except Exception:
+            continue
+        for k, v in (cob.get('destino') or {}).items():
+            cubre.setdefault(_n_cob(k), v)
+    mudas, vistas = [], set()
+    for f in films:
+        if f.get('event_kind') or f.get('type') == 'event':
+            continue
+        inner = f.get('film_list') or []
+        for o in (inner or [f]):
+            t = o.get('title')
+            if not t or o.get('poster') or _n_cob(t) in vistas:
+                continue
+            vistas.add(_n_cob(t))
+            e = cubre.get(_n_cob(t)) or (cubre.get(_n_cob(f.get('title'))) if inner else None)
+            if not e or not str(e.get('_por_que') or '').strip():
+                mudas.append(f'«{t[:50]}»' + (f' (en «{f["title"][:30]}»)' if inner else ''))
+    return mudas
+
+
 def publicar(fid, forzar=False):
     build = f'{REPO}/festivals/staging/{fid}-build.json'
     out_p = f'{REPO}/festivals/{fid}.json'
@@ -174,6 +225,20 @@ def publicar(fid, forzar=False):
         for x in fallos[:8]:
             print('   ', x)
         sys.exit(1)
+
+    # ── ninguna obra sin afiche EN SILENCIO (trabajo 4 del docstring) ───────
+    mudas = _sin_afiche_mudas(fid, out['films'])
+    if mudas and not forzar:
+        print(f'✗ NO se publica {fid}: {len(mudas)} obra(s) sin afiche que NADIE miró — '
+              f'cada una lleva su ficha en `fichas` o su porqué en `sin_afiche` '
+              f'(festivals/staging/{fid}-correcciones.json), por título de obra o de su programa:')
+        for x in mudas[:12]:
+            print('   ·', x)
+        if len(mudas) > 12:
+            print(f'   … y {len(mudas) - 12} más')
+        sys.exit(1)
+    if mudas:
+        print(f'⚠ --forzar: se publican {len(mudas)} obra(s) sin afiche y sin porqué')
 
     # ── ¿esta publicación PIERDE datos? ─────────────────────────────────────
     if os.path.exists(out_p):

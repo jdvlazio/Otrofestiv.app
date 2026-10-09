@@ -5969,19 +5969,34 @@ except Exception as _e:
 # festival por festival, no se inventa deuda retroactiva.
 check = 'afiche-cobertura'
 try:
-    import json as _ja, glob as _ga, unicodedata as _ua
+    import json as _ja, glob as _ga, unicodedata as _ua, re as _re_m
+    _re_cob = _re_m.compile(r'-(posters|afiches)\.json$')
     def _n_afi(_s):
         _s = _ua.normalize('NFD', str(_s or '')).lower()
         return ''.join(_c for _c in _s if _c.isalnum())
     _huerfanas, _cubiertos = [], 0
-    for _sp in sorted(_ga.glob('festivals/staging/*-posters.json')):
-        _fest = _sp.split('/')[-1].replace('-posters.json', '')
+    # DOS fuentes de cobertura (8 oct 2026): `_cobertura.destino` de un sidecar
+    # de afiches, y `sin_afiche` de -correcciones.json (título de obra o de su
+    # programa → {_por_que}), que es lo que exige publicar.py desde ese día.
+    _fuentes = {}
+    for _sp in sorted(_ga.glob('festivals/staging/*-posters.json') + _ga.glob('festivals/staging/*-afiches.json')):
+        _fest = _re_cob.sub('', _sp.split('/')[-1])
         try:
             _cob = (_ja.load(open(_sp, encoding='utf-8')) or {}).get('_cobertura')
         except Exception:
             continue
-        if not _cob:
+        if _cob:
+            _fuentes.setdefault(_fest, {}).update(_cob.get('destino') or {})
+    for _sp in sorted(_ga.glob('festivals/staging/*-correcciones.json')):
+        _fest = _sp.split('/')[-1].replace('-correcciones.json', '')
+        try:
+            _sa = (_ja.load(open(_sp, encoding='utf-8')) or {}).get('sin_afiche')
+        except Exception:
             continue
+        if _sa:
+            _fuentes.setdefault(_fest, {}).update({_k: (_v if isinstance(_v, dict) else {'_por_que': _v}) for _k, _v in _sa.items()})
+    for _fest, _destino in sorted(_fuentes.items()):
+        _cob = {'destino': _destino}
         _fp = f'festivals/{_fest}.json'
         if not _os8.path.exists(_fp):
             continue
@@ -5996,7 +6011,7 @@ try:
                 if not _t or _n_afi(_t) in _ya or _o.get('poster'):
                     continue
                 _ya.add(_n_afi(_t))
-                _e = _dst.get(_n_afi(_t))
+                _e = _dst.get(_n_afi(_t)) or (_dst.get(_n_afi(_x.get('title'))) if _x.get('film_list') else None)
                 if not _e:
                     _huerfanas.append(f'{_fest}/«{_t[:34]}»: sin afiche y sin rastro '
                                       f'en _cobertura — nadie la miró')

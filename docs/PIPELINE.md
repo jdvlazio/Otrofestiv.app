@@ -665,6 +665,17 @@ así que el sidecar no puede aprobarse a sí mismo—. Toda obra publicada sin
 silencio.** Alcanza solo a los festivales cuyo sidecar declara `_cobertura`; se
 adopta festival por festival, sin inventar deuda retroactiva.
 
+**Y desde el 8 oct de 2026 ya no es opcional: la exige el publicador.** Ficcali
+salió a producción con 23 obras sin afiche —*El Coloso*, *Minotauro*, *En
+construcción*, todas en TMDB— porque la lista `sin_ficha` del enriquecido
+existía y nadie la miró; lo vio Juan en la app. `pipeline/publicar.py` se niega
+a publicar una obra sin `poster` que ninguna declaración cubra: o su ficha en
+`fichas` de `-correcciones.json`, o su porqué en `sin_afiche` del mismo archivo
+(por título de obra o de su programa, que cubre a sus obras), o la
+`_cobertura.destino` de un sidecar. `[afiche-cobertura]` lee las dos fuentes.
+`--forzar` sigue siendo el escape, a mano y con el OK de Juan. Lo que nadie
+miró no se publica.
+
 **Decimoquinto: `[arquetipo-existe]` — el color que no existe se pinta gris.**
 `[seccion-sin-arquetipo]` comprueba que la sección ESTÉ en `SECTION_ARCHETYPES`.
 Nadie comprobaba que el arquetipo asignado sea uno de los NUEVE que tienen
