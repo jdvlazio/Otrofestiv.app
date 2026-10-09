@@ -11,5 +11,25 @@
    "_fuente": "https://proimagenescolombia.com/secciones/cine_colombiano/peliculas_colombianas/pelicula_plantilla.php?id_pelicula=102",
    "_por_que": "TMDB (127593) casa por dirección y año, pero solo tiene sinopsis en inglés: en español la obra salía sin una línea. La sinopsis es la del catálogo oficial de cine colombiano de Proimágenes (ficha 102, Jairo Pinilla, 1977), tal cual. Las láminas del festival no traen sinopsis."
   }
+ },
+ "sin_afiche": {
+  "Muestra de cortos Girardotanos": {
+   "_por_que": "muestra local sin lista pública ni imagen del programa (revisado 9 oct)."
+  },
+  "Selección de Cortometrajes fantásticos para toda la familia": {
+   "_por_que": "programa sin lista pública ni imagen (revisado 9 oct)."
+  },
+  "Silencio en la Laguna": {
+   "_por_que": "sin ficha en TMDB; el festival no publica afiche de la obra (9 oct)."
+  },
+  "/IMAGINA": {
+   "_por_que": "está en TMDB (1152273, Pablo Tobón-Gallo, 2023) sin afiche; el festival no publica uno (9 oct)."
+  },
+  "Elementales": {
+   "_por_que": "la única imagen era una tarjeta ajena de otro festival, descartada por el criterio de afiche (girardota-2026-afiches.json, 7 oct); sin ficha en TMDB."
+  },
+  "Carola": {
+   "_por_que": "está en TMDB (1497688, Violeta Barrios) sin afiche; la imagen heredada era una tarjeta ajena, descartada por el criterio de afiche (7 oct)."
+  }
  }
 }
