@@ -10,18 +10,17 @@ import { t } from '../i18n/i18n.js';
 import { starsText, getFilmPoster, getCortoItemPoster } from './helpers.js';
 import { parseProgramTitle } from './components.js';
 
-// recapTitular(rec) → {verbo, n, unidad}. «obras» si todo lo visto se califica;
-// «actividades» si hubo eventos (talleres, charlas): el paraguas correcto.
+// recapTitular(rec) → {verbo, n, unidad}. El titular cuenta SOLO lo visto
+// (Juan, 9 oct 2026: «se respeta lo visto de lo asistido»): «Viste 14 obras».
+// Lo asistido (charlas, talleres, ceremonias) va a la línea del recorrido. Si no
+// viste ninguna obra y solo fuiste a actividades: «Fuiste a 3 actividades».
 export function recapTitular(rec){
-  const n=rec.actividades;
-  const unidad=rec.eventos
-    ? (n===1?t('misc_actividad'):t('misc_actividades'))
-    : (n===1?t('recap_u_obra'):t('recap_u_obras'));
-  return {verbo:t('plan_viste_n'), n, unidad};
+  if(rec.peliculas) return {verbo:t('plan_viste_n'), n:rec.peliculas, unidad:t(rec.peliculas===1?'recap_u_obra':'recap_u_obras')};
+  return {verbo:t('recap_fuiste_a'), n:rec.eventos, unidad:t(rec.eventos===1?'recap_u_actividad':'recap_u_actividades')};
 }
 
 // recorridoPartes(rec) → [{n, unidad}] en orden fijo: días · sedes|ciudades ·
-// horas · países. Multiciudad (≥2 ciudades): se dicen ciudades, no sedes.
+// horas · países · actividades. Multiciudad (≥2 ciudades): se dicen ciudades, no sedes.
 export function recorridoPartes(rec){
   const p=[];
   const u=(n,uno,varios)=>({n, unidad:t(n===1?uno:varios)});
@@ -30,6 +29,8 @@ export function recorridoPartes(rec){
   else if(rec.sedes) p.push(u(rec.sedes,'recap_u_sede','recap_u_sedes'));
   if(rec.horas) p.push({n:rec.horas, unidad:t('recap_u_horas')});
   if(rec.paises) p.push(u(rec.paises,'recap_u_pais','recap_u_paises'));
+  // Lo asistido, al final — solo si el titular habla de obras (si no, ya está arriba).
+  if(rec.peliculas&&rec.eventos) p.push(u(rec.eventos,'recap_u_actividad','recap_u_actividades'));
   return p;
 }
 

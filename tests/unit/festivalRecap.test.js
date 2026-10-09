@@ -13,6 +13,8 @@ const FILMS = [
   PELI('A'), PELI('B', { day: '2026-10-10', venue: 'Colombo', country: 'Francia, Alemania', duration: '120 min' }),
   PELI('C', { day: '2026-10-11', venue: 'Teatro Cali', time: '16:00' }),
   { title: 'Taller', type: 'event', day: '2026-10-10', time: '10:00', venue: 'Colombo' },
+  { title: 'Apertura', type: 'event', event_kind: 'apertura', day: '2026-10-09', time: '19:00', venue: 'Colombo',
+    film_list: [{ title: 'Gabin', country: 'Francia', duration: '80 min' }] },
   { title: 'Programa 1', is_cortos: true, day: '2026-10-11', time: '20:00', venue: 'Cinemateca', duration: '60 min',
     film_list: [{ title: 'c1', country: 'Perú' }, { title: 'c2', country: 'Chile' }] },
 ];
@@ -70,4 +72,21 @@ test('top 3: por estrellas; empate → orden cronológico; sin estrellas no entr
   const r = load({ watched: new Set(['A', 'B', 'C', 'Programa 1']), watchedMeta: meta('A', 'B', 'C', 'Programa 1'),
     filmRatings: { A: 4, B: 5, C: 4, c1: 0 } }).festivalRecap();
   assert.deepStrictEqual(r.top.map(o => o.title), ['B', 'A', 'C'], 'B(5) primero; A y C empatan a 4 y gana la más temprana');
+});
+
+test('lo visto y lo asistido: una apertura que proyecta una obra cuenta 1 actividad Y 1 obra', async () => {
+  const r = load({ watched: new Set(['Apertura']), watchedMeta: meta('Apertura'), filmRatings: { Gabin: 5 } }).festivalRecap();
+  assert.strictEqual(r.eventos, 1, 'fuiste a la apertura');
+  assert.strictEqual(r.peliculas, 1, 'y viste Gabin');
+  assert.strictEqual(r.horas, 1, 'las horas son las de la obra (80 min), no las de la ceremonia');
+  assert.strictEqual(r.paises, 1);
+  assert.deepStrictEqual(r.top.map(o => o.title), ['Gabin']);
+});
+
+test('obrasDe: obra suelta, programa, evento con y sin obras', () => {
+  const { obrasDe } = loadDomain({ functions: ['obrasDe'], globals: {} });
+  assert.deepStrictEqual(obrasDe(FILMS[0]).map(o => o.title), ['A']);
+  assert.deepStrictEqual(obrasDe(FILMS.find(f => f.title === 'Programa 1')).map(o => o.title), ['c1', 'c2']);
+  assert.deepStrictEqual(obrasDe(FILMS.find(f => f.title === 'Taller')), []);
+  assert.deepStrictEqual(obrasDe(FILMS.find(f => f.title === 'Apertura')).map(o => o.title), ['Gabin']);
 });
