@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "Instagram @filcmar — el carrusel de programación (16 láminas)",
-  "capturado": "2026-10-07",
+  "capturado": "2026-10-09",
   "que_aporta": "la programación entera: día, hora, lugar, sección y créditos",
   "url": "https://www.instagram.com/p/Dd-Wc29Dhkd/",
   "metodo": "lectura a ojo lámina por lámina, confirmada con la OCR de las mismas láminas, en los dos sentidos"
@@ -35,6 +35,7 @@
    "tipo": "evento",
    "event_kind": "evento",
    "is_recurring": true,
+   "info": true,
    "duracion_min": 90,
    "_duracion_de": "90 min declarados: la lámina no la da"
   },
@@ -193,6 +194,7 @@
    "tipo": "evento",
    "event_kind": "evento",
    "is_recurring": true,
+   "info": true,
    "duracion_min": 60,
    "_duracion_de": "el hueco hasta la siguiente actividad en la misma sede"
   },
@@ -490,6 +492,7 @@
    "tipo": "evento",
    "event_kind": "evento",
    "is_recurring": true,
+   "info": true,
    "duracion_min": 90,
    "_duracion_de": "90 min declarados: la lámina no la da"
   },
@@ -735,6 +738,7 @@
    "tipo": "evento",
    "event_kind": "evento",
    "is_recurring": true,
+   "info": true,
    "duracion_min": 90,
    "_duracion_de": "90 min declarados: la lámina no la da"
   },

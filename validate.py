@@ -5949,6 +5949,40 @@ try:
 except Exception as _e:
     warn(check, f'no se pudo verificar afiche-es-afiche: {_e}')
 
+# ── [abierta-sin-info] una exposición no se reserva: va con info:true ─────────
+# MAPISTAS (FILCMAR, 9 oct 2026) salió como cuatro funciones con hora y la app la
+# anclaba en el plan los cuatro días. El modelo de la actividad abierta existe
+# desde agosto (`info: true`, docs/SCHEMA.md «Campo info»), pero nada obligaba a
+# usarlo: se elegía a mano en cada crudo, y en FILCMAR no se eligió. Este guardián
+# mira lo que el nombre ya dice —exposición, expo, instalación, exhibición,
+# muestra fotográfica, galería abierta— en los festivales vivos y exige `info`.
+# Un falso positivo (una «expo» que sí es una charla con hora) se declara en
+# _ABIERTA_NO con su porqué; no se afloja la palabra.
+check = 'abierta-sin-info'
+try:
+    import json as _jab, re as _reab
+    _PAL = _reab.compile(r'(?i)\b(expo|exposici[oó]n|exposiciones|instalaci[oó]n|exhibici[oó]n|muestra fotogr[aá]fica|galer[ií]a abierta)\b')
+    _ABIERTA_NO = {}   # (festival, título): porqué
+    _malas = []
+    for _fab in _festivalesVivos():
+        try:
+            _dab = _jab.load(open(f'festivals/{_fab}.json', encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        for _x in _dab.get('films') or []:
+            if _x.get('type') != 'event' or _x.get('info'):
+                continue
+            _tt = _x.get('title') or ''
+            if _PAL.search(_tt) and (_fab, _tt) not in _ABIERTA_NO:
+                _malas.append(f'{_fab}: «{_tt[:40]}» {_x.get("day","")} {_x.get("time","")}')
+    if _malas:
+        fail(check, 'actividad abierta publicada como función con hora (va con info:true, o se declara en _ABIERTA_NO): '
+             + ' · '.join(sorted(set(_malas))[:5]))
+    else:
+        ok(check, 'ninguna exposición/instalación de un festival vivo se publica como función reservable')
+except Exception as _e:
+    warn(check, f'no se pudo verificar abierta-sin-info: {_e}')
+
 # ── [afiche-cobertura] una obra sin afiche lleva el porqué ESCRITO ───────────
 # COBERTURA INVERSA, la doctrina que ya teníamos escrita y no habíamos aplicado
 # a los afiches: verificar lo transcrito no verifica lo DESCARTADO. El 21 sep

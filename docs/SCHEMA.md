@@ -332,7 +332,7 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 | `is_programa` | boolean | — | 3 fest |  |
 | `is_recurring` | boolean | — | 4 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |
-| `info` | boolean | — | 6 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
+| `info` | boolean | — | 7 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |
 | `sessions` | array | — | 1 fest |  |
 | `has_qa` | boolean | — | 23 fest | Afecta conflictos vía durationForTravel. |
@@ -385,6 +385,7 @@ fiestas, conciertos, performances, presentaciones virtuales.
 - Regla de clasificación al montar: *¿el asistente "reserva" ese horario?* Sí →
   `duration` (planificable). No (entra/sale cuando quiere) → `info: true`.
 - `info` se propaga a los screenings exploded vía el `Object.assign` del loader.
+- **Y `validate.py` vigila el olvido** con `[abierta-sin-info]`: en los festivales vivos, un evento cuyo título dice exposición, expo, instalación, exhibición o muestra fotográfica y no lleva `info` es un error (MAPISTAS, FILCMAR, 9 oct 2026: cuatro funciones ancladas en el plan). Un falso positivo se declara en `_ABIERTA_NO` con su porqué.
 - **Lo vigila `validate-festivals.js`** en las dos direcciones: `[info-solo-evento]` exige que `info` vaya sobre `type: 'event'`, y la advertencia de *duración anómala* (techo de 400 min) **no le aplica**, porque su duración es la VENTANA en que está abierta y no un compromiso del asistente. Una duración de cero sigue siendo dato roto.
 
 ### Bloques de cortos: `is_cortos` + `film_list` (+ `unscheduled`)

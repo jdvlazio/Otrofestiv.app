@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @filcmar — el carrusel de programación (16 láminas)",
-  "capturado": "2026-10-08",
+  "capturado": "2026-10-09",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina, tal cual; la sala va aparte (Foso, Hall, Capilla).",
@@ -198,6 +198,7 @@
    "day_order": 0,
    "venue": "Galería San José - CBA Marinilla - Marinilla",
    "event_kind": "evento",
+   "info": true,
    "is_recurring": true,
    "has_qa": false,
    "_src": {
@@ -413,6 +414,7 @@
    "day_order": 1,
    "venue": "Galería San José - CBA Marinilla - Marinilla",
    "event_kind": "evento",
+   "info": true,
    "is_recurring": true,
    "has_qa": false,
    "_src": {
@@ -838,6 +840,7 @@
    "day_order": 2,
    "venue": "Galería San José - CBA Marinilla - Marinilla",
    "event_kind": "evento",
+   "info": true,
    "is_recurring": true,
    "has_qa": false,
    "_src": {
@@ -917,7 +920,7 @@
      "synopsis": "En una noche oscura, un niño sigue una señal que lo lleva a una misteriosa máquina expendedora de dulces escondida en un bar prohibido. Para alcanzarla, deberá armarse de valor y afrontar desafíos que pondrán a prueba su ingenio, valentía y determinación.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/el-espejo-de-la-vida.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-espejo-de-la-vida",
      "tmdb_id": 1791654
     },
@@ -931,7 +934,7 @@
      "synopsis": "La Danza del Caos es un cortometraje de animación experimental que traduce la teoría de los Cinco Ritmos de Gabrielle Roth en una experiencia audiovisual abstracta. Mediante el movimiento y el diseño sonoro, la animación sustituye al cuerpo físico para llevar al espectador en un viaje sensorial que recorre diferentes ritmos hasta alcanzar un estado de caos contenido. El cortometraje sumerge al espectador en una experiencia sensorial que lo invita a sentir y dejarse llevar por el ritmo como guía para la interpretación.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/la-danza-del-caos.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "la-danza-del-caos",
      "tmdb_id": 1791655
     },
@@ -955,8 +958,8 @@
      "synopsis": "Este cortometraje surgió como un intento de plasmar los sonidos que escuchaba por la noche. Mediante animación manual, escaneo y stop motion, el film pretende evocar la anticipación de algo que podría ocurrir durante la noche.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/reverb.jpg",
-     "posterSource": "oficial",
-     "lbSlug": "reverb-1",
+     "posterSource": "tmdb",
+     "lbSlug": "reverb-2025-2",
      "tmdb_id": 1791605
     },
     {
@@ -1158,6 +1161,7 @@
    "day_order": 3,
    "venue": "Galería San José - CBA Marinilla - Marinilla",
    "event_kind": "evento",
+   "info": true,
    "is_recurring": true,
    "has_qa": false,
    "_src": {
@@ -1227,7 +1231,7 @@
      "synopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
      "synopsis_lang": "es",
      "poster": "/assets/filcmar-2026/sol-de-niebla.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "sol-de-niebla",
      "tmdb_id": 1791609
     },
@@ -1455,7 +1459,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-08T10:33:27",
+  "fecha": "2026-10-09T07:50:08",
   "plan_sha": "23096bf87098b953",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py filcmar-2026"

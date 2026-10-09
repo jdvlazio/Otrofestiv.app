@@ -129,6 +129,11 @@ ACTIVIDAD = {
     'CAMINATA FOTOGRÁFICA': 'experiencia',
     'Ceremonia de premiación — Premiación MORA y Competencias': 'acto',
 }
+# LAS ACTIVIDADES ABIERTAS (drop-in): una exposición no se «reserva», se visita
+# cuando uno quiere mientras está abierta. Van con `info: true` (docs/SCHEMA.md,
+# «Campo info»): salen en el programa pero no entran al plan ni a conflictos.
+# Sin esto MAPISTAS se anclaba en los cuatro días como cuatro funciones (Juan, 9 oct).
+ABIERTA = {'MAPISTAS Expo FILCMAR 8'}
 # La caja sostenida de la lámina no se publica (caja-sostenida): la palabra, en
 # frase; MAPISTAS es el nombre propio de la expo y se queda.
 TITULO = {'CAMINATA FOTOGRÁFICA': 'Caminata fotográfica',
@@ -360,6 +365,8 @@ def main():
                 reg['registration_url'] = INSCRIPCION[t]
             if sum(1 for x in ojos if x.get('titulo') == t) > 1:
                 reg['is_recurring'] = True
+            if t in ABIERTA:
+                reg['info'] = True
             funciones.append(reg)
         elif t not in (None, 'Cinescuela', 'Competencia Latinoamericana', 'Película de Clausura'):
             sys.exit(f'✗ bloque sin decidir: {t!r}')
