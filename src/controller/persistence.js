@@ -34,6 +34,7 @@ let _planChannel=null, _planChannelKey=null, _planRerenderCb=null, _planLive=fal
 export function saveWL(){ storage.setWatchlist(watchlist); _cloudSave('watchlist'); }
 
 export function saveWatched(){ storage.setWatched(watched); _cloudSave('watched'); }
+export function saveWatchedMeta(){ storage.setWatchedMeta(watchedMeta); _cloudSave('watchedMeta'); }
 export function saveNotWatched(){ storage.setNotWatched(notWatched); _cloudSave('notWatched'); }
 
 export function saveRating(title,rating){
@@ -264,7 +265,7 @@ export function _applyCloudRow(data, opts){
     state.update('savedAgenda', a=>({...a, schedule: syncScheduleWithCatalog(a.schedule, FILMS)}));
   }
   // Persistir en local (identidad de arrays/Sets vía globals bridgeados).
-  storage.setWatchlist(watchlist);storage.setWatched(watched);
+  storage.setWatchlist(watchlist);storage.setWatched(watched);storage.setWatchedMeta(watchedMeta);
   storage.setPrioritized(prioritized);storage.setSavedAgenda(savedAgenda);
   storage.setAvailability(availability);storage.setFilmRatings(filmRatings);
   storage.setCloudSyncedAt(data.updated_at||new Date().toISOString());
