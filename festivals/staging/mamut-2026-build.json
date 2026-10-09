@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @mamut_festival — el carrusel de programación (11 láminas)",
-  "capturado": "2026-10-02",
+  "capturado": "2026-10-09",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina de día, tal cual; la sala va aparte (crudo `sala`). La lámina 10 da la dirección de seis. «Capilla, Comfama» y «Lab UNAL» no están en esa lámina.",
@@ -466,7 +466,13 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
-     "duration": "7 min"
+     "duration": "7 min",
+     "poster": "/assets/mamut-2026/sol-de-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sol-de-niebla",
+     "tmdb_id": 1791609,
+     "synopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Los no humanos",
@@ -956,24 +962,25 @@
   },
   {
    "title": "Programa SHUB: Hocico de cerdo",
-   "type": "film",
-   "section": "🎬 Proyecciones",
+   "type": "event",
+   "section": "🎪 Actividades",
    "duration": "60 min",
    "day": "2026-10-10",
    "time": "17:00",
    "day_order": 5,
    "venue": "Centro Colombo Americano - Medellín",
    "sala": "Sala 2",
+   "event_kind": "encuentro",
    "has_qa": true,
    "qa_type": "guests",
-   "synopsis": "Invitados: Juana Schlenker, Daniel Cortés, Ana Tiagx y Tomás Campuzano.",
-   "synopsis_lang": "es",
    "_src": {
     "url": "https://www.instagram.com/p/Dd4A9NxERJA/",
     "date": "2026-09-29",
     "lamina": 7
    },
-   "is_free": true
+   "is_free": true,
+   "description": "Invitados: Juana Schlenker, Daniel Cortés, Ana Tiagx y Tomás Campuzano.",
+   "description_lang": "es"
   },
   {
    "title": "Geographies of Solitude",
@@ -1233,7 +1240,13 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 2026,
-     "duration": "7 min"
+     "duration": "7 min",
+     "poster": "/assets/mamut-2026/sol-de-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "sol-de-niebla",
+     "tmdb_id": 1791609,
+     "synopsis": "Misty Sun presenta una visión fragmentada y multiángulosa de la Espeletia frailejones a través de la yuxtaposición de tomas detalladas (macro), funcionando como una especie de estudio morfológico de la planta. Contrasta las ilustraciones científicas, las representaciones institucionales y los discursos en torno a la Espeletia frailejones. Las imágenes, filmadas en película, transmiten una sensación de registro tangible de las frailejones y sus inflorescencias, creando una metáfora de la planta como un territorio habitado por diversas manifestaciones de la vida.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Los no humanos",
@@ -1366,7 +1379,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-02T19:44:53",
+  "fecha": "2026-10-09T08:13:41",
   "plan_sha": "6f9942cdcada33ca",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py mamut-2026"
