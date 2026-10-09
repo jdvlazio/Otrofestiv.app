@@ -26,9 +26,9 @@ DIAS = ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'doming
 
 # (título, día, hora) → qué se hizo. Mirado en las dos páginas el 29 sep.
 CONTRADICCIONES = {
-    ('Al Final del Espectro', '2026-10-19', '17:00'): 'la página de largos dice lunes 19; la parrilla, martes 20 (Colombo). Se publica la parrilla; preguntado',
+    ('Al Final del Espectro', '2026-10-19', '17:00'): 'la página de largos dice lunes 19; la parrilla, martes 20 (Colombo). Se publica la parrilla; CONFIRMADO por el festival (DM, 8 oct): sáb 17 18:30 Parque de los Deseos y mar 20 17:00 Colombo',
     ('Al Final del Espectro', '2026-10-20', '17:00'): 'ver la del lunes 19',
-    ('Schichinin No Samurai (Seven Samurai)', '2026-10-16', '18:30'): 'la parrilla dice «Entrada Libre»; la página de largos, «Entrada con boleta». Se publica la parrilla; preguntado',
+    ('Schichinin No Samurai (Seven Samurai)', '2026-10-16', '18:30'): 'la parrilla dice «Entrada Libre»; la página de largos, «Entrada con boleta». Se publica la parrilla; CONFIRMADO por el festival (DM, 8 oct): entrada libre, 19:00',
     ('Hoodsteps', '2026-10-22', '18:40'): 'no es contradicción: el corto que acompaña a You Are The Film («+ Hoodsteps»); la página de largos lo lista aparte',
     ('Hoodsteps', '2026-10-23', '16:00'): 'ídem',
     # LA BASE DE SU CARTELERA (v2, 6 oct) contra la página de largos (28 sep): la
@@ -37,6 +37,8 @@ CONTRADICCIONES = {
     ('Critters', '2026-10-17', '19:00'): 'ver la del domingo 18',
     ('Pura Sangre', '2026-10-20', '18:30'): 'la página de largos dice 6:30 p. m.; la base v2, 18:00. Se publica la base',
     ('Pura Sangre', '2026-10-20', '18:00'): 'ver la de las 18:30',
+    # la base v5 (7 oct) la pasa a las 19:00 en la Sala 1; la página de largos sigue en 18:30
+    ('Schichinin No Samurai (Seven Samurai)', '2026-10-16', '19:00'): 'la página de largos dice 6:30 p. m. (Sala 2); la base v5, 19:00 en la Sala 1. Se publica la base',
 }
 
 

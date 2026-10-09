@@ -20,7 +20,7 @@
   },
   {
    "cmd": "python3 pipeline/fantasmagoria-2026-base.py",
-   "que": "la cartelera oficial (su base, v2 del 6 oct) manda sobre la noticia: día, hora, sede y lo nuevo"
+   "que": "la cartelera oficial (su base, v5 del 7 oct; con --bajar se baja la vigente) manda sobre la noticia: día, hora, sede y lo nuevo"
   },
   {
    "cmd": "python3 pipeline/enriquecer.py fantasmagoria-2026 --posters",
