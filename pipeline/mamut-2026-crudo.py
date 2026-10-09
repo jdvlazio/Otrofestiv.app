@@ -111,6 +111,10 @@ ACTIVIDAD = {
     'Huella mi frente': 'live cinema',
     # el festival no lo rotula; «convite» es nuestra lectura (SiembraFest), por aprobar
     '¡Sancocho!': 'convite',
+    # NO es una proyección: la lámina 7 dice «Presentación Cuadernos de Cine
+    # Colombiano #35 Prácticas documentales · Conversación con Juana Schlenker,
+    # Daniel Cortés, Ana Tiagx, Tomás Campuzano». Iba como obra sin afiche (9 oct).
+    'Programa SHUB: Hocico de cerdo': 'encuentro',
 }
 INSCRIPCION = {
     # linktr.ee/M.A.M.U.T, el único de los cuatro formularios que sigue abierto (28 sep)
