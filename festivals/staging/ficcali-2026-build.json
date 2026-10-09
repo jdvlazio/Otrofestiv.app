@@ -1102,6 +1102,7 @@
    "title": "Guapi: ritmo y balsada",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "year": 1963,
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "30 min",
@@ -1120,19 +1121,28 @@
    "title": "La fabulosa máquina del tiempo",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "director": "Eliza Capai",
+   "year": 2026,
    "country": "Brasil",
    "flags": "🇧🇷",
    "duration": "70 min",
+   "genre": "Documental",
    "day": "2026-10-21",
    "time": "18:00",
    "day_order": 5,
    "venue": "Centro Cultural Comfandi - Cali",
    "has_qa": false,
+   "poster": "/assets/ficcali-2026/la-fabulosa-maquina-del-tiempo.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14001
-   }
+   },
+   "lbSlug": "the-fabulous-time-machine",
+   "tmdb_id": 1599779,
+   "synopsis_en": "What if it were possible to travel back in time to dream of other futures? In the hinterlands of Brazil, young girls navigate the delicate transition from childhood to adolescence while grappling with social media, religion, their dreams, and the stories of the women who came before them. By inventing a time machine, they revisit the pasts of their mothers and grandmothers and imagine a future in which they can be free, fulfilled, and in control of their own choices.",
+   "title_en": "The Fabulous Time Machine"
   },
   {
    "title": "La libertad doble",
@@ -1617,6 +1627,8 @@
    "title": "Rodilla Negra + El Coloso",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "60 min",
    "day": "2026-10-22",
    "time": "20:00",
@@ -1627,7 +1639,37 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14016
-   }
+   },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Rodilla Negra",
+     "director": "Carlos Mayolo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 1975,
+     "duration": "14 min",
+     "poster": "/assets/ficcali-2026/rodilla-negra.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "rodilla-negra",
+     "tmdb_id": 947607,
+     "synopsis_en": "In this short film, the title of which translates as \"Black Knee\", a team of football players (played by members of the Barrios Unidos Cali team) encounter a pair of skinnydipping hippies out in the fields and steal their transistor radio.  This seems to trigger something in their most legendary player, Jonny Mosquera: a terrible syndrome that makes him literally fall to his knees.  Like La hamaca, Agarrando pueblo, Carne de tu Carne and other films made by Mayolo, this film blends deeply unsettling imagery and lowkey genre filmmaking into an equally unsettling and exhilarating realism."
+    },
+    {
+     "title": "El Coloso",
+     "director": "José Varón",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2025,
+     "duration": "70 min",
+     "poster": "/assets/ficcali-2026/el-coloso.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "el-coloso",
+     "tmdb_id": 1566489,
+     "synopsis_en": "“El Coloso” tells the story of the life and legacy of Freddy Rincón, a giant of Colombian soccer who conquered Brazil with his strength and talent, filled stadiums in Spain, and gave his country one of its most unforgettable goals against Germany. From his roots in Buenaventura to becoming a symbol of national pride, Rincón transcended the soccer field to inspire an entire generation. More than just a soccer player, he was a beacon of hope, whose greatness lives on in the memory of Colombians.",
+     "genre": "Documental"
+    }
+   ]
   },
   {
    "title": "Salseando ando + Convergencias",
@@ -1645,12 +1687,29 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14021
-   }
+   },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Salseando ando",
+     "director": "Álvaro Varón",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Convergencias",
+     "director": "Jorge Navas",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    }
+   ]
   },
   {
    "title": "Trópico interior: Todos los colores de la oscuridad",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "60 min",
    "day": "2026-10-22",
    "time": "20:00",
@@ -1662,7 +1721,107 @@
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14019
-   }
+   },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "¿Por qué se esconde Drácula?",
+     "director": "Camila Loboguerrero",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 1980,
+     "duration": "11 min",
+     "poster": "/assets/ficcali-2026/por-que-se-esconde-dracula.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "por-que-se-esconde-dracula",
+     "tmdb_id": 1033710,
+     "synopsis_en": "Lolita, a secretary from an estate company, must bring the contract of the sale of a new house to a very peculiar and thirsty customer.",
+     "genre": "Terror"
+    },
+    {
+     "title": "Sirenas en la niebla",
+     "director": "Daniela Narváez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2023,
+     "duration": "16 min",
+     "poster": "/assets/ficcali-2026/sirenas-en-la-niebla.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "mermaids-in-the-mist",
+     "tmdb_id": 1117116,
+     "synopsis_en": "Mariela will fight against the belief of the people that a mermaid is leading to young people, discovering the true monster on her journey.",
+     "title_en": "Mermaids in the Mist",
+     "genre": "Drama"
+    },
+    {
+     "title": "El ocaso de las criaturas",
+     "director": "Jenny David Piedrahita",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2023,
+     "duration": "10 min",
+     "poster": "/assets/ficcali-2026/el-ocaso-de-las-criaturas.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "creatures-under-the-sun",
+     "tmdb_id": 1216479,
+     "synopsis_en": "A melancholy young woman wanders the lonely streets of downtown in search of food. While her mind is connected to a parallel dimension where she dreams aloud letters to her sister. Her curiosity and the possibility of seeing a sunset again jeopardize her return home.",
+     "title_en": "Creatures under the sun",
+     "genre": "Animación"
+    },
+    {
+     "title": "Estirpe",
+     "director": "Ana María Ferro",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2023,
+     "duration": "16 min",
+     "poster": "/assets/ficcali-2026/estirpe.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "lineage-2024",
+     "tmdb_id": 1327925,
+     "synopsis_en": "Among the living and the dead, there is a shared memory",
+     "title_en": "LINEAGE"
+    },
+    {
+     "title": "Mi Demonio",
+     "director": "Rossana Montoya",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2024,
+     "duration": "17 min",
+     "poster": "/assets/ficcali-2026/mi-demonio.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "my-demon-2024",
+     "tmdb_id": 1463453,
+     "synopsis_en": "Through an extraordinary 17-minute sequence shot, we accompany a young and dysfunctional couple who are about to have their first child. On the way to the hospital, labor pains mix with mutual complaints, and calls from relatives add reckless comments to a more than desperate situation.",
+     "title_en": "My Demon",
+     "genre": "Drama"
+    },
+    {
+     "title": "Liebres",
+     "director": "Laura Carvajal",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2024,
+     "duration": "13 min",
+     "lbSlug": "hare",
+     "tmdb_id": 1392101,
+     "synopsis_en": "The short film follows Valentina and Pilar, two young teenagers from different socio-cultural contexts who will experience a violent event that will change them forever, breaking the barriers that distance them and making them live in the same wounded body.",
+     "title_en": "Hare"
+    },
+    {
+     "title": "Somnolítico",
+     "director": "Abril Natalia Velázquez",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2026,
+     "duration": "13 min",
+     "poster": "/assets/cineautopsia/somnolitico.jpg",
+     "synopsis": "Un ser extraño pierde su rumbo en el caos del sistema de transporte, desplazándose de un lugar a otro sin encontrar una salida. Los trayectos se ven desbordados por flujos acelerados que van y vienen como cascadas humanas. Los transeúntes, desdibujados y sin rostro, se mueven de manera automática, creando un laberinto en el que las rutas parecen infinitas. Personas adormiladas se funden con el entorno y, mientras el autobús sigue su marcha, el ser finalmente se descubre a sí mismo.",
+     "posterSource": "oficial",
+     "synopsis_lang": "es"
+    }
+   ]
   },
   {
    "title": "I Built a Rocket Imagining your Arrival",
@@ -2021,19 +2180,30 @@
    "title": "En construcción",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "director": "José Luis Guerín",
+   "year": 2001,
    "country": "España",
    "flags": "🇪🇸",
    "duration": "124 min",
+   "genre": "Documental",
    "day": "2026-10-23",
    "time": "18:00",
    "day_order": 7,
    "venue": "Cinemateca La Tertulia - Cali",
    "has_qa": false,
+   "synopsis": "En un emblemático barrio popular de Barcelona, amenazado por un plan de reforma, se emprende la construcción de un bloque de viviendas. Queríamos conocer la intimidad de una construcción, así que nos metimos ahí, cuando ese espacio era todavía un solar donde los chavales jugaban a fútbol. Sobre este terreno buscamos la forma de convivir, conocer y rodar -así, por este orden- que nos permitiera abordar tanto el anecdotario de la propia obra como el que ésta generaba a su alrededor; en esa cotidianidad quebrada por el estruendo de los derribos, entre sus vecinos, en el barrio (de hecho la imagen del barrio se concretó en la del puñado de rostros que a nuestros ojos lo representaban). En este proceso, pronto advertimos que la mutación del paisaje urbano implicaba también una mutación en el paisaje humano, y que en este movimiento se podrían reconocer ciertos ecos del mundo. Sobre estos cimientos construimos una película.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficcali-2026/en-construccion.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14025
-   }
+   },
+   "lbSlug": "work-in-progress",
+   "tmdb_id": 148353,
+   "synopsis_en": "An author spends a year and a half filming what happens as a new apartment building is built in a neighborhood of Barcelona.",
+   "title_en": "Work in Progress"
   },
   {
    "title": "Luis Tercero",
@@ -2641,6 +2811,8 @@
    "title": "Animá Ve – Anibia",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "country": "Colombia",
+   "flags": "🇨🇴",
    "duration": "60 min",
    "day": "2026-10-24",
    "time": "17:00",
@@ -2653,6 +2825,49 @@
     "date": "2026-10-06",
     "tarjeta": 14043
    },
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Fabricia",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Corte Eléctrico",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Una porción por envase",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Quimera",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Tapir Memories",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Caída libre",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Pájaro Cubo",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Susurros del mar",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    }
+   ],
    "titulos_anteriores": [
     "Anima Vé! – Anibia"
    ]
@@ -2681,37 +2896,56 @@
    "title": "Minotauro",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "director": "Andrey Zvyagintsev",
+   "year": 2026,
    "country": "Rusia",
    "flags": "🇷🇺",
    "duration": "135 min",
+   "genre": "Drama",
    "day": "2026-10-24",
    "time": "18:00",
    "day_order": 8,
    "venue": "Cine Colombia Unicentro - Cali",
    "has_qa": false,
+   "synopsis": "Es la contemplación del director sobre la naturaleza de las relaciones humanas, el estado del hombre moderno y la fragilidad de la vida humana.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficcali-2026/minotauro.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14040
-   }
+   },
+   "lbSlug": "minotaur-2026",
+   "tmdb_id": 848700,
+   "synopsis_en": "When Gleb, a successful company director, finds himself under siege from mounting corporate pressures, an increasingly unstable world, and the discovery of his wife's affair, the collapse of his carefully ordered life accelerates toward violence.",
+   "title_en": "Minotaur"
   },
   {
    "title": "El Coloso",
    "type": "film",
    "section": "📽️ Proyecciones",
+   "director": "José Varón",
+   "year": 2025,
    "country": "Colombia",
    "flags": "🇨🇴",
    "duration": "70 min",
+   "genre": "Documental",
    "day": "2026-10-24",
    "time": "18:30",
    "day_order": 8,
    "venue": "Cine Colombia Unicentro - Cali",
    "has_qa": false,
+   "poster": "/assets/ficcali-2026/el-coloso.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14038
-   }
+   },
+   "lbSlug": "el-coloso",
+   "tmdb_id": 1566489,
+   "synopsis_en": "“El Coloso” tells the story of the life and legacy of Freddy Rincón, a giant of Colombian soccer who conquered Brazil with his strength and talent, filled stadiums in Spain, and gave his country one of its most unforgettable goals against Germany. From his roots in Buenaventura to becoming a symbol of national pride, Rincón transcended the soccer field to inspire an entire generation. More than just a soccer player, he was a beacon of hope, whose greatness lives on in the memory of Colombians."
   },
   {
    "title": "Historias del buen Valle",
@@ -2835,22 +3069,32 @@
    "title_en": "It All Started at the End"
   },
   {
-   "title": "Érase una vez en Harlem",
+   "title": "Once Upon a Time in Harlem",
    "type": "film",
-   "section": "📽️ Proyecciones",
-   "country": "USA",
+   "section": "🎞️ Muestras de Muestras",
+   "director": "David Greaves, William Greaves",
+   "year": 2026,
+   "country": "Estados Unidos",
    "flags": "🇺🇸",
    "duration": "100 min",
+   "genre": "Documental",
    "day": "2026-10-25",
    "time": "17:30",
    "day_order": 9,
    "venue": "Cinemateca La Tertulia - Cali",
    "has_qa": false,
+   "synopsis": "Una década después de su muerte, el cineasta William Greaves tiene un último truco bajo la manga con lo que consideró el evento más importante que capturó en cine: una fiesta de 1972, ideada por él, junto a las luminarias vivas del Renacimiento de Harlem. Durante cuatro horas, este extraordinario grupo —muchos de sus miembros no se habían visto en cincuenta años— recordó, criticó, argumentó, rio y bebió mientras luchaba con su lugar en un panorama cultural que cambiaba rápidamente. Filmada en 16 mm y recientemente restaurada bajo la dirección de su hijo David, esta película histórica es, a la vez, una autoexploración y una indagación en el corazón de esa masa crítica de energía creativa.",
+   "synopsis_lang": "es",
+   "poster": "/assets/ficcali-2026/once-upon-a-time-in-harlem.jpg",
+   "posterSource": "tmdb",
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
     "date": "2026-10-06",
     "tarjeta": 14451
-   }
+   },
+   "lbSlug": "once-upon-a-time-in-harlem",
+   "tmdb_id": 1596300,
+   "synopsis_en": "A decade after his death, genre-defying filmmaker William Greaves has one last trick up his sleeve with what he considered the most important event he captured on film: a 1972 party he engineered with the living luminaries of the Harlem Renaissance."
   },
   {
    "title": "Álbum de familia",
@@ -2956,11 +3200,13 @@
   }
  ],
  "_avisos_duracion": [
+  "programa «Rodilla Negra + El Coloso» (2026-10-22 20:00): sus obras suman 84 min (2 de 2 con duración) y la función dura 60",
+  "programa «Trópico interior: Todos los colores de la oscuridad» (2026-10-22 20:00): sus obras suman 96 min (7 de 7 con duración) y la función dura 60",
   "«An Incomplete Calendar»: 90 min en el festival, 77 en TMDB"
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-08T21:41:30",
+  "fecha": "2026-10-08T22:11:09",
   "plan_sha": "54b63bd268851ff8",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficcali-2026"

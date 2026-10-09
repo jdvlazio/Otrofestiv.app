@@ -599,6 +599,7 @@
    },
    "titulo": "Guapi: ritmo y balsada",
    "seccion": "Proyecciones",
+   "anio": 1963,
    "pais": "Colombia",
    "duracion_min": 30
   },
@@ -615,6 +616,8 @@
    },
    "titulo": "La fabulosa máquina del tiempo",
    "seccion": "Proyecciones",
+   "director": "Eliza Capai",
+   "anio": 2026,
    "pais": "Brasil",
    "duracion_min": 70
   },
@@ -1005,6 +1008,22 @@
    },
    "titulo": "Rodilla Negra + El Coloso",
    "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "Rodilla Negra",
+     "pais": "Colombia",
+     "director": "Carlos Mayolo",
+     "anio": 1975,
+     "duracion_min": 14
+    },
+    {
+     "titulo": "El Coloso",
+     "pais": "Colombia",
+     "director": "José Varón",
+     "anio": 2025,
+     "duracion_min": 70
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -1021,7 +1040,18 @@
    },
    "titulo": "Salseando ando + Convergencias",
    "seccion": "Proyecciones",
-   "pais": "Colombia",
+   "obras": [
+    {
+     "titulo": "Salseando ando",
+     "pais": "Colombia",
+     "director": "Álvaro Varón"
+    },
+    {
+     "titulo": "Convergencias",
+     "pais": "Colombia",
+     "director": "Jorge Navas"
+    }
+   ],
    "duracion_min": 100
   },
   {
@@ -1038,6 +1068,57 @@
    },
    "titulo": "Trópico interior: Todos los colores de la oscuridad",
    "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "¿Por qué se esconde Drácula?",
+     "director": "Camila Loboguerrero",
+     "anio": 1980,
+     "duracion_min": 11,
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Sirenas en la niebla",
+     "director": "Daniela Narváez",
+     "anio": 2023,
+     "duracion_min": 16,
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "El ocaso de las criaturas",
+     "director": "Jenny David Piedrahita",
+     "anio": 2023,
+     "duracion_min": 10,
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Estirpe",
+     "director": "Ana María Ferro",
+     "anio": 2023,
+     "duracion_min": 16,
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Mi Demonio",
+     "director": "Rossana Montoya",
+     "anio": 2024,
+     "duracion_min": 17,
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Liebres",
+     "director": "Laura Carvajal",
+     "anio": 2024,
+     "duracion_min": 13,
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Somnolítico",
+     "director": "Abril Natalia Velázquez",
+     "anio": 2026,
+     "duracion_min": 13,
+     "pais": "Colombia"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -1364,6 +1445,8 @@
    },
    "titulo": "En construcción",
    "seccion": "Proyecciones",
+   "director": "José Luis Guerín",
+   "anio": 2001,
    "pais": "España",
    "duracion_min": 124
   },
@@ -1833,6 +1916,40 @@
    },
    "titulo": "Animá Ve – Anibia",
    "seccion": "Proyecciones",
+   "obras": [
+    {
+     "titulo": "Fabricia",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Corte Eléctrico",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Una porción por envase",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Quimera",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Tapir Memories",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Caída libre",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Pájaro Cubo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Susurros del mar",
+     "pais": "Colombia"
+    }
+   ],
    "duracion_min": 60,
    "_duracion_de": "el hueco hasta la siguiente en la misma sede (tope 90, 60 si es la última)"
   },
@@ -1868,6 +1985,8 @@
    },
    "titulo": "Minotauro",
    "seccion": "Proyecciones",
+   "director": "Andrey Zvyagintsev",
+   "anio": 2026,
    "pais": "Rusia",
    "duracion_min": 135
   },
@@ -1884,6 +2003,8 @@
    },
    "titulo": "El Coloso",
    "seccion": "Proyecciones",
+   "director": "José Varón",
+   "anio": 2025,
    "pais": "Colombia",
    "duracion_min": 70
   },
@@ -1989,10 +2110,16 @@
     "date": "2026-10-06",
     "tarjeta": 14451
    },
-   "titulo": "Érase una vez en Harlem",
-   "seccion": "Proyecciones",
-   "pais": "USA",
-   "duracion_min": 100
+   "titulo": "Once Upon a Time in Harlem",
+   "director": "David Greaves, William Greaves",
+   "pais": "Estados Unidos",
+   "anio": 2026,
+   "duracion_min": 100,
+   "genero": "Documental",
+   "sinopsis": "Una década después de su muerte, el cineasta William Greaves tiene un último truco bajo la manga con lo que consideró el evento más importante que capturó en cine: una fiesta de 1972, ideada por él, junto a las luminarias vivas del Renacimiento de Harlem. Durante cuatro horas, este extraordinario grupo —muchos de sus miembros no se habían visto en cincuenta años— recordó, criticó, argumentó, rio y bebió mientras luchaba con su lugar en un panorama cultural que cambiaba rápidamente. Filmada en 16 mm y recientemente restaurada bajo la dirección de su hijo David, esta película histórica es, a la vez, una autoexploración y una indagación en el corazón de esa masa crítica de energía creativa.",
+   "seccion": "Muestras de Muestras",
+   "titulo_es": "Érase una vez en Harlem",
+   "duracion_obra": 100
   },
   {
    "dia": "2026-10-25",

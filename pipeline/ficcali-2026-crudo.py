@@ -147,6 +147,7 @@ ALIAS = {
     'escribir la vida': 'Écrire la vie: Annie Ernaux racontée par des lycéennes et des lycéens',
     'ellas guardianas de la amazonia': 'Ellas, gardiennes de l’Amazonie',
     'mukira': 'Mu-ki-ra',
+    'erase una vez en harlem': 'Once Upon a Time in Harlem',   # la tarjeta traduce; la ficha, en inglés
     'ninxs': 'Niñxs',
     'seis meses en el edificio rosa': 'Seis meses en el edificio rosa con azul',
     'amelie y los secretos de lluvia': 'Amélie y los secretos de la lluvia',
@@ -165,6 +166,46 @@ PROGRAMA = {
     14495: ['Mi vecino Totoro', 'Boato', 'El viaje', 'La gran hazaña'],   # Cortos infantiles FICCALI / Mi vecino Totoro
     14496: ['Arco', 'Akababuru: Expresión de Asombro'],                     # Largo Arco + Corto Akababuru
     14042: ('rotulo', 'We Cam Fest'),                   # WE CAM FEST 3
+}
+# LAS TARJETAS QUE JUNTAN DOS OBRAS CON «+» y que NO están en la Selección (sin
+# ficha en el catálogo): cada obra con lo que la tarjeta dice de ella; la ficha
+# de TMDB se declara en -correcciones.json. Antes se publicaban como UNA obra
+# («Rodilla Negra + El Coloso») y ninguna de las dos se buscaba (8 oct).
+# LO QUE LA TARJETA CALLA y otra fuente dice (8 oct): «Guapi: ritmo y balsada» es
+# el documental de la Expedición Guapi 1963 del Instituto Popular de Cultura
+# (nexus.univalle.edu.co/index.php/nexus/article/view/13321; trasmishuellas.univalle.edu.co),
+# sin director acreditado (camarógrafo Juan B. Ocampo)
+# …y las proyecciones especiales cuya ficha de TMDB se declaró a mano en
+# -correcciones.json: el director y el año, de esa ficha, van aquí porque el
+# ensamblador los lee del crudo
+DATOS_TARJETA = {14002: {'anio': 1963},
+                 14040: {'director': 'Andrey Zvyagintsev', 'anio': 2026},          # Minotauro
+                 14025: {'director': 'José Luis Guerín', 'anio': 2001},            # En construcción
+                 14001: {'director': 'Eliza Capai', 'anio': 2026},                 # La fabulosa máquina del tiempo
+                 13904: {'director': 'Eliza Capai', 'anio': 2026},
+                 14038: {'director': 'José Varón', 'anio': 2025}}             # El Coloso (sáb 24)
+OBRAS_TARJETA = {
+    14016: [{'titulo': 'Rodilla Negra', 'pais': 'Colombia', 'director': 'Carlos Mayolo', 'anio': 1975, 'duracion_min': 14},
+            {'titulo': 'El Coloso', 'pais': 'Colombia', 'director': 'José Varón', 'anio': 2025, 'duracion_min': 70}],
+    # dos SERIES documentales de Telepacífico (telepacifico.com/37-novedades): la
+    # función proyecta episodios; directores de la fuente, sin ficha en TMDB
+    14021: [{'titulo': 'Salseando ando', 'pais': 'Colombia', 'director': 'Álvaro Varón'},
+            {'titulo': 'Convergencias', 'pais': 'Colombia', 'director': 'Jorge Navas'}],
+    # PROGRAMAS cuya lista no está en ficcali.com sino en la programación del
+    # Teatrino publicada por El País Cali (elpais.com.co/cultura/el-teatro-
+    # municipal-enrique-buenaventura-se-reactiva-con-programacion-en-su-teatrino-
+    # eventos-culturales-para-octubre-0230.html). Trópico interior: muestra de
+    # terror/fantástico (curaduría Melissa Saavedra y Alejandra Rocas); Anibia: la
+    # muestra itinerante del festival de animación Anibia (Bogotá).
+    14019: [{'titulo': '¿Por qué se esconde Drácula?', 'director': 'Camila Loboguerrero', 'anio': 1980, 'duracion_min': 11, 'pais': 'Colombia'},
+            {'titulo': 'Sirenas en la niebla', 'director': 'Daniela Narváez', 'anio': 2023, 'duracion_min': 16, 'pais': 'Colombia'},
+            {'titulo': 'El ocaso de las criaturas', 'director': 'Jenny David Piedrahita', 'anio': 2023, 'duracion_min': 10, 'pais': 'Colombia'},
+            {'titulo': 'Estirpe', 'director': 'Ana María Ferro', 'anio': 2023, 'duracion_min': 16, 'pais': 'Colombia'},
+            {'titulo': 'Mi Demonio', 'director': 'Rossana Montoya', 'anio': 2024, 'duracion_min': 17, 'pais': 'Colombia'},
+            {'titulo': 'Liebres', 'director': 'Laura Carvajal', 'anio': 2024, 'duracion_min': 13, 'pais': 'Colombia'},
+            {'titulo': 'Somnolítico', 'director': 'Abril Natalia Velázquez', 'anio': 2026, 'duracion_min': 13, 'pais': 'Colombia'}],
+    14043: [{'titulo': t, 'pais': 'Colombia'} for t in ('Fabricia', 'Corte Eléctrico', 'Una porción por envase', 'Quimera',
+                                                       'Tapir Memories', 'Caída libre', 'Pájaro Cubo', 'Susurros del mar')],
 }
 # LOS PROGRAMAS SIN LISTA: la tarjeta parte una sección sin decir cómo
 SIN_LISTA = {13995: 'Competencia Cortometraje Nacional', 13999: 'Competencia Cortometraje Nacional',
@@ -295,6 +336,10 @@ def main():
                       (p[1] if p[0] != 'rotulo' else 'Muestras de Muestras'),
                       'obras': [_obra(o_) for o_ in obras]})
             r.setdefault('duracion_min', sum(o_.get('duracion_min') or 0 for o_ in obras) or None)
+        elif x['id'] in OBRAS_TARJETA:
+            r.update({'titulo': nombre, 'seccion': SECCION_TARJETA.get(cat, 'Proyecciones'),
+                      'obras': [dict(o_) for o_ in OBRAS_TARJETA[x['id']]]})
+            r.setdefault('duracion_min', x.get('duracion_min'))
         elif x['id'] in SIN_LISTA:
             # sin lista no hay programa (un `is_cortos` vacío rompe el contrato):
             # va como función de la categoría de su tarjeta; preguntado al festival
@@ -308,6 +353,7 @@ def main():
             r['duracion_min'] = max(filter(None, [o.get('duracion_min'), x.get('duracion_min')]), default=None)
         elif es_proy and x['id'] not in EXPERIENCIA:
             r.update({'titulo': nombre, 'seccion': SECCION_TARJETA.get(cat, 'Proyecciones'),
+                      **(DATOS_TARJETA.get(x['id']) or {}),
                       'pais': x.get('pais') if x.get('pais') not in ('Cali, Colombia', 'Cali') else None,
                       'duracion_min': x.get('duracion_min')})
         else:
