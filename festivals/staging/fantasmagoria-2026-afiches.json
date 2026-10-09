@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "afiches buscados fuera de TMDB y MIRADOS uno por uno",
-  "capturado": "2026-09-30",
+  "capturado": "2026-10-08",
   "regla": "solo donde TMDB y lo ya publicado no tienen afiche; el título va en la imagen y la dirección en el afiche o en su página oficial",
   "descartados": {
    "Contrafrente": "su única imagen oficial (IMDb, Shortfilmwire, tarjeta del festival) es un collage de fotogramas con el título, sin créditos: no es un afiche (decisión de Juan, 30 sep)",
@@ -24,6 +24,26 @@
   "Siempre Hay un Monstruo": {
    "archivo": "fuentes/afiches/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
    "fuente": "https://www.instagram.com/p/DZfGyK5I5w9/"
+  },
+  "Muestra Fantasmagoritos: Cortometrajes infantiles": {
+   "fuente": "https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/cortometrajes-infantiles.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)",
+   "lamina": "fuentes/afiches/fantasmagoria-2026/cortometrajes-infantiles.webp"
+  },
+  "Fantascátedra – Muestra Cortometrajes universitarios de Medellín": {
+   "fuente": "https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/fantascatedra.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct); la pieza lista sus cortos: Vientre (2026), Bajo el último aliento (2025), Nativos de la tierra negra (2026), Profano (2026), Ahora y en la hora (2026) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)",
+   "lamina": "fuentes/afiches/fantasmagoria-2026/fantascatedra.webp"
+  },
+  "Cortometrajes en competencia: deliberación del Jurado Infantil": {
+   "fuente": "https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/fantasmagoritos-cortos-en-competencia.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)",
+   "lamina": "fuentes/afiches/fantasmagoria-2026/fantasmagoritos-cortos-en-competencia.webp"
+  },
+  "Cortometrajes y Taller Fantasmagoritos con la Corporación Trama": {
+   "fuente": "https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/fantasmagoritos-grillos-animados.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)",
+   "lamina": "fuentes/afiches/fantasmagoria-2026/fantasmagoritos-grillos-animados.webp"
+  },
+  "Taller Fantasmagoritos con la Corporación Trama": {
+   "fuente": "https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/taller-fantasmagoritos-trama.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)",
+   "lamina": "fuentes/afiches/fantasmagoria-2026/taller-fantasmagoritos-trama.webp"
   }
  }
 }

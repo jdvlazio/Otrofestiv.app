@@ -125,6 +125,16 @@ def parecido(a, b):
     return max(difflib.SequenceMatcher(None, a, b).ratio(), len(wa & wb) / max(1, min(len(wa), len(wb))))
 
 
+# LA DOBLE DE JAIRO PINILLA (Archivo Fantasmagoría, 22 oct) junta dos obras en un
+# registro: se publican como programa, cada una con su ficha. Antes era UNA obra
+# y ninguna de las dos se buscaba en TMDB (8 oct).
+OBRAS_DOBLE = {
+    '2026-10-22-17-00-kondor-el-mago-el-cigarro-mortal-de-jairo-pinilla': [
+        {'titulo': 'Kondor, El Mago', 'director': 'Jairo Pinilla', 'pais': 'Colombia', 'anio': 1975},
+        {'titulo': 'El Cigarro Mortal', 'director': 'Jairo Pinilla', 'pais': 'Colombia'}],
+}
+
+
 def acceso(r):
     """La entrada de la base, con las palabras que ya usa el crudo."""
     txt = ' '.join([r.get('entrada') or ''] + (r.get('notas') or []))
@@ -190,6 +200,9 @@ def main():
             f.update({'online': True, 'stream_url': crudo.STREAM_URL, 'stream_platform': 'Twitch'})
         if r.get('invitados') or any('presencia' in n.lower() for n in r.get('notas') or []):
             f['has_qa'], f['qa_type'] = True, 'team'
+        if r['id'] in OBRAS_DOBLE:
+            f['obras'] = [dict(o) for o in OBRAS_DOBLE[r['id']]]
+            f.pop('director', None)
         salida.append({k: v for k, v in f.items() if v not in (None, '')})
     fuera = [f'{g["dia"]} {g["hora"]} {g["titulo"][:60]}' for i, g in enumerate(viejas) if i not in usados]
 

@@ -744,6 +744,24 @@
    "posterSource": "tmdb"
   },
   {
+   "titulo": "Kondor, El Mago",
+   "tmdb_id": 1558429,
+   "titulo_original": "Kondor, El Mago",
+   "poster_path": "/ybJBPMtuVtnkW6MFgxsdjhxJfZC.jpg",
+   "synopsis_es": "En el Parque Nacional de Bogotá¸ pasean unos sujetos que se cruzan con los integrantes de un paseo¸ posteriormente se encuentran con una niña que desea hacer una llamada y pide a los sujetos le cambien una moneda¸ se dirige al teléfono y llama¸ entre tanto los del paseo pasan frente a unos enamorados que se besan burlándose de ellos. Los enamorados disgustados se retiran mientras los del paseo siguen su trayectoria para realizar su piquete. Entre tanto un raponero se da cuenta que la niña que llama por teléfono posee un bolso¸ acercándose lo rapta y sale a toda velocidad y ella detrás gritando: pasan frente a un mago que se encuentra leyendo una de sus magias y pone en práctica una de ellas deteniendo al raponero y haciéndolo retroceder¸ se incorpora y devuelve el bolso a la niña¸ en ese instante se acercan los sujetos que antes habían cambiado la moneda a la niña y felicitan al mago por su oportuna acción.",
+   "synopsis_en": "",
+   "genero": "Fantasía",
+   "anio_tmdb": 1975,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "kondor-el-mago",
+   "_verificado": "declarada a mano: la doble de Jairo Pinilla del 22 oct (Archivo Fantasmagoría) junta dos obras; TMDB tiene «Kondor, El Mago» (Jairo Pinilla, Colombia, 1975) con afiche. Verificado a mano el 8 oct.",
+   "_director": "Jairo Pinilla",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/fantasmagoria-2026/kondor-el-mago.jpg",
+   "posterSource": "tmdb"
+  },
+  {
    "titulo": "La Caça",
    "tmdb_id": 1729204,
    "titulo_original": "La Caça",
@@ -1548,6 +1566,36 @@
    "poster": "/assets/fantasmagoria-2026/siempre-hay-un-monstruo.jpg",
    "posterSource": "oficial",
    "_afiche": "declarado: https://www.instagram.com/p/DZfGyK5I5w9/"
+  },
+  {
+   "titulo": "Muestra Fantasmagoritos: Cortometrajes infantiles",
+   "poster": "/assets/fantasmagoria-2026/muestra-fantasmagoritos-cortometrajes-infantiles.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/cortometrajes-infantiles.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)"
+  },
+  {
+   "titulo": "Fantascátedra – Muestra Cortometrajes universitarios de Medellín",
+   "poster": "/assets/fantasmagoria-2026/fantascatedra-muestra-cortometrajes-universitarios-de-medell.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/fantascatedra.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct); la pieza lista sus cortos: Vientre (2026), Bajo el último aliento (2025), Nativos de la tierra negra (2026), Profano (2026), Ahora y en la hora (2026) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)"
+  },
+  {
+   "titulo": "Cortometrajes en competencia: deliberación del Jurado Infantil",
+   "poster": "/assets/fantasmagoria-2026/cortometrajes-en-competencia-deliberacion-del-jurado-infanti.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/fantasmagoritos-cortos-en-competencia.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)"
+  },
+  {
+   "titulo": "Cortometrajes y Taller Fantasmagoritos con la Corporación Trama",
+   "poster": "/assets/fantasmagoria-2026/cortometrajes-y-taller-fantasmagoritos-con-la-corporacion-tr.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/fantasmagoritos-grillos-animados.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)"
+  },
+  {
+   "titulo": "Taller Fantasmagoritos con la Corporación Trama",
+   "poster": "/assets/fantasmagoria-2026/taller-fantasmagoritos-con-la-corporacion-trama.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/taller-fantasmagoritos-trama.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)"
   }
  ],
  "verificadas": {
@@ -2227,6 +2275,23 @@
    "_director": "",
    "_sondeado": "2026-10-08",
    "poster": "/assets/fantasmagoria-2026/iris-de-cristal.jpg",
+   "posterSource": "tmdb"
+  },
+  "Kondor, El Mago": {
+   "tmdb_id": 1558429,
+   "titulo_original": "Kondor, El Mago",
+   "poster_path": "/ybJBPMtuVtnkW6MFgxsdjhxJfZC.jpg",
+   "synopsis_es": "En el Parque Nacional de Bogotá¸ pasean unos sujetos que se cruzan con los integrantes de un paseo¸ posteriormente se encuentran con una niña que desea hacer una llamada y pide a los sujetos le cambien una moneda¸ se dirige al teléfono y llama¸ entre tanto los del paseo pasan frente a unos enamorados que se besan burlándose de ellos. Los enamorados disgustados se retiran mientras los del paseo siguen su trayectoria para realizar su piquete. Entre tanto un raponero se da cuenta que la niña que llama por teléfono posee un bolso¸ acercándose lo rapta y sale a toda velocidad y ella detrás gritando: pasan frente a un mago que se encuentra leyendo una de sus magias y pone en práctica una de ellas deteniendo al raponero y haciéndolo retroceder¸ se incorpora y devuelve el bolso a la niña¸ en ese instante se acercan los sujetos que antes habían cambiado la moneda a la niña y felicitan al mago por su oportuna acción.",
+   "synopsis_en": "",
+   "genero": "Fantasía",
+   "anio_tmdb": 1975,
+   "duracion_tmdb": 0,
+   "pais_tmdb": "Colombia",
+   "lbSlug": "kondor-el-mago",
+   "_verificado": "declarada a mano: la doble de Jairo Pinilla del 22 oct (Archivo Fantasmagoría) junta dos obras; TMDB tiene «Kondor, El Mago» (Jairo Pinilla, Colombia, 1975) con afiche. Verificado a mano el 8 oct.",
+   "_director": "Jairo Pinilla",
+   "_sondeado": "2026-10-08",
+   "poster": "/assets/fantasmagoria-2026/kondor-el-mago.jpg",
    "posterSource": "tmdb"
   },
   "La Caça": {
@@ -2986,6 +3051,11 @@
    "_sondeado": "2026-09-29",
    "poster": "/assets/fantasmagoria-2026/you-are-the-film.jpg",
    "posterSource": "tmdb"
+  },
+  "Taller Fantasmagoritos con la Corporación Trama": {
+   "poster": "/assets/fantasmagoria-2026/taller-fantasmagoritos-con-la-corporacion-trama.jpg",
+   "posterSource": "custom",
+   "_afiche": "declarado: https://wggmrznxnzyoufcnzdef.supabase.co/storage/v1/object/public/posters/eventos/taller-fantasmagoritos-trama.webp — la pieza oficial del festival para esta actividad en su cartelera (base v5, 7 oct) — lámina 4:5: 6 % de recorte por lado y estirón (regla SiembraFest)"
   }
  },
  "sin_ficha": [
@@ -2993,6 +3063,7 @@
   "Cortometrajes colombianos que miran al cielo",
   "Cortometrajes en competencia: deliberación del Jurado Infantil",
   "Cortometrajes y Taller Fantasmagoritos con la Corporación Trama",
+  "El Cigarro Mortal",
   "Fantascátedra – Muestra Cortometrajes universitarios de Medellín",
   "Función Grindhouse: Selección Oficial de Cortometrajes",
   "HDLT",
@@ -3026,6 +3097,10 @@
    "director": "",
    "fecha": "2026-10-07"
   },
+  "El Cigarro Mortal": {
+   "director": "Jairo Pinilla",
+   "fecha": "2026-10-08"
+  },
   "Fantascátedra – Muestra Cortometrajes universitarios de Medellín": {
    "director": "",
    "fecha": "2026-10-07"
@@ -3039,8 +3114,8 @@
    "fecha": "2026-10-07"
   },
   "Kondor, El Mago + El Cigarro Mortal de Jairo Pinilla": {
-   "director": "Jairo Pinilla",
-   "fecha": "2026-10-07"
+   "director": "",
+   "fecha": "2026-10-08"
   },
   "Muestra Catalana: Cortometrajes C-Trencada": {
    "director": "",
