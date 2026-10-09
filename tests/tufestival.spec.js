@@ -74,3 +74,38 @@ test('TF2 — recorrido en Mi Plan terminado y la historia en 1080×1920', async
   expect(r.hoja.join('|'), 'la hoja ofrece Historia y Grilla').toMatch(/Historia.*Grilla/);
   expect(r.dim, 'la historia mide 1080×1920').toEqual([1080, 1920]);
 });
+
+// TF3 — el aviso del día después (10:00 del día siguiente al cierre, abre Mi
+// Plan) y la etiqueta de Instagram tras compartir la historia. Se simula el
+// puente de avisos del iPhone para leer exactamente lo que se programa.
+test('TF3 — aviso «Tu festival» al día siguiente y etiqueta del festival al compartir', async ({ page }) => {
+  await enterFestival(page, 'biff2026', '2026-10-12T10:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const lotes = [];
+    window.webkit = { messageHandlers: { notifications: { postMessage: m => lotes.push(m) } } };
+    const f = FILMS.find(x => !x.info && x.day === '2026-10-13' && x.time && x.type !== 'event');
+    commitPlan(() => ({ schedule: [{ ...f, _title: f.title }] })); saveSavedAgenda(); await w(300);
+    const conPlan = (lotes.pop() || { avisos: [] }).avisos.find(a => a.id === '99') || null;
+    state.set('notWatched', new Set([f.title])); saveSavedAgenda(); await w(300);
+    const negado = (lotes.pop() || { avisos: [] }).avisos.find(a => a.id === '99') || null;
+    return { conPlan, negado, esperado: new Date('2026-10-15T10:00:00-05:00').getTime() };
+  });
+  expect(r.conPlan, 'con algo para contar, se programa el aviso').not.toBeNull();
+  expect(r.conPlan.at, 'al día siguiente del cierre, 10:00 hora del festival').toBe(r.esperado);
+  expect(r.conPlan.abrir, 'y abre Mi Plan').toBe('miplan');
+  expect(r.conPlan.title).toBe('Tu festival está listo.');
+  expect(r.conPlan.body).toContain('BIFF');
+  expect(r.negado, 'si negaste todo, no hay festival que contar: no hay aviso').toBeNull();
+
+  await enterFestival(page, 'biff2026', '2026-10-16T10:00:00-05:00');
+  const toast = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const f = FILMS.find(x => !x.info && x.day && x.time && x.type !== 'event');
+    commitPlan(() => ({ schedule: [{ ...f, _title: f.title }] }));
+    navigator.canShare = () => true; navigator.share = async () => {};
+    const m = await import('/src/controller/story.js'); await m.shareStory(); await w(900);
+    return (document.getElementById('prio-toast') || {}).textContent || '';
+  });
+  expect(toast, 'tras compartir, sugiere etiquetar al festival').toContain('@biffcol');
+});

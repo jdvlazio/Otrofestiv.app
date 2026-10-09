@@ -144,13 +144,22 @@ export async function shareStory(){
     const file=blob?new File([blob],fname,{type:'image/png'}):null;
     if(file&&navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
       await navigator.share({files:[file],title:titulo});
-      showToast(t('toast_compartido'),'info');
+      _etiqueta(cfg);
       return;
     }
   }catch(e){ if(e&&e.name==='AbortError') return; }
   const durl=c.toDataURL('image/png');
-  if(await _shareNativeImage(fname,durl,titulo)) return;
+  if(await _shareNativeImage(fname,durl,titulo)){ _etiqueta(cfg); return; }
   _dlDirect(durl);
+}
+
+// Tras compartir, si el festival tiene Instagram en su config, sugerir la
+// etiqueta: así el festival se entera y puede repostear (el cuarto inferior de
+// la historia queda libre justo para ese sticker). Sin el campo, el aviso de siempre.
+function _etiqueta(cfg){
+  const h=String(cfg.instagram||'').replace(/^@/,'').trim();
+  if(h) setTimeout(()=>showToast(t('share_etiqueta',{handle:h}),'info',5000),600);
+  else showToast(t('toast_compartido'),'info');
 }
 
 // ── helpers de dibujo ──

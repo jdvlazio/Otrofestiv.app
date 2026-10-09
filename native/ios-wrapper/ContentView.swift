@@ -110,15 +110,17 @@ struct WebViewContainer: UIViewRepresentable {
                     guard granted else { return }
                     let now = Date().timeIntervalSince1970
                     // iOS guarda hasta 64 pendientes por app: los más próximos primero.
-                    let prox = avisos.compactMap { a -> (String, String, String, Double)? in
+                    // «abrir»: destino al tocar el aviso (el del día después → Mi Plan, #1055).
+                    let prox = avisos.compactMap { a -> (String, String, String, Double, String?)? in
                         guard let id = a["id"] as? String, let t = a["title"] as? String,
                               let b = a["body"] as? String,
                               let at = (a["at"] as? NSNumber)?.doubleValue else { return nil }
-                        return (id, t, b, at / 1000)
+                        return (id, t, b, at / 1000, a["abrir"] as? String)
                     }.filter { $0.3 > now + 1 }.sorted { $0.3 < $1.3 }.prefix(60)
-                    for (id, t, b, at) in prox {
+                    for (id, t, b, at, abrir) in prox {
                         let c = UNMutableNotificationContent()
                         c.title = t; c.body = b; c.sound = .default
+                        if let abrir = abrir { c.userInfo = ["abrir": abrir] }
                         let trig = UNTimeIntervalNotificationTrigger(timeInterval: at - now, repeats: false)
                         center.add(UNNotificationRequest(identifier: prefix + id, content: c, trigger: trig))
                     }
@@ -129,6 +131,15 @@ struct WebViewContainer: UIViewRepresentable {
         func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification,
                                     withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
             completionHandler([.banner, .sound, .list])
+        }
+        // Tocar un aviso con destino: «Tu festival» abre Mi Plan (mismo camino que
+        // la Live Activity, otfOpenPlan). Sin destino, la app abre donde estaba.
+        func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse,
+                                    withCompletionHandler completionHandler: @escaping () -> Void) {
+            if (response.notification.request.content.userInfo["abrir"] as? String) == "miplan" {
+                NotificationCenter.default.post(name: .otfOpenPlan, object: nil)
+            }
+            completionHandler()
         }
 
         func userContentController(_ uc: WKUserContentController,

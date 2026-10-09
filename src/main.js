@@ -504,7 +504,7 @@ FESTIVAL_STORAGE_KEY=(storage.getActiveFestId()||_DEFAULT_FEST_ID)+'_';
 // BUILD_VERSION: cambia en cada deploy.
 // Al cargar, compara con localStorage. Si difiere → reload duro.
 // sessionStorage evita loops infinitos dentro de la misma sesión.
-const BUILD_VERSION='202610091038';
+const BUILD_VERSION='202610091043';
 (function(){
   // _vk eliminado — el build version se accede vía storage.getBuild()/setBuild()
   const _sk='otrofestiv_reloaded';
@@ -1022,6 +1022,9 @@ try{
   const _capApp=window.Capacitor?.Plugins?.App;
   if(window.Capacitor?.isNativePlatform?.()&&_capApp?.addListener){
     _capApp.addListener('backButton',()=>{ if(!_closeTopSheet()) _capApp.minimizeApp?.(); });
+    // Tocar un aviso que trae destino (el del día después: «Tu festival») abre Mi Plan.
+    window.Capacitor.Plugins?.LocalNotifications?.addListener?.('localNotificationActionPerformed',
+      a=>{ if(a?.notification?.extra?.abrir==='miplan'){ try{ switchMainNav('mnav-miplan'); showAgView(); }catch(e){} } });
   }
 }catch(e){ /* sin plugin: comportamiento de siempre */ }
 
