@@ -2504,7 +2504,7 @@ test('T172 — Mi Plan e Intereses cuentan lo mismo, y quien fue a todo puede co
       switchMainNav('mnav-miplan'); showAgView();
       await new Promise(r => setTimeout(r, 900));
       const recap = document.querySelector('.recap-hdr');
-      const compartir = [...document.querySelectorAll('.ag-save-btn[data-action="shareDiary"]')]
+      const compartir = [...document.querySelectorAll('.ag-save-btn[data-action="abrirCompartirFestival"]')]
         .filter(e => e.getBoundingClientRect().height > 0).length;
       // renderAgenda() explícito: cambiar de pestaña sola no re-dibuja la vista
       // (medido: #ag-view queda con el contenido anterior y en display:none).
@@ -2549,7 +2549,7 @@ test('T172 — Mi Plan e Intereses cuentan lo mismo, y quien fue a todo puede co
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 900));
     return { diario: !!document.querySelector('.saved-agenda'),
-      compartir: [...document.querySelectorAll('.ag-save-btn[data-action="shareDiary"]')]
+      compartir: [...document.querySelectorAll('.ag-save-btn[data-action="abrirCompartirFestival"]')]
         .filter(e => e.getBoundingClientRect().height > 0).length };
   });
   expect(negadas.diario, 'el plan vivido se sigue pintando').toBe(true);
@@ -2561,7 +2561,7 @@ test('T172 — Mi Plan e Intereses cuentan lo mismo, y quien fue a todo puede co
     switchMainNav('mnav-miplan'); showAgView();
     await new Promise(r => setTimeout(r, 900));
     return { recap: !!document.querySelector('.recap-hdr'),
-      compartir: [...document.querySelectorAll('.ag-save-btn[data-action="shareDiary"]')]
+      compartir: [...document.querySelectorAll('.ag-save-btn[data-action="abrirCompartirFestival"]')]
         .filter(e => e.getBoundingClientRect().height > 0).length };
   });
   expect(vacio.recap, 'sin plan ni marcas no hay recap que mostrar').toBe(false);
