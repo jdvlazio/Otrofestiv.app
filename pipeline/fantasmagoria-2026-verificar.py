@@ -37,6 +37,8 @@ CONTRADICCIONES = {
     ('Critters', '2026-10-17', '19:00'): 'ver la del domingo 18',
     ('Pura Sangre', '2026-10-20', '18:30'): 'la página de largos dice 6:30 p. m.; la base v2, 18:00. Se publica la base',
     ('Pura Sangre', '2026-10-20', '18:00'): 'ver la de las 18:30',
+    # la base v5 (7 oct) la pasa a las 19:00 en la Sala 1; la página de largos sigue en 18:30
+    ('Schichinin No Samurai (Seven Samurai)', '2026-10-16', '19:00'): 'la página de largos dice 6:30 p. m. (Sala 2); la base v5, 19:00 en la Sala 1. Se publica la base',
 }
 
 

@@ -79,6 +79,7 @@ SEDES = {
     'La Villa': 'Nueva Villa de Aburrá',
     # el mismo punto: Google Maps lo llama «Silencio y Ruido» (ver -venues-geo)
     'Bar Silencio Ruido': 'Silencio',
+    'Bar Silencio / Ruido': 'Silencio',     # así lo escribe la v5 (7 oct)
     'Parque de los Deseos': 'Parque de los Deseos',
     'Universidad Luis Amigó': 'Universidad Católica Luis Amigó',
     'La Comarca': 'La Comarca',
