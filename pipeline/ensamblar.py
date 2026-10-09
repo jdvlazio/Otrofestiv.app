@@ -199,6 +199,44 @@ def mayuscula_inicial(s):
     return s
 
 
+CONSERVABLES = ('director', 'year', 'duration', 'country', 'synopsis', 'synopsis_lang', 'genre', 'title_en')
+
+
+def _conservar_publicado(fid, films):
+    """Lo que ya publicamos de una obra no se pierde porque la fuente lo calle.
+
+    Ficcali, 8 oct 2026: la edición del sitio borró año, duración, dirección o
+    sinopsis de 8 fichas (Para vivir, Niñxs, Mi vecino Totoro…) y el build nuevo
+    las publicaba vacías. Que una página deje de decir algo no hace falso el
+    dato que publicó antes. Para cada obra del build (también dentro de los
+    programas) que YA está en festivals/<fid>.json, un campo conservable vacío
+    toma el valor publicado y queda anotado en `_conservado` (clave interna: el
+    publicador no la escribe). Solo rellena huecos: lo que la fuente SÍ dice,
+    manda. Una obra que cambia de título no se reconoce (titulos_anteriores)."""
+    p = f'{REPO}/festivals/{fid}.json'
+    if not os.path.exists(p):
+        return
+    pub = {}
+    for f in json.load(open(p, encoding='utf-8')).get('films') or []:
+        for o in [f] + (f.get('film_list') or []):
+            if o.get('title') and o.get('title') not in pub:
+                pub[o['title']] = o
+    n = 0
+    for f in films:
+        for o in [f] + (f.get('film_list') or []):
+            v = pub.get(o.get('title'))
+            if not v:
+                continue
+            kept = [k for k in CONSERVABLES if not o.get(k) and v.get(k)]
+            for k in kept:
+                o[k] = v[k]
+            if kept:
+                o['_conservado'] = kept
+                n += 1
+    if n:
+        print(f'  conservado de lo publicado: {n} obra(s) con campos que la fuente dejó de decir')
+
+
 def _titulos_anteriores(fid, films):
     """`titulos_anteriores` desde festivals/staging/<id>-titulos-anteriores.json.
 
@@ -508,6 +546,7 @@ def ensamblar(fid, escribir=True):
                     _o[_k] = mayuscula_inicial(_o[_k])
         # programa o actividad: su texto es DESCRIPCIÓN, no sinopsis (lib)
         lib.separar_descripcion(_f)
+    _conservar_publicado(fid, films)
     _titulos_anteriores(fid, films)
     out['films'] = films
 
