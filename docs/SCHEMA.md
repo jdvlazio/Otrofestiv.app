@@ -394,12 +394,21 @@ Un **bloque de cortos** agrupa varios cortometrajes que se proyectan juntos:
 
 ```jsonc
 { "title": "Cortometraje Documental", "section": "📽️ Cortometrajes",
-  "type": "event", "is_cortos": true, "flags": "<derivado>",
+  "type": "film", "is_cortos": true, "flags": "<derivado>",
   "film_list": [ { "title": "Madres de nacimiento", "director": "...",
                    "country": "Colombia/Francia", "genre": "Documental",
                    "duration": "18 min" }, ... ] }
 ```
 
+- **Un bloque de cortos NO es `type: "event"`** (va como `film` o sin `type`):
+  con `event` sus cortos dejaban de calificarse y de contar como obras vistas
+  (FICMontañas y Tribeca, corregidos en #1058).
+- **Evento que proyecta obras** (apertura con película, cineconcierto, Award
+  Screening ya anunciado): sigue siendo `type: "event"` y las obras van en su
+  `film_list`, verbatim. Regla «lo visto y lo asistido» (Juan, 9 oct 2026):
+  cuenta 1 actividad + sus obras (`obrasDe`, `domain/film.js`). Nunca se
+  infiere por el título. También aplica a una actividad abierta (`info: true`)
+  que expone obras.
 - `is_cortos: true` **requiere** `film_list` no vacío (guard bloqueante en
   `validate-festivals.js` — un bloque vacío invisibiliza cortos que sí están).
 - Cada item del `film_list` es **buscable como card propia** (`_searchAll` los
