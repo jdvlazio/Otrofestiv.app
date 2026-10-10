@@ -1,0 +1,166 @@
+{
+ "_nota": "22 FICPA — Festival Internacional de Cine de Pasto (13–17 oct 2026). La programación es la página web oficial (HTML estructurado, modificada el 9 oct); la sección y el crédito, de la página de seleccionados. Radar #1071.",
+ "radar": 1071,
+ "pasos": [
+  {
+   "cmd": "python3 pipeline/radar.py ficpa-2026",
+   "que": "el volcado del radar #1071"
+  },
+  {
+   "cmd": "python3 pipeline/ficpa-2026-crudo.py",
+   "que": "programación oficial + alterna de ficpa.co → crudo, con la sección de la Selección Oficial"
+  },
+  {
+   "cmd": "python3 pipeline/enriquecer.py ficpa-2026 --posters",
+   "que": "crudo → enriquecido con la cascada de TMDB y lo ya publicado"
+  },
+  {
+   "cmd": "python3 pipeline/proimagenes.py ficpa-2026 --posters",
+   "que": "el cine colombiano que TMDB no tiene"
+  },
+  {
+   "cmd": "python3 pipeline/geocodificar.py ficpa-2026 --centro 1.2136,-77.2811 --ciudad \"Pasto, Nariño\"",
+   "que": "pines: los manuales se respetan"
+  },
+  {
+   "cmd": "python3 pipeline/ensamblar.py ficpa-2026",
+   "que": "el build"
+  },
+  {
+   "cmd": "python3 pipeline/encuadrar-posters.py ficpa-2026 --aplicar --desde festivals/staging/ficpa-2026-build.json",
+   "que": "los afiches a 2:3"
+  },
+  {
+   "cmd": "python3 pipeline/ficpa-2026-verificar.py",
+   "que": "el build contra la página, en los dos sentidos, y cada sede con pin"
+  }
+ ],
+ "festival": {
+  "crudo": "festivals/staging/ficpa-2026-crudo.json",
+  "enriquecido": "festivals/staging/ficpa-2026-enriquecido.json",
+  "geo": "festivals/staging/ficpa-2026-venues-geo.json",
+  "_por_que_secciones": "Las de la Selección Oficial, tal cual (Ecos del Mundo y Latidos del Cine Colombiano son las dos mitades de «Sol de los Pastos»); Academia e Industria son los dos menús del sitio; «Programación alterna» es el nombre que el sitio da a las funciones fuera de las salas principales.",
+  "secciones": {
+   "Ecos del Mundo": {
+    "emoji": "🌍",
+    "en": "Echoes of the World",
+    "archetype": "Competencia"
+   },
+   "Latidos del Cine Colombiano": {
+    "emoji": "💓",
+    "en": "Heartbeats of Colombian Cinema",
+    "archetype": "Competencia"
+   },
+   "Cámaras de Barniz": {
+    "emoji": "🎨",
+    "en": "Cámaras de Barniz — Nariño Cinema",
+    "archetype": "Competencia"
+   },
+   "Churo Cósmico": {
+    "emoji": "🌀",
+    "en": "Churo Cósmico",
+    "archetype": "Perspectivas / Miradas"
+   },
+   "Programación alterna": {
+    "emoji": "🗺️",
+    "en": "Alternative Program",
+    "archetype": "Muestra / País"
+   },
+   "Academia": {
+    "emoji": "🎓",
+    "en": "Academy",
+    "archetype": "Charlas / Industria"
+   },
+   "Industria": {
+    "emoji": "💼",
+    "en": "Industry",
+    "archetype": "Charlas / Industria"
+   },
+   "Clausura": {
+    "emoji": "🏆",
+    "en": "Closing",
+    "archetype": "Clausura"
+   }
+  },
+  "sedes": {
+   "Casa de la Cultura": [
+    "Casa de la Cultura - Pasto",
+    ""
+   ],
+   "Universidad CESMAG": [
+    "Universidad CESMAG - Pasto",
+    ""
+   ],
+   "Universidad Mariana": [
+    "Universidad Mariana - Pasto",
+    ""
+   ],
+   "Cinemas Valle de Atriz": [
+    "Cinemas Valle de Atriz - Pasto",
+    ""
+   ],
+   "Banco de la República": [
+    "Banco de la República - Pasto",
+    ""
+   ],
+   "Salón Comunal El Rosario, Jamondino": [
+    "Salón Comunal El Rosario, Jamondino - Pasto",
+    ""
+   ],
+   "Teatro Colombia": [
+    "Teatro Colombia - Pasto",
+    ""
+   ],
+   "Chachagüí": [
+    "Chachagüí - Chachagüí",
+    ""
+   ],
+   "Parque Principal de Yacuanquer": [
+    "Parque Principal de Yacuanquer - Yacuanquer",
+    ""
+   ],
+   "Fundación Universitaria San Martín, Sede Mijitayo": [
+    "Fundación Universitaria San Martín, Sede Mijitayo - Pasto",
+    ""
+   ],
+   "Universidad Cooperativa de Colombia, Torobajo": [
+    "Universidad Cooperativa de Colombia, Torobajo - Pasto",
+    ""
+   ],
+   "Universidad de Nariño, Sede Torobajo": [
+    "Universidad de Nariño, Sede Torobajo - Pasto",
+    ""
+   ],
+   "Casa Páramo": [
+    "Casa Páramo - Pasto",
+    ""
+   ],
+   "Parque Principal de La Florida": [
+    "Parque Principal de La Florida - La Florida",
+    ""
+   ]
+  },
+  "name": "FICPA",
+  "displayName": "FICPA",
+  "fullName": "22 FICPA — Festival Internacional de Cine de Pasto",
+  "shortName": "FICPA",
+  "tagline": "Festival Internacional de Cine de Pasto",
+  "city": "Pasto",
+  "country": "CO",
+  "dates": "13–17 OCT",
+  "dates_en": "OCT 13–17",
+  "year": 2026,
+  "timezoneOffset": "-05:00",
+  "storageKey": "ficpa2026_",
+  "festivalStartStr": "2026-10-13T00:00:00",
+  "festivalEndStr": "2026-10-17T23:59:00",
+  "sharedSlotIsOneScreening": false,
+  "mes_es": "octubre",
+  "dias_vacios": [],
+  "_fuentes_versionadas": {
+   "festivals/staging/ficpa-2026-radar.json": "el volcado del radar #1071, que escribe y relee pipeline/radar.py",
+   "festivals/staging/ficpa-2026-correcciones.json": "fichas de TMDB declaradas a mano y el porqué de cada obra sin afiche",
+   "festivals/staging/ficpa-2026-sinopsis.json": "sinopsis declaradas (traducción nuestra de la oficial en inglés), cada una con su fuente; la lee enriquecer.py"
+  }
+ }
+}

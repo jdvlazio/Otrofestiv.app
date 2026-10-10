@@ -1,0 +1,1211 @@
+{
+ "_provenance": {
+  "fuente": "ficpa.co — Programación oficial 2026 (WP programacion2026) + Selección Oficial",
+  "capturado": "2026-10-10",
+  "url": "https://www.ficpa.co/programacion2026/",
+  "metodo": "HTML estructurado de la página, tarjeta por tarjeta; la sección y el crédito, de la página de seleccionados"
+ },
+ "_excluidas": [
+  "2026-10-14 10:00 FILMS IN PROGRESS: Ley de Cine. Ingreso solo para proyectos : solo para proyectos participantes previamente inscritos (lo dice la tarjeta)",
+  "2026-10-14 15:00 SEMINARIO CINE EN MIL PALABRAS – PONENCIAS: encabezado de bloque (sus tarjetas se publican solas)",
+  "2026-10-14 21:00 NETWORKING – Papalote Carrera 40 #19-120 Palermo. Cóctel de : «Cóctel de cortesía para acreditados» / «Con acreditación»",
+  "2026-10-15 10:00 FILMS IN PROGRESS: Asesorías personalizadas one to one. Ingr: solo para proyectos participantes previamente inscritos (lo dice la tarjeta)",
+  "2026-10-15 15:00 SEMINARIO CINE EN MIL PALABRAS – PONENCIAS: encabezado de bloque (sus tarjetas se publican solas)",
+  "2026-10-15 18:00 LARGOMETRAJE COLOMBIANO DE FICCIÓN: encabezado de bloque (sus tarjetas se publican solas)",
+  "2026-10-15 21:00 NETWORKING: El Colibrí y el Mago, Centro, Cl 18 #21B 11. Cóc: «Cóctel de cortesía para acreditados» / «Con acreditación»",
+  "2026-10-16 19:30 Función Privada – Work in Progress “DE TOPOS Y SAPOS”: «Con invitación de la producción»",
+  "2026-10-16 21:00 NETWORKING – Papalote Carrera 40 #19-120 Palermo. Cóctel de : «Cóctel de cortesía para acreditados» / «Con acreditación»",
+  "2026-10-17 09:00 ENCUENTRO DEL SECTOR AUDIOVISUAL NARIÑENSE: «Espacio para personas nariñenses vinculadas al sector»: no es para el público",
+  "2026-10-17 16:30 GALA DE CINE NARIÑENSE: encabezado de bloque (sus tarjetas se publican solas)",
+  "2026-10-17 21:00 Fiesta de clausura – Casa Paramo: «Cóctel de cortesía para acreditados» / «Con acreditación»",
+  "2026-10-16 09:30 Cortos colegiales y cine infantil (I.E. Luis Eduardo Mora Osejo): funciones dentro de un colegio, para sus estudiantes",
+  "2026-10-16 07:00 Taller clown: Cómo se hace una película (I.E. San Juan Bosco): funciones y taller dentro de un colegio",
+  "2026-10-16 07:00 Cortos colegiales y cine infantil (I.E. San Juan Bosco): funciones y taller dentro de un colegio",
+  "2026-10-14 08:00 Taller: Cuerpo, emociones y cine (Chachagüí · I.E. Chachagüí): taller dentro de un colegio",
+  "2026-10-15 09:00 Taller: Cuerpo, emociones y cine (Yacuanquer · I.E. de Concentración de De): taller dentro de un colegio",
+  "2026-10-16 09:00 Taller: Cuerpo, emociones y cine (La Florida · I.E. de la Inmaculada de Ro): taller dentro de un colegio",
+  "2026-10-15 16:00 Tres lunas nuevas y Ayuno y Cenizas (Centro Comercial Único · Cinemas Royal F): el festival la declara «fuera de la programación oficial»"
+ ],
+ "funciones": [
+  {
+   "dia": "2026-10-13",
+   "hora": "10:00",
+   "sede": "Casa de la Cultura",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Master Class sobre Dirección de Cine",
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "seccion": "Academia",
+   "invitados": "A cargo de Harold Trompetero (Colombia).",
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-10-13",
+   "hora": "10:00",
+   "sede": "Universidad CESMAG",
+   "sala": "Auditorio Santa Clara",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Conversatorio sobre la experiencia en Cine y Televisión",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Academia",
+   "invitados": "A cargo de María Helena Doëring (Colombia).",
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-10-13",
+   "hora": "10:00",
+   "sede": "Universidad Mariana",
+   "sala": "Auditorio Jesús de Nazareth",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Master Class \"Desarrollar el Carisma\"",
+   "tipo": "evento",
+   "event_kind": "masterclass",
+   "seccion": "Academia",
+   "invitados": "A cargo de Diego Trujillo (Colombia).",
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-10-13",
+   "hora": "15:00",
+   "sede": "Casa de la Cultura",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "info": true,
+   "titulo": "Apertura de la exposición \"Nariño como locación cinematográfica\" y \"Vitrina de servicios audiovisuales\"",
+   "tipo": "evento",
+   "event_kind": "apertura",
+   "seccion": "Academia",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la tarjeta no da hora de fin"
+  },
+  {
+   "dia": "2026-10-13",
+   "hora": "18:30",
+   "sede": "Cinemas Valle de Atriz",
+   "sala": "Sala 2",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre, sujeto a aforo",
+   "titulo": "Lactar",
+   "director": "Harold Trompetero",
+   "pais": "Colombia",
+   "duracion_min": 75,
+   "seccion": "Latidos del Cine Colombiano",
+   "premiere": "Inauguración",
+   "sinopsis": "Una mujer de 62 años, atrapada en una vida de privilegios vacíos, queda embarazada de su chofer. Enfrentándose al rechazo de su familia y de la sociedad, decide luchar por traer a la vida un bebé que parece imposible a su tardía edad, sin importar las consecuencias."
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "08:30",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Taller Central \"Videoclip Branding\"",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Academia",
+   "invitados": "A cargo de Juan David Betancur (Bogotá).",
+   "duracion_min": 270
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "08:30",
+   "sede": "Banco de la República",
+   "sala": "Sala Emi",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Taller Nuestro Talento \"Cine para no cineastas\"",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Academia",
+   "invitados": "A cargo de Gabriela Pazmiño (Colombia).",
+   "duracion_min": 270
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "09:00",
+   "sede": "Universidad Mariana",
+   "sala": "Auditorio San José",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Conversatorio con María Jimena Duzán y proyección de \"Después del frío\"",
+   "tipo": "evento",
+   "event_kind": "conversatorio",
+   "seccion": "Academia",
+   "invitados": "A cargo de María Jimena Duzán (Colombia).",
+   "sinopsis": "Proyección de «Después del frío» (María Jimena Duzán, largometraje colombiano documental) y conversatorio con su directora.",
+   "duracion_min": 180
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "15:00",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Cine comunitario en el encuentro de su propio relato",
+   "tipo": "evento",
+   "event_kind": "ponencia",
+   "seccion": "Academia",
+   "invitados": "A cargo de Colectivo Estrella de Chambú (Pasto).",
+   "duracion_min": 30
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "15:00",
+   "sede": "Universidad CESMAG",
+   "sala": "Salón de Teatro",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Cortos universitarios",
+   "obras": [
+    {
+     "titulo": "Cantar de Noche Larga",
+     "director": "Eller Solarte"
+    },
+    {
+     "titulo": "Matas, marchitas vivas",
+     "director": "Johanna Martínez"
+    },
+    {
+     "titulo": "Muerta la ilusión",
+     "director": "Camilo Yandún"
+    },
+    {
+     "titulo": "Contaminado",
+     "director": "Cristhian Izquierdo"
+    },
+    {
+     "titulo": "Recuerdos",
+     "director": "Valentina López"
+    }
+   ],
+   "seccion": "Cámaras de Barniz",
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "15:00",
+   "sede": "Universidad CESMAG",
+   "sala": "Salón de Teatro",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Selección Churo Cósmico: Identidades",
+   "obras": [
+    {
+     "titulo": "Memoria, territorio y vida",
+     "director": "Amparo Cuaspud, Alba Cuaspud y Mónica Cuaspud"
+    },
+    {
+     "titulo": "Tudnum, Tierra Sagrada",
+     "director": "William Ceballos"
+    },
+    {
+     "titulo": "En su Sombra Fértil",
+     "director": "Andrés Dávila"
+    }
+   ],
+   "seccion": "Churo Cósmico",
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "15:30",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "La imaginación sintética: Estéticas y posibilidades del cine con I.A",
+   "tipo": "evento",
+   "event_kind": "ponencia",
+   "seccion": "Academia",
+   "invitados": "A cargo de William Lucero (Pasto).",
+   "duracion_min": 30
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "16:00",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "El río como víctima del conflicto",
+   "tipo": "evento",
+   "event_kind": "ponencia",
+   "seccion": "Academia",
+   "invitados": "A cargo de Juan Camilo Ocaña (Pasto).",
+   "duracion_min": 30
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "16:00",
+   "sede": "Salón Comunal El Rosario, Jamondino",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Churo Cósmico: animación y videoclip nariñense",
+   "obras": [],
+   "seccion": "Churo Cósmico",
+   "sinopsis": "Proyección en Jamondino. Entrada libre.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la tarjeta no la da"
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "16:30",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Aquello que sostiene una película: La producción",
+   "tipo": "evento",
+   "event_kind": "ponencia",
+   "seccion": "Academia",
+   "invitados": "A cargo de Carolina Beltrán (Pasto).",
+   "duracion_min": 30
+  },
+  {
+   "titulo": "Cortos internacionales",
+   "dia": "2026-10-14",
+   "hora": "18:00",
+   "sede": "Teatro Colombia",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "has_qa": true,
+   "qa_type": "team",
+   "obras": [
+    {
+     "titulo": "Cautivo",
+     "director": "Hernani Rodríguez",
+     "pais": "Venezuela"
+    },
+    {
+     "titulo": "La fuerza del silencio",
+     "director": "Samuel Vela",
+     "pais": "España, Etiopía /Mekelle/ Tigray/ Wukro"
+    }
+   ],
+   "seccion": "Ecos del Mundo",
+   "duracion_min": 30,
+   "_duracion_de": "el hueco hasta la siguiente función en la misma sede"
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "18:30",
+   "sede": "Teatro Colombia",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Corrientes del Amazonas",
+   "director": "Alberto Moncayo",
+   "pais": "Francia, Colombia",
+   "duracion_min": 52,
+   "seccion": "Latidos del Cine Colombiano",
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "19:00",
+   "sede": "Chachagüí",
+   "ciudad": "Chachagüí",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Animación",
+   "obras": [
+    {
+     "titulo": "Harvey & Maude",
+     "director": "Alex Minerales",
+     "pais": "España"
+    },
+    {
+     "titulo": "Tinku",
+     "director": "Román Nina",
+     "pais": "Bolivia"
+    },
+    {
+     "titulo": "Tuktu, Padre Maíz",
+     "director": "Mauricio Prieto",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Relatos del Camino",
+     "director": "Daniel Prieto",
+     "pais": "Colombia"
+    }
+   ],
+   "seccion": "Churo Cósmico",
+   "duracion_min": 46
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "19:00",
+   "sede": "Parque Principal de Yacuanquer",
+   "ciudad": "Yacuanquer",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Cortos invitados de México",
+   "obras": [
+    {
+     "titulo": "Ellir",
+     "director": "Laura Quintanilla"
+    },
+    {
+     "titulo": "Tres viudas",
+     "director": "Clara Toscano"
+    },
+    {
+     "titulo": "La casa que nunca fue",
+     "director": "Emil María Ravelero"
+    },
+    {
+     "titulo": "Chihuato",
+     "director": "Óscar Tovar"
+    },
+    {
+     "titulo": "Las almas errantes",
+     "director": "Gael Romero"
+    },
+    {
+     "titulo": "BOCA",
+     "director": "Diego Villaseñor"
+    }
+   ],
+   "seccion": "Programación alterna",
+   "duracion_min": 90
+  },
+  {
+   "dia": "2026-10-14",
+   "hora": "19:30",
+   "sede": "Teatro Colombia",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Allá, cartas al corazón",
+   "director": "Montserrat Larqué",
+   "pais": "México",
+   "duracion_min": 102,
+   "seccion": "Ecos del Mundo",
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "08:30",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Taller Nuestro Talento \"VFX (IA): Efectos visuales de bajo costo para el cine de lo real\"",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Academia",
+   "invitados": "A cargo de Kevin Bradley Delgado (Colombia).",
+   "duracion_min": 270
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "10:00",
+   "sede": "Fundación Universitaria San Martín, Sede Mijitayo",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Cine foro: Medio ambiente / Homo Plastic",
+   "seccion": "Academia",
+   "duracion_min": 71,
+   "tipo": "evento",
+   "event_kind": "foro",
+   "sinopsis": "Proyección de «Homo Plastic» (Julio Pérez del Campo, 71 min) y foro con Roberto Ramírez Espitia (México)."
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "10:00",
+   "sede": "Universidad Cooperativa de Colombia, Torobajo",
+   "sala": "Sala de Audiencias",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "El Cielo al Revés",
+   "seccion": "Latidos del Cine Colombiano",
+   "director": "Jorge Enrique Rojas",
+   "pais": "Colombia",
+   "duracion_min": 63
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "14:00",
+   "sede": "Casa de la Cultura",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Taller Central \"Dirección de actores para el cine de Terror\"",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Academia",
+   "invitados": "A cargo de Carlos Ortiz (Bogotá).",
+   "duracion_min": 240
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "15:00",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "La imagen como documento histórico",
+   "tipo": "evento",
+   "event_kind": "ponencia",
+   "seccion": "Academia",
+   "invitados": "A cargo de María Rosalía Gómez (Ecuador).",
+   "duracion_min": 30
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "15:00",
+   "sede": "Universidad CESMAG",
+   "sala": "Salón de Teatro",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Kueka, Memoria Ancestral",
+   "seccion": "Ecos del Mundo",
+   "director": "María de los Ángeles Peña Fonseca",
+   "pais": "Venezuela",
+   "duracion_min": 60
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "15:30",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Del cine al click",
+   "tipo": "evento",
+   "event_kind": "ponencia",
+   "seccion": "Academia",
+   "invitados": "A cargo de Danilo Carrillo (Bogotá).",
+   "duracion_min": 30
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "16:00",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Más allá de los tres actos",
+   "tipo": "evento",
+   "event_kind": "ponencia",
+   "seccion": "Academia",
+   "invitados": "A cargo de Paúl López (Ecuador).",
+   "duracion_min": 30
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "16:00",
+   "sede": "Universidad Mariana",
+   "sala": "Sala Audiovisual Pedro Schumacher",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "El Perdón",
+   "seccion": "Ecos del Mundo",
+   "director": "Joaquín Lisón",
+   "pais": "España",
+   "duracion_min": 83
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "16:00",
+   "sede": "Universidad de Nariño, Sede Torobajo",
+   "sala": "Sala de Proyecciones Biblioteca",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Cortos experimentales internacionales y colombianos",
+   "obras": [
+    {
+     "titulo": "Esperando a los bárbaros",
+     "director": "Georges Sifianos",
+     "pais": "Grecia"
+    },
+    {
+     "titulo": "Chaika",
+     "director": "Ingrid Paola Bonilla Rodríguez",
+     "pais": "Colombia/Cuba"
+    },
+    {
+     "titulo": "AtmaSphaira",
+     "director": "Sandra Rengifo"
+    }
+   ],
+   "seccion": "Ecos del Mundo",
+   "duracion_min": 39
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "16:00",
+   "sede": "Universidad de Nariño, Sede Torobajo",
+   "sala": "Sala de Proyecciones Biblioteca",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Cortos universitarios",
+   "obras": [
+    {
+     "titulo": "Cantar de Noche Larga",
+     "director": "Eller Solarte"
+    },
+    {
+     "titulo": "Matas, marchitas vivas",
+     "director": "Johanna Martínez"
+    },
+    {
+     "titulo": "Muerta la ilusión",
+     "director": "Camilo Yandún"
+    },
+    {
+     "titulo": "Contaminado",
+     "director": "Cristhian Izquierdo"
+    },
+    {
+     "titulo": "Recuerdos",
+     "director": "Valentina López"
+    }
+   ],
+   "seccion": "Cámaras de Barniz",
+   "duracion_min": 38
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "16:30",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Carnaval, 100 años legado vivo: Memoria y exploración audiovisual",
+   "tipo": "evento",
+   "event_kind": "ponencia",
+   "seccion": "Academia",
+   "invitados": "A cargo de Lorena Burbano (Pasto).",
+   "duracion_min": 30
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "17:00",
+   "sede": "Casa Páramo",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Donde el Sol Brilla con Fuerza",
+   "seccion": "Ecos del Mundo",
+   "director": "Can-zhao Lam",
+   "pais": "China",
+   "duracion_min": 68
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "18:00",
+   "sede": "Teatro Colombia",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "El Huaquero",
+   "director": "Harold DeVasten",
+   "pais": "Colombia",
+   "duracion_min": 94,
+   "seccion": "Latidos del Cine Colombiano"
+  },
+  {
+   "dia": "2026-10-15",
+   "hora": "19:30",
+   "sede": "Teatro Colombia",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Sierra: el álbum mortuorio",
+   "director": "Carlos Ortiz",
+   "pais": "Colombia",
+   "duracion_min": 102,
+   "seccion": "Latidos del Cine Colombiano",
+   "has_qa": true,
+   "qa_type": "team"
+  },
+  {
+   "dia": "2026-10-16",
+   "hora": "08:30",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Taller Nuestro Talento \"Galeras 2037. Del plano al mundo jugable (AAA aplicados al cine)\"",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Academia",
+   "invitados": "A cargo de Andrés XR 369 – Tallerista.",
+   "duracion_min": 270
+  },
+  {
+   "dia": "2026-10-16",
+   "hora": "09:00",
+   "sede": "Casa de la Cultura",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Taller de música para cine",
+   "tipo": "evento",
+   "event_kind": "taller",
+   "seccion": "Academia",
+   "invitados": "A cargo de Nicolas Rojas.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la tarjeta no da hora de fin"
+  },
+  {
+   "dia": "2026-10-16",
+   "hora": "10:00",
+   "sede": "Banco de la República",
+   "sala": "Sala de Apoyo",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Films in Progress: pitch de proyectos participantes",
+   "tipo": "evento",
+   "event_kind": "evento",
+   "seccion": "Industria",
+   "duracion_min": 120
+  },
+  {
+   "dia": "2026-10-16",
+   "hora": "10:00",
+   "sede": "Universidad Mariana",
+   "sala": "Sala Audiovisual Pedro Schumacher",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "El Viento y Todos los Tiempos",
+   "seccion": "Ecos del Mundo",
+   "director": "Carla Valencia Dávila",
+   "pais": "Ecuador",
+   "duracion_min": 83
+  },
+  {
+   "dia": "2026-10-16",
+   "hora": "15:00",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Foro de Cine y Pedagogía",
+   "tipo": "evento",
+   "event_kind": "foro",
+   "seccion": "Academia",
+   "invitados": "A cargo de Universidad Central de Bogotá, Universidad de Nariño, Universidad CESMAG, Universidad Mariana.",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la tarjeta no da hora de fin"
+  },
+  {
+   "dia": "2026-10-16",
+   "hora": "15:00",
+   "sede": "Universidad Cooperativa de Colombia, Torobajo",
+   "sala": "Sala de Audiencias",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Selección Churo Cósmico: Sociedad y Libertades",
+   "obras": [
+    {
+     "titulo": "La Pandemia del Feminicidio",
+     "director": "Alejandra Calderón"
+    },
+    {
+     "titulo": "Hijas de Eva",
+     "director": "Daniela Narváez"
+    }
+   ],
+   "seccion": "Churo Cósmico",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la tarjeta no la da"
+  },
+  {
+   "dia": "2026-10-16",
+   "hora": "15:00",
+   "sede": "Universidad Cooperativa de Colombia, Torobajo",
+   "sala": "Sala de Audiencias",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Trabajo, economías y futuro",
+   "obras": [
+    {
+     "titulo": "También nuestra",
+     "director": "Lady Vanessa, Ana Portela, Clara Cuaspud y Amparo Cuaspud"
+    },
+    {
+     "titulo": "La Abuela Científica",
+     "director": "Juliana Insandara"
+    },
+    {
+     "titulo": "Viena, Gijón",
+     "director": "Ana G. Argüelles"
+    }
+   ],
+   "seccion": "Churo Cósmico",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la tarjeta no la da"
+  },
+  {
+   "dia": "2026-10-16",
+   "hora": "16:00",
+   "sede": "Universidad de Nariño, Sede Torobajo",
+   "sala": "Sala de Proyecciones Biblioteca",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Tierra Palestina",
+   "seccion": "Ecos del Mundo",
+   "director": "Claudio Lara",
+   "pais": "España, Chile, México, Palestina",
+   "duracion_min": 72
+  },
+  {
+   "dia": "2026-10-16",
+   "hora": "16:30",
+   "sede": "Banco de la República",
+   "sala": "Sala Múltiple",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Encuentro Internacional de Producción \"La circulación en festivales de cine\"",
+   "tipo": "evento",
+   "event_kind": "encuentro",
+   "seccion": "Industria",
+   "invitados": "A cargo de Festival de Cine de Tequila (México), Turicine (Ecuador) y FICPA (Colombia).",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la tarjeta no da hora de fin"
+  },
+  {
+   "titulo": "Cortos colombianos de ficción y documental",
+   "dia": "2026-10-16",
+   "hora": "18:00",
+   "sede": "Teatro Colombia",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "has_qa": true,
+   "qa_type": "team",
+   "obras": [
+    {
+     "titulo": "Tuktu, Padre Maíz",
+     "director": "Mauricio Prieto Muriel",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La Gallina Saraviada",
+     "director": "Ingrid Bonilla",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Akababuru",
+     "director": "Irati Dojura",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Achikanain",
+     "director": "Dana Sofía Florez",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Relatos del Camino",
+     "director": "Daniel Prieto Muriel",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "El Mundo de Humberto",
+     "director": "Paula Ortiz",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Después del Espanto",
+     "director": "Alejandro Naranjo",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Carlitos",
+     "director": "Karol Tamayo Bayona",
+     "pais": "Colombia"
+    }
+   ],
+   "seccion": "Latidos del Cine Colombiano",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la tarjeta no la da"
+  },
+  {
+   "dia": "2026-10-16",
+   "hora": "19:00",
+   "sede": "Parque Principal de La Florida",
+   "ciudad": "La Florida",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09",
+    "programacion": "alterna"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Churo Cósmico: animación",
+   "obras": [
+    {
+     "titulo": "Harvey & Maude",
+     "director": "Alex Minerales",
+     "pais": "España"
+    },
+    {
+     "titulo": "Tinku",
+     "director": "Román Nina",
+     "pais": "Bolivia"
+    },
+    {
+     "titulo": "Tuktu, Padre Maíz",
+     "director": "Mauricio Prieto",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Relatos del Camino",
+     "director": "Daniel Prieto",
+     "pais": "Colombia"
+    }
+   ],
+   "seccion": "Churo Cósmico",
+   "duracion_min": 46
+  },
+  {
+   "dia": "2026-10-17",
+   "hora": "16:30",
+   "sede": "Teatro Colombia",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Pacto de libertad",
+   "director": "Julián Esteban Maya",
+   "pais": "Colombia",
+   "seccion": "Cámaras de Barniz",
+   "has_qa": true,
+   "qa_type": "team",
+   "duracion_min": 90,
+   "_duracion_de": "el hueco hasta la siguiente función en la misma sede"
+  },
+  {
+   "titulo": "Videoclips nariñenses",
+   "dia": "2026-10-17",
+   "hora": "18:00",
+   "sede": "Teatro Colombia",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "obras": [
+    {
+     "titulo": "Que Generosa Sos mi Tierra",
+     "director": "David Bry feat. Piero",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Flor de un Día",
+     "director": "David Bry",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "Loto",
+     "director": "Las Tres Piedras",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La Tejedora",
+     "director": "Diego D'Alba",
+     "pais": "Colombia"
+    },
+    {
+     "titulo": "La Ruana de mi Compadre",
+     "director": "Luis Aníbal Quiroz",
+     "pais": "Colombia"
+    }
+   ],
+   "seccion": "Cámaras de Barniz",
+   "duracion_min": 30
+  },
+  {
+   "titulo": "Cortometraje nariñense",
+   "dia": "2026-10-17",
+   "hora": "18:30",
+   "sede": "Teatro Colombia",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "obras": [
+    {
+     "titulo": "Laureano",
+     "director": "Esteban Cabrera",
+     "pais": "Colombia",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "80KM",
+     "director": "Cristian Arcos",
+     "pais": "Colombia",
+     "duracion_min": 15
+    },
+    {
+     "titulo": "Coyima, lugar sagrado",
+     "director": "Amparo Cuaspud",
+     "pais": "Colombia",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "El Reflejo de Doña Gloria",
+     "director": "Colectivo Estrellas del Chambú",
+     "pais": "Colombia",
+     "duracion_min": 11
+    },
+    {
+     "titulo": "El sueño del Cusillo",
+     "director": "Marcela Hidalgo",
+     "pais": "Colombia",
+     "duracion_min": 7
+    },
+    {
+     "titulo": "Sinfonía de las sombras en el fuego etéreo",
+     "director": "Álvaro De La Cruz",
+     "pais": "Colombia",
+     "duracion_min": 5
+    },
+    {
+     "titulo": "Retorno",
+     "director": "Silvia Guzmán",
+     "pais": "Colombia",
+     "duracion_min": 4
+    }
+   ],
+   "seccion": "Cámaras de Barniz",
+   "duracion_min": 68
+  },
+  {
+   "dia": "2026-10-17",
+   "hora": "19:30",
+   "sede": "Teatro Colombia",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Buscando a papá",
+   "director": "Mauro Andrade",
+   "pais": "Colombia",
+   "duracion_min": 5,
+   "seccion": "Clausura",
+   "premiere": "Clausura",
+   "accesibilidad": "Con audiodescripción y lengua de señas"
+  },
+  {
+   "dia": "2026-10-17",
+   "hora": "20:00",
+   "sede": "Teatro Colombia",
+   "ciudad": "Pasto",
+   "_src": {
+    "url": "https://www.ficpa.co/programacion2026/",
+    "date": "2026-10-09"
+   },
+   "acceso": "Entrada libre",
+   "titulo": "Ceremonia de premiación y clausura",
+   "tipo": "evento",
+   "event_kind": "acto",
+   "seccion": "Clausura",
+   "duracion_min": 90,
+   "_duracion_de": "90 min declarados: la tarjeta no da hora de fin"
+  }
+ ]
+}
