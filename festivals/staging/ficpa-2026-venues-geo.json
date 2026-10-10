@@ -1,0 +1,120 @@
+{
+ "Banco de la República": {
+  "lat": 1.2115002,
+  "lng": -77.2766571,
+  "_prec": "manual",
+  "_match": "Google Maps: Biblioteca del Banco de la República (Pasto) (10 oct 2026)",
+  "n": 15
+ },
+ "Casa Páramo": {
+  "n": 1,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 1.2131613,
+  "lng": -77.2784112,
+  "_match": "Google Maps: Casa Páramo (10 oct 2026)",
+  "address": "Cra. 23 #17-85"
+ },
+ "Casa de la Cultura": {
+  "n": 4,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 1.2160418,
+  "lng": -77.2786615,
+  "_match": "Google Maps: Casa de la Cultura (Pasto) (10 oct 2026)"
+ },
+ "Chachagüí": {
+  "n": 1,
+  "lat": 1.3587528,
+  "lng": -77.2825742,
+  "_prec": "manual",
+  "_match": "APROXIMADO (10 oct 2026): Google Maps «Alcaldía Chachagüí», centro del casco urbano. La tarjeta dice solo «Chachagüí» (Animación, mié 14, 7:00 p. m.); el taller de la mañana es en la I.E. Chachagüí, no esta función. Pendiente preguntar al festival el lugar exacto."
+ },
+ "Cinemas Valle de Atriz": {
+  "n": 1,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 1.2276955,
+  "lng": -77.2859232,
+  "_match": "Google Maps: Cinemas Valle De Atriz (10 oct 2026)",
+  "address": "C.C. Valle de Atriz, Av. Panamericana"
+ },
+ "Fundación Universitaria San Martín, Sede Mijitayo": {
+  "n": 1,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 1.2270611,
+  "lng": -77.286592,
+  "_match": "Google Maps: Fundación Universitaria San Martín (Pasto) (10 oct 2026)"
+ },
+ "Parque Principal de La Florida": {
+  "n": 1,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 1.2992226,
+  "lng": -77.4064299,
+  "_match": "Google Maps: Parque de Florida (10 oct 2026)",
+  "address": "Cra. 4 #3, La Florida"
+ },
+ "Parque Principal de Yacuanquer": {
+  "n": 1,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 1.114646,
+  "lng": -77.4013722,
+  "_match": "Google Maps: parque principal de Yacuanquer (10 oct 2026)"
+ },
+ "Salón Comunal El Rosario, Jamondino": {
+  "lat": 1.1885147,
+  "lng": -77.2622224,
+  "_prec": "manual",
+  "_match": "Nominatim «Salón comunal El Rosario, Carrera 14B Este», mismo barrio que Google Maps «Barrio el rosario» (10 oct 2026)",
+  "n": 1
+ },
+ "Teatro Colombia": {
+  "n": 11,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 1.2115349,
+  "lng": -77.278292,
+  "_match": "Google Maps: Teatro Colombia (10 oct 2026)",
+  "address": "Cl. 17 #21A-51"
+ },
+ "Universidad CESMAG": {
+  "lat": 1.2090585,
+  "lng": -77.2785053,
+  "_prec": "manual",
+  "_match": "Google Maps: Universidad CESMAG (10 oct 2026)",
+  "n": 4
+ },
+ "Universidad Cooperativa de Colombia, Torobajo": {
+  "n": 3,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 1.2295096,
+  "lng": -77.2899877,
+  "_match": "Google Maps: UCC Campus Pasto (10 oct 2026)",
+  "address": "Calle 18 #47-150, Torobajo"
+ },
+ "Universidad Mariana": {
+  "lat": 1.2238916,
+  "lng": -77.2830765,
+  "_prec": "manual",
+  "_match": "Google Maps: Universidad Mariana (10 oct 2026)",
+  "n": 4,
+  "address": "Cl 18 #34-104"
+ },
+ "Universidad de Nariño, Sede Torobajo": {
+  "n": 3,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 1.2310572,
+  "lng": -77.2932987,
+  "_match": "Google Maps: Universidad de Nariño - Sede Torobajo (10 oct 2026)",
+  "address": "Cl. 18 #47-154"
+ },
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-10-10"
+ }
+}

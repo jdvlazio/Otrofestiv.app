@@ -1,0 +1,14 @@
+{
+ "_provenance": {
+  "fuente": "issue de radar #1071 — https://github.com/jdvlazio/Otrofestiv.app/issues/1071",
+  "capturado": "2026-10-10",
+  "titulo": "RADAR: 22 FICPA — Festival Internacional de Cine de Pasto, 13–17 OCT 2026",
+  "estado": "OPEN",
+  "comentarios": 0
+ },
+ "issue": 1071,
+ "titulo": "RADAR: 22 FICPA — Festival Internacional de Cine de Pasto, 13–17 OCT 2026",
+ "estado": "OPEN",
+ "cuerpo": "Fuente: calendario de Proimágenes (triaje del 10 oct 2026). No estaba en la lista ancla.\n\n- **Estado:** programación oficial PUBLICADA (web, WP `programacion2026`, modificada 9 oct) + Selección Oficial (`seleccionados2026`)\n- **Web:** https://www.ficpa.co/ · programación: https://www.ficpa.co/programacion2026/ · PDF: https://www.ficpa.co/wp-content/uploads/2026/10/PROGRAMACION-FICPA-IMPRESIONES-2026.pdf\n- **Formato:** 68 actividades oficiales en Pasto (Teatro Colombia, Banco de la República, Casa de la Cultura, universidades) + 24 de programación alterna (universidades, colegios y municipios de Nariño: Chachagüí, Yacuanquer, La Florida, Jamondino)\n- **Secciones (Selección Oficial):** Sol de los Pastos (Ecos del Mundo, Latidos del Cine Colombiano), Cámaras de Barniz (cine nariñense), Churo Cósmico (temática)\n- **Discrepancia:** la página de la película inaugural (Lactar) dice 7:00 p. m.; la programación, 6:30 p. m.\n\nPlan: onboarding en rama `data/ficpa-2026` (10 oct).",
+ "comentarios": []
+}

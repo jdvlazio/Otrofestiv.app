@@ -5,20 +5,6 @@
   "regla": "un afiche ajeno se publica solo con veredicto «afiche» y huella vigente"
  },
  "afiches": {
-  "/assets/biff-2026/la-bola-negra.jpg": {
-   "sha1": "3077821d062de8c452f69864f004c1d74b079abf",
-   "veredicto": "afiche",
-   "usado_en": [
-    "ficcali-2026"
-   ]
-  },
-  "/assets/biff-2026/la-libertad-doble-v2.jpg": {
-   "sha1": "916895bffc8e4b4b03c676a7ae16ce9342d51740",
-   "veredicto": "afiche",
-   "usado_en": [
-    "ficcali-2026"
-   ]
-  },
   "/assets/cineautopsia/somnolitico.jpg": {
    "sha1": "866286218380149b0d207e30ddc414df95615649",
    "veredicto": "afiche",
@@ -47,6 +33,13 @@
     "ficma-2026"
    ]
   },
+  "/assets/ficdeh/tuktu-padre-maiz.jpg": {
+   "sha1": "eb464529f5096aef1984f9f771075085e918d637",
+   "veredicto": "afiche",
+   "usado_en": [
+    "ficpa-2026"
+   ]
+  },
   "/assets/ficmontanas/el-huaquero.jpg": {
    "sha1": "8d1dc5636811bc3deffa929ff059b3e2f8a12dc6",
    "veredicto": "afiche",
@@ -71,13 +64,6 @@
   },
   "/assets/villadelcine-2026/aguapanela.jpg": {
    "sha1": "848f1f258e3d961dd733268ff4e320a80430206d",
-   "veredicto": "afiche",
-   "usado_en": [
-    "ficcali-2026"
-   ]
-  },
-  "/assets/villadelcine-2026/alivios.jpg": {
-   "sha1": "dd646c491e95d5330742213f598c8d67b2298336",
    "veredicto": "afiche",
    "usado_en": [
     "ficcali-2026"

@@ -743,6 +743,25 @@ export const FESTIVAL_CONFIG={
   // a propósito: el splash pinta «CIUDAD, PAÍS» y con ambos daría «COLOMBIA,
   // COLOMBIA». Además, al no coincidir con ninguna sede, el badge
   // venue-municipio y el filtro por ciudad se activan en las 11.
+  'ficpa2026': {
+    name:'FICPA',displayName:'FICPA',fullName:'22 FICPA — Festival Internacional de Cine de Pasto',shortName:'FICPA',
+    city:'Pasto',country:'CO',
+    dates:'13–17 OCT',dates_en:'OCT 13–17',year:2026,timezoneOffset:'-05:00',
+    // EL AFICHE OFICIAL de la 22.ª edición (ficpa.co, «AficheActualizado», 23 sep
+    // 2026). 9:16 estirado a 2:3 (keyart-estirado).
+    keyArt:'/assets/keyart/ficpa2026.jpg',
+    // lo que el festival dice de sí mismo; «FICPA» ya es el nombre
+    tagline:'Festival Internacional de Cine de Pasto',
+    storageKey:'ficpa2026_',festivalStartStr:'2026-10-13T00:00:00',festivalEndStr:'2026-10-17T23:59:00',
+    festivalDates:{'2026-10-13':'2026-10-13','2026-10-14':'2026-10-14','2026-10-15':'2026-10-15','2026-10-16':'2026-10-16','2026-10-17':'2026-10-17'},
+    days:[{k:'2026-10-13',d:13,lbl:'MAR'},{k:'2026-10-14',d:14,lbl:'MIÉ'},{k:'2026-10-15',d:15,lbl:'JUE'},{k:'2026-10-16',d:16,lbl:'VIE'},{k:'2026-10-17',d:17,lbl:'SÁB'}],
+    dayKeys:['2026-10-13','2026-10-14','2026-10-15','2026-10-16','2026-10-17'],
+    dayShort:{'2026-10-13':'MAR 13','2026-10-14':'MIÉ 14','2026-10-15':'JUE 15','2026-10-16':'VIE 16','2026-10-17':'SÁB 17'},
+    dayShort_en:{'2026-10-13':'TUE 13','2026-10-14':'WED 14','2026-10-15':'THU 15','2026-10-16':'FRI 16','2026-10-17':'SAT 17'},
+    dayLong:{'2026-10-13':'Martes 13 de octubre','2026-10-14':'Miércoles 14 de octubre','2026-10-15':'Jueves 15 de octubre','2026-10-16':'Viernes 16 de octubre','2026-10-17':'Sábado 17 de octubre'},
+    prioLimit:3,
+    films:null,posters:null,lbSlugs:{}
+  },
   'villadelcine2026': {
     name:'Villa del Cine',displayName:'Villa del Cine',fullName:'Festival Villa del Cine',
     // displayName porque el nombre es MULTI-PALABRA: sin él, festivalShortName()
@@ -1358,6 +1377,15 @@ export const SECTION_ARCHETYPES = {
   '🌎 Muestra de Cortos Internacionales': 'Muestra / País',
   '🏘️ CineCorto en el Barrio': 'Cortos / Programas',
   '🏡 Cine Corto al barrio': 'Cortos / Programas',
+  // FICPA 2026 (la Selección Oficial y los dos menús del sitio)
+  '🌍 Ecos del Mundo': 'Competencia',
+  '💓 Latidos del Cine Colombiano': 'Competencia',
+  '🎨 Cámaras de Barniz': 'Competencia',
+  '🌀 Churo Cósmico': 'Perspectivas / Miradas',
+  '🗺️ Programación alterna': 'Muestra / País',
+  '🎓 Academia': 'Charlas / Industria',
+  '💼 Industria': 'Charlas / Industria',
+  '🏆 Clausura': 'Clausura',
   '🧒 Cine Corto Familiar': 'Cortos / Programas',
   '🎤 Actividades': 'Charlas / Industria',
   // Fantasmagoría 8 (29 sep 2026)
