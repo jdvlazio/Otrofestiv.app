@@ -109,3 +109,42 @@ test('TF3 — aviso «Tu festival» al día siguiente y etiqueta del festival al
   });
   expect(toast, 'tras compartir, sugiere etiquetar al festival').toContain('@biffcol');
 });
+
+// TF4 — «Mi plan» como historia (#1064). La hoja ofrece Historia / Calendario;
+// planRecap cuenta OBRAS (un programa son sus cortos), las prioridades van
+// primero en el mosaico y la historia de «Tu festival» habla en primera persona.
+test('TF4 — Mi plan: hoja Historia/Calendario, prioridades primero y voz en primera persona', async ({ page }) => {
+  await enterFestival(page, 'biff2026', '2026-10-07T09:00:00-05:00');
+  const r = await page.evaluate(async () => {
+    const w = ms => new Promise(r => setTimeout(r, ms));
+    const pr = ['Fjord', 'Cobarde'];
+    // Un programa de cortos: cuenta por sus cortos, no como 1.
+    const prog = FILMS.find(f => f.is_cortos && f.film_list && f.film_list.length > 1);
+    const otras = [prog.title, ...new Set(FILMS.filter(f => f.type !== 'event' && !f.is_cortos && !pr.includes(f.title)).map(f => f.title))].slice(0, 6);
+    watchlist.clear(); prioritized.clear(); watched.clear();
+    [...otras, ...pr].forEach(x => watchlist.add(x)); pr.forEach(x => prioritized.add(x));
+    const D = await import('/src/domain/schedule.js');
+    const sch = D.computeScenarios([...watchlist])[0].schedule;
+    state.set('savedAgenda', { scenarioIdx: 0, schedule: sch });
+    const F = await import('/src/domain/festival.js');
+    const film = await import('/src/domain/film.js');
+    const p = F.planRecap();
+    const esperadas = [...new Set(sch.map(s => s._title))].reduce((n, t) => n + film.obrasDe(FILMS.find(f => f.title === t)).length, 0);
+    const S = await import('/src/controller/story.js');
+    S.abrirCompartirPlan(); await w(400);
+    const botones = [...document.querySelectorAll('button')].filter(b => b.offsetParent).map(b => b.textContent.trim());
+    const R = await import('/src/view/recap.js');
+    const rec = { peliculas: 4, eventos: 0 };
+    return { n: p.n, esperadas, conProg: sch.some(s => s._title === prog.title), primeras: p.obras.slice(0, p.prios.length).map(o => o.prio),
+      resto: p.obras.slice(p.prios.length).some(o => o.prio), prios: p.prios.map(x => x.title).sort(),
+      botones, yo: R.recapTitular(rec, true).verbo, tu: R.recapTitular(rec).verbo };
+  });
+  expect(r.conProg, 'el programa de cortos entró al Plan').toBe(true);
+  expect(r.n, 'cuenta obras con obrasDe, una vez por título').toBe(r.esperadas);
+  expect(r.prios, 'No me las pierdo = las prioridades del Plan').toEqual(['Cobarde', 'Fjord']);
+  expect(r.primeras.every(Boolean), 'las prioridades abren el mosaico').toBe(true);
+  expect(r.resto, 'y no se repiten después').toBe(false);
+  expect(r.botones).toEqual(expect.arrayContaining(['Historia', 'Calendario']));
+  expect(r.yo, 'la historia habla el asistente').toBe('Vi');
+  expect(r.tu, 'la pantalla le habla a él').toBe('Viste');
+});

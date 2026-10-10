@@ -160,6 +160,32 @@ export function _getFestivalPhase(){
 //   · top: las 3 mejor calificadas; empate → orden cronológico (día+hora), y lo
 //     sin fecha al final. Solo obras con estrellas.
 //   · multiciudad: ciudades distintas aparte; la vista elige cuál mostrar.
+// planRecap() — la historia «Mi plan» (#1064): lo que el usuario VA a ver, con
+// la misma regla que festivalRecap («lo visto y lo asistido»): el titular cuenta
+// obras (obrasDe: un programa son sus cortos, un evento las que proyecta). El
+// mosaico lleva las prioridades primero; «No me las pierdo» son las prioridades
+// tal como están en el Plan (el programa, no sus cortos), en orden cronológico.
+// → {obras:[{title, film, prio}], n, dias, sedes, ciudades, prios:[{title, film, day, time}]}
+export function planRecap(){
+  const sch=((savedAgenda&&savedAgenda.schedule)||[]).filter(s=>s&&s._title);
+  const _vs=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
+  const dias=new Set(), sedes=new Set(), ciudades=new Set(), vistos=new Set();
+  const obras=[], prios=[];
+  sch.slice().sort((a,b)=>(a.day+a.time).localeCompare(b.day+b.time)).forEach(s=>{
+    dias.add(s.day);
+    if(s.venue){ const r=_resolveVenue(s.venue,_vs); sedes.add(r.short||s.venue); if(r.city) ciudades.add(r.city); }
+    if(vistos.has(s._title)) return; // un taller de dos sesiones es UNA entrada
+    vistos.add(s._title);
+    const f=(FILMS||[]).find(x=>x.title===s._title&&x.day===s.day&&x.time===s.time)||(FILMS||[]).find(x=>x.title===s._title);
+    if(!f) return;
+    const prio=prioritized.has(s._title);
+    if(prio) prios.push({title:s._title, film:f, day:s.day, time:s.time||''});
+    obrasDe(f).forEach(it=>obras.push({title:it.title, prio, film:it===f?f:{...it,_prog:f}}));
+  });
+  obras.sort((a,b)=>b.prio-a.prio); // estable: dentro de cada grupo, cronológico
+  return {obras, n:obras.length, dias:dias.size, sedes:sedes.size, ciudades:ciudades.size, prios};
+}
+
 export function festivalRecap(){
   const vistas=[...effectiveWatched()];
   const _byTitle=new Map();

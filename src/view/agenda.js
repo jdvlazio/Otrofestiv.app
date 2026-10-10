@@ -719,7 +719,7 @@ export function renderMiPlanCalendar(state){
     <div class="mplan-div"></div>
     ${listHtml}
     <div class="mplan-foot">
-      <button class="mplan-foot-btn" data-action="sharePlan">${ICONS.share} ${t('plan_compartir_plan')}</button>
+      <button class="mplan-foot-btn" data-action="abrirCompartirPlan">${ICONS.share} ${t('plan_compartir_plan')}</button>
       <button class="mplan-foot-btn" data-action="exportICS">${ICONS.calendarPlus} ${t('plan_exportar_cal')}</button>
     </div>
   </div>`

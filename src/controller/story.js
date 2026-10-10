@@ -13,16 +13,16 @@
 // autoalojada; sin esperar, el canvas pinta con la del sistema).
 
 import { FESTIVAL_CONFIG } from '../config.js';
-import { festivalRecap } from '../domain/festival.js';
+import { festivalRecap, planRecap } from '../domain/festival.js';
 import { recapTitular, recorridoPartes } from '../view/recap.js';
 import { parseProgramTitle, _sectionColor, makeProgramPoster } from '../view/components.js';
-import { starsText, posterModel, itemPosterParts } from '../view/helpers.js';
+import { starsText, posterModel, itemPosterParts, dayLabel } from '../view/helpers.js';
 import { state } from '../state/state.js';
 import { showToast, showActionModal } from '../view/feedback.js';
 import { _esRevisionActiva } from '../view/sheets.js';
 import { t } from '../i18n/i18n.js';
 import { storage } from '../storage/storage.js';
-import { cargarAfiche, shareDiary, _shareNativeImage, _dlDirect } from './share.js';
+import { cargarAfiche, shareDiary, sharePlan, _shareNativeImage, _dlDirect } from './share.js';
 
 const W=1080, H=1920, M=92;
 const BG='#0B0A08', HUESO='#F0EDE8', AMBAR='#F59E0B', GRIS='#8A8A8A', GRIS2='#6A6A6A';
@@ -34,6 +34,15 @@ export function abrirCompartirFestival(){
   if(_esRevisionActiva()){ showToast(t('review_no_compartir')); return; }
   showActionModal(t('recap_compartir'),'',t('share_historia'),()=>shareStory(),undefined,
     {altLabel:t('share_grilla'), altCb:()=>shareDiary()});
+}
+
+// abrirCompartirPlan — la hoja «Historia / Calendario» de Mi Plan (#1064). El
+// Calendario es la imagen de siempre (sharePlan), sin cambios.
+export function abrirCompartirPlan(){
+  if(_esRevisionActiva()){ showToast(t('review_no_compartir')); return; }
+  if(!planRecap().n){ sharePlan(); return; } // sin obras (solo charlas): no hay historia que contar
+  showActionModal(t('share_mi_plan'),'',t('share_historia'),()=>shareStoryPlan(),undefined,
+    {altLabel:t('share_calendario'), altCb:()=>sharePlan()});
 }
 
 async function _fuentes(){
@@ -64,57 +73,14 @@ export async function shareStory(){
   const rec=festivalRecap();
   if(!rec.actividades){ showToast(t('diary_vacio'),'warn'); return; }
   storage.setDiarioNotaVista();
-  await _fuentes();
-  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
-  const c=document.createElement('canvas'); c.width=W; c.height=H;
-  const x=c.getContext('2d');
-  x.fillStyle=BG; x.fillRect(0,0,W,H);
-  // glow ámbar arriba a la derecha (el del mockup)
-  const g=x.createRadialGradient(W*0.86,0,0,W*0.86,0,620);
-  g.addColorStop(0,'rgba(245,158,11,.22)'); g.addColorStop(1,'rgba(245,158,11,0)');
-  x.fillStyle=g; x.fillRect(0,0,W,700);
-  x.textBaseline='alphabetic'; x.textAlign='left';
-
-  // acreditación: nombre · ciudad, con tracking
-  const _cred=[cfg.name||'', cfg.city||''].filter(Boolean).join(' · ').toUpperCase();
-  _tracked(x,_cred,M,300,`700 26px ${F}`,GRIS,0.32*26);
-
-  // titular
-  const T=recapTitular(rec);
-  x.font=`800 112px ${F}`; x.fillStyle=HUESO; x.fillText(T.verbo,M,372+96);
-  x.fillStyle=AMBAR; x.fillText(`${T.n} ${T.unidad}.`,M,372+96+116);
-
-  // recorrido en una línea (se achica si no entra)
-  const partes=recorridoPartes(rec);
-  if(partes.length){
-    let sz=34, total;
-    const medir=()=>{ total=0; partes.forEach((p,i)=>{ x.font=`700 ${sz}px ${F}`; total+=x.measureText(String(p.n)).width;
-      x.font=`500 ${sz}px ${F}`; total+=x.measureText(' '+p.unidad+(i<partes.length-1?' · ':'')).width; }); };
-    medir(); while(total>W-M*2&&sz>22){ sz-=2; medir(); }
-    let cx=M; const y=632+34;
-    partes.forEach((p,i)=>{
-      x.font=`700 ${sz}px ${F}`; x.fillStyle=HUESO; x.fillText(String(p.n),cx,y); cx+=x.measureText(String(p.n)).width;
-      x.font=`500 ${sz}px ${F}`; x.fillStyle=GRIS; const u=' '+p.unidad+(i<partes.length-1?' · ':''); x.fillText(u,cx,y); cx+=x.measureText(u).width;
-    });
-  }
-
+  const {c,x,cfg}=await _lienzo(recapTitular(rec,true), recorridoPartes(rec));
   // mosaico: todo lo visto con estrellas posibles, mejor calificado primero
-  const obras=rec.obras.slice().sort((a,b)=>b.rating-a.rating);
-  const geo=geometriaMosaico(obras.length);
-  const afs=obras.map(_modeloAfiche);
-  const imgs=await _cargarConRespaldo(afs);
-  const y0=712;
-  let k=0;
-  geo.porFila.forEach((nf,fila)=>{
-    const x0=(W-nf*geo.cw)/2;
-    for(let c=0;c<nf;c++,k++) _afiche(x,afs[k],imgs[k],x0+c*geo.cw,y0+fila*geo.ch,geo.cw,geo.ch);
-  });
-  const yMos=y0+geo.filas*geo.ch;
+  const yMos=await _mosaico(x, rec.obras.slice().sort((a,b)=>b.rating-a.rating));
 
-  // «Tus mejores»
+  // «Mis mejores» (primera persona: la historia la publica el asistente)
   if(rec.top.length){
     const ye=Math.max(1060,yMos+56);
-    _tracked(x,t('recap_tus_mejores').toUpperCase(),M,ye,`700 22px ${F}`,GRIS,0.32*22);
+    _tracked(x,t('story_mis_mejores').toUpperCase(),M,ye,`700 22px ${F}`,GRIS,0.32*22);
     const topAfs=rec.top.map(_modeloAfiche);
     const tops=await _cargarConRespaldo(topAfs);
     const col=(W-M*2)/3;
@@ -131,14 +97,118 @@ export async function shareStory(){
     });
   }
 
+  await _cierre(c,x,cfg,'historia',`${t('recap_tu_festival')} · ${cfg.name||'Otrofestiv'}`);
+}
+
+// shareStoryPlan — la historia «Mi plan» (#1064): misma retícula que la de «Tu
+// festival». Titular «Voy a ver N obras.», línea «días · sedes · N que no me
+// pierdo», mosaico con TODO lo planeado (prioridades primero, con su marca) y
+// «No me las pierdo»: cada prioridad con su afiche chico, día y hora.
+export async function shareStoryPlan(){
+  if(_esRevisionActiva()){ showToast(t('review_no_compartir')); return; }
+  const pr=planRecap();
+  if(!pr.n){ showToast(t('plan_sin_plan'),'warn'); return; }
+  const u=(n,uno,varios)=>({n, unidad:t(n===1?uno:varios)});
+  const partes=[u(pr.dias,'recap_u_dia','recap_u_dias'),
+    pr.ciudades>1?u(pr.ciudades,'recap_u_ciudad','recap_u_ciudades'):u(pr.sedes,'recap_u_sede','recap_u_sedes')];
+  if(pr.prios.length) partes.push({n:pr.prios.length, unidad:t('story_no_me_pierdo_n')});
+  const {c,x,cfg}=await _lienzo({verbo:t('story_voy_a_ver'), n:pr.n, unidad:t(pr.n===1?'recap_u_obra':'recap_u_obras')}, partes);
+  const yMos=await _mosaico(x, pr.obras);
+
+  if(pr.prios.length){
+    const ye=Math.max(1060,yMos+56);
+    _tracked(x,t('story_no_me_las_pierdo').toUpperCase(),M,ye,`700 22px ${F}`,GRIS,0.32*22);
+    const afs=pr.prios.map(p=>_modeloAfiche({film:p.film}));
+    const ims=await _cargarConRespaldo(afs);
+    // Hasta 3 por fila (el máximo de prioridades es 5 → dos filas a lo sumo).
+    const col=(W-M*2)/3;
+    pr.prios.forEach((p,i)=>{
+      const bx=M+(i%3)*col, by=ye+50+Math.floor(i/3)*120;
+      _rr(x,bx,by,62,93,8); x.save(); x.clip(); _afiche(x,afs[i],ims[i],bx,by,62,93); x.restore();
+      const tx=bx+80, tw=col-80-12;
+      const {displayTitle:dt}=parseProgramTitle(p.title);
+      x.font=`700 26px ${F}`; x.fillStyle=HUESO;
+      const lns=_lineas(x,dt,tw).slice(0,2);
+      lns.forEach((l,k)=>x.fillText(l,tx,by+32+k*30));
+      x.font=`500 24px ${F}`; x.fillStyle=GRIS; x.fillText(`${dayLabel(p.day)} · ${p.time}`,tx,by+32+lns.length*30+4);
+    });
+  }
+  await _cierre(c,x,cfg,'plan',`${t('share_mi_plan')} · ${cfg.name||'Otrofestiv'}`);
+}
+
+// _lienzo — fondo, glow, acreditación, titular y línea de recorrido: la parte
+// común de las dos historias. T={verbo,n,unidad}; partes=[{n,unidad}].
+async function _lienzo(T, partes){
+  await _fuentes();
+  const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
+  const c=document.createElement('canvas'); c.width=W; c.height=H;
+  const x=c.getContext('2d');
+  x.fillStyle=BG; x.fillRect(0,0,W,H);
+  // glow ámbar arriba a la derecha (el del mockup)
+  const g=x.createRadialGradient(W*0.86,0,0,W*0.86,0,620);
+  g.addColorStop(0,'rgba(245,158,11,.22)'); g.addColorStop(1,'rgba(245,158,11,0)');
+  x.fillStyle=g; x.fillRect(0,0,W,700);
+  x.textBaseline='alphabetic'; x.textAlign='left';
+  // acreditación: nombre · ciudad, con tracking
+  const _cred=[cfg.name||'', cfg.city||''].filter(Boolean).join(' · ').toUpperCase();
+  _tracked(x,_cred,M,300,`700 26px ${F}`,GRIS,0.32*26);
+  // titular
+  x.font=`800 112px ${F}`; x.fillStyle=HUESO; x.fillText(T.verbo,M,372+96);
+  x.fillStyle=AMBAR; x.fillText(`${T.n} ${T.unidad}.`,M,372+96+116);
+  // recorrido en una línea (se achica si no entra)
+  if(partes.length){
+    let sz=34, total;
+    const medir=()=>{ total=0; partes.forEach((p,i)=>{ x.font=`700 ${sz}px ${F}`; total+=x.measureText(String(p.n)).width;
+      x.font=`500 ${sz}px ${F}`; total+=x.measureText(' '+p.unidad+(i<partes.length-1?' · ':'')).width; }); };
+    medir(); while(total>W-M*2&&sz>22){ sz-=2; medir(); }
+    let cx=M; const y=632+34;
+    partes.forEach((p,i)=>{
+      x.font=`700 ${sz}px ${F}`; x.fillStyle=HUESO; x.fillText(String(p.n),cx,y); cx+=x.measureText(String(p.n)).width;
+      x.font=`500 ${sz}px ${F}`; x.fillStyle=GRIS; const u=' '+p.unidad+(i<partes.length-1?' · ':''); x.fillText(u,cx,y); cx+=x.measureText(u).width;
+    });
+  }
+  return {c,x,cfg};
+}
+
+// _mosaico — la franja de afiches desde y=712 (geometriaMosaico: 2:3, filas
+// parejas, hasta 3). Un ítem con `prio` lleva la marca de prioridad. → y final.
+async function _mosaico(x, obras){
+  const geo=geometriaMosaico(obras.length);
+  const afs=obras.map(_modeloAfiche);
+  const imgs=await _cargarConRespaldo(afs);
+  const y0=712;
+  let k=0;
+  geo.porFila.forEach((nf,fila)=>{
+    const x0=(W-nf*geo.cw)/2;
+    for(let c=0;c<nf;c++,k++){
+      const cx=x0+c*geo.cw, cy=y0+fila*geo.ch;
+      _afiche(x,afs[k],imgs[k],cx,cy,geo.cw,geo.ch);
+      if(obras[k].prio) _marca(x,cx+geo.cw-geo.cw*0.24,cy+geo.cw*0.06,geo.cw*0.16);
+    }
+  });
+  return y0+geo.filas*geo.ch;
+}
+
+// _marca — el marcador de prioridad (la forma de ICONS.bookmarkFill) en ámbar,
+// sobre un fondo oscuro para que se lea encima de cualquier afiche.
+function _marca(x,px,py,w){
+  const h=w*1.3;
+  x.save();
+  x.fillStyle='rgba(11,10,8,.55)'; _rr(x,px-w*0.25,py-w*0.2,w*1.5,h+w*0.4,w*0.3); x.fill();
+  x.fillStyle=AMBAR; x.beginPath(); x.moveTo(px,py); x.lineTo(px+w,py); x.lineTo(px+w,py+h);
+  x.lineTo(px+w/2,py+h-w*0.4); x.lineTo(px,py+h); x.closePath(); x.fill();
+  x.restore();
+}
+
+// _cierre — wordmark + dominio y la salida (Web Share → menú nativo → descarga).
+async function _cierre(c,x,cfg,tipo,titulo){
   // cierre: wordmark bicolor + dominio (sobre la zona libre, nunca dentro)
   const yw=1340+44;
   x.font=`800 44px ${F}`; x.fillStyle=HUESO; const w1=x.measureText('Otro').width;
   x.fillText('Otro',M,yw); x.fillStyle=AMBAR; x.fillText('festiv',M+w1,yw);
   x.font=`500 28px ${F}`; x.fillStyle=GRIS2; x.textAlign='right'; x.fillText('otrofestiv.app',W-M,yw); x.textAlign='left';
 
-  const fname=`otrofestiv-historia-${(cfg.shortName||'fest').toLowerCase().replace(/\s+/g,'-')}.png`;
-  const titulo=`${t('recap_tu_festival')} · ${cfg.name||'Otrofestiv'}`;
+  const fname=`otrofestiv-${tipo}-${(cfg.shortName||'fest').toLowerCase().replace(/\s+/g,'-')}.png`;
   try{
     const blob=await new Promise(r=>c.toBlob(r,'image/png'));
     const file=blob?new File([blob],fname,{type:'image/png'}):null;
