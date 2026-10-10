@@ -1,0 +1,94 @@
+{
+ "Alianza Francesa": {
+  "lat": 4.6026422,
+  "lng": -74.0686512,
+  "_prec": "manual",
+  "_match": "Google Maps: Alianza Francesa de Bogotá - Sede Centro (el seminario dice «Sede Centro»; las fichas de película, solo «Alianza Francesa») (10 oct 2026)",
+  "n": 10,
+  "address": "Cra. 3 #18-45"
+ },
+ "Canterbury Café": {
+  "lat": 4.6197817,
+  "lng": -74.1374424,
+  "_prec": "manual",
+  "_match": "Google Maps: Canterbury Café (Kennedy) (10 oct 2026)",
+  "n": 1
+ },
+ "Centro Cultural Gabriel García Márquez": {
+  "lat": 4.5978757,
+  "lng": -74.0742633,
+  "_prec": "manual",
+  "_match": "Google Maps: Centro Cultural Gabriel García Márquez (10 oct 2026)",
+  "n": 1,
+  "address": "Cl. 11 #5-60"
+ },
+ "Centro de Memoria, Paz y Reconciliación": {
+  "n": 3,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 4.6193117,
+  "lng": -74.0761362,
+  "_match": "Google Maps: Centro de Memoria, Paz y Reconciliación (10 oct 2026)",
+  "address": "Cra. 19B #24-86"
+ },
+ "Cine club Cine 40": {
+  "n": 2,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 11.1426579,
+  "lng": -74.1165712,
+  "_match": "APROXIMADO: el cineclub no figura en Google Maps; pin en la parroquia Nuestra Señora del Perpetuo Socorro, centro de Minca (10 oct 2026). Pendiente preguntar al festival."
+ },
+ "Cinemateca de Bogotá": {
+  "lat": 4.6031614,
+  "lng": -74.0676717,
+  "_prec": "manual",
+  "_match": "Google Maps: Cinemateca de Bogotá (10 oct 2026)",
+  "n": 52,
+  "address": "Cra. 3 #19-10"
+ },
+ "Potocine": {
+  "n": 1,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 4.5687992,
+  "lng": -74.1710843,
+  "_match": "Google Maps: Potocine, Sala de Cine Comunitario del barrio Potosí (10 oct 2026)",
+  "address": "Cl. 81 Sur #42A-81"
+ },
+ "Universidad Central": {
+  "lat": 4.6059549,
+  "lng": -74.068697,
+  "_prec": "manual",
+  "_match": "Google Maps: Universidad Central (sede centro, Auditorio Caldas) (10 oct 2026)",
+  "n": 1
+ },
+ "Universidad Nacional de Colombia": {
+  "lat": 4.6342839,
+  "lng": -74.0865589,
+  "_prec": "manual",
+  "_match": "Google Maps: Edificio 225 Rogelio Salmona, Posgrados de Ciencias Humanas (10 oct 2026)",
+  "n": 1
+ },
+ "Universidad de Antioquia": {
+  "n": 1,
+  "_prec": "manual",
+  "_todo": "buscar a mano (sedes-html.py genera la página)",
+  "lat": 6.2464191,
+  "lng": -75.564178,
+  "_match": "Google Maps: Edificio Paraninfo Universidad de Antioquia (10 oct 2026)",
+  "address": "Cra. 44 #48-72"
+ },
+ "_provenance": {
+  "fuente": "Nominatim con verificación: caja de ciudad + token distintivo + clase de lugar (una sede fija nunca es un barrio). _prec:manual intocable.",
+  "capturado": "2026-10-10"
+ },
+ "Universidad del Magdalena": {
+  "n": 1,
+  "lat": 11.2262461,
+  "lng": -74.1873608,
+  "_prec": "manual",
+  "_match": "Google Maps: Universidad del Magdalena (sala Langosta Azul dentro del campus) (10 oct 2026)",
+  "address": "Carrera 32 #22-08"
+ }
+}

@@ -281,19 +281,19 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
-| `title` | string | — | 30 fest | Nombre oficial, verbatim del festival. La palabra la pone el festival. |
-| `section` | string | — | 30 fest | Nombre VERBATIM del festival + nuestro emoji. Arquetipo de los 9 canónicos. |
-| `day` | string | `^\d{4}-\d{2}-\d{2}$` | 30 fest | Clave exacta de dayKeys, en ISO. Los 5 festivales legacy usan «MAR 21» y quedan exentos. |
-| `time` | string | `^\d{2}:\d{2}$` | 30 fest | 24h con dos dígitos. Nunca 12h con AM/PM. |
-| `venue` | string | ` - .+$` | 30 fest | «Nombre de la Sede - Ciudad», SIEMPRE. La sala va en `sala`, nunca en el nombre. |
-| `day_order` | number | — | 30 fest | **derivado de `day`** — no viene de ninguna fuente Orden del día en la grilla. |
+| `title` | string | — | 31 fest | Nombre oficial, verbatim del festival. La palabra la pone el festival. |
+| `section` | string | — | 31 fest | Nombre VERBATIM del festival + nuestro emoji. Arquetipo de los 9 canónicos. |
+| `day` | string | `^\d{4}-\d{2}-\d{2}$` | 31 fest | Clave exacta de dayKeys, en ISO. Los 5 festivales legacy usan «MAR 21» y quedan exentos. |
+| `time` | string | `^\d{2}:\d{2}$` | 31 fest | 24h con dos dígitos. Nunca 12h con AM/PM. |
+| `venue` | string | ` - .+$` | 31 fest | «Nombre de la Sede - Ciudad», SIEMPRE. La sala va en `sala`, nunca en el nombre. |
+| `day_order` | number | — | 31 fest | **derivado de `day`** — no viene de ninguna fuente Orden del día en la grilla. |
 
 ### Cómo se entra — la casilla que no se deja en blanco
 
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
-| `ticket_url` | string | `^https://` | 7 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
-| `is_free` | boolean | — | 21 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
+| `ticket_url` | string | `^https://` | 8 fest | URL de compra de ESTA función. En snake_case: `ticketUrl` no lo lee nadie. |
+| `is_free` | boolean | — | 22 fest | Entrada libre. Booleano de verdad — la app compara con === true. |
 | `requires_registration` | boolean | — | 10 fest |  |
 | `registration_url` | string | `^https://` | 6 fest |  |
 | `by_invitation` | boolean | — | 2 fest | Función CERRADA al público, solo con invitación. Anula el badge de precio y el plan no la propone (screeningPlannable); se agenda a mano. Por función: la gala sí, las demás funciones de la obra no. |
@@ -306,51 +306,51 @@ está pasando de verdad — no lo que alguien recordaba al escribirlo.
 
 | campo | tipo | formato / valores | lo usan | notas |
 |---|---|---|---|---|
-| `title_en` | string | — | 21 fest |  |
+| `title_en` | string | — | 22 fest |  |
 | `title_es` | string | — | — | Título en español, SOLO cuando el festival titula en otro idioma y el afiche que mostramos dice el español. El buscador lo mira además de `title`: la única pista que el usuario tiene delante es el afiche. No es una traducción de cortesía; `title` sigue siendo el nombre oficial. |
-| `director` | string | — | 29 fest |  |
-| `year` | number | — | 28 fest | Entero. Dos festivales legacy lo tienen como string. |
-| `country` | string | — | 30 fest |  |
-| `flags` | string | — | 30 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
-| `duration` | string | `^\d+ min$` | 30 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
+| `director` | string | — | 30 fest |  |
+| `year` | number | — | 29 fest | Entero. Dos festivales legacy lo tienen como string. |
+| `country` | string | — | 31 fest |  |
+| `flags` | string | — | 31 fest | **derivado de `country`** — no viene de ninguna fuente Emoji de bandera. NUNCA viene de la fuente: se calcula del país. |
+| `duration` | string | `^\d+ min$` | 31 fest | «90 min». No es un número, y la doc dijo lo contrario durante meses. |
 | `language` | string | — | 9 fest |  |
-| `genre` | string | — | 26 fest |  |
-| `synopsis` | string | — | 29 fest | SIEMPRE en español. La traducción no es opcional. |
-| `synopsis_en` | string | — | 27 fest |  |
+| `genre` | string | — | 27 fest |  |
+| `synopsis` | string | — | 30 fest | SIEMPRE en español. La traducción no es opcional. |
+| `synopsis_en` | string | — | 28 fest |  |
 | `synopsis_es` | string | — | 2 fest |  |
-| `synopsis_lang` | string | `es` · `en` · `pt` | 29 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
-| `description` | string | — | 26 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
+| `synopsis_lang` | string | `es` · `en` · `pt` | 30 fest | no lo lee la vista: guardianes No lo lee la vista: lo consumen los guardianes ([paridad-derivados]). |
+| `description` | string | — | 27 fest | Texto de un PROGRAMA o una ACTIVIDAD (no de una obra: eso es synopsis). En español; lib.separar_descripcion es la regla. |
 | `description_en` | string | — | 5 fest |  |
 | `description_es` | string | — | 1 fest |  |
-| `description_lang` | string | `es` · `en` · `pt` | 26 fest |  |
+| `description_lang` | string | `es` · `en` · `pt` | 27 fest |  |
 | `rating` | string | — | 5 fest |  |
-| `premiere` | string | — | 11 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
-| `type` | string | `film` · `event` · `short` | 27 fest |  |
-| `event_kind` | string | — | 20 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
-| `is_cortos` | boolean | — | 28 fest | exige `film_list` Programa curado: exige film_list no vacío. |
-| `film_list` | array | — | 27 fest |  |
+| `premiere` | string | — | 12 fest | Texto libre del festival («World Premiere», «Estreno argentino»). |
+| `type` | string | `film` · `event` · `short` | 28 fest |  |
+| `event_kind` | string | — | 21 fest | Palabra del festival, verbatim (charla, taller, masterclass). Enum en validate-festivals. |
+| `is_cortos` | boolean | — | 29 fest | exige `film_list` Programa curado: exige film_list no vacío. |
+| `film_list` | array | — | 28 fest |  |
 | `is_programa` | boolean | — | 3 fest |  |
 | `is_recurring` | boolean | — | 4 fest |  |
 | `is_awards_screening` | boolean | — | 1 fest |  |
 | `info` | boolean | — | 8 fest | Drop-in sin hora fija: NO entra al plan ni a conflictos. |
 | `unscheduled` | boolean | — | 1 fest | En catálogo sin jornada. Única exención de day/time/venue. |
 | `sessions` | array | — | 1 fest |  |
-| `has_qa` | boolean | — | 24 fest | Afecta conflictos vía durationForTravel. |
+| `has_qa` | boolean | — | 25 fest | Afecta conflictos vía durationForTravel. |
 | `titulos_anteriores` | array | — | 2 fest | Títulos con que el festival publicó ANTES esta obra. Lo llena Onboarding cuando un festival renombra (p. ej. «Tránsito» → «Tránsitos»). La app mueve en silencio lo que el usuario guardó bajo el viejo (Interés, Plan, vista, prioridad, calificación, retrasos) — domain/titulos.js. Obra partida en dos: el viejo va en las dos y gana la primera del catálogo. Nunca un título que siga vigente. |
-| `qa_type` | string | `team` · `guests` | 13 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
+| `qa_type` | string | `team` · `guests` | 14 fest | La variante del Q&A. Se pinta traducida; NO se escribe la frase en el dato. |
 | `competencia` | string | — | 1 fest |  |
 | `premium` | boolean | — | 1 fest |  |
-| `sala` | string | — | 17 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
+| `sala` | string | — | 18 fest | Sala DENTRO de la sede. Que no aparezca en el nombre de la sede ([sala-en-sede]). |
 | `date` | string | `^\d{4}-\d{2}-\d{2}$` | 6 fest | Requerido si hay screenings[]. Tres festivales legacy lo tienen como número de día. |
 | `screenings` | array | — | 3 fest |  |
-| `poster` | string | — | 30 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |
-| `posterSource` | string | `tmdb` · `custom` · `editorial` · `letterboxd` · `oficial` | 30 fest | **derivado de `poster`** — no viene de ninguna fuente |
+| `poster` | string | — | 31 fest | URL, /assets/… o path TMDB. poster:"" está PROHIBIDO. Reglas: docs/POSTERS.md |
+| `posterSource` | string | `tmdb` · `custom` · `editorial` · `letterboxd` · `oficial` | 31 fest | **derivado de `poster`** — no viene de ninguna fuente |
 | `posterPosition` | string | `center` · `top` · `bottom` | 1 fest |  |
-| `lbSlug` | string | — | 24 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
+| `lbSlug` | string | — | 25 fest | Slug de Letterboxd. En camelCase: `lb_slug` no lo lee nadie. |
 | `slug` | string | — | 1 fest |  |
 | `filmCategory` | string | — | 1 fest |  |
-| `tmdb_id` | number | — | 20 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
-| `_src` | — | — | 22 fest | De dónde salió el dato. Toda obra nueva lo lleva. |
+| `tmdb_id` | number | — | 21 fest | no lo lee la vista: pipeline No lo lee la vista: lo usa el pipeline para reenriquecer sin volver a buscar. |
+| `_src` | — | — | 23 fest | De dónde salió el dato. Toda obra nueva lo lleva. |
 | `format` | string | — | 1 fest | Formato de proyección (DCP, 35mm). Lo publica el festival; TIFF es el único que lo trae. |
 | `section_tags` | array | — | 1 fest | no lo lee la vista: ninguno todavía Sellos del festival (TIFF). Decisión de Juan: etiqueta, no sección. Falta cablearlo en la vista. |
 | `accessibility` | array | — | 1 fest | no lo lee la vista: ninguno todavía Accesibilidad de la función (p. ej. «oc» = subtítulos descriptivos). Sin superficie que la muestre. |

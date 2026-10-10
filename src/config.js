@@ -1269,6 +1269,26 @@ export const FESTIVAL_CONFIG={
     prioLimit:5,
     films:null,posters:null,lbSlugs:{}
   },
+  'midbo2026': {
+    name:'MIDBO',displayName:'MIDBO',fullName:'28 MIDBO — Muestra Internacional Documental de Bogotá',shortName:'MIDBO',
+    city:'Bogotá',country:'CO',
+    dates:'27 OCT–4 NOV',dates_en:'OCT 27–NOV 4',year:2026,timezoneOffset:'-05:00',
+    // EL AFICHE OFICIAL de la 28 MIDBO, «Sonido imprescindible» (Marta Rodríguez
+    // fotografiada por Jorge Silva en el rodaje de Chircales), @midbo_doc
+    // p/DeSf11QJ-Mp, 9 oct 2026. 3:4 estirado a 2:3 (keyart-estirado).
+    keyArt:'/assets/keyart/midbo2026.jpg',
+    // lo que el festival dice de sí mismo; «MIDBO» ya es el nombre
+    tagline:'Muestra Internacional Documental de Bogotá',
+    instagram:'midbo_doc', storageKey:'midbo2026_',festivalStartStr:'2026-10-27T00:00:00',festivalEndStr:'2026-11-04T23:59:00',
+    festivalDates:{'2026-10-27':'2026-10-27','2026-10-28':'2026-10-28','2026-10-29':'2026-10-29','2026-10-30':'2026-10-30','2026-10-31':'2026-10-31','2026-11-01':'2026-11-01','2026-11-02':'2026-11-02','2026-11-03':'2026-11-03','2026-11-04':'2026-11-04'},
+    days:[{k:'2026-10-27',d:27,lbl:'MAR'},{k:'2026-10-28',d:28,lbl:'MIÉ'},{k:'2026-10-29',d:29,lbl:'JUE'},{k:'2026-10-30',d:30,lbl:'VIE'},{k:'2026-10-31',d:31,lbl:'SÁB'},{k:'2026-11-01',d:1,lbl:'DOM'},{k:'2026-11-02',d:2,lbl:'LUN'},{k:'2026-11-03',d:3,lbl:'MAR'},{k:'2026-11-04',d:4,lbl:'MIÉ'}],
+    dayKeys:['2026-10-27','2026-10-28','2026-10-29','2026-10-30','2026-10-31','2026-11-01','2026-11-02','2026-11-03','2026-11-04'],
+    dayShort:{'2026-10-27':'MAR 27','2026-10-28':'MIÉ 28','2026-10-29':'JUE 29','2026-10-30':'VIE 30','2026-10-31':'SÁB 31','2026-11-01':'DOM 1','2026-11-02':'LUN 2','2026-11-03':'MAR 3','2026-11-04':'MIÉ 4'},
+    dayShort_en:{'2026-10-27':'TUE 27','2026-10-28':'WED 28','2026-10-29':'THU 29','2026-10-30':'FRI 30','2026-10-31':'SAT 31','2026-11-01':'SUN 1','2026-11-02':'MON 2','2026-11-03':'TUE 3','2026-11-04':'WED 4'},
+    dayLong:{'2026-10-27':'Martes 27 de octubre','2026-10-28':'Miércoles 28 de octubre','2026-10-29':'Jueves 29 de octubre','2026-10-30':'Viernes 30 de octubre','2026-10-31':'Sábado 31 de octubre','2026-11-01':'Domingo 1 de noviembre','2026-11-02':'Lunes 2 de noviembre','2026-11-03':'Martes 3 de noviembre','2026-11-04':'Miércoles 4 de noviembre'},
+    prioLimit:5,
+    films:null,posters:null,lbSlugs:{}
+  },
   'narrarelfuturo2026': {
     name:'#NarrarElFuturo',fullName:'#NarrarElFuturo — Festival de Cine & Nuevos Medios',shortName:'NEF',
     city:'Bogotá',country:'CO',
@@ -1386,6 +1406,24 @@ export const SECTION_ARCHETYPES = {
   '🎓 Academia': 'Charlas / Industria',
   '💼 Industria': 'Charlas / Industria',
   '🏆 Clausura': 'Clausura',
+  // MIDBO 2026 (las categorías madre de midbo.co)
+  '🏆 Competencia Nacional de Largometraje Documental': 'Competencia',
+  '🎞️ Competencia Nacional de Cortometraje Documental': 'Competencia',
+  '🌎 Competencia Iberoamericana de Largometraje Documental': 'Competencia',
+  '📽️ Competencia Iberoamericana de Cortometraje Documental': 'Competencia',
+  '🌍 Panorama Internacional de Largometraje Documental': 'Muestra / País',
+  '🗺️ Panorama Internacional de Cortometraje Documental': 'Muestra / País',
+  '🇨🇴 Panorama Nacional de Documental': 'Muestra / País',
+  '🪞 Espejos: Gestos de reparación': 'Perspectivas / Miradas',
+  '✨ Programas especiales': 'Especiales / Eventos',
+  '🔎 Foco Claire Simon': 'Retrospectiva / Tributo',
+  '🔍 Foco Ignacio Agüero': 'Retrospectiva / Tributo',
+  '🎯 Foco Santiago Álvarez': 'Retrospectiva / Tributo',
+  '🕰️ Retrospectiva: Sara Gómez': 'Retrospectiva / Tributo',
+  '🏅 Homenaje a Pablo Mora Calderón. Premio ALADOS a toda una vida': 'Retrospectiva / Tributo',
+  '🇫🇷 Comptoir du Doc': 'Muestra / País',
+  '🏘️ CREAndo documental en los barrios': 'Cortos / Programas',
+  '🎙️ Encuentro Pensar lo Real': 'Charlas / Industria',
   '🧒 Cine Corto Familiar': 'Cortos / Programas',
   '🎤 Actividades': 'Charlas / Industria',
   // Fantasmagoría 8 (29 sep 2026)
