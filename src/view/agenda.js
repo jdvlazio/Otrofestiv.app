@@ -1849,12 +1849,24 @@ export function buildResultHTML(scenarios){
           reason=`<div class="excl-reason">${t(_yaPaso)}</div>`;
         }
       }
+      // La disponibilidad no es «ya pasó» (#1060): `screens` descarta las
+      // funciones que caen en un bloque de «¿Cuándo NO podés ir?», y una obra
+      // con todas sus funciones vivas bloqueadas llegaba a la rama de arriba y
+      // decía «Ya pasó» — Fjord en BIFF, con funciones el 12 y el 14. Sin botón:
+      // «Agendar» busca entre las funciones planificables y estas no lo son; el
+      // camino es editar la disponibilidad, que está arriba en la misma pantalla.
+      // plannable-ok: se buscan justo las que el dueño descarta por disponibilidad.
+      const _bloq=!screens.length?FILMS.filter(fi=>fi.title===excTitle&&!screeningPassed(fi)&&isScreeningBlocked(fi)):[];
+      if(_bloq.length){
+        reason=`<div class="excl-reason">${t('plan_choca_dispo')}</div>`;
+        _cuando=`${dayLabel(_bloq[0].day)||_bloq[0].day||''}${_bloq[0].time?' '+_bloq[0].time:''}`;
+      }
       const includeBtn=canInclude
         ?(_qaOnlySlot
           ?`<button class="excl-include-btn" data-action="includeAnyway" data-title="${safeT}" data-day="${_qaOnlySlot.day}" data-time="${_qaOnlySlot.time}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`
           :`<button class="excl-include-btn" data-action="forceInclude" data-title="${safeT}" data-stop="1">${ICONS.plus} ${t('plan_agendar')}</button>`)
         :'';
-      const opacity=!screens.length?'opacity:.45;':'';
+      const opacity=!screens.length&&!_bloq.length?'opacity:.45;':'';
       // En «En otra ciudad» la razón se dice UNA vez, en el encabezado de la
       // sección: repetirla en cada fila era la misma frase cuatro veces, con una
       // hora que además era de OTRA función. Acá la fila solo aporta su ciudad.
@@ -1862,10 +1874,10 @@ export function buildResultHTML(scenarios){
       const _when=_esCiudad
         ?(_cuando?`${_cuando} · ${_ciudadFn}`:_ciudadFn)
         :_cuando;
-      return{k:_kind,ciudad:_ciudadPlan,html:`<div class="int-item js-open-pel" style="${opacity}" data-title="${escXML(f.title)}">
+      return{k:_kind,ciudad:_ciudadPlan,prio:prioritized.has(excTitle)?1:0,html:`<div class="int-item js-open-pel" style="${opacity}" data-title="${escXML(f.title)}">
         ${posterHtml}
         <div class="int-item-info">
-          <div class="int-item-title"><span class="int-item-name">${dt}</span>${_excCanc?`<span class="notice-badge">${t('notice_cancelada')}</span>`:''}</div>
+          <div class="int-item-title"><span class="int-item-name">${dt}</span>${prioritized.has(excTitle)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:''}${_excCanc?`<span class="notice-badge">${t('notice_cancelada')}</span>`:''}</div>
           <div class="int-item-sec">${flagFmt(f?.flags)||''}${flagFmt(f?.flags)?' ':''} ${secLabel}</div>
           ${_when?`<div class="int-item-when">${_when}</div>`:''}
           ${_esCiudad?'':reason}
@@ -1874,7 +1886,9 @@ export function buildResultHTML(scenarios){
       </div>`};
     });
     const _ciudad=_excItems.filter(i=>i.k==='ciudad');
-    const _compiten=_excItems.filter(i=>i.k!=='ciudad');
+    // Las prioridades que quedaron fuera van PRIMERO (#1060): son lo que el
+    // usuario dijo que no se quería perder, y no pueden quedar enterradas.
+    const _compiten=_excItems.filter(i=>i.k!=='ciudad').sort((a,b)=>b.prio-a.prio);
     _nFuera=_compiten.length;
     if(_compiten.length) _htmlNoIncl=`<div class="ag-excl-block">
       <div class="sec-hdr sm">
@@ -1927,10 +1941,18 @@ export function buildResultHTML(scenarios){
     _nFuera?(_nFuera===1?t('res_fuera_1'):t('res_fuera',{n:_nFuera})):'',
   ].filter(Boolean).join(' · ');
   const _fuera=_cola?` <span class="dato-linea">· ${_cola}</span>`:'';
+  // Cuántas prioridades entraron (#1060): «· 3 prioridades» o «· 2 de 3
+  // prioridades». Las vistas no cuentan: el planificador tampoco las busca.
+  const _prioVivas=[...prioritized].filter(x=>!watched.has(x)&&FILMS.some(fi=>fi.title===x&&!screeningPassed(fi)));
+  const _prioDentro=_prioVivas.filter(x=>sc.schedule.some(s=>s._title===x)).length;
+  const _prioTxt=!_prioVivas.length?''
+    :_prioDentro===_prioVivas.length
+      ?` · ${t(_prioDentro===1?'res_prio_1':'res_prio',{n:_prioDentro})}`
+      :` · ${t('res_prio_de',{n:_prioDentro,tot:_prioVivas.length})}`;
   let html=`${_staleBanner}<div class="ag-summary ag-summary-res">
     <div class="dato-resultado">${hayEvento(sc.schedule,FILMS)
       ?`${ok} ${ok!==1?t('misc_actividades'):t('misc_actividad')}`
-      :t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_fuera}</div>
+      :t(ok===1?'pre_obra':'pre_obras',{n:ok})} · ${_nDias===1?t('res_dia'):t('res_dias',{n:_nDias})}${_prioTxt}${_fuera}</div>
     ${sc.incompatiblePriorities?(()=>{
       const pairs=sc.conflictingPriorityPairs||[];
       const pairMsg=pairs.length
@@ -2000,7 +2022,10 @@ export function mkAgendaRow(s, mode='saved'){
   // Layout: en Planear (scenario) la hora vive ARRIBA del título dentro de .saved-info
   // (jerarquía vertical: hora → título → venue). En Mi Plan (saved) la hora sigue como
   // columna lateral (layout familiar para usuarios del plan guardado).
-  const _timeHTML=`<div class="saved-time">${s.time}</div>`;
+  // La prioridad se ve en el plan (#1060): la misma marca que ya llevan la fila
+  // y el bloque de Mi Plan, junto a la hora. Faltaba solo acá, en Planear.
+  const _prioMark=prioritized.has(title)?` <span class="txt-amber60-xs">${ICONS.bookmarkFill}</span>`:'';
+  const _timeHTML=`<div class="saved-time">${s.time}${_prioMark}</div>`;
   // Affordances de la fila de Planear: Cambiar (switch) + el CORAZÓN.
   // El corazón y no una ✕ (revisión de UX Writer, 16 ago 2026): este control
   // saca de Intereses, prioridades y vistas —no del plan—, y con la ✕ era
