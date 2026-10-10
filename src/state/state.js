@@ -19,7 +19,7 @@
 const _ROSTER = new Set([
   '_activeFestId', 'FILMS', 'FESTIVAL_DATES', 'FESTIVAL_END', 'FESTIVAL_POSTPONED',
   'FESTIVAL_STORAGE_KEY', 'PRIO_LIMIT', 'TZ_OFFSET', 'FESTIVAL_TRANSPORT',
-  'watchlist', 'watched', 'notWatched', 'prioritized', 'filmRatings', 'filmDelays',
+  'watchlist', 'watched', 'notWatched', 'watchedMeta', 'prioritized', 'filmRatings', 'filmDelays',
   'filmDelaysHistory', 'savedAgenda', 'availability', 'lastRemovedSlots', 'planCalculado',
   'icsEntregados',
   '_lang', '_simTime',

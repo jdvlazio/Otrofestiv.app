@@ -165,9 +165,9 @@ test('deriveCloudMerge — TODAS las keys dirty (push de fila entera) → todo l
   // local entero aunque exista fila remota (si no, el merge devolvía el remoto para
   // todo, la subida era un no-op y el flag dirty se limpiaba → edición offline perdida).
   const local  = { watchlist: ['offline-edit'], watched: ['W'], notwatched: ['N'], prioritized: [], ratings: { A: 5 },
-                   saved_agenda: { s: 2 }, availability: { d1: { blocks: ['b'] } } };
+                   saved_agenda: { s: 2 }, availability: { d1: { blocks: ['b'] } }, watched_meta: { W: { day: 'd1' } } };
   const remote = { watchlist: ['stale'], watched: [], notwatched: [], prioritized: ['P'], ratings: {},
-                   saved_agenda: null, availability: {} };
+                   saved_agenda: null, availability: {}, watched_meta: {} };
   const allDirty = new Set(FC.FESTIVAL_STATE.filter(e => e.cloud).map(e => e.key));
   const merged = FC.deriveCloudMerge(local, remote, allDirty);
   assert.deepStrictEqual(merged, local, 'fila entera dirty → el local gana en TODAS las columnas');

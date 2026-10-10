@@ -34,6 +34,7 @@ let _planChannel=null, _planChannelKey=null, _planRerenderCb=null, _planLive=fal
 export function saveWL(){ storage.setWatchlist(watchlist); _cloudSave('watchlist'); }
 
 export function saveWatched(){ storage.setWatched(watched); _cloudSave('watched'); }
+export function saveWatchedMeta(){ storage.setWatchedMeta(watchedMeta); _cloudSave('watchedMeta'); }
 export function saveNotWatched(){ storage.setNotWatched(notWatched); _cloudSave('notWatched'); }
 
 export function saveRating(title,rating){
@@ -264,7 +265,7 @@ export function _applyCloudRow(data, opts){
     state.update('savedAgenda', a=>({...a, schedule: syncScheduleWithCatalog(a.schedule, FILMS)}));
   }
   // Persistir en local (identidad de arrays/Sets vía globals bridgeados).
-  storage.setWatchlist(watchlist);storage.setWatched(watched);
+  storage.setWatchlist(watchlist);storage.setWatched(watched);storage.setWatchedMeta(watchedMeta);
   storage.setPrioritized(prioritized);storage.setSavedAgenda(savedAgenda);
   storage.setAvailability(availability);storage.setFilmRatings(filmRatings);
   storage.setCloudSyncedAt(data.updated_at||new Date().toISOString());
@@ -532,11 +533,34 @@ function _planAvisos(){
       // la siguiente = la primera del mismo día que empieza después de la salida
       const sig=sch.filter(x=>x!==s&&x.day===s.day).map(x=>({x,st:at(x.day,x.time)}))
         .filter(o=>o.st&&o.st>=sal).sort((a,b)=>a.st-b.st)[0];
-      if(sig) out.push({slot:_NOTIF_SLOT/2+i, title:t('aviso_salir'),
+      if(sig&&_NOTIF_SLOT/2+i<_SLOT_RECAP) out.push({slot:_NOTIF_SLOT/2+i, title:t('aviso_salir'),
         body:t('aviso_salir_body',{title:sig.x._title||'',h:sig.x.time,venue:sig.x.venue||''}), at:sal});
     }
   });
+  // «Tu festival» (#1055, F3): UN aviso al día siguiente del cierre, 10:00 hora
+  // del festival, que abre Mi Plan. Solo si habrá algo que contar: lo visto
+  // previsto (marcado ∪ Plan − «no la vi») > 0. Se recalcula con cada cambio,
+  // así que negar todo lo del Plan lo retira. Copy aprobado por Juan (9 oct).
+  const rec=_avisoRecap(now);
+  if(rec) out.push(rec);
   return out;
+}
+
+const _SLOT_RECAP=_NOTIF_SLOT-1;   // último del bloque del festival; las salidas no lo pisan
+function _avisoRecap(now){
+  const dias=Object.values(FESTIVAL_DATES||{}).filter(Boolean).sort();
+  const ultimo=dias[dias.length-1]; if(!ultimo) return null;
+  const sch=(savedAgenda&&savedAgenda.schedule)||[];
+  const previstas=new Set([...watched, ...sch.map(s=>s._title).filter(Boolean)]);
+  notWatched.forEach(x=>previstas.delete(x));
+  if(!previstas.size) return null;
+  // El día siguiente sin pasar por zonas: aritmética sobre la fecha del festival.
+  const [y,m,dd]=ultimo.split('-').map(Number), sig=new Date(Date.UTC(y,m-1,dd+1));
+  const p2=n=>String(n).padStart(2,'0');
+  const at=_festDate(`${sig.getUTCFullYear()}-${p2(sig.getUTCMonth()+1)}-${p2(sig.getUTCDate())}`,'10:00');
+  if(isNaN(at.getTime())||at.getTime()<=now) return null;
+  const nombre=(FESTIVAL_CONFIG[_activeFestId]||{}).name||'';
+  return {slot:_SLOT_RECAP, title:t('aviso_recap'), body:t('aviso_recap_body',{festival:nombre}), at, abrir:'miplan'};
 }
 
 // ── Live Activity del iPhone (fase 1, aprobada por Juan el 28 sep 2026) ──────
@@ -585,7 +609,7 @@ async function _scheduleNotifications(){
   const _wk=window.webkit?.messageHandlers?.notifications;
   if(_wk){
     try{
-      _wk.postMessage({festival:_activeFestId||'', avisos:_planAvisos().map(a=>({id:String(a.slot),title:a.title,body:a.body,at:a.at.getTime()}))});
+      _wk.postMessage({festival:_activeFestId||'', avisos:_planAvisos().map(a=>({id:String(a.slot),title:a.title,body:a.body,at:a.at.getTime(),...(a.abrir?{abrir:a.abrir}:{})}))});
     }catch(e){console.warn('Notifications (iOS) error:',e);}
     return;
   }
@@ -597,11 +621,11 @@ async function _scheduleNotifications(){
     if(perm.display!=='granted') return;
     // Cancelar solo los recordatorios de ESTE festival (no los del otro simultáneo)
     await _cancelNotifications();
-    if(!savedAgenda?.schedule?.length) return;
+    if(!savedAgenda?.schedule?.length&&!watched.size) return;
     const _base=_notifBase(_activeFestId);
     const notifications=_planAvisos().map(a=>({
       id:_base+a.slot, title:a.title, body:a.body,
-      schedule:{at:a.at,allowWhileIdle:true}, sound:null, extra:null
+      schedule:{at:a.at,allowWhileIdle:true}, sound:null, extra:a.abrir?{abrir:a.abrir}:null
     }));
     if(notifications.length){
       await LocalNotifications.schedule({notifications});

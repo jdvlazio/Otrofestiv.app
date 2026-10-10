@@ -12,6 +12,42 @@ import { state } from '../state/state.js';
 import { storage } from '../storage/storage.js';
 import { _getDisplayName, _promptDisplayName } from './auth.js';  // share→auth (sharePlan pide nombre)
 
+// cargarAfiche — DUEÑO ÚNICO de cómo un afiche entra a un canvas (la grilla del
+// Diario y la historia 9:16 de «Tu festival»). Los afiches del export se piden de otra forma que en la pantalla, y ESA es la
+// razón por la que no cargaban (reportado por Juan, FICCI desde iPhone, 4 sep
+// 2026). El canvas EXIGE permiso cruzado —dibujar una imagen sin él lo
+// contamina y `toBlob` tira excepción, medido—, pero la grilla ya cargó ese
+// mismo afiche SIN pedirlo, y la copia guardada no sirve para una petición que
+// sí lo pide: el navegador la rechaza. Medido con un póster real de FICCI
+// (TMDB w185): con permiso cruzado falla, sin él carga, y con permiso cruzado
+// más una dirección distinta carga. El servidor autoriza —manda
+// `access-control-allow-origin: *`—; lo que falla es reusar la copia vieja.
+//
+// Tres casos, cada uno con lo que necesita:
+//  · `data:` — no hay servidor ni copia que arreglar, y pedirle permiso cruzado
+//    la rompe en WebKit (el motor de la app de iPhone). Se pide tal cual.
+//  · mismo origen — no hay permiso que pedir: el canvas no se contamina.
+//  · otro origen — permiso cruzado Y una dirección distinta, para no recibir la
+//    copia que la pantalla dejó sin permiso.
+export const cargarAfiche=src=>new Promise(res=>{
+  if(!src){res(null);return;}
+  const im=new Image();
+  let _u=src;
+  if(/^https?:/i.test(src)){
+    let _ajeno=true;
+    try{ _ajeno=new URL(src,location.href).origin!==location.origin; }catch(e){}
+    // El mismo origen no necesita ninguna de las dos cosas: no hay permiso que
+    // pedir ni copia envenenada. Distinguirlo evita descargar dos veces cada
+    // afiche propio — ninguna mutación mueve esta rama (el archivo sale igual),
+    // así que queda dicho: la protege el sentido, no el test.
+    if(_ajeno){
+      im.crossOrigin='anonymous';
+      _u=src+(src.includes('?')?'&':'?')+'ofx=1';
+    }
+  }
+  im.onload=()=>res(im); im.onerror=()=>res(null); im.src=_u;
+});
+
 // ── shareDiary (F3 del Diario, rediseño 19 jul) — el diario como GRID de pósters.
 // Muro de afiches (3 col, 2:3) con chip de estrellas ámbar sobre scrim inferior.
 // Póster no dibujable (CORS/CDN) → tile generativo: fondo cálido + tinte de la
@@ -71,41 +107,7 @@ export async function shareDiary(){
   x.fillText(_dt?`${_n} · ${String(_dt).toUpperCase()}`:_n,PAD,192);
   // helpers
   const rr=(px,py,w,h,r)=>{ x.beginPath(); x.moveTo(px+r,py); x.arcTo(px+w,py,px+w,py+h,r); x.arcTo(px+w,py+h,px,py+h,r); x.arcTo(px,py+h,px,py,r); x.arcTo(px,py,px+w,py,r); x.closePath(); };
-  // Los afiches del export se piden de otra forma que en la pantalla, y ESA es la
-  // razón por la que no cargaban (reportado por Juan, FICCI desde iPhone, 4 sep
-  // 2026). El canvas EXIGE permiso cruzado —dibujar una imagen sin él lo
-  // contamina y `toBlob` tira excepción, medido—, pero la grilla ya cargó ese
-  // mismo afiche SIN pedirlo, y la copia guardada no sirve para una petición que
-  // sí lo pide: el navegador la rechaza. Medido con un póster real de FICCI
-  // (TMDB w185): con permiso cruzado falla, sin él carga, y con permiso cruzado
-  // más una dirección distinta carga. El servidor autoriza —manda
-  // `access-control-allow-origin: *`—; lo que falla es reusar la copia vieja.
-  //
-  // Tres casos, cada uno con lo que necesita:
-  //  · `data:` — no hay servidor ni copia que arreglar, y pedirle permiso cruzado
-  //    la rompe en WebKit (el motor de la app de iPhone). Se pide tal cual.
-  //  · mismo origen — no hay permiso que pedir: el canvas no se contamina.
-  //  · otro origen — permiso cruzado Y una dirección distinta, para no recibir la
-  //    copia que la pantalla dejó sin permiso.
-  const load=src=>new Promise(res=>{
-    if(!src){res(null);return;}
-    const im=new Image();
-    let _u=src;
-    if(/^https?:/i.test(src)){
-      let _ajeno=true;
-      try{ _ajeno=new URL(src,location.href).origin!==location.origin; }catch(e){}
-      // El mismo origen no necesita ninguna de las dos cosas: no hay permiso que
-      // pedir ni copia envenenada. Distinguirlo evita descargar dos veces cada
-      // afiche propio — ninguna mutación mueve esta rama (el archivo sale igual),
-      // así que queda dicho: la protege el sentido, no el test.
-      if(_ajeno){
-        im.crossOrigin='anonymous';
-        _u=src+(src.includes('?')?'&':'?')+'ofx=1';
-      }
-    }
-    im.onload=()=>res(im); im.onerror=()=>res(null); im.src=_u;
-  });
-  const imgs=await Promise.all(rows.map(rw=>load(rw.src)));
+  const imgs=await Promise.all(rows.map(rw=>cargarAfiche(rw.src)));
   // celdas
   for(let i=0;i<rows.length;i++){
     const rw=rows[i], col=i%COLS, row=Math.floor(i/COLS);
@@ -357,7 +359,7 @@ function _rr(c,x,y,w,h,r){
 // revisión cazó que el diario tenía el mismo camino muerto). El iPhone no pasa
 // por acá: su app es WKWebView, sin window.Capacitor, y su Web Share sí funciona.
 // Devuelve true si se hizo cargo (nativo), false si hay que seguir por la web.
-async function _shareNativeImage(fname,dataUrl,title){
+export async function _shareNativeImage(fname,dataUrl,title){
   if(!window.Capacitor?.isNativePlatform()) return false;
   try{
     const {Filesystem,Share}=window.Capacitor.Plugins;
@@ -375,7 +377,7 @@ async function _shareNativeImage(fname,dataUrl,title){
   return true;
 }
 
-function _dlDirect(dataUrl){
+export function _dlDirect(dataUrl){
   const a=document.createElement('a');
   a.href=dataUrl;a.download='otrofestiv-miplan.png';
   a.style.cssText='position:fixed;top:-999px;left:-999px;opacity:0';
