@@ -960,8 +960,10 @@
      "posterSource": "tmdb",
      "lbSlug": "dormilon",
      "tmdb_id": 1426072,
+     "synopsis": "Dormilón cuida con cariño el cine abandonado que convirtió en su hogar. Cada noche registra sus sueños, en los que es la estrella del teatro y no su antiguo conserje. Una noche de tormenta, la vida que Dormi ha construido con tanto cuidado se pone a prueba cuando sus pesadillas se acumulan y lo enfrentan. Dormilón tendrá que vencer sus miedos y aceptar sus inseguridades para ser una versión más completa de sí mismo.",
      "synopsis_en": "Dormilón lovingly cares for the abandoned cinema he’s made a home. Every night he records his dreams, in which he is the star performer of the theater, rather than its former-janitor. On a stormy night, Dormi’s carefully crafted life is challenged when his nightmares accumulate and confront him. Dormilón will have to overcome his fears and embrace his insecurities to be a more complete version of himself.",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Balada de Peces y Pájaros",
@@ -1023,9 +1025,11 @@
      "posterSource": "tmdb",
      "lbSlug": "sorrow-doesnt-sleep-at-night",
      "tmdb_id": 1515864,
+     "synopsis": "Un hombre se aísla en el bosque con su gato. Los fantasmas de su pasado empiezan a atormentarlo y lo obligan a enfrentar sus miedos y sus culpas para no dejarse consumir por la locura.",
      "synopsis_en": "A man secludes himself in the forest with his cat. The ghosts of his past begin to torment him, being forced to face his fears and guilts in a try to not be consumed by madness.",
      "title_en": "Sorrow Doesn't Sleep At Night",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Trading Cards",
@@ -1038,8 +1042,10 @@
      "posterSource": "tmdb",
      "lbSlug": "trading-cards",
      "tmdb_id": 1616600,
+     "synopsis": "Un hombre enigmático viaja al pasado para encontrar a su yo más joven, en apariencia para revivir la nostalgia de las tarjetas coleccionables. Una exploración de la identidad, la salud mental y la pérdida de la inocencia infantil: Trading Cards es un cortometraje animado de fantasía oscura sobre el peso de vivir con un trastorno obsesivo-compulsivo.",
      "synopsis_en": "An enigmatic man journeys back in time to find his younger self, seemingly to revisit the nostalgia of trading cards. An exploration of identity, mental health and the erosion of childhood innocence, Trading Cards is a dark fantasy animated film about the weight of living with Obsessive-compulsive disorder.",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Lullaby",
@@ -1050,8 +1056,10 @@
      "duration": "5 min",
      "lbSlug": "lullaby-2026-2",
      "tmdb_id": 1730339,
+     "synopsis": "Una niña y su gato se enfrentan al duelo cuando una inquietante canción de cuna los atrae a las profundidades de una mansión en plena noche.",
      "synopsis_en": "A young girl and her cat come to confront grief as a haunting lullaby lures them into the depths of a night-time mansion.",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Bestias de la Muerte",
@@ -1581,7 +1589,9 @@
      "year": 2025,
      "duration": "9 min",
      "lbSlug": "the-flower-of-fear",
-     "tmdb_id": 1546267
+     "tmdb_id": 1546267,
+     "synopsis": "Un niño colombiano de 10 años es secuestrado por un grupo armado mientras juega en el bosque. Su madre lo busca desesperadamente y él, como mecanismo de defensa, crea un mundo de fantasía. Allí descubre que lo han llevado a un jardín oscuro y surreal donde a los niños los «siembran» y los obligan a hacer crecer flores en la cabeza, que producen un perfume conocido como el olor del miedo.",
+     "synopsis_lang": "es"
     },
     {
      "title": "No Vacancy",
@@ -1594,8 +1604,10 @@
      "posterSource": "tmdb",
      "lbSlug": "no-vacancy-2025",
      "tmdb_id": 1461232,
+     "synopsis": "La mente de Jack se desmorona, retratada a través de un motel en ruinas. Atraviesa noches caóticas llenas de llamadas misteriosas, huéspedes perturbadores, humillaciones de la infancia y batallas con la adicción.",
      "synopsis_en": "The unraveling mind of Jack, depicted through a dilapidated motel. He navigates chaotic nights filled with mysterious phone calls, disruptive guests, childhood humiliation and battles with addiction.",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "No es el Fin del Mundo",
@@ -1750,8 +1762,10 @@
      "posterSource": "tmdb",
      "lbSlug": "mucura",
      "tmdb_id": 1774280,
+     "synopsis": "En una casa sofocante de Rondônia, Marta despierta paralizada. La noche toma formas, voces y presencias que invaden su cuerpo y su mente. Atrapada entre el delirio y la realidad, enfrenta una espiral de miedo, violencia y derrumbe en la que todo a su alrededor parece brotar de su interior.",
      "synopsis_en": "In a stifling house in Rondônia, Marta wakes up paralyzed. The night takes on shapes, voices, and presences that invade her body and mind. Caught between delirium and reality, she faces a spiral of fear, violence, and collapse, where everything around her seems to spring from within her.",
-     "genre": "Terror"
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Herencia",
@@ -1776,7 +1790,9 @@
      "year": 2026,
      "duration": "13 min",
      "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Contrafrente",
@@ -1784,7 +1800,9 @@
      "country": "Argentina",
      "flags": "🇦🇷",
      "year": 2026,
-     "duration": "15 min"
+     "duration": "15 min",
+     "synopsis": "Un nuevo comienzo, un pasado trágico y la esperanza de ayudar terminan convirtiendo al protagonista en el causante de un problema sin solución. Sean Daniel Quinn envuelve un drama ordinario en fantasmas atemporales, regalándonos una mirada al pasado a través de una herida que nunca termina de cerrar.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Huasi",
@@ -1795,7 +1813,9 @@
      "duration": "15 min",
      "lbSlug": "huasi",
      "tmdb_id": 1655535,
-     "synopsis_en": "In this atmospheric and metaphysical short film that is truly captivating, two men traverse the forest in search of a mysterious object, while in an abandoned house, a tearful woman remains unmoved by her companion's words of comfort. \"Huasi\" is one of those films that appeals to the senses more than it speaks to the intellect, yet it still poses a question to us : saving one human being—does that mean saving all of humanity ?"
+     "synopsis": "Dos hombres atraviesan el bosque en busca de un objeto misterioso, mientras en una casa abandonada una mujer llorosa no se conmueve con las palabras de consuelo de su compañero. Un cortometraje atmosférico y metafísico que apela más a los sentidos que al intelecto y que, aun así, plantea una pregunta: ¿salvar a un ser humano es salvar a toda la humanidad?",
+     "synopsis_en": "In this atmospheric and metaphysical short film that is truly captivating, two men traverse the forest in search of a mysterious object, while in an abandoned house, a tearful woman remains unmoved by her companion's words of comfort. \"Huasi\" is one of those films that appeals to the senses more than it speaks to the intellect, yet it still poses a question to us : saving one human being—does that mean saving all of humanity ?",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -2661,8 +2681,10 @@
      "posterSource": "tmdb",
      "lbSlug": "mucura",
      "tmdb_id": 1774280,
+     "synopsis": "En una casa sofocante de Rondônia, Marta despierta paralizada. La noche toma formas, voces y presencias que invaden su cuerpo y su mente. Atrapada entre el delirio y la realidad, enfrenta una espiral de miedo, violencia y derrumbe en la que todo a su alrededor parece brotar de su interior.",
      "synopsis_en": "In a stifling house in Rondônia, Marta wakes up paralyzed. The night takes on shapes, voices, and presences that invade her body and mind. Caught between delirium and reality, she faces a spiral of fear, violence, and collapse, where everything around her seems to spring from within her.",
-     "genre": "Terror"
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Herencia",
@@ -2687,7 +2709,9 @@
      "year": 2026,
      "duration": "13 min",
      "poster": "/assets/fantasmagoria-2026/ubicua.jpg",
-     "posterSource": "oficial"
+     "posterSource": "oficial",
+     "synopsis": "Quién no se ha visto en las altas horas de la noche, cayendo en un agujero de conejo virtual que nos atrapa por horas en vez de hacer nuestras labores?… Que tal que ese tema se convirtiera en realidad? Un relato de terror digital que estremecerá a todos los trabajadores independientes.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Contrafrente",
@@ -2695,7 +2719,9 @@
      "country": "Argentina",
      "flags": "🇦🇷",
      "year": 2026,
-     "duration": "15 min"
+     "duration": "15 min",
+     "synopsis": "Un nuevo comienzo, un pasado trágico y la esperanza de ayudar terminan convirtiendo al protagonista en el causante de un problema sin solución. Sean Daniel Quinn envuelve un drama ordinario en fantasmas atemporales, regalándonos una mirada al pasado a través de una herida que nunca termina de cerrar.",
+     "synopsis_lang": "es"
     },
     {
      "title": "Huasi",
@@ -2706,7 +2732,9 @@
      "duration": "15 min",
      "lbSlug": "huasi",
      "tmdb_id": 1655535,
-     "synopsis_en": "In this atmospheric and metaphysical short film that is truly captivating, two men traverse the forest in search of a mysterious object, while in an abandoned house, a tearful woman remains unmoved by her companion's words of comfort. \"Huasi\" is one of those films that appeals to the senses more than it speaks to the intellect, yet it still poses a question to us : saving one human being—does that mean saving all of humanity ?"
+     "synopsis": "Dos hombres atraviesan el bosque en busca de un objeto misterioso, mientras en una casa abandonada una mujer llorosa no se conmueve con las palabras de consuelo de su compañero. Un cortometraje atmosférico y metafísico que apela más a los sentidos que al intelecto y que, aun así, plantea una pregunta: ¿salvar a un ser humano es salvar a toda la humanidad?",
+     "synopsis_en": "In this atmospheric and metaphysical short film that is truly captivating, two men traverse the forest in search of a mysterious object, while in an abandoned house, a tearful woman remains unmoved by her companion's words of comfort. \"Huasi\" is one of those films that appeals to the senses more than it speaks to the intellect, yet it still poses a question to us : saving one human being—does that mean saving all of humanity ?",
+     "synopsis_lang": "es"
     }
    ]
   },
@@ -2744,8 +2772,10 @@
      "posterSource": "tmdb",
      "lbSlug": "remembrance-of-night-whispers",
      "tmdb_id": 1671522,
+     "synopsis": "Un joven vislumbra el pasado enigmático de su difunto padre.",
      "synopsis_en": "A young man catches a glimpse into his late father's enigmatic past.",
-     "genre": "Documental"
+     "genre": "Documental",
+     "synopsis_lang": "es"
     },
     {
      "title": "Lady Puritan",
@@ -2758,7 +2788,9 @@
      "posterSource": "tmdb",
      "lbSlug": "lady-puritan",
      "tmdb_id": 1637564,
-     "synopsis_en": "As dream life bleeds into waking reality, a woman haunted by her Puritan ancestor must confront the terror buried deep within her bloodline."
+     "synopsis": "Mientras la vida onírica se filtra en la vigilia, una mujer acechada por su antepasada puritana debe enfrentar el terror enterrado en lo más hondo de su linaje.",
+     "synopsis_en": "As dream life bleeds into waking reality, a woman haunted by her Puritan ancestor must confront the terror buried deep within her bloodline.",
+     "synopsis_lang": "es"
     },
     {
      "title": "La Caça",
@@ -2786,8 +2818,10 @@
      "posterSource": "tmdb",
      "lbSlug": "dont-watch-this-2025",
      "tmdb_id": 1493377,
+     "synopsis": "Una mujer se da cuenta, poco a poco, de que es un personaje de una película. Mientras se hunde en el terror, todos a su alrededor la tachan de delirante, sin saber que ella es la única que sabe que la estamos viendo.",
      "synopsis_en": "A woman slowly realizes she's a character in a movie. As she spirals in terror, everyone around her dismisses her as delusional-unaware that she's the only one who knows we are watching.",
-     "genre": "Ciencia ficción"
+     "genre": "Ciencia ficción",
+     "synopsis_lang": "es"
     },
     {
      "title": "Te Debo Una",
@@ -2827,8 +2861,10 @@
      "posterSource": "tmdb",
      "lbSlug": "morana-1",
      "tmdb_id": 1649572,
+     "synopsis": "En las vacaciones de Semana Santa de comienzos de los años dos mil, Mathilde, una adolescente nihilista, recibe una maldición de su hermana: morir a manos de Morana, la mismísima diosa de la muerte.",
      "synopsis_en": "During the Easter holidays in the early two-thousands, Mathilde, a nihilistic teen, is cursed by her sister to die at the hands of Morana, the Goddess of death herself.",
-     "genre": "Terror"
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Que El Cielo Nos Perdone",
@@ -3184,8 +3220,10 @@
      "posterSource": "tmdb",
      "lbSlug": "dormilon",
      "tmdb_id": 1426072,
+     "synopsis": "Dormilón cuida con cariño el cine abandonado que convirtió en su hogar. Cada noche registra sus sueños, en los que es la estrella del teatro y no su antiguo conserje. Una noche de tormenta, la vida que Dormi ha construido con tanto cuidado se pone a prueba cuando sus pesadillas se acumulan y lo enfrentan. Dormilón tendrá que vencer sus miedos y aceptar sus inseguridades para ser una versión más completa de sí mismo.",
      "synopsis_en": "Dormilón lovingly cares for the abandoned cinema he’s made a home. Every night he records his dreams, in which he is the star performer of the theater, rather than its former-janitor. On a stormy night, Dormi’s carefully crafted life is challenged when his nightmares accumulate and confront him. Dormilón will have to overcome his fears and embrace his insecurities to be a more complete version of himself.",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Balada de Peces y Pájaros",
@@ -3247,9 +3285,11 @@
      "posterSource": "tmdb",
      "lbSlug": "sorrow-doesnt-sleep-at-night",
      "tmdb_id": 1515864,
+     "synopsis": "Un hombre se aísla en el bosque con su gato. Los fantasmas de su pasado empiezan a atormentarlo y lo obligan a enfrentar sus miedos y sus culpas para no dejarse consumir por la locura.",
      "synopsis_en": "A man secludes himself in the forest with his cat. The ghosts of his past begin to torment him, being forced to face his fears and guilts in a try to not be consumed by madness.",
      "title_en": "Sorrow Doesn't Sleep At Night",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Trading Cards",
@@ -3262,8 +3302,10 @@
      "posterSource": "tmdb",
      "lbSlug": "trading-cards",
      "tmdb_id": 1616600,
+     "synopsis": "Un hombre enigmático viaja al pasado para encontrar a su yo más joven, en apariencia para revivir la nostalgia de las tarjetas coleccionables. Una exploración de la identidad, la salud mental y la pérdida de la inocencia infantil: Trading Cards es un cortometraje animado de fantasía oscura sobre el peso de vivir con un trastorno obsesivo-compulsivo.",
      "synopsis_en": "An enigmatic man journeys back in time to find his younger self, seemingly to revisit the nostalgia of trading cards. An exploration of identity, mental health and the erosion of childhood innocence, Trading Cards is a dark fantasy animated film about the weight of living with Obsessive-compulsive disorder.",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Lullaby",
@@ -3274,8 +3316,10 @@
      "duration": "5 min",
      "lbSlug": "lullaby-2026-2",
      "tmdb_id": 1730339,
+     "synopsis": "Una niña y su gato se enfrentan al duelo cuando una inquietante canción de cuna los atrae a las profundidades de una mansión en plena noche.",
      "synopsis_en": "A young girl and her cat come to confront grief as a haunting lullaby lures them into the depths of a night-time mansion.",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Bestias de la Muerte",
@@ -3573,8 +3617,10 @@
      "posterSource": "tmdb",
      "lbSlug": "remembrance-of-night-whispers",
      "tmdb_id": 1671522,
+     "synopsis": "Un joven vislumbra el pasado enigmático de su difunto padre.",
      "synopsis_en": "A young man catches a glimpse into his late father's enigmatic past.",
-     "genre": "Documental"
+     "genre": "Documental",
+     "synopsis_lang": "es"
     },
     {
      "title": "Lady Puritan",
@@ -3587,7 +3633,9 @@
      "posterSource": "tmdb",
      "lbSlug": "lady-puritan",
      "tmdb_id": 1637564,
-     "synopsis_en": "As dream life bleeds into waking reality, a woman haunted by her Puritan ancestor must confront the terror buried deep within her bloodline."
+     "synopsis": "Mientras la vida onírica se filtra en la vigilia, una mujer acechada por su antepasada puritana debe enfrentar el terror enterrado en lo más hondo de su linaje.",
+     "synopsis_en": "As dream life bleeds into waking reality, a woman haunted by her Puritan ancestor must confront the terror buried deep within her bloodline.",
+     "synopsis_lang": "es"
     },
     {
      "title": "La Caça",
@@ -3615,8 +3663,10 @@
      "posterSource": "tmdb",
      "lbSlug": "dont-watch-this-2025",
      "tmdb_id": 1493377,
+     "synopsis": "Una mujer se da cuenta, poco a poco, de que es un personaje de una película. Mientras se hunde en el terror, todos a su alrededor la tachan de delirante, sin saber que ella es la única que sabe que la estamos viendo.",
      "synopsis_en": "A woman slowly realizes she's a character in a movie. As she spirals in terror, everyone around her dismisses her as delusional-unaware that she's the only one who knows we are watching.",
-     "genre": "Ciencia ficción"
+     "genre": "Ciencia ficción",
+     "synopsis_lang": "es"
     },
     {
      "title": "Te Debo Una",
@@ -3656,8 +3706,10 @@
      "posterSource": "tmdb",
      "lbSlug": "morana-1",
      "tmdb_id": 1649572,
+     "synopsis": "En las vacaciones de Semana Santa de comienzos de los años dos mil, Mathilde, una adolescente nihilista, recibe una maldición de su hermana: morir a manos de Morana, la mismísima diosa de la muerte.",
      "synopsis_en": "During the Easter holidays in the early two-thousands, Mathilde, a nihilistic teen, is cursed by her sister to die at the hands of Morana, the Goddess of death herself.",
-     "genre": "Terror"
+     "genre": "Terror",
+     "synopsis_lang": "es"
     },
     {
      "title": "Que El Cielo Nos Perdone",
@@ -3851,7 +3903,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T07:48:08",
+  "fecha": "2026-10-10T08:55:17",
   "plan_sha": "bcc190a548850b59",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"
