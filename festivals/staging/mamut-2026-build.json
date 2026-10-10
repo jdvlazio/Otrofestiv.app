@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "Instagram @mamut_festival — el carrusel de programación (11 láminas)",
-  "capturado": "2026-10-09",
+  "capturado": "2026-10-10",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime cada lámina de día, tal cual; la sala va aparte (crudo `sala`). La lámina 10 da la dirección de seis. «Capilla, Comfama» y «Lab UNAL» no están en esa lámina.",
@@ -203,10 +203,10 @@
    "short": "Cine Centro",
    "city": "Medellín",
    "n": 1,
-   "lat": 6.2538534,
-   "lng": -75.5636238,
+   "lat": 6.2549874,
+   "lng": -75.5628949,
    "_prec": "manual",
-   "_match": "APROXIMADO (9 oct 2026): la sala cerró en 2008 y no está en Google Maps ni en OSM. La lámina dice «Esquina de la Avenida Oriental (Carrera 46) con la calle Ecuador (Carrera 48)»; El Colombiano la ubica en el eje del Parque de Bolívar. Pin sobre Ecuador (Cra 48) frente al parque, punto de Nominatim; pendiente confirmar la esquina con el festival.",
+   "_match": "Google Maps: «Ecuador & Av. Oriental, La Candelaria, Medellín» — la esquina exacta que da la lámina del festival (Av. Oriental, Cra 46, con Ecuador, Cra 48). La sala cerró en 2008 y no figura como lugar; el cruce sí (10 oct 2026). Antes: pin aproximado 150 m al suroeste.",
    "address": "Av. Oriental (Cra. 46) con Ecuador (Cra. 48)"
   },
   "Coocine - Medellín": {
@@ -1415,7 +1415,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-09T21:14:16",
+  "fecha": "2026-10-10T12:27:43",
   "plan_sha": "3725c84df2834966",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py mamut-2026"
