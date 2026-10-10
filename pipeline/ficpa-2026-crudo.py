@@ -82,6 +82,13 @@ ALTERNA_FUERA = {
 # («– Con presencia del director», «largometraje colombiano documental»). El
 # título publicado es el de la obra, tal como lo escribe la Selección Oficial
 # en frase; la presencia del equipo va como has_qa.
+# Datos que FICPA no publica de una obra y que ya publicamos de la MISMA obra
+# en otro festival nuestro (mismo título y misma dirección). OK de Juan, 10 oct.
+DATOS_PUBLICADOS = {
+    # CineAutopsia 2026 (festivals/cineautopsia-2026.json) e IMDb nm5653494
+    'AtmoSphaira': {'anio': 2024, 'duracion_min': 12, 'pais': 'Colombia'},
+}
+
 TITULO = {
     # errata del festival: el corto de Sandra Rengifo es «AtmoSphaira» (IMDb
     # nm5653494 y CineAutopsia 2026); corregido con OK de Juan, 10 oct
@@ -448,6 +455,9 @@ def main():
             # erratas del festival declaradas en TITULO, también dentro de un programa
             if o.get('titulo') in ('AtmaSphaira',):
                 o['titulo'] = TITULO[o['titulo']]
+            # lo que el festival no publica y ya publicamos de la misma obra
+            for k, v in DATOS_PUBLICADOS.get(o.get('titulo'), {}).items():
+                o.setdefault(k, v)
         # COMILLAS RECTAS en el título ([title-normalization])
         f['titulo'] = f['titulo'].translate(str.maketrans({'“': '"', '”': '"', '«': '"', '»': '"'}))
     funciones = [{k: v for k, v in f.items() if v not in (None, '')} for f in funciones]

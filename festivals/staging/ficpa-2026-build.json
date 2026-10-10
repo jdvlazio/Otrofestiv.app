@@ -1054,9 +1054,9 @@
   {
    "title": "Cortos experimentales internacionales y colombianos",
    "type": "film",
-   "section": "🌍 Ecos del Mundo",
-   "country": "Grecia, Colombia/Cuba",
-   "flags": "🇬🇷🇨🇴🇨🇺",
+   "section": "💓 Latidos del Cine Colombiano",
+   "country": "Grecia, Colombia/Cuba, Colombia",
+   "flags": "🇬🇷🇨🇴🇨🇺🇨🇴",
    "duration": "39 min",
    "day": "2026-10-15",
    "time": "16:00",
@@ -1106,6 +1106,10 @@
     {
      "title": "AtmoSphaira",
      "director": "Sandra Rengifo",
+     "country": "Colombia",
+     "flags": "🇨🇴",
+     "year": 2024,
+     "duration": "12 min",
      "poster": "/assets/cineautopsia/atmosphaira.jpg",
      "synopsis": "Sin la protección de una atmósfera, la vida cesa. Este fino barniz gaseoso, un compuesto de ἀτμός (vapor o aire) y σφαῖρα (esfera), nos permite existir mientras flotamos en el infinito. De ahí parte esta película, con el canto grabado del último pájaro hawaiano Kauaʻi ʻōʻō superviviente —y ahora extinto—. AtmoSphaira se subdivide en capítulos epistolares, en bitácoras de viaje o cartas de confrontación con la naturaleza humana y no humana. Cada segmento teje la urdimbre sonora y visual de dos cíclopes que, desde su punto de vista esférico, nos conceden —a veces de forma abstracta, otras de forma frontal y muy a menudo en silueta— una mirada a sus mundos. Desde los páramos andinos hasta el mar Mediterráneo, esta película nos guía con texturas fotosensibles y capas superpuestas a través de un multiverso que evoca la nostalgia de días mejores, la extinción de y dentro de los cuerpos, la ampliación de nuestra concepción de los acontecimientos en el espacio y el tiempo, así como la memoria física e inmaterial. Los sujetos de esta pieza son controladores insignificantes que se enfrentan a un flujo finito en sus cuerpos caducos, excretando imágenes crujientes y perfectas… megapíxeles que no muestran nada. AtmoSphaira nos invita a recorrer este paisaje, enfrentándonos a nuestra miopía vital: somos cíclopes de pantalla. Invoca la contradicción en nuestros cuerpos —efímeros y en el límite entre lo analógico y lo digital—, superando lo visible y envolviéndonos en lo sensible. Aquí nos convertimos en una nebulosa, un destello de luz que fertiliza la experiencia de una realidad trémula, revelando la sacralidad de la impureza tangible y confirmando que errar es verdaderamente humano.",
      "posterSource": "oficial",
@@ -1829,7 +1833,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-10T17:25:56",
+  "fecha": "2026-10-10T18:07:21",
   "plan_sha": "572c264052fc30e6",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py ficpa-2026"
