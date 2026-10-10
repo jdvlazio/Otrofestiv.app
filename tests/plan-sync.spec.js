@@ -265,7 +265,7 @@ test('PS07 — el export dibuja los afiches, no sus reemplazos', async ({ page }
     const cx = cv.getContext('2d'); cx.drawImage(bmp, 0, 0);
     // Geometría del carrusel 4:5 (#1066), pedida a su dueño: no se copia acá.
     const S = await import('/src/controller/story.js');
-    const G = S.geometriaGrilla(3), HDR = 222, GAP = 14;
+    const G = S.geometriaGrilla(3), HDR = Math.round(G.y0), GAP = 14;
     const cw = Math.floor(G.cw), ch = Math.round(G.ch);
     const celdas = [];
     for (let i = 0; i < 3; i++) {

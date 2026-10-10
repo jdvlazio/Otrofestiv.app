@@ -4,7 +4,7 @@
 //   y 286  acreditación (nombre · ciudad), 700 26px, tracking, gris
 //   y 358  titular 112px: verbo hueso + cifra y unidad en ámbar
 //   y 618  recorrido en una línea: números 700 hueso, unidades 500 gris
-//   y 698  mosaico a sangre, afiches 2:3, ≤470 de alto (geometriaMosaico)
+//   y 698  mosaico de tarjetas redondeadas 2:3, ≤470 de alto (geometriaMosaico)
 //   +62    etiqueta («Mis mejores» / «No me las pierdo») + tarjetas
 //   +72    wordmark + otrofestiv.app — todo desde el final REAL del mosaico
 //   y 1440–1920 LIBRE: ahí el usuario pone el sticker del festival.
@@ -23,7 +23,7 @@ import { t } from '../i18n/i18n.js';
 import { storage } from '../storage/storage.js';
 import { cargarAfiche, sharePlan, _shareNativeImage, _shareNativeImages, _dlDirect } from './share.js';
 
-const W=1080, H=1920, M=92;
+const W=1080, H=1920, M=92, MM=24, GM=10;
 const BG='#0B0A08', HUESO='#F0EDE8', AMBAR='#F59E0B', GRIS='#8A8A8A', GRIS2='#6A6A6A';
 const F="'Plus Jakarta Sans', system-ui, sans-serif";
 
@@ -56,8 +56,12 @@ async function _fuentes(){
 // entre en el alto, y la última fila queda a la izquierda. altoMax lo fija quien llama (≤470) para que el bloque de abajo
 // nunca pise el cuarto libre (y ≥ 1440).
 export function geometriaMosaico(n, altoMax=470){
-  if(!n) return {filas:0, cols:0, cw:0, ch:0, porFila:[]};
-  const alto=c=>Math.ceil(n/c)*1.5*W/c;
+  if(!n) return {filas:0, cols:0, cw:0, ch:0, porFila:[], x0:MM, gap:GM};
+  // Tarjetas redondeadas con separación (Juan, 10 oct: el mosaico a sangre
+  // «cortaba» los afiches y no tenía el borde de la Grilla): margen MM a cada
+  // lado y GM entre tarjetas, también en el alto.
+  const cwDe=c=>(W-MM*2-GM*(c-1))/c;
+  const alto=c=>{ const f=Math.ceil(n/c); return f*cwDe(c)*1.5+(f-1)*GM; };
   // La menor cantidad que entra en el alto (filas parejas o no)…
   let min=7; while(alto(min)>altoMax) min++;
   // …y una con filas completas gana solo si no achica los afiches más de la
@@ -65,9 +69,9 @@ export function geometriaMosaico(n, altoMax=470){
   // diminutos, que la regla al pie de la letra elegía (medido, 10 oct).
   let cols=min;
   for(let c=min; c<=min*1.5; c++) if(n%c===0){ cols=c; break; }
-  const filas=Math.ceil(n/cols), cw=W/cols;
+  const filas=Math.ceil(n/cols), cw=cwDe(cols);
   const porFila=Array.from({length:filas},(_,i)=>Math.min(cols,n-i*cols));
-  return {filas, cols, cw, ch:cw*1.5, porFila};
+  return {filas, cols, cw, ch:cw*1.5, porFila, x0:MM, gap:GM};
 }
 
 // Retícula vertical (maqueta con guías de #1064, bajada 50 px el 10 oct: la
@@ -162,11 +166,7 @@ async function _lienzo(T, partes){
   const cfg=FESTIVAL_CONFIG[_activeFestId]||{};
   const c=document.createElement('canvas'); c.width=W; c.height=H;
   const x=c.getContext('2d');
-  x.fillStyle=BG; x.fillRect(0,0,W,H);
-  // glow ámbar arriba a la derecha (el del mockup)
-  const g=x.createRadialGradient(W*0.86,0,0,W*0.86,0,620);
-  g.addColorStop(0,'rgba(245,158,11,.22)'); g.addColorStop(1,'rgba(245,158,11,0)');
-  x.fillStyle=g; x.fillRect(0,0,W,700);
+  _fondo(x,W,H);
   x.textBaseline='alphabetic'; x.textAlign='left';
   // acreditación: nombre · ciudad, con tracking
   const _cred=[cfg.name||'', cfg.city||''].filter(Boolean).join(' · ').toUpperCase();
@@ -195,17 +195,37 @@ async function _mosaico(x, obras, altoMax){
   const geo=geometriaMosaico(obras.length, altoMax);
   const afs=obras.map(_modeloAfiche);
   const imgs=await _cargarConRespaldo(afs);
-  const y0=Y_MOS;
+  const y0=Y_MOS, rad=Math.max(6,geo.cw*0.07);
   let k=0;
   geo.porFila.forEach((nf,fila)=>{
-    const x0=0; // a sangre; la última fila incompleta queda a la izquierda
-    for(let c=0;c<nf;c++,k++){
-      const cx=x0+c*geo.cw, cy=y0+fila*geo.ch;
+    for(let c=0;c<nf;c++,k++){ // la última fila incompleta queda a la izquierda
+      const cx=geo.x0+c*(geo.cw+geo.gap), cy=y0+fila*(geo.ch+geo.gap);
+      x.save(); _rr(x,cx,cy,geo.cw,geo.ch,rad); x.clip();
       _afiche(x,afs[k],imgs[k],cx,cy,geo.cw,geo.ch);
+      x.restore();
       if(obras[k].prio) _marca(x,cx+geo.cw-geo.cw*0.24,cy+geo.cw*0.06,geo.cw*0.16);
     }
   });
-  return y0+geo.filas*geo.ch;
+  return y0+geo.filas*geo.ch+(geo.filas-1)*geo.gap;
+}
+
+// _fondo — el mismo fondo para la historia y la Grilla (Juan, 10 oct: «mejor
+// balance e identidad entre ellos»): negro cálido, resplandor ámbar arriba a la
+// derecha y grano fino. El grano sale de una semilla fija: la misma imagen cada vez.
+function _fondo(x,w,h){
+  x.fillStyle=BG; x.fillRect(0,0,w,h);
+  const g=x.createRadialGradient(w*0.86,0,0,w*0.86,0,Math.min(620,w*0.58));
+  g.addColorStop(0,'rgba(245,158,11,.22)'); g.addColorStop(1,'rgba(245,158,11,0)');
+  x.fillStyle=g; x.fillRect(0,0,w,700);
+  const T=document.createElement('canvas'); T.width=T.height=180;
+  const tx=T.getContext('2d'), d=tx.createImageData(180,180);
+  let sem=0x9e3779b1;
+  for(let i=0;i<d.data.length;i+=4){
+    sem=(sem*1664525+1013904223)>>>0; const v=sem>>>24;
+    d.data[i]=d.data[i+1]=d.data[i+2]=v; d.data[i+3]=14;
+  }
+  tx.putImageData(d,0,0);
+  x.save(); x.fillStyle=x.createPattern(T,'repeat'); x.fillRect(0,0,w,h); x.restore();
 }
 
 // _marca — el marcador de prioridad (la forma de ICONS.bookmarkFill) en ámbar,
@@ -342,7 +362,7 @@ async function _cargarConRespaldo(afs){
 // PAREJO (Juan, 10 oct: en un carrusel cada lámina se ve sola — 18 → 9+9).
 // Afiches: los mismos dueños que la historia (_modeloAfiche) con respaldo
 // generativo para lo que no se puede dibujar (_cargarConRespaldo).
-const G_W=1080, G_H=1350, G_P=80, G_GAP=14, G_RAD=16, G_Y0=222, G_MAX=12;
+const G_W=1080, G_H=1350, G_P=80, G_GAP=14, G_RAD=16, G_Y0=222, G_FIN=1250, G_MAX=12;
 
 // geometriaGrilla(k) — cómo se acomodan k tarjetas en una lámina 4:5.
 //   ≤6 → 3 columnas grandes; 9 → 3×3; el resto → 4 columnas. Centrada.
@@ -351,7 +371,11 @@ export function geometriaGrilla(k){
   const cols=k<=6?3:(k===9?3:4);
   const cw=k<=6?(G_W-G_P*2-G_GAP*2)/3:ancho;
   const x0=(G_W-(cols*cw+(cols-1)*G_GAP))/2;
-  return {cols, cw, ch:cw*1.5, x0, filas:Math.ceil(k/cols)};
+  const filas=Math.ceil(k/cols), ch=cw*1.5;
+  // Centrada también en el ALTO entre el titular y el wordmark: con 8 obras
+  // (4×2) la lámina quedaba con media hoja vacía abajo (Jardín, 10 oct).
+  const y0=G_Y0+Math.max(0,(G_FIN-G_Y0-(filas*ch+(filas-1)*G_GAP))/2);
+  return {cols, cw, ch, x0, y0, filas};
 }
 // repartoLaminas(n) → cuántas tarjetas va en cada lámina, parejo.
 export function repartoLaminas(n){
@@ -376,10 +400,7 @@ export async function shareGrilla(){
   reparto.forEach((k,L)=>{
     const c=document.createElement('canvas'); c.width=G_W; c.height=G_H;
     const x=c.getContext('2d');
-    x.fillStyle=BG; x.fillRect(0,0,G_W,G_H);
-    const g=x.createRadialGradient(G_W*0.86,0,0,G_W*0.86,0,520);
-    g.addColorStop(0,'rgba(245,158,11,.22)'); g.addColorStop(1,'rgba(245,158,11,0)');
-    x.fillStyle=g; x.fillRect(0,0,G_W,600);
+    _fondo(x,G_W,G_H);
     x.textBaseline='alphabetic'; x.textAlign='left';
     const _cred=[cfg.name||'', cfg.city||''].filter(Boolean).join(' · ').toUpperCase();
     _tracked(x,_cred,G_P,92,`700 24px ${F}`,GRIS,0.32*24);
@@ -390,7 +411,7 @@ export async function shareGrilla(){
     const geo=geometriaGrilla(k);
     for(let j=0;j<k;j++){
       const i=k0+j, o=obras[i];
-      const cx=geo.x0+(j%geo.cols)*(geo.cw+G_GAP), cy=G_Y0+Math.floor(j/geo.cols)*(geo.ch+G_GAP);
+      const cx=geo.x0+(j%geo.cols)*(geo.cw+G_GAP), cy=geo.y0+Math.floor(j/geo.cols)*(geo.ch+G_GAP);
       x.save(); _rr(x,cx,cy,geo.cw,geo.ch,G_RAD); x.clip();
       _afiche(x,afs[i],imgs[i],cx,cy,geo.cw,geo.ch);
       const sg=x.createLinearGradient(0,cy+geo.ch-110,0,cy+geo.ch); sg.addColorStop(0,'rgba(0,0,0,0)'); sg.addColorStop(1,'rgba(0,0,0,.8)');

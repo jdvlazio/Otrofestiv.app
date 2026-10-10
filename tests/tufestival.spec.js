@@ -139,7 +139,7 @@ test('TF4 — Mi plan: hoja Historia/Calendario, prioridades primero y voz en pr
     const botones = [...document.querySelectorAll('button')].filter(b => b.offsetParent).map(b => b.textContent.trim());
     const R = await import('/src/view/recap.js');
     const geo = [5, 14, 18, 22, 23, 24, 40].map(n => { const g = S.geometriaMosaico(n);
-      return { n, cols: g.cols, filas: g.porFila, alto: Math.round(g.filas * g.ch), dos3: Math.abs(g.ch / g.cw - 1.5) < 1e-9, sangre: Math.round(g.cols * g.cw) }; });
+      return { n, cols: g.cols, filas: g.porFila, dos3: Math.abs(g.ch / g.cw - 1.5) < 1e-9, ancho: Math.round(g.x0 * 2 + g.cols * g.cw + (g.cols - 1) * g.gap), alto: Math.round(g.filas * g.ch + (g.filas - 1) * g.gap) }; });
     const rec = { peliculas: 4, eventos: 0 };
     return { n: p.n, sinVista, esperadas, conProg: sch.some(s => s._title === prog.title), primeras: p.obras.slice(0, p.prios.length).map(o => o.prio),
       resto: p.obras.slice(p.prios.length).some(o => o.prio), prios: p.prios.map(x => x.title).sort(),
@@ -163,7 +163,7 @@ test('TF4 — Mi plan: hoja Historia/Calendario, prioridades primero y voz en pr
   expect(g[23].filas.slice(0, -1).every(v => v === g[23].cols), 'si no hay filas completas, solo la última queda corta').toBe(true);
   expect(g[5].cols, 'nunca menos de 7 columnas').toBe(7);
   expect(g[23].filas.length, 'un primo no se vuelve una sola fila diminuta').toBeGreaterThan(1);
-  r.geo.forEach(x => { expect(x.dos3, `${x.n}: 2:3`).toBe(true); expect(x.sangre).toBe(1080); expect(x.alto).toBeLessThanOrEqual(470); });
+  r.geo.forEach(x => { expect(x.dos3, `${x.n}: 2:3`).toBe(true); expect(x.ancho, 'llena el ancho con su margen').toBe(1080); expect(x.alto).toBeLessThanOrEqual(470); });
   expect(r.tu, 'la pantalla le habla a él').toBe('Viste');
 });
 
@@ -183,7 +183,7 @@ test('TF5 — Grilla: carrusel 4:5 repartido parejo y compartido de una vez', as
     const dims = [];
     for (const f of (enviado ? enviado.files : [])) { const b = await createImageBitmap(f); dims.push([b.width, b.height]); }
     const cabe = [1, 3, 6, 7, 9, 12].every(k => { const g = S.geometriaGrilla(k);
-      return 222 + g.filas * g.ch + (g.filas - 1) * 14 <= 1250 && g.x0 >= 79 && g.cols * g.cw + (g.cols - 1) * 14 + g.x0 * 2 <= 1080.5; });
+      return g.y0 >= 222 && g.y0 + g.filas * g.ch + (g.filas - 1) * 14 <= 1250 && g.x0 >= 79 && g.cols * g.cw + (g.cols - 1) * 14 + g.x0 * 2 <= 1080.5; });
     return { dims, nombres: enviado ? enviado.files.map(f => f.name) : [],
       r18: S.repartoLaminas(18), r12: S.repartoLaminas(12), r13: S.repartoLaminas(13), r25: S.repartoLaminas(25), cabe };
   });
