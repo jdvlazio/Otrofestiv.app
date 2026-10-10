@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "ficcali.com — Programación 2026 (WP 14870) + fichas de la Selección 2026",
-  "capturado": "2026-10-08",
+  "capturado": "2026-10-09",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "radar": 1024,
@@ -1386,7 +1386,7 @@
   },
   {
    "title": "Conversatorio \"Territorios y Voces Indígenas\" Presentan Concip y Telepacífico",
-   "type": "film",
+   "type": "event",
    "section": "📽️ Proyecciones",
    "duration": "90 min",
    "day": "2026-10-22",
@@ -1394,6 +1394,7 @@
    "day_order": 6,
    "venue": "Teatro Municipal Enrique Buenaventura - Cali",
    "sala": "Teatrino",
+   "event_kind": "conversatorio",
    "has_qa": false,
    "_src": {
     "url": "https://ficcali.com/programacion-ficcali-2026/",
@@ -3206,7 +3207,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-08T22:11:09",
+  "fecha": "2026-10-09T08:32:40",
   "plan_sha": "54b63bd268851ff8",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py ficcali-2026"

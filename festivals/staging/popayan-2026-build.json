@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festicinepopayan.com, página de programación 2026 (wp-json, id 12543)",
-  "capturado": "2026-10-08",
+  "capturado": "2026-10-09",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre que imprime la parrilla; el Auditorio Maya es la sala de la Facultad de Artes de Unicauca.",
@@ -160,30 +160,35 @@
    "archetype": "Competencia",
    "order": 8
   },
+  "🏡 Cine Corto al barrio": {
+   "en": "Cine Corto in the Neighborhood",
+   "archetype": "Cortos / Programas",
+   "order": 9
+  },
   "🎬 Selección Oficial Ficción": {
    "en": "Official Selection: Fiction",
    "archetype": "Competencia",
-   "order": 9
+   "order": 10
   },
   "🌎 Muestra de Cortos Internacionales": {
    "en": "International Shorts Showcase",
    "archetype": "Muestra / País",
-   "order": 10
+   "order": 11
   },
   "🧒 Cine Corto Familiar": {
    "en": "Family Shorts",
    "archetype": "Cortos / Programas",
-   "order": 11
+   "order": 12
   },
   "🎈 Selección Oficial Infantil": {
    "en": "Official Selection: Children",
    "archetype": "Competencia",
-   "order": 12
+   "order": 13
   },
   "🏘️ CineCorto en el Barrio": {
    "en": "CineCorto in the Neighborhood",
    "archetype": "Cortos / Programas",
-   "order": 13
+   "order": 14
   }
  },
  "venues": {
@@ -204,6 +209,15 @@
    "address": "Cra. 6 #3-14, Centro, Popayán",
    "_prec": "manual",
    "_nota": "Google Maps «Facultad de Artes Universidad del Cauca», Cra. 6 #3-14; OSM «Puerta artes, 3-14, Carrera 6» a 6 m. El Auditorio Maya es su sala."
+  },
+  "Mikuna Casa Cultural - Popayán": {
+   "short": "Mikuna Casa Cultural",
+   "city": "Popayán",
+   "lat": 2.4285559,
+   "lng": -76.6175557,
+   "address": "Túnel bajo, Popayán",
+   "_prec": "manual",
+   "_nota": "Google Maps «Mikuna, Casa de las Artes» (plus code C9HJ+CX, Túnel bajo): el único Mikuna de Popayán en Maps, un espacio cultural y escuela de arte; el festival la llama «Mikuna Casa Cultural». OSM no la tiene (30 sep)."
   },
   "Centro Comercial Terra Plaza - Popayán": {
    "short": "Centro Comercial Terra Plaza",
@@ -238,7 +252,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true
   },
@@ -256,7 +270,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -365,7 +379,7 @@
    "qa_type": "team",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -447,7 +461,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -558,7 +572,7 @@
      "synopsis": "Una mujer reflexiona sobre el significado de la infancia a partir de los archivos de una película incompleta que recibe. Los personajes son unas muñecas de cerámica únicas que cobran vida a su paso. ¿Es la infancia una ficción colectiva?",
      "synopsis_lang": "es",
      "poster": "/assets/popayan-2026/el-patio-de-la-infancia.jpg",
-     "posterSource": "oficial",
+     "posterSource": "tmdb",
      "lbSlug": "el-patio-de-la-infancia",
      "tmdb_id": 1791680,
      "country": "Colombia",
@@ -614,7 +628,7 @@
    "qa_type": "team",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -701,7 +715,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -769,7 +783,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "description": "Con el Apoyo de Origen Lab",
@@ -789,7 +803,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -887,7 +901,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1071,7 +1085,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1148,7 +1162,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1225,6 +1239,116 @@
    ]
   },
   {
+   "title": "Cine Corto al barrio",
+   "type": "film",
+   "section": "🏡 Cine Corto al barrio",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "72 min",
+   "day": "2026-10-08",
+   "time": "18:30",
+   "day_order": 3,
+   "venue": "Mikuna Casa Cultural - Popayán",
+   "has_qa": false,
+   "_src": {
+    "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
+    "date": "2026-10-08"
+   },
+   "is_free": true,
+   "is_cortos": true,
+   "film_list": [
+    {
+     "title": "Chicanoa",
+     "director": "Carlos Alberto Mera Jiménez",
+     "year": 2025,
+     "duration": "9 min",
+     "synopsis": "Lura lucia Carabali Otero, Yineth Mera Mejia, Luz Adiana Serna Lasso, Jorge Olmedo Serna Lasso, Eddy Valeria Carabali Lasso, Eddy Valeria Carabali Lasso, Ibeth Karina Correa Fajardo, Coni Estefani Lasso Gonzalias",
+     "synopsis_lang": "es",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Abuelita caza vampiros",
+     "director": "Mariana Betancourt Chaves",
+     "year": 2026,
+     "duration": "2 min",
+     "synopsis": "En medio de la noche, un vampiro irrumpe en la casa de una abuelita latinoamericana esperando encontrar una presa fácil. En su lugar, se enfrenta a una mujer valiente, dispuesta a pelear por su vida. Con la ayuda inesperada de su fiel pug, la abuelita se envuelve en una batalla bizarra por la supervivencia. Mezclando humor con una atmósfera inquietante, Abuelita Caza Vampiros es una comedia gótica tropical inspirada en memorias familiares, donde el coraje y un toque de lo absurdo transforman una noche común en un enfrentamiento inolvidable.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/abuelita-caza-vampiros.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "abuelita-caza-vampiros",
+     "tmdb_id": 1786238,
+     "genre": "Animación",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Pájaros huérfanos",
+     "director": "Leonardo Rafael Montes Pérez",
+     "year": 2026,
+     "duration": "6 min",
+     "synopsis": "Un juego de caza en el bosque termina en un espejo inesperado. Tres hermanos logran abatir a una paloma, solo para descubrir que han dejado un nido de pichones huérfanos. En la fragilidad de esas crías, los niños reviven el trauma de su propio pasado y el vacío que dejó el conflicto en su hogar. Una historia sobre la pérdida, la memoria y el ciclo del dolor que intentan sanar al llevarse consigo aquello que ellos mismos rompieron.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/pajaros-huerfanos.jpg",
+     "posterSource": "custom",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Gris",
+     "director": "Loren Escandon",
+     "year": 2025,
+     "duration": "15 min",
+     "synopsis": "Sofía; una niña curiosa e imaginativa; enfrenta desafíos en la escuela mientras comienza a navegar las complejidades de su identidad multirracial. Sus dibujos cobran vida en animaciones llenas de fantasía y la acompañan en un viaje de autoconocimiento; marcado por dudas; resiliencia y aprendizajes sobre el sentido de pertenencia. Sofía aprende a abrazar los matices que la definen; fusionando amor; cultura e individualidad en una narrativa única.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/gris.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "gris-2025",
+     "tmdb_id": 1490328,
+     "synopsis_en": "Sofía, a curious and imaginative young girl, faces challenges at school as she begins to navigate the complexities of her mixed-race identity. As her art springs to life through vibrant and whimsical animations, the story delves into Sofia’s journey of self-discovery, capturing her confusion, resilience, and profound lessons about belonging. Sofia learns to embrace the shades that define her, blending love, culture, and individuality into a unique narrative.",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "Juan PorOcho",
+     "director": "Marquitos Cárdenas",
+     "duration": "10 min",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La gran hazaña",
+     "director": "Luber Yesid Zúñiga Ordóñez",
+     "year": 2024,
+     "duration": "15 min",
+     "synopsis": "Pablo (10) tendrá el desafío de rescatar a su mascota Pascualina, una gallina ponedora, de las garras de Don Chucho, el usurero del pueblo quien cobra las deudas con huevos. Este día Pablo tiene un accidente en su bicicleta y rompe los preciados huevos, ahora debe reponer la cubeta para saldar la deuda. La única herramienta que tiene el niño para rescatar a Pascualina es una apuesta con su trompo de madera con Felipe el mejor jugador de trompo del pueblo. Aunque todo parece jugar a favor de Pablo, quien ha ganado la cubeta que rescatará a su querida Pascualina y realizar la gran hazaña, Valeria, la hermana de Felipe, impide que el premio sea entregado y les hace caer en cuenta que no basta ganar una apuesta si entorpece el trabajo de otra familia en la misma situación. Se desata una disertación en la que todos los niños empatizan con Pablo gracias a que reconocen los obstáculos que han tenido al tratar de sortear la dura actitud de Don Chucho. Ahora, es la unión de todos los niños lo que permite que Pascualina sea rescatada. Finalmente, Pablo aprende la importancia del trabajo en equipo.",
+     "synopsis_lang": "es",
+     "poster": "/assets/popayan-2026/la-gran-hazana.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "the-great-feat",
+     "tmdb_id": 1494003,
+     "synopsis_en": "A rescue with a spinning tops, feathers, eggs and friends.",
+     "title_en": "The Great Feat",
+     "genre": "Aventura",
+     "country": "Colombia",
+     "flags": "🇨🇴"
+    },
+    {
+     "title": "La guerra de los tomates",
+     "director": "Juancarlos Gutiérrez",
+     "duration": "15 min",
+     "poster": "/assets/popayan-2026/la-guerra-de-los-tomates.jpg",
+     "posterSource": "tmdb",
+     "lbSlug": "la-guerra-de-los-tomates",
+     "tmdb_id": 1753830,
+     "synopsis_en": "Two groups of local and migrant children will represent the neighborhood in a tournament, an idea that will spark a tomato fight; a charismatic girl will bring out the best in everyone as she tries to unite an unlikely team against an unexpected rival.",
+     "country": "Colombia",
+     "year": 2026,
+     "flags": "🇨🇴"
+    }
+   ]
+  },
+  {
    "title": "Selección Oficial Ficción Primer bloque",
    "type": "film",
    "section": "🎬 Selección Oficial Ficción",
@@ -1238,7 +1362,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1342,7 +1466,7 @@
    "posterSource": "oficial",
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true
   },
@@ -1360,7 +1484,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true
   },
@@ -1379,7 +1503,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1440,7 +1564,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "description": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
@@ -1461,7 +1585,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1571,7 +1695,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1678,7 +1802,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true
   },
@@ -1696,7 +1820,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1841,7 +1965,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -1915,7 +2039,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "description": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
@@ -1936,7 +2060,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -2010,7 +2134,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "description": "Grabación de Video Podcast con Productores y directores cinematográficos y audiovisuales invitados al Festival",
@@ -2031,7 +2155,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -2112,7 +2236,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -2228,7 +2352,7 @@
    "has_qa": false,
    "_src": {
     "url": "https://festicinepopayan.com/fest2026/programacion-2026/",
-    "date": "2026-10-06"
+    "date": "2026-10-08"
    },
    "is_free": true,
    "is_cortos": true,
@@ -2366,8 +2490,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-08T08:34:22",
-  "plan_sha": "af098517d0317e3e",
+  "fecha": "2026-10-09T21:14:40",
+  "plan_sha": "2463d186c98f3316",
   "paso": 6,
   "cmd": "python3 pipeline/ensamblar.py popayan-2026"
  }

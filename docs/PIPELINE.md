@@ -665,6 +665,25 @@ así que el sidecar no puede aprobarse a sí mismo—. Toda obra publicada sin
 silencio.** Alcanza solo a los festivales cuyo sidecar declara `_cobertura`; se
 adopta festival por festival, sin inventar deuda retroactiva.
 
+**Tres reglas más de la misma semana (9 oct 2026), una por cada error que
+Juan vio en la app:**
+
+- `[programa-sin-desglosar]`: una función «A + B» publicada como una sola obra
+  es un error en los festivales vivos (Rodilla Negra + El Coloso; la doble de
+  Pinilla): va como programa con `film_list`, cada obra con su ficha.
+- `[proyeccion-que-es-actividad]`: una obra cuyo título empieza por
+  presentación, lanzamiento, conversatorio, charla, taller, panel o clase
+  magistral se clasifica a mano (Mamut publicó la presentación de *Cuadernos de
+  Cine* como proyección).
+- **Lo publicado no se pierde porque la fuente lo calle:** `ensamblar.py`
+  rellena de `festivals/<id>.json` los campos conservables (director, año,
+  duración, país, sinopsis, género) que la fuente dejó de dar, y lo anota en
+  `_conservado`. Lo que la fuente sí dice, manda.
+- **Y antes de publicar se MIRA la app:** `node scripts/capturas-festival.js
+  <id>` deja en `fuentes/capturas/<id>/` el Programa, una ficha, Intereses y Mi Plan a
+  390×844; las capturas van a Juan junto con la hoja de contacto. MAPISTAS se
+  veía en la pantalla, no en el dato.
+
 **Y desde el 8 oct de 2026 ya no es opcional: la exige el publicador.** Ficcali
 salió a producción con 23 obras sin afiche —*El Coloso*, *Minotauro*, *En
 construcción*, todas en TMDB— porque la lista `sin_ficha` del enriquecido

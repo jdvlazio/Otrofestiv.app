@@ -612,6 +612,20 @@ export const NOTICES=[
     note_en:'FICDEH canceled its programming in Quibdó, Cali, Pereira and Manizales due to the earthquake. It remains active in all other cities.',
     url:'https://www.instagram.com/p/Db6xcU2FGb6/',
   },
+  // MAMUT 11 — «La memoria de las mariposas» (vie 9 oct, 4:30 p. m.) pasa al
+  // domingo 11. El festival NO dio hora ni sala nuevas (lámina del día 05,
+  // p/DeSPVs5CcQW): por eso va SIN newDay/newTime — mover solo el día dejaría
+  // la hora de las 4:30 inventada. Texto del festival, verbatim (Juan, 9 oct).
+  // Sin `date`: el banner sigue hasta que el festival publique la hora; ese
+  // día se reemplaza por newDay/newTime/newVenue.
+  {
+    festival:'mamut2026',
+    type:'rescheduled',
+    title:'La memoria de las mariposas',
+    id:'mamut-mariposas-domingo',
+    note:'<b>La memoria de las mariposas</b>: «Evento reprogramado para el domingo 11 de octubre».',
+    url:'https://www.instagram.com/p/DeSPVs5CcQW/',
+  },
 ];
 
 // ── FESTIVAL_CONFIG ────────────────────────────────────────────────────────
@@ -1343,6 +1357,7 @@ export const SECTION_ARCHETYPES = {
   '🎈 Selección Oficial Infantil': 'Competencia',
   '🌎 Muestra de Cortos Internacionales': 'Muestra / País',
   '🏘️ CineCorto en el Barrio': 'Cortos / Programas',
+  '🏡 Cine Corto al barrio': 'Cortos / Programas',
   '🧒 Cine Corto Familiar': 'Cortos / Programas',
   '🎤 Actividades': 'Charlas / Industria',
   // Fantasmagoría 8 (29 sep 2026)

@@ -199,6 +199,16 @@
    "_match": "Google Maps: MAMM, Cra 44 #19a-100, El Poblado (el post de Frío metal dice «Teatro MAMM»)",
    "address": "Cra. 44 #19A-100"
   },
+  "Cine Centro - Medellín": {
+   "short": "Cine Centro",
+   "city": "Medellín",
+   "n": 1,
+   "lat": 6.2538534,
+   "lng": -75.5636238,
+   "_prec": "manual",
+   "_match": "APROXIMADO (9 oct 2026): la sala cerró en 2008 y no está en Google Maps ni en OSM. La lámina dice «Esquina de la Avenida Oriental (Carrera 46) con la calle Ecuador (Carrera 48)»; El Colombiano la ubica en el eje del Parque de Bolívar. Pin sobre Ecuador (Cra 48) frente al parque, punto de Nominatim; pendiente confirmar la esquina con el festival.",
+   "address": "Av. Oriental (Cra. 46) con Ecuador (Cra. 48)"
+  },
   "Coocine - Medellín": {
    "short": "Coocine",
    "city": "Medellín",
@@ -961,6 +971,32 @@
    "title_en": "Bloody Flesh"
   },
   {
+   "title": "Lolita en Honda",
+   "type": "film",
+   "section": "🎬 Proyecciones",
+   "director": "Daniel Torres",
+   "country": "Colombia",
+   "flags": "🇨🇴",
+   "duration": "61 min",
+   "day": "2026-10-10",
+   "time": "14:30",
+   "day_order": 5,
+   "venue": "Cine Centro - Medellín",
+   "has_qa": true,
+   "qa_type": "guests",
+   "synopsis": "Detrás de los ojos de Lolita hay un velo que ciega sus palabras. Es el recuerdo de una infancia que, aún en la vejez, le oscurece la vista y no le permite escapar. Cuando habla me parece intuir, por el eco de las historias que repite, un mundo espectral de hambre, abandono, el estigma social de una madre soltera, la magia del Río Magdalena y todas las ilusiones y demonios de esa niñez.",
+   "synopsis_lang": "es",
+   "poster": "/assets/mamut-2026/lolita-en-honda.jpg",
+   "posterSource": "tmdb",
+   "_src": {
+    "url": "https://www.instagram.com/p/DeQQqCqiUdb/",
+    "date": "2026-10-08"
+   },
+   "is_free": true,
+   "lbSlug": "lolita-en-honda",
+   "tmdb_id": 1665546
+  },
+  {
    "title": "Programa SHUB: Hocico de cerdo",
    "type": "event",
    "section": "🎪 Actividades",
@@ -1379,8 +1415,8 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-09T08:13:41",
-  "plan_sha": "6f9942cdcada33ca",
+  "fecha": "2026-10-09T21:14:16",
+  "plan_sha": "3725c84df2834966",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py mamut-2026"
  }
