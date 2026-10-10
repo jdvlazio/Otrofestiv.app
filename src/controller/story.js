@@ -41,7 +41,7 @@ export function abrirCompartirFestival(){
 export function abrirCompartirPlan(){
   if(_esRevisionActiva()){ showToast(t('review_no_compartir')); return; }
   if(!planRecap().n){ sharePlan(); return; } // sin obras (solo charlas): no hay historia que contar
-  showActionModal(t('share_mi_plan'),'',t('share_historia'),()=>shareStoryPlan(),undefined,
+  showActionModal(t('plan_compartir_plan'),'',t('share_historia'),()=>shareStoryPlan(),undefined,
     {altLabel:t('share_calendario'), altCb:()=>sharePlan()});
 }
 
@@ -111,7 +111,7 @@ export async function shareStoryPlan(){
   const u=(n,uno,varios)=>({n, unidad:t(n===1?uno:varios)});
   const partes=[u(pr.dias,'recap_u_dia','recap_u_dias'),
     pr.ciudades>1?u(pr.ciudades,'recap_u_ciudad','recap_u_ciudades'):u(pr.sedes,'recap_u_sede','recap_u_sedes')];
-  if(pr.prios.length) partes.push({n:pr.prios.length, unidad:t('story_no_me_pierdo_n')});
+  if(pr.prios.length) partes.push({n:pr.prios.length, unidad:t(pr.prios.length===1?'story_no_me_pierdo_1':'story_no_me_pierdo_n')});
   const {c,x,cfg}=await _lienzo({verbo:t('story_voy_a_ver'), n:pr.n, unidad:t(pr.n===1?'recap_u_obra':'recap_u_obras')}, partes);
   const yMos=await _mosaico(x, pr.obras);
 

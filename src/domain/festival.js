@@ -165,9 +165,13 @@ export function _getFestivalPhase(){
 // obras (obrasDe: un programa son sus cortos, un evento las que proyecta). El
 // mosaico lleva las prioridades primero; «No me las pierdo» son las prioridades
 // tal como están en el Plan (el programa, no sus cortos), en orden cronológico.
+// Cuenta solo lo que falta: lo pasado y lo visto no entran.
 // → {obras:[{title, film, prio}], n, dias, sedes, ciudades, prios:[{title, film, day, time}]}
 export function planRecap(){
-  const sch=((savedAgenda&&savedAgenda.schedule)||[]).filter(s=>s&&s._title);
+  // Solo lo que FALTA (auditoría UX Writer, 10 oct): «Voy a ver» es futuro, y a
+  // mitad del festival el Plan entero contaba también lo ya visto. Fuera las
+  // funciones a las que ya no se llega (screeningPassed) y lo marcado como visto.
+  const sch=((savedAgenda&&savedAgenda.schedule)||[]).filter(s=>s&&s._title&&!screeningPassed(s)&&!watched.has(s._title));
   const _vs=(FESTIVAL_CONFIG[_activeFestId]||{}).venues||{};
   const dias=new Set(), sedes=new Set(), ciudades=new Set(), vistos=new Set();
   const obras=[], prios=[];
