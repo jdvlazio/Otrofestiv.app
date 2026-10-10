@@ -2,7 +2,7 @@
  "_etapa": "build generado por pipeline/ensamblar.py",
  "_provenance": {
   "fuente": "festivalfantasmagoriamedellin.com, noticia de programación (wp-json post 6481)",
-  "capturado": "2026-10-08",
+  "capturado": "2026-10-10",
   "ensamblador": "pipeline/ensamblar.py"
  },
  "_por_que_sedes": "El nombre de la parrilla, normalizado (la escribe de varias formas); la sala aparte. Otraparte está en Envigado, pero se publica en la ciudad «Medellín» (decisión de Juan, 30 sep): con una sola sede fuera, la app abría con «¿A cuál ciudad vas?» para 2 de 85 funciones. La dirección y el pin son los reales de Envigado, y el traslado se calcula con ellos.",
@@ -935,7 +935,7 @@
    "film_list": [
     {
      "title": "Line 12",
-     "director": "Saskia Stirn y Christopher Schmier",
+     "director": "Sarah Schulz y Christopher Schmier",
      "country": "Alemania",
      "flags": "🇩🇪",
      "year": 2026,
@@ -944,8 +944,10 @@
      "posterSource": "tmdb",
      "lbSlug": "line-12",
      "tmdb_id": 1493302,
+     "synopsis": "En un mundo de montañas imponentes, Peregrin, un meticuloso conductor de tren, mantiene su máquina en marcha con precisión. Cuando la inquieta música Clara se cuela en la cabina, una catástrofe los obliga a superar sus diferencias para evitar el descarrilamiento.",
      "synopsis_en": "In a world dominated by towering, steep mountains, pedantic train conductor Peregrin navigates his train over huge bridges and along dangerous ridges. Like a clockwork, he follows the world’s very own rhythm - he has to, if he wants to bring the passengers safely to their destination.",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Dormilón",
@@ -2570,6 +2572,7 @@
      "country": "Colombia",
      "flags": "🇨🇴",
      "year": 1975,
+     "duration": "12 min",
      "poster": "/assets/fantasmagoria-2026/kondor-el-mago.jpg",
      "posterSource": "tmdb",
      "lbSlug": "kondor-el-mago",
@@ -3156,7 +3159,7 @@
    "film_list": [
     {
      "title": "Line 12",
-     "director": "Saskia Stirn y Christopher Schmier",
+     "director": "Sarah Schulz y Christopher Schmier",
      "country": "Alemania",
      "flags": "🇩🇪",
      "year": 2026,
@@ -3165,8 +3168,10 @@
      "posterSource": "tmdb",
      "lbSlug": "line-12",
      "tmdb_id": 1493302,
+     "synopsis": "En un mundo de montañas imponentes, Peregrin, un meticuloso conductor de tren, mantiene su máquina en marcha con precisión. Cuando la inquieta música Clara se cuela en la cabina, una catástrofe los obliga a superar sus diferencias para evitar el descarrilamiento.",
      "synopsis_en": "In a world dominated by towering, steep mountains, pedantic train conductor Peregrin navigates his train over huge bridges and along dangerous ridges. Like a clockwork, he follows the world’s very own rhythm - he has to, if he wants to bring the passengers safely to their destination.",
-     "genre": "Animación"
+     "genre": "Animación",
+     "synopsis_lang": "es"
     },
     {
      "title": "Dormilón",
@@ -3846,7 +3851,7 @@
  ],
  "_corrido": {
   "por": "pipeline/correr.py",
-  "fecha": "2026-10-08T22:27:29",
+  "fecha": "2026-10-10T07:48:08",
   "plan_sha": "bcc190a548850b59",
   "paso": 8,
   "cmd": "python3 pipeline/ensamblar.py fantasmagoria-2026"

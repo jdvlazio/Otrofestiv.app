@@ -118,6 +118,12 @@ DURACION_DE_OTRA_FUENTE = {'Iris de Cristal': (13, 'https://www.themoviedb.org/m
 
 # EL ACCESO, con las palabras de la parrilla. «Entrada con Boleta» = «funciones
 # con cobro especial en Colombo Americano, CineProx y MAMM» (nota de la noticia).
+# EL CRÉDITO DEL CATÁLOGO QUE NO ES LA DIRECCIÓN (10 oct 2026). «Line 12»
+# figuraba dirigida por «Saskia Stirn y Christopher Schmier»; Saskia Stirn es la
+# PRODUCTORA. Dirigen Sarah Schulz y Christopher Schmier: ficha técnica de BAFICI
+# 28 (bafici.org/pelicula/line-12) y créditos de TMDB 1493302, dos fuentes.
+DIRECTOR_CORREGIDO = {'Line 12': 'Sarah Schulz y Christopher Schmier'}
+
 def acceso(txt):
     t = txt.lower()
     if 'confirmar' in t:
@@ -256,6 +262,8 @@ def main():
     lidx = {plano(k): v for k, v in largos.items()}
     por_seccion = {}
     for o in cat:
+        if o['titulo'] in DIRECTOR_CORREGIDO:
+            o = {**o, 'director': DIRECTOR_CORREGIDO[o['titulo']]}
         por_seccion.setdefault(o['seccion'], []).append(o)
 
     bloques, dia = [], None
