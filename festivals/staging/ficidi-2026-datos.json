@@ -1,0 +1,207 @@
+{
+ "_provenance": {
+  "fuente": "investigación web obra por obra, cada dato con su URL; los conflictos van en notas",
+  "capturado": "2026-10-10"
+ },
+ "datos": {
+  "Verdulera": {
+   "anio": 2026,
+   "anio_url": "https://imagicfilms.com/catalogo/",
+   "duracion_min": 6,
+   "duracion_url": "https://imagicfilms.com/catalogo/",
+   "notas": "Distribuidora Imagic (ficha https://imagicfilms.com/cortometraje/verdulera/). Notodofilmfest la lista en Edición 2025 (https://www.notodofilmfest.com/corto/verdulera/) con texto promocional, no sinopsis. Año en conflicto: 2025 (festival) vs 2026 (distribuidora)."
+  },
+  "La mujer sentada": {
+   "duracion_min": 6,
+   "duracion_url": "https://www.themoviedb.org/movie/1697643",
+   "notas": "Solo TMDB (API es-ES/en-US); sin año en TMDB; búsqueda web sin resultados."
+  },
+  "El bañador": {
+   "anio": 2026,
+   "anio_url": "https://www.themoviedb.org/movie/1656528",
+   "duracion_min": 14,
+   "duracion_url": "https://www.themoviedb.org/movie/1656528",
+   "notas": "Sin hallazgos verificables (solo un proyecto Verkami sin director confirmado). | año TMDB = fecha de estreno/release_date, no necesariamente año de producción"
+  },
+  "Los pájaros": {
+   "anio": 2026,
+   "anio_url": "https://www.themoviedb.org/movie/1707240",
+   "duracion_min": 10,
+   "duracion_url": "https://www.themoviedb.org/movie/1707240",
+   "notas": "Sin hallazgos en búsqueda web (2-3 búsquedas); no se confirmó la obra. | año TMDB = fecha de estreno/release_date, no necesariamente año de producción"
+  },
+  "A mi edad": {
+   "anio": "2025",
+   "anio_url": "https://www.themoviedb.org/movie/1572696",
+   "duracion_min": 5,
+   "duracion_url": "https://www.themoviedb.org/movie/1572696",
+   "notas": "Datos tomados de la API de TMDB (ficha ya existente); web abierta sin resultados adicionales."
+  },
+  "Blue Berri": {
+   "anio": 2025,
+   "anio_url": "https://www.themoviedb.org/movie/1548621",
+   "duracion_min": 16,
+   "duracion_url": "https://www.themoviedb.org/movie/1548621",
+   "notas": "Solo TMDB (fecha 2025-09-15); sin overview en español. Búsqueda web sin resultados."
+  },
+  "Tía Morgana": {
+   "anio": 2024,
+   "anio_url": "https://www.themoviedb.org/movie/1542668",
+   "duracion_min": 22,
+   "duracion_url": "https://www.themoviedb.org/movie/1542668",
+   "notas": "Solo TMDB (fecha 2024-12-05; duración 22 en pt-BR). Título TMDB 'Tia Morgana'. Sin sinopsis ES."
+  },
+  "Couraça": {
+   "anio": 2025,
+   "anio_url": "https://www.shortfilmwire.com/en/embedded/film/200144725/toto",
+   "duracion_min": 20,
+   "duracion_url": "https://www.shortfilmwire.com/en/embedded/film/200144725/toto",
+   "notas": "Brasil, dir. Susan Kalik y Daniel Arcades confirmados en Shortfilmwire. Título EN 'Armor'. Estreno en 58º Festival de Brasília (https://atarde.com.br/cineinsite/filme-baiano-revisita-o-cangaco-e-subverte-papeis-de-genero-1351521). Sinopsis PT no obtenida verbatim."
+  },
+  "Ar-dor": {
+   "anio": 2026,
+   "anio_url": "https://www.themoviedb.org/movie/1722336",
+   "duracion_min": 19,
+   "duracion_url": "https://www.themoviedb.org/movie/1722336",
+   "notas": "Sin hallazgos en búsqueda web (2-3 búsquedas); no se confirmó la obra. | año TMDB = fecha de estreno/release_date, no necesariamente año de producción"
+  },
+  "Aquí donde soy": {
+   "anio": 2025,
+   "anio_url": "https://www.themoviedb.org/movie/1574595",
+   "duracion_min": 22,
+   "duracion_url": "https://www.themoviedb.org/movie/1574595",
+   "notas": "Solo TMDB (estreno 2025-08-28). Ojo: la sinopsis lo describe como retrato documental aunque el festival lo pone en Ficción."
+  },
+  "Verdades": {
+   "anio": 2025,
+   "anio_url": "https://pro.imdb.com/name/nm13069246/connections",
+   "duracion_min": 6,
+   "duracion_url": "https://www.themoviedb.org/movie/1653100",
+   "notas": "IMDbPro (vía buscador) lista Verdades (2025) short, escrita y dirigida por Ignacio Ondaro; sin sinopsis ni duración."
+  },
+  "Ius del tiempo": {
+   "anio": 2025,
+   "anio_url": "https://www.huesca-filmfestival.com/en/pelicula/ius-del-tiempo/",
+   "duracion_min": 25,
+   "duracion_url": "https://www.huesca-filmfestival.com/en/pelicula/ius-del-tiempo/",
+   "notas": "Confirmada: Roberto F. Canuto y Xu Xiaoxi, España, Festival de Huesca. Título EN 'IUS of Time'. Diálogos en español y amestao. Tráiler: https://vimeo.com/1053909038 ; FilmFreeway https://filmfreeway.com/IUSoftime (403)."
+  },
+  "Jugo en polvo": {
+   "anio": "2025",
+   "anio_url": "https://www.themoviedb.org/movie/1491904",
+   "duracion_min": 19,
+   "duracion_url": "https://www.themoviedb.org/movie/1491904",
+   "notas": "Datos tomados de la API de TMDB (ficha ya existente); web abierta sin resultados adicionales."
+  },
+  "Inés": {
+   "duracion_min": 12,
+   "duracion_url": "https://www.themoviedb.org/movie/1641476",
+   "notas": "Solo TMDB; sin año ni sinopsis ES."
+  },
+  "Há sinais": {
+   "anio": 2026,
+   "anio_url": "https://www.themoviedb.org/movie/1733521",
+   "notas": "Sin hallazgos en búsqueda web (2-3 búsquedas); no se confirmó la obra. | año TMDB = fecha de estreno/release_date, no necesariamente año de producción"
+  },
+  "Onades": {
+   "anio": 2026,
+   "anio_url": "https://www.themoviedb.org/movie/1554852",
+   "duracion_min": 15,
+   "duracion_url": "https://www.themoviedb.org/movie/1554852",
+   "notas": "TMDB API devolvió runtime 20 con es-ES y 15 con en-US (inconsistente, verificar). Estreno 2026-05-25. Director de La Vila Joiosa radicado en Londres."
+  },
+  "Young Wild Things": {
+   "anio": 2025,
+   "anio_url": "https://www.imdb.com/title/tt36397898/",
+   "notas": "Directora acreditada como Ines Serrano De Haro Perez, UK, Waju Studios. IMDb tt36397898 (año 2025 según snippet de búsqueda; IMDb devolvió 403). Duración no hallada."
+  },
+  "Todos los nombres empiezan con M": {
+   "anio": 2026,
+   "anio_url": "https://bafici.org/pelicula/todos-los-nombres-empiezan-con-m/",
+   "duracion_min": 19,
+   "duracion_url": "https://bafici.org/pelicula/todos-los-nombres-empiezan-con-m/",
+   "notas": "Argentina/Uruguay, dir. Carla Scolari (BAFICI 2026, premiere latinoamericana). Saguenay/Regard 2026 da 18'50 (https://festivalregard.com/programming/30e-festival-2026/competition-focus/program/short-queer/tous-les-noms-commencent-par-m). Título EN 'All Names Begin with M'."
+  },
+  "Perros": {
+   "anio": 2026,
+   "anio_url": "https://www.themoviedb.org/movie/1613681",
+   "duracion_min": 10,
+   "duracion_url": "https://www.themoviedb.org/movie/1613681",
+   "notas": "Sin hallazgos en búsqueda web (2-3 búsquedas); no se confirmó la obra. | año TMDB = fecha de estreno/release_date, no necesariamente año de producción"
+  },
+  "Lo que fuimos": {
+   "duracion_min": 19,
+   "duracion_url": "https://www.themoviedb.org/movie/1777436",
+   "notas": "Solo TMDB; sin fecha de estreno."
+  },
+  "Dafne y Pol": {
+   "anio": 2026,
+   "anio_url": "https://www.lineupshorts.com/dafne-y-pol",
+   "duracion_min": 17,
+   "duracion_url": "https://www.lineupshorts.com/dafne-y-pol",
+   "notas": "España, dir./guion Sergio Checa (distribuidora Line Up). Texto leído vía WebFetch (resumidor), no curl: revisar puntuación."
+  },
+  "Travas sobrevivientes": {
+   "anio": 2026,
+   "anio_url": "https://www.themoviedb.org/movie/1783014",
+   "duracion_min": 11,
+   "duracion_url": "https://www.themoviedb.org/movie/1783014",
+   "notas": "Datos tomados de la API de TMDB (ficha ya existente); web abierta sin resultados adicionales. release_date TMDB 2026-10-05 (parece la fecha del festival, no el año de producción) -> año no puesto. | año TMDB = fecha de estreno/release_date, no necesariamente año de producción"
+  },
+  "A Sin de Fella Story": {
+   "duracion_min": 15,
+   "duracion_url": "https://www.themoviedb.org/movie/1500524",
+   "notas": "Solo TMDB; sin fecha. Doble espacio tras «Fella”» tal cual en TMDB."
+  },
+  "Alwasiyya": {
+   "duracion_min": 29,
+   "duracion_url": "https://www.themoviedb.org/movie/1705471",
+   "notas": "Sin hallazgos en búsqueda web (2-3 búsquedas); no se confirmó la obra."
+  },
+  "Kiboko": {
+   "anio": 2026,
+   "anio_url": "https://alicanteplaza.es/alicanteplaza/cultura/la-vila-arropa-el-estreno-del-cortometraje-documental-sobre-el-historico-pub-kiboko",
+   "notas": "Fragmento de prensa (no sinopsis oficial). Docuficción sobre el pub Kiboko de La Vila Joiosa (1983–1996), dir. Noelia Fluxá y Julie-Estel Soard; estreno 6 jun 2026 en Teatre Auditori. Prensa lo llama a veces mediometraje. Más: https://alicanteplaza.es/alicanteplaza/cultura/kiboko-o-la-revolucion-silenciosa-de-un-pueblo-alicantino-que-decidio-sonar-en-grande"
+  },
+  "O diário imaginado": {
+   "duracion_min": 20,
+   "duracion_url": "https://www.themoviedb.org/movie/1687430",
+   "notas": "Datos tomados de la API de TMDB (ficha ya existente); web abierta sin resultados adicionales. TMDB sin fecha; sinopsis pt vacía en TMDB."
+  },
+  "Refracción": {
+   "anio": 2025,
+   "anio_url": "https://www.themoviedb.org/movie/1584776",
+   "duracion_min": 11,
+   "duracion_url": "https://www.themoviedb.org/movie/1584776",
+   "notas": "Colombia, dir. Isabella Palacio Mesa; Competencia Nacional Bogoshorts 2025. Buscador reporta 10'54'' y terminado 12 sep 2025 (FilmFreeway https://filmfreeway.com/Refraction687, 403 al abrir; Bogoshorts no cargó), sinopsis sobre Eloísa, 20 años, dos relaciones, bicicleta por Medellín — no verificado verbatim. | año TMDB = fecha de estreno/release_date, no necesariamente año de producción"
+  },
+  "Fielmente": {
+   "anio": 2026,
+   "anio_url": "https://www.themoviedb.org/movie/1765996",
+   "duracion_min": 7,
+   "duracion_url": "https://www.themoviedb.org/movie/1765996",
+   "notas": "Solo fuente TMDB (título en inglés 'Faithfully', fecha 2026-09-16). Ninguna fuente web externa hallada."
+  },
+  "Danzan las luciérnagas": {
+   "anio": 2025,
+   "anio_url": "https://www.themoviedb.org/movie/1456289",
+   "duracion_min": 18,
+   "duracion_url": "https://www.themoviedb.org/movie/1456289",
+   "notas": "TMDB título EN «Dancing Fireflies», fecha 2025-04-04; sin overview ES."
+  },
+  "Maricones": {
+   "anio": 2026,
+   "anio_url": "https://www.themoviedb.org/movie/1756766",
+   "duracion_min": 15,
+   "duracion_url": "https://www.themoviedb.org/movie/1756766",
+   "notas": "Sin hallazgos en búsqueda web (2-3 búsquedas); no se confirmó la obra. | año TMDB = fecha de estreno/release_date, no necesariamente año de producción"
+  },
+  "Más allá de la corona": {
+   "anio": 2025,
+   "anio_url": "https://www.themoviedb.org/movie/1738928",
+   "duracion_min": 14,
+   "duracion_url": "https://www.themoviedb.org/movie/1738928",
+   "notas": "TMDB fecha 2025-01-01 (probable placeholder de año)."
+  }
+ }
+}

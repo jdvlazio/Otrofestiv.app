@@ -1,0 +1,15 @@
+{
+ "_nota": "IV FICIDI — Festival Internacional de Cine Diverso (Barranquilla, 4–7 nov 2026). PRE-ONBOARDING: la Selección Oficial de los 5 carruseles de IG (sin sesión), sin programación todavía. Cuando salga la parrilla se agregan crudo/enriquecer/ensamblar; el crudo leerá -sinopsis.json y -datos.json.",
+ "radar": 1042,
+ "pasos": [
+  {"cmd": "python3 pipeline/ficidi-2026-catalogo.py", "que": "las 12 grillas de IG → catálogo (66 obras)"},
+  {"cmd": "python3 pipeline/enriquecer_catalogo.py festivals/staging/ficidi-2026-catalogo.json", "que": "la cascada de TMDB → catálogo enriquecido"},
+  {"cmd": "python3 pipeline/ficidi-2026-verificar.py", "que": "verificador: lo declarado es de obras del catálogo y trae su fuente"}
+ ],
+ "_fuentes_versionadas": {
+  "festivals/staging/ficidi-2026-catalogo.json": "la Selección Oficial (66 obras) leída de las grillas de IG; la leerá el crudo",
+  "festivals/staging/ficidi-2026-catalogo-enriquecido.json": "las fichas TMDB del catálogo (28 verificadas), que escribe el paso 2",
+  "festivals/staging/ficidi-2026-sinopsis.json": "31 sinopsis: 19 tal cual de su fuente y 12 traducidas con contexto, cada una con URL",
+  "festivals/staging/ficidi-2026-datos.json": "año y duración de 31 obras desde distribuidoras y festivales, cada dato con URL y los conflictos anotados"
+ }
+}
