@@ -20,11 +20,28 @@
 // cloudScreeningKey (constructor de clave, PURO) vive ahora en domain/delays.js.
 // Se re-exporta acá para no romper a handlers.js, que lo importa desde este módulo.
 import { deriveDelayConsensus, cloudScreeningKey } from '../domain/delays.js';
+import { storage } from '../storage/storage.js';
 export { cloudScreeningKey };
+
+// ── Sin sesión de email (migración 0006, 10 oct 2026) ─────────────────────────
+// Hasta acá el retraso colaborativo solo existía con cuenta: sin sesión no se
+// escribía ni se leía (7 cuentas activas). Ahora quien no tiene cuenta reporta
+// por la edge function `reportar` con un identificador al azar del dispositivo
+// (no es una cuenta: no toca la sesión, el bug de PR #270) y lee el consenso con
+// consenso_festival() cada 60 s. INTERRUPTOR: false apaga los dos caminos.
+export const REPORTES_SIN_EMAIL = true;
+function _reportarSinCuenta(screeningKey, delayMin){
+  const token = storage.getDispositivo();   // sin almacenamiento no hay identidad estable: no se reporta
+  if(!token) return;
+  _sb.functions.invoke('reportar', { body: { festival_id: _activeFestId, screening_key: screeningKey, delay_min: delayMin, token } })
+    .then(({ error }) => { if(error) console.warn('[delays-cloud] reportar:', error.message); else _leerConsenso(_activeFestId); })
+    .catch(e => console.warn('[delays-cloud] reportar:', e.message));
+}
 
 // Upsert del reporte propio con el total de minutos vigente para esa función.
 export function cloudReportDelay(screeningKey, delayMin){
-  if(!_sb || !_sbUser || !screeningKey) return;
+  if(!_sb || !screeningKey) return;
+  if(!_sbUser){ if(REPORTES_SIN_EMAIL) _reportarSinCuenta(screeningKey, delayMin); return; }
   _sb.from('screening_reports').upsert(
     { festival_id: _activeFestId, screening_key: screeningKey, delay_min: delayMin },
     { onConflict: 'festival_id,screening_key,reporter_id' }
@@ -36,7 +53,8 @@ export function cloudReportDelay(screeningKey, delayMin){
 // Borra el reporte propio (clear / retraso vuelto a 0). La RLS (reporter_id =
 // auth.uid()) asegura que solo se borra el de uno aunque el filtro no lo incluya.
 export function cloudClearDelay(screeningKey){
-  if(!_sb || !_sbUser || !screeningKey) return;
+  if(!_sb || !screeningKey) return;
+  if(!_sbUser){ if(REPORTES_SIN_EMAIL) _reportarSinCuenta(screeningKey, 0); return; }
   _sb.from('screening_reports').delete()
     .eq('festival_id', _activeFestId)
     .eq('screening_key', screeningKey)
@@ -75,7 +93,9 @@ export async function subscribeDelaysCloud(){
   // grant faltante, no una RLS que filtra), así que cada carga de festival
   // disparaba un 401 garantizado. Los hermanos de escritura —cloudReportDelay,
   // cloudClearDelay— ya exigían _sbUser; la lectura era la única que no.
-  if(!_sb || !_sbUser || !_activeFestId) return;
+  if(!_sb || !_activeFestId) return;
+  if(!_sbUser){ _sondearSinCuenta(); return; }
+  _pararSondeo();
   if(_channelFest === _activeFestId && _channel) return; // ya suscrito a este festival
   if(_channel){ try{ _sb.removeChannel(_channel); }catch(e){ /* noop */ } _channel = null; }
   _reports.clear();
@@ -113,6 +133,34 @@ export async function subscribeDelaysCloud(){
         _rerender();
       })
     .subscribe();
+}
+
+// Sin sesión no hay Realtime (la tabla no se lee como anon): se consulta el
+// consenso cada 60 s — el mismo ritmo del tick que ya repinta la pantalla.
+let _sondeo = null, _sondeoFest = null;
+function _pararSondeo(){ if(_sondeo){ clearInterval(_sondeo); _sondeo = null; } _sondeoFest = null; }
+async function _leerConsenso(fest){
+  if(!REPORTES_SIN_EMAIL || _sbUser || !fest) return;
+  try{
+    const { data, error } = await _sb.rpc('consenso_festival', { p_festival: fest });
+    if(error){ console.warn('[delays-cloud] consenso:', error.message); return; }
+    if(fest !== _activeFestId) return;     // cambió de festival mientras esperaba
+    _reports.clear();
+    // `id` = una persona en esa función (una fila por persona y función); quién
+    // es no viaja nunca.
+    (data || []).forEach(r => _applyRow({ ...r, reporter_id: r.id }, false));
+    _rerender();
+  }catch(e){ console.warn('[delays-cloud] consenso:', e.message); }
+}
+function _sondearSinCuenta(){
+  if(!REPORTES_SIN_EMAIL) return;
+  if(_sondeoFest === _activeFestId && _sondeo){ _leerConsenso(_sondeoFest); return; } // ya sondea: releer ya
+  _pararSondeo();
+  if(_channel){ try{ _sb.removeChannel(_channel); }catch(e){ /* noop */ } _channel = null; _channelFest = null; }
+  _reports.clear();
+  _sondeoFest = _activeFestId;
+  _leerConsenso(_activeFestId);
+  _sondeo = setInterval(() => _leerConsenso(_sondeoFest), 60000);
 }
 
 // Mapa de consenso por screening_key (lo consume el badge en renderAgenda, que lo
