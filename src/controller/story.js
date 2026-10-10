@@ -1,12 +1,12 @@
 // ── src/controller/story.js — la historia 9:16 de «Tu festival» (#1055, F2) ───
 // 1080×1920, dirección A aprobada por Juan (mosaico con estrellas). Retícula de
 // la maqueta con guías de #1064, márgenes 92 como los slides de marca:
-//   y 236  acreditación (nombre · ciudad), 700 26px, tracking, gris
-//   y 308  titular 112px: verbo hueso + cifra y unidad en ámbar
-//   y 568  recorrido en una línea: números 700 hueso, unidades 500 gris
-//   y 648  mosaico a sangre, afiches 2:3, ≤470 de alto (geometriaMosaico)
+//   y 286  acreditación (nombre · ciudad), 700 26px, tracking, gris
+//   y 358  titular 112px: verbo hueso + cifra y unidad en ámbar
+//   y 618  recorrido en una línea: números 700 hueso, unidades 500 gris
+//   y 698  mosaico a sangre, afiches 2:3, ≤470 de alto (geometriaMosaico)
 //   +62    etiqueta («Mis mejores» / «No me las pierdo») + tarjetas
-//   +105   wordmark + otrofestiv.app — todo desde el final REAL del mosaico
+//   +72    wordmark + otrofestiv.app — todo desde el final REAL del mosaico
 //   y 1440–1920 LIBRE: ahí el usuario pone el sticker del festival.
 // Sin nombre de usuario. Fuente de marca cargada ANTES de dibujar (está
 // autoalojada; sin esperar, el canvas pinta con la del sistema).
@@ -70,13 +70,15 @@ export function geometriaMosaico(n, altoMax=470){
   return {filas, cols, cw, ch:cw*1.5, porFila};
 }
 
-// Retícula vertical (maqueta con guías de #1064): el mosaico arranca en Y_MOS;
+// Retícula vertical (maqueta con guías de #1064, bajada 50 px el 10 oct: la
+// franja superior —~250 px, foto y nombre de quien publica— tapaba la
+// acreditación): el mosaico arranca en Y_MOS;
 // debajo, etiqueta (+62), tarjetas (+33, 93 de alto, filas cada 120) y el
-// wordmark (+105 desde el final de lo que haya arriba). Todo termina antes de
+// wordmark (+72 desde el final de lo que haya arriba). Todo termina antes de
 // Y_LIBRE: el cuarto inferior es del sticker del festival.
-const Y_MOS=648, Y_LIBRE=1428;
+const Y_MOS=698, Y_LIBRE=1428, G_MARCA=72; // 72: con 1 fila de tarjetas el mosaico conserva sus 470
 function _altoBloque(filasTarjetas){
-  return filasTarjetas ? 62+33+filasTarjetas*93+(filasTarjetas-1)*27+105 : 105;
+  return filasTarjetas ? 62+33+filasTarjetas*93+(filasTarjetas-1)*27+G_MARCA : G_MARCA;
 }
 function _altoMosaico(filasTarjetas){
   return Math.min(470, Y_LIBRE-Y_MOS-_altoBloque(filasTarjetas));
@@ -168,17 +170,17 @@ async function _lienzo(T, partes){
   x.textBaseline='alphabetic'; x.textAlign='left';
   // acreditación: nombre · ciudad, con tracking
   const _cred=[cfg.name||'', cfg.city||''].filter(Boolean).join(' · ').toUpperCase();
-  _tracked(x,_cred,M,236,`700 26px ${F}`,GRIS,0.32*26);
+  _tracked(x,_cred,M,286,`700 26px ${F}`,GRIS,0.32*26);
   // titular
-  x.font=`800 112px ${F}`; x.fillStyle=HUESO; x.fillText(T.verbo,M,308+96);
-  x.fillStyle=AMBAR; x.fillText(`${T.n} ${T.unidad}.`,M,308+96+116);
+  x.font=`800 112px ${F}`; x.fillStyle=HUESO; x.fillText(T.verbo,M,358+96);
+  x.fillStyle=AMBAR; x.fillText(`${T.n} ${T.unidad}.`,M,358+96+116);
   // recorrido en una línea (se achica si no entra)
   if(partes.length){
     let sz=34, total;
     const medir=()=>{ total=0; partes.forEach((p,i)=>{ x.font=`700 ${sz}px ${F}`; total+=x.measureText(String(p.n)).width;
       x.font=`500 ${sz}px ${F}`; total+=x.measureText(' '+p.unidad+(i<partes.length-1?' · ':'')).width; }); };
     medir(); while(total>W-M*2&&sz>22){ sz-=2; medir(); }
-    let cx=M; const y=568+34;
+    let cx=M; const y=618+34;
     partes.forEach((p,i)=>{
       x.font=`700 ${sz}px ${F}`; x.fillStyle=HUESO; x.fillText(String(p.n),cx,y); cx+=x.measureText(String(p.n)).width;
       x.font=`500 ${sz}px ${F}`; x.fillStyle=GRIS; const u=' '+p.unidad+(i<partes.length-1?' · ':''); x.fillText(u,cx,y); cx+=x.measureText(u).width;
@@ -221,7 +223,7 @@ function _marca(x,px,py,w){
 async function _cierre(c,x,cfg,yFin,tipo,titulo){
   // cierre: wordmark bicolor + dominio, desde el final real de lo de arriba —
   // nunca dentro de la zona libre (geometría garantizada por _altoMosaico).
-  const yw=yFin+105;
+  const yw=yFin+G_MARCA;
   x.font=`800 44px ${F}`; x.fillStyle=HUESO; const w1=x.measureText('Otro').width;
   x.fillText('Otro',M,yw); x.fillStyle=AMBAR; x.fillText('festiv',M+w1,yw);
   x.font=`500 28px ${F}`; x.fillStyle=GRIS2; x.textAlign='right'; x.fillText('otrofestiv.app',W-M,yw); x.textAlign='left';
