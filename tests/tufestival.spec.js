@@ -138,10 +138,12 @@ test('TF4 — Mi plan: hoja Historia/Calendario, prioridades primero y voz en pr
     const titulo = (document.querySelector('.conflict-modal-hdr, .action-modal-title, [class*="modal"] [class*="hdr"], [class*="modal"] [class*="title"]') || {}).textContent?.trim();
     const botones = [...document.querySelectorAll('button')].filter(b => b.offsetParent).map(b => b.textContent.trim());
     const R = await import('/src/view/recap.js');
+    const geo = [5, 14, 18, 22, 23, 24, 40].map(n => { const g = S.geometriaMosaico(n);
+      return { n, cols: g.cols, filas: g.porFila, alto: Math.round(g.filas * g.ch), dos3: Math.abs(g.ch / g.cw - 1.5) < 1e-9, sangre: Math.round(g.cols * g.cw) }; });
     const rec = { peliculas: 4, eventos: 0 };
     return { n: p.n, sinVista, esperadas, conProg: sch.some(s => s._title === prog.title), primeras: p.obras.slice(0, p.prios.length).map(o => o.prio),
       resto: p.obras.slice(p.prios.length).some(o => o.prio), prios: p.prios.map(x => x.title).sort(),
-      titulo, botones, yo: R.recapTitular(rec, true).verbo, tu: R.recapTitular(rec).verbo };
+      geo, titulo, botones, yo: R.recapTitular(rec, true).verbo, tu: R.recapTitular(rec).verbo };
   });
   expect(r.conProg, 'el programa de cortos entró al Plan').toBe(true);
   expect(r.n, 'cuenta obras con obrasDe, una vez por título').toBe(r.esperadas);
@@ -152,5 +154,15 @@ test('TF4 — Mi plan: hoja Historia/Calendario, prioridades primero y voz en pr
   expect(r.botones).toEqual(expect.arrayContaining(['Historia', 'Calendario']));
   expect(r.titulo, 'la hoja dice qué hace').toBe('Compartir Plan');
   expect(r.yo, 'la historia habla el asistente').toBe('Vi');
+  // Regla de los mosaicos (Juan, 10 oct): filas completas cuando se puede.
+  const g = Object.fromEntries(r.geo.map(x => [x.n, x]));
+  expect(g[14].filas).toEqual([7, 7]);
+  expect(g[18].filas).toEqual([9, 9]);
+  expect(g[22].filas).toEqual([11, 11]);
+  expect(g[24].filas, "filas completas antes que la menor cantidad").toEqual([12, 12]);
+  expect(g[23].filas.slice(0, -1).every(v => v === g[23].cols), 'si no hay filas completas, solo la última queda corta').toBe(true);
+  expect(g[5].cols, 'nunca menos de 7 columnas').toBe(7);
+  expect(g[23].filas.length, 'un primo no se vuelve una sola fila diminuta').toBeGreaterThan(1);
+  r.geo.forEach(x => { expect(x.dos3, `${x.n}: 2:3`).toBe(true); expect(x.sangre).toBe(1080); expect(x.alto).toBeLessThanOrEqual(470); });
   expect(r.tu, 'la pantalla le habla a él').toBe('Viste');
 });

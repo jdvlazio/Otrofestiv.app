@@ -1,13 +1,12 @@
 // ── src/controller/story.js — la historia 9:16 de «Tu festival» (#1055, F2) ───
-// 1080×1920, dirección A aprobada por Juan (mosaico con estrellas). Retícula del
-// diseño (09_Marketing/plans/tu-festival-diseno.md §D), márgenes 92 como los
-// slides de marca:
-//   y 300  acreditación (nombre · ciudad), 700 26px, tracking, gris
-//   y 372  titular 112px: «Viste» hueso + cifra y unidad en ámbar
-//   y 632  recorrido en una línea: números 700 hueso, unidades 500 gris
-//   y 712  mosaico a sangre de TODO lo visto, ordenado por calificación
-//   y 1060 «Tus mejores» + 3 tarjetas (número ámbar · afiche · título · estrellas)
-//   y 1340 wordmark + otrofestiv.app
+// 1080×1920, dirección A aprobada por Juan (mosaico con estrellas). Retícula de
+// la maqueta con guías de #1064, márgenes 92 como los slides de marca:
+//   y 236  acreditación (nombre · ciudad), 700 26px, tracking, gris
+//   y 308  titular 112px: verbo hueso + cifra y unidad en ámbar
+//   y 568  recorrido en una línea: números 700 hueso, unidades 500 gris
+//   y 648  mosaico a sangre, afiches 2:3, ≤470 de alto (geometriaMosaico)
+//   +62    etiqueta («Mis mejores» / «No me las pierdo») + tarjetas
+//   +105   wordmark + otrofestiv.app — todo desde el final REAL del mosaico
 //   y 1440–1920 LIBRE: ahí el usuario pone el sticker del festival.
 // Sin nombre de usuario. Fuente de marca cargada ANTES de dibujar (está
 // autoalojada; sin esperar, el canvas pinta con la del sistema).
@@ -50,22 +49,37 @@ async function _fuentes(){
   try{ await Promise.all(['500','700','800'].map(w=>document.fonts.load(`${w} 40px 'Plus Jakarta Sans'`))); }catch(e){}
 }
 
-// Mosaico EQUILIBRADO: todas las vistas, afiches en 2:3, filas parejas (difieren
-// en una a lo sumo) y centradas. Se elige el número de filas (1–3) que da la
-// celda más grande sin pasar el alto de la franja (388 px). Cuando la grilla
-// llena el ancho exacto (22 vistas → 11×2 de 98 px, el mockup aprobado) queda a
-// sangre; si no, las filas se centran y el margen coincide con el del texto.
-export function geometriaMosaico(n){
-  if(!n) return {filas:0, cw:0, ch:0, porFila:[]};
-  const ALTO_MAX=388; let mejor=null;
-  for(let f=1; f<=Math.min(3,n); f++){
-    const cols=Math.ceil(n/f);
-    const cw=Math.min(W/cols, ALTO_MAX/f/1.5);
-    if(!mejor||cw>mejor.cw+0.01) mejor={filas:f, cols, cw};
-  }
-  const {filas, cw}=mejor, base=Math.floor(n/filas), extra=n%filas;
-  const porFila=Array.from({length:filas},(_,i)=>base+(i<extra?1:0));
-  return {filas, cw, ch:cw*1.5, porFila};
+// Mosaico (regla de Juan, 10 oct — comentario en #1064): afiche SIEMPRE 2:3, a
+// sangre (las columnas llenan el ancho). Columnas ≥7: primero la menor cantidad
+// que deje FILAS COMPLETAS con el mosaico ≤ altoMax (14 → 7+7, 18 → 9+9,
+// 22 → 11+11) sin achicar el afiche más de la mitad; si ninguna, la menor que
+// entre en el alto, y la última fila queda a la izquierda. altoMax lo fija quien llama (≤470) para que el bloque de abajo
+// nunca pise el cuarto libre (y ≥ 1440).
+export function geometriaMosaico(n, altoMax=470){
+  if(!n) return {filas:0, cols:0, cw:0, ch:0, porFila:[]};
+  const alto=c=>Math.ceil(n/c)*1.5*W/c;
+  // La menor cantidad que entra en el alto (filas parejas o no)…
+  let min=7; while(alto(min)>altoMax) min++;
+  // …y una con filas completas gana solo si no achica los afiches más de la
+  // mitad: con un primo (23) la única fila «completa» es UNA de 23 afiches
+  // diminutos, que la regla al pie de la letra elegía (medido, 10 oct).
+  let cols=min;
+  for(let c=min; c<=min*1.5; c++) if(n%c===0){ cols=c; break; }
+  const filas=Math.ceil(n/cols), cw=W/cols;
+  const porFila=Array.from({length:filas},(_,i)=>Math.min(cols,n-i*cols));
+  return {filas, cols, cw, ch:cw*1.5, porFila};
+}
+
+// Retícula vertical (maqueta con guías de #1064): el mosaico arranca en Y_MOS;
+// debajo, etiqueta (+62), tarjetas (+33, 93 de alto, filas cada 120) y el
+// wordmark (+105 desde el final de lo que haya arriba). Todo termina antes de
+// Y_LIBRE: el cuarto inferior es del sticker del festival.
+const Y_MOS=648, Y_LIBRE=1428;
+function _altoBloque(filasTarjetas){
+  return filasTarjetas ? 62+33+filasTarjetas*93+(filasTarjetas-1)*27+105 : 105;
+}
+function _altoMosaico(filasTarjetas){
+  return Math.min(470, Y_LIBRE-Y_MOS-_altoBloque(filasTarjetas));
 }
 
 export async function shareStory(){
@@ -75,17 +89,18 @@ export async function shareStory(){
   storage.setDiarioNotaVista();
   const {c,x,cfg}=await _lienzo(recapTitular(rec,true), recorridoPartes(rec));
   // mosaico: todo lo visto con estrellas posibles, mejor calificado primero
-  const yMos=await _mosaico(x, rec.obras.slice().sort((a,b)=>b.rating-a.rating));
+  const yMos=await _mosaico(x, rec.obras.slice().sort((a,b)=>b.rating-a.rating), _altoMosaico(rec.top.length?1:0));
+  let yFin=yMos;
 
   // «Mis mejores» (primera persona: la historia la publica el asistente)
   if(rec.top.length){
-    const ye=Math.max(1060,yMos+56);
+    const ye=yMos+62;
     _tracked(x,t('story_mis_mejores').toUpperCase(),M,ye,`700 22px ${F}`,GRIS,0.32*22);
     const topAfs=rec.top.map(_modeloAfiche);
     const tops=await _cargarConRespaldo(topAfs);
     const col=(W-M*2)/3;
     rec.top.forEach((o,i)=>{
-      const bx=M+i*col, by=ye+50;
+      const bx=M+i*col, by=ye+33; yFin=by+93;
       x.font=`800 40px ${F}`; x.fillStyle=AMBAR; x.fillText(String(i+1),bx,by+60);
       const px=bx+44; _rr(x,px,by,62,93,8); x.save(); x.clip(); _afiche(x,topAfs[i],tops[i],px,by,62,93); x.restore();
       const tx=px+80, tw=col-(tx-bx)-12;
@@ -97,7 +112,7 @@ export async function shareStory(){
     });
   }
 
-  await _cierre(c,x,cfg,'historia',`${t('recap_tu_festival')} · ${cfg.name||'Otrofestiv'}`);
+  await _cierre(c,x,cfg,yFin,'historia',`${t('recap_tu_festival')} · ${cfg.name||'Otrofestiv'}`);
 }
 
 // shareStoryPlan — la historia «Mi plan» (#1064): misma retícula que la de «Tu
@@ -113,17 +128,19 @@ export async function shareStoryPlan(){
     pr.ciudades>1?u(pr.ciudades,'recap_u_ciudad','recap_u_ciudades'):u(pr.sedes,'recap_u_sede','recap_u_sedes')];
   if(pr.prios.length) partes.push({n:pr.prios.length, unidad:t(pr.prios.length===1?'story_no_me_pierdo_1':'story_no_me_pierdo_n')});
   const {c,x,cfg}=await _lienzo({verbo:t('story_voy_a_ver'), n:pr.n, unidad:t(pr.n===1?'recap_u_obra':'recap_u_obras')}, partes);
-  const yMos=await _mosaico(x, pr.obras);
+  const filasT=Math.ceil(pr.prios.length/3);
+  const yMos=await _mosaico(x, pr.obras, _altoMosaico(filasT));
+  let yFin=yMos;
 
   if(pr.prios.length){
-    const ye=Math.max(1060,yMos+56);
+    const ye=yMos+62;
     _tracked(x,t('story_no_me_las_pierdo').toUpperCase(),M,ye,`700 22px ${F}`,GRIS,0.32*22);
     const afs=pr.prios.map(p=>_modeloAfiche({film:p.film}));
     const ims=await _cargarConRespaldo(afs);
     // Hasta 3 por fila (el máximo de prioridades es 5 → dos filas a lo sumo).
     const col=(W-M*2)/3;
     pr.prios.forEach((p,i)=>{
-      const bx=M+(i%3)*col, by=ye+50+Math.floor(i/3)*120;
+      const bx=M+(i%3)*col, by=ye+33+Math.floor(i/3)*120; yFin=Math.max(yFin,by+93);
       _rr(x,bx,by,62,93,8); x.save(); x.clip(); _afiche(x,afs[i],ims[i],bx,by,62,93); x.restore();
       const tx=bx+80, tw=col-80-12;
       const {displayTitle:dt}=parseProgramTitle(p.title);
@@ -133,7 +150,7 @@ export async function shareStoryPlan(){
       x.font=`500 24px ${F}`; x.fillStyle=GRIS; x.fillText(`${dayLabel(p.day)} · ${p.time}`,tx,by+32+lns.length*30+4);
     });
   }
-  await _cierre(c,x,cfg,'plan',`${t('share_mi_plan')} · ${cfg.name||'Otrofestiv'}`);
+  await _cierre(c,x,cfg,yFin,'plan',`${t('share_mi_plan')} · ${cfg.name||'Otrofestiv'}`);
 }
 
 // _lienzo — fondo, glow, acreditación, titular y línea de recorrido: la parte
@@ -151,17 +168,17 @@ async function _lienzo(T, partes){
   x.textBaseline='alphabetic'; x.textAlign='left';
   // acreditación: nombre · ciudad, con tracking
   const _cred=[cfg.name||'', cfg.city||''].filter(Boolean).join(' · ').toUpperCase();
-  _tracked(x,_cred,M,300,`700 26px ${F}`,GRIS,0.32*26);
+  _tracked(x,_cred,M,236,`700 26px ${F}`,GRIS,0.32*26);
   // titular
-  x.font=`800 112px ${F}`; x.fillStyle=HUESO; x.fillText(T.verbo,M,372+96);
-  x.fillStyle=AMBAR; x.fillText(`${T.n} ${T.unidad}.`,M,372+96+116);
+  x.font=`800 112px ${F}`; x.fillStyle=HUESO; x.fillText(T.verbo,M,308+96);
+  x.fillStyle=AMBAR; x.fillText(`${T.n} ${T.unidad}.`,M,308+96+116);
   // recorrido en una línea (se achica si no entra)
   if(partes.length){
     let sz=34, total;
     const medir=()=>{ total=0; partes.forEach((p,i)=>{ x.font=`700 ${sz}px ${F}`; total+=x.measureText(String(p.n)).width;
       x.font=`500 ${sz}px ${F}`; total+=x.measureText(' '+p.unidad+(i<partes.length-1?' · ':'')).width; }); };
     medir(); while(total>W-M*2&&sz>22){ sz-=2; medir(); }
-    let cx=M; const y=632+34;
+    let cx=M; const y=568+34;
     partes.forEach((p,i)=>{
       x.font=`700 ${sz}px ${F}`; x.fillStyle=HUESO; x.fillText(String(p.n),cx,y); cx+=x.measureText(String(p.n)).width;
       x.font=`500 ${sz}px ${F}`; x.fillStyle=GRIS; const u=' '+p.unidad+(i<partes.length-1?' · ':''); x.fillText(u,cx,y); cx+=x.measureText(u).width;
@@ -172,14 +189,14 @@ async function _lienzo(T, partes){
 
 // _mosaico — la franja de afiches desde y=712 (geometriaMosaico: 2:3, filas
 // parejas, hasta 3). Un ítem con `prio` lleva la marca de prioridad. → y final.
-async function _mosaico(x, obras){
-  const geo=geometriaMosaico(obras.length);
+async function _mosaico(x, obras, altoMax){
+  const geo=geometriaMosaico(obras.length, altoMax);
   const afs=obras.map(_modeloAfiche);
   const imgs=await _cargarConRespaldo(afs);
-  const y0=712;
+  const y0=Y_MOS;
   let k=0;
   geo.porFila.forEach((nf,fila)=>{
-    const x0=(W-nf*geo.cw)/2;
+    const x0=0; // a sangre; la última fila incompleta queda a la izquierda
     for(let c=0;c<nf;c++,k++){
       const cx=x0+c*geo.cw, cy=y0+fila*geo.ch;
       _afiche(x,afs[k],imgs[k],cx,cy,geo.cw,geo.ch);
@@ -201,9 +218,10 @@ function _marca(x,px,py,w){
 }
 
 // _cierre — wordmark + dominio y la salida (Web Share → menú nativo → descarga).
-async function _cierre(c,x,cfg,tipo,titulo){
-  // cierre: wordmark bicolor + dominio (sobre la zona libre, nunca dentro)
-  const yw=1340+44;
+async function _cierre(c,x,cfg,yFin,tipo,titulo){
+  // cierre: wordmark bicolor + dominio, desde el final real de lo de arriba —
+  // nunca dentro de la zona libre (geometría garantizada por _altoMosaico).
+  const yw=yFin+105;
   x.font=`800 44px ${F}`; x.fillStyle=HUESO; const w1=x.measureText('Otro').width;
   x.fillText('Otro',M,yw); x.fillStyle=AMBAR; x.fillText('festiv',M+w1,yw);
   x.font=`500 28px ${F}`; x.fillStyle=GRIS2; x.textAlign='right'; x.fillText('otrofestiv.app',W-M,yw); x.textAlign='left';
