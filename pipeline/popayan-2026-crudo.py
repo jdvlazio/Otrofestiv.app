@@ -85,6 +85,8 @@ SEDES = {
     'Museo de Arte Moderno de Popayán MAMPO': ('Museo de Arte Moderno de Popayán MAMPO', ''),
     'Casa Taller Sirirí': ('Casa Taller Sirirí', ''),
     'Mikuna Casa Cultural': ('Mikuna Casa Cultural', ''),
+    # 8 oct: la misma sede con su barrio pegado (jueves 8, «Cine Corto al barrio»)
+    'Mikuna Casa Cultural. Barrio el Tunel Bajo': ('Mikuna Casa Cultural', ''),
     'Centro Comercial Terra Plaza – Pantalla gigante': ('Centro Comercial Terra Plaza', 'Pantalla gigante'),
 }
 # LO QUE ES SOLO PARA INSCRITOS: los talleres y el CineCorto Lab («solo
@@ -195,6 +197,14 @@ def normalizar(L):
             out.append(f'{x} / {nxt}')
             sede = None
             i += 2
+            continue
+        # 8 oct: la sede, la barra sola y la hora, en TRES renglones
+        # («Mikuna Casa Cultural. Barrio el Tunel Bajo» + «/» + «6:30 pm»)
+        nxt2 = L[i + 2] if i + 2 < len(L) else ''
+        if x in SEDES and nxt == '/' and re.fullmatch(r'\d{1,2}(:\d{2})?\s*(am|pm)', nxt2, re.I):
+            out.append(f'{x} / {nxt2}')
+            sede = None
+            i += 3
             continue
         if x in SEDES and nxt.startswith('/ '):
             out.append(f'{x} {nxt}')

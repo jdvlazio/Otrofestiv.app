@@ -1,10 +1,10 @@
 {
  "_provenance": {
   "fuente": "issue de radar #573 — https://github.com/jdvlazio/Otrofestiv.app/issues/573",
-  "capturado": "2026-09-29",
+  "capturado": "2026-10-09",
   "titulo": "RADAR: Festival de Cine Corto de Popayán 17 — Popayán, 5–11 OCT 2026",
   "estado": "OPEN",
-  "comentarios": 12
+  "comentarios": 14
  },
  "issue": 573,
  "titulo": "RADAR: Festival de Cine Corto de Popayán 17 — Popayán, 5–11 OCT 2026",
@@ -58,6 +58,14 @@
   {
    "fecha": "2026-09-29",
    "cuerpo": "ESTADO: 29 sep 2026 · fuente: **web** (`curl` + `wp-json`) — **salió la parrilla, pero a medias.** ROJO a **6 días**.\n\nLa página que vimos ayer en `/programacion-2/` es la misma (creada el 28 sep a las 15:43), pero **se movió a [`/fest2026/programacion2026/`](https://festicinepopayan.com/fest2026/programacion2026/)** (última modificación: 29 sep, 02:21 GMT). `/programacion-2/` ahora **redirige a la programación de 2009**. La portada **no la enlaza** (el HTML no tiene «programacion2026»).\n\n**Lo que trae**, del lunes 5 al viernes 9 de octubre, con sede y hora en cada bloque:\n- **Lun 5** · Teatro Bolívar: 7:00 p. m. Apertura · 7:30 p. m. Documental (primer bloque) · 9:30 p. m. Conversatorio.\n- **Mar 6** · 5:00 p. m. Cauca (primer bloque), Teatro Bolívar · **6:00 p. m. Experimental, Auditorio Maya, Facultad de Artes Unicauca** · 7:00 p. m. Cauca (segundo bloque), Teatro Bolívar · más conversatorios.\n- **Mié 7** · Teatro Bolívar: 3:30 p. m. Indígena · 5:00 p. m. Afro · 7:00 p. m. Animación · más conversatorios.\n- **Jue 8** · Teatro Bolívar: 3:30 p. m. Comunitario · 5:00 p. m. Documental (segundo bloque) · 7:00 p. m. Ficción (primer bloque) · más conversatorios.\n- **Vie 9** · Teatro Bolívar: 3:00 p. m. Muestra de Cortos Internacionales · 5:00 p. m. Ficción (segundo bloque).\n\nCada bloque lista sus obras con dirección, producción, género, duración y lugar de rodaje (68 menciones de «dirigido»).\n\n**Lo que falta o está a medio armar** (no se interpreta; hay que volver a mirar):\n- **Sábado 10 y domingo 11: no aparecen.** La bio de IG dice «5 al 11 de octubre» (con el año mal: «2016»). Tampoco hay clausura ni premiación.\n- **Muestra de Cortos Internacionales** (vie 3:00 p. m.): el encabezado «Películas» no tiene obras.\n- **Experimental**: la primera obra aparece como «Lorem ipsum… (El Experimento)», con el texto de relleno de la plantilla.\n- **Miércoles**: el par «4:30 p. m. Conversatorio / 5:00 p. m. Selección Oficial Afro» sale **dos veces seguidas**.\n- **Acceso**: la página no dice si la entrada es libre o con boleta.\n\n**IG @cinecortofest** (navegador): un post nuevo, `p/Dd2BuzLluN4`, con la Selección Oficial **Afro** (6 obras, las mismas del bloque del miércoles). No trae parrilla.\n\n**Nuestro lado, medido hoy:** rama `data/popayan-2026` **8 behind / 3 ahead**, sin PR. Solo tiene el catálogo en `festivals/staging/` (sin JSON del festival, sin `films` con `day`, sin entrada en `src/config.js`).\n"
+  },
+  {
+   "fecha": "2026-09-29",
+   "cuerpo": "ESTADO: 29 sep 2026 · **MONTADO** en [#989](https://github.com/jdvlazio/Otrofestiv.app/pull/989), sin merge: faltan las decisiones de copy de Juan.\n\n- 21 funciones de lunes a viernes: 68 cortos en 11 bloques, apertura, 8 conversatorios y la Muestra Internacional.\n- Parrilla de `/fest2026/programacion2026/`, verificada contra el build en los dos sentidos y con una lectura independiente.\n- Falta del festival: el sábado 10, el domingo 11 (Infantil y clausura), las obras de la Muestra Internacional y dónde son los talleres de Tulpa.\n- La Selección Oficial se corrigió el 29 sep a las 03:28 UTC: «Ley de Origen y Espiritualidad» y la caja de 3 títulos."
+  },
+  {
+   "fecha": "2026-09-29",
+   "cuerpo": "ESTADO: 29 sep 2026 · **PUBLICADO** ([#989](https://github.com/jdvlazio/Otrofestiv.app/pull/989), commit `8e56711d`, verificado en otrofestiv.app): 21 funciones, 68 obras. Juan aprobó el nombre, las secciones y el keyArt. **Vigilar:** el sábado 10 y el domingo 11 (Infantil y clausura), las obras de la Muestra Internacional y las sedes de Tulpa."
   }
  ]
 }

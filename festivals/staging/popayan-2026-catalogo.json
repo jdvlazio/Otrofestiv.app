@@ -1,7 +1,7 @@
 {
  "_provenance": {
   "fuente": "festicinepopayan.com (Selección Oficial 2026, vía wp-json) + cinecorto.co (ficha de cada corto, confirmada por dirección)",
-  "capturado": "2026-09-29",
+  "capturado": "2026-10-09",
   "que_aporta": "sección, título y crédito (la web); año, duración y sinopsis (cinecorto.co)",
   "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
   "metodo": "la lista emparejada pestaña por pestaña y contada contra ESPERADAS; la ficha aceptada solo si su dirección casa"
@@ -197,6 +197,11 @@
      "festival": "cinemancia-2026",
      "titulo": "Decaer",
      "poster": "https://image.tmdb.org/t/p/w500/vG4HQdPsjfVOBuAN3L2Yea7HdQ4.jpg"
+    },
+    {
+     "festival": "mamut-2026",
+     "titulo": "Decaer",
+     "poster": "/assets/mamut-2026/decaer.jpg"
     }
    ]
   },
@@ -237,7 +242,14 @@
     "url": "https://festicinepopayan.com/fest2026/seleccion-oficial-2026/",
     "date": "2026-09-28"
    },
-   "produccion": "Duban Pinzon"
+   "produccion": "Duban Pinzon",
+   "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "La Habitación del Macho Cabrío",
+     "poster": "/assets/fantasmagoria-2026/la-habitacion-del-macho-cabrio.jpg"
+    }
+   ]
   },
   {
    "titulo": "Pudor ante el asalto de los ojos furtivos",
@@ -261,6 +273,16 @@
      "festival": "cineautopsia-2026",
      "titulo": "Pudor ante el asalto de los ojos furtivos",
      "poster": "/assets/cineautopsia/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg"
+    },
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Pudor Ante el Asalto de los Ojos Furtivos",
+     "poster": "/assets/fantasmagoria-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg"
+    },
+    {
+     "festival": "filcmar-2026",
+     "titulo": "Pudor ante el asalto de los ojos furtivos",
+     "poster": "/assets/filcmar-2026/pudor-ante-el-asalto-de-los-ojos-furtivos.jpg"
     },
     {
      "festival": "siembrafest-2026",
@@ -352,6 +374,11 @@
      "poster": "https://admin.alternativa.film/uploads/Oficial_Poster_Una_Michel_d4a64a67e9.jpg"
     },
     {
+     "festival": "filcmar-2026",
+     "titulo": "Una vez en un cuerpo",
+     "poster": "/assets/filcmar-2026/una-vez-en-un-cuerpo.jpg"
+    },
+    {
      "festival": "jardin-2026",
      "titulo": "Una vez en un cuerpo",
      "poster": "/assets/jardin-2026/una-vez-en-un-cuerpo.jpg"
@@ -376,6 +403,16 @@
     "direccion": "Colectivo Artefactum Suba"
    },
    "_ya_publicada": [
+    {
+     "festival": "fantasmagoria-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/filcmar-2026/hdlt.jpg"
+    },
+    {
+     "festival": "filcmar-2026",
+     "titulo": "HDLT",
+     "poster": "/assets/filcmar-2026/hdlt.jpg"
+    },
     {
      "festival": "siembrafest-2026",
      "titulo": "HDLT",
@@ -754,6 +791,11 @@
      "poster": "/assets/cineautopsia/chaika.jpg"
     },
     {
+     "festival": "fantasmagoria-2026",
+     "titulo": "Chaika",
+     "poster": "/assets/fantasmagoria-2026/chaika.jpg"
+    },
+    {
      "festival": "fantasofest-2026",
      "titulo": "Chaika",
      "poster": "/assets/fantasofest/corto-chaika.jpg"
@@ -845,7 +887,8 @@
    "_ya_publicada": [
     {
      "festival": "girardota-2026",
-     "titulo": "La Rebelión de un Fantasma"
+     "titulo": "La Rebelión de un Fantasma",
+     "poster": "/assets/popayan-2026/la-rebelion-de-un-fantasma.jpg"
     }
    ]
   },
@@ -931,6 +974,11 @@
      "festival": "aff-2026",
      "titulo": "Akababuru: Expresión de asombro",
      "poster": "https://admin.alternativa.film/uploads/AKABABURU_POSTER_laura_giraldo_9666ac856d.jpg"
+    },
+    {
+     "festival": "ficcali-2026",
+     "titulo": "Akababuru: Expresión de Asombro",
+     "poster": "/assets/ficcali-2026/akababuru-expresion-de-asombro.jpg"
     },
     {
      "festival": "ficdeh-2026",
@@ -1094,6 +1142,11 @@
     "direccion": "Luber Yesid Zúñiga Ordóñez"
    },
    "_ya_publicada": [
+    {
+     "festival": "ficcali-2026",
+     "titulo": "La gran hazaña",
+     "poster": "/assets/ficcali-2026/la-gran-hazana.jpg"
+    },
     {
      "festival": "ficdeh-2026",
      "titulo": "La gran hazaña",
