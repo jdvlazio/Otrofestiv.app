@@ -94,7 +94,9 @@ def main():
         if not os.path.exists(dest) or os.path.getsize(dest) < 5000:
             subprocess.run(['curl', '-sL', '--max-time', '40', m['source_url'], '-o', dest])
         if os.path.exists(dest) and os.path.getsize(dest) > 5000:
-            afiches[o['titulo']] = {'archivo': os.path.relpath(dest, REPO),
+            # con comillas rectas, como el programa: con la tipográfica la obra
+            # quedaba dos veces en el enriquecido y el afiche pisaba a la ficha
+            afiches[o['titulo'].replace('’', "'").replace('‘', "'")] = {'archivo': os.path.relpath(dest, REPO),
                                     'fuente': f'ficcali.com, biblioteca de medios: {m["source_url"]} ({w}×{h})'}
         else:
             sin.append(f'{o["titulo"]} (no se pudo bajar)')
