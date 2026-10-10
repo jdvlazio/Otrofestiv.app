@@ -83,6 +83,9 @@ ALTERNA_FUERA = {
 # título publicado es el de la obra, tal como lo escribe la Selección Oficial
 # en frase; la presencia del equipo va como has_qa.
 TITULO = {
+    # errata del festival: el corto de Sandra Rengifo es «AtmoSphaira» (IMDb
+    # nm5653494 y CineAutopsia 2026); corregido con OK de Juan, 10 oct
+    'AtmaSphaira': 'AtmoSphaira',
     'Película Inaugural: Lactar': 'Lactar',
     'Cautivo – Con presencia del productor Alfredo Brito': 'Cautivo',
     'Corrientes del Amazonas, largometraje colombiano documental – en presencia del director': 'Corrientes del Amazonas',
@@ -442,6 +445,9 @@ def main():
         for o in [f] + list(f.get('obras') or []):
             if o.get('pais'):
                 o['pais'] = pais(o['pais'])
+            # erratas del festival declaradas en TITULO, también dentro de un programa
+            if o.get('titulo') in ('AtmaSphaira',):
+                o['titulo'] = TITULO[o['titulo']]
         # COMILLAS RECTAS en el título ([title-normalization])
         f['titulo'] = f['titulo'].translate(str.maketrans({'“': '"', '”': '"', '«': '"', '»': '"'}))
     funciones = [{k: v for k, v in f.items() if v not in (None, '')} for f in funciones]
